@@ -25,23 +25,24 @@ public class ListEndpointsResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * Returns an array of endpoints associated with AWS Outposts.
+     * The list of endpoints associated with the specified Outpost.
      * </p>
      */
     private java.util.List<Endpoint> endpoints;
     /**
      * <p>
-     * The next endpoint returned in the list.
+     * If the number of endpoints associated with the specified Outpost exceeds <code>MaxResults</code>, you can include
+     * this value in subsequent calls to this operation to retrieve more results.
      * </p>
      */
     private String nextToken;
 
     /**
      * <p>
-     * Returns an array of endpoints associated with AWS Outposts.
+     * The list of endpoints associated with the specified Outpost.
      * </p>
      * 
-     * @return Returns an array of endpoints associated with AWS Outposts.
+     * @return The list of endpoints associated with the specified Outpost.
      */
 
     public java.util.List<Endpoint> getEndpoints() {
@@ -50,11 +51,11 @@ public class ListEndpointsResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * Returns an array of endpoints associated with AWS Outposts.
+     * The list of endpoints associated with the specified Outpost.
      * </p>
      * 
      * @param endpoints
-     *        Returns an array of endpoints associated with AWS Outposts.
+     *        The list of endpoints associated with the specified Outpost.
      */
 
     public void setEndpoints(java.util.Collection<Endpoint> endpoints) {
@@ -68,7 +69,7 @@ public class ListEndpointsResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * Returns an array of endpoints associated with AWS Outposts.
+     * The list of endpoints associated with the specified Outpost.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -77,7 +78,7 @@ public class ListEndpointsResult extends com.amazonaws.AmazonWebServiceResult<co
      * </p>
      * 
      * @param endpoints
-     *        Returns an array of endpoints associated with AWS Outposts.
+     *        The list of endpoints associated with the specified Outpost.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -93,11 +94,11 @@ public class ListEndpointsResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * Returns an array of endpoints associated with AWS Outposts.
+     * The list of endpoints associated with the specified Outpost.
      * </p>
      * 
      * @param endpoints
-     *        Returns an array of endpoints associated with AWS Outposts.
+     *        The list of endpoints associated with the specified Outpost.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -108,11 +109,13 @@ public class ListEndpointsResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The next endpoint returned in the list.
+     * If the number of endpoints associated with the specified Outpost exceeds <code>MaxResults</code>, you can include
+     * this value in subsequent calls to this operation to retrieve more results.
      * </p>
      * 
      * @param nextToken
-     *        The next endpoint returned in the list.
+     *        If the number of endpoints associated with the specified Outpost exceeds <code>MaxResults</code>, you can
+     *        include this value in subsequent calls to this operation to retrieve more results.
      */
 
     public void setNextToken(String nextToken) {
@@ -121,10 +124,12 @@ public class ListEndpointsResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The next endpoint returned in the list.
+     * If the number of endpoints associated with the specified Outpost exceeds <code>MaxResults</code>, you can include
+     * this value in subsequent calls to this operation to retrieve more results.
      * </p>
      * 
-     * @return The next endpoint returned in the list.
+     * @return If the number of endpoints associated with the specified Outpost exceeds <code>MaxResults</code>, you can
+     *         include this value in subsequent calls to this operation to retrieve more results.
      */
 
     public String getNextToken() {
@@ -133,11 +138,13 @@ public class ListEndpointsResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The next endpoint returned in the list.
+     * If the number of endpoints associated with the specified Outpost exceeds <code>MaxResults</code>, you can include
+     * this value in subsequent calls to this operation to retrieve more results.
      * </p>
      * 
      * @param nextToken
-     *        The next endpoint returned in the list.
+     *        If the number of endpoints associated with the specified Outpost exceeds <code>MaxResults</code>, you can
+     *        include this value in subsequent calls to this operation to retrieve more results.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

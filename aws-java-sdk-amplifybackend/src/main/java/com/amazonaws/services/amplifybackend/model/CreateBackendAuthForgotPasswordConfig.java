@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Describes the forgot password policy for authenticating into the Amplify app.
+ * <b>(DEPRECATED)</b> Describes the forgot password policy for authenticating into the Amplify app.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/amplifybackend-2020-08-11/CreateBackendAuthForgotPasswordConfig"
@@ -30,33 +30,32 @@ public class CreateBackendAuthForgotPasswordConfig implements Serializable, Clon
 
     /**
      * <p>
-     * Describes which mode to use (either SMS or email) to deliver messages to app users who want to recover their
-     * password.
+     * <b>(DEPRECATED)</b> Describes which mode to use (either SMS or email) to deliver messages to app users who want
+     * to recover their password.
      * </p>
      */
     private String deliveryMethod;
     /**
      * <p>
-     * The configuration for the email sent when an app user forgets their password.
+     * <b>(DEPRECATED)</b> The configuration for the email sent when an app user forgets their password.
      * </p>
      */
     private EmailSettings emailSettings;
     /**
      * <p>
-     * The configuration for the SMS message sent when an app user forgets their password.
+     * <b>(DEPRECATED)</b> The configuration for the SMS message sent when an app user forgets their password.
      * </p>
      */
     private SmsSettings smsSettings;
 
     /**
      * <p>
-     * Describes which mode to use (either SMS or email) to deliver messages to app users who want to recover their
-     * password.
+     * <b>(DEPRECATED)</b> Describes which mode to use (either SMS or email) to deliver messages to app users who want
+     * to recover their password.
      * </p>
      * 
      * @param deliveryMethod
-     *        Describes which mode to use (either SMS or email) to deliver messages to app users who want to recover
-     *        their password.
+     *        (DEPRECATED)
      * @see DeliveryMethod
      */
 
@@ -66,12 +65,11 @@ public class CreateBackendAuthForgotPasswordConfig implements Serializable, Clon
 
     /**
      * <p>
-     * Describes which mode to use (either SMS or email) to deliver messages to app users who want to recover their
-     * password.
+     * <b>(DEPRECATED)</b> Describes which mode to use (either SMS or email) to deliver messages to app users who want
+     * to recover their password.
      * </p>
      * 
-     * @return Describes which mode to use (either SMS or email) to deliver messages to app users who want to recover
-     *         their password.
+     * @return (DEPRECATED)
      * @see DeliveryMethod
      */
 
@@ -81,13 +79,12 @@ public class CreateBackendAuthForgotPasswordConfig implements Serializable, Clon
 
     /**
      * <p>
-     * Describes which mode to use (either SMS or email) to deliver messages to app users who want to recover their
-     * password.
+     * <b>(DEPRECATED)</b> Describes which mode to use (either SMS or email) to deliver messages to app users who want
+     * to recover their password.
      * </p>
      * 
      * @param deliveryMethod
-     *        Describes which mode to use (either SMS or email) to deliver messages to app users who want to recover
-     *        their password.
+     *        (DEPRECATED)
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see DeliveryMethod
      */
@@ -99,13 +96,12 @@ public class CreateBackendAuthForgotPasswordConfig implements Serializable, Clon
 
     /**
      * <p>
-     * Describes which mode to use (either SMS or email) to deliver messages to app users who want to recover their
-     * password.
+     * <b>(DEPRECATED)</b> Describes which mode to use (either SMS or email) to deliver messages to app users who want
+     * to recover their password.
      * </p>
      * 
      * @param deliveryMethod
-     *        Describes which mode to use (either SMS or email) to deliver messages to app users who want to recover
-     *        their password.
+     *        (DEPRECATED)
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see DeliveryMethod
      */
@@ -117,11 +113,11 @@ public class CreateBackendAuthForgotPasswordConfig implements Serializable, Clon
 
     /**
      * <p>
-     * The configuration for the email sent when an app user forgets their password.
+     * <b>(DEPRECATED)</b> The configuration for the email sent when an app user forgets their password.
      * </p>
      * 
      * @param emailSettings
-     *        The configuration for the email sent when an app user forgets their password.
+     *        (DEPRECATED)
      */
 
     public void setEmailSettings(EmailSettings emailSettings) {
@@ -130,10 +126,10 @@ public class CreateBackendAuthForgotPasswordConfig implements Serializable, Clon
 
     /**
      * <p>
-     * The configuration for the email sent when an app user forgets their password.
+     * <b>(DEPRECATED)</b> The configuration for the email sent when an app user forgets their password.
      * </p>
      * 
-     * @return The configuration for the email sent when an app user forgets their password.
+     * @return (DEPRECATED)
      */
 
     public EmailSettings getEmailSettings() {
@@ -142,11 +138,11 @@ public class CreateBackendAuthForgotPasswordConfig implements Serializable, Clon
 
     /**
      * <p>
-     * The configuration for the email sent when an app user forgets their password.
+     * <b>(DEPRECATED)</b> The configuration for the email sent when an app user forgets their password.
      * </p>
      * 
      * @param emailSettings
-     *        The configuration for the email sent when an app user forgets their password.
+     *        (DEPRECATED)
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -157,11 +153,11 @@ public class CreateBackendAuthForgotPasswordConfig implements Serializable, Clon
 
     /**
      * <p>
-     * The configuration for the SMS message sent when an app user forgets their password.
+     * <b>(DEPRECATED)</b> The configuration for the SMS message sent when an app user forgets their password.
      * </p>
      * 
      * @param smsSettings
-     *        The configuration for the SMS message sent when an app user forgets their password.
+     *        (DEPRECATED)
      */
 
     public void setSmsSettings(SmsSettings smsSettings) {
@@ -170,10 +166,10 @@ public class CreateBackendAuthForgotPasswordConfig implements Serializable, Clon
 
     /**
      * <p>
-     * The configuration for the SMS message sent when an app user forgets their password.
+     * <b>(DEPRECATED)</b> The configuration for the SMS message sent when an app user forgets their password.
      * </p>
      * 
-     * @return The configuration for the SMS message sent when an app user forgets their password.
+     * @return (DEPRECATED)
      */
 
     public SmsSettings getSmsSettings() {
@@ -182,11 +178,11 @@ public class CreateBackendAuthForgotPasswordConfig implements Serializable, Clon
 
     /**
      * <p>
-     * The configuration for the SMS message sent when an app user forgets their password.
+     * <b>(DEPRECATED)</b> The configuration for the SMS message sent when an app user forgets their password.
      * </p>
      * 
      * @param smsSettings
-     *        The configuration for the SMS message sent when an app user forgets their password.
+     *        (DEPRECATED)
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

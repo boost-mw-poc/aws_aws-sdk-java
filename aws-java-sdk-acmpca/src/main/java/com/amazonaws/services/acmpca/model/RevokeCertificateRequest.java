@@ -49,7 +49,7 @@ public class RevokeCertificateRequest extends com.amazonaws.AmazonWebServiceRequ
      * <p>
      * You can also copy the serial number from the console or use the <a
      * href="https://docs.aws.amazon.com/acm/latest/APIReference/API_DescribeCertificate.html">DescribeCertificate</a>
-     * action in the <i>AWS Certificate Manager API Reference</i>.
+     * action in the <i>Certificate Manager API Reference</i>.
      * </p>
      */
     private String certificateSerial;
@@ -133,7 +133,7 @@ public class RevokeCertificateRequest extends com.amazonaws.AmazonWebServiceRequ
      * <p>
      * You can also copy the serial number from the console or use the <a
      * href="https://docs.aws.amazon.com/acm/latest/APIReference/API_DescribeCertificate.html">DescribeCertificate</a>
-     * action in the <i>AWS Certificate Manager API Reference</i>.
+     * action in the <i>Certificate Manager API Reference</i>.
      * </p>
      * 
      * @param certificateSerial
@@ -149,7 +149,7 @@ public class RevokeCertificateRequest extends com.amazonaws.AmazonWebServiceRequ
      *        <p>
      *        You can also copy the serial number from the console or use the <a
      *        href="https://docs.aws.amazon.com/acm/latest/APIReference/API_DescribeCertificate.html"
-     *        >DescribeCertificate</a> action in the <i>AWS Certificate Manager API Reference</i>.
+     *        >DescribeCertificate</a> action in the <i>Certificate Manager API Reference</i>.
      */
 
     public void setCertificateSerial(String certificateSerial) {
@@ -171,7 +171,7 @@ public class RevokeCertificateRequest extends com.amazonaws.AmazonWebServiceRequ
      * <p>
      * You can also copy the serial number from the console or use the <a
      * href="https://docs.aws.amazon.com/acm/latest/APIReference/API_DescribeCertificate.html">DescribeCertificate</a>
-     * action in the <i>AWS Certificate Manager API Reference</i>.
+     * action in the <i>Certificate Manager API Reference</i>.
      * </p>
      * 
      * @return Serial number of the certificate to be revoked. This must be in hexadecimal format. You can retrieve the
@@ -186,7 +186,7 @@ public class RevokeCertificateRequest extends com.amazonaws.AmazonWebServiceRequ
      *         <p>
      *         You can also copy the serial number from the console or use the <a
      *         href="https://docs.aws.amazon.com/acm/latest/APIReference/API_DescribeCertificate.html"
-     *         >DescribeCertificate</a> action in the <i>AWS Certificate Manager API Reference</i>.
+     *         >DescribeCertificate</a> action in the <i>Certificate Manager API Reference</i>.
      */
 
     public String getCertificateSerial() {
@@ -208,7 +208,7 @@ public class RevokeCertificateRequest extends com.amazonaws.AmazonWebServiceRequ
      * <p>
      * You can also copy the serial number from the console or use the <a
      * href="https://docs.aws.amazon.com/acm/latest/APIReference/API_DescribeCertificate.html">DescribeCertificate</a>
-     * action in the <i>AWS Certificate Manager API Reference</i>.
+     * action in the <i>Certificate Manager API Reference</i>.
      * </p>
      * 
      * @param certificateSerial
@@ -224,7 +224,7 @@ public class RevokeCertificateRequest extends com.amazonaws.AmazonWebServiceRequ
      *        <p>
      *        You can also copy the serial number from the console or use the <a
      *        href="https://docs.aws.amazon.com/acm/latest/APIReference/API_DescribeCertificate.html"
-     *        >DescribeCertificate</a> action in the <i>AWS Certificate Manager API Reference</i>.
+     *        >DescribeCertificate</a> action in the <i>Certificate Manager API Reference</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

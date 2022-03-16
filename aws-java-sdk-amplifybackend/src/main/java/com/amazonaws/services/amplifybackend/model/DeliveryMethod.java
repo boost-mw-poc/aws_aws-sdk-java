@@ -15,7 +15,9 @@ package com.amazonaws.services.amplifybackend.model;
 import javax.annotation.Generated;
 
 /**
- * 
+ * <p>
+ * The type of verification message to send.
+ * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public enum DeliveryMethod {

@@ -36,6 +36,8 @@ public class ExtensionsMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("KeyUsage").build();
     private static final MarshallingInfo<List> SUBJECTALTERNATIVENAMES_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SubjectAlternativeNames").build();
+    private static final MarshallingInfo<List> CUSTOMEXTENSIONS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CustomExtensions").build();
 
     private static final ExtensionsMarshaller instance = new ExtensionsMarshaller();
 
@@ -57,6 +59,7 @@ public class ExtensionsMarshaller {
             protocolMarshaller.marshall(extensions.getExtendedKeyUsage(), EXTENDEDKEYUSAGE_BINDING);
             protocolMarshaller.marshall(extensions.getKeyUsage(), KEYUSAGE_BINDING);
             protocolMarshaller.marshall(extensions.getSubjectAlternativeNames(), SUBJECTALTERNATIVENAMES_BINDING);
+            protocolMarshaller.marshall(extensions.getCustomExtensions(), CUSTOMEXTENSIONS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

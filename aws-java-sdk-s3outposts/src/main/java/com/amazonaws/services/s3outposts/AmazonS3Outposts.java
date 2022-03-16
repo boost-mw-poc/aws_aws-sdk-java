@@ -43,18 +43,11 @@ public interface AmazonS3Outposts {
 
     /**
      * <p>
-     * Amazon S3 on Outposts Access Points simplify managing data access at scale for shared datasets in S3 on Outposts.
-     * S3 on Outposts uses endpoints to connect to Outposts buckets so that you can perform actions within your virtual
-     * private cloud (VPC). For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/AccessingS3Outposts.html"> Accessing S3 on Outposts
-     * using VPC only access points</a>.
-     * </p>
-     * <p>
-     * This action creates an endpoint and associates it with the specified Outposts.
+     * Creates an endpoint and associates it with the specified Outpost.
      * </p>
      * <note>
      * <p>
-     * It can take up to 5 minutes for this action to complete.
+     * It can take up to 5 minutes for this action to finish.
      * </p>
      * </note>
      * <p/>
@@ -94,18 +87,11 @@ public interface AmazonS3Outposts {
 
     /**
      * <p>
-     * Amazon S3 on Outposts Access Points simplify managing data access at scale for shared datasets in S3 on Outposts.
-     * S3 on Outposts uses endpoints to connect to Outposts buckets so that you can perform actions within your virtual
-     * private cloud (VPC). For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/AccessingS3Outposts.html"> Accessing S3 on Outposts
-     * using VPC only access points</a>.
-     * </p>
-     * <p>
-     * This action deletes an endpoint.
+     * Deletes an endpoint.
      * </p>
      * <note>
      * <p>
-     * It can take up to 5 minutes for this action to complete.
+     * It can take up to 5 minutes for this action to finish.
      * </p>
      * </note>
      * <p/>
@@ -143,16 +129,8 @@ public interface AmazonS3Outposts {
 
     /**
      * <p>
-     * Amazon S3 on Outposts Access Points simplify managing data access at scale for shared datasets in S3 on Outposts.
-     * S3 on Outposts uses endpoints to connect to Outposts buckets so that you can perform actions within your virtual
-     * private cloud (VPC). For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/AccessingS3Outposts.html"> Accessing S3 on Outposts
-     * using VPC only access points</a>.
+     * Lists endpoints associated with the specified Outpost.
      * </p>
-     * <p>
-     * This action lists endpoints associated with the Outposts.
-     * </p>
-     * <p/>
      * <p>
      * Related actions include:
      * </p>
@@ -184,6 +162,43 @@ public interface AmazonS3Outposts {
      *      Documentation</a>
      */
     ListEndpointsResult listEndpoints(ListEndpointsRequest listEndpointsRequest);
+
+    /**
+     * <p>
+     * Lists all endpoints associated with an Outpost that has been shared by Amazon Web Services Resource Access
+     * Manager (RAM).
+     * </p>
+     * <p>
+     * Related actions include:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_s3outposts_CreateEndpoint.html">CreateEndpoint</a>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_s3outposts_DeleteEndpoint.html">DeleteEndpoint</a>
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param listSharedEndpointsRequest
+     * @return Result of the ListSharedEndpoints operation returned by the service.
+     * @throws InternalServerException
+     *         There was an exception with the internal server.
+     * @throws ResourceNotFoundException
+     *         The requested resource was not found.
+     * @throws AccessDeniedException
+     *         Access was denied for this action.
+     * @throws ValidationException
+     *         There was an exception validating this data.
+     * @sample AmazonS3Outposts.ListSharedEndpoints
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3outposts-2017-07-25/ListSharedEndpoints" target="_top">AWS
+     *      API Documentation</a>
+     */
+    ListSharedEndpointsResult listSharedEndpoints(ListSharedEndpointsRequest listSharedEndpointsRequest);
 
     /**
      * Shuts down this client object, releasing any resources that might be held open. This is an optional method, and

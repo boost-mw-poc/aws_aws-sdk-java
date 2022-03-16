@@ -64,6 +64,11 @@ public class UpdateBackendAuthUserPoolConfigJsonUnmarshaller implements Unmarsha
                     context.nextToken();
                     updateBackendAuthUserPoolConfig.setPasswordPolicy(UpdateBackendAuthPasswordPolicyConfigJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("verificationMessage", targetDepth)) {
+                    context.nextToken();
+                    updateBackendAuthUserPoolConfig.setVerificationMessage(UpdateBackendAuthVerificationMessageConfigJsonUnmarshaller.getInstance().unmarshall(
+                            context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

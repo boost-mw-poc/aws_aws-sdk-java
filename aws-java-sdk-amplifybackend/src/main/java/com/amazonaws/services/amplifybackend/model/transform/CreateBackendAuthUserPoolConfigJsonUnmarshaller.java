@@ -78,6 +78,11 @@ public class CreateBackendAuthUserPoolConfigJsonUnmarshaller implements Unmarsha
                     context.nextToken();
                     createBackendAuthUserPoolConfig.setUserPoolName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("verificationMessage", targetDepth)) {
+                    context.nextToken();
+                    createBackendAuthUserPoolConfig.setVerificationMessage(CreateBackendAuthVerificationMessageConfigJsonUnmarshaller.getInstance().unmarshall(
+                            context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

@@ -57,6 +57,22 @@ public class Extensions implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private java.util.List<GeneralName> subjectAlternativeNames;
+    /**
+     * <p/>
+     * <p>
+     * Contains a sequence of one or more X.509 extensions, each of which consists of an object identifier (OID), a
+     * base64-encoded value, and the critical flag. For more information, see the <a
+     * href="https://oidref.com/2.5.29">Global OID reference database.</a>
+     * </p>
+     * <note>
+     * <p>
+     * The OID value of a <a
+     * href="https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_CustomExtension.html">CustomExtension</a> must
+     * not match the OID of a predefined extension.
+     * </p>
+     * </note>
+     */
+    private java.util.List<CustomExtension> customExtensions;
 
     /**
      * <p>
@@ -367,6 +383,156 @@ public class Extensions implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p/>
+     * <p>
+     * Contains a sequence of one or more X.509 extensions, each of which consists of an object identifier (OID), a
+     * base64-encoded value, and the critical flag. For more information, see the <a
+     * href="https://oidref.com/2.5.29">Global OID reference database.</a>
+     * </p>
+     * <note>
+     * <p>
+     * The OID value of a <a
+     * href="https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_CustomExtension.html">CustomExtension</a> must
+     * not match the OID of a predefined extension.
+     * </p>
+     * </note>
+     * 
+     * @return <p>
+     *         Contains a sequence of one or more X.509 extensions, each of which consists of an object identifier
+     *         (OID), a base64-encoded value, and the critical flag. For more information, see the <a
+     *         href="https://oidref.com/2.5.29">Global OID reference database.</a>
+     *         </p>
+     *         <note>
+     *         <p>
+     *         The OID value of a <a
+     *         href="https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_CustomExtension.html"
+     *         >CustomExtension</a> must not match the OID of a predefined extension.
+     *         </p>
+     */
+
+    public java.util.List<CustomExtension> getCustomExtensions() {
+        return customExtensions;
+    }
+
+    /**
+     * <p/>
+     * <p>
+     * Contains a sequence of one or more X.509 extensions, each of which consists of an object identifier (OID), a
+     * base64-encoded value, and the critical flag. For more information, see the <a
+     * href="https://oidref.com/2.5.29">Global OID reference database.</a>
+     * </p>
+     * <note>
+     * <p>
+     * The OID value of a <a
+     * href="https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_CustomExtension.html">CustomExtension</a> must
+     * not match the OID of a predefined extension.
+     * </p>
+     * </note>
+     * 
+     * @param customExtensions
+     *        <p>
+     *        Contains a sequence of one or more X.509 extensions, each of which consists of an object identifier (OID),
+     *        a base64-encoded value, and the critical flag. For more information, see the <a
+     *        href="https://oidref.com/2.5.29">Global OID reference database.</a>
+     *        </p>
+     *        <note>
+     *        <p>
+     *        The OID value of a <a
+     *        href="https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_CustomExtension.html"
+     *        >CustomExtension</a> must not match the OID of a predefined extension.
+     *        </p>
+     */
+
+    public void setCustomExtensions(java.util.Collection<CustomExtension> customExtensions) {
+        if (customExtensions == null) {
+            this.customExtensions = null;
+            return;
+        }
+
+        this.customExtensions = new java.util.ArrayList<CustomExtension>(customExtensions);
+    }
+
+    /**
+     * <p/>
+     * <p>
+     * Contains a sequence of one or more X.509 extensions, each of which consists of an object identifier (OID), a
+     * base64-encoded value, and the critical flag. For more information, see the <a
+     * href="https://oidref.com/2.5.29">Global OID reference database.</a>
+     * </p>
+     * <note>
+     * <p>
+     * The OID value of a <a
+     * href="https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_CustomExtension.html">CustomExtension</a> must
+     * not match the OID of a predefined extension.
+     * </p>
+     * </note>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setCustomExtensions(java.util.Collection)} or {@link #withCustomExtensions(java.util.Collection)} if you
+     * want to override the existing values.
+     * </p>
+     * 
+     * @param customExtensions
+     *        <p>
+     *        Contains a sequence of one or more X.509 extensions, each of which consists of an object identifier (OID),
+     *        a base64-encoded value, and the critical flag. For more information, see the <a
+     *        href="https://oidref.com/2.5.29">Global OID reference database.</a>
+     *        </p>
+     *        <note>
+     *        <p>
+     *        The OID value of a <a
+     *        href="https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_CustomExtension.html"
+     *        >CustomExtension</a> must not match the OID of a predefined extension.
+     *        </p>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Extensions withCustomExtensions(CustomExtension... customExtensions) {
+        if (this.customExtensions == null) {
+            setCustomExtensions(new java.util.ArrayList<CustomExtension>(customExtensions.length));
+        }
+        for (CustomExtension ele : customExtensions) {
+            this.customExtensions.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p/>
+     * <p>
+     * Contains a sequence of one or more X.509 extensions, each of which consists of an object identifier (OID), a
+     * base64-encoded value, and the critical flag. For more information, see the <a
+     * href="https://oidref.com/2.5.29">Global OID reference database.</a>
+     * </p>
+     * <note>
+     * <p>
+     * The OID value of a <a
+     * href="https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_CustomExtension.html">CustomExtension</a> must
+     * not match the OID of a predefined extension.
+     * </p>
+     * </note>
+     * 
+     * @param customExtensions
+     *        <p>
+     *        Contains a sequence of one or more X.509 extensions, each of which consists of an object identifier (OID),
+     *        a base64-encoded value, and the critical flag. For more information, see the <a
+     *        href="https://oidref.com/2.5.29">Global OID reference database.</a>
+     *        </p>
+     *        <note>
+     *        <p>
+     *        The OID value of a <a
+     *        href="https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_CustomExtension.html"
+     *        >CustomExtension</a> must not match the OID of a predefined extension.
+     *        </p>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Extensions withCustomExtensions(java.util.Collection<CustomExtension> customExtensions) {
+        setCustomExtensions(customExtensions);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -385,7 +551,9 @@ public class Extensions implements Serializable, Cloneable, StructuredPojo {
         if (getKeyUsage() != null)
             sb.append("KeyUsage: ").append(getKeyUsage()).append(",");
         if (getSubjectAlternativeNames() != null)
-            sb.append("SubjectAlternativeNames: ").append(getSubjectAlternativeNames());
+            sb.append("SubjectAlternativeNames: ").append(getSubjectAlternativeNames()).append(",");
+        if (getCustomExtensions() != null)
+            sb.append("CustomExtensions: ").append(getCustomExtensions());
         sb.append("}");
         return sb.toString();
     }
@@ -416,6 +584,10 @@ public class Extensions implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getSubjectAlternativeNames() != null && other.getSubjectAlternativeNames().equals(this.getSubjectAlternativeNames()) == false)
             return false;
+        if (other.getCustomExtensions() == null ^ this.getCustomExtensions() == null)
+            return false;
+        if (other.getCustomExtensions() != null && other.getCustomExtensions().equals(this.getCustomExtensions()) == false)
+            return false;
         return true;
     }
 
@@ -428,6 +600,7 @@ public class Extensions implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getExtendedKeyUsage() == null) ? 0 : getExtendedKeyUsage().hashCode());
         hashCode = prime * hashCode + ((getKeyUsage() == null) ? 0 : getKeyUsage().hashCode());
         hashCode = prime * hashCode + ((getSubjectAlternativeNames() == null) ? 0 : getSubjectAlternativeNames().hashCode());
+        hashCode = prime * hashCode + ((getCustomExtensions() == null) ? 0 : getCustomExtensions().hashCode());
         return hashCode;
     }
 

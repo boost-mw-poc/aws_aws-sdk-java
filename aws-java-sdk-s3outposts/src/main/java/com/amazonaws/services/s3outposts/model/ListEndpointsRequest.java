@@ -27,24 +27,27 @@ public class ListEndpointsRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The next endpoint requested in the list.
+     * If a previous response from this operation included a <code>NextToken</code> value, provide that value here to
+     * retrieve the next page of results.
      * </p>
      */
     private String nextToken;
     /**
      * <p>
-     * The max number of endpoints that can be returned on the request.
+     * The maximum number of endpoints that will be returned in the response.
      * </p>
      */
     private Integer maxResults;
 
     /**
      * <p>
-     * The next endpoint requested in the list.
+     * If a previous response from this operation included a <code>NextToken</code> value, provide that value here to
+     * retrieve the next page of results.
      * </p>
      * 
      * @param nextToken
-     *        The next endpoint requested in the list.
+     *        If a previous response from this operation included a <code>NextToken</code> value, provide that value
+     *        here to retrieve the next page of results.
      */
 
     public void setNextToken(String nextToken) {
@@ -53,10 +56,12 @@ public class ListEndpointsRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The next endpoint requested in the list.
+     * If a previous response from this operation included a <code>NextToken</code> value, provide that value here to
+     * retrieve the next page of results.
      * </p>
      * 
-     * @return The next endpoint requested in the list.
+     * @return If a previous response from this operation included a <code>NextToken</code> value, provide that value
+     *         here to retrieve the next page of results.
      */
 
     public String getNextToken() {
@@ -65,11 +70,13 @@ public class ListEndpointsRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The next endpoint requested in the list.
+     * If a previous response from this operation included a <code>NextToken</code> value, provide that value here to
+     * retrieve the next page of results.
      * </p>
      * 
      * @param nextToken
-     *        The next endpoint requested in the list.
+     *        If a previous response from this operation included a <code>NextToken</code> value, provide that value
+     *        here to retrieve the next page of results.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -80,11 +87,11 @@ public class ListEndpointsRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The max number of endpoints that can be returned on the request.
+     * The maximum number of endpoints that will be returned in the response.
      * </p>
      * 
      * @param maxResults
-     *        The max number of endpoints that can be returned on the request.
+     *        The maximum number of endpoints that will be returned in the response.
      */
 
     public void setMaxResults(Integer maxResults) {
@@ -93,10 +100,10 @@ public class ListEndpointsRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The max number of endpoints that can be returned on the request.
+     * The maximum number of endpoints that will be returned in the response.
      * </p>
      * 
-     * @return The max number of endpoints that can be returned on the request.
+     * @return The maximum number of endpoints that will be returned in the response.
      */
 
     public Integer getMaxResults() {
@@ -105,11 +112,11 @@ public class ListEndpointsRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The max number of endpoints that can be returned on the request.
+     * The maximum number of endpoints that will be returned in the response.
      * </p>
      * 
      * @param maxResults
-     *        The max number of endpoints that can be returned on the request.
+     *        The maximum number of endpoints that will be returned in the response.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

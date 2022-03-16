@@ -19,9 +19,9 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Describes an ASN.1 X.400 <code>GeneralName</code> as defined in <a href="https://tools.ietf.org/html/rfc5280">RFC
- * 5280</a>. Only one of the following naming options should be provided. Providing more than one option results in an
- * <code>InvalidArgsException</code> error.
+ * Describes an ASN.1 X.400 <code>GeneralName</code> as defined in <a
+ * href="https://datatracker.ietf.org/doc/html/rfc5280">RFC 5280</a>. Only one of the following naming options should be
+ * provided. Providing more than one option results in an <code>InvalidArgsException</code> error.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/acm-pca-2017-08-22/GeneralName" target="_top">AWS API
@@ -38,7 +38,8 @@ public class GeneralName implements Serializable, Cloneable, StructuredPojo {
     private OtherName otherName;
     /**
      * <p>
-     * Represents <code>GeneralName</code> as an <a href="https://tools.ietf.org/html/rfc822">RFC 822</a> email address.
+     * Represents <code>GeneralName</code> as an <a href="https://datatracker.ietf.org/doc/html/rfc822">RFC 822</a>
+     * email address.
      * </p>
      */
     private String rfc822Name;
@@ -117,12 +118,13 @@ public class GeneralName implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Represents <code>GeneralName</code> as an <a href="https://tools.ietf.org/html/rfc822">RFC 822</a> email address.
+     * Represents <code>GeneralName</code> as an <a href="https://datatracker.ietf.org/doc/html/rfc822">RFC 822</a>
+     * email address.
      * </p>
      * 
      * @param rfc822Name
-     *        Represents <code>GeneralName</code> as an <a href="https://tools.ietf.org/html/rfc822">RFC 822</a> email
-     *        address.
+     *        Represents <code>GeneralName</code> as an <a href="https://datatracker.ietf.org/doc/html/rfc822">RFC
+     *        822</a> email address.
      */
 
     public void setRfc822Name(String rfc822Name) {
@@ -131,11 +133,12 @@ public class GeneralName implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Represents <code>GeneralName</code> as an <a href="https://tools.ietf.org/html/rfc822">RFC 822</a> email address.
+     * Represents <code>GeneralName</code> as an <a href="https://datatracker.ietf.org/doc/html/rfc822">RFC 822</a>
+     * email address.
      * </p>
      * 
-     * @return Represents <code>GeneralName</code> as an <a href="https://tools.ietf.org/html/rfc822">RFC 822</a> email
-     *         address.
+     * @return Represents <code>GeneralName</code> as an <a href="https://datatracker.ietf.org/doc/html/rfc822">RFC
+     *         822</a> email address.
      */
 
     public String getRfc822Name() {
@@ -144,12 +147,13 @@ public class GeneralName implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Represents <code>GeneralName</code> as an <a href="https://tools.ietf.org/html/rfc822">RFC 822</a> email address.
+     * Represents <code>GeneralName</code> as an <a href="https://datatracker.ietf.org/doc/html/rfc822">RFC 822</a>
+     * email address.
      * </p>
      * 
      * @param rfc822Name
-     *        Represents <code>GeneralName</code> as an <a href="https://tools.ietf.org/html/rfc822">RFC 822</a> email
-     *        address.
+     *        Represents <code>GeneralName</code> as an <a href="https://datatracker.ietf.org/doc/html/rfc822">RFC
+     *        822</a> email address.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

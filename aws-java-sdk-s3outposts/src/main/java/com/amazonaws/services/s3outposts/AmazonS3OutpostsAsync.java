@@ -34,18 +34,11 @@ public interface AmazonS3OutpostsAsync extends AmazonS3Outposts {
 
     /**
      * <p>
-     * Amazon S3 on Outposts Access Points simplify managing data access at scale for shared datasets in S3 on Outposts.
-     * S3 on Outposts uses endpoints to connect to Outposts buckets so that you can perform actions within your virtual
-     * private cloud (VPC). For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/AccessingS3Outposts.html"> Accessing S3 on Outposts
-     * using VPC only access points</a>.
-     * </p>
-     * <p>
-     * This action creates an endpoint and associates it with the specified Outposts.
+     * Creates an endpoint and associates it with the specified Outpost.
      * </p>
      * <note>
      * <p>
-     * It can take up to 5 minutes for this action to complete.
+     * It can take up to 5 minutes for this action to finish.
      * </p>
      * </note>
      * <p/>
@@ -75,18 +68,11 @@ public interface AmazonS3OutpostsAsync extends AmazonS3Outposts {
 
     /**
      * <p>
-     * Amazon S3 on Outposts Access Points simplify managing data access at scale for shared datasets in S3 on Outposts.
-     * S3 on Outposts uses endpoints to connect to Outposts buckets so that you can perform actions within your virtual
-     * private cloud (VPC). For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/AccessingS3Outposts.html"> Accessing S3 on Outposts
-     * using VPC only access points</a>.
-     * </p>
-     * <p>
-     * This action creates an endpoint and associates it with the specified Outposts.
+     * Creates an endpoint and associates it with the specified Outpost.
      * </p>
      * <note>
      * <p>
-     * It can take up to 5 minutes for this action to complete.
+     * It can take up to 5 minutes for this action to finish.
      * </p>
      * </note>
      * <p/>
@@ -121,18 +107,11 @@ public interface AmazonS3OutpostsAsync extends AmazonS3Outposts {
 
     /**
      * <p>
-     * Amazon S3 on Outposts Access Points simplify managing data access at scale for shared datasets in S3 on Outposts.
-     * S3 on Outposts uses endpoints to connect to Outposts buckets so that you can perform actions within your virtual
-     * private cloud (VPC). For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/AccessingS3Outposts.html"> Accessing S3 on Outposts
-     * using VPC only access points</a>.
-     * </p>
-     * <p>
-     * This action deletes an endpoint.
+     * Deletes an endpoint.
      * </p>
      * <note>
      * <p>
-     * It can take up to 5 minutes for this action to complete.
+     * It can take up to 5 minutes for this action to finish.
      * </p>
      * </note>
      * <p/>
@@ -162,18 +141,11 @@ public interface AmazonS3OutpostsAsync extends AmazonS3Outposts {
 
     /**
      * <p>
-     * Amazon S3 on Outposts Access Points simplify managing data access at scale for shared datasets in S3 on Outposts.
-     * S3 on Outposts uses endpoints to connect to Outposts buckets so that you can perform actions within your virtual
-     * private cloud (VPC). For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/AccessingS3Outposts.html"> Accessing S3 on Outposts
-     * using VPC only access points</a>.
-     * </p>
-     * <p>
-     * This action deletes an endpoint.
+     * Deletes an endpoint.
      * </p>
      * <note>
      * <p>
-     * It can take up to 5 minutes for this action to complete.
+     * It can take up to 5 minutes for this action to finish.
      * </p>
      * </note>
      * <p/>
@@ -208,16 +180,8 @@ public interface AmazonS3OutpostsAsync extends AmazonS3Outposts {
 
     /**
      * <p>
-     * Amazon S3 on Outposts Access Points simplify managing data access at scale for shared datasets in S3 on Outposts.
-     * S3 on Outposts uses endpoints to connect to Outposts buckets so that you can perform actions within your virtual
-     * private cloud (VPC). For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/AccessingS3Outposts.html"> Accessing S3 on Outposts
-     * using VPC only access points</a>.
+     * Lists endpoints associated with the specified Outpost.
      * </p>
-     * <p>
-     * This action lists endpoints associated with the Outposts.
-     * </p>
-     * <p/>
      * <p>
      * Related actions include:
      * </p>
@@ -244,16 +208,8 @@ public interface AmazonS3OutpostsAsync extends AmazonS3Outposts {
 
     /**
      * <p>
-     * Amazon S3 on Outposts Access Points simplify managing data access at scale for shared datasets in S3 on Outposts.
-     * S3 on Outposts uses endpoints to connect to Outposts buckets so that you can perform actions within your virtual
-     * private cloud (VPC). For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/AccessingS3Outposts.html"> Accessing S3 on Outposts
-     * using VPC only access points</a>.
+     * Lists endpoints associated with the specified Outpost.
      * </p>
-     * <p>
-     * This action lists endpoints associated with the Outposts.
-     * </p>
-     * <p/>
      * <p>
      * Related actions include:
      * </p>
@@ -282,5 +238,68 @@ public interface AmazonS3OutpostsAsync extends AmazonS3Outposts {
      */
     java.util.concurrent.Future<ListEndpointsResult> listEndpointsAsync(ListEndpointsRequest listEndpointsRequest,
             com.amazonaws.handlers.AsyncHandler<ListEndpointsRequest, ListEndpointsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Lists all endpoints associated with an Outpost that has been shared by Amazon Web Services Resource Access
+     * Manager (RAM).
+     * </p>
+     * <p>
+     * Related actions include:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_s3outposts_CreateEndpoint.html">CreateEndpoint</a>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_s3outposts_DeleteEndpoint.html">DeleteEndpoint</a>
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param listSharedEndpointsRequest
+     * @return A Java Future containing the result of the ListSharedEndpoints operation returned by the service.
+     * @sample AmazonS3OutpostsAsync.ListSharedEndpoints
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3outposts-2017-07-25/ListSharedEndpoints" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ListSharedEndpointsResult> listSharedEndpointsAsync(ListSharedEndpointsRequest listSharedEndpointsRequest);
+
+    /**
+     * <p>
+     * Lists all endpoints associated with an Outpost that has been shared by Amazon Web Services Resource Access
+     * Manager (RAM).
+     * </p>
+     * <p>
+     * Related actions include:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_s3outposts_CreateEndpoint.html">CreateEndpoint</a>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_s3outposts_DeleteEndpoint.html">DeleteEndpoint</a>
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param listSharedEndpointsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListSharedEndpoints operation returned by the service.
+     * @sample AmazonS3OutpostsAsyncHandler.ListSharedEndpoints
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3outposts-2017-07-25/ListSharedEndpoints" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ListSharedEndpointsResult> listSharedEndpointsAsync(ListSharedEndpointsRequest listSharedEndpointsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListSharedEndpointsRequest, ListSharedEndpointsResult> asyncHandler);
 
 }

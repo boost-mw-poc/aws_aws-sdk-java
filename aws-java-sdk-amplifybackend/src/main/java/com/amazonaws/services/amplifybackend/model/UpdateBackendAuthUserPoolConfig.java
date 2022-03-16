@@ -31,8 +31,8 @@ public class UpdateBackendAuthUserPoolConfig implements Serializable, Cloneable,
 
     /**
      * <p>
-     * Describes the forgot password policy for your Amazon Cognito user pool, configured as a part of your Amplify
-     * project.
+     * <b>(DEPRECATED)</b> Describes the forgot password policy for your Amazon Cognito user pool, configured as a part
+     * of your Amplify project.
      * </p>
      */
     private UpdateBackendAuthForgotPasswordConfig forgotPassword;
@@ -56,16 +56,22 @@ public class UpdateBackendAuthUserPoolConfig implements Serializable, Cloneable,
      * </p>
      */
     private UpdateBackendAuthPasswordPolicyConfig passwordPolicy;
+    /**
+     * <p>
+     * Describes the email or SMS verification message for your Amazon Cognito user pool, configured as a part of your
+     * Amplify project.
+     * </p>
+     */
+    private UpdateBackendAuthVerificationMessageConfig verificationMessage;
 
     /**
      * <p>
-     * Describes the forgot password policy for your Amazon Cognito user pool, configured as a part of your Amplify
-     * project.
+     * <b>(DEPRECATED)</b> Describes the forgot password policy for your Amazon Cognito user pool, configured as a part
+     * of your Amplify project.
      * </p>
      * 
      * @param forgotPassword
-     *        Describes the forgot password policy for your Amazon Cognito user pool, configured as a part of your
-     *        Amplify project.
+     *        (DEPRECATED)
      */
 
     public void setForgotPassword(UpdateBackendAuthForgotPasswordConfig forgotPassword) {
@@ -74,12 +80,11 @@ public class UpdateBackendAuthUserPoolConfig implements Serializable, Cloneable,
 
     /**
      * <p>
-     * Describes the forgot password policy for your Amazon Cognito user pool, configured as a part of your Amplify
-     * project.
+     * <b>(DEPRECATED)</b> Describes the forgot password policy for your Amazon Cognito user pool, configured as a part
+     * of your Amplify project.
      * </p>
      * 
-     * @return Describes the forgot password policy for your Amazon Cognito user pool, configured as a part of your
-     *         Amplify project.
+     * @return (DEPRECATED)
      */
 
     public UpdateBackendAuthForgotPasswordConfig getForgotPassword() {
@@ -88,13 +93,12 @@ public class UpdateBackendAuthUserPoolConfig implements Serializable, Cloneable,
 
     /**
      * <p>
-     * Describes the forgot password policy for your Amazon Cognito user pool, configured as a part of your Amplify
-     * project.
+     * <b>(DEPRECATED)</b> Describes the forgot password policy for your Amazon Cognito user pool, configured as a part
+     * of your Amplify project.
      * </p>
      * 
      * @param forgotPassword
-     *        Describes the forgot password policy for your Amazon Cognito user pool, configured as a part of your
-     *        Amplify project.
+     *        (DEPRECATED)
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -239,6 +243,52 @@ public class UpdateBackendAuthUserPoolConfig implements Serializable, Cloneable,
     }
 
     /**
+     * <p>
+     * Describes the email or SMS verification message for your Amazon Cognito user pool, configured as a part of your
+     * Amplify project.
+     * </p>
+     * 
+     * @param verificationMessage
+     *        Describes the email or SMS verification message for your Amazon Cognito user pool, configured as a part of
+     *        your Amplify project.
+     */
+
+    public void setVerificationMessage(UpdateBackendAuthVerificationMessageConfig verificationMessage) {
+        this.verificationMessage = verificationMessage;
+    }
+
+    /**
+     * <p>
+     * Describes the email or SMS verification message for your Amazon Cognito user pool, configured as a part of your
+     * Amplify project.
+     * </p>
+     * 
+     * @return Describes the email or SMS verification message for your Amazon Cognito user pool, configured as a part
+     *         of your Amplify project.
+     */
+
+    public UpdateBackendAuthVerificationMessageConfig getVerificationMessage() {
+        return this.verificationMessage;
+    }
+
+    /**
+     * <p>
+     * Describes the email or SMS verification message for your Amazon Cognito user pool, configured as a part of your
+     * Amplify project.
+     * </p>
+     * 
+     * @param verificationMessage
+     *        Describes the email or SMS verification message for your Amazon Cognito user pool, configured as a part of
+     *        your Amplify project.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateBackendAuthUserPoolConfig withVerificationMessage(UpdateBackendAuthVerificationMessageConfig verificationMessage) {
+        setVerificationMessage(verificationMessage);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -257,7 +307,9 @@ public class UpdateBackendAuthUserPoolConfig implements Serializable, Cloneable,
         if (getOAuth() != null)
             sb.append("OAuth: ").append(getOAuth()).append(",");
         if (getPasswordPolicy() != null)
-            sb.append("PasswordPolicy: ").append(getPasswordPolicy());
+            sb.append("PasswordPolicy: ").append(getPasswordPolicy()).append(",");
+        if (getVerificationMessage() != null)
+            sb.append("VerificationMessage: ").append(getVerificationMessage());
         sb.append("}");
         return sb.toString();
     }
@@ -288,6 +340,10 @@ public class UpdateBackendAuthUserPoolConfig implements Serializable, Cloneable,
             return false;
         if (other.getPasswordPolicy() != null && other.getPasswordPolicy().equals(this.getPasswordPolicy()) == false)
             return false;
+        if (other.getVerificationMessage() == null ^ this.getVerificationMessage() == null)
+            return false;
+        if (other.getVerificationMessage() != null && other.getVerificationMessage().equals(this.getVerificationMessage()) == false)
+            return false;
         return true;
     }
 
@@ -300,6 +356,7 @@ public class UpdateBackendAuthUserPoolConfig implements Serializable, Cloneable,
         hashCode = prime * hashCode + ((getMfa() == null) ? 0 : getMfa().hashCode());
         hashCode = prime * hashCode + ((getOAuth() == null) ? 0 : getOAuth().hashCode());
         hashCode = prime * hashCode + ((getPasswordPolicy() == null) ? 0 : getPasswordPolicy().hashCode());
+        hashCode = prime * hashCode + ((getVerificationMessage() == null) ? 0 : getVerificationMessage().hashCode());
         return hashCode;
     }
 

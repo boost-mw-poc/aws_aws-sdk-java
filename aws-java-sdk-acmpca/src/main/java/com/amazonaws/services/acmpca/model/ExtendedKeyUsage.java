@@ -32,7 +32,7 @@ public class ExtendedKeyUsage implements Serializable, Cloneable, StructuredPojo
     /**
      * <p>
      * Specifies a standard <code>ExtendedKeyUsage</code> as defined as in <a
-     * href="https://tools.ietf.org/html/rfc5280#section-4.2.1.12">RFC 5280</a>.
+     * href="https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.12">RFC 5280</a>.
      * </p>
      */
     private String extendedKeyUsageType;
@@ -46,12 +46,12 @@ public class ExtendedKeyUsage implements Serializable, Cloneable, StructuredPojo
     /**
      * <p>
      * Specifies a standard <code>ExtendedKeyUsage</code> as defined as in <a
-     * href="https://tools.ietf.org/html/rfc5280#section-4.2.1.12">RFC 5280</a>.
+     * href="https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.12">RFC 5280</a>.
      * </p>
      * 
      * @param extendedKeyUsageType
      *        Specifies a standard <code>ExtendedKeyUsage</code> as defined as in <a
-     *        href="https://tools.ietf.org/html/rfc5280#section-4.2.1.12">RFC 5280</a>.
+     *        href="https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.12">RFC 5280</a>.
      * @see ExtendedKeyUsageType
      */
 
@@ -62,11 +62,11 @@ public class ExtendedKeyUsage implements Serializable, Cloneable, StructuredPojo
     /**
      * <p>
      * Specifies a standard <code>ExtendedKeyUsage</code> as defined as in <a
-     * href="https://tools.ietf.org/html/rfc5280#section-4.2.1.12">RFC 5280</a>.
+     * href="https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.12">RFC 5280</a>.
      * </p>
      * 
      * @return Specifies a standard <code>ExtendedKeyUsage</code> as defined as in <a
-     *         href="https://tools.ietf.org/html/rfc5280#section-4.2.1.12">RFC 5280</a>.
+     *         href="https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.12">RFC 5280</a>.
      * @see ExtendedKeyUsageType
      */
 
@@ -77,12 +77,12 @@ public class ExtendedKeyUsage implements Serializable, Cloneable, StructuredPojo
     /**
      * <p>
      * Specifies a standard <code>ExtendedKeyUsage</code> as defined as in <a
-     * href="https://tools.ietf.org/html/rfc5280#section-4.2.1.12">RFC 5280</a>.
+     * href="https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.12">RFC 5280</a>.
      * </p>
      * 
      * @param extendedKeyUsageType
      *        Specifies a standard <code>ExtendedKeyUsage</code> as defined as in <a
-     *        href="https://tools.ietf.org/html/rfc5280#section-4.2.1.12">RFC 5280</a>.
+     *        href="https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.12">RFC 5280</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ExtendedKeyUsageType
      */
@@ -95,12 +95,12 @@ public class ExtendedKeyUsage implements Serializable, Cloneable, StructuredPojo
     /**
      * <p>
      * Specifies a standard <code>ExtendedKeyUsage</code> as defined as in <a
-     * href="https://tools.ietf.org/html/rfc5280#section-4.2.1.12">RFC 5280</a>.
+     * href="https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.12">RFC 5280</a>.
      * </p>
      * 
      * @param extendedKeyUsageType
      *        Specifies a standard <code>ExtendedKeyUsage</code> as defined as in <a
-     *        href="https://tools.ietf.org/html/rfc5280#section-4.2.1.12">RFC 5280</a>.
+     *        href="https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.12">RFC 5280</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ExtendedKeyUsageType
      */

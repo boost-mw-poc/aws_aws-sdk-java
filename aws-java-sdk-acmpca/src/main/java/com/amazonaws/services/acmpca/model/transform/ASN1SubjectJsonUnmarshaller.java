@@ -104,6 +104,12 @@ public class ASN1SubjectJsonUnmarshaller implements Unmarshaller<ASN1Subject, Js
                     context.nextToken();
                     aSN1Subject.setGenerationQualifier(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("CustomAttributes", targetDepth)) {
+                    context.nextToken();
+                    aSN1Subject.setCustomAttributes(new ListUnmarshaller<CustomAttribute>(CustomAttributeJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

@@ -30,18 +30,18 @@ public class SmsSettings implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The body of the SMS message.
+     * The contents of the SMS message.
      * </p>
      */
     private String smsMessage;
 
     /**
      * <p>
-     * The body of the SMS message.
+     * The contents of the SMS message.
      * </p>
      * 
      * @param smsMessage
-     *        The body of the SMS message.
+     *        The contents of the SMS message.
      */
 
     public void setSmsMessage(String smsMessage) {
@@ -50,10 +50,10 @@ public class SmsSettings implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The body of the SMS message.
+     * The contents of the SMS message.
      * </p>
      * 
-     * @return The body of the SMS message.
+     * @return The contents of the SMS message.
      */
 
     public String getSmsMessage() {
@@ -62,11 +62,11 @@ public class SmsSettings implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The body of the SMS message.
+     * The contents of the SMS message.
      * </p>
      * 
      * @param smsMessage
-     *        The body of the SMS message.
+     *        The contents of the SMS message.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -30,24 +30,24 @@ public class EmailSettings implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The body of the email.
+     * The contents of the email message.
      * </p>
      */
     private String emailMessage;
     /**
      * <p>
-     * The subject of the email.
+     * The contents of the subject line of the email message.
      * </p>
      */
     private String emailSubject;
 
     /**
      * <p>
-     * The body of the email.
+     * The contents of the email message.
      * </p>
      * 
      * @param emailMessage
-     *        The body of the email.
+     *        The contents of the email message.
      */
 
     public void setEmailMessage(String emailMessage) {
@@ -56,10 +56,10 @@ public class EmailSettings implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The body of the email.
+     * The contents of the email message.
      * </p>
      * 
-     * @return The body of the email.
+     * @return The contents of the email message.
      */
 
     public String getEmailMessage() {
@@ -68,11 +68,11 @@ public class EmailSettings implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The body of the email.
+     * The contents of the email message.
      * </p>
      * 
      * @param emailMessage
-     *        The body of the email.
+     *        The contents of the email message.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -83,11 +83,11 @@ public class EmailSettings implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The subject of the email.
+     * The contents of the subject line of the email message.
      * </p>
      * 
      * @param emailSubject
-     *        The subject of the email.
+     *        The contents of the subject line of the email message.
      */
 
     public void setEmailSubject(String emailSubject) {
@@ -96,10 +96,10 @@ public class EmailSettings implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The subject of the email.
+     * The contents of the subject line of the email message.
      * </p>
      * 
-     * @return The subject of the email.
+     * @return The contents of the subject line of the email message.
      */
 
     public String getEmailSubject() {
@@ -108,11 +108,11 @@ public class EmailSettings implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The subject of the email.
+     * The contents of the subject line of the email message.
      * </p>
      * 
      * @param emailSubject
-     *        The subject of the email.
+     *        The contents of the subject line of the email message.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

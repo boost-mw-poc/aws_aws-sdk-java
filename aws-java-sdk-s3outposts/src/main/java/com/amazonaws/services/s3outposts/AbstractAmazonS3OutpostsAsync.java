@@ -66,4 +66,17 @@ public class AbstractAmazonS3OutpostsAsync extends AbstractAmazonS3Outposts impl
         throw new java.lang.UnsupportedOperationException();
     }
 
+    @Override
+    public java.util.concurrent.Future<ListSharedEndpointsResult> listSharedEndpointsAsync(ListSharedEndpointsRequest request) {
+
+        return listSharedEndpointsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListSharedEndpointsResult> listSharedEndpointsAsync(ListSharedEndpointsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListSharedEndpointsRequest, ListSharedEndpointsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
 }

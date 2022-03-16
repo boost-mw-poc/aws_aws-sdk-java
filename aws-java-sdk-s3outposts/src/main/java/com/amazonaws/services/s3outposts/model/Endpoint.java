@@ -22,8 +22,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * Amazon S3 on Outposts Access Points simplify managing data access at scale for shared datasets in S3 on Outposts. S3
  * on Outposts uses endpoints to connect to Outposts buckets so that you can perform actions within your virtual private
  * cloud (VPC). For more information, see <a
- * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/AccessingS3Outposts.html"> Accessing S3 on Outposts using
- * VPC only access points</a>.
+ * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/WorkingWithS3Outposts.html"> Accessing S3 on Outposts
+ * using VPC-only access points</a> in the <i>Amazon Simple Storage Service User Guide</i>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3outposts-2017-07-25/Endpoint" target="_top">AWS API
@@ -40,7 +40,7 @@ public class Endpoint implements Serializable, Cloneable, StructuredPojo {
     private String endpointArn;
     /**
      * <p>
-     * The ID of the AWS Outposts.
+     * The ID of the Outposts.
      * </p>
      */
     private String outpostsId;
@@ -86,11 +86,15 @@ public class Endpoint implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private String securityGroupId;
-    /** <p/> */
+    /**
+     * <p>
+     * The type of connectivity used to access the Amazon S3 on Outposts endpoint.
+     * </p>
+     */
     private String accessType;
     /**
      * <p>
-     * The ID of the customer-owned IPv4 pool used for the endpoint.
+     * The ID of the customer-owned IPv4 address pool used for the endpoint.
      * </p>
      */
     private String customerOwnedIpv4Pool;
@@ -137,11 +141,11 @@ public class Endpoint implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID of the AWS Outposts.
+     * The ID of the Outposts.
      * </p>
      * 
      * @param outpostsId
-     *        The ID of the AWS Outposts.
+     *        The ID of the Outposts.
      */
 
     public void setOutpostsId(String outpostsId) {
@@ -150,10 +154,10 @@ public class Endpoint implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID of the AWS Outposts.
+     * The ID of the Outposts.
      * </p>
      * 
-     * @return The ID of the AWS Outposts.
+     * @return The ID of the Outposts.
      */
 
     public String getOutpostsId() {
@@ -162,11 +166,11 @@ public class Endpoint implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID of the AWS Outposts.
+     * The ID of the Outposts.
      * </p>
      * 
      * @param outpostsId
-     *        The ID of the AWS Outposts.
+     *        The ID of the Outposts.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -505,9 +509,12 @@ public class Endpoint implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The type of connectivity used to access the Amazon S3 on Outposts endpoint.
+     * </p>
      * 
      * @param accessType
+     *        The type of connectivity used to access the Amazon S3 on Outposts endpoint.
      * @see EndpointAccessType
      */
 
@@ -516,9 +523,11 @@ public class Endpoint implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The type of connectivity used to access the Amazon S3 on Outposts endpoint.
+     * </p>
      * 
-     * @return
+     * @return The type of connectivity used to access the Amazon S3 on Outposts endpoint.
      * @see EndpointAccessType
      */
 
@@ -527,9 +536,12 @@ public class Endpoint implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The type of connectivity used to access the Amazon S3 on Outposts endpoint.
+     * </p>
      * 
      * @param accessType
+     *        The type of connectivity used to access the Amazon S3 on Outposts endpoint.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see EndpointAccessType
      */
@@ -540,9 +552,12 @@ public class Endpoint implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The type of connectivity used to access the Amazon S3 on Outposts endpoint.
+     * </p>
      * 
      * @param accessType
+     *        The type of connectivity used to access the Amazon S3 on Outposts endpoint.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see EndpointAccessType
      */
@@ -554,11 +569,11 @@ public class Endpoint implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID of the customer-owned IPv4 pool used for the endpoint.
+     * The ID of the customer-owned IPv4 address pool used for the endpoint.
      * </p>
      * 
      * @param customerOwnedIpv4Pool
-     *        The ID of the customer-owned IPv4 pool used for the endpoint.
+     *        The ID of the customer-owned IPv4 address pool used for the endpoint.
      */
 
     public void setCustomerOwnedIpv4Pool(String customerOwnedIpv4Pool) {
@@ -567,10 +582,10 @@ public class Endpoint implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID of the customer-owned IPv4 pool used for the endpoint.
+     * The ID of the customer-owned IPv4 address pool used for the endpoint.
      * </p>
      * 
-     * @return The ID of the customer-owned IPv4 pool used for the endpoint.
+     * @return The ID of the customer-owned IPv4 address pool used for the endpoint.
      */
 
     public String getCustomerOwnedIpv4Pool() {
@@ -579,11 +594,11 @@ public class Endpoint implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID of the customer-owned IPv4 pool used for the endpoint.
+     * The ID of the customer-owned IPv4 address pool used for the endpoint.
      * </p>
      * 
      * @param customerOwnedIpv4Pool
-     *        The ID of the customer-owned IPv4 pool used for the endpoint.
+     *        The ID of the customer-owned IPv4 address pool used for the endpoint.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -27,14 +27,14 @@ public class CreateEndpointRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The ID of the AWS Outposts.
+     * The ID of the Outposts.
      * </p>
      */
     private String outpostId;
     /**
      * <p>
-     * The ID of the subnet in the selected VPC. The endpoint subnet must belong to the Outpost that has the Amazon S3
-     * on Outposts provisioned.
+     * The ID of the subnet in the selected VPC. The endpoint subnet must belong to the Outpost that has Amazon S3 on
+     * Outposts provisioned.
      * </p>
      */
     private String subnetId;
@@ -46,26 +46,33 @@ public class CreateEndpointRequest extends com.amazonaws.AmazonWebServiceRequest
     private String securityGroupId;
     /**
      * <p>
-     * The type of access for the on-premise network connectivity for the Outpost endpoint. To access the endpoint from
-     * an on-premises network, you must specify the access type and provide the customer owned IPv4 pool.
+     * The type of access for the network connectivity for the Amazon S3 on Outposts endpoint. To use the Amazon Web
+     * Services VPC, choose <code>Private</code>. To use the endpoint with an on-premises network, choose
+     * <code>CustomerOwnedIp</code>. If you choose <code>CustomerOwnedIp</code>, you must also provide the
+     * customer-owned IP address pool (CoIP pool).
      * </p>
+     * <note>
+     * <p>
+     * <code>Private</code> is the default access type value.
+     * </p>
+     * </note>
      */
     private String accessType;
     /**
      * <p>
-     * The ID of the customer-owned IPv4 pool for the endpoint. IP addresses will be allocated from this pool for the
-     * endpoint.
+     * The ID of the customer-owned IPv4 address pool (CoIP pool) for the endpoint. IP addresses are allocated from this
+     * pool for the endpoint.
      * </p>
      */
     private String customerOwnedIpv4Pool;
 
     /**
      * <p>
-     * The ID of the AWS Outposts.
+     * The ID of the Outposts.
      * </p>
      * 
      * @param outpostId
-     *        The ID of the AWS Outposts.
+     *        The ID of the Outposts.
      */
 
     public void setOutpostId(String outpostId) {
@@ -74,10 +81,10 @@ public class CreateEndpointRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The ID of the AWS Outposts.
+     * The ID of the Outposts.
      * </p>
      * 
-     * @return The ID of the AWS Outposts.
+     * @return The ID of the Outposts.
      */
 
     public String getOutpostId() {
@@ -86,11 +93,11 @@ public class CreateEndpointRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The ID of the AWS Outposts.
+     * The ID of the Outposts.
      * </p>
      * 
      * @param outpostId
-     *        The ID of the AWS Outposts.
+     *        The ID of the Outposts.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -101,13 +108,13 @@ public class CreateEndpointRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The ID of the subnet in the selected VPC. The endpoint subnet must belong to the Outpost that has the Amazon S3
-     * on Outposts provisioned.
+     * The ID of the subnet in the selected VPC. The endpoint subnet must belong to the Outpost that has Amazon S3 on
+     * Outposts provisioned.
      * </p>
      * 
      * @param subnetId
-     *        The ID of the subnet in the selected VPC. The endpoint subnet must belong to the Outpost that has the
-     *        Amazon S3 on Outposts provisioned.
+     *        The ID of the subnet in the selected VPC. The endpoint subnet must belong to the Outpost that has Amazon
+     *        S3 on Outposts provisioned.
      */
 
     public void setSubnetId(String subnetId) {
@@ -116,12 +123,12 @@ public class CreateEndpointRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The ID of the subnet in the selected VPC. The endpoint subnet must belong to the Outpost that has the Amazon S3
-     * on Outposts provisioned.
+     * The ID of the subnet in the selected VPC. The endpoint subnet must belong to the Outpost that has Amazon S3 on
+     * Outposts provisioned.
      * </p>
      * 
-     * @return The ID of the subnet in the selected VPC. The endpoint subnet must belong to the Outpost that has the
-     *         Amazon S3 on Outposts provisioned.
+     * @return The ID of the subnet in the selected VPC. The endpoint subnet must belong to the Outpost that has Amazon
+     *         S3 on Outposts provisioned.
      */
 
     public String getSubnetId() {
@@ -130,13 +137,13 @@ public class CreateEndpointRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The ID of the subnet in the selected VPC. The endpoint subnet must belong to the Outpost that has the Amazon S3
-     * on Outposts provisioned.
+     * The ID of the subnet in the selected VPC. The endpoint subnet must belong to the Outpost that has Amazon S3 on
+     * Outposts provisioned.
      * </p>
      * 
      * @param subnetId
-     *        The ID of the subnet in the selected VPC. The endpoint subnet must belong to the Outpost that has the
-     *        Amazon S3 on Outposts provisioned.
+     *        The ID of the subnet in the selected VPC. The endpoint subnet must belong to the Outpost that has Amazon
+     *        S3 on Outposts provisioned.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -187,14 +194,25 @@ public class CreateEndpointRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The type of access for the on-premise network connectivity for the Outpost endpoint. To access the endpoint from
-     * an on-premises network, you must specify the access type and provide the customer owned IPv4 pool.
+     * The type of access for the network connectivity for the Amazon S3 on Outposts endpoint. To use the Amazon Web
+     * Services VPC, choose <code>Private</code>. To use the endpoint with an on-premises network, choose
+     * <code>CustomerOwnedIp</code>. If you choose <code>CustomerOwnedIp</code>, you must also provide the
+     * customer-owned IP address pool (CoIP pool).
      * </p>
+     * <note>
+     * <p>
+     * <code>Private</code> is the default access type value.
+     * </p>
+     * </note>
      * 
      * @param accessType
-     *        The type of access for the on-premise network connectivity for the Outpost endpoint. To access the
-     *        endpoint from an on-premises network, you must specify the access type and provide the customer owned IPv4
-     *        pool.
+     *        The type of access for the network connectivity for the Amazon S3 on Outposts endpoint. To use the Amazon
+     *        Web Services VPC, choose <code>Private</code>. To use the endpoint with an on-premises network, choose
+     *        <code>CustomerOwnedIp</code>. If you choose <code>CustomerOwnedIp</code>, you must also provide the
+     *        customer-owned IP address pool (CoIP pool).</p> <note>
+     *        <p>
+     *        <code>Private</code> is the default access type value.
+     *        </p>
      * @see EndpointAccessType
      */
 
@@ -204,13 +222,24 @@ public class CreateEndpointRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The type of access for the on-premise network connectivity for the Outpost endpoint. To access the endpoint from
-     * an on-premises network, you must specify the access type and provide the customer owned IPv4 pool.
+     * The type of access for the network connectivity for the Amazon S3 on Outposts endpoint. To use the Amazon Web
+     * Services VPC, choose <code>Private</code>. To use the endpoint with an on-premises network, choose
+     * <code>CustomerOwnedIp</code>. If you choose <code>CustomerOwnedIp</code>, you must also provide the
+     * customer-owned IP address pool (CoIP pool).
      * </p>
+     * <note>
+     * <p>
+     * <code>Private</code> is the default access type value.
+     * </p>
+     * </note>
      * 
-     * @return The type of access for the on-premise network connectivity for the Outpost endpoint. To access the
-     *         endpoint from an on-premises network, you must specify the access type and provide the customer owned
-     *         IPv4 pool.
+     * @return The type of access for the network connectivity for the Amazon S3 on Outposts endpoint. To use the Amazon
+     *         Web Services VPC, choose <code>Private</code>. To use the endpoint with an on-premises network, choose
+     *         <code>CustomerOwnedIp</code>. If you choose <code>CustomerOwnedIp</code>, you must also provide the
+     *         customer-owned IP address pool (CoIP pool).</p> <note>
+     *         <p>
+     *         <code>Private</code> is the default access type value.
+     *         </p>
      * @see EndpointAccessType
      */
 
@@ -220,14 +249,25 @@ public class CreateEndpointRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The type of access for the on-premise network connectivity for the Outpost endpoint. To access the endpoint from
-     * an on-premises network, you must specify the access type and provide the customer owned IPv4 pool.
+     * The type of access for the network connectivity for the Amazon S3 on Outposts endpoint. To use the Amazon Web
+     * Services VPC, choose <code>Private</code>. To use the endpoint with an on-premises network, choose
+     * <code>CustomerOwnedIp</code>. If you choose <code>CustomerOwnedIp</code>, you must also provide the
+     * customer-owned IP address pool (CoIP pool).
      * </p>
+     * <note>
+     * <p>
+     * <code>Private</code> is the default access type value.
+     * </p>
+     * </note>
      * 
      * @param accessType
-     *        The type of access for the on-premise network connectivity for the Outpost endpoint. To access the
-     *        endpoint from an on-premises network, you must specify the access type and provide the customer owned IPv4
-     *        pool.
+     *        The type of access for the network connectivity for the Amazon S3 on Outposts endpoint. To use the Amazon
+     *        Web Services VPC, choose <code>Private</code>. To use the endpoint with an on-premises network, choose
+     *        <code>CustomerOwnedIp</code>. If you choose <code>CustomerOwnedIp</code>, you must also provide the
+     *        customer-owned IP address pool (CoIP pool).</p> <note>
+     *        <p>
+     *        <code>Private</code> is the default access type value.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see EndpointAccessType
      */
@@ -239,14 +279,25 @@ public class CreateEndpointRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The type of access for the on-premise network connectivity for the Outpost endpoint. To access the endpoint from
-     * an on-premises network, you must specify the access type and provide the customer owned IPv4 pool.
+     * The type of access for the network connectivity for the Amazon S3 on Outposts endpoint. To use the Amazon Web
+     * Services VPC, choose <code>Private</code>. To use the endpoint with an on-premises network, choose
+     * <code>CustomerOwnedIp</code>. If you choose <code>CustomerOwnedIp</code>, you must also provide the
+     * customer-owned IP address pool (CoIP pool).
      * </p>
+     * <note>
+     * <p>
+     * <code>Private</code> is the default access type value.
+     * </p>
+     * </note>
      * 
      * @param accessType
-     *        The type of access for the on-premise network connectivity for the Outpost endpoint. To access the
-     *        endpoint from an on-premises network, you must specify the access type and provide the customer owned IPv4
-     *        pool.
+     *        The type of access for the network connectivity for the Amazon S3 on Outposts endpoint. To use the Amazon
+     *        Web Services VPC, choose <code>Private</code>. To use the endpoint with an on-premises network, choose
+     *        <code>CustomerOwnedIp</code>. If you choose <code>CustomerOwnedIp</code>, you must also provide the
+     *        customer-owned IP address pool (CoIP pool).</p> <note>
+     *        <p>
+     *        <code>Private</code> is the default access type value.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see EndpointAccessType
      */
@@ -258,13 +309,13 @@ public class CreateEndpointRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The ID of the customer-owned IPv4 pool for the endpoint. IP addresses will be allocated from this pool for the
-     * endpoint.
+     * The ID of the customer-owned IPv4 address pool (CoIP pool) for the endpoint. IP addresses are allocated from this
+     * pool for the endpoint.
      * </p>
      * 
      * @param customerOwnedIpv4Pool
-     *        The ID of the customer-owned IPv4 pool for the endpoint. IP addresses will be allocated from this pool for
-     *        the endpoint.
+     *        The ID of the customer-owned IPv4 address pool (CoIP pool) for the endpoint. IP addresses are allocated
+     *        from this pool for the endpoint.
      */
 
     public void setCustomerOwnedIpv4Pool(String customerOwnedIpv4Pool) {
@@ -273,12 +324,12 @@ public class CreateEndpointRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The ID of the customer-owned IPv4 pool for the endpoint. IP addresses will be allocated from this pool for the
-     * endpoint.
+     * The ID of the customer-owned IPv4 address pool (CoIP pool) for the endpoint. IP addresses are allocated from this
+     * pool for the endpoint.
      * </p>
      * 
-     * @return The ID of the customer-owned IPv4 pool for the endpoint. IP addresses will be allocated from this pool
-     *         for the endpoint.
+     * @return The ID of the customer-owned IPv4 address pool (CoIP pool) for the endpoint. IP addresses are allocated
+     *         from this pool for the endpoint.
      */
 
     public String getCustomerOwnedIpv4Pool() {
@@ -287,13 +338,13 @@ public class CreateEndpointRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The ID of the customer-owned IPv4 pool for the endpoint. IP addresses will be allocated from this pool for the
-     * endpoint.
+     * The ID of the customer-owned IPv4 address pool (CoIP pool) for the endpoint. IP addresses are allocated from this
+     * pool for the endpoint.
      * </p>
      * 
      * @param customerOwnedIpv4Pool
-     *        The ID of the customer-owned IPv4 pool for the endpoint. IP addresses will be allocated from this pool for
-     *        the endpoint.
+     *        The ID of the customer-owned IPv4 address pool (CoIP pool) for the endpoint. IP addresses are allocated
+     *        from this pool for the endpoint.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

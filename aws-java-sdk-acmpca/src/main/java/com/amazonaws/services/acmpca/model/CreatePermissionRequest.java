@@ -39,8 +39,8 @@ public class CreatePermissionRequest extends com.amazonaws.AmazonWebServiceReque
     private String certificateAuthorityArn;
     /**
      * <p>
-     * The AWS service or identity that receives the permission. At this time, the only valid principal is
-     * <code>acm.amazonaws.com</code>.
+     * The Amazon Web Services service or identity that receives the permission. At this time, the only valid principal
+     * is <code>acm.amazonaws.com</code>.
      * </p>
      */
     private String principal;
@@ -52,8 +52,8 @@ public class CreatePermissionRequest extends com.amazonaws.AmazonWebServiceReque
     private String sourceAccount;
     /**
      * <p>
-     * The actions that the specified AWS service principal can use. These include <code>IssueCertificate</code>,
-     * <code>GetCertificate</code>, and <code>ListPermissions</code>.
+     * The actions that the specified Amazon Web Services service principal can use. These include
+     * <code>IssueCertificate</code>, <code>GetCertificate</code>, and <code>ListPermissions</code>.
      * </p>
      */
     private java.util.List<String> actions;
@@ -130,13 +130,13 @@ public class CreatePermissionRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The AWS service or identity that receives the permission. At this time, the only valid principal is
-     * <code>acm.amazonaws.com</code>.
+     * The Amazon Web Services service or identity that receives the permission. At this time, the only valid principal
+     * is <code>acm.amazonaws.com</code>.
      * </p>
      * 
      * @param principal
-     *        The AWS service or identity that receives the permission. At this time, the only valid principal is
-     *        <code>acm.amazonaws.com</code>.
+     *        The Amazon Web Services service or identity that receives the permission. At this time, the only valid
+     *        principal is <code>acm.amazonaws.com</code>.
      */
 
     public void setPrincipal(String principal) {
@@ -145,12 +145,12 @@ public class CreatePermissionRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The AWS service or identity that receives the permission. At this time, the only valid principal is
-     * <code>acm.amazonaws.com</code>.
+     * The Amazon Web Services service or identity that receives the permission. At this time, the only valid principal
+     * is <code>acm.amazonaws.com</code>.
      * </p>
      * 
-     * @return The AWS service or identity that receives the permission. At this time, the only valid principal is
-     *         <code>acm.amazonaws.com</code>.
+     * @return The Amazon Web Services service or identity that receives the permission. At this time, the only valid
+     *         principal is <code>acm.amazonaws.com</code>.
      */
 
     public String getPrincipal() {
@@ -159,13 +159,13 @@ public class CreatePermissionRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The AWS service or identity that receives the permission. At this time, the only valid principal is
-     * <code>acm.amazonaws.com</code>.
+     * The Amazon Web Services service or identity that receives the permission. At this time, the only valid principal
+     * is <code>acm.amazonaws.com</code>.
      * </p>
      * 
      * @param principal
-     *        The AWS service or identity that receives the permission. At this time, the only valid principal is
-     *        <code>acm.amazonaws.com</code>.
+     *        The Amazon Web Services service or identity that receives the permission. At this time, the only valid
+     *        principal is <code>acm.amazonaws.com</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -216,12 +216,12 @@ public class CreatePermissionRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The actions that the specified AWS service principal can use. These include <code>IssueCertificate</code>,
-     * <code>GetCertificate</code>, and <code>ListPermissions</code>.
+     * The actions that the specified Amazon Web Services service principal can use. These include
+     * <code>IssueCertificate</code>, <code>GetCertificate</code>, and <code>ListPermissions</code>.
      * </p>
      * 
-     * @return The actions that the specified AWS service principal can use. These include <code>IssueCertificate</code>
-     *         , <code>GetCertificate</code>, and <code>ListPermissions</code>.
+     * @return The actions that the specified Amazon Web Services service principal can use. These include
+     *         <code>IssueCertificate</code>, <code>GetCertificate</code>, and <code>ListPermissions</code>.
      * @see ActionType
      */
 
@@ -231,13 +231,13 @@ public class CreatePermissionRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The actions that the specified AWS service principal can use. These include <code>IssueCertificate</code>,
-     * <code>GetCertificate</code>, and <code>ListPermissions</code>.
+     * The actions that the specified Amazon Web Services service principal can use. These include
+     * <code>IssueCertificate</code>, <code>GetCertificate</code>, and <code>ListPermissions</code>.
      * </p>
      * 
      * @param actions
-     *        The actions that the specified AWS service principal can use. These include <code>IssueCertificate</code>,
-     *        <code>GetCertificate</code>, and <code>ListPermissions</code>.
+     *        The actions that the specified Amazon Web Services service principal can use. These include
+     *        <code>IssueCertificate</code>, <code>GetCertificate</code>, and <code>ListPermissions</code>.
      * @see ActionType
      */
 
@@ -252,8 +252,8 @@ public class CreatePermissionRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The actions that the specified AWS service principal can use. These include <code>IssueCertificate</code>,
-     * <code>GetCertificate</code>, and <code>ListPermissions</code>.
+     * The actions that the specified Amazon Web Services service principal can use. These include
+     * <code>IssueCertificate</code>, <code>GetCertificate</code>, and <code>ListPermissions</code>.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -262,8 +262,8 @@ public class CreatePermissionRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * 
      * @param actions
-     *        The actions that the specified AWS service principal can use. These include <code>IssueCertificate</code>,
-     *        <code>GetCertificate</code>, and <code>ListPermissions</code>.
+     *        The actions that the specified Amazon Web Services service principal can use. These include
+     *        <code>IssueCertificate</code>, <code>GetCertificate</code>, and <code>ListPermissions</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ActionType
      */
@@ -280,13 +280,13 @@ public class CreatePermissionRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The actions that the specified AWS service principal can use. These include <code>IssueCertificate</code>,
-     * <code>GetCertificate</code>, and <code>ListPermissions</code>.
+     * The actions that the specified Amazon Web Services service principal can use. These include
+     * <code>IssueCertificate</code>, <code>GetCertificate</code>, and <code>ListPermissions</code>.
      * </p>
      * 
      * @param actions
-     *        The actions that the specified AWS service principal can use. These include <code>IssueCertificate</code>,
-     *        <code>GetCertificate</code>, and <code>ListPermissions</code>.
+     *        The actions that the specified Amazon Web Services service principal can use. These include
+     *        <code>IssueCertificate</code>, <code>GetCertificate</code>, and <code>ListPermissions</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ActionType
      */
@@ -298,13 +298,13 @@ public class CreatePermissionRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The actions that the specified AWS service principal can use. These include <code>IssueCertificate</code>,
-     * <code>GetCertificate</code>, and <code>ListPermissions</code>.
+     * The actions that the specified Amazon Web Services service principal can use. These include
+     * <code>IssueCertificate</code>, <code>GetCertificate</code>, and <code>ListPermissions</code>.
      * </p>
      * 
      * @param actions
-     *        The actions that the specified AWS service principal can use. These include <code>IssueCertificate</code>,
-     *        <code>GetCertificate</code>, and <code>ListPermissions</code>.
+     *        The actions that the specified Amazon Web Services service principal can use. These include
+     *        <code>IssueCertificate</code>, <code>GetCertificate</code>, and <code>ListPermissions</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ActionType
      */

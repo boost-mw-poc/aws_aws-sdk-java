@@ -35,6 +35,8 @@ public class UpdateBackendAuthUserPoolConfigMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("oAuth").build();
     private static final MarshallingInfo<StructuredPojo> PASSWORDPOLICY_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("passwordPolicy").build();
+    private static final MarshallingInfo<StructuredPojo> VERIFICATIONMESSAGE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("verificationMessage").build();
 
     private static final UpdateBackendAuthUserPoolConfigMarshaller instance = new UpdateBackendAuthUserPoolConfigMarshaller();
 
@@ -56,6 +58,7 @@ public class UpdateBackendAuthUserPoolConfigMarshaller {
             protocolMarshaller.marshall(updateBackendAuthUserPoolConfig.getMfa(), MFA_BINDING);
             protocolMarshaller.marshall(updateBackendAuthUserPoolConfig.getOAuth(), OAUTH_BINDING);
             protocolMarshaller.marshall(updateBackendAuthUserPoolConfig.getPasswordPolicy(), PASSWORDPOLICY_BINDING);
+            protocolMarshaller.marshall(updateBackendAuthUserPoolConfig.getVerificationMessage(), VERIFICATIONMESSAGE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

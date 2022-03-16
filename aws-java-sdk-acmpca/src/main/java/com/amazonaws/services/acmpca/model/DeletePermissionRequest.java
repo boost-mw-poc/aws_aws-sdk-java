@@ -40,14 +40,14 @@ public class DeletePermissionRequest extends com.amazonaws.AmazonWebServiceReque
     private String certificateAuthorityArn;
     /**
      * <p>
-     * The AWS service or identity that will have its CA permissions revoked. At this time, the only valid service
-     * principal is <code>acm.amazonaws.com</code>
+     * The Amazon Web Services service or identity that will have its CA permissions revoked. At this time, the only
+     * valid service principal is <code>acm.amazonaws.com</code>
      * </p>
      */
     private String principal;
     /**
      * <p>
-     * The AWS account that calls this action.
+     * The Amazon Web Services account that calls this action.
      * </p>
      */
     private String sourceAccount;
@@ -130,13 +130,13 @@ public class DeletePermissionRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The AWS service or identity that will have its CA permissions revoked. At this time, the only valid service
-     * principal is <code>acm.amazonaws.com</code>
+     * The Amazon Web Services service or identity that will have its CA permissions revoked. At this time, the only
+     * valid service principal is <code>acm.amazonaws.com</code>
      * </p>
      * 
      * @param principal
-     *        The AWS service or identity that will have its CA permissions revoked. At this time, the only valid
-     *        service principal is <code>acm.amazonaws.com</code>
+     *        The Amazon Web Services service or identity that will have its CA permissions revoked. At this time, the
+     *        only valid service principal is <code>acm.amazonaws.com</code>
      */
 
     public void setPrincipal(String principal) {
@@ -145,12 +145,12 @@ public class DeletePermissionRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The AWS service or identity that will have its CA permissions revoked. At this time, the only valid service
-     * principal is <code>acm.amazonaws.com</code>
+     * The Amazon Web Services service or identity that will have its CA permissions revoked. At this time, the only
+     * valid service principal is <code>acm.amazonaws.com</code>
      * </p>
      * 
-     * @return The AWS service or identity that will have its CA permissions revoked. At this time, the only valid
-     *         service principal is <code>acm.amazonaws.com</code>
+     * @return The Amazon Web Services service or identity that will have its CA permissions revoked. At this time, the
+     *         only valid service principal is <code>acm.amazonaws.com</code>
      */
 
     public String getPrincipal() {
@@ -159,13 +159,13 @@ public class DeletePermissionRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The AWS service or identity that will have its CA permissions revoked. At this time, the only valid service
-     * principal is <code>acm.amazonaws.com</code>
+     * The Amazon Web Services service or identity that will have its CA permissions revoked. At this time, the only
+     * valid service principal is <code>acm.amazonaws.com</code>
      * </p>
      * 
      * @param principal
-     *        The AWS service or identity that will have its CA permissions revoked. At this time, the only valid
-     *        service principal is <code>acm.amazonaws.com</code>
+     *        The Amazon Web Services service or identity that will have its CA permissions revoked. At this time, the
+     *        only valid service principal is <code>acm.amazonaws.com</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -176,11 +176,11 @@ public class DeletePermissionRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The AWS account that calls this action.
+     * The Amazon Web Services account that calls this action.
      * </p>
      * 
      * @param sourceAccount
-     *        The AWS account that calls this action.
+     *        The Amazon Web Services account that calls this action.
      */
 
     public void setSourceAccount(String sourceAccount) {
@@ -189,10 +189,10 @@ public class DeletePermissionRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The AWS account that calls this action.
+     * The Amazon Web Services account that calls this action.
      * </p>
      * 
-     * @return The AWS account that calls this action.
+     * @return The Amazon Web Services account that calls this action.
      */
 
     public String getSourceAccount() {
@@ -201,11 +201,11 @@ public class DeletePermissionRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The AWS account that calls this action.
+     * The Amazon Web Services account that calls this action.
      * </p>
      * 
      * @param sourceAccount
-     *        The AWS account that calls this action.
+     *        The Amazon Web Services account that calls this action.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

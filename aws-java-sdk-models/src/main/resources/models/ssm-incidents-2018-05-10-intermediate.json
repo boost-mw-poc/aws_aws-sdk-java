@@ -16935,7 +16935,7 @@
         "xmlNameSpaceUri" : null
       }, {
         "c2jName" : "invokedBy",
-        "c2jShape" : "Arn",
+        "c2jShape" : "ServicePrincipal",
         "deprecated" : false,
         "documentation" : "<p>The principal the assumed the role specified of the <code>createdBy</code>.</p>",
         "endpointDiscoveryId" : false,
@@ -17214,7 +17214,7 @@
         },
         "InvokedBy" : {
           "c2jName" : "invokedBy",
-          "c2jShape" : "Arn",
+          "c2jShape" : "ServicePrincipal",
           "deprecated" : false,
           "documentation" : "<p>The principal the assumed the role specified of the <code>createdBy</code>.</p>",
           "endpointDiscoveryId" : false,

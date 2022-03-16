@@ -37,7 +37,7 @@ public class CsrExtensions implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * For CA certificates, provides a path to additional information pertaining to the CA, such as revocation and
-     * policy. For more information, see <a href="https://tools.ietf.org/html/rfc5280#section-4.2.2.2">Subject
+     * policy. For more information, see <a href="https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.2.2">Subject
      * Information Access</a> in RFC 5280.
      * </p>
      */
@@ -86,13 +86,14 @@ public class CsrExtensions implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * For CA certificates, provides a path to additional information pertaining to the CA, such as revocation and
-     * policy. For more information, see <a href="https://tools.ietf.org/html/rfc5280#section-4.2.2.2">Subject
+     * policy. For more information, see <a href="https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.2.2">Subject
      * Information Access</a> in RFC 5280.
      * </p>
      * 
      * @return For CA certificates, provides a path to additional information pertaining to the CA, such as revocation
      *         and policy. For more information, see <a
-     *         href="https://tools.ietf.org/html/rfc5280#section-4.2.2.2">Subject Information Access</a> in RFC 5280.
+     *         href="https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.2.2">Subject Information Access</a> in
+     *         RFC 5280.
      */
 
     public java.util.List<AccessDescription> getSubjectInformationAccess() {
@@ -102,14 +103,15 @@ public class CsrExtensions implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * For CA certificates, provides a path to additional information pertaining to the CA, such as revocation and
-     * policy. For more information, see <a href="https://tools.ietf.org/html/rfc5280#section-4.2.2.2">Subject
+     * policy. For more information, see <a href="https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.2.2">Subject
      * Information Access</a> in RFC 5280.
      * </p>
      * 
      * @param subjectInformationAccess
      *        For CA certificates, provides a path to additional information pertaining to the CA, such as revocation
      *        and policy. For more information, see <a
-     *        href="https://tools.ietf.org/html/rfc5280#section-4.2.2.2">Subject Information Access</a> in RFC 5280.
+     *        href="https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.2.2">Subject Information Access</a> in RFC
+     *        5280.
      */
 
     public void setSubjectInformationAccess(java.util.Collection<AccessDescription> subjectInformationAccess) {
@@ -124,7 +126,7 @@ public class CsrExtensions implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * For CA certificates, provides a path to additional information pertaining to the CA, such as revocation and
-     * policy. For more information, see <a href="https://tools.ietf.org/html/rfc5280#section-4.2.2.2">Subject
+     * policy. For more information, see <a href="https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.2.2">Subject
      * Information Access</a> in RFC 5280.
      * </p>
      * <p>
@@ -136,7 +138,8 @@ public class CsrExtensions implements Serializable, Cloneable, StructuredPojo {
      * @param subjectInformationAccess
      *        For CA certificates, provides a path to additional information pertaining to the CA, such as revocation
      *        and policy. For more information, see <a
-     *        href="https://tools.ietf.org/html/rfc5280#section-4.2.2.2">Subject Information Access</a> in RFC 5280.
+     *        href="https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.2.2">Subject Information Access</a> in RFC
+     *        5280.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -153,14 +156,15 @@ public class CsrExtensions implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * For CA certificates, provides a path to additional information pertaining to the CA, such as revocation and
-     * policy. For more information, see <a href="https://tools.ietf.org/html/rfc5280#section-4.2.2.2">Subject
+     * policy. For more information, see <a href="https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.2.2">Subject
      * Information Access</a> in RFC 5280.
      * </p>
      * 
      * @param subjectInformationAccess
      *        For CA certificates, provides a path to additional information pertaining to the CA, such as revocation
      *        and policy. For more information, see <a
-     *        href="https://tools.ietf.org/html/rfc5280#section-4.2.2.2">Subject Information Access</a> in RFC 5280.
+     *        href="https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.2.2">Subject Information Access</a> in RFC
+     *        5280.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

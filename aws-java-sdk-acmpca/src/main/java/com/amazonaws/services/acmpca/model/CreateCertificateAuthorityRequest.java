@@ -54,9 +54,10 @@ public class CreateCertificateAuthorityRequest extends com.amazonaws.AmazonWebSe
      * <p>
      * Custom string that can be used to distinguish between calls to the <b>CreateCertificateAuthority</b> action.
      * Idempotency tokens for <b>CreateCertificateAuthority</b> time out after five minutes. Therefore, if you call
-     * <b>CreateCertificateAuthority</b> multiple times with the same idempotency token within five minutes, ACM Private
-     * CA recognizes that you are requesting only certificate authority and will issue only one. If you change the
-     * idempotency token for each call, PCA recognizes that you are requesting multiple certificate authorities.
+     * <b>CreateCertificateAuthority</b> multiple times with the same idempotency token within five minutes, Amazon Web
+     * Services Private CA recognizes that you are requesting only certificate authority and will issue only one. If you
+     * change the idempotency token for each call, PCA recognizes that you are requesting multiple certificate
+     * authorities.
      * </p>
      */
     private String idempotencyToken;
@@ -270,18 +271,19 @@ public class CreateCertificateAuthorityRequest extends com.amazonaws.AmazonWebSe
      * <p>
      * Custom string that can be used to distinguish between calls to the <b>CreateCertificateAuthority</b> action.
      * Idempotency tokens for <b>CreateCertificateAuthority</b> time out after five minutes. Therefore, if you call
-     * <b>CreateCertificateAuthority</b> multiple times with the same idempotency token within five minutes, ACM Private
-     * CA recognizes that you are requesting only certificate authority and will issue only one. If you change the
-     * idempotency token for each call, PCA recognizes that you are requesting multiple certificate authorities.
+     * <b>CreateCertificateAuthority</b> multiple times with the same idempotency token within five minutes, Amazon Web
+     * Services Private CA recognizes that you are requesting only certificate authority and will issue only one. If you
+     * change the idempotency token for each call, PCA recognizes that you are requesting multiple certificate
+     * authorities.
      * </p>
      * 
      * @param idempotencyToken
      *        Custom string that can be used to distinguish between calls to the <b>CreateCertificateAuthority</b>
      *        action. Idempotency tokens for <b>CreateCertificateAuthority</b> time out after five minutes. Therefore,
      *        if you call <b>CreateCertificateAuthority</b> multiple times with the same idempotency token within five
-     *        minutes, ACM Private CA recognizes that you are requesting only certificate authority and will issue only
-     *        one. If you change the idempotency token for each call, PCA recognizes that you are requesting multiple
-     *        certificate authorities.
+     *        minutes, Amazon Web Services Private CA recognizes that you are requesting only certificate authority and
+     *        will issue only one. If you change the idempotency token for each call, PCA recognizes that you are
+     *        requesting multiple certificate authorities.
      */
 
     public void setIdempotencyToken(String idempotencyToken) {
@@ -292,17 +294,18 @@ public class CreateCertificateAuthorityRequest extends com.amazonaws.AmazonWebSe
      * <p>
      * Custom string that can be used to distinguish between calls to the <b>CreateCertificateAuthority</b> action.
      * Idempotency tokens for <b>CreateCertificateAuthority</b> time out after five minutes. Therefore, if you call
-     * <b>CreateCertificateAuthority</b> multiple times with the same idempotency token within five minutes, ACM Private
-     * CA recognizes that you are requesting only certificate authority and will issue only one. If you change the
-     * idempotency token for each call, PCA recognizes that you are requesting multiple certificate authorities.
+     * <b>CreateCertificateAuthority</b> multiple times with the same idempotency token within five minutes, Amazon Web
+     * Services Private CA recognizes that you are requesting only certificate authority and will issue only one. If you
+     * change the idempotency token for each call, PCA recognizes that you are requesting multiple certificate
+     * authorities.
      * </p>
      * 
      * @return Custom string that can be used to distinguish between calls to the <b>CreateCertificateAuthority</b>
      *         action. Idempotency tokens for <b>CreateCertificateAuthority</b> time out after five minutes. Therefore,
      *         if you call <b>CreateCertificateAuthority</b> multiple times with the same idempotency token within five
-     *         minutes, ACM Private CA recognizes that you are requesting only certificate authority and will issue only
-     *         one. If you change the idempotency token for each call, PCA recognizes that you are requesting multiple
-     *         certificate authorities.
+     *         minutes, Amazon Web Services Private CA recognizes that you are requesting only certificate authority and
+     *         will issue only one. If you change the idempotency token for each call, PCA recognizes that you are
+     *         requesting multiple certificate authorities.
      */
 
     public String getIdempotencyToken() {
@@ -313,18 +316,19 @@ public class CreateCertificateAuthorityRequest extends com.amazonaws.AmazonWebSe
      * <p>
      * Custom string that can be used to distinguish between calls to the <b>CreateCertificateAuthority</b> action.
      * Idempotency tokens for <b>CreateCertificateAuthority</b> time out after five minutes. Therefore, if you call
-     * <b>CreateCertificateAuthority</b> multiple times with the same idempotency token within five minutes, ACM Private
-     * CA recognizes that you are requesting only certificate authority and will issue only one. If you change the
-     * idempotency token for each call, PCA recognizes that you are requesting multiple certificate authorities.
+     * <b>CreateCertificateAuthority</b> multiple times with the same idempotency token within five minutes, Amazon Web
+     * Services Private CA recognizes that you are requesting only certificate authority and will issue only one. If you
+     * change the idempotency token for each call, PCA recognizes that you are requesting multiple certificate
+     * authorities.
      * </p>
      * 
      * @param idempotencyToken
      *        Custom string that can be used to distinguish between calls to the <b>CreateCertificateAuthority</b>
      *        action. Idempotency tokens for <b>CreateCertificateAuthority</b> time out after five minutes. Therefore,
      *        if you call <b>CreateCertificateAuthority</b> multiple times with the same idempotency token within five
-     *        minutes, ACM Private CA recognizes that you are requesting only certificate authority and will issue only
-     *        one. If you change the idempotency token for each call, PCA recognizes that you are requesting multiple
-     *        certificate authorities.
+     *        minutes, Amazon Web Services Private CA recognizes that you are requesting only certificate authority and
+     *        will issue only one. If you change the idempotency token for each call, PCA recognizes that you are
+     *        requesting multiple certificate authorities.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

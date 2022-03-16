@@ -174,6 +174,39 @@ public class AmazonS3OutpostsAsyncClient extends AmazonS3OutpostsClient implemen
         });
     }
 
+    @Override
+    public java.util.concurrent.Future<ListSharedEndpointsResult> listSharedEndpointsAsync(ListSharedEndpointsRequest request) {
+
+        return listSharedEndpointsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListSharedEndpointsResult> listSharedEndpointsAsync(final ListSharedEndpointsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListSharedEndpointsRequest, ListSharedEndpointsResult> asyncHandler) {
+        final ListSharedEndpointsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListSharedEndpointsResult>() {
+            @Override
+            public ListSharedEndpointsResult call() throws Exception {
+                ListSharedEndpointsResult result = null;
+
+                try {
+                    result = executeListSharedEndpoints(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
     /**
      * Shuts down the client, releasing all managed resources. This includes forcibly terminating all pending
      * asynchronous service calls. Clients who wish to give pending asynchronous service calls time to complete should

@@ -20,7 +20,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 /**
  * <p>
  * Provides access information used by the <code>authorityInfoAccess</code> and <code>subjectInfoAccess</code>
- * extensions described in <a href="https://tools.ietf.org/html/rfc5280">RFC 5280</a>.
+ * extensions described in <a href="https://datatracker.ietf.org/doc/html/rfc5280">RFC 5280</a>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/acm-pca-2017-08-22/AccessDescription" target="_top">AWS API

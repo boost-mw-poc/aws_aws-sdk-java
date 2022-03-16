@@ -42,6 +42,8 @@ public class CreateBackendAuthUserPoolConfigMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("signInMethod").build();
     private static final MarshallingInfo<String> USERPOOLNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("userPoolName").build();
+    private static final MarshallingInfo<StructuredPojo> VERIFICATIONMESSAGE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("verificationMessage").build();
 
     private static final CreateBackendAuthUserPoolConfigMarshaller instance = new CreateBackendAuthUserPoolConfigMarshaller();
 
@@ -66,6 +68,7 @@ public class CreateBackendAuthUserPoolConfigMarshaller {
             protocolMarshaller.marshall(createBackendAuthUserPoolConfig.getRequiredSignUpAttributes(), REQUIREDSIGNUPATTRIBUTES_BINDING);
             protocolMarshaller.marshall(createBackendAuthUserPoolConfig.getSignInMethod(), SIGNINMETHOD_BINDING);
             protocolMarshaller.marshall(createBackendAuthUserPoolConfig.getUserPoolName(), USERPOOLNAME_BINDING);
+            protocolMarshaller.marshall(createBackendAuthUserPoolConfig.getVerificationMessage(), VERIFICATIONMESSAGE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

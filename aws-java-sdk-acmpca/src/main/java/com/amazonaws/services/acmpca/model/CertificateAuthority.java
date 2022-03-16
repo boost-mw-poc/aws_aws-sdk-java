@@ -26,10 +26,9 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * >CreateCertificateAuthority</a> action to create your private CA. You must then call the <a
  * href="https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_GetCertificateAuthorityCertificate.html"
  * >GetCertificateAuthorityCertificate</a> action to retrieve a private CA certificate signing request (CSR). Sign the
- * CSR with your ACM Private CA-hosted or on-premises root or subordinate CA certificate. Call the <a
- * href="https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_ImportCertificateAuthorityCertificate.html"
- * >ImportCertificateAuthorityCertificate</a> action to import the signed certificate into AWS Certificate Manager
- * (ACM).
+ * CSR with your Amazon Web Services Private CA-hosted or on-premises root or subordinate CA certificate. Call the <a
+ * href="https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_ImportCertificateAuthorityCertificate.html">
+ * ImportCertificateAuthorityCertificate</a> action to import the signed certificate into Certificate Manager (ACM).
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/acm-pca-2017-08-22/CertificateAuthority" target="_top">AWS API
@@ -47,7 +46,7 @@ public class CertificateAuthority implements Serializable, Cloneable, Structured
     private String arn;
     /**
      * <p>
-     * The AWS account ID that owns the certificate authority.
+     * The Amazon Web Services account ID that owns the certificate authority.
      * </p>
      */
     private String ownerAccount;
@@ -129,9 +128,9 @@ public class CertificateAuthority implements Serializable, Cloneable, Structured
      * Default: FIPS_140_2_LEVEL_3_OR_HIGHER
      * </p>
      * <p>
-     * Note: AWS Region ap-northeast-3 supports only FIPS_140_2_LEVEL_2_OR_HIGHER. You must explicitly specify this
-     * parameter and value when creating a CA in that Region. Specifying a different value (or no value) results in an
-     * <code>InvalidArgsException</code> with the message
+     * Note: Amazon Web Services Region ap-northeast-3 supports only FIPS_140_2_LEVEL_2_OR_HIGHER. You must explicitly
+     * specify this parameter and value when creating a CA in that Region. Specifying a different value (or no value)
+     * results in an <code>InvalidArgsException</code> with the message
      * "A certificate authority cannot be created in this region with the specified security standard."
      * </p>
      */
@@ -185,11 +184,11 @@ public class CertificateAuthority implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The AWS account ID that owns the certificate authority.
+     * The Amazon Web Services account ID that owns the certificate authority.
      * </p>
      * 
      * @param ownerAccount
-     *        The AWS account ID that owns the certificate authority.
+     *        The Amazon Web Services account ID that owns the certificate authority.
      */
 
     public void setOwnerAccount(String ownerAccount) {
@@ -198,10 +197,10 @@ public class CertificateAuthority implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The AWS account ID that owns the certificate authority.
+     * The Amazon Web Services account ID that owns the certificate authority.
      * </p>
      * 
-     * @return The AWS account ID that owns the certificate authority.
+     * @return The Amazon Web Services account ID that owns the certificate authority.
      */
 
     public String getOwnerAccount() {
@@ -210,11 +209,11 @@ public class CertificateAuthority implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The AWS account ID that owns the certificate authority.
+     * The Amazon Web Services account ID that owns the certificate authority.
      * </p>
      * 
      * @param ownerAccount
-     *        The AWS account ID that owns the certificate authority.
+     *        The Amazon Web Services account ID that owns the certificate authority.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -752,9 +751,9 @@ public class CertificateAuthority implements Serializable, Cloneable, Structured
      * Default: FIPS_140_2_LEVEL_3_OR_HIGHER
      * </p>
      * <p>
-     * Note: AWS Region ap-northeast-3 supports only FIPS_140_2_LEVEL_2_OR_HIGHER. You must explicitly specify this
-     * parameter and value when creating a CA in that Region. Specifying a different value (or no value) results in an
-     * <code>InvalidArgsException</code> with the message
+     * Note: Amazon Web Services Region ap-northeast-3 supports only FIPS_140_2_LEVEL_2_OR_HIGHER. You must explicitly
+     * specify this parameter and value when creating a CA in that Region. Specifying a different value (or no value)
+     * results in an <code>InvalidArgsException</code> with the message
      * "A certificate authority cannot be created in this region with the specified security standard."
      * </p>
      * 
@@ -764,9 +763,9 @@ public class CertificateAuthority implements Serializable, Cloneable, Structured
      *        Default: FIPS_140_2_LEVEL_3_OR_HIGHER
      *        </p>
      *        <p>
-     *        Note: AWS Region ap-northeast-3 supports only FIPS_140_2_LEVEL_2_OR_HIGHER. You must explicitly specify
-     *        this parameter and value when creating a CA in that Region. Specifying a different value (or no value)
-     *        results in an <code>InvalidArgsException</code> with the message
+     *        Note: Amazon Web Services Region ap-northeast-3 supports only FIPS_140_2_LEVEL_2_OR_HIGHER. You must
+     *        explicitly specify this parameter and value when creating a CA in that Region. Specifying a different
+     *        value (or no value) results in an <code>InvalidArgsException</code> with the message
      *        "A certificate authority cannot be created in this region with the specified security standard."
      * @see KeyStorageSecurityStandard
      */
@@ -783,9 +782,9 @@ public class CertificateAuthority implements Serializable, Cloneable, Structured
      * Default: FIPS_140_2_LEVEL_3_OR_HIGHER
      * </p>
      * <p>
-     * Note: AWS Region ap-northeast-3 supports only FIPS_140_2_LEVEL_2_OR_HIGHER. You must explicitly specify this
-     * parameter and value when creating a CA in that Region. Specifying a different value (or no value) results in an
-     * <code>InvalidArgsException</code> with the message
+     * Note: Amazon Web Services Region ap-northeast-3 supports only FIPS_140_2_LEVEL_2_OR_HIGHER. You must explicitly
+     * specify this parameter and value when creating a CA in that Region. Specifying a different value (or no value)
+     * results in an <code>InvalidArgsException</code> with the message
      * "A certificate authority cannot be created in this region with the specified security standard."
      * </p>
      * 
@@ -794,9 +793,9 @@ public class CertificateAuthority implements Serializable, Cloneable, Structured
      *         Default: FIPS_140_2_LEVEL_3_OR_HIGHER
      *         </p>
      *         <p>
-     *         Note: AWS Region ap-northeast-3 supports only FIPS_140_2_LEVEL_2_OR_HIGHER. You must explicitly specify
-     *         this parameter and value when creating a CA in that Region. Specifying a different value (or no value)
-     *         results in an <code>InvalidArgsException</code> with the message
+     *         Note: Amazon Web Services Region ap-northeast-3 supports only FIPS_140_2_LEVEL_2_OR_HIGHER. You must
+     *         explicitly specify this parameter and value when creating a CA in that Region. Specifying a different
+     *         value (or no value) results in an <code>InvalidArgsException</code> with the message
      *         "A certificate authority cannot be created in this region with the specified security standard."
      * @see KeyStorageSecurityStandard
      */
@@ -813,9 +812,9 @@ public class CertificateAuthority implements Serializable, Cloneable, Structured
      * Default: FIPS_140_2_LEVEL_3_OR_HIGHER
      * </p>
      * <p>
-     * Note: AWS Region ap-northeast-3 supports only FIPS_140_2_LEVEL_2_OR_HIGHER. You must explicitly specify this
-     * parameter and value when creating a CA in that Region. Specifying a different value (or no value) results in an
-     * <code>InvalidArgsException</code> with the message
+     * Note: Amazon Web Services Region ap-northeast-3 supports only FIPS_140_2_LEVEL_2_OR_HIGHER. You must explicitly
+     * specify this parameter and value when creating a CA in that Region. Specifying a different value (or no value)
+     * results in an <code>InvalidArgsException</code> with the message
      * "A certificate authority cannot be created in this region with the specified security standard."
      * </p>
      * 
@@ -825,9 +824,9 @@ public class CertificateAuthority implements Serializable, Cloneable, Structured
      *        Default: FIPS_140_2_LEVEL_3_OR_HIGHER
      *        </p>
      *        <p>
-     *        Note: AWS Region ap-northeast-3 supports only FIPS_140_2_LEVEL_2_OR_HIGHER. You must explicitly specify
-     *        this parameter and value when creating a CA in that Region. Specifying a different value (or no value)
-     *        results in an <code>InvalidArgsException</code> with the message
+     *        Note: Amazon Web Services Region ap-northeast-3 supports only FIPS_140_2_LEVEL_2_OR_HIGHER. You must
+     *        explicitly specify this parameter and value when creating a CA in that Region. Specifying a different
+     *        value (or no value) results in an <code>InvalidArgsException</code> with the message
      *        "A certificate authority cannot be created in this region with the specified security standard."
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see KeyStorageSecurityStandard
@@ -846,9 +845,9 @@ public class CertificateAuthority implements Serializable, Cloneable, Structured
      * Default: FIPS_140_2_LEVEL_3_OR_HIGHER
      * </p>
      * <p>
-     * Note: AWS Region ap-northeast-3 supports only FIPS_140_2_LEVEL_2_OR_HIGHER. You must explicitly specify this
-     * parameter and value when creating a CA in that Region. Specifying a different value (or no value) results in an
-     * <code>InvalidArgsException</code> with the message
+     * Note: Amazon Web Services Region ap-northeast-3 supports only FIPS_140_2_LEVEL_2_OR_HIGHER. You must explicitly
+     * specify this parameter and value when creating a CA in that Region. Specifying a different value (or no value)
+     * results in an <code>InvalidArgsException</code> with the message
      * "A certificate authority cannot be created in this region with the specified security standard."
      * </p>
      * 
@@ -858,9 +857,9 @@ public class CertificateAuthority implements Serializable, Cloneable, Structured
      *        Default: FIPS_140_2_LEVEL_3_OR_HIGHER
      *        </p>
      *        <p>
-     *        Note: AWS Region ap-northeast-3 supports only FIPS_140_2_LEVEL_2_OR_HIGHER. You must explicitly specify
-     *        this parameter and value when creating a CA in that Region. Specifying a different value (or no value)
-     *        results in an <code>InvalidArgsException</code> with the message
+     *        Note: Amazon Web Services Region ap-northeast-3 supports only FIPS_140_2_LEVEL_2_OR_HIGHER. You must
+     *        explicitly specify this parameter and value when creating a CA in that Region. Specifying a different
+     *        value (or no value) results in an <code>InvalidArgsException</code> with the message
      *        "A certificate authority cannot be created in this region with the specified security standard."
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see KeyStorageSecurityStandard

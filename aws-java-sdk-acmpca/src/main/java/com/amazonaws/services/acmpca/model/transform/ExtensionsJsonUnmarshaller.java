@@ -70,6 +70,12 @@ public class ExtensionsJsonUnmarshaller implements Unmarshaller<Extensions, Json
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("CustomExtensions", targetDepth)) {
+                    context.nextToken();
+                    extensions.setCustomExtensions(new ListUnmarshaller<CustomExtension>(CustomExtensionJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)
