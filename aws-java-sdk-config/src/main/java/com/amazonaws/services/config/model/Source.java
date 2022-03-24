@@ -19,8 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Provides the Config rule owner (Amazon Web Services or customer), the rule identifier, and the events that trigger
- * the evaluation of your Amazon Web Services resources.
+ * Provides the CustomPolicyDetails, the rule owner (Amazon Web Services or customer), the rule identifier, and the
+ * events that cause the evaluation of your Amazon Web Services resources.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/Source" target="_top">AWS API
@@ -33,35 +33,84 @@ public class Source implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * Indicates whether Amazon Web Services or the customer owns and manages the Config rule.
      * </p>
+     * <p>
+     * Config Managed Rules are predefined rules owned by Amazon Web Services. For more information, see <a
+     * href="https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_use-managed-rules.html">Config
+     * Managed Rules</a> in the Config developer guide.
+     * </p>
+     * <p>
+     * Config Custom Rules are rules that you can develop either with Guard (<code>CUSTOM_POLICY</code>) or Lambda (
+     * <code>CUSTOM_LAMBDA</code>). For more information, see <a
+     * href="https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_develop-rules.html">Config Custom
+     * Rules </a> in the Config developer guide.
+     * </p>
      */
     private String owner;
     /**
      * <p>
-     * For Config managed rules, a predefined identifier from a list. For example, <code>IAM_PASSWORD_POLICY</code> is a
+     * For Config Managed rules, a predefined identifier from a list. For example, <code>IAM_PASSWORD_POLICY</code> is a
      * managed rule. To reference a managed rule, see <a
-     * href="https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_use-managed-rules.html">Using
-     * Config managed rules</a>.
+     * href="https://docs.aws.amazon.com/config/latest/developerguide/managed-rules-by-aws-config.html">List of Config
+     * Managed Rules</a>.
      * </p>
      * <p>
-     * For custom rules, the identifier is the Amazon Resource Name (ARN) of the rule's Lambda function, such as
-     * <code>arn:aws:lambda:us-east-2:123456789012:function:custom_rule_name</code>.
+     * For Config Custom Lambda rules, the identifier is the Amazon Resource Name (ARN) of the rule's Lambda function,
+     * such as <code>arn:aws:lambda:us-east-2:123456789012:function:custom_rule_name</code>.
+     * </p>
+     * <p>
+     * For Config Custom Policy rules, this field will be ignored.
      * </p>
      */
     private String sourceIdentifier;
     /**
      * <p>
-     * Provides the source and type of the event that causes Config to evaluate your Amazon Web Services resources.
+     * Provides the source and the message types that cause Config to evaluate your Amazon Web Services resources
+     * against a rule. It also provides the frequency with which you want Config to run evaluations for the rule if the
+     * trigger type is periodic.
+     * </p>
+     * <p>
+     * If the owner is set to <code>CUSTOM_POLICY</code>, the only acceptable values for the Config rule trigger message
+     * type are <code>ConfigurationItemChangeNotification</code> and
+     * <code>OversizedConfigurationItemChangeNotification</code>.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<SourceDetail> sourceDetails;
+    /**
+     * <p>
+     * Provides the runtime system, policy definition, and whether debug logging is enabled. Required when owner is set
+     * to <code>CUSTOM_POLICY</code>.
+     * </p>
+     */
+    private CustomPolicyDetails customPolicyDetails;
 
     /**
      * <p>
      * Indicates whether Amazon Web Services or the customer owns and manages the Config rule.
      * </p>
+     * <p>
+     * Config Managed Rules are predefined rules owned by Amazon Web Services. For more information, see <a
+     * href="https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_use-managed-rules.html">Config
+     * Managed Rules</a> in the Config developer guide.
+     * </p>
+     * <p>
+     * Config Custom Rules are rules that you can develop either with Guard (<code>CUSTOM_POLICY</code>) or Lambda (
+     * <code>CUSTOM_LAMBDA</code>). For more information, see <a
+     * href="https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_develop-rules.html">Config Custom
+     * Rules </a> in the Config developer guide.
+     * </p>
      * 
      * @param owner
-     *        Indicates whether Amazon Web Services or the customer owns and manages the Config rule.
+     *        Indicates whether Amazon Web Services or the customer owns and manages the Config rule.</p>
+     *        <p>
+     *        Config Managed Rules are predefined rules owned by Amazon Web Services. For more information, see <a
+     *        href="https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_use-managed-rules.html"
+     *        >Config Managed Rules</a> in the Config developer guide.
+     *        </p>
+     *        <p>
+     *        Config Custom Rules are rules that you can develop either with Guard (<code>CUSTOM_POLICY</code>) or
+     *        Lambda (<code>CUSTOM_LAMBDA</code>). For more information, see <a
+     *        href="https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_develop-rules.html">Config
+     *        Custom Rules </a> in the Config developer guide.
      * @see Owner
      */
 
@@ -73,8 +122,30 @@ public class Source implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * Indicates whether Amazon Web Services or the customer owns and manages the Config rule.
      * </p>
+     * <p>
+     * Config Managed Rules are predefined rules owned by Amazon Web Services. For more information, see <a
+     * href="https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_use-managed-rules.html">Config
+     * Managed Rules</a> in the Config developer guide.
+     * </p>
+     * <p>
+     * Config Custom Rules are rules that you can develop either with Guard (<code>CUSTOM_POLICY</code>) or Lambda (
+     * <code>CUSTOM_LAMBDA</code>). For more information, see <a
+     * href="https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_develop-rules.html">Config Custom
+     * Rules </a> in the Config developer guide.
+     * </p>
      * 
-     * @return Indicates whether Amazon Web Services or the customer owns and manages the Config rule.
+     * @return Indicates whether Amazon Web Services or the customer owns and manages the Config rule.</p>
+     *         <p>
+     *         Config Managed Rules are predefined rules owned by Amazon Web Services. For more information, see <a
+     *         href=
+     *         "https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_use-managed-rules.html">Config
+     *         Managed Rules</a> in the Config developer guide.
+     *         </p>
+     *         <p>
+     *         Config Custom Rules are rules that you can develop either with Guard (<code>CUSTOM_POLICY</code>) or
+     *         Lambda (<code>CUSTOM_LAMBDA</code>). For more information, see <a
+     *         href="https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_develop-rules.html">Config
+     *         Custom Rules </a> in the Config developer guide.
      * @see Owner
      */
 
@@ -86,9 +157,30 @@ public class Source implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * Indicates whether Amazon Web Services or the customer owns and manages the Config rule.
      * </p>
+     * <p>
+     * Config Managed Rules are predefined rules owned by Amazon Web Services. For more information, see <a
+     * href="https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_use-managed-rules.html">Config
+     * Managed Rules</a> in the Config developer guide.
+     * </p>
+     * <p>
+     * Config Custom Rules are rules that you can develop either with Guard (<code>CUSTOM_POLICY</code>) or Lambda (
+     * <code>CUSTOM_LAMBDA</code>). For more information, see <a
+     * href="https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_develop-rules.html">Config Custom
+     * Rules </a> in the Config developer guide.
+     * </p>
      * 
      * @param owner
-     *        Indicates whether Amazon Web Services or the customer owns and manages the Config rule.
+     *        Indicates whether Amazon Web Services or the customer owns and manages the Config rule.</p>
+     *        <p>
+     *        Config Managed Rules are predefined rules owned by Amazon Web Services. For more information, see <a
+     *        href="https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_use-managed-rules.html"
+     *        >Config Managed Rules</a> in the Config developer guide.
+     *        </p>
+     *        <p>
+     *        Config Custom Rules are rules that you can develop either with Guard (<code>CUSTOM_POLICY</code>) or
+     *        Lambda (<code>CUSTOM_LAMBDA</code>). For more information, see <a
+     *        href="https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_develop-rules.html">Config
+     *        Custom Rules </a> in the Config developer guide.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Owner
      */
@@ -102,9 +194,30 @@ public class Source implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * Indicates whether Amazon Web Services or the customer owns and manages the Config rule.
      * </p>
+     * <p>
+     * Config Managed Rules are predefined rules owned by Amazon Web Services. For more information, see <a
+     * href="https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_use-managed-rules.html">Config
+     * Managed Rules</a> in the Config developer guide.
+     * </p>
+     * <p>
+     * Config Custom Rules are rules that you can develop either with Guard (<code>CUSTOM_POLICY</code>) or Lambda (
+     * <code>CUSTOM_LAMBDA</code>). For more information, see <a
+     * href="https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_develop-rules.html">Config Custom
+     * Rules </a> in the Config developer guide.
+     * </p>
      * 
      * @param owner
-     *        Indicates whether Amazon Web Services or the customer owns and manages the Config rule.
+     *        Indicates whether Amazon Web Services or the customer owns and manages the Config rule.</p>
+     *        <p>
+     *        Config Managed Rules are predefined rules owned by Amazon Web Services. For more information, see <a
+     *        href="https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_use-managed-rules.html"
+     *        >Config Managed Rules</a> in the Config developer guide.
+     *        </p>
+     *        <p>
+     *        Config Custom Rules are rules that you can develop either with Guard (<code>CUSTOM_POLICY</code>) or
+     *        Lambda (<code>CUSTOM_LAMBDA</code>). For more information, see <a
+     *        href="https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_develop-rules.html">Config
+     *        Custom Rules </a> in the Config developer guide.
      * @see Owner
      */
 
@@ -116,9 +229,30 @@ public class Source implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * Indicates whether Amazon Web Services or the customer owns and manages the Config rule.
      * </p>
+     * <p>
+     * Config Managed Rules are predefined rules owned by Amazon Web Services. For more information, see <a
+     * href="https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_use-managed-rules.html">Config
+     * Managed Rules</a> in the Config developer guide.
+     * </p>
+     * <p>
+     * Config Custom Rules are rules that you can develop either with Guard (<code>CUSTOM_POLICY</code>) or Lambda (
+     * <code>CUSTOM_LAMBDA</code>). For more information, see <a
+     * href="https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_develop-rules.html">Config Custom
+     * Rules </a> in the Config developer guide.
+     * </p>
      * 
      * @param owner
-     *        Indicates whether Amazon Web Services or the customer owns and manages the Config rule.
+     *        Indicates whether Amazon Web Services or the customer owns and manages the Config rule.</p>
+     *        <p>
+     *        Config Managed Rules are predefined rules owned by Amazon Web Services. For more information, see <a
+     *        href="https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_use-managed-rules.html"
+     *        >Config Managed Rules</a> in the Config developer guide.
+     *        </p>
+     *        <p>
+     *        Config Custom Rules are rules that you can develop either with Guard (<code>CUSTOM_POLICY</code>) or
+     *        Lambda (<code>CUSTOM_LAMBDA</code>). For more information, see <a
+     *        href="https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_develop-rules.html">Config
+     *        Custom Rules </a> in the Config developer guide.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Owner
      */
@@ -130,24 +264,30 @@ public class Source implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * For Config managed rules, a predefined identifier from a list. For example, <code>IAM_PASSWORD_POLICY</code> is a
+     * For Config Managed rules, a predefined identifier from a list. For example, <code>IAM_PASSWORD_POLICY</code> is a
      * managed rule. To reference a managed rule, see <a
-     * href="https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_use-managed-rules.html">Using
-     * Config managed rules</a>.
+     * href="https://docs.aws.amazon.com/config/latest/developerguide/managed-rules-by-aws-config.html">List of Config
+     * Managed Rules</a>.
      * </p>
      * <p>
-     * For custom rules, the identifier is the Amazon Resource Name (ARN) of the rule's Lambda function, such as
-     * <code>arn:aws:lambda:us-east-2:123456789012:function:custom_rule_name</code>.
+     * For Config Custom Lambda rules, the identifier is the Amazon Resource Name (ARN) of the rule's Lambda function,
+     * such as <code>arn:aws:lambda:us-east-2:123456789012:function:custom_rule_name</code>.
+     * </p>
+     * <p>
+     * For Config Custom Policy rules, this field will be ignored.
      * </p>
      * 
      * @param sourceIdentifier
-     *        For Config managed rules, a predefined identifier from a list. For example,
+     *        For Config Managed rules, a predefined identifier from a list. For example,
      *        <code>IAM_PASSWORD_POLICY</code> is a managed rule. To reference a managed rule, see <a
-     *        href="https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_use-managed-rules.html"
-     *        >Using Config managed rules</a>.</p>
+     *        href="https://docs.aws.amazon.com/config/latest/developerguide/managed-rules-by-aws-config.html">List of
+     *        Config Managed Rules</a>.</p>
      *        <p>
-     *        For custom rules, the identifier is the Amazon Resource Name (ARN) of the rule's Lambda function, such as
-     *        <code>arn:aws:lambda:us-east-2:123456789012:function:custom_rule_name</code>.
+     *        For Config Custom Lambda rules, the identifier is the Amazon Resource Name (ARN) of the rule's Lambda
+     *        function, such as <code>arn:aws:lambda:us-east-2:123456789012:function:custom_rule_name</code>.
+     *        </p>
+     *        <p>
+     *        For Config Custom Policy rules, this field will be ignored.
      */
 
     public void setSourceIdentifier(String sourceIdentifier) {
@@ -156,23 +296,29 @@ public class Source implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * For Config managed rules, a predefined identifier from a list. For example, <code>IAM_PASSWORD_POLICY</code> is a
+     * For Config Managed rules, a predefined identifier from a list. For example, <code>IAM_PASSWORD_POLICY</code> is a
      * managed rule. To reference a managed rule, see <a
-     * href="https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_use-managed-rules.html">Using
-     * Config managed rules</a>.
+     * href="https://docs.aws.amazon.com/config/latest/developerguide/managed-rules-by-aws-config.html">List of Config
+     * Managed Rules</a>.
      * </p>
      * <p>
-     * For custom rules, the identifier is the Amazon Resource Name (ARN) of the rule's Lambda function, such as
-     * <code>arn:aws:lambda:us-east-2:123456789012:function:custom_rule_name</code>.
+     * For Config Custom Lambda rules, the identifier is the Amazon Resource Name (ARN) of the rule's Lambda function,
+     * such as <code>arn:aws:lambda:us-east-2:123456789012:function:custom_rule_name</code>.
+     * </p>
+     * <p>
+     * For Config Custom Policy rules, this field will be ignored.
      * </p>
      * 
-     * @return For Config managed rules, a predefined identifier from a list. For example,
+     * @return For Config Managed rules, a predefined identifier from a list. For example,
      *         <code>IAM_PASSWORD_POLICY</code> is a managed rule. To reference a managed rule, see <a
-     *         href="https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_use-managed-rules.html"
-     *         >Using Config managed rules</a>.</p>
+     *         href="https://docs.aws.amazon.com/config/latest/developerguide/managed-rules-by-aws-config.html">List of
+     *         Config Managed Rules</a>.</p>
      *         <p>
-     *         For custom rules, the identifier is the Amazon Resource Name (ARN) of the rule's Lambda function, such as
-     *         <code>arn:aws:lambda:us-east-2:123456789012:function:custom_rule_name</code>.
+     *         For Config Custom Lambda rules, the identifier is the Amazon Resource Name (ARN) of the rule's Lambda
+     *         function, such as <code>arn:aws:lambda:us-east-2:123456789012:function:custom_rule_name</code>.
+     *         </p>
+     *         <p>
+     *         For Config Custom Policy rules, this field will be ignored.
      */
 
     public String getSourceIdentifier() {
@@ -181,24 +327,30 @@ public class Source implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * For Config managed rules, a predefined identifier from a list. For example, <code>IAM_PASSWORD_POLICY</code> is a
+     * For Config Managed rules, a predefined identifier from a list. For example, <code>IAM_PASSWORD_POLICY</code> is a
      * managed rule. To reference a managed rule, see <a
-     * href="https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_use-managed-rules.html">Using
-     * Config managed rules</a>.
+     * href="https://docs.aws.amazon.com/config/latest/developerguide/managed-rules-by-aws-config.html">List of Config
+     * Managed Rules</a>.
      * </p>
      * <p>
-     * For custom rules, the identifier is the Amazon Resource Name (ARN) of the rule's Lambda function, such as
-     * <code>arn:aws:lambda:us-east-2:123456789012:function:custom_rule_name</code>.
+     * For Config Custom Lambda rules, the identifier is the Amazon Resource Name (ARN) of the rule's Lambda function,
+     * such as <code>arn:aws:lambda:us-east-2:123456789012:function:custom_rule_name</code>.
+     * </p>
+     * <p>
+     * For Config Custom Policy rules, this field will be ignored.
      * </p>
      * 
      * @param sourceIdentifier
-     *        For Config managed rules, a predefined identifier from a list. For example,
+     *        For Config Managed rules, a predefined identifier from a list. For example,
      *        <code>IAM_PASSWORD_POLICY</code> is a managed rule. To reference a managed rule, see <a
-     *        href="https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_use-managed-rules.html"
-     *        >Using Config managed rules</a>.</p>
+     *        href="https://docs.aws.amazon.com/config/latest/developerguide/managed-rules-by-aws-config.html">List of
+     *        Config Managed Rules</a>.</p>
      *        <p>
-     *        For custom rules, the identifier is the Amazon Resource Name (ARN) of the rule's Lambda function, such as
-     *        <code>arn:aws:lambda:us-east-2:123456789012:function:custom_rule_name</code>.
+     *        For Config Custom Lambda rules, the identifier is the Amazon Resource Name (ARN) of the rule's Lambda
+     *        function, such as <code>arn:aws:lambda:us-east-2:123456789012:function:custom_rule_name</code>.
+     *        </p>
+     *        <p>
+     *        For Config Custom Policy rules, this field will be ignored.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -209,11 +361,23 @@ public class Source implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Provides the source and type of the event that causes Config to evaluate your Amazon Web Services resources.
+     * Provides the source and the message types that cause Config to evaluate your Amazon Web Services resources
+     * against a rule. It also provides the frequency with which you want Config to run evaluations for the rule if the
+     * trigger type is periodic.
+     * </p>
+     * <p>
+     * If the owner is set to <code>CUSTOM_POLICY</code>, the only acceptable values for the Config rule trigger message
+     * type are <code>ConfigurationItemChangeNotification</code> and
+     * <code>OversizedConfigurationItemChangeNotification</code>.
      * </p>
      * 
-     * @return Provides the source and type of the event that causes Config to evaluate your Amazon Web Services
-     *         resources.
+     * @return Provides the source and the message types that cause Config to evaluate your Amazon Web Services
+     *         resources against a rule. It also provides the frequency with which you want Config to run evaluations
+     *         for the rule if the trigger type is periodic.</p>
+     *         <p>
+     *         If the owner is set to <code>CUSTOM_POLICY</code>, the only acceptable values for the Config rule trigger
+     *         message type are <code>ConfigurationItemChangeNotification</code> and
+     *         <code>OversizedConfigurationItemChangeNotification</code>.
      */
 
     public java.util.List<SourceDetail> getSourceDetails() {
@@ -225,12 +389,24 @@ public class Source implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Provides the source and type of the event that causes Config to evaluate your Amazon Web Services resources.
+     * Provides the source and the message types that cause Config to evaluate your Amazon Web Services resources
+     * against a rule. It also provides the frequency with which you want Config to run evaluations for the rule if the
+     * trigger type is periodic.
+     * </p>
+     * <p>
+     * If the owner is set to <code>CUSTOM_POLICY</code>, the only acceptable values for the Config rule trigger message
+     * type are <code>ConfigurationItemChangeNotification</code> and
+     * <code>OversizedConfigurationItemChangeNotification</code>.
      * </p>
      * 
      * @param sourceDetails
-     *        Provides the source and type of the event that causes Config to evaluate your Amazon Web Services
-     *        resources.
+     *        Provides the source and the message types that cause Config to evaluate your Amazon Web Services resources
+     *        against a rule. It also provides the frequency with which you want Config to run evaluations for the rule
+     *        if the trigger type is periodic.</p>
+     *        <p>
+     *        If the owner is set to <code>CUSTOM_POLICY</code>, the only acceptable values for the Config rule trigger
+     *        message type are <code>ConfigurationItemChangeNotification</code> and
+     *        <code>OversizedConfigurationItemChangeNotification</code>.
      */
 
     public void setSourceDetails(java.util.Collection<SourceDetail> sourceDetails) {
@@ -244,7 +420,14 @@ public class Source implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Provides the source and type of the event that causes Config to evaluate your Amazon Web Services resources.
+     * Provides the source and the message types that cause Config to evaluate your Amazon Web Services resources
+     * against a rule. It also provides the frequency with which you want Config to run evaluations for the rule if the
+     * trigger type is periodic.
+     * </p>
+     * <p>
+     * If the owner is set to <code>CUSTOM_POLICY</code>, the only acceptable values for the Config rule trigger message
+     * type are <code>ConfigurationItemChangeNotification</code> and
+     * <code>OversizedConfigurationItemChangeNotification</code>.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -253,8 +436,13 @@ public class Source implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param sourceDetails
-     *        Provides the source and type of the event that causes Config to evaluate your Amazon Web Services
-     *        resources.
+     *        Provides the source and the message types that cause Config to evaluate your Amazon Web Services resources
+     *        against a rule. It also provides the frequency with which you want Config to run evaluations for the rule
+     *        if the trigger type is periodic.</p>
+     *        <p>
+     *        If the owner is set to <code>CUSTOM_POLICY</code>, the only acceptable values for the Config rule trigger
+     *        message type are <code>ConfigurationItemChangeNotification</code> and
+     *        <code>OversizedConfigurationItemChangeNotification</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -270,17 +458,75 @@ public class Source implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Provides the source and type of the event that causes Config to evaluate your Amazon Web Services resources.
+     * Provides the source and the message types that cause Config to evaluate your Amazon Web Services resources
+     * against a rule. It also provides the frequency with which you want Config to run evaluations for the rule if the
+     * trigger type is periodic.
+     * </p>
+     * <p>
+     * If the owner is set to <code>CUSTOM_POLICY</code>, the only acceptable values for the Config rule trigger message
+     * type are <code>ConfigurationItemChangeNotification</code> and
+     * <code>OversizedConfigurationItemChangeNotification</code>.
      * </p>
      * 
      * @param sourceDetails
-     *        Provides the source and type of the event that causes Config to evaluate your Amazon Web Services
-     *        resources.
+     *        Provides the source and the message types that cause Config to evaluate your Amazon Web Services resources
+     *        against a rule. It also provides the frequency with which you want Config to run evaluations for the rule
+     *        if the trigger type is periodic.</p>
+     *        <p>
+     *        If the owner is set to <code>CUSTOM_POLICY</code>, the only acceptable values for the Config rule trigger
+     *        message type are <code>ConfigurationItemChangeNotification</code> and
+     *        <code>OversizedConfigurationItemChangeNotification</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public Source withSourceDetails(java.util.Collection<SourceDetail> sourceDetails) {
         setSourceDetails(sourceDetails);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Provides the runtime system, policy definition, and whether debug logging is enabled. Required when owner is set
+     * to <code>CUSTOM_POLICY</code>.
+     * </p>
+     * 
+     * @param customPolicyDetails
+     *        Provides the runtime system, policy definition, and whether debug logging is enabled. Required when owner
+     *        is set to <code>CUSTOM_POLICY</code>.
+     */
+
+    public void setCustomPolicyDetails(CustomPolicyDetails customPolicyDetails) {
+        this.customPolicyDetails = customPolicyDetails;
+    }
+
+    /**
+     * <p>
+     * Provides the runtime system, policy definition, and whether debug logging is enabled. Required when owner is set
+     * to <code>CUSTOM_POLICY</code>.
+     * </p>
+     * 
+     * @return Provides the runtime system, policy definition, and whether debug logging is enabled. Required when owner
+     *         is set to <code>CUSTOM_POLICY</code>.
+     */
+
+    public CustomPolicyDetails getCustomPolicyDetails() {
+        return this.customPolicyDetails;
+    }
+
+    /**
+     * <p>
+     * Provides the runtime system, policy definition, and whether debug logging is enabled. Required when owner is set
+     * to <code>CUSTOM_POLICY</code>.
+     * </p>
+     * 
+     * @param customPolicyDetails
+     *        Provides the runtime system, policy definition, and whether debug logging is enabled. Required when owner
+     *        is set to <code>CUSTOM_POLICY</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Source withCustomPolicyDetails(CustomPolicyDetails customPolicyDetails) {
+        setCustomPolicyDetails(customPolicyDetails);
         return this;
     }
 
@@ -301,7 +547,9 @@ public class Source implements Serializable, Cloneable, StructuredPojo {
         if (getSourceIdentifier() != null)
             sb.append("SourceIdentifier: ").append(getSourceIdentifier()).append(",");
         if (getSourceDetails() != null)
-            sb.append("SourceDetails: ").append(getSourceDetails());
+            sb.append("SourceDetails: ").append(getSourceDetails()).append(",");
+        if (getCustomPolicyDetails() != null)
+            sb.append("CustomPolicyDetails: ").append(getCustomPolicyDetails());
         sb.append("}");
         return sb.toString();
     }
@@ -328,6 +576,10 @@ public class Source implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getSourceDetails() != null && other.getSourceDetails().equals(this.getSourceDetails()) == false)
             return false;
+        if (other.getCustomPolicyDetails() == null ^ this.getCustomPolicyDetails() == null)
+            return false;
+        if (other.getCustomPolicyDetails() != null && other.getCustomPolicyDetails().equals(this.getCustomPolicyDetails()) == false)
+            return false;
         return true;
     }
 
@@ -339,6 +591,7 @@ public class Source implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getOwner() == null) ? 0 : getOwner().hashCode());
         hashCode = prime * hashCode + ((getSourceIdentifier() == null) ? 0 : getSourceIdentifier().hashCode());
         hashCode = prime * hashCode + ((getSourceDetails() == null) ? 0 : getSourceDetails().hashCode());
+        hashCode = prime * hashCode + ((getCustomPolicyDetails() == null) ? 0 : getCustomPolicyDetails().hashCode());
         return hashCode;
     }
 

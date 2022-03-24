@@ -183,6 +183,10 @@ public class UpdateFunctionConfigurationResultJsonUnmarshaller implements Unmars
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("EphemeralStorage", targetDepth)) {
+                    context.nextToken();
+                    updateFunctionConfigurationResult.setEphemeralStorage(EphemeralStorageJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

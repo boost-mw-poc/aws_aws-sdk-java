@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Organization config rule creation or deletion status in each member account. This includes the name of the rule, the
+ * Organization Config rule creation or deletion status in each member account. This includes the name of the rule, the
  * status, error code and error message when the rule creation or deletion failed.
  * </p>
  * 
@@ -37,15 +37,15 @@ public class MemberAccountStatus implements Serializable, Cloneable, StructuredP
     private String accountId;
     /**
      * <p>
-     * The name of config rule deployed in the member account.
+     * The name of Config rule deployed in the member account.
      * </p>
      */
     private String configRuleName;
     /**
      * <p>
-     * Indicates deployment status for config rule in the member account. When master account calls
-     * <code>PutOrganizationConfigRule</code> action for the first time, config rule status is created in the member
-     * account. When master account calls <code>PutOrganizationConfigRule</code> action for the second time, config rule
+     * Indicates deployment status for Config rule in the member account. When master account calls
+     * <code>PutOrganizationConfigRule</code> action for the first time, Config rule status is created in the member
+     * account. When master account calls <code>PutOrganizationConfigRule</code> action for the second time, Config rule
      * status is updated in the member account. Config rule status is deleted when the master account deletes
      * <code>OrganizationConfigRule</code> and disables service access for
      * <code>config-multiaccountsetup.amazonaws.com</code>.
@@ -56,47 +56,47 @@ public class MemberAccountStatus implements Serializable, Cloneable, StructuredP
      * <ul>
      * <li>
      * <p>
-     * <code>CREATE_SUCCESSFUL</code> when config rule has been created in the member account.
+     * <code>CREATE_SUCCESSFUL</code> when Config rule has been created in the member account.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>CREATE_IN_PROGRESS</code> when config rule is being created in the member account.
+     * <code>CREATE_IN_PROGRESS</code> when Config rule is being created in the member account.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>CREATE_FAILED</code> when config rule creation has failed in the member account.
+     * <code>CREATE_FAILED</code> when Config rule creation has failed in the member account.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>DELETE_FAILED</code> when config rule deletion has failed in the member account.
+     * <code>DELETE_FAILED</code> when Config rule deletion has failed in the member account.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>DELETE_IN_PROGRESS</code> when config rule is being deleted in the member account.
+     * <code>DELETE_IN_PROGRESS</code> when Config rule is being deleted in the member account.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>DELETE_SUCCESSFUL</code> when config rule has been deleted in the member account.
+     * <code>DELETE_SUCCESSFUL</code> when Config rule has been deleted in the member account.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>UPDATE_SUCCESSFUL</code> when config rule has been updated in the member account.
+     * <code>UPDATE_SUCCESSFUL</code> when Config rule has been updated in the member account.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>UPDATE_IN_PROGRESS</code> when config rule is being updated in the member account.
+     * <code>UPDATE_IN_PROGRESS</code> when Config rule is being updated in the member account.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>UPDATE_FAILED</code> when config rule deletion has failed in the member account.
+     * <code>UPDATE_FAILED</code> when Config rule deletion has failed in the member account.
      * </p>
      * </li>
      * </ul>
@@ -104,13 +104,13 @@ public class MemberAccountStatus implements Serializable, Cloneable, StructuredP
     private String memberAccountRuleStatus;
     /**
      * <p>
-     * An error code that is returned when config rule creation or deletion failed in the member account.
+     * An error code that is returned when Config rule creation or deletion failed in the member account.
      * </p>
      */
     private String errorCode;
     /**
      * <p>
-     * An error message indicating that config rule account creation or deletion has failed due to an error in the
+     * An error message indicating that Config rule account creation or deletion has failed due to an error in the
      * member account.
      * </p>
      */
@@ -164,11 +164,11 @@ public class MemberAccountStatus implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The name of config rule deployed in the member account.
+     * The name of Config rule deployed in the member account.
      * </p>
      * 
      * @param configRuleName
-     *        The name of config rule deployed in the member account.
+     *        The name of Config rule deployed in the member account.
      */
 
     public void setConfigRuleName(String configRuleName) {
@@ -177,10 +177,10 @@ public class MemberAccountStatus implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The name of config rule deployed in the member account.
+     * The name of Config rule deployed in the member account.
      * </p>
      * 
-     * @return The name of config rule deployed in the member account.
+     * @return The name of Config rule deployed in the member account.
      */
 
     public String getConfigRuleName() {
@@ -189,11 +189,11 @@ public class MemberAccountStatus implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The name of config rule deployed in the member account.
+     * The name of Config rule deployed in the member account.
      * </p>
      * 
      * @param configRuleName
-     *        The name of config rule deployed in the member account.
+     *        The name of Config rule deployed in the member account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -204,9 +204,9 @@ public class MemberAccountStatus implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * Indicates deployment status for config rule in the member account. When master account calls
-     * <code>PutOrganizationConfigRule</code> action for the first time, config rule status is created in the member
-     * account. When master account calls <code>PutOrganizationConfigRule</code> action for the second time, config rule
+     * Indicates deployment status for Config rule in the member account. When master account calls
+     * <code>PutOrganizationConfigRule</code> action for the first time, Config rule status is created in the member
+     * account. When master account calls <code>PutOrganizationConfigRule</code> action for the second time, Config rule
      * status is updated in the member account. Config rule status is deleted when the master account deletes
      * <code>OrganizationConfigRule</code> and disables service access for
      * <code>config-multiaccountsetup.amazonaws.com</code>.
@@ -217,56 +217,56 @@ public class MemberAccountStatus implements Serializable, Cloneable, StructuredP
      * <ul>
      * <li>
      * <p>
-     * <code>CREATE_SUCCESSFUL</code> when config rule has been created in the member account.
+     * <code>CREATE_SUCCESSFUL</code> when Config rule has been created in the member account.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>CREATE_IN_PROGRESS</code> when config rule is being created in the member account.
+     * <code>CREATE_IN_PROGRESS</code> when Config rule is being created in the member account.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>CREATE_FAILED</code> when config rule creation has failed in the member account.
+     * <code>CREATE_FAILED</code> when Config rule creation has failed in the member account.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>DELETE_FAILED</code> when config rule deletion has failed in the member account.
+     * <code>DELETE_FAILED</code> when Config rule deletion has failed in the member account.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>DELETE_IN_PROGRESS</code> when config rule is being deleted in the member account.
+     * <code>DELETE_IN_PROGRESS</code> when Config rule is being deleted in the member account.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>DELETE_SUCCESSFUL</code> when config rule has been deleted in the member account.
+     * <code>DELETE_SUCCESSFUL</code> when Config rule has been deleted in the member account.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>UPDATE_SUCCESSFUL</code> when config rule has been updated in the member account.
+     * <code>UPDATE_SUCCESSFUL</code> when Config rule has been updated in the member account.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>UPDATE_IN_PROGRESS</code> when config rule is being updated in the member account.
+     * <code>UPDATE_IN_PROGRESS</code> when Config rule is being updated in the member account.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>UPDATE_FAILED</code> when config rule deletion has failed in the member account.
+     * <code>UPDATE_FAILED</code> when Config rule deletion has failed in the member account.
      * </p>
      * </li>
      * </ul>
      * 
      * @param memberAccountRuleStatus
-     *        Indicates deployment status for config rule in the member account. When master account calls
-     *        <code>PutOrganizationConfigRule</code> action for the first time, config rule status is created in the
+     *        Indicates deployment status for Config rule in the member account. When master account calls
+     *        <code>PutOrganizationConfigRule</code> action for the first time, Config rule status is created in the
      *        member account. When master account calls <code>PutOrganizationConfigRule</code> action for the second
-     *        time, config rule status is updated in the member account. Config rule status is deleted when the master
+     *        time, Config rule status is updated in the member account. Config rule status is deleted when the master
      *        account deletes <code>OrganizationConfigRule</code> and disables service access for
      *        <code>config-multiaccountsetup.amazonaws.com</code>. </p>
      *        <p>
@@ -275,47 +275,47 @@ public class MemberAccountStatus implements Serializable, Cloneable, StructuredP
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>CREATE_SUCCESSFUL</code> when config rule has been created in the member account.
+     *        <code>CREATE_SUCCESSFUL</code> when Config rule has been created in the member account.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>CREATE_IN_PROGRESS</code> when config rule is being created in the member account.
+     *        <code>CREATE_IN_PROGRESS</code> when Config rule is being created in the member account.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>CREATE_FAILED</code> when config rule creation has failed in the member account.
+     *        <code>CREATE_FAILED</code> when Config rule creation has failed in the member account.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>DELETE_FAILED</code> when config rule deletion has failed in the member account.
+     *        <code>DELETE_FAILED</code> when Config rule deletion has failed in the member account.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>DELETE_IN_PROGRESS</code> when config rule is being deleted in the member account.
+     *        <code>DELETE_IN_PROGRESS</code> when Config rule is being deleted in the member account.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>DELETE_SUCCESSFUL</code> when config rule has been deleted in the member account.
+     *        <code>DELETE_SUCCESSFUL</code> when Config rule has been deleted in the member account.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>UPDATE_SUCCESSFUL</code> when config rule has been updated in the member account.
+     *        <code>UPDATE_SUCCESSFUL</code> when Config rule has been updated in the member account.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>UPDATE_IN_PROGRESS</code> when config rule is being updated in the member account.
+     *        <code>UPDATE_IN_PROGRESS</code> when Config rule is being updated in the member account.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>UPDATE_FAILED</code> when config rule deletion has failed in the member account.
+     *        <code>UPDATE_FAILED</code> when Config rule deletion has failed in the member account.
      *        </p>
      *        </li>
      * @see MemberAccountRuleStatus
@@ -327,9 +327,9 @@ public class MemberAccountStatus implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * Indicates deployment status for config rule in the member account. When master account calls
-     * <code>PutOrganizationConfigRule</code> action for the first time, config rule status is created in the member
-     * account. When master account calls <code>PutOrganizationConfigRule</code> action for the second time, config rule
+     * Indicates deployment status for Config rule in the member account. When master account calls
+     * <code>PutOrganizationConfigRule</code> action for the first time, Config rule status is created in the member
+     * account. When master account calls <code>PutOrganizationConfigRule</code> action for the second time, Config rule
      * status is updated in the member account. Config rule status is deleted when the master account deletes
      * <code>OrganizationConfigRule</code> and disables service access for
      * <code>config-multiaccountsetup.amazonaws.com</code>.
@@ -340,55 +340,55 @@ public class MemberAccountStatus implements Serializable, Cloneable, StructuredP
      * <ul>
      * <li>
      * <p>
-     * <code>CREATE_SUCCESSFUL</code> when config rule has been created in the member account.
+     * <code>CREATE_SUCCESSFUL</code> when Config rule has been created in the member account.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>CREATE_IN_PROGRESS</code> when config rule is being created in the member account.
+     * <code>CREATE_IN_PROGRESS</code> when Config rule is being created in the member account.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>CREATE_FAILED</code> when config rule creation has failed in the member account.
+     * <code>CREATE_FAILED</code> when Config rule creation has failed in the member account.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>DELETE_FAILED</code> when config rule deletion has failed in the member account.
+     * <code>DELETE_FAILED</code> when Config rule deletion has failed in the member account.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>DELETE_IN_PROGRESS</code> when config rule is being deleted in the member account.
+     * <code>DELETE_IN_PROGRESS</code> when Config rule is being deleted in the member account.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>DELETE_SUCCESSFUL</code> when config rule has been deleted in the member account.
+     * <code>DELETE_SUCCESSFUL</code> when Config rule has been deleted in the member account.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>UPDATE_SUCCESSFUL</code> when config rule has been updated in the member account.
+     * <code>UPDATE_SUCCESSFUL</code> when Config rule has been updated in the member account.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>UPDATE_IN_PROGRESS</code> when config rule is being updated in the member account.
+     * <code>UPDATE_IN_PROGRESS</code> when Config rule is being updated in the member account.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>UPDATE_FAILED</code> when config rule deletion has failed in the member account.
+     * <code>UPDATE_FAILED</code> when Config rule deletion has failed in the member account.
      * </p>
      * </li>
      * </ul>
      * 
-     * @return Indicates deployment status for config rule in the member account. When master account calls
-     *         <code>PutOrganizationConfigRule</code> action for the first time, config rule status is created in the
+     * @return Indicates deployment status for Config rule in the member account. When master account calls
+     *         <code>PutOrganizationConfigRule</code> action for the first time, Config rule status is created in the
      *         member account. When master account calls <code>PutOrganizationConfigRule</code> action for the second
-     *         time, config rule status is updated in the member account. Config rule status is deleted when the master
+     *         time, Config rule status is updated in the member account. Config rule status is deleted when the master
      *         account deletes <code>OrganizationConfigRule</code> and disables service access for
      *         <code>config-multiaccountsetup.amazonaws.com</code>. </p>
      *         <p>
@@ -397,47 +397,47 @@ public class MemberAccountStatus implements Serializable, Cloneable, StructuredP
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>CREATE_SUCCESSFUL</code> when config rule has been created in the member account.
+     *         <code>CREATE_SUCCESSFUL</code> when Config rule has been created in the member account.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>CREATE_IN_PROGRESS</code> when config rule is being created in the member account.
+     *         <code>CREATE_IN_PROGRESS</code> when Config rule is being created in the member account.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>CREATE_FAILED</code> when config rule creation has failed in the member account.
+     *         <code>CREATE_FAILED</code> when Config rule creation has failed in the member account.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>DELETE_FAILED</code> when config rule deletion has failed in the member account.
+     *         <code>DELETE_FAILED</code> when Config rule deletion has failed in the member account.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>DELETE_IN_PROGRESS</code> when config rule is being deleted in the member account.
+     *         <code>DELETE_IN_PROGRESS</code> when Config rule is being deleted in the member account.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>DELETE_SUCCESSFUL</code> when config rule has been deleted in the member account.
+     *         <code>DELETE_SUCCESSFUL</code> when Config rule has been deleted in the member account.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>UPDATE_SUCCESSFUL</code> when config rule has been updated in the member account.
+     *         <code>UPDATE_SUCCESSFUL</code> when Config rule has been updated in the member account.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>UPDATE_IN_PROGRESS</code> when config rule is being updated in the member account.
+     *         <code>UPDATE_IN_PROGRESS</code> when Config rule is being updated in the member account.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>UPDATE_FAILED</code> when config rule deletion has failed in the member account.
+     *         <code>UPDATE_FAILED</code> when Config rule deletion has failed in the member account.
      *         </p>
      *         </li>
      * @see MemberAccountRuleStatus
@@ -449,9 +449,9 @@ public class MemberAccountStatus implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * Indicates deployment status for config rule in the member account. When master account calls
-     * <code>PutOrganizationConfigRule</code> action for the first time, config rule status is created in the member
-     * account. When master account calls <code>PutOrganizationConfigRule</code> action for the second time, config rule
+     * Indicates deployment status for Config rule in the member account. When master account calls
+     * <code>PutOrganizationConfigRule</code> action for the first time, Config rule status is created in the member
+     * account. When master account calls <code>PutOrganizationConfigRule</code> action for the second time, Config rule
      * status is updated in the member account. Config rule status is deleted when the master account deletes
      * <code>OrganizationConfigRule</code> and disables service access for
      * <code>config-multiaccountsetup.amazonaws.com</code>.
@@ -462,56 +462,56 @@ public class MemberAccountStatus implements Serializable, Cloneable, StructuredP
      * <ul>
      * <li>
      * <p>
-     * <code>CREATE_SUCCESSFUL</code> when config rule has been created in the member account.
+     * <code>CREATE_SUCCESSFUL</code> when Config rule has been created in the member account.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>CREATE_IN_PROGRESS</code> when config rule is being created in the member account.
+     * <code>CREATE_IN_PROGRESS</code> when Config rule is being created in the member account.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>CREATE_FAILED</code> when config rule creation has failed in the member account.
+     * <code>CREATE_FAILED</code> when Config rule creation has failed in the member account.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>DELETE_FAILED</code> when config rule deletion has failed in the member account.
+     * <code>DELETE_FAILED</code> when Config rule deletion has failed in the member account.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>DELETE_IN_PROGRESS</code> when config rule is being deleted in the member account.
+     * <code>DELETE_IN_PROGRESS</code> when Config rule is being deleted in the member account.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>DELETE_SUCCESSFUL</code> when config rule has been deleted in the member account.
+     * <code>DELETE_SUCCESSFUL</code> when Config rule has been deleted in the member account.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>UPDATE_SUCCESSFUL</code> when config rule has been updated in the member account.
+     * <code>UPDATE_SUCCESSFUL</code> when Config rule has been updated in the member account.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>UPDATE_IN_PROGRESS</code> when config rule is being updated in the member account.
+     * <code>UPDATE_IN_PROGRESS</code> when Config rule is being updated in the member account.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>UPDATE_FAILED</code> when config rule deletion has failed in the member account.
+     * <code>UPDATE_FAILED</code> when Config rule deletion has failed in the member account.
      * </p>
      * </li>
      * </ul>
      * 
      * @param memberAccountRuleStatus
-     *        Indicates deployment status for config rule in the member account. When master account calls
-     *        <code>PutOrganizationConfigRule</code> action for the first time, config rule status is created in the
+     *        Indicates deployment status for Config rule in the member account. When master account calls
+     *        <code>PutOrganizationConfigRule</code> action for the first time, Config rule status is created in the
      *        member account. When master account calls <code>PutOrganizationConfigRule</code> action for the second
-     *        time, config rule status is updated in the member account. Config rule status is deleted when the master
+     *        time, Config rule status is updated in the member account. Config rule status is deleted when the master
      *        account deletes <code>OrganizationConfigRule</code> and disables service access for
      *        <code>config-multiaccountsetup.amazonaws.com</code>. </p>
      *        <p>
@@ -520,47 +520,47 @@ public class MemberAccountStatus implements Serializable, Cloneable, StructuredP
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>CREATE_SUCCESSFUL</code> when config rule has been created in the member account.
+     *        <code>CREATE_SUCCESSFUL</code> when Config rule has been created in the member account.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>CREATE_IN_PROGRESS</code> when config rule is being created in the member account.
+     *        <code>CREATE_IN_PROGRESS</code> when Config rule is being created in the member account.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>CREATE_FAILED</code> when config rule creation has failed in the member account.
+     *        <code>CREATE_FAILED</code> when Config rule creation has failed in the member account.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>DELETE_FAILED</code> when config rule deletion has failed in the member account.
+     *        <code>DELETE_FAILED</code> when Config rule deletion has failed in the member account.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>DELETE_IN_PROGRESS</code> when config rule is being deleted in the member account.
+     *        <code>DELETE_IN_PROGRESS</code> when Config rule is being deleted in the member account.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>DELETE_SUCCESSFUL</code> when config rule has been deleted in the member account.
+     *        <code>DELETE_SUCCESSFUL</code> when Config rule has been deleted in the member account.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>UPDATE_SUCCESSFUL</code> when config rule has been updated in the member account.
+     *        <code>UPDATE_SUCCESSFUL</code> when Config rule has been updated in the member account.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>UPDATE_IN_PROGRESS</code> when config rule is being updated in the member account.
+     *        <code>UPDATE_IN_PROGRESS</code> when Config rule is being updated in the member account.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>UPDATE_FAILED</code> when config rule deletion has failed in the member account.
+     *        <code>UPDATE_FAILED</code> when Config rule deletion has failed in the member account.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -574,9 +574,9 @@ public class MemberAccountStatus implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * Indicates deployment status for config rule in the member account. When master account calls
-     * <code>PutOrganizationConfigRule</code> action for the first time, config rule status is created in the member
-     * account. When master account calls <code>PutOrganizationConfigRule</code> action for the second time, config rule
+     * Indicates deployment status for Config rule in the member account. When master account calls
+     * <code>PutOrganizationConfigRule</code> action for the first time, Config rule status is created in the member
+     * account. When master account calls <code>PutOrganizationConfigRule</code> action for the second time, Config rule
      * status is updated in the member account. Config rule status is deleted when the master account deletes
      * <code>OrganizationConfigRule</code> and disables service access for
      * <code>config-multiaccountsetup.amazonaws.com</code>.
@@ -587,56 +587,56 @@ public class MemberAccountStatus implements Serializable, Cloneable, StructuredP
      * <ul>
      * <li>
      * <p>
-     * <code>CREATE_SUCCESSFUL</code> when config rule has been created in the member account.
+     * <code>CREATE_SUCCESSFUL</code> when Config rule has been created in the member account.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>CREATE_IN_PROGRESS</code> when config rule is being created in the member account.
+     * <code>CREATE_IN_PROGRESS</code> when Config rule is being created in the member account.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>CREATE_FAILED</code> when config rule creation has failed in the member account.
+     * <code>CREATE_FAILED</code> when Config rule creation has failed in the member account.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>DELETE_FAILED</code> when config rule deletion has failed in the member account.
+     * <code>DELETE_FAILED</code> when Config rule deletion has failed in the member account.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>DELETE_IN_PROGRESS</code> when config rule is being deleted in the member account.
+     * <code>DELETE_IN_PROGRESS</code> when Config rule is being deleted in the member account.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>DELETE_SUCCESSFUL</code> when config rule has been deleted in the member account.
+     * <code>DELETE_SUCCESSFUL</code> when Config rule has been deleted in the member account.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>UPDATE_SUCCESSFUL</code> when config rule has been updated in the member account.
+     * <code>UPDATE_SUCCESSFUL</code> when Config rule has been updated in the member account.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>UPDATE_IN_PROGRESS</code> when config rule is being updated in the member account.
+     * <code>UPDATE_IN_PROGRESS</code> when Config rule is being updated in the member account.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>UPDATE_FAILED</code> when config rule deletion has failed in the member account.
+     * <code>UPDATE_FAILED</code> when Config rule deletion has failed in the member account.
      * </p>
      * </li>
      * </ul>
      * 
      * @param memberAccountRuleStatus
-     *        Indicates deployment status for config rule in the member account. When master account calls
-     *        <code>PutOrganizationConfigRule</code> action for the first time, config rule status is created in the
+     *        Indicates deployment status for Config rule in the member account. When master account calls
+     *        <code>PutOrganizationConfigRule</code> action for the first time, Config rule status is created in the
      *        member account. When master account calls <code>PutOrganizationConfigRule</code> action for the second
-     *        time, config rule status is updated in the member account. Config rule status is deleted when the master
+     *        time, Config rule status is updated in the member account. Config rule status is deleted when the master
      *        account deletes <code>OrganizationConfigRule</code> and disables service access for
      *        <code>config-multiaccountsetup.amazonaws.com</code>. </p>
      *        <p>
@@ -645,47 +645,47 @@ public class MemberAccountStatus implements Serializable, Cloneable, StructuredP
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>CREATE_SUCCESSFUL</code> when config rule has been created in the member account.
+     *        <code>CREATE_SUCCESSFUL</code> when Config rule has been created in the member account.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>CREATE_IN_PROGRESS</code> when config rule is being created in the member account.
+     *        <code>CREATE_IN_PROGRESS</code> when Config rule is being created in the member account.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>CREATE_FAILED</code> when config rule creation has failed in the member account.
+     *        <code>CREATE_FAILED</code> when Config rule creation has failed in the member account.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>DELETE_FAILED</code> when config rule deletion has failed in the member account.
+     *        <code>DELETE_FAILED</code> when Config rule deletion has failed in the member account.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>DELETE_IN_PROGRESS</code> when config rule is being deleted in the member account.
+     *        <code>DELETE_IN_PROGRESS</code> when Config rule is being deleted in the member account.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>DELETE_SUCCESSFUL</code> when config rule has been deleted in the member account.
+     *        <code>DELETE_SUCCESSFUL</code> when Config rule has been deleted in the member account.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>UPDATE_SUCCESSFUL</code> when config rule has been updated in the member account.
+     *        <code>UPDATE_SUCCESSFUL</code> when Config rule has been updated in the member account.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>UPDATE_IN_PROGRESS</code> when config rule is being updated in the member account.
+     *        <code>UPDATE_IN_PROGRESS</code> when Config rule is being updated in the member account.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>UPDATE_FAILED</code> when config rule deletion has failed in the member account.
+     *        <code>UPDATE_FAILED</code> when Config rule deletion has failed in the member account.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -699,11 +699,11 @@ public class MemberAccountStatus implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * An error code that is returned when config rule creation or deletion failed in the member account.
+     * An error code that is returned when Config rule creation or deletion failed in the member account.
      * </p>
      * 
      * @param errorCode
-     *        An error code that is returned when config rule creation or deletion failed in the member account.
+     *        An error code that is returned when Config rule creation or deletion failed in the member account.
      */
 
     public void setErrorCode(String errorCode) {
@@ -712,10 +712,10 @@ public class MemberAccountStatus implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * An error code that is returned when config rule creation or deletion failed in the member account.
+     * An error code that is returned when Config rule creation or deletion failed in the member account.
      * </p>
      * 
-     * @return An error code that is returned when config rule creation or deletion failed in the member account.
+     * @return An error code that is returned when Config rule creation or deletion failed in the member account.
      */
 
     public String getErrorCode() {
@@ -724,11 +724,11 @@ public class MemberAccountStatus implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * An error code that is returned when config rule creation or deletion failed in the member account.
+     * An error code that is returned when Config rule creation or deletion failed in the member account.
      * </p>
      * 
      * @param errorCode
-     *        An error code that is returned when config rule creation or deletion failed in the member account.
+     *        An error code that is returned when Config rule creation or deletion failed in the member account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -739,12 +739,12 @@ public class MemberAccountStatus implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * An error message indicating that config rule account creation or deletion has failed due to an error in the
+     * An error message indicating that Config rule account creation or deletion has failed due to an error in the
      * member account.
      * </p>
      * 
      * @param errorMessage
-     *        An error message indicating that config rule account creation or deletion has failed due to an error in
+     *        An error message indicating that Config rule account creation or deletion has failed due to an error in
      *        the member account.
      */
 
@@ -754,11 +754,11 @@ public class MemberAccountStatus implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * An error message indicating that config rule account creation or deletion has failed due to an error in the
+     * An error message indicating that Config rule account creation or deletion has failed due to an error in the
      * member account.
      * </p>
      * 
-     * @return An error message indicating that config rule account creation or deletion has failed due to an error in
+     * @return An error message indicating that Config rule account creation or deletion has failed due to an error in
      *         the member account.
      */
 
@@ -768,12 +768,12 @@ public class MemberAccountStatus implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * An error message indicating that config rule account creation or deletion has failed due to an error in the
+     * An error message indicating that Config rule account creation or deletion has failed due to an error in the
      * member account.
      * </p>
      * 
      * @param errorMessage
-     *        An error message indicating that config rule account creation or deletion has failed due to an error in
+     *        An error message indicating that Config rule account creation or deletion has failed due to an error in
      *        the member account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

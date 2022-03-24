@@ -92,6 +92,8 @@ public class FunctionConfigurationMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SigningJobArn").build();
     private static final MarshallingInfo<List> ARCHITECTURES_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Architectures").build();
+    private static final MarshallingInfo<StructuredPojo> EPHEMERALSTORAGE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EphemeralStorage").build();
 
     private static final FunctionConfigurationMarshaller instance = new FunctionConfigurationMarshaller();
 
@@ -141,6 +143,7 @@ public class FunctionConfigurationMarshaller {
             protocolMarshaller.marshall(functionConfiguration.getSigningProfileVersionArn(), SIGNINGPROFILEVERSIONARN_BINDING);
             protocolMarshaller.marshall(functionConfiguration.getSigningJobArn(), SIGNINGJOBARN_BINDING);
             protocolMarshaller.marshall(functionConfiguration.getArchitectures(), ARCHITECTURES_BINDING);
+            protocolMarshaller.marshall(functionConfiguration.getEphemeralStorage(), EPHEMERALSTORAGE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

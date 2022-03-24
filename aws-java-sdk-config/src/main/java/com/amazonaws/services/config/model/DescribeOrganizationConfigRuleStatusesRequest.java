@@ -27,7 +27,7 @@ public class DescribeOrganizationConfigRuleStatusesRequest extends com.amazonaws
 
     /**
      * <p>
-     * The names of organization config rules for which you want status details. If you do not specify any names, Config
+     * The names of organization Config rules for which you want status details. If you do not specify any names, Config
      * returns details for all your organization Config rules.
      * </p>
      */
@@ -49,11 +49,11 @@ public class DescribeOrganizationConfigRuleStatusesRequest extends com.amazonaws
 
     /**
      * <p>
-     * The names of organization config rules for which you want status details. If you do not specify any names, Config
+     * The names of organization Config rules for which you want status details. If you do not specify any names, Config
      * returns details for all your organization Config rules.
      * </p>
      * 
-     * @return The names of organization config rules for which you want status details. If you do not specify any
+     * @return The names of organization Config rules for which you want status details. If you do not specify any
      *         names, Config returns details for all your organization Config rules.
      */
 
@@ -66,12 +66,12 @@ public class DescribeOrganizationConfigRuleStatusesRequest extends com.amazonaws
 
     /**
      * <p>
-     * The names of organization config rules for which you want status details. If you do not specify any names, Config
+     * The names of organization Config rules for which you want status details. If you do not specify any names, Config
      * returns details for all your organization Config rules.
      * </p>
      * 
      * @param organizationConfigRuleNames
-     *        The names of organization config rules for which you want status details. If you do not specify any names,
+     *        The names of organization Config rules for which you want status details. If you do not specify any names,
      *        Config returns details for all your organization Config rules.
      */
 
@@ -86,7 +86,7 @@ public class DescribeOrganizationConfigRuleStatusesRequest extends com.amazonaws
 
     /**
      * <p>
-     * The names of organization config rules for which you want status details. If you do not specify any names, Config
+     * The names of organization Config rules for which you want status details. If you do not specify any names, Config
      * returns details for all your organization Config rules.
      * </p>
      * <p>
@@ -96,7 +96,7 @@ public class DescribeOrganizationConfigRuleStatusesRequest extends com.amazonaws
      * </p>
      * 
      * @param organizationConfigRuleNames
-     *        The names of organization config rules for which you want status details. If you do not specify any names,
+     *        The names of organization Config rules for which you want status details. If you do not specify any names,
      *        Config returns details for all your organization Config rules.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -113,12 +113,12 @@ public class DescribeOrganizationConfigRuleStatusesRequest extends com.amazonaws
 
     /**
      * <p>
-     * The names of organization config rules for which you want status details. If you do not specify any names, Config
+     * The names of organization Config rules for which you want status details. If you do not specify any names, Config
      * returns details for all your organization Config rules.
      * </p>
      * 
      * @param organizationConfigRuleNames
-     *        The names of organization config rules for which you want status details. If you do not specify any names,
+     *        The names of organization Config rules for which you want status details. If you do not specify any names,
      *        Config returns details for all your organization Config rules.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

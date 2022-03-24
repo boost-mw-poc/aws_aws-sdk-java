@@ -164,6 +164,13 @@ public class UpdateFunctionConfigurationRequest extends com.amazonaws.AmazonWebS
      * </p>
      */
     private ImageConfig imageConfig;
+    /**
+     * <p>
+     * The size of the function’s /tmp directory in MB. The default value is 512, but can be any whole number between
+     * 512 and 10240 MB.
+     * </p>
+     */
+    private EphemeralStorage ephemeralStorage;
 
     /**
      * <p>
@@ -1177,6 +1184,52 @@ public class UpdateFunctionConfigurationRequest extends com.amazonaws.AmazonWebS
     }
 
     /**
+     * <p>
+     * The size of the function’s /tmp directory in MB. The default value is 512, but can be any whole number between
+     * 512 and 10240 MB.
+     * </p>
+     * 
+     * @param ephemeralStorage
+     *        The size of the function’s /tmp directory in MB. The default value is 512, but can be any whole number
+     *        between 512 and 10240 MB.
+     */
+
+    public void setEphemeralStorage(EphemeralStorage ephemeralStorage) {
+        this.ephemeralStorage = ephemeralStorage;
+    }
+
+    /**
+     * <p>
+     * The size of the function’s /tmp directory in MB. The default value is 512, but can be any whole number between
+     * 512 and 10240 MB.
+     * </p>
+     * 
+     * @return The size of the function’s /tmp directory in MB. The default value is 512, but can be any whole number
+     *         between 512 and 10240 MB.
+     */
+
+    public EphemeralStorage getEphemeralStorage() {
+        return this.ephemeralStorage;
+    }
+
+    /**
+     * <p>
+     * The size of the function’s /tmp directory in MB. The default value is 512, but can be any whole number between
+     * 512 and 10240 MB.
+     * </p>
+     * 
+     * @param ephemeralStorage
+     *        The size of the function’s /tmp directory in MB. The default value is 512, but can be any whole number
+     *        between 512 and 10240 MB.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateFunctionConfigurationRequest withEphemeralStorage(EphemeralStorage ephemeralStorage) {
+        setEphemeralStorage(ephemeralStorage);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1219,7 +1272,9 @@ public class UpdateFunctionConfigurationRequest extends com.amazonaws.AmazonWebS
         if (getFileSystemConfigs() != null)
             sb.append("FileSystemConfigs: ").append(getFileSystemConfigs()).append(",");
         if (getImageConfig() != null)
-            sb.append("ImageConfig: ").append(getImageConfig());
+            sb.append("ImageConfig: ").append(getImageConfig()).append(",");
+        if (getEphemeralStorage() != null)
+            sb.append("EphemeralStorage: ").append(getEphemeralStorage());
         sb.append("}");
         return sb.toString();
     }
@@ -1298,6 +1353,10 @@ public class UpdateFunctionConfigurationRequest extends com.amazonaws.AmazonWebS
             return false;
         if (other.getImageConfig() != null && other.getImageConfig().equals(this.getImageConfig()) == false)
             return false;
+        if (other.getEphemeralStorage() == null ^ this.getEphemeralStorage() == null)
+            return false;
+        if (other.getEphemeralStorage() != null && other.getEphemeralStorage().equals(this.getEphemeralStorage()) == false)
+            return false;
         return true;
     }
 
@@ -1322,6 +1381,7 @@ public class UpdateFunctionConfigurationRequest extends com.amazonaws.AmazonWebS
         hashCode = prime * hashCode + ((getLayers() == null) ? 0 : getLayers().hashCode());
         hashCode = prime * hashCode + ((getFileSystemConfigs() == null) ? 0 : getFileSystemConfigs().hashCode());
         hashCode = prime * hashCode + ((getImageConfig() == null) ? 0 : getImageConfig().hashCode());
+        hashCode = prime * hashCode + ((getEphemeralStorage() == null) ? 0 : getEphemeralStorage().hashCode());
         return hashCode;
     }
 

@@ -475,11 +475,11 @@ public interface AmazonConfigAsync extends AmazonConfig {
 
     /**
      * <p>
-     * Deletes the specified organization config rule and all of its evaluation results from all member accounts in that
+     * Deletes the specified organization Config rule and all of its evaluation results from all member accounts in that
      * organization.
      * </p>
      * <p>
-     * Only a master account and a delegated administrator account can delete an organization config rule. When calling
+     * Only a master account and a delegated administrator account can delete an organization Config rule. When calling
      * this API with a delegated administrator, you must ensure Organizations <code>ListDelegatedAdministrator</code>
      * permissions are added.
      * </p>
@@ -500,11 +500,11 @@ public interface AmazonConfigAsync extends AmazonConfig {
 
     /**
      * <p>
-     * Deletes the specified organization config rule and all of its evaluation results from all member accounts in that
+     * Deletes the specified organization Config rule and all of its evaluation results from all member accounts in that
      * organization.
      * </p>
      * <p>
-     * Only a master account and a delegated administrator account can delete an organization config rule. When calling
+     * Only a master account and a delegated administrator account can delete an organization Config rule. When calling
      * this API with a delegated administrator, you must ensure Organizations <code>ListDelegatedAdministrator</code>
      * permissions are added.
      * </p>
@@ -530,7 +530,7 @@ public interface AmazonConfigAsync extends AmazonConfig {
 
     /**
      * <p>
-     * Deletes the specified organization conformance pack and all of the config rules and remediation actions from all
+     * Deletes the specified organization conformance pack and all of the Config rules and remediation actions from all
      * member accounts in that organization.
      * </p>
      * <p>
@@ -555,7 +555,7 @@ public interface AmazonConfigAsync extends AmazonConfig {
 
     /**
      * <p>
-     * Deletes the specified organization conformance pack and all of the config rules and remediation actions from all
+     * Deletes the specified organization conformance pack and all of the Config rules and remediation actions from all
      * member accounts in that organization.
      * </p>
      * <p>
@@ -1791,17 +1791,17 @@ public interface AmazonConfigAsync extends AmazonConfig {
 
     /**
      * <p>
-     * Provides organization config rule deployment status for an organization.
+     * Provides organization Config rule deployment status for an organization.
      * </p>
      * <note>
      * <p>
-     * The status is not considered successful until organization config rule is successfully deployed in all the member
+     * The status is not considered successful until organization Config rule is successfully deployed in all the member
      * accounts with an exception of excluded accounts.
      * </p>
      * <p>
      * When you specify the limit and the next token, you receive a paginated response. Limit and next token are not
-     * applicable if you specify organization config rule names. It is only applicable, when you request all the
-     * organization config rules.
+     * applicable if you specify organization Config rule names. It is only applicable, when you request all the
+     * organization Config rules.
      * </p>
      * </note>
      * 
@@ -1817,17 +1817,17 @@ public interface AmazonConfigAsync extends AmazonConfig {
 
     /**
      * <p>
-     * Provides organization config rule deployment status for an organization.
+     * Provides organization Config rule deployment status for an organization.
      * </p>
      * <note>
      * <p>
-     * The status is not considered successful until organization config rule is successfully deployed in all the member
+     * The status is not considered successful until organization Config rule is successfully deployed in all the member
      * accounts with an exception of excluded accounts.
      * </p>
      * <p>
      * When you specify the limit and the next token, you receive a paginated response. Limit and next token are not
-     * applicable if you specify organization config rule names. It is only applicable, when you request all the
-     * organization config rules.
+     * applicable if you specify organization Config rule names. It is only applicable, when you request all the
+     * organization Config rules.
      * </p>
      * </note>
      * 
@@ -1848,13 +1848,13 @@ public interface AmazonConfigAsync extends AmazonConfig {
 
     /**
      * <p>
-     * Returns a list of organization config rules.
+     * Returns a list of organization Config rules.
      * </p>
      * <note>
      * <p>
      * When you specify the limit and the next token, you receive a paginated response. Limit and next token are not
-     * applicable if you specify organization config rule names. It is only applicable, when you request all the
-     * organization config rules.
+     * applicable if you specify organization Config rule names. It is only applicable, when you request all the
+     * organization Config rules.
      * </p>
      * </note>
      * 
@@ -1870,13 +1870,13 @@ public interface AmazonConfigAsync extends AmazonConfig {
 
     /**
      * <p>
-     * Returns a list of organization config rules.
+     * Returns a list of organization Config rules.
      * </p>
      * <note>
      * <p>
      * When you specify the limit and the next token, you receive a paginated response. Limit and next token are not
-     * applicable if you specify organization config rule names. It is only applicable, when you request all the
-     * organization config rules.
+     * applicable if you specify organization Config rule names. It is only applicable, when you request all the
+     * organization Config rules.
      * </p>
      * </note>
      * 
@@ -2717,6 +2717,37 @@ public interface AmazonConfigAsync extends AmazonConfig {
 
     /**
      * <p>
+     * Returns the policy definition containing the logic for your Config Custom Policy rule.
+     * </p>
+     * 
+     * @param getCustomRulePolicyRequest
+     * @return A Java Future containing the result of the GetCustomRulePolicy operation returned by the service.
+     * @sample AmazonConfigAsync.GetCustomRulePolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/GetCustomRulePolicy" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetCustomRulePolicyResult> getCustomRulePolicyAsync(GetCustomRulePolicyRequest getCustomRulePolicyRequest);
+
+    /**
+     * <p>
+     * Returns the policy definition containing the logic for your Config Custom Policy rule.
+     * </p>
+     * 
+     * @param getCustomRulePolicyRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetCustomRulePolicy operation returned by the service.
+     * @sample AmazonConfigAsyncHandler.GetCustomRulePolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/GetCustomRulePolicy" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetCustomRulePolicyResult> getCustomRulePolicyAsync(GetCustomRulePolicyRequest getCustomRulePolicyRequest,
+            com.amazonaws.handlers.AsyncHandler<GetCustomRulePolicyRequest, GetCustomRulePolicyResult> asyncHandler);
+
+    /**
+     * <p>
      * Returns the resource types, the number of each resource type, and the total number of resources that Config is
      * recording in this region for your Amazon Web Services account.
      * </p>
@@ -2886,7 +2917,7 @@ public interface AmazonConfigAsync extends AmazonConfig {
 
     /**
      * <p>
-     * Returns detailed status for each member account within an organization for a given organization config rule.
+     * Returns detailed status for each member account within an organization for a given organization Config rule.
      * </p>
      * 
      * @param getOrganizationConfigRuleDetailedStatusRequest
@@ -2901,7 +2932,7 @@ public interface AmazonConfigAsync extends AmazonConfig {
 
     /**
      * <p>
-     * Returns detailed status for each member account within an organization for a given organization config rule.
+     * Returns detailed status for each member account within an organization for a given organization Config rule.
      * </p>
      * 
      * @param getOrganizationConfigRuleDetailedStatusRequest
@@ -2955,6 +2986,41 @@ public interface AmazonConfigAsync extends AmazonConfig {
     java.util.concurrent.Future<GetOrganizationConformancePackDetailedStatusResult> getOrganizationConformancePackDetailedStatusAsync(
             GetOrganizationConformancePackDetailedStatusRequest getOrganizationConformancePackDetailedStatusRequest,
             com.amazonaws.handlers.AsyncHandler<GetOrganizationConformancePackDetailedStatusRequest, GetOrganizationConformancePackDetailedStatusResult> asyncHandler);
+
+    /**
+     * <p>
+     * Returns the policy definition containing the logic for your organization Config Custom Policy rule.
+     * </p>
+     * 
+     * @param getOrganizationCustomRulePolicyRequest
+     * @return A Java Future containing the result of the GetOrganizationCustomRulePolicy operation returned by the
+     *         service.
+     * @sample AmazonConfigAsync.GetOrganizationCustomRulePolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/GetOrganizationCustomRulePolicy"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetOrganizationCustomRulePolicyResult> getOrganizationCustomRulePolicyAsync(
+            GetOrganizationCustomRulePolicyRequest getOrganizationCustomRulePolicyRequest);
+
+    /**
+     * <p>
+     * Returns the policy definition containing the logic for your organization Config Custom Policy rule.
+     * </p>
+     * 
+     * @param getOrganizationCustomRulePolicyRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetOrganizationCustomRulePolicy operation returned by the
+     *         service.
+     * @sample AmazonConfigAsyncHandler.GetOrganizationCustomRulePolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/GetOrganizationCustomRulePolicy"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetOrganizationCustomRulePolicyResult> getOrganizationCustomRulePolicyAsync(
+            GetOrganizationCustomRulePolicyRequest getOrganizationCustomRulePolicyRequest,
+            com.amazonaws.handlers.AsyncHandler<GetOrganizationCustomRulePolicyRequest, GetOrganizationCustomRulePolicyResult> asyncHandler);
 
     /**
      * <p>
@@ -3694,11 +3760,11 @@ public interface AmazonConfigAsync extends AmazonConfig {
 
     /**
      * <p>
-     * Adds or updates organization config rule for your entire organization evaluating whether your Amazon Web Services
+     * Adds or updates organization Config rule for your entire organization evaluating whether your Amazon Web Services
      * resources comply with your desired configurations.
      * </p>
      * <p>
-     * Only a master account and a delegated administrator can create or update an organization config rule. When
+     * Only a master account and a delegated administrator can create or update an organization Config rule. When
      * calling this API with a delegated administrator, you must ensure Organizations
      * <code>ListDelegatedAdministrator</code> permissions are added.
      * </p>
@@ -3722,7 +3788,7 @@ public interface AmazonConfigAsync extends AmazonConfig {
      * an Config managed rule, specify the rule's identifier for the <code>RuleIdentifier</code> key.
      * </p>
      * <p>
-     * The maximum number of organization config rules that Config supports is 150 and 3 delegated administrator per
+     * The maximum number of organization Config rules that Config supports is 150 and 3 delegated administrator per
      * organization.
      * </p>
      * <note>
@@ -3745,11 +3811,11 @@ public interface AmazonConfigAsync extends AmazonConfig {
 
     /**
      * <p>
-     * Adds or updates organization config rule for your entire organization evaluating whether your Amazon Web Services
+     * Adds or updates organization Config rule for your entire organization evaluating whether your Amazon Web Services
      * resources comply with your desired configurations.
      * </p>
      * <p>
-     * Only a master account and a delegated administrator can create or update an organization config rule. When
+     * Only a master account and a delegated administrator can create or update an organization Config rule. When
      * calling this API with a delegated administrator, you must ensure Organizations
      * <code>ListDelegatedAdministrator</code> permissions are added.
      * </p>
@@ -3773,7 +3839,7 @@ public interface AmazonConfigAsync extends AmazonConfig {
      * an Config managed rule, specify the rule's identifier for the <code>RuleIdentifier</code> key.
      * </p>
      * <p>
-     * The maximum number of organization config rules that Config supports is 150 and 3 delegated administrator per
+     * The maximum number of organization Config rules that Config supports is 150 and 3 delegated administrator per
      * organization.
      * </p>
      * <note>

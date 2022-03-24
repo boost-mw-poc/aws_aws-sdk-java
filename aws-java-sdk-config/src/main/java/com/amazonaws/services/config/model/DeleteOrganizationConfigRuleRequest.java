@@ -27,18 +27,18 @@ public class DeleteOrganizationConfigRuleRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The name of organization config rule that you want to delete.
+     * The name of organization Config rule that you want to delete.
      * </p>
      */
     private String organizationConfigRuleName;
 
     /**
      * <p>
-     * The name of organization config rule that you want to delete.
+     * The name of organization Config rule that you want to delete.
      * </p>
      * 
      * @param organizationConfigRuleName
-     *        The name of organization config rule that you want to delete.
+     *        The name of organization Config rule that you want to delete.
      */
 
     public void setOrganizationConfigRuleName(String organizationConfigRuleName) {
@@ -47,10 +47,10 @@ public class DeleteOrganizationConfigRuleRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The name of organization config rule that you want to delete.
+     * The name of organization Config rule that you want to delete.
      * </p>
      * 
-     * @return The name of organization config rule that you want to delete.
+     * @return The name of organization Config rule that you want to delete.
      */
 
     public String getOrganizationConfigRuleName() {
@@ -59,11 +59,11 @@ public class DeleteOrganizationConfigRuleRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The name of organization config rule that you want to delete.
+     * The name of organization Config rule that you want to delete.
      * </p>
      * 
      * @param organizationConfigRuleName
-     *        The name of organization config rule that you want to delete.
+     *        The name of organization Config rule that you want to delete.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

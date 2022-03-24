@@ -25,18 +25,18 @@ public class PutOrganizationConfigRuleResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of an organization config rule.
+     * The Amazon Resource Name (ARN) of an organization Config rule.
      * </p>
      */
     private String organizationConfigRuleArn;
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of an organization config rule.
+     * The Amazon Resource Name (ARN) of an organization Config rule.
      * </p>
      * 
      * @param organizationConfigRuleArn
-     *        The Amazon Resource Name (ARN) of an organization config rule.
+     *        The Amazon Resource Name (ARN) of an organization Config rule.
      */
 
     public void setOrganizationConfigRuleArn(String organizationConfigRuleArn) {
@@ -45,10 +45,10 @@ public class PutOrganizationConfigRuleResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of an organization config rule.
+     * The Amazon Resource Name (ARN) of an organization Config rule.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of an organization config rule.
+     * @return The Amazon Resource Name (ARN) of an organization Config rule.
      */
 
     public String getOrganizationConfigRuleArn() {
@@ -57,11 +57,11 @@ public class PutOrganizationConfigRuleResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of an organization config rule.
+     * The Amazon Resource Name (ARN) of an organization Config rule.
      * </p>
      * 
      * @param organizationConfigRuleArn
-     *        The Amazon Resource Name (ARN) of an organization config rule.
+     *        The Amazon Resource Name (ARN) of an organization Config rule.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

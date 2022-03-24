@@ -25,18 +25,18 @@ public class StartTranscriptionJobResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * An object containing details of the asynchronous transcription job.
+     * Provides information about your asynchronous transcription job.
      * </p>
      */
     private TranscriptionJob transcriptionJob;
 
     /**
      * <p>
-     * An object containing details of the asynchronous transcription job.
+     * Provides information about your asynchronous transcription job.
      * </p>
      * 
      * @param transcriptionJob
-     *        An object containing details of the asynchronous transcription job.
+     *        Provides information about your asynchronous transcription job.
      */
 
     public void setTranscriptionJob(TranscriptionJob transcriptionJob) {
@@ -45,10 +45,10 @@ public class StartTranscriptionJobResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * An object containing details of the asynchronous transcription job.
+     * Provides information about your asynchronous transcription job.
      * </p>
      * 
-     * @return An object containing details of the asynchronous transcription job.
+     * @return Provides information about your asynchronous transcription job.
      */
 
     public TranscriptionJob getTranscriptionJob() {
@@ -57,11 +57,11 @@ public class StartTranscriptionJobResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * An object containing details of the asynchronous transcription job.
+     * Provides information about your asynchronous transcription job.
      * </p>
      * 
      * @param transcriptionJob
-     *        An object containing details of the asynchronous transcription job.
+     *        Provides information about your asynchronous transcription job.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

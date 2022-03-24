@@ -37,12 +37,12 @@ import javax.annotation.Generated;
  * </li>
  * <li>
  * <p>
- * For PutConfigOrganizationRule, organization config rule deletion is in progress. Try your request again later.
+ * For PutConfigOrganizationRule, organization Config rule deletion is in progress. Try your request again later.
  * </p>
  * </li>
  * <li>
  * <p>
- * For DeleteOrganizationConfigRule, organization config rule creation is in progress. Try your request again later.
+ * For DeleteOrganizationConfigRule, organization Config rule creation is in progress. Try your request again later.
  * </p>
  * </li>
  * <li>

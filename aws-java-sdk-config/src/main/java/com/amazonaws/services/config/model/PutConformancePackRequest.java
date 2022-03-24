@@ -51,7 +51,7 @@ public class PutConformancePackRequest extends com.amazonaws.AmazonWebServiceReq
      * </p>
      * <note>
      * <p>
-     * You can only use a YAML template with two resource types: config rule (<code>AWS::Config::ConfigRule</code>) and
+     * You can only use a YAML template with two resource types: Config rule (<code>AWS::Config::ConfigRule</code>) and
      * a remediation action (<code>AWS::Config::RemediationConfiguration</code>).
      * </p>
      * </note>
@@ -209,7 +209,7 @@ public class PutConformancePackRequest extends com.amazonaws.AmazonWebServiceReq
      * </p>
      * <note>
      * <p>
-     * You can only use a YAML template with two resource types: config rule (<code>AWS::Config::ConfigRule</code>) and
+     * You can only use a YAML template with two resource types: Config rule (<code>AWS::Config::ConfigRule</code>) and
      * a remediation action (<code>AWS::Config::RemediationConfiguration</code>).
      * </p>
      * </note>
@@ -218,7 +218,7 @@ public class PutConformancePackRequest extends com.amazonaws.AmazonWebServiceReq
      *        A string containing full conformance pack template body. Structure containing the template body with a
      *        minimum length of 1 byte and a maximum length of 51,200 bytes.</p> <note>
      *        <p>
-     *        You can only use a YAML template with two resource types: config rule (
+     *        You can only use a YAML template with two resource types: Config rule (
      *        <code>AWS::Config::ConfigRule</code>) and a remediation action (
      *        <code>AWS::Config::RemediationConfiguration</code>).
      *        </p>
@@ -235,7 +235,7 @@ public class PutConformancePackRequest extends com.amazonaws.AmazonWebServiceReq
      * </p>
      * <note>
      * <p>
-     * You can only use a YAML template with two resource types: config rule (<code>AWS::Config::ConfigRule</code>) and
+     * You can only use a YAML template with two resource types: Config rule (<code>AWS::Config::ConfigRule</code>) and
      * a remediation action (<code>AWS::Config::RemediationConfiguration</code>).
      * </p>
      * </note>
@@ -243,7 +243,7 @@ public class PutConformancePackRequest extends com.amazonaws.AmazonWebServiceReq
      * @return A string containing full conformance pack template body. Structure containing the template body with a
      *         minimum length of 1 byte and a maximum length of 51,200 bytes.</p> <note>
      *         <p>
-     *         You can only use a YAML template with two resource types: config rule (
+     *         You can only use a YAML template with two resource types: Config rule (
      *         <code>AWS::Config::ConfigRule</code>) and a remediation action (
      *         <code>AWS::Config::RemediationConfiguration</code>).
      *         </p>
@@ -260,7 +260,7 @@ public class PutConformancePackRequest extends com.amazonaws.AmazonWebServiceReq
      * </p>
      * <note>
      * <p>
-     * You can only use a YAML template with two resource types: config rule (<code>AWS::Config::ConfigRule</code>) and
+     * You can only use a YAML template with two resource types: Config rule (<code>AWS::Config::ConfigRule</code>) and
      * a remediation action (<code>AWS::Config::RemediationConfiguration</code>).
      * </p>
      * </note>
@@ -269,7 +269,7 @@ public class PutConformancePackRequest extends com.amazonaws.AmazonWebServiceReq
      *        A string containing full conformance pack template body. Structure containing the template body with a
      *        minimum length of 1 byte and a maximum length of 51,200 bytes.</p> <note>
      *        <p>
-     *        You can only use a YAML template with two resource types: config rule (
+     *        You can only use a YAML template with two resource types: Config rule (
      *        <code>AWS::Config::ConfigRule</code>) and a remediation action (
      *        <code>AWS::Config::RemediationConfiguration</code>).
      *        </p>

@@ -707,8 +707,8 @@ public class AmazonConfigClient extends AmazonWebServiceClient implements Amazon
      * @param deleteConfigRuleRequest
      * @return Result of the DeleteConfigRule operation returned by the service.
      * @throws NoSuchConfigRuleException
-     *         One or more Config rules in the request are invalid. Verify that the rule names are correct and try
-     *         again.
+     *         The Config rule in the request is not valid. Verify that the rule is an Config Custom Policy rule, that
+     *         the rule name is correct, and that valid Amazon Resouce Names (ARNs) are used before trying again.
      * @throws ResourceInUseException
      *         You see this exception in the following cases: </p>
      *         <ul>
@@ -731,13 +731,13 @@ public class AmazonConfigClient extends AmazonWebServiceClient implements Amazon
      *         </li>
      *         <li>
      *         <p>
-     *         For PutConfigOrganizationRule, organization config rule deletion is in progress. Try your request again
+     *         For PutConfigOrganizationRule, organization Config rule deletion is in progress. Try your request again
      *         later.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         For DeleteOrganizationConfigRule, organization config rule creation is in progress. Try your request
+     *         For DeleteOrganizationConfigRule, organization Config rule creation is in progress. Try your request
      *         again later.
      *         </p>
      *         </li>
@@ -965,13 +965,13 @@ public class AmazonConfigClient extends AmazonWebServiceClient implements Amazon
      *         </li>
      *         <li>
      *         <p>
-     *         For PutConfigOrganizationRule, organization config rule deletion is in progress. Try your request again
+     *         For PutConfigOrganizationRule, organization Config rule deletion is in progress. Try your request again
      *         later.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         For DeleteOrganizationConfigRule, organization config rule creation is in progress. Try your request
+     *         For DeleteOrganizationConfigRule, organization Config rule creation is in progress. Try your request
      *         again later.
      *         </p>
      *         </li>
@@ -1112,8 +1112,8 @@ public class AmazonConfigClient extends AmazonWebServiceClient implements Amazon
      * @param deleteEvaluationResultsRequest
      * @return Result of the DeleteEvaluationResults operation returned by the service.
      * @throws NoSuchConfigRuleException
-     *         One or more Config rules in the request are invalid. Verify that the rule names are correct and try
-     *         again.
+     *         The Config rule in the request is not valid. Verify that the rule is an Config Custom Policy rule, that
+     *         the rule name is correct, and that valid Amazon Resouce Names (ARNs) are used before trying again.
      * @throws ResourceInUseException
      *         You see this exception in the following cases: </p>
      *         <ul>
@@ -1136,13 +1136,13 @@ public class AmazonConfigClient extends AmazonWebServiceClient implements Amazon
      *         </li>
      *         <li>
      *         <p>
-     *         For PutConfigOrganizationRule, organization config rule deletion is in progress. Try your request again
+     *         For PutConfigOrganizationRule, organization Config rule deletion is in progress. Try your request again
      *         later.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         For DeleteOrganizationConfigRule, organization config rule creation is in progress. Try your request
+     *         For DeleteOrganizationConfigRule, organization Config rule creation is in progress. Try your request
      *         again later.
      *         </p>
      *         </li>
@@ -1210,11 +1210,11 @@ public class AmazonConfigClient extends AmazonWebServiceClient implements Amazon
 
     /**
      * <p>
-     * Deletes the specified organization config rule and all of its evaluation results from all member accounts in that
+     * Deletes the specified organization Config rule and all of its evaluation results from all member accounts in that
      * organization.
      * </p>
      * <p>
-     * Only a master account and a delegated administrator account can delete an organization config rule. When calling
+     * Only a master account and a delegated administrator account can delete an organization Config rule. When calling
      * this API with a delegated administrator, you must ensure Organizations <code>ListDelegatedAdministrator</code>
      * permissions are added.
      * </p>
@@ -1226,7 +1226,9 @@ public class AmazonConfigClient extends AmazonWebServiceClient implements Amazon
      * @param deleteOrganizationConfigRuleRequest
      * @return Result of the DeleteOrganizationConfigRule operation returned by the service.
      * @throws NoSuchOrganizationConfigRuleException
-     *         You specified one or more organization config rules that do not exist.
+     *         The Config rule in the request is not valid. Verify that the rule is an organization Config Custom Policy
+     *         rule, that the rule name is correct, and that valid Amazon Resouce Names (ARNs) are used before trying
+     *         again.
      * @throws ResourceInUseException
      *         You see this exception in the following cases: </p>
      *         <ul>
@@ -1249,13 +1251,13 @@ public class AmazonConfigClient extends AmazonWebServiceClient implements Amazon
      *         </li>
      *         <li>
      *         <p>
-     *         For PutConfigOrganizationRule, organization config rule deletion is in progress. Try your request again
+     *         For PutConfigOrganizationRule, organization Config rule deletion is in progress. Try your request again
      *         later.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         For DeleteOrganizationConfigRule, organization config rule creation is in progress. Try your request
+     *         For DeleteOrganizationConfigRule, organization Config rule creation is in progress. Try your request
      *         again later.
      *         </p>
      *         </li>
@@ -1358,7 +1360,7 @@ public class AmazonConfigClient extends AmazonWebServiceClient implements Amazon
 
     /**
      * <p>
-     * Deletes the specified organization conformance pack and all of the config rules and remediation actions from all
+     * Deletes the specified organization conformance pack and all of the Config rules and remediation actions from all
      * member accounts in that organization.
      * </p>
      * <p>
@@ -1401,13 +1403,13 @@ public class AmazonConfigClient extends AmazonWebServiceClient implements Amazon
      *         </li>
      *         <li>
      *         <p>
-     *         For PutConfigOrganizationRule, organization config rule deletion is in progress. Try your request again
+     *         For PutConfigOrganizationRule, organization Config rule deletion is in progress. Try your request again
      *         later.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         For DeleteOrganizationConfigRule, organization config rule creation is in progress. Try your request
+     *         For DeleteOrganizationConfigRule, organization Config rule creation is in progress. Try your request
      *         again later.
      *         </p>
      *         </li>
@@ -1598,7 +1600,7 @@ public class AmazonConfigClient extends AmazonWebServiceClient implements Amazon
      *         </li>
      *         <li>
      *         <p>
-     *         For PutOrganizationConfigRule, organization config rule cannot be created because you do not have
+     *         For PutOrganizationConfigRule, organization Config rule cannot be created because you do not have
      *         permissions to call IAM <code>GetRole</code> action or create a service linked role.
      *         </p>
      *         </li>
@@ -2286,8 +2288,8 @@ public class AmazonConfigClient extends AmazonWebServiceClient implements Amazon
      * @throws InvalidParameterValueException
      *         One or more of the specified parameters are invalid. Verify that your parameters are valid and try again.
      * @throws NoSuchConfigRuleException
-     *         One or more Config rules in the request are invalid. Verify that the rule names are correct and try
-     *         again.
+     *         The Config rule in the request is not valid. Verify that the rule is an Config Custom Policy rule, that
+     *         the rule name is correct, and that valid Amazon Resouce Names (ARNs) are used before trying again.
      * @throws InvalidNextTokenException
      *         The specified next token is invalid. Specify the <code>nextToken</code> string that was returned in the
      *         previous response to get the next page of results.
@@ -2455,8 +2457,8 @@ public class AmazonConfigClient extends AmazonWebServiceClient implements Amazon
      * @param describeConfigRuleEvaluationStatusRequest
      * @return Result of the DescribeConfigRuleEvaluationStatus operation returned by the service.
      * @throws NoSuchConfigRuleException
-     *         One or more Config rules in the request are invalid. Verify that the rule names are correct and try
-     *         again.
+     *         The Config rule in the request is not valid. Verify that the rule is an Config Custom Policy rule, that
+     *         the rule name is correct, and that valid Amazon Resouce Names (ARNs) are used before trying again.
      * @throws InvalidParameterValueException
      *         One or more of the specified parameters are invalid. Verify that your parameters are valid and try again.
      * @throws InvalidNextTokenException
@@ -2526,8 +2528,8 @@ public class AmazonConfigClient extends AmazonWebServiceClient implements Amazon
      * @param describeConfigRulesRequest
      * @return Result of the DescribeConfigRules operation returned by the service.
      * @throws NoSuchConfigRuleException
-     *         One or more Config rules in the request are invalid. Verify that the rule names are correct and try
-     *         again.
+     *         The Config rule in the request is not valid. Verify that the rule is an Config Custom Policy rule, that
+     *         the rule name is correct, and that valid Amazon Resouce Names (ARNs) are used before trying again.
      * @throws InvalidNextTokenException
      *         The specified next token is invalid. Specify the <code>nextToken</code> string that was returned in the
      *         previous response to get the next page of results.
@@ -3219,24 +3221,26 @@ public class AmazonConfigClient extends AmazonWebServiceClient implements Amazon
 
     /**
      * <p>
-     * Provides organization config rule deployment status for an organization.
+     * Provides organization Config rule deployment status for an organization.
      * </p>
      * <note>
      * <p>
-     * The status is not considered successful until organization config rule is successfully deployed in all the member
+     * The status is not considered successful until organization Config rule is successfully deployed in all the member
      * accounts with an exception of excluded accounts.
      * </p>
      * <p>
      * When you specify the limit and the next token, you receive a paginated response. Limit and next token are not
-     * applicable if you specify organization config rule names. It is only applicable, when you request all the
-     * organization config rules.
+     * applicable if you specify organization Config rule names. It is only applicable, when you request all the
+     * organization Config rules.
      * </p>
      * </note>
      * 
      * @param describeOrganizationConfigRuleStatusesRequest
      * @return Result of the DescribeOrganizationConfigRuleStatuses operation returned by the service.
      * @throws NoSuchOrganizationConfigRuleException
-     *         You specified one or more organization config rules that do not exist.
+     *         The Config rule in the request is not valid. Verify that the rule is an organization Config Custom Policy
+     *         rule, that the rule name is correct, and that valid Amazon Resouce Names (ARNs) are used before trying
+     *         again.
      * @throws InvalidLimitException
      *         The specified limit is outside the allowable range.
      * @throws InvalidNextTokenException
@@ -3330,20 +3334,22 @@ public class AmazonConfigClient extends AmazonWebServiceClient implements Amazon
 
     /**
      * <p>
-     * Returns a list of organization config rules.
+     * Returns a list of organization Config rules.
      * </p>
      * <note>
      * <p>
      * When you specify the limit and the next token, you receive a paginated response. Limit and next token are not
-     * applicable if you specify organization config rule names. It is only applicable, when you request all the
-     * organization config rules.
+     * applicable if you specify organization Config rule names. It is only applicable, when you request all the
+     * organization Config rules.
      * </p>
      * </note>
      * 
      * @param describeOrganizationConfigRulesRequest
      * @return Result of the DescribeOrganizationConfigRules operation returned by the service.
      * @throws NoSuchOrganizationConfigRuleException
-     *         You specified one or more organization config rules that do not exist.
+     *         The Config rule in the request is not valid. Verify that the rule is an organization Config Custom Policy
+     *         rule, that the rule name is correct, and that valid Amazon Resouce Names (ARNs) are used before trying
+     *         again.
      * @throws InvalidNextTokenException
      *         The specified next token is invalid. Specify the <code>nextToken</code> string that was returned in the
      *         previous response to get the next page of results.
@@ -4414,8 +4420,8 @@ public class AmazonConfigClient extends AmazonWebServiceClient implements Amazon
      *         The specified next token is invalid. Specify the <code>nextToken</code> string that was returned in the
      *         previous response to get the next page of results.
      * @throws NoSuchConfigRuleException
-     *         One or more Config rules in the request are invalid. Verify that the rule names are correct and try
-     *         again.
+     *         The Config rule in the request is not valid. Verify that the rule is an Config Custom Policy rule, that
+     *         the rule name is correct, and that valid Amazon Resouce Names (ARNs) are used before trying again.
      * @sample AmazonConfig.GetComplianceDetailsByConfigRule
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/GetComplianceDetailsByConfigRule"
      *      target="_top">AWS API Documentation</a>
@@ -4795,6 +4801,64 @@ public class AmazonConfigClient extends AmazonWebServiceClient implements Amazon
 
     /**
      * <p>
+     * Returns the policy definition containing the logic for your Config Custom Policy rule.
+     * </p>
+     * 
+     * @param getCustomRulePolicyRequest
+     * @return Result of the GetCustomRulePolicy operation returned by the service.
+     * @throws NoSuchConfigRuleException
+     *         The Config rule in the request is not valid. Verify that the rule is an Config Custom Policy rule, that
+     *         the rule name is correct, and that valid Amazon Resouce Names (ARNs) are used before trying again.
+     * @sample AmazonConfig.GetCustomRulePolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/GetCustomRulePolicy" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public GetCustomRulePolicyResult getCustomRulePolicy(GetCustomRulePolicyRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetCustomRulePolicy(request);
+    }
+
+    @SdkInternalApi
+    final GetCustomRulePolicyResult executeGetCustomRulePolicy(GetCustomRulePolicyRequest getCustomRulePolicyRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getCustomRulePolicyRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetCustomRulePolicyRequest> request = null;
+        Response<GetCustomRulePolicyResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetCustomRulePolicyRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getCustomRulePolicyRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Config Service");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetCustomRulePolicy");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetCustomRulePolicyResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetCustomRulePolicyResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Returns the resource types, the number of each resource type, and the total number of resources that Config is
      * recording in this region for your Amazon Web Services account.
      * </p>
@@ -4934,13 +4998,15 @@ public class AmazonConfigClient extends AmazonWebServiceClient implements Amazon
 
     /**
      * <p>
-     * Returns detailed status for each member account within an organization for a given organization config rule.
+     * Returns detailed status for each member account within an organization for a given organization Config rule.
      * </p>
      * 
      * @param getOrganizationConfigRuleDetailedStatusRequest
      * @return Result of the GetOrganizationConfigRuleDetailedStatus operation returned by the service.
      * @throws NoSuchOrganizationConfigRuleException
-     *         You specified one or more organization config rules that do not exist.
+     *         The Config rule in the request is not valid. Verify that the rule is an organization Config Custom Policy
+     *         rule, that the rule name is correct, and that valid Amazon Resouce Names (ARNs) are used before trying
+     *         again.
      * @throws InvalidLimitException
      *         The specified limit is outside the allowable range.
      * @throws InvalidNextTokenException
@@ -5127,6 +5193,103 @@ public class AmazonConfigClient extends AmazonWebServiceClient implements Amazon
             HttpResponseHandler<AmazonWebServiceResponse<GetOrganizationConformancePackDetailedStatusResult>> responseHandler = protocolFactory
                     .createResponseHandler(new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                             new GetOrganizationConformancePackDetailedStatusResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Returns the policy definition containing the logic for your organization Config Custom Policy rule.
+     * </p>
+     * 
+     * @param getOrganizationCustomRulePolicyRequest
+     * @return Result of the GetOrganizationCustomRulePolicy operation returned by the service.
+     * @throws NoSuchOrganizationConfigRuleException
+     *         The Config rule in the request is not valid. Verify that the rule is an organization Config Custom Policy
+     *         rule, that the rule name is correct, and that valid Amazon Resouce Names (ARNs) are used before trying
+     *         again.
+     * @throws OrganizationAccessDeniedException
+     *         For <code>PutConfigurationAggregator</code> API, you can see this exception for the following
+     *         reasons:</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         No permission to call <code>EnableAWSServiceAccess</code> API
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         The configuration aggregator cannot be updated because your Amazon Web Services Organization management
+     *         account or the delegated administrator role changed. Delete this aggregator and create a new one with the
+     *         current Amazon Web Services Organization.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         The configuration aggregator is associated with a previous Amazon Web Services Organization and Config
+     *         cannot aggregate data with current Amazon Web Services Organization. Delete this aggregator and create a
+     *         new one with the current Amazon Web Services Organization.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         You are not a registered delegated administrator for Config with permissions to call
+     *         <code>ListDelegatedAdministrators</code> API. Ensure that the management account registers delagated
+     *         administrator for Config service principle name before the delegated administrator creates an aggregator.
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         For all <code>OrganizationConfigRule</code> and <code>OrganizationConformancePack</code> APIs, Config
+     *         throws an exception if APIs are called from member accounts. All APIs must be called from organization
+     *         master account.
+     * @sample AmazonConfig.GetOrganizationCustomRulePolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/GetOrganizationCustomRulePolicy"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetOrganizationCustomRulePolicyResult getOrganizationCustomRulePolicy(GetOrganizationCustomRulePolicyRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetOrganizationCustomRulePolicy(request);
+    }
+
+    @SdkInternalApi
+    final GetOrganizationCustomRulePolicyResult executeGetOrganizationCustomRulePolicy(
+            GetOrganizationCustomRulePolicyRequest getOrganizationCustomRulePolicyRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getOrganizationCustomRulePolicyRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetOrganizationCustomRulePolicyRequest> request = null;
+        Response<GetOrganizationCustomRulePolicyResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetOrganizationCustomRulePolicyRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(getOrganizationCustomRulePolicyRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Config Service");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetOrganizationCustomRulePolicy");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetOrganizationCustomRulePolicyResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new GetOrganizationCustomRulePolicyResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -5740,13 +5903,13 @@ public class AmazonConfigClient extends AmazonWebServiceClient implements Amazon
      *         </li>
      *         <li>
      *         <p>
-     *         For PutConfigOrganizationRule, organization config rule deletion is in progress. Try your request again
+     *         For PutConfigOrganizationRule, organization Config rule deletion is in progress. Try your request again
      *         later.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         For DeleteOrganizationConfigRule, organization config rule creation is in progress. Try your request
+     *         For DeleteOrganizationConfigRule, organization Config rule creation is in progress. Try your request
      *         again later.
      *         </p>
      *         </li>
@@ -5779,7 +5942,7 @@ public class AmazonConfigClient extends AmazonWebServiceClient implements Amazon
      *         </li>
      *         <li>
      *         <p>
-     *         For PutOrganizationConfigRule, organization config rule cannot be created because you do not have
+     *         For PutOrganizationConfigRule, organization Config rule cannot be created because you do not have
      *         permissions to call IAM <code>GetRole</code> action or create a service linked role.
      *         </p>
      *         </li>
@@ -6097,7 +6260,7 @@ public class AmazonConfigClient extends AmazonWebServiceClient implements Amazon
      *         </li>
      *         <li>
      *         <p>
-     *         For PutOrganizationConfigRule, organization config rule cannot be created because you do not have
+     *         For PutOrganizationConfigRule, organization Config rule cannot be created because you do not have
      *         permissions to call IAM <code>GetRole</code> action or create a service linked role.
      *         </p>
      *         </li>
@@ -6143,13 +6306,13 @@ public class AmazonConfigClient extends AmazonWebServiceClient implements Amazon
      *         </li>
      *         <li>
      *         <p>
-     *         For PutConfigOrganizationRule, organization config rule deletion is in progress. Try your request again
+     *         For PutConfigOrganizationRule, organization Config rule deletion is in progress. Try your request again
      *         later.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         For DeleteOrganizationConfigRule, organization config rule creation is in progress. Try your request
+     *         For DeleteOrganizationConfigRule, organization Config rule creation is in progress. Try your request
      *         again later.
      *         </p>
      *         </li>
@@ -6319,8 +6482,8 @@ public class AmazonConfigClient extends AmazonWebServiceClient implements Amazon
      * @throws InvalidResultTokenException
      *         The specified <code>ResultToken</code> is invalid.
      * @throws NoSuchConfigRuleException
-     *         One or more Config rules in the request are invalid. Verify that the rule names are correct and try
-     *         again.
+     *         The Config rule in the request is not valid. Verify that the rule is an Config Custom Policy rule, that
+     *         the rule name is correct, and that valid Amazon Resouce Names (ARNs) are used before trying again.
      * @sample AmazonConfig.PutEvaluations
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/PutEvaluations" target="_top">AWS API
      *      Documentation</a>
@@ -6378,8 +6541,8 @@ public class AmazonConfigClient extends AmazonWebServiceClient implements Amazon
      * @param putExternalEvaluationRequest
      * @return Result of the PutExternalEvaluation operation returned by the service.
      * @throws NoSuchConfigRuleException
-     *         One or more Config rules in the request are invalid. Verify that the rule names are correct and try
-     *         again.
+     *         The Config rule in the request is not valid. Verify that the rule is an Config Custom Policy rule, that
+     *         the rule name is correct, and that valid Amazon Resouce Names (ARNs) are used before trying again.
      * @throws InvalidParameterValueException
      *         One or more of the specified parameters are invalid. Verify that your parameters are valid and try again.
      * @sample AmazonConfig.PutExternalEvaluation
@@ -6433,11 +6596,11 @@ public class AmazonConfigClient extends AmazonWebServiceClient implements Amazon
 
     /**
      * <p>
-     * Adds or updates organization config rule for your entire organization evaluating whether your Amazon Web Services
+     * Adds or updates organization Config rule for your entire organization evaluating whether your Amazon Web Services
      * resources comply with your desired configurations.
      * </p>
      * <p>
-     * Only a master account and a delegated administrator can create or update an organization config rule. When
+     * Only a master account and a delegated administrator can create or update an organization Config rule. When
      * calling this API with a delegated administrator, you must ensure Organizations
      * <code>ListDelegatedAdministrator</code> permissions are added.
      * </p>
@@ -6461,7 +6624,7 @@ public class AmazonConfigClient extends AmazonWebServiceClient implements Amazon
      * an Config managed rule, specify the rule's identifier for the <code>RuleIdentifier</code> key.
      * </p>
      * <p>
-     * The maximum number of organization config rules that Config supports is 150 and 3 delegated administrator per
+     * The maximum number of organization Config rules that Config supports is 150 and 3 delegated administrator per
      * organization.
      * </p>
      * <note>
@@ -6476,7 +6639,7 @@ public class AmazonConfigClient extends AmazonWebServiceClient implements Amazon
      * @param putOrganizationConfigRuleRequest
      * @return Result of the PutOrganizationConfigRule operation returned by the service.
      * @throws MaxNumberOfOrganizationConfigRulesExceededException
-     *         You have reached the limit of the number of organization config rules you can create.
+     *         You have reached the limit of the number of organization Config rules you can create.
      * @throws ResourceInUseException
      *         You see this exception in the following cases: </p>
      *         <ul>
@@ -6499,13 +6662,13 @@ public class AmazonConfigClient extends AmazonWebServiceClient implements Amazon
      *         </li>
      *         <li>
      *         <p>
-     *         For PutConfigOrganizationRule, organization config rule deletion is in progress. Try your request again
+     *         For PutConfigOrganizationRule, organization Config rule deletion is in progress. Try your request again
      *         later.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         For DeleteOrganizationConfigRule, organization config rule creation is in progress. Try your request
+     *         For DeleteOrganizationConfigRule, organization Config rule creation is in progress. Try your request
      *         again later.
      *         </p>
      *         </li>
@@ -6589,7 +6752,7 @@ public class AmazonConfigClient extends AmazonWebServiceClient implements Amazon
      *         </li>
      *         <li>
      *         <p>
-     *         For PutOrganizationConfigRule, organization config rule cannot be created because you do not have
+     *         For PutOrganizationConfigRule, organization Config rule cannot be created because you do not have
      *         permissions to call IAM <code>GetRole</code> action or create a service linked role.
      *         </p>
      *         </li>
@@ -6723,13 +6886,13 @@ public class AmazonConfigClient extends AmazonWebServiceClient implements Amazon
      *         </li>
      *         <li>
      *         <p>
-     *         For PutConfigOrganizationRule, organization config rule deletion is in progress. Try your request again
+     *         For PutConfigOrganizationRule, organization Config rule deletion is in progress. Try your request again
      *         later.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         For DeleteOrganizationConfigRule, organization config rule creation is in progress. Try your request
+     *         For DeleteOrganizationConfigRule, organization Config rule creation is in progress. Try your request
      *         again later.
      *         </p>
      *         </li>
@@ -6807,7 +6970,7 @@ public class AmazonConfigClient extends AmazonWebServiceClient implements Amazon
      *         </li>
      *         <li>
      *         <p>
-     *         For PutOrganizationConfigRule, organization config rule cannot be created because you do not have
+     *         For PutOrganizationConfigRule, organization Config rule cannot be created because you do not have
      *         permissions to call IAM <code>GetRole</code> action or create a service linked role.
      *         </p>
      *         </li>
@@ -6922,7 +7085,7 @@ public class AmazonConfigClient extends AmazonWebServiceClient implements Amazon
      *         </li>
      *         <li>
      *         <p>
-     *         For PutOrganizationConfigRule, organization config rule cannot be created because you do not have
+     *         For PutOrganizationConfigRule, organization Config rule cannot be created because you do not have
      *         permissions to call IAM <code>GetRole</code> action or create a service linked role.
      *         </p>
      *         </li>
@@ -7029,7 +7192,7 @@ public class AmazonConfigClient extends AmazonWebServiceClient implements Amazon
      *         </li>
      *         <li>
      *         <p>
-     *         For PutOrganizationConfigRule, organization config rule cannot be created because you do not have
+     *         For PutOrganizationConfigRule, organization Config rule cannot be created because you do not have
      *         permissions to call IAM <code>GetRole</code> action or create a service linked role.
      *         </p>
      *         </li>
@@ -7150,7 +7313,7 @@ public class AmazonConfigClient extends AmazonWebServiceClient implements Amazon
      *         </li>
      *         <li>
      *         <p>
-     *         For PutOrganizationConfigRule, organization config rule cannot be created because you do not have
+     *         For PutOrganizationConfigRule, organization Config rule cannot be created because you do not have
      *         permissions to call IAM <code>GetRole</code> action or create a service linked role.
      *         </p>
      *         </li>
@@ -7576,8 +7739,8 @@ public class AmazonConfigClient extends AmazonWebServiceClient implements Amazon
      * @param startConfigRulesEvaluationRequest
      * @return Result of the StartConfigRulesEvaluation operation returned by the service.
      * @throws NoSuchConfigRuleException
-     *         One or more Config rules in the request are invalid. Verify that the rule names are correct and try
-     *         again.
+     *         The Config rule in the request is not valid. Verify that the rule is an Config Custom Policy rule, that
+     *         the rule name is correct, and that valid Amazon Resouce Names (ARNs) are used before trying again.
      * @throws LimitExceededException
      *         For <code>StartConfigRulesEvaluation</code> API, this exception is thrown if an evaluation is in progress
      *         or if you call the <a>StartConfigRulesEvaluation</a> API more than once per minute.</p>
@@ -7607,13 +7770,13 @@ public class AmazonConfigClient extends AmazonWebServiceClient implements Amazon
      *         </li>
      *         <li>
      *         <p>
-     *         For PutConfigOrganizationRule, organization config rule deletion is in progress. Try your request again
+     *         For PutConfigOrganizationRule, organization Config rule deletion is in progress. Try your request again
      *         later.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         For DeleteOrganizationConfigRule, organization config rule creation is in progress. Try your request
+     *         For DeleteOrganizationConfigRule, organization Config rule creation is in progress. Try your request
      *         again later.
      *         </p>
      *         </li>
@@ -7778,7 +7941,7 @@ public class AmazonConfigClient extends AmazonWebServiceClient implements Amazon
      *         </li>
      *         <li>
      *         <p>
-     *         For PutOrganizationConfigRule, organization config rule cannot be created because you do not have
+     *         For PutOrganizationConfigRule, organization Config rule cannot be created because you do not have
      *         permissions to call IAM <code>GetRole</code> action or create a service linked role.
      *         </p>
      *         </li>

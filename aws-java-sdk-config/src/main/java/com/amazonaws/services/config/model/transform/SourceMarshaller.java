@@ -34,6 +34,8 @@ public class SourceMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SourceIdentifier").build();
     private static final MarshallingInfo<List> SOURCEDETAILS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("SourceDetails").build();
+    private static final MarshallingInfo<StructuredPojo> CUSTOMPOLICYDETAILS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CustomPolicyDetails").build();
 
     private static final SourceMarshaller instance = new SourceMarshaller();
 
@@ -54,6 +56,7 @@ public class SourceMarshaller {
             protocolMarshaller.marshall(source.getOwner(), OWNER_BINDING);
             protocolMarshaller.marshall(source.getSourceIdentifier(), SOURCEIDENTIFIER_BINDING);
             protocolMarshaller.marshall(source.getSourceDetails(), SOURCEDETAILS_BINDING);
+            protocolMarshaller.marshall(source.getCustomPolicyDetails(), CUSTOMPOLICYDETAILS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

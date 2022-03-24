@@ -16,7 +16,8 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * You specified one or more organization config rules that do not exist.
+ * The Config rule in the request is not valid. Verify that the rule is an organization Config Custom Policy rule, that
+ * the rule name is correct, and that valid Amazon Resouce Names (ARNs) are used before trying again.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

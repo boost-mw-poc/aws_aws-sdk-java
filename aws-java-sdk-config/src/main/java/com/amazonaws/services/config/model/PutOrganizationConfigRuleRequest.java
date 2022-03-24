@@ -27,7 +27,7 @@ public class PutOrganizationConfigRuleRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The name that you assign to an organization config rule.
+     * The name that you assign to an organization Config rule.
      * </p>
      */
     private String organizationConfigRuleName;
@@ -45,18 +45,27 @@ public class PutOrganizationConfigRuleRequest extends com.amazonaws.AmazonWebSer
     private OrganizationCustomRuleMetadata organizationCustomRuleMetadata;
     /**
      * <p>
-     * A comma-separated list of accounts that you want to exclude from an organization config rule.
+     * A comma-separated list of accounts that you want to exclude from an organization Config rule.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> excludedAccounts;
+    /**
+     * <p>
+     * An object that specifies metadata for your organization's Config Custom Policy rule. The metadata includes the
+     * runtime system in use, which accounts have debug logging enabled, and other custom rule metadata, such as
+     * resource type, resource ID of Amazon Web Services resource, and organization trigger types that initiate Config
+     * to evaluate Amazon Web Services resources against a rule.
+     * </p>
+     */
+    private OrganizationCustomPolicyRuleMetadata organizationCustomPolicyRuleMetadata;
 
     /**
      * <p>
-     * The name that you assign to an organization config rule.
+     * The name that you assign to an organization Config rule.
      * </p>
      * 
      * @param organizationConfigRuleName
-     *        The name that you assign to an organization config rule.
+     *        The name that you assign to an organization Config rule.
      */
 
     public void setOrganizationConfigRuleName(String organizationConfigRuleName) {
@@ -65,10 +74,10 @@ public class PutOrganizationConfigRuleRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The name that you assign to an organization config rule.
+     * The name that you assign to an organization Config rule.
      * </p>
      * 
-     * @return The name that you assign to an organization config rule.
+     * @return The name that you assign to an organization Config rule.
      */
 
     public String getOrganizationConfigRuleName() {
@@ -77,11 +86,11 @@ public class PutOrganizationConfigRuleRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The name that you assign to an organization config rule.
+     * The name that you assign to an organization Config rule.
      * </p>
      * 
      * @param organizationConfigRuleName
-     *        The name that you assign to an organization config rule.
+     *        The name that you assign to an organization Config rule.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -172,10 +181,10 @@ public class PutOrganizationConfigRuleRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * A comma-separated list of accounts that you want to exclude from an organization config rule.
+     * A comma-separated list of accounts that you want to exclude from an organization Config rule.
      * </p>
      * 
-     * @return A comma-separated list of accounts that you want to exclude from an organization config rule.
+     * @return A comma-separated list of accounts that you want to exclude from an organization Config rule.
      */
 
     public java.util.List<String> getExcludedAccounts() {
@@ -187,11 +196,11 @@ public class PutOrganizationConfigRuleRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * A comma-separated list of accounts that you want to exclude from an organization config rule.
+     * A comma-separated list of accounts that you want to exclude from an organization Config rule.
      * </p>
      * 
      * @param excludedAccounts
-     *        A comma-separated list of accounts that you want to exclude from an organization config rule.
+     *        A comma-separated list of accounts that you want to exclude from an organization Config rule.
      */
 
     public void setExcludedAccounts(java.util.Collection<String> excludedAccounts) {
@@ -205,7 +214,7 @@ public class PutOrganizationConfigRuleRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * A comma-separated list of accounts that you want to exclude from an organization config rule.
+     * A comma-separated list of accounts that you want to exclude from an organization Config rule.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -214,7 +223,7 @@ public class PutOrganizationConfigRuleRequest extends com.amazonaws.AmazonWebSer
      * </p>
      * 
      * @param excludedAccounts
-     *        A comma-separated list of accounts that you want to exclude from an organization config rule.
+     *        A comma-separated list of accounts that you want to exclude from an organization Config rule.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -230,16 +239,74 @@ public class PutOrganizationConfigRuleRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * A comma-separated list of accounts that you want to exclude from an organization config rule.
+     * A comma-separated list of accounts that you want to exclude from an organization Config rule.
      * </p>
      * 
      * @param excludedAccounts
-     *        A comma-separated list of accounts that you want to exclude from an organization config rule.
+     *        A comma-separated list of accounts that you want to exclude from an organization Config rule.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public PutOrganizationConfigRuleRequest withExcludedAccounts(java.util.Collection<String> excludedAccounts) {
         setExcludedAccounts(excludedAccounts);
+        return this;
+    }
+
+    /**
+     * <p>
+     * An object that specifies metadata for your organization's Config Custom Policy rule. The metadata includes the
+     * runtime system in use, which accounts have debug logging enabled, and other custom rule metadata, such as
+     * resource type, resource ID of Amazon Web Services resource, and organization trigger types that initiate Config
+     * to evaluate Amazon Web Services resources against a rule.
+     * </p>
+     * 
+     * @param organizationCustomPolicyRuleMetadata
+     *        An object that specifies metadata for your organization's Config Custom Policy rule. The metadata includes
+     *        the runtime system in use, which accounts have debug logging enabled, and other custom rule metadata, such
+     *        as resource type, resource ID of Amazon Web Services resource, and organization trigger types that
+     *        initiate Config to evaluate Amazon Web Services resources against a rule.
+     */
+
+    public void setOrganizationCustomPolicyRuleMetadata(OrganizationCustomPolicyRuleMetadata organizationCustomPolicyRuleMetadata) {
+        this.organizationCustomPolicyRuleMetadata = organizationCustomPolicyRuleMetadata;
+    }
+
+    /**
+     * <p>
+     * An object that specifies metadata for your organization's Config Custom Policy rule. The metadata includes the
+     * runtime system in use, which accounts have debug logging enabled, and other custom rule metadata, such as
+     * resource type, resource ID of Amazon Web Services resource, and organization trigger types that initiate Config
+     * to evaluate Amazon Web Services resources against a rule.
+     * </p>
+     * 
+     * @return An object that specifies metadata for your organization's Config Custom Policy rule. The metadata
+     *         includes the runtime system in use, which accounts have debug logging enabled, and other custom rule
+     *         metadata, such as resource type, resource ID of Amazon Web Services resource, and organization trigger
+     *         types that initiate Config to evaluate Amazon Web Services resources against a rule.
+     */
+
+    public OrganizationCustomPolicyRuleMetadata getOrganizationCustomPolicyRuleMetadata() {
+        return this.organizationCustomPolicyRuleMetadata;
+    }
+
+    /**
+     * <p>
+     * An object that specifies metadata for your organization's Config Custom Policy rule. The metadata includes the
+     * runtime system in use, which accounts have debug logging enabled, and other custom rule metadata, such as
+     * resource type, resource ID of Amazon Web Services resource, and organization trigger types that initiate Config
+     * to evaluate Amazon Web Services resources against a rule.
+     * </p>
+     * 
+     * @param organizationCustomPolicyRuleMetadata
+     *        An object that specifies metadata for your organization's Config Custom Policy rule. The metadata includes
+     *        the runtime system in use, which accounts have debug logging enabled, and other custom rule metadata, such
+     *        as resource type, resource ID of Amazon Web Services resource, and organization trigger types that
+     *        initiate Config to evaluate Amazon Web Services resources against a rule.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PutOrganizationConfigRuleRequest withOrganizationCustomPolicyRuleMetadata(OrganizationCustomPolicyRuleMetadata organizationCustomPolicyRuleMetadata) {
+        setOrganizationCustomPolicyRuleMetadata(organizationCustomPolicyRuleMetadata);
         return this;
     }
 
@@ -262,7 +329,9 @@ public class PutOrganizationConfigRuleRequest extends com.amazonaws.AmazonWebSer
         if (getOrganizationCustomRuleMetadata() != null)
             sb.append("OrganizationCustomRuleMetadata: ").append(getOrganizationCustomRuleMetadata()).append(",");
         if (getExcludedAccounts() != null)
-            sb.append("ExcludedAccounts: ").append(getExcludedAccounts());
+            sb.append("ExcludedAccounts: ").append(getExcludedAccounts()).append(",");
+        if (getOrganizationCustomPolicyRuleMetadata() != null)
+            sb.append("OrganizationCustomPolicyRuleMetadata: ").append(getOrganizationCustomPolicyRuleMetadata());
         sb.append("}");
         return sb.toString();
     }
@@ -295,6 +364,11 @@ public class PutOrganizationConfigRuleRequest extends com.amazonaws.AmazonWebSer
             return false;
         if (other.getExcludedAccounts() != null && other.getExcludedAccounts().equals(this.getExcludedAccounts()) == false)
             return false;
+        if (other.getOrganizationCustomPolicyRuleMetadata() == null ^ this.getOrganizationCustomPolicyRuleMetadata() == null)
+            return false;
+        if (other.getOrganizationCustomPolicyRuleMetadata() != null
+                && other.getOrganizationCustomPolicyRuleMetadata().equals(this.getOrganizationCustomPolicyRuleMetadata()) == false)
+            return false;
         return true;
     }
 
@@ -307,6 +381,7 @@ public class PutOrganizationConfigRuleRequest extends com.amazonaws.AmazonWebSer
         hashCode = prime * hashCode + ((getOrganizationManagedRuleMetadata() == null) ? 0 : getOrganizationManagedRuleMetadata().hashCode());
         hashCode = prime * hashCode + ((getOrganizationCustomRuleMetadata() == null) ? 0 : getOrganizationCustomRuleMetadata().hashCode());
         hashCode = prime * hashCode + ((getExcludedAccounts() == null) ? 0 : getExcludedAccounts().hashCode());
+        hashCode = prime * hashCode + ((getOrganizationCustomPolicyRuleMetadata() == null) ? 0 : getOrganizationCustomPolicyRuleMetadata().hashCode());
         return hashCode;
     }
 

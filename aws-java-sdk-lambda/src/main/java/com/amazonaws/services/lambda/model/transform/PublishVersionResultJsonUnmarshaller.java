@@ -182,6 +182,10 @@ public class PublishVersionResultJsonUnmarshaller implements Unmarshaller<Publis
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("EphemeralStorage", targetDepth)) {
+                    context.nextToken();
+                    publishVersionResult.setEphemeralStorage(EphemeralStorageJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

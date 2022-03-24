@@ -31,7 +31,7 @@ public class ConformancePackRuleCompliance implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * Name of the config rule.
+     * Name of the Config rule.
      * </p>
      */
     private String configRuleName;
@@ -54,11 +54,11 @@ public class ConformancePackRuleCompliance implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * Name of the config rule.
+     * Name of the Config rule.
      * </p>
      * 
      * @param configRuleName
-     *        Name of the config rule.
+     *        Name of the Config rule.
      */
 
     public void setConfigRuleName(String configRuleName) {
@@ -67,10 +67,10 @@ public class ConformancePackRuleCompliance implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * Name of the config rule.
+     * Name of the Config rule.
      * </p>
      * 
-     * @return Name of the config rule.
+     * @return Name of the Config rule.
      */
 
     public String getConfigRuleName() {
@@ -79,11 +79,11 @@ public class ConformancePackRuleCompliance implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * Name of the config rule.
+     * Name of the Config rule.
      * </p>
      * 
      * @param configRuleName
-     *        Name of the config rule.
+     *        Name of the Config rule.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

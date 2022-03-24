@@ -55,7 +55,7 @@ public class CallAnalyticsJob implements Serializable, Cloneable, StructuredPojo
     private String languageCode;
     /**
      * <p>
-     * The sample rate, in Hertz, of the audio.
+     * The sample rate, in Hertz, of the input audio.
      * </p>
      */
     private Integer mediaSampleRateHertz;
@@ -387,11 +387,11 @@ public class CallAnalyticsJob implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The sample rate, in Hertz, of the audio.
+     * The sample rate, in Hertz, of the input audio.
      * </p>
      * 
      * @param mediaSampleRateHertz
-     *        The sample rate, in Hertz, of the audio.
+     *        The sample rate, in Hertz, of the input audio.
      */
 
     public void setMediaSampleRateHertz(Integer mediaSampleRateHertz) {
@@ -400,10 +400,10 @@ public class CallAnalyticsJob implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The sample rate, in Hertz, of the audio.
+     * The sample rate, in Hertz, of the input audio.
      * </p>
      * 
-     * @return The sample rate, in Hertz, of the audio.
+     * @return The sample rate, in Hertz, of the input audio.
      */
 
     public Integer getMediaSampleRateHertz() {
@@ -412,11 +412,11 @@ public class CallAnalyticsJob implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The sample rate, in Hertz, of the audio.
+     * The sample rate, in Hertz, of the input audio.
      * </p>
      * 
      * @param mediaSampleRateHertz
-     *        The sample rate, in Hertz, of the audio.
+     *        The sample rate, in Hertz, of the input audio.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

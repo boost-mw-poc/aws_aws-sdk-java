@@ -2360,6 +2360,39 @@ public class AmazonConfigAsyncClient extends AmazonConfigClient implements Amazo
     }
 
     @Override
+    public java.util.concurrent.Future<GetCustomRulePolicyResult> getCustomRulePolicyAsync(GetCustomRulePolicyRequest request) {
+
+        return getCustomRulePolicyAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetCustomRulePolicyResult> getCustomRulePolicyAsync(final GetCustomRulePolicyRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetCustomRulePolicyRequest, GetCustomRulePolicyResult> asyncHandler) {
+        final GetCustomRulePolicyRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetCustomRulePolicyResult>() {
+            @Override
+            public GetCustomRulePolicyResult call() throws Exception {
+                GetCustomRulePolicyResult result = null;
+
+                try {
+                    result = executeGetCustomRulePolicy(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetDiscoveredResourceCountsResult> getDiscoveredResourceCountsAsync(GetDiscoveredResourceCountsRequest request) {
 
         return getDiscoveredResourceCountsAsync(request, null);
@@ -2447,6 +2480,41 @@ public class AmazonConfigAsyncClient extends AmazonConfigClient implements Amazo
 
                 try {
                     result = executeGetOrganizationConformancePackDetailedStatus(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetOrganizationCustomRulePolicyResult> getOrganizationCustomRulePolicyAsync(
+            GetOrganizationCustomRulePolicyRequest request) {
+
+        return getOrganizationCustomRulePolicyAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetOrganizationCustomRulePolicyResult> getOrganizationCustomRulePolicyAsync(
+            final GetOrganizationCustomRulePolicyRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetOrganizationCustomRulePolicyRequest, GetOrganizationCustomRulePolicyResult> asyncHandler) {
+        final GetOrganizationCustomRulePolicyRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetOrganizationCustomRulePolicyResult>() {
+            @Override
+            public GetOrganizationCustomRulePolicyResult call() throws Exception {
+                GetOrganizationCustomRulePolicyResult result = null;
+
+                try {
+                    result = executeGetOrganizationCustomRulePolicy(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

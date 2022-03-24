@@ -71,6 +71,8 @@ public class CreateFunctionRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CodeSigningConfigArn").build();
     private static final MarshallingInfo<List> ARCHITECTURES_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Architectures").build();
+    private static final MarshallingInfo<StructuredPojo> EPHEMERALSTORAGE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EphemeralStorage").build();
 
     private static final CreateFunctionRequestMarshaller instance = new CreateFunctionRequestMarshaller();
 
@@ -109,6 +111,7 @@ public class CreateFunctionRequestMarshaller {
             protocolMarshaller.marshall(createFunctionRequest.getImageConfig(), IMAGECONFIG_BINDING);
             protocolMarshaller.marshall(createFunctionRequest.getCodeSigningConfigArn(), CODESIGNINGCONFIGARN_BINDING);
             protocolMarshaller.marshall(createFunctionRequest.getArchitectures(), ARCHITECTURES_BINDING);
+            protocolMarshaller.marshall(createFunctionRequest.getEphemeralStorage(), EPHEMERALSTORAGE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

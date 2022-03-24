@@ -27,7 +27,7 @@ public class GetOrganizationConfigRuleDetailedStatusRequest extends com.amazonaw
 
     /**
      * <p>
-     * The name of organization config rule for which you want status details for member accounts.
+     * The name of your organization Config rule for which you want status details for member accounts.
      * </p>
      */
     private String organizationConfigRuleName;
@@ -54,11 +54,11 @@ public class GetOrganizationConfigRuleDetailedStatusRequest extends com.amazonaw
 
     /**
      * <p>
-     * The name of organization config rule for which you want status details for member accounts.
+     * The name of your organization Config rule for which you want status details for member accounts.
      * </p>
      * 
      * @param organizationConfigRuleName
-     *        The name of organization config rule for which you want status details for member accounts.
+     *        The name of your organization Config rule for which you want status details for member accounts.
      */
 
     public void setOrganizationConfigRuleName(String organizationConfigRuleName) {
@@ -67,10 +67,10 @@ public class GetOrganizationConfigRuleDetailedStatusRequest extends com.amazonaw
 
     /**
      * <p>
-     * The name of organization config rule for which you want status details for member accounts.
+     * The name of your organization Config rule for which you want status details for member accounts.
      * </p>
      * 
-     * @return The name of organization config rule for which you want status details for member accounts.
+     * @return The name of your organization Config rule for which you want status details for member accounts.
      */
 
     public String getOrganizationConfigRuleName() {
@@ -79,11 +79,11 @@ public class GetOrganizationConfigRuleDetailedStatusRequest extends com.amazonaw
 
     /**
      * <p>
-     * The name of organization config rule for which you want status details for member accounts.
+     * The name of your organization Config rule for which you want status details for member accounts.
      * </p>
      * 
      * @param organizationConfigRuleName
-     *        The name of organization config rule for which you want status details for member accounts.
+     *        The name of your organization Config rule for which you want status details for member accounts.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

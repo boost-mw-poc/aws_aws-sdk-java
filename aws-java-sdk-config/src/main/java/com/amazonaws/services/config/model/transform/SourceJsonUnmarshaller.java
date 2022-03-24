@@ -62,6 +62,10 @@ public class SourceJsonUnmarshaller implements Unmarshaller<Source, JsonUnmarsha
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("CustomPolicyDetails", targetDepth)) {
+                    context.nextToken();
+                    source.setCustomPolicyDetails(CustomPolicyDetailsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

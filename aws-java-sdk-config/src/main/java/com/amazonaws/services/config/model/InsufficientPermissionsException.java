@@ -33,7 +33,7 @@ import javax.annotation.Generated;
  * </li>
  * <li>
  * <p>
- * For PutOrganizationConfigRule, organization config rule cannot be created because you do not have permissions to call
+ * For PutOrganizationConfigRule, organization Config rule cannot be created because you do not have permissions to call
  * IAM <code>GetRole</code> action or create a service linked role.
  * </p>
  * </li>

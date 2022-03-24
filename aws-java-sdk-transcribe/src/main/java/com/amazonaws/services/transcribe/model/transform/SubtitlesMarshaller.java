@@ -30,6 +30,8 @@ public class SubtitlesMarshaller {
 
     private static final MarshallingInfo<List> FORMATS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Formats").build();
+    private static final MarshallingInfo<Integer> OUTPUTSTARTINDEX_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("OutputStartIndex").build();
 
     private static final SubtitlesMarshaller instance = new SubtitlesMarshaller();
 
@@ -48,6 +50,7 @@ public class SubtitlesMarshaller {
 
         try {
             protocolMarshaller.marshall(subtitles.getFormats(), FORMATS_BINDING);
+            protocolMarshaller.marshall(subtitles.getOutputStartIndex(), OUTPUTSTARTINDEX_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

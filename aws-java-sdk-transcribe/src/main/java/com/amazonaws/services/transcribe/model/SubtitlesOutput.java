@@ -19,7 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Choose the output format for your subtitle file and the S3 location where you want your file saved.
+ * The S3 location where your subtitle files are located. Note that your subtitle files are placed in the same location
+ * as your transcription output. Refer to <code>TranscriptFileUri</code> to download your files.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transcribe-2017-10-26/SubtitlesOutput" target="_top">AWS API
@@ -30,8 +31,8 @@ public class SubtitlesOutput implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Specify the output format for your subtitle file; if you select both SRT and VTT formats, two output files are
-     * generated.
+     * The format of your subtitle files. If your request specified both <code>srt</code> and <code>vtt</code> formats,
+     * both formats are shown.
      * </p>
      */
     private java.util.List<String> formats;
@@ -41,15 +42,22 @@ public class SubtitlesOutput implements Serializable, Cloneable, StructuredPojo 
      * </p>
      */
     private java.util.List<String> subtitleFileUris;
+    /**
+     * <p>
+     * Shows the output start index value for your subtitle files. If you did not specify a value in your request, the
+     * default value of <code>0</code> is used.
+     * </p>
+     */
+    private Integer outputStartIndex;
 
     /**
      * <p>
-     * Specify the output format for your subtitle file; if you select both SRT and VTT formats, two output files are
-     * generated.
+     * The format of your subtitle files. If your request specified both <code>srt</code> and <code>vtt</code> formats,
+     * both formats are shown.
      * </p>
      * 
-     * @return Specify the output format for your subtitle file; if you select both SRT and VTT formats, two output
-     *         files are generated.
+     * @return The format of your subtitle files. If your request specified both <code>srt</code> and <code>vtt</code>
+     *         formats, both formats are shown.
      * @see SubtitleFormat
      */
 
@@ -59,13 +67,13 @@ public class SubtitlesOutput implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Specify the output format for your subtitle file; if you select both SRT and VTT formats, two output files are
-     * generated.
+     * The format of your subtitle files. If your request specified both <code>srt</code> and <code>vtt</code> formats,
+     * both formats are shown.
      * </p>
      * 
      * @param formats
-     *        Specify the output format for your subtitle file; if you select both SRT and VTT formats, two output files
-     *        are generated.
+     *        The format of your subtitle files. If your request specified both <code>srt</code> and <code>vtt</code>
+     *        formats, both formats are shown.
      * @see SubtitleFormat
      */
 
@@ -80,8 +88,8 @@ public class SubtitlesOutput implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Specify the output format for your subtitle file; if you select both SRT and VTT formats, two output files are
-     * generated.
+     * The format of your subtitle files. If your request specified both <code>srt</code> and <code>vtt</code> formats,
+     * both formats are shown.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -90,8 +98,8 @@ public class SubtitlesOutput implements Serializable, Cloneable, StructuredPojo 
      * </p>
      * 
      * @param formats
-     *        Specify the output format for your subtitle file; if you select both SRT and VTT formats, two output files
-     *        are generated.
+     *        The format of your subtitle files. If your request specified both <code>srt</code> and <code>vtt</code>
+     *        formats, both formats are shown.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see SubtitleFormat
      */
@@ -108,13 +116,13 @@ public class SubtitlesOutput implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Specify the output format for your subtitle file; if you select both SRT and VTT formats, two output files are
-     * generated.
+     * The format of your subtitle files. If your request specified both <code>srt</code> and <code>vtt</code> formats,
+     * both formats are shown.
      * </p>
      * 
      * @param formats
-     *        Specify the output format for your subtitle file; if you select both SRT and VTT formats, two output files
-     *        are generated.
+     *        The format of your subtitle files. If your request specified both <code>srt</code> and <code>vtt</code>
+     *        formats, both formats are shown.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see SubtitleFormat
      */
@@ -126,13 +134,13 @@ public class SubtitlesOutput implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Specify the output format for your subtitle file; if you select both SRT and VTT formats, two output files are
-     * generated.
+     * The format of your subtitle files. If your request specified both <code>srt</code> and <code>vtt</code> formats,
+     * both formats are shown.
      * </p>
      * 
      * @param formats
-     *        Specify the output format for your subtitle file; if you select both SRT and VTT formats, two output files
-     *        are generated.
+     *        The format of your subtitle files. If your request specified both <code>srt</code> and <code>vtt</code>
+     *        formats, both formats are shown.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see SubtitleFormat
      */
@@ -221,6 +229,52 @@ public class SubtitlesOutput implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
+     * <p>
+     * Shows the output start index value for your subtitle files. If you did not specify a value in your request, the
+     * default value of <code>0</code> is used.
+     * </p>
+     * 
+     * @param outputStartIndex
+     *        Shows the output start index value for your subtitle files. If you did not specify a value in your
+     *        request, the default value of <code>0</code> is used.
+     */
+
+    public void setOutputStartIndex(Integer outputStartIndex) {
+        this.outputStartIndex = outputStartIndex;
+    }
+
+    /**
+     * <p>
+     * Shows the output start index value for your subtitle files. If you did not specify a value in your request, the
+     * default value of <code>0</code> is used.
+     * </p>
+     * 
+     * @return Shows the output start index value for your subtitle files. If you did not specify a value in your
+     *         request, the default value of <code>0</code> is used.
+     */
+
+    public Integer getOutputStartIndex() {
+        return this.outputStartIndex;
+    }
+
+    /**
+     * <p>
+     * Shows the output start index value for your subtitle files. If you did not specify a value in your request, the
+     * default value of <code>0</code> is used.
+     * </p>
+     * 
+     * @param outputStartIndex
+     *        Shows the output start index value for your subtitle files. If you did not specify a value in your
+     *        request, the default value of <code>0</code> is used.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public SubtitlesOutput withOutputStartIndex(Integer outputStartIndex) {
+        setOutputStartIndex(outputStartIndex);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -235,7 +289,9 @@ public class SubtitlesOutput implements Serializable, Cloneable, StructuredPojo 
         if (getFormats() != null)
             sb.append("Formats: ").append(getFormats()).append(",");
         if (getSubtitleFileUris() != null)
-            sb.append("SubtitleFileUris: ").append(getSubtitleFileUris());
+            sb.append("SubtitleFileUris: ").append(getSubtitleFileUris()).append(",");
+        if (getOutputStartIndex() != null)
+            sb.append("OutputStartIndex: ").append(getOutputStartIndex());
         sb.append("}");
         return sb.toString();
     }
@@ -258,6 +314,10 @@ public class SubtitlesOutput implements Serializable, Cloneable, StructuredPojo 
             return false;
         if (other.getSubtitleFileUris() != null && other.getSubtitleFileUris().equals(this.getSubtitleFileUris()) == false)
             return false;
+        if (other.getOutputStartIndex() == null ^ this.getOutputStartIndex() == null)
+            return false;
+        if (other.getOutputStartIndex() != null && other.getOutputStartIndex().equals(this.getOutputStartIndex()) == false)
+            return false;
         return true;
     }
 
@@ -268,6 +328,7 @@ public class SubtitlesOutput implements Serializable, Cloneable, StructuredPojo 
 
         hashCode = prime * hashCode + ((getFormats() == null) ? 0 : getFormats().hashCode());
         hashCode = prime * hashCode + ((getSubtitleFileUris() == null) ? 0 : getSubtitleFileUris().hashCode());
+        hashCode = prime * hashCode + ((getOutputStartIndex() == null) ? 0 : getOutputStartIndex().hashCode());
         return hashCode;
     }
 

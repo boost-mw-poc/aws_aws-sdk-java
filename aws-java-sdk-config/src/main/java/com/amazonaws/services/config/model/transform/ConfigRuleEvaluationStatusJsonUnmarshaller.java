@@ -96,6 +96,18 @@ public class ConfigRuleEvaluationStatusJsonUnmarshaller implements Unmarshaller<
                     context.nextToken();
                     configRuleEvaluationStatus.setFirstEvaluationStarted(context.getUnmarshaller(Boolean.class).unmarshall(context));
                 }
+                if (context.testExpression("LastDebugLogDeliveryStatus", targetDepth)) {
+                    context.nextToken();
+                    configRuleEvaluationStatus.setLastDebugLogDeliveryStatus(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("LastDebugLogDeliveryStatusReason", targetDepth)) {
+                    context.nextToken();
+                    configRuleEvaluationStatus.setLastDebugLogDeliveryStatusReason(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("LastDebugLogDeliveryTime", targetDepth)) {
+                    context.nextToken();
+                    configRuleEvaluationStatus.setLastDebugLogDeliveryTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

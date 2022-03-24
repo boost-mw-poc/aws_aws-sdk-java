@@ -21,7 +21,8 @@ import javax.annotation.Generated;
 public enum Owner {
 
     CUSTOM_LAMBDA("CUSTOM_LAMBDA"),
-    AWS("AWS");
+    AWS("AWS"),
+    CUSTOM_POLICY("CUSTOM_POLICY");
 
     private String value;
 

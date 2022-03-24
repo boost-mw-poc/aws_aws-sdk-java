@@ -36,6 +36,8 @@ public class PutOrganizationConfigRuleRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("OrganizationCustomRuleMetadata").build();
     private static final MarshallingInfo<List> EXCLUDEDACCOUNTS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ExcludedAccounts").build();
+    private static final MarshallingInfo<StructuredPojo> ORGANIZATIONCUSTOMPOLICYRULEMETADATA_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("OrganizationCustomPolicyRuleMetadata").build();
 
     private static final PutOrganizationConfigRuleRequestMarshaller instance = new PutOrganizationConfigRuleRequestMarshaller();
 
@@ -57,6 +59,8 @@ public class PutOrganizationConfigRuleRequestMarshaller {
             protocolMarshaller.marshall(putOrganizationConfigRuleRequest.getOrganizationManagedRuleMetadata(), ORGANIZATIONMANAGEDRULEMETADATA_BINDING);
             protocolMarshaller.marshall(putOrganizationConfigRuleRequest.getOrganizationCustomRuleMetadata(), ORGANIZATIONCUSTOMRULEMETADATA_BINDING);
             protocolMarshaller.marshall(putOrganizationConfigRuleRequest.getExcludedAccounts(), EXCLUDEDACCOUNTS_BINDING);
+            protocolMarshaller.marshall(putOrganizationConfigRuleRequest.getOrganizationCustomPolicyRuleMetadata(),
+                    ORGANIZATIONCUSTOMPOLICYRULEMETADATA_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

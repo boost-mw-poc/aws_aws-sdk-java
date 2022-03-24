@@ -51,6 +51,12 @@ public class ConfigRuleEvaluationStatusMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LastErrorMessage").build();
     private static final MarshallingInfo<Boolean> FIRSTEVALUATIONSTARTED_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("FirstEvaluationStarted").build();
+    private static final MarshallingInfo<String> LASTDEBUGLOGDELIVERYSTATUS_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LastDebugLogDeliveryStatus").build();
+    private static final MarshallingInfo<String> LASTDEBUGLOGDELIVERYSTATUSREASON_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LastDebugLogDeliveryStatusReason").build();
+    private static final MarshallingInfo<java.util.Date> LASTDEBUGLOGDELIVERYTIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LastDebugLogDeliveryTime").timestampFormat("unixTimestamp").build();
 
     private static final ConfigRuleEvaluationStatusMarshaller instance = new ConfigRuleEvaluationStatusMarshaller();
 
@@ -80,6 +86,9 @@ public class ConfigRuleEvaluationStatusMarshaller {
             protocolMarshaller.marshall(configRuleEvaluationStatus.getLastErrorCode(), LASTERRORCODE_BINDING);
             protocolMarshaller.marshall(configRuleEvaluationStatus.getLastErrorMessage(), LASTERRORMESSAGE_BINDING);
             protocolMarshaller.marshall(configRuleEvaluationStatus.getFirstEvaluationStarted(), FIRSTEVALUATIONSTARTED_BINDING);
+            protocolMarshaller.marshall(configRuleEvaluationStatus.getLastDebugLogDeliveryStatus(), LASTDEBUGLOGDELIVERYSTATUS_BINDING);
+            protocolMarshaller.marshall(configRuleEvaluationStatus.getLastDebugLogDeliveryStatusReason(), LASTDEBUGLOGDELIVERYSTATUSREASON_BINDING);
+            protocolMarshaller.marshall(configRuleEvaluationStatus.getLastDebugLogDeliveryTime(), LASTDEBUGLOGDELIVERYTIME_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

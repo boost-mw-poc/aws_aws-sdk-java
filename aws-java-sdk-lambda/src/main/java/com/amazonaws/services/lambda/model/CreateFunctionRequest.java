@@ -197,6 +197,13 @@ public class CreateFunctionRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> architectures;
+    /**
+     * <p>
+     * The size of the function’s /tmp directory in MB. The default value is 512, but can be any whole number between
+     * 512 and 10240 MB.
+     * </p>
+     */
+    private EphemeralStorage ephemeralStorage;
 
     /**
      * <p>
@@ -1576,6 +1583,52 @@ public class CreateFunctionRequest extends com.amazonaws.AmazonWebServiceRequest
     }
 
     /**
+     * <p>
+     * The size of the function’s /tmp directory in MB. The default value is 512, but can be any whole number between
+     * 512 and 10240 MB.
+     * </p>
+     * 
+     * @param ephemeralStorage
+     *        The size of the function’s /tmp directory in MB. The default value is 512, but can be any whole number
+     *        between 512 and 10240 MB.
+     */
+
+    public void setEphemeralStorage(EphemeralStorage ephemeralStorage) {
+        this.ephemeralStorage = ephemeralStorage;
+    }
+
+    /**
+     * <p>
+     * The size of the function’s /tmp directory in MB. The default value is 512, but can be any whole number between
+     * 512 and 10240 MB.
+     * </p>
+     * 
+     * @return The size of the function’s /tmp directory in MB. The default value is 512, but can be any whole number
+     *         between 512 and 10240 MB.
+     */
+
+    public EphemeralStorage getEphemeralStorage() {
+        return this.ephemeralStorage;
+    }
+
+    /**
+     * <p>
+     * The size of the function’s /tmp directory in MB. The default value is 512, but can be any whole number between
+     * 512 and 10240 MB.
+     * </p>
+     * 
+     * @param ephemeralStorage
+     *        The size of the function’s /tmp directory in MB. The default value is 512, but can be any whole number
+     *        between 512 and 10240 MB.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateFunctionRequest withEphemeralStorage(EphemeralStorage ephemeralStorage) {
+        setEphemeralStorage(ephemeralStorage);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1628,7 +1681,9 @@ public class CreateFunctionRequest extends com.amazonaws.AmazonWebServiceRequest
         if (getCodeSigningConfigArn() != null)
             sb.append("CodeSigningConfigArn: ").append(getCodeSigningConfigArn()).append(",");
         if (getArchitectures() != null)
-            sb.append("Architectures: ").append(getArchitectures());
+            sb.append("Architectures: ").append(getArchitectures()).append(",");
+        if (getEphemeralStorage() != null)
+            sb.append("EphemeralStorage: ").append(getEphemeralStorage());
         sb.append("}");
         return sb.toString();
     }
@@ -1727,6 +1782,10 @@ public class CreateFunctionRequest extends com.amazonaws.AmazonWebServiceRequest
             return false;
         if (other.getArchitectures() != null && other.getArchitectures().equals(this.getArchitectures()) == false)
             return false;
+        if (other.getEphemeralStorage() == null ^ this.getEphemeralStorage() == null)
+            return false;
+        if (other.getEphemeralStorage() != null && other.getEphemeralStorage().equals(this.getEphemeralStorage()) == false)
+            return false;
         return true;
     }
 
@@ -1756,6 +1815,7 @@ public class CreateFunctionRequest extends com.amazonaws.AmazonWebServiceRequest
         hashCode = prime * hashCode + ((getImageConfig() == null) ? 0 : getImageConfig().hashCode());
         hashCode = prime * hashCode + ((getCodeSigningConfigArn() == null) ? 0 : getCodeSigningConfigArn().hashCode());
         hashCode = prime * hashCode + ((getArchitectures() == null) ? 0 : getArchitectures().hashCode());
+        hashCode = prime * hashCode + ((getEphemeralStorage() == null) ? 0 : getEphemeralStorage().hashCode());
         return hashCode;
     }
 

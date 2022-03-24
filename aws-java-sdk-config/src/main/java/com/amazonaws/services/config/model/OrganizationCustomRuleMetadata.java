@@ -33,7 +33,7 @@ public class OrganizationCustomRuleMetadata implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The description that you provide for organization config rule.
+     * The description that you provide for your organization Config rule.
      * </p>
      */
     private String description;
@@ -73,7 +73,7 @@ public class OrganizationCustomRuleMetadata implements Serializable, Cloneable, 
     private com.amazonaws.internal.SdkInternalList<String> organizationConfigRuleTriggerTypes;
     /**
      * <p>
-     * A string, in JSON format, that is passed to organization config rule Lambda function.
+     * A string, in JSON format, that is passed to your organization Config rule Lambda function.
      * </p>
      */
     private String inputParameters;
@@ -119,11 +119,11 @@ public class OrganizationCustomRuleMetadata implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The description that you provide for organization config rule.
+     * The description that you provide for your organization Config rule.
      * </p>
      * 
      * @param description
-     *        The description that you provide for organization config rule.
+     *        The description that you provide for your organization Config rule.
      */
 
     public void setDescription(String description) {
@@ -132,10 +132,10 @@ public class OrganizationCustomRuleMetadata implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The description that you provide for organization config rule.
+     * The description that you provide for your organization Config rule.
      * </p>
      * 
-     * @return The description that you provide for organization config rule.
+     * @return The description that you provide for your organization Config rule.
      */
 
     public String getDescription() {
@@ -144,11 +144,11 @@ public class OrganizationCustomRuleMetadata implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The description that you provide for organization config rule.
+     * The description that you provide for your organization Config rule.
      * </p>
      * 
      * @param description
-     *        The description that you provide for organization config rule.
+     *        The description that you provide for your organization Config rule.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -517,11 +517,11 @@ public class OrganizationCustomRuleMetadata implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * A string, in JSON format, that is passed to organization config rule Lambda function.
+     * A string, in JSON format, that is passed to your organization Config rule Lambda function.
      * </p>
      * 
      * @param inputParameters
-     *        A string, in JSON format, that is passed to organization config rule Lambda function.
+     *        A string, in JSON format, that is passed to your organization Config rule Lambda function.
      */
 
     public void setInputParameters(String inputParameters) {
@@ -530,10 +530,10 @@ public class OrganizationCustomRuleMetadata implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * A string, in JSON format, that is passed to organization config rule Lambda function.
+     * A string, in JSON format, that is passed to your organization Config rule Lambda function.
      * </p>
      * 
-     * @return A string, in JSON format, that is passed to organization config rule Lambda function.
+     * @return A string, in JSON format, that is passed to your organization Config rule Lambda function.
      */
 
     public String getInputParameters() {
@@ -542,11 +542,11 @@ public class OrganizationCustomRuleMetadata implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * A string, in JSON format, that is passed to organization config rule Lambda function.
+     * A string, in JSON format, that is passed to your organization Config rule Lambda function.
      * </p>
      * 
      * @param inputParameters
-     *        A string, in JSON format, that is passed to organization config rule Lambda function.
+     *        A string, in JSON format, that is passed to your organization Config rule Lambda function.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -19,11 +19,11 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Status information for your Config managed rules. The status includes information such as the last time the rule ran,
- * the last time it failed, and the related error for the last failure.
+ * Status information for your Config Managed rules and Config Custom Policy rules. The status includes information such
+ * as the last time the rule ran, the last time it failed, and the related error for the last failure.
  * </p>
  * <p>
- * This action does not return status information about custom Config rules.
+ * This action does not return status information about Config Custom Lambda rules.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/ConfigRuleEvaluationStatus" target="_top">AWS
@@ -110,12 +110,33 @@ public class ConfigRuleEvaluationStatus implements Serializable, Cloneable, Stru
      * </li>
      * <li>
      * <p>
-     * <code>false</code> - Config has not once finished evaluating your Amazon Web Services resources against the rule.
+     * <code>false</code> - Config has not finished evaluating your Amazon Web Services resources against the rule at
+     * least once.
      * </p>
      * </li>
      * </ul>
      */
     private Boolean firstEvaluationStarted;
+    /**
+     * <p>
+     * The status of the last attempted delivery of a debug log for your Config Custom Policy rules. Either
+     * <code>Successful</code> or <code>Failed</code>.
+     * </p>
+     */
+    private String lastDebugLogDeliveryStatus;
+    /**
+     * <p>
+     * The reason Config was not able to deliver a debug log. This is for the last failed attempt to retrieve a debug
+     * log for your Config Custom Policy rules.
+     * </p>
+     */
+    private String lastDebugLogDeliveryStatusReason;
+    /**
+     * <p>
+     * The time Config last attempted to deliver a debug log for your Config Custom Policy rules.
+     * </p>
+     */
+    private java.util.Date lastDebugLogDeliveryTime;
 
     /**
      * <p>
@@ -573,7 +594,8 @@ public class ConfigRuleEvaluationStatus implements Serializable, Cloneable, Stru
      * </li>
      * <li>
      * <p>
-     * <code>false</code> - Config has not once finished evaluating your Amazon Web Services resources against the rule.
+     * <code>false</code> - Config has not finished evaluating your Amazon Web Services resources against the rule at
+     * least once.
      * </p>
      * </li>
      * </ul>
@@ -589,8 +611,8 @@ public class ConfigRuleEvaluationStatus implements Serializable, Cloneable, Stru
      *        </li>
      *        <li>
      *        <p>
-     *        <code>false</code> - Config has not once finished evaluating your Amazon Web Services resources against
-     *        the rule.
+     *        <code>false</code> - Config has not finished evaluating your Amazon Web Services resources against the
+     *        rule at least once.
      *        </p>
      *        </li>
      */
@@ -611,7 +633,8 @@ public class ConfigRuleEvaluationStatus implements Serializable, Cloneable, Stru
      * </li>
      * <li>
      * <p>
-     * <code>false</code> - Config has not once finished evaluating your Amazon Web Services resources against the rule.
+     * <code>false</code> - Config has not finished evaluating your Amazon Web Services resources against the rule at
+     * least once.
      * </p>
      * </li>
      * </ul>
@@ -626,8 +649,8 @@ public class ConfigRuleEvaluationStatus implements Serializable, Cloneable, Stru
      *         </li>
      *         <li>
      *         <p>
-     *         <code>false</code> - Config has not once finished evaluating your Amazon Web Services resources against
-     *         the rule.
+     *         <code>false</code> - Config has not finished evaluating your Amazon Web Services resources against the
+     *         rule at least once.
      *         </p>
      *         </li>
      */
@@ -648,7 +671,8 @@ public class ConfigRuleEvaluationStatus implements Serializable, Cloneable, Stru
      * </li>
      * <li>
      * <p>
-     * <code>false</code> - Config has not once finished evaluating your Amazon Web Services resources against the rule.
+     * <code>false</code> - Config has not finished evaluating your Amazon Web Services resources against the rule at
+     * least once.
      * </p>
      * </li>
      * </ul>
@@ -664,8 +688,8 @@ public class ConfigRuleEvaluationStatus implements Serializable, Cloneable, Stru
      *        </li>
      *        <li>
      *        <p>
-     *        <code>false</code> - Config has not once finished evaluating your Amazon Web Services resources against
-     *        the rule.
+     *        <code>false</code> - Config has not finished evaluating your Amazon Web Services resources against the
+     *        rule at least once.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -688,7 +712,8 @@ public class ConfigRuleEvaluationStatus implements Serializable, Cloneable, Stru
      * </li>
      * <li>
      * <p>
-     * <code>false</code> - Config has not once finished evaluating your Amazon Web Services resources against the rule.
+     * <code>false</code> - Config has not finished evaluating your Amazon Web Services resources against the rule at
+     * least once.
      * </p>
      * </li>
      * </ul>
@@ -703,14 +728,146 @@ public class ConfigRuleEvaluationStatus implements Serializable, Cloneable, Stru
      *         </li>
      *         <li>
      *         <p>
-     *         <code>false</code> - Config has not once finished evaluating your Amazon Web Services resources against
-     *         the rule.
+     *         <code>false</code> - Config has not finished evaluating your Amazon Web Services resources against the
+     *         rule at least once.
      *         </p>
      *         </li>
      */
 
     public Boolean isFirstEvaluationStarted() {
         return this.firstEvaluationStarted;
+    }
+
+    /**
+     * <p>
+     * The status of the last attempted delivery of a debug log for your Config Custom Policy rules. Either
+     * <code>Successful</code> or <code>Failed</code>.
+     * </p>
+     * 
+     * @param lastDebugLogDeliveryStatus
+     *        The status of the last attempted delivery of a debug log for your Config Custom Policy rules. Either
+     *        <code>Successful</code> or <code>Failed</code>.
+     */
+
+    public void setLastDebugLogDeliveryStatus(String lastDebugLogDeliveryStatus) {
+        this.lastDebugLogDeliveryStatus = lastDebugLogDeliveryStatus;
+    }
+
+    /**
+     * <p>
+     * The status of the last attempted delivery of a debug log for your Config Custom Policy rules. Either
+     * <code>Successful</code> or <code>Failed</code>.
+     * </p>
+     * 
+     * @return The status of the last attempted delivery of a debug log for your Config Custom Policy rules. Either
+     *         <code>Successful</code> or <code>Failed</code>.
+     */
+
+    public String getLastDebugLogDeliveryStatus() {
+        return this.lastDebugLogDeliveryStatus;
+    }
+
+    /**
+     * <p>
+     * The status of the last attempted delivery of a debug log for your Config Custom Policy rules. Either
+     * <code>Successful</code> or <code>Failed</code>.
+     * </p>
+     * 
+     * @param lastDebugLogDeliveryStatus
+     *        The status of the last attempted delivery of a debug log for your Config Custom Policy rules. Either
+     *        <code>Successful</code> or <code>Failed</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ConfigRuleEvaluationStatus withLastDebugLogDeliveryStatus(String lastDebugLogDeliveryStatus) {
+        setLastDebugLogDeliveryStatus(lastDebugLogDeliveryStatus);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The reason Config was not able to deliver a debug log. This is for the last failed attempt to retrieve a debug
+     * log for your Config Custom Policy rules.
+     * </p>
+     * 
+     * @param lastDebugLogDeliveryStatusReason
+     *        The reason Config was not able to deliver a debug log. This is for the last failed attempt to retrieve a
+     *        debug log for your Config Custom Policy rules.
+     */
+
+    public void setLastDebugLogDeliveryStatusReason(String lastDebugLogDeliveryStatusReason) {
+        this.lastDebugLogDeliveryStatusReason = lastDebugLogDeliveryStatusReason;
+    }
+
+    /**
+     * <p>
+     * The reason Config was not able to deliver a debug log. This is for the last failed attempt to retrieve a debug
+     * log for your Config Custom Policy rules.
+     * </p>
+     * 
+     * @return The reason Config was not able to deliver a debug log. This is for the last failed attempt to retrieve a
+     *         debug log for your Config Custom Policy rules.
+     */
+
+    public String getLastDebugLogDeliveryStatusReason() {
+        return this.lastDebugLogDeliveryStatusReason;
+    }
+
+    /**
+     * <p>
+     * The reason Config was not able to deliver a debug log. This is for the last failed attempt to retrieve a debug
+     * log for your Config Custom Policy rules.
+     * </p>
+     * 
+     * @param lastDebugLogDeliveryStatusReason
+     *        The reason Config was not able to deliver a debug log. This is for the last failed attempt to retrieve a
+     *        debug log for your Config Custom Policy rules.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ConfigRuleEvaluationStatus withLastDebugLogDeliveryStatusReason(String lastDebugLogDeliveryStatusReason) {
+        setLastDebugLogDeliveryStatusReason(lastDebugLogDeliveryStatusReason);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The time Config last attempted to deliver a debug log for your Config Custom Policy rules.
+     * </p>
+     * 
+     * @param lastDebugLogDeliveryTime
+     *        The time Config last attempted to deliver a debug log for your Config Custom Policy rules.
+     */
+
+    public void setLastDebugLogDeliveryTime(java.util.Date lastDebugLogDeliveryTime) {
+        this.lastDebugLogDeliveryTime = lastDebugLogDeliveryTime;
+    }
+
+    /**
+     * <p>
+     * The time Config last attempted to deliver a debug log for your Config Custom Policy rules.
+     * </p>
+     * 
+     * @return The time Config last attempted to deliver a debug log for your Config Custom Policy rules.
+     */
+
+    public java.util.Date getLastDebugLogDeliveryTime() {
+        return this.lastDebugLogDeliveryTime;
+    }
+
+    /**
+     * <p>
+     * The time Config last attempted to deliver a debug log for your Config Custom Policy rules.
+     * </p>
+     * 
+     * @param lastDebugLogDeliveryTime
+     *        The time Config last attempted to deliver a debug log for your Config Custom Policy rules.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ConfigRuleEvaluationStatus withLastDebugLogDeliveryTime(java.util.Date lastDebugLogDeliveryTime) {
+        setLastDebugLogDeliveryTime(lastDebugLogDeliveryTime);
+        return this;
     }
 
     /**
@@ -748,7 +905,13 @@ public class ConfigRuleEvaluationStatus implements Serializable, Cloneable, Stru
         if (getLastErrorMessage() != null)
             sb.append("LastErrorMessage: ").append(getLastErrorMessage()).append(",");
         if (getFirstEvaluationStarted() != null)
-            sb.append("FirstEvaluationStarted: ").append(getFirstEvaluationStarted());
+            sb.append("FirstEvaluationStarted: ").append(getFirstEvaluationStarted()).append(",");
+        if (getLastDebugLogDeliveryStatus() != null)
+            sb.append("LastDebugLogDeliveryStatus: ").append(getLastDebugLogDeliveryStatus()).append(",");
+        if (getLastDebugLogDeliveryStatusReason() != null)
+            sb.append("LastDebugLogDeliveryStatusReason: ").append(getLastDebugLogDeliveryStatusReason()).append(",");
+        if (getLastDebugLogDeliveryTime() != null)
+            sb.append("LastDebugLogDeliveryTime: ").append(getLastDebugLogDeliveryTime());
         sb.append("}");
         return sb.toString();
     }
@@ -811,6 +974,19 @@ public class ConfigRuleEvaluationStatus implements Serializable, Cloneable, Stru
             return false;
         if (other.getFirstEvaluationStarted() != null && other.getFirstEvaluationStarted().equals(this.getFirstEvaluationStarted()) == false)
             return false;
+        if (other.getLastDebugLogDeliveryStatus() == null ^ this.getLastDebugLogDeliveryStatus() == null)
+            return false;
+        if (other.getLastDebugLogDeliveryStatus() != null && other.getLastDebugLogDeliveryStatus().equals(this.getLastDebugLogDeliveryStatus()) == false)
+            return false;
+        if (other.getLastDebugLogDeliveryStatusReason() == null ^ this.getLastDebugLogDeliveryStatusReason() == null)
+            return false;
+        if (other.getLastDebugLogDeliveryStatusReason() != null
+                && other.getLastDebugLogDeliveryStatusReason().equals(this.getLastDebugLogDeliveryStatusReason()) == false)
+            return false;
+        if (other.getLastDebugLogDeliveryTime() == null ^ this.getLastDebugLogDeliveryTime() == null)
+            return false;
+        if (other.getLastDebugLogDeliveryTime() != null && other.getLastDebugLogDeliveryTime().equals(this.getLastDebugLogDeliveryTime()) == false)
+            return false;
         return true;
     }
 
@@ -831,6 +1007,9 @@ public class ConfigRuleEvaluationStatus implements Serializable, Cloneable, Stru
         hashCode = prime * hashCode + ((getLastErrorCode() == null) ? 0 : getLastErrorCode().hashCode());
         hashCode = prime * hashCode + ((getLastErrorMessage() == null) ? 0 : getLastErrorMessage().hashCode());
         hashCode = prime * hashCode + ((getFirstEvaluationStarted() == null) ? 0 : getFirstEvaluationStarted().hashCode());
+        hashCode = prime * hashCode + ((getLastDebugLogDeliveryStatus() == null) ? 0 : getLastDebugLogDeliveryStatus().hashCode());
+        hashCode = prime * hashCode + ((getLastDebugLogDeliveryStatusReason() == null) ? 0 : getLastDebugLogDeliveryStatusReason().hashCode());
+        hashCode = prime * hashCode + ((getLastDebugLogDeliveryTime() == null) ? 0 : getLastDebugLogDeliveryTime().hashCode());
         return hashCode;
     }
 

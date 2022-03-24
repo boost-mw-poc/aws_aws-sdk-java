@@ -229,6 +229,13 @@ public class FunctionConfiguration implements Serializable, Cloneable, Structure
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> architectures;
+    /**
+     * <p>
+     * The size of the function’s /tmp directory in MB. The default value is 512, but can be any whole number between
+     * 512 and 10240 MB.
+     * </p>
+     */
+    private EphemeralStorage ephemeralStorage;
 
     /**
      * <p>
@@ -1920,6 +1927,52 @@ public class FunctionConfiguration implements Serializable, Cloneable, Structure
     }
 
     /**
+     * <p>
+     * The size of the function’s /tmp directory in MB. The default value is 512, but can be any whole number between
+     * 512 and 10240 MB.
+     * </p>
+     * 
+     * @param ephemeralStorage
+     *        The size of the function’s /tmp directory in MB. The default value is 512, but can be any whole number
+     *        between 512 and 10240 MB.
+     */
+
+    public void setEphemeralStorage(EphemeralStorage ephemeralStorage) {
+        this.ephemeralStorage = ephemeralStorage;
+    }
+
+    /**
+     * <p>
+     * The size of the function’s /tmp directory in MB. The default value is 512, but can be any whole number between
+     * 512 and 10240 MB.
+     * </p>
+     * 
+     * @return The size of the function’s /tmp directory in MB. The default value is 512, but can be any whole number
+     *         between 512 and 10240 MB.
+     */
+
+    public EphemeralStorage getEphemeralStorage() {
+        return this.ephemeralStorage;
+    }
+
+    /**
+     * <p>
+     * The size of the function’s /tmp directory in MB. The default value is 512, but can be any whole number between
+     * 512 and 10240 MB.
+     * </p>
+     * 
+     * @param ephemeralStorage
+     *        The size of the function’s /tmp directory in MB. The default value is 512, but can be any whole number
+     *        between 512 and 10240 MB.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public FunctionConfiguration withEphemeralStorage(EphemeralStorage ephemeralStorage) {
+        setEphemeralStorage(ephemeralStorage);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1994,7 +2047,9 @@ public class FunctionConfiguration implements Serializable, Cloneable, Structure
         if (getSigningJobArn() != null)
             sb.append("SigningJobArn: ").append(getSigningJobArn()).append(",");
         if (getArchitectures() != null)
-            sb.append("Architectures: ").append(getArchitectures());
+            sb.append("Architectures: ").append(getArchitectures()).append(",");
+        if (getEphemeralStorage() != null)
+            sb.append("EphemeralStorage: ").append(getEphemeralStorage());
         sb.append("}");
         return sb.toString();
     }
@@ -2137,6 +2192,10 @@ public class FunctionConfiguration implements Serializable, Cloneable, Structure
             return false;
         if (other.getArchitectures() != null && other.getArchitectures().equals(this.getArchitectures()) == false)
             return false;
+        if (other.getEphemeralStorage() == null ^ this.getEphemeralStorage() == null)
+            return false;
+        if (other.getEphemeralStorage() != null && other.getEphemeralStorage().equals(this.getEphemeralStorage()) == false)
+            return false;
         return true;
     }
 
@@ -2177,6 +2236,7 @@ public class FunctionConfiguration implements Serializable, Cloneable, Structure
         hashCode = prime * hashCode + ((getSigningProfileVersionArn() == null) ? 0 : getSigningProfileVersionArn().hashCode());
         hashCode = prime * hashCode + ((getSigningJobArn() == null) ? 0 : getSigningJobArn().hashCode());
         hashCode = prime * hashCode + ((getArchitectures() == null) ? 0 : getArchitectures().hashCode());
+        hashCode = prime * hashCode + ((getEphemeralStorage() == null) ? 0 : getEphemeralStorage().hashCode());
         return hashCode;
     }
 

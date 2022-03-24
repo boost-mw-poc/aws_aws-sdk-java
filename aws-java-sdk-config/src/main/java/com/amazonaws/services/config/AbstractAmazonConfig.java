@@ -362,6 +362,11 @@ public class AbstractAmazonConfig implements AmazonConfig {
     }
 
     @Override
+    public GetCustomRulePolicyResult getCustomRulePolicy(GetCustomRulePolicyRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetDiscoveredResourceCountsResult getDiscoveredResourceCounts(GetDiscoveredResourceCountsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -374,6 +379,11 @@ public class AbstractAmazonConfig implements AmazonConfig {
     @Override
     public GetOrganizationConformancePackDetailedStatusResult getOrganizationConformancePackDetailedStatus(
             GetOrganizationConformancePackDetailedStatusRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetOrganizationCustomRulePolicyResult getOrganizationCustomRulePolicy(GetOrganizationCustomRulePolicyRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

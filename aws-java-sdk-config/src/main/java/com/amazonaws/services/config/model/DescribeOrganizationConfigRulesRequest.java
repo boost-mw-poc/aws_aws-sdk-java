@@ -27,14 +27,14 @@ public class DescribeOrganizationConfigRulesRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The names of organization config rules for which you want details. If you do not specify any names, Config
-     * returns details for all your organization config rules.
+     * The names of organization Config rules for which you want details. If you do not specify any names, Config
+     * returns details for all your organization Config rules.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> organizationConfigRuleNames;
     /**
      * <p>
-     * The maximum number of organization config rules returned on each page. If you do no specify a number, Config uses
+     * The maximum number of organization Config rules returned on each page. If you do no specify a number, Config uses
      * the default. The default is 100.
      * </p>
      */
@@ -49,12 +49,12 @@ public class DescribeOrganizationConfigRulesRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The names of organization config rules for which you want details. If you do not specify any names, Config
-     * returns details for all your organization config rules.
+     * The names of organization Config rules for which you want details. If you do not specify any names, Config
+     * returns details for all your organization Config rules.
      * </p>
      * 
-     * @return The names of organization config rules for which you want details. If you do not specify any names,
-     *         Config returns details for all your organization config rules.
+     * @return The names of organization Config rules for which you want details. If you do not specify any names,
+     *         Config returns details for all your organization Config rules.
      */
 
     public java.util.List<String> getOrganizationConfigRuleNames() {
@@ -66,13 +66,13 @@ public class DescribeOrganizationConfigRulesRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The names of organization config rules for which you want details. If you do not specify any names, Config
-     * returns details for all your organization config rules.
+     * The names of organization Config rules for which you want details. If you do not specify any names, Config
+     * returns details for all your organization Config rules.
      * </p>
      * 
      * @param organizationConfigRuleNames
-     *        The names of organization config rules for which you want details. If you do not specify any names, Config
-     *        returns details for all your organization config rules.
+     *        The names of organization Config rules for which you want details. If you do not specify any names, Config
+     *        returns details for all your organization Config rules.
      */
 
     public void setOrganizationConfigRuleNames(java.util.Collection<String> organizationConfigRuleNames) {
@@ -86,8 +86,8 @@ public class DescribeOrganizationConfigRulesRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The names of organization config rules for which you want details. If you do not specify any names, Config
-     * returns details for all your organization config rules.
+     * The names of organization Config rules for which you want details. If you do not specify any names, Config
+     * returns details for all your organization Config rules.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -96,8 +96,8 @@ public class DescribeOrganizationConfigRulesRequest extends com.amazonaws.Amazon
      * </p>
      * 
      * @param organizationConfigRuleNames
-     *        The names of organization config rules for which you want details. If you do not specify any names, Config
-     *        returns details for all your organization config rules.
+     *        The names of organization Config rules for which you want details. If you do not specify any names, Config
+     *        returns details for all your organization Config rules.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -113,13 +113,13 @@ public class DescribeOrganizationConfigRulesRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The names of organization config rules for which you want details. If you do not specify any names, Config
-     * returns details for all your organization config rules.
+     * The names of organization Config rules for which you want details. If you do not specify any names, Config
+     * returns details for all your organization Config rules.
      * </p>
      * 
      * @param organizationConfigRuleNames
-     *        The names of organization config rules for which you want details. If you do not specify any names, Config
-     *        returns details for all your organization config rules.
+     *        The names of organization Config rules for which you want details. If you do not specify any names, Config
+     *        returns details for all your organization Config rules.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -130,12 +130,12 @@ public class DescribeOrganizationConfigRulesRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The maximum number of organization config rules returned on each page. If you do no specify a number, Config uses
+     * The maximum number of organization Config rules returned on each page. If you do no specify a number, Config uses
      * the default. The default is 100.
      * </p>
      * 
      * @param limit
-     *        The maximum number of organization config rules returned on each page. If you do no specify a number,
+     *        The maximum number of organization Config rules returned on each page. If you do no specify a number,
      *        Config uses the default. The default is 100.
      */
 
@@ -145,11 +145,11 @@ public class DescribeOrganizationConfigRulesRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The maximum number of organization config rules returned on each page. If you do no specify a number, Config uses
+     * The maximum number of organization Config rules returned on each page. If you do no specify a number, Config uses
      * the default. The default is 100.
      * </p>
      * 
-     * @return The maximum number of organization config rules returned on each page. If you do no specify a number,
+     * @return The maximum number of organization Config rules returned on each page. If you do no specify a number,
      *         Config uses the default. The default is 100.
      */
 
@@ -159,12 +159,12 @@ public class DescribeOrganizationConfigRulesRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The maximum number of organization config rules returned on each page. If you do no specify a number, Config uses
+     * The maximum number of organization Config rules returned on each page. If you do no specify a number, Config uses
      * the default. The default is 100.
      * </p>
      * 
      * @param limit
-     *        The maximum number of organization config rules returned on each page. If you do no specify a number,
+     *        The maximum number of organization Config rules returned on each page. If you do no specify a number,
      *        Config uses the default. The default is 100.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

@@ -54,6 +54,10 @@ public class SubtitlesJsonUnmarshaller implements Unmarshaller<Subtitles, JsonUn
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("OutputStartIndex", targetDepth)) {
+                    context.nextToken();
+                    subtitles.setOutputStartIndex(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)
