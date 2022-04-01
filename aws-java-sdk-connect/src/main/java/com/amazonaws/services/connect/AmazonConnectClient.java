@@ -7006,11 +7006,6 @@ public class AmazonConnectClient extends AmazonWebServiceClient implements Amazo
      * <ul>
      * <li>
      * <p>
-     * CALLBACK
-     * </p>
-     * </li>
-     * <li>
-     * <p>
      * DISCONNECT
      * </p>
      * </li>

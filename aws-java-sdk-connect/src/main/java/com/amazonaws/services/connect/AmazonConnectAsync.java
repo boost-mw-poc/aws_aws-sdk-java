@@ -3826,11 +3826,6 @@ public interface AmazonConnectAsync extends AmazonConnect {
      * <ul>
      * <li>
      * <p>
-     * CALLBACK
-     * </p>
-     * </li>
-     * <li>
-     * <p>
      * DISCONNECT
      * </p>
      * </li>
@@ -3859,11 +3854,6 @@ public interface AmazonConnectAsync extends AmazonConnect {
      * Ends the specified contact. This call does not work for the following initiation methods:
      * </p>
      * <ul>
-     * <li>
-     * <p>
-     * CALLBACK
-     * </p>
-     * </li>
      * <li>
      * <p>
      * DISCONNECT
