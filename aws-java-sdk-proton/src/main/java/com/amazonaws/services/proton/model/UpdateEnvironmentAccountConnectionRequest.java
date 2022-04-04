@@ -33,7 +33,7 @@ public class UpdateEnvironmentAccountConnectionRequest extends com.amazonaws.Ama
     private String id;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the IAM service role that is associated with the environment account connection
+     * The Amazon Resource Name (ARN) of the IAM service role that's associated with the environment account connection
      * to update.
      * </p>
      */
@@ -81,12 +81,12 @@ public class UpdateEnvironmentAccountConnectionRequest extends com.amazonaws.Ama
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the IAM service role that is associated with the environment account connection
+     * The Amazon Resource Name (ARN) of the IAM service role that's associated with the environment account connection
      * to update.
      * </p>
      * 
      * @param roleArn
-     *        The Amazon Resource Name (ARN) of the IAM service role that is associated with the environment account
+     *        The Amazon Resource Name (ARN) of the IAM service role that's associated with the environment account
      *        connection to update.
      */
 
@@ -96,11 +96,11 @@ public class UpdateEnvironmentAccountConnectionRequest extends com.amazonaws.Ama
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the IAM service role that is associated with the environment account connection
+     * The Amazon Resource Name (ARN) of the IAM service role that's associated with the environment account connection
      * to update.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the IAM service role that is associated with the environment account
+     * @return The Amazon Resource Name (ARN) of the IAM service role that's associated with the environment account
      *         connection to update.
      */
 
@@ -110,12 +110,12 @@ public class UpdateEnvironmentAccountConnectionRequest extends com.amazonaws.Ama
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the IAM service role that is associated with the environment account connection
+     * The Amazon Resource Name (ARN) of the IAM service role that's associated with the environment account connection
      * to update.
      * </p>
      * 
      * @param roleArn
-     *        The Amazon Resource Name (ARN) of the IAM service role that is associated with the environment account
+     *        The Amazon Resource Name (ARN) of the IAM service role that's associated with the environment account
      *        connection to update.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

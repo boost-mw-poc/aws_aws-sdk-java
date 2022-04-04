@@ -33,8 +33,8 @@ public class ListServiceTemplatesRequest extends com.amazonaws.AmazonWebServiceR
     private Integer maxResults;
     /**
      * <p>
-     * A token to indicate the location of the next service template in the array of service templates, after the list
-     * of service templates previously requested.
+     * A token that indicates the location of the next service template in the array of service templates, after the
+     * list of service templates previously requested.
      * </p>
      */
     private String nextToken;
@@ -81,13 +81,13 @@ public class ListServiceTemplatesRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * A token to indicate the location of the next service template in the array of service templates, after the list
-     * of service templates previously requested.
+     * A token that indicates the location of the next service template in the array of service templates, after the
+     * list of service templates previously requested.
      * </p>
      * 
      * @param nextToken
-     *        A token to indicate the location of the next service template in the array of service templates, after the
-     *        list of service templates previously requested.
+     *        A token that indicates the location of the next service template in the array of service templates, after
+     *        the list of service templates previously requested.
      */
 
     public void setNextToken(String nextToken) {
@@ -96,11 +96,11 @@ public class ListServiceTemplatesRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * A token to indicate the location of the next service template in the array of service templates, after the list
-     * of service templates previously requested.
+     * A token that indicates the location of the next service template in the array of service templates, after the
+     * list of service templates previously requested.
      * </p>
      * 
-     * @return A token to indicate the location of the next service template in the array of service templates, after
+     * @return A token that indicates the location of the next service template in the array of service templates, after
      *         the list of service templates previously requested.
      */
 
@@ -110,13 +110,13 @@ public class ListServiceTemplatesRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * A token to indicate the location of the next service template in the array of service templates, after the list
-     * of service templates previously requested.
+     * A token that indicates the location of the next service template in the array of service templates, after the
+     * list of service templates previously requested.
      * </p>
      * 
      * @param nextToken
-     *        A token to indicate the location of the next service template in the array of service templates, after the
-     *        list of service templates previously requested.
+     *        A token that indicates the location of the next service template in the array of service templates, after
+     *        the list of service templates previously requested.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

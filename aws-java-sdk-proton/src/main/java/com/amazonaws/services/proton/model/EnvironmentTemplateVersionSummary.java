@@ -84,7 +84,7 @@ public class EnvironmentTemplateVersionSummary implements Serializable, Cloneabl
     private String statusMessage;
     /**
      * <p>
-     * The name of the version of an environment template.
+     * The name of the environment template.
      * </p>
      */
     private String templateName;
@@ -470,11 +470,11 @@ public class EnvironmentTemplateVersionSummary implements Serializable, Cloneabl
 
     /**
      * <p>
-     * The name of the version of an environment template.
+     * The name of the environment template.
      * </p>
      * 
      * @param templateName
-     *        The name of the version of an environment template.
+     *        The name of the environment template.
      */
 
     public void setTemplateName(String templateName) {
@@ -483,10 +483,10 @@ public class EnvironmentTemplateVersionSummary implements Serializable, Cloneabl
 
     /**
      * <p>
-     * The name of the version of an environment template.
+     * The name of the environment template.
      * </p>
      * 
-     * @return The name of the version of an environment template.
+     * @return The name of the environment template.
      */
 
     public String getTemplateName() {
@@ -495,11 +495,11 @@ public class EnvironmentTemplateVersionSummary implements Serializable, Cloneabl
 
     /**
      * <p>
-     * The name of the version of an environment template.
+     * The name of the environment template.
      * </p>
      * 
      * @param templateName
-     *        The name of the version of an environment template.
+     *        The name of the environment template.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

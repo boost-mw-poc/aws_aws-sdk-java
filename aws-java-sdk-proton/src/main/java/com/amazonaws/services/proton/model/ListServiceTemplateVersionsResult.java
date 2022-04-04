@@ -25,8 +25,8 @@ public class ListServiceTemplateVersionsResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * A token to indicate the location of the next major or minor version in the array of major or minor versions of a
-     * service template, after the current requested list of service major or minor versions.
+     * A token that indicates the location of the next major or minor version in the array of major or minor versions of
+     * a service template, after the current requested list of service major or minor versions.
      * </p>
      */
     private String nextToken;
@@ -39,12 +39,12 @@ public class ListServiceTemplateVersionsResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * A token to indicate the location of the next major or minor version in the array of major or minor versions of a
-     * service template, after the current requested list of service major or minor versions.
+     * A token that indicates the location of the next major or minor version in the array of major or minor versions of
+     * a service template, after the current requested list of service major or minor versions.
      * </p>
      * 
      * @param nextToken
-     *        A token to indicate the location of the next major or minor version in the array of major or minor
+     *        A token that indicates the location of the next major or minor version in the array of major or minor
      *        versions of a service template, after the current requested list of service major or minor versions.
      */
 
@@ -54,11 +54,11 @@ public class ListServiceTemplateVersionsResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * A token to indicate the location of the next major or minor version in the array of major or minor versions of a
-     * service template, after the current requested list of service major or minor versions.
+     * A token that indicates the location of the next major or minor version in the array of major or minor versions of
+     * a service template, after the current requested list of service major or minor versions.
      * </p>
      * 
-     * @return A token to indicate the location of the next major or minor version in the array of major or minor
+     * @return A token that indicates the location of the next major or minor version in the array of major or minor
      *         versions of a service template, after the current requested list of service major or minor versions.
      */
 
@@ -68,12 +68,12 @@ public class ListServiceTemplateVersionsResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * A token to indicate the location of the next major or minor version in the array of major or minor versions of a
-     * service template, after the current requested list of service major or minor versions.
+     * A token that indicates the location of the next major or minor version in the array of major or minor versions of
+     * a service template, after the current requested list of service major or minor versions.
      * </p>
      * 
      * @param nextToken
-     *        A token to indicate the location of the next major or minor version in the array of major or minor
+     *        A token that indicates the location of the next major or minor version in the array of major or minor
      *        versions of a service template, after the current requested list of service major or minor versions.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

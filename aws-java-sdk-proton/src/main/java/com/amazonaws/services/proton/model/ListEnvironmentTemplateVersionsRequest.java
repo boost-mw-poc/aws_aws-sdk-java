@@ -43,8 +43,8 @@ public class ListEnvironmentTemplateVersionsRequest extends com.amazonaws.Amazon
     private Integer maxResults;
     /**
      * <p>
-     * A token to indicate the location of the next major or minor version in the array of major or minor versions of an
-     * environment template, after the list of major or minor versions that was previously requested.
+     * A token that indicates the location of the next major or minor version in the array of major or minor versions of
+     * an environment template, after the list of major or minor versions that was previously requested.
      * </p>
      */
     private String nextToken;
@@ -158,12 +158,12 @@ public class ListEnvironmentTemplateVersionsRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * A token to indicate the location of the next major or minor version in the array of major or minor versions of an
-     * environment template, after the list of major or minor versions that was previously requested.
+     * A token that indicates the location of the next major or minor version in the array of major or minor versions of
+     * an environment template, after the list of major or minor versions that was previously requested.
      * </p>
      * 
      * @param nextToken
-     *        A token to indicate the location of the next major or minor version in the array of major or minor
+     *        A token that indicates the location of the next major or minor version in the array of major or minor
      *        versions of an environment template, after the list of major or minor versions that was previously
      *        requested.
      */
@@ -174,11 +174,11 @@ public class ListEnvironmentTemplateVersionsRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * A token to indicate the location of the next major or minor version in the array of major or minor versions of an
-     * environment template, after the list of major or minor versions that was previously requested.
+     * A token that indicates the location of the next major or minor version in the array of major or minor versions of
+     * an environment template, after the list of major or minor versions that was previously requested.
      * </p>
      * 
-     * @return A token to indicate the location of the next major or minor version in the array of major or minor
+     * @return A token that indicates the location of the next major or minor version in the array of major or minor
      *         versions of an environment template, after the list of major or minor versions that was previously
      *         requested.
      */
@@ -189,12 +189,12 @@ public class ListEnvironmentTemplateVersionsRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * A token to indicate the location of the next major or minor version in the array of major or minor versions of an
-     * environment template, after the list of major or minor versions that was previously requested.
+     * A token that indicates the location of the next major or minor version in the array of major or minor versions of
+     * an environment template, after the list of major or minor versions that was previously requested.
      * </p>
      * 
      * @param nextToken
-     *        A token to indicate the location of the next major or minor version in the array of major or minor
+     *        A token that indicates the location of the next major or minor version in the array of major or minor
      *        versions of an environment template, after the list of major or minor versions that was previously
      *        requested.
      * @return Returns a reference to this object so that method calls can be chained together.

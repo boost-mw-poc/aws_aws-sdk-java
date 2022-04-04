@@ -25,7 +25,7 @@ public class ListEnvironmentOutputsResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * A token to indicate the location of the next environment output in the array of environment outputs, after the
+     * A token that indicates the location of the next environment output in the array of environment outputs, after the
      * current requested list of environment outputs.
      * </p>
      */
@@ -39,13 +39,13 @@ public class ListEnvironmentOutputsResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * A token to indicate the location of the next environment output in the array of environment outputs, after the
+     * A token that indicates the location of the next environment output in the array of environment outputs, after the
      * current requested list of environment outputs.
      * </p>
      * 
      * @param nextToken
-     *        A token to indicate the location of the next environment output in the array of environment outputs, after
-     *        the current requested list of environment outputs.
+     *        A token that indicates the location of the next environment output in the array of environment outputs,
+     *        after the current requested list of environment outputs.
      */
 
     public void setNextToken(String nextToken) {
@@ -54,11 +54,11 @@ public class ListEnvironmentOutputsResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * A token to indicate the location of the next environment output in the array of environment outputs, after the
+     * A token that indicates the location of the next environment output in the array of environment outputs, after the
      * current requested list of environment outputs.
      * </p>
      * 
-     * @return A token to indicate the location of the next environment output in the array of environment outputs,
+     * @return A token that indicates the location of the next environment output in the array of environment outputs,
      *         after the current requested list of environment outputs.
      */
 
@@ -68,13 +68,13 @@ public class ListEnvironmentOutputsResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * A token to indicate the location of the next environment output in the array of environment outputs, after the
+     * A token that indicates the location of the next environment output in the array of environment outputs, after the
      * current requested list of environment outputs.
      * </p>
      * 
      * @param nextToken
-     *        A token to indicate the location of the next environment output in the array of environment outputs, after
-     *        the current requested list of environment outputs.
+     *        A token that indicates the location of the next environment output in the array of environment outputs,
+     *        after the current requested list of environment outputs.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

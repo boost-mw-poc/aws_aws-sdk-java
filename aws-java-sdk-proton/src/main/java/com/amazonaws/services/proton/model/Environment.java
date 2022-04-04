@@ -104,15 +104,9 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
     private String provisioning;
     /**
      * <p>
-     * The repository that you provide with pull request provisioning.
+     * The infrastructure repository that you use to host your rendered infrastructure templates for self-managed
+     * provisioning.
      * </p>
-     * <important>
-     * <p>
-     * Provisioning by pull request is currently in feature preview and is only usable with Terraform based Proton
-     * Templates. To learn more about <a href="https://aws.amazon.com/service-terms">Amazon Web Services Feature Preview
-     * terms</a>, see section 2 on Beta and Previews.
-     * </p>
-     * </important>
      */
     private RepositoryBranch provisioningRepository;
     /**
@@ -123,13 +117,13 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
     private String spec;
     /**
      * <p>
-     * The ID of the major version of the environment template.
+     * The major version of the environment template.
      * </p>
      */
     private String templateMajorVersion;
     /**
      * <p>
-     * The ID of the minor version of the environment template.
+     * The minor version of the environment template.
      * </p>
      */
     private String templateMinorVersion;
@@ -676,23 +670,13 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The repository that you provide with pull request provisioning.
+     * The infrastructure repository that you use to host your rendered infrastructure templates for self-managed
+     * provisioning.
      * </p>
-     * <important>
-     * <p>
-     * Provisioning by pull request is currently in feature preview and is only usable with Terraform based Proton
-     * Templates. To learn more about <a href="https://aws.amazon.com/service-terms">Amazon Web Services Feature Preview
-     * terms</a>, see section 2 on Beta and Previews.
-     * </p>
-     * </important>
      * 
      * @param provisioningRepository
-     *        The repository that you provide with pull request provisioning.</p> <important>
-     *        <p>
-     *        Provisioning by pull request is currently in feature preview and is only usable with Terraform based
-     *        Proton Templates. To learn more about <a href="https://aws.amazon.com/service-terms">Amazon Web Services
-     *        Feature Preview terms</a>, see section 2 on Beta and Previews.
-     *        </p>
+     *        The infrastructure repository that you use to host your rendered infrastructure templates for self-managed
+     *        provisioning.
      */
 
     public void setProvisioningRepository(RepositoryBranch provisioningRepository) {
@@ -701,22 +685,12 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The repository that you provide with pull request provisioning.
+     * The infrastructure repository that you use to host your rendered infrastructure templates for self-managed
+     * provisioning.
      * </p>
-     * <important>
-     * <p>
-     * Provisioning by pull request is currently in feature preview and is only usable with Terraform based Proton
-     * Templates. To learn more about <a href="https://aws.amazon.com/service-terms">Amazon Web Services Feature Preview
-     * terms</a>, see section 2 on Beta and Previews.
-     * </p>
-     * </important>
      * 
-     * @return The repository that you provide with pull request provisioning.</p> <important>
-     *         <p>
-     *         Provisioning by pull request is currently in feature preview and is only usable with Terraform based
-     *         Proton Templates. To learn more about <a href="https://aws.amazon.com/service-terms">Amazon Web Services
-     *         Feature Preview terms</a>, see section 2 on Beta and Previews.
-     *         </p>
+     * @return The infrastructure repository that you use to host your rendered infrastructure templates for
+     *         self-managed provisioning.
      */
 
     public RepositoryBranch getProvisioningRepository() {
@@ -725,23 +699,13 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The repository that you provide with pull request provisioning.
+     * The infrastructure repository that you use to host your rendered infrastructure templates for self-managed
+     * provisioning.
      * </p>
-     * <important>
-     * <p>
-     * Provisioning by pull request is currently in feature preview and is only usable with Terraform based Proton
-     * Templates. To learn more about <a href="https://aws.amazon.com/service-terms">Amazon Web Services Feature Preview
-     * terms</a>, see section 2 on Beta and Previews.
-     * </p>
-     * </important>
      * 
      * @param provisioningRepository
-     *        The repository that you provide with pull request provisioning.</p> <important>
-     *        <p>
-     *        Provisioning by pull request is currently in feature preview and is only usable with Terraform based
-     *        Proton Templates. To learn more about <a href="https://aws.amazon.com/service-terms">Amazon Web Services
-     *        Feature Preview terms</a>, see section 2 on Beta and Previews.
-     *        </p>
+     *        The infrastructure repository that you use to host your rendered infrastructure templates for self-managed
+     *        provisioning.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -792,11 +756,11 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID of the major version of the environment template.
+     * The major version of the environment template.
      * </p>
      * 
      * @param templateMajorVersion
-     *        The ID of the major version of the environment template.
+     *        The major version of the environment template.
      */
 
     public void setTemplateMajorVersion(String templateMajorVersion) {
@@ -805,10 +769,10 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID of the major version of the environment template.
+     * The major version of the environment template.
      * </p>
      * 
-     * @return The ID of the major version of the environment template.
+     * @return The major version of the environment template.
      */
 
     public String getTemplateMajorVersion() {
@@ -817,11 +781,11 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID of the major version of the environment template.
+     * The major version of the environment template.
      * </p>
      * 
      * @param templateMajorVersion
-     *        The ID of the major version of the environment template.
+     *        The major version of the environment template.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -832,11 +796,11 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID of the minor version of the environment template.
+     * The minor version of the environment template.
      * </p>
      * 
      * @param templateMinorVersion
-     *        The ID of the minor version of the environment template.
+     *        The minor version of the environment template.
      */
 
     public void setTemplateMinorVersion(String templateMinorVersion) {
@@ -845,10 +809,10 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID of the minor version of the environment template.
+     * The minor version of the environment template.
      * </p>
      * 
-     * @return The ID of the minor version of the environment template.
+     * @return The minor version of the environment template.
      */
 
     public String getTemplateMinorVersion() {
@@ -857,11 +821,11 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID of the minor version of the environment template.
+     * The minor version of the environment template.
      * </p>
      * 
      * @param templateMinorVersion
-     *        The ID of the minor version of the environment template.
+     *        The minor version of the environment template.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

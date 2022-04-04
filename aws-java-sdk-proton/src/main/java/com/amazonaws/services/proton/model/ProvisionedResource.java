@@ -42,15 +42,14 @@ public class ProvisionedResource implements Serializable, Cloneable, StructuredP
     private String name;
     /**
      * <p>
-     * The resource provisioning engine.
+     * The resource provisioning engine. At this time, <code>CLOUDFORMATION</code> can be used for Amazon Web
+     * Services-managed provisioning, and <code>TERRAFORM</code> can be used for self-managed provisioning.
      * </p>
-     * <important>
      * <p>
-     * Provisioning by pull request is currently in feature preview and is only usable with Terraform based Proton
-     * Templates. To learn more about <a href="https://aws.amazon.com/service-terms">Amazon Web Services Feature Preview
-     * terms</a>, see section 2 on Beta and Previews.
+     * For more information, see <a href=
+     * "https://docs.aws.amazon.com/proton/latest/adminguide/ag-works-prov-methods.html#ag-works-prov-methods-self"
+     * >Self-managed provisioning</a> in the <i>Proton Administrator Guide</i>.
      * </p>
-     * </important>
      */
     private String provisioningEngine;
 
@@ -136,23 +135,22 @@ public class ProvisionedResource implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The resource provisioning engine.
+     * The resource provisioning engine. At this time, <code>CLOUDFORMATION</code> can be used for Amazon Web
+     * Services-managed provisioning, and <code>TERRAFORM</code> can be used for self-managed provisioning.
      * </p>
-     * <important>
      * <p>
-     * Provisioning by pull request is currently in feature preview and is only usable with Terraform based Proton
-     * Templates. To learn more about <a href="https://aws.amazon.com/service-terms">Amazon Web Services Feature Preview
-     * terms</a>, see section 2 on Beta and Previews.
+     * For more information, see <a href=
+     * "https://docs.aws.amazon.com/proton/latest/adminguide/ag-works-prov-methods.html#ag-works-prov-methods-self"
+     * >Self-managed provisioning</a> in the <i>Proton Administrator Guide</i>.
      * </p>
-     * </important>
      * 
      * @param provisioningEngine
-     *        The resource provisioning engine.</p> <important>
+     *        The resource provisioning engine. At this time, <code>CLOUDFORMATION</code> can be used for Amazon Web
+     *        Services-managed provisioning, and <code>TERRAFORM</code> can be used for self-managed provisioning.</p>
      *        <p>
-     *        Provisioning by pull request is currently in feature preview and is only usable with Terraform based
-     *        Proton Templates. To learn more about <a href="https://aws.amazon.com/service-terms">Amazon Web Services
-     *        Feature Preview terms</a>, see section 2 on Beta and Previews.
-     *        </p>
+     *        For more information, see <a href=
+     *        "https://docs.aws.amazon.com/proton/latest/adminguide/ag-works-prov-methods.html#ag-works-prov-methods-self"
+     *        >Self-managed provisioning</a> in the <i>Proton Administrator Guide</i>.
      * @see ProvisionedResourceEngine
      */
 
@@ -162,22 +160,21 @@ public class ProvisionedResource implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The resource provisioning engine.
+     * The resource provisioning engine. At this time, <code>CLOUDFORMATION</code> can be used for Amazon Web
+     * Services-managed provisioning, and <code>TERRAFORM</code> can be used for self-managed provisioning.
      * </p>
-     * <important>
      * <p>
-     * Provisioning by pull request is currently in feature preview and is only usable with Terraform based Proton
-     * Templates. To learn more about <a href="https://aws.amazon.com/service-terms">Amazon Web Services Feature Preview
-     * terms</a>, see section 2 on Beta and Previews.
+     * For more information, see <a href=
+     * "https://docs.aws.amazon.com/proton/latest/adminguide/ag-works-prov-methods.html#ag-works-prov-methods-self"
+     * >Self-managed provisioning</a> in the <i>Proton Administrator Guide</i>.
      * </p>
-     * </important>
      * 
-     * @return The resource provisioning engine.</p> <important>
+     * @return The resource provisioning engine. At this time, <code>CLOUDFORMATION</code> can be used for Amazon Web
+     *         Services-managed provisioning, and <code>TERRAFORM</code> can be used for self-managed provisioning.</p>
      *         <p>
-     *         Provisioning by pull request is currently in feature preview and is only usable with Terraform based
-     *         Proton Templates. To learn more about <a href="https://aws.amazon.com/service-terms">Amazon Web Services
-     *         Feature Preview terms</a>, see section 2 on Beta and Previews.
-     *         </p>
+     *         For more information, see <a href=
+     *         "https://docs.aws.amazon.com/proton/latest/adminguide/ag-works-prov-methods.html#ag-works-prov-methods-self"
+     *         >Self-managed provisioning</a> in the <i>Proton Administrator Guide</i>.
      * @see ProvisionedResourceEngine
      */
 
@@ -187,23 +184,22 @@ public class ProvisionedResource implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The resource provisioning engine.
+     * The resource provisioning engine. At this time, <code>CLOUDFORMATION</code> can be used for Amazon Web
+     * Services-managed provisioning, and <code>TERRAFORM</code> can be used for self-managed provisioning.
      * </p>
-     * <important>
      * <p>
-     * Provisioning by pull request is currently in feature preview and is only usable with Terraform based Proton
-     * Templates. To learn more about <a href="https://aws.amazon.com/service-terms">Amazon Web Services Feature Preview
-     * terms</a>, see section 2 on Beta and Previews.
+     * For more information, see <a href=
+     * "https://docs.aws.amazon.com/proton/latest/adminguide/ag-works-prov-methods.html#ag-works-prov-methods-self"
+     * >Self-managed provisioning</a> in the <i>Proton Administrator Guide</i>.
      * </p>
-     * </important>
      * 
      * @param provisioningEngine
-     *        The resource provisioning engine.</p> <important>
+     *        The resource provisioning engine. At this time, <code>CLOUDFORMATION</code> can be used for Amazon Web
+     *        Services-managed provisioning, and <code>TERRAFORM</code> can be used for self-managed provisioning.</p>
      *        <p>
-     *        Provisioning by pull request is currently in feature preview and is only usable with Terraform based
-     *        Proton Templates. To learn more about <a href="https://aws.amazon.com/service-terms">Amazon Web Services
-     *        Feature Preview terms</a>, see section 2 on Beta and Previews.
-     *        </p>
+     *        For more information, see <a href=
+     *        "https://docs.aws.amazon.com/proton/latest/adminguide/ag-works-prov-methods.html#ag-works-prov-methods-self"
+     *        >Self-managed provisioning</a> in the <i>Proton Administrator Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ProvisionedResourceEngine
      */
@@ -215,23 +211,22 @@ public class ProvisionedResource implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The resource provisioning engine.
+     * The resource provisioning engine. At this time, <code>CLOUDFORMATION</code> can be used for Amazon Web
+     * Services-managed provisioning, and <code>TERRAFORM</code> can be used for self-managed provisioning.
      * </p>
-     * <important>
      * <p>
-     * Provisioning by pull request is currently in feature preview and is only usable with Terraform based Proton
-     * Templates. To learn more about <a href="https://aws.amazon.com/service-terms">Amazon Web Services Feature Preview
-     * terms</a>, see section 2 on Beta and Previews.
+     * For more information, see <a href=
+     * "https://docs.aws.amazon.com/proton/latest/adminguide/ag-works-prov-methods.html#ag-works-prov-methods-self"
+     * >Self-managed provisioning</a> in the <i>Proton Administrator Guide</i>.
      * </p>
-     * </important>
      * 
      * @param provisioningEngine
-     *        The resource provisioning engine.</p> <important>
+     *        The resource provisioning engine. At this time, <code>CLOUDFORMATION</code> can be used for Amazon Web
+     *        Services-managed provisioning, and <code>TERRAFORM</code> can be used for self-managed provisioning.</p>
      *        <p>
-     *        Provisioning by pull request is currently in feature preview and is only usable with Terraform based
-     *        Proton Templates. To learn more about <a href="https://aws.amazon.com/service-terms">Amazon Web Services
-     *        Feature Preview terms</a>, see section 2 on Beta and Previews.
-     *        </p>
+     *        For more information, see <a href=
+     *        "https://docs.aws.amazon.com/proton/latest/adminguide/ag-works-prov-methods.html#ag-works-prov-methods-self"
+     *        >Self-managed provisioning</a> in the <i>Proton Administrator Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ProvisionedResourceEngine
      */

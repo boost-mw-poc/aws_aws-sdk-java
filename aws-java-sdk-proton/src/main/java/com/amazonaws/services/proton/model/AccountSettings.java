@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The Proton pipeline service role and repository data.
+ * The Proton pipeline service role and repository data shared across the Amazon Web Services account.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/proton-2020-07-20/AccountSettings" target="_top">AWS API
@@ -30,43 +30,28 @@ public class AccountSettings implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The repository that you provide with pull request provisioning.
+     * The repository configured in the Amazon Web Services account for pipeline provisioning. Required it if you have
+     * environments configured for self-managed provisioning with services that include pipelines.
      * </p>
-     * <important>
-     * <p>
-     * Provisioning by pull request is currently in feature preview and is only usable with Terraform based Proton
-     * Templates. To learn more about <a href="https://aws.amazon.com/service-terms">Amazon Web Services Feature Preview
-     * terms</a>, see section 2 on Beta and Previews.
-     * </p>
-     * </important>
      */
     private RepositoryBranch pipelineProvisioningRepository;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Proton pipeline service role.
+     * The Amazon Resource Name (ARN) of the service role you want to use for provisioning pipelines. Assumed by Proton
+     * for Amazon Web Services-managed provisioning, and by customer-owned automation for self-managed provisioning.
      * </p>
      */
     private String pipelineServiceRoleArn;
 
     /**
      * <p>
-     * The repository that you provide with pull request provisioning.
+     * The repository configured in the Amazon Web Services account for pipeline provisioning. Required it if you have
+     * environments configured for self-managed provisioning with services that include pipelines.
      * </p>
-     * <important>
-     * <p>
-     * Provisioning by pull request is currently in feature preview and is only usable with Terraform based Proton
-     * Templates. To learn more about <a href="https://aws.amazon.com/service-terms">Amazon Web Services Feature Preview
-     * terms</a>, see section 2 on Beta and Previews.
-     * </p>
-     * </important>
      * 
      * @param pipelineProvisioningRepository
-     *        The repository that you provide with pull request provisioning.</p> <important>
-     *        <p>
-     *        Provisioning by pull request is currently in feature preview and is only usable with Terraform based
-     *        Proton Templates. To learn more about <a href="https://aws.amazon.com/service-terms">Amazon Web Services
-     *        Feature Preview terms</a>, see section 2 on Beta and Previews.
-     *        </p>
+     *        The repository configured in the Amazon Web Services account for pipeline provisioning. Required it if you
+     *        have environments configured for self-managed provisioning with services that include pipelines.
      */
 
     public void setPipelineProvisioningRepository(RepositoryBranch pipelineProvisioningRepository) {
@@ -75,22 +60,12 @@ public class AccountSettings implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The repository that you provide with pull request provisioning.
+     * The repository configured in the Amazon Web Services account for pipeline provisioning. Required it if you have
+     * environments configured for self-managed provisioning with services that include pipelines.
      * </p>
-     * <important>
-     * <p>
-     * Provisioning by pull request is currently in feature preview and is only usable with Terraform based Proton
-     * Templates. To learn more about <a href="https://aws.amazon.com/service-terms">Amazon Web Services Feature Preview
-     * terms</a>, see section 2 on Beta and Previews.
-     * </p>
-     * </important>
      * 
-     * @return The repository that you provide with pull request provisioning.</p> <important>
-     *         <p>
-     *         Provisioning by pull request is currently in feature preview and is only usable with Terraform based
-     *         Proton Templates. To learn more about <a href="https://aws.amazon.com/service-terms">Amazon Web Services
-     *         Feature Preview terms</a>, see section 2 on Beta and Previews.
-     *         </p>
+     * @return The repository configured in the Amazon Web Services account for pipeline provisioning. Required it if
+     *         you have environments configured for self-managed provisioning with services that include pipelines.
      */
 
     public RepositoryBranch getPipelineProvisioningRepository() {
@@ -99,23 +74,13 @@ public class AccountSettings implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The repository that you provide with pull request provisioning.
+     * The repository configured in the Amazon Web Services account for pipeline provisioning. Required it if you have
+     * environments configured for self-managed provisioning with services that include pipelines.
      * </p>
-     * <important>
-     * <p>
-     * Provisioning by pull request is currently in feature preview and is only usable with Terraform based Proton
-     * Templates. To learn more about <a href="https://aws.amazon.com/service-terms">Amazon Web Services Feature Preview
-     * terms</a>, see section 2 on Beta and Previews.
-     * </p>
-     * </important>
      * 
      * @param pipelineProvisioningRepository
-     *        The repository that you provide with pull request provisioning.</p> <important>
-     *        <p>
-     *        Provisioning by pull request is currently in feature preview and is only usable with Terraform based
-     *        Proton Templates. To learn more about <a href="https://aws.amazon.com/service-terms">Amazon Web Services
-     *        Feature Preview terms</a>, see section 2 on Beta and Previews.
-     *        </p>
+     *        The repository configured in the Amazon Web Services account for pipeline provisioning. Required it if you
+     *        have environments configured for self-managed provisioning with services that include pipelines.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -126,11 +91,14 @@ public class AccountSettings implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Proton pipeline service role.
+     * The Amazon Resource Name (ARN) of the service role you want to use for provisioning pipelines. Assumed by Proton
+     * for Amazon Web Services-managed provisioning, and by customer-owned automation for self-managed provisioning.
      * </p>
      * 
      * @param pipelineServiceRoleArn
-     *        The Amazon Resource Name (ARN) of the Proton pipeline service role.
+     *        The Amazon Resource Name (ARN) of the service role you want to use for provisioning pipelines. Assumed by
+     *        Proton for Amazon Web Services-managed provisioning, and by customer-owned automation for self-managed
+     *        provisioning.
      */
 
     public void setPipelineServiceRoleArn(String pipelineServiceRoleArn) {
@@ -139,10 +107,13 @@ public class AccountSettings implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Proton pipeline service role.
+     * The Amazon Resource Name (ARN) of the service role you want to use for provisioning pipelines. Assumed by Proton
+     * for Amazon Web Services-managed provisioning, and by customer-owned automation for self-managed provisioning.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the Proton pipeline service role.
+     * @return The Amazon Resource Name (ARN) of the service role you want to use for provisioning pipelines. Assumed by
+     *         Proton for Amazon Web Services-managed provisioning, and by customer-owned automation for self-managed
+     *         provisioning.
      */
 
     public String getPipelineServiceRoleArn() {
@@ -151,11 +122,14 @@ public class AccountSettings implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Proton pipeline service role.
+     * The Amazon Resource Name (ARN) of the service role you want to use for provisioning pipelines. Assumed by Proton
+     * for Amazon Web Services-managed provisioning, and by customer-owned automation for self-managed provisioning.
      * </p>
      * 
      * @param pipelineServiceRoleArn
-     *        The Amazon Resource Name (ARN) of the Proton pipeline service role.
+     *        The Amazon Resource Name (ARN) of the service role you want to use for provisioning pipelines. Assumed by
+     *        Proton for Amazon Web Services-managed provisioning, and by customer-owned automation for self-managed
+     *        provisioning.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

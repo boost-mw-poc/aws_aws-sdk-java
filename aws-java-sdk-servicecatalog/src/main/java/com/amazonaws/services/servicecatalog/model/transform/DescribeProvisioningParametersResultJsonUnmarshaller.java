@@ -87,6 +87,13 @@ public class DescribeProvisioningParametersResultJsonUnmarshaller implements Unm
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("ProvisioningArtifactOutputKeys", targetDepth)) {
+                    context.nextToken();
+                    describeProvisioningParametersResult.setProvisioningArtifactOutputKeys(new ListUnmarshaller<ProvisioningArtifactOutput>(
+                            ProvisioningArtifactOutputJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

@@ -25,7 +25,7 @@ public class ListServiceInstancesResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * A token to indicate the location of the next service instance in the array of service instances, after the
+     * A token that indicates the location of the next service instance in the array of service instances, after the
      * current requested list of service instances.
      * </p>
      */
@@ -39,13 +39,13 @@ public class ListServiceInstancesResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * A token to indicate the location of the next service instance in the array of service instances, after the
+     * A token that indicates the location of the next service instance in the array of service instances, after the
      * current requested list of service instances.
      * </p>
      * 
      * @param nextToken
-     *        A token to indicate the location of the next service instance in the array of service instances, after the
-     *        current requested list of service instances.
+     *        A token that indicates the location of the next service instance in the array of service instances, after
+     *        the current requested list of service instances.
      */
 
     public void setNextToken(String nextToken) {
@@ -54,11 +54,11 @@ public class ListServiceInstancesResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * A token to indicate the location of the next service instance in the array of service instances, after the
+     * A token that indicates the location of the next service instance in the array of service instances, after the
      * current requested list of service instances.
      * </p>
      * 
-     * @return A token to indicate the location of the next service instance in the array of service instances, after
+     * @return A token that indicates the location of the next service instance in the array of service instances, after
      *         the current requested list of service instances.
      */
 
@@ -68,13 +68,13 @@ public class ListServiceInstancesResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * A token to indicate the location of the next service instance in the array of service instances, after the
+     * A token that indicates the location of the next service instance in the array of service instances, after the
      * current requested list of service instances.
      * </p>
      * 
      * @param nextToken
-     *        A token to indicate the location of the next service instance in the array of service instances, after the
-     *        current requested list of service instances.
+     *        A token that indicates the location of the next service instance in the array of service instances, after
+     *        the current requested list of service instances.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

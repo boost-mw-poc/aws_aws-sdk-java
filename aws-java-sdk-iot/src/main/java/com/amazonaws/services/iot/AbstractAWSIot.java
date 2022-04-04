@@ -815,6 +815,11 @@ public class AbstractAWSIot implements AWSIot {
     }
 
     @Override
+    public ListMetricValuesResult listMetricValues(ListMetricValuesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListMitigationActionsResult listMitigationActions(ListMitigationActionsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

@@ -30,8 +30,7 @@ public class UpdateServicePipelineRequest extends com.amazonaws.AmazonWebService
      * The deployment type.
      * </p>
      * <p>
-     * There are four modes for updating a service pipeline as described in the following. The
-     * <code>deploymentType</code> field defines the mode.
+     * There are four modes for updating a service pipeline. The <code>deploymentType</code> field defines the mode.
      * </p>
      * <dl>
      * <dt/>
@@ -50,7 +49,7 @@ public class UpdateServicePipelineRequest extends com.amazonaws.AmazonWebService
      * </p>
      * <p>
      * In this mode, the service pipeline is deployed and updated with the new spec that you provide. Only requested
-     * parameters are updated. <i>Don’t</i> include minor or major version parameters when you use this
+     * parameters are updated. <i>Don’t</i> include major or minor version parameters when you use this
      * <code>deployment-type</code>.
      * </p>
      * </dd>
@@ -61,8 +60,8 @@ public class UpdateServicePipelineRequest extends com.amazonaws.AmazonWebService
      * </p>
      * <p>
      * In this mode, the service pipeline is deployed and updated with the published, recommended (latest) minor version
-     * of the current major version in use, by default. You can also specify a different minor version of the current
-     * major version in use.
+     * of the current major version in use, by default. You can specify a different minor version of the current major
+     * version in use.
      * </p>
      * </dd>
      * <dt/>
@@ -72,8 +71,8 @@ public class UpdateServicePipelineRequest extends com.amazonaws.AmazonWebService
      * </p>
      * <p>
      * In this mode, the service pipeline is deployed and updated with the published, recommended (latest) major and
-     * minor version of the current template, by default. You can also specify a different major version that is higher
-     * than the major version in use and a minor version (optional).
+     * minor version of the current template, by default. You can specify a different major version that's higher than
+     * the major version in use and a minor version.
      * </p>
      * </dd>
      * </dl>
@@ -111,8 +110,7 @@ public class UpdateServicePipelineRequest extends com.amazonaws.AmazonWebService
      * The deployment type.
      * </p>
      * <p>
-     * There are four modes for updating a service pipeline as described in the following. The
-     * <code>deploymentType</code> field defines the mode.
+     * There are four modes for updating a service pipeline. The <code>deploymentType</code> field defines the mode.
      * </p>
      * <dl>
      * <dt/>
@@ -131,7 +129,7 @@ public class UpdateServicePipelineRequest extends com.amazonaws.AmazonWebService
      * </p>
      * <p>
      * In this mode, the service pipeline is deployed and updated with the new spec that you provide. Only requested
-     * parameters are updated. <i>Don’t</i> include minor or major version parameters when you use this
+     * parameters are updated. <i>Don’t</i> include major or minor version parameters when you use this
      * <code>deployment-type</code>.
      * </p>
      * </dd>
@@ -142,8 +140,8 @@ public class UpdateServicePipelineRequest extends com.amazonaws.AmazonWebService
      * </p>
      * <p>
      * In this mode, the service pipeline is deployed and updated with the published, recommended (latest) minor version
-     * of the current major version in use, by default. You can also specify a different minor version of the current
-     * major version in use.
+     * of the current major version in use, by default. You can specify a different minor version of the current major
+     * version in use.
      * </p>
      * </dd>
      * <dt/>
@@ -153,8 +151,8 @@ public class UpdateServicePipelineRequest extends com.amazonaws.AmazonWebService
      * </p>
      * <p>
      * In this mode, the service pipeline is deployed and updated with the published, recommended (latest) major and
-     * minor version of the current template, by default. You can also specify a different major version that is higher
-     * than the major version in use and a minor version (optional).
+     * minor version of the current template, by default. You can specify a different major version that's higher than
+     * the major version in use and a minor version.
      * </p>
      * </dd>
      * </dl>
@@ -162,8 +160,8 @@ public class UpdateServicePipelineRequest extends com.amazonaws.AmazonWebService
      * @param deploymentType
      *        The deployment type.</p>
      *        <p>
-     *        There are four modes for updating a service pipeline as described in the following. The
-     *        <code>deploymentType</code> field defines the mode.
+     *        There are four modes for updating a service pipeline. The <code>deploymentType</code> field defines the
+     *        mode.
      *        </p>
      *        <dl>
      *        <dt/>
@@ -182,7 +180,7 @@ public class UpdateServicePipelineRequest extends com.amazonaws.AmazonWebService
      *        </p>
      *        <p>
      *        In this mode, the service pipeline is deployed and updated with the new spec that you provide. Only
-     *        requested parameters are updated. <i>Don’t</i> include minor or major version parameters when you use this
+     *        requested parameters are updated. <i>Don’t</i> include major or minor version parameters when you use this
      *        <code>deployment-type</code>.
      *        </p>
      *        </dd>
@@ -193,8 +191,8 @@ public class UpdateServicePipelineRequest extends com.amazonaws.AmazonWebService
      *        </p>
      *        <p>
      *        In this mode, the service pipeline is deployed and updated with the published, recommended (latest) minor
-     *        version of the current major version in use, by default. You can also specify a different minor version of
-     *        the current major version in use.
+     *        version of the current major version in use, by default. You can specify a different minor version of the
+     *        current major version in use.
      *        </p>
      *        </dd>
      *        <dt/>
@@ -204,8 +202,8 @@ public class UpdateServicePipelineRequest extends com.amazonaws.AmazonWebService
      *        </p>
      *        <p>
      *        In this mode, the service pipeline is deployed and updated with the published, recommended (latest) major
-     *        and minor version of the current template, by default. You can also specify a different major version that
-     *        is higher than the major version in use and a minor version (optional).
+     *        and minor version of the current template, by default. You can specify a different major version that's
+     *        higher than the major version in use and a minor version.
      *        </p>
      *        </dd>
      * @see DeploymentUpdateType
@@ -220,8 +218,7 @@ public class UpdateServicePipelineRequest extends com.amazonaws.AmazonWebService
      * The deployment type.
      * </p>
      * <p>
-     * There are four modes for updating a service pipeline as described in the following. The
-     * <code>deploymentType</code> field defines the mode.
+     * There are four modes for updating a service pipeline. The <code>deploymentType</code> field defines the mode.
      * </p>
      * <dl>
      * <dt/>
@@ -240,7 +237,7 @@ public class UpdateServicePipelineRequest extends com.amazonaws.AmazonWebService
      * </p>
      * <p>
      * In this mode, the service pipeline is deployed and updated with the new spec that you provide. Only requested
-     * parameters are updated. <i>Don’t</i> include minor or major version parameters when you use this
+     * parameters are updated. <i>Don’t</i> include major or minor version parameters when you use this
      * <code>deployment-type</code>.
      * </p>
      * </dd>
@@ -251,8 +248,8 @@ public class UpdateServicePipelineRequest extends com.amazonaws.AmazonWebService
      * </p>
      * <p>
      * In this mode, the service pipeline is deployed and updated with the published, recommended (latest) minor version
-     * of the current major version in use, by default. You can also specify a different minor version of the current
-     * major version in use.
+     * of the current major version in use, by default. You can specify a different minor version of the current major
+     * version in use.
      * </p>
      * </dd>
      * <dt/>
@@ -262,16 +259,16 @@ public class UpdateServicePipelineRequest extends com.amazonaws.AmazonWebService
      * </p>
      * <p>
      * In this mode, the service pipeline is deployed and updated with the published, recommended (latest) major and
-     * minor version of the current template, by default. You can also specify a different major version that is higher
-     * than the major version in use and a minor version (optional).
+     * minor version of the current template, by default. You can specify a different major version that's higher than
+     * the major version in use and a minor version.
      * </p>
      * </dd>
      * </dl>
      * 
      * @return The deployment type.</p>
      *         <p>
-     *         There are four modes for updating a service pipeline as described in the following. The
-     *         <code>deploymentType</code> field defines the mode.
+     *         There are four modes for updating a service pipeline. The <code>deploymentType</code> field defines the
+     *         mode.
      *         </p>
      *         <dl>
      *         <dt/>
@@ -290,7 +287,7 @@ public class UpdateServicePipelineRequest extends com.amazonaws.AmazonWebService
      *         </p>
      *         <p>
      *         In this mode, the service pipeline is deployed and updated with the new spec that you provide. Only
-     *         requested parameters are updated. <i>Don’t</i> include minor or major version parameters when you use
+     *         requested parameters are updated. <i>Don’t</i> include major or minor version parameters when you use
      *         this <code>deployment-type</code>.
      *         </p>
      *         </dd>
@@ -301,8 +298,8 @@ public class UpdateServicePipelineRequest extends com.amazonaws.AmazonWebService
      *         </p>
      *         <p>
      *         In this mode, the service pipeline is deployed and updated with the published, recommended (latest) minor
-     *         version of the current major version in use, by default. You can also specify a different minor version
-     *         of the current major version in use.
+     *         version of the current major version in use, by default. You can specify a different minor version of the
+     *         current major version in use.
      *         </p>
      *         </dd>
      *         <dt/>
@@ -312,8 +309,8 @@ public class UpdateServicePipelineRequest extends com.amazonaws.AmazonWebService
      *         </p>
      *         <p>
      *         In this mode, the service pipeline is deployed and updated with the published, recommended (latest) major
-     *         and minor version of the current template, by default. You can also specify a different major version
-     *         that is higher than the major version in use and a minor version (optional).
+     *         and minor version of the current template, by default. You can specify a different major version that's
+     *         higher than the major version in use and a minor version.
      *         </p>
      *         </dd>
      * @see DeploymentUpdateType
@@ -328,8 +325,7 @@ public class UpdateServicePipelineRequest extends com.amazonaws.AmazonWebService
      * The deployment type.
      * </p>
      * <p>
-     * There are four modes for updating a service pipeline as described in the following. The
-     * <code>deploymentType</code> field defines the mode.
+     * There are four modes for updating a service pipeline. The <code>deploymentType</code> field defines the mode.
      * </p>
      * <dl>
      * <dt/>
@@ -348,7 +344,7 @@ public class UpdateServicePipelineRequest extends com.amazonaws.AmazonWebService
      * </p>
      * <p>
      * In this mode, the service pipeline is deployed and updated with the new spec that you provide. Only requested
-     * parameters are updated. <i>Don’t</i> include minor or major version parameters when you use this
+     * parameters are updated. <i>Don’t</i> include major or minor version parameters when you use this
      * <code>deployment-type</code>.
      * </p>
      * </dd>
@@ -359,8 +355,8 @@ public class UpdateServicePipelineRequest extends com.amazonaws.AmazonWebService
      * </p>
      * <p>
      * In this mode, the service pipeline is deployed and updated with the published, recommended (latest) minor version
-     * of the current major version in use, by default. You can also specify a different minor version of the current
-     * major version in use.
+     * of the current major version in use, by default. You can specify a different minor version of the current major
+     * version in use.
      * </p>
      * </dd>
      * <dt/>
@@ -370,8 +366,8 @@ public class UpdateServicePipelineRequest extends com.amazonaws.AmazonWebService
      * </p>
      * <p>
      * In this mode, the service pipeline is deployed and updated with the published, recommended (latest) major and
-     * minor version of the current template, by default. You can also specify a different major version that is higher
-     * than the major version in use and a minor version (optional).
+     * minor version of the current template, by default. You can specify a different major version that's higher than
+     * the major version in use and a minor version.
      * </p>
      * </dd>
      * </dl>
@@ -379,8 +375,8 @@ public class UpdateServicePipelineRequest extends com.amazonaws.AmazonWebService
      * @param deploymentType
      *        The deployment type.</p>
      *        <p>
-     *        There are four modes for updating a service pipeline as described in the following. The
-     *        <code>deploymentType</code> field defines the mode.
+     *        There are four modes for updating a service pipeline. The <code>deploymentType</code> field defines the
+     *        mode.
      *        </p>
      *        <dl>
      *        <dt/>
@@ -399,7 +395,7 @@ public class UpdateServicePipelineRequest extends com.amazonaws.AmazonWebService
      *        </p>
      *        <p>
      *        In this mode, the service pipeline is deployed and updated with the new spec that you provide. Only
-     *        requested parameters are updated. <i>Don’t</i> include minor or major version parameters when you use this
+     *        requested parameters are updated. <i>Don’t</i> include major or minor version parameters when you use this
      *        <code>deployment-type</code>.
      *        </p>
      *        </dd>
@@ -410,8 +406,8 @@ public class UpdateServicePipelineRequest extends com.amazonaws.AmazonWebService
      *        </p>
      *        <p>
      *        In this mode, the service pipeline is deployed and updated with the published, recommended (latest) minor
-     *        version of the current major version in use, by default. You can also specify a different minor version of
-     *        the current major version in use.
+     *        version of the current major version in use, by default. You can specify a different minor version of the
+     *        current major version in use.
      *        </p>
      *        </dd>
      *        <dt/>
@@ -421,8 +417,8 @@ public class UpdateServicePipelineRequest extends com.amazonaws.AmazonWebService
      *        </p>
      *        <p>
      *        In this mode, the service pipeline is deployed and updated with the published, recommended (latest) major
-     *        and minor version of the current template, by default. You can also specify a different major version that
-     *        is higher than the major version in use and a minor version (optional).
+     *        and minor version of the current template, by default. You can specify a different major version that's
+     *        higher than the major version in use and a minor version.
      *        </p>
      *        </dd>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -439,8 +435,7 @@ public class UpdateServicePipelineRequest extends com.amazonaws.AmazonWebService
      * The deployment type.
      * </p>
      * <p>
-     * There are four modes for updating a service pipeline as described in the following. The
-     * <code>deploymentType</code> field defines the mode.
+     * There are four modes for updating a service pipeline. The <code>deploymentType</code> field defines the mode.
      * </p>
      * <dl>
      * <dt/>
@@ -459,7 +454,7 @@ public class UpdateServicePipelineRequest extends com.amazonaws.AmazonWebService
      * </p>
      * <p>
      * In this mode, the service pipeline is deployed and updated with the new spec that you provide. Only requested
-     * parameters are updated. <i>Don’t</i> include minor or major version parameters when you use this
+     * parameters are updated. <i>Don’t</i> include major or minor version parameters when you use this
      * <code>deployment-type</code>.
      * </p>
      * </dd>
@@ -470,8 +465,8 @@ public class UpdateServicePipelineRequest extends com.amazonaws.AmazonWebService
      * </p>
      * <p>
      * In this mode, the service pipeline is deployed and updated with the published, recommended (latest) minor version
-     * of the current major version in use, by default. You can also specify a different minor version of the current
-     * major version in use.
+     * of the current major version in use, by default. You can specify a different minor version of the current major
+     * version in use.
      * </p>
      * </dd>
      * <dt/>
@@ -481,8 +476,8 @@ public class UpdateServicePipelineRequest extends com.amazonaws.AmazonWebService
      * </p>
      * <p>
      * In this mode, the service pipeline is deployed and updated with the published, recommended (latest) major and
-     * minor version of the current template, by default. You can also specify a different major version that is higher
-     * than the major version in use and a minor version (optional).
+     * minor version of the current template, by default. You can specify a different major version that's higher than
+     * the major version in use and a minor version.
      * </p>
      * </dd>
      * </dl>
@@ -490,8 +485,8 @@ public class UpdateServicePipelineRequest extends com.amazonaws.AmazonWebService
      * @param deploymentType
      *        The deployment type.</p>
      *        <p>
-     *        There are four modes for updating a service pipeline as described in the following. The
-     *        <code>deploymentType</code> field defines the mode.
+     *        There are four modes for updating a service pipeline. The <code>deploymentType</code> field defines the
+     *        mode.
      *        </p>
      *        <dl>
      *        <dt/>
@@ -510,7 +505,7 @@ public class UpdateServicePipelineRequest extends com.amazonaws.AmazonWebService
      *        </p>
      *        <p>
      *        In this mode, the service pipeline is deployed and updated with the new spec that you provide. Only
-     *        requested parameters are updated. <i>Don’t</i> include minor or major version parameters when you use this
+     *        requested parameters are updated. <i>Don’t</i> include major or minor version parameters when you use this
      *        <code>deployment-type</code>.
      *        </p>
      *        </dd>
@@ -521,8 +516,8 @@ public class UpdateServicePipelineRequest extends com.amazonaws.AmazonWebService
      *        </p>
      *        <p>
      *        In this mode, the service pipeline is deployed and updated with the published, recommended (latest) minor
-     *        version of the current major version in use, by default. You can also specify a different minor version of
-     *        the current major version in use.
+     *        version of the current major version in use, by default. You can specify a different minor version of the
+     *        current major version in use.
      *        </p>
      *        </dd>
      *        <dt/>
@@ -532,8 +527,8 @@ public class UpdateServicePipelineRequest extends com.amazonaws.AmazonWebService
      *        </p>
      *        <p>
      *        In this mode, the service pipeline is deployed and updated with the published, recommended (latest) major
-     *        and minor version of the current template, by default. You can also specify a different major version that
-     *        is higher than the major version in use and a minor version (optional).
+     *        and minor version of the current template, by default. You can specify a different major version that's
+     *        higher than the major version in use and a minor version.
      *        </p>
      *        </dd>
      * @return Returns a reference to this object so that method calls can be chained together.

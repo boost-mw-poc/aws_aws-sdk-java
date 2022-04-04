@@ -6348,6 +6348,35 @@ public interface AWSIotAsync extends AWSIot {
 
     /**
      * <p>
+     * Lists the values reported for an IoT Device Defender metric (device-side metric, cloud-side metric, or custom
+     * metric) by the given thing during the specified time period.
+     * </p>
+     * 
+     * @param listMetricValuesRequest
+     * @return A Java Future containing the result of the ListMetricValues operation returned by the service.
+     * @sample AWSIotAsync.ListMetricValues
+     */
+    java.util.concurrent.Future<ListMetricValuesResult> listMetricValuesAsync(ListMetricValuesRequest listMetricValuesRequest);
+
+    /**
+     * <p>
+     * Lists the values reported for an IoT Device Defender metric (device-side metric, cloud-side metric, or custom
+     * metric) by the given thing during the specified time period.
+     * </p>
+     * 
+     * @param listMetricValuesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListMetricValues operation returned by the service.
+     * @sample AWSIotAsyncHandler.ListMetricValues
+     */
+    java.util.concurrent.Future<ListMetricValuesResult> listMetricValuesAsync(ListMetricValuesRequest listMetricValuesRequest,
+            com.amazonaws.handlers.AsyncHandler<ListMetricValuesRequest, ListMetricValuesResult> asyncHandler);
+
+    /**
+     * <p>
      * Gets a list of all mitigation actions that match the specified filter criteria.
      * </p>
      * <p>

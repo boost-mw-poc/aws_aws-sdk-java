@@ -25,18 +25,18 @@ public class UpdateAccountSettingsResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The Proton pipeline service role repository detail data that's returned by Proton.
+     * The Proton pipeline service role and repository data shared across the Amazon Web Services account.
      * </p>
      */
     private AccountSettings accountSettings;
 
     /**
      * <p>
-     * The Proton pipeline service role repository detail data that's returned by Proton.
+     * The Proton pipeline service role and repository data shared across the Amazon Web Services account.
      * </p>
      * 
      * @param accountSettings
-     *        The Proton pipeline service role repository detail data that's returned by Proton.
+     *        The Proton pipeline service role and repository data shared across the Amazon Web Services account.
      */
 
     public void setAccountSettings(AccountSettings accountSettings) {
@@ -45,10 +45,10 @@ public class UpdateAccountSettingsResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The Proton pipeline service role repository detail data that's returned by Proton.
+     * The Proton pipeline service role and repository data shared across the Amazon Web Services account.
      * </p>
      * 
-     * @return The Proton pipeline service role repository detail data that's returned by Proton.
+     * @return The Proton pipeline service role and repository data shared across the Amazon Web Services account.
      */
 
     public AccountSettings getAccountSettings() {
@@ -57,11 +57,11 @@ public class UpdateAccountSettingsResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The Proton pipeline service role repository detail data that's returned by Proton.
+     * The Proton pipeline service role and repository data shared across the Amazon Web Services account.
      * </p>
      * 
      * @param accountSettings
-     *        The Proton pipeline service role repository detail data that's returned by Proton.
+     *        The Proton pipeline service role and repository data shared across the Amazon Web Services account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

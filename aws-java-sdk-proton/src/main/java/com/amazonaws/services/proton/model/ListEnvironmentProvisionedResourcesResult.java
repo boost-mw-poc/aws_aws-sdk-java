@@ -26,7 +26,7 @@ public class ListEnvironmentProvisionedResourcesResult extends com.amazonaws.Ama
 
     /**
      * <p>
-     * A token to indicate the location of the next environment provisioned resource in the array of provisioned
+     * A token that indicates the location of the next environment provisioned resource in the array of provisioned
      * resources, after the current requested list of environment provisioned resources.
      * </p>
      */
@@ -40,13 +40,13 @@ public class ListEnvironmentProvisionedResourcesResult extends com.amazonaws.Ama
 
     /**
      * <p>
-     * A token to indicate the location of the next environment provisioned resource in the array of provisioned
+     * A token that indicates the location of the next environment provisioned resource in the array of provisioned
      * resources, after the current requested list of environment provisioned resources.
      * </p>
      * 
      * @param nextToken
-     *        A token to indicate the location of the next environment provisioned resource in the array of provisioned
-     *        resources, after the current requested list of environment provisioned resources.
+     *        A token that indicates the location of the next environment provisioned resource in the array of
+     *        provisioned resources, after the current requested list of environment provisioned resources.
      */
 
     public void setNextToken(String nextToken) {
@@ -55,12 +55,12 @@ public class ListEnvironmentProvisionedResourcesResult extends com.amazonaws.Ama
 
     /**
      * <p>
-     * A token to indicate the location of the next environment provisioned resource in the array of provisioned
+     * A token that indicates the location of the next environment provisioned resource in the array of provisioned
      * resources, after the current requested list of environment provisioned resources.
      * </p>
      * 
-     * @return A token to indicate the location of the next environment provisioned resource in the array of provisioned
-     *         resources, after the current requested list of environment provisioned resources.
+     * @return A token that indicates the location of the next environment provisioned resource in the array of
+     *         provisioned resources, after the current requested list of environment provisioned resources.
      */
 
     public String getNextToken() {
@@ -69,13 +69,13 @@ public class ListEnvironmentProvisionedResourcesResult extends com.amazonaws.Ama
 
     /**
      * <p>
-     * A token to indicate the location of the next environment provisioned resource in the array of provisioned
+     * A token that indicates the location of the next environment provisioned resource in the array of provisioned
      * resources, after the current requested list of environment provisioned resources.
      * </p>
      * 
      * @param nextToken
-     *        A token to indicate the location of the next environment provisioned resource in the array of provisioned
-     *        resources, after the current requested list of environment provisioned resources.
+     *        A token that indicates the location of the next environment provisioned resource in the array of
+     *        provisioned resources, after the current requested list of environment provisioned resources.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

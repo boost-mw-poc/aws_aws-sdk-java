@@ -33,7 +33,7 @@ public class ListRepositoriesRequest extends com.amazonaws.AmazonWebServiceReque
     private Integer maxResults;
     /**
      * <p>
-     * A token to indicate the location of the next repository in the array of repositories, after the list of
+     * A token that indicates the location of the next repository in the array of repositories, after the list of
      * repositories previously requested.
      * </p>
      */
@@ -81,12 +81,12 @@ public class ListRepositoriesRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * A token to indicate the location of the next repository in the array of repositories, after the list of
+     * A token that indicates the location of the next repository in the array of repositories, after the list of
      * repositories previously requested.
      * </p>
      * 
      * @param nextToken
-     *        A token to indicate the location of the next repository in the array of repositories, after the list of
+     *        A token that indicates the location of the next repository in the array of repositories, after the list of
      *        repositories previously requested.
      */
 
@@ -96,12 +96,12 @@ public class ListRepositoriesRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * A token to indicate the location of the next repository in the array of repositories, after the list of
+     * A token that indicates the location of the next repository in the array of repositories, after the list of
      * repositories previously requested.
      * </p>
      * 
-     * @return A token to indicate the location of the next repository in the array of repositories, after the list of
-     *         repositories previously requested.
+     * @return A token that indicates the location of the next repository in the array of repositories, after the list
+     *         of repositories previously requested.
      */
 
     public String getNextToken() {
@@ -110,12 +110,12 @@ public class ListRepositoriesRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * A token to indicate the location of the next repository in the array of repositories, after the list of
+     * A token that indicates the location of the next repository in the array of repositories, after the list of
      * repositories previously requested.
      * </p>
      * 
      * @param nextToken
-     *        A token to indicate the location of the next repository in the array of repositories, after the list of
+     *        A token that indicates the location of the next repository in the array of repositories, after the list of
      *        repositories previously requested.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

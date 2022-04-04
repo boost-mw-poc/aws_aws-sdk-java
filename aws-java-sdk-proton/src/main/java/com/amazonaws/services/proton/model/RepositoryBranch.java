@@ -21,13 +21,6 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * <p>
  * Detail data for a repository branch.
  * </p>
- * <important>
- * <p>
- * Provisioning by pull request is currently in feature preview and is only usable with Terraform based Proton
- * Templates. To learn more about <a href="https://aws.amazon.com/service-terms">Amazon Web Services Feature Preview
- * terms</a>, see section 2 on Beta and Previews.
- * </p>
- * </important>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/proton-2020-07-20/RepositoryBranch" target="_top">AWS API
  *      Documentation</a>

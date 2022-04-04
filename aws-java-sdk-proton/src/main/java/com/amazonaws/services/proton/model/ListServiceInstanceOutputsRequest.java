@@ -27,8 +27,8 @@ public class ListServiceInstanceOutputsRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * A token to indicate the location of the next output in the array of outputs, after the list of outputs that was
-     * previously requested.
+     * A token that indicates the location of the next output in the array of outputs, after the list of outputs that
+     * was previously requested.
      * </p>
      */
     private String nextToken;
@@ -47,12 +47,12 @@ public class ListServiceInstanceOutputsRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * A token to indicate the location of the next output in the array of outputs, after the list of outputs that was
-     * previously requested.
+     * A token that indicates the location of the next output in the array of outputs, after the list of outputs that
+     * was previously requested.
      * </p>
      * 
      * @param nextToken
-     *        A token to indicate the location of the next output in the array of outputs, after the list of outputs
+     *        A token that indicates the location of the next output in the array of outputs, after the list of outputs
      *        that was previously requested.
      */
 
@@ -62,11 +62,11 @@ public class ListServiceInstanceOutputsRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * A token to indicate the location of the next output in the array of outputs, after the list of outputs that was
-     * previously requested.
+     * A token that indicates the location of the next output in the array of outputs, after the list of outputs that
+     * was previously requested.
      * </p>
      * 
-     * @return A token to indicate the location of the next output in the array of outputs, after the list of outputs
+     * @return A token that indicates the location of the next output in the array of outputs, after the list of outputs
      *         that was previously requested.
      */
 
@@ -76,12 +76,12 @@ public class ListServiceInstanceOutputsRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * A token to indicate the location of the next output in the array of outputs, after the list of outputs that was
-     * previously requested.
+     * A token that indicates the location of the next output in the array of outputs, after the list of outputs that
+     * was previously requested.
      * </p>
      * 
      * @param nextToken
-     *        A token to indicate the location of the next output in the array of outputs, after the list of outputs
+     *        A token that indicates the location of the next output in the array of outputs, after the list of outputs
      *        that was previously requested.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

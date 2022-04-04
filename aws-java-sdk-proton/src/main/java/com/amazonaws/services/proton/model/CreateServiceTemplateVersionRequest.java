@@ -61,7 +61,13 @@ public class CreateServiceTemplateVersionRequest extends com.amazonaws.AmazonWeb
     private TemplateVersionSourceInput source;
     /**
      * <p>
-     * Create tags for a new version of a service template.
+     * An optional list of metadata items that you can associate with the Proton service template version. A tag is a
+     * key-value pair.
+     * </p>
+     * <p>
+     * For more information, see <i>Proton resources and tagging</i> in the <a
+     * href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton Administrator Guide</a> or <a
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">Proton User Guide</a>.
      * </p>
      */
     private java.util.List<Tag> tags;
@@ -330,10 +336,21 @@ public class CreateServiceTemplateVersionRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * Create tags for a new version of a service template.
+     * An optional list of metadata items that you can associate with the Proton service template version. A tag is a
+     * key-value pair.
+     * </p>
+     * <p>
+     * For more information, see <i>Proton resources and tagging</i> in the <a
+     * href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton Administrator Guide</a> or <a
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">Proton User Guide</a>.
      * </p>
      * 
-     * @return Create tags for a new version of a service template.
+     * @return An optional list of metadata items that you can associate with the Proton service template version. A tag
+     *         is a key-value pair.</p>
+     *         <p>
+     *         For more information, see <i>Proton resources and tagging</i> in the <a
+     *         href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton Administrator Guide</a>
+     *         or <a href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">Proton User Guide</a>.
      */
 
     public java.util.List<Tag> getTags() {
@@ -342,11 +359,22 @@ public class CreateServiceTemplateVersionRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * Create tags for a new version of a service template.
+     * An optional list of metadata items that you can associate with the Proton service template version. A tag is a
+     * key-value pair.
+     * </p>
+     * <p>
+     * For more information, see <i>Proton resources and tagging</i> in the <a
+     * href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton Administrator Guide</a> or <a
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">Proton User Guide</a>.
      * </p>
      * 
      * @param tags
-     *        Create tags for a new version of a service template.
+     *        An optional list of metadata items that you can associate with the Proton service template version. A tag
+     *        is a key-value pair.</p>
+     *        <p>
+     *        For more information, see <i>Proton resources and tagging</i> in the <a
+     *        href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton Administrator Guide</a>
+     *        or <a href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">Proton User Guide</a>.
      */
 
     public void setTags(java.util.Collection<Tag> tags) {
@@ -360,7 +388,13 @@ public class CreateServiceTemplateVersionRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * Create tags for a new version of a service template.
+     * An optional list of metadata items that you can associate with the Proton service template version. A tag is a
+     * key-value pair.
+     * </p>
+     * <p>
+     * For more information, see <i>Proton resources and tagging</i> in the <a
+     * href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton Administrator Guide</a> or <a
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">Proton User Guide</a>.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -369,7 +403,12 @@ public class CreateServiceTemplateVersionRequest extends com.amazonaws.AmazonWeb
      * </p>
      * 
      * @param tags
-     *        Create tags for a new version of a service template.
+     *        An optional list of metadata items that you can associate with the Proton service template version. A tag
+     *        is a key-value pair.</p>
+     *        <p>
+     *        For more information, see <i>Proton resources and tagging</i> in the <a
+     *        href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton Administrator Guide</a>
+     *        or <a href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">Proton User Guide</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -385,11 +424,22 @@ public class CreateServiceTemplateVersionRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * Create tags for a new version of a service template.
+     * An optional list of metadata items that you can associate with the Proton service template version. A tag is a
+     * key-value pair.
+     * </p>
+     * <p>
+     * For more information, see <i>Proton resources and tagging</i> in the <a
+     * href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton Administrator Guide</a> or <a
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">Proton User Guide</a>.
      * </p>
      * 
      * @param tags
-     *        Create tags for a new version of a service template.
+     *        An optional list of metadata items that you can associate with the Proton service template version. A tag
+     *        is a key-value pair.</p>
+     *        <p>
+     *        For more information, see <i>Proton resources and tagging</i> in the <a
+     *        href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton Administrator Guide</a>
+     *        or <a href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">Proton User Guide</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

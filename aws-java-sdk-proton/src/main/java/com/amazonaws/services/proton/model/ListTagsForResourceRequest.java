@@ -33,7 +33,7 @@ public class ListTagsForResourceRequest extends com.amazonaws.AmazonWebServiceRe
     private Integer maxResults;
     /**
      * <p>
-     * A token to indicate the location of the next resource tag in the array of resource tags, after the list of
+     * A token that indicates the location of the next resource tag in the array of resource tags, after the list of
      * resource tags that was previously requested.
      * </p>
      */
@@ -87,13 +87,13 @@ public class ListTagsForResourceRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * A token to indicate the location of the next resource tag in the array of resource tags, after the list of
+     * A token that indicates the location of the next resource tag in the array of resource tags, after the list of
      * resource tags that was previously requested.
      * </p>
      * 
      * @param nextToken
-     *        A token to indicate the location of the next resource tag in the array of resource tags, after the list of
-     *        resource tags that was previously requested.
+     *        A token that indicates the location of the next resource tag in the array of resource tags, after the list
+     *        of resource tags that was previously requested.
      */
 
     public void setNextToken(String nextToken) {
@@ -102,12 +102,12 @@ public class ListTagsForResourceRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * A token to indicate the location of the next resource tag in the array of resource tags, after the list of
+     * A token that indicates the location of the next resource tag in the array of resource tags, after the list of
      * resource tags that was previously requested.
      * </p>
      * 
-     * @return A token to indicate the location of the next resource tag in the array of resource tags, after the list
-     *         of resource tags that was previously requested.
+     * @return A token that indicates the location of the next resource tag in the array of resource tags, after the
+     *         list of resource tags that was previously requested.
      */
 
     public String getNextToken() {
@@ -116,13 +116,13 @@ public class ListTagsForResourceRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * A token to indicate the location of the next resource tag in the array of resource tags, after the list of
+     * A token that indicates the location of the next resource tag in the array of resource tags, after the list of
      * resource tags that was previously requested.
      * </p>
      * 
      * @param nextToken
-     *        A token to indicate the location of the next resource tag in the array of resource tags, after the list of
-     *        resource tags that was previously requested.
+     *        A token that indicates the location of the next resource tag in the array of resource tags, after the list
+     *        of resource tags that was previously requested.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

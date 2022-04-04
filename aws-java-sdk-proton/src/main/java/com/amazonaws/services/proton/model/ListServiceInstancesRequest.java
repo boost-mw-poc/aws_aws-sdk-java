@@ -33,8 +33,8 @@ public class ListServiceInstancesRequest extends com.amazonaws.AmazonWebServiceR
     private Integer maxResults;
     /**
      * <p>
-     * A token to indicate the location of the next service in the array of service instances, after the list of service
-     * instances that was previously requested.
+     * A token that indicates the location of the next service in the array of service instances, after the list of
+     * service instances that was previously requested.
      * </p>
      */
     private String nextToken;
@@ -87,13 +87,13 @@ public class ListServiceInstancesRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * A token to indicate the location of the next service in the array of service instances, after the list of service
-     * instances that was previously requested.
+     * A token that indicates the location of the next service in the array of service instances, after the list of
+     * service instances that was previously requested.
      * </p>
      * 
      * @param nextToken
-     *        A token to indicate the location of the next service in the array of service instances, after the list of
-     *        service instances that was previously requested.
+     *        A token that indicates the location of the next service in the array of service instances, after the list
+     *        of service instances that was previously requested.
      */
 
     public void setNextToken(String nextToken) {
@@ -102,12 +102,12 @@ public class ListServiceInstancesRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * A token to indicate the location of the next service in the array of service instances, after the list of service
-     * instances that was previously requested.
+     * A token that indicates the location of the next service in the array of service instances, after the list of
+     * service instances that was previously requested.
      * </p>
      * 
-     * @return A token to indicate the location of the next service in the array of service instances, after the list of
-     *         service instances that was previously requested.
+     * @return A token that indicates the location of the next service in the array of service instances, after the list
+     *         of service instances that was previously requested.
      */
 
     public String getNextToken() {
@@ -116,13 +116,13 @@ public class ListServiceInstancesRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * A token to indicate the location of the next service in the array of service instances, after the list of service
-     * instances that was previously requested.
+     * A token that indicates the location of the next service in the array of service instances, after the list of
+     * service instances that was previously requested.
      * </p>
      * 
      * @param nextToken
-     *        A token to indicate the location of the next service in the array of service instances, after the list of
-     *        service instances that was previously requested.
+     *        A token that indicates the location of the next service in the array of service instances, after the list
+     *        of service instances that was previously requested.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -25,27 +25,27 @@ public class ListTagsForResourceResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * A token to indicate the location of the next resource tag in the array of resource tags, after the current
+     * A token that indicates the location of the next resource tag in the array of resource tags, after the current
      * requested list of resource tags.
      * </p>
      */
     private String nextToken;
     /**
      * <p>
-     * An array of resource tags with detail data.
+     * A list of resource tags with detail data.
      * </p>
      */
     private java.util.List<Tag> tags;
 
     /**
      * <p>
-     * A token to indicate the location of the next resource tag in the array of resource tags, after the current
+     * A token that indicates the location of the next resource tag in the array of resource tags, after the current
      * requested list of resource tags.
      * </p>
      * 
      * @param nextToken
-     *        A token to indicate the location of the next resource tag in the array of resource tags, after the current
-     *        requested list of resource tags.
+     *        A token that indicates the location of the next resource tag in the array of resource tags, after the
+     *        current requested list of resource tags.
      */
 
     public void setNextToken(String nextToken) {
@@ -54,11 +54,11 @@ public class ListTagsForResourceResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * A token to indicate the location of the next resource tag in the array of resource tags, after the current
+     * A token that indicates the location of the next resource tag in the array of resource tags, after the current
      * requested list of resource tags.
      * </p>
      * 
-     * @return A token to indicate the location of the next resource tag in the array of resource tags, after the
+     * @return A token that indicates the location of the next resource tag in the array of resource tags, after the
      *         current requested list of resource tags.
      */
 
@@ -68,13 +68,13 @@ public class ListTagsForResourceResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * A token to indicate the location of the next resource tag in the array of resource tags, after the current
+     * A token that indicates the location of the next resource tag in the array of resource tags, after the current
      * requested list of resource tags.
      * </p>
      * 
      * @param nextToken
-     *        A token to indicate the location of the next resource tag in the array of resource tags, after the current
-     *        requested list of resource tags.
+     *        A token that indicates the location of the next resource tag in the array of resource tags, after the
+     *        current requested list of resource tags.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -85,10 +85,10 @@ public class ListTagsForResourceResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * An array of resource tags with detail data.
+     * A list of resource tags with detail data.
      * </p>
      * 
-     * @return An array of resource tags with detail data.
+     * @return A list of resource tags with detail data.
      */
 
     public java.util.List<Tag> getTags() {
@@ -97,11 +97,11 @@ public class ListTagsForResourceResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * An array of resource tags with detail data.
+     * A list of resource tags with detail data.
      * </p>
      * 
      * @param tags
-     *        An array of resource tags with detail data.
+     *        A list of resource tags with detail data.
      */
 
     public void setTags(java.util.Collection<Tag> tags) {
@@ -115,7 +115,7 @@ public class ListTagsForResourceResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * An array of resource tags with detail data.
+     * A list of resource tags with detail data.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -124,7 +124,7 @@ public class ListTagsForResourceResult extends com.amazonaws.AmazonWebServiceRes
      * </p>
      * 
      * @param tags
-     *        An array of resource tags with detail data.
+     *        A list of resource tags with detail data.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -140,11 +140,11 @@ public class ListTagsForResourceResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * An array of resource tags with detail data.
+     * A list of resource tags with detail data.
      * </p>
      * 
      * @param tags
-     *        An array of resource tags with detail data.
+     *        A list of resource tags with detail data.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

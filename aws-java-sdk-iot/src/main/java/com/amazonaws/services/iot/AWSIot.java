@@ -4465,6 +4465,26 @@ public interface AWSIot {
 
     /**
      * <p>
+     * Lists the values reported for an IoT Device Defender metric (device-side metric, cloud-side metric, or custom
+     * metric) by the given thing during the specified time period.
+     * </p>
+     * 
+     * @param listMetricValuesRequest
+     * @return Result of the ListMetricValues operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws ThrottlingException
+     *         The rate exceeds the limit.
+     * @throws InternalFailureException
+     *         An unexpected error has occurred.
+     * @throws ResourceNotFoundException
+     *         The specified resource does not exist.
+     * @sample AWSIot.ListMetricValues
+     */
+    ListMetricValuesResult listMetricValues(ListMetricValuesRequest listMetricValuesRequest);
+
+    /**
+     * <p>
      * Gets a list of all mitigation actions that match the specified filter criteria.
      * </p>
      * <p>

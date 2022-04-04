@@ -2074,6 +2074,19 @@ public class AbstractAWSIotAsync extends AbstractAWSIot implements AWSIotAsync {
     }
 
     @Override
+    public java.util.concurrent.Future<ListMetricValuesResult> listMetricValuesAsync(ListMetricValuesRequest request) {
+
+        return listMetricValuesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListMetricValuesResult> listMetricValuesAsync(ListMetricValuesRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListMetricValuesRequest, ListMetricValuesResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ListMitigationActionsResult> listMitigationActionsAsync(ListMitigationActionsRequest request) {
 
         return listMitigationActionsAsync(request, null);

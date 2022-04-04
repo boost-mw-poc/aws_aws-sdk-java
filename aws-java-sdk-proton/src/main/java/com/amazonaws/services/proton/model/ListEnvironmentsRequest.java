@@ -39,7 +39,7 @@ public class ListEnvironmentsRequest extends com.amazonaws.AmazonWebServiceReque
     private Integer maxResults;
     /**
      * <p>
-     * A token to indicate the location of the next environment in the array of environments, after the list of
+     * A token that indicates the location of the next environment in the array of environments, after the list of
      * environments that was previously requested.
      * </p>
      */
@@ -157,13 +157,13 @@ public class ListEnvironmentsRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * A token to indicate the location of the next environment in the array of environments, after the list of
+     * A token that indicates the location of the next environment in the array of environments, after the list of
      * environments that was previously requested.
      * </p>
      * 
      * @param nextToken
-     *        A token to indicate the location of the next environment in the array of environments, after the list of
-     *        environments that was previously requested.
+     *        A token that indicates the location of the next environment in the array of environments, after the list
+     *        of environments that was previously requested.
      */
 
     public void setNextToken(String nextToken) {
@@ -172,12 +172,12 @@ public class ListEnvironmentsRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * A token to indicate the location of the next environment in the array of environments, after the list of
+     * A token that indicates the location of the next environment in the array of environments, after the list of
      * environments that was previously requested.
      * </p>
      * 
-     * @return A token to indicate the location of the next environment in the array of environments, after the list of
-     *         environments that was previously requested.
+     * @return A token that indicates the location of the next environment in the array of environments, after the list
+     *         of environments that was previously requested.
      */
 
     public String getNextToken() {
@@ -186,13 +186,13 @@ public class ListEnvironmentsRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * A token to indicate the location of the next environment in the array of environments, after the list of
+     * A token that indicates the location of the next environment in the array of environments, after the list of
      * environments that was previously requested.
      * </p>
      * 
      * @param nextToken
-     *        A token to indicate the location of the next environment in the array of environments, after the list of
-     *        environments that was previously requested.
+     *        A token that indicates the location of the next environment in the array of environments, after the list
+     *        of environments that was previously requested.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

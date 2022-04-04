@@ -32,8 +32,8 @@ public class ListEnvironmentAccountConnectionsResult extends com.amazonaws.Amazo
     private java.util.List<EnvironmentAccountConnectionSummary> environmentAccountConnections;
     /**
      * <p>
-     * A token to indicate the location of the next environment account connection in the array of environment account
-     * connections, after the current requested list of environment account connections.
+     * A token that indicates the location of the next environment account connection in the array of environment
+     * account connections, after the current requested list of environment account connections.
      * </p>
      */
     private String nextToken;
@@ -111,12 +111,12 @@ public class ListEnvironmentAccountConnectionsResult extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * A token to indicate the location of the next environment account connection in the array of environment account
-     * connections, after the current requested list of environment account connections.
+     * A token that indicates the location of the next environment account connection in the array of environment
+     * account connections, after the current requested list of environment account connections.
      * </p>
      * 
      * @param nextToken
-     *        A token to indicate the location of the next environment account connection in the array of environment
+     *        A token that indicates the location of the next environment account connection in the array of environment
      *        account connections, after the current requested list of environment account connections.
      */
 
@@ -126,12 +126,12 @@ public class ListEnvironmentAccountConnectionsResult extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * A token to indicate the location of the next environment account connection in the array of environment account
-     * connections, after the current requested list of environment account connections.
+     * A token that indicates the location of the next environment account connection in the array of environment
+     * account connections, after the current requested list of environment account connections.
      * </p>
      * 
-     * @return A token to indicate the location of the next environment account connection in the array of environment
-     *         account connections, after the current requested list of environment account connections.
+     * @return A token that indicates the location of the next environment account connection in the array of
+     *         environment account connections, after the current requested list of environment account connections.
      */
 
     public String getNextToken() {
@@ -140,12 +140,12 @@ public class ListEnvironmentAccountConnectionsResult extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * A token to indicate the location of the next environment account connection in the array of environment account
-     * connections, after the current requested list of environment account connections.
+     * A token that indicates the location of the next environment account connection in the array of environment
+     * account connections, after the current requested list of environment account connections.
      * </p>
      * 
      * @param nextToken
-     *        A token to indicate the location of the next environment account connection in the array of environment
+     *        A token that indicates the location of the next environment account connection in the array of environment
      *        account connections, after the current requested list of environment account connections.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

@@ -27,24 +27,24 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the resource that the resource tag is applied to.
+     * The Amazon Resource Name (ARN) of the Proton resource to apply customer tags to.
      * </p>
      */
     private String resourceArn;
     /**
      * <p>
-     * An array of resource tags to apply to a resource.
+     * A list of customer tags to apply to the Proton resource.
      * </p>
      */
     private java.util.List<Tag> tags;
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the resource that the resource tag is applied to.
+     * The Amazon Resource Name (ARN) of the Proton resource to apply customer tags to.
      * </p>
      * 
      * @param resourceArn
-     *        The Amazon Resource Name (ARN) of the resource that the resource tag is applied to.
+     *        The Amazon Resource Name (ARN) of the Proton resource to apply customer tags to.
      */
 
     public void setResourceArn(String resourceArn) {
@@ -53,10 +53,10 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the resource that the resource tag is applied to.
+     * The Amazon Resource Name (ARN) of the Proton resource to apply customer tags to.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the resource that the resource tag is applied to.
+     * @return The Amazon Resource Name (ARN) of the Proton resource to apply customer tags to.
      */
 
     public String getResourceArn() {
@@ -65,11 +65,11 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the resource that the resource tag is applied to.
+     * The Amazon Resource Name (ARN) of the Proton resource to apply customer tags to.
      * </p>
      * 
      * @param resourceArn
-     *        The Amazon Resource Name (ARN) of the resource that the resource tag is applied to.
+     *        The Amazon Resource Name (ARN) of the Proton resource to apply customer tags to.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -80,10 +80,10 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * An array of resource tags to apply to a resource.
+     * A list of customer tags to apply to the Proton resource.
      * </p>
      * 
-     * @return An array of resource tags to apply to a resource.
+     * @return A list of customer tags to apply to the Proton resource.
      */
 
     public java.util.List<Tag> getTags() {
@@ -92,11 +92,11 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * An array of resource tags to apply to a resource.
+     * A list of customer tags to apply to the Proton resource.
      * </p>
      * 
      * @param tags
-     *        An array of resource tags to apply to a resource.
+     *        A list of customer tags to apply to the Proton resource.
      */
 
     public void setTags(java.util.Collection<Tag> tags) {
@@ -110,7 +110,7 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * An array of resource tags to apply to a resource.
+     * A list of customer tags to apply to the Proton resource.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -119,7 +119,7 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * 
      * @param tags
-     *        An array of resource tags to apply to a resource.
+     *        A list of customer tags to apply to the Proton resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -135,11 +135,11 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * An array of resource tags to apply to a resource.
+     * A list of customer tags to apply to the Proton resource.
      * </p>
      * 
      * @param tags
-     *        An array of resource tags to apply to a resource.
+     *        A list of customer tags to apply to the Proton resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

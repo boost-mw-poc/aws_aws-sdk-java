@@ -5427,6 +5427,39 @@ public class AWSIotAsyncClient extends AWSIotClient implements AWSIotAsync {
     }
 
     @Override
+    public java.util.concurrent.Future<ListMetricValuesResult> listMetricValuesAsync(ListMetricValuesRequest request) {
+
+        return listMetricValuesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListMetricValuesResult> listMetricValuesAsync(final ListMetricValuesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListMetricValuesRequest, ListMetricValuesResult> asyncHandler) {
+        final ListMetricValuesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListMetricValuesResult>() {
+            @Override
+            public ListMetricValuesResult call() throws Exception {
+                ListMetricValuesResult result = null;
+
+                try {
+                    result = executeListMetricValues(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ListMitigationActionsResult> listMitigationActionsAsync(ListMitigationActionsRequest request) {
 
         return listMitigationActionsAsync(request, null);

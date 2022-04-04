@@ -25,8 +25,8 @@ public class ListRepositoriesResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * A token to indicate the location of the next repository in the array of repositories, after the current requested
-     * list of repositories.
+     * A token that indicates the location of the next repository in the array of repositories, after the current
+     * requested list of repositories.
      * </p>
      */
     private String nextToken;
@@ -39,12 +39,12 @@ public class ListRepositoriesResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * A token to indicate the location of the next repository in the array of repositories, after the current requested
-     * list of repositories.
+     * A token that indicates the location of the next repository in the array of repositories, after the current
+     * requested list of repositories.
      * </p>
      * 
      * @param nextToken
-     *        A token to indicate the location of the next repository in the array of repositories, after the current
+     *        A token that indicates the location of the next repository in the array of repositories, after the current
      *        requested list of repositories.
      */
 
@@ -54,12 +54,12 @@ public class ListRepositoriesResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * A token to indicate the location of the next repository in the array of repositories, after the current requested
-     * list of repositories.
+     * A token that indicates the location of the next repository in the array of repositories, after the current
+     * requested list of repositories.
      * </p>
      * 
-     * @return A token to indicate the location of the next repository in the array of repositories, after the current
-     *         requested list of repositories.
+     * @return A token that indicates the location of the next repository in the array of repositories, after the
+     *         current requested list of repositories.
      */
 
     public String getNextToken() {
@@ -68,12 +68,12 @@ public class ListRepositoriesResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * A token to indicate the location of the next repository in the array of repositories, after the current requested
-     * list of repositories.
+     * A token that indicates the location of the next repository in the array of repositories, after the current
+     * requested list of repositories.
      * </p>
      * 
      * @param nextToken
-     *        A token to indicate the location of the next repository in the array of repositories, after the current
+     *        A token that indicates the location of the next repository in the array of repositories, after the current
      *        requested list of repositories.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

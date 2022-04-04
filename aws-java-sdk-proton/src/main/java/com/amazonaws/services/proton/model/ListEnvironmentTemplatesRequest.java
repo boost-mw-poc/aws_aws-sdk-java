@@ -33,7 +33,7 @@ public class ListEnvironmentTemplatesRequest extends com.amazonaws.AmazonWebServ
     private Integer maxResults;
     /**
      * <p>
-     * A token to indicate the location of the next environment template in the array of environment templates, after
+     * A token that indicates the location of the next environment template in the array of environment templates, after
      * the list of environment templates that was previously requested.
      * </p>
      */
@@ -81,13 +81,13 @@ public class ListEnvironmentTemplatesRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * A token to indicate the location of the next environment template in the array of environment templates, after
+     * A token that indicates the location of the next environment template in the array of environment templates, after
      * the list of environment templates that was previously requested.
      * </p>
      * 
      * @param nextToken
-     *        A token to indicate the location of the next environment template in the array of environment templates,
-     *        after the list of environment templates that was previously requested.
+     *        A token that indicates the location of the next environment template in the array of environment
+     *        templates, after the list of environment templates that was previously requested.
      */
 
     public void setNextToken(String nextToken) {
@@ -96,12 +96,12 @@ public class ListEnvironmentTemplatesRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * A token to indicate the location of the next environment template in the array of environment templates, after
+     * A token that indicates the location of the next environment template in the array of environment templates, after
      * the list of environment templates that was previously requested.
      * </p>
      * 
-     * @return A token to indicate the location of the next environment template in the array of environment templates,
-     *         after the list of environment templates that was previously requested.
+     * @return A token that indicates the location of the next environment template in the array of environment
+     *         templates, after the list of environment templates that was previously requested.
      */
 
     public String getNextToken() {
@@ -110,13 +110,13 @@ public class ListEnvironmentTemplatesRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * A token to indicate the location of the next environment template in the array of environment templates, after
+     * A token that indicates the location of the next environment template in the array of environment templates, after
      * the list of environment templates that was previously requested.
      * </p>
      * 
      * @param nextToken
-     *        A token to indicate the location of the next environment template in the array of environment templates,
-     *        after the list of environment templates that was previously requested.
+     *        A token that indicates the location of the next environment template in the array of environment
+     *        templates, after the list of environment templates that was previously requested.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

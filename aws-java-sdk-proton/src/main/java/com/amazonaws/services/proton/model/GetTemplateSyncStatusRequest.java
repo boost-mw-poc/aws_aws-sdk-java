@@ -39,7 +39,7 @@ public class GetTemplateSyncStatusRequest extends com.amazonaws.AmazonWebService
     private String templateType;
     /**
      * <p>
-     * The template version.
+     * The template major version.
      * </p>
      */
     private String templateVersion;
@@ -145,11 +145,11 @@ public class GetTemplateSyncStatusRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The template version.
+     * The template major version.
      * </p>
      * 
      * @param templateVersion
-     *        The template version.
+     *        The template major version.
      */
 
     public void setTemplateVersion(String templateVersion) {
@@ -158,10 +158,10 @@ public class GetTemplateSyncStatusRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The template version.
+     * The template major version.
      * </p>
      * 
-     * @return The template version.
+     * @return The template major version.
      */
 
     public String getTemplateVersion() {
@@ -170,11 +170,11 @@ public class GetTemplateSyncStatusRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The template version.
+     * The template major version.
      * </p>
      * 
      * @param templateVersion
-     *        The template version.
+     *        The template major version.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

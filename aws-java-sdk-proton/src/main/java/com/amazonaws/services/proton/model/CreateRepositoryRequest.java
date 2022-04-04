@@ -28,8 +28,8 @@ public class CreateRepositoryRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * The Amazon Resource Name (ARN) of your Amazon Web Services CodeStar connection. For more information, see <a
-     * href="https://docs.aws.amazon.com/setting-up-for-service">Setting up for Proton</a> in the <i>Proton
-     * Administrator Guide</i>.
+     * href="https://docs.aws.amazon.com/proton/latest/adminguide/setting-up-for-service.html">Setting up for Proton</a>
+     * in the <i>Proton Administrator Guide</i>.
      * </p>
      */
     private String connectionArn;
@@ -41,7 +41,7 @@ public class CreateRepositoryRequest extends com.amazonaws.AmazonWebServiceReque
     private String encryptionKey;
     /**
      * <p>
-     * The repository name, for example <code>myrepos/myrepo</code>.
+     * The repository name (for example, <code>myrepos/myrepo</code>).
      * </p>
      */
     private String name;
@@ -51,18 +51,29 @@ public class CreateRepositoryRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      */
     private String provider;
+    /**
+     * <p>
+     * An optional list of metadata items that you can associate with the Proton repository. A tag is a key-value pair.
+     * </p>
+     * <p>
+     * For more information, see <i>Proton resources and tagging</i> in the <a
+     * href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton Administrator Guide</a> or <a
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">Proton User Guide</a>.
+     * </p>
+     */
+    private java.util.List<Tag> tags;
 
     /**
      * <p>
      * The Amazon Resource Name (ARN) of your Amazon Web Services CodeStar connection. For more information, see <a
-     * href="https://docs.aws.amazon.com/setting-up-for-service">Setting up for Proton</a> in the <i>Proton
-     * Administrator Guide</i>.
+     * href="https://docs.aws.amazon.com/proton/latest/adminguide/setting-up-for-service.html">Setting up for Proton</a>
+     * in the <i>Proton Administrator Guide</i>.
      * </p>
      * 
      * @param connectionArn
      *        The Amazon Resource Name (ARN) of your Amazon Web Services CodeStar connection. For more information, see
-     *        <a href="https://docs.aws.amazon.com/setting-up-for-service">Setting up for Proton</a> in the <i>Proton
-     *        Administrator Guide</i>.
+     *        <a href="https://docs.aws.amazon.com/proton/latest/adminguide/setting-up-for-service.html">Setting up for
+     *        Proton</a> in the <i>Proton Administrator Guide</i>.
      */
 
     public void setConnectionArn(String connectionArn) {
@@ -72,13 +83,13 @@ public class CreateRepositoryRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * The Amazon Resource Name (ARN) of your Amazon Web Services CodeStar connection. For more information, see <a
-     * href="https://docs.aws.amazon.com/setting-up-for-service">Setting up for Proton</a> in the <i>Proton
-     * Administrator Guide</i>.
+     * href="https://docs.aws.amazon.com/proton/latest/adminguide/setting-up-for-service.html">Setting up for Proton</a>
+     * in the <i>Proton Administrator Guide</i>.
      * </p>
      * 
      * @return The Amazon Resource Name (ARN) of your Amazon Web Services CodeStar connection. For more information, see
-     *         <a href="https://docs.aws.amazon.com/setting-up-for-service">Setting up for Proton</a> in the <i>Proton
-     *         Administrator Guide</i>.
+     *         <a href="https://docs.aws.amazon.com/proton/latest/adminguide/setting-up-for-service.html">Setting up for
+     *         Proton</a> in the <i>Proton Administrator Guide</i>.
      */
 
     public String getConnectionArn() {
@@ -88,14 +99,14 @@ public class CreateRepositoryRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * The Amazon Resource Name (ARN) of your Amazon Web Services CodeStar connection. For more information, see <a
-     * href="https://docs.aws.amazon.com/setting-up-for-service">Setting up for Proton</a> in the <i>Proton
-     * Administrator Guide</i>.
+     * href="https://docs.aws.amazon.com/proton/latest/adminguide/setting-up-for-service.html">Setting up for Proton</a>
+     * in the <i>Proton Administrator Guide</i>.
      * </p>
      * 
      * @param connectionArn
      *        The Amazon Resource Name (ARN) of your Amazon Web Services CodeStar connection. For more information, see
-     *        <a href="https://docs.aws.amazon.com/setting-up-for-service">Setting up for Proton</a> in the <i>Proton
-     *        Administrator Guide</i>.
+     *        <a href="https://docs.aws.amazon.com/proton/latest/adminguide/setting-up-for-service.html">Setting up for
+     *        Proton</a> in the <i>Proton Administrator Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -146,11 +157,11 @@ public class CreateRepositoryRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The repository name, for example <code>myrepos/myrepo</code>.
+     * The repository name (for example, <code>myrepos/myrepo</code>).
      * </p>
      * 
      * @param name
-     *        The repository name, for example <code>myrepos/myrepo</code>.
+     *        The repository name (for example, <code>myrepos/myrepo</code>).
      */
 
     public void setName(String name) {
@@ -159,10 +170,10 @@ public class CreateRepositoryRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The repository name, for example <code>myrepos/myrepo</code>.
+     * The repository name (for example, <code>myrepos/myrepo</code>).
      * </p>
      * 
-     * @return The repository name, for example <code>myrepos/myrepo</code>.
+     * @return The repository name (for example, <code>myrepos/myrepo</code>).
      */
 
     public String getName() {
@@ -171,11 +182,11 @@ public class CreateRepositoryRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The repository name, for example <code>myrepos/myrepo</code>.
+     * The repository name (for example, <code>myrepos/myrepo</code>).
      * </p>
      * 
      * @param name
-     *        The repository name, for example <code>myrepos/myrepo</code>.
+     *        The repository name (for example, <code>myrepos/myrepo</code>).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -244,6 +255,116 @@ public class CreateRepositoryRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
+     * <p>
+     * An optional list of metadata items that you can associate with the Proton repository. A tag is a key-value pair.
+     * </p>
+     * <p>
+     * For more information, see <i>Proton resources and tagging</i> in the <a
+     * href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton Administrator Guide</a> or <a
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">Proton User Guide</a>.
+     * </p>
+     * 
+     * @return An optional list of metadata items that you can associate with the Proton repository. A tag is a
+     *         key-value pair.</p>
+     *         <p>
+     *         For more information, see <i>Proton resources and tagging</i> in the <a
+     *         href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton Administrator Guide</a>
+     *         or <a href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">Proton User Guide</a>.
+     */
+
+    public java.util.List<Tag> getTags() {
+        return tags;
+    }
+
+    /**
+     * <p>
+     * An optional list of metadata items that you can associate with the Proton repository. A tag is a key-value pair.
+     * </p>
+     * <p>
+     * For more information, see <i>Proton resources and tagging</i> in the <a
+     * href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton Administrator Guide</a> or <a
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">Proton User Guide</a>.
+     * </p>
+     * 
+     * @param tags
+     *        An optional list of metadata items that you can associate with the Proton repository. A tag is a key-value
+     *        pair.</p>
+     *        <p>
+     *        For more information, see <i>Proton resources and tagging</i> in the <a
+     *        href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton Administrator Guide</a>
+     *        or <a href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">Proton User Guide</a>.
+     */
+
+    public void setTags(java.util.Collection<Tag> tags) {
+        if (tags == null) {
+            this.tags = null;
+            return;
+        }
+
+        this.tags = new java.util.ArrayList<Tag>(tags);
+    }
+
+    /**
+     * <p>
+     * An optional list of metadata items that you can associate with the Proton repository. A tag is a key-value pair.
+     * </p>
+     * <p>
+     * For more information, see <i>Proton resources and tagging</i> in the <a
+     * href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton Administrator Guide</a> or <a
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">Proton User Guide</a>.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setTags(java.util.Collection)} or {@link #withTags(java.util.Collection)} if you want to override the
+     * existing values.
+     * </p>
+     * 
+     * @param tags
+     *        An optional list of metadata items that you can associate with the Proton repository. A tag is a key-value
+     *        pair.</p>
+     *        <p>
+     *        For more information, see <i>Proton resources and tagging</i> in the <a
+     *        href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton Administrator Guide</a>
+     *        or <a href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">Proton User Guide</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateRepositoryRequest withTags(Tag... tags) {
+        if (this.tags == null) {
+            setTags(new java.util.ArrayList<Tag>(tags.length));
+        }
+        for (Tag ele : tags) {
+            this.tags.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * An optional list of metadata items that you can associate with the Proton repository. A tag is a key-value pair.
+     * </p>
+     * <p>
+     * For more information, see <i>Proton resources and tagging</i> in the <a
+     * href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton Administrator Guide</a> or <a
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">Proton User Guide</a>.
+     * </p>
+     * 
+     * @param tags
+     *        An optional list of metadata items that you can associate with the Proton repository. A tag is a key-value
+     *        pair.</p>
+     *        <p>
+     *        For more information, see <i>Proton resources and tagging</i> in the <a
+     *        href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton Administrator Guide</a>
+     *        or <a href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">Proton User Guide</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateRepositoryRequest withTags(java.util.Collection<Tag> tags) {
+        setTags(tags);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -262,7 +383,9 @@ public class CreateRepositoryRequest extends com.amazonaws.AmazonWebServiceReque
         if (getName() != null)
             sb.append("Name: ").append(getName()).append(",");
         if (getProvider() != null)
-            sb.append("Provider: ").append(getProvider());
+            sb.append("Provider: ").append(getProvider()).append(",");
+        if (getTags() != null)
+            sb.append("Tags: ").append(getTags());
         sb.append("}");
         return sb.toString();
     }
@@ -293,6 +416,10 @@ public class CreateRepositoryRequest extends com.amazonaws.AmazonWebServiceReque
             return false;
         if (other.getProvider() != null && other.getProvider().equals(this.getProvider()) == false)
             return false;
+        if (other.getTags() == null ^ this.getTags() == null)
+            return false;
+        if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
+            return false;
         return true;
     }
 
@@ -305,6 +432,7 @@ public class CreateRepositoryRequest extends com.amazonaws.AmazonWebServiceReque
         hashCode = prime * hashCode + ((getEncryptionKey() == null) ? 0 : getEncryptionKey().hashCode());
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
         hashCode = prime * hashCode + ((getProvider() == null) ? 0 : getProvider().hashCode());
+        hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         return hashCode;
     }
 

@@ -51,8 +51,8 @@ public class CreateServiceTemplateRequest extends com.amazonaws.AmazonWebService
     private String name;
     /**
      * <p>
-     * Proton includes a service pipeline for your service by default. When included, this parameter indicates that an
-     * Proton service pipeline <i>won't</i> be included for your service. Once specified, this parameter <i>can't</i> be
+     * By default, Proton provides a service pipeline for your service. When this parameter is included, it indicates
+     * that an Proton service pipeline <i>isn't</i> provided for your service. After it's included, it <i>can't</i> be
      * changed. For more information, see <a
      * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-template-bundles.html">Service template bundles</a>
      * in the <i>Proton Administrator Guide</i>.
@@ -61,7 +61,11 @@ public class CreateServiceTemplateRequest extends com.amazonaws.AmazonWebService
     private String pipelineProvisioning;
     /**
      * <p>
-     * Create tags for your service template. For more information, see <i>Proton resources and tagging</i> in the <a
+     * An optional list of metadata items that you can associate with the Proton service template. A tag is a key-value
+     * pair.
+     * </p>
+     * <p>
+     * For more information, see <i>Proton resources and tagging</i> in the <a
      * href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton Administrator Guide</a> or <a
      * href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">Proton User Guide</a>.
      * </p>
@@ -230,16 +234,16 @@ public class CreateServiceTemplateRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * Proton includes a service pipeline for your service by default. When included, this parameter indicates that an
-     * Proton service pipeline <i>won't</i> be included for your service. Once specified, this parameter <i>can't</i> be
+     * By default, Proton provides a service pipeline for your service. When this parameter is included, it indicates
+     * that an Proton service pipeline <i>isn't</i> provided for your service. After it's included, it <i>can't</i> be
      * changed. For more information, see <a
      * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-template-bundles.html">Service template bundles</a>
      * in the <i>Proton Administrator Guide</i>.
      * </p>
      * 
      * @param pipelineProvisioning
-     *        Proton includes a service pipeline for your service by default. When included, this parameter indicates
-     *        that an Proton service pipeline <i>won't</i> be included for your service. Once specified, this parameter
+     *        By default, Proton provides a service pipeline for your service. When this parameter is included, it
+     *        indicates that an Proton service pipeline <i>isn't</i> provided for your service. After it's included, it
      *        <i>can't</i> be changed. For more information, see <a
      *        href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-template-bundles.html">Service template
      *        bundles</a> in the <i>Proton Administrator Guide</i>.
@@ -252,15 +256,15 @@ public class CreateServiceTemplateRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * Proton includes a service pipeline for your service by default. When included, this parameter indicates that an
-     * Proton service pipeline <i>won't</i> be included for your service. Once specified, this parameter <i>can't</i> be
+     * By default, Proton provides a service pipeline for your service. When this parameter is included, it indicates
+     * that an Proton service pipeline <i>isn't</i> provided for your service. After it's included, it <i>can't</i> be
      * changed. For more information, see <a
      * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-template-bundles.html">Service template bundles</a>
      * in the <i>Proton Administrator Guide</i>.
      * </p>
      * 
-     * @return Proton includes a service pipeline for your service by default. When included, this parameter indicates
-     *         that an Proton service pipeline <i>won't</i> be included for your service. Once specified, this parameter
+     * @return By default, Proton provides a service pipeline for your service. When this parameter is included, it
+     *         indicates that an Proton service pipeline <i>isn't</i> provided for your service. After it's included, it
      *         <i>can't</i> be changed. For more information, see <a
      *         href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-template-bundles.html">Service template
      *         bundles</a> in the <i>Proton Administrator Guide</i>.
@@ -273,16 +277,16 @@ public class CreateServiceTemplateRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * Proton includes a service pipeline for your service by default. When included, this parameter indicates that an
-     * Proton service pipeline <i>won't</i> be included for your service. Once specified, this parameter <i>can't</i> be
+     * By default, Proton provides a service pipeline for your service. When this parameter is included, it indicates
+     * that an Proton service pipeline <i>isn't</i> provided for your service. After it's included, it <i>can't</i> be
      * changed. For more information, see <a
      * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-template-bundles.html">Service template bundles</a>
      * in the <i>Proton Administrator Guide</i>.
      * </p>
      * 
      * @param pipelineProvisioning
-     *        Proton includes a service pipeline for your service by default. When included, this parameter indicates
-     *        that an Proton service pipeline <i>won't</i> be included for your service. Once specified, this parameter
+     *        By default, Proton provides a service pipeline for your service. When this parameter is included, it
+     *        indicates that an Proton service pipeline <i>isn't</i> provided for your service. After it's included, it
      *        <i>can't</i> be changed. For more information, see <a
      *        href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-template-bundles.html">Service template
      *        bundles</a> in the <i>Proton Administrator Guide</i>.
@@ -297,16 +301,16 @@ public class CreateServiceTemplateRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * Proton includes a service pipeline for your service by default. When included, this parameter indicates that an
-     * Proton service pipeline <i>won't</i> be included for your service. Once specified, this parameter <i>can't</i> be
+     * By default, Proton provides a service pipeline for your service. When this parameter is included, it indicates
+     * that an Proton service pipeline <i>isn't</i> provided for your service. After it's included, it <i>can't</i> be
      * changed. For more information, see <a
      * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-template-bundles.html">Service template bundles</a>
      * in the <i>Proton Administrator Guide</i>.
      * </p>
      * 
      * @param pipelineProvisioning
-     *        Proton includes a service pipeline for your service by default. When included, this parameter indicates
-     *        that an Proton service pipeline <i>won't</i> be included for your service. Once specified, this parameter
+     *        By default, Proton provides a service pipeline for your service. When this parameter is included, it
+     *        indicates that an Proton service pipeline <i>isn't</i> provided for your service. After it's included, it
      *        <i>can't</i> be changed. For more information, see <a
      *        href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-template-bundles.html">Service template
      *        bundles</a> in the <i>Proton Administrator Guide</i>.
@@ -321,15 +325,21 @@ public class CreateServiceTemplateRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * Create tags for your service template. For more information, see <i>Proton resources and tagging</i> in the <a
+     * An optional list of metadata items that you can associate with the Proton service template. A tag is a key-value
+     * pair.
+     * </p>
+     * <p>
+     * For more information, see <i>Proton resources and tagging</i> in the <a
      * href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton Administrator Guide</a> or <a
      * href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">Proton User Guide</a>.
      * </p>
      * 
-     * @return Create tags for your service template. For more information, see <i>Proton resources and tagging</i> in
-     *         the <a href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton Administrator
-     *         Guide</a> or <a href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">Proton User
-     *         Guide</a>.
+     * @return An optional list of metadata items that you can associate with the Proton service template. A tag is a
+     *         key-value pair.</p>
+     *         <p>
+     *         For more information, see <i>Proton resources and tagging</i> in the <a
+     *         href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton Administrator Guide</a>
+     *         or <a href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">Proton User Guide</a>.
      */
 
     public java.util.List<Tag> getTags() {
@@ -338,16 +348,22 @@ public class CreateServiceTemplateRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * Create tags for your service template. For more information, see <i>Proton resources and tagging</i> in the <a
+     * An optional list of metadata items that you can associate with the Proton service template. A tag is a key-value
+     * pair.
+     * </p>
+     * <p>
+     * For more information, see <i>Proton resources and tagging</i> in the <a
      * href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton Administrator Guide</a> or <a
      * href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">Proton User Guide</a>.
      * </p>
      * 
      * @param tags
-     *        Create tags for your service template. For more information, see <i>Proton resources and tagging</i> in
-     *        the <a href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton Administrator
-     *        Guide</a> or <a href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">Proton User
-     *        Guide</a>.
+     *        An optional list of metadata items that you can associate with the Proton service template. A tag is a
+     *        key-value pair.</p>
+     *        <p>
+     *        For more information, see <i>Proton resources and tagging</i> in the <a
+     *        href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton Administrator Guide</a>
+     *        or <a href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">Proton User Guide</a>.
      */
 
     public void setTags(java.util.Collection<Tag> tags) {
@@ -361,7 +377,11 @@ public class CreateServiceTemplateRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * Create tags for your service template. For more information, see <i>Proton resources and tagging</i> in the <a
+     * An optional list of metadata items that you can associate with the Proton service template. A tag is a key-value
+     * pair.
+     * </p>
+     * <p>
+     * For more information, see <i>Proton resources and tagging</i> in the <a
      * href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton Administrator Guide</a> or <a
      * href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">Proton User Guide</a>.
      * </p>
@@ -372,10 +392,12 @@ public class CreateServiceTemplateRequest extends com.amazonaws.AmazonWebService
      * </p>
      * 
      * @param tags
-     *        Create tags for your service template. For more information, see <i>Proton resources and tagging</i> in
-     *        the <a href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton Administrator
-     *        Guide</a> or <a href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">Proton User
-     *        Guide</a>.
+     *        An optional list of metadata items that you can associate with the Proton service template. A tag is a
+     *        key-value pair.</p>
+     *        <p>
+     *        For more information, see <i>Proton resources and tagging</i> in the <a
+     *        href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton Administrator Guide</a>
+     *        or <a href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">Proton User Guide</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -391,16 +413,22 @@ public class CreateServiceTemplateRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * Create tags for your service template. For more information, see <i>Proton resources and tagging</i> in the <a
+     * An optional list of metadata items that you can associate with the Proton service template. A tag is a key-value
+     * pair.
+     * </p>
+     * <p>
+     * For more information, see <i>Proton resources and tagging</i> in the <a
      * href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton Administrator Guide</a> or <a
      * href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">Proton User Guide</a>.
      * </p>
      * 
      * @param tags
-     *        Create tags for your service template. For more information, see <i>Proton resources and tagging</i> in
-     *        the <a href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton Administrator
-     *        Guide</a> or <a href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">Proton User
-     *        Guide</a>.
+     *        An optional list of metadata items that you can associate with the Proton service template. A tag is a
+     *        key-value pair.</p>
+     *        <p>
+     *        For more information, see <i>Proton resources and tagging</i> in the <a
+     *        href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton Administrator Guide</a>
+     *        or <a href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">Proton User Guide</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

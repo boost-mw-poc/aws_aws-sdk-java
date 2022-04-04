@@ -25,8 +25,8 @@ public class ListServicesResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * A token to indicate the location of the next service in the array of services, after the current requested list
-     * of services.
+     * A token that indicates the location of the next service in the array of services, after the current requested
+     * list of services.
      * </p>
      */
     private String nextToken;
@@ -39,13 +39,13 @@ public class ListServicesResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * A token to indicate the location of the next service in the array of services, after the current requested list
-     * of services.
+     * A token that indicates the location of the next service in the array of services, after the current requested
+     * list of services.
      * </p>
      * 
      * @param nextToken
-     *        A token to indicate the location of the next service in the array of services, after the current requested
-     *        list of services.
+     *        A token that indicates the location of the next service in the array of services, after the current
+     *        requested list of services.
      */
 
     public void setNextToken(String nextToken) {
@@ -54,11 +54,11 @@ public class ListServicesResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * A token to indicate the location of the next service in the array of services, after the current requested list
-     * of services.
+     * A token that indicates the location of the next service in the array of services, after the current requested
+     * list of services.
      * </p>
      * 
-     * @return A token to indicate the location of the next service in the array of services, after the current
+     * @return A token that indicates the location of the next service in the array of services, after the current
      *         requested list of services.
      */
 
@@ -68,13 +68,13 @@ public class ListServicesResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * A token to indicate the location of the next service in the array of services, after the current requested list
-     * of services.
+     * A token that indicates the location of the next service in the array of services, after the current requested
+     * list of services.
      * </p>
      * 
      * @param nextToken
-     *        A token to indicate the location of the next service in the array of services, after the current requested
-     *        list of services.
+     *        A token that indicates the location of the next service in the array of services, after the current
+     *        requested list of services.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

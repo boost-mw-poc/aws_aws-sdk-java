@@ -26,7 +26,7 @@ public class ListRepositorySyncDefinitionsResult extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * A token to indicate the location of the next repository sync definition in the array of repository sync
+     * A token that indicates the location of the next repository sync definition in the array of repository sync
      * definitions, after the current requested list of repository sync definitions.
      * </p>
      */
@@ -40,12 +40,12 @@ public class ListRepositorySyncDefinitionsResult extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * A token to indicate the location of the next repository sync definition in the array of repository sync
+     * A token that indicates the location of the next repository sync definition in the array of repository sync
      * definitions, after the current requested list of repository sync definitions.
      * </p>
      * 
      * @param nextToken
-     *        A token to indicate the location of the next repository sync definition in the array of repository sync
+     *        A token that indicates the location of the next repository sync definition in the array of repository sync
      *        definitions, after the current requested list of repository sync definitions.
      */
 
@@ -55,12 +55,12 @@ public class ListRepositorySyncDefinitionsResult extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * A token to indicate the location of the next repository sync definition in the array of repository sync
+     * A token that indicates the location of the next repository sync definition in the array of repository sync
      * definitions, after the current requested list of repository sync definitions.
      * </p>
      * 
-     * @return A token to indicate the location of the next repository sync definition in the array of repository sync
-     *         definitions, after the current requested list of repository sync definitions.
+     * @return A token that indicates the location of the next repository sync definition in the array of repository
+     *         sync definitions, after the current requested list of repository sync definitions.
      */
 
     public String getNextToken() {
@@ -69,12 +69,12 @@ public class ListRepositorySyncDefinitionsResult extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * A token to indicate the location of the next repository sync definition in the array of repository sync
+     * A token that indicates the location of the next repository sync definition in the array of repository sync
      * definitions, after the current requested list of repository sync definitions.
      * </p>
      * 
      * @param nextToken
-     *        A token to indicate the location of the next repository sync definition in the array of repository sync
+     *        A token that indicates the location of the next repository sync definition in the array of repository sync
      *        definitions, after the current requested list of repository sync definitions.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

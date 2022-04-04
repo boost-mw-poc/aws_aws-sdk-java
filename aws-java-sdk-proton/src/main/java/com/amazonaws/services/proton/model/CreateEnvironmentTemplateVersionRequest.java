@@ -40,10 +40,10 @@ public class CreateEnvironmentTemplateVersionRequest extends com.amazonaws.Amazo
     private String description;
     /**
      * <p>
-     * To create a new minor version of the environment template, include a <code>major Version</code>.
+     * To create a new minor version of the environment template, include <code>major Version</code>.
      * </p>
      * <p>
-     * To create a new major and minor version of the environment template, <i>exclude</i> <code>major Version</code>.
+     * To create a new major and minor version of the environment template, exclude <code>major Version</code>.
      * </p>
      */
     private String majorVersion;
@@ -55,7 +55,13 @@ public class CreateEnvironmentTemplateVersionRequest extends com.amazonaws.Amazo
     private TemplateVersionSourceInput source;
     /**
      * <p>
-     * Create tags for a new version of an environment template.
+     * An optional list of metadata items that you can associate with the Proton environment template version. A tag is
+     * a key-value pair.
+     * </p>
+     * <p>
+     * For more information, see <i>Proton resources and tagging</i> in the <a
+     * href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton Administrator Guide</a> or <a
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">Proton User Guide</a>.
      * </p>
      */
     private java.util.List<Tag> tags;
@@ -154,17 +160,16 @@ public class CreateEnvironmentTemplateVersionRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * To create a new minor version of the environment template, include a <code>major Version</code>.
+     * To create a new minor version of the environment template, include <code>major Version</code>.
      * </p>
      * <p>
-     * To create a new major and minor version of the environment template, <i>exclude</i> <code>major Version</code>.
+     * To create a new major and minor version of the environment template, exclude <code>major Version</code>.
      * </p>
      * 
      * @param majorVersion
-     *        To create a new minor version of the environment template, include a <code>major Version</code>.</p>
+     *        To create a new minor version of the environment template, include <code>major Version</code>.</p>
      *        <p>
-     *        To create a new major and minor version of the environment template, <i>exclude</i>
-     *        <code>major Version</code>.
+     *        To create a new major and minor version of the environment template, exclude <code>major Version</code>.
      */
 
     public void setMajorVersion(String majorVersion) {
@@ -173,16 +178,15 @@ public class CreateEnvironmentTemplateVersionRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * To create a new minor version of the environment template, include a <code>major Version</code>.
+     * To create a new minor version of the environment template, include <code>major Version</code>.
      * </p>
      * <p>
-     * To create a new major and minor version of the environment template, <i>exclude</i> <code>major Version</code>.
+     * To create a new major and minor version of the environment template, exclude <code>major Version</code>.
      * </p>
      * 
-     * @return To create a new minor version of the environment template, include a <code>major Version</code>.</p>
+     * @return To create a new minor version of the environment template, include <code>major Version</code>.</p>
      *         <p>
-     *         To create a new major and minor version of the environment template, <i>exclude</i>
-     *         <code>major Version</code>.
+     *         To create a new major and minor version of the environment template, exclude <code>major Version</code>.
      */
 
     public String getMajorVersion() {
@@ -191,17 +195,16 @@ public class CreateEnvironmentTemplateVersionRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * To create a new minor version of the environment template, include a <code>major Version</code>.
+     * To create a new minor version of the environment template, include <code>major Version</code>.
      * </p>
      * <p>
-     * To create a new major and minor version of the environment template, <i>exclude</i> <code>major Version</code>.
+     * To create a new major and minor version of the environment template, exclude <code>major Version</code>.
      * </p>
      * 
      * @param majorVersion
-     *        To create a new minor version of the environment template, include a <code>major Version</code>.</p>
+     *        To create a new minor version of the environment template, include <code>major Version</code>.</p>
      *        <p>
-     *        To create a new major and minor version of the environment template, <i>exclude</i>
-     *        <code>major Version</code>.
+     *        To create a new major and minor version of the environment template, exclude <code>major Version</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -252,10 +255,21 @@ public class CreateEnvironmentTemplateVersionRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * Create tags for a new version of an environment template.
+     * An optional list of metadata items that you can associate with the Proton environment template version. A tag is
+     * a key-value pair.
+     * </p>
+     * <p>
+     * For more information, see <i>Proton resources and tagging</i> in the <a
+     * href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton Administrator Guide</a> or <a
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">Proton User Guide</a>.
      * </p>
      * 
-     * @return Create tags for a new version of an environment template.
+     * @return An optional list of metadata items that you can associate with the Proton environment template version. A
+     *         tag is a key-value pair.</p>
+     *         <p>
+     *         For more information, see <i>Proton resources and tagging</i> in the <a
+     *         href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton Administrator Guide</a>
+     *         or <a href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">Proton User Guide</a>.
      */
 
     public java.util.List<Tag> getTags() {
@@ -264,11 +278,22 @@ public class CreateEnvironmentTemplateVersionRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * Create tags for a new version of an environment template.
+     * An optional list of metadata items that you can associate with the Proton environment template version. A tag is
+     * a key-value pair.
+     * </p>
+     * <p>
+     * For more information, see <i>Proton resources and tagging</i> in the <a
+     * href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton Administrator Guide</a> or <a
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">Proton User Guide</a>.
      * </p>
      * 
      * @param tags
-     *        Create tags for a new version of an environment template.
+     *        An optional list of metadata items that you can associate with the Proton environment template version. A
+     *        tag is a key-value pair.</p>
+     *        <p>
+     *        For more information, see <i>Proton resources and tagging</i> in the <a
+     *        href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton Administrator Guide</a>
+     *        or <a href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">Proton User Guide</a>.
      */
 
     public void setTags(java.util.Collection<Tag> tags) {
@@ -282,7 +307,13 @@ public class CreateEnvironmentTemplateVersionRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * Create tags for a new version of an environment template.
+     * An optional list of metadata items that you can associate with the Proton environment template version. A tag is
+     * a key-value pair.
+     * </p>
+     * <p>
+     * For more information, see <i>Proton resources and tagging</i> in the <a
+     * href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton Administrator Guide</a> or <a
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">Proton User Guide</a>.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -291,7 +322,12 @@ public class CreateEnvironmentTemplateVersionRequest extends com.amazonaws.Amazo
      * </p>
      * 
      * @param tags
-     *        Create tags for a new version of an environment template.
+     *        An optional list of metadata items that you can associate with the Proton environment template version. A
+     *        tag is a key-value pair.</p>
+     *        <p>
+     *        For more information, see <i>Proton resources and tagging</i> in the <a
+     *        href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton Administrator Guide</a>
+     *        or <a href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">Proton User Guide</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -307,11 +343,22 @@ public class CreateEnvironmentTemplateVersionRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * Create tags for a new version of an environment template.
+     * An optional list of metadata items that you can associate with the Proton environment template version. A tag is
+     * a key-value pair.
+     * </p>
+     * <p>
+     * For more information, see <i>Proton resources and tagging</i> in the <a
+     * href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton Administrator Guide</a> or <a
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">Proton User Guide</a>.
      * </p>
      * 
      * @param tags
-     *        Create tags for a new version of an environment template.
+     *        An optional list of metadata items that you can associate with the Proton environment template version. A
+     *        tag is a key-value pair.</p>
+     *        <p>
+     *        For more information, see <i>Proton resources and tagging</i> in the <a
+     *        href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton Administrator Guide</a>
+     *        or <a href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">Proton User Guide</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

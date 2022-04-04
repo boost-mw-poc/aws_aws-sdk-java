@@ -33,7 +33,7 @@ public class UpdateServiceTemplateRequest extends com.amazonaws.AmazonWebService
     private String description;
     /**
      * <p>
-     * The name of the service template to update as displayed in the developer interface.
+     * The name of the service template to update that's displayed in the developer interface.
      * </p>
      */
     private String displayName;
@@ -86,11 +86,11 @@ public class UpdateServiceTemplateRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The name of the service template to update as displayed in the developer interface.
+     * The name of the service template to update that's displayed in the developer interface.
      * </p>
      * 
      * @param displayName
-     *        The name of the service template to update as displayed in the developer interface.
+     *        The name of the service template to update that's displayed in the developer interface.
      */
 
     public void setDisplayName(String displayName) {
@@ -99,10 +99,10 @@ public class UpdateServiceTemplateRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The name of the service template to update as displayed in the developer interface.
+     * The name of the service template to update that's displayed in the developer interface.
      * </p>
      * 
-     * @return The name of the service template to update as displayed in the developer interface.
+     * @return The name of the service template to update that's displayed in the developer interface.
      */
 
     public String getDisplayName() {
@@ -111,11 +111,11 @@ public class UpdateServiceTemplateRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The name of the service template to update as displayed in the developer interface.
+     * The name of the service template to update that's displayed in the developer interface.
      * </p>
      * 
      * @param displayName
-     *        The name of the service template to update as displayed in the developer interface.
+     *        The name of the service template to update that's displayed in the developer interface.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

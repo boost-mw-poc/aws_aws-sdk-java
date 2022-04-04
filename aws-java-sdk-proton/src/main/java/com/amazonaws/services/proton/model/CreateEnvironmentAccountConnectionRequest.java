@@ -40,10 +40,10 @@ public class CreateEnvironmentAccountConnectionRequest extends com.amazonaws.Ama
     private String environmentName;
     /**
      * <p>
-     * The ID of the management account that accepts or rejects the environment account connection. You create an manage
-     * the Proton environment in this account. If the management account accepts the environment account connection,
-     * Proton can use the associated IAM role to provision environment infrastructure resources in the associated
-     * environment account.
+     * The ID of the management account that accepts or rejects the environment account connection. You create and
+     * manage the Proton environment in this account. If the management account accepts the environment account
+     * connection, Proton can use the associated IAM role to provision environment infrastructure resources in the
+     * associated environment account.
      * </p>
      */
     private String managementAccountId;
@@ -56,9 +56,12 @@ public class CreateEnvironmentAccountConnectionRequest extends com.amazonaws.Ama
     private String roleArn;
     /**
      * <p>
-     * Tags for your environment account connection. For more information, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton resources and tagging</a> in
-     * the <i>Proton Administrator Guide</i>.
+     * An optional list of metadata items that you can associate with the Proton environment account connection. A tag
+     * is a key-value pair.
+     * </p>
+     * <p>
+     * For more information, see <a href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton
+     * resources and tagging</a> in the <i>Proton Administrator Guide</i>.
      * </p>
      */
     private java.util.List<Tag> tags;
@@ -151,17 +154,17 @@ public class CreateEnvironmentAccountConnectionRequest extends com.amazonaws.Ama
 
     /**
      * <p>
-     * The ID of the management account that accepts or rejects the environment account connection. You create an manage
-     * the Proton environment in this account. If the management account accepts the environment account connection,
-     * Proton can use the associated IAM role to provision environment infrastructure resources in the associated
-     * environment account.
+     * The ID of the management account that accepts or rejects the environment account connection. You create and
+     * manage the Proton environment in this account. If the management account accepts the environment account
+     * connection, Proton can use the associated IAM role to provision environment infrastructure resources in the
+     * associated environment account.
      * </p>
      * 
      * @param managementAccountId
-     *        The ID of the management account that accepts or rejects the environment account connection. You create an
-     *        manage the Proton environment in this account. If the management account accepts the environment account
-     *        connection, Proton can use the associated IAM role to provision environment infrastructure resources in
-     *        the associated environment account.
+     *        The ID of the management account that accepts or rejects the environment account connection. You create
+     *        and manage the Proton environment in this account. If the management account accepts the environment
+     *        account connection, Proton can use the associated IAM role to provision environment infrastructure
+     *        resources in the associated environment account.
      */
 
     public void setManagementAccountId(String managementAccountId) {
@@ -170,14 +173,14 @@ public class CreateEnvironmentAccountConnectionRequest extends com.amazonaws.Ama
 
     /**
      * <p>
-     * The ID of the management account that accepts or rejects the environment account connection. You create an manage
-     * the Proton environment in this account. If the management account accepts the environment account connection,
-     * Proton can use the associated IAM role to provision environment infrastructure resources in the associated
-     * environment account.
+     * The ID of the management account that accepts or rejects the environment account connection. You create and
+     * manage the Proton environment in this account. If the management account accepts the environment account
+     * connection, Proton can use the associated IAM role to provision environment infrastructure resources in the
+     * associated environment account.
      * </p>
      * 
      * @return The ID of the management account that accepts or rejects the environment account connection. You create
-     *         an manage the Proton environment in this account. If the management account accepts the environment
+     *         and manage the Proton environment in this account. If the management account accepts the environment
      *         account connection, Proton can use the associated IAM role to provision environment infrastructure
      *         resources in the associated environment account.
      */
@@ -188,17 +191,17 @@ public class CreateEnvironmentAccountConnectionRequest extends com.amazonaws.Ama
 
     /**
      * <p>
-     * The ID of the management account that accepts or rejects the environment account connection. You create an manage
-     * the Proton environment in this account. If the management account accepts the environment account connection,
-     * Proton can use the associated IAM role to provision environment infrastructure resources in the associated
-     * environment account.
+     * The ID of the management account that accepts or rejects the environment account connection. You create and
+     * manage the Proton environment in this account. If the management account accepts the environment account
+     * connection, Proton can use the associated IAM role to provision environment infrastructure resources in the
+     * associated environment account.
      * </p>
      * 
      * @param managementAccountId
-     *        The ID of the management account that accepts or rejects the environment account connection. You create an
-     *        manage the Proton environment in this account. If the management account accepts the environment account
-     *        connection, Proton can use the associated IAM role to provision environment infrastructure resources in
-     *        the associated environment account.
+     *        The ID of the management account that accepts or rejects the environment account connection. You create
+     *        and manage the Proton environment in this account. If the management account accepts the environment
+     *        account connection, Proton can use the associated IAM role to provision environment infrastructure
+     *        resources in the associated environment account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -255,12 +258,18 @@ public class CreateEnvironmentAccountConnectionRequest extends com.amazonaws.Ama
 
     /**
      * <p>
-     * Tags for your environment account connection. For more information, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton resources and tagging</a> in
-     * the <i>Proton Administrator Guide</i>.
+     * An optional list of metadata items that you can associate with the Proton environment account connection. A tag
+     * is a key-value pair.
+     * </p>
+     * <p>
+     * For more information, see <a href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton
+     * resources and tagging</a> in the <i>Proton Administrator Guide</i>.
      * </p>
      * 
-     * @return Tags for your environment account connection. For more information, see <a
+     * @return An optional list of metadata items that you can associate with the Proton environment account connection.
+     *         A tag is a key-value pair.</p>
+     *         <p>
+     *         For more information, see <a
      *         href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton resources and
      *         tagging</a> in the <i>Proton Administrator Guide</i>.
      */
@@ -271,13 +280,19 @@ public class CreateEnvironmentAccountConnectionRequest extends com.amazonaws.Ama
 
     /**
      * <p>
-     * Tags for your environment account connection. For more information, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton resources and tagging</a> in
-     * the <i>Proton Administrator Guide</i>.
+     * An optional list of metadata items that you can associate with the Proton environment account connection. A tag
+     * is a key-value pair.
+     * </p>
+     * <p>
+     * For more information, see <a href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton
+     * resources and tagging</a> in the <i>Proton Administrator Guide</i>.
      * </p>
      * 
      * @param tags
-     *        Tags for your environment account connection. For more information, see <a
+     *        An optional list of metadata items that you can associate with the Proton environment account connection.
+     *        A tag is a key-value pair.</p>
+     *        <p>
+     *        For more information, see <a
      *        href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton resources and
      *        tagging</a> in the <i>Proton Administrator Guide</i>.
      */
@@ -293,9 +308,12 @@ public class CreateEnvironmentAccountConnectionRequest extends com.amazonaws.Ama
 
     /**
      * <p>
-     * Tags for your environment account connection. For more information, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton resources and tagging</a> in
-     * the <i>Proton Administrator Guide</i>.
+     * An optional list of metadata items that you can associate with the Proton environment account connection. A tag
+     * is a key-value pair.
+     * </p>
+     * <p>
+     * For more information, see <a href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton
+     * resources and tagging</a> in the <i>Proton Administrator Guide</i>.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -304,7 +322,10 @@ public class CreateEnvironmentAccountConnectionRequest extends com.amazonaws.Ama
      * </p>
      * 
      * @param tags
-     *        Tags for your environment account connection. For more information, see <a
+     *        An optional list of metadata items that you can associate with the Proton environment account connection.
+     *        A tag is a key-value pair.</p>
+     *        <p>
+     *        For more information, see <a
      *        href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton resources and
      *        tagging</a> in the <i>Proton Administrator Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -322,13 +343,19 @@ public class CreateEnvironmentAccountConnectionRequest extends com.amazonaws.Ama
 
     /**
      * <p>
-     * Tags for your environment account connection. For more information, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton resources and tagging</a> in
-     * the <i>Proton Administrator Guide</i>.
+     * An optional list of metadata items that you can associate with the Proton environment account connection. A tag
+     * is a key-value pair.
+     * </p>
+     * <p>
+     * For more information, see <a href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton
+     * resources and tagging</a> in the <i>Proton Administrator Guide</i>.
      * </p>
      * 
      * @param tags
-     *        Tags for your environment account connection. For more information, see <a
+     *        An optional list of metadata items that you can associate with the Proton environment account connection.
+     *        A tag is a key-value pair.</p>
+     *        <p>
+     *        For more information, see <a
      *        href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton resources and
      *        tagging</a> in the <i>Proton Administrator Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.

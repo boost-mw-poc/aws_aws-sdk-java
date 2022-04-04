@@ -31,7 +31,7 @@ public class ListEnvironmentsResult extends com.amazonaws.AmazonWebServiceResult
     private java.util.List<EnvironmentSummary> environments;
     /**
      * <p>
-     * A token to indicate the location of the next environment in the array of environments, after the current
+     * A token that indicates the location of the next environment in the array of environments, after the current
      * requested list of environments.
      * </p>
      */
@@ -109,13 +109,13 @@ public class ListEnvironmentsResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * A token to indicate the location of the next environment in the array of environments, after the current
+     * A token that indicates the location of the next environment in the array of environments, after the current
      * requested list of environments.
      * </p>
      * 
      * @param nextToken
-     *        A token to indicate the location of the next environment in the array of environments, after the current
-     *        requested list of environments.
+     *        A token that indicates the location of the next environment in the array of environments, after the
+     *        current requested list of environments.
      */
 
     public void setNextToken(String nextToken) {
@@ -124,12 +124,12 @@ public class ListEnvironmentsResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * A token to indicate the location of the next environment in the array of environments, after the current
+     * A token that indicates the location of the next environment in the array of environments, after the current
      * requested list of environments.
      * </p>
      * 
-     * @return A token to indicate the location of the next environment in the array of environments, after the current
-     *         requested list of environments.
+     * @return A token that indicates the location of the next environment in the array of environments, after the
+     *         current requested list of environments.
      */
 
     public String getNextToken() {
@@ -138,13 +138,13 @@ public class ListEnvironmentsResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * A token to indicate the location of the next environment in the array of environments, after the current
+     * A token that indicates the location of the next environment in the array of environments, after the current
      * requested list of environments.
      * </p>
      * 
      * @param nextToken
-     *        A token to indicate the location of the next environment in the array of environments, after the current
-     *        requested list of environments.
+     *        A token that indicates the location of the next environment in the array of environments, after the
+     *        current requested list of environments.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

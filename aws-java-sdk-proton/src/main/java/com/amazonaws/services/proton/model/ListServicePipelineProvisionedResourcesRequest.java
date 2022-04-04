@@ -27,7 +27,7 @@ public class ListServicePipelineProvisionedResourcesRequest extends com.amazonaw
 
     /**
      * <p>
-     * A token to indicate the location of the next provisioned resource in the array of provisioned resources, after
+     * A token that indicates the location of the next provisioned resource in the array of provisioned resources, after
      * the list of provisioned resources that was previously requested.
      * </p>
      */
@@ -41,13 +41,13 @@ public class ListServicePipelineProvisionedResourcesRequest extends com.amazonaw
 
     /**
      * <p>
-     * A token to indicate the location of the next provisioned resource in the array of provisioned resources, after
+     * A token that indicates the location of the next provisioned resource in the array of provisioned resources, after
      * the list of provisioned resources that was previously requested.
      * </p>
      * 
      * @param nextToken
-     *        A token to indicate the location of the next provisioned resource in the array of provisioned resources,
-     *        after the list of provisioned resources that was previously requested.
+     *        A token that indicates the location of the next provisioned resource in the array of provisioned
+     *        resources, after the list of provisioned resources that was previously requested.
      */
 
     public void setNextToken(String nextToken) {
@@ -56,12 +56,12 @@ public class ListServicePipelineProvisionedResourcesRequest extends com.amazonaw
 
     /**
      * <p>
-     * A token to indicate the location of the next provisioned resource in the array of provisioned resources, after
+     * A token that indicates the location of the next provisioned resource in the array of provisioned resources, after
      * the list of provisioned resources that was previously requested.
      * </p>
      * 
-     * @return A token to indicate the location of the next provisioned resource in the array of provisioned resources,
-     *         after the list of provisioned resources that was previously requested.
+     * @return A token that indicates the location of the next provisioned resource in the array of provisioned
+     *         resources, after the list of provisioned resources that was previously requested.
      */
 
     public String getNextToken() {
@@ -70,13 +70,13 @@ public class ListServicePipelineProvisionedResourcesRequest extends com.amazonaw
 
     /**
      * <p>
-     * A token to indicate the location of the next provisioned resource in the array of provisioned resources, after
+     * A token that indicates the location of the next provisioned resource in the array of provisioned resources, after
      * the list of provisioned resources that was previously requested.
      * </p>
      * 
      * @param nextToken
-     *        A token to indicate the location of the next provisioned resource in the array of provisioned resources,
-     *        after the list of provisioned resources that was previously requested.
+     *        A token that indicates the location of the next provisioned resource in the array of provisioned
+     *        resources, after the list of provisioned resources that was previously requested.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

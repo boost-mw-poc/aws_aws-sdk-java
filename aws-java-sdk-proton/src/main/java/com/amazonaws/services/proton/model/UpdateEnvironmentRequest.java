@@ -27,8 +27,7 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * There are four modes for updating an environment as described in the following. The <code>deploymentType</code>
-     * field defines the mode.
+     * There are four modes for updating an environment. The <code>deploymentType</code> field defines the mode.
      * </p>
      * <dl>
      * <dt/>
@@ -47,7 +46,7 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
      * </p>
      * <p>
      * In this mode, the environment is deployed and updated with the new spec that you provide. Only requested
-     * parameters are updated. <i>Don’t</i> include minor or major version parameters when you use this
+     * parameters are updated. <i>Don’t</i> include major or minor version parameters when you use this
      * <code>deployment-type</code>.
      * </p>
      * </dd>
@@ -107,15 +106,9 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
     private String protonServiceRoleArn;
     /**
      * <p>
-     * The repository that you provide with pull request provisioning.
+     * The infrastructure repository that you use to host your rendered infrastructure templates for self-managed
+     * provisioning.
      * </p>
-     * <important>
-     * <p>
-     * Provisioning by pull request is currently in feature preview and is only usable with Terraform based Proton
-     * Templates. To learn more about <a href="https://aws.amazon.com/service-terms">Amazon Web Services Feature Preview
-     * terms</a>, see section 2 on Beta and Previews.
-     * </p>
-     * </important>
      */
     private RepositoryBranchInput provisioningRepository;
     /**
@@ -139,8 +132,7 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * There are four modes for updating an environment as described in the following. The <code>deploymentType</code>
-     * field defines the mode.
+     * There are four modes for updating an environment. The <code>deploymentType</code> field defines the mode.
      * </p>
      * <dl>
      * <dt/>
@@ -159,7 +151,7 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
      * </p>
      * <p>
      * In this mode, the environment is deployed and updated with the new spec that you provide. Only requested
-     * parameters are updated. <i>Don’t</i> include minor or major version parameters when you use this
+     * parameters are updated. <i>Don’t</i> include major or minor version parameters when you use this
      * <code>deployment-type</code>.
      * </p>
      * </dd>
@@ -188,8 +180,8 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
      * </dl>
      * 
      * @param deploymentType
-     *        There are four modes for updating an environment as described in the following. The
-     *        <code>deploymentType</code> field defines the mode.</p>
+     *        There are four modes for updating an environment. The <code>deploymentType</code> field defines the
+     *        mode.</p>
      *        <dl>
      *        <dt/>
      *        <dd>
@@ -207,7 +199,7 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
      *        </p>
      *        <p>
      *        In this mode, the environment is deployed and updated with the new spec that you provide. Only requested
-     *        parameters are updated. <i>Don’t</i> include minor or major version parameters when you use this
+     *        parameters are updated. <i>Don’t</i> include major or minor version parameters when you use this
      *        <code>deployment-type</code>.
      *        </p>
      *        </dd>
@@ -242,8 +234,7 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * There are four modes for updating an environment as described in the following. The <code>deploymentType</code>
-     * field defines the mode.
+     * There are four modes for updating an environment. The <code>deploymentType</code> field defines the mode.
      * </p>
      * <dl>
      * <dt/>
@@ -262,7 +253,7 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
      * </p>
      * <p>
      * In this mode, the environment is deployed and updated with the new spec that you provide. Only requested
-     * parameters are updated. <i>Don’t</i> include minor or major version parameters when you use this
+     * parameters are updated. <i>Don’t</i> include major or minor version parameters when you use this
      * <code>deployment-type</code>.
      * </p>
      * </dd>
@@ -290,8 +281,8 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
      * </dd>
      * </dl>
      * 
-     * @return There are four modes for updating an environment as described in the following. The
-     *         <code>deploymentType</code> field defines the mode.</p>
+     * @return There are four modes for updating an environment. The <code>deploymentType</code> field defines the
+     *         mode.</p>
      *         <dl>
      *         <dt/>
      *         <dd>
@@ -309,7 +300,7 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
      *         </p>
      *         <p>
      *         In this mode, the environment is deployed and updated with the new spec that you provide. Only requested
-     *         parameters are updated. <i>Don’t</i> include minor or major version parameters when you use this
+     *         parameters are updated. <i>Don’t</i> include major or minor version parameters when you use this
      *         <code>deployment-type</code>.
      *         </p>
      *         </dd>
@@ -344,8 +335,7 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * There are four modes for updating an environment as described in the following. The <code>deploymentType</code>
-     * field defines the mode.
+     * There are four modes for updating an environment. The <code>deploymentType</code> field defines the mode.
      * </p>
      * <dl>
      * <dt/>
@@ -364,7 +354,7 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
      * </p>
      * <p>
      * In this mode, the environment is deployed and updated with the new spec that you provide. Only requested
-     * parameters are updated. <i>Don’t</i> include minor or major version parameters when you use this
+     * parameters are updated. <i>Don’t</i> include major or minor version parameters when you use this
      * <code>deployment-type</code>.
      * </p>
      * </dd>
@@ -393,8 +383,8 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
      * </dl>
      * 
      * @param deploymentType
-     *        There are four modes for updating an environment as described in the following. The
-     *        <code>deploymentType</code> field defines the mode.</p>
+     *        There are four modes for updating an environment. The <code>deploymentType</code> field defines the
+     *        mode.</p>
      *        <dl>
      *        <dt/>
      *        <dd>
@@ -412,7 +402,7 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
      *        </p>
      *        <p>
      *        In this mode, the environment is deployed and updated with the new spec that you provide. Only requested
-     *        parameters are updated. <i>Don’t</i> include minor or major version parameters when you use this
+     *        parameters are updated. <i>Don’t</i> include major or minor version parameters when you use this
      *        <code>deployment-type</code>.
      *        </p>
      *        </dd>
@@ -449,8 +439,7 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * There are four modes for updating an environment as described in the following. The <code>deploymentType</code>
-     * field defines the mode.
+     * There are four modes for updating an environment. The <code>deploymentType</code> field defines the mode.
      * </p>
      * <dl>
      * <dt/>
@@ -469,7 +458,7 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
      * </p>
      * <p>
      * In this mode, the environment is deployed and updated with the new spec that you provide. Only requested
-     * parameters are updated. <i>Don’t</i> include minor or major version parameters when you use this
+     * parameters are updated. <i>Don’t</i> include major or minor version parameters when you use this
      * <code>deployment-type</code>.
      * </p>
      * </dd>
@@ -498,8 +487,8 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
      * </dl>
      * 
      * @param deploymentType
-     *        There are four modes for updating an environment as described in the following. The
-     *        <code>deploymentType</code> field defines the mode.</p>
+     *        There are four modes for updating an environment. The <code>deploymentType</code> field defines the
+     *        mode.</p>
      *        <dl>
      *        <dt/>
      *        <dd>
@@ -517,7 +506,7 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
      *        </p>
      *        <p>
      *        In this mode, the environment is deployed and updated with the new spec that you provide. Only requested
-     *        parameters are updated. <i>Don’t</i> include minor or major version parameters when you use this
+     *        parameters are updated. <i>Don’t</i> include major or minor version parameters when you use this
      *        <code>deployment-type</code>.
      *        </p>
      *        </dd>
@@ -744,23 +733,13 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The repository that you provide with pull request provisioning.
+     * The infrastructure repository that you use to host your rendered infrastructure templates for self-managed
+     * provisioning.
      * </p>
-     * <important>
-     * <p>
-     * Provisioning by pull request is currently in feature preview and is only usable with Terraform based Proton
-     * Templates. To learn more about <a href="https://aws.amazon.com/service-terms">Amazon Web Services Feature Preview
-     * terms</a>, see section 2 on Beta and Previews.
-     * </p>
-     * </important>
      * 
      * @param provisioningRepository
-     *        The repository that you provide with pull request provisioning.</p> <important>
-     *        <p>
-     *        Provisioning by pull request is currently in feature preview and is only usable with Terraform based
-     *        Proton Templates. To learn more about <a href="https://aws.amazon.com/service-terms">Amazon Web Services
-     *        Feature Preview terms</a>, see section 2 on Beta and Previews.
-     *        </p>
+     *        The infrastructure repository that you use to host your rendered infrastructure templates for self-managed
+     *        provisioning.
      */
 
     public void setProvisioningRepository(RepositoryBranchInput provisioningRepository) {
@@ -769,22 +748,12 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The repository that you provide with pull request provisioning.
+     * The infrastructure repository that you use to host your rendered infrastructure templates for self-managed
+     * provisioning.
      * </p>
-     * <important>
-     * <p>
-     * Provisioning by pull request is currently in feature preview and is only usable with Terraform based Proton
-     * Templates. To learn more about <a href="https://aws.amazon.com/service-terms">Amazon Web Services Feature Preview
-     * terms</a>, see section 2 on Beta and Previews.
-     * </p>
-     * </important>
      * 
-     * @return The repository that you provide with pull request provisioning.</p> <important>
-     *         <p>
-     *         Provisioning by pull request is currently in feature preview and is only usable with Terraform based
-     *         Proton Templates. To learn more about <a href="https://aws.amazon.com/service-terms">Amazon Web Services
-     *         Feature Preview terms</a>, see section 2 on Beta and Previews.
-     *         </p>
+     * @return The infrastructure repository that you use to host your rendered infrastructure templates for
+     *         self-managed provisioning.
      */
 
     public RepositoryBranchInput getProvisioningRepository() {
@@ -793,23 +762,13 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The repository that you provide with pull request provisioning.
+     * The infrastructure repository that you use to host your rendered infrastructure templates for self-managed
+     * provisioning.
      * </p>
-     * <important>
-     * <p>
-     * Provisioning by pull request is currently in feature preview and is only usable with Terraform based Proton
-     * Templates. To learn more about <a href="https://aws.amazon.com/service-terms">Amazon Web Services Feature Preview
-     * terms</a>, see section 2 on Beta and Previews.
-     * </p>
-     * </important>
      * 
      * @param provisioningRepository
-     *        The repository that you provide with pull request provisioning.</p> <important>
-     *        <p>
-     *        Provisioning by pull request is currently in feature preview and is only usable with Terraform based
-     *        Proton Templates. To learn more about <a href="https://aws.amazon.com/service-terms">Amazon Web Services
-     *        Feature Preview terms</a>, see section 2 on Beta and Previews.
-     *        </p>
+     *        The infrastructure repository that you use to host your rendered infrastructure templates for self-managed
+     *        provisioning.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

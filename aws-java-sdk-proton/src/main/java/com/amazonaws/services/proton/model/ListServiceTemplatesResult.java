@@ -25,7 +25,7 @@ public class ListServiceTemplatesResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * A token to indicate the location of the next service template in the array of service templates, after the
+     * A token that indicates the location of the next service template in the array of service templates, after the
      * current requested list of service templates.
      * </p>
      */
@@ -39,13 +39,13 @@ public class ListServiceTemplatesResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * A token to indicate the location of the next service template in the array of service templates, after the
+     * A token that indicates the location of the next service template in the array of service templates, after the
      * current requested list of service templates.
      * </p>
      * 
      * @param nextToken
-     *        A token to indicate the location of the next service template in the array of service templates, after the
-     *        current requested list of service templates.
+     *        A token that indicates the location of the next service template in the array of service templates, after
+     *        the current requested list of service templates.
      */
 
     public void setNextToken(String nextToken) {
@@ -54,11 +54,11 @@ public class ListServiceTemplatesResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * A token to indicate the location of the next service template in the array of service templates, after the
+     * A token that indicates the location of the next service template in the array of service templates, after the
      * current requested list of service templates.
      * </p>
      * 
-     * @return A token to indicate the location of the next service template in the array of service templates, after
+     * @return A token that indicates the location of the next service template in the array of service templates, after
      *         the current requested list of service templates.
      */
 
@@ -68,13 +68,13 @@ public class ListServiceTemplatesResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * A token to indicate the location of the next service template in the array of service templates, after the
+     * A token that indicates the location of the next service template in the array of service templates, after the
      * current requested list of service templates.
      * </p>
      * 
      * @param nextToken
-     *        A token to indicate the location of the next service template in the array of service templates, after the
-     *        current requested list of service templates.
+     *        A token that indicates the location of the next service template in the array of service templates, after
+     *        the current requested list of service templates.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

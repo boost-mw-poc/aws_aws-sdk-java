@@ -33,7 +33,7 @@ public class ListEnvironmentOutputsRequest extends com.amazonaws.AmazonWebServic
     private String environmentName;
     /**
      * <p>
-     * A token to indicate the location of the next environment output in the array of environment outputs, after the
+     * A token that indicates the location of the next environment output in the array of environment outputs, after the
      * list of environment outputs that was previously requested.
      * </p>
      */
@@ -81,13 +81,13 @@ public class ListEnvironmentOutputsRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * A token to indicate the location of the next environment output in the array of environment outputs, after the
+     * A token that indicates the location of the next environment output in the array of environment outputs, after the
      * list of environment outputs that was previously requested.
      * </p>
      * 
      * @param nextToken
-     *        A token to indicate the location of the next environment output in the array of environment outputs, after
-     *        the list of environment outputs that was previously requested.
+     *        A token that indicates the location of the next environment output in the array of environment outputs,
+     *        after the list of environment outputs that was previously requested.
      */
 
     public void setNextToken(String nextToken) {
@@ -96,11 +96,11 @@ public class ListEnvironmentOutputsRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * A token to indicate the location of the next environment output in the array of environment outputs, after the
+     * A token that indicates the location of the next environment output in the array of environment outputs, after the
      * list of environment outputs that was previously requested.
      * </p>
      * 
-     * @return A token to indicate the location of the next environment output in the array of environment outputs,
+     * @return A token that indicates the location of the next environment output in the array of environment outputs,
      *         after the list of environment outputs that was previously requested.
      */
 
@@ -110,13 +110,13 @@ public class ListEnvironmentOutputsRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * A token to indicate the location of the next environment output in the array of environment outputs, after the
+     * A token that indicates the location of the next environment output in the array of environment outputs, after the
      * list of environment outputs that was previously requested.
      * </p>
      * 
      * @param nextToken
-     *        A token to indicate the location of the next environment output in the array of environment outputs, after
-     *        the list of environment outputs that was previously requested.
+     *        A token that indicates the location of the next environment output in the array of environment outputs,
+     *        after the list of environment outputs that was previously requested.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

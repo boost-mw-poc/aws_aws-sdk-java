@@ -25,8 +25,8 @@ public class ListServiceInstanceOutputsResult extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * A token to indicate the location of the next output in the array of outputs, after the current requested list of
-     * outputs.
+     * A token that indicates the location of the next output in the array of outputs, after the current requested list
+     * of outputs.
      * </p>
      */
     private String nextToken;
@@ -39,13 +39,13 @@ public class ListServiceInstanceOutputsResult extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * A token to indicate the location of the next output in the array of outputs, after the current requested list of
-     * outputs.
+     * A token that indicates the location of the next output in the array of outputs, after the current requested list
+     * of outputs.
      * </p>
      * 
      * @param nextToken
-     *        A token to indicate the location of the next output in the array of outputs, after the current requested
-     *        list of outputs.
+     *        A token that indicates the location of the next output in the array of outputs, after the current
+     *        requested list of outputs.
      */
 
     public void setNextToken(String nextToken) {
@@ -54,12 +54,12 @@ public class ListServiceInstanceOutputsResult extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * A token to indicate the location of the next output in the array of outputs, after the current requested list of
-     * outputs.
+     * A token that indicates the location of the next output in the array of outputs, after the current requested list
+     * of outputs.
      * </p>
      * 
-     * @return A token to indicate the location of the next output in the array of outputs, after the current requested
-     *         list of outputs.
+     * @return A token that indicates the location of the next output in the array of outputs, after the current
+     *         requested list of outputs.
      */
 
     public String getNextToken() {
@@ -68,13 +68,13 @@ public class ListServiceInstanceOutputsResult extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * A token to indicate the location of the next output in the array of outputs, after the current requested list of
-     * outputs.
+     * A token that indicates the location of the next output in the array of outputs, after the current requested list
+     * of outputs.
      * </p>
      * 
      * @param nextToken
-     *        A token to indicate the location of the next output in the array of outputs, after the current requested
-     *        list of outputs.
+     *        A token that indicates the location of the next output in the array of outputs, after the current
+     *        requested list of outputs.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
