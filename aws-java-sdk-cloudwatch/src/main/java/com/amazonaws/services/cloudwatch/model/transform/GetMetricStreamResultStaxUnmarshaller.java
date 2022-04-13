@@ -104,6 +104,17 @@ public class GetMetricStreamResultStaxUnmarshaller implements Unmarshaller<GetMe
                     getMetricStreamResult.setOutputFormat(StringStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("StatisticsConfigurations", targetDepth)) {
+                    getMetricStreamResult.withStatisticsConfigurations(new ArrayList<MetricStreamStatisticsConfiguration>());
+                    continue;
+                }
+
+                if (context.testExpression("StatisticsConfigurations/member", targetDepth)) {
+                    getMetricStreamResult.withStatisticsConfigurations(MetricStreamStatisticsConfigurationStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return getMetricStreamResult;

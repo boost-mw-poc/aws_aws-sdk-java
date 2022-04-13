@@ -111,6 +111,60 @@ public class PutMetricStreamRequestMarshaller implements Marshaller<Request<PutM
             }
         }
 
+        if (!putMetricStreamRequest.getStatisticsConfigurations().isEmpty()
+                || !((com.amazonaws.internal.SdkInternalList<MetricStreamStatisticsConfiguration>) putMetricStreamRequest.getStatisticsConfigurations())
+                        .isAutoConstruct()) {
+            com.amazonaws.internal.SdkInternalList<MetricStreamStatisticsConfiguration> statisticsConfigurationsList = (com.amazonaws.internal.SdkInternalList<MetricStreamStatisticsConfiguration>) putMetricStreamRequest
+                    .getStatisticsConfigurations();
+            int statisticsConfigurationsListIndex = 1;
+
+            for (MetricStreamStatisticsConfiguration statisticsConfigurationsListValue : statisticsConfigurationsList) {
+                if (statisticsConfigurationsListValue != null) {
+
+                    if (!statisticsConfigurationsListValue.getIncludeMetrics().isEmpty()
+                            || !((com.amazonaws.internal.SdkInternalList<MetricStreamStatisticsMetric>) statisticsConfigurationsListValue.getIncludeMetrics())
+                                    .isAutoConstruct()) {
+                        com.amazonaws.internal.SdkInternalList<MetricStreamStatisticsMetric> includeMetricsList = (com.amazonaws.internal.SdkInternalList<MetricStreamStatisticsMetric>) statisticsConfigurationsListValue
+                                .getIncludeMetrics();
+                        int includeMetricsListIndex = 1;
+
+                        for (MetricStreamStatisticsMetric includeMetricsListValue : includeMetricsList) {
+                            if (includeMetricsListValue != null) {
+
+                                if (includeMetricsListValue.getNamespace() != null) {
+                                    request.addParameter("StatisticsConfigurations.member." + statisticsConfigurationsListIndex + ".IncludeMetrics.member."
+                                            + includeMetricsListIndex + ".Namespace", StringUtils.fromString(includeMetricsListValue.getNamespace()));
+                                }
+
+                                if (includeMetricsListValue.getMetricName() != null) {
+                                    request.addParameter("StatisticsConfigurations.member." + statisticsConfigurationsListIndex + ".IncludeMetrics.member."
+                                            + includeMetricsListIndex + ".MetricName", StringUtils.fromString(includeMetricsListValue.getMetricName()));
+                                }
+                            }
+                            includeMetricsListIndex++;
+                        }
+                    }
+
+                    if (!statisticsConfigurationsListValue.getAdditionalStatistics().isEmpty()
+                            || !((com.amazonaws.internal.SdkInternalList<String>) statisticsConfigurationsListValue.getAdditionalStatistics())
+                                    .isAutoConstruct()) {
+                        com.amazonaws.internal.SdkInternalList<String> additionalStatisticsList = (com.amazonaws.internal.SdkInternalList<String>) statisticsConfigurationsListValue
+                                .getAdditionalStatistics();
+                        int additionalStatisticsListIndex = 1;
+
+                        for (String additionalStatisticsListValue : additionalStatisticsList) {
+                            if (additionalStatisticsListValue != null) {
+                                request.addParameter("StatisticsConfigurations.member." + statisticsConfigurationsListIndex + ".AdditionalStatistics.member."
+                                        + additionalStatisticsListIndex, StringUtils.fromString(additionalStatisticsListValue));
+                            }
+                            additionalStatisticsListIndex++;
+                        }
+                    }
+                }
+                statisticsConfigurationsListIndex++;
+            }
+        }
+
         return request;
     }
 

@@ -171,8 +171,13 @@ public class MetricAlarm implements Serializable, Cloneable {
     private String comparisonOperator;
     /**
      * <p>
-     * Sets how this alarm is to handle missing data points. If this parameter is omitted, the default behavior of
-     * <code>missing</code> is used.
+     * Sets how this alarm is to handle missing data points. The valid values are <code>breaching</code>,
+     * <code>notBreaching</code>, <code>ignore</code>, and <code>missing</code>. For more information, see <a href=
+     * "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/AlarmThatSendsEmail.html#alarms-and-missing-data"
+     * >Configuring how CloudWatch alarms treat missing data</a>.
+     * </p>
+     * <p>
+     * If this parameter is omitted, the default behavior of <code>missing</code> is used.
      * </p>
      */
     private String treatMissingData;
@@ -1442,13 +1447,23 @@ public class MetricAlarm implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Sets how this alarm is to handle missing data points. If this parameter is omitted, the default behavior of
-     * <code>missing</code> is used.
+     * Sets how this alarm is to handle missing data points. The valid values are <code>breaching</code>,
+     * <code>notBreaching</code>, <code>ignore</code>, and <code>missing</code>. For more information, see <a href=
+     * "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/AlarmThatSendsEmail.html#alarms-and-missing-data"
+     * >Configuring how CloudWatch alarms treat missing data</a>.
+     * </p>
+     * <p>
+     * If this parameter is omitted, the default behavior of <code>missing</code> is used.
      * </p>
      * 
      * @param treatMissingData
-     *        Sets how this alarm is to handle missing data points. If this parameter is omitted, the default behavior
-     *        of <code>missing</code> is used.
+     *        Sets how this alarm is to handle missing data points. The valid values are <code>breaching</code>,
+     *        <code>notBreaching</code>, <code>ignore</code>, and <code>missing</code>. For more information, see <a
+     *        href=
+     *        "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/AlarmThatSendsEmail.html#alarms-and-missing-data"
+     *        >Configuring how CloudWatch alarms treat missing data</a>.</p>
+     *        <p>
+     *        If this parameter is omitted, the default behavior of <code>missing</code> is used.
      */
 
     public void setTreatMissingData(String treatMissingData) {
@@ -1457,12 +1472,22 @@ public class MetricAlarm implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Sets how this alarm is to handle missing data points. If this parameter is omitted, the default behavior of
-     * <code>missing</code> is used.
+     * Sets how this alarm is to handle missing data points. The valid values are <code>breaching</code>,
+     * <code>notBreaching</code>, <code>ignore</code>, and <code>missing</code>. For more information, see <a href=
+     * "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/AlarmThatSendsEmail.html#alarms-and-missing-data"
+     * >Configuring how CloudWatch alarms treat missing data</a>.
+     * </p>
+     * <p>
+     * If this parameter is omitted, the default behavior of <code>missing</code> is used.
      * </p>
      * 
-     * @return Sets how this alarm is to handle missing data points. If this parameter is omitted, the default behavior
-     *         of <code>missing</code> is used.
+     * @return Sets how this alarm is to handle missing data points. The valid values are <code>breaching</code>,
+     *         <code>notBreaching</code>, <code>ignore</code>, and <code>missing</code>. For more information, see <a
+     *         href=
+     *         "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/AlarmThatSendsEmail.html#alarms-and-missing-data"
+     *         >Configuring how CloudWatch alarms treat missing data</a>.</p>
+     *         <p>
+     *         If this parameter is omitted, the default behavior of <code>missing</code> is used.
      */
 
     public String getTreatMissingData() {
@@ -1471,13 +1496,23 @@ public class MetricAlarm implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Sets how this alarm is to handle missing data points. If this parameter is omitted, the default behavior of
-     * <code>missing</code> is used.
+     * Sets how this alarm is to handle missing data points. The valid values are <code>breaching</code>,
+     * <code>notBreaching</code>, <code>ignore</code>, and <code>missing</code>. For more information, see <a href=
+     * "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/AlarmThatSendsEmail.html#alarms-and-missing-data"
+     * >Configuring how CloudWatch alarms treat missing data</a>.
+     * </p>
+     * <p>
+     * If this parameter is omitted, the default behavior of <code>missing</code> is used.
      * </p>
      * 
      * @param treatMissingData
-     *        Sets how this alarm is to handle missing data points. If this parameter is omitted, the default behavior
-     *        of <code>missing</code> is used.
+     *        Sets how this alarm is to handle missing data points. The valid values are <code>breaching</code>,
+     *        <code>notBreaching</code>, <code>ignore</code>, and <code>missing</code>. For more information, see <a
+     *        href=
+     *        "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/AlarmThatSendsEmail.html#alarms-and-missing-data"
+     *        >Configuring how CloudWatch alarms treat missing data</a>.</p>
+     *        <p>
+     *        If this parameter is omitted, the default behavior of <code>missing</code> is used.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

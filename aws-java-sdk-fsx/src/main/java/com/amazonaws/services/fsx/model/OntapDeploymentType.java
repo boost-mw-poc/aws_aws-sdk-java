@@ -20,7 +20,8 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public enum OntapDeploymentType {
 
-    MULTI_AZ_1("MULTI_AZ_1");
+    MULTI_AZ_1("MULTI_AZ_1"),
+    SINGLE_AZ_1("SINGLE_AZ_1");
 
     private String value;
 

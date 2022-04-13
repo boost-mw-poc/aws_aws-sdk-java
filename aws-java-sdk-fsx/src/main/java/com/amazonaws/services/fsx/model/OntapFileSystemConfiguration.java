@@ -33,13 +33,31 @@ public class OntapFileSystemConfiguration implements Serializable, Cloneable, St
     private String dailyAutomaticBackupStartTime;
     /**
      * <p>
-     * The ONTAP file system deployment type.
+     * Specifies the FSx for ONTAP file system deployment type in use in the file system.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>MULTI_AZ_1</code> - (Default) A high availability file system configured for Multi-AZ redundancy to
+     * tolerate temporary Availability Zone (AZ) unavailability.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>SINGLE_AZ_1</code> - A file system configured for Single-AZ redundancy.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For information about the use cases for Multi-AZ and Single-AZ deployments, refer to <a
+     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/high-availability-multiAZ.html">Choosing Multi-AZ or
+     * Single-AZ file system deployment</a>.
      * </p>
      */
     private String deploymentType;
     /**
      * <p>
-     * The IP address range in which the endpoints to access your file system are created.
+     * (Multi-AZ only) The IP address range in which the endpoints to access your file system are created.
      * </p>
      * <important>
      * <p>
@@ -68,7 +86,7 @@ public class OntapFileSystemConfiguration implements Serializable, Cloneable, St
     private String preferredSubnetId;
     /**
      * <p>
-     * The VPC route tables in which your file system's endpoints are created.
+     * (Multi-AZ only) The VPC route tables in which your file system's endpoints are created.
      * </p>
      */
     private java.util.List<String> routeTableIds;
@@ -131,11 +149,46 @@ public class OntapFileSystemConfiguration implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * The ONTAP file system deployment type.
+     * Specifies the FSx for ONTAP file system deployment type in use in the file system.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>MULTI_AZ_1</code> - (Default) A high availability file system configured for Multi-AZ redundancy to
+     * tolerate temporary Availability Zone (AZ) unavailability.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>SINGLE_AZ_1</code> - A file system configured for Single-AZ redundancy.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For information about the use cases for Multi-AZ and Single-AZ deployments, refer to <a
+     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/high-availability-multiAZ.html">Choosing Multi-AZ or
+     * Single-AZ file system deployment</a>.
      * </p>
      * 
      * @param deploymentType
-     *        The ONTAP file system deployment type.
+     *        Specifies the FSx for ONTAP file system deployment type in use in the file system. </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>MULTI_AZ_1</code> - (Default) A high availability file system configured for Multi-AZ redundancy to
+     *        tolerate temporary Availability Zone (AZ) unavailability.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>SINGLE_AZ_1</code> - A file system configured for Single-AZ redundancy.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        For information about the use cases for Multi-AZ and Single-AZ deployments, refer to <a
+     *        href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/high-availability-multiAZ.html">Choosing Multi-AZ
+     *        or Single-AZ file system deployment</a>.
      * @see OntapDeploymentType
      */
 
@@ -145,10 +198,45 @@ public class OntapFileSystemConfiguration implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * The ONTAP file system deployment type.
+     * Specifies the FSx for ONTAP file system deployment type in use in the file system.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>MULTI_AZ_1</code> - (Default) A high availability file system configured for Multi-AZ redundancy to
+     * tolerate temporary Availability Zone (AZ) unavailability.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>SINGLE_AZ_1</code> - A file system configured for Single-AZ redundancy.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For information about the use cases for Multi-AZ and Single-AZ deployments, refer to <a
+     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/high-availability-multiAZ.html">Choosing Multi-AZ or
+     * Single-AZ file system deployment</a>.
      * </p>
      * 
-     * @return The ONTAP file system deployment type.
+     * @return Specifies the FSx for ONTAP file system deployment type in use in the file system. </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>MULTI_AZ_1</code> - (Default) A high availability file system configured for Multi-AZ redundancy to
+     *         tolerate temporary Availability Zone (AZ) unavailability.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>SINGLE_AZ_1</code> - A file system configured for Single-AZ redundancy.
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         For information about the use cases for Multi-AZ and Single-AZ deployments, refer to <a
+     *         href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/high-availability-multiAZ.html">Choosing Multi-AZ
+     *         or Single-AZ file system deployment</a>.
      * @see OntapDeploymentType
      */
 
@@ -158,11 +246,46 @@ public class OntapFileSystemConfiguration implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * The ONTAP file system deployment type.
+     * Specifies the FSx for ONTAP file system deployment type in use in the file system.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>MULTI_AZ_1</code> - (Default) A high availability file system configured for Multi-AZ redundancy to
+     * tolerate temporary Availability Zone (AZ) unavailability.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>SINGLE_AZ_1</code> - A file system configured for Single-AZ redundancy.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For information about the use cases for Multi-AZ and Single-AZ deployments, refer to <a
+     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/high-availability-multiAZ.html">Choosing Multi-AZ or
+     * Single-AZ file system deployment</a>.
      * </p>
      * 
      * @param deploymentType
-     *        The ONTAP file system deployment type.
+     *        Specifies the FSx for ONTAP file system deployment type in use in the file system. </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>MULTI_AZ_1</code> - (Default) A high availability file system configured for Multi-AZ redundancy to
+     *        tolerate temporary Availability Zone (AZ) unavailability.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>SINGLE_AZ_1</code> - A file system configured for Single-AZ redundancy.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        For information about the use cases for Multi-AZ and Single-AZ deployments, refer to <a
+     *        href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/high-availability-multiAZ.html">Choosing Multi-AZ
+     *        or Single-AZ file system deployment</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see OntapDeploymentType
      */
@@ -174,11 +297,46 @@ public class OntapFileSystemConfiguration implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * The ONTAP file system deployment type.
+     * Specifies the FSx for ONTAP file system deployment type in use in the file system.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>MULTI_AZ_1</code> - (Default) A high availability file system configured for Multi-AZ redundancy to
+     * tolerate temporary Availability Zone (AZ) unavailability.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>SINGLE_AZ_1</code> - A file system configured for Single-AZ redundancy.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For information about the use cases for Multi-AZ and Single-AZ deployments, refer to <a
+     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/high-availability-multiAZ.html">Choosing Multi-AZ or
+     * Single-AZ file system deployment</a>.
      * </p>
      * 
      * @param deploymentType
-     *        The ONTAP file system deployment type.
+     *        Specifies the FSx for ONTAP file system deployment type in use in the file system. </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>MULTI_AZ_1</code> - (Default) A high availability file system configured for Multi-AZ redundancy to
+     *        tolerate temporary Availability Zone (AZ) unavailability.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>SINGLE_AZ_1</code> - A file system configured for Single-AZ redundancy.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        For information about the use cases for Multi-AZ and Single-AZ deployments, refer to <a
+     *        href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/high-availability-multiAZ.html">Choosing Multi-AZ
+     *        or Single-AZ file system deployment</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see OntapDeploymentType
      */
@@ -190,7 +348,7 @@ public class OntapFileSystemConfiguration implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * The IP address range in which the endpoints to access your file system are created.
+     * (Multi-AZ only) The IP address range in which the endpoints to access your file system are created.
      * </p>
      * <important>
      * <p>
@@ -201,7 +359,8 @@ public class OntapFileSystemConfiguration implements Serializable, Cloneable, St
      * </important>
      * 
      * @param endpointIpAddressRange
-     *        The IP address range in which the endpoints to access your file system are created.</p> <important>
+     *        (Multi-AZ only) The IP address range in which the endpoints to access your file system are created.</p>
+     *        <important>
      *        <p>
      *        The Endpoint IP address range you select for your file system must exist outside the VPC's CIDR range and
      *        must be at least /30 or larger. If you do not specify this optional parameter, Amazon FSx will
@@ -215,7 +374,7 @@ public class OntapFileSystemConfiguration implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * The IP address range in which the endpoints to access your file system are created.
+     * (Multi-AZ only) The IP address range in which the endpoints to access your file system are created.
      * </p>
      * <important>
      * <p>
@@ -225,7 +384,8 @@ public class OntapFileSystemConfiguration implements Serializable, Cloneable, St
      * </p>
      * </important>
      * 
-     * @return The IP address range in which the endpoints to access your file system are created.</p> <important>
+     * @return (Multi-AZ only) The IP address range in which the endpoints to access your file system are created.</p>
+     *         <important>
      *         <p>
      *         The Endpoint IP address range you select for your file system must exist outside the VPC's CIDR range and
      *         must be at least /30 or larger. If you do not specify this optional parameter, Amazon FSx will
@@ -239,7 +399,7 @@ public class OntapFileSystemConfiguration implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * The IP address range in which the endpoints to access your file system are created.
+     * (Multi-AZ only) The IP address range in which the endpoints to access your file system are created.
      * </p>
      * <important>
      * <p>
@@ -250,7 +410,8 @@ public class OntapFileSystemConfiguration implements Serializable, Cloneable, St
      * </important>
      * 
      * @param endpointIpAddressRange
-     *        The IP address range in which the endpoints to access your file system are created.</p> <important>
+     *        (Multi-AZ only) The IP address range in which the endpoints to access your file system are created.</p>
+     *        <important>
      *        <p>
      *        The Endpoint IP address range you select for your file system must exist outside the VPC's CIDR range and
      *        must be at least /30 or larger. If you do not specify this optional parameter, Amazon FSx will
@@ -384,10 +545,10 @@ public class OntapFileSystemConfiguration implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * The VPC route tables in which your file system's endpoints are created.
+     * (Multi-AZ only) The VPC route tables in which your file system's endpoints are created.
      * </p>
      * 
-     * @return The VPC route tables in which your file system's endpoints are created.
+     * @return (Multi-AZ only) The VPC route tables in which your file system's endpoints are created.
      */
 
     public java.util.List<String> getRouteTableIds() {
@@ -396,11 +557,11 @@ public class OntapFileSystemConfiguration implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * The VPC route tables in which your file system's endpoints are created.
+     * (Multi-AZ only) The VPC route tables in which your file system's endpoints are created.
      * </p>
      * 
      * @param routeTableIds
-     *        The VPC route tables in which your file system's endpoints are created.
+     *        (Multi-AZ only) The VPC route tables in which your file system's endpoints are created.
      */
 
     public void setRouteTableIds(java.util.Collection<String> routeTableIds) {
@@ -414,7 +575,7 @@ public class OntapFileSystemConfiguration implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * The VPC route tables in which your file system's endpoints are created.
+     * (Multi-AZ only) The VPC route tables in which your file system's endpoints are created.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -423,7 +584,7 @@ public class OntapFileSystemConfiguration implements Serializable, Cloneable, St
      * </p>
      * 
      * @param routeTableIds
-     *        The VPC route tables in which your file system's endpoints are created.
+     *        (Multi-AZ only) The VPC route tables in which your file system's endpoints are created.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -439,11 +600,11 @@ public class OntapFileSystemConfiguration implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * The VPC route tables in which your file system's endpoints are created.
+     * (Multi-AZ only) The VPC route tables in which your file system's endpoints are created.
      * </p>
      * 
      * @param routeTableIds
-     *        The VPC route tables in which your file system's endpoints are created.
+     *        (Multi-AZ only) The VPC route tables in which your file system's endpoints are created.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -17,9 +17,13 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * A dimension is a name/value pair that is part of the identity of a metric. You can assign up to 10 dimensions to a
- * metric. Because dimensions are part of the unique identifier for a metric, whenever you add a unique name/value pair
- * to one of your metrics, you are creating a new variation of that metric.
+ * A dimension is a name/value pair that is part of the identity of a metric. Because dimensions are part of the unique
+ * identifier for a metric, whenever you add a unique name/value pair to one of your metrics, you are creating a new
+ * variation of that metric. For example, many Amazon EC2 metrics publish <code>InstanceId</code> as a dimension name,
+ * and the actual instance ID as the value for that dimension.
+ * </p>
+ * <p>
+ * You can assign up to 10 dimensions to a metric.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/monitoring-2010-08-01/Dimension" target="_top">AWS API
@@ -30,8 +34,8 @@ public class Dimension implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The name of the dimension. Dimension names must contain only ASCII characters and must include at least one
-     * non-whitespace character.
+     * The name of the dimension. Dimension names must contain only ASCII characters, must include at least one
+     * non-whitespace character, and cannot start with a colon (<code>:</code>).
      * </p>
      */
     private String name;
@@ -45,13 +49,13 @@ public class Dimension implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The name of the dimension. Dimension names must contain only ASCII characters and must include at least one
-     * non-whitespace character.
+     * The name of the dimension. Dimension names must contain only ASCII characters, must include at least one
+     * non-whitespace character, and cannot start with a colon (<code>:</code>).
      * </p>
      * 
      * @param name
-     *        The name of the dimension. Dimension names must contain only ASCII characters and must include at least
-     *        one non-whitespace character.
+     *        The name of the dimension. Dimension names must contain only ASCII characters, must include at least one
+     *        non-whitespace character, and cannot start with a colon (<code>:</code>).
      */
 
     public void setName(String name) {
@@ -60,12 +64,12 @@ public class Dimension implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The name of the dimension. Dimension names must contain only ASCII characters and must include at least one
-     * non-whitespace character.
+     * The name of the dimension. Dimension names must contain only ASCII characters, must include at least one
+     * non-whitespace character, and cannot start with a colon (<code>:</code>).
      * </p>
      * 
-     * @return The name of the dimension. Dimension names must contain only ASCII characters and must include at least
-     *         one non-whitespace character.
+     * @return The name of the dimension. Dimension names must contain only ASCII characters, must include at least one
+     *         non-whitespace character, and cannot start with a colon (<code>:</code>).
      */
 
     public String getName() {
@@ -74,13 +78,13 @@ public class Dimension implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The name of the dimension. Dimension names must contain only ASCII characters and must include at least one
-     * non-whitespace character.
+     * The name of the dimension. Dimension names must contain only ASCII characters, must include at least one
+     * non-whitespace character, and cannot start with a colon (<code>:</code>).
      * </p>
      * 
      * @param name
-     *        The name of the dimension. Dimension names must contain only ASCII characters and must include at least
-     *        one non-whitespace character.
+     *        The name of the dimension. Dimension names must contain only ASCII characters, must include at least one
+     *        non-whitespace character, and cannot start with a colon (<code>:</code>).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

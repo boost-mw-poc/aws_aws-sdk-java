@@ -80,8 +80,24 @@ public class GetMetricStreamResult extends com.amazonaws.AmazonWebServiceResult<
      * </p>
      */
     private java.util.Date lastUpdateDate;
-    /** <p/> */
+    /**
+     * <p>
+     * The output format for the stream. Valid values are <code>json</code> and <code>opentelemetry0.7</code>. For more
+     * information about metric stream output formats, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-metric-streams-formats.html">
+     * Metric streams output formats</a>.
+     * </p>
+     */
     private String outputFormat;
+    /**
+     * <p>
+     * Each entry in this array displays information about one or more metrics that include extended statistics in the
+     * metric stream. For more information about extended statistics, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Statistics-definitions.html.html">
+     * CloudWatch statistics definitions</a>.
+     * </p>
+     */
+    private com.amazonaws.internal.SdkInternalList<MetricStreamStatisticsConfiguration> statisticsConfigurations;
 
     /**
      * <p>
@@ -534,9 +550,18 @@ public class GetMetricStreamResult extends com.amazonaws.AmazonWebServiceResult<
     }
 
     /**
-     * <p/>
+     * <p>
+     * The output format for the stream. Valid values are <code>json</code> and <code>opentelemetry0.7</code>. For more
+     * information about metric stream output formats, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-metric-streams-formats.html">
+     * Metric streams output formats</a>.
+     * </p>
      * 
      * @param outputFormat
+     *        The output format for the stream. Valid values are <code>json</code> and <code>opentelemetry0.7</code>.
+     *        For more information about metric stream output formats, see <a href=
+     *        "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-metric-streams-formats.html">
+     *        Metric streams output formats</a>.
      * @see MetricStreamOutputFormat
      */
 
@@ -545,9 +570,17 @@ public class GetMetricStreamResult extends com.amazonaws.AmazonWebServiceResult<
     }
 
     /**
-     * <p/>
+     * <p>
+     * The output format for the stream. Valid values are <code>json</code> and <code>opentelemetry0.7</code>. For more
+     * information about metric stream output formats, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-metric-streams-formats.html">
+     * Metric streams output formats</a>.
+     * </p>
      * 
-     * @return
+     * @return The output format for the stream. Valid values are <code>json</code> and <code>opentelemetry0.7</code>.
+     *         For more information about metric stream output formats, see <a href=
+     *         "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-metric-streams-formats.html">
+     *         Metric streams output formats</a>.
      * @see MetricStreamOutputFormat
      */
 
@@ -556,9 +589,18 @@ public class GetMetricStreamResult extends com.amazonaws.AmazonWebServiceResult<
     }
 
     /**
-     * <p/>
+     * <p>
+     * The output format for the stream. Valid values are <code>json</code> and <code>opentelemetry0.7</code>. For more
+     * information about metric stream output formats, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-metric-streams-formats.html">
+     * Metric streams output formats</a>.
+     * </p>
      * 
      * @param outputFormat
+     *        The output format for the stream. Valid values are <code>json</code> and <code>opentelemetry0.7</code>.
+     *        For more information about metric stream output formats, see <a href=
+     *        "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-metric-streams-formats.html">
+     *        Metric streams output formats</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see MetricStreamOutputFormat
      */
@@ -569,15 +611,121 @@ public class GetMetricStreamResult extends com.amazonaws.AmazonWebServiceResult<
     }
 
     /**
-     * <p/>
+     * <p>
+     * The output format for the stream. Valid values are <code>json</code> and <code>opentelemetry0.7</code>. For more
+     * information about metric stream output formats, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-metric-streams-formats.html">
+     * Metric streams output formats</a>.
+     * </p>
      * 
      * @param outputFormat
+     *        The output format for the stream. Valid values are <code>json</code> and <code>opentelemetry0.7</code>.
+     *        For more information about metric stream output formats, see <a href=
+     *        "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-metric-streams-formats.html">
+     *        Metric streams output formats</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see MetricStreamOutputFormat
      */
 
     public GetMetricStreamResult withOutputFormat(MetricStreamOutputFormat outputFormat) {
         this.outputFormat = outputFormat.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * Each entry in this array displays information about one or more metrics that include extended statistics in the
+     * metric stream. For more information about extended statistics, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Statistics-definitions.html.html">
+     * CloudWatch statistics definitions</a>.
+     * </p>
+     * 
+     * @return Each entry in this array displays information about one or more metrics that include extended statistics
+     *         in the metric stream. For more information about extended statistics, see <a
+     *         href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Statistics-definitions.html.html">
+     *         CloudWatch statistics definitions</a>.
+     */
+
+    public java.util.List<MetricStreamStatisticsConfiguration> getStatisticsConfigurations() {
+        if (statisticsConfigurations == null) {
+            statisticsConfigurations = new com.amazonaws.internal.SdkInternalList<MetricStreamStatisticsConfiguration>();
+        }
+        return statisticsConfigurations;
+    }
+
+    /**
+     * <p>
+     * Each entry in this array displays information about one or more metrics that include extended statistics in the
+     * metric stream. For more information about extended statistics, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Statistics-definitions.html.html">
+     * CloudWatch statistics definitions</a>.
+     * </p>
+     * 
+     * @param statisticsConfigurations
+     *        Each entry in this array displays information about one or more metrics that include extended statistics
+     *        in the metric stream. For more information about extended statistics, see <a
+     *        href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Statistics-definitions.html.html">
+     *        CloudWatch statistics definitions</a>.
+     */
+
+    public void setStatisticsConfigurations(java.util.Collection<MetricStreamStatisticsConfiguration> statisticsConfigurations) {
+        if (statisticsConfigurations == null) {
+            this.statisticsConfigurations = null;
+            return;
+        }
+
+        this.statisticsConfigurations = new com.amazonaws.internal.SdkInternalList<MetricStreamStatisticsConfiguration>(statisticsConfigurations);
+    }
+
+    /**
+     * <p>
+     * Each entry in this array displays information about one or more metrics that include extended statistics in the
+     * metric stream. For more information about extended statistics, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Statistics-definitions.html.html">
+     * CloudWatch statistics definitions</a>.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setStatisticsConfigurations(java.util.Collection)} or
+     * {@link #withStatisticsConfigurations(java.util.Collection)} if you want to override the existing values.
+     * </p>
+     * 
+     * @param statisticsConfigurations
+     *        Each entry in this array displays information about one or more metrics that include extended statistics
+     *        in the metric stream. For more information about extended statistics, see <a
+     *        href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Statistics-definitions.html.html">
+     *        CloudWatch statistics definitions</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetMetricStreamResult withStatisticsConfigurations(MetricStreamStatisticsConfiguration... statisticsConfigurations) {
+        if (this.statisticsConfigurations == null) {
+            setStatisticsConfigurations(new com.amazonaws.internal.SdkInternalList<MetricStreamStatisticsConfiguration>(statisticsConfigurations.length));
+        }
+        for (MetricStreamStatisticsConfiguration ele : statisticsConfigurations) {
+            this.statisticsConfigurations.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * Each entry in this array displays information about one or more metrics that include extended statistics in the
+     * metric stream. For more information about extended statistics, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Statistics-definitions.html.html">
+     * CloudWatch statistics definitions</a>.
+     * </p>
+     * 
+     * @param statisticsConfigurations
+     *        Each entry in this array displays information about one or more metrics that include extended statistics
+     *        in the metric stream. For more information about extended statistics, see <a
+     *        href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Statistics-definitions.html.html">
+     *        CloudWatch statistics definitions</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetMetricStreamResult withStatisticsConfigurations(java.util.Collection<MetricStreamStatisticsConfiguration> statisticsConfigurations) {
+        setStatisticsConfigurations(statisticsConfigurations);
         return this;
     }
 
@@ -612,7 +760,9 @@ public class GetMetricStreamResult extends com.amazonaws.AmazonWebServiceResult<
         if (getLastUpdateDate() != null)
             sb.append("LastUpdateDate: ").append(getLastUpdateDate()).append(",");
         if (getOutputFormat() != null)
-            sb.append("OutputFormat: ").append(getOutputFormat());
+            sb.append("OutputFormat: ").append(getOutputFormat()).append(",");
+        if (getStatisticsConfigurations() != null)
+            sb.append("StatisticsConfigurations: ").append(getStatisticsConfigurations());
         sb.append("}");
         return sb.toString();
     }
@@ -667,6 +817,10 @@ public class GetMetricStreamResult extends com.amazonaws.AmazonWebServiceResult<
             return false;
         if (other.getOutputFormat() != null && other.getOutputFormat().equals(this.getOutputFormat()) == false)
             return false;
+        if (other.getStatisticsConfigurations() == null ^ this.getStatisticsConfigurations() == null)
+            return false;
+        if (other.getStatisticsConfigurations() != null && other.getStatisticsConfigurations().equals(this.getStatisticsConfigurations()) == false)
+            return false;
         return true;
     }
 
@@ -685,6 +839,7 @@ public class GetMetricStreamResult extends com.amazonaws.AmazonWebServiceResult<
         hashCode = prime * hashCode + ((getCreationDate() == null) ? 0 : getCreationDate().hashCode());
         hashCode = prime * hashCode + ((getLastUpdateDate() == null) ? 0 : getLastUpdateDate().hashCode());
         hashCode = prime * hashCode + ((getOutputFormat() == null) ? 0 : getOutputFormat().hashCode());
+        hashCode = prime * hashCode + ((getStatisticsConfigurations() == null) ? 0 : getStatisticsConfigurations().hashCode());
         return hashCode;
     }
 

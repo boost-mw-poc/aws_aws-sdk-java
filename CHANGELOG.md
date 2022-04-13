@@ -1,3 +1,12 @@
+# __1.12.199__ __2022-04-13__
+## __Amazon CloudWatch__
+  - ### Features
+    - Adds support for additional statistics in CloudWatch Metric Streams.
+
+## __Amazon FSx__
+  - ### Features
+    - This release adds support for deploying FSx for ONTAP file systems in a single Availability Zone.
+
 # __1.12.198__ __2022-04-12__
 ## __AWS IoT TwinMaker__
   - ### Features

@@ -34,14 +34,31 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
     /**
      * <p>
      * Specifies the FSx for ONTAP file system deployment type to use in creating the file system.
-     * <code>MULTI_AZ_1</code> is the supported ONTAP deployment type.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>MULTI_AZ_1</code> - (Default) A high availability file system configured for Multi-AZ redundancy to
+     * tolerate temporary Availability Zone (AZ) unavailability.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>SINGLE_AZ_1</code> - A file system configured for Single-AZ redundancy.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For information about the use cases for Multi-AZ and Single-AZ deployments, refer to <a
+     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/high-availability-multiAZ.html">Choosing Multi-AZ or
+     * Single-AZ file system deployment</a>.
      * </p>
      */
     private String deploymentType;
     /**
      * <p>
-     * Specifies the IP address range in which the endpoints to access your file system will be created. By default,
-     * Amazon FSx selects an unused IP address range for you from the 198.19.* range.
+     * (Multi-AZ only) Specifies the IP address range in which the endpoints to access your file system will be created.
+     * By default, Amazon FSx selects an unused IP address range for you from the 198.19.* range.
      * </p>
      * <important>
      * <p>
@@ -73,9 +90,9 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
     private String preferredSubnetId;
     /**
      * <p>
-     * Specifies the virtual private cloud (VPC) route tables in which your file system's endpoints will be created. You
-     * should specify all VPC route tables associated with the subnets in which your clients are located. By default,
-     * Amazon FSx selects your VPC's default route table.
+     * (Multi-AZ only) Specifies the virtual private cloud (VPC) route tables in which your file system's endpoints will
+     * be created. You should specify all VPC route tables associated with the subnets in which your clients are
+     * located. By default, Amazon FSx selects your VPC's default route table.
      * </p>
      */
     private java.util.List<String> routeTableIds;
@@ -144,12 +161,45 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
     /**
      * <p>
      * Specifies the FSx for ONTAP file system deployment type to use in creating the file system.
-     * <code>MULTI_AZ_1</code> is the supported ONTAP deployment type.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>MULTI_AZ_1</code> - (Default) A high availability file system configured for Multi-AZ redundancy to
+     * tolerate temporary Availability Zone (AZ) unavailability.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>SINGLE_AZ_1</code> - A file system configured for Single-AZ redundancy.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For information about the use cases for Multi-AZ and Single-AZ deployments, refer to <a
+     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/high-availability-multiAZ.html">Choosing Multi-AZ or
+     * Single-AZ file system deployment</a>.
      * </p>
      * 
      * @param deploymentType
-     *        Specifies the FSx for ONTAP file system deployment type to use in creating the file system.
-     *        <code>MULTI_AZ_1</code> is the supported ONTAP deployment type.
+     *        Specifies the FSx for ONTAP file system deployment type to use in creating the file system. </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>MULTI_AZ_1</code> - (Default) A high availability file system configured for Multi-AZ redundancy to
+     *        tolerate temporary Availability Zone (AZ) unavailability.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>SINGLE_AZ_1</code> - A file system configured for Single-AZ redundancy.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        For information about the use cases for Multi-AZ and Single-AZ deployments, refer to <a
+     *        href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/high-availability-multiAZ.html">Choosing Multi-AZ
+     *        or Single-AZ file system deployment</a>.
      * @see OntapDeploymentType
      */
 
@@ -160,11 +210,44 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
     /**
      * <p>
      * Specifies the FSx for ONTAP file system deployment type to use in creating the file system.
-     * <code>MULTI_AZ_1</code> is the supported ONTAP deployment type.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>MULTI_AZ_1</code> - (Default) A high availability file system configured for Multi-AZ redundancy to
+     * tolerate temporary Availability Zone (AZ) unavailability.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>SINGLE_AZ_1</code> - A file system configured for Single-AZ redundancy.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For information about the use cases for Multi-AZ and Single-AZ deployments, refer to <a
+     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/high-availability-multiAZ.html">Choosing Multi-AZ or
+     * Single-AZ file system deployment</a>.
      * </p>
      * 
-     * @return Specifies the FSx for ONTAP file system deployment type to use in creating the file system.
-     *         <code>MULTI_AZ_1</code> is the supported ONTAP deployment type.
+     * @return Specifies the FSx for ONTAP file system deployment type to use in creating the file system. </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>MULTI_AZ_1</code> - (Default) A high availability file system configured for Multi-AZ redundancy to
+     *         tolerate temporary Availability Zone (AZ) unavailability.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>SINGLE_AZ_1</code> - A file system configured for Single-AZ redundancy.
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         For information about the use cases for Multi-AZ and Single-AZ deployments, refer to <a
+     *         href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/high-availability-multiAZ.html">Choosing Multi-AZ
+     *         or Single-AZ file system deployment</a>.
      * @see OntapDeploymentType
      */
 
@@ -175,12 +258,45 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
     /**
      * <p>
      * Specifies the FSx for ONTAP file system deployment type to use in creating the file system.
-     * <code>MULTI_AZ_1</code> is the supported ONTAP deployment type.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>MULTI_AZ_1</code> - (Default) A high availability file system configured for Multi-AZ redundancy to
+     * tolerate temporary Availability Zone (AZ) unavailability.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>SINGLE_AZ_1</code> - A file system configured for Single-AZ redundancy.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For information about the use cases for Multi-AZ and Single-AZ deployments, refer to <a
+     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/high-availability-multiAZ.html">Choosing Multi-AZ or
+     * Single-AZ file system deployment</a>.
      * </p>
      * 
      * @param deploymentType
-     *        Specifies the FSx for ONTAP file system deployment type to use in creating the file system.
-     *        <code>MULTI_AZ_1</code> is the supported ONTAP deployment type.
+     *        Specifies the FSx for ONTAP file system deployment type to use in creating the file system. </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>MULTI_AZ_1</code> - (Default) A high availability file system configured for Multi-AZ redundancy to
+     *        tolerate temporary Availability Zone (AZ) unavailability.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>SINGLE_AZ_1</code> - A file system configured for Single-AZ redundancy.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        For information about the use cases for Multi-AZ and Single-AZ deployments, refer to <a
+     *        href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/high-availability-multiAZ.html">Choosing Multi-AZ
+     *        or Single-AZ file system deployment</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see OntapDeploymentType
      */
@@ -193,12 +309,45 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
     /**
      * <p>
      * Specifies the FSx for ONTAP file system deployment type to use in creating the file system.
-     * <code>MULTI_AZ_1</code> is the supported ONTAP deployment type.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>MULTI_AZ_1</code> - (Default) A high availability file system configured for Multi-AZ redundancy to
+     * tolerate temporary Availability Zone (AZ) unavailability.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>SINGLE_AZ_1</code> - A file system configured for Single-AZ redundancy.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For information about the use cases for Multi-AZ and Single-AZ deployments, refer to <a
+     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/high-availability-multiAZ.html">Choosing Multi-AZ or
+     * Single-AZ file system deployment</a>.
      * </p>
      * 
      * @param deploymentType
-     *        Specifies the FSx for ONTAP file system deployment type to use in creating the file system.
-     *        <code>MULTI_AZ_1</code> is the supported ONTAP deployment type.
+     *        Specifies the FSx for ONTAP file system deployment type to use in creating the file system. </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>MULTI_AZ_1</code> - (Default) A high availability file system configured for Multi-AZ redundancy to
+     *        tolerate temporary Availability Zone (AZ) unavailability.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>SINGLE_AZ_1</code> - A file system configured for Single-AZ redundancy.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        For information about the use cases for Multi-AZ and Single-AZ deployments, refer to <a
+     *        href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/high-availability-multiAZ.html">Choosing Multi-AZ
+     *        or Single-AZ file system deployment</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see OntapDeploymentType
      */
@@ -210,8 +359,8 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
 
     /**
      * <p>
-     * Specifies the IP address range in which the endpoints to access your file system will be created. By default,
-     * Amazon FSx selects an unused IP address range for you from the 198.19.* range.
+     * (Multi-AZ only) Specifies the IP address range in which the endpoints to access your file system will be created.
+     * By default, Amazon FSx selects an unused IP address range for you from the 198.19.* range.
      * </p>
      * <important>
      * <p>
@@ -221,8 +370,9 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
      * </important>
      * 
      * @param endpointIpAddressRange
-     *        Specifies the IP address range in which the endpoints to access your file system will be created. By
-     *        default, Amazon FSx selects an unused IP address range for you from the 198.19.* range.</p> <important>
+     *        (Multi-AZ only) Specifies the IP address range in which the endpoints to access your file system will be
+     *        created. By default, Amazon FSx selects an unused IP address range for you from the 198.19.* range.</p>
+     *        <important>
      *        <p>
      *        The Endpoint IP address range you select for your file system must exist outside the VPC's CIDR range and
      *        must be at least /30 or larger.
@@ -235,8 +385,8 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
 
     /**
      * <p>
-     * Specifies the IP address range in which the endpoints to access your file system will be created. By default,
-     * Amazon FSx selects an unused IP address range for you from the 198.19.* range.
+     * (Multi-AZ only) Specifies the IP address range in which the endpoints to access your file system will be created.
+     * By default, Amazon FSx selects an unused IP address range for you from the 198.19.* range.
      * </p>
      * <important>
      * <p>
@@ -245,8 +395,9 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
      * </p>
      * </important>
      * 
-     * @return Specifies the IP address range in which the endpoints to access your file system will be created. By
-     *         default, Amazon FSx selects an unused IP address range for you from the 198.19.* range.</p> <important>
+     * @return (Multi-AZ only) Specifies the IP address range in which the endpoints to access your file system will be
+     *         created. By default, Amazon FSx selects an unused IP address range for you from the 198.19.* range.</p>
+     *         <important>
      *         <p>
      *         The Endpoint IP address range you select for your file system must exist outside the VPC's CIDR range and
      *         must be at least /30 or larger.
@@ -259,8 +410,8 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
 
     /**
      * <p>
-     * Specifies the IP address range in which the endpoints to access your file system will be created. By default,
-     * Amazon FSx selects an unused IP address range for you from the 198.19.* range.
+     * (Multi-AZ only) Specifies the IP address range in which the endpoints to access your file system will be created.
+     * By default, Amazon FSx selects an unused IP address range for you from the 198.19.* range.
      * </p>
      * <important>
      * <p>
@@ -270,8 +421,9 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
      * </important>
      * 
      * @param endpointIpAddressRange
-     *        Specifies the IP address range in which the endpoints to access your file system will be created. By
-     *        default, Amazon FSx selects an unused IP address range for you from the 198.19.* range.</p> <important>
+     *        (Multi-AZ only) Specifies the IP address range in which the endpoints to access your file system will be
+     *        created. By default, Amazon FSx selects an unused IP address range for you from the 198.19.* range.</p>
+     *        <important>
      *        <p>
      *        The Endpoint IP address range you select for your file system must exist outside the VPC's CIDR range and
      *        must be at least /30 or larger.
@@ -418,14 +570,14 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
 
     /**
      * <p>
-     * Specifies the virtual private cloud (VPC) route tables in which your file system's endpoints will be created. You
-     * should specify all VPC route tables associated with the subnets in which your clients are located. By default,
-     * Amazon FSx selects your VPC's default route table.
+     * (Multi-AZ only) Specifies the virtual private cloud (VPC) route tables in which your file system's endpoints will
+     * be created. You should specify all VPC route tables associated with the subnets in which your clients are
+     * located. By default, Amazon FSx selects your VPC's default route table.
      * </p>
      * 
-     * @return Specifies the virtual private cloud (VPC) route tables in which your file system's endpoints will be
-     *         created. You should specify all VPC route tables associated with the subnets in which your clients are
-     *         located. By default, Amazon FSx selects your VPC's default route table.
+     * @return (Multi-AZ only) Specifies the virtual private cloud (VPC) route tables in which your file system's
+     *         endpoints will be created. You should specify all VPC route tables associated with the subnets in which
+     *         your clients are located. By default, Amazon FSx selects your VPC's default route table.
      */
 
     public java.util.List<String> getRouteTableIds() {
@@ -434,15 +586,15 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
 
     /**
      * <p>
-     * Specifies the virtual private cloud (VPC) route tables in which your file system's endpoints will be created. You
-     * should specify all VPC route tables associated with the subnets in which your clients are located. By default,
-     * Amazon FSx selects your VPC's default route table.
+     * (Multi-AZ only) Specifies the virtual private cloud (VPC) route tables in which your file system's endpoints will
+     * be created. You should specify all VPC route tables associated with the subnets in which your clients are
+     * located. By default, Amazon FSx selects your VPC's default route table.
      * </p>
      * 
      * @param routeTableIds
-     *        Specifies the virtual private cloud (VPC) route tables in which your file system's endpoints will be
-     *        created. You should specify all VPC route tables associated with the subnets in which your clients are
-     *        located. By default, Amazon FSx selects your VPC's default route table.
+     *        (Multi-AZ only) Specifies the virtual private cloud (VPC) route tables in which your file system's
+     *        endpoints will be created. You should specify all VPC route tables associated with the subnets in which
+     *        your clients are located. By default, Amazon FSx selects your VPC's default route table.
      */
 
     public void setRouteTableIds(java.util.Collection<String> routeTableIds) {
@@ -456,9 +608,9 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
 
     /**
      * <p>
-     * Specifies the virtual private cloud (VPC) route tables in which your file system's endpoints will be created. You
-     * should specify all VPC route tables associated with the subnets in which your clients are located. By default,
-     * Amazon FSx selects your VPC's default route table.
+     * (Multi-AZ only) Specifies the virtual private cloud (VPC) route tables in which your file system's endpoints will
+     * be created. You should specify all VPC route tables associated with the subnets in which your clients are
+     * located. By default, Amazon FSx selects your VPC's default route table.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -467,9 +619,9 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
      * </p>
      * 
      * @param routeTableIds
-     *        Specifies the virtual private cloud (VPC) route tables in which your file system's endpoints will be
-     *        created. You should specify all VPC route tables associated with the subnets in which your clients are
-     *        located. By default, Amazon FSx selects your VPC's default route table.
+     *        (Multi-AZ only) Specifies the virtual private cloud (VPC) route tables in which your file system's
+     *        endpoints will be created. You should specify all VPC route tables associated with the subnets in which
+     *        your clients are located. By default, Amazon FSx selects your VPC's default route table.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -485,15 +637,15 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
 
     /**
      * <p>
-     * Specifies the virtual private cloud (VPC) route tables in which your file system's endpoints will be created. You
-     * should specify all VPC route tables associated with the subnets in which your clients are located. By default,
-     * Amazon FSx selects your VPC's default route table.
+     * (Multi-AZ only) Specifies the virtual private cloud (VPC) route tables in which your file system's endpoints will
+     * be created. You should specify all VPC route tables associated with the subnets in which your clients are
+     * located. By default, Amazon FSx selects your VPC's default route table.
      * </p>
      * 
      * @param routeTableIds
-     *        Specifies the virtual private cloud (VPC) route tables in which your file system's endpoints will be
-     *        created. You should specify all VPC route tables associated with the subnets in which your clients are
-     *        located. By default, Amazon FSx selects your VPC's default route table.
+     *        (Multi-AZ only) Specifies the virtual private cloud (VPC) route tables in which your file system's
+     *        endpoints will be created. You should specify all VPC route tables associated with the subnets in which
+     *        your clients are located. By default, Amazon FSx selects your VPC's default route table.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

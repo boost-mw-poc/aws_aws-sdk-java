@@ -22,8 +22,8 @@ import javax.annotation.Generated;
  * </p>
  * <p>
  * When used in <code>GetMetricData</code>, it indicates the metric data to return, and whether this call is just
- * retrieving a batch set of data for one metric, or is performing a math expression on metric data. A single
- * <code>GetMetricData</code> call can include up to 500 <code>MetricDataQuery</code> structures.
+ * retrieving a batch set of data for one metric, or is performing a Metrics Insights query or a math expression. A
+ * single <code>GetMetricData</code> call can include up to 500 <code>MetricDataQuery</code> structures.
  * </p>
  * <p>
  * When used in <code>PutMetricAlarm</code>, it enables you to create an alarm based on a metric math expression. Each
@@ -75,10 +75,15 @@ public class MetricDataQuery implements Serializable, Cloneable {
     private MetricStat metricStat;
     /**
      * <p>
-     * The math expression to be performed on the returned data, if this object is performing a math expression. This
-     * expression can use the <code>Id</code> of the other metrics to refer to those metrics, and can also use the
-     * <code>Id</code> of other expressions to use the result of those expressions. For more information about metric
-     * math expressions, see <a
+     * This field can contain either a Metrics Insights query, or a metric math expression to be performed on the
+     * returned data. For more information about Metrics Insights queries, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cloudwatch-metrics-insights-querylanguage"
+     * >Metrics Insights query components and syntax</a> in the <i>Amazon CloudWatch User Guide</i>.
+     * </p>
+     * <p>
+     * A math expression can use the <code>Id</code> of the other metrics or queries to refer to those metrics, and can
+     * also use the <code>Id</code> of other expressions to use the result of those expressions. For more information
+     * about metric math expressions, see <a
      * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/using-metric-math.html#metric-math-syntax"
      * >Metric Math Syntax and Functions</a> in the <i>Amazon CloudWatch User Guide</i>.
      * </p>
@@ -262,10 +267,15 @@ public class MetricDataQuery implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The math expression to be performed on the returned data, if this object is performing a math expression. This
-     * expression can use the <code>Id</code> of the other metrics to refer to those metrics, and can also use the
-     * <code>Id</code> of other expressions to use the result of those expressions. For more information about metric
-     * math expressions, see <a
+     * This field can contain either a Metrics Insights query, or a metric math expression to be performed on the
+     * returned data. For more information about Metrics Insights queries, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cloudwatch-metrics-insights-querylanguage"
+     * >Metrics Insights query components and syntax</a> in the <i>Amazon CloudWatch User Guide</i>.
+     * </p>
+     * <p>
+     * A math expression can use the <code>Id</code> of the other metrics or queries to refer to those metrics, and can
+     * also use the <code>Id</code> of other expressions to use the result of those expressions. For more information
+     * about metric math expressions, see <a
      * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/using-metric-math.html#metric-math-syntax"
      * >Metric Math Syntax and Functions</a> in the <i>Amazon CloudWatch User Guide</i>.
      * </p>
@@ -275,12 +285,17 @@ public class MetricDataQuery implements Serializable, Cloneable {
      * </p>
      * 
      * @param expression
-     *        The math expression to be performed on the returned data, if this object is performing a math expression.
-     *        This expression can use the <code>Id</code> of the other metrics to refer to those metrics, and can also
-     *        use the <code>Id</code> of other expressions to use the result of those expressions. For more information
-     *        about metric math expressions, see <a href=
+     *        This field can contain either a Metrics Insights query, or a metric math expression to be performed on the
+     *        returned data. For more information about Metrics Insights queries, see <a href=
+     *        "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cloudwatch-metrics-insights-querylanguage"
+     *        >Metrics Insights query components and syntax</a> in the <i>Amazon CloudWatch User Guide</i>.</p>
+     *        <p>
+     *        A math expression can use the <code>Id</code> of the other metrics or queries to refer to those metrics,
+     *        and can also use the <code>Id</code> of other expressions to use the result of those expressions. For more
+     *        information about metric math expressions, see <a href=
      *        "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/using-metric-math.html#metric-math-syntax"
-     *        >Metric Math Syntax and Functions</a> in the <i>Amazon CloudWatch User Guide</i>.</p>
+     *        >Metric Math Syntax and Functions</a> in the <i>Amazon CloudWatch User Guide</i>.
+     *        </p>
      *        <p>
      *        Within each MetricDataQuery object, you must specify either <code>Expression</code> or
      *        <code>MetricStat</code> but not both.
@@ -292,10 +307,15 @@ public class MetricDataQuery implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The math expression to be performed on the returned data, if this object is performing a math expression. This
-     * expression can use the <code>Id</code> of the other metrics to refer to those metrics, and can also use the
-     * <code>Id</code> of other expressions to use the result of those expressions. For more information about metric
-     * math expressions, see <a
+     * This field can contain either a Metrics Insights query, or a metric math expression to be performed on the
+     * returned data. For more information about Metrics Insights queries, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cloudwatch-metrics-insights-querylanguage"
+     * >Metrics Insights query components and syntax</a> in the <i>Amazon CloudWatch User Guide</i>.
+     * </p>
+     * <p>
+     * A math expression can use the <code>Id</code> of the other metrics or queries to refer to those metrics, and can
+     * also use the <code>Id</code> of other expressions to use the result of those expressions. For more information
+     * about metric math expressions, see <a
      * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/using-metric-math.html#metric-math-syntax"
      * >Metric Math Syntax and Functions</a> in the <i>Amazon CloudWatch User Guide</i>.
      * </p>
@@ -304,12 +324,17 @@ public class MetricDataQuery implements Serializable, Cloneable {
      * but not both.
      * </p>
      * 
-     * @return The math expression to be performed on the returned data, if this object is performing a math expression.
-     *         This expression can use the <code>Id</code> of the other metrics to refer to those metrics, and can also
-     *         use the <code>Id</code> of other expressions to use the result of those expressions. For more information
-     *         about metric math expressions, see <a href=
+     * @return This field can contain either a Metrics Insights query, or a metric math expression to be performed on
+     *         the returned data. For more information about Metrics Insights queries, see <a href=
+     *         "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cloudwatch-metrics-insights-querylanguage"
+     *         >Metrics Insights query components and syntax</a> in the <i>Amazon CloudWatch User Guide</i>.</p>
+     *         <p>
+     *         A math expression can use the <code>Id</code> of the other metrics or queries to refer to those metrics,
+     *         and can also use the <code>Id</code> of other expressions to use the result of those expressions. For
+     *         more information about metric math expressions, see <a href=
      *         "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/using-metric-math.html#metric-math-syntax"
-     *         >Metric Math Syntax and Functions</a> in the <i>Amazon CloudWatch User Guide</i>.</p>
+     *         >Metric Math Syntax and Functions</a> in the <i>Amazon CloudWatch User Guide</i>.
+     *         </p>
      *         <p>
      *         Within each MetricDataQuery object, you must specify either <code>Expression</code> or
      *         <code>MetricStat</code> but not both.
@@ -321,10 +346,15 @@ public class MetricDataQuery implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The math expression to be performed on the returned data, if this object is performing a math expression. This
-     * expression can use the <code>Id</code> of the other metrics to refer to those metrics, and can also use the
-     * <code>Id</code> of other expressions to use the result of those expressions. For more information about metric
-     * math expressions, see <a
+     * This field can contain either a Metrics Insights query, or a metric math expression to be performed on the
+     * returned data. For more information about Metrics Insights queries, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cloudwatch-metrics-insights-querylanguage"
+     * >Metrics Insights query components and syntax</a> in the <i>Amazon CloudWatch User Guide</i>.
+     * </p>
+     * <p>
+     * A math expression can use the <code>Id</code> of the other metrics or queries to refer to those metrics, and can
+     * also use the <code>Id</code> of other expressions to use the result of those expressions. For more information
+     * about metric math expressions, see <a
      * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/using-metric-math.html#metric-math-syntax"
      * >Metric Math Syntax and Functions</a> in the <i>Amazon CloudWatch User Guide</i>.
      * </p>
@@ -334,12 +364,17 @@ public class MetricDataQuery implements Serializable, Cloneable {
      * </p>
      * 
      * @param expression
-     *        The math expression to be performed on the returned data, if this object is performing a math expression.
-     *        This expression can use the <code>Id</code> of the other metrics to refer to those metrics, and can also
-     *        use the <code>Id</code> of other expressions to use the result of those expressions. For more information
-     *        about metric math expressions, see <a href=
+     *        This field can contain either a Metrics Insights query, or a metric math expression to be performed on the
+     *        returned data. For more information about Metrics Insights queries, see <a href=
+     *        "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cloudwatch-metrics-insights-querylanguage"
+     *        >Metrics Insights query components and syntax</a> in the <i>Amazon CloudWatch User Guide</i>.</p>
+     *        <p>
+     *        A math expression can use the <code>Id</code> of the other metrics or queries to refer to those metrics,
+     *        and can also use the <code>Id</code> of other expressions to use the result of those expressions. For more
+     *        information about metric math expressions, see <a href=
      *        "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/using-metric-math.html#metric-math-syntax"
-     *        >Metric Math Syntax and Functions</a> in the <i>Amazon CloudWatch User Guide</i>.</p>
+     *        >Metric Math Syntax and Functions</a> in the <i>Amazon CloudWatch User Guide</i>.
+     *        </p>
      *        <p>
      *        Within each MetricDataQuery object, you must specify either <code>Expression</code> or
      *        <code>MetricStat</code> but not both.
