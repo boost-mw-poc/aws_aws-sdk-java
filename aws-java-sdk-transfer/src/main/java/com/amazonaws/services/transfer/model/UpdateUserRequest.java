@@ -67,7 +67,7 @@ public class UpdateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * The following is an <code>Entry</code> and <code>Target</code> pair example for <code>chroot</code>.
      * </p>
      * <p>
-     * <code>[ { "Entry:": "/", "Target": "/bucket_name/home/mydirectory" } ]</code>
+     * <code>[ { "Entry": "/", "Target": "/bucket_name/home/mydirectory" } ]</code>
      * </p>
      */
     private java.util.List<HomeDirectoryMapEntry> homeDirectoryMappings;
@@ -300,7 +300,7 @@ public class UpdateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * The following is an <code>Entry</code> and <code>Target</code> pair example for <code>chroot</code>.
      * </p>
      * <p>
-     * <code>[ { "Entry:": "/", "Target": "/bucket_name/home/mydirectory" } ]</code>
+     * <code>[ { "Entry": "/", "Target": "/bucket_name/home/mydirectory" } ]</code>
      * </p>
      * 
      * @return Logical directory mappings that specify what Amazon S3 or Amazon EFS paths and keys should be visible to
@@ -325,7 +325,7 @@ public class UpdateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
      *         The following is an <code>Entry</code> and <code>Target</code> pair example for <code>chroot</code>.
      *         </p>
      *         <p>
-     *         <code>[ { "Entry:": "/", "Target": "/bucket_name/home/mydirectory" } ]</code>
+     *         <code>[ { "Entry": "/", "Target": "/bucket_name/home/mydirectory" } ]</code>
      */
 
     public java.util.List<HomeDirectoryMapEntry> getHomeDirectoryMappings() {
@@ -356,7 +356,7 @@ public class UpdateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * The following is an <code>Entry</code> and <code>Target</code> pair example for <code>chroot</code>.
      * </p>
      * <p>
-     * <code>[ { "Entry:": "/", "Target": "/bucket_name/home/mydirectory" } ]</code>
+     * <code>[ { "Entry": "/", "Target": "/bucket_name/home/mydirectory" } ]</code>
      * </p>
      * 
      * @param homeDirectoryMappings
@@ -382,7 +382,7 @@ public class UpdateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
      *        The following is an <code>Entry</code> and <code>Target</code> pair example for <code>chroot</code>.
      *        </p>
      *        <p>
-     *        <code>[ { "Entry:": "/", "Target": "/bucket_name/home/mydirectory" } ]</code>
+     *        <code>[ { "Entry": "/", "Target": "/bucket_name/home/mydirectory" } ]</code>
      */
 
     public void setHomeDirectoryMappings(java.util.Collection<HomeDirectoryMapEntry> homeDirectoryMappings) {
@@ -418,7 +418,7 @@ public class UpdateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * The following is an <code>Entry</code> and <code>Target</code> pair example for <code>chroot</code>.
      * </p>
      * <p>
-     * <code>[ { "Entry:": "/", "Target": "/bucket_name/home/mydirectory" } ]</code>
+     * <code>[ { "Entry": "/", "Target": "/bucket_name/home/mydirectory" } ]</code>
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -449,7 +449,7 @@ public class UpdateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
      *        The following is an <code>Entry</code> and <code>Target</code> pair example for <code>chroot</code>.
      *        </p>
      *        <p>
-     *        <code>[ { "Entry:": "/", "Target": "/bucket_name/home/mydirectory" } ]</code>
+     *        <code>[ { "Entry": "/", "Target": "/bucket_name/home/mydirectory" } ]</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -487,7 +487,7 @@ public class UpdateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * The following is an <code>Entry</code> and <code>Target</code> pair example for <code>chroot</code>.
      * </p>
      * <p>
-     * <code>[ { "Entry:": "/", "Target": "/bucket_name/home/mydirectory" } ]</code>
+     * <code>[ { "Entry": "/", "Target": "/bucket_name/home/mydirectory" } ]</code>
      * </p>
      * 
      * @param homeDirectoryMappings
@@ -513,7 +513,7 @@ public class UpdateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
      *        The following is an <code>Entry</code> and <code>Target</code> pair example for <code>chroot</code>.
      *        </p>
      *        <p>
-     *        <code>[ { "Entry:": "/", "Target": "/bucket_name/home/mydirectory" } ]</code>
+     *        <code>[ { "Entry": "/", "Target": "/bucket_name/home/mydirectory" } ]</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

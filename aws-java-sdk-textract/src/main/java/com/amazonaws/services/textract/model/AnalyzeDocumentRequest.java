@@ -28,7 +28,7 @@ public class AnalyzeDocumentRequest extends com.amazonaws.AmazonWebServiceReques
     /**
      * <p>
      * The input document as base64-encoded bytes or an Amazon S3 object. If you use the AWS CLI to call Amazon Textract
-     * operations, you can't pass image bytes. The document must be an image in JPEG or PNG format.
+     * operations, you can't pass image bytes. The document must be an image in JPEG, PNG, PDF, or TIFF format.
      * </p>
      * <p>
      * If you're using an AWS SDK to call Amazon Textract, you might not need to base64-encode image bytes that are
@@ -51,11 +51,17 @@ public class AnalyzeDocumentRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      */
     private HumanLoopConfig humanLoopConfig;
+    /**
+     * <p>
+     * Contains Queries and the alias for those Queries, as determined by the input.
+     * </p>
+     */
+    private QueriesConfig queriesConfig;
 
     /**
      * <p>
      * The input document as base64-encoded bytes or an Amazon S3 object. If you use the AWS CLI to call Amazon Textract
-     * operations, you can't pass image bytes. The document must be an image in JPEG or PNG format.
+     * operations, you can't pass image bytes. The document must be an image in JPEG, PNG, PDF, or TIFF format.
      * </p>
      * <p>
      * If you're using an AWS SDK to call Amazon Textract, you might not need to base64-encode image bytes that are
@@ -64,7 +70,8 @@ public class AnalyzeDocumentRequest extends com.amazonaws.AmazonWebServiceReques
      * 
      * @param document
      *        The input document as base64-encoded bytes or an Amazon S3 object. If you use the AWS CLI to call Amazon
-     *        Textract operations, you can't pass image bytes. The document must be an image in JPEG or PNG format.</p>
+     *        Textract operations, you can't pass image bytes. The document must be an image in JPEG, PNG, PDF, or TIFF
+     *        format.</p>
      *        <p>
      *        If you're using an AWS SDK to call Amazon Textract, you might not need to base64-encode image bytes that
      *        are passed using the <code>Bytes</code> field.
@@ -77,7 +84,7 @@ public class AnalyzeDocumentRequest extends com.amazonaws.AmazonWebServiceReques
     /**
      * <p>
      * The input document as base64-encoded bytes or an Amazon S3 object. If you use the AWS CLI to call Amazon Textract
-     * operations, you can't pass image bytes. The document must be an image in JPEG or PNG format.
+     * operations, you can't pass image bytes. The document must be an image in JPEG, PNG, PDF, or TIFF format.
      * </p>
      * <p>
      * If you're using an AWS SDK to call Amazon Textract, you might not need to base64-encode image bytes that are
@@ -85,7 +92,8 @@ public class AnalyzeDocumentRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * 
      * @return The input document as base64-encoded bytes or an Amazon S3 object. If you use the AWS CLI to call Amazon
-     *         Textract operations, you can't pass image bytes. The document must be an image in JPEG or PNG format.</p>
+     *         Textract operations, you can't pass image bytes. The document must be an image in JPEG, PNG, PDF, or TIFF
+     *         format.</p>
      *         <p>
      *         If you're using an AWS SDK to call Amazon Textract, you might not need to base64-encode image bytes that
      *         are passed using the <code>Bytes</code> field.
@@ -98,7 +106,7 @@ public class AnalyzeDocumentRequest extends com.amazonaws.AmazonWebServiceReques
     /**
      * <p>
      * The input document as base64-encoded bytes or an Amazon S3 object. If you use the AWS CLI to call Amazon Textract
-     * operations, you can't pass image bytes. The document must be an image in JPEG or PNG format.
+     * operations, you can't pass image bytes. The document must be an image in JPEG, PNG, PDF, or TIFF format.
      * </p>
      * <p>
      * If you're using an AWS SDK to call Amazon Textract, you might not need to base64-encode image bytes that are
@@ -107,7 +115,8 @@ public class AnalyzeDocumentRequest extends com.amazonaws.AmazonWebServiceReques
      * 
      * @param document
      *        The input document as base64-encoded bytes or an Amazon S3 object. If you use the AWS CLI to call Amazon
-     *        Textract operations, you can't pass image bytes. The document must be an image in JPEG or PNG format.</p>
+     *        Textract operations, you can't pass image bytes. The document must be an image in JPEG, PNG, PDF, or TIFF
+     *        format.</p>
      *        <p>
      *        If you're using an AWS SDK to call Amazon Textract, you might not need to base64-encode image bytes that
      *        are passed using the <code>Bytes</code> field.
@@ -293,6 +302,46 @@ public class AnalyzeDocumentRequest extends com.amazonaws.AmazonWebServiceReques
     }
 
     /**
+     * <p>
+     * Contains Queries and the alias for those Queries, as determined by the input.
+     * </p>
+     * 
+     * @param queriesConfig
+     *        Contains Queries and the alias for those Queries, as determined by the input.
+     */
+
+    public void setQueriesConfig(QueriesConfig queriesConfig) {
+        this.queriesConfig = queriesConfig;
+    }
+
+    /**
+     * <p>
+     * Contains Queries and the alias for those Queries, as determined by the input.
+     * </p>
+     * 
+     * @return Contains Queries and the alias for those Queries, as determined by the input.
+     */
+
+    public QueriesConfig getQueriesConfig() {
+        return this.queriesConfig;
+    }
+
+    /**
+     * <p>
+     * Contains Queries and the alias for those Queries, as determined by the input.
+     * </p>
+     * 
+     * @param queriesConfig
+     *        Contains Queries and the alias for those Queries, as determined by the input.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AnalyzeDocumentRequest withQueriesConfig(QueriesConfig queriesConfig) {
+        setQueriesConfig(queriesConfig);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -309,7 +358,9 @@ public class AnalyzeDocumentRequest extends com.amazonaws.AmazonWebServiceReques
         if (getFeatureTypes() != null)
             sb.append("FeatureTypes: ").append(getFeatureTypes()).append(",");
         if (getHumanLoopConfig() != null)
-            sb.append("HumanLoopConfig: ").append(getHumanLoopConfig());
+            sb.append("HumanLoopConfig: ").append(getHumanLoopConfig()).append(",");
+        if (getQueriesConfig() != null)
+            sb.append("QueriesConfig: ").append(getQueriesConfig());
         sb.append("}");
         return sb.toString();
     }
@@ -336,6 +387,10 @@ public class AnalyzeDocumentRequest extends com.amazonaws.AmazonWebServiceReques
             return false;
         if (other.getHumanLoopConfig() != null && other.getHumanLoopConfig().equals(this.getHumanLoopConfig()) == false)
             return false;
+        if (other.getQueriesConfig() == null ^ this.getQueriesConfig() == null)
+            return false;
+        if (other.getQueriesConfig() != null && other.getQueriesConfig().equals(this.getQueriesConfig()) == false)
+            return false;
         return true;
     }
 
@@ -347,6 +402,7 @@ public class AnalyzeDocumentRequest extends com.amazonaws.AmazonWebServiceReques
         hashCode = prime * hashCode + ((getDocument() == null) ? 0 : getDocument().hashCode());
         hashCode = prime * hashCode + ((getFeatureTypes() == null) ? 0 : getFeatureTypes().hashCode());
         hashCode = prime * hashCode + ((getHumanLoopConfig() == null) ? 0 : getHumanLoopConfig().hashCode());
+        hashCode = prime * hashCode + ((getQueriesConfig() == null) ? 0 : getQueriesConfig().hashCode());
         return hashCode;
     }
 

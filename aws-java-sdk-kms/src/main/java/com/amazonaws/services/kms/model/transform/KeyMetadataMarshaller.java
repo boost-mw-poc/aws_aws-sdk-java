@@ -72,6 +72,8 @@ public class KeyMetadataMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MultiRegionConfiguration").build();
     private static final MarshallingInfo<Integer> PENDINGDELETIONWINDOWINDAYS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PendingDeletionWindowInDays").build();
+    private static final MarshallingInfo<List> MACALGORITHMS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("MacAlgorithms").build();
 
     private static final KeyMetadataMarshaller instance = new KeyMetadataMarshaller();
 
@@ -111,6 +113,7 @@ public class KeyMetadataMarshaller {
             protocolMarshaller.marshall(keyMetadata.getMultiRegion(), MULTIREGION_BINDING);
             protocolMarshaller.marshall(keyMetadata.getMultiRegionConfiguration(), MULTIREGIONCONFIGURATION_BINDING);
             protocolMarshaller.marshall(keyMetadata.getPendingDeletionWindowInDays(), PENDINGDELETIONWINDOWINDAYS_BINDING);
+            protocolMarshaller.marshall(keyMetadata.getMacAlgorithms(), MACALGORITHMS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -21,7 +21,8 @@ import javax.annotation.Generated;
 public enum FeatureType {
 
     TABLES("TABLES"),
-    FORMS("FORMS");
+    FORMS("FORMS"),
+    QUERIES("QUERIES");
 
     private String value;
 

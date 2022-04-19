@@ -102,6 +102,12 @@ public class Association implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private String associationName;
+    /**
+     * <p>
+     * Number of days to wait after the scheduled day to run an association.
+     * </p>
+     */
+    private Integer scheduleOffset;
 
     /**
      * <p>
@@ -618,6 +624,46 @@ public class Association implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Number of days to wait after the scheduled day to run an association.
+     * </p>
+     * 
+     * @param scheduleOffset
+     *        Number of days to wait after the scheduled day to run an association.
+     */
+
+    public void setScheduleOffset(Integer scheduleOffset) {
+        this.scheduleOffset = scheduleOffset;
+    }
+
+    /**
+     * <p>
+     * Number of days to wait after the scheduled day to run an association.
+     * </p>
+     * 
+     * @return Number of days to wait after the scheduled day to run an association.
+     */
+
+    public Integer getScheduleOffset() {
+        return this.scheduleOffset;
+    }
+
+    /**
+     * <p>
+     * Number of days to wait after the scheduled day to run an association.
+     * </p>
+     * 
+     * @param scheduleOffset
+     *        Number of days to wait after the scheduled day to run an association.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Association withScheduleOffset(Integer scheduleOffset) {
+        setScheduleOffset(scheduleOffset);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -648,7 +694,9 @@ public class Association implements Serializable, Cloneable, StructuredPojo {
         if (getScheduleExpression() != null)
             sb.append("ScheduleExpression: ").append(getScheduleExpression()).append(",");
         if (getAssociationName() != null)
-            sb.append("AssociationName: ").append(getAssociationName());
+            sb.append("AssociationName: ").append(getAssociationName()).append(",");
+        if (getScheduleOffset() != null)
+            sb.append("ScheduleOffset: ").append(getScheduleOffset());
         sb.append("}");
         return sb.toString();
     }
@@ -703,6 +751,10 @@ public class Association implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getAssociationName() != null && other.getAssociationName().equals(this.getAssociationName()) == false)
             return false;
+        if (other.getScheduleOffset() == null ^ this.getScheduleOffset() == null)
+            return false;
+        if (other.getScheduleOffset() != null && other.getScheduleOffset().equals(this.getScheduleOffset()) == false)
+            return false;
         return true;
     }
 
@@ -721,6 +773,7 @@ public class Association implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getOverview() == null) ? 0 : getOverview().hashCode());
         hashCode = prime * hashCode + ((getScheduleExpression() == null) ? 0 : getScheduleExpression().hashCode());
         hashCode = prime * hashCode + ((getAssociationName() == null) ? 0 : getAssociationName().hashCode());
+        hashCode = prime * hashCode + ((getScheduleOffset() == null) ? 0 : getScheduleOffset().hashCode());
         return hashCode;
     }
 

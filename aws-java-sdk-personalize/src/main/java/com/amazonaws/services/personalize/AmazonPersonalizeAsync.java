@@ -3303,6 +3303,72 @@ public interface AmazonPersonalizeAsync extends AmazonPersonalize {
 
     /**
      * <p>
+     * Starts a recommender that is INACTIVE. Starting a recommender does not create any new models, but resumes billing
+     * and automatic retraining for the recommender.
+     * </p>
+     * 
+     * @param startRecommenderRequest
+     * @return A Java Future containing the result of the StartRecommender operation returned by the service.
+     * @sample AmazonPersonalizeAsync.StartRecommender
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/personalize-2018-05-22/StartRecommender" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<StartRecommenderResult> startRecommenderAsync(StartRecommenderRequest startRecommenderRequest);
+
+    /**
+     * <p>
+     * Starts a recommender that is INACTIVE. Starting a recommender does not create any new models, but resumes billing
+     * and automatic retraining for the recommender.
+     * </p>
+     * 
+     * @param startRecommenderRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the StartRecommender operation returned by the service.
+     * @sample AmazonPersonalizeAsyncHandler.StartRecommender
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/personalize-2018-05-22/StartRecommender" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<StartRecommenderResult> startRecommenderAsync(StartRecommenderRequest startRecommenderRequest,
+            com.amazonaws.handlers.AsyncHandler<StartRecommenderRequest, StartRecommenderResult> asyncHandler);
+
+    /**
+     * <p>
+     * Stops a recommender that is ACTIVE. Stopping a recommender halts billing and automatic retraining for the
+     * recommender.
+     * </p>
+     * 
+     * @param stopRecommenderRequest
+     * @return A Java Future containing the result of the StopRecommender operation returned by the service.
+     * @sample AmazonPersonalizeAsync.StopRecommender
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/personalize-2018-05-22/StopRecommender" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<StopRecommenderResult> stopRecommenderAsync(StopRecommenderRequest stopRecommenderRequest);
+
+    /**
+     * <p>
+     * Stops a recommender that is ACTIVE. Stopping a recommender halts billing and automatic retraining for the
+     * recommender.
+     * </p>
+     * 
+     * @param stopRecommenderRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the StopRecommender operation returned by the service.
+     * @sample AmazonPersonalizeAsyncHandler.StopRecommender
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/personalize-2018-05-22/StopRecommender" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<StopRecommenderResult> stopRecommenderAsync(StopRecommenderRequest stopRecommenderRequest,
+            com.amazonaws.handlers.AsyncHandler<StopRecommenderRequest, StopRecommenderResult> asyncHandler);
+
+    /**
+     * <p>
      * Stops creating a solution version that is in a state of CREATE_PENDING or CREATE IN_PROGRESS.
      * </p>
      * <p>
@@ -3454,8 +3520,9 @@ public interface AmazonPersonalizeAsync extends AmazonPersonalize {
      * </p>
      * <note>
      * <p>
-     * You must wait until the <code>status</code> of the updated campaign is <code>ACTIVE</code> before asking the
-     * campaign for recommendations.
+     * You can still get recommendations from a campaign while an update is in progress. The campaign will use the
+     * previous solution version and campaign configuration to generate recommendations until the latest campaign update
+     * status is <code>Active</code>.
      * </p>
      * </note>
      * <p>
@@ -3483,8 +3550,9 @@ public interface AmazonPersonalizeAsync extends AmazonPersonalize {
      * </p>
      * <note>
      * <p>
-     * You must wait until the <code>status</code> of the updated campaign is <code>ACTIVE</code> before asking the
-     * campaign for recommendations.
+     * You can still get recommendations from a campaign while an update is in progress. The campaign will use the
+     * previous solution version and campaign configuration to generate recommendations until the latest campaign update
+     * status is <code>Active</code>.
      * </p>
      * </note>
      * <p>

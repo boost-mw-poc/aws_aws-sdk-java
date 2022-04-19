@@ -25,7 +25,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * The following is an <code>Entry</code> and <code>Target</code> pair example for <code>chroot</code>.
  * </p>
  * <p>
- * <code>[ { "Entry:": "/", "Target": "/bucket_name/home/mydirectory" } ]</code>
+ * <code>[ { "Entry": "/", "Target": "/bucket_name/home/mydirectory" } ]</code>
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transfer-2018-11-05/HomeDirectoryMapEntry" target="_top">AWS API

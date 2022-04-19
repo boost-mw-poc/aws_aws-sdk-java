@@ -33,7 +33,8 @@ public enum DataSourceType {
     WORKDOCS("WORKDOCS"),
     FSX("FSX"),
     SLACK("SLACK"),
-    BOX("BOX");
+    BOX("BOX"),
+    QUIP("QUIP");
 
     private String value;
 

@@ -84,9 +84,11 @@ public class UpdateAutoScalingGroupRequest extends com.amazonaws.AmazonWebServic
     private Integer desiredCapacity;
     /**
      * <p>
-     * The amount of time, in seconds, after a scaling activity completes before another scaling activity can start. The
-     * default value is <code>300</code>. This setting applies when using simple scaling policies, but not when using
-     * other scaling policies or scheduled scaling. For more information, see <a
+     * <i>Only needed if you use simple scaling policies.</i>
+     * </p>
+     * <p>
+     * The amount of time, in seconds, between one scaling activity ending and another one starting due to simple
+     * scaling policies. For more information, see <a
      * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/Cooldown.html">Scaling cooldowns for Amazon EC2 Auto
      * Scaling</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
@@ -109,24 +111,26 @@ public class UpdateAutoScalingGroupRequest extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * The amount of time, in seconds, that Amazon EC2 Auto Scaling waits before checking the health status of an EC2
-     * instance that has come into service and marking it unhealthy due to a failed health check. The default value is
-     * <code>0</code>. For more information, see <a
+     * instance that has come into service and marking it unhealthy due to a failed Elastic Load Balancing or custom
+     * health check. This is useful if your instances do not immediately pass these health checks after they enter the
+     * <code>InService</code> state. For more information, see <a
      * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/healthcheck.html#health-check-grace-period">Health
      * check grace period</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
-     * </p>
-     * <p>
-     * Required if you are adding an <code>ELB</code> health check.
      * </p>
      */
     private Integer healthCheckGracePeriod;
     /**
      * <p>
-     * The name of an existing placement group into which to launch your instances, if any. A placement group is a
-     * logical grouping of instances within a single Availability Zone. You cannot specify multiple Availability Zones
-     * and a placement group. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html">Placement Groups</a> in the
+     * The name of an existing placement group into which to launch your instances. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html">Placement groups</a> in the
      * <i>Amazon EC2 User Guide for Linux Instances</i>.
      * </p>
+     * <note>
+     * <p>
+     * A <i>cluster</i> placement group is a logical grouping of instances within a single Availability Zone. You cannot
+     * specify multiple Availability Zones and a cluster placement group.
+     * </p>
+     * </note>
      */
     private String placementGroup;
     /**
@@ -204,6 +208,30 @@ public class UpdateAutoScalingGroupRequest extends com.amazonaws.AmazonWebServic
      * </p>
      */
     private String desiredCapacityType;
+    /**
+     * <p>
+     * The amount of time, in seconds, until a newly launched instance can contribute to the Amazon CloudWatch metrics.
+     * This delay lets an instance finish initializing before Amazon EC2 Auto Scaling aggregates instance metrics,
+     * resulting in more reliable usage data. Set this value equal to the amount of time that it takes for resource
+     * consumption to become stable after an instance reaches the <code>InService</code> state. For more information,
+     * see <a
+     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-default-instance-warmup.html">Set
+     * the default instance warmup for an Auto Scaling group</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     * </p>
+     * <important>
+     * <p>
+     * To manage your warm-up settings at the group level, we recommend that you set the default instance warmup,
+     * <i>even if its value is set to 0 seconds</i>. This also optimizes the performance of scaling policies that scale
+     * continuously, such as target tracking and step scaling policies.
+     * </p>
+     * <p>
+     * If you need to remove a value that you previously set, include the property but specify <code>-1</code> for the
+     * value. However, we strongly recommend keeping the default instance warmup enabled by specifying a minimum value
+     * of <code>0</code>.
+     * </p>
+     * </important>
+     */
+    private Integer defaultInstanceWarmup;
 
     /**
      * <p>
@@ -574,17 +602,20 @@ public class UpdateAutoScalingGroupRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The amount of time, in seconds, after a scaling activity completes before another scaling activity can start. The
-     * default value is <code>300</code>. This setting applies when using simple scaling policies, but not when using
-     * other scaling policies or scheduled scaling. For more information, see <a
+     * <i>Only needed if you use simple scaling policies.</i>
+     * </p>
+     * <p>
+     * The amount of time, in seconds, between one scaling activity ending and another one starting due to simple
+     * scaling policies. For more information, see <a
      * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/Cooldown.html">Scaling cooldowns for Amazon EC2 Auto
      * Scaling</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
      * 
      * @param defaultCooldown
-     *        The amount of time, in seconds, after a scaling activity completes before another scaling activity can
-     *        start. The default value is <code>300</code>. This setting applies when using simple scaling policies, but
-     *        not when using other scaling policies or scheduled scaling. For more information, see <a
+     *        <i>Only needed if you use simple scaling policies.</i> </p>
+     *        <p>
+     *        The amount of time, in seconds, between one scaling activity ending and another one starting due to simple
+     *        scaling policies. For more information, see <a
      *        href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/Cooldown.html">Scaling cooldowns for Amazon
      *        EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      */
@@ -595,16 +626,19 @@ public class UpdateAutoScalingGroupRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The amount of time, in seconds, after a scaling activity completes before another scaling activity can start. The
-     * default value is <code>300</code>. This setting applies when using simple scaling policies, but not when using
-     * other scaling policies or scheduled scaling. For more information, see <a
+     * <i>Only needed if you use simple scaling policies.</i>
+     * </p>
+     * <p>
+     * The amount of time, in seconds, between one scaling activity ending and another one starting due to simple
+     * scaling policies. For more information, see <a
      * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/Cooldown.html">Scaling cooldowns for Amazon EC2 Auto
      * Scaling</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
      * 
-     * @return The amount of time, in seconds, after a scaling activity completes before another scaling activity can
-     *         start. The default value is <code>300</code>. This setting applies when using simple scaling policies,
-     *         but not when using other scaling policies or scheduled scaling. For more information, see <a
+     * @return <i>Only needed if you use simple scaling policies.</i> </p>
+     *         <p>
+     *         The amount of time, in seconds, between one scaling activity ending and another one starting due to
+     *         simple scaling policies. For more information, see <a
      *         href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/Cooldown.html">Scaling cooldowns for Amazon
      *         EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      */
@@ -615,17 +649,20 @@ public class UpdateAutoScalingGroupRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The amount of time, in seconds, after a scaling activity completes before another scaling activity can start. The
-     * default value is <code>300</code>. This setting applies when using simple scaling policies, but not when using
-     * other scaling policies or scheduled scaling. For more information, see <a
+     * <i>Only needed if you use simple scaling policies.</i>
+     * </p>
+     * <p>
+     * The amount of time, in seconds, between one scaling activity ending and another one starting due to simple
+     * scaling policies. For more information, see <a
      * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/Cooldown.html">Scaling cooldowns for Amazon EC2 Auto
      * Scaling</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
      * 
      * @param defaultCooldown
-     *        The amount of time, in seconds, after a scaling activity completes before another scaling activity can
-     *        start. The default value is <code>300</code>. This setting applies when using simple scaling policies, but
-     *        not when using other scaling policies or scheduled scaling. For more information, see <a
+     *        <i>Only needed if you use simple scaling policies.</i> </p>
+     *        <p>
+     *        The amount of time, in seconds, between one scaling activity ending and another one starting due to simple
+     *        scaling policies. For more information, see <a
      *        href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/Cooldown.html">Scaling cooldowns for Amazon
      *        EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -764,23 +801,20 @@ public class UpdateAutoScalingGroupRequest extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * The amount of time, in seconds, that Amazon EC2 Auto Scaling waits before checking the health status of an EC2
-     * instance that has come into service and marking it unhealthy due to a failed health check. The default value is
-     * <code>0</code>. For more information, see <a
+     * instance that has come into service and marking it unhealthy due to a failed Elastic Load Balancing or custom
+     * health check. This is useful if your instances do not immediately pass these health checks after they enter the
+     * <code>InService</code> state. For more information, see <a
      * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/healthcheck.html#health-check-grace-period">Health
      * check grace period</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
-     * </p>
-     * <p>
-     * Required if you are adding an <code>ELB</code> health check.
      * </p>
      * 
      * @param healthCheckGracePeriod
      *        The amount of time, in seconds, that Amazon EC2 Auto Scaling waits before checking the health status of an
-     *        EC2 instance that has come into service and marking it unhealthy due to a failed health check. The default
-     *        value is <code>0</code>. For more information, see <a
+     *        EC2 instance that has come into service and marking it unhealthy due to a failed Elastic Load Balancing or
+     *        custom health check. This is useful if your instances do not immediately pass these health checks after
+     *        they enter the <code>InService</code> state. For more information, see <a
      *        href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/healthcheck.html#health-check-grace-period"
-     *        >Health check grace period</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.</p>
-     *        <p>
-     *        Required if you are adding an <code>ELB</code> health check.
+     *        >Health check grace period</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      */
 
     public void setHealthCheckGracePeriod(Integer healthCheckGracePeriod) {
@@ -790,22 +824,19 @@ public class UpdateAutoScalingGroupRequest extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * The amount of time, in seconds, that Amazon EC2 Auto Scaling waits before checking the health status of an EC2
-     * instance that has come into service and marking it unhealthy due to a failed health check. The default value is
-     * <code>0</code>. For more information, see <a
+     * instance that has come into service and marking it unhealthy due to a failed Elastic Load Balancing or custom
+     * health check. This is useful if your instances do not immediately pass these health checks after they enter the
+     * <code>InService</code> state. For more information, see <a
      * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/healthcheck.html#health-check-grace-period">Health
      * check grace period</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
-     * <p>
-     * Required if you are adding an <code>ELB</code> health check.
-     * </p>
      * 
      * @return The amount of time, in seconds, that Amazon EC2 Auto Scaling waits before checking the health status of
-     *         an EC2 instance that has come into service and marking it unhealthy due to a failed health check. The
-     *         default value is <code>0</code>. For more information, see <a
+     *         an EC2 instance that has come into service and marking it unhealthy due to a failed Elastic Load
+     *         Balancing or custom health check. This is useful if your instances do not immediately pass these health
+     *         checks after they enter the <code>InService</code> state. For more information, see <a
      *         href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/healthcheck.html#health-check-grace-period"
-     *         >Health check grace period</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.</p>
-     *         <p>
-     *         Required if you are adding an <code>ELB</code> health check.
+     *         >Health check grace period</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      */
 
     public Integer getHealthCheckGracePeriod() {
@@ -815,23 +846,20 @@ public class UpdateAutoScalingGroupRequest extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * The amount of time, in seconds, that Amazon EC2 Auto Scaling waits before checking the health status of an EC2
-     * instance that has come into service and marking it unhealthy due to a failed health check. The default value is
-     * <code>0</code>. For more information, see <a
+     * instance that has come into service and marking it unhealthy due to a failed Elastic Load Balancing or custom
+     * health check. This is useful if your instances do not immediately pass these health checks after they enter the
+     * <code>InService</code> state. For more information, see <a
      * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/healthcheck.html#health-check-grace-period">Health
      * check grace period</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
-     * </p>
-     * <p>
-     * Required if you are adding an <code>ELB</code> health check.
      * </p>
      * 
      * @param healthCheckGracePeriod
      *        The amount of time, in seconds, that Amazon EC2 Auto Scaling waits before checking the health status of an
-     *        EC2 instance that has come into service and marking it unhealthy due to a failed health check. The default
-     *        value is <code>0</code>. For more information, see <a
+     *        EC2 instance that has come into service and marking it unhealthy due to a failed Elastic Load Balancing or
+     *        custom health check. This is useful if your instances do not immediately pass these health checks after
+     *        they enter the <code>InService</code> state. For more information, see <a
      *        href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/healthcheck.html#health-check-grace-period"
-     *        >Health check grace period</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.</p>
-     *        <p>
-     *        Required if you are adding an <code>ELB</code> health check.
+     *        >Health check grace period</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -842,19 +870,25 @@ public class UpdateAutoScalingGroupRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The name of an existing placement group into which to launch your instances, if any. A placement group is a
-     * logical grouping of instances within a single Availability Zone. You cannot specify multiple Availability Zones
-     * and a placement group. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html">Placement Groups</a> in the
+     * The name of an existing placement group into which to launch your instances. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html">Placement groups</a> in the
      * <i>Amazon EC2 User Guide for Linux Instances</i>.
      * </p>
+     * <note>
+     * <p>
+     * A <i>cluster</i> placement group is a logical grouping of instances within a single Availability Zone. You cannot
+     * specify multiple Availability Zones and a cluster placement group.
+     * </p>
+     * </note>
      * 
      * @param placementGroup
-     *        The name of an existing placement group into which to launch your instances, if any. A placement group is
-     *        a logical grouping of instances within a single Availability Zone. You cannot specify multiple
-     *        Availability Zones and a placement group. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html">Placement Groups</a> in
-     *        the <i>Amazon EC2 User Guide for Linux Instances</i>.
+     *        The name of an existing placement group into which to launch your instances. For more information, see <a
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html">Placement groups</a> in
+     *        the <i>Amazon EC2 User Guide for Linux Instances</i>.</p> <note>
+     *        <p>
+     *        A <i>cluster</i> placement group is a logical grouping of instances within a single Availability Zone. You
+     *        cannot specify multiple Availability Zones and a cluster placement group.
+     *        </p>
      */
 
     public void setPlacementGroup(String placementGroup) {
@@ -863,18 +897,24 @@ public class UpdateAutoScalingGroupRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The name of an existing placement group into which to launch your instances, if any. A placement group is a
-     * logical grouping of instances within a single Availability Zone. You cannot specify multiple Availability Zones
-     * and a placement group. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html">Placement Groups</a> in the
+     * The name of an existing placement group into which to launch your instances. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html">Placement groups</a> in the
      * <i>Amazon EC2 User Guide for Linux Instances</i>.
      * </p>
+     * <note>
+     * <p>
+     * A <i>cluster</i> placement group is a logical grouping of instances within a single Availability Zone. You cannot
+     * specify multiple Availability Zones and a cluster placement group.
+     * </p>
+     * </note>
      * 
-     * @return The name of an existing placement group into which to launch your instances, if any. A placement group is
-     *         a logical grouping of instances within a single Availability Zone. You cannot specify multiple
-     *         Availability Zones and a placement group. For more information, see <a
-     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html">Placement Groups</a> in
-     *         the <i>Amazon EC2 User Guide for Linux Instances</i>.
+     * @return The name of an existing placement group into which to launch your instances. For more information, see <a
+     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html">Placement groups</a> in
+     *         the <i>Amazon EC2 User Guide for Linux Instances</i>.</p> <note>
+     *         <p>
+     *         A <i>cluster</i> placement group is a logical grouping of instances within a single Availability Zone.
+     *         You cannot specify multiple Availability Zones and a cluster placement group.
+     *         </p>
      */
 
     public String getPlacementGroup() {
@@ -883,19 +923,25 @@ public class UpdateAutoScalingGroupRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The name of an existing placement group into which to launch your instances, if any. A placement group is a
-     * logical grouping of instances within a single Availability Zone. You cannot specify multiple Availability Zones
-     * and a placement group. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html">Placement Groups</a> in the
+     * The name of an existing placement group into which to launch your instances. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html">Placement groups</a> in the
      * <i>Amazon EC2 User Guide for Linux Instances</i>.
      * </p>
+     * <note>
+     * <p>
+     * A <i>cluster</i> placement group is a logical grouping of instances within a single Availability Zone. You cannot
+     * specify multiple Availability Zones and a cluster placement group.
+     * </p>
+     * </note>
      * 
      * @param placementGroup
-     *        The name of an existing placement group into which to launch your instances, if any. A placement group is
-     *        a logical grouping of instances within a single Availability Zone. You cannot specify multiple
-     *        Availability Zones and a placement group. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html">Placement Groups</a> in
-     *        the <i>Amazon EC2 User Guide for Linux Instances</i>.
+     *        The name of an existing placement group into which to launch your instances. For more information, see <a
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html">Placement groups</a> in
+     *        the <i>Amazon EC2 User Guide for Linux Instances</i>.</p> <note>
+     *        <p>
+     *        A <i>cluster</i> placement group is a logical grouping of instances within a single Availability Zone. You
+     *        cannot specify multiple Availability Zones and a cluster placement group.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1468,6 +1514,151 @@ public class UpdateAutoScalingGroupRequest extends com.amazonaws.AmazonWebServic
     }
 
     /**
+     * <p>
+     * The amount of time, in seconds, until a newly launched instance can contribute to the Amazon CloudWatch metrics.
+     * This delay lets an instance finish initializing before Amazon EC2 Auto Scaling aggregates instance metrics,
+     * resulting in more reliable usage data. Set this value equal to the amount of time that it takes for resource
+     * consumption to become stable after an instance reaches the <code>InService</code> state. For more information,
+     * see <a
+     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-default-instance-warmup.html">Set
+     * the default instance warmup for an Auto Scaling group</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     * </p>
+     * <important>
+     * <p>
+     * To manage your warm-up settings at the group level, we recommend that you set the default instance warmup,
+     * <i>even if its value is set to 0 seconds</i>. This also optimizes the performance of scaling policies that scale
+     * continuously, such as target tracking and step scaling policies.
+     * </p>
+     * <p>
+     * If you need to remove a value that you previously set, include the property but specify <code>-1</code> for the
+     * value. However, we strongly recommend keeping the default instance warmup enabled by specifying a minimum value
+     * of <code>0</code>.
+     * </p>
+     * </important>
+     * 
+     * @param defaultInstanceWarmup
+     *        The amount of time, in seconds, until a newly launched instance can contribute to the Amazon CloudWatch
+     *        metrics. This delay lets an instance finish initializing before Amazon EC2 Auto Scaling aggregates
+     *        instance metrics, resulting in more reliable usage data. Set this value equal to the amount of time that
+     *        it takes for resource consumption to become stable after an instance reaches the <code>InService</code>
+     *        state. For more information, see <a href=
+     *        "https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-default-instance-warmup.html">Set
+     *        the default instance warmup for an Auto Scaling group</a> in the <i>Amazon EC2 Auto Scaling User
+     *        Guide</i>.</p> <important>
+     *        <p>
+     *        To manage your warm-up settings at the group level, we recommend that you set the default instance warmup,
+     *        <i>even if its value is set to 0 seconds</i>. This also optimizes the performance of scaling policies that
+     *        scale continuously, such as target tracking and step scaling policies.
+     *        </p>
+     *        <p>
+     *        If you need to remove a value that you previously set, include the property but specify <code>-1</code>
+     *        for the value. However, we strongly recommend keeping the default instance warmup enabled by specifying a
+     *        minimum value of <code>0</code>.
+     *        </p>
+     */
+
+    public void setDefaultInstanceWarmup(Integer defaultInstanceWarmup) {
+        this.defaultInstanceWarmup = defaultInstanceWarmup;
+    }
+
+    /**
+     * <p>
+     * The amount of time, in seconds, until a newly launched instance can contribute to the Amazon CloudWatch metrics.
+     * This delay lets an instance finish initializing before Amazon EC2 Auto Scaling aggregates instance metrics,
+     * resulting in more reliable usage data. Set this value equal to the amount of time that it takes for resource
+     * consumption to become stable after an instance reaches the <code>InService</code> state. For more information,
+     * see <a
+     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-default-instance-warmup.html">Set
+     * the default instance warmup for an Auto Scaling group</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     * </p>
+     * <important>
+     * <p>
+     * To manage your warm-up settings at the group level, we recommend that you set the default instance warmup,
+     * <i>even if its value is set to 0 seconds</i>. This also optimizes the performance of scaling policies that scale
+     * continuously, such as target tracking and step scaling policies.
+     * </p>
+     * <p>
+     * If you need to remove a value that you previously set, include the property but specify <code>-1</code> for the
+     * value. However, we strongly recommend keeping the default instance warmup enabled by specifying a minimum value
+     * of <code>0</code>.
+     * </p>
+     * </important>
+     * 
+     * @return The amount of time, in seconds, until a newly launched instance can contribute to the Amazon CloudWatch
+     *         metrics. This delay lets an instance finish initializing before Amazon EC2 Auto Scaling aggregates
+     *         instance metrics, resulting in more reliable usage data. Set this value equal to the amount of time that
+     *         it takes for resource consumption to become stable after an instance reaches the <code>InService</code>
+     *         state. For more information, see <a href=
+     *         "https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-default-instance-warmup.html">Set
+     *         the default instance warmup for an Auto Scaling group</a> in the <i>Amazon EC2 Auto Scaling User
+     *         Guide</i>.</p> <important>
+     *         <p>
+     *         To manage your warm-up settings at the group level, we recommend that you set the default instance
+     *         warmup, <i>even if its value is set to 0 seconds</i>. This also optimizes the performance of scaling
+     *         policies that scale continuously, such as target tracking and step scaling policies.
+     *         </p>
+     *         <p>
+     *         If you need to remove a value that you previously set, include the property but specify <code>-1</code>
+     *         for the value. However, we strongly recommend keeping the default instance warmup enabled by specifying a
+     *         minimum value of <code>0</code>.
+     *         </p>
+     */
+
+    public Integer getDefaultInstanceWarmup() {
+        return this.defaultInstanceWarmup;
+    }
+
+    /**
+     * <p>
+     * The amount of time, in seconds, until a newly launched instance can contribute to the Amazon CloudWatch metrics.
+     * This delay lets an instance finish initializing before Amazon EC2 Auto Scaling aggregates instance metrics,
+     * resulting in more reliable usage data. Set this value equal to the amount of time that it takes for resource
+     * consumption to become stable after an instance reaches the <code>InService</code> state. For more information,
+     * see <a
+     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-default-instance-warmup.html">Set
+     * the default instance warmup for an Auto Scaling group</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     * </p>
+     * <important>
+     * <p>
+     * To manage your warm-up settings at the group level, we recommend that you set the default instance warmup,
+     * <i>even if its value is set to 0 seconds</i>. This also optimizes the performance of scaling policies that scale
+     * continuously, such as target tracking and step scaling policies.
+     * </p>
+     * <p>
+     * If you need to remove a value that you previously set, include the property but specify <code>-1</code> for the
+     * value. However, we strongly recommend keeping the default instance warmup enabled by specifying a minimum value
+     * of <code>0</code>.
+     * </p>
+     * </important>
+     * 
+     * @param defaultInstanceWarmup
+     *        The amount of time, in seconds, until a newly launched instance can contribute to the Amazon CloudWatch
+     *        metrics. This delay lets an instance finish initializing before Amazon EC2 Auto Scaling aggregates
+     *        instance metrics, resulting in more reliable usage data. Set this value equal to the amount of time that
+     *        it takes for resource consumption to become stable after an instance reaches the <code>InService</code>
+     *        state. For more information, see <a href=
+     *        "https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-default-instance-warmup.html">Set
+     *        the default instance warmup for an Auto Scaling group</a> in the <i>Amazon EC2 Auto Scaling User
+     *        Guide</i>.</p> <important>
+     *        <p>
+     *        To manage your warm-up settings at the group level, we recommend that you set the default instance warmup,
+     *        <i>even if its value is set to 0 seconds</i>. This also optimizes the performance of scaling policies that
+     *        scale continuously, such as target tracking and step scaling policies.
+     *        </p>
+     *        <p>
+     *        If you need to remove a value that you previously set, include the property but specify <code>-1</code>
+     *        for the value. However, we strongly recommend keeping the default instance warmup enabled by specifying a
+     *        minimum value of <code>0</code>.
+     *        </p>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateAutoScalingGroupRequest withDefaultInstanceWarmup(Integer defaultInstanceWarmup) {
+        setDefaultInstanceWarmup(defaultInstanceWarmup);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1518,7 +1709,9 @@ public class UpdateAutoScalingGroupRequest extends com.amazonaws.AmazonWebServic
         if (getContext() != null)
             sb.append("Context: ").append(getContext()).append(",");
         if (getDesiredCapacityType() != null)
-            sb.append("DesiredCapacityType: ").append(getDesiredCapacityType());
+            sb.append("DesiredCapacityType: ").append(getDesiredCapacityType()).append(",");
+        if (getDefaultInstanceWarmup() != null)
+            sb.append("DefaultInstanceWarmup: ").append(getDefaultInstanceWarmup());
         sb.append("}");
         return sb.toString();
     }
@@ -1614,6 +1807,10 @@ public class UpdateAutoScalingGroupRequest extends com.amazonaws.AmazonWebServic
             return false;
         if (other.getDesiredCapacityType() != null && other.getDesiredCapacityType().equals(this.getDesiredCapacityType()) == false)
             return false;
+        if (other.getDefaultInstanceWarmup() == null ^ this.getDefaultInstanceWarmup() == null)
+            return false;
+        if (other.getDefaultInstanceWarmup() != null && other.getDefaultInstanceWarmup().equals(this.getDefaultInstanceWarmup()) == false)
+            return false;
         return true;
     }
 
@@ -1642,6 +1839,7 @@ public class UpdateAutoScalingGroupRequest extends com.amazonaws.AmazonWebServic
         hashCode = prime * hashCode + ((getCapacityRebalance() == null) ? 0 : getCapacityRebalance().hashCode());
         hashCode = prime * hashCode + ((getContext() == null) ? 0 : getContext().hashCode());
         hashCode = prime * hashCode + ((getDesiredCapacityType() == null) ? 0 : getDesiredCapacityType().hashCode());
+        hashCode = prime * hashCode + ((getDefaultInstanceWarmup() == null) ? 0 : getDefaultInstanceWarmup().hashCode());
         return hashCode;
     }
 

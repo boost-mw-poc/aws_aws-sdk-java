@@ -68,24 +68,23 @@ public class CreateLaunchConfigurationRequest extends com.amazonaws.AmazonWebSer
     private com.amazonaws.internal.SdkInternalList<String> securityGroups;
     /**
      * <p>
-     * The ID of a ClassicLink-enabled VPC to link your EC2-Classic instances to. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-classiclink.html">ClassicLink</a> in the <i>Amazon
-     * EC2 User Guide for Linux Instances</i> and <a
-     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-in-vpc.html#as-ClassicLink">Linking EC2-Classic
-     * instances to a VPC</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     * <i>EC2-Classic retires on August 15, 2022. This parameter is not supported after that date.</i>
      * </p>
      * <p>
-     * This parameter can only be used if you are launching EC2-Classic instances.
+     * The ID of a ClassicLink-enabled VPC to link your EC2-Classic instances to. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-classiclink.html">ClassicLink</a> in the <i>Amazon
+     * EC2 User Guide for Linux Instances</i>.
      * </p>
      */
     private String classicLinkVPCId;
     /**
      * <p>
+     * <i>EC2-Classic retires on August 15, 2022. This parameter is not supported after that date.</i>
+     * </p>
+     * <p>
      * The IDs of one or more security groups for the specified ClassicLink-enabled VPC. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-classiclink.html">ClassicLink</a> in the <i>Amazon
-     * EC2 User Guide for Linux Instances</i> and <a
-     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-in-vpc.html#as-ClassicLink">Linking EC2-Classic
-     * instances to a VPC</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     * EC2 User Guide for Linux Instances</i>.
      * </p>
      * <p>
      * If you specify the <code>ClassicLinkVPCId</code> parameter, you must specify this parameter.
@@ -580,24 +579,20 @@ public class CreateLaunchConfigurationRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The ID of a ClassicLink-enabled VPC to link your EC2-Classic instances to. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-classiclink.html">ClassicLink</a> in the <i>Amazon
-     * EC2 User Guide for Linux Instances</i> and <a
-     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-in-vpc.html#as-ClassicLink">Linking EC2-Classic
-     * instances to a VPC</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     * <i>EC2-Classic retires on August 15, 2022. This parameter is not supported after that date.</i>
      * </p>
      * <p>
-     * This parameter can only be used if you are launching EC2-Classic instances.
+     * The ID of a ClassicLink-enabled VPC to link your EC2-Classic instances to. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-classiclink.html">ClassicLink</a> in the <i>Amazon
+     * EC2 User Guide for Linux Instances</i>.
      * </p>
      * 
      * @param classicLinkVPCId
+     *        <i>EC2-Classic retires on August 15, 2022. This parameter is not supported after that date.</i> </p>
+     *        <p>
      *        The ID of a ClassicLink-enabled VPC to link your EC2-Classic instances to. For more information, see <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-classiclink.html">ClassicLink</a> in the
-     *        <i>Amazon EC2 User Guide for Linux Instances</i> and <a
-     *        href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-in-vpc.html#as-ClassicLink">Linking
-     *        EC2-Classic instances to a VPC</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.</p>
-     *        <p>
-     *        This parameter can only be used if you are launching EC2-Classic instances.
+     *        <i>Amazon EC2 User Guide for Linux Instances</i>.
      */
 
     public void setClassicLinkVPCId(String classicLinkVPCId) {
@@ -606,23 +601,19 @@ public class CreateLaunchConfigurationRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The ID of a ClassicLink-enabled VPC to link your EC2-Classic instances to. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-classiclink.html">ClassicLink</a> in the <i>Amazon
-     * EC2 User Guide for Linux Instances</i> and <a
-     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-in-vpc.html#as-ClassicLink">Linking EC2-Classic
-     * instances to a VPC</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     * <i>EC2-Classic retires on August 15, 2022. This parameter is not supported after that date.</i>
      * </p>
      * <p>
-     * This parameter can only be used if you are launching EC2-Classic instances.
+     * The ID of a ClassicLink-enabled VPC to link your EC2-Classic instances to. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-classiclink.html">ClassicLink</a> in the <i>Amazon
+     * EC2 User Guide for Linux Instances</i>.
      * </p>
      * 
-     * @return The ID of a ClassicLink-enabled VPC to link your EC2-Classic instances to. For more information, see <a
-     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-classiclink.html">ClassicLink</a> in the
-     *         <i>Amazon EC2 User Guide for Linux Instances</i> and <a
-     *         href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-in-vpc.html#as-ClassicLink">Linking
-     *         EC2-Classic instances to a VPC</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.</p>
+     * @return <i>EC2-Classic retires on August 15, 2022. This parameter is not supported after that date.</i> </p>
      *         <p>
-     *         This parameter can only be used if you are launching EC2-Classic instances.
+     *         The ID of a ClassicLink-enabled VPC to link your EC2-Classic instances to. For more information, see <a
+     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-classiclink.html">ClassicLink</a> in the
+     *         <i>Amazon EC2 User Guide for Linux Instances</i>.
      */
 
     public String getClassicLinkVPCId() {
@@ -631,24 +622,20 @@ public class CreateLaunchConfigurationRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The ID of a ClassicLink-enabled VPC to link your EC2-Classic instances to. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-classiclink.html">ClassicLink</a> in the <i>Amazon
-     * EC2 User Guide for Linux Instances</i> and <a
-     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-in-vpc.html#as-ClassicLink">Linking EC2-Classic
-     * instances to a VPC</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     * <i>EC2-Classic retires on August 15, 2022. This parameter is not supported after that date.</i>
      * </p>
      * <p>
-     * This parameter can only be used if you are launching EC2-Classic instances.
+     * The ID of a ClassicLink-enabled VPC to link your EC2-Classic instances to. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-classiclink.html">ClassicLink</a> in the <i>Amazon
+     * EC2 User Guide for Linux Instances</i>.
      * </p>
      * 
      * @param classicLinkVPCId
+     *        <i>EC2-Classic retires on August 15, 2022. This parameter is not supported after that date.</i> </p>
+     *        <p>
      *        The ID of a ClassicLink-enabled VPC to link your EC2-Classic instances to. For more information, see <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-classiclink.html">ClassicLink</a> in the
-     *        <i>Amazon EC2 User Guide for Linux Instances</i> and <a
-     *        href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-in-vpc.html#as-ClassicLink">Linking
-     *        EC2-Classic instances to a VPC</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.</p>
-     *        <p>
-     *        This parameter can only be used if you are launching EC2-Classic instances.
+     *        <i>Amazon EC2 User Guide for Linux Instances</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -659,21 +646,23 @@ public class CreateLaunchConfigurationRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
+     * <i>EC2-Classic retires on August 15, 2022. This parameter is not supported after that date.</i>
+     * </p>
+     * <p>
      * The IDs of one or more security groups for the specified ClassicLink-enabled VPC. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-classiclink.html">ClassicLink</a> in the <i>Amazon
-     * EC2 User Guide for Linux Instances</i> and <a
-     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-in-vpc.html#as-ClassicLink">Linking EC2-Classic
-     * instances to a VPC</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     * EC2 User Guide for Linux Instances</i>.
      * </p>
      * <p>
      * If you specify the <code>ClassicLinkVPCId</code> parameter, you must specify this parameter.
      * </p>
      * 
-     * @return The IDs of one or more security groups for the specified ClassicLink-enabled VPC. For more information,
+     * @return <i>EC2-Classic retires on August 15, 2022. This parameter is not supported after that date.</i> </p>
+     *         <p>
+     *         The IDs of one or more security groups for the specified ClassicLink-enabled VPC. For more information,
      *         see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-classiclink.html">ClassicLink</a> in
-     *         the <i>Amazon EC2 User Guide for Linux Instances</i> and <a
-     *         href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-in-vpc.html#as-ClassicLink">Linking
-     *         EC2-Classic instances to a VPC</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.</p>
+     *         the <i>Amazon EC2 User Guide for Linux Instances</i>.
+     *         </p>
      *         <p>
      *         If you specify the <code>ClassicLinkVPCId</code> parameter, you must specify this parameter.
      */
@@ -687,22 +676,24 @@ public class CreateLaunchConfigurationRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
+     * <i>EC2-Classic retires on August 15, 2022. This parameter is not supported after that date.</i>
+     * </p>
+     * <p>
      * The IDs of one or more security groups for the specified ClassicLink-enabled VPC. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-classiclink.html">ClassicLink</a> in the <i>Amazon
-     * EC2 User Guide for Linux Instances</i> and <a
-     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-in-vpc.html#as-ClassicLink">Linking EC2-Classic
-     * instances to a VPC</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     * EC2 User Guide for Linux Instances</i>.
      * </p>
      * <p>
      * If you specify the <code>ClassicLinkVPCId</code> parameter, you must specify this parameter.
      * </p>
      * 
      * @param classicLinkVPCSecurityGroups
+     *        <i>EC2-Classic retires on August 15, 2022. This parameter is not supported after that date.</i> </p>
+     *        <p>
      *        The IDs of one or more security groups for the specified ClassicLink-enabled VPC. For more information,
      *        see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-classiclink.html">ClassicLink</a> in
-     *        the <i>Amazon EC2 User Guide for Linux Instances</i> and <a
-     *        href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-in-vpc.html#as-ClassicLink">Linking
-     *        EC2-Classic instances to a VPC</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.</p>
+     *        the <i>Amazon EC2 User Guide for Linux Instances</i>.
+     *        </p>
      *        <p>
      *        If you specify the <code>ClassicLinkVPCId</code> parameter, you must specify this parameter.
      */
@@ -718,11 +709,12 @@ public class CreateLaunchConfigurationRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
+     * <i>EC2-Classic retires on August 15, 2022. This parameter is not supported after that date.</i>
+     * </p>
+     * <p>
      * The IDs of one or more security groups for the specified ClassicLink-enabled VPC. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-classiclink.html">ClassicLink</a> in the <i>Amazon
-     * EC2 User Guide for Linux Instances</i> and <a
-     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-in-vpc.html#as-ClassicLink">Linking EC2-Classic
-     * instances to a VPC</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     * EC2 User Guide for Linux Instances</i>.
      * </p>
      * <p>
      * If you specify the <code>ClassicLinkVPCId</code> parameter, you must specify this parameter.
@@ -734,11 +726,12 @@ public class CreateLaunchConfigurationRequest extends com.amazonaws.AmazonWebSer
      * </p>
      * 
      * @param classicLinkVPCSecurityGroups
+     *        <i>EC2-Classic retires on August 15, 2022. This parameter is not supported after that date.</i> </p>
+     *        <p>
      *        The IDs of one or more security groups for the specified ClassicLink-enabled VPC. For more information,
      *        see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-classiclink.html">ClassicLink</a> in
-     *        the <i>Amazon EC2 User Guide for Linux Instances</i> and <a
-     *        href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-in-vpc.html#as-ClassicLink">Linking
-     *        EC2-Classic instances to a VPC</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.</p>
+     *        the <i>Amazon EC2 User Guide for Linux Instances</i>.
+     *        </p>
      *        <p>
      *        If you specify the <code>ClassicLinkVPCId</code> parameter, you must specify this parameter.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -756,22 +749,24 @@ public class CreateLaunchConfigurationRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
+     * <i>EC2-Classic retires on August 15, 2022. This parameter is not supported after that date.</i>
+     * </p>
+     * <p>
      * The IDs of one or more security groups for the specified ClassicLink-enabled VPC. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-classiclink.html">ClassicLink</a> in the <i>Amazon
-     * EC2 User Guide for Linux Instances</i> and <a
-     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-in-vpc.html#as-ClassicLink">Linking EC2-Classic
-     * instances to a VPC</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     * EC2 User Guide for Linux Instances</i>.
      * </p>
      * <p>
      * If you specify the <code>ClassicLinkVPCId</code> parameter, you must specify this parameter.
      * </p>
      * 
      * @param classicLinkVPCSecurityGroups
+     *        <i>EC2-Classic retires on August 15, 2022. This parameter is not supported after that date.</i> </p>
+     *        <p>
      *        The IDs of one or more security groups for the specified ClassicLink-enabled VPC. For more information,
      *        see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-classiclink.html">ClassicLink</a> in
-     *        the <i>Amazon EC2 User Guide for Linux Instances</i> and <a
-     *        href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-in-vpc.html#as-ClassicLink">Linking
-     *        EC2-Classic instances to a VPC</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.</p>
+     *        the <i>Amazon EC2 User Guide for Linux Instances</i>.
+     *        </p>
      *        <p>
      *        If you specify the <code>ClassicLinkVPCId</code> parameter, you must specify this parameter.
      * @return Returns a reference to this object so that method calls can be chained together.

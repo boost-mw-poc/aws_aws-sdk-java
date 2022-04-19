@@ -27,9 +27,11 @@ public class ImportKeyMaterialRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The identifier of the symmetric KMS key that receives the imported key material. The KMS key's
-     * <code>Origin</code> must be <code>EXTERNAL</code>. This must be the same KMS key specified in the
-     * <code>KeyID</code> parameter of the corresponding <a>GetParametersForImport</a> request.
+     * The identifier of the symmetric encryption KMS key that receives the imported key material. This must be the same
+     * KMS key specified in the <code>KeyID</code> parameter of the corresponding <a>GetParametersForImport</a> request.
+     * The <code>Origin</code> of the KMS key must be <code>EXTERNAL</code>. You cannot perform this operation on an
+     * asymmetric KMS key, an HMAC KMS key, a KMS key in a custom key store, or on a KMS key in a different Amazon Web
+     * Services account
      * </p>
      * <p>
      * Specify the key ID or key ARN of the KMS key.
@@ -88,9 +90,11 @@ public class ImportKeyMaterialRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The identifier of the symmetric KMS key that receives the imported key material. The KMS key's
-     * <code>Origin</code> must be <code>EXTERNAL</code>. This must be the same KMS key specified in the
-     * <code>KeyID</code> parameter of the corresponding <a>GetParametersForImport</a> request.
+     * The identifier of the symmetric encryption KMS key that receives the imported key material. This must be the same
+     * KMS key specified in the <code>KeyID</code> parameter of the corresponding <a>GetParametersForImport</a> request.
+     * The <code>Origin</code> of the KMS key must be <code>EXTERNAL</code>. You cannot perform this operation on an
+     * asymmetric KMS key, an HMAC KMS key, a KMS key in a custom key store, or on a KMS key in a different Amazon Web
+     * Services account
      * </p>
      * <p>
      * Specify the key ID or key ARN of the KMS key.
@@ -115,9 +119,11 @@ public class ImportKeyMaterialRequest extends com.amazonaws.AmazonWebServiceRequ
      * </p>
      * 
      * @param keyId
-     *        The identifier of the symmetric KMS key that receives the imported key material. The KMS key's
-     *        <code>Origin</code> must be <code>EXTERNAL</code>. This must be the same KMS key specified in the
-     *        <code>KeyID</code> parameter of the corresponding <a>GetParametersForImport</a> request.</p>
+     *        The identifier of the symmetric encryption KMS key that receives the imported key material. This must be
+     *        the same KMS key specified in the <code>KeyID</code> parameter of the corresponding
+     *        <a>GetParametersForImport</a> request. The <code>Origin</code> of the KMS key must be
+     *        <code>EXTERNAL</code>. You cannot perform this operation on an asymmetric KMS key, an HMAC KMS key, a KMS
+     *        key in a custom key store, or on a KMS key in a different Amazon Web Services account</p>
      *        <p>
      *        Specify the key ID or key ARN of the KMS key.
      *        </p>
@@ -146,9 +152,11 @@ public class ImportKeyMaterialRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The identifier of the symmetric KMS key that receives the imported key material. The KMS key's
-     * <code>Origin</code> must be <code>EXTERNAL</code>. This must be the same KMS key specified in the
-     * <code>KeyID</code> parameter of the corresponding <a>GetParametersForImport</a> request.
+     * The identifier of the symmetric encryption KMS key that receives the imported key material. This must be the same
+     * KMS key specified in the <code>KeyID</code> parameter of the corresponding <a>GetParametersForImport</a> request.
+     * The <code>Origin</code> of the KMS key must be <code>EXTERNAL</code>. You cannot perform this operation on an
+     * asymmetric KMS key, an HMAC KMS key, a KMS key in a custom key store, or on a KMS key in a different Amazon Web
+     * Services account
      * </p>
      * <p>
      * Specify the key ID or key ARN of the KMS key.
@@ -172,9 +180,11 @@ public class ImportKeyMaterialRequest extends com.amazonaws.AmazonWebServiceRequ
      * To get the key ID and key ARN for a KMS key, use <a>ListKeys</a> or <a>DescribeKey</a>.
      * </p>
      * 
-     * @return The identifier of the symmetric KMS key that receives the imported key material. The KMS key's
-     *         <code>Origin</code> must be <code>EXTERNAL</code>. This must be the same KMS key specified in the
-     *         <code>KeyID</code> parameter of the corresponding <a>GetParametersForImport</a> request.</p>
+     * @return The identifier of the symmetric encryption KMS key that receives the imported key material. This must be
+     *         the same KMS key specified in the <code>KeyID</code> parameter of the corresponding
+     *         <a>GetParametersForImport</a> request. The <code>Origin</code> of the KMS key must be
+     *         <code>EXTERNAL</code>. You cannot perform this operation on an asymmetric KMS key, an HMAC KMS key, a KMS
+     *         key in a custom key store, or on a KMS key in a different Amazon Web Services account</p>
      *         <p>
      *         Specify the key ID or key ARN of the KMS key.
      *         </p>
@@ -203,9 +213,11 @@ public class ImportKeyMaterialRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The identifier of the symmetric KMS key that receives the imported key material. The KMS key's
-     * <code>Origin</code> must be <code>EXTERNAL</code>. This must be the same KMS key specified in the
-     * <code>KeyID</code> parameter of the corresponding <a>GetParametersForImport</a> request.
+     * The identifier of the symmetric encryption KMS key that receives the imported key material. This must be the same
+     * KMS key specified in the <code>KeyID</code> parameter of the corresponding <a>GetParametersForImport</a> request.
+     * The <code>Origin</code> of the KMS key must be <code>EXTERNAL</code>. You cannot perform this operation on an
+     * asymmetric KMS key, an HMAC KMS key, a KMS key in a custom key store, or on a KMS key in a different Amazon Web
+     * Services account
      * </p>
      * <p>
      * Specify the key ID or key ARN of the KMS key.
@@ -230,9 +242,11 @@ public class ImportKeyMaterialRequest extends com.amazonaws.AmazonWebServiceRequ
      * </p>
      * 
      * @param keyId
-     *        The identifier of the symmetric KMS key that receives the imported key material. The KMS key's
-     *        <code>Origin</code> must be <code>EXTERNAL</code>. This must be the same KMS key specified in the
-     *        <code>KeyID</code> parameter of the corresponding <a>GetParametersForImport</a> request.</p>
+     *        The identifier of the symmetric encryption KMS key that receives the imported key material. This must be
+     *        the same KMS key specified in the <code>KeyID</code> parameter of the corresponding
+     *        <a>GetParametersForImport</a> request. The <code>Origin</code> of the KMS key must be
+     *        <code>EXTERNAL</code>. You cannot perform this operation on an asymmetric KMS key, an HMAC KMS key, a KMS
+     *        key in a custom key store, or on a KMS key in a different Amazon Web Services account</p>
      *        <p>
      *        Specify the key ID or key ARN of the KMS key.
      *        </p>

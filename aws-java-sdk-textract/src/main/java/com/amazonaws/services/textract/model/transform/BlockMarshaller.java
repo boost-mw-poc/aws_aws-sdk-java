@@ -56,6 +56,8 @@ public class BlockMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SelectionStatus").build();
     private static final MarshallingInfo<Integer> PAGE_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Page").build();
+    private static final MarshallingInfo<StructuredPojo> QUERY_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Query").build();
 
     private static final BlockMarshaller instance = new BlockMarshaller();
 
@@ -87,6 +89,7 @@ public class BlockMarshaller {
             protocolMarshaller.marshall(block.getEntityTypes(), ENTITYTYPES_BINDING);
             protocolMarshaller.marshall(block.getSelectionStatus(), SELECTIONSTATUS_BINDING);
             protocolMarshaller.marshall(block.getPage(), PAGE_BINDING);
+            protocolMarshaller.marshall(block.getQuery(), QUERY_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -214,6 +214,23 @@ public class UpdateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<TargetLocation> targetLocations;
+    /**
+     * <p>
+     * Number of days to wait after the scheduled day to run an association. For example, if you specified a cron
+     * schedule of <code>cron(0 0 ? * THU#2 *)</code>, you could specify an offset of 3 to run the association each
+     * Sunday after the second Thursday of the month. For more information about cron schedules for associations, see <a
+     * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/reference-cron-and-rate-expressions.html">
+     * Reference: Cron and rate expressions for Systems Manager</a> in the <i>Amazon Web Services Systems Manager User
+     * Guide</i>.
+     * </p>
+     * <note>
+     * <p>
+     * To use offsets, you must specify the <code>ApplyOnlyAtCronInterval</code> parameter. This option tells the system
+     * not to run an association immediately after you create it.
+     * </p>
+     * </note>
+     */
+    private Integer scheduleOffset;
 
     /**
      * <p>
@@ -1649,6 +1666,109 @@ public class UpdateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
     }
 
     /**
+     * <p>
+     * Number of days to wait after the scheduled day to run an association. For example, if you specified a cron
+     * schedule of <code>cron(0 0 ? * THU#2 *)</code>, you could specify an offset of 3 to run the association each
+     * Sunday after the second Thursday of the month. For more information about cron schedules for associations, see <a
+     * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/reference-cron-and-rate-expressions.html">
+     * Reference: Cron and rate expressions for Systems Manager</a> in the <i>Amazon Web Services Systems Manager User
+     * Guide</i>.
+     * </p>
+     * <note>
+     * <p>
+     * To use offsets, you must specify the <code>ApplyOnlyAtCronInterval</code> parameter. This option tells the system
+     * not to run an association immediately after you create it.
+     * </p>
+     * </note>
+     * 
+     * @param scheduleOffset
+     *        Number of days to wait after the scheduled day to run an association. For example, if you specified a cron
+     *        schedule of <code>cron(0 0 ? * THU#2 *)</code>, you could specify an offset of 3 to run the association
+     *        each Sunday after the second Thursday of the month. For more information about cron schedules for
+     *        associations, see <a href=
+     *        "https://docs.aws.amazon.com/systems-manager/latest/userguide/reference-cron-and-rate-expressions.html"
+     *        >Reference: Cron and rate expressions for Systems Manager</a> in the <i>Amazon Web Services Systems
+     *        Manager User Guide</i>. </p> <note>
+     *        <p>
+     *        To use offsets, you must specify the <code>ApplyOnlyAtCronInterval</code> parameter. This option tells the
+     *        system not to run an association immediately after you create it.
+     *        </p>
+     */
+
+    public void setScheduleOffset(Integer scheduleOffset) {
+        this.scheduleOffset = scheduleOffset;
+    }
+
+    /**
+     * <p>
+     * Number of days to wait after the scheduled day to run an association. For example, if you specified a cron
+     * schedule of <code>cron(0 0 ? * THU#2 *)</code>, you could specify an offset of 3 to run the association each
+     * Sunday after the second Thursday of the month. For more information about cron schedules for associations, see <a
+     * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/reference-cron-and-rate-expressions.html">
+     * Reference: Cron and rate expressions for Systems Manager</a> in the <i>Amazon Web Services Systems Manager User
+     * Guide</i>.
+     * </p>
+     * <note>
+     * <p>
+     * To use offsets, you must specify the <code>ApplyOnlyAtCronInterval</code> parameter. This option tells the system
+     * not to run an association immediately after you create it.
+     * </p>
+     * </note>
+     * 
+     * @return Number of days to wait after the scheduled day to run an association. For example, if you specified a
+     *         cron schedule of <code>cron(0 0 ? * THU#2 *)</code>, you could specify an offset of 3 to run the
+     *         association each Sunday after the second Thursday of the month. For more information about cron schedules
+     *         for associations, see <a href=
+     *         "https://docs.aws.amazon.com/systems-manager/latest/userguide/reference-cron-and-rate-expressions.html"
+     *         >Reference: Cron and rate expressions for Systems Manager</a> in the <i>Amazon Web Services Systems
+     *         Manager User Guide</i>. </p> <note>
+     *         <p>
+     *         To use offsets, you must specify the <code>ApplyOnlyAtCronInterval</code> parameter. This option tells
+     *         the system not to run an association immediately after you create it.
+     *         </p>
+     */
+
+    public Integer getScheduleOffset() {
+        return this.scheduleOffset;
+    }
+
+    /**
+     * <p>
+     * Number of days to wait after the scheduled day to run an association. For example, if you specified a cron
+     * schedule of <code>cron(0 0 ? * THU#2 *)</code>, you could specify an offset of 3 to run the association each
+     * Sunday after the second Thursday of the month. For more information about cron schedules for associations, see <a
+     * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/reference-cron-and-rate-expressions.html">
+     * Reference: Cron and rate expressions for Systems Manager</a> in the <i>Amazon Web Services Systems Manager User
+     * Guide</i>.
+     * </p>
+     * <note>
+     * <p>
+     * To use offsets, you must specify the <code>ApplyOnlyAtCronInterval</code> parameter. This option tells the system
+     * not to run an association immediately after you create it.
+     * </p>
+     * </note>
+     * 
+     * @param scheduleOffset
+     *        Number of days to wait after the scheduled day to run an association. For example, if you specified a cron
+     *        schedule of <code>cron(0 0 ? * THU#2 *)</code>, you could specify an offset of 3 to run the association
+     *        each Sunday after the second Thursday of the month. For more information about cron schedules for
+     *        associations, see <a href=
+     *        "https://docs.aws.amazon.com/systems-manager/latest/userguide/reference-cron-and-rate-expressions.html"
+     *        >Reference: Cron and rate expressions for Systems Manager</a> in the <i>Amazon Web Services Systems
+     *        Manager User Guide</i>. </p> <note>
+     *        <p>
+     *        To use offsets, you must specify the <code>ApplyOnlyAtCronInterval</code> parameter. This option tells the
+     *        system not to run an association immediately after you create it.
+     *        </p>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateAssociationRequest withScheduleOffset(Integer scheduleOffset) {
+        setScheduleOffset(scheduleOffset);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1693,7 +1813,9 @@ public class UpdateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
         if (getCalendarNames() != null)
             sb.append("CalendarNames: ").append(getCalendarNames()).append(",");
         if (getTargetLocations() != null)
-            sb.append("TargetLocations: ").append(getTargetLocations());
+            sb.append("TargetLocations: ").append(getTargetLocations()).append(",");
+        if (getScheduleOffset() != null)
+            sb.append("ScheduleOffset: ").append(getScheduleOffset());
         sb.append("}");
         return sb.toString();
     }
@@ -1777,6 +1899,10 @@ public class UpdateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
             return false;
         if (other.getTargetLocations() != null && other.getTargetLocations().equals(this.getTargetLocations()) == false)
             return false;
+        if (other.getScheduleOffset() == null ^ this.getScheduleOffset() == null)
+            return false;
+        if (other.getScheduleOffset() != null && other.getScheduleOffset().equals(this.getScheduleOffset()) == false)
+            return false;
         return true;
     }
 
@@ -1802,6 +1928,7 @@ public class UpdateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
         hashCode = prime * hashCode + ((getApplyOnlyAtCronInterval() == null) ? 0 : getApplyOnlyAtCronInterval().hashCode());
         hashCode = prime * hashCode + ((getCalendarNames() == null) ? 0 : getCalendarNames().hashCode());
         hashCode = prime * hashCode + ((getTargetLocations() == null) ? 0 : getTargetLocations().hashCode());
+        hashCode = prime * hashCode + ((getScheduleOffset() == null) ? 0 : getScheduleOffset().hashCode());
         return hashCode;
     }
 

@@ -83,8 +83,8 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * For more information about how key state affects the use of a KMS key, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a>
-     * in the <i>Key Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the
+     * <i>Key Management Service Developer Guide</i>.
      * </p>
      */
     private String keyState;
@@ -197,8 +197,8 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * For more information about multi-Region keys, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/multi-region-keys-overview.html">Using multi-Region
-     * keys</a> in the <i>Key Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/multi-region-keys-overview.html">Multi-Region keys in
+     * KMS</a> in the <i>Key Management Service Developer Guide</i>.
      * </p>
      */
     private Boolean multiRegion;
@@ -249,6 +249,15 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private Integer pendingDeletionWindowInDays;
+    /**
+     * <p>
+     * The message authentication code (MAC) algorithm that the HMAC KMS key supports.
+     * </p>
+     * <p>
+     * This value is present only when the <code>KeyUsage</code> of the KMS key is <code>GENERATE_VERIFY_MAC</code>.
+     * </p>
+     */
+    private com.amazonaws.internal.SdkInternalList<String> macAlgorithms;
 
     /**
      * <p>
@@ -619,16 +628,16 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * For more information about how key state affects the use of a KMS key, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a>
-     * in the <i>Key Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the
+     * <i>Key Management Service Developer Guide</i>.
      * </p>
      * 
      * @param keyState
      *        The current status of the KMS key.</p>
      *        <p>
      *        For more information about how key state affects the use of a KMS key, see <a
-     *        href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS
-     *        key</a> in the <i>Key Management Service Developer Guide</i>.
+     *        href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in
+     *        the <i>Key Management Service Developer Guide</i>.
      * @see KeyState
      */
 
@@ -642,15 +651,15 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * For more information about how key state affects the use of a KMS key, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a>
-     * in the <i>Key Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the
+     * <i>Key Management Service Developer Guide</i>.
      * </p>
      * 
      * @return The current status of the KMS key.</p>
      *         <p>
      *         For more information about how key state affects the use of a KMS key, see <a
-     *         href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS
-     *         key</a> in the <i>Key Management Service Developer Guide</i>.
+     *         href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in
+     *         the <i>Key Management Service Developer Guide</i>.
      * @see KeyState
      */
 
@@ -664,16 +673,16 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * For more information about how key state affects the use of a KMS key, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a>
-     * in the <i>Key Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the
+     * <i>Key Management Service Developer Guide</i>.
      * </p>
      * 
      * @param keyState
      *        The current status of the KMS key.</p>
      *        <p>
      *        For more information about how key state affects the use of a KMS key, see <a
-     *        href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS
-     *        key</a> in the <i>Key Management Service Developer Guide</i>.
+     *        href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in
+     *        the <i>Key Management Service Developer Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see KeyState
      */
@@ -689,16 +698,16 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * For more information about how key state affects the use of a KMS key, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a>
-     * in the <i>Key Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the
+     * <i>Key Management Service Developer Guide</i>.
      * </p>
      * 
      * @param keyState
      *        The current status of the KMS key.</p>
      *        <p>
      *        For more information about how key state affects the use of a KMS key, see <a
-     *        href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS
-     *        key</a> in the <i>Key Management Service Developer Guide</i>.
+     *        href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in
+     *        the <i>Key Management Service Developer Guide</i>.
      * @see KeyState
      */
 
@@ -712,16 +721,16 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * For more information about how key state affects the use of a KMS key, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a>
-     * in the <i>Key Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the
+     * <i>Key Management Service Developer Guide</i>.
      * </p>
      * 
      * @param keyState
      *        The current status of the KMS key.</p>
      *        <p>
      *        For more information about how key state affects the use of a KMS key, see <a
-     *        href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS
-     *        key</a> in the <i>Key Management Service Developer Guide</i>.
+     *        href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in
+     *        the <i>Key Management Service Developer Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see KeyState
      */
@@ -1739,8 +1748,8 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * For more information about multi-Region keys, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/multi-region-keys-overview.html">Using multi-Region
-     * keys</a> in the <i>Key Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/multi-region-keys-overview.html">Multi-Region keys in
+     * KMS</a> in the <i>Key Management Service Developer Guide</i>.
      * </p>
      * 
      * @param multiRegion
@@ -1749,8 +1758,8 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
      *        regional KMS keys.</p>
      *        <p>
      *        For more information about multi-Region keys, see <a
-     *        href="https://docs.aws.amazon.com/kms/latest/developerguide/multi-region-keys-overview.html">Using
-     *        multi-Region keys</a> in the <i>Key Management Service Developer Guide</i>.
+     *        href="https://docs.aws.amazon.com/kms/latest/developerguide/multi-region-keys-overview.html">Multi-Region
+     *        keys in KMS</a> in the <i>Key Management Service Developer Guide</i>.
      */
 
     public void setMultiRegion(Boolean multiRegion) {
@@ -1765,8 +1774,8 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * For more information about multi-Region keys, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/multi-region-keys-overview.html">Using multi-Region
-     * keys</a> in the <i>Key Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/multi-region-keys-overview.html">Multi-Region keys in
+     * KMS</a> in the <i>Key Management Service Developer Guide</i>.
      * </p>
      * 
      * @return Indicates whether the KMS key is a multi-Region (<code>True</code>) or regional (<code>False</code>) key.
@@ -1774,8 +1783,8 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
      *         regional KMS keys.</p>
      *         <p>
      *         For more information about multi-Region keys, see <a
-     *         href="https://docs.aws.amazon.com/kms/latest/developerguide/multi-region-keys-overview.html">Using
-     *         multi-Region keys</a> in the <i>Key Management Service Developer Guide</i>.
+     *         href="https://docs.aws.amazon.com/kms/latest/developerguide/multi-region-keys-overview.html">Multi-Region
+     *         keys in KMS</a> in the <i>Key Management Service Developer Guide</i>.
      */
 
     public Boolean getMultiRegion() {
@@ -1790,8 +1799,8 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * For more information about multi-Region keys, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/multi-region-keys-overview.html">Using multi-Region
-     * keys</a> in the <i>Key Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/multi-region-keys-overview.html">Multi-Region keys in
+     * KMS</a> in the <i>Key Management Service Developer Guide</i>.
      * </p>
      * 
      * @param multiRegion
@@ -1800,8 +1809,8 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
      *        regional KMS keys.</p>
      *        <p>
      *        For more information about multi-Region keys, see <a
-     *        href="https://docs.aws.amazon.com/kms/latest/developerguide/multi-region-keys-overview.html">Using
-     *        multi-Region keys</a> in the <i>Key Management Service Developer Guide</i>.
+     *        href="https://docs.aws.amazon.com/kms/latest/developerguide/multi-region-keys-overview.html">Multi-Region
+     *        keys in KMS</a> in the <i>Key Management Service Developer Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1818,8 +1827,8 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * For more information about multi-Region keys, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/multi-region-keys-overview.html">Using multi-Region
-     * keys</a> in the <i>Key Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/multi-region-keys-overview.html">Multi-Region keys in
+     * KMS</a> in the <i>Key Management Service Developer Guide</i>.
      * </p>
      * 
      * @return Indicates whether the KMS key is a multi-Region (<code>True</code>) or regional (<code>False</code>) key.
@@ -1827,8 +1836,8 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
      *         regional KMS keys.</p>
      *         <p>
      *         For more information about multi-Region keys, see <a
-     *         href="https://docs.aws.amazon.com/kms/latest/developerguide/multi-region-keys-overview.html">Using
-     *         multi-Region keys</a> in the <i>Key Management Service Developer Guide</i>.
+     *         href="https://docs.aws.amazon.com/kms/latest/developerguide/multi-region-keys-overview.html">Multi-Region
+     *         keys in KMS</a> in the <i>Key Management Service Developer Guide</i>.
      */
 
     public Boolean isMultiRegion() {
@@ -2120,6 +2129,137 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The message authentication code (MAC) algorithm that the HMAC KMS key supports.
+     * </p>
+     * <p>
+     * This value is present only when the <code>KeyUsage</code> of the KMS key is <code>GENERATE_VERIFY_MAC</code>.
+     * </p>
+     * 
+     * @return The message authentication code (MAC) algorithm that the HMAC KMS key supports.</p>
+     *         <p>
+     *         This value is present only when the <code>KeyUsage</code> of the KMS key is
+     *         <code>GENERATE_VERIFY_MAC</code>.
+     * @see MacAlgorithmSpec
+     */
+
+    public java.util.List<String> getMacAlgorithms() {
+        if (macAlgorithms == null) {
+            macAlgorithms = new com.amazonaws.internal.SdkInternalList<String>();
+        }
+        return macAlgorithms;
+    }
+
+    /**
+     * <p>
+     * The message authentication code (MAC) algorithm that the HMAC KMS key supports.
+     * </p>
+     * <p>
+     * This value is present only when the <code>KeyUsage</code> of the KMS key is <code>GENERATE_VERIFY_MAC</code>.
+     * </p>
+     * 
+     * @param macAlgorithms
+     *        The message authentication code (MAC) algorithm that the HMAC KMS key supports.</p>
+     *        <p>
+     *        This value is present only when the <code>KeyUsage</code> of the KMS key is
+     *        <code>GENERATE_VERIFY_MAC</code>.
+     * @see MacAlgorithmSpec
+     */
+
+    public void setMacAlgorithms(java.util.Collection<String> macAlgorithms) {
+        if (macAlgorithms == null) {
+            this.macAlgorithms = null;
+            return;
+        }
+
+        this.macAlgorithms = new com.amazonaws.internal.SdkInternalList<String>(macAlgorithms);
+    }
+
+    /**
+     * <p>
+     * The message authentication code (MAC) algorithm that the HMAC KMS key supports.
+     * </p>
+     * <p>
+     * This value is present only when the <code>KeyUsage</code> of the KMS key is <code>GENERATE_VERIFY_MAC</code>.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setMacAlgorithms(java.util.Collection)} or {@link #withMacAlgorithms(java.util.Collection)} if you want
+     * to override the existing values.
+     * </p>
+     * 
+     * @param macAlgorithms
+     *        The message authentication code (MAC) algorithm that the HMAC KMS key supports.</p>
+     *        <p>
+     *        This value is present only when the <code>KeyUsage</code> of the KMS key is
+     *        <code>GENERATE_VERIFY_MAC</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see MacAlgorithmSpec
+     */
+
+    public KeyMetadata withMacAlgorithms(String... macAlgorithms) {
+        if (this.macAlgorithms == null) {
+            setMacAlgorithms(new com.amazonaws.internal.SdkInternalList<String>(macAlgorithms.length));
+        }
+        for (String ele : macAlgorithms) {
+            this.macAlgorithms.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The message authentication code (MAC) algorithm that the HMAC KMS key supports.
+     * </p>
+     * <p>
+     * This value is present only when the <code>KeyUsage</code> of the KMS key is <code>GENERATE_VERIFY_MAC</code>.
+     * </p>
+     * 
+     * @param macAlgorithms
+     *        The message authentication code (MAC) algorithm that the HMAC KMS key supports.</p>
+     *        <p>
+     *        This value is present only when the <code>KeyUsage</code> of the KMS key is
+     *        <code>GENERATE_VERIFY_MAC</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see MacAlgorithmSpec
+     */
+
+    public KeyMetadata withMacAlgorithms(java.util.Collection<String> macAlgorithms) {
+        setMacAlgorithms(macAlgorithms);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The message authentication code (MAC) algorithm that the HMAC KMS key supports.
+     * </p>
+     * <p>
+     * This value is present only when the <code>KeyUsage</code> of the KMS key is <code>GENERATE_VERIFY_MAC</code>.
+     * </p>
+     * 
+     * @param macAlgorithms
+     *        The message authentication code (MAC) algorithm that the HMAC KMS key supports.</p>
+     *        <p>
+     *        This value is present only when the <code>KeyUsage</code> of the KMS key is
+     *        <code>GENERATE_VERIFY_MAC</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see MacAlgorithmSpec
+     */
+
+    public KeyMetadata withMacAlgorithms(MacAlgorithmSpec... macAlgorithms) {
+        com.amazonaws.internal.SdkInternalList<String> macAlgorithmsCopy = new com.amazonaws.internal.SdkInternalList<String>(macAlgorithms.length);
+        for (MacAlgorithmSpec value : macAlgorithms) {
+            macAlgorithmsCopy.add(value.toString());
+        }
+        if (getMacAlgorithms() == null) {
+            setMacAlgorithms(macAlgorithmsCopy);
+        } else {
+            getMacAlgorithms().addAll(macAlgorithmsCopy);
+        }
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -2174,7 +2314,9 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
         if (getMultiRegionConfiguration() != null)
             sb.append("MultiRegionConfiguration: ").append(getMultiRegionConfiguration()).append(",");
         if (getPendingDeletionWindowInDays() != null)
-            sb.append("PendingDeletionWindowInDays: ").append(getPendingDeletionWindowInDays());
+            sb.append("PendingDeletionWindowInDays: ").append(getPendingDeletionWindowInDays()).append(",");
+        if (getMacAlgorithms() != null)
+            sb.append("MacAlgorithms: ").append(getMacAlgorithms());
         sb.append("}");
         return sb.toString();
     }
@@ -2277,6 +2419,10 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getPendingDeletionWindowInDays() != null && other.getPendingDeletionWindowInDays().equals(this.getPendingDeletionWindowInDays()) == false)
             return false;
+        if (other.getMacAlgorithms() == null ^ this.getMacAlgorithms() == null)
+            return false;
+        if (other.getMacAlgorithms() != null && other.getMacAlgorithms().equals(this.getMacAlgorithms()) == false)
+            return false;
         return true;
     }
 
@@ -2307,6 +2453,7 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getMultiRegion() == null) ? 0 : getMultiRegion().hashCode());
         hashCode = prime * hashCode + ((getMultiRegionConfiguration() == null) ? 0 : getMultiRegionConfiguration().hashCode());
         hashCode = prime * hashCode + ((getPendingDeletionWindowInDays() == null) ? 0 : getPendingDeletionWindowInDays().hashCode());
+        hashCode = prime * hashCode + ((getMacAlgorithms() == null) ? 0 : getMacAlgorithms().hashCode());
         return hashCode;
     }
 

@@ -339,6 +339,19 @@ public class AbstractAWSKMSAsync extends AbstractAWSKMS implements AWSKMSAsync {
     }
 
     @Override
+    public java.util.concurrent.Future<GenerateMacResult> generateMacAsync(GenerateMacRequest request) {
+
+        return generateMacAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GenerateMacResult> generateMacAsync(GenerateMacRequest request,
+            com.amazonaws.handlers.AsyncHandler<GenerateMacRequest, GenerateMacResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GenerateRandomResult> generateRandomAsync(GenerateRandomRequest request) {
 
         return generateRandomAsync(request, null);
@@ -762,6 +775,19 @@ public class AbstractAWSKMSAsync extends AbstractAWSKMS implements AWSKMSAsync {
     @Override
     public java.util.concurrent.Future<VerifyResult> verifyAsync(VerifyRequest request,
             com.amazonaws.handlers.AsyncHandler<VerifyRequest, VerifyResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<VerifyMacResult> verifyMacAsync(VerifyMacRequest request) {
+
+        return verifyMacAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<VerifyMacResult> verifyMacAsync(VerifyMacRequest request,
+            com.amazonaws.handlers.AsyncHandler<VerifyMacRequest, VerifyMacResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

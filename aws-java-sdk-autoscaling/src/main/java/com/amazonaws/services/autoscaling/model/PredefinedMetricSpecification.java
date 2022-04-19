@@ -38,20 +38,20 @@ public class PredefinedMetricSpecification implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>ASGAverageNetworkIn</code> - Average number of bytes received (per instance per minute) for the Auto
+     * <code>ASGAverageNetworkIn</code> - Average number of bytes received on all network interfaces by the Auto Scaling
+     * group.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ASGAverageNetworkOut</code> - Average number of bytes sent out on all network interfaces by the Auto
      * Scaling group.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>ASGAverageNetworkOut</code> - Average number of bytes sent out (per instance per minute) for the Auto
+     * <code>ALBRequestCountPerTarget</code> - Average Application Load Balancer request count per target for your Auto
      * Scaling group.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>ALBRequestCountPerTarget</code> - Average Application Load Balancer request count (per target per minute)
-     * for your Auto Scaling group.
      * </p>
      * </li>
      * </ul>
@@ -107,20 +107,20 @@ public class PredefinedMetricSpecification implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>ASGAverageNetworkIn</code> - Average number of bytes received (per instance per minute) for the Auto
+     * <code>ASGAverageNetworkIn</code> - Average number of bytes received on all network interfaces by the Auto Scaling
+     * group.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ASGAverageNetworkOut</code> - Average number of bytes sent out on all network interfaces by the Auto
      * Scaling group.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>ASGAverageNetworkOut</code> - Average number of bytes sent out (per instance per minute) for the Auto
+     * <code>ALBRequestCountPerTarget</code> - Average Application Load Balancer request count per target for your Auto
      * Scaling group.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>ALBRequestCountPerTarget</code> - Average Application Load Balancer request count (per target per minute)
-     * for your Auto Scaling group.
      * </p>
      * </li>
      * </ul>
@@ -135,20 +135,20 @@ public class PredefinedMetricSpecification implements Serializable, Cloneable {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>ASGAverageNetworkIn</code> - Average number of bytes received (per instance per minute) for the Auto
+     *        <code>ASGAverageNetworkIn</code> - Average number of bytes received on all network interfaces by the Auto
      *        Scaling group.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>ASGAverageNetworkOut</code> - Average number of bytes sent out (per instance per minute) for the
-     *        Auto Scaling group.
+     *        <code>ASGAverageNetworkOut</code> - Average number of bytes sent out on all network interfaces by the Auto
+     *        Scaling group.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>ALBRequestCountPerTarget</code> - Average Application Load Balancer request count (per target per
-     *        minute) for your Auto Scaling group.
+     *        <code>ALBRequestCountPerTarget</code> - Average Application Load Balancer request count per target for
+     *        your Auto Scaling group.
      *        </p>
      *        </li>
      * @see MetricType
@@ -170,20 +170,20 @@ public class PredefinedMetricSpecification implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>ASGAverageNetworkIn</code> - Average number of bytes received (per instance per minute) for the Auto
+     * <code>ASGAverageNetworkIn</code> - Average number of bytes received on all network interfaces by the Auto Scaling
+     * group.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ASGAverageNetworkOut</code> - Average number of bytes sent out on all network interfaces by the Auto
      * Scaling group.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>ASGAverageNetworkOut</code> - Average number of bytes sent out (per instance per minute) for the Auto
+     * <code>ALBRequestCountPerTarget</code> - Average Application Load Balancer request count per target for your Auto
      * Scaling group.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>ALBRequestCountPerTarget</code> - Average Application Load Balancer request count (per target per minute)
-     * for your Auto Scaling group.
      * </p>
      * </li>
      * </ul>
@@ -197,20 +197,20 @@ public class PredefinedMetricSpecification implements Serializable, Cloneable {
      *         </li>
      *         <li>
      *         <p>
-     *         <code>ASGAverageNetworkIn</code> - Average number of bytes received (per instance per minute) for the
+     *         <code>ASGAverageNetworkIn</code> - Average number of bytes received on all network interfaces by the Auto
+     *         Scaling group.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>ASGAverageNetworkOut</code> - Average number of bytes sent out on all network interfaces by the
      *         Auto Scaling group.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>ASGAverageNetworkOut</code> - Average number of bytes sent out (per instance per minute) for the
-     *         Auto Scaling group.
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
-     *         <code>ALBRequestCountPerTarget</code> - Average Application Load Balancer request count (per target per
-     *         minute) for your Auto Scaling group.
+     *         <code>ALBRequestCountPerTarget</code> - Average Application Load Balancer request count per target for
+     *         your Auto Scaling group.
      *         </p>
      *         </li>
      * @see MetricType
@@ -232,20 +232,20 @@ public class PredefinedMetricSpecification implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>ASGAverageNetworkIn</code> - Average number of bytes received (per instance per minute) for the Auto
+     * <code>ASGAverageNetworkIn</code> - Average number of bytes received on all network interfaces by the Auto Scaling
+     * group.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ASGAverageNetworkOut</code> - Average number of bytes sent out on all network interfaces by the Auto
      * Scaling group.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>ASGAverageNetworkOut</code> - Average number of bytes sent out (per instance per minute) for the Auto
+     * <code>ALBRequestCountPerTarget</code> - Average Application Load Balancer request count per target for your Auto
      * Scaling group.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>ALBRequestCountPerTarget</code> - Average Application Load Balancer request count (per target per minute)
-     * for your Auto Scaling group.
      * </p>
      * </li>
      * </ul>
@@ -260,20 +260,20 @@ public class PredefinedMetricSpecification implements Serializable, Cloneable {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>ASGAverageNetworkIn</code> - Average number of bytes received (per instance per minute) for the Auto
+     *        <code>ASGAverageNetworkIn</code> - Average number of bytes received on all network interfaces by the Auto
      *        Scaling group.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>ASGAverageNetworkOut</code> - Average number of bytes sent out (per instance per minute) for the
-     *        Auto Scaling group.
+     *        <code>ASGAverageNetworkOut</code> - Average number of bytes sent out on all network interfaces by the Auto
+     *        Scaling group.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>ALBRequestCountPerTarget</code> - Average Application Load Balancer request count (per target per
-     *        minute) for your Auto Scaling group.
+     *        <code>ALBRequestCountPerTarget</code> - Average Application Load Balancer request count per target for
+     *        your Auto Scaling group.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -297,20 +297,20 @@ public class PredefinedMetricSpecification implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>ASGAverageNetworkIn</code> - Average number of bytes received (per instance per minute) for the Auto
+     * <code>ASGAverageNetworkIn</code> - Average number of bytes received on all network interfaces by the Auto Scaling
+     * group.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ASGAverageNetworkOut</code> - Average number of bytes sent out on all network interfaces by the Auto
      * Scaling group.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>ASGAverageNetworkOut</code> - Average number of bytes sent out (per instance per minute) for the Auto
+     * <code>ALBRequestCountPerTarget</code> - Average Application Load Balancer request count per target for your Auto
      * Scaling group.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>ALBRequestCountPerTarget</code> - Average Application Load Balancer request count (per target per minute)
-     * for your Auto Scaling group.
      * </p>
      * </li>
      * </ul>
@@ -325,20 +325,20 @@ public class PredefinedMetricSpecification implements Serializable, Cloneable {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>ASGAverageNetworkIn</code> - Average number of bytes received (per instance per minute) for the Auto
+     *        <code>ASGAverageNetworkIn</code> - Average number of bytes received on all network interfaces by the Auto
      *        Scaling group.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>ASGAverageNetworkOut</code> - Average number of bytes sent out (per instance per minute) for the
-     *        Auto Scaling group.
+     *        <code>ASGAverageNetworkOut</code> - Average number of bytes sent out on all network interfaces by the Auto
+     *        Scaling group.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>ALBRequestCountPerTarget</code> - Average Application Load Balancer request count (per target per
-     *        minute) for your Auto Scaling group.
+     *        <code>ALBRequestCountPerTarget</code> - Average Application Load Balancer request count per target for
+     *        your Auto Scaling group.
      *        </p>
      *        </li>
      * @see MetricType
@@ -360,20 +360,20 @@ public class PredefinedMetricSpecification implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>ASGAverageNetworkIn</code> - Average number of bytes received (per instance per minute) for the Auto
+     * <code>ASGAverageNetworkIn</code> - Average number of bytes received on all network interfaces by the Auto Scaling
+     * group.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ASGAverageNetworkOut</code> - Average number of bytes sent out on all network interfaces by the Auto
      * Scaling group.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>ASGAverageNetworkOut</code> - Average number of bytes sent out (per instance per minute) for the Auto
+     * <code>ALBRequestCountPerTarget</code> - Average Application Load Balancer request count per target for your Auto
      * Scaling group.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>ALBRequestCountPerTarget</code> - Average Application Load Balancer request count (per target per minute)
-     * for your Auto Scaling group.
      * </p>
      * </li>
      * </ul>
@@ -388,20 +388,20 @@ public class PredefinedMetricSpecification implements Serializable, Cloneable {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>ASGAverageNetworkIn</code> - Average number of bytes received (per instance per minute) for the Auto
+     *        <code>ASGAverageNetworkIn</code> - Average number of bytes received on all network interfaces by the Auto
      *        Scaling group.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>ASGAverageNetworkOut</code> - Average number of bytes sent out (per instance per minute) for the
-     *        Auto Scaling group.
+     *        <code>ASGAverageNetworkOut</code> - Average number of bytes sent out on all network interfaces by the Auto
+     *        Scaling group.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>ALBRequestCountPerTarget</code> - Average Application Load Balancer request count (per target per
-     *        minute) for your Auto Scaling group.
+     *        <code>ALBRequestCountPerTarget</code> - Average Application Load Balancer request count per target for
+     *        your Auto Scaling group.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

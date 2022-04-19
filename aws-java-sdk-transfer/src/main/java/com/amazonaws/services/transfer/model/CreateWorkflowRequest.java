@@ -41,22 +41,22 @@ public class CreateWorkflowRequest extends com.amazonaws.AmazonWebServiceRequest
      * <ul>
      * <li>
      * <p>
-     * <i>Copy</i>: copy the file to another location
+     * <i>COPY</i>: copy the file to another location
      * </p>
      * </li>
      * <li>
      * <p>
-     * <i>Custom</i>: custom step with a lambda target
+     * <i>CUSTOM</i>: custom step with a lambda target
      * </p>
      * </li>
      * <li>
      * <p>
-     * <i>Delete</i>: delete the file
+     * <i>DELETE</i>: delete the file
      * </p>
      * </li>
      * <li>
      * <p>
-     * <i>Tag</i>: add a tag to the file
+     * <i>TAG</i>: add a tag to the file
      * </p>
      * </li>
      * </ul>
@@ -141,22 +141,22 @@ public class CreateWorkflowRequest extends com.amazonaws.AmazonWebServiceRequest
      * <ul>
      * <li>
      * <p>
-     * <i>Copy</i>: copy the file to another location
+     * <i>COPY</i>: copy the file to another location
      * </p>
      * </li>
      * <li>
      * <p>
-     * <i>Custom</i>: custom step with a lambda target
+     * <i>CUSTOM</i>: custom step with a lambda target
      * </p>
      * </li>
      * <li>
      * <p>
-     * <i>Delete</i>: delete the file
+     * <i>DELETE</i>: delete the file
      * </p>
      * </li>
      * <li>
      * <p>
-     * <i>Tag</i>: add a tag to the file
+     * <i>TAG</i>: add a tag to the file
      * </p>
      * </li>
      * </ul>
@@ -176,22 +176,22 @@ public class CreateWorkflowRequest extends com.amazonaws.AmazonWebServiceRequest
      *         <ul>
      *         <li>
      *         <p>
-     *         <i>Copy</i>: copy the file to another location
+     *         <i>COPY</i>: copy the file to another location
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <i>Custom</i>: custom step with a lambda target
+     *         <i>CUSTOM</i>: custom step with a lambda target
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <i>Delete</i>: delete the file
+     *         <i>DELETE</i>: delete the file
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <i>Tag</i>: add a tag to the file
+     *         <i>TAG</i>: add a tag to the file
      *         </p>
      *         </li>
      *         </ul>
@@ -218,22 +218,22 @@ public class CreateWorkflowRequest extends com.amazonaws.AmazonWebServiceRequest
      * <ul>
      * <li>
      * <p>
-     * <i>Copy</i>: copy the file to another location
+     * <i>COPY</i>: copy the file to another location
      * </p>
      * </li>
      * <li>
      * <p>
-     * <i>Custom</i>: custom step with a lambda target
+     * <i>CUSTOM</i>: custom step with a lambda target
      * </p>
      * </li>
      * <li>
      * <p>
-     * <i>Delete</i>: delete the file
+     * <i>DELETE</i>: delete the file
      * </p>
      * </li>
      * <li>
      * <p>
-     * <i>Tag</i>: add a tag to the file
+     * <i>TAG</i>: add a tag to the file
      * </p>
      * </li>
      * </ul>
@@ -254,22 +254,22 @@ public class CreateWorkflowRequest extends com.amazonaws.AmazonWebServiceRequest
      *        <ul>
      *        <li>
      *        <p>
-     *        <i>Copy</i>: copy the file to another location
+     *        <i>COPY</i>: copy the file to another location
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <i>Custom</i>: custom step with a lambda target
+     *        <i>CUSTOM</i>: custom step with a lambda target
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <i>Delete</i>: delete the file
+     *        <i>DELETE</i>: delete the file
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <i>Tag</i>: add a tag to the file
+     *        <i>TAG</i>: add a tag to the file
      *        </p>
      *        </li>
      *        </ul>
@@ -301,22 +301,22 @@ public class CreateWorkflowRequest extends com.amazonaws.AmazonWebServiceRequest
      * <ul>
      * <li>
      * <p>
-     * <i>Copy</i>: copy the file to another location
+     * <i>COPY</i>: copy the file to another location
      * </p>
      * </li>
      * <li>
      * <p>
-     * <i>Custom</i>: custom step with a lambda target
+     * <i>CUSTOM</i>: custom step with a lambda target
      * </p>
      * </li>
      * <li>
      * <p>
-     * <i>Delete</i>: delete the file
+     * <i>DELETE</i>: delete the file
      * </p>
      * </li>
      * <li>
      * <p>
-     * <i>Tag</i>: add a tag to the file
+     * <i>TAG</i>: add a tag to the file
      * </p>
      * </li>
      * </ul>
@@ -342,22 +342,22 @@ public class CreateWorkflowRequest extends com.amazonaws.AmazonWebServiceRequest
      *        <ul>
      *        <li>
      *        <p>
-     *        <i>Copy</i>: copy the file to another location
+     *        <i>COPY</i>: copy the file to another location
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <i>Custom</i>: custom step with a lambda target
+     *        <i>CUSTOM</i>: custom step with a lambda target
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <i>Delete</i>: delete the file
+     *        <i>DELETE</i>: delete the file
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <i>Tag</i>: add a tag to the file
+     *        <i>TAG</i>: add a tag to the file
      *        </p>
      *        </li>
      *        </ul>
@@ -391,22 +391,22 @@ public class CreateWorkflowRequest extends com.amazonaws.AmazonWebServiceRequest
      * <ul>
      * <li>
      * <p>
-     * <i>Copy</i>: copy the file to another location
+     * <i>COPY</i>: copy the file to another location
      * </p>
      * </li>
      * <li>
      * <p>
-     * <i>Custom</i>: custom step with a lambda target
+     * <i>CUSTOM</i>: custom step with a lambda target
      * </p>
      * </li>
      * <li>
      * <p>
-     * <i>Delete</i>: delete the file
+     * <i>DELETE</i>: delete the file
      * </p>
      * </li>
      * <li>
      * <p>
-     * <i>Tag</i>: add a tag to the file
+     * <i>TAG</i>: add a tag to the file
      * </p>
      * </li>
      * </ul>
@@ -427,22 +427,22 @@ public class CreateWorkflowRequest extends com.amazonaws.AmazonWebServiceRequest
      *        <ul>
      *        <li>
      *        <p>
-     *        <i>Copy</i>: copy the file to another location
+     *        <i>COPY</i>: copy the file to another location
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <i>Custom</i>: custom step with a lambda target
+     *        <i>CUSTOM</i>: custom step with a lambda target
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <i>Delete</i>: delete the file
+     *        <i>DELETE</i>: delete the file
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <i>Tag</i>: add a tag to the file
+     *        <i>TAG</i>: add a tag to the file
      *        </p>
      *        </li>
      *        </ul>

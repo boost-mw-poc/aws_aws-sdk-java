@@ -49,6 +49,12 @@ import com.amazonaws.services.kms.model.*;
  * We recommend that you use the Amazon Web Services SDKs to make programmatic API calls to KMS.
  * </p>
  * <p>
+ * If you need to use FIPS 140-2 validated cryptographic modules when communicating with Amazon Web Services, use the
+ * FIPS endpoint in your preferred Amazon Web Services Region. For more information about the available FIPS endpoints,
+ * see <a href="https://docs.aws.amazon.com/general/latest/gr/kms.html#kms_region">Service endpoints</a> in the Key
+ * Management Service topic of the <i>Amazon Web Services General Reference</i>.
+ * </p>
+ * <p>
  * Clients must support TLS (Transport Layer Security) 1.0. We recommend TLS 1.2. Clients must also support cipher
  * suites with Perfect Forward Secrecy (PFS) such as Ephemeral Diffie-Hellman (DHE) or Elliptic Curve Ephemeral
  * Diffie-Hellman (ECDHE). Most modern systems such as Java 7 and later support these modes.
@@ -150,8 +156,8 @@ public interface AWSKMSAsync extends AWSKMS {
      * </p>
      * <p>
      * The KMS key that you use for this operation must be in a compatible key state. For details, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a>
-     * in the <i>Key Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the
+     * <i>Key Management Service Developer Guide</i>.
      * </p>
      * <p>
      * <b>Cross-account use</b>: No. You cannot perform this operation on a KMS key in a different Amazon Web Services
@@ -186,8 +192,8 @@ public interface AWSKMSAsync extends AWSKMS {
      * </p>
      * <p>
      * The KMS key that you use for this operation must be in a compatible key state. For details, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a>
-     * in the <i>Key Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the
+     * <i>Key Management Service Developer Guide</i>.
      * </p>
      * <p>
      * <b>Cross-account use</b>: No. You cannot perform this operation on a KMS key in a different Amazon Web Services
@@ -417,8 +423,8 @@ public interface AWSKMSAsync extends AWSKMS {
      * <note>
      * <p>
      * Adding, deleting, or updating an alias can allow or deny permission to the KMS key. For details, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/abac.html">Using ABAC in KMS</a> in the <i>Key
-     * Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/abac.html">ABAC in KMS</a> in the <i>Key Management
+     * Service Developer Guide</i>.
      * </p>
      * </note>
      * <p>
@@ -445,8 +451,8 @@ public interface AWSKMSAsync extends AWSKMS {
      * </p>
      * <p>
      * The KMS key that you use for this operation must be in a compatible key state. For details, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a>
-     * in the <i>Key Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the
+     * <i>Key Management Service Developer Guide</i>.
      * </p>
      * <p>
      * <b>Cross-account use</b>: No. You cannot perform this operation on an alias in a different Amazon Web Services
@@ -512,8 +518,8 @@ public interface AWSKMSAsync extends AWSKMS {
      * <note>
      * <p>
      * Adding, deleting, or updating an alias can allow or deny permission to the KMS key. For details, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/abac.html">Using ABAC in KMS</a> in the <i>Key
-     * Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/abac.html">ABAC in KMS</a> in the <i>Key Management
+     * Service Developer Guide</i>.
      * </p>
      * </note>
      * <p>
@@ -540,8 +546,8 @@ public interface AWSKMSAsync extends AWSKMS {
      * </p>
      * <p>
      * The KMS key that you use for this operation must be in a compatible key state. For details, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a>
-     * in the <i>Key Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the
+     * <i>Key Management Service Developer Guide</i>.
      * </p>
      * <p>
      * <b>Cross-account use</b>: No. You cannot perform this operation on an alias in a different Amazon Web Services
@@ -779,7 +785,7 @@ public interface AWSKMSAsync extends AWSKMS {
      * </p>
      * <p>
      * For detailed information about grants, including grant terminology, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/grants.html">Using grants</a> in the <i> <i>Key
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/grants.html">Grants in KMS</a> in the <i> <i>Key
      * Management Service Developer Guide</i> </i>. For examples of working with grants in several programming
      * languages, see <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/programming-grants.html">Programming grants</a>.
@@ -812,8 +818,8 @@ public interface AWSKMSAsync extends AWSKMS {
      * </ul>
      * <p>
      * The KMS key that you use for this operation must be in a compatible key state. For details, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a>
-     * in the <i>Key Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the
+     * <i>Key Management Service Developer Guide</i>.
      * </p>
      * <p>
      * <b>Cross-account use</b>: Yes. To perform this operation on a KMS key in a different Amazon Web Services account,
@@ -871,7 +877,7 @@ public interface AWSKMSAsync extends AWSKMS {
      * </p>
      * <p>
      * For detailed information about grants, including grant terminology, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/grants.html">Using grants</a> in the <i> <i>Key
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/grants.html">Grants in KMS</a> in the <i> <i>Key
      * Management Service Developer Guide</i> </i>. For examples of working with grants in several programming
      * languages, see <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/programming-grants.html">Programming grants</a>.
@@ -904,8 +910,8 @@ public interface AWSKMSAsync extends AWSKMS {
      * </ul>
      * <p>
      * The KMS key that you use for this operation must be in a compatible key state. For details, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a>
-     * in the <i>Key Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the
+     * <i>Key Management Service Developer Guide</i>.
      * </p>
      * <p>
      * <b>Cross-account use</b>: Yes. To perform this operation on a KMS key in a different Amazon Web Services account,
@@ -961,6 +967,10 @@ public interface AWSKMSAsync extends AWSKMS {
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#kms-keys">KMS key</a> in your Amazon
      * Web Services account and Region.
      * </p>
+     * <p>
+     * In addition to the required parameters, you can use the optional parameters to specify a key policy, description,
+     * tags, and other useful elements for any key type.
+     * </p>
      * <note>
      * <p>
      * KMS is replacing the term <i>customer master key (CMK)</i> with <i>KMS key</i> and <i>KMS key</i>. The concept
@@ -968,38 +978,25 @@ public interface AWSKMSAsync extends AWSKMS {
      * </p>
      * </note>
      * <p>
-     * You can use the <code>CreateKey</code> operation to create symmetric or asymmetric KMS keys.
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * <b>Symmetric KMS keys</b> contain a 256-bit symmetric key that never leaves KMS unencrypted. To use the KMS key,
-     * you must call KMS. You can use a symmetric KMS key to encrypt and decrypt small amounts of data, but they are
-     * typically used to generate <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#data-keys">data keys</a> and <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#data-key-pairs">data keys pairs</a>.
-     * For details, see <a>GenerateDataKey</a> and <a>GenerateDataKeyPair</a>.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <b>Asymmetric KMS keys</b> can contain an RSA key pair or an Elliptic Curve (ECC) key pair. The private key in an
-     * asymmetric KMS key never leaves KMS unencrypted. However, you can use the <a>GetPublicKey</a> operation to
-     * download the public key so it can be used outside of KMS. KMS keys with RSA key pairs can be used to encrypt or
-     * decrypt data or sign and verify messages (but not both). KMS keys with ECC key pairs can be used only to sign and
-     * verify messages.
-     * </p>
-     * </li>
-     * </ul>
-     * <p>
-     * For information about symmetric and asymmetric KMS keys, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/symmetric-asymmetric.html">Using Symmetric and
-     * Asymmetric KMS keys</a> in the <i>Key Management Service Developer Guide</i>.
-     * </p>
-     * <p>
      * To create different types of KMS keys, use the following guidance:
      * </p>
      * <dl>
+     * <dt>Symmetric encryption KMS key</dt>
+     * <dd>
+     * <p>
+     * To create a symmetric encryption KMS key, you aren't required to specify any parameters. The default value for
+     * <code>KeySpec</code>, <code>SYMMETRIC_DEFAULT</code>, and the default value for <code>KeyUsage</code>,
+     * <code>ENCRYPT_DECRYPT</code>, create a symmetric encryption KMS key.
+     * </p>
+     * <p>
+     * If you need a key for basic encryption and decryption or you are creating a KMS key to protect your resources in
+     * an Amazon Web Services service, create a symmetric encryption KMS key. The key material in a symmetric encryption
+     * key never leaves KMS unencrypted. You can use a symmetric encryption KMS key to encrypt and decrypt data up to
+     * 4,096 bytes, but they are typically used to generate data keys and data keys pairs. For details, see
+     * <a>GenerateDataKey</a> and <a>GenerateDataKeyPair</a>.
+     * </p>
+     * <p>
+     * </p></dd>
      * <dt>Asymmetric KMS keys</dt>
      * <dd>
      * <p>
@@ -1008,13 +1005,34 @@ public interface AWSKMSAsync extends AWSKMS {
      * encrypt and decrypt or sign and verify. You can't change these properties after the KMS key is created.
      * </p>
      * <p>
+     * Asymmetric KMS keys contain an RSA key pair or an Elliptic Curve (ECC) key pair. The private key in an asymmetric
+     * KMS key never leaves AWS KMS unencrypted. However, you can use the <a>GetPublicKey</a> operation to download the
+     * public key so it can be used outside of AWS KMS. KMS keys with RSA key pairs can be used to encrypt or decrypt
+     * data or sign and verify messages (but not both). KMS keys with ECC key pairs can be used only to sign and verify
+     * messages. For information about asymmetric KMS keys, see <a
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/symmetric-asymmetric.html">Asymmetric KMS keys</a> in
+     * the <i>Key Management Service Developer Guide</i>.
+     * </p>
+     * <p>
      * </p></dd>
-     * <dt>Symmetric KMS keys</dt>
+     * <dt>HMAC KMS key</dt>
      * <dd>
      * <p>
-     * When creating a symmetric KMS key, you don't need to specify the <code>KeySpec</code> or <code>KeyUsage</code>
-     * parameters. The default value for <code>KeySpec</code>, <code>SYMMETRIC_DEFAULT</code>, and the default value for
-     * <code>KeyUsage</code>, <code>ENCRYPT_DECRYPT</code>, are the only valid values for symmetric KMS keys.
+     * To create an HMAC KMS key, set the <code>KeySpec</code> parameter to a key spec value for HMAC KMS keys. Then set
+     * the <code>KeyUsage</code> parameter to <code>GENERATE_VERIFY_MAC</code>. You must set the key usage even though
+     * <code>GENERATE_VERIFY_MAC</code> is the only valid key usage value for HMAC KMS keys. You can't change these
+     * properties after the KMS key is created.
+     * </p>
+     * <p>
+     * HMAC KMS keys are symmetric keys that never leave KMS unencrypted. You can use HMAC keys to generate
+     * (<a>GenerateMac</a>) and verify (<a>VerifyMac</a>) HMAC codes for messages up to 4096 bytes.
+     * </p>
+     * <p>
+     * HMAC KMS keys are not supported in all Amazon Web Services Regions. If you try to create an HMAC KMS key in an
+     * Amazon Web Services Region in which HMAC keys are not supported, the <code>CreateKey</code> operation returns an
+     * <code>UnsupportedOperationException</code>. For a list of Regions in which HMAC KMS keys are supported, see <a
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/hmac.html">HMAC keys in KMS</a> in the <i>Key
+     * Management Service Developer Guide</i>.
      * </p>
      * <p>
      * </p></dd>
@@ -1029,45 +1047,49 @@ public interface AWSKMSAsync extends AWSKMS {
      * key to a replica key, use the <a>UpdatePrimaryRegion</a> operation.
      * </p>
      * <p>
+     * You can create multi-Region KMS keys for all supported KMS key types: symmetric encryption KMS keys, HMAC KMS
+     * keys, asymmetric encryption KMS keys, and asymmetric signing KMS keys. You can also create multi-Region keys with
+     * imported key material. However, you can't create multi-Region keys in a custom key store.
+     * </p>
+     * <p>
      * This operation supports <i>multi-Region keys</i>, an KMS feature that lets you create multiple interoperable KMS
      * keys in different Amazon Web Services Regions. Because these KMS keys have the same key ID, key material, and
      * other metadata, you can use them interchangeably to encrypt data in one Amazon Web Services Region and decrypt it
      * in a different Amazon Web Services Region without re-encrypting the data or making a cross-Region call. For more
      * information about multi-Region keys, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/multi-region-keys-overview.html">Using multi-Region
-     * keys</a> in the <i>Key Management Service Developer Guide</i>.
-     * </p>
-     * <p>
-     * You can create symmetric and asymmetric multi-Region keys and multi-Region keys with imported key material. You
-     * cannot create multi-Region keys in a custom key store.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/multi-region-keys-overview.html">Multi-Region keys in
+     * KMS</a> in the <i>Key Management Service Developer Guide</i>.
      * </p>
      * <p>
      * </p></dd>
      * <dd>
      * <p>
-     * To import your own key material, begin by creating a symmetric KMS key with no key material. To do this, use the
-     * <code>Origin</code> parameter of <code>CreateKey</code> with a value of <code>EXTERNAL</code>. Next, use
-     * <a>GetParametersForImport</a> operation to get a public key and import token, and use the public key to encrypt
-     * your key material. Then, use <a>ImportKeyMaterial</a> with your import token to import the key material. For
-     * step-by-step instructions, see <a
+     * To import your own key material, begin by creating a symmetric encryption KMS key with no key material. To do
+     * this, use the <code>Origin</code> parameter of <code>CreateKey</code> with a value of <code>EXTERNAL</code>.
+     * Next, use <a>GetParametersForImport</a> operation to get a public key and import token, and use the public key to
+     * encrypt your key material. Then, use <a>ImportKeyMaterial</a> with your import token to import the key material.
+     * For step-by-step instructions, see <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/importing-keys.html">Importing Key Material</a> in
-     * the <i> <i>Key Management Service Developer Guide</i> </i>. You cannot import the key material into an asymmetric
-     * KMS key.
+     * the <i> <i>Key Management Service Developer Guide</i> </i>.
+     * </p>
+     * <p>
+     * This feature supports only symmetric encryption KMS keys, including multi-Region symmetric encryption KMS keys.
+     * You cannot import key material into any other type of KMS key.
      * </p>
      * <p>
      * To create a multi-Region primary key with imported key material, use the <code>Origin</code> parameter of
      * <code>CreateKey</code> with a value of <code>EXTERNAL</code> and the <code>MultiRegion</code> parameter with a
      * value of <code>True</code>. To create replicas of the multi-Region primary key, use the <a>ReplicateKey</a>
      * operation. For more information about multi-Region keys, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/multi-region-keys-overview.html">Using multi-Region
-     * keys</a> in the <i>Key Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/multi-region-keys-overview.html">Multi-Region keys in
+     * KMS</a> in the <i>Key Management Service Developer Guide</i>.
      * </p>
      * <p>
      * </p></dd>
      * <dt>Custom key store</dt>
      * <dd>
      * <p>
-     * To create a symmetric KMS key in a <a
+     * To create a symmetric encryption KMS key in a <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/custom-key-store-overview.html">custom key store</a>,
      * use the <code>CustomKeyStoreId</code> parameter to specify the custom key store. You must also use the
      * <code>Origin</code> parameter with a value of <code>AWS_CLOUDHSM</code>. The CloudHSM cluster that is associated
@@ -1075,9 +1097,10 @@ public interface AWSKMSAsync extends AWSKMS {
      * Services Region.
      * </p>
      * <p>
-     * You cannot create an asymmetric KMS key in a custom key store. For information about custom key stores in KMS see
-     * <a href="https://docs.aws.amazon.com/kms/latest/developerguide/custom-key-store-overview.html">Using Custom Key
-     * Stores</a> in the <i> <i>Key Management Service Developer Guide</i> </i>.
+     * Custom key stores support only symmetric encryption KMS keys. You cannot create an HMAC KMS key or an asymmetric
+     * KMS key in a custom key store. For information about custom key stores in KMS see <a
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/custom-key-store-overview.html">Custom key stores in
+     * KMS</a> in the <i> <i>Key Management Service Developer Guide</i> </i>.
      * </p>
      * </dd>
      * </dl>
@@ -1129,6 +1152,10 @@ public interface AWSKMSAsync extends AWSKMS {
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#kms-keys">KMS key</a> in your Amazon
      * Web Services account and Region.
      * </p>
+     * <p>
+     * In addition to the required parameters, you can use the optional parameters to specify a key policy, description,
+     * tags, and other useful elements for any key type.
+     * </p>
      * <note>
      * <p>
      * KMS is replacing the term <i>customer master key (CMK)</i> with <i>KMS key</i> and <i>KMS key</i>. The concept
@@ -1136,38 +1163,25 @@ public interface AWSKMSAsync extends AWSKMS {
      * </p>
      * </note>
      * <p>
-     * You can use the <code>CreateKey</code> operation to create symmetric or asymmetric KMS keys.
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * <b>Symmetric KMS keys</b> contain a 256-bit symmetric key that never leaves KMS unencrypted. To use the KMS key,
-     * you must call KMS. You can use a symmetric KMS key to encrypt and decrypt small amounts of data, but they are
-     * typically used to generate <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#data-keys">data keys</a> and <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#data-key-pairs">data keys pairs</a>.
-     * For details, see <a>GenerateDataKey</a> and <a>GenerateDataKeyPair</a>.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <b>Asymmetric KMS keys</b> can contain an RSA key pair or an Elliptic Curve (ECC) key pair. The private key in an
-     * asymmetric KMS key never leaves KMS unencrypted. However, you can use the <a>GetPublicKey</a> operation to
-     * download the public key so it can be used outside of KMS. KMS keys with RSA key pairs can be used to encrypt or
-     * decrypt data or sign and verify messages (but not both). KMS keys with ECC key pairs can be used only to sign and
-     * verify messages.
-     * </p>
-     * </li>
-     * </ul>
-     * <p>
-     * For information about symmetric and asymmetric KMS keys, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/symmetric-asymmetric.html">Using Symmetric and
-     * Asymmetric KMS keys</a> in the <i>Key Management Service Developer Guide</i>.
-     * </p>
-     * <p>
      * To create different types of KMS keys, use the following guidance:
      * </p>
      * <dl>
+     * <dt>Symmetric encryption KMS key</dt>
+     * <dd>
+     * <p>
+     * To create a symmetric encryption KMS key, you aren't required to specify any parameters. The default value for
+     * <code>KeySpec</code>, <code>SYMMETRIC_DEFAULT</code>, and the default value for <code>KeyUsage</code>,
+     * <code>ENCRYPT_DECRYPT</code>, create a symmetric encryption KMS key.
+     * </p>
+     * <p>
+     * If you need a key for basic encryption and decryption or you are creating a KMS key to protect your resources in
+     * an Amazon Web Services service, create a symmetric encryption KMS key. The key material in a symmetric encryption
+     * key never leaves KMS unencrypted. You can use a symmetric encryption KMS key to encrypt and decrypt data up to
+     * 4,096 bytes, but they are typically used to generate data keys and data keys pairs. For details, see
+     * <a>GenerateDataKey</a> and <a>GenerateDataKeyPair</a>.
+     * </p>
+     * <p>
+     * </p></dd>
      * <dt>Asymmetric KMS keys</dt>
      * <dd>
      * <p>
@@ -1176,13 +1190,34 @@ public interface AWSKMSAsync extends AWSKMS {
      * encrypt and decrypt or sign and verify. You can't change these properties after the KMS key is created.
      * </p>
      * <p>
+     * Asymmetric KMS keys contain an RSA key pair or an Elliptic Curve (ECC) key pair. The private key in an asymmetric
+     * KMS key never leaves AWS KMS unencrypted. However, you can use the <a>GetPublicKey</a> operation to download the
+     * public key so it can be used outside of AWS KMS. KMS keys with RSA key pairs can be used to encrypt or decrypt
+     * data or sign and verify messages (but not both). KMS keys with ECC key pairs can be used only to sign and verify
+     * messages. For information about asymmetric KMS keys, see <a
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/symmetric-asymmetric.html">Asymmetric KMS keys</a> in
+     * the <i>Key Management Service Developer Guide</i>.
+     * </p>
+     * <p>
      * </p></dd>
-     * <dt>Symmetric KMS keys</dt>
+     * <dt>HMAC KMS key</dt>
      * <dd>
      * <p>
-     * When creating a symmetric KMS key, you don't need to specify the <code>KeySpec</code> or <code>KeyUsage</code>
-     * parameters. The default value for <code>KeySpec</code>, <code>SYMMETRIC_DEFAULT</code>, and the default value for
-     * <code>KeyUsage</code>, <code>ENCRYPT_DECRYPT</code>, are the only valid values for symmetric KMS keys.
+     * To create an HMAC KMS key, set the <code>KeySpec</code> parameter to a key spec value for HMAC KMS keys. Then set
+     * the <code>KeyUsage</code> parameter to <code>GENERATE_VERIFY_MAC</code>. You must set the key usage even though
+     * <code>GENERATE_VERIFY_MAC</code> is the only valid key usage value for HMAC KMS keys. You can't change these
+     * properties after the KMS key is created.
+     * </p>
+     * <p>
+     * HMAC KMS keys are symmetric keys that never leave KMS unencrypted. You can use HMAC keys to generate
+     * (<a>GenerateMac</a>) and verify (<a>VerifyMac</a>) HMAC codes for messages up to 4096 bytes.
+     * </p>
+     * <p>
+     * HMAC KMS keys are not supported in all Amazon Web Services Regions. If you try to create an HMAC KMS key in an
+     * Amazon Web Services Region in which HMAC keys are not supported, the <code>CreateKey</code> operation returns an
+     * <code>UnsupportedOperationException</code>. For a list of Regions in which HMAC KMS keys are supported, see <a
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/hmac.html">HMAC keys in KMS</a> in the <i>Key
+     * Management Service Developer Guide</i>.
      * </p>
      * <p>
      * </p></dd>
@@ -1197,45 +1232,49 @@ public interface AWSKMSAsync extends AWSKMS {
      * key to a replica key, use the <a>UpdatePrimaryRegion</a> operation.
      * </p>
      * <p>
+     * You can create multi-Region KMS keys for all supported KMS key types: symmetric encryption KMS keys, HMAC KMS
+     * keys, asymmetric encryption KMS keys, and asymmetric signing KMS keys. You can also create multi-Region keys with
+     * imported key material. However, you can't create multi-Region keys in a custom key store.
+     * </p>
+     * <p>
      * This operation supports <i>multi-Region keys</i>, an KMS feature that lets you create multiple interoperable KMS
      * keys in different Amazon Web Services Regions. Because these KMS keys have the same key ID, key material, and
      * other metadata, you can use them interchangeably to encrypt data in one Amazon Web Services Region and decrypt it
      * in a different Amazon Web Services Region without re-encrypting the data or making a cross-Region call. For more
      * information about multi-Region keys, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/multi-region-keys-overview.html">Using multi-Region
-     * keys</a> in the <i>Key Management Service Developer Guide</i>.
-     * </p>
-     * <p>
-     * You can create symmetric and asymmetric multi-Region keys and multi-Region keys with imported key material. You
-     * cannot create multi-Region keys in a custom key store.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/multi-region-keys-overview.html">Multi-Region keys in
+     * KMS</a> in the <i>Key Management Service Developer Guide</i>.
      * </p>
      * <p>
      * </p></dd>
      * <dd>
      * <p>
-     * To import your own key material, begin by creating a symmetric KMS key with no key material. To do this, use the
-     * <code>Origin</code> parameter of <code>CreateKey</code> with a value of <code>EXTERNAL</code>. Next, use
-     * <a>GetParametersForImport</a> operation to get a public key and import token, and use the public key to encrypt
-     * your key material. Then, use <a>ImportKeyMaterial</a> with your import token to import the key material. For
-     * step-by-step instructions, see <a
+     * To import your own key material, begin by creating a symmetric encryption KMS key with no key material. To do
+     * this, use the <code>Origin</code> parameter of <code>CreateKey</code> with a value of <code>EXTERNAL</code>.
+     * Next, use <a>GetParametersForImport</a> operation to get a public key and import token, and use the public key to
+     * encrypt your key material. Then, use <a>ImportKeyMaterial</a> with your import token to import the key material.
+     * For step-by-step instructions, see <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/importing-keys.html">Importing Key Material</a> in
-     * the <i> <i>Key Management Service Developer Guide</i> </i>. You cannot import the key material into an asymmetric
-     * KMS key.
+     * the <i> <i>Key Management Service Developer Guide</i> </i>.
+     * </p>
+     * <p>
+     * This feature supports only symmetric encryption KMS keys, including multi-Region symmetric encryption KMS keys.
+     * You cannot import key material into any other type of KMS key.
      * </p>
      * <p>
      * To create a multi-Region primary key with imported key material, use the <code>Origin</code> parameter of
      * <code>CreateKey</code> with a value of <code>EXTERNAL</code> and the <code>MultiRegion</code> parameter with a
      * value of <code>True</code>. To create replicas of the multi-Region primary key, use the <a>ReplicateKey</a>
      * operation. For more information about multi-Region keys, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/multi-region-keys-overview.html">Using multi-Region
-     * keys</a> in the <i>Key Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/multi-region-keys-overview.html">Multi-Region keys in
+     * KMS</a> in the <i>Key Management Service Developer Guide</i>.
      * </p>
      * <p>
      * </p></dd>
      * <dt>Custom key store</dt>
      * <dd>
      * <p>
-     * To create a symmetric KMS key in a <a
+     * To create a symmetric encryption KMS key in a <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/custom-key-store-overview.html">custom key store</a>,
      * use the <code>CustomKeyStoreId</code> parameter to specify the custom key store. You must also use the
      * <code>Origin</code> parameter with a value of <code>AWS_CLOUDHSM</code>. The CloudHSM cluster that is associated
@@ -1243,9 +1282,10 @@ public interface AWSKMSAsync extends AWSKMS {
      * Services Region.
      * </p>
      * <p>
-     * You cannot create an asymmetric KMS key in a custom key store. For information about custom key stores in KMS see
-     * <a href="https://docs.aws.amazon.com/kms/latest/developerguide/custom-key-store-overview.html">Using Custom Key
-     * Stores</a> in the <i> <i>Key Management Service Developer Guide</i> </i>.
+     * Custom key stores support only symmetric encryption KMS keys. You cannot create an HMAC KMS key or an asymmetric
+     * KMS key in a custom key store. For information about custom key stores in KMS see <a
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/custom-key-store-overview.html">Custom key stores in
+     * KMS</a> in the <i> <i>Key Management Service Developer Guide</i> </i>.
      * </p>
      * </dd>
      * </dl>
@@ -1342,27 +1382,28 @@ public interface AWSKMSAsync extends AWSKMS {
      * </li>
      * </ul>
      * <p>
-     * You can use this operation to decrypt ciphertext that was encrypted under a symmetric or asymmetric KMS key. When
-     * the KMS key is asymmetric, you must specify the KMS key and the encryption algorithm that was used to encrypt the
-     * ciphertext. For information about symmetric and asymmetric KMS keys, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/symmetric-asymmetric.html">Using Symmetric and
-     * Asymmetric KMS keys</a> in the <i>Key Management Service Developer Guide</i>.
+     * You can use this operation to decrypt ciphertext that was encrypted under a symmetric encryption KMS key or an
+     * asymmetric encryption KMS key. When the KMS key is asymmetric, you must specify the KMS key and the encryption
+     * algorithm that was used to encrypt the ciphertext. For information about asymmetric KMS keys, see <a
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/symmetric-asymmetric.html">Asymmetric KMS keys</a> in
+     * the <i>Key Management Service Developer Guide</i>.
      * </p>
      * <p>
-     * The Decrypt operation also decrypts ciphertext that was encrypted outside of KMS by the public key in an KMS
-     * asymmetric KMS key. However, it cannot decrypt ciphertext produced by other libraries, such as the <a
-     * href="https://docs.aws.amazon.com/encryption-sdk/latest/developer-guide/">Amazon Web Services Encryption SDK</a>
-     * or <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingClientSideEncryption.html">Amazon S3 client-side
+     * The <code>Decrypt</code> operation also decrypts ciphertext that was encrypted outside of KMS by the public key
+     * in an KMS asymmetric KMS key. However, it cannot decrypt symmetric ciphertext produced by other libraries, such
+     * as the <a href="https://docs.aws.amazon.com/encryption-sdk/latest/developer-guide/">Amazon Web Services
+     * Encryption SDK</a> or <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingClientSideEncryption.html">Amazon S3 client-side
      * encryption</a>. These libraries return a ciphertext format that is incompatible with KMS.
      * </p>
      * <p>
-     * If the ciphertext was encrypted under a symmetric KMS key, the <code>KeyId</code> parameter is optional. KMS can
-     * get this information from metadata that it adds to the symmetric ciphertext blob. This feature adds durability to
-     * your implementation by ensuring that authorized users can decrypt ciphertext decades after it was encrypted, even
-     * if they've lost track of the key ID. However, specifying the KMS key is always recommended as a best practice.
-     * When you use the <code>KeyId</code> parameter to specify a KMS key, KMS only uses the KMS key you specify. If the
-     * ciphertext was encrypted under a different KMS key, the <code>Decrypt</code> operation fails. This practice
-     * ensures that you use the KMS key that you intend.
+     * If the ciphertext was encrypted under a symmetric encryption KMS key, the <code>KeyId</code> parameter is
+     * optional. KMS can get this information from metadata that it adds to the symmetric ciphertext blob. This feature
+     * adds durability to your implementation by ensuring that authorized users can decrypt ciphertext decades after it
+     * was encrypted, even if they've lost track of the key ID. However, specifying the KMS key is always recommended as
+     * a best practice. When you use the <code>KeyId</code> parameter to specify a KMS key, KMS only uses the KMS key
+     * you specify. If the ciphertext was encrypted under a different KMS key, the <code>Decrypt</code> operation fails.
+     * This practice ensures that you use the KMS key that you intend.
      * </p>
      * <p>
      * Whenever possible, use key policies to give users permission to call the <code>Decrypt</code> operation on a
@@ -1383,8 +1424,8 @@ public interface AWSKMSAsync extends AWSKMS {
      * </p>
      * <p>
      * The KMS key that you use for this operation must be in a compatible key state. For details, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a>
-     * in the <i>Key Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the
+     * <i>Key Management Service Developer Guide</i>.
      * </p>
      * <p>
      * <b>Cross-account use</b>: Yes. To perform this operation with a KMS key in a different Amazon Web Services
@@ -1461,27 +1502,28 @@ public interface AWSKMSAsync extends AWSKMS {
      * </li>
      * </ul>
      * <p>
-     * You can use this operation to decrypt ciphertext that was encrypted under a symmetric or asymmetric KMS key. When
-     * the KMS key is asymmetric, you must specify the KMS key and the encryption algorithm that was used to encrypt the
-     * ciphertext. For information about symmetric and asymmetric KMS keys, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/symmetric-asymmetric.html">Using Symmetric and
-     * Asymmetric KMS keys</a> in the <i>Key Management Service Developer Guide</i>.
+     * You can use this operation to decrypt ciphertext that was encrypted under a symmetric encryption KMS key or an
+     * asymmetric encryption KMS key. When the KMS key is asymmetric, you must specify the KMS key and the encryption
+     * algorithm that was used to encrypt the ciphertext. For information about asymmetric KMS keys, see <a
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/symmetric-asymmetric.html">Asymmetric KMS keys</a> in
+     * the <i>Key Management Service Developer Guide</i>.
      * </p>
      * <p>
-     * The Decrypt operation also decrypts ciphertext that was encrypted outside of KMS by the public key in an KMS
-     * asymmetric KMS key. However, it cannot decrypt ciphertext produced by other libraries, such as the <a
-     * href="https://docs.aws.amazon.com/encryption-sdk/latest/developer-guide/">Amazon Web Services Encryption SDK</a>
-     * or <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingClientSideEncryption.html">Amazon S3 client-side
+     * The <code>Decrypt</code> operation also decrypts ciphertext that was encrypted outside of KMS by the public key
+     * in an KMS asymmetric KMS key. However, it cannot decrypt symmetric ciphertext produced by other libraries, such
+     * as the <a href="https://docs.aws.amazon.com/encryption-sdk/latest/developer-guide/">Amazon Web Services
+     * Encryption SDK</a> or <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingClientSideEncryption.html">Amazon S3 client-side
      * encryption</a>. These libraries return a ciphertext format that is incompatible with KMS.
      * </p>
      * <p>
-     * If the ciphertext was encrypted under a symmetric KMS key, the <code>KeyId</code> parameter is optional. KMS can
-     * get this information from metadata that it adds to the symmetric ciphertext blob. This feature adds durability to
-     * your implementation by ensuring that authorized users can decrypt ciphertext decades after it was encrypted, even
-     * if they've lost track of the key ID. However, specifying the KMS key is always recommended as a best practice.
-     * When you use the <code>KeyId</code> parameter to specify a KMS key, KMS only uses the KMS key you specify. If the
-     * ciphertext was encrypted under a different KMS key, the <code>Decrypt</code> operation fails. This practice
-     * ensures that you use the KMS key that you intend.
+     * If the ciphertext was encrypted under a symmetric encryption KMS key, the <code>KeyId</code> parameter is
+     * optional. KMS can get this information from metadata that it adds to the symmetric ciphertext blob. This feature
+     * adds durability to your implementation by ensuring that authorized users can decrypt ciphertext decades after it
+     * was encrypted, even if they've lost track of the key ID. However, specifying the KMS key is always recommended as
+     * a best practice. When you use the <code>KeyId</code> parameter to specify a KMS key, KMS only uses the KMS key
+     * you specify. If the ciphertext was encrypted under a different KMS key, the <code>Decrypt</code> operation fails.
+     * This practice ensures that you use the KMS key that you intend.
      * </p>
      * <p>
      * Whenever possible, use key policies to give users permission to call the <code>Decrypt</code> operation on a
@@ -1502,8 +1544,8 @@ public interface AWSKMSAsync extends AWSKMS {
      * </p>
      * <p>
      * The KMS key that you use for this operation must be in a compatible key state. For details, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a>
-     * in the <i>Key Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the
+     * <i>Key Management Service Developer Guide</i>.
      * </p>
      * <p>
      * <b>Cross-account use</b>: Yes. To perform this operation with a KMS key in a different Amazon Web Services
@@ -1560,8 +1602,8 @@ public interface AWSKMSAsync extends AWSKMS {
      * <note>
      * <p>
      * Adding, deleting, or updating an alias can allow or deny permission to the KMS key. For details, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/abac.html">Using ABAC in KMS</a> in the <i>Key
-     * Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/abac.html">ABAC in KMS</a> in the <i>Key Management
+     * Service Developer Guide</i>.
      * </p>
      * </note>
      * <p>
@@ -1638,8 +1680,8 @@ public interface AWSKMSAsync extends AWSKMS {
      * <note>
      * <p>
      * Adding, deleting, or updating an alias can allow or deny permission to the KMS key. For details, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/abac.html">Using ABAC in KMS</a> in the <i>Key
-     * Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/abac.html">ABAC in KMS</a> in the <i>Key Management
+     * Service Developer Guide</i>.
      * </p>
      * </note>
      * <p>
@@ -1904,8 +1946,8 @@ public interface AWSKMSAsync extends AWSKMS {
      * </p>
      * <p>
      * The KMS key that you use for this operation must be in a compatible key state. For details, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a>
-     * in the <i>Key Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the
+     * <i>Key Management Service Developer Guide</i>.
      * </p>
      * <p>
      * <b>Cross-account use</b>: No. You cannot perform this operation on a KMS key in a different Amazon Web Services
@@ -1958,8 +2000,8 @@ public interface AWSKMSAsync extends AWSKMS {
      * </p>
      * <p>
      * The KMS key that you use for this operation must be in a compatible key state. For details, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a>
-     * in the <i>Key Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the
+     * <i>Key Management Service Developer Guide</i>.
      * </p>
      * <p>
      * <b>Cross-account use</b>: No. You cannot perform this operation on a KMS key in a different Amazon Web Services
@@ -2181,11 +2223,10 @@ public interface AWSKMSAsync extends AWSKMS {
      * <p>
      * This detailed information includes the key ARN, creation date (and deletion date, if applicable), the key state,
      * and the origin and expiration date (if any) of the key material. It includes fields, like <code>KeySpec</code>,
-     * that help you distinguish symmetric from asymmetric KMS keys. It also provides information that is particularly
-     * important to asymmetric keys, such as the key usage (encryption or signing) and the encryption algorithms or
-     * signing algorithms that the KMS key supports. For KMS keys in custom key stores, it includes information about
-     * the custom key store, such as the key store ID and the CloudHSM cluster ID. For multi-Region keys, it displays
-     * the primary key and all related replica keys.
+     * that help you distinguish different types of KMS keys. It also displays the key usage (encryption, signing, or
+     * generating and verifying MACs) and the algorithms that the KMS key supports. For KMS keys in custom key stores,
+     * it includes information about the custom key store, such as the key store ID and the CloudHSM cluster ID. For
+     * multi-Region keys, it displays the primary key and all related replica keys.
      * </p>
      * <p>
      * <code>DescribeKey</code> does not return the following information:
@@ -2217,11 +2258,10 @@ public interface AWSKMSAsync extends AWSKMS {
      * </li>
      * </ul>
      * <p>
-     * If you call the <code>DescribeKey</code> operation on a <i>predefined Amazon Web Services alias</i>, that is, an
-     * Amazon Web Services alias with no key ID, KMS creates an <a
+     * In general, <code>DescribeKey</code> is a non-mutating operation. It returns data about KMS keys, but doesn't
+     * change them. However, Amazon Web Services services use <code>DescribeKey</code> to create <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#aws-managed-cmk">Amazon Web Services
-     * managed key</a>. Then, it associates the alias with the new KMS key, and returns the <code>KeyId</code> and
-     * <code>Arn</code> of the new KMS key in the response.
+     * managed keys</a> from a <i>predefined Amazon Web Services alias</i> with no key ID.
      * </p>
      * <p>
      * <b>Cross-account use</b>: Yes. To perform this operation with a KMS key in a different Amazon Web Services
@@ -2291,11 +2331,10 @@ public interface AWSKMSAsync extends AWSKMS {
      * <p>
      * This detailed information includes the key ARN, creation date (and deletion date, if applicable), the key state,
      * and the origin and expiration date (if any) of the key material. It includes fields, like <code>KeySpec</code>,
-     * that help you distinguish symmetric from asymmetric KMS keys. It also provides information that is particularly
-     * important to asymmetric keys, such as the key usage (encryption or signing) and the encryption algorithms or
-     * signing algorithms that the KMS key supports. For KMS keys in custom key stores, it includes information about
-     * the custom key store, such as the key store ID and the CloudHSM cluster ID. For multi-Region keys, it displays
-     * the primary key and all related replica keys.
+     * that help you distinguish different types of KMS keys. It also displays the key usage (encryption, signing, or
+     * generating and verifying MACs) and the algorithms that the KMS key supports. For KMS keys in custom key stores,
+     * it includes information about the custom key store, such as the key store ID and the CloudHSM cluster ID. For
+     * multi-Region keys, it displays the primary key and all related replica keys.
      * </p>
      * <p>
      * <code>DescribeKey</code> does not return the following information:
@@ -2327,11 +2366,10 @@ public interface AWSKMSAsync extends AWSKMS {
      * </li>
      * </ul>
      * <p>
-     * If you call the <code>DescribeKey</code> operation on a <i>predefined Amazon Web Services alias</i>, that is, an
-     * Amazon Web Services alias with no key ID, KMS creates an <a
+     * In general, <code>DescribeKey</code> is a non-mutating operation. It returns data about KMS keys, but doesn't
+     * change them. However, Amazon Web Services services use <code>DescribeKey</code> to create <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#aws-managed-cmk">Amazon Web Services
-     * managed key</a>. Then, it associates the alias with the new KMS key, and returns the <code>KeyId</code> and
-     * <code>Arn</code> of the new KMS key in the response.
+     * managed keys</a> from a <i>predefined Amazon Web Services alias</i> with no key ID.
      * </p>
      * <p>
      * <b>Cross-account use</b>: Yes. To perform this operation with a KMS key in a different Amazon Web Services
@@ -2404,13 +2442,13 @@ public interface AWSKMSAsync extends AWSKMS {
      * </p>
      * <p>
      * For more information about how key state affects the use of a KMS key, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a>
-     * in the <i> <i>Key Management Service Developer Guide</i> </i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the <i>
+     * <i>Key Management Service Developer Guide</i> </i>.
      * </p>
      * <p>
      * The KMS key that you use for this operation must be in a compatible key state. For details, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a>
-     * in the <i>Key Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the
+     * <i>Key Management Service Developer Guide</i>.
      * </p>
      * <p>
      * <b>Cross-account use</b>: No. You cannot perform this operation on a KMS key in a different Amazon Web Services
@@ -2441,13 +2479,13 @@ public interface AWSKMSAsync extends AWSKMS {
      * </p>
      * <p>
      * For more information about how key state affects the use of a KMS key, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a>
-     * in the <i> <i>Key Management Service Developer Guide</i> </i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the <i>
+     * <i>Key Management Service Developer Guide</i> </i>.
      * </p>
      * <p>
      * The KMS key that you use for this operation must be in a compatible key state. For details, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a>
-     * in the <i>Key Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the
+     * <i>Key Management Service Developer Guide</i>.
      * </p>
      * <p>
      * <b>Cross-account use</b>: No. You cannot perform this operation on a KMS key in a different Amazon Web Services
@@ -2478,23 +2516,23 @@ public interface AWSKMSAsync extends AWSKMS {
     /**
      * <p>
      * Disables <a href="https://docs.aws.amazon.com/kms/latest/developerguide/rotate-keys.html">automatic rotation of
-     * the key material</a> for the specified symmetric KMS key.
+     * the key material</a> for the specified symmetric encryption KMS key.
      * </p>
      * <p>
      * You cannot enable automatic rotation of <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/symm-asymm-concepts.html#asymmetric-cmks">asymmetric
-     * KMS keys</a>, KMS keys with <a
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/symmetric-asymmetric.html">asymmetric KMS keys</a>,
+     * <a href="https://docs.aws.amazon.com/kms/latest/developerguide/hmac.html">HMAC KMS keys</a>, KMS keys with <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/importing-keys.html">imported key material</a>, or
      * KMS keys in a <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/custom-key-store-overview.html">custom key store</a>.
      * To enable or disable automatic rotation of a set of related <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/multi-region-keys-overview.html#mrk-replica-key"
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/multi-region-keys-manage.html#multi-region-rotate"
      * >multi-Region keys</a>, set the property on the primary key.
      * </p>
      * <p>
      * The KMS key that you use for this operation must be in a compatible key state. For details, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a>
-     * in the <i>Key Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the
+     * <i>Key Management Service Developer Guide</i>.
      * </p>
      * <p>
      * <b>Cross-account use</b>: No. You cannot perform this operation on a KMS key in a different Amazon Web Services
@@ -2532,23 +2570,23 @@ public interface AWSKMSAsync extends AWSKMS {
     /**
      * <p>
      * Disables <a href="https://docs.aws.amazon.com/kms/latest/developerguide/rotate-keys.html">automatic rotation of
-     * the key material</a> for the specified symmetric KMS key.
+     * the key material</a> for the specified symmetric encryption KMS key.
      * </p>
      * <p>
      * You cannot enable automatic rotation of <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/symm-asymm-concepts.html#asymmetric-cmks">asymmetric
-     * KMS keys</a>, KMS keys with <a
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/symmetric-asymmetric.html">asymmetric KMS keys</a>,
+     * <a href="https://docs.aws.amazon.com/kms/latest/developerguide/hmac.html">HMAC KMS keys</a>, KMS keys with <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/importing-keys.html">imported key material</a>, or
      * KMS keys in a <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/custom-key-store-overview.html">custom key store</a>.
      * To enable or disable automatic rotation of a set of related <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/multi-region-keys-overview.html#mrk-replica-key"
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/multi-region-keys-manage.html#multi-region-rotate"
      * >multi-Region keys</a>, set the property on the primary key.
      * </p>
      * <p>
      * The KMS key that you use for this operation must be in a compatible key state. For details, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a>
-     * in the <i>Key Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the
+     * <i>Key Management Service Developer Guide</i>.
      * </p>
      * <p>
      * <b>Cross-account use</b>: No. You cannot perform this operation on a KMS key in a different Amazon Web Services
@@ -2757,8 +2795,8 @@ public interface AWSKMSAsync extends AWSKMS {
      * </p>
      * <p>
      * The KMS key that you use for this operation must be in a compatible key state. For details, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a>
-     * in the <i>Key Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the
+     * <i>Key Management Service Developer Guide</i>.
      * </p>
      * <p>
      * <b>Cross-account use</b>: No. You cannot perform this operation on a KMS key in a different Amazon Web Services
@@ -2789,8 +2827,8 @@ public interface AWSKMSAsync extends AWSKMS {
      * </p>
      * <p>
      * The KMS key that you use for this operation must be in a compatible key state. For details, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a>
-     * in the <i>Key Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the
+     * <i>Key Management Service Developer Guide</i>.
      * </p>
      * <p>
      * <b>Cross-account use</b>: No. You cannot perform this operation on a KMS key in a different Amazon Web Services
@@ -2821,23 +2859,23 @@ public interface AWSKMSAsync extends AWSKMS {
     /**
      * <p>
      * Enables <a href="https://docs.aws.amazon.com/kms/latest/developerguide/rotate-keys.html">automatic rotation of
-     * the key material</a> for the specified symmetric KMS key.
+     * the key material</a> for the specified symmetric encryption KMS key.
      * </p>
      * <p>
      * You cannot enable automatic rotation of <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/symm-asymm-concepts.html#asymmetric-cmks">asymmetric
-     * KMS keys</a>, KMS keys with <a
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/symmetric-asymmetric.html">asymmetric KMS keys</a>,
+     * <a href="https://docs.aws.amazon.com/kms/latest/developerguide/hmac.html">HMAC KMS keys</a>, KMS keys with <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/importing-keys.html">imported key material</a>, or
      * KMS keys in a <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/custom-key-store-overview.html">custom key store</a>.
      * To enable or disable automatic rotation of a set of related <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/multi-region-keys-overview.html#mrk-replica-key"
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/multi-region-keys-manage.html#multi-region-rotate"
      * >multi-Region keys</a>, set the property on the primary key.
      * </p>
      * <p>
      * The KMS key that you use for this operation must be in a compatible key state. For details, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a>
-     * in the <i>Key Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the
+     * <i>Key Management Service Developer Guide</i>.
      * </p>
      * <p>
      * <b>Cross-account use</b>: No. You cannot perform this operation on a KMS key in a different Amazon Web Services
@@ -2875,23 +2913,23 @@ public interface AWSKMSAsync extends AWSKMS {
     /**
      * <p>
      * Enables <a href="https://docs.aws.amazon.com/kms/latest/developerguide/rotate-keys.html">automatic rotation of
-     * the key material</a> for the specified symmetric KMS key.
+     * the key material</a> for the specified symmetric encryption KMS key.
      * </p>
      * <p>
      * You cannot enable automatic rotation of <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/symm-asymm-concepts.html#asymmetric-cmks">asymmetric
-     * KMS keys</a>, KMS keys with <a
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/symmetric-asymmetric.html">asymmetric KMS keys</a>,
+     * <a href="https://docs.aws.amazon.com/kms/latest/developerguide/hmac.html">HMAC KMS keys</a>, KMS keys with <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/importing-keys.html">imported key material</a>, or
      * KMS keys in a <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/custom-key-store-overview.html">custom key store</a>.
      * To enable or disable automatic rotation of a set of related <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/multi-region-keys-overview.html#mrk-replica-key"
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/multi-region-keys-manage.html#multi-region-rotate"
      * >multi-Region keys</a>, set the property on the primary key.
      * </p>
      * <p>
      * The KMS key that you use for this operation must be in a compatible key state. For details, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a>
-     * in the <i>Key Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the
+     * <i>Key Management Service Developer Guide</i>.
      * </p>
      * <p>
      * <b>Cross-account use</b>: No. You cannot perform this operation on a KMS key in a different Amazon Web Services
@@ -2933,40 +2971,20 @@ public interface AWSKMSAsync extends AWSKMS {
 
     /**
      * <p>
-     * Encrypts plaintext into ciphertext by using a KMS key. The <code>Encrypt</code> operation has two primary use
-     * cases:
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * You can encrypt small amounts of arbitrary data, such as a personal identifier or database password, or other
-     * sensitive information.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * You can use the <code>Encrypt</code> operation to move encrypted data from one Amazon Web Services Region to
-     * another. For example, in Region A, generate a data key and use the plaintext key to encrypt your data. Then, in
-     * Region A, use the <code>Encrypt</code> operation to encrypt the plaintext data key under a KMS key in Region B.
-     * Now, you can move the encrypted data and the encrypted data key to Region B. When necessary, you can decrypt the
-     * encrypted data key and the encrypted data entirely within in Region B.
-     * </p>
-     * </li>
-     * </ul>
-     * <p>
-     * You don't need to use the <code>Encrypt</code> operation to encrypt a data key. The <a>GenerateDataKey</a> and
-     * <a>GenerateDataKeyPair</a> operations return a plaintext data key and an encrypted copy of that data key.
+     * Encrypts plaintext of up to 4,096 bytes using a KMS key. You can use a symmetric or asymmetric KMS key with a
+     * <code>KeyUsage</code> of <code>ENCRYPT_DECRYPT</code>.
      * </p>
      * <p>
-     * When you encrypt data, you must specify a symmetric or asymmetric KMS key to use in the encryption operation. The
-     * KMS key must have a <code>KeyUsage</code> value of <code>ENCRYPT_DECRYPT.</code> To find the
-     * <code>KeyUsage</code> of a KMS key, use the <a>DescribeKey</a> operation.
+     * You can use this operation to encrypt small amounts of arbitrary data, such as a personal identifier or database
+     * password, or other sensitive information. You don't need to use the <code>Encrypt</code> operation to encrypt a
+     * data key. The <a>GenerateDataKey</a> and <a>GenerateDataKeyPair</a> operations return a plaintext data key and an
+     * encrypted copy of that data key.
      * </p>
      * <p>
-     * If you use a symmetric KMS key, you can use an encryption context to add additional security to your encryption
-     * operation. If you specify an <code>EncryptionContext</code> when encrypting data, you must specify the same
-     * encryption context (a case-sensitive exact match) when decrypting the data. Otherwise, the request to decrypt
-     * fails with an <code>InvalidCiphertextException</code>. For more information, see <a
+     * If you use a symmetric encryption KMS key, you can use an encryption context to add additional security to your
+     * encryption operation. If you specify an <code>EncryptionContext</code> when encrypting data, you must specify the
+     * same encryption context (a case-sensitive exact match) when decrypting the data. Otherwise, the request to
+     * decrypt fails with an <code>InvalidCiphertextException</code>. For more information, see <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#encrypt_context">Encryption Context</a>
      * in the <i>Key Management Service Developer Guide</i>.
      * </p>
@@ -2982,9 +3000,10 @@ public interface AWSKMSAsync extends AWSKMS {
      * operation fails.
      * </p>
      * <p>
-     * You are not required to supply the key ID and encryption algorithm when you decrypt with symmetric KMS keys
-     * because KMS stores this information in the ciphertext blob. KMS cannot store metadata in ciphertext generated
-     * with asymmetric keys. The standard format for asymmetric key ciphertext does not include configurable fields.
+     * You are not required to supply the key ID and encryption algorithm when you decrypt with symmetric encryption KMS
+     * keys because KMS stores this information in the ciphertext blob. KMS cannot store metadata in ciphertext
+     * generated with asymmetric keys. The standard format for asymmetric key ciphertext does not include configurable
+     * fields.
      * </p>
      * </important>
      * <p>
@@ -2994,7 +3013,7 @@ public interface AWSKMSAsync extends AWSKMS {
      * <ul>
      * <li>
      * <p>
-     * Symmetric KMS keys
+     * Symmetric encryption KMS keys
      * </p>
      * <ul>
      * <li>
@@ -3058,8 +3077,8 @@ public interface AWSKMSAsync extends AWSKMS {
      * </ul>
      * <p>
      * The KMS key that you use for this operation must be in a compatible key state. For details, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a>
-     * in the <i>Key Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the
+     * <i>Key Management Service Developer Guide</i>.
      * </p>
      * <p>
      * <b>Cross-account use</b>: Yes. To perform this operation with a KMS key in a different Amazon Web Services
@@ -3101,40 +3120,20 @@ public interface AWSKMSAsync extends AWSKMS {
 
     /**
      * <p>
-     * Encrypts plaintext into ciphertext by using a KMS key. The <code>Encrypt</code> operation has two primary use
-     * cases:
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * You can encrypt small amounts of arbitrary data, such as a personal identifier or database password, or other
-     * sensitive information.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * You can use the <code>Encrypt</code> operation to move encrypted data from one Amazon Web Services Region to
-     * another. For example, in Region A, generate a data key and use the plaintext key to encrypt your data. Then, in
-     * Region A, use the <code>Encrypt</code> operation to encrypt the plaintext data key under a KMS key in Region B.
-     * Now, you can move the encrypted data and the encrypted data key to Region B. When necessary, you can decrypt the
-     * encrypted data key and the encrypted data entirely within in Region B.
-     * </p>
-     * </li>
-     * </ul>
-     * <p>
-     * You don't need to use the <code>Encrypt</code> operation to encrypt a data key. The <a>GenerateDataKey</a> and
-     * <a>GenerateDataKeyPair</a> operations return a plaintext data key and an encrypted copy of that data key.
+     * Encrypts plaintext of up to 4,096 bytes using a KMS key. You can use a symmetric or asymmetric KMS key with a
+     * <code>KeyUsage</code> of <code>ENCRYPT_DECRYPT</code>.
      * </p>
      * <p>
-     * When you encrypt data, you must specify a symmetric or asymmetric KMS key to use in the encryption operation. The
-     * KMS key must have a <code>KeyUsage</code> value of <code>ENCRYPT_DECRYPT.</code> To find the
-     * <code>KeyUsage</code> of a KMS key, use the <a>DescribeKey</a> operation.
+     * You can use this operation to encrypt small amounts of arbitrary data, such as a personal identifier or database
+     * password, or other sensitive information. You don't need to use the <code>Encrypt</code> operation to encrypt a
+     * data key. The <a>GenerateDataKey</a> and <a>GenerateDataKeyPair</a> operations return a plaintext data key and an
+     * encrypted copy of that data key.
      * </p>
      * <p>
-     * If you use a symmetric KMS key, you can use an encryption context to add additional security to your encryption
-     * operation. If you specify an <code>EncryptionContext</code> when encrypting data, you must specify the same
-     * encryption context (a case-sensitive exact match) when decrypting the data. Otherwise, the request to decrypt
-     * fails with an <code>InvalidCiphertextException</code>. For more information, see <a
+     * If you use a symmetric encryption KMS key, you can use an encryption context to add additional security to your
+     * encryption operation. If you specify an <code>EncryptionContext</code> when encrypting data, you must specify the
+     * same encryption context (a case-sensitive exact match) when decrypting the data. Otherwise, the request to
+     * decrypt fails with an <code>InvalidCiphertextException</code>. For more information, see <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#encrypt_context">Encryption Context</a>
      * in the <i>Key Management Service Developer Guide</i>.
      * </p>
@@ -3150,9 +3149,10 @@ public interface AWSKMSAsync extends AWSKMS {
      * operation fails.
      * </p>
      * <p>
-     * You are not required to supply the key ID and encryption algorithm when you decrypt with symmetric KMS keys
-     * because KMS stores this information in the ciphertext blob. KMS cannot store metadata in ciphertext generated
-     * with asymmetric keys. The standard format for asymmetric key ciphertext does not include configurable fields.
+     * You are not required to supply the key ID and encryption algorithm when you decrypt with symmetric encryption KMS
+     * keys because KMS stores this information in the ciphertext blob. KMS cannot store metadata in ciphertext
+     * generated with asymmetric keys. The standard format for asymmetric key ciphertext does not include configurable
+     * fields.
      * </p>
      * </important>
      * <p>
@@ -3162,7 +3162,7 @@ public interface AWSKMSAsync extends AWSKMS {
      * <ul>
      * <li>
      * <p>
-     * Symmetric KMS keys
+     * Symmetric encryption KMS keys
      * </p>
      * <ul>
      * <li>
@@ -3226,8 +3226,8 @@ public interface AWSKMSAsync extends AWSKMS {
      * </ul>
      * <p>
      * The KMS key that you use for this operation must be in a compatible key state. For details, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a>
-     * in the <i>Key Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the
+     * <i>Key Management Service Developer Guide</i>.
      * </p>
      * <p>
      * <b>Cross-account use</b>: Yes. To perform this operation with a KMS key in a different Amazon Web Services
@@ -3274,20 +3274,17 @@ public interface AWSKMSAsync extends AWSKMS {
 
     /**
      * <p>
-     * Generates a unique symmetric data key for client-side encryption. This operation returns a plaintext copy of the
-     * data key and a copy that is encrypted under a KMS key that you specify. You can use the plaintext key to encrypt
-     * your data outside of KMS and store the encrypted data key with the encrypted data.
+     * Returns a unique symmetric data key for use outside of KMS. This operation returns a plaintext copy of the data
+     * key and a copy that is encrypted under a symmetric encryption KMS key that you specify. The bytes in the
+     * plaintext key are random; they are not related to the caller or the KMS key. You can use the plaintext key to
+     * encrypt your data outside of KMS and store the encrypted data key with the encrypted data.
      * </p>
      * <p>
-     * <code>GenerateDataKey</code> returns a unique data key for each request. The bytes in the plaintext key are not
-     * related to the caller or the KMS key.
-     * </p>
-     * <p>
-     * To generate a data key, specify the symmetric KMS key that will be used to encrypt the data key. You cannot use
-     * an asymmetric KMS key to generate data keys. To get the type of your KMS key, use the <a>DescribeKey</a>
-     * operation. You must also specify the length of the data key. Use either the <code>KeySpec</code> or
-     * <code>NumberOfBytes</code> parameters (but not both). For 128-bit and 256-bit data keys, use the
-     * <code>KeySpec</code> parameter.
+     * To generate a data key, specify the symmetric encryption KMS key that will be used to encrypt the data key. You
+     * cannot use an asymmetric KMS key to encrypt data keys. To get the type of your KMS key, use the
+     * <a>DescribeKey</a> operation. You must also specify the length of the data key. Use either the
+     * <code>KeySpec</code> or <code>NumberOfBytes</code> parameters (but not both). For 128-bit and 256-bit data keys,
+     * use the <code>KeySpec</code> parameter.
      * </p>
      * <p>
      * To get only an encrypted copy of the data key, use <a>GenerateDataKeyWithoutPlaintext</a>. To generate an
@@ -3295,9 +3292,9 @@ public interface AWSKMSAsync extends AWSKMS {
      * operation. To get a cryptographically secure random byte string, use <a>GenerateRandom</a>.
      * </p>
      * <p>
-     * You can use the optional encryption context to add additional security to the encryption operation. If you
-     * specify an <code>EncryptionContext</code>, you must specify the same encryption context (a case-sensitive exact
-     * match) when decrypting the encrypted data key. Otherwise, the request to decrypt fails with an
+     * You can use an optional encryption context to add additional security to the encryption operation. If you specify
+     * an <code>EncryptionContext</code>, you must specify the same encryption context (a case-sensitive exact match)
+     * when decrypting the encrypted data key. Otherwise, the request to decrypt fails with an
      * <code>InvalidCiphertextException</code>. For more information, see <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#encrypt_context">Encryption Context</a>
      * in the <i>Key Management Service Developer Guide</i>.
@@ -3311,8 +3308,8 @@ public interface AWSKMSAsync extends AWSKMS {
      * </p>
      * <p>
      * The KMS key that you use for this operation must be in a compatible key state. For details, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a>
-     * in the <i>Key Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the
+     * <i>Key Management Service Developer Guide</i>.
      * </p>
      * <p>
      * <b>How to use your data key</b>
@@ -3412,20 +3409,17 @@ public interface AWSKMSAsync extends AWSKMS {
 
     /**
      * <p>
-     * Generates a unique symmetric data key for client-side encryption. This operation returns a plaintext copy of the
-     * data key and a copy that is encrypted under a KMS key that you specify. You can use the plaintext key to encrypt
-     * your data outside of KMS and store the encrypted data key with the encrypted data.
+     * Returns a unique symmetric data key for use outside of KMS. This operation returns a plaintext copy of the data
+     * key and a copy that is encrypted under a symmetric encryption KMS key that you specify. The bytes in the
+     * plaintext key are random; they are not related to the caller or the KMS key. You can use the plaintext key to
+     * encrypt your data outside of KMS and store the encrypted data key with the encrypted data.
      * </p>
      * <p>
-     * <code>GenerateDataKey</code> returns a unique data key for each request. The bytes in the plaintext key are not
-     * related to the caller or the KMS key.
-     * </p>
-     * <p>
-     * To generate a data key, specify the symmetric KMS key that will be used to encrypt the data key. You cannot use
-     * an asymmetric KMS key to generate data keys. To get the type of your KMS key, use the <a>DescribeKey</a>
-     * operation. You must also specify the length of the data key. Use either the <code>KeySpec</code> or
-     * <code>NumberOfBytes</code> parameters (but not both). For 128-bit and 256-bit data keys, use the
-     * <code>KeySpec</code> parameter.
+     * To generate a data key, specify the symmetric encryption KMS key that will be used to encrypt the data key. You
+     * cannot use an asymmetric KMS key to encrypt data keys. To get the type of your KMS key, use the
+     * <a>DescribeKey</a> operation. You must also specify the length of the data key. Use either the
+     * <code>KeySpec</code> or <code>NumberOfBytes</code> parameters (but not both). For 128-bit and 256-bit data keys,
+     * use the <code>KeySpec</code> parameter.
      * </p>
      * <p>
      * To get only an encrypted copy of the data key, use <a>GenerateDataKeyWithoutPlaintext</a>. To generate an
@@ -3433,9 +3427,9 @@ public interface AWSKMSAsync extends AWSKMS {
      * operation. To get a cryptographically secure random byte string, use <a>GenerateRandom</a>.
      * </p>
      * <p>
-     * You can use the optional encryption context to add additional security to the encryption operation. If you
-     * specify an <code>EncryptionContext</code>, you must specify the same encryption context (a case-sensitive exact
-     * match) when decrypting the encrypted data key. Otherwise, the request to decrypt fails with an
+     * You can use an optional encryption context to add additional security to the encryption operation. If you specify
+     * an <code>EncryptionContext</code>, you must specify the same encryption context (a case-sensitive exact match)
+     * when decrypting the encrypted data key. Otherwise, the request to decrypt fails with an
      * <code>InvalidCiphertextException</code>. For more information, see <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#encrypt_context">Encryption Context</a>
      * in the <i>Key Management Service Developer Guide</i>.
@@ -3449,8 +3443,8 @@ public interface AWSKMSAsync extends AWSKMS {
      * </p>
      * <p>
      * The KMS key that you use for this operation must be in a compatible key state. For details, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a>
-     * in the <i>Key Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the
+     * <i>Key Management Service Developer Guide</i>.
      * </p>
      * <p>
      * <b>How to use your data key</b>
@@ -3555,10 +3549,11 @@ public interface AWSKMSAsync extends AWSKMS {
 
     /**
      * <p>
-     * Generates a unique asymmetric data key pair. The <code>GenerateDataKeyPair</code> operation returns a plaintext
-     * public key, a plaintext private key, and a copy of the private key that is encrypted under the symmetric KMS key
+     * Returns a unique asymmetric data key pair for use outside of KMS. This operation returns a plaintext public key,
+     * a plaintext private key, and a copy of the private key that is encrypted under the symmetric encryption KMS key
      * you specify. You can use the data key pair to perform asymmetric cryptography and implement digital signatures
-     * outside of KMS.
+     * outside of KMS. The bytes in the keys are random; they not related to the caller or to the KMS key that is used
+     * to encrypt the private key.
      * </p>
      * <p>
      * You can use the public key that <code>GenerateDataKeyPair</code> returns to encrypt data or verify a signature
@@ -3566,9 +3561,9 @@ public interface AWSKMSAsync extends AWSKMS {
      * message, you can use the <a>Decrypt</a> operation to decrypt the encrypted private key.
      * </p>
      * <p>
-     * To generate a data key pair, you must specify a symmetric KMS key to encrypt the private key in a data key pair.
-     * You cannot use an asymmetric KMS key or a KMS key in a custom key store. To get the type and origin of your KMS
-     * key, use the <a>DescribeKey</a> operation.
+     * To generate a data key pair, you must specify a symmetric encryption KMS key to encrypt the private key in a data
+     * key pair. You cannot use an asymmetric KMS key or a KMS key in a custom key store. To get the type and origin of
+     * your KMS key, use the <a>DescribeKey</a> operation.
      * </p>
      * <p>
      * Use the <code>KeyPairSpec</code> parameter to choose an RSA or Elliptic Curve (ECC) data key pair. KMS recommends
@@ -3584,24 +3579,24 @@ public interface AWSKMSAsync extends AWSKMS {
      * the data key pair.
      * </p>
      * <p>
-     * <code>GenerateDataKeyPair</code> returns a unique data key pair for each request. The bytes in the keys are not
-     * related to the caller or the KMS key that is used to encrypt the private key. The public key is a DER-encoded
-     * X.509 SubjectPublicKeyInfo, as specified in <a href="https://tools.ietf.org/html/rfc5280">RFC 5280</a>. The
-     * private key is a DER-encoded PKCS8 PrivateKeyInfo, as specified in <a
+     * <code>GenerateDataKeyPair</code> returns a unique data key pair for each request. The bytes in the keys are
+     * random; they are not related to the caller or the KMS key that is used to encrypt the private key. The public key
+     * is a DER-encoded X.509 SubjectPublicKeyInfo, as specified in <a href="https://tools.ietf.org/html/rfc5280">RFC
+     * 5280</a>. The private key is a DER-encoded PKCS8 PrivateKeyInfo, as specified in <a
      * href="https://tools.ietf.org/html/rfc5958">RFC 5958</a>.
      * </p>
      * <p>
-     * You can use the optional encryption context to add additional security to the encryption operation. If you
-     * specify an <code>EncryptionContext</code>, you must specify the same encryption context (a case-sensitive exact
-     * match) when decrypting the encrypted data key. Otherwise, the request to decrypt fails with an
+     * You can use an optional encryption context to add additional security to the encryption operation. If you specify
+     * an <code>EncryptionContext</code>, you must specify the same encryption context (a case-sensitive exact match)
+     * when decrypting the encrypted data key. Otherwise, the request to decrypt fails with an
      * <code>InvalidCiphertextException</code>. For more information, see <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#encrypt_context">Encryption Context</a>
      * in the <i>Key Management Service Developer Guide</i>.
      * </p>
      * <p>
      * The KMS key that you use for this operation must be in a compatible key state. For details, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a>
-     * in the <i>Key Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the
+     * <i>Key Management Service Developer Guide</i>.
      * </p>
      * <p>
      * <b>Cross-account use</b>: Yes. To perform this operation with a KMS key in a different Amazon Web Services
@@ -3653,10 +3648,11 @@ public interface AWSKMSAsync extends AWSKMS {
 
     /**
      * <p>
-     * Generates a unique asymmetric data key pair. The <code>GenerateDataKeyPair</code> operation returns a plaintext
-     * public key, a plaintext private key, and a copy of the private key that is encrypted under the symmetric KMS key
+     * Returns a unique asymmetric data key pair for use outside of KMS. This operation returns a plaintext public key,
+     * a plaintext private key, and a copy of the private key that is encrypted under the symmetric encryption KMS key
      * you specify. You can use the data key pair to perform asymmetric cryptography and implement digital signatures
-     * outside of KMS.
+     * outside of KMS. The bytes in the keys are random; they not related to the caller or to the KMS key that is used
+     * to encrypt the private key.
      * </p>
      * <p>
      * You can use the public key that <code>GenerateDataKeyPair</code> returns to encrypt data or verify a signature
@@ -3664,9 +3660,9 @@ public interface AWSKMSAsync extends AWSKMS {
      * message, you can use the <a>Decrypt</a> operation to decrypt the encrypted private key.
      * </p>
      * <p>
-     * To generate a data key pair, you must specify a symmetric KMS key to encrypt the private key in a data key pair.
-     * You cannot use an asymmetric KMS key or a KMS key in a custom key store. To get the type and origin of your KMS
-     * key, use the <a>DescribeKey</a> operation.
+     * To generate a data key pair, you must specify a symmetric encryption KMS key to encrypt the private key in a data
+     * key pair. You cannot use an asymmetric KMS key or a KMS key in a custom key store. To get the type and origin of
+     * your KMS key, use the <a>DescribeKey</a> operation.
      * </p>
      * <p>
      * Use the <code>KeyPairSpec</code> parameter to choose an RSA or Elliptic Curve (ECC) data key pair. KMS recommends
@@ -3682,24 +3678,24 @@ public interface AWSKMSAsync extends AWSKMS {
      * the data key pair.
      * </p>
      * <p>
-     * <code>GenerateDataKeyPair</code> returns a unique data key pair for each request. The bytes in the keys are not
-     * related to the caller or the KMS key that is used to encrypt the private key. The public key is a DER-encoded
-     * X.509 SubjectPublicKeyInfo, as specified in <a href="https://tools.ietf.org/html/rfc5280">RFC 5280</a>. The
-     * private key is a DER-encoded PKCS8 PrivateKeyInfo, as specified in <a
+     * <code>GenerateDataKeyPair</code> returns a unique data key pair for each request. The bytes in the keys are
+     * random; they are not related to the caller or the KMS key that is used to encrypt the private key. The public key
+     * is a DER-encoded X.509 SubjectPublicKeyInfo, as specified in <a href="https://tools.ietf.org/html/rfc5280">RFC
+     * 5280</a>. The private key is a DER-encoded PKCS8 PrivateKeyInfo, as specified in <a
      * href="https://tools.ietf.org/html/rfc5958">RFC 5958</a>.
      * </p>
      * <p>
-     * You can use the optional encryption context to add additional security to the encryption operation. If you
-     * specify an <code>EncryptionContext</code>, you must specify the same encryption context (a case-sensitive exact
-     * match) when decrypting the encrypted data key. Otherwise, the request to decrypt fails with an
+     * You can use an optional encryption context to add additional security to the encryption operation. If you specify
+     * an <code>EncryptionContext</code>, you must specify the same encryption context (a case-sensitive exact match)
+     * when decrypting the encrypted data key. Otherwise, the request to decrypt fails with an
      * <code>InvalidCiphertextException</code>. For more information, see <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#encrypt_context">Encryption Context</a>
      * in the <i>Key Management Service Developer Guide</i>.
      * </p>
      * <p>
      * The KMS key that you use for this operation must be in a compatible key state. For details, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a>
-     * in the <i>Key Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the
+     * <i>Key Management Service Developer Guide</i>.
      * </p>
      * <p>
      * <b>Cross-account use</b>: Yes. To perform this operation with a KMS key in a different Amazon Web Services
@@ -3756,9 +3752,10 @@ public interface AWSKMSAsync extends AWSKMS {
 
     /**
      * <p>
-     * Generates a unique asymmetric data key pair. The <code>GenerateDataKeyPairWithoutPlaintext</code> operation
-     * returns a plaintext public key and a copy of the private key that is encrypted under the symmetric KMS key you
-     * specify. Unlike <a>GenerateDataKeyPair</a>, this operation does not return a plaintext private key.
+     * Returns a unique asymmetric data key pair for use outside of KMS. This operation returns a plaintext public key
+     * and a copy of the private key that is encrypted under the symmetric encryption KMS key you specify. Unlike
+     * <a>GenerateDataKeyPair</a>, this operation does not return a plaintext private key. The bytes in the keys are
+     * random; they are not related to the caller or to the KMS key that is used to encrypt the private key.
      * </p>
      * <p>
      * You can use the public key that <code>GenerateDataKeyPairWithoutPlaintext</code> returns to encrypt data or
@@ -3766,9 +3763,9 @@ public interface AWSKMSAsync extends AWSKMS {
      * decrypt data or sign a message, you can use the <a>Decrypt</a> operation to decrypt the encrypted private key.
      * </p>
      * <p>
-     * To generate a data key pair, you must specify a symmetric KMS key to encrypt the private key in a data key pair.
-     * You cannot use an asymmetric KMS key or a KMS key in a custom key store. To get the type and origin of your KMS
-     * key, use the <a>DescribeKey</a> operation.
+     * To generate a data key pair, you must specify a symmetric encryption KMS key to encrypt the private key in a data
+     * key pair. You cannot use an asymmetric KMS key or a KMS key in a custom key store. To get the type and origin of
+     * your KMS key, use the <a>DescribeKey</a> operation.
      * </p>
      * <p>
      * Use the <code>KeyPairSpec</code> parameter to choose an RSA or Elliptic Curve (ECC) data key pair. KMS recommends
@@ -3782,17 +3779,17 @@ public interface AWSKMSAsync extends AWSKMS {
      * 5280</a>.
      * </p>
      * <p>
-     * You can use the optional encryption context to add additional security to the encryption operation. If you
-     * specify an <code>EncryptionContext</code>, you must specify the same encryption context (a case-sensitive exact
-     * match) when decrypting the encrypted data key. Otherwise, the request to decrypt fails with an
+     * You can use an optional encryption context to add additional security to the encryption operation. If you specify
+     * an <code>EncryptionContext</code>, you must specify the same encryption context (a case-sensitive exact match)
+     * when decrypting the encrypted data key. Otherwise, the request to decrypt fails with an
      * <code>InvalidCiphertextException</code>. For more information, see <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#encrypt_context">Encryption Context</a>
      * in the <i>Key Management Service Developer Guide</i>.
      * </p>
      * <p>
      * The KMS key that you use for this operation must be in a compatible key state. For details, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a>
-     * in the <i>Key Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the
+     * <i>Key Management Service Developer Guide</i>.
      * </p>
      * <p>
      * <b>Cross-account use</b>: Yes. To perform this operation with a KMS key in a different Amazon Web Services
@@ -3846,9 +3843,10 @@ public interface AWSKMSAsync extends AWSKMS {
 
     /**
      * <p>
-     * Generates a unique asymmetric data key pair. The <code>GenerateDataKeyPairWithoutPlaintext</code> operation
-     * returns a plaintext public key and a copy of the private key that is encrypted under the symmetric KMS key you
-     * specify. Unlike <a>GenerateDataKeyPair</a>, this operation does not return a plaintext private key.
+     * Returns a unique asymmetric data key pair for use outside of KMS. This operation returns a plaintext public key
+     * and a copy of the private key that is encrypted under the symmetric encryption KMS key you specify. Unlike
+     * <a>GenerateDataKeyPair</a>, this operation does not return a plaintext private key. The bytes in the keys are
+     * random; they are not related to the caller or to the KMS key that is used to encrypt the private key.
      * </p>
      * <p>
      * You can use the public key that <code>GenerateDataKeyPairWithoutPlaintext</code> returns to encrypt data or
@@ -3856,9 +3854,9 @@ public interface AWSKMSAsync extends AWSKMS {
      * decrypt data or sign a message, you can use the <a>Decrypt</a> operation to decrypt the encrypted private key.
      * </p>
      * <p>
-     * To generate a data key pair, you must specify a symmetric KMS key to encrypt the private key in a data key pair.
-     * You cannot use an asymmetric KMS key or a KMS key in a custom key store. To get the type and origin of your KMS
-     * key, use the <a>DescribeKey</a> operation.
+     * To generate a data key pair, you must specify a symmetric encryption KMS key to encrypt the private key in a data
+     * key pair. You cannot use an asymmetric KMS key or a KMS key in a custom key store. To get the type and origin of
+     * your KMS key, use the <a>DescribeKey</a> operation.
      * </p>
      * <p>
      * Use the <code>KeyPairSpec</code> parameter to choose an RSA or Elliptic Curve (ECC) data key pair. KMS recommends
@@ -3872,17 +3870,17 @@ public interface AWSKMSAsync extends AWSKMS {
      * 5280</a>.
      * </p>
      * <p>
-     * You can use the optional encryption context to add additional security to the encryption operation. If you
-     * specify an <code>EncryptionContext</code>, you must specify the same encryption context (a case-sensitive exact
-     * match) when decrypting the encrypted data key. Otherwise, the request to decrypt fails with an
+     * You can use an optional encryption context to add additional security to the encryption operation. If you specify
+     * an <code>EncryptionContext</code>, you must specify the same encryption context (a case-sensitive exact match)
+     * when decrypting the encrypted data key. Otherwise, the request to decrypt fails with an
      * <code>InvalidCiphertextException</code>. For more information, see <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#encrypt_context">Encryption Context</a>
      * in the <i>Key Management Service Developer Guide</i>.
      * </p>
      * <p>
      * The KMS key that you use for this operation must be in a compatible key state. For details, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a>
-     * in the <i>Key Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the
+     * <i>Key Management Service Developer Guide</i>.
      * </p>
      * <p>
      * <b>Cross-account use</b>: Yes. To perform this operation with a KMS key in a different Amazon Web Services
@@ -3941,49 +3939,48 @@ public interface AWSKMSAsync extends AWSKMS {
 
     /**
      * <p>
-     * Generates a unique symmetric data key. This operation returns a data key that is encrypted under a KMS key that
-     * you specify. To request an asymmetric data key pair, use the <a>GenerateDataKeyPair</a> or
+     * Returns a unique symmetric data key for use outside of KMS. This operation returns a data key that is encrypted
+     * under a symmetric encryption KMS key that you specify. The bytes in the key are random; they are not related to
+     * the caller or to the KMS key.
+     * </p>
+     * <p>
+     * <code>GenerateDataKeyWithoutPlaintext</code> is identical to the <a>GenerateDataKey</a> operation except that it
+     * does not return a plaintext copy of the data key.
+     * </p>
+     * <p>
+     * This operation is useful for systems that need to encrypt data at some point, but not immediately. When you need
+     * to encrypt the data, you call the <a>Decrypt</a> operation on the encrypted copy of the key. It's also useful in
+     * distributed systems with different levels of trust. For example, you might store encrypted data in containers.
+     * One component of your system creates new containers and stores an encrypted data key with each container. Then, a
+     * different component puts the data into the containers. That component first decrypts the data key, uses the
+     * plaintext data key to encrypt data, puts the encrypted data into the container, and then destroys the plaintext
+     * data key. In this system, the component that creates the containers never sees the plaintext data key.
+     * </p>
+     * <p>
+     * To request an asymmetric data key pair, use the <a>GenerateDataKeyPair</a> or
      * <a>GenerateDataKeyPairWithoutPlaintext</a> operations.
      * </p>
      * <p>
-     * <code>GenerateDataKeyWithoutPlaintext</code> is identical to the <a>GenerateDataKey</a> operation except that
-     * returns only the encrypted copy of the data key. This operation is useful for systems that need to encrypt data
-     * at some point, but not immediately. When you need to encrypt the data, you call the <a>Decrypt</a> operation on
-     * the encrypted copy of the key.
-     * </p>
-     * <p>
-     * It's also useful in distributed systems with different levels of trust. For example, you might store encrypted
-     * data in containers. One component of your system creates new containers and stores an encrypted data key with
-     * each container. Then, a different component puts the data into the containers. That component first decrypts the
-     * data key, uses the plaintext data key to encrypt data, puts the encrypted data into the container, and then
-     * destroys the plaintext data key. In this system, the component that creates the containers never sees the
-     * plaintext data key.
-     * </p>
-     * <p>
-     * <code>GenerateDataKeyWithoutPlaintext</code> returns a unique data key for each request. The bytes in the keys
-     * are not related to the caller or KMS key that is used to encrypt the private key.
-     * </p>
-     * <p>
-     * To generate a data key, you must specify the symmetric KMS key that is used to encrypt the data key. You cannot
-     * use an asymmetric KMS key to generate a data key. To get the type of your KMS key, use the <a>DescribeKey</a>
-     * operation.
+     * To generate a data key, you must specify the symmetric encryption KMS key that is used to encrypt the data key.
+     * You cannot use an asymmetric KMS key or a key in a custom key store to generate a data key. To get the type of
+     * your KMS key, use the <a>DescribeKey</a> operation.
      * </p>
      * <p>
      * If the operation succeeds, you will find the encrypted copy of the data key in the <code>CiphertextBlob</code>
      * field.
      * </p>
      * <p>
-     * You can use the optional encryption context to add additional security to the encryption operation. If you
-     * specify an <code>EncryptionContext</code>, you must specify the same encryption context (a case-sensitive exact
-     * match) when decrypting the encrypted data key. Otherwise, the request to decrypt fails with an
+     * You can use an optional encryption context to add additional security to the encryption operation. If you specify
+     * an <code>EncryptionContext</code>, you must specify the same encryption context (a case-sensitive exact match)
+     * when decrypting the encrypted data key. Otherwise, the request to decrypt fails with an
      * <code>InvalidCiphertextException</code>. For more information, see <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#encrypt_context">Encryption Context</a>
      * in the <i>Key Management Service Developer Guide</i>.
      * </p>
      * <p>
      * The KMS key that you use for this operation must be in a compatible key state. For details, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a>
-     * in the <i>Key Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the
+     * <i>Key Management Service Developer Guide</i>.
      * </p>
      * <p>
      * <b>Cross-account use</b>: Yes. To perform this operation with a KMS key in a different Amazon Web Services
@@ -4037,49 +4034,48 @@ public interface AWSKMSAsync extends AWSKMS {
 
     /**
      * <p>
-     * Generates a unique symmetric data key. This operation returns a data key that is encrypted under a KMS key that
-     * you specify. To request an asymmetric data key pair, use the <a>GenerateDataKeyPair</a> or
+     * Returns a unique symmetric data key for use outside of KMS. This operation returns a data key that is encrypted
+     * under a symmetric encryption KMS key that you specify. The bytes in the key are random; they are not related to
+     * the caller or to the KMS key.
+     * </p>
+     * <p>
+     * <code>GenerateDataKeyWithoutPlaintext</code> is identical to the <a>GenerateDataKey</a> operation except that it
+     * does not return a plaintext copy of the data key.
+     * </p>
+     * <p>
+     * This operation is useful for systems that need to encrypt data at some point, but not immediately. When you need
+     * to encrypt the data, you call the <a>Decrypt</a> operation on the encrypted copy of the key. It's also useful in
+     * distributed systems with different levels of trust. For example, you might store encrypted data in containers.
+     * One component of your system creates new containers and stores an encrypted data key with each container. Then, a
+     * different component puts the data into the containers. That component first decrypts the data key, uses the
+     * plaintext data key to encrypt data, puts the encrypted data into the container, and then destroys the plaintext
+     * data key. In this system, the component that creates the containers never sees the plaintext data key.
+     * </p>
+     * <p>
+     * To request an asymmetric data key pair, use the <a>GenerateDataKeyPair</a> or
      * <a>GenerateDataKeyPairWithoutPlaintext</a> operations.
      * </p>
      * <p>
-     * <code>GenerateDataKeyWithoutPlaintext</code> is identical to the <a>GenerateDataKey</a> operation except that
-     * returns only the encrypted copy of the data key. This operation is useful for systems that need to encrypt data
-     * at some point, but not immediately. When you need to encrypt the data, you call the <a>Decrypt</a> operation on
-     * the encrypted copy of the key.
-     * </p>
-     * <p>
-     * It's also useful in distributed systems with different levels of trust. For example, you might store encrypted
-     * data in containers. One component of your system creates new containers and stores an encrypted data key with
-     * each container. Then, a different component puts the data into the containers. That component first decrypts the
-     * data key, uses the plaintext data key to encrypt data, puts the encrypted data into the container, and then
-     * destroys the plaintext data key. In this system, the component that creates the containers never sees the
-     * plaintext data key.
-     * </p>
-     * <p>
-     * <code>GenerateDataKeyWithoutPlaintext</code> returns a unique data key for each request. The bytes in the keys
-     * are not related to the caller or KMS key that is used to encrypt the private key.
-     * </p>
-     * <p>
-     * To generate a data key, you must specify the symmetric KMS key that is used to encrypt the data key. You cannot
-     * use an asymmetric KMS key to generate a data key. To get the type of your KMS key, use the <a>DescribeKey</a>
-     * operation.
+     * To generate a data key, you must specify the symmetric encryption KMS key that is used to encrypt the data key.
+     * You cannot use an asymmetric KMS key or a key in a custom key store to generate a data key. To get the type of
+     * your KMS key, use the <a>DescribeKey</a> operation.
      * </p>
      * <p>
      * If the operation succeeds, you will find the encrypted copy of the data key in the <code>CiphertextBlob</code>
      * field.
      * </p>
      * <p>
-     * You can use the optional encryption context to add additional security to the encryption operation. If you
-     * specify an <code>EncryptionContext</code>, you must specify the same encryption context (a case-sensitive exact
-     * match) when decrypting the encrypted data key. Otherwise, the request to decrypt fails with an
+     * You can use an optional encryption context to add additional security to the encryption operation. If you specify
+     * an <code>EncryptionContext</code>, you must specify the same encryption context (a case-sensitive exact match)
+     * when decrypting the encrypted data key. Otherwise, the request to decrypt fails with an
      * <code>InvalidCiphertextException</code>. For more information, see <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#encrypt_context">Encryption Context</a>
      * in the <i>Key Management Service Developer Guide</i>.
      * </p>
      * <p>
      * The KMS key that you use for this operation must be in a compatible key state. For details, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a>
-     * in the <i>Key Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the
+     * <i>Key Management Service Developer Guide</i>.
      * </p>
      * <p>
      * <b>Cross-account use</b>: Yes. To perform this operation with a KMS key in a different Amazon Web Services
@@ -4135,6 +4131,89 @@ public interface AWSKMSAsync extends AWSKMS {
     java.util.concurrent.Future<GenerateDataKeyWithoutPlaintextResult> generateDataKeyWithoutPlaintextAsync(
             GenerateDataKeyWithoutPlaintextRequest generateDataKeyWithoutPlaintextRequest,
             com.amazonaws.handlers.AsyncHandler<GenerateDataKeyWithoutPlaintextRequest, GenerateDataKeyWithoutPlaintextResult> asyncHandler);
+
+    /**
+     * <p>
+     * Generates a hash-based message authentication code (HMAC) for a message using an HMAC KMS key and a MAC algorithm
+     * that the key supports. The MAC algorithm computes the HMAC for the message and the key as described in <a
+     * href="https://datatracker.ietf.org/doc/html/rfc2104">RFC 2104</a>.
+     * </p>
+     * <p>
+     * You can use the HMAC that this operation generates with the <a>VerifyMac</a> operation to demonstrate that the
+     * original message has not changed. Also, because a secret key is used to create the hash, you can verify that the
+     * party that generated the hash has the required secret key. This operation is part of KMS support for HMAC KMS
+     * keys. For details, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/hmac.html">HMAC keys in
+     * KMS</a> in the <i> <i>Key Management Service Developer Guide</i> </i>.
+     * </p>
+     * <p>
+     * The KMS key that you use for this operation must be in a compatible key state. For details, see <a
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the
+     * <i>Key Management Service Developer Guide</i>.
+     * </p>
+     * <p>
+     * <b>Cross-account use</b>: Yes. To perform this operation with a KMS key in a different Amazon Web Services
+     * account, specify the key ARN or alias ARN in the value of the <code>KeyId</code> parameter.
+     * </p>
+     * <p>
+     * <b>Required permissions</b>: <a
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/kms-api-permissions-reference.html"
+     * >kms:GenerateMac</a> (key policy)
+     * </p>
+     * <p>
+     * <b>Related operations</b>: <a>VerifyMac</a>
+     * </p>
+     * 
+     * @param generateMacRequest
+     * @return A Java Future containing the result of the GenerateMac operation returned by the service.
+     * @sample AWSKMSAsync.GenerateMac
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kms-2014-11-01/GenerateMac" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GenerateMacResult> generateMacAsync(GenerateMacRequest generateMacRequest);
+
+    /**
+     * <p>
+     * Generates a hash-based message authentication code (HMAC) for a message using an HMAC KMS key and a MAC algorithm
+     * that the key supports. The MAC algorithm computes the HMAC for the message and the key as described in <a
+     * href="https://datatracker.ietf.org/doc/html/rfc2104">RFC 2104</a>.
+     * </p>
+     * <p>
+     * You can use the HMAC that this operation generates with the <a>VerifyMac</a> operation to demonstrate that the
+     * original message has not changed. Also, because a secret key is used to create the hash, you can verify that the
+     * party that generated the hash has the required secret key. This operation is part of KMS support for HMAC KMS
+     * keys. For details, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/hmac.html">HMAC keys in
+     * KMS</a> in the <i> <i>Key Management Service Developer Guide</i> </i>.
+     * </p>
+     * <p>
+     * The KMS key that you use for this operation must be in a compatible key state. For details, see <a
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the
+     * <i>Key Management Service Developer Guide</i>.
+     * </p>
+     * <p>
+     * <b>Cross-account use</b>: Yes. To perform this operation with a KMS key in a different Amazon Web Services
+     * account, specify the key ARN or alias ARN in the value of the <code>KeyId</code> parameter.
+     * </p>
+     * <p>
+     * <b>Required permissions</b>: <a
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/kms-api-permissions-reference.html"
+     * >kms:GenerateMac</a> (key policy)
+     * </p>
+     * <p>
+     * <b>Related operations</b>: <a>VerifyMac</a>
+     * </p>
+     * 
+     * @param generateMacRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GenerateMac operation returned by the service.
+     * @sample AWSKMSAsyncHandler.GenerateMac
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kms-2014-11-01/GenerateMac" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GenerateMacResult> generateMacAsync(GenerateMacRequest generateMacRequest,
+            com.amazonaws.handlers.AsyncHandler<GenerateMacRequest, GenerateMacResult> asyncHandler);
 
     /**
      * <p>
@@ -4291,20 +4370,20 @@ public interface AWSKMSAsync extends AWSKMS {
      * </p>
      * <p>
      * You cannot enable automatic rotation of <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/symm-asymm-concepts.html#asymmetric-cmks">asymmetric
-     * KMS keys</a>, KMS keys with <a
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/symmetric-asymmetric.html">asymmetric KMS keys</a>,
+     * <a href="https://docs.aws.amazon.com/kms/latest/developerguide/hmac.html">HMAC KMS keys</a>, KMS keys with <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/importing-keys.html">imported key material</a>, or
      * KMS keys in a <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/custom-key-store-overview.html">custom key store</a>.
      * To enable or disable automatic rotation of a set of related <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/multi-region-keys-overview.html#mrk-replica-key"
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/multi-region-keys-manage.html#multi-region-rotate"
      * >multi-Region keys</a>, set the property on the primary key. The key rotation status for these KMS keys is always
      * <code>false</code>.
      * </p>
      * <p>
      * The KMS key that you use for this operation must be in a compatible key state. For details, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a>
-     * in the <i>Key Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the
+     * <i>Key Management Service Developer Guide</i>.
      * </p>
      * <ul>
      * <li>
@@ -4361,20 +4440,20 @@ public interface AWSKMSAsync extends AWSKMS {
      * </p>
      * <p>
      * You cannot enable automatic rotation of <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/symm-asymm-concepts.html#asymmetric-cmks">asymmetric
-     * KMS keys</a>, KMS keys with <a
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/symmetric-asymmetric.html">asymmetric KMS keys</a>,
+     * <a href="https://docs.aws.amazon.com/kms/latest/developerguide/hmac.html">HMAC KMS keys</a>, KMS keys with <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/importing-keys.html">imported key material</a>, or
      * KMS keys in a <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/custom-key-store-overview.html">custom key store</a>.
      * To enable or disable automatic rotation of a set of related <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/multi-region-keys-overview.html#mrk-replica-key"
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/multi-region-keys-manage.html#multi-region-rotate"
      * >multi-Region keys</a>, set the property on the primary key. The key rotation status for these KMS keys is always
      * <code>false</code>.
      * </p>
      * <p>
      * The KMS key that you use for this operation must be in a compatible key state. For details, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a>
-     * in the <i>Key Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the
+     * <i>Key Management Service Developer Guide</i>.
      * </p>
      * <ul>
      * <li>
@@ -4430,9 +4509,9 @@ public interface AWSKMSAsync extends AWSKMS {
 
     /**
      * <p>
-     * Returns the items you need to import key material into a symmetric, customer managed KMS key. For more
-     * information about importing key material into KMS, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/importing-keys.html">Importing Key Material</a> in
+     * Returns the items you need to import key material into a symmetric encryption KMS key. For more information about
+     * importing key material into KMS, see <a
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/importing-keys.html">Importing key material</a> in
      * the <i>Key Management Service Developer Guide</i>.
      * </p>
      * <p>
@@ -4440,10 +4519,10 @@ public interface AWSKMSAsync extends AWSKMS {
      * material. Store the import token to send with a subsequent <a>ImportKeyMaterial</a> request.
      * </p>
      * <p>
-     * You must specify the key ID of the symmetric KMS key into which you will import key material. This KMS key's
-     * <code>Origin</code> must be <code>EXTERNAL</code>. You must also specify the wrapping algorithm and type of
+     * You must specify the key ID of the symmetric encryption KMS key into which you will import key material. This KMS
+     * key's <code>Origin</code> must be <code>EXTERNAL</code>. You must also specify the wrapping algorithm and type of
      * wrapping key (public key) that you will use to encrypt the key material. You cannot perform this operation on an
-     * asymmetric KMS key or on any KMS key in a different Amazon Web Services account.
+     * asymmetric KMS key, an HMAC KMS key, or on any KMS key in a different Amazon Web Services account.
      * </p>
      * <p>
      * To import key material, you must use the public key and import token from the same response. These items are
@@ -4453,8 +4532,8 @@ public interface AWSKMSAsync extends AWSKMS {
      * </p>
      * <p>
      * The KMS key that you use for this operation must be in a compatible key state. For details, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a>
-     * in the <i>Key Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the
+     * <i>Key Management Service Developer Guide</i>.
      * </p>
      * <p>
      * <b>Cross-account use</b>: No. You cannot perform this operation on a KMS key in a different Amazon Web Services
@@ -4491,9 +4570,9 @@ public interface AWSKMSAsync extends AWSKMS {
 
     /**
      * <p>
-     * Returns the items you need to import key material into a symmetric, customer managed KMS key. For more
-     * information about importing key material into KMS, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/importing-keys.html">Importing Key Material</a> in
+     * Returns the items you need to import key material into a symmetric encryption KMS key. For more information about
+     * importing key material into KMS, see <a
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/importing-keys.html">Importing key material</a> in
      * the <i>Key Management Service Developer Guide</i>.
      * </p>
      * <p>
@@ -4501,10 +4580,10 @@ public interface AWSKMSAsync extends AWSKMS {
      * material. Store the import token to send with a subsequent <a>ImportKeyMaterial</a> request.
      * </p>
      * <p>
-     * You must specify the key ID of the symmetric KMS key into which you will import key material. This KMS key's
-     * <code>Origin</code> must be <code>EXTERNAL</code>. You must also specify the wrapping algorithm and type of
+     * You must specify the key ID of the symmetric encryption KMS key into which you will import key material. This KMS
+     * key's <code>Origin</code> must be <code>EXTERNAL</code>. You must also specify the wrapping algorithm and type of
      * wrapping key (public key) that you will use to encrypt the key material. You cannot perform this operation on an
-     * asymmetric KMS key or on any KMS key in a different Amazon Web Services account.
+     * asymmetric KMS key, an HMAC KMS key, or on any KMS key in a different Amazon Web Services account.
      * </p>
      * <p>
      * To import key material, you must use the public key and import token from the same response. These items are
@@ -4514,8 +4593,8 @@ public interface AWSKMSAsync extends AWSKMS {
      * </p>
      * <p>
      * The KMS key that you use for this operation must be in a compatible key state. For details, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a>
-     * in the <i>Key Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the
+     * <i>Key Management Service Developer Guide</i>.
      * </p>
      * <p>
      * <b>Cross-account use</b>: No. You cannot perform this operation on a KMS key in a different Amazon Web Services
@@ -4560,9 +4639,9 @@ public interface AWSKMSAsync extends AWSKMS {
      * Returns the public key of an asymmetric KMS key. Unlike the private key of a asymmetric KMS key, which never
      * leaves KMS unencrypted, callers with <code>kms:GetPublicKey</code> permission can download the public key of an
      * asymmetric KMS key. You can share the public key to allow others to encrypt messages and verify signatures
-     * outside of KMS. For information about symmetric and asymmetric KMS keys, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/symmetric-asymmetric.html">Using Symmetric and
-     * Asymmetric KMS keys</a> in the <i>Key Management Service Developer Guide</i>.
+     * outside of KMS. For information about asymmetric KMS keys, see <a
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/symmetric-asymmetric.html">Asymmetric KMS keys</a> in
+     * the <i>Key Management Service Developer Guide</i>.
      * </p>
      * <p>
      * You do not need to download the public key. Instead, you can use the public key within KMS by calling the
@@ -4612,8 +4691,8 @@ public interface AWSKMSAsync extends AWSKMS {
      * </p>
      * <p>
      * The KMS key that you use for this operation must be in a compatible key state. For details, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a>
-     * in the <i>Key Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the
+     * <i>Key Management Service Developer Guide</i>.
      * </p>
      * <p>
      * <b>Cross-account use</b>: Yes. To perform this operation with a KMS key in a different Amazon Web Services
@@ -4641,9 +4720,9 @@ public interface AWSKMSAsync extends AWSKMS {
      * Returns the public key of an asymmetric KMS key. Unlike the private key of a asymmetric KMS key, which never
      * leaves KMS unencrypted, callers with <code>kms:GetPublicKey</code> permission can download the public key of an
      * asymmetric KMS key. You can share the public key to allow others to encrypt messages and verify signatures
-     * outside of KMS. For information about symmetric and asymmetric KMS keys, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/symmetric-asymmetric.html">Using Symmetric and
-     * Asymmetric KMS keys</a> in the <i>Key Management Service Developer Guide</i>.
+     * outside of KMS. For information about asymmetric KMS keys, see <a
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/symmetric-asymmetric.html">Asymmetric KMS keys</a> in
+     * the <i>Key Management Service Developer Guide</i>.
      * </p>
      * <p>
      * You do not need to download the public key. Instead, you can use the public key within KMS by calling the
@@ -4693,8 +4772,8 @@ public interface AWSKMSAsync extends AWSKMS {
      * </p>
      * <p>
      * The KMS key that you use for this operation must be in a compatible key state. For details, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a>
-     * in the <i>Key Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the
+     * <i>Key Management Service Developer Guide</i>.
      * </p>
      * <p>
      * <b>Cross-account use</b>: Yes. To perform this operation with a KMS key in a different Amazon Web Services
@@ -4724,16 +4803,16 @@ public interface AWSKMSAsync extends AWSKMS {
 
     /**
      * <p>
-     * Imports key material into an existing symmetric KMS KMS key that was created without key material. After you
-     * successfully import key material into a KMS key, you can <a
+     * Imports key material into an existing symmetric encryption KMS key that was created without key material. After
+     * you successfully import key material into a KMS key, you can <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/importing-keys.html#reimport-key-material">reimport
      * the same key material</a> into that KMS key, but you cannot import different key material.
      * </p>
      * <p>
-     * You cannot perform this operation on an asymmetric KMS key or on any KMS key in a different Amazon Web Services
-     * account. For more information about creating KMS keys with no key material and then importing key material, see
-     * <a href="https://docs.aws.amazon.com/kms/latest/developerguide/importing-keys.html">Importing Key Material</a> in
-     * the <i>Key Management Service Developer Guide</i>.
+     * You cannot perform this operation on an asymmetric KMS key, an HMAC KMS key, or on any KMS key in a different
+     * Amazon Web Services account. For more information about creating KMS keys with no key material and then importing
+     * key material, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/importing-keys.html">Importing
+     * Key Material</a> in the <i>Key Management Service Developer Guide</i>.
      * </p>
      * <p>
      * Before using this operation, call <a>GetParametersForImport</a>. Its response includes a public key and an import
@@ -4787,8 +4866,8 @@ public interface AWSKMSAsync extends AWSKMS {
      * </p>
      * <p>
      * The KMS key that you use for this operation must be in a compatible key state. For details, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a>
-     * in the <i>Key Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the
+     * <i>Key Management Service Developer Guide</i>.
      * </p>
      * <p>
      * <b>Cross-account use</b>: No. You cannot perform this operation on a KMS key in a different Amazon Web Services
@@ -4825,16 +4904,16 @@ public interface AWSKMSAsync extends AWSKMS {
 
     /**
      * <p>
-     * Imports key material into an existing symmetric KMS KMS key that was created without key material. After you
-     * successfully import key material into a KMS key, you can <a
+     * Imports key material into an existing symmetric encryption KMS key that was created without key material. After
+     * you successfully import key material into a KMS key, you can <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/importing-keys.html#reimport-key-material">reimport
      * the same key material</a> into that KMS key, but you cannot import different key material.
      * </p>
      * <p>
-     * You cannot perform this operation on an asymmetric KMS key or on any KMS key in a different Amazon Web Services
-     * account. For more information about creating KMS keys with no key material and then importing key material, see
-     * <a href="https://docs.aws.amazon.com/kms/latest/developerguide/importing-keys.html">Importing Key Material</a> in
-     * the <i>Key Management Service Developer Guide</i>.
+     * You cannot perform this operation on an asymmetric KMS key, an HMAC KMS key, or on any KMS key in a different
+     * Amazon Web Services account. For more information about creating KMS keys with no key material and then importing
+     * key material, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/importing-keys.html">Importing
+     * Key Material</a> in the <i>Key Management Service Developer Guide</i>.
      * </p>
      * <p>
      * Before using this operation, call <a>GetParametersForImport</a>. Its response includes a public key and an import
@@ -4888,8 +4967,8 @@ public interface AWSKMSAsync extends AWSKMS {
      * </p>
      * <p>
      * The KMS key that you use for this operation must be in a compatible key state. For details, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a>
-     * in the <i>Key Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the
+     * <i>Key Management Service Developer Guide</i>.
      * </p>
      * <p>
      * <b>Cross-account use</b>: No. You cannot perform this operation on a KMS key in a different Amazon Web Services
@@ -5085,7 +5164,7 @@ public interface AWSKMSAsync extends AWSKMS {
      * </p>
      * <p>
      * For detailed information about grants, including grant terminology, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/grants.html">Using grants</a> in the <i> <i>Key
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/grants.html">Grants in KMS</a> in the <i> <i>Key
      * Management Service Developer Guide</i> </i>. For examples of working with grants in several programming
      * languages, see <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/programming-grants.html">Programming grants</a>.
@@ -5151,7 +5230,7 @@ public interface AWSKMSAsync extends AWSKMS {
      * </p>
      * <p>
      * For detailed information about grants, including grant terminology, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/grants.html">Using grants</a> in the <i> <i>Key
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/grants.html">Grants in KMS</a> in the <i> <i>Key
      * Management Service Developer Guide</i> </i>. For examples of working with grants in several programming
      * languages, see <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/programming-grants.html">Programming grants</a>.
@@ -5530,7 +5609,7 @@ public interface AWSKMSAsync extends AWSKMS {
      * </p>
      * <p>
      * For detailed information about grants, including grant terminology, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/grants.html">Using grants</a> in the <i> <i>Key
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/grants.html">Grants in KMS</a> in the <i> <i>Key
      * Management Service Developer Guide</i> </i>. For examples of working with grants in several programming
      * languages, see <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/programming-grants.html">Programming grants</a>.
@@ -5592,7 +5671,7 @@ public interface AWSKMSAsync extends AWSKMS {
      * </p>
      * <p>
      * For detailed information about grants, including grant terminology, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/grants.html">Using grants</a> in the <i> <i>Key
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/grants.html">Grants in KMS</a> in the <i> <i>Key
      * Management Service Developer Guide</i> </i>. For examples of working with grants in several programming
      * languages, see <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/programming-grants.html">Programming grants</a>.
@@ -5733,7 +5812,7 @@ public interface AWSKMSAsync extends AWSKMS {
      * of a ciphertext.
      * </p>
      * <p>
-     * The <code>ReEncrypt</code> operation can decrypt ciphertext that was encrypted by using an KMS KMS key in an KMS
+     * The <code>ReEncrypt</code> operation can decrypt ciphertext that was encrypted by using a KMS key in an KMS
      * operation, such as <a>Encrypt</a> or <a>GenerateDataKey</a>. It can also decrypt ciphertext that was encrypted by
      * using the public key of an <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/symm-asymm-concepts.html#asymmetric-cmks">asymmetric
@@ -5756,21 +5835,20 @@ public interface AWSKMSAsync extends AWSKMS {
      * </li>
      * <li>
      * <p>
-     * If your ciphertext was encrypted under a symmetric KMS key, the <code>SourceKeyId</code> parameter is optional.
-     * KMS can get this information from metadata that it adds to the symmetric ciphertext blob. This feature adds
-     * durability to your implementation by ensuring that authorized users can decrypt ciphertext decades after it was
-     * encrypted, even if they've lost track of the key ID. However, specifying the source KMS key is always recommended
-     * as a best practice. When you use the <code>SourceKeyId</code> parameter to specify a KMS key, KMS uses only the
-     * KMS key you specify. If the ciphertext was encrypted under a different KMS key, the <code>ReEncrypt</code>
-     * operation fails. This practice ensures that you use the KMS key that you intend.
+     * If your ciphertext was encrypted under a symmetric encryption KMS key, the <code>SourceKeyId</code> parameter is
+     * optional. KMS can get this information from metadata that it adds to the symmetric ciphertext blob. This feature
+     * adds durability to your implementation by ensuring that authorized users can decrypt ciphertext decades after it
+     * was encrypted, even if they've lost track of the key ID. However, specifying the source KMS key is always
+     * recommended as a best practice. When you use the <code>SourceKeyId</code> parameter to specify a KMS key, KMS
+     * uses only the KMS key you specify. If the ciphertext was encrypted under a different KMS key, the
+     * <code>ReEncrypt</code> operation fails. This practice ensures that you use the KMS key that you intend.
      * </p>
      * </li>
      * <li>
      * <p>
      * To reencrypt the data, you must use the <code>DestinationKeyId</code> parameter specify the KMS key that
-     * re-encrypts the data after it is decrypted. You can select a symmetric or asymmetric KMS key. If the destination
-     * KMS key is an asymmetric KMS key, you must also provide the encryption algorithm. The algorithm that you choose
-     * must be compatible with the KMS key.
+     * re-encrypts the data after it is decrypted. If the destination KMS key is an asymmetric KMS key, you must also
+     * provide the encryption algorithm. The algorithm that you choose must be compatible with the KMS key.
      * </p>
      * <important>
      * <p>
@@ -5780,16 +5858,17 @@ public interface AWSKMSAsync extends AWSKMS {
      * operation fails.
      * </p>
      * <p>
-     * You are not required to supply the key ID and encryption algorithm when you decrypt with symmetric KMS keys
-     * because KMS stores this information in the ciphertext blob. KMS cannot store metadata in ciphertext generated
-     * with asymmetric keys. The standard format for asymmetric key ciphertext does not include configurable fields.
+     * You are not required to supply the key ID and encryption algorithm when you decrypt with symmetric encryption KMS
+     * keys because KMS stores this information in the ciphertext blob. KMS cannot store metadata in ciphertext
+     * generated with asymmetric keys. The standard format for asymmetric key ciphertext does not include configurable
+     * fields.
      * </p>
      * </important></li>
      * </ul>
      * <p>
      * The KMS key that you use for this operation must be in a compatible key state. For details, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a>
-     * in the <i>Key Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the
+     * <i>Key Management Service Developer Guide</i>.
      * </p>
      * <p>
      * <b>Cross-account use</b>: Yes. The source KMS key and destination KMS key can be in different Amazon Web Services
@@ -5866,7 +5945,7 @@ public interface AWSKMSAsync extends AWSKMS {
      * of a ciphertext.
      * </p>
      * <p>
-     * The <code>ReEncrypt</code> operation can decrypt ciphertext that was encrypted by using an KMS KMS key in an KMS
+     * The <code>ReEncrypt</code> operation can decrypt ciphertext that was encrypted by using a KMS key in an KMS
      * operation, such as <a>Encrypt</a> or <a>GenerateDataKey</a>. It can also decrypt ciphertext that was encrypted by
      * using the public key of an <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/symm-asymm-concepts.html#asymmetric-cmks">asymmetric
@@ -5889,21 +5968,20 @@ public interface AWSKMSAsync extends AWSKMS {
      * </li>
      * <li>
      * <p>
-     * If your ciphertext was encrypted under a symmetric KMS key, the <code>SourceKeyId</code> parameter is optional.
-     * KMS can get this information from metadata that it adds to the symmetric ciphertext blob. This feature adds
-     * durability to your implementation by ensuring that authorized users can decrypt ciphertext decades after it was
-     * encrypted, even if they've lost track of the key ID. However, specifying the source KMS key is always recommended
-     * as a best practice. When you use the <code>SourceKeyId</code> parameter to specify a KMS key, KMS uses only the
-     * KMS key you specify. If the ciphertext was encrypted under a different KMS key, the <code>ReEncrypt</code>
-     * operation fails. This practice ensures that you use the KMS key that you intend.
+     * If your ciphertext was encrypted under a symmetric encryption KMS key, the <code>SourceKeyId</code> parameter is
+     * optional. KMS can get this information from metadata that it adds to the symmetric ciphertext blob. This feature
+     * adds durability to your implementation by ensuring that authorized users can decrypt ciphertext decades after it
+     * was encrypted, even if they've lost track of the key ID. However, specifying the source KMS key is always
+     * recommended as a best practice. When you use the <code>SourceKeyId</code> parameter to specify a KMS key, KMS
+     * uses only the KMS key you specify. If the ciphertext was encrypted under a different KMS key, the
+     * <code>ReEncrypt</code> operation fails. This practice ensures that you use the KMS key that you intend.
      * </p>
      * </li>
      * <li>
      * <p>
      * To reencrypt the data, you must use the <code>DestinationKeyId</code> parameter specify the KMS key that
-     * re-encrypts the data after it is decrypted. You can select a symmetric or asymmetric KMS key. If the destination
-     * KMS key is an asymmetric KMS key, you must also provide the encryption algorithm. The algorithm that you choose
-     * must be compatible with the KMS key.
+     * re-encrypts the data after it is decrypted. If the destination KMS key is an asymmetric KMS key, you must also
+     * provide the encryption algorithm. The algorithm that you choose must be compatible with the KMS key.
      * </p>
      * <important>
      * <p>
@@ -5913,16 +5991,17 @@ public interface AWSKMSAsync extends AWSKMS {
      * operation fails.
      * </p>
      * <p>
-     * You are not required to supply the key ID and encryption algorithm when you decrypt with symmetric KMS keys
-     * because KMS stores this information in the ciphertext blob. KMS cannot store metadata in ciphertext generated
-     * with asymmetric keys. The standard format for asymmetric key ciphertext does not include configurable fields.
+     * You are not required to supply the key ID and encryption algorithm when you decrypt with symmetric encryption KMS
+     * keys because KMS stores this information in the ciphertext blob. KMS cannot store metadata in ciphertext
+     * generated with asymmetric keys. The standard format for asymmetric key ciphertext does not include configurable
+     * fields.
      * </p>
      * </important></li>
      * </ul>
      * <p>
      * The KMS key that you use for this operation must be in a compatible key state. For details, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a>
-     * in the <i>Key Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the
+     * <i>Key Management Service Developer Guide</i>.
      * </p>
      * <p>
      * <b>Cross-account use</b>: Yes. The source KMS key and destination KMS key can be in different Amazon Web Services
@@ -6006,8 +6085,8 @@ public interface AWSKMSAsync extends AWSKMS {
      * other metadata, you can use them interchangeably to encrypt data in one Amazon Web Services Region and decrypt it
      * in a different Amazon Web Services Region without re-encrypting the data or making a cross-Region call. For more
      * information about multi-Region keys, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/multi-region-keys-overview.html">Using multi-Region
-     * keys</a> in the <i>Key Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/multi-region-keys-overview.html">Multi-Region keys in
+     * KMS</a> in the <i>Key Management Service Developer Guide</i>.
      * </p>
      * <p>
      * A <i>replica key</i> is a fully-functional KMS key that can be used independently of its primary and peer replica
@@ -6023,8 +6102,8 @@ public interface AWSKMSAsync extends AWSKMS {
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-policies.html">key policy</a>, <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/tagging-keys.html">tags</a>, <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/kms-alias.html">aliases</a>, and <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">key state</a>. KMS pricing and quotas
-     * for KMS keys apply to each primary key and replica key.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a>. KMS
+     * pricing and quotas for KMS keys apply to each primary key and replica key.
      * </p>
      * <p>
      * When this operation completes, the new replica key has a transient key state of <code>Creating</code>. This key
@@ -6033,8 +6112,17 @@ public interface AWSKMSAsync extends AWSKMS {
      * you cannot yet use it in cryptographic operations. If you are creating and using the replica key
      * programmatically, retry on <code>KMSInvalidStateException</code> or call <code>DescribeKey</code> to check its
      * <code>KeyState</code> value before using it. For details about the <code>Creating</code> key state, see <a
-     * href="kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a> in the <i>Key Management
-     * Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the
+     * <i>Key Management Service Developer Guide</i>.
+     * </p>
+     * <p>
+     * You cannot create more than one replica of a primary key in any Region. If the Region already includes a replica
+     * of the key you're trying to replicate, <code>ReplicateKey</code> returns an <code>AlreadyExistsException</code>
+     * error. If the key state of the existing replica is <code>PendingDeletion</code>, you can cancel the scheduled key
+     * deletion (<a>CancelKeyDeletion</a>) or wait for the key to be deleted. The new replica key you create will have
+     * the same <a href=
+     * "https://docs.aws.amazon.com/kms/latest/developerguide/multi-region-keys-overview.html#mrk-sync-properties"
+     * >shared properties</a> as the original replica key.
      * </p>
      * <p>
      * The CloudTrail log of a <code>ReplicateKey</code> operation records a <code>ReplicateKey</code> operation in the
@@ -6117,8 +6205,8 @@ public interface AWSKMSAsync extends AWSKMS {
      * other metadata, you can use them interchangeably to encrypt data in one Amazon Web Services Region and decrypt it
      * in a different Amazon Web Services Region without re-encrypting the data or making a cross-Region call. For more
      * information about multi-Region keys, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/multi-region-keys-overview.html">Using multi-Region
-     * keys</a> in the <i>Key Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/multi-region-keys-overview.html">Multi-Region keys in
+     * KMS</a> in the <i>Key Management Service Developer Guide</i>.
      * </p>
      * <p>
      * A <i>replica key</i> is a fully-functional KMS key that can be used independently of its primary and peer replica
@@ -6134,8 +6222,8 @@ public interface AWSKMSAsync extends AWSKMS {
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-policies.html">key policy</a>, <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/tagging-keys.html">tags</a>, <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/kms-alias.html">aliases</a>, and <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">key state</a>. KMS pricing and quotas
-     * for KMS keys apply to each primary key and replica key.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a>. KMS
+     * pricing and quotas for KMS keys apply to each primary key and replica key.
      * </p>
      * <p>
      * When this operation completes, the new replica key has a transient key state of <code>Creating</code>. This key
@@ -6144,8 +6232,17 @@ public interface AWSKMSAsync extends AWSKMS {
      * you cannot yet use it in cryptographic operations. If you are creating and using the replica key
      * programmatically, retry on <code>KMSInvalidStateException</code> or call <code>DescribeKey</code> to check its
      * <code>KeyState</code> value before using it. For details about the <code>Creating</code> key state, see <a
-     * href="kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a> in the <i>Key Management
-     * Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the
+     * <i>Key Management Service Developer Guide</i>.
+     * </p>
+     * <p>
+     * You cannot create more than one replica of a primary key in any Region. If the Region already includes a replica
+     * of the key you're trying to replicate, <code>ReplicateKey</code> returns an <code>AlreadyExistsException</code>
+     * error. If the key state of the existing replica is <code>PendingDeletion</code>, you can cancel the scheduled key
+     * deletion (<a>CancelKeyDeletion</a>) or wait for the key to be deleted. The new replica key you create will have
+     * the same <a href=
+     * "https://docs.aws.amazon.com/kms/latest/developerguide/multi-region-keys-overview.html#mrk-sync-properties"
+     * >shared properties</a> as the original replica key.
      * </p>
      * <p>
      * The CloudTrail log of a <code>ReplicateKey</code> operation records a <code>ReplicateKey</code> operation in the
@@ -6229,15 +6326,14 @@ public interface AWSKMSAsync extends AWSKMS {
      * </p>
      * <p>
      * This operation can be called by the <i>retiring principal</i> for a grant, by the <i>grantee principal</i> if the
-     * grant allows the <code>RetireGrant</code> operation, and by the Amazon Web Services account (root user) in which
-     * the grant is created. It can also be called by principals to whom permission for retiring a grant is delegated.
-     * For details, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/grant-manage.html#grant-delete">Retiring and revoking
-     * grants</a> in the <i>Key Management Service Developer Guide</i>.
+     * grant allows the <code>RetireGrant</code> operation, and by the Amazon Web Services account in which the grant is
+     * created. It can also be called by principals to whom permission for retiring a grant is delegated. For details,
+     * see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/grant-manage.html#grant-delete">Retiring and
+     * revoking grants</a> in the <i>Key Management Service Developer Guide</i>.
      * </p>
      * <p>
      * For detailed information about grants, including grant terminology, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/grants.html">Using grants</a> in the <i> <i>Key
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/grants.html">Grants in KMS</a> in the <i> <i>Key
      * Management Service Developer Guide</i> </i>. For examples of working with grants in several programming
      * languages, see <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/programming-grants.html">Programming grants</a>.
@@ -6293,15 +6389,14 @@ public interface AWSKMSAsync extends AWSKMS {
      * </p>
      * <p>
      * This operation can be called by the <i>retiring principal</i> for a grant, by the <i>grantee principal</i> if the
-     * grant allows the <code>RetireGrant</code> operation, and by the Amazon Web Services account (root user) in which
-     * the grant is created. It can also be called by principals to whom permission for retiring a grant is delegated.
-     * For details, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/grant-manage.html#grant-delete">Retiring and revoking
-     * grants</a> in the <i>Key Management Service Developer Guide</i>.
+     * grant allows the <code>RetireGrant</code> operation, and by the Amazon Web Services account in which the grant is
+     * created. It can also be called by principals to whom permission for retiring a grant is delegated. For details,
+     * see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/grant-manage.html#grant-delete">Retiring and
+     * revoking grants</a> in the <i>Key Management Service Developer Guide</i>.
      * </p>
      * <p>
      * For detailed information about grants, including grant terminology, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/grants.html">Using grants</a> in the <i> <i>Key
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/grants.html">Grants in KMS</a> in the <i> <i>Key
      * Management Service Developer Guide</i> </i>. For examples of working with grants in several programming
      * languages, see <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/programming-grants.html">Programming grants</a>.
@@ -6382,7 +6477,7 @@ public interface AWSKMSAsync extends AWSKMS {
      * </p>
      * <p>
      * For detailed information about grants, including grant terminology, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/grants.html">Using grants</a> in the <i> <i>Key
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/grants.html">Grants in KMS</a> in the <i> <i>Key
      * Management Service Developer Guide</i> </i>. For examples of working with grants in several programming
      * languages, see <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/programming-grants.html">Programming grants</a>.
@@ -6445,7 +6540,7 @@ public interface AWSKMSAsync extends AWSKMS {
      * </p>
      * <p>
      * For detailed information about grants, including grant terminology, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/grants.html">Using grants</a> in the <i> <i>Key
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/grants.html">Grants in KMS</a> in the <i> <i>Key
      * Management Service Developer Guide</i> </i>. For examples of working with grants in several programming
      * languages, see <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/programming-grants.html">Programming grants</a>.
@@ -6540,8 +6635,8 @@ public interface AWSKMSAsync extends AWSKMS {
      * </p>
      * <p>
      * The KMS key that you use for this operation must be in a compatible key state. For details, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a>
-     * in the <i>Key Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the
+     * <i>Key Management Service Developer Guide</i>.
      * </p>
      * <p>
      * <b>Cross-account use</b>: No. You cannot perform this operation on a KMS key in a different Amazon Web Services
@@ -6616,8 +6711,8 @@ public interface AWSKMSAsync extends AWSKMS {
      * </p>
      * <p>
      * The KMS key that you use for this operation must be in a compatible key state. For details, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a>
-     * in the <i>Key Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the
+     * <i>Key Management Service Developer Guide</i>.
      * </p>
      * <p>
      * <b>Cross-account use</b>: No. You cannot perform this operation on a KMS key in a different Amazon Web Services
@@ -6658,11 +6753,11 @@ public interface AWSKMSAsync extends AWSKMS {
     /**
      * <p>
      * Creates a <a href="https://en.wikipedia.org/wiki/Digital_signature">digital signature</a> for a message or
-     * message digest by using the private key in an asymmetric KMS key. To verify the signature, use the <a>Verify</a>
-     * operation, or use the public key in the same asymmetric KMS key outside of KMS. For information about symmetric
-     * and asymmetric KMS keys, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/symmetric-asymmetric.html">Using Symmetric and
-     * Asymmetric KMS keys</a> in the <i>Key Management Service Developer Guide</i>.
+     * message digest by using the private key in an asymmetric signing KMS key. To verify the signature, use the
+     * <a>Verify</a> operation, or use the public key in the same asymmetric KMS key outside of KMS. For information
+     * about asymmetric KMS keys, see <a
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/symmetric-asymmetric.html">Asymmetric KMS keys</a> in
+     * the <i>Key Management Service Developer Guide</i>.
      * </p>
      * <p>
      * Digital signatures are generated and verified by using asymmetric key pair, such as an RSA or ECC pair that is
@@ -6708,8 +6803,8 @@ public interface AWSKMSAsync extends AWSKMS {
      * </p>
      * <p>
      * The KMS key that you use for this operation must be in a compatible key state. For details, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a>
-     * in the <i>Key Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the
+     * <i>Key Management Service Developer Guide</i>.
      * </p>
      * <p>
      * <b>Cross-account use</b>: Yes. To perform this operation with a KMS key in a different Amazon Web Services
@@ -6734,11 +6829,11 @@ public interface AWSKMSAsync extends AWSKMS {
     /**
      * <p>
      * Creates a <a href="https://en.wikipedia.org/wiki/Digital_signature">digital signature</a> for a message or
-     * message digest by using the private key in an asymmetric KMS key. To verify the signature, use the <a>Verify</a>
-     * operation, or use the public key in the same asymmetric KMS key outside of KMS. For information about symmetric
-     * and asymmetric KMS keys, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/symmetric-asymmetric.html">Using Symmetric and
-     * Asymmetric KMS keys</a> in the <i>Key Management Service Developer Guide</i>.
+     * message digest by using the private key in an asymmetric signing KMS key. To verify the signature, use the
+     * <a>Verify</a> operation, or use the public key in the same asymmetric KMS key outside of KMS. For information
+     * about asymmetric KMS keys, see <a
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/symmetric-asymmetric.html">Asymmetric KMS keys</a> in
+     * the <i>Key Management Service Developer Guide</i>.
      * </p>
      * <p>
      * Digital signatures are generated and verified by using asymmetric key pair, such as an RSA or ECC pair that is
@@ -6784,8 +6879,8 @@ public interface AWSKMSAsync extends AWSKMS {
      * </p>
      * <p>
      * The KMS key that you use for this operation must be in a compatible key state. For details, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a>
-     * in the <i>Key Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the
+     * <i>Key Management Service Developer Guide</i>.
      * </p>
      * <p>
      * <b>Cross-account use</b>: Yes. To perform this operation with a KMS key in a different Amazon Web Services
@@ -6819,8 +6914,8 @@ public interface AWSKMSAsync extends AWSKMS {
      * <note>
      * <p>
      * Tagging or untagging a KMS key can allow or deny permission to the KMS key. For details, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/abac.html">Using ABAC in KMS</a> in the <i>Key
-     * Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/abac.html">ABAC in KMS</a> in the <i>Key Management
+     * Service Developer Guide</i>.
      * </p>
      * </note>
      * <p>
@@ -6851,8 +6946,8 @@ public interface AWSKMSAsync extends AWSKMS {
      * </p>
      * <p>
      * The KMS key that you use for this operation must be in a compatible key state. For details, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a>
-     * in the <i>Key Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the
+     * <i>Key Management Service Developer Guide</i>.
      * </p>
      * <p>
      * <b>Cross-account use</b>: No. You cannot perform this operation on a KMS key in a different Amazon Web Services
@@ -6905,8 +7000,8 @@ public interface AWSKMSAsync extends AWSKMS {
      * <note>
      * <p>
      * Tagging or untagging a KMS key can allow or deny permission to the KMS key. For details, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/abac.html">Using ABAC in KMS</a> in the <i>Key
-     * Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/abac.html">ABAC in KMS</a> in the <i>Key Management
+     * Service Developer Guide</i>.
      * </p>
      * </note>
      * <p>
@@ -6937,8 +7032,8 @@ public interface AWSKMSAsync extends AWSKMS {
      * </p>
      * <p>
      * The KMS key that you use for this operation must be in a compatible key state. For details, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a>
-     * in the <i>Key Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the
+     * <i>Key Management Service Developer Guide</i>.
      * </p>
      * <p>
      * <b>Cross-account use</b>: No. You cannot perform this operation on a KMS key in a different Amazon Web Services
@@ -6997,8 +7092,8 @@ public interface AWSKMSAsync extends AWSKMS {
      * <note>
      * <p>
      * Tagging or untagging a KMS key can allow or deny permission to the KMS key. For details, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/abac.html">Using ABAC in KMS</a> in the <i>Key
-     * Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/abac.html">ABAC in KMS</a> in the <i>Key Management
+     * Service Developer Guide</i>.
      * </p>
      * </note>
      * <p>
@@ -7015,8 +7110,8 @@ public interface AWSKMSAsync extends AWSKMS {
      * </p>
      * <p>
      * The KMS key that you use for this operation must be in a compatible key state. For details, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a>
-     * in the <i>Key Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the
+     * <i>Key Management Service Developer Guide</i>.
      * </p>
      * <p>
      * <b>Cross-account use</b>: No. You cannot perform this operation on a KMS key in a different Amazon Web Services
@@ -7070,8 +7165,8 @@ public interface AWSKMSAsync extends AWSKMS {
      * <note>
      * <p>
      * Tagging or untagging a KMS key can allow or deny permission to the KMS key. For details, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/abac.html">Using ABAC in KMS</a> in the <i>Key
-     * Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/abac.html">ABAC in KMS</a> in the <i>Key Management
+     * Service Developer Guide</i>.
      * </p>
      * </note>
      * <p>
@@ -7088,8 +7183,8 @@ public interface AWSKMSAsync extends AWSKMS {
      * </p>
      * <p>
      * The KMS key that you use for this operation must be in a compatible key state. For details, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a>
-     * in the <i>Key Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the
+     * <i>Key Management Service Developer Guide</i>.
      * </p>
      * <p>
      * <b>Cross-account use</b>: No. You cannot perform this operation on a KMS key in a different Amazon Web Services
@@ -7148,8 +7243,8 @@ public interface AWSKMSAsync extends AWSKMS {
      * <note>
      * <p>
      * Adding, deleting, or updating an alias can allow or deny permission to the KMS key. For details, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/abac.html">Using ABAC in KMS</a> in the <i>Key
-     * Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/abac.html">ABAC in KMS</a> in the <i>Key Management
+     * Service Developer Guide</i>.
      * </p>
      * </note>
      * <p>
@@ -7169,8 +7264,8 @@ public interface AWSKMSAsync extends AWSKMS {
      * </p>
      * <p>
      * The KMS key that you use for this operation must be in a compatible key state. For details, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a>
-     * in the <i>Key Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the
+     * <i>Key Management Service Developer Guide</i>.
      * </p>
      * <p>
      * <b>Cross-account use</b>: No. You cannot perform this operation on a KMS key in a different Amazon Web Services
@@ -7245,8 +7340,8 @@ public interface AWSKMSAsync extends AWSKMS {
      * <note>
      * <p>
      * Adding, deleting, or updating an alias can allow or deny permission to the KMS key. For details, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/abac.html">Using ABAC in KMS</a> in the <i>Key
-     * Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/abac.html">ABAC in KMS</a> in the <i>Key Management
+     * Service Developer Guide</i>.
      * </p>
      * </note>
      * <p>
@@ -7266,8 +7361,8 @@ public interface AWSKMSAsync extends AWSKMS {
      * </p>
      * <p>
      * The KMS key that you use for this operation must be in a compatible key state. For details, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a>
-     * in the <i>Key Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the
+     * <i>Key Management Service Developer Guide</i>.
      * </p>
      * <p>
      * <b>Cross-account use</b>: No. You cannot perform this operation on a KMS key in a different Amazon Web Services
@@ -7547,8 +7642,8 @@ public interface AWSKMSAsync extends AWSKMS {
      * </p>
      * <p>
      * The KMS key that you use for this operation must be in a compatible key state. For details, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a>
-     * in the <i>Key Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the
+     * <i>Key Management Service Developer Guide</i>.
      * </p>
      * <p>
      * <b>Cross-account use</b>: No. You cannot perform this operation on a KMS key in a different Amazon Web Services
@@ -7589,8 +7684,8 @@ public interface AWSKMSAsync extends AWSKMS {
      * </p>
      * <p>
      * The KMS key that you use for this operation must be in a compatible key state. For details, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a>
-     * in the <i>Key Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the
+     * <i>Key Management Service Developer Guide</i>.
      * </p>
      * <p>
      * <b>Cross-account use</b>: No. You cannot perform this operation on a KMS key in a different Amazon Web Services
@@ -7649,8 +7744,8 @@ public interface AWSKMSAsync extends AWSKMS {
      * other metadata, you can use them interchangeably to encrypt data in one Amazon Web Services Region and decrypt it
      * in a different Amazon Web Services Region without re-encrypting the data or making a cross-Region call. For more
      * information about multi-Region keys, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/multi-region-keys-overview.html">Using multi-Region
-     * keys</a> in the <i>Key Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/multi-region-keys-overview.html">Multi-Region keys in
+     * KMS</a> in the <i>Key Management Service Developer Guide</i>.
      * </p>
      * <p>
      * The <i>primary key</i> of a multi-Region key is the source for properties that are always shared by primary and
@@ -7681,8 +7776,8 @@ public interface AWSKMSAsync extends AWSKMS {
      * state is restored when the update is complete. While the key state is <code>Updating</code>, you can use the keys
      * in cryptographic operations, but you cannot replicate the new primary key or perform certain management
      * operations, such as enabling or disabling these keys. For details about the <code>Updating</code> key state, see
-     * <a href="kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a> in the <i>Key Management
-     * Service Developer Guide</i>.
+     * <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the
+     * <i>Key Management Service Developer Guide</i>.
      * </p>
      * <p>
      * This operation does not return any output. To verify that primary key is changed, use the <a>DescribeKey</a>
@@ -7751,8 +7846,8 @@ public interface AWSKMSAsync extends AWSKMS {
      * other metadata, you can use them interchangeably to encrypt data in one Amazon Web Services Region and decrypt it
      * in a different Amazon Web Services Region without re-encrypting the data or making a cross-Region call. For more
      * information about multi-Region keys, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/multi-region-keys-overview.html">Using multi-Region
-     * keys</a> in the <i>Key Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/multi-region-keys-overview.html">Multi-Region keys in
+     * KMS</a> in the <i>Key Management Service Developer Guide</i>.
      * </p>
      * <p>
      * The <i>primary key</i> of a multi-Region key is the source for properties that are always shared by primary and
@@ -7783,8 +7878,8 @@ public interface AWSKMSAsync extends AWSKMS {
      * state is restored when the update is complete. While the key state is <code>Updating</code>, you can use the keys
      * in cryptographic operations, but you cannot replicate the new primary key or perform certain management
      * operations, such as enabling or disabling these keys. For details about the <code>Updating</code> key state, see
-     * <a href="kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a> in the <i>Key Management
-     * Service Developer Guide</i>.
+     * <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the
+     * <i>Key Management Service Developer Guide</i>.
      * </p>
      * <p>
      * This operation does not return any output. To verify that primary key is changed, use the <a>DescribeKey</a>
@@ -7852,9 +7947,9 @@ public interface AWSKMSAsync extends AWSKMS {
      * </p>
      * <p>
      * A digital signature is generated by using the private key in an asymmetric KMS key. The signature is verified by
-     * using the public key in the same asymmetric KMS key. For information about symmetric and asymmetric KMS keys, see
-     * <a href="https://docs.aws.amazon.com/kms/latest/developerguide/symmetric-asymmetric.html">Using Symmetric and
-     * Asymmetric KMS keys</a> in the <i>Key Management Service Developer Guide</i>.
+     * using the public key in the same asymmetric KMS key. For information about asymmetric KMS keys, see <a
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/symmetric-asymmetric.html">Asymmetric KMS keys</a> in
+     * the <i>Key Management Service Developer Guide</i>.
      * </p>
      * <p>
      * To verify a digital signature, you can use the <code>Verify</code> operation. Specify the same asymmetric KMS
@@ -7870,8 +7965,8 @@ public interface AWSKMSAsync extends AWSKMS {
      * </p>
      * <p>
      * The KMS key that you use for this operation must be in a compatible key state. For details, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a>
-     * in the <i>Key Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the
+     * <i>Key Management Service Developer Guide</i>.
      * </p>
      * <p>
      * <b>Cross-account use</b>: Yes. To perform this operation with a KMS key in a different Amazon Web Services
@@ -7907,9 +8002,9 @@ public interface AWSKMSAsync extends AWSKMS {
      * </p>
      * <p>
      * A digital signature is generated by using the private key in an asymmetric KMS key. The signature is verified by
-     * using the public key in the same asymmetric KMS key. For information about symmetric and asymmetric KMS keys, see
-     * <a href="https://docs.aws.amazon.com/kms/latest/developerguide/symmetric-asymmetric.html">Using Symmetric and
-     * Asymmetric KMS keys</a> in the <i>Key Management Service Developer Guide</i>.
+     * using the public key in the same asymmetric KMS key. For information about asymmetric KMS keys, see <a
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/symmetric-asymmetric.html">Asymmetric KMS keys</a> in
+     * the <i>Key Management Service Developer Guide</i>.
      * </p>
      * <p>
      * To verify a digital signature, you can use the <code>Verify</code> operation. Specify the same asymmetric KMS
@@ -7925,8 +8020,8 @@ public interface AWSKMSAsync extends AWSKMS {
      * </p>
      * <p>
      * The KMS key that you use for this operation must be in a compatible key state. For details, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a>
-     * in the <i>Key Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the
+     * <i>Key Management Service Developer Guide</i>.
      * </p>
      * <p>
      * <b>Cross-account use</b>: Yes. To perform this operation with a KMS key in a different Amazon Web Services
@@ -7953,5 +8048,94 @@ public interface AWSKMSAsync extends AWSKMS {
      */
     java.util.concurrent.Future<VerifyResult> verifyAsync(VerifyRequest verifyRequest,
             com.amazonaws.handlers.AsyncHandler<VerifyRequest, VerifyResult> asyncHandler);
+
+    /**
+     * <p>
+     * Verifies the hash-based message authentication code (HMAC) for a specified message, HMAC KMS key, and MAC
+     * algorithm. To verify the HMAC, <code>VerifyMac</code> computes an HMAC using the message, HMAC KMS key, and MAC
+     * algorithm that you specify, and compares the computed HMAC to the HMAC that you specify. If the HMACs are
+     * identical, the verification succeeds; otherwise, it fails.
+     * </p>
+     * <p>
+     * Verification indicates that the message hasn't changed since the HMAC was calculated, and the specified key was
+     * used to generate and verify the HMAC.
+     * </p>
+     * <p>
+     * This operation is part of KMS support for HMAC KMS keys. For details, see <a
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/hmac.html">HMAC keys in KMS</a> in the <i>Key
+     * Management Service Developer Guide</i>.
+     * </p>
+     * <p>
+     * The KMS key that you use for this operation must be in a compatible key state. For details, see <a
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the
+     * <i>Key Management Service Developer Guide</i>.
+     * </p>
+     * <p>
+     * <b>Cross-account use</b>: Yes. To perform this operation with a KMS key in a different Amazon Web Services
+     * account, specify the key ARN or alias ARN in the value of the <code>KeyId</code> parameter.
+     * </p>
+     * <p>
+     * <b>Required permissions</b>: <a
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/kms-api-permissions-reference.html">kms:VerifyMac</a>
+     * (key policy)
+     * </p>
+     * <p>
+     * <b>Related operations</b>: <a>GenerateMac</a>
+     * </p>
+     * 
+     * @param verifyMacRequest
+     * @return A Java Future containing the result of the VerifyMac operation returned by the service.
+     * @sample AWSKMSAsync.VerifyMac
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kms-2014-11-01/VerifyMac" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<VerifyMacResult> verifyMacAsync(VerifyMacRequest verifyMacRequest);
+
+    /**
+     * <p>
+     * Verifies the hash-based message authentication code (HMAC) for a specified message, HMAC KMS key, and MAC
+     * algorithm. To verify the HMAC, <code>VerifyMac</code> computes an HMAC using the message, HMAC KMS key, and MAC
+     * algorithm that you specify, and compares the computed HMAC to the HMAC that you specify. If the HMACs are
+     * identical, the verification succeeds; otherwise, it fails.
+     * </p>
+     * <p>
+     * Verification indicates that the message hasn't changed since the HMAC was calculated, and the specified key was
+     * used to generate and verify the HMAC.
+     * </p>
+     * <p>
+     * This operation is part of KMS support for HMAC KMS keys. For details, see <a
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/hmac.html">HMAC keys in KMS</a> in the <i>Key
+     * Management Service Developer Guide</i>.
+     * </p>
+     * <p>
+     * The KMS key that you use for this operation must be in a compatible key state. For details, see <a
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the
+     * <i>Key Management Service Developer Guide</i>.
+     * </p>
+     * <p>
+     * <b>Cross-account use</b>: Yes. To perform this operation with a KMS key in a different Amazon Web Services
+     * account, specify the key ARN or alias ARN in the value of the <code>KeyId</code> parameter.
+     * </p>
+     * <p>
+     * <b>Required permissions</b>: <a
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/kms-api-permissions-reference.html">kms:VerifyMac</a>
+     * (key policy)
+     * </p>
+     * <p>
+     * <b>Related operations</b>: <a>GenerateMac</a>
+     * </p>
+     * 
+     * @param verifyMacRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the VerifyMac operation returned by the service.
+     * @sample AWSKMSAsyncHandler.VerifyMac
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kms-2014-11-01/VerifyMac" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<VerifyMacResult> verifyMacAsync(VerifyMacRequest verifyMacRequest,
+            com.amazonaws.handlers.AsyncHandler<VerifyMacRequest, VerifyMacResult> asyncHandler);
 
 }

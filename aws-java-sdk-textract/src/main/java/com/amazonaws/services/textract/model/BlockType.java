@@ -28,7 +28,9 @@ public enum BlockType {
     CELL("CELL"),
     SELECTION_ELEMENT("SELECTION_ELEMENT"),
     MERGED_CELL("MERGED_CELL"),
-    TITLE("TITLE");
+    TITLE("TITLE"),
+    QUERY("QUERY"),
+    QUERY_RESULT("QUERY_RESULT");
 
     private String value;
 

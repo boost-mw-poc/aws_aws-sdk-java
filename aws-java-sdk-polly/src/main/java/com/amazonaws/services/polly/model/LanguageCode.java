@@ -51,7 +51,8 @@ public enum LanguageCode {
     TrTR("tr-TR"),
     EnNZ("en-NZ"),
     EnZA("en-ZA"),
-    CaES("ca-ES");
+    CaES("ca-ES"),
+    DeAT("de-AT");
 
     private String value;
 

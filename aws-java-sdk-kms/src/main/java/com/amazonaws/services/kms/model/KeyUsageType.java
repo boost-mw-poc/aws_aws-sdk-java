@@ -21,7 +21,8 @@ import javax.annotation.Generated;
 public enum KeyUsageType {
 
     SIGN_VERIFY("SIGN_VERIFY"),
-    ENCRYPT_DECRYPT("ENCRYPT_DECRYPT");
+    ENCRYPT_DECRYPT("ENCRYPT_DECRYPT"),
+    GENERATE_VERIFY_MAC("GENERATE_VERIFY_MAC");
 
     private String value;
 

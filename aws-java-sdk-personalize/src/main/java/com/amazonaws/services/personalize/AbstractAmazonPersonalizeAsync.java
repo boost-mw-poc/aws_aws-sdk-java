@@ -717,6 +717,32 @@ public class AbstractAmazonPersonalizeAsync extends AbstractAmazonPersonalize im
     }
 
     @Override
+    public java.util.concurrent.Future<StartRecommenderResult> startRecommenderAsync(StartRecommenderRequest request) {
+
+        return startRecommenderAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartRecommenderResult> startRecommenderAsync(StartRecommenderRequest request,
+            com.amazonaws.handlers.AsyncHandler<StartRecommenderRequest, StartRecommenderResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<StopRecommenderResult> stopRecommenderAsync(StopRecommenderRequest request) {
+
+        return stopRecommenderAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StopRecommenderResult> stopRecommenderAsync(StopRecommenderRequest request,
+            com.amazonaws.handlers.AsyncHandler<StopRecommenderRequest, StopRecommenderResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<StopSolutionVersionCreationResult> stopSolutionVersionCreationAsync(StopSolutionVersionCreationRequest request) {
 
         return stopSolutionVersionCreationAsync(request, null);

@@ -33,7 +33,9 @@ public enum GrantOperation {
     RetireGrant("RetireGrant"),
     DescribeKey("DescribeKey"),
     GenerateDataKeyPair("GenerateDataKeyPair"),
-    GenerateDataKeyPairWithoutPlaintext("GenerateDataKeyPairWithoutPlaintext");
+    GenerateDataKeyPairWithoutPlaintext("GenerateDataKeyPairWithoutPlaintext"),
+    GenerateMac("GenerateMac"),
+    VerifyMac("VerifyMac");
 
     private String value;
 

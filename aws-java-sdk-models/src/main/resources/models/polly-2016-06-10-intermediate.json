@@ -3335,6 +3335,9 @@
       }, {
         "name" : "CaES",
         "value" : "ca-ES"
+      }, {
+        "name" : "DeAT",
+        "value" : "de-AT"
       } ],
       "errorCode" : null,
       "fullyQualifiedName" : "com.amazonaws.services.polly.enum.LanguageCode",
@@ -15974,6 +15977,9 @@
       }, {
         "name" : "Arlet",
         "value" : "Arlet"
+      }, {
+        "name" : "Hannah",
+        "value" : "Hannah"
       } ],
       "errorCode" : null,
       "fullyQualifiedName" : "com.amazonaws.services.polly.enum.VoiceId",

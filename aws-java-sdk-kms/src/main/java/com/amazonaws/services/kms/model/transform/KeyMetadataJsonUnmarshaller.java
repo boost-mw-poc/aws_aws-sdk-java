@@ -140,6 +140,12 @@ public class KeyMetadataJsonUnmarshaller implements Unmarshaller<KeyMetadata, Js
                     context.nextToken();
                     keyMetadata.setPendingDeletionWindowInDays(context.getUnmarshaller(Integer.class).unmarshall(context));
                 }
+                if (context.testExpression("MacAlgorithms", targetDepth)) {
+                    context.nextToken();
+                    keyMetadata.setMacAlgorithms(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

@@ -102,6 +102,12 @@ public class DataSourceConfiguration implements Serializable, Cloneable, Structu
      * </p>
      */
     private BoxConfiguration boxConfiguration;
+    /**
+     * <p>
+     * Provides the configuration information to connect to Quip as your data source.
+     * </p>
+     */
+    private QuipConfiguration quipConfiguration;
 
     /**
      * <p>
@@ -610,6 +616,46 @@ public class DataSourceConfiguration implements Serializable, Cloneable, Structu
     }
 
     /**
+     * <p>
+     * Provides the configuration information to connect to Quip as your data source.
+     * </p>
+     * 
+     * @param quipConfiguration
+     *        Provides the configuration information to connect to Quip as your data source.
+     */
+
+    public void setQuipConfiguration(QuipConfiguration quipConfiguration) {
+        this.quipConfiguration = quipConfiguration;
+    }
+
+    /**
+     * <p>
+     * Provides the configuration information to connect to Quip as your data source.
+     * </p>
+     * 
+     * @return Provides the configuration information to connect to Quip as your data source.
+     */
+
+    public QuipConfiguration getQuipConfiguration() {
+        return this.quipConfiguration;
+    }
+
+    /**
+     * <p>
+     * Provides the configuration information to connect to Quip as your data source.
+     * </p>
+     * 
+     * @param quipConfiguration
+     *        Provides the configuration information to connect to Quip as your data source.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DataSourceConfiguration withQuipConfiguration(QuipConfiguration quipConfiguration) {
+        setQuipConfiguration(quipConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -646,7 +692,9 @@ public class DataSourceConfiguration implements Serializable, Cloneable, Structu
         if (getSlackConfiguration() != null)
             sb.append("SlackConfiguration: ").append(getSlackConfiguration()).append(",");
         if (getBoxConfiguration() != null)
-            sb.append("BoxConfiguration: ").append(getBoxConfiguration());
+            sb.append("BoxConfiguration: ").append(getBoxConfiguration()).append(",");
+        if (getQuipConfiguration() != null)
+            sb.append("QuipConfiguration: ").append(getQuipConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -713,6 +761,10 @@ public class DataSourceConfiguration implements Serializable, Cloneable, Structu
             return false;
         if (other.getBoxConfiguration() != null && other.getBoxConfiguration().equals(this.getBoxConfiguration()) == false)
             return false;
+        if (other.getQuipConfiguration() == null ^ this.getQuipConfiguration() == null)
+            return false;
+        if (other.getQuipConfiguration() != null && other.getQuipConfiguration().equals(this.getQuipConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -734,6 +786,7 @@ public class DataSourceConfiguration implements Serializable, Cloneable, Structu
         hashCode = prime * hashCode + ((getFsxConfiguration() == null) ? 0 : getFsxConfiguration().hashCode());
         hashCode = prime * hashCode + ((getSlackConfiguration() == null) ? 0 : getSlackConfiguration().hashCode());
         hashCode = prime * hashCode + ((getBoxConfiguration() == null) ? 0 : getBoxConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getQuipConfiguration() == null) ? 0 : getQuipConfiguration().hashCode());
         return hashCode;
     }
 

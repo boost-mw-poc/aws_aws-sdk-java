@@ -85,7 +85,8 @@ public enum VoiceId {
     Zhiyu("Zhiyu"),
     Aria("Aria"),
     Ayanda("Ayanda"),
-    Arlet("Arlet");
+    Arlet("Arlet"),
+    Hannah("Hannah");
 
     private String value;
 

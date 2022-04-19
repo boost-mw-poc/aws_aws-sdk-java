@@ -27,8 +27,8 @@ public class GetParametersForImportRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The identifier of the symmetric KMS key into which you will import key material. The <code>Origin</code> of the
-     * KMS key must be <code>EXTERNAL</code>.
+     * The identifier of the symmetric encryption KMS key into which you will import key material. The
+     * <code>Origin</code> of the KMS key must be <code>EXTERNAL</code>.
      * </p>
      * <p>
      * Specify the key ID or key ARN of the KMS key.
@@ -71,8 +71,8 @@ public class GetParametersForImportRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The identifier of the symmetric KMS key into which you will import key material. The <code>Origin</code> of the
-     * KMS key must be <code>EXTERNAL</code>.
+     * The identifier of the symmetric encryption KMS key into which you will import key material. The
+     * <code>Origin</code> of the KMS key must be <code>EXTERNAL</code>.
      * </p>
      * <p>
      * Specify the key ID or key ARN of the KMS key.
@@ -97,8 +97,8 @@ public class GetParametersForImportRequest extends com.amazonaws.AmazonWebServic
      * </p>
      * 
      * @param keyId
-     *        The identifier of the symmetric KMS key into which you will import key material. The <code>Origin</code>
-     *        of the KMS key must be <code>EXTERNAL</code>.</p>
+     *        The identifier of the symmetric encryption KMS key into which you will import key material. The
+     *        <code>Origin</code> of the KMS key must be <code>EXTERNAL</code>.</p>
      *        <p>
      *        Specify the key ID or key ARN of the KMS key.
      *        </p>
@@ -127,8 +127,8 @@ public class GetParametersForImportRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The identifier of the symmetric KMS key into which you will import key material. The <code>Origin</code> of the
-     * KMS key must be <code>EXTERNAL</code>.
+     * The identifier of the symmetric encryption KMS key into which you will import key material. The
+     * <code>Origin</code> of the KMS key must be <code>EXTERNAL</code>.
      * </p>
      * <p>
      * Specify the key ID or key ARN of the KMS key.
@@ -152,8 +152,8 @@ public class GetParametersForImportRequest extends com.amazonaws.AmazonWebServic
      * To get the key ID and key ARN for a KMS key, use <a>ListKeys</a> or <a>DescribeKey</a>.
      * </p>
      * 
-     * @return The identifier of the symmetric KMS key into which you will import key material. The <code>Origin</code>
-     *         of the KMS key must be <code>EXTERNAL</code>.</p>
+     * @return The identifier of the symmetric encryption KMS key into which you will import key material. The
+     *         <code>Origin</code> of the KMS key must be <code>EXTERNAL</code>.</p>
      *         <p>
      *         Specify the key ID or key ARN of the KMS key.
      *         </p>
@@ -182,8 +182,8 @@ public class GetParametersForImportRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The identifier of the symmetric KMS key into which you will import key material. The <code>Origin</code> of the
-     * KMS key must be <code>EXTERNAL</code>.
+     * The identifier of the symmetric encryption KMS key into which you will import key material. The
+     * <code>Origin</code> of the KMS key must be <code>EXTERNAL</code>.
      * </p>
      * <p>
      * Specify the key ID or key ARN of the KMS key.
@@ -208,8 +208,8 @@ public class GetParametersForImportRequest extends com.amazonaws.AmazonWebServic
      * </p>
      * 
      * @param keyId
-     *        The identifier of the symmetric KMS key into which you will import key material. The <code>Origin</code>
-     *        of the KMS key must be <code>EXTERNAL</code>.</p>
+     *        The identifier of the symmetric encryption KMS key into which you will import key material. The
+     *        <code>Origin</code> of the KMS key must be <code>EXTERNAL</code>.</p>
      *        <p>
      *        Specify the key ID or key ARN of the KMS key.
      *        </p>

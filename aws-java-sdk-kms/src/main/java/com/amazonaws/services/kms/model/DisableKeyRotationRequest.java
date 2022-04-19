@@ -27,11 +27,11 @@ public class DisableKeyRotationRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * Identifies a symmetric KMS key. You cannot enable or disable automatic rotation of <a
+     * Identifies a symmetric encryption KMS key. You cannot enable or disable automatic rotation of <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/symmetric-asymmetric.html#asymmetric-cmks">asymmetric
-     * KMS keys</a>, KMS keys with <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/importing-keys.html">imported key material</a>, or
-     * KMS keys in a <a
+     * KMS keys</a>, <a href="https://docs.aws.amazon.com/kms/latest/developerguide/hmac.html">HMAC KMS keys</a>, KMS
+     * keys with <a href="https://docs.aws.amazon.com/kms/latest/developerguide/importing-keys.html">imported key
+     * material</a>, or KMS keys in a <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/custom-key-store-overview.html">custom key store</a>.
      * </p>
      * <p>
@@ -60,11 +60,11 @@ public class DisableKeyRotationRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * Identifies a symmetric KMS key. You cannot enable or disable automatic rotation of <a
+     * Identifies a symmetric encryption KMS key. You cannot enable or disable automatic rotation of <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/symmetric-asymmetric.html#asymmetric-cmks">asymmetric
-     * KMS keys</a>, KMS keys with <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/importing-keys.html">imported key material</a>, or
-     * KMS keys in a <a
+     * KMS keys</a>, <a href="https://docs.aws.amazon.com/kms/latest/developerguide/hmac.html">HMAC KMS keys</a>, KMS
+     * keys with <a href="https://docs.aws.amazon.com/kms/latest/developerguide/importing-keys.html">imported key
+     * material</a>, or KMS keys in a <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/custom-key-store-overview.html">custom key store</a>.
      * </p>
      * <p>
@@ -90,9 +90,10 @@ public class DisableKeyRotationRequest extends com.amazonaws.AmazonWebServiceReq
      * </p>
      * 
      * @param keyId
-     *        Identifies a symmetric KMS key. You cannot enable or disable automatic rotation of <a
+     *        Identifies a symmetric encryption KMS key. You cannot enable or disable automatic rotation of <a
      *        href="https://docs.aws.amazon.com/kms/latest/developerguide/symmetric-asymmetric.html#asymmetric-cmks"
-     *        >asymmetric KMS keys</a>, KMS keys with <a
+     *        >asymmetric KMS keys</a>, <a href="https://docs.aws.amazon.com/kms/latest/developerguide/hmac.html">HMAC
+     *        KMS keys</a>, KMS keys with <a
      *        href="https://docs.aws.amazon.com/kms/latest/developerguide/importing-keys.html">imported key
      *        material</a>, or KMS keys in a <a
      *        href="https://docs.aws.amazon.com/kms/latest/developerguide/custom-key-store-overview.html">custom key
@@ -125,11 +126,11 @@ public class DisableKeyRotationRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * Identifies a symmetric KMS key. You cannot enable or disable automatic rotation of <a
+     * Identifies a symmetric encryption KMS key. You cannot enable or disable automatic rotation of <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/symmetric-asymmetric.html#asymmetric-cmks">asymmetric
-     * KMS keys</a>, KMS keys with <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/importing-keys.html">imported key material</a>, or
-     * KMS keys in a <a
+     * KMS keys</a>, <a href="https://docs.aws.amazon.com/kms/latest/developerguide/hmac.html">HMAC KMS keys</a>, KMS
+     * keys with <a href="https://docs.aws.amazon.com/kms/latest/developerguide/importing-keys.html">imported key
+     * material</a>, or KMS keys in a <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/custom-key-store-overview.html">custom key store</a>.
      * </p>
      * <p>
@@ -154,9 +155,10 @@ public class DisableKeyRotationRequest extends com.amazonaws.AmazonWebServiceReq
      * To get the key ID and key ARN for a KMS key, use <a>ListKeys</a> or <a>DescribeKey</a>.
      * </p>
      * 
-     * @return Identifies a symmetric KMS key. You cannot enable or disable automatic rotation of <a
+     * @return Identifies a symmetric encryption KMS key. You cannot enable or disable automatic rotation of <a
      *         href="https://docs.aws.amazon.com/kms/latest/developerguide/symmetric-asymmetric.html#asymmetric-cmks"
-     *         >asymmetric KMS keys</a>, KMS keys with <a
+     *         >asymmetric KMS keys</a>, <a href="https://docs.aws.amazon.com/kms/latest/developerguide/hmac.html">HMAC
+     *         KMS keys</a>, KMS keys with <a
      *         href="https://docs.aws.amazon.com/kms/latest/developerguide/importing-keys.html">imported key
      *         material</a>, or KMS keys in a <a
      *         href="https://docs.aws.amazon.com/kms/latest/developerguide/custom-key-store-overview.html">custom key
@@ -189,11 +191,11 @@ public class DisableKeyRotationRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * Identifies a symmetric KMS key. You cannot enable or disable automatic rotation of <a
+     * Identifies a symmetric encryption KMS key. You cannot enable or disable automatic rotation of <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/symmetric-asymmetric.html#asymmetric-cmks">asymmetric
-     * KMS keys</a>, KMS keys with <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/importing-keys.html">imported key material</a>, or
-     * KMS keys in a <a
+     * KMS keys</a>, <a href="https://docs.aws.amazon.com/kms/latest/developerguide/hmac.html">HMAC KMS keys</a>, KMS
+     * keys with <a href="https://docs.aws.amazon.com/kms/latest/developerguide/importing-keys.html">imported key
+     * material</a>, or KMS keys in a <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/custom-key-store-overview.html">custom key store</a>.
      * </p>
      * <p>
@@ -219,9 +221,10 @@ public class DisableKeyRotationRequest extends com.amazonaws.AmazonWebServiceReq
      * </p>
      * 
      * @param keyId
-     *        Identifies a symmetric KMS key. You cannot enable or disable automatic rotation of <a
+     *        Identifies a symmetric encryption KMS key. You cannot enable or disable automatic rotation of <a
      *        href="https://docs.aws.amazon.com/kms/latest/developerguide/symmetric-asymmetric.html#asymmetric-cmks"
-     *        >asymmetric KMS keys</a>, KMS keys with <a
+     *        >asymmetric KMS keys</a>, <a href="https://docs.aws.amazon.com/kms/latest/developerguide/hmac.html">HMAC
+     *        KMS keys</a>, KMS keys with <a
      *        href="https://docs.aws.amazon.com/kms/latest/developerguide/importing-keys.html">imported key
      *        material</a>, or KMS keys in a <a
      *        href="https://docs.aws.amazon.com/kms/latest/developerguide/custom-key-store-overview.html">custom key

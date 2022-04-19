@@ -163,7 +163,7 @@ public class BoxConfiguration implements Serializable, Cloneable, StructuredPojo
     /**
      * <p>
      * Configuration information for an Amazon VPC to connect to your Box. For more information, see <a
-     * href="https://docs.aws.amazon.com/endra/latest/dg/vpc-configuration.html">Configuring a VPC</a>.
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/vpc-configuration.html">Configuring a VPC</a>.
      * </p>
      */
     private DataSourceVpcConfiguration vpcConfiguration;
@@ -1284,12 +1284,12 @@ public class BoxConfiguration implements Serializable, Cloneable, StructuredPojo
     /**
      * <p>
      * Configuration information for an Amazon VPC to connect to your Box. For more information, see <a
-     * href="https://docs.aws.amazon.com/endra/latest/dg/vpc-configuration.html">Configuring a VPC</a>.
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/vpc-configuration.html">Configuring a VPC</a>.
      * </p>
      * 
      * @param vpcConfiguration
      *        Configuration information for an Amazon VPC to connect to your Box. For more information, see <a
-     *        href="https://docs.aws.amazon.com/endra/latest/dg/vpc-configuration.html">Configuring a VPC</a>.
+     *        href="https://docs.aws.amazon.com/kendra/latest/dg/vpc-configuration.html">Configuring a VPC</a>.
      */
 
     public void setVpcConfiguration(DataSourceVpcConfiguration vpcConfiguration) {
@@ -1299,11 +1299,11 @@ public class BoxConfiguration implements Serializable, Cloneable, StructuredPojo
     /**
      * <p>
      * Configuration information for an Amazon VPC to connect to your Box. For more information, see <a
-     * href="https://docs.aws.amazon.com/endra/latest/dg/vpc-configuration.html">Configuring a VPC</a>.
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/vpc-configuration.html">Configuring a VPC</a>.
      * </p>
      * 
      * @return Configuration information for an Amazon VPC to connect to your Box. For more information, see <a
-     *         href="https://docs.aws.amazon.com/endra/latest/dg/vpc-configuration.html">Configuring a VPC</a>.
+     *         href="https://docs.aws.amazon.com/kendra/latest/dg/vpc-configuration.html">Configuring a VPC</a>.
      */
 
     public DataSourceVpcConfiguration getVpcConfiguration() {
@@ -1313,12 +1313,12 @@ public class BoxConfiguration implements Serializable, Cloneable, StructuredPojo
     /**
      * <p>
      * Configuration information for an Amazon VPC to connect to your Box. For more information, see <a
-     * href="https://docs.aws.amazon.com/endra/latest/dg/vpc-configuration.html">Configuring a VPC</a>.
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/vpc-configuration.html">Configuring a VPC</a>.
      * </p>
      * 
      * @param vpcConfiguration
      *        Configuration information for an Amazon VPC to connect to your Box. For more information, see <a
-     *        href="https://docs.aws.amazon.com/endra/latest/dg/vpc-configuration.html">Configuring a VPC</a>.
+     *        href="https://docs.aws.amazon.com/kendra/latest/dg/vpc-configuration.html">Configuring a VPC</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

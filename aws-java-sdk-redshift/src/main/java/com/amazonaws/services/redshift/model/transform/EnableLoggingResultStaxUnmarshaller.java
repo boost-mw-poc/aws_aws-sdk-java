@@ -12,6 +12,8 @@
  */
 package com.amazonaws.services.redshift.model.transform;
 
+import java.util.ArrayList;
+
 import javax.xml.stream.events.XMLEvent;
 import javax.annotation.Generated;
 
@@ -72,6 +74,22 @@ public class EnableLoggingResultStaxUnmarshaller implements Unmarshaller<EnableL
                     enableLoggingResult.setLastFailureMessage(StringStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("LogDestinationType", targetDepth)) {
+                    enableLoggingResult.setLogDestinationType(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
+                if (context.testExpression("LogExports", targetDepth)) {
+                    enableLoggingResult.withLogExports(new ArrayList<String>());
+                    continue;
+                }
+
+                if (context.testExpression("LogExports/member", targetDepth)) {
+                    enableLoggingResult.withLogExports(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return enableLoggingResult;

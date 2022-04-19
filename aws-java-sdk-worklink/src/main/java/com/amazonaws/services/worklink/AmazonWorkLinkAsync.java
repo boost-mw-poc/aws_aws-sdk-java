@@ -48,6 +48,7 @@ public interface AmazonWorkLinkAsync extends AmazonWorkLink {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/AssociateDomain" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<AssociateDomainResult> associateDomainAsync(AssociateDomainRequest associateDomainRequest);
 
     /**
@@ -65,6 +66,7 @@ public interface AmazonWorkLinkAsync extends AmazonWorkLink {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/AssociateDomain" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<AssociateDomainResult> associateDomainAsync(AssociateDomainRequest associateDomainRequest,
             com.amazonaws.handlers.AsyncHandler<AssociateDomainRequest, AssociateDomainResult> asyncHandler);
 
@@ -81,6 +83,7 @@ public interface AmazonWorkLinkAsync extends AmazonWorkLink {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/AssociateWebsiteAuthorizationProvider"
      *      target="_top">AWS API Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<AssociateWebsiteAuthorizationProviderResult> associateWebsiteAuthorizationProviderAsync(
             AssociateWebsiteAuthorizationProviderRequest associateWebsiteAuthorizationProviderRequest);
 
@@ -101,6 +104,7 @@ public interface AmazonWorkLinkAsync extends AmazonWorkLink {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/AssociateWebsiteAuthorizationProvider"
      *      target="_top">AWS API Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<AssociateWebsiteAuthorizationProviderResult> associateWebsiteAuthorizationProviderAsync(
             AssociateWebsiteAuthorizationProviderRequest associateWebsiteAuthorizationProviderRequest,
             com.amazonaws.handlers.AsyncHandler<AssociateWebsiteAuthorizationProviderRequest, AssociateWebsiteAuthorizationProviderResult> asyncHandler);
@@ -118,6 +122,7 @@ public interface AmazonWorkLinkAsync extends AmazonWorkLink {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/AssociateWebsiteCertificateAuthority"
      *      target="_top">AWS API Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<AssociateWebsiteCertificateAuthorityResult> associateWebsiteCertificateAuthorityAsync(
             AssociateWebsiteCertificateAuthorityRequest associateWebsiteCertificateAuthorityRequest);
 
@@ -138,6 +143,7 @@ public interface AmazonWorkLinkAsync extends AmazonWorkLink {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/AssociateWebsiteCertificateAuthority"
      *      target="_top">AWS API Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<AssociateWebsiteCertificateAuthorityResult> associateWebsiteCertificateAuthorityAsync(
             AssociateWebsiteCertificateAuthorityRequest associateWebsiteCertificateAuthorityRequest,
             com.amazonaws.handlers.AsyncHandler<AssociateWebsiteCertificateAuthorityRequest, AssociateWebsiteCertificateAuthorityResult> asyncHandler);
@@ -154,6 +160,7 @@ public interface AmazonWorkLinkAsync extends AmazonWorkLink {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/CreateFleet" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<CreateFleetResult> createFleetAsync(CreateFleetRequest createFleetRequest);
 
     /**
@@ -172,6 +179,7 @@ public interface AmazonWorkLinkAsync extends AmazonWorkLink {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/CreateFleet" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<CreateFleetResult> createFleetAsync(CreateFleetRequest createFleetRequest,
             com.amazonaws.handlers.AsyncHandler<CreateFleetRequest, CreateFleetResult> asyncHandler);
 
@@ -186,6 +194,7 @@ public interface AmazonWorkLinkAsync extends AmazonWorkLink {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/DeleteFleet" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<DeleteFleetResult> deleteFleetAsync(DeleteFleetRequest deleteFleetRequest);
 
     /**
@@ -203,6 +212,7 @@ public interface AmazonWorkLinkAsync extends AmazonWorkLink {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/DeleteFleet" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<DeleteFleetResult> deleteFleetAsync(DeleteFleetRequest deleteFleetRequest,
             com.amazonaws.handlers.AsyncHandler<DeleteFleetRequest, DeleteFleetResult> asyncHandler);
 
@@ -218,6 +228,7 @@ public interface AmazonWorkLinkAsync extends AmazonWorkLink {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/DescribeAuditStreamConfiguration"
      *      target="_top">AWS API Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<DescribeAuditStreamConfigurationResult> describeAuditStreamConfigurationAsync(
             DescribeAuditStreamConfigurationRequest describeAuditStreamConfigurationRequest);
 
@@ -237,6 +248,7 @@ public interface AmazonWorkLinkAsync extends AmazonWorkLink {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/DescribeAuditStreamConfiguration"
      *      target="_top">AWS API Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<DescribeAuditStreamConfigurationResult> describeAuditStreamConfigurationAsync(
             DescribeAuditStreamConfigurationRequest describeAuditStreamConfigurationRequest,
             com.amazonaws.handlers.AsyncHandler<DescribeAuditStreamConfigurationRequest, DescribeAuditStreamConfigurationResult> asyncHandler);
@@ -253,6 +265,7 @@ public interface AmazonWorkLinkAsync extends AmazonWorkLink {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/DescribeCompanyNetworkConfiguration"
      *      target="_top">AWS API Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<DescribeCompanyNetworkConfigurationResult> describeCompanyNetworkConfigurationAsync(
             DescribeCompanyNetworkConfigurationRequest describeCompanyNetworkConfigurationRequest);
 
@@ -272,6 +285,7 @@ public interface AmazonWorkLinkAsync extends AmazonWorkLink {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/DescribeCompanyNetworkConfiguration"
      *      target="_top">AWS API Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<DescribeCompanyNetworkConfigurationResult> describeCompanyNetworkConfigurationAsync(
             DescribeCompanyNetworkConfigurationRequest describeCompanyNetworkConfigurationRequest,
             com.amazonaws.handlers.AsyncHandler<DescribeCompanyNetworkConfigurationRequest, DescribeCompanyNetworkConfigurationResult> asyncHandler);
@@ -287,6 +301,7 @@ public interface AmazonWorkLinkAsync extends AmazonWorkLink {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/DescribeDevice" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<DescribeDeviceResult> describeDeviceAsync(DescribeDeviceRequest describeDeviceRequest);
 
     /**
@@ -304,6 +319,7 @@ public interface AmazonWorkLinkAsync extends AmazonWorkLink {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/DescribeDevice" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<DescribeDeviceResult> describeDeviceAsync(DescribeDeviceRequest describeDeviceRequest,
             com.amazonaws.handlers.AsyncHandler<DescribeDeviceRequest, DescribeDeviceResult> asyncHandler);
 
@@ -319,6 +335,7 @@ public interface AmazonWorkLinkAsync extends AmazonWorkLink {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/DescribeDevicePolicyConfiguration"
      *      target="_top">AWS API Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<DescribeDevicePolicyConfigurationResult> describeDevicePolicyConfigurationAsync(
             DescribeDevicePolicyConfigurationRequest describeDevicePolicyConfigurationRequest);
 
@@ -338,6 +355,7 @@ public interface AmazonWorkLinkAsync extends AmazonWorkLink {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/DescribeDevicePolicyConfiguration"
      *      target="_top">AWS API Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<DescribeDevicePolicyConfigurationResult> describeDevicePolicyConfigurationAsync(
             DescribeDevicePolicyConfigurationRequest describeDevicePolicyConfigurationRequest,
             com.amazonaws.handlers.AsyncHandler<DescribeDevicePolicyConfigurationRequest, DescribeDevicePolicyConfigurationResult> asyncHandler);
@@ -353,6 +371,7 @@ public interface AmazonWorkLinkAsync extends AmazonWorkLink {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/DescribeDomain" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<DescribeDomainResult> describeDomainAsync(DescribeDomainRequest describeDomainRequest);
 
     /**
@@ -370,6 +389,7 @@ public interface AmazonWorkLinkAsync extends AmazonWorkLink {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/DescribeDomain" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<DescribeDomainResult> describeDomainAsync(DescribeDomainRequest describeDomainRequest,
             com.amazonaws.handlers.AsyncHandler<DescribeDomainRequest, DescribeDomainResult> asyncHandler);
 
@@ -385,6 +405,7 @@ public interface AmazonWorkLinkAsync extends AmazonWorkLink {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/DescribeFleetMetadata" target="_top">AWS
      *      API Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<DescribeFleetMetadataResult> describeFleetMetadataAsync(DescribeFleetMetadataRequest describeFleetMetadataRequest);
 
     /**
@@ -403,6 +424,7 @@ public interface AmazonWorkLinkAsync extends AmazonWorkLink {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/DescribeFleetMetadata" target="_top">AWS
      *      API Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<DescribeFleetMetadataResult> describeFleetMetadataAsync(DescribeFleetMetadataRequest describeFleetMetadataRequest,
             com.amazonaws.handlers.AsyncHandler<DescribeFleetMetadataRequest, DescribeFleetMetadataResult> asyncHandler);
 
@@ -418,6 +440,7 @@ public interface AmazonWorkLinkAsync extends AmazonWorkLink {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/DescribeIdentityProviderConfiguration"
      *      target="_top">AWS API Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<DescribeIdentityProviderConfigurationResult> describeIdentityProviderConfigurationAsync(
             DescribeIdentityProviderConfigurationRequest describeIdentityProviderConfigurationRequest);
 
@@ -437,6 +460,7 @@ public interface AmazonWorkLinkAsync extends AmazonWorkLink {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/DescribeIdentityProviderConfiguration"
      *      target="_top">AWS API Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<DescribeIdentityProviderConfigurationResult> describeIdentityProviderConfigurationAsync(
             DescribeIdentityProviderConfigurationRequest describeIdentityProviderConfigurationRequest,
             com.amazonaws.handlers.AsyncHandler<DescribeIdentityProviderConfigurationRequest, DescribeIdentityProviderConfigurationResult> asyncHandler);
@@ -453,6 +477,7 @@ public interface AmazonWorkLinkAsync extends AmazonWorkLink {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/DescribeWebsiteCertificateAuthority"
      *      target="_top">AWS API Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<DescribeWebsiteCertificateAuthorityResult> describeWebsiteCertificateAuthorityAsync(
             DescribeWebsiteCertificateAuthorityRequest describeWebsiteCertificateAuthorityRequest);
 
@@ -472,6 +497,7 @@ public interface AmazonWorkLinkAsync extends AmazonWorkLink {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/DescribeWebsiteCertificateAuthority"
      *      target="_top">AWS API Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<DescribeWebsiteCertificateAuthorityResult> describeWebsiteCertificateAuthorityAsync(
             DescribeWebsiteCertificateAuthorityRequest describeWebsiteCertificateAuthorityRequest,
             com.amazonaws.handlers.AsyncHandler<DescribeWebsiteCertificateAuthorityRequest, DescribeWebsiteCertificateAuthorityResult> asyncHandler);
@@ -488,6 +514,7 @@ public interface AmazonWorkLinkAsync extends AmazonWorkLink {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/DisassociateDomain" target="_top">AWS
      *      API Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<DisassociateDomainResult> disassociateDomainAsync(DisassociateDomainRequest disassociateDomainRequest);
 
     /**
@@ -506,6 +533,7 @@ public interface AmazonWorkLinkAsync extends AmazonWorkLink {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/DisassociateDomain" target="_top">AWS
      *      API Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<DisassociateDomainResult> disassociateDomainAsync(DisassociateDomainRequest disassociateDomainRequest,
             com.amazonaws.handlers.AsyncHandler<DisassociateDomainRequest, DisassociateDomainResult> asyncHandler);
 
@@ -523,6 +551,7 @@ public interface AmazonWorkLinkAsync extends AmazonWorkLink {
      *      href="http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/DisassociateWebsiteAuthorizationProvider"
      *      target="_top">AWS API Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<DisassociateWebsiteAuthorizationProviderResult> disassociateWebsiteAuthorizationProviderAsync(
             DisassociateWebsiteAuthorizationProviderRequest disassociateWebsiteAuthorizationProviderRequest);
 
@@ -544,6 +573,7 @@ public interface AmazonWorkLinkAsync extends AmazonWorkLink {
      *      href="http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/DisassociateWebsiteAuthorizationProvider"
      *      target="_top">AWS API Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<DisassociateWebsiteAuthorizationProviderResult> disassociateWebsiteAuthorizationProviderAsync(
             DisassociateWebsiteAuthorizationProviderRequest disassociateWebsiteAuthorizationProviderRequest,
             com.amazonaws.handlers.AsyncHandler<DisassociateWebsiteAuthorizationProviderRequest, DisassociateWebsiteAuthorizationProviderResult> asyncHandler);
@@ -560,6 +590,7 @@ public interface AmazonWorkLinkAsync extends AmazonWorkLink {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/DisassociateWebsiteCertificateAuthority"
      *      target="_top">AWS API Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<DisassociateWebsiteCertificateAuthorityResult> disassociateWebsiteCertificateAuthorityAsync(
             DisassociateWebsiteCertificateAuthorityRequest disassociateWebsiteCertificateAuthorityRequest);
 
@@ -579,6 +610,7 @@ public interface AmazonWorkLinkAsync extends AmazonWorkLink {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/DisassociateWebsiteCertificateAuthority"
      *      target="_top">AWS API Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<DisassociateWebsiteCertificateAuthorityResult> disassociateWebsiteCertificateAuthorityAsync(
             DisassociateWebsiteCertificateAuthorityRequest disassociateWebsiteCertificateAuthorityRequest,
             com.amazonaws.handlers.AsyncHandler<DisassociateWebsiteCertificateAuthorityRequest, DisassociateWebsiteCertificateAuthorityResult> asyncHandler);
@@ -594,6 +626,7 @@ public interface AmazonWorkLinkAsync extends AmazonWorkLink {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/ListDevices" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<ListDevicesResult> listDevicesAsync(ListDevicesRequest listDevicesRequest);
 
     /**
@@ -611,6 +644,7 @@ public interface AmazonWorkLinkAsync extends AmazonWorkLink {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/ListDevices" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<ListDevicesResult> listDevicesAsync(ListDevicesRequest listDevicesRequest,
             com.amazonaws.handlers.AsyncHandler<ListDevicesRequest, ListDevicesResult> asyncHandler);
 
@@ -625,6 +659,7 @@ public interface AmazonWorkLinkAsync extends AmazonWorkLink {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/ListDomains" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<ListDomainsResult> listDomainsAsync(ListDomainsRequest listDomainsRequest);
 
     /**
@@ -642,6 +677,7 @@ public interface AmazonWorkLinkAsync extends AmazonWorkLink {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/ListDomains" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<ListDomainsResult> listDomainsAsync(ListDomainsRequest listDomainsRequest,
             com.amazonaws.handlers.AsyncHandler<ListDomainsRequest, ListDomainsResult> asyncHandler);
 
@@ -656,6 +692,7 @@ public interface AmazonWorkLinkAsync extends AmazonWorkLink {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/ListFleets" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<ListFleetsResult> listFleetsAsync(ListFleetsRequest listFleetsRequest);
 
     /**
@@ -673,6 +710,7 @@ public interface AmazonWorkLinkAsync extends AmazonWorkLink {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/ListFleets" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<ListFleetsResult> listFleetsAsync(ListFleetsRequest listFleetsRequest,
             com.amazonaws.handlers.AsyncHandler<ListFleetsRequest, ListFleetsResult> asyncHandler);
 
@@ -687,6 +725,7 @@ public interface AmazonWorkLinkAsync extends AmazonWorkLink {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/ListTagsForResource" target="_top">AWS
      *      API Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<ListTagsForResourceResult> listTagsForResourceAsync(ListTagsForResourceRequest listTagsForResourceRequest);
 
     /**
@@ -704,6 +743,7 @@ public interface AmazonWorkLinkAsync extends AmazonWorkLink {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/ListTagsForResource" target="_top">AWS
      *      API Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<ListTagsForResourceResult> listTagsForResourceAsync(ListTagsForResourceRequest listTagsForResourceRequest,
             com.amazonaws.handlers.AsyncHandler<ListTagsForResourceRequest, ListTagsForResourceResult> asyncHandler);
 
@@ -719,6 +759,7 @@ public interface AmazonWorkLinkAsync extends AmazonWorkLink {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/ListWebsiteAuthorizationProviders"
      *      target="_top">AWS API Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<ListWebsiteAuthorizationProvidersResult> listWebsiteAuthorizationProvidersAsync(
             ListWebsiteAuthorizationProvidersRequest listWebsiteAuthorizationProvidersRequest);
 
@@ -738,6 +779,7 @@ public interface AmazonWorkLinkAsync extends AmazonWorkLink {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/ListWebsiteAuthorizationProviders"
      *      target="_top">AWS API Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<ListWebsiteAuthorizationProvidersResult> listWebsiteAuthorizationProvidersAsync(
             ListWebsiteAuthorizationProvidersRequest listWebsiteAuthorizationProvidersRequest,
             com.amazonaws.handlers.AsyncHandler<ListWebsiteAuthorizationProvidersRequest, ListWebsiteAuthorizationProvidersResult> asyncHandler);
@@ -754,6 +796,7 @@ public interface AmazonWorkLinkAsync extends AmazonWorkLink {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/ListWebsiteCertificateAuthorities"
      *      target="_top">AWS API Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<ListWebsiteCertificateAuthoritiesResult> listWebsiteCertificateAuthoritiesAsync(
             ListWebsiteCertificateAuthoritiesRequest listWebsiteCertificateAuthoritiesRequest);
 
@@ -773,6 +816,7 @@ public interface AmazonWorkLinkAsync extends AmazonWorkLink {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/ListWebsiteCertificateAuthorities"
      *      target="_top">AWS API Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<ListWebsiteCertificateAuthoritiesResult> listWebsiteCertificateAuthoritiesAsync(
             ListWebsiteCertificateAuthoritiesRequest listWebsiteCertificateAuthoritiesRequest,
             com.amazonaws.handlers.AsyncHandler<ListWebsiteCertificateAuthoritiesRequest, ListWebsiteCertificateAuthoritiesResult> asyncHandler);
@@ -788,6 +832,7 @@ public interface AmazonWorkLinkAsync extends AmazonWorkLink {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/RestoreDomainAccess" target="_top">AWS
      *      API Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<RestoreDomainAccessResult> restoreDomainAccessAsync(RestoreDomainAccessRequest restoreDomainAccessRequest);
 
     /**
@@ -805,6 +850,7 @@ public interface AmazonWorkLinkAsync extends AmazonWorkLink {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/RestoreDomainAccess" target="_top">AWS
      *      API Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<RestoreDomainAccessResult> restoreDomainAccessAsync(RestoreDomainAccessRequest restoreDomainAccessRequest,
             com.amazonaws.handlers.AsyncHandler<RestoreDomainAccessRequest, RestoreDomainAccessResult> asyncHandler);
 
@@ -819,6 +865,7 @@ public interface AmazonWorkLinkAsync extends AmazonWorkLink {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/RevokeDomainAccess" target="_top">AWS
      *      API Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<RevokeDomainAccessResult> revokeDomainAccessAsync(RevokeDomainAccessRequest revokeDomainAccessRequest);
 
     /**
@@ -836,6 +883,7 @@ public interface AmazonWorkLinkAsync extends AmazonWorkLink {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/RevokeDomainAccess" target="_top">AWS
      *      API Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<RevokeDomainAccessResult> revokeDomainAccessAsync(RevokeDomainAccessRequest revokeDomainAccessRequest,
             com.amazonaws.handlers.AsyncHandler<RevokeDomainAccessRequest, RevokeDomainAccessResult> asyncHandler);
 
@@ -850,6 +898,7 @@ public interface AmazonWorkLinkAsync extends AmazonWorkLink {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/SignOutUser" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<SignOutUserResult> signOutUserAsync(SignOutUserRequest signOutUserRequest);
 
     /**
@@ -867,6 +916,7 @@ public interface AmazonWorkLinkAsync extends AmazonWorkLink {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/SignOutUser" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<SignOutUserResult> signOutUserAsync(SignOutUserRequest signOutUserRequest,
             com.amazonaws.handlers.AsyncHandler<SignOutUserRequest, SignOutUserResult> asyncHandler);
 
@@ -882,6 +932,7 @@ public interface AmazonWorkLinkAsync extends AmazonWorkLink {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/TagResource" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<TagResourceResult> tagResourceAsync(TagResourceRequest tagResourceRequest);
 
     /**
@@ -900,6 +951,7 @@ public interface AmazonWorkLinkAsync extends AmazonWorkLink {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/TagResource" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<TagResourceResult> tagResourceAsync(TagResourceRequest tagResourceRequest,
             com.amazonaws.handlers.AsyncHandler<TagResourceRequest, TagResourceResult> asyncHandler);
 
@@ -914,6 +966,7 @@ public interface AmazonWorkLinkAsync extends AmazonWorkLink {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/UntagResource" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<UntagResourceResult> untagResourceAsync(UntagResourceRequest untagResourceRequest);
 
     /**
@@ -931,6 +984,7 @@ public interface AmazonWorkLinkAsync extends AmazonWorkLink {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/UntagResource" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<UntagResourceResult> untagResourceAsync(UntagResourceRequest untagResourceRequest,
             com.amazonaws.handlers.AsyncHandler<UntagResourceRequest, UntagResourceResult> asyncHandler);
 
@@ -946,6 +1000,7 @@ public interface AmazonWorkLinkAsync extends AmazonWorkLink {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/UpdateAuditStreamConfiguration"
      *      target="_top">AWS API Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<UpdateAuditStreamConfigurationResult> updateAuditStreamConfigurationAsync(
             UpdateAuditStreamConfigurationRequest updateAuditStreamConfigurationRequest);
 
@@ -965,6 +1020,7 @@ public interface AmazonWorkLinkAsync extends AmazonWorkLink {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/UpdateAuditStreamConfiguration"
      *      target="_top">AWS API Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<UpdateAuditStreamConfigurationResult> updateAuditStreamConfigurationAsync(
             UpdateAuditStreamConfigurationRequest updateAuditStreamConfigurationRequest,
             com.amazonaws.handlers.AsyncHandler<UpdateAuditStreamConfigurationRequest, UpdateAuditStreamConfigurationResult> asyncHandler);
@@ -981,6 +1037,7 @@ public interface AmazonWorkLinkAsync extends AmazonWorkLink {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/UpdateCompanyNetworkConfiguration"
      *      target="_top">AWS API Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<UpdateCompanyNetworkConfigurationResult> updateCompanyNetworkConfigurationAsync(
             UpdateCompanyNetworkConfigurationRequest updateCompanyNetworkConfigurationRequest);
 
@@ -1000,6 +1057,7 @@ public interface AmazonWorkLinkAsync extends AmazonWorkLink {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/UpdateCompanyNetworkConfiguration"
      *      target="_top">AWS API Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<UpdateCompanyNetworkConfigurationResult> updateCompanyNetworkConfigurationAsync(
             UpdateCompanyNetworkConfigurationRequest updateCompanyNetworkConfigurationRequest,
             com.amazonaws.handlers.AsyncHandler<UpdateCompanyNetworkConfigurationRequest, UpdateCompanyNetworkConfigurationResult> asyncHandler);
@@ -1016,6 +1074,7 @@ public interface AmazonWorkLinkAsync extends AmazonWorkLink {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/UpdateDevicePolicyConfiguration"
      *      target="_top">AWS API Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<UpdateDevicePolicyConfigurationResult> updateDevicePolicyConfigurationAsync(
             UpdateDevicePolicyConfigurationRequest updateDevicePolicyConfigurationRequest);
 
@@ -1035,6 +1094,7 @@ public interface AmazonWorkLinkAsync extends AmazonWorkLink {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/UpdateDevicePolicyConfiguration"
      *      target="_top">AWS API Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<UpdateDevicePolicyConfigurationResult> updateDevicePolicyConfigurationAsync(
             UpdateDevicePolicyConfigurationRequest updateDevicePolicyConfigurationRequest,
             com.amazonaws.handlers.AsyncHandler<UpdateDevicePolicyConfigurationRequest, UpdateDevicePolicyConfigurationResult> asyncHandler);
@@ -1050,6 +1110,7 @@ public interface AmazonWorkLinkAsync extends AmazonWorkLink {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/UpdateDomainMetadata" target="_top">AWS
      *      API Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<UpdateDomainMetadataResult> updateDomainMetadataAsync(UpdateDomainMetadataRequest updateDomainMetadataRequest);
 
     /**
@@ -1067,6 +1128,7 @@ public interface AmazonWorkLinkAsync extends AmazonWorkLink {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/UpdateDomainMetadata" target="_top">AWS
      *      API Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<UpdateDomainMetadataResult> updateDomainMetadataAsync(UpdateDomainMetadataRequest updateDomainMetadataRequest,
             com.amazonaws.handlers.AsyncHandler<UpdateDomainMetadataRequest, UpdateDomainMetadataResult> asyncHandler);
 
@@ -1081,6 +1143,7 @@ public interface AmazonWorkLinkAsync extends AmazonWorkLink {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/UpdateFleetMetadata" target="_top">AWS
      *      API Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<UpdateFleetMetadataResult> updateFleetMetadataAsync(UpdateFleetMetadataRequest updateFleetMetadataRequest);
 
     /**
@@ -1098,6 +1161,7 @@ public interface AmazonWorkLinkAsync extends AmazonWorkLink {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/UpdateFleetMetadata" target="_top">AWS
      *      API Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<UpdateFleetMetadataResult> updateFleetMetadataAsync(UpdateFleetMetadataRequest updateFleetMetadataRequest,
             com.amazonaws.handlers.AsyncHandler<UpdateFleetMetadataRequest, UpdateFleetMetadataResult> asyncHandler);
 
@@ -1113,6 +1177,7 @@ public interface AmazonWorkLinkAsync extends AmazonWorkLink {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/UpdateIdentityProviderConfiguration"
      *      target="_top">AWS API Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<UpdateIdentityProviderConfigurationResult> updateIdentityProviderConfigurationAsync(
             UpdateIdentityProviderConfigurationRequest updateIdentityProviderConfigurationRequest);
 
@@ -1132,6 +1197,7 @@ public interface AmazonWorkLinkAsync extends AmazonWorkLink {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/worklink-2018-09-25/UpdateIdentityProviderConfiguration"
      *      target="_top">AWS API Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<UpdateIdentityProviderConfigurationResult> updateIdentityProviderConfigurationAsync(
             UpdateIdentityProviderConfigurationRequest updateIdentityProviderConfigurationRequest,
             com.amazonaws.handlers.AsyncHandler<UpdateIdentityProviderConfigurationRequest, UpdateIdentityProviderConfigurationResult> asyncHandler);

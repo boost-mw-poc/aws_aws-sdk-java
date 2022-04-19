@@ -568,6 +568,10 @@ public class UpdateAutoScalingGroupRequestMarshaller implements Marshaller<Reque
             request.addParameter("DesiredCapacityType", StringUtils.fromString(updateAutoScalingGroupRequest.getDesiredCapacityType()));
         }
 
+        if (updateAutoScalingGroupRequest.getDefaultInstanceWarmup() != null) {
+            request.addParameter("DefaultInstanceWarmup", StringUtils.fromInteger(updateAutoScalingGroupRequest.getDefaultInstanceWarmup()));
+        }
+
         return request;
     }
 

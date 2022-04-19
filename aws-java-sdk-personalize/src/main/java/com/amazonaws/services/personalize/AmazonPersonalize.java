@@ -1850,6 +1850,46 @@ public interface AmazonPersonalize {
 
     /**
      * <p>
+     * Starts a recommender that is INACTIVE. Starting a recommender does not create any new models, but resumes billing
+     * and automatic retraining for the recommender.
+     * </p>
+     * 
+     * @param startRecommenderRequest
+     * @return Result of the StartRecommender operation returned by the service.
+     * @throws InvalidInputException
+     *         Provide a valid value for the field or parameter.
+     * @throws ResourceNotFoundException
+     *         Could not find the specified resource.
+     * @throws ResourceInUseException
+     *         The specified resource is in use.
+     * @sample AmazonPersonalize.StartRecommender
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/personalize-2018-05-22/StartRecommender" target="_top">AWS
+     *      API Documentation</a>
+     */
+    StartRecommenderResult startRecommender(StartRecommenderRequest startRecommenderRequest);
+
+    /**
+     * <p>
+     * Stops a recommender that is ACTIVE. Stopping a recommender halts billing and automatic retraining for the
+     * recommender.
+     * </p>
+     * 
+     * @param stopRecommenderRequest
+     * @return Result of the StopRecommender operation returned by the service.
+     * @throws InvalidInputException
+     *         Provide a valid value for the field or parameter.
+     * @throws ResourceNotFoundException
+     *         Could not find the specified resource.
+     * @throws ResourceInUseException
+     *         The specified resource is in use.
+     * @sample AmazonPersonalize.StopRecommender
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/personalize-2018-05-22/StopRecommender" target="_top">AWS
+     *      API Documentation</a>
+     */
+    StopRecommenderResult stopRecommender(StopRecommenderRequest stopRecommenderRequest);
+
+    /**
+     * <p>
      * Stops creating a solution version that is in a state of CREATE_PENDING or CREATE IN_PROGRESS.
      * </p>
      * <p>
@@ -1946,8 +1986,9 @@ public interface AmazonPersonalize {
      * </p>
      * <note>
      * <p>
-     * You must wait until the <code>status</code> of the updated campaign is <code>ACTIVE</code> before asking the
-     * campaign for recommendations.
+     * You can still get recommendations from a campaign while an update is in progress. The campaign will use the
+     * previous solution version and campaign configuration to generate recommendations until the latest campaign update
+     * status is <code>Active</code>.
      * </p>
      * </note>
      * <p>

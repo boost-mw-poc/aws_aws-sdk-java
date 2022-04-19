@@ -153,6 +153,11 @@ public class AbstractAWSKMS implements AWSKMS {
     }
 
     @Override
+    public GenerateMacResult generateMac(GenerateMacRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GenerateRandomResult generateRandom(GenerateRandomRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -299,6 +304,11 @@ public class AbstractAWSKMS implements AWSKMS {
 
     @Override
     public VerifyResult verify(VerifyRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public VerifyMacResult verifyMac(VerifyMacRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

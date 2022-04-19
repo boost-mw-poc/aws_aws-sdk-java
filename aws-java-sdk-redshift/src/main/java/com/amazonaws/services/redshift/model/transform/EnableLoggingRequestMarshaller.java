@@ -52,6 +52,24 @@ public class EnableLoggingRequestMarshaller implements Marshaller<Request<Enable
             request.addParameter("S3KeyPrefix", StringUtils.fromString(enableLoggingRequest.getS3KeyPrefix()));
         }
 
+        if (enableLoggingRequest.getLogDestinationType() != null) {
+            request.addParameter("LogDestinationType", StringUtils.fromString(enableLoggingRequest.getLogDestinationType()));
+        }
+
+        if (!enableLoggingRequest.getLogExports().isEmpty()
+                || !((com.amazonaws.internal.SdkInternalList<String>) enableLoggingRequest.getLogExports()).isAutoConstruct()) {
+            com.amazonaws.internal.SdkInternalList<String> logExportsList = (com.amazonaws.internal.SdkInternalList<String>) enableLoggingRequest
+                    .getLogExports();
+            int logExportsListIndex = 1;
+
+            for (String logExportsListValue : logExportsList) {
+                if (logExportsListValue != null) {
+                    request.addParameter("LogExports.member." + logExportsListIndex, StringUtils.fromString(logExportsListValue));
+                }
+                logExportsListIndex++;
+            }
+        }
+
         return request;
     }
 

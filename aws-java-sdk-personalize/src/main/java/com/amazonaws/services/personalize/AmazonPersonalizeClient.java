@@ -78,9 +78,6 @@ public class AmazonPersonalizeClient extends AmazonWebServiceClient implements A
                     .withSupportsCbor(false)
                     .withSupportsIon(false)
                     .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("ResourceInUseException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.personalize.model.transform.ResourceInUseExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("TooManyTagKeysException").withExceptionUnmarshaller(
                                     com.amazonaws.services.personalize.model.transform.TooManyTagKeysExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
@@ -90,17 +87,20 @@ public class AmazonPersonalizeClient extends AmazonWebServiceClient implements A
                             new JsonErrorShapeMetadata().withErrorCode("LimitExceededException").withExceptionUnmarshaller(
                                     com.amazonaws.services.personalize.model.transform.LimitExceededExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("TooManyTagsException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.personalize.model.transform.TooManyTagsExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ResourceNotFoundException").withExceptionUnmarshaller(
                                     com.amazonaws.services.personalize.model.transform.ResourceNotFoundExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("InvalidInputException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.personalize.model.transform.InvalidInputExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ResourceAlreadyExistsException").withExceptionUnmarshaller(
                                     com.amazonaws.services.personalize.model.transform.ResourceAlreadyExistsExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("ResourceInUseException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.personalize.model.transform.ResourceInUseExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("TooManyTagsException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.personalize.model.transform.TooManyTagsExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("InvalidInputException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.personalize.model.transform.InvalidInputExceptionUnmarshaller.getInstance()))
                     .withBaseServiceExceptionClass(com.amazonaws.services.personalize.model.AmazonPersonalizeException.class));
 
     public static AmazonPersonalizeClientBuilder builder() {
@@ -4204,6 +4204,130 @@ public class AmazonPersonalizeClient extends AmazonWebServiceClient implements A
 
     /**
      * <p>
+     * Starts a recommender that is INACTIVE. Starting a recommender does not create any new models, but resumes billing
+     * and automatic retraining for the recommender.
+     * </p>
+     * 
+     * @param startRecommenderRequest
+     * @return Result of the StartRecommender operation returned by the service.
+     * @throws InvalidInputException
+     *         Provide a valid value for the field or parameter.
+     * @throws ResourceNotFoundException
+     *         Could not find the specified resource.
+     * @throws ResourceInUseException
+     *         The specified resource is in use.
+     * @sample AmazonPersonalize.StartRecommender
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/personalize-2018-05-22/StartRecommender" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public StartRecommenderResult startRecommender(StartRecommenderRequest request) {
+        request = beforeClientExecution(request);
+        return executeStartRecommender(request);
+    }
+
+    @SdkInternalApi
+    final StartRecommenderResult executeStartRecommender(StartRecommenderRequest startRecommenderRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(startRecommenderRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<StartRecommenderRequest> request = null;
+        Response<StartRecommenderResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new StartRecommenderRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(startRecommenderRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Personalize");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "StartRecommender");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<StartRecommenderResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new StartRecommenderResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Stops a recommender that is ACTIVE. Stopping a recommender halts billing and automatic retraining for the
+     * recommender.
+     * </p>
+     * 
+     * @param stopRecommenderRequest
+     * @return Result of the StopRecommender operation returned by the service.
+     * @throws InvalidInputException
+     *         Provide a valid value for the field or parameter.
+     * @throws ResourceNotFoundException
+     *         Could not find the specified resource.
+     * @throws ResourceInUseException
+     *         The specified resource is in use.
+     * @sample AmazonPersonalize.StopRecommender
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/personalize-2018-05-22/StopRecommender" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public StopRecommenderResult stopRecommender(StopRecommenderRequest request) {
+        request = beforeClientExecution(request);
+        return executeStopRecommender(request);
+    }
+
+    @SdkInternalApi
+    final StopRecommenderResult executeStopRecommender(StopRecommenderRequest stopRecommenderRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(stopRecommenderRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<StopRecommenderRequest> request = null;
+        Response<StopRecommenderResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new StopRecommenderRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(stopRecommenderRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Personalize");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "StopRecommender");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<StopRecommenderResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new StopRecommenderResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Stops creating a solution version that is in a state of CREATE_PENDING or CREATE IN_PROGRESS.
      * </p>
      * <p>
@@ -4428,8 +4552,9 @@ public class AmazonPersonalizeClient extends AmazonWebServiceClient implements A
      * </p>
      * <note>
      * <p>
-     * You must wait until the <code>status</code> of the updated campaign is <code>ACTIVE</code> before asking the
-     * campaign for recommendations.
+     * You can still get recommendations from a campaign while an update is in progress. The campaign will use the
+     * previous solution version and campaign configuration to generate recommendations until the latest campaign update
+     * status is <code>Active</code>.
      * </p>
      * </note>
      * <p>

@@ -114,8 +114,7 @@ public class AutoScalingGroup implements Serializable, Cloneable {
     private String healthCheckType;
     /**
      * <p>
-     * The amount of time, in seconds, that Amazon EC2 Auto Scaling waits before checking the health status of an EC2
-     * instance that has come into service and marking it unhealthy due to a failed health check.
+     * The duration of the health check grace period, in seconds.
      * </p>
      */
     private Integer healthCheckGracePeriod;
@@ -223,19 +222,16 @@ public class AutoScalingGroup implements Serializable, Cloneable {
     /**
      * <p>
      * The unit of measurement for the value specified for desired capacity. Amazon EC2 Auto Scaling supports
-     * <code>DesiredCapacityType</code> for attribute-based instance type selection only. For more information, see <a
-     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-asg-instance-type-requirements.html">Creating
-     * an Auto Scaling group using attribute-based instance type selection</a> in the <i>Amazon EC2 Auto Scaling User
-     * Guide</i>.
-     * </p>
-     * <p>
-     * By default, Amazon EC2 Auto Scaling specifies <code>units</code>, which translates into number of instances.
-     * </p>
-     * <p>
-     * Valid values: <code>units</code> | <code>vcpu</code> | <code>memory-mib</code>
+     * <code>DesiredCapacityType</code> for attribute-based instance type selection only.
      * </p>
      */
     private String desiredCapacityType;
+    /**
+     * <p>
+     * The duration of the default instance warmup, in seconds.
+     * </p>
+     */
+    private Integer defaultInstanceWarmup;
 
     /**
      * <p>
@@ -910,13 +906,11 @@ public class AutoScalingGroup implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The amount of time, in seconds, that Amazon EC2 Auto Scaling waits before checking the health status of an EC2
-     * instance that has come into service and marking it unhealthy due to a failed health check.
+     * The duration of the health check grace period, in seconds.
      * </p>
      * 
      * @param healthCheckGracePeriod
-     *        The amount of time, in seconds, that Amazon EC2 Auto Scaling waits before checking the health status of an
-     *        EC2 instance that has come into service and marking it unhealthy due to a failed health check.
+     *        The duration of the health check grace period, in seconds.
      */
 
     public void setHealthCheckGracePeriod(Integer healthCheckGracePeriod) {
@@ -925,12 +919,10 @@ public class AutoScalingGroup implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The amount of time, in seconds, that Amazon EC2 Auto Scaling waits before checking the health status of an EC2
-     * instance that has come into service and marking it unhealthy due to a failed health check.
+     * The duration of the health check grace period, in seconds.
      * </p>
      * 
-     * @return The amount of time, in seconds, that Amazon EC2 Auto Scaling waits before checking the health status of
-     *         an EC2 instance that has come into service and marking it unhealthy due to a failed health check.
+     * @return The duration of the health check grace period, in seconds.
      */
 
     public Integer getHealthCheckGracePeriod() {
@@ -939,13 +931,11 @@ public class AutoScalingGroup implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The amount of time, in seconds, that Amazon EC2 Auto Scaling waits before checking the health status of an EC2
-     * instance that has come into service and marking it unhealthy due to a failed health check.
+     * The duration of the health check grace period, in seconds.
      * </p>
      * 
      * @param healthCheckGracePeriod
-     *        The amount of time, in seconds, that Amazon EC2 Auto Scaling waits before checking the health status of an
-     *        EC2 instance that has come into service and marking it unhealthy due to a failed health check.
+     *        The duration of the health check grace period, in seconds.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1815,31 +1805,12 @@ public class AutoScalingGroup implements Serializable, Cloneable {
     /**
      * <p>
      * The unit of measurement for the value specified for desired capacity. Amazon EC2 Auto Scaling supports
-     * <code>DesiredCapacityType</code> for attribute-based instance type selection only. For more information, see <a
-     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-asg-instance-type-requirements.html">Creating
-     * an Auto Scaling group using attribute-based instance type selection</a> in the <i>Amazon EC2 Auto Scaling User
-     * Guide</i>.
-     * </p>
-     * <p>
-     * By default, Amazon EC2 Auto Scaling specifies <code>units</code>, which translates into number of instances.
-     * </p>
-     * <p>
-     * Valid values: <code>units</code> | <code>vcpu</code> | <code>memory-mib</code>
+     * <code>DesiredCapacityType</code> for attribute-based instance type selection only.
      * </p>
      * 
      * @param desiredCapacityType
      *        The unit of measurement for the value specified for desired capacity. Amazon EC2 Auto Scaling supports
-     *        <code>DesiredCapacityType</code> for attribute-based instance type selection only. For more information,
-     *        see <a
-     *        href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-asg-instance-type-requirements.html"
-     *        >Creating an Auto Scaling group using attribute-based instance type selection</a> in the <i>Amazon EC2
-     *        Auto Scaling User Guide</i>.</p>
-     *        <p>
-     *        By default, Amazon EC2 Auto Scaling specifies <code>units</code>, which translates into number of
-     *        instances.
-     *        </p>
-     *        <p>
-     *        Valid values: <code>units</code> | <code>vcpu</code> | <code>memory-mib</code>
+     *        <code>DesiredCapacityType</code> for attribute-based instance type selection only.
      */
 
     public void setDesiredCapacityType(String desiredCapacityType) {
@@ -1849,30 +1820,11 @@ public class AutoScalingGroup implements Serializable, Cloneable {
     /**
      * <p>
      * The unit of measurement for the value specified for desired capacity. Amazon EC2 Auto Scaling supports
-     * <code>DesiredCapacityType</code> for attribute-based instance type selection only. For more information, see <a
-     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-asg-instance-type-requirements.html">Creating
-     * an Auto Scaling group using attribute-based instance type selection</a> in the <i>Amazon EC2 Auto Scaling User
-     * Guide</i>.
-     * </p>
-     * <p>
-     * By default, Amazon EC2 Auto Scaling specifies <code>units</code>, which translates into number of instances.
-     * </p>
-     * <p>
-     * Valid values: <code>units</code> | <code>vcpu</code> | <code>memory-mib</code>
+     * <code>DesiredCapacityType</code> for attribute-based instance type selection only.
      * </p>
      * 
      * @return The unit of measurement for the value specified for desired capacity. Amazon EC2 Auto Scaling supports
-     *         <code>DesiredCapacityType</code> for attribute-based instance type selection only. For more information,
-     *         see <a
-     *         href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-asg-instance-type-requirements.html"
-     *         >Creating an Auto Scaling group using attribute-based instance type selection</a> in the <i>Amazon EC2
-     *         Auto Scaling User Guide</i>.</p>
-     *         <p>
-     *         By default, Amazon EC2 Auto Scaling specifies <code>units</code>, which translates into number of
-     *         instances.
-     *         </p>
-     *         <p>
-     *         Valid values: <code>units</code> | <code>vcpu</code> | <code>memory-mib</code>
+     *         <code>DesiredCapacityType</code> for attribute-based instance type selection only.
      */
 
     public String getDesiredCapacityType() {
@@ -1882,36 +1834,57 @@ public class AutoScalingGroup implements Serializable, Cloneable {
     /**
      * <p>
      * The unit of measurement for the value specified for desired capacity. Amazon EC2 Auto Scaling supports
-     * <code>DesiredCapacityType</code> for attribute-based instance type selection only. For more information, see <a
-     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-asg-instance-type-requirements.html">Creating
-     * an Auto Scaling group using attribute-based instance type selection</a> in the <i>Amazon EC2 Auto Scaling User
-     * Guide</i>.
-     * </p>
-     * <p>
-     * By default, Amazon EC2 Auto Scaling specifies <code>units</code>, which translates into number of instances.
-     * </p>
-     * <p>
-     * Valid values: <code>units</code> | <code>vcpu</code> | <code>memory-mib</code>
+     * <code>DesiredCapacityType</code> for attribute-based instance type selection only.
      * </p>
      * 
      * @param desiredCapacityType
      *        The unit of measurement for the value specified for desired capacity. Amazon EC2 Auto Scaling supports
-     *        <code>DesiredCapacityType</code> for attribute-based instance type selection only. For more information,
-     *        see <a
-     *        href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-asg-instance-type-requirements.html"
-     *        >Creating an Auto Scaling group using attribute-based instance type selection</a> in the <i>Amazon EC2
-     *        Auto Scaling User Guide</i>.</p>
-     *        <p>
-     *        By default, Amazon EC2 Auto Scaling specifies <code>units</code>, which translates into number of
-     *        instances.
-     *        </p>
-     *        <p>
-     *        Valid values: <code>units</code> | <code>vcpu</code> | <code>memory-mib</code>
+     *        <code>DesiredCapacityType</code> for attribute-based instance type selection only.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public AutoScalingGroup withDesiredCapacityType(String desiredCapacityType) {
         setDesiredCapacityType(desiredCapacityType);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The duration of the default instance warmup, in seconds.
+     * </p>
+     * 
+     * @param defaultInstanceWarmup
+     *        The duration of the default instance warmup, in seconds.
+     */
+
+    public void setDefaultInstanceWarmup(Integer defaultInstanceWarmup) {
+        this.defaultInstanceWarmup = defaultInstanceWarmup;
+    }
+
+    /**
+     * <p>
+     * The duration of the default instance warmup, in seconds.
+     * </p>
+     * 
+     * @return The duration of the default instance warmup, in seconds.
+     */
+
+    public Integer getDefaultInstanceWarmup() {
+        return this.defaultInstanceWarmup;
+    }
+
+    /**
+     * <p>
+     * The duration of the default instance warmup, in seconds.
+     * </p>
+     * 
+     * @param defaultInstanceWarmup
+     *        The duration of the default instance warmup, in seconds.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AutoScalingGroup withDefaultInstanceWarmup(Integer defaultInstanceWarmup) {
+        setDefaultInstanceWarmup(defaultInstanceWarmup);
         return this;
     }
 
@@ -1990,7 +1963,9 @@ public class AutoScalingGroup implements Serializable, Cloneable {
         if (getContext() != null)
             sb.append("Context: ").append(getContext()).append(",");
         if (getDesiredCapacityType() != null)
-            sb.append("DesiredCapacityType: ").append(getDesiredCapacityType());
+            sb.append("DesiredCapacityType: ").append(getDesiredCapacityType()).append(",");
+        if (getDefaultInstanceWarmup() != null)
+            sb.append("DefaultInstanceWarmup: ").append(getDefaultInstanceWarmup());
         sb.append("}");
         return sb.toString();
     }
@@ -2134,6 +2109,10 @@ public class AutoScalingGroup implements Serializable, Cloneable {
             return false;
         if (other.getDesiredCapacityType() != null && other.getDesiredCapacityType().equals(this.getDesiredCapacityType()) == false)
             return false;
+        if (other.getDefaultInstanceWarmup() == null ^ this.getDefaultInstanceWarmup() == null)
+            return false;
+        if (other.getDefaultInstanceWarmup() != null && other.getDefaultInstanceWarmup().equals(this.getDefaultInstanceWarmup()) == false)
+            return false;
         return true;
     }
 
@@ -2174,6 +2153,7 @@ public class AutoScalingGroup implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getWarmPoolSize() == null) ? 0 : getWarmPoolSize().hashCode());
         hashCode = prime * hashCode + ((getContext() == null) ? 0 : getContext().hashCode());
         hashCode = prime * hashCode + ((getDesiredCapacityType() == null) ? 0 : getDesiredCapacityType().hashCode());
+        hashCode = prime * hashCode + ((getDefaultInstanceWarmup() == null) ? 0 : getDefaultInstanceWarmup().hashCode());
         return hashCode;
     }
 

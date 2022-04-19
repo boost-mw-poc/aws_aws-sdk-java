@@ -1827,6 +1827,72 @@ public class AmazonPersonalizeAsyncClient extends AmazonPersonalizeClient implem
     }
 
     @Override
+    public java.util.concurrent.Future<StartRecommenderResult> startRecommenderAsync(StartRecommenderRequest request) {
+
+        return startRecommenderAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartRecommenderResult> startRecommenderAsync(final StartRecommenderRequest request,
+            final com.amazonaws.handlers.AsyncHandler<StartRecommenderRequest, StartRecommenderResult> asyncHandler) {
+        final StartRecommenderRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<StartRecommenderResult>() {
+            @Override
+            public StartRecommenderResult call() throws Exception {
+                StartRecommenderResult result = null;
+
+                try {
+                    result = executeStartRecommender(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<StopRecommenderResult> stopRecommenderAsync(StopRecommenderRequest request) {
+
+        return stopRecommenderAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StopRecommenderResult> stopRecommenderAsync(final StopRecommenderRequest request,
+            final com.amazonaws.handlers.AsyncHandler<StopRecommenderRequest, StopRecommenderResult> asyncHandler) {
+        final StopRecommenderRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<StopRecommenderResult>() {
+            @Override
+            public StopRecommenderResult call() throws Exception {
+                StopRecommenderResult result = null;
+
+                try {
+                    result = executeStopRecommender(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<StopSolutionVersionCreationResult> stopSolutionVersionCreationAsync(StopSolutionVersionCreationRequest request) {
 
         return stopSolutionVersionCreationAsync(request, null);

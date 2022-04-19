@@ -77,6 +77,8 @@ public class AssociationDescriptionMarshaller {
             .marshallLocationName("CalendarNames").build();
     private static final MarshallingInfo<List> TARGETLOCATIONS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("TargetLocations").build();
+    private static final MarshallingInfo<Integer> SCHEDULEOFFSET_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ScheduleOffset").build();
 
     private static final AssociationDescriptionMarshaller instance = new AssociationDescriptionMarshaller();
 
@@ -118,6 +120,7 @@ public class AssociationDescriptionMarshaller {
             protocolMarshaller.marshall(associationDescription.getApplyOnlyAtCronInterval(), APPLYONLYATCRONINTERVAL_BINDING);
             protocolMarshaller.marshall(associationDescription.getCalendarNames(), CALENDARNAMES_BINDING);
             protocolMarshaller.marshall(associationDescription.getTargetLocations(), TARGETLOCATIONS_BINDING);
+            protocolMarshaller.marshall(associationDescription.getScheduleOffset(), SCHEDULEOFFSET_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

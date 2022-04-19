@@ -172,6 +172,7 @@ public class AmazonWorkLinkClient extends AmazonWebServiceClient implements Amaz
      *      Documentation</a>
      */
     @Override
+    @Deprecated
     public AssociateDomainResult associateDomain(AssociateDomainRequest request) {
         request = beforeClientExecution(request);
         return executeAssociateDomain(request);
@@ -240,6 +241,7 @@ public class AmazonWorkLinkClient extends AmazonWebServiceClient implements Amaz
      *      target="_top">AWS API Documentation</a>
      */
     @Override
+    @Deprecated
     public AssociateWebsiteAuthorizationProviderResult associateWebsiteAuthorizationProvider(AssociateWebsiteAuthorizationProviderRequest request) {
         request = beforeClientExecution(request);
         return executeAssociateWebsiteAuthorizationProvider(request);
@@ -311,6 +313,7 @@ public class AmazonWorkLinkClient extends AmazonWebServiceClient implements Amaz
      *      target="_top">AWS API Documentation</a>
      */
     @Override
+    @Deprecated
     public AssociateWebsiteCertificateAuthorityResult associateWebsiteCertificateAuthority(AssociateWebsiteCertificateAuthorityRequest request) {
         request = beforeClientExecution(request);
         return executeAssociateWebsiteCertificateAuthority(request);
@@ -382,6 +385,7 @@ public class AmazonWorkLinkClient extends AmazonWebServiceClient implements Amaz
      *      Documentation</a>
      */
     @Override
+    @Deprecated
     public CreateFleetResult createFleet(CreateFleetRequest request) {
         request = beforeClientExecution(request);
         return executeCreateFleet(request);
@@ -447,6 +451,7 @@ public class AmazonWorkLinkClient extends AmazonWebServiceClient implements Amaz
      *      Documentation</a>
      */
     @Override
+    @Deprecated
     public DeleteFleetResult deleteFleet(DeleteFleetRequest request) {
         request = beforeClientExecution(request);
         return executeDeleteFleet(request);
@@ -512,6 +517,7 @@ public class AmazonWorkLinkClient extends AmazonWebServiceClient implements Amaz
      *      target="_top">AWS API Documentation</a>
      */
     @Override
+    @Deprecated
     public DescribeAuditStreamConfigurationResult describeAuditStreamConfiguration(DescribeAuditStreamConfigurationRequest request) {
         request = beforeClientExecution(request);
         return executeDescribeAuditStreamConfiguration(request);
@@ -580,6 +586,7 @@ public class AmazonWorkLinkClient extends AmazonWebServiceClient implements Amaz
      *      target="_top">AWS API Documentation</a>
      */
     @Override
+    @Deprecated
     public DescribeCompanyNetworkConfigurationResult describeCompanyNetworkConfiguration(DescribeCompanyNetworkConfigurationRequest request) {
         request = beforeClientExecution(request);
         return executeDescribeCompanyNetworkConfiguration(request);
@@ -648,6 +655,7 @@ public class AmazonWorkLinkClient extends AmazonWebServiceClient implements Amaz
      *      Documentation</a>
      */
     @Override
+    @Deprecated
     public DescribeDeviceResult describeDevice(DescribeDeviceRequest request) {
         request = beforeClientExecution(request);
         return executeDescribeDevice(request);
@@ -713,6 +721,7 @@ public class AmazonWorkLinkClient extends AmazonWebServiceClient implements Amaz
      *      target="_top">AWS API Documentation</a>
      */
     @Override
+    @Deprecated
     public DescribeDevicePolicyConfigurationResult describeDevicePolicyConfiguration(DescribeDevicePolicyConfigurationRequest request) {
         request = beforeClientExecution(request);
         return executeDescribeDevicePolicyConfiguration(request);
@@ -781,6 +790,7 @@ public class AmazonWorkLinkClient extends AmazonWebServiceClient implements Amaz
      *      Documentation</a>
      */
     @Override
+    @Deprecated
     public DescribeDomainResult describeDomain(DescribeDomainRequest request) {
         request = beforeClientExecution(request);
         return executeDescribeDomain(request);
@@ -847,6 +857,7 @@ public class AmazonWorkLinkClient extends AmazonWebServiceClient implements Amaz
      *      API Documentation</a>
      */
     @Override
+    @Deprecated
     public DescribeFleetMetadataResult describeFleetMetadata(DescribeFleetMetadataRequest request) {
         request = beforeClientExecution(request);
         return executeDescribeFleetMetadata(request);
@@ -913,6 +924,7 @@ public class AmazonWorkLinkClient extends AmazonWebServiceClient implements Amaz
      *      target="_top">AWS API Documentation</a>
      */
     @Override
+    @Deprecated
     public DescribeIdentityProviderConfigurationResult describeIdentityProviderConfiguration(DescribeIdentityProviderConfigurationRequest request) {
         request = beforeClientExecution(request);
         return executeDescribeIdentityProviderConfiguration(request);
@@ -981,6 +993,7 @@ public class AmazonWorkLinkClient extends AmazonWebServiceClient implements Amaz
      *      target="_top">AWS API Documentation</a>
      */
     @Override
+    @Deprecated
     public DescribeWebsiteCertificateAuthorityResult describeWebsiteCertificateAuthority(DescribeWebsiteCertificateAuthorityRequest request) {
         request = beforeClientExecution(request);
         return executeDescribeWebsiteCertificateAuthority(request);
@@ -1050,6 +1063,7 @@ public class AmazonWorkLinkClient extends AmazonWebServiceClient implements Amaz
      *      API Documentation</a>
      */
     @Override
+    @Deprecated
     public DisassociateDomainResult disassociateDomain(DisassociateDomainRequest request) {
         request = beforeClientExecution(request);
         return executeDisassociateDomain(request);
@@ -1119,6 +1133,7 @@ public class AmazonWorkLinkClient extends AmazonWebServiceClient implements Amaz
      *      target="_top">AWS API Documentation</a>
      */
     @Override
+    @Deprecated
     public DisassociateWebsiteAuthorizationProviderResult disassociateWebsiteAuthorizationProvider(DisassociateWebsiteAuthorizationProviderRequest request) {
         request = beforeClientExecution(request);
         return executeDisassociateWebsiteAuthorizationProvider(request);
@@ -1187,6 +1202,7 @@ public class AmazonWorkLinkClient extends AmazonWebServiceClient implements Amaz
      *      target="_top">AWS API Documentation</a>
      */
     @Override
+    @Deprecated
     public DisassociateWebsiteCertificateAuthorityResult disassociateWebsiteCertificateAuthority(DisassociateWebsiteCertificateAuthorityRequest request) {
         request = beforeClientExecution(request);
         return executeDisassociateWebsiteCertificateAuthority(request);
@@ -1255,6 +1271,7 @@ public class AmazonWorkLinkClient extends AmazonWebServiceClient implements Amaz
      *      Documentation</a>
      */
     @Override
+    @Deprecated
     public ListDevicesResult listDevices(ListDevicesRequest request) {
         request = beforeClientExecution(request);
         return executeListDevices(request);
@@ -1320,6 +1337,7 @@ public class AmazonWorkLinkClient extends AmazonWebServiceClient implements Amaz
      *      Documentation</a>
      */
     @Override
+    @Deprecated
     public ListDomainsResult listDomains(ListDomainsRequest request) {
         request = beforeClientExecution(request);
         return executeListDomains(request);
@@ -1383,6 +1401,7 @@ public class AmazonWorkLinkClient extends AmazonWebServiceClient implements Amaz
      *      Documentation</a>
      */
     @Override
+    @Deprecated
     public ListFleetsResult listFleets(ListFleetsRequest request) {
         request = beforeClientExecution(request);
         return executeListFleets(request);
@@ -1440,6 +1459,7 @@ public class AmazonWorkLinkClient extends AmazonWebServiceClient implements Amaz
      *      API Documentation</a>
      */
     @Override
+    @Deprecated
     public ListTagsForResourceResult listTagsForResource(ListTagsForResourceRequest request) {
         request = beforeClientExecution(request);
         return executeListTagsForResource(request);
@@ -1505,6 +1525,7 @@ public class AmazonWorkLinkClient extends AmazonWebServiceClient implements Amaz
      *      target="_top">AWS API Documentation</a>
      */
     @Override
+    @Deprecated
     public ListWebsiteAuthorizationProvidersResult listWebsiteAuthorizationProviders(ListWebsiteAuthorizationProvidersRequest request) {
         request = beforeClientExecution(request);
         return executeListWebsiteAuthorizationProviders(request);
@@ -1571,6 +1592,7 @@ public class AmazonWorkLinkClient extends AmazonWebServiceClient implements Amaz
      *      target="_top">AWS API Documentation</a>
      */
     @Override
+    @Deprecated
     public ListWebsiteCertificateAuthoritiesResult listWebsiteCertificateAuthorities(ListWebsiteCertificateAuthoritiesRequest request) {
         request = beforeClientExecution(request);
         return executeListWebsiteCertificateAuthorities(request);
@@ -1639,6 +1661,7 @@ public class AmazonWorkLinkClient extends AmazonWebServiceClient implements Amaz
      *      API Documentation</a>
      */
     @Override
+    @Deprecated
     public RestoreDomainAccessResult restoreDomainAccess(RestoreDomainAccessRequest request) {
         request = beforeClientExecution(request);
         return executeRestoreDomainAccess(request);
@@ -1704,6 +1727,7 @@ public class AmazonWorkLinkClient extends AmazonWebServiceClient implements Amaz
      *      API Documentation</a>
      */
     @Override
+    @Deprecated
     public RevokeDomainAccessResult revokeDomainAccess(RevokeDomainAccessRequest request) {
         request = beforeClientExecution(request);
         return executeRevokeDomainAccess(request);
@@ -1769,6 +1793,7 @@ public class AmazonWorkLinkClient extends AmazonWebServiceClient implements Amaz
      *      Documentation</a>
      */
     @Override
+    @Deprecated
     public SignOutUserResult signOutUser(SignOutUserRequest request) {
         request = beforeClientExecution(request);
         return executeSignOutUser(request);
@@ -1827,6 +1852,7 @@ public class AmazonWorkLinkClient extends AmazonWebServiceClient implements Amaz
      *      Documentation</a>
      */
     @Override
+    @Deprecated
     public TagResourceResult tagResource(TagResourceRequest request) {
         request = beforeClientExecution(request);
         return executeTagResource(request);
@@ -1884,6 +1910,7 @@ public class AmazonWorkLinkClient extends AmazonWebServiceClient implements Amaz
      *      Documentation</a>
      */
     @Override
+    @Deprecated
     public UntagResourceResult untagResource(UntagResourceRequest request) {
         request = beforeClientExecution(request);
         return executeUntagResource(request);
@@ -1949,6 +1976,7 @@ public class AmazonWorkLinkClient extends AmazonWebServiceClient implements Amaz
      *      target="_top">AWS API Documentation</a>
      */
     @Override
+    @Deprecated
     public UpdateAuditStreamConfigurationResult updateAuditStreamConfiguration(UpdateAuditStreamConfigurationRequest request) {
         request = beforeClientExecution(request);
         return executeUpdateAuditStreamConfiguration(request);
@@ -2016,6 +2044,7 @@ public class AmazonWorkLinkClient extends AmazonWebServiceClient implements Amaz
      *      target="_top">AWS API Documentation</a>
      */
     @Override
+    @Deprecated
     public UpdateCompanyNetworkConfigurationResult updateCompanyNetworkConfiguration(UpdateCompanyNetworkConfigurationRequest request) {
         request = beforeClientExecution(request);
         return executeUpdateCompanyNetworkConfiguration(request);
@@ -2084,6 +2113,7 @@ public class AmazonWorkLinkClient extends AmazonWebServiceClient implements Amaz
      *      target="_top">AWS API Documentation</a>
      */
     @Override
+    @Deprecated
     public UpdateDevicePolicyConfigurationResult updateDevicePolicyConfiguration(UpdateDevicePolicyConfigurationRequest request) {
         request = beforeClientExecution(request);
         return executeUpdateDevicePolicyConfiguration(request);
@@ -2152,6 +2182,7 @@ public class AmazonWorkLinkClient extends AmazonWebServiceClient implements Amaz
      *      API Documentation</a>
      */
     @Override
+    @Deprecated
     public UpdateDomainMetadataResult updateDomainMetadata(UpdateDomainMetadataRequest request) {
         request = beforeClientExecution(request);
         return executeUpdateDomainMetadata(request);
@@ -2217,6 +2248,7 @@ public class AmazonWorkLinkClient extends AmazonWebServiceClient implements Amaz
      *      API Documentation</a>
      */
     @Override
+    @Deprecated
     public UpdateFleetMetadataResult updateFleetMetadata(UpdateFleetMetadataRequest request) {
         request = beforeClientExecution(request);
         return executeUpdateFleetMetadata(request);
@@ -2282,6 +2314,7 @@ public class AmazonWorkLinkClient extends AmazonWebServiceClient implements Amaz
      *      target="_top">AWS API Documentation</a>
      */
     @Override
+    @Deprecated
     public UpdateIdentityProviderConfigurationResult updateIdentityProviderConfiguration(UpdateIdentityProviderConfigurationRequest request) {
         request = beforeClientExecution(request);
         return executeUpdateIdentityProviderConfiguration(request);

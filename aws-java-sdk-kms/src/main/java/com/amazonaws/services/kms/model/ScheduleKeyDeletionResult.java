@@ -47,8 +47,8 @@ public class ScheduleKeyDeletionResult extends com.amazonaws.AmazonWebServiceRes
      * </p>
      * <p>
      * For more information about how key state affects the use of a KMS key, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a>
-     * in the <i>Key Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the
+     * <i>Key Management Service Developer Guide</i>.
      * </p>
      */
     private String keyState;
@@ -182,16 +182,16 @@ public class ScheduleKeyDeletionResult extends com.amazonaws.AmazonWebServiceRes
      * </p>
      * <p>
      * For more information about how key state affects the use of a KMS key, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a>
-     * in the <i>Key Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the
+     * <i>Key Management Service Developer Guide</i>.
      * </p>
      * 
      * @param keyState
      *        The current status of the KMS key.</p>
      *        <p>
      *        For more information about how key state affects the use of a KMS key, see <a
-     *        href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS
-     *        key</a> in the <i>Key Management Service Developer Guide</i>.
+     *        href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in
+     *        the <i>Key Management Service Developer Guide</i>.
      * @see KeyState
      */
 
@@ -205,15 +205,15 @@ public class ScheduleKeyDeletionResult extends com.amazonaws.AmazonWebServiceRes
      * </p>
      * <p>
      * For more information about how key state affects the use of a KMS key, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a>
-     * in the <i>Key Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the
+     * <i>Key Management Service Developer Guide</i>.
      * </p>
      * 
      * @return The current status of the KMS key.</p>
      *         <p>
      *         For more information about how key state affects the use of a KMS key, see <a
-     *         href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS
-     *         key</a> in the <i>Key Management Service Developer Guide</i>.
+     *         href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in
+     *         the <i>Key Management Service Developer Guide</i>.
      * @see KeyState
      */
 
@@ -227,16 +227,16 @@ public class ScheduleKeyDeletionResult extends com.amazonaws.AmazonWebServiceRes
      * </p>
      * <p>
      * For more information about how key state affects the use of a KMS key, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a>
-     * in the <i>Key Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the
+     * <i>Key Management Service Developer Guide</i>.
      * </p>
      * 
      * @param keyState
      *        The current status of the KMS key.</p>
      *        <p>
      *        For more information about how key state affects the use of a KMS key, see <a
-     *        href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS
-     *        key</a> in the <i>Key Management Service Developer Guide</i>.
+     *        href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in
+     *        the <i>Key Management Service Developer Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see KeyState
      */
@@ -252,16 +252,16 @@ public class ScheduleKeyDeletionResult extends com.amazonaws.AmazonWebServiceRes
      * </p>
      * <p>
      * For more information about how key state affects the use of a KMS key, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a>
-     * in the <i>Key Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the
+     * <i>Key Management Service Developer Guide</i>.
      * </p>
      * 
      * @param keyState
      *        The current status of the KMS key.</p>
      *        <p>
      *        For more information about how key state affects the use of a KMS key, see <a
-     *        href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS
-     *        key</a> in the <i>Key Management Service Developer Guide</i>.
+     *        href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in
+     *        the <i>Key Management Service Developer Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see KeyState
      */

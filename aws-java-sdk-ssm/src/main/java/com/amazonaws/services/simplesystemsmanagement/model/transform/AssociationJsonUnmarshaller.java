@@ -90,6 +90,10 @@ public class AssociationJsonUnmarshaller implements Unmarshaller<Association, Js
                     context.nextToken();
                     association.setAssociationName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("ScheduleOffset", targetDepth)) {
+                    context.nextToken();
+                    association.setScheduleOffset(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

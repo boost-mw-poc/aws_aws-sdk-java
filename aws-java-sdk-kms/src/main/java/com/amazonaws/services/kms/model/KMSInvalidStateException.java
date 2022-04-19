@@ -20,8 +20,8 @@ import javax.annotation.Generated;
  * </p>
  * <p>
  * For more information about how key state affects the use of a KMS key, see <a
- * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a> in
- * the <i> <i>Key Management Service Developer Guide</i> </i>.
+ * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the <i>
+ * <i>Key Management Service Developer Guide</i> </i>.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

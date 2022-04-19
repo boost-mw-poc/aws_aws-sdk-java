@@ -192,6 +192,12 @@ public class CreateAssociationBatchRequestEntry implements Serializable, Cloneab
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<TargetLocation> targetLocations;
+    /**
+     * <p>
+     * Number of days to wait after the scheduled day to run an association.
+     * </p>
+     */
+    private Integer scheduleOffset;
 
     /**
      * <p>
@@ -1449,6 +1455,46 @@ public class CreateAssociationBatchRequestEntry implements Serializable, Cloneab
     }
 
     /**
+     * <p>
+     * Number of days to wait after the scheduled day to run an association.
+     * </p>
+     * 
+     * @param scheduleOffset
+     *        Number of days to wait after the scheduled day to run an association.
+     */
+
+    public void setScheduleOffset(Integer scheduleOffset) {
+        this.scheduleOffset = scheduleOffset;
+    }
+
+    /**
+     * <p>
+     * Number of days to wait after the scheduled day to run an association.
+     * </p>
+     * 
+     * @return Number of days to wait after the scheduled day to run an association.
+     */
+
+    public Integer getScheduleOffset() {
+        return this.scheduleOffset;
+    }
+
+    /**
+     * <p>
+     * Number of days to wait after the scheduled day to run an association.
+     * </p>
+     * 
+     * @param scheduleOffset
+     *        Number of days to wait after the scheduled day to run an association.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateAssociationBatchRequestEntry withScheduleOffset(Integer scheduleOffset) {
+        setScheduleOffset(scheduleOffset);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1491,7 +1537,9 @@ public class CreateAssociationBatchRequestEntry implements Serializable, Cloneab
         if (getCalendarNames() != null)
             sb.append("CalendarNames: ").append(getCalendarNames()).append(",");
         if (getTargetLocations() != null)
-            sb.append("TargetLocations: ").append(getTargetLocations());
+            sb.append("TargetLocations: ").append(getTargetLocations()).append(",");
+        if (getScheduleOffset() != null)
+            sb.append("ScheduleOffset: ").append(getScheduleOffset());
         sb.append("}");
         return sb.toString();
     }
@@ -1571,6 +1619,10 @@ public class CreateAssociationBatchRequestEntry implements Serializable, Cloneab
             return false;
         if (other.getTargetLocations() != null && other.getTargetLocations().equals(this.getTargetLocations()) == false)
             return false;
+        if (other.getScheduleOffset() == null ^ this.getScheduleOffset() == null)
+            return false;
+        if (other.getScheduleOffset() != null && other.getScheduleOffset().equals(this.getScheduleOffset()) == false)
+            return false;
         return true;
     }
 
@@ -1595,6 +1647,7 @@ public class CreateAssociationBatchRequestEntry implements Serializable, Cloneab
         hashCode = prime * hashCode + ((getApplyOnlyAtCronInterval() == null) ? 0 : getApplyOnlyAtCronInterval().hashCode());
         hashCode = prime * hashCode + ((getCalendarNames() == null) ? 0 : getCalendarNames().hashCode());
         hashCode = prime * hashCode + ((getTargetLocations() == null) ? 0 : getTargetLocations().hashCode());
+        hashCode = prime * hashCode + ((getScheduleOffset() == null) ? 0 : getScheduleOffset().hashCode());
         return hashCode;
     }
 

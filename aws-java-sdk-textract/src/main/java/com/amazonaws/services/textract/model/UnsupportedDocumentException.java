@@ -16,8 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The format of the input document isn't supported. Documents for synchronous operations can be in PNG or JPEG format
- * only. Documents for asynchronous operations can be in PDF format.
+ * The format of the input document isn't supported. Documents for operations can be in PNG, JPEG, PDF, or TIFF format.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

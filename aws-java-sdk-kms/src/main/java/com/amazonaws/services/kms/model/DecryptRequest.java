@@ -34,18 +34,19 @@ public class DecryptRequest extends com.amazonaws.AmazonWebServiceRequest implem
      * <p>
      * Specifies the encryption context to use when decrypting the data. An encryption context is valid only for <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#cryptographic-operations">cryptographic
-     * operations</a> with a symmetric KMS key. The standard asymmetric encryption algorithms that KMS uses do not
-     * support an encryption context.
+     * operations</a> with a symmetric encryption KMS key. The standard asymmetric encryption algorithms and HMAC
+     * algorithms that KMS uses do not support an encryption context.
      * </p>
      * <p>
-     * An <i>encryption context</i> is a collection of non-secret key-value pairs that represents additional
+     * An <i>encryption context</i> is a collection of non-secret key-value pairs that represent additional
      * authenticated data. When you use an encryption context to encrypt data, you must specify the same (an exact
-     * case-sensitive match) encryption context to decrypt the data. An encryption context is optional when encrypting
-     * with a symmetric KMS key, but it is highly recommended.
+     * case-sensitive match) encryption context to decrypt the data. An encryption context is supported only on
+     * operations with symmetric encryption KMS keys. On operations with symmetric encryption KMS keys, an encryption
+     * context is optional, but it is strongly recommended.
      * </p>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#encrypt_context">Encryption Context</a>
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#encrypt_context">Encryption context</a>
      * in the <i>Key Management Service Developer Guide</i>.
      * </p>
      */
@@ -65,13 +66,17 @@ public class DecryptRequest extends com.amazonaws.AmazonWebServiceRequest implem
     private com.amazonaws.internal.SdkInternalList<String> grantTokens;
     /**
      * <p>
-     * Specifies the KMS key that KMS uses to decrypt the ciphertext. Enter a key ID of the KMS key that was used to
-     * encrypt the ciphertext.
+     * Specifies the KMS key that KMS uses to decrypt the ciphertext.
+     * </p>
+     * <p>
+     * Enter a key ID of the KMS key that was used to encrypt the ciphertext. If you identify a different KMS key, the
+     * <code>Decrypt</code> operation throws an <code>IncorrectKeyException</code>.
      * </p>
      * <p>
      * This parameter is required only when the ciphertext was encrypted under an asymmetric KMS key. If you used a
-     * symmetric KMS key, KMS can get the KMS key from metadata that it adds to the symmetric ciphertext blob. However,
-     * it is always recommended as a best practice. This practice ensures that you use the KMS key that you intend.
+     * symmetric encryption KMS key, KMS can get the KMS key from metadata that it adds to the symmetric ciphertext
+     * blob. However, it is always recommended as a best practice. This practice ensures that you use the KMS key that
+     * you intend.
      * </p>
      * <p>
      * To specify a KMS key, use its key ID, key ARN, alias name, or alias ARN. When using an alias name, prefix it with
@@ -116,7 +121,8 @@ public class DecryptRequest extends com.amazonaws.AmazonWebServiceRequest implem
      * </p>
      * <p>
      * This parameter is required only when the ciphertext was encrypted under an asymmetric KMS key. The default value,
-     * <code>SYMMETRIC_DEFAULT</code>, represents the only supported algorithm that is valid for symmetric KMS keys.
+     * <code>SYMMETRIC_DEFAULT</code>, represents the only supported algorithm that is valid for symmetric encryption
+     * KMS keys.
      * </p>
      */
     private String encryptionAlgorithm;
@@ -192,35 +198,37 @@ public class DecryptRequest extends com.amazonaws.AmazonWebServiceRequest implem
      * <p>
      * Specifies the encryption context to use when decrypting the data. An encryption context is valid only for <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#cryptographic-operations">cryptographic
-     * operations</a> with a symmetric KMS key. The standard asymmetric encryption algorithms that KMS uses do not
-     * support an encryption context.
+     * operations</a> with a symmetric encryption KMS key. The standard asymmetric encryption algorithms and HMAC
+     * algorithms that KMS uses do not support an encryption context.
      * </p>
      * <p>
-     * An <i>encryption context</i> is a collection of non-secret key-value pairs that represents additional
+     * An <i>encryption context</i> is a collection of non-secret key-value pairs that represent additional
      * authenticated data. When you use an encryption context to encrypt data, you must specify the same (an exact
-     * case-sensitive match) encryption context to decrypt the data. An encryption context is optional when encrypting
-     * with a symmetric KMS key, but it is highly recommended.
+     * case-sensitive match) encryption context to decrypt the data. An encryption context is supported only on
+     * operations with symmetric encryption KMS keys. On operations with symmetric encryption KMS keys, an encryption
+     * context is optional, but it is strongly recommended.
      * </p>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#encrypt_context">Encryption Context</a>
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#encrypt_context">Encryption context</a>
      * in the <i>Key Management Service Developer Guide</i>.
      * </p>
      * 
      * @return Specifies the encryption context to use when decrypting the data. An encryption context is valid only for
      *         <a href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#cryptographic-operations">
-     *         cryptographic operations</a> with a symmetric KMS key. The standard asymmetric encryption algorithms that
-     *         KMS uses do not support an encryption context.</p>
+     *         cryptographic operations</a> with a symmetric encryption KMS key. The standard asymmetric encryption
+     *         algorithms and HMAC algorithms that KMS uses do not support an encryption context.</p>
      *         <p>
-     *         An <i>encryption context</i> is a collection of non-secret key-value pairs that represents additional
+     *         An <i>encryption context</i> is a collection of non-secret key-value pairs that represent additional
      *         authenticated data. When you use an encryption context to encrypt data, you must specify the same (an
-     *         exact case-sensitive match) encryption context to decrypt the data. An encryption context is optional
-     *         when encrypting with a symmetric KMS key, but it is highly recommended.
+     *         exact case-sensitive match) encryption context to decrypt the data. An encryption context is supported
+     *         only on operations with symmetric encryption KMS keys. On operations with symmetric encryption KMS keys,
+     *         an encryption context is optional, but it is strongly recommended.
      *         </p>
      *         <p>
      *         For more information, see <a
      *         href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#encrypt_context">Encryption
-     *         Context</a> in the <i>Key Management Service Developer Guide</i>.
+     *         context</a> in the <i>Key Management Service Developer Guide</i>.
      */
 
     public java.util.Map<String, String> getEncryptionContext() {
@@ -234,36 +242,38 @@ public class DecryptRequest extends com.amazonaws.AmazonWebServiceRequest implem
      * <p>
      * Specifies the encryption context to use when decrypting the data. An encryption context is valid only for <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#cryptographic-operations">cryptographic
-     * operations</a> with a symmetric KMS key. The standard asymmetric encryption algorithms that KMS uses do not
-     * support an encryption context.
+     * operations</a> with a symmetric encryption KMS key. The standard asymmetric encryption algorithms and HMAC
+     * algorithms that KMS uses do not support an encryption context.
      * </p>
      * <p>
-     * An <i>encryption context</i> is a collection of non-secret key-value pairs that represents additional
+     * An <i>encryption context</i> is a collection of non-secret key-value pairs that represent additional
      * authenticated data. When you use an encryption context to encrypt data, you must specify the same (an exact
-     * case-sensitive match) encryption context to decrypt the data. An encryption context is optional when encrypting
-     * with a symmetric KMS key, but it is highly recommended.
+     * case-sensitive match) encryption context to decrypt the data. An encryption context is supported only on
+     * operations with symmetric encryption KMS keys. On operations with symmetric encryption KMS keys, an encryption
+     * context is optional, but it is strongly recommended.
      * </p>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#encrypt_context">Encryption Context</a>
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#encrypt_context">Encryption context</a>
      * in the <i>Key Management Service Developer Guide</i>.
      * </p>
      * 
      * @param encryptionContext
      *        Specifies the encryption context to use when decrypting the data. An encryption context is valid only for
      *        <a href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#cryptographic-operations">
-     *        cryptographic operations</a> with a symmetric KMS key. The standard asymmetric encryption algorithms that
-     *        KMS uses do not support an encryption context.</p>
+     *        cryptographic operations</a> with a symmetric encryption KMS key. The standard asymmetric encryption
+     *        algorithms and HMAC algorithms that KMS uses do not support an encryption context.</p>
      *        <p>
-     *        An <i>encryption context</i> is a collection of non-secret key-value pairs that represents additional
+     *        An <i>encryption context</i> is a collection of non-secret key-value pairs that represent additional
      *        authenticated data. When you use an encryption context to encrypt data, you must specify the same (an
-     *        exact case-sensitive match) encryption context to decrypt the data. An encryption context is optional when
-     *        encrypting with a symmetric KMS key, but it is highly recommended.
+     *        exact case-sensitive match) encryption context to decrypt the data. An encryption context is supported
+     *        only on operations with symmetric encryption KMS keys. On operations with symmetric encryption KMS keys,
+     *        an encryption context is optional, but it is strongly recommended.
      *        </p>
      *        <p>
      *        For more information, see <a
      *        href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#encrypt_context">Encryption
-     *        Context</a> in the <i>Key Management Service Developer Guide</i>.
+     *        context</a> in the <i>Key Management Service Developer Guide</i>.
      */
 
     public void setEncryptionContext(java.util.Map<String, String> encryptionContext) {
@@ -274,36 +284,38 @@ public class DecryptRequest extends com.amazonaws.AmazonWebServiceRequest implem
      * <p>
      * Specifies the encryption context to use when decrypting the data. An encryption context is valid only for <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#cryptographic-operations">cryptographic
-     * operations</a> with a symmetric KMS key. The standard asymmetric encryption algorithms that KMS uses do not
-     * support an encryption context.
+     * operations</a> with a symmetric encryption KMS key. The standard asymmetric encryption algorithms and HMAC
+     * algorithms that KMS uses do not support an encryption context.
      * </p>
      * <p>
-     * An <i>encryption context</i> is a collection of non-secret key-value pairs that represents additional
+     * An <i>encryption context</i> is a collection of non-secret key-value pairs that represent additional
      * authenticated data. When you use an encryption context to encrypt data, you must specify the same (an exact
-     * case-sensitive match) encryption context to decrypt the data. An encryption context is optional when encrypting
-     * with a symmetric KMS key, but it is highly recommended.
+     * case-sensitive match) encryption context to decrypt the data. An encryption context is supported only on
+     * operations with symmetric encryption KMS keys. On operations with symmetric encryption KMS keys, an encryption
+     * context is optional, but it is strongly recommended.
      * </p>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#encrypt_context">Encryption Context</a>
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#encrypt_context">Encryption context</a>
      * in the <i>Key Management Service Developer Guide</i>.
      * </p>
      * 
      * @param encryptionContext
      *        Specifies the encryption context to use when decrypting the data. An encryption context is valid only for
      *        <a href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#cryptographic-operations">
-     *        cryptographic operations</a> with a symmetric KMS key. The standard asymmetric encryption algorithms that
-     *        KMS uses do not support an encryption context.</p>
+     *        cryptographic operations</a> with a symmetric encryption KMS key. The standard asymmetric encryption
+     *        algorithms and HMAC algorithms that KMS uses do not support an encryption context.</p>
      *        <p>
-     *        An <i>encryption context</i> is a collection of non-secret key-value pairs that represents additional
+     *        An <i>encryption context</i> is a collection of non-secret key-value pairs that represent additional
      *        authenticated data. When you use an encryption context to encrypt data, you must specify the same (an
-     *        exact case-sensitive match) encryption context to decrypt the data. An encryption context is optional when
-     *        encrypting with a symmetric KMS key, but it is highly recommended.
+     *        exact case-sensitive match) encryption context to decrypt the data. An encryption context is supported
+     *        only on operations with symmetric encryption KMS keys. On operations with symmetric encryption KMS keys,
+     *        an encryption context is optional, but it is strongly recommended.
      *        </p>
      *        <p>
      *        For more information, see <a
      *        href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#encrypt_context">Encryption
-     *        Context</a> in the <i>Key Management Service Developer Guide</i>.
+     *        context</a> in the <i>Key Management Service Developer Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -467,13 +479,17 @@ public class DecryptRequest extends com.amazonaws.AmazonWebServiceRequest implem
 
     /**
      * <p>
-     * Specifies the KMS key that KMS uses to decrypt the ciphertext. Enter a key ID of the KMS key that was used to
-     * encrypt the ciphertext.
+     * Specifies the KMS key that KMS uses to decrypt the ciphertext.
+     * </p>
+     * <p>
+     * Enter a key ID of the KMS key that was used to encrypt the ciphertext. If you identify a different KMS key, the
+     * <code>Decrypt</code> operation throws an <code>IncorrectKeyException</code>.
      * </p>
      * <p>
      * This parameter is required only when the ciphertext was encrypted under an asymmetric KMS key. If you used a
-     * symmetric KMS key, KMS can get the KMS key from metadata that it adds to the symmetric ciphertext blob. However,
-     * it is always recommended as a best practice. This practice ensures that you use the KMS key that you intend.
+     * symmetric encryption KMS key, KMS can get the KMS key from metadata that it adds to the symmetric ciphertext
+     * blob. However, it is always recommended as a best practice. This practice ensures that you use the KMS key that
+     * you intend.
      * </p>
      * <p>
      * To specify a KMS key, use its key ID, key ARN, alias name, or alias ARN. When using an alias name, prefix it with
@@ -511,13 +527,16 @@ public class DecryptRequest extends com.amazonaws.AmazonWebServiceRequest implem
      * </p>
      * 
      * @param keyId
-     *        Specifies the KMS key that KMS uses to decrypt the ciphertext. Enter a key ID of the KMS key that was used
-     *        to encrypt the ciphertext. </p>
+     *        Specifies the KMS key that KMS uses to decrypt the ciphertext.</p>
+     *        <p>
+     *        Enter a key ID of the KMS key that was used to encrypt the ciphertext. If you identify a different KMS
+     *        key, the <code>Decrypt</code> operation throws an <code>IncorrectKeyException</code>.
+     *        </p>
      *        <p>
      *        This parameter is required only when the ciphertext was encrypted under an asymmetric KMS key. If you used
-     *        a symmetric KMS key, KMS can get the KMS key from metadata that it adds to the symmetric ciphertext blob.
-     *        However, it is always recommended as a best practice. This practice ensures that you use the KMS key that
-     *        you intend.
+     *        a symmetric encryption KMS key, KMS can get the KMS key from metadata that it adds to the symmetric
+     *        ciphertext blob. However, it is always recommended as a best practice. This practice ensures that you use
+     *        the KMS key that you intend.
      *        </p>
      *        <p>
      *        To specify a KMS key, use its key ID, key ARN, alias name, or alias ARN. When using an alias name, prefix
@@ -560,13 +579,17 @@ public class DecryptRequest extends com.amazonaws.AmazonWebServiceRequest implem
 
     /**
      * <p>
-     * Specifies the KMS key that KMS uses to decrypt the ciphertext. Enter a key ID of the KMS key that was used to
-     * encrypt the ciphertext.
+     * Specifies the KMS key that KMS uses to decrypt the ciphertext.
+     * </p>
+     * <p>
+     * Enter a key ID of the KMS key that was used to encrypt the ciphertext. If you identify a different KMS key, the
+     * <code>Decrypt</code> operation throws an <code>IncorrectKeyException</code>.
      * </p>
      * <p>
      * This parameter is required only when the ciphertext was encrypted under an asymmetric KMS key. If you used a
-     * symmetric KMS key, KMS can get the KMS key from metadata that it adds to the symmetric ciphertext blob. However,
-     * it is always recommended as a best practice. This practice ensures that you use the KMS key that you intend.
+     * symmetric encryption KMS key, KMS can get the KMS key from metadata that it adds to the symmetric ciphertext
+     * blob. However, it is always recommended as a best practice. This practice ensures that you use the KMS key that
+     * you intend.
      * </p>
      * <p>
      * To specify a KMS key, use its key ID, key ARN, alias name, or alias ARN. When using an alias name, prefix it with
@@ -603,13 +626,16 @@ public class DecryptRequest extends com.amazonaws.AmazonWebServiceRequest implem
      * alias ARN, use <a>ListAliases</a>.
      * </p>
      * 
-     * @return Specifies the KMS key that KMS uses to decrypt the ciphertext. Enter a key ID of the KMS key that was
-     *         used to encrypt the ciphertext. </p>
+     * @return Specifies the KMS key that KMS uses to decrypt the ciphertext.</p>
+     *         <p>
+     *         Enter a key ID of the KMS key that was used to encrypt the ciphertext. If you identify a different KMS
+     *         key, the <code>Decrypt</code> operation throws an <code>IncorrectKeyException</code>.
+     *         </p>
      *         <p>
      *         This parameter is required only when the ciphertext was encrypted under an asymmetric KMS key. If you
-     *         used a symmetric KMS key, KMS can get the KMS key from metadata that it adds to the symmetric ciphertext
-     *         blob. However, it is always recommended as a best practice. This practice ensures that you use the KMS
-     *         key that you intend.
+     *         used a symmetric encryption KMS key, KMS can get the KMS key from metadata that it adds to the symmetric
+     *         ciphertext blob. However, it is always recommended as a best practice. This practice ensures that you use
+     *         the KMS key that you intend.
      *         </p>
      *         <p>
      *         To specify a KMS key, use its key ID, key ARN, alias name, or alias ARN. When using an alias name, prefix
@@ -652,13 +678,17 @@ public class DecryptRequest extends com.amazonaws.AmazonWebServiceRequest implem
 
     /**
      * <p>
-     * Specifies the KMS key that KMS uses to decrypt the ciphertext. Enter a key ID of the KMS key that was used to
-     * encrypt the ciphertext.
+     * Specifies the KMS key that KMS uses to decrypt the ciphertext.
+     * </p>
+     * <p>
+     * Enter a key ID of the KMS key that was used to encrypt the ciphertext. If you identify a different KMS key, the
+     * <code>Decrypt</code> operation throws an <code>IncorrectKeyException</code>.
      * </p>
      * <p>
      * This parameter is required only when the ciphertext was encrypted under an asymmetric KMS key. If you used a
-     * symmetric KMS key, KMS can get the KMS key from metadata that it adds to the symmetric ciphertext blob. However,
-     * it is always recommended as a best practice. This practice ensures that you use the KMS key that you intend.
+     * symmetric encryption KMS key, KMS can get the KMS key from metadata that it adds to the symmetric ciphertext
+     * blob. However, it is always recommended as a best practice. This practice ensures that you use the KMS key that
+     * you intend.
      * </p>
      * <p>
      * To specify a KMS key, use its key ID, key ARN, alias name, or alias ARN. When using an alias name, prefix it with
@@ -696,13 +726,16 @@ public class DecryptRequest extends com.amazonaws.AmazonWebServiceRequest implem
      * </p>
      * 
      * @param keyId
-     *        Specifies the KMS key that KMS uses to decrypt the ciphertext. Enter a key ID of the KMS key that was used
-     *        to encrypt the ciphertext. </p>
+     *        Specifies the KMS key that KMS uses to decrypt the ciphertext.</p>
+     *        <p>
+     *        Enter a key ID of the KMS key that was used to encrypt the ciphertext. If you identify a different KMS
+     *        key, the <code>Decrypt</code> operation throws an <code>IncorrectKeyException</code>.
+     *        </p>
      *        <p>
      *        This parameter is required only when the ciphertext was encrypted under an asymmetric KMS key. If you used
-     *        a symmetric KMS key, KMS can get the KMS key from metadata that it adds to the symmetric ciphertext blob.
-     *        However, it is always recommended as a best practice. This practice ensures that you use the KMS key that
-     *        you intend.
+     *        a symmetric encryption KMS key, KMS can get the KMS key from metadata that it adds to the symmetric
+     *        ciphertext blob. However, it is always recommended as a best practice. This practice ensures that you use
+     *        the KMS key that you intend.
      *        </p>
      *        <p>
      *        To specify a KMS key, use its key ID, key ARN, alias name, or alias ARN. When using an alias name, prefix
@@ -752,7 +785,8 @@ public class DecryptRequest extends com.amazonaws.AmazonWebServiceRequest implem
      * </p>
      * <p>
      * This parameter is required only when the ciphertext was encrypted under an asymmetric KMS key. The default value,
-     * <code>SYMMETRIC_DEFAULT</code>, represents the only supported algorithm that is valid for symmetric KMS keys.
+     * <code>SYMMETRIC_DEFAULT</code>, represents the only supported algorithm that is valid for symmetric encryption
+     * KMS keys.
      * </p>
      * 
      * @param encryptionAlgorithm
@@ -762,7 +796,7 @@ public class DecryptRequest extends com.amazonaws.AmazonWebServiceRequest implem
      *        <p>
      *        This parameter is required only when the ciphertext was encrypted under an asymmetric KMS key. The default
      *        value, <code>SYMMETRIC_DEFAULT</code>, represents the only supported algorithm that is valid for symmetric
-     *        KMS keys.
+     *        encryption KMS keys.
      * @see EncryptionAlgorithmSpec
      */
 
@@ -777,7 +811,8 @@ public class DecryptRequest extends com.amazonaws.AmazonWebServiceRequest implem
      * </p>
      * <p>
      * This parameter is required only when the ciphertext was encrypted under an asymmetric KMS key. The default value,
-     * <code>SYMMETRIC_DEFAULT</code>, represents the only supported algorithm that is valid for symmetric KMS keys.
+     * <code>SYMMETRIC_DEFAULT</code>, represents the only supported algorithm that is valid for symmetric encryption
+     * KMS keys.
      * </p>
      * 
      * @return Specifies the encryption algorithm that will be used to decrypt the ciphertext. Specify the same
@@ -786,7 +821,7 @@ public class DecryptRequest extends com.amazonaws.AmazonWebServiceRequest implem
      *         <p>
      *         This parameter is required only when the ciphertext was encrypted under an asymmetric KMS key. The
      *         default value, <code>SYMMETRIC_DEFAULT</code>, represents the only supported algorithm that is valid for
-     *         symmetric KMS keys.
+     *         symmetric encryption KMS keys.
      * @see EncryptionAlgorithmSpec
      */
 
@@ -801,7 +836,8 @@ public class DecryptRequest extends com.amazonaws.AmazonWebServiceRequest implem
      * </p>
      * <p>
      * This parameter is required only when the ciphertext was encrypted under an asymmetric KMS key. The default value,
-     * <code>SYMMETRIC_DEFAULT</code>, represents the only supported algorithm that is valid for symmetric KMS keys.
+     * <code>SYMMETRIC_DEFAULT</code>, represents the only supported algorithm that is valid for symmetric encryption
+     * KMS keys.
      * </p>
      * 
      * @param encryptionAlgorithm
@@ -811,7 +847,7 @@ public class DecryptRequest extends com.amazonaws.AmazonWebServiceRequest implem
      *        <p>
      *        This parameter is required only when the ciphertext was encrypted under an asymmetric KMS key. The default
      *        value, <code>SYMMETRIC_DEFAULT</code>, represents the only supported algorithm that is valid for symmetric
-     *        KMS keys.
+     *        encryption KMS keys.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see EncryptionAlgorithmSpec
      */
@@ -828,7 +864,8 @@ public class DecryptRequest extends com.amazonaws.AmazonWebServiceRequest implem
      * </p>
      * <p>
      * This parameter is required only when the ciphertext was encrypted under an asymmetric KMS key. The default value,
-     * <code>SYMMETRIC_DEFAULT</code>, represents the only supported algorithm that is valid for symmetric KMS keys.
+     * <code>SYMMETRIC_DEFAULT</code>, represents the only supported algorithm that is valid for symmetric encryption
+     * KMS keys.
      * </p>
      * 
      * @param encryptionAlgorithm
@@ -838,7 +875,7 @@ public class DecryptRequest extends com.amazonaws.AmazonWebServiceRequest implem
      *        <p>
      *        This parameter is required only when the ciphertext was encrypted under an asymmetric KMS key. The default
      *        value, <code>SYMMETRIC_DEFAULT</code>, represents the only supported algorithm that is valid for symmetric
-     *        KMS keys.
+     *        encryption KMS keys.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see EncryptionAlgorithmSpec
      */

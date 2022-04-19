@@ -260,7 +260,7 @@ public class RestoreFromClusterSnapshotRequest extends com.amazonaws.AmazonWebSe
     private Integer manualSnapshotRetentionPeriod;
     /**
      * <p>
-     * The Key Management Service (KMS) key ID of the encryption key to encrypt data in the cluster restored from a
+     * The Key Management Service (KMS) key ID of the encryption key that encrypts data in the cluster restored from a
      * shared snapshot. You can also provide the key ID when you restore from an unencrypted snapshot to an encrypted
      * cluster in the same account. Additionally, you can specify a new KMS key ID when you restore from an encrypted
      * snapshot in the same account in order to change it. In that case, the restored cluster is encrypted with the new
@@ -393,7 +393,7 @@ public class RestoreFromClusterSnapshotRequest extends com.amazonaws.AmazonWebSe
     /**
      * <p>
      * Enables support for restoring an unencrypted snapshot to a cluster encrypted with Key Management Service (KMS)
-     * and a CMK.
+     * and a customer managed key.
      * </p>
      */
     private Boolean encrypted;
@@ -1956,7 +1956,7 @@ public class RestoreFromClusterSnapshotRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The Key Management Service (KMS) key ID of the encryption key to encrypt data in the cluster restored from a
+     * The Key Management Service (KMS) key ID of the encryption key that encrypts data in the cluster restored from a
      * shared snapshot. You can also provide the key ID when you restore from an unencrypted snapshot to an encrypted
      * cluster in the same account. Additionally, you can specify a new KMS key ID when you restore from an encrypted
      * snapshot in the same account in order to change it. In that case, the restored cluster is encrypted with the new
@@ -1964,9 +1964,9 @@ public class RestoreFromClusterSnapshotRequest extends com.amazonaws.AmazonWebSe
      * </p>
      * 
      * @param kmsKeyId
-     *        The Key Management Service (KMS) key ID of the encryption key to encrypt data in the cluster restored from
-     *        a shared snapshot. You can also provide the key ID when you restore from an unencrypted snapshot to an
-     *        encrypted cluster in the same account. Additionally, you can specify a new KMS key ID when you restore
+     *        The Key Management Service (KMS) key ID of the encryption key that encrypts data in the cluster restored
+     *        from a shared snapshot. You can also provide the key ID when you restore from an unencrypted snapshot to
+     *        an encrypted cluster in the same account. Additionally, you can specify a new KMS key ID when you restore
      *        from an encrypted snapshot in the same account in order to change it. In that case, the restored cluster
      *        is encrypted with the new KMS key ID.
      */
@@ -1977,14 +1977,14 @@ public class RestoreFromClusterSnapshotRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The Key Management Service (KMS) key ID of the encryption key to encrypt data in the cluster restored from a
+     * The Key Management Service (KMS) key ID of the encryption key that encrypts data in the cluster restored from a
      * shared snapshot. You can also provide the key ID when you restore from an unencrypted snapshot to an encrypted
      * cluster in the same account. Additionally, you can specify a new KMS key ID when you restore from an encrypted
      * snapshot in the same account in order to change it. In that case, the restored cluster is encrypted with the new
      * KMS key ID.
      * </p>
      * 
-     * @return The Key Management Service (KMS) key ID of the encryption key to encrypt data in the cluster restored
+     * @return The Key Management Service (KMS) key ID of the encryption key that encrypts data in the cluster restored
      *         from a shared snapshot. You can also provide the key ID when you restore from an unencrypted snapshot to
      *         an encrypted cluster in the same account. Additionally, you can specify a new KMS key ID when you restore
      *         from an encrypted snapshot in the same account in order to change it. In that case, the restored cluster
@@ -1997,7 +1997,7 @@ public class RestoreFromClusterSnapshotRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The Key Management Service (KMS) key ID of the encryption key to encrypt data in the cluster restored from a
+     * The Key Management Service (KMS) key ID of the encryption key that encrypts data in the cluster restored from a
      * shared snapshot. You can also provide the key ID when you restore from an unencrypted snapshot to an encrypted
      * cluster in the same account. Additionally, you can specify a new KMS key ID when you restore from an encrypted
      * snapshot in the same account in order to change it. In that case, the restored cluster is encrypted with the new
@@ -2005,9 +2005,9 @@ public class RestoreFromClusterSnapshotRequest extends com.amazonaws.AmazonWebSe
      * </p>
      * 
      * @param kmsKeyId
-     *        The Key Management Service (KMS) key ID of the encryption key to encrypt data in the cluster restored from
-     *        a shared snapshot. You can also provide the key ID when you restore from an unencrypted snapshot to an
-     *        encrypted cluster in the same account. Additionally, you can specify a new KMS key ID when you restore
+     *        The Key Management Service (KMS) key ID of the encryption key that encrypts data in the cluster restored
+     *        from a shared snapshot. You can also provide the key ID when you restore from an unencrypted snapshot to
+     *        an encrypted cluster in the same account. Additionally, you can specify a new KMS key ID when you restore
      *        from an encrypted snapshot in the same account in order to change it. In that case, the restored cluster
      *        is encrypted with the new KMS key ID.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -2938,12 +2938,12 @@ public class RestoreFromClusterSnapshotRequest extends com.amazonaws.AmazonWebSe
     /**
      * <p>
      * Enables support for restoring an unencrypted snapshot to a cluster encrypted with Key Management Service (KMS)
-     * and a CMK.
+     * and a customer managed key.
      * </p>
      * 
      * @param encrypted
      *        Enables support for restoring an unencrypted snapshot to a cluster encrypted with Key Management Service
-     *        (KMS) and a CMK.
+     *        (KMS) and a customer managed key.
      */
 
     public void setEncrypted(Boolean encrypted) {
@@ -2953,11 +2953,11 @@ public class RestoreFromClusterSnapshotRequest extends com.amazonaws.AmazonWebSe
     /**
      * <p>
      * Enables support for restoring an unencrypted snapshot to a cluster encrypted with Key Management Service (KMS)
-     * and a CMK.
+     * and a customer managed key.
      * </p>
      * 
      * @return Enables support for restoring an unencrypted snapshot to a cluster encrypted with Key Management Service
-     *         (KMS) and a CMK.
+     *         (KMS) and a customer managed key.
      */
 
     public Boolean getEncrypted() {
@@ -2967,12 +2967,12 @@ public class RestoreFromClusterSnapshotRequest extends com.amazonaws.AmazonWebSe
     /**
      * <p>
      * Enables support for restoring an unencrypted snapshot to a cluster encrypted with Key Management Service (KMS)
-     * and a CMK.
+     * and a customer managed key.
      * </p>
      * 
      * @param encrypted
      *        Enables support for restoring an unencrypted snapshot to a cluster encrypted with Key Management Service
-     *        (KMS) and a CMK.
+     *        (KMS) and a customer managed key.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2984,11 +2984,11 @@ public class RestoreFromClusterSnapshotRequest extends com.amazonaws.AmazonWebSe
     /**
      * <p>
      * Enables support for restoring an unencrypted snapshot to a cluster encrypted with Key Management Service (KMS)
-     * and a CMK.
+     * and a customer managed key.
      * </p>
      * 
      * @return Enables support for restoring an unencrypted snapshot to a cluster encrypted with Key Management Service
-     *         (KMS) and a CMK.
+     *         (KMS) and a customer managed key.
      */
 
     public Boolean isEncrypted() {

@@ -109,6 +109,18 @@ public class Block implements Serializable, Cloneable, StructuredPojo {
      * selection element.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <i>QUERY</i> - A question asked during the call of AnalyzeDocument. Contains an alias and an ID that attachs it
+     * to its answer.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <i>QUERY_RESULT</i> - A response to a question asked during the call of analyze document. Comes with an alias and
+     * ID for ease of locating in a response. Also contains location and confidence score.
+     * </p>
+     * </li>
      * </ul>
      */
     private String blockType;
@@ -232,6 +244,8 @@ public class Block implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private Integer page;
+    /** <p/> */
+    private Query query;
 
     /**
      * <p>
@@ -301,6 +315,18 @@ public class Block implements Serializable, Cloneable, StructuredPojo {
      * selection element.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <i>QUERY</i> - A question asked during the call of AnalyzeDocument. Contains an alias and an ID that attachs it
+     * to its answer.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <i>QUERY_RESULT</i> - A response to a question asked during the call of analyze document. Comes with an alias and
+     * ID for ease of locating in a response. Also contains location and confidence score.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param blockType
@@ -368,6 +394,18 @@ public class Block implements Serializable, Cloneable, StructuredPojo {
      *        <i>SELECTION_ELEMENT</i> - A selection element such as an option button (radio button) or a check box
      *        that's detected on a document page. Use the value of <code>SelectionStatus</code> to determine the status
      *        of the selection element.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <i>QUERY</i> - A question asked during the call of AnalyzeDocument. Contains an alias and an ID that
+     *        attachs it to its answer.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <i>QUERY_RESULT</i> - A response to a question asked during the call of analyze document. Comes with an
+     *        alias and ID for ease of locating in a response. Also contains location and confidence score.
      *        </p>
      *        </li>
      * @see BlockType
@@ -445,6 +483,18 @@ public class Block implements Serializable, Cloneable, StructuredPojo {
      * selection element.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <i>QUERY</i> - A question asked during the call of AnalyzeDocument. Contains an alias and an ID that attachs it
+     * to its answer.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <i>QUERY_RESULT</i> - A response to a question asked during the call of analyze document. Comes with an alias and
+     * ID for ease of locating in a response. Also contains location and confidence score.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @return The type of text item that's recognized. In operations for text detection, the following types are
@@ -512,6 +562,18 @@ public class Block implements Serializable, Cloneable, StructuredPojo {
      *         <i>SELECTION_ELEMENT</i> - A selection element such as an option button (radio button) or a check box
      *         that's detected on a document page. Use the value of <code>SelectionStatus</code> to determine the status
      *         of the selection element.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <i>QUERY</i> - A question asked during the call of AnalyzeDocument. Contains an alias and an ID that
+     *         attachs it to its answer.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <i>QUERY_RESULT</i> - A response to a question asked during the call of analyze document. Comes with an
+     *         alias and ID for ease of locating in a response. Also contains location and confidence score.
      *         </p>
      *         </li>
      * @see BlockType
@@ -589,6 +651,18 @@ public class Block implements Serializable, Cloneable, StructuredPojo {
      * selection element.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <i>QUERY</i> - A question asked during the call of AnalyzeDocument. Contains an alias and an ID that attachs it
+     * to its answer.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <i>QUERY_RESULT</i> - A response to a question asked during the call of analyze document. Comes with an alias and
+     * ID for ease of locating in a response. Also contains location and confidence score.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param blockType
@@ -656,6 +730,18 @@ public class Block implements Serializable, Cloneable, StructuredPojo {
      *        <i>SELECTION_ELEMENT</i> - A selection element such as an option button (radio button) or a check box
      *        that's detected on a document page. Use the value of <code>SelectionStatus</code> to determine the status
      *        of the selection element.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <i>QUERY</i> - A question asked during the call of AnalyzeDocument. Contains an alias and an ID that
+     *        attachs it to its answer.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <i>QUERY_RESULT</i> - A response to a question asked during the call of analyze document. Comes with an
+     *        alias and ID for ease of locating in a response. Also contains location and confidence score.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -735,6 +821,18 @@ public class Block implements Serializable, Cloneable, StructuredPojo {
      * selection element.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <i>QUERY</i> - A question asked during the call of AnalyzeDocument. Contains an alias and an ID that attachs it
+     * to its answer.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <i>QUERY_RESULT</i> - A response to a question asked during the call of analyze document. Comes with an alias and
+     * ID for ease of locating in a response. Also contains location and confidence score.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param blockType
@@ -802,6 +900,18 @@ public class Block implements Serializable, Cloneable, StructuredPojo {
      *        <i>SELECTION_ELEMENT</i> - A selection element such as an option button (radio button) or a check box
      *        that's detected on a document page. Use the value of <code>SelectionStatus</code> to determine the status
      *        of the selection element.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <i>QUERY</i> - A question asked during the call of AnalyzeDocument. Contains an alias and an ID that
+     *        attachs it to its answer.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <i>QUERY_RESULT</i> - A response to a question asked during the call of analyze document. Comes with an
+     *        alias and ID for ease of locating in a response. Also contains location and confidence score.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -1799,6 +1909,38 @@ public class Block implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p/>
+     * 
+     * @param query
+     */
+
+    public void setQuery(Query query) {
+        this.query = query;
+    }
+
+    /**
+     * <p/>
+     * 
+     * @return
+     */
+
+    public Query getQuery() {
+        return this.query;
+    }
+
+    /**
+     * <p/>
+     * 
+     * @param query
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Block withQuery(Query query) {
+        setQuery(query);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1837,7 +1979,9 @@ public class Block implements Serializable, Cloneable, StructuredPojo {
         if (getSelectionStatus() != null)
             sb.append("SelectionStatus: ").append(getSelectionStatus()).append(",");
         if (getPage() != null)
-            sb.append("Page: ").append(getPage());
+            sb.append("Page: ").append(getPage()).append(",");
+        if (getQuery() != null)
+            sb.append("Query: ").append(getQuery());
         sb.append("}");
         return sb.toString();
     }
@@ -1908,6 +2052,10 @@ public class Block implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getPage() != null && other.getPage().equals(this.getPage()) == false)
             return false;
+        if (other.getQuery() == null ^ this.getQuery() == null)
+            return false;
+        if (other.getQuery() != null && other.getQuery().equals(this.getQuery()) == false)
+            return false;
         return true;
     }
 
@@ -1930,6 +2078,7 @@ public class Block implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getEntityTypes() == null) ? 0 : getEntityTypes().hashCode());
         hashCode = prime * hashCode + ((getSelectionStatus() == null) ? 0 : getSelectionStatus().hashCode());
         hashCode = prime * hashCode + ((getPage() == null) ? 0 : getPage().hashCode());
+        hashCode = prime * hashCode + ((getQuery() == null) ? 0 : getQuery().hashCode());
         return hashCode;
     }
 

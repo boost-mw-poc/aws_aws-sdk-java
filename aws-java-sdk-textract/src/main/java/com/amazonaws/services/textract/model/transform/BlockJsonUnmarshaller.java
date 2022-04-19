@@ -108,6 +108,10 @@ public class BlockJsonUnmarshaller implements Unmarshaller<Block, JsonUnmarshall
                     context.nextToken();
                     block.setPage(context.getUnmarshaller(Integer.class).unmarshall(context));
                 }
+                if (context.testExpression("Query", targetDepth)) {
+                    context.nextToken();
+                    block.setQuery(QueryJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

@@ -54,6 +54,12 @@ import com.amazonaws.auth.DefaultAWSCredentialsProviderChain;
  * We recommend that you use the Amazon Web Services SDKs to make programmatic API calls to KMS.
  * </p>
  * <p>
+ * If you need to use FIPS 140-2 validated cryptographic modules when communicating with Amazon Web Services, use the
+ * FIPS endpoint in your preferred Amazon Web Services Region. For more information about the available FIPS endpoints,
+ * see <a href="https://docs.aws.amazon.com/general/latest/gr/kms.html#kms_region">Service endpoints</a> in the Key
+ * Management Service topic of the <i>Amazon Web Services General Reference</i>.
+ * </p>
+ * <p>
  * Clients must support TLS (Transport Layer Security) 1.0. We recommend TLS 1.2. Clients must also support cipher
  * suites with Perfect Forward Secrecy (PFS) such as Ephemeral Diffie-Hellman (DHE) or Elliptic Curve Ephemeral
  * Diffie-Hellman (ECDHE). Most modern systems such as Java 7 and later support these modes.
@@ -1114,6 +1120,39 @@ public class AWSKMSAsyncClient extends AWSKMSClient implements AWSKMSAsync {
     }
 
     @Override
+    public java.util.concurrent.Future<GenerateMacResult> generateMacAsync(GenerateMacRequest request) {
+
+        return generateMacAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GenerateMacResult> generateMacAsync(final GenerateMacRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GenerateMacRequest, GenerateMacResult> asyncHandler) {
+        final GenerateMacRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GenerateMacResult>() {
+            @Override
+            public GenerateMacResult call() throws Exception {
+                GenerateMacResult result = null;
+
+                try {
+                    result = executeGenerateMac(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GenerateRandomResult> generateRandomAsync(GenerateRandomRequest request) {
 
         return generateRandomAsync(request, null);
@@ -2047,6 +2086,39 @@ public class AWSKMSAsyncClient extends AWSKMSClient implements AWSKMSAsync {
 
                 try {
                     result = executeVerify(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<VerifyMacResult> verifyMacAsync(VerifyMacRequest request) {
+
+        return verifyMacAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<VerifyMacResult> verifyMacAsync(final VerifyMacRequest request,
+            final com.amazonaws.handlers.AsyncHandler<VerifyMacRequest, VerifyMacResult> asyncHandler) {
+        final VerifyMacRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<VerifyMacResult>() {
+            @Override
+            public VerifyMacResult call() throws Exception {
+                VerifyMacResult result = null;
+
+                try {
+                    result = executeVerifyMac(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

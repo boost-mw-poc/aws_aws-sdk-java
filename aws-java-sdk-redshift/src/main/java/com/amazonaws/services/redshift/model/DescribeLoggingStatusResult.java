@@ -62,6 +62,18 @@ public class DescribeLoggingStatusResult extends com.amazonaws.AmazonWebServiceR
      * </p>
      */
     private String lastFailureMessage;
+    /**
+     * <p>
+     * The log destination type. An enum with possible values of <code>s3</code> and <code>cloudwatch</code>.
+     * </p>
+     */
+    private String logDestinationType;
+    /**
+     * <p>
+     * The collection of exported log types. Log types include the connection log, user log and user activity log.
+     * </p>
+     */
+    private com.amazonaws.internal.SdkInternalList<String> logExports;
 
     /**
      * <p>
@@ -316,6 +328,142 @@ public class DescribeLoggingStatusResult extends com.amazonaws.AmazonWebServiceR
     }
 
     /**
+     * <p>
+     * The log destination type. An enum with possible values of <code>s3</code> and <code>cloudwatch</code>.
+     * </p>
+     * 
+     * @param logDestinationType
+     *        The log destination type. An enum with possible values of <code>s3</code> and <code>cloudwatch</code>.
+     * @see LogDestinationType
+     */
+
+    public void setLogDestinationType(String logDestinationType) {
+        this.logDestinationType = logDestinationType;
+    }
+
+    /**
+     * <p>
+     * The log destination type. An enum with possible values of <code>s3</code> and <code>cloudwatch</code>.
+     * </p>
+     * 
+     * @return The log destination type. An enum with possible values of <code>s3</code> and <code>cloudwatch</code>.
+     * @see LogDestinationType
+     */
+
+    public String getLogDestinationType() {
+        return this.logDestinationType;
+    }
+
+    /**
+     * <p>
+     * The log destination type. An enum with possible values of <code>s3</code> and <code>cloudwatch</code>.
+     * </p>
+     * 
+     * @param logDestinationType
+     *        The log destination type. An enum with possible values of <code>s3</code> and <code>cloudwatch</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see LogDestinationType
+     */
+
+    public DescribeLoggingStatusResult withLogDestinationType(String logDestinationType) {
+        setLogDestinationType(logDestinationType);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The log destination type. An enum with possible values of <code>s3</code> and <code>cloudwatch</code>.
+     * </p>
+     * 
+     * @param logDestinationType
+     *        The log destination type. An enum with possible values of <code>s3</code> and <code>cloudwatch</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see LogDestinationType
+     */
+
+    public DescribeLoggingStatusResult withLogDestinationType(LogDestinationType logDestinationType) {
+        this.logDestinationType = logDestinationType.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * The collection of exported log types. Log types include the connection log, user log and user activity log.
+     * </p>
+     * 
+     * @return The collection of exported log types. Log types include the connection log, user log and user activity
+     *         log.
+     */
+
+    public java.util.List<String> getLogExports() {
+        if (logExports == null) {
+            logExports = new com.amazonaws.internal.SdkInternalList<String>();
+        }
+        return logExports;
+    }
+
+    /**
+     * <p>
+     * The collection of exported log types. Log types include the connection log, user log and user activity log.
+     * </p>
+     * 
+     * @param logExports
+     *        The collection of exported log types. Log types include the connection log, user log and user activity
+     *        log.
+     */
+
+    public void setLogExports(java.util.Collection<String> logExports) {
+        if (logExports == null) {
+            this.logExports = null;
+            return;
+        }
+
+        this.logExports = new com.amazonaws.internal.SdkInternalList<String>(logExports);
+    }
+
+    /**
+     * <p>
+     * The collection of exported log types. Log types include the connection log, user log and user activity log.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setLogExports(java.util.Collection)} or {@link #withLogExports(java.util.Collection)} if you want to
+     * override the existing values.
+     * </p>
+     * 
+     * @param logExports
+     *        The collection of exported log types. Log types include the connection log, user log and user activity
+     *        log.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeLoggingStatusResult withLogExports(String... logExports) {
+        if (this.logExports == null) {
+            setLogExports(new com.amazonaws.internal.SdkInternalList<String>(logExports.length));
+        }
+        for (String ele : logExports) {
+            this.logExports.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The collection of exported log types. Log types include the connection log, user log and user activity log.
+     * </p>
+     * 
+     * @param logExports
+     *        The collection of exported log types. Log types include the connection log, user log and user activity
+     *        log.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeLoggingStatusResult withLogExports(java.util.Collection<String> logExports) {
+        setLogExports(logExports);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -338,7 +486,11 @@ public class DescribeLoggingStatusResult extends com.amazonaws.AmazonWebServiceR
         if (getLastFailureTime() != null)
             sb.append("LastFailureTime: ").append(getLastFailureTime()).append(",");
         if (getLastFailureMessage() != null)
-            sb.append("LastFailureMessage: ").append(getLastFailureMessage());
+            sb.append("LastFailureMessage: ").append(getLastFailureMessage()).append(",");
+        if (getLogDestinationType() != null)
+            sb.append("LogDestinationType: ").append(getLogDestinationType()).append(",");
+        if (getLogExports() != null)
+            sb.append("LogExports: ").append(getLogExports());
         sb.append("}");
         return sb.toString();
     }
@@ -377,6 +529,14 @@ public class DescribeLoggingStatusResult extends com.amazonaws.AmazonWebServiceR
             return false;
         if (other.getLastFailureMessage() != null && other.getLastFailureMessage().equals(this.getLastFailureMessage()) == false)
             return false;
+        if (other.getLogDestinationType() == null ^ this.getLogDestinationType() == null)
+            return false;
+        if (other.getLogDestinationType() != null && other.getLogDestinationType().equals(this.getLogDestinationType()) == false)
+            return false;
+        if (other.getLogExports() == null ^ this.getLogExports() == null)
+            return false;
+        if (other.getLogExports() != null && other.getLogExports().equals(this.getLogExports()) == false)
+            return false;
         return true;
     }
 
@@ -391,6 +551,8 @@ public class DescribeLoggingStatusResult extends com.amazonaws.AmazonWebServiceR
         hashCode = prime * hashCode + ((getLastSuccessfulDeliveryTime() == null) ? 0 : getLastSuccessfulDeliveryTime().hashCode());
         hashCode = prime * hashCode + ((getLastFailureTime() == null) ? 0 : getLastFailureTime().hashCode());
         hashCode = prime * hashCode + ((getLastFailureMessage() == null) ? 0 : getLastFailureMessage().hashCode());
+        hashCode = prime * hashCode + ((getLogDestinationType() == null) ? 0 : getLogDestinationType().hashCode());
+        hashCode = prime * hashCode + ((getLogExports() == null) ? 0 : getLogExports().hashCode());
         return hashCode;
     }
 

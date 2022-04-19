@@ -39,7 +39,8 @@ public class GenerateDataKeyPairResult extends com.amazonaws.AmazonWebServiceRes
     private java.nio.ByteBuffer privateKeyPlaintext;
     /**
      * <p>
-     * The public key (in plaintext).
+     * The public key (in plaintext). When you use the HTTP API or the Amazon Web Services CLI, the value is
+     * Base64-encoded. Otherwise, it is not Base64-encoded.
      * </p>
      */
     private java.nio.ByteBuffer publicKey;
@@ -206,7 +207,8 @@ public class GenerateDataKeyPairResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The public key (in plaintext).
+     * The public key (in plaintext). When you use the HTTP API or the Amazon Web Services CLI, the value is
+     * Base64-encoded. Otherwise, it is not Base64-encoded.
      * </p>
      * <p>
      * The AWS SDK for Java performs a Base64 encoding on this field before sending this request to the AWS service.
@@ -220,7 +222,8 @@ public class GenerateDataKeyPairResult extends com.amazonaws.AmazonWebServiceRes
      * </p>
      * 
      * @param publicKey
-     *        The public key (in plaintext).
+     *        The public key (in plaintext). When you use the HTTP API or the Amazon Web Services CLI, the value is
+     *        Base64-encoded. Otherwise, it is not Base64-encoded.
      */
 
     public void setPublicKey(java.nio.ByteBuffer publicKey) {
@@ -229,7 +232,8 @@ public class GenerateDataKeyPairResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The public key (in plaintext).
+     * The public key (in plaintext). When you use the HTTP API or the Amazon Web Services CLI, the value is
+     * Base64-encoded. Otherwise, it is not Base64-encoded.
      * </p>
      * <p>
      * {@code ByteBuffer}s are stateful. Calling their {@code get} methods changes their {@code position}. We recommend
@@ -239,7 +243,8 @@ public class GenerateDataKeyPairResult extends com.amazonaws.AmazonWebServiceRes
      * {@code position}.
      * </p>
      * 
-     * @return The public key (in plaintext).
+     * @return The public key (in plaintext). When you use the HTTP API or the Amazon Web Services CLI, the value is
+     *         Base64-encoded. Otherwise, it is not Base64-encoded.
      */
 
     public java.nio.ByteBuffer getPublicKey() {
@@ -248,7 +253,8 @@ public class GenerateDataKeyPairResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The public key (in plaintext).
+     * The public key (in plaintext). When you use the HTTP API or the Amazon Web Services CLI, the value is
+     * Base64-encoded. Otherwise, it is not Base64-encoded.
      * </p>
      * <p>
      * The AWS SDK for Java performs a Base64 encoding on this field before sending this request to the AWS service.
@@ -262,7 +268,8 @@ public class GenerateDataKeyPairResult extends com.amazonaws.AmazonWebServiceRes
      * </p>
      * 
      * @param publicKey
-     *        The public key (in plaintext).
+     *        The public key (in plaintext). When you use the HTTP API or the Amazon Web Services CLI, the value is
+     *        Base64-encoded. Otherwise, it is not Base64-encoded.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

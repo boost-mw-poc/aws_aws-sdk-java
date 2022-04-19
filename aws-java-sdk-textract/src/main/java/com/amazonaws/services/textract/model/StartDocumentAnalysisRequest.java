@@ -80,6 +80,8 @@ public class StartDocumentAnalysisRequest extends com.amazonaws.AmazonWebService
      */
     private String kMSKeyId;
 
+    private QueriesConfig queriesConfig;
+
     /**
      * <p>
      * The location of the document to be processed.
@@ -511,6 +513,32 @@ public class StartDocumentAnalysisRequest extends com.amazonaws.AmazonWebService
     }
 
     /**
+     * @param queriesConfig
+     */
+
+    public void setQueriesConfig(QueriesConfig queriesConfig) {
+        this.queriesConfig = queriesConfig;
+    }
+
+    /**
+     * @return
+     */
+
+    public QueriesConfig getQueriesConfig() {
+        return this.queriesConfig;
+    }
+
+    /**
+     * @param queriesConfig
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public StartDocumentAnalysisRequest withQueriesConfig(QueriesConfig queriesConfig) {
+        setQueriesConfig(queriesConfig);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -535,7 +563,9 @@ public class StartDocumentAnalysisRequest extends com.amazonaws.AmazonWebService
         if (getOutputConfig() != null)
             sb.append("OutputConfig: ").append(getOutputConfig()).append(",");
         if (getKMSKeyId() != null)
-            sb.append("KMSKeyId: ").append(getKMSKeyId());
+            sb.append("KMSKeyId: ").append(getKMSKeyId()).append(",");
+        if (getQueriesConfig() != null)
+            sb.append("QueriesConfig: ").append(getQueriesConfig());
         sb.append("}");
         return sb.toString();
     }
@@ -578,6 +608,10 @@ public class StartDocumentAnalysisRequest extends com.amazonaws.AmazonWebService
             return false;
         if (other.getKMSKeyId() != null && other.getKMSKeyId().equals(this.getKMSKeyId()) == false)
             return false;
+        if (other.getQueriesConfig() == null ^ this.getQueriesConfig() == null)
+            return false;
+        if (other.getQueriesConfig() != null && other.getQueriesConfig().equals(this.getQueriesConfig()) == false)
+            return false;
         return true;
     }
 
@@ -593,6 +627,7 @@ public class StartDocumentAnalysisRequest extends com.amazonaws.AmazonWebService
         hashCode = prime * hashCode + ((getNotificationChannel() == null) ? 0 : getNotificationChannel().hashCode());
         hashCode = prime * hashCode + ((getOutputConfig() == null) ? 0 : getOutputConfig().hashCode());
         hashCode = prime * hashCode + ((getKMSKeyId() == null) ? 0 : getKMSKeyId().hashCode());
+        hashCode = prime * hashCode + ((getQueriesConfig() == null) ? 0 : getQueriesConfig().hashCode());
         return hashCode;
     }
 

@@ -27,8 +27,8 @@ public class ReplicateKeyResult extends com.amazonaws.AmazonWebServiceResult<com
      * <p>
      * Displays details about the new replica key, including its Amazon Resource Name (<a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-ARN">key ARN</a>) and <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">key state</a>. It also includes the
-     * ARN and Amazon Web Services Region of its primary key and other replica keys.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a>. It also
+     * includes the ARN and Amazon Web Services Region of its primary key and other replica keys.
      * </p>
      */
     private KeyMetadata replicaKeyMetadata;
@@ -49,15 +49,15 @@ public class ReplicateKeyResult extends com.amazonaws.AmazonWebServiceResult<com
      * <p>
      * Displays details about the new replica key, including its Amazon Resource Name (<a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-ARN">key ARN</a>) and <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">key state</a>. It also includes the
-     * ARN and Amazon Web Services Region of its primary key and other replica keys.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a>. It also
+     * includes the ARN and Amazon Web Services Region of its primary key and other replica keys.
      * </p>
      * 
      * @param replicaKeyMetadata
      *        Displays details about the new replica key, including its Amazon Resource Name (<a
      *        href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-ARN">key ARN</a>) and
-     *        <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">key state</a>. It also
-     *        includes the ARN and Amazon Web Services Region of its primary key and other replica keys.
+     *        <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a>.
+     *        It also includes the ARN and Amazon Web Services Region of its primary key and other replica keys.
      */
 
     public void setReplicaKeyMetadata(KeyMetadata replicaKeyMetadata) {
@@ -68,14 +68,15 @@ public class ReplicateKeyResult extends com.amazonaws.AmazonWebServiceResult<com
      * <p>
      * Displays details about the new replica key, including its Amazon Resource Name (<a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-ARN">key ARN</a>) and <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">key state</a>. It also includes the
-     * ARN and Amazon Web Services Region of its primary key and other replica keys.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a>. It also
+     * includes the ARN and Amazon Web Services Region of its primary key and other replica keys.
      * </p>
      * 
      * @return Displays details about the new replica key, including its Amazon Resource Name (<a
      *         href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-ARN">key ARN</a>)
-     *         and <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">key state</a>. It also
-     *         includes the ARN and Amazon Web Services Region of its primary key and other replica keys.
+     *         and <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS
+     *         keys</a>. It also includes the ARN and Amazon Web Services Region of its primary key and other replica
+     *         keys.
      */
 
     public KeyMetadata getReplicaKeyMetadata() {
@@ -86,15 +87,15 @@ public class ReplicateKeyResult extends com.amazonaws.AmazonWebServiceResult<com
      * <p>
      * Displays details about the new replica key, including its Amazon Resource Name (<a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-ARN">key ARN</a>) and <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">key state</a>. It also includes the
-     * ARN and Amazon Web Services Region of its primary key and other replica keys.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a>. It also
+     * includes the ARN and Amazon Web Services Region of its primary key and other replica keys.
      * </p>
      * 
      * @param replicaKeyMetadata
      *        Displays details about the new replica key, including its Amazon Resource Name (<a
      *        href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-ARN">key ARN</a>) and
-     *        <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">key state</a>. It also
-     *        includes the ARN and Amazon Web Services Region of its primary key and other replica keys.
+     *        <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a>.
+     *        It also includes the ARN and Amazon Web Services Region of its primary key and other replica keys.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

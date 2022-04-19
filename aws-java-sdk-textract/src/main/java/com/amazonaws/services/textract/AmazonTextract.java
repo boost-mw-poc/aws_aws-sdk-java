@@ -71,6 +71,12 @@ public interface AmazonTextract {
      * relationship with the value of <code>FeatureTypes</code>).
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * Queries.A QUERIES_RESULT Block object contains the answer to the query, the alias associated and an ID that
+     * connect it to the query asked. This Block also contains a location and attached confidence score.
+     * </p>
+     * </li>
      * </ul>
      * <p>
      * Selection elements such as check boxes and option buttons (radio buttons) can be detected in form data and in
@@ -105,8 +111,8 @@ public interface AmazonTextract {
      *         Amazon S3</a> For troubleshooting information, see <a
      *         href="https://docs.aws.amazon.com/AmazonS3/latest/dev/troubleshooting.html">Troubleshooting Amazon S3</a>
      * @throws UnsupportedDocumentException
-     *         The format of the input document isn't supported. Documents for synchronous operations can be in PNG or
-     *         JPEG format only. Documents for asynchronous operations can be in PDF format.
+     *         The format of the input document isn't supported. Documents for operations can be in PNG, JPEG, PDF, or
+     *         TIFF format.
      * @throws DocumentTooLargeException
      *         The document can't be processed because it's too large. The maximum document size for synchronous
      *         operations 10 MB. The maximum document size for asynchronous operations is 500 MB for PDF files.
@@ -167,8 +173,8 @@ public interface AmazonTextract {
      *         Amazon S3</a> For troubleshooting information, see <a
      *         href="https://docs.aws.amazon.com/AmazonS3/latest/dev/troubleshooting.html">Troubleshooting Amazon S3</a>
      * @throws UnsupportedDocumentException
-     *         The format of the input document isn't supported. Documents for synchronous operations can be in PNG or
-     *         JPEG format only. Documents for asynchronous operations can be in PDF format.
+     *         The format of the input document isn't supported. Documents for operations can be in PNG, JPEG, PDF, or
+     *         TIFF format.
      * @throws DocumentTooLargeException
      *         The document can't be processed because it's too large. The maximum document size for synchronous
      *         operations 10 MB. The maximum document size for asynchronous operations is 500 MB for PDF files.
@@ -194,7 +200,8 @@ public interface AmazonTextract {
     /**
      * <p>
      * Analyzes identity documents for relevant information. This information is extracted and returned as
-     * <code>IdentityDocumentFields</code>, which records both the normalized field and value of the extracted text.
+     * <code>IdentityDocumentFields</code>, which records both the normalized field and value of the extracted
+     * text.Unlike other Amazon Textract operations, <code>AnalyzeID</code> doesn't return any Geometry data.
      * </p>
      * 
      * @param analyzeIDRequest
@@ -210,8 +217,8 @@ public interface AmazonTextract {
      *         Amazon S3</a> For troubleshooting information, see <a
      *         href="https://docs.aws.amazon.com/AmazonS3/latest/dev/troubleshooting.html">Troubleshooting Amazon S3</a>
      * @throws UnsupportedDocumentException
-     *         The format of the input document isn't supported. Documents for synchronous operations can be in PNG or
-     *         JPEG format only. Documents for asynchronous operations can be in PDF format.
+     *         The format of the input document isn't supported. Documents for operations can be in PNG, JPEG, PDF, or
+     *         TIFF format.
      * @throws DocumentTooLargeException
      *         The document can't be processed because it's too large. The maximum document size for synchronous
      *         operations 10 MB. The maximum document size for asynchronous operations is 500 MB for PDF files.
@@ -237,8 +244,8 @@ public interface AmazonTextract {
     /**
      * <p>
      * Detects text in the input document. Amazon Textract can detect lines of text and the words that make up a line of
-     * text. The input document must be an image in JPEG or PNG format. <code>DetectDocumentText</code> returns the
-     * detected text in an array of <a>Block</a> objects.
+     * text. The input document must be an image in JPEG, PNG, PDF, or TIFF format. <code>DetectDocumentText</code>
+     * returns the detected text in an array of <a>Block</a> objects.
      * </p>
      * <p>
      * Each document page has as an associated <code>Block</code> of type PAGE. Each PAGE <code>Block</code> object is
@@ -268,8 +275,8 @@ public interface AmazonTextract {
      *         Amazon S3</a> For troubleshooting information, see <a
      *         href="https://docs.aws.amazon.com/AmazonS3/latest/dev/troubleshooting.html">Troubleshooting Amazon S3</a>
      * @throws UnsupportedDocumentException
-     *         The format of the input document isn't supported. Documents for synchronous operations can be in PNG or
-     *         JPEG format only. Documents for asynchronous operations can be in PDF format.
+     *         The format of the input document isn't supported. Documents for operations can be in PNG, JPEG, PDF, or
+     *         TIFF format.
      * @throws DocumentTooLargeException
      *         The document can't be processed because it's too large. The maximum document size for synchronous
      *         operations 10 MB. The maximum document size for asynchronous operations is 500 MB for PDF files.
@@ -329,6 +336,12 @@ public interface AmazonTextract {
      * Lines and words of text. A LINE <code>Block</code> object contains one or more WORD <code>Block</code> objects.
      * All lines and words that are detected in the document are returned (including text that doesn't have a
      * relationship with the value of the <code>StartDocumentAnalysis</code> <code>FeatureTypes</code> input parameter).
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Queries. A QUERIES_RESULT Block object contains the answer to the query, the alias associated and an ID that
+     * connect it to the query asked. This Block also contains a location and attached confidence score
      * </p>
      * </li>
      * </ul>
@@ -548,8 +561,8 @@ public interface AmazonTextract {
      *         Indicates you do not have decrypt permissions with the KMS key entered, or the KMS key was entered
      *         incorrectly.
      * @throws UnsupportedDocumentException
-     *         The format of the input document isn't supported. Documents for synchronous operations can be in PNG or
-     *         JPEG format only. Documents for asynchronous operations can be in PDF format.
+     *         The format of the input document isn't supported. Documents for operations can be in PNG, JPEG, PDF, or
+     *         TIFF format.
      * @throws DocumentTooLargeException
      *         The document can't be processed because it's too large. The maximum document size for synchronous
      *         operations 10 MB. The maximum document size for asynchronous operations is 500 MB for PDF files.
@@ -619,8 +632,8 @@ public interface AmazonTextract {
      *         Indicates you do not have decrypt permissions with the KMS key entered, or the KMS key was entered
      *         incorrectly.
      * @throws UnsupportedDocumentException
-     *         The format of the input document isn't supported. Documents for synchronous operations can be in PNG or
-     *         JPEG format only. Documents for asynchronous operations can be in PDF format.
+     *         The format of the input document isn't supported. Documents for operations can be in PNG, JPEG, PDF, or
+     *         TIFF format.
      * @throws DocumentTooLargeException
      *         The document can't be processed because it's too large. The maximum document size for synchronous
      *         operations 10 MB. The maximum document size for asynchronous operations is 500 MB for PDF files.
@@ -691,8 +704,8 @@ public interface AmazonTextract {
      *         Indicates you do not have decrypt permissions with the KMS key entered, or the KMS key was entered
      *         incorrectly.
      * @throws UnsupportedDocumentException
-     *         The format of the input document isn't supported. Documents for synchronous operations can be in PNG or
-     *         JPEG format only. Documents for asynchronous operations can be in PDF format.
+     *         The format of the input document isn't supported. Documents for operations can be in PNG, JPEG, PDF, or
+     *         TIFF format.
      * @throws DocumentTooLargeException
      *         The document can't be processed because it's too large. The maximum document size for synchronous
      *         operations 10 MB. The maximum document size for asynchronous operations is 500 MB for PDF files.
