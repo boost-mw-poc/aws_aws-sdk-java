@@ -25,7 +25,7 @@ public class UpdatePhoneNumberResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * The identifier of the phone number.
+     * A unique identifier for the phone number.
      * </p>
      */
     private String phoneNumberId;
@@ -38,11 +38,11 @@ public class UpdatePhoneNumberResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * The identifier of the phone number.
+     * A unique identifier for the phone number.
      * </p>
      * 
      * @param phoneNumberId
-     *        The identifier of the phone number.
+     *        A unique identifier for the phone number.
      */
 
     public void setPhoneNumberId(String phoneNumberId) {
@@ -51,10 +51,10 @@ public class UpdatePhoneNumberResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * The identifier of the phone number.
+     * A unique identifier for the phone number.
      * </p>
      * 
-     * @return The identifier of the phone number.
+     * @return A unique identifier for the phone number.
      */
 
     public String getPhoneNumberId() {
@@ -63,11 +63,11 @@ public class UpdatePhoneNumberResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * The identifier of the phone number.
+     * A unique identifier for the phone number.
      * </p>
      * 
      * @param phoneNumberId
-     *        The identifier of the phone number.
+     *        A unique identifier for the phone number.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

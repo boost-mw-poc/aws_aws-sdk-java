@@ -37,6 +37,21 @@ public class UpdateOrganizationConfigurationRequest extends com.amazonaws.Amazon
      * </p>
      */
     private Boolean autoEnable;
+    /**
+     * <p>
+     * Whether to automatically enable Security Hub <a
+     * href="https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-standards-enable-disable.html">default
+     * standards</a> for new member accounts in the organization.
+     * </p>
+     * <p>
+     * By default, this parameter is equal to <code>DEFAULT</code>, and new member accounts are automatically enabled
+     * with default Security Hub standards.
+     * </p>
+     * <p>
+     * To opt out of enabling default standards for new member accounts, set this parameter equal to <code>NONE</code>.
+     * </p>
+     */
+    private String autoEnableStandards;
 
     /**
      * <p>
@@ -135,6 +150,137 @@ public class UpdateOrganizationConfigurationRequest extends com.amazonaws.Amazon
     }
 
     /**
+     * <p>
+     * Whether to automatically enable Security Hub <a
+     * href="https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-standards-enable-disable.html">default
+     * standards</a> for new member accounts in the organization.
+     * </p>
+     * <p>
+     * By default, this parameter is equal to <code>DEFAULT</code>, and new member accounts are automatically enabled
+     * with default Security Hub standards.
+     * </p>
+     * <p>
+     * To opt out of enabling default standards for new member accounts, set this parameter equal to <code>NONE</code>.
+     * </p>
+     * 
+     * @param autoEnableStandards
+     *        Whether to automatically enable Security Hub <a href=
+     *        "https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-standards-enable-disable.html"
+     *        >default standards</a> for new member accounts in the organization.</p>
+     *        <p>
+     *        By default, this parameter is equal to <code>DEFAULT</code>, and new member accounts are automatically
+     *        enabled with default Security Hub standards.
+     *        </p>
+     *        <p>
+     *        To opt out of enabling default standards for new member accounts, set this parameter equal to
+     *        <code>NONE</code>.
+     * @see AutoEnableStandards
+     */
+
+    public void setAutoEnableStandards(String autoEnableStandards) {
+        this.autoEnableStandards = autoEnableStandards;
+    }
+
+    /**
+     * <p>
+     * Whether to automatically enable Security Hub <a
+     * href="https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-standards-enable-disable.html">default
+     * standards</a> for new member accounts in the organization.
+     * </p>
+     * <p>
+     * By default, this parameter is equal to <code>DEFAULT</code>, and new member accounts are automatically enabled
+     * with default Security Hub standards.
+     * </p>
+     * <p>
+     * To opt out of enabling default standards for new member accounts, set this parameter equal to <code>NONE</code>.
+     * </p>
+     * 
+     * @return Whether to automatically enable Security Hub <a
+     *         href="https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-standards-enable-disable.html"
+     *         >default standards</a> for new member accounts in the organization.</p>
+     *         <p>
+     *         By default, this parameter is equal to <code>DEFAULT</code>, and new member accounts are automatically
+     *         enabled with default Security Hub standards.
+     *         </p>
+     *         <p>
+     *         To opt out of enabling default standards for new member accounts, set this parameter equal to
+     *         <code>NONE</code>.
+     * @see AutoEnableStandards
+     */
+
+    public String getAutoEnableStandards() {
+        return this.autoEnableStandards;
+    }
+
+    /**
+     * <p>
+     * Whether to automatically enable Security Hub <a
+     * href="https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-standards-enable-disable.html">default
+     * standards</a> for new member accounts in the organization.
+     * </p>
+     * <p>
+     * By default, this parameter is equal to <code>DEFAULT</code>, and new member accounts are automatically enabled
+     * with default Security Hub standards.
+     * </p>
+     * <p>
+     * To opt out of enabling default standards for new member accounts, set this parameter equal to <code>NONE</code>.
+     * </p>
+     * 
+     * @param autoEnableStandards
+     *        Whether to automatically enable Security Hub <a href=
+     *        "https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-standards-enable-disable.html"
+     *        >default standards</a> for new member accounts in the organization.</p>
+     *        <p>
+     *        By default, this parameter is equal to <code>DEFAULT</code>, and new member accounts are automatically
+     *        enabled with default Security Hub standards.
+     *        </p>
+     *        <p>
+     *        To opt out of enabling default standards for new member accounts, set this parameter equal to
+     *        <code>NONE</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see AutoEnableStandards
+     */
+
+    public UpdateOrganizationConfigurationRequest withAutoEnableStandards(String autoEnableStandards) {
+        setAutoEnableStandards(autoEnableStandards);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Whether to automatically enable Security Hub <a
+     * href="https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-standards-enable-disable.html">default
+     * standards</a> for new member accounts in the organization.
+     * </p>
+     * <p>
+     * By default, this parameter is equal to <code>DEFAULT</code>, and new member accounts are automatically enabled
+     * with default Security Hub standards.
+     * </p>
+     * <p>
+     * To opt out of enabling default standards for new member accounts, set this parameter equal to <code>NONE</code>.
+     * </p>
+     * 
+     * @param autoEnableStandards
+     *        Whether to automatically enable Security Hub <a href=
+     *        "https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-standards-enable-disable.html"
+     *        >default standards</a> for new member accounts in the organization.</p>
+     *        <p>
+     *        By default, this parameter is equal to <code>DEFAULT</code>, and new member accounts are automatically
+     *        enabled with default Security Hub standards.
+     *        </p>
+     *        <p>
+     *        To opt out of enabling default standards for new member accounts, set this parameter equal to
+     *        <code>NONE</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see AutoEnableStandards
+     */
+
+    public UpdateOrganizationConfigurationRequest withAutoEnableStandards(AutoEnableStandards autoEnableStandards) {
+        this.autoEnableStandards = autoEnableStandards.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -147,7 +293,9 @@ public class UpdateOrganizationConfigurationRequest extends com.amazonaws.Amazon
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getAutoEnable() != null)
-            sb.append("AutoEnable: ").append(getAutoEnable());
+            sb.append("AutoEnable: ").append(getAutoEnable()).append(",");
+        if (getAutoEnableStandards() != null)
+            sb.append("AutoEnableStandards: ").append(getAutoEnableStandards());
         sb.append("}");
         return sb.toString();
     }
@@ -166,6 +314,10 @@ public class UpdateOrganizationConfigurationRequest extends com.amazonaws.Amazon
             return false;
         if (other.getAutoEnable() != null && other.getAutoEnable().equals(this.getAutoEnable()) == false)
             return false;
+        if (other.getAutoEnableStandards() == null ^ this.getAutoEnableStandards() == null)
+            return false;
+        if (other.getAutoEnableStandards() != null && other.getAutoEnableStandards().equals(this.getAutoEnableStandards()) == false)
+            return false;
         return true;
     }
 
@@ -175,6 +327,7 @@ public class UpdateOrganizationConfigurationRequest extends com.amazonaws.Amazon
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getAutoEnable() == null) ? 0 : getAutoEnable().hashCode());
+        hashCode = prime * hashCode + ((getAutoEnableStandards() == null) ? 0 : getAutoEnableStandards().hashCode());
         return hashCode;
     }
 

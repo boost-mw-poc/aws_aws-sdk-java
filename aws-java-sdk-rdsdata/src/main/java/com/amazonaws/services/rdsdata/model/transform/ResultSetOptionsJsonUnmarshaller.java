@@ -52,6 +52,10 @@ public class ResultSetOptionsJsonUnmarshaller implements Unmarshaller<ResultSetO
                     context.nextToken();
                     resultSetOptions.setDecimalReturnType(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("longReturnType", targetDepth)) {
+                    context.nextToken();
+                    resultSetOptions.setLongReturnType(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

@@ -22,9 +22,9 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * <b>This data type is used with the GameLift FleetIQ and game server groups.</b>
  * </p>
  * <p>
- * An Amazon EC2 launch template that contains configuration settings and game server code to be deployed to all
- * instances in a game server group. The launch template is specified when creating a new game server group with
- * <a>CreateGameServerGroup</a>.
+ * An Amazon Elastic Compute Cloud launch template that contains configuration settings and game server code to be
+ * deployed to all instances in a game server group. The launch template is specified when creating a new game server
+ * group with <a>CreateGameServerGroup</a>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/LaunchTemplateSpecification"
@@ -48,8 +48,8 @@ public class LaunchTemplateSpecification implements Serializable, Cloneable, Str
     /**
      * <p>
      * The version of the Amazon EC2 launch template to use. If no version is specified, the default version will be
-     * used. With Amazon Elastic Compute Cloud, you can specify a default version for a launch template. If none is set,
-     * the default is the first version created.
+     * used. With Amazon EC2, you can specify a default version for a launch template. If none is set, the default is
+     * the first version created.
      * </p>
      */
     private String version;
@@ -137,14 +137,14 @@ public class LaunchTemplateSpecification implements Serializable, Cloneable, Str
     /**
      * <p>
      * The version of the Amazon EC2 launch template to use. If no version is specified, the default version will be
-     * used. With Amazon Elastic Compute Cloud, you can specify a default version for a launch template. If none is set,
-     * the default is the first version created.
+     * used. With Amazon EC2, you can specify a default version for a launch template. If none is set, the default is
+     * the first version created.
      * </p>
      * 
      * @param version
      *        The version of the Amazon EC2 launch template to use. If no version is specified, the default version will
-     *        be used. With Amazon Elastic Compute Cloud, you can specify a default version for a launch template. If
-     *        none is set, the default is the first version created.
+     *        be used. With Amazon EC2, you can specify a default version for a launch template. If none is set, the
+     *        default is the first version created.
      */
 
     public void setVersion(String version) {
@@ -154,13 +154,13 @@ public class LaunchTemplateSpecification implements Serializable, Cloneable, Str
     /**
      * <p>
      * The version of the Amazon EC2 launch template to use. If no version is specified, the default version will be
-     * used. With Amazon Elastic Compute Cloud, you can specify a default version for a launch template. If none is set,
-     * the default is the first version created.
+     * used. With Amazon EC2, you can specify a default version for a launch template. If none is set, the default is
+     * the first version created.
      * </p>
      * 
      * @return The version of the Amazon EC2 launch template to use. If no version is specified, the default version
-     *         will be used. With Amazon Elastic Compute Cloud, you can specify a default version for a launch template.
-     *         If none is set, the default is the first version created.
+     *         will be used. With Amazon EC2, you can specify a default version for a launch template. If none is set,
+     *         the default is the first version created.
      */
 
     public String getVersion() {
@@ -170,14 +170,14 @@ public class LaunchTemplateSpecification implements Serializable, Cloneable, Str
     /**
      * <p>
      * The version of the Amazon EC2 launch template to use. If no version is specified, the default version will be
-     * used. With Amazon Elastic Compute Cloud, you can specify a default version for a launch template. If none is set,
-     * the default is the first version created.
+     * used. With Amazon EC2, you can specify a default version for a launch template. If none is set, the default is
+     * the first version created.
      * </p>
      * 
      * @param version
      *        The version of the Amazon EC2 launch template to use. If no version is specified, the default version will
-     *        be used. With Amazon Elastic Compute Cloud, you can specify a default version for a launch template. If
-     *        none is set, the default is the first version created.
+     *        be used. With Amazon EC2, you can specify a default version for a launch template. If none is set, the
+     *        default is the first version created.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

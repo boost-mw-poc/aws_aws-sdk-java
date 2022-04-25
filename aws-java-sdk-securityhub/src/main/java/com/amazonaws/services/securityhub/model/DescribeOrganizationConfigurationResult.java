@@ -41,6 +41,22 @@ public class DescribeOrganizationConfigurationResult extends com.amazonaws.Amazo
      * </p>
      */
     private Boolean memberAccountLimitReached;
+    /**
+     * <p>
+     * Whether to automatically enable Security Hub <a
+     * href="https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-standards-enable-disable.html">default
+     * standards</a> for new member accounts in the organization.
+     * </p>
+     * <p>
+     * The default value of this parameter is equal to <code>DEFAULT</code>.
+     * </p>
+     * <p>
+     * If equal to <code>DEFAULT</code>, then Security Hub default standards are automatically enabled for new member
+     * accounts. If equal to <code>NONE</code>, then default standards are not automatically enabled for new member
+     * accounts.
+     * </p>
+     */
+    private String autoEnableStandards;
 
     /**
      * <p>
@@ -183,6 +199,141 @@ public class DescribeOrganizationConfigurationResult extends com.amazonaws.Amazo
     }
 
     /**
+     * <p>
+     * Whether to automatically enable Security Hub <a
+     * href="https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-standards-enable-disable.html">default
+     * standards</a> for new member accounts in the organization.
+     * </p>
+     * <p>
+     * The default value of this parameter is equal to <code>DEFAULT</code>.
+     * </p>
+     * <p>
+     * If equal to <code>DEFAULT</code>, then Security Hub default standards are automatically enabled for new member
+     * accounts. If equal to <code>NONE</code>, then default standards are not automatically enabled for new member
+     * accounts.
+     * </p>
+     * 
+     * @param autoEnableStandards
+     *        Whether to automatically enable Security Hub <a href=
+     *        "https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-standards-enable-disable.html"
+     *        >default standards</a> for new member accounts in the organization.</p>
+     *        <p>
+     *        The default value of this parameter is equal to <code>DEFAULT</code>.
+     *        </p>
+     *        <p>
+     *        If equal to <code>DEFAULT</code>, then Security Hub default standards are automatically enabled for new
+     *        member accounts. If equal to <code>NONE</code>, then default standards are not automatically enabled for
+     *        new member accounts.
+     * @see AutoEnableStandards
+     */
+
+    public void setAutoEnableStandards(String autoEnableStandards) {
+        this.autoEnableStandards = autoEnableStandards;
+    }
+
+    /**
+     * <p>
+     * Whether to automatically enable Security Hub <a
+     * href="https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-standards-enable-disable.html">default
+     * standards</a> for new member accounts in the organization.
+     * </p>
+     * <p>
+     * The default value of this parameter is equal to <code>DEFAULT</code>.
+     * </p>
+     * <p>
+     * If equal to <code>DEFAULT</code>, then Security Hub default standards are automatically enabled for new member
+     * accounts. If equal to <code>NONE</code>, then default standards are not automatically enabled for new member
+     * accounts.
+     * </p>
+     * 
+     * @return Whether to automatically enable Security Hub <a
+     *         href="https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-standards-enable-disable.html"
+     *         >default standards</a> for new member accounts in the organization.</p>
+     *         <p>
+     *         The default value of this parameter is equal to <code>DEFAULT</code>.
+     *         </p>
+     *         <p>
+     *         If equal to <code>DEFAULT</code>, then Security Hub default standards are automatically enabled for new
+     *         member accounts. If equal to <code>NONE</code>, then default standards are not automatically enabled for
+     *         new member accounts.
+     * @see AutoEnableStandards
+     */
+
+    public String getAutoEnableStandards() {
+        return this.autoEnableStandards;
+    }
+
+    /**
+     * <p>
+     * Whether to automatically enable Security Hub <a
+     * href="https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-standards-enable-disable.html">default
+     * standards</a> for new member accounts in the organization.
+     * </p>
+     * <p>
+     * The default value of this parameter is equal to <code>DEFAULT</code>.
+     * </p>
+     * <p>
+     * If equal to <code>DEFAULT</code>, then Security Hub default standards are automatically enabled for new member
+     * accounts. If equal to <code>NONE</code>, then default standards are not automatically enabled for new member
+     * accounts.
+     * </p>
+     * 
+     * @param autoEnableStandards
+     *        Whether to automatically enable Security Hub <a href=
+     *        "https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-standards-enable-disable.html"
+     *        >default standards</a> for new member accounts in the organization.</p>
+     *        <p>
+     *        The default value of this parameter is equal to <code>DEFAULT</code>.
+     *        </p>
+     *        <p>
+     *        If equal to <code>DEFAULT</code>, then Security Hub default standards are automatically enabled for new
+     *        member accounts. If equal to <code>NONE</code>, then default standards are not automatically enabled for
+     *        new member accounts.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see AutoEnableStandards
+     */
+
+    public DescribeOrganizationConfigurationResult withAutoEnableStandards(String autoEnableStandards) {
+        setAutoEnableStandards(autoEnableStandards);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Whether to automatically enable Security Hub <a
+     * href="https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-standards-enable-disable.html">default
+     * standards</a> for new member accounts in the organization.
+     * </p>
+     * <p>
+     * The default value of this parameter is equal to <code>DEFAULT</code>.
+     * </p>
+     * <p>
+     * If equal to <code>DEFAULT</code>, then Security Hub default standards are automatically enabled for new member
+     * accounts. If equal to <code>NONE</code>, then default standards are not automatically enabled for new member
+     * accounts.
+     * </p>
+     * 
+     * @param autoEnableStandards
+     *        Whether to automatically enable Security Hub <a href=
+     *        "https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-standards-enable-disable.html"
+     *        >default standards</a> for new member accounts in the organization.</p>
+     *        <p>
+     *        The default value of this parameter is equal to <code>DEFAULT</code>.
+     *        </p>
+     *        <p>
+     *        If equal to <code>DEFAULT</code>, then Security Hub default standards are automatically enabled for new
+     *        member accounts. If equal to <code>NONE</code>, then default standards are not automatically enabled for
+     *        new member accounts.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see AutoEnableStandards
+     */
+
+    public DescribeOrganizationConfigurationResult withAutoEnableStandards(AutoEnableStandards autoEnableStandards) {
+        this.autoEnableStandards = autoEnableStandards.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -197,7 +348,9 @@ public class DescribeOrganizationConfigurationResult extends com.amazonaws.Amazo
         if (getAutoEnable() != null)
             sb.append("AutoEnable: ").append(getAutoEnable()).append(",");
         if (getMemberAccountLimitReached() != null)
-            sb.append("MemberAccountLimitReached: ").append(getMemberAccountLimitReached());
+            sb.append("MemberAccountLimitReached: ").append(getMemberAccountLimitReached()).append(",");
+        if (getAutoEnableStandards() != null)
+            sb.append("AutoEnableStandards: ").append(getAutoEnableStandards());
         sb.append("}");
         return sb.toString();
     }
@@ -220,6 +373,10 @@ public class DescribeOrganizationConfigurationResult extends com.amazonaws.Amazo
             return false;
         if (other.getMemberAccountLimitReached() != null && other.getMemberAccountLimitReached().equals(this.getMemberAccountLimitReached()) == false)
             return false;
+        if (other.getAutoEnableStandards() == null ^ this.getAutoEnableStandards() == null)
+            return false;
+        if (other.getAutoEnableStandards() != null && other.getAutoEnableStandards().equals(this.getAutoEnableStandards()) == false)
+            return false;
         return true;
     }
 
@@ -230,6 +387,7 @@ public class DescribeOrganizationConfigurationResult extends com.amazonaws.Amazo
 
         hashCode = prime * hashCode + ((getAutoEnable() == null) ? 0 : getAutoEnable().hashCode());
         hashCode = prime * hashCode + ((getMemberAccountLimitReached() == null) ? 0 : getMemberAccountLimitReached().hashCode());
+        hashCode = prime * hashCode + ((getAutoEnableStandards() == null) ? 0 : getAutoEnableStandards().hashCode());
         return hashCode;
     }
 

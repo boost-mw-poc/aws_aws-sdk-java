@@ -54,6 +54,10 @@ public class ExecuteStatementResultJsonUnmarshaller implements Unmarshaller<Exec
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("formattedRecords", targetDepth)) {
+                    context.nextToken();
+                    executeStatementResult.setFormattedRecords(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("generatedFields", targetDepth)) {
                     context.nextToken();
                     executeStatementResult.setGeneratedFields(new ListUnmarshaller<Field>(FieldJsonUnmarshaller.getInstance())

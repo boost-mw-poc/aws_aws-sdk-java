@@ -175,19 +175,11 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
      * <p>
      * The name of the solution (product) that generates findings.
      * </p>
-     * <p>
-     * Note that this is a filter against the <code>aws/securityhub/ProductName</code> field in
-     * <code>ProductFields</code>. It is not a filter for the top-level <code>ProductName</code> field.
-     * </p>
      */
     private java.util.List<StringFilter> productName;
     /**
      * <p>
      * The name of the findings provider (company) that owns the solution (product) that generates findings.
-     * </p>
-     * <p>
-     * Note that this is a filter against the <code>aws/securityhub/CompanyName</code> field in
-     * <code>ProductFields</code>. It is not a filter for the top-level <code>CompanyName</code> field.
      * </p>
      */
     private java.util.List<StringFilter> companyName;
@@ -2272,15 +2264,8 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
      * <p>
      * The name of the solution (product) that generates findings.
      * </p>
-     * <p>
-     * Note that this is a filter against the <code>aws/securityhub/ProductName</code> field in
-     * <code>ProductFields</code>. It is not a filter for the top-level <code>ProductName</code> field.
-     * </p>
      * 
-     * @return The name of the solution (product) that generates findings.</p>
-     *         <p>
-     *         Note that this is a filter against the <code>aws/securityhub/ProductName</code> field in
-     *         <code>ProductFields</code>. It is not a filter for the top-level <code>ProductName</code> field.
+     * @return The name of the solution (product) that generates findings.
      */
 
     public java.util.List<StringFilter> getProductName() {
@@ -2291,16 +2276,9 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
      * <p>
      * The name of the solution (product) that generates findings.
      * </p>
-     * <p>
-     * Note that this is a filter against the <code>aws/securityhub/ProductName</code> field in
-     * <code>ProductFields</code>. It is not a filter for the top-level <code>ProductName</code> field.
-     * </p>
      * 
      * @param productName
-     *        The name of the solution (product) that generates findings.</p>
-     *        <p>
-     *        Note that this is a filter against the <code>aws/securityhub/ProductName</code> field in
-     *        <code>ProductFields</code>. It is not a filter for the top-level <code>ProductName</code> field.
+     *        The name of the solution (product) that generates findings.
      */
 
     public void setProductName(java.util.Collection<StringFilter> productName) {
@@ -2317,20 +2295,13 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
      * The name of the solution (product) that generates findings.
      * </p>
      * <p>
-     * Note that this is a filter against the <code>aws/securityhub/ProductName</code> field in
-     * <code>ProductFields</code>. It is not a filter for the top-level <code>ProductName</code> field.
-     * </p>
-     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setProductName(java.util.Collection)} or {@link #withProductName(java.util.Collection)} if you want to
      * override the existing values.
      * </p>
      * 
      * @param productName
-     *        The name of the solution (product) that generates findings.</p>
-     *        <p>
-     *        Note that this is a filter against the <code>aws/securityhub/ProductName</code> field in
-     *        <code>ProductFields</code>. It is not a filter for the top-level <code>ProductName</code> field.
+     *        The name of the solution (product) that generates findings.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2348,16 +2319,9 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
      * <p>
      * The name of the solution (product) that generates findings.
      * </p>
-     * <p>
-     * Note that this is a filter against the <code>aws/securityhub/ProductName</code> field in
-     * <code>ProductFields</code>. It is not a filter for the top-level <code>ProductName</code> field.
-     * </p>
      * 
      * @param productName
-     *        The name of the solution (product) that generates findings.</p>
-     *        <p>
-     *        Note that this is a filter against the <code>aws/securityhub/ProductName</code> field in
-     *        <code>ProductFields</code>. It is not a filter for the top-level <code>ProductName</code> field.
+     *        The name of the solution (product) that generates findings.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2370,15 +2334,8 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
      * <p>
      * The name of the findings provider (company) that owns the solution (product) that generates findings.
      * </p>
-     * <p>
-     * Note that this is a filter against the <code>aws/securityhub/CompanyName</code> field in
-     * <code>ProductFields</code>. It is not a filter for the top-level <code>CompanyName</code> field.
-     * </p>
      * 
-     * @return The name of the findings provider (company) that owns the solution (product) that generates findings.</p>
-     *         <p>
-     *         Note that this is a filter against the <code>aws/securityhub/CompanyName</code> field in
-     *         <code>ProductFields</code>. It is not a filter for the top-level <code>CompanyName</code> field.
+     * @return The name of the findings provider (company) that owns the solution (product) that generates findings.
      */
 
     public java.util.List<StringFilter> getCompanyName() {
@@ -2389,16 +2346,9 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
      * <p>
      * The name of the findings provider (company) that owns the solution (product) that generates findings.
      * </p>
-     * <p>
-     * Note that this is a filter against the <code>aws/securityhub/CompanyName</code> field in
-     * <code>ProductFields</code>. It is not a filter for the top-level <code>CompanyName</code> field.
-     * </p>
      * 
      * @param companyName
-     *        The name of the findings provider (company) that owns the solution (product) that generates findings.</p>
-     *        <p>
-     *        Note that this is a filter against the <code>aws/securityhub/CompanyName</code> field in
-     *        <code>ProductFields</code>. It is not a filter for the top-level <code>CompanyName</code> field.
+     *        The name of the findings provider (company) that owns the solution (product) that generates findings.
      */
 
     public void setCompanyName(java.util.Collection<StringFilter> companyName) {
@@ -2415,20 +2365,13 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
      * The name of the findings provider (company) that owns the solution (product) that generates findings.
      * </p>
      * <p>
-     * Note that this is a filter against the <code>aws/securityhub/CompanyName</code> field in
-     * <code>ProductFields</code>. It is not a filter for the top-level <code>CompanyName</code> field.
-     * </p>
-     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setCompanyName(java.util.Collection)} or {@link #withCompanyName(java.util.Collection)} if you want to
      * override the existing values.
      * </p>
      * 
      * @param companyName
-     *        The name of the findings provider (company) that owns the solution (product) that generates findings.</p>
-     *        <p>
-     *        Note that this is a filter against the <code>aws/securityhub/CompanyName</code> field in
-     *        <code>ProductFields</code>. It is not a filter for the top-level <code>CompanyName</code> field.
+     *        The name of the findings provider (company) that owns the solution (product) that generates findings.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2446,16 +2389,9 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
      * <p>
      * The name of the findings provider (company) that owns the solution (product) that generates findings.
      * </p>
-     * <p>
-     * Note that this is a filter against the <code>aws/securityhub/CompanyName</code> field in
-     * <code>ProductFields</code>. It is not a filter for the top-level <code>CompanyName</code> field.
-     * </p>
      * 
      * @param companyName
-     *        The name of the findings provider (company) that owns the solution (product) that generates findings.</p>
-     *        <p>
-     *        Note that this is a filter against the <code>aws/securityhub/CompanyName</code> field in
-     *        <code>ProductFields</code>. It is not a filter for the top-level <code>CompanyName</code> field.
+     *        The name of the findings provider (company) that owns the solution (product) that generates findings.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -30,16 +30,15 @@ public class CreateVpcPeeringConnectionRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * A unique identifier for the fleet. You can use either the fleet ID or ARN value. This tells Amazon Web Services
-     * which GameLift VPC to peer with.
+     * A unique identifier for the fleet. You can use either the fleet ID or ARN value. This tells Amazon GameLift which
+     * GameLift VPC to peer with.
      * </p>
      */
     private String fleetId;
     /**
      * <p>
-     * A unique identifier for the Amazon Web Services account with the VPC that you want to peer your Amazon Web
-     * Services fleet with. You can find your Account ID in the Amazon Web Services Management Console under account
-     * settings.
+     * A unique identifier for the Amazon Web Services account with the VPC that you want to peer your Amazon GameLift
+     * fleet with. You can find your Account ID in the Amazon Web Services Management Console under account settings.
      * </p>
      */
     private String peerVpcAwsAccountId;
@@ -56,13 +55,13 @@ public class CreateVpcPeeringConnectionRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * A unique identifier for the fleet. You can use either the fleet ID or ARN value. This tells Amazon Web Services
-     * which GameLift VPC to peer with.
+     * A unique identifier for the fleet. You can use either the fleet ID or ARN value. This tells Amazon GameLift which
+     * GameLift VPC to peer with.
      * </p>
      * 
      * @param fleetId
-     *        A unique identifier for the fleet. You can use either the fleet ID or ARN value. This tells Amazon Web
-     *        Services which GameLift VPC to peer with.
+     *        A unique identifier for the fleet. You can use either the fleet ID or ARN value. This tells Amazon
+     *        GameLift which GameLift VPC to peer with.
      */
 
     public void setFleetId(String fleetId) {
@@ -71,12 +70,12 @@ public class CreateVpcPeeringConnectionRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * A unique identifier for the fleet. You can use either the fleet ID or ARN value. This tells Amazon Web Services
-     * which GameLift VPC to peer with.
+     * A unique identifier for the fleet. You can use either the fleet ID or ARN value. This tells Amazon GameLift which
+     * GameLift VPC to peer with.
      * </p>
      * 
-     * @return A unique identifier for the fleet. You can use either the fleet ID or ARN value. This tells Amazon Web
-     *         Services which GameLift VPC to peer with.
+     * @return A unique identifier for the fleet. You can use either the fleet ID or ARN value. This tells Amazon
+     *         GameLift which GameLift VPC to peer with.
      */
 
     public String getFleetId() {
@@ -85,13 +84,13 @@ public class CreateVpcPeeringConnectionRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * A unique identifier for the fleet. You can use either the fleet ID or ARN value. This tells Amazon Web Services
-     * which GameLift VPC to peer with.
+     * A unique identifier for the fleet. You can use either the fleet ID or ARN value. This tells Amazon GameLift which
+     * GameLift VPC to peer with.
      * </p>
      * 
      * @param fleetId
-     *        A unique identifier for the fleet. You can use either the fleet ID or ARN value. This tells Amazon Web
-     *        Services which GameLift VPC to peer with.
+     *        A unique identifier for the fleet. You can use either the fleet ID or ARN value. This tells Amazon
+     *        GameLift which GameLift VPC to peer with.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -102,14 +101,13 @@ public class CreateVpcPeeringConnectionRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * A unique identifier for the Amazon Web Services account with the VPC that you want to peer your Amazon Web
-     * Services fleet with. You can find your Account ID in the Amazon Web Services Management Console under account
-     * settings.
+     * A unique identifier for the Amazon Web Services account with the VPC that you want to peer your Amazon GameLift
+     * fleet with. You can find your Account ID in the Amazon Web Services Management Console under account settings.
      * </p>
      * 
      * @param peerVpcAwsAccountId
-     *        A unique identifier for the Amazon Web Services account with the VPC that you want to peer your Amazon Web
-     *        Services fleet with. You can find your Account ID in the Amazon Web Services Management Console under
+     *        A unique identifier for the Amazon Web Services account with the VPC that you want to peer your Amazon
+     *        GameLift fleet with. You can find your Account ID in the Amazon Web Services Management Console under
      *        account settings.
      */
 
@@ -119,13 +117,12 @@ public class CreateVpcPeeringConnectionRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * A unique identifier for the Amazon Web Services account with the VPC that you want to peer your Amazon Web
-     * Services fleet with. You can find your Account ID in the Amazon Web Services Management Console under account
-     * settings.
+     * A unique identifier for the Amazon Web Services account with the VPC that you want to peer your Amazon GameLift
+     * fleet with. You can find your Account ID in the Amazon Web Services Management Console under account settings.
      * </p>
      * 
      * @return A unique identifier for the Amazon Web Services account with the VPC that you want to peer your Amazon
-     *         Web Services fleet with. You can find your Account ID in the Amazon Web Services Management Console under
+     *         GameLift fleet with. You can find your Account ID in the Amazon Web Services Management Console under
      *         account settings.
      */
 
@@ -135,14 +132,13 @@ public class CreateVpcPeeringConnectionRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * A unique identifier for the Amazon Web Services account with the VPC that you want to peer your Amazon Web
-     * Services fleet with. You can find your Account ID in the Amazon Web Services Management Console under account
-     * settings.
+     * A unique identifier for the Amazon Web Services account with the VPC that you want to peer your Amazon GameLift
+     * fleet with. You can find your Account ID in the Amazon Web Services Management Console under account settings.
      * </p>
      * 
      * @param peerVpcAwsAccountId
-     *        A unique identifier for the Amazon Web Services account with the VPC that you want to peer your Amazon Web
-     *        Services fleet with. You can find your Account ID in the Amazon Web Services Management Console under
+     *        A unique identifier for the Amazon Web Services account with the VPC that you want to peer your Amazon
+     *        GameLift fleet with. You can find your Account ID in the Amazon Web Services Management Console under
      *        account settings.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

@@ -32,6 +32,8 @@ public class ExecuteStatementRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("continueAfterTimeout").build();
     private static final MarshallingInfo<String> DATABASE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("database").build();
+    private static final MarshallingInfo<String> FORMATRECORDSAS_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("formatRecordsAs").build();
     private static final MarshallingInfo<Boolean> INCLUDERESULTMETADATA_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("includeResultMetadata").build();
     private static final MarshallingInfo<List> PARAMETERS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
@@ -67,6 +69,7 @@ public class ExecuteStatementRequestMarshaller {
         try {
             protocolMarshaller.marshall(executeStatementRequest.getContinueAfterTimeout(), CONTINUEAFTERTIMEOUT_BINDING);
             protocolMarshaller.marshall(executeStatementRequest.getDatabase(), DATABASE_BINDING);
+            protocolMarshaller.marshall(executeStatementRequest.getFormatRecordsAs(), FORMATRECORDSAS_BINDING);
             protocolMarshaller.marshall(executeStatementRequest.getIncludeResultMetadata(), INCLUDERESULTMETADATA_BINDING);
             protocolMarshaller.marshall(executeStatementRequest.getParameters(), PARAMETERS_BINDING);
             protocolMarshaller.marshall(executeStatementRequest.getResourceArn(), RESOURCEARN_BINDING);

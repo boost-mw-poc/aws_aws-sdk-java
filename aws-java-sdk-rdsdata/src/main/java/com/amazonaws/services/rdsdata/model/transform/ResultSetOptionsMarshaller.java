@@ -29,6 +29,8 @@ public class ResultSetOptionsMarshaller {
 
     private static final MarshallingInfo<String> DECIMALRETURNTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("decimalReturnType").build();
+    private static final MarshallingInfo<String> LONGRETURNTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("longReturnType").build();
 
     private static final ResultSetOptionsMarshaller instance = new ResultSetOptionsMarshaller();
 
@@ -47,6 +49,7 @@ public class ResultSetOptionsMarshaller {
 
         try {
             protocolMarshaller.marshall(resultSetOptions.getDecimalReturnType(), DECIMALRETURNTYPE_BINDING);
+            protocolMarshaller.marshall(resultSetOptions.getLongReturnType(), LONGRETURNTYPE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

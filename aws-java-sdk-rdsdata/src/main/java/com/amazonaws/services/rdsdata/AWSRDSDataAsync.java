@@ -33,8 +33,8 @@ import com.amazonaws.services.rdsdata.model.*;
  * </p>
  * <p>
  * For more information about the Data Service API, see <a
- * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html">Using the Data API for Aurora
- * Serverless</a> in the <i>Amazon Aurora User Guide</i>.
+ * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html">Using the Data API</a> in the
+ * <i>Amazon Aurora User Guide</i>.
  * </p>
  * </p>
  */
@@ -228,7 +228,7 @@ public interface AWSRDSDataAsync extends AWSRDSData {
      * </p>
      * </important>
      * <p>
-     * The response size limit is 1 MB. If the call returns more than 1 MB of response data, the call is terminated.
+     * If the binary response data from the database is more than 1 MB, the call is terminated.
      * </p>
      * 
      * @param executeStatementRequest
@@ -251,7 +251,7 @@ public interface AWSRDSDataAsync extends AWSRDSData {
      * </p>
      * </important>
      * <p>
-     * The response size limit is 1 MB. If the call returns more than 1 MB of response data, the call is terminated.
+     * If the binary response data from the database is more than 1 MB, the call is terminated.
      * </p>
      * 
      * @param executeStatementRequest

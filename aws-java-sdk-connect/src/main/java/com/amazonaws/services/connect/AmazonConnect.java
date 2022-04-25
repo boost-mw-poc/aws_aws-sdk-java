@@ -2649,6 +2649,29 @@ public interface AmazonConnect {
 
     /**
      * <p>
+     * Searches users in an Amazon Connect instance, with optional filtering.
+     * </p>
+     * 
+     * @param searchUsersRequest
+     * @return Result of the SearchUsers operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @sample AmazonConnect.SearchUsers
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/SearchUsers" target="_top">AWS API
+     *      Documentation</a>
+     */
+    SearchUsersResult searchUsers(SearchUsersRequest searchUsersRequest);
+
+    /**
+     * <p>
      * Searches for vocabularies within a specific Amazon Connect instance using <code>State</code>,
      * <code>NameStartsWith</code>, and <code>LanguageCode</code>.
      * </p>

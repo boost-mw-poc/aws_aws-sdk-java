@@ -58,8 +58,8 @@ import com.amazonaws.services.rdsdata.model.transform.*;
  * </p>
  * <p>
  * For more information about the Data Service API, see <a
- * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html">Using the Data API for Aurora
- * Serverless</a> in the <i>Amazon Aurora User Guide</i>.
+ * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html">Using the Data API</a> in the
+ * <i>Amazon Aurora User Guide</i>.
  * </p>
  * </p>
  */
@@ -86,6 +86,9 @@ public class AWSRDSDataClient extends AmazonWebServiceClient implements AWSRDSDa
                     .withSupportsCbor(false)
                     .withSupportsIon(false)
                     .withContentTypeOverride("application/json")
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("AccessDeniedException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.rdsdata.model.transform.AccessDeniedExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("NotFoundException").withExceptionUnmarshaller(
                                     com.amazonaws.services.rdsdata.model.transform.NotFoundExceptionUnmarshaller.getInstance()))
@@ -171,6 +174,8 @@ public class AWSRDSDataClient extends AmazonWebServiceClient implements AWSRDSDa
      * @param batchExecuteStatementRequest
      *        The request parameters represent the input of a SQL statement over an array of data.
      * @return Result of the BatchExecuteStatement operation returned by the service.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
      * @throws BadRequestException
      *         There is an error in the call or in a SQL statement.
      * @throws StatementTimeoutException
@@ -242,6 +247,8 @@ public class AWSRDSDataClient extends AmazonWebServiceClient implements AWSRDSDa
      * @param beginTransactionRequest
      *        The request parameters represent the input of a request to start a SQL transaction.
      * @return Result of the BeginTransaction operation returned by the service.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
      * @throws BadRequestException
      *         There is an error in the call or in a SQL statement.
      * @throws StatementTimeoutException
@@ -308,6 +315,8 @@ public class AWSRDSDataClient extends AmazonWebServiceClient implements AWSRDSDa
      * @param commitTransactionRequest
      *        The request parameters represent the input of a commit transaction request.
      * @return Result of the CommitTransaction operation returned by the service.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
      * @throws BadRequestException
      *         There is an error in the call or in a SQL statement.
      * @throws StatementTimeoutException
@@ -382,6 +391,8 @@ public class AWSRDSDataClient extends AmazonWebServiceClient implements AWSRDSDa
      * @param executeSqlRequest
      *        The request parameters represent the input of a request to run one or more SQL statements.
      * @return Result of the ExecuteSql operation returned by the service.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
      * @throws BadRequestException
      *         There is an error in the call or in a SQL statement.
      * @throws InternalServerErrorException
@@ -450,12 +461,14 @@ public class AWSRDSDataClient extends AmazonWebServiceClient implements AWSRDSDa
      * </p>
      * </important>
      * <p>
-     * The response size limit is 1 MB. If the call returns more than 1 MB of response data, the call is terminated.
+     * If the binary response data from the database is more than 1 MB, the call is terminated.
      * </p>
      * 
      * @param executeStatementRequest
      *        The request parameters represent the input of a request to run a SQL statement against a database.
      * @return Result of the ExecuteStatement operation returned by the service.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
      * @throws BadRequestException
      *         There is an error in the call or in a SQL statement.
      * @throws StatementTimeoutException
@@ -522,6 +535,8 @@ public class AWSRDSDataClient extends AmazonWebServiceClient implements AWSRDSDa
      * @param rollbackTransactionRequest
      *        The request parameters represent the input of a request to perform a rollback of a transaction.
      * @return Result of the RollbackTransaction operation returned by the service.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
      * @throws BadRequestException
      *         There is an error in the call or in a SQL statement.
      * @throws StatementTimeoutException

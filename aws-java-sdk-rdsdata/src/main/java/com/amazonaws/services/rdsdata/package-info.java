@@ -20,8 +20,8 @@
  * </p>
  * <p>
  * For more information about the Data Service API, see <a
- * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html">Using the Data API for Aurora
- * Serverless</a> in the <i>Amazon Aurora User Guide</i>.
+ * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html">Using the Data API</a> in the
+ * <i>Amazon Aurora User Guide</i>.
  * </p>
  * </p>
  */

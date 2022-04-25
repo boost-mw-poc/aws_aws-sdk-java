@@ -518,6 +518,11 @@ public class AbstractAmazonConnect implements AmazonConnect {
     }
 
     @Override
+    public SearchUsersResult searchUsers(SearchUsersRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public SearchVocabulariesResult searchVocabularies(SearchVocabulariesRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

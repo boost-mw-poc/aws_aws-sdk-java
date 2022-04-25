@@ -21,6 +21,12 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * <p>
  * The result set returned by a SQL statement.
  * </p>
+ * <important>
+ * <p>
+ * This data structure is only used with the deprecated <code>ExecuteSql</code> operation. Use the
+ * <code>BatchExecuteStatement</code> or <code>ExecuteStatement</code> operation instead.
+ * </p>
+ * </important>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-data-2018-08-01/ResultFrame" target="_top">AWS API
  *      Documentation</a>

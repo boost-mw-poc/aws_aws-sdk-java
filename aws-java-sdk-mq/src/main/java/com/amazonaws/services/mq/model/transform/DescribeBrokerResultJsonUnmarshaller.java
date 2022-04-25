@@ -48,6 +48,12 @@ public class DescribeBrokerResultJsonUnmarshaller implements Unmarshaller<Descri
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("actionsRequired", targetDepth)) {
+                    context.nextToken();
+                    describeBrokerResult.setActionsRequired(new ListUnmarshaller<ActionRequired>(ActionRequiredJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
                 if (context.testExpression("authenticationStrategy", targetDepth)) {
                     context.nextToken();
                     describeBrokerResult.setAuthenticationStrategy(context.getUnmarshaller(String.class).unmarshall(context));

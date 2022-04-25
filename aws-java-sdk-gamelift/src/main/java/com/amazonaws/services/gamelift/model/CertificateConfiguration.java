@@ -53,8 +53,6 @@ public class CertificateConfiguration implements Serializable, Cloneable, Struct
      * </p>
      * </li>
      * </ul>
-     * <p>
-     * </p>
      */
     private String certificateType;
 
@@ -77,8 +75,6 @@ public class CertificateConfiguration implements Serializable, Cloneable, Struct
      * </p>
      * </li>
      * </ul>
-     * <p>
-     * </p>
      * 
      * @param certificateType
      *        Indicates whether a TLS/SSL certificate is generated for a fleet. </p>
@@ -96,8 +92,6 @@ public class CertificateConfiguration implements Serializable, Cloneable, Struct
      *        <b>DISABLED</b> - (default) Do not generate a TLS/SSL certificate for this fleet.
      *        </p>
      *        </li>
-     *        </ul>
-     *        <p>
      * @see CertificateType
      */
 
@@ -124,8 +118,6 @@ public class CertificateConfiguration implements Serializable, Cloneable, Struct
      * </p>
      * </li>
      * </ul>
-     * <p>
-     * </p>
      * 
      * @return Indicates whether a TLS/SSL certificate is generated for a fleet. </p>
      *         <p>
@@ -142,8 +134,6 @@ public class CertificateConfiguration implements Serializable, Cloneable, Struct
      *         <b>DISABLED</b> - (default) Do not generate a TLS/SSL certificate for this fleet.
      *         </p>
      *         </li>
-     *         </ul>
-     *         <p>
      * @see CertificateType
      */
 
@@ -170,8 +160,6 @@ public class CertificateConfiguration implements Serializable, Cloneable, Struct
      * </p>
      * </li>
      * </ul>
-     * <p>
-     * </p>
      * 
      * @param certificateType
      *        Indicates whether a TLS/SSL certificate is generated for a fleet. </p>
@@ -189,8 +177,6 @@ public class CertificateConfiguration implements Serializable, Cloneable, Struct
      *        <b>DISABLED</b> - (default) Do not generate a TLS/SSL certificate for this fleet.
      *        </p>
      *        </li>
-     *        </ul>
-     *        <p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see CertificateType
      */
@@ -219,8 +205,6 @@ public class CertificateConfiguration implements Serializable, Cloneable, Struct
      * </p>
      * </li>
      * </ul>
-     * <p>
-     * </p>
      * 
      * @param certificateType
      *        Indicates whether a TLS/SSL certificate is generated for a fleet. </p>
@@ -238,8 +222,6 @@ public class CertificateConfiguration implements Serializable, Cloneable, Struct
      *        <b>DISABLED</b> - (default) Do not generate a TLS/SSL certificate for this fleet.
      *        </p>
      *        </li>
-     *        </ul>
-     *        <p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see CertificateType
      */

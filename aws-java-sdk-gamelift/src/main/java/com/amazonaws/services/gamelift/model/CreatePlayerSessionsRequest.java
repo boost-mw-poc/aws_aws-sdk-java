@@ -43,8 +43,8 @@ public class CreatePlayerSessionsRequest extends com.amazonaws.AmazonWebServiceR
     /**
      * <p>
      * Map of string pairs, each specifying a player ID and a set of developer-defined information related to the
-     * player. Amazon Web Services does not use this data, so it can be formatted as needed for use in the game. Any
-     * player data strings for player IDs that are not included in the <code>PlayerIds</code> parameter are ignored.
+     * player. Amazon GameLift does not use this data, so it can be formatted as needed for use in the game. Any player
+     * data strings for player IDs that are not included in the <code>PlayerIds</code> parameter are ignored.
      * </p>
      */
     private java.util.Map<String, String> playerDataMap;
@@ -162,14 +162,14 @@ public class CreatePlayerSessionsRequest extends com.amazonaws.AmazonWebServiceR
     /**
      * <p>
      * Map of string pairs, each specifying a player ID and a set of developer-defined information related to the
-     * player. Amazon Web Services does not use this data, so it can be formatted as needed for use in the game. Any
-     * player data strings for player IDs that are not included in the <code>PlayerIds</code> parameter are ignored.
+     * player. Amazon GameLift does not use this data, so it can be formatted as needed for use in the game. Any player
+     * data strings for player IDs that are not included in the <code>PlayerIds</code> parameter are ignored.
      * </p>
      * 
      * @return Map of string pairs, each specifying a player ID and a set of developer-defined information related to
-     *         the player. Amazon Web Services does not use this data, so it can be formatted as needed for use in the
-     *         game. Any player data strings for player IDs that are not included in the <code>PlayerIds</code>
-     *         parameter are ignored.
+     *         the player. Amazon GameLift does not use this data, so it can be formatted as needed for use in the game.
+     *         Any player data strings for player IDs that are not included in the <code>PlayerIds</code> parameter are
+     *         ignored.
      */
 
     public java.util.Map<String, String> getPlayerDataMap() {
@@ -179,14 +179,14 @@ public class CreatePlayerSessionsRequest extends com.amazonaws.AmazonWebServiceR
     /**
      * <p>
      * Map of string pairs, each specifying a player ID and a set of developer-defined information related to the
-     * player. Amazon Web Services does not use this data, so it can be formatted as needed for use in the game. Any
-     * player data strings for player IDs that are not included in the <code>PlayerIds</code> parameter are ignored.
+     * player. Amazon GameLift does not use this data, so it can be formatted as needed for use in the game. Any player
+     * data strings for player IDs that are not included in the <code>PlayerIds</code> parameter are ignored.
      * </p>
      * 
      * @param playerDataMap
      *        Map of string pairs, each specifying a player ID and a set of developer-defined information related to the
-     *        player. Amazon Web Services does not use this data, so it can be formatted as needed for use in the game.
-     *        Any player data strings for player IDs that are not included in the <code>PlayerIds</code> parameter are
+     *        player. Amazon GameLift does not use this data, so it can be formatted as needed for use in the game. Any
+     *        player data strings for player IDs that are not included in the <code>PlayerIds</code> parameter are
      *        ignored.
      */
 
@@ -197,14 +197,14 @@ public class CreatePlayerSessionsRequest extends com.amazonaws.AmazonWebServiceR
     /**
      * <p>
      * Map of string pairs, each specifying a player ID and a set of developer-defined information related to the
-     * player. Amazon Web Services does not use this data, so it can be formatted as needed for use in the game. Any
-     * player data strings for player IDs that are not included in the <code>PlayerIds</code> parameter are ignored.
+     * player. Amazon GameLift does not use this data, so it can be formatted as needed for use in the game. Any player
+     * data strings for player IDs that are not included in the <code>PlayerIds</code> parameter are ignored.
      * </p>
      * 
      * @param playerDataMap
      *        Map of string pairs, each specifying a player ID and a set of developer-defined information related to the
-     *        player. Amazon Web Services does not use this data, so it can be formatted as needed for use in the game.
-     *        Any player data strings for player IDs that are not included in the <code>PlayerIds</code> parameter are
+     *        player. Amazon GameLift does not use this data, so it can be formatted as needed for use in the game. Any
+     *        player data strings for player IDs that are not included in the <code>PlayerIds</code> parameter are
      *        ignored.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

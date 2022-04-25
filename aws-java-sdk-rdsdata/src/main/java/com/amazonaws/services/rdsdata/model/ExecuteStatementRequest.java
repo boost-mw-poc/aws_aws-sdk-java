@@ -49,6 +49,20 @@ public class ExecuteStatementRequest extends com.amazonaws.AmazonWebServiceReque
     private String database;
     /**
      * <p>
+     * A value that indicates whether to format the result set as a single JSON string. This parameter only applies to
+     * <code>SELECT</code> statements and is ignored for other types of statements. Allowed values are <code>NONE</code>
+     * and <code>JSON</code>. The default value is <code>NONE</code>. The result is returned in the
+     * <code>formattedRecords</code> field.
+     * </p>
+     * <p>
+     * For usage information about the JSON format for result sets, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html">Using the Data API</a> in the
+     * <i>Amazon Aurora User Guide</i>.
+     * </p>
+     */
+    private String formatRecordsAs;
+    /**
+     * <p>
      * A value that indicates whether to include metadata in the results.
      * </p>
      */
@@ -251,6 +265,125 @@ public class ExecuteStatementRequest extends com.amazonaws.AmazonWebServiceReque
 
     public ExecuteStatementRequest withDatabase(String database) {
         setDatabase(database);
+        return this;
+    }
+
+    /**
+     * <p>
+     * A value that indicates whether to format the result set as a single JSON string. This parameter only applies to
+     * <code>SELECT</code> statements and is ignored for other types of statements. Allowed values are <code>NONE</code>
+     * and <code>JSON</code>. The default value is <code>NONE</code>. The result is returned in the
+     * <code>formattedRecords</code> field.
+     * </p>
+     * <p>
+     * For usage information about the JSON format for result sets, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html">Using the Data API</a> in the
+     * <i>Amazon Aurora User Guide</i>.
+     * </p>
+     * 
+     * @param formatRecordsAs
+     *        A value that indicates whether to format the result set as a single JSON string. This parameter only
+     *        applies to <code>SELECT</code> statements and is ignored for other types of statements. Allowed values are
+     *        <code>NONE</code> and <code>JSON</code>. The default value is <code>NONE</code>. The result is returned in
+     *        the <code>formattedRecords</code> field.</p>
+     *        <p>
+     *        For usage information about the JSON format for result sets, see <a
+     *        href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html">Using the Data API</a>
+     *        in the <i>Amazon Aurora User Guide</i>.
+     * @see RecordsFormatType
+     */
+
+    public void setFormatRecordsAs(String formatRecordsAs) {
+        this.formatRecordsAs = formatRecordsAs;
+    }
+
+    /**
+     * <p>
+     * A value that indicates whether to format the result set as a single JSON string. This parameter only applies to
+     * <code>SELECT</code> statements and is ignored for other types of statements. Allowed values are <code>NONE</code>
+     * and <code>JSON</code>. The default value is <code>NONE</code>. The result is returned in the
+     * <code>formattedRecords</code> field.
+     * </p>
+     * <p>
+     * For usage information about the JSON format for result sets, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html">Using the Data API</a> in the
+     * <i>Amazon Aurora User Guide</i>.
+     * </p>
+     * 
+     * @return A value that indicates whether to format the result set as a single JSON string. This parameter only
+     *         applies to <code>SELECT</code> statements and is ignored for other types of statements. Allowed values
+     *         are <code>NONE</code> and <code>JSON</code>. The default value is <code>NONE</code>. The result is
+     *         returned in the <code>formattedRecords</code> field.</p>
+     *         <p>
+     *         For usage information about the JSON format for result sets, see <a
+     *         href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html">Using the Data API</a>
+     *         in the <i>Amazon Aurora User Guide</i>.
+     * @see RecordsFormatType
+     */
+
+    public String getFormatRecordsAs() {
+        return this.formatRecordsAs;
+    }
+
+    /**
+     * <p>
+     * A value that indicates whether to format the result set as a single JSON string. This parameter only applies to
+     * <code>SELECT</code> statements and is ignored for other types of statements. Allowed values are <code>NONE</code>
+     * and <code>JSON</code>. The default value is <code>NONE</code>. The result is returned in the
+     * <code>formattedRecords</code> field.
+     * </p>
+     * <p>
+     * For usage information about the JSON format for result sets, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html">Using the Data API</a> in the
+     * <i>Amazon Aurora User Guide</i>.
+     * </p>
+     * 
+     * @param formatRecordsAs
+     *        A value that indicates whether to format the result set as a single JSON string. This parameter only
+     *        applies to <code>SELECT</code> statements and is ignored for other types of statements. Allowed values are
+     *        <code>NONE</code> and <code>JSON</code>. The default value is <code>NONE</code>. The result is returned in
+     *        the <code>formattedRecords</code> field.</p>
+     *        <p>
+     *        For usage information about the JSON format for result sets, see <a
+     *        href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html">Using the Data API</a>
+     *        in the <i>Amazon Aurora User Guide</i>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see RecordsFormatType
+     */
+
+    public ExecuteStatementRequest withFormatRecordsAs(String formatRecordsAs) {
+        setFormatRecordsAs(formatRecordsAs);
+        return this;
+    }
+
+    /**
+     * <p>
+     * A value that indicates whether to format the result set as a single JSON string. This parameter only applies to
+     * <code>SELECT</code> statements and is ignored for other types of statements. Allowed values are <code>NONE</code>
+     * and <code>JSON</code>. The default value is <code>NONE</code>. The result is returned in the
+     * <code>formattedRecords</code> field.
+     * </p>
+     * <p>
+     * For usage information about the JSON format for result sets, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html">Using the Data API</a> in the
+     * <i>Amazon Aurora User Guide</i>.
+     * </p>
+     * 
+     * @param formatRecordsAs
+     *        A value that indicates whether to format the result set as a single JSON string. This parameter only
+     *        applies to <code>SELECT</code> statements and is ignored for other types of statements. Allowed values are
+     *        <code>NONE</code> and <code>JSON</code>. The default value is <code>NONE</code>. The result is returned in
+     *        the <code>formattedRecords</code> field.</p>
+     *        <p>
+     *        For usage information about the JSON format for result sets, see <a
+     *        href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html">Using the Data API</a>
+     *        in the <i>Amazon Aurora User Guide</i>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see RecordsFormatType
+     */
+
+    public ExecuteStatementRequest withFormatRecordsAs(RecordsFormatType formatRecordsAs) {
+        this.formatRecordsAs = formatRecordsAs.toString();
         return this;
     }
 
@@ -709,6 +842,8 @@ public class ExecuteStatementRequest extends com.amazonaws.AmazonWebServiceReque
             sb.append("ContinueAfterTimeout: ").append(getContinueAfterTimeout()).append(",");
         if (getDatabase() != null)
             sb.append("Database: ").append(getDatabase()).append(",");
+        if (getFormatRecordsAs() != null)
+            sb.append("FormatRecordsAs: ").append(getFormatRecordsAs()).append(",");
         if (getIncludeResultMetadata() != null)
             sb.append("IncludeResultMetadata: ").append(getIncludeResultMetadata()).append(",");
         if (getParameters() != null)
@@ -746,6 +881,10 @@ public class ExecuteStatementRequest extends com.amazonaws.AmazonWebServiceReque
         if (other.getDatabase() == null ^ this.getDatabase() == null)
             return false;
         if (other.getDatabase() != null && other.getDatabase().equals(this.getDatabase()) == false)
+            return false;
+        if (other.getFormatRecordsAs() == null ^ this.getFormatRecordsAs() == null)
+            return false;
+        if (other.getFormatRecordsAs() != null && other.getFormatRecordsAs().equals(this.getFormatRecordsAs()) == false)
             return false;
         if (other.getIncludeResultMetadata() == null ^ this.getIncludeResultMetadata() == null)
             return false;
@@ -789,6 +928,7 @@ public class ExecuteStatementRequest extends com.amazonaws.AmazonWebServiceReque
 
         hashCode = prime * hashCode + ((getContinueAfterTimeout() == null) ? 0 : getContinueAfterTimeout().hashCode());
         hashCode = prime * hashCode + ((getDatabase() == null) ? 0 : getDatabase().hashCode());
+        hashCode = prime * hashCode + ((getFormatRecordsAs() == null) ? 0 : getFormatRecordsAs().hashCode());
         hashCode = prime * hashCode + ((getIncludeResultMetadata() == null) ? 0 : getIncludeResultMetadata().hashCode());
         hashCode = prime * hashCode + ((getParameters() == null) ? 0 : getParameters().hashCode());
         hashCode = prime * hashCode + ((getResourceArn() == null) ? 0 : getResourceArn().hashCode());

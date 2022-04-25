@@ -46,12 +46,12 @@ public class CreateBuildRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <p>
      * Information indicating where your game build files are stored. Use this parameter only when creating a build with
      * files stored in an Amazon S3 bucket that you own. The storage location must specify an Amazon S3 bucket name and
-     * key. The location must also specify a role ARN that you set up to allow Amazon Web Services to access your Amazon
-     * S3 bucket. The S3 bucket and your new build must be in the same Region.
+     * key. The location must also specify a role ARN that you set up to allow Amazon GameLift to access your Amazon S3
+     * bucket. The S3 bucket and your new build must be in the same Region.
      * </p>
      * <p>
      * If a <code>StorageLocation</code> is specified, the size of your file can be found in your Amazon S3 bucket.
-     * Amazon Web Services will report a <code>SizeOnDisk</code> of 0.
+     * Amazon GameLift will report a <code>SizeOnDisk</code> of 0.
      * </p>
      */
     private S3Location storageLocation;
@@ -173,22 +173,22 @@ public class CreateBuildRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <p>
      * Information indicating where your game build files are stored. Use this parameter only when creating a build with
      * files stored in an Amazon S3 bucket that you own. The storage location must specify an Amazon S3 bucket name and
-     * key. The location must also specify a role ARN that you set up to allow Amazon Web Services to access your Amazon
-     * S3 bucket. The S3 bucket and your new build must be in the same Region.
+     * key. The location must also specify a role ARN that you set up to allow Amazon GameLift to access your Amazon S3
+     * bucket. The S3 bucket and your new build must be in the same Region.
      * </p>
      * <p>
      * If a <code>StorageLocation</code> is specified, the size of your file can be found in your Amazon S3 bucket.
-     * Amazon Web Services will report a <code>SizeOnDisk</code> of 0.
+     * Amazon GameLift will report a <code>SizeOnDisk</code> of 0.
      * </p>
      * 
      * @param storageLocation
      *        Information indicating where your game build files are stored. Use this parameter only when creating a
      *        build with files stored in an Amazon S3 bucket that you own. The storage location must specify an Amazon
-     *        S3 bucket name and key. The location must also specify a role ARN that you set up to allow Amazon Web
-     *        Services to access your Amazon S3 bucket. The S3 bucket and your new build must be in the same Region.</p>
+     *        S3 bucket name and key. The location must also specify a role ARN that you set up to allow Amazon GameLift
+     *        to access your Amazon S3 bucket. The S3 bucket and your new build must be in the same Region.</p>
      *        <p>
      *        If a <code>StorageLocation</code> is specified, the size of your file can be found in your Amazon S3
-     *        bucket. Amazon Web Services will report a <code>SizeOnDisk</code> of 0.
+     *        bucket. Amazon GameLift will report a <code>SizeOnDisk</code> of 0.
      */
 
     public void setStorageLocation(S3Location storageLocation) {
@@ -199,22 +199,22 @@ public class CreateBuildRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <p>
      * Information indicating where your game build files are stored. Use this parameter only when creating a build with
      * files stored in an Amazon S3 bucket that you own. The storage location must specify an Amazon S3 bucket name and
-     * key. The location must also specify a role ARN that you set up to allow Amazon Web Services to access your Amazon
-     * S3 bucket. The S3 bucket and your new build must be in the same Region.
+     * key. The location must also specify a role ARN that you set up to allow Amazon GameLift to access your Amazon S3
+     * bucket. The S3 bucket and your new build must be in the same Region.
      * </p>
      * <p>
      * If a <code>StorageLocation</code> is specified, the size of your file can be found in your Amazon S3 bucket.
-     * Amazon Web Services will report a <code>SizeOnDisk</code> of 0.
+     * Amazon GameLift will report a <code>SizeOnDisk</code> of 0.
      * </p>
      * 
      * @return Information indicating where your game build files are stored. Use this parameter only when creating a
      *         build with files stored in an Amazon S3 bucket that you own. The storage location must specify an Amazon
-     *         S3 bucket name and key. The location must also specify a role ARN that you set up to allow Amazon Web
-     *         Services to access your Amazon S3 bucket. The S3 bucket and your new build must be in the same
+     *         S3 bucket name and key. The location must also specify a role ARN that you set up to allow Amazon
+     *         GameLift to access your Amazon S3 bucket. The S3 bucket and your new build must be in the same
      *         Region.</p>
      *         <p>
      *         If a <code>StorageLocation</code> is specified, the size of your file can be found in your Amazon S3
-     *         bucket. Amazon Web Services will report a <code>SizeOnDisk</code> of 0.
+     *         bucket. Amazon GameLift will report a <code>SizeOnDisk</code> of 0.
      */
 
     public S3Location getStorageLocation() {
@@ -225,22 +225,22 @@ public class CreateBuildRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <p>
      * Information indicating where your game build files are stored. Use this parameter only when creating a build with
      * files stored in an Amazon S3 bucket that you own. The storage location must specify an Amazon S3 bucket name and
-     * key. The location must also specify a role ARN that you set up to allow Amazon Web Services to access your Amazon
-     * S3 bucket. The S3 bucket and your new build must be in the same Region.
+     * key. The location must also specify a role ARN that you set up to allow Amazon GameLift to access your Amazon S3
+     * bucket. The S3 bucket and your new build must be in the same Region.
      * </p>
      * <p>
      * If a <code>StorageLocation</code> is specified, the size of your file can be found in your Amazon S3 bucket.
-     * Amazon Web Services will report a <code>SizeOnDisk</code> of 0.
+     * Amazon GameLift will report a <code>SizeOnDisk</code> of 0.
      * </p>
      * 
      * @param storageLocation
      *        Information indicating where your game build files are stored. Use this parameter only when creating a
      *        build with files stored in an Amazon S3 bucket that you own. The storage location must specify an Amazon
-     *        S3 bucket name and key. The location must also specify a role ARN that you set up to allow Amazon Web
-     *        Services to access your Amazon S3 bucket. The S3 bucket and your new build must be in the same Region.</p>
+     *        S3 bucket name and key. The location must also specify a role ARN that you set up to allow Amazon GameLift
+     *        to access your Amazon S3 bucket. The S3 bucket and your new build must be in the same Region.</p>
      *        <p>
      *        If a <code>StorageLocation</code> is specified, the size of your file can be found in your Amazon S3
-     *        bucket. Amazon Web Services will report a <code>SizeOnDisk</code> of 0.
+     *        bucket. Amazon GameLift will report a <code>SizeOnDisk</code> of 0.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

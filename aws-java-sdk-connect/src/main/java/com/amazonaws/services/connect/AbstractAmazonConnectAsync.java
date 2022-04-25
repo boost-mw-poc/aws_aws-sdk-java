@@ -1310,6 +1310,19 @@ public class AbstractAmazonConnectAsync extends AbstractAmazonConnect implements
     }
 
     @Override
+    public java.util.concurrent.Future<SearchUsersResult> searchUsersAsync(SearchUsersRequest request) {
+
+        return searchUsersAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<SearchUsersResult> searchUsersAsync(SearchUsersRequest request,
+            com.amazonaws.handlers.AsyncHandler<SearchUsersRequest, SearchUsersResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<SearchVocabulariesResult> searchVocabulariesAsync(SearchVocabulariesRequest request) {
 
         return searchVocabulariesAsync(request, null);

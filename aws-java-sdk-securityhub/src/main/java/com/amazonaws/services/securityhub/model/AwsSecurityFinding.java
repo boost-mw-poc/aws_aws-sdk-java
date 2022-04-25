@@ -60,19 +60,12 @@ public class AwsSecurityFinding implements Serializable, Cloneable, StructuredPo
      * The name of the product that generated the finding.
      * </p>
      * <p>
-     * Security Hub populates this attribute automatically for each finding. You cannot update it using
-     * <code>BatchImportFindings</code> or <code>BatchUpdateFindings</code>. The exception to this is when you use a
-     * custom integration.
+     * Security Hub populates this attribute automatically for each finding. You cannot update this attribute with
+     * <code>BatchImportFindings</code> or <code>BatchUpdateFindings</code>. The exception to this is a custom
+     * integration.
      * </p>
      * <p>
-     * When you use the Security Hub console to filter findings by product name, you use this attribute.
-     * </p>
-     * <p>
-     * When you use the Security Hub API to filter findings by product name, you use the
-     * <code>aws/securityhub/ProductName</code> attribute under <code>ProductFields</code>.
-     * </p>
-     * <p>
-     * Security Hub does not synchronize those two attributes.
+     * When you use the Security Hub console or API to filter findings by product name, you use this attribute.
      * </p>
      */
     private String productName;
@@ -81,19 +74,12 @@ public class AwsSecurityFinding implements Serializable, Cloneable, StructuredPo
      * The name of the company for the product that generated the finding.
      * </p>
      * <p>
-     * Security Hub populates this attribute automatically for each finding. You cannot be updated using
-     * <code>BatchImportFindings</code> or <code>BatchUpdateFindings</code>. The exception to this is when you use a
-     * custom integration.
+     * Security Hub populates this attribute automatically for each finding. You cannot update this attribute with
+     * <code>BatchImportFindings</code> or <code>BatchUpdateFindings</code>. The exception to this is a custom
+     * integration.
      * </p>
      * <p>
-     * When you use the Security Hub console to filter findings by company name, you use this attribute.
-     * </p>
-     * <p>
-     * When you use the Security Hub API to filter findings by company name, you use the
-     * <code>aws/securityhub/CompanyName</code> attribute under <code>ProductFields</code>.
-     * </p>
-     * <p>
-     * Security Hub does not synchronize those two attributes.
+     * When you use the Security Hub console or API to filter findings by company name, you use this attribute.
      * </p>
      */
     private String companyName;
@@ -503,37 +489,23 @@ public class AwsSecurityFinding implements Serializable, Cloneable, StructuredPo
      * The name of the product that generated the finding.
      * </p>
      * <p>
-     * Security Hub populates this attribute automatically for each finding. You cannot update it using
-     * <code>BatchImportFindings</code> or <code>BatchUpdateFindings</code>. The exception to this is when you use a
-     * custom integration.
+     * Security Hub populates this attribute automatically for each finding. You cannot update this attribute with
+     * <code>BatchImportFindings</code> or <code>BatchUpdateFindings</code>. The exception to this is a custom
+     * integration.
      * </p>
      * <p>
-     * When you use the Security Hub console to filter findings by product name, you use this attribute.
-     * </p>
-     * <p>
-     * When you use the Security Hub API to filter findings by product name, you use the
-     * <code>aws/securityhub/ProductName</code> attribute under <code>ProductFields</code>.
-     * </p>
-     * <p>
-     * Security Hub does not synchronize those two attributes.
+     * When you use the Security Hub console or API to filter findings by product name, you use this attribute.
      * </p>
      * 
      * @param productName
      *        The name of the product that generated the finding.</p>
      *        <p>
-     *        Security Hub populates this attribute automatically for each finding. You cannot update it using
-     *        <code>BatchImportFindings</code> or <code>BatchUpdateFindings</code>. The exception to this is when you
-     *        use a custom integration.
+     *        Security Hub populates this attribute automatically for each finding. You cannot update this attribute
+     *        with <code>BatchImportFindings</code> or <code>BatchUpdateFindings</code>. The exception to this is a
+     *        custom integration.
      *        </p>
      *        <p>
-     *        When you use the Security Hub console to filter findings by product name, you use this attribute.
-     *        </p>
-     *        <p>
-     *        When you use the Security Hub API to filter findings by product name, you use the
-     *        <code>aws/securityhub/ProductName</code> attribute under <code>ProductFields</code>.
-     *        </p>
-     *        <p>
-     *        Security Hub does not synchronize those two attributes.
+     *        When you use the Security Hub console or API to filter findings by product name, you use this attribute.
      */
 
     public void setProductName(String productName) {
@@ -545,36 +517,22 @@ public class AwsSecurityFinding implements Serializable, Cloneable, StructuredPo
      * The name of the product that generated the finding.
      * </p>
      * <p>
-     * Security Hub populates this attribute automatically for each finding. You cannot update it using
-     * <code>BatchImportFindings</code> or <code>BatchUpdateFindings</code>. The exception to this is when you use a
-     * custom integration.
+     * Security Hub populates this attribute automatically for each finding. You cannot update this attribute with
+     * <code>BatchImportFindings</code> or <code>BatchUpdateFindings</code>. The exception to this is a custom
+     * integration.
      * </p>
      * <p>
-     * When you use the Security Hub console to filter findings by product name, you use this attribute.
-     * </p>
-     * <p>
-     * When you use the Security Hub API to filter findings by product name, you use the
-     * <code>aws/securityhub/ProductName</code> attribute under <code>ProductFields</code>.
-     * </p>
-     * <p>
-     * Security Hub does not synchronize those two attributes.
+     * When you use the Security Hub console or API to filter findings by product name, you use this attribute.
      * </p>
      * 
      * @return The name of the product that generated the finding.</p>
      *         <p>
-     *         Security Hub populates this attribute automatically for each finding. You cannot update it using
-     *         <code>BatchImportFindings</code> or <code>BatchUpdateFindings</code>. The exception to this is when you
-     *         use a custom integration.
+     *         Security Hub populates this attribute automatically for each finding. You cannot update this attribute
+     *         with <code>BatchImportFindings</code> or <code>BatchUpdateFindings</code>. The exception to this is a
+     *         custom integration.
      *         </p>
      *         <p>
-     *         When you use the Security Hub console to filter findings by product name, you use this attribute.
-     *         </p>
-     *         <p>
-     *         When you use the Security Hub API to filter findings by product name, you use the
-     *         <code>aws/securityhub/ProductName</code> attribute under <code>ProductFields</code>.
-     *         </p>
-     *         <p>
-     *         Security Hub does not synchronize those two attributes.
+     *         When you use the Security Hub console or API to filter findings by product name, you use this attribute.
      */
 
     public String getProductName() {
@@ -586,37 +544,23 @@ public class AwsSecurityFinding implements Serializable, Cloneable, StructuredPo
      * The name of the product that generated the finding.
      * </p>
      * <p>
-     * Security Hub populates this attribute automatically for each finding. You cannot update it using
-     * <code>BatchImportFindings</code> or <code>BatchUpdateFindings</code>. The exception to this is when you use a
-     * custom integration.
+     * Security Hub populates this attribute automatically for each finding. You cannot update this attribute with
+     * <code>BatchImportFindings</code> or <code>BatchUpdateFindings</code>. The exception to this is a custom
+     * integration.
      * </p>
      * <p>
-     * When you use the Security Hub console to filter findings by product name, you use this attribute.
-     * </p>
-     * <p>
-     * When you use the Security Hub API to filter findings by product name, you use the
-     * <code>aws/securityhub/ProductName</code> attribute under <code>ProductFields</code>.
-     * </p>
-     * <p>
-     * Security Hub does not synchronize those two attributes.
+     * When you use the Security Hub console or API to filter findings by product name, you use this attribute.
      * </p>
      * 
      * @param productName
      *        The name of the product that generated the finding.</p>
      *        <p>
-     *        Security Hub populates this attribute automatically for each finding. You cannot update it using
-     *        <code>BatchImportFindings</code> or <code>BatchUpdateFindings</code>. The exception to this is when you
-     *        use a custom integration.
+     *        Security Hub populates this attribute automatically for each finding. You cannot update this attribute
+     *        with <code>BatchImportFindings</code> or <code>BatchUpdateFindings</code>. The exception to this is a
+     *        custom integration.
      *        </p>
      *        <p>
-     *        When you use the Security Hub console to filter findings by product name, you use this attribute.
-     *        </p>
-     *        <p>
-     *        When you use the Security Hub API to filter findings by product name, you use the
-     *        <code>aws/securityhub/ProductName</code> attribute under <code>ProductFields</code>.
-     *        </p>
-     *        <p>
-     *        Security Hub does not synchronize those two attributes.
+     *        When you use the Security Hub console or API to filter findings by product name, you use this attribute.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -630,37 +574,23 @@ public class AwsSecurityFinding implements Serializable, Cloneable, StructuredPo
      * The name of the company for the product that generated the finding.
      * </p>
      * <p>
-     * Security Hub populates this attribute automatically for each finding. You cannot be updated using
-     * <code>BatchImportFindings</code> or <code>BatchUpdateFindings</code>. The exception to this is when you use a
-     * custom integration.
+     * Security Hub populates this attribute automatically for each finding. You cannot update this attribute with
+     * <code>BatchImportFindings</code> or <code>BatchUpdateFindings</code>. The exception to this is a custom
+     * integration.
      * </p>
      * <p>
-     * When you use the Security Hub console to filter findings by company name, you use this attribute.
-     * </p>
-     * <p>
-     * When you use the Security Hub API to filter findings by company name, you use the
-     * <code>aws/securityhub/CompanyName</code> attribute under <code>ProductFields</code>.
-     * </p>
-     * <p>
-     * Security Hub does not synchronize those two attributes.
+     * When you use the Security Hub console or API to filter findings by company name, you use this attribute.
      * </p>
      * 
      * @param companyName
      *        The name of the company for the product that generated the finding.</p>
      *        <p>
-     *        Security Hub populates this attribute automatically for each finding. You cannot be updated using
-     *        <code>BatchImportFindings</code> or <code>BatchUpdateFindings</code>. The exception to this is when you
-     *        use a custom integration.
+     *        Security Hub populates this attribute automatically for each finding. You cannot update this attribute
+     *        with <code>BatchImportFindings</code> or <code>BatchUpdateFindings</code>. The exception to this is a
+     *        custom integration.
      *        </p>
      *        <p>
-     *        When you use the Security Hub console to filter findings by company name, you use this attribute.
-     *        </p>
-     *        <p>
-     *        When you use the Security Hub API to filter findings by company name, you use the
-     *        <code>aws/securityhub/CompanyName</code> attribute under <code>ProductFields</code>.
-     *        </p>
-     *        <p>
-     *        Security Hub does not synchronize those two attributes.
+     *        When you use the Security Hub console or API to filter findings by company name, you use this attribute.
      */
 
     public void setCompanyName(String companyName) {
@@ -672,36 +602,22 @@ public class AwsSecurityFinding implements Serializable, Cloneable, StructuredPo
      * The name of the company for the product that generated the finding.
      * </p>
      * <p>
-     * Security Hub populates this attribute automatically for each finding. You cannot be updated using
-     * <code>BatchImportFindings</code> or <code>BatchUpdateFindings</code>. The exception to this is when you use a
-     * custom integration.
+     * Security Hub populates this attribute automatically for each finding. You cannot update this attribute with
+     * <code>BatchImportFindings</code> or <code>BatchUpdateFindings</code>. The exception to this is a custom
+     * integration.
      * </p>
      * <p>
-     * When you use the Security Hub console to filter findings by company name, you use this attribute.
-     * </p>
-     * <p>
-     * When you use the Security Hub API to filter findings by company name, you use the
-     * <code>aws/securityhub/CompanyName</code> attribute under <code>ProductFields</code>.
-     * </p>
-     * <p>
-     * Security Hub does not synchronize those two attributes.
+     * When you use the Security Hub console or API to filter findings by company name, you use this attribute.
      * </p>
      * 
      * @return The name of the company for the product that generated the finding.</p>
      *         <p>
-     *         Security Hub populates this attribute automatically for each finding. You cannot be updated using
-     *         <code>BatchImportFindings</code> or <code>BatchUpdateFindings</code>. The exception to this is when you
-     *         use a custom integration.
+     *         Security Hub populates this attribute automatically for each finding. You cannot update this attribute
+     *         with <code>BatchImportFindings</code> or <code>BatchUpdateFindings</code>. The exception to this is a
+     *         custom integration.
      *         </p>
      *         <p>
-     *         When you use the Security Hub console to filter findings by company name, you use this attribute.
-     *         </p>
-     *         <p>
-     *         When you use the Security Hub API to filter findings by company name, you use the
-     *         <code>aws/securityhub/CompanyName</code> attribute under <code>ProductFields</code>.
-     *         </p>
-     *         <p>
-     *         Security Hub does not synchronize those two attributes.
+     *         When you use the Security Hub console or API to filter findings by company name, you use this attribute.
      */
 
     public String getCompanyName() {
@@ -713,37 +629,23 @@ public class AwsSecurityFinding implements Serializable, Cloneable, StructuredPo
      * The name of the company for the product that generated the finding.
      * </p>
      * <p>
-     * Security Hub populates this attribute automatically for each finding. You cannot be updated using
-     * <code>BatchImportFindings</code> or <code>BatchUpdateFindings</code>. The exception to this is when you use a
-     * custom integration.
+     * Security Hub populates this attribute automatically for each finding. You cannot update this attribute with
+     * <code>BatchImportFindings</code> or <code>BatchUpdateFindings</code>. The exception to this is a custom
+     * integration.
      * </p>
      * <p>
-     * When you use the Security Hub console to filter findings by company name, you use this attribute.
-     * </p>
-     * <p>
-     * When you use the Security Hub API to filter findings by company name, you use the
-     * <code>aws/securityhub/CompanyName</code> attribute under <code>ProductFields</code>.
-     * </p>
-     * <p>
-     * Security Hub does not synchronize those two attributes.
+     * When you use the Security Hub console or API to filter findings by company name, you use this attribute.
      * </p>
      * 
      * @param companyName
      *        The name of the company for the product that generated the finding.</p>
      *        <p>
-     *        Security Hub populates this attribute automatically for each finding. You cannot be updated using
-     *        <code>BatchImportFindings</code> or <code>BatchUpdateFindings</code>. The exception to this is when you
-     *        use a custom integration.
+     *        Security Hub populates this attribute automatically for each finding. You cannot update this attribute
+     *        with <code>BatchImportFindings</code> or <code>BatchUpdateFindings</code>. The exception to this is a
+     *        custom integration.
      *        </p>
      *        <p>
-     *        When you use the Security Hub console to filter findings by company name, you use this attribute.
-     *        </p>
-     *        <p>
-     *        When you use the Security Hub API to filter findings by company name, you use the
-     *        <code>aws/securityhub/CompanyName</code> attribute under <code>ProductFields</code>.
-     *        </p>
-     *        <p>
-     *        Security Hub does not synchronize those two attributes.
+     *        When you use the Security Hub console or API to filter findings by company name, you use this attribute.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

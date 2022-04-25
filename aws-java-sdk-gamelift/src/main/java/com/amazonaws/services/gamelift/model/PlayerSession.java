@@ -153,7 +153,7 @@ public class PlayerSession implements Serializable, Cloneable, StructuredPojo {
     private String dnsName;
     /**
      * <p>
-     * Port number for the game session. To connect to a Amazon Web Services server process, an app needs both the IP
+     * Port number for the game session. To connect to a Amazon GameLift server process, an app needs both the IP
      * address and port number.
      * </p>
      */
@@ -1001,13 +1001,13 @@ public class PlayerSession implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Port number for the game session. To connect to a Amazon Web Services server process, an app needs both the IP
+     * Port number for the game session. To connect to a Amazon GameLift server process, an app needs both the IP
      * address and port number.
      * </p>
      * 
      * @param port
-     *        Port number for the game session. To connect to a Amazon Web Services server process, an app needs both
-     *        the IP address and port number.
+     *        Port number for the game session. To connect to a Amazon GameLift server process, an app needs both the IP
+     *        address and port number.
      */
 
     public void setPort(Integer port) {
@@ -1016,12 +1016,12 @@ public class PlayerSession implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Port number for the game session. To connect to a Amazon Web Services server process, an app needs both the IP
+     * Port number for the game session. To connect to a Amazon GameLift server process, an app needs both the IP
      * address and port number.
      * </p>
      * 
-     * @return Port number for the game session. To connect to a Amazon Web Services server process, an app needs both
-     *         the IP address and port number.
+     * @return Port number for the game session. To connect to a Amazon GameLift server process, an app needs both the
+     *         IP address and port number.
      */
 
     public Integer getPort() {
@@ -1030,13 +1030,13 @@ public class PlayerSession implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Port number for the game session. To connect to a Amazon Web Services server process, an app needs both the IP
+     * Port number for the game session. To connect to a Amazon GameLift server process, an app needs both the IP
      * address and port number.
      * </p>
      * 
      * @param port
-     *        Port number for the game session. To connect to a Amazon Web Services server process, an app needs both
-     *        the IP address and port number.
+     *        Port number for the game session. To connect to a Amazon GameLift server process, an app needs both the IP
+     *        address and port number.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

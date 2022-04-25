@@ -42,13 +42,13 @@ public class ArrayValue implements Serializable, Cloneable, StructuredPojo {
     private java.util.List<Boolean> booleanValues;
     /**
      * <p>
-     * An array of integers.
+     * An array of floating-point numbers.
      * </p>
      */
     private java.util.List<Double> doubleValues;
     /**
      * <p>
-     * An array of floating point numbers.
+     * An array of integers.
      * </p>
      */
     private java.util.List<Long> longValues;
@@ -201,10 +201,10 @@ public class ArrayValue implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * An array of integers.
+     * An array of floating-point numbers.
      * </p>
      * 
-     * @return An array of integers.
+     * @return An array of floating-point numbers.
      */
 
     public java.util.List<Double> getDoubleValues() {
@@ -213,11 +213,11 @@ public class ArrayValue implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * An array of integers.
+     * An array of floating-point numbers.
      * </p>
      * 
      * @param doubleValues
-     *        An array of integers.
+     *        An array of floating-point numbers.
      */
 
     public void setDoubleValues(java.util.Collection<Double> doubleValues) {
@@ -231,7 +231,7 @@ public class ArrayValue implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * An array of integers.
+     * An array of floating-point numbers.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -240,7 +240,7 @@ public class ArrayValue implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param doubleValues
-     *        An array of integers.
+     *        An array of floating-point numbers.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -256,11 +256,11 @@ public class ArrayValue implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * An array of integers.
+     * An array of floating-point numbers.
      * </p>
      * 
      * @param doubleValues
-     *        An array of integers.
+     *        An array of floating-point numbers.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -271,10 +271,10 @@ public class ArrayValue implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * An array of floating point numbers.
+     * An array of integers.
      * </p>
      * 
-     * @return An array of floating point numbers.
+     * @return An array of integers.
      */
 
     public java.util.List<Long> getLongValues() {
@@ -283,11 +283,11 @@ public class ArrayValue implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * An array of floating point numbers.
+     * An array of integers.
      * </p>
      * 
      * @param longValues
-     *        An array of floating point numbers.
+     *        An array of integers.
      */
 
     public void setLongValues(java.util.Collection<Long> longValues) {
@@ -301,7 +301,7 @@ public class ArrayValue implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * An array of floating point numbers.
+     * An array of integers.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -310,7 +310,7 @@ public class ArrayValue implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param longValues
-     *        An array of floating point numbers.
+     *        An array of integers.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -326,11 +326,11 @@ public class ArrayValue implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * An array of floating point numbers.
+     * An array of integers.
      * </p>
      * 
      * @param longValues
-     *        An array of floating point numbers.
+     *        An array of integers.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -3692,6 +3692,37 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
+     * Searches users in an Amazon Connect instance, with optional filtering.
+     * </p>
+     * 
+     * @param searchUsersRequest
+     * @return A Java Future containing the result of the SearchUsers operation returned by the service.
+     * @sample AmazonConnectAsync.SearchUsers
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/SearchUsers" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<SearchUsersResult> searchUsersAsync(SearchUsersRequest searchUsersRequest);
+
+    /**
+     * <p>
+     * Searches users in an Amazon Connect instance, with optional filtering.
+     * </p>
+     * 
+     * @param searchUsersRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the SearchUsers operation returned by the service.
+     * @sample AmazonConnectAsyncHandler.SearchUsers
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/SearchUsers" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<SearchUsersResult> searchUsersAsync(SearchUsersRequest searchUsersRequest,
+            com.amazonaws.handlers.AsyncHandler<SearchUsersRequest, SearchUsersResult> asyncHandler);
+
+    /**
+     * <p>
      * Searches for vocabularies within a specific Amazon Connect instance using <code>State</code>,
      * <code>NameStartsWith</code>, and <code>LanguageCode</code>.
      * </p>

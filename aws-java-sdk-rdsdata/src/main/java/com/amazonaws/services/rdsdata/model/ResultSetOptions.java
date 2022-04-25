@@ -43,6 +43,14 @@ public class ResultSetOptions implements Serializable, Cloneable, StructuredPojo
      * </important>
      */
     private String decimalReturnType;
+    /**
+     * <p>
+     * A value that indicates how a field of <code>LONG</code> type is represented. Allowed values are <code>LONG</code>
+     * and <code>STRING</code>. The default is <code>LONG</code>. Specify <code>STRING</code> if the length or precision
+     * of numeric values might cause truncation or rounding errors.
+     * </p>
+     */
+    private String longReturnType;
 
     /**
      * <p>
@@ -168,6 +176,81 @@ public class ResultSetOptions implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * <p>
+     * A value that indicates how a field of <code>LONG</code> type is represented. Allowed values are <code>LONG</code>
+     * and <code>STRING</code>. The default is <code>LONG</code>. Specify <code>STRING</code> if the length or precision
+     * of numeric values might cause truncation or rounding errors.
+     * </p>
+     * 
+     * @param longReturnType
+     *        A value that indicates how a field of <code>LONG</code> type is represented. Allowed values are
+     *        <code>LONG</code> and <code>STRING</code>. The default is <code>LONG</code>. Specify <code>STRING</code>
+     *        if the length or precision of numeric values might cause truncation or rounding errors.
+     * @see LongReturnType
+     */
+
+    public void setLongReturnType(String longReturnType) {
+        this.longReturnType = longReturnType;
+    }
+
+    /**
+     * <p>
+     * A value that indicates how a field of <code>LONG</code> type is represented. Allowed values are <code>LONG</code>
+     * and <code>STRING</code>. The default is <code>LONG</code>. Specify <code>STRING</code> if the length or precision
+     * of numeric values might cause truncation or rounding errors.
+     * </p>
+     * 
+     * @return A value that indicates how a field of <code>LONG</code> type is represented. Allowed values are
+     *         <code>LONG</code> and <code>STRING</code>. The default is <code>LONG</code>. Specify <code>STRING</code>
+     *         if the length or precision of numeric values might cause truncation or rounding errors.
+     * @see LongReturnType
+     */
+
+    public String getLongReturnType() {
+        return this.longReturnType;
+    }
+
+    /**
+     * <p>
+     * A value that indicates how a field of <code>LONG</code> type is represented. Allowed values are <code>LONG</code>
+     * and <code>STRING</code>. The default is <code>LONG</code>. Specify <code>STRING</code> if the length or precision
+     * of numeric values might cause truncation or rounding errors.
+     * </p>
+     * 
+     * @param longReturnType
+     *        A value that indicates how a field of <code>LONG</code> type is represented. Allowed values are
+     *        <code>LONG</code> and <code>STRING</code>. The default is <code>LONG</code>. Specify <code>STRING</code>
+     *        if the length or precision of numeric values might cause truncation or rounding errors.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see LongReturnType
+     */
+
+    public ResultSetOptions withLongReturnType(String longReturnType) {
+        setLongReturnType(longReturnType);
+        return this;
+    }
+
+    /**
+     * <p>
+     * A value that indicates how a field of <code>LONG</code> type is represented. Allowed values are <code>LONG</code>
+     * and <code>STRING</code>. The default is <code>LONG</code>. Specify <code>STRING</code> if the length or precision
+     * of numeric values might cause truncation or rounding errors.
+     * </p>
+     * 
+     * @param longReturnType
+     *        A value that indicates how a field of <code>LONG</code> type is represented. Allowed values are
+     *        <code>LONG</code> and <code>STRING</code>. The default is <code>LONG</code>. Specify <code>STRING</code>
+     *        if the length or precision of numeric values might cause truncation or rounding errors.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see LongReturnType
+     */
+
+    public ResultSetOptions withLongReturnType(LongReturnType longReturnType) {
+        this.longReturnType = longReturnType.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -180,7 +263,9 @@ public class ResultSetOptions implements Serializable, Cloneable, StructuredPojo
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getDecimalReturnType() != null)
-            sb.append("DecimalReturnType: ").append(getDecimalReturnType());
+            sb.append("DecimalReturnType: ").append(getDecimalReturnType()).append(",");
+        if (getLongReturnType() != null)
+            sb.append("LongReturnType: ").append(getLongReturnType());
         sb.append("}");
         return sb.toString();
     }
@@ -199,6 +284,10 @@ public class ResultSetOptions implements Serializable, Cloneable, StructuredPojo
             return false;
         if (other.getDecimalReturnType() != null && other.getDecimalReturnType().equals(this.getDecimalReturnType()) == false)
             return false;
+        if (other.getLongReturnType() == null ^ this.getLongReturnType() == null)
+            return false;
+        if (other.getLongReturnType() != null && other.getLongReturnType().equals(this.getLongReturnType()) == false)
+            return false;
         return true;
     }
 
@@ -208,6 +297,7 @@ public class ResultSetOptions implements Serializable, Cloneable, StructuredPojo
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getDecimalReturnType() == null) ? 0 : getDecimalReturnType().hashCode());
+        hashCode = prime * hashCode + ((getLongReturnType() == null) ? 0 : getLongReturnType().hashCode());
         return hashCode;
     }
 

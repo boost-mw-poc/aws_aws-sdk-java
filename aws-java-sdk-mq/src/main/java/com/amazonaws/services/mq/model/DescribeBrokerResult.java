@@ -25,6 +25,12 @@ public class DescribeBrokerResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
+     * A list of actions required for a broker.
+     * </p>
+     */
+    private java.util.List<ActionRequired> actionsRequired;
+    /**
+     * <p>
      * The authentication strategy used to secure the broker. The default is SIMPLE.
      * </p>
      */
@@ -200,6 +206,76 @@ public class DescribeBrokerResult extends com.amazonaws.AmazonWebServiceResult<c
      * </p>
      */
     private java.util.List<UserSummary> users;
+
+    /**
+     * <p>
+     * A list of actions required for a broker.
+     * </p>
+     * 
+     * @return A list of actions required for a broker.
+     */
+
+    public java.util.List<ActionRequired> getActionsRequired() {
+        return actionsRequired;
+    }
+
+    /**
+     * <p>
+     * A list of actions required for a broker.
+     * </p>
+     * 
+     * @param actionsRequired
+     *        A list of actions required for a broker.
+     */
+
+    public void setActionsRequired(java.util.Collection<ActionRequired> actionsRequired) {
+        if (actionsRequired == null) {
+            this.actionsRequired = null;
+            return;
+        }
+
+        this.actionsRequired = new java.util.ArrayList<ActionRequired>(actionsRequired);
+    }
+
+    /**
+     * <p>
+     * A list of actions required for a broker.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setActionsRequired(java.util.Collection)} or {@link #withActionsRequired(java.util.Collection)} if you
+     * want to override the existing values.
+     * </p>
+     * 
+     * @param actionsRequired
+     *        A list of actions required for a broker.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeBrokerResult withActionsRequired(ActionRequired... actionsRequired) {
+        if (this.actionsRequired == null) {
+            setActionsRequired(new java.util.ArrayList<ActionRequired>(actionsRequired.length));
+        }
+        for (ActionRequired ele : actionsRequired) {
+            this.actionsRequired.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * A list of actions required for a broker.
+     * </p>
+     * 
+     * @param actionsRequired
+     *        A list of actions required for a broker.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeBrokerResult withActionsRequired(java.util.Collection<ActionRequired> actionsRequired) {
+        setActionsRequired(actionsRequired);
+        return this;
+    }
 
     /**
      * <p>
@@ -1717,6 +1793,8 @@ public class DescribeBrokerResult extends com.amazonaws.AmazonWebServiceResult<c
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getActionsRequired() != null)
+            sb.append("ActionsRequired: ").append(getActionsRequired()).append(",");
         if (getAuthenticationStrategy() != null)
             sb.append("AuthenticationStrategy: ").append(getAuthenticationStrategy()).append(",");
         if (getAutoMinorVersionUpgrade() != null)
@@ -1787,6 +1865,10 @@ public class DescribeBrokerResult extends com.amazonaws.AmazonWebServiceResult<c
         if (obj instanceof DescribeBrokerResult == false)
             return false;
         DescribeBrokerResult other = (DescribeBrokerResult) obj;
+        if (other.getActionsRequired() == null ^ this.getActionsRequired() == null)
+            return false;
+        if (other.getActionsRequired() != null && other.getActionsRequired().equals(this.getActionsRequired()) == false)
+            return false;
         if (other.getAuthenticationStrategy() == null ^ this.getAuthenticationStrategy() == null)
             return false;
         if (other.getAuthenticationStrategy() != null && other.getAuthenticationStrategy().equals(this.getAuthenticationStrategy()) == false)
@@ -1908,6 +1990,7 @@ public class DescribeBrokerResult extends com.amazonaws.AmazonWebServiceResult<c
         final int prime = 31;
         int hashCode = 1;
 
+        hashCode = prime * hashCode + ((getActionsRequired() == null) ? 0 : getActionsRequired().hashCode());
         hashCode = prime * hashCode + ((getAuthenticationStrategy() == null) ? 0 : getAuthenticationStrategy().hashCode());
         hashCode = prime * hashCode + ((getAutoMinorVersionUpgrade() == null) ? 0 : getAutoMinorVersionUpgrade().hashCode());
         hashCode = prime * hashCode + ((getBrokerArn() == null) ? 0 : getBrokerArn().hashCode());

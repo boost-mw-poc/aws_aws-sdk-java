@@ -43,8 +43,8 @@ public class CreateScriptRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <p>
      * The location of the Amazon S3 bucket where a zipped file containing your Realtime scripts is stored. The storage
      * location must specify the Amazon S3 bucket name, the zip file name (the "key"), and a role ARN that allows Amazon
-     * Web Services to access the Amazon S3 storage location. The S3 bucket must be in the same Region where you want to
-     * create a new script. By default, Amazon Web Services uploads the latest version of the zip file; if you have S3
+     * GameLift to access the Amazon S3 storage location. The S3 bucket must be in the same Region where you want to
+     * create a new script. By default, Amazon GameLift uploads the latest version of the zip file; if you have S3
      * object versioning turned on, you can use the <code>ObjectVersion</code> parameter to specify an earlier version.
      * </p>
      */
@@ -170,18 +170,18 @@ public class CreateScriptRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <p>
      * The location of the Amazon S3 bucket where a zipped file containing your Realtime scripts is stored. The storage
      * location must specify the Amazon S3 bucket name, the zip file name (the "key"), and a role ARN that allows Amazon
-     * Web Services to access the Amazon S3 storage location. The S3 bucket must be in the same Region where you want to
-     * create a new script. By default, Amazon Web Services uploads the latest version of the zip file; if you have S3
+     * GameLift to access the Amazon S3 storage location. The S3 bucket must be in the same Region where you want to
+     * create a new script. By default, Amazon GameLift uploads the latest version of the zip file; if you have S3
      * object versioning turned on, you can use the <code>ObjectVersion</code> parameter to specify an earlier version.
      * </p>
      * 
      * @param storageLocation
      *        The location of the Amazon S3 bucket where a zipped file containing your Realtime scripts is stored. The
      *        storage location must specify the Amazon S3 bucket name, the zip file name (the "key"), and a role ARN
-     *        that allows Amazon Web Services to access the Amazon S3 storage location. The S3 bucket must be in the
-     *        same Region where you want to create a new script. By default, Amazon Web Services uploads the latest
-     *        version of the zip file; if you have S3 object versioning turned on, you can use the
-     *        <code>ObjectVersion</code> parameter to specify an earlier version.
+     *        that allows Amazon GameLift to access the Amazon S3 storage location. The S3 bucket must be in the same
+     *        Region where you want to create a new script. By default, Amazon GameLift uploads the latest version of
+     *        the zip file; if you have S3 object versioning turned on, you can use the <code>ObjectVersion</code>
+     *        parameter to specify an earlier version.
      */
 
     public void setStorageLocation(S3Location storageLocation) {
@@ -192,17 +192,17 @@ public class CreateScriptRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <p>
      * The location of the Amazon S3 bucket where a zipped file containing your Realtime scripts is stored. The storage
      * location must specify the Amazon S3 bucket name, the zip file name (the "key"), and a role ARN that allows Amazon
-     * Web Services to access the Amazon S3 storage location. The S3 bucket must be in the same Region where you want to
-     * create a new script. By default, Amazon Web Services uploads the latest version of the zip file; if you have S3
+     * GameLift to access the Amazon S3 storage location. The S3 bucket must be in the same Region where you want to
+     * create a new script. By default, Amazon GameLift uploads the latest version of the zip file; if you have S3
      * object versioning turned on, you can use the <code>ObjectVersion</code> parameter to specify an earlier version.
      * </p>
      * 
      * @return The location of the Amazon S3 bucket where a zipped file containing your Realtime scripts is stored. The
      *         storage location must specify the Amazon S3 bucket name, the zip file name (the "key"), and a role ARN
-     *         that allows Amazon Web Services to access the Amazon S3 storage location. The S3 bucket must be in the
-     *         same Region where you want to create a new script. By default, Amazon Web Services uploads the latest
-     *         version of the zip file; if you have S3 object versioning turned on, you can use the
-     *         <code>ObjectVersion</code> parameter to specify an earlier version.
+     *         that allows Amazon GameLift to access the Amazon S3 storage location. The S3 bucket must be in the same
+     *         Region where you want to create a new script. By default, Amazon GameLift uploads the latest version of
+     *         the zip file; if you have S3 object versioning turned on, you can use the <code>ObjectVersion</code>
+     *         parameter to specify an earlier version.
      */
 
     public S3Location getStorageLocation() {
@@ -213,18 +213,18 @@ public class CreateScriptRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <p>
      * The location of the Amazon S3 bucket where a zipped file containing your Realtime scripts is stored. The storage
      * location must specify the Amazon S3 bucket name, the zip file name (the "key"), and a role ARN that allows Amazon
-     * Web Services to access the Amazon S3 storage location. The S3 bucket must be in the same Region where you want to
-     * create a new script. By default, Amazon Web Services uploads the latest version of the zip file; if you have S3
+     * GameLift to access the Amazon S3 storage location. The S3 bucket must be in the same Region where you want to
+     * create a new script. By default, Amazon GameLift uploads the latest version of the zip file; if you have S3
      * object versioning turned on, you can use the <code>ObjectVersion</code> parameter to specify an earlier version.
      * </p>
      * 
      * @param storageLocation
      *        The location of the Amazon S3 bucket where a zipped file containing your Realtime scripts is stored. The
      *        storage location must specify the Amazon S3 bucket name, the zip file name (the "key"), and a role ARN
-     *        that allows Amazon Web Services to access the Amazon S3 storage location. The S3 bucket must be in the
-     *        same Region where you want to create a new script. By default, Amazon Web Services uploads the latest
-     *        version of the zip file; if you have S3 object versioning turned on, you can use the
-     *        <code>ObjectVersion</code> parameter to specify an earlier version.
+     *        that allows Amazon GameLift to access the Amazon S3 storage location. The S3 bucket must be in the same
+     *        Region where you want to create a new script. By default, Amazon GameLift uploads the latest version of
+     *        the zip file; if you have S3 object versioning turned on, you can use the <code>ObjectVersion</code>
+     *        parameter to specify an earlier version.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

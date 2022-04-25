@@ -34,7 +34,7 @@ public class UpdateGameServerGroupRequest extends com.amazonaws.AmazonWebService
     /**
      * <p>
      * The Amazon Resource Name (<a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>)
-     * for an IAM role that allows Amazon Web Services to access your Amazon EC2 Auto Scaling groups.
+     * for an IAM role that allows Amazon GameLift to access your Amazon EC2 Auto Scaling groups.
      * </p>
      */
     private String roleArn;
@@ -138,13 +138,13 @@ public class UpdateGameServerGroupRequest extends com.amazonaws.AmazonWebService
     /**
      * <p>
      * The Amazon Resource Name (<a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>)
-     * for an IAM role that allows Amazon Web Services to access your Amazon EC2 Auto Scaling groups.
+     * for an IAM role that allows Amazon GameLift to access your Amazon EC2 Auto Scaling groups.
      * </p>
      * 
      * @param roleArn
      *        The Amazon Resource Name (<a
      *        href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>) for an IAM role that
-     *        allows Amazon Web Services to access your Amazon EC2 Auto Scaling groups.
+     *        allows Amazon GameLift to access your Amazon EC2 Auto Scaling groups.
      */
 
     public void setRoleArn(String roleArn) {
@@ -154,12 +154,12 @@ public class UpdateGameServerGroupRequest extends com.amazonaws.AmazonWebService
     /**
      * <p>
      * The Amazon Resource Name (<a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>)
-     * for an IAM role that allows Amazon Web Services to access your Amazon EC2 Auto Scaling groups.
+     * for an IAM role that allows Amazon GameLift to access your Amazon EC2 Auto Scaling groups.
      * </p>
      * 
      * @return The Amazon Resource Name (<a
      *         href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>) for an IAM role that
-     *         allows Amazon Web Services to access your Amazon EC2 Auto Scaling groups.
+     *         allows Amazon GameLift to access your Amazon EC2 Auto Scaling groups.
      */
 
     public String getRoleArn() {
@@ -169,13 +169,13 @@ public class UpdateGameServerGroupRequest extends com.amazonaws.AmazonWebService
     /**
      * <p>
      * The Amazon Resource Name (<a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>)
-     * for an IAM role that allows Amazon Web Services to access your Amazon EC2 Auto Scaling groups.
+     * for an IAM role that allows Amazon GameLift to access your Amazon EC2 Auto Scaling groups.
      * </p>
      * 
      * @param roleArn
      *        The Amazon Resource Name (<a
      *        href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>) for an IAM role that
-     *        allows Amazon Web Services to access your Amazon EC2 Auto Scaling groups.
+     *        allows Amazon GameLift to access your Amazon EC2 Auto Scaling groups.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
