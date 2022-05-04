@@ -1,3 +1,20 @@
+# __1.12.213__ __2022-05-04__
+## __AWS Backup__
+  - ### Features
+    - Adds support to 2 new filters about job complete time for 3 list jobs APIs in AWS Backup
+
+## __AWS IoT Secure Tunneling__
+  - ### Features
+    - This release introduces a new API RotateTunnelAccessToken that allow revoking the existing tokens and generate new tokens
+
+## __Amazon Lightsail__
+  - ### Features
+    - Documentation updates for Lightsail
+
+## __Amazon Simple Systems Manager (SSM)__
+  - ### Features
+    - This release adds the TargetMaps parameter in SSM State Manager API.
+
 # __1.12.212__ __2022-05-03__
 ## __Amazon Elastic Compute Cloud__
   - ### Features

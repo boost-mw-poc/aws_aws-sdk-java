@@ -358,6 +358,9 @@ public class AWSSimpleSystemsManagementClient extends AmazonWebServiceClient imp
                             new JsonErrorShapeMetadata().withErrorCode("InvalidAutomationSignalException").withExceptionUnmarshaller(
                                     com.amazonaws.services.simplesystemsmanagement.model.transform.InvalidAutomationSignalExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("InvalidTargetMaps").withExceptionUnmarshaller(
+                                    com.amazonaws.services.simplesystemsmanagement.model.transform.InvalidTargetMapsExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("InvalidDocumentType").withExceptionUnmarshaller(
                                     com.amazonaws.services.simplesystemsmanagement.model.transform.InvalidDocumentTypeExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
@@ -1220,6 +1223,8 @@ public class AWSSimpleSystemsManagementClient extends AmazonWebServiceClient imp
      *         have permission to perform the operation.
      * @throws InvalidScheduleException
      *         The schedule is invalid. Verify your cron or rate expression and try again.
+     * @throws InvalidTargetMapsException
+     *         TargetMap parameter isn't valid.
      * @sample AWSSimpleSystemsManagement.CreateAssociation
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/CreateAssociation" target="_top">AWS API
      *      Documentation</a>
@@ -1333,6 +1338,8 @@ public class AWSSimpleSystemsManagementClient extends AmazonWebServiceClient imp
      *         have permission to perform the operation.
      * @throws InvalidScheduleException
      *         The schedule is invalid. Verify your cron or rate expression and try again.
+     * @throws InvalidTargetMapsException
+     *         TargetMap parameter isn't valid.
      * @sample AWSSimpleSystemsManagement.CreateAssociationBatch
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/CreateAssociationBatch" target="_top">AWS API
      *      Documentation</a>
@@ -9660,6 +9667,8 @@ public class AWSSimpleSystemsManagementClient extends AmazonWebServiceClient imp
      * @throws AssociationVersionLimitExceededException
      *         You have reached the maximum number versions allowed for an association. Each association has a limit of
      *         1,000 versions.
+     * @throws InvalidTargetMapsException
+     *         TargetMap parameter isn't valid.
      * @sample AWSSimpleSystemsManagement.UpdateAssociation
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/UpdateAssociation" target="_top">AWS API
      *      Documentation</a>
