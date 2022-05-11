@@ -74,6 +74,12 @@ public class VpcEndpointConnection implements Serializable, Cloneable {
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> gatewayLoadBalancerArns;
+    /**
+     * <p>
+     * The IP address type for the endpoint.
+     * </p>
+     */
+    private String ipAddressType;
 
     /**
      * <p>
@@ -514,6 +520,65 @@ public class VpcEndpointConnection implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * The IP address type for the endpoint.
+     * </p>
+     * 
+     * @param ipAddressType
+     *        The IP address type for the endpoint.
+     * @see IpAddressType
+     */
+
+    public void setIpAddressType(String ipAddressType) {
+        this.ipAddressType = ipAddressType;
+    }
+
+    /**
+     * <p>
+     * The IP address type for the endpoint.
+     * </p>
+     * 
+     * @return The IP address type for the endpoint.
+     * @see IpAddressType
+     */
+
+    public String getIpAddressType() {
+        return this.ipAddressType;
+    }
+
+    /**
+     * <p>
+     * The IP address type for the endpoint.
+     * </p>
+     * 
+     * @param ipAddressType
+     *        The IP address type for the endpoint.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see IpAddressType
+     */
+
+    public VpcEndpointConnection withIpAddressType(String ipAddressType) {
+        setIpAddressType(ipAddressType);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The IP address type for the endpoint.
+     * </p>
+     * 
+     * @param ipAddressType
+     *        The IP address type for the endpoint.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see IpAddressType
+     */
+
+    public VpcEndpointConnection withIpAddressType(IpAddressType ipAddressType) {
+        this.ipAddressType = ipAddressType.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -540,7 +605,9 @@ public class VpcEndpointConnection implements Serializable, Cloneable {
         if (getNetworkLoadBalancerArns() != null)
             sb.append("NetworkLoadBalancerArns: ").append(getNetworkLoadBalancerArns()).append(",");
         if (getGatewayLoadBalancerArns() != null)
-            sb.append("GatewayLoadBalancerArns: ").append(getGatewayLoadBalancerArns());
+            sb.append("GatewayLoadBalancerArns: ").append(getGatewayLoadBalancerArns()).append(",");
+        if (getIpAddressType() != null)
+            sb.append("IpAddressType: ").append(getIpAddressType());
         sb.append("}");
         return sb.toString();
     }
@@ -587,6 +654,10 @@ public class VpcEndpointConnection implements Serializable, Cloneable {
             return false;
         if (other.getGatewayLoadBalancerArns() != null && other.getGatewayLoadBalancerArns().equals(this.getGatewayLoadBalancerArns()) == false)
             return false;
+        if (other.getIpAddressType() == null ^ this.getIpAddressType() == null)
+            return false;
+        if (other.getIpAddressType() != null && other.getIpAddressType().equals(this.getIpAddressType()) == false)
+            return false;
         return true;
     }
 
@@ -603,6 +674,7 @@ public class VpcEndpointConnection implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getDnsEntries() == null) ? 0 : getDnsEntries().hashCode());
         hashCode = prime * hashCode + ((getNetworkLoadBalancerArns() == null) ? 0 : getNetworkLoadBalancerArns().hashCode());
         hashCode = prime * hashCode + ((getGatewayLoadBalancerArns() == null) ? 0 : getGatewayLoadBalancerArns().hashCode());
+        hashCode = prime * hashCode + ((getIpAddressType() == null) ? 0 : getIpAddressType().hashCode());
         return hashCode;
     }
 

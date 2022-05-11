@@ -100,6 +100,10 @@ public class VpcEndpointConnectionStaxUnmarshaller implements Unmarshaller<VpcEn
                     continue;
                 }
 
+                if (context.testExpression("ipAddressType", targetDepth)) {
+                    vpcEndpointConnection.setIpAddressType(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return vpcEndpointConnection;
