@@ -22,7 +22,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * The input properties for training a document classifier.
  * </p>
  * <p>
- * For more information on how the input file is formatted, see <a>how-document-classification-training-data</a>.
+ * For more information on how the input file is formatted, see <a>prep-classifier-data</a>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/comprehend-2017-11-27/DocumentClassifierInputDataConfig"

@@ -28,7 +28,7 @@ public class BatchDetectKeyPhrasesRequest extends com.amazonaws.AmazonWebService
     /**
      * <p>
      * A list containing the text of the input documents. The list can contain a maximum of 25 documents. Each document
-     * must contain fewer that 5,000 bytes of UTF-8 encoded characters.
+     * must contain fewer than 5,000 bytes of UTF-8 encoded characters.
      * </p>
      */
     private java.util.List<String> textList;
@@ -43,11 +43,11 @@ public class BatchDetectKeyPhrasesRequest extends com.amazonaws.AmazonWebService
     /**
      * <p>
      * A list containing the text of the input documents. The list can contain a maximum of 25 documents. Each document
-     * must contain fewer that 5,000 bytes of UTF-8 encoded characters.
+     * must contain fewer than 5,000 bytes of UTF-8 encoded characters.
      * </p>
      * 
      * @return A list containing the text of the input documents. The list can contain a maximum of 25 documents. Each
-     *         document must contain fewer that 5,000 bytes of UTF-8 encoded characters.
+     *         document must contain fewer than 5,000 bytes of UTF-8 encoded characters.
      */
 
     public java.util.List<String> getTextList() {
@@ -57,12 +57,12 @@ public class BatchDetectKeyPhrasesRequest extends com.amazonaws.AmazonWebService
     /**
      * <p>
      * A list containing the text of the input documents. The list can contain a maximum of 25 documents. Each document
-     * must contain fewer that 5,000 bytes of UTF-8 encoded characters.
+     * must contain fewer than 5,000 bytes of UTF-8 encoded characters.
      * </p>
      * 
      * @param textList
      *        A list containing the text of the input documents. The list can contain a maximum of 25 documents. Each
-     *        document must contain fewer that 5,000 bytes of UTF-8 encoded characters.
+     *        document must contain fewer than 5,000 bytes of UTF-8 encoded characters.
      */
 
     public void setTextList(java.util.Collection<String> textList) {
@@ -77,7 +77,7 @@ public class BatchDetectKeyPhrasesRequest extends com.amazonaws.AmazonWebService
     /**
      * <p>
      * A list containing the text of the input documents. The list can contain a maximum of 25 documents. Each document
-     * must contain fewer that 5,000 bytes of UTF-8 encoded characters.
+     * must contain fewer than 5,000 bytes of UTF-8 encoded characters.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -87,7 +87,7 @@ public class BatchDetectKeyPhrasesRequest extends com.amazonaws.AmazonWebService
      * 
      * @param textList
      *        A list containing the text of the input documents. The list can contain a maximum of 25 documents. Each
-     *        document must contain fewer that 5,000 bytes of UTF-8 encoded characters.
+     *        document must contain fewer than 5,000 bytes of UTF-8 encoded characters.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -104,12 +104,12 @@ public class BatchDetectKeyPhrasesRequest extends com.amazonaws.AmazonWebService
     /**
      * <p>
      * A list containing the text of the input documents. The list can contain a maximum of 25 documents. Each document
-     * must contain fewer that 5,000 bytes of UTF-8 encoded characters.
+     * must contain fewer than 5,000 bytes of UTF-8 encoded characters.
      * </p>
      * 
      * @param textList
      *        A list containing the text of the input documents. The list can contain a maximum of 25 documents. Each
-     *        document must contain fewer that 5,000 bytes of UTF-8 encoded characters.
+     *        document must contain fewer than 5,000 bytes of UTF-8 encoded characters.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

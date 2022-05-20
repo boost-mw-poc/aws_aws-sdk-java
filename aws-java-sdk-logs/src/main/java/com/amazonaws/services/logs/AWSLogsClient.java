@@ -375,7 +375,7 @@ public class AWSLogsClient extends AmazonWebServiceClient implements AWSLogs {
      * @throws ResourceNotFoundException
      *         The specified resource does not exist.
      * @throws OperationAbortedException
-     *         Multiple requests to update the same resource were in conflict.
+     *         Multiple concurrent requests to update the same resource were in conflict.
      * @throws ServiceUnavailableException
      *         The service cannot complete the request.
      * @sample AWSLogs.AssociateKmsKey
@@ -498,6 +498,15 @@ public class AWSLogsClient extends AmazonWebServiceClient implements AWSLogs {
      * you perform a <code>CreateExportTask</code> operation, you must use credentials that have permission to write to
      * the S3 bucket that you specify as the destination.
      * </p>
+     * <important>
+     * <p>
+     * Exporting log data to Amazon S3 buckets that are encrypted by KMS is not supported. Exporting log data to Amazon
+     * S3 buckets that have S3 Object Lock enabled with a retention period is not supported.
+     * </p>
+     * <p>
+     * Exporting to S3 buckets that are encrypted with AES-256 is supported.
+     * </p>
+     * </important>
      * <p>
      * This is an asynchronous call. If all the required information is provided, this operation initiates an export
      * task and responds with the ID of the task. After the task has started, you can use <a
@@ -512,10 +521,12 @@ public class AWSLogsClient extends AmazonWebServiceClient implements AWSLogs {
      * data for each export task, you can specify a prefix to be used as the Amazon S3 key prefix for all exported
      * objects.
      * </p>
+     * <note>
      * <p>
-     * Exporting to S3 buckets that are encrypted with AES-256 is supported. Exporting to S3 buckets encrypted with
-     * SSE-KMS is not supported.
+     * Time-based sorting on chunks of log data inside an exported file is not guaranteed. You can sort the exported log
+     * fild data by using Linux utilities.
      * </p>
+     * </note>
      * 
      * @param createExportTaskRequest
      * @return Result of the CreateExportTask operation returned by the service.
@@ -524,7 +535,7 @@ public class AWSLogsClient extends AmazonWebServiceClient implements AWSLogs {
      * @throws LimitExceededException
      *         You have reached the maximum number of resources that can be created.
      * @throws OperationAbortedException
-     *         Multiple requests to update the same resource were in conflict.
+     *         Multiple concurrent requests to update the same resource were in conflict.
      * @throws ServiceUnavailableException
      *         The service cannot complete the request.
      * @throws ResourceNotFoundException
@@ -636,7 +647,7 @@ public class AWSLogsClient extends AmazonWebServiceClient implements AWSLogs {
      * @throws LimitExceededException
      *         You have reached the maximum number of resources that can be created.
      * @throws OperationAbortedException
-     *         Multiple requests to update the same resource were in conflict.
+     *         Multiple concurrent requests to update the same resource were in conflict.
      * @throws ServiceUnavailableException
      *         The service cannot complete the request.
      * @sample AWSLogs.CreateLogGroup
@@ -788,7 +799,7 @@ public class AWSLogsClient extends AmazonWebServiceClient implements AWSLogs {
      * @throws ResourceNotFoundException
      *         The specified resource does not exist.
      * @throws OperationAbortedException
-     *         Multiple requests to update the same resource were in conflict.
+     *         Multiple concurrent requests to update the same resource were in conflict.
      * @throws ServiceUnavailableException
      *         The service cannot complete the request.
      * @sample AWSLogs.DeleteDestination
@@ -852,7 +863,7 @@ public class AWSLogsClient extends AmazonWebServiceClient implements AWSLogs {
      * @throws ResourceNotFoundException
      *         The specified resource does not exist.
      * @throws OperationAbortedException
-     *         Multiple requests to update the same resource were in conflict.
+     *         Multiple concurrent requests to update the same resource were in conflict.
      * @throws ServiceUnavailableException
      *         The service cannot complete the request.
      * @sample AWSLogs.DeleteLogGroup
@@ -916,7 +927,7 @@ public class AWSLogsClient extends AmazonWebServiceClient implements AWSLogs {
      * @throws ResourceNotFoundException
      *         The specified resource does not exist.
      * @throws OperationAbortedException
-     *         Multiple requests to update the same resource were in conflict.
+     *         Multiple concurrent requests to update the same resource were in conflict.
      * @throws ServiceUnavailableException
      *         The service cannot complete the request.
      * @sample AWSLogs.DeleteLogStream
@@ -979,7 +990,7 @@ public class AWSLogsClient extends AmazonWebServiceClient implements AWSLogs {
      * @throws ResourceNotFoundException
      *         The specified resource does not exist.
      * @throws OperationAbortedException
-     *         Multiple requests to update the same resource were in conflict.
+     *         Multiple concurrent requests to update the same resource were in conflict.
      * @throws ServiceUnavailableException
      *         The service cannot complete the request.
      * @sample AWSLogs.DeleteMetricFilter
@@ -1176,7 +1187,7 @@ public class AWSLogsClient extends AmazonWebServiceClient implements AWSLogs {
      * @throws ResourceNotFoundException
      *         The specified resource does not exist.
      * @throws OperationAbortedException
-     *         Multiple requests to update the same resource were in conflict.
+     *         Multiple concurrent requests to update the same resource were in conflict.
      * @throws ServiceUnavailableException
      *         The service cannot complete the request.
      * @sample AWSLogs.DeleteRetentionPolicy
@@ -1240,7 +1251,7 @@ public class AWSLogsClient extends AmazonWebServiceClient implements AWSLogs {
      * @throws ResourceNotFoundException
      *         The specified resource does not exist.
      * @throws OperationAbortedException
-     *         Multiple requests to update the same resource were in conflict.
+     *         Multiple concurrent requests to update the same resource were in conflict.
      * @throws ServiceUnavailableException
      *         The service cannot complete the request.
      * @sample AWSLogs.DeleteSubscriptionFilter
@@ -1891,7 +1902,7 @@ public class AWSLogsClient extends AmazonWebServiceClient implements AWSLogs {
      * @throws ResourceNotFoundException
      *         The specified resource does not exist.
      * @throws OperationAbortedException
-     *         Multiple requests to update the same resource were in conflict.
+     *         Multiple concurrent requests to update the same resource were in conflict.
      * @throws ServiceUnavailableException
      *         The service cannot complete the request.
      * @sample AWSLogs.DisassociateKmsKey
@@ -2385,7 +2396,7 @@ public class AWSLogsClient extends AmazonWebServiceClient implements AWSLogs {
      * @throws InvalidParameterException
      *         A parameter is specified incorrectly.
      * @throws OperationAbortedException
-     *         Multiple requests to update the same resource were in conflict.
+     *         Multiple concurrent requests to update the same resource were in conflict.
      * @throws ServiceUnavailableException
      *         The service cannot complete the request.
      * @sample AWSLogs.PutDestination
@@ -2453,7 +2464,7 @@ public class AWSLogsClient extends AmazonWebServiceClient implements AWSLogs {
      * @throws InvalidParameterException
      *         A parameter is specified incorrectly.
      * @throws OperationAbortedException
-     *         Multiple requests to update the same resource were in conflict.
+     *         Multiple concurrent requests to update the same resource were in conflict.
      * @throws ServiceUnavailableException
      *         The service cannot complete the request.
      * @sample AWSLogs.PutDestinationPolicy
@@ -2669,7 +2680,7 @@ public class AWSLogsClient extends AmazonWebServiceClient implements AWSLogs {
      * @throws ResourceNotFoundException
      *         The specified resource does not exist.
      * @throws OperationAbortedException
-     *         Multiple requests to update the same resource were in conflict.
+     *         Multiple concurrent requests to update the same resource were in conflict.
      * @throws LimitExceededException
      *         You have reached the maximum number of resources that can be created.
      * @throws ServiceUnavailableException
@@ -2873,7 +2884,7 @@ public class AWSLogsClient extends AmazonWebServiceClient implements AWSLogs {
      * @throws ResourceNotFoundException
      *         The specified resource does not exist.
      * @throws OperationAbortedException
-     *         Multiple requests to update the same resource were in conflict.
+     *         Multiple concurrent requests to update the same resource were in conflict.
      * @throws ServiceUnavailableException
      *         The service cannot complete the request.
      * @sample AWSLogs.PutRetentionPolicy
@@ -2974,7 +2985,7 @@ public class AWSLogsClient extends AmazonWebServiceClient implements AWSLogs {
      * @throws ResourceNotFoundException
      *         The specified resource does not exist.
      * @throws OperationAbortedException
-     *         Multiple requests to update the same resource were in conflict.
+     *         Multiple concurrent requests to update the same resource were in conflict.
      * @throws LimitExceededException
      *         You have reached the maximum number of resources that can be created.
      * @throws ServiceUnavailableException

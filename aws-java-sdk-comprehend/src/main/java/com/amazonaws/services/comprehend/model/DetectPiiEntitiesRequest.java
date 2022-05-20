@@ -33,7 +33,7 @@ public class DetectPiiEntitiesRequest extends com.amazonaws.AmazonWebServiceRequ
     private String text;
     /**
      * <p>
-     * The language of the input documents.
+     * The language of the input documents. Currently, English is the only valid language.
      * </p>
      */
     private String languageCode;
@@ -80,11 +80,11 @@ public class DetectPiiEntitiesRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The language of the input documents.
+     * The language of the input documents. Currently, English is the only valid language.
      * </p>
      * 
      * @param languageCode
-     *        The language of the input documents.
+     *        The language of the input documents. Currently, English is the only valid language.
      * @see LanguageCode
      */
 
@@ -94,10 +94,10 @@ public class DetectPiiEntitiesRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The language of the input documents.
+     * The language of the input documents. Currently, English is the only valid language.
      * </p>
      * 
-     * @return The language of the input documents.
+     * @return The language of the input documents. Currently, English is the only valid language.
      * @see LanguageCode
      */
 
@@ -107,11 +107,11 @@ public class DetectPiiEntitiesRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The language of the input documents.
+     * The language of the input documents. Currently, English is the only valid language.
      * </p>
      * 
      * @param languageCode
-     *        The language of the input documents.
+     *        The language of the input documents. Currently, English is the only valid language.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see LanguageCode
      */
@@ -123,11 +123,11 @@ public class DetectPiiEntitiesRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The language of the input documents.
+     * The language of the input documents. Currently, English is the only valid language.
      * </p>
      * 
      * @param languageCode
-     *        The language of the input documents.
+     *        The language of the input documents. Currently, English is the only valid language.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see LanguageCode
      */
