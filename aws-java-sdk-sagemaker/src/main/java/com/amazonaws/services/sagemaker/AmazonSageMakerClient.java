@@ -3429,7 +3429,8 @@ public class AmazonSageMakerClient extends AmazonWebServiceClient implements Ama
      * <p>
      * <code>ModelName</code> - Identifies the model to use. <code>ModelName</code> must be the name of an existing
      * Amazon SageMaker model in the same Amazon Web Services Region and Amazon Web Services account. For information on
-     * creating a model, see <a>CreateModel</a>.
+     * creating a model, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateModel.html">CreateModel</a>.
      * </p>
      * </li>
      * <li>

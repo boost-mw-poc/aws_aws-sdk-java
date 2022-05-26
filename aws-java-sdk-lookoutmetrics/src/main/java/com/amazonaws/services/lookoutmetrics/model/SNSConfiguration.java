@@ -43,7 +43,7 @@ public class SNSConfiguration implements Serializable, Cloneable, StructuredPojo
     private String snsTopicArn;
     /**
      * <p>
-     * The text format for alerts.
+     * The format of the SNS topic.
      * </p>
      */
     private String snsFormat;
@@ -130,11 +130,11 @@ public class SNSConfiguration implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The text format for alerts.
+     * The format of the SNS topic.
      * </p>
      * 
      * @param snsFormat
-     *        The text format for alerts.
+     *        The format of the SNS topic.
      * @see SnsFormat
      */
 
@@ -144,10 +144,10 @@ public class SNSConfiguration implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The text format for alerts.
+     * The format of the SNS topic.
      * </p>
      * 
-     * @return The text format for alerts.
+     * @return The format of the SNS topic.
      * @see SnsFormat
      */
 
@@ -157,11 +157,11 @@ public class SNSConfiguration implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The text format for alerts.
+     * The format of the SNS topic.
      * </p>
      * 
      * @param snsFormat
-     *        The text format for alerts.
+     *        The format of the SNS topic.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see SnsFormat
      */
@@ -173,11 +173,11 @@ public class SNSConfiguration implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The text format for alerts.
+     * The format of the SNS topic.
      * </p>
      * 
      * @param snsFormat
-     *        The text format for alerts.
+     *        The format of the SNS topic.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see SnsFormat
      */

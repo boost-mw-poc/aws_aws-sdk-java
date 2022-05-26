@@ -3054,6 +3054,11 @@ public class AmazonFSxClient extends AmazonWebServiceClient implements AmazonFSx
      * </li>
      * <li>
      * <p>
+     * <code>LustreRootSquashConfiguration</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>StorageCapacity</code>
      * </p>
      * </li>

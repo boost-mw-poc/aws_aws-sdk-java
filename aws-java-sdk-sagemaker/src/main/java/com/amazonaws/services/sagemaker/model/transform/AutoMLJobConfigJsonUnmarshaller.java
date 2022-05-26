@@ -60,6 +60,10 @@ public class AutoMLJobConfigJsonUnmarshaller implements Unmarshaller<AutoMLJobCo
                     context.nextToken();
                     autoMLJobConfig.setDataSplitConfig(AutoMLDataSplitConfigJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("CandidateGenerationConfig", targetDepth)) {
+                    context.nextToken();
+                    autoMLJobConfig.setCandidateGenerationConfig(AutoMLCandidateGenerationConfigJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

@@ -49,6 +49,12 @@ public class AutoMLJobConfig implements Serializable, Cloneable, StructuredPojo 
      * </p>
      */
     private AutoMLDataSplitConfig dataSplitConfig;
+    /**
+     * <p>
+     * The configuration for generating a candidate for an AutoML job (optional).
+     * </p>
+     */
+    private AutoMLCandidateGenerationConfig candidateGenerationConfig;
 
     /**
      * <p>
@@ -186,6 +192,46 @@ public class AutoMLJobConfig implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
+     * <p>
+     * The configuration for generating a candidate for an AutoML job (optional).
+     * </p>
+     * 
+     * @param candidateGenerationConfig
+     *        The configuration for generating a candidate for an AutoML job (optional).
+     */
+
+    public void setCandidateGenerationConfig(AutoMLCandidateGenerationConfig candidateGenerationConfig) {
+        this.candidateGenerationConfig = candidateGenerationConfig;
+    }
+
+    /**
+     * <p>
+     * The configuration for generating a candidate for an AutoML job (optional).
+     * </p>
+     * 
+     * @return The configuration for generating a candidate for an AutoML job (optional).
+     */
+
+    public AutoMLCandidateGenerationConfig getCandidateGenerationConfig() {
+        return this.candidateGenerationConfig;
+    }
+
+    /**
+     * <p>
+     * The configuration for generating a candidate for an AutoML job (optional).
+     * </p>
+     * 
+     * @param candidateGenerationConfig
+     *        The configuration for generating a candidate for an AutoML job (optional).
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AutoMLJobConfig withCandidateGenerationConfig(AutoMLCandidateGenerationConfig candidateGenerationConfig) {
+        setCandidateGenerationConfig(candidateGenerationConfig);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -202,7 +248,9 @@ public class AutoMLJobConfig implements Serializable, Cloneable, StructuredPojo 
         if (getSecurityConfig() != null)
             sb.append("SecurityConfig: ").append(getSecurityConfig()).append(",");
         if (getDataSplitConfig() != null)
-            sb.append("DataSplitConfig: ").append(getDataSplitConfig());
+            sb.append("DataSplitConfig: ").append(getDataSplitConfig()).append(",");
+        if (getCandidateGenerationConfig() != null)
+            sb.append("CandidateGenerationConfig: ").append(getCandidateGenerationConfig());
         sb.append("}");
         return sb.toString();
     }
@@ -229,6 +277,10 @@ public class AutoMLJobConfig implements Serializable, Cloneable, StructuredPojo 
             return false;
         if (other.getDataSplitConfig() != null && other.getDataSplitConfig().equals(this.getDataSplitConfig()) == false)
             return false;
+        if (other.getCandidateGenerationConfig() == null ^ this.getCandidateGenerationConfig() == null)
+            return false;
+        if (other.getCandidateGenerationConfig() != null && other.getCandidateGenerationConfig().equals(this.getCandidateGenerationConfig()) == false)
+            return false;
         return true;
     }
 
@@ -240,6 +292,7 @@ public class AutoMLJobConfig implements Serializable, Cloneable, StructuredPojo 
         hashCode = prime * hashCode + ((getCompletionCriteria() == null) ? 0 : getCompletionCriteria().hashCode());
         hashCode = prime * hashCode + ((getSecurityConfig() == null) ? 0 : getSecurityConfig().hashCode());
         hashCode = prime * hashCode + ((getDataSplitConfig() == null) ? 0 : getDataSplitConfig().hashCode());
+        hashCode = prime * hashCode + ((getCandidateGenerationConfig() == null) ? 0 : getCandidateGenerationConfig().hashCode());
         return hashCode;
     }
 
