@@ -1,3 +1,28 @@
+# __1.12.231__ __2022-05-31__
+## __AWS IoT SiteWise__
+  - ### Features
+    - This release adds the following new optional field to the IoT SiteWise asset resource: assetDescription.
+
+## __Amazon Cognito Identity Provider__
+  - ### Features
+    - Amazon Cognito now supports IP Address propagation for all unauthenticated APIs (e.g. SignUp, ForgotPassword).
+
+## __Amazon Lookout for Metrics__
+  - ### Features
+    - Adding backtest mode to detectors using the Cloudwatch data source.
+
+## __Amazon SageMaker Service__
+  - ### Features
+    - Amazon SageMaker Notebook Instances now support Jupyter Lab 3.
+
+## __Amazon Transcribe Service__
+  - ### Features
+    - Amazon Transcribe now supports automatic language identification for multi-lingual audio in batch mode.
+
+## __Elastic Disaster Recovery Service__
+  - ### Features
+    - Changed existing APIs and added new APIs to accommodate using multiple AWS accounts with AWS Elastic Disaster Recovery.
+
 # __1.12.230__ __2022-05-27__
 ## __AWS DataSync__
   - ### Features

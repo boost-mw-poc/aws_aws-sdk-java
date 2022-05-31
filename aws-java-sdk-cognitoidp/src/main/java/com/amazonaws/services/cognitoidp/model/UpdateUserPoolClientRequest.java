@@ -332,6 +332,17 @@ public class UpdateUserPoolClientRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      */
     private Boolean enableTokenRevocation;
+    /**
+     * <p>
+     * Activates the propagation of additional user context data. For more information about propagation of user context
+     * data, see <a href=
+     * "https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-settings-advanced-security.html">
+     * Adding advanced security to a user pool</a>. If you don’t include this parameter, you can't send device
+     * fingerprint information, including source IP address, to Amazon Cognito advanced security. You can only activate
+     * <code>EnablePropagateAdditionalUserContextData</code> in an app client that has a client secret.
+     * </p>
+     */
+    private Boolean enablePropagateAdditionalUserContextData;
 
     /**
      * <p>
@@ -2908,6 +2919,98 @@ public class UpdateUserPoolClientRequest extends com.amazonaws.AmazonWebServiceR
     }
 
     /**
+     * <p>
+     * Activates the propagation of additional user context data. For more information about propagation of user context
+     * data, see <a href=
+     * "https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-settings-advanced-security.html">
+     * Adding advanced security to a user pool</a>. If you don’t include this parameter, you can't send device
+     * fingerprint information, including source IP address, to Amazon Cognito advanced security. You can only activate
+     * <code>EnablePropagateAdditionalUserContextData</code> in an app client that has a client secret.
+     * </p>
+     * 
+     * @param enablePropagateAdditionalUserContextData
+     *        Activates the propagation of additional user context data. For more information about propagation of user
+     *        context data, see <a href=
+     *        "https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-settings-advanced-security.html"
+     *        > Adding advanced security to a user pool</a>. If you don’t include this parameter, you can't send device
+     *        fingerprint information, including source IP address, to Amazon Cognito advanced security. You can only
+     *        activate <code>EnablePropagateAdditionalUserContextData</code> in an app client that has a client secret.
+     */
+
+    public void setEnablePropagateAdditionalUserContextData(Boolean enablePropagateAdditionalUserContextData) {
+        this.enablePropagateAdditionalUserContextData = enablePropagateAdditionalUserContextData;
+    }
+
+    /**
+     * <p>
+     * Activates the propagation of additional user context data. For more information about propagation of user context
+     * data, see <a href=
+     * "https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-settings-advanced-security.html">
+     * Adding advanced security to a user pool</a>. If you don’t include this parameter, you can't send device
+     * fingerprint information, including source IP address, to Amazon Cognito advanced security. You can only activate
+     * <code>EnablePropagateAdditionalUserContextData</code> in an app client that has a client secret.
+     * </p>
+     * 
+     * @return Activates the propagation of additional user context data. For more information about propagation of user
+     *         context data, see <a href=
+     *         "https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-settings-advanced-security.html"
+     *         > Adding advanced security to a user pool</a>. If you don’t include this parameter, you can't send device
+     *         fingerprint information, including source IP address, to Amazon Cognito advanced security. You can only
+     *         activate <code>EnablePropagateAdditionalUserContextData</code> in an app client that has a client secret.
+     */
+
+    public Boolean getEnablePropagateAdditionalUserContextData() {
+        return this.enablePropagateAdditionalUserContextData;
+    }
+
+    /**
+     * <p>
+     * Activates the propagation of additional user context data. For more information about propagation of user context
+     * data, see <a href=
+     * "https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-settings-advanced-security.html">
+     * Adding advanced security to a user pool</a>. If you don’t include this parameter, you can't send device
+     * fingerprint information, including source IP address, to Amazon Cognito advanced security. You can only activate
+     * <code>EnablePropagateAdditionalUserContextData</code> in an app client that has a client secret.
+     * </p>
+     * 
+     * @param enablePropagateAdditionalUserContextData
+     *        Activates the propagation of additional user context data. For more information about propagation of user
+     *        context data, see <a href=
+     *        "https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-settings-advanced-security.html"
+     *        > Adding advanced security to a user pool</a>. If you don’t include this parameter, you can't send device
+     *        fingerprint information, including source IP address, to Amazon Cognito advanced security. You can only
+     *        activate <code>EnablePropagateAdditionalUserContextData</code> in an app client that has a client secret.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateUserPoolClientRequest withEnablePropagateAdditionalUserContextData(Boolean enablePropagateAdditionalUserContextData) {
+        setEnablePropagateAdditionalUserContextData(enablePropagateAdditionalUserContextData);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Activates the propagation of additional user context data. For more information about propagation of user context
+     * data, see <a href=
+     * "https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-settings-advanced-security.html">
+     * Adding advanced security to a user pool</a>. If you don’t include this parameter, you can't send device
+     * fingerprint information, including source IP address, to Amazon Cognito advanced security. You can only activate
+     * <code>EnablePropagateAdditionalUserContextData</code> in an app client that has a client secret.
+     * </p>
+     * 
+     * @return Activates the propagation of additional user context data. For more information about propagation of user
+     *         context data, see <a href=
+     *         "https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-settings-advanced-security.html"
+     *         > Adding advanced security to a user pool</a>. If you don’t include this parameter, you can't send device
+     *         fingerprint information, including source IP address, to Amazon Cognito advanced security. You can only
+     *         activate <code>EnablePropagateAdditionalUserContextData</code> in an app client that has a client secret.
+     */
+
+    public Boolean isEnablePropagateAdditionalUserContextData() {
+        return this.enablePropagateAdditionalUserContextData;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -2958,7 +3061,9 @@ public class UpdateUserPoolClientRequest extends com.amazonaws.AmazonWebServiceR
         if (getPreventUserExistenceErrors() != null)
             sb.append("PreventUserExistenceErrors: ").append(getPreventUserExistenceErrors()).append(",");
         if (getEnableTokenRevocation() != null)
-            sb.append("EnableTokenRevocation: ").append(getEnableTokenRevocation());
+            sb.append("EnableTokenRevocation: ").append(getEnableTokenRevocation()).append(",");
+        if (getEnablePropagateAdditionalUserContextData() != null)
+            sb.append("EnablePropagateAdditionalUserContextData: ").append(getEnablePropagateAdditionalUserContextData());
         sb.append("}");
         return sb.toString();
     }
@@ -3054,6 +3159,11 @@ public class UpdateUserPoolClientRequest extends com.amazonaws.AmazonWebServiceR
             return false;
         if (other.getEnableTokenRevocation() != null && other.getEnableTokenRevocation().equals(this.getEnableTokenRevocation()) == false)
             return false;
+        if (other.getEnablePropagateAdditionalUserContextData() == null ^ this.getEnablePropagateAdditionalUserContextData() == null)
+            return false;
+        if (other.getEnablePropagateAdditionalUserContextData() != null
+                && other.getEnablePropagateAdditionalUserContextData().equals(this.getEnablePropagateAdditionalUserContextData()) == false)
+            return false;
         return true;
     }
 
@@ -3082,6 +3192,7 @@ public class UpdateUserPoolClientRequest extends com.amazonaws.AmazonWebServiceR
         hashCode = prime * hashCode + ((getAnalyticsConfiguration() == null) ? 0 : getAnalyticsConfiguration().hashCode());
         hashCode = prime * hashCode + ((getPreventUserExistenceErrors() == null) ? 0 : getPreventUserExistenceErrors().hashCode());
         hashCode = prime * hashCode + ((getEnableTokenRevocation() == null) ? 0 : getEnableTokenRevocation().hashCode());
+        hashCode = prime * hashCode + ((getEnablePropagateAdditionalUserContextData() == null) ? 0 : getEnablePropagateAdditionalUserContextData().hashCode());
         return hashCode;
     }
 

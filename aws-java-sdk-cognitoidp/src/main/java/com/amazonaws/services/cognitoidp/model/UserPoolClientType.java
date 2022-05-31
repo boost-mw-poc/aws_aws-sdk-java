@@ -350,6 +350,29 @@ public class UserPoolClientType implements Serializable, Cloneable, StructuredPo
      * </p>
      */
     private Boolean enableTokenRevocation;
+    /**
+     * <p>
+     * When <code>EnablePropagateAdditionalUserContextData</code> is true, Amazon Cognito accepts an
+     * <code>IpAddress</code> value that you send in the <code>UserContextData</code> parameter. The
+     * <code>UserContextData</code> parameter sends information to Amazon Cognito advanced security for risk analysis.
+     * You can send <code>UserContextData</code> when you sign in Amazon Cognito native users with the
+     * <code>InitiateAuth</code> and <code>RespondToAuthChallenge</code> API operations.
+     * </p>
+     * <p>
+     * When <code>EnablePropagateAdditionalUserContextData</code> is false, you can't send your user's source IP address
+     * to Amazon Cognito advanced security with unauthenticated API operations.
+     * <code>EnablePropagateAdditionalUserContextData</code> doesn't affect whether you can send a source IP address in
+     * a <code>ContextData</code> parameter with the authenticated API operations <code>AdminInitiateAuth</code> and
+     * <code>AdminRespondToAuthChallenge</code>.
+     * </p>
+     * <p>
+     * You can only activate <code>EnablePropagateAdditionalUserContextData</code> in an app client that has a client
+     * secret. For more information about propagation of user context data, see <a href=
+     * "https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-settings-adaptive-authentication.html#user-pool-settings-adaptive-authentication-device-fingerprint"
+     * >Adding user device and session data to API requests</a>.
+     * </p>
+     */
+    private Boolean enablePropagateAdditionalUserContextData;
 
     /**
      * <p>
@@ -3047,6 +3070,190 @@ public class UserPoolClientType implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * When <code>EnablePropagateAdditionalUserContextData</code> is true, Amazon Cognito accepts an
+     * <code>IpAddress</code> value that you send in the <code>UserContextData</code> parameter. The
+     * <code>UserContextData</code> parameter sends information to Amazon Cognito advanced security for risk analysis.
+     * You can send <code>UserContextData</code> when you sign in Amazon Cognito native users with the
+     * <code>InitiateAuth</code> and <code>RespondToAuthChallenge</code> API operations.
+     * </p>
+     * <p>
+     * When <code>EnablePropagateAdditionalUserContextData</code> is false, you can't send your user's source IP address
+     * to Amazon Cognito advanced security with unauthenticated API operations.
+     * <code>EnablePropagateAdditionalUserContextData</code> doesn't affect whether you can send a source IP address in
+     * a <code>ContextData</code> parameter with the authenticated API operations <code>AdminInitiateAuth</code> and
+     * <code>AdminRespondToAuthChallenge</code>.
+     * </p>
+     * <p>
+     * You can only activate <code>EnablePropagateAdditionalUserContextData</code> in an app client that has a client
+     * secret. For more information about propagation of user context data, see <a href=
+     * "https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-settings-adaptive-authentication.html#user-pool-settings-adaptive-authentication-device-fingerprint"
+     * >Adding user device and session data to API requests</a>.
+     * </p>
+     * 
+     * @param enablePropagateAdditionalUserContextData
+     *        When <code>EnablePropagateAdditionalUserContextData</code> is true, Amazon Cognito accepts an
+     *        <code>IpAddress</code> value that you send in the <code>UserContextData</code> parameter. The
+     *        <code>UserContextData</code> parameter sends information to Amazon Cognito advanced security for risk
+     *        analysis. You can send <code>UserContextData</code> when you sign in Amazon Cognito native users with the
+     *        <code>InitiateAuth</code> and <code>RespondToAuthChallenge</code> API operations.</p>
+     *        <p>
+     *        When <code>EnablePropagateAdditionalUserContextData</code> is false, you can't send your user's source IP
+     *        address to Amazon Cognito advanced security with unauthenticated API operations.
+     *        <code>EnablePropagateAdditionalUserContextData</code> doesn't affect whether you can send a source IP
+     *        address in a <code>ContextData</code> parameter with the authenticated API operations
+     *        <code>AdminInitiateAuth</code> and <code>AdminRespondToAuthChallenge</code>.
+     *        </p>
+     *        <p>
+     *        You can only activate <code>EnablePropagateAdditionalUserContextData</code> in an app client that has a
+     *        client secret. For more information about propagation of user context data, see <a href=
+     *        "https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-settings-adaptive-authentication.html#user-pool-settings-adaptive-authentication-device-fingerprint"
+     *        >Adding user device and session data to API requests</a>.
+     */
+
+    public void setEnablePropagateAdditionalUserContextData(Boolean enablePropagateAdditionalUserContextData) {
+        this.enablePropagateAdditionalUserContextData = enablePropagateAdditionalUserContextData;
+    }
+
+    /**
+     * <p>
+     * When <code>EnablePropagateAdditionalUserContextData</code> is true, Amazon Cognito accepts an
+     * <code>IpAddress</code> value that you send in the <code>UserContextData</code> parameter. The
+     * <code>UserContextData</code> parameter sends information to Amazon Cognito advanced security for risk analysis.
+     * You can send <code>UserContextData</code> when you sign in Amazon Cognito native users with the
+     * <code>InitiateAuth</code> and <code>RespondToAuthChallenge</code> API operations.
+     * </p>
+     * <p>
+     * When <code>EnablePropagateAdditionalUserContextData</code> is false, you can't send your user's source IP address
+     * to Amazon Cognito advanced security with unauthenticated API operations.
+     * <code>EnablePropagateAdditionalUserContextData</code> doesn't affect whether you can send a source IP address in
+     * a <code>ContextData</code> parameter with the authenticated API operations <code>AdminInitiateAuth</code> and
+     * <code>AdminRespondToAuthChallenge</code>.
+     * </p>
+     * <p>
+     * You can only activate <code>EnablePropagateAdditionalUserContextData</code> in an app client that has a client
+     * secret. For more information about propagation of user context data, see <a href=
+     * "https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-settings-adaptive-authentication.html#user-pool-settings-adaptive-authentication-device-fingerprint"
+     * >Adding user device and session data to API requests</a>.
+     * </p>
+     * 
+     * @return When <code>EnablePropagateAdditionalUserContextData</code> is true, Amazon Cognito accepts an
+     *         <code>IpAddress</code> value that you send in the <code>UserContextData</code> parameter. The
+     *         <code>UserContextData</code> parameter sends information to Amazon Cognito advanced security for risk
+     *         analysis. You can send <code>UserContextData</code> when you sign in Amazon Cognito native users with the
+     *         <code>InitiateAuth</code> and <code>RespondToAuthChallenge</code> API operations.</p>
+     *         <p>
+     *         When <code>EnablePropagateAdditionalUserContextData</code> is false, you can't send your user's source IP
+     *         address to Amazon Cognito advanced security with unauthenticated API operations.
+     *         <code>EnablePropagateAdditionalUserContextData</code> doesn't affect whether you can send a source IP
+     *         address in a <code>ContextData</code> parameter with the authenticated API operations
+     *         <code>AdminInitiateAuth</code> and <code>AdminRespondToAuthChallenge</code>.
+     *         </p>
+     *         <p>
+     *         You can only activate <code>EnablePropagateAdditionalUserContextData</code> in an app client that has a
+     *         client secret. For more information about propagation of user context data, see <a href=
+     *         "https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-settings-adaptive-authentication.html#user-pool-settings-adaptive-authentication-device-fingerprint"
+     *         >Adding user device and session data to API requests</a>.
+     */
+
+    public Boolean getEnablePropagateAdditionalUserContextData() {
+        return this.enablePropagateAdditionalUserContextData;
+    }
+
+    /**
+     * <p>
+     * When <code>EnablePropagateAdditionalUserContextData</code> is true, Amazon Cognito accepts an
+     * <code>IpAddress</code> value that you send in the <code>UserContextData</code> parameter. The
+     * <code>UserContextData</code> parameter sends information to Amazon Cognito advanced security for risk analysis.
+     * You can send <code>UserContextData</code> when you sign in Amazon Cognito native users with the
+     * <code>InitiateAuth</code> and <code>RespondToAuthChallenge</code> API operations.
+     * </p>
+     * <p>
+     * When <code>EnablePropagateAdditionalUserContextData</code> is false, you can't send your user's source IP address
+     * to Amazon Cognito advanced security with unauthenticated API operations.
+     * <code>EnablePropagateAdditionalUserContextData</code> doesn't affect whether you can send a source IP address in
+     * a <code>ContextData</code> parameter with the authenticated API operations <code>AdminInitiateAuth</code> and
+     * <code>AdminRespondToAuthChallenge</code>.
+     * </p>
+     * <p>
+     * You can only activate <code>EnablePropagateAdditionalUserContextData</code> in an app client that has a client
+     * secret. For more information about propagation of user context data, see <a href=
+     * "https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-settings-adaptive-authentication.html#user-pool-settings-adaptive-authentication-device-fingerprint"
+     * >Adding user device and session data to API requests</a>.
+     * </p>
+     * 
+     * @param enablePropagateAdditionalUserContextData
+     *        When <code>EnablePropagateAdditionalUserContextData</code> is true, Amazon Cognito accepts an
+     *        <code>IpAddress</code> value that you send in the <code>UserContextData</code> parameter. The
+     *        <code>UserContextData</code> parameter sends information to Amazon Cognito advanced security for risk
+     *        analysis. You can send <code>UserContextData</code> when you sign in Amazon Cognito native users with the
+     *        <code>InitiateAuth</code> and <code>RespondToAuthChallenge</code> API operations.</p>
+     *        <p>
+     *        When <code>EnablePropagateAdditionalUserContextData</code> is false, you can't send your user's source IP
+     *        address to Amazon Cognito advanced security with unauthenticated API operations.
+     *        <code>EnablePropagateAdditionalUserContextData</code> doesn't affect whether you can send a source IP
+     *        address in a <code>ContextData</code> parameter with the authenticated API operations
+     *        <code>AdminInitiateAuth</code> and <code>AdminRespondToAuthChallenge</code>.
+     *        </p>
+     *        <p>
+     *        You can only activate <code>EnablePropagateAdditionalUserContextData</code> in an app client that has a
+     *        client secret. For more information about propagation of user context data, see <a href=
+     *        "https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-settings-adaptive-authentication.html#user-pool-settings-adaptive-authentication-device-fingerprint"
+     *        >Adding user device and session data to API requests</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UserPoolClientType withEnablePropagateAdditionalUserContextData(Boolean enablePropagateAdditionalUserContextData) {
+        setEnablePropagateAdditionalUserContextData(enablePropagateAdditionalUserContextData);
+        return this;
+    }
+
+    /**
+     * <p>
+     * When <code>EnablePropagateAdditionalUserContextData</code> is true, Amazon Cognito accepts an
+     * <code>IpAddress</code> value that you send in the <code>UserContextData</code> parameter. The
+     * <code>UserContextData</code> parameter sends information to Amazon Cognito advanced security for risk analysis.
+     * You can send <code>UserContextData</code> when you sign in Amazon Cognito native users with the
+     * <code>InitiateAuth</code> and <code>RespondToAuthChallenge</code> API operations.
+     * </p>
+     * <p>
+     * When <code>EnablePropagateAdditionalUserContextData</code> is false, you can't send your user's source IP address
+     * to Amazon Cognito advanced security with unauthenticated API operations.
+     * <code>EnablePropagateAdditionalUserContextData</code> doesn't affect whether you can send a source IP address in
+     * a <code>ContextData</code> parameter with the authenticated API operations <code>AdminInitiateAuth</code> and
+     * <code>AdminRespondToAuthChallenge</code>.
+     * </p>
+     * <p>
+     * You can only activate <code>EnablePropagateAdditionalUserContextData</code> in an app client that has a client
+     * secret. For more information about propagation of user context data, see <a href=
+     * "https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-settings-adaptive-authentication.html#user-pool-settings-adaptive-authentication-device-fingerprint"
+     * >Adding user device and session data to API requests</a>.
+     * </p>
+     * 
+     * @return When <code>EnablePropagateAdditionalUserContextData</code> is true, Amazon Cognito accepts an
+     *         <code>IpAddress</code> value that you send in the <code>UserContextData</code> parameter. The
+     *         <code>UserContextData</code> parameter sends information to Amazon Cognito advanced security for risk
+     *         analysis. You can send <code>UserContextData</code> when you sign in Amazon Cognito native users with the
+     *         <code>InitiateAuth</code> and <code>RespondToAuthChallenge</code> API operations.</p>
+     *         <p>
+     *         When <code>EnablePropagateAdditionalUserContextData</code> is false, you can't send your user's source IP
+     *         address to Amazon Cognito advanced security with unauthenticated API operations.
+     *         <code>EnablePropagateAdditionalUserContextData</code> doesn't affect whether you can send a source IP
+     *         address in a <code>ContextData</code> parameter with the authenticated API operations
+     *         <code>AdminInitiateAuth</code> and <code>AdminRespondToAuthChallenge</code>.
+     *         </p>
+     *         <p>
+     *         You can only activate <code>EnablePropagateAdditionalUserContextData</code> in an app client that has a
+     *         client secret. For more information about propagation of user context data, see <a href=
+     *         "https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-settings-adaptive-authentication.html#user-pool-settings-adaptive-authentication-device-fingerprint"
+     *         >Adding user device and session data to API requests</a>.
+     */
+
+    public Boolean isEnablePropagateAdditionalUserContextData() {
+        return this.enablePropagateAdditionalUserContextData;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -3103,7 +3310,9 @@ public class UserPoolClientType implements Serializable, Cloneable, StructuredPo
         if (getPreventUserExistenceErrors() != null)
             sb.append("PreventUserExistenceErrors: ").append(getPreventUserExistenceErrors()).append(",");
         if (getEnableTokenRevocation() != null)
-            sb.append("EnableTokenRevocation: ").append(getEnableTokenRevocation());
+            sb.append("EnableTokenRevocation: ").append(getEnableTokenRevocation()).append(",");
+        if (getEnablePropagateAdditionalUserContextData() != null)
+            sb.append("EnablePropagateAdditionalUserContextData: ").append(getEnablePropagateAdditionalUserContextData());
         sb.append("}");
         return sb.toString();
     }
@@ -3211,6 +3420,11 @@ public class UserPoolClientType implements Serializable, Cloneable, StructuredPo
             return false;
         if (other.getEnableTokenRevocation() != null && other.getEnableTokenRevocation().equals(this.getEnableTokenRevocation()) == false)
             return false;
+        if (other.getEnablePropagateAdditionalUserContextData() == null ^ this.getEnablePropagateAdditionalUserContextData() == null)
+            return false;
+        if (other.getEnablePropagateAdditionalUserContextData() != null
+                && other.getEnablePropagateAdditionalUserContextData().equals(this.getEnablePropagateAdditionalUserContextData()) == false)
+            return false;
         return true;
     }
 
@@ -3242,6 +3456,7 @@ public class UserPoolClientType implements Serializable, Cloneable, StructuredPo
         hashCode = prime * hashCode + ((getAnalyticsConfiguration() == null) ? 0 : getAnalyticsConfiguration().hashCode());
         hashCode = prime * hashCode + ((getPreventUserExistenceErrors() == null) ? 0 : getPreventUserExistenceErrors().hashCode());
         hashCode = prime * hashCode + ((getEnableTokenRevocation() == null) ? 0 : getEnableTokenRevocation().hashCode());
+        hashCode = prime * hashCode + ((getEnablePropagateAdditionalUserContextData() == null) ? 0 : getEnablePropagateAdditionalUserContextData().hashCode());
         return hashCode;
     }
 

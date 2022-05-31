@@ -955,7 +955,7 @@ public class AWSCognitoIdentityProviderClient extends AmazonWebServiceClient imp
      *         This exception is thrown when a user isn't found.
      * @throws AliasExistsException
      *         This exception is thrown when a user tries to confirm the account with an email address or phone number
-     *         that has already been supplied as an alias from a different account. This exception indicates that an
+     *         that has already been supplied as an alias for a different user profile. This exception indicates that an
      *         account with this email address or phone already exists in a user pool that you've configured to use
      *         email address or phone number as a sign-in alias.
      * @throws InternalErrorException
@@ -1519,7 +1519,7 @@ public class AWSCognitoIdentityProviderClient extends AmazonWebServiceClient imp
      *         This exception is thrown when a user isn't found.
      * @throws AliasExistsException
      *         This exception is thrown when a user tries to confirm the account with an email address or phone number
-     *         that has already been supplied as an alias from a different account. This exception indicates that an
+     *         that has already been supplied as an alias for a different user profile. This exception indicates that an
      *         account with this email address or phone already exists in a user pool that you've configured to use
      *         email address or phone number as a sign-in alias.
      * @throws LimitExceededException
@@ -2045,7 +2045,7 @@ public class AWSCognitoIdentityProviderClient extends AmazonWebServiceClient imp
      *         ID provided in the role does not match what is provided in the SMS configuration for the user pool.
      * @throws AliasExistsException
      *         This exception is thrown when a user tries to confirm the account with an email address or phone number
-     *         that has already been supplied as an alias from a different account. This exception indicates that an
+     *         that has already been supplied as an alias for a different user profile. This exception indicates that an
      *         account with this email address or phone already exists in a user pool that you've configured to use
      *         email address or phone number as a sign-in alias.
      * @throws PasswordResetRequiredException
@@ -2525,7 +2525,7 @@ public class AWSCognitoIdentityProviderClient extends AmazonWebServiceClient imp
      *         This exception is thrown when Amazon Cognito encounters an invalid Lambda response.
      * @throws AliasExistsException
      *         This exception is thrown when a user tries to confirm the account with an email address or phone number
-     *         that has already been supplied as an alias from a different account. This exception indicates that an
+     *         that has already been supplied as an alias for a different user profile. This exception indicates that an
      *         account with this email address or phone already exists in a user pool that you've configured to use
      *         email address or phone number as a sign-in alias.
      * @throws TooManyRequestsException
@@ -2674,15 +2674,24 @@ public class AWSCognitoIdentityProviderClient extends AmazonWebServiceClient imp
 
     /**
      * <p>
-     * Returns a unique generated shared secret key code for the user account. The request takes an access token or a
-     * session string, but not both.
+     * Begins setup of time-based one-time password multi-factor authentication (TOTP MFA) for a user, with a unique
+     * private key that Amazon Cognito generates and returns in the API response. You can authorize an
+     * <code>AssociateSoftwareToken</code> request with either the user's access token, or a session string from a
+     * challenge response that you received from Amazon Cognito.
      * </p>
      * <note>
      * <p>
-     * Calling AssociateSoftwareToken immediately disassociates the existing software token from the user account. If
-     * the user doesn't subsequently verify the software token, their account is set up to authenticate without MFA. If
-     * MFA config is set to Optional at the user pool level, the user can then log in without MFA. However, if MFA is
-     * set to Required for the user pool, the user is asked to set up a new software token MFA during sign-in.
+     * Amazon Cognito disassociates an existing software token when you verify the new token in a <a
+     * href="https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_VerifySoftwareToken.html">
+     * VerifySoftwareToken</a> API request. If you don't verify the software token and your user pool doesn't require
+     * MFA, the user can then authenticate with user name and password credentials alone. If your user pool requires
+     * TOTP MFA, Amazon Cognito generates an <code>MFA_SETUP</code> or <code>SOFTWARE_TOKEN_SETUP</code> challenge each
+     * time your user signs. Complete setup with <code>AssociateSoftwareToken</code> and
+     * <code>VerifySoftwareToken</code>.
+     * </p>
+     * <p>
+     * After you set up software token MFA for your user, Amazon Cognito generates a <code>SOFTWARE_TOKEN_MFA</code>
+     * challenge when they authenticate. Respond to this challenge with your user's TOTP.
      * </p>
      * </note>
      * 
@@ -3025,7 +3034,7 @@ public class AWSCognitoIdentityProviderClient extends AmazonWebServiceClient imp
      *         This exception is thrown when Amazon Cognito encounters an invalid Lambda response.
      * @throws AliasExistsException
      *         This exception is thrown when a user tries to confirm the account with an email address or phone number
-     *         that has already been supplied as an alias from a different account. This exception indicates that an
+     *         that has already been supplied as an alias for a different user profile. This exception indicates that an
      *         account with this email address or phone already exists in a user pool that you've configured to use
      *         email address or phone number as a sign-in alias.
      * @throws TooManyRequestsException
@@ -6499,7 +6508,7 @@ public class AWSCognitoIdentityProviderClient extends AmazonWebServiceClient imp
      *         ID provided in the role does not match what is provided in the SMS configuration for the user pool.
      * @throws AliasExistsException
      *         This exception is thrown when a user tries to confirm the account with an email address or phone number
-     *         that has already been supplied as an alias from a different account. This exception indicates that an
+     *         that has already been supplied as an alias for a different user profile. This exception indicates that an
      *         account with this email address or phone already exists in a user pool that you've configured to use
      *         email address or phone number as a sign-in alias.
      * @throws InternalErrorException
@@ -7810,7 +7819,7 @@ public class AWSCognitoIdentityProviderClient extends AmazonWebServiceClient imp
      *         This exception is thrown when the user has made too many requests for a given operation.
      * @throws AliasExistsException
      *         This exception is thrown when a user tries to confirm the account with an email address or phone number
-     *         that has already been supplied as an alias from a different account. This exception indicates that an
+     *         that has already been supplied as an alias for a different user profile. This exception indicates that an
      *         account with this email address or phone already exists in a user pool that you've configured to use
      *         email address or phone number as a sign-in alias.
      * @throws InvalidSmsRoleAccessPolicyException
@@ -8293,7 +8302,7 @@ public class AWSCognitoIdentityProviderClient extends AmazonWebServiceClient imp
      *         This exception is thrown when Amazon Cognito encounters an internal error.
      * @throws AliasExistsException
      *         This exception is thrown when a user tries to confirm the account with an email address or phone number
-     *         that has already been supplied as an alias from a different account. This exception indicates that an
+     *         that has already been supplied as an alias for a different user profile. This exception indicates that an
      *         account with this email address or phone already exists in a user pool that you've configured to use
      *         email address or phone number as a sign-in alias.
      * @sample AWSCognitoIdentityProvider.VerifyUserAttribute
