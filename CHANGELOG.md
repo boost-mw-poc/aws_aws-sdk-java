@@ -1,3 +1,8 @@
+# __1.12.238__ __2022-06-10__
+## __Amazon Fraud Detector__
+  - ### Features
+    - Documentation updates for Amazon Fraud Detector (AWSHawksNest)
+
 # __1.12.237__ __2022-06-09__
 ## __Amazon Chime SDK Meetings__
   - ### Features
@@ -23,10 +28,6 @@
 ## __Amazon Redshift__
   - ### Features
     - Adds new API GetClusterCredentialsWithIAM to return temporary credentials.
-
-## __Redshift Serverless__
-  - ### Features
-    - Add new API operations for Amazon Redshift Serverless, a new way of using Amazon Redshift without needing to manually manage provisioned clusters. The new operations let you interact with Redshift Serverless resources, such as create snapshots, list VPC endpoints, delete resource policies, and more.
 
 # __1.12.235__ __2022-06-07__
 ## __AWS Audit Manager__
