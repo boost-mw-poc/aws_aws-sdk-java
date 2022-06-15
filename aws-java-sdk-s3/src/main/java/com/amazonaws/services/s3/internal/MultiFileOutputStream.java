@@ -174,7 +174,7 @@ public class MultiFileOutputStream extends OutputStream implements OnFileDelete 
             if (os != null) {
                 os.close();
                 log.info(String.format("Finished encrypting and writing part %s in %s ms", filesCreated,
-                                       partDuration(System.nanoTime())));
+                                       duration(partStart, System.nanoTime())));
                 // notify about the new file ready for processing
                 observer.onPartCreate(new PartCreationEvent(
                         getFile(filesCreated), filesCreated, false, this));
@@ -207,7 +207,9 @@ public class MultiFileOutputStream extends OutputStream implements OnFileDelete 
         if (diskPermits == null || diskLimit == Long.MAX_VALUE)
             return;
         try {
+            long start = System.nanoTime();
             diskPermits.acquire();
+            log.info(String.format("Acquired disk permit in %s ms", duration(start, System.nanoTime())));
         } catch (InterruptedException e) {
             // don't want to re-interrupt so it won't cause SDK stream to be
             // closed in case the thread is reused for a different request
@@ -236,7 +238,7 @@ public class MultiFileOutputStream extends OutputStream implements OnFileDelete 
                 }
             } else {
                 log.info(String.format("Finished encrypting and writing part %s in %s ms", filesCreated,
-                                       partDuration(System.nanoTime())));
+                                       duration(partStart, System.nanoTime())));
                 // notify about the new file ready for processing
                 observer.onPartCreate(new PartCreationEvent(
                         getFile(filesCreated), filesCreated, true, this));
@@ -244,8 +246,8 @@ public class MultiFileOutputStream extends OutputStream implements OnFileDelete 
         }
     }
 
-    private long partDuration(long endPartWriteTime) {
-        return TimeUnit.NANOSECONDS.toMillis(endPartWriteTime - partStart);
+    private static long duration(long start, long end) {
+        return TimeUnit.NANOSECONDS.toMillis(end - start);
     }
 
     public void cleanup() {
