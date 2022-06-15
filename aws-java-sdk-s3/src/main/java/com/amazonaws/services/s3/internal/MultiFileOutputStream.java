@@ -21,6 +21,8 @@ import java.io.OutputStream;
 import java.util.UUID;
 import java.util.concurrent.Semaphore;
 
+import java.util.concurrent.TimeUnit;
+import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.joda.time.DateTime;
 import org.joda.time.format.DateTimeFormat;
@@ -34,6 +36,10 @@ import com.amazonaws.services.s3.UploadObjectObserver;
  * parallel uploads.
  */
 public class MultiFileOutputStream extends OutputStream implements OnFileDelete {
+
+    private final Log log = LogFactory.getLog(getClass());
+    private long partStart;
+
     static final int DEFAULT_PART_SIZE = 5 << 20; // 5MB
     private final File root;
     private final String namePrefix;
@@ -167,6 +173,8 @@ public class MultiFileOutputStream extends OutputStream implements OnFileDelete 
         if (os == null || currFileBytesWritten >= partSize) {
             if (os != null) {
                 os.close();
+                log.info(String.format("Finished encrypting and writing part %s in %s ms", filesCreated,
+                                       duration(partStart, System.nanoTime())));
                 // notify about the new file ready for processing
                 observer.onPartCreate(new PartCreationEvent(
                         getFile(filesCreated), filesCreated, false, this));
@@ -174,6 +182,8 @@ public class MultiFileOutputStream extends OutputStream implements OnFileDelete 
             currFileBytesWritten = 0;
             filesCreated++;
             blockIfNecessary();
+            partStart = System.nanoTime();
+            log.info(String.format("Start writing and encrypting part %s", filesCreated));
             final File file = getFile(filesCreated);
             os = new FileOutputStream(file);
         }
@@ -197,7 +207,9 @@ public class MultiFileOutputStream extends OutputStream implements OnFileDelete 
         if (diskPermits == null || diskLimit == Long.MAX_VALUE)
             return;
         try {
+            long start = System.nanoTime();
             diskPermits.acquire();
+            log.info(String.format("Acquired disk permit in %s ms", duration(start, System.nanoTime())));
         } catch (InterruptedException e) {
             // don't want to re-interrupt so it won't cause SDK stream to be
             // closed in case the thread is reused for a different request
@@ -225,11 +237,17 @@ public class MultiFileOutputStream extends OutputStream implements OnFileDelete 
                             "Ignoring failure to delete empty file " + lastPart);
                 }
             } else {
+                log.info(String.format("Finished encrypting and writing part %s in %s ms", filesCreated,
+                                       duration(partStart, System.nanoTime())));
                 // notify about the new file ready for processing
                 observer.onPartCreate(new PartCreationEvent(
                         getFile(filesCreated), filesCreated, true, this));
             }
         }
+    }
+
+    private static long duration(long start, long end) {
+        return TimeUnit.NANOSECONDS.toMillis(end - start);
     }
 
     public void cleanup() {
