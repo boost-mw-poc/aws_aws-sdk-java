@@ -21,6 +21,7 @@ import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Future;
 
+import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
 import com.amazonaws.AmazonWebServiceRequest;
@@ -52,6 +53,9 @@ import com.amazonaws.services.s3.model.UploadPartResult;
  * @see UploadObjectRequest
  */
 public class UploadObjectObserver {
+
+    private final Log log = LogFactory.getLog(getClass());
+
     private final List<Future<UploadPartResult>> futures = new ArrayList<Future<UploadPartResult>>();
     private UploadObjectRequest req;
     private String uploadId;
@@ -148,7 +152,10 @@ public class UploadObjectObserver {
                 // Upload the ciphertext directly via the non-encrypting
                 // s3 client
                 try {
-                    return uploadPart(reqUploadPart);
+                    log.info(String.format("Call S3 PUT, partNumber %s", reqUploadPart.getPartNumber()));
+                    UploadPartResult uploadPartResult = uploadPart(reqUploadPart);
+                    log.info(String.format("Finished uploading part %s", reqUploadPart.getPartNumber()));
+                    return uploadPartResult;
                 } finally {
                     // clean up part already uploaded
                     if (!part.delete()) {
