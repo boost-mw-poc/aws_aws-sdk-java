@@ -83,7 +83,7 @@ public class AwsKmsKeyDetails implements Serializable, Cloneable, StructuredPojo
     private String origin;
     /**
      * <p>
-     * A description of the key.
+     * A description of the KMS key.
      * </p>
      */
     private String description;
@@ -432,11 +432,11 @@ public class AwsKmsKeyDetails implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * A description of the key.
+     * A description of the KMS key.
      * </p>
      * 
      * @param description
-     *        A description of the key.
+     *        A description of the KMS key.
      */
 
     public void setDescription(String description) {
@@ -445,10 +445,10 @@ public class AwsKmsKeyDetails implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * A description of the key.
+     * A description of the KMS key.
      * </p>
      * 
-     * @return A description of the key.
+     * @return A description of the KMS key.
      */
 
     public String getDescription() {
@@ -457,11 +457,11 @@ public class AwsKmsKeyDetails implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * A description of the key.
+     * A description of the KMS key.
      * </p>
      * 
      * @param description
-     *        A description of the key.
+     *        A description of the KMS key.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
