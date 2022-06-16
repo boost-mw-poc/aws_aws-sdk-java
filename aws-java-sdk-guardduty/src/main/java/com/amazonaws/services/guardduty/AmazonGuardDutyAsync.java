@@ -27,11 +27,11 @@ import com.amazonaws.services.guardduty.model.*;
  * <p>
  * <p>
  * Amazon GuardDuty is a continuous security monitoring service that analyzes and processes the following data sources:
- * VPC Flow Logs, Amazon Web Services CloudTrail event logs, and DNS logs. It uses threat intelligence feeds (such as
- * lists of malicious IPs and domains) and machine learning to identify unexpected, potentially unauthorized, and
- * malicious activity within your Amazon Web Services environment. This can include issues like escalations of
- * privileges, uses of exposed credentials, or communication with malicious IPs, URLs, or domains. For example,
- * GuardDuty can detect compromised EC2 instances that serve malware or mine bitcoin.
+ * VPC Flow Logs, AWS CloudTrail management event logs, CloudTrail S3 data event logs, EKS audit logs, and DNS logs. It
+ * uses threat intelligence feeds (such as lists of malicious IPs and domains) and machine learning to identify
+ * unexpected, potentially unauthorized, and malicious activity within your Amazon Web Services environment. This can
+ * include issues like escalations of privileges, uses of exposed credentials, or communication with malicious IPs,
+ * URLs, or domains. For example, GuardDuty can detect compromised EC2 instances that serve malware or mine bitcoin.
  * </p>
  * <p>
  * GuardDuty also monitors Amazon Web Services account access behavior for signs of compromise. Some examples of this
@@ -49,6 +49,43 @@ public interface AmazonGuardDutyAsync extends AmazonGuardDuty {
 
     /**
      * <p>
+     * Accepts the invitation to be a member account and get monitored by a GuardDuty administrator account that sent
+     * the invitation.
+     * </p>
+     * 
+     * @param acceptAdministratorInvitationRequest
+     * @return A Java Future containing the result of the AcceptAdministratorInvitation operation returned by the
+     *         service.
+     * @sample AmazonGuardDutyAsync.AcceptAdministratorInvitation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/AcceptAdministratorInvitation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<AcceptAdministratorInvitationResult> acceptAdministratorInvitationAsync(
+            AcceptAdministratorInvitationRequest acceptAdministratorInvitationRequest);
+
+    /**
+     * <p>
+     * Accepts the invitation to be a member account and get monitored by a GuardDuty administrator account that sent
+     * the invitation.
+     * </p>
+     * 
+     * @param acceptAdministratorInvitationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the AcceptAdministratorInvitation operation returned by the
+     *         service.
+     * @sample AmazonGuardDutyAsyncHandler.AcceptAdministratorInvitation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/AcceptAdministratorInvitation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<AcceptAdministratorInvitationResult> acceptAdministratorInvitationAsync(
+            AcceptAdministratorInvitationRequest acceptAdministratorInvitationRequest,
+            com.amazonaws.handlers.AsyncHandler<AcceptAdministratorInvitationRequest, AcceptAdministratorInvitationResult> asyncHandler);
+
+    /**
+     * <p>
      * Accepts the invitation to be monitored by a GuardDuty administrator account.
      * </p>
      * 
@@ -58,6 +95,7 @@ public interface AmazonGuardDutyAsync extends AmazonGuardDuty {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/AcceptInvitation" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<AcceptInvitationResult> acceptInvitationAsync(AcceptInvitationRequest acceptInvitationRequest);
 
     /**
@@ -75,6 +113,7 @@ public interface AmazonGuardDutyAsync extends AmazonGuardDuty {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/AcceptInvitation" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<AcceptInvitationResult> acceptInvitationAsync(AcceptInvitationRequest acceptInvitationRequest,
             com.amazonaws.handlers.AsyncHandler<AcceptInvitationRequest, AcceptInvitationResult> asyncHandler);
 
@@ -748,6 +787,41 @@ public interface AmazonGuardDutyAsync extends AmazonGuardDuty {
      * Disassociates the current GuardDuty member account from its administrator account.
      * </p>
      * 
+     * @param disassociateFromAdministratorAccountRequest
+     * @return A Java Future containing the result of the DisassociateFromAdministratorAccount operation returned by the
+     *         service.
+     * @sample AmazonGuardDutyAsync.DisassociateFromAdministratorAccount
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/DisassociateFromAdministratorAccount"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DisassociateFromAdministratorAccountResult> disassociateFromAdministratorAccountAsync(
+            DisassociateFromAdministratorAccountRequest disassociateFromAdministratorAccountRequest);
+
+    /**
+     * <p>
+     * Disassociates the current GuardDuty member account from its administrator account.
+     * </p>
+     * 
+     * @param disassociateFromAdministratorAccountRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DisassociateFromAdministratorAccount operation returned by the
+     *         service.
+     * @sample AmazonGuardDutyAsyncHandler.DisassociateFromAdministratorAccount
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/DisassociateFromAdministratorAccount"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DisassociateFromAdministratorAccountResult> disassociateFromAdministratorAccountAsync(
+            DisassociateFromAdministratorAccountRequest disassociateFromAdministratorAccountRequest,
+            com.amazonaws.handlers.AsyncHandler<DisassociateFromAdministratorAccountRequest, DisassociateFromAdministratorAccountResult> asyncHandler);
+
+    /**
+     * <p>
+     * Disassociates the current GuardDuty member account from its administrator account.
+     * </p>
+     * 
      * @param disassociateFromMasterAccountRequest
      * @return A Java Future containing the result of the DisassociateFromMasterAccount operation returned by the
      *         service.
@@ -755,6 +829,7 @@ public interface AmazonGuardDutyAsync extends AmazonGuardDuty {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/DisassociateFromMasterAccount"
      *      target="_top">AWS API Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<DisassociateFromMasterAccountResult> disassociateFromMasterAccountAsync(
             DisassociateFromMasterAccountRequest disassociateFromMasterAccountRequest);
 
@@ -774,6 +849,7 @@ public interface AmazonGuardDutyAsync extends AmazonGuardDuty {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/DisassociateFromMasterAccount"
      *      target="_top">AWS API Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<DisassociateFromMasterAccountResult> disassociateFromMasterAccountAsync(
             DisassociateFromMasterAccountRequest disassociateFromMasterAccountRequest,
             com.amazonaws.handlers.AsyncHandler<DisassociateFromMasterAccountRequest, DisassociateFromMasterAccountResult> asyncHandler);
@@ -781,9 +857,7 @@ public interface AmazonGuardDutyAsync extends AmazonGuardDuty {
     /**
      * <p>
      * Disassociates GuardDuty member accounts (to the current GuardDuty administrator account) specified by the account
-     * IDs. Member accounts added through <a
-     * href="https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_invitations.html">Invitation</a> get deleted from
-     * the current GuardDuty administrator account after 30 days of disassociation.
+     * IDs.
      * </p>
      * 
      * @param disassociateMembersRequest
@@ -797,9 +871,7 @@ public interface AmazonGuardDutyAsync extends AmazonGuardDuty {
     /**
      * <p>
      * Disassociates GuardDuty member accounts (to the current GuardDuty administrator account) specified by the account
-     * IDs. Member accounts added through <a
-     * href="https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_invitations.html">Invitation</a> get deleted from
-     * the current GuardDuty administrator account after 30 days of disassociation.
+     * IDs.
      * </p>
      * 
      * @param disassociateMembersRequest
@@ -849,6 +921,39 @@ public interface AmazonGuardDutyAsync extends AmazonGuardDuty {
     java.util.concurrent.Future<EnableOrganizationAdminAccountResult> enableOrganizationAdminAccountAsync(
             EnableOrganizationAdminAccountRequest enableOrganizationAdminAccountRequest,
             com.amazonaws.handlers.AsyncHandler<EnableOrganizationAdminAccountRequest, EnableOrganizationAdminAccountResult> asyncHandler);
+
+    /**
+     * <p>
+     * Provides the details for the GuardDuty administrator account associated with the current GuardDuty member
+     * account.
+     * </p>
+     * 
+     * @param getAdministratorAccountRequest
+     * @return A Java Future containing the result of the GetAdministratorAccount operation returned by the service.
+     * @sample AmazonGuardDutyAsync.GetAdministratorAccount
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/GetAdministratorAccount"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetAdministratorAccountResult> getAdministratorAccountAsync(GetAdministratorAccountRequest getAdministratorAccountRequest);
+
+    /**
+     * <p>
+     * Provides the details for the GuardDuty administrator account associated with the current GuardDuty member
+     * account.
+     * </p>
+     * 
+     * @param getAdministratorAccountRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetAdministratorAccount operation returned by the service.
+     * @sample AmazonGuardDutyAsyncHandler.GetAdministratorAccount
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/GetAdministratorAccount"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetAdministratorAccountResult> getAdministratorAccountAsync(GetAdministratorAccountRequest getAdministratorAccountRequest,
+            com.amazonaws.handlers.AsyncHandler<GetAdministratorAccountRequest, GetAdministratorAccountResult> asyncHandler);
 
     /**
      * <p>
@@ -1050,6 +1155,7 @@ public interface AmazonGuardDutyAsync extends AmazonGuardDuty {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/GetMasterAccount" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<GetMasterAccountResult> getMasterAccountAsync(GetMasterAccountRequest getMasterAccountRequest);
 
     /**
@@ -1068,6 +1174,7 @@ public interface AmazonGuardDutyAsync extends AmazonGuardDuty {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/GetMasterAccount" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<GetMasterAccountResult> getMasterAccountAsync(GetMasterAccountRequest getMasterAccountRequest,
             com.amazonaws.handlers.AsyncHandler<GetMasterAccountRequest, GetMasterAccountResult> asyncHandler);
 
@@ -1137,6 +1244,39 @@ public interface AmazonGuardDutyAsync extends AmazonGuardDuty {
 
     /**
      * <p>
+     * Provides the number of days left for each data source used in the free trial period.
+     * </p>
+     * 
+     * @param getRemainingFreeTrialDaysRequest
+     * @return A Java Future containing the result of the GetRemainingFreeTrialDays operation returned by the service.
+     * @sample AmazonGuardDutyAsync.GetRemainingFreeTrialDays
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/GetRemainingFreeTrialDays"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetRemainingFreeTrialDaysResult> getRemainingFreeTrialDaysAsync(
+            GetRemainingFreeTrialDaysRequest getRemainingFreeTrialDaysRequest);
+
+    /**
+     * <p>
+     * Provides the number of days left for each data source used in the free trial period.
+     * </p>
+     * 
+     * @param getRemainingFreeTrialDaysRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetRemainingFreeTrialDays operation returned by the service.
+     * @sample AmazonGuardDutyAsyncHandler.GetRemainingFreeTrialDays
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/GetRemainingFreeTrialDays"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetRemainingFreeTrialDaysResult> getRemainingFreeTrialDaysAsync(
+            GetRemainingFreeTrialDaysRequest getRemainingFreeTrialDaysRequest,
+            com.amazonaws.handlers.AsyncHandler<GetRemainingFreeTrialDaysRequest, GetRemainingFreeTrialDaysResult> asyncHandler);
+
+    /**
+     * <p>
      * Retrieves the ThreatIntelSet that is specified by the ThreatIntelSet ID.
      * </p>
      * 
@@ -1169,9 +1309,9 @@ public interface AmazonGuardDutyAsync extends AmazonGuardDuty {
     /**
      * <p>
      * Lists Amazon GuardDuty usage statistics over the last 30 days for the specified detector ID. For newly enabled
-     * detectors or data sources the cost returned will include only the usage so far under 30 days, this may differ
-     * from the cost metrics in the console, which projects usage over 30 days to provide a monthly cost estimate. For
-     * more information see <a
+     * detectors or data sources, the cost returned will include only the usage so far under 30 days. This may differ
+     * from the cost metrics in the console, which project usage over 30 days to provide a monthly cost estimate. For
+     * more information, see <a
      * href="https://docs.aws.amazon.com/guardduty/latest/ug/monitoring_costs.html#usage-calculations">Understanding How
      * Usage Costs are Calculated</a>.
      * </p>
@@ -1187,9 +1327,9 @@ public interface AmazonGuardDutyAsync extends AmazonGuardDuty {
     /**
      * <p>
      * Lists Amazon GuardDuty usage statistics over the last 30 days for the specified detector ID. For newly enabled
-     * detectors or data sources the cost returned will include only the usage so far under 30 days, this may differ
-     * from the cost metrics in the console, which projects usage over 30 days to provide a monthly cost estimate. For
-     * more information see <a
+     * detectors or data sources, the cost returned will include only the usage so far under 30 days. This may differ
+     * from the cost metrics in the console, which project usage over 30 days to provide a monthly cost estimate. For
+     * more information, see <a
      * href="https://docs.aws.amazon.com/guardduty/latest/ug/monitoring_costs.html#usage-calculations">Understanding How
      * Usage Costs are Calculated</a>.
      * </p>

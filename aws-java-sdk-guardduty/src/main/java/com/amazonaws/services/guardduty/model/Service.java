@@ -88,6 +88,12 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private String userFeedback;
+    /**
+     * <p>
+     * Contains additional information about the generated finding.
+     * </p>
+     */
+    private ServiceAdditionalInfo additionalInfo;
 
     /**
      * <p>
@@ -502,6 +508,46 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Contains additional information about the generated finding.
+     * </p>
+     * 
+     * @param additionalInfo
+     *        Contains additional information about the generated finding.
+     */
+
+    public void setAdditionalInfo(ServiceAdditionalInfo additionalInfo) {
+        this.additionalInfo = additionalInfo;
+    }
+
+    /**
+     * <p>
+     * Contains additional information about the generated finding.
+     * </p>
+     * 
+     * @return Contains additional information about the generated finding.
+     */
+
+    public ServiceAdditionalInfo getAdditionalInfo() {
+        return this.additionalInfo;
+    }
+
+    /**
+     * <p>
+     * Contains additional information about the generated finding.
+     * </p>
+     * 
+     * @param additionalInfo
+     *        Contains additional information about the generated finding.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Service withAdditionalInfo(ServiceAdditionalInfo additionalInfo) {
+        setAdditionalInfo(additionalInfo);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -532,7 +578,9 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
         if (getServiceName() != null)
             sb.append("ServiceName: ").append(getServiceName()).append(",");
         if (getUserFeedback() != null)
-            sb.append("UserFeedback: ").append(getUserFeedback());
+            sb.append("UserFeedback: ").append(getUserFeedback()).append(",");
+        if (getAdditionalInfo() != null)
+            sb.append("AdditionalInfo: ").append(getAdditionalInfo());
         sb.append("}");
         return sb.toString();
     }
@@ -587,6 +635,10 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getUserFeedback() != null && other.getUserFeedback().equals(this.getUserFeedback()) == false)
             return false;
+        if (other.getAdditionalInfo() == null ^ this.getAdditionalInfo() == null)
+            return false;
+        if (other.getAdditionalInfo() != null && other.getAdditionalInfo().equals(this.getAdditionalInfo()) == false)
+            return false;
         return true;
     }
 
@@ -605,6 +657,7 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getResourceRole() == null) ? 0 : getResourceRole().hashCode());
         hashCode = prime * hashCode + ((getServiceName() == null) ? 0 : getServiceName().hashCode());
         hashCode = prime * hashCode + ((getUserFeedback() == null) ? 0 : getUserFeedback().hashCode());
+        hashCode = prime * hashCode + ((getAdditionalInfo() == null) ? 0 : getAdditionalInfo().hashCode());
         return hashCode;
     }
 

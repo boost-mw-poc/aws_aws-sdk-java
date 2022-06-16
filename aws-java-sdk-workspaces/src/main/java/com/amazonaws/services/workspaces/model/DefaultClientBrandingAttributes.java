@@ -35,8 +35,8 @@ public class DefaultClientBrandingAttributes implements Serializable, Cloneable,
 
     /**
      * <p>
-     * The logo URL. This is the link where users can download the logo image. The only supported image format is
-     * <code>.png</code>.
+     * The logo URL. The only image format accepted is a binary data object that is converted from a <code>.png</code>
+     * file.
      * </p>
      */
     private String logoUrl;
@@ -99,13 +99,13 @@ public class DefaultClientBrandingAttributes implements Serializable, Cloneable,
 
     /**
      * <p>
-     * The logo URL. This is the link where users can download the logo image. The only supported image format is
-     * <code>.png</code>.
+     * The logo URL. The only image format accepted is a binary data object that is converted from a <code>.png</code>
+     * file.
      * </p>
      * 
      * @param logoUrl
-     *        The logo URL. This is the link where users can download the logo image. The only supported image format is
-     *        <code>.png</code>.
+     *        The logo URL. The only image format accepted is a binary data object that is converted from a
+     *        <code>.png</code> file.
      */
 
     public void setLogoUrl(String logoUrl) {
@@ -114,12 +114,12 @@ public class DefaultClientBrandingAttributes implements Serializable, Cloneable,
 
     /**
      * <p>
-     * The logo URL. This is the link where users can download the logo image. The only supported image format is
-     * <code>.png</code>.
+     * The logo URL. The only image format accepted is a binary data object that is converted from a <code>.png</code>
+     * file.
      * </p>
      * 
-     * @return The logo URL. This is the link where users can download the logo image. The only supported image format
-     *         is <code>.png</code>.
+     * @return The logo URL. The only image format accepted is a binary data object that is converted from a
+     *         <code>.png</code> file.
      */
 
     public String getLogoUrl() {
@@ -128,13 +128,13 @@ public class DefaultClientBrandingAttributes implements Serializable, Cloneable,
 
     /**
      * <p>
-     * The logo URL. This is the link where users can download the logo image. The only supported image format is
-     * <code>.png</code>.
+     * The logo URL. The only image format accepted is a binary data object that is converted from a <code>.png</code>
+     * file.
      * </p>
      * 
      * @param logoUrl
-     *        The logo URL. This is the link where users can download the logo image. The only supported image format is
-     *        <code>.png</code>.
+     *        The logo URL. The only image format accepted is a binary data object that is converted from a
+     *        <code>.png</code> file.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

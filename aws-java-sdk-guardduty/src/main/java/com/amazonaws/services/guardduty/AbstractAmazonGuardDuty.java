@@ -28,6 +28,12 @@ public class AbstractAmazonGuardDuty implements AmazonGuardDuty {
     }
 
     @Override
+    public AcceptAdministratorInvitationResult acceptAdministratorInvitation(AcceptAdministratorInvitationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    @Deprecated
     public AcceptInvitationResult acceptInvitation(AcceptInvitationRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -128,6 +134,12 @@ public class AbstractAmazonGuardDuty implements AmazonGuardDuty {
     }
 
     @Override
+    public DisassociateFromAdministratorAccountResult disassociateFromAdministratorAccount(DisassociateFromAdministratorAccountRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    @Deprecated
     public DisassociateFromMasterAccountResult disassociateFromMasterAccount(DisassociateFromMasterAccountRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -139,6 +151,11 @@ public class AbstractAmazonGuardDuty implements AmazonGuardDuty {
 
     @Override
     public EnableOrganizationAdminAccountResult enableOrganizationAdminAccount(EnableOrganizationAdminAccountRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetAdministratorAccountResult getAdministratorAccount(GetAdministratorAccountRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -173,6 +190,7 @@ public class AbstractAmazonGuardDuty implements AmazonGuardDuty {
     }
 
     @Override
+    @Deprecated
     public GetMasterAccountResult getMasterAccount(GetMasterAccountRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -184,6 +202,11 @@ public class AbstractAmazonGuardDuty implements AmazonGuardDuty {
 
     @Override
     public GetMembersResult getMembers(GetMembersRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetRemainingFreeTrialDaysResult getRemainingFreeTrialDays(GetRemainingFreeTrialDaysRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

@@ -36,14 +36,16 @@ public class IosImportClientBrandingAttributes implements Serializable, Cloneabl
 
     /**
      * <p>
-     * The logo. This is the link where users can download the logo image. This is the standard-resolution display that
-     * has a 1:1 pixel density (or @1x), where one pixel is equal to one point.
+     * The logo. This is the standard-resolution display that has a 1:1 pixel density (or @1x), where one pixel is equal
+     * to one point. The only image format accepted is a binary data object that is converted from a <code>.png</code>
+     * file.
      * </p>
      */
     private java.nio.ByteBuffer logo;
     /**
      * <p>
      * The @2x version of the logo. This is the higher resolution display that offers a scale factor of 2.0 (or @2x).
+     * The only image format accepted is a binary data object that is converted from a <code>.png</code> file.
      * </p>
      * <note>
      * <p>
@@ -57,6 +59,7 @@ public class IosImportClientBrandingAttributes implements Serializable, Cloneabl
     /**
      * <p>
      * The @3x version of the logo. This is the higher resolution display that offers a scale factor of 3.0 (or @3x).
+     * The only image format accepted is a binary data object that is converted from a <code>.png</code> file.
      * </p>
      * <note>
      * <p>
@@ -126,8 +129,9 @@ public class IosImportClientBrandingAttributes implements Serializable, Cloneabl
 
     /**
      * <p>
-     * The logo. This is the link where users can download the logo image. This is the standard-resolution display that
-     * has a 1:1 pixel density (or @1x), where one pixel is equal to one point.
+     * The logo. This is the standard-resolution display that has a 1:1 pixel density (or @1x), where one pixel is equal
+     * to one point. The only image format accepted is a binary data object that is converted from a <code>.png</code>
+     * file.
      * </p>
      * <p>
      * The AWS SDK for Java performs a Base64 encoding on this field before sending this request to the AWS service.
@@ -141,8 +145,9 @@ public class IosImportClientBrandingAttributes implements Serializable, Cloneabl
      * </p>
      * 
      * @param logo
-     *        The logo. This is the link where users can download the logo image. This is the standard-resolution
-     *        display that has a 1:1 pixel density (or @1x), where one pixel is equal to one point.
+     *        The logo. This is the standard-resolution display that has a 1:1 pixel density (or @1x), where one pixel
+     *        is equal to one point. The only image format accepted is a binary data object that is converted from a
+     *        <code>.png</code> file.
      */
 
     public void setLogo(java.nio.ByteBuffer logo) {
@@ -151,8 +156,9 @@ public class IosImportClientBrandingAttributes implements Serializable, Cloneabl
 
     /**
      * <p>
-     * The logo. This is the link where users can download the logo image. This is the standard-resolution display that
-     * has a 1:1 pixel density (or @1x), where one pixel is equal to one point.
+     * The logo. This is the standard-resolution display that has a 1:1 pixel density (or @1x), where one pixel is equal
+     * to one point. The only image format accepted is a binary data object that is converted from a <code>.png</code>
+     * file.
      * </p>
      * <p>
      * {@code ByteBuffer}s are stateful. Calling their {@code get} methods changes their {@code position}. We recommend
@@ -162,8 +168,9 @@ public class IosImportClientBrandingAttributes implements Serializable, Cloneabl
      * {@code position}.
      * </p>
      * 
-     * @return The logo. This is the link where users can download the logo image. This is the standard-resolution
-     *         display that has a 1:1 pixel density (or @1x), where one pixel is equal to one point.
+     * @return The logo. This is the standard-resolution display that has a 1:1 pixel density (or @1x), where one pixel
+     *         is equal to one point. The only image format accepted is a binary data object that is converted from a
+     *         <code>.png</code> file.
      */
 
     public java.nio.ByteBuffer getLogo() {
@@ -172,8 +179,9 @@ public class IosImportClientBrandingAttributes implements Serializable, Cloneabl
 
     /**
      * <p>
-     * The logo. This is the link where users can download the logo image. This is the standard-resolution display that
-     * has a 1:1 pixel density (or @1x), where one pixel is equal to one point.
+     * The logo. This is the standard-resolution display that has a 1:1 pixel density (or @1x), where one pixel is equal
+     * to one point. The only image format accepted is a binary data object that is converted from a <code>.png</code>
+     * file.
      * </p>
      * <p>
      * The AWS SDK for Java performs a Base64 encoding on this field before sending this request to the AWS service.
@@ -187,8 +195,9 @@ public class IosImportClientBrandingAttributes implements Serializable, Cloneabl
      * </p>
      * 
      * @param logo
-     *        The logo. This is the link where users can download the logo image. This is the standard-resolution
-     *        display that has a 1:1 pixel density (or @1x), where one pixel is equal to one point.
+     *        The logo. This is the standard-resolution display that has a 1:1 pixel density (or @1x), where one pixel
+     *        is equal to one point. The only image format accepted is a binary data object that is converted from a
+     *        <code>.png</code> file.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -200,6 +209,7 @@ public class IosImportClientBrandingAttributes implements Serializable, Cloneabl
     /**
      * <p>
      * The @2x version of the logo. This is the higher resolution display that offers a scale factor of 2.0 (or @2x).
+     * The only image format accepted is a binary data object that is converted from a <code>.png</code> file.
      * </p>
      * <note>
      * <p>
@@ -221,7 +231,8 @@ public class IosImportClientBrandingAttributes implements Serializable, Cloneabl
      * 
      * @param logo2x
      *        The @2x version of the logo. This is the higher resolution display that offers a scale factor of 2.0 (or
-     *        @2x).</p> <note>
+     *        @2x). The only image format accepted is a binary data object that is converted from a <code>.png</code>
+     *        file.</p> <note>
      *        <p>
      *        For more information about iOS image size and resolution, see <a href=
      *        "https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/image-size-and-resolution/"
@@ -236,6 +247,7 @@ public class IosImportClientBrandingAttributes implements Serializable, Cloneabl
     /**
      * <p>
      * The @2x version of the logo. This is the higher resolution display that offers a scale factor of 2.0 (or @2x).
+     * The only image format accepted is a binary data object that is converted from a <code>.png</code> file.
      * </p>
      * <note>
      * <p>
@@ -253,7 +265,8 @@ public class IosImportClientBrandingAttributes implements Serializable, Cloneabl
      * </p>
      * 
      * @return The @2x version of the logo. This is the higher resolution display that offers a scale factor of 2.0 (or
-     *         @2x).</p> <note>
+     *         @2x). The only image format accepted is a binary data object that is converted from a <code>.png</code>
+     *         file.</p> <note>
      *         <p>
      *         For more information about iOS image size and resolution, see <a href=
      *         "https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/image-size-and-resolution/"
@@ -268,6 +281,7 @@ public class IosImportClientBrandingAttributes implements Serializable, Cloneabl
     /**
      * <p>
      * The @2x version of the logo. This is the higher resolution display that offers a scale factor of 2.0 (or @2x).
+     * The only image format accepted is a binary data object that is converted from a <code>.png</code> file.
      * </p>
      * <note>
      * <p>
@@ -289,7 +303,8 @@ public class IosImportClientBrandingAttributes implements Serializable, Cloneabl
      * 
      * @param logo2x
      *        The @2x version of the logo. This is the higher resolution display that offers a scale factor of 2.0 (or
-     *        @2x).</p> <note>
+     *        @2x). The only image format accepted is a binary data object that is converted from a <code>.png</code>
+     *        file.</p> <note>
      *        <p>
      *        For more information about iOS image size and resolution, see <a href=
      *        "https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/image-size-and-resolution/"
@@ -306,6 +321,7 @@ public class IosImportClientBrandingAttributes implements Serializable, Cloneabl
     /**
      * <p>
      * The @3x version of the logo. This is the higher resolution display that offers a scale factor of 3.0 (or @3x).
+     * The only image format accepted is a binary data object that is converted from a <code>.png</code> file.
      * </p>
      * <note>
      * <p>
@@ -327,7 +343,8 @@ public class IosImportClientBrandingAttributes implements Serializable, Cloneabl
      * 
      * @param logo3x
      *        The @3x version of the logo. This is the higher resolution display that offers a scale factor of 3.0 (or
-     *        @3x).</p> <note>
+     *        @3x). The only image format accepted is a binary data object that is converted from a <code>.png</code>
+     *        file.</p> <note>
      *        <p>
      *        For more information about iOS image size and resolution, see <a href=
      *        "https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/image-size-and-resolution/"
@@ -342,6 +359,7 @@ public class IosImportClientBrandingAttributes implements Serializable, Cloneabl
     /**
      * <p>
      * The @3x version of the logo. This is the higher resolution display that offers a scale factor of 3.0 (or @3x).
+     * The only image format accepted is a binary data object that is converted from a <code>.png</code> file.
      * </p>
      * <note>
      * <p>
@@ -359,7 +377,8 @@ public class IosImportClientBrandingAttributes implements Serializable, Cloneabl
      * </p>
      * 
      * @return The @3x version of the logo. This is the higher resolution display that offers a scale factor of 3.0 (or
-     *         @3x).</p> <note>
+     *         @3x). The only image format accepted is a binary data object that is converted from a <code>.png</code>
+     *         file.</p> <note>
      *         <p>
      *         For more information about iOS image size and resolution, see <a href=
      *         "https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/image-size-and-resolution/"
@@ -374,6 +393,7 @@ public class IosImportClientBrandingAttributes implements Serializable, Cloneabl
     /**
      * <p>
      * The @3x version of the logo. This is the higher resolution display that offers a scale factor of 3.0 (or @3x).
+     * The only image format accepted is a binary data object that is converted from a <code>.png</code> file.
      * </p>
      * <note>
      * <p>
@@ -395,7 +415,8 @@ public class IosImportClientBrandingAttributes implements Serializable, Cloneabl
      * 
      * @param logo3x
      *        The @3x version of the logo. This is the higher resolution display that offers a scale factor of 3.0 (or
-     *        @3x).</p> <note>
+     *        @3x). The only image format accepted is a binary data object that is converted from a <code>.png</code>
+     *        file.</p> <note>
      *        <p>
      *        For more information about iOS image size and resolution, see <a href=
      *        "https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/image-size-and-resolution/"
