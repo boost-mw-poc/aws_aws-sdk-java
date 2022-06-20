@@ -1205,6 +1205,37 @@ public interface AWSDirectoryServiceAsync extends AWSDirectoryService {
 
     /**
      * <p>
+     * Retrieves information about the configurable settings for the specified directory.
+     * </p>
+     * 
+     * @param describeSettingsRequest
+     * @return A Java Future containing the result of the DescribeSettings operation returned by the service.
+     * @sample AWSDirectoryServiceAsync.DescribeSettings
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/DescribeSettings" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeSettingsResult> describeSettingsAsync(DescribeSettingsRequest describeSettingsRequest);
+
+    /**
+     * <p>
+     * Retrieves information about the configurable settings for the specified directory.
+     * </p>
+     * 
+     * @param describeSettingsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeSettings operation returned by the service.
+     * @sample AWSDirectoryServiceAsyncHandler.DescribeSettings
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/DescribeSettings" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeSettingsResult> describeSettingsAsync(DescribeSettingsRequest describeSettingsRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeSettingsRequest, DescribeSettingsResult> asyncHandler);
+
+    /**
+     * <p>
      * Returns the shared directories in your account.
      * </p>
      * 
@@ -2406,6 +2437,37 @@ public interface AWSDirectoryServiceAsync extends AWSDirectoryService {
      */
     java.util.concurrent.Future<UpdateRadiusResult> updateRadiusAsync(UpdateRadiusRequest updateRadiusRequest,
             com.amazonaws.handlers.AsyncHandler<UpdateRadiusRequest, UpdateRadiusResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates the configurable settings for the specified directory.
+     * </p>
+     * 
+     * @param updateSettingsRequest
+     * @return A Java Future containing the result of the UpdateSettings operation returned by the service.
+     * @sample AWSDirectoryServiceAsync.UpdateSettings
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/UpdateSettings" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateSettingsResult> updateSettingsAsync(UpdateSettingsRequest updateSettingsRequest);
+
+    /**
+     * <p>
+     * Updates the configurable settings for the specified directory.
+     * </p>
+     * 
+     * @param updateSettingsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateSettings operation returned by the service.
+     * @sample AWSDirectoryServiceAsyncHandler.UpdateSettings
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/UpdateSettings" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateSettingsResult> updateSettingsAsync(UpdateSettingsRequest updateSettingsRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateSettingsRequest, UpdateSettingsResult> asyncHandler);
 
     /**
      * <p>

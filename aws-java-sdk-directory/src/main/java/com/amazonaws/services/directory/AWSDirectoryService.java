@@ -935,6 +935,31 @@ public interface AWSDirectoryService {
 
     /**
      * <p>
+     * Retrieves information about the configurable settings for the specified directory.
+     * </p>
+     * 
+     * @param describeSettingsRequest
+     * @return Result of the DescribeSettings operation returned by the service.
+     * @throws DirectoryDoesNotExistException
+     *         The specified directory does not exist in the system.
+     * @throws UnsupportedOperationException
+     *         The operation is not supported.
+     * @throws InvalidParameterException
+     *         One or more parameters are not valid.
+     * @throws InvalidNextTokenException
+     *         The <code>NextToken</code> value is not valid.
+     * @throws ClientException
+     *         A client exception has occurred.
+     * @throws ServiceException
+     *         An exception has occurred in Directory Service.
+     * @sample AWSDirectoryService.DescribeSettings
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/DescribeSettings" target="_top">AWS API
+     *      Documentation</a>
+     */
+    DescribeSettingsResult describeSettings(DescribeSettingsRequest describeSettingsRequest);
+
+    /**
+     * <p>
      * Returns the shared directories in your account.
      * </p>
      * 
@@ -1803,6 +1828,35 @@ public interface AWSDirectoryService {
      *      Documentation</a>
      */
     UpdateRadiusResult updateRadius(UpdateRadiusRequest updateRadiusRequest);
+
+    /**
+     * <p>
+     * Updates the configurable settings for the specified directory.
+     * </p>
+     * 
+     * @param updateSettingsRequest
+     * @return Result of the UpdateSettings operation returned by the service.
+     * @throws DirectoryDoesNotExistException
+     *         The specified directory does not exist in the system.
+     * @throws UnsupportedOperationException
+     *         The operation is not supported.
+     * @throws DirectoryUnavailableException
+     *         The specified directory is unavailable or could not be found.
+     * @throws IncompatibleSettingsException
+     *         The specified directory setting is not compatible with other settings.
+     * @throws UnsupportedSettingsException
+     *         The specified directory setting is not supported.
+     * @throws InvalidParameterException
+     *         One or more parameters are not valid.
+     * @throws ClientException
+     *         A client exception has occurred.
+     * @throws ServiceException
+     *         An exception has occurred in Directory Service.
+     * @sample AWSDirectoryService.UpdateSettings
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/UpdateSettings" target="_top">AWS API
+     *      Documentation</a>
+     */
+    UpdateSettingsResult updateSettings(UpdateSettingsRequest updateSettingsRequest);
 
     /**
      * <p>

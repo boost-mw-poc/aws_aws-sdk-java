@@ -188,6 +188,11 @@ public class AbstractAWSDirectoryService implements AWSDirectoryService {
     }
 
     @Override
+    public DescribeSettingsResult describeSettings(DescribeSettingsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DescribeSharedDirectoriesResult describeSharedDirectories(DescribeSharedDirectoriesRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -354,6 +359,11 @@ public class AbstractAWSDirectoryService implements AWSDirectoryService {
 
     @Override
     public UpdateRadiusResult updateRadius(UpdateRadiusRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateSettingsResult updateSettings(UpdateSettingsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

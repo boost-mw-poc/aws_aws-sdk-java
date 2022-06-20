@@ -430,6 +430,19 @@ public class AbstractAWSDirectoryServiceAsync extends AbstractAWSDirectoryServic
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeSettingsResult> describeSettingsAsync(DescribeSettingsRequest request) {
+
+        return describeSettingsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeSettingsResult> describeSettingsAsync(DescribeSettingsRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeSettingsRequest, DescribeSettingsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeSharedDirectoriesResult> describeSharedDirectoriesAsync(DescribeSharedDirectoriesRequest request) {
 
         return describeSharedDirectoriesAsync(request, null);
@@ -889,6 +902,19 @@ public class AbstractAWSDirectoryServiceAsync extends AbstractAWSDirectoryServic
     @Override
     public java.util.concurrent.Future<UpdateRadiusResult> updateRadiusAsync(UpdateRadiusRequest request,
             com.amazonaws.handlers.AsyncHandler<UpdateRadiusRequest, UpdateRadiusResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateSettingsResult> updateSettingsAsync(UpdateSettingsRequest request) {
+
+        return updateSettingsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateSettingsResult> updateSettingsAsync(UpdateSettingsRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateSettingsRequest, UpdateSettingsResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
