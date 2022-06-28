@@ -98,6 +98,11 @@ public class AbstractAWSFinSpaceData implements AWSFinSpaceData {
     }
 
     @Override
+    public GetExternalDataViewAccessDetailsResult getExternalDataViewAccessDetails(GetExternalDataViewAccessDetailsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetPermissionGroupResult getPermissionGroup(GetPermissionGroupRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

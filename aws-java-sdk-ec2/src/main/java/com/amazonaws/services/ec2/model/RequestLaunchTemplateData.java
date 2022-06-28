@@ -167,10 +167,49 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
     private String userData;
     /**
      * <p>
-     * The tags to apply to the resources during launch. You can only tag instances and volumes on launch. The specified
-     * tags are applied to all instances or volumes that are created during launch. To tag a resource after it has been
-     * created, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTags.html">CreateTags</a>.
+     * The tags to apply to the resources that are created during instance launch.
      * </p>
+     * <p>
+     * You can specify tags for the following resources only:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Instances
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Volumes
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Elastic graphics
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Spot Instance requests
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Network interfaces
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * To tag a resource after it has been created, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTags.html">CreateTags</a>.
+     * </p>
+     * <note>
+     * <p>
+     * To tag the launch template itself, you must use the <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateLaunchTemplate.html">TagSpecification</a>
+     * parameter.
+     * </p>
+     * </note>
      */
     private com.amazonaws.internal.SdkInternalList<LaunchTemplateTagSpecificationRequest> tagSpecifications;
     /**
@@ -208,7 +247,7 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
     private LaunchTemplateInstanceMarketOptionsRequest instanceMarketOptions;
     /**
      * <p>
-     * The credit option for CPU usage of the instance. Valid for T2, T3, or T3a instances only.
+     * The credit option for CPU usage of the instance. Valid only for T instances.
      * </p>
      */
     private CreditSpecificationRequest creditSpecification;
@@ -1299,15 +1338,91 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The tags to apply to the resources during launch. You can only tag instances and volumes on launch. The specified
-     * tags are applied to all instances or volumes that are created during launch. To tag a resource after it has been
-     * created, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTags.html">CreateTags</a>.
+     * The tags to apply to the resources that are created during instance launch.
      * </p>
+     * <p>
+     * You can specify tags for the following resources only:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Instances
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Volumes
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Elastic graphics
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Spot Instance requests
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Network interfaces
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * To tag a resource after it has been created, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTags.html">CreateTags</a>.
+     * </p>
+     * <note>
+     * <p>
+     * To tag the launch template itself, you must use the <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateLaunchTemplate.html">TagSpecification</a>
+     * parameter.
+     * </p>
+     * </note>
      * 
-     * @return The tags to apply to the resources during launch. You can only tag instances and volumes on launch. The
-     *         specified tags are applied to all instances or volumes that are created during launch. To tag a resource
-     *         after it has been created, see <a
+     * @return The tags to apply to the resources that are created during instance launch.</p>
+     *         <p>
+     *         You can specify tags for the following resources only:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         Instances
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Volumes
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Elastic graphics
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Spot Instance requests
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Network interfaces
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         To tag a resource after it has been created, see <a
      *         href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTags.html">CreateTags</a>.
+     *         </p>
+     *         <note>
+     *         <p>
+     *         To tag the launch template itself, you must use the <a
+     *         href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateLaunchTemplate.html"
+     *         >TagSpecification</a> parameter.
+     *         </p>
      */
 
     public java.util.List<LaunchTemplateTagSpecificationRequest> getTagSpecifications() {
@@ -1319,16 +1434,92 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The tags to apply to the resources during launch. You can only tag instances and volumes on launch. The specified
-     * tags are applied to all instances or volumes that are created during launch. To tag a resource after it has been
-     * created, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTags.html">CreateTags</a>.
+     * The tags to apply to the resources that are created during instance launch.
      * </p>
+     * <p>
+     * You can specify tags for the following resources only:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Instances
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Volumes
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Elastic graphics
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Spot Instance requests
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Network interfaces
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * To tag a resource after it has been created, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTags.html">CreateTags</a>.
+     * </p>
+     * <note>
+     * <p>
+     * To tag the launch template itself, you must use the <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateLaunchTemplate.html">TagSpecification</a>
+     * parameter.
+     * </p>
+     * </note>
      * 
      * @param tagSpecifications
-     *        The tags to apply to the resources during launch. You can only tag instances and volumes on launch. The
-     *        specified tags are applied to all instances or volumes that are created during launch. To tag a resource
-     *        after it has been created, see <a
+     *        The tags to apply to the resources that are created during instance launch.</p>
+     *        <p>
+     *        You can specify tags for the following resources only:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        Instances
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Volumes
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Elastic graphics
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Spot Instance requests
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Network interfaces
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        To tag a resource after it has been created, see <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTags.html">CreateTags</a>.
+     *        </p>
+     *        <note>
+     *        <p>
+     *        To tag the launch template itself, you must use the <a
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateLaunchTemplate.html"
+     *        >TagSpecification</a> parameter.
+     *        </p>
      */
 
     public void setTagSpecifications(java.util.Collection<LaunchTemplateTagSpecificationRequest> tagSpecifications) {
@@ -1342,10 +1533,49 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The tags to apply to the resources during launch. You can only tag instances and volumes on launch. The specified
-     * tags are applied to all instances or volumes that are created during launch. To tag a resource after it has been
-     * created, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTags.html">CreateTags</a>.
+     * The tags to apply to the resources that are created during instance launch.
      * </p>
+     * <p>
+     * You can specify tags for the following resources only:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Instances
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Volumes
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Elastic graphics
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Spot Instance requests
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Network interfaces
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * To tag a resource after it has been created, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTags.html">CreateTags</a>.
+     * </p>
+     * <note>
+     * <p>
+     * To tag the launch template itself, you must use the <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateLaunchTemplate.html">TagSpecification</a>
+     * parameter.
+     * </p>
+     * </note>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setTagSpecifications(java.util.Collection)} or {@link #withTagSpecifications(java.util.Collection)} if
@@ -1353,10 +1583,47 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
      * </p>
      * 
      * @param tagSpecifications
-     *        The tags to apply to the resources during launch. You can only tag instances and volumes on launch. The
-     *        specified tags are applied to all instances or volumes that are created during launch. To tag a resource
-     *        after it has been created, see <a
+     *        The tags to apply to the resources that are created during instance launch.</p>
+     *        <p>
+     *        You can specify tags for the following resources only:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        Instances
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Volumes
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Elastic graphics
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Spot Instance requests
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Network interfaces
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        To tag a resource after it has been created, see <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTags.html">CreateTags</a>.
+     *        </p>
+     *        <note>
+     *        <p>
+     *        To tag the launch template itself, you must use the <a
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateLaunchTemplate.html"
+     *        >TagSpecification</a> parameter.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1372,16 +1639,92 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The tags to apply to the resources during launch. You can only tag instances and volumes on launch. The specified
-     * tags are applied to all instances or volumes that are created during launch. To tag a resource after it has been
-     * created, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTags.html">CreateTags</a>.
+     * The tags to apply to the resources that are created during instance launch.
      * </p>
+     * <p>
+     * You can specify tags for the following resources only:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Instances
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Volumes
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Elastic graphics
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Spot Instance requests
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Network interfaces
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * To tag a resource after it has been created, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTags.html">CreateTags</a>.
+     * </p>
+     * <note>
+     * <p>
+     * To tag the launch template itself, you must use the <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateLaunchTemplate.html">TagSpecification</a>
+     * parameter.
+     * </p>
+     * </note>
      * 
      * @param tagSpecifications
-     *        The tags to apply to the resources during launch. You can only tag instances and volumes on launch. The
-     *        specified tags are applied to all instances or volumes that are created during launch. To tag a resource
-     *        after it has been created, see <a
+     *        The tags to apply to the resources that are created during instance launch.</p>
+     *        <p>
+     *        You can specify tags for the following resources only:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        Instances
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Volumes
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Elastic graphics
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Spot Instance requests
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Network interfaces
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        To tag a resource after it has been created, see <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTags.html">CreateTags</a>.
+     *        </p>
+     *        <note>
+     *        <p>
+     *        To tag the launch template itself, you must use the <a
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateLaunchTemplate.html"
+     *        >TagSpecification</a> parameter.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1754,11 +2097,11 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The credit option for CPU usage of the instance. Valid for T2, T3, or T3a instances only.
+     * The credit option for CPU usage of the instance. Valid only for T instances.
      * </p>
      * 
      * @param creditSpecification
-     *        The credit option for CPU usage of the instance. Valid for T2, T3, or T3a instances only.
+     *        The credit option for CPU usage of the instance. Valid only for T instances.
      */
 
     public void setCreditSpecification(CreditSpecificationRequest creditSpecification) {
@@ -1767,10 +2110,10 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The credit option for CPU usage of the instance. Valid for T2, T3, or T3a instances only.
+     * The credit option for CPU usage of the instance. Valid only for T instances.
      * </p>
      * 
-     * @return The credit option for CPU usage of the instance. Valid for T2, T3, or T3a instances only.
+     * @return The credit option for CPU usage of the instance. Valid only for T instances.
      */
 
     public CreditSpecificationRequest getCreditSpecification() {
@@ -1779,11 +2122,11 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The credit option for CPU usage of the instance. Valid for T2, T3, or T3a instances only.
+     * The credit option for CPU usage of the instance. Valid only for T instances.
      * </p>
      * 
      * @param creditSpecification
-     *        The credit option for CPU usage of the instance. Valid for T2, T3, or T3a instances only.
+     *        The credit option for CPU usage of the instance. Valid only for T instances.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -147,6 +147,26 @@ public interface AWSDataSync {
 
     /**
      * <p>
+     * Creates an endpoint for an Amazon FSx for NetApp ONTAP file system that DataSync can access for a transfer. For
+     * more information, see <a
+     * href="https://docs.aws.amazon.com/datasync/latest/userguide/create-ontap-location.html">Creating a location for
+     * FSx for ONTAP</a>.
+     * </p>
+     * 
+     * @param createLocationFsxOntapRequest
+     * @return Result of the CreateLocationFsxOntap operation returned by the service.
+     * @throws InvalidRequestException
+     *         This exception is thrown when the client submits a malformed request.
+     * @throws InternalException
+     *         This exception is thrown when an error occurs in the DataSync service.
+     * @sample AWSDataSync.CreateLocationFsxOntap
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/CreateLocationFsxOntap"
+     *      target="_top">AWS API Documentation</a>
+     */
+    CreateLocationFsxOntapResult createLocationFsxOntap(CreateLocationFsxOntapRequest createLocationFsxOntapRequest);
+
+    /**
+     * <p>
      * Creates an endpoint for an Amazon FSx for OpenZFS file system.
      * </p>
      * 
@@ -216,10 +236,9 @@ public interface AWSDataSync {
 
     /**
      * <p>
-     * Creates an endpoint for a self-managed object storage bucket. For more information about self-managed object
-     * storage locations, see <a
-     * href="https://docs.aws.amazon.com/datasync/latest/userguide/create-object-location.html">Creating a location for
-     * object storage</a>.
+     * Creates an endpoint for an object storage system that DataSync can access for a transfer. For more information,
+     * see <a href="https://docs.aws.amazon.com/datasync/latest/userguide/create-object-location.html">Creating a
+     * location for object storage</a>.
      * </p>
      * 
      * @param createLocationObjectStorageRequest
@@ -429,6 +448,23 @@ public interface AWSDataSync {
 
     /**
      * <p>
+     * Provides details about how an DataSync location for an Amazon FSx for NetApp ONTAP file system is configured.
+     * </p>
+     * 
+     * @param describeLocationFsxOntapRequest
+     * @return Result of the DescribeLocationFsxOntap operation returned by the service.
+     * @throws InvalidRequestException
+     *         This exception is thrown when the client submits a malformed request.
+     * @throws InternalException
+     *         This exception is thrown when an error occurs in the DataSync service.
+     * @sample AWSDataSync.DescribeLocationFsxOntap
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/DescribeLocationFsxOntap"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DescribeLocationFsxOntapResult describeLocationFsxOntap(DescribeLocationFsxOntapRequest describeLocationFsxOntapRequest);
+
+    /**
+     * <p>
      * Returns metadata about an Amazon FSx for OpenZFS location, such as information about its path.
      * </p>
      * 
@@ -499,10 +535,7 @@ public interface AWSDataSync {
 
     /**
      * <p>
-     * Returns metadata about a self-managed object storage server location. For more information about self-managed
-     * object storage locations, see <a
-     * href="https://docs.aws.amazon.com/datasync/latest/userguide/create-object-location.html">Creating a location for
-     * object storage</a>.
+     * Returns metadata about your DataSync location for an object storage system.
      * </p>
      * 
      * @param describeLocationObjectStorageRequest

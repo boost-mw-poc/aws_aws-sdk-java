@@ -539,6 +539,41 @@ public class AWSFinSpaceDataAsyncClient extends AWSFinSpaceDataClient implements
     }
 
     @Override
+    public java.util.concurrent.Future<GetExternalDataViewAccessDetailsResult> getExternalDataViewAccessDetailsAsync(
+            GetExternalDataViewAccessDetailsRequest request) {
+
+        return getExternalDataViewAccessDetailsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetExternalDataViewAccessDetailsResult> getExternalDataViewAccessDetailsAsync(
+            final GetExternalDataViewAccessDetailsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetExternalDataViewAccessDetailsRequest, GetExternalDataViewAccessDetailsResult> asyncHandler) {
+        final GetExternalDataViewAccessDetailsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetExternalDataViewAccessDetailsResult>() {
+            @Override
+            public GetExternalDataViewAccessDetailsResult call() throws Exception {
+                GetExternalDataViewAccessDetailsResult result = null;
+
+                try {
+                    result = executeGetExternalDataViewAccessDetails(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetPermissionGroupResult> getPermissionGroupAsync(GetPermissionGroupRequest request) {
 
         return getPermissionGroupAsync(request, null);

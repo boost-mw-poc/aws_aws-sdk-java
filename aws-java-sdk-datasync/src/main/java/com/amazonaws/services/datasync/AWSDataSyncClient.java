@@ -406,6 +406,69 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
 
     /**
      * <p>
+     * Creates an endpoint for an Amazon FSx for NetApp ONTAP file system that DataSync can access for a transfer. For
+     * more information, see <a
+     * href="https://docs.aws.amazon.com/datasync/latest/userguide/create-ontap-location.html">Creating a location for
+     * FSx for ONTAP</a>.
+     * </p>
+     * 
+     * @param createLocationFsxOntapRequest
+     * @return Result of the CreateLocationFsxOntap operation returned by the service.
+     * @throws InvalidRequestException
+     *         This exception is thrown when the client submits a malformed request.
+     * @throws InternalException
+     *         This exception is thrown when an error occurs in the DataSync service.
+     * @sample AWSDataSync.CreateLocationFsxOntap
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/CreateLocationFsxOntap"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public CreateLocationFsxOntapResult createLocationFsxOntap(CreateLocationFsxOntapRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateLocationFsxOntap(request);
+    }
+
+    @SdkInternalApi
+    final CreateLocationFsxOntapResult executeCreateLocationFsxOntap(CreateLocationFsxOntapRequest createLocationFsxOntapRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createLocationFsxOntapRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateLocationFsxOntapRequest> request = null;
+        Response<CreateLocationFsxOntapResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateLocationFsxOntapRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(createLocationFsxOntapRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "DataSync");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateLocationFsxOntap");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<CreateLocationFsxOntapResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new CreateLocationFsxOntapResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Creates an endpoint for an Amazon FSx for OpenZFS file system.
      * </p>
      * 
@@ -647,10 +710,9 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
 
     /**
      * <p>
-     * Creates an endpoint for a self-managed object storage bucket. For more information about self-managed object
-     * storage locations, see <a
-     * href="https://docs.aws.amazon.com/datasync/latest/userguide/create-object-location.html">Creating a location for
-     * object storage</a>.
+     * Creates an endpoint for an object storage system that DataSync can access for a transfer. For more information,
+     * see <a href="https://docs.aws.amazon.com/datasync/latest/userguide/create-object-location.html">Creating a
+     * location for object storage</a>.
      * </p>
      * 
      * @param createLocationObjectStorageRequest
@@ -1284,6 +1346,67 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
 
     /**
      * <p>
+     * Provides details about how an DataSync location for an Amazon FSx for NetApp ONTAP file system is configured.
+     * </p>
+     * 
+     * @param describeLocationFsxOntapRequest
+     * @return Result of the DescribeLocationFsxOntap operation returned by the service.
+     * @throws InvalidRequestException
+     *         This exception is thrown when the client submits a malformed request.
+     * @throws InternalException
+     *         This exception is thrown when an error occurs in the DataSync service.
+     * @sample AWSDataSync.DescribeLocationFsxOntap
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/DescribeLocationFsxOntap"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DescribeLocationFsxOntapResult describeLocationFsxOntap(DescribeLocationFsxOntapRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribeLocationFsxOntap(request);
+    }
+
+    @SdkInternalApi
+    final DescribeLocationFsxOntapResult executeDescribeLocationFsxOntap(DescribeLocationFsxOntapRequest describeLocationFsxOntapRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describeLocationFsxOntapRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeLocationFsxOntapRequest> request = null;
+        Response<DescribeLocationFsxOntapResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeLocationFsxOntapRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(describeLocationFsxOntapRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "DataSync");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeLocationFsxOntap");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DescribeLocationFsxOntapResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new DescribeLocationFsxOntapResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Returns metadata about an Amazon FSx for OpenZFS location, such as information about its path.
      * </p>
      * 
@@ -1526,10 +1649,7 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
 
     /**
      * <p>
-     * Returns metadata about a self-managed object storage server location. For more information about self-managed
-     * object storage locations, see <a
-     * href="https://docs.aws.amazon.com/datasync/latest/userguide/create-object-location.html">Creating a location for
-     * object storage</a>.
+     * Returns metadata about your DataSync location for an object storage system.
      * </p>
      * 
      * @param describeLocationObjectStorageRequest

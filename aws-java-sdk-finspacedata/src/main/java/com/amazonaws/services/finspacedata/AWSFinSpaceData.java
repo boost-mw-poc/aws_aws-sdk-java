@@ -409,6 +409,42 @@ public interface AWSFinSpaceData {
 
     /**
      * <p>
+     * Returns the credentials to access the external Dataview from an S3 location. To call this API:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * You must retrieve the programmatic credentials.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * You must be a member of a FinSpace user group, where the dataset that you want to access has
+     * <code>Read Dataset Data</code> permissions.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param getExternalDataViewAccessDetailsRequest
+     * @return Result of the GetExternalDataViewAccessDetails operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         One or more resources can't be found.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception or failure.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @sample AWSFinSpaceData.GetExternalDataViewAccessDetails
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/GetExternalDataViewAccessDetails"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetExternalDataViewAccessDetailsResult getExternalDataViewAccessDetails(GetExternalDataViewAccessDetailsRequest getExternalDataViewAccessDetailsRequest);
+
+    /**
+     * <p>
      * Retrieves the details of a specific permission group.
      * </p>
      * 

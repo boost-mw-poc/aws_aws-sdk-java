@@ -60,7 +60,8 @@ public class DescribeLocationEfsResult extends com.amazonaws.AmazonWebServiceRes
     private String fileSystemAccessRoleArn;
     /**
      * <p>
-     * Whether DataSync uses TLS encryption when transferring data to or from your Amazon EFS file system.
+     * Describes whether DataSync uses Transport Layer Security (TLS) encryption when copying data to or from the Amazon
+     * EFS file system.
      * </p>
      */
     private String inTransitEncryption;
@@ -296,11 +297,13 @@ public class DescribeLocationEfsResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * Whether DataSync uses TLS encryption when transferring data to or from your Amazon EFS file system.
+     * Describes whether DataSync uses Transport Layer Security (TLS) encryption when copying data to or from the Amazon
+     * EFS file system.
      * </p>
      * 
      * @param inTransitEncryption
-     *        Whether DataSync uses TLS encryption when transferring data to or from your Amazon EFS file system.
+     *        Describes whether DataSync uses Transport Layer Security (TLS) encryption when copying data to or from the
+     *        Amazon EFS file system.
      * @see EfsInTransitEncryption
      */
 
@@ -310,10 +313,12 @@ public class DescribeLocationEfsResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * Whether DataSync uses TLS encryption when transferring data to or from your Amazon EFS file system.
+     * Describes whether DataSync uses Transport Layer Security (TLS) encryption when copying data to or from the Amazon
+     * EFS file system.
      * </p>
      * 
-     * @return Whether DataSync uses TLS encryption when transferring data to or from your Amazon EFS file system.
+     * @return Describes whether DataSync uses Transport Layer Security (TLS) encryption when copying data to or from
+     *         the Amazon EFS file system.
      * @see EfsInTransitEncryption
      */
 
@@ -323,11 +328,13 @@ public class DescribeLocationEfsResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * Whether DataSync uses TLS encryption when transferring data to or from your Amazon EFS file system.
+     * Describes whether DataSync uses Transport Layer Security (TLS) encryption when copying data to or from the Amazon
+     * EFS file system.
      * </p>
      * 
      * @param inTransitEncryption
-     *        Whether DataSync uses TLS encryption when transferring data to or from your Amazon EFS file system.
+     *        Describes whether DataSync uses Transport Layer Security (TLS) encryption when copying data to or from the
+     *        Amazon EFS file system.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see EfsInTransitEncryption
      */
@@ -339,11 +346,13 @@ public class DescribeLocationEfsResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * Whether DataSync uses TLS encryption when transferring data to or from your Amazon EFS file system.
+     * Describes whether DataSync uses Transport Layer Security (TLS) encryption when copying data to or from the Amazon
+     * EFS file system.
      * </p>
      * 
      * @param inTransitEncryption
-     *        Whether DataSync uses TLS encryption when transferring data to or from your Amazon EFS file system.
+     *        Describes whether DataSync uses Transport Layer Security (TLS) encryption when copying data to or from the
+     *        Amazon EFS file system.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see EfsInTransitEncryption
      */

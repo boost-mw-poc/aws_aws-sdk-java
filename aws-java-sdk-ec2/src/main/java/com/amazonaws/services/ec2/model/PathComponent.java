@@ -104,7 +104,11 @@ public class PathComponent implements Serializable, Cloneable {
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<AdditionalDetail> additionalDetails;
-
+    /**
+     * <p>
+     * The transit gateway.
+     * </p>
+     */
     private AnalysisComponent transitGateway;
     /**
      * <p>
@@ -667,7 +671,12 @@ public class PathComponent implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * The transit gateway.
+     * </p>
+     * 
      * @param transitGateway
+     *        The transit gateway.
      */
 
     public void setTransitGateway(AnalysisComponent transitGateway) {
@@ -675,7 +684,11 @@ public class PathComponent implements Serializable, Cloneable {
     }
 
     /**
-     * @return
+     * <p>
+     * The transit gateway.
+     * </p>
+     * 
+     * @return The transit gateway.
      */
 
     public AnalysisComponent getTransitGateway() {
@@ -683,7 +696,12 @@ public class PathComponent implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * The transit gateway.
+     * </p>
+     * 
      * @param transitGateway
+     *        The transit gateway.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

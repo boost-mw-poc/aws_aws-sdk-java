@@ -490,6 +490,67 @@ public interface AWSFinSpaceDataAsync extends AWSFinSpaceData {
 
     /**
      * <p>
+     * Returns the credentials to access the external Dataview from an S3 location. To call this API:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * You must retrieve the programmatic credentials.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * You must be a member of a FinSpace user group, where the dataset that you want to access has
+     * <code>Read Dataset Data</code> permissions.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param getExternalDataViewAccessDetailsRequest
+     * @return A Java Future containing the result of the GetExternalDataViewAccessDetails operation returned by the
+     *         service.
+     * @sample AWSFinSpaceDataAsync.GetExternalDataViewAccessDetails
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/GetExternalDataViewAccessDetails"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetExternalDataViewAccessDetailsResult> getExternalDataViewAccessDetailsAsync(
+            GetExternalDataViewAccessDetailsRequest getExternalDataViewAccessDetailsRequest);
+
+    /**
+     * <p>
+     * Returns the credentials to access the external Dataview from an S3 location. To call this API:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * You must retrieve the programmatic credentials.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * You must be a member of a FinSpace user group, where the dataset that you want to access has
+     * <code>Read Dataset Data</code> permissions.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param getExternalDataViewAccessDetailsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetExternalDataViewAccessDetails operation returned by the
+     *         service.
+     * @sample AWSFinSpaceDataAsyncHandler.GetExternalDataViewAccessDetails
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/GetExternalDataViewAccessDetails"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetExternalDataViewAccessDetailsResult> getExternalDataViewAccessDetailsAsync(
+            GetExternalDataViewAccessDetailsRequest getExternalDataViewAccessDetailsRequest,
+            com.amazonaws.handlers.AsyncHandler<GetExternalDataViewAccessDetailsRequest, GetExternalDataViewAccessDetailsResult> asyncHandler);
+
+    /**
+     * <p>
      * Retrieves the details of a specific permission group.
      * </p>
      * 

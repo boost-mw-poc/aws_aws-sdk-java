@@ -112,7 +112,7 @@ public class CapacityReservation implements Serializable, Cloneable {
     private Boolean ebsOptimized;
     /**
      * <p>
-     * Indicates whether the Capacity Reservation supports instances with temporary, block-level storage.
+     * <i>Deprecated.</i>
      * </p>
      */
     private Boolean ephemeralStorage;
@@ -877,11 +877,11 @@ public class CapacityReservation implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Indicates whether the Capacity Reservation supports instances with temporary, block-level storage.
+     * <i>Deprecated.</i>
      * </p>
      * 
      * @param ephemeralStorage
-     *        Indicates whether the Capacity Reservation supports instances with temporary, block-level storage.
+     *        <i>Deprecated.</i>
      */
 
     public void setEphemeralStorage(Boolean ephemeralStorage) {
@@ -890,10 +890,10 @@ public class CapacityReservation implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Indicates whether the Capacity Reservation supports instances with temporary, block-level storage.
+     * <i>Deprecated.</i>
      * </p>
      * 
-     * @return Indicates whether the Capacity Reservation supports instances with temporary, block-level storage.
+     * @return <i>Deprecated.</i>
      */
 
     public Boolean getEphemeralStorage() {
@@ -902,11 +902,11 @@ public class CapacityReservation implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Indicates whether the Capacity Reservation supports instances with temporary, block-level storage.
+     * <i>Deprecated.</i>
      * </p>
      * 
      * @param ephemeralStorage
-     *        Indicates whether the Capacity Reservation supports instances with temporary, block-level storage.
+     *        <i>Deprecated.</i>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -917,10 +917,10 @@ public class CapacityReservation implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Indicates whether the Capacity Reservation supports instances with temporary, block-level storage.
+     * <i>Deprecated.</i>
      * </p>
      * 
-     * @return Indicates whether the Capacity Reservation supports instances with temporary, block-level storage.
+     * @return <i>Deprecated.</i>
      */
 
     public Boolean isEphemeralStorage() {

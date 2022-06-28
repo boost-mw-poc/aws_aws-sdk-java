@@ -312,12 +312,12 @@ public class InstanceRequirements implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * For instance types with solid state drive (SDD) storage, specify <code>sdd</code>.
+     * For instance types with solid state drive (SSD) storage, specify <code>ssd</code>.
      * </p>
      * </li>
      * </ul>
      * <p>
-     * Default: <code>hdd</code> and <code>sdd</code>
+     * Default: <code>hdd</code> and <code>ssd</code>
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> localStorageTypes;
@@ -2573,12 +2573,12 @@ public class InstanceRequirements implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * For instance types with solid state drive (SDD) storage, specify <code>sdd</code>.
+     * For instance types with solid state drive (SSD) storage, specify <code>ssd</code>.
      * </p>
      * </li>
      * </ul>
      * <p>
-     * Default: <code>hdd</code> and <code>sdd</code>
+     * Default: <code>hdd</code> and <code>ssd</code>
      * </p>
      * 
      * @return The type of local storage that is required.</p>
@@ -2590,12 +2590,12 @@ public class InstanceRequirements implements Serializable, Cloneable {
      *         </li>
      *         <li>
      *         <p>
-     *         For instance types with solid state drive (SDD) storage, specify <code>sdd</code>.
+     *         For instance types with solid state drive (SSD) storage, specify <code>ssd</code>.
      *         </p>
      *         </li>
      *         </ul>
      *         <p>
-     *         Default: <code>hdd</code> and <code>sdd</code>
+     *         Default: <code>hdd</code> and <code>ssd</code>
      * @see LocalStorageType
      */
 
@@ -2618,12 +2618,12 @@ public class InstanceRequirements implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * For instance types with solid state drive (SDD) storage, specify <code>sdd</code>.
+     * For instance types with solid state drive (SSD) storage, specify <code>ssd</code>.
      * </p>
      * </li>
      * </ul>
      * <p>
-     * Default: <code>hdd</code> and <code>sdd</code>
+     * Default: <code>hdd</code> and <code>ssd</code>
      * </p>
      * 
      * @param localStorageTypes
@@ -2636,12 +2636,12 @@ public class InstanceRequirements implements Serializable, Cloneable {
      *        </li>
      *        <li>
      *        <p>
-     *        For instance types with solid state drive (SDD) storage, specify <code>sdd</code>.
+     *        For instance types with solid state drive (SSD) storage, specify <code>ssd</code>.
      *        </p>
      *        </li>
      *        </ul>
      *        <p>
-     *        Default: <code>hdd</code> and <code>sdd</code>
+     *        Default: <code>hdd</code> and <code>ssd</code>
      * @see LocalStorageType
      */
 
@@ -2666,12 +2666,12 @@ public class InstanceRequirements implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * For instance types with solid state drive (SDD) storage, specify <code>sdd</code>.
+     * For instance types with solid state drive (SSD) storage, specify <code>ssd</code>.
      * </p>
      * </li>
      * </ul>
      * <p>
-     * Default: <code>hdd</code> and <code>sdd</code>
+     * Default: <code>hdd</code> and <code>ssd</code>
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -2689,12 +2689,12 @@ public class InstanceRequirements implements Serializable, Cloneable {
      *        </li>
      *        <li>
      *        <p>
-     *        For instance types with solid state drive (SDD) storage, specify <code>sdd</code>.
+     *        For instance types with solid state drive (SSD) storage, specify <code>ssd</code>.
      *        </p>
      *        </li>
      *        </ul>
      *        <p>
-     *        Default: <code>hdd</code> and <code>sdd</code>
+     *        Default: <code>hdd</code> and <code>ssd</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see LocalStorageType
      */
@@ -2721,12 +2721,12 @@ public class InstanceRequirements implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * For instance types with solid state drive (SDD) storage, specify <code>sdd</code>.
+     * For instance types with solid state drive (SSD) storage, specify <code>ssd</code>.
      * </p>
      * </li>
      * </ul>
      * <p>
-     * Default: <code>hdd</code> and <code>sdd</code>
+     * Default: <code>hdd</code> and <code>ssd</code>
      * </p>
      * 
      * @param localStorageTypes
@@ -2739,12 +2739,12 @@ public class InstanceRequirements implements Serializable, Cloneable {
      *        </li>
      *        <li>
      *        <p>
-     *        For instance types with solid state drive (SDD) storage, specify <code>sdd</code>.
+     *        For instance types with solid state drive (SSD) storage, specify <code>ssd</code>.
      *        </p>
      *        </li>
      *        </ul>
      *        <p>
-     *        Default: <code>hdd</code> and <code>sdd</code>
+     *        Default: <code>hdd</code> and <code>ssd</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see LocalStorageType
      */
@@ -2766,12 +2766,12 @@ public class InstanceRequirements implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * For instance types with solid state drive (SDD) storage, specify <code>sdd</code>.
+     * For instance types with solid state drive (SSD) storage, specify <code>ssd</code>.
      * </p>
      * </li>
      * </ul>
      * <p>
-     * Default: <code>hdd</code> and <code>sdd</code>
+     * Default: <code>hdd</code> and <code>ssd</code>
      * </p>
      * 
      * @param localStorageTypes
@@ -2784,12 +2784,12 @@ public class InstanceRequirements implements Serializable, Cloneable {
      *        </li>
      *        <li>
      *        <p>
-     *        For instance types with solid state drive (SDD) storage, specify <code>sdd</code>.
+     *        For instance types with solid state drive (SSD) storage, specify <code>ssd</code>.
      *        </p>
      *        </li>
      *        </ul>
      *        <p>
-     *        Default: <code>hdd</code> and <code>sdd</code>
+     *        Default: <code>hdd</code> and <code>ssd</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see LocalStorageType
      */

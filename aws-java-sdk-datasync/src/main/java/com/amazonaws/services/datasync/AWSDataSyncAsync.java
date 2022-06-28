@@ -224,6 +224,43 @@ public interface AWSDataSyncAsync extends AWSDataSync {
 
     /**
      * <p>
+     * Creates an endpoint for an Amazon FSx for NetApp ONTAP file system that DataSync can access for a transfer. For
+     * more information, see <a
+     * href="https://docs.aws.amazon.com/datasync/latest/userguide/create-ontap-location.html">Creating a location for
+     * FSx for ONTAP</a>.
+     * </p>
+     * 
+     * @param createLocationFsxOntapRequest
+     * @return A Java Future containing the result of the CreateLocationFsxOntap operation returned by the service.
+     * @sample AWSDataSyncAsync.CreateLocationFsxOntap
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/CreateLocationFsxOntap"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateLocationFsxOntapResult> createLocationFsxOntapAsync(CreateLocationFsxOntapRequest createLocationFsxOntapRequest);
+
+    /**
+     * <p>
+     * Creates an endpoint for an Amazon FSx for NetApp ONTAP file system that DataSync can access for a transfer. For
+     * more information, see <a
+     * href="https://docs.aws.amazon.com/datasync/latest/userguide/create-ontap-location.html">Creating a location for
+     * FSx for ONTAP</a>.
+     * </p>
+     * 
+     * @param createLocationFsxOntapRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateLocationFsxOntap operation returned by the service.
+     * @sample AWSDataSyncAsyncHandler.CreateLocationFsxOntap
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/CreateLocationFsxOntap"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateLocationFsxOntapResult> createLocationFsxOntapAsync(CreateLocationFsxOntapRequest createLocationFsxOntapRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateLocationFsxOntapRequest, CreateLocationFsxOntapResult> asyncHandler);
+
+    /**
+     * <p>
      * Creates an endpoint for an Amazon FSx for OpenZFS file system.
      * </p>
      * 
@@ -350,10 +387,9 @@ public interface AWSDataSyncAsync extends AWSDataSync {
 
     /**
      * <p>
-     * Creates an endpoint for a self-managed object storage bucket. For more information about self-managed object
-     * storage locations, see <a
-     * href="https://docs.aws.amazon.com/datasync/latest/userguide/create-object-location.html">Creating a location for
-     * object storage</a>.
+     * Creates an endpoint for an object storage system that DataSync can access for a transfer. For more information,
+     * see <a href="https://docs.aws.amazon.com/datasync/latest/userguide/create-object-location.html">Creating a
+     * location for object storage</a>.
      * </p>
      * 
      * @param createLocationObjectStorageRequest
@@ -368,10 +404,9 @@ public interface AWSDataSyncAsync extends AWSDataSync {
 
     /**
      * <p>
-     * Creates an endpoint for a self-managed object storage bucket. For more information about self-managed object
-     * storage locations, see <a
-     * href="https://docs.aws.amazon.com/datasync/latest/userguide/create-object-location.html">Creating a location for
-     * object storage</a>.
+     * Creates an endpoint for an object storage system that DataSync can access for a transfer. For more information,
+     * see <a href="https://docs.aws.amazon.com/datasync/latest/userguide/create-object-location.html">Creating a
+     * location for object storage</a>.
      * </p>
      * 
      * @param createLocationObjectStorageRequest
@@ -750,6 +785,37 @@ public interface AWSDataSyncAsync extends AWSDataSync {
 
     /**
      * <p>
+     * Provides details about how an DataSync location for an Amazon FSx for NetApp ONTAP file system is configured.
+     * </p>
+     * 
+     * @param describeLocationFsxOntapRequest
+     * @return A Java Future containing the result of the DescribeLocationFsxOntap operation returned by the service.
+     * @sample AWSDataSyncAsync.DescribeLocationFsxOntap
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/DescribeLocationFsxOntap"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeLocationFsxOntapResult> describeLocationFsxOntapAsync(DescribeLocationFsxOntapRequest describeLocationFsxOntapRequest);
+
+    /**
+     * <p>
+     * Provides details about how an DataSync location for an Amazon FSx for NetApp ONTAP file system is configured.
+     * </p>
+     * 
+     * @param describeLocationFsxOntapRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeLocationFsxOntap operation returned by the service.
+     * @sample AWSDataSyncAsyncHandler.DescribeLocationFsxOntap
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/DescribeLocationFsxOntap"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeLocationFsxOntapResult> describeLocationFsxOntapAsync(DescribeLocationFsxOntapRequest describeLocationFsxOntapRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeLocationFsxOntapRequest, DescribeLocationFsxOntapResult> asyncHandler);
+
+    /**
+     * <p>
      * Returns metadata about an Amazon FSx for OpenZFS location, such as information about its path.
      * </p>
      * 
@@ -882,10 +948,7 @@ public interface AWSDataSyncAsync extends AWSDataSync {
 
     /**
      * <p>
-     * Returns metadata about a self-managed object storage server location. For more information about self-managed
-     * object storage locations, see <a
-     * href="https://docs.aws.amazon.com/datasync/latest/userguide/create-object-location.html">Creating a location for
-     * object storage</a>.
+     * Returns metadata about your DataSync location for an object storage system.
      * </p>
      * 
      * @param describeLocationObjectStorageRequest
@@ -901,10 +964,7 @@ public interface AWSDataSyncAsync extends AWSDataSync {
 
     /**
      * <p>
-     * Returns metadata about a self-managed object storage server location. For more information about self-managed
-     * object storage locations, see <a
-     * href="https://docs.aws.amazon.com/datasync/latest/userguide/create-object-location.html">Creating a location for
-     * object storage</a>.
+     * Returns metadata about your DataSync location for an object storage system.
      * </p>
      * 
      * @param describeLocationObjectStorageRequest

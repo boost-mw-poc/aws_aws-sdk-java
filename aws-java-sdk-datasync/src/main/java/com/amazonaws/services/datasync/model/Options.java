@@ -45,18 +45,18 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      * href="https://docs.aws.amazon.com/datasync/latest/userguide/create-task.html">Configure task settings</a>.
      * </p>
      * <p>
-     * Default value: POINT_IN_TIME_CONSISTENT.
+     * Default value: <code>POINT_IN_TIME_CONSISTENT</code>
      * </p>
      * <p>
-     * ONLY_FILES_TRANSFERRED (recommended): Perform verification only on files that were transferred.
+     * <code>ONLY_FILES_TRANSFERRED</code> (recommended): Perform verification only on files that were transferred.
      * </p>
      * <p>
-     * POINT_IN_TIME_CONSISTENT: Scan the entire source and entire destination at the end of the transfer to verify that
-     * source and destination are fully synchronized. This option isn't supported when transferring to S3 Glacier
-     * Flexible Retrieval or S3 Glacier Deep Archive storage classes.
+     * <code>POINT_IN_TIME_CONSISTENT</code>: Scan the entire source and entire destination at the end of the transfer
+     * to verify that source and destination are fully synchronized. This option isn't supported when transferring to S3
+     * Glacier Flexible Retrieval or S3 Glacier Deep Archive storage classes.
      * </p>
      * <p>
-     * NONE: No additional verification is done at the end of the transfer, but all data transmissions are
+     * <code>NONE</code>: No additional verification is done at the end of the transfer, but all data transmissions are
      * integrity-checked with checksum verification during the transfer.
      * </p>
      */
@@ -78,25 +78,27 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * A file metadata value that shows the last time a file was accessed (that is, when the file was read or written
-     * to). If you set <code>Atime</code> to BEST_EFFORT, DataSync attempts to preserve the original <code>Atime</code>
-     * attribute on all source files (that is, the version before the PREPARING phase). However, <code>Atime</code>'s
-     * behavior is not fully standard across platforms, so DataSync can only do this on a best-effort basis.
+     * to). If you set <code>Atime</code> to <code>BEST_EFFORT</code>, DataSync attempts to preserve the original
+     * <code>Atime</code> attribute on all source files (that is, the version before the <code>PREPARING</code> phase).
+     * However, <code>Atime</code>'s behavior is not fully standard across platforms, so DataSync can only do this on a
+     * best-effort basis.
      * </p>
      * <p>
-     * Default value: BEST_EFFORT.
+     * Default value: <code>BEST_EFFORT</code>
      * </p>
      * <p>
-     * BEST_EFFORT: Attempt to preserve the per-file <code>Atime</code> value (recommended).
+     * <code>BEST_EFFORT</code>: Attempt to preserve the per-file <code>Atime</code> value (recommended).
      * </p>
      * <p>
-     * NONE: Ignore <code>Atime</code>.
+     * <code>NONE</code>: Ignore <code>Atime</code>.
      * </p>
      * <note>
      * <p>
-     * If <code>Atime</code> is set to BEST_EFFORT, <code>Mtime</code> must be set to PRESERVE.
+     * If <code>Atime</code> is set to <code>BEST_EFFORT</code>, <code>Mtime</code> must be set to <code>PRESERVE</code>
+     * .
      * </p>
      * <p>
-     * If <code>Atime</code> is set to NONE, <code>Mtime</code> must also be NONE.
+     * If <code>Atime</code> is set to <code>NONE</code>, <code>Mtime</code> must also be <code>NONE</code>.
      * </p>
      * </note>
      */
@@ -104,60 +106,66 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * A value that indicates the last time that a file was modified (that is, a file was written to) before the
-     * PREPARING phase. This option is required for cases when you need to run the same task more than one time.
+     * <code>PREPARING</code> phase. This option is required for cases when you need to run the same task more than one
+     * time.
      * </p>
      * <p>
      * Default Value: <code>PRESERVE</code>
      * </p>
      * <p>
-     * PRESERVE: Preserve original <code>Mtime</code> (recommended)
+     * <code>PRESERVE</code>: Preserve original <code>Mtime</code> (recommended)
      * </p>
      * <p>
-     * NONE: Ignore <code>Mtime</code>.
+     * <code>NONE</code>: Ignore <code>Mtime</code>.
      * </p>
      * <note>
      * <p>
-     * If <code>Mtime</code> is set to PRESERVE, <code>Atime</code> must be set to BEST_EFFORT.
+     * If <code>Mtime</code> is set to <code>PRESERVE</code>, <code>Atime</code> must be set to <code>BEST_EFFORT</code>
+     * .
      * </p>
      * <p>
-     * If <code>Mtime</code> is set to NONE, <code>Atime</code> must also be set to NONE.
+     * If <code>Mtime</code> is set to <code>NONE</code>, <code>Atime</code> must also be set to <code>NONE</code>.
      * </p>
      * </note>
      */
     private String mtime;
     /**
      * <p>
-     * The POSIX user ID (UID) of the file's owner. This option should only be set for NFS, EFS, and S3 locations. To
-     * learn more about what metadata is copied by DataSync, see <a
-     * href="https://docs.aws.amazon.com/datasync/latest/userguide/special-files.html#metadata-copied">Metadata Copied
+     * The POSIX user ID (UID) of the file's owner.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/datasync/latest/userguide/special-files.html#metadata-copied">Metadata copied
      * by DataSync</a>.
      * </p>
      * <p>
-     * Default value: INT_VALUE. This preserves the integer value of the ID.
+     * Default value: <code>INT_VALUE</code>. This preserves the integer value of the ID.
      * </p>
      * <p>
-     * INT_VALUE: Preserve the integer value of UID and group ID (GID) (recommended).
+     * <code>INT_VALUE</code>: Preserve the integer value of UID and group ID (GID) (recommended).
      * </p>
      * <p>
-     * NONE: Ignore UID and GID.
+     * <code>NONE</code>: Ignore UID and GID.
      * </p>
      */
     private String uid;
     /**
      * <p>
-     * The POSIX group ID (GID) of the file's owners. This option should only be set for NFS, EFS, and S3 locations. For
-     * more information about what metadata is copied by DataSync, see <a
-     * href="https://docs.aws.amazon.com/datasync/latest/userguide/special-files.html#metadata-copied">Metadata Copied
+     * The POSIX group ID (GID) of the file's owners.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/datasync/latest/userguide/special-files.html#metadata-copied">Metadata copied
      * by DataSync</a>.
      * </p>
      * <p>
-     * Default value: INT_VALUE. This preserves the integer value of the ID.
+     * Default value: <code>INT_VALUE</code>. This preserves the integer value of the ID.
      * </p>
      * <p>
-     * INT_VALUE: Preserve the integer value of user ID (UID) and GID (recommended).
+     * <code>INT_VALUE</code>: Preserve the integer value of user ID (UID) and GID (recommended).
      * </p>
      * <p>
-     * NONE: Ignore UID and GID.
+     * <code>NONE</code>: Ignore UID and GID.
      * </p>
      */
     private String gid;
@@ -170,13 +178,13 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      * >Considerations when working with Amazon S3 storage classes in DataSync </a> in the <i>DataSync User Guide</i>.
      * </p>
      * <p>
-     * Default value: PRESERVE.
+     * Default value: <code>PRESERVE</code>
      * </p>
      * <p>
-     * PRESERVE: Ignore such destination files (recommended).
+     * <code>PRESERVE</code>: Ignore such destination files (recommended).
      * </p>
      * <p>
-     * REMOVE: Delete destination files that aren’t present in the source.
+     * <code>REMOVE</code>: Delete destination files that aren’t present in the source.
      * </p>
      */
     private String preserveDeletedFiles;
@@ -193,32 +201,35 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * </note>
      * <p>
-     * Default value: NONE.
+     * Default value: <code>NONE</code>
      * </p>
      * <p>
-     * NONE: Ignore special devices (recommended).
+     * <code>NONE</code>: Ignore special devices (recommended).
      * </p>
      * <p>
-     * PRESERVE: Preserve character and block device metadata. This option isn't currently supported for Amazon EFS.
+     * <code>PRESERVE</code>: Preserve character and block device metadata. This option isn't currently supported for
+     * Amazon EFS.
      * </p>
      */
     private String preserveDevices;
     /**
      * <p>
      * A value that determines which users or groups can access a file for a specific purpose such as reading, writing,
-     * or execution of the file. This option should only be set for NFS, EFS, and S3 locations. For more information
-     * about what metadata is copied by DataSync, see <a
-     * href="https://docs.aws.amazon.com/datasync/latest/userguide/special-files.html#metadata-copied">Metadata Copied
+     * or execution of the file.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/datasync/latest/userguide/special-files.html#metadata-copied">Metadata copied
      * by DataSync</a>.
      * </p>
      * <p>
-     * Default value: PRESERVE.
+     * Default value: <code>PRESERVE</code>
      * </p>
      * <p>
-     * PRESERVE: Preserve POSIX-style permissions (recommended).
+     * <code>PRESERVE</code>: Preserve POSIX-style permissions (recommended).
      * </p>
      * <p>
-     * NONE: Ignore permissions.
+     * <code>NONE</code>: Ignore permissions.
      * </p>
      * <note>
      * <p>
@@ -264,12 +275,12 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      * destination location.
      * </p>
      * <p>
-     * CHANGED: DataSync copies only data or metadata that is new or different content from the source location to the
-     * destination location.
+     * <code>CHANGED</code>: DataSync copies only data or metadata that is new or different content from the source
+     * location to the destination location.
      * </p>
      * <p>
-     * ALL: DataSync copies all source location content to the destination, without comparing to existing content on the
-     * destination.
+     * <code>ALL</code>: DataSync copies all source location content to the destination, without comparing to existing
+     * content on the destination.
      * </p>
      */
     private String transferMode;
@@ -285,10 +296,10 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      * and Special Files</a>.
      * </p>
      * <p>
-     * Default value: OWNER_DACL.
+     * Default value: <code>OWNER_DACL</code>
      * </p>
      * <p>
-     * <b>OWNER_DACL</b>: For each copied object, DataSync copies the following metadata:
+     * <code>OWNER_DACL</code>: For each copied object, DataSync copies the following metadata:
      * </p>
      * <ul>
      * <li>
@@ -307,7 +318,7 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      * administrators to log attempts to access a secured object.
      * </p>
      * <p>
-     * <b>OWNER_DACL_SACL</b>: For each copied object, DataSync copies the following metadata:
+     * <code>OWNER_DACL_SACL</code>: For each copied object, DataSync copies the following metadata:
      * </p>
      * <ul>
      * <li>
@@ -333,9 +344,9 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      * metadata, see <a href="create-smb-location.html#SMBuser">user</a>.
      * </p>
      * <p>
-     * <b>NONE</b>: None of the SMB security descriptor components are copied. Destination objects are owned by the user
-     * that was provided for accessing the destination location. DACLs and SACLs are set based on the destination
-     * server’s configuration.
+     * <code>NONE</code>: None of the SMB security descriptor components are copied. Destination objects are owned by
+     * the user that was provided for accessing the destination location. DACLs and SACLs are set based on the
+     * destination server’s configuration.
      * </p>
      */
     private String securityDescriptorCopyFlags;
@@ -357,18 +368,18 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      * href="https://docs.aws.amazon.com/datasync/latest/userguide/create-task.html">Configure task settings</a>.
      * </p>
      * <p>
-     * Default value: POINT_IN_TIME_CONSISTENT.
+     * Default value: <code>POINT_IN_TIME_CONSISTENT</code>
      * </p>
      * <p>
-     * ONLY_FILES_TRANSFERRED (recommended): Perform verification only on files that were transferred.
+     * <code>ONLY_FILES_TRANSFERRED</code> (recommended): Perform verification only on files that were transferred.
      * </p>
      * <p>
-     * POINT_IN_TIME_CONSISTENT: Scan the entire source and entire destination at the end of the transfer to verify that
-     * source and destination are fully synchronized. This option isn't supported when transferring to S3 Glacier
-     * Flexible Retrieval or S3 Glacier Deep Archive storage classes.
+     * <code>POINT_IN_TIME_CONSISTENT</code>: Scan the entire source and entire destination at the end of the transfer
+     * to verify that source and destination are fully synchronized. This option isn't supported when transferring to S3
+     * Glacier Flexible Retrieval or S3 Glacier Deep Archive storage classes.
      * </p>
      * <p>
-     * NONE: No additional verification is done at the end of the transfer, but all data transmissions are
+     * <code>NONE</code>: No additional verification is done at the end of the transfer, but all data transmissions are
      * integrity-checked with checksum verification during the transfer.
      * </p>
      * 
@@ -378,19 +389,20 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      *        href="https://docs.aws.amazon.com/datasync/latest/userguide/create-task.html">Configure task settings</a>.
      *        </p>
      *        <p>
-     *        Default value: POINT_IN_TIME_CONSISTENT.
+     *        Default value: <code>POINT_IN_TIME_CONSISTENT</code>
      *        </p>
      *        <p>
-     *        ONLY_FILES_TRANSFERRED (recommended): Perform verification only on files that were transferred.
+     *        <code>ONLY_FILES_TRANSFERRED</code> (recommended): Perform verification only on files that were
+     *        transferred.
      *        </p>
      *        <p>
-     *        POINT_IN_TIME_CONSISTENT: Scan the entire source and entire destination at the end of the transfer to
-     *        verify that source and destination are fully synchronized. This option isn't supported when transferring
-     *        to S3 Glacier Flexible Retrieval or S3 Glacier Deep Archive storage classes.
+     *        <code>POINT_IN_TIME_CONSISTENT</code>: Scan the entire source and entire destination at the end of the
+     *        transfer to verify that source and destination are fully synchronized. This option isn't supported when
+     *        transferring to S3 Glacier Flexible Retrieval or S3 Glacier Deep Archive storage classes.
      *        </p>
      *        <p>
-     *        NONE: No additional verification is done at the end of the transfer, but all data transmissions are
-     *        integrity-checked with checksum verification during the transfer.
+     *        <code>NONE</code>: No additional verification is done at the end of the transfer, but all data
+     *        transmissions are integrity-checked with checksum verification during the transfer.
      * @see VerifyMode
      */
 
@@ -405,18 +417,18 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      * href="https://docs.aws.amazon.com/datasync/latest/userguide/create-task.html">Configure task settings</a>.
      * </p>
      * <p>
-     * Default value: POINT_IN_TIME_CONSISTENT.
+     * Default value: <code>POINT_IN_TIME_CONSISTENT</code>
      * </p>
      * <p>
-     * ONLY_FILES_TRANSFERRED (recommended): Perform verification only on files that were transferred.
+     * <code>ONLY_FILES_TRANSFERRED</code> (recommended): Perform verification only on files that were transferred.
      * </p>
      * <p>
-     * POINT_IN_TIME_CONSISTENT: Scan the entire source and entire destination at the end of the transfer to verify that
-     * source and destination are fully synchronized. This option isn't supported when transferring to S3 Glacier
-     * Flexible Retrieval or S3 Glacier Deep Archive storage classes.
+     * <code>POINT_IN_TIME_CONSISTENT</code>: Scan the entire source and entire destination at the end of the transfer
+     * to verify that source and destination are fully synchronized. This option isn't supported when transferring to S3
+     * Glacier Flexible Retrieval or S3 Glacier Deep Archive storage classes.
      * </p>
      * <p>
-     * NONE: No additional verification is done at the end of the transfer, but all data transmissions are
+     * <code>NONE</code>: No additional verification is done at the end of the transfer, but all data transmissions are
      * integrity-checked with checksum verification during the transfer.
      * </p>
      * 
@@ -425,19 +437,20 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      *         href="https://docs.aws.amazon.com/datasync/latest/userguide/create-task.html">Configure task
      *         settings</a>. </p>
      *         <p>
-     *         Default value: POINT_IN_TIME_CONSISTENT.
+     *         Default value: <code>POINT_IN_TIME_CONSISTENT</code>
      *         </p>
      *         <p>
-     *         ONLY_FILES_TRANSFERRED (recommended): Perform verification only on files that were transferred.
+     *         <code>ONLY_FILES_TRANSFERRED</code> (recommended): Perform verification only on files that were
+     *         transferred.
      *         </p>
      *         <p>
-     *         POINT_IN_TIME_CONSISTENT: Scan the entire source and entire destination at the end of the transfer to
-     *         verify that source and destination are fully synchronized. This option isn't supported when transferring
-     *         to S3 Glacier Flexible Retrieval or S3 Glacier Deep Archive storage classes.
+     *         <code>POINT_IN_TIME_CONSISTENT</code>: Scan the entire source and entire destination at the end of the
+     *         transfer to verify that source and destination are fully synchronized. This option isn't supported when
+     *         transferring to S3 Glacier Flexible Retrieval or S3 Glacier Deep Archive storage classes.
      *         </p>
      *         <p>
-     *         NONE: No additional verification is done at the end of the transfer, but all data transmissions are
-     *         integrity-checked with checksum verification during the transfer.
+     *         <code>NONE</code>: No additional verification is done at the end of the transfer, but all data
+     *         transmissions are integrity-checked with checksum verification during the transfer.
      * @see VerifyMode
      */
 
@@ -452,18 +465,18 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      * href="https://docs.aws.amazon.com/datasync/latest/userguide/create-task.html">Configure task settings</a>.
      * </p>
      * <p>
-     * Default value: POINT_IN_TIME_CONSISTENT.
+     * Default value: <code>POINT_IN_TIME_CONSISTENT</code>
      * </p>
      * <p>
-     * ONLY_FILES_TRANSFERRED (recommended): Perform verification only on files that were transferred.
+     * <code>ONLY_FILES_TRANSFERRED</code> (recommended): Perform verification only on files that were transferred.
      * </p>
      * <p>
-     * POINT_IN_TIME_CONSISTENT: Scan the entire source and entire destination at the end of the transfer to verify that
-     * source and destination are fully synchronized. This option isn't supported when transferring to S3 Glacier
-     * Flexible Retrieval or S3 Glacier Deep Archive storage classes.
+     * <code>POINT_IN_TIME_CONSISTENT</code>: Scan the entire source and entire destination at the end of the transfer
+     * to verify that source and destination are fully synchronized. This option isn't supported when transferring to S3
+     * Glacier Flexible Retrieval or S3 Glacier Deep Archive storage classes.
      * </p>
      * <p>
-     * NONE: No additional verification is done at the end of the transfer, but all data transmissions are
+     * <code>NONE</code>: No additional verification is done at the end of the transfer, but all data transmissions are
      * integrity-checked with checksum verification during the transfer.
      * </p>
      * 
@@ -473,19 +486,20 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      *        href="https://docs.aws.amazon.com/datasync/latest/userguide/create-task.html">Configure task settings</a>.
      *        </p>
      *        <p>
-     *        Default value: POINT_IN_TIME_CONSISTENT.
+     *        Default value: <code>POINT_IN_TIME_CONSISTENT</code>
      *        </p>
      *        <p>
-     *        ONLY_FILES_TRANSFERRED (recommended): Perform verification only on files that were transferred.
+     *        <code>ONLY_FILES_TRANSFERRED</code> (recommended): Perform verification only on files that were
+     *        transferred.
      *        </p>
      *        <p>
-     *        POINT_IN_TIME_CONSISTENT: Scan the entire source and entire destination at the end of the transfer to
-     *        verify that source and destination are fully synchronized. This option isn't supported when transferring
-     *        to S3 Glacier Flexible Retrieval or S3 Glacier Deep Archive storage classes.
+     *        <code>POINT_IN_TIME_CONSISTENT</code>: Scan the entire source and entire destination at the end of the
+     *        transfer to verify that source and destination are fully synchronized. This option isn't supported when
+     *        transferring to S3 Glacier Flexible Retrieval or S3 Glacier Deep Archive storage classes.
      *        </p>
      *        <p>
-     *        NONE: No additional verification is done at the end of the transfer, but all data transmissions are
-     *        integrity-checked with checksum verification during the transfer.
+     *        <code>NONE</code>: No additional verification is done at the end of the transfer, but all data
+     *        transmissions are integrity-checked with checksum verification during the transfer.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see VerifyMode
      */
@@ -502,18 +516,18 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      * href="https://docs.aws.amazon.com/datasync/latest/userguide/create-task.html">Configure task settings</a>.
      * </p>
      * <p>
-     * Default value: POINT_IN_TIME_CONSISTENT.
+     * Default value: <code>POINT_IN_TIME_CONSISTENT</code>
      * </p>
      * <p>
-     * ONLY_FILES_TRANSFERRED (recommended): Perform verification only on files that were transferred.
+     * <code>ONLY_FILES_TRANSFERRED</code> (recommended): Perform verification only on files that were transferred.
      * </p>
      * <p>
-     * POINT_IN_TIME_CONSISTENT: Scan the entire source and entire destination at the end of the transfer to verify that
-     * source and destination are fully synchronized. This option isn't supported when transferring to S3 Glacier
-     * Flexible Retrieval or S3 Glacier Deep Archive storage classes.
+     * <code>POINT_IN_TIME_CONSISTENT</code>: Scan the entire source and entire destination at the end of the transfer
+     * to verify that source and destination are fully synchronized. This option isn't supported when transferring to S3
+     * Glacier Flexible Retrieval or S3 Glacier Deep Archive storage classes.
      * </p>
      * <p>
-     * NONE: No additional verification is done at the end of the transfer, but all data transmissions are
+     * <code>NONE</code>: No additional verification is done at the end of the transfer, but all data transmissions are
      * integrity-checked with checksum verification during the transfer.
      * </p>
      * 
@@ -523,19 +537,20 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      *        href="https://docs.aws.amazon.com/datasync/latest/userguide/create-task.html">Configure task settings</a>.
      *        </p>
      *        <p>
-     *        Default value: POINT_IN_TIME_CONSISTENT.
+     *        Default value: <code>POINT_IN_TIME_CONSISTENT</code>
      *        </p>
      *        <p>
-     *        ONLY_FILES_TRANSFERRED (recommended): Perform verification only on files that were transferred.
+     *        <code>ONLY_FILES_TRANSFERRED</code> (recommended): Perform verification only on files that were
+     *        transferred.
      *        </p>
      *        <p>
-     *        POINT_IN_TIME_CONSISTENT: Scan the entire source and entire destination at the end of the transfer to
-     *        verify that source and destination are fully synchronized. This option isn't supported when transferring
-     *        to S3 Glacier Flexible Retrieval or S3 Glacier Deep Archive storage classes.
+     *        <code>POINT_IN_TIME_CONSISTENT</code>: Scan the entire source and entire destination at the end of the
+     *        transfer to verify that source and destination are fully synchronized. This option isn't supported when
+     *        transferring to S3 Glacier Flexible Retrieval or S3 Glacier Deep Archive storage classes.
      *        </p>
      *        <p>
-     *        NONE: No additional verification is done at the end of the transfer, but all data transmissions are
-     *        integrity-checked with checksum verification during the transfer.
+     *        <code>NONE</code>: No additional verification is done at the end of the transfer, but all data
+     *        transmissions are integrity-checked with checksum verification during the transfer.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see VerifyMode
      */
@@ -675,49 +690,52 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * A file metadata value that shows the last time a file was accessed (that is, when the file was read or written
-     * to). If you set <code>Atime</code> to BEST_EFFORT, DataSync attempts to preserve the original <code>Atime</code>
-     * attribute on all source files (that is, the version before the PREPARING phase). However, <code>Atime</code>'s
-     * behavior is not fully standard across platforms, so DataSync can only do this on a best-effort basis.
+     * to). If you set <code>Atime</code> to <code>BEST_EFFORT</code>, DataSync attempts to preserve the original
+     * <code>Atime</code> attribute on all source files (that is, the version before the <code>PREPARING</code> phase).
+     * However, <code>Atime</code>'s behavior is not fully standard across platforms, so DataSync can only do this on a
+     * best-effort basis.
      * </p>
      * <p>
-     * Default value: BEST_EFFORT.
+     * Default value: <code>BEST_EFFORT</code>
      * </p>
      * <p>
-     * BEST_EFFORT: Attempt to preserve the per-file <code>Atime</code> value (recommended).
+     * <code>BEST_EFFORT</code>: Attempt to preserve the per-file <code>Atime</code> value (recommended).
      * </p>
      * <p>
-     * NONE: Ignore <code>Atime</code>.
+     * <code>NONE</code>: Ignore <code>Atime</code>.
      * </p>
      * <note>
      * <p>
-     * If <code>Atime</code> is set to BEST_EFFORT, <code>Mtime</code> must be set to PRESERVE.
+     * If <code>Atime</code> is set to <code>BEST_EFFORT</code>, <code>Mtime</code> must be set to <code>PRESERVE</code>
+     * .
      * </p>
      * <p>
-     * If <code>Atime</code> is set to NONE, <code>Mtime</code> must also be NONE.
+     * If <code>Atime</code> is set to <code>NONE</code>, <code>Mtime</code> must also be <code>NONE</code>.
      * </p>
      * </note>
      * 
      * @param atime
      *        A file metadata value that shows the last time a file was accessed (that is, when the file was read or
-     *        written to). If you set <code>Atime</code> to BEST_EFFORT, DataSync attempts to preserve the original
-     *        <code>Atime</code> attribute on all source files (that is, the version before the PREPARING phase).
-     *        However, <code>Atime</code>'s behavior is not fully standard across platforms, so DataSync can only do
-     *        this on a best-effort basis. </p>
+     *        written to). If you set <code>Atime</code> to <code>BEST_EFFORT</code>, DataSync attempts to preserve the
+     *        original <code>Atime</code> attribute on all source files (that is, the version before the
+     *        <code>PREPARING</code> phase). However, <code>Atime</code>'s behavior is not fully standard across
+     *        platforms, so DataSync can only do this on a best-effort basis. </p>
      *        <p>
-     *        Default value: BEST_EFFORT.
+     *        Default value: <code>BEST_EFFORT</code>
      *        </p>
      *        <p>
-     *        BEST_EFFORT: Attempt to preserve the per-file <code>Atime</code> value (recommended).
+     *        <code>BEST_EFFORT</code>: Attempt to preserve the per-file <code>Atime</code> value (recommended).
      *        </p>
      *        <p>
-     *        NONE: Ignore <code>Atime</code>.
+     *        <code>NONE</code>: Ignore <code>Atime</code>.
      *        </p>
      *        <note>
      *        <p>
-     *        If <code>Atime</code> is set to BEST_EFFORT, <code>Mtime</code> must be set to PRESERVE.
+     *        If <code>Atime</code> is set to <code>BEST_EFFORT</code>, <code>Mtime</code> must be set to
+     *        <code>PRESERVE</code>.
      *        </p>
      *        <p>
-     *        If <code>Atime</code> is set to NONE, <code>Mtime</code> must also be NONE.
+     *        If <code>Atime</code> is set to <code>NONE</code>, <code>Mtime</code> must also be <code>NONE</code>.
      *        </p>
      * @see Atime
      */
@@ -729,48 +747,51 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * A file metadata value that shows the last time a file was accessed (that is, when the file was read or written
-     * to). If you set <code>Atime</code> to BEST_EFFORT, DataSync attempts to preserve the original <code>Atime</code>
-     * attribute on all source files (that is, the version before the PREPARING phase). However, <code>Atime</code>'s
-     * behavior is not fully standard across platforms, so DataSync can only do this on a best-effort basis.
+     * to). If you set <code>Atime</code> to <code>BEST_EFFORT</code>, DataSync attempts to preserve the original
+     * <code>Atime</code> attribute on all source files (that is, the version before the <code>PREPARING</code> phase).
+     * However, <code>Atime</code>'s behavior is not fully standard across platforms, so DataSync can only do this on a
+     * best-effort basis.
      * </p>
      * <p>
-     * Default value: BEST_EFFORT.
+     * Default value: <code>BEST_EFFORT</code>
      * </p>
      * <p>
-     * BEST_EFFORT: Attempt to preserve the per-file <code>Atime</code> value (recommended).
+     * <code>BEST_EFFORT</code>: Attempt to preserve the per-file <code>Atime</code> value (recommended).
      * </p>
      * <p>
-     * NONE: Ignore <code>Atime</code>.
+     * <code>NONE</code>: Ignore <code>Atime</code>.
      * </p>
      * <note>
      * <p>
-     * If <code>Atime</code> is set to BEST_EFFORT, <code>Mtime</code> must be set to PRESERVE.
+     * If <code>Atime</code> is set to <code>BEST_EFFORT</code>, <code>Mtime</code> must be set to <code>PRESERVE</code>
+     * .
      * </p>
      * <p>
-     * If <code>Atime</code> is set to NONE, <code>Mtime</code> must also be NONE.
+     * If <code>Atime</code> is set to <code>NONE</code>, <code>Mtime</code> must also be <code>NONE</code>.
      * </p>
      * </note>
      * 
      * @return A file metadata value that shows the last time a file was accessed (that is, when the file was read or
-     *         written to). If you set <code>Atime</code> to BEST_EFFORT, DataSync attempts to preserve the original
-     *         <code>Atime</code> attribute on all source files (that is, the version before the PREPARING phase).
-     *         However, <code>Atime</code>'s behavior is not fully standard across platforms, so DataSync can only do
-     *         this on a best-effort basis. </p>
+     *         written to). If you set <code>Atime</code> to <code>BEST_EFFORT</code>, DataSync attempts to preserve the
+     *         original <code>Atime</code> attribute on all source files (that is, the version before the
+     *         <code>PREPARING</code> phase). However, <code>Atime</code>'s behavior is not fully standard across
+     *         platforms, so DataSync can only do this on a best-effort basis. </p>
      *         <p>
-     *         Default value: BEST_EFFORT.
+     *         Default value: <code>BEST_EFFORT</code>
      *         </p>
      *         <p>
-     *         BEST_EFFORT: Attempt to preserve the per-file <code>Atime</code> value (recommended).
+     *         <code>BEST_EFFORT</code>: Attempt to preserve the per-file <code>Atime</code> value (recommended).
      *         </p>
      *         <p>
-     *         NONE: Ignore <code>Atime</code>.
+     *         <code>NONE</code>: Ignore <code>Atime</code>.
      *         </p>
      *         <note>
      *         <p>
-     *         If <code>Atime</code> is set to BEST_EFFORT, <code>Mtime</code> must be set to PRESERVE.
+     *         If <code>Atime</code> is set to <code>BEST_EFFORT</code>, <code>Mtime</code> must be set to
+     *         <code>PRESERVE</code>.
      *         </p>
      *         <p>
-     *         If <code>Atime</code> is set to NONE, <code>Mtime</code> must also be NONE.
+     *         If <code>Atime</code> is set to <code>NONE</code>, <code>Mtime</code> must also be <code>NONE</code>.
      *         </p>
      * @see Atime
      */
@@ -782,49 +803,52 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * A file metadata value that shows the last time a file was accessed (that is, when the file was read or written
-     * to). If you set <code>Atime</code> to BEST_EFFORT, DataSync attempts to preserve the original <code>Atime</code>
-     * attribute on all source files (that is, the version before the PREPARING phase). However, <code>Atime</code>'s
-     * behavior is not fully standard across platforms, so DataSync can only do this on a best-effort basis.
+     * to). If you set <code>Atime</code> to <code>BEST_EFFORT</code>, DataSync attempts to preserve the original
+     * <code>Atime</code> attribute on all source files (that is, the version before the <code>PREPARING</code> phase).
+     * However, <code>Atime</code>'s behavior is not fully standard across platforms, so DataSync can only do this on a
+     * best-effort basis.
      * </p>
      * <p>
-     * Default value: BEST_EFFORT.
+     * Default value: <code>BEST_EFFORT</code>
      * </p>
      * <p>
-     * BEST_EFFORT: Attempt to preserve the per-file <code>Atime</code> value (recommended).
+     * <code>BEST_EFFORT</code>: Attempt to preserve the per-file <code>Atime</code> value (recommended).
      * </p>
      * <p>
-     * NONE: Ignore <code>Atime</code>.
+     * <code>NONE</code>: Ignore <code>Atime</code>.
      * </p>
      * <note>
      * <p>
-     * If <code>Atime</code> is set to BEST_EFFORT, <code>Mtime</code> must be set to PRESERVE.
+     * If <code>Atime</code> is set to <code>BEST_EFFORT</code>, <code>Mtime</code> must be set to <code>PRESERVE</code>
+     * .
      * </p>
      * <p>
-     * If <code>Atime</code> is set to NONE, <code>Mtime</code> must also be NONE.
+     * If <code>Atime</code> is set to <code>NONE</code>, <code>Mtime</code> must also be <code>NONE</code>.
      * </p>
      * </note>
      * 
      * @param atime
      *        A file metadata value that shows the last time a file was accessed (that is, when the file was read or
-     *        written to). If you set <code>Atime</code> to BEST_EFFORT, DataSync attempts to preserve the original
-     *        <code>Atime</code> attribute on all source files (that is, the version before the PREPARING phase).
-     *        However, <code>Atime</code>'s behavior is not fully standard across platforms, so DataSync can only do
-     *        this on a best-effort basis. </p>
+     *        written to). If you set <code>Atime</code> to <code>BEST_EFFORT</code>, DataSync attempts to preserve the
+     *        original <code>Atime</code> attribute on all source files (that is, the version before the
+     *        <code>PREPARING</code> phase). However, <code>Atime</code>'s behavior is not fully standard across
+     *        platforms, so DataSync can only do this on a best-effort basis. </p>
      *        <p>
-     *        Default value: BEST_EFFORT.
+     *        Default value: <code>BEST_EFFORT</code>
      *        </p>
      *        <p>
-     *        BEST_EFFORT: Attempt to preserve the per-file <code>Atime</code> value (recommended).
+     *        <code>BEST_EFFORT</code>: Attempt to preserve the per-file <code>Atime</code> value (recommended).
      *        </p>
      *        <p>
-     *        NONE: Ignore <code>Atime</code>.
+     *        <code>NONE</code>: Ignore <code>Atime</code>.
      *        </p>
      *        <note>
      *        <p>
-     *        If <code>Atime</code> is set to BEST_EFFORT, <code>Mtime</code> must be set to PRESERVE.
+     *        If <code>Atime</code> is set to <code>BEST_EFFORT</code>, <code>Mtime</code> must be set to
+     *        <code>PRESERVE</code>.
      *        </p>
      *        <p>
-     *        If <code>Atime</code> is set to NONE, <code>Mtime</code> must also be NONE.
+     *        If <code>Atime</code> is set to <code>NONE</code>, <code>Mtime</code> must also be <code>NONE</code>.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Atime
@@ -838,49 +862,52 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * A file metadata value that shows the last time a file was accessed (that is, when the file was read or written
-     * to). If you set <code>Atime</code> to BEST_EFFORT, DataSync attempts to preserve the original <code>Atime</code>
-     * attribute on all source files (that is, the version before the PREPARING phase). However, <code>Atime</code>'s
-     * behavior is not fully standard across platforms, so DataSync can only do this on a best-effort basis.
+     * to). If you set <code>Atime</code> to <code>BEST_EFFORT</code>, DataSync attempts to preserve the original
+     * <code>Atime</code> attribute on all source files (that is, the version before the <code>PREPARING</code> phase).
+     * However, <code>Atime</code>'s behavior is not fully standard across platforms, so DataSync can only do this on a
+     * best-effort basis.
      * </p>
      * <p>
-     * Default value: BEST_EFFORT.
+     * Default value: <code>BEST_EFFORT</code>
      * </p>
      * <p>
-     * BEST_EFFORT: Attempt to preserve the per-file <code>Atime</code> value (recommended).
+     * <code>BEST_EFFORT</code>: Attempt to preserve the per-file <code>Atime</code> value (recommended).
      * </p>
      * <p>
-     * NONE: Ignore <code>Atime</code>.
+     * <code>NONE</code>: Ignore <code>Atime</code>.
      * </p>
      * <note>
      * <p>
-     * If <code>Atime</code> is set to BEST_EFFORT, <code>Mtime</code> must be set to PRESERVE.
+     * If <code>Atime</code> is set to <code>BEST_EFFORT</code>, <code>Mtime</code> must be set to <code>PRESERVE</code>
+     * .
      * </p>
      * <p>
-     * If <code>Atime</code> is set to NONE, <code>Mtime</code> must also be NONE.
+     * If <code>Atime</code> is set to <code>NONE</code>, <code>Mtime</code> must also be <code>NONE</code>.
      * </p>
      * </note>
      * 
      * @param atime
      *        A file metadata value that shows the last time a file was accessed (that is, when the file was read or
-     *        written to). If you set <code>Atime</code> to BEST_EFFORT, DataSync attempts to preserve the original
-     *        <code>Atime</code> attribute on all source files (that is, the version before the PREPARING phase).
-     *        However, <code>Atime</code>'s behavior is not fully standard across platforms, so DataSync can only do
-     *        this on a best-effort basis. </p>
+     *        written to). If you set <code>Atime</code> to <code>BEST_EFFORT</code>, DataSync attempts to preserve the
+     *        original <code>Atime</code> attribute on all source files (that is, the version before the
+     *        <code>PREPARING</code> phase). However, <code>Atime</code>'s behavior is not fully standard across
+     *        platforms, so DataSync can only do this on a best-effort basis. </p>
      *        <p>
-     *        Default value: BEST_EFFORT.
+     *        Default value: <code>BEST_EFFORT</code>
      *        </p>
      *        <p>
-     *        BEST_EFFORT: Attempt to preserve the per-file <code>Atime</code> value (recommended).
+     *        <code>BEST_EFFORT</code>: Attempt to preserve the per-file <code>Atime</code> value (recommended).
      *        </p>
      *        <p>
-     *        NONE: Ignore <code>Atime</code>.
+     *        <code>NONE</code>: Ignore <code>Atime</code>.
      *        </p>
      *        <note>
      *        <p>
-     *        If <code>Atime</code> is set to BEST_EFFORT, <code>Mtime</code> must be set to PRESERVE.
+     *        If <code>Atime</code> is set to <code>BEST_EFFORT</code>, <code>Mtime</code> must be set to
+     *        <code>PRESERVE</code>.
      *        </p>
      *        <p>
-     *        If <code>Atime</code> is set to NONE, <code>Mtime</code> must also be NONE.
+     *        If <code>Atime</code> is set to <code>NONE</code>, <code>Mtime</code> must also be <code>NONE</code>.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Atime
@@ -894,45 +921,49 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * A value that indicates the last time that a file was modified (that is, a file was written to) before the
-     * PREPARING phase. This option is required for cases when you need to run the same task more than one time.
+     * <code>PREPARING</code> phase. This option is required for cases when you need to run the same task more than one
+     * time.
      * </p>
      * <p>
      * Default Value: <code>PRESERVE</code>
      * </p>
      * <p>
-     * PRESERVE: Preserve original <code>Mtime</code> (recommended)
+     * <code>PRESERVE</code>: Preserve original <code>Mtime</code> (recommended)
      * </p>
      * <p>
-     * NONE: Ignore <code>Mtime</code>.
+     * <code>NONE</code>: Ignore <code>Mtime</code>.
      * </p>
      * <note>
      * <p>
-     * If <code>Mtime</code> is set to PRESERVE, <code>Atime</code> must be set to BEST_EFFORT.
+     * If <code>Mtime</code> is set to <code>PRESERVE</code>, <code>Atime</code> must be set to <code>BEST_EFFORT</code>
+     * .
      * </p>
      * <p>
-     * If <code>Mtime</code> is set to NONE, <code>Atime</code> must also be set to NONE.
+     * If <code>Mtime</code> is set to <code>NONE</code>, <code>Atime</code> must also be set to <code>NONE</code>.
      * </p>
      * </note>
      * 
      * @param mtime
      *        A value that indicates the last time that a file was modified (that is, a file was written to) before the
-     *        PREPARING phase. This option is required for cases when you need to run the same task more than one time.
-     *        </p>
+     *        <code>PREPARING</code> phase. This option is required for cases when you need to run the same task more
+     *        than one time. </p>
      *        <p>
      *        Default Value: <code>PRESERVE</code>
      *        </p>
      *        <p>
-     *        PRESERVE: Preserve original <code>Mtime</code> (recommended)
+     *        <code>PRESERVE</code>: Preserve original <code>Mtime</code> (recommended)
      *        </p>
      *        <p>
-     *        NONE: Ignore <code>Mtime</code>.
+     *        <code>NONE</code>: Ignore <code>Mtime</code>.
      *        </p>
      *        <note>
      *        <p>
-     *        If <code>Mtime</code> is set to PRESERVE, <code>Atime</code> must be set to BEST_EFFORT.
+     *        If <code>Mtime</code> is set to <code>PRESERVE</code>, <code>Atime</code> must be set to
+     *        <code>BEST_EFFORT</code>.
      *        </p>
      *        <p>
-     *        If <code>Mtime</code> is set to NONE, <code>Atime</code> must also be set to NONE.
+     *        If <code>Mtime</code> is set to <code>NONE</code>, <code>Atime</code> must also be set to
+     *        <code>NONE</code>.
      *        </p>
      * @see Mtime
      */
@@ -944,44 +975,48 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * A value that indicates the last time that a file was modified (that is, a file was written to) before the
-     * PREPARING phase. This option is required for cases when you need to run the same task more than one time.
+     * <code>PREPARING</code> phase. This option is required for cases when you need to run the same task more than one
+     * time.
      * </p>
      * <p>
      * Default Value: <code>PRESERVE</code>
      * </p>
      * <p>
-     * PRESERVE: Preserve original <code>Mtime</code> (recommended)
+     * <code>PRESERVE</code>: Preserve original <code>Mtime</code> (recommended)
      * </p>
      * <p>
-     * NONE: Ignore <code>Mtime</code>.
+     * <code>NONE</code>: Ignore <code>Mtime</code>.
      * </p>
      * <note>
      * <p>
-     * If <code>Mtime</code> is set to PRESERVE, <code>Atime</code> must be set to BEST_EFFORT.
+     * If <code>Mtime</code> is set to <code>PRESERVE</code>, <code>Atime</code> must be set to <code>BEST_EFFORT</code>
+     * .
      * </p>
      * <p>
-     * If <code>Mtime</code> is set to NONE, <code>Atime</code> must also be set to NONE.
+     * If <code>Mtime</code> is set to <code>NONE</code>, <code>Atime</code> must also be set to <code>NONE</code>.
      * </p>
      * </note>
      * 
      * @return A value that indicates the last time that a file was modified (that is, a file was written to) before the
-     *         PREPARING phase. This option is required for cases when you need to run the same task more than one time.
-     *         </p>
+     *         <code>PREPARING</code> phase. This option is required for cases when you need to run the same task more
+     *         than one time. </p>
      *         <p>
      *         Default Value: <code>PRESERVE</code>
      *         </p>
      *         <p>
-     *         PRESERVE: Preserve original <code>Mtime</code> (recommended)
+     *         <code>PRESERVE</code>: Preserve original <code>Mtime</code> (recommended)
      *         </p>
      *         <p>
-     *         NONE: Ignore <code>Mtime</code>.
+     *         <code>NONE</code>: Ignore <code>Mtime</code>.
      *         </p>
      *         <note>
      *         <p>
-     *         If <code>Mtime</code> is set to PRESERVE, <code>Atime</code> must be set to BEST_EFFORT.
+     *         If <code>Mtime</code> is set to <code>PRESERVE</code>, <code>Atime</code> must be set to
+     *         <code>BEST_EFFORT</code>.
      *         </p>
      *         <p>
-     *         If <code>Mtime</code> is set to NONE, <code>Atime</code> must also be set to NONE.
+     *         If <code>Mtime</code> is set to <code>NONE</code>, <code>Atime</code> must also be set to
+     *         <code>NONE</code>.
      *         </p>
      * @see Mtime
      */
@@ -993,45 +1028,49 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * A value that indicates the last time that a file was modified (that is, a file was written to) before the
-     * PREPARING phase. This option is required for cases when you need to run the same task more than one time.
+     * <code>PREPARING</code> phase. This option is required for cases when you need to run the same task more than one
+     * time.
      * </p>
      * <p>
      * Default Value: <code>PRESERVE</code>
      * </p>
      * <p>
-     * PRESERVE: Preserve original <code>Mtime</code> (recommended)
+     * <code>PRESERVE</code>: Preserve original <code>Mtime</code> (recommended)
      * </p>
      * <p>
-     * NONE: Ignore <code>Mtime</code>.
+     * <code>NONE</code>: Ignore <code>Mtime</code>.
      * </p>
      * <note>
      * <p>
-     * If <code>Mtime</code> is set to PRESERVE, <code>Atime</code> must be set to BEST_EFFORT.
+     * If <code>Mtime</code> is set to <code>PRESERVE</code>, <code>Atime</code> must be set to <code>BEST_EFFORT</code>
+     * .
      * </p>
      * <p>
-     * If <code>Mtime</code> is set to NONE, <code>Atime</code> must also be set to NONE.
+     * If <code>Mtime</code> is set to <code>NONE</code>, <code>Atime</code> must also be set to <code>NONE</code>.
      * </p>
      * </note>
      * 
      * @param mtime
      *        A value that indicates the last time that a file was modified (that is, a file was written to) before the
-     *        PREPARING phase. This option is required for cases when you need to run the same task more than one time.
-     *        </p>
+     *        <code>PREPARING</code> phase. This option is required for cases when you need to run the same task more
+     *        than one time. </p>
      *        <p>
      *        Default Value: <code>PRESERVE</code>
      *        </p>
      *        <p>
-     *        PRESERVE: Preserve original <code>Mtime</code> (recommended)
+     *        <code>PRESERVE</code>: Preserve original <code>Mtime</code> (recommended)
      *        </p>
      *        <p>
-     *        NONE: Ignore <code>Mtime</code>.
+     *        <code>NONE</code>: Ignore <code>Mtime</code>.
      *        </p>
      *        <note>
      *        <p>
-     *        If <code>Mtime</code> is set to PRESERVE, <code>Atime</code> must be set to BEST_EFFORT.
+     *        If <code>Mtime</code> is set to <code>PRESERVE</code>, <code>Atime</code> must be set to
+     *        <code>BEST_EFFORT</code>.
      *        </p>
      *        <p>
-     *        If <code>Mtime</code> is set to NONE, <code>Atime</code> must also be set to NONE.
+     *        If <code>Mtime</code> is set to <code>NONE</code>, <code>Atime</code> must also be set to
+     *        <code>NONE</code>.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Mtime
@@ -1045,45 +1084,49 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * A value that indicates the last time that a file was modified (that is, a file was written to) before the
-     * PREPARING phase. This option is required for cases when you need to run the same task more than one time.
+     * <code>PREPARING</code> phase. This option is required for cases when you need to run the same task more than one
+     * time.
      * </p>
      * <p>
      * Default Value: <code>PRESERVE</code>
      * </p>
      * <p>
-     * PRESERVE: Preserve original <code>Mtime</code> (recommended)
+     * <code>PRESERVE</code>: Preserve original <code>Mtime</code> (recommended)
      * </p>
      * <p>
-     * NONE: Ignore <code>Mtime</code>.
+     * <code>NONE</code>: Ignore <code>Mtime</code>.
      * </p>
      * <note>
      * <p>
-     * If <code>Mtime</code> is set to PRESERVE, <code>Atime</code> must be set to BEST_EFFORT.
+     * If <code>Mtime</code> is set to <code>PRESERVE</code>, <code>Atime</code> must be set to <code>BEST_EFFORT</code>
+     * .
      * </p>
      * <p>
-     * If <code>Mtime</code> is set to NONE, <code>Atime</code> must also be set to NONE.
+     * If <code>Mtime</code> is set to <code>NONE</code>, <code>Atime</code> must also be set to <code>NONE</code>.
      * </p>
      * </note>
      * 
      * @param mtime
      *        A value that indicates the last time that a file was modified (that is, a file was written to) before the
-     *        PREPARING phase. This option is required for cases when you need to run the same task more than one time.
-     *        </p>
+     *        <code>PREPARING</code> phase. This option is required for cases when you need to run the same task more
+     *        than one time. </p>
      *        <p>
      *        Default Value: <code>PRESERVE</code>
      *        </p>
      *        <p>
-     *        PRESERVE: Preserve original <code>Mtime</code> (recommended)
+     *        <code>PRESERVE</code>: Preserve original <code>Mtime</code> (recommended)
      *        </p>
      *        <p>
-     *        NONE: Ignore <code>Mtime</code>.
+     *        <code>NONE</code>: Ignore <code>Mtime</code>.
      *        </p>
      *        <note>
      *        <p>
-     *        If <code>Mtime</code> is set to PRESERVE, <code>Atime</code> must be set to BEST_EFFORT.
+     *        If <code>Mtime</code> is set to <code>PRESERVE</code>, <code>Atime</code> must be set to
+     *        <code>BEST_EFFORT</code>.
      *        </p>
      *        <p>
-     *        If <code>Mtime</code> is set to NONE, <code>Atime</code> must also be set to NONE.
+     *        If <code>Mtime</code> is set to <code>NONE</code>, <code>Atime</code> must also be set to
+     *        <code>NONE</code>.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Mtime
@@ -1096,34 +1139,38 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The POSIX user ID (UID) of the file's owner. This option should only be set for NFS, EFS, and S3 locations. To
-     * learn more about what metadata is copied by DataSync, see <a
-     * href="https://docs.aws.amazon.com/datasync/latest/userguide/special-files.html#metadata-copied">Metadata Copied
+     * The POSIX user ID (UID) of the file's owner.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/datasync/latest/userguide/special-files.html#metadata-copied">Metadata copied
      * by DataSync</a>.
      * </p>
      * <p>
-     * Default value: INT_VALUE. This preserves the integer value of the ID.
+     * Default value: <code>INT_VALUE</code>. This preserves the integer value of the ID.
      * </p>
      * <p>
-     * INT_VALUE: Preserve the integer value of UID and group ID (GID) (recommended).
+     * <code>INT_VALUE</code>: Preserve the integer value of UID and group ID (GID) (recommended).
      * </p>
      * <p>
-     * NONE: Ignore UID and GID.
+     * <code>NONE</code>: Ignore UID and GID.
      * </p>
      * 
      * @param uid
-     *        The POSIX user ID (UID) of the file's owner. This option should only be set for NFS, EFS, and S3
-     *        locations. To learn more about what metadata is copied by DataSync, see <a
+     *        The POSIX user ID (UID) of the file's owner.</p>
+     *        <p>
+     *        For more information, see <a
      *        href="https://docs.aws.amazon.com/datasync/latest/userguide/special-files.html#metadata-copied">Metadata
-     *        Copied by DataSync</a>.</p>
-     *        <p>
-     *        Default value: INT_VALUE. This preserves the integer value of the ID.
+     *        copied by DataSync</a>.
      *        </p>
      *        <p>
-     *        INT_VALUE: Preserve the integer value of UID and group ID (GID) (recommended).
+     *        Default value: <code>INT_VALUE</code>. This preserves the integer value of the ID.
      *        </p>
      *        <p>
-     *        NONE: Ignore UID and GID.
+     *        <code>INT_VALUE</code>: Preserve the integer value of UID and group ID (GID) (recommended).
+     *        </p>
+     *        <p>
+     *        <code>NONE</code>: Ignore UID and GID.
      * @see Uid
      */
 
@@ -1133,33 +1180,37 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The POSIX user ID (UID) of the file's owner. This option should only be set for NFS, EFS, and S3 locations. To
-     * learn more about what metadata is copied by DataSync, see <a
-     * href="https://docs.aws.amazon.com/datasync/latest/userguide/special-files.html#metadata-copied">Metadata Copied
+     * The POSIX user ID (UID) of the file's owner.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/datasync/latest/userguide/special-files.html#metadata-copied">Metadata copied
      * by DataSync</a>.
      * </p>
      * <p>
-     * Default value: INT_VALUE. This preserves the integer value of the ID.
+     * Default value: <code>INT_VALUE</code>. This preserves the integer value of the ID.
      * </p>
      * <p>
-     * INT_VALUE: Preserve the integer value of UID and group ID (GID) (recommended).
+     * <code>INT_VALUE</code>: Preserve the integer value of UID and group ID (GID) (recommended).
      * </p>
      * <p>
-     * NONE: Ignore UID and GID.
+     * <code>NONE</code>: Ignore UID and GID.
      * </p>
      * 
-     * @return The POSIX user ID (UID) of the file's owner. This option should only be set for NFS, EFS, and S3
-     *         locations. To learn more about what metadata is copied by DataSync, see <a
+     * @return The POSIX user ID (UID) of the file's owner.</p>
+     *         <p>
+     *         For more information, see <a
      *         href="https://docs.aws.amazon.com/datasync/latest/userguide/special-files.html#metadata-copied">Metadata
-     *         Copied by DataSync</a>.</p>
-     *         <p>
-     *         Default value: INT_VALUE. This preserves the integer value of the ID.
+     *         copied by DataSync</a>.
      *         </p>
      *         <p>
-     *         INT_VALUE: Preserve the integer value of UID and group ID (GID) (recommended).
+     *         Default value: <code>INT_VALUE</code>. This preserves the integer value of the ID.
      *         </p>
      *         <p>
-     *         NONE: Ignore UID and GID.
+     *         <code>INT_VALUE</code>: Preserve the integer value of UID and group ID (GID) (recommended).
+     *         </p>
+     *         <p>
+     *         <code>NONE</code>: Ignore UID and GID.
      * @see Uid
      */
 
@@ -1169,34 +1220,38 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The POSIX user ID (UID) of the file's owner. This option should only be set for NFS, EFS, and S3 locations. To
-     * learn more about what metadata is copied by DataSync, see <a
-     * href="https://docs.aws.amazon.com/datasync/latest/userguide/special-files.html#metadata-copied">Metadata Copied
+     * The POSIX user ID (UID) of the file's owner.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/datasync/latest/userguide/special-files.html#metadata-copied">Metadata copied
      * by DataSync</a>.
      * </p>
      * <p>
-     * Default value: INT_VALUE. This preserves the integer value of the ID.
+     * Default value: <code>INT_VALUE</code>. This preserves the integer value of the ID.
      * </p>
      * <p>
-     * INT_VALUE: Preserve the integer value of UID and group ID (GID) (recommended).
+     * <code>INT_VALUE</code>: Preserve the integer value of UID and group ID (GID) (recommended).
      * </p>
      * <p>
-     * NONE: Ignore UID and GID.
+     * <code>NONE</code>: Ignore UID and GID.
      * </p>
      * 
      * @param uid
-     *        The POSIX user ID (UID) of the file's owner. This option should only be set for NFS, EFS, and S3
-     *        locations. To learn more about what metadata is copied by DataSync, see <a
+     *        The POSIX user ID (UID) of the file's owner.</p>
+     *        <p>
+     *        For more information, see <a
      *        href="https://docs.aws.amazon.com/datasync/latest/userguide/special-files.html#metadata-copied">Metadata
-     *        Copied by DataSync</a>.</p>
-     *        <p>
-     *        Default value: INT_VALUE. This preserves the integer value of the ID.
+     *        copied by DataSync</a>.
      *        </p>
      *        <p>
-     *        INT_VALUE: Preserve the integer value of UID and group ID (GID) (recommended).
+     *        Default value: <code>INT_VALUE</code>. This preserves the integer value of the ID.
      *        </p>
      *        <p>
-     *        NONE: Ignore UID and GID.
+     *        <code>INT_VALUE</code>: Preserve the integer value of UID and group ID (GID) (recommended).
+     *        </p>
+     *        <p>
+     *        <code>NONE</code>: Ignore UID and GID.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Uid
      */
@@ -1208,34 +1263,38 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The POSIX user ID (UID) of the file's owner. This option should only be set for NFS, EFS, and S3 locations. To
-     * learn more about what metadata is copied by DataSync, see <a
-     * href="https://docs.aws.amazon.com/datasync/latest/userguide/special-files.html#metadata-copied">Metadata Copied
+     * The POSIX user ID (UID) of the file's owner.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/datasync/latest/userguide/special-files.html#metadata-copied">Metadata copied
      * by DataSync</a>.
      * </p>
      * <p>
-     * Default value: INT_VALUE. This preserves the integer value of the ID.
+     * Default value: <code>INT_VALUE</code>. This preserves the integer value of the ID.
      * </p>
      * <p>
-     * INT_VALUE: Preserve the integer value of UID and group ID (GID) (recommended).
+     * <code>INT_VALUE</code>: Preserve the integer value of UID and group ID (GID) (recommended).
      * </p>
      * <p>
-     * NONE: Ignore UID and GID.
+     * <code>NONE</code>: Ignore UID and GID.
      * </p>
      * 
      * @param uid
-     *        The POSIX user ID (UID) of the file's owner. This option should only be set for NFS, EFS, and S3
-     *        locations. To learn more about what metadata is copied by DataSync, see <a
+     *        The POSIX user ID (UID) of the file's owner.</p>
+     *        <p>
+     *        For more information, see <a
      *        href="https://docs.aws.amazon.com/datasync/latest/userguide/special-files.html#metadata-copied">Metadata
-     *        Copied by DataSync</a>.</p>
-     *        <p>
-     *        Default value: INT_VALUE. This preserves the integer value of the ID.
+     *        copied by DataSync</a>.
      *        </p>
      *        <p>
-     *        INT_VALUE: Preserve the integer value of UID and group ID (GID) (recommended).
+     *        Default value: <code>INT_VALUE</code>. This preserves the integer value of the ID.
      *        </p>
      *        <p>
-     *        NONE: Ignore UID and GID.
+     *        <code>INT_VALUE</code>: Preserve the integer value of UID and group ID (GID) (recommended).
+     *        </p>
+     *        <p>
+     *        <code>NONE</code>: Ignore UID and GID.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Uid
      */
@@ -1247,34 +1306,38 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The POSIX group ID (GID) of the file's owners. This option should only be set for NFS, EFS, and S3 locations. For
-     * more information about what metadata is copied by DataSync, see <a
-     * href="https://docs.aws.amazon.com/datasync/latest/userguide/special-files.html#metadata-copied">Metadata Copied
+     * The POSIX group ID (GID) of the file's owners.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/datasync/latest/userguide/special-files.html#metadata-copied">Metadata copied
      * by DataSync</a>.
      * </p>
      * <p>
-     * Default value: INT_VALUE. This preserves the integer value of the ID.
+     * Default value: <code>INT_VALUE</code>. This preserves the integer value of the ID.
      * </p>
      * <p>
-     * INT_VALUE: Preserve the integer value of user ID (UID) and GID (recommended).
+     * <code>INT_VALUE</code>: Preserve the integer value of user ID (UID) and GID (recommended).
      * </p>
      * <p>
-     * NONE: Ignore UID and GID.
+     * <code>NONE</code>: Ignore UID and GID.
      * </p>
      * 
      * @param gid
-     *        The POSIX group ID (GID) of the file's owners. This option should only be set for NFS, EFS, and S3
-     *        locations. For more information about what metadata is copied by DataSync, see <a
+     *        The POSIX group ID (GID) of the file's owners.</p>
+     *        <p>
+     *        For more information, see <a
      *        href="https://docs.aws.amazon.com/datasync/latest/userguide/special-files.html#metadata-copied">Metadata
-     *        Copied by DataSync</a>. </p>
-     *        <p>
-     *        Default value: INT_VALUE. This preserves the integer value of the ID.
+     *        copied by DataSync</a>.
      *        </p>
      *        <p>
-     *        INT_VALUE: Preserve the integer value of user ID (UID) and GID (recommended).
+     *        Default value: <code>INT_VALUE</code>. This preserves the integer value of the ID.
      *        </p>
      *        <p>
-     *        NONE: Ignore UID and GID.
+     *        <code>INT_VALUE</code>: Preserve the integer value of user ID (UID) and GID (recommended).
+     *        </p>
+     *        <p>
+     *        <code>NONE</code>: Ignore UID and GID.
      * @see Gid
      */
 
@@ -1284,33 +1347,37 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The POSIX group ID (GID) of the file's owners. This option should only be set for NFS, EFS, and S3 locations. For
-     * more information about what metadata is copied by DataSync, see <a
-     * href="https://docs.aws.amazon.com/datasync/latest/userguide/special-files.html#metadata-copied">Metadata Copied
+     * The POSIX group ID (GID) of the file's owners.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/datasync/latest/userguide/special-files.html#metadata-copied">Metadata copied
      * by DataSync</a>.
      * </p>
      * <p>
-     * Default value: INT_VALUE. This preserves the integer value of the ID.
+     * Default value: <code>INT_VALUE</code>. This preserves the integer value of the ID.
      * </p>
      * <p>
-     * INT_VALUE: Preserve the integer value of user ID (UID) and GID (recommended).
+     * <code>INT_VALUE</code>: Preserve the integer value of user ID (UID) and GID (recommended).
      * </p>
      * <p>
-     * NONE: Ignore UID and GID.
+     * <code>NONE</code>: Ignore UID and GID.
      * </p>
      * 
-     * @return The POSIX group ID (GID) of the file's owners. This option should only be set for NFS, EFS, and S3
-     *         locations. For more information about what metadata is copied by DataSync, see <a
+     * @return The POSIX group ID (GID) of the file's owners.</p>
+     *         <p>
+     *         For more information, see <a
      *         href="https://docs.aws.amazon.com/datasync/latest/userguide/special-files.html#metadata-copied">Metadata
-     *         Copied by DataSync</a>. </p>
-     *         <p>
-     *         Default value: INT_VALUE. This preserves the integer value of the ID.
+     *         copied by DataSync</a>.
      *         </p>
      *         <p>
-     *         INT_VALUE: Preserve the integer value of user ID (UID) and GID (recommended).
+     *         Default value: <code>INT_VALUE</code>. This preserves the integer value of the ID.
      *         </p>
      *         <p>
-     *         NONE: Ignore UID and GID.
+     *         <code>INT_VALUE</code>: Preserve the integer value of user ID (UID) and GID (recommended).
+     *         </p>
+     *         <p>
+     *         <code>NONE</code>: Ignore UID and GID.
      * @see Gid
      */
 
@@ -1320,34 +1387,38 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The POSIX group ID (GID) of the file's owners. This option should only be set for NFS, EFS, and S3 locations. For
-     * more information about what metadata is copied by DataSync, see <a
-     * href="https://docs.aws.amazon.com/datasync/latest/userguide/special-files.html#metadata-copied">Metadata Copied
+     * The POSIX group ID (GID) of the file's owners.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/datasync/latest/userguide/special-files.html#metadata-copied">Metadata copied
      * by DataSync</a>.
      * </p>
      * <p>
-     * Default value: INT_VALUE. This preserves the integer value of the ID.
+     * Default value: <code>INT_VALUE</code>. This preserves the integer value of the ID.
      * </p>
      * <p>
-     * INT_VALUE: Preserve the integer value of user ID (UID) and GID (recommended).
+     * <code>INT_VALUE</code>: Preserve the integer value of user ID (UID) and GID (recommended).
      * </p>
      * <p>
-     * NONE: Ignore UID and GID.
+     * <code>NONE</code>: Ignore UID and GID.
      * </p>
      * 
      * @param gid
-     *        The POSIX group ID (GID) of the file's owners. This option should only be set for NFS, EFS, and S3
-     *        locations. For more information about what metadata is copied by DataSync, see <a
+     *        The POSIX group ID (GID) of the file's owners.</p>
+     *        <p>
+     *        For more information, see <a
      *        href="https://docs.aws.amazon.com/datasync/latest/userguide/special-files.html#metadata-copied">Metadata
-     *        Copied by DataSync</a>. </p>
-     *        <p>
-     *        Default value: INT_VALUE. This preserves the integer value of the ID.
+     *        copied by DataSync</a>.
      *        </p>
      *        <p>
-     *        INT_VALUE: Preserve the integer value of user ID (UID) and GID (recommended).
+     *        Default value: <code>INT_VALUE</code>. This preserves the integer value of the ID.
      *        </p>
      *        <p>
-     *        NONE: Ignore UID and GID.
+     *        <code>INT_VALUE</code>: Preserve the integer value of user ID (UID) and GID (recommended).
+     *        </p>
+     *        <p>
+     *        <code>NONE</code>: Ignore UID and GID.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Gid
      */
@@ -1359,34 +1430,38 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The POSIX group ID (GID) of the file's owners. This option should only be set for NFS, EFS, and S3 locations. For
-     * more information about what metadata is copied by DataSync, see <a
-     * href="https://docs.aws.amazon.com/datasync/latest/userguide/special-files.html#metadata-copied">Metadata Copied
+     * The POSIX group ID (GID) of the file's owners.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/datasync/latest/userguide/special-files.html#metadata-copied">Metadata copied
      * by DataSync</a>.
      * </p>
      * <p>
-     * Default value: INT_VALUE. This preserves the integer value of the ID.
+     * Default value: <code>INT_VALUE</code>. This preserves the integer value of the ID.
      * </p>
      * <p>
-     * INT_VALUE: Preserve the integer value of user ID (UID) and GID (recommended).
+     * <code>INT_VALUE</code>: Preserve the integer value of user ID (UID) and GID (recommended).
      * </p>
      * <p>
-     * NONE: Ignore UID and GID.
+     * <code>NONE</code>: Ignore UID and GID.
      * </p>
      * 
      * @param gid
-     *        The POSIX group ID (GID) of the file's owners. This option should only be set for NFS, EFS, and S3
-     *        locations. For more information about what metadata is copied by DataSync, see <a
+     *        The POSIX group ID (GID) of the file's owners.</p>
+     *        <p>
+     *        For more information, see <a
      *        href="https://docs.aws.amazon.com/datasync/latest/userguide/special-files.html#metadata-copied">Metadata
-     *        Copied by DataSync</a>. </p>
-     *        <p>
-     *        Default value: INT_VALUE. This preserves the integer value of the ID.
+     *        copied by DataSync</a>.
      *        </p>
      *        <p>
-     *        INT_VALUE: Preserve the integer value of user ID (UID) and GID (recommended).
+     *        Default value: <code>INT_VALUE</code>. This preserves the integer value of the ID.
      *        </p>
      *        <p>
-     *        NONE: Ignore UID and GID.
+     *        <code>INT_VALUE</code>: Preserve the integer value of user ID (UID) and GID (recommended).
+     *        </p>
+     *        <p>
+     *        <code>NONE</code>: Ignore UID and GID.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Gid
      */
@@ -1405,13 +1480,13 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      * >Considerations when working with Amazon S3 storage classes in DataSync </a> in the <i>DataSync User Guide</i>.
      * </p>
      * <p>
-     * Default value: PRESERVE.
+     * Default value: <code>PRESERVE</code>
      * </p>
      * <p>
-     * PRESERVE: Ignore such destination files (recommended).
+     * <code>PRESERVE</code>: Ignore such destination files (recommended).
      * </p>
      * <p>
-     * REMOVE: Delete destination files that aren’t present in the source.
+     * <code>REMOVE</code>: Delete destination files that aren’t present in the source.
      * </p>
      * 
      * @param preserveDeletedFiles
@@ -1422,13 +1497,13 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      *        >Considerations when working with Amazon S3 storage classes in DataSync </a> in the <i>DataSync User
      *        Guide</i>.</p>
      *        <p>
-     *        Default value: PRESERVE.
+     *        Default value: <code>PRESERVE</code>
      *        </p>
      *        <p>
-     *        PRESERVE: Ignore such destination files (recommended).
+     *        <code>PRESERVE</code>: Ignore such destination files (recommended).
      *        </p>
      *        <p>
-     *        REMOVE: Delete destination files that aren’t present in the source.
+     *        <code>REMOVE</code>: Delete destination files that aren’t present in the source.
      * @see PreserveDeletedFiles
      */
 
@@ -1445,13 +1520,13 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      * >Considerations when working with Amazon S3 storage classes in DataSync </a> in the <i>DataSync User Guide</i>.
      * </p>
      * <p>
-     * Default value: PRESERVE.
+     * Default value: <code>PRESERVE</code>
      * </p>
      * <p>
-     * PRESERVE: Ignore such destination files (recommended).
+     * <code>PRESERVE</code>: Ignore such destination files (recommended).
      * </p>
      * <p>
-     * REMOVE: Delete destination files that aren’t present in the source.
+     * <code>REMOVE</code>: Delete destination files that aren’t present in the source.
      * </p>
      * 
      * @return A value that specifies whether files in the destination that don't exist in the source file system should
@@ -1461,13 +1536,13 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      *         >Considerations when working with Amazon S3 storage classes in DataSync </a> in the <i>DataSync User
      *         Guide</i>.</p>
      *         <p>
-     *         Default value: PRESERVE.
+     *         Default value: <code>PRESERVE</code>
      *         </p>
      *         <p>
-     *         PRESERVE: Ignore such destination files (recommended).
+     *         <code>PRESERVE</code>: Ignore such destination files (recommended).
      *         </p>
      *         <p>
-     *         REMOVE: Delete destination files that aren’t present in the source.
+     *         <code>REMOVE</code>: Delete destination files that aren’t present in the source.
      * @see PreserveDeletedFiles
      */
 
@@ -1484,13 +1559,13 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      * >Considerations when working with Amazon S3 storage classes in DataSync </a> in the <i>DataSync User Guide</i>.
      * </p>
      * <p>
-     * Default value: PRESERVE.
+     * Default value: <code>PRESERVE</code>
      * </p>
      * <p>
-     * PRESERVE: Ignore such destination files (recommended).
+     * <code>PRESERVE</code>: Ignore such destination files (recommended).
      * </p>
      * <p>
-     * REMOVE: Delete destination files that aren’t present in the source.
+     * <code>REMOVE</code>: Delete destination files that aren’t present in the source.
      * </p>
      * 
      * @param preserveDeletedFiles
@@ -1501,13 +1576,13 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      *        >Considerations when working with Amazon S3 storage classes in DataSync </a> in the <i>DataSync User
      *        Guide</i>.</p>
      *        <p>
-     *        Default value: PRESERVE.
+     *        Default value: <code>PRESERVE</code>
      *        </p>
      *        <p>
-     *        PRESERVE: Ignore such destination files (recommended).
+     *        <code>PRESERVE</code>: Ignore such destination files (recommended).
      *        </p>
      *        <p>
-     *        REMOVE: Delete destination files that aren’t present in the source.
+     *        <code>REMOVE</code>: Delete destination files that aren’t present in the source.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PreserveDeletedFiles
      */
@@ -1526,13 +1601,13 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      * >Considerations when working with Amazon S3 storage classes in DataSync </a> in the <i>DataSync User Guide</i>.
      * </p>
      * <p>
-     * Default value: PRESERVE.
+     * Default value: <code>PRESERVE</code>
      * </p>
      * <p>
-     * PRESERVE: Ignore such destination files (recommended).
+     * <code>PRESERVE</code>: Ignore such destination files (recommended).
      * </p>
      * <p>
-     * REMOVE: Delete destination files that aren’t present in the source.
+     * <code>REMOVE</code>: Delete destination files that aren’t present in the source.
      * </p>
      * 
      * @param preserveDeletedFiles
@@ -1543,13 +1618,13 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      *        >Considerations when working with Amazon S3 storage classes in DataSync </a> in the <i>DataSync User
      *        Guide</i>.</p>
      *        <p>
-     *        Default value: PRESERVE.
+     *        Default value: <code>PRESERVE</code>
      *        </p>
      *        <p>
-     *        PRESERVE: Ignore such destination files (recommended).
+     *        <code>PRESERVE</code>: Ignore such destination files (recommended).
      *        </p>
      *        <p>
-     *        REMOVE: Delete destination files that aren’t present in the source.
+     *        <code>REMOVE</code>: Delete destination files that aren’t present in the source.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PreserveDeletedFiles
      */
@@ -1572,13 +1647,14 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * </note>
      * <p>
-     * Default value: NONE.
+     * Default value: <code>NONE</code>
      * </p>
      * <p>
-     * NONE: Ignore special devices (recommended).
+     * <code>NONE</code>: Ignore special devices (recommended).
      * </p>
      * <p>
-     * PRESERVE: Preserve character and block device metadata. This option isn't currently supported for Amazon EFS.
+     * <code>PRESERVE</code>: Preserve character and block device metadata. This option isn't currently supported for
+     * Amazon EFS.
      * </p>
      * 
      * @param preserveDevices
@@ -1591,14 +1667,14 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      *        </p>
      *        </note>
      *        <p>
-     *        Default value: NONE.
+     *        Default value: <code>NONE</code>
      *        </p>
      *        <p>
-     *        NONE: Ignore special devices (recommended).
+     *        <code>NONE</code>: Ignore special devices (recommended).
      *        </p>
      *        <p>
-     *        PRESERVE: Preserve character and block device metadata. This option isn't currently supported for Amazon
-     *        EFS.
+     *        <code>PRESERVE</code>: Preserve character and block device metadata. This option isn't currently supported
+     *        for Amazon EFS.
      * @see PreserveDevices
      */
 
@@ -1619,13 +1695,14 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * </note>
      * <p>
-     * Default value: NONE.
+     * Default value: <code>NONE</code>
      * </p>
      * <p>
-     * NONE: Ignore special devices (recommended).
+     * <code>NONE</code>: Ignore special devices (recommended).
      * </p>
      * <p>
-     * PRESERVE: Preserve character and block device metadata. This option isn't currently supported for Amazon EFS.
+     * <code>PRESERVE</code>: Preserve character and block device metadata. This option isn't currently supported for
+     * Amazon EFS.
      * </p>
      * 
      * @return A value that determines whether DataSync should preserve the metadata of block and character devices in
@@ -1637,14 +1714,14 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      *         </p>
      *         </note>
      *         <p>
-     *         Default value: NONE.
+     *         Default value: <code>NONE</code>
      *         </p>
      *         <p>
-     *         NONE: Ignore special devices (recommended).
+     *         <code>NONE</code>: Ignore special devices (recommended).
      *         </p>
      *         <p>
-     *         PRESERVE: Preserve character and block device metadata. This option isn't currently supported for Amazon
-     *         EFS.
+     *         <code>PRESERVE</code>: Preserve character and block device metadata. This option isn't currently
+     *         supported for Amazon EFS.
      * @see PreserveDevices
      */
 
@@ -1665,13 +1742,14 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * </note>
      * <p>
-     * Default value: NONE.
+     * Default value: <code>NONE</code>
      * </p>
      * <p>
-     * NONE: Ignore special devices (recommended).
+     * <code>NONE</code>: Ignore special devices (recommended).
      * </p>
      * <p>
-     * PRESERVE: Preserve character and block device metadata. This option isn't currently supported for Amazon EFS.
+     * <code>PRESERVE</code>: Preserve character and block device metadata. This option isn't currently supported for
+     * Amazon EFS.
      * </p>
      * 
      * @param preserveDevices
@@ -1684,14 +1762,14 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      *        </p>
      *        </note>
      *        <p>
-     *        Default value: NONE.
+     *        Default value: <code>NONE</code>
      *        </p>
      *        <p>
-     *        NONE: Ignore special devices (recommended).
+     *        <code>NONE</code>: Ignore special devices (recommended).
      *        </p>
      *        <p>
-     *        PRESERVE: Preserve character and block device metadata. This option isn't currently supported for Amazon
-     *        EFS.
+     *        <code>PRESERVE</code>: Preserve character and block device metadata. This option isn't currently supported
+     *        for Amazon EFS.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PreserveDevices
      */
@@ -1714,13 +1792,14 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * </note>
      * <p>
-     * Default value: NONE.
+     * Default value: <code>NONE</code>
      * </p>
      * <p>
-     * NONE: Ignore special devices (recommended).
+     * <code>NONE</code>: Ignore special devices (recommended).
      * </p>
      * <p>
-     * PRESERVE: Preserve character and block device metadata. This option isn't currently supported for Amazon EFS.
+     * <code>PRESERVE</code>: Preserve character and block device metadata. This option isn't currently supported for
+     * Amazon EFS.
      * </p>
      * 
      * @param preserveDevices
@@ -1733,14 +1812,14 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      *        </p>
      *        </note>
      *        <p>
-     *        Default value: NONE.
+     *        Default value: <code>NONE</code>
      *        </p>
      *        <p>
-     *        NONE: Ignore special devices (recommended).
+     *        <code>NONE</code>: Ignore special devices (recommended).
      *        </p>
      *        <p>
-     *        PRESERVE: Preserve character and block device metadata. This option isn't currently supported for Amazon
-     *        EFS.
+     *        <code>PRESERVE</code>: Preserve character and block device metadata. This option isn't currently supported
+     *        for Amazon EFS.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PreserveDevices
      */
@@ -1753,19 +1832,21 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * A value that determines which users or groups can access a file for a specific purpose such as reading, writing,
-     * or execution of the file. This option should only be set for NFS, EFS, and S3 locations. For more information
-     * about what metadata is copied by DataSync, see <a
-     * href="https://docs.aws.amazon.com/datasync/latest/userguide/special-files.html#metadata-copied">Metadata Copied
+     * or execution of the file.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/datasync/latest/userguide/special-files.html#metadata-copied">Metadata copied
      * by DataSync</a>.
      * </p>
      * <p>
-     * Default value: PRESERVE.
+     * Default value: <code>PRESERVE</code>
      * </p>
      * <p>
-     * PRESERVE: Preserve POSIX-style permissions (recommended).
+     * <code>PRESERVE</code>: Preserve POSIX-style permissions (recommended).
      * </p>
      * <p>
-     * NONE: Ignore permissions.
+     * <code>NONE</code>: Ignore permissions.
      * </p>
      * <note>
      * <p>
@@ -1775,18 +1856,20 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      * 
      * @param posixPermissions
      *        A value that determines which users or groups can access a file for a specific purpose such as reading,
-     *        writing, or execution of the file. This option should only be set for NFS, EFS, and S3 locations. For more
-     *        information about what metadata is copied by DataSync, see <a
+     *        writing, or execution of the file.</p>
+     *        <p>
+     *        For more information, see <a
      *        href="https://docs.aws.amazon.com/datasync/latest/userguide/special-files.html#metadata-copied">Metadata
-     *        Copied by DataSync</a>. </p>
-     *        <p>
-     *        Default value: PRESERVE.
+     *        copied by DataSync</a>.
      *        </p>
      *        <p>
-     *        PRESERVE: Preserve POSIX-style permissions (recommended).
+     *        Default value: <code>PRESERVE</code>
      *        </p>
      *        <p>
-     *        NONE: Ignore permissions.
+     *        <code>PRESERVE</code>: Preserve POSIX-style permissions (recommended).
+     *        </p>
+     *        <p>
+     *        <code>NONE</code>: Ignore permissions.
      *        </p>
      *        <note>
      *        <p>
@@ -1802,19 +1885,21 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * A value that determines which users or groups can access a file for a specific purpose such as reading, writing,
-     * or execution of the file. This option should only be set for NFS, EFS, and S3 locations. For more information
-     * about what metadata is copied by DataSync, see <a
-     * href="https://docs.aws.amazon.com/datasync/latest/userguide/special-files.html#metadata-copied">Metadata Copied
+     * or execution of the file.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/datasync/latest/userguide/special-files.html#metadata-copied">Metadata copied
      * by DataSync</a>.
      * </p>
      * <p>
-     * Default value: PRESERVE.
+     * Default value: <code>PRESERVE</code>
      * </p>
      * <p>
-     * PRESERVE: Preserve POSIX-style permissions (recommended).
+     * <code>PRESERVE</code>: Preserve POSIX-style permissions (recommended).
      * </p>
      * <p>
-     * NONE: Ignore permissions.
+     * <code>NONE</code>: Ignore permissions.
      * </p>
      * <note>
      * <p>
@@ -1823,18 +1908,20 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      * </note>
      * 
      * @return A value that determines which users or groups can access a file for a specific purpose such as reading,
-     *         writing, or execution of the file. This option should only be set for NFS, EFS, and S3 locations. For
-     *         more information about what metadata is copied by DataSync, see <a
+     *         writing, or execution of the file.</p>
+     *         <p>
+     *         For more information, see <a
      *         href="https://docs.aws.amazon.com/datasync/latest/userguide/special-files.html#metadata-copied">Metadata
-     *         Copied by DataSync</a>. </p>
-     *         <p>
-     *         Default value: PRESERVE.
+     *         copied by DataSync</a>.
      *         </p>
      *         <p>
-     *         PRESERVE: Preserve POSIX-style permissions (recommended).
+     *         Default value: <code>PRESERVE</code>
      *         </p>
      *         <p>
-     *         NONE: Ignore permissions.
+     *         <code>PRESERVE</code>: Preserve POSIX-style permissions (recommended).
+     *         </p>
+     *         <p>
+     *         <code>NONE</code>: Ignore permissions.
      *         </p>
      *         <note>
      *         <p>
@@ -1850,19 +1937,21 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * A value that determines which users or groups can access a file for a specific purpose such as reading, writing,
-     * or execution of the file. This option should only be set for NFS, EFS, and S3 locations. For more information
-     * about what metadata is copied by DataSync, see <a
-     * href="https://docs.aws.amazon.com/datasync/latest/userguide/special-files.html#metadata-copied">Metadata Copied
+     * or execution of the file.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/datasync/latest/userguide/special-files.html#metadata-copied">Metadata copied
      * by DataSync</a>.
      * </p>
      * <p>
-     * Default value: PRESERVE.
+     * Default value: <code>PRESERVE</code>
      * </p>
      * <p>
-     * PRESERVE: Preserve POSIX-style permissions (recommended).
+     * <code>PRESERVE</code>: Preserve POSIX-style permissions (recommended).
      * </p>
      * <p>
-     * NONE: Ignore permissions.
+     * <code>NONE</code>: Ignore permissions.
      * </p>
      * <note>
      * <p>
@@ -1872,18 +1961,20 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      * 
      * @param posixPermissions
      *        A value that determines which users or groups can access a file for a specific purpose such as reading,
-     *        writing, or execution of the file. This option should only be set for NFS, EFS, and S3 locations. For more
-     *        information about what metadata is copied by DataSync, see <a
+     *        writing, or execution of the file.</p>
+     *        <p>
+     *        For more information, see <a
      *        href="https://docs.aws.amazon.com/datasync/latest/userguide/special-files.html#metadata-copied">Metadata
-     *        Copied by DataSync</a>. </p>
-     *        <p>
-     *        Default value: PRESERVE.
+     *        copied by DataSync</a>.
      *        </p>
      *        <p>
-     *        PRESERVE: Preserve POSIX-style permissions (recommended).
+     *        Default value: <code>PRESERVE</code>
      *        </p>
      *        <p>
-     *        NONE: Ignore permissions.
+     *        <code>PRESERVE</code>: Preserve POSIX-style permissions (recommended).
+     *        </p>
+     *        <p>
+     *        <code>NONE</code>: Ignore permissions.
      *        </p>
      *        <note>
      *        <p>
@@ -1901,19 +1992,21 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * A value that determines which users or groups can access a file for a specific purpose such as reading, writing,
-     * or execution of the file. This option should only be set for NFS, EFS, and S3 locations. For more information
-     * about what metadata is copied by DataSync, see <a
-     * href="https://docs.aws.amazon.com/datasync/latest/userguide/special-files.html#metadata-copied">Metadata Copied
+     * or execution of the file.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/datasync/latest/userguide/special-files.html#metadata-copied">Metadata copied
      * by DataSync</a>.
      * </p>
      * <p>
-     * Default value: PRESERVE.
+     * Default value: <code>PRESERVE</code>
      * </p>
      * <p>
-     * PRESERVE: Preserve POSIX-style permissions (recommended).
+     * <code>PRESERVE</code>: Preserve POSIX-style permissions (recommended).
      * </p>
      * <p>
-     * NONE: Ignore permissions.
+     * <code>NONE</code>: Ignore permissions.
      * </p>
      * <note>
      * <p>
@@ -1923,18 +2016,20 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      * 
      * @param posixPermissions
      *        A value that determines which users or groups can access a file for a specific purpose such as reading,
-     *        writing, or execution of the file. This option should only be set for NFS, EFS, and S3 locations. For more
-     *        information about what metadata is copied by DataSync, see <a
+     *        writing, or execution of the file.</p>
+     *        <p>
+     *        For more information, see <a
      *        href="https://docs.aws.amazon.com/datasync/latest/userguide/special-files.html#metadata-copied">Metadata
-     *        Copied by DataSync</a>. </p>
-     *        <p>
-     *        Default value: PRESERVE.
+     *        copied by DataSync</a>.
      *        </p>
      *        <p>
-     *        PRESERVE: Preserve POSIX-style permissions (recommended).
+     *        Default value: <code>PRESERVE</code>
      *        </p>
      *        <p>
-     *        NONE: Ignore permissions.
+     *        <code>PRESERVE</code>: Preserve POSIX-style permissions (recommended).
+     *        </p>
+     *        <p>
+     *        <code>NONE</code>: Ignore permissions.
      *        </p>
      *        <note>
      *        <p>
@@ -2208,12 +2303,12 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      * destination location.
      * </p>
      * <p>
-     * CHANGED: DataSync copies only data or metadata that is new or different content from the source location to the
-     * destination location.
+     * <code>CHANGED</code>: DataSync copies only data or metadata that is new or different content from the source
+     * location to the destination location.
      * </p>
      * <p>
-     * ALL: DataSync copies all source location content to the destination, without comparing to existing content on the
-     * destination.
+     * <code>ALL</code>: DataSync copies all source location content to the destination, without comparing to existing
+     * content on the destination.
      * </p>
      * 
      * @param transferMode
@@ -2221,12 +2316,12 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      *        source and the destination location, or whether DataSync transfers all the content from the source,
      *        without comparing to the destination location. </p>
      *        <p>
-     *        CHANGED: DataSync copies only data or metadata that is new or different content from the source location
-     *        to the destination location.
+     *        <code>CHANGED</code>: DataSync copies only data or metadata that is new or different content from the
+     *        source location to the destination location.
      *        </p>
      *        <p>
-     *        ALL: DataSync copies all source location content to the destination, without comparing to existing content
-     *        on the destination.
+     *        <code>ALL</code>: DataSync copies all source location content to the destination, without comparing to
+     *        existing content on the destination.
      * @see TransferMode
      */
 
@@ -2241,24 +2336,24 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      * destination location.
      * </p>
      * <p>
-     * CHANGED: DataSync copies only data or metadata that is new or different content from the source location to the
-     * destination location.
+     * <code>CHANGED</code>: DataSync copies only data or metadata that is new or different content from the source
+     * location to the destination location.
      * </p>
      * <p>
-     * ALL: DataSync copies all source location content to the destination, without comparing to existing content on the
-     * destination.
+     * <code>ALL</code>: DataSync copies all source location content to the destination, without comparing to existing
+     * content on the destination.
      * </p>
      * 
      * @return A value that determines whether DataSync transfers only the data and metadata that differ between the
      *         source and the destination location, or whether DataSync transfers all the content from the source,
      *         without comparing to the destination location. </p>
      *         <p>
-     *         CHANGED: DataSync copies only data or metadata that is new or different content from the source location
-     *         to the destination location.
+     *         <code>CHANGED</code>: DataSync copies only data or metadata that is new or different content from the
+     *         source location to the destination location.
      *         </p>
      *         <p>
-     *         ALL: DataSync copies all source location content to the destination, without comparing to existing
-     *         content on the destination.
+     *         <code>ALL</code>: DataSync copies all source location content to the destination, without comparing to
+     *         existing content on the destination.
      * @see TransferMode
      */
 
@@ -2273,12 +2368,12 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      * destination location.
      * </p>
      * <p>
-     * CHANGED: DataSync copies only data or metadata that is new or different content from the source location to the
-     * destination location.
+     * <code>CHANGED</code>: DataSync copies only data or metadata that is new or different content from the source
+     * location to the destination location.
      * </p>
      * <p>
-     * ALL: DataSync copies all source location content to the destination, without comparing to existing content on the
-     * destination.
+     * <code>ALL</code>: DataSync copies all source location content to the destination, without comparing to existing
+     * content on the destination.
      * </p>
      * 
      * @param transferMode
@@ -2286,12 +2381,12 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      *        source and the destination location, or whether DataSync transfers all the content from the source,
      *        without comparing to the destination location. </p>
      *        <p>
-     *        CHANGED: DataSync copies only data or metadata that is new or different content from the source location
-     *        to the destination location.
+     *        <code>CHANGED</code>: DataSync copies only data or metadata that is new or different content from the
+     *        source location to the destination location.
      *        </p>
      *        <p>
-     *        ALL: DataSync copies all source location content to the destination, without comparing to existing content
-     *        on the destination.
+     *        <code>ALL</code>: DataSync copies all source location content to the destination, without comparing to
+     *        existing content on the destination.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see TransferMode
      */
@@ -2308,12 +2403,12 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      * destination location.
      * </p>
      * <p>
-     * CHANGED: DataSync copies only data or metadata that is new or different content from the source location to the
-     * destination location.
+     * <code>CHANGED</code>: DataSync copies only data or metadata that is new or different content from the source
+     * location to the destination location.
      * </p>
      * <p>
-     * ALL: DataSync copies all source location content to the destination, without comparing to existing content on the
-     * destination.
+     * <code>ALL</code>: DataSync copies all source location content to the destination, without comparing to existing
+     * content on the destination.
      * </p>
      * 
      * @param transferMode
@@ -2321,12 +2416,12 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      *        source and the destination location, or whether DataSync transfers all the content from the source,
      *        without comparing to the destination location. </p>
      *        <p>
-     *        CHANGED: DataSync copies only data or metadata that is new or different content from the source location
-     *        to the destination location.
+     *        <code>CHANGED</code>: DataSync copies only data or metadata that is new or different content from the
+     *        source location to the destination location.
      *        </p>
      *        <p>
-     *        ALL: DataSync copies all source location content to the destination, without comparing to existing content
-     *        on the destination.
+     *        <code>ALL</code>: DataSync copies all source location content to the destination, without comparing to
+     *        existing content on the destination.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see TransferMode
      */
@@ -2348,10 +2443,10 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      * and Special Files</a>.
      * </p>
      * <p>
-     * Default value: OWNER_DACL.
+     * Default value: <code>OWNER_DACL</code>
      * </p>
      * <p>
-     * <b>OWNER_DACL</b>: For each copied object, DataSync copies the following metadata:
+     * <code>OWNER_DACL</code>: For each copied object, DataSync copies the following metadata:
      * </p>
      * <ul>
      * <li>
@@ -2370,7 +2465,7 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      * administrators to log attempts to access a secured object.
      * </p>
      * <p>
-     * <b>OWNER_DACL_SACL</b>: For each copied object, DataSync copies the following metadata:
+     * <code>OWNER_DACL_SACL</code>: For each copied object, DataSync copies the following metadata:
      * </p>
      * <ul>
      * <li>
@@ -2396,9 +2491,9 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      * metadata, see <a href="create-smb-location.html#SMBuser">user</a>.
      * </p>
      * <p>
-     * <b>NONE</b>: None of the SMB security descriptor components are copied. Destination objects are owned by the user
-     * that was provided for accessing the destination location. DACLs and SACLs are set based on the destination
-     * server’s configuration.
+     * <code>NONE</code>: None of the SMB security descriptor components are copied. Destination objects are owned by
+     * the user that was provided for accessing the destination location. DACLs and SACLs are set based on the
+     * destination server’s configuration.
      * </p>
      * 
      * @param securityDescriptorCopyFlags
@@ -2411,10 +2506,10 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      *        DataSync Handles Metadata and Special Files</a>.
      *        </p>
      *        <p>
-     *        Default value: OWNER_DACL.
+     *        Default value: <code>OWNER_DACL</code>
      *        </p>
      *        <p>
-     *        <b>OWNER_DACL</b>: For each copied object, DataSync copies the following metadata:
+     *        <code>OWNER_DACL</code>: For each copied object, DataSync copies the following metadata:
      *        </p>
      *        <ul>
      *        <li>
@@ -2433,7 +2528,7 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      *        used by administrators to log attempts to access a secured object.
      *        </p>
      *        <p>
-     *        <b>OWNER_DACL_SACL</b>: For each copied object, DataSync copies the following metadata:
+     *        <code>OWNER_DACL_SACL</code>: For each copied object, DataSync copies the following metadata:
      *        </p>
      *        <ul>
      *        <li>
@@ -2459,9 +2554,9 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      *        folders, and metadata, see <a href="create-smb-location.html#SMBuser">user</a>.
      *        </p>
      *        <p>
-     *        <b>NONE</b>: None of the SMB security descriptor components are copied. Destination objects are owned by
-     *        the user that was provided for accessing the destination location. DACLs and SACLs are set based on the
-     *        destination server’s configuration.
+     *        <code>NONE</code>: None of the SMB security descriptor components are copied. Destination objects are
+     *        owned by the user that was provided for accessing the destination location. DACLs and SACLs are set based
+     *        on the destination server’s configuration.
      * @see SmbSecurityDescriptorCopyFlags
      */
 
@@ -2481,10 +2576,10 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      * and Special Files</a>.
      * </p>
      * <p>
-     * Default value: OWNER_DACL.
+     * Default value: <code>OWNER_DACL</code>
      * </p>
      * <p>
-     * <b>OWNER_DACL</b>: For each copied object, DataSync copies the following metadata:
+     * <code>OWNER_DACL</code>: For each copied object, DataSync copies the following metadata:
      * </p>
      * <ul>
      * <li>
@@ -2503,7 +2598,7 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      * administrators to log attempts to access a secured object.
      * </p>
      * <p>
-     * <b>OWNER_DACL_SACL</b>: For each copied object, DataSync copies the following metadata:
+     * <code>OWNER_DACL_SACL</code>: For each copied object, DataSync copies the following metadata:
      * </p>
      * <ul>
      * <li>
@@ -2529,9 +2624,9 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      * metadata, see <a href="create-smb-location.html#SMBuser">user</a>.
      * </p>
      * <p>
-     * <b>NONE</b>: None of the SMB security descriptor components are copied. Destination objects are owned by the user
-     * that was provided for accessing the destination location. DACLs and SACLs are set based on the destination
-     * server’s configuration.
+     * <code>NONE</code>: None of the SMB security descriptor components are copied. Destination objects are owned by
+     * the user that was provided for accessing the destination location. DACLs and SACLs are set based on the
+     * destination server’s configuration.
      * </p>
      * 
      * @return A value that determines which components of the SMB security descriptor are copied from source to
@@ -2543,10 +2638,10 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      *         DataSync Handles Metadata and Special Files</a>.
      *         </p>
      *         <p>
-     *         Default value: OWNER_DACL.
+     *         Default value: <code>OWNER_DACL</code>
      *         </p>
      *         <p>
-     *         <b>OWNER_DACL</b>: For each copied object, DataSync copies the following metadata:
+     *         <code>OWNER_DACL</code>: For each copied object, DataSync copies the following metadata:
      *         </p>
      *         <ul>
      *         <li>
@@ -2565,7 +2660,7 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      *         used by administrators to log attempts to access a secured object.
      *         </p>
      *         <p>
-     *         <b>OWNER_DACL_SACL</b>: For each copied object, DataSync copies the following metadata:
+     *         <code>OWNER_DACL_SACL</code>: For each copied object, DataSync copies the following metadata:
      *         </p>
      *         <ul>
      *         <li>
@@ -2591,9 +2686,9 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      *         folders, and metadata, see <a href="create-smb-location.html#SMBuser">user</a>.
      *         </p>
      *         <p>
-     *         <b>NONE</b>: None of the SMB security descriptor components are copied. Destination objects are owned by
-     *         the user that was provided for accessing the destination location. DACLs and SACLs are set based on the
-     *         destination server’s configuration.
+     *         <code>NONE</code>: None of the SMB security descriptor components are copied. Destination objects are
+     *         owned by the user that was provided for accessing the destination location. DACLs and SACLs are set based
+     *         on the destination server’s configuration.
      * @see SmbSecurityDescriptorCopyFlags
      */
 
@@ -2613,10 +2708,10 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      * and Special Files</a>.
      * </p>
      * <p>
-     * Default value: OWNER_DACL.
+     * Default value: <code>OWNER_DACL</code>
      * </p>
      * <p>
-     * <b>OWNER_DACL</b>: For each copied object, DataSync copies the following metadata:
+     * <code>OWNER_DACL</code>: For each copied object, DataSync copies the following metadata:
      * </p>
      * <ul>
      * <li>
@@ -2635,7 +2730,7 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      * administrators to log attempts to access a secured object.
      * </p>
      * <p>
-     * <b>OWNER_DACL_SACL</b>: For each copied object, DataSync copies the following metadata:
+     * <code>OWNER_DACL_SACL</code>: For each copied object, DataSync copies the following metadata:
      * </p>
      * <ul>
      * <li>
@@ -2661,9 +2756,9 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      * metadata, see <a href="create-smb-location.html#SMBuser">user</a>.
      * </p>
      * <p>
-     * <b>NONE</b>: None of the SMB security descriptor components are copied. Destination objects are owned by the user
-     * that was provided for accessing the destination location. DACLs and SACLs are set based on the destination
-     * server’s configuration.
+     * <code>NONE</code>: None of the SMB security descriptor components are copied. Destination objects are owned by
+     * the user that was provided for accessing the destination location. DACLs and SACLs are set based on the
+     * destination server’s configuration.
      * </p>
      * 
      * @param securityDescriptorCopyFlags
@@ -2676,10 +2771,10 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      *        DataSync Handles Metadata and Special Files</a>.
      *        </p>
      *        <p>
-     *        Default value: OWNER_DACL.
+     *        Default value: <code>OWNER_DACL</code>
      *        </p>
      *        <p>
-     *        <b>OWNER_DACL</b>: For each copied object, DataSync copies the following metadata:
+     *        <code>OWNER_DACL</code>: For each copied object, DataSync copies the following metadata:
      *        </p>
      *        <ul>
      *        <li>
@@ -2698,7 +2793,7 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      *        used by administrators to log attempts to access a secured object.
      *        </p>
      *        <p>
-     *        <b>OWNER_DACL_SACL</b>: For each copied object, DataSync copies the following metadata:
+     *        <code>OWNER_DACL_SACL</code>: For each copied object, DataSync copies the following metadata:
      *        </p>
      *        <ul>
      *        <li>
@@ -2724,9 +2819,9 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      *        folders, and metadata, see <a href="create-smb-location.html#SMBuser">user</a>.
      *        </p>
      *        <p>
-     *        <b>NONE</b>: None of the SMB security descriptor components are copied. Destination objects are owned by
-     *        the user that was provided for accessing the destination location. DACLs and SACLs are set based on the
-     *        destination server’s configuration.
+     *        <code>NONE</code>: None of the SMB security descriptor components are copied. Destination objects are
+     *        owned by the user that was provided for accessing the destination location. DACLs and SACLs are set based
+     *        on the destination server’s configuration.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see SmbSecurityDescriptorCopyFlags
      */
@@ -2748,10 +2843,10 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      * and Special Files</a>.
      * </p>
      * <p>
-     * Default value: OWNER_DACL.
+     * Default value: <code>OWNER_DACL</code>
      * </p>
      * <p>
-     * <b>OWNER_DACL</b>: For each copied object, DataSync copies the following metadata:
+     * <code>OWNER_DACL</code>: For each copied object, DataSync copies the following metadata:
      * </p>
      * <ul>
      * <li>
@@ -2770,7 +2865,7 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      * administrators to log attempts to access a secured object.
      * </p>
      * <p>
-     * <b>OWNER_DACL_SACL</b>: For each copied object, DataSync copies the following metadata:
+     * <code>OWNER_DACL_SACL</code>: For each copied object, DataSync copies the following metadata:
      * </p>
      * <ul>
      * <li>
@@ -2796,9 +2891,9 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      * metadata, see <a href="create-smb-location.html#SMBuser">user</a>.
      * </p>
      * <p>
-     * <b>NONE</b>: None of the SMB security descriptor components are copied. Destination objects are owned by the user
-     * that was provided for accessing the destination location. DACLs and SACLs are set based on the destination
-     * server’s configuration.
+     * <code>NONE</code>: None of the SMB security descriptor components are copied. Destination objects are owned by
+     * the user that was provided for accessing the destination location. DACLs and SACLs are set based on the
+     * destination server’s configuration.
      * </p>
      * 
      * @param securityDescriptorCopyFlags
@@ -2811,10 +2906,10 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      *        DataSync Handles Metadata and Special Files</a>.
      *        </p>
      *        <p>
-     *        Default value: OWNER_DACL.
+     *        Default value: <code>OWNER_DACL</code>
      *        </p>
      *        <p>
-     *        <b>OWNER_DACL</b>: For each copied object, DataSync copies the following metadata:
+     *        <code>OWNER_DACL</code>: For each copied object, DataSync copies the following metadata:
      *        </p>
      *        <ul>
      *        <li>
@@ -2833,7 +2928,7 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      *        used by administrators to log attempts to access a secured object.
      *        </p>
      *        <p>
-     *        <b>OWNER_DACL_SACL</b>: For each copied object, DataSync copies the following metadata:
+     *        <code>OWNER_DACL_SACL</code>: For each copied object, DataSync copies the following metadata:
      *        </p>
      *        <ul>
      *        <li>
@@ -2859,9 +2954,9 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      *        folders, and metadata, see <a href="create-smb-location.html#SMBuser">user</a>.
      *        </p>
      *        <p>
-     *        <b>NONE</b>: None of the SMB security descriptor components are copied. Destination objects are owned by
-     *        the user that was provided for accessing the destination location. DACLs and SACLs are set based on the
-     *        destination server’s configuration.
+     *        <code>NONE</code>: None of the SMB security descriptor components are copied. Destination objects are
+     *        owned by the user that was provided for accessing the destination location. DACLs and SACLs are set based
+     *        on the destination server’s configuration.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see SmbSecurityDescriptorCopyFlags
      */

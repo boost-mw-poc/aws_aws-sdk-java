@@ -77,8 +77,8 @@ public class CreateLocationEfsRequest extends com.amazonaws.AmazonWebServiceRequ
     private String fileSystemAccessRoleArn;
     /**
      * <p>
-     * Specifies whether you want DataSync to use TLS encryption when transferring data to or from your Amazon EFS file
-     * system.
+     * Specifies whether you want DataSync to use Transport Layer Security (TLS) 1.2 encryption when it copies data to
+     * or from the Amazon EFS file system.
      * </p>
      * <p>
      * If you specify an access point using <code>AccessPointArn</code> or an IAM role using
@@ -423,8 +423,8 @@ public class CreateLocationEfsRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * Specifies whether you want DataSync to use TLS encryption when transferring data to or from your Amazon EFS file
-     * system.
+     * Specifies whether you want DataSync to use Transport Layer Security (TLS) 1.2 encryption when it copies data to
+     * or from the Amazon EFS file system.
      * </p>
      * <p>
      * If you specify an access point using <code>AccessPointArn</code> or an IAM role using
@@ -432,8 +432,8 @@ public class CreateLocationEfsRequest extends com.amazonaws.AmazonWebServiceRequ
      * </p>
      * 
      * @param inTransitEncryption
-     *        Specifies whether you want DataSync to use TLS encryption when transferring data to or from your Amazon
-     *        EFS file system.</p>
+     *        Specifies whether you want DataSync to use Transport Layer Security (TLS) 1.2 encryption when it copies
+     *        data to or from the Amazon EFS file system.</p>
      *        <p>
      *        If you specify an access point using <code>AccessPointArn</code> or an IAM role using
      *        <code>FileSystemAccessRoleArn</code>, you must set this parameter to <code>TLS1_2</code>.
@@ -446,16 +446,16 @@ public class CreateLocationEfsRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * Specifies whether you want DataSync to use TLS encryption when transferring data to or from your Amazon EFS file
-     * system.
+     * Specifies whether you want DataSync to use Transport Layer Security (TLS) 1.2 encryption when it copies data to
+     * or from the Amazon EFS file system.
      * </p>
      * <p>
      * If you specify an access point using <code>AccessPointArn</code> or an IAM role using
      * <code>FileSystemAccessRoleArn</code>, you must set this parameter to <code>TLS1_2</code>.
      * </p>
      * 
-     * @return Specifies whether you want DataSync to use TLS encryption when transferring data to or from your Amazon
-     *         EFS file system.</p>
+     * @return Specifies whether you want DataSync to use Transport Layer Security (TLS) 1.2 encryption when it copies
+     *         data to or from the Amazon EFS file system.</p>
      *         <p>
      *         If you specify an access point using <code>AccessPointArn</code> or an IAM role using
      *         <code>FileSystemAccessRoleArn</code>, you must set this parameter to <code>TLS1_2</code>.
@@ -468,8 +468,8 @@ public class CreateLocationEfsRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * Specifies whether you want DataSync to use TLS encryption when transferring data to or from your Amazon EFS file
-     * system.
+     * Specifies whether you want DataSync to use Transport Layer Security (TLS) 1.2 encryption when it copies data to
+     * or from the Amazon EFS file system.
      * </p>
      * <p>
      * If you specify an access point using <code>AccessPointArn</code> or an IAM role using
@@ -477,8 +477,8 @@ public class CreateLocationEfsRequest extends com.amazonaws.AmazonWebServiceRequ
      * </p>
      * 
      * @param inTransitEncryption
-     *        Specifies whether you want DataSync to use TLS encryption when transferring data to or from your Amazon
-     *        EFS file system.</p>
+     *        Specifies whether you want DataSync to use Transport Layer Security (TLS) 1.2 encryption when it copies
+     *        data to or from the Amazon EFS file system.</p>
      *        <p>
      *        If you specify an access point using <code>AccessPointArn</code> or an IAM role using
      *        <code>FileSystemAccessRoleArn</code>, you must set this parameter to <code>TLS1_2</code>.
@@ -493,8 +493,8 @@ public class CreateLocationEfsRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * Specifies whether you want DataSync to use TLS encryption when transferring data to or from your Amazon EFS file
-     * system.
+     * Specifies whether you want DataSync to use Transport Layer Security (TLS) 1.2 encryption when it copies data to
+     * or from the Amazon EFS file system.
      * </p>
      * <p>
      * If you specify an access point using <code>AccessPointArn</code> or an IAM role using
@@ -502,8 +502,8 @@ public class CreateLocationEfsRequest extends com.amazonaws.AmazonWebServiceRequ
      * </p>
      * 
      * @param inTransitEncryption
-     *        Specifies whether you want DataSync to use TLS encryption when transferring data to or from your Amazon
-     *        EFS file system.</p>
+     *        Specifies whether you want DataSync to use Transport Layer Security (TLS) 1.2 encryption when it copies
+     *        data to or from the Amazon EFS file system.</p>
      *        <p>
      *        If you specify an access point using <code>AccessPointArn</code> or an IAM role using
      *        <code>FileSystemAccessRoleArn</code>, you must set this parameter to <code>TLS1_2</code>.

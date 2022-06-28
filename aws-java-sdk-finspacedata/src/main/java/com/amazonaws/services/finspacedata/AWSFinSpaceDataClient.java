@@ -1108,6 +1108,87 @@ public class AWSFinSpaceDataClient extends AmazonWebServiceClient implements AWS
 
     /**
      * <p>
+     * Returns the credentials to access the external Dataview from an S3 location. To call this API:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * You must retrieve the programmatic credentials.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * You must be a member of a FinSpace user group, where the dataset that you want to access has
+     * <code>Read Dataset Data</code> permissions.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param getExternalDataViewAccessDetailsRequest
+     * @return Result of the GetExternalDataViewAccessDetails operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         One or more resources can't be found.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception or failure.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @sample AWSFinSpaceData.GetExternalDataViewAccessDetails
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/GetExternalDataViewAccessDetails"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetExternalDataViewAccessDetailsResult getExternalDataViewAccessDetails(GetExternalDataViewAccessDetailsRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetExternalDataViewAccessDetails(request);
+    }
+
+    @SdkInternalApi
+    final GetExternalDataViewAccessDetailsResult executeGetExternalDataViewAccessDetails(
+            GetExternalDataViewAccessDetailsRequest getExternalDataViewAccessDetailsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getExternalDataViewAccessDetailsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetExternalDataViewAccessDetailsRequest> request = null;
+        Response<GetExternalDataViewAccessDetailsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetExternalDataViewAccessDetailsRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(getExternalDataViewAccessDetailsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "finspace data");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetExternalDataViewAccessDetails");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetExternalDataViewAccessDetailsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new GetExternalDataViewAccessDetailsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Retrieves the details of a specific permission group.
      * </p>
      * 

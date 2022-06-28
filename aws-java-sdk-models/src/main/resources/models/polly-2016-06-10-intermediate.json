@@ -15980,6 +15980,18 @@
       }, {
         "name" : "Hannah",
         "value" : "Hannah"
+      }, {
+        "name" : "Arthur",
+        "value" : "Arthur"
+      }, {
+        "name" : "Daniel",
+        "value" : "Daniel"
+      }, {
+        "name" : "Liam",
+        "value" : "Liam"
+      }, {
+        "name" : "Pedro",
+        "value" : "Pedro"
       } ],
       "errorCode" : null,
       "fullyQualifiedName" : "com.amazonaws.services.polly.enum.VoiceId",

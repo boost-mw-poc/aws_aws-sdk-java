@@ -30,77 +30,73 @@ public class CreateLocationObjectStorageRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The name of the self-managed object storage server. This value is the IP address or Domain Name Service (DNS)
-     * name of the object storage server. An agent uses this hostname to mount the object storage server in a network.
+     * Specifies the domain name or IP address of the object storage server. A DataSync agent uses this hostname to
+     * mount the object storage server in a network.
      * </p>
      */
     private String serverHostname;
     /**
      * <p>
-     * The port that your self-managed object storage server accepts inbound network traffic on. The server port is set
-     * by default to TCP 80 (HTTP) or TCP 443 (HTTPS). You can specify a custom port if your self-managed object storage
-     * server requires one.
+     * Specifies the port that your object storage server accepts inbound network traffic on (for example, port 443).
      * </p>
      */
     private Integer serverPort;
     /**
      * <p>
-     * The protocol that the object storage server uses to communicate. Valid values are HTTP or HTTPS.
+     * Specifies the protocol that your object storage server uses to communicate.
      * </p>
      */
     private String serverProtocol;
     /**
      * <p>
-     * The subdirectory in the self-managed object storage server that is used to read data from.
+     * Specifies the object prefix for your object storage server. If this is a source location, DataSync only copies
+     * objects with this prefix. If this is a destination location, DataSync writes all objects with this prefix.
      * </p>
      */
     private String subdirectory;
     /**
      * <p>
-     * The bucket on the self-managed object storage server that is used to read data from.
+     * Specifies the name of the object storage bucket involved in the transfer.
      * </p>
      */
     private String bucketName;
     /**
      * <p>
-     * Optional. The access key is used if credentials are required to access the self-managed object storage server. If
-     * your object storage requires a user name and password to authenticate, use <code>AccessKey</code> and
-     * <code>SecretKey</code> to provide the user name and password, respectively.
+     * Specifies the access key (for example, a user name) if credentials are required to authenticate with the object
+     * storage server.
      * </p>
      */
     private String accessKey;
     /**
      * <p>
-     * Optional. The secret key is used if credentials are required to access the self-managed object storage server. If
-     * your object storage requires a user name and password to authenticate, use <code>AccessKey</code> and
-     * <code>SecretKey</code> to provide the user name and password, respectively.
+     * Specifies the secret key (for example, a password) if credentials are required to authenticate with the object
+     * storage server.
      * </p>
      */
     private String secretKey;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the agents associated with the self-managed object storage server location.
+     * Specifies the Amazon Resource Names (ARNs) of the DataSync agents that can securely connect with your location.
      * </p>
      */
     private java.util.List<String> agentArns;
     /**
      * <p>
-     * The key-value pair that represents the tag that you want to add to the location. The value can be an empty
-     * string. We recommend using tags to name your resources.
+     * Specifies the key-value pair that represents a tag that you want to add to the resource. Tags can help you
+     * manage, filter, and search for your resources. We recommend creating a name tag for your location.
      * </p>
      */
     private java.util.List<TagListEntry> tags;
 
     /**
      * <p>
-     * The name of the self-managed object storage server. This value is the IP address or Domain Name Service (DNS)
-     * name of the object storage server. An agent uses this hostname to mount the object storage server in a network.
+     * Specifies the domain name or IP address of the object storage server. A DataSync agent uses this hostname to
+     * mount the object storage server in a network.
      * </p>
      * 
      * @param serverHostname
-     *        The name of the self-managed object storage server. This value is the IP address or Domain Name Service
-     *        (DNS) name of the object storage server. An agent uses this hostname to mount the object storage server in
-     *        a network.
+     *        Specifies the domain name or IP address of the object storage server. A DataSync agent uses this hostname
+     *        to mount the object storage server in a network.
      */
 
     public void setServerHostname(String serverHostname) {
@@ -109,13 +105,12 @@ public class CreateLocationObjectStorageRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The name of the self-managed object storage server. This value is the IP address or Domain Name Service (DNS)
-     * name of the object storage server. An agent uses this hostname to mount the object storage server in a network.
+     * Specifies the domain name or IP address of the object storage server. A DataSync agent uses this hostname to
+     * mount the object storage server in a network.
      * </p>
      * 
-     * @return The name of the self-managed object storage server. This value is the IP address or Domain Name Service
-     *         (DNS) name of the object storage server. An agent uses this hostname to mount the object storage server
-     *         in a network.
+     * @return Specifies the domain name or IP address of the object storage server. A DataSync agent uses this hostname
+     *         to mount the object storage server in a network.
      */
 
     public String getServerHostname() {
@@ -124,14 +119,13 @@ public class CreateLocationObjectStorageRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The name of the self-managed object storage server. This value is the IP address or Domain Name Service (DNS)
-     * name of the object storage server. An agent uses this hostname to mount the object storage server in a network.
+     * Specifies the domain name or IP address of the object storage server. A DataSync agent uses this hostname to
+     * mount the object storage server in a network.
      * </p>
      * 
      * @param serverHostname
-     *        The name of the self-managed object storage server. This value is the IP address or Domain Name Service
-     *        (DNS) name of the object storage server. An agent uses this hostname to mount the object storage server in
-     *        a network.
+     *        Specifies the domain name or IP address of the object storage server. A DataSync agent uses this hostname
+     *        to mount the object storage server in a network.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -142,15 +136,12 @@ public class CreateLocationObjectStorageRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The port that your self-managed object storage server accepts inbound network traffic on. The server port is set
-     * by default to TCP 80 (HTTP) or TCP 443 (HTTPS). You can specify a custom port if your self-managed object storage
-     * server requires one.
+     * Specifies the port that your object storage server accepts inbound network traffic on (for example, port 443).
      * </p>
      * 
      * @param serverPort
-     *        The port that your self-managed object storage server accepts inbound network traffic on. The server port
-     *        is set by default to TCP 80 (HTTP) or TCP 443 (HTTPS). You can specify a custom port if your self-managed
-     *        object storage server requires one.
+     *        Specifies the port that your object storage server accepts inbound network traffic on (for example, port
+     *        443).
      */
 
     public void setServerPort(Integer serverPort) {
@@ -159,14 +150,11 @@ public class CreateLocationObjectStorageRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The port that your self-managed object storage server accepts inbound network traffic on. The server port is set
-     * by default to TCP 80 (HTTP) or TCP 443 (HTTPS). You can specify a custom port if your self-managed object storage
-     * server requires one.
+     * Specifies the port that your object storage server accepts inbound network traffic on (for example, port 443).
      * </p>
      * 
-     * @return The port that your self-managed object storage server accepts inbound network traffic on. The server port
-     *         is set by default to TCP 80 (HTTP) or TCP 443 (HTTPS). You can specify a custom port if your self-managed
-     *         object storage server requires one.
+     * @return Specifies the port that your object storage server accepts inbound network traffic on (for example, port
+     *         443).
      */
 
     public Integer getServerPort() {
@@ -175,15 +163,12 @@ public class CreateLocationObjectStorageRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The port that your self-managed object storage server accepts inbound network traffic on. The server port is set
-     * by default to TCP 80 (HTTP) or TCP 443 (HTTPS). You can specify a custom port if your self-managed object storage
-     * server requires one.
+     * Specifies the port that your object storage server accepts inbound network traffic on (for example, port 443).
      * </p>
      * 
      * @param serverPort
-     *        The port that your self-managed object storage server accepts inbound network traffic on. The server port
-     *        is set by default to TCP 80 (HTTP) or TCP 443 (HTTPS). You can specify a custom port if your self-managed
-     *        object storage server requires one.
+     *        Specifies the port that your object storage server accepts inbound network traffic on (for example, port
+     *        443).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -194,11 +179,11 @@ public class CreateLocationObjectStorageRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The protocol that the object storage server uses to communicate. Valid values are HTTP or HTTPS.
+     * Specifies the protocol that your object storage server uses to communicate.
      * </p>
      * 
      * @param serverProtocol
-     *        The protocol that the object storage server uses to communicate. Valid values are HTTP or HTTPS.
+     *        Specifies the protocol that your object storage server uses to communicate.
      * @see ObjectStorageServerProtocol
      */
 
@@ -208,10 +193,10 @@ public class CreateLocationObjectStorageRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The protocol that the object storage server uses to communicate. Valid values are HTTP or HTTPS.
+     * Specifies the protocol that your object storage server uses to communicate.
      * </p>
      * 
-     * @return The protocol that the object storage server uses to communicate. Valid values are HTTP or HTTPS.
+     * @return Specifies the protocol that your object storage server uses to communicate.
      * @see ObjectStorageServerProtocol
      */
 
@@ -221,11 +206,11 @@ public class CreateLocationObjectStorageRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The protocol that the object storage server uses to communicate. Valid values are HTTP or HTTPS.
+     * Specifies the protocol that your object storage server uses to communicate.
      * </p>
      * 
      * @param serverProtocol
-     *        The protocol that the object storage server uses to communicate. Valid values are HTTP or HTTPS.
+     *        Specifies the protocol that your object storage server uses to communicate.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ObjectStorageServerProtocol
      */
@@ -237,11 +222,11 @@ public class CreateLocationObjectStorageRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The protocol that the object storage server uses to communicate. Valid values are HTTP or HTTPS.
+     * Specifies the protocol that your object storage server uses to communicate.
      * </p>
      * 
      * @param serverProtocol
-     *        The protocol that the object storage server uses to communicate. Valid values are HTTP or HTTPS.
+     *        Specifies the protocol that your object storage server uses to communicate.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ObjectStorageServerProtocol
      */
@@ -253,11 +238,14 @@ public class CreateLocationObjectStorageRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The subdirectory in the self-managed object storage server that is used to read data from.
+     * Specifies the object prefix for your object storage server. If this is a source location, DataSync only copies
+     * objects with this prefix. If this is a destination location, DataSync writes all objects with this prefix.
      * </p>
      * 
      * @param subdirectory
-     *        The subdirectory in the self-managed object storage server that is used to read data from.
+     *        Specifies the object prefix for your object storage server. If this is a source location, DataSync only
+     *        copies objects with this prefix. If this is a destination location, DataSync writes all objects with this
+     *        prefix.
      */
 
     public void setSubdirectory(String subdirectory) {
@@ -266,10 +254,13 @@ public class CreateLocationObjectStorageRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The subdirectory in the self-managed object storage server that is used to read data from.
+     * Specifies the object prefix for your object storage server. If this is a source location, DataSync only copies
+     * objects with this prefix. If this is a destination location, DataSync writes all objects with this prefix.
      * </p>
      * 
-     * @return The subdirectory in the self-managed object storage server that is used to read data from.
+     * @return Specifies the object prefix for your object storage server. If this is a source location, DataSync only
+     *         copies objects with this prefix. If this is a destination location, DataSync writes all objects with this
+     *         prefix.
      */
 
     public String getSubdirectory() {
@@ -278,11 +269,14 @@ public class CreateLocationObjectStorageRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The subdirectory in the self-managed object storage server that is used to read data from.
+     * Specifies the object prefix for your object storage server. If this is a source location, DataSync only copies
+     * objects with this prefix. If this is a destination location, DataSync writes all objects with this prefix.
      * </p>
      * 
      * @param subdirectory
-     *        The subdirectory in the self-managed object storage server that is used to read data from.
+     *        Specifies the object prefix for your object storage server. If this is a source location, DataSync only
+     *        copies objects with this prefix. If this is a destination location, DataSync writes all objects with this
+     *        prefix.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -293,11 +287,11 @@ public class CreateLocationObjectStorageRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The bucket on the self-managed object storage server that is used to read data from.
+     * Specifies the name of the object storage bucket involved in the transfer.
      * </p>
      * 
      * @param bucketName
-     *        The bucket on the self-managed object storage server that is used to read data from.
+     *        Specifies the name of the object storage bucket involved in the transfer.
      */
 
     public void setBucketName(String bucketName) {
@@ -306,10 +300,10 @@ public class CreateLocationObjectStorageRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The bucket on the self-managed object storage server that is used to read data from.
+     * Specifies the name of the object storage bucket involved in the transfer.
      * </p>
      * 
-     * @return The bucket on the self-managed object storage server that is used to read data from.
+     * @return Specifies the name of the object storage bucket involved in the transfer.
      */
 
     public String getBucketName() {
@@ -318,11 +312,11 @@ public class CreateLocationObjectStorageRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The bucket on the self-managed object storage server that is used to read data from.
+     * Specifies the name of the object storage bucket involved in the transfer.
      * </p>
      * 
      * @param bucketName
-     *        The bucket on the self-managed object storage server that is used to read data from.
+     *        Specifies the name of the object storage bucket involved in the transfer.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -333,15 +327,13 @@ public class CreateLocationObjectStorageRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * Optional. The access key is used if credentials are required to access the self-managed object storage server. If
-     * your object storage requires a user name and password to authenticate, use <code>AccessKey</code> and
-     * <code>SecretKey</code> to provide the user name and password, respectively.
+     * Specifies the access key (for example, a user name) if credentials are required to authenticate with the object
+     * storage server.
      * </p>
      * 
      * @param accessKey
-     *        Optional. The access key is used if credentials are required to access the self-managed object storage
-     *        server. If your object storage requires a user name and password to authenticate, use
-     *        <code>AccessKey</code> and <code>SecretKey</code> to provide the user name and password, respectively.
+     *        Specifies the access key (for example, a user name) if credentials are required to authenticate with the
+     *        object storage server.
      */
 
     public void setAccessKey(String accessKey) {
@@ -350,14 +342,12 @@ public class CreateLocationObjectStorageRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * Optional. The access key is used if credentials are required to access the self-managed object storage server. If
-     * your object storage requires a user name and password to authenticate, use <code>AccessKey</code> and
-     * <code>SecretKey</code> to provide the user name and password, respectively.
+     * Specifies the access key (for example, a user name) if credentials are required to authenticate with the object
+     * storage server.
      * </p>
      * 
-     * @return Optional. The access key is used if credentials are required to access the self-managed object storage
-     *         server. If your object storage requires a user name and password to authenticate, use
-     *         <code>AccessKey</code> and <code>SecretKey</code> to provide the user name and password, respectively.
+     * @return Specifies the access key (for example, a user name) if credentials are required to authenticate with the
+     *         object storage server.
      */
 
     public String getAccessKey() {
@@ -366,15 +356,13 @@ public class CreateLocationObjectStorageRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * Optional. The access key is used if credentials are required to access the self-managed object storage server. If
-     * your object storage requires a user name and password to authenticate, use <code>AccessKey</code> and
-     * <code>SecretKey</code> to provide the user name and password, respectively.
+     * Specifies the access key (for example, a user name) if credentials are required to authenticate with the object
+     * storage server.
      * </p>
      * 
      * @param accessKey
-     *        Optional. The access key is used if credentials are required to access the self-managed object storage
-     *        server. If your object storage requires a user name and password to authenticate, use
-     *        <code>AccessKey</code> and <code>SecretKey</code> to provide the user name and password, respectively.
+     *        Specifies the access key (for example, a user name) if credentials are required to authenticate with the
+     *        object storage server.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -385,15 +373,13 @@ public class CreateLocationObjectStorageRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * Optional. The secret key is used if credentials are required to access the self-managed object storage server. If
-     * your object storage requires a user name and password to authenticate, use <code>AccessKey</code> and
-     * <code>SecretKey</code> to provide the user name and password, respectively.
+     * Specifies the secret key (for example, a password) if credentials are required to authenticate with the object
+     * storage server.
      * </p>
      * 
      * @param secretKey
-     *        Optional. The secret key is used if credentials are required to access the self-managed object storage
-     *        server. If your object storage requires a user name and password to authenticate, use
-     *        <code>AccessKey</code> and <code>SecretKey</code> to provide the user name and password, respectively.
+     *        Specifies the secret key (for example, a password) if credentials are required to authenticate with the
+     *        object storage server.
      */
 
     public void setSecretKey(String secretKey) {
@@ -402,14 +388,12 @@ public class CreateLocationObjectStorageRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * Optional. The secret key is used if credentials are required to access the self-managed object storage server. If
-     * your object storage requires a user name and password to authenticate, use <code>AccessKey</code> and
-     * <code>SecretKey</code> to provide the user name and password, respectively.
+     * Specifies the secret key (for example, a password) if credentials are required to authenticate with the object
+     * storage server.
      * </p>
      * 
-     * @return Optional. The secret key is used if credentials are required to access the self-managed object storage
-     *         server. If your object storage requires a user name and password to authenticate, use
-     *         <code>AccessKey</code> and <code>SecretKey</code> to provide the user name and password, respectively.
+     * @return Specifies the secret key (for example, a password) if credentials are required to authenticate with the
+     *         object storage server.
      */
 
     public String getSecretKey() {
@@ -418,15 +402,13 @@ public class CreateLocationObjectStorageRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * Optional. The secret key is used if credentials are required to access the self-managed object storage server. If
-     * your object storage requires a user name and password to authenticate, use <code>AccessKey</code> and
-     * <code>SecretKey</code> to provide the user name and password, respectively.
+     * Specifies the secret key (for example, a password) if credentials are required to authenticate with the object
+     * storage server.
      * </p>
      * 
      * @param secretKey
-     *        Optional. The secret key is used if credentials are required to access the self-managed object storage
-     *        server. If your object storage requires a user name and password to authenticate, use
-     *        <code>AccessKey</code> and <code>SecretKey</code> to provide the user name and password, respectively.
+     *        Specifies the secret key (for example, a password) if credentials are required to authenticate with the
+     *        object storage server.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -437,10 +419,10 @@ public class CreateLocationObjectStorageRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the agents associated with the self-managed object storage server location.
+     * Specifies the Amazon Resource Names (ARNs) of the DataSync agents that can securely connect with your location.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the agents associated with the self-managed object storage server
+     * @return Specifies the Amazon Resource Names (ARNs) of the DataSync agents that can securely connect with your
      *         location.
      */
 
@@ -450,11 +432,11 @@ public class CreateLocationObjectStorageRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the agents associated with the self-managed object storage server location.
+     * Specifies the Amazon Resource Names (ARNs) of the DataSync agents that can securely connect with your location.
      * </p>
      * 
      * @param agentArns
-     *        The Amazon Resource Name (ARN) of the agents associated with the self-managed object storage server
+     *        Specifies the Amazon Resource Names (ARNs) of the DataSync agents that can securely connect with your
      *        location.
      */
 
@@ -469,7 +451,7 @@ public class CreateLocationObjectStorageRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the agents associated with the self-managed object storage server location.
+     * Specifies the Amazon Resource Names (ARNs) of the DataSync agents that can securely connect with your location.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -478,7 +460,7 @@ public class CreateLocationObjectStorageRequest extends com.amazonaws.AmazonWebS
      * </p>
      * 
      * @param agentArns
-     *        The Amazon Resource Name (ARN) of the agents associated with the self-managed object storage server
+     *        Specifies the Amazon Resource Names (ARNs) of the DataSync agents that can securely connect with your
      *        location.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -495,11 +477,11 @@ public class CreateLocationObjectStorageRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the agents associated with the self-managed object storage server location.
+     * Specifies the Amazon Resource Names (ARNs) of the DataSync agents that can securely connect with your location.
      * </p>
      * 
      * @param agentArns
-     *        The Amazon Resource Name (ARN) of the agents associated with the self-managed object storage server
+     *        Specifies the Amazon Resource Names (ARNs) of the DataSync agents that can securely connect with your
      *        location.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -511,12 +493,12 @@ public class CreateLocationObjectStorageRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The key-value pair that represents the tag that you want to add to the location. The value can be an empty
-     * string. We recommend using tags to name your resources.
+     * Specifies the key-value pair that represents a tag that you want to add to the resource. Tags can help you
+     * manage, filter, and search for your resources. We recommend creating a name tag for your location.
      * </p>
      * 
-     * @return The key-value pair that represents the tag that you want to add to the location. The value can be an
-     *         empty string. We recommend using tags to name your resources.
+     * @return Specifies the key-value pair that represents a tag that you want to add to the resource. Tags can help
+     *         you manage, filter, and search for your resources. We recommend creating a name tag for your location.
      */
 
     public java.util.List<TagListEntry> getTags() {
@@ -525,13 +507,13 @@ public class CreateLocationObjectStorageRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The key-value pair that represents the tag that you want to add to the location. The value can be an empty
-     * string. We recommend using tags to name your resources.
+     * Specifies the key-value pair that represents a tag that you want to add to the resource. Tags can help you
+     * manage, filter, and search for your resources. We recommend creating a name tag for your location.
      * </p>
      * 
      * @param tags
-     *        The key-value pair that represents the tag that you want to add to the location. The value can be an empty
-     *        string. We recommend using tags to name your resources.
+     *        Specifies the key-value pair that represents a tag that you want to add to the resource. Tags can help you
+     *        manage, filter, and search for your resources. We recommend creating a name tag for your location.
      */
 
     public void setTags(java.util.Collection<TagListEntry> tags) {
@@ -545,8 +527,8 @@ public class CreateLocationObjectStorageRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The key-value pair that represents the tag that you want to add to the location. The value can be an empty
-     * string. We recommend using tags to name your resources.
+     * Specifies the key-value pair that represents a tag that you want to add to the resource. Tags can help you
+     * manage, filter, and search for your resources. We recommend creating a name tag for your location.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -555,8 +537,8 @@ public class CreateLocationObjectStorageRequest extends com.amazonaws.AmazonWebS
      * </p>
      * 
      * @param tags
-     *        The key-value pair that represents the tag that you want to add to the location. The value can be an empty
-     *        string. We recommend using tags to name your resources.
+     *        Specifies the key-value pair that represents a tag that you want to add to the resource. Tags can help you
+     *        manage, filter, and search for your resources. We recommend creating a name tag for your location.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -572,13 +554,13 @@ public class CreateLocationObjectStorageRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The key-value pair that represents the tag that you want to add to the location. The value can be an empty
-     * string. We recommend using tags to name your resources.
+     * Specifies the key-value pair that represents a tag that you want to add to the resource. Tags can help you
+     * manage, filter, and search for your resources. We recommend creating a name tag for your location.
      * </p>
      * 
      * @param tags
-     *        The key-value pair that represents the tag that you want to add to the location. The value can be an empty
-     *        string. We recommend using tags to name your resources.
+     *        Specifies the key-value pair that represents a tag that you want to add to the resource. Tags can help you
+     *        manage, filter, and search for your resources. We recommend creating a name tag for your location.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

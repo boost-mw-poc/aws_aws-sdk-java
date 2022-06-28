@@ -212,6 +212,39 @@ public class AWSDataSyncAsyncClient extends AWSDataSyncClient implements AWSData
     }
 
     @Override
+    public java.util.concurrent.Future<CreateLocationFsxOntapResult> createLocationFsxOntapAsync(CreateLocationFsxOntapRequest request) {
+
+        return createLocationFsxOntapAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateLocationFsxOntapResult> createLocationFsxOntapAsync(final CreateLocationFsxOntapRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateLocationFsxOntapRequest, CreateLocationFsxOntapResult> asyncHandler) {
+        final CreateLocationFsxOntapRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateLocationFsxOntapResult>() {
+            @Override
+            public CreateLocationFsxOntapResult call() throws Exception {
+                CreateLocationFsxOntapResult result = null;
+
+                try {
+                    result = executeCreateLocationFsxOntap(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateLocationFsxOpenZfsResult> createLocationFsxOpenZfsAsync(CreateLocationFsxOpenZfsRequest request) {
 
         return createLocationFsxOpenZfsAsync(request, null);
@@ -658,6 +691,39 @@ public class AWSDataSyncAsyncClient extends AWSDataSyncClient implements AWSData
 
                 try {
                     result = executeDescribeLocationFsxLustre(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeLocationFsxOntapResult> describeLocationFsxOntapAsync(DescribeLocationFsxOntapRequest request) {
+
+        return describeLocationFsxOntapAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeLocationFsxOntapResult> describeLocationFsxOntapAsync(final DescribeLocationFsxOntapRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeLocationFsxOntapRequest, DescribeLocationFsxOntapResult> asyncHandler) {
+        final DescribeLocationFsxOntapRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeLocationFsxOntapResult>() {
+            @Override
+            public DescribeLocationFsxOntapResult call() throws Exception {
+                DescribeLocationFsxOntapResult result = null;
+
+                try {
+                    result = executeDescribeLocationFsxOntap(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

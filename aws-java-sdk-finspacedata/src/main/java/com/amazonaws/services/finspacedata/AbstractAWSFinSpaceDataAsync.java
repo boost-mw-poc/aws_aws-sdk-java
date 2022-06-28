@@ -212,6 +212,21 @@ public class AbstractAWSFinSpaceDataAsync extends AbstractAWSFinSpaceData implem
     }
 
     @Override
+    public java.util.concurrent.Future<GetExternalDataViewAccessDetailsResult> getExternalDataViewAccessDetailsAsync(
+            GetExternalDataViewAccessDetailsRequest request) {
+
+        return getExternalDataViewAccessDetailsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetExternalDataViewAccessDetailsResult> getExternalDataViewAccessDetailsAsync(
+            GetExternalDataViewAccessDetailsRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetExternalDataViewAccessDetailsRequest, GetExternalDataViewAccessDetailsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetPermissionGroupResult> getPermissionGroupAsync(GetPermissionGroupRequest request) {
 
         return getPermissionGroupAsync(request, null);

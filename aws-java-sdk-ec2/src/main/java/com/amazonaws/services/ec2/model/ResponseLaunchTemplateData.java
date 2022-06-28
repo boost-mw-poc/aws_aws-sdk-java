@@ -114,7 +114,7 @@ public class ResponseLaunchTemplateData implements Serializable, Cloneable {
     private String userData;
     /**
      * <p>
-     * The tags.
+     * The tags that are applied to the resources that are created during instance launch.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<LaunchTemplateTagSpecification> tagSpecifications;
@@ -933,10 +933,10 @@ public class ResponseLaunchTemplateData implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The tags.
+     * The tags that are applied to the resources that are created during instance launch.
      * </p>
      * 
-     * @return The tags.
+     * @return The tags that are applied to the resources that are created during instance launch.
      */
 
     public java.util.List<LaunchTemplateTagSpecification> getTagSpecifications() {
@@ -948,11 +948,11 @@ public class ResponseLaunchTemplateData implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The tags.
+     * The tags that are applied to the resources that are created during instance launch.
      * </p>
      * 
      * @param tagSpecifications
-     *        The tags.
+     *        The tags that are applied to the resources that are created during instance launch.
      */
 
     public void setTagSpecifications(java.util.Collection<LaunchTemplateTagSpecification> tagSpecifications) {
@@ -966,7 +966,7 @@ public class ResponseLaunchTemplateData implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The tags.
+     * The tags that are applied to the resources that are created during instance launch.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -975,7 +975,7 @@ public class ResponseLaunchTemplateData implements Serializable, Cloneable {
      * </p>
      * 
      * @param tagSpecifications
-     *        The tags.
+     *        The tags that are applied to the resources that are created during instance launch.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -991,11 +991,11 @@ public class ResponseLaunchTemplateData implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The tags.
+     * The tags that are applied to the resources that are created during instance launch.
      * </p>
      * 
      * @param tagSpecifications
-     *        The tags.
+     *        The tags that are applied to the resources that are created during instance launch.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -2114,8 +2114,8 @@ public interface AmazonEC2 {
      * Creates a route in a route table within a VPC.
      * </p>
      * <p>
-     * You must specify one of the following targets: internet gateway or virtual private gateway, NAT instance, NAT
-     * gateway, VPC peering connection, network interface, egress-only internet gateway, or transit gateway.
+     * You must specify either a destination CIDR block or a prefix list ID. You must also specify exactly one of the
+     * resources from the parameter list.
      * </p>
      * <p>
      * When determining how to route traffic, we use the route with the most specific match. For example, traffic is
@@ -2592,8 +2592,8 @@ public interface AmazonEC2 {
     /**
      * <p>
      * Requests a transit gateway peering attachment between the specified transit gateway (requester) and a peer
-     * transit gateway (accepter). The transit gateways must be in different Regions. The peer transit gateway can be in
-     * your account or a different Amazon Web Services account.
+     * transit gateway (accepter). The peer transit gateway can be in your account or a different Amazon Web Services
+     * account.
      * </p>
      * <p>
      * After you create the peering attachment, the owner of the accepter transit gateway must accept the attachment
@@ -10019,6 +10019,11 @@ public interface AmazonEC2 {
      * [EC2-VPC] After you release an Elastic IP address for use in a VPC, you might be able to recover it. For more
      * information, see <a>AllocateAddress</a>.
      * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html">Elastic IP Addresses</a>
+     * in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * </p>
      * 
      * @param releaseAddressRequest
      * @return Result of the ReleaseAddress operation returned by the service.
@@ -10124,9 +10129,11 @@ public interface AmazonEC2 {
 
     /**
      * <p>
-     * Replaces an existing route within a route table in a VPC. You must provide only one of the following: internet
-     * gateway, virtual private gateway, NAT instance, NAT gateway, VPC peering connection, network interface,
-     * egress-only internet gateway, or transit gateway.
+     * Replaces an existing route within a route table in a VPC.
+     * </p>
+     * <p>
+     * You must specify either a destination CIDR block or a prefix list ID. You must also specify exactly one of the
+     * resources from the parameter list, or reset the local route to its default target.
      * </p>
      * <p>
      * For more information, see <a href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Route_Tables.html">Route

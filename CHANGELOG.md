@@ -1,3 +1,20 @@
+# __1.12.250__ __2022-06-28__
+## __AWS DataSync__
+  - ### Features
+    - AWS DataSync now supports Amazon FSx for NetApp ONTAP locations.
+
+## __Amazon Elastic Compute Cloud__
+  - ### Features
+    - This release adds a new spread placement group to EC2 Placement Groups: host level spread, which spread instances between physical hosts, available to Outpost customers only. CreatePlacementGroup and DescribePlacementGroups APIs were updated with a new parameter: SpreadLevel to support this feature.
+
+## __Amazon Polly__
+  - ### Features
+    - Add 4 new neural voices - Pedro (es-US), Liam (fr-CA), Daniel (de-DE) and Arthur (en-GB).
+
+## __FinSpace Public API__
+  - ### Features
+    - Release new API GetExternalDataViewAccessDetails
+
 # __1.12.249__ __2022-06-27__
 ## __AWS IoT__
   - ### Features
