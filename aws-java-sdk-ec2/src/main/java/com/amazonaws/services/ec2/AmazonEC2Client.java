@@ -1781,6 +1781,64 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
     /**
      * <p>
+     * Associates the specified transit gateway attachment with a transit gateway policy table.
+     * </p>
+     * 
+     * @param associateTransitGatewayPolicyTableRequest
+     * @return Result of the AssociateTransitGatewayPolicyTable operation returned by the service.
+     * @sample AmazonEC2.AssociateTransitGatewayPolicyTable
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/AssociateTransitGatewayPolicyTable"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public AssociateTransitGatewayPolicyTableResult associateTransitGatewayPolicyTable(AssociateTransitGatewayPolicyTableRequest request) {
+        request = beforeClientExecution(request);
+        return executeAssociateTransitGatewayPolicyTable(request);
+    }
+
+    @SdkInternalApi
+    final AssociateTransitGatewayPolicyTableResult executeAssociateTransitGatewayPolicyTable(
+            AssociateTransitGatewayPolicyTableRequest associateTransitGatewayPolicyTableRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(associateTransitGatewayPolicyTableRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<AssociateTransitGatewayPolicyTableRequest> request = null;
+        Response<AssociateTransitGatewayPolicyTableResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new AssociateTransitGatewayPolicyTableRequestMarshaller()
+                        .marshall(super.beforeMarshalling(associateTransitGatewayPolicyTableRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "AssociateTransitGatewayPolicyTable");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<AssociateTransitGatewayPolicyTableResult> responseHandler = new StaxResponseHandler<AssociateTransitGatewayPolicyTableResult>(
+                    new AssociateTransitGatewayPolicyTableResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Associates the specified attachment with the specified transit gateway route table. You can associate only one
      * route table with an attachment.
      * </p>
@@ -7213,8 +7271,8 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
     /**
      * <p>
      * Requests a transit gateway peering attachment between the specified transit gateway (requester) and a peer
-     * transit gateway (accepter). The peer transit gateway can be in your account or a different Amazon Web Services
-     * account.
+     * transit gateway (accepter). The transit gateways must be in different Regions. The peer transit gateway can be in
+     * your account or a different Amazon Web Services account.
      * </p>
      * <p>
      * After you create the peering attachment, the owner of the accepter transit gateway must accept the attachment
@@ -7263,6 +7321,63 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
             StaxResponseHandler<CreateTransitGatewayPeeringAttachmentResult> responseHandler = new StaxResponseHandler<CreateTransitGatewayPeeringAttachmentResult>(
                     new CreateTransitGatewayPeeringAttachmentResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Creates a transit gateway policy table.
+     * </p>
+     * 
+     * @param createTransitGatewayPolicyTableRequest
+     * @return Result of the CreateTransitGatewayPolicyTable operation returned by the service.
+     * @sample AmazonEC2.CreateTransitGatewayPolicyTable
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateTransitGatewayPolicyTable"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public CreateTransitGatewayPolicyTableResult createTransitGatewayPolicyTable(CreateTransitGatewayPolicyTableRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateTransitGatewayPolicyTable(request);
+    }
+
+    @SdkInternalApi
+    final CreateTransitGatewayPolicyTableResult executeCreateTransitGatewayPolicyTable(
+            CreateTransitGatewayPolicyTableRequest createTransitGatewayPolicyTableRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createTransitGatewayPolicyTableRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateTransitGatewayPolicyTableRequest> request = null;
+        Response<CreateTransitGatewayPolicyTableResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateTransitGatewayPolicyTableRequestMarshaller().marshall(super.beforeMarshalling(createTransitGatewayPolicyTableRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateTransitGatewayPolicyTable");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<CreateTransitGatewayPolicyTableResult> responseHandler = new StaxResponseHandler<CreateTransitGatewayPolicyTableResult>(
+                    new CreateTransitGatewayPolicyTableResultStaxUnmarshaller());
 
             response = invoke(request, responseHandler, executionContext);
 
@@ -7433,6 +7548,64 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
             StaxResponseHandler<CreateTransitGatewayRouteTableResult> responseHandler = new StaxResponseHandler<CreateTransitGatewayRouteTableResult>(
                     new CreateTransitGatewayRouteTableResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Advertises a new transit gateway route table.
+     * </p>
+     * 
+     * @param createTransitGatewayRouteTableAnnouncementRequest
+     * @return Result of the CreateTransitGatewayRouteTableAnnouncement operation returned by the service.
+     * @sample AmazonEC2.CreateTransitGatewayRouteTableAnnouncement
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateTransitGatewayRouteTableAnnouncement"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public CreateTransitGatewayRouteTableAnnouncementResult createTransitGatewayRouteTableAnnouncement(CreateTransitGatewayRouteTableAnnouncementRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateTransitGatewayRouteTableAnnouncement(request);
+    }
+
+    @SdkInternalApi
+    final CreateTransitGatewayRouteTableAnnouncementResult executeCreateTransitGatewayRouteTableAnnouncement(
+            CreateTransitGatewayRouteTableAnnouncementRequest createTransitGatewayRouteTableAnnouncementRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createTransitGatewayRouteTableAnnouncementRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateTransitGatewayRouteTableAnnouncementRequest> request = null;
+        Response<CreateTransitGatewayRouteTableAnnouncementResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateTransitGatewayRouteTableAnnouncementRequestMarshaller().marshall(super
+                        .beforeMarshalling(createTransitGatewayRouteTableAnnouncementRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateTransitGatewayRouteTableAnnouncement");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<CreateTransitGatewayRouteTableAnnouncementResult> responseHandler = new StaxResponseHandler<CreateTransitGatewayRouteTableAnnouncementResult>(
+                    new CreateTransitGatewayRouteTableAnnouncementResultStaxUnmarshaller());
 
             response = invoke(request, responseHandler, executionContext);
 
@@ -11031,6 +11204,63 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
     /**
      * <p>
+     * Deletes the specified transit gateway policy table.
+     * </p>
+     * 
+     * @param deleteTransitGatewayPolicyTableRequest
+     * @return Result of the DeleteTransitGatewayPolicyTable operation returned by the service.
+     * @sample AmazonEC2.DeleteTransitGatewayPolicyTable
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteTransitGatewayPolicyTable"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DeleteTransitGatewayPolicyTableResult deleteTransitGatewayPolicyTable(DeleteTransitGatewayPolicyTableRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteTransitGatewayPolicyTable(request);
+    }
+
+    @SdkInternalApi
+    final DeleteTransitGatewayPolicyTableResult executeDeleteTransitGatewayPolicyTable(
+            DeleteTransitGatewayPolicyTableRequest deleteTransitGatewayPolicyTableRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteTransitGatewayPolicyTableRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteTransitGatewayPolicyTableRequest> request = null;
+        Response<DeleteTransitGatewayPolicyTableResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteTransitGatewayPolicyTableRequestMarshaller().marshall(super.beforeMarshalling(deleteTransitGatewayPolicyTableRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteTransitGatewayPolicyTable");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<DeleteTransitGatewayPolicyTableResult> responseHandler = new StaxResponseHandler<DeleteTransitGatewayPolicyTableResult>(
+                    new DeleteTransitGatewayPolicyTableResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Deletes a reference (route) to a prefix list in a specified transit gateway route table.
      * </p>
      * 
@@ -11189,6 +11419,64 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
             StaxResponseHandler<DeleteTransitGatewayRouteTableResult> responseHandler = new StaxResponseHandler<DeleteTransitGatewayRouteTableResult>(
                     new DeleteTransitGatewayRouteTableResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Advertises to the transit gateway that a transit gateway route table is deleted.
+     * </p>
+     * 
+     * @param deleteTransitGatewayRouteTableAnnouncementRequest
+     * @return Result of the DeleteTransitGatewayRouteTableAnnouncement operation returned by the service.
+     * @sample AmazonEC2.DeleteTransitGatewayRouteTableAnnouncement
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteTransitGatewayRouteTableAnnouncement"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DeleteTransitGatewayRouteTableAnnouncementResult deleteTransitGatewayRouteTableAnnouncement(DeleteTransitGatewayRouteTableAnnouncementRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteTransitGatewayRouteTableAnnouncement(request);
+    }
+
+    @SdkInternalApi
+    final DeleteTransitGatewayRouteTableAnnouncementResult executeDeleteTransitGatewayRouteTableAnnouncement(
+            DeleteTransitGatewayRouteTableAnnouncementRequest deleteTransitGatewayRouteTableAnnouncementRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteTransitGatewayRouteTableAnnouncementRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteTransitGatewayRouteTableAnnouncementRequest> request = null;
+        Response<DeleteTransitGatewayRouteTableAnnouncementResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteTransitGatewayRouteTableAnnouncementRequestMarshaller().marshall(super
+                        .beforeMarshalling(deleteTransitGatewayRouteTableAnnouncementRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteTransitGatewayRouteTableAnnouncement");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<DeleteTransitGatewayRouteTableAnnouncementResult> responseHandler = new StaxResponseHandler<DeleteTransitGatewayRouteTableAnnouncementResult>(
+                    new DeleteTransitGatewayRouteTableAnnouncementResultStaxUnmarshaller());
 
             response = invoke(request, responseHandler, executionContext);
 
@@ -19346,6 +19634,124 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
     /**
      * <p>
+     * Describes one or more transit gateway route policy tables.
+     * </p>
+     * 
+     * @param describeTransitGatewayPolicyTablesRequest
+     * @return Result of the DescribeTransitGatewayPolicyTables operation returned by the service.
+     * @sample AmazonEC2.DescribeTransitGatewayPolicyTables
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeTransitGatewayPolicyTables"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DescribeTransitGatewayPolicyTablesResult describeTransitGatewayPolicyTables(DescribeTransitGatewayPolicyTablesRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribeTransitGatewayPolicyTables(request);
+    }
+
+    @SdkInternalApi
+    final DescribeTransitGatewayPolicyTablesResult executeDescribeTransitGatewayPolicyTables(
+            DescribeTransitGatewayPolicyTablesRequest describeTransitGatewayPolicyTablesRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describeTransitGatewayPolicyTablesRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeTransitGatewayPolicyTablesRequest> request = null;
+        Response<DescribeTransitGatewayPolicyTablesResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeTransitGatewayPolicyTablesRequestMarshaller()
+                        .marshall(super.beforeMarshalling(describeTransitGatewayPolicyTablesRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeTransitGatewayPolicyTables");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<DescribeTransitGatewayPolicyTablesResult> responseHandler = new StaxResponseHandler<DescribeTransitGatewayPolicyTablesResult>(
+                    new DescribeTransitGatewayPolicyTablesResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Describes one or more transit gateway route table advertisements.
+     * </p>
+     * 
+     * @param describeTransitGatewayRouteTableAnnouncementsRequest
+     * @return Result of the DescribeTransitGatewayRouteTableAnnouncements operation returned by the service.
+     * @sample AmazonEC2.DescribeTransitGatewayRouteTableAnnouncements
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeTransitGatewayRouteTableAnnouncements"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DescribeTransitGatewayRouteTableAnnouncementsResult describeTransitGatewayRouteTableAnnouncements(
+            DescribeTransitGatewayRouteTableAnnouncementsRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribeTransitGatewayRouteTableAnnouncements(request);
+    }
+
+    @SdkInternalApi
+    final DescribeTransitGatewayRouteTableAnnouncementsResult executeDescribeTransitGatewayRouteTableAnnouncements(
+            DescribeTransitGatewayRouteTableAnnouncementsRequest describeTransitGatewayRouteTableAnnouncementsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describeTransitGatewayRouteTableAnnouncementsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeTransitGatewayRouteTableAnnouncementsRequest> request = null;
+        Response<DescribeTransitGatewayRouteTableAnnouncementsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeTransitGatewayRouteTableAnnouncementsRequestMarshaller().marshall(super
+                        .beforeMarshalling(describeTransitGatewayRouteTableAnnouncementsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeTransitGatewayRouteTableAnnouncements");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<DescribeTransitGatewayRouteTableAnnouncementsResult> responseHandler = new StaxResponseHandler<DescribeTransitGatewayRouteTableAnnouncementsResult>(
+                    new DescribeTransitGatewayRouteTableAnnouncementsResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Describes one or more transit gateway route tables. By default, all transit gateway route tables are described.
      * Alternatively, you can filter the results.
      * </p>
@@ -22070,6 +22476,64 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
             StaxResponseHandler<DisassociateTransitGatewayMulticastDomainResult> responseHandler = new StaxResponseHandler<DisassociateTransitGatewayMulticastDomainResult>(
                     new DisassociateTransitGatewayMulticastDomainResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Removes the association between an an attachment and a policy table.
+     * </p>
+     * 
+     * @param disassociateTransitGatewayPolicyTableRequest
+     * @return Result of the DisassociateTransitGatewayPolicyTable operation returned by the service.
+     * @sample AmazonEC2.DisassociateTransitGatewayPolicyTable
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DisassociateTransitGatewayPolicyTable"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DisassociateTransitGatewayPolicyTableResult disassociateTransitGatewayPolicyTable(DisassociateTransitGatewayPolicyTableRequest request) {
+        request = beforeClientExecution(request);
+        return executeDisassociateTransitGatewayPolicyTable(request);
+    }
+
+    @SdkInternalApi
+    final DisassociateTransitGatewayPolicyTableResult executeDisassociateTransitGatewayPolicyTable(
+            DisassociateTransitGatewayPolicyTableRequest disassociateTransitGatewayPolicyTableRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(disassociateTransitGatewayPolicyTableRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DisassociateTransitGatewayPolicyTableRequest> request = null;
+        Response<DisassociateTransitGatewayPolicyTableResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DisassociateTransitGatewayPolicyTableRequestMarshaller().marshall(super
+                        .beforeMarshalling(disassociateTransitGatewayPolicyTableRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DisassociateTransitGatewayPolicyTable");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<DisassociateTransitGatewayPolicyTableResult> responseHandler = new StaxResponseHandler<DisassociateTransitGatewayPolicyTableResult>(
+                    new DisassociateTransitGatewayPolicyTableResultStaxUnmarshaller());
 
             response = invoke(request, responseHandler, executionContext);
 
@@ -25021,6 +25485,122 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
             StaxResponseHandler<GetTransitGatewayMulticastDomainAssociationsResult> responseHandler = new StaxResponseHandler<GetTransitGatewayMulticastDomainAssociationsResult>(
                     new GetTransitGatewayMulticastDomainAssociationsResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Gets a list of the transit gateway policy table associations.
+     * </p>
+     * 
+     * @param getTransitGatewayPolicyTableAssociationsRequest
+     * @return Result of the GetTransitGatewayPolicyTableAssociations operation returned by the service.
+     * @sample AmazonEC2.GetTransitGatewayPolicyTableAssociations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/GetTransitGatewayPolicyTableAssociations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetTransitGatewayPolicyTableAssociationsResult getTransitGatewayPolicyTableAssociations(GetTransitGatewayPolicyTableAssociationsRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetTransitGatewayPolicyTableAssociations(request);
+    }
+
+    @SdkInternalApi
+    final GetTransitGatewayPolicyTableAssociationsResult executeGetTransitGatewayPolicyTableAssociations(
+            GetTransitGatewayPolicyTableAssociationsRequest getTransitGatewayPolicyTableAssociationsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getTransitGatewayPolicyTableAssociationsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetTransitGatewayPolicyTableAssociationsRequest> request = null;
+        Response<GetTransitGatewayPolicyTableAssociationsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetTransitGatewayPolicyTableAssociationsRequestMarshaller().marshall(super
+                        .beforeMarshalling(getTransitGatewayPolicyTableAssociationsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetTransitGatewayPolicyTableAssociations");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<GetTransitGatewayPolicyTableAssociationsResult> responseHandler = new StaxResponseHandler<GetTransitGatewayPolicyTableAssociationsResult>(
+                    new GetTransitGatewayPolicyTableAssociationsResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Returns a list of transit gateway policy table entries.
+     * </p>
+     * 
+     * @param getTransitGatewayPolicyTableEntriesRequest
+     * @return Result of the GetTransitGatewayPolicyTableEntries operation returned by the service.
+     * @sample AmazonEC2.GetTransitGatewayPolicyTableEntries
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/GetTransitGatewayPolicyTableEntries"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetTransitGatewayPolicyTableEntriesResult getTransitGatewayPolicyTableEntries(GetTransitGatewayPolicyTableEntriesRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetTransitGatewayPolicyTableEntries(request);
+    }
+
+    @SdkInternalApi
+    final GetTransitGatewayPolicyTableEntriesResult executeGetTransitGatewayPolicyTableEntries(
+            GetTransitGatewayPolicyTableEntriesRequest getTransitGatewayPolicyTableEntriesRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getTransitGatewayPolicyTableEntriesRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetTransitGatewayPolicyTableEntriesRequest> request = null;
+        Response<GetTransitGatewayPolicyTableEntriesResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetTransitGatewayPolicyTableEntriesRequestMarshaller().marshall(super
+                        .beforeMarshalling(getTransitGatewayPolicyTableEntriesRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetTransitGatewayPolicyTableEntries");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<GetTransitGatewayPolicyTableEntriesResult> responseHandler = new StaxResponseHandler<GetTransitGatewayPolicyTableEntriesResult>(
+                    new GetTransitGatewayPolicyTableEntriesResultStaxUnmarshaller());
 
             response = invoke(request, responseHandler, executionContext);
 

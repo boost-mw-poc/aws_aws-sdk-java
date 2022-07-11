@@ -427,7 +427,8 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
     private String hsmConfigurationIdentifier;
     /**
      * <p>
-     * The Elastic IP (EIP) address for the cluster.
+     * The Elastic IP (EIP) address for the cluster. You don't have to specify the EIP for a publicly accessible cluster
+     * with AvailabilityZoneRelocation turned on.
      * </p>
      * <p>
      * Constraints: The cluster must be provisioned in EC2-VPC and publicly-accessible through an Internet gateway. For
@@ -3114,7 +3115,8 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The Elastic IP (EIP) address for the cluster.
+     * The Elastic IP (EIP) address for the cluster. You don't have to specify the EIP for a publicly accessible cluster
+     * with AvailabilityZoneRelocation turned on.
      * </p>
      * <p>
      * Constraints: The cluster must be provisioned in EC2-VPC and publicly-accessible through an Internet gateway. For
@@ -3124,7 +3126,8 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      * 
      * @param elasticIp
-     *        The Elastic IP (EIP) address for the cluster.</p>
+     *        The Elastic IP (EIP) address for the cluster. You don't have to specify the EIP for a publicly accessible
+     *        cluster with AvailabilityZoneRelocation turned on.</p>
      *        <p>
      *        Constraints: The cluster must be provisioned in EC2-VPC and publicly-accessible through an Internet
      *        gateway. For more information about provisioning clusters in EC2-VPC, go to <a
@@ -3138,7 +3141,8 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The Elastic IP (EIP) address for the cluster.
+     * The Elastic IP (EIP) address for the cluster. You don't have to specify the EIP for a publicly accessible cluster
+     * with AvailabilityZoneRelocation turned on.
      * </p>
      * <p>
      * Constraints: The cluster must be provisioned in EC2-VPC and publicly-accessible through an Internet gateway. For
@@ -3147,7 +3151,8 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * Platforms to Launch Your Cluster</a> in the Amazon Redshift Cluster Management Guide.
      * </p>
      * 
-     * @return The Elastic IP (EIP) address for the cluster.</p>
+     * @return The Elastic IP (EIP) address for the cluster. You don't have to specify the EIP for a publicly accessible
+     *         cluster with AvailabilityZoneRelocation turned on.</p>
      *         <p>
      *         Constraints: The cluster must be provisioned in EC2-VPC and publicly-accessible through an Internet
      *         gateway. For more information about provisioning clusters in EC2-VPC, go to <a
@@ -3161,7 +3166,8 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The Elastic IP (EIP) address for the cluster.
+     * The Elastic IP (EIP) address for the cluster. You don't have to specify the EIP for a publicly accessible cluster
+     * with AvailabilityZoneRelocation turned on.
      * </p>
      * <p>
      * Constraints: The cluster must be provisioned in EC2-VPC and publicly-accessible through an Internet gateway. For
@@ -3171,7 +3177,8 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      * 
      * @param elasticIp
-     *        The Elastic IP (EIP) address for the cluster.</p>
+     *        The Elastic IP (EIP) address for the cluster. You don't have to specify the EIP for a publicly accessible
+     *        cluster with AvailabilityZoneRelocation turned on.</p>
      *        <p>
      *        Constraints: The cluster must be provisioned in EC2-VPC and publicly-accessible through an Internet
      *        gateway. For more information about provisioning clusters in EC2-VPC, go to <a

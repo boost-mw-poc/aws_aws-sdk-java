@@ -375,6 +375,21 @@ public class AbstractAmazonEC2Async extends AbstractAmazonEC2 implements AmazonE
     }
 
     @Override
+    public java.util.concurrent.Future<AssociateTransitGatewayPolicyTableResult> associateTransitGatewayPolicyTableAsync(
+            AssociateTransitGatewayPolicyTableRequest request) {
+
+        return associateTransitGatewayPolicyTableAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<AssociateTransitGatewayPolicyTableResult> associateTransitGatewayPolicyTableAsync(
+            AssociateTransitGatewayPolicyTableRequest request,
+            com.amazonaws.handlers.AsyncHandler<AssociateTransitGatewayPolicyTableRequest, AssociateTransitGatewayPolicyTableResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<AssociateTransitGatewayRouteTableResult> associateTransitGatewayRouteTableAsync(
             AssociateTransitGatewayRouteTableRequest request) {
 
@@ -1505,6 +1520,21 @@ public class AbstractAmazonEC2Async extends AbstractAmazonEC2 implements AmazonE
     }
 
     @Override
+    public java.util.concurrent.Future<CreateTransitGatewayPolicyTableResult> createTransitGatewayPolicyTableAsync(
+            CreateTransitGatewayPolicyTableRequest request) {
+
+        return createTransitGatewayPolicyTableAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateTransitGatewayPolicyTableResult> createTransitGatewayPolicyTableAsync(
+            CreateTransitGatewayPolicyTableRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateTransitGatewayPolicyTableRequest, CreateTransitGatewayPolicyTableResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateTransitGatewayPrefixListReferenceResult> createTransitGatewayPrefixListReferenceAsync(
             CreateTransitGatewayPrefixListReferenceRequest request) {
 
@@ -1541,6 +1571,21 @@ public class AbstractAmazonEC2Async extends AbstractAmazonEC2 implements AmazonE
     @Override
     public java.util.concurrent.Future<CreateTransitGatewayRouteTableResult> createTransitGatewayRouteTableAsync(CreateTransitGatewayRouteTableRequest request,
             com.amazonaws.handlers.AsyncHandler<CreateTransitGatewayRouteTableRequest, CreateTransitGatewayRouteTableResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateTransitGatewayRouteTableAnnouncementResult> createTransitGatewayRouteTableAnnouncementAsync(
+            CreateTransitGatewayRouteTableAnnouncementRequest request) {
+
+        return createTransitGatewayRouteTableAnnouncementAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateTransitGatewayRouteTableAnnouncementResult> createTransitGatewayRouteTableAnnouncementAsync(
+            CreateTransitGatewayRouteTableAnnouncementRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateTransitGatewayRouteTableAnnouncementRequest, CreateTransitGatewayRouteTableAnnouncementResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -2382,6 +2427,21 @@ public class AbstractAmazonEC2Async extends AbstractAmazonEC2 implements AmazonE
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteTransitGatewayPolicyTableResult> deleteTransitGatewayPolicyTableAsync(
+            DeleteTransitGatewayPolicyTableRequest request) {
+
+        return deleteTransitGatewayPolicyTableAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteTransitGatewayPolicyTableResult> deleteTransitGatewayPolicyTableAsync(
+            DeleteTransitGatewayPolicyTableRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteTransitGatewayPolicyTableRequest, DeleteTransitGatewayPolicyTableResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteTransitGatewayPrefixListReferenceResult> deleteTransitGatewayPrefixListReferenceAsync(
             DeleteTransitGatewayPrefixListReferenceRequest request) {
 
@@ -2418,6 +2478,21 @@ public class AbstractAmazonEC2Async extends AbstractAmazonEC2 implements AmazonE
     @Override
     public java.util.concurrent.Future<DeleteTransitGatewayRouteTableResult> deleteTransitGatewayRouteTableAsync(DeleteTransitGatewayRouteTableRequest request,
             com.amazonaws.handlers.AsyncHandler<DeleteTransitGatewayRouteTableRequest, DeleteTransitGatewayRouteTableResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteTransitGatewayRouteTableAnnouncementResult> deleteTransitGatewayRouteTableAnnouncementAsync(
+            DeleteTransitGatewayRouteTableAnnouncementRequest request) {
+
+        return deleteTransitGatewayRouteTableAnnouncementAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteTransitGatewayRouteTableAnnouncementResult> deleteTransitGatewayRouteTableAnnouncementAsync(
+            DeleteTransitGatewayRouteTableAnnouncementRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteTransitGatewayRouteTableAnnouncementRequest, DeleteTransitGatewayRouteTableAnnouncementResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -5048,6 +5123,36 @@ public class AbstractAmazonEC2Async extends AbstractAmazonEC2 implements AmazonE
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeTransitGatewayPolicyTablesResult> describeTransitGatewayPolicyTablesAsync(
+            DescribeTransitGatewayPolicyTablesRequest request) {
+
+        return describeTransitGatewayPolicyTablesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeTransitGatewayPolicyTablesResult> describeTransitGatewayPolicyTablesAsync(
+            DescribeTransitGatewayPolicyTablesRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeTransitGatewayPolicyTablesRequest, DescribeTransitGatewayPolicyTablesResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeTransitGatewayRouteTableAnnouncementsResult> describeTransitGatewayRouteTableAnnouncementsAsync(
+            DescribeTransitGatewayRouteTableAnnouncementsRequest request) {
+
+        return describeTransitGatewayRouteTableAnnouncementsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeTransitGatewayRouteTableAnnouncementsResult> describeTransitGatewayRouteTableAnnouncementsAsync(
+            DescribeTransitGatewayRouteTableAnnouncementsRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeTransitGatewayRouteTableAnnouncementsRequest, DescribeTransitGatewayRouteTableAnnouncementsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeTransitGatewayRouteTablesResult> describeTransitGatewayRouteTablesAsync(
             DescribeTransitGatewayRouteTablesRequest request) {
 
@@ -5856,6 +5961,21 @@ public class AbstractAmazonEC2Async extends AbstractAmazonEC2 implements AmazonE
     }
 
     @Override
+    public java.util.concurrent.Future<DisassociateTransitGatewayPolicyTableResult> disassociateTransitGatewayPolicyTableAsync(
+            DisassociateTransitGatewayPolicyTableRequest request) {
+
+        return disassociateTransitGatewayPolicyTableAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DisassociateTransitGatewayPolicyTableResult> disassociateTransitGatewayPolicyTableAsync(
+            DisassociateTransitGatewayPolicyTableRequest request,
+            com.amazonaws.handlers.AsyncHandler<DisassociateTransitGatewayPolicyTableRequest, DisassociateTransitGatewayPolicyTableResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DisassociateTransitGatewayRouteTableResult> disassociateTransitGatewayRouteTableAsync(
             DisassociateTransitGatewayRouteTableRequest request) {
 
@@ -6505,6 +6625,36 @@ public class AbstractAmazonEC2Async extends AbstractAmazonEC2 implements AmazonE
     public java.util.concurrent.Future<GetTransitGatewayMulticastDomainAssociationsResult> getTransitGatewayMulticastDomainAssociationsAsync(
             GetTransitGatewayMulticastDomainAssociationsRequest request,
             com.amazonaws.handlers.AsyncHandler<GetTransitGatewayMulticastDomainAssociationsRequest, GetTransitGatewayMulticastDomainAssociationsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetTransitGatewayPolicyTableAssociationsResult> getTransitGatewayPolicyTableAssociationsAsync(
+            GetTransitGatewayPolicyTableAssociationsRequest request) {
+
+        return getTransitGatewayPolicyTableAssociationsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetTransitGatewayPolicyTableAssociationsResult> getTransitGatewayPolicyTableAssociationsAsync(
+            GetTransitGatewayPolicyTableAssociationsRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetTransitGatewayPolicyTableAssociationsRequest, GetTransitGatewayPolicyTableAssociationsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetTransitGatewayPolicyTableEntriesResult> getTransitGatewayPolicyTableEntriesAsync(
+            GetTransitGatewayPolicyTableEntriesRequest request) {
+
+        return getTransitGatewayPolicyTableEntriesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetTransitGatewayPolicyTableEntriesResult> getTransitGatewayPolicyTableEntriesAsync(
+            GetTransitGatewayPolicyTableEntriesRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetTransitGatewayPolicyTableEntriesRequest, GetTransitGatewayPolicyTableEntriesResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

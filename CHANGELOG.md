@@ -1,3 +1,16 @@
+# __1.12.258__ __2022-07-11__
+## __Amazon Elastic Compute Cloud__
+  - ### Features
+    - Build, manage, and monitor a unified global network that connects resources running across your cloud and on-premises environments using the AWS Cloud WAN APIs.
+
+## __Amazon Redshift__
+  - ### Features
+    - This release adds a new --snapshot-arn field for describe-cluster-snapshots, describe-node-configuration-options, restore-from-cluster-snapshot, authorize-snapshot-acsess, and revoke-snapshot-acsess APIs. It allows customers to give a Redshift snapshot ARN or a Redshift Serverless ARN as input.
+
+## __Redshift Serverless__
+  - ### Features
+    - Removed prerelease language for GA launch.
+
 # __1.12.257__ __2022-07-08__
 ## __AWS Backup__
   - ### Features

@@ -161,6 +161,11 @@ public class AbstractAmazonEC2 implements AmazonEC2 {
     }
 
     @Override
+    public AssociateTransitGatewayPolicyTableResult associateTransitGatewayPolicyTable(AssociateTransitGatewayPolicyTableRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public AssociateTransitGatewayRouteTableResult associateTransitGatewayRouteTable(AssociateTransitGatewayRouteTableRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -581,6 +586,11 @@ public class AbstractAmazonEC2 implements AmazonEC2 {
     }
 
     @Override
+    public CreateTransitGatewayPolicyTableResult createTransitGatewayPolicyTable(CreateTransitGatewayPolicyTableRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateTransitGatewayPrefixListReferenceResult createTransitGatewayPrefixListReference(CreateTransitGatewayPrefixListReferenceRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -592,6 +602,11 @@ public class AbstractAmazonEC2 implements AmazonEC2 {
 
     @Override
     public CreateTransitGatewayRouteTableResult createTransitGatewayRouteTable(CreateTransitGatewayRouteTableRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public CreateTransitGatewayRouteTableAnnouncementResult createTransitGatewayRouteTableAnnouncement(CreateTransitGatewayRouteTableAnnouncementRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -901,6 +916,11 @@ public class AbstractAmazonEC2 implements AmazonEC2 {
     }
 
     @Override
+    public DeleteTransitGatewayPolicyTableResult deleteTransitGatewayPolicyTable(DeleteTransitGatewayPolicyTableRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DeleteTransitGatewayPrefixListReferenceResult deleteTransitGatewayPrefixListReference(DeleteTransitGatewayPrefixListReferenceRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -912,6 +932,11 @@ public class AbstractAmazonEC2 implements AmazonEC2 {
 
     @Override
     public DeleteTransitGatewayRouteTableResult deleteTransitGatewayRouteTable(DeleteTransitGatewayRouteTableRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteTransitGatewayRouteTableAnnouncementResult deleteTransitGatewayRouteTableAnnouncement(DeleteTransitGatewayRouteTableAnnouncementRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -1757,6 +1782,17 @@ public class AbstractAmazonEC2 implements AmazonEC2 {
     }
 
     @Override
+    public DescribeTransitGatewayPolicyTablesResult describeTransitGatewayPolicyTables(DescribeTransitGatewayPolicyTablesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DescribeTransitGatewayRouteTableAnnouncementsResult describeTransitGatewayRouteTableAnnouncements(
+            DescribeTransitGatewayRouteTableAnnouncementsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DescribeTransitGatewayRouteTablesResult describeTransitGatewayRouteTables(DescribeTransitGatewayRouteTablesRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -2022,6 +2058,11 @@ public class AbstractAmazonEC2 implements AmazonEC2 {
     }
 
     @Override
+    public DisassociateTransitGatewayPolicyTableResult disassociateTransitGatewayPolicyTable(DisassociateTransitGatewayPolicyTableRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DisassociateTransitGatewayRouteTableResult disassociateTransitGatewayRouteTable(DisassociateTransitGatewayRouteTableRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -2261,6 +2302,16 @@ public class AbstractAmazonEC2 implements AmazonEC2 {
     @Override
     public GetTransitGatewayMulticastDomainAssociationsResult getTransitGatewayMulticastDomainAssociations(
             GetTransitGatewayMulticastDomainAssociationsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetTransitGatewayPolicyTableAssociationsResult getTransitGatewayPolicyTableAssociations(GetTransitGatewayPolicyTableAssociationsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetTransitGatewayPolicyTableEntriesResult getTransitGatewayPolicyTableEntries(GetTransitGatewayPolicyTableEntriesRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

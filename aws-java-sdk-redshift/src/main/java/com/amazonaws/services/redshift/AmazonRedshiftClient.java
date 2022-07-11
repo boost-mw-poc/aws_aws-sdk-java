@@ -1256,6 +1256,8 @@ public class AmazonRedshiftClient extends AmazonWebServiceClient implements Amaz
      *         authorized to access the snapshot.
      * @throws LimitExceededException
      *         The encryption key has exceeded its grant limit in Amazon Web Services KMS.
+     * @throws UnsupportedOperationException
+     *         The requested operation isn't supported.
      * @sample AmazonRedshift.AuthorizeSnapshotAccess
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/AuthorizeSnapshotAccess"
      *      target="_top">AWS API Documentation</a>
@@ -4255,6 +4257,8 @@ public class AmazonRedshiftClient extends AmazonWebServiceClient implements Amaz
      *         The snapshot identifier does not refer to an existing cluster snapshot.
      * @throws InvalidTagException
      *         The tag is invalid.
+     * @throws UnsupportedOperationException
+     *         The requested operation isn't supported.
      * @sample AmazonRedshift.DescribeClusterSnapshots
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/DescribeClusterSnapshots"
      *      target="_top">AWS API Documentation</a>
@@ -5377,6 +5381,8 @@ public class AmazonRedshiftClient extends AmazonWebServiceClient implements Amaz
      *         The <code>ClusterIdentifier</code> parameter does not refer to an existing cluster.
      * @throws AccessToSnapshotDeniedException
      *         The owner of the specified snapshot has not authorized your account to access the snapshot.
+     * @throws UnsupportedOperationException
+     *         The requested operation isn't supported.
      * @sample AmazonRedshift.DescribeNodeConfigurationOptions
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/DescribeNodeConfigurationOptions"
      *      target="_top">AWS API Documentation</a>
@@ -8982,6 +8988,8 @@ public class AmazonRedshiftClient extends AmazonWebServiceClient implements Amaz
      *         group.
      * @throws ClusterSnapshotNotFoundException
      *         The snapshot identifier does not refer to an existing cluster snapshot.
+     * @throws UnsupportedOperationException
+     *         The requested operation isn't supported.
      * @sample AmazonRedshift.RevokeSnapshotAccess
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/RevokeSnapshotAccess" target="_top">AWS
      *      API Documentation</a>

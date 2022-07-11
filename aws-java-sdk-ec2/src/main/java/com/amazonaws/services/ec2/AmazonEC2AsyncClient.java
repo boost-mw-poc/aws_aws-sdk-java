@@ -1080,6 +1080,41 @@ public class AmazonEC2AsyncClient extends AmazonEC2Client implements AmazonEC2As
     }
 
     @Override
+    public java.util.concurrent.Future<AssociateTransitGatewayPolicyTableResult> associateTransitGatewayPolicyTableAsync(
+            AssociateTransitGatewayPolicyTableRequest request) {
+
+        return associateTransitGatewayPolicyTableAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<AssociateTransitGatewayPolicyTableResult> associateTransitGatewayPolicyTableAsync(
+            final AssociateTransitGatewayPolicyTableRequest request,
+            final com.amazonaws.handlers.AsyncHandler<AssociateTransitGatewayPolicyTableRequest, AssociateTransitGatewayPolicyTableResult> asyncHandler) {
+        final AssociateTransitGatewayPolicyTableRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<AssociateTransitGatewayPolicyTableResult>() {
+            @Override
+            public AssociateTransitGatewayPolicyTableResult call() throws Exception {
+                AssociateTransitGatewayPolicyTableResult result = null;
+
+                try {
+                    result = executeAssociateTransitGatewayPolicyTable(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<AssociateTransitGatewayRouteTableResult> associateTransitGatewayRouteTableAsync(
             AssociateTransitGatewayRouteTableRequest request) {
 
@@ -3856,6 +3891,41 @@ public class AmazonEC2AsyncClient extends AmazonEC2Client implements AmazonEC2As
     }
 
     @Override
+    public java.util.concurrent.Future<CreateTransitGatewayPolicyTableResult> createTransitGatewayPolicyTableAsync(
+            CreateTransitGatewayPolicyTableRequest request) {
+
+        return createTransitGatewayPolicyTableAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateTransitGatewayPolicyTableResult> createTransitGatewayPolicyTableAsync(
+            final CreateTransitGatewayPolicyTableRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateTransitGatewayPolicyTableRequest, CreateTransitGatewayPolicyTableResult> asyncHandler) {
+        final CreateTransitGatewayPolicyTableRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateTransitGatewayPolicyTableResult>() {
+            @Override
+            public CreateTransitGatewayPolicyTableResult call() throws Exception {
+                CreateTransitGatewayPolicyTableResult result = null;
+
+                try {
+                    result = executeCreateTransitGatewayPolicyTable(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateTransitGatewayPrefixListReferenceResult> createTransitGatewayPrefixListReferenceAsync(
             CreateTransitGatewayPrefixListReferenceRequest request) {
 
@@ -3942,6 +4012,41 @@ public class AmazonEC2AsyncClient extends AmazonEC2Client implements AmazonEC2As
 
                 try {
                     result = executeCreateTransitGatewayRouteTable(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateTransitGatewayRouteTableAnnouncementResult> createTransitGatewayRouteTableAnnouncementAsync(
+            CreateTransitGatewayRouteTableAnnouncementRequest request) {
+
+        return createTransitGatewayRouteTableAnnouncementAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateTransitGatewayRouteTableAnnouncementResult> createTransitGatewayRouteTableAnnouncementAsync(
+            final CreateTransitGatewayRouteTableAnnouncementRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateTransitGatewayRouteTableAnnouncementRequest, CreateTransitGatewayRouteTableAnnouncementResult> asyncHandler) {
+        final CreateTransitGatewayRouteTableAnnouncementRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateTransitGatewayRouteTableAnnouncementResult>() {
+            @Override
+            public CreateTransitGatewayRouteTableAnnouncementResult call() throws Exception {
+                CreateTransitGatewayRouteTableAnnouncementResult result = null;
+
+                try {
+                    result = executeCreateTransitGatewayRouteTableAnnouncement(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -5978,6 +6083,41 @@ public class AmazonEC2AsyncClient extends AmazonEC2Client implements AmazonEC2As
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteTransitGatewayPolicyTableResult> deleteTransitGatewayPolicyTableAsync(
+            DeleteTransitGatewayPolicyTableRequest request) {
+
+        return deleteTransitGatewayPolicyTableAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteTransitGatewayPolicyTableResult> deleteTransitGatewayPolicyTableAsync(
+            final DeleteTransitGatewayPolicyTableRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteTransitGatewayPolicyTableRequest, DeleteTransitGatewayPolicyTableResult> asyncHandler) {
+        final DeleteTransitGatewayPolicyTableRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteTransitGatewayPolicyTableResult>() {
+            @Override
+            public DeleteTransitGatewayPolicyTableResult call() throws Exception {
+                DeleteTransitGatewayPolicyTableResult result = null;
+
+                try {
+                    result = executeDeleteTransitGatewayPolicyTable(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteTransitGatewayPrefixListReferenceResult> deleteTransitGatewayPrefixListReferenceAsync(
             DeleteTransitGatewayPrefixListReferenceRequest request) {
 
@@ -6064,6 +6204,41 @@ public class AmazonEC2AsyncClient extends AmazonEC2Client implements AmazonEC2As
 
                 try {
                     result = executeDeleteTransitGatewayRouteTable(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteTransitGatewayRouteTableAnnouncementResult> deleteTransitGatewayRouteTableAnnouncementAsync(
+            DeleteTransitGatewayRouteTableAnnouncementRequest request) {
+
+        return deleteTransitGatewayRouteTableAnnouncementAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteTransitGatewayRouteTableAnnouncementResult> deleteTransitGatewayRouteTableAnnouncementAsync(
+            final DeleteTransitGatewayRouteTableAnnouncementRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteTransitGatewayRouteTableAnnouncementRequest, DeleteTransitGatewayRouteTableAnnouncementResult> asyncHandler) {
+        final DeleteTransitGatewayRouteTableAnnouncementRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteTransitGatewayRouteTableAnnouncementResult>() {
+            @Override
+            public DeleteTransitGatewayRouteTableAnnouncementResult call() throws Exception {
+                DeleteTransitGatewayRouteTableAnnouncementResult result = null;
+
+                try {
+                    result = executeDeleteTransitGatewayRouteTableAnnouncement(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -11291,6 +11466,76 @@ public class AmazonEC2AsyncClient extends AmazonEC2Client implements AmazonEC2As
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeTransitGatewayPolicyTablesResult> describeTransitGatewayPolicyTablesAsync(
+            DescribeTransitGatewayPolicyTablesRequest request) {
+
+        return describeTransitGatewayPolicyTablesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeTransitGatewayPolicyTablesResult> describeTransitGatewayPolicyTablesAsync(
+            final DescribeTransitGatewayPolicyTablesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeTransitGatewayPolicyTablesRequest, DescribeTransitGatewayPolicyTablesResult> asyncHandler) {
+        final DescribeTransitGatewayPolicyTablesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeTransitGatewayPolicyTablesResult>() {
+            @Override
+            public DescribeTransitGatewayPolicyTablesResult call() throws Exception {
+                DescribeTransitGatewayPolicyTablesResult result = null;
+
+                try {
+                    result = executeDescribeTransitGatewayPolicyTables(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeTransitGatewayRouteTableAnnouncementsResult> describeTransitGatewayRouteTableAnnouncementsAsync(
+            DescribeTransitGatewayRouteTableAnnouncementsRequest request) {
+
+        return describeTransitGatewayRouteTableAnnouncementsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeTransitGatewayRouteTableAnnouncementsResult> describeTransitGatewayRouteTableAnnouncementsAsync(
+            final DescribeTransitGatewayRouteTableAnnouncementsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeTransitGatewayRouteTableAnnouncementsRequest, DescribeTransitGatewayRouteTableAnnouncementsResult> asyncHandler) {
+        final DescribeTransitGatewayRouteTableAnnouncementsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeTransitGatewayRouteTableAnnouncementsResult>() {
+            @Override
+            public DescribeTransitGatewayRouteTableAnnouncementsResult call() throws Exception {
+                DescribeTransitGatewayRouteTableAnnouncementsResult result = null;
+
+                try {
+                    result = executeDescribeTransitGatewayRouteTableAnnouncements(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeTransitGatewayRouteTablesResult> describeTransitGatewayRouteTablesAsync(
             DescribeTransitGatewayRouteTablesRequest request) {
 
@@ -12983,6 +13228,41 @@ public class AmazonEC2AsyncClient extends AmazonEC2Client implements AmazonEC2As
     }
 
     @Override
+    public java.util.concurrent.Future<DisassociateTransitGatewayPolicyTableResult> disassociateTransitGatewayPolicyTableAsync(
+            DisassociateTransitGatewayPolicyTableRequest request) {
+
+        return disassociateTransitGatewayPolicyTableAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DisassociateTransitGatewayPolicyTableResult> disassociateTransitGatewayPolicyTableAsync(
+            final DisassociateTransitGatewayPolicyTableRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DisassociateTransitGatewayPolicyTableRequest, DisassociateTransitGatewayPolicyTableResult> asyncHandler) {
+        final DisassociateTransitGatewayPolicyTableRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DisassociateTransitGatewayPolicyTableResult>() {
+            @Override
+            public DisassociateTransitGatewayPolicyTableResult call() throws Exception {
+                DisassociateTransitGatewayPolicyTableResult result = null;
+
+                try {
+                    result = executeDisassociateTransitGatewayPolicyTable(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DisassociateTransitGatewayRouteTableResult> disassociateTransitGatewayRouteTableAsync(
             DisassociateTransitGatewayRouteTableRequest request) {
 
@@ -14584,6 +14864,76 @@ public class AmazonEC2AsyncClient extends AmazonEC2Client implements AmazonEC2As
 
                 try {
                     result = executeGetTransitGatewayMulticastDomainAssociations(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetTransitGatewayPolicyTableAssociationsResult> getTransitGatewayPolicyTableAssociationsAsync(
+            GetTransitGatewayPolicyTableAssociationsRequest request) {
+
+        return getTransitGatewayPolicyTableAssociationsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetTransitGatewayPolicyTableAssociationsResult> getTransitGatewayPolicyTableAssociationsAsync(
+            final GetTransitGatewayPolicyTableAssociationsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetTransitGatewayPolicyTableAssociationsRequest, GetTransitGatewayPolicyTableAssociationsResult> asyncHandler) {
+        final GetTransitGatewayPolicyTableAssociationsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetTransitGatewayPolicyTableAssociationsResult>() {
+            @Override
+            public GetTransitGatewayPolicyTableAssociationsResult call() throws Exception {
+                GetTransitGatewayPolicyTableAssociationsResult result = null;
+
+                try {
+                    result = executeGetTransitGatewayPolicyTableAssociations(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetTransitGatewayPolicyTableEntriesResult> getTransitGatewayPolicyTableEntriesAsync(
+            GetTransitGatewayPolicyTableEntriesRequest request) {
+
+        return getTransitGatewayPolicyTableEntriesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetTransitGatewayPolicyTableEntriesResult> getTransitGatewayPolicyTableEntriesAsync(
+            final GetTransitGatewayPolicyTableEntriesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetTransitGatewayPolicyTableEntriesRequest, GetTransitGatewayPolicyTableEntriesResult> asyncHandler) {
+        final GetTransitGatewayPolicyTableEntriesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetTransitGatewayPolicyTableEntriesResult>() {
+            @Override
+            public GetTransitGatewayPolicyTableEntriesResult call() throws Exception {
+                GetTransitGatewayPolicyTableEntriesResult result = null;
+
+                try {
+                    result = executeGetTransitGatewayPolicyTableEntries(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

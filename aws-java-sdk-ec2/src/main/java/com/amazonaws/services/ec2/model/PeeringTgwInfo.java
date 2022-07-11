@@ -32,6 +32,8 @@ public class PeeringTgwInfo implements Serializable, Cloneable {
      * </p>
      */
     private String transitGatewayId;
+
+    private String coreNetworkId;
     /**
      * <p>
      * The ID of the Amazon Web Services account that owns the transit gateway.
@@ -82,6 +84,32 @@ public class PeeringTgwInfo implements Serializable, Cloneable {
 
     public PeeringTgwInfo withTransitGatewayId(String transitGatewayId) {
         setTransitGatewayId(transitGatewayId);
+        return this;
+    }
+
+    /**
+     * @param coreNetworkId
+     */
+
+    public void setCoreNetworkId(String coreNetworkId) {
+        this.coreNetworkId = coreNetworkId;
+    }
+
+    /**
+     * @return
+     */
+
+    public String getCoreNetworkId() {
+        return this.coreNetworkId;
+    }
+
+    /**
+     * @param coreNetworkId
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PeeringTgwInfo withCoreNetworkId(String coreNetworkId) {
+        setCoreNetworkId(coreNetworkId);
         return this;
     }
 
@@ -179,6 +207,8 @@ public class PeeringTgwInfo implements Serializable, Cloneable {
         sb.append("{");
         if (getTransitGatewayId() != null)
             sb.append("TransitGatewayId: ").append(getTransitGatewayId()).append(",");
+        if (getCoreNetworkId() != null)
+            sb.append("CoreNetworkId: ").append(getCoreNetworkId()).append(",");
         if (getOwnerId() != null)
             sb.append("OwnerId: ").append(getOwnerId()).append(",");
         if (getRegion() != null)
@@ -201,6 +231,10 @@ public class PeeringTgwInfo implements Serializable, Cloneable {
             return false;
         if (other.getTransitGatewayId() != null && other.getTransitGatewayId().equals(this.getTransitGatewayId()) == false)
             return false;
+        if (other.getCoreNetworkId() == null ^ this.getCoreNetworkId() == null)
+            return false;
+        if (other.getCoreNetworkId() != null && other.getCoreNetworkId().equals(this.getCoreNetworkId()) == false)
+            return false;
         if (other.getOwnerId() == null ^ this.getOwnerId() == null)
             return false;
         if (other.getOwnerId() != null && other.getOwnerId().equals(this.getOwnerId()) == false)
@@ -218,6 +252,7 @@ public class PeeringTgwInfo implements Serializable, Cloneable {
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getTransitGatewayId() == null) ? 0 : getTransitGatewayId().hashCode());
+        hashCode = prime * hashCode + ((getCoreNetworkId() == null) ? 0 : getCoreNetworkId().hashCode());
         hashCode = prime * hashCode + ((getOwnerId() == null) ? 0 : getOwnerId().hashCode());
         hashCode = prime * hashCode + ((getRegion() == null) ? 0 : getRegion().hashCode());
         return hashCode;

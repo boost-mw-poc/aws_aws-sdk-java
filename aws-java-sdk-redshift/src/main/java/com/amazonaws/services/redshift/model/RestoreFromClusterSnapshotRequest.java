@@ -73,6 +73,12 @@ public class RestoreFromClusterSnapshotRequest extends com.amazonaws.AmazonWebSe
     private String snapshotIdentifier;
     /**
      * <p>
+     * The Amazon Resource Name (ARN) of the snapshot associated with the message to restore from a cluster.
+     * </p>
+     */
+    private String snapshotArn;
+    /**
+     * <p>
      * The name of the cluster the source snapshot was created from. This parameter is required if your IAM user has a
      * policy containing a snapshot resource element that specifies anything other than * for the cluster name.
      * </p>
@@ -151,7 +157,8 @@ public class RestoreFromClusterSnapshotRequest extends com.amazonaws.AmazonWebSe
     private String hsmConfigurationIdentifier;
     /**
      * <p>
-     * The elastic IP (EIP) address for the cluster.
+     * The elastic IP (EIP) address for the cluster. You don't have to specify the EIP for a publicly accessible cluster
+     * with AvailabilityZoneRelocation turned on.
      * </p>
      */
     private String elasticIp;
@@ -667,6 +674,46 @@ public class RestoreFromClusterSnapshotRequest extends com.amazonaws.AmazonWebSe
 
     public RestoreFromClusterSnapshotRequest withSnapshotIdentifier(String snapshotIdentifier) {
         setSnapshotIdentifier(snapshotIdentifier);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the snapshot associated with the message to restore from a cluster.
+     * </p>
+     * 
+     * @param snapshotArn
+     *        The Amazon Resource Name (ARN) of the snapshot associated with the message to restore from a cluster.
+     */
+
+    public void setSnapshotArn(String snapshotArn) {
+        this.snapshotArn = snapshotArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the snapshot associated with the message to restore from a cluster.
+     * </p>
+     * 
+     * @return The Amazon Resource Name (ARN) of the snapshot associated with the message to restore from a cluster.
+     */
+
+    public String getSnapshotArn() {
+        return this.snapshotArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the snapshot associated with the message to restore from a cluster.
+     * </p>
+     * 
+     * @param snapshotArn
+     *        The Amazon Resource Name (ARN) of the snapshot associated with the message to restore from a cluster.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RestoreFromClusterSnapshotRequest withSnapshotArn(String snapshotArn) {
+        setSnapshotArn(snapshotArn);
         return this;
     }
 
@@ -1198,11 +1245,13 @@ public class RestoreFromClusterSnapshotRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The elastic IP (EIP) address for the cluster.
+     * The elastic IP (EIP) address for the cluster. You don't have to specify the EIP for a publicly accessible cluster
+     * with AvailabilityZoneRelocation turned on.
      * </p>
      * 
      * @param elasticIp
-     *        The elastic IP (EIP) address for the cluster.
+     *        The elastic IP (EIP) address for the cluster. You don't have to specify the EIP for a publicly accessible
+     *        cluster with AvailabilityZoneRelocation turned on.
      */
 
     public void setElasticIp(String elasticIp) {
@@ -1211,10 +1260,12 @@ public class RestoreFromClusterSnapshotRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The elastic IP (EIP) address for the cluster.
+     * The elastic IP (EIP) address for the cluster. You don't have to specify the EIP for a publicly accessible cluster
+     * with AvailabilityZoneRelocation turned on.
      * </p>
      * 
-     * @return The elastic IP (EIP) address for the cluster.
+     * @return The elastic IP (EIP) address for the cluster. You don't have to specify the EIP for a publicly accessible
+     *         cluster with AvailabilityZoneRelocation turned on.
      */
 
     public String getElasticIp() {
@@ -1223,11 +1274,13 @@ public class RestoreFromClusterSnapshotRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The elastic IP (EIP) address for the cluster.
+     * The elastic IP (EIP) address for the cluster. You don't have to specify the EIP for a publicly accessible cluster
+     * with AvailabilityZoneRelocation turned on.
      * </p>
      * 
      * @param elasticIp
-     *        The elastic IP (EIP) address for the cluster.
+     *        The elastic IP (EIP) address for the cluster. You don't have to specify the EIP for a publicly accessible
+     *        cluster with AvailabilityZoneRelocation turned on.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -3011,6 +3064,8 @@ public class RestoreFromClusterSnapshotRequest extends com.amazonaws.AmazonWebSe
             sb.append("ClusterIdentifier: ").append(getClusterIdentifier()).append(",");
         if (getSnapshotIdentifier() != null)
             sb.append("SnapshotIdentifier: ").append(getSnapshotIdentifier()).append(",");
+        if (getSnapshotArn() != null)
+            sb.append("SnapshotArn: ").append(getSnapshotArn()).append(",");
         if (getSnapshotClusterIdentifier() != null)
             sb.append("SnapshotClusterIdentifier: ").append(getSnapshotClusterIdentifier()).append(",");
         if (getPort() != null)
@@ -3092,6 +3147,10 @@ public class RestoreFromClusterSnapshotRequest extends com.amazonaws.AmazonWebSe
         if (other.getSnapshotIdentifier() == null ^ this.getSnapshotIdentifier() == null)
             return false;
         if (other.getSnapshotIdentifier() != null && other.getSnapshotIdentifier().equals(this.getSnapshotIdentifier()) == false)
+            return false;
+        if (other.getSnapshotArn() == null ^ this.getSnapshotArn() == null)
+            return false;
+        if (other.getSnapshotArn() != null && other.getSnapshotArn().equals(this.getSnapshotArn()) == false)
             return false;
         if (other.getSnapshotClusterIdentifier() == null ^ this.getSnapshotClusterIdentifier() == null)
             return false;
@@ -3226,6 +3285,7 @@ public class RestoreFromClusterSnapshotRequest extends com.amazonaws.AmazonWebSe
 
         hashCode = prime * hashCode + ((getClusterIdentifier() == null) ? 0 : getClusterIdentifier().hashCode());
         hashCode = prime * hashCode + ((getSnapshotIdentifier() == null) ? 0 : getSnapshotIdentifier().hashCode());
+        hashCode = prime * hashCode + ((getSnapshotArn() == null) ? 0 : getSnapshotArn().hashCode());
         hashCode = prime * hashCode + ((getSnapshotClusterIdentifier() == null) ? 0 : getSnapshotClusterIdentifier().hashCode());
         hashCode = prime * hashCode + ((getPort() == null) ? 0 : getPort().hashCode());
         hashCode = prime * hashCode + ((getAvailabilityZone() == null) ? 0 : getAvailabilityZone().hashCode());

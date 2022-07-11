@@ -1220,6 +1220,41 @@ public interface AmazonEC2Async extends AmazonEC2 {
 
     /**
      * <p>
+     * Associates the specified transit gateway attachment with a transit gateway policy table.
+     * </p>
+     * 
+     * @param associateTransitGatewayPolicyTableRequest
+     * @return A Java Future containing the result of the AssociateTransitGatewayPolicyTable operation returned by the
+     *         service.
+     * @sample AmazonEC2Async.AssociateTransitGatewayPolicyTable
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/AssociateTransitGatewayPolicyTable"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<AssociateTransitGatewayPolicyTableResult> associateTransitGatewayPolicyTableAsync(
+            AssociateTransitGatewayPolicyTableRequest associateTransitGatewayPolicyTableRequest);
+
+    /**
+     * <p>
+     * Associates the specified transit gateway attachment with a transit gateway policy table.
+     * </p>
+     * 
+     * @param associateTransitGatewayPolicyTableRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the AssociateTransitGatewayPolicyTable operation returned by the
+     *         service.
+     * @sample AmazonEC2AsyncHandler.AssociateTransitGatewayPolicyTable
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/AssociateTransitGatewayPolicyTable"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<AssociateTransitGatewayPolicyTableResult> associateTransitGatewayPolicyTableAsync(
+            AssociateTransitGatewayPolicyTableRequest associateTransitGatewayPolicyTableRequest,
+            com.amazonaws.handlers.AsyncHandler<AssociateTransitGatewayPolicyTableRequest, AssociateTransitGatewayPolicyTableResult> asyncHandler);
+
+    /**
+     * <p>
      * Associates the specified attachment with the specified transit gateway route table. You can associate only one
      * route table with an attachment.
      * </p>
@@ -5620,8 +5655,8 @@ public interface AmazonEC2Async extends AmazonEC2 {
     /**
      * <p>
      * Requests a transit gateway peering attachment between the specified transit gateway (requester) and a peer
-     * transit gateway (accepter). The peer transit gateway can be in your account or a different Amazon Web Services
-     * account.
+     * transit gateway (accepter). The transit gateways must be in different Regions. The peer transit gateway can be in
+     * your account or a different Amazon Web Services account.
      * </p>
      * <p>
      * After you create the peering attachment, the owner of the accepter transit gateway must accept the attachment
@@ -5641,8 +5676,8 @@ public interface AmazonEC2Async extends AmazonEC2 {
     /**
      * <p>
      * Requests a transit gateway peering attachment between the specified transit gateway (requester) and a peer
-     * transit gateway (accepter). The peer transit gateway can be in your account or a different Amazon Web Services
-     * account.
+     * transit gateway (accepter). The transit gateways must be in different Regions. The peer transit gateway can be in
+     * your account or a different Amazon Web Services account.
      * </p>
      * <p>
      * After you create the peering attachment, the owner of the accepter transit gateway must accept the attachment
@@ -5663,6 +5698,41 @@ public interface AmazonEC2Async extends AmazonEC2 {
     java.util.concurrent.Future<CreateTransitGatewayPeeringAttachmentResult> createTransitGatewayPeeringAttachmentAsync(
             CreateTransitGatewayPeeringAttachmentRequest createTransitGatewayPeeringAttachmentRequest,
             com.amazonaws.handlers.AsyncHandler<CreateTransitGatewayPeeringAttachmentRequest, CreateTransitGatewayPeeringAttachmentResult> asyncHandler);
+
+    /**
+     * <p>
+     * Creates a transit gateway policy table.
+     * </p>
+     * 
+     * @param createTransitGatewayPolicyTableRequest
+     * @return A Java Future containing the result of the CreateTransitGatewayPolicyTable operation returned by the
+     *         service.
+     * @sample AmazonEC2Async.CreateTransitGatewayPolicyTable
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateTransitGatewayPolicyTable"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateTransitGatewayPolicyTableResult> createTransitGatewayPolicyTableAsync(
+            CreateTransitGatewayPolicyTableRequest createTransitGatewayPolicyTableRequest);
+
+    /**
+     * <p>
+     * Creates a transit gateway policy table.
+     * </p>
+     * 
+     * @param createTransitGatewayPolicyTableRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateTransitGatewayPolicyTable operation returned by the
+     *         service.
+     * @sample AmazonEC2AsyncHandler.CreateTransitGatewayPolicyTable
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateTransitGatewayPolicyTable"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateTransitGatewayPolicyTableResult> createTransitGatewayPolicyTableAsync(
+            CreateTransitGatewayPolicyTableRequest createTransitGatewayPolicyTableRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateTransitGatewayPolicyTableRequest, CreateTransitGatewayPolicyTableResult> asyncHandler);
 
     /**
      * <p>
@@ -5766,6 +5836,41 @@ public interface AmazonEC2Async extends AmazonEC2 {
     java.util.concurrent.Future<CreateTransitGatewayRouteTableResult> createTransitGatewayRouteTableAsync(
             CreateTransitGatewayRouteTableRequest createTransitGatewayRouteTableRequest,
             com.amazonaws.handlers.AsyncHandler<CreateTransitGatewayRouteTableRequest, CreateTransitGatewayRouteTableResult> asyncHandler);
+
+    /**
+     * <p>
+     * Advertises a new transit gateway route table.
+     * </p>
+     * 
+     * @param createTransitGatewayRouteTableAnnouncementRequest
+     * @return A Java Future containing the result of the CreateTransitGatewayRouteTableAnnouncement operation returned
+     *         by the service.
+     * @sample AmazonEC2Async.CreateTransitGatewayRouteTableAnnouncement
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateTransitGatewayRouteTableAnnouncement"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateTransitGatewayRouteTableAnnouncementResult> createTransitGatewayRouteTableAnnouncementAsync(
+            CreateTransitGatewayRouteTableAnnouncementRequest createTransitGatewayRouteTableAnnouncementRequest);
+
+    /**
+     * <p>
+     * Advertises a new transit gateway route table.
+     * </p>
+     * 
+     * @param createTransitGatewayRouteTableAnnouncementRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateTransitGatewayRouteTableAnnouncement operation returned
+     *         by the service.
+     * @sample AmazonEC2AsyncHandler.CreateTransitGatewayRouteTableAnnouncement
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateTransitGatewayRouteTableAnnouncement"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateTransitGatewayRouteTableAnnouncementResult> createTransitGatewayRouteTableAnnouncementAsync(
+            CreateTransitGatewayRouteTableAnnouncementRequest createTransitGatewayRouteTableAnnouncementRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateTransitGatewayRouteTableAnnouncementRequest, CreateTransitGatewayRouteTableAnnouncementResult> asyncHandler);
 
     /**
      * <p>
@@ -8233,6 +8338,41 @@ public interface AmazonEC2Async extends AmazonEC2 {
 
     /**
      * <p>
+     * Deletes the specified transit gateway policy table.
+     * </p>
+     * 
+     * @param deleteTransitGatewayPolicyTableRequest
+     * @return A Java Future containing the result of the DeleteTransitGatewayPolicyTable operation returned by the
+     *         service.
+     * @sample AmazonEC2Async.DeleteTransitGatewayPolicyTable
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteTransitGatewayPolicyTable"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteTransitGatewayPolicyTableResult> deleteTransitGatewayPolicyTableAsync(
+            DeleteTransitGatewayPolicyTableRequest deleteTransitGatewayPolicyTableRequest);
+
+    /**
+     * <p>
+     * Deletes the specified transit gateway policy table.
+     * </p>
+     * 
+     * @param deleteTransitGatewayPolicyTableRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteTransitGatewayPolicyTable operation returned by the
+     *         service.
+     * @sample AmazonEC2AsyncHandler.DeleteTransitGatewayPolicyTable
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteTransitGatewayPolicyTable"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteTransitGatewayPolicyTableResult> deleteTransitGatewayPolicyTableAsync(
+            DeleteTransitGatewayPolicyTableRequest deleteTransitGatewayPolicyTableRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteTransitGatewayPolicyTableRequest, DeleteTransitGatewayPolicyTableResult> asyncHandler);
+
+    /**
+     * <p>
      * Deletes a reference (route) to a prefix list in a specified transit gateway route table.
      * </p>
      * 
@@ -8335,6 +8475,41 @@ public interface AmazonEC2Async extends AmazonEC2 {
     java.util.concurrent.Future<DeleteTransitGatewayRouteTableResult> deleteTransitGatewayRouteTableAsync(
             DeleteTransitGatewayRouteTableRequest deleteTransitGatewayRouteTableRequest,
             com.amazonaws.handlers.AsyncHandler<DeleteTransitGatewayRouteTableRequest, DeleteTransitGatewayRouteTableResult> asyncHandler);
+
+    /**
+     * <p>
+     * Advertises to the transit gateway that a transit gateway route table is deleted.
+     * </p>
+     * 
+     * @param deleteTransitGatewayRouteTableAnnouncementRequest
+     * @return A Java Future containing the result of the DeleteTransitGatewayRouteTableAnnouncement operation returned
+     *         by the service.
+     * @sample AmazonEC2Async.DeleteTransitGatewayRouteTableAnnouncement
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteTransitGatewayRouteTableAnnouncement"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteTransitGatewayRouteTableAnnouncementResult> deleteTransitGatewayRouteTableAnnouncementAsync(
+            DeleteTransitGatewayRouteTableAnnouncementRequest deleteTransitGatewayRouteTableAnnouncementRequest);
+
+    /**
+     * <p>
+     * Advertises to the transit gateway that a transit gateway route table is deleted.
+     * </p>
+     * 
+     * @param deleteTransitGatewayRouteTableAnnouncementRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteTransitGatewayRouteTableAnnouncement operation returned
+     *         by the service.
+     * @sample AmazonEC2AsyncHandler.DeleteTransitGatewayRouteTableAnnouncement
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteTransitGatewayRouteTableAnnouncement"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteTransitGatewayRouteTableAnnouncementResult> deleteTransitGatewayRouteTableAnnouncementAsync(
+            DeleteTransitGatewayRouteTableAnnouncementRequest deleteTransitGatewayRouteTableAnnouncementRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteTransitGatewayRouteTableAnnouncementRequest, DeleteTransitGatewayRouteTableAnnouncementResult> asyncHandler);
 
     /**
      * <p>
@@ -14490,6 +14665,78 @@ public interface AmazonEC2Async extends AmazonEC2 {
 
     /**
      * <p>
+     * Describes one or more transit gateway route policy tables.
+     * </p>
+     * 
+     * @param describeTransitGatewayPolicyTablesRequest
+     * @return A Java Future containing the result of the DescribeTransitGatewayPolicyTables operation returned by the
+     *         service.
+     * @sample AmazonEC2Async.DescribeTransitGatewayPolicyTables
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeTransitGatewayPolicyTables"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeTransitGatewayPolicyTablesResult> describeTransitGatewayPolicyTablesAsync(
+            DescribeTransitGatewayPolicyTablesRequest describeTransitGatewayPolicyTablesRequest);
+
+    /**
+     * <p>
+     * Describes one or more transit gateway route policy tables.
+     * </p>
+     * 
+     * @param describeTransitGatewayPolicyTablesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeTransitGatewayPolicyTables operation returned by the
+     *         service.
+     * @sample AmazonEC2AsyncHandler.DescribeTransitGatewayPolicyTables
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeTransitGatewayPolicyTables"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeTransitGatewayPolicyTablesResult> describeTransitGatewayPolicyTablesAsync(
+            DescribeTransitGatewayPolicyTablesRequest describeTransitGatewayPolicyTablesRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeTransitGatewayPolicyTablesRequest, DescribeTransitGatewayPolicyTablesResult> asyncHandler);
+
+    /**
+     * <p>
+     * Describes one or more transit gateway route table advertisements.
+     * </p>
+     * 
+     * @param describeTransitGatewayRouteTableAnnouncementsRequest
+     * @return A Java Future containing the result of the DescribeTransitGatewayRouteTableAnnouncements operation
+     *         returned by the service.
+     * @sample AmazonEC2Async.DescribeTransitGatewayRouteTableAnnouncements
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeTransitGatewayRouteTableAnnouncements"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeTransitGatewayRouteTableAnnouncementsResult> describeTransitGatewayRouteTableAnnouncementsAsync(
+            DescribeTransitGatewayRouteTableAnnouncementsRequest describeTransitGatewayRouteTableAnnouncementsRequest);
+
+    /**
+     * <p>
+     * Describes one or more transit gateway route table advertisements.
+     * </p>
+     * 
+     * @param describeTransitGatewayRouteTableAnnouncementsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeTransitGatewayRouteTableAnnouncements operation
+     *         returned by the service.
+     * @sample AmazonEC2AsyncHandler.DescribeTransitGatewayRouteTableAnnouncements
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeTransitGatewayRouteTableAnnouncements"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeTransitGatewayRouteTableAnnouncementsResult> describeTransitGatewayRouteTableAnnouncementsAsync(
+            DescribeTransitGatewayRouteTableAnnouncementsRequest describeTransitGatewayRouteTableAnnouncementsRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeTransitGatewayRouteTableAnnouncementsRequest, DescribeTransitGatewayRouteTableAnnouncementsResult> asyncHandler);
+
+    /**
+     * <p>
      * Describes one or more transit gateway route tables. By default, all transit gateway route tables are described.
      * Alternatively, you can filter the results.
      * </p>
@@ -16484,6 +16731,41 @@ public interface AmazonEC2Async extends AmazonEC2 {
     java.util.concurrent.Future<DisassociateTransitGatewayMulticastDomainResult> disassociateTransitGatewayMulticastDomainAsync(
             DisassociateTransitGatewayMulticastDomainRequest disassociateTransitGatewayMulticastDomainRequest,
             com.amazonaws.handlers.AsyncHandler<DisassociateTransitGatewayMulticastDomainRequest, DisassociateTransitGatewayMulticastDomainResult> asyncHandler);
+
+    /**
+     * <p>
+     * Removes the association between an an attachment and a policy table.
+     * </p>
+     * 
+     * @param disassociateTransitGatewayPolicyTableRequest
+     * @return A Java Future containing the result of the DisassociateTransitGatewayPolicyTable operation returned by
+     *         the service.
+     * @sample AmazonEC2Async.DisassociateTransitGatewayPolicyTable
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DisassociateTransitGatewayPolicyTable"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DisassociateTransitGatewayPolicyTableResult> disassociateTransitGatewayPolicyTableAsync(
+            DisassociateTransitGatewayPolicyTableRequest disassociateTransitGatewayPolicyTableRequest);
+
+    /**
+     * <p>
+     * Removes the association between an an attachment and a policy table.
+     * </p>
+     * 
+     * @param disassociateTransitGatewayPolicyTableRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DisassociateTransitGatewayPolicyTable operation returned by
+     *         the service.
+     * @sample AmazonEC2AsyncHandler.DisassociateTransitGatewayPolicyTable
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DisassociateTransitGatewayPolicyTable"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DisassociateTransitGatewayPolicyTableResult> disassociateTransitGatewayPolicyTableAsync(
+            DisassociateTransitGatewayPolicyTableRequest disassociateTransitGatewayPolicyTableRequest,
+            com.amazonaws.handlers.AsyncHandler<DisassociateTransitGatewayPolicyTableRequest, DisassociateTransitGatewayPolicyTableResult> asyncHandler);
 
     /**
      * <p>
@@ -18542,6 +18824,76 @@ public interface AmazonEC2Async extends AmazonEC2 {
     java.util.concurrent.Future<GetTransitGatewayMulticastDomainAssociationsResult> getTransitGatewayMulticastDomainAssociationsAsync(
             GetTransitGatewayMulticastDomainAssociationsRequest getTransitGatewayMulticastDomainAssociationsRequest,
             com.amazonaws.handlers.AsyncHandler<GetTransitGatewayMulticastDomainAssociationsRequest, GetTransitGatewayMulticastDomainAssociationsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Gets a list of the transit gateway policy table associations.
+     * </p>
+     * 
+     * @param getTransitGatewayPolicyTableAssociationsRequest
+     * @return A Java Future containing the result of the GetTransitGatewayPolicyTableAssociations operation returned by
+     *         the service.
+     * @sample AmazonEC2Async.GetTransitGatewayPolicyTableAssociations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/GetTransitGatewayPolicyTableAssociations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetTransitGatewayPolicyTableAssociationsResult> getTransitGatewayPolicyTableAssociationsAsync(
+            GetTransitGatewayPolicyTableAssociationsRequest getTransitGatewayPolicyTableAssociationsRequest);
+
+    /**
+     * <p>
+     * Gets a list of the transit gateway policy table associations.
+     * </p>
+     * 
+     * @param getTransitGatewayPolicyTableAssociationsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetTransitGatewayPolicyTableAssociations operation returned by
+     *         the service.
+     * @sample AmazonEC2AsyncHandler.GetTransitGatewayPolicyTableAssociations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/GetTransitGatewayPolicyTableAssociations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetTransitGatewayPolicyTableAssociationsResult> getTransitGatewayPolicyTableAssociationsAsync(
+            GetTransitGatewayPolicyTableAssociationsRequest getTransitGatewayPolicyTableAssociationsRequest,
+            com.amazonaws.handlers.AsyncHandler<GetTransitGatewayPolicyTableAssociationsRequest, GetTransitGatewayPolicyTableAssociationsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Returns a list of transit gateway policy table entries.
+     * </p>
+     * 
+     * @param getTransitGatewayPolicyTableEntriesRequest
+     * @return A Java Future containing the result of the GetTransitGatewayPolicyTableEntries operation returned by the
+     *         service.
+     * @sample AmazonEC2Async.GetTransitGatewayPolicyTableEntries
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/GetTransitGatewayPolicyTableEntries"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetTransitGatewayPolicyTableEntriesResult> getTransitGatewayPolicyTableEntriesAsync(
+            GetTransitGatewayPolicyTableEntriesRequest getTransitGatewayPolicyTableEntriesRequest);
+
+    /**
+     * <p>
+     * Returns a list of transit gateway policy table entries.
+     * </p>
+     * 
+     * @param getTransitGatewayPolicyTableEntriesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetTransitGatewayPolicyTableEntries operation returned by the
+     *         service.
+     * @sample AmazonEC2AsyncHandler.GetTransitGatewayPolicyTableEntries
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/GetTransitGatewayPolicyTableEntries"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetTransitGatewayPolicyTableEntriesResult> getTransitGatewayPolicyTableEntriesAsync(
+            GetTransitGatewayPolicyTableEntriesRequest getTransitGatewayPolicyTableEntriesRequest,
+            com.amazonaws.handlers.AsyncHandler<GetTransitGatewayPolicyTableEntriesRequest, GetTransitGatewayPolicyTableEntriesResult> asyncHandler);
 
     /**
      * <p>

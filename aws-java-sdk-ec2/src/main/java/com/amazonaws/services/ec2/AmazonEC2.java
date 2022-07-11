@@ -636,6 +636,20 @@ public interface AmazonEC2 {
 
     /**
      * <p>
+     * Associates the specified transit gateway attachment with a transit gateway policy table.
+     * </p>
+     * 
+     * @param associateTransitGatewayPolicyTableRequest
+     * @return Result of the AssociateTransitGatewayPolicyTable operation returned by the service.
+     * @sample AmazonEC2.AssociateTransitGatewayPolicyTable
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/AssociateTransitGatewayPolicyTable"
+     *      target="_top">AWS API Documentation</a>
+     */
+    AssociateTransitGatewayPolicyTableResult associateTransitGatewayPolicyTable(
+            AssociateTransitGatewayPolicyTableRequest associateTransitGatewayPolicyTableRequest);
+
+    /**
+     * <p>
      * Associates the specified attachment with the specified transit gateway route table. You can associate only one
      * route table with an attachment.
      * </p>
@@ -2592,8 +2606,8 @@ public interface AmazonEC2 {
     /**
      * <p>
      * Requests a transit gateway peering attachment between the specified transit gateway (requester) and a peer
-     * transit gateway (accepter). The peer transit gateway can be in your account or a different Amazon Web Services
-     * account.
+     * transit gateway (accepter). The transit gateways must be in different Regions. The peer transit gateway can be in
+     * your account or a different Amazon Web Services account.
      * </p>
      * <p>
      * After you create the peering attachment, the owner of the accepter transit gateway must accept the attachment
@@ -2608,6 +2622,19 @@ public interface AmazonEC2 {
      */
     CreateTransitGatewayPeeringAttachmentResult createTransitGatewayPeeringAttachment(
             CreateTransitGatewayPeeringAttachmentRequest createTransitGatewayPeeringAttachmentRequest);
+
+    /**
+     * <p>
+     * Creates a transit gateway policy table.
+     * </p>
+     * 
+     * @param createTransitGatewayPolicyTableRequest
+     * @return Result of the CreateTransitGatewayPolicyTable operation returned by the service.
+     * @sample AmazonEC2.CreateTransitGatewayPolicyTable
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateTransitGatewayPolicyTable"
+     *      target="_top">AWS API Documentation</a>
+     */
+    CreateTransitGatewayPolicyTableResult createTransitGatewayPolicyTable(CreateTransitGatewayPolicyTableRequest createTransitGatewayPolicyTableRequest);
 
     /**
      * <p>
@@ -2648,6 +2675,20 @@ public interface AmazonEC2 {
      *      target="_top">AWS API Documentation</a>
      */
     CreateTransitGatewayRouteTableResult createTransitGatewayRouteTable(CreateTransitGatewayRouteTableRequest createTransitGatewayRouteTableRequest);
+
+    /**
+     * <p>
+     * Advertises a new transit gateway route table.
+     * </p>
+     * 
+     * @param createTransitGatewayRouteTableAnnouncementRequest
+     * @return Result of the CreateTransitGatewayRouteTableAnnouncement operation returned by the service.
+     * @sample AmazonEC2.CreateTransitGatewayRouteTableAnnouncement
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateTransitGatewayRouteTableAnnouncement"
+     *      target="_top">AWS API Documentation</a>
+     */
+    CreateTransitGatewayRouteTableAnnouncementResult createTransitGatewayRouteTableAnnouncement(
+            CreateTransitGatewayRouteTableAnnouncementRequest createTransitGatewayRouteTableAnnouncementRequest);
 
     /**
      * <p>
@@ -3700,6 +3741,19 @@ public interface AmazonEC2 {
 
     /**
      * <p>
+     * Deletes the specified transit gateway policy table.
+     * </p>
+     * 
+     * @param deleteTransitGatewayPolicyTableRequest
+     * @return Result of the DeleteTransitGatewayPolicyTable operation returned by the service.
+     * @sample AmazonEC2.DeleteTransitGatewayPolicyTable
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteTransitGatewayPolicyTable"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DeleteTransitGatewayPolicyTableResult deleteTransitGatewayPolicyTable(DeleteTransitGatewayPolicyTableRequest deleteTransitGatewayPolicyTableRequest);
+
+    /**
+     * <p>
      * Deletes a reference (route) to a prefix list in a specified transit gateway route table.
      * </p>
      * 
@@ -3738,6 +3792,20 @@ public interface AmazonEC2 {
      *      target="_top">AWS API Documentation</a>
      */
     DeleteTransitGatewayRouteTableResult deleteTransitGatewayRouteTable(DeleteTransitGatewayRouteTableRequest deleteTransitGatewayRouteTableRequest);
+
+    /**
+     * <p>
+     * Advertises to the transit gateway that a transit gateway route table is deleted.
+     * </p>
+     * 
+     * @param deleteTransitGatewayRouteTableAnnouncementRequest
+     * @return Result of the DeleteTransitGatewayRouteTableAnnouncement operation returned by the service.
+     * @sample AmazonEC2.DeleteTransitGatewayRouteTableAnnouncement
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteTransitGatewayRouteTableAnnouncement"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DeleteTransitGatewayRouteTableAnnouncementResult deleteTransitGatewayRouteTableAnnouncement(
+            DeleteTransitGatewayRouteTableAnnouncementRequest deleteTransitGatewayRouteTableAnnouncementRequest);
 
     /**
      * <p>
@@ -6378,6 +6446,35 @@ public interface AmazonEC2 {
 
     /**
      * <p>
+     * Describes one or more transit gateway route policy tables.
+     * </p>
+     * 
+     * @param describeTransitGatewayPolicyTablesRequest
+     * @return Result of the DescribeTransitGatewayPolicyTables operation returned by the service.
+     * @sample AmazonEC2.DescribeTransitGatewayPolicyTables
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeTransitGatewayPolicyTables"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DescribeTransitGatewayPolicyTablesResult describeTransitGatewayPolicyTables(
+            DescribeTransitGatewayPolicyTablesRequest describeTransitGatewayPolicyTablesRequest);
+
+    /**
+     * <p>
+     * Describes one or more transit gateway route table advertisements.
+     * </p>
+     * 
+     * @param describeTransitGatewayRouteTableAnnouncementsRequest
+     * @return Result of the DescribeTransitGatewayRouteTableAnnouncements operation returned by the service.
+     * @sample AmazonEC2.DescribeTransitGatewayRouteTableAnnouncements
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeTransitGatewayRouteTableAnnouncements"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DescribeTransitGatewayRouteTableAnnouncementsResult describeTransitGatewayRouteTableAnnouncements(
+            DescribeTransitGatewayRouteTableAnnouncementsRequest describeTransitGatewayRouteTableAnnouncementsRequest);
+
+    /**
+     * <p>
      * Describes one or more transit gateway route tables. By default, all transit gateway route tables are described.
      * Alternatively, you can filter the results.
      * </p>
@@ -7226,6 +7323,20 @@ public interface AmazonEC2 {
      */
     DisassociateTransitGatewayMulticastDomainResult disassociateTransitGatewayMulticastDomain(
             DisassociateTransitGatewayMulticastDomainRequest disassociateTransitGatewayMulticastDomainRequest);
+
+    /**
+     * <p>
+     * Removes the association between an an attachment and a policy table.
+     * </p>
+     * 
+     * @param disassociateTransitGatewayPolicyTableRequest
+     * @return Result of the DisassociateTransitGatewayPolicyTable operation returned by the service.
+     * @sample AmazonEC2.DisassociateTransitGatewayPolicyTable
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DisassociateTransitGatewayPolicyTable"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DisassociateTransitGatewayPolicyTableResult disassociateTransitGatewayPolicyTable(
+            DisassociateTransitGatewayPolicyTableRequest disassociateTransitGatewayPolicyTableRequest);
 
     /**
      * <p>
@@ -8096,6 +8207,34 @@ public interface AmazonEC2 {
      */
     GetTransitGatewayMulticastDomainAssociationsResult getTransitGatewayMulticastDomainAssociations(
             GetTransitGatewayMulticastDomainAssociationsRequest getTransitGatewayMulticastDomainAssociationsRequest);
+
+    /**
+     * <p>
+     * Gets a list of the transit gateway policy table associations.
+     * </p>
+     * 
+     * @param getTransitGatewayPolicyTableAssociationsRequest
+     * @return Result of the GetTransitGatewayPolicyTableAssociations operation returned by the service.
+     * @sample AmazonEC2.GetTransitGatewayPolicyTableAssociations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/GetTransitGatewayPolicyTableAssociations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetTransitGatewayPolicyTableAssociationsResult getTransitGatewayPolicyTableAssociations(
+            GetTransitGatewayPolicyTableAssociationsRequest getTransitGatewayPolicyTableAssociationsRequest);
+
+    /**
+     * <p>
+     * Returns a list of transit gateway policy table entries.
+     * </p>
+     * 
+     * @param getTransitGatewayPolicyTableEntriesRequest
+     * @return Result of the GetTransitGatewayPolicyTableEntries operation returned by the service.
+     * @sample AmazonEC2.GetTransitGatewayPolicyTableEntries
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/GetTransitGatewayPolicyTableEntries"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetTransitGatewayPolicyTableEntriesResult getTransitGatewayPolicyTableEntries(
+            GetTransitGatewayPolicyTableEntriesRequest getTransitGatewayPolicyTableEntriesRequest);
 
     /**
      * <p>
