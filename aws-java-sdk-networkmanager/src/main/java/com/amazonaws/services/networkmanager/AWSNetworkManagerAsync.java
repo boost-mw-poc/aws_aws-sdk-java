@@ -555,6 +555,76 @@ public interface AWSNetworkManagerAsync extends AWSNetworkManager {
 
     /**
      * <p>
+     * Creates a transit gateway peering connection.
+     * </p>
+     * 
+     * @param createTransitGatewayPeeringRequest
+     * @return A Java Future containing the result of the CreateTransitGatewayPeering operation returned by the service.
+     * @sample AWSNetworkManagerAsync.CreateTransitGatewayPeering
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/CreateTransitGatewayPeering"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateTransitGatewayPeeringResult> createTransitGatewayPeeringAsync(
+            CreateTransitGatewayPeeringRequest createTransitGatewayPeeringRequest);
+
+    /**
+     * <p>
+     * Creates a transit gateway peering connection.
+     * </p>
+     * 
+     * @param createTransitGatewayPeeringRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateTransitGatewayPeering operation returned by the service.
+     * @sample AWSNetworkManagerAsyncHandler.CreateTransitGatewayPeering
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/CreateTransitGatewayPeering"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateTransitGatewayPeeringResult> createTransitGatewayPeeringAsync(
+            CreateTransitGatewayPeeringRequest createTransitGatewayPeeringRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateTransitGatewayPeeringRequest, CreateTransitGatewayPeeringResult> asyncHandler);
+
+    /**
+     * <p>
+     * Creates a transit gateway route table attachment.
+     * </p>
+     * 
+     * @param createTransitGatewayRouteTableAttachmentRequest
+     * @return A Java Future containing the result of the CreateTransitGatewayRouteTableAttachment operation returned by
+     *         the service.
+     * @sample AWSNetworkManagerAsync.CreateTransitGatewayRouteTableAttachment
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/CreateTransitGatewayRouteTableAttachment"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateTransitGatewayRouteTableAttachmentResult> createTransitGatewayRouteTableAttachmentAsync(
+            CreateTransitGatewayRouteTableAttachmentRequest createTransitGatewayRouteTableAttachmentRequest);
+
+    /**
+     * <p>
+     * Creates a transit gateway route table attachment.
+     * </p>
+     * 
+     * @param createTransitGatewayRouteTableAttachmentRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateTransitGatewayRouteTableAttachment operation returned by
+     *         the service.
+     * @sample AWSNetworkManagerAsyncHandler.CreateTransitGatewayRouteTableAttachment
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/CreateTransitGatewayRouteTableAttachment"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateTransitGatewayRouteTableAttachmentResult> createTransitGatewayRouteTableAttachmentAsync(
+            CreateTransitGatewayRouteTableAttachmentRequest createTransitGatewayRouteTableAttachmentRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateTransitGatewayRouteTableAttachmentRequest, CreateTransitGatewayRouteTableAttachmentResult> asyncHandler);
+
+    /**
+     * <p>
      * Creates a VPC attachment on an edge location of a core network.
      * </p>
      * 
@@ -839,6 +909,37 @@ public interface AWSNetworkManagerAsync extends AWSNetworkManager {
      */
     java.util.concurrent.Future<DeleteLinkResult> deleteLinkAsync(DeleteLinkRequest deleteLinkRequest,
             com.amazonaws.handlers.AsyncHandler<DeleteLinkRequest, DeleteLinkResult> asyncHandler);
+
+    /**
+     * <p>
+     * Deletes an existing peering connection.
+     * </p>
+     * 
+     * @param deletePeeringRequest
+     * @return A Java Future containing the result of the DeletePeering operation returned by the service.
+     * @sample AWSNetworkManagerAsync.DeletePeering
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/DeletePeering" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DeletePeeringResult> deletePeeringAsync(DeletePeeringRequest deletePeeringRequest);
+
+    /**
+     * <p>
+     * Deletes an existing peering connection.
+     * </p>
+     * 
+     * @param deletePeeringRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeletePeering operation returned by the service.
+     * @sample AWSNetworkManagerAsyncHandler.DeletePeering
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/DeletePeering" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DeletePeeringResult> deletePeeringAsync(DeletePeeringRequest deletePeeringRequest,
+            com.amazonaws.handlers.AsyncHandler<DeletePeeringRequest, DeletePeeringResult> asyncHandler);
 
     /**
      * <p>
@@ -1298,6 +1399,39 @@ public interface AWSNetworkManagerAsync extends AWSNetworkManager {
 
     /**
      * <p>
+     * Returns information about a core network change event.
+     * </p>
+     * 
+     * @param getCoreNetworkChangeEventsRequest
+     * @return A Java Future containing the result of the GetCoreNetworkChangeEvents operation returned by the service.
+     * @sample AWSNetworkManagerAsync.GetCoreNetworkChangeEvents
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/GetCoreNetworkChangeEvents"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetCoreNetworkChangeEventsResult> getCoreNetworkChangeEventsAsync(
+            GetCoreNetworkChangeEventsRequest getCoreNetworkChangeEventsRequest);
+
+    /**
+     * <p>
+     * Returns information about a core network change event.
+     * </p>
+     * 
+     * @param getCoreNetworkChangeEventsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetCoreNetworkChangeEvents operation returned by the service.
+     * @sample AWSNetworkManagerAsyncHandler.GetCoreNetworkChangeEvents
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/GetCoreNetworkChangeEvents"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetCoreNetworkChangeEventsResult> getCoreNetworkChangeEventsAsync(
+            GetCoreNetworkChangeEventsRequest getCoreNetworkChangeEventsRequest,
+            com.amazonaws.handlers.AsyncHandler<GetCoreNetworkChangeEventsRequest, GetCoreNetworkChangeEventsResult> asyncHandler);
+
+    /**
+     * <p>
      * Returns a change set between the LIVE core network policy and a submitted policy.
      * </p>
      * 
@@ -1329,7 +1463,7 @@ public interface AWSNetworkManagerAsync extends AWSNetworkManager {
 
     /**
      * <p>
-     * Gets details about a core network policy. You can get details about your current live policy or any previous
+     * Returns details about a core network policy. You can get details about your current live policy or any previous
      * policy version.
      * </p>
      * 
@@ -1343,7 +1477,7 @@ public interface AWSNetworkManagerAsync extends AWSNetworkManager {
 
     /**
      * <p>
-     * Gets details about a core network policy. You can get details about your current live policy or any previous
+     * Returns details about a core network policy. You can get details about your current live policy or any previous
      * policy version.
      * </p>
      * 
@@ -1830,6 +1964,37 @@ public interface AWSNetworkManagerAsync extends AWSNetworkManager {
 
     /**
      * <p>
+     * Returns information about a transit gateway peer.
+     * </p>
+     * 
+     * @param getTransitGatewayPeeringRequest
+     * @return A Java Future containing the result of the GetTransitGatewayPeering operation returned by the service.
+     * @sample AWSNetworkManagerAsync.GetTransitGatewayPeering
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/GetTransitGatewayPeering"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetTransitGatewayPeeringResult> getTransitGatewayPeeringAsync(GetTransitGatewayPeeringRequest getTransitGatewayPeeringRequest);
+
+    /**
+     * <p>
+     * Returns information about a transit gateway peer.
+     * </p>
+     * 
+     * @param getTransitGatewayPeeringRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetTransitGatewayPeering operation returned by the service.
+     * @sample AWSNetworkManagerAsyncHandler.GetTransitGatewayPeering
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/GetTransitGatewayPeering"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetTransitGatewayPeeringResult> getTransitGatewayPeeringAsync(GetTransitGatewayPeeringRequest getTransitGatewayPeeringRequest,
+            com.amazonaws.handlers.AsyncHandler<GetTransitGatewayPeeringRequest, GetTransitGatewayPeeringResult> asyncHandler);
+
+    /**
+     * <p>
      * Gets information about the transit gateway registrations in a specified global network.
      * </p>
      * 
@@ -1862,6 +2027,43 @@ public interface AWSNetworkManagerAsync extends AWSNetworkManager {
     java.util.concurrent.Future<GetTransitGatewayRegistrationsResult> getTransitGatewayRegistrationsAsync(
             GetTransitGatewayRegistrationsRequest getTransitGatewayRegistrationsRequest,
             com.amazonaws.handlers.AsyncHandler<GetTransitGatewayRegistrationsRequest, GetTransitGatewayRegistrationsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Returns information about a transit gateway route table attachment.
+     * </p>
+     * 
+     * @param getTransitGatewayRouteTableAttachmentRequest
+     * @return A Java Future containing the result of the GetTransitGatewayRouteTableAttachment operation returned by
+     *         the service.
+     * @sample AWSNetworkManagerAsync.GetTransitGatewayRouteTableAttachment
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/GetTransitGatewayRouteTableAttachment"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetTransitGatewayRouteTableAttachmentResult> getTransitGatewayRouteTableAttachmentAsync(
+            GetTransitGatewayRouteTableAttachmentRequest getTransitGatewayRouteTableAttachmentRequest);
+
+    /**
+     * <p>
+     * Returns information about a transit gateway route table attachment.
+     * </p>
+     * 
+     * @param getTransitGatewayRouteTableAttachmentRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetTransitGatewayRouteTableAttachment operation returned by
+     *         the service.
+     * @sample AWSNetworkManagerAsyncHandler.GetTransitGatewayRouteTableAttachment
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/GetTransitGatewayRouteTableAttachment"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetTransitGatewayRouteTableAttachmentResult> getTransitGatewayRouteTableAttachmentAsync(
+            GetTransitGatewayRouteTableAttachmentRequest getTransitGatewayRouteTableAttachmentRequest,
+            com.amazonaws.handlers.AsyncHandler<GetTransitGatewayRouteTableAttachmentRequest, GetTransitGatewayRouteTableAttachmentResult> asyncHandler);
 
     /**
      * <p>
@@ -2023,6 +2225,11 @@ public interface AWSNetworkManagerAsync extends AWSNetworkManager {
             com.amazonaws.handlers.AsyncHandler<ListCoreNetworksRequest, ListCoreNetworksResult> asyncHandler);
 
     /**
+     * <p>
+     * Gets the status of the Service Linked Role (SLR) deployment for the accounts in a given Amazon Web Services
+     * Organization.
+     * </p>
+     * 
      * @param listOrganizationServiceAccessStatusRequest
      * @return A Java Future containing the result of the ListOrganizationServiceAccessStatus operation returned by the
      *         service.
@@ -2035,6 +2242,11 @@ public interface AWSNetworkManagerAsync extends AWSNetworkManager {
             ListOrganizationServiceAccessStatusRequest listOrganizationServiceAccessStatusRequest);
 
     /**
+     * <p>
+     * Gets the status of the Service Linked Role (SLR) deployment for the accounts in a given Amazon Web Services
+     * Organization.
+     * </p>
+     * 
      * @param listOrganizationServiceAccessStatusRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -2050,6 +2262,37 @@ public interface AWSNetworkManagerAsync extends AWSNetworkManager {
     java.util.concurrent.Future<ListOrganizationServiceAccessStatusResult> listOrganizationServiceAccessStatusAsync(
             ListOrganizationServiceAccessStatusRequest listOrganizationServiceAccessStatusRequest,
             com.amazonaws.handlers.AsyncHandler<ListOrganizationServiceAccessStatusRequest, ListOrganizationServiceAccessStatusResult> asyncHandler);
+
+    /**
+     * <p>
+     * Lists the peerings for a core network.
+     * </p>
+     * 
+     * @param listPeeringsRequest
+     * @return A Java Future containing the result of the ListPeerings operation returned by the service.
+     * @sample AWSNetworkManagerAsync.ListPeerings
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/ListPeerings" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ListPeeringsResult> listPeeringsAsync(ListPeeringsRequest listPeeringsRequest);
+
+    /**
+     * <p>
+     * Lists the peerings for a core network.
+     * </p>
+     * 
+     * @param listPeeringsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListPeerings operation returned by the service.
+     * @sample AWSNetworkManagerAsyncHandler.ListPeerings
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/ListPeerings" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ListPeeringsResult> listPeeringsAsync(ListPeeringsRequest listPeeringsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListPeeringsRequest, ListPeeringsResult> asyncHandler);
 
     /**
      * <p>
@@ -2250,6 +2493,11 @@ public interface AWSNetworkManagerAsync extends AWSNetworkManager {
             com.amazonaws.handlers.AsyncHandler<RestoreCoreNetworkPolicyVersionRequest, RestoreCoreNetworkPolicyVersionResult> asyncHandler);
 
     /**
+     * <p>
+     * Enables for the Network Manager service for an Amazon Web Services Organization. This can only be called by a
+     * management account within the organization.
+     * </p>
+     * 
      * @param startOrganizationServiceAccessUpdateRequest
      * @return A Java Future containing the result of the StartOrganizationServiceAccessUpdate operation returned by the
      *         service.
@@ -2262,6 +2510,11 @@ public interface AWSNetworkManagerAsync extends AWSNetworkManager {
             StartOrganizationServiceAccessUpdateRequest startOrganizationServiceAccessUpdateRequest);
 
     /**
+     * <p>
+     * Enables for the Network Manager service for an Amazon Web Services Organization. This can only be called by a
+     * management account within the organization.
+     * </p>
+     * 
      * @param startOrganizationServiceAccessUpdateRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an

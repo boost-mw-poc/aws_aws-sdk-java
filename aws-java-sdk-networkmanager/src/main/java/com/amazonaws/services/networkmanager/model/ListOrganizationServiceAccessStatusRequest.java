@@ -25,12 +25,26 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ListOrganizationServiceAccessStatusRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * The maximum number of results to return.
+     * </p>
+     */
     private Integer maxResults;
-
+    /**
+     * <p>
+     * The token for the next page of results.
+     * </p>
+     */
     private String nextToken;
 
     /**
+     * <p>
+     * The maximum number of results to return.
+     * </p>
+     * 
      * @param maxResults
+     *        The maximum number of results to return.
      */
 
     public void setMaxResults(Integer maxResults) {
@@ -38,7 +52,11 @@ public class ListOrganizationServiceAccessStatusRequest extends com.amazonaws.Am
     }
 
     /**
-     * @return
+     * <p>
+     * The maximum number of results to return.
+     * </p>
+     * 
+     * @return The maximum number of results to return.
      */
 
     public Integer getMaxResults() {
@@ -46,7 +64,12 @@ public class ListOrganizationServiceAccessStatusRequest extends com.amazonaws.Am
     }
 
     /**
+     * <p>
+     * The maximum number of results to return.
+     * </p>
+     * 
      * @param maxResults
+     *        The maximum number of results to return.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -56,7 +79,12 @@ public class ListOrganizationServiceAccessStatusRequest extends com.amazonaws.Am
     }
 
     /**
+     * <p>
+     * The token for the next page of results.
+     * </p>
+     * 
      * @param nextToken
+     *        The token for the next page of results.
      */
 
     public void setNextToken(String nextToken) {
@@ -64,7 +92,11 @@ public class ListOrganizationServiceAccessStatusRequest extends com.amazonaws.Am
     }
 
     /**
-     * @return
+     * <p>
+     * The token for the next page of results.
+     * </p>
+     * 
+     * @return The token for the next page of results.
      */
 
     public String getNextToken() {
@@ -72,7 +104,12 @@ public class ListOrganizationServiceAccessStatusRequest extends com.amazonaws.Am
     }
 
     /**
+     * <p>
+     * The token for the next page of results.
+     * </p>
+     * 
      * @param nextToken
+     *        The token for the next page of results.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -24,12 +24,26 @@ import javax.annotation.Generated;
 public class ListOrganizationServiceAccessStatusResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable,
         Cloneable {
 
+    /**
+     * <p>
+     * Displays the status of an Amazon Web Services Organization.
+     * </p>
+     */
     private OrganizationStatus organizationStatus;
-
+    /**
+     * <p>
+     * The token for the next page of results.
+     * </p>
+     */
     private String nextToken;
 
     /**
+     * <p>
+     * Displays the status of an Amazon Web Services Organization.
+     * </p>
+     * 
      * @param organizationStatus
+     *        Displays the status of an Amazon Web Services Organization.
      */
 
     public void setOrganizationStatus(OrganizationStatus organizationStatus) {
@@ -37,7 +51,11 @@ public class ListOrganizationServiceAccessStatusResult extends com.amazonaws.Ama
     }
 
     /**
-     * @return
+     * <p>
+     * Displays the status of an Amazon Web Services Organization.
+     * </p>
+     * 
+     * @return Displays the status of an Amazon Web Services Organization.
      */
 
     public OrganizationStatus getOrganizationStatus() {
@@ -45,7 +63,12 @@ public class ListOrganizationServiceAccessStatusResult extends com.amazonaws.Ama
     }
 
     /**
+     * <p>
+     * Displays the status of an Amazon Web Services Organization.
+     * </p>
+     * 
      * @param organizationStatus
+     *        Displays the status of an Amazon Web Services Organization.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -55,7 +78,12 @@ public class ListOrganizationServiceAccessStatusResult extends com.amazonaws.Ama
     }
 
     /**
+     * <p>
+     * The token for the next page of results.
+     * </p>
+     * 
      * @param nextToken
+     *        The token for the next page of results.
      */
 
     public void setNextToken(String nextToken) {
@@ -63,7 +91,11 @@ public class ListOrganizationServiceAccessStatusResult extends com.amazonaws.Ama
     }
 
     /**
-     * @return
+     * <p>
+     * The token for the next page of results.
+     * </p>
+     * 
+     * @return The token for the next page of results.
      */
 
     public String getNextToken() {
@@ -71,7 +103,12 @@ public class ListOrganizationServiceAccessStatusResult extends com.amazonaws.Ama
     }
 
     /**
+     * <p>
+     * The token for the next page of results.
+     * </p>
+     * 
      * @param nextToken
+     *        The token for the next page of results.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

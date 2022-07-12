@@ -24,10 +24,20 @@ import javax.annotation.Generated;
 public class StartOrganizationServiceAccessUpdateResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable,
         Cloneable {
 
+    /**
+     * <p>
+     * The status of the service access update request for an Amazon Web Services Organization.
+     * </p>
+     */
     private OrganizationStatus organizationStatus;
 
     /**
+     * <p>
+     * The status of the service access update request for an Amazon Web Services Organization.
+     * </p>
+     * 
      * @param organizationStatus
+     *        The status of the service access update request for an Amazon Web Services Organization.
      */
 
     public void setOrganizationStatus(OrganizationStatus organizationStatus) {
@@ -35,7 +45,11 @@ public class StartOrganizationServiceAccessUpdateResult extends com.amazonaws.Am
     }
 
     /**
-     * @return
+     * <p>
+     * The status of the service access update request for an Amazon Web Services Organization.
+     * </p>
+     * 
+     * @return The status of the service access update request for an Amazon Web Services Organization.
      */
 
     public OrganizationStatus getOrganizationStatus() {
@@ -43,7 +57,12 @@ public class StartOrganizationServiceAccessUpdateResult extends com.amazonaws.Am
     }
 
     /**
+     * <p>
+     * The status of the service access update request for an Amazon Web Services Organization.
+     * </p>
+     * 
      * @param organizationStatus
+     *        The status of the service access update request for an Amazon Web Services Organization.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

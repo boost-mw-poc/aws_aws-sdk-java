@@ -18,6 +18,10 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
+ * <p>
+ * Describes the current status of an account within an Amazon Web Services Organization, including service-linked roles
+ * (SLRs).
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/AccountStatus" target="_top">AWS API
  *      Documentation</a>
@@ -25,12 +29,26 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class AccountStatus implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * The ID of an account within the Amazon Web Services Organization.
+     * </p>
+     */
     private String accountId;
-
+    /**
+     * <p>
+     * The status of SLR deployment for the account.
+     * </p>
+     */
     private String sLRDeploymentStatus;
 
     /**
+     * <p>
+     * The ID of an account within the Amazon Web Services Organization.
+     * </p>
+     * 
      * @param accountId
+     *        The ID of an account within the Amazon Web Services Organization.
      */
 
     public void setAccountId(String accountId) {
@@ -38,7 +56,11 @@ public class AccountStatus implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * The ID of an account within the Amazon Web Services Organization.
+     * </p>
+     * 
+     * @return The ID of an account within the Amazon Web Services Organization.
      */
 
     public String getAccountId() {
@@ -46,7 +68,12 @@ public class AccountStatus implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The ID of an account within the Amazon Web Services Organization.
+     * </p>
+     * 
      * @param accountId
+     *        The ID of an account within the Amazon Web Services Organization.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -56,7 +83,12 @@ public class AccountStatus implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The status of SLR deployment for the account.
+     * </p>
+     * 
      * @param sLRDeploymentStatus
+     *        The status of SLR deployment for the account.
      */
 
     public void setSLRDeploymentStatus(String sLRDeploymentStatus) {
@@ -64,7 +96,11 @@ public class AccountStatus implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * The status of SLR deployment for the account.
+     * </p>
+     * 
+     * @return The status of SLR deployment for the account.
      */
 
     public String getSLRDeploymentStatus() {
@@ -72,7 +108,12 @@ public class AccountStatus implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The status of SLR deployment for the account.
+     * </p>
+     * 
      * @param sLRDeploymentStatus
+     *        The status of SLR deployment for the account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

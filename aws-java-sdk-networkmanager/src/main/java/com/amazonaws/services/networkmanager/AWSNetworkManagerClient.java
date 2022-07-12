@@ -1168,6 +1168,148 @@ public class AWSNetworkManagerClient extends AmazonWebServiceClient implements A
 
     /**
      * <p>
+     * Creates a transit gateway peering connection.
+     * </p>
+     * 
+     * @param createTransitGatewayPeeringRequest
+     * @return Result of the CreateTransitGatewayPeering operation returned by the service.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ResourceNotFoundException
+     *         The specified resource could not be found.
+     * @throws ConflictException
+     *         There was a conflict processing the request. Updating or deleting the resource can cause an inconsistent
+     *         state.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws InternalServerException
+     *         The request has failed due to an internal error.
+     * @sample AWSNetworkManager.CreateTransitGatewayPeering
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/CreateTransitGatewayPeering"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public CreateTransitGatewayPeeringResult createTransitGatewayPeering(CreateTransitGatewayPeeringRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateTransitGatewayPeering(request);
+    }
+
+    @SdkInternalApi
+    final CreateTransitGatewayPeeringResult executeCreateTransitGatewayPeering(CreateTransitGatewayPeeringRequest createTransitGatewayPeeringRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createTransitGatewayPeeringRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateTransitGatewayPeeringRequest> request = null;
+        Response<CreateTransitGatewayPeeringResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateTransitGatewayPeeringRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(createTransitGatewayPeeringRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "NetworkManager");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateTransitGatewayPeering");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<CreateTransitGatewayPeeringResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new CreateTransitGatewayPeeringResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Creates a transit gateway route table attachment.
+     * </p>
+     * 
+     * @param createTransitGatewayRouteTableAttachmentRequest
+     * @return Result of the CreateTransitGatewayRouteTableAttachment operation returned by the service.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ResourceNotFoundException
+     *         The specified resource could not be found.
+     * @throws ConflictException
+     *         There was a conflict processing the request. Updating or deleting the resource can cause an inconsistent
+     *         state.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws InternalServerException
+     *         The request has failed due to an internal error.
+     * @sample AWSNetworkManager.CreateTransitGatewayRouteTableAttachment
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/CreateTransitGatewayRouteTableAttachment"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public CreateTransitGatewayRouteTableAttachmentResult createTransitGatewayRouteTableAttachment(CreateTransitGatewayRouteTableAttachmentRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateTransitGatewayRouteTableAttachment(request);
+    }
+
+    @SdkInternalApi
+    final CreateTransitGatewayRouteTableAttachmentResult executeCreateTransitGatewayRouteTableAttachment(
+            CreateTransitGatewayRouteTableAttachmentRequest createTransitGatewayRouteTableAttachmentRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createTransitGatewayRouteTableAttachmentRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateTransitGatewayRouteTableAttachmentRequest> request = null;
+        Response<CreateTransitGatewayRouteTableAttachmentResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateTransitGatewayRouteTableAttachmentRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(createTransitGatewayRouteTableAttachmentRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "NetworkManager");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateTransitGatewayRouteTableAttachment");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<CreateTransitGatewayRouteTableAttachmentResult>> responseHandler = protocolFactory
+                    .createResponseHandler(new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                            new CreateTransitGatewayRouteTableAttachmentResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Creates a VPC attachment on an edge location of a core network.
      * </p>
      * 
@@ -1772,6 +1914,74 @@ public class AWSNetworkManagerClient extends AmazonWebServiceClient implements A
 
             HttpResponseHandler<AmazonWebServiceResponse<DeleteLinkResult>> responseHandler = protocolFactory.createResponseHandler(new JsonOperationMetadata()
                     .withPayloadJson(true).withHasStreamingSuccessResponse(false), new DeleteLinkResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Deletes an existing peering connection.
+     * </p>
+     * 
+     * @param deletePeeringRequest
+     * @return Result of the DeletePeering operation returned by the service.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ResourceNotFoundException
+     *         The specified resource could not be found.
+     * @throws ConflictException
+     *         There was a conflict processing the request. Updating or deleting the resource can cause an inconsistent
+     *         state.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws InternalServerException
+     *         The request has failed due to an internal error.
+     * @sample AWSNetworkManager.DeletePeering
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/DeletePeering" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public DeletePeeringResult deletePeering(DeletePeeringRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeletePeering(request);
+    }
+
+    @SdkInternalApi
+    final DeletePeeringResult executeDeletePeering(DeletePeeringRequest deletePeeringRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deletePeeringRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeletePeeringRequest> request = null;
+        Response<DeletePeeringResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeletePeeringRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(deletePeeringRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "NetworkManager");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeletePeering");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeletePeeringResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DeletePeeringResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -2739,6 +2949,73 @@ public class AWSNetworkManagerClient extends AmazonWebServiceClient implements A
 
     /**
      * <p>
+     * Returns information about a core network change event.
+     * </p>
+     * 
+     * @param getCoreNetworkChangeEventsRequest
+     * @return Result of the GetCoreNetworkChangeEvents operation returned by the service.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ResourceNotFoundException
+     *         The specified resource could not be found.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws InternalServerException
+     *         The request has failed due to an internal error.
+     * @sample AWSNetworkManager.GetCoreNetworkChangeEvents
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/GetCoreNetworkChangeEvents"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetCoreNetworkChangeEventsResult getCoreNetworkChangeEvents(GetCoreNetworkChangeEventsRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetCoreNetworkChangeEvents(request);
+    }
+
+    @SdkInternalApi
+    final GetCoreNetworkChangeEventsResult executeGetCoreNetworkChangeEvents(GetCoreNetworkChangeEventsRequest getCoreNetworkChangeEventsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getCoreNetworkChangeEventsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetCoreNetworkChangeEventsRequest> request = null;
+        Response<GetCoreNetworkChangeEventsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetCoreNetworkChangeEventsRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(getCoreNetworkChangeEventsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "NetworkManager");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetCoreNetworkChangeEvents");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetCoreNetworkChangeEventsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new GetCoreNetworkChangeEventsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Returns a change set between the LIVE core network policy and a submitted policy.
      * </p>
      * 
@@ -2806,7 +3083,7 @@ public class AWSNetworkManagerClient extends AmazonWebServiceClient implements A
 
     /**
      * <p>
-     * Gets details about a core network policy. You can get details about your current live policy or any previous
+     * Returns details about a core network policy. You can get details about your current live policy or any previous
      * policy version.
      * </p>
      * 
@@ -3806,6 +4083,73 @@ public class AWSNetworkManagerClient extends AmazonWebServiceClient implements A
 
     /**
      * <p>
+     * Returns information about a transit gateway peer.
+     * </p>
+     * 
+     * @param getTransitGatewayPeeringRequest
+     * @return Result of the GetTransitGatewayPeering operation returned by the service.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ResourceNotFoundException
+     *         The specified resource could not be found.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws InternalServerException
+     *         The request has failed due to an internal error.
+     * @sample AWSNetworkManager.GetTransitGatewayPeering
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/GetTransitGatewayPeering"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetTransitGatewayPeeringResult getTransitGatewayPeering(GetTransitGatewayPeeringRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetTransitGatewayPeering(request);
+    }
+
+    @SdkInternalApi
+    final GetTransitGatewayPeeringResult executeGetTransitGatewayPeering(GetTransitGatewayPeeringRequest getTransitGatewayPeeringRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getTransitGatewayPeeringRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetTransitGatewayPeeringRequest> request = null;
+        Response<GetTransitGatewayPeeringResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetTransitGatewayPeeringRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(getTransitGatewayPeeringRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "NetworkManager");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetTransitGatewayPeering");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetTransitGatewayPeeringResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new GetTransitGatewayPeeringResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Gets information about the transit gateway registrations in a specified global network.
      * </p>
      * 
@@ -3861,6 +4205,75 @@ public class AWSNetworkManagerClient extends AmazonWebServiceClient implements A
             HttpResponseHandler<AmazonWebServiceResponse<GetTransitGatewayRegistrationsResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new GetTransitGatewayRegistrationsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Returns information about a transit gateway route table attachment.
+     * </p>
+     * 
+     * @param getTransitGatewayRouteTableAttachmentRequest
+     * @return Result of the GetTransitGatewayRouteTableAttachment operation returned by the service.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ResourceNotFoundException
+     *         The specified resource could not be found.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws InternalServerException
+     *         The request has failed due to an internal error.
+     * @sample AWSNetworkManager.GetTransitGatewayRouteTableAttachment
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/GetTransitGatewayRouteTableAttachment"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetTransitGatewayRouteTableAttachmentResult getTransitGatewayRouteTableAttachment(GetTransitGatewayRouteTableAttachmentRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetTransitGatewayRouteTableAttachment(request);
+    }
+
+    @SdkInternalApi
+    final GetTransitGatewayRouteTableAttachmentResult executeGetTransitGatewayRouteTableAttachment(
+            GetTransitGatewayRouteTableAttachmentRequest getTransitGatewayRouteTableAttachmentRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getTransitGatewayRouteTableAttachmentRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetTransitGatewayRouteTableAttachmentRequest> request = null;
+        Response<GetTransitGatewayRouteTableAttachmentResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetTransitGatewayRouteTableAttachmentRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(getTransitGatewayRouteTableAttachmentRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "NetworkManager");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetTransitGatewayRouteTableAttachment");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetTransitGatewayRouteTableAttachmentResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new GetTransitGatewayRouteTableAttachmentResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -4193,6 +4606,11 @@ public class AWSNetworkManagerClient extends AmazonWebServiceClient implements A
     }
 
     /**
+     * <p>
+     * Gets the status of the Service Linked Role (SLR) deployment for the accounts in a given Amazon Web Services
+     * Organization.
+     * </p>
+     * 
      * @param listOrganizationServiceAccessStatusRequest
      * @return Result of the ListOrganizationServiceAccessStatus operation returned by the service.
      * @sample AWSNetworkManager.ListOrganizationServiceAccessStatus
@@ -4237,6 +4655,69 @@ public class AWSNetworkManagerClient extends AmazonWebServiceClient implements A
             HttpResponseHandler<AmazonWebServiceResponse<ListOrganizationServiceAccessStatusResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new ListOrganizationServiceAccessStatusResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Lists the peerings for a core network.
+     * </p>
+     * 
+     * @param listPeeringsRequest
+     * @return Result of the ListPeerings operation returned by the service.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws InternalServerException
+     *         The request has failed due to an internal error.
+     * @sample AWSNetworkManager.ListPeerings
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/ListPeerings" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public ListPeeringsResult listPeerings(ListPeeringsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListPeerings(request);
+    }
+
+    @SdkInternalApi
+    final ListPeeringsResult executeListPeerings(ListPeeringsRequest listPeeringsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listPeeringsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListPeeringsRequest> request = null;
+        Response<ListPeeringsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListPeeringsRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listPeeringsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "NetworkManager");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListPeerings");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListPeeringsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListPeeringsResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -4663,6 +5144,11 @@ public class AWSNetworkManagerClient extends AmazonWebServiceClient implements A
     }
 
     /**
+     * <p>
+     * Enables for the Network Manager service for an Amazon Web Services Organization. This can only be called by a
+     * management account within the organization.
+     * </p>
+     * 
      * @param startOrganizationServiceAccessUpdateRequest
      * @return Result of the StartOrganizationServiceAccessUpdate operation returned by the service.
      * @throws ValidationException

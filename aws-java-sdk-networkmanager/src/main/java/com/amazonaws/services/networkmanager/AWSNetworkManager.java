@@ -464,6 +464,60 @@ public interface AWSNetworkManager {
 
     /**
      * <p>
+     * Creates a transit gateway peering connection.
+     * </p>
+     * 
+     * @param createTransitGatewayPeeringRequest
+     * @return Result of the CreateTransitGatewayPeering operation returned by the service.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ResourceNotFoundException
+     *         The specified resource could not be found.
+     * @throws ConflictException
+     *         There was a conflict processing the request. Updating or deleting the resource can cause an inconsistent
+     *         state.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws InternalServerException
+     *         The request has failed due to an internal error.
+     * @sample AWSNetworkManager.CreateTransitGatewayPeering
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/CreateTransitGatewayPeering"
+     *      target="_top">AWS API Documentation</a>
+     */
+    CreateTransitGatewayPeeringResult createTransitGatewayPeering(CreateTransitGatewayPeeringRequest createTransitGatewayPeeringRequest);
+
+    /**
+     * <p>
+     * Creates a transit gateway route table attachment.
+     * </p>
+     * 
+     * @param createTransitGatewayRouteTableAttachmentRequest
+     * @return Result of the CreateTransitGatewayRouteTableAttachment operation returned by the service.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ResourceNotFoundException
+     *         The specified resource could not be found.
+     * @throws ConflictException
+     *         There was a conflict processing the request. Updating or deleting the resource can cause an inconsistent
+     *         state.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws InternalServerException
+     *         The request has failed due to an internal error.
+     * @sample AWSNetworkManager.CreateTransitGatewayRouteTableAttachment
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/CreateTransitGatewayRouteTableAttachment"
+     *      target="_top">AWS API Documentation</a>
+     */
+    CreateTransitGatewayRouteTableAttachmentResult createTransitGatewayRouteTableAttachment(
+            CreateTransitGatewayRouteTableAttachmentRequest createTransitGatewayRouteTableAttachmentRequest);
+
+    /**
+     * <p>
      * Creates a VPC attachment on an edge location of a core network.
      * </p>
      * 
@@ -697,6 +751,32 @@ public interface AWSNetworkManager {
      *      Documentation</a>
      */
     DeleteLinkResult deleteLink(DeleteLinkRequest deleteLinkRequest);
+
+    /**
+     * <p>
+     * Deletes an existing peering connection.
+     * </p>
+     * 
+     * @param deletePeeringRequest
+     * @return Result of the DeletePeering operation returned by the service.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ResourceNotFoundException
+     *         The specified resource could not be found.
+     * @throws ConflictException
+     *         There was a conflict processing the request. Updating or deleting the resource can cause an inconsistent
+     *         state.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws InternalServerException
+     *         The request has failed due to an internal error.
+     * @sample AWSNetworkManager.DeletePeering
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/DeletePeering" target="_top">AWS
+     *      API Documentation</a>
+     */
+    DeletePeeringResult deletePeering(DeletePeeringRequest deletePeeringRequest);
 
     /**
      * <p>
@@ -1054,6 +1134,29 @@ public interface AWSNetworkManager {
 
     /**
      * <p>
+     * Returns information about a core network change event.
+     * </p>
+     * 
+     * @param getCoreNetworkChangeEventsRequest
+     * @return Result of the GetCoreNetworkChangeEvents operation returned by the service.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ResourceNotFoundException
+     *         The specified resource could not be found.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws InternalServerException
+     *         The request has failed due to an internal error.
+     * @sample AWSNetworkManager.GetCoreNetworkChangeEvents
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/GetCoreNetworkChangeEvents"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetCoreNetworkChangeEventsResult getCoreNetworkChangeEvents(GetCoreNetworkChangeEventsRequest getCoreNetworkChangeEventsRequest);
+
+    /**
+     * <p>
      * Returns a change set between the LIVE core network policy and a submitted policy.
      * </p>
      * 
@@ -1077,7 +1180,7 @@ public interface AWSNetworkManager {
 
     /**
      * <p>
-     * Gets details about a core network policy. You can get details about your current live policy or any previous
+     * Returns details about a core network policy. You can get details about your current live policy or any previous
      * policy version.
      * </p>
      * 
@@ -1436,6 +1539,29 @@ public interface AWSNetworkManager {
 
     /**
      * <p>
+     * Returns information about a transit gateway peer.
+     * </p>
+     * 
+     * @param getTransitGatewayPeeringRequest
+     * @return Result of the GetTransitGatewayPeering operation returned by the service.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ResourceNotFoundException
+     *         The specified resource could not be found.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws InternalServerException
+     *         The request has failed due to an internal error.
+     * @sample AWSNetworkManager.GetTransitGatewayPeering
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/GetTransitGatewayPeering"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetTransitGatewayPeeringResult getTransitGatewayPeering(GetTransitGatewayPeeringRequest getTransitGatewayPeeringRequest);
+
+    /**
+     * <p>
      * Gets information about the transit gateway registrations in a specified global network.
      * </p>
      * 
@@ -1456,6 +1582,31 @@ public interface AWSNetworkManager {
      *      target="_top">AWS API Documentation</a>
      */
     GetTransitGatewayRegistrationsResult getTransitGatewayRegistrations(GetTransitGatewayRegistrationsRequest getTransitGatewayRegistrationsRequest);
+
+    /**
+     * <p>
+     * Returns information about a transit gateway route table attachment.
+     * </p>
+     * 
+     * @param getTransitGatewayRouteTableAttachmentRequest
+     * @return Result of the GetTransitGatewayRouteTableAttachment operation returned by the service.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ResourceNotFoundException
+     *         The specified resource could not be found.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws InternalServerException
+     *         The request has failed due to an internal error.
+     * @sample AWSNetworkManager.GetTransitGatewayRouteTableAttachment
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/GetTransitGatewayRouteTableAttachment"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetTransitGatewayRouteTableAttachmentResult getTransitGatewayRouteTableAttachment(
+            GetTransitGatewayRouteTableAttachmentRequest getTransitGatewayRouteTableAttachmentRequest);
 
     /**
      * <p>
@@ -1567,6 +1718,11 @@ public interface AWSNetworkManager {
     ListCoreNetworksResult listCoreNetworks(ListCoreNetworksRequest listCoreNetworksRequest);
 
     /**
+     * <p>
+     * Gets the status of the Service Linked Role (SLR) deployment for the accounts in a given Amazon Web Services
+     * Organization.
+     * </p>
+     * 
      * @param listOrganizationServiceAccessStatusRequest
      * @return Result of the ListOrganizationServiceAccessStatus operation returned by the service.
      * @sample AWSNetworkManager.ListOrganizationServiceAccessStatus
@@ -1576,6 +1732,27 @@ public interface AWSNetworkManager {
      */
     ListOrganizationServiceAccessStatusResult listOrganizationServiceAccessStatus(
             ListOrganizationServiceAccessStatusRequest listOrganizationServiceAccessStatusRequest);
+
+    /**
+     * <p>
+     * Lists the peerings for a core network.
+     * </p>
+     * 
+     * @param listPeeringsRequest
+     * @return Result of the ListPeerings operation returned by the service.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws InternalServerException
+     *         The request has failed due to an internal error.
+     * @sample AWSNetworkManager.ListPeerings
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/ListPeerings" target="_top">AWS
+     *      API Documentation</a>
+     */
+    ListPeeringsResult listPeerings(ListPeeringsRequest listPeeringsRequest);
 
     /**
      * <p>
@@ -1737,6 +1914,11 @@ public interface AWSNetworkManager {
     RestoreCoreNetworkPolicyVersionResult restoreCoreNetworkPolicyVersion(RestoreCoreNetworkPolicyVersionRequest restoreCoreNetworkPolicyVersionRequest);
 
     /**
+     * <p>
+     * Enables for the Network Manager service for an Amazon Web Services Organization. This can only be called by a
+     * management account within the organization.
+     * </p>
+     * 
      * @param startOrganizationServiceAccessUpdateRequest
      * @return Result of the StartOrganizationServiceAccessUpdate operation returned by the service.
      * @throws ValidationException

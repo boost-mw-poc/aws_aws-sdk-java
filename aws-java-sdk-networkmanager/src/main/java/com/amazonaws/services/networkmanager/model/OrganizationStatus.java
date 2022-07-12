@@ -18,6 +18,9 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
+ * <p>
+ * The status of an Amazon Web Services Organization and the accounts within that organization.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/OrganizationStatus" target="_top">AWS
  *      API Documentation</a>
@@ -25,16 +28,40 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class OrganizationStatus implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * The ID of an Amazon Web Services Organization.
+     * </p>
+     */
     private String organizationId;
-
+    /**
+     * <p>
+     * The status of the organization's AWS service access. This will be <code>ENABLED</code> or <code>DISABLED</code>.
+     * </p>
+     */
     private String organizationAwsServiceAccessStatus;
-
+    /**
+     * <p>
+     * The status of the SLR deployment for the account. This will be either <code>SUCCEEDED</code> or
+     * <code>IN_PROGRESS</code>.
+     * </p>
+     */
     private String sLRDeploymentStatus;
-
+    /**
+     * <p>
+     * The current service-linked role (SLR) deployment status for an Amazon Web Services Organization's accounts. This
+     * will be either <code>SUCCEEDED</code> or <code>IN_PROGRESS</code>.
+     * </p>
+     */
     private java.util.List<AccountStatus> accountStatusList;
 
     /**
+     * <p>
+     * The ID of an Amazon Web Services Organization.
+     * </p>
+     * 
      * @param organizationId
+     *        The ID of an Amazon Web Services Organization.
      */
 
     public void setOrganizationId(String organizationId) {
@@ -42,7 +69,11 @@ public class OrganizationStatus implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * @return
+     * <p>
+     * The ID of an Amazon Web Services Organization.
+     * </p>
+     * 
+     * @return The ID of an Amazon Web Services Organization.
      */
 
     public String getOrganizationId() {
@@ -50,7 +81,12 @@ public class OrganizationStatus implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * The ID of an Amazon Web Services Organization.
+     * </p>
+     * 
      * @param organizationId
+     *        The ID of an Amazon Web Services Organization.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -60,7 +96,13 @@ public class OrganizationStatus implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * The status of the organization's AWS service access. This will be <code>ENABLED</code> or <code>DISABLED</code>.
+     * </p>
+     * 
      * @param organizationAwsServiceAccessStatus
+     *        The status of the organization's AWS service access. This will be <code>ENABLED</code> or
+     *        <code>DISABLED</code>.
      */
 
     public void setOrganizationAwsServiceAccessStatus(String organizationAwsServiceAccessStatus) {
@@ -68,7 +110,12 @@ public class OrganizationStatus implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * @return
+     * <p>
+     * The status of the organization's AWS service access. This will be <code>ENABLED</code> or <code>DISABLED</code>.
+     * </p>
+     * 
+     * @return The status of the organization's AWS service access. This will be <code>ENABLED</code> or
+     *         <code>DISABLED</code>.
      */
 
     public String getOrganizationAwsServiceAccessStatus() {
@@ -76,7 +123,13 @@ public class OrganizationStatus implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * The status of the organization's AWS service access. This will be <code>ENABLED</code> or <code>DISABLED</code>.
+     * </p>
+     * 
      * @param organizationAwsServiceAccessStatus
+     *        The status of the organization's AWS service access. This will be <code>ENABLED</code> or
+     *        <code>DISABLED</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -86,7 +139,14 @@ public class OrganizationStatus implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * The status of the SLR deployment for the account. This will be either <code>SUCCEEDED</code> or
+     * <code>IN_PROGRESS</code>.
+     * </p>
+     * 
      * @param sLRDeploymentStatus
+     *        The status of the SLR deployment for the account. This will be either <code>SUCCEEDED</code> or
+     *        <code>IN_PROGRESS</code>.
      */
 
     public void setSLRDeploymentStatus(String sLRDeploymentStatus) {
@@ -94,7 +154,13 @@ public class OrganizationStatus implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * @return
+     * <p>
+     * The status of the SLR deployment for the account. This will be either <code>SUCCEEDED</code> or
+     * <code>IN_PROGRESS</code>.
+     * </p>
+     * 
+     * @return The status of the SLR deployment for the account. This will be either <code>SUCCEEDED</code> or
+     *         <code>IN_PROGRESS</code>.
      */
 
     public String getSLRDeploymentStatus() {
@@ -102,7 +168,14 @@ public class OrganizationStatus implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * The status of the SLR deployment for the account. This will be either <code>SUCCEEDED</code> or
+     * <code>IN_PROGRESS</code>.
+     * </p>
+     * 
      * @param sLRDeploymentStatus
+     *        The status of the SLR deployment for the account. This will be either <code>SUCCEEDED</code> or
+     *        <code>IN_PROGRESS</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -112,7 +185,13 @@ public class OrganizationStatus implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * @return
+     * <p>
+     * The current service-linked role (SLR) deployment status for an Amazon Web Services Organization's accounts. This
+     * will be either <code>SUCCEEDED</code> or <code>IN_PROGRESS</code>.
+     * </p>
+     * 
+     * @return The current service-linked role (SLR) deployment status for an Amazon Web Services Organization's
+     *         accounts. This will be either <code>SUCCEEDED</code> or <code>IN_PROGRESS</code>.
      */
 
     public java.util.List<AccountStatus> getAccountStatusList() {
@@ -120,7 +199,14 @@ public class OrganizationStatus implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * The current service-linked role (SLR) deployment status for an Amazon Web Services Organization's accounts. This
+     * will be either <code>SUCCEEDED</code> or <code>IN_PROGRESS</code>.
+     * </p>
+     * 
      * @param accountStatusList
+     *        The current service-linked role (SLR) deployment status for an Amazon Web Services Organization's
+     *        accounts. This will be either <code>SUCCEEDED</code> or <code>IN_PROGRESS</code>.
      */
 
     public void setAccountStatusList(java.util.Collection<AccountStatus> accountStatusList) {
@@ -134,12 +220,18 @@ public class OrganizationStatus implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
+     * The current service-linked role (SLR) deployment status for an Amazon Web Services Organization's accounts. This
+     * will be either <code>SUCCEEDED</code> or <code>IN_PROGRESS</code>.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setAccountStatusList(java.util.Collection)} or {@link #withAccountStatusList(java.util.Collection)} if
      * you want to override the existing values.
      * </p>
      * 
      * @param accountStatusList
+     *        The current service-linked role (SLR) deployment status for an Amazon Web Services Organization's
+     *        accounts. This will be either <code>SUCCEEDED</code> or <code>IN_PROGRESS</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -154,7 +246,14 @@ public class OrganizationStatus implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * The current service-linked role (SLR) deployment status for an Amazon Web Services Organization's accounts. This
+     * will be either <code>SUCCEEDED</code> or <code>IN_PROGRESS</code>.
+     * </p>
+     * 
      * @param accountStatusList
+     *        The current service-linked role (SLR) deployment status for an Amazon Web Services Organization's
+     *        accounts. This will be either <code>SUCCEEDED</code> or <code>IN_PROGRESS</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

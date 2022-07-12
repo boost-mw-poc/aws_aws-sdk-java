@@ -25,10 +25,20 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class StartOrganizationServiceAccessUpdateRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * The action to take for the update request. This can be either <code>ENABLE</code> or <code>DISABLE</code>.
+     * </p>
+     */
     private String action;
 
     /**
+     * <p>
+     * The action to take for the update request. This can be either <code>ENABLE</code> or <code>DISABLE</code>.
+     * </p>
+     * 
      * @param action
+     *        The action to take for the update request. This can be either <code>ENABLE</code> or <code>DISABLE</code>.
      */
 
     public void setAction(String action) {
@@ -36,7 +46,12 @@ public class StartOrganizationServiceAccessUpdateRequest extends com.amazonaws.A
     }
 
     /**
-     * @return
+     * <p>
+     * The action to take for the update request. This can be either <code>ENABLE</code> or <code>DISABLE</code>.
+     * </p>
+     * 
+     * @return The action to take for the update request. This can be either <code>ENABLE</code> or <code>DISABLE</code>
+     *         .
      */
 
     public String getAction() {
@@ -44,7 +59,12 @@ public class StartOrganizationServiceAccessUpdateRequest extends com.amazonaws.A
     }
 
     /**
+     * <p>
+     * The action to take for the update request. This can be either <code>ENABLE</code> or <code>DISABLE</code>.
+     * </p>
+     * 
      * @param action
+     *        The action to take for the update request. This can be either <code>ENABLE</code> or <code>DISABLE</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -1,3 +1,8 @@
+# __1.12.259__ __2022-07-12__
+## __AWS Network Manager__
+  - ### Features
+    - This release adds general availability API support for AWS Cloud WAN.
+
 # __1.12.258__ __2022-07-11__
 ## __Amazon Elastic Compute Cloud__
   - ### Features
