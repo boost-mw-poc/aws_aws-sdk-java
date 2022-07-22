@@ -705,6 +705,12 @@ public class DBInstance implements Serializable, Cloneable {
      * </p>
      */
     private String networkType;
+    /**
+     * <p>
+     * The status of the policy state of the activity stream.
+     * </p>
+     */
+    private String activityStreamPolicyStatus;
 
     /**
      * <p>
@@ -5811,6 +5817,65 @@ public class DBInstance implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * The status of the policy state of the activity stream.
+     * </p>
+     * 
+     * @param activityStreamPolicyStatus
+     *        The status of the policy state of the activity stream.
+     * @see ActivityStreamPolicyStatus
+     */
+
+    public void setActivityStreamPolicyStatus(String activityStreamPolicyStatus) {
+        this.activityStreamPolicyStatus = activityStreamPolicyStatus;
+    }
+
+    /**
+     * <p>
+     * The status of the policy state of the activity stream.
+     * </p>
+     * 
+     * @return The status of the policy state of the activity stream.
+     * @see ActivityStreamPolicyStatus
+     */
+
+    public String getActivityStreamPolicyStatus() {
+        return this.activityStreamPolicyStatus;
+    }
+
+    /**
+     * <p>
+     * The status of the policy state of the activity stream.
+     * </p>
+     * 
+     * @param activityStreamPolicyStatus
+     *        The status of the policy state of the activity stream.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ActivityStreamPolicyStatus
+     */
+
+    public DBInstance withActivityStreamPolicyStatus(String activityStreamPolicyStatus) {
+        setActivityStreamPolicyStatus(activityStreamPolicyStatus);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The status of the policy state of the activity stream.
+     * </p>
+     * 
+     * @param activityStreamPolicyStatus
+     *        The status of the policy state of the activity stream.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ActivityStreamPolicyStatus
+     */
+
+    public DBInstance withActivityStreamPolicyStatus(ActivityStreamPolicyStatus activityStreamPolicyStatus) {
+        this.activityStreamPolicyStatus = activityStreamPolicyStatus.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -5971,7 +6036,9 @@ public class DBInstance implements Serializable, Cloneable {
         if (getBackupTarget() != null)
             sb.append("BackupTarget: ").append(getBackupTarget()).append(",");
         if (getNetworkType() != null)
-            sb.append("NetworkType: ").append(getNetworkType());
+            sb.append("NetworkType: ").append(getNetworkType()).append(",");
+        if (getActivityStreamPolicyStatus() != null)
+            sb.append("ActivityStreamPolicyStatus: ").append(getActivityStreamPolicyStatus());
         sb.append("}");
         return sb.toString();
     }
@@ -6295,6 +6362,10 @@ public class DBInstance implements Serializable, Cloneable {
             return false;
         if (other.getNetworkType() != null && other.getNetworkType().equals(this.getNetworkType()) == false)
             return false;
+        if (other.getActivityStreamPolicyStatus() == null ^ this.getActivityStreamPolicyStatus() == null)
+            return false;
+        if (other.getActivityStreamPolicyStatus() != null && other.getActivityStreamPolicyStatus().equals(this.getActivityStreamPolicyStatus()) == false)
+            return false;
         return true;
     }
 
@@ -6379,6 +6450,7 @@ public class DBInstance implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getCustomIamInstanceProfile() == null) ? 0 : getCustomIamInstanceProfile().hashCode());
         hashCode = prime * hashCode + ((getBackupTarget() == null) ? 0 : getBackupTarget().hashCode());
         hashCode = prime * hashCode + ((getNetworkType() == null) ? 0 : getNetworkType().hashCode());
+        hashCode = prime * hashCode + ((getActivityStreamPolicyStatus() == null) ? 0 : getActivityStreamPolicyStatus().hashCode());
         return hashCode;
     }
 

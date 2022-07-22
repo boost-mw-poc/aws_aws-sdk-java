@@ -201,6 +201,8 @@ public enum RDSActions implements Action {
     FailoverGlobalCluster("rds:FailoverGlobalCluster"),
     /** Action for the ListTagsForResource operation. */
     ListTagsForResource("rds:ListTagsForResource"),
+    /** Action for the ModifyActivityStream operation. */
+    ModifyActivityStream("rds:ModifyActivityStream"),
     /** Action for the ModifyCertificates operation. */
     ModifyCertificates("rds:ModifyCertificates"),
     /** Action for the ModifyCurrentDBClusterCapacity operation. */

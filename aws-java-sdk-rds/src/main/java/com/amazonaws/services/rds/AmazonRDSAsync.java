@@ -4543,6 +4543,53 @@ public interface AmazonRDSAsync extends AmazonRDS {
 
     /**
      * <p>
+     * Changes the audit policy state of a database activity stream to either locked (default) or unlocked. A locked
+     * policy is read-only, whereas an unlocked policy is read/write. If your activity stream is started and locked, you
+     * can unlock it, customize your audit policy, and then lock your activity stream. Restarting the activity stream
+     * isn't required. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/DBActivityStreams.Modifying.html"> Modifying a
+     * database activity stream</a> in the <i>Amazon RDS User Guide</i>.
+     * </p>
+     * <p>
+     * This operation is supported for RDS for Oracle only.
+     * </p>
+     * 
+     * @param modifyActivityStreamRequest
+     * @return A Java Future containing the result of the ModifyActivityStream operation returned by the service.
+     * @sample AmazonRDSAsync.ModifyActivityStream
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/ModifyActivityStream" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ModifyActivityStreamResult> modifyActivityStreamAsync(ModifyActivityStreamRequest modifyActivityStreamRequest);
+
+    /**
+     * <p>
+     * Changes the audit policy state of a database activity stream to either locked (default) or unlocked. A locked
+     * policy is read-only, whereas an unlocked policy is read/write. If your activity stream is started and locked, you
+     * can unlock it, customize your audit policy, and then lock your activity stream. Restarting the activity stream
+     * isn't required. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/DBActivityStreams.Modifying.html"> Modifying a
+     * database activity stream</a> in the <i>Amazon RDS User Guide</i>.
+     * </p>
+     * <p>
+     * This operation is supported for RDS for Oracle only.
+     * </p>
+     * 
+     * @param modifyActivityStreamRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ModifyActivityStream operation returned by the service.
+     * @sample AmazonRDSAsyncHandler.ModifyActivityStream
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/ModifyActivityStream" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ModifyActivityStreamResult> modifyActivityStreamAsync(ModifyActivityStreamRequest modifyActivityStreamRequest,
+            com.amazonaws.handlers.AsyncHandler<ModifyActivityStreamRequest, ModifyActivityStreamResult> asyncHandler);
+
+    /**
+     * <p>
      * Override the system-default Secure Sockets Layer/Transport Layer Security (SSL/TLS) certificate for Amazon RDS
      * for new DB instances, or remove the override.
      * </p>

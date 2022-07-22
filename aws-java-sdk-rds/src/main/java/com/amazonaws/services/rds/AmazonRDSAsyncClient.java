@@ -3706,6 +3706,39 @@ public class AmazonRDSAsyncClient extends AmazonRDSClient implements AmazonRDSAs
     }
 
     @Override
+    public java.util.concurrent.Future<ModifyActivityStreamResult> modifyActivityStreamAsync(ModifyActivityStreamRequest request) {
+
+        return modifyActivityStreamAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ModifyActivityStreamResult> modifyActivityStreamAsync(final ModifyActivityStreamRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ModifyActivityStreamRequest, ModifyActivityStreamResult> asyncHandler) {
+        final ModifyActivityStreamRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ModifyActivityStreamResult>() {
+            @Override
+            public ModifyActivityStreamResult call() throws Exception {
+                ModifyActivityStreamResult result = null;
+
+                try {
+                    result = executeModifyActivityStream(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<Certificate> modifyCertificatesAsync(ModifyCertificatesRequest request) {
 
         return modifyCertificatesAsync(request, null);

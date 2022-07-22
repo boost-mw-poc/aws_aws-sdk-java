@@ -7051,6 +7051,76 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
 
     /**
      * <p>
+     * Changes the audit policy state of a database activity stream to either locked (default) or unlocked. A locked
+     * policy is read-only, whereas an unlocked policy is read/write. If your activity stream is started and locked, you
+     * can unlock it, customize your audit policy, and then lock your activity stream. Restarting the activity stream
+     * isn't required. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/DBActivityStreams.Modifying.html"> Modifying a
+     * database activity stream</a> in the <i>Amazon RDS User Guide</i>.
+     * </p>
+     * <p>
+     * This operation is supported for RDS for Oracle only.
+     * </p>
+     * 
+     * @param modifyActivityStreamRequest
+     * @return Result of the ModifyActivityStream operation returned by the service.
+     * @throws InvalidDBInstanceStateException
+     *         The DB instance isn't in a valid state.
+     * @throws ResourceNotFoundException
+     *         The specified resource ID was not found.
+     * @throws DBInstanceNotFoundException
+     *         <code>DBInstanceIdentifier</code> doesn't refer to an existing DB instance.
+     * @sample AmazonRDS.ModifyActivityStream
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/ModifyActivityStream" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public ModifyActivityStreamResult modifyActivityStream(ModifyActivityStreamRequest request) {
+        request = beforeClientExecution(request);
+        return executeModifyActivityStream(request);
+    }
+
+    @SdkInternalApi
+    final ModifyActivityStreamResult executeModifyActivityStream(ModifyActivityStreamRequest modifyActivityStreamRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(modifyActivityStreamRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ModifyActivityStreamRequest> request = null;
+        Response<ModifyActivityStreamResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ModifyActivityStreamRequestMarshaller().marshall(super.beforeMarshalling(modifyActivityStreamRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "RDS");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ModifyActivityStream");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<ModifyActivityStreamResult> responseHandler = new StaxResponseHandler<ModifyActivityStreamResult>(
+                    new ModifyActivityStreamResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Override the system-default Secure Sockets Layer/Transport Layer Security (SSL/TLS) certificate for Amazon RDS
      * for new DB instances, or remove the override.
      * </p>

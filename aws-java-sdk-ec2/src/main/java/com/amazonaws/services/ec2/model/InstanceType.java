@@ -544,7 +544,8 @@ public enum InstanceType {
     C7g4xlarge("c7g.4xlarge"),
     C7g8xlarge("c7g.8xlarge"),
     C7g12xlarge("c7g.12xlarge"),
-    C7g16xlarge("c7g.16xlarge");
+    C7g16xlarge("c7g.16xlarge"),
+    Mac2Metal("mac2.metal");
 
     private String value;
 
