@@ -5573,6 +5573,75 @@ public class AmazonConfigClient extends AmazonWebServiceClient implements Amazon
 
     /**
      * <p>
+     * Returns a list of conformance pack compliance scores. A compliance score is the percentage of the number of
+     * compliant rule-resource combinations in a conformance pack compared to the number of total possible rule-resource
+     * combinations in the conformance pack. This metric provides you with a high-level view of the compliance state of
+     * your conformance packs, and can be used to identify, investigate, and understand compliance deviations in your
+     * conformance packs.
+     * </p>
+     * 
+     * @param listConformancePackComplianceScoresRequest
+     * @return Result of the ListConformancePackComplianceScores operation returned by the service.
+     * @throws InvalidParameterValueException
+     *         One or more of the specified parameters are invalid. Verify that your parameters are valid and try again.
+     * @throws InvalidLimitException
+     *         The specified limit is outside the allowable range.
+     * @throws InvalidNextTokenException
+     *         The specified next token is invalid. Specify the <code>nextToken</code> string that was returned in the
+     *         previous response to get the next page of results.
+     * @sample AmazonConfig.ListConformancePackComplianceScores
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/ListConformancePackComplianceScores"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListConformancePackComplianceScoresResult listConformancePackComplianceScores(ListConformancePackComplianceScoresRequest request) {
+        request = beforeClientExecution(request);
+        return executeListConformancePackComplianceScores(request);
+    }
+
+    @SdkInternalApi
+    final ListConformancePackComplianceScoresResult executeListConformancePackComplianceScores(
+            ListConformancePackComplianceScoresRequest listConformancePackComplianceScoresRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listConformancePackComplianceScoresRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListConformancePackComplianceScoresRequest> request = null;
+        Response<ListConformancePackComplianceScoresResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListConformancePackComplianceScoresRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(listConformancePackComplianceScoresRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Config Service");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListConformancePackComplianceScores");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListConformancePackComplianceScoresResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new ListConformancePackComplianceScoresResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Accepts a resource type and returns a list of resource identifiers for the resources of that type. A resource
      * identifier includes the resource type, ID, and (if available) the custom resource name. The results consist of
      * resources that Config has discovered, including those that Config is not currently recording. You can narrow the

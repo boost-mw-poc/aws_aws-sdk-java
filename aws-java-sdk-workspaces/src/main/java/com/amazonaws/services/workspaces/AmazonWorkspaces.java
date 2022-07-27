@@ -439,6 +439,33 @@ public interface AmazonWorkspaces {
 
     /**
      * <p>
+     * Creates a new WorkSpace image from an existing WorkSpace.
+     * </p>
+     * 
+     * @param createWorkspaceImageRequest
+     * @return Result of the CreateWorkspaceImage operation returned by the service.
+     * @throws ResourceLimitExceededException
+     *         Your resource limits have been exceeded.
+     * @throws ResourceAlreadyExistsException
+     *         The specified resource already exists.
+     * @throws ResourceNotFoundException
+     *         The resource could not be found.
+     * @throws OperationNotSupportedException
+     *         This operation is not supported.
+     * @throws InvalidResourceStateException
+     *         The state of the resource is not valid for this operation.
+     * @throws AccessDeniedException
+     *         The user is not authorized to access a resource.
+     * @throws InvalidParameterValuesException
+     *         One or more parameter values are not valid.
+     * @sample AmazonWorkspaces.CreateWorkspaceImage
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/CreateWorkspaceImage"
+     *      target="_top">AWS API Documentation</a>
+     */
+    CreateWorkspaceImageResult createWorkspaceImage(CreateWorkspaceImageRequest createWorkspaceImageRequest);
+
+    /**
+     * <p>
      * Creates one or more WorkSpaces.
      * </p>
      * <p>

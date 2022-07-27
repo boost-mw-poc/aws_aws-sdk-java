@@ -3227,6 +3227,49 @@ public interface AmazonConfigAsync extends AmazonConfig {
 
     /**
      * <p>
+     * Returns a list of conformance pack compliance scores. A compliance score is the percentage of the number of
+     * compliant rule-resource combinations in a conformance pack compared to the number of total possible rule-resource
+     * combinations in the conformance pack. This metric provides you with a high-level view of the compliance state of
+     * your conformance packs, and can be used to identify, investigate, and understand compliance deviations in your
+     * conformance packs.
+     * </p>
+     * 
+     * @param listConformancePackComplianceScoresRequest
+     * @return A Java Future containing the result of the ListConformancePackComplianceScores operation returned by the
+     *         service.
+     * @sample AmazonConfigAsync.ListConformancePackComplianceScores
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/ListConformancePackComplianceScores"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListConformancePackComplianceScoresResult> listConformancePackComplianceScoresAsync(
+            ListConformancePackComplianceScoresRequest listConformancePackComplianceScoresRequest);
+
+    /**
+     * <p>
+     * Returns a list of conformance pack compliance scores. A compliance score is the percentage of the number of
+     * compliant rule-resource combinations in a conformance pack compared to the number of total possible rule-resource
+     * combinations in the conformance pack. This metric provides you with a high-level view of the compliance state of
+     * your conformance packs, and can be used to identify, investigate, and understand compliance deviations in your
+     * conformance packs.
+     * </p>
+     * 
+     * @param listConformancePackComplianceScoresRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListConformancePackComplianceScores operation returned by the
+     *         service.
+     * @sample AmazonConfigAsyncHandler.ListConformancePackComplianceScores
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/ListConformancePackComplianceScores"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListConformancePackComplianceScoresResult> listConformancePackComplianceScoresAsync(
+            ListConformancePackComplianceScoresRequest listConformancePackComplianceScoresRequest,
+            com.amazonaws.handlers.AsyncHandler<ListConformancePackComplianceScoresRequest, ListConformancePackComplianceScoresResult> asyncHandler);
+
+    /**
+     * <p>
      * Accepts a resource type and returns a list of resource identifiers for the resources of that type. A resource
      * identifier includes the resource type, ID, and (if available) the custom resource name. The results consist of
      * resources that Config has discovered, including those that Config is not currently recording. You can narrow the

@@ -15992,6 +15992,9 @@
       }, {
         "name" : "Pedro",
         "value" : "Pedro"
+      }, {
+        "name" : "Kajal",
+        "value" : "Kajal"
       } ],
       "errorCode" : null,
       "fullyQualifiedName" : "com.amazonaws.services.polly.enum.VoiceId",

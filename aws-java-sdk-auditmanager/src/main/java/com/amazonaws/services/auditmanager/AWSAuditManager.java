@@ -242,6 +242,13 @@ public interface AWSAuditManager {
      *         Manager settings page, and try again.
      * @throws InternalServerException
      *         An internal service error occurred during the processing of your request. Try again later.
+     * @throws ServiceQuotaExceededException
+     *         You've reached your account quota for this resource type. To perform the requested action, delete some
+     *         existing resources or <a
+     *         href="https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html">request a quota increase</a>
+     *         from the Service Quotas console. For a list of Audit Manager service quotas, see <a
+     *         href="https://docs.aws.amazon.com/audit-manager/latest/userguide/service-quotas.html">Quotas and
+     *         restrictions for Audit Manager</a>.
      * @sample AWSAuditManager.CreateAssessment
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/CreateAssessment" target="_top">AWS
      *      API Documentation</a>
@@ -264,6 +271,13 @@ public interface AWSAuditManager {
      *         Manager settings page, and try again.
      * @throws InternalServerException
      *         An internal service error occurred during the processing of your request. Try again later.
+     * @throws ServiceQuotaExceededException
+     *         You've reached your account quota for this resource type. To perform the requested action, delete some
+     *         existing resources or <a
+     *         href="https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html">request a quota increase</a>
+     *         from the Service Quotas console. For a list of Audit Manager service quotas, see <a
+     *         href="https://docs.aws.amazon.com/audit-manager/latest/userguide/service-quotas.html">Quotas and
+     *         restrictions for Audit Manager</a>.
      * @sample AWSAuditManager.CreateAssessmentFramework
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/CreateAssessmentFramework"
      *      target="_top">AWS API Documentation</a>
@@ -308,6 +322,13 @@ public interface AWSAuditManager {
      *         Manager settings page, and try again.
      * @throws InternalServerException
      *         An internal service error occurred during the processing of your request. Try again later.
+     * @throws ServiceQuotaExceededException
+     *         You've reached your account quota for this resource type. To perform the requested action, delete some
+     *         existing resources or <a
+     *         href="https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html">request a quota increase</a>
+     *         from the Service Quotas console. For a list of Audit Manager service quotas, see <a
+     *         href="https://docs.aws.amazon.com/audit-manager/latest/userguide/service-quotas.html">Quotas and
+     *         restrictions for Audit Manager</a>.
      * @sample AWSAuditManager.CreateControl
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/CreateControl" target="_top">AWS API
      *      Documentation</a>
@@ -1573,6 +1594,13 @@ public interface AWSAuditManager {
      *         Manager settings page, and try again.
      * @throws InternalServerException
      *         An internal service error occurred during the processing of your request. Try again later.
+     * @throws ServiceQuotaExceededException
+     *         You've reached your account quota for this resource type. To perform the requested action, delete some
+     *         existing resources or <a
+     *         href="https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html">request a quota increase</a>
+     *         from the Service Quotas console. For a list of Audit Manager service quotas, see <a
+     *         href="https://docs.aws.amazon.com/audit-manager/latest/userguide/service-quotas.html">Quotas and
+     *         restrictions for Audit Manager</a>.
      * @sample AWSAuditManager.UpdateAssessmentStatus
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/UpdateAssessmentStatus"
      *      target="_top">AWS API Documentation</a>
