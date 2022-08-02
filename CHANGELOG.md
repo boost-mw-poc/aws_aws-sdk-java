@@ -1,3 +1,12 @@
+# __1.12.274__ __2022-08-02__
+## __AWS License Manager User Subscriptions__
+  - ### Features
+    - This release supports user based subscription for Microsoft Visual Studio Professional and Enterprise on EC2.
+
+## __Amazon Personalize__
+  - ### Features
+    - This release adds support for incremental bulk ingestion for the Personalize CreateDatasetImportJob API.
+
 # __1.12.273__ __2022-08-01__
 ## __AWS Config__
   - ### Features
