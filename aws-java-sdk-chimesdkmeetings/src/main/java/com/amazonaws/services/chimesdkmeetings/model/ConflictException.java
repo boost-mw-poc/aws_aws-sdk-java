@@ -24,7 +24,11 @@ public class ConflictException extends com.amazonaws.services.chimesdkmeetings.m
     private static final long serialVersionUID = 1L;
 
     private String code;
-
+    /**
+     * <p>
+     * The ID of the request involved in the conflict.
+     * </p>
+     */
     private String requestId;
 
     /**
@@ -66,7 +70,12 @@ public class ConflictException extends com.amazonaws.services.chimesdkmeetings.m
     }
 
     /**
+     * <p>
+     * The ID of the request involved in the conflict.
+     * </p>
+     * 
      * @param requestId
+     *        The ID of the request involved in the conflict.
      */
 
     @com.fasterxml.jackson.annotation.JsonProperty("RequestId")
@@ -75,7 +84,11 @@ public class ConflictException extends com.amazonaws.services.chimesdkmeetings.m
     }
 
     /**
-     * @return
+     * <p>
+     * The ID of the request involved in the conflict.
+     * </p>
+     * 
+     * @return The ID of the request involved in the conflict.
      */
 
     @com.fasterxml.jackson.annotation.JsonProperty("RequestId")
@@ -84,7 +97,12 @@ public class ConflictException extends com.amazonaws.services.chimesdkmeetings.m
     }
 
     /**
+     * <p>
+     * The ID of the request involved in the conflict.
+     * </p>
+     * 
      * @param requestId
+     *        The ID of the request involved in the conflict.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

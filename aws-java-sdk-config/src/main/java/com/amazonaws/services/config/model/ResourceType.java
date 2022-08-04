@@ -154,7 +154,16 @@ public enum ResourceType {
     AWSStepFunctionsStateMachine("AWS::StepFunctions::StateMachine"),
     AWSBatchJobQueue("AWS::Batch::JobQueue"),
     AWSBatchComputeEnvironment("AWS::Batch::ComputeEnvironment"),
-    AWSAccessAnalyzerAnalyzer("AWS::AccessAnalyzer::Analyzer");
+    AWSAccessAnalyzerAnalyzer("AWS::AccessAnalyzer::Analyzer"),
+    AWSAthenaWorkGroup("AWS::Athena::WorkGroup"),
+    AWSAthenaDataCatalog("AWS::Athena::DataCatalog"),
+    AWSDetectiveGraph("AWS::Detective::Graph"),
+    AWSGlobalAcceleratorAccelerator("AWS::GlobalAccelerator::Accelerator"),
+    AWSGlobalAcceleratorEndpointGroup("AWS::GlobalAccelerator::EndpointGroup"),
+    AWSGlobalAcceleratorListener("AWS::GlobalAccelerator::Listener"),
+    AWSEC2TransitGatewayAttachment("AWS::EC2::TransitGatewayAttachment"),
+    AWSEC2TransitGatewayRouteTable("AWS::EC2::TransitGatewayRouteTable"),
+    AWSDMSCertificate("AWS::DMS::Certificate");
 
     private String value;
 

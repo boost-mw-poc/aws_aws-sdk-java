@@ -84,6 +84,12 @@ public class Meeting implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private java.util.List<String> tenantIds;
+    /**
+     * <p>
+     * The ARN of the meeting.
+     * </p>
+     */
+    private String meetingArn;
 
     /**
      * <p>
@@ -481,6 +487,46 @@ public class Meeting implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The ARN of the meeting.
+     * </p>
+     * 
+     * @param meetingArn
+     *        The ARN of the meeting.
+     */
+
+    public void setMeetingArn(String meetingArn) {
+        this.meetingArn = meetingArn;
+    }
+
+    /**
+     * <p>
+     * The ARN of the meeting.
+     * </p>
+     * 
+     * @return The ARN of the meeting.
+     */
+
+    public String getMeetingArn() {
+        return this.meetingArn;
+    }
+
+    /**
+     * <p>
+     * The ARN of the meeting.
+     * </p>
+     * 
+     * @param meetingArn
+     *        The ARN of the meeting.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Meeting withMeetingArn(String meetingArn) {
+        setMeetingArn(meetingArn);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -507,7 +553,9 @@ public class Meeting implements Serializable, Cloneable, StructuredPojo {
         if (getPrimaryMeetingId() != null)
             sb.append("PrimaryMeetingId: ").append(getPrimaryMeetingId()).append(",");
         if (getTenantIds() != null)
-            sb.append("TenantIds: ").append(getTenantIds());
+            sb.append("TenantIds: ").append(getTenantIds()).append(",");
+        if (getMeetingArn() != null)
+            sb.append("MeetingArn: ").append(getMeetingArn());
         sb.append("}");
         return sb.toString();
     }
@@ -554,6 +602,10 @@ public class Meeting implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getTenantIds() != null && other.getTenantIds().equals(this.getTenantIds()) == false)
             return false;
+        if (other.getMeetingArn() == null ^ this.getMeetingArn() == null)
+            return false;
+        if (other.getMeetingArn() != null && other.getMeetingArn().equals(this.getMeetingArn()) == false)
+            return false;
         return true;
     }
 
@@ -570,6 +622,7 @@ public class Meeting implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getMeetingFeatures() == null) ? 0 : getMeetingFeatures().hashCode());
         hashCode = prime * hashCode + ((getPrimaryMeetingId() == null) ? 0 : getPrimaryMeetingId().hashCode());
         hashCode = prime * hashCode + ((getTenantIds() == null) ? 0 : getTenantIds().hashCode());
+        hashCode = prime * hashCode + ((getMeetingArn() == null) ? 0 : getMeetingArn().hashCode());
         return hashCode;
     }
 

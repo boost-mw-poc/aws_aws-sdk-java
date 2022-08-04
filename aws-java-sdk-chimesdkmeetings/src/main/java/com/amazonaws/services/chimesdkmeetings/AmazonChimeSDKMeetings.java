@@ -387,6 +387,21 @@ public interface AmazonChimeSDKMeetings {
 
     /**
      * <p>
+     * Returns a list of the tags available for the specified resource.
+     * </p>
+     * 
+     * @param listTagsForResourceRequest
+     * @return Result of the ListTagsForResource operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The resource that you want to tag couldn't be found.
+     * @sample AmazonChimeSDKMeetings.ListTagsForResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-meetings-2021-07-15/ListTagsForResource"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListTagsForResourceResult listTagsForResource(ListTagsForResourceRequest listTagsForResourceRequest);
+
+    /**
+     * <p>
      * Starts transcription for the specified <code>meetingId</code>.
      * </p>
      * 
@@ -444,6 +459,73 @@ public interface AmazonChimeSDKMeetings {
      *      target="_top">AWS API Documentation</a>
      */
     StopMeetingTranscriptionResult stopMeetingTranscription(StopMeetingTranscriptionRequest stopMeetingTranscriptionRequest);
+
+    /**
+     * <p>
+     * The resource that supports tags.
+     * </p>
+     * 
+     * @param tagResourceRequest
+     * @return Result of the TagResource operation returned by the service.
+     * @throws BadRequestException
+     *         The input parameters don't match the service's restrictions.
+     * @throws ResourceNotFoundException
+     *         The resource that you want to tag couldn't be found.
+     * @throws TooManyTagsException
+     *         Too many tags were added to the specified resource.
+     * @sample AmazonChimeSDKMeetings.TagResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-meetings-2021-07-15/TagResource" target="_top">AWS
+     *      API Documentation</a>
+     */
+    TagResourceResult tagResource(TagResourceRequest tagResourceRequest);
+
+    /**
+     * <p>
+     * Removes the specified tags from the specified resources. When you specify a tag key, the action removes both that
+     * key and its associated value. The operation succeeds even if you attempt to remove tags from a resource that were
+     * already removed. Note the following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * To remove tags from a resource, you need the necessary permissions for the service that the resource belongs to
+     * as well as permissions for removing tags. For more information, see the documentation for the service whose
+     * resource you want to untag.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * You can only tag resources that are located in the specified AWS Region for the calling AWS account.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * <b>Minimum permissions</b>
+     * </p>
+     * <p>
+     * In addition to the <code>tag:UntagResources</code> permission required by this operation, you must also have the
+     * remove tags permission defined by the service that created the resource. For example, to remove the tags from an
+     * Amazon EC2 instance using the <code>UntagResources</code> operation, you must have both of the following
+     * permissions:
+     * </p>
+     * <p>
+     * <code>tag:UntagResource</code>
+     * </p>
+     * <p>
+     * <code>ChimeSDKMeetings:DeleteTags</code>
+     * </p>
+     * 
+     * @param untagResourceRequest
+     * @return Result of the UntagResource operation returned by the service.
+     * @throws BadRequestException
+     *         The input parameters don't match the service's restrictions.
+     * @throws ResourceNotFoundException
+     *         The resource that you want to tag couldn't be found.
+     * @sample AmazonChimeSDKMeetings.UntagResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-meetings-2021-07-15/UntagResource"
+     *      target="_top">AWS API Documentation</a>
+     */
+    UntagResourceResult untagResource(UntagResourceRequest untagResourceRequest);
 
     /**
      * <p>
