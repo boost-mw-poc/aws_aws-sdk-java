@@ -33,7 +33,9 @@ public class UpdateFeatureGroupRequest extends com.amazonaws.AmazonWebServiceReq
     private String featureGroupName;
     /**
      * <p>
-     * A list of the features that you're adding to the feature group.
+     * Updates the feature group. Updating a feature group is an asynchronous operation. When you get an HTTP 200
+     * response, you've made a valid request. It takes some time after you've made a valid request for Feature Store to
+     * update the feature group.
      * </p>
      */
     private java.util.List<FeatureDefinition> featureAdditions;
@@ -80,10 +82,14 @@ public class UpdateFeatureGroupRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * A list of the features that you're adding to the feature group.
+     * Updates the feature group. Updating a feature group is an asynchronous operation. When you get an HTTP 200
+     * response, you've made a valid request. It takes some time after you've made a valid request for Feature Store to
+     * update the feature group.
      * </p>
      * 
-     * @return A list of the features that you're adding to the feature group.
+     * @return Updates the feature group. Updating a feature group is an asynchronous operation. When you get an HTTP
+     *         200 response, you've made a valid request. It takes some time after you've made a valid request for
+     *         Feature Store to update the feature group.
      */
 
     public java.util.List<FeatureDefinition> getFeatureAdditions() {
@@ -92,11 +98,15 @@ public class UpdateFeatureGroupRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * A list of the features that you're adding to the feature group.
+     * Updates the feature group. Updating a feature group is an asynchronous operation. When you get an HTTP 200
+     * response, you've made a valid request. It takes some time after you've made a valid request for Feature Store to
+     * update the feature group.
      * </p>
      * 
      * @param featureAdditions
-     *        A list of the features that you're adding to the feature group.
+     *        Updates the feature group. Updating a feature group is an asynchronous operation. When you get an HTTP 200
+     *        response, you've made a valid request. It takes some time after you've made a valid request for Feature
+     *        Store to update the feature group.
      */
 
     public void setFeatureAdditions(java.util.Collection<FeatureDefinition> featureAdditions) {
@@ -110,7 +120,9 @@ public class UpdateFeatureGroupRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * A list of the features that you're adding to the feature group.
+     * Updates the feature group. Updating a feature group is an asynchronous operation. When you get an HTTP 200
+     * response, you've made a valid request. It takes some time after you've made a valid request for Feature Store to
+     * update the feature group.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -119,7 +131,9 @@ public class UpdateFeatureGroupRequest extends com.amazonaws.AmazonWebServiceReq
      * </p>
      * 
      * @param featureAdditions
-     *        A list of the features that you're adding to the feature group.
+     *        Updates the feature group. Updating a feature group is an asynchronous operation. When you get an HTTP 200
+     *        response, you've made a valid request. It takes some time after you've made a valid request for Feature
+     *        Store to update the feature group.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -135,11 +149,15 @@ public class UpdateFeatureGroupRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * A list of the features that you're adding to the feature group.
+     * Updates the feature group. Updating a feature group is an asynchronous operation. When you get an HTTP 200
+     * response, you've made a valid request. It takes some time after you've made a valid request for Feature Store to
+     * update the feature group.
      * </p>
      * 
      * @param featureAdditions
-     *        A list of the features that you're adding to the feature group.
+     *        Updates the feature group. Updating a feature group is an asynchronous operation. When you get an HTTP 200
+     *        response, you've made a valid request. It takes some time after you've made a valid request for Feature
+     *        Store to update the feature group.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

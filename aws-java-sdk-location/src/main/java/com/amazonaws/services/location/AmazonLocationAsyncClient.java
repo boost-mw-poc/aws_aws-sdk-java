@@ -26,7 +26,7 @@ import java.util.concurrent.ExecutorService;
  * notification when an asynchronous operation completes.
  * <p>
  * <p>
- * Suite of geospatial services including Maps, Places, Routes, Tracking, and Geofencing
+ * "Suite of geospatial services including Maps, Places, Routes, Tracking, and Geofencing"
  * </p>
  */
 @ThreadSafe

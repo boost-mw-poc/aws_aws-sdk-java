@@ -26,7 +26,7 @@ import com.amazonaws.services.location.model.*;
  * </p>
  * <p>
  * <p>
- * Suite of geospatial services including Maps, Places, Routes, Tracking, and Geofencing
+ * "Suite of geospatial services including Maps, Places, Routes, Tracking, and Geofencing"
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
@@ -432,7 +432,12 @@ public interface AmazonLocationAsync extends AmazonLocation {
      * additional route preferences in <code>CarModeOptions</code> if traveling by <code>Car</code>, or
      * <code>TruckModeOptions</code> if traveling by <code>Truck</code>.
      * </p>
-     * </li>
+     * <note>
+     * <p>
+     * If you specify <code>walking</code> for the travel mode and your data provider is Esri, the start and destination
+     * must be within 40km.
+     * </p>
+     * </note></li>
      * </ul>
      * 
      * @param calculateRouteRequest
@@ -478,7 +483,12 @@ public interface AmazonLocationAsync extends AmazonLocation {
      * additional route preferences in <code>CarModeOptions</code> if traveling by <code>Car</code>, or
      * <code>TruckModeOptions</code> if traveling by <code>Truck</code>.
      * </p>
-     * </li>
+     * <note>
+     * <p>
+     * If you specify <code>walking</code> for the travel mode and your data provider is Esri, the start and destination
+     * must be within 40km.
+     * </p>
+     * </note></li>
      * </ul>
      * 
      * @param calculateRouteRequest

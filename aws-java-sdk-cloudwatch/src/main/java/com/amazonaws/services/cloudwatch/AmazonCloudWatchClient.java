@@ -427,7 +427,10 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
 
     /**
      * <p>
-     * Deletes the specified anomaly detection model from your account.
+     * Deletes the specified anomaly detection model from your account. For more information about how to delete an
+     * anomaly detection model, see <a href=
+     * "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Create_Anomaly_Detection_Alarm.html#Delete_Anomaly_Detection_Model"
+     * >Deleting an anomaly detection model</a> in the <i>CloudWatch User Guide</i>.
      * </p>
      * 
      * @param deleteAnomalyDetectorRequest
@@ -2580,8 +2583,8 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
      * percentile statistics on this data.
      * </p>
      * <p>
-     * Each <code>PutMetricData</code> request is limited to 40 KB in size for HTTP POST requests. You can send a
-     * payload compressed by gzip. Each request is also limited to no more than 20 different metrics.
+     * Each <code>PutMetricData</code> request is limited to 1 MB in size for HTTP POST requests. You can send a payload
+     * compressed by gzip. Each request is also limited to no more than 1000 different metrics.
      * </p>
      * <p>
      * Although the <code>Value</code> parameter accepts numbers of type <code>Double</code>, CloudWatch rejects values
@@ -2589,7 +2592,7 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
      * values (for example, NaN, +Infinity, -Infinity) are not supported.
      * </p>
      * <p>
-     * You can use up to 10 dimensions per metric to further clarify what data the metric collects. Each dimension
+     * You can use up to 30 dimensions per metric to further clarify what data the metric collects. Each dimension
      * consists of a Name and Value pair. For more information about specifying dimensions, see <a
      * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/publishingMetrics.html">Publishing
      * Metrics</a> in the <i>Amazon CloudWatch User Guide</i>.

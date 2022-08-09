@@ -149,7 +149,8 @@ public class CalculateRouteRequest extends com.amazonaws.AmazonWebServiceRequest
     /**
      * <p>
      * Specifies the mode of transport when calculating a route. Used in estimating the speed of travel and road
-     * compatibility.
+     * compatibility. You can choose <code>Car</code>, <code>Truck</code>, or <code>Walking</code> as options for the
+     * <code>TravelMode</code>.
      * </p>
      * <p>
      * The <code>TravelMode</code> you specify also determines how you specify route preferences:
@@ -1159,7 +1160,8 @@ public class CalculateRouteRequest extends com.amazonaws.AmazonWebServiceRequest
     /**
      * <p>
      * Specifies the mode of transport when calculating a route. Used in estimating the speed of travel and road
-     * compatibility.
+     * compatibility. You can choose <code>Car</code>, <code>Truck</code>, or <code>Walking</code> as options for the
+     * <code>TravelMode</code>.
      * </p>
      * <p>
      * The <code>TravelMode</code> you specify also determines how you specify route preferences:
@@ -1182,7 +1184,8 @@ public class CalculateRouteRequest extends com.amazonaws.AmazonWebServiceRequest
      * 
      * @param travelMode
      *        Specifies the mode of transport when calculating a route. Used in estimating the speed of travel and road
-     *        compatibility.</p>
+     *        compatibility. You can choose <code>Car</code>, <code>Truck</code>, or <code>Walking</code> as options for
+     *        the <code>TravelMode</code>.</p>
      *        <p>
      *        The <code>TravelMode</code> you specify also determines how you specify route preferences:
      *        </p>
@@ -1210,7 +1213,8 @@ public class CalculateRouteRequest extends com.amazonaws.AmazonWebServiceRequest
     /**
      * <p>
      * Specifies the mode of transport when calculating a route. Used in estimating the speed of travel and road
-     * compatibility.
+     * compatibility. You can choose <code>Car</code>, <code>Truck</code>, or <code>Walking</code> as options for the
+     * <code>TravelMode</code>.
      * </p>
      * <p>
      * The <code>TravelMode</code> you specify also determines how you specify route preferences:
@@ -1232,7 +1236,8 @@ public class CalculateRouteRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      * 
      * @return Specifies the mode of transport when calculating a route. Used in estimating the speed of travel and road
-     *         compatibility.</p>
+     *         compatibility. You can choose <code>Car</code>, <code>Truck</code>, or <code>Walking</code> as options
+     *         for the <code>TravelMode</code>.</p>
      *         <p>
      *         The <code>TravelMode</code> you specify also determines how you specify route preferences:
      *         </p>
@@ -1260,7 +1265,8 @@ public class CalculateRouteRequest extends com.amazonaws.AmazonWebServiceRequest
     /**
      * <p>
      * Specifies the mode of transport when calculating a route. Used in estimating the speed of travel and road
-     * compatibility.
+     * compatibility. You can choose <code>Car</code>, <code>Truck</code>, or <code>Walking</code> as options for the
+     * <code>TravelMode</code>.
      * </p>
      * <p>
      * The <code>TravelMode</code> you specify also determines how you specify route preferences:
@@ -1283,7 +1289,8 @@ public class CalculateRouteRequest extends com.amazonaws.AmazonWebServiceRequest
      * 
      * @param travelMode
      *        Specifies the mode of transport when calculating a route. Used in estimating the speed of travel and road
-     *        compatibility.</p>
+     *        compatibility. You can choose <code>Car</code>, <code>Truck</code>, or <code>Walking</code> as options for
+     *        the <code>TravelMode</code>.</p>
      *        <p>
      *        The <code>TravelMode</code> you specify also determines how you specify route preferences:
      *        </p>
@@ -1313,7 +1320,8 @@ public class CalculateRouteRequest extends com.amazonaws.AmazonWebServiceRequest
     /**
      * <p>
      * Specifies the mode of transport when calculating a route. Used in estimating the speed of travel and road
-     * compatibility.
+     * compatibility. You can choose <code>Car</code>, <code>Truck</code>, or <code>Walking</code> as options for the
+     * <code>TravelMode</code>.
      * </p>
      * <p>
      * The <code>TravelMode</code> you specify also determines how you specify route preferences:
@@ -1336,7 +1344,8 @@ public class CalculateRouteRequest extends com.amazonaws.AmazonWebServiceRequest
      * 
      * @param travelMode
      *        Specifies the mode of transport when calculating a route. Used in estimating the speed of travel and road
-     *        compatibility.</p>
+     *        compatibility. You can choose <code>Car</code>, <code>Truck</code>, or <code>Walking</code> as options for
+     *        the <code>TravelMode</code>.</p>
      *        <p>
      *        The <code>TravelMode</code> you specify also determines how you specify route preferences:
      *        </p>

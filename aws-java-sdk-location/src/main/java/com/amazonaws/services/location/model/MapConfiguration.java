@@ -83,8 +83,8 @@ public class MapConfiguration implements Serializable, Cloneable, StructuredPojo
      * <ul>
      * <li>
      * <p>
-     * <code>VectorHereBerlin</code> – The HERE Berlin map style is a high contrast detailed base map of the world that
-     * blends 3D and 2D rendering.
+     * <code>VectorHereContrast</code> – The HERE Contrast (Berlin) map style is a high contrast detailed base map of
+     * the world that blends 3D and 2D rendering.
      * </p>
      * </li>
      * <li>
@@ -101,6 +101,12 @@ public class MapConfiguration implements Serializable, Cloneable, StructuredPojo
      * </p>
      * </li>
      * </ul>
+     * <note>
+     * <p>
+     * The <code>VectorHereContrast</code> style has been renamed from <code>VectorHereBerlin</code>.
+     * <code>VectorHereBerlin</code> has been deprecated, but will continue to work in applications that use it.
+     * </p>
+     * </note>
      */
     private String style;
 
@@ -159,8 +165,8 @@ public class MapConfiguration implements Serializable, Cloneable, StructuredPojo
      * <ul>
      * <li>
      * <p>
-     * <code>VectorHereBerlin</code> – The HERE Berlin map style is a high contrast detailed base map of the world that
-     * blends 3D and 2D rendering.
+     * <code>VectorHereContrast</code> – The HERE Contrast (Berlin) map style is a high contrast detailed base map of
+     * the world that blends 3D and 2D rendering.
      * </p>
      * </li>
      * <li>
@@ -177,6 +183,12 @@ public class MapConfiguration implements Serializable, Cloneable, StructuredPojo
      * </p>
      * </li>
      * </ul>
+     * <note>
+     * <p>
+     * The <code>VectorHereContrast</code> style has been renamed from <code>VectorHereBerlin</code>.
+     * <code>VectorHereBerlin</code> has been deprecated, but will continue to work in applications that use it.
+     * </p>
+     * </note>
      * 
      * @param style
      *        Specifies the map style selected from an available data provider.</p>
@@ -233,8 +245,8 @@ public class MapConfiguration implements Serializable, Cloneable, StructuredPojo
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>VectorHereBerlin</code> – The HERE Berlin map style is a high contrast detailed base map of the
-     *        world that blends 3D and 2D rendering.
+     *        <code>VectorHereContrast</code> – The HERE Contrast (Berlin) map style is a high contrast detailed base
+     *        map of the world that blends 3D and 2D rendering.
      *        </p>
      *        </li>
      *        <li>
@@ -251,6 +263,12 @@ public class MapConfiguration implements Serializable, Cloneable, StructuredPojo
      *        use cases within transport and logistics.
      *        </p>
      *        </li>
+     *        </ul>
+     *        <note>
+     *        <p>
+     *        The <code>VectorHereContrast</code> style has been renamed from <code>VectorHereBerlin</code>.
+     *        <code>VectorHereBerlin</code> has been deprecated, but will continue to work in applications that use it.
+     *        </p>
      */
 
     public void setStyle(String style) {
@@ -312,8 +330,8 @@ public class MapConfiguration implements Serializable, Cloneable, StructuredPojo
      * <ul>
      * <li>
      * <p>
-     * <code>VectorHereBerlin</code> – The HERE Berlin map style is a high contrast detailed base map of the world that
-     * blends 3D and 2D rendering.
+     * <code>VectorHereContrast</code> – The HERE Contrast (Berlin) map style is a high contrast detailed base map of
+     * the world that blends 3D and 2D rendering.
      * </p>
      * </li>
      * <li>
@@ -330,6 +348,12 @@ public class MapConfiguration implements Serializable, Cloneable, StructuredPojo
      * </p>
      * </li>
      * </ul>
+     * <note>
+     * <p>
+     * The <code>VectorHereContrast</code> style has been renamed from <code>VectorHereBerlin</code>.
+     * <code>VectorHereBerlin</code> has been deprecated, but will continue to work in applications that use it.
+     * </p>
+     * </note>
      * 
      * @return Specifies the map style selected from an available data provider.</p>
      *         <p>
@@ -385,8 +409,8 @@ public class MapConfiguration implements Serializable, Cloneable, StructuredPojo
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>VectorHereBerlin</code> – The HERE Berlin map style is a high contrast detailed base map of the
-     *         world that blends 3D and 2D rendering.
+     *         <code>VectorHereContrast</code> – The HERE Contrast (Berlin) map style is a high contrast detailed base
+     *         map of the world that blends 3D and 2D rendering.
      *         </p>
      *         </li>
      *         <li>
@@ -403,6 +427,12 @@ public class MapConfiguration implements Serializable, Cloneable, StructuredPojo
      *         use cases within transport and logistics.
      *         </p>
      *         </li>
+     *         </ul>
+     *         <note>
+     *         <p>
+     *         The <code>VectorHereContrast</code> style has been renamed from <code>VectorHereBerlin</code>.
+     *         <code>VectorHereBerlin</code> has been deprecated, but will continue to work in applications that use it.
+     *         </p>
      */
 
     public String getStyle() {
@@ -464,8 +494,8 @@ public class MapConfiguration implements Serializable, Cloneable, StructuredPojo
      * <ul>
      * <li>
      * <p>
-     * <code>VectorHereBerlin</code> – The HERE Berlin map style is a high contrast detailed base map of the world that
-     * blends 3D and 2D rendering.
+     * <code>VectorHereContrast</code> – The HERE Contrast (Berlin) map style is a high contrast detailed base map of
+     * the world that blends 3D and 2D rendering.
      * </p>
      * </li>
      * <li>
@@ -482,6 +512,12 @@ public class MapConfiguration implements Serializable, Cloneable, StructuredPojo
      * </p>
      * </li>
      * </ul>
+     * <note>
+     * <p>
+     * The <code>VectorHereContrast</code> style has been renamed from <code>VectorHereBerlin</code>.
+     * <code>VectorHereBerlin</code> has been deprecated, but will continue to work in applications that use it.
+     * </p>
+     * </note>
      * 
      * @param style
      *        Specifies the map style selected from an available data provider.</p>
@@ -538,8 +574,8 @@ public class MapConfiguration implements Serializable, Cloneable, StructuredPojo
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>VectorHereBerlin</code> – The HERE Berlin map style is a high contrast detailed base map of the
-     *        world that blends 3D and 2D rendering.
+     *        <code>VectorHereContrast</code> – The HERE Contrast (Berlin) map style is a high contrast detailed base
+     *        map of the world that blends 3D and 2D rendering.
      *        </p>
      *        </li>
      *        <li>
@@ -556,6 +592,12 @@ public class MapConfiguration implements Serializable, Cloneable, StructuredPojo
      *        use cases within transport and logistics.
      *        </p>
      *        </li>
+     *        </ul>
+     *        <note>
+     *        <p>
+     *        The <code>VectorHereContrast</code> style has been renamed from <code>VectorHereBerlin</code>.
+     *        <code>VectorHereBerlin</code> has been deprecated, but will continue to work in applications that use it.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
