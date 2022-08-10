@@ -19,8 +19,11 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Specifies the retention rule for a lifecycle policy. You can retain snapshots based on either a count or a time
- * interval.
+ * <b>[Snapshot and AMI policies only]</b> Specifies a retention rule for snapshots created by snapshot policies or for
+ * AMIs created by AMI policies. You can retain snapshots based on either a count or a time interval.
+ * </p>
+ * <p>
+ * You must specify either <b>Count</b>, or <b>Interval</b> and <b>IntervalUnit</b>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dlm-2018-01-12/RetainRule" target="_top">AWS API

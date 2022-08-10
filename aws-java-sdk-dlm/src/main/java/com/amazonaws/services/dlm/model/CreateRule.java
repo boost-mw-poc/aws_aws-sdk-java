@@ -19,11 +19,13 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Specifies when to create snapshots of EBS volumes.
+ * <b>[Snapshot and AMI policies only]</b> Specifies when the policy should create snapshots or AMIs.
  * </p>
+ * <important>
  * <p>
  * You must specify either a Cron expression or an interval, interval unit, and start time. You cannot specify both.
  * </p>
+ * </important>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dlm-2018-01-12/CreateRule" target="_top">AWS API
  *      Documentation</a>
@@ -33,17 +35,15 @@ public class CreateRule implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Specifies the destination for snapshots created by the policy. To create snapshots in the same Region as the
-     * source resource, specify <code>CLOUD</code>. To create snapshots on the same Outpost as the source resource,
-     * specify <code>OUTPOST_LOCAL</code>. If you omit this parameter, <code>CLOUD</code> is used by default.
+     * <b>[Snapshot policies only]</b> Specifies the destination for snapshots created by the policy. To create
+     * snapshots in the same Region as the source resource, specify <code>CLOUD</code>. To create snapshots on the same
+     * Outpost as the source resource, specify <code>OUTPOST_LOCAL</code>. If you omit this parameter,
+     * <code>CLOUD</code> is used by default.
      * </p>
      * <p>
      * If the policy targets resources in an Amazon Web Services Region, then you must create snapshots in the same
-     * Region as the source resource.
-     * </p>
-     * <p>
-     * If the policy targets resources on an Outpost, then you can create snapshots on the same Outpost as the source
-     * resource, or in the Region of that Outpost.
+     * Region as the source resource. If the policy targets resources on an Outpost, then you can create snapshots on
+     * the same Outpost as the source resource, or in the Region of that Outpost.
      * </p>
      */
     private String location;
@@ -81,31 +81,26 @@ public class CreateRule implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Specifies the destination for snapshots created by the policy. To create snapshots in the same Region as the
-     * source resource, specify <code>CLOUD</code>. To create snapshots on the same Outpost as the source resource,
-     * specify <code>OUTPOST_LOCAL</code>. If you omit this parameter, <code>CLOUD</code> is used by default.
+     * <b>[Snapshot policies only]</b> Specifies the destination for snapshots created by the policy. To create
+     * snapshots in the same Region as the source resource, specify <code>CLOUD</code>. To create snapshots on the same
+     * Outpost as the source resource, specify <code>OUTPOST_LOCAL</code>. If you omit this parameter,
+     * <code>CLOUD</code> is used by default.
      * </p>
      * <p>
      * If the policy targets resources in an Amazon Web Services Region, then you must create snapshots in the same
-     * Region as the source resource.
-     * </p>
-     * <p>
-     * If the policy targets resources on an Outpost, then you can create snapshots on the same Outpost as the source
-     * resource, or in the Region of that Outpost.
+     * Region as the source resource. If the policy targets resources on an Outpost, then you can create snapshots on
+     * the same Outpost as the source resource, or in the Region of that Outpost.
      * </p>
      * 
      * @param location
-     *        Specifies the destination for snapshots created by the policy. To create snapshots in the same Region as
-     *        the source resource, specify <code>CLOUD</code>. To create snapshots on the same Outpost as the source
-     *        resource, specify <code>OUTPOST_LOCAL</code>. If you omit this parameter, <code>CLOUD</code> is used by
-     *        default.</p>
+     *        <b>[Snapshot policies only]</b> Specifies the destination for snapshots created by the policy. To create
+     *        snapshots in the same Region as the source resource, specify <code>CLOUD</code>. To create snapshots on
+     *        the same Outpost as the source resource, specify <code>OUTPOST_LOCAL</code>. If you omit this parameter,
+     *        <code>CLOUD</code> is used by default.</p>
      *        <p>
      *        If the policy targets resources in an Amazon Web Services Region, then you must create snapshots in the
-     *        same Region as the source resource.
-     *        </p>
-     *        <p>
-     *        If the policy targets resources on an Outpost, then you can create snapshots on the same Outpost as the
-     *        source resource, or in the Region of that Outpost.
+     *        same Region as the source resource. If the policy targets resources on an Outpost, then you can create
+     *        snapshots on the same Outpost as the source resource, or in the Region of that Outpost.
      * @see LocationValues
      */
 
@@ -115,30 +110,25 @@ public class CreateRule implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Specifies the destination for snapshots created by the policy. To create snapshots in the same Region as the
-     * source resource, specify <code>CLOUD</code>. To create snapshots on the same Outpost as the source resource,
-     * specify <code>OUTPOST_LOCAL</code>. If you omit this parameter, <code>CLOUD</code> is used by default.
+     * <b>[Snapshot policies only]</b> Specifies the destination for snapshots created by the policy. To create
+     * snapshots in the same Region as the source resource, specify <code>CLOUD</code>. To create snapshots on the same
+     * Outpost as the source resource, specify <code>OUTPOST_LOCAL</code>. If you omit this parameter,
+     * <code>CLOUD</code> is used by default.
      * </p>
      * <p>
      * If the policy targets resources in an Amazon Web Services Region, then you must create snapshots in the same
-     * Region as the source resource.
-     * </p>
-     * <p>
-     * If the policy targets resources on an Outpost, then you can create snapshots on the same Outpost as the source
-     * resource, or in the Region of that Outpost.
+     * Region as the source resource. If the policy targets resources on an Outpost, then you can create snapshots on
+     * the same Outpost as the source resource, or in the Region of that Outpost.
      * </p>
      * 
-     * @return Specifies the destination for snapshots created by the policy. To create snapshots in the same Region as
-     *         the source resource, specify <code>CLOUD</code>. To create snapshots on the same Outpost as the source
-     *         resource, specify <code>OUTPOST_LOCAL</code>. If you omit this parameter, <code>CLOUD</code> is used by
-     *         default.</p>
+     * @return <b>[Snapshot policies only]</b> Specifies the destination for snapshots created by the policy. To create
+     *         snapshots in the same Region as the source resource, specify <code>CLOUD</code>. To create snapshots on
+     *         the same Outpost as the source resource, specify <code>OUTPOST_LOCAL</code>. If you omit this parameter,
+     *         <code>CLOUD</code> is used by default.</p>
      *         <p>
      *         If the policy targets resources in an Amazon Web Services Region, then you must create snapshots in the
-     *         same Region as the source resource.
-     *         </p>
-     *         <p>
-     *         If the policy targets resources on an Outpost, then you can create snapshots on the same Outpost as the
-     *         source resource, or in the Region of that Outpost.
+     *         same Region as the source resource. If the policy targets resources on an Outpost, then you can create
+     *         snapshots on the same Outpost as the source resource, or in the Region of that Outpost.
      * @see LocationValues
      */
 
@@ -148,31 +138,26 @@ public class CreateRule implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Specifies the destination for snapshots created by the policy. To create snapshots in the same Region as the
-     * source resource, specify <code>CLOUD</code>. To create snapshots on the same Outpost as the source resource,
-     * specify <code>OUTPOST_LOCAL</code>. If you omit this parameter, <code>CLOUD</code> is used by default.
+     * <b>[Snapshot policies only]</b> Specifies the destination for snapshots created by the policy. To create
+     * snapshots in the same Region as the source resource, specify <code>CLOUD</code>. To create snapshots on the same
+     * Outpost as the source resource, specify <code>OUTPOST_LOCAL</code>. If you omit this parameter,
+     * <code>CLOUD</code> is used by default.
      * </p>
      * <p>
      * If the policy targets resources in an Amazon Web Services Region, then you must create snapshots in the same
-     * Region as the source resource.
-     * </p>
-     * <p>
-     * If the policy targets resources on an Outpost, then you can create snapshots on the same Outpost as the source
-     * resource, or in the Region of that Outpost.
+     * Region as the source resource. If the policy targets resources on an Outpost, then you can create snapshots on
+     * the same Outpost as the source resource, or in the Region of that Outpost.
      * </p>
      * 
      * @param location
-     *        Specifies the destination for snapshots created by the policy. To create snapshots in the same Region as
-     *        the source resource, specify <code>CLOUD</code>. To create snapshots on the same Outpost as the source
-     *        resource, specify <code>OUTPOST_LOCAL</code>. If you omit this parameter, <code>CLOUD</code> is used by
-     *        default.</p>
+     *        <b>[Snapshot policies only]</b> Specifies the destination for snapshots created by the policy. To create
+     *        snapshots in the same Region as the source resource, specify <code>CLOUD</code>. To create snapshots on
+     *        the same Outpost as the source resource, specify <code>OUTPOST_LOCAL</code>. If you omit this parameter,
+     *        <code>CLOUD</code> is used by default.</p>
      *        <p>
      *        If the policy targets resources in an Amazon Web Services Region, then you must create snapshots in the
-     *        same Region as the source resource.
-     *        </p>
-     *        <p>
-     *        If the policy targets resources on an Outpost, then you can create snapshots on the same Outpost as the
-     *        source resource, or in the Region of that Outpost.
+     *        same Region as the source resource. If the policy targets resources on an Outpost, then you can create
+     *        snapshots on the same Outpost as the source resource, or in the Region of that Outpost.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see LocationValues
      */
@@ -184,31 +169,26 @@ public class CreateRule implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Specifies the destination for snapshots created by the policy. To create snapshots in the same Region as the
-     * source resource, specify <code>CLOUD</code>. To create snapshots on the same Outpost as the source resource,
-     * specify <code>OUTPOST_LOCAL</code>. If you omit this parameter, <code>CLOUD</code> is used by default.
+     * <b>[Snapshot policies only]</b> Specifies the destination for snapshots created by the policy. To create
+     * snapshots in the same Region as the source resource, specify <code>CLOUD</code>. To create snapshots on the same
+     * Outpost as the source resource, specify <code>OUTPOST_LOCAL</code>. If you omit this parameter,
+     * <code>CLOUD</code> is used by default.
      * </p>
      * <p>
      * If the policy targets resources in an Amazon Web Services Region, then you must create snapshots in the same
-     * Region as the source resource.
-     * </p>
-     * <p>
-     * If the policy targets resources on an Outpost, then you can create snapshots on the same Outpost as the source
-     * resource, or in the Region of that Outpost.
+     * Region as the source resource. If the policy targets resources on an Outpost, then you can create snapshots on
+     * the same Outpost as the source resource, or in the Region of that Outpost.
      * </p>
      * 
      * @param location
-     *        Specifies the destination for snapshots created by the policy. To create snapshots in the same Region as
-     *        the source resource, specify <code>CLOUD</code>. To create snapshots on the same Outpost as the source
-     *        resource, specify <code>OUTPOST_LOCAL</code>. If you omit this parameter, <code>CLOUD</code> is used by
-     *        default.</p>
+     *        <b>[Snapshot policies only]</b> Specifies the destination for snapshots created by the policy. To create
+     *        snapshots in the same Region as the source resource, specify <code>CLOUD</code>. To create snapshots on
+     *        the same Outpost as the source resource, specify <code>OUTPOST_LOCAL</code>. If you omit this parameter,
+     *        <code>CLOUD</code> is used by default.</p>
      *        <p>
      *        If the policy targets resources in an Amazon Web Services Region, then you must create snapshots in the
-     *        same Region as the source resource.
-     *        </p>
-     *        <p>
-     *        If the policy targets resources on an Outpost, then you can create snapshots on the same Outpost as the
-     *        source resource, or in the Region of that Outpost.
+     *        same Region as the source resource. If the policy targets resources on an Outpost, then you can create
+     *        snapshots on the same Outpost as the source resource, or in the Region of that Outpost.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see LocationValues
      */

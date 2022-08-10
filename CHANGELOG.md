@@ -1,3 +1,12 @@
+# __1.12.279__ __2022-08-10__
+## __Amazon Data Lifecycle Manager__
+  - ### Features
+    - This release adds support for excluding specific data (non-boot) volumes from multi-volume snapshot sets created by snapshot lifecycle policies
+
+## __Amazon Elastic Compute Cloud__
+  - ### Features
+    - This release adds support for excluding specific data (non-root) volumes from multi-volume snapshot sets created from instances.
+
 # __1.12.278__ __2022-08-09__
 ## __Amazon Augmented AI Runtime__
   - ### Features
