@@ -49,7 +49,11 @@ public class DescribedProfile implements Serializable, Cloneable, StructuredPojo
     private String profileType;
     /**
      * <p>
-     * The unique identifier for the AS2 process.
+     * The <code>As2Id</code> is the <i>AS2-name</i>, as defined in the <a
+     * href="https://datatracker.ietf.org/doc/html/rfc4130">RFC 4130</a>. For inbound transfers, this is the
+     * <code>AS2-From</code> header for the AS2 messages sent from the partner. For outbound connectors, this is the
+     * <code>AS2-To</code> header for the AS2 messages sent to the partner using the <code>StartFileTransfer</code> API
+     * operation. This ID cannot include spaces.
      * </p>
      */
     private String as2Id;
@@ -216,11 +220,19 @@ public class DescribedProfile implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The unique identifier for the AS2 process.
+     * The <code>As2Id</code> is the <i>AS2-name</i>, as defined in the <a
+     * href="https://datatracker.ietf.org/doc/html/rfc4130">RFC 4130</a>. For inbound transfers, this is the
+     * <code>AS2-From</code> header for the AS2 messages sent from the partner. For outbound connectors, this is the
+     * <code>AS2-To</code> header for the AS2 messages sent to the partner using the <code>StartFileTransfer</code> API
+     * operation. This ID cannot include spaces.
      * </p>
      * 
      * @param as2Id
-     *        The unique identifier for the AS2 process.
+     *        The <code>As2Id</code> is the <i>AS2-name</i>, as defined in the <a
+     *        href="https://datatracker.ietf.org/doc/html/rfc4130">RFC 4130</a>. For inbound transfers, this is the
+     *        <code>AS2-From</code> header for the AS2 messages sent from the partner. For outbound connectors, this is
+     *        the <code>AS2-To</code> header for the AS2 messages sent to the partner using the
+     *        <code>StartFileTransfer</code> API operation. This ID cannot include spaces.
      */
 
     public void setAs2Id(String as2Id) {
@@ -229,10 +241,18 @@ public class DescribedProfile implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The unique identifier for the AS2 process.
+     * The <code>As2Id</code> is the <i>AS2-name</i>, as defined in the <a
+     * href="https://datatracker.ietf.org/doc/html/rfc4130">RFC 4130</a>. For inbound transfers, this is the
+     * <code>AS2-From</code> header for the AS2 messages sent from the partner. For outbound connectors, this is the
+     * <code>AS2-To</code> header for the AS2 messages sent to the partner using the <code>StartFileTransfer</code> API
+     * operation. This ID cannot include spaces.
      * </p>
      * 
-     * @return The unique identifier for the AS2 process.
+     * @return The <code>As2Id</code> is the <i>AS2-name</i>, as defined in the <a
+     *         href="https://datatracker.ietf.org/doc/html/rfc4130">RFC 4130</a>. For inbound transfers, this is the
+     *         <code>AS2-From</code> header for the AS2 messages sent from the partner. For outbound connectors, this is
+     *         the <code>AS2-To</code> header for the AS2 messages sent to the partner using the
+     *         <code>StartFileTransfer</code> API operation. This ID cannot include spaces.
      */
 
     public String getAs2Id() {
@@ -241,11 +261,19 @@ public class DescribedProfile implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The unique identifier for the AS2 process.
+     * The <code>As2Id</code> is the <i>AS2-name</i>, as defined in the <a
+     * href="https://datatracker.ietf.org/doc/html/rfc4130">RFC 4130</a>. For inbound transfers, this is the
+     * <code>AS2-From</code> header for the AS2 messages sent from the partner. For outbound connectors, this is the
+     * <code>AS2-To</code> header for the AS2 messages sent to the partner using the <code>StartFileTransfer</code> API
+     * operation. This ID cannot include spaces.
      * </p>
      * 
      * @param as2Id
-     *        The unique identifier for the AS2 process.
+     *        The <code>As2Id</code> is the <i>AS2-name</i>, as defined in the <a
+     *        href="https://datatracker.ietf.org/doc/html/rfc4130">RFC 4130</a>. For inbound transfers, this is the
+     *        <code>AS2-From</code> header for the AS2 messages sent from the partner. For outbound connectors, this is
+     *        the <code>AS2-To</code> header for the AS2 messages sent to the partner using the
+     *        <code>StartFileTransfer</code> API operation. This ID cannot include spaces.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

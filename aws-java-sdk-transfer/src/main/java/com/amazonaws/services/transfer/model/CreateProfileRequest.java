@@ -27,7 +27,7 @@ public class CreateProfileRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The <code>As2Id</code> is the <i>AS2-name</i>, as defined in the defined in the <a
+     * The <code>As2Id</code> is the <i>AS2-name</i>, as defined in the <a
      * href="https://datatracker.ietf.org/doc/html/rfc4130">RFC 4130</a>. For inbound transfers, this is the
      * <code>AS2-From</code> header for the AS2 messages sent from the partner. For outbound connectors, this is the
      * <code>AS2-To</code> header for the AS2 messages sent to the partner using the <code>StartFileTransfer</code> API
@@ -58,7 +58,7 @@ public class CreateProfileRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The <code>As2Id</code> is the <i>AS2-name</i>, as defined in the defined in the <a
+     * The <code>As2Id</code> is the <i>AS2-name</i>, as defined in the <a
      * href="https://datatracker.ietf.org/doc/html/rfc4130">RFC 4130</a>. For inbound transfers, this is the
      * <code>AS2-From</code> header for the AS2 messages sent from the partner. For outbound connectors, this is the
      * <code>AS2-To</code> header for the AS2 messages sent to the partner using the <code>StartFileTransfer</code> API
@@ -66,7 +66,7 @@ public class CreateProfileRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      * 
      * @param as2Id
-     *        The <code>As2Id</code> is the <i>AS2-name</i>, as defined in the defined in the <a
+     *        The <code>As2Id</code> is the <i>AS2-name</i>, as defined in the <a
      *        href="https://datatracker.ietf.org/doc/html/rfc4130">RFC 4130</a>. For inbound transfers, this is the
      *        <code>AS2-From</code> header for the AS2 messages sent from the partner. For outbound connectors, this is
      *        the <code>AS2-To</code> header for the AS2 messages sent to the partner using the
@@ -79,14 +79,14 @@ public class CreateProfileRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The <code>As2Id</code> is the <i>AS2-name</i>, as defined in the defined in the <a
+     * The <code>As2Id</code> is the <i>AS2-name</i>, as defined in the <a
      * href="https://datatracker.ietf.org/doc/html/rfc4130">RFC 4130</a>. For inbound transfers, this is the
      * <code>AS2-From</code> header for the AS2 messages sent from the partner. For outbound connectors, this is the
      * <code>AS2-To</code> header for the AS2 messages sent to the partner using the <code>StartFileTransfer</code> API
      * operation. This ID cannot include spaces.
      * </p>
      * 
-     * @return The <code>As2Id</code> is the <i>AS2-name</i>, as defined in the defined in the <a
+     * @return The <code>As2Id</code> is the <i>AS2-name</i>, as defined in the <a
      *         href="https://datatracker.ietf.org/doc/html/rfc4130">RFC 4130</a>. For inbound transfers, this is the
      *         <code>AS2-From</code> header for the AS2 messages sent from the partner. For outbound connectors, this is
      *         the <code>AS2-To</code> header for the AS2 messages sent to the partner using the
@@ -99,7 +99,7 @@ public class CreateProfileRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The <code>As2Id</code> is the <i>AS2-name</i>, as defined in the defined in the <a
+     * The <code>As2Id</code> is the <i>AS2-name</i>, as defined in the <a
      * href="https://datatracker.ietf.org/doc/html/rfc4130">RFC 4130</a>. For inbound transfers, this is the
      * <code>AS2-From</code> header for the AS2 messages sent from the partner. For outbound connectors, this is the
      * <code>AS2-To</code> header for the AS2 messages sent to the partner using the <code>StartFileTransfer</code> API
@@ -107,7 +107,7 @@ public class CreateProfileRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      * 
      * @param as2Id
-     *        The <code>As2Id</code> is the <i>AS2-name</i>, as defined in the defined in the <a
+     *        The <code>As2Id</code> is the <i>AS2-name</i>, as defined in the <a
      *        href="https://datatracker.ietf.org/doc/html/rfc4130">RFC 4130</a>. For inbound transfers, this is the
      *        <code>AS2-From</code> header for the AS2 messages sent from the partner. For outbound connectors, this is
      *        the <code>AS2-To</code> header for the AS2 messages sent to the partner using the

@@ -31,19 +31,19 @@ public class As2ConnectorConfig implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * A unique identifier for the AS2 process.
+     * A unique identifier for the AS2 local profile.
      * </p>
      */
     private String localProfileId;
     /**
      * <p>
-     * A unique identifier for the partner for the connector.
+     * A unique identifier for the partner profile for the connector.
      * </p>
      */
     private String partnerProfileId;
     /**
      * <p>
-     * A short description to help identify the connector.
+     * Used as the <code>Subject</code> HTTP header attribute in AS2 messages that are being sent with the connector.
      * </p>
      */
     private String messageSubject;
@@ -61,7 +61,7 @@ public class As2ConnectorConfig implements Serializable, Cloneable, StructuredPo
     private String encryptionAlgorithm;
     /**
      * <p>
-     * The algorithm that is used to sign the AS2 transfers for this partner profile.
+     * The algorithm that is used to sign the AS2 messages sent with the connector.
      * </p>
      */
     private String signingAlgorithm;
@@ -69,6 +69,11 @@ public class As2ConnectorConfig implements Serializable, Cloneable, StructuredPo
      * <p>
      * The signing algorithm for the MDN response.
      * </p>
+     * <note>
+     * <p>
+     * If set to DEFAULT (or not set at all), the value for <code>SigningAlogorithm</code> is used.
+     * </p>
+     * </note>
      */
     private String mdnSigningAlgorithm;
     /**
@@ -94,11 +99,11 @@ public class As2ConnectorConfig implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * A unique identifier for the AS2 process.
+     * A unique identifier for the AS2 local profile.
      * </p>
      * 
      * @param localProfileId
-     *        A unique identifier for the AS2 process.
+     *        A unique identifier for the AS2 local profile.
      */
 
     public void setLocalProfileId(String localProfileId) {
@@ -107,10 +112,10 @@ public class As2ConnectorConfig implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * A unique identifier for the AS2 process.
+     * A unique identifier for the AS2 local profile.
      * </p>
      * 
-     * @return A unique identifier for the AS2 process.
+     * @return A unique identifier for the AS2 local profile.
      */
 
     public String getLocalProfileId() {
@@ -119,11 +124,11 @@ public class As2ConnectorConfig implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * A unique identifier for the AS2 process.
+     * A unique identifier for the AS2 local profile.
      * </p>
      * 
      * @param localProfileId
-     *        A unique identifier for the AS2 process.
+     *        A unique identifier for the AS2 local profile.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -134,11 +139,11 @@ public class As2ConnectorConfig implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * A unique identifier for the partner for the connector.
+     * A unique identifier for the partner profile for the connector.
      * </p>
      * 
      * @param partnerProfileId
-     *        A unique identifier for the partner for the connector.
+     *        A unique identifier for the partner profile for the connector.
      */
 
     public void setPartnerProfileId(String partnerProfileId) {
@@ -147,10 +152,10 @@ public class As2ConnectorConfig implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * A unique identifier for the partner for the connector.
+     * A unique identifier for the partner profile for the connector.
      * </p>
      * 
-     * @return A unique identifier for the partner for the connector.
+     * @return A unique identifier for the partner profile for the connector.
      */
 
     public String getPartnerProfileId() {
@@ -159,11 +164,11 @@ public class As2ConnectorConfig implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * A unique identifier for the partner for the connector.
+     * A unique identifier for the partner profile for the connector.
      * </p>
      * 
      * @param partnerProfileId
-     *        A unique identifier for the partner for the connector.
+     *        A unique identifier for the partner profile for the connector.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -174,11 +179,12 @@ public class As2ConnectorConfig implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * A short description to help identify the connector.
+     * Used as the <code>Subject</code> HTTP header attribute in AS2 messages that are being sent with the connector.
      * </p>
      * 
      * @param messageSubject
-     *        A short description to help identify the connector.
+     *        Used as the <code>Subject</code> HTTP header attribute in AS2 messages that are being sent with the
+     *        connector.
      */
 
     public void setMessageSubject(String messageSubject) {
@@ -187,10 +193,11 @@ public class As2ConnectorConfig implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * A short description to help identify the connector.
+     * Used as the <code>Subject</code> HTTP header attribute in AS2 messages that are being sent with the connector.
      * </p>
      * 
-     * @return A short description to help identify the connector.
+     * @return Used as the <code>Subject</code> HTTP header attribute in AS2 messages that are being sent with the
+     *         connector.
      */
 
     public String getMessageSubject() {
@@ -199,11 +206,12 @@ public class As2ConnectorConfig implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * A short description to help identify the connector.
+     * Used as the <code>Subject</code> HTTP header attribute in AS2 messages that are being sent with the connector.
      * </p>
      * 
      * @param messageSubject
-     *        A short description to help identify the connector.
+     *        Used as the <code>Subject</code> HTTP header attribute in AS2 messages that are being sent with the
+     *        connector.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -332,11 +340,11 @@ public class As2ConnectorConfig implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The algorithm that is used to sign the AS2 transfers for this partner profile.
+     * The algorithm that is used to sign the AS2 messages sent with the connector.
      * </p>
      * 
      * @param signingAlgorithm
-     *        The algorithm that is used to sign the AS2 transfers for this partner profile.
+     *        The algorithm that is used to sign the AS2 messages sent with the connector.
      * @see SigningAlg
      */
 
@@ -346,10 +354,10 @@ public class As2ConnectorConfig implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The algorithm that is used to sign the AS2 transfers for this partner profile.
+     * The algorithm that is used to sign the AS2 messages sent with the connector.
      * </p>
      * 
-     * @return The algorithm that is used to sign the AS2 transfers for this partner profile.
+     * @return The algorithm that is used to sign the AS2 messages sent with the connector.
      * @see SigningAlg
      */
 
@@ -359,11 +367,11 @@ public class As2ConnectorConfig implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The algorithm that is used to sign the AS2 transfers for this partner profile.
+     * The algorithm that is used to sign the AS2 messages sent with the connector.
      * </p>
      * 
      * @param signingAlgorithm
-     *        The algorithm that is used to sign the AS2 transfers for this partner profile.
+     *        The algorithm that is used to sign the AS2 messages sent with the connector.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see SigningAlg
      */
@@ -375,11 +383,11 @@ public class As2ConnectorConfig implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The algorithm that is used to sign the AS2 transfers for this partner profile.
+     * The algorithm that is used to sign the AS2 messages sent with the connector.
      * </p>
      * 
      * @param signingAlgorithm
-     *        The algorithm that is used to sign the AS2 transfers for this partner profile.
+     *        The algorithm that is used to sign the AS2 messages sent with the connector.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see SigningAlg
      */
@@ -393,9 +401,17 @@ public class As2ConnectorConfig implements Serializable, Cloneable, StructuredPo
      * <p>
      * The signing algorithm for the MDN response.
      * </p>
+     * <note>
+     * <p>
+     * If set to DEFAULT (or not set at all), the value for <code>SigningAlogorithm</code> is used.
+     * </p>
+     * </note>
      * 
      * @param mdnSigningAlgorithm
-     *        The signing algorithm for the MDN response.
+     *        The signing algorithm for the MDN response.</p> <note>
+     *        <p>
+     *        If set to DEFAULT (or not set at all), the value for <code>SigningAlogorithm</code> is used.
+     *        </p>
      * @see MdnSigningAlg
      */
 
@@ -407,8 +423,16 @@ public class As2ConnectorConfig implements Serializable, Cloneable, StructuredPo
      * <p>
      * The signing algorithm for the MDN response.
      * </p>
+     * <note>
+     * <p>
+     * If set to DEFAULT (or not set at all), the value for <code>SigningAlogorithm</code> is used.
+     * </p>
+     * </note>
      * 
-     * @return The signing algorithm for the MDN response.
+     * @return The signing algorithm for the MDN response.</p> <note>
+     *         <p>
+     *         If set to DEFAULT (or not set at all), the value for <code>SigningAlogorithm</code> is used.
+     *         </p>
      * @see MdnSigningAlg
      */
 
@@ -420,9 +444,17 @@ public class As2ConnectorConfig implements Serializable, Cloneable, StructuredPo
      * <p>
      * The signing algorithm for the MDN response.
      * </p>
+     * <note>
+     * <p>
+     * If set to DEFAULT (or not set at all), the value for <code>SigningAlogorithm</code> is used.
+     * </p>
+     * </note>
      * 
      * @param mdnSigningAlgorithm
-     *        The signing algorithm for the MDN response.
+     *        The signing algorithm for the MDN response.</p> <note>
+     *        <p>
+     *        If set to DEFAULT (or not set at all), the value for <code>SigningAlogorithm</code> is used.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see MdnSigningAlg
      */
@@ -436,9 +468,17 @@ public class As2ConnectorConfig implements Serializable, Cloneable, StructuredPo
      * <p>
      * The signing algorithm for the MDN response.
      * </p>
+     * <note>
+     * <p>
+     * If set to DEFAULT (or not set at all), the value for <code>SigningAlogorithm</code> is used.
+     * </p>
+     * </note>
      * 
      * @param mdnSigningAlgorithm
-     *        The signing algorithm for the MDN response.
+     *        The signing algorithm for the MDN response.</p> <note>
+     *        <p>
+     *        If set to DEFAULT (or not set at all), the value for <code>SigningAlogorithm</code> is used.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see MdnSigningAlg
      */

@@ -50,7 +50,7 @@ import javax.annotation.Generated;
  * </li>
  * <li>
  * <p>
- * To read Amazon S3 bucket.
+ * To read Amazon S3 bucket or call SSM:GetDocument.
  * </p>
  * </li>
  * </ul>

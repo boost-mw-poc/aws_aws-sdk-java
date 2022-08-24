@@ -61,13 +61,13 @@ public class ListedAgreement implements Serializable, Cloneable, StructuredPojo 
     private String serverId;
     /**
      * <p>
-     * A unique identifier for the AS2 process.
+     * A unique identifier for the AS2 local profile.
      * </p>
      */
     private String localProfileId;
     /**
      * <p>
-     * A unique identifier for the partner process.
+     * A unique identifier for the partner profile.
      * </p>
      */
     private String partnerProfileId;
@@ -299,11 +299,11 @@ public class ListedAgreement implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * A unique identifier for the AS2 process.
+     * A unique identifier for the AS2 local profile.
      * </p>
      * 
      * @param localProfileId
-     *        A unique identifier for the AS2 process.
+     *        A unique identifier for the AS2 local profile.
      */
 
     public void setLocalProfileId(String localProfileId) {
@@ -312,10 +312,10 @@ public class ListedAgreement implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * A unique identifier for the AS2 process.
+     * A unique identifier for the AS2 local profile.
      * </p>
      * 
-     * @return A unique identifier for the AS2 process.
+     * @return A unique identifier for the AS2 local profile.
      */
 
     public String getLocalProfileId() {
@@ -324,11 +324,11 @@ public class ListedAgreement implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * A unique identifier for the AS2 process.
+     * A unique identifier for the AS2 local profile.
      * </p>
      * 
      * @param localProfileId
-     *        A unique identifier for the AS2 process.
+     *        A unique identifier for the AS2 local profile.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -339,11 +339,11 @@ public class ListedAgreement implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * A unique identifier for the partner process.
+     * A unique identifier for the partner profile.
      * </p>
      * 
      * @param partnerProfileId
-     *        A unique identifier for the partner process.
+     *        A unique identifier for the partner profile.
      */
 
     public void setPartnerProfileId(String partnerProfileId) {
@@ -352,10 +352,10 @@ public class ListedAgreement implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * A unique identifier for the partner process.
+     * A unique identifier for the partner profile.
      * </p>
      * 
-     * @return A unique identifier for the partner process.
+     * @return A unique identifier for the partner profile.
      */
 
     public String getPartnerProfileId() {
@@ -364,11 +364,11 @@ public class ListedAgreement implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * A unique identifier for the partner process.
+     * A unique identifier for the partner profile.
      * </p>
      * 
      * @param partnerProfileId
-     *        A unique identifier for the partner process.
+     *        A unique identifier for the partner profile.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -68,15 +68,18 @@ public class CreateChannelRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <ul>
      * <li>
      * <p>
-     * <code>STANDARD</code>: Multiple qualities are generated from the original input, to automatically give viewers
-     * the best experience for their devices and network conditions. Resolution can be up to 1080p and bitrate can be up
-     * to 8.5 Mbps. Audio is transcoded only for renditions 360p and below; above that, audio is passed through.
+     * <code>STANDARD</code>: Video is transcoded: multiple qualities are generated from the original input, to
+     * automatically give viewers the best experience for their devices and network conditions. Transcoding allows
+     * higher playback quality across a range of download speeds. Resolution can be up to 1080p and bitrate can be up to
+     * 8.5 Mbps. Audio is transcoded only for renditions 360p and below; above that, audio is passed through. This is
+     * the default.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>BASIC</code>: Amazon IVS delivers the original input to viewers. The viewer’s video-quality choice is
-     * limited to the original input. Resolution can be up to 480p and bitrate can be up to 1.5 Mbps.
+     * <code>BASIC</code>: Video is transmuxed: Amazon IVS delivers the original input to viewers. The viewer’s
+     * video-quality choice is limited to the original input. Resolution can be up to 1080p and bitrate can be up to 1.5
+     * Mbps for 480p and up to 3.5 Mbps for resolutions between 480p and 1080p.
      * </p>
      * </li>
      * </ul>
@@ -391,15 +394,18 @@ public class CreateChannelRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <ul>
      * <li>
      * <p>
-     * <code>STANDARD</code>: Multiple qualities are generated from the original input, to automatically give viewers
-     * the best experience for their devices and network conditions. Resolution can be up to 1080p and bitrate can be up
-     * to 8.5 Mbps. Audio is transcoded only for renditions 360p and below; above that, audio is passed through.
+     * <code>STANDARD</code>: Video is transcoded: multiple qualities are generated from the original input, to
+     * automatically give viewers the best experience for their devices and network conditions. Transcoding allows
+     * higher playback quality across a range of download speeds. Resolution can be up to 1080p and bitrate can be up to
+     * 8.5 Mbps. Audio is transcoded only for renditions 360p and below; above that, audio is passed through. This is
+     * the default.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>BASIC</code>: Amazon IVS delivers the original input to viewers. The viewer’s video-quality choice is
-     * limited to the original input. Resolution can be up to 480p and bitrate can be up to 1.5 Mbps.
+     * <code>BASIC</code>: Video is transmuxed: Amazon IVS delivers the original input to viewers. The viewer’s
+     * video-quality choice is limited to the original input. Resolution can be up to 1080p and bitrate can be up to 1.5
+     * Mbps for 480p and up to 3.5 Mbps for resolutions between 480p and 1080p.
      * </p>
      * </li>
      * </ul>
@@ -411,16 +417,18 @@ public class CreateChannelRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>STANDARD</code>: Multiple qualities are generated from the original input, to automatically give
-     *        viewers the best experience for their devices and network conditions. Resolution can be up to 1080p and
+     *        <code>STANDARD</code>: Video is transcoded: multiple qualities are generated from the original input, to
+     *        automatically give viewers the best experience for their devices and network conditions. Transcoding
+     *        allows higher playback quality across a range of download speeds. Resolution can be up to 1080p and
      *        bitrate can be up to 8.5 Mbps. Audio is transcoded only for renditions 360p and below; above that, audio
-     *        is passed through.
+     *        is passed through. This is the default.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>BASIC</code>: Amazon IVS delivers the original input to viewers. The viewer’s video-quality choice
-     *        is limited to the original input. Resolution can be up to 480p and bitrate can be up to 1.5 Mbps.
+     *        <code>BASIC</code>: Video is transmuxed: Amazon IVS delivers the original input to viewers. The viewer’s
+     *        video-quality choice is limited to the original input. Resolution can be up to 1080p and bitrate can be up
+     *        to 1.5 Mbps for 480p and up to 3.5 Mbps for resolutions between 480p and 1080p.
      *        </p>
      *        </li>
      * @see ChannelType
@@ -438,15 +446,18 @@ public class CreateChannelRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <ul>
      * <li>
      * <p>
-     * <code>STANDARD</code>: Multiple qualities are generated from the original input, to automatically give viewers
-     * the best experience for their devices and network conditions. Resolution can be up to 1080p and bitrate can be up
-     * to 8.5 Mbps. Audio is transcoded only for renditions 360p and below; above that, audio is passed through.
+     * <code>STANDARD</code>: Video is transcoded: multiple qualities are generated from the original input, to
+     * automatically give viewers the best experience for their devices and network conditions. Transcoding allows
+     * higher playback quality across a range of download speeds. Resolution can be up to 1080p and bitrate can be up to
+     * 8.5 Mbps. Audio is transcoded only for renditions 360p and below; above that, audio is passed through. This is
+     * the default.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>BASIC</code>: Amazon IVS delivers the original input to viewers. The viewer’s video-quality choice is
-     * limited to the original input. Resolution can be up to 480p and bitrate can be up to 1.5 Mbps.
+     * <code>BASIC</code>: Video is transmuxed: Amazon IVS delivers the original input to viewers. The viewer’s
+     * video-quality choice is limited to the original input. Resolution can be up to 1080p and bitrate can be up to 1.5
+     * Mbps for 480p and up to 3.5 Mbps for resolutions between 480p and 1080p.
      * </p>
      * </li>
      * </ul>
@@ -457,16 +468,18 @@ public class CreateChannelRequest extends com.amazonaws.AmazonWebServiceRequest 
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>STANDARD</code>: Multiple qualities are generated from the original input, to automatically give
-     *         viewers the best experience for their devices and network conditions. Resolution can be up to 1080p and
+     *         <code>STANDARD</code>: Video is transcoded: multiple qualities are generated from the original input, to
+     *         automatically give viewers the best experience for their devices and network conditions. Transcoding
+     *         allows higher playback quality across a range of download speeds. Resolution can be up to 1080p and
      *         bitrate can be up to 8.5 Mbps. Audio is transcoded only for renditions 360p and below; above that, audio
-     *         is passed through.
+     *         is passed through. This is the default.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>BASIC</code>: Amazon IVS delivers the original input to viewers. The viewer’s video-quality choice
-     *         is limited to the original input. Resolution can be up to 480p and bitrate can be up to 1.5 Mbps.
+     *         <code>BASIC</code>: Video is transmuxed: Amazon IVS delivers the original input to viewers. The viewer’s
+     *         video-quality choice is limited to the original input. Resolution can be up to 1080p and bitrate can be
+     *         up to 1.5 Mbps for 480p and up to 3.5 Mbps for resolutions between 480p and 1080p.
      *         </p>
      *         </li>
      * @see ChannelType
@@ -484,15 +497,18 @@ public class CreateChannelRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <ul>
      * <li>
      * <p>
-     * <code>STANDARD</code>: Multiple qualities are generated from the original input, to automatically give viewers
-     * the best experience for their devices and network conditions. Resolution can be up to 1080p and bitrate can be up
-     * to 8.5 Mbps. Audio is transcoded only for renditions 360p and below; above that, audio is passed through.
+     * <code>STANDARD</code>: Video is transcoded: multiple qualities are generated from the original input, to
+     * automatically give viewers the best experience for their devices and network conditions. Transcoding allows
+     * higher playback quality across a range of download speeds. Resolution can be up to 1080p and bitrate can be up to
+     * 8.5 Mbps. Audio is transcoded only for renditions 360p and below; above that, audio is passed through. This is
+     * the default.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>BASIC</code>: Amazon IVS delivers the original input to viewers. The viewer’s video-quality choice is
-     * limited to the original input. Resolution can be up to 480p and bitrate can be up to 1.5 Mbps.
+     * <code>BASIC</code>: Video is transmuxed: Amazon IVS delivers the original input to viewers. The viewer’s
+     * video-quality choice is limited to the original input. Resolution can be up to 1080p and bitrate can be up to 1.5
+     * Mbps for 480p and up to 3.5 Mbps for resolutions between 480p and 1080p.
      * </p>
      * </li>
      * </ul>
@@ -504,16 +520,18 @@ public class CreateChannelRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>STANDARD</code>: Multiple qualities are generated from the original input, to automatically give
-     *        viewers the best experience for their devices and network conditions. Resolution can be up to 1080p and
+     *        <code>STANDARD</code>: Video is transcoded: multiple qualities are generated from the original input, to
+     *        automatically give viewers the best experience for their devices and network conditions. Transcoding
+     *        allows higher playback quality across a range of download speeds. Resolution can be up to 1080p and
      *        bitrate can be up to 8.5 Mbps. Audio is transcoded only for renditions 360p and below; above that, audio
-     *        is passed through.
+     *        is passed through. This is the default.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>BASIC</code>: Amazon IVS delivers the original input to viewers. The viewer’s video-quality choice
-     *        is limited to the original input. Resolution can be up to 480p and bitrate can be up to 1.5 Mbps.
+     *        <code>BASIC</code>: Video is transmuxed: Amazon IVS delivers the original input to viewers. The viewer’s
+     *        video-quality choice is limited to the original input. Resolution can be up to 1080p and bitrate can be up
+     *        to 1.5 Mbps for 480p and up to 3.5 Mbps for resolutions between 480p and 1080p.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -533,15 +551,18 @@ public class CreateChannelRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <ul>
      * <li>
      * <p>
-     * <code>STANDARD</code>: Multiple qualities are generated from the original input, to automatically give viewers
-     * the best experience for their devices and network conditions. Resolution can be up to 1080p and bitrate can be up
-     * to 8.5 Mbps. Audio is transcoded only for renditions 360p and below; above that, audio is passed through.
+     * <code>STANDARD</code>: Video is transcoded: multiple qualities are generated from the original input, to
+     * automatically give viewers the best experience for their devices and network conditions. Transcoding allows
+     * higher playback quality across a range of download speeds. Resolution can be up to 1080p and bitrate can be up to
+     * 8.5 Mbps. Audio is transcoded only for renditions 360p and below; above that, audio is passed through. This is
+     * the default.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>BASIC</code>: Amazon IVS delivers the original input to viewers. The viewer’s video-quality choice is
-     * limited to the original input. Resolution can be up to 480p and bitrate can be up to 1.5 Mbps.
+     * <code>BASIC</code>: Video is transmuxed: Amazon IVS delivers the original input to viewers. The viewer’s
+     * video-quality choice is limited to the original input. Resolution can be up to 1080p and bitrate can be up to 1.5
+     * Mbps for 480p and up to 3.5 Mbps for resolutions between 480p and 1080p.
      * </p>
      * </li>
      * </ul>
@@ -553,16 +574,18 @@ public class CreateChannelRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>STANDARD</code>: Multiple qualities are generated from the original input, to automatically give
-     *        viewers the best experience for their devices and network conditions. Resolution can be up to 1080p and
+     *        <code>STANDARD</code>: Video is transcoded: multiple qualities are generated from the original input, to
+     *        automatically give viewers the best experience for their devices and network conditions. Transcoding
+     *        allows higher playback quality across a range of download speeds. Resolution can be up to 1080p and
      *        bitrate can be up to 8.5 Mbps. Audio is transcoded only for renditions 360p and below; above that, audio
-     *        is passed through.
+     *        is passed through. This is the default.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>BASIC</code>: Amazon IVS delivers the original input to viewers. The viewer’s video-quality choice
-     *        is limited to the original input. Resolution can be up to 480p and bitrate can be up to 1.5 Mbps.
+     *        <code>BASIC</code>: Video is transmuxed: Amazon IVS delivers the original input to viewers. The viewer’s
+     *        video-quality choice is limited to the original input. Resolution can be up to 1080p and bitrate can be up
+     *        to 1.5 Mbps for 480p and up to 3.5 Mbps for resolutions between 480p and 1080p.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

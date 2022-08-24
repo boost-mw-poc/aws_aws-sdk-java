@@ -51,13 +51,16 @@ public class UpdateAgreementRequest extends com.amazonaws.AmazonWebServiceReques
     private String status;
     /**
      * <p>
+     * A unique identifier for the AS2 local profile.
+     * </p>
+     * <p>
      * To change the local profile identifier, provide a new value here.
      * </p>
      */
     private String localProfileId;
     /**
      * <p>
-     * To change the partner profile identifier, provide a new value here.
+     * A unique identifier for the partner profile. To change the partner profile identifier, provide a new value here.
      * </p>
      */
     private String partnerProfileId;
@@ -70,8 +73,14 @@ public class UpdateAgreementRequest extends com.amazonaws.AmazonWebServiceReques
     private String baseDirectory;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Identity and Access Management (IAM) role that grants access to at least
-     * the <code>HomeDirectory</code> of your users' Amazon S3 buckets.
+     * With AS2, you can send files by calling <code>StartFileTransfer</code> and specifying the file paths in the
+     * request parameter, <code>SendFilePaths</code>. We use the file’s parent directory (for example, for
+     * <code>--send-file-paths /bucket/dir/file.txt</code>, parent directory is <code>/bucket/dir/</code>) to
+     * temporarily store a processed AS2 message file, store the MDN when we receive them from the partner, and write a
+     * final JSON file containing relevant metadata of the transmission. So, the <code>AccessRole</code> needs to
+     * provide read and write access to the parent directory of the file location used in the
+     * <code>StartFileTransfer</code> request. Additionally, you need to provide read and write access to the parent
+     * directory of the files that you intend to send with <code>StartFileTransfer</code>.
      * </p>
      */
     private String accessRole;
@@ -260,10 +269,15 @@ public class UpdateAgreementRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
+     * A unique identifier for the AS2 local profile.
+     * </p>
+     * <p>
      * To change the local profile identifier, provide a new value here.
      * </p>
      * 
      * @param localProfileId
+     *        A unique identifier for the AS2 local profile.</p>
+     *        <p>
      *        To change the local profile identifier, provide a new value here.
      */
 
@@ -273,10 +287,15 @@ public class UpdateAgreementRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
+     * A unique identifier for the AS2 local profile.
+     * </p>
+     * <p>
      * To change the local profile identifier, provide a new value here.
      * </p>
      * 
-     * @return To change the local profile identifier, provide a new value here.
+     * @return A unique identifier for the AS2 local profile.</p>
+     *         <p>
+     *         To change the local profile identifier, provide a new value here.
      */
 
     public String getLocalProfileId() {
@@ -285,10 +304,15 @@ public class UpdateAgreementRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
+     * A unique identifier for the AS2 local profile.
+     * </p>
+     * <p>
      * To change the local profile identifier, provide a new value here.
      * </p>
      * 
      * @param localProfileId
+     *        A unique identifier for the AS2 local profile.</p>
+     *        <p>
      *        To change the local profile identifier, provide a new value here.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -300,11 +324,12 @@ public class UpdateAgreementRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * To change the partner profile identifier, provide a new value here.
+     * A unique identifier for the partner profile. To change the partner profile identifier, provide a new value here.
      * </p>
      * 
      * @param partnerProfileId
-     *        To change the partner profile identifier, provide a new value here.
+     *        A unique identifier for the partner profile. To change the partner profile identifier, provide a new value
+     *        here.
      */
 
     public void setPartnerProfileId(String partnerProfileId) {
@@ -313,10 +338,11 @@ public class UpdateAgreementRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * To change the partner profile identifier, provide a new value here.
+     * A unique identifier for the partner profile. To change the partner profile identifier, provide a new value here.
      * </p>
      * 
-     * @return To change the partner profile identifier, provide a new value here.
+     * @return A unique identifier for the partner profile. To change the partner profile identifier, provide a new
+     *         value here.
      */
 
     public String getPartnerProfileId() {
@@ -325,11 +351,12 @@ public class UpdateAgreementRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * To change the partner profile identifier, provide a new value here.
+     * A unique identifier for the partner profile. To change the partner profile identifier, provide a new value here.
      * </p>
      * 
      * @param partnerProfileId
-     *        To change the partner profile identifier, provide a new value here.
+     *        A unique identifier for the partner profile. To change the partner profile identifier, provide a new value
+     *        here.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -386,13 +413,25 @@ public class UpdateAgreementRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Identity and Access Management (IAM) role that grants access to at least
-     * the <code>HomeDirectory</code> of your users' Amazon S3 buckets.
+     * With AS2, you can send files by calling <code>StartFileTransfer</code> and specifying the file paths in the
+     * request parameter, <code>SendFilePaths</code>. We use the file’s parent directory (for example, for
+     * <code>--send-file-paths /bucket/dir/file.txt</code>, parent directory is <code>/bucket/dir/</code>) to
+     * temporarily store a processed AS2 message file, store the MDN when we receive them from the partner, and write a
+     * final JSON file containing relevant metadata of the transmission. So, the <code>AccessRole</code> needs to
+     * provide read and write access to the parent directory of the file location used in the
+     * <code>StartFileTransfer</code> request. Additionally, you need to provide read and write access to the parent
+     * directory of the files that you intend to send with <code>StartFileTransfer</code>.
      * </p>
      * 
      * @param accessRole
-     *        The Amazon Resource Name (ARN) of the Identity and Access Management (IAM) role that grants access to at
-     *        least the <code>HomeDirectory</code> of your users' Amazon S3 buckets.
+     *        With AS2, you can send files by calling <code>StartFileTransfer</code> and specifying the file paths in
+     *        the request parameter, <code>SendFilePaths</code>. We use the file’s parent directory (for example, for
+     *        <code>--send-file-paths /bucket/dir/file.txt</code>, parent directory is <code>/bucket/dir/</code>) to
+     *        temporarily store a processed AS2 message file, store the MDN when we receive them from the partner, and
+     *        write a final JSON file containing relevant metadata of the transmission. So, the <code>AccessRole</code>
+     *        needs to provide read and write access to the parent directory of the file location used in the
+     *        <code>StartFileTransfer</code> request. Additionally, you need to provide read and write access to the
+     *        parent directory of the files that you intend to send with <code>StartFileTransfer</code>.
      */
 
     public void setAccessRole(String accessRole) {
@@ -401,12 +440,24 @@ public class UpdateAgreementRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Identity and Access Management (IAM) role that grants access to at least
-     * the <code>HomeDirectory</code> of your users' Amazon S3 buckets.
+     * With AS2, you can send files by calling <code>StartFileTransfer</code> and specifying the file paths in the
+     * request parameter, <code>SendFilePaths</code>. We use the file’s parent directory (for example, for
+     * <code>--send-file-paths /bucket/dir/file.txt</code>, parent directory is <code>/bucket/dir/</code>) to
+     * temporarily store a processed AS2 message file, store the MDN when we receive them from the partner, and write a
+     * final JSON file containing relevant metadata of the transmission. So, the <code>AccessRole</code> needs to
+     * provide read and write access to the parent directory of the file location used in the
+     * <code>StartFileTransfer</code> request. Additionally, you need to provide read and write access to the parent
+     * directory of the files that you intend to send with <code>StartFileTransfer</code>.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the Identity and Access Management (IAM) role that grants access to at
-     *         least the <code>HomeDirectory</code> of your users' Amazon S3 buckets.
+     * @return With AS2, you can send files by calling <code>StartFileTransfer</code> and specifying the file paths in
+     *         the request parameter, <code>SendFilePaths</code>. We use the file’s parent directory (for example, for
+     *         <code>--send-file-paths /bucket/dir/file.txt</code>, parent directory is <code>/bucket/dir/</code>) to
+     *         temporarily store a processed AS2 message file, store the MDN when we receive them from the partner, and
+     *         write a final JSON file containing relevant metadata of the transmission. So, the <code>AccessRole</code>
+     *         needs to provide read and write access to the parent directory of the file location used in the
+     *         <code>StartFileTransfer</code> request. Additionally, you need to provide read and write access to the
+     *         parent directory of the files that you intend to send with <code>StartFileTransfer</code>.
      */
 
     public String getAccessRole() {
@@ -415,13 +466,25 @@ public class UpdateAgreementRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Identity and Access Management (IAM) role that grants access to at least
-     * the <code>HomeDirectory</code> of your users' Amazon S3 buckets.
+     * With AS2, you can send files by calling <code>StartFileTransfer</code> and specifying the file paths in the
+     * request parameter, <code>SendFilePaths</code>. We use the file’s parent directory (for example, for
+     * <code>--send-file-paths /bucket/dir/file.txt</code>, parent directory is <code>/bucket/dir/</code>) to
+     * temporarily store a processed AS2 message file, store the MDN when we receive them from the partner, and write a
+     * final JSON file containing relevant metadata of the transmission. So, the <code>AccessRole</code> needs to
+     * provide read and write access to the parent directory of the file location used in the
+     * <code>StartFileTransfer</code> request. Additionally, you need to provide read and write access to the parent
+     * directory of the files that you intend to send with <code>StartFileTransfer</code>.
      * </p>
      * 
      * @param accessRole
-     *        The Amazon Resource Name (ARN) of the Identity and Access Management (IAM) role that grants access to at
-     *        least the <code>HomeDirectory</code> of your users' Amazon S3 buckets.
+     *        With AS2, you can send files by calling <code>StartFileTransfer</code> and specifying the file paths in
+     *        the request parameter, <code>SendFilePaths</code>. We use the file’s parent directory (for example, for
+     *        <code>--send-file-paths /bucket/dir/file.txt</code>, parent directory is <code>/bucket/dir/</code>) to
+     *        temporarily store a processed AS2 message file, store the MDN when we receive them from the partner, and
+     *        write a final JSON file containing relevant metadata of the transmission. So, the <code>AccessRole</code>
+     *        needs to provide read and write access to the parent directory of the file location used in the
+     *        <code>StartFileTransfer</code> request. Additionally, you need to provide read and write access to the
+     *        parent directory of the files that you intend to send with <code>StartFileTransfer</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

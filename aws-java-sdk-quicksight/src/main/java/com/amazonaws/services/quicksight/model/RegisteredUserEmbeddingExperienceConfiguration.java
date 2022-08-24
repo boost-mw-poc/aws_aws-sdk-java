@@ -97,6 +97,12 @@ public class RegisteredUserEmbeddingExperienceConfiguration implements Serializa
      * </p>
      */
     private RegisteredUserQSearchBarEmbeddingConfiguration qSearchBar;
+    /**
+     * <p>
+     * The type of embedding experience. In this case, Amazon QuickSight visuals.
+     * </p>
+     */
+    private RegisteredUserDashboardVisualEmbeddingConfiguration dashboardVisual;
 
     /**
      * <p>
@@ -474,6 +480,46 @@ public class RegisteredUserEmbeddingExperienceConfiguration implements Serializa
     }
 
     /**
+     * <p>
+     * The type of embedding experience. In this case, Amazon QuickSight visuals.
+     * </p>
+     * 
+     * @param dashboardVisual
+     *        The type of embedding experience. In this case, Amazon QuickSight visuals.
+     */
+
+    public void setDashboardVisual(RegisteredUserDashboardVisualEmbeddingConfiguration dashboardVisual) {
+        this.dashboardVisual = dashboardVisual;
+    }
+
+    /**
+     * <p>
+     * The type of embedding experience. In this case, Amazon QuickSight visuals.
+     * </p>
+     * 
+     * @return The type of embedding experience. In this case, Amazon QuickSight visuals.
+     */
+
+    public RegisteredUserDashboardVisualEmbeddingConfiguration getDashboardVisual() {
+        return this.dashboardVisual;
+    }
+
+    /**
+     * <p>
+     * The type of embedding experience. In this case, Amazon QuickSight visuals.
+     * </p>
+     * 
+     * @param dashboardVisual
+     *        The type of embedding experience. In this case, Amazon QuickSight visuals.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RegisteredUserEmbeddingExperienceConfiguration withDashboardVisual(RegisteredUserDashboardVisualEmbeddingConfiguration dashboardVisual) {
+        setDashboardVisual(dashboardVisual);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -490,7 +536,9 @@ public class RegisteredUserEmbeddingExperienceConfiguration implements Serializa
         if (getQuickSightConsole() != null)
             sb.append("QuickSightConsole: ").append(getQuickSightConsole()).append(",");
         if (getQSearchBar() != null)
-            sb.append("QSearchBar: ").append(getQSearchBar());
+            sb.append("QSearchBar: ").append(getQSearchBar()).append(",");
+        if (getDashboardVisual() != null)
+            sb.append("DashboardVisual: ").append(getDashboardVisual());
         sb.append("}");
         return sb.toString();
     }
@@ -517,6 +565,10 @@ public class RegisteredUserEmbeddingExperienceConfiguration implements Serializa
             return false;
         if (other.getQSearchBar() != null && other.getQSearchBar().equals(this.getQSearchBar()) == false)
             return false;
+        if (other.getDashboardVisual() == null ^ this.getDashboardVisual() == null)
+            return false;
+        if (other.getDashboardVisual() != null && other.getDashboardVisual().equals(this.getDashboardVisual()) == false)
+            return false;
         return true;
     }
 
@@ -528,6 +580,7 @@ public class RegisteredUserEmbeddingExperienceConfiguration implements Serializa
         hashCode = prime * hashCode + ((getDashboard() == null) ? 0 : getDashboard().hashCode());
         hashCode = prime * hashCode + ((getQuickSightConsole() == null) ? 0 : getQuickSightConsole().hashCode());
         hashCode = prime * hashCode + ((getQSearchBar() == null) ? 0 : getQSearchBar().hashCode());
+        hashCode = prime * hashCode + ((getDashboardVisual() == null) ? 0 : getDashboardVisual().hashCode());
         return hashCode;
     }
 
