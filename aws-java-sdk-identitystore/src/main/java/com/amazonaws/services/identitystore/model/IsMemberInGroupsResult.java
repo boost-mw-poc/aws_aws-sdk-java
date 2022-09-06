@@ -25,17 +25,17 @@ public class IsMemberInGroupsResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * An object containing results of batch <code>IsMemberInGroups</code> call.
+     * A list containing the results of membership existence checks.
      * </p>
      */
     private java.util.List<GroupMembershipExistenceResult> results;
 
     /**
      * <p>
-     * An object containing results of batch <code>IsMemberInGroups</code> call.
+     * A list containing the results of membership existence checks.
      * </p>
      * 
-     * @return An object containing results of batch <code>IsMemberInGroups</code> call.
+     * @return A list containing the results of membership existence checks.
      */
 
     public java.util.List<GroupMembershipExistenceResult> getResults() {
@@ -44,11 +44,11 @@ public class IsMemberInGroupsResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * An object containing results of batch <code>IsMemberInGroups</code> call.
+     * A list containing the results of membership existence checks.
      * </p>
      * 
      * @param results
-     *        An object containing results of batch <code>IsMemberInGroups</code> call.
+     *        A list containing the results of membership existence checks.
      */
 
     public void setResults(java.util.Collection<GroupMembershipExistenceResult> results) {
@@ -62,7 +62,7 @@ public class IsMemberInGroupsResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * An object containing results of batch <code>IsMemberInGroups</code> call.
+     * A list containing the results of membership existence checks.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -71,7 +71,7 @@ public class IsMemberInGroupsResult extends com.amazonaws.AmazonWebServiceResult
      * </p>
      * 
      * @param results
-     *        An object containing results of batch <code>IsMemberInGroups</code> call.
+     *        A list containing the results of membership existence checks.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -87,11 +87,11 @@ public class IsMemberInGroupsResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * An object containing results of batch <code>IsMemberInGroups</code> call.
+     * A list containing the results of membership existence checks.
      * </p>
      * 
      * @param results
-     *        An object containing results of batch <code>IsMemberInGroups</code> call.
+     *        A list containing the results of membership existence checks.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

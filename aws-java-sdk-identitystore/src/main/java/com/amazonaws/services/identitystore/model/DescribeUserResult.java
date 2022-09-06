@@ -25,9 +25,9 @@ public class DescribeUserResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * The user’s username value. The length limit is 128 characters. This value can consist of letters, accented
-     * characters, symbols, numbers, and punctuation. The characters <code>&lt;&gt;;:%</code> are excluded. This value
-     * is specified at the time the user is created and stored as an attribute of the user object in the identity store.
+     * A unique string used to identify the user. The length limit is 128 characters. This value can consist of letters,
+     * accented characters, symbols, numbers, and punctuation. This value is specified at the time the user is created
+     * and stored as an attribute of the user object in the identity store.
      * </p>
      */
     private String userName;
@@ -125,16 +125,15 @@ public class DescribeUserResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * The user’s username value. The length limit is 128 characters. This value can consist of letters, accented
-     * characters, symbols, numbers, and punctuation. The characters <code>&lt;&gt;;:%</code> are excluded. This value
-     * is specified at the time the user is created and stored as an attribute of the user object in the identity store.
+     * A unique string used to identify the user. The length limit is 128 characters. This value can consist of letters,
+     * accented characters, symbols, numbers, and punctuation. This value is specified at the time the user is created
+     * and stored as an attribute of the user object in the identity store.
      * </p>
      * 
      * @param userName
-     *        The user’s username value. The length limit is 128 characters. This value can consist of letters, accented
-     *        characters, symbols, numbers, and punctuation. The characters <code>&lt;&gt;;:%</code> are excluded. This
-     *        value is specified at the time the user is created and stored as an attribute of the user object in the
-     *        identity store.
+     *        A unique string used to identify the user. The length limit is 128 characters. This value can consist of
+     *        letters, accented characters, symbols, numbers, and punctuation. This value is specified at the time the
+     *        user is created and stored as an attribute of the user object in the identity store.
      */
 
     public void setUserName(String userName) {
@@ -143,15 +142,14 @@ public class DescribeUserResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * The user’s username value. The length limit is 128 characters. This value can consist of letters, accented
-     * characters, symbols, numbers, and punctuation. The characters <code>&lt;&gt;;:%</code> are excluded. This value
-     * is specified at the time the user is created and stored as an attribute of the user object in the identity store.
+     * A unique string used to identify the user. The length limit is 128 characters. This value can consist of letters,
+     * accented characters, symbols, numbers, and punctuation. This value is specified at the time the user is created
+     * and stored as an attribute of the user object in the identity store.
      * </p>
      * 
-     * @return The user’s username value. The length limit is 128 characters. This value can consist of letters,
-     *         accented characters, symbols, numbers, and punctuation. The characters <code>&lt;&gt;;:%</code> are
-     *         excluded. This value is specified at the time the user is created and stored as an attribute of the user
-     *         object in the identity store.
+     * @return A unique string used to identify the user. The length limit is 128 characters. This value can consist of
+     *         letters, accented characters, symbols, numbers, and punctuation. This value is specified at the time the
+     *         user is created and stored as an attribute of the user object in the identity store.
      */
 
     public String getUserName() {
@@ -160,16 +158,15 @@ public class DescribeUserResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * The user’s username value. The length limit is 128 characters. This value can consist of letters, accented
-     * characters, symbols, numbers, and punctuation. The characters <code>&lt;&gt;;:%</code> are excluded. This value
-     * is specified at the time the user is created and stored as an attribute of the user object in the identity store.
+     * A unique string used to identify the user. The length limit is 128 characters. This value can consist of letters,
+     * accented characters, symbols, numbers, and punctuation. This value is specified at the time the user is created
+     * and stored as an attribute of the user object in the identity store.
      * </p>
      * 
      * @param userName
-     *        The user’s username value. The length limit is 128 characters. This value can consist of letters, accented
-     *        characters, symbols, numbers, and punctuation. The characters <code>&lt;&gt;;:%</code> are excluded. This
-     *        value is specified at the time the user is created and stored as an attribute of the user object in the
-     *        identity store.
+     *        A unique string used to identify the user. The length limit is 128 characters. This value can consist of
+     *        letters, accented characters, symbols, numbers, and punctuation. This value is specified at the time the
+     *        user is created and stored as an attribute of the user object in the identity store.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

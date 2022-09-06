@@ -33,9 +33,9 @@ public class GetGroupIdRequest extends com.amazonaws.AmazonWebServiceRequest imp
     private String identityStoreId;
     /**
      * <p>
-     * A unique identifier for the group value that is not the group's primary identifier. This value can be an
-     * identifier from an external identity provider (IdP) that is associated with the group or a unique attribute. For
-     * example, a unique <code>GroupDisplayName</code>.
+     * A unique identifier for an identity resource that is not the primary identifier. This value can be an identifier
+     * from an external identity provider (IdP) that is associated with the group or a unique attribute. For example, a
+     * unique <code>GroupDisplayName</code>.
      * </p>
      */
     private AlternateIdentifier alternateIdentifier;
@@ -82,13 +82,13 @@ public class GetGroupIdRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * A unique identifier for the group value that is not the group's primary identifier. This value can be an
-     * identifier from an external identity provider (IdP) that is associated with the group or a unique attribute. For
-     * example, a unique <code>GroupDisplayName</code>.
+     * A unique identifier for an identity resource that is not the primary identifier. This value can be an identifier
+     * from an external identity provider (IdP) that is associated with the group or a unique attribute. For example, a
+     * unique <code>GroupDisplayName</code>.
      * </p>
      * 
      * @param alternateIdentifier
-     *        A unique identifier for the group value that is not the group's primary identifier. This value can be an
+     *        A unique identifier for an identity resource that is not the primary identifier. This value can be an
      *        identifier from an external identity provider (IdP) that is associated with the group or a unique
      *        attribute. For example, a unique <code>GroupDisplayName</code>.
      */
@@ -99,12 +99,12 @@ public class GetGroupIdRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * A unique identifier for the group value that is not the group's primary identifier. This value can be an
-     * identifier from an external identity provider (IdP) that is associated with the group or a unique attribute. For
-     * example, a unique <code>GroupDisplayName</code>.
+     * A unique identifier for an identity resource that is not the primary identifier. This value can be an identifier
+     * from an external identity provider (IdP) that is associated with the group or a unique attribute. For example, a
+     * unique <code>GroupDisplayName</code>.
      * </p>
      * 
-     * @return A unique identifier for the group value that is not the group's primary identifier. This value can be an
+     * @return A unique identifier for an identity resource that is not the primary identifier. This value can be an
      *         identifier from an external identity provider (IdP) that is associated with the group or a unique
      *         attribute. For example, a unique <code>GroupDisplayName</code>.
      */
@@ -115,13 +115,13 @@ public class GetGroupIdRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * A unique identifier for the group value that is not the group's primary identifier. This value can be an
-     * identifier from an external identity provider (IdP) that is associated with the group or a unique attribute. For
-     * example, a unique <code>GroupDisplayName</code>.
+     * A unique identifier for an identity resource that is not the primary identifier. This value can be an identifier
+     * from an external identity provider (IdP) that is associated with the group or a unique attribute. For example, a
+     * unique <code>GroupDisplayName</code>.
      * </p>
      * 
      * @param alternateIdentifier
-     *        A unique identifier for the group value that is not the group's primary identifier. This value can be an
+     *        A unique identifier for an identity resource that is not the primary identifier. This value can be an
      *        identifier from an external identity provider (IdP) that is associated with the group or a unique
      *        attribute. For example, a unique <code>GroupDisplayName</code>.
      * @return Returns a reference to this object so that method calls can be chained together.

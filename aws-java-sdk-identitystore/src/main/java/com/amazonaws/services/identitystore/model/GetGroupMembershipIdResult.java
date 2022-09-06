@@ -25,7 +25,7 @@ public class GetGroupMembershipIdResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The identifier for a <code>GroupMembership</code> in the identity store.
+     * The identifier for a <code>GroupMembership</code> in an identity store.
      * </p>
      */
     private String membershipId;
@@ -38,11 +38,11 @@ public class GetGroupMembershipIdResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The identifier for a <code>GroupMembership</code> in the identity store.
+     * The identifier for a <code>GroupMembership</code> in an identity store.
      * </p>
      * 
      * @param membershipId
-     *        The identifier for a <code>GroupMembership</code> in the identity store.
+     *        The identifier for a <code>GroupMembership</code> in an identity store.
      */
 
     public void setMembershipId(String membershipId) {
@@ -51,10 +51,10 @@ public class GetGroupMembershipIdResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The identifier for a <code>GroupMembership</code> in the identity store.
+     * The identifier for a <code>GroupMembership</code> in an identity store.
      * </p>
      * 
-     * @return The identifier for a <code>GroupMembership</code> in the identity store.
+     * @return The identifier for a <code>GroupMembership</code> in an identity store.
      */
 
     public String getMembershipId() {
@@ -63,11 +63,11 @@ public class GetGroupMembershipIdResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The identifier for a <code>GroupMembership</code> in the identity store.
+     * The identifier for a <code>GroupMembership</code> in an identity store.
      * </p>
      * 
      * @param membershipId
-     *        The identifier for a <code>GroupMembership</code> in the identity store.
+     *        The identifier for a <code>GroupMembership</code> in an identity store.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

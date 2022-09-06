@@ -19,9 +19,9 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * A unique identifier for the group value that is not the group's primary identifier. This value can be an identifier
- * from an external identity provider (IdP) that is associated with the group or a unique attribute. For example, a
- * unique <code>GroupDisplayName</code>.
+ * A unique identifier for a user or group that is not the its primary identifier. This value can be an identifier from
+ * an external identity provider (IdP) that is associated with the group or a unique attribute. For example, a unique
+ * <code>GroupDisplayName</code>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/identitystore-2020-06-15/AlternateIdentifier" target="_top">AWS

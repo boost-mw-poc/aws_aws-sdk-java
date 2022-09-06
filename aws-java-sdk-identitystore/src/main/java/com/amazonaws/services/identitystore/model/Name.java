@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The name of the user.
+ * The full name of the user.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/identitystore-2020-06-15/Name" target="_top">AWS API

@@ -96,6 +96,10 @@ public class SearchRecordJsonUnmarshaller implements Unmarshaller<SearchRecord, 
                     context.nextToken();
                     searchRecord.setFeatureMetadata(FeatureMetadataJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("HyperParameterTuningJob", targetDepth)) {
+                    context.nextToken();
+                    searchRecord.setHyperParameterTuningJob(HyperParameterTuningJobSearchEntityJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

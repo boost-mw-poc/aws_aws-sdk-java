@@ -37,7 +37,7 @@ public class GroupMembership implements Serializable, Cloneable, StructuredPojo 
     private String identityStoreId;
     /**
      * <p>
-     * The identifier for a <code>GroupMembership</code> object in the identity store.
+     * The identifier for a <code>GroupMembership</code> object in an identity store.
      * </p>
      */
     private String membershipId;
@@ -97,11 +97,11 @@ public class GroupMembership implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The identifier for a <code>GroupMembership</code> object in the identity store.
+     * The identifier for a <code>GroupMembership</code> object in an identity store.
      * </p>
      * 
      * @param membershipId
-     *        The identifier for a <code>GroupMembership</code> object in the identity store.
+     *        The identifier for a <code>GroupMembership</code> object in an identity store.
      */
 
     public void setMembershipId(String membershipId) {
@@ -110,10 +110,10 @@ public class GroupMembership implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The identifier for a <code>GroupMembership</code> object in the identity store.
+     * The identifier for a <code>GroupMembership</code> object in an identity store.
      * </p>
      * 
-     * @return The identifier for a <code>GroupMembership</code> object in the identity store.
+     * @return The identifier for a <code>GroupMembership</code> object in an identity store.
      */
 
     public String getMembershipId() {
@@ -122,11 +122,11 @@ public class GroupMembership implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The identifier for a <code>GroupMembership</code> object in the identity store.
+     * The identifier for a <code>GroupMembership</code> object in an identity store.
      * </p>
      * 
      * @param membershipId
-     *        The identifier for a <code>GroupMembership</code> object in the identity store.
+     *        The identifier for a <code>GroupMembership</code> object in an identity store.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

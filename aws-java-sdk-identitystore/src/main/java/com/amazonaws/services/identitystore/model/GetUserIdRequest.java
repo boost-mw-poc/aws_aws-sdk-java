@@ -33,7 +33,7 @@ public class GetUserIdRequest extends com.amazonaws.AmazonWebServiceRequest impl
     private String identityStoreId;
     /**
      * <p>
-     * Any unique attribute associated with a user that is not the <code>UserId</code>.
+     * A unique identifier for an identity resource that is not the primary identifier.
      * </p>
      */
     private AlternateIdentifier alternateIdentifier;
@@ -80,11 +80,11 @@ public class GetUserIdRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * Any unique attribute associated with a user that is not the <code>UserId</code>.
+     * A unique identifier for an identity resource that is not the primary identifier.
      * </p>
      * 
      * @param alternateIdentifier
-     *        Any unique attribute associated with a user that is not the <code>UserId</code>.
+     *        A unique identifier for an identity resource that is not the primary identifier.
      */
 
     public void setAlternateIdentifier(AlternateIdentifier alternateIdentifier) {
@@ -93,10 +93,10 @@ public class GetUserIdRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * Any unique attribute associated with a user that is not the <code>UserId</code>.
+     * A unique identifier for an identity resource that is not the primary identifier.
      * </p>
      * 
-     * @return Any unique attribute associated with a user that is not the <code>UserId</code>.
+     * @return A unique identifier for an identity resource that is not the primary identifier.
      */
 
     public AlternateIdentifier getAlternateIdentifier() {
@@ -105,11 +105,11 @@ public class GetUserIdRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * Any unique attribute associated with a user that is not the <code>UserId</code>.
+     * A unique identifier for an identity resource that is not the primary identifier.
      * </p>
      * 
      * @param alternateIdentifier
-     *        Any unique attribute associated with a user that is not the <code>UserId</code>.
+     *        A unique identifier for an identity resource that is not the primary identifier.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

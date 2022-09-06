@@ -42,7 +42,7 @@ public class PhoneNumber implements Serializable, Cloneable, StructuredPojo {
     private String type;
     /**
      * <p>
-     * A boolean representing whether this is the primary phone number for the associated resource.
+     * A Boolean value representing whether this is the primary phone number for the associated resource.
      * </p>
      */
     private Boolean primary;
@@ -129,11 +129,11 @@ public class PhoneNumber implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A boolean representing whether this is the primary phone number for the associated resource.
+     * A Boolean value representing whether this is the primary phone number for the associated resource.
      * </p>
      * 
      * @param primary
-     *        A boolean representing whether this is the primary phone number for the associated resource.
+     *        A Boolean value representing whether this is the primary phone number for the associated resource.
      */
 
     public void setPrimary(Boolean primary) {
@@ -142,10 +142,10 @@ public class PhoneNumber implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A boolean representing whether this is the primary phone number for the associated resource.
+     * A Boolean value representing whether this is the primary phone number for the associated resource.
      * </p>
      * 
-     * @return A boolean representing whether this is the primary phone number for the associated resource.
+     * @return A Boolean value representing whether this is the primary phone number for the associated resource.
      */
 
     public Boolean getPrimary() {
@@ -154,11 +154,11 @@ public class PhoneNumber implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A boolean representing whether this is the primary phone number for the associated resource.
+     * A Boolean value representing whether this is the primary phone number for the associated resource.
      * </p>
      * 
      * @param primary
-     *        A boolean representing whether this is the primary phone number for the associated resource.
+     *        A Boolean value representing whether this is the primary phone number for the associated resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -169,10 +169,10 @@ public class PhoneNumber implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A boolean representing whether this is the primary phone number for the associated resource.
+     * A Boolean value representing whether this is the primary phone number for the associated resource.
      * </p>
      * 
-     * @return A boolean representing whether this is the primary phone number for the associated resource.
+     * @return A Boolean value representing whether this is the primary phone number for the associated resource.
      */
 
     public Boolean isPrimary() {

@@ -51,7 +51,7 @@ public class ListUsersRequest extends com.amazonaws.AmazonWebServiceRequest impl
     private String nextToken;
     /**
      * <p>
-     * A list of <code>Filter</code> objects that is used in the <code>ListUsers</code> and <code>ListGroups</code>
+     * A list of <code>Filter</code> objects, which is used in the <code>ListUsers</code> and <code>ListGroups</code>
      * requests.
      * </p>
      */
@@ -222,11 +222,11 @@ public class ListUsersRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * A list of <code>Filter</code> objects that is used in the <code>ListUsers</code> and <code>ListGroups</code>
+     * A list of <code>Filter</code> objects, which is used in the <code>ListUsers</code> and <code>ListGroups</code>
      * requests.
      * </p>
      * 
-     * @return A list of <code>Filter</code> objects that is used in the <code>ListUsers</code> and
+     * @return A list of <code>Filter</code> objects, which is used in the <code>ListUsers</code> and
      *         <code>ListGroups</code> requests.
      */
     @Deprecated
@@ -236,12 +236,12 @@ public class ListUsersRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * A list of <code>Filter</code> objects that is used in the <code>ListUsers</code> and <code>ListGroups</code>
+     * A list of <code>Filter</code> objects, which is used in the <code>ListUsers</code> and <code>ListGroups</code>
      * requests.
      * </p>
      * 
      * @param filters
-     *        A list of <code>Filter</code> objects that is used in the <code>ListUsers</code> and
+     *        A list of <code>Filter</code> objects, which is used in the <code>ListUsers</code> and
      *        <code>ListGroups</code> requests.
      */
     @Deprecated
@@ -256,7 +256,7 @@ public class ListUsersRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * A list of <code>Filter</code> objects that is used in the <code>ListUsers</code> and <code>ListGroups</code>
+     * A list of <code>Filter</code> objects, which is used in the <code>ListUsers</code> and <code>ListGroups</code>
      * requests.
      * </p>
      * <p>
@@ -266,7 +266,7 @@ public class ListUsersRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </p>
      * 
      * @param filters
-     *        A list of <code>Filter</code> objects that is used in the <code>ListUsers</code> and
+     *        A list of <code>Filter</code> objects, which is used in the <code>ListUsers</code> and
      *        <code>ListGroups</code> requests.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -283,12 +283,12 @@ public class ListUsersRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * A list of <code>Filter</code> objects that is used in the <code>ListUsers</code> and <code>ListGroups</code>
+     * A list of <code>Filter</code> objects, which is used in the <code>ListUsers</code> and <code>ListGroups</code>
      * requests.
      * </p>
      * 
      * @param filters
-     *        A list of <code>Filter</code> objects that is used in the <code>ListUsers</code> and
+     *        A list of <code>Filter</code> objects, which is used in the <code>ListUsers</code> and
      *        <code>ListGroups</code> requests.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

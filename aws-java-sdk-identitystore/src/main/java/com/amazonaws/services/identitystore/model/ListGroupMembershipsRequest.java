@@ -39,9 +39,8 @@ public class ListGroupMembershipsRequest extends com.amazonaws.AmazonWebServiceR
     private String groupId;
     /**
      * <p>
-     * The maximum number of results to be returned per request. This parameter is used in the <code>ListUsers</code>
-     * and <code>ListGroups</code> requests to specify how many results to return in one page. The length limit is 50
-     * characters.
+     * The maximum number of results to be returned per request. This parameter is used in all <code>List</code>
+     * requests to specify how many results to return in one page.
      * </p>
      */
     private Integer maxResults;
@@ -137,15 +136,13 @@ public class ListGroupMembershipsRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The maximum number of results to be returned per request. This parameter is used in the <code>ListUsers</code>
-     * and <code>ListGroups</code> requests to specify how many results to return in one page. The length limit is 50
-     * characters.
+     * The maximum number of results to be returned per request. This parameter is used in all <code>List</code>
+     * requests to specify how many results to return in one page.
      * </p>
      * 
      * @param maxResults
-     *        The maximum number of results to be returned per request. This parameter is used in the
-     *        <code>ListUsers</code> and <code>ListGroups</code> requests to specify how many results to return in one
-     *        page. The length limit is 50 characters.
+     *        The maximum number of results to be returned per request. This parameter is used in all <code>List</code>
+     *        requests to specify how many results to return in one page.
      */
 
     public void setMaxResults(Integer maxResults) {
@@ -154,14 +151,12 @@ public class ListGroupMembershipsRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The maximum number of results to be returned per request. This parameter is used in the <code>ListUsers</code>
-     * and <code>ListGroups</code> requests to specify how many results to return in one page. The length limit is 50
-     * characters.
+     * The maximum number of results to be returned per request. This parameter is used in all <code>List</code>
+     * requests to specify how many results to return in one page.
      * </p>
      * 
-     * @return The maximum number of results to be returned per request. This parameter is used in the
-     *         <code>ListUsers</code> and <code>ListGroups</code> requests to specify how many results to return in one
-     *         page. The length limit is 50 characters.
+     * @return The maximum number of results to be returned per request. This parameter is used in all <code>List</code>
+     *         requests to specify how many results to return in one page.
      */
 
     public Integer getMaxResults() {
@@ -170,15 +165,13 @@ public class ListGroupMembershipsRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The maximum number of results to be returned per request. This parameter is used in the <code>ListUsers</code>
-     * and <code>ListGroups</code> requests to specify how many results to return in one page. The length limit is 50
-     * characters.
+     * The maximum number of results to be returned per request. This parameter is used in all <code>List</code>
+     * requests to specify how many results to return in one page.
      * </p>
      * 
      * @param maxResults
-     *        The maximum number of results to be returned per request. This parameter is used in the
-     *        <code>ListUsers</code> and <code>ListGroups</code> requests to specify how many results to return in one
-     *        page. The length limit is 50 characters.
+     *        The maximum number of results to be returned per request. This parameter is used in all <code>List</code>
+     *        requests to specify how many results to return in one page.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
