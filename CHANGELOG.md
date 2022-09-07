@@ -1,3 +1,36 @@
+# __1.12.298__ __2022-09-07__
+## __AWS Data Exchange__
+  - ### Features
+    - Documentation updates for AWS Data Exchange.
+
+## __AWS IoT SiteWise__
+  - ### Features
+    - Allow specifying units in Asset Properties
+
+## __Amazon Elastic Compute Cloud__
+  - ### Features
+    - Documentation updates for Amazon EC2.
+
+## __Amazon Elastic Kubernetes Service__
+  - ### Features
+    - Adds support for EKS Addons ResolveConflicts "preserve" flag. Also adds new update failed status for EKS Addons.
+
+## __Amazon FSx__
+  - ### Features
+    - Documentation update for Amazon FSx.
+
+## __Amazon SageMaker Service__
+  - ### Features
+    - SageMaker Hosting now allows customization on ML instance storage volume size, model data download timeout and inference container startup ping health check timeout for each ProductionVariant in CreateEndpointConfig API.
+
+## __Amazon Simple Notification Service__
+  - ### Features
+    - Amazon SNS introduces the Data Protection Policy APIs, which enable customers to attach a data protection policy to an SNS topic. This allows topic owners to enable the new message data protection feature to audit and block sensitive data that is exchanged through their topics.
+
+## __Inspector2__
+  - ### Features
+    - This release adds new fields like fixAvailable, fixedInVersion and remediation to the finding model. The requirement to have vulnerablePackages in the finding model has also been removed. The documentation has been updated to reflect these changes.
+
 # __1.12.297__ __2022-09-06__
 ## __AWS SSO Identity Store__
   - ### Features

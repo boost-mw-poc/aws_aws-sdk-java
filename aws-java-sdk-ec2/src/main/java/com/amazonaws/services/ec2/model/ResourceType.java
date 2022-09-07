@@ -92,7 +92,8 @@ public enum ResourceType {
     VpcFlowLog("vpc-flow-log"),
     CapacityReservationFleet("capacity-reservation-fleet"),
     TrafficMirrorFilterRule("traffic-mirror-filter-rule"),
-    VpcEndpointConnectionDeviceType("vpc-endpoint-connection-device-type");
+    VpcEndpointConnectionDeviceType("vpc-endpoint-connection-device-type"),
+    VpnConnectionDeviceType("vpn-connection-device-type");
 
     private String value;
 

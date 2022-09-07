@@ -27,7 +27,7 @@ public class CreateAssetRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * A unique, friendly name for the asset.
+     * A friendly name for the asset.
      * </p>
      */
     private String assetName;
@@ -61,11 +61,11 @@ public class CreateAssetRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * A unique, friendly name for the asset.
+     * A friendly name for the asset.
      * </p>
      * 
      * @param assetName
-     *        A unique, friendly name for the asset.
+     *        A friendly name for the asset.
      */
 
     public void setAssetName(String assetName) {
@@ -74,10 +74,10 @@ public class CreateAssetRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * A unique, friendly name for the asset.
+     * A friendly name for the asset.
      * </p>
      * 
-     * @return A unique, friendly name for the asset.
+     * @return A friendly name for the asset.
      */
 
     public String getAssetName() {
@@ -86,11 +86,11 @@ public class CreateAssetRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * A unique, friendly name for the asset.
+     * A friendly name for the asset.
      * </p>
      * 
      * @param assetName
-     *        A unique, friendly name for the asset.
+     *        A friendly name for the asset.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -513,12 +513,6 @@ public interface AWSIoTSiteWiseAsync extends AWSIoTSiteWise {
             com.amazonaws.handlers.AsyncHandler<CreateAssetModelRequest, CreateAssetModelResult> asyncHandler);
 
     /**
-     * <note>
-     * <p>
-     * This API operation is in preview release for IoT SiteWise and is subject to change. We recommend that you use
-     * this operation only with test data, and not in production environments.
-     * </p>
-     * </note>
      * <p>
      * Defines a job to ingest data to IoT SiteWise from Amazon S3. For more information, see <a
      * href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/CreateBulkImportJob.html">Create a bulk import
@@ -542,12 +536,6 @@ public interface AWSIoTSiteWiseAsync extends AWSIoTSiteWise {
     java.util.concurrent.Future<CreateBulkImportJobResult> createBulkImportJobAsync(CreateBulkImportJobRequest createBulkImportJobRequest);
 
     /**
-     * <note>
-     * <p>
-     * This API operation is in preview release for IoT SiteWise and is subject to change. We recommend that you use
-     * this operation only with test data, and not in production environments.
-     * </p>
-     * </note>
      * <p>
      * Defines a job to ingest data to IoT SiteWise from Amazon S3. For more information, see <a
      * href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/CreateBulkImportJob.html">Create a bulk import
@@ -1218,12 +1206,6 @@ public interface AWSIoTSiteWiseAsync extends AWSIoTSiteWise {
             com.amazonaws.handlers.AsyncHandler<DescribeAssetPropertyRequest, DescribeAssetPropertyResult> asyncHandler);
 
     /**
-     * <note>
-     * <p>
-     * This API operation is in preview release for IoT SiteWise and is subject to change. We recommend that you use
-     * this operation only with test data, and not in production environments.
-     * </p>
-     * </note>
      * <p>
      * Retrieves information about a bulk import job request. For more information, see <a
      * href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/DescribeBulkImportJob.html">Describe a bulk
@@ -1239,12 +1221,6 @@ public interface AWSIoTSiteWiseAsync extends AWSIoTSiteWise {
     java.util.concurrent.Future<DescribeBulkImportJobResult> describeBulkImportJobAsync(DescribeBulkImportJobRequest describeBulkImportJobRequest);
 
     /**
-     * <note>
-     * <p>
-     * This API operation is in preview release for IoT SiteWise and is subject to change. We recommend that you use
-     * this operation only with test data, and not in production environments.
-     * </p>
-     * </note>
      * <p>
      * Retrieves information about a bulk import job request. For more information, see <a
      * href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/DescribeBulkImportJob.html">Describe a bulk
@@ -2227,16 +2203,10 @@ public interface AWSIoTSiteWiseAsync extends AWSIoTSiteWise {
             com.amazonaws.handlers.AsyncHandler<ListAssociatedAssetsRequest, ListAssociatedAssetsResult> asyncHandler);
 
     /**
-     * <note>
-     * <p>
-     * This API operation is in preview release for IoT SiteWise and is subject to change. We recommend that you use
-     * this operation only with test data, and not in production environments.
-     * </p>
-     * </note>
      * <p>
      * Retrieves a paginated list of bulk import job requests. For more information, see <a
      * href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/ListBulkImportJobs.html">List bulk import jobs
-     * (CLI)</a> in the <i>Amazon Simple Storage Service User Guide</i>.
+     * (CLI)</a> in the <i>IoT SiteWise User Guide</i>.
      * </p>
      * 
      * @param listBulkImportJobsRequest
@@ -2248,16 +2218,10 @@ public interface AWSIoTSiteWiseAsync extends AWSIoTSiteWise {
     java.util.concurrent.Future<ListBulkImportJobsResult> listBulkImportJobsAsync(ListBulkImportJobsRequest listBulkImportJobsRequest);
 
     /**
-     * <note>
-     * <p>
-     * This API operation is in preview release for IoT SiteWise and is subject to change. We recommend that you use
-     * this operation only with test data, and not in production environments.
-     * </p>
-     * </note>
      * <p>
      * Retrieves a paginated list of bulk import job requests. For more information, see <a
      * href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/ListBulkImportJobs.html">List bulk import jobs
-     * (CLI)</a> in the <i>Amazon Simple Storage Service User Guide</i>.
+     * (CLI)</a> in the <i>IoT SiteWise User Guide</i>.
      * </p>
      * 
      * @param listBulkImportJobsRequest

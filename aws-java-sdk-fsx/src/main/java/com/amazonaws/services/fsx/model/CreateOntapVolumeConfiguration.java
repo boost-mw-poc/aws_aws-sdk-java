@@ -37,8 +37,11 @@ public class CreateOntapVolumeConfiguration implements Serializable, Cloneable, 
     private String junctionPath;
     /**
      * <p>
-     * The security style for the volume. If a volume's security style is not specified, it is automatically set to the
-     * root volume's security style. Specify one of the following values:
+     * Specifies the security style for the volume. If a volume's security style is not specified, it is automatically
+     * set to the root volume's security style. The security style determines the type of permissions that FSx for ONTAP
+     * uses to control data access. For more information, see <a
+     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-volumes.html#volume-security-style">Volume
+     * security style</a> in the <i>Amazon FSx for NetApp ONTAP User Guide</i>. Specify one of the following values:
      * </p>
      * <ul>
      * <li>
@@ -131,8 +134,11 @@ public class CreateOntapVolumeConfiguration implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The security style for the volume. If a volume's security style is not specified, it is automatically set to the
-     * root volume's security style. Specify one of the following values:
+     * Specifies the security style for the volume. If a volume's security style is not specified, it is automatically
+     * set to the root volume's security style. The security style determines the type of permissions that FSx for ONTAP
+     * uses to control data access. For more information, see <a
+     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-volumes.html#volume-security-style">Volume
+     * security style</a> in the <i>Amazon FSx for NetApp ONTAP User Guide</i>. Specify one of the following values:
      * </p>
      * <ul>
      * <li>
@@ -156,8 +162,12 @@ public class CreateOntapVolumeConfiguration implements Serializable, Cloneable, 
      * </ul>
      * 
      * @param securityStyle
-     *        The security style for the volume. If a volume's security style is not specified, it is automatically set
-     *        to the root volume's security style. Specify one of the following values:</p>
+     *        Specifies the security style for the volume. If a volume's security style is not specified, it is
+     *        automatically set to the root volume's security style. The security style determines the type of
+     *        permissions that FSx for ONTAP uses to control data access. For more information, see <a
+     *        href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-volumes.html#volume-security-style"
+     *        >Volume security style</a> in the <i>Amazon FSx for NetApp ONTAP User Guide</i>. Specify one of the
+     *        following values:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -186,8 +196,11 @@ public class CreateOntapVolumeConfiguration implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The security style for the volume. If a volume's security style is not specified, it is automatically set to the
-     * root volume's security style. Specify one of the following values:
+     * Specifies the security style for the volume. If a volume's security style is not specified, it is automatically
+     * set to the root volume's security style. The security style determines the type of permissions that FSx for ONTAP
+     * uses to control data access. For more information, see <a
+     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-volumes.html#volume-security-style">Volume
+     * security style</a> in the <i>Amazon FSx for NetApp ONTAP User Guide</i>. Specify one of the following values:
      * </p>
      * <ul>
      * <li>
@@ -210,8 +223,12 @@ public class CreateOntapVolumeConfiguration implements Serializable, Cloneable, 
      * </li>
      * </ul>
      * 
-     * @return The security style for the volume. If a volume's security style is not specified, it is automatically set
-     *         to the root volume's security style. Specify one of the following values:</p>
+     * @return Specifies the security style for the volume. If a volume's security style is not specified, it is
+     *         automatically set to the root volume's security style. The security style determines the type of
+     *         permissions that FSx for ONTAP uses to control data access. For more information, see <a
+     *         href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-volumes.html#volume-security-style"
+     *         >Volume security style</a> in the <i>Amazon FSx for NetApp ONTAP User Guide</i>. Specify one of the
+     *         following values:</p>
      *         <ul>
      *         <li>
      *         <p>
@@ -240,8 +257,11 @@ public class CreateOntapVolumeConfiguration implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The security style for the volume. If a volume's security style is not specified, it is automatically set to the
-     * root volume's security style. Specify one of the following values:
+     * Specifies the security style for the volume. If a volume's security style is not specified, it is automatically
+     * set to the root volume's security style. The security style determines the type of permissions that FSx for ONTAP
+     * uses to control data access. For more information, see <a
+     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-volumes.html#volume-security-style">Volume
+     * security style</a> in the <i>Amazon FSx for NetApp ONTAP User Guide</i>. Specify one of the following values:
      * </p>
      * <ul>
      * <li>
@@ -265,8 +285,12 @@ public class CreateOntapVolumeConfiguration implements Serializable, Cloneable, 
      * </ul>
      * 
      * @param securityStyle
-     *        The security style for the volume. If a volume's security style is not specified, it is automatically set
-     *        to the root volume's security style. Specify one of the following values:</p>
+     *        Specifies the security style for the volume. If a volume's security style is not specified, it is
+     *        automatically set to the root volume's security style. The security style determines the type of
+     *        permissions that FSx for ONTAP uses to control data access. For more information, see <a
+     *        href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-volumes.html#volume-security-style"
+     *        >Volume security style</a> in the <i>Amazon FSx for NetApp ONTAP User Guide</i>. Specify one of the
+     *        following values:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -297,8 +321,11 @@ public class CreateOntapVolumeConfiguration implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The security style for the volume. If a volume's security style is not specified, it is automatically set to the
-     * root volume's security style. Specify one of the following values:
+     * Specifies the security style for the volume. If a volume's security style is not specified, it is automatically
+     * set to the root volume's security style. The security style determines the type of permissions that FSx for ONTAP
+     * uses to control data access. For more information, see <a
+     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-volumes.html#volume-security-style">Volume
+     * security style</a> in the <i>Amazon FSx for NetApp ONTAP User Guide</i>. Specify one of the following values:
      * </p>
      * <ul>
      * <li>
@@ -322,8 +349,12 @@ public class CreateOntapVolumeConfiguration implements Serializable, Cloneable, 
      * </ul>
      * 
      * @param securityStyle
-     *        The security style for the volume. If a volume's security style is not specified, it is automatically set
-     *        to the root volume's security style. Specify one of the following values:</p>
+     *        Specifies the security style for the volume. If a volume's security style is not specified, it is
+     *        automatically set to the root volume's security style. The security style determines the type of
+     *        permissions that FSx for ONTAP uses to control data access. For more information, see <a
+     *        href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-volumes.html#volume-security-style"
+     *        >Volume security style</a> in the <i>Amazon FSx for NetApp ONTAP User Guide</i>. Specify one of the
+     *        following values:</p>
      *        <ul>
      *        <li>
      *        <p>
