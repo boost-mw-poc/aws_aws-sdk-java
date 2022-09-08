@@ -179,6 +179,13 @@ public class SendCommandRequest extends com.amazonaws.AmazonWebServiceRequest im
      * The ARN of the Identity and Access Management (IAM) service role to use to publish Amazon Simple Notification
      * Service (Amazon SNS) notifications for Run Command commands.
      * </p>
+     * <p>
+     * This role must provide the <code>sns:Publish</code> permission for your notification topic. For information about
+     * creating and using this service role, see <a
+     * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/monitoring-sns-notifications.html">Monitoring
+     * Systems Manager status changes using Amazon SNS notifications</a> in the <i>Amazon Web Services Systems Manager
+     * User Guide</i>.
+     * </p>
      */
     private String serviceRoleArn;
     /**
@@ -1318,10 +1325,23 @@ public class SendCommandRequest extends com.amazonaws.AmazonWebServiceRequest im
      * The ARN of the Identity and Access Management (IAM) service role to use to publish Amazon Simple Notification
      * Service (Amazon SNS) notifications for Run Command commands.
      * </p>
+     * <p>
+     * This role must provide the <code>sns:Publish</code> permission for your notification topic. For information about
+     * creating and using this service role, see <a
+     * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/monitoring-sns-notifications.html">Monitoring
+     * Systems Manager status changes using Amazon SNS notifications</a> in the <i>Amazon Web Services Systems Manager
+     * User Guide</i>.
+     * </p>
      * 
      * @param serviceRoleArn
      *        The ARN of the Identity and Access Management (IAM) service role to use to publish Amazon Simple
-     *        Notification Service (Amazon SNS) notifications for Run Command commands.
+     *        Notification Service (Amazon SNS) notifications for Run Command commands.</p>
+     *        <p>
+     *        This role must provide the <code>sns:Publish</code> permission for your notification topic. For
+     *        information about creating and using this service role, see <a
+     *        href="https://docs.aws.amazon.com/systems-manager/latest/userguide/monitoring-sns-notifications.html"
+     *        >Monitoring Systems Manager status changes using Amazon SNS notifications</a> in the <i>Amazon Web
+     *        Services Systems Manager User Guide</i>.
      */
 
     public void setServiceRoleArn(String serviceRoleArn) {
@@ -1333,9 +1353,22 @@ public class SendCommandRequest extends com.amazonaws.AmazonWebServiceRequest im
      * The ARN of the Identity and Access Management (IAM) service role to use to publish Amazon Simple Notification
      * Service (Amazon SNS) notifications for Run Command commands.
      * </p>
+     * <p>
+     * This role must provide the <code>sns:Publish</code> permission for your notification topic. For information about
+     * creating and using this service role, see <a
+     * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/monitoring-sns-notifications.html">Monitoring
+     * Systems Manager status changes using Amazon SNS notifications</a> in the <i>Amazon Web Services Systems Manager
+     * User Guide</i>.
+     * </p>
      * 
      * @return The ARN of the Identity and Access Management (IAM) service role to use to publish Amazon Simple
-     *         Notification Service (Amazon SNS) notifications for Run Command commands.
+     *         Notification Service (Amazon SNS) notifications for Run Command commands.</p>
+     *         <p>
+     *         This role must provide the <code>sns:Publish</code> permission for your notification topic. For
+     *         information about creating and using this service role, see <a
+     *         href="https://docs.aws.amazon.com/systems-manager/latest/userguide/monitoring-sns-notifications.html"
+     *         >Monitoring Systems Manager status changes using Amazon SNS notifications</a> in the <i>Amazon Web
+     *         Services Systems Manager User Guide</i>.
      */
 
     public String getServiceRoleArn() {
@@ -1347,10 +1380,23 @@ public class SendCommandRequest extends com.amazonaws.AmazonWebServiceRequest im
      * The ARN of the Identity and Access Management (IAM) service role to use to publish Amazon Simple Notification
      * Service (Amazon SNS) notifications for Run Command commands.
      * </p>
+     * <p>
+     * This role must provide the <code>sns:Publish</code> permission for your notification topic. For information about
+     * creating and using this service role, see <a
+     * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/monitoring-sns-notifications.html">Monitoring
+     * Systems Manager status changes using Amazon SNS notifications</a> in the <i>Amazon Web Services Systems Manager
+     * User Guide</i>.
+     * </p>
      * 
      * @param serviceRoleArn
      *        The ARN of the Identity and Access Management (IAM) service role to use to publish Amazon Simple
-     *        Notification Service (Amazon SNS) notifications for Run Command commands.
+     *        Notification Service (Amazon SNS) notifications for Run Command commands.</p>
+     *        <p>
+     *        This role must provide the <code>sns:Publish</code> permission for your notification topic. For
+     *        information about creating and using this service role, see <a
+     *        href="https://docs.aws.amazon.com/systems-manager/latest/userguide/monitoring-sns-notifications.html"
+     *        >Monitoring Systems Manager status changes using Amazon SNS notifications</a> in the <i>Amazon Web
+     *        Services Systems Manager User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

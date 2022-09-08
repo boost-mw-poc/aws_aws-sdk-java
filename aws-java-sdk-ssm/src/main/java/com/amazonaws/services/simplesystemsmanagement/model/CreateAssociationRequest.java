@@ -229,6 +229,15 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<java.util.Map<String, java.util.List<String>>> targetMaps;
+    /**
+     * <p>
+     * Adds or overwrites one or more tags for a State Manager association. <i>Tags</i> are metadata that you can assign
+     * to your Amazon Web Services resources. Tags enable you to categorize your resources in different ways, for
+     * example, by purpose, owner, or environment. Each tag consists of a key and an optional value, both of which you
+     * define.
+     * </p>
+     */
+    private com.amazonaws.internal.SdkInternalList<Tag> tags;
 
     /**
      * <p>
@@ -1783,6 +1792,103 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
     }
 
     /**
+     * <p>
+     * Adds or overwrites one or more tags for a State Manager association. <i>Tags</i> are metadata that you can assign
+     * to your Amazon Web Services resources. Tags enable you to categorize your resources in different ways, for
+     * example, by purpose, owner, or environment. Each tag consists of a key and an optional value, both of which you
+     * define.
+     * </p>
+     * 
+     * @return Adds or overwrites one or more tags for a State Manager association. <i>Tags</i> are metadata that you
+     *         can assign to your Amazon Web Services resources. Tags enable you to categorize your resources in
+     *         different ways, for example, by purpose, owner, or environment. Each tag consists of a key and an
+     *         optional value, both of which you define.
+     */
+
+    public java.util.List<Tag> getTags() {
+        if (tags == null) {
+            tags = new com.amazonaws.internal.SdkInternalList<Tag>();
+        }
+        return tags;
+    }
+
+    /**
+     * <p>
+     * Adds or overwrites one or more tags for a State Manager association. <i>Tags</i> are metadata that you can assign
+     * to your Amazon Web Services resources. Tags enable you to categorize your resources in different ways, for
+     * example, by purpose, owner, or environment. Each tag consists of a key and an optional value, both of which you
+     * define.
+     * </p>
+     * 
+     * @param tags
+     *        Adds or overwrites one or more tags for a State Manager association. <i>Tags</i> are metadata that you can
+     *        assign to your Amazon Web Services resources. Tags enable you to categorize your resources in different
+     *        ways, for example, by purpose, owner, or environment. Each tag consists of a key and an optional value,
+     *        both of which you define.
+     */
+
+    public void setTags(java.util.Collection<Tag> tags) {
+        if (tags == null) {
+            this.tags = null;
+            return;
+        }
+
+        this.tags = new com.amazonaws.internal.SdkInternalList<Tag>(tags);
+    }
+
+    /**
+     * <p>
+     * Adds or overwrites one or more tags for a State Manager association. <i>Tags</i> are metadata that you can assign
+     * to your Amazon Web Services resources. Tags enable you to categorize your resources in different ways, for
+     * example, by purpose, owner, or environment. Each tag consists of a key and an optional value, both of which you
+     * define.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setTags(java.util.Collection)} or {@link #withTags(java.util.Collection)} if you want to override the
+     * existing values.
+     * </p>
+     * 
+     * @param tags
+     *        Adds or overwrites one or more tags for a State Manager association. <i>Tags</i> are metadata that you can
+     *        assign to your Amazon Web Services resources. Tags enable you to categorize your resources in different
+     *        ways, for example, by purpose, owner, or environment. Each tag consists of a key and an optional value,
+     *        both of which you define.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateAssociationRequest withTags(Tag... tags) {
+        if (this.tags == null) {
+            setTags(new com.amazonaws.internal.SdkInternalList<Tag>(tags.length));
+        }
+        for (Tag ele : tags) {
+            this.tags.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * Adds or overwrites one or more tags for a State Manager association. <i>Tags</i> are metadata that you can assign
+     * to your Amazon Web Services resources. Tags enable you to categorize your resources in different ways, for
+     * example, by purpose, owner, or environment. Each tag consists of a key and an optional value, both of which you
+     * define.
+     * </p>
+     * 
+     * @param tags
+     *        Adds or overwrites one or more tags for a State Manager association. <i>Tags</i> are metadata that you can
+     *        assign to your Amazon Web Services resources. Tags enable you to categorize your resources in different
+     *        ways, for example, by purpose, owner, or environment. Each tag consists of a key and an optional value,
+     *        both of which you define.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateAssociationRequest withTags(java.util.Collection<Tag> tags) {
+        setTags(tags);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1829,7 +1935,9 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
         if (getScheduleOffset() != null)
             sb.append("ScheduleOffset: ").append(getScheduleOffset()).append(",");
         if (getTargetMaps() != null)
-            sb.append("TargetMaps: ").append(getTargetMaps());
+            sb.append("TargetMaps: ").append(getTargetMaps()).append(",");
+        if (getTags() != null)
+            sb.append("Tags: ").append(getTags());
         sb.append("}");
         return sb.toString();
     }
@@ -1917,6 +2025,10 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
             return false;
         if (other.getTargetMaps() != null && other.getTargetMaps().equals(this.getTargetMaps()) == false)
             return false;
+        if (other.getTags() == null ^ this.getTags() == null)
+            return false;
+        if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
+            return false;
         return true;
     }
 
@@ -1943,6 +2055,7 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
         hashCode = prime * hashCode + ((getTargetLocations() == null) ? 0 : getTargetLocations().hashCode());
         hashCode = prime * hashCode + ((getScheduleOffset() == null) ? 0 : getScheduleOffset().hashCode());
         hashCode = prime * hashCode + ((getTargetMaps() == null) ? 0 : getTargetMaps().hashCode());
+        hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         return hashCode;
     }
 

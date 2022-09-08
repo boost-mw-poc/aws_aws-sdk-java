@@ -33,14 +33,14 @@ public class InstanceInformationStringFilter implements Serializable, Cloneable,
      * The filter key name to describe your managed nodes. For example:
      * </p>
      * <p>
-     * "InstanceIds"|"AgentVersion"|"PingStatus"|"PlatformTypes"|"ActivationIds"|"IamRole"|"ResourceType"|
-     * "AssociationStatus"|"Tag Key"
+     * "InstanceIds" | "AgentVersion" | "PingStatus" | "PlatformTypes" | "ActivationIds" | "IamRole" | "ResourceType" |
+     * "AssociationStatus" | "tag-key" | "tag:<code>{keyname}</code>
      * </p>
      * <important>
      * <p>
-     * <code>Tag key</code> isn't a valid filter. You must specify either <code>tag-key</code> or
-     * <code>tag:keyname</code> and a string. Here are some valid examples: tag-key, tag:123, tag:al!, tag:Windows. Here
-     * are some <i>invalid</i> examples: tag-keys, Tag Key, tag:, tagKey, abc:keyname.
+     * <code>Tag Key</code> isn't a valid filter. You must specify either <code>tag-key</code> or
+     * <code>tag:{keyname}</code> and a string. Here are some valid examples: <code>tag-key</code>, <code>tag:123</code>, <code>tag:al!</code>, <code>tag:Windows</code>. Here are some <i>invalid</i> examples: <code>tag-keys</code>,
+     * <code>Tag Key</code>, <code>tag:</code>, <code>tagKey</code>, <code>abc:keyname</code>.
      * </p>
      * </important>
      */
@@ -57,28 +57,30 @@ public class InstanceInformationStringFilter implements Serializable, Cloneable,
      * The filter key name to describe your managed nodes. For example:
      * </p>
      * <p>
-     * "InstanceIds"|"AgentVersion"|"PingStatus"|"PlatformTypes"|"ActivationIds"|"IamRole"|"ResourceType"|
-     * "AssociationStatus"|"Tag Key"
+     * "InstanceIds" | "AgentVersion" | "PingStatus" | "PlatformTypes" | "ActivationIds" | "IamRole" | "ResourceType" |
+     * "AssociationStatus" | "tag-key" | "tag:<code>{keyname}</code>
      * </p>
      * <important>
      * <p>
-     * <code>Tag key</code> isn't a valid filter. You must specify either <code>tag-key</code> or
-     * <code>tag:keyname</code> and a string. Here are some valid examples: tag-key, tag:123, tag:al!, tag:Windows. Here
-     * are some <i>invalid</i> examples: tag-keys, Tag Key, tag:, tagKey, abc:keyname.
+     * <code>Tag Key</code> isn't a valid filter. You must specify either <code>tag-key</code> or
+     * <code>tag:{keyname}</code> and a string. Here are some valid examples: <code>tag-key</code>, <code>tag:123</code>, <code>tag:al!</code>, <code>tag:Windows</code>. Here are some <i>invalid</i> examples: <code>tag-keys</code>,
+     * <code>Tag Key</code>, <code>tag:</code>, <code>tagKey</code>, <code>abc:keyname</code>.
      * </p>
      * </important>
      * 
      * @param key
      *        The filter key name to describe your managed nodes. For example:</p>
      *        <p>
-     *        "InstanceIds"|"AgentVersion"|"PingStatus"|"PlatformTypes"|"ActivationIds"|"IamRole"|"ResourceType"|
-     *        "AssociationStatus"|"Tag Key"
+     *        "InstanceIds" | "AgentVersion" | "PingStatus" | "PlatformTypes" | "ActivationIds" | "IamRole" |
+     *        "ResourceType" | "AssociationStatus" | "tag-key" | "tag:<code>{keyname}</code>
      *        </p>
      *        <important>
      *        <p>
-     *        <code>Tag key</code> isn't a valid filter. You must specify either <code>tag-key</code> or
-     *        <code>tag:keyname</code> and a string. Here are some valid examples: tag-key, tag:123, tag:al!,
-     *        tag:Windows. Here are some <i>invalid</i> examples: tag-keys, Tag Key, tag:, tagKey, abc:keyname.
+     *        <code>Tag Key</code> isn't a valid filter. You must specify either <code>tag-key</code> or
+     *        <code>tag:{keyname}</code> and a string. Here are some valid examples: <code>tag-key</code>,
+     *        <code>tag:123</code>, <code>tag:al!</code>, <code>tag:Windows</code>. Here are some <i>invalid</i>
+     *        examples: <code>tag-keys</code>, <code>Tag Key</code>, <code>tag:</code>, <code>tagKey</code>,
+     *        <code>abc:keyname</code>.
      *        </p>
      */
 
@@ -91,27 +93,29 @@ public class InstanceInformationStringFilter implements Serializable, Cloneable,
      * The filter key name to describe your managed nodes. For example:
      * </p>
      * <p>
-     * "InstanceIds"|"AgentVersion"|"PingStatus"|"PlatformTypes"|"ActivationIds"|"IamRole"|"ResourceType"|
-     * "AssociationStatus"|"Tag Key"
+     * "InstanceIds" | "AgentVersion" | "PingStatus" | "PlatformTypes" | "ActivationIds" | "IamRole" | "ResourceType" |
+     * "AssociationStatus" | "tag-key" | "tag:<code>{keyname}</code>
      * </p>
      * <important>
      * <p>
-     * <code>Tag key</code> isn't a valid filter. You must specify either <code>tag-key</code> or
-     * <code>tag:keyname</code> and a string. Here are some valid examples: tag-key, tag:123, tag:al!, tag:Windows. Here
-     * are some <i>invalid</i> examples: tag-keys, Tag Key, tag:, tagKey, abc:keyname.
+     * <code>Tag Key</code> isn't a valid filter. You must specify either <code>tag-key</code> or
+     * <code>tag:{keyname}</code> and a string. Here are some valid examples: <code>tag-key</code>, <code>tag:123</code>, <code>tag:al!</code>, <code>tag:Windows</code>. Here are some <i>invalid</i> examples: <code>tag-keys</code>,
+     * <code>Tag Key</code>, <code>tag:</code>, <code>tagKey</code>, <code>abc:keyname</code>.
      * </p>
      * </important>
      * 
      * @return The filter key name to describe your managed nodes. For example:</p>
      *         <p>
-     *         "InstanceIds"|"AgentVersion"|"PingStatus"|"PlatformTypes"|"ActivationIds"|"IamRole"|"ResourceType"|
-     *         "AssociationStatus"|"Tag Key"
+     *         "InstanceIds" | "AgentVersion" | "PingStatus" | "PlatformTypes" | "ActivationIds" | "IamRole" |
+     *         "ResourceType" | "AssociationStatus" | "tag-key" | "tag:<code>{keyname}</code>
      *         </p>
      *         <important>
      *         <p>
-     *         <code>Tag key</code> isn't a valid filter. You must specify either <code>tag-key</code> or
-     *         <code>tag:keyname</code> and a string. Here are some valid examples: tag-key, tag:123, tag:al!,
-     *         tag:Windows. Here are some <i>invalid</i> examples: tag-keys, Tag Key, tag:, tagKey, abc:keyname.
+     *         <code>Tag Key</code> isn't a valid filter. You must specify either <code>tag-key</code> or
+     *         <code>tag:{keyname}</code> and a string. Here are some valid examples: <code>tag-key</code>,
+     *         <code>tag:123</code>, <code>tag:al!</code>, <code>tag:Windows</code>. Here are some <i>invalid</i>
+     *         examples: <code>tag-keys</code>, <code>Tag Key</code>, <code>tag:</code>, <code>tagKey</code>,
+     *         <code>abc:keyname</code>.
      *         </p>
      */
 
@@ -124,28 +128,30 @@ public class InstanceInformationStringFilter implements Serializable, Cloneable,
      * The filter key name to describe your managed nodes. For example:
      * </p>
      * <p>
-     * "InstanceIds"|"AgentVersion"|"PingStatus"|"PlatformTypes"|"ActivationIds"|"IamRole"|"ResourceType"|
-     * "AssociationStatus"|"Tag Key"
+     * "InstanceIds" | "AgentVersion" | "PingStatus" | "PlatformTypes" | "ActivationIds" | "IamRole" | "ResourceType" |
+     * "AssociationStatus" | "tag-key" | "tag:<code>{keyname}</code>
      * </p>
      * <important>
      * <p>
-     * <code>Tag key</code> isn't a valid filter. You must specify either <code>tag-key</code> or
-     * <code>tag:keyname</code> and a string. Here are some valid examples: tag-key, tag:123, tag:al!, tag:Windows. Here
-     * are some <i>invalid</i> examples: tag-keys, Tag Key, tag:, tagKey, abc:keyname.
+     * <code>Tag Key</code> isn't a valid filter. You must specify either <code>tag-key</code> or
+     * <code>tag:{keyname}</code> and a string. Here are some valid examples: <code>tag-key</code>, <code>tag:123</code>, <code>tag:al!</code>, <code>tag:Windows</code>. Here are some <i>invalid</i> examples: <code>tag-keys</code>,
+     * <code>Tag Key</code>, <code>tag:</code>, <code>tagKey</code>, <code>abc:keyname</code>.
      * </p>
      * </important>
      * 
      * @param key
      *        The filter key name to describe your managed nodes. For example:</p>
      *        <p>
-     *        "InstanceIds"|"AgentVersion"|"PingStatus"|"PlatformTypes"|"ActivationIds"|"IamRole"|"ResourceType"|
-     *        "AssociationStatus"|"Tag Key"
+     *        "InstanceIds" | "AgentVersion" | "PingStatus" | "PlatformTypes" | "ActivationIds" | "IamRole" |
+     *        "ResourceType" | "AssociationStatus" | "tag-key" | "tag:<code>{keyname}</code>
      *        </p>
      *        <important>
      *        <p>
-     *        <code>Tag key</code> isn't a valid filter. You must specify either <code>tag-key</code> or
-     *        <code>tag:keyname</code> and a string. Here are some valid examples: tag-key, tag:123, tag:al!,
-     *        tag:Windows. Here are some <i>invalid</i> examples: tag-keys, Tag Key, tag:, tagKey, abc:keyname.
+     *        <code>Tag Key</code> isn't a valid filter. You must specify either <code>tag-key</code> or
+     *        <code>tag:{keyname}</code> and a string. Here are some valid examples: <code>tag-key</code>,
+     *        <code>tag:123</code>, <code>tag:al!</code>, <code>tag:Windows</code>. Here are some <i>invalid</i>
+     *        examples: <code>tag-keys</code>, <code>Tag Key</code>, <code>tag:</code>, <code>tagKey</code>,
+     *        <code>abc:keyname</code>.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */

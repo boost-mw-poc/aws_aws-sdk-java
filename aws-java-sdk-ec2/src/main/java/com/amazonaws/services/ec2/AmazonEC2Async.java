@@ -1433,9 +1433,9 @@ public interface AmazonEC2Async extends AmazonEC2 {
     /**
      * <note>
      * <p>
-     * We are retiring EC2-Classic on August 15, 2022. We recommend that you migrate from EC2-Classic to a VPC. For more
-     * information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-migrate.html">Migrate from
-     * EC2-Classic to a VPC</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * We are retiring EC2-Classic. We recommend that you migrate from EC2-Classic to a VPC. For more information, see
+     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-migrate.html">Migrate from EC2-Classic to a
+     * VPC</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * </note>
      * <p>
@@ -1463,9 +1463,9 @@ public interface AmazonEC2Async extends AmazonEC2 {
     /**
      * <note>
      * <p>
-     * We are retiring EC2-Classic on August 15, 2022. We recommend that you migrate from EC2-Classic to a VPC. For more
-     * information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-migrate.html">Migrate from
-     * EC2-Classic to a VPC</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * We are retiring EC2-Classic. We recommend that you migrate from EC2-Classic to a VPC. For more information, see
+     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-migrate.html">Migrate from EC2-Classic to a
+     * VPC</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * </note>
      * <p>
@@ -2950,9 +2950,9 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * </p>
      * <note>
      * <p>
-     * We are retiring EC2-Classic on August 15, 2022. We recommend that you migrate from EC2-Classic to a VPC. For more
-     * information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-migrate.html">Migrate from
-     * EC2-Classic to a VPC</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * We are retiring EC2-Classic. We recommend that you migrate from EC2-Classic to a VPC. For more information, see
+     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-migrate.html">Migrate from EC2-Classic to a
+     * VPC</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * </note>
      * 
@@ -2984,9 +2984,9 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * </p>
      * <note>
      * <p>
-     * We are retiring EC2-Classic on August 15, 2022. We recommend that you migrate from EC2-Classic to a VPC. For more
-     * information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-migrate.html">Migrate from
-     * EC2-Classic to a VPC</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * We are retiring EC2-Classic. We recommend that you migrate from EC2-Classic to a VPC. For more information, see
+     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-migrate.html">Migrate from EC2-Classic to a
+     * VPC</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * </note>
      * 
@@ -9968,9 +9968,9 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * </p>
      * <note>
      * <p>
-     * We are retiring EC2-Classic on August 15, 2022. We recommend that you migrate from EC2-Classic to a VPC. For more
-     * information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-migrate.html">Migrate from
-     * EC2-Classic to a VPC</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * We are retiring EC2-Classic. We recommend that you migrate from EC2-Classic to a VPC. For more information, see
+     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-migrate.html">Migrate from EC2-Classic to a
+     * VPC</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * </note>
      * 
@@ -9992,9 +9992,9 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * </p>
      * <note>
      * <p>
-     * We are retiring EC2-Classic on August 15, 2022. We recommend that you migrate from EC2-Classic to a VPC. For more
-     * information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-migrate.html">Migrate from
-     * EC2-Classic to a VPC</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * We are retiring EC2-Classic. We recommend that you migrate from EC2-Classic to a VPC. For more information, see
+     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-migrate.html">Migrate from EC2-Classic to a
+     * VPC</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * </note>
      * 
@@ -10742,8 +10742,11 @@ public interface AmazonEC2Async extends AmazonEC2 {
 
     /**
      * <p>
-     * Describes one or more flow logs. To view the information in your flow logs (the log streams for the network
-     * interfaces), you must use the CloudWatch Logs console or the CloudWatch Logs API.
+     * Describes one or more flow logs.
+     * </p>
+     * <p>
+     * To view the published flow log records, you must view the log destination. For example, the CloudWatch Logs log
+     * group, the Amazon S3 bucket, or the Kinesis Data Firehose delivery stream.
      * </p>
      * 
      * @param describeFlowLogsRequest
@@ -10756,8 +10759,11 @@ public interface AmazonEC2Async extends AmazonEC2 {
 
     /**
      * <p>
-     * Describes one or more flow logs. To view the information in your flow logs (the log streams for the network
-     * interfaces), you must use the CloudWatch Logs console or the CloudWatch Logs API.
+     * Describes one or more flow logs.
+     * </p>
+     * <p>
+     * To view the published flow log records, you must view the log destination. For example, the CloudWatch Logs log
+     * group, the Amazon S3 bucket, or the Kinesis Data Firehose delivery stream.
      * </p>
      * 
      * @param describeFlowLogsRequest
@@ -15450,9 +15456,9 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * </p>
      * <note>
      * <p>
-     * We are retiring EC2-Classic on August 15, 2022. We recommend that you migrate from EC2-Classic to a VPC. For more
-     * information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-migrate.html">Migrate from
-     * EC2-Classic to a VPC</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * We are retiring EC2-Classic. We recommend that you migrate from EC2-Classic to a VPC. For more information, see
+     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-migrate.html">Migrate from EC2-Classic to a
+     * VPC</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * </note>
      * 
@@ -15470,9 +15476,9 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * </p>
      * <note>
      * <p>
-     * We are retiring EC2-Classic on August 15, 2022. We recommend that you migrate from EC2-Classic to a VPC. For more
-     * information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-migrate.html">Migrate from
-     * EC2-Classic to a VPC</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * We are retiring EC2-Classic. We recommend that you migrate from EC2-Classic to a VPC. For more information, see
+     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-migrate.html">Migrate from EC2-Classic to a
+     * VPC</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * </note>
      * 
@@ -15507,9 +15513,9 @@ public interface AmazonEC2Async extends AmazonEC2 {
     /**
      * <note>
      * <p>
-     * We are retiring EC2-Classic on August 15, 2022. We recommend that you migrate from EC2-Classic to a VPC. For more
-     * information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-migrate.html">Migrate from
-     * EC2-Classic to a VPC</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * We are retiring EC2-Classic. We recommend that you migrate from EC2-Classic to a VPC. For more information, see
+     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-migrate.html">Migrate from EC2-Classic to a
+     * VPC</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * </note>
      * <p>
@@ -15534,9 +15540,9 @@ public interface AmazonEC2Async extends AmazonEC2 {
     /**
      * <note>
      * <p>
-     * We are retiring EC2-Classic on August 15, 2022. We recommend that you migrate from EC2-Classic to a VPC. For more
-     * information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-migrate.html">Migrate from
-     * EC2-Classic to a VPC</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * We are retiring EC2-Classic. We recommend that you migrate from EC2-Classic to a VPC. For more information, see
+     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-migrate.html">Migrate from EC2-Classic to a
+     * VPC</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * </note>
      * <p>
@@ -16028,9 +16034,9 @@ public interface AmazonEC2Async extends AmazonEC2 {
     /**
      * <note>
      * <p>
-     * We are retiring EC2-Classic on August 15, 2022. We recommend that you migrate from EC2-Classic to a VPC. For more
-     * information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-migrate.html">Migrate from
-     * EC2-Classic to a VPC</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * We are retiring EC2-Classic. We recommend that you migrate from EC2-Classic to a VPC. For more information, see
+     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-migrate.html">Migrate from EC2-Classic to a
+     * VPC</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * </note>
      * <p>
@@ -16050,9 +16056,9 @@ public interface AmazonEC2Async extends AmazonEC2 {
     /**
      * <note>
      * <p>
-     * We are retiring EC2-Classic on August 15, 2022. We recommend that you migrate from EC2-Classic to a VPC. For more
-     * information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-migrate.html">Migrate from
-     * EC2-Classic to a VPC</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * We are retiring EC2-Classic. We recommend that you migrate from EC2-Classic to a VPC. For more information, see
+     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-migrate.html">Migrate from EC2-Classic to a
+     * VPC</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * </note>
      * <p>
@@ -16575,9 +16581,9 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * </p>
      * <note>
      * <p>
-     * We are retiring EC2-Classic on August 15, 2022. We recommend that you migrate from EC2-Classic to a VPC. For more
-     * information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-migrate.html">Migrate from
-     * EC2-Classic to a VPC</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * We are retiring EC2-Classic. We recommend that you migrate from EC2-Classic to a VPC. For more information, see
+     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-migrate.html">Migrate from EC2-Classic to a
+     * VPC</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * </note>
      * 
@@ -16596,9 +16602,9 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * </p>
      * <note>
      * <p>
-     * We are retiring EC2-Classic on August 15, 2022. We recommend that you migrate from EC2-Classic to a VPC. For more
-     * information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-migrate.html">Migrate from
-     * EC2-Classic to a VPC</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * We are retiring EC2-Classic. We recommend that you migrate from EC2-Classic to a VPC. For more information, see
+     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-migrate.html">Migrate from EC2-Classic to a
+     * VPC</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * </note>
      * 
@@ -16628,9 +16634,9 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * </p>
      * <note>
      * <p>
-     * We are retiring EC2-Classic on August 15, 2022. We recommend that you migrate from EC2-Classic to a VPC. For more
-     * information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-migrate.html">Migrate from
-     * EC2-Classic to a VPC</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * We are retiring EC2-Classic. We recommend that you migrate from EC2-Classic to a VPC. For more information, see
+     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-migrate.html">Migrate from EC2-Classic to a
+     * VPC</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * </note>
      * 
@@ -16657,9 +16663,9 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * </p>
      * <note>
      * <p>
-     * We are retiring EC2-Classic on August 15, 2022. We recommend that you migrate from EC2-Classic to a VPC. For more
-     * information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-migrate.html">Migrate from
-     * EC2-Classic to a VPC</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * We are retiring EC2-Classic. We recommend that you migrate from EC2-Classic to a VPC. For more information, see
+     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-migrate.html">Migrate from EC2-Classic to a
+     * VPC</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * </note>
      * 
@@ -17618,9 +17624,9 @@ public interface AmazonEC2Async extends AmazonEC2 {
     /**
      * <note>
      * <p>
-     * We are retiring EC2-Classic on August 15, 2022. We recommend that you migrate from EC2-Classic to a VPC. For more
-     * information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-migrate.html">Migrate from
-     * EC2-Classic to a VPC</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * We are retiring EC2-Classic. We recommend that you migrate from EC2-Classic to a VPC. For more information, see
+     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-migrate.html">Migrate from EC2-Classic to a
+     * VPC</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * </note>
      * <p>
@@ -17644,9 +17650,9 @@ public interface AmazonEC2Async extends AmazonEC2 {
     /**
      * <note>
      * <p>
-     * We are retiring EC2-Classic on August 15, 2022. We recommend that you migrate from EC2-Classic to a VPC. For more
-     * information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-migrate.html">Migrate from
-     * EC2-Classic to a VPC</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * We are retiring EC2-Classic. We recommend that you migrate from EC2-Classic to a VPC. For more information, see
+     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-migrate.html">Migrate from EC2-Classic to a
+     * VPC</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * </note>
      * <p>
@@ -17675,9 +17681,9 @@ public interface AmazonEC2Async extends AmazonEC2 {
     /**
      * <note>
      * <p>
-     * We are retiring EC2-Classic on August 15, 2022. We recommend that you migrate from EC2-Classic to a VPC. For more
-     * information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-migrate.html">Migrate from
-     * EC2-Classic to a VPC</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * We are retiring EC2-Classic. We recommend that you migrate from EC2-Classic to a VPC. For more information, see
+     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-migrate.html">Migrate from EC2-Classic to a
+     * VPC</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * </note>
      * <p>
@@ -17705,9 +17711,9 @@ public interface AmazonEC2Async extends AmazonEC2 {
     /**
      * <note>
      * <p>
-     * We are retiring EC2-Classic on August 15, 2022. We recommend that you migrate from EC2-Classic to a VPC. For more
-     * information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-migrate.html">Migrate from
-     * EC2-Classic to a VPC</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * We are retiring EC2-Classic. We recommend that you migrate from EC2-Classic to a VPC. For more information, see
+     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-migrate.html">Migrate from EC2-Classic to a
+     * VPC</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * </note>
      * <p>
@@ -22219,9 +22225,9 @@ public interface AmazonEC2Async extends AmazonEC2 {
     /**
      * <note>
      * <p>
-     * We are retiring EC2-Classic on August 15, 2022. We recommend that you migrate from EC2-Classic to a VPC. For more
-     * information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-migrate.html">Migrate from
-     * EC2-Classic to a VPC</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * We are retiring EC2-Classic. We recommend that you migrate from EC2-Classic to a VPC. For more information, see
+     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-migrate.html">Migrate from EC2-Classic to a
+     * VPC</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * </note>
      * <p>
@@ -22271,9 +22277,9 @@ public interface AmazonEC2Async extends AmazonEC2 {
     /**
      * <note>
      * <p>
-     * We are retiring EC2-Classic on August 15, 2022. We recommend that you migrate from EC2-Classic to a VPC. For more
-     * information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-migrate.html">Migrate from
-     * EC2-Classic to a VPC</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * We are retiring EC2-Classic. We recommend that you migrate from EC2-Classic to a VPC. For more information, see
+     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-migrate.html">Migrate from EC2-Classic to a
+     * VPC</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * </note>
      * <p>

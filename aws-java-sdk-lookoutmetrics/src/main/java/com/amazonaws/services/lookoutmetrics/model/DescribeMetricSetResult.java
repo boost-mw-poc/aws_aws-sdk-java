@@ -102,6 +102,12 @@ public class DescribeMetricSetResult extends com.amazonaws.AmazonWebServiceResul
      * </p>
      */
     private MetricSource metricSource;
+    /**
+     * <p>
+     * The dimensions and their values that were used to filter the dataset.
+     * </p>
+     */
+    private java.util.List<MetricSetDimensionFilter> dimensionFilterList;
 
     /**
      * <p>
@@ -709,6 +715,76 @@ public class DescribeMetricSetResult extends com.amazonaws.AmazonWebServiceResul
     }
 
     /**
+     * <p>
+     * The dimensions and their values that were used to filter the dataset.
+     * </p>
+     * 
+     * @return The dimensions and their values that were used to filter the dataset.
+     */
+
+    public java.util.List<MetricSetDimensionFilter> getDimensionFilterList() {
+        return dimensionFilterList;
+    }
+
+    /**
+     * <p>
+     * The dimensions and their values that were used to filter the dataset.
+     * </p>
+     * 
+     * @param dimensionFilterList
+     *        The dimensions and their values that were used to filter the dataset.
+     */
+
+    public void setDimensionFilterList(java.util.Collection<MetricSetDimensionFilter> dimensionFilterList) {
+        if (dimensionFilterList == null) {
+            this.dimensionFilterList = null;
+            return;
+        }
+
+        this.dimensionFilterList = new java.util.ArrayList<MetricSetDimensionFilter>(dimensionFilterList);
+    }
+
+    /**
+     * <p>
+     * The dimensions and their values that were used to filter the dataset.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setDimensionFilterList(java.util.Collection)} or {@link #withDimensionFilterList(java.util.Collection)}
+     * if you want to override the existing values.
+     * </p>
+     * 
+     * @param dimensionFilterList
+     *        The dimensions and their values that were used to filter the dataset.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeMetricSetResult withDimensionFilterList(MetricSetDimensionFilter... dimensionFilterList) {
+        if (this.dimensionFilterList == null) {
+            setDimensionFilterList(new java.util.ArrayList<MetricSetDimensionFilter>(dimensionFilterList.length));
+        }
+        for (MetricSetDimensionFilter ele : dimensionFilterList) {
+            this.dimensionFilterList.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The dimensions and their values that were used to filter the dataset.
+     * </p>
+     * 
+     * @param dimensionFilterList
+     *        The dimensions and their values that were used to filter the dataset.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeMetricSetResult withDimensionFilterList(java.util.Collection<MetricSetDimensionFilter> dimensionFilterList) {
+        setDimensionFilterList(dimensionFilterList);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -745,7 +821,9 @@ public class DescribeMetricSetResult extends com.amazonaws.AmazonWebServiceResul
         if (getTimezone() != null)
             sb.append("Timezone: ").append(getTimezone()).append(",");
         if (getMetricSource() != null)
-            sb.append("MetricSource: ").append(getMetricSource());
+            sb.append("MetricSource: ").append(getMetricSource()).append(",");
+        if (getDimensionFilterList() != null)
+            sb.append("DimensionFilterList: ").append(getDimensionFilterList());
         sb.append("}");
         return sb.toString();
     }
@@ -812,6 +890,10 @@ public class DescribeMetricSetResult extends com.amazonaws.AmazonWebServiceResul
             return false;
         if (other.getMetricSource() != null && other.getMetricSource().equals(this.getMetricSource()) == false)
             return false;
+        if (other.getDimensionFilterList() == null ^ this.getDimensionFilterList() == null)
+            return false;
+        if (other.getDimensionFilterList() != null && other.getDimensionFilterList().equals(this.getDimensionFilterList()) == false)
+            return false;
         return true;
     }
 
@@ -833,6 +915,7 @@ public class DescribeMetricSetResult extends com.amazonaws.AmazonWebServiceResul
         hashCode = prime * hashCode + ((getMetricSetFrequency() == null) ? 0 : getMetricSetFrequency().hashCode());
         hashCode = prime * hashCode + ((getTimezone() == null) ? 0 : getTimezone().hashCode());
         hashCode = prime * hashCode + ((getMetricSource() == null) ? 0 : getMetricSource().hashCode());
+        hashCode = prime * hashCode + ((getDimensionFilterList() == null) ? 0 : getDimensionFilterList().hashCode());
         return hashCode;
     }
 

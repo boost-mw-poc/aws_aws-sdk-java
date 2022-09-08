@@ -84,7 +84,7 @@ public class CreateDocumentRequest extends com.amazonaws.AmazonWebServiceRequest
      * <ul>
      * <li>
      * <p>
-     * <code>aws-</code>
+     * <code>aws</code>
      * </p>
      * </li>
      * <li>
@@ -553,7 +553,7 @@ public class CreateDocumentRequest extends com.amazonaws.AmazonWebServiceRequest
      * <ul>
      * <li>
      * <p>
-     * <code>aws-</code>
+     * <code>aws</code>
      * </p>
      * </li>
      * <li>
@@ -578,7 +578,7 @@ public class CreateDocumentRequest extends com.amazonaws.AmazonWebServiceRequest
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>aws-</code>
+     *        <code>aws</code>
      *        </p>
      *        </li>
      *        <li>
@@ -610,7 +610,7 @@ public class CreateDocumentRequest extends com.amazonaws.AmazonWebServiceRequest
      * <ul>
      * <li>
      * <p>
-     * <code>aws-</code>
+     * <code>aws</code>
      * </p>
      * </li>
      * <li>
@@ -634,7 +634,7 @@ public class CreateDocumentRequest extends com.amazonaws.AmazonWebServiceRequest
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>aws-</code>
+     *         <code>aws</code>
      *         </p>
      *         </li>
      *         <li>
@@ -666,7 +666,7 @@ public class CreateDocumentRequest extends com.amazonaws.AmazonWebServiceRequest
      * <ul>
      * <li>
      * <p>
-     * <code>aws-</code>
+     * <code>aws</code>
      * </p>
      * </li>
      * <li>
@@ -691,7 +691,7 @@ public class CreateDocumentRequest extends com.amazonaws.AmazonWebServiceRequest
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>aws-</code>
+     *        <code>aws</code>
      *        </p>
      *        </li>
      *        <li>

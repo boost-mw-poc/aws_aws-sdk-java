@@ -91,15 +91,15 @@ public class ProductionVariant implements Serializable, Cloneable, StructuredPoj
     private Integer volumeSizeInGB;
     /**
      * <p>
-     * The timeout value, in seconds, to download and extract customer model artifact from Amazon S3 to individual
-     * inference instance associated with this production variant.
+     * The timeout value, in seconds, to download and extract the model that you want to host from Amazon S3 to the
+     * individual inference instance associated with this production variant.
      * </p>
      */
     private Integer modelDataDownloadTimeoutInSeconds;
     /**
      * <p>
-     * The timeout value, in seconds, for the customer inference container to pass health check by SageMaker Hosting.
-     * For more information on health check, see <a href=
+     * The timeout value, in seconds, for your inference container to pass health check by SageMaker Hosting. For more
+     * information about health check, see <a href=
      * "https://docs.aws.amazon.com/sagemaker/latest/dg/your-algorithms-inference-code.html#your-algorithms-inference-algo-ping-requests"
      * >How Your Container Should Respond to Health Check (Ping) Requests</a>.
      * </p>
@@ -553,13 +553,13 @@ public class ProductionVariant implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The timeout value, in seconds, to download and extract customer model artifact from Amazon S3 to individual
-     * inference instance associated with this production variant.
+     * The timeout value, in seconds, to download and extract the model that you want to host from Amazon S3 to the
+     * individual inference instance associated with this production variant.
      * </p>
      * 
      * @param modelDataDownloadTimeoutInSeconds
-     *        The timeout value, in seconds, to download and extract customer model artifact from Amazon S3 to
-     *        individual inference instance associated with this production variant.
+     *        The timeout value, in seconds, to download and extract the model that you want to host from Amazon S3 to
+     *        the individual inference instance associated with this production variant.
      */
 
     public void setModelDataDownloadTimeoutInSeconds(Integer modelDataDownloadTimeoutInSeconds) {
@@ -568,12 +568,12 @@ public class ProductionVariant implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The timeout value, in seconds, to download and extract customer model artifact from Amazon S3 to individual
-     * inference instance associated with this production variant.
+     * The timeout value, in seconds, to download and extract the model that you want to host from Amazon S3 to the
+     * individual inference instance associated with this production variant.
      * </p>
      * 
-     * @return The timeout value, in seconds, to download and extract customer model artifact from Amazon S3 to
-     *         individual inference instance associated with this production variant.
+     * @return The timeout value, in seconds, to download and extract the model that you want to host from Amazon S3 to
+     *         the individual inference instance associated with this production variant.
      */
 
     public Integer getModelDataDownloadTimeoutInSeconds() {
@@ -582,13 +582,13 @@ public class ProductionVariant implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The timeout value, in seconds, to download and extract customer model artifact from Amazon S3 to individual
-     * inference instance associated with this production variant.
+     * The timeout value, in seconds, to download and extract the model that you want to host from Amazon S3 to the
+     * individual inference instance associated with this production variant.
      * </p>
      * 
      * @param modelDataDownloadTimeoutInSeconds
-     *        The timeout value, in seconds, to download and extract customer model artifact from Amazon S3 to
-     *        individual inference instance associated with this production variant.
+     *        The timeout value, in seconds, to download and extract the model that you want to host from Amazon S3 to
+     *        the individual inference instance associated with this production variant.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -599,15 +599,15 @@ public class ProductionVariant implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The timeout value, in seconds, for the customer inference container to pass health check by SageMaker Hosting.
-     * For more information on health check, see <a href=
+     * The timeout value, in seconds, for your inference container to pass health check by SageMaker Hosting. For more
+     * information about health check, see <a href=
      * "https://docs.aws.amazon.com/sagemaker/latest/dg/your-algorithms-inference-code.html#your-algorithms-inference-algo-ping-requests"
      * >How Your Container Should Respond to Health Check (Ping) Requests</a>.
      * </p>
      * 
      * @param containerStartupHealthCheckTimeoutInSeconds
-     *        The timeout value, in seconds, for the customer inference container to pass health check by SageMaker
-     *        Hosting. For more information on health check, see <a href=
+     *        The timeout value, in seconds, for your inference container to pass health check by SageMaker Hosting. For
+     *        more information about health check, see <a href=
      *        "https://docs.aws.amazon.com/sagemaker/latest/dg/your-algorithms-inference-code.html#your-algorithms-inference-algo-ping-requests"
      *        >How Your Container Should Respond to Health Check (Ping) Requests</a>.
      */
@@ -618,14 +618,14 @@ public class ProductionVariant implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The timeout value, in seconds, for the customer inference container to pass health check by SageMaker Hosting.
-     * For more information on health check, see <a href=
+     * The timeout value, in seconds, for your inference container to pass health check by SageMaker Hosting. For more
+     * information about health check, see <a href=
      * "https://docs.aws.amazon.com/sagemaker/latest/dg/your-algorithms-inference-code.html#your-algorithms-inference-algo-ping-requests"
      * >How Your Container Should Respond to Health Check (Ping) Requests</a>.
      * </p>
      * 
-     * @return The timeout value, in seconds, for the customer inference container to pass health check by SageMaker
-     *         Hosting. For more information on health check, see <a href=
+     * @return The timeout value, in seconds, for your inference container to pass health check by SageMaker Hosting.
+     *         For more information about health check, see <a href=
      *         "https://docs.aws.amazon.com/sagemaker/latest/dg/your-algorithms-inference-code.html#your-algorithms-inference-algo-ping-requests"
      *         >How Your Container Should Respond to Health Check (Ping) Requests</a>.
      */
@@ -636,15 +636,15 @@ public class ProductionVariant implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The timeout value, in seconds, for the customer inference container to pass health check by SageMaker Hosting.
-     * For more information on health check, see <a href=
+     * The timeout value, in seconds, for your inference container to pass health check by SageMaker Hosting. For more
+     * information about health check, see <a href=
      * "https://docs.aws.amazon.com/sagemaker/latest/dg/your-algorithms-inference-code.html#your-algorithms-inference-algo-ping-requests"
      * >How Your Container Should Respond to Health Check (Ping) Requests</a>.
      * </p>
      * 
      * @param containerStartupHealthCheckTimeoutInSeconds
-     *        The timeout value, in seconds, for the customer inference container to pass health check by SageMaker
-     *        Hosting. For more information on health check, see <a href=
+     *        The timeout value, in seconds, for your inference container to pass health check by SageMaker Hosting. For
+     *        more information about health check, see <a href=
      *        "https://docs.aws.amazon.com/sagemaker/latest/dg/your-algorithms-inference-code.html#your-algorithms-inference-algo-ping-requests"
      *        >How Your Container Should Respond to Health Check (Ping) Requests</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
