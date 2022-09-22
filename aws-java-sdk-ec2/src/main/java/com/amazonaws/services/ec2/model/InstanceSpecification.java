@@ -38,7 +38,15 @@ public class InstanceSpecification implements Serializable, Cloneable {
      * </p>
      */
     private Boolean excludeBootVolume;
-
+    /**
+     * <p>
+     * The IDs of the data (non-root) volumes to exclude from the multi-volume snapshot set. If you specify the ID of
+     * the root volume, the request fails. To exclude the root volume, use <b>ExcludeBootVolume</b>.
+     * </p>
+     * <p>
+     * You can specify up to 40 volume IDs per request.
+     * </p>
+     */
     private com.amazonaws.internal.SdkInternalList<String> excludeDataVolumeIds;
 
     /**
@@ -134,7 +142,18 @@ public class InstanceSpecification implements Serializable, Cloneable {
     }
 
     /**
-     * @return
+     * <p>
+     * The IDs of the data (non-root) volumes to exclude from the multi-volume snapshot set. If you specify the ID of
+     * the root volume, the request fails. To exclude the root volume, use <b>ExcludeBootVolume</b>.
+     * </p>
+     * <p>
+     * You can specify up to 40 volume IDs per request.
+     * </p>
+     * 
+     * @return The IDs of the data (non-root) volumes to exclude from the multi-volume snapshot set. If you specify the
+     *         ID of the root volume, the request fails. To exclude the root volume, use <b>ExcludeBootVolume</b>.</p>
+     *         <p>
+     *         You can specify up to 40 volume IDs per request.
      */
 
     public java.util.List<String> getExcludeDataVolumeIds() {
@@ -145,7 +164,19 @@ public class InstanceSpecification implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * The IDs of the data (non-root) volumes to exclude from the multi-volume snapshot set. If you specify the ID of
+     * the root volume, the request fails. To exclude the root volume, use <b>ExcludeBootVolume</b>.
+     * </p>
+     * <p>
+     * You can specify up to 40 volume IDs per request.
+     * </p>
+     * 
      * @param excludeDataVolumeIds
+     *        The IDs of the data (non-root) volumes to exclude from the multi-volume snapshot set. If you specify the
+     *        ID of the root volume, the request fails. To exclude the root volume, use <b>ExcludeBootVolume</b>.</p>
+     *        <p>
+     *        You can specify up to 40 volume IDs per request.
      */
 
     public void setExcludeDataVolumeIds(java.util.Collection<String> excludeDataVolumeIds) {
@@ -159,12 +190,23 @@ public class InstanceSpecification implements Serializable, Cloneable {
 
     /**
      * <p>
+     * The IDs of the data (non-root) volumes to exclude from the multi-volume snapshot set. If you specify the ID of
+     * the root volume, the request fails. To exclude the root volume, use <b>ExcludeBootVolume</b>.
+     * </p>
+     * <p>
+     * You can specify up to 40 volume IDs per request.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setExcludeDataVolumeIds(java.util.Collection)} or {@link #withExcludeDataVolumeIds(java.util.Collection)}
      * if you want to override the existing values.
      * </p>
      * 
      * @param excludeDataVolumeIds
+     *        The IDs of the data (non-root) volumes to exclude from the multi-volume snapshot set. If you specify the
+     *        ID of the root volume, the request fails. To exclude the root volume, use <b>ExcludeBootVolume</b>.</p>
+     *        <p>
+     *        You can specify up to 40 volume IDs per request.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -179,7 +221,19 @@ public class InstanceSpecification implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * The IDs of the data (non-root) volumes to exclude from the multi-volume snapshot set. If you specify the ID of
+     * the root volume, the request fails. To exclude the root volume, use <b>ExcludeBootVolume</b>.
+     * </p>
+     * <p>
+     * You can specify up to 40 volume IDs per request.
+     * </p>
+     * 
      * @param excludeDataVolumeIds
+     *        The IDs of the data (non-root) volumes to exclude from the multi-volume snapshot set. If you specify the
+     *        ID of the root volume, the request fails. To exclude the root volume, use <b>ExcludeBootVolume</b>.</p>
+     *        <p>
+     *        You can specify up to 40 volume IDs per request.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

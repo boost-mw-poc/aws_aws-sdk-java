@@ -58,6 +58,11 @@ public class AbstractAWSBackupGateway implements AWSBackupGateway {
     }
 
     @Override
+    public GetVirtualMachineResult getVirtualMachine(GetVirtualMachineRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ImportHypervisorConfigurationResult importHypervisorConfiguration(ImportHypervisorConfigurationRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

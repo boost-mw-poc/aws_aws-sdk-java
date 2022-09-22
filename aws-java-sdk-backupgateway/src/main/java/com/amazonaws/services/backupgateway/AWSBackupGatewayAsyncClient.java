@@ -291,6 +291,39 @@ public class AWSBackupGatewayAsyncClient extends AWSBackupGatewayClient implemen
     }
 
     @Override
+    public java.util.concurrent.Future<GetVirtualMachineResult> getVirtualMachineAsync(GetVirtualMachineRequest request) {
+
+        return getVirtualMachineAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetVirtualMachineResult> getVirtualMachineAsync(final GetVirtualMachineRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetVirtualMachineRequest, GetVirtualMachineResult> asyncHandler) {
+        final GetVirtualMachineRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetVirtualMachineResult>() {
+            @Override
+            public GetVirtualMachineResult call() throws Exception {
+                GetVirtualMachineResult result = null;
+
+                try {
+                    result = executeGetVirtualMachine(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ImportHypervisorConfigurationResult> importHypervisorConfigurationAsync(ImportHypervisorConfigurationRequest request) {
 
         return importHypervisorConfigurationAsync(request, null);

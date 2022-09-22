@@ -68,6 +68,10 @@ public class GatewayDetailsJsonUnmarshaller implements Unmarshaller<GatewayDetai
                     context.nextToken();
                     gatewayDetails.setLastSeenTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
                 }
+                if (context.testExpression("MaintenanceStartTime", targetDepth)) {
+                    context.nextToken();
+                    gatewayDetails.setMaintenanceStartTime(MaintenanceStartTimeJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("NextUpdateAvailabilityTime", targetDepth)) {
                     context.nextToken();
                     gatewayDetails.setNextUpdateAvailabilityTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));

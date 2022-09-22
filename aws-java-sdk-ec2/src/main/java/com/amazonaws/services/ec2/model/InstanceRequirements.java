@@ -458,7 +458,7 @@ public class InstanceRequirements implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * For instance types with Amazon Web Services Inferentia GPUs, specify <code>inferentia</code>.
+     * For instance types with Amazon Web Services Inferentia chips, specify <code>inferentia</code>.
      * </p>
      * </li>
      * <li>
@@ -3738,7 +3738,7 @@ public class InstanceRequirements implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * For instance types with Amazon Web Services Inferentia GPUs, specify <code>inferentia</code>.
+     * For instance types with Amazon Web Services Inferentia chips, specify <code>inferentia</code>.
      * </p>
      * </li>
      * <li>
@@ -3790,7 +3790,7 @@ public class InstanceRequirements implements Serializable, Cloneable {
      *         </li>
      *         <li>
      *         <p>
-     *         For instance types with Amazon Web Services Inferentia GPUs, specify <code>inferentia</code>.
+     *         For instance types with Amazon Web Services Inferentia chips, specify <code>inferentia</code>.
      *         </p>
      *         </li>
      *         <li>
@@ -3853,7 +3853,7 @@ public class InstanceRequirements implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * For instance types with Amazon Web Services Inferentia GPUs, specify <code>inferentia</code>.
+     * For instance types with Amazon Web Services Inferentia chips, specify <code>inferentia</code>.
      * </p>
      * </li>
      * <li>
@@ -3906,7 +3906,7 @@ public class InstanceRequirements implements Serializable, Cloneable {
      *        </li>
      *        <li>
      *        <p>
-     *        For instance types with Amazon Web Services Inferentia GPUs, specify <code>inferentia</code>.
+     *        For instance types with Amazon Web Services Inferentia chips, specify <code>inferentia</code>.
      *        </p>
      *        </li>
      *        <li>
@@ -3971,7 +3971,7 @@ public class InstanceRequirements implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * For instance types with Amazon Web Services Inferentia GPUs, specify <code>inferentia</code>.
+     * For instance types with Amazon Web Services Inferentia chips, specify <code>inferentia</code>.
      * </p>
      * </li>
      * <li>
@@ -4029,7 +4029,7 @@ public class InstanceRequirements implements Serializable, Cloneable {
      *        </li>
      *        <li>
      *        <p>
-     *        For instance types with Amazon Web Services Inferentia GPUs, specify <code>inferentia</code>.
+     *        For instance types with Amazon Web Services Inferentia chips, specify <code>inferentia</code>.
      *        </p>
      *        </li>
      *        <li>
@@ -4096,7 +4096,7 @@ public class InstanceRequirements implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * For instance types with Amazon Web Services Inferentia GPUs, specify <code>inferentia</code>.
+     * For instance types with Amazon Web Services Inferentia chips, specify <code>inferentia</code>.
      * </p>
      * </li>
      * <li>
@@ -4149,7 +4149,7 @@ public class InstanceRequirements implements Serializable, Cloneable {
      *        </li>
      *        <li>
      *        <p>
-     *        For instance types with Amazon Web Services Inferentia GPUs, specify <code>inferentia</code>.
+     *        For instance types with Amazon Web Services Inferentia chips, specify <code>inferentia</code>.
      *        </p>
      *        </li>
      *        <li>
@@ -4211,7 +4211,7 @@ public class InstanceRequirements implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * For instance types with Amazon Web Services Inferentia GPUs, specify <code>inferentia</code>.
+     * For instance types with Amazon Web Services Inferentia chips, specify <code>inferentia</code>.
      * </p>
      * </li>
      * <li>
@@ -4264,7 +4264,7 @@ public class InstanceRequirements implements Serializable, Cloneable {
      *        </li>
      *        <li>
      *        <p>
-     *        For instance types with Amazon Web Services Inferentia GPUs, specify <code>inferentia</code>.
+     *        For instance types with Amazon Web Services Inferentia chips, specify <code>inferentia</code>.
      *        </p>
      *        </li>
      *        <li>

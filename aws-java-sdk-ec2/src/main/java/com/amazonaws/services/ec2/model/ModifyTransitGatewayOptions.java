@@ -86,6 +86,10 @@ public class ModifyTransitGatewayOptions implements Serializable, Cloneable {
      * A private Autonomous System Number (ASN) for the Amazon side of a BGP session. The range is 64512 to 65534 for
      * 16-bit ASNs and 4200000000 to 4294967294 for 32-bit ASNs.
      * </p>
+     * <p>
+     * The modify ASN operation is not allowed on a transit gateway with active BGP sessions. You must first delete all
+     * transit gateway attachments that have BGP configured prior to modifying the ASN on the transit gateway.
+     * </p>
      */
     private Long amazonSideAsn;
 
@@ -623,10 +627,18 @@ public class ModifyTransitGatewayOptions implements Serializable, Cloneable {
      * A private Autonomous System Number (ASN) for the Amazon side of a BGP session. The range is 64512 to 65534 for
      * 16-bit ASNs and 4200000000 to 4294967294 for 32-bit ASNs.
      * </p>
+     * <p>
+     * The modify ASN operation is not allowed on a transit gateway with active BGP sessions. You must first delete all
+     * transit gateway attachments that have BGP configured prior to modifying the ASN on the transit gateway.
+     * </p>
      * 
      * @param amazonSideAsn
      *        A private Autonomous System Number (ASN) for the Amazon side of a BGP session. The range is 64512 to 65534
-     *        for 16-bit ASNs and 4200000000 to 4294967294 for 32-bit ASNs.
+     *        for 16-bit ASNs and 4200000000 to 4294967294 for 32-bit ASNs.</p>
+     *        <p>
+     *        The modify ASN operation is not allowed on a transit gateway with active BGP sessions. You must first
+     *        delete all transit gateway attachments that have BGP configured prior to modifying the ASN on the transit
+     *        gateway.
      */
 
     public void setAmazonSideAsn(Long amazonSideAsn) {
@@ -638,9 +650,17 @@ public class ModifyTransitGatewayOptions implements Serializable, Cloneable {
      * A private Autonomous System Number (ASN) for the Amazon side of a BGP session. The range is 64512 to 65534 for
      * 16-bit ASNs and 4200000000 to 4294967294 for 32-bit ASNs.
      * </p>
+     * <p>
+     * The modify ASN operation is not allowed on a transit gateway with active BGP sessions. You must first delete all
+     * transit gateway attachments that have BGP configured prior to modifying the ASN on the transit gateway.
+     * </p>
      * 
      * @return A private Autonomous System Number (ASN) for the Amazon side of a BGP session. The range is 64512 to
-     *         65534 for 16-bit ASNs and 4200000000 to 4294967294 for 32-bit ASNs.
+     *         65534 for 16-bit ASNs and 4200000000 to 4294967294 for 32-bit ASNs.</p>
+     *         <p>
+     *         The modify ASN operation is not allowed on a transit gateway with active BGP sessions. You must first
+     *         delete all transit gateway attachments that have BGP configured prior to modifying the ASN on the transit
+     *         gateway.
      */
 
     public Long getAmazonSideAsn() {
@@ -652,10 +672,18 @@ public class ModifyTransitGatewayOptions implements Serializable, Cloneable {
      * A private Autonomous System Number (ASN) for the Amazon side of a BGP session. The range is 64512 to 65534 for
      * 16-bit ASNs and 4200000000 to 4294967294 for 32-bit ASNs.
      * </p>
+     * <p>
+     * The modify ASN operation is not allowed on a transit gateway with active BGP sessions. You must first delete all
+     * transit gateway attachments that have BGP configured prior to modifying the ASN on the transit gateway.
+     * </p>
      * 
      * @param amazonSideAsn
      *        A private Autonomous System Number (ASN) for the Amazon side of a BGP session. The range is 64512 to 65534
-     *        for 16-bit ASNs and 4200000000 to 4294967294 for 32-bit ASNs.
+     *        for 16-bit ASNs and 4200000000 to 4294967294 for 32-bit ASNs.</p>
+     *        <p>
+     *        The modify ASN operation is not allowed on a transit gateway with active BGP sessions. You must first
+     *        delete all transit gateway attachments that have BGP configured prior to modifying the ASN on the transit
+     *        gateway.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

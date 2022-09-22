@@ -96,14 +96,17 @@ public class AWSBackupGatewayClient extends AmazonWebServiceClient implements AW
                             new JsonErrorShapeMetadata().withErrorCode("AccessDeniedException").withExceptionUnmarshaller(
                                     com.amazonaws.services.backupgateway.model.transform.AccessDeniedExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("ValidationException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.backupgateway.model.transform.ValidationExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ConflictException").withExceptionUnmarshaller(
                                     com.amazonaws.services.backupgateway.model.transform.ConflictExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ResourceNotFoundException").withExceptionUnmarshaller(
                                     com.amazonaws.services.backupgateway.model.transform.ResourceNotFoundExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("ThrottlingException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.backupgateway.model.transform.ThrottlingExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("ValidationException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.backupgateway.model.transform.ValidationExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("InternalServerException").withExceptionUnmarshaller(
                                     com.amazonaws.services.backupgateway.model.transform.InternalServerExceptionUnmarshaller.getInstance()))
@@ -169,6 +172,8 @@ public class AWSBackupGatewayClient extends AmazonWebServiceClient implements AW
      *         The operation cannot proceed because it is not supported.
      * @throws InternalServerException
      *         The operation did not succeed because an internal error occurred. Try again later.
+     * @throws ThrottlingException
+     *         TPS has been limited to protect against intentional or unintentional high request volumes.
      * @sample AWSBackupGateway.AssociateGatewayToServer
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/backup-gateway-2021-01-01/AssociateGatewayToServer"
      *      target="_top">AWS API Documentation</a>
@@ -231,6 +236,8 @@ public class AWSBackupGatewayClient extends AmazonWebServiceClient implements AW
      *         The operation did not succeed because a validation error occurred.
      * @throws InternalServerException
      *         The operation did not succeed because an internal error occurred. Try again later.
+     * @throws ThrottlingException
+     *         TPS has been limited to protect against intentional or unintentional high request volumes.
      * @sample AWSBackupGateway.CreateGateway
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/backup-gateway-2021-01-01/CreateGateway" target="_top">AWS
      *      API Documentation</a>
@@ -292,6 +299,8 @@ public class AWSBackupGatewayClient extends AmazonWebServiceClient implements AW
      *         The operation did not succeed because an internal error occurred. Try again later.
      * @throws ResourceNotFoundException
      *         A resource that is required for the action wasn't found.
+     * @throws ThrottlingException
+     *         TPS has been limited to protect against intentional or unintentional high request volumes.
      * @sample AWSBackupGateway.DeleteGateway
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/backup-gateway-2021-01-01/DeleteGateway" target="_top">AWS
      *      API Documentation</a>
@@ -355,6 +364,8 @@ public class AWSBackupGatewayClient extends AmazonWebServiceClient implements AW
      *         The operation cannot proceed because you have insufficient permissions.
      * @throws ResourceNotFoundException
      *         A resource that is required for the action wasn't found.
+     * @throws ThrottlingException
+     *         TPS has been limited to protect against intentional or unintentional high request volumes.
      * @sample AWSBackupGateway.DeleteHypervisor
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/backup-gateway-2021-01-01/DeleteHypervisor"
      *      target="_top">AWS API Documentation</a>
@@ -419,6 +430,8 @@ public class AWSBackupGatewayClient extends AmazonWebServiceClient implements AW
      *         The operation did not succeed because an internal error occurred. Try again later.
      * @throws ResourceNotFoundException
      *         A resource that is required for the action wasn't found.
+     * @throws ThrottlingException
+     *         TPS has been limited to protect against intentional or unintentional high request volumes.
      * @sample AWSBackupGateway.DisassociateGatewayFromServer
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/backup-gateway-2021-01-01/DisassociateGatewayFromServer"
      *      target="_top">AWS API Documentation</a>
@@ -482,6 +495,8 @@ public class AWSBackupGatewayClient extends AmazonWebServiceClient implements AW
      *         The operation did not succeed because an internal error occurred. Try again later.
      * @throws ResourceNotFoundException
      *         A resource that is required for the action wasn't found.
+     * @throws ThrottlingException
+     *         TPS has been limited to protect against intentional or unintentional high request volumes.
      * @sample AWSBackupGateway.GetGateway
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/backup-gateway-2021-01-01/GetGateway" target="_top">AWS API
      *      Documentation</a>
@@ -532,6 +547,69 @@ public class AWSBackupGatewayClient extends AmazonWebServiceClient implements AW
 
     /**
      * <p>
+     * By providing the ARN (Amazon Resource Name), this API returns the virtual machine.
+     * </p>
+     * 
+     * @param getVirtualMachineRequest
+     * @return Result of the GetVirtualMachine operation returned by the service.
+     * @throws ValidationException
+     *         The operation did not succeed because a validation error occurred.
+     * @throws InternalServerException
+     *         The operation did not succeed because an internal error occurred. Try again later.
+     * @throws ResourceNotFoundException
+     *         A resource that is required for the action wasn't found.
+     * @throws ThrottlingException
+     *         TPS has been limited to protect against intentional or unintentional high request volumes.
+     * @sample AWSBackupGateway.GetVirtualMachine
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/backup-gateway-2021-01-01/GetVirtualMachine"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetVirtualMachineResult getVirtualMachine(GetVirtualMachineRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetVirtualMachine(request);
+    }
+
+    @SdkInternalApi
+    final GetVirtualMachineResult executeGetVirtualMachine(GetVirtualMachineRequest getVirtualMachineRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getVirtualMachineRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetVirtualMachineRequest> request = null;
+        Response<GetVirtualMachineResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetVirtualMachineRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getVirtualMachineRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Backup Gateway");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetVirtualMachine");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetVirtualMachineResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetVirtualMachineResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Connect to a hypervisor by importing its configuration.
      * </p>
      * 
@@ -543,6 +621,8 @@ public class AWSBackupGatewayClient extends AmazonWebServiceClient implements AW
      *         The operation did not succeed because an internal error occurred. Try again later.
      * @throws AccessDeniedException
      *         The operation cannot proceed because you have insufficient permissions.
+     * @throws ThrottlingException
+     *         TPS has been limited to protect against intentional or unintentional high request volumes.
      * @sample AWSBackupGateway.ImportHypervisorConfiguration
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/backup-gateway-2021-01-01/ImportHypervisorConfiguration"
      *      target="_top">AWS API Documentation</a>
@@ -605,6 +685,8 @@ public class AWSBackupGatewayClient extends AmazonWebServiceClient implements AW
      *         The operation did not succeed because a validation error occurred.
      * @throws InternalServerException
      *         The operation did not succeed because an internal error occurred. Try again later.
+     * @throws ThrottlingException
+     *         TPS has been limited to protect against intentional or unintentional high request volumes.
      * @sample AWSBackupGateway.ListGateways
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/backup-gateway-2021-01-01/ListGateways" target="_top">AWS
      *      API Documentation</a>
@@ -664,6 +746,8 @@ public class AWSBackupGatewayClient extends AmazonWebServiceClient implements AW
      *         The operation did not succeed because a validation error occurred.
      * @throws InternalServerException
      *         The operation did not succeed because an internal error occurred. Try again later.
+     * @throws ThrottlingException
+     *         TPS has been limited to protect against intentional or unintentional high request volumes.
      * @sample AWSBackupGateway.ListHypervisors
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/backup-gateway-2021-01-01/ListHypervisors" target="_top">AWS
      *      API Documentation</a>
@@ -725,6 +809,8 @@ public class AWSBackupGatewayClient extends AmazonWebServiceClient implements AW
      *         The operation did not succeed because an internal error occurred. Try again later.
      * @throws ResourceNotFoundException
      *         A resource that is required for the action wasn't found.
+     * @throws ThrottlingException
+     *         TPS has been limited to protect against intentional or unintentional high request volumes.
      * @sample AWSBackupGateway.ListTagsForResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/backup-gateway-2021-01-01/ListTagsForResource"
      *      target="_top">AWS API Documentation</a>
@@ -784,6 +870,8 @@ public class AWSBackupGatewayClient extends AmazonWebServiceClient implements AW
      *         The operation did not succeed because a validation error occurred.
      * @throws InternalServerException
      *         The operation did not succeed because an internal error occurred. Try again later.
+     * @throws ThrottlingException
+     *         TPS has been limited to protect against intentional or unintentional high request volumes.
      * @sample AWSBackupGateway.ListVirtualMachines
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/backup-gateway-2021-01-01/ListVirtualMachines"
      *      target="_top">AWS API Documentation</a>
@@ -847,6 +935,8 @@ public class AWSBackupGatewayClient extends AmazonWebServiceClient implements AW
      *         The operation did not succeed because an internal error occurred. Try again later.
      * @throws ResourceNotFoundException
      *         A resource that is required for the action wasn't found.
+     * @throws ThrottlingException
+     *         TPS has been limited to protect against intentional or unintentional high request volumes.
      * @sample AWSBackupGateway.PutMaintenanceStartTime
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/backup-gateway-2021-01-01/PutMaintenanceStartTime"
      *      target="_top">AWS API Documentation</a>
@@ -910,6 +1000,8 @@ public class AWSBackupGatewayClient extends AmazonWebServiceClient implements AW
      *         The operation did not succeed because an internal error occurred. Try again later.
      * @throws ResourceNotFoundException
      *         A resource that is required for the action wasn't found.
+     * @throws ThrottlingException
+     *         TPS has been limited to protect against intentional or unintentional high request volumes.
      * @sample AWSBackupGateway.TagResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/backup-gateway-2021-01-01/TagResource" target="_top">AWS API
      *      Documentation</a>
@@ -974,6 +1066,8 @@ public class AWSBackupGatewayClient extends AmazonWebServiceClient implements AW
      *         The operation did not succeed because an internal error occurred. Try again later.
      * @throws ResourceNotFoundException
      *         A resource that is required for the action wasn't found.
+     * @throws ThrottlingException
+     *         TPS has been limited to protect against intentional or unintentional high request volumes.
      * @sample AWSBackupGateway.TestHypervisorConfiguration
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/backup-gateway-2021-01-01/TestHypervisorConfiguration"
      *      target="_top">AWS API Documentation</a>
@@ -1037,6 +1131,8 @@ public class AWSBackupGatewayClient extends AmazonWebServiceClient implements AW
      *         The operation did not succeed because an internal error occurred. Try again later.
      * @throws ResourceNotFoundException
      *         A resource that is required for the action wasn't found.
+     * @throws ThrottlingException
+     *         TPS has been limited to protect against intentional or unintentional high request volumes.
      * @sample AWSBackupGateway.UntagResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/backup-gateway-2021-01-01/UntagResource" target="_top">AWS
      *      API Documentation</a>
@@ -1101,6 +1197,8 @@ public class AWSBackupGatewayClient extends AmazonWebServiceClient implements AW
      *         The operation did not succeed because an internal error occurred. Try again later.
      * @throws ResourceNotFoundException
      *         A resource that is required for the action wasn't found.
+     * @throws ThrottlingException
+     *         TPS has been limited to protect against intentional or unintentional high request volumes.
      * @sample AWSBackupGateway.UpdateGatewayInformation
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/backup-gateway-2021-01-01/UpdateGatewayInformation"
      *      target="_top">AWS API Documentation</a>
@@ -1170,6 +1268,8 @@ public class AWSBackupGatewayClient extends AmazonWebServiceClient implements AW
      *         The operation did not succeed because an internal error occurred. Try again later.
      * @throws ResourceNotFoundException
      *         A resource that is required for the action wasn't found.
+     * @throws ThrottlingException
+     *         TPS has been limited to protect against intentional or unintentional high request volumes.
      * @sample AWSBackupGateway.UpdateGatewaySoftwareNow
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/backup-gateway-2021-01-01/UpdateGatewaySoftwareNow"
      *      target="_top">AWS API Documentation</a>
@@ -1236,6 +1336,8 @@ public class AWSBackupGatewayClient extends AmazonWebServiceClient implements AW
      *         The operation cannot proceed because you have insufficient permissions.
      * @throws ResourceNotFoundException
      *         A resource that is required for the action wasn't found.
+     * @throws ThrottlingException
+     *         TPS has been limited to protect against intentional or unintentional high request volumes.
      * @sample AWSBackupGateway.UpdateHypervisor
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/backup-gateway-2021-01-01/UpdateHypervisor"
      *      target="_top">AWS API Documentation</a>

@@ -38,8 +38,17 @@ public class ModifyInstanceAttributeRequest extends AmazonWebServiceRequest impl
     private Boolean sourceDestCheck;
     /**
      * <p>
-     * The name of the attribute.
+     * The name of the attribute to modify.
      * </p>
+     * <important>
+     * <p>
+     * You can modify the following attributes only: <code>disableApiTermination</code> | <code>instanceType</code> |
+     * <code>kernel</code> | <code>ramdisk</code> | <code>instanceInitiatedShutdownBehavior</code> |
+     * <code>blockDeviceMapping</code> | <code>userData</code> | <code>sourceDestCheck</code> | <code>groupSet</code> |
+     * <code>ebsOptimized</code> | <code>sriovNetSupport</code> | <code>enaSupport</code> | <code>nvmeSupport</code> |
+     * <code>disableApiStop</code> | <code>enclaveOptions</code>
+     * </p>
+     * </important>
      */
     private String attribute;
     /**
@@ -179,7 +188,15 @@ public class ModifyInstanceAttributeRequest extends AmazonWebServiceRequest impl
      * @param instanceId
      *        The ID of the instance.
      * @param attribute
-     *        The name of the attribute.
+     *        The name of the attribute to modify.</p> <important>
+     *        <p>
+     *        You can modify the following attributes only: <code>disableApiTermination</code> |
+     *        <code>instanceType</code> | <code>kernel</code> | <code>ramdisk</code> |
+     *        <code>instanceInitiatedShutdownBehavior</code> | <code>blockDeviceMapping</code> | <code>userData</code> |
+     *        <code>sourceDestCheck</code> | <code>groupSet</code> | <code>ebsOptimized</code> |
+     *        <code>sriovNetSupport</code> | <code>enaSupport</code> | <code>nvmeSupport</code> |
+     *        <code>disableApiStop</code> | <code>enclaveOptions</code>
+     *        </p>
      */
     public ModifyInstanceAttributeRequest(String instanceId, String attribute) {
         setInstanceId(instanceId);
@@ -193,7 +210,15 @@ public class ModifyInstanceAttributeRequest extends AmazonWebServiceRequest impl
      * @param instanceId
      *        The ID of the instance.
      * @param attribute
-     *        The name of the attribute.
+     *        The name of the attribute to modify.</p> <important>
+     *        <p>
+     *        You can modify the following attributes only: <code>disableApiTermination</code> |
+     *        <code>instanceType</code> | <code>kernel</code> | <code>ramdisk</code> |
+     *        <code>instanceInitiatedShutdownBehavior</code> | <code>blockDeviceMapping</code> | <code>userData</code> |
+     *        <code>sourceDestCheck</code> | <code>groupSet</code> | <code>ebsOptimized</code> |
+     *        <code>sriovNetSupport</code> | <code>enaSupport</code> | <code>nvmeSupport</code> |
+     *        <code>disableApiStop</code> | <code>enclaveOptions</code>
+     *        </p>
      */
     public ModifyInstanceAttributeRequest(String instanceId, InstanceAttributeName attribute) {
         setInstanceId(instanceId);
@@ -286,11 +311,28 @@ public class ModifyInstanceAttributeRequest extends AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * The name of the attribute.
+     * The name of the attribute to modify.
      * </p>
+     * <important>
+     * <p>
+     * You can modify the following attributes only: <code>disableApiTermination</code> | <code>instanceType</code> |
+     * <code>kernel</code> | <code>ramdisk</code> | <code>instanceInitiatedShutdownBehavior</code> |
+     * <code>blockDeviceMapping</code> | <code>userData</code> | <code>sourceDestCheck</code> | <code>groupSet</code> |
+     * <code>ebsOptimized</code> | <code>sriovNetSupport</code> | <code>enaSupport</code> | <code>nvmeSupport</code> |
+     * <code>disableApiStop</code> | <code>enclaveOptions</code>
+     * </p>
+     * </important>
      * 
      * @param attribute
-     *        The name of the attribute.
+     *        The name of the attribute to modify.</p> <important>
+     *        <p>
+     *        You can modify the following attributes only: <code>disableApiTermination</code> |
+     *        <code>instanceType</code> | <code>kernel</code> | <code>ramdisk</code> |
+     *        <code>instanceInitiatedShutdownBehavior</code> | <code>blockDeviceMapping</code> | <code>userData</code> |
+     *        <code>sourceDestCheck</code> | <code>groupSet</code> | <code>ebsOptimized</code> |
+     *        <code>sriovNetSupport</code> | <code>enaSupport</code> | <code>nvmeSupport</code> |
+     *        <code>disableApiStop</code> | <code>enclaveOptions</code>
+     *        </p>
      * @see InstanceAttributeName
      */
 
@@ -300,10 +342,27 @@ public class ModifyInstanceAttributeRequest extends AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * The name of the attribute.
+     * The name of the attribute to modify.
      * </p>
+     * <important>
+     * <p>
+     * You can modify the following attributes only: <code>disableApiTermination</code> | <code>instanceType</code> |
+     * <code>kernel</code> | <code>ramdisk</code> | <code>instanceInitiatedShutdownBehavior</code> |
+     * <code>blockDeviceMapping</code> | <code>userData</code> | <code>sourceDestCheck</code> | <code>groupSet</code> |
+     * <code>ebsOptimized</code> | <code>sriovNetSupport</code> | <code>enaSupport</code> | <code>nvmeSupport</code> |
+     * <code>disableApiStop</code> | <code>enclaveOptions</code>
+     * </p>
+     * </important>
      * 
-     * @return The name of the attribute.
+     * @return The name of the attribute to modify.</p> <important>
+     *         <p>
+     *         You can modify the following attributes only: <code>disableApiTermination</code> |
+     *         <code>instanceType</code> | <code>kernel</code> | <code>ramdisk</code> |
+     *         <code>instanceInitiatedShutdownBehavior</code> | <code>blockDeviceMapping</code> | <code>userData</code>
+     *         | <code>sourceDestCheck</code> | <code>groupSet</code> | <code>ebsOptimized</code> |
+     *         <code>sriovNetSupport</code> | <code>enaSupport</code> | <code>nvmeSupport</code> |
+     *         <code>disableApiStop</code> | <code>enclaveOptions</code>
+     *         </p>
      * @see InstanceAttributeName
      */
 
@@ -313,11 +372,28 @@ public class ModifyInstanceAttributeRequest extends AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * The name of the attribute.
+     * The name of the attribute to modify.
      * </p>
+     * <important>
+     * <p>
+     * You can modify the following attributes only: <code>disableApiTermination</code> | <code>instanceType</code> |
+     * <code>kernel</code> | <code>ramdisk</code> | <code>instanceInitiatedShutdownBehavior</code> |
+     * <code>blockDeviceMapping</code> | <code>userData</code> | <code>sourceDestCheck</code> | <code>groupSet</code> |
+     * <code>ebsOptimized</code> | <code>sriovNetSupport</code> | <code>enaSupport</code> | <code>nvmeSupport</code> |
+     * <code>disableApiStop</code> | <code>enclaveOptions</code>
+     * </p>
+     * </important>
      * 
      * @param attribute
-     *        The name of the attribute.
+     *        The name of the attribute to modify.</p> <important>
+     *        <p>
+     *        You can modify the following attributes only: <code>disableApiTermination</code> |
+     *        <code>instanceType</code> | <code>kernel</code> | <code>ramdisk</code> |
+     *        <code>instanceInitiatedShutdownBehavior</code> | <code>blockDeviceMapping</code> | <code>userData</code> |
+     *        <code>sourceDestCheck</code> | <code>groupSet</code> | <code>ebsOptimized</code> |
+     *        <code>sriovNetSupport</code> | <code>enaSupport</code> | <code>nvmeSupport</code> |
+     *        <code>disableApiStop</code> | <code>enclaveOptions</code>
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see InstanceAttributeName
      */
@@ -329,11 +405,28 @@ public class ModifyInstanceAttributeRequest extends AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * The name of the attribute.
+     * The name of the attribute to modify.
      * </p>
+     * <important>
+     * <p>
+     * You can modify the following attributes only: <code>disableApiTermination</code> | <code>instanceType</code> |
+     * <code>kernel</code> | <code>ramdisk</code> | <code>instanceInitiatedShutdownBehavior</code> |
+     * <code>blockDeviceMapping</code> | <code>userData</code> | <code>sourceDestCheck</code> | <code>groupSet</code> |
+     * <code>ebsOptimized</code> | <code>sriovNetSupport</code> | <code>enaSupport</code> | <code>nvmeSupport</code> |
+     * <code>disableApiStop</code> | <code>enclaveOptions</code>
+     * </p>
+     * </important>
      * 
      * @param attribute
-     *        The name of the attribute.
+     *        The name of the attribute to modify.</p> <important>
+     *        <p>
+     *        You can modify the following attributes only: <code>disableApiTermination</code> |
+     *        <code>instanceType</code> | <code>kernel</code> | <code>ramdisk</code> |
+     *        <code>instanceInitiatedShutdownBehavior</code> | <code>blockDeviceMapping</code> | <code>userData</code> |
+     *        <code>sourceDestCheck</code> | <code>groupSet</code> | <code>ebsOptimized</code> |
+     *        <code>sriovNetSupport</code> | <code>enaSupport</code> | <code>nvmeSupport</code> |
+     *        <code>disableApiStop</code> | <code>enclaveOptions</code>
+     *        </p>
      * @see InstanceAttributeName
      */
 
@@ -343,11 +436,28 @@ public class ModifyInstanceAttributeRequest extends AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * The name of the attribute.
+     * The name of the attribute to modify.
      * </p>
+     * <important>
+     * <p>
+     * You can modify the following attributes only: <code>disableApiTermination</code> | <code>instanceType</code> |
+     * <code>kernel</code> | <code>ramdisk</code> | <code>instanceInitiatedShutdownBehavior</code> |
+     * <code>blockDeviceMapping</code> | <code>userData</code> | <code>sourceDestCheck</code> | <code>groupSet</code> |
+     * <code>ebsOptimized</code> | <code>sriovNetSupport</code> | <code>enaSupport</code> | <code>nvmeSupport</code> |
+     * <code>disableApiStop</code> | <code>enclaveOptions</code>
+     * </p>
+     * </important>
      * 
      * @param attribute
-     *        The name of the attribute.
+     *        The name of the attribute to modify.</p> <important>
+     *        <p>
+     *        You can modify the following attributes only: <code>disableApiTermination</code> |
+     *        <code>instanceType</code> | <code>kernel</code> | <code>ramdisk</code> |
+     *        <code>instanceInitiatedShutdownBehavior</code> | <code>blockDeviceMapping</code> | <code>userData</code> |
+     *        <code>sourceDestCheck</code> | <code>groupSet</code> | <code>ebsOptimized</code> |
+     *        <code>sriovNetSupport</code> | <code>enaSupport</code> | <code>nvmeSupport</code> |
+     *        <code>disableApiStop</code> | <code>enclaveOptions</code>
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see InstanceAttributeName
      */

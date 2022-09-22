@@ -76,9 +76,9 @@ public class InstanceNetworkInterfaceSpecification implements Serializable, Clon
     private Integer ipv6AddressCount;
     /**
      * <p>
-     * One or more IPv6 addresses to assign to the network interface. You cannot specify this option and the option to
-     * assign a number of IPv6 addresses in the same request. You cannot specify this option if you've specified a
-     * minimum number of instances to launch.
+     * The IPv6 addresses to assign to the network interface. You cannot specify this option and the option to assign a
+     * number of IPv6 addresses in the same request. You cannot specify this option if you've specified a minimum number
+     * of instances to launch.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<InstanceIpv6Address> ipv6Addresses;
@@ -102,8 +102,8 @@ public class InstanceNetworkInterfaceSpecification implements Serializable, Clon
     private String privateIpAddress;
     /**
      * <p>
-     * One or more private IPv4 addresses to assign to the network interface. Only one private IPv4 address can be
-     * designated as primary. You cannot specify this option if you're launching more than one instance in a <a
+     * The private IPv4 addresses to assign to the network interface. Only one private IPv4 address can be designated as
+     * primary. You cannot specify this option if you're launching more than one instance in a <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RunInstances.html">RunInstances</a> request.
      * </p>
      */
@@ -160,8 +160,8 @@ public class InstanceNetworkInterfaceSpecification implements Serializable, Clon
     private Integer networkCardIndex;
     /**
      * <p>
-     * One or more IPv4 delegated prefixes to be assigned to the network interface. You cannot use this option if you
-     * use the <code>Ipv4PrefixCount</code> option.
+     * The IPv4 delegated prefixes to be assigned to the network interface. You cannot use this option if you use the
+     * <code>Ipv4PrefixCount</code> option.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<Ipv4PrefixSpecificationRequest> ipv4Prefixes;
@@ -174,8 +174,8 @@ public class InstanceNetworkInterfaceSpecification implements Serializable, Clon
     private Integer ipv4PrefixCount;
     /**
      * <p>
-     * One or more IPv6 delegated prefixes to be assigned to the network interface. You cannot use this option if you
-     * use the <code>Ipv6PrefixCount</code> option.
+     * The IPv6 delegated prefixes to be assigned to the network interface. You cannot use this option if you use the
+     * <code>Ipv6PrefixCount</code> option.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<Ipv6PrefixSpecificationRequest> ipv6Prefixes;
@@ -568,14 +568,14 @@ public class InstanceNetworkInterfaceSpecification implements Serializable, Clon
 
     /**
      * <p>
-     * One or more IPv6 addresses to assign to the network interface. You cannot specify this option and the option to
-     * assign a number of IPv6 addresses in the same request. You cannot specify this option if you've specified a
-     * minimum number of instances to launch.
+     * The IPv6 addresses to assign to the network interface. You cannot specify this option and the option to assign a
+     * number of IPv6 addresses in the same request. You cannot specify this option if you've specified a minimum number
+     * of instances to launch.
      * </p>
      * 
-     * @return One or more IPv6 addresses to assign to the network interface. You cannot specify this option and the
-     *         option to assign a number of IPv6 addresses in the same request. You cannot specify this option if you've
-     *         specified a minimum number of instances to launch.
+     * @return The IPv6 addresses to assign to the network interface. You cannot specify this option and the option to
+     *         assign a number of IPv6 addresses in the same request. You cannot specify this option if you've specified
+     *         a minimum number of instances to launch.
      */
 
     public java.util.List<InstanceIpv6Address> getIpv6Addresses() {
@@ -587,15 +587,15 @@ public class InstanceNetworkInterfaceSpecification implements Serializable, Clon
 
     /**
      * <p>
-     * One or more IPv6 addresses to assign to the network interface. You cannot specify this option and the option to
-     * assign a number of IPv6 addresses in the same request. You cannot specify this option if you've specified a
-     * minimum number of instances to launch.
+     * The IPv6 addresses to assign to the network interface. You cannot specify this option and the option to assign a
+     * number of IPv6 addresses in the same request. You cannot specify this option if you've specified a minimum number
+     * of instances to launch.
      * </p>
      * 
      * @param ipv6Addresses
-     *        One or more IPv6 addresses to assign to the network interface. You cannot specify this option and the
-     *        option to assign a number of IPv6 addresses in the same request. You cannot specify this option if you've
-     *        specified a minimum number of instances to launch.
+     *        The IPv6 addresses to assign to the network interface. You cannot specify this option and the option to
+     *        assign a number of IPv6 addresses in the same request. You cannot specify this option if you've specified
+     *        a minimum number of instances to launch.
      */
 
     public void setIpv6Addresses(java.util.Collection<InstanceIpv6Address> ipv6Addresses) {
@@ -609,9 +609,9 @@ public class InstanceNetworkInterfaceSpecification implements Serializable, Clon
 
     /**
      * <p>
-     * One or more IPv6 addresses to assign to the network interface. You cannot specify this option and the option to
-     * assign a number of IPv6 addresses in the same request. You cannot specify this option if you've specified a
-     * minimum number of instances to launch.
+     * The IPv6 addresses to assign to the network interface. You cannot specify this option and the option to assign a
+     * number of IPv6 addresses in the same request. You cannot specify this option if you've specified a minimum number
+     * of instances to launch.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -620,9 +620,9 @@ public class InstanceNetworkInterfaceSpecification implements Serializable, Clon
      * </p>
      * 
      * @param ipv6Addresses
-     *        One or more IPv6 addresses to assign to the network interface. You cannot specify this option and the
-     *        option to assign a number of IPv6 addresses in the same request. You cannot specify this option if you've
-     *        specified a minimum number of instances to launch.
+     *        The IPv6 addresses to assign to the network interface. You cannot specify this option and the option to
+     *        assign a number of IPv6 addresses in the same request. You cannot specify this option if you've specified
+     *        a minimum number of instances to launch.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -638,15 +638,15 @@ public class InstanceNetworkInterfaceSpecification implements Serializable, Clon
 
     /**
      * <p>
-     * One or more IPv6 addresses to assign to the network interface. You cannot specify this option and the option to
-     * assign a number of IPv6 addresses in the same request. You cannot specify this option if you've specified a
-     * minimum number of instances to launch.
+     * The IPv6 addresses to assign to the network interface. You cannot specify this option and the option to assign a
+     * number of IPv6 addresses in the same request. You cannot specify this option if you've specified a minimum number
+     * of instances to launch.
      * </p>
      * 
      * @param ipv6Addresses
-     *        One or more IPv6 addresses to assign to the network interface. You cannot specify this option and the
-     *        option to assign a number of IPv6 addresses in the same request. You cannot specify this option if you've
-     *        specified a minimum number of instances to launch.
+     *        The IPv6 addresses to assign to the network interface. You cannot specify this option and the option to
+     *        assign a number of IPv6 addresses in the same request. You cannot specify this option if you've specified
+     *        a minimum number of instances to launch.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -773,14 +773,14 @@ public class InstanceNetworkInterfaceSpecification implements Serializable, Clon
 
     /**
      * <p>
-     * One or more private IPv4 addresses to assign to the network interface. Only one private IPv4 address can be
-     * designated as primary. You cannot specify this option if you're launching more than one instance in a <a
+     * The private IPv4 addresses to assign to the network interface. Only one private IPv4 address can be designated as
+     * primary. You cannot specify this option if you're launching more than one instance in a <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RunInstances.html">RunInstances</a> request.
      * </p>
      * 
-     * @return One or more private IPv4 addresses to assign to the network interface. Only one private IPv4 address can
-     *         be designated as primary. You cannot specify this option if you're launching more than one instance in a
-     *         <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RunInstances.html">RunInstances</a>
+     * @return The private IPv4 addresses to assign to the network interface. Only one private IPv4 address can be
+     *         designated as primary. You cannot specify this option if you're launching more than one instance in a <a
+     *         href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RunInstances.html">RunInstances</a>
      *         request.
      */
 
@@ -793,15 +793,15 @@ public class InstanceNetworkInterfaceSpecification implements Serializable, Clon
 
     /**
      * <p>
-     * One or more private IPv4 addresses to assign to the network interface. Only one private IPv4 address can be
-     * designated as primary. You cannot specify this option if you're launching more than one instance in a <a
+     * The private IPv4 addresses to assign to the network interface. Only one private IPv4 address can be designated as
+     * primary. You cannot specify this option if you're launching more than one instance in a <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RunInstances.html">RunInstances</a> request.
      * </p>
      * 
      * @param privateIpAddresses
-     *        One or more private IPv4 addresses to assign to the network interface. Only one private IPv4 address can
-     *        be designated as primary. You cannot specify this option if you're launching more than one instance in a
-     *        <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RunInstances.html">RunInstances</a>
+     *        The private IPv4 addresses to assign to the network interface. Only one private IPv4 address can be
+     *        designated as primary. You cannot specify this option if you're launching more than one instance in a <a
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RunInstances.html">RunInstances</a>
      *        request.
      */
 
@@ -816,8 +816,8 @@ public class InstanceNetworkInterfaceSpecification implements Serializable, Clon
 
     /**
      * <p>
-     * One or more private IPv4 addresses to assign to the network interface. Only one private IPv4 address can be
-     * designated as primary. You cannot specify this option if you're launching more than one instance in a <a
+     * The private IPv4 addresses to assign to the network interface. Only one private IPv4 address can be designated as
+     * primary. You cannot specify this option if you're launching more than one instance in a <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RunInstances.html">RunInstances</a> request.
      * </p>
      * <p>
@@ -827,9 +827,9 @@ public class InstanceNetworkInterfaceSpecification implements Serializable, Clon
      * </p>
      * 
      * @param privateIpAddresses
-     *        One or more private IPv4 addresses to assign to the network interface. Only one private IPv4 address can
-     *        be designated as primary. You cannot specify this option if you're launching more than one instance in a
-     *        <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RunInstances.html">RunInstances</a>
+     *        The private IPv4 addresses to assign to the network interface. Only one private IPv4 address can be
+     *        designated as primary. You cannot specify this option if you're launching more than one instance in a <a
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RunInstances.html">RunInstances</a>
      *        request.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -846,15 +846,15 @@ public class InstanceNetworkInterfaceSpecification implements Serializable, Clon
 
     /**
      * <p>
-     * One or more private IPv4 addresses to assign to the network interface. Only one private IPv4 address can be
-     * designated as primary. You cannot specify this option if you're launching more than one instance in a <a
+     * The private IPv4 addresses to assign to the network interface. Only one private IPv4 address can be designated as
+     * primary. You cannot specify this option if you're launching more than one instance in a <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RunInstances.html">RunInstances</a> request.
      * </p>
      * 
      * @param privateIpAddresses
-     *        One or more private IPv4 addresses to assign to the network interface. Only one private IPv4 address can
-     *        be designated as primary. You cannot specify this option if you're launching more than one instance in a
-     *        <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RunInstances.html">RunInstances</a>
+     *        The private IPv4 addresses to assign to the network interface. Only one private IPv4 address can be
+     *        designated as primary. You cannot specify this option if you're launching more than one instance in a <a
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RunInstances.html">RunInstances</a>
      *        request.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -1206,12 +1206,12 @@ public class InstanceNetworkInterfaceSpecification implements Serializable, Clon
 
     /**
      * <p>
-     * One or more IPv4 delegated prefixes to be assigned to the network interface. You cannot use this option if you
-     * use the <code>Ipv4PrefixCount</code> option.
+     * The IPv4 delegated prefixes to be assigned to the network interface. You cannot use this option if you use the
+     * <code>Ipv4PrefixCount</code> option.
      * </p>
      * 
-     * @return One or more IPv4 delegated prefixes to be assigned to the network interface. You cannot use this option
-     *         if you use the <code>Ipv4PrefixCount</code> option.
+     * @return The IPv4 delegated prefixes to be assigned to the network interface. You cannot use this option if you
+     *         use the <code>Ipv4PrefixCount</code> option.
      */
 
     public java.util.List<Ipv4PrefixSpecificationRequest> getIpv4Prefixes() {
@@ -1223,13 +1223,13 @@ public class InstanceNetworkInterfaceSpecification implements Serializable, Clon
 
     /**
      * <p>
-     * One or more IPv4 delegated prefixes to be assigned to the network interface. You cannot use this option if you
-     * use the <code>Ipv4PrefixCount</code> option.
+     * The IPv4 delegated prefixes to be assigned to the network interface. You cannot use this option if you use the
+     * <code>Ipv4PrefixCount</code> option.
      * </p>
      * 
      * @param ipv4Prefixes
-     *        One or more IPv4 delegated prefixes to be assigned to the network interface. You cannot use this option if
-     *        you use the <code>Ipv4PrefixCount</code> option.
+     *        The IPv4 delegated prefixes to be assigned to the network interface. You cannot use this option if you use
+     *        the <code>Ipv4PrefixCount</code> option.
      */
 
     public void setIpv4Prefixes(java.util.Collection<Ipv4PrefixSpecificationRequest> ipv4Prefixes) {
@@ -1243,8 +1243,8 @@ public class InstanceNetworkInterfaceSpecification implements Serializable, Clon
 
     /**
      * <p>
-     * One or more IPv4 delegated prefixes to be assigned to the network interface. You cannot use this option if you
-     * use the <code>Ipv4PrefixCount</code> option.
+     * The IPv4 delegated prefixes to be assigned to the network interface. You cannot use this option if you use the
+     * <code>Ipv4PrefixCount</code> option.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -1253,8 +1253,8 @@ public class InstanceNetworkInterfaceSpecification implements Serializable, Clon
      * </p>
      * 
      * @param ipv4Prefixes
-     *        One or more IPv4 delegated prefixes to be assigned to the network interface. You cannot use this option if
-     *        you use the <code>Ipv4PrefixCount</code> option.
+     *        The IPv4 delegated prefixes to be assigned to the network interface. You cannot use this option if you use
+     *        the <code>Ipv4PrefixCount</code> option.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1270,13 +1270,13 @@ public class InstanceNetworkInterfaceSpecification implements Serializable, Clon
 
     /**
      * <p>
-     * One or more IPv4 delegated prefixes to be assigned to the network interface. You cannot use this option if you
-     * use the <code>Ipv4PrefixCount</code> option.
+     * The IPv4 delegated prefixes to be assigned to the network interface. You cannot use this option if you use the
+     * <code>Ipv4PrefixCount</code> option.
      * </p>
      * 
      * @param ipv4Prefixes
-     *        One or more IPv4 delegated prefixes to be assigned to the network interface. You cannot use this option if
-     *        you use the <code>Ipv4PrefixCount</code> option.
+     *        The IPv4 delegated prefixes to be assigned to the network interface. You cannot use this option if you use
+     *        the <code>Ipv4PrefixCount</code> option.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1333,12 +1333,12 @@ public class InstanceNetworkInterfaceSpecification implements Serializable, Clon
 
     /**
      * <p>
-     * One or more IPv6 delegated prefixes to be assigned to the network interface. You cannot use this option if you
-     * use the <code>Ipv6PrefixCount</code> option.
+     * The IPv6 delegated prefixes to be assigned to the network interface. You cannot use this option if you use the
+     * <code>Ipv6PrefixCount</code> option.
      * </p>
      * 
-     * @return One or more IPv6 delegated prefixes to be assigned to the network interface. You cannot use this option
-     *         if you use the <code>Ipv6PrefixCount</code> option.
+     * @return The IPv6 delegated prefixes to be assigned to the network interface. You cannot use this option if you
+     *         use the <code>Ipv6PrefixCount</code> option.
      */
 
     public java.util.List<Ipv6PrefixSpecificationRequest> getIpv6Prefixes() {
@@ -1350,13 +1350,13 @@ public class InstanceNetworkInterfaceSpecification implements Serializable, Clon
 
     /**
      * <p>
-     * One or more IPv6 delegated prefixes to be assigned to the network interface. You cannot use this option if you
-     * use the <code>Ipv6PrefixCount</code> option.
+     * The IPv6 delegated prefixes to be assigned to the network interface. You cannot use this option if you use the
+     * <code>Ipv6PrefixCount</code> option.
      * </p>
      * 
      * @param ipv6Prefixes
-     *        One or more IPv6 delegated prefixes to be assigned to the network interface. You cannot use this option if
-     *        you use the <code>Ipv6PrefixCount</code> option.
+     *        The IPv6 delegated prefixes to be assigned to the network interface. You cannot use this option if you use
+     *        the <code>Ipv6PrefixCount</code> option.
      */
 
     public void setIpv6Prefixes(java.util.Collection<Ipv6PrefixSpecificationRequest> ipv6Prefixes) {
@@ -1370,8 +1370,8 @@ public class InstanceNetworkInterfaceSpecification implements Serializable, Clon
 
     /**
      * <p>
-     * One or more IPv6 delegated prefixes to be assigned to the network interface. You cannot use this option if you
-     * use the <code>Ipv6PrefixCount</code> option.
+     * The IPv6 delegated prefixes to be assigned to the network interface. You cannot use this option if you use the
+     * <code>Ipv6PrefixCount</code> option.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -1380,8 +1380,8 @@ public class InstanceNetworkInterfaceSpecification implements Serializable, Clon
      * </p>
      * 
      * @param ipv6Prefixes
-     *        One or more IPv6 delegated prefixes to be assigned to the network interface. You cannot use this option if
-     *        you use the <code>Ipv6PrefixCount</code> option.
+     *        The IPv6 delegated prefixes to be assigned to the network interface. You cannot use this option if you use
+     *        the <code>Ipv6PrefixCount</code> option.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1397,13 +1397,13 @@ public class InstanceNetworkInterfaceSpecification implements Serializable, Clon
 
     /**
      * <p>
-     * One or more IPv6 delegated prefixes to be assigned to the network interface. You cannot use this option if you
-     * use the <code>Ipv6PrefixCount</code> option.
+     * The IPv6 delegated prefixes to be assigned to the network interface. You cannot use this option if you use the
+     * <code>Ipv6PrefixCount</code> option.
      * </p>
      * 
      * @param ipv6Prefixes
-     *        One or more IPv6 delegated prefixes to be assigned to the network interface. You cannot use this option if
-     *        you use the <code>Ipv6PrefixCount</code> option.
+     *        The IPv6 delegated prefixes to be assigned to the network interface. You cannot use this option if you use
+     *        the <code>Ipv6PrefixCount</code> option.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

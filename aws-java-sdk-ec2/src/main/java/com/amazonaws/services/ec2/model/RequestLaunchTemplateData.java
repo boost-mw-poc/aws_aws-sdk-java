@@ -85,7 +85,7 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
      * <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * <p>
-     * If you specify <code>InstanceTypes</code>, you can't specify <code>InstanceRequirements</code>.
+     * If you specify <code>InstanceType</code>, you can't specify <code>InstanceRequirements</code>.
      * </p>
      */
     private String instanceType;
@@ -727,7 +727,7 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
      * <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * <p>
-     * If you specify <code>InstanceTypes</code>, you can't specify <code>InstanceRequirements</code>.
+     * If you specify <code>InstanceType</code>, you can't specify <code>InstanceRequirements</code>.
      * </p>
      * 
      * @param instanceType
@@ -735,7 +735,7 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Instance types</a> in the
      *        <i>Amazon Elastic Compute Cloud User Guide</i>.</p>
      *        <p>
-     *        If you specify <code>InstanceTypes</code>, you can't specify <code>InstanceRequirements</code>.
+     *        If you specify <code>InstanceType</code>, you can't specify <code>InstanceRequirements</code>.
      * @see InstanceType
      */
 
@@ -750,14 +750,14 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
      * <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * <p>
-     * If you specify <code>InstanceTypes</code>, you can't specify <code>InstanceRequirements</code>.
+     * If you specify <code>InstanceType</code>, you can't specify <code>InstanceRequirements</code>.
      * </p>
      * 
      * @return The instance type. For more information, see <a
      *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Instance types</a> in the
      *         <i>Amazon Elastic Compute Cloud User Guide</i>.</p>
      *         <p>
-     *         If you specify <code>InstanceTypes</code>, you can't specify <code>InstanceRequirements</code>.
+     *         If you specify <code>InstanceType</code>, you can't specify <code>InstanceRequirements</code>.
      * @see InstanceType
      */
 
@@ -772,7 +772,7 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
      * <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * <p>
-     * If you specify <code>InstanceTypes</code>, you can't specify <code>InstanceRequirements</code>.
+     * If you specify <code>InstanceType</code>, you can't specify <code>InstanceRequirements</code>.
      * </p>
      * 
      * @param instanceType
@@ -780,7 +780,7 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Instance types</a> in the
      *        <i>Amazon Elastic Compute Cloud User Guide</i>.</p>
      *        <p>
-     *        If you specify <code>InstanceTypes</code>, you can't specify <code>InstanceRequirements</code>.
+     *        If you specify <code>InstanceType</code>, you can't specify <code>InstanceRequirements</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see InstanceType
      */
@@ -797,7 +797,7 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
      * <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * <p>
-     * If you specify <code>InstanceTypes</code>, you can't specify <code>InstanceRequirements</code>.
+     * If you specify <code>InstanceType</code>, you can't specify <code>InstanceRequirements</code>.
      * </p>
      * 
      * @param instanceType
@@ -805,7 +805,7 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Instance types</a> in the
      *        <i>Amazon Elastic Compute Cloud User Guide</i>.</p>
      *        <p>
-     *        If you specify <code>InstanceTypes</code>, you can't specify <code>InstanceRequirements</code>.
+     *        If you specify <code>InstanceType</code>, you can't specify <code>InstanceRequirements</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see InstanceType
      */

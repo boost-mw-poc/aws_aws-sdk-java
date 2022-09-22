@@ -33,7 +33,9 @@ public class GetUserIdRequest extends com.amazonaws.AmazonWebServiceRequest impl
     private String identityStoreId;
     /**
      * <p>
-     * A unique identifier for an identity resource that is not the primary identifier.
+     * A unique identifier for a user or group that is not the primary identifier. This value can be an identifier from
+     * an external identity provider (IdP) that is associated with the user, the group, or a unique attribute. For
+     * example, a unique <code>UserDisplayName</code>.
      * </p>
      */
     private AlternateIdentifier alternateIdentifier;
@@ -80,11 +82,15 @@ public class GetUserIdRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * A unique identifier for an identity resource that is not the primary identifier.
+     * A unique identifier for a user or group that is not the primary identifier. This value can be an identifier from
+     * an external identity provider (IdP) that is associated with the user, the group, or a unique attribute. For
+     * example, a unique <code>UserDisplayName</code>.
      * </p>
      * 
      * @param alternateIdentifier
-     *        A unique identifier for an identity resource that is not the primary identifier.
+     *        A unique identifier for a user or group that is not the primary identifier. This value can be an
+     *        identifier from an external identity provider (IdP) that is associated with the user, the group, or a
+     *        unique attribute. For example, a unique <code>UserDisplayName</code>.
      */
 
     public void setAlternateIdentifier(AlternateIdentifier alternateIdentifier) {
@@ -93,10 +99,14 @@ public class GetUserIdRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * A unique identifier for an identity resource that is not the primary identifier.
+     * A unique identifier for a user or group that is not the primary identifier. This value can be an identifier from
+     * an external identity provider (IdP) that is associated with the user, the group, or a unique attribute. For
+     * example, a unique <code>UserDisplayName</code>.
      * </p>
      * 
-     * @return A unique identifier for an identity resource that is not the primary identifier.
+     * @return A unique identifier for a user or group that is not the primary identifier. This value can be an
+     *         identifier from an external identity provider (IdP) that is associated with the user, the group, or a
+     *         unique attribute. For example, a unique <code>UserDisplayName</code>.
      */
 
     public AlternateIdentifier getAlternateIdentifier() {
@@ -105,11 +115,15 @@ public class GetUserIdRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * A unique identifier for an identity resource that is not the primary identifier.
+     * A unique identifier for a user or group that is not the primary identifier. This value can be an identifier from
+     * an external identity provider (IdP) that is associated with the user, the group, or a unique attribute. For
+     * example, a unique <code>UserDisplayName</code>.
      * </p>
      * 
      * @param alternateIdentifier
-     *        A unique identifier for an identity resource that is not the primary identifier.
+     *        A unique identifier for a user or group that is not the primary identifier. This value can be an
+     *        identifier from an external identity provider (IdP) that is associated with the user, the group, or a
+     *        unique attribute. For example, a unique <code>UserDisplayName</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

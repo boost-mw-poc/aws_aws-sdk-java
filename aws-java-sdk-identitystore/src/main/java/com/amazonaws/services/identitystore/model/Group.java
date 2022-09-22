@@ -38,8 +38,8 @@ public class Group implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The group’s display name value. The length limit is 1,024 characters. This value can consist of letters, accented
      * characters, symbols, numbers, punctuation, tab, new line, carriage return, space, and nonbreaking space in this
-     * attribute. The characters <code>&lt;&gt;;:%</code> are excluded. This value is specified at the time the group is
-     * created and stored as an attribute of the group object in the identity store.
+     * attribute. This value is specified at the time the group is created and stored as an attribute of the group
+     * object in the identity store.
      * </p>
      */
     private String displayName;
@@ -107,15 +107,15 @@ public class Group implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The group’s display name value. The length limit is 1,024 characters. This value can consist of letters, accented
      * characters, symbols, numbers, punctuation, tab, new line, carriage return, space, and nonbreaking space in this
-     * attribute. The characters <code>&lt;&gt;;:%</code> are excluded. This value is specified at the time the group is
-     * created and stored as an attribute of the group object in the identity store.
+     * attribute. This value is specified at the time the group is created and stored as an attribute of the group
+     * object in the identity store.
      * </p>
      * 
      * @param displayName
      *        The group’s display name value. The length limit is 1,024 characters. This value can consist of letters,
      *        accented characters, symbols, numbers, punctuation, tab, new line, carriage return, space, and nonbreaking
-     *        space in this attribute. The characters <code>&lt;&gt;;:%</code> are excluded. This value is specified at
-     *        the time the group is created and stored as an attribute of the group object in the identity store.
+     *        space in this attribute. This value is specified at the time the group is created and stored as an
+     *        attribute of the group object in the identity store.
      */
 
     public void setDisplayName(String displayName) {
@@ -126,15 +126,14 @@ public class Group implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The group’s display name value. The length limit is 1,024 characters. This value can consist of letters, accented
      * characters, symbols, numbers, punctuation, tab, new line, carriage return, space, and nonbreaking space in this
-     * attribute. The characters <code>&lt;&gt;;:%</code> are excluded. This value is specified at the time the group is
-     * created and stored as an attribute of the group object in the identity store.
+     * attribute. This value is specified at the time the group is created and stored as an attribute of the group
+     * object in the identity store.
      * </p>
      * 
      * @return The group’s display name value. The length limit is 1,024 characters. This value can consist of letters,
      *         accented characters, symbols, numbers, punctuation, tab, new line, carriage return, space, and
-     *         nonbreaking space in this attribute. The characters <code>&lt;&gt;;:%</code> are excluded. This value is
-     *         specified at the time the group is created and stored as an attribute of the group object in the identity
-     *         store.
+     *         nonbreaking space in this attribute. This value is specified at the time the group is created and stored
+     *         as an attribute of the group object in the identity store.
      */
 
     public String getDisplayName() {
@@ -145,15 +144,15 @@ public class Group implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The group’s display name value. The length limit is 1,024 characters. This value can consist of letters, accented
      * characters, symbols, numbers, punctuation, tab, new line, carriage return, space, and nonbreaking space in this
-     * attribute. The characters <code>&lt;&gt;;:%</code> are excluded. This value is specified at the time the group is
-     * created and stored as an attribute of the group object in the identity store.
+     * attribute. This value is specified at the time the group is created and stored as an attribute of the group
+     * object in the identity store.
      * </p>
      * 
      * @param displayName
      *        The group’s display name value. The length limit is 1,024 characters. This value can consist of letters,
      *        accented characters, symbols, numbers, punctuation, tab, new line, carriage return, space, and nonbreaking
-     *        space in this attribute. The characters <code>&lt;&gt;;:%</code> are excluded. This value is specified at
-     *        the time the group is created and stored as an attribute of the group object in the identity store.
+     *        space in this attribute. This value is specified at the time the group is created and stored as an
+     *        attribute of the group object in the identity store.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

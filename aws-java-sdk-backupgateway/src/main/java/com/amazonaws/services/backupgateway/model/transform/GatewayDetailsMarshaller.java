@@ -37,6 +37,8 @@ public class GatewayDetailsMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("HypervisorId").build();
     private static final MarshallingInfo<java.util.Date> LASTSEENTIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LastSeenTime").timestampFormat("unixTimestamp").build();
+    private static final MarshallingInfo<StructuredPojo> MAINTENANCESTARTTIME_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MaintenanceStartTime").build();
     private static final MarshallingInfo<java.util.Date> NEXTUPDATEAVAILABILITYTIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("NextUpdateAvailabilityTime").timestampFormat("unixTimestamp").build();
     private static final MarshallingInfo<String> VPCENDPOINT_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
@@ -63,6 +65,7 @@ public class GatewayDetailsMarshaller {
             protocolMarshaller.marshall(gatewayDetails.getGatewayType(), GATEWAYTYPE_BINDING);
             protocolMarshaller.marshall(gatewayDetails.getHypervisorId(), HYPERVISORID_BINDING);
             protocolMarshaller.marshall(gatewayDetails.getLastSeenTime(), LASTSEENTIME_BINDING);
+            protocolMarshaller.marshall(gatewayDetails.getMaintenanceStartTime(), MAINTENANCESTARTTIME_BINDING);
             protocolMarshaller.marshall(gatewayDetails.getNextUpdateAvailabilityTime(), NEXTUPDATEAVAILABILITYTIME_BINDING);
             protocolMarshaller.marshall(gatewayDetails.getVpcEndpoint(), VPCENDPOINT_BINDING);
         } catch (Exception e) {

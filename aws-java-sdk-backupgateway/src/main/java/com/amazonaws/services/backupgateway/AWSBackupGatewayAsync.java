@@ -246,6 +246,37 @@ public interface AWSBackupGatewayAsync extends AWSBackupGateway {
 
     /**
      * <p>
+     * By providing the ARN (Amazon Resource Name), this API returns the virtual machine.
+     * </p>
+     * 
+     * @param getVirtualMachineRequest
+     * @return A Java Future containing the result of the GetVirtualMachine operation returned by the service.
+     * @sample AWSBackupGatewayAsync.GetVirtualMachine
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/backup-gateway-2021-01-01/GetVirtualMachine"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetVirtualMachineResult> getVirtualMachineAsync(GetVirtualMachineRequest getVirtualMachineRequest);
+
+    /**
+     * <p>
+     * By providing the ARN (Amazon Resource Name), this API returns the virtual machine.
+     * </p>
+     * 
+     * @param getVirtualMachineRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetVirtualMachine operation returned by the service.
+     * @sample AWSBackupGatewayAsyncHandler.GetVirtualMachine
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/backup-gateway-2021-01-01/GetVirtualMachine"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetVirtualMachineResult> getVirtualMachineAsync(GetVirtualMachineRequest getVirtualMachineRequest,
+            com.amazonaws.handlers.AsyncHandler<GetVirtualMachineRequest, GetVirtualMachineResult> asyncHandler);
+
+    /**
+     * <p>
      * Connect to a hypervisor by importing its configuration.
      * </p>
      * 

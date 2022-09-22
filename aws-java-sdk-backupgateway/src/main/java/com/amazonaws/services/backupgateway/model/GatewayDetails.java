@@ -61,6 +61,13 @@ public class GatewayDetails implements Serializable, Cloneable, StructuredPojo {
     private java.util.Date lastSeenTime;
     /**
      * <p>
+     * Returns your gateway's weekly maintenance start time including the day and time of the week. Note that values are
+     * in terms of the gateway's time zone. Can be weekly or monthly.
+     * </p>
+     */
+    private MaintenanceStartTime maintenanceStartTime;
+    /**
+     * <p>
      * Details showing the next update availability time of the gateway.
      * </p>
      */
@@ -300,6 +307,52 @@ public class GatewayDetails implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
+     * Returns your gateway's weekly maintenance start time including the day and time of the week. Note that values are
+     * in terms of the gateway's time zone. Can be weekly or monthly.
+     * </p>
+     * 
+     * @param maintenanceStartTime
+     *        Returns your gateway's weekly maintenance start time including the day and time of the week. Note that
+     *        values are in terms of the gateway's time zone. Can be weekly or monthly.
+     */
+
+    public void setMaintenanceStartTime(MaintenanceStartTime maintenanceStartTime) {
+        this.maintenanceStartTime = maintenanceStartTime;
+    }
+
+    /**
+     * <p>
+     * Returns your gateway's weekly maintenance start time including the day and time of the week. Note that values are
+     * in terms of the gateway's time zone. Can be weekly or monthly.
+     * </p>
+     * 
+     * @return Returns your gateway's weekly maintenance start time including the day and time of the week. Note that
+     *         values are in terms of the gateway's time zone. Can be weekly or monthly.
+     */
+
+    public MaintenanceStartTime getMaintenanceStartTime() {
+        return this.maintenanceStartTime;
+    }
+
+    /**
+     * <p>
+     * Returns your gateway's weekly maintenance start time including the day and time of the week. Note that values are
+     * in terms of the gateway's time zone. Can be weekly or monthly.
+     * </p>
+     * 
+     * @param maintenanceStartTime
+     *        Returns your gateway's weekly maintenance start time including the day and time of the week. Note that
+     *        values are in terms of the gateway's time zone. Can be weekly or monthly.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GatewayDetails withMaintenanceStartTime(MaintenanceStartTime maintenanceStartTime) {
+        setMaintenanceStartTime(maintenanceStartTime);
+        return this;
+    }
+
+    /**
+     * <p>
      * Details showing the next update availability time of the gateway.
      * </p>
      * 
@@ -406,6 +459,8 @@ public class GatewayDetails implements Serializable, Cloneable, StructuredPojo {
             sb.append("HypervisorId: ").append(getHypervisorId()).append(",");
         if (getLastSeenTime() != null)
             sb.append("LastSeenTime: ").append(getLastSeenTime()).append(",");
+        if (getMaintenanceStartTime() != null)
+            sb.append("MaintenanceStartTime: ").append(getMaintenanceStartTime()).append(",");
         if (getNextUpdateAvailabilityTime() != null)
             sb.append("NextUpdateAvailabilityTime: ").append(getNextUpdateAvailabilityTime()).append(",");
         if (getVpcEndpoint() != null)
@@ -444,6 +499,10 @@ public class GatewayDetails implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getLastSeenTime() != null && other.getLastSeenTime().equals(this.getLastSeenTime()) == false)
             return false;
+        if (other.getMaintenanceStartTime() == null ^ this.getMaintenanceStartTime() == null)
+            return false;
+        if (other.getMaintenanceStartTime() != null && other.getMaintenanceStartTime().equals(this.getMaintenanceStartTime()) == false)
+            return false;
         if (other.getNextUpdateAvailabilityTime() == null ^ this.getNextUpdateAvailabilityTime() == null)
             return false;
         if (other.getNextUpdateAvailabilityTime() != null && other.getNextUpdateAvailabilityTime().equals(this.getNextUpdateAvailabilityTime()) == false)
@@ -465,6 +524,7 @@ public class GatewayDetails implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getGatewayType() == null) ? 0 : getGatewayType().hashCode());
         hashCode = prime * hashCode + ((getHypervisorId() == null) ? 0 : getHypervisorId().hashCode());
         hashCode = prime * hashCode + ((getLastSeenTime() == null) ? 0 : getLastSeenTime().hashCode());
+        hashCode = prime * hashCode + ((getMaintenanceStartTime() == null) ? 0 : getMaintenanceStartTime().hashCode());
         hashCode = prime * hashCode + ((getNextUpdateAvailabilityTime() == null) ? 0 : getNextUpdateAvailabilityTime().hashCode());
         hashCode = prime * hashCode + ((getVpcEndpoint() == null) ? 0 : getVpcEndpoint().hashCode());
         return hashCode;
