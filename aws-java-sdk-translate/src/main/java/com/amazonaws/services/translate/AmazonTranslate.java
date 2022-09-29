@@ -62,8 +62,11 @@ public interface AmazonTranslate {
      * @throws TooManyRequestsException
      *         You have made too many requests within a short period of time. Wait for a short time and then try your
      *         request again.
+     * @throws TooManyTagsException
      * @throws ConflictException
      *         There was a conflict processing the request. Try your request again.
+     * @throws ConcurrentModificationException
+     *         Another modification is being made. That modification must complete before you can make your change.
      * @throws InternalServerException
      *         An internal server error occurred. Retry your request.
      * @sample AmazonTranslate.CreateParallelData
@@ -212,6 +215,9 @@ public interface AmazonTranslate {
      * @throws TooManyRequestsException
      *         You have made too many requests within a short period of time. Wait for a short time and then try your
      *         request again.
+     * @throws TooManyTagsException
+     * @throws ConcurrentModificationException
+     *         Another modification is being made. That modification must complete before you can make your change.
      * @throws InternalServerException
      *         An internal server error occurred. Retry your request.
      * @sample AmazonTranslate.ImportTerminology
@@ -263,6 +269,23 @@ public interface AmazonTranslate {
      *      Documentation</a>
      */
     ListParallelDataResult listParallelData(ListParallelDataRequest listParallelDataRequest);
+
+    /**
+     * @param listTagsForResourceRequest
+     * @return Result of the ListTagsForResource operation returned by the service.
+     * @throws InvalidParameterValueException
+     *         The value of the parameter is not valid. Review the value of the parameter you are using to correct it,
+     *         and then retry your operation.
+     * @throws ResourceNotFoundException
+     *         The resource you are looking for has not been found. Review the resource you're looking for and see if a
+     *         different resource will accomplish your needs before retrying the revised request.
+     * @throws InternalServerException
+     *         An internal server error occurred. Retry your request.
+     * @sample AmazonTranslate.ListTagsForResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/translate-2017-07-01/ListTagsForResource" target="_top">AWS
+     *      API Documentation</a>
+     */
+    ListTagsForResourceResult listTagsForResource(ListTagsForResourceRequest listTagsForResourceRequest);
 
     /**
      * <p>
@@ -380,6 +403,26 @@ public interface AmazonTranslate {
     StopTextTranslationJobResult stopTextTranslationJob(StopTextTranslationJobRequest stopTextTranslationJobRequest);
 
     /**
+     * @param tagResourceRequest
+     * @return Result of the TagResource operation returned by the service.
+     * @throws InvalidParameterValueException
+     *         The value of the parameter is not valid. Review the value of the parameter you are using to correct it,
+     *         and then retry your operation.
+     * @throws ConcurrentModificationException
+     *         Another modification is being made. That modification must complete before you can make your change.
+     * @throws ResourceNotFoundException
+     *         The resource you are looking for has not been found. Review the resource you're looking for and see if a
+     *         different resource will accomplish your needs before retrying the revised request.
+     * @throws TooManyTagsException
+     * @throws InternalServerException
+     *         An internal server error occurred. Retry your request.
+     * @sample AmazonTranslate.TagResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/translate-2017-07-01/TagResource" target="_top">AWS API
+     *      Documentation</a>
+     */
+    TagResourceResult tagResource(TagResourceRequest tagResourceRequest);
+
+    /**
      * <p>
      * Translates input text from the source language to the target language. For a list of available languages and
      * language codes, see <a>what-is-languages</a>.
@@ -417,6 +460,25 @@ public interface AmazonTranslate {
      *      Documentation</a>
      */
     TranslateTextResult translateText(TranslateTextRequest translateTextRequest);
+
+    /**
+     * @param untagResourceRequest
+     * @return Result of the UntagResource operation returned by the service.
+     * @throws InvalidParameterValueException
+     *         The value of the parameter is not valid. Review the value of the parameter you are using to correct it,
+     *         and then retry your operation.
+     * @throws ConcurrentModificationException
+     *         Another modification is being made. That modification must complete before you can make your change.
+     * @throws ResourceNotFoundException
+     *         The resource you are looking for has not been found. Review the resource you're looking for and see if a
+     *         different resource will accomplish your needs before retrying the revised request.
+     * @throws InternalServerException
+     *         An internal server error occurred. Retry your request.
+     * @sample AmazonTranslate.UntagResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/translate-2017-07-01/UntagResource" target="_top">AWS API
+     *      Documentation</a>
+     */
+    UntagResourceResult untagResource(UntagResourceRequest untagResourceRequest);
 
     /**
      * <p>

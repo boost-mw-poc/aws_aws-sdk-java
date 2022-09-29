@@ -39,7 +39,7 @@ public class GetEnvironmentTemplateVersionRequest extends com.amazonaws.AmazonWe
     private String minorVersion;
     /**
      * <p>
-     * The name of the environment template a version of which you want to get detailed data for..
+     * The name of the environment template a version of which you want to get detailed data for.
      * </p>
      */
     private String templateName;
@@ -126,11 +126,11 @@ public class GetEnvironmentTemplateVersionRequest extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * The name of the environment template a version of which you want to get detailed data for..
+     * The name of the environment template a version of which you want to get detailed data for.
      * </p>
      * 
      * @param templateName
-     *        The name of the environment template a version of which you want to get detailed data for..
+     *        The name of the environment template a version of which you want to get detailed data for.
      */
 
     public void setTemplateName(String templateName) {
@@ -139,10 +139,10 @@ public class GetEnvironmentTemplateVersionRequest extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * The name of the environment template a version of which you want to get detailed data for..
+     * The name of the environment template a version of which you want to get detailed data for.
      * </p>
      * 
-     * @return The name of the environment template a version of which you want to get detailed data for..
+     * @return The name of the environment template a version of which you want to get detailed data for.
      */
 
     public String getTemplateName() {
@@ -151,11 +151,11 @@ public class GetEnvironmentTemplateVersionRequest extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * The name of the environment template a version of which you want to get detailed data for..
+     * The name of the environment template a version of which you want to get detailed data for.
      * </p>
      * 
      * @param templateName
-     *        The name of the environment template a version of which you want to get detailed data for..
+     *        The name of the environment template a version of which you want to get detailed data for.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

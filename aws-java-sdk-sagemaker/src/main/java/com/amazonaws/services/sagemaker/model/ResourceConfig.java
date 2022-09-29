@@ -125,6 +125,12 @@ public class ResourceConfig implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private java.util.List<InstanceGroup> instanceGroups;
+    /**
+     * <p>
+     * The duration of time in seconds to retain configured resources in a warm pool for subsequent training jobs.
+     * </p>
+     */
+    private Integer keepAlivePeriodInSeconds;
 
     /**
      * <p>
@@ -767,6 +773,49 @@ public class ResourceConfig implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The duration of time in seconds to retain configured resources in a warm pool for subsequent training jobs.
+     * </p>
+     * 
+     * @param keepAlivePeriodInSeconds
+     *        The duration of time in seconds to retain configured resources in a warm pool for subsequent training
+     *        jobs.
+     */
+
+    public void setKeepAlivePeriodInSeconds(Integer keepAlivePeriodInSeconds) {
+        this.keepAlivePeriodInSeconds = keepAlivePeriodInSeconds;
+    }
+
+    /**
+     * <p>
+     * The duration of time in seconds to retain configured resources in a warm pool for subsequent training jobs.
+     * </p>
+     * 
+     * @return The duration of time in seconds to retain configured resources in a warm pool for subsequent training
+     *         jobs.
+     */
+
+    public Integer getKeepAlivePeriodInSeconds() {
+        return this.keepAlivePeriodInSeconds;
+    }
+
+    /**
+     * <p>
+     * The duration of time in seconds to retain configured resources in a warm pool for subsequent training jobs.
+     * </p>
+     * 
+     * @param keepAlivePeriodInSeconds
+     *        The duration of time in seconds to retain configured resources in a warm pool for subsequent training
+     *        jobs.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ResourceConfig withKeepAlivePeriodInSeconds(Integer keepAlivePeriodInSeconds) {
+        setKeepAlivePeriodInSeconds(keepAlivePeriodInSeconds);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -787,7 +836,9 @@ public class ResourceConfig implements Serializable, Cloneable, StructuredPojo {
         if (getVolumeKmsKeyId() != null)
             sb.append("VolumeKmsKeyId: ").append(getVolumeKmsKeyId()).append(",");
         if (getInstanceGroups() != null)
-            sb.append("InstanceGroups: ").append(getInstanceGroups());
+            sb.append("InstanceGroups: ").append(getInstanceGroups()).append(",");
+        if (getKeepAlivePeriodInSeconds() != null)
+            sb.append("KeepAlivePeriodInSeconds: ").append(getKeepAlivePeriodInSeconds());
         sb.append("}");
         return sb.toString();
     }
@@ -822,6 +873,10 @@ public class ResourceConfig implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getInstanceGroups() != null && other.getInstanceGroups().equals(this.getInstanceGroups()) == false)
             return false;
+        if (other.getKeepAlivePeriodInSeconds() == null ^ this.getKeepAlivePeriodInSeconds() == null)
+            return false;
+        if (other.getKeepAlivePeriodInSeconds() != null && other.getKeepAlivePeriodInSeconds().equals(this.getKeepAlivePeriodInSeconds()) == false)
+            return false;
         return true;
     }
 
@@ -835,6 +890,7 @@ public class ResourceConfig implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getVolumeSizeInGB() == null) ? 0 : getVolumeSizeInGB().hashCode());
         hashCode = prime * hashCode + ((getVolumeKmsKeyId() == null) ? 0 : getVolumeKmsKeyId().hashCode());
         hashCode = prime * hashCode + ((getInstanceGroups() == null) ? 0 : getInstanceGroups().hashCode());
+        hashCode = prime * hashCode + ((getKeepAlivePeriodInSeconds() == null) ? 0 : getKeepAlivePeriodInSeconds().hashCode());
         return hashCode;
     }
 

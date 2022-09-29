@@ -587,7 +587,8 @@ public enum InstanceType {
     R6a32xlarge("r6a.32xlarge"),
     R6a48xlarge("r6a.48xlarge"),
     R6aMetal("r6a.metal"),
-    P4de24xlarge("p4de.24xlarge");
+    P4de24xlarge("p4de.24xlarge"),
+    U3tb156xlarge("u-3tb1.56xlarge");
 
     private String value;
 

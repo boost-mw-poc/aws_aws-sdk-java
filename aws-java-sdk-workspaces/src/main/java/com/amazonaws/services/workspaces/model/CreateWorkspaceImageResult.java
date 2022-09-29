@@ -70,7 +70,7 @@ public class CreateWorkspaceImageResult extends com.amazonaws.AmazonWebServiceRe
     private java.util.Date created;
     /**
      * <p>
-     * The identifier of the AWS account that owns the image.
+     * The identifier of the Amazon Web Services account that owns the image.
      * </p>
      */
     private String ownerAccountId;
@@ -419,11 +419,11 @@ public class CreateWorkspaceImageResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The identifier of the AWS account that owns the image.
+     * The identifier of the Amazon Web Services account that owns the image.
      * </p>
      * 
      * @param ownerAccountId
-     *        The identifier of the AWS account that owns the image.
+     *        The identifier of the Amazon Web Services account that owns the image.
      */
 
     public void setOwnerAccountId(String ownerAccountId) {
@@ -432,10 +432,10 @@ public class CreateWorkspaceImageResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The identifier of the AWS account that owns the image.
+     * The identifier of the Amazon Web Services account that owns the image.
      * </p>
      * 
-     * @return The identifier of the AWS account that owns the image.
+     * @return The identifier of the Amazon Web Services account that owns the image.
      */
 
     public String getOwnerAccountId() {
@@ -444,11 +444,11 @@ public class CreateWorkspaceImageResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The identifier of the AWS account that owns the image.
+     * The identifier of the Amazon Web Services account that owns the image.
      * </p>
      * 
      * @param ownerAccountId
-     *        The identifier of the AWS account that owns the image.
+     *        The identifier of the Amazon Web Services account that owns the image.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -10287,7 +10287,8 @@ public interface AmazonSageMakerAsync extends AmazonSageMaker {
 
     /**
      * <p>
-     * Update a model training job to request a new Debugger profiling configuration.
+     * Update a model training job to request a new Debugger profiling configuration or to change warm pool retention
+     * length.
      * </p>
      * 
      * @param updateTrainingJobRequest
@@ -10300,7 +10301,8 @@ public interface AmazonSageMakerAsync extends AmazonSageMaker {
 
     /**
      * <p>
-     * Update a model training job to request a new Debugger profiling configuration.
+     * Update a model training job to request a new Debugger profiling configuration or to change warm pool retention
+     * length.
      * </p>
      * 
      * @param updateTrainingJobRequest

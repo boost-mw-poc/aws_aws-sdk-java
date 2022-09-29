@@ -53,12 +53,8 @@ import com.amazonaws.services.proton.model.*;
  * <i>update</i> and <i>delete</i> API operations and the service instance <i>list</i> and <i>update</i> API operations.
  * </p>
  * <p>
- * To learn more about Proton administration, see the <a
- * href="https://docs.aws.amazon.com/proton/latest/adminguide/Welcome.html">Proton Administrator Guide</a>.
- * </p>
- * <p>
- * To learn more about deploying serverless and containerized applications on Proton, see the <a
- * href="https://docs.aws.amazon.com/proton/latest/userguide/Welcome.html">Proton User Guide</a>.
+ * To learn more about Proton, see the <a href="https://docs.aws.amazon.com/proton/latest/userguide/Welcome.html">Proton
+ * User Guide</a>.
  * </p>
  * <p>
  * <b>Ensuring Idempotency</b>
@@ -257,8 +253,8 @@ public interface AWSProtonAsync extends AWSProton {
      * </p>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-env-account-connections.html">Environment account
-     * connections</a> in the <i>Proton Administrator guide</i>.
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/ag-env-account-connections.html">Environment account
+     * connections</a> in the <i>Proton User guide</i>.
      * </p>
      * 
      * @param acceptEnvironmentAccountConnectionRequest
@@ -279,8 +275,8 @@ public interface AWSProtonAsync extends AWSProton {
      * </p>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-env-account-connections.html">Environment account
-     * connections</a> in the <i>Proton Administrator guide</i>.
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/ag-env-account-connections.html">Environment account
+     * connections</a> in the <i>Proton User guide</i>.
      * </p>
      * 
      * @param acceptEnvironmentAccountConnectionRequest
@@ -305,8 +301,8 @@ public interface AWSProtonAsync extends AWSProton {
      * </p>
      * <p>
      * For more information about components, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-components.html">Proton components</a> in the
-     * <i>Proton Administrator Guide</i>.
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/ag-components.html">Proton components</a> in the
+     * <i>Proton User Guide</i>.
      * </p>
      * 
      * @param cancelComponentDeploymentRequest
@@ -325,8 +321,8 @@ public interface AWSProtonAsync extends AWSProton {
      * </p>
      * <p>
      * For more information about components, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-components.html">Proton components</a> in the
-     * <i>Proton Administrator Guide</i>.
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/ag-components.html">Proton components</a> in the
+     * <i>Proton User Guide</i>.
      * </p>
      * 
      * @param cancelComponentDeploymentRequest
@@ -347,8 +343,8 @@ public interface AWSProtonAsync extends AWSProton {
      * <p>
      * Attempts to cancel an environment deployment on an <a>UpdateEnvironment</a> action, if the deployment is
      * <code>IN_PROGRESS</code>. For more information, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-env-update.html">Update an environment</a> in the
-     * <i>Proton Administrator guide</i>.
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/ag-env-update.html">Update an environment</a> in the
+     * <i>Proton User guide</i>.
      * </p>
      * <p>
      * The following list includes potential cancellation scenarios.
@@ -385,8 +381,8 @@ public interface AWSProtonAsync extends AWSProton {
      * <p>
      * Attempts to cancel an environment deployment on an <a>UpdateEnvironment</a> action, if the deployment is
      * <code>IN_PROGRESS</code>. For more information, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-env-update.html">Update an environment</a> in the
-     * <i>Proton Administrator guide</i>.
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/ag-env-update.html">Update an environment</a> in the
+     * <i>Proton User guide</i>.
      * </p>
      * <p>
      * The following list includes potential cancellation scenarios.
@@ -427,10 +423,9 @@ public interface AWSProtonAsync extends AWSProton {
     /**
      * <p>
      * Attempts to cancel a service instance deployment on an <a>UpdateServiceInstance</a> action, if the deployment is
-     * <code>IN_PROGRESS</code>. For more information, see <i>Update a service instance</i> in the <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-svc-instance-update.html">Proton Administrator
-     * guide</a> or the <a href="https://docs.aws.amazon.com/proton/latest/userguide/ug-svc-instance-update.html">Proton
-     * User guide</a>.
+     * <code>IN_PROGRESS</code>. For more information, see <a
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/ag-svc-instance-update.html">Update a service
+     * instance</a> in the <i>Proton User guide</i>.
      * </p>
      * <p>
      * The following list includes potential cancellation scenarios.
@@ -467,10 +462,9 @@ public interface AWSProtonAsync extends AWSProton {
     /**
      * <p>
      * Attempts to cancel a service instance deployment on an <a>UpdateServiceInstance</a> action, if the deployment is
-     * <code>IN_PROGRESS</code>. For more information, see <i>Update a service instance</i> in the <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-svc-instance-update.html">Proton Administrator
-     * guide</a> or the <a href="https://docs.aws.amazon.com/proton/latest/userguide/ug-svc-instance-update.html">Proton
-     * User guide</a>.
+     * <code>IN_PROGRESS</code>. For more information, see <a
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/ag-svc-instance-update.html">Update a service
+     * instance</a> in the <i>Proton User guide</i>.
      * </p>
      * <p>
      * The following list includes potential cancellation scenarios.
@@ -512,10 +506,9 @@ public interface AWSProtonAsync extends AWSProton {
     /**
      * <p>
      * Attempts to cancel a service pipeline deployment on an <a>UpdateServicePipeline</a> action, if the deployment is
-     * <code>IN_PROGRESS</code>. For more information, see <i>Update a service pipeline</i> in the <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-svc-pipeline-update.html">Proton Administrator
-     * guide</a> or the <a href="https://docs.aws.amazon.com/proton/latest/userguide/ug-svc-pipeline-update.html">Proton
-     * User guide</a>.
+     * <code>IN_PROGRESS</code>. For more information, see <a
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/ag-svc-pipeline-update.html">Update a service
+     * pipeline</a> in the <i>Proton User guide</i>.
      * </p>
      * <p>
      * The following list includes potential cancellation scenarios.
@@ -552,10 +545,9 @@ public interface AWSProtonAsync extends AWSProton {
     /**
      * <p>
      * Attempts to cancel a service pipeline deployment on an <a>UpdateServicePipeline</a> action, if the deployment is
-     * <code>IN_PROGRESS</code>. For more information, see <i>Update a service pipeline</i> in the <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-svc-pipeline-update.html">Proton Administrator
-     * guide</a> or the <a href="https://docs.aws.amazon.com/proton/latest/userguide/ug-svc-pipeline-update.html">Proton
-     * User guide</a>.
+     * <code>IN_PROGRESS</code>. For more information, see <a
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/ag-svc-pipeline-update.html">Update a service
+     * pipeline</a> in the <i>Proton User guide</i>.
      * </p>
      * <p>
      * The following list includes potential cancellation scenarios.
@@ -600,8 +592,8 @@ public interface AWSProtonAsync extends AWSProton {
      * </p>
      * <p>
      * For more information about components, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-components.html">Proton components</a> in the
-     * <i>Proton Administrator Guide</i>.
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/ag-components.html">Proton components</a> in the
+     * <i>Proton User Guide</i>.
      * </p>
      * 
      * @param createComponentRequest
@@ -618,8 +610,8 @@ public interface AWSProtonAsync extends AWSProton {
      * </p>
      * <p>
      * For more information about components, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-components.html">Proton components</a> in the
-     * <i>Proton Administrator Guide</i>.
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/ag-components.html">Proton components</a> in the
+     * <i>Proton User Guide</i>.
      * </p>
      * 
      * @param createComponentRequest
@@ -658,9 +650,9 @@ public interface AWSProtonAsync extends AWSProton {
      * </ul>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-environments.html">Environments</a> and <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-works-prov-methods.html">Provisioning methods</a>
-     * in the <i>Proton Administrator Guide</i>.
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/ag-environments.html">Environments</a> and <a
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/ag-works-prov-methods.html">Provisioning methods</a> in
+     * the <i>Proton User Guide</i>.
      * </p>
      * 
      * @param createEnvironmentRequest
@@ -694,9 +686,9 @@ public interface AWSProtonAsync extends AWSProton {
      * </ul>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-environments.html">Environments</a> and <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-works-prov-methods.html">Provisioning methods</a>
-     * in the <i>Proton Administrator Guide</i>.
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/ag-environments.html">Environments</a> and <a
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/ag-works-prov-methods.html">Provisioning methods</a> in
+     * the <i>Proton User Guide</i>.
      * </p>
      * 
      * @param createEnvironmentRequest
@@ -720,8 +712,8 @@ public interface AWSProtonAsync extends AWSProton {
      * <p>
      * An environment account connection is a secure bi-directional connection between a <i>management account</i> and
      * an <i>environment account</i> that maintains authorization and permissions. For more information, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-env-account-connections.html">Environment account
-     * connections</a> in the <i>Proton Administrator guide</i>.
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/ag-env-account-connections.html">Environment account
+     * connections</a> in the <i>Proton User guide</i>.
      * </p>
      * 
      * @param createEnvironmentAccountConnectionRequest
@@ -742,8 +734,8 @@ public interface AWSProtonAsync extends AWSProton {
      * <p>
      * An environment account connection is a secure bi-directional connection between a <i>management account</i> and
      * an <i>environment account</i> that maintains authorization and permissions. For more information, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-env-account-connections.html">Environment account
-     * connections</a> in the <i>Proton Administrator guide</i>.
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/ag-env-account-connections.html">Environment account
+     * connections</a> in the <i>Proton User guide</i>.
      * </p>
      * 
      * @param createEnvironmentAccountConnectionRequest
@@ -764,8 +756,8 @@ public interface AWSProtonAsync extends AWSProton {
     /**
      * <p>
      * Create an environment template for Proton. For more information, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-templates.html">Environment Templates</a> in the
-     * <i>Proton Administrator Guide</i>.
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/ag-templates.html">Environment Templates</a> in the
+     * <i>Proton User Guide</i>.
      * </p>
      * <p>
      * You can create an environment template in one of the two following ways:
@@ -783,8 +775,8 @@ public interface AWSProtonAsync extends AWSProton {
      * provisioned infrastructure that you manage. Proton <i>doesn't</i> manage your existing provisioned
      * infrastructure. To create an environment template for customer provisioned and managed infrastructure, include
      * the <code>provisioning</code> parameter and set the value to <code>CUSTOMER_MANAGED</code>. For more information,
-     * see <a href="https://docs.aws.amazon.com/proton/latest/adminguide/template-create.html">Register and publish an
-     * environment template</a> in the <i>Proton Administrator Guide</i>.
+     * see <a href="https://docs.aws.amazon.com/proton/latest/userguide/template-create.html">Register and publish an
+     * environment template</a> in the <i>Proton User Guide</i>.
      * </p>
      * </li>
      * </ul>
@@ -801,8 +793,8 @@ public interface AWSProtonAsync extends AWSProton {
     /**
      * <p>
      * Create an environment template for Proton. For more information, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-templates.html">Environment Templates</a> in the
-     * <i>Proton Administrator Guide</i>.
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/ag-templates.html">Environment Templates</a> in the
+     * <i>Proton User Guide</i>.
      * </p>
      * <p>
      * You can create an environment template in one of the two following ways:
@@ -820,8 +812,8 @@ public interface AWSProtonAsync extends AWSProton {
      * provisioned infrastructure that you manage. Proton <i>doesn't</i> manage your existing provisioned
      * infrastructure. To create an environment template for customer provisioned and managed infrastructure, include
      * the <code>provisioning</code> parameter and set the value to <code>CUSTOMER_MANAGED</code>. For more information,
-     * see <a href="https://docs.aws.amazon.com/proton/latest/adminguide/template-create.html">Register and publish an
-     * environment template</a> in the <i>Proton Administrator Guide</i>.
+     * see <a href="https://docs.aws.amazon.com/proton/latest/userguide/template-create.html">Register and publish an
+     * environment template</a> in the <i>Proton User Guide</i>.
      * </p>
      * </li>
      * </ul>
@@ -881,18 +873,21 @@ public interface AWSProtonAsync extends AWSProton {
 
     /**
      * <p>
-     * Create and register a link to a repository that can be used with self-managed provisioning (infrastructure or
-     * pipelines) or for template sync configurations. When you create a repository link, Proton creates a <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/using-service-linked-roles.html">service-linked
+     * Create and register a link to a repository. Proton uses the link to repeatedly access the repository, to either
+     * push to it (self-managed provisioning) or pull from it (template sync). You can share a linked repository across
+     * multiple resources (like environments using self-managed provisioning, or synced templates). When you create a
+     * repository link, Proton creates a <a
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/using-service-linked-roles.html">service-linked
      * role</a> for you.
      * </p>
      * <p>
      * For more information, see <a href=
-     * "https://docs.aws.amazon.com/proton/latest/adminguide/ag-works-prov-methods.html#ag-works-prov-methods-self"
+     * "https://docs.aws.amazon.com/proton/latest/userguide/ag-works-prov-methods.html#ag-works-prov-methods-self"
      * >Self-managed provisioning</a>, <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-template-bundles.html">Template bundles</a>, and <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-template-sync-configs.html">Template sync
-     * configurations</a> in the <i>Proton Administrator Guide</i>.
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/ag-template-authoring.html#ag-template-bundles"
+     * >Template bundles</a>, and <a
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/ag-template-sync-configs.html">Template sync
+     * configurations</a> in the <i>Proton User Guide</i>.
      * </p>
      * 
      * @param createRepositoryRequest
@@ -905,18 +900,21 @@ public interface AWSProtonAsync extends AWSProton {
 
     /**
      * <p>
-     * Create and register a link to a repository that can be used with self-managed provisioning (infrastructure or
-     * pipelines) or for template sync configurations. When you create a repository link, Proton creates a <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/using-service-linked-roles.html">service-linked
+     * Create and register a link to a repository. Proton uses the link to repeatedly access the repository, to either
+     * push to it (self-managed provisioning) or pull from it (template sync). You can share a linked repository across
+     * multiple resources (like environments using self-managed provisioning, or synced templates). When you create a
+     * repository link, Proton creates a <a
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/using-service-linked-roles.html">service-linked
      * role</a> for you.
      * </p>
      * <p>
      * For more information, see <a href=
-     * "https://docs.aws.amazon.com/proton/latest/adminguide/ag-works-prov-methods.html#ag-works-prov-methods-self"
+     * "https://docs.aws.amazon.com/proton/latest/userguide/ag-works-prov-methods.html#ag-works-prov-methods-self"
      * >Self-managed provisioning</a>, <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-template-bundles.html">Template bundles</a>, and <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-template-sync-configs.html">Template sync
-     * configurations</a> in the <i>Proton Administrator Guide</i>.
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/ag-template-authoring.html#ag-template-bundles"
+     * >Template bundles</a>, and <a
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/ag-template-sync-configs.html">Template sync
+     * configurations</a> in the <i>Proton User Guide</i>.
      * </p>
      * 
      * @param createRepositoryRequest
@@ -936,9 +934,7 @@ public interface AWSProtonAsync extends AWSProton {
      * <p>
      * Create an Proton service. An Proton service is an instantiation of a service template and often includes several
      * service instances and pipeline. For more information, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-services.html">Services</a> in the <i>Proton
-     * Administrator Guide</i> and <a
-     * href="https://docs.aws.amazon.com/proton/latest/userguide/ug-service.html">Services</a> in the <i>Proton User
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/ag-services.html">Services</a> in the <i>Proton User
      * Guide</i>.
      * </p>
      * 
@@ -954,9 +950,7 @@ public interface AWSProtonAsync extends AWSProton {
      * <p>
      * Create an Proton service. An Proton service is an instantiation of a service template and often includes several
      * service instances and pipeline. For more information, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-services.html">Services</a> in the <i>Proton
-     * Administrator Guide</i> and <a
-     * href="https://docs.aws.amazon.com/proton/latest/userguide/ug-service.html">Services</a> in the <i>Proton User
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/ag-services.html">Services</a> in the <i>Proton User
      * Guide</i>.
      * </p>
      * 
@@ -979,9 +973,8 @@ public interface AWSProtonAsync extends AWSProton {
      * an optional CI/CD service pipeline. Developers, in turn, select the service template from Proton. If the selected
      * service template includes a service pipeline definition, they provide a link to their source code repository.
      * Proton then deploys and manages the infrastructure defined by the selected service template. For more
-     * information, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/managing-svc-templates.html">Service Templates</a> in
-     * the <i>Proton Administrator Guide</i>.
+     * information, see <a href="https://docs.aws.amazon.com/proton/latest/userguide/ag-templates.html">Proton
+     * templates</a> in the <i>Proton User Guide</i>.
      * </p>
      * 
      * @param createServiceTemplateRequest
@@ -998,9 +991,8 @@ public interface AWSProtonAsync extends AWSProton {
      * an optional CI/CD service pipeline. Developers, in turn, select the service template from Proton. If the selected
      * service template includes a service pipeline definition, they provide a link to their source code repository.
      * Proton then deploys and manages the infrastructure defined by the selected service template. For more
-     * information, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/managing-svc-templates.html">Service Templates</a> in
-     * the <i>Proton Administrator Guide</i>.
+     * information, see <a href="https://docs.aws.amazon.com/proton/latest/userguide/ag-templates.html">Proton
+     * templates</a> in the <i>Proton User Guide</i>.
      * </p>
      * 
      * @param createServiceTemplateRequest
@@ -1057,12 +1049,16 @@ public interface AWSProtonAsync extends AWSProton {
 
     /**
      * <p>
-     * Set up a template to create new template versions automatically. When a commit is pushed to your registered <a
-     * href="https://docs.aws.amazon.com/proton/latest/APIReference/API_Repository.html">repository</a>, Proton checks
-     * for changes to your repository template bundles. If it detects a template bundle change, a new major or minor
-     * version of its template is created, if the version doesn’t already exist. For more information, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-template-sync-configs.html">Template sync
-     * configurations</a> in the <i>Proton Administrator Guide</i>.
+     * Set up a template to create new template versions automatically by tracking a linked repository. A linked
+     * repository is a repository that has been registered with Proton. For more information, see
+     * <a>CreateRepository</a>.
+     * </p>
+     * <p>
+     * When a commit is pushed to your linked repository, Proton checks for changes to your repository template bundles.
+     * If it detects a template bundle change, a new major or minor version of its template is created, if the version
+     * doesn’t already exist. For more information, see <a
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/ag-template-sync-configs.html">Template sync
+     * configurations</a> in the <i>Proton User Guide</i>.
      * </p>
      * 
      * @param createTemplateSyncConfigRequest
@@ -1075,12 +1071,16 @@ public interface AWSProtonAsync extends AWSProton {
 
     /**
      * <p>
-     * Set up a template to create new template versions automatically. When a commit is pushed to your registered <a
-     * href="https://docs.aws.amazon.com/proton/latest/APIReference/API_Repository.html">repository</a>, Proton checks
-     * for changes to your repository template bundles. If it detects a template bundle change, a new major or minor
-     * version of its template is created, if the version doesn’t already exist. For more information, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-template-sync-configs.html">Template sync
-     * configurations</a> in the <i>Proton Administrator Guide</i>.
+     * Set up a template to create new template versions automatically by tracking a linked repository. A linked
+     * repository is a repository that has been registered with Proton. For more information, see
+     * <a>CreateRepository</a>.
+     * </p>
+     * <p>
+     * When a commit is pushed to your linked repository, Proton checks for changes to your repository template bundles.
+     * If it detects a template bundle change, a new major or minor version of its template is created, if the version
+     * doesn’t already exist. For more information, see <a
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/ag-template-sync-configs.html">Template sync
+     * configurations</a> in the <i>Proton User Guide</i>.
      * </p>
      * 
      * @param createTemplateSyncConfigRequest
@@ -1102,8 +1102,8 @@ public interface AWSProtonAsync extends AWSProton {
      * </p>
      * <p>
      * For more information about components, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-components.html">Proton components</a> in the
-     * <i>Proton Administrator Guide</i>.
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/ag-components.html">Proton components</a> in the
+     * <i>Proton User Guide</i>.
      * </p>
      * 
      * @param deleteComponentRequest
@@ -1120,8 +1120,8 @@ public interface AWSProtonAsync extends AWSProton {
      * </p>
      * <p>
      * For more information about components, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-components.html">Proton components</a> in the
-     * <i>Proton Administrator Guide</i>.
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/ag-components.html">Proton components</a> in the
+     * <i>Proton User Guide</i>.
      * </p>
      * 
      * @param deleteComponentRequest
@@ -1180,8 +1180,8 @@ public interface AWSProtonAsync extends AWSProton {
      * </p>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-env-account-connections.html">Environment account
-     * connections</a> in the <i>Proton Administrator guide</i>.
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/ag-env-account-connections.html">Environment account
+     * connections</a> in the <i>Proton User guide</i>.
      * </p>
      * 
      * @param deleteEnvironmentAccountConnectionRequest
@@ -1206,8 +1206,8 @@ public interface AWSProtonAsync extends AWSProton {
      * </p>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-env-account-connections.html">Environment account
-     * connections</a> in the <i>Proton Administrator guide</i>.
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/ag-env-account-connections.html">Environment account
+     * connections</a> in the <i>Proton User guide</i>.
      * </p>
      * 
      * @param deleteEnvironmentAccountConnectionRequest
@@ -1350,8 +1350,8 @@ public interface AWSProtonAsync extends AWSProton {
      * </p>
      * <p>
      * For more information about components, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-components.html">Proton components</a> in the
-     * <i>Proton Administrator Guide</i>.
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/ag-components.html">Proton components</a> in the
+     * <i>Proton User Guide</i>.
      * </p>
      * </note>
      * 
@@ -1373,8 +1373,8 @@ public interface AWSProtonAsync extends AWSProton {
      * </p>
      * <p>
      * For more information about components, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-components.html">Proton components</a> in the
-     * <i>Proton Administrator Guide</i>.
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/ag-components.html">Proton components</a> in the
+     * <i>Proton User Guide</i>.
      * </p>
      * </note>
      * 
@@ -1506,7 +1506,7 @@ public interface AWSProtonAsync extends AWSProton {
 
     /**
      * <p>
-     * Get detail data for the Proton pipeline service role.
+     * Get detail data for Proton account-wide settings.
      * </p>
      * 
      * @param getAccountSettingsRequest
@@ -1519,7 +1519,7 @@ public interface AWSProtonAsync extends AWSProton {
 
     /**
      * <p>
-     * Get detail data for the Proton pipeline service role.
+     * Get detail data for Proton account-wide settings.
      * </p>
      * 
      * @param getAccountSettingsRequest
@@ -1541,8 +1541,8 @@ public interface AWSProtonAsync extends AWSProton {
      * </p>
      * <p>
      * For more information about components, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-components.html">Proton components</a> in the
-     * <i>Proton Administrator Guide</i>.
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/ag-components.html">Proton components</a> in the
+     * <i>Proton User Guide</i>.
      * </p>
      * 
      * @param getComponentRequest
@@ -1559,8 +1559,8 @@ public interface AWSProtonAsync extends AWSProton {
      * </p>
      * <p>
      * For more information about components, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-components.html">Proton components</a> in the
-     * <i>Proton Administrator Guide</i>.
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/ag-components.html">Proton components</a> in the
+     * <i>Proton User Guide</i>.
      * </p>
      * 
      * @param getComponentRequest
@@ -1613,8 +1613,8 @@ public interface AWSProtonAsync extends AWSProton {
      * </p>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-env-account-connections.html">Environment account
-     * connections</a> in the <i>Proton Administrator guide</i>.
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/ag-env-account-connections.html">Environment account
+     * connections</a> in the <i>Proton User guide</i>.
      * </p>
      * 
      * @param getEnvironmentAccountConnectionRequest
@@ -1633,8 +1633,8 @@ public interface AWSProtonAsync extends AWSProton {
      * </p>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-env-account-connections.html">Environment account
-     * connections</a> in the <i>Proton Administrator guide</i>.
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/ag-env-account-connections.html">Environment account
+     * connections</a> in the <i>Proton User guide</i>.
      * </p>
      * 
      * @param getEnvironmentAccountConnectionRequest
@@ -1720,7 +1720,7 @@ public interface AWSProtonAsync extends AWSProton {
 
     /**
      * <p>
-     * Get detail data for a repository.
+     * Get detail data for a linked repository.
      * </p>
      * 
      * @param getRepositoryRequest
@@ -1733,7 +1733,7 @@ public interface AWSProtonAsync extends AWSProton {
 
     /**
      * <p>
-     * Get detail data for a repository.
+     * Get detail data for a linked repository.
      * </p>
      * 
      * @param getRepositoryRequest
@@ -1762,8 +1762,8 @@ public interface AWSProtonAsync extends AWSProton {
      * </p>
      * <p>
      * For more information about ABAC, see <a href=
-     * "https://docs.aws.amazon.com/proton/latest/adminguide/security_iam_service-with-iam.html#security_iam_service-with-iam-tags"
-     * >ABAC</a> in the <i>Proton Administrator Guide</i>.
+     * "https://docs.aws.amazon.com/proton/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-tags"
+     * >ABAC</a> in the <i>Proton User Guide</i>.
      * </p>
      * </note>
      * 
@@ -1788,8 +1788,8 @@ public interface AWSProtonAsync extends AWSProton {
      * </p>
      * <p>
      * For more information about ABAC, see <a href=
-     * "https://docs.aws.amazon.com/proton/latest/adminguide/security_iam_service-with-iam.html#security_iam_service-with-iam-tags"
-     * >ABAC</a> in the <i>Proton Administrator Guide</i>.
+     * "https://docs.aws.amazon.com/proton/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-tags"
+     * >ABAC</a> in the <i>Proton User Guide</i>.
      * </p>
      * </note>
      * 
@@ -2002,8 +2002,8 @@ public interface AWSProtonAsync extends AWSProton {
      * </p>
      * <p>
      * For more information about components, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-components.html">Proton components</a> in the
-     * <i>Proton Administrator Guide</i>.
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/ag-components.html">Proton components</a> in the
+     * <i>Proton User Guide</i>.
      * </p>
      * 
      * @param listComponentOutputsRequest
@@ -2020,8 +2020,8 @@ public interface AWSProtonAsync extends AWSProton {
      * </p>
      * <p>
      * For more information about components, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-components.html">Proton components</a> in the
-     * <i>Proton Administrator Guide</i>.
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/ag-components.html">Proton components</a> in the
+     * <i>Proton User Guide</i>.
      * </p>
      * 
      * @param listComponentOutputsRequest
@@ -2043,8 +2043,8 @@ public interface AWSProtonAsync extends AWSProton {
      * </p>
      * <p>
      * For more information about components, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-components.html">Proton components</a> in the
-     * <i>Proton Administrator Guide</i>.
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/ag-components.html">Proton components</a> in the
+     * <i>Proton User Guide</i>.
      * </p>
      * 
      * @param listComponentProvisionedResourcesRequest
@@ -2063,8 +2063,8 @@ public interface AWSProtonAsync extends AWSProton {
      * </p>
      * <p>
      * For more information about components, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-components.html">Proton components</a> in the
-     * <i>Proton Administrator Guide</i>.
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/ag-components.html">Proton components</a> in the
+     * <i>Proton User Guide</i>.
      * </p>
      * 
      * @param listComponentProvisionedResourcesRequest
@@ -2089,8 +2089,8 @@ public interface AWSProtonAsync extends AWSProton {
      * </p>
      * <p>
      * For more information about components, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-components.html">Proton components</a> in the
-     * <i>Proton Administrator Guide</i>.
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/ag-components.html">Proton components</a> in the
+     * <i>Proton User Guide</i>.
      * </p>
      * 
      * @param listComponentsRequest
@@ -2108,8 +2108,8 @@ public interface AWSProtonAsync extends AWSProton {
      * </p>
      * <p>
      * For more information about components, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-components.html">Proton components</a> in the
-     * <i>Proton Administrator Guide</i>.
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/ag-components.html">Proton components</a> in the
+     * <i>Proton User Guide</i>.
      * </p>
      * 
      * @param listComponentsRequest
@@ -2131,8 +2131,8 @@ public interface AWSProtonAsync extends AWSProton {
      * </p>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-env-account-connections.html">Environment account
-     * connections</a> in the <i>Proton Administrator guide</i>.
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/ag-env-account-connections.html">Environment account
+     * connections</a> in the <i>Proton User guide</i>.
      * </p>
      * 
      * @param listEnvironmentAccountConnectionsRequest
@@ -2151,8 +2151,8 @@ public interface AWSProtonAsync extends AWSProton {
      * </p>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-env-account-connections.html">Environment account
-     * connections</a> in the <i>Proton Administrator guide</i>.
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/ag-env-account-connections.html">Environment account
+     * connections</a> in the <i>Proton User guide</i>.
      * </p>
      * 
      * @param listEnvironmentAccountConnectionsRequest
@@ -2335,7 +2335,7 @@ public interface AWSProtonAsync extends AWSProton {
 
     /**
      * <p>
-     * List repositories with detail data.
+     * List linked repositories with detail data.
      * </p>
      * 
      * @param listRepositoriesRequest
@@ -2348,7 +2348,7 @@ public interface AWSProtonAsync extends AWSProton {
 
     /**
      * <p>
-     * List repositories with detail data.
+     * List linked repositories with detail data.
      * </p>
      * 
      * @param listRepositoriesRequest
@@ -2663,9 +2663,9 @@ public interface AWSProtonAsync extends AWSProton {
 
     /**
      * <p>
-     * List tags for a resource. For more information, see <i>Proton resources and tagging</i> in the <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton Administrator Guide</a> or <a
-     * href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">Proton User Guide</a>.
+     * List tags for a resource. For more information, see <a
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">Proton resources and tagging</a> in the
+     * <i>Proton User Guide</i>.
      * </p>
      * 
      * @param listTagsForResourceRequest
@@ -2678,9 +2678,9 @@ public interface AWSProtonAsync extends AWSProton {
 
     /**
      * <p>
-     * List tags for a resource. For more information, see <i>Proton resources and tagging</i> in the <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton Administrator Guide</a> or <a
-     * href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">Proton User Guide</a>.
+     * List tags for a resource. For more information, see <a
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">Proton resources and tagging</a> in the
+     * <i>Proton User Guide</i>.
      * </p>
      * 
      * @param listTagsForResourceRequest
@@ -2702,8 +2702,8 @@ public interface AWSProtonAsync extends AWSProton {
      * </p>
      * <p>
      * For more information, see <a href=
-     * "https://docs.aws.amazon.com/proton/latest/adminguide/ag-works-prov-methods.html#ag-works-prov-methods-self"
-     * >Self-managed provisioning</a> in the <i>Proton Administrator Guide</i>.
+     * "https://docs.aws.amazon.com/proton/latest/userguide/ag-works-prov-methods.html#ag-works-prov-methods-self"
+     * >Self-managed provisioning</a> in the <i>Proton User Guide</i>.
      * </p>
      * 
      * @param notifyResourceDeploymentStatusChangeRequest
@@ -2722,8 +2722,8 @@ public interface AWSProtonAsync extends AWSProton {
      * </p>
      * <p>
      * For more information, see <a href=
-     * "https://docs.aws.amazon.com/proton/latest/adminguide/ag-works-prov-methods.html#ag-works-prov-methods-self"
-     * >Self-managed provisioning</a> in the <i>Proton Administrator Guide</i>.
+     * "https://docs.aws.amazon.com/proton/latest/userguide/ag-works-prov-methods.html#ag-works-prov-methods-self"
+     * >Self-managed provisioning</a> in the <i>Proton User Guide</i>.
      * </p>
      * 
      * @param notifyResourceDeploymentStatusChangeRequest
@@ -2754,8 +2754,8 @@ public interface AWSProtonAsync extends AWSProton {
      * </p>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-env-account-connections.html">Environment account
-     * connections</a> in the <i>Proton Administrator guide</i>.
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/ag-env-account-connections.html">Environment account
+     * connections</a> in the <i>Proton User guide</i>.
      * </p>
      * 
      * @param rejectEnvironmentAccountConnectionRequest
@@ -2781,8 +2781,8 @@ public interface AWSProtonAsync extends AWSProton {
      * </p>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-env-account-connections.html">Environment account
-     * connections</a> in the <i>Proton Administrator guide</i>.
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/ag-env-account-connections.html">Environment account
+     * connections</a> in the <i>Proton User guide</i>.
      * </p>
      * 
      * @param rejectEnvironmentAccountConnectionRequest
@@ -2805,9 +2805,8 @@ public interface AWSProtonAsync extends AWSProton {
      * Tag a resource. A tag is a key-value pair of metadata that you associate with an Proton resource.
      * </p>
      * <p>
-     * For more information, see <i>Proton resources and tagging</i> in the <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton Administrator Guide</a> or <a
-     * href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">Proton User Guide</a>.
+     * For more information, see <a href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">Proton
+     * resources and tagging</a> in the <i>Proton User Guide</i>.
      * </p>
      * 
      * @param tagResourceRequest
@@ -2823,9 +2822,8 @@ public interface AWSProtonAsync extends AWSProton {
      * Tag a resource. A tag is a key-value pair of metadata that you associate with an Proton resource.
      * </p>
      * <p>
-     * For more information, see <i>Proton resources and tagging</i> in the <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton Administrator Guide</a> or <a
-     * href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">Proton User Guide</a>.
+     * For more information, see <a href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">Proton
+     * resources and tagging</a> in the <i>Proton User Guide</i>.
      * </p>
      * 
      * @param tagResourceRequest
@@ -2846,9 +2844,8 @@ public interface AWSProtonAsync extends AWSProton {
      * Remove a customer tag from a resource. A tag is a key-value pair of metadata associated with an Proton resource.
      * </p>
      * <p>
-     * For more information, see <i>Proton resources and tagging</i> in the <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton Administrator Guide</a> or <a
-     * href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">Proton User Guide</a>.
+     * For more information, see <a href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">Proton
+     * resources and tagging</a> in the <i>Proton User Guide</i>.
      * </p>
      * 
      * @param untagResourceRequest
@@ -2864,9 +2861,8 @@ public interface AWSProtonAsync extends AWSProton {
      * Remove a customer tag from a resource. A tag is a key-value pair of metadata associated with an Proton resource.
      * </p>
      * <p>
-     * For more information, see <i>Proton resources and tagging</i> in the <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton Administrator Guide</a> or <a
-     * href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">Proton User Guide</a>.
+     * For more information, see <a href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">Proton
+     * resources and tagging</a> in the <i>Proton User Guide</i>.
      * </p>
      * 
      * @param untagResourceRequest
@@ -2884,7 +2880,7 @@ public interface AWSProtonAsync extends AWSProton {
 
     /**
      * <p>
-     * Update the Proton service pipeline role or repository settings.
+     * Update Proton settings that are used for multiple services in the Amazon Web Services account.
      * </p>
      * 
      * @param updateAccountSettingsRequest
@@ -2897,7 +2893,7 @@ public interface AWSProtonAsync extends AWSProton {
 
     /**
      * <p>
-     * Update the Proton service pipeline role or repository settings.
+     * Update Proton settings that are used for multiple services in the Amazon Web Services account.
      * </p>
      * 
      * @param updateAccountSettingsRequest
@@ -2928,8 +2924,8 @@ public interface AWSProtonAsync extends AWSProton {
      * </note>
      * <p>
      * For more information about components, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-components.html">Proton components</a> in the
-     * <i>Proton Administrator Guide</i>.
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/ag-components.html">Proton components</a> in the
+     * <i>Proton User Guide</i>.
      * </p>
      * 
      * @param updateComponentRequest
@@ -2955,8 +2951,8 @@ public interface AWSProtonAsync extends AWSProton {
      * </note>
      * <p>
      * For more information about components, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-components.html">Proton components</a> in the
-     * <i>Proton Administrator Guide</i>.
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/ag-components.html">Proton components</a> in the
+     * <i>Proton User Guide</i>.
      * </p>
      * 
      * @param updateComponentRequest
@@ -3006,9 +3002,9 @@ public interface AWSProtonAsync extends AWSProton {
      * </p>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-environments.html">Environments</a> and <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-works-prov-methods.html">Provisioning methods</a>
-     * in the <i>Proton Administrator Guide</i>.
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/ag-environments.html">Environments</a> and <a
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/ag-works-prov-methods.html">Provisioning methods</a> in
+     * the <i>Proton User Guide</i>.
      * </p>
      * <p>
      * There are four modes for updating an environment. The <code>deploymentType</code> field defines the mode.
@@ -3100,9 +3096,9 @@ public interface AWSProtonAsync extends AWSProton {
      * </p>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-environments.html">Environments</a> and <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-works-prov-methods.html">Provisioning methods</a>
-     * in the <i>Proton Administrator Guide</i>.
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/ag-environments.html">Environments</a> and <a
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/ag-works-prov-methods.html">Provisioning methods</a> in
+     * the <i>Proton User Guide</i>.
      * </p>
      * <p>
      * There are four modes for updating an environment. The <code>deploymentType</code> field defines the mode.
@@ -3171,8 +3167,8 @@ public interface AWSProtonAsync extends AWSProton {
      * </p>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-env-account-connections.html">Environment account
-     * connections</a> in the <i>Proton Administrator guide</i>.
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/ag-env-account-connections.html">Environment account
+     * connections</a> in the <i>Proton User guide</i>.
      * </p>
      * 
      * @param updateEnvironmentAccountConnectionRequest
@@ -3191,8 +3187,8 @@ public interface AWSProtonAsync extends AWSProton {
      * </p>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-env-account-connections.html">Environment account
-     * connections</a> in the <i>Proton Administrator guide</i>.
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/ag-env-account-connections.html">Environment account
+     * connections</a> in the <i>Proton User guide</i>.
      * </p>
      * 
      * @param updateEnvironmentAccountConnectionRequest
@@ -3300,8 +3296,8 @@ public interface AWSProtonAsync extends AWSProton {
      * </p>
      * <p>
      * For more information about components, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-components.html">Proton components</a> in the
-     * <i>Proton Administrator Guide</i>.
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/ag-components.html">Proton components</a> in the
+     * <i>Proton User Guide</i>.
      * </p>
      * </note>
      * 
@@ -3335,8 +3331,8 @@ public interface AWSProtonAsync extends AWSProton {
      * </p>
      * <p>
      * For more information about components, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-components.html">Proton components</a> in the
-     * <i>Proton Administrator Guide</i>.
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/ag-components.html">Proton components</a> in the
+     * <i>Proton User Guide</i>.
      * </p>
      * </note>
      * 
@@ -3367,8 +3363,8 @@ public interface AWSProtonAsync extends AWSProton {
      * </p>
      * <p>
      * For more information about components, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-components.html">Proton components</a> in the
-     * <i>Proton Administrator Guide</i>.
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/ag-components.html">Proton components</a> in the
+     * <i>Proton User Guide</i>.
      * </p>
      * </note>
      * 
@@ -3394,8 +3390,8 @@ public interface AWSProtonAsync extends AWSProton {
      * </p>
      * <p>
      * For more information about components, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-components.html">Proton components</a> in the
-     * <i>Proton Administrator Guide</i>.
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/ag-components.html">Proton components</a> in the
+     * <i>Proton User Guide</i>.
      * </p>
      * </note>
      * 
@@ -3606,7 +3602,9 @@ public interface AWSProtonAsync extends AWSProton {
     /**
      * <p>
      * Update template sync configuration parameters, except for the <code>templateName</code> and
-     * <code>templateType</code>.
+     * <code>templateType</code>. Repository details (branch, name, and provider) should be of a linked repository. A
+     * linked repository is a repository that has been registered with Proton. For more information, see
+     * <a>CreateRepository</a>.
      * </p>
      * 
      * @param updateTemplateSyncConfigRequest
@@ -3620,7 +3618,9 @@ public interface AWSProtonAsync extends AWSProton {
     /**
      * <p>
      * Update template sync configuration parameters, except for the <code>templateName</code> and
-     * <code>templateType</code>.
+     * <code>templateType</code>. Repository details (branch, name, and provider) should be of a linked repository. A
+     * linked repository is a repository that has been registered with Proton. For more information, see
+     * <a>CreateRepository</a>.
      * </p>
      * 
      * @param updateTemplateSyncConfigRequest

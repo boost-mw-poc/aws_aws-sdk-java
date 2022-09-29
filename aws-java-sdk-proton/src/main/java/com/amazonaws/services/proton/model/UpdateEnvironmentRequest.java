@@ -36,8 +36,8 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
      * </p>
      * <p>
      * For more information about components, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-components.html">Proton components</a> in the
-     * <i>Proton Administrator Guide</i>.
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/ag-components.html">Proton components</a> in the
+     * <i>Proton User Guide</i>.
      * </p>
      */
     private String componentRoleArn;
@@ -122,8 +122,9 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
     private String protonServiceRoleArn;
     /**
      * <p>
-     * The infrastructure repository that you use to host your rendered infrastructure templates for self-managed
-     * provisioning.
+     * The linked repository that you use to host your rendered infrastructure templates for self-managed provisioning.
+     * A linked repository is a repository that has been registered with Proton. For more information, see
+     * <a>CreateRepository</a>.
      * </p>
      */
     private RepositoryBranchInput provisioningRepository;
@@ -157,8 +158,8 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
      * </p>
      * <p>
      * For more information about components, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-components.html">Proton components</a> in the
-     * <i>Proton Administrator Guide</i>.
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/ag-components.html">Proton components</a> in the
+     * <i>Proton User Guide</i>.
      * </p>
      * 
      * @param componentRoleArn
@@ -171,8 +172,8 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
      *        </p>
      *        <p>
      *        For more information about components, see <a
-     *        href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-components.html">Proton components</a> in
-     *        the <i>Proton Administrator Guide</i>.
+     *        href="https://docs.aws.amazon.com/proton/latest/userguide/ag-components.html">Proton components</a> in the
+     *        <i>Proton User Guide</i>.
      */
 
     public void setComponentRoleArn(String componentRoleArn) {
@@ -190,8 +191,8 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
      * </p>
      * <p>
      * For more information about components, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-components.html">Proton components</a> in the
-     * <i>Proton Administrator Guide</i>.
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/ag-components.html">Proton components</a> in the
+     * <i>Proton User Guide</i>.
      * </p>
      * 
      * @return The Amazon Resource Name (ARN) of the IAM service role that Proton uses when provisioning directly
@@ -203,8 +204,8 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
      *         </p>
      *         <p>
      *         For more information about components, see <a
-     *         href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-components.html">Proton components</a> in
-     *         the <i>Proton Administrator Guide</i>.
+     *         href="https://docs.aws.amazon.com/proton/latest/userguide/ag-components.html">Proton components</a> in
+     *         the <i>Proton User Guide</i>.
      */
 
     public String getComponentRoleArn() {
@@ -222,8 +223,8 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
      * </p>
      * <p>
      * For more information about components, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-components.html">Proton components</a> in the
-     * <i>Proton Administrator Guide</i>.
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/ag-components.html">Proton components</a> in the
+     * <i>Proton User Guide</i>.
      * </p>
      * 
      * @param componentRoleArn
@@ -236,8 +237,8 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
      *        </p>
      *        <p>
      *        For more information about components, see <a
-     *        href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-components.html">Proton components</a> in
-     *        the <i>Proton Administrator Guide</i>.
+     *        href="https://docs.aws.amazon.com/proton/latest/userguide/ag-components.html">Proton components</a> in the
+     *        <i>Proton User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -849,13 +850,15 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The infrastructure repository that you use to host your rendered infrastructure templates for self-managed
-     * provisioning.
+     * The linked repository that you use to host your rendered infrastructure templates for self-managed provisioning.
+     * A linked repository is a repository that has been registered with Proton. For more information, see
+     * <a>CreateRepository</a>.
      * </p>
      * 
      * @param provisioningRepository
-     *        The infrastructure repository that you use to host your rendered infrastructure templates for self-managed
-     *        provisioning.
+     *        The linked repository that you use to host your rendered infrastructure templates for self-managed
+     *        provisioning. A linked repository is a repository that has been registered with Proton. For more
+     *        information, see <a>CreateRepository</a>.
      */
 
     public void setProvisioningRepository(RepositoryBranchInput provisioningRepository) {
@@ -864,12 +867,14 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The infrastructure repository that you use to host your rendered infrastructure templates for self-managed
-     * provisioning.
+     * The linked repository that you use to host your rendered infrastructure templates for self-managed provisioning.
+     * A linked repository is a repository that has been registered with Proton. For more information, see
+     * <a>CreateRepository</a>.
      * </p>
      * 
-     * @return The infrastructure repository that you use to host your rendered infrastructure templates for
-     *         self-managed provisioning.
+     * @return The linked repository that you use to host your rendered infrastructure templates for self-managed
+     *         provisioning. A linked repository is a repository that has been registered with Proton. For more
+     *         information, see <a>CreateRepository</a>.
      */
 
     public RepositoryBranchInput getProvisioningRepository() {
@@ -878,13 +883,15 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The infrastructure repository that you use to host your rendered infrastructure templates for self-managed
-     * provisioning.
+     * The linked repository that you use to host your rendered infrastructure templates for self-managed provisioning.
+     * A linked repository is a repository that has been registered with Proton. For more information, see
+     * <a>CreateRepository</a>.
      * </p>
      * 
      * @param provisioningRepository
-     *        The infrastructure repository that you use to host your rendered infrastructure templates for self-managed
-     *        provisioning.
+     *        The linked repository that you use to host your rendered infrastructure templates for self-managed
+     *        provisioning. A linked repository is a repository that has been registered with Proton. For more
+     *        information, see <a>CreateRepository</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

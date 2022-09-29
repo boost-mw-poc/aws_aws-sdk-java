@@ -235,6 +235,39 @@ public class AWSEMRServerlessAsyncClient extends AWSEMRServerlessClient implemen
     }
 
     @Override
+    public java.util.concurrent.Future<GetDashboardForJobRunResult> getDashboardForJobRunAsync(GetDashboardForJobRunRequest request) {
+
+        return getDashboardForJobRunAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetDashboardForJobRunResult> getDashboardForJobRunAsync(final GetDashboardForJobRunRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetDashboardForJobRunRequest, GetDashboardForJobRunResult> asyncHandler) {
+        final GetDashboardForJobRunRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetDashboardForJobRunResult>() {
+            @Override
+            public GetDashboardForJobRunResult call() throws Exception {
+                GetDashboardForJobRunResult result = null;
+
+                try {
+                    result = executeGetDashboardForJobRun(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetJobRunResult> getJobRunAsync(GetJobRunRequest request) {
 
         return getJobRunAsync(request, null);

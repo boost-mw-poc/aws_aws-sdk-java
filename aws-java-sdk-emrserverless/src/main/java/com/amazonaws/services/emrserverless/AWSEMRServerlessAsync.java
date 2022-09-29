@@ -187,6 +187,37 @@ public interface AWSEMRServerlessAsync extends AWSEMRServerless {
 
     /**
      * <p>
+     * Returns a URL to access the job run dashboard.
+     * </p>
+     * 
+     * @param getDashboardForJobRunRequest
+     * @return A Java Future containing the result of the GetDashboardForJobRun operation returned by the service.
+     * @sample AWSEMRServerlessAsync.GetDashboardForJobRun
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/emr-serverless-2021-07-13/GetDashboardForJobRun"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetDashboardForJobRunResult> getDashboardForJobRunAsync(GetDashboardForJobRunRequest getDashboardForJobRunRequest);
+
+    /**
+     * <p>
+     * Returns a URL to access the job run dashboard.
+     * </p>
+     * 
+     * @param getDashboardForJobRunRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetDashboardForJobRun operation returned by the service.
+     * @sample AWSEMRServerlessAsyncHandler.GetDashboardForJobRun
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/emr-serverless-2021-07-13/GetDashboardForJobRun"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetDashboardForJobRunResult> getDashboardForJobRunAsync(GetDashboardForJobRunRequest getDashboardForJobRunRequest,
+            com.amazonaws.handlers.AsyncHandler<GetDashboardForJobRunRequest, GetDashboardForJobRunResult> asyncHandler);
+
+    /**
+     * <p>
      * Displays detailed information about a job run.
      * </p>
      * 

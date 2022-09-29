@@ -91,7 +91,8 @@ public enum VoiceId {
     Daniel("Daniel"),
     Liam("Liam"),
     Pedro("Pedro"),
-    Kajal("Kajal");
+    Kajal("Kajal"),
+    Hiujin("Hiujin");
 
     private String value;
 

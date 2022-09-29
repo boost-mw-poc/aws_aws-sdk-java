@@ -101,8 +101,8 @@ public class ServiceTemplateVersion implements Serializable, Cloneable, Structur
      * </p>
      * <p>
      * For more information about components, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-components.html">Proton components</a> in the
-     * <i>Proton Administrator Guide</i>.
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/ag-components.html">Proton components</a> in the
+     * <i>Proton User Guide</i>.
      * </p>
      */
     private java.util.List<String> supportedComponentSources;
@@ -609,16 +609,16 @@ public class ServiceTemplateVersion implements Serializable, Cloneable, Structur
      * </p>
      * <p>
      * For more information about components, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-components.html">Proton components</a> in the
-     * <i>Proton Administrator Guide</i>.
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/ag-components.html">Proton components</a> in the
+     * <i>Proton User Guide</i>.
      * </p>
      * 
      * @return An array of supported component sources. Components with supported sources can be attached to service
      *         instances based on this service template version.</p>
      *         <p>
      *         For more information about components, see <a
-     *         href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-components.html">Proton components</a> in
-     *         the <i>Proton Administrator Guide</i>.
+     *         href="https://docs.aws.amazon.com/proton/latest/userguide/ag-components.html">Proton components</a> in
+     *         the <i>Proton User Guide</i>.
      * @see ServiceTemplateSupportedComponentSourceType
      */
 
@@ -633,8 +633,8 @@ public class ServiceTemplateVersion implements Serializable, Cloneable, Structur
      * </p>
      * <p>
      * For more information about components, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-components.html">Proton components</a> in the
-     * <i>Proton Administrator Guide</i>.
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/ag-components.html">Proton components</a> in the
+     * <i>Proton User Guide</i>.
      * </p>
      * 
      * @param supportedComponentSources
@@ -642,8 +642,8 @@ public class ServiceTemplateVersion implements Serializable, Cloneable, Structur
      *        instances based on this service template version.</p>
      *        <p>
      *        For more information about components, see <a
-     *        href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-components.html">Proton components</a> in
-     *        the <i>Proton Administrator Guide</i>.
+     *        href="https://docs.aws.amazon.com/proton/latest/userguide/ag-components.html">Proton components</a> in the
+     *        <i>Proton User Guide</i>.
      * @see ServiceTemplateSupportedComponentSourceType
      */
 
@@ -663,8 +663,8 @@ public class ServiceTemplateVersion implements Serializable, Cloneable, Structur
      * </p>
      * <p>
      * For more information about components, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-components.html">Proton components</a> in the
-     * <i>Proton Administrator Guide</i>.
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/ag-components.html">Proton components</a> in the
+     * <i>Proton User Guide</i>.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -677,8 +677,8 @@ public class ServiceTemplateVersion implements Serializable, Cloneable, Structur
      *        instances based on this service template version.</p>
      *        <p>
      *        For more information about components, see <a
-     *        href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-components.html">Proton components</a> in
-     *        the <i>Proton Administrator Guide</i>.
+     *        href="https://docs.aws.amazon.com/proton/latest/userguide/ag-components.html">Proton components</a> in the
+     *        <i>Proton User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ServiceTemplateSupportedComponentSourceType
      */
@@ -700,8 +700,8 @@ public class ServiceTemplateVersion implements Serializable, Cloneable, Structur
      * </p>
      * <p>
      * For more information about components, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-components.html">Proton components</a> in the
-     * <i>Proton Administrator Guide</i>.
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/ag-components.html">Proton components</a> in the
+     * <i>Proton User Guide</i>.
      * </p>
      * 
      * @param supportedComponentSources
@@ -709,8 +709,8 @@ public class ServiceTemplateVersion implements Serializable, Cloneable, Structur
      *        instances based on this service template version.</p>
      *        <p>
      *        For more information about components, see <a
-     *        href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-components.html">Proton components</a> in
-     *        the <i>Proton Administrator Guide</i>.
+     *        href="https://docs.aws.amazon.com/proton/latest/userguide/ag-components.html">Proton components</a> in the
+     *        <i>Proton User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ServiceTemplateSupportedComponentSourceType
      */
@@ -727,8 +727,8 @@ public class ServiceTemplateVersion implements Serializable, Cloneable, Structur
      * </p>
      * <p>
      * For more information about components, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-components.html">Proton components</a> in the
-     * <i>Proton Administrator Guide</i>.
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/ag-components.html">Proton components</a> in the
+     * <i>Proton User Guide</i>.
      * </p>
      * 
      * @param supportedComponentSources
@@ -736,8 +736,8 @@ public class ServiceTemplateVersion implements Serializable, Cloneable, Structur
      *        instances based on this service template version.</p>
      *        <p>
      *        For more information about components, see <a
-     *        href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-components.html">Proton components</a> in
-     *        the <i>Proton Administrator Guide</i>.
+     *        href="https://docs.aws.amazon.com/proton/latest/userguide/ag-components.html">Proton components</a> in the
+     *        <i>Proton User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ServiceTemplateSupportedComponentSourceType
      */

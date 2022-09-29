@@ -67,8 +67,8 @@ public class CreateServiceTemplateVersionRequest extends com.amazonaws.AmazonWeb
      * </p>
      * <p>
      * For more information about components, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-components.html">Proton components</a> in the
-     * <i>Proton Administrator Guide</i>.
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/ag-components.html">Proton components</a> in the
+     * <i>Proton User Guide</i>.
      * </p>
      */
     private java.util.List<String> supportedComponentSources;
@@ -78,9 +78,8 @@ public class CreateServiceTemplateVersionRequest extends com.amazonaws.AmazonWeb
      * key-value pair.
      * </p>
      * <p>
-     * For more information, see <i>Proton resources and tagging</i> in the <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton Administrator Guide</a> or <a
-     * href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">Proton User Guide</a>.
+     * For more information, see <a href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">Proton
+     * resources and tagging</a> in the <i>Proton User Guide</i>.
      * </p>
      */
     private java.util.List<Tag> tags;
@@ -366,16 +365,16 @@ public class CreateServiceTemplateVersionRequest extends com.amazonaws.AmazonWeb
      * </p>
      * <p>
      * For more information about components, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-components.html">Proton components</a> in the
-     * <i>Proton Administrator Guide</i>.
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/ag-components.html">Proton components</a> in the
+     * <i>Proton User Guide</i>.
      * </p>
      * 
      * @return An array of supported component sources. Components with supported sources can be attached to service
      *         instances based on this service template version.</p>
      *         <p>
      *         For more information about components, see <a
-     *         href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-components.html">Proton components</a> in
-     *         the <i>Proton Administrator Guide</i>.
+     *         href="https://docs.aws.amazon.com/proton/latest/userguide/ag-components.html">Proton components</a> in
+     *         the <i>Proton User Guide</i>.
      * @see ServiceTemplateSupportedComponentSourceType
      */
 
@@ -390,8 +389,8 @@ public class CreateServiceTemplateVersionRequest extends com.amazonaws.AmazonWeb
      * </p>
      * <p>
      * For more information about components, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-components.html">Proton components</a> in the
-     * <i>Proton Administrator Guide</i>.
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/ag-components.html">Proton components</a> in the
+     * <i>Proton User Guide</i>.
      * </p>
      * 
      * @param supportedComponentSources
@@ -399,8 +398,8 @@ public class CreateServiceTemplateVersionRequest extends com.amazonaws.AmazonWeb
      *        instances based on this service template version.</p>
      *        <p>
      *        For more information about components, see <a
-     *        href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-components.html">Proton components</a> in
-     *        the <i>Proton Administrator Guide</i>.
+     *        href="https://docs.aws.amazon.com/proton/latest/userguide/ag-components.html">Proton components</a> in the
+     *        <i>Proton User Guide</i>.
      * @see ServiceTemplateSupportedComponentSourceType
      */
 
@@ -420,8 +419,8 @@ public class CreateServiceTemplateVersionRequest extends com.amazonaws.AmazonWeb
      * </p>
      * <p>
      * For more information about components, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-components.html">Proton components</a> in the
-     * <i>Proton Administrator Guide</i>.
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/ag-components.html">Proton components</a> in the
+     * <i>Proton User Guide</i>.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -434,8 +433,8 @@ public class CreateServiceTemplateVersionRequest extends com.amazonaws.AmazonWeb
      *        instances based on this service template version.</p>
      *        <p>
      *        For more information about components, see <a
-     *        href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-components.html">Proton components</a> in
-     *        the <i>Proton Administrator Guide</i>.
+     *        href="https://docs.aws.amazon.com/proton/latest/userguide/ag-components.html">Proton components</a> in the
+     *        <i>Proton User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ServiceTemplateSupportedComponentSourceType
      */
@@ -457,8 +456,8 @@ public class CreateServiceTemplateVersionRequest extends com.amazonaws.AmazonWeb
      * </p>
      * <p>
      * For more information about components, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-components.html">Proton components</a> in the
-     * <i>Proton Administrator Guide</i>.
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/ag-components.html">Proton components</a> in the
+     * <i>Proton User Guide</i>.
      * </p>
      * 
      * @param supportedComponentSources
@@ -466,8 +465,8 @@ public class CreateServiceTemplateVersionRequest extends com.amazonaws.AmazonWeb
      *        instances based on this service template version.</p>
      *        <p>
      *        For more information about components, see <a
-     *        href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-components.html">Proton components</a> in
-     *        the <i>Proton Administrator Guide</i>.
+     *        href="https://docs.aws.amazon.com/proton/latest/userguide/ag-components.html">Proton components</a> in the
+     *        <i>Proton User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ServiceTemplateSupportedComponentSourceType
      */
@@ -484,8 +483,8 @@ public class CreateServiceTemplateVersionRequest extends com.amazonaws.AmazonWeb
      * </p>
      * <p>
      * For more information about components, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-components.html">Proton components</a> in the
-     * <i>Proton Administrator Guide</i>.
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/ag-components.html">Proton components</a> in the
+     * <i>Proton User Guide</i>.
      * </p>
      * 
      * @param supportedComponentSources
@@ -493,8 +492,8 @@ public class CreateServiceTemplateVersionRequest extends com.amazonaws.AmazonWeb
      *        instances based on this service template version.</p>
      *        <p>
      *        For more information about components, see <a
-     *        href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-components.html">Proton components</a> in
-     *        the <i>Proton Administrator Guide</i>.
+     *        href="https://docs.aws.amazon.com/proton/latest/userguide/ag-components.html">Proton components</a> in the
+     *        <i>Proton User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ServiceTemplateSupportedComponentSourceType
      */
@@ -518,17 +517,16 @@ public class CreateServiceTemplateVersionRequest extends com.amazonaws.AmazonWeb
      * key-value pair.
      * </p>
      * <p>
-     * For more information, see <i>Proton resources and tagging</i> in the <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton Administrator Guide</a> or <a
-     * href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">Proton User Guide</a>.
+     * For more information, see <a href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">Proton
+     * resources and tagging</a> in the <i>Proton User Guide</i>.
      * </p>
      * 
      * @return An optional list of metadata items that you can associate with the Proton service template version. A tag
      *         is a key-value pair.</p>
      *         <p>
-     *         For more information, see <i>Proton resources and tagging</i> in the <a
-     *         href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton Administrator Guide</a>
-     *         or <a href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">Proton User Guide</a>.
+     *         For more information, see <a
+     *         href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">Proton resources and
+     *         tagging</a> in the <i>Proton User Guide</i>.
      */
 
     public java.util.List<Tag> getTags() {
@@ -541,18 +539,17 @@ public class CreateServiceTemplateVersionRequest extends com.amazonaws.AmazonWeb
      * key-value pair.
      * </p>
      * <p>
-     * For more information, see <i>Proton resources and tagging</i> in the <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton Administrator Guide</a> or <a
-     * href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">Proton User Guide</a>.
+     * For more information, see <a href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">Proton
+     * resources and tagging</a> in the <i>Proton User Guide</i>.
      * </p>
      * 
      * @param tags
      *        An optional list of metadata items that you can associate with the Proton service template version. A tag
      *        is a key-value pair.</p>
      *        <p>
-     *        For more information, see <i>Proton resources and tagging</i> in the <a
-     *        href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton Administrator Guide</a>
-     *        or <a href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">Proton User Guide</a>.
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">Proton resources and tagging</a>
+     *        in the <i>Proton User Guide</i>.
      */
 
     public void setTags(java.util.Collection<Tag> tags) {
@@ -570,9 +567,8 @@ public class CreateServiceTemplateVersionRequest extends com.amazonaws.AmazonWeb
      * key-value pair.
      * </p>
      * <p>
-     * For more information, see <i>Proton resources and tagging</i> in the <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton Administrator Guide</a> or <a
-     * href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">Proton User Guide</a>.
+     * For more information, see <a href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">Proton
+     * resources and tagging</a> in the <i>Proton User Guide</i>.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -584,9 +580,9 @@ public class CreateServiceTemplateVersionRequest extends com.amazonaws.AmazonWeb
      *        An optional list of metadata items that you can associate with the Proton service template version. A tag
      *        is a key-value pair.</p>
      *        <p>
-     *        For more information, see <i>Proton resources and tagging</i> in the <a
-     *        href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton Administrator Guide</a>
-     *        or <a href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">Proton User Guide</a>.
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">Proton resources and tagging</a>
+     *        in the <i>Proton User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -606,18 +602,17 @@ public class CreateServiceTemplateVersionRequest extends com.amazonaws.AmazonWeb
      * key-value pair.
      * </p>
      * <p>
-     * For more information, see <i>Proton resources and tagging</i> in the <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton Administrator Guide</a> or <a
-     * href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">Proton User Guide</a>.
+     * For more information, see <a href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">Proton
+     * resources and tagging</a> in the <i>Proton User Guide</i>.
      * </p>
      * 
      * @param tags
      *        An optional list of metadata items that you can associate with the Proton service template version. A tag
      *        is a key-value pair.</p>
      *        <p>
-     *        For more information, see <i>Proton resources and tagging</i> in the <a
-     *        href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton Administrator Guide</a>
-     *        or <a href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">Proton User Guide</a>.
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">Proton resources and tagging</a>
+     *        in the <i>Proton User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

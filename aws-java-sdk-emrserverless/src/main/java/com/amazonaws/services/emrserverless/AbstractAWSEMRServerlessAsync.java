@@ -80,6 +80,19 @@ public class AbstractAWSEMRServerlessAsync extends AbstractAWSEMRServerless impl
     }
 
     @Override
+    public java.util.concurrent.Future<GetDashboardForJobRunResult> getDashboardForJobRunAsync(GetDashboardForJobRunRequest request) {
+
+        return getDashboardForJobRunAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetDashboardForJobRunResult> getDashboardForJobRunAsync(GetDashboardForJobRunRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetDashboardForJobRunRequest, GetDashboardForJobRunResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetJobRunResult> getJobRunAsync(GetJobRunRequest request) {
 
         return getJobRunAsync(request, null);

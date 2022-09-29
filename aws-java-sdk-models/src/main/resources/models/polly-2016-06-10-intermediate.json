@@ -3338,6 +3338,9 @@
       }, {
         "name" : "DeAT",
         "value" : "de-AT"
+      }, {
+        "name" : "YueCN",
+        "value" : "yue-CN"
       } ],
       "errorCode" : null,
       "fullyQualifiedName" : "com.amazonaws.services.polly.enum.LanguageCode",
@@ -15995,6 +15998,9 @@
       }, {
         "name" : "Kajal",
         "value" : "Kajal"
+      }, {
+        "name" : "Hiujin",
+        "value" : "Hiujin"
       } ],
       "errorCode" : null,
       "fullyQualifiedName" : "com.amazonaws.services.polly.enum.VoiceId",

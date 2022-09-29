@@ -73,10 +73,8 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The Amazon Resource Name (ARN) of the repository connection. For more information, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/setting-up-for-service.html#setting-up-vcontrol">Set
-     * up a repository connection</a> in the <i>Proton Administrator Guide</i> and <a
-     * href="https://docs.aws.amazon.com/proton/latest/userguide/proton-setup.html#setup-repo-connection">Setting up
-     * with Proton</a> in the <i>Proton User Guide</i>.
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/setting-up-for-service.html#setting-up-vcontrol"
+     * >Setting up an AWS CodeStar connection</a> in the <i>Proton User Guide</i>.
      * </p>
      */
     private String repositoryConnectionArn;
@@ -394,18 +392,14 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The Amazon Resource Name (ARN) of the repository connection. For more information, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/setting-up-for-service.html#setting-up-vcontrol">Set
-     * up a repository connection</a> in the <i>Proton Administrator Guide</i> and <a
-     * href="https://docs.aws.amazon.com/proton/latest/userguide/proton-setup.html#setup-repo-connection">Setting up
-     * with Proton</a> in the <i>Proton User Guide</i>.
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/setting-up-for-service.html#setting-up-vcontrol"
+     * >Setting up an AWS CodeStar connection</a> in the <i>Proton User Guide</i>.
      * </p>
      * 
      * @param repositoryConnectionArn
      *        The Amazon Resource Name (ARN) of the repository connection. For more information, see <a href=
-     *        "https://docs.aws.amazon.com/proton/latest/adminguide/setting-up-for-service.html#setting-up-vcontrol">Set
-     *        up a repository connection</a> in the <i>Proton Administrator Guide</i> and <a
-     *        href="https://docs.aws.amazon.com/proton/latest/userguide/proton-setup.html#setup-repo-connection">Setting
-     *        up with Proton</a> in the <i>Proton User Guide</i>.
+     *        "https://docs.aws.amazon.com/proton/latest/userguide/setting-up-for-service.html#setting-up-vcontrol"
+     *        >Setting up an AWS CodeStar connection</a> in the <i>Proton User Guide</i>.
      */
 
     public void setRepositoryConnectionArn(String repositoryConnectionArn) {
@@ -415,17 +409,13 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The Amazon Resource Name (ARN) of the repository connection. For more information, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/setting-up-for-service.html#setting-up-vcontrol">Set
-     * up a repository connection</a> in the <i>Proton Administrator Guide</i> and <a
-     * href="https://docs.aws.amazon.com/proton/latest/userguide/proton-setup.html#setup-repo-connection">Setting up
-     * with Proton</a> in the <i>Proton User Guide</i>.
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/setting-up-for-service.html#setting-up-vcontrol"
+     * >Setting up an AWS CodeStar connection</a> in the <i>Proton User Guide</i>.
      * </p>
      * 
      * @return The Amazon Resource Name (ARN) of the repository connection. For more information, see <a
-     *         href="https://docs.aws.amazon.com/proton/latest/adminguide/setting-up-for-service.html#setting-up-vcontrol"
-     *         >Set up a repository connection</a> in the <i>Proton Administrator Guide</i> and <a
-     *         href="https://docs.aws.amazon.com/proton/latest/userguide/proton-setup.html#setup-repo-connection"
-     *         >Setting up with Proton</a> in the <i>Proton User Guide</i>.
+     *         href="https://docs.aws.amazon.com/proton/latest/userguide/setting-up-for-service.html#setting-up-vcontrol"
+     *         >Setting up an AWS CodeStar connection</a> in the <i>Proton User Guide</i>.
      */
 
     public String getRepositoryConnectionArn() {
@@ -435,18 +425,14 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The Amazon Resource Name (ARN) of the repository connection. For more information, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/setting-up-for-service.html#setting-up-vcontrol">Set
-     * up a repository connection</a> in the <i>Proton Administrator Guide</i> and <a
-     * href="https://docs.aws.amazon.com/proton/latest/userguide/proton-setup.html#setup-repo-connection">Setting up
-     * with Proton</a> in the <i>Proton User Guide</i>.
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/setting-up-for-service.html#setting-up-vcontrol"
+     * >Setting up an AWS CodeStar connection</a> in the <i>Proton User Guide</i>.
      * </p>
      * 
      * @param repositoryConnectionArn
      *        The Amazon Resource Name (ARN) of the repository connection. For more information, see <a href=
-     *        "https://docs.aws.amazon.com/proton/latest/adminguide/setting-up-for-service.html#setting-up-vcontrol">Set
-     *        up a repository connection</a> in the <i>Proton Administrator Guide</i> and <a
-     *        href="https://docs.aws.amazon.com/proton/latest/userguide/proton-setup.html#setup-repo-connection">Setting
-     *        up with Proton</a> in the <i>Proton User Guide</i>.
+     *        "https://docs.aws.amazon.com/proton/latest/userguide/setting-up-for-service.html#setting-up-vcontrol"
+     *        >Setting up an AWS CodeStar connection</a> in the <i>Proton User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -70,6 +70,10 @@ public class ResourceConfigJsonUnmarshaller implements Unmarshaller<ResourceConf
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("KeepAlivePeriodInSeconds", targetDepth)) {
+                    context.nextToken();
+                    resourceConfig.setKeepAlivePeriodInSeconds(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

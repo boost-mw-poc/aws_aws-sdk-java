@@ -148,6 +148,25 @@ public interface AWSEMRServerless {
 
     /**
      * <p>
+     * Returns a URL to access the job run dashboard.
+     * </p>
+     * 
+     * @param getDashboardForJobRunRequest
+     * @return Result of the GetDashboardForJobRun operation returned by the service.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws InternalServerException
+     *         Request processing failed because of an error or failure with the service.
+     * @sample AWSEMRServerless.GetDashboardForJobRun
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/emr-serverless-2021-07-13/GetDashboardForJobRun"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetDashboardForJobRunResult getDashboardForJobRun(GetDashboardForJobRunRequest getDashboardForJobRunRequest);
+
+    /**
+     * <p>
      * Displays detailed information about a job run.
      * </p>
      * 

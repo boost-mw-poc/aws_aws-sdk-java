@@ -72,6 +72,13 @@ public class CreateDataRepositoryTaskRequest extends com.amazonaws.AmazonWebServ
     private String clientRequestToken;
 
     private java.util.List<Tag> tags;
+    /**
+     * <p>
+     * Specifies the amount of data to release, in GiB, by an Amazon File Cache <code>AUTO_RELEASE_DATA</code> task that
+     * automatically releases files from the cache.
+     * </p>
+     */
+    private Long capacityToRelease;
 
     /**
      * <p>
@@ -519,6 +526,52 @@ public class CreateDataRepositoryTaskRequest extends com.amazonaws.AmazonWebServ
     }
 
     /**
+     * <p>
+     * Specifies the amount of data to release, in GiB, by an Amazon File Cache <code>AUTO_RELEASE_DATA</code> task that
+     * automatically releases files from the cache.
+     * </p>
+     * 
+     * @param capacityToRelease
+     *        Specifies the amount of data to release, in GiB, by an Amazon File Cache <code>AUTO_RELEASE_DATA</code>
+     *        task that automatically releases files from the cache.
+     */
+
+    public void setCapacityToRelease(Long capacityToRelease) {
+        this.capacityToRelease = capacityToRelease;
+    }
+
+    /**
+     * <p>
+     * Specifies the amount of data to release, in GiB, by an Amazon File Cache <code>AUTO_RELEASE_DATA</code> task that
+     * automatically releases files from the cache.
+     * </p>
+     * 
+     * @return Specifies the amount of data to release, in GiB, by an Amazon File Cache <code>AUTO_RELEASE_DATA</code>
+     *         task that automatically releases files from the cache.
+     */
+
+    public Long getCapacityToRelease() {
+        return this.capacityToRelease;
+    }
+
+    /**
+     * <p>
+     * Specifies the amount of data to release, in GiB, by an Amazon File Cache <code>AUTO_RELEASE_DATA</code> task that
+     * automatically releases files from the cache.
+     * </p>
+     * 
+     * @param capacityToRelease
+     *        Specifies the amount of data to release, in GiB, by an Amazon File Cache <code>AUTO_RELEASE_DATA</code>
+     *        task that automatically releases files from the cache.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateDataRepositoryTaskRequest withCapacityToRelease(Long capacityToRelease) {
+        setCapacityToRelease(capacityToRelease);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -541,7 +594,9 @@ public class CreateDataRepositoryTaskRequest extends com.amazonaws.AmazonWebServ
         if (getClientRequestToken() != null)
             sb.append("ClientRequestToken: ").append(getClientRequestToken()).append(",");
         if (getTags() != null)
-            sb.append("Tags: ").append(getTags());
+            sb.append("Tags: ").append(getTags()).append(",");
+        if (getCapacityToRelease() != null)
+            sb.append("CapacityToRelease: ").append(getCapacityToRelease());
         sb.append("}");
         return sb.toString();
     }
@@ -580,6 +635,10 @@ public class CreateDataRepositoryTaskRequest extends com.amazonaws.AmazonWebServ
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
             return false;
+        if (other.getCapacityToRelease() == null ^ this.getCapacityToRelease() == null)
+            return false;
+        if (other.getCapacityToRelease() != null && other.getCapacityToRelease().equals(this.getCapacityToRelease()) == false)
+            return false;
         return true;
     }
 
@@ -594,6 +653,7 @@ public class CreateDataRepositoryTaskRequest extends com.amazonaws.AmazonWebServ
         hashCode = prime * hashCode + ((getReport() == null) ? 0 : getReport().hashCode());
         hashCode = prime * hashCode + ((getClientRequestToken() == null) ? 0 : getClientRequestToken().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
+        hashCode = prime * hashCode + ((getCapacityToRelease() == null) ? 0 : getCapacityToRelease().hashCode());
         return hashCode;
     }
 

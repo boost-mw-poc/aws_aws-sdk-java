@@ -415,6 +415,68 @@ public class AWSEMRServerlessClient extends AmazonWebServiceClient implements AW
 
     /**
      * <p>
+     * Returns a URL to access the job run dashboard.
+     * </p>
+     * 
+     * @param getDashboardForJobRunRequest
+     * @return Result of the GetDashboardForJobRun operation returned by the service.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws InternalServerException
+     *         Request processing failed because of an error or failure with the service.
+     * @sample AWSEMRServerless.GetDashboardForJobRun
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/emr-serverless-2021-07-13/GetDashboardForJobRun"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetDashboardForJobRunResult getDashboardForJobRun(GetDashboardForJobRunRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetDashboardForJobRun(request);
+    }
+
+    @SdkInternalApi
+    final GetDashboardForJobRunResult executeGetDashboardForJobRun(GetDashboardForJobRunRequest getDashboardForJobRunRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getDashboardForJobRunRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetDashboardForJobRunRequest> request = null;
+        Response<GetDashboardForJobRunResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetDashboardForJobRunRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getDashboardForJobRunRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EMR Serverless");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetDashboardForJobRun");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetDashboardForJobRunResult>> responseHandler = protocolFactory
+                    .createResponseHandler(new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                            new GetDashboardForJobRunResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Displays detailed information about a job run.
      * </p>
      * 

@@ -44,8 +44,8 @@ public class CreateEnvironmentAccountConnectionRequest extends com.amazonaws.Ama
      * </p>
      * <p>
      * For more information about components, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-components.html">Proton components</a> in the
-     * <i>Proton Administrator Guide</i>.
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/ag-components.html">Proton components</a> in the
+     * <i>Proton User Guide</i>.
      * </p>
      */
     private String componentRoleArn;
@@ -77,8 +77,8 @@ public class CreateEnvironmentAccountConnectionRequest extends com.amazonaws.Ama
      * is a key-value pair.
      * </p>
      * <p>
-     * For more information, see <a href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton
-     * resources and tagging</a> in the <i>Proton Administrator Guide</i>.
+     * For more information, see <a href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">Proton
+     * resources and tagging</a> in the <i>Proton User Guide</i>.
      * </p>
      */
     private java.util.List<Tag> tags;
@@ -141,8 +141,8 @@ public class CreateEnvironmentAccountConnectionRequest extends com.amazonaws.Ama
      * </p>
      * <p>
      * For more information about components, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-components.html">Proton components</a> in the
-     * <i>Proton Administrator Guide</i>.
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/ag-components.html">Proton components</a> in the
+     * <i>Proton User Guide</i>.
      * </p>
      * 
      * @param componentRoleArn
@@ -155,8 +155,8 @@ public class CreateEnvironmentAccountConnectionRequest extends com.amazonaws.Ama
      *        </p>
      *        <p>
      *        For more information about components, see <a
-     *        href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-components.html">Proton components</a> in
-     *        the <i>Proton Administrator Guide</i>.
+     *        href="https://docs.aws.amazon.com/proton/latest/userguide/ag-components.html">Proton components</a> in the
+     *        <i>Proton User Guide</i>.
      */
 
     public void setComponentRoleArn(String componentRoleArn) {
@@ -175,8 +175,8 @@ public class CreateEnvironmentAccountConnectionRequest extends com.amazonaws.Ama
      * </p>
      * <p>
      * For more information about components, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-components.html">Proton components</a> in the
-     * <i>Proton Administrator Guide</i>.
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/ag-components.html">Proton components</a> in the
+     * <i>Proton User Guide</i>.
      * </p>
      * 
      * @return The Amazon Resource Name (ARN) of the IAM service role that Proton uses when provisioning directly
@@ -188,8 +188,8 @@ public class CreateEnvironmentAccountConnectionRequest extends com.amazonaws.Ama
      *         </p>
      *         <p>
      *         For more information about components, see <a
-     *         href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-components.html">Proton components</a> in
-     *         the <i>Proton Administrator Guide</i>.
+     *         href="https://docs.aws.amazon.com/proton/latest/userguide/ag-components.html">Proton components</a> in
+     *         the <i>Proton User Guide</i>.
      */
 
     public String getComponentRoleArn() {
@@ -208,8 +208,8 @@ public class CreateEnvironmentAccountConnectionRequest extends com.amazonaws.Ama
      * </p>
      * <p>
      * For more information about components, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-components.html">Proton components</a> in the
-     * <i>Proton Administrator Guide</i>.
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/ag-components.html">Proton components</a> in the
+     * <i>Proton User Guide</i>.
      * </p>
      * 
      * @param componentRoleArn
@@ -222,8 +222,8 @@ public class CreateEnvironmentAccountConnectionRequest extends com.amazonaws.Ama
      *        </p>
      *        <p>
      *        For more information about components, see <a
-     *        href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-components.html">Proton components</a> in
-     *        the <i>Proton Administrator Guide</i>.
+     *        href="https://docs.aws.amazon.com/proton/latest/userguide/ag-components.html">Proton components</a> in the
+     *        <i>Proton User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -382,16 +382,16 @@ public class CreateEnvironmentAccountConnectionRequest extends com.amazonaws.Ama
      * is a key-value pair.
      * </p>
      * <p>
-     * For more information, see <a href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton
-     * resources and tagging</a> in the <i>Proton Administrator Guide</i>.
+     * For more information, see <a href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">Proton
+     * resources and tagging</a> in the <i>Proton User Guide</i>.
      * </p>
      * 
      * @return An optional list of metadata items that you can associate with the Proton environment account connection.
      *         A tag is a key-value pair.</p>
      *         <p>
      *         For more information, see <a
-     *         href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton resources and
-     *         tagging</a> in the <i>Proton Administrator Guide</i>.
+     *         href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">Proton resources and
+     *         tagging</a> in the <i>Proton User Guide</i>.
      */
 
     public java.util.List<Tag> getTags() {
@@ -404,8 +404,8 @@ public class CreateEnvironmentAccountConnectionRequest extends com.amazonaws.Ama
      * is a key-value pair.
      * </p>
      * <p>
-     * For more information, see <a href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton
-     * resources and tagging</a> in the <i>Proton Administrator Guide</i>.
+     * For more information, see <a href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">Proton
+     * resources and tagging</a> in the <i>Proton User Guide</i>.
      * </p>
      * 
      * @param tags
@@ -413,8 +413,8 @@ public class CreateEnvironmentAccountConnectionRequest extends com.amazonaws.Ama
      *        A tag is a key-value pair.</p>
      *        <p>
      *        For more information, see <a
-     *        href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton resources and
-     *        tagging</a> in the <i>Proton Administrator Guide</i>.
+     *        href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">Proton resources and tagging</a>
+     *        in the <i>Proton User Guide</i>.
      */
 
     public void setTags(java.util.Collection<Tag> tags) {
@@ -432,8 +432,8 @@ public class CreateEnvironmentAccountConnectionRequest extends com.amazonaws.Ama
      * is a key-value pair.
      * </p>
      * <p>
-     * For more information, see <a href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton
-     * resources and tagging</a> in the <i>Proton Administrator Guide</i>.
+     * For more information, see <a href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">Proton
+     * resources and tagging</a> in the <i>Proton User Guide</i>.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -446,8 +446,8 @@ public class CreateEnvironmentAccountConnectionRequest extends com.amazonaws.Ama
      *        A tag is a key-value pair.</p>
      *        <p>
      *        For more information, see <a
-     *        href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton resources and
-     *        tagging</a> in the <i>Proton Administrator Guide</i>.
+     *        href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">Proton resources and tagging</a>
+     *        in the <i>Proton User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -467,8 +467,8 @@ public class CreateEnvironmentAccountConnectionRequest extends com.amazonaws.Ama
      * is a key-value pair.
      * </p>
      * <p>
-     * For more information, see <a href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton
-     * resources and tagging</a> in the <i>Proton Administrator Guide</i>.
+     * For more information, see <a href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">Proton
+     * resources and tagging</a> in the <i>Proton User Guide</i>.
      * </p>
      * 
      * @param tags
@@ -476,8 +476,8 @@ public class CreateEnvironmentAccountConnectionRequest extends com.amazonaws.Ama
      *        A tag is a key-value pair.</p>
      *        <p>
      *        For more information, see <a
-     *        href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton resources and
-     *        tagging</a> in the <i>Proton Administrator Guide</i>.
+     *        href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">Proton resources and tagging</a>
+     *        in the <i>Proton User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

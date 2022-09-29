@@ -46,8 +46,8 @@ public class EnvironmentSummary implements Serializable, Cloneable, StructuredPo
      * </p>
      * <p>
      * For more information about components, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-components.html">Proton components</a> in the
-     * <i>Proton Administrator Guide</i>.
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/ag-components.html">Proton components</a> in the
+     * <i>Proton User Guide</i>.
      * </p>
      */
     private String componentRoleArn;
@@ -188,8 +188,8 @@ public class EnvironmentSummary implements Serializable, Cloneable, StructuredPo
      * </p>
      * <p>
      * For more information about components, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-components.html">Proton components</a> in the
-     * <i>Proton Administrator Guide</i>.
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/ag-components.html">Proton components</a> in the
+     * <i>Proton User Guide</i>.
      * </p>
      * 
      * @param componentRoleArn
@@ -202,8 +202,8 @@ public class EnvironmentSummary implements Serializable, Cloneable, StructuredPo
      *        </p>
      *        <p>
      *        For more information about components, see <a
-     *        href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-components.html">Proton components</a> in
-     *        the <i>Proton Administrator Guide</i>.
+     *        href="https://docs.aws.amazon.com/proton/latest/userguide/ag-components.html">Proton components</a> in the
+     *        <i>Proton User Guide</i>.
      */
 
     public void setComponentRoleArn(String componentRoleArn) {
@@ -221,8 +221,8 @@ public class EnvironmentSummary implements Serializable, Cloneable, StructuredPo
      * </p>
      * <p>
      * For more information about components, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-components.html">Proton components</a> in the
-     * <i>Proton Administrator Guide</i>.
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/ag-components.html">Proton components</a> in the
+     * <i>Proton User Guide</i>.
      * </p>
      * 
      * @return The Amazon Resource Name (ARN) of the IAM service role that Proton uses when provisioning directly
@@ -234,8 +234,8 @@ public class EnvironmentSummary implements Serializable, Cloneable, StructuredPo
      *         </p>
      *         <p>
      *         For more information about components, see <a
-     *         href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-components.html">Proton components</a> in
-     *         the <i>Proton Administrator Guide</i>.
+     *         href="https://docs.aws.amazon.com/proton/latest/userguide/ag-components.html">Proton components</a> in
+     *         the <i>Proton User Guide</i>.
      */
 
     public String getComponentRoleArn() {
@@ -253,8 +253,8 @@ public class EnvironmentSummary implements Serializable, Cloneable, StructuredPo
      * </p>
      * <p>
      * For more information about components, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-components.html">Proton components</a> in the
-     * <i>Proton Administrator Guide</i>.
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/ag-components.html">Proton components</a> in the
+     * <i>Proton User Guide</i>.
      * </p>
      * 
      * @param componentRoleArn
@@ -267,8 +267,8 @@ public class EnvironmentSummary implements Serializable, Cloneable, StructuredPo
      *        </p>
      *        <p>
      *        For more information about components, see <a
-     *        href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-components.html">Proton components</a> in
-     *        the <i>Proton Administrator Guide</i>.
+     *        href="https://docs.aws.amazon.com/proton/latest/userguide/ag-components.html">Proton components</a> in the
+     *        <i>Proton User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
