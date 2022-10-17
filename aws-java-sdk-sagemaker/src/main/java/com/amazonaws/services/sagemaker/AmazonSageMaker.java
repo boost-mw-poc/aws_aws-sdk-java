@@ -799,6 +799,19 @@ public interface AmazonSageMaker {
      * you specify. It then chooses the hyperparameter values that result in a model that performs the best, as measured
      * by an objective metric that you choose.
      * </p>
+     * <p>
+     * A hyperparameter tuning job automatically creates Amazon SageMaker experiments, trials, and trial components for
+     * each training job that it runs. You can view these entities in Amazon SageMaker Studio. For more information, see
+     * <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/experiments-view-compare.html#experiments-view">View
+     * Experiments, Trials, and Trial Components</a>.
+     * </p>
+     * <important>
+     * <p>
+     * Do not include any security-sensitive information including account access IDs, secrets or tokens in any
+     * hyperparameter field. If the use of security-sensitive credentials are detected, SageMaker will reject your
+     * training job request and return an exception error.
+     * </p>
+     * </important>
      * 
      * @param createHyperParameterTuningJobRequest
      * @return Result of the CreateHyperParameterTuningJob operation returned by the service.
@@ -1391,9 +1404,9 @@ public interface AmazonSageMaker {
      * </p>
      * <important>
      * <p>
-     * You must not include any security-sensitive information, such as account access IDs, secrets, and tokens, in the
-     * dictionary for configuring hyperparameters. SageMaker rejects the training job request and returns an exception
-     * error for detected credentials, if such user input is found.
+     * Do not include any security-sensitive information including account access IDs, secrets or tokens in any
+     * hyperparameter field. If the use of security-sensitive credentials are detected, SageMaker will reject your
+     * training job request and return an exception error.
      * </p>
      * </important></li>
      * <li>

@@ -44,9 +44,9 @@ public class CreateTrainingJobRequest extends com.amazonaws.AmazonWebServiceRequ
      * </p>
      * <important>
      * <p>
-     * You must not include any security-sensitive information, such as account access IDs, secrets, and tokens, in the
-     * dictionary for configuring hyperparameters. SageMaker rejects the training job request and returns an exception
-     * error for detected credentials, if such user input is found.
+     * Do not include any security-sensitive information including account access IDs, secrets or tokens in any
+     * hyperparameter field. If the use of security-sensitive credentials are detected, SageMaker will reject your
+     * training job request and return an exception error.
      * </p>
      * </important>
      */
@@ -277,9 +277,9 @@ public class CreateTrainingJobRequest extends com.amazonaws.AmazonWebServiceRequ
      * </p>
      * <important>
      * <p>
-     * You must not include any security-sensitive information, such as account access IDs, secrets, and tokens, in the
-     * dictionary for configuring hyperparameters. SageMaker rejects the training job request and returns an exception
-     * error for detected credentials, if such user input is found.
+     * Do not include any security-sensitive information including account access IDs, secrets or tokens in any
+     * hyperparameter field. If the use of security-sensitive credentials are detected, SageMaker will reject your
+     * training job request and return an exception error.
      * </p>
      * </important>
      * 
@@ -292,9 +292,9 @@ public class CreateTrainingJobRequest extends com.amazonaws.AmazonWebServiceRequ
      *         </p>
      *         <important>
      *         <p>
-     *         You must not include any security-sensitive information, such as account access IDs, secrets, and tokens,
-     *         in the dictionary for configuring hyperparameters. SageMaker rejects the training job request and returns
-     *         an exception error for detected credentials, if such user input is found.
+     *         Do not include any security-sensitive information including account access IDs, secrets or tokens in any
+     *         hyperparameter field. If the use of security-sensitive credentials are detected, SageMaker will reject
+     *         your training job request and return an exception error.
      *         </p>
      */
 
@@ -314,9 +314,9 @@ public class CreateTrainingJobRequest extends com.amazonaws.AmazonWebServiceRequ
      * </p>
      * <important>
      * <p>
-     * You must not include any security-sensitive information, such as account access IDs, secrets, and tokens, in the
-     * dictionary for configuring hyperparameters. SageMaker rejects the training job request and returns an exception
-     * error for detected credentials, if such user input is found.
+     * Do not include any security-sensitive information including account access IDs, secrets or tokens in any
+     * hyperparameter field. If the use of security-sensitive credentials are detected, SageMaker will reject your
+     * training job request and return an exception error.
      * </p>
      * </important>
      * 
@@ -330,9 +330,9 @@ public class CreateTrainingJobRequest extends com.amazonaws.AmazonWebServiceRequ
      *        </p>
      *        <important>
      *        <p>
-     *        You must not include any security-sensitive information, such as account access IDs, secrets, and tokens,
-     *        in the dictionary for configuring hyperparameters. SageMaker rejects the training job request and returns
-     *        an exception error for detected credentials, if such user input is found.
+     *        Do not include any security-sensitive information including account access IDs, secrets or tokens in any
+     *        hyperparameter field. If the use of security-sensitive credentials are detected, SageMaker will reject
+     *        your training job request and return an exception error.
      *        </p>
      */
 
@@ -352,9 +352,9 @@ public class CreateTrainingJobRequest extends com.amazonaws.AmazonWebServiceRequ
      * </p>
      * <important>
      * <p>
-     * You must not include any security-sensitive information, such as account access IDs, secrets, and tokens, in the
-     * dictionary for configuring hyperparameters. SageMaker rejects the training job request and returns an exception
-     * error for detected credentials, if such user input is found.
+     * Do not include any security-sensitive information including account access IDs, secrets or tokens in any
+     * hyperparameter field. If the use of security-sensitive credentials are detected, SageMaker will reject your
+     * training job request and return an exception error.
      * </p>
      * </important>
      * 
@@ -368,9 +368,9 @@ public class CreateTrainingJobRequest extends com.amazonaws.AmazonWebServiceRequ
      *        </p>
      *        <important>
      *        <p>
-     *        You must not include any security-sensitive information, such as account access IDs, secrets, and tokens,
-     *        in the dictionary for configuring hyperparameters. SageMaker rejects the training job request and returns
-     *        an exception error for detected credentials, if such user input is found.
+     *        Do not include any security-sensitive information including account access IDs, secrets or tokens in any
+     *        hyperparameter field. If the use of security-sensitive credentials are detected, SageMaker will reject
+     *        your training job request and return an exception error.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */

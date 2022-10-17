@@ -1,3 +1,17 @@
+# __1.12.322__ __2022-10-17__
+## __AWS Greengrass__
+  - ### Features
+    - This change allows customers to specify FunctionRuntimeOverride in FunctionDefinitionVersion. This configuration can be used if the runtime on the device is different from the AWS Lambda runtime specified for that function.
+
+## __AWS SDK for Java__
+  - ### Features
+    - Adding regions me-central-1 (DXB) and ap-southeast-3 (CGK) to message manager
+    - Bump jackson-databind version to 2.12.7.1
+
+## __Amazon SageMaker Service__
+  - ### Features
+    - This release adds support for C7g, C6g, C6gd, C6gn, M6g, M6gd, R6g, and R6gn Graviton instance types in Amazon SageMaker Inference.
+
 # __1.12.321__ __2022-10-14__
 ## __AWS Elemental MediaConvert__
   - ### Features

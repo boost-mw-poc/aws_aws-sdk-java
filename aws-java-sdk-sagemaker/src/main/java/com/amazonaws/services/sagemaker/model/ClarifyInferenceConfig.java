@@ -32,7 +32,7 @@ public class ClarifyInferenceConfig implements Serializable, Cloneable, Structur
      * <p>
      * Provides the JMESPath expression to extract the features from a model container input in JSON Lines format. For
      * example, if <code>FeaturesAttribute</code> is the JMESPath expression <code>'myfeatures'</code>, it extracts a
-     * list of features <code>[1,2,3]</code> from request data <code>'{"myfeatures":[1,2,3}'</code>.
+     * list of features <code>[1,2,3]</code> from request data <code>'{"myfeatures":[1,2,3]}'</code>.
      * </p>
      */
     private String featuresAttribute;
@@ -154,14 +154,14 @@ public class ClarifyInferenceConfig implements Serializable, Cloneable, Structur
      * <p>
      * Provides the JMESPath expression to extract the features from a model container input in JSON Lines format. For
      * example, if <code>FeaturesAttribute</code> is the JMESPath expression <code>'myfeatures'</code>, it extracts a
-     * list of features <code>[1,2,3]</code> from request data <code>'{"myfeatures":[1,2,3}'</code>.
+     * list of features <code>[1,2,3]</code> from request data <code>'{"myfeatures":[1,2,3]}'</code>.
      * </p>
      * 
      * @param featuresAttribute
      *        Provides the JMESPath expression to extract the features from a model container input in JSON Lines
      *        format. For example, if <code>FeaturesAttribute</code> is the JMESPath expression
      *        <code>'myfeatures'</code>, it extracts a list of features <code>[1,2,3]</code> from request data
-     *        <code>'{"myfeatures":[1,2,3}'</code>.
+     *        <code>'{"myfeatures":[1,2,3]}'</code>.
      */
 
     public void setFeaturesAttribute(String featuresAttribute) {
@@ -172,13 +172,13 @@ public class ClarifyInferenceConfig implements Serializable, Cloneable, Structur
      * <p>
      * Provides the JMESPath expression to extract the features from a model container input in JSON Lines format. For
      * example, if <code>FeaturesAttribute</code> is the JMESPath expression <code>'myfeatures'</code>, it extracts a
-     * list of features <code>[1,2,3]</code> from request data <code>'{"myfeatures":[1,2,3}'</code>.
+     * list of features <code>[1,2,3]</code> from request data <code>'{"myfeatures":[1,2,3]}'</code>.
      * </p>
      * 
      * @return Provides the JMESPath expression to extract the features from a model container input in JSON Lines
      *         format. For example, if <code>FeaturesAttribute</code> is the JMESPath expression
      *         <code>'myfeatures'</code>, it extracts a list of features <code>[1,2,3]</code> from request data
-     *         <code>'{"myfeatures":[1,2,3}'</code>.
+     *         <code>'{"myfeatures":[1,2,3]}'</code>.
      */
 
     public String getFeaturesAttribute() {
@@ -189,14 +189,14 @@ public class ClarifyInferenceConfig implements Serializable, Cloneable, Structur
      * <p>
      * Provides the JMESPath expression to extract the features from a model container input in JSON Lines format. For
      * example, if <code>FeaturesAttribute</code> is the JMESPath expression <code>'myfeatures'</code>, it extracts a
-     * list of features <code>[1,2,3]</code> from request data <code>'{"myfeatures":[1,2,3}'</code>.
+     * list of features <code>[1,2,3]</code> from request data <code>'{"myfeatures":[1,2,3]}'</code>.
      * </p>
      * 
      * @param featuresAttribute
      *        Provides the JMESPath expression to extract the features from a model container input in JSON Lines
      *        format. For example, if <code>FeaturesAttribute</code> is the JMESPath expression
      *        <code>'myfeatures'</code>, it extracts a list of features <code>[1,2,3]</code> from request data
-     *        <code>'{"myfeatures":[1,2,3}'</code>.
+     *        <code>'{"myfeatures":[1,2,3]}'</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

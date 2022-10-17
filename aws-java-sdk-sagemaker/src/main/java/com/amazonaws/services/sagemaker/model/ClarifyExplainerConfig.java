@@ -32,7 +32,7 @@ public class ClarifyExplainerConfig implements Serializable, Cloneable, Structur
      * <p>
      * A JMESPath boolean expression used to filter which records to explain. Explanations are activated by default. See
      * <a href=
-     * "https://docs.aws.amazon.com/sagemaker-dg/src/AWSIronmanApiDoc/build/server-root/sagemaker/latest/dg/clarify-online-explainability-create-endpoint.html#clarify-online-explainability-create-endpoint-enable"
+     * "https://docs.aws.amazon.com/sagemaker/latest/dg/clarify-online-explainability-create-endpoint.html#clarify-online-explainability-create-endpoint-enable"
      * > <code>EnableExplanations</code> </a>for additional information.
      * </p>
      */
@@ -54,14 +54,14 @@ public class ClarifyExplainerConfig implements Serializable, Cloneable, Structur
      * <p>
      * A JMESPath boolean expression used to filter which records to explain. Explanations are activated by default. See
      * <a href=
-     * "https://docs.aws.amazon.com/sagemaker-dg/src/AWSIronmanApiDoc/build/server-root/sagemaker/latest/dg/clarify-online-explainability-create-endpoint.html#clarify-online-explainability-create-endpoint-enable"
+     * "https://docs.aws.amazon.com/sagemaker/latest/dg/clarify-online-explainability-create-endpoint.html#clarify-online-explainability-create-endpoint-enable"
      * > <code>EnableExplanations</code> </a>for additional information.
      * </p>
      * 
      * @param enableExplanations
      *        A JMESPath boolean expression used to filter which records to explain. Explanations are activated by
      *        default. See <a href=
-     *        "https://docs.aws.amazon.com/sagemaker-dg/src/AWSIronmanApiDoc/build/server-root/sagemaker/latest/dg/clarify-online-explainability-create-endpoint.html#clarify-online-explainability-create-endpoint-enable"
+     *        "https://docs.aws.amazon.com/sagemaker/latest/dg/clarify-online-explainability-create-endpoint.html#clarify-online-explainability-create-endpoint-enable"
      *        > <code>EnableExplanations</code> </a>for additional information.
      */
 
@@ -73,13 +73,13 @@ public class ClarifyExplainerConfig implements Serializable, Cloneable, Structur
      * <p>
      * A JMESPath boolean expression used to filter which records to explain. Explanations are activated by default. See
      * <a href=
-     * "https://docs.aws.amazon.com/sagemaker-dg/src/AWSIronmanApiDoc/build/server-root/sagemaker/latest/dg/clarify-online-explainability-create-endpoint.html#clarify-online-explainability-create-endpoint-enable"
+     * "https://docs.aws.amazon.com/sagemaker/latest/dg/clarify-online-explainability-create-endpoint.html#clarify-online-explainability-create-endpoint-enable"
      * > <code>EnableExplanations</code> </a>for additional information.
      * </p>
      * 
      * @return A JMESPath boolean expression used to filter which records to explain. Explanations are activated by
      *         default. See <a href=
-     *         "https://docs.aws.amazon.com/sagemaker-dg/src/AWSIronmanApiDoc/build/server-root/sagemaker/latest/dg/clarify-online-explainability-create-endpoint.html#clarify-online-explainability-create-endpoint-enable"
+     *         "https://docs.aws.amazon.com/sagemaker/latest/dg/clarify-online-explainability-create-endpoint.html#clarify-online-explainability-create-endpoint-enable"
      *         > <code>EnableExplanations</code> </a>for additional information.
      */
 
@@ -91,14 +91,14 @@ public class ClarifyExplainerConfig implements Serializable, Cloneable, Structur
      * <p>
      * A JMESPath boolean expression used to filter which records to explain. Explanations are activated by default. See
      * <a href=
-     * "https://docs.aws.amazon.com/sagemaker-dg/src/AWSIronmanApiDoc/build/server-root/sagemaker/latest/dg/clarify-online-explainability-create-endpoint.html#clarify-online-explainability-create-endpoint-enable"
+     * "https://docs.aws.amazon.com/sagemaker/latest/dg/clarify-online-explainability-create-endpoint.html#clarify-online-explainability-create-endpoint-enable"
      * > <code>EnableExplanations</code> </a>for additional information.
      * </p>
      * 
      * @param enableExplanations
      *        A JMESPath boolean expression used to filter which records to explain. Explanations are activated by
      *        default. See <a href=
-     *        "https://docs.aws.amazon.com/sagemaker-dg/src/AWSIronmanApiDoc/build/server-root/sagemaker/latest/dg/clarify-online-explainability-create-endpoint.html#clarify-online-explainability-create-endpoint-enable"
+     *        "https://docs.aws.amazon.com/sagemaker/latest/dg/clarify-online-explainability-create-endpoint.html#clarify-online-explainability-create-endpoint-enable"
      *        > <code>EnableExplanations</code> </a>for additional information.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
