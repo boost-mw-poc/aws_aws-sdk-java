@@ -42,7 +42,8 @@ public class IncidentTemplate implements Serializable, Cloneable, StructuredPojo
     private Integer impact;
     /**
      * <p>
-     * Tags to apply to an incident when calling the <code>StartIncident</code> API action.
+     * Tags to assign to the template. When the <code>StartIncident</code> API action is called, Incident Manager
+     * assigns the tags specified in the template to the incident.
      * </p>
      */
     private java.util.Map<String, String> incidentTags;
@@ -148,10 +149,12 @@ public class IncidentTemplate implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * Tags to apply to an incident when calling the <code>StartIncident</code> API action.
+     * Tags to assign to the template. When the <code>StartIncident</code> API action is called, Incident Manager
+     * assigns the tags specified in the template to the incident.
      * </p>
      * 
-     * @return Tags to apply to an incident when calling the <code>StartIncident</code> API action.
+     * @return Tags to assign to the template. When the <code>StartIncident</code> API action is called, Incident
+     *         Manager assigns the tags specified in the template to the incident.
      */
 
     public java.util.Map<String, String> getIncidentTags() {
@@ -160,11 +163,13 @@ public class IncidentTemplate implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * Tags to apply to an incident when calling the <code>StartIncident</code> API action.
+     * Tags to assign to the template. When the <code>StartIncident</code> API action is called, Incident Manager
+     * assigns the tags specified in the template to the incident.
      * </p>
      * 
      * @param incidentTags
-     *        Tags to apply to an incident when calling the <code>StartIncident</code> API action.
+     *        Tags to assign to the template. When the <code>StartIncident</code> API action is called, Incident Manager
+     *        assigns the tags specified in the template to the incident.
      */
 
     public void setIncidentTags(java.util.Map<String, String> incidentTags) {
@@ -173,11 +178,13 @@ public class IncidentTemplate implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * Tags to apply to an incident when calling the <code>StartIncident</code> API action.
+     * Tags to assign to the template. When the <code>StartIncident</code> API action is called, Incident Manager
+     * assigns the tags specified in the template to the incident.
      * </p>
      * 
      * @param incidentTags
-     *        Tags to apply to an incident when calling the <code>StartIncident</code> API action.
+     *        Tags to assign to the template. When the <code>StartIncident</code> API action is called, Incident Manager
+     *        assigns the tags specified in the template to the incident.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -254,7 +254,17 @@ public class AbstractAWSIoTSiteWise implements AWSIoTSiteWise {
     }
 
     @Override
+    public ListAssetModelPropertiesResult listAssetModelProperties(ListAssetModelPropertiesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListAssetModelsResult listAssetModels(ListAssetModelsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListAssetPropertiesResult listAssetProperties(ListAssetPropertiesRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
