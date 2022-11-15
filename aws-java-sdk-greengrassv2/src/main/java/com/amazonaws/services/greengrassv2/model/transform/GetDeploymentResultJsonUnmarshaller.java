@@ -97,6 +97,10 @@ public class GetDeploymentResultJsonUnmarshaller implements Unmarshaller<GetDepl
                     context.nextToken();
                     getDeploymentResult.setIsLatestForTarget(context.getUnmarshaller(Boolean.class).unmarshall(context));
                 }
+                if (context.testExpression("parentTargetArn", targetDepth)) {
+                    context.nextToken();
+                    getDeploymentResult.setParentTargetArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("tags", targetDepth)) {
                     context.nextToken();
                     getDeploymentResult.setTags(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context

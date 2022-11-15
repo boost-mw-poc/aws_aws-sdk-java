@@ -122,6 +122,10 @@ public class WorkspaceDirectoryJsonUnmarshaller implements Unmarshaller<Workspac
                     context.nextToken();
                     workspaceDirectory.setSamlProperties(SamlPropertiesJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("CertificateBasedAuthProperties", targetDepth)) {
+                    context.nextToken();
+                    workspaceDirectory.setCertificateBasedAuthProperties(CertificateBasedAuthPropertiesJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

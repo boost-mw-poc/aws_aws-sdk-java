@@ -45,7 +45,8 @@ public enum ResourceRecordSetRegion {
     MeCentral1("me-central-1"),
     ApSouth1("ap-south-1"),
     AfSouth1("af-south-1"),
-    EuSouth1("eu-south-1");
+    EuSouth1("eu-south-1"),
+    EuSouth2("eu-south-2");
 
     private String value;
 

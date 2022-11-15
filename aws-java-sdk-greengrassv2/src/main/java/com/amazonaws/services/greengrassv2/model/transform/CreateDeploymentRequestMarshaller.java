@@ -41,6 +41,8 @@ public class CreateDeploymentRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("iotJobConfiguration").build();
     private static final MarshallingInfo<StructuredPojo> DEPLOYMENTPOLICIES_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("deploymentPolicies").build();
+    private static final MarshallingInfo<String> PARENTTARGETARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("parentTargetArn").build();
     private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("tags").build();
     private static final MarshallingInfo<String> CLIENTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
@@ -68,6 +70,7 @@ public class CreateDeploymentRequestMarshaller {
             protocolMarshaller.marshall(createDeploymentRequest.getComponents(), COMPONENTS_BINDING);
             protocolMarshaller.marshall(createDeploymentRequest.getIotJobConfiguration(), IOTJOBCONFIGURATION_BINDING);
             protocolMarshaller.marshall(createDeploymentRequest.getDeploymentPolicies(), DEPLOYMENTPOLICIES_BINDING);
+            protocolMarshaller.marshall(createDeploymentRequest.getParentTargetArn(), PARENTTARGETARN_BINDING);
             protocolMarshaller.marshall(createDeploymentRequest.getTags(), TAGS_BINDING);
             protocolMarshaller.marshall(createDeploymentRequest.getClientToken(), CLIENTTOKEN_BINDING);
         } catch (Exception e) {

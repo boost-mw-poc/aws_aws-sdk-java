@@ -268,6 +268,11 @@ public class AbstractAmazonWorkspaces implements AmazonWorkspaces {
     }
 
     @Override
+    public ModifyCertificateBasedAuthPropertiesResult modifyCertificateBasedAuthProperties(ModifyCertificateBasedAuthPropertiesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ModifyClientPropertiesResult modifyClientProperties(ModifyClientPropertiesRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
