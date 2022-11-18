@@ -20,7 +20,8 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public enum PrincipalType {
 
-    IAM("IAM");
+    IAM("IAM"),
+    IAM_PATTERN("IAM_PATTERN");
 
     private String value;
 

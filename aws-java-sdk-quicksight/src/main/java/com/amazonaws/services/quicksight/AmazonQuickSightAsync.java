@@ -842,6 +842,47 @@ public interface AmazonQuickSightAsync extends AmazonQuickSight {
 
     /**
      * <p>
+     * Use the <code>DeleteAccountSubscription</code> operation to delete an Amazon QuickSight account. This operation
+     * will result in an error message if you have configured your account termination protection settings to
+     * <code>True</code>. To change this setting and delete your account, call the <code>UpdateAccountSettings</code>
+     * API and set the value of the <code>TerminationProtectionEnabled</code> parameter to <code>False</code>, then make
+     * another call to the <code>DeleteAccountSubscription</code> API.
+     * </p>
+     * 
+     * @param deleteAccountSubscriptionRequest
+     * @return A Java Future containing the result of the DeleteAccountSubscription operation returned by the service.
+     * @sample AmazonQuickSightAsync.DeleteAccountSubscription
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/DeleteAccountSubscription"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteAccountSubscriptionResult> deleteAccountSubscriptionAsync(
+            DeleteAccountSubscriptionRequest deleteAccountSubscriptionRequest);
+
+    /**
+     * <p>
+     * Use the <code>DeleteAccountSubscription</code> operation to delete an Amazon QuickSight account. This operation
+     * will result in an error message if you have configured your account termination protection settings to
+     * <code>True</code>. To change this setting and delete your account, call the <code>UpdateAccountSettings</code>
+     * API and set the value of the <code>TerminationProtectionEnabled</code> parameter to <code>False</code>, then make
+     * another call to the <code>DeleteAccountSubscription</code> API.
+     * </p>
+     * 
+     * @param deleteAccountSubscriptionRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteAccountSubscription operation returned by the service.
+     * @sample AmazonQuickSightAsyncHandler.DeleteAccountSubscription
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/DeleteAccountSubscription"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteAccountSubscriptionResult> deleteAccountSubscriptionAsync(
+            DeleteAccountSubscriptionRequest deleteAccountSubscriptionRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteAccountSubscriptionRequest, DeleteAccountSubscriptionResult> asyncHandler);
+
+    /**
+     * <p>
      * Deletes an analysis from Amazon QuickSight. You can optionally include a recovery window during which you can
      * restore the analysis. If you don't specify a recovery window value, the operation defaults to 30 days. Amazon
      * QuickSight attaches a <code>DeletionTime</code> stamp to the response that specifies the end of the recovery
@@ -1578,7 +1619,7 @@ public interface AmazonQuickSightAsync extends AmazonQuickSight {
 
     /**
      * <p>
-     * Use the DescribeAccountSubscription operation to receive a description of a Amazon QuickSight account's
+     * Use the DescribeAccountSubscription operation to receive a description of an Amazon QuickSight account's
      * subscription. A successful API call returns an <code>AccountInfo</code> object that includes an account's name,
      * subscription status, authentication type, edition, and notification email address.
      * </p>
@@ -1594,7 +1635,7 @@ public interface AmazonQuickSightAsync extends AmazonQuickSight {
 
     /**
      * <p>
-     * Use the DescribeAccountSubscription operation to receive a description of a Amazon QuickSight account's
+     * Use the DescribeAccountSubscription operation to receive a description of an Amazon QuickSight account's
      * subscription. A successful API call returns an <code>AccountInfo</code> object that includes an account's name,
      * subscription status, authentication type, edition, and notification email address.
      * </p>
@@ -3658,6 +3699,68 @@ public interface AmazonQuickSightAsync extends AmazonQuickSight {
      */
     java.util.concurrent.Future<SearchDashboardsResult> searchDashboardsAsync(SearchDashboardsRequest searchDashboardsRequest,
             com.amazonaws.handlers.AsyncHandler<SearchDashboardsRequest, SearchDashboardsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Use the <code>SearchDataSets</code> operation to search for datasets that belong to an account.
+     * </p>
+     * 
+     * @param searchDataSetsRequest
+     * @return A Java Future containing the result of the SearchDataSets operation returned by the service.
+     * @sample AmazonQuickSightAsync.SearchDataSets
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/SearchDataSets" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<SearchDataSetsResult> searchDataSetsAsync(SearchDataSetsRequest searchDataSetsRequest);
+
+    /**
+     * <p>
+     * Use the <code>SearchDataSets</code> operation to search for datasets that belong to an account.
+     * </p>
+     * 
+     * @param searchDataSetsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the SearchDataSets operation returned by the service.
+     * @sample AmazonQuickSightAsyncHandler.SearchDataSets
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/SearchDataSets" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<SearchDataSetsResult> searchDataSetsAsync(SearchDataSetsRequest searchDataSetsRequest,
+            com.amazonaws.handlers.AsyncHandler<SearchDataSetsRequest, SearchDataSetsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Use the <code>SearchDataSources</code> operation to search for data sources that belong to an account.
+     * </p>
+     * 
+     * @param searchDataSourcesRequest
+     * @return A Java Future containing the result of the SearchDataSources operation returned by the service.
+     * @sample AmazonQuickSightAsync.SearchDataSources
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/SearchDataSources" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<SearchDataSourcesResult> searchDataSourcesAsync(SearchDataSourcesRequest searchDataSourcesRequest);
+
+    /**
+     * <p>
+     * Use the <code>SearchDataSources</code> operation to search for data sources that belong to an account.
+     * </p>
+     * 
+     * @param searchDataSourcesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the SearchDataSources operation returned by the service.
+     * @sample AmazonQuickSightAsyncHandler.SearchDataSources
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/SearchDataSources" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<SearchDataSourcesResult> searchDataSourcesAsync(SearchDataSourcesRequest searchDataSourcesRequest,
+            com.amazonaws.handlers.AsyncHandler<SearchDataSourcesRequest, SearchDataSourcesResult> asyncHandler);
 
     /**
      * <p>

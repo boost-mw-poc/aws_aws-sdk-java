@@ -72,6 +72,10 @@ public class TaskScheduledEventDetailsJsonUnmarshaller implements Unmarshaller<T
                     context.nextToken();
                     taskScheduledEventDetails.setHeartbeatInSeconds(context.getUnmarshaller(Long.class).unmarshall(context));
                 }
+                if (context.testExpression("taskCredentials", targetDepth)) {
+                    context.nextToken();
+                    taskScheduledEventDetails.setTaskCredentials(TaskCredentialsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

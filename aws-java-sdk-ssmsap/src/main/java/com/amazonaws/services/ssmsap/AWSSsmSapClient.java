@@ -50,7 +50,10 @@ import com.amazonaws.services.ssmsap.model.transform.*;
  * Client for accessing SsmSap. All service calls made using this client are blocking, and will not return until the
  * service call completes.
  * <p>
- * <p/>
+ * <p>
+ * This API reference provides descriptions, syntax, and other details about each of the actions and data types for AWS
+ * Systems Manager for SAP. The topic for each action shows the API request parameters and responses.
+ * </p>
  */
 @ThreadSafe
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
@@ -136,7 +139,9 @@ public class AWSSsmSapClient extends AmazonWebServiceClient implements AWSSsmSap
     }
 
     /**
-     * <p/>
+     * <p>
+     * Removes permissions associated with the target database.
+     * </p>
      * 
      * @param deleteResourcePermissionRequest
      * @return Result of the DeleteResourcePermission operation returned by the service.
@@ -144,7 +149,7 @@ public class AWSSsmSapClient extends AmazonWebServiceClient implements AWSSsmSap
      * @throws ValidationException
      * @throws InternalServerException
      * @sample AWSSsmSap.DeleteResourcePermission
-     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssmsap-2018-05-10/DeleteResourcePermission"
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-sap-2018-05-10/DeleteResourcePermission"
      *      target="_top">AWS API Documentation</a>
      */
     @Override
@@ -172,7 +177,7 @@ public class AWSSsmSapClient extends AmazonWebServiceClient implements AWSSsmSap
                 request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
                 request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
                 request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
-                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "SsmSap");
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Ssm Sap");
                 request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteResourcePermission");
                 request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
 
@@ -194,14 +199,17 @@ public class AWSSsmSapClient extends AmazonWebServiceClient implements AWSSsmSap
     }
 
     /**
-     * <p/>
+     * <p>
+     * Deregister an SAP application with AWS Systems Manager for SAP. This action does not aﬀect the existing setup of
+     * your SAP workloads on Amazon EC2.
+     * </p>
      * 
      * @param deregisterApplicationRequest
      * @return Result of the DeregisterApplication operation returned by the service.
      * @throws ValidationException
      * @throws InternalServerException
      * @sample AWSSsmSap.DeregisterApplication
-     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssmsap-2018-05-10/DeregisterApplication" target="_top">AWS
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-sap-2018-05-10/DeregisterApplication" target="_top">AWS
      *      API Documentation</a>
      */
     @Override
@@ -228,7 +236,7 @@ public class AWSSsmSapClient extends AmazonWebServiceClient implements AWSSsmSap
                 request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
                 request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
                 request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
-                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "SsmSap");
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Ssm Sap");
                 request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeregisterApplication");
                 request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
 
@@ -250,14 +258,17 @@ public class AWSSsmSapClient extends AmazonWebServiceClient implements AWSSsmSap
     }
 
     /**
-     * <p/>
+     * <p>
+     * Gets an application registered with AWS Systems Manager for SAP. It also returns the components of the
+     * application.
+     * </p>
      * 
      * @param getApplicationRequest
      * @return Result of the GetApplication operation returned by the service.
      * @throws ValidationException
      * @throws InternalServerException
      * @sample AWSSsmSap.GetApplication
-     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssmsap-2018-05-10/GetApplication" target="_top">AWS API
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-sap-2018-05-10/GetApplication" target="_top">AWS API
      *      Documentation</a>
      */
     @Override
@@ -284,7 +295,7 @@ public class AWSSsmSapClient extends AmazonWebServiceClient implements AWSSsmSap
                 request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
                 request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
                 request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
-                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "SsmSap");
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Ssm Sap");
                 request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetApplication");
                 request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
 
@@ -305,14 +316,16 @@ public class AWSSsmSapClient extends AmazonWebServiceClient implements AWSSsmSap
     }
 
     /**
-     * <p/>
+     * <p>
+     * Gets the component of an application registered with AWS Systems Manager for SAP.
+     * </p>
      * 
      * @param getComponentRequest
      * @return Result of the GetComponent operation returned by the service.
      * @throws ValidationException
      * @throws InternalServerException
      * @sample AWSSsmSap.GetComponent
-     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssmsap-2018-05-10/GetComponent" target="_top">AWS API
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-sap-2018-05-10/GetComponent" target="_top">AWS API
      *      Documentation</a>
      */
     @Override
@@ -339,7 +352,7 @@ public class AWSSsmSapClient extends AmazonWebServiceClient implements AWSSsmSap
                 request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
                 request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
                 request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
-                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "SsmSap");
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Ssm Sap");
                 request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetComponent");
                 request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
 
@@ -360,14 +373,16 @@ public class AWSSsmSapClient extends AmazonWebServiceClient implements AWSSsmSap
     }
 
     /**
-     * <p/>
+     * <p>
+     * Gets the SAP HANA database of an application registered with AWS Systems Manager for SAP.
+     * </p>
      * 
      * @param getDatabaseRequest
      * @return Result of the GetDatabase operation returned by the service.
      * @throws ValidationException
      * @throws InternalServerException
      * @sample AWSSsmSap.GetDatabase
-     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssmsap-2018-05-10/GetDatabase" target="_top">AWS API
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-sap-2018-05-10/GetDatabase" target="_top">AWS API
      *      Documentation</a>
      */
     @Override
@@ -394,7 +409,7 @@ public class AWSSsmSapClient extends AmazonWebServiceClient implements AWSSsmSap
                 request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
                 request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
                 request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
-                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "SsmSap");
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Ssm Sap");
                 request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetDatabase");
                 request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
 
@@ -415,14 +430,16 @@ public class AWSSsmSapClient extends AmazonWebServiceClient implements AWSSsmSap
     }
 
     /**
-     * <p/>
+     * <p>
+     * Gets the details of an operation by specifying the operation ID.
+     * </p>
      * 
      * @param getOperationRequest
      * @return Result of the GetOperation operation returned by the service.
      * @throws ValidationException
      * @throws InternalServerException
      * @sample AWSSsmSap.GetOperation
-     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssmsap-2018-05-10/GetOperation" target="_top">AWS API
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-sap-2018-05-10/GetOperation" target="_top">AWS API
      *      Documentation</a>
      */
     @Override
@@ -449,7 +466,7 @@ public class AWSSsmSapClient extends AmazonWebServiceClient implements AWSSsmSap
                 request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
                 request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
                 request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
-                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "SsmSap");
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Ssm Sap");
                 request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetOperation");
                 request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
 
@@ -470,7 +487,9 @@ public class AWSSsmSapClient extends AmazonWebServiceClient implements AWSSsmSap
     }
 
     /**
-     * <p/>
+     * <p>
+     * Gets permissions associated with the target database.
+     * </p>
      * 
      * @param getResourcePermissionRequest
      * @return Result of the GetResourcePermission operation returned by the service.
@@ -478,7 +497,7 @@ public class AWSSsmSapClient extends AmazonWebServiceClient implements AWSSsmSap
      * @throws ValidationException
      * @throws InternalServerException
      * @sample AWSSsmSap.GetResourcePermission
-     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssmsap-2018-05-10/GetResourcePermission" target="_top">AWS
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-sap-2018-05-10/GetResourcePermission" target="_top">AWS
      *      API Documentation</a>
      */
     @Override
@@ -505,7 +524,7 @@ public class AWSSsmSapClient extends AmazonWebServiceClient implements AWSSsmSap
                 request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
                 request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
                 request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
-                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "SsmSap");
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Ssm Sap");
                 request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetResourcePermission");
                 request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
 
@@ -527,7 +546,9 @@ public class AWSSsmSapClient extends AmazonWebServiceClient implements AWSSsmSap
     }
 
     /**
-     * <p/>
+     * <p>
+     * Lists all the applications registered with AWS Systems Manager for SAP.
+     * </p>
      * 
      * @param listApplicationsRequest
      * @return Result of the ListApplications operation returned by the service.
@@ -535,7 +556,7 @@ public class AWSSsmSapClient extends AmazonWebServiceClient implements AWSSsmSap
      * @throws ValidationException
      * @throws InternalServerException
      * @sample AWSSsmSap.ListApplications
-     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssmsap-2018-05-10/ListApplications" target="_top">AWS API
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-sap-2018-05-10/ListApplications" target="_top">AWS API
      *      Documentation</a>
      */
     @Override
@@ -562,7 +583,7 @@ public class AWSSsmSapClient extends AmazonWebServiceClient implements AWSSsmSap
                 request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
                 request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
                 request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
-                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "SsmSap");
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Ssm Sap");
                 request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListApplications");
                 request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
 
@@ -583,7 +604,9 @@ public class AWSSsmSapClient extends AmazonWebServiceClient implements AWSSsmSap
     }
 
     /**
-     * <p/>
+     * <p>
+     * Lists all the components registered with AWS Systems Manager for SAP.
+     * </p>
      * 
      * @param listComponentsRequest
      * @return Result of the ListComponents operation returned by the service.
@@ -591,7 +614,7 @@ public class AWSSsmSapClient extends AmazonWebServiceClient implements AWSSsmSap
      * @throws ValidationException
      * @throws InternalServerException
      * @sample AWSSsmSap.ListComponents
-     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssmsap-2018-05-10/ListComponents" target="_top">AWS API
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-sap-2018-05-10/ListComponents" target="_top">AWS API
      *      Documentation</a>
      */
     @Override
@@ -618,7 +641,7 @@ public class AWSSsmSapClient extends AmazonWebServiceClient implements AWSSsmSap
                 request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
                 request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
                 request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
-                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "SsmSap");
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Ssm Sap");
                 request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListComponents");
                 request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
 
@@ -639,7 +662,9 @@ public class AWSSsmSapClient extends AmazonWebServiceClient implements AWSSsmSap
     }
 
     /**
-     * <p/>
+     * <p>
+     * Lists the SAP HANA databases of an application registered with AWS Systems Manager for SAP.
+     * </p>
      * 
      * @param listDatabasesRequest
      * @return Result of the ListDatabases operation returned by the service.
@@ -647,7 +672,7 @@ public class AWSSsmSapClient extends AmazonWebServiceClient implements AWSSsmSap
      * @throws ValidationException
      * @throws InternalServerException
      * @sample AWSSsmSap.ListDatabases
-     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssmsap-2018-05-10/ListDatabases" target="_top">AWS API
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-sap-2018-05-10/ListDatabases" target="_top">AWS API
      *      Documentation</a>
      */
     @Override
@@ -674,7 +699,7 @@ public class AWSSsmSapClient extends AmazonWebServiceClient implements AWSSsmSap
                 request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
                 request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
                 request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
-                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "SsmSap");
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Ssm Sap");
                 request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListDatabases");
                 request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
 
@@ -695,7 +720,9 @@ public class AWSSsmSapClient extends AmazonWebServiceClient implements AWSSsmSap
     }
 
     /**
-     * <p/>
+     * <p>
+     * Lists all tags on an SAP HANA application and/or database registered with AWS Systems Manager for SAP.
+     * </p>
      * 
      * @param listTagsForResourceRequest
      * @return Result of the ListTagsForResource operation returned by the service.
@@ -703,8 +730,8 @@ public class AWSSsmSapClient extends AmazonWebServiceClient implements AWSSsmSap
      * @throws ValidationException
      * @throws ConflictException
      * @sample AWSSsmSap.ListTagsForResource
-     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssmsap-2018-05-10/ListTagsForResource" target="_top">AWS API
-     *      Documentation</a>
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-sap-2018-05-10/ListTagsForResource" target="_top">AWS
+     *      API Documentation</a>
      */
     @Override
     public ListTagsForResourceResult listTagsForResource(ListTagsForResourceRequest request) {
@@ -730,7 +757,7 @@ public class AWSSsmSapClient extends AmazonWebServiceClient implements AWSSsmSap
                 request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
                 request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
                 request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
-                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "SsmSap");
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Ssm Sap");
                 request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListTagsForResource");
                 request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
 
@@ -751,7 +778,9 @@ public class AWSSsmSapClient extends AmazonWebServiceClient implements AWSSsmSap
     }
 
     /**
-     * <p/>
+     * <p>
+     * Adds permissions to the target database.
+     * </p>
      * 
      * @param putResourcePermissionRequest
      * @return Result of the PutResourcePermission operation returned by the service.
@@ -759,7 +788,7 @@ public class AWSSsmSapClient extends AmazonWebServiceClient implements AWSSsmSap
      * @throws ValidationException
      * @throws InternalServerException
      * @sample AWSSsmSap.PutResourcePermission
-     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssmsap-2018-05-10/PutResourcePermission" target="_top">AWS
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-sap-2018-05-10/PutResourcePermission" target="_top">AWS
      *      API Documentation</a>
      */
     @Override
@@ -786,7 +815,7 @@ public class AWSSsmSapClient extends AmazonWebServiceClient implements AWSSsmSap
                 request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
                 request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
                 request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
-                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "SsmSap");
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Ssm Sap");
                 request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "PutResourcePermission");
                 request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
 
@@ -808,7 +837,20 @@ public class AWSSsmSapClient extends AmazonWebServiceClient implements AWSSsmSap
     }
 
     /**
-     * <p/>
+     * <p>
+     * Register an SAP application with AWS Systems Manager for SAP. You must meet the following requirements before
+     * registering.
+     * </p>
+     * <p>
+     * The SAP application you want to register with AWS Systems Manager for SAP is running on Amazon EC2.
+     * </p>
+     * <p>
+     * AWS Systems Manager Agent must be setup on an Amazon EC2 instance along with the required IAM permissions.
+     * </p>
+     * <p>
+     * Amazon EC2 instance(s) must have access to the secrets created in AWS Secrets Manager to manage SAP applications
+     * and components.
+     * </p>
      * 
      * @param registerApplicationRequest
      * @return Result of the RegisterApplication operation returned by the service.
@@ -816,8 +858,8 @@ public class AWSSsmSapClient extends AmazonWebServiceClient implements AWSSsmSap
      * @throws ConflictException
      * @throws InternalServerException
      * @sample AWSSsmSap.RegisterApplication
-     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssmsap-2018-05-10/RegisterApplication" target="_top">AWS API
-     *      Documentation</a>
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-sap-2018-05-10/RegisterApplication" target="_top">AWS
+     *      API Documentation</a>
      */
     @Override
     public RegisterApplicationResult registerApplication(RegisterApplicationRequest request) {
@@ -843,7 +885,7 @@ public class AWSSsmSapClient extends AmazonWebServiceClient implements AWSSsmSap
                 request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
                 request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
                 request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
-                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "SsmSap");
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Ssm Sap");
                 request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "RegisterApplication");
                 request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
 
@@ -864,7 +906,9 @@ public class AWSSsmSapClient extends AmazonWebServiceClient implements AWSSsmSap
     }
 
     /**
-     * <p/>
+     * <p>
+     * Creates tag for a resource by specifying the ARN.
+     * </p>
      * 
      * @param tagResourceRequest
      * @return Result of the TagResource operation returned by the service.
@@ -872,7 +916,7 @@ public class AWSSsmSapClient extends AmazonWebServiceClient implements AWSSsmSap
      * @throws ValidationException
      * @throws ConflictException
      * @sample AWSSsmSap.TagResource
-     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssmsap-2018-05-10/TagResource" target="_top">AWS API
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-sap-2018-05-10/TagResource" target="_top">AWS API
      *      Documentation</a>
      */
     @Override
@@ -899,7 +943,7 @@ public class AWSSsmSapClient extends AmazonWebServiceClient implements AWSSsmSap
                 request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
                 request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
                 request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
-                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "SsmSap");
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Ssm Sap");
                 request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "TagResource");
                 request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
 
@@ -920,7 +964,9 @@ public class AWSSsmSapClient extends AmazonWebServiceClient implements AWSSsmSap
     }
 
     /**
-     * <p/>
+     * <p>
+     * Delete the tags for a resource.
+     * </p>
      * 
      * @param untagResourceRequest
      * @return Result of the UntagResource operation returned by the service.
@@ -928,7 +974,7 @@ public class AWSSsmSapClient extends AmazonWebServiceClient implements AWSSsmSap
      * @throws ValidationException
      * @throws ConflictException
      * @sample AWSSsmSap.UntagResource
-     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssmsap-2018-05-10/UntagResource" target="_top">AWS API
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-sap-2018-05-10/UntagResource" target="_top">AWS API
      *      Documentation</a>
      */
     @Override
@@ -955,7 +1001,7 @@ public class AWSSsmSapClient extends AmazonWebServiceClient implements AWSSsmSap
                 request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
                 request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
                 request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
-                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "SsmSap");
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Ssm Sap");
                 request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UntagResource");
                 request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
 
@@ -984,7 +1030,7 @@ public class AWSSsmSapClient extends AmazonWebServiceClient implements AWSSsmSap
      * @throws ValidationException
      * @throws InternalServerException
      * @sample AWSSsmSap.UpdateApplicationSettings
-     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssmsap-2018-05-10/UpdateApplicationSettings"
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-sap-2018-05-10/UpdateApplicationSettings"
      *      target="_top">AWS API Documentation</a>
      */
     @Override
@@ -1012,7 +1058,7 @@ public class AWSSsmSapClient extends AmazonWebServiceClient implements AWSSsmSap
                 request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
                 request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
                 request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
-                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "SsmSap");
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Ssm Sap");
                 request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateApplicationSettings");
                 request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
 

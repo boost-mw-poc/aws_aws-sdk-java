@@ -72,6 +72,10 @@ public class CopyImageRequestMarshaller implements Marshaller<Request<CopyImageR
             request.addParameter("DestinationOutpostArn", StringUtils.fromString(copyImageRequest.getDestinationOutpostArn()));
         }
 
+        if (copyImageRequest.getCopyImageTags() != null) {
+            request.addParameter("CopyImageTags", StringUtils.fromBoolean(copyImageRequest.getCopyImageTags()));
+        }
+
         return request;
     }
 

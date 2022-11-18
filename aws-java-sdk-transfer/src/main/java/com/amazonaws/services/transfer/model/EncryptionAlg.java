@@ -22,7 +22,8 @@ public enum EncryptionAlg {
 
     AES128_CBC("AES128_CBC"),
     AES192_CBC("AES192_CBC"),
-    AES256_CBC("AES256_CBC");
+    AES256_CBC("AES256_CBC"),
+    NONE("NONE");
 
     private String value;
 

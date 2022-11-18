@@ -25,7 +25,10 @@ import java.util.concurrent.ExecutorService;
  * the asynchronous operation; overloads which accept an {@code AsyncHandler} can be used to receive notification when
  * an asynchronous operation completes.
  * <p>
- * <p/>
+ * <p>
+ * This API reference provides descriptions, syntax, and other details about each of the actions and data types for AWS
+ * Systems Manager for SAP. The topic for each action shows the API request parameters and responses.
+ * </p>
  */
 @ThreadSafe
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

@@ -108,7 +108,8 @@ public class UpdateCrawlerRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <p>
      * Crawler configuration information. This versioned JSON string allows users to specify aspects of a crawler's
      * behavior. For more information, see <a
-     * href="https://docs.aws.amazon.com/glue/latest/dg/crawler-configuration.html">Configuring a Crawler</a>.
+     * href="https://docs.aws.amazon.com/glue/latest/dg/crawler-configuration.html">Setting crawler configuration
+     * options</a>.
      * </p>
      */
     private String configuration;
@@ -681,13 +682,15 @@ public class UpdateCrawlerRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <p>
      * Crawler configuration information. This versioned JSON string allows users to specify aspects of a crawler's
      * behavior. For more information, see <a
-     * href="https://docs.aws.amazon.com/glue/latest/dg/crawler-configuration.html">Configuring a Crawler</a>.
+     * href="https://docs.aws.amazon.com/glue/latest/dg/crawler-configuration.html">Setting crawler configuration
+     * options</a>.
      * </p>
      * 
      * @param configuration
      *        Crawler configuration information. This versioned JSON string allows users to specify aspects of a
      *        crawler's behavior. For more information, see <a
-     *        href="https://docs.aws.amazon.com/glue/latest/dg/crawler-configuration.html">Configuring a Crawler</a>.
+     *        href="https://docs.aws.amazon.com/glue/latest/dg/crawler-configuration.html">Setting crawler configuration
+     *        options</a>.
      */
 
     public void setConfiguration(String configuration) {
@@ -698,12 +701,14 @@ public class UpdateCrawlerRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <p>
      * Crawler configuration information. This versioned JSON string allows users to specify aspects of a crawler's
      * behavior. For more information, see <a
-     * href="https://docs.aws.amazon.com/glue/latest/dg/crawler-configuration.html">Configuring a Crawler</a>.
+     * href="https://docs.aws.amazon.com/glue/latest/dg/crawler-configuration.html">Setting crawler configuration
+     * options</a>.
      * </p>
      * 
      * @return Crawler configuration information. This versioned JSON string allows users to specify aspects of a
      *         crawler's behavior. For more information, see <a
-     *         href="https://docs.aws.amazon.com/glue/latest/dg/crawler-configuration.html">Configuring a Crawler</a>.
+     *         href="https://docs.aws.amazon.com/glue/latest/dg/crawler-configuration.html">Setting crawler
+     *         configuration options</a>.
      */
 
     public String getConfiguration() {
@@ -714,13 +719,15 @@ public class UpdateCrawlerRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <p>
      * Crawler configuration information. This versioned JSON string allows users to specify aspects of a crawler's
      * behavior. For more information, see <a
-     * href="https://docs.aws.amazon.com/glue/latest/dg/crawler-configuration.html">Configuring a Crawler</a>.
+     * href="https://docs.aws.amazon.com/glue/latest/dg/crawler-configuration.html">Setting crawler configuration
+     * options</a>.
      * </p>
      * 
      * @param configuration
      *        Crawler configuration information. This versioned JSON string allows users to specify aspects of a
      *        crawler's behavior. For more information, see <a
-     *        href="https://docs.aws.amazon.com/glue/latest/dg/crawler-configuration.html">Configuring a Crawler</a>.
+     *        href="https://docs.aws.amazon.com/glue/latest/dg/crawler-configuration.html">Setting crawler configuration
+     *        options</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

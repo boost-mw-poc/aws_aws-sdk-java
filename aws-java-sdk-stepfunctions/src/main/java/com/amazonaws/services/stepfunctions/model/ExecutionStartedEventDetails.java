@@ -43,7 +43,7 @@ public class ExecutionStartedEventDetails implements Serializable, Cloneable, St
     private HistoryEventExecutionDataDetails inputDetails;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the IAM role used for executing AWS Lambda tasks.
+     * The Amazon Resource Name (ARN) of the IAM role used for executing Lambda tasks.
      * </p>
      */
     private String roleArn;
@@ -136,11 +136,11 @@ public class ExecutionStartedEventDetails implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the IAM role used for executing AWS Lambda tasks.
+     * The Amazon Resource Name (ARN) of the IAM role used for executing Lambda tasks.
      * </p>
      * 
      * @param roleArn
-     *        The Amazon Resource Name (ARN) of the IAM role used for executing AWS Lambda tasks.
+     *        The Amazon Resource Name (ARN) of the IAM role used for executing Lambda tasks.
      */
 
     public void setRoleArn(String roleArn) {
@@ -149,10 +149,10 @@ public class ExecutionStartedEventDetails implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the IAM role used for executing AWS Lambda tasks.
+     * The Amazon Resource Name (ARN) of the IAM role used for executing Lambda tasks.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the IAM role used for executing AWS Lambda tasks.
+     * @return The Amazon Resource Name (ARN) of the IAM role used for executing Lambda tasks.
      */
 
     public String getRoleArn() {
@@ -161,11 +161,11 @@ public class ExecutionStartedEventDetails implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the IAM role used for executing AWS Lambda tasks.
+     * The Amazon Resource Name (ARN) of the IAM role used for executing Lambda tasks.
      * </p>
      * 
      * @param roleArn
-     *        The Amazon Resource Name (ARN) of the IAM role used for executing AWS Lambda tasks.
+     *        The Amazon Resource Name (ARN) of the IAM role used for executing Lambda tasks.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

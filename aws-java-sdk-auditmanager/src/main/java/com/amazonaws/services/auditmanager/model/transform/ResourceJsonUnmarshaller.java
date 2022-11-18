@@ -56,6 +56,10 @@ public class ResourceJsonUnmarshaller implements Unmarshaller<Resource, JsonUnma
                     context.nextToken();
                     resource.setValue(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("complianceCheck", targetDepth)) {
+                    context.nextToken();
+                    resource.setComplianceCheck(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

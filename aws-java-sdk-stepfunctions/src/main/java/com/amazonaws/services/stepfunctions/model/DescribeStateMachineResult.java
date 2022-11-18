@@ -85,7 +85,7 @@ public class DescribeStateMachineResult extends com.amazonaws.AmazonWebServiceRe
     /**
      * <p>
      * The Amazon Resource Name (ARN) of the IAM role used when creating this state machine. (The IAM role maintains
-     * security by granting Step Functions access to AWS resources.)
+     * security by granting Step Functions access to Amazon Web Services resources.)
      * </p>
      */
     private String roleArn;
@@ -105,7 +105,7 @@ public class DescribeStateMachineResult extends com.amazonaws.AmazonWebServiceRe
     private LoggingConfiguration loggingConfiguration;
     /**
      * <p>
-     * Selects whether AWS X-Ray tracing is enabled.
+     * Selects whether X-Ray tracing is enabled.
      * </p>
      */
     private TracingConfiguration tracingConfiguration;
@@ -513,12 +513,12 @@ public class DescribeStateMachineResult extends com.amazonaws.AmazonWebServiceRe
     /**
      * <p>
      * The Amazon Resource Name (ARN) of the IAM role used when creating this state machine. (The IAM role maintains
-     * security by granting Step Functions access to AWS resources.)
+     * security by granting Step Functions access to Amazon Web Services resources.)
      * </p>
      * 
      * @param roleArn
      *        The Amazon Resource Name (ARN) of the IAM role used when creating this state machine. (The IAM role
-     *        maintains security by granting Step Functions access to AWS resources.)
+     *        maintains security by granting Step Functions access to Amazon Web Services resources.)
      */
 
     public void setRoleArn(String roleArn) {
@@ -528,11 +528,11 @@ public class DescribeStateMachineResult extends com.amazonaws.AmazonWebServiceRe
     /**
      * <p>
      * The Amazon Resource Name (ARN) of the IAM role used when creating this state machine. (The IAM role maintains
-     * security by granting Step Functions access to AWS resources.)
+     * security by granting Step Functions access to Amazon Web Services resources.)
      * </p>
      * 
      * @return The Amazon Resource Name (ARN) of the IAM role used when creating this state machine. (The IAM role
-     *         maintains security by granting Step Functions access to AWS resources.)
+     *         maintains security by granting Step Functions access to Amazon Web Services resources.)
      */
 
     public String getRoleArn() {
@@ -542,12 +542,12 @@ public class DescribeStateMachineResult extends com.amazonaws.AmazonWebServiceRe
     /**
      * <p>
      * The Amazon Resource Name (ARN) of the IAM role used when creating this state machine. (The IAM role maintains
-     * security by granting Step Functions access to AWS resources.)
+     * security by granting Step Functions access to Amazon Web Services resources.)
      * </p>
      * 
      * @param roleArn
      *        The Amazon Resource Name (ARN) of the IAM role used when creating this state machine. (The IAM role
-     *        maintains security by granting Step Functions access to AWS resources.)
+     *        maintains security by granting Step Functions access to Amazon Web Services resources.)
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -697,11 +697,11 @@ public class DescribeStateMachineResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * Selects whether AWS X-Ray tracing is enabled.
+     * Selects whether X-Ray tracing is enabled.
      * </p>
      * 
      * @param tracingConfiguration
-     *        Selects whether AWS X-Ray tracing is enabled.
+     *        Selects whether X-Ray tracing is enabled.
      */
 
     public void setTracingConfiguration(TracingConfiguration tracingConfiguration) {
@@ -710,10 +710,10 @@ public class DescribeStateMachineResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * Selects whether AWS X-Ray tracing is enabled.
+     * Selects whether X-Ray tracing is enabled.
      * </p>
      * 
-     * @return Selects whether AWS X-Ray tracing is enabled.
+     * @return Selects whether X-Ray tracing is enabled.
      */
 
     public TracingConfiguration getTracingConfiguration() {
@@ -722,11 +722,11 @@ public class DescribeStateMachineResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * Selects whether AWS X-Ray tracing is enabled.
+     * Selects whether X-Ray tracing is enabled.
      * </p>
      * 
      * @param tracingConfiguration
-     *        Selects whether AWS X-Ray tracing is enabled.
+     *        Selects whether X-Ray tracing is enabled.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

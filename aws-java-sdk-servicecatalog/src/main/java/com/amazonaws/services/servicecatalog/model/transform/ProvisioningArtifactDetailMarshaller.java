@@ -41,6 +41,8 @@ public class ProvisioningArtifactDetailMarshaller {
             .marshallLocationName("Active").build();
     private static final MarshallingInfo<String> GUIDANCE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Guidance").build();
+    private static final MarshallingInfo<String> SOURCEREVISION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SourceRevision").build();
 
     private static final ProvisioningArtifactDetailMarshaller instance = new ProvisioningArtifactDetailMarshaller();
 
@@ -65,6 +67,7 @@ public class ProvisioningArtifactDetailMarshaller {
             protocolMarshaller.marshall(provisioningArtifactDetail.getCreatedTime(), CREATEDTIME_BINDING);
             protocolMarshaller.marshall(provisioningArtifactDetail.getActive(), ACTIVE_BINDING);
             protocolMarshaller.marshall(provisioningArtifactDetail.getGuidance(), GUIDANCE_BINDING);
+            protocolMarshaller.marshall(provisioningArtifactDetail.getSourceRevision(), SOURCEREVISION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

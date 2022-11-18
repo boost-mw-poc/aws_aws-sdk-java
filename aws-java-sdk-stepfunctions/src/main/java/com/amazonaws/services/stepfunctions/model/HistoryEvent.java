@@ -170,7 +170,7 @@ public class HistoryEvent implements Serializable, Cloneable, StructuredPojo {
     private LambdaFunctionStartFailedEventDetails lambdaFunctionStartFailedEventDetails;
     /**
      * <p>
-     * Contains details about a lambda function that terminated successfully during an execution.
+     * Contains details about a Lambda function that terminated successfully during an execution.
      * </p>
      */
     private LambdaFunctionSucceededEventDetails lambdaFunctionSucceededEventDetails;
@@ -1314,11 +1314,11 @@ public class HistoryEvent implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Contains details about a lambda function that terminated successfully during an execution.
+     * Contains details about a Lambda function that terminated successfully during an execution.
      * </p>
      * 
      * @param lambdaFunctionSucceededEventDetails
-     *        Contains details about a lambda function that terminated successfully during an execution.
+     *        Contains details about a Lambda function that terminated successfully during an execution.
      */
 
     public void setLambdaFunctionSucceededEventDetails(LambdaFunctionSucceededEventDetails lambdaFunctionSucceededEventDetails) {
@@ -1327,10 +1327,10 @@ public class HistoryEvent implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Contains details about a lambda function that terminated successfully during an execution.
+     * Contains details about a Lambda function that terminated successfully during an execution.
      * </p>
      * 
-     * @return Contains details about a lambda function that terminated successfully during an execution.
+     * @return Contains details about a Lambda function that terminated successfully during an execution.
      */
 
     public LambdaFunctionSucceededEventDetails getLambdaFunctionSucceededEventDetails() {
@@ -1339,11 +1339,11 @@ public class HistoryEvent implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Contains details about a lambda function that terminated successfully during an execution.
+     * Contains details about a Lambda function that terminated successfully during an execution.
      * </p>
      * 
      * @param lambdaFunctionSucceededEventDetails
-     *        Contains details about a lambda function that terminated successfully during an execution.
+     *        Contains details about a Lambda function that terminated successfully during an execution.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

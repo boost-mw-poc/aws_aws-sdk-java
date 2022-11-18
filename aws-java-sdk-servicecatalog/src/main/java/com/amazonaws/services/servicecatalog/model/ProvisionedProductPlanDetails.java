@@ -91,7 +91,7 @@ public class ProvisionedProductPlanDetails implements Serializable, Cloneable, S
     private String status;
     /**
      * <p>
-     * The time when the plan was last updated.
+     * The UTC time stamp when the plan was last updated.
      * </p>
      */
     private java.util.Date updatedTime;
@@ -567,11 +567,11 @@ public class ProvisionedProductPlanDetails implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * The time when the plan was last updated.
+     * The UTC time stamp when the plan was last updated.
      * </p>
      * 
      * @param updatedTime
-     *        The time when the plan was last updated.
+     *        The UTC time stamp when the plan was last updated.
      */
 
     public void setUpdatedTime(java.util.Date updatedTime) {
@@ -580,10 +580,10 @@ public class ProvisionedProductPlanDetails implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * The time when the plan was last updated.
+     * The UTC time stamp when the plan was last updated.
      * </p>
      * 
-     * @return The time when the plan was last updated.
+     * @return The UTC time stamp when the plan was last updated.
      */
 
     public java.util.Date getUpdatedTime() {
@@ -592,11 +592,11 @@ public class ProvisionedProductPlanDetails implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * The time when the plan was last updated.
+     * The UTC time stamp when the plan was last updated.
      * </p>
      * 
      * @param updatedTime
-     *        The time when the plan was last updated.
+     *        The UTC time stamp when the plan was last updated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

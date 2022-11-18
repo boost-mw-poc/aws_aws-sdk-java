@@ -64,6 +64,10 @@ public class PortfolioShareDetailJsonUnmarshaller implements Unmarshaller<Portfo
                     context.nextToken();
                     portfolioShareDetail.setShareTagOptions(context.getUnmarshaller(Boolean.class).unmarshall(context));
                 }
+                if (context.testExpression("SharePrincipals", targetDepth)) {
+                    context.nextToken();
+                    portfolioShareDetail.setSharePrincipals(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

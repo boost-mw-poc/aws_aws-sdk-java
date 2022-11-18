@@ -12,7 +12,10 @@
  */
 
 /**
- * <p/>
+ * <p>
+ * This API reference provides descriptions, syntax, and other details about each of the actions and data types for AWS
+ * Systems Manager for SAP. The topic for each action shows the API request parameters and responses.
+ * </p>
  */
 package com.amazonaws.services.ssmsap;
 

@@ -36,6 +36,8 @@ public class UpdateSettingsRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("defaultProcessOwners").build();
     private static final MarshallingInfo<String> KMSKEY_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("kmsKey").build();
+    private static final MarshallingInfo<Boolean> EVIDENCEFINDERENABLED_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("evidenceFinderEnabled").build();
 
     private static final UpdateSettingsRequestMarshaller instance = new UpdateSettingsRequestMarshaller();
 
@@ -57,6 +59,7 @@ public class UpdateSettingsRequestMarshaller {
             protocolMarshaller.marshall(updateSettingsRequest.getDefaultAssessmentReportsDestination(), DEFAULTASSESSMENTREPORTSDESTINATION_BINDING);
             protocolMarshaller.marshall(updateSettingsRequest.getDefaultProcessOwners(), DEFAULTPROCESSOWNERS_BINDING);
             protocolMarshaller.marshall(updateSettingsRequest.getKmsKey(), KMSKEY_BINDING);
+            protocolMarshaller.marshall(updateSettingsRequest.getEvidenceFinderEnabled(), EVIDENCEFINDERENABLED_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

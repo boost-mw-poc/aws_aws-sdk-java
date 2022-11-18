@@ -20,7 +20,8 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public enum FilterOperator {
 
-    StringEquals("StringEquals");
+    StringEquals("StringEquals"),
+    StringLike("StringLike");
 
     private String value;
 

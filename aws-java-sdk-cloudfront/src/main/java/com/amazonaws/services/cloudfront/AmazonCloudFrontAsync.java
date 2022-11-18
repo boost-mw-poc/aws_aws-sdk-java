@@ -92,6 +92,51 @@ public interface AmazonCloudFrontAsync extends AmazonCloudFront {
 
     /**
      * <p>
+     * Creates a staging distribution using the configuration of the provided primary distribution. A staging
+     * distribution is a copy of an existing distribution (called the primary distribution) that you can use in a
+     * continuous deployment workflow.
+     * </p>
+     * <p>
+     * After you create a staging distribution, you can use <code>UpdateDistribution</code> to modify the staging
+     * distribution’s configuration. Then you can use <code>CreateContinuousDeploymentPolicy</code> to incrementally
+     * move traffic to the staging distribution.
+     * </p>
+     * 
+     * @param copyDistributionRequest
+     * @return A Java Future containing the result of the CopyDistribution operation returned by the service.
+     * @sample AmazonCloudFrontAsync.CopyDistribution
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/CopyDistribution" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<CopyDistributionResult> copyDistributionAsync(CopyDistributionRequest copyDistributionRequest);
+
+    /**
+     * <p>
+     * Creates a staging distribution using the configuration of the provided primary distribution. A staging
+     * distribution is a copy of an existing distribution (called the primary distribution) that you can use in a
+     * continuous deployment workflow.
+     * </p>
+     * <p>
+     * After you create a staging distribution, you can use <code>UpdateDistribution</code> to modify the staging
+     * distribution’s configuration. Then you can use <code>CreateContinuousDeploymentPolicy</code> to incrementally
+     * move traffic to the staging distribution.
+     * </p>
+     * 
+     * @param copyDistributionRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CopyDistribution operation returned by the service.
+     * @sample AmazonCloudFrontAsyncHandler.CopyDistribution
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/CopyDistribution" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<CopyDistributionResult> copyDistributionAsync(CopyDistributionRequest copyDistributionRequest,
+            com.amazonaws.handlers.AsyncHandler<CopyDistributionRequest, CopyDistributionResult> asyncHandler);
+
+    /**
+     * <p>
      * Creates a cache policy.
      * </p>
      * <p>
@@ -236,23 +281,63 @@ public interface AmazonCloudFrontAsync extends AmazonCloudFront {
 
     /**
      * <p>
-     * Creates a new web distribution. You create a CloudFront distribution to tell CloudFront where you want content to
-     * be delivered from, and the details about how to track and manage content delivery. Send a <code>POST</code>
-     * request to the <code>/<i>CloudFront API version</i>/distribution</code>/<code>distribution ID</code> resource.
+     * Creates a continuous deployment policy that distributes traffic for a custom domain name to two different
+     * CloudFront distributions.
      * </p>
-     * <important>
      * <p>
-     * When you update a distribution, there are more required fields than when you create a distribution. When you
-     * update your distribution by using <a
-     * href="https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_UpdateDistribution.html"
-     * >UpdateDistribution</a>, follow the steps included in the documentation to get the current configuration and then
-     * make your updates. This helps to make sure that you include all of the required fields. To view a summary, see <a
-     * href
-     * ="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-overview-required-fields.html"
-     * >Required Fields for Create Distribution and Update Distribution</a> in the <i>Amazon CloudFront Developer
-     * Guide</i>.
+     * To use a continuous deployment policy, first use <code>CopyDistribution</code> to create a staging distribution,
+     * then use <code>UpdateDistribution</code> to modify the staging distribution’s configuration.
      * </p>
-     * </important>
+     * <p>
+     * After you create and update a staging distribution, you can use a continuous deployment policy to incrementally
+     * move traffic to the staging distribution. This workflow enables you to test changes to a distribution’s
+     * configuration before moving all of your domain’s production traffic to the new configuration.
+     * </p>
+     * 
+     * @param createContinuousDeploymentPolicyRequest
+     * @return A Java Future containing the result of the CreateContinuousDeploymentPolicy operation returned by the
+     *         service.
+     * @sample AmazonCloudFrontAsync.CreateContinuousDeploymentPolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/CreateContinuousDeploymentPolicy"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateContinuousDeploymentPolicyResult> createContinuousDeploymentPolicyAsync(
+            CreateContinuousDeploymentPolicyRequest createContinuousDeploymentPolicyRequest);
+
+    /**
+     * <p>
+     * Creates a continuous deployment policy that distributes traffic for a custom domain name to two different
+     * CloudFront distributions.
+     * </p>
+     * <p>
+     * To use a continuous deployment policy, first use <code>CopyDistribution</code> to create a staging distribution,
+     * then use <code>UpdateDistribution</code> to modify the staging distribution’s configuration.
+     * </p>
+     * <p>
+     * After you create and update a staging distribution, you can use a continuous deployment policy to incrementally
+     * move traffic to the staging distribution. This workflow enables you to test changes to a distribution’s
+     * configuration before moving all of your domain’s production traffic to the new configuration.
+     * </p>
+     * 
+     * @param createContinuousDeploymentPolicyRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateContinuousDeploymentPolicy operation returned by the
+     *         service.
+     * @sample AmazonCloudFrontAsyncHandler.CreateContinuousDeploymentPolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/CreateContinuousDeploymentPolicy"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateContinuousDeploymentPolicyResult> createContinuousDeploymentPolicyAsync(
+            CreateContinuousDeploymentPolicyRequest createContinuousDeploymentPolicyRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateContinuousDeploymentPolicyRequest, CreateContinuousDeploymentPolicyResult> asyncHandler);
+
+    /**
+     * <p>
+     * Creates a CloudFront distribution.
+     * </p>
      * 
      * @param createDistributionRequest
      *        The request to create a new distribution.
@@ -265,23 +350,8 @@ public interface AmazonCloudFrontAsync extends AmazonCloudFront {
 
     /**
      * <p>
-     * Creates a new web distribution. You create a CloudFront distribution to tell CloudFront where you want content to
-     * be delivered from, and the details about how to track and manage content delivery. Send a <code>POST</code>
-     * request to the <code>/<i>CloudFront API version</i>/distribution</code>/<code>distribution ID</code> resource.
+     * Creates a CloudFront distribution.
      * </p>
-     * <important>
-     * <p>
-     * When you update a distribution, there are more required fields than when you create a distribution. When you
-     * update your distribution by using <a
-     * href="https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_UpdateDistribution.html"
-     * >UpdateDistribution</a>, follow the steps included in the documentation to get the current configuration and then
-     * make your updates. This helps to make sure that you include all of the required fields. To view a summary, see <a
-     * href
-     * ="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-overview-required-fields.html"
-     * >Required Fields for Create Distribution and Update Distribution</a> in the <i>Amazon CloudFront Developer
-     * Guide</i>.
-     * </p>
-     * </important>
      * 
      * @param createDistributionRequest
      *        The request to create a new distribution.
@@ -1052,6 +1122,49 @@ public interface AmazonCloudFrontAsync extends AmazonCloudFront {
     java.util.concurrent.Future<DeleteCloudFrontOriginAccessIdentityResult> deleteCloudFrontOriginAccessIdentityAsync(
             DeleteCloudFrontOriginAccessIdentityRequest deleteCloudFrontOriginAccessIdentityRequest,
             com.amazonaws.handlers.AsyncHandler<DeleteCloudFrontOriginAccessIdentityRequest, DeleteCloudFrontOriginAccessIdentityResult> asyncHandler);
+
+    /**
+     * <p>
+     * Deletes a continuous deployment policy.
+     * </p>
+     * <p>
+     * You cannot delete a continuous deployment policy that’s attached to a primary distribution. First update your
+     * distribution to remove the continuous deployment policy, then you can delete the policy.
+     * </p>
+     * 
+     * @param deleteContinuousDeploymentPolicyRequest
+     * @return A Java Future containing the result of the DeleteContinuousDeploymentPolicy operation returned by the
+     *         service.
+     * @sample AmazonCloudFrontAsync.DeleteContinuousDeploymentPolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/DeleteContinuousDeploymentPolicy"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteContinuousDeploymentPolicyResult> deleteContinuousDeploymentPolicyAsync(
+            DeleteContinuousDeploymentPolicyRequest deleteContinuousDeploymentPolicyRequest);
+
+    /**
+     * <p>
+     * Deletes a continuous deployment policy.
+     * </p>
+     * <p>
+     * You cannot delete a continuous deployment policy that’s attached to a primary distribution. First update your
+     * distribution to remove the continuous deployment policy, then you can delete the policy.
+     * </p>
+     * 
+     * @param deleteContinuousDeploymentPolicyRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteContinuousDeploymentPolicy operation returned by the
+     *         service.
+     * @sample AmazonCloudFrontAsyncHandler.DeleteContinuousDeploymentPolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/DeleteContinuousDeploymentPolicy"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteContinuousDeploymentPolicyResult> deleteContinuousDeploymentPolicyAsync(
+            DeleteContinuousDeploymentPolicyRequest deleteContinuousDeploymentPolicyRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteContinuousDeploymentPolicyRequest, DeleteContinuousDeploymentPolicyResult> asyncHandler);
 
     /**
      * <p>
@@ -2015,6 +2128,78 @@ public interface AmazonCloudFrontAsync extends AmazonCloudFront {
     java.util.concurrent.Future<GetCloudFrontOriginAccessIdentityConfigResult> getCloudFrontOriginAccessIdentityConfigAsync(
             GetCloudFrontOriginAccessIdentityConfigRequest getCloudFrontOriginAccessIdentityConfigRequest,
             com.amazonaws.handlers.AsyncHandler<GetCloudFrontOriginAccessIdentityConfigRequest, GetCloudFrontOriginAccessIdentityConfigResult> asyncHandler);
+
+    /**
+     * <p>
+     * Gets a continuous deployment policy, including metadata (the policy’s identifier and the date and time when the
+     * policy was last modified).
+     * </p>
+     * 
+     * @param getContinuousDeploymentPolicyRequest
+     * @return A Java Future containing the result of the GetContinuousDeploymentPolicy operation returned by the
+     *         service.
+     * @sample AmazonCloudFrontAsync.GetContinuousDeploymentPolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/GetContinuousDeploymentPolicy"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetContinuousDeploymentPolicyResult> getContinuousDeploymentPolicyAsync(
+            GetContinuousDeploymentPolicyRequest getContinuousDeploymentPolicyRequest);
+
+    /**
+     * <p>
+     * Gets a continuous deployment policy, including metadata (the policy’s identifier and the date and time when the
+     * policy was last modified).
+     * </p>
+     * 
+     * @param getContinuousDeploymentPolicyRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetContinuousDeploymentPolicy operation returned by the
+     *         service.
+     * @sample AmazonCloudFrontAsyncHandler.GetContinuousDeploymentPolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/GetContinuousDeploymentPolicy"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetContinuousDeploymentPolicyResult> getContinuousDeploymentPolicyAsync(
+            GetContinuousDeploymentPolicyRequest getContinuousDeploymentPolicyRequest,
+            com.amazonaws.handlers.AsyncHandler<GetContinuousDeploymentPolicyRequest, GetContinuousDeploymentPolicyResult> asyncHandler);
+
+    /**
+     * <p>
+     * Gets configuration information about a continuous deployment policy.
+     * </p>
+     * 
+     * @param getContinuousDeploymentPolicyConfigRequest
+     * @return A Java Future containing the result of the GetContinuousDeploymentPolicyConfig operation returned by the
+     *         service.
+     * @sample AmazonCloudFrontAsync.GetContinuousDeploymentPolicyConfig
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/GetContinuousDeploymentPolicyConfig"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetContinuousDeploymentPolicyConfigResult> getContinuousDeploymentPolicyConfigAsync(
+            GetContinuousDeploymentPolicyConfigRequest getContinuousDeploymentPolicyConfigRequest);
+
+    /**
+     * <p>
+     * Gets configuration information about a continuous deployment policy.
+     * </p>
+     * 
+     * @param getContinuousDeploymentPolicyConfigRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetContinuousDeploymentPolicyConfig operation returned by the
+     *         service.
+     * @sample AmazonCloudFrontAsyncHandler.GetContinuousDeploymentPolicyConfig
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/GetContinuousDeploymentPolicyConfig"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetContinuousDeploymentPolicyConfigResult> getContinuousDeploymentPolicyConfigAsync(
+            GetContinuousDeploymentPolicyConfigRequest getContinuousDeploymentPolicyConfigRequest,
+            com.amazonaws.handlers.AsyncHandler<GetContinuousDeploymentPolicyConfigRequest, GetContinuousDeploymentPolicyConfigResult> asyncHandler);
 
     /**
      * <p>
@@ -3026,6 +3211,53 @@ public interface AmazonCloudFrontAsync extends AmazonCloudFront {
      */
     java.util.concurrent.Future<ListConflictingAliasesResult> listConflictingAliasesAsync(ListConflictingAliasesRequest listConflictingAliasesRequest,
             com.amazonaws.handlers.AsyncHandler<ListConflictingAliasesRequest, ListConflictingAliasesResult> asyncHandler);
+
+    /**
+     * <p>
+     * Gets a list of the continuous deployment policies in your Amazon Web Services account.
+     * </p>
+     * <p>
+     * You can optionally specify the maximum number of items to receive in the response. If the total number of items
+     * in the list exceeds the maximum that you specify, or the default maximum, the response is paginated. To get the
+     * next page of items, send a subsequent request that specifies the <code>NextMarker</code> value from the current
+     * response as the <code>Marker</code> value in the subsequent request.
+     * </p>
+     * 
+     * @param listContinuousDeploymentPoliciesRequest
+     * @return A Java Future containing the result of the ListContinuousDeploymentPolicies operation returned by the
+     *         service.
+     * @sample AmazonCloudFrontAsync.ListContinuousDeploymentPolicies
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/ListContinuousDeploymentPolicies"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListContinuousDeploymentPoliciesResult> listContinuousDeploymentPoliciesAsync(
+            ListContinuousDeploymentPoliciesRequest listContinuousDeploymentPoliciesRequest);
+
+    /**
+     * <p>
+     * Gets a list of the continuous deployment policies in your Amazon Web Services account.
+     * </p>
+     * <p>
+     * You can optionally specify the maximum number of items to receive in the response. If the total number of items
+     * in the list exceeds the maximum that you specify, or the default maximum, the response is paginated. To get the
+     * next page of items, send a subsequent request that specifies the <code>NextMarker</code> value from the current
+     * response as the <code>Marker</code> value in the subsequent request.
+     * </p>
+     * 
+     * @param listContinuousDeploymentPoliciesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListContinuousDeploymentPolicies operation returned by the
+     *         service.
+     * @sample AmazonCloudFrontAsyncHandler.ListContinuousDeploymentPolicies
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/ListContinuousDeploymentPolicies"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListContinuousDeploymentPoliciesResult> listContinuousDeploymentPoliciesAsync(
+            ListContinuousDeploymentPoliciesRequest listContinuousDeploymentPoliciesRequest,
+            com.amazonaws.handlers.AsyncHandler<ListContinuousDeploymentPoliciesRequest, ListContinuousDeploymentPoliciesResult> asyncHandler);
 
     /**
      * <p>
@@ -4130,27 +4362,96 @@ public interface AmazonCloudFrontAsync extends AmazonCloudFront {
 
     /**
      * <p>
-     * Updates the configuration for a web distribution.
-     * </p>
-     * <important>
-     * <p>
-     * When you update a distribution, there are more required fields than when you create a distribution. When you
-     * update your distribution by using this API action, follow the steps here to get the current configuration and
-     * then make your updates, to make sure that you include all of the required fields. To view a summary, see <a href=
-     * "https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-overview-required-fields.html"
-     * >Required Fields for Create Distribution and Update Distribution</a> in the <i>Amazon CloudFront Developer
-     * Guide</i>.
-     * </p>
-     * </important>
-     * <p>
-     * The update process includes getting the current distribution configuration, updating the XML document that is
-     * returned to make your changes, and then submitting an <code>UpdateDistribution</code> request to make the
-     * updates.
+     * Updates a continuous deployment policy. You can update a continuous deployment policy to enable or disable it, to
+     * change the percentage of traffic that it sends to the staging distribution, or to change the staging distribution
+     * that it sends traffic to.
      * </p>
      * <p>
-     * For information about updating a distribution using the CloudFront console instead, see <a href=
-     * "https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-web-creating-console.html"
-     * >Creating a Distribution</a> in the <i>Amazon CloudFront Developer Guide</i>.
+     * When you update a continuous deployment policy configuration, all the fields are updated with the values that are
+     * provided in the request. You cannot update some fields independent of others. To update a continuous deployment
+     * policy configuration:
+     * </p>
+     * <ol>
+     * <li>
+     * <p>
+     * Use <code>GetContinuousDeploymentPolicyConfig</code> to get the current configuration.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Locally modify the fields in the continuous deployment policy configuration that you want to update.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Use <code>UpdateContinuousDeploymentPolicy</code>, providing the entire continuous deployment policy
+     * configuration, including the fields that you modified and those that you didn’t.
+     * </p>
+     * </li>
+     * </ol>
+     * 
+     * @param updateContinuousDeploymentPolicyRequest
+     * @return A Java Future containing the result of the UpdateContinuousDeploymentPolicy operation returned by the
+     *         service.
+     * @sample AmazonCloudFrontAsync.UpdateContinuousDeploymentPolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/UpdateContinuousDeploymentPolicy"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateContinuousDeploymentPolicyResult> updateContinuousDeploymentPolicyAsync(
+            UpdateContinuousDeploymentPolicyRequest updateContinuousDeploymentPolicyRequest);
+
+    /**
+     * <p>
+     * Updates a continuous deployment policy. You can update a continuous deployment policy to enable or disable it, to
+     * change the percentage of traffic that it sends to the staging distribution, or to change the staging distribution
+     * that it sends traffic to.
+     * </p>
+     * <p>
+     * When you update a continuous deployment policy configuration, all the fields are updated with the values that are
+     * provided in the request. You cannot update some fields independent of others. To update a continuous deployment
+     * policy configuration:
+     * </p>
+     * <ol>
+     * <li>
+     * <p>
+     * Use <code>GetContinuousDeploymentPolicyConfig</code> to get the current configuration.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Locally modify the fields in the continuous deployment policy configuration that you want to update.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Use <code>UpdateContinuousDeploymentPolicy</code>, providing the entire continuous deployment policy
+     * configuration, including the fields that you modified and those that you didn’t.
+     * </p>
+     * </li>
+     * </ol>
+     * 
+     * @param updateContinuousDeploymentPolicyRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateContinuousDeploymentPolicy operation returned by the
+     *         service.
+     * @sample AmazonCloudFrontAsyncHandler.UpdateContinuousDeploymentPolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/UpdateContinuousDeploymentPolicy"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateContinuousDeploymentPolicyResult> updateContinuousDeploymentPolicyAsync(
+            UpdateContinuousDeploymentPolicyRequest updateContinuousDeploymentPolicyRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateContinuousDeploymentPolicyRequest, UpdateContinuousDeploymentPolicyResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates the configuration for a CloudFront distribution.
+     * </p>
+     * <p>
+     * The update process includes getting the current distribution configuration, updating it to make your changes, and
+     * then submitting an <code>UpdateDistribution</code> request to make the updates.
      * </p>
      * <p>
      * <b>To update a web distribution using the CloudFront API</b>
@@ -4158,85 +4459,35 @@ public interface AmazonCloudFrontAsync extends AmazonCloudFront {
      * <ol>
      * <li>
      * <p>
-     * Submit a <a href="https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_GetDistributionConfig.html">
-     * GetDistributionConfig</a> request to get the current configuration and an <code>Etag</code> header for the
-     * distribution.
+     * Use <code>GetDistributionConfig</code> to get the current configuration, including the version identifier (
+     * <code>ETag</code>).
      * </p>
-     * <note>
-     * <p>
-     * If you update the distribution again, you must get a new <code>Etag</code> header.
-     * </p>
-     * </note></li>
+     * </li>
      * <li>
      * <p>
-     * Update the XML document that was returned in the response to your <code>GetDistributionConfig</code> request to
-     * include your changes.
-     * </p>
-     * <important>
-     * <p>
-     * When you edit the XML file, be aware of the following:
+     * Update the distribution configuration that was returned in the response. Note the following important
+     * requirements and restrictions:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * You must strip out the ETag parameter that is returned.
+     * You must rename the <code>ETag</code> field to <code>IfMatch</code>, leaving the value unchanged. (Set the value
+     * of <code>IfMatch</code> to the value of <code>ETag</code>, then remove the <code>ETag</code> field.)
      * </p>
      * </li>
      * <li>
      * <p>
-     * Additional fields are required when you update a distribution. There may be fields included in the XML file for
-     * features that you haven't configured for your distribution. This is expected and required to successfully update
-     * the distribution.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * You can't change the value of <code>CallerReference</code>. If you try to change this value, CloudFront returns
-     * an <code>IllegalUpdate</code> error.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * The new configuration replaces the existing configuration; the values that you specify in an
-     * <code>UpdateDistribution</code> request are not merged into your existing configuration. When you add, delete, or
-     * replace values in an element that allows multiple values (for example, <code>CNAME</code>), you must specify all
-     * of the values that you want to appear in the updated distribution. In addition, you must update the corresponding
-     * <code>Quantity</code> element.
-     * </p>
-     * </li>
-     * </ul>
-     * </important></li>
-     * <li>
-     * <p>
-     * Submit an <code>UpdateDistribution</code> request to update the configuration for your distribution:
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * In the request body, include the XML document that you updated in Step 2. The request body must include an XML
-     * document with a <code>DistributionConfig</code> element.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * Set the value of the HTTP <code>If-Match</code> header to the value of the <code>ETag</code> header that
-     * CloudFront returned when you submitted the <code>GetDistributionConfig</code> request in Step 1.
+     * You can’t change the value of <code>CallerReference</code>.
      * </p>
      * </li>
      * </ul>
      * </li>
      * <li>
      * <p>
-     * Review the response to the <code>UpdateDistribution</code> request to confirm that the configuration was
-     * successfully updated.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * Optional: Submit a <a
-     * href="https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_GetDistribution.html">GetDistribution</a>
-     * request to confirm that your changes have propagated. When propagation is complete, the value of
-     * <code>Status</code> is <code>Deployed</code>.
+     * Submit an <code>UpdateDistribution</code> request, providing the distribution configuration. The new
+     * configuration replaces the existing configuration. The values that you specify in an
+     * <code>UpdateDistribution</code> request are not merged into your existing configuration. Make sure to include all
+     * fields: the ones that you modified and also the ones that you didn’t.
      * </p>
      * </li>
      * </ol>
@@ -4252,27 +4503,11 @@ public interface AmazonCloudFrontAsync extends AmazonCloudFront {
 
     /**
      * <p>
-     * Updates the configuration for a web distribution.
-     * </p>
-     * <important>
-     * <p>
-     * When you update a distribution, there are more required fields than when you create a distribution. When you
-     * update your distribution by using this API action, follow the steps here to get the current configuration and
-     * then make your updates, to make sure that you include all of the required fields. To view a summary, see <a href=
-     * "https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-overview-required-fields.html"
-     * >Required Fields for Create Distribution and Update Distribution</a> in the <i>Amazon CloudFront Developer
-     * Guide</i>.
-     * </p>
-     * </important>
-     * <p>
-     * The update process includes getting the current distribution configuration, updating the XML document that is
-     * returned to make your changes, and then submitting an <code>UpdateDistribution</code> request to make the
-     * updates.
+     * Updates the configuration for a CloudFront distribution.
      * </p>
      * <p>
-     * For information about updating a distribution using the CloudFront console instead, see <a href=
-     * "https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-web-creating-console.html"
-     * >Creating a Distribution</a> in the <i>Amazon CloudFront Developer Guide</i>.
+     * The update process includes getting the current distribution configuration, updating it to make your changes, and
+     * then submitting an <code>UpdateDistribution</code> request to make the updates.
      * </p>
      * <p>
      * <b>To update a web distribution using the CloudFront API</b>
@@ -4280,85 +4515,35 @@ public interface AmazonCloudFrontAsync extends AmazonCloudFront {
      * <ol>
      * <li>
      * <p>
-     * Submit a <a href="https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_GetDistributionConfig.html">
-     * GetDistributionConfig</a> request to get the current configuration and an <code>Etag</code> header for the
-     * distribution.
+     * Use <code>GetDistributionConfig</code> to get the current configuration, including the version identifier (
+     * <code>ETag</code>).
      * </p>
-     * <note>
-     * <p>
-     * If you update the distribution again, you must get a new <code>Etag</code> header.
-     * </p>
-     * </note></li>
+     * </li>
      * <li>
      * <p>
-     * Update the XML document that was returned in the response to your <code>GetDistributionConfig</code> request to
-     * include your changes.
-     * </p>
-     * <important>
-     * <p>
-     * When you edit the XML file, be aware of the following:
+     * Update the distribution configuration that was returned in the response. Note the following important
+     * requirements and restrictions:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * You must strip out the ETag parameter that is returned.
+     * You must rename the <code>ETag</code> field to <code>IfMatch</code>, leaving the value unchanged. (Set the value
+     * of <code>IfMatch</code> to the value of <code>ETag</code>, then remove the <code>ETag</code> field.)
      * </p>
      * </li>
      * <li>
      * <p>
-     * Additional fields are required when you update a distribution. There may be fields included in the XML file for
-     * features that you haven't configured for your distribution. This is expected and required to successfully update
-     * the distribution.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * You can't change the value of <code>CallerReference</code>. If you try to change this value, CloudFront returns
-     * an <code>IllegalUpdate</code> error.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * The new configuration replaces the existing configuration; the values that you specify in an
-     * <code>UpdateDistribution</code> request are not merged into your existing configuration. When you add, delete, or
-     * replace values in an element that allows multiple values (for example, <code>CNAME</code>), you must specify all
-     * of the values that you want to appear in the updated distribution. In addition, you must update the corresponding
-     * <code>Quantity</code> element.
-     * </p>
-     * </li>
-     * </ul>
-     * </important></li>
-     * <li>
-     * <p>
-     * Submit an <code>UpdateDistribution</code> request to update the configuration for your distribution:
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * In the request body, include the XML document that you updated in Step 2. The request body must include an XML
-     * document with a <code>DistributionConfig</code> element.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * Set the value of the HTTP <code>If-Match</code> header to the value of the <code>ETag</code> header that
-     * CloudFront returned when you submitted the <code>GetDistributionConfig</code> request in Step 1.
+     * You can’t change the value of <code>CallerReference</code>.
      * </p>
      * </li>
      * </ul>
      * </li>
      * <li>
      * <p>
-     * Review the response to the <code>UpdateDistribution</code> request to confirm that the configuration was
-     * successfully updated.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * Optional: Submit a <a
-     * href="https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_GetDistribution.html">GetDistribution</a>
-     * request to confirm that your changes have propagated. When propagation is complete, the value of
-     * <code>Status</code> is <code>Deployed</code>.
+     * Submit an <code>UpdateDistribution</code> request, providing the distribution configuration. The new
+     * configuration replaces the existing configuration. The values that you specify in an
+     * <code>UpdateDistribution</code> request are not merged into your existing configuration. Make sure to include all
+     * fields: the ones that you modified and also the ones that you didn’t.
      * </p>
      * </li>
      * </ol>

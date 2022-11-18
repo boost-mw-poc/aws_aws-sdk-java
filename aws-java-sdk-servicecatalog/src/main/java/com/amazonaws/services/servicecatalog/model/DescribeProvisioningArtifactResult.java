@@ -31,7 +31,7 @@ public class DescribeProvisioningArtifactResult extends com.amazonaws.AmazonWebS
     private ProvisioningArtifactDetail provisioningArtifactDetail;
     /**
      * <p>
-     * The URL of the CloudFormation template in Amazon S3, Amazon Web Services CodeCommit, or GitHub in JSON format.
+     * The URL of the CloudFormation template in Amazon S3 or GitHub in JSON format.
      * </p>
      */
     private java.util.Map<String, String> info;
@@ -84,11 +84,10 @@ public class DescribeProvisioningArtifactResult extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The URL of the CloudFormation template in Amazon S3, Amazon Web Services CodeCommit, or GitHub in JSON format.
+     * The URL of the CloudFormation template in Amazon S3 or GitHub in JSON format.
      * </p>
      * 
-     * @return The URL of the CloudFormation template in Amazon S3, Amazon Web Services CodeCommit, or GitHub in JSON
-     *         format.
+     * @return The URL of the CloudFormation template in Amazon S3 or GitHub in JSON format.
      */
 
     public java.util.Map<String, String> getInfo() {
@@ -97,12 +96,11 @@ public class DescribeProvisioningArtifactResult extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The URL of the CloudFormation template in Amazon S3, Amazon Web Services CodeCommit, or GitHub in JSON format.
+     * The URL of the CloudFormation template in Amazon S3 or GitHub in JSON format.
      * </p>
      * 
      * @param info
-     *        The URL of the CloudFormation template in Amazon S3, Amazon Web Services CodeCommit, or GitHub in JSON
-     *        format.
+     *        The URL of the CloudFormation template in Amazon S3 or GitHub in JSON format.
      */
 
     public void setInfo(java.util.Map<String, String> info) {
@@ -111,12 +109,11 @@ public class DescribeProvisioningArtifactResult extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The URL of the CloudFormation template in Amazon S3, Amazon Web Services CodeCommit, or GitHub in JSON format.
+     * The URL of the CloudFormation template in Amazon S3 or GitHub in JSON format.
      * </p>
      * 
      * @param info
-     *        The URL of the CloudFormation template in Amazon S3, Amazon Web Services CodeCommit, or GitHub in JSON
-     *        format.
+     *        The URL of the CloudFormation template in Amazon S3 or GitHub in JSON format.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

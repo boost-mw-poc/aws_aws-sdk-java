@@ -53,6 +53,12 @@ public class ProfilerConfig implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private java.util.Map<String, String> profilingParameters;
+    /**
+     * <p>
+     * To disable system monitoring and profiling, set to <code>True</code>.
+     * </p>
+     */
+    private Boolean disableProfiler;
 
     /**
      * <p>
@@ -245,6 +251,58 @@ public class ProfilerConfig implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * To disable system monitoring and profiling, set to <code>True</code>.
+     * </p>
+     * 
+     * @param disableProfiler
+     *        To disable system monitoring and profiling, set to <code>True</code>.
+     */
+
+    public void setDisableProfiler(Boolean disableProfiler) {
+        this.disableProfiler = disableProfiler;
+    }
+
+    /**
+     * <p>
+     * To disable system monitoring and profiling, set to <code>True</code>.
+     * </p>
+     * 
+     * @return To disable system monitoring and profiling, set to <code>True</code>.
+     */
+
+    public Boolean getDisableProfiler() {
+        return this.disableProfiler;
+    }
+
+    /**
+     * <p>
+     * To disable system monitoring and profiling, set to <code>True</code>.
+     * </p>
+     * 
+     * @param disableProfiler
+     *        To disable system monitoring and profiling, set to <code>True</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ProfilerConfig withDisableProfiler(Boolean disableProfiler) {
+        setDisableProfiler(disableProfiler);
+        return this;
+    }
+
+    /**
+     * <p>
+     * To disable system monitoring and profiling, set to <code>True</code>.
+     * </p>
+     * 
+     * @return To disable system monitoring and profiling, set to <code>True</code>.
+     */
+
+    public Boolean isDisableProfiler() {
+        return this.disableProfiler;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -261,7 +319,9 @@ public class ProfilerConfig implements Serializable, Cloneable, StructuredPojo {
         if (getProfilingIntervalInMilliseconds() != null)
             sb.append("ProfilingIntervalInMilliseconds: ").append(getProfilingIntervalInMilliseconds()).append(",");
         if (getProfilingParameters() != null)
-            sb.append("ProfilingParameters: ").append(getProfilingParameters());
+            sb.append("ProfilingParameters: ").append(getProfilingParameters()).append(",");
+        if (getDisableProfiler() != null)
+            sb.append("DisableProfiler: ").append(getDisableProfiler());
         sb.append("}");
         return sb.toString();
     }
@@ -289,6 +349,10 @@ public class ProfilerConfig implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getProfilingParameters() != null && other.getProfilingParameters().equals(this.getProfilingParameters()) == false)
             return false;
+        if (other.getDisableProfiler() == null ^ this.getDisableProfiler() == null)
+            return false;
+        if (other.getDisableProfiler() != null && other.getDisableProfiler().equals(this.getDisableProfiler()) == false)
+            return false;
         return true;
     }
 
@@ -300,6 +364,7 @@ public class ProfilerConfig implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getS3OutputPath() == null) ? 0 : getS3OutputPath().hashCode());
         hashCode = prime * hashCode + ((getProfilingIntervalInMilliseconds() == null) ? 0 : getProfilingIntervalInMilliseconds().hashCode());
         hashCode = prime * hashCode + ((getProfilingParameters() == null) ? 0 : getProfilingParameters().hashCode());
+        hashCode = prime * hashCode + ((getDisableProfiler() == null) ? 0 : getDisableProfiler().hashCode());
         return hashCode;
     }
 

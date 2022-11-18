@@ -44,7 +44,8 @@ public enum DataSourceType {
     TWITTER("TWITTER"),
     TIMESTREAM("TIMESTREAM"),
     AMAZON_OPENSEARCH("AMAZON_OPENSEARCH"),
-    EXASOL("EXASOL");
+    EXASOL("EXASOL"),
+    DATABRICKS("DATABRICKS");
 
     private String value;
 

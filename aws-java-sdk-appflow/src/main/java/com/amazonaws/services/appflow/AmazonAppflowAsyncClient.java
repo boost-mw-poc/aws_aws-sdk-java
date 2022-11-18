@@ -814,6 +814,39 @@ public class AmazonAppflowAsyncClient extends AmazonAppflowClient implements Ama
     }
 
     @Override
+    public java.util.concurrent.Future<UpdateConnectorRegistrationResult> updateConnectorRegistrationAsync(UpdateConnectorRegistrationRequest request) {
+
+        return updateConnectorRegistrationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateConnectorRegistrationResult> updateConnectorRegistrationAsync(final UpdateConnectorRegistrationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateConnectorRegistrationRequest, UpdateConnectorRegistrationResult> asyncHandler) {
+        final UpdateConnectorRegistrationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateConnectorRegistrationResult>() {
+            @Override
+            public UpdateConnectorRegistrationResult call() throws Exception {
+                UpdateConnectorRegistrationResult result = null;
+
+                try {
+                    result = executeUpdateConnectorRegistration(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<UpdateFlowResult> updateFlowAsync(UpdateFlowRequest request) {
 
         return updateFlowAsync(request, null);

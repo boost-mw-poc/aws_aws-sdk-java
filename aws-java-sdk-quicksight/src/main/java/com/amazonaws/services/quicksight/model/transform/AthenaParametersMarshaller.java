@@ -29,6 +29,8 @@ public class AthenaParametersMarshaller {
 
     private static final MarshallingInfo<String> WORKGROUP_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("WorkGroup").build();
+    private static final MarshallingInfo<String> ROLEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("RoleArn").build();
 
     private static final AthenaParametersMarshaller instance = new AthenaParametersMarshaller();
 
@@ -47,6 +49,7 @@ public class AthenaParametersMarshaller {
 
         try {
             protocolMarshaller.marshall(athenaParameters.getWorkGroup(), WORKGROUP_BINDING);
+            protocolMarshaller.marshall(athenaParameters.getRoleArn(), ROLEARN_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

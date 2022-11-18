@@ -20,7 +20,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 /**
  * <p/>
  * 
- * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssmsap-2018-05-10/Host" target="_top">AWS API Documentation</a>
+ * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-sap-2018-05-10/Host" target="_top">AWS API Documentation</a>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class Host implements Serializable, Cloneable, StructuredPojo {

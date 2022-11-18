@@ -31,6 +31,8 @@ public class ResourceMarshaller {
             .marshallLocationName("arn").build();
     private static final MarshallingInfo<String> VALUE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("value").build();
+    private static final MarshallingInfo<String> COMPLIANCECHECK_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("complianceCheck").build();
 
     private static final ResourceMarshaller instance = new ResourceMarshaller();
 
@@ -50,6 +52,7 @@ public class ResourceMarshaller {
         try {
             protocolMarshaller.marshall(resource.getArn(), ARN_BINDING);
             protocolMarshaller.marshall(resource.getValue(), VALUE_BINDING);
+            protocolMarshaller.marshall(resource.getComplianceCheck(), COMPLIANCECHECK_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

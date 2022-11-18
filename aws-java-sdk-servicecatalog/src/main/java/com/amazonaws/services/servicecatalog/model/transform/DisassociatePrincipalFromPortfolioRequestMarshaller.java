@@ -33,6 +33,8 @@ public class DisassociatePrincipalFromPortfolioRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PortfolioId").build();
     private static final MarshallingInfo<String> PRINCIPALARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PrincipalARN").build();
+    private static final MarshallingInfo<String> PRINCIPALTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PrincipalType").build();
 
     private static final DisassociatePrincipalFromPortfolioRequestMarshaller instance = new DisassociatePrincipalFromPortfolioRequestMarshaller();
 
@@ -53,6 +55,7 @@ public class DisassociatePrincipalFromPortfolioRequestMarshaller {
             protocolMarshaller.marshall(disassociatePrincipalFromPortfolioRequest.getAcceptLanguage(), ACCEPTLANGUAGE_BINDING);
             protocolMarshaller.marshall(disassociatePrincipalFromPortfolioRequest.getPortfolioId(), PORTFOLIOID_BINDING);
             protocolMarshaller.marshall(disassociatePrincipalFromPortfolioRequest.getPrincipalARN(), PRINCIPALARN_BINDING);
+            protocolMarshaller.marshall(disassociatePrincipalFromPortfolioRequest.getPrincipalType(), PRINCIPALTYPE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -706,6 +706,39 @@ public class AmazonQuickSightAsyncClient extends AmazonQuickSightClient implemen
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteAccountSubscriptionResult> deleteAccountSubscriptionAsync(DeleteAccountSubscriptionRequest request) {
+
+        return deleteAccountSubscriptionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteAccountSubscriptionResult> deleteAccountSubscriptionAsync(final DeleteAccountSubscriptionRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteAccountSubscriptionRequest, DeleteAccountSubscriptionResult> asyncHandler) {
+        final DeleteAccountSubscriptionRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteAccountSubscriptionResult>() {
+            @Override
+            public DeleteAccountSubscriptionResult call() throws Exception {
+                DeleteAccountSubscriptionResult result = null;
+
+                try {
+                    result = executeDeleteAccountSubscription(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteAnalysisResult> deleteAnalysisAsync(DeleteAnalysisRequest request) {
 
         return deleteAnalysisAsync(request, null);
@@ -3108,6 +3141,72 @@ public class AmazonQuickSightAsyncClient extends AmazonQuickSightClient implemen
 
                 try {
                     result = executeSearchDashboards(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<SearchDataSetsResult> searchDataSetsAsync(SearchDataSetsRequest request) {
+
+        return searchDataSetsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<SearchDataSetsResult> searchDataSetsAsync(final SearchDataSetsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<SearchDataSetsRequest, SearchDataSetsResult> asyncHandler) {
+        final SearchDataSetsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<SearchDataSetsResult>() {
+            @Override
+            public SearchDataSetsResult call() throws Exception {
+                SearchDataSetsResult result = null;
+
+                try {
+                    result = executeSearchDataSets(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<SearchDataSourcesResult> searchDataSourcesAsync(SearchDataSourcesRequest request) {
+
+        return searchDataSourcesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<SearchDataSourcesResult> searchDataSourcesAsync(final SearchDataSourcesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<SearchDataSourcesRequest, SearchDataSourcesResult> asyncHandler) {
+        final SearchDataSourcesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<SearchDataSourcesResult>() {
+            @Override
+            public SearchDataSourcesResult call() throws Exception {
+                SearchDataSourcesResult result = null;
+
+                try {
+                    result = executeSearchDataSources(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

@@ -50,9 +50,9 @@ import com.amazonaws.services.stepfunctions.model.transform.*;
  * Client for accessing AWS SFN. All service calls made using this client are blocking, and will not return until the
  * service call completes.
  * <p>
- * <fullname>AWS Step Functions</fullname>
+ * <fullname>Step Functions</fullname>
  * <p>
- * AWS Step Functions is a service that lets you coordinate the components of distributed applications and microservices
+ * Step Functions is a service that lets you coordinate the components of distributed applications and microservices
  * using visual workflows.
  * </p>
  * <p>
@@ -64,9 +64,10 @@ import com.amazonaws.services.stepfunctions.model.transform.*;
  * </p>
  * <p>
  * Step Functions manages operations and underlying infrastructure to ensure your application is available at any scale.
- * You can run tasks on AWS, your own servers, or any system that has access to AWS. You can access and use Step
- * Functions using the console, the AWS SDKs, or an HTTP API. For more information about Step Functions, see the <i> <a
- * href="https://docs.aws.amazon.com/step-functions/latest/dg/welcome.html">AWS Step Functions Developer Guide</a> </i>.
+ * You can run tasks on Amazon Web Services, your own servers, or any system that has access to Amazon Web Services. You
+ * can access and use Step Functions using the console, the Amazon Web Services SDKs, or an HTTP API. For more
+ * information about Step Functions, see the <i> <a
+ * href="https://docs.aws.amazon.com/step-functions/latest/dg/welcome.html">Step Functions Developer Guide</a> </i>.
  * </p>
  */
 @ThreadSafe
@@ -367,10 +368,9 @@ public class AWSStepFunctionsClient extends AmazonWebServiceClient implements AW
     /**
      * <p>
      * Creates an activity. An activity is a task that you write in any programming language and host on any machine
-     * that has access to AWS Step Functions. Activities must poll Step Functions using the <code>GetActivityTask</code>
-     * API action and respond using <code>SendTask*</code> API actions. This function lets Step Functions know the
-     * existence of your activity and returns an identifier for use in a state machine and when polling from the
-     * activity.
+     * that has access to Step Functions. Activities must poll Step Functions using the <code>GetActivityTask</code> API
+     * action and respond using <code>SendTask*</code> API actions. This function lets Step Functions know the existence
+     * of your activity and returns an identifier for use in a state machine and when polling from the activity.
      * </p>
      * <note>
      * <p>
@@ -396,7 +396,7 @@ public class AWSStepFunctionsClient extends AmazonWebServiceClient implements AW
      *         The provided name is invalid.
      * @throws TooManyTagsException
      *         You've exceeded the number of tags allowed for a resource. See the <a
-     *         href="https://docs.aws.amazon.com/step-functions/latest/dg/limits.html"> Limits Topic</a> in the AWS Step
+     *         href="https://docs.aws.amazon.com/step-functions/latest/dg/limits.html"> Limits Topic</a> in the Step
      *         Functions Developer Guide.
      * @sample AWSStepFunctions.CreateActivity
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/states-2016-11-23/CreateActivity" target="_top">AWS API
@@ -453,7 +453,7 @@ public class AWSStepFunctionsClient extends AmazonWebServiceClient implements AW
      * error (<code>Fail</code> states), and so on. State machines are specified using a JSON-based, structured
      * language. For more information, see <a
      * href="https://docs.aws.amazon.com/step-functions/latest/dg/concepts-amazon-states-language.html">Amazon States
-     * Language</a> in the AWS Step Functions User Guide.
+     * Language</a> in the Step Functions User Guide.
      * </p>
      * <note>
      * <p>
@@ -494,7 +494,7 @@ public class AWSStepFunctionsClient extends AmazonWebServiceClient implements AW
      * @throws StateMachineTypeNotSupportedException
      * @throws TooManyTagsException
      *         You've exceeded the number of tags allowed for a resource. See the <a
-     *         href="https://docs.aws.amazon.com/step-functions/latest/dg/limits.html"> Limits Topic</a> in the AWS Step
+     *         href="https://docs.aws.amazon.com/step-functions/latest/dg/limits.html"> Limits Topic</a> in the Step
      *         Functions Developer Guide.
      * @sample AWSStepFunctions.CreateStateMachine
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/states-2016-11-23/CreateStateMachine" target="_top">AWS API
@@ -608,8 +608,8 @@ public class AWSStepFunctionsClient extends AmazonWebServiceClient implements AW
      * </p>
      * <note>
      * <p>
-     * For <code>EXPRESS</code>state machines, the deletion will happen eventually (usually less than a minute). Running
-     * executions may emit logs after <code>DeleteStateMachine</code> API is called.
+     * For <code>EXPRESS</code> state machines, the deletion will happen eventually (usually less than a minute).
+     * Running executions may emit logs after <code>DeleteStateMachine</code> API is called.
      * </p>
      * </note>
      * 
@@ -942,7 +942,11 @@ public class AWSStepFunctionsClient extends AmazonWebServiceClient implements AW
      * service holds on to the request before responding is 60 seconds. If no task is available within 60 seconds, the
      * poll returns a <code>taskToken</code> with a null string.
      * </p>
-     * <important>
+     * <note>
+     * <p>
+     * This API action isn't logged in CloudTrail.
+     * </p>
+     * </note> <important>
      * <p>
      * Workers should set their client side socket timeout to at least 65 seconds (5 seconds higher than the maximum
      * time the service may hold the poll request).
@@ -1566,10 +1570,13 @@ public class AWSStepFunctionsClient extends AmazonWebServiceClient implements AW
      * </p>
      * <note>
      * <p>
-     * <code>StartExecution</code> is idempotent. If <code>StartExecution</code> is called with the same name and input
-     * as a running execution, the call will succeed and return the same response as the original request. If the
-     * execution is closed or if the input is different, it will return a 400 <code>ExecutionAlreadyExists</code> error.
-     * Names can be reused after 90 days.
+     * <code>StartExecution</code> is idempotent for <code>STANDARD</code> workflows. For a <code>STANDARD</code>
+     * workflow, if <code>StartExecution</code> is called with the same name and input as a running execution, the call
+     * will succeed and return the same response as the original request. If the execution is closed or if the input is
+     * different, it will return a <code>400 ExecutionAlreadyExists</code> error. Names can be reused after 90 days.
+     * </p>
+     * <p>
+     * <code>StartExecution</code> is not idempotent for <code>EXPRESS</code> workflows.
      * </p>
      * </note>
      * 
@@ -1644,8 +1651,21 @@ public class AWSStepFunctionsClient extends AmazonWebServiceClient implements AW
 
     /**
      * <p>
-     * Starts a Synchronous Express state machine execution.
+     * Starts a Synchronous Express state machine execution. <code>StartSyncExecution</code> is not available for
+     * <code>STANDARD</code> workflows.
      * </p>
+     * <note>
+     * <p>
+     * <code>StartSyncExecution</code> will return a <code>200 OK</code> response, even if your execution fails, because
+     * the status code in the API response doesn't reflect function errors. Error codes are reserved for errors that
+     * prevent your execution from running, such as permissions errors, limit errors, or issues with your state machine
+     * code and configuration.
+     * </p>
+     * </note> <note>
+     * <p>
+     * This API action isn't logged in CloudTrail.
+     * </p>
+     * </note>
      * 
      * @param startSyncExecutionRequest
      * @return Result of the StartSyncExecution operation returned by the service.
@@ -1786,7 +1806,7 @@ public class AWSStepFunctionsClient extends AmazonWebServiceClient implements AW
      * <p>
      * An array of key-value pairs. For more information, see <a
      * href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html">Using Cost Allocation
-     * Tags</a> in the <i>AWS Billing and Cost Management User Guide</i>, and <a
+     * Tags</a> in the <i>Amazon Web Services Billing and Cost Management User Guide</i>, and <a
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_iam-tags.html">Controlling Access Using IAM
      * Tags</a>.
      * </p>
@@ -1802,7 +1822,7 @@ public class AWSStepFunctionsClient extends AmazonWebServiceClient implements AW
      *         Could not find the referenced resource. Only state machine and activity ARNs are supported.
      * @throws TooManyTagsException
      *         You've exceeded the number of tags allowed for a resource. See the <a
-     *         href="https://docs.aws.amazon.com/step-functions/latest/dg/limits.html"> Limits Topic</a> in the AWS Step
+     *         href="https://docs.aws.amazon.com/step-functions/latest/dg/limits.html"> Limits Topic</a> in the Step
      *         Functions Developer Guide.
      * @sample AWSStepFunctions.TagResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/states-2016-11-23/TagResource" target="_top">AWS API

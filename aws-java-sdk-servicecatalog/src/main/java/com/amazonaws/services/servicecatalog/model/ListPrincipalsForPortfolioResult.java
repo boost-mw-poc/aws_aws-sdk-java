@@ -25,7 +25,7 @@ public class ListPrincipalsForPortfolioResult extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The IAM principals (users or roles) associated with the portfolio.
+     * The <code>PrincipalARN</code>s and corresponding <code>PrincipalType</code>s associated with the portfolio.
      * </p>
      */
     private java.util.List<Principal> principals;
@@ -39,10 +39,11 @@ public class ListPrincipalsForPortfolioResult extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The IAM principals (users or roles) associated with the portfolio.
+     * The <code>PrincipalARN</code>s and corresponding <code>PrincipalType</code>s associated with the portfolio.
      * </p>
      * 
-     * @return The IAM principals (users or roles) associated with the portfolio.
+     * @return The <code>PrincipalARN</code>s and corresponding <code>PrincipalType</code>s associated with the
+     *         portfolio.
      */
 
     public java.util.List<Principal> getPrincipals() {
@@ -51,11 +52,12 @@ public class ListPrincipalsForPortfolioResult extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The IAM principals (users or roles) associated with the portfolio.
+     * The <code>PrincipalARN</code>s and corresponding <code>PrincipalType</code>s associated with the portfolio.
      * </p>
      * 
      * @param principals
-     *        The IAM principals (users or roles) associated with the portfolio.
+     *        The <code>PrincipalARN</code>s and corresponding <code>PrincipalType</code>s associated with the
+     *        portfolio.
      */
 
     public void setPrincipals(java.util.Collection<Principal> principals) {
@@ -69,7 +71,7 @@ public class ListPrincipalsForPortfolioResult extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The IAM principals (users or roles) associated with the portfolio.
+     * The <code>PrincipalARN</code>s and corresponding <code>PrincipalType</code>s associated with the portfolio.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -78,7 +80,8 @@ public class ListPrincipalsForPortfolioResult extends com.amazonaws.AmazonWebSer
      * </p>
      * 
      * @param principals
-     *        The IAM principals (users or roles) associated with the portfolio.
+     *        The <code>PrincipalARN</code>s and corresponding <code>PrincipalType</code>s associated with the
+     *        portfolio.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -94,11 +97,12 @@ public class ListPrincipalsForPortfolioResult extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The IAM principals (users or roles) associated with the portfolio.
+     * The <code>PrincipalARN</code>s and corresponding <code>PrincipalType</code>s associated with the portfolio.
      * </p>
      * 
      * @param principals
-     *        The IAM principals (users or roles) associated with the portfolio.
+     *        The <code>PrincipalARN</code>s and corresponding <code>PrincipalType</code>s associated with the
+     *        portfolio.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

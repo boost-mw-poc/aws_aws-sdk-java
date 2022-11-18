@@ -136,6 +136,10 @@ public class DataSourceParametersJsonUnmarshaller implements Unmarshaller<DataSo
                     context.nextToken();
                     dataSourceParameters.setExasolParameters(ExasolParametersJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("DatabricksParameters", targetDepth)) {
+                    context.nextToken();
+                    dataSourceParameters.setDatabricksParameters(DatabricksParametersJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

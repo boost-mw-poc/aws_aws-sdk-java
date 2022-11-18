@@ -88,7 +88,7 @@ public class SalesforceSourceProperties implements Serializable, Cloneable, Stru
      * <p>
      * Amazon AppFlow uses only Salesforce REST API. By choosing this option, you ensure that your flow writes
      * consistent output, but you decrease performance for large data transfers that are better suited for Bulk API 2.0.
-     * In some cases, if your flow attempts to transfer a vary large set of data, it might fail with a timed out error.
+     * In some cases, if your flow attempts to transfer a vary large set of data, it might fail wituh a timed out error.
      * </p>
      * </dd>
      * </dl>
@@ -288,7 +288,7 @@ public class SalesforceSourceProperties implements Serializable, Cloneable, Stru
      * <p>
      * Amazon AppFlow uses only Salesforce REST API. By choosing this option, you ensure that your flow writes
      * consistent output, but you decrease performance for large data transfers that are better suited for Bulk API 2.0.
-     * In some cases, if your flow attempts to transfer a vary large set of data, it might fail with a timed out error.
+     * In some cases, if your flow attempts to transfer a vary large set of data, it might fail wituh a timed out error.
      * </p>
      * </dd>
      * </dl>
@@ -334,7 +334,7 @@ public class SalesforceSourceProperties implements Serializable, Cloneable, Stru
      *        <p>
      *        Amazon AppFlow uses only Salesforce REST API. By choosing this option, you ensure that your flow writes
      *        consistent output, but you decrease performance for large data transfers that are better suited for Bulk
-     *        API 2.0. In some cases, if your flow attempts to transfer a vary large set of data, it might fail with a
+     *        API 2.0. In some cases, if your flow attempts to transfer a vary large set of data, it might fail wituh a
      *        timed out error.
      *        </p>
      *        </dd>
@@ -386,7 +386,7 @@ public class SalesforceSourceProperties implements Serializable, Cloneable, Stru
      * <p>
      * Amazon AppFlow uses only Salesforce REST API. By choosing this option, you ensure that your flow writes
      * consistent output, but you decrease performance for large data transfers that are better suited for Bulk API 2.0.
-     * In some cases, if your flow attempts to transfer a vary large set of data, it might fail with a timed out error.
+     * In some cases, if your flow attempts to transfer a vary large set of data, it might fail wituh a timed out error.
      * </p>
      * </dd>
      * </dl>
@@ -432,7 +432,7 @@ public class SalesforceSourceProperties implements Serializable, Cloneable, Stru
      *         <p>
      *         Amazon AppFlow uses only Salesforce REST API. By choosing this option, you ensure that your flow writes
      *         consistent output, but you decrease performance for large data transfers that are better suited for Bulk
-     *         API 2.0. In some cases, if your flow attempts to transfer a vary large set of data, it might fail with a
+     *         API 2.0. In some cases, if your flow attempts to transfer a vary large set of data, it might fail wituh a
      *         timed out error.
      *         </p>
      *         </dd>
@@ -484,7 +484,7 @@ public class SalesforceSourceProperties implements Serializable, Cloneable, Stru
      * <p>
      * Amazon AppFlow uses only Salesforce REST API. By choosing this option, you ensure that your flow writes
      * consistent output, but you decrease performance for large data transfers that are better suited for Bulk API 2.0.
-     * In some cases, if your flow attempts to transfer a vary large set of data, it might fail with a timed out error.
+     * In some cases, if your flow attempts to transfer a vary large set of data, it might fail wituh a timed out error.
      * </p>
      * </dd>
      * </dl>
@@ -530,7 +530,7 @@ public class SalesforceSourceProperties implements Serializable, Cloneable, Stru
      *        <p>
      *        Amazon AppFlow uses only Salesforce REST API. By choosing this option, you ensure that your flow writes
      *        consistent output, but you decrease performance for large data transfers that are better suited for Bulk
-     *        API 2.0. In some cases, if your flow attempts to transfer a vary large set of data, it might fail with a
+     *        API 2.0. In some cases, if your flow attempts to transfer a vary large set of data, it might fail wituh a
      *        timed out error.
      *        </p>
      *        </dd>
@@ -584,7 +584,7 @@ public class SalesforceSourceProperties implements Serializable, Cloneable, Stru
      * <p>
      * Amazon AppFlow uses only Salesforce REST API. By choosing this option, you ensure that your flow writes
      * consistent output, but you decrease performance for large data transfers that are better suited for Bulk API 2.0.
-     * In some cases, if your flow attempts to transfer a vary large set of data, it might fail with a timed out error.
+     * In some cases, if your flow attempts to transfer a vary large set of data, it might fail wituh a timed out error.
      * </p>
      * </dd>
      * </dl>
@@ -630,7 +630,7 @@ public class SalesforceSourceProperties implements Serializable, Cloneable, Stru
      *        <p>
      *        Amazon AppFlow uses only Salesforce REST API. By choosing this option, you ensure that your flow writes
      *        consistent output, but you decrease performance for large data transfers that are better suited for Bulk
-     *        API 2.0. In some cases, if your flow attempts to transfer a vary large set of data, it might fail with a
+     *        API 2.0. In some cases, if your flow attempts to transfer a vary large set of data, it might fail wituh a
      *        timed out error.
      *        </p>
      *        </dd>

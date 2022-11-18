@@ -301,6 +301,19 @@ public class AbstractAmazonAppflowAsync extends AbstractAmazonAppflow implements
     }
 
     @Override
+    public java.util.concurrent.Future<UpdateConnectorRegistrationResult> updateConnectorRegistrationAsync(UpdateConnectorRegistrationRequest request) {
+
+        return updateConnectorRegistrationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateConnectorRegistrationResult> updateConnectorRegistrationAsync(UpdateConnectorRegistrationRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateConnectorRegistrationRequest, UpdateConnectorRegistrationResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<UpdateFlowResult> updateFlowAsync(UpdateFlowRequest request) {
 
         return updateFlowAsync(request, null);

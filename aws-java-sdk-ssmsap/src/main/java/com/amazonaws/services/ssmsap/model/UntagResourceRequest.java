@@ -19,7 +19,7 @@ import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * 
- * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssmsap-2018-05-10/UntagResource" target="_top">AWS API
+ * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-sap-2018-05-10/UntagResource" target="_top">AWS API
  *      Documentation</a>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
@@ -27,7 +27,11 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /** <p/> */
     private String resourceArn;
-    /** <p/> */
+    /**
+     * <p>
+     * Adds/updates or removes credentials for applications registered with AWS Systems Manager for SAP.
+     * </p>
+     */
     private java.util.List<String> tagKeys;
 
     /**
@@ -63,9 +67,11 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
     }
 
     /**
-     * <p/>
+     * <p>
+     * Adds/updates or removes credentials for applications registered with AWS Systems Manager for SAP.
+     * </p>
      * 
-     * @return
+     * @return Adds/updates or removes credentials for applications registered with AWS Systems Manager for SAP.
      */
 
     public java.util.List<String> getTagKeys() {
@@ -73,9 +79,12 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
     }
 
     /**
-     * <p/>
+     * <p>
+     * Adds/updates or removes credentials for applications registered with AWS Systems Manager for SAP.
+     * </p>
      * 
      * @param tagKeys
+     *        Adds/updates or removes credentials for applications registered with AWS Systems Manager for SAP.
      */
 
     public void setTagKeys(java.util.Collection<String> tagKeys) {
@@ -88,7 +97,9 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
     }
 
     /**
-     * <p/>
+     * <p>
+     * Adds/updates or removes credentials for applications registered with AWS Systems Manager for SAP.
+     * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setTagKeys(java.util.Collection)} or {@link #withTagKeys(java.util.Collection)} if you want to override
@@ -96,6 +107,7 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      * 
      * @param tagKeys
+     *        Adds/updates or removes credentials for applications registered with AWS Systems Manager for SAP.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -110,9 +122,12 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
     }
 
     /**
-     * <p/>
+     * <p>
+     * Adds/updates or removes credentials for applications registered with AWS Systems Manager for SAP.
+     * </p>
      * 
      * @param tagKeys
+     *        Adds/updates or removes credentials for applications registered with AWS Systems Manager for SAP.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -47,7 +47,7 @@ public class CopyImageRequest extends AmazonWebServiceRequest implements Seriali
      * unencrypted snapshot, but you cannot create an unencrypted copy of an encrypted snapshot. The default KMS key for
      * Amazon EBS is used unless you specify a non-default Key Management Service (KMS) KMS key using
      * <code>KmsKeyId</code>. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html">Amazon EBS Encryption</a> in the
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html">Amazon EBS encryption</a> in the
      * <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      */
@@ -122,11 +122,35 @@ public class CopyImageRequest extends AmazonWebServiceRequest implements Seriali
      * </p>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshots-outposts.html#copy-amis"> Copying AMIs from
-     * an Amazon Web Services Region to an Outpost</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshots-outposts.html#copy-amis"> Copy AMIs from an
+     * Amazon Web Services Region to an Outpost</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      */
     private String destinationOutpostArn;
+    /**
+     * <p>
+     * Indicates whether to include your user-defined AMI tags when copying the AMI.
+     * </p>
+     * <p>
+     * The following tags will not be copied:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * System tags (prefixed with <code>aws:</code>)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For public and shared AMIs, user-defined tags that are attached by other Amazon Web Services accounts
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Default: Your user-defined AMI tags are not copied.
+     * </p>
+     */
+    private Boolean copyImageTags;
 
     /**
      * <p>
@@ -229,7 +253,7 @@ public class CopyImageRequest extends AmazonWebServiceRequest implements Seriali
      * unencrypted snapshot, but you cannot create an unencrypted copy of an encrypted snapshot. The default KMS key for
      * Amazon EBS is used unless you specify a non-default Key Management Service (KMS) KMS key using
      * <code>KmsKeyId</code>. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html">Amazon EBS Encryption</a> in the
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html">Amazon EBS encryption</a> in the
      * <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * 
@@ -238,7 +262,7 @@ public class CopyImageRequest extends AmazonWebServiceRequest implements Seriali
      *        copy of an unencrypted snapshot, but you cannot create an unencrypted copy of an encrypted snapshot. The
      *        default KMS key for Amazon EBS is used unless you specify a non-default Key Management Service (KMS) KMS
      *        key using <code>KmsKeyId</code>. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html">Amazon EBS Encryption</a> in
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html">Amazon EBS encryption</a> in
      *        the <i>Amazon Elastic Compute Cloud User Guide</i>.
      */
 
@@ -252,7 +276,7 @@ public class CopyImageRequest extends AmazonWebServiceRequest implements Seriali
      * unencrypted snapshot, but you cannot create an unencrypted copy of an encrypted snapshot. The default KMS key for
      * Amazon EBS is used unless you specify a non-default Key Management Service (KMS) KMS key using
      * <code>KmsKeyId</code>. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html">Amazon EBS Encryption</a> in the
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html">Amazon EBS encryption</a> in the
      * <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * 
@@ -260,7 +284,7 @@ public class CopyImageRequest extends AmazonWebServiceRequest implements Seriali
      *         copy of an unencrypted snapshot, but you cannot create an unencrypted copy of an encrypted snapshot. The
      *         default KMS key for Amazon EBS is used unless you specify a non-default Key Management Service (KMS) KMS
      *         key using <code>KmsKeyId</code>. For more information, see <a
-     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html">Amazon EBS Encryption</a>
+     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html">Amazon EBS encryption</a>
      *         in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      */
 
@@ -274,7 +298,7 @@ public class CopyImageRequest extends AmazonWebServiceRequest implements Seriali
      * unencrypted snapshot, but you cannot create an unencrypted copy of an encrypted snapshot. The default KMS key for
      * Amazon EBS is used unless you specify a non-default Key Management Service (KMS) KMS key using
      * <code>KmsKeyId</code>. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html">Amazon EBS Encryption</a> in the
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html">Amazon EBS encryption</a> in the
      * <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * 
@@ -283,7 +307,7 @@ public class CopyImageRequest extends AmazonWebServiceRequest implements Seriali
      *        copy of an unencrypted snapshot, but you cannot create an unencrypted copy of an encrypted snapshot. The
      *        default KMS key for Amazon EBS is used unless you specify a non-default Key Management Service (KMS) KMS
      *        key using <code>KmsKeyId</code>. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html">Amazon EBS Encryption</a> in
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html">Amazon EBS encryption</a> in
      *        the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -299,7 +323,7 @@ public class CopyImageRequest extends AmazonWebServiceRequest implements Seriali
      * unencrypted snapshot, but you cannot create an unencrypted copy of an encrypted snapshot. The default KMS key for
      * Amazon EBS is used unless you specify a non-default Key Management Service (KMS) KMS key using
      * <code>KmsKeyId</code>. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html">Amazon EBS Encryption</a> in the
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html">Amazon EBS encryption</a> in the
      * <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * 
@@ -307,7 +331,7 @@ public class CopyImageRequest extends AmazonWebServiceRequest implements Seriali
      *         copy of an unencrypted snapshot, but you cannot create an unencrypted copy of an encrypted snapshot. The
      *         default KMS key for Amazon EBS is used unless you specify a non-default Key Management Service (KMS) KMS
      *         key using <code>KmsKeyId</code>. For more information, see <a
-     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html">Amazon EBS Encryption</a>
+     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html">Amazon EBS encryption</a>
      *         in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      */
 
@@ -703,8 +727,8 @@ public class CopyImageRequest extends AmazonWebServiceRequest implements Seriali
      * </p>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshots-outposts.html#copy-amis"> Copying AMIs from
-     * an Amazon Web Services Region to an Outpost</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshots-outposts.html#copy-amis"> Copy AMIs from an
+     * Amazon Web Services Region to an Outpost</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * 
      * @param destinationOutpostArn
@@ -714,7 +738,7 @@ public class CopyImageRequest extends AmazonWebServiceRequest implements Seriali
      *        within the same Outpost.</p>
      *        <p>
      *        For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshots-outposts.html#copy-amis"> Copying AMIs
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshots-outposts.html#copy-amis"> Copy AMIs
      *        from an Amazon Web Services Region to an Outpost</a> in the <i>Amazon Elastic Compute Cloud User
      *        Guide</i>.
      */
@@ -732,8 +756,8 @@ public class CopyImageRequest extends AmazonWebServiceRequest implements Seriali
      * </p>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshots-outposts.html#copy-amis"> Copying AMIs from
-     * an Amazon Web Services Region to an Outpost</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshots-outposts.html#copy-amis"> Copy AMIs from an
+     * Amazon Web Services Region to an Outpost</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * 
      * @return The Amazon Resource Name (ARN) of the Outpost to which to copy the AMI. Only specify this parameter when
@@ -742,8 +766,8 @@ public class CopyImageRequest extends AmazonWebServiceRequest implements Seriali
      *         within the same Outpost.</p>
      *         <p>
      *         For more information, see <a
-     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshots-outposts.html#copy-amis"> Copying
-     *         AMIs from an Amazon Web Services Region to an Outpost</a> in the <i>Amazon Elastic Compute Cloud User
+     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshots-outposts.html#copy-amis"> Copy AMIs
+     *         from an Amazon Web Services Region to an Outpost</a> in the <i>Amazon Elastic Compute Cloud User
      *         Guide</i>.
      */
 
@@ -760,8 +784,8 @@ public class CopyImageRequest extends AmazonWebServiceRequest implements Seriali
      * </p>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshots-outposts.html#copy-amis"> Copying AMIs from
-     * an Amazon Web Services Region to an Outpost</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshots-outposts.html#copy-amis"> Copy AMIs from an
+     * Amazon Web Services Region to an Outpost</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * 
      * @param destinationOutpostArn
@@ -771,7 +795,7 @@ public class CopyImageRequest extends AmazonWebServiceRequest implements Seriali
      *        within the same Outpost.</p>
      *        <p>
      *        For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshots-outposts.html#copy-amis"> Copying AMIs
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshots-outposts.html#copy-amis"> Copy AMIs
      *        from an Amazon Web Services Region to an Outpost</a> in the <i>Amazon Elastic Compute Cloud User
      *        Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -780,6 +804,198 @@ public class CopyImageRequest extends AmazonWebServiceRequest implements Seriali
     public CopyImageRequest withDestinationOutpostArn(String destinationOutpostArn) {
         setDestinationOutpostArn(destinationOutpostArn);
         return this;
+    }
+
+    /**
+     * <p>
+     * Indicates whether to include your user-defined AMI tags when copying the AMI.
+     * </p>
+     * <p>
+     * The following tags will not be copied:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * System tags (prefixed with <code>aws:</code>)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For public and shared AMIs, user-defined tags that are attached by other Amazon Web Services accounts
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Default: Your user-defined AMI tags are not copied.
+     * </p>
+     * 
+     * @param copyImageTags
+     *        Indicates whether to include your user-defined AMI tags when copying the AMI.</p>
+     *        <p>
+     *        The following tags will not be copied:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        System tags (prefixed with <code>aws:</code>)
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        For public and shared AMIs, user-defined tags that are attached by other Amazon Web Services accounts
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        Default: Your user-defined AMI tags are not copied.
+     */
+
+    public void setCopyImageTags(Boolean copyImageTags) {
+        this.copyImageTags = copyImageTags;
+    }
+
+    /**
+     * <p>
+     * Indicates whether to include your user-defined AMI tags when copying the AMI.
+     * </p>
+     * <p>
+     * The following tags will not be copied:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * System tags (prefixed with <code>aws:</code>)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For public and shared AMIs, user-defined tags that are attached by other Amazon Web Services accounts
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Default: Your user-defined AMI tags are not copied.
+     * </p>
+     * 
+     * @return Indicates whether to include your user-defined AMI tags when copying the AMI.</p>
+     *         <p>
+     *         The following tags will not be copied:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         System tags (prefixed with <code>aws:</code>)
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         For public and shared AMIs, user-defined tags that are attached by other Amazon Web Services accounts
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         Default: Your user-defined AMI tags are not copied.
+     */
+
+    public Boolean getCopyImageTags() {
+        return this.copyImageTags;
+    }
+
+    /**
+     * <p>
+     * Indicates whether to include your user-defined AMI tags when copying the AMI.
+     * </p>
+     * <p>
+     * The following tags will not be copied:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * System tags (prefixed with <code>aws:</code>)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For public and shared AMIs, user-defined tags that are attached by other Amazon Web Services accounts
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Default: Your user-defined AMI tags are not copied.
+     * </p>
+     * 
+     * @param copyImageTags
+     *        Indicates whether to include your user-defined AMI tags when copying the AMI.</p>
+     *        <p>
+     *        The following tags will not be copied:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        System tags (prefixed with <code>aws:</code>)
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        For public and shared AMIs, user-defined tags that are attached by other Amazon Web Services accounts
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        Default: Your user-defined AMI tags are not copied.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CopyImageRequest withCopyImageTags(Boolean copyImageTags) {
+        setCopyImageTags(copyImageTags);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Indicates whether to include your user-defined AMI tags when copying the AMI.
+     * </p>
+     * <p>
+     * The following tags will not be copied:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * System tags (prefixed with <code>aws:</code>)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For public and shared AMIs, user-defined tags that are attached by other Amazon Web Services accounts
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Default: Your user-defined AMI tags are not copied.
+     * </p>
+     * 
+     * @return Indicates whether to include your user-defined AMI tags when copying the AMI.</p>
+     *         <p>
+     *         The following tags will not be copied:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         System tags (prefixed with <code>aws:</code>)
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         For public and shared AMIs, user-defined tags that are attached by other Amazon Web Services accounts
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         Default: Your user-defined AMI tags are not copied.
+     */
+
+    public Boolean isCopyImageTags() {
+        return this.copyImageTags;
     }
 
     /**
@@ -820,7 +1036,9 @@ public class CopyImageRequest extends AmazonWebServiceRequest implements Seriali
         if (getSourceRegion() != null)
             sb.append("SourceRegion: ").append(getSourceRegion()).append(",");
         if (getDestinationOutpostArn() != null)
-            sb.append("DestinationOutpostArn: ").append(getDestinationOutpostArn());
+            sb.append("DestinationOutpostArn: ").append(getDestinationOutpostArn()).append(",");
+        if (getCopyImageTags() != null)
+            sb.append("CopyImageTags: ").append(getCopyImageTags());
         sb.append("}");
         return sb.toString();
     }
@@ -867,6 +1085,10 @@ public class CopyImageRequest extends AmazonWebServiceRequest implements Seriali
             return false;
         if (other.getDestinationOutpostArn() != null && other.getDestinationOutpostArn().equals(this.getDestinationOutpostArn()) == false)
             return false;
+        if (other.getCopyImageTags() == null ^ this.getCopyImageTags() == null)
+            return false;
+        if (other.getCopyImageTags() != null && other.getCopyImageTags().equals(this.getCopyImageTags()) == false)
+            return false;
         return true;
     }
 
@@ -883,6 +1105,7 @@ public class CopyImageRequest extends AmazonWebServiceRequest implements Seriali
         hashCode = prime * hashCode + ((getSourceImageId() == null) ? 0 : getSourceImageId().hashCode());
         hashCode = prime * hashCode + ((getSourceRegion() == null) ? 0 : getSourceRegion().hashCode());
         hashCode = prime * hashCode + ((getDestinationOutpostArn() == null) ? 0 : getDestinationOutpostArn().hashCode());
+        hashCode = prime * hashCode + ((getCopyImageTags() == null) ? 0 : getCopyImageTags().hashCode());
         return hashCode;
     }
 

@@ -37,6 +37,8 @@ public class AccountSettingsMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("NotificationEmail").build();
     private static final MarshallingInfo<Boolean> PUBLICSHARINGENABLED_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PublicSharingEnabled").build();
+    private static final MarshallingInfo<Boolean> TERMINATIONPROTECTIONENABLED_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("TerminationProtectionEnabled").build();
 
     private static final AccountSettingsMarshaller instance = new AccountSettingsMarshaller();
 
@@ -59,6 +61,7 @@ public class AccountSettingsMarshaller {
             protocolMarshaller.marshall(accountSettings.getDefaultNamespace(), DEFAULTNAMESPACE_BINDING);
             protocolMarshaller.marshall(accountSettings.getNotificationEmail(), NOTIFICATIONEMAIL_BINDING);
             protocolMarshaller.marshall(accountSettings.getPublicSharingEnabled(), PUBLICSHARINGENABLED_BINDING);
+            protocolMarshaller.marshall(accountSettings.getTerminationProtectionEnabled(), TERMINATIONPROTECTIONENABLED_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

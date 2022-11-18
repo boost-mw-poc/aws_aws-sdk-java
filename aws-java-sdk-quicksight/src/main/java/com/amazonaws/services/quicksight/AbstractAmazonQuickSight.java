@@ -123,6 +123,11 @@ public class AbstractAmazonQuickSight implements AmazonQuickSight {
     }
 
     @Override
+    public DeleteAccountSubscriptionResult deleteAccountSubscription(DeleteAccountSubscriptionRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DeleteAnalysisResult deleteAnalysis(DeleteAnalysisRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -484,6 +489,16 @@ public class AbstractAmazonQuickSight implements AmazonQuickSight {
 
     @Override
     public SearchDashboardsResult searchDashboards(SearchDashboardsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public SearchDataSetsResult searchDataSets(SearchDataSetsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public SearchDataSourcesResult searchDataSources(SearchDataSourcesRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

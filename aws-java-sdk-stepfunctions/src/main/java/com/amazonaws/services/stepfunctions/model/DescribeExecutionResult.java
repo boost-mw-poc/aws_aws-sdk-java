@@ -117,7 +117,7 @@ public class DescribeExecutionResult extends com.amazonaws.AmazonWebServiceResul
     private CloudWatchEventsExecutionDataDetails outputDetails;
     /**
      * <p>
-     * The AWS X-Ray trace header that was passed to the execution.
+     * The X-Ray trace header that was passed to the execution.
      * </p>
      */
     private String traceHeader;
@@ -760,11 +760,11 @@ public class DescribeExecutionResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * The AWS X-Ray trace header that was passed to the execution.
+     * The X-Ray trace header that was passed to the execution.
      * </p>
      * 
      * @param traceHeader
-     *        The AWS X-Ray trace header that was passed to the execution.
+     *        The X-Ray trace header that was passed to the execution.
      */
 
     public void setTraceHeader(String traceHeader) {
@@ -773,10 +773,10 @@ public class DescribeExecutionResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * The AWS X-Ray trace header that was passed to the execution.
+     * The X-Ray trace header that was passed to the execution.
      * </p>
      * 
-     * @return The AWS X-Ray trace header that was passed to the execution.
+     * @return The X-Ray trace header that was passed to the execution.
      */
 
     public String getTraceHeader() {
@@ -785,11 +785,11 @@ public class DescribeExecutionResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * The AWS X-Ray trace header that was passed to the execution.
+     * The X-Ray trace header that was passed to the execution.
      * </p>
      * 
      * @param traceHeader
-     *        The AWS X-Ray trace header that was passed to the execution.
+     *        The X-Ray trace header that was passed to the execution.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

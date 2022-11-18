@@ -70,6 +70,10 @@ public class SettingsJsonUnmarshaller implements Unmarshaller<Settings, JsonUnma
                     context.nextToken();
                     settings.setKmsKey(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("evidenceFinderEnablement", targetDepth)) {
+                    context.nextToken();
+                    settings.setEvidenceFinderEnablement(EvidenceFinderEnablementJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

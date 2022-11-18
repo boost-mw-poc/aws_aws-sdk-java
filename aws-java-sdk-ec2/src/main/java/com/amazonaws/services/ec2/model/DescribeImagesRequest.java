@@ -166,7 +166,7 @@ public class DescribeImagesRequest extends AmazonWebServiceRequest implements Se
      * </li>
      * <li>
      * <p>
-     * <code>platform</code> - The platform. To only list Windows-based AMIs, use <code>windows</code>.
+     * <code>platform</code> - The platform. The only supported value is <code>windows</code>.
      * </p>
      * </li>
      * <li>
@@ -630,7 +630,7 @@ public class DescribeImagesRequest extends AmazonWebServiceRequest implements Se
      * </li>
      * <li>
      * <p>
-     * <code>platform</code> - The platform. To only list Windows-based AMIs, use <code>windows</code>.
+     * <code>platform</code> - The platform. The only supported value is <code>windows</code>.
      * </p>
      * </li>
      * <li>
@@ -814,7 +814,7 @@ public class DescribeImagesRequest extends AmazonWebServiceRequest implements Se
      *         </li>
      *         <li>
      *         <p>
-     *         <code>platform</code> - The platform. To only list Windows-based AMIs, use <code>windows</code>.
+     *         <code>platform</code> - The platform. The only supported value is <code>windows</code>.
      *         </p>
      *         </li>
      *         <li>
@@ -1007,7 +1007,7 @@ public class DescribeImagesRequest extends AmazonWebServiceRequest implements Se
      * </li>
      * <li>
      * <p>
-     * <code>platform</code> - The platform. To only list Windows-based AMIs, use <code>windows</code>.
+     * <code>platform</code> - The platform. The only supported value is <code>windows</code>.
      * </p>
      * </li>
      * <li>
@@ -1192,7 +1192,7 @@ public class DescribeImagesRequest extends AmazonWebServiceRequest implements Se
      *        </li>
      *        <li>
      *        <p>
-     *        <code>platform</code> - The platform. To only list Windows-based AMIs, use <code>windows</code>.
+     *        <code>platform</code> - The platform. The only supported value is <code>windows</code>.
      *        </p>
      *        </li>
      *        <li>
@@ -1387,7 +1387,7 @@ public class DescribeImagesRequest extends AmazonWebServiceRequest implements Se
      * </li>
      * <li>
      * <p>
-     * <code>platform</code> - The platform. To only list Windows-based AMIs, use <code>windows</code>.
+     * <code>platform</code> - The platform. The only supported value is <code>windows</code>.
      * </p>
      * </li>
      * <li>
@@ -1577,7 +1577,7 @@ public class DescribeImagesRequest extends AmazonWebServiceRequest implements Se
      *        </li>
      *        <li>
      *        <p>
-     *        <code>platform</code> - The platform. To only list Windows-based AMIs, use <code>windows</code>.
+     *        <code>platform</code> - The platform. The only supported value is <code>windows</code>.
      *        </p>
      *        </li>
      *        <li>
@@ -1774,7 +1774,7 @@ public class DescribeImagesRequest extends AmazonWebServiceRequest implements Se
      * </li>
      * <li>
      * <p>
-     * <code>platform</code> - The platform. To only list Windows-based AMIs, use <code>windows</code>.
+     * <code>platform</code> - The platform. The only supported value is <code>windows</code>.
      * </p>
      * </li>
      * <li>
@@ -1959,7 +1959,7 @@ public class DescribeImagesRequest extends AmazonWebServiceRequest implements Se
      *        </li>
      *        <li>
      *        <p>
-     *        <code>platform</code> - The platform. To only list Windows-based AMIs, use <code>windows</code>.
+     *        <code>platform</code> - The platform. The only supported value is <code>windows</code>.
      *        </p>
      *        </li>
      *        <li>

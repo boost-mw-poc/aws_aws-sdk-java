@@ -64,6 +64,10 @@ public class ProductViewDetailJsonUnmarshaller implements Unmarshaller<ProductVi
                     context.nextToken();
                     productViewDetail.setCreatedTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
                 }
+                if (context.testExpression("SourceConnection", targetDepth)) {
+                    context.nextToken();
+                    productViewDetail.setSourceConnection(SourceConnectionDetailJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

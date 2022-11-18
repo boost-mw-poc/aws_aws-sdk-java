@@ -133,6 +133,11 @@ public class AbstractAmazonAppflow implements AmazonAppflow {
     }
 
     @Override
+    public UpdateConnectorRegistrationResult updateConnectorRegistration(UpdateConnectorRegistrationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public UpdateFlowResult updateFlow(UpdateFlowRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

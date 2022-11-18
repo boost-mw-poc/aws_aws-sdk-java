@@ -62,6 +62,12 @@ public class JdbcTargetJsonUnmarshaller implements Unmarshaller<JdbcTarget, Json
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("EnableAdditionalMetadata", targetDepth)) {
+                    context.nextToken();
+                    jdbcTarget.setEnableAdditionalMetadata(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)
