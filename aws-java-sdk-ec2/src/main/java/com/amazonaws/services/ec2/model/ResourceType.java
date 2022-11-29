@@ -96,6 +96,11 @@ public enum ResourceType {
     CapacityReservationFleet("capacity-reservation-fleet"),
     TrafficMirrorFilterRule("traffic-mirror-filter-rule"),
     VpcEndpointConnectionDeviceType("vpc-endpoint-connection-device-type"),
+    VerifiedAccessInstance("verified-access-instance"),
+    VerifiedAccessGroup("verified-access-group"),
+    VerifiedAccessEndpoint("verified-access-endpoint"),
+    VerifiedAccessPolicy("verified-access-policy"),
+    VerifiedAccessTrustProvider("verified-access-trust-provider"),
     VpnConnectionDeviceType("vpn-connection-device-type");
 
     private String value;

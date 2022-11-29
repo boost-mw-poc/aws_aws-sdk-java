@@ -48,6 +48,8 @@ public class CreateKeyRequestMarshaller {
             .marshallLocationName("Tags").build();
     private static final MarshallingInfo<Boolean> MULTIREGION_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MultiRegion").build();
+    private static final MarshallingInfo<String> XKSKEYID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("XksKeyId").build();
 
     private static final CreateKeyRequestMarshaller instance = new CreateKeyRequestMarshaller();
 
@@ -75,6 +77,7 @@ public class CreateKeyRequestMarshaller {
             protocolMarshaller.marshall(createKeyRequest.getBypassPolicyLockoutSafetyCheck(), BYPASSPOLICYLOCKOUTSAFETYCHECK_BINDING);
             protocolMarshaller.marshall(createKeyRequest.getTags(), TAGS_BINDING);
             protocolMarshaller.marshall(createKeyRequest.getMultiRegion(), MULTIREGION_BINDING);
+            protocolMarshaller.marshall(createKeyRequest.getXksKeyId(), XKSKEYID_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

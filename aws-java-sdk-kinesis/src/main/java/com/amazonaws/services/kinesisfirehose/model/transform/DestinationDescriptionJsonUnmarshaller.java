@@ -84,6 +84,11 @@ public class DestinationDescriptionJsonUnmarshaller implements Unmarshaller<Dest
                     destinationDescription.setHttpEndpointDestinationDescription(HttpEndpointDestinationDescriptionJsonUnmarshaller.getInstance().unmarshall(
                             context));
                 }
+                if (context.testExpression("AmazonOpenSearchServerlessDestinationDescription", targetDepth)) {
+                    context.nextToken();
+                    destinationDescription.setAmazonOpenSearchServerlessDestinationDescription(AmazonOpenSearchServerlessDestinationDescriptionJsonUnmarshaller
+                            .getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

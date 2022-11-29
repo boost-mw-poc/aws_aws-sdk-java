@@ -76,6 +76,14 @@ public class CustomKeyStoresListEntryJsonUnmarshaller implements Unmarshaller<Cu
                     context.nextToken();
                     customKeyStoresListEntry.setCreationDate(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
                 }
+                if (context.testExpression("CustomKeyStoreType", targetDepth)) {
+                    context.nextToken();
+                    customKeyStoresListEntry.setCustomKeyStoreType(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("XksProxyConfiguration", targetDepth)) {
+                    context.nextToken();
+                    customKeyStoresListEntry.setXksProxyConfiguration(XksProxyConfigurationTypeJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

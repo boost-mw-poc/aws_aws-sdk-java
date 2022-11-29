@@ -592,7 +592,8 @@ public enum InstanceType {
     U18tb1112xlarge("u-18tb1.112xlarge"),
     U24tb1112xlarge("u-24tb1.112xlarge"),
     Trn12xlarge("trn1.2xlarge"),
-    Trn132xlarge("trn1.32xlarge");
+    Trn132xlarge("trn1.32xlarge"),
+    Hpc6id32xlarge("hpc6id.32xlarge");
 
     private String value;
 

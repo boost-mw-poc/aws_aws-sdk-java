@@ -39,8 +39,8 @@ public class KinesisStreamSourceConfiguration implements Serializable, Cloneable
     /**
      * <p>
      * The ARN of the role that provides access to the source Kinesis data stream. For more information, see <a
-     * href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-iam">AWS Identity and
-     * Access Management (IAM) ARN Format</a>.
+     * href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-iam">Amazon Web
+     * Services Identity and Access Management (IAM) ARN Format</a>.
      * </p>
      */
     private String roleARN;
@@ -100,14 +100,14 @@ public class KinesisStreamSourceConfiguration implements Serializable, Cloneable
     /**
      * <p>
      * The ARN of the role that provides access to the source Kinesis data stream. For more information, see <a
-     * href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-iam">AWS Identity and
-     * Access Management (IAM) ARN Format</a>.
+     * href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-iam">Amazon Web
+     * Services Identity and Access Management (IAM) ARN Format</a>.
      * </p>
      * 
      * @param roleARN
      *        The ARN of the role that provides access to the source Kinesis data stream. For more information, see <a
-     *        href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-iam">AWS
-     *        Identity and Access Management (IAM) ARN Format</a>.
+     *        href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-iam">Amazon
+     *        Web Services Identity and Access Management (IAM) ARN Format</a>.
      */
 
     public void setRoleARN(String roleARN) {
@@ -117,13 +117,13 @@ public class KinesisStreamSourceConfiguration implements Serializable, Cloneable
     /**
      * <p>
      * The ARN of the role that provides access to the source Kinesis data stream. For more information, see <a
-     * href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-iam">AWS Identity and
-     * Access Management (IAM) ARN Format</a>.
+     * href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-iam">Amazon Web
+     * Services Identity and Access Management (IAM) ARN Format</a>.
      * </p>
      * 
      * @return The ARN of the role that provides access to the source Kinesis data stream. For more information, see <a
-     *         href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-iam">AWS
-     *         Identity and Access Management (IAM) ARN Format</a>.
+     *         href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-iam">Amazon
+     *         Web Services Identity and Access Management (IAM) ARN Format</a>.
      */
 
     public String getRoleARN() {
@@ -133,14 +133,14 @@ public class KinesisStreamSourceConfiguration implements Serializable, Cloneable
     /**
      * <p>
      * The ARN of the role that provides access to the source Kinesis data stream. For more information, see <a
-     * href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-iam">AWS Identity and
-     * Access Management (IAM) ARN Format</a>.
+     * href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-iam">Amazon Web
+     * Services Identity and Access Management (IAM) ARN Format</a>.
      * </p>
      * 
      * @param roleARN
      *        The ARN of the role that provides access to the source Kinesis data stream. For more information, see <a
-     *        href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-iam">AWS
-     *        Identity and Access Management (IAM) ARN Format</a>.
+     *        href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-iam">Amazon
+     *        Web Services Identity and Access Management (IAM) ARN Format</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

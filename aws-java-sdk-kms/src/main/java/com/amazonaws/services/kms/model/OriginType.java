@@ -22,7 +22,8 @@ public enum OriginType {
 
     AWS_KMS("AWS_KMS"),
     EXTERNAL("EXTERNAL"),
-    AWS_CLOUDHSM("AWS_CLOUDHSM");
+    AWS_CLOUDHSM("AWS_CLOUDHSM"),
+    EXTERNAL_KEY_STORE("EXTERNAL_KEY_STORE");
 
     private String value;
 

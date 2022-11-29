@@ -18,6 +18,9 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
+ * <p>
+ * Configures retry behavior in case Kinesis Data Firehose is unable to deliver documents to Amazon OpenSearch Service.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/firehose-2015-08-04/AmazonopensearchserviceRetryOptions"
  *      target="_top">AWS API Documentation</a>
@@ -25,10 +28,27 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class AmazonopensearchserviceRetryOptions implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * After an initial failure to deliver to Amazon OpenSearch Service, the total amount of time during which Kinesis
+     * Data Firehose retries delivery (including the first attempt). After this time has elapsed, the failed documents
+     * are written to Amazon S3. Default value is 300 seconds (5 minutes). A value of 0 (zero) results in no retries.
+     * </p>
+     */
     private Integer durationInSeconds;
 
     /**
+     * <p>
+     * After an initial failure to deliver to Amazon OpenSearch Service, the total amount of time during which Kinesis
+     * Data Firehose retries delivery (including the first attempt). After this time has elapsed, the failed documents
+     * are written to Amazon S3. Default value is 300 seconds (5 minutes). A value of 0 (zero) results in no retries.
+     * </p>
+     * 
      * @param durationInSeconds
+     *        After an initial failure to deliver to Amazon OpenSearch Service, the total amount of time during which
+     *        Kinesis Data Firehose retries delivery (including the first attempt). After this time has elapsed, the
+     *        failed documents are written to Amazon S3. Default value is 300 seconds (5 minutes). A value of 0 (zero)
+     *        results in no retries.
      */
 
     public void setDurationInSeconds(Integer durationInSeconds) {
@@ -36,7 +56,16 @@ public class AmazonopensearchserviceRetryOptions implements Serializable, Clonea
     }
 
     /**
-     * @return
+     * <p>
+     * After an initial failure to deliver to Amazon OpenSearch Service, the total amount of time during which Kinesis
+     * Data Firehose retries delivery (including the first attempt). After this time has elapsed, the failed documents
+     * are written to Amazon S3. Default value is 300 seconds (5 minutes). A value of 0 (zero) results in no retries.
+     * </p>
+     * 
+     * @return After an initial failure to deliver to Amazon OpenSearch Service, the total amount of time during which
+     *         Kinesis Data Firehose retries delivery (including the first attempt). After this time has elapsed, the
+     *         failed documents are written to Amazon S3. Default value is 300 seconds (5 minutes). A value of 0 (zero)
+     *         results in no retries.
      */
 
     public Integer getDurationInSeconds() {
@@ -44,7 +73,17 @@ public class AmazonopensearchserviceRetryOptions implements Serializable, Clonea
     }
 
     /**
+     * <p>
+     * After an initial failure to deliver to Amazon OpenSearch Service, the total amount of time during which Kinesis
+     * Data Firehose retries delivery (including the first attempt). After this time has elapsed, the failed documents
+     * are written to Amazon S3. Default value is 300 seconds (5 minutes). A value of 0 (zero) results in no retries.
+     * </p>
+     * 
      * @param durationInSeconds
+     *        After an initial failure to deliver to Amazon OpenSearch Service, the total amount of time during which
+     *        Kinesis Data Firehose retries delivery (including the first attempt). After this time has elapsed, the
+     *        failed documents are written to Amazon S3. Default value is 300 seconds (5 minutes). A value of 0 (zero)
+     *        results in no retries.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

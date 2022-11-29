@@ -146,6 +146,10 @@ public class KeyMetadataJsonUnmarshaller implements Unmarshaller<KeyMetadata, Js
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("XksKeyConfiguration", targetDepth)) {
+                    context.nextToken();
+                    keyMetadata.setXksKeyConfiguration(XksKeyConfigurationTypeJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

@@ -47,6 +47,9 @@ public class UpdateDestinationRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SplunkDestinationUpdate").build();
     private static final MarshallingInfo<StructuredPojo> HTTPENDPOINTDESTINATIONUPDATE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("HttpEndpointDestinationUpdate").build();
+    private static final MarshallingInfo<StructuredPojo> AMAZONOPENSEARCHSERVERLESSDESTINATIONUPDATE_BINDING = MarshallingInfo
+            .builder(MarshallingType.STRUCTURED).marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AmazonOpenSearchServerlessDestinationUpdate")
+            .build();
 
     private static final UpdateDestinationRequestMarshaller instance = new UpdateDestinationRequestMarshaller();
 
@@ -75,6 +78,8 @@ public class UpdateDestinationRequestMarshaller {
                     AMAZONOPENSEARCHSERVICEDESTINATIONUPDATE_BINDING);
             protocolMarshaller.marshall(updateDestinationRequest.getSplunkDestinationUpdate(), SPLUNKDESTINATIONUPDATE_BINDING);
             protocolMarshaller.marshall(updateDestinationRequest.getHttpEndpointDestinationUpdate(), HTTPENDPOINTDESTINATIONUPDATE_BINDING);
+            protocolMarshaller.marshall(updateDestinationRequest.getAmazonOpenSearchServerlessDestinationUpdate(),
+                    AMAZONOPENSEARCHSERVERLESSDESTINATIONUPDATE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }
