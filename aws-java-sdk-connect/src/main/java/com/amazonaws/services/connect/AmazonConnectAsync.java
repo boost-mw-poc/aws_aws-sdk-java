@@ -462,11 +462,20 @@ public interface AmazonConnectAsync extends AmazonConnect {
      * API only in the same Amazon Web Services Region where the Amazon Connect instance or traffic distribution group
      * was created.
      * </p>
+     * <p>
+     * For more information about how to use this operation, see <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/claim-phone-number.html">Claim a phone number in your
+     * country</a> and <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/claim-phone-numbers-traffic-distribution-groups.html"
+     * >Claim phone numbers to traffic distribution groups</a> in the <i>Amazon Connect Administrator Guide</i>.
+     * </p>
      * <important>
      * <p>
      * You can call the <a
-     * href="https://docs.aws.amazon.com/connect/latest/APIReference/API_DescribePhoneNumber.html">DescribePhoneNumber
-     * </a> API to verify the status of a previous <a
+     * href="https://docs.aws.amazon.com/connect/latest/APIReference/API_SearchAvailablePhoneNumbers.html"
+     * >SearchAvailablePhoneNumbers</a> API for available phone numbers that you can claim. Call the <a
+     * href="https://docs.aws.amazon.com/connect/latest/APIReference/API_DescribePhoneNumber.html"
+     * >DescribePhoneNumber</a> API to verify the status of a previous <a
      * href="https://docs.aws.amazon.com/connect/latest/APIReference/API_ClaimPhoneNumber.html">ClaimPhoneNumber</a>
      * operation.
      * </p>
@@ -486,11 +495,20 @@ public interface AmazonConnectAsync extends AmazonConnect {
      * API only in the same Amazon Web Services Region where the Amazon Connect instance or traffic distribution group
      * was created.
      * </p>
+     * <p>
+     * For more information about how to use this operation, see <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/claim-phone-number.html">Claim a phone number in your
+     * country</a> and <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/claim-phone-numbers-traffic-distribution-groups.html"
+     * >Claim phone numbers to traffic distribution groups</a> in the <i>Amazon Connect Administrator Guide</i>.
+     * </p>
      * <important>
      * <p>
      * You can call the <a
-     * href="https://docs.aws.amazon.com/connect/latest/APIReference/API_DescribePhoneNumber.html">DescribePhoneNumber
-     * </a> API to verify the status of a previous <a
+     * href="https://docs.aws.amazon.com/connect/latest/APIReference/API_SearchAvailablePhoneNumbers.html"
+     * >SearchAvailablePhoneNumbers</a> API for available phone numbers that you can claim. Call the <a
+     * href="https://docs.aws.amazon.com/connect/latest/APIReference/API_DescribePhoneNumber.html"
+     * >DescribePhoneNumber</a> API to verify the status of a previous <a
      * href="https://docs.aws.amazon.com/connect/latest/APIReference/API_ClaimPhoneNumber.html">ClaimPhoneNumber</a>
      * operation.
      * </p>
@@ -863,6 +881,37 @@ public interface AmazonConnectAsync extends AmazonConnect {
      */
     java.util.concurrent.Future<CreateRoutingProfileResult> createRoutingProfileAsync(CreateRoutingProfileRequest createRoutingProfileRequest,
             com.amazonaws.handlers.AsyncHandler<CreateRoutingProfileRequest, CreateRoutingProfileResult> asyncHandler);
+
+    /**
+     * <p>
+     * Creates a rule for the specified Amazon Connect instance.
+     * </p>
+     * 
+     * @param createRuleRequest
+     * @return A Java Future containing the result of the CreateRule operation returned by the service.
+     * @sample AmazonConnectAsync.CreateRule
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/CreateRule" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<CreateRuleResult> createRuleAsync(CreateRuleRequest createRuleRequest);
+
+    /**
+     * <p>
+     * Creates a rule for the specified Amazon Connect instance.
+     * </p>
+     * 
+     * @param createRuleRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateRule operation returned by the service.
+     * @sample AmazonConnectAsyncHandler.CreateRule
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/CreateRule" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<CreateRuleResult> createRuleAsync(CreateRuleRequest createRuleRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateRuleRequest, CreateRuleResult> asyncHandler);
 
     /**
      * <p>
@@ -1330,6 +1379,37 @@ public interface AmazonConnectAsync extends AmazonConnect {
      */
     java.util.concurrent.Future<DeleteQuickConnectResult> deleteQuickConnectAsync(DeleteQuickConnectRequest deleteQuickConnectRequest,
             com.amazonaws.handlers.AsyncHandler<DeleteQuickConnectRequest, DeleteQuickConnectResult> asyncHandler);
+
+    /**
+     * <p>
+     * Deletes a rule for the specified Amazon Connect instance.
+     * </p>
+     * 
+     * @param deleteRuleRequest
+     * @return A Java Future containing the result of the DeleteRule operation returned by the service.
+     * @sample AmazonConnectAsync.DeleteRule
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DeleteRule" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteRuleResult> deleteRuleAsync(DeleteRuleRequest deleteRuleRequest);
+
+    /**
+     * <p>
+     * Deletes a rule for the specified Amazon Connect instance.
+     * </p>
+     * 
+     * @param deleteRuleRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteRule operation returned by the service.
+     * @sample AmazonConnectAsyncHandler.DeleteRule
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DeleteRule" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteRuleResult> deleteRuleAsync(DeleteRuleRequest deleteRuleRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteRuleRequest, DeleteRuleResult> asyncHandler);
 
     /**
      * <p>
@@ -2059,6 +2139,37 @@ public interface AmazonConnectAsync extends AmazonConnect {
      */
     java.util.concurrent.Future<DescribeRoutingProfileResult> describeRoutingProfileAsync(DescribeRoutingProfileRequest describeRoutingProfileRequest,
             com.amazonaws.handlers.AsyncHandler<DescribeRoutingProfileRequest, DescribeRoutingProfileResult> asyncHandler);
+
+    /**
+     * <p>
+     * Describes a rule for the specified Amazon Connect instance.
+     * </p>
+     * 
+     * @param describeRuleRequest
+     * @return A Java Future containing the result of the DescribeRule operation returned by the service.
+     * @sample AmazonConnectAsync.DescribeRule
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DescribeRule" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeRuleResult> describeRuleAsync(DescribeRuleRequest describeRuleRequest);
+
+    /**
+     * <p>
+     * Describes a rule for the specified Amazon Connect instance.
+     * </p>
+     * 
+     * @param describeRuleRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeRule operation returned by the service.
+     * @sample AmazonConnectAsyncHandler.DescribeRule
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DescribeRule" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeRuleResult> describeRuleAsync(DescribeRuleRequest describeRuleRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeRuleRequest, DescribeRuleResult> asyncHandler);
 
     /**
      * <p>
@@ -3780,6 +3891,37 @@ public interface AmazonConnectAsync extends AmazonConnect {
      */
     java.util.concurrent.Future<ListRoutingProfilesResult> listRoutingProfilesAsync(ListRoutingProfilesRequest listRoutingProfilesRequest,
             com.amazonaws.handlers.AsyncHandler<ListRoutingProfilesRequest, ListRoutingProfilesResult> asyncHandler);
+
+    /**
+     * <p>
+     * List all rules for the specified Amazon Connect instance.
+     * </p>
+     * 
+     * @param listRulesRequest
+     * @return A Java Future containing the result of the ListRules operation returned by the service.
+     * @sample AmazonConnectAsync.ListRules
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/ListRules" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListRulesResult> listRulesAsync(ListRulesRequest listRulesRequest);
+
+    /**
+     * <p>
+     * List all rules for the specified Amazon Connect instance.
+     * </p>
+     * 
+     * @param listRulesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListRules operation returned by the service.
+     * @sample AmazonConnectAsyncHandler.ListRules
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/ListRules" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListRulesResult> listRulesAsync(ListRulesRequest listRulesRequest,
+            com.amazonaws.handlers.AsyncHandler<ListRulesRequest, ListRulesResult> asyncHandler);
 
     /**
      * <p>
@@ -6188,6 +6330,37 @@ public interface AmazonConnectAsync extends AmazonConnect {
     java.util.concurrent.Future<UpdateRoutingProfileQueuesResult> updateRoutingProfileQueuesAsync(
             UpdateRoutingProfileQueuesRequest updateRoutingProfileQueuesRequest,
             com.amazonaws.handlers.AsyncHandler<UpdateRoutingProfileQueuesRequest, UpdateRoutingProfileQueuesResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates a rule for the specified Amazon Connect instance.
+     * </p>
+     * 
+     * @param updateRuleRequest
+     * @return A Java Future containing the result of the UpdateRule operation returned by the service.
+     * @sample AmazonConnectAsync.UpdateRule
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/UpdateRule" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateRuleResult> updateRuleAsync(UpdateRuleRequest updateRuleRequest);
+
+    /**
+     * <p>
+     * Updates a rule for the specified Amazon Connect instance.
+     * </p>
+     * 
+     * @param updateRuleRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateRule operation returned by the service.
+     * @sample AmazonConnectAsyncHandler.UpdateRule
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/UpdateRule" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateRuleResult> updateRuleAsync(UpdateRuleRequest updateRuleRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateRuleRequest, UpdateRuleResult> asyncHandler);
 
     /**
      * <p>

@@ -88,6 +88,10 @@ public class UpdatePricingRuleResultJsonUnmarshaller implements Unmarshaller<Upd
                     context.nextToken();
                     updatePricingRuleResult.setBillingEntity(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("Tiering", targetDepth)) {
+                    context.nextToken();
+                    updatePricingRuleResult.setTiering(UpdateTieringInputJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

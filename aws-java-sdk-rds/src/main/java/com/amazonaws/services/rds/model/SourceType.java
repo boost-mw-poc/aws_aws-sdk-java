@@ -27,7 +27,8 @@ public enum SourceType {
     DbCluster("db-cluster"),
     DbClusterSnapshot("db-cluster-snapshot"),
     CustomEngineVersion("custom-engine-version"),
-    DbProxy("db-proxy");
+    DbProxy("db-proxy"),
+    BlueGreenDeployment("blue-green-deployment");
 
     private String value;
 

@@ -290,6 +290,19 @@ public class AbstractAmazonConnectAsync extends AbstractAmazonConnect implements
     }
 
     @Override
+    public java.util.concurrent.Future<CreateRuleResult> createRuleAsync(CreateRuleRequest request) {
+
+        return createRuleAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateRuleResult> createRuleAsync(CreateRuleRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateRuleRequest, CreateRuleResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateSecurityProfileResult> createSecurityProfileAsync(CreateSecurityProfileRequest request) {
 
         return createSecurityProfileAsync(request, null);
@@ -454,6 +467,19 @@ public class AbstractAmazonConnectAsync extends AbstractAmazonConnect implements
     @Override
     public java.util.concurrent.Future<DeleteQuickConnectResult> deleteQuickConnectAsync(DeleteQuickConnectRequest request,
             com.amazonaws.handlers.AsyncHandler<DeleteQuickConnectRequest, DeleteQuickConnectResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteRuleResult> deleteRuleAsync(DeleteRuleRequest request) {
+
+        return deleteRuleAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteRuleResult> deleteRuleAsync(DeleteRuleRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteRuleRequest, DeleteRuleResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -701,6 +727,19 @@ public class AbstractAmazonConnectAsync extends AbstractAmazonConnect implements
     @Override
     public java.util.concurrent.Future<DescribeRoutingProfileResult> describeRoutingProfileAsync(DescribeRoutingProfileRequest request,
             com.amazonaws.handlers.AsyncHandler<DescribeRoutingProfileRequest, DescribeRoutingProfileResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeRuleResult> describeRuleAsync(DescribeRuleRequest request) {
+
+        return describeRuleAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeRuleResult> describeRuleAsync(DescribeRuleRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeRuleRequest, DescribeRuleResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -1294,6 +1333,19 @@ public class AbstractAmazonConnectAsync extends AbstractAmazonConnect implements
     @Override
     public java.util.concurrent.Future<ListRoutingProfilesResult> listRoutingProfilesAsync(ListRoutingProfilesRequest request,
             com.amazonaws.handlers.AsyncHandler<ListRoutingProfilesRequest, ListRoutingProfilesResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListRulesResult> listRulesAsync(ListRulesRequest request) {
+
+        return listRulesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListRulesResult> listRulesAsync(ListRulesRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListRulesRequest, ListRulesResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -2030,6 +2082,19 @@ public class AbstractAmazonConnectAsync extends AbstractAmazonConnect implements
     @Override
     public java.util.concurrent.Future<UpdateRoutingProfileQueuesResult> updateRoutingProfileQueuesAsync(UpdateRoutingProfileQueuesRequest request,
             com.amazonaws.handlers.AsyncHandler<UpdateRoutingProfileQueuesRequest, UpdateRoutingProfileQueuesResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateRuleResult> updateRuleAsync(UpdateRuleRequest request) {
+
+        return updateRuleAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateRuleResult> updateRuleAsync(UpdateRuleRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateRuleRequest, UpdateRuleResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

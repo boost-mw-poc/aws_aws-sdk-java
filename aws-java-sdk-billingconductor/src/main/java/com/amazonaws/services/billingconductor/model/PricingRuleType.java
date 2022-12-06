@@ -21,7 +21,8 @@ import javax.annotation.Generated;
 public enum PricingRuleType {
 
     MARKUP("MARKUP"),
-    DISCOUNT("DISCOUNT");
+    DISCOUNT("DISCOUNT"),
+    TIERING("TIERING");
 
     private String value;
 

@@ -82,6 +82,12 @@ public class CreatePricingRuleRequest extends com.amazonaws.AmazonWebServiceRequ
      * </p>
      */
     private String billingEntity;
+    /**
+     * <p>
+     * The set of tiering configurations for the pricing rule.
+     * </p>
+     */
+    private CreateTieringInput tiering;
 
     /**
      * <p>
@@ -528,6 +534,46 @@ public class CreatePricingRuleRequest extends com.amazonaws.AmazonWebServiceRequ
     }
 
     /**
+     * <p>
+     * The set of tiering configurations for the pricing rule.
+     * </p>
+     * 
+     * @param tiering
+     *        The set of tiering configurations for the pricing rule.
+     */
+
+    public void setTiering(CreateTieringInput tiering) {
+        this.tiering = tiering;
+    }
+
+    /**
+     * <p>
+     * The set of tiering configurations for the pricing rule.
+     * </p>
+     * 
+     * @return The set of tiering configurations for the pricing rule.
+     */
+
+    public CreateTieringInput getTiering() {
+        return this.tiering;
+    }
+
+    /**
+     * <p>
+     * The set of tiering configurations for the pricing rule.
+     * </p>
+     * 
+     * @param tiering
+     *        The set of tiering configurations for the pricing rule.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreatePricingRuleRequest withTiering(CreateTieringInput tiering) {
+        setTiering(tiering);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -556,7 +602,9 @@ public class CreatePricingRuleRequest extends com.amazonaws.AmazonWebServiceRequ
         if (getTags() != null)
             sb.append("Tags: ").append(getTags()).append(",");
         if (getBillingEntity() != null)
-            sb.append("BillingEntity: ").append(getBillingEntity());
+            sb.append("BillingEntity: ").append(getBillingEntity()).append(",");
+        if (getTiering() != null)
+            sb.append("Tiering: ").append(getTiering());
         sb.append("}");
         return sb.toString();
     }
@@ -607,6 +655,10 @@ public class CreatePricingRuleRequest extends com.amazonaws.AmazonWebServiceRequ
             return false;
         if (other.getBillingEntity() != null && other.getBillingEntity().equals(this.getBillingEntity()) == false)
             return false;
+        if (other.getTiering() == null ^ this.getTiering() == null)
+            return false;
+        if (other.getTiering() != null && other.getTiering().equals(this.getTiering()) == false)
+            return false;
         return true;
     }
 
@@ -624,6 +676,7 @@ public class CreatePricingRuleRequest extends com.amazonaws.AmazonWebServiceRequ
         hashCode = prime * hashCode + ((getService() == null) ? 0 : getService().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getBillingEntity() == null) ? 0 : getBillingEntity().hashCode());
+        hashCode = prime * hashCode + ((getTiering() == null) ? 0 : getTiering().hashCode());
         return hashCode;
     }
 

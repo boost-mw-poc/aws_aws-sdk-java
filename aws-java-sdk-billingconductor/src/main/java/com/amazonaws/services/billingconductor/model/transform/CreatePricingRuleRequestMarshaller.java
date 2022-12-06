@@ -50,6 +50,8 @@ public class CreatePricingRuleRequestMarshaller {
             .marshallLocationName("Tags").build();
     private static final MarshallingInfo<String> BILLINGENTITY_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("BillingEntity").build();
+    private static final MarshallingInfo<StructuredPojo> TIERING_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Tiering").build();
 
     private static final CreatePricingRuleRequestMarshaller instance = new CreatePricingRuleRequestMarshaller();
 
@@ -76,6 +78,7 @@ public class CreatePricingRuleRequestMarshaller {
             protocolMarshaller.marshall(createPricingRuleRequest.getService(), SERVICE_BINDING);
             protocolMarshaller.marshall(createPricingRuleRequest.getTags(), TAGS_BINDING);
             protocolMarshaller.marshall(createPricingRuleRequest.getBillingEntity(), BILLINGENTITY_BINDING);
+            protocolMarshaller.marshall(createPricingRuleRequest.getTiering(), TIERING_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

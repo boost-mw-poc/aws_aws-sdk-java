@@ -1071,6 +1071,8 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
      * @throws DBProxyTargetGroupNotFoundException
      *         The specified target group isn't available for a proxy owned by your Amazon Web Services account in the
      *         specified Amazon Web Services Region.
+     * @throws BlueGreenDeploymentNotFoundException
+     *         <code>BlueGreenDeploymentIdentifier</code> doesn't refer to an existing blue/green deployment.
      * @sample AmazonRDS.AddTagsToResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/AddTagsToResource" target="_top">AWS API
      *      Documentation</a>
@@ -7307,6 +7309,8 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
      * @throws DBProxyTargetGroupNotFoundException
      *         The specified target group isn't available for a proxy owned by your Amazon Web Services account in the
      *         specified Amazon Web Services Region.
+     * @throws BlueGreenDeploymentNotFoundException
+     *         <code>BlueGreenDeploymentIdentifier</code> doesn't refer to an existing blue/green deployment.
      * @sample AmazonRDS.ListTagsForResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/ListTagsForResource" target="_top">AWS API
      *      Documentation</a>
@@ -9520,6 +9524,8 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
      * @throws DBProxyTargetGroupNotFoundException
      *         The specified target group isn't available for a proxy owned by your Amazon Web Services account in the
      *         specified Amazon Web Services Region.
+     * @throws BlueGreenDeploymentNotFoundException
+     *         <code>BlueGreenDeploymentIdentifier</code> doesn't refer to an existing blue/green deployment.
      * @sample AmazonRDS.RemoveTagsFromResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/RemoveTagsFromResource" target="_top">AWS API
      *      Documentation</a>

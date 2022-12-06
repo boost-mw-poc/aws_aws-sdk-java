@@ -37,6 +37,8 @@ public class UpdatePricingRuleRequestMarshaller {
             .marshallLocationName("Type").build();
     private static final MarshallingInfo<Double> MODIFIERPERCENTAGE_BINDING = MarshallingInfo.builder(MarshallingType.DOUBLE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ModifierPercentage").build();
+    private static final MarshallingInfo<StructuredPojo> TIERING_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Tiering").build();
 
     private static final UpdatePricingRuleRequestMarshaller instance = new UpdatePricingRuleRequestMarshaller();
 
@@ -59,6 +61,7 @@ public class UpdatePricingRuleRequestMarshaller {
             protocolMarshaller.marshall(updatePricingRuleRequest.getDescription(), DESCRIPTION_BINDING);
             protocolMarshaller.marshall(updatePricingRuleRequest.getType(), TYPE_BINDING);
             protocolMarshaller.marshall(updatePricingRuleRequest.getModifierPercentage(), MODIFIERPERCENTAGE_BINDING);
+            protocolMarshaller.marshall(updatePricingRuleRequest.getTiering(), TIERING_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

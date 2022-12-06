@@ -96,6 +96,12 @@ public class PricingRuleListElement implements Serializable, Cloneable, Structur
      * </p>
      */
     private String billingEntity;
+    /**
+     * <p>
+     * The set of tiering configurations for the pricing rule.
+     * </p>
+     */
+    private Tiering tiering;
 
     /**
      * <p>
@@ -588,6 +594,46 @@ public class PricingRuleListElement implements Serializable, Cloneable, Structur
     }
 
     /**
+     * <p>
+     * The set of tiering configurations for the pricing rule.
+     * </p>
+     * 
+     * @param tiering
+     *        The set of tiering configurations for the pricing rule.
+     */
+
+    public void setTiering(Tiering tiering) {
+        this.tiering = tiering;
+    }
+
+    /**
+     * <p>
+     * The set of tiering configurations for the pricing rule.
+     * </p>
+     * 
+     * @return The set of tiering configurations for the pricing rule.
+     */
+
+    public Tiering getTiering() {
+        return this.tiering;
+    }
+
+    /**
+     * <p>
+     * The set of tiering configurations for the pricing rule.
+     * </p>
+     * 
+     * @param tiering
+     *        The set of tiering configurations for the pricing rule.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PricingRuleListElement withTiering(Tiering tiering) {
+        setTiering(tiering);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -620,7 +666,9 @@ public class PricingRuleListElement implements Serializable, Cloneable, Structur
         if (getLastModifiedTime() != null)
             sb.append("LastModifiedTime: ").append(getLastModifiedTime()).append(",");
         if (getBillingEntity() != null)
-            sb.append("BillingEntity: ").append(getBillingEntity());
+            sb.append("BillingEntity: ").append(getBillingEntity()).append(",");
+        if (getTiering() != null)
+            sb.append("Tiering: ").append(getTiering());
         sb.append("}");
         return sb.toString();
     }
@@ -679,6 +727,10 @@ public class PricingRuleListElement implements Serializable, Cloneable, Structur
             return false;
         if (other.getBillingEntity() != null && other.getBillingEntity().equals(this.getBillingEntity()) == false)
             return false;
+        if (other.getTiering() == null ^ this.getTiering() == null)
+            return false;
+        if (other.getTiering() != null && other.getTiering().equals(this.getTiering()) == false)
+            return false;
         return true;
     }
 
@@ -698,6 +750,7 @@ public class PricingRuleListElement implements Serializable, Cloneable, Structur
         hashCode = prime * hashCode + ((getCreationTime() == null) ? 0 : getCreationTime().hashCode());
         hashCode = prime * hashCode + ((getLastModifiedTime() == null) ? 0 : getLastModifiedTime().hashCode());
         hashCode = prime * hashCode + ((getBillingEntity() == null) ? 0 : getBillingEntity().hashCode());
+        hashCode = prime * hashCode + ((getTiering() == null) ? 0 : getTiering().hashCode());
         return hashCode;
     }
 

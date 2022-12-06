@@ -361,11 +361,20 @@ public interface AmazonConnect {
      * API only in the same Amazon Web Services Region where the Amazon Connect instance or traffic distribution group
      * was created.
      * </p>
+     * <p>
+     * For more information about how to use this operation, see <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/claim-phone-number.html">Claim a phone number in your
+     * country</a> and <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/claim-phone-numbers-traffic-distribution-groups.html"
+     * >Claim phone numbers to traffic distribution groups</a> in the <i>Amazon Connect Administrator Guide</i>.
+     * </p>
      * <important>
      * <p>
      * You can call the <a
-     * href="https://docs.aws.amazon.com/connect/latest/APIReference/API_DescribePhoneNumber.html">DescribePhoneNumber
-     * </a> API to verify the status of a previous <a
+     * href="https://docs.aws.amazon.com/connect/latest/APIReference/API_SearchAvailablePhoneNumbers.html"
+     * >SearchAvailablePhoneNumbers</a> API for available phone numbers that you can claim. Call the <a
+     * href="https://docs.aws.amazon.com/connect/latest/APIReference/API_DescribePhoneNumber.html"
+     * >DescribePhoneNumber</a> API to verify the status of a previous <a
      * href="https://docs.aws.amazon.com/connect/latest/APIReference/API_ClaimPhoneNumber.html">ClaimPhoneNumber</a>
      * operation.
      * </p>
@@ -669,6 +678,33 @@ public interface AmazonConnect {
      *      API Documentation</a>
      */
     CreateRoutingProfileResult createRoutingProfile(CreateRoutingProfileRequest createRoutingProfileRequest);
+
+    /**
+     * <p>
+     * Creates a rule for the specified Amazon Connect instance.
+     * </p>
+     * 
+     * @param createRuleRequest
+     * @return Result of the CreateRule operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws AccessDeniedException
+     *         You do not have sufficient permissions to perform this action.
+     * @throws ResourceConflictException
+     *         A resource already has that name.
+     * @throws ServiceQuotaExceededException
+     *         The service quota has been exceeded.
+     * @sample AmazonConnect.CreateRule
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/CreateRule" target="_top">AWS API
+     *      Documentation</a>
+     */
+    CreateRuleResult createRule(CreateRuleRequest createRuleRequest);
 
     /**
      * <p>
@@ -1018,6 +1054,29 @@ public interface AmazonConnect {
      *      Documentation</a>
      */
     DeleteQuickConnectResult deleteQuickConnect(DeleteQuickConnectRequest deleteQuickConnectRequest);
+
+    /**
+     * <p>
+     * Deletes a rule for the specified Amazon Connect instance.
+     * </p>
+     * 
+     * @param deleteRuleRequest
+     * @return Result of the DeleteRule operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws AccessDeniedException
+     *         You do not have sufficient permissions to perform this action.
+     * @sample AmazonConnect.DeleteRule
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DeleteRule" target="_top">AWS API
+     *      Documentation</a>
+     */
+    DeleteRuleResult deleteRule(DeleteRuleRequest deleteRuleRequest);
 
     /**
      * <p>
@@ -1525,6 +1584,29 @@ public interface AmazonConnect {
      *      API Documentation</a>
      */
     DescribeRoutingProfileResult describeRoutingProfile(DescribeRoutingProfileRequest describeRoutingProfileRequest);
+
+    /**
+     * <p>
+     * Describes a rule for the specified Amazon Connect instance.
+     * </p>
+     * 
+     * @param describeRuleRequest
+     * @return Result of the DescribeRule operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws AccessDeniedException
+     *         You do not have sufficient permissions to perform this action.
+     * @sample AmazonConnect.DescribeRule
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DescribeRule" target="_top">AWS API
+     *      Documentation</a>
+     */
+    DescribeRuleResult describeRule(DescribeRuleRequest describeRuleRequest);
 
     /**
      * <p>
@@ -2695,6 +2777,29 @@ public interface AmazonConnect {
      *      API Documentation</a>
      */
     ListRoutingProfilesResult listRoutingProfiles(ListRoutingProfilesRequest listRoutingProfilesRequest);
+
+    /**
+     * <p>
+     * List all rules for the specified Amazon Connect instance.
+     * </p>
+     * 
+     * @param listRulesRequest
+     * @return Result of the ListRules operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws AccessDeniedException
+     *         You do not have sufficient permissions to perform this action.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @sample AmazonConnect.ListRules
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/ListRules" target="_top">AWS API
+     *      Documentation</a>
+     */
+    ListRulesResult listRules(ListRulesRequest listRulesRequest);
 
     /**
      * <p>
@@ -4329,6 +4434,31 @@ public interface AmazonConnect {
      *      target="_top">AWS API Documentation</a>
      */
     UpdateRoutingProfileQueuesResult updateRoutingProfileQueues(UpdateRoutingProfileQueuesRequest updateRoutingProfileQueuesRequest);
+
+    /**
+     * <p>
+     * Updates a rule for the specified Amazon Connect instance.
+     * </p>
+     * 
+     * @param updateRuleRequest
+     * @return Result of the UpdateRule operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws AccessDeniedException
+     *         You do not have sufficient permissions to perform this action.
+     * @throws ResourceConflictException
+     *         A resource already has that name.
+     * @sample AmazonConnect.UpdateRule
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/UpdateRule" target="_top">AWS API
+     *      Documentation</a>
+     */
+    UpdateRuleResult updateRule(UpdateRuleRequest updateRuleRequest);
 
     /**
      * <p>

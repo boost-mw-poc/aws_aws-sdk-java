@@ -92,6 +92,10 @@ public class PricingRuleListElementJsonUnmarshaller implements Unmarshaller<Pric
                     context.nextToken();
                     pricingRuleListElement.setBillingEntity(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("Tiering", targetDepth)) {
+                    context.nextToken();
+                    pricingRuleListElement.setTiering(TieringJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

@@ -760,6 +760,39 @@ public class AmazonConnectAsyncClient extends AmazonConnectClient implements Ama
     }
 
     @Override
+    public java.util.concurrent.Future<CreateRuleResult> createRuleAsync(CreateRuleRequest request) {
+
+        return createRuleAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateRuleResult> createRuleAsync(final CreateRuleRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateRuleRequest, CreateRuleResult> asyncHandler) {
+        final CreateRuleRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateRuleResult>() {
+            @Override
+            public CreateRuleResult call() throws Exception {
+                CreateRuleResult result = null;
+
+                try {
+                    result = executeCreateRule(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateSecurityProfileResult> createSecurityProfileAsync(CreateSecurityProfileRequest request) {
 
         return createSecurityProfileAsync(request, null);
@@ -1174,6 +1207,39 @@ public class AmazonConnectAsyncClient extends AmazonConnectClient implements Ama
 
                 try {
                     result = executeDeleteQuickConnect(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteRuleResult> deleteRuleAsync(DeleteRuleRequest request) {
+
+        return deleteRuleAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteRuleResult> deleteRuleAsync(final DeleteRuleRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteRuleRequest, DeleteRuleResult> asyncHandler) {
+        final DeleteRuleRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteRuleResult>() {
+            @Override
+            public DeleteRuleResult call() throws Exception {
+                DeleteRuleResult result = null;
+
+                try {
+                    result = executeDeleteRule(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -1803,6 +1869,39 @@ public class AmazonConnectAsyncClient extends AmazonConnectClient implements Ama
 
                 try {
                     result = executeDescribeRoutingProfile(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeRuleResult> describeRuleAsync(DescribeRuleRequest request) {
+
+        return describeRuleAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeRuleResult> describeRuleAsync(final DescribeRuleRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeRuleRequest, DescribeRuleResult> asyncHandler) {
+        final DescribeRuleRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeRuleResult>() {
+            @Override
+            public DescribeRuleResult call() throws Exception {
+                DescribeRuleResult result = null;
+
+                try {
+                    result = executeDescribeRule(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -3298,6 +3397,39 @@ public class AmazonConnectAsyncClient extends AmazonConnectClient implements Ama
 
                 try {
                     result = executeListRoutingProfiles(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListRulesResult> listRulesAsync(ListRulesRequest request) {
+
+        return listRulesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListRulesResult> listRulesAsync(final ListRulesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListRulesRequest, ListRulesResult> asyncHandler) {
+        final ListRulesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListRulesResult>() {
+            @Override
+            public ListRulesResult call() throws Exception {
+                ListRulesResult result = null;
+
+                try {
+                    result = executeListRules(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -5157,6 +5289,39 @@ public class AmazonConnectAsyncClient extends AmazonConnectClient implements Ama
 
                 try {
                     result = executeUpdateRoutingProfileQueues(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateRuleResult> updateRuleAsync(UpdateRuleRequest request) {
+
+        return updateRuleAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateRuleResult> updateRuleAsync(final UpdateRuleRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateRuleRequest, UpdateRuleResult> asyncHandler) {
+        final UpdateRuleRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateRuleResult>() {
+            @Override
+            public UpdateRuleResult call() throws Exception {
+                UpdateRuleResult result = null;
+
+                try {
+                    result = executeUpdateRule(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

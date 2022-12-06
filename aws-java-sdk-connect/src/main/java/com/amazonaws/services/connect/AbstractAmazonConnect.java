@@ -128,6 +128,11 @@ public class AbstractAmazonConnect implements AmazonConnect {
     }
 
     @Override
+    public CreateRuleResult createRule(CreateRuleRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateSecurityProfileResult createSecurityProfile(CreateSecurityProfileRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -189,6 +194,11 @@ public class AbstractAmazonConnect implements AmazonConnect {
 
     @Override
     public DeleteQuickConnectResult deleteQuickConnect(DeleteQuickConnectRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteRuleResult deleteRule(DeleteRuleRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -284,6 +294,11 @@ public class AbstractAmazonConnect implements AmazonConnect {
 
     @Override
     public DescribeRoutingProfileResult describeRoutingProfile(DescribeRoutingProfileRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DescribeRuleResult describeRule(DescribeRuleRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -509,6 +524,11 @@ public class AbstractAmazonConnect implements AmazonConnect {
 
     @Override
     public ListRoutingProfilesResult listRoutingProfiles(ListRoutingProfilesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListRulesResult listRules(ListRulesRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -789,6 +809,11 @@ public class AbstractAmazonConnect implements AmazonConnect {
 
     @Override
     public UpdateRoutingProfileQueuesResult updateRoutingProfileQueues(UpdateRoutingProfileQueuesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateRuleResult updateRule(UpdateRuleRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

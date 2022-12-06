@@ -49,6 +49,8 @@ public class PricingRuleListElementMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LastModifiedTime").build();
     private static final MarshallingInfo<String> BILLINGENTITY_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("BillingEntity").build();
+    private static final MarshallingInfo<StructuredPojo> TIERING_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Tiering").build();
 
     private static final PricingRuleListElementMarshaller instance = new PricingRuleListElementMarshaller();
 
@@ -77,6 +79,7 @@ public class PricingRuleListElementMarshaller {
             protocolMarshaller.marshall(pricingRuleListElement.getCreationTime(), CREATIONTIME_BINDING);
             protocolMarshaller.marshall(pricingRuleListElement.getLastModifiedTime(), LASTMODIFIEDTIME_BINDING);
             protocolMarshaller.marshall(pricingRuleListElement.getBillingEntity(), BILLINGENTITY_BINDING);
+            protocolMarshaller.marshall(pricingRuleListElement.getTiering(), TIERING_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

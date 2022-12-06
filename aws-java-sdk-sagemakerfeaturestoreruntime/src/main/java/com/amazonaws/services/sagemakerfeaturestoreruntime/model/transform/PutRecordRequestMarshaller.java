@@ -32,6 +32,8 @@ public class PutRecordRequestMarshaller {
             .marshallLocation(MarshallLocation.PATH).marshallLocationName("FeatureGroupName").build();
     private static final MarshallingInfo<List> RECORD_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Record").build();
+    private static final MarshallingInfo<List> TARGETSTORES_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("TargetStores").build();
 
     private static final PutRecordRequestMarshaller instance = new PutRecordRequestMarshaller();
 
@@ -51,6 +53,7 @@ public class PutRecordRequestMarshaller {
         try {
             protocolMarshaller.marshall(putRecordRequest.getFeatureGroupName(), FEATUREGROUPNAME_BINDING);
             protocolMarshaller.marshall(putRecordRequest.getRecord(), RECORD_BINDING);
+            protocolMarshaller.marshall(putRecordRequest.getTargetStores(), TARGETSTORES_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

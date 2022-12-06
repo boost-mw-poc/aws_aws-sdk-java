@@ -943,11 +943,20 @@ public class AmazonConnectClient extends AmazonWebServiceClient implements Amazo
      * API only in the same Amazon Web Services Region where the Amazon Connect instance or traffic distribution group
      * was created.
      * </p>
+     * <p>
+     * For more information about how to use this operation, see <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/claim-phone-number.html">Claim a phone number in your
+     * country</a> and <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/claim-phone-numbers-traffic-distribution-groups.html"
+     * >Claim phone numbers to traffic distribution groups</a> in the <i>Amazon Connect Administrator Guide</i>.
+     * </p>
      * <important>
      * <p>
      * You can call the <a
-     * href="https://docs.aws.amazon.com/connect/latest/APIReference/API_DescribePhoneNumber.html">DescribePhoneNumber
-     * </a> API to verify the status of a previous <a
+     * href="https://docs.aws.amazon.com/connect/latest/APIReference/API_SearchAvailablePhoneNumbers.html"
+     * >SearchAvailablePhoneNumbers</a> API for available phone numbers that you can claim. Call the <a
+     * href="https://docs.aws.amazon.com/connect/latest/APIReference/API_DescribePhoneNumber.html"
+     * >DescribePhoneNumber</a> API to verify the status of a previous <a
      * href="https://docs.aws.amazon.com/connect/latest/APIReference/API_ClaimPhoneNumber.html">ClaimPhoneNumber</a>
      * operation.
      * </p>
@@ -1667,6 +1676,75 @@ public class AmazonConnectClient extends AmazonWebServiceClient implements Amazo
 
             HttpResponseHandler<AmazonWebServiceResponse<CreateRoutingProfileResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new CreateRoutingProfileResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Creates a rule for the specified Amazon Connect instance.
+     * </p>
+     * 
+     * @param createRuleRequest
+     * @return Result of the CreateRule operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws AccessDeniedException
+     *         You do not have sufficient permissions to perform this action.
+     * @throws ResourceConflictException
+     *         A resource already has that name.
+     * @throws ServiceQuotaExceededException
+     *         The service quota has been exceeded.
+     * @sample AmazonConnect.CreateRule
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/CreateRule" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public CreateRuleResult createRule(CreateRuleRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateRule(request);
+    }
+
+    @SdkInternalApi
+    final CreateRuleResult executeCreateRule(CreateRuleRequest createRuleRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createRuleRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateRuleRequest> request = null;
+        Response<CreateRuleResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateRuleRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(createRuleRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Connect");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateRule");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<CreateRuleResult>> responseHandler = protocolFactory.createResponseHandler(new JsonOperationMetadata()
+                    .withPayloadJson(true).withHasStreamingSuccessResponse(false), new CreateRuleResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -2572,6 +2650,71 @@ public class AmazonConnectClient extends AmazonWebServiceClient implements Amazo
 
             HttpResponseHandler<AmazonWebServiceResponse<DeleteQuickConnectResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DeleteQuickConnectResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Deletes a rule for the specified Amazon Connect instance.
+     * </p>
+     * 
+     * @param deleteRuleRequest
+     * @return Result of the DeleteRule operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws AccessDeniedException
+     *         You do not have sufficient permissions to perform this action.
+     * @sample AmazonConnect.DeleteRule
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DeleteRule" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public DeleteRuleResult deleteRule(DeleteRuleRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteRule(request);
+    }
+
+    @SdkInternalApi
+    final DeleteRuleResult executeDeleteRule(DeleteRuleRequest deleteRuleRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteRuleRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteRuleRequest> request = null;
+        Response<DeleteRuleResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteRuleRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(deleteRuleRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Connect");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteRule");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeleteRuleResult>> responseHandler = protocolFactory.createResponseHandler(new JsonOperationMetadata()
+                    .withPayloadJson(true).withHasStreamingSuccessResponse(false), new DeleteRuleResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -3891,6 +4034,71 @@ public class AmazonConnectClient extends AmazonWebServiceClient implements Amazo
             HttpResponseHandler<AmazonWebServiceResponse<DescribeRoutingProfileResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new DescribeRoutingProfileResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Describes a rule for the specified Amazon Connect instance.
+     * </p>
+     * 
+     * @param describeRuleRequest
+     * @return Result of the DescribeRule operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws AccessDeniedException
+     *         You do not have sufficient permissions to perform this action.
+     * @sample AmazonConnect.DescribeRule
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DescribeRule" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public DescribeRuleResult describeRule(DescribeRuleRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribeRule(request);
+    }
+
+    @SdkInternalApi
+    final DescribeRuleResult executeDescribeRule(DescribeRuleRequest describeRuleRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describeRuleRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeRuleRequest> request = null;
+        Response<DescribeRuleResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeRuleRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(describeRuleRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Connect");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeRule");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DescribeRuleResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DescribeRuleResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -6990,6 +7198,71 @@ public class AmazonConnectClient extends AmazonWebServiceClient implements Amazo
 
             HttpResponseHandler<AmazonWebServiceResponse<ListRoutingProfilesResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListRoutingProfilesResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * List all rules for the specified Amazon Connect instance.
+     * </p>
+     * 
+     * @param listRulesRequest
+     * @return Result of the ListRules operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws AccessDeniedException
+     *         You do not have sufficient permissions to perform this action.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @sample AmazonConnect.ListRules
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/ListRules" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public ListRulesResult listRules(ListRulesRequest request) {
+        request = beforeClientExecution(request);
+        return executeListRules(request);
+    }
+
+    @SdkInternalApi
+    final ListRulesResult executeListRules(ListRulesRequest listRulesRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listRulesRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListRulesRequest> request = null;
+        Response<ListRulesResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListRulesRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listRulesRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Connect");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListRules");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListRulesResult>> responseHandler = protocolFactory.createResponseHandler(new JsonOperationMetadata()
+                    .withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListRulesResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -11029,6 +11302,73 @@ public class AmazonConnectClient extends AmazonWebServiceClient implements Amazo
             HttpResponseHandler<AmazonWebServiceResponse<UpdateRoutingProfileQueuesResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new UpdateRoutingProfileQueuesResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Updates a rule for the specified Amazon Connect instance.
+     * </p>
+     * 
+     * @param updateRuleRequest
+     * @return Result of the UpdateRule operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws AccessDeniedException
+     *         You do not have sufficient permissions to perform this action.
+     * @throws ResourceConflictException
+     *         A resource already has that name.
+     * @sample AmazonConnect.UpdateRule
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/UpdateRule" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public UpdateRuleResult updateRule(UpdateRuleRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateRule(request);
+    }
+
+    @SdkInternalApi
+    final UpdateRuleResult executeUpdateRule(UpdateRuleRequest updateRuleRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateRuleRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateRuleRequest> request = null;
+        Response<UpdateRuleResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateRuleRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(updateRuleRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Connect");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateRule");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdateRuleResult>> responseHandler = protocolFactory.createResponseHandler(new JsonOperationMetadata()
+                    .withPayloadJson(true).withHasStreamingSuccessResponse(false), new UpdateRuleResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
