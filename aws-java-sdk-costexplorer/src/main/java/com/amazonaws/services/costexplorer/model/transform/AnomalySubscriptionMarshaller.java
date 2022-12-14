@@ -42,6 +42,8 @@ public class AnomalySubscriptionMarshaller {
             .marshallLocationName("Frequency").build();
     private static final MarshallingInfo<String> SUBSCRIPTIONNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SubscriptionName").build();
+    private static final MarshallingInfo<StructuredPojo> THRESHOLDEXPRESSION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ThresholdExpression").build();
 
     private static final AnomalySubscriptionMarshaller instance = new AnomalySubscriptionMarshaller();
 
@@ -66,6 +68,7 @@ public class AnomalySubscriptionMarshaller {
             protocolMarshaller.marshall(anomalySubscription.getThreshold(), THRESHOLD_BINDING);
             protocolMarshaller.marshall(anomalySubscription.getFrequency(), FREQUENCY_BINDING);
             protocolMarshaller.marshall(anomalySubscription.getSubscriptionName(), SUBSCRIPTIONNAME_BINDING);
+            protocolMarshaller.marshall(anomalySubscription.getThresholdExpression(), THRESHOLDEXPRESSION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

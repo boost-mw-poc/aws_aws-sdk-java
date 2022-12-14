@@ -2580,8 +2580,11 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
 
     /**
      * <p>
-     * Creates or updates an alarm and associates it with the specified metric, metric math expression, or anomaly
-     * detection model.
+     * Creates or updates an alarm and associates it with the specified metric, metric math expression, anomaly
+     * detection model, or Metrics Insights query. For more information about using a Metrics Insights query for an
+     * alarm, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Create_Metrics_Insights_Alarm.html">Create
+     * alarms on Metrics Insights queries</a>.
      * </p>
      * <p>
      * Alarms based on anomaly detection models cannot have Auto Scaling actions.

@@ -35,22 +35,22 @@ public class BatchPutMetricsError implements Serializable, Cloneable, Structured
      * <ul>
      * <li>
      * <p>
-     * <code>METRIC_LIMIT_EXCEEDED</code> - The max amount of metrics per resource has been exceeded.
+     * <code>METRIC_LIMIT_EXCEEDED</code>: The maximum amount of metrics per resource is exceeded.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>INTERNAL_ERROR</code> - An internal error occured.
+     * <code>INTERNAL_ERROR</code>: An internal error occured.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>VALIDATION_ERROR</code> - The metric data failed validation.
+     * <code>VALIDATION_ERROR</code>: The metric data failed validation.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>CONFLICT_ERROR</code> - Multiple requests attempted to modify the same data simultaneously.
+     * <code>CONFLICT_ERROR</code>: Multiple requests attempted to modify the same data simultaneously.
      * </p>
      * </li>
      * </ul>
@@ -70,22 +70,22 @@ public class BatchPutMetricsError implements Serializable, Cloneable, Structured
      * <ul>
      * <li>
      * <p>
-     * <code>METRIC_LIMIT_EXCEEDED</code> - The max amount of metrics per resource has been exceeded.
+     * <code>METRIC_LIMIT_EXCEEDED</code>: The maximum amount of metrics per resource is exceeded.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>INTERNAL_ERROR</code> - An internal error occured.
+     * <code>INTERNAL_ERROR</code>: An internal error occured.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>VALIDATION_ERROR</code> - The metric data failed validation.
+     * <code>VALIDATION_ERROR</code>: The metric data failed validation.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>CONFLICT_ERROR</code> - Multiple requests attempted to modify the same data simultaneously.
+     * <code>CONFLICT_ERROR</code>: Multiple requests attempted to modify the same data simultaneously.
      * </p>
      * </li>
      * </ul>
@@ -95,22 +95,22 @@ public class BatchPutMetricsError implements Serializable, Cloneable, Structured
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>METRIC_LIMIT_EXCEEDED</code> - The max amount of metrics per resource has been exceeded.
+     *        <code>METRIC_LIMIT_EXCEEDED</code>: The maximum amount of metrics per resource is exceeded.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>INTERNAL_ERROR</code> - An internal error occured.
+     *        <code>INTERNAL_ERROR</code>: An internal error occured.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>VALIDATION_ERROR</code> - The metric data failed validation.
+     *        <code>VALIDATION_ERROR</code>: The metric data failed validation.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>CONFLICT_ERROR</code> - Multiple requests attempted to modify the same data simultaneously.
+     *        <code>CONFLICT_ERROR</code>: Multiple requests attempted to modify the same data simultaneously.
      *        </p>
      *        </li>
      * @see PutMetricsErrorCode
@@ -127,22 +127,22 @@ public class BatchPutMetricsError implements Serializable, Cloneable, Structured
      * <ul>
      * <li>
      * <p>
-     * <code>METRIC_LIMIT_EXCEEDED</code> - The max amount of metrics per resource has been exceeded.
+     * <code>METRIC_LIMIT_EXCEEDED</code>: The maximum amount of metrics per resource is exceeded.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>INTERNAL_ERROR</code> - An internal error occured.
+     * <code>INTERNAL_ERROR</code>: An internal error occured.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>VALIDATION_ERROR</code> - The metric data failed validation.
+     * <code>VALIDATION_ERROR</code>: The metric data failed validation.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>CONFLICT_ERROR</code> - Multiple requests attempted to modify the same data simultaneously.
+     * <code>CONFLICT_ERROR</code>: Multiple requests attempted to modify the same data simultaneously.
      * </p>
      * </li>
      * </ul>
@@ -151,22 +151,22 @@ public class BatchPutMetricsError implements Serializable, Cloneable, Structured
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>METRIC_LIMIT_EXCEEDED</code> - The max amount of metrics per resource has been exceeded.
+     *         <code>METRIC_LIMIT_EXCEEDED</code>: The maximum amount of metrics per resource is exceeded.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>INTERNAL_ERROR</code> - An internal error occured.
+     *         <code>INTERNAL_ERROR</code>: An internal error occured.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>VALIDATION_ERROR</code> - The metric data failed validation.
+     *         <code>VALIDATION_ERROR</code>: The metric data failed validation.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>CONFLICT_ERROR</code> - Multiple requests attempted to modify the same data simultaneously.
+     *         <code>CONFLICT_ERROR</code>: Multiple requests attempted to modify the same data simultaneously.
      *         </p>
      *         </li>
      * @see PutMetricsErrorCode
@@ -183,22 +183,22 @@ public class BatchPutMetricsError implements Serializable, Cloneable, Structured
      * <ul>
      * <li>
      * <p>
-     * <code>METRIC_LIMIT_EXCEEDED</code> - The max amount of metrics per resource has been exceeded.
+     * <code>METRIC_LIMIT_EXCEEDED</code>: The maximum amount of metrics per resource is exceeded.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>INTERNAL_ERROR</code> - An internal error occured.
+     * <code>INTERNAL_ERROR</code>: An internal error occured.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>VALIDATION_ERROR</code> - The metric data failed validation.
+     * <code>VALIDATION_ERROR</code>: The metric data failed validation.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>CONFLICT_ERROR</code> - Multiple requests attempted to modify the same data simultaneously.
+     * <code>CONFLICT_ERROR</code>: Multiple requests attempted to modify the same data simultaneously.
      * </p>
      * </li>
      * </ul>
@@ -208,22 +208,22 @@ public class BatchPutMetricsError implements Serializable, Cloneable, Structured
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>METRIC_LIMIT_EXCEEDED</code> - The max amount of metrics per resource has been exceeded.
+     *        <code>METRIC_LIMIT_EXCEEDED</code>: The maximum amount of metrics per resource is exceeded.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>INTERNAL_ERROR</code> - An internal error occured.
+     *        <code>INTERNAL_ERROR</code>: An internal error occured.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>VALIDATION_ERROR</code> - The metric data failed validation.
+     *        <code>VALIDATION_ERROR</code>: The metric data failed validation.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>CONFLICT_ERROR</code> - Multiple requests attempted to modify the same data simultaneously.
+     *        <code>CONFLICT_ERROR</code>: Multiple requests attempted to modify the same data simultaneously.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -242,22 +242,22 @@ public class BatchPutMetricsError implements Serializable, Cloneable, Structured
      * <ul>
      * <li>
      * <p>
-     * <code>METRIC_LIMIT_EXCEEDED</code> - The max amount of metrics per resource has been exceeded.
+     * <code>METRIC_LIMIT_EXCEEDED</code>: The maximum amount of metrics per resource is exceeded.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>INTERNAL_ERROR</code> - An internal error occured.
+     * <code>INTERNAL_ERROR</code>: An internal error occured.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>VALIDATION_ERROR</code> - The metric data failed validation.
+     * <code>VALIDATION_ERROR</code>: The metric data failed validation.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>CONFLICT_ERROR</code> - Multiple requests attempted to modify the same data simultaneously.
+     * <code>CONFLICT_ERROR</code>: Multiple requests attempted to modify the same data simultaneously.
      * </p>
      * </li>
      * </ul>
@@ -267,22 +267,22 @@ public class BatchPutMetricsError implements Serializable, Cloneable, Structured
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>METRIC_LIMIT_EXCEEDED</code> - The max amount of metrics per resource has been exceeded.
+     *        <code>METRIC_LIMIT_EXCEEDED</code>: The maximum amount of metrics per resource is exceeded.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>INTERNAL_ERROR</code> - An internal error occured.
+     *        <code>INTERNAL_ERROR</code>: An internal error occured.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>VALIDATION_ERROR</code> - The metric data failed validation.
+     *        <code>VALIDATION_ERROR</code>: The metric data failed validation.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>CONFLICT_ERROR</code> - Multiple requests attempted to modify the same data simultaneously.
+     *        <code>CONFLICT_ERROR</code>: Multiple requests attempted to modify the same data simultaneously.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

@@ -25,17 +25,17 @@ public class BatchPutMetricsResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * Any errors that occur when inserting metric data will appear in this.
+     * Lists any errors that occur when inserting metric data.
      * </p>
      */
     private java.util.List<BatchPutMetricsError> errors;
 
     /**
      * <p>
-     * Any errors that occur when inserting metric data will appear in this.
+     * Lists any errors that occur when inserting metric data.
      * </p>
      * 
-     * @return Any errors that occur when inserting metric data will appear in this.
+     * @return Lists any errors that occur when inserting metric data.
      */
 
     public java.util.List<BatchPutMetricsError> getErrors() {
@@ -44,11 +44,11 @@ public class BatchPutMetricsResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * Any errors that occur when inserting metric data will appear in this.
+     * Lists any errors that occur when inserting metric data.
      * </p>
      * 
      * @param errors
-     *        Any errors that occur when inserting metric data will appear in this.
+     *        Lists any errors that occur when inserting metric data.
      */
 
     public void setErrors(java.util.Collection<BatchPutMetricsError> errors) {
@@ -62,7 +62,7 @@ public class BatchPutMetricsResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * Any errors that occur when inserting metric data will appear in this.
+     * Lists any errors that occur when inserting metric data.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -71,7 +71,7 @@ public class BatchPutMetricsResult extends com.amazonaws.AmazonWebServiceResult<
      * </p>
      * 
      * @param errors
-     *        Any errors that occur when inserting metric data will appear in this.
+     *        Lists any errors that occur when inserting metric data.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -87,11 +87,11 @@ public class BatchPutMetricsResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * Any errors that occur when inserting metric data will appear in this.
+     * Lists any errors that occur when inserting metric data.
      * </p>
      * 
      * @param errors
-     *        Any errors that occur when inserting metric data will appear in this.
+     *        Lists any errors that occur when inserting metric data.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

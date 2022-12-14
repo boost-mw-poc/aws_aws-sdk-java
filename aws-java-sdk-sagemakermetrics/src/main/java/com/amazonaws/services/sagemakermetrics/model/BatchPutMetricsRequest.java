@@ -27,7 +27,7 @@ public class BatchPutMetricsRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The name of Trial Component to associate the metrics with.
+     * The name of the Trial Component to associate with the metrics.
      * </p>
      */
     private String trialComponentName;
@@ -40,11 +40,11 @@ public class BatchPutMetricsRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The name of Trial Component to associate the metrics with.
+     * The name of the Trial Component to associate with the metrics.
      * </p>
      * 
      * @param trialComponentName
-     *        The name of Trial Component to associate the metrics with.
+     *        The name of the Trial Component to associate with the metrics.
      */
 
     public void setTrialComponentName(String trialComponentName) {
@@ -53,10 +53,10 @@ public class BatchPutMetricsRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The name of Trial Component to associate the metrics with.
+     * The name of the Trial Component to associate with the metrics.
      * </p>
      * 
-     * @return The name of Trial Component to associate the metrics with.
+     * @return The name of the Trial Component to associate with the metrics.
      */
 
     public String getTrialComponentName() {
@@ -65,11 +65,11 @@ public class BatchPutMetricsRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The name of Trial Component to associate the metrics with.
+     * The name of the Trial Component to associate with the metrics.
      * </p>
      * 
      * @param trialComponentName
-     *        The name of Trial Component to associate the metrics with.
+     *        The name of the Trial Component to associate with the metrics.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

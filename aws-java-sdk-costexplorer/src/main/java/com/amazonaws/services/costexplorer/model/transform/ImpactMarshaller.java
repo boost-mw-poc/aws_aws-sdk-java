@@ -31,6 +31,12 @@ public class ImpactMarshaller {
             .marshallLocationName("MaxImpact").build();
     private static final MarshallingInfo<Double> TOTALIMPACT_BINDING = MarshallingInfo.builder(MarshallingType.DOUBLE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("TotalImpact").build();
+    private static final MarshallingInfo<Double> TOTALACTUALSPEND_BINDING = MarshallingInfo.builder(MarshallingType.DOUBLE)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("TotalActualSpend").build();
+    private static final MarshallingInfo<Double> TOTALEXPECTEDSPEND_BINDING = MarshallingInfo.builder(MarshallingType.DOUBLE)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("TotalExpectedSpend").build();
+    private static final MarshallingInfo<Double> TOTALIMPACTPERCENTAGE_BINDING = MarshallingInfo.builder(MarshallingType.DOUBLE)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("TotalImpactPercentage").build();
 
     private static final ImpactMarshaller instance = new ImpactMarshaller();
 
@@ -50,6 +56,9 @@ public class ImpactMarshaller {
         try {
             protocolMarshaller.marshall(impact.getMaxImpact(), MAXIMPACT_BINDING);
             protocolMarshaller.marshall(impact.getTotalImpact(), TOTALIMPACT_BINDING);
+            protocolMarshaller.marshall(impact.getTotalActualSpend(), TOTALACTUALSPEND_BINDING);
+            protocolMarshaller.marshall(impact.getTotalExpectedSpend(), TOTALEXPECTEDSPEND_BINDING);
+            protocolMarshaller.marshall(impact.getTotalImpactPercentage(), TOTALIMPACTPERCENTAGE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -56,6 +56,18 @@ public class ImpactJsonUnmarshaller implements Unmarshaller<Impact, JsonUnmarsha
                     context.nextToken();
                     impact.setTotalImpact(context.getUnmarshaller(Double.class).unmarshall(context));
                 }
+                if (context.testExpression("TotalActualSpend", targetDepth)) {
+                    context.nextToken();
+                    impact.setTotalActualSpend(context.getUnmarshaller(Double.class).unmarshall(context));
+                }
+                if (context.testExpression("TotalExpectedSpend", targetDepth)) {
+                    context.nextToken();
+                    impact.setTotalExpectedSpend(context.getUnmarshaller(Double.class).unmarshall(context));
+                }
+                if (context.testExpression("TotalImpactPercentage", targetDepth)) {
+                    context.nextToken();
+                    impact.setTotalImpactPercentage(context.getUnmarshaller(Double.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

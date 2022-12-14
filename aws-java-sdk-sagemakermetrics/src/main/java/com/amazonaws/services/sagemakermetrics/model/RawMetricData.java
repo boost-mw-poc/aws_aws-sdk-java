@@ -36,13 +36,13 @@ public class RawMetricData implements Serializable, Cloneable, StructuredPojo {
     private String metricName;
     /**
      * <p>
-     * The time when the metric was recorded.
+     * The time that the metric was recorded.
      * </p>
      */
     private java.util.Date timestamp;
     /**
      * <p>
-     * Metric step (aka Epoch).
+     * The metric step (epoch).
      * </p>
      */
     private Integer step;
@@ -95,11 +95,11 @@ public class RawMetricData implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The time when the metric was recorded.
+     * The time that the metric was recorded.
      * </p>
      * 
      * @param timestamp
-     *        The time when the metric was recorded.
+     *        The time that the metric was recorded.
      */
 
     public void setTimestamp(java.util.Date timestamp) {
@@ -108,10 +108,10 @@ public class RawMetricData implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The time when the metric was recorded.
+     * The time that the metric was recorded.
      * </p>
      * 
-     * @return The time when the metric was recorded.
+     * @return The time that the metric was recorded.
      */
 
     public java.util.Date getTimestamp() {
@@ -120,11 +120,11 @@ public class RawMetricData implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The time when the metric was recorded.
+     * The time that the metric was recorded.
      * </p>
      * 
      * @param timestamp
-     *        The time when the metric was recorded.
+     *        The time that the metric was recorded.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -135,11 +135,11 @@ public class RawMetricData implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Metric step (aka Epoch).
+     * The metric step (epoch).
      * </p>
      * 
      * @param step
-     *        Metric step (aka Epoch).
+     *        The metric step (epoch).
      */
 
     public void setStep(Integer step) {
@@ -148,10 +148,10 @@ public class RawMetricData implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Metric step (aka Epoch).
+     * The metric step (epoch).
      * </p>
      * 
-     * @return Metric step (aka Epoch).
+     * @return The metric step (epoch).
      */
 
     public Integer getStep() {
@@ -160,11 +160,11 @@ public class RawMetricData implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Metric step (aka Epoch).
+     * The metric step (epoch).
      * </p>
      * 
      * @param step
-     *        Metric step (aka Epoch).
+     *        The metric step (epoch).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

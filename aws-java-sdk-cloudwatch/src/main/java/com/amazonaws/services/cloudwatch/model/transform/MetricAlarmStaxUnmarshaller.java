@@ -204,6 +204,16 @@ public class MetricAlarmStaxUnmarshaller implements Unmarshaller<MetricAlarm, St
                     metricAlarm.setThresholdMetricId(StringStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("EvaluationState", targetDepth)) {
+                    metricAlarm.setEvaluationState(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
+                if (context.testExpression("StateTransitionedTimestamp", targetDepth)) {
+                    metricAlarm.setStateTransitionedTimestamp(DateStaxUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return metricAlarm;

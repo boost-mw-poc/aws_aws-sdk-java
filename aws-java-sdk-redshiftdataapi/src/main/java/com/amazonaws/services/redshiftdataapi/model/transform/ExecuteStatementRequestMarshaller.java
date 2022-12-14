@@ -18,6 +18,8 @@ import javax.annotation.Generated;
 import com.amazonaws.SdkClientException;
 import com.amazonaws.services.redshiftdataapi.model.*;
 
+import com.amazonaws.util.IdempotentUtils;
+
 import com.amazonaws.protocol.*;
 import com.amazonaws.annotation.SdkInternalApi;
 
@@ -28,6 +30,9 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class ExecuteStatementRequestMarshaller {
 
+    private static final MarshallingInfo<String> CLIENTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ClientToken")
+            .defaultValueSupplier(com.amazonaws.util.IdempotentUtils.getGenerator()).build();
     private static final MarshallingInfo<String> CLUSTERIDENTIFIER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ClusterIdentifier").build();
     private static final MarshallingInfo<String> DATABASE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
@@ -63,6 +68,7 @@ public class ExecuteStatementRequestMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(executeStatementRequest.getClientToken(), CLIENTTOKEN_BINDING);
             protocolMarshaller.marshall(executeStatementRequest.getClusterIdentifier(), CLUSTERIDENTIFIER_BINDING);
             protocolMarshaller.marshall(executeStatementRequest.getDatabase(), DATABASE_BINDING);
             protocolMarshaller.marshall(executeStatementRequest.getDbUser(), DBUSER_BINDING);

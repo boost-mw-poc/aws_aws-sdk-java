@@ -238,9 +238,9 @@ public class AWSCostExplorerClient extends AmazonWebServiceClient implements AWS
 
     /**
      * <p>
-     * Adds a subscription to a cost anomaly detection monitor. You can use each subscription to define subscribers with
-     * email or SNS notifications. Email subscribers can set a dollar threshold and a time frequency for receiving
-     * notifications.
+     * Adds an alert subscription to a cost anomaly detection monitor. You can use each subscription to define
+     * subscribers with email or SNS notifications. Email subscribers can set an absolute or percentage threshold and a
+     * time frequency for receiving notifications.
      * </p>
      * 
      * @param createAnomalySubscriptionRequest
@@ -613,7 +613,7 @@ public class AWSCostExplorerClient extends AmazonWebServiceClient implements AWS
     /**
      * <p>
      * Retrieves all of the cost anomalies detected on your account during the time period that's specified by the
-     * <code>DateInterval</code> object.
+     * <code>DateInterval</code> object. Anomalies are available for up to 90 days.
      * </p>
      * 
      * @param getAnomaliesRequest

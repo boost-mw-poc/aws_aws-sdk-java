@@ -52,8 +52,8 @@ public interface AmazonSageMakerMetrics {
 
     /**
      * <p>
-     * Used to ingest training metrics into SageMaker which can be visualized in SageMaker Studio and retrieved with the
-     * <code>GetMetrics</code> API.
+     * Used to ingest training metrics into SageMaker. These metrics can be visualized in SageMaker Studio and retrieved
+     * with the <code>GetMetrics</code> API.
      * </p>
      * 
      * @param batchPutMetricsRequest

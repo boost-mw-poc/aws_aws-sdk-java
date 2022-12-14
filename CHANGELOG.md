@@ -1,3 +1,24 @@
+# __1.12.365__ __2022-12-14__
+## __AWS Cost Explorer Service__
+  - ### Features
+    - This release supports percentage-based thresholds on Cost Anomaly Detection alert subscriptions.
+
+## __AWS Network Manager__
+  - ### Features
+    - Appliance Mode support for AWS Cloud WAN.
+
+## __Amazon CloudWatch__
+  - ### Features
+    - Adding support for Metrics Insights Alarms
+
+## __Amazon SageMaker Metrics Service__
+  - ### Features
+    - Update SageMaker Metrics documentation.
+
+## __Redshift Data API Service__
+  - ### Features
+    - This release adds a new --client-token field to ExecuteStatement and BatchExecuteStatement operations. Customers can now run queries with the additional client token parameter to ensures idempotency.
+
 # __1.12.364__ __2022-12-13__
 ## __AWS CloudTrail__
   - ### Features
