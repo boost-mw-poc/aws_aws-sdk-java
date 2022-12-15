@@ -19,8 +19,9 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Shows which variant is a production variant and which variant is a shadow variant. For shadow variants, also shows
- * the sampling percentages.
+ * The configuration of <code>ShadowMode</code> inference experiment type, which specifies a production variant to take
+ * all the inference requests, and a shadow variant to which Amazon SageMaker replicates a percentage of the inference
+ * requests. For the shadow variant it also specifies the percentage of requests that Amazon SageMaker replicates.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ShadowModeConfig" target="_top">AWS API
@@ -31,7 +32,7 @@ public class ShadowModeConfig implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The name of the production variant.
+     * The name of the production variant, which takes all the inference requests.
      * </p>
      */
     private String sourceModelVariantName;
@@ -44,11 +45,11 @@ public class ShadowModeConfig implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The name of the production variant.
+     * The name of the production variant, which takes all the inference requests.
      * </p>
      * 
      * @param sourceModelVariantName
-     *        The name of the production variant.
+     *        The name of the production variant, which takes all the inference requests.
      */
 
     public void setSourceModelVariantName(String sourceModelVariantName) {
@@ -57,10 +58,10 @@ public class ShadowModeConfig implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The name of the production variant.
+     * The name of the production variant, which takes all the inference requests.
      * </p>
      * 
-     * @return The name of the production variant.
+     * @return The name of the production variant, which takes all the inference requests.
      */
 
     public String getSourceModelVariantName() {
@@ -69,11 +70,11 @@ public class ShadowModeConfig implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The name of the production variant.
+     * The name of the production variant, which takes all the inference requests.
      * </p>
      * 
      * @param sourceModelVariantName
-     *        The name of the production variant.
+     *        The name of the production variant, which takes all the inference requests.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

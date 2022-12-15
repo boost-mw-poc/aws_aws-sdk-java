@@ -57,8 +57,8 @@ public class OfflineStoreConfig implements Serializable, Cloneable, StructuredPo
     private DataCatalogConfig dataCatalogConfig;
     /**
      * <p>
-     * Format for the offline store feature group. <code>Iceberg</code> is the optimal format for feature groups shared
-     * between offline and online stores.
+     * Format for the offline store table. Supported formats are Glue (Default) and <a
+     * href="https://iceberg.apache.org/">Apache Iceberg</a>.
      * </p>
      */
     private String tableFormat;
@@ -205,13 +205,13 @@ public class OfflineStoreConfig implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * Format for the offline store feature group. <code>Iceberg</code> is the optimal format for feature groups shared
-     * between offline and online stores.
+     * Format for the offline store table. Supported formats are Glue (Default) and <a
+     * href="https://iceberg.apache.org/">Apache Iceberg</a>.
      * </p>
      * 
      * @param tableFormat
-     *        Format for the offline store feature group. <code>Iceberg</code> is the optimal format for feature groups
-     *        shared between offline and online stores.
+     *        Format for the offline store table. Supported formats are Glue (Default) and <a
+     *        href="https://iceberg.apache.org/">Apache Iceberg</a>.
      * @see TableFormat
      */
 
@@ -221,12 +221,12 @@ public class OfflineStoreConfig implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * Format for the offline store feature group. <code>Iceberg</code> is the optimal format for feature groups shared
-     * between offline and online stores.
+     * Format for the offline store table. Supported formats are Glue (Default) and <a
+     * href="https://iceberg.apache.org/">Apache Iceberg</a>.
      * </p>
      * 
-     * @return Format for the offline store feature group. <code>Iceberg</code> is the optimal format for feature groups
-     *         shared between offline and online stores.
+     * @return Format for the offline store table. Supported formats are Glue (Default) and <a
+     *         href="https://iceberg.apache.org/">Apache Iceberg</a>.
      * @see TableFormat
      */
 
@@ -236,13 +236,13 @@ public class OfflineStoreConfig implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * Format for the offline store feature group. <code>Iceberg</code> is the optimal format for feature groups shared
-     * between offline and online stores.
+     * Format for the offline store table. Supported formats are Glue (Default) and <a
+     * href="https://iceberg.apache.org/">Apache Iceberg</a>.
      * </p>
      * 
      * @param tableFormat
-     *        Format for the offline store feature group. <code>Iceberg</code> is the optimal format for feature groups
-     *        shared between offline and online stores.
+     *        Format for the offline store table. Supported formats are Glue (Default) and <a
+     *        href="https://iceberg.apache.org/">Apache Iceberg</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see TableFormat
      */
@@ -254,13 +254,13 @@ public class OfflineStoreConfig implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * Format for the offline store feature group. <code>Iceberg</code> is the optimal format for feature groups shared
-     * between offline and online stores.
+     * Format for the offline store table. Supported formats are Glue (Default) and <a
+     * href="https://iceberg.apache.org/">Apache Iceberg</a>.
      * </p>
      * 
      * @param tableFormat
-     *        Format for the offline store feature group. <code>Iceberg</code> is the optimal format for feature groups
-     *        shared between offline and online stores.
+     *        Format for the offline store table. Supported formats are Glue (Default) and <a
+     *        href="https://iceberg.apache.org/">Apache Iceberg</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see TableFormat
      */

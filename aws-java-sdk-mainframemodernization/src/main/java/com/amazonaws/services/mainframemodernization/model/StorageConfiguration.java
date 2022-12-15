@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Defines the storage configuration for an environment.
+ * Defines the storage configuration for a runtime environment.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/m2-2021-04-28/StorageConfiguration" target="_top">AWS API

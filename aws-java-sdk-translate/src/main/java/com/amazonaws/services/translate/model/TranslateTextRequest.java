@@ -27,8 +27,8 @@ public class TranslateTextRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The text to translate. The text string can be a maximum of 5,000 bytes long. Depending on your character set,
-     * this may be fewer than 5,000 characters.
+     * The text to translate. The text string can be a maximum of 10,000 bytes long. Depending on your character set,
+     * this may be fewer than 10,000 characters.
      * </p>
      */
     private String text;
@@ -76,13 +76,13 @@ public class TranslateTextRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The text to translate. The text string can be a maximum of 5,000 bytes long. Depending on your character set,
-     * this may be fewer than 5,000 characters.
+     * The text to translate. The text string can be a maximum of 10,000 bytes long. Depending on your character set,
+     * this may be fewer than 10,000 characters.
      * </p>
      * 
      * @param text
-     *        The text to translate. The text string can be a maximum of 5,000 bytes long. Depending on your character
-     *        set, this may be fewer than 5,000 characters.
+     *        The text to translate. The text string can be a maximum of 10,000 bytes long. Depending on your character
+     *        set, this may be fewer than 10,000 characters.
      */
 
     public void setText(String text) {
@@ -91,12 +91,12 @@ public class TranslateTextRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The text to translate. The text string can be a maximum of 5,000 bytes long. Depending on your character set,
-     * this may be fewer than 5,000 characters.
+     * The text to translate. The text string can be a maximum of 10,000 bytes long. Depending on your character set,
+     * this may be fewer than 10,000 characters.
      * </p>
      * 
-     * @return The text to translate. The text string can be a maximum of 5,000 bytes long. Depending on your character
-     *         set, this may be fewer than 5,000 characters.
+     * @return The text to translate. The text string can be a maximum of 10,000 bytes long. Depending on your character
+     *         set, this may be fewer than 10,000 characters.
      */
 
     public String getText() {
@@ -105,13 +105,13 @@ public class TranslateTextRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The text to translate. The text string can be a maximum of 5,000 bytes long. Depending on your character set,
-     * this may be fewer than 5,000 characters.
+     * The text to translate. The text string can be a maximum of 10,000 bytes long. Depending on your character set,
+     * this may be fewer than 10,000 characters.
      * </p>
      * 
      * @param text
-     *        The text to translate. The text string can be a maximum of 5,000 bytes long. Depending on your character
-     *        set, this may be fewer than 5,000 characters.
+     *        The text to translate. The text string can be a maximum of 10,000 bytes long. Depending on your character
+     *        set, this may be fewer than 10,000 characters.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

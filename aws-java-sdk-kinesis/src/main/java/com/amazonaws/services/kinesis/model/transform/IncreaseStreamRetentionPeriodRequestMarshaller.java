@@ -31,6 +31,8 @@ public class IncreaseStreamRetentionPeriodRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("StreamName").build();
     private static final MarshallingInfo<Integer> RETENTIONPERIODHOURS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("RetentionPeriodHours").build();
+    private static final MarshallingInfo<String> STREAMARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("StreamARN").build();
 
     private static final IncreaseStreamRetentionPeriodRequestMarshaller instance = new IncreaseStreamRetentionPeriodRequestMarshaller();
 
@@ -50,6 +52,7 @@ public class IncreaseStreamRetentionPeriodRequestMarshaller {
         try {
             protocolMarshaller.marshall(increaseStreamRetentionPeriodRequest.getStreamName(), STREAMNAME_BINDING);
             protocolMarshaller.marshall(increaseStreamRetentionPeriodRequest.getRetentionPeriodHours(), RETENTIONPERIODHOURS_BINDING);
+            protocolMarshaller.marshall(increaseStreamRetentionPeriodRequest.getStreamARN(), STREAMARN_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

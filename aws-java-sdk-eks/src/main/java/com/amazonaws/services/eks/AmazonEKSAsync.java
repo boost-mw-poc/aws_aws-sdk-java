@@ -356,11 +356,15 @@ public interface AmazonEKSAsync extends AmazonEKS {
      * </p>
      * <p>
      * An Amazon EKS managed node group is an Amazon EC2 Auto Scaling group and associated Amazon EC2 instances that are
-     * managed by Amazon Web Services for an Amazon EKS cluster. Each node group uses a version of the Amazon EKS
-     * optimized Amazon Linux 2 AMI. For more information, see <a
-     * href="https://docs.aws.amazon.com/eks/latest/userguide/managed-node-groups.html">Managed Node Groups</a> in the
+     * managed by Amazon Web Services for an Amazon EKS cluster. For more information, see <a
+     * href="https://docs.aws.amazon.com/eks/latest/userguide/managed-node-groups.html">Managed node groups</a> in the
      * <i>Amazon EKS User Guide</i>.
      * </p>
+     * <note>
+     * <p>
+     * Windows AMI types are only supported for commercial Regions that support Windows Amazon EKS.
+     * </p>
+     * </note>
      * 
      * @param createNodegroupRequest
      * @return A Java Future containing the result of the CreateNodegroup operation returned by the service.
@@ -380,11 +384,15 @@ public interface AmazonEKSAsync extends AmazonEKS {
      * </p>
      * <p>
      * An Amazon EKS managed node group is an Amazon EC2 Auto Scaling group and associated Amazon EC2 instances that are
-     * managed by Amazon Web Services for an Amazon EKS cluster. Each node group uses a version of the Amazon EKS
-     * optimized Amazon Linux 2 AMI. For more information, see <a
-     * href="https://docs.aws.amazon.com/eks/latest/userguide/managed-node-groups.html">Managed Node Groups</a> in the
+     * managed by Amazon Web Services for an Amazon EKS cluster. For more information, see <a
+     * href="https://docs.aws.amazon.com/eks/latest/userguide/managed-node-groups.html">Managed node groups</a> in the
      * <i>Amazon EKS User Guide</i>.
      * </p>
+     * <note>
+     * <p>
+     * Windows AMI types are only supported for commercial Regions that support Windows Amazon EKS.
+     * </p>
+     * </note>
      * 
      * @param createNodegroupRequest
      * @param asyncHandler
@@ -1525,9 +1533,11 @@ public interface AmazonEKSAsync extends AmazonEKS {
      * If you update without a launch template, then you can update to the latest available AMI version of a node
      * group's current Kubernetes version by not specifying a Kubernetes version in the request. You can update to the
      * latest AMI version of your cluster's current Kubernetes version by specifying your cluster's Kubernetes version
-     * in the request. For more information, see <a
+     * in the request. For information about Linux versions, see <a
      * href="https://docs.aws.amazon.com/eks/latest/userguide/eks-linux-ami-versions.html">Amazon EKS optimized Amazon
-     * Linux 2 AMI versions</a> in the <i>Amazon EKS User Guide</i>.
+     * Linux AMI versions</a> in the <i>Amazon EKS User Guide</i>. For information about Windows versions, see <a
+     * href="https://docs.aws.amazon.com/eks/latest/userguide/eks-ami-versions-windows.html">Amazon EKS optimized
+     * Windows AMI versions</a> in the <i>Amazon EKS User Guide</i>.
      * </p>
      * <p>
      * You cannot roll back a node group to an earlier Kubernetes version or AMI version.
@@ -1561,9 +1571,11 @@ public interface AmazonEKSAsync extends AmazonEKS {
      * If you update without a launch template, then you can update to the latest available AMI version of a node
      * group's current Kubernetes version by not specifying a Kubernetes version in the request. You can update to the
      * latest AMI version of your cluster's current Kubernetes version by specifying your cluster's Kubernetes version
-     * in the request. For more information, see <a
+     * in the request. For information about Linux versions, see <a
      * href="https://docs.aws.amazon.com/eks/latest/userguide/eks-linux-ami-versions.html">Amazon EKS optimized Amazon
-     * Linux 2 AMI versions</a> in the <i>Amazon EKS User Guide</i>.
+     * Linux AMI versions</a> in the <i>Amazon EKS User Guide</i>. For information about Windows versions, see <a
+     * href="https://docs.aws.amazon.com/eks/latest/userguide/eks-ami-versions-windows.html">Amazon EKS optimized
+     * Windows AMI versions</a> in the <i>Amazon EKS User Guide</i>.
      * </p>
      * <p>
      * You cannot roll back a node group to an earlier Kubernetes version or AMI version.

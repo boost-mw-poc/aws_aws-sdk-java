@@ -1974,6 +1974,11 @@ public class AmazonECSClient extends AmazonWebServiceClient implements AmazonECS
      * limit the actions to a specific cluster, you receive an <code>AccessDeniedException</code> when there is a
      * mismatch between the condition key value and the corresponding parameter value.
      * </p>
+     * <p>
+     * For information about required permissions and considerations, see <a
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-exec.htm">Using Amazon ECS Exec for
+     * debugging</a> in the <i>Amazon ECS Developer Guide</i>.
+     * </p>
      * 
      * @param executeCommandRequest
      * @return Result of the ExecuteCommand operation returned by the service.

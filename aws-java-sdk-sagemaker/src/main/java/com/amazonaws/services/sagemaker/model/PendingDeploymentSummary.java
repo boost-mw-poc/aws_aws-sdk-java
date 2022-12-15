@@ -36,7 +36,8 @@ public class PendingDeploymentSummary implements Serializable, Cloneable, Struct
     private String endpointConfigName;
     /**
      * <p>
-     * List of <code>PendingProductionVariantSummary</code> objects.
+     * An array of <a>PendingProductionVariantSummary</a> objects, one for each model hosted behind this endpoint for
+     * the in-progress deployment.
      * </p>
      */
     private java.util.List<PendingProductionVariantSummary> productionVariants;
@@ -48,10 +49,9 @@ public class PendingDeploymentSummary implements Serializable, Cloneable, Struct
     private java.util.Date startTime;
     /**
      * <p>
-     * Array of <code>ProductionVariant</code> objects, one for each model that you want to host at this endpoint in
-     * shadow mode with production traffic replicated from the model specified on <code>ProductionVariants</code>.If you
-     * use this field, you can only specify one variant for <code>ProductionVariants</code> and one variant for
-     * <code>ShadowProductionVariants</code>.
+     * An array of <a>PendingProductionVariantSummary</a> objects, one for each model hosted behind this endpoint in
+     * shadow mode with production traffic replicated from the model specified on <code>ProductionVariants</code> for
+     * the in-progress deployment.
      * </p>
      */
     private java.util.List<PendingProductionVariantSummary> shadowProductionVariants;
@@ -98,10 +98,12 @@ public class PendingDeploymentSummary implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * List of <code>PendingProductionVariantSummary</code> objects.
+     * An array of <a>PendingProductionVariantSummary</a> objects, one for each model hosted behind this endpoint for
+     * the in-progress deployment.
      * </p>
      * 
-     * @return List of <code>PendingProductionVariantSummary</code> objects.
+     * @return An array of <a>PendingProductionVariantSummary</a> objects, one for each model hosted behind this
+     *         endpoint for the in-progress deployment.
      */
 
     public java.util.List<PendingProductionVariantSummary> getProductionVariants() {
@@ -110,11 +112,13 @@ public class PendingDeploymentSummary implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * List of <code>PendingProductionVariantSummary</code> objects.
+     * An array of <a>PendingProductionVariantSummary</a> objects, one for each model hosted behind this endpoint for
+     * the in-progress deployment.
      * </p>
      * 
      * @param productionVariants
-     *        List of <code>PendingProductionVariantSummary</code> objects.
+     *        An array of <a>PendingProductionVariantSummary</a> objects, one for each model hosted behind this endpoint
+     *        for the in-progress deployment.
      */
 
     public void setProductionVariants(java.util.Collection<PendingProductionVariantSummary> productionVariants) {
@@ -128,7 +132,8 @@ public class PendingDeploymentSummary implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * List of <code>PendingProductionVariantSummary</code> objects.
+     * An array of <a>PendingProductionVariantSummary</a> objects, one for each model hosted behind this endpoint for
+     * the in-progress deployment.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -137,7 +142,8 @@ public class PendingDeploymentSummary implements Serializable, Cloneable, Struct
      * </p>
      * 
      * @param productionVariants
-     *        List of <code>PendingProductionVariantSummary</code> objects.
+     *        An array of <a>PendingProductionVariantSummary</a> objects, one for each model hosted behind this endpoint
+     *        for the in-progress deployment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -153,11 +159,13 @@ public class PendingDeploymentSummary implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * List of <code>PendingProductionVariantSummary</code> objects.
+     * An array of <a>PendingProductionVariantSummary</a> objects, one for each model hosted behind this endpoint for
+     * the in-progress deployment.
      * </p>
      * 
      * @param productionVariants
-     *        List of <code>PendingProductionVariantSummary</code> objects.
+     *        An array of <a>PendingProductionVariantSummary</a> objects, one for each model hosted behind this endpoint
+     *        for the in-progress deployment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -208,16 +216,14 @@ public class PendingDeploymentSummary implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * Array of <code>ProductionVariant</code> objects, one for each model that you want to host at this endpoint in
-     * shadow mode with production traffic replicated from the model specified on <code>ProductionVariants</code>.If you
-     * use this field, you can only specify one variant for <code>ProductionVariants</code> and one variant for
-     * <code>ShadowProductionVariants</code>.
+     * An array of <a>PendingProductionVariantSummary</a> objects, one for each model hosted behind this endpoint in
+     * shadow mode with production traffic replicated from the model specified on <code>ProductionVariants</code> for
+     * the in-progress deployment.
      * </p>
      * 
-     * @return Array of <code>ProductionVariant</code> objects, one for each model that you want to host at this
+     * @return An array of <a>PendingProductionVariantSummary</a> objects, one for each model hosted behind this
      *         endpoint in shadow mode with production traffic replicated from the model specified on
-     *         <code>ProductionVariants</code>.If you use this field, you can only specify one variant for
-     *         <code>ProductionVariants</code> and one variant for <code>ShadowProductionVariants</code>.
+     *         <code>ProductionVariants</code> for the in-progress deployment.
      */
 
     public java.util.List<PendingProductionVariantSummary> getShadowProductionVariants() {
@@ -226,17 +232,15 @@ public class PendingDeploymentSummary implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * Array of <code>ProductionVariant</code> objects, one for each model that you want to host at this endpoint in
-     * shadow mode with production traffic replicated from the model specified on <code>ProductionVariants</code>.If you
-     * use this field, you can only specify one variant for <code>ProductionVariants</code> and one variant for
-     * <code>ShadowProductionVariants</code>.
+     * An array of <a>PendingProductionVariantSummary</a> objects, one for each model hosted behind this endpoint in
+     * shadow mode with production traffic replicated from the model specified on <code>ProductionVariants</code> for
+     * the in-progress deployment.
      * </p>
      * 
      * @param shadowProductionVariants
-     *        Array of <code>ProductionVariant</code> objects, one for each model that you want to host at this endpoint
+     *        An array of <a>PendingProductionVariantSummary</a> objects, one for each model hosted behind this endpoint
      *        in shadow mode with production traffic replicated from the model specified on
-     *        <code>ProductionVariants</code>.If you use this field, you can only specify one variant for
-     *        <code>ProductionVariants</code> and one variant for <code>ShadowProductionVariants</code>.
+     *        <code>ProductionVariants</code> for the in-progress deployment.
      */
 
     public void setShadowProductionVariants(java.util.Collection<PendingProductionVariantSummary> shadowProductionVariants) {
@@ -250,10 +254,9 @@ public class PendingDeploymentSummary implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * Array of <code>ProductionVariant</code> objects, one for each model that you want to host at this endpoint in
-     * shadow mode with production traffic replicated from the model specified on <code>ProductionVariants</code>.If you
-     * use this field, you can only specify one variant for <code>ProductionVariants</code> and one variant for
-     * <code>ShadowProductionVariants</code>.
+     * An array of <a>PendingProductionVariantSummary</a> objects, one for each model hosted behind this endpoint in
+     * shadow mode with production traffic replicated from the model specified on <code>ProductionVariants</code> for
+     * the in-progress deployment.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -262,10 +265,9 @@ public class PendingDeploymentSummary implements Serializable, Cloneable, Struct
      * </p>
      * 
      * @param shadowProductionVariants
-     *        Array of <code>ProductionVariant</code> objects, one for each model that you want to host at this endpoint
+     *        An array of <a>PendingProductionVariantSummary</a> objects, one for each model hosted behind this endpoint
      *        in shadow mode with production traffic replicated from the model specified on
-     *        <code>ProductionVariants</code>.If you use this field, you can only specify one variant for
-     *        <code>ProductionVariants</code> and one variant for <code>ShadowProductionVariants</code>.
+     *        <code>ProductionVariants</code> for the in-progress deployment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -281,17 +283,15 @@ public class PendingDeploymentSummary implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * Array of <code>ProductionVariant</code> objects, one for each model that you want to host at this endpoint in
-     * shadow mode with production traffic replicated from the model specified on <code>ProductionVariants</code>.If you
-     * use this field, you can only specify one variant for <code>ProductionVariants</code> and one variant for
-     * <code>ShadowProductionVariants</code>.
+     * An array of <a>PendingProductionVariantSummary</a> objects, one for each model hosted behind this endpoint in
+     * shadow mode with production traffic replicated from the model specified on <code>ProductionVariants</code> for
+     * the in-progress deployment.
      * </p>
      * 
      * @param shadowProductionVariants
-     *        Array of <code>ProductionVariant</code> objects, one for each model that you want to host at this endpoint
+     *        An array of <a>PendingProductionVariantSummary</a> objects, one for each model hosted behind this endpoint
      *        in shadow mode with production traffic replicated from the model specified on
-     *        <code>ProductionVariants</code>.If you use this field, you can only specify one variant for
-     *        <code>ProductionVariants</code> and one variant for <code>ShadowProductionVariants</code>.
+     *        <code>ProductionVariants</code> for the in-progress deployment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

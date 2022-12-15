@@ -56,9 +56,9 @@ public class StopInferenceExperimentRequest extends com.amazonaws.AmazonWebServi
     private java.util.Map<String, String> modelVariantActions;
     /**
      * <p>
-     * Array of <code>ModelVariantConfig</code> objects. There is one for each variant that you want to deploy after the
-     * inference experiment stops. Each <code>ModelVariantConfig</code> describes the infrastructure configuration for
-     * deploying the corresponding variant.
+     * An array of <code>ModelVariantConfig</code> objects. There is one for each variant that you want to deploy after
+     * the inference experiment stops. Each <code>ModelVariantConfig</code> describes the infrastructure configuration
+     * for deploying the corresponding variant.
      * </p>
      */
     private java.util.List<ModelVariantConfig> desiredModelVariants;
@@ -299,14 +299,14 @@ public class StopInferenceExperimentRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * Array of <code>ModelVariantConfig</code> objects. There is one for each variant that you want to deploy after the
-     * inference experiment stops. Each <code>ModelVariantConfig</code> describes the infrastructure configuration for
-     * deploying the corresponding variant.
+     * An array of <code>ModelVariantConfig</code> objects. There is one for each variant that you want to deploy after
+     * the inference experiment stops. Each <code>ModelVariantConfig</code> describes the infrastructure configuration
+     * for deploying the corresponding variant.
      * </p>
      * 
-     * @return Array of <code>ModelVariantConfig</code> objects. There is one for each variant that you want to deploy
-     *         after the inference experiment stops. Each <code>ModelVariantConfig</code> describes the infrastructure
-     *         configuration for deploying the corresponding variant.
+     * @return An array of <code>ModelVariantConfig</code> objects. There is one for each variant that you want to
+     *         deploy after the inference experiment stops. Each <code>ModelVariantConfig</code> describes the
+     *         infrastructure configuration for deploying the corresponding variant.
      */
 
     public java.util.List<ModelVariantConfig> getDesiredModelVariants() {
@@ -315,13 +315,13 @@ public class StopInferenceExperimentRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * Array of <code>ModelVariantConfig</code> objects. There is one for each variant that you want to deploy after the
-     * inference experiment stops. Each <code>ModelVariantConfig</code> describes the infrastructure configuration for
-     * deploying the corresponding variant.
+     * An array of <code>ModelVariantConfig</code> objects. There is one for each variant that you want to deploy after
+     * the inference experiment stops. Each <code>ModelVariantConfig</code> describes the infrastructure configuration
+     * for deploying the corresponding variant.
      * </p>
      * 
      * @param desiredModelVariants
-     *        Array of <code>ModelVariantConfig</code> objects. There is one for each variant that you want to deploy
+     *        An array of <code>ModelVariantConfig</code> objects. There is one for each variant that you want to deploy
      *        after the inference experiment stops. Each <code>ModelVariantConfig</code> describes the infrastructure
      *        configuration for deploying the corresponding variant.
      */
@@ -337,9 +337,9 @@ public class StopInferenceExperimentRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * Array of <code>ModelVariantConfig</code> objects. There is one for each variant that you want to deploy after the
-     * inference experiment stops. Each <code>ModelVariantConfig</code> describes the infrastructure configuration for
-     * deploying the corresponding variant.
+     * An array of <code>ModelVariantConfig</code> objects. There is one for each variant that you want to deploy after
+     * the inference experiment stops. Each <code>ModelVariantConfig</code> describes the infrastructure configuration
+     * for deploying the corresponding variant.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -348,7 +348,7 @@ public class StopInferenceExperimentRequest extends com.amazonaws.AmazonWebServi
      * </p>
      * 
      * @param desiredModelVariants
-     *        Array of <code>ModelVariantConfig</code> objects. There is one for each variant that you want to deploy
+     *        An array of <code>ModelVariantConfig</code> objects. There is one for each variant that you want to deploy
      *        after the inference experiment stops. Each <code>ModelVariantConfig</code> describes the infrastructure
      *        configuration for deploying the corresponding variant.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -366,13 +366,13 @@ public class StopInferenceExperimentRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * Array of <code>ModelVariantConfig</code> objects. There is one for each variant that you want to deploy after the
-     * inference experiment stops. Each <code>ModelVariantConfig</code> describes the infrastructure configuration for
-     * deploying the corresponding variant.
+     * An array of <code>ModelVariantConfig</code> objects. There is one for each variant that you want to deploy after
+     * the inference experiment stops. Each <code>ModelVariantConfig</code> describes the infrastructure configuration
+     * for deploying the corresponding variant.
      * </p>
      * 
      * @param desiredModelVariants
-     *        Array of <code>ModelVariantConfig</code> objects. There is one for each variant that you want to deploy
+     *        An array of <code>ModelVariantConfig</code> objects. There is one for each variant that you want to deploy
      *        after the inference experiment stops. Each <code>ModelVariantConfig</code> describes the infrastructure
      *        configuration for deploying the corresponding variant.
      * @return Returns a reference to this object so that method calls can be chained together.

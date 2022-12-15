@@ -76,6 +76,10 @@ public class GetApplicationResultJsonUnmarshaller implements Unmarshaller<GetApp
                     context.nextToken();
                     getApplicationResult.setEnvironmentId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("kmsKeyId", targetDepth)) {
+                    context.nextToken();
+                    getApplicationResult.setKmsKeyId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("lastStartTime", targetDepth)) {
                     context.nextToken();
                     getApplicationResult.setLastStartTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));

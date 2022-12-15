@@ -27,7 +27,7 @@ import com.amazonaws.services.translate.model.*;
  * </p>
  * <p>
  * <p>
- * Provides language translation for input text in the source language to the specified target language.
+ * Provides translation of the input content from the source language to the target language.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
@@ -341,20 +341,15 @@ public interface AmazonTranslate {
     /**
      * <p>
      * Starts an asynchronous batch translation job. Use batch translation jobs to translate large volumes of text
-     * across multiple documents at once. For batch translation, the input documents must share the same source
-     * language. You can specify one or more target languages. Batch translation translates each input document into
-     * each of the target languages. For more information, see <a
-     * href="https://docs.aws.amazon.com/translate/latest/dg/async.html">Asynchronous batch processing</a>
+     * across multiple documents at once. For batch translation, you can input documents with different source languages
+     * (specify <code>auto</code> as the source language). You can specify one or more target languages. Batch
+     * translation translates each input document into each of the target languages. For more information, see <a
+     * href="https://docs.aws.amazon.com/translate/latest/dg/async.html">Asynchronous batch processing</a>.
      * </p>
      * <p>
      * Batch translation jobs can be described with the <a>DescribeTextTranslationJob</a> operation, listed with the
      * <a>ListTextTranslationJobs</a> operation, and stopped with the <a>StopTextTranslationJob</a> operation.
      * </p>
-     * <note>
-     * <p>
-     * Amazon Translate does not support batch translation of multiple source languages at once.
-     * </p>
-     * </note>
      * 
      * @param startTextTranslationJobRequest
      * @return Result of the StartTextTranslationJob operation returned by the service.

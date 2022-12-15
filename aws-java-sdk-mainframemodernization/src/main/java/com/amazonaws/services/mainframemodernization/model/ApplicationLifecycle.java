@@ -29,7 +29,8 @@ public enum ApplicationLifecycle {
     Stopping("Stopping"),
     Stopped("Stopped"),
     Failed("Failed"),
-    Deleting("Deleting");
+    Deleting("Deleting"),
+    DeletingFromEnvironment("Deleting From Environment");
 
     private String value;
 

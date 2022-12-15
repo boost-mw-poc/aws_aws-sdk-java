@@ -47,20 +47,23 @@ public class UpdateInferenceExperimentRequest extends com.amazonaws.AmazonWebSer
     private String description;
     /**
      * <p>
-     * Array of <code>ModelVariantConfigSummary</code> objects. There is one for each variant, whose infrastructure
+     * An array of <code>ModelVariantConfig</code> objects. There is one for each variant, whose infrastructure
      * configuration you want to update.
      * </p>
      */
     private java.util.List<ModelVariantConfig> modelVariants;
     /**
      * <p>
-     * The Amazon S3 storage configuration for the inference experiment.
+     * The Amazon S3 location and configuration for storing inference request and response data.
      * </p>
      */
     private InferenceExperimentDataStorageConfig dataStorageConfig;
     /**
      * <p>
-     * The Amazon S3 storage configuration for the inference experiment.
+     * The configuration of <code>ShadowMode</code> inference experiment type. Use this field to specify a production
+     * variant which takes all the inference requests, and a shadow variant to which Amazon SageMaker replicates a
+     * percentage of the inference requests. For the shadow variant also specify the percentage of requests that Amazon
+     * SageMaker replicates.
      * </p>
      */
     private ShadowModeConfig shadowModeConfig;
@@ -199,12 +202,12 @@ public class UpdateInferenceExperimentRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * Array of <code>ModelVariantConfigSummary</code> objects. There is one for each variant, whose infrastructure
+     * An array of <code>ModelVariantConfig</code> objects. There is one for each variant, whose infrastructure
      * configuration you want to update.
      * </p>
      * 
-     * @return Array of <code>ModelVariantConfigSummary</code> objects. There is one for each variant, whose
-     *         infrastructure configuration you want to update.
+     * @return An array of <code>ModelVariantConfig</code> objects. There is one for each variant, whose infrastructure
+     *         configuration you want to update.
      */
 
     public java.util.List<ModelVariantConfig> getModelVariants() {
@@ -213,13 +216,13 @@ public class UpdateInferenceExperimentRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * Array of <code>ModelVariantConfigSummary</code> objects. There is one for each variant, whose infrastructure
+     * An array of <code>ModelVariantConfig</code> objects. There is one for each variant, whose infrastructure
      * configuration you want to update.
      * </p>
      * 
      * @param modelVariants
-     *        Array of <code>ModelVariantConfigSummary</code> objects. There is one for each variant, whose
-     *        infrastructure configuration you want to update.
+     *        An array of <code>ModelVariantConfig</code> objects. There is one for each variant, whose infrastructure
+     *        configuration you want to update.
      */
 
     public void setModelVariants(java.util.Collection<ModelVariantConfig> modelVariants) {
@@ -233,7 +236,7 @@ public class UpdateInferenceExperimentRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * Array of <code>ModelVariantConfigSummary</code> objects. There is one for each variant, whose infrastructure
+     * An array of <code>ModelVariantConfig</code> objects. There is one for each variant, whose infrastructure
      * configuration you want to update.
      * </p>
      * <p>
@@ -243,8 +246,8 @@ public class UpdateInferenceExperimentRequest extends com.amazonaws.AmazonWebSer
      * </p>
      * 
      * @param modelVariants
-     *        Array of <code>ModelVariantConfigSummary</code> objects. There is one for each variant, whose
-     *        infrastructure configuration you want to update.
+     *        An array of <code>ModelVariantConfig</code> objects. There is one for each variant, whose infrastructure
+     *        configuration you want to update.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -260,13 +263,13 @@ public class UpdateInferenceExperimentRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * Array of <code>ModelVariantConfigSummary</code> objects. There is one for each variant, whose infrastructure
+     * An array of <code>ModelVariantConfig</code> objects. There is one for each variant, whose infrastructure
      * configuration you want to update.
      * </p>
      * 
      * @param modelVariants
-     *        Array of <code>ModelVariantConfigSummary</code> objects. There is one for each variant, whose
-     *        infrastructure configuration you want to update.
+     *        An array of <code>ModelVariantConfig</code> objects. There is one for each variant, whose infrastructure
+     *        configuration you want to update.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -277,11 +280,11 @@ public class UpdateInferenceExperimentRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The Amazon S3 storage configuration for the inference experiment.
+     * The Amazon S3 location and configuration for storing inference request and response data.
      * </p>
      * 
      * @param dataStorageConfig
-     *        The Amazon S3 storage configuration for the inference experiment.
+     *        The Amazon S3 location and configuration for storing inference request and response data.
      */
 
     public void setDataStorageConfig(InferenceExperimentDataStorageConfig dataStorageConfig) {
@@ -290,10 +293,10 @@ public class UpdateInferenceExperimentRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The Amazon S3 storage configuration for the inference experiment.
+     * The Amazon S3 location and configuration for storing inference request and response data.
      * </p>
      * 
-     * @return The Amazon S3 storage configuration for the inference experiment.
+     * @return The Amazon S3 location and configuration for storing inference request and response data.
      */
 
     public InferenceExperimentDataStorageConfig getDataStorageConfig() {
@@ -302,11 +305,11 @@ public class UpdateInferenceExperimentRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The Amazon S3 storage configuration for the inference experiment.
+     * The Amazon S3 location and configuration for storing inference request and response data.
      * </p>
      * 
      * @param dataStorageConfig
-     *        The Amazon S3 storage configuration for the inference experiment.
+     *        The Amazon S3 location and configuration for storing inference request and response data.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -317,11 +320,17 @@ public class UpdateInferenceExperimentRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The Amazon S3 storage configuration for the inference experiment.
+     * The configuration of <code>ShadowMode</code> inference experiment type. Use this field to specify a production
+     * variant which takes all the inference requests, and a shadow variant to which Amazon SageMaker replicates a
+     * percentage of the inference requests. For the shadow variant also specify the percentage of requests that Amazon
+     * SageMaker replicates.
      * </p>
      * 
      * @param shadowModeConfig
-     *        The Amazon S3 storage configuration for the inference experiment.
+     *        The configuration of <code>ShadowMode</code> inference experiment type. Use this field to specify a
+     *        production variant which takes all the inference requests, and a shadow variant to which Amazon SageMaker
+     *        replicates a percentage of the inference requests. For the shadow variant also specify the percentage of
+     *        requests that Amazon SageMaker replicates.
      */
 
     public void setShadowModeConfig(ShadowModeConfig shadowModeConfig) {
@@ -330,10 +339,16 @@ public class UpdateInferenceExperimentRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The Amazon S3 storage configuration for the inference experiment.
+     * The configuration of <code>ShadowMode</code> inference experiment type. Use this field to specify a production
+     * variant which takes all the inference requests, and a shadow variant to which Amazon SageMaker replicates a
+     * percentage of the inference requests. For the shadow variant also specify the percentage of requests that Amazon
+     * SageMaker replicates.
      * </p>
      * 
-     * @return The Amazon S3 storage configuration for the inference experiment.
+     * @return The configuration of <code>ShadowMode</code> inference experiment type. Use this field to specify a
+     *         production variant which takes all the inference requests, and a shadow variant to which Amazon SageMaker
+     *         replicates a percentage of the inference requests. For the shadow variant also specify the percentage of
+     *         requests that Amazon SageMaker replicates.
      */
 
     public ShadowModeConfig getShadowModeConfig() {
@@ -342,11 +357,17 @@ public class UpdateInferenceExperimentRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The Amazon S3 storage configuration for the inference experiment.
+     * The configuration of <code>ShadowMode</code> inference experiment type. Use this field to specify a production
+     * variant which takes all the inference requests, and a shadow variant to which Amazon SageMaker replicates a
+     * percentage of the inference requests. For the shadow variant also specify the percentage of requests that Amazon
+     * SageMaker replicates.
      * </p>
      * 
      * @param shadowModeConfig
-     *        The Amazon S3 storage configuration for the inference experiment.
+     *        The configuration of <code>ShadowMode</code> inference experiment type. Use this field to specify a
+     *        production variant which takes all the inference requests, and a shadow variant to which Amazon SageMaker
+     *        replicates a percentage of the inference requests. For the shadow variant also specify the percentage of
+     *        requests that Amazon SageMaker replicates.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

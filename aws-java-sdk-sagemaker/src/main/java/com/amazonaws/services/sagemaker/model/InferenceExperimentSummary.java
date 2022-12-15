@@ -87,7 +87,8 @@ public class InferenceExperimentSummary implements Serializable, Cloneable, Stru
     private java.util.Date lastModifiedTime;
     /**
      * <p>
-     * The ARN of the IAM role that Amazon SageMaker can assume to access model artifacts and container images.
+     * The ARN of the IAM role that Amazon SageMaker can assume to access model artifacts and container images, and
+     * manage Amazon SageMaker Inference endpoints for model deployment.
      * </p>
      */
     private String roleArn;
@@ -507,11 +508,13 @@ public class InferenceExperimentSummary implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The ARN of the IAM role that Amazon SageMaker can assume to access model artifacts and container images.
+     * The ARN of the IAM role that Amazon SageMaker can assume to access model artifacts and container images, and
+     * manage Amazon SageMaker Inference endpoints for model deployment.
      * </p>
      * 
      * @param roleArn
-     *        The ARN of the IAM role that Amazon SageMaker can assume to access model artifacts and container images.
+     *        The ARN of the IAM role that Amazon SageMaker can assume to access model artifacts and container images,
+     *        and manage Amazon SageMaker Inference endpoints for model deployment.
      */
 
     public void setRoleArn(String roleArn) {
@@ -520,10 +523,12 @@ public class InferenceExperimentSummary implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The ARN of the IAM role that Amazon SageMaker can assume to access model artifacts and container images.
+     * The ARN of the IAM role that Amazon SageMaker can assume to access model artifacts and container images, and
+     * manage Amazon SageMaker Inference endpoints for model deployment.
      * </p>
      * 
-     * @return The ARN of the IAM role that Amazon SageMaker can assume to access model artifacts and container images.
+     * @return The ARN of the IAM role that Amazon SageMaker can assume to access model artifacts and container images,
+     *         and manage Amazon SageMaker Inference endpoints for model deployment.
      */
 
     public String getRoleArn() {
@@ -532,11 +537,13 @@ public class InferenceExperimentSummary implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The ARN of the IAM role that Amazon SageMaker can assume to access model artifacts and container images.
+     * The ARN of the IAM role that Amazon SageMaker can assume to access model artifacts and container images, and
+     * manage Amazon SageMaker Inference endpoints for model deployment.
      * </p>
      * 
      * @param roleArn
-     *        The ARN of the IAM role that Amazon SageMaker can assume to access model artifacts and container images.
+     *        The ARN of the IAM role that Amazon SageMaker can assume to access model artifacts and container images,
+     *        and manage Amazon SageMaker Inference endpoints for model deployment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

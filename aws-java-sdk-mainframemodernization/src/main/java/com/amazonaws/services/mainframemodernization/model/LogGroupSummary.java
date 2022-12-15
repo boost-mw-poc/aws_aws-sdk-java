@@ -19,8 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * A subset of the attributes about a log group. In CloudWatch a log group is a group of log streams that share the same
- * retention, monitoring, and access control settings.
+ * A subset of the attributes that describe a log group. In CloudWatch a log group is a group of log streams that share
+ * the same retention, monitoring, and access control settings.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/m2-2021-04-28/LogGroupSummary" target="_top">AWS API

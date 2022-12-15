@@ -26,7 +26,7 @@ import java.util.concurrent.ExecutorService;
  * notification when an asynchronous operation completes.
  * <p>
  * <p>
- * Provides language translation for input text in the source language to the specified target language.
+ * Provides translation of the input content from the source language to the target language.
  * </p>
  */
 @ThreadSafe

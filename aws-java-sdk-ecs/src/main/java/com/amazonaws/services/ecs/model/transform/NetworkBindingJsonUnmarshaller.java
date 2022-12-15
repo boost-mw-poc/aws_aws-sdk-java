@@ -64,6 +64,14 @@ public class NetworkBindingJsonUnmarshaller implements Unmarshaller<NetworkBindi
                     context.nextToken();
                     networkBinding.setProtocol(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("containerPortRange", targetDepth)) {
+                    context.nextToken();
+                    networkBinding.setContainerPortRange(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("hostPortRange", targetDepth)) {
+                    context.nextToken();
+                    networkBinding.setHostPortRange(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

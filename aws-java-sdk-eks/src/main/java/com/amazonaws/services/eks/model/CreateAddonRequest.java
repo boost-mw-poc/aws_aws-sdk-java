@@ -33,9 +33,9 @@ public class CreateAddonRequest extends com.amazonaws.AmazonWebServiceRequest im
     private String clusterName;
     /**
      * <p>
-     * The name of the add-on. The name must match one of the names returned by <a
+     * The name of the add-on. The name must match one of the names that <a
      * href="https://docs.aws.amazon.com/eks/latest/APIReference/API_DescribeAddonVersions.html">
-     * <code>DescribeAddonVersions</code> </a>.
+     * <code>DescribeAddonVersions</code> </a> returns.
      * </p>
      */
     private String addonName;
@@ -111,9 +111,8 @@ public class CreateAddonRequest extends com.amazonaws.AmazonWebServiceRequest im
     private java.util.Map<String, String> tags;
     /**
      * <p>
-     * The set of configuration values for the add-on being created. Whatever values provided here are validated against
-     * the schema from <a
-     * href="https://docs.aws.amazon.com/eks/latest/APIReference/API_DescribeAddonConfiguration.html">
+     * The set of configuration values for the add-on that's created. The values that you provide are validated against
+     * the schema in <a href="https://docs.aws.amazon.com/eks/latest/APIReference/API_DescribeAddonConfiguration.html">
      * <code>DescribeAddonConfiguration</code> </a>.
      * </p>
      */
@@ -161,15 +160,15 @@ public class CreateAddonRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The name of the add-on. The name must match one of the names returned by <a
+     * The name of the add-on. The name must match one of the names that <a
      * href="https://docs.aws.amazon.com/eks/latest/APIReference/API_DescribeAddonVersions.html">
-     * <code>DescribeAddonVersions</code> </a>.
+     * <code>DescribeAddonVersions</code> </a> returns.
      * </p>
      * 
      * @param addonName
-     *        The name of the add-on. The name must match one of the names returned by <a
+     *        The name of the add-on. The name must match one of the names that <a
      *        href="https://docs.aws.amazon.com/eks/latest/APIReference/API_DescribeAddonVersions.html">
-     *        <code>DescribeAddonVersions</code> </a>.
+     *        <code>DescribeAddonVersions</code> </a> returns.
      */
 
     public void setAddonName(String addonName) {
@@ -178,14 +177,14 @@ public class CreateAddonRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The name of the add-on. The name must match one of the names returned by <a
+     * The name of the add-on. The name must match one of the names that <a
      * href="https://docs.aws.amazon.com/eks/latest/APIReference/API_DescribeAddonVersions.html">
-     * <code>DescribeAddonVersions</code> </a>.
+     * <code>DescribeAddonVersions</code> </a> returns.
      * </p>
      * 
-     * @return The name of the add-on. The name must match one of the names returned by <a
+     * @return The name of the add-on. The name must match one of the names that <a
      *         href="https://docs.aws.amazon.com/eks/latest/APIReference/API_DescribeAddonVersions.html">
-     *         <code>DescribeAddonVersions</code> </a>.
+     *         <code>DescribeAddonVersions</code> </a> returns.
      */
 
     public String getAddonName() {
@@ -194,15 +193,15 @@ public class CreateAddonRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The name of the add-on. The name must match one of the names returned by <a
+     * The name of the add-on. The name must match one of the names that <a
      * href="https://docs.aws.amazon.com/eks/latest/APIReference/API_DescribeAddonVersions.html">
-     * <code>DescribeAddonVersions</code> </a>.
+     * <code>DescribeAddonVersions</code> </a> returns.
      * </p>
      * 
      * @param addonName
-     *        The name of the add-on. The name must match one of the names returned by <a
+     *        The name of the add-on. The name must match one of the names that <a
      *        href="https://docs.aws.amazon.com/eks/latest/APIReference/API_DescribeAddonVersions.html">
-     *        <code>DescribeAddonVersions</code> </a>.
+     *        <code>DescribeAddonVersions</code> </a> returns.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -752,15 +751,14 @@ public class CreateAddonRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The set of configuration values for the add-on being created. Whatever values provided here are validated against
-     * the schema from <a
-     * href="https://docs.aws.amazon.com/eks/latest/APIReference/API_DescribeAddonConfiguration.html">
+     * The set of configuration values for the add-on that's created. The values that you provide are validated against
+     * the schema in <a href="https://docs.aws.amazon.com/eks/latest/APIReference/API_DescribeAddonConfiguration.html">
      * <code>DescribeAddonConfiguration</code> </a>.
      * </p>
      * 
      * @param configurationValues
-     *        The set of configuration values for the add-on being created. Whatever values provided here are validated
-     *        against the schema from <a
+     *        The set of configuration values for the add-on that's created. The values that you provide are validated
+     *        against the schema in <a
      *        href="https://docs.aws.amazon.com/eks/latest/APIReference/API_DescribeAddonConfiguration.html">
      *        <code>DescribeAddonConfiguration</code> </a>.
      */
@@ -771,14 +769,13 @@ public class CreateAddonRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The set of configuration values for the add-on being created. Whatever values provided here are validated against
-     * the schema from <a
-     * href="https://docs.aws.amazon.com/eks/latest/APIReference/API_DescribeAddonConfiguration.html">
+     * The set of configuration values for the add-on that's created. The values that you provide are validated against
+     * the schema in <a href="https://docs.aws.amazon.com/eks/latest/APIReference/API_DescribeAddonConfiguration.html">
      * <code>DescribeAddonConfiguration</code> </a>.
      * </p>
      * 
-     * @return The set of configuration values for the add-on being created. Whatever values provided here are validated
-     *         against the schema from <a
+     * @return The set of configuration values for the add-on that's created. The values that you provide are validated
+     *         against the schema in <a
      *         href="https://docs.aws.amazon.com/eks/latest/APIReference/API_DescribeAddonConfiguration.html">
      *         <code>DescribeAddonConfiguration</code> </a>.
      */
@@ -789,15 +786,14 @@ public class CreateAddonRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The set of configuration values for the add-on being created. Whatever values provided here are validated against
-     * the schema from <a
-     * href="https://docs.aws.amazon.com/eks/latest/APIReference/API_DescribeAddonConfiguration.html">
+     * The set of configuration values for the add-on that's created. The values that you provide are validated against
+     * the schema in <a href="https://docs.aws.amazon.com/eks/latest/APIReference/API_DescribeAddonConfiguration.html">
      * <code>DescribeAddonConfiguration</code> </a>.
      * </p>
      * 
      * @param configurationValues
-     *        The set of configuration values for the add-on being created. Whatever values provided here are validated
-     *        against the schema from <a
+     *        The set of configuration values for the add-on that's created. The values that you provide are validated
+     *        against the schema in <a
      *        href="https://docs.aws.amazon.com/eks/latest/APIReference/API_DescribeAddonConfiguration.html">
      *        <code>DescribeAddonConfiguration</code> </a>.
      * @return Returns a reference to this object so that method calls can be chained together.

@@ -31,6 +31,8 @@ public class ListStreamsRequestMarshaller {
             .marshallLocationName("Limit").build();
     private static final MarshallingInfo<String> EXCLUSIVESTARTSTREAMNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ExclusiveStartStreamName").build();
+    private static final MarshallingInfo<String> NEXTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("NextToken").build();
 
     private static final ListStreamsRequestMarshaller instance = new ListStreamsRequestMarshaller();
 
@@ -50,6 +52,7 @@ public class ListStreamsRequestMarshaller {
         try {
             protocolMarshaller.marshall(listStreamsRequest.getLimit(), LIMIT_BINDING);
             protocolMarshaller.marshall(listStreamsRequest.getExclusiveStartStreamName(), EXCLUSIVESTARTSTREAMNAME_BINDING);
+            protocolMarshaller.marshall(listStreamsRequest.getNextToken(), NEXTTOKEN_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

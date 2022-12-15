@@ -48,7 +48,7 @@ public class CreateInferenceExperimentRequest extends com.amazonaws.AmazonWebSer
     /**
      * <p>
      * The duration for which you want the inference experiment to run. If you don't specify this field, the experiment
-     * automatically concludes after 7 days.
+     * automatically starts immediately upon creation and concludes after 7 days.
      * </p>
      */
     private InferenceExperimentSchedule schedule;
@@ -60,7 +60,8 @@ public class CreateInferenceExperimentRequest extends com.amazonaws.AmazonWebSer
     private String description;
     /**
      * <p>
-     * The ARN of the IAM role that Amazon SageMaker can assume to access model artifacts and container images.
+     * The ARN of the IAM role that Amazon SageMaker can assume to access model artifacts and container images, and
+     * manage Amazon SageMaker Inference endpoints for model deployment.
      * </p>
      */
     private String roleArn;
@@ -72,24 +73,28 @@ public class CreateInferenceExperimentRequest extends com.amazonaws.AmazonWebSer
     private String endpointName;
     /**
      * <p>
-     * Array of <code>ModelVariantConfigSummary</code> objects. There is one for each variant in the inference
-     * experiment. Each <code>ModelVariantConfigSummary</code> object in the array describes the infrastructure
-     * configuration for the corresponding variant.
+     * An array of <code>ModelVariantConfig</code> objects. There is one for each variant in the inference experiment.
+     * Each <code>ModelVariantConfig</code> object in the array describes the infrastructure configuration for the
+     * corresponding variant.
      * </p>
      */
     private java.util.List<ModelVariantConfig> modelVariants;
     /**
      * <p>
-     * The storage configuration for the inference experiment. This is an optional parameter that you can use for data
-     * capture. For more information, see <a
+     * The Amazon S3 location and configuration for storing inference request and response data.
+     * </p>
+     * <p>
+     * This is an optional parameter that you can use for data capture. For more information, see <a
      * href="https://docs.aws.amazon.com/sagemaker/latest/dg/model-monitor-data-capture.html">Capture data</a>.
      * </p>
      */
     private InferenceExperimentDataStorageConfig dataStorageConfig;
     /**
      * <p>
-     * Shows which variant is the production variant and which variant is the shadow variant. For the shadow variant,
-     * also shows the sampling percentage.
+     * The configuration of <code>ShadowMode</code> inference experiment type. Use this field to specify a production
+     * variant which takes all the inference requests, and a shadow variant to which Amazon SageMaker replicates a
+     * percentage of the inference requests. For the shadow variant also specify the percentage of requests that Amazon
+     * SageMaker replicates.
      * </p>
      */
     private ShadowModeConfig shadowModeConfig;
@@ -327,12 +332,12 @@ public class CreateInferenceExperimentRequest extends com.amazonaws.AmazonWebSer
     /**
      * <p>
      * The duration for which you want the inference experiment to run. If you don't specify this field, the experiment
-     * automatically concludes after 7 days.
+     * automatically starts immediately upon creation and concludes after 7 days.
      * </p>
      * 
      * @param schedule
      *        The duration for which you want the inference experiment to run. If you don't specify this field, the
-     *        experiment automatically concludes after 7 days.
+     *        experiment automatically starts immediately upon creation and concludes after 7 days.
      */
 
     public void setSchedule(InferenceExperimentSchedule schedule) {
@@ -342,11 +347,11 @@ public class CreateInferenceExperimentRequest extends com.amazonaws.AmazonWebSer
     /**
      * <p>
      * The duration for which you want the inference experiment to run. If you don't specify this field, the experiment
-     * automatically concludes after 7 days.
+     * automatically starts immediately upon creation and concludes after 7 days.
      * </p>
      * 
      * @return The duration for which you want the inference experiment to run. If you don't specify this field, the
-     *         experiment automatically concludes after 7 days.
+     *         experiment automatically starts immediately upon creation and concludes after 7 days.
      */
 
     public InferenceExperimentSchedule getSchedule() {
@@ -356,12 +361,12 @@ public class CreateInferenceExperimentRequest extends com.amazonaws.AmazonWebSer
     /**
      * <p>
      * The duration for which you want the inference experiment to run. If you don't specify this field, the experiment
-     * automatically concludes after 7 days.
+     * automatically starts immediately upon creation and concludes after 7 days.
      * </p>
      * 
      * @param schedule
      *        The duration for which you want the inference experiment to run. If you don't specify this field, the
-     *        experiment automatically concludes after 7 days.
+     *        experiment automatically starts immediately upon creation and concludes after 7 days.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -412,11 +417,13 @@ public class CreateInferenceExperimentRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The ARN of the IAM role that Amazon SageMaker can assume to access model artifacts and container images.
+     * The ARN of the IAM role that Amazon SageMaker can assume to access model artifacts and container images, and
+     * manage Amazon SageMaker Inference endpoints for model deployment.
      * </p>
      * 
      * @param roleArn
-     *        The ARN of the IAM role that Amazon SageMaker can assume to access model artifacts and container images.
+     *        The ARN of the IAM role that Amazon SageMaker can assume to access model artifacts and container images,
+     *        and manage Amazon SageMaker Inference endpoints for model deployment.
      */
 
     public void setRoleArn(String roleArn) {
@@ -425,10 +432,12 @@ public class CreateInferenceExperimentRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The ARN of the IAM role that Amazon SageMaker can assume to access model artifacts and container images.
+     * The ARN of the IAM role that Amazon SageMaker can assume to access model artifacts and container images, and
+     * manage Amazon SageMaker Inference endpoints for model deployment.
      * </p>
      * 
-     * @return The ARN of the IAM role that Amazon SageMaker can assume to access model artifacts and container images.
+     * @return The ARN of the IAM role that Amazon SageMaker can assume to access model artifacts and container images,
+     *         and manage Amazon SageMaker Inference endpoints for model deployment.
      */
 
     public String getRoleArn() {
@@ -437,11 +446,13 @@ public class CreateInferenceExperimentRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The ARN of the IAM role that Amazon SageMaker can assume to access model artifacts and container images.
+     * The ARN of the IAM role that Amazon SageMaker can assume to access model artifacts and container images, and
+     * manage Amazon SageMaker Inference endpoints for model deployment.
      * </p>
      * 
      * @param roleArn
-     *        The ARN of the IAM role that Amazon SageMaker can assume to access model artifacts and container images.
+     *        The ARN of the IAM role that Amazon SageMaker can assume to access model artifacts and container images,
+     *        and manage Amazon SageMaker Inference endpoints for model deployment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -492,13 +503,13 @@ public class CreateInferenceExperimentRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * Array of <code>ModelVariantConfigSummary</code> objects. There is one for each variant in the inference
-     * experiment. Each <code>ModelVariantConfigSummary</code> object in the array describes the infrastructure
-     * configuration for the corresponding variant.
+     * An array of <code>ModelVariantConfig</code> objects. There is one for each variant in the inference experiment.
+     * Each <code>ModelVariantConfig</code> object in the array describes the infrastructure configuration for the
+     * corresponding variant.
      * </p>
      * 
-     * @return Array of <code>ModelVariantConfigSummary</code> objects. There is one for each variant in the inference
-     *         experiment. Each <code>ModelVariantConfigSummary</code> object in the array describes the infrastructure
+     * @return An array of <code>ModelVariantConfig</code> objects. There is one for each variant in the inference
+     *         experiment. Each <code>ModelVariantConfig</code> object in the array describes the infrastructure
      *         configuration for the corresponding variant.
      */
 
@@ -508,14 +519,14 @@ public class CreateInferenceExperimentRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * Array of <code>ModelVariantConfigSummary</code> objects. There is one for each variant in the inference
-     * experiment. Each <code>ModelVariantConfigSummary</code> object in the array describes the infrastructure
-     * configuration for the corresponding variant.
+     * An array of <code>ModelVariantConfig</code> objects. There is one for each variant in the inference experiment.
+     * Each <code>ModelVariantConfig</code> object in the array describes the infrastructure configuration for the
+     * corresponding variant.
      * </p>
      * 
      * @param modelVariants
-     *        Array of <code>ModelVariantConfigSummary</code> objects. There is one for each variant in the inference
-     *        experiment. Each <code>ModelVariantConfigSummary</code> object in the array describes the infrastructure
+     *        An array of <code>ModelVariantConfig</code> objects. There is one for each variant in the inference
+     *        experiment. Each <code>ModelVariantConfig</code> object in the array describes the infrastructure
      *        configuration for the corresponding variant.
      */
 
@@ -530,9 +541,9 @@ public class CreateInferenceExperimentRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * Array of <code>ModelVariantConfigSummary</code> objects. There is one for each variant in the inference
-     * experiment. Each <code>ModelVariantConfigSummary</code> object in the array describes the infrastructure
-     * configuration for the corresponding variant.
+     * An array of <code>ModelVariantConfig</code> objects. There is one for each variant in the inference experiment.
+     * Each <code>ModelVariantConfig</code> object in the array describes the infrastructure configuration for the
+     * corresponding variant.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -541,8 +552,8 @@ public class CreateInferenceExperimentRequest extends com.amazonaws.AmazonWebSer
      * </p>
      * 
      * @param modelVariants
-     *        Array of <code>ModelVariantConfigSummary</code> objects. There is one for each variant in the inference
-     *        experiment. Each <code>ModelVariantConfigSummary</code> object in the array describes the infrastructure
+     *        An array of <code>ModelVariantConfig</code> objects. There is one for each variant in the inference
+     *        experiment. Each <code>ModelVariantConfig</code> object in the array describes the infrastructure
      *        configuration for the corresponding variant.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -559,14 +570,14 @@ public class CreateInferenceExperimentRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * Array of <code>ModelVariantConfigSummary</code> objects. There is one for each variant in the inference
-     * experiment. Each <code>ModelVariantConfigSummary</code> object in the array describes the infrastructure
-     * configuration for the corresponding variant.
+     * An array of <code>ModelVariantConfig</code> objects. There is one for each variant in the inference experiment.
+     * Each <code>ModelVariantConfig</code> object in the array describes the infrastructure configuration for the
+     * corresponding variant.
      * </p>
      * 
      * @param modelVariants
-     *        Array of <code>ModelVariantConfigSummary</code> objects. There is one for each variant in the inference
-     *        experiment. Each <code>ModelVariantConfigSummary</code> object in the array describes the infrastructure
+     *        An array of <code>ModelVariantConfig</code> objects. There is one for each variant in the inference
+     *        experiment. Each <code>ModelVariantConfig</code> object in the array describes the infrastructure
      *        configuration for the corresponding variant.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -578,14 +589,17 @@ public class CreateInferenceExperimentRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The storage configuration for the inference experiment. This is an optional parameter that you can use for data
-     * capture. For more information, see <a
+     * The Amazon S3 location and configuration for storing inference request and response data.
+     * </p>
+     * <p>
+     * This is an optional parameter that you can use for data capture. For more information, see <a
      * href="https://docs.aws.amazon.com/sagemaker/latest/dg/model-monitor-data-capture.html">Capture data</a>.
      * </p>
      * 
      * @param dataStorageConfig
-     *        The storage configuration for the inference experiment. This is an optional parameter that you can use for
-     *        data capture. For more information, see <a
+     *        The Amazon S3 location and configuration for storing inference request and response data. </p>
+     *        <p>
+     *        This is an optional parameter that you can use for data capture. For more information, see <a
      *        href="https://docs.aws.amazon.com/sagemaker/latest/dg/model-monitor-data-capture.html">Capture data</a>.
      */
 
@@ -595,13 +609,16 @@ public class CreateInferenceExperimentRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The storage configuration for the inference experiment. This is an optional parameter that you can use for data
-     * capture. For more information, see <a
+     * The Amazon S3 location and configuration for storing inference request and response data.
+     * </p>
+     * <p>
+     * This is an optional parameter that you can use for data capture. For more information, see <a
      * href="https://docs.aws.amazon.com/sagemaker/latest/dg/model-monitor-data-capture.html">Capture data</a>.
      * </p>
      * 
-     * @return The storage configuration for the inference experiment. This is an optional parameter that you can use
-     *         for data capture. For more information, see <a
+     * @return The Amazon S3 location and configuration for storing inference request and response data. </p>
+     *         <p>
+     *         This is an optional parameter that you can use for data capture. For more information, see <a
      *         href="https://docs.aws.amazon.com/sagemaker/latest/dg/model-monitor-data-capture.html">Capture data</a>.
      */
 
@@ -611,14 +628,17 @@ public class CreateInferenceExperimentRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The storage configuration for the inference experiment. This is an optional parameter that you can use for data
-     * capture. For more information, see <a
+     * The Amazon S3 location and configuration for storing inference request and response data.
+     * </p>
+     * <p>
+     * This is an optional parameter that you can use for data capture. For more information, see <a
      * href="https://docs.aws.amazon.com/sagemaker/latest/dg/model-monitor-data-capture.html">Capture data</a>.
      * </p>
      * 
      * @param dataStorageConfig
-     *        The storage configuration for the inference experiment. This is an optional parameter that you can use for
-     *        data capture. For more information, see <a
+     *        The Amazon S3 location and configuration for storing inference request and response data. </p>
+     *        <p>
+     *        This is an optional parameter that you can use for data capture. For more information, see <a
      *        href="https://docs.aws.amazon.com/sagemaker/latest/dg/model-monitor-data-capture.html">Capture data</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -630,13 +650,17 @@ public class CreateInferenceExperimentRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * Shows which variant is the production variant and which variant is the shadow variant. For the shadow variant,
-     * also shows the sampling percentage.
+     * The configuration of <code>ShadowMode</code> inference experiment type. Use this field to specify a production
+     * variant which takes all the inference requests, and a shadow variant to which Amazon SageMaker replicates a
+     * percentage of the inference requests. For the shadow variant also specify the percentage of requests that Amazon
+     * SageMaker replicates.
      * </p>
      * 
      * @param shadowModeConfig
-     *        Shows which variant is the production variant and which variant is the shadow variant. For the shadow
-     *        variant, also shows the sampling percentage.
+     *        The configuration of <code>ShadowMode</code> inference experiment type. Use this field to specify a
+     *        production variant which takes all the inference requests, and a shadow variant to which Amazon SageMaker
+     *        replicates a percentage of the inference requests. For the shadow variant also specify the percentage of
+     *        requests that Amazon SageMaker replicates.
      */
 
     public void setShadowModeConfig(ShadowModeConfig shadowModeConfig) {
@@ -645,12 +669,16 @@ public class CreateInferenceExperimentRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * Shows which variant is the production variant and which variant is the shadow variant. For the shadow variant,
-     * also shows the sampling percentage.
+     * The configuration of <code>ShadowMode</code> inference experiment type. Use this field to specify a production
+     * variant which takes all the inference requests, and a shadow variant to which Amazon SageMaker replicates a
+     * percentage of the inference requests. For the shadow variant also specify the percentage of requests that Amazon
+     * SageMaker replicates.
      * </p>
      * 
-     * @return Shows which variant is the production variant and which variant is the shadow variant. For the shadow
-     *         variant, also shows the sampling percentage.
+     * @return The configuration of <code>ShadowMode</code> inference experiment type. Use this field to specify a
+     *         production variant which takes all the inference requests, and a shadow variant to which Amazon SageMaker
+     *         replicates a percentage of the inference requests. For the shadow variant also specify the percentage of
+     *         requests that Amazon SageMaker replicates.
      */
 
     public ShadowModeConfig getShadowModeConfig() {
@@ -659,13 +687,17 @@ public class CreateInferenceExperimentRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * Shows which variant is the production variant and which variant is the shadow variant. For the shadow variant,
-     * also shows the sampling percentage.
+     * The configuration of <code>ShadowMode</code> inference experiment type. Use this field to specify a production
+     * variant which takes all the inference requests, and a shadow variant to which Amazon SageMaker replicates a
+     * percentage of the inference requests. For the shadow variant also specify the percentage of requests that Amazon
+     * SageMaker replicates.
      * </p>
      * 
      * @param shadowModeConfig
-     *        Shows which variant is the production variant and which variant is the shadow variant. For the shadow
-     *        variant, also shows the sampling percentage.
+     *        The configuration of <code>ShadowMode</code> inference experiment type. Use this field to specify a
+     *        production variant which takes all the inference requests, and a shadow variant to which Amazon SageMaker
+     *        replicates a percentage of the inference requests. For the shadow variant also specify the percentage of
+     *        requests that Amazon SageMaker replicates.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -66,7 +66,9 @@ public class CreateSecurityProfileRequest extends com.amazonaws.AmazonWebService
     private java.util.Map<String, String> allowedAccessControlTags;
     /**
      * <p>
-     * The list of resources that a security profile applies tag restrictions to in Amazon Connect.
+     * The list of resources that a security profile applies tag restrictions to in Amazon Connect. Following are
+     * acceptable ResourceNames: <code>User</code> | <code>SecurityProfile</code> | <code>Queue</code> |
+     * <code>RoutingProfile</code>
      * </p>
      */
     private java.util.List<String> tagRestrictedResources;
@@ -421,10 +423,14 @@ public class CreateSecurityProfileRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The list of resources that a security profile applies tag restrictions to in Amazon Connect.
+     * The list of resources that a security profile applies tag restrictions to in Amazon Connect. Following are
+     * acceptable ResourceNames: <code>User</code> | <code>SecurityProfile</code> | <code>Queue</code> |
+     * <code>RoutingProfile</code>
      * </p>
      * 
-     * @return The list of resources that a security profile applies tag restrictions to in Amazon Connect.
+     * @return The list of resources that a security profile applies tag restrictions to in Amazon Connect. Following
+     *         are acceptable ResourceNames: <code>User</code> | <code>SecurityProfile</code> | <code>Queue</code> |
+     *         <code>RoutingProfile</code>
      */
 
     public java.util.List<String> getTagRestrictedResources() {
@@ -433,11 +439,15 @@ public class CreateSecurityProfileRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The list of resources that a security profile applies tag restrictions to in Amazon Connect.
+     * The list of resources that a security profile applies tag restrictions to in Amazon Connect. Following are
+     * acceptable ResourceNames: <code>User</code> | <code>SecurityProfile</code> | <code>Queue</code> |
+     * <code>RoutingProfile</code>
      * </p>
      * 
      * @param tagRestrictedResources
-     *        The list of resources that a security profile applies tag restrictions to in Amazon Connect.
+     *        The list of resources that a security profile applies tag restrictions to in Amazon Connect. Following are
+     *        acceptable ResourceNames: <code>User</code> | <code>SecurityProfile</code> | <code>Queue</code> |
+     *        <code>RoutingProfile</code>
      */
 
     public void setTagRestrictedResources(java.util.Collection<String> tagRestrictedResources) {
@@ -451,7 +461,9 @@ public class CreateSecurityProfileRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The list of resources that a security profile applies tag restrictions to in Amazon Connect.
+     * The list of resources that a security profile applies tag restrictions to in Amazon Connect. Following are
+     * acceptable ResourceNames: <code>User</code> | <code>SecurityProfile</code> | <code>Queue</code> |
+     * <code>RoutingProfile</code>
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -460,7 +472,9 @@ public class CreateSecurityProfileRequest extends com.amazonaws.AmazonWebService
      * </p>
      * 
      * @param tagRestrictedResources
-     *        The list of resources that a security profile applies tag restrictions to in Amazon Connect.
+     *        The list of resources that a security profile applies tag restrictions to in Amazon Connect. Following are
+     *        acceptable ResourceNames: <code>User</code> | <code>SecurityProfile</code> | <code>Queue</code> |
+     *        <code>RoutingProfile</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -476,11 +490,15 @@ public class CreateSecurityProfileRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The list of resources that a security profile applies tag restrictions to in Amazon Connect.
+     * The list of resources that a security profile applies tag restrictions to in Amazon Connect. Following are
+     * acceptable ResourceNames: <code>User</code> | <code>SecurityProfile</code> | <code>Queue</code> |
+     * <code>RoutingProfile</code>
      * </p>
      * 
      * @param tagRestrictedResources
-     *        The list of resources that a security profile applies tag restrictions to in Amazon Connect.
+     *        The list of resources that a security profile applies tag restrictions to in Amazon Connect. Following are
+     *        acceptable ResourceNames: <code>User</code> | <code>SecurityProfile</code> | <code>Queue</code> |
+     *        <code>RoutingProfile</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

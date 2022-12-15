@@ -95,10 +95,8 @@ public class Endpoint implements Serializable, Cloneable, StructuredPojo {
     private java.util.List<Tag> tags;
     /**
      * <p>
-     * Array of <code>ProductionVariant</code> objects, one for each model that you want to host at this endpoint in
-     * shadow mode with production traffic replicated from the model specified on <code>ProductionVariants</code>.If you
-     * use this field, you can only specify one variant for <code>ProductionVariants</code> and one variant for
-     * <code>ShadowProductionVariants</code>.
+     * A list of the shadow variants hosted on the endpoint. Each shadow variant is a model in shadow mode with
+     * production traffic replicated from the proudction variant.
      * </p>
      */
     private java.util.List<ProductionVariantSummary> shadowProductionVariants;
@@ -668,16 +666,12 @@ public class Endpoint implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Array of <code>ProductionVariant</code> objects, one for each model that you want to host at this endpoint in
-     * shadow mode with production traffic replicated from the model specified on <code>ProductionVariants</code>.If you
-     * use this field, you can only specify one variant for <code>ProductionVariants</code> and one variant for
-     * <code>ShadowProductionVariants</code>.
+     * A list of the shadow variants hosted on the endpoint. Each shadow variant is a model in shadow mode with
+     * production traffic replicated from the proudction variant.
      * </p>
      * 
-     * @return Array of <code>ProductionVariant</code> objects, one for each model that you want to host at this
-     *         endpoint in shadow mode with production traffic replicated from the model specified on
-     *         <code>ProductionVariants</code>.If you use this field, you can only specify one variant for
-     *         <code>ProductionVariants</code> and one variant for <code>ShadowProductionVariants</code>.
+     * @return A list of the shadow variants hosted on the endpoint. Each shadow variant is a model in shadow mode with
+     *         production traffic replicated from the proudction variant.
      */
 
     public java.util.List<ProductionVariantSummary> getShadowProductionVariants() {
@@ -686,17 +680,13 @@ public class Endpoint implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Array of <code>ProductionVariant</code> objects, one for each model that you want to host at this endpoint in
-     * shadow mode with production traffic replicated from the model specified on <code>ProductionVariants</code>.If you
-     * use this field, you can only specify one variant for <code>ProductionVariants</code> and one variant for
-     * <code>ShadowProductionVariants</code>.
+     * A list of the shadow variants hosted on the endpoint. Each shadow variant is a model in shadow mode with
+     * production traffic replicated from the proudction variant.
      * </p>
      * 
      * @param shadowProductionVariants
-     *        Array of <code>ProductionVariant</code> objects, one for each model that you want to host at this endpoint
-     *        in shadow mode with production traffic replicated from the model specified on
-     *        <code>ProductionVariants</code>.If you use this field, you can only specify one variant for
-     *        <code>ProductionVariants</code> and one variant for <code>ShadowProductionVariants</code>.
+     *        A list of the shadow variants hosted on the endpoint. Each shadow variant is a model in shadow mode with
+     *        production traffic replicated from the proudction variant.
      */
 
     public void setShadowProductionVariants(java.util.Collection<ProductionVariantSummary> shadowProductionVariants) {
@@ -710,10 +700,8 @@ public class Endpoint implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Array of <code>ProductionVariant</code> objects, one for each model that you want to host at this endpoint in
-     * shadow mode with production traffic replicated from the model specified on <code>ProductionVariants</code>.If you
-     * use this field, you can only specify one variant for <code>ProductionVariants</code> and one variant for
-     * <code>ShadowProductionVariants</code>.
+     * A list of the shadow variants hosted on the endpoint. Each shadow variant is a model in shadow mode with
+     * production traffic replicated from the proudction variant.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -722,10 +710,8 @@ public class Endpoint implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param shadowProductionVariants
-     *        Array of <code>ProductionVariant</code> objects, one for each model that you want to host at this endpoint
-     *        in shadow mode with production traffic replicated from the model specified on
-     *        <code>ProductionVariants</code>.If you use this field, you can only specify one variant for
-     *        <code>ProductionVariants</code> and one variant for <code>ShadowProductionVariants</code>.
+     *        A list of the shadow variants hosted on the endpoint. Each shadow variant is a model in shadow mode with
+     *        production traffic replicated from the proudction variant.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -741,17 +727,13 @@ public class Endpoint implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Array of <code>ProductionVariant</code> objects, one for each model that you want to host at this endpoint in
-     * shadow mode with production traffic replicated from the model specified on <code>ProductionVariants</code>.If you
-     * use this field, you can only specify one variant for <code>ProductionVariants</code> and one variant for
-     * <code>ShadowProductionVariants</code>.
+     * A list of the shadow variants hosted on the endpoint. Each shadow variant is a model in shadow mode with
+     * production traffic replicated from the proudction variant.
      * </p>
      * 
      * @param shadowProductionVariants
-     *        Array of <code>ProductionVariant</code> objects, one for each model that you want to host at this endpoint
-     *        in shadow mode with production traffic replicated from the model specified on
-     *        <code>ProductionVariants</code>.If you use this field, you can only specify one variant for
-     *        <code>ProductionVariants</code> and one variant for <code>ShadowProductionVariants</code>.
+     *        A list of the shadow variants hosted on the endpoint. Each shadow variant is a model in shadow mode with
+     *        production traffic replicated from the proudction variant.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

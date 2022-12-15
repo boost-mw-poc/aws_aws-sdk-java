@@ -54,7 +54,7 @@ public class DeploymentSummary implements Serializable, Cloneable, StructuredPoj
     private String deploymentId;
     /**
      * <p>
-     * The unique identifier of the environment.
+     * The unique identifier of the runtime environment.
      * </p>
      */
     private String environmentId;
@@ -233,11 +233,11 @@ public class DeploymentSummary implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The unique identifier of the environment.
+     * The unique identifier of the runtime environment.
      * </p>
      * 
      * @param environmentId
-     *        The unique identifier of the environment.
+     *        The unique identifier of the runtime environment.
      */
 
     public void setEnvironmentId(String environmentId) {
@@ -246,10 +246,10 @@ public class DeploymentSummary implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The unique identifier of the environment.
+     * The unique identifier of the runtime environment.
      * </p>
      * 
-     * @return The unique identifier of the environment.
+     * @return The unique identifier of the runtime environment.
      */
 
     public String getEnvironmentId() {
@@ -258,11 +258,11 @@ public class DeploymentSummary implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The unique identifier of the environment.
+     * The unique identifier of the runtime environment.
      * </p>
      * 
      * @param environmentId
-     *        The unique identifier of the environment.
+     *        The unique identifier of the runtime environment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

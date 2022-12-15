@@ -32,6 +32,8 @@ public class DisableEnhancedMonitoringRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("StreamName").build();
     private static final MarshallingInfo<List> SHARDLEVELMETRICS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ShardLevelMetrics").build();
+    private static final MarshallingInfo<String> STREAMARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("StreamARN").build();
 
     private static final DisableEnhancedMonitoringRequestMarshaller instance = new DisableEnhancedMonitoringRequestMarshaller();
 
@@ -51,6 +53,7 @@ public class DisableEnhancedMonitoringRequestMarshaller {
         try {
             protocolMarshaller.marshall(disableEnhancedMonitoringRequest.getStreamName(), STREAMNAME_BINDING);
             protocolMarshaller.marshall(disableEnhancedMonitoringRequest.getShardLevelMetrics(), SHARDLEVELMETRICS_BINDING);
+            protocolMarshaller.marshall(disableEnhancedMonitoringRequest.getStreamARN(), STREAMARN_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

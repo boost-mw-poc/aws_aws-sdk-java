@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The Amazon S3 location and configuration for storing inference experiment data.
+ * The Amazon S3 location and configuration for storing inference request and response data.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/InferenceExperimentDataStorageConfig"
@@ -30,14 +30,14 @@ public class InferenceExperimentDataStorageConfig implements Serializable, Clone
 
     /**
      * <p>
-     * The Amazon S3 bucket where the inference experiment data is stored.
+     * The Amazon S3 bucket where the inference request and response data is stored.
      * </p>
      */
     private String destination;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of a Amazon Web Services Key Management Service key that Amazon SageMaker uses to
-     * encrypt captured data when uploading to Amazon S3.
+     * The Amazon Web Services Key Management Service key that Amazon SageMaker uses to encrypt captured data at rest
+     * using Amazon S3 server-side encryption.
      * </p>
      */
     private String kmsKey;
@@ -46,11 +46,11 @@ public class InferenceExperimentDataStorageConfig implements Serializable, Clone
 
     /**
      * <p>
-     * The Amazon S3 bucket where the inference experiment data is stored.
+     * The Amazon S3 bucket where the inference request and response data is stored.
      * </p>
      * 
      * @param destination
-     *        The Amazon S3 bucket where the inference experiment data is stored.
+     *        The Amazon S3 bucket where the inference request and response data is stored.
      */
 
     public void setDestination(String destination) {
@@ -59,10 +59,10 @@ public class InferenceExperimentDataStorageConfig implements Serializable, Clone
 
     /**
      * <p>
-     * The Amazon S3 bucket where the inference experiment data is stored.
+     * The Amazon S3 bucket where the inference request and response data is stored.
      * </p>
      * 
-     * @return The Amazon S3 bucket where the inference experiment data is stored.
+     * @return The Amazon S3 bucket where the inference request and response data is stored.
      */
 
     public String getDestination() {
@@ -71,11 +71,11 @@ public class InferenceExperimentDataStorageConfig implements Serializable, Clone
 
     /**
      * <p>
-     * The Amazon S3 bucket where the inference experiment data is stored.
+     * The Amazon S3 bucket where the inference request and response data is stored.
      * </p>
      * 
      * @param destination
-     *        The Amazon S3 bucket where the inference experiment data is stored.
+     *        The Amazon S3 bucket where the inference request and response data is stored.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -86,13 +86,13 @@ public class InferenceExperimentDataStorageConfig implements Serializable, Clone
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of a Amazon Web Services Key Management Service key that Amazon SageMaker uses to
-     * encrypt captured data when uploading to Amazon S3.
+     * The Amazon Web Services Key Management Service key that Amazon SageMaker uses to encrypt captured data at rest
+     * using Amazon S3 server-side encryption.
      * </p>
      * 
      * @param kmsKey
-     *        The Amazon Resource Name (ARN) of a Amazon Web Services Key Management Service key that Amazon SageMaker
-     *        uses to encrypt captured data when uploading to Amazon S3.
+     *        The Amazon Web Services Key Management Service key that Amazon SageMaker uses to encrypt captured data at
+     *        rest using Amazon S3 server-side encryption.
      */
 
     public void setKmsKey(String kmsKey) {
@@ -101,12 +101,12 @@ public class InferenceExperimentDataStorageConfig implements Serializable, Clone
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of a Amazon Web Services Key Management Service key that Amazon SageMaker uses to
-     * encrypt captured data when uploading to Amazon S3.
+     * The Amazon Web Services Key Management Service key that Amazon SageMaker uses to encrypt captured data at rest
+     * using Amazon S3 server-side encryption.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of a Amazon Web Services Key Management Service key that Amazon SageMaker
-     *         uses to encrypt captured data when uploading to Amazon S3.
+     * @return The Amazon Web Services Key Management Service key that Amazon SageMaker uses to encrypt captured data at
+     *         rest using Amazon S3 server-side encryption.
      */
 
     public String getKmsKey() {
@@ -115,13 +115,13 @@ public class InferenceExperimentDataStorageConfig implements Serializable, Clone
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of a Amazon Web Services Key Management Service key that Amazon SageMaker uses to
-     * encrypt captured data when uploading to Amazon S3.
+     * The Amazon Web Services Key Management Service key that Amazon SageMaker uses to encrypt captured data at rest
+     * using Amazon S3 server-side encryption.
      * </p>
      * 
      * @param kmsKey
-     *        The Amazon Resource Name (ARN) of a Amazon Web Services Key Management Service key that Amazon SageMaker
-     *        uses to encrypt captured data when uploading to Amazon S3.
+     *        The Amazon Web Services Key Management Service key that Amazon SageMaker uses to encrypt captured data at
+     *        rest using Amazon S3 server-side encryption.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

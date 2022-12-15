@@ -33,7 +33,7 @@ public class CreateEndpointConfigRequest extends com.amazonaws.AmazonWebServiceR
     private String endpointConfigName;
     /**
      * <p>
-     * An list of <code>ProductionVariant</code> objects, one for each model that you want to host at this endpoint.
+     * An array of <code>ProductionVariant</code> objects, one for each model that you want to host at this endpoint.
      * </p>
      */
     private java.util.List<ProductionVariant> productionVariants;
@@ -122,10 +122,10 @@ public class CreateEndpointConfigRequest extends com.amazonaws.AmazonWebServiceR
     private ExplainerConfig explainerConfig;
     /**
      * <p>
-     * Array of <code>ProductionVariant</code> objects. There is one for each model that you want to host at this
-     * endpoint in shadow mode with production traffic replicated from the model specified on
-     * <code>ProductionVariants</code>.If you use this field, you can only specify one variant for
-     * <code>ProductionVariants</code> and one variant for <code>ShadowProductionVariants</code>.
+     * An array of <code>ProductionVariant</code> objects, one for each model that you want to host at this endpoint in
+     * shadow mode with production traffic replicated from the model specified on <code>ProductionVariants</code>. If
+     * you use this field, you can only specify one variant for <code>ProductionVariants</code> and one variant for
+     * <code>ShadowProductionVariants</code>.
      * </p>
      */
     private java.util.List<ProductionVariant> shadowProductionVariants;
@@ -172,10 +172,10 @@ public class CreateEndpointConfigRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * An list of <code>ProductionVariant</code> objects, one for each model that you want to host at this endpoint.
+     * An array of <code>ProductionVariant</code> objects, one for each model that you want to host at this endpoint.
      * </p>
      * 
-     * @return An list of <code>ProductionVariant</code> objects, one for each model that you want to host at this
+     * @return An array of <code>ProductionVariant</code> objects, one for each model that you want to host at this
      *         endpoint.
      */
 
@@ -185,11 +185,11 @@ public class CreateEndpointConfigRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * An list of <code>ProductionVariant</code> objects, one for each model that you want to host at this endpoint.
+     * An array of <code>ProductionVariant</code> objects, one for each model that you want to host at this endpoint.
      * </p>
      * 
      * @param productionVariants
-     *        An list of <code>ProductionVariant</code> objects, one for each model that you want to host at this
+     *        An array of <code>ProductionVariant</code> objects, one for each model that you want to host at this
      *        endpoint.
      */
 
@@ -204,7 +204,7 @@ public class CreateEndpointConfigRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * An list of <code>ProductionVariant</code> objects, one for each model that you want to host at this endpoint.
+     * An array of <code>ProductionVariant</code> objects, one for each model that you want to host at this endpoint.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -213,7 +213,7 @@ public class CreateEndpointConfigRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      * 
      * @param productionVariants
-     *        An list of <code>ProductionVariant</code> objects, one for each model that you want to host at this
+     *        An array of <code>ProductionVariant</code> objects, one for each model that you want to host at this
      *        endpoint.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -230,11 +230,11 @@ public class CreateEndpointConfigRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * An list of <code>ProductionVariant</code> objects, one for each model that you want to host at this endpoint.
+     * An array of <code>ProductionVariant</code> objects, one for each model that you want to host at this endpoint.
      * </p>
      * 
      * @param productionVariants
-     *        An list of <code>ProductionVariant</code> objects, one for each model that you want to host at this
+     *        An array of <code>ProductionVariant</code> objects, one for each model that you want to host at this
      *        endpoint.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -812,15 +812,15 @@ public class CreateEndpointConfigRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Array of <code>ProductionVariant</code> objects. There is one for each model that you want to host at this
-     * endpoint in shadow mode with production traffic replicated from the model specified on
-     * <code>ProductionVariants</code>.If you use this field, you can only specify one variant for
-     * <code>ProductionVariants</code> and one variant for <code>ShadowProductionVariants</code>.
+     * An array of <code>ProductionVariant</code> objects, one for each model that you want to host at this endpoint in
+     * shadow mode with production traffic replicated from the model specified on <code>ProductionVariants</code>. If
+     * you use this field, you can only specify one variant for <code>ProductionVariants</code> and one variant for
+     * <code>ShadowProductionVariants</code>.
      * </p>
      * 
-     * @return Array of <code>ProductionVariant</code> objects. There is one for each model that you want to host at
-     *         this endpoint in shadow mode with production traffic replicated from the model specified on
-     *         <code>ProductionVariants</code>.If you use this field, you can only specify one variant for
+     * @return An array of <code>ProductionVariant</code> objects, one for each model that you want to host at this
+     *         endpoint in shadow mode with production traffic replicated from the model specified on
+     *         <code>ProductionVariants</code>. If you use this field, you can only specify one variant for
      *         <code>ProductionVariants</code> and one variant for <code>ShadowProductionVariants</code>.
      */
 
@@ -830,16 +830,16 @@ public class CreateEndpointConfigRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Array of <code>ProductionVariant</code> objects. There is one for each model that you want to host at this
-     * endpoint in shadow mode with production traffic replicated from the model specified on
-     * <code>ProductionVariants</code>.If you use this field, you can only specify one variant for
-     * <code>ProductionVariants</code> and one variant for <code>ShadowProductionVariants</code>.
+     * An array of <code>ProductionVariant</code> objects, one for each model that you want to host at this endpoint in
+     * shadow mode with production traffic replicated from the model specified on <code>ProductionVariants</code>. If
+     * you use this field, you can only specify one variant for <code>ProductionVariants</code> and one variant for
+     * <code>ShadowProductionVariants</code>.
      * </p>
      * 
      * @param shadowProductionVariants
-     *        Array of <code>ProductionVariant</code> objects. There is one for each model that you want to host at this
+     *        An array of <code>ProductionVariant</code> objects, one for each model that you want to host at this
      *        endpoint in shadow mode with production traffic replicated from the model specified on
-     *        <code>ProductionVariants</code>.If you use this field, you can only specify one variant for
+     *        <code>ProductionVariants</code>. If you use this field, you can only specify one variant for
      *        <code>ProductionVariants</code> and one variant for <code>ShadowProductionVariants</code>.
      */
 
@@ -854,10 +854,10 @@ public class CreateEndpointConfigRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Array of <code>ProductionVariant</code> objects. There is one for each model that you want to host at this
-     * endpoint in shadow mode with production traffic replicated from the model specified on
-     * <code>ProductionVariants</code>.If you use this field, you can only specify one variant for
-     * <code>ProductionVariants</code> and one variant for <code>ShadowProductionVariants</code>.
+     * An array of <code>ProductionVariant</code> objects, one for each model that you want to host at this endpoint in
+     * shadow mode with production traffic replicated from the model specified on <code>ProductionVariants</code>. If
+     * you use this field, you can only specify one variant for <code>ProductionVariants</code> and one variant for
+     * <code>ShadowProductionVariants</code>.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -866,9 +866,9 @@ public class CreateEndpointConfigRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      * 
      * @param shadowProductionVariants
-     *        Array of <code>ProductionVariant</code> objects. There is one for each model that you want to host at this
+     *        An array of <code>ProductionVariant</code> objects, one for each model that you want to host at this
      *        endpoint in shadow mode with production traffic replicated from the model specified on
-     *        <code>ProductionVariants</code>.If you use this field, you can only specify one variant for
+     *        <code>ProductionVariants</code>. If you use this field, you can only specify one variant for
      *        <code>ProductionVariants</code> and one variant for <code>ShadowProductionVariants</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -885,16 +885,16 @@ public class CreateEndpointConfigRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Array of <code>ProductionVariant</code> objects. There is one for each model that you want to host at this
-     * endpoint in shadow mode with production traffic replicated from the model specified on
-     * <code>ProductionVariants</code>.If you use this field, you can only specify one variant for
-     * <code>ProductionVariants</code> and one variant for <code>ShadowProductionVariants</code>.
+     * An array of <code>ProductionVariant</code> objects, one for each model that you want to host at this endpoint in
+     * shadow mode with production traffic replicated from the model specified on <code>ProductionVariants</code>. If
+     * you use this field, you can only specify one variant for <code>ProductionVariants</code> and one variant for
+     * <code>ShadowProductionVariants</code>.
      * </p>
      * 
      * @param shadowProductionVariants
-     *        Array of <code>ProductionVariant</code> objects. There is one for each model that you want to host at this
+     *        An array of <code>ProductionVariant</code> objects, one for each model that you want to host at this
      *        endpoint in shadow mode with production traffic replicated from the model specified on
-     *        <code>ProductionVariants</code>.If you use this field, you can only specify one variant for
+     *        <code>ProductionVariants</code>. If you use this field, you can only specify one variant for
      *        <code>ProductionVariants</code> and one variant for <code>ShadowProductionVariants</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

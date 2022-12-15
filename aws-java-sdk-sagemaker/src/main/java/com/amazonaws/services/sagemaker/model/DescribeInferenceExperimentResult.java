@@ -59,8 +59,8 @@ public class DescribeInferenceExperimentResult extends com.amazonaws.AmazonWebSe
      * </li>
      * <li>
      * <p>
-     * <code>Created</code> - Amazon SageMaker has finished creating your experiment and it will begin at the scheduled
-     * time.
+     * <code>Created</code> - Amazon SageMaker has finished the creation of your experiment and will begin the
+     * experiment at the scheduled time.
      * </p>
      * </li>
      * <li>
@@ -90,7 +90,8 @@ public class DescribeInferenceExperimentResult extends com.amazonaws.AmazonWebSe
      * </li>
      * <li>
      * <p>
-     * <code>Cancelled</code> - When you conclude your experiment early, it shows as canceled.
+     * <code>Cancelled</code> - When you conclude your experiment early using the <a>StopInferenceExperiment</a> API, or
+     * if any operation fails with an unexpected error, it shows as cancelled.
      * </p>
      * </li>
      * </ul>
@@ -98,7 +99,8 @@ public class DescribeInferenceExperimentResult extends com.amazonaws.AmazonWebSe
     private String status;
     /**
      * <p>
-     * The error message for the inference experiment status result.
+     * The error message or client-specified <code>Reason</code> from the <a>StopInferenceExperiment</a> API, that
+     * explains the status of the inference experiment.
      * </p>
      */
     private String statusReason;
@@ -116,7 +118,7 @@ public class DescribeInferenceExperimentResult extends com.amazonaws.AmazonWebSe
     private java.util.Date creationTime;
     /**
      * <p>
-     * The timestamp at which the inference experiment was completed or will complete.
+     * The timestamp at which the inference experiment was completed.
      * </p>
      */
     private java.util.Date completionTime;
@@ -128,7 +130,8 @@ public class DescribeInferenceExperimentResult extends com.amazonaws.AmazonWebSe
     private java.util.Date lastModifiedTime;
     /**
      * <p>
-     * The ARN of the IAM role that Amazon SageMaker can assume to access model artifacts and container images.
+     * The ARN of the IAM role that Amazon SageMaker can assume to access model artifacts and container images, and
+     * manage Amazon SageMaker Inference endpoints for model deployment.
      * </p>
      */
     private String roleArn;
@@ -140,7 +143,7 @@ public class DescribeInferenceExperimentResult extends com.amazonaws.AmazonWebSe
     private EndpointMetadata endpointMetadata;
     /**
      * <p>
-     * Array of <code>ModelVariantConfigSummary</code> objects. There is one for each variant in the inference
+     * An array of <code>ModelVariantConfigSummary</code> objects. There is one for each variant in the inference
      * experiment. Each <code>ModelVariantConfigSummary</code> object in the array describes the infrastructure
      * configuration for deploying the corresponding variant.
      * </p>
@@ -148,14 +151,16 @@ public class DescribeInferenceExperimentResult extends com.amazonaws.AmazonWebSe
     private java.util.List<ModelVariantConfigSummary> modelVariants;
     /**
      * <p>
-     * The Amazon S3 storage configuration for the inference experiment.
+     * The Amazon S3 location and configuration for storing inference request and response data.
      * </p>
      */
     private InferenceExperimentDataStorageConfig dataStorageConfig;
     /**
      * <p>
-     * Shows which variant is a production variant and which variant is a shadow variant. For shadow variants, also
-     * shows the sampling percentage.
+     * The configuration of <code>ShadowMode</code> inference experiment type, which shows the production variant that
+     * takes all the inference requests, and the shadow variant to which Amazon SageMaker replicates a percentage of the
+     * inference requests. For the shadow variant it also shows the percentage of requests that Amazon SageMaker
+     * replicates.
      * </p>
      */
     private ShadowModeConfig shadowModeConfig;
@@ -359,8 +364,8 @@ public class DescribeInferenceExperimentResult extends com.amazonaws.AmazonWebSe
      * </li>
      * <li>
      * <p>
-     * <code>Created</code> - Amazon SageMaker has finished creating your experiment and it will begin at the scheduled
-     * time.
+     * <code>Created</code> - Amazon SageMaker has finished the creation of your experiment and will begin the
+     * experiment at the scheduled time.
      * </p>
      * </li>
      * <li>
@@ -390,7 +395,8 @@ public class DescribeInferenceExperimentResult extends com.amazonaws.AmazonWebSe
      * </li>
      * <li>
      * <p>
-     * <code>Cancelled</code> - When you conclude your experiment early, it shows as canceled.
+     * <code>Cancelled</code> - When you conclude your experiment early using the <a>StopInferenceExperiment</a> API, or
+     * if any operation fails with an unexpected error, it shows as cancelled.
      * </p>
      * </li>
      * </ul>
@@ -406,8 +412,8 @@ public class DescribeInferenceExperimentResult extends com.amazonaws.AmazonWebSe
      *        </li>
      *        <li>
      *        <p>
-     *        <code>Created</code> - Amazon SageMaker has finished creating your experiment and it will begin at the
-     *        scheduled time.
+     *        <code>Created</code> - Amazon SageMaker has finished the creation of your experiment and will begin the
+     *        experiment at the scheduled time.
      *        </p>
      *        </li>
      *        <li>
@@ -437,7 +443,8 @@ public class DescribeInferenceExperimentResult extends com.amazonaws.AmazonWebSe
      *        </li>
      *        <li>
      *        <p>
-     *        <code>Cancelled</code> - When you conclude your experiment early, it shows as canceled.
+     *        <code>Cancelled</code> - When you conclude your experiment early using the <a>StopInferenceExperiment</a>
+     *        API, or if any operation fails with an unexpected error, it shows as cancelled.
      *        </p>
      *        </li>
      * @see InferenceExperimentStatus
@@ -459,8 +466,8 @@ public class DescribeInferenceExperimentResult extends com.amazonaws.AmazonWebSe
      * </li>
      * <li>
      * <p>
-     * <code>Created</code> - Amazon SageMaker has finished creating your experiment and it will begin at the scheduled
-     * time.
+     * <code>Created</code> - Amazon SageMaker has finished the creation of your experiment and will begin the
+     * experiment at the scheduled time.
      * </p>
      * </li>
      * <li>
@@ -490,7 +497,8 @@ public class DescribeInferenceExperimentResult extends com.amazonaws.AmazonWebSe
      * </li>
      * <li>
      * <p>
-     * <code>Cancelled</code> - When you conclude your experiment early, it shows as canceled.
+     * <code>Cancelled</code> - When you conclude your experiment early using the <a>StopInferenceExperiment</a> API, or
+     * if any operation fails with an unexpected error, it shows as cancelled.
      * </p>
      * </li>
      * </ul>
@@ -505,8 +513,8 @@ public class DescribeInferenceExperimentResult extends com.amazonaws.AmazonWebSe
      *         </li>
      *         <li>
      *         <p>
-     *         <code>Created</code> - Amazon SageMaker has finished creating your experiment and it will begin at the
-     *         scheduled time.
+     *         <code>Created</code> - Amazon SageMaker has finished the creation of your experiment and will begin the
+     *         experiment at the scheduled time.
      *         </p>
      *         </li>
      *         <li>
@@ -536,7 +544,8 @@ public class DescribeInferenceExperimentResult extends com.amazonaws.AmazonWebSe
      *         </li>
      *         <li>
      *         <p>
-     *         <code>Cancelled</code> - When you conclude your experiment early, it shows as canceled.
+     *         <code>Cancelled</code> - When you conclude your experiment early using the <a>StopInferenceExperiment</a>
+     *         API, or if any operation fails with an unexpected error, it shows as cancelled.
      *         </p>
      *         </li>
      * @see InferenceExperimentStatus
@@ -558,8 +567,8 @@ public class DescribeInferenceExperimentResult extends com.amazonaws.AmazonWebSe
      * </li>
      * <li>
      * <p>
-     * <code>Created</code> - Amazon SageMaker has finished creating your experiment and it will begin at the scheduled
-     * time.
+     * <code>Created</code> - Amazon SageMaker has finished the creation of your experiment and will begin the
+     * experiment at the scheduled time.
      * </p>
      * </li>
      * <li>
@@ -589,7 +598,8 @@ public class DescribeInferenceExperimentResult extends com.amazonaws.AmazonWebSe
      * </li>
      * <li>
      * <p>
-     * <code>Cancelled</code> - When you conclude your experiment early, it shows as canceled.
+     * <code>Cancelled</code> - When you conclude your experiment early using the <a>StopInferenceExperiment</a> API, or
+     * if any operation fails with an unexpected error, it shows as cancelled.
      * </p>
      * </li>
      * </ul>
@@ -605,8 +615,8 @@ public class DescribeInferenceExperimentResult extends com.amazonaws.AmazonWebSe
      *        </li>
      *        <li>
      *        <p>
-     *        <code>Created</code> - Amazon SageMaker has finished creating your experiment and it will begin at the
-     *        scheduled time.
+     *        <code>Created</code> - Amazon SageMaker has finished the creation of your experiment and will begin the
+     *        experiment at the scheduled time.
      *        </p>
      *        </li>
      *        <li>
@@ -636,7 +646,8 @@ public class DescribeInferenceExperimentResult extends com.amazonaws.AmazonWebSe
      *        </li>
      *        <li>
      *        <p>
-     *        <code>Cancelled</code> - When you conclude your experiment early, it shows as canceled.
+     *        <code>Cancelled</code> - When you conclude your experiment early using the <a>StopInferenceExperiment</a>
+     *        API, or if any operation fails with an unexpected error, it shows as cancelled.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -660,8 +671,8 @@ public class DescribeInferenceExperimentResult extends com.amazonaws.AmazonWebSe
      * </li>
      * <li>
      * <p>
-     * <code>Created</code> - Amazon SageMaker has finished creating your experiment and it will begin at the scheduled
-     * time.
+     * <code>Created</code> - Amazon SageMaker has finished the creation of your experiment and will begin the
+     * experiment at the scheduled time.
      * </p>
      * </li>
      * <li>
@@ -691,7 +702,8 @@ public class DescribeInferenceExperimentResult extends com.amazonaws.AmazonWebSe
      * </li>
      * <li>
      * <p>
-     * <code>Cancelled</code> - When you conclude your experiment early, it shows as canceled.
+     * <code>Cancelled</code> - When you conclude your experiment early using the <a>StopInferenceExperiment</a> API, or
+     * if any operation fails with an unexpected error, it shows as cancelled.
      * </p>
      * </li>
      * </ul>
@@ -707,8 +719,8 @@ public class DescribeInferenceExperimentResult extends com.amazonaws.AmazonWebSe
      *        </li>
      *        <li>
      *        <p>
-     *        <code>Created</code> - Amazon SageMaker has finished creating your experiment and it will begin at the
-     *        scheduled time.
+     *        <code>Created</code> - Amazon SageMaker has finished the creation of your experiment and will begin the
+     *        experiment at the scheduled time.
      *        </p>
      *        </li>
      *        <li>
@@ -738,7 +750,8 @@ public class DescribeInferenceExperimentResult extends com.amazonaws.AmazonWebSe
      *        </li>
      *        <li>
      *        <p>
-     *        <code>Cancelled</code> - When you conclude your experiment early, it shows as canceled.
+     *        <code>Cancelled</code> - When you conclude your experiment early using the <a>StopInferenceExperiment</a>
+     *        API, or if any operation fails with an unexpected error, it shows as cancelled.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -752,11 +765,13 @@ public class DescribeInferenceExperimentResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The error message for the inference experiment status result.
+     * The error message or client-specified <code>Reason</code> from the <a>StopInferenceExperiment</a> API, that
+     * explains the status of the inference experiment.
      * </p>
      * 
      * @param statusReason
-     *        The error message for the inference experiment status result.
+     *        The error message or client-specified <code>Reason</code> from the <a>StopInferenceExperiment</a> API,
+     *        that explains the status of the inference experiment.
      */
 
     public void setStatusReason(String statusReason) {
@@ -765,10 +780,12 @@ public class DescribeInferenceExperimentResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The error message for the inference experiment status result.
+     * The error message or client-specified <code>Reason</code> from the <a>StopInferenceExperiment</a> API, that
+     * explains the status of the inference experiment.
      * </p>
      * 
-     * @return The error message for the inference experiment status result.
+     * @return The error message or client-specified <code>Reason</code> from the <a>StopInferenceExperiment</a> API,
+     *         that explains the status of the inference experiment.
      */
 
     public String getStatusReason() {
@@ -777,11 +794,13 @@ public class DescribeInferenceExperimentResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The error message for the inference experiment status result.
+     * The error message or client-specified <code>Reason</code> from the <a>StopInferenceExperiment</a> API, that
+     * explains the status of the inference experiment.
      * </p>
      * 
      * @param statusReason
-     *        The error message for the inference experiment status result.
+     *        The error message or client-specified <code>Reason</code> from the <a>StopInferenceExperiment</a> API,
+     *        that explains the status of the inference experiment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -872,11 +891,11 @@ public class DescribeInferenceExperimentResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The timestamp at which the inference experiment was completed or will complete.
+     * The timestamp at which the inference experiment was completed.
      * </p>
      * 
      * @param completionTime
-     *        The timestamp at which the inference experiment was completed or will complete.
+     *        The timestamp at which the inference experiment was completed.
      */
 
     public void setCompletionTime(java.util.Date completionTime) {
@@ -885,10 +904,10 @@ public class DescribeInferenceExperimentResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The timestamp at which the inference experiment was completed or will complete.
+     * The timestamp at which the inference experiment was completed.
      * </p>
      * 
-     * @return The timestamp at which the inference experiment was completed or will complete.
+     * @return The timestamp at which the inference experiment was completed.
      */
 
     public java.util.Date getCompletionTime() {
@@ -897,11 +916,11 @@ public class DescribeInferenceExperimentResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The timestamp at which the inference experiment was completed or will complete.
+     * The timestamp at which the inference experiment was completed.
      * </p>
      * 
      * @param completionTime
-     *        The timestamp at which the inference experiment was completed or will complete.
+     *        The timestamp at which the inference experiment was completed.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -952,11 +971,13 @@ public class DescribeInferenceExperimentResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The ARN of the IAM role that Amazon SageMaker can assume to access model artifacts and container images.
+     * The ARN of the IAM role that Amazon SageMaker can assume to access model artifacts and container images, and
+     * manage Amazon SageMaker Inference endpoints for model deployment.
      * </p>
      * 
      * @param roleArn
-     *        The ARN of the IAM role that Amazon SageMaker can assume to access model artifacts and container images.
+     *        The ARN of the IAM role that Amazon SageMaker can assume to access model artifacts and container images,
+     *        and manage Amazon SageMaker Inference endpoints for model deployment.
      */
 
     public void setRoleArn(String roleArn) {
@@ -965,10 +986,12 @@ public class DescribeInferenceExperimentResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The ARN of the IAM role that Amazon SageMaker can assume to access model artifacts and container images.
+     * The ARN of the IAM role that Amazon SageMaker can assume to access model artifacts and container images, and
+     * manage Amazon SageMaker Inference endpoints for model deployment.
      * </p>
      * 
-     * @return The ARN of the IAM role that Amazon SageMaker can assume to access model artifacts and container images.
+     * @return The ARN of the IAM role that Amazon SageMaker can assume to access model artifacts and container images,
+     *         and manage Amazon SageMaker Inference endpoints for model deployment.
      */
 
     public String getRoleArn() {
@@ -977,11 +1000,13 @@ public class DescribeInferenceExperimentResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The ARN of the IAM role that Amazon SageMaker can assume to access model artifacts and container images.
+     * The ARN of the IAM role that Amazon SageMaker can assume to access model artifacts and container images, and
+     * manage Amazon SageMaker Inference endpoints for model deployment.
      * </p>
      * 
      * @param roleArn
-     *        The ARN of the IAM role that Amazon SageMaker can assume to access model artifacts and container images.
+     *        The ARN of the IAM role that Amazon SageMaker can assume to access model artifacts and container images,
+     *        and manage Amazon SageMaker Inference endpoints for model deployment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1032,14 +1057,14 @@ public class DescribeInferenceExperimentResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * Array of <code>ModelVariantConfigSummary</code> objects. There is one for each variant in the inference
+     * An array of <code>ModelVariantConfigSummary</code> objects. There is one for each variant in the inference
      * experiment. Each <code>ModelVariantConfigSummary</code> object in the array describes the infrastructure
      * configuration for deploying the corresponding variant.
      * </p>
      * 
-     * @return Array of <code>ModelVariantConfigSummary</code> objects. There is one for each variant in the inference
-     *         experiment. Each <code>ModelVariantConfigSummary</code> object in the array describes the infrastructure
-     *         configuration for deploying the corresponding variant.
+     * @return An array of <code>ModelVariantConfigSummary</code> objects. There is one for each variant in the
+     *         inference experiment. Each <code>ModelVariantConfigSummary</code> object in the array describes the
+     *         infrastructure configuration for deploying the corresponding variant.
      */
 
     public java.util.List<ModelVariantConfigSummary> getModelVariants() {
@@ -1048,13 +1073,13 @@ public class DescribeInferenceExperimentResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * Array of <code>ModelVariantConfigSummary</code> objects. There is one for each variant in the inference
+     * An array of <code>ModelVariantConfigSummary</code> objects. There is one for each variant in the inference
      * experiment. Each <code>ModelVariantConfigSummary</code> object in the array describes the infrastructure
      * configuration for deploying the corresponding variant.
      * </p>
      * 
      * @param modelVariants
-     *        Array of <code>ModelVariantConfigSummary</code> objects. There is one for each variant in the inference
+     *        An array of <code>ModelVariantConfigSummary</code> objects. There is one for each variant in the inference
      *        experiment. Each <code>ModelVariantConfigSummary</code> object in the array describes the infrastructure
      *        configuration for deploying the corresponding variant.
      */
@@ -1070,7 +1095,7 @@ public class DescribeInferenceExperimentResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * Array of <code>ModelVariantConfigSummary</code> objects. There is one for each variant in the inference
+     * An array of <code>ModelVariantConfigSummary</code> objects. There is one for each variant in the inference
      * experiment. Each <code>ModelVariantConfigSummary</code> object in the array describes the infrastructure
      * configuration for deploying the corresponding variant.
      * </p>
@@ -1081,7 +1106,7 @@ public class DescribeInferenceExperimentResult extends com.amazonaws.AmazonWebSe
      * </p>
      * 
      * @param modelVariants
-     *        Array of <code>ModelVariantConfigSummary</code> objects. There is one for each variant in the inference
+     *        An array of <code>ModelVariantConfigSummary</code> objects. There is one for each variant in the inference
      *        experiment. Each <code>ModelVariantConfigSummary</code> object in the array describes the infrastructure
      *        configuration for deploying the corresponding variant.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -1099,13 +1124,13 @@ public class DescribeInferenceExperimentResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * Array of <code>ModelVariantConfigSummary</code> objects. There is one for each variant in the inference
+     * An array of <code>ModelVariantConfigSummary</code> objects. There is one for each variant in the inference
      * experiment. Each <code>ModelVariantConfigSummary</code> object in the array describes the infrastructure
      * configuration for deploying the corresponding variant.
      * </p>
      * 
      * @param modelVariants
-     *        Array of <code>ModelVariantConfigSummary</code> objects. There is one for each variant in the inference
+     *        An array of <code>ModelVariantConfigSummary</code> objects. There is one for each variant in the inference
      *        experiment. Each <code>ModelVariantConfigSummary</code> object in the array describes the infrastructure
      *        configuration for deploying the corresponding variant.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -1118,11 +1143,11 @@ public class DescribeInferenceExperimentResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The Amazon S3 storage configuration for the inference experiment.
+     * The Amazon S3 location and configuration for storing inference request and response data.
      * </p>
      * 
      * @param dataStorageConfig
-     *        The Amazon S3 storage configuration for the inference experiment.
+     *        The Amazon S3 location and configuration for storing inference request and response data.
      */
 
     public void setDataStorageConfig(InferenceExperimentDataStorageConfig dataStorageConfig) {
@@ -1131,10 +1156,10 @@ public class DescribeInferenceExperimentResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The Amazon S3 storage configuration for the inference experiment.
+     * The Amazon S3 location and configuration for storing inference request and response data.
      * </p>
      * 
-     * @return The Amazon S3 storage configuration for the inference experiment.
+     * @return The Amazon S3 location and configuration for storing inference request and response data.
      */
 
     public InferenceExperimentDataStorageConfig getDataStorageConfig() {
@@ -1143,11 +1168,11 @@ public class DescribeInferenceExperimentResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The Amazon S3 storage configuration for the inference experiment.
+     * The Amazon S3 location and configuration for storing inference request and response data.
      * </p>
      * 
      * @param dataStorageConfig
-     *        The Amazon S3 storage configuration for the inference experiment.
+     *        The Amazon S3 location and configuration for storing inference request and response data.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1158,13 +1183,17 @@ public class DescribeInferenceExperimentResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * Shows which variant is a production variant and which variant is a shadow variant. For shadow variants, also
-     * shows the sampling percentage.
+     * The configuration of <code>ShadowMode</code> inference experiment type, which shows the production variant that
+     * takes all the inference requests, and the shadow variant to which Amazon SageMaker replicates a percentage of the
+     * inference requests. For the shadow variant it also shows the percentage of requests that Amazon SageMaker
+     * replicates.
      * </p>
      * 
      * @param shadowModeConfig
-     *        Shows which variant is a production variant and which variant is a shadow variant. For shadow variants,
-     *        also shows the sampling percentage.
+     *        The configuration of <code>ShadowMode</code> inference experiment type, which shows the production variant
+     *        that takes all the inference requests, and the shadow variant to which Amazon SageMaker replicates a
+     *        percentage of the inference requests. For the shadow variant it also shows the percentage of requests that
+     *        Amazon SageMaker replicates.
      */
 
     public void setShadowModeConfig(ShadowModeConfig shadowModeConfig) {
@@ -1173,12 +1202,16 @@ public class DescribeInferenceExperimentResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * Shows which variant is a production variant and which variant is a shadow variant. For shadow variants, also
-     * shows the sampling percentage.
+     * The configuration of <code>ShadowMode</code> inference experiment type, which shows the production variant that
+     * takes all the inference requests, and the shadow variant to which Amazon SageMaker replicates a percentage of the
+     * inference requests. For the shadow variant it also shows the percentage of requests that Amazon SageMaker
+     * replicates.
      * </p>
      * 
-     * @return Shows which variant is a production variant and which variant is a shadow variant. For shadow variants,
-     *         also shows the sampling percentage.
+     * @return The configuration of <code>ShadowMode</code> inference experiment type, which shows the production
+     *         variant that takes all the inference requests, and the shadow variant to which Amazon SageMaker
+     *         replicates a percentage of the inference requests. For the shadow variant it also shows the percentage of
+     *         requests that Amazon SageMaker replicates.
      */
 
     public ShadowModeConfig getShadowModeConfig() {
@@ -1187,13 +1220,17 @@ public class DescribeInferenceExperimentResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * Shows which variant is a production variant and which variant is a shadow variant. For shadow variants, also
-     * shows the sampling percentage.
+     * The configuration of <code>ShadowMode</code> inference experiment type, which shows the production variant that
+     * takes all the inference requests, and the shadow variant to which Amazon SageMaker replicates a percentage of the
+     * inference requests. For the shadow variant it also shows the percentage of requests that Amazon SageMaker
+     * replicates.
      * </p>
      * 
      * @param shadowModeConfig
-     *        Shows which variant is a production variant and which variant is a shadow variant. For shadow variants,
-     *        also shows the sampling percentage.
+     *        The configuration of <code>ShadowMode</code> inference experiment type, which shows the production variant
+     *        that takes all the inference requests, and the shadow variant to which Amazon SageMaker replicates a
+     *        percentage of the inference requests. For the shadow variant it also shows the percentage of requests that
+     *        Amazon SageMaker replicates.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

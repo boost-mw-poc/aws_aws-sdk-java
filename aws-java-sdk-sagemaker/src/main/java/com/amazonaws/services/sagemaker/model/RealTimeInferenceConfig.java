@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The infrastructure configuration for deploying the model to real-time inference.
+ * The infrastructure configuration for deploying the model to a real-time inference endpoint.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/RealTimeInferenceConfig" target="_top">AWS
@@ -30,24 +30,24 @@ public class RealTimeInferenceConfig implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The number of instances of the type specified by <code>InstanceType</code>.
+     * The instance type the model is deployed to.
      * </p>
      */
     private String instanceType;
     /**
      * <p>
-     * The instance type the model is deployed to.
+     * The number of instances of the type specified by <code>InstanceType</code>.
      * </p>
      */
     private Integer instanceCount;
 
     /**
      * <p>
-     * The number of instances of the type specified by <code>InstanceType</code>.
+     * The instance type the model is deployed to.
      * </p>
      * 
      * @param instanceType
-     *        The number of instances of the type specified by <code>InstanceType</code>.
+     *        The instance type the model is deployed to.
      * @see InstanceType
      */
 
@@ -57,10 +57,10 @@ public class RealTimeInferenceConfig implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The number of instances of the type specified by <code>InstanceType</code>.
+     * The instance type the model is deployed to.
      * </p>
      * 
-     * @return The number of instances of the type specified by <code>InstanceType</code>.
+     * @return The instance type the model is deployed to.
      * @see InstanceType
      */
 
@@ -70,11 +70,11 @@ public class RealTimeInferenceConfig implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The number of instances of the type specified by <code>InstanceType</code>.
+     * The instance type the model is deployed to.
      * </p>
      * 
      * @param instanceType
-     *        The number of instances of the type specified by <code>InstanceType</code>.
+     *        The instance type the model is deployed to.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see InstanceType
      */
@@ -86,11 +86,11 @@ public class RealTimeInferenceConfig implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The number of instances of the type specified by <code>InstanceType</code>.
+     * The instance type the model is deployed to.
      * </p>
      * 
      * @param instanceType
-     *        The number of instances of the type specified by <code>InstanceType</code>.
+     *        The instance type the model is deployed to.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see InstanceType
      */
@@ -102,11 +102,11 @@ public class RealTimeInferenceConfig implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The instance type the model is deployed to.
+     * The number of instances of the type specified by <code>InstanceType</code>.
      * </p>
      * 
      * @param instanceCount
-     *        The instance type the model is deployed to.
+     *        The number of instances of the type specified by <code>InstanceType</code>.
      */
 
     public void setInstanceCount(Integer instanceCount) {
@@ -115,10 +115,10 @@ public class RealTimeInferenceConfig implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The instance type the model is deployed to.
+     * The number of instances of the type specified by <code>InstanceType</code>.
      * </p>
      * 
-     * @return The instance type the model is deployed to.
+     * @return The number of instances of the type specified by <code>InstanceType</code>.
      */
 
     public Integer getInstanceCount() {
@@ -127,11 +127,11 @@ public class RealTimeInferenceConfig implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The instance type the model is deployed to.
+     * The number of instances of the type specified by <code>InstanceType</code>.
      * </p>
      * 
      * @param instanceCount
-     *        The instance type the model is deployed to.
+     *        The number of instances of the type specified by <code>InstanceType</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

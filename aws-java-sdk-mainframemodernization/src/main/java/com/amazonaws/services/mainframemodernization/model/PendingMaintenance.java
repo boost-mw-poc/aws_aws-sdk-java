@@ -36,7 +36,7 @@ public class PendingMaintenance implements Serializable, Cloneable, StructuredPo
     private String engineVersion;
     /**
      * <p>
-     * The maintenance schedule for the engine version.
+     * The maintenance schedule for the runtime engine version.
      * </p>
      */
     private MaintenanceSchedule schedule;
@@ -83,11 +83,11 @@ public class PendingMaintenance implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The maintenance schedule for the engine version.
+     * The maintenance schedule for the runtime engine version.
      * </p>
      * 
      * @param schedule
-     *        The maintenance schedule for the engine version.
+     *        The maintenance schedule for the runtime engine version.
      */
 
     public void setSchedule(MaintenanceSchedule schedule) {
@@ -96,10 +96,10 @@ public class PendingMaintenance implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The maintenance schedule for the engine version.
+     * The maintenance schedule for the runtime engine version.
      * </p>
      * 
-     * @return The maintenance schedule for the engine version.
+     * @return The maintenance schedule for the runtime engine version.
      */
 
     public MaintenanceSchedule getSchedule() {
@@ -108,11 +108,11 @@ public class PendingMaintenance implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The maintenance schedule for the engine version.
+     * The maintenance schedule for the runtime engine version.
      * </p>
      * 
      * @param schedule
-     *        The maintenance schedule for the engine version.
+     *        The maintenance schedule for the runtime engine version.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

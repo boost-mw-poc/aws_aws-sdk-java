@@ -1,3 +1,48 @@
+# __1.12.366__ __2022-12-15__
+## __AWS Backup Gateway__
+  - ### Features
+    - This release adds support for VMware vSphere tags, enabling customer to protect VMware virtual machines using tag-based policies for AWS tags mapped from vSphere tags. This release also adds support for customer-accessible gateway-hypervisor interaction log and upload bandwidth rate limit schedule.
+
+## __AWS Glue__
+  - ### Features
+    - This release adds support for AWS Glue Crawler with native DeltaLake tables, allowing Crawlers to classify Delta Lake format tables and catalog them for query engines to query against.
+
+## __AWS SecurityHub__
+  - ### Features
+    - Added new resource details objects to ASFF, including resources for AwsEc2LaunchTemplate, AwsSageMakerNotebookInstance, AwsWafv2WebAcl and AwsWafv2RuleGroup.
+
+## __AWSMainframeModernization__
+  - ### Features
+    - Adds an optional create-only `KmsKeyId` property to Environment and Application resources.
+
+## __Amazon Connect Service__
+  - ### Features
+    - Added support for "English - New Zealand" and "English - South African" to be used with Amazon Connect Custom Vocabulary APIs.
+
+## __Amazon EC2 Container Service__
+  - ### Features
+    - This release adds support for container port ranges in ECS, a new capability that allows customers to provide container port ranges to simplify use cases where multiple ports are in use in a container. This release updates TaskDefinition mutation APIs and the Task description APIs.
+
+## __Amazon Elastic Kubernetes Service__
+  - ### Features
+    - Add support for Windows managed nodes groups.
+
+## __Amazon Kinesis__
+  - ### Features
+    - Added StreamARN parameter for Kinesis Data Streams APIs. Added a new opaque pagination token for ListStreams. SDKs will auto-generate Account Endpoint when accessing Kinesis Data Streams.
+
+## __Amazon Location Service__
+  - ### Features
+    - This release adds support for a new style, "VectorOpenDataStandardLight" which can be used with the new data source, "Open Data Maps (Preview)".
+
+## __Amazon SageMaker Service__
+  - ### Features
+    - SageMaker Inference Recommender now allows customers to load tests their models on various instance types using private VPC.
+
+## __Amazon Translate__
+  - ### Features
+    - Raised the input byte size limit of the Text field in the TranslateText API to 10000 bytes.
+
 # __1.12.365__ __2022-12-14__
 ## __AWS Cost Explorer Service__
   - ### Features

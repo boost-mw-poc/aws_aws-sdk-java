@@ -84,6 +84,10 @@ public class GetEnvironmentResultJsonUnmarshaller implements Unmarshaller<GetEnv
                     context.nextToken();
                     getEnvironmentResult.setInstanceType(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("kmsKeyId", targetDepth)) {
+                    context.nextToken();
+                    getEnvironmentResult.setKmsKeyId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("loadBalancerArn", targetDepth)) {
                     context.nextToken();
                     getEnvironmentResult.setLoadBalancerArn(context.getUnmarshaller(String.class).unmarshall(context));

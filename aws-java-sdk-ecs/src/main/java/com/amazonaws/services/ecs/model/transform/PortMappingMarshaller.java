@@ -37,6 +37,8 @@ public class PortMappingMarshaller {
             .marshallLocationName("name").build();
     private static final MarshallingInfo<String> APPPROTOCOL_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("appProtocol").build();
+    private static final MarshallingInfo<String> CONTAINERPORTRANGE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("containerPortRange").build();
 
     private static final PortMappingMarshaller instance = new PortMappingMarshaller();
 
@@ -59,6 +61,7 @@ public class PortMappingMarshaller {
             protocolMarshaller.marshall(portMapping.getProtocol(), PROTOCOL_BINDING);
             protocolMarshaller.marshall(portMapping.getName(), NAME_BINDING);
             protocolMarshaller.marshall(portMapping.getAppProtocol(), APPPROTOCOL_BINDING);
+            protocolMarshaller.marshall(portMapping.getContainerPortRange(), CONTAINERPORTRANGE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

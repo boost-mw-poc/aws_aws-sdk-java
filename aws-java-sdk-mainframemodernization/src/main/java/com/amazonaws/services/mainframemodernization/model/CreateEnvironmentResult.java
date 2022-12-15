@@ -25,18 +25,18 @@ public class CreateEnvironmentResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * The identifier of this environment.
+     * The unique identifier of the runtime environment.
      * </p>
      */
     private String environmentId;
 
     /**
      * <p>
-     * The identifier of this environment.
+     * The unique identifier of the runtime environment.
      * </p>
      * 
      * @param environmentId
-     *        The identifier of this environment.
+     *        The unique identifier of the runtime environment.
      */
 
     public void setEnvironmentId(String environmentId) {
@@ -45,10 +45,10 @@ public class CreateEnvironmentResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * The identifier of this environment.
+     * The unique identifier of the runtime environment.
      * </p>
      * 
-     * @return The identifier of this environment.
+     * @return The unique identifier of the runtime environment.
      */
 
     public String getEnvironmentId() {
@@ -57,11 +57,11 @@ public class CreateEnvironmentResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * The identifier of this environment.
+     * The unique identifier of the runtime environment.
      * </p>
      * 
      * @param environmentId
-     *        The identifier of this environment.
+     *        The unique identifier of the runtime environment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

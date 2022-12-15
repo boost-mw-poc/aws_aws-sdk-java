@@ -62,6 +62,10 @@ public class DeltaTargetJsonUnmarshaller implements Unmarshaller<DeltaTarget, Js
                     context.nextToken();
                     deltaTarget.setWriteManifest(context.getUnmarshaller(Boolean.class).unmarshall(context));
                 }
+                if (context.testExpression("CreateNativeDeltaTable", targetDepth)) {
+                    context.nextToken();
+                    deltaTarget.setCreateNativeDeltaTable(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

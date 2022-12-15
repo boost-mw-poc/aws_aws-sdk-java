@@ -54,11 +54,11 @@ public class StartTextTranslationJobRequest extends com.amazonaws.AmazonWebServi
     private String dataAccessRoleArn;
     /**
      * <p>
-     * The language code of the input language. For a list of language codes, see <a
+     * The language code of the input language. Specify the language if all input documents share the same language. If
+     * you don't know the language of the source files, or your input documents contains different source languages,
+     * select <code>auto</code>. Amazon Translate auto detects the source language for each input document. For a list
+     * of supported language codes, see <a
      * href="https://docs.aws.amazon.com/translate/latest/dg/what-is-languages.html">Supported languages</a>.
-     * </p>
-     * <p>
-     * Amazon Translate does not automatically detect a source language during batch translation jobs.
      * </p>
      */
     private String sourceLanguageCode;
@@ -68,7 +68,7 @@ public class StartTextTranslationJobRequest extends com.amazonaws.AmazonWebServi
      * each target language.
      * </p>
      * <p>
-     * Each language code is two or five characters long. For a list of language codes, see <a
+     * Each language code is 2 or 5 characters long. For a list of language codes, see <a
      * href="https://docs.aws.amazon.com/translate/latest/dg/what-is-languages.html">Supported languages</a>.
      * </p>
      */
@@ -316,18 +316,19 @@ public class StartTextTranslationJobRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The language code of the input language. For a list of language codes, see <a
+     * The language code of the input language. Specify the language if all input documents share the same language. If
+     * you don't know the language of the source files, or your input documents contains different source languages,
+     * select <code>auto</code>. Amazon Translate auto detects the source language for each input document. For a list
+     * of supported language codes, see <a
      * href="https://docs.aws.amazon.com/translate/latest/dg/what-is-languages.html">Supported languages</a>.
-     * </p>
-     * <p>
-     * Amazon Translate does not automatically detect a source language during batch translation jobs.
      * </p>
      * 
      * @param sourceLanguageCode
-     *        The language code of the input language. For a list of language codes, see <a
-     *        href="https://docs.aws.amazon.com/translate/latest/dg/what-is-languages.html">Supported languages</a>.</p>
-     *        <p>
-     *        Amazon Translate does not automatically detect a source language during batch translation jobs.
+     *        The language code of the input language. Specify the language if all input documents share the same
+     *        language. If you don't know the language of the source files, or your input documents contains different
+     *        source languages, select <code>auto</code>. Amazon Translate auto detects the source language for each
+     *        input document. For a list of supported language codes, see <a
+     *        href="https://docs.aws.amazon.com/translate/latest/dg/what-is-languages.html">Supported languages</a>.
      */
 
     public void setSourceLanguageCode(String sourceLanguageCode) {
@@ -336,18 +337,18 @@ public class StartTextTranslationJobRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The language code of the input language. For a list of language codes, see <a
+     * The language code of the input language. Specify the language if all input documents share the same language. If
+     * you don't know the language of the source files, or your input documents contains different source languages,
+     * select <code>auto</code>. Amazon Translate auto detects the source language for each input document. For a list
+     * of supported language codes, see <a
      * href="https://docs.aws.amazon.com/translate/latest/dg/what-is-languages.html">Supported languages</a>.
      * </p>
-     * <p>
-     * Amazon Translate does not automatically detect a source language during batch translation jobs.
-     * </p>
      * 
-     * @return The language code of the input language. For a list of language codes, see <a
-     *         href="https://docs.aws.amazon.com/translate/latest/dg/what-is-languages.html">Supported
-     *         languages</a>.</p>
-     *         <p>
-     *         Amazon Translate does not automatically detect a source language during batch translation jobs.
+     * @return The language code of the input language. Specify the language if all input documents share the same
+     *         language. If you don't know the language of the source files, or your input documents contains different
+     *         source languages, select <code>auto</code>. Amazon Translate auto detects the source language for each
+     *         input document. For a list of supported language codes, see <a
+     *         href="https://docs.aws.amazon.com/translate/latest/dg/what-is-languages.html">Supported languages</a>.
      */
 
     public String getSourceLanguageCode() {
@@ -356,18 +357,19 @@ public class StartTextTranslationJobRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The language code of the input language. For a list of language codes, see <a
+     * The language code of the input language. Specify the language if all input documents share the same language. If
+     * you don't know the language of the source files, or your input documents contains different source languages,
+     * select <code>auto</code>. Amazon Translate auto detects the source language for each input document. For a list
+     * of supported language codes, see <a
      * href="https://docs.aws.amazon.com/translate/latest/dg/what-is-languages.html">Supported languages</a>.
-     * </p>
-     * <p>
-     * Amazon Translate does not automatically detect a source language during batch translation jobs.
      * </p>
      * 
      * @param sourceLanguageCode
-     *        The language code of the input language. For a list of language codes, see <a
-     *        href="https://docs.aws.amazon.com/translate/latest/dg/what-is-languages.html">Supported languages</a>.</p>
-     *        <p>
-     *        Amazon Translate does not automatically detect a source language during batch translation jobs.
+     *        The language code of the input language. Specify the language if all input documents share the same
+     *        language. If you don't know the language of the source files, or your input documents contains different
+     *        source languages, select <code>auto</code>. Amazon Translate auto detects the source language for each
+     *        input document. For a list of supported language codes, see <a
+     *        href="https://docs.aws.amazon.com/translate/latest/dg/what-is-languages.html">Supported languages</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -382,14 +384,14 @@ public class StartTextTranslationJobRequest extends com.amazonaws.AmazonWebServi
      * each target language.
      * </p>
      * <p>
-     * Each language code is two or five characters long. For a list of language codes, see <a
+     * Each language code is 2 or 5 characters long. For a list of language codes, see <a
      * href="https://docs.aws.amazon.com/translate/latest/dg/what-is-languages.html">Supported languages</a>.
      * </p>
      * 
      * @return The target languages of the translation job. Enter up to 10 language codes. Each input file is translated
      *         into each target language.</p>
      *         <p>
-     *         Each language code is two or five characters long. For a list of language codes, see <a
+     *         Each language code is 2 or 5 characters long. For a list of language codes, see <a
      *         href="https://docs.aws.amazon.com/translate/latest/dg/what-is-languages.html">Supported languages</a>.
      */
 
@@ -403,7 +405,7 @@ public class StartTextTranslationJobRequest extends com.amazonaws.AmazonWebServi
      * each target language.
      * </p>
      * <p>
-     * Each language code is two or five characters long. For a list of language codes, see <a
+     * Each language code is 2 or 5 characters long. For a list of language codes, see <a
      * href="https://docs.aws.amazon.com/translate/latest/dg/what-is-languages.html">Supported languages</a>.
      * </p>
      * 
@@ -411,7 +413,7 @@ public class StartTextTranslationJobRequest extends com.amazonaws.AmazonWebServi
      *        The target languages of the translation job. Enter up to 10 language codes. Each input file is translated
      *        into each target language.</p>
      *        <p>
-     *        Each language code is two or five characters long. For a list of language codes, see <a
+     *        Each language code is 2 or 5 characters long. For a list of language codes, see <a
      *        href="https://docs.aws.amazon.com/translate/latest/dg/what-is-languages.html">Supported languages</a>.
      */
 
@@ -430,7 +432,7 @@ public class StartTextTranslationJobRequest extends com.amazonaws.AmazonWebServi
      * each target language.
      * </p>
      * <p>
-     * Each language code is two or five characters long. For a list of language codes, see <a
+     * Each language code is 2 or 5 characters long. For a list of language codes, see <a
      * href="https://docs.aws.amazon.com/translate/latest/dg/what-is-languages.html">Supported languages</a>.
      * </p>
      * <p>
@@ -443,7 +445,7 @@ public class StartTextTranslationJobRequest extends com.amazonaws.AmazonWebServi
      *        The target languages of the translation job. Enter up to 10 language codes. Each input file is translated
      *        into each target language.</p>
      *        <p>
-     *        Each language code is two or five characters long. For a list of language codes, see <a
+     *        Each language code is 2 or 5 characters long. For a list of language codes, see <a
      *        href="https://docs.aws.amazon.com/translate/latest/dg/what-is-languages.html">Supported languages</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -464,7 +466,7 @@ public class StartTextTranslationJobRequest extends com.amazonaws.AmazonWebServi
      * each target language.
      * </p>
      * <p>
-     * Each language code is two or five characters long. For a list of language codes, see <a
+     * Each language code is 2 or 5 characters long. For a list of language codes, see <a
      * href="https://docs.aws.amazon.com/translate/latest/dg/what-is-languages.html">Supported languages</a>.
      * </p>
      * 
@@ -472,7 +474,7 @@ public class StartTextTranslationJobRequest extends com.amazonaws.AmazonWebServi
      *        The target languages of the translation job. Enter up to 10 language codes. Each input file is translated
      *        into each target language.</p>
      *        <p>
-     *        Each language code is two or five characters long. For a list of language codes, see <a
+     *        Each language code is 2 or 5 characters long. For a list of language codes, see <a
      *        href="https://docs.aws.amazon.com/translate/latest/dg/what-is-languages.html">Supported languages</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

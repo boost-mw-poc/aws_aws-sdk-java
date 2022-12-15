@@ -34,6 +34,8 @@ public class DeltaTargetMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ConnectionName").build();
     private static final MarshallingInfo<Boolean> WRITEMANIFEST_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("WriteManifest").build();
+    private static final MarshallingInfo<Boolean> CREATENATIVEDELTATABLE_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CreateNativeDeltaTable").build();
 
     private static final DeltaTargetMarshaller instance = new DeltaTargetMarshaller();
 
@@ -54,6 +56,7 @@ public class DeltaTargetMarshaller {
             protocolMarshaller.marshall(deltaTarget.getDeltaTables(), DELTATABLES_BINDING);
             protocolMarshaller.marshall(deltaTarget.getConnectionName(), CONNECTIONNAME_BINDING);
             protocolMarshaller.marshall(deltaTarget.getWriteManifest(), WRITEMANIFEST_BINDING);
+            protocolMarshaller.marshall(deltaTarget.getCreateNativeDeltaTable(), CREATENATIVEDELTATABLE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

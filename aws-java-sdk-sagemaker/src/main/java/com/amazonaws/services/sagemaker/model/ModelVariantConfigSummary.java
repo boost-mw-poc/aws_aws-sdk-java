@@ -30,7 +30,7 @@ public class ModelVariantConfigSummary implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The name of the model.
+     * The name of the Amazon SageMaker Model entity.
      * </p>
      */
     private String modelName;
@@ -48,18 +48,46 @@ public class ModelVariantConfigSummary implements Serializable, Cloneable, Struc
     private ModelInfrastructureConfig infrastructureConfig;
     /**
      * <p>
-     * The status of the deployment.
+     * The status of deployment for the model variant on the hosted inference endpoint.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>Creating</code> - Amazon SageMaker is preparing the model variant on the hosted inference endpoint.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>InService</code> - The model variant is running on the hosted inference endpoint.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Updating</code> - Amazon SageMaker is updating the model variant on the hosted inference endpoint.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Deleting</code> - Amazon SageMaker is deleting the model variant on the hosted inference endpoint.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Deleted</code> - The model variant has been deleted on the hosted inference endpoint. This can only happen
+     * after stopping the experiment.
+     * </p>
+     * </li>
+     * </ul>
      */
     private String status;
 
     /**
      * <p>
-     * The name of the model.
+     * The name of the Amazon SageMaker Model entity.
      * </p>
      * 
      * @param modelName
-     *        The name of the model.
+     *        The name of the Amazon SageMaker Model entity.
      */
 
     public void setModelName(String modelName) {
@@ -68,10 +96,10 @@ public class ModelVariantConfigSummary implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The name of the model.
+     * The name of the Amazon SageMaker Model entity.
      * </p>
      * 
-     * @return The name of the model.
+     * @return The name of the Amazon SageMaker Model entity.
      */
 
     public String getModelName() {
@@ -80,11 +108,11 @@ public class ModelVariantConfigSummary implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The name of the model.
+     * The name of the Amazon SageMaker Model entity.
      * </p>
      * 
      * @param modelName
-     *        The name of the model.
+     *        The name of the Amazon SageMaker Model entity.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -175,11 +203,66 @@ public class ModelVariantConfigSummary implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The status of the deployment.
+     * The status of deployment for the model variant on the hosted inference endpoint.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>Creating</code> - Amazon SageMaker is preparing the model variant on the hosted inference endpoint.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>InService</code> - The model variant is running on the hosted inference endpoint.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Updating</code> - Amazon SageMaker is updating the model variant on the hosted inference endpoint.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Deleting</code> - Amazon SageMaker is deleting the model variant on the hosted inference endpoint.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Deleted</code> - The model variant has been deleted on the hosted inference endpoint. This can only happen
+     * after stopping the experiment.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param status
-     *        The status of the deployment.
+     *        The status of deployment for the model variant on the hosted inference endpoint.</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>Creating</code> - Amazon SageMaker is preparing the model variant on the hosted inference endpoint.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>InService</code> - The model variant is running on the hosted inference endpoint.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>Updating</code> - Amazon SageMaker is updating the model variant on the hosted inference endpoint.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>Deleting</code> - Amazon SageMaker is deleting the model variant on the hosted inference endpoint.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>Deleted</code> - The model variant has been deleted on the hosted inference endpoint. This can only
+     *        happen after stopping the experiment.
+     *        </p>
+     *        </li>
      * @see ModelVariantStatus
      */
 
@@ -189,10 +272,65 @@ public class ModelVariantConfigSummary implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The status of the deployment.
+     * The status of deployment for the model variant on the hosted inference endpoint.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>Creating</code> - Amazon SageMaker is preparing the model variant on the hosted inference endpoint.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>InService</code> - The model variant is running on the hosted inference endpoint.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Updating</code> - Amazon SageMaker is updating the model variant on the hosted inference endpoint.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Deleting</code> - Amazon SageMaker is deleting the model variant on the hosted inference endpoint.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Deleted</code> - The model variant has been deleted on the hosted inference endpoint. This can only happen
+     * after stopping the experiment.
+     * </p>
+     * </li>
+     * </ul>
      * 
-     * @return The status of the deployment.
+     * @return The status of deployment for the model variant on the hosted inference endpoint.</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>Creating</code> - Amazon SageMaker is preparing the model variant on the hosted inference endpoint.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>InService</code> - The model variant is running on the hosted inference endpoint.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>Updating</code> - Amazon SageMaker is updating the model variant on the hosted inference endpoint.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>Deleting</code> - Amazon SageMaker is deleting the model variant on the hosted inference endpoint.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>Deleted</code> - The model variant has been deleted on the hosted inference endpoint. This can only
+     *         happen after stopping the experiment.
+     *         </p>
+     *         </li>
      * @see ModelVariantStatus
      */
 
@@ -202,11 +340,66 @@ public class ModelVariantConfigSummary implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The status of the deployment.
+     * The status of deployment for the model variant on the hosted inference endpoint.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>Creating</code> - Amazon SageMaker is preparing the model variant on the hosted inference endpoint.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>InService</code> - The model variant is running on the hosted inference endpoint.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Updating</code> - Amazon SageMaker is updating the model variant on the hosted inference endpoint.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Deleting</code> - Amazon SageMaker is deleting the model variant on the hosted inference endpoint.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Deleted</code> - The model variant has been deleted on the hosted inference endpoint. This can only happen
+     * after stopping the experiment.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param status
-     *        The status of the deployment.
+     *        The status of deployment for the model variant on the hosted inference endpoint.</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>Creating</code> - Amazon SageMaker is preparing the model variant on the hosted inference endpoint.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>InService</code> - The model variant is running on the hosted inference endpoint.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>Updating</code> - Amazon SageMaker is updating the model variant on the hosted inference endpoint.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>Deleting</code> - Amazon SageMaker is deleting the model variant on the hosted inference endpoint.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>Deleted</code> - The model variant has been deleted on the hosted inference endpoint. This can only
+     *        happen after stopping the experiment.
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ModelVariantStatus
      */
@@ -218,11 +411,66 @@ public class ModelVariantConfigSummary implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The status of the deployment.
+     * The status of deployment for the model variant on the hosted inference endpoint.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>Creating</code> - Amazon SageMaker is preparing the model variant on the hosted inference endpoint.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>InService</code> - The model variant is running on the hosted inference endpoint.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Updating</code> - Amazon SageMaker is updating the model variant on the hosted inference endpoint.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Deleting</code> - Amazon SageMaker is deleting the model variant on the hosted inference endpoint.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Deleted</code> - The model variant has been deleted on the hosted inference endpoint. This can only happen
+     * after stopping the experiment.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param status
-     *        The status of the deployment.
+     *        The status of deployment for the model variant on the hosted inference endpoint.</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>Creating</code> - Amazon SageMaker is preparing the model variant on the hosted inference endpoint.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>InService</code> - The model variant is running on the hosted inference endpoint.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>Updating</code> - Amazon SageMaker is updating the model variant on the hosted inference endpoint.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>Deleting</code> - Amazon SageMaker is deleting the model variant on the hosted inference endpoint.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>Deleted</code> - The model variant has been deleted on the hosted inference endpoint. This can only
+     *        happen after stopping the experiment.
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ModelVariantStatus
      */

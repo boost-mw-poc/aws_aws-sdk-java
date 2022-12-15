@@ -36,7 +36,8 @@ public class ShadowModelVariantConfig implements Serializable, Cloneable, Struct
     private String shadowModelVariantName;
     /**
      * <p>
-     * The percentage of inference requests that are replicated to the shadow variant.
+     * The percentage of inference requests that Amazon SageMaker replicates from the production variant to the shadow
+     * variant.
      * </p>
      */
     private Integer samplingPercentage;
@@ -83,11 +84,13 @@ public class ShadowModelVariantConfig implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The percentage of inference requests that are replicated to the shadow variant.
+     * The percentage of inference requests that Amazon SageMaker replicates from the production variant to the shadow
+     * variant.
      * </p>
      * 
      * @param samplingPercentage
-     *        The percentage of inference requests that are replicated to the shadow variant.
+     *        The percentage of inference requests that Amazon SageMaker replicates from the production variant to the
+     *        shadow variant.
      */
 
     public void setSamplingPercentage(Integer samplingPercentage) {
@@ -96,10 +99,12 @@ public class ShadowModelVariantConfig implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The percentage of inference requests that are replicated to the shadow variant.
+     * The percentage of inference requests that Amazon SageMaker replicates from the production variant to the shadow
+     * variant.
      * </p>
      * 
-     * @return The percentage of inference requests that are replicated to the shadow variant.
+     * @return The percentage of inference requests that Amazon SageMaker replicates from the production variant to the
+     *         shadow variant.
      */
 
     public Integer getSamplingPercentage() {
@@ -108,11 +113,13 @@ public class ShadowModelVariantConfig implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The percentage of inference requests that are replicated to the shadow variant.
+     * The percentage of inference requests that Amazon SageMaker replicates from the production variant to the shadow
+     * variant.
      * </p>
      * 
      * @param samplingPercentage
-     *        The percentage of inference requests that are replicated to the shadow variant.
+     *        The percentage of inference requests that Amazon SageMaker replicates from the production variant to the
+     *        shadow variant.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

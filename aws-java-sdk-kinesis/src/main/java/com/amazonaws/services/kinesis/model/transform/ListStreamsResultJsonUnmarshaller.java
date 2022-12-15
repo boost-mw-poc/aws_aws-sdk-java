@@ -58,6 +58,16 @@ public class ListStreamsResultJsonUnmarshaller implements Unmarshaller<ListStrea
                     context.nextToken();
                     listStreamsResult.setHasMoreStreams(context.getUnmarshaller(Boolean.class).unmarshall(context));
                 }
+                if (context.testExpression("NextToken", targetDepth)) {
+                    context.nextToken();
+                    listStreamsResult.setNextToken(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("StreamSummaries", targetDepth)) {
+                    context.nextToken();
+                    listStreamsResult.setStreamSummaries(new ListUnmarshaller<StreamSummary>(StreamSummaryJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

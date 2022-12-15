@@ -60,6 +60,10 @@ public class UpdateShardCountResultJsonUnmarshaller implements Unmarshaller<Upda
                     context.nextToken();
                     updateShardCountResult.setTargetShardCount(context.getUnmarshaller(Integer.class).unmarshall(context));
                 }
+                if (context.testExpression("StreamARN", targetDepth)) {
+                    context.nextToken();
+                    updateShardCountResult.setStreamARN(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

@@ -42,7 +42,7 @@ public class DataSetSummary implements Serializable, Cloneable, StructuredPojo {
     private String dataSetName;
     /**
      * <p>
-     * The type of data set. Possible values include VSAM, IS, PS, GDG, PO, PS, or unknown.
+     * The type of data set. The only supported value is VSAM.
      * </p>
      */
     private String dataSetOrg;
@@ -147,11 +147,11 @@ public class DataSetSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type of data set. Possible values include VSAM, IS, PS, GDG, PO, PS, or unknown.
+     * The type of data set. The only supported value is VSAM.
      * </p>
      * 
      * @param dataSetOrg
-     *        The type of data set. Possible values include VSAM, IS, PS, GDG, PO, PS, or unknown.
+     *        The type of data set. The only supported value is VSAM.
      */
 
     public void setDataSetOrg(String dataSetOrg) {
@@ -160,10 +160,10 @@ public class DataSetSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type of data set. Possible values include VSAM, IS, PS, GDG, PO, PS, or unknown.
+     * The type of data set. The only supported value is VSAM.
      * </p>
      * 
-     * @return The type of data set. Possible values include VSAM, IS, PS, GDG, PO, PS, or unknown.
+     * @return The type of data set. The only supported value is VSAM.
      */
 
     public String getDataSetOrg() {
@@ -172,11 +172,11 @@ public class DataSetSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type of data set. Possible values include VSAM, IS, PS, GDG, PO, PS, or unknown.
+     * The type of data set. The only supported value is VSAM.
      * </p>
      * 
      * @param dataSetOrg
-     *        The type of data set. Possible values include VSAM, IS, PS, GDG, PO, PS, or unknown.
+     *        The type of data set. The only supported value is VSAM.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -33,6 +33,8 @@ public class SplitShardRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ShardToSplit").build();
     private static final MarshallingInfo<String> NEWSTARTINGHASHKEY_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("NewStartingHashKey").build();
+    private static final MarshallingInfo<String> STREAMARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("StreamARN").build();
 
     private static final SplitShardRequestMarshaller instance = new SplitShardRequestMarshaller();
 
@@ -53,6 +55,7 @@ public class SplitShardRequestMarshaller {
             protocolMarshaller.marshall(splitShardRequest.getStreamName(), STREAMNAME_BINDING);
             protocolMarshaller.marshall(splitShardRequest.getShardToSplit(), SHARDTOSPLIT_BINDING);
             protocolMarshaller.marshall(splitShardRequest.getNewStartingHashKey(), NEWSTARTINGHASHKEY_BINDING);
+            protocolMarshaller.marshall(splitShardRequest.getStreamARN(), STREAMARN_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

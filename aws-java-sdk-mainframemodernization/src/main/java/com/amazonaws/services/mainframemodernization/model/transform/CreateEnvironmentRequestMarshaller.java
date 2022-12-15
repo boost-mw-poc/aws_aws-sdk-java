@@ -44,6 +44,8 @@ public class CreateEnvironmentRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("highAvailabilityConfig").build();
     private static final MarshallingInfo<String> INSTANCETYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("instanceType").build();
+    private static final MarshallingInfo<String> KMSKEYID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("kmsKeyId").build();
     private static final MarshallingInfo<String> NAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("name").build();
     private static final MarshallingInfo<String> PREFERREDMAINTENANCEWINDOW_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
@@ -81,6 +83,7 @@ public class CreateEnvironmentRequestMarshaller {
             protocolMarshaller.marshall(createEnvironmentRequest.getEngineVersion(), ENGINEVERSION_BINDING);
             protocolMarshaller.marshall(createEnvironmentRequest.getHighAvailabilityConfig(), HIGHAVAILABILITYCONFIG_BINDING);
             protocolMarshaller.marshall(createEnvironmentRequest.getInstanceType(), INSTANCETYPE_BINDING);
+            protocolMarshaller.marshall(createEnvironmentRequest.getKmsKeyId(), KMSKEYID_BINDING);
             protocolMarshaller.marshall(createEnvironmentRequest.getName(), NAME_BINDING);
             protocolMarshaller.marshall(createEnvironmentRequest.getPreferredMaintenanceWindow(), PREFERREDMAINTENANCEWINDOW_BINDING);
             protocolMarshaller.marshall(createEnvironmentRequest.getPubliclyAccessible(), PUBLICLYACCESSIBLE_BINDING);

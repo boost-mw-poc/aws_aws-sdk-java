@@ -30,7 +30,7 @@ public class ModelVariantConfig implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The name of the model.
+     * The name of the Amazon SageMaker Model entity.
      * </p>
      */
     private String modelName;
@@ -49,11 +49,11 @@ public class ModelVariantConfig implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The name of the model.
+     * The name of the Amazon SageMaker Model entity.
      * </p>
      * 
      * @param modelName
-     *        The name of the model.
+     *        The name of the Amazon SageMaker Model entity.
      */
 
     public void setModelName(String modelName) {
@@ -62,10 +62,10 @@ public class ModelVariantConfig implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The name of the model.
+     * The name of the Amazon SageMaker Model entity.
      * </p>
      * 
-     * @return The name of the model.
+     * @return The name of the Amazon SageMaker Model entity.
      */
 
     public String getModelName() {
@@ -74,11 +74,11 @@ public class ModelVariantConfig implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The name of the model.
+     * The name of the Amazon SageMaker Model entity.
      * </p>
      * 
      * @param modelName
-     *        The name of the model.
+     *        The name of the Amazon SageMaker Model entity.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

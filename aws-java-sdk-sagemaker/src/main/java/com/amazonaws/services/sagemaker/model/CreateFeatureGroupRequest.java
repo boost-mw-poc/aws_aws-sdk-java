@@ -153,6 +153,12 @@ public class CreateFeatureGroupRequest extends com.amazonaws.AmazonWebServiceReq
      * can reduce Amazon Web Services KMS requests costs by up to 99 percent.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * Format for the offline store table. Supported formats are Glue (Default) and <a
+     * href="https://iceberg.apache.org/">Apache Iceberg</a>.
+     * </p>
+     * </li>
      * </ul>
      * <p>
      * To learn more about this parameter, see <a>OfflineStoreConfig</a>.
@@ -896,6 +902,12 @@ public class CreateFeatureGroupRequest extends com.amazonaws.AmazonWebServiceReq
      * can reduce Amazon Web Services KMS requests costs by up to 99 percent.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * Format for the offline store table. Supported formats are Glue (Default) and <a
+     * href="https://iceberg.apache.org/">Apache Iceberg</a>.
+     * </p>
+     * </li>
      * </ul>
      * <p>
      * To learn more about this parameter, see <a>OfflineStoreConfig</a>.
@@ -921,6 +933,12 @@ public class CreateFeatureGroupRequest extends com.amazonaws.AmazonWebServiceReq
      *        By defining your <a
      *        href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucket-key.html">bucket-level key</a> for SSE,
      *        you can reduce Amazon Web Services KMS requests costs by up to 99 percent.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Format for the offline store table. Supported formats are Glue (Default) and <a
+     *        href="https://iceberg.apache.org/">Apache Iceberg</a>.
      *        </p>
      *        </li>
      *        </ul>
@@ -955,6 +973,12 @@ public class CreateFeatureGroupRequest extends com.amazonaws.AmazonWebServiceReq
      * can reduce Amazon Web Services KMS requests costs by up to 99 percent.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * Format for the offline store table. Supported formats are Glue (Default) and <a
+     * href="https://iceberg.apache.org/">Apache Iceberg</a>.
+     * </p>
+     * </li>
      * </ul>
      * <p>
      * To learn more about this parameter, see <a>OfflineStoreConfig</a>.
@@ -979,6 +1003,12 @@ public class CreateFeatureGroupRequest extends com.amazonaws.AmazonWebServiceReq
      *         key. By defining your <a
      *         href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucket-key.html">bucket-level key</a> for
      *         SSE, you can reduce Amazon Web Services KMS requests costs by up to 99 percent.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Format for the offline store table. Supported formats are Glue (Default) and <a
+     *         href="https://iceberg.apache.org/">Apache Iceberg</a>.
      *         </p>
      *         </li>
      *         </ul>
@@ -1013,6 +1043,12 @@ public class CreateFeatureGroupRequest extends com.amazonaws.AmazonWebServiceReq
      * can reduce Amazon Web Services KMS requests costs by up to 99 percent.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * Format for the offline store table. Supported formats are Glue (Default) and <a
+     * href="https://iceberg.apache.org/">Apache Iceberg</a>.
+     * </p>
+     * </li>
      * </ul>
      * <p>
      * To learn more about this parameter, see <a>OfflineStoreConfig</a>.
@@ -1038,6 +1074,12 @@ public class CreateFeatureGroupRequest extends com.amazonaws.AmazonWebServiceReq
      *        By defining your <a
      *        href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucket-key.html">bucket-level key</a> for SSE,
      *        you can reduce Amazon Web Services KMS requests costs by up to 99 percent.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Format for the offline store table. Supported formats are Glue (Default) and <a
+     *        href="https://iceberg.apache.org/">Apache Iceberg</a>.
      *        </p>
      *        </li>
      *        </ul>

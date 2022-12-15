@@ -93,6 +93,19 @@ public class AbstractAWSBackupGatewayAsync extends AbstractAWSBackupGateway impl
     }
 
     @Override
+    public java.util.concurrent.Future<GetBandwidthRateLimitScheduleResult> getBandwidthRateLimitScheduleAsync(GetBandwidthRateLimitScheduleRequest request) {
+
+        return getBandwidthRateLimitScheduleAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetBandwidthRateLimitScheduleResult> getBandwidthRateLimitScheduleAsync(GetBandwidthRateLimitScheduleRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetBandwidthRateLimitScheduleRequest, GetBandwidthRateLimitScheduleResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetGatewayResult> getGatewayAsync(GetGatewayRequest request) {
 
         return getGatewayAsync(request, null);
@@ -101,6 +114,32 @@ public class AbstractAWSBackupGatewayAsync extends AbstractAWSBackupGateway impl
     @Override
     public java.util.concurrent.Future<GetGatewayResult> getGatewayAsync(GetGatewayRequest request,
             com.amazonaws.handlers.AsyncHandler<GetGatewayRequest, GetGatewayResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetHypervisorResult> getHypervisorAsync(GetHypervisorRequest request) {
+
+        return getHypervisorAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetHypervisorResult> getHypervisorAsync(GetHypervisorRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetHypervisorRequest, GetHypervisorResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetHypervisorPropertyMappingsResult> getHypervisorPropertyMappingsAsync(GetHypervisorPropertyMappingsRequest request) {
+
+        return getHypervisorPropertyMappingsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetHypervisorPropertyMappingsResult> getHypervisorPropertyMappingsAsync(GetHypervisorPropertyMappingsRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetHypervisorPropertyMappingsRequest, GetHypervisorPropertyMappingsResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -184,6 +223,32 @@ public class AbstractAWSBackupGatewayAsync extends AbstractAWSBackupGateway impl
     }
 
     @Override
+    public java.util.concurrent.Future<PutBandwidthRateLimitScheduleResult> putBandwidthRateLimitScheduleAsync(PutBandwidthRateLimitScheduleRequest request) {
+
+        return putBandwidthRateLimitScheduleAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<PutBandwidthRateLimitScheduleResult> putBandwidthRateLimitScheduleAsync(PutBandwidthRateLimitScheduleRequest request,
+            com.amazonaws.handlers.AsyncHandler<PutBandwidthRateLimitScheduleRequest, PutBandwidthRateLimitScheduleResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<PutHypervisorPropertyMappingsResult> putHypervisorPropertyMappingsAsync(PutHypervisorPropertyMappingsRequest request) {
+
+        return putHypervisorPropertyMappingsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<PutHypervisorPropertyMappingsResult> putHypervisorPropertyMappingsAsync(PutHypervisorPropertyMappingsRequest request,
+            com.amazonaws.handlers.AsyncHandler<PutHypervisorPropertyMappingsRequest, PutHypervisorPropertyMappingsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<PutMaintenanceStartTimeResult> putMaintenanceStartTimeAsync(PutMaintenanceStartTimeRequest request) {
 
         return putMaintenanceStartTimeAsync(request, null);
@@ -192,6 +257,21 @@ public class AbstractAWSBackupGatewayAsync extends AbstractAWSBackupGateway impl
     @Override
     public java.util.concurrent.Future<PutMaintenanceStartTimeResult> putMaintenanceStartTimeAsync(PutMaintenanceStartTimeRequest request,
             com.amazonaws.handlers.AsyncHandler<PutMaintenanceStartTimeRequest, PutMaintenanceStartTimeResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartVirtualMachinesMetadataSyncResult> startVirtualMachinesMetadataSyncAsync(
+            StartVirtualMachinesMetadataSyncRequest request) {
+
+        return startVirtualMachinesMetadataSyncAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartVirtualMachinesMetadataSyncResult> startVirtualMachinesMetadataSyncAsync(
+            StartVirtualMachinesMetadataSyncRequest request,
+            com.amazonaws.handlers.AsyncHandler<StartVirtualMachinesMetadataSyncRequest, StartVirtualMachinesMetadataSyncResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

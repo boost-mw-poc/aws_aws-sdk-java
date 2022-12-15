@@ -64,6 +64,10 @@ public class DisableEnhancedMonitoringResultJsonUnmarshaller implements Unmarsha
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("StreamARN", targetDepth)) {
+                    context.nextToken();
+                    disableEnhancedMonitoringResult.setStreamARN(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

@@ -33,6 +33,8 @@ public class DescribeStreamRequestMarshaller {
             .marshallLocationName("Limit").build();
     private static final MarshallingInfo<String> EXCLUSIVESTARTSHARDID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ExclusiveStartShardId").build();
+    private static final MarshallingInfo<String> STREAMARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("StreamARN").build();
 
     private static final DescribeStreamRequestMarshaller instance = new DescribeStreamRequestMarshaller();
 
@@ -53,6 +55,7 @@ public class DescribeStreamRequestMarshaller {
             protocolMarshaller.marshall(describeStreamRequest.getStreamName(), STREAMNAME_BINDING);
             protocolMarshaller.marshall(describeStreamRequest.getLimit(), LIMIT_BINDING);
             protocolMarshaller.marshall(describeStreamRequest.getExclusiveStartShardId(), EXCLUSIVESTARTSHARDID_BINDING);
+            protocolMarshaller.marshall(describeStreamRequest.getStreamARN(), STREAMARN_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

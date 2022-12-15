@@ -49,7 +49,8 @@ public class EndpointMetadata implements Serializable, Cloneable, StructuredPojo
     private String endpointStatus;
     /**
      * <p>
-     * If the status of the endpoint is <code>Failed</code>, this provides the reason why it failed.
+     * If the status of the endpoint is <code>Failed</code>, or the status is <code>InService</code> but update
+     * operation fails, this provides the reason why it failed.
      * </p>
      */
     private String failureReason;
@@ -203,11 +204,13 @@ public class EndpointMetadata implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * If the status of the endpoint is <code>Failed</code>, this provides the reason why it failed.
+     * If the status of the endpoint is <code>Failed</code>, or the status is <code>InService</code> but update
+     * operation fails, this provides the reason why it failed.
      * </p>
      * 
      * @param failureReason
-     *        If the status of the endpoint is <code>Failed</code>, this provides the reason why it failed.
+     *        If the status of the endpoint is <code>Failed</code>, or the status is <code>InService</code> but update
+     *        operation fails, this provides the reason why it failed.
      */
 
     public void setFailureReason(String failureReason) {
@@ -216,10 +219,12 @@ public class EndpointMetadata implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * If the status of the endpoint is <code>Failed</code>, this provides the reason why it failed.
+     * If the status of the endpoint is <code>Failed</code>, or the status is <code>InService</code> but update
+     * operation fails, this provides the reason why it failed.
      * </p>
      * 
-     * @return If the status of the endpoint is <code>Failed</code>, this provides the reason why it failed.
+     * @return If the status of the endpoint is <code>Failed</code>, or the status is <code>InService</code> but update
+     *         operation fails, this provides the reason why it failed.
      */
 
     public String getFailureReason() {
@@ -228,11 +233,13 @@ public class EndpointMetadata implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * If the status of the endpoint is <code>Failed</code>, this provides the reason why it failed.
+     * If the status of the endpoint is <code>Failed</code>, or the status is <code>InService</code> but update
+     * operation fails, this provides the reason why it failed.
      * </p>
      * 
      * @param failureReason
-     *        If the status of the endpoint is <code>Failed</code>, this provides the reason why it failed.
+     *        If the status of the endpoint is <code>Failed</code>, or the status is <code>InService</code> but update
+     *        operation fails, this provides the reason why it failed.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

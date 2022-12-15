@@ -97,10 +97,9 @@ public class UpdateAddonRequest extends com.amazonaws.AmazonWebServiceRequest im
     private String clientRequestToken;
     /**
      * <p>
-     * The set of configuration values for the add-on being created. Whatever values provided here are validated against
-     * the schema from <a
-     * href="https://docs.aws.amazon.com/eks/latest/APIReference/API_DescribeAddonConfiguration.html">
-     * DescribeAddonConfiguration</a>
+     * The set of configuration values for the add-on that's created. The values that you provide are validated against
+     * the schema in <a href="https://docs.aws.amazon.com/eks/latest/APIReference/API_DescribeAddonConfiguration.html">
+     * DescribeAddonConfiguration</a>.
      * </p>
      */
     private String configurationValues;
@@ -605,17 +604,16 @@ public class UpdateAddonRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The set of configuration values for the add-on being created. Whatever values provided here are validated against
-     * the schema from <a
-     * href="https://docs.aws.amazon.com/eks/latest/APIReference/API_DescribeAddonConfiguration.html">
-     * DescribeAddonConfiguration</a>
+     * The set of configuration values for the add-on that's created. The values that you provide are validated against
+     * the schema in <a href="https://docs.aws.amazon.com/eks/latest/APIReference/API_DescribeAddonConfiguration.html">
+     * DescribeAddonConfiguration</a>.
      * </p>
      * 
      * @param configurationValues
-     *        The set of configuration values for the add-on being created. Whatever values provided here are validated
-     *        against the schema from <a
+     *        The set of configuration values for the add-on that's created. The values that you provide are validated
+     *        against the schema in <a
      *        href="https://docs.aws.amazon.com/eks/latest/APIReference/API_DescribeAddonConfiguration.html"
-     *        >DescribeAddonConfiguration</a>
+     *        >DescribeAddonConfiguration</a>.
      */
 
     public void setConfigurationValues(String configurationValues) {
@@ -624,16 +622,15 @@ public class UpdateAddonRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The set of configuration values for the add-on being created. Whatever values provided here are validated against
-     * the schema from <a
-     * href="https://docs.aws.amazon.com/eks/latest/APIReference/API_DescribeAddonConfiguration.html">
-     * DescribeAddonConfiguration</a>
+     * The set of configuration values for the add-on that's created. The values that you provide are validated against
+     * the schema in <a href="https://docs.aws.amazon.com/eks/latest/APIReference/API_DescribeAddonConfiguration.html">
+     * DescribeAddonConfiguration</a>.
      * </p>
      * 
-     * @return The set of configuration values for the add-on being created. Whatever values provided here are validated
-     *         against the schema from <a
+     * @return The set of configuration values for the add-on that's created. The values that you provide are validated
+     *         against the schema in <a
      *         href="https://docs.aws.amazon.com/eks/latest/APIReference/API_DescribeAddonConfiguration.html"
-     *         >DescribeAddonConfiguration</a>
+     *         >DescribeAddonConfiguration</a>.
      */
 
     public String getConfigurationValues() {
@@ -642,17 +639,16 @@ public class UpdateAddonRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The set of configuration values for the add-on being created. Whatever values provided here are validated against
-     * the schema from <a
-     * href="https://docs.aws.amazon.com/eks/latest/APIReference/API_DescribeAddonConfiguration.html">
-     * DescribeAddonConfiguration</a>
+     * The set of configuration values for the add-on that's created. The values that you provide are validated against
+     * the schema in <a href="https://docs.aws.amazon.com/eks/latest/APIReference/API_DescribeAddonConfiguration.html">
+     * DescribeAddonConfiguration</a>.
      * </p>
      * 
      * @param configurationValues
-     *        The set of configuration values for the add-on being created. Whatever values provided here are validated
-     *        against the schema from <a
+     *        The set of configuration values for the add-on that's created. The values that you provide are validated
+     *        against the schema in <a
      *        href="https://docs.aws.amazon.com/eks/latest/APIReference/API_DescribeAddonConfiguration.html"
-     *        >DescribeAddonConfiguration</a>
+     *        >DescribeAddonConfiguration</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

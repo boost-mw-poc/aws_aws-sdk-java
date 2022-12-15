@@ -72,6 +72,12 @@ public class VirtualMachineDetailsJsonUnmarshaller implements Unmarshaller<Virtu
                     context.nextToken();
                     virtualMachineDetails.setResourceArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("VmwareTags", targetDepth)) {
+                    context.nextToken();
+                    virtualMachineDetails.setVmwareTags(new ListUnmarshaller<VmwareTag>(VmwareTagJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

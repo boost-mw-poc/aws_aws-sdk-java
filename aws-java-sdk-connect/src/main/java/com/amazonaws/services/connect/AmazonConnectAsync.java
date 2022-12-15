@@ -44,12 +44,6 @@ import com.amazonaws.services.connect.model.*;
  * endpoints, see <a href="https://docs.aws.amazon.com/general/latest/gr/connect_region.html">Amazon Connect
  * Endpoints</a>.
  * </p>
- * <note>
- * <p>
- * Working with flows? Check out the <a
- * href="https://docs.aws.amazon.com/connect/latest/adminguide/flow-language.html">Amazon Connect Flow language</a>.
- * </p>
- * </note>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public interface AmazonConnectAsync extends AmazonConnect {
@@ -570,7 +564,8 @@ public interface AmazonConnectAsync extends AmazonConnect {
      * </p>
      * <p>
      * You can also create and update flows using the <a
-     * href="https://docs.aws.amazon.com/connect/latest/adminguide/flow-language.html">Amazon Connect Flow language</a>.
+     * href="https://docs.aws.amazon.com/connect/latest/APIReference/flow-language.html">Amazon Connect Flow
+     * language</a>.
      * </p>
      * 
      * @param createContactFlowRequest
@@ -587,7 +582,8 @@ public interface AmazonConnectAsync extends AmazonConnect {
      * </p>
      * <p>
      * You can also create and update flows using the <a
-     * href="https://docs.aws.amazon.com/connect/latest/adminguide/flow-language.html">Amazon Connect Flow language</a>.
+     * href="https://docs.aws.amazon.com/connect/latest/APIReference/flow-language.html">Amazon Connect Flow
+     * language</a>.
      * </p>
      * 
      * @param createContactFlowRequest
@@ -886,6 +882,10 @@ public interface AmazonConnectAsync extends AmazonConnect {
      * <p>
      * Creates a rule for the specified Amazon Connect instance.
      * </p>
+     * <p>
+     * Use the <a href="https://docs.aws.amazon.com/connect/latest/APIReference/connect-rules-language.html">Rules
+     * Function language</a> to code conditions for the rule.
+     * </p>
      * 
      * @param createRuleRequest
      * @return A Java Future containing the result of the CreateRule operation returned by the service.
@@ -898,6 +898,10 @@ public interface AmazonConnectAsync extends AmazonConnect {
     /**
      * <p>
      * Creates a rule for the specified Amazon Connect instance.
+     * </p>
+     * <p>
+     * Use the <a href="https://docs.aws.amazon.com/connect/latest/APIReference/connect-rules-language.html">Rules
+     * Function language</a> to code conditions for the rule.
      * </p>
      * 
      * @param createRuleRequest
@@ -1758,7 +1762,8 @@ public interface AmazonConnectAsync extends AmazonConnect {
      * </p>
      * <p>
      * You can also create and update flows using the <a
-     * href="https://docs.aws.amazon.com/connect/latest/adminguide/flow-language.html">Amazon Connect Flow language</a>.
+     * href="https://docs.aws.amazon.com/connect/latest/APIReference/flow-language.html">Amazon Connect Flow
+     * language</a>.
      * </p>
      * 
      * @param describeContactFlowRequest
@@ -1775,7 +1780,8 @@ public interface AmazonConnectAsync extends AmazonConnect {
      * </p>
      * <p>
      * You can also create and update flows using the <a
-     * href="https://docs.aws.amazon.com/connect/latest/adminguide/flow-language.html">Amazon Connect Flow language</a>.
+     * href="https://docs.aws.amazon.com/connect/latest/APIReference/flow-language.html">Amazon Connect Flow
+     * language</a>.
      * </p>
      * 
      * @param describeContactFlowRequest
@@ -3178,7 +3184,8 @@ public interface AmazonConnectAsync extends AmazonConnect {
      * </p>
      * <p>
      * You can also create and update flows using the <a
-     * href="https://docs.aws.amazon.com/connect/latest/adminguide/flow-language.html">Amazon Connect Flow language</a>.
+     * href="https://docs.aws.amazon.com/connect/latest/APIReference/flow-language.html">Amazon Connect Flow
+     * language</a>.
      * </p>
      * <p>
      * For more information about flows, see <a
@@ -3200,7 +3207,8 @@ public interface AmazonConnectAsync extends AmazonConnect {
      * </p>
      * <p>
      * You can also create and update flows using the <a
-     * href="https://docs.aws.amazon.com/connect/latest/adminguide/flow-language.html">Amazon Connect Flow language</a>.
+     * href="https://docs.aws.amazon.com/connect/latest/APIReference/flow-language.html">Amazon Connect Flow
+     * language</a>.
      * </p>
      * <p>
      * For more information about flows, see <a
@@ -5544,7 +5552,8 @@ public interface AmazonConnectAsync extends AmazonConnect {
      * </p>
      * <p>
      * You can also create and update flows using the <a
-     * href="https://docs.aws.amazon.com/connect/latest/adminguide/flow-language.html">Amazon Connect Flow language</a>.
+     * href="https://docs.aws.amazon.com/connect/latest/APIReference/flow-language.html">Amazon Connect Flow
+     * language</a>.
      * </p>
      * 
      * @param updateContactFlowContentRequest
@@ -5561,7 +5570,8 @@ public interface AmazonConnectAsync extends AmazonConnect {
      * </p>
      * <p>
      * You can also create and update flows using the <a
-     * href="https://docs.aws.amazon.com/connect/latest/adminguide/flow-language.html">Amazon Connect Flow language</a>.
+     * href="https://docs.aws.amazon.com/connect/latest/APIReference/flow-language.html">Amazon Connect Flow
+     * language</a>.
      * </p>
      * 
      * @param updateContactFlowContentRequest
@@ -5686,7 +5696,8 @@ public interface AmazonConnectAsync extends AmazonConnect {
      * </p>
      * <p>
      * You can also create and update flows using the <a
-     * href="https://docs.aws.amazon.com/connect/latest/adminguide/flow-language.html">Amazon Connect Flow language</a>.
+     * href="https://docs.aws.amazon.com/connect/latest/APIReference/flow-language.html">Amazon Connect Flow
+     * language</a>.
      * </p>
      * 
      * @param updateContactFlowNameRequest
@@ -5703,7 +5714,8 @@ public interface AmazonConnectAsync extends AmazonConnect {
      * </p>
      * <p>
      * You can also create and update flows using the <a
-     * href="https://docs.aws.amazon.com/connect/latest/adminguide/flow-language.html">Amazon Connect Flow language</a>.
+     * href="https://docs.aws.amazon.com/connect/latest/APIReference/flow-language.html">Amazon Connect Flow
+     * language</a>.
      * </p>
      * 
      * @param updateContactFlowNameRequest
@@ -6335,6 +6347,10 @@ public interface AmazonConnectAsync extends AmazonConnect {
      * <p>
      * Updates a rule for the specified Amazon Connect instance.
      * </p>
+     * <p>
+     * Use the <a href="https://docs.aws.amazon.com/connect/latest/APIReference/connect-rules-language.html">Rules
+     * Function language</a> to code conditions for the rule.
+     * </p>
      * 
      * @param updateRuleRequest
      * @return A Java Future containing the result of the UpdateRule operation returned by the service.
@@ -6347,6 +6363,10 @@ public interface AmazonConnectAsync extends AmazonConnect {
     /**
      * <p>
      * Updates a rule for the specified Amazon Connect instance.
+     * </p>
+     * <p>
+     * Use the <a href="https://docs.aws.amazon.com/connect/latest/APIReference/connect-rules-language.html">Rules
+     * Function language</a> to code conditions for the rule.
      * </p>
      * 
      * @param updateRuleRequest

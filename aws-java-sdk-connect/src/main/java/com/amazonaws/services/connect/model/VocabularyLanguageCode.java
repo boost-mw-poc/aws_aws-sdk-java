@@ -40,7 +40,9 @@ public enum VocabularyLanguageCode {
     KoKR("ko-KR"),
     PtBR("pt-BR"),
     PtPT("pt-PT"),
-    ZhCN("zh-CN");
+    ZhCN("zh-CN"),
+    EnNZ("en-NZ"),
+    EnZA("en-ZA");
 
     private String value;
 

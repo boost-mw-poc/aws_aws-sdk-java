@@ -127,6 +127,12 @@ public class RecommendationJobInputConfig implements Serializable, Cloneable, St
      * </p>
      */
     private java.util.List<EndpointInfo> endpoints;
+    /**
+     * <p>
+     * Inference Recommender provisions SageMaker endpoints with access to VPC in the inference recommendation job.
+     * </p>
+     */
+    private RecommendationJobVpcConfig vpcConfig;
 
     /**
      * <p>
@@ -812,6 +818,49 @@ public class RecommendationJobInputConfig implements Serializable, Cloneable, St
     }
 
     /**
+     * <p>
+     * Inference Recommender provisions SageMaker endpoints with access to VPC in the inference recommendation job.
+     * </p>
+     * 
+     * @param vpcConfig
+     *        Inference Recommender provisions SageMaker endpoints with access to VPC in the inference recommendation
+     *        job.
+     */
+
+    public void setVpcConfig(RecommendationJobVpcConfig vpcConfig) {
+        this.vpcConfig = vpcConfig;
+    }
+
+    /**
+     * <p>
+     * Inference Recommender provisions SageMaker endpoints with access to VPC in the inference recommendation job.
+     * </p>
+     * 
+     * @return Inference Recommender provisions SageMaker endpoints with access to VPC in the inference recommendation
+     *         job.
+     */
+
+    public RecommendationJobVpcConfig getVpcConfig() {
+        return this.vpcConfig;
+    }
+
+    /**
+     * <p>
+     * Inference Recommender provisions SageMaker endpoints with access to VPC in the inference recommendation job.
+     * </p>
+     * 
+     * @param vpcConfig
+     *        Inference Recommender provisions SageMaker endpoints with access to VPC in the inference recommendation
+     *        job.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RecommendationJobInputConfig withVpcConfig(RecommendationJobVpcConfig vpcConfig) {
+        setVpcConfig(vpcConfig);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -838,7 +887,9 @@ public class RecommendationJobInputConfig implements Serializable, Cloneable, St
         if (getContainerConfig() != null)
             sb.append("ContainerConfig: ").append(getContainerConfig()).append(",");
         if (getEndpoints() != null)
-            sb.append("Endpoints: ").append(getEndpoints());
+            sb.append("Endpoints: ").append(getEndpoints()).append(",");
+        if (getVpcConfig() != null)
+            sb.append("VpcConfig: ").append(getVpcConfig());
         sb.append("}");
         return sb.toString();
     }
@@ -885,6 +936,10 @@ public class RecommendationJobInputConfig implements Serializable, Cloneable, St
             return false;
         if (other.getEndpoints() != null && other.getEndpoints().equals(this.getEndpoints()) == false)
             return false;
+        if (other.getVpcConfig() == null ^ this.getVpcConfig() == null)
+            return false;
+        if (other.getVpcConfig() != null && other.getVpcConfig().equals(this.getVpcConfig()) == false)
+            return false;
         return true;
     }
 
@@ -901,6 +956,7 @@ public class RecommendationJobInputConfig implements Serializable, Cloneable, St
         hashCode = prime * hashCode + ((getVolumeKmsKeyId() == null) ? 0 : getVolumeKmsKeyId().hashCode());
         hashCode = prime * hashCode + ((getContainerConfig() == null) ? 0 : getContainerConfig().hashCode());
         hashCode = prime * hashCode + ((getEndpoints() == null) ? 0 : getEndpoints().hashCode());
+        hashCode = prime * hashCode + ((getVpcConfig() == null) ? 0 : getVpcConfig().hashCode());
         return hashCode;
     }
 

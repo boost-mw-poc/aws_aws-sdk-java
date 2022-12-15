@@ -37,6 +37,8 @@ public class GetShardIteratorRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("StartingSequenceNumber").build();
     private static final MarshallingInfo<java.util.Date> TIMESTAMP_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Timestamp").timestampFormat("unixTimestampInMillis").build();
+    private static final MarshallingInfo<String> STREAMARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("StreamARN").build();
 
     private static final GetShardIteratorRequestMarshaller instance = new GetShardIteratorRequestMarshaller();
 
@@ -59,6 +61,7 @@ public class GetShardIteratorRequestMarshaller {
             protocolMarshaller.marshall(getShardIteratorRequest.getShardIteratorType(), SHARDITERATORTYPE_BINDING);
             protocolMarshaller.marshall(getShardIteratorRequest.getStartingSequenceNumber(), STARTINGSEQUENCENUMBER_BINDING);
             protocolMarshaller.marshall(getShardIteratorRequest.getTimestamp(), TIMESTAMP_BINDING);
+            protocolMarshaller.marshall(getShardIteratorRequest.getStreamARN(), STREAMARN_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

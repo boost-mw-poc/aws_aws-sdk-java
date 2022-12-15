@@ -123,6 +123,27 @@ public class MapConfiguration implements Serializable, Cloneable, StructuredPojo
      * </p>
      * </note></li>
      * </ul>
+     * <p>
+     * Valid <a href="https://docs.aws.amazon.com/location/latest/developerguide/open-data.html">Open Data (Preview) map
+     * styles</a>:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>VectorOpenDataStandardLight</code> – The Open Data Standard Light (preview) map style provides a detailed
+     * basemap for the world suitable for website and mobile application use. The map includes highways major roads,
+     * minor roads, railways, water features, cities, parks, landmarks, building footprints, and administrative
+     * boundaries.
+     * </p>
+     * <important>
+     * <p>
+     * Open Data maps is in preview. We may add, change, or remove features before announcing general availability. For
+     * more information, see <a
+     * href="https://docs.aws.amazon.com/location/latest/developerguide/open-data.html#open-data-preview">Open Data is
+     * in preview release</a>.
+     * </p>
+     * </important></li>
+     * </ul>
      */
     private String style;
 
@@ -221,6 +242,27 @@ public class MapConfiguration implements Serializable, Cloneable, StructuredPojo
      * </p>
      * </note></li>
      * </ul>
+     * <p>
+     * Valid <a href="https://docs.aws.amazon.com/location/latest/developerguide/open-data.html">Open Data (Preview) map
+     * styles</a>:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>VectorOpenDataStandardLight</code> – The Open Data Standard Light (preview) map style provides a detailed
+     * basemap for the world suitable for website and mobile application use. The map includes highways major roads,
+     * minor roads, railways, water features, cities, parks, landmarks, building footprints, and administrative
+     * boundaries.
+     * </p>
+     * <important>
+     * <p>
+     * Open Data maps is in preview. We may add, change, or remove features before announcing general availability. For
+     * more information, see <a
+     * href="https://docs.aws.amazon.com/location/latest/developerguide/open-data.html#open-data-preview">Open Data is
+     * in preview release</a>.
+     * </p>
+     * </important></li>
+     * </ul>
      * 
      * @param style
      *        Specifies the map style selected from an available data provider.</p>
@@ -318,6 +360,27 @@ public class MapConfiguration implements Serializable, Cloneable, StructuredPojo
      *        tiles retrieved.
      *        </p>
      *        </note></li>
+     *        </ul>
+     *        <p>
+     *        Valid <a href="https://docs.aws.amazon.com/location/latest/developerguide/open-data.html">Open Data
+     *        (Preview) map styles</a>:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>VectorOpenDataStandardLight</code> – The Open Data Standard Light (preview) map style provides a
+     *        detailed basemap for the world suitable for website and mobile application use. The map includes highways
+     *        major roads, minor roads, railways, water features, cities, parks, landmarks, building footprints, and
+     *        administrative boundaries.
+     *        </p>
+     *        <important>
+     *        <p>
+     *        Open Data maps is in preview. We may add, change, or remove features before announcing general
+     *        availability. For more information, see <a
+     *        href="https://docs.aws.amazon.com/location/latest/developerguide/open-data.html#open-data-preview">Open
+     *        Data is in preview release</a>.
+     *        </p>
+     *        </important></li>
      */
 
     public void setStyle(String style) {
@@ -419,6 +482,27 @@ public class MapConfiguration implements Serializable, Cloneable, StructuredPojo
      * </p>
      * </note></li>
      * </ul>
+     * <p>
+     * Valid <a href="https://docs.aws.amazon.com/location/latest/developerguide/open-data.html">Open Data (Preview) map
+     * styles</a>:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>VectorOpenDataStandardLight</code> – The Open Data Standard Light (preview) map style provides a detailed
+     * basemap for the world suitable for website and mobile application use. The map includes highways major roads,
+     * minor roads, railways, water features, cities, parks, landmarks, building footprints, and administrative
+     * boundaries.
+     * </p>
+     * <important>
+     * <p>
+     * Open Data maps is in preview. We may add, change, or remove features before announcing general availability. For
+     * more information, see <a
+     * href="https://docs.aws.amazon.com/location/latest/developerguide/open-data.html#open-data-preview">Open Data is
+     * in preview release</a>.
+     * </p>
+     * </important></li>
+     * </ul>
      * 
      * @return Specifies the map style selected from an available data provider.</p>
      *         <p>
@@ -515,6 +599,27 @@ public class MapConfiguration implements Serializable, Cloneable, StructuredPojo
      *         tiles retrieved.
      *         </p>
      *         </note></li>
+     *         </ul>
+     *         <p>
+     *         Valid <a href="https://docs.aws.amazon.com/location/latest/developerguide/open-data.html">Open Data
+     *         (Preview) map styles</a>:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>VectorOpenDataStandardLight</code> – The Open Data Standard Light (preview) map style provides a
+     *         detailed basemap for the world suitable for website and mobile application use. The map includes highways
+     *         major roads, minor roads, railways, water features, cities, parks, landmarks, building footprints, and
+     *         administrative boundaries.
+     *         </p>
+     *         <important>
+     *         <p>
+     *         Open Data maps is in preview. We may add, change, or remove features before announcing general
+     *         availability. For more information, see <a
+     *         href="https://docs.aws.amazon.com/location/latest/developerguide/open-data.html#open-data-preview">Open
+     *         Data is in preview release</a>.
+     *         </p>
+     *         </important></li>
      */
 
     public String getStyle() {
@@ -616,6 +721,27 @@ public class MapConfiguration implements Serializable, Cloneable, StructuredPojo
      * </p>
      * </note></li>
      * </ul>
+     * <p>
+     * Valid <a href="https://docs.aws.amazon.com/location/latest/developerguide/open-data.html">Open Data (Preview) map
+     * styles</a>:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>VectorOpenDataStandardLight</code> – The Open Data Standard Light (preview) map style provides a detailed
+     * basemap for the world suitable for website and mobile application use. The map includes highways major roads,
+     * minor roads, railways, water features, cities, parks, landmarks, building footprints, and administrative
+     * boundaries.
+     * </p>
+     * <important>
+     * <p>
+     * Open Data maps is in preview. We may add, change, or remove features before announcing general availability. For
+     * more information, see <a
+     * href="https://docs.aws.amazon.com/location/latest/developerguide/open-data.html#open-data-preview">Open Data is
+     * in preview release</a>.
+     * </p>
+     * </important></li>
+     * </ul>
      * 
      * @param style
      *        Specifies the map style selected from an available data provider.</p>
@@ -713,6 +839,27 @@ public class MapConfiguration implements Serializable, Cloneable, StructuredPojo
      *        tiles retrieved.
      *        </p>
      *        </note></li>
+     *        </ul>
+     *        <p>
+     *        Valid <a href="https://docs.aws.amazon.com/location/latest/developerguide/open-data.html">Open Data
+     *        (Preview) map styles</a>:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>VectorOpenDataStandardLight</code> – The Open Data Standard Light (preview) map style provides a
+     *        detailed basemap for the world suitable for website and mobile application use. The map includes highways
+     *        major roads, minor roads, railways, water features, cities, parks, landmarks, building footprints, and
+     *        administrative boundaries.
+     *        </p>
+     *        <important>
+     *        <p>
+     *        Open Data maps is in preview. We may add, change, or remove features before announcing general
+     *        availability. For more information, see <a
+     *        href="https://docs.aws.amazon.com/location/latest/developerguide/open-data.html#open-data-preview">Open
+     *        Data is in preview release</a>.
+     *        </p>
+     *        </important></li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
