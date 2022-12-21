@@ -108,6 +108,8 @@ public class WorkflowStep implements Serializable, Cloneable, StructuredPojo {
      */
     private TagStepDetails tagStepDetails;
 
+    private DecryptStepDetails decryptStepDetails;
+
     /**
      * <p>
      * Currently, the following step types are supported.
@@ -653,6 +655,32 @@ public class WorkflowStep implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * @param decryptStepDetails
+     */
+
+    public void setDecryptStepDetails(DecryptStepDetails decryptStepDetails) {
+        this.decryptStepDetails = decryptStepDetails;
+    }
+
+    /**
+     * @return
+     */
+
+    public DecryptStepDetails getDecryptStepDetails() {
+        return this.decryptStepDetails;
+    }
+
+    /**
+     * @param decryptStepDetails
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public WorkflowStep withDecryptStepDetails(DecryptStepDetails decryptStepDetails) {
+        setDecryptStepDetails(decryptStepDetails);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -673,7 +701,9 @@ public class WorkflowStep implements Serializable, Cloneable, StructuredPojo {
         if (getDeleteStepDetails() != null)
             sb.append("DeleteStepDetails: ").append(getDeleteStepDetails()).append(",");
         if (getTagStepDetails() != null)
-            sb.append("TagStepDetails: ").append(getTagStepDetails());
+            sb.append("TagStepDetails: ").append(getTagStepDetails()).append(",");
+        if (getDecryptStepDetails() != null)
+            sb.append("DecryptStepDetails: ").append(getDecryptStepDetails());
         sb.append("}");
         return sb.toString();
     }
@@ -708,6 +738,10 @@ public class WorkflowStep implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getTagStepDetails() != null && other.getTagStepDetails().equals(this.getTagStepDetails()) == false)
             return false;
+        if (other.getDecryptStepDetails() == null ^ this.getDecryptStepDetails() == null)
+            return false;
+        if (other.getDecryptStepDetails() != null && other.getDecryptStepDetails().equals(this.getDecryptStepDetails()) == false)
+            return false;
         return true;
     }
 
@@ -721,6 +755,7 @@ public class WorkflowStep implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getCustomStepDetails() == null) ? 0 : getCustomStepDetails().hashCode());
         hashCode = prime * hashCode + ((getDeleteStepDetails() == null) ? 0 : getDeleteStepDetails().hashCode());
         hashCode = prime * hashCode + ((getTagStepDetails() == null) ? 0 : getTagStepDetails().hashCode());
+        hashCode = prime * hashCode + ((getDecryptStepDetails() == null) ? 0 : getDecryptStepDetails().hashCode());
         return hashCode;
     }
 

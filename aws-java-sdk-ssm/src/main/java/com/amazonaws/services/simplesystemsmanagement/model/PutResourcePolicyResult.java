@@ -31,8 +31,7 @@ public class PutResourcePolicyResult extends com.amazonaws.AmazonWebServiceResul
     private String policyId;
     /**
      * <p>
-     * ID of the current policy version. The hash helps to prevent a situation where multiple users attempt to overwrite
-     * a policy. You must provide this hash when updating or deleting a policy.
+     * ID of the current policy version.
      * </p>
      */
     private String policyHash;
@@ -79,13 +78,11 @@ public class PutResourcePolicyResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * ID of the current policy version. The hash helps to prevent a situation where multiple users attempt to overwrite
-     * a policy. You must provide this hash when updating or deleting a policy.
+     * ID of the current policy version.
      * </p>
      * 
      * @param policyHash
-     *        ID of the current policy version. The hash helps to prevent a situation where multiple users attempt to
-     *        overwrite a policy. You must provide this hash when updating or deleting a policy.
+     *        ID of the current policy version.
      */
 
     public void setPolicyHash(String policyHash) {
@@ -94,12 +91,10 @@ public class PutResourcePolicyResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * ID of the current policy version. The hash helps to prevent a situation where multiple users attempt to overwrite
-     * a policy. You must provide this hash when updating or deleting a policy.
+     * ID of the current policy version.
      * </p>
      * 
-     * @return ID of the current policy version. The hash helps to prevent a situation where multiple users attempt to
-     *         overwrite a policy. You must provide this hash when updating or deleting a policy.
+     * @return ID of the current policy version.
      */
 
     public String getPolicyHash() {
@@ -108,13 +103,11 @@ public class PutResourcePolicyResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * ID of the current policy version. The hash helps to prevent a situation where multiple users attempt to overwrite
-     * a policy. You must provide this hash when updating or deleting a policy.
+     * ID of the current policy version.
      * </p>
      * 
      * @param policyHash
-     *        ID of the current policy version. The hash helps to prevent a situation where multiple users attempt to
-     *        overwrite a policy. You must provide this hash when updating or deleting a policy.
+     *        ID of the current policy version.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

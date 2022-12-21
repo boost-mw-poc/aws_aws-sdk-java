@@ -274,7 +274,7 @@ public class DescribedServer implements Serializable, Cloneable, StructuredPojo 
      * workflow.
      * </p>
      * <p>
-     * In addition to a workflow to execute when a file is uploaded completely, <code>WorkflowDetails</code> can also
+     * In additon to a workflow to execute when a file is uploaded completely, <code>WorkflowDeatails</code> can also
      * contain a workflow ID (and execution role) for a workflow to execute on partial upload. A partial upload occurs
      * when a file is open when the session disconnects.
      * </p>
@@ -2226,7 +2226,7 @@ public class DescribedServer implements Serializable, Cloneable, StructuredPojo 
      * workflow.
      * </p>
      * <p>
-     * In addition to a workflow to execute when a file is uploaded completely, <code>WorkflowDetails</code> can also
+     * In additon to a workflow to execute when a file is uploaded completely, <code>WorkflowDeatails</code> can also
      * contain a workflow ID (and execution role) for a workflow to execute on partial upload. A partial upload occurs
      * when a file is open when the session disconnects.
      * </p>
@@ -2235,7 +2235,7 @@ public class DescribedServer implements Serializable, Cloneable, StructuredPojo 
      *        Specifies the workflow ID for the workflow to assign and the execution role that's used for executing the
      *        workflow.</p>
      *        <p>
-     *        In addition to a workflow to execute when a file is uploaded completely, <code>WorkflowDetails</code> can
+     *        In additon to a workflow to execute when a file is uploaded completely, <code>WorkflowDeatails</code> can
      *        also contain a workflow ID (and execution role) for a workflow to execute on partial upload. A partial
      *        upload occurs when a file is open when the session disconnects.
      */
@@ -2250,7 +2250,7 @@ public class DescribedServer implements Serializable, Cloneable, StructuredPojo 
      * workflow.
      * </p>
      * <p>
-     * In addition to a workflow to execute when a file is uploaded completely, <code>WorkflowDetails</code> can also
+     * In additon to a workflow to execute when a file is uploaded completely, <code>WorkflowDeatails</code> can also
      * contain a workflow ID (and execution role) for a workflow to execute on partial upload. A partial upload occurs
      * when a file is open when the session disconnects.
      * </p>
@@ -2258,7 +2258,7 @@ public class DescribedServer implements Serializable, Cloneable, StructuredPojo 
      * @return Specifies the workflow ID for the workflow to assign and the execution role that's used for executing the
      *         workflow.</p>
      *         <p>
-     *         In addition to a workflow to execute when a file is uploaded completely, <code>WorkflowDetails</code> can
+     *         In additon to a workflow to execute when a file is uploaded completely, <code>WorkflowDeatails</code> can
      *         also contain a workflow ID (and execution role) for a workflow to execute on partial upload. A partial
      *         upload occurs when a file is open when the session disconnects.
      */
@@ -2273,7 +2273,7 @@ public class DescribedServer implements Serializable, Cloneable, StructuredPojo 
      * workflow.
      * </p>
      * <p>
-     * In addition to a workflow to execute when a file is uploaded completely, <code>WorkflowDetails</code> can also
+     * In additon to a workflow to execute when a file is uploaded completely, <code>WorkflowDeatails</code> can also
      * contain a workflow ID (and execution role) for a workflow to execute on partial upload. A partial upload occurs
      * when a file is open when the session disconnects.
      * </p>
@@ -2282,7 +2282,7 @@ public class DescribedServer implements Serializable, Cloneable, StructuredPojo 
      *        Specifies the workflow ID for the workflow to assign and the execution role that's used for executing the
      *        workflow.</p>
      *        <p>
-     *        In addition to a workflow to execute when a file is uploaded completely, <code>WorkflowDetails</code> can
+     *        In additon to a workflow to execute when a file is uploaded completely, <code>WorkflowDeatails</code> can
      *        also contain a workflow ID (and execution role) for a workflow to execute on partial upload. A partial
      *        upload occurs when a file is open when the session disconnects.
      * @return Returns a reference to this object so that method calls can be chained together.

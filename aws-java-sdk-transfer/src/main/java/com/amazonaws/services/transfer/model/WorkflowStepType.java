@@ -23,7 +23,8 @@ public enum WorkflowStepType {
     COPY("COPY"),
     CUSTOM("CUSTOM"),
     TAG("TAG"),
-    DELETE("DELETE");
+    DELETE("DELETE"),
+    DECRYPT("DECRYPT");
 
     private String value;
 

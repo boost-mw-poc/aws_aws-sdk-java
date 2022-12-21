@@ -56,6 +56,14 @@ public class RStudioServerProDomainSettingsForUpdateJsonUnmarshaller implements 
                     context.nextToken();
                     rStudioServerProDomainSettingsForUpdate.setDefaultResourceSpec(ResourceSpecJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("RStudioConnectUrl", targetDepth)) {
+                    context.nextToken();
+                    rStudioServerProDomainSettingsForUpdate.setRStudioConnectUrl(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("RStudioPackageManagerUrl", targetDepth)) {
+                    context.nextToken();
+                    rStudioServerProDomainSettingsForUpdate.setRStudioPackageManagerUrl(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

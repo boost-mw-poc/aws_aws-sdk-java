@@ -57,12 +57,6 @@ public class As2ConnectorConfig implements Serializable, Cloneable, StructuredPo
      * <p>
      * The algorithm that is used to encrypt the file.
      * </p>
-     * <note>
-     * <p>
-     * You can only specify <code>NONE</code> if the URL for your connector uses HTTPS. This ensures that no traffic is
-     * sent in clear text.
-     * </p>
-     * </note>
      */
     private String encryptionAlgorithm;
     /**
@@ -77,7 +71,7 @@ public class As2ConnectorConfig implements Serializable, Cloneable, StructuredPo
      * </p>
      * <note>
      * <p>
-     * If set to DEFAULT (or not set at all), the value for <code>SigningAlgorithm</code> is used.
+     * If set to DEFAULT (or not set at all), the value for <code>SigningAlogorithm</code> is used.
      * </p>
      * </note>
      */
@@ -289,19 +283,9 @@ public class As2ConnectorConfig implements Serializable, Cloneable, StructuredPo
      * <p>
      * The algorithm that is used to encrypt the file.
      * </p>
-     * <note>
-     * <p>
-     * You can only specify <code>NONE</code> if the URL for your connector uses HTTPS. This ensures that no traffic is
-     * sent in clear text.
-     * </p>
-     * </note>
      * 
      * @param encryptionAlgorithm
-     *        The algorithm that is used to encrypt the file.</p> <note>
-     *        <p>
-     *        You can only specify <code>NONE</code> if the URL for your connector uses HTTPS. This ensures that no
-     *        traffic is sent in clear text.
-     *        </p>
+     *        The algorithm that is used to encrypt the file.
      * @see EncryptionAlg
      */
 
@@ -313,18 +297,8 @@ public class As2ConnectorConfig implements Serializable, Cloneable, StructuredPo
      * <p>
      * The algorithm that is used to encrypt the file.
      * </p>
-     * <note>
-     * <p>
-     * You can only specify <code>NONE</code> if the URL for your connector uses HTTPS. This ensures that no traffic is
-     * sent in clear text.
-     * </p>
-     * </note>
      * 
-     * @return The algorithm that is used to encrypt the file.</p> <note>
-     *         <p>
-     *         You can only specify <code>NONE</code> if the URL for your connector uses HTTPS. This ensures that no
-     *         traffic is sent in clear text.
-     *         </p>
+     * @return The algorithm that is used to encrypt the file.
      * @see EncryptionAlg
      */
 
@@ -336,19 +310,9 @@ public class As2ConnectorConfig implements Serializable, Cloneable, StructuredPo
      * <p>
      * The algorithm that is used to encrypt the file.
      * </p>
-     * <note>
-     * <p>
-     * You can only specify <code>NONE</code> if the URL for your connector uses HTTPS. This ensures that no traffic is
-     * sent in clear text.
-     * </p>
-     * </note>
      * 
      * @param encryptionAlgorithm
-     *        The algorithm that is used to encrypt the file.</p> <note>
-     *        <p>
-     *        You can only specify <code>NONE</code> if the URL for your connector uses HTTPS. This ensures that no
-     *        traffic is sent in clear text.
-     *        </p>
+     *        The algorithm that is used to encrypt the file.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see EncryptionAlg
      */
@@ -362,19 +326,9 @@ public class As2ConnectorConfig implements Serializable, Cloneable, StructuredPo
      * <p>
      * The algorithm that is used to encrypt the file.
      * </p>
-     * <note>
-     * <p>
-     * You can only specify <code>NONE</code> if the URL for your connector uses HTTPS. This ensures that no traffic is
-     * sent in clear text.
-     * </p>
-     * </note>
      * 
      * @param encryptionAlgorithm
-     *        The algorithm that is used to encrypt the file.</p> <note>
-     *        <p>
-     *        You can only specify <code>NONE</code> if the URL for your connector uses HTTPS. This ensures that no
-     *        traffic is sent in clear text.
-     *        </p>
+     *        The algorithm that is used to encrypt the file.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see EncryptionAlg
      */
@@ -449,14 +403,14 @@ public class As2ConnectorConfig implements Serializable, Cloneable, StructuredPo
      * </p>
      * <note>
      * <p>
-     * If set to DEFAULT (or not set at all), the value for <code>SigningAlgorithm</code> is used.
+     * If set to DEFAULT (or not set at all), the value for <code>SigningAlogorithm</code> is used.
      * </p>
      * </note>
      * 
      * @param mdnSigningAlgorithm
      *        The signing algorithm for the MDN response.</p> <note>
      *        <p>
-     *        If set to DEFAULT (or not set at all), the value for <code>SigningAlgorithm</code> is used.
+     *        If set to DEFAULT (or not set at all), the value for <code>SigningAlogorithm</code> is used.
      *        </p>
      * @see MdnSigningAlg
      */
@@ -471,13 +425,13 @@ public class As2ConnectorConfig implements Serializable, Cloneable, StructuredPo
      * </p>
      * <note>
      * <p>
-     * If set to DEFAULT (or not set at all), the value for <code>SigningAlgorithm</code> is used.
+     * If set to DEFAULT (or not set at all), the value for <code>SigningAlogorithm</code> is used.
      * </p>
      * </note>
      * 
      * @return The signing algorithm for the MDN response.</p> <note>
      *         <p>
-     *         If set to DEFAULT (or not set at all), the value for <code>SigningAlgorithm</code> is used.
+     *         If set to DEFAULT (or not set at all), the value for <code>SigningAlogorithm</code> is used.
      *         </p>
      * @see MdnSigningAlg
      */
@@ -492,14 +446,14 @@ public class As2ConnectorConfig implements Serializable, Cloneable, StructuredPo
      * </p>
      * <note>
      * <p>
-     * If set to DEFAULT (or not set at all), the value for <code>SigningAlgorithm</code> is used.
+     * If set to DEFAULT (or not set at all), the value for <code>SigningAlogorithm</code> is used.
      * </p>
      * </note>
      * 
      * @param mdnSigningAlgorithm
      *        The signing algorithm for the MDN response.</p> <note>
      *        <p>
-     *        If set to DEFAULT (or not set at all), the value for <code>SigningAlgorithm</code> is used.
+     *        If set to DEFAULT (or not set at all), the value for <code>SigningAlogorithm</code> is used.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see MdnSigningAlg
@@ -516,14 +470,14 @@ public class As2ConnectorConfig implements Serializable, Cloneable, StructuredPo
      * </p>
      * <note>
      * <p>
-     * If set to DEFAULT (or not set at all), the value for <code>SigningAlgorithm</code> is used.
+     * If set to DEFAULT (or not set at all), the value for <code>SigningAlogorithm</code> is used.
      * </p>
      * </note>
      * 
      * @param mdnSigningAlgorithm
      *        The signing algorithm for the MDN response.</p> <note>
      *        <p>
-     *        If set to DEFAULT (or not set at all), the value for <code>SigningAlgorithm</code> is used.
+     *        If set to DEFAULT (or not set at all), the value for <code>SigningAlogorithm</code> is used.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see MdnSigningAlg

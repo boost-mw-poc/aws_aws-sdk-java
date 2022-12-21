@@ -31,6 +31,10 @@ public class RStudioServerProDomainSettingsForUpdateMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DomainExecutionRoleArn").build();
     private static final MarshallingInfo<StructuredPojo> DEFAULTRESOURCESPEC_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DefaultResourceSpec").build();
+    private static final MarshallingInfo<String> RSTUDIOCONNECTURL_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("RStudioConnectUrl").build();
+    private static final MarshallingInfo<String> RSTUDIOPACKAGEMANAGERURL_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("RStudioPackageManagerUrl").build();
 
     private static final RStudioServerProDomainSettingsForUpdateMarshaller instance = new RStudioServerProDomainSettingsForUpdateMarshaller();
 
@@ -50,6 +54,8 @@ public class RStudioServerProDomainSettingsForUpdateMarshaller {
         try {
             protocolMarshaller.marshall(rStudioServerProDomainSettingsForUpdate.getDomainExecutionRoleArn(), DOMAINEXECUTIONROLEARN_BINDING);
             protocolMarshaller.marshall(rStudioServerProDomainSettingsForUpdate.getDefaultResourceSpec(), DEFAULTRESOURCESPEC_BINDING);
+            protocolMarshaller.marshall(rStudioServerProDomainSettingsForUpdate.getRStudioConnectUrl(), RSTUDIOCONNECTURL_BINDING);
+            protocolMarshaller.marshall(rStudioServerProDomainSettingsForUpdate.getRStudioPackageManagerUrl(), RSTUDIOPACKAGEMANAGERURL_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

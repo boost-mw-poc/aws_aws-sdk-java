@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.amazonaws</groupId>
   <artifactId>aws-java-sdk-pom</artifactId>
-  <version>1.12.370-SNAPSHOT</version>
+  <version>1.12.370</version>
   <packaging>pom</packaging>
   <name>AWS SDK for Java</name>
   <description>The Amazon Web Services SDK for Java provides Java APIs
@@ -33,6 +33,7 @@
   </developers>
   <!-- The module section in pom.xml is auto generated. No manual changes are allowed -->
   <modules>
+    <module>aws-java-sdk-licensemanagerlinuxsubscriptions</module>
     <module>aws-java-sdk-kinesisvideowebrtcstorage</module>
     <module>aws-java-sdk-sagemakermetrics</module>
     <module>aws-java-sdk-pipes</module>
@@ -409,7 +410,6 @@
       <unitils.version>3.3</unitils.version>
       <!-- Netty is used by Kinesis Video -->
       <netty.version>4.1.86.Final</netty.version>
-      <netty.version>4.1.86.Final</netty.version>
       <versions-maven-plugin.version>2.13.0</versions-maven-plugin.version>
   </properties>
   <dependencyManagement>
@@ -467,6 +467,12 @@
             </includes>
           </configuration>
         </plugin>
+        <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>versions-maven-plugin</artifactId>
+          <version>${versions-maven-plugin.version}</version>
+        </plugin>
+
       </plugins>
     </pluginManagement>
   </build>

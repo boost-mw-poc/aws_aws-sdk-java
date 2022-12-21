@@ -57,6 +57,12 @@ public class DomainSettingsForUpdateJsonUnmarshaller implements Unmarshaller<Dom
                     context.nextToken();
                     domainSettingsForUpdate.setExecutionRoleIdentityConfig(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("SecurityGroupIds", targetDepth)) {
+                    context.nextToken();
+                    domainSettingsForUpdate.setSecurityGroupIds(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

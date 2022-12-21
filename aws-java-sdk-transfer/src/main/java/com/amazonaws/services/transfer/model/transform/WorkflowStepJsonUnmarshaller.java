@@ -68,6 +68,10 @@ public class WorkflowStepJsonUnmarshaller implements Unmarshaller<WorkflowStep, 
                     context.nextToken();
                     workflowStep.setTagStepDetails(TagStepDetailsJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("DecryptStepDetails", targetDepth)) {
+                    context.nextToken();
+                    workflowStep.setDecryptStepDetails(DecryptStepDetailsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

@@ -27,7 +27,7 @@ public class PutResourcePolicyRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * Amazon Resource Name (ARN) of the resource to which the policies are attached.
+     * Amazon Resource Name (ARN) of the resource to which you want to attach a policy.
      * </p>
      */
     private String resourceArn;
@@ -46,18 +46,18 @@ public class PutResourcePolicyRequest extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * ID of the current policy version. The hash helps to prevent a situation where multiple users attempt to overwrite
-     * a policy.
+     * a policy. You must provide this hash when updating or deleting a policy.
      * </p>
      */
     private String policyHash;
 
     /**
      * <p>
-     * Amazon Resource Name (ARN) of the resource to which the policies are attached.
+     * Amazon Resource Name (ARN) of the resource to which you want to attach a policy.
      * </p>
      * 
      * @param resourceArn
-     *        Amazon Resource Name (ARN) of the resource to which the policies are attached.
+     *        Amazon Resource Name (ARN) of the resource to which you want to attach a policy.
      */
 
     public void setResourceArn(String resourceArn) {
@@ -66,10 +66,10 @@ public class PutResourcePolicyRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * Amazon Resource Name (ARN) of the resource to which the policies are attached.
+     * Amazon Resource Name (ARN) of the resource to which you want to attach a policy.
      * </p>
      * 
-     * @return Amazon Resource Name (ARN) of the resource to which the policies are attached.
+     * @return Amazon Resource Name (ARN) of the resource to which you want to attach a policy.
      */
 
     public String getResourceArn() {
@@ -78,11 +78,11 @@ public class PutResourcePolicyRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * Amazon Resource Name (ARN) of the resource to which the policies are attached.
+     * Amazon Resource Name (ARN) of the resource to which you want to attach a policy.
      * </p>
      * 
      * @param resourceArn
-     *        Amazon Resource Name (ARN) of the resource to which the policies are attached.
+     *        Amazon Resource Name (ARN) of the resource to which you want to attach a policy.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -174,12 +174,12 @@ public class PutResourcePolicyRequest extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * ID of the current policy version. The hash helps to prevent a situation where multiple users attempt to overwrite
-     * a policy.
+     * a policy. You must provide this hash when updating or deleting a policy.
      * </p>
      * 
      * @param policyHash
      *        ID of the current policy version. The hash helps to prevent a situation where multiple users attempt to
-     *        overwrite a policy.
+     *        overwrite a policy. You must provide this hash when updating or deleting a policy.
      */
 
     public void setPolicyHash(String policyHash) {
@@ -189,11 +189,11 @@ public class PutResourcePolicyRequest extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * ID of the current policy version. The hash helps to prevent a situation where multiple users attempt to overwrite
-     * a policy.
+     * a policy. You must provide this hash when updating or deleting a policy.
      * </p>
      * 
      * @return ID of the current policy version. The hash helps to prevent a situation where multiple users attempt to
-     *         overwrite a policy.
+     *         overwrite a policy. You must provide this hash when updating or deleting a policy.
      */
 
     public String getPolicyHash() {
@@ -203,12 +203,12 @@ public class PutResourcePolicyRequest extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * ID of the current policy version. The hash helps to prevent a situation where multiple users attempt to overwrite
-     * a policy.
+     * a policy. You must provide this hash when updating or deleting a policy.
      * </p>
      * 
      * @param policyHash
      *        ID of the current policy version. The hash helps to prevent a situation where multiple users attempt to
-     *        overwrite a policy.
+     *        overwrite a policy. You must provide this hash when updating or deleting a policy.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

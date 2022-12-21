@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.sagemaker.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -31,6 +32,8 @@ public class DomainSettingsForUpdateMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("RStudioServerProDomainSettingsForUpdate").build();
     private static final MarshallingInfo<String> EXECUTIONROLEIDENTITYCONFIG_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ExecutionRoleIdentityConfig").build();
+    private static final MarshallingInfo<List> SECURITYGROUPIDS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SecurityGroupIds").build();
 
     private static final DomainSettingsForUpdateMarshaller instance = new DomainSettingsForUpdateMarshaller();
 
@@ -50,6 +53,7 @@ public class DomainSettingsForUpdateMarshaller {
         try {
             protocolMarshaller.marshall(domainSettingsForUpdate.getRStudioServerProDomainSettingsForUpdate(), RSTUDIOSERVERPRODOMAINSETTINGSFORUPDATE_BINDING);
             protocolMarshaller.marshall(domainSettingsForUpdate.getExecutionRoleIdentityConfig(), EXECUTIONROLEIDENTITYCONFIG_BINDING);
+            protocolMarshaller.marshall(domainSettingsForUpdate.getSecurityGroupIds(), SECURITYGROUPIDS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

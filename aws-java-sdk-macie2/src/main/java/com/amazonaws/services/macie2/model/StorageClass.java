@@ -28,7 +28,9 @@ public enum StorageClass {
     INTELLIGENT_TIERING("INTELLIGENT_TIERING"),
     DEEP_ARCHIVE("DEEP_ARCHIVE"),
     ONEZONE_IA("ONEZONE_IA"),
-    GLACIER("GLACIER");
+    GLACIER("GLACIER"),
+    GLACIER_IR("GLACIER_IR"),
+    OUTPOSTS("OUTPOSTS");
 
     private String value;
 
