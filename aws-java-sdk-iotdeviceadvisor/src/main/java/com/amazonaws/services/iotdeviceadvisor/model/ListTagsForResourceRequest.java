@@ -27,18 +27,18 @@ public class ListTagsForResourceRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The ARN of the IoT Device Advisor resource.
+     * The resource ARN of the IoT Device Advisor resource. This can be SuiteDefinition ARN or SuiteRun ARN.
      * </p>
      */
     private String resourceArn;
 
     /**
      * <p>
-     * The ARN of the IoT Device Advisor resource.
+     * The resource ARN of the IoT Device Advisor resource. This can be SuiteDefinition ARN or SuiteRun ARN.
      * </p>
      * 
      * @param resourceArn
-     *        The ARN of the IoT Device Advisor resource.
+     *        The resource ARN of the IoT Device Advisor resource. This can be SuiteDefinition ARN or SuiteRun ARN.
      */
 
     public void setResourceArn(String resourceArn) {
@@ -47,10 +47,10 @@ public class ListTagsForResourceRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The ARN of the IoT Device Advisor resource.
+     * The resource ARN of the IoT Device Advisor resource. This can be SuiteDefinition ARN or SuiteRun ARN.
      * </p>
      * 
-     * @return The ARN of the IoT Device Advisor resource.
+     * @return The resource ARN of the IoT Device Advisor resource. This can be SuiteDefinition ARN or SuiteRun ARN.
      */
 
     public String getResourceArn() {
@@ -59,11 +59,11 @@ public class ListTagsForResourceRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The ARN of the IoT Device Advisor resource.
+     * The resource ARN of the IoT Device Advisor resource. This can be SuiteDefinition ARN or SuiteRun ARN.
      * </p>
      * 
      * @param resourceArn
-     *        The ARN of the IoT Device Advisor resource.
+     *        The resource ARN of the IoT Device Advisor resource. This can be SuiteDefinition ARN or SuiteRun ARN.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -15,20 +15,9 @@ package com.amazonaws.services.kinesisvideowebrtcstorage.model;
 import javax.annotation.Generated;
 
 /**
- * <ol>
- * <li>
  * <p>
- * The specified resource is not found
+ * The specified resource is not found.
  * </p>
- * </li>
- * </ol>
- * <ol>
- * <li>
- * <p>
- * You have not specified a channel in this API call.
- * </p>
- * </li>
- * </ol>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ResourceNotFoundException extends com.amazonaws.services.kinesisvideowebrtcstorage.model.AmazonKinesisVideoWebRTCStorageException {

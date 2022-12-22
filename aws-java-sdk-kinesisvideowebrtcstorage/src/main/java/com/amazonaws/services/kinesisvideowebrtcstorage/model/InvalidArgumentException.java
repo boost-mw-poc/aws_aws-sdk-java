@@ -15,20 +15,9 @@ package com.amazonaws.services.kinesisvideowebrtcstorage.model;
 import javax.annotation.Generated;
 
 /**
- * <ol>
- * <li>
  * <p>
  * The value for this input parameter is invalid.
  * </p>
- * </li>
- * </ol>
- * <ol>
- * <li>
- * <p>
- * Additional details may <b>not</b>be returned.
- * </p>
- * </li>
- * </ol>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class InvalidArgumentException extends com.amazonaws.services.kinesisvideowebrtcstorage.model.AmazonKinesisVideoWebRTCStorageException {

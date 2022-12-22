@@ -232,6 +232,14 @@ public class RestoreDBClusterFromS3RequestMarshaller implements Marshaller<Reque
             request.addParameter("NetworkType", StringUtils.fromString(restoreDBClusterFromS3Request.getNetworkType()));
         }
 
+        if (restoreDBClusterFromS3Request.getManageMasterUserPassword() != null) {
+            request.addParameter("ManageMasterUserPassword", StringUtils.fromBoolean(restoreDBClusterFromS3Request.getManageMasterUserPassword()));
+        }
+
+        if (restoreDBClusterFromS3Request.getMasterUserSecretKmsKeyId() != null) {
+            request.addParameter("MasterUserSecretKmsKeyId", StringUtils.fromString(restoreDBClusterFromS3Request.getMasterUserSecretKmsKeyId()));
+        }
+
         return request;
     }
 

@@ -315,6 +315,14 @@ public class CreateDBInstanceRequestMarshaller implements Marshaller<Request<Cre
             request.addParameter("StorageThroughput", StringUtils.fromInteger(createDBInstanceRequest.getStorageThroughput()));
         }
 
+        if (createDBInstanceRequest.getManageMasterUserPassword() != null) {
+            request.addParameter("ManageMasterUserPassword", StringUtils.fromBoolean(createDBInstanceRequest.getManageMasterUserPassword()));
+        }
+
+        if (createDBInstanceRequest.getMasterUserSecretKmsKeyId() != null) {
+            request.addParameter("MasterUserSecretKmsKeyId", StringUtils.fromString(createDBInstanceRequest.getMasterUserSecretKmsKeyId()));
+        }
+
         return request;
     }
 

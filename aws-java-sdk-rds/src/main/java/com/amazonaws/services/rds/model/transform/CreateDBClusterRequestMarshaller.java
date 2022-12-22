@@ -313,6 +313,14 @@ public class CreateDBClusterRequestMarshaller implements Marshaller<Request<Crea
             request.addParameter("DBSystemId", StringUtils.fromString(createDBClusterRequest.getDBSystemId()));
         }
 
+        if (createDBClusterRequest.getManageMasterUserPassword() != null) {
+            request.addParameter("ManageMasterUserPassword", StringUtils.fromBoolean(createDBClusterRequest.getManageMasterUserPassword()));
+        }
+
+        if (createDBClusterRequest.getMasterUserSecretKmsKeyId() != null) {
+            request.addParameter("MasterUserSecretKmsKeyId", StringUtils.fromString(createDBClusterRequest.getMasterUserSecretKmsKeyId()));
+        }
+
         if (createDBClusterRequest.getSourceRegion() != null) {
             request.addParameter("SourceRegion", StringUtils.fromString(createDBClusterRequest.getSourceRegion()));
         }

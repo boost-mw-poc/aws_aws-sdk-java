@@ -40,17 +40,4 @@ public class AbstractAmazonKinesisVideoWebRTCStorageAsync extends AbstractAmazon
         throw new java.lang.UnsupportedOperationException();
     }
 
-    @Override
-    public java.util.concurrent.Future<JoinStorageSessionAsViewerResult> joinStorageSessionAsViewerAsync(JoinStorageSessionAsViewerRequest request) {
-
-        return joinStorageSessionAsViewerAsync(request, null);
-    }
-
-    @Override
-    public java.util.concurrent.Future<JoinStorageSessionAsViewerResult> joinStorageSessionAsViewerAsync(JoinStorageSessionAsViewerRequest request,
-            com.amazonaws.handlers.AsyncHandler<JoinStorageSessionAsViewerRequest, JoinStorageSessionAsViewerResult> asyncHandler) {
-
-        throw new java.lang.UnsupportedOperationException();
-    }
-
 }

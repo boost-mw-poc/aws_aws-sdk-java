@@ -265,6 +265,18 @@ public class ModifyDBClusterRequestMarshaller implements Marshaller<Request<Modi
             request.addParameter("NetworkType", StringUtils.fromString(modifyDBClusterRequest.getNetworkType()));
         }
 
+        if (modifyDBClusterRequest.getManageMasterUserPassword() != null) {
+            request.addParameter("ManageMasterUserPassword", StringUtils.fromBoolean(modifyDBClusterRequest.getManageMasterUserPassword()));
+        }
+
+        if (modifyDBClusterRequest.getRotateMasterUserPassword() != null) {
+            request.addParameter("RotateMasterUserPassword", StringUtils.fromBoolean(modifyDBClusterRequest.getRotateMasterUserPassword()));
+        }
+
+        if (modifyDBClusterRequest.getMasterUserSecretKmsKeyId() != null) {
+            request.addParameter("MasterUserSecretKmsKeyId", StringUtils.fromString(modifyDBClusterRequest.getMasterUserSecretKmsKeyId()));
+        }
+
         return request;
     }
 

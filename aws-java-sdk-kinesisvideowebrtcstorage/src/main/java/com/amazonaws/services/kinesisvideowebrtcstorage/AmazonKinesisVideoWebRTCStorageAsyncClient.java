@@ -107,39 +107,6 @@ public class AmazonKinesisVideoWebRTCStorageAsyncClient extends AmazonKinesisVid
         });
     }
 
-    @Override
-    public java.util.concurrent.Future<JoinStorageSessionAsViewerResult> joinStorageSessionAsViewerAsync(JoinStorageSessionAsViewerRequest request) {
-
-        return joinStorageSessionAsViewerAsync(request, null);
-    }
-
-    @Override
-    public java.util.concurrent.Future<JoinStorageSessionAsViewerResult> joinStorageSessionAsViewerAsync(final JoinStorageSessionAsViewerRequest request,
-            final com.amazonaws.handlers.AsyncHandler<JoinStorageSessionAsViewerRequest, JoinStorageSessionAsViewerResult> asyncHandler) {
-        final JoinStorageSessionAsViewerRequest finalRequest = beforeClientExecution(request);
-
-        return executorService.submit(new java.util.concurrent.Callable<JoinStorageSessionAsViewerResult>() {
-            @Override
-            public JoinStorageSessionAsViewerResult call() throws Exception {
-                JoinStorageSessionAsViewerResult result = null;
-
-                try {
-                    result = executeJoinStorageSessionAsViewer(finalRequest);
-                } catch (Exception ex) {
-                    if (asyncHandler != null) {
-                        asyncHandler.onError(ex);
-                    }
-                    throw ex;
-                }
-
-                if (asyncHandler != null) {
-                    asyncHandler.onSuccess(finalRequest, result);
-                }
-                return result;
-            }
-        });
-    }
-
     /**
      * Shuts down the client, releasing all managed resources. This includes forcibly terminating all pending
      * asynchronous service calls. Clients who wish to give pending asynchronous service calls time to complete should

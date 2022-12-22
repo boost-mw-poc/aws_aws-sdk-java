@@ -308,6 +308,18 @@ public class ModifyDBInstanceRequestMarshaller implements Marshaller<Request<Mod
             request.addParameter("StorageThroughput", StringUtils.fromInteger(modifyDBInstanceRequest.getStorageThroughput()));
         }
 
+        if (modifyDBInstanceRequest.getManageMasterUserPassword() != null) {
+            request.addParameter("ManageMasterUserPassword", StringUtils.fromBoolean(modifyDBInstanceRequest.getManageMasterUserPassword()));
+        }
+
+        if (modifyDBInstanceRequest.getRotateMasterUserPassword() != null) {
+            request.addParameter("RotateMasterUserPassword", StringUtils.fromBoolean(modifyDBInstanceRequest.getRotateMasterUserPassword()));
+        }
+
+        if (modifyDBInstanceRequest.getMasterUserSecretKmsKeyId() != null) {
+            request.addParameter("MasterUserSecretKmsKeyId", StringUtils.fromString(modifyDBInstanceRequest.getMasterUserSecretKmsKeyId()));
+        }
+
         return request;
     }
 

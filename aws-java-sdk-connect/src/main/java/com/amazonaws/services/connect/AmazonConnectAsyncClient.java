@@ -4897,6 +4897,39 @@ public class AmazonConnectAsyncClient extends AmazonConnectClient implements Ama
     }
 
     @Override
+    public java.util.concurrent.Future<UpdateParticipantRoleConfigResult> updateParticipantRoleConfigAsync(UpdateParticipantRoleConfigRequest request) {
+
+        return updateParticipantRoleConfigAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateParticipantRoleConfigResult> updateParticipantRoleConfigAsync(final UpdateParticipantRoleConfigRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateParticipantRoleConfigRequest, UpdateParticipantRoleConfigResult> asyncHandler) {
+        final UpdateParticipantRoleConfigRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateParticipantRoleConfigResult>() {
+            @Override
+            public UpdateParticipantRoleConfigResult call() throws Exception {
+                UpdateParticipantRoleConfigResult result = null;
+
+                try {
+                    result = executeUpdateParticipantRoleConfig(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<UpdatePhoneNumberResult> updatePhoneNumberAsync(UpdatePhoneNumberRequest request) {
 
         return updatePhoneNumberAsync(request, null);

@@ -33,11 +33,6 @@ public class AbstractAmazonKinesisVideoWebRTCStorage implements AmazonKinesisVid
     }
 
     @Override
-    public JoinStorageSessionAsViewerResult joinStorageSessionAsViewer(JoinStorageSessionAsViewerRequest request) {
-        throw new java.lang.UnsupportedOperationException();
-    }
-
-    @Override
     public void shutdown() {
         throw new java.lang.UnsupportedOperationException();
     }

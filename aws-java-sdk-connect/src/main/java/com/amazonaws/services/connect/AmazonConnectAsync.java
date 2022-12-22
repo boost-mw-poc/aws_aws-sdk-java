@@ -4265,7 +4265,7 @@ public interface AmazonConnectAsync extends AmazonConnect {
     /**
      * <p>
      * Initiates silent monitoring of a contact. The Contact Control Panel (CCP) of the user specified by <i>userId</i>
-     * will be set to silent monitoring mode on the contact.
+     * will be set to silent monitoring mode on the contact. Supports voice and chat contacts.
      * </p>
      * 
      * @param monitorContactRequest
@@ -4279,7 +4279,7 @@ public interface AmazonConnectAsync extends AmazonConnect {
     /**
      * <p>
      * Initiates silent monitoring of a contact. The Contact Control Panel (CCP) of the user specified by <i>userId</i>
-     * will be set to silent monitoring mode on the contact.
+     * will be set to silent monitoring mode on the contact. Supports voice and chat contacts.
      * </p>
      * 
      * @param monitorContactRequest
@@ -5874,6 +5874,95 @@ public interface AmazonConnectAsync extends AmazonConnect {
     java.util.concurrent.Future<UpdateInstanceStorageConfigResult> updateInstanceStorageConfigAsync(
             UpdateInstanceStorageConfigRequest updateInstanceStorageConfigRequest,
             com.amazonaws.handlers.AsyncHandler<UpdateInstanceStorageConfigRequest, UpdateInstanceStorageConfigResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates timeouts for when human chat participants are to be considered idle, and when agents are automatically
+     * disconnected from a chat due to idleness. You can set four timers:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Customer idle timeout
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Customer auto-disconnect timeout
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Agent idle timeout
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Agent auto-disconnect timeout
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For more information about how chat timeouts work, see <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/setup-chat-timeouts.html">Set up chat timeouts for
+     * human participants</a>.
+     * </p>
+     * 
+     * @param updateParticipantRoleConfigRequest
+     * @return A Java Future containing the result of the UpdateParticipantRoleConfig operation returned by the service.
+     * @sample AmazonConnectAsync.UpdateParticipantRoleConfig
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/UpdateParticipantRoleConfig"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateParticipantRoleConfigResult> updateParticipantRoleConfigAsync(
+            UpdateParticipantRoleConfigRequest updateParticipantRoleConfigRequest);
+
+    /**
+     * <p>
+     * Updates timeouts for when human chat participants are to be considered idle, and when agents are automatically
+     * disconnected from a chat due to idleness. You can set four timers:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Customer idle timeout
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Customer auto-disconnect timeout
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Agent idle timeout
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Agent auto-disconnect timeout
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For more information about how chat timeouts work, see <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/setup-chat-timeouts.html">Set up chat timeouts for
+     * human participants</a>.
+     * </p>
+     * 
+     * @param updateParticipantRoleConfigRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateParticipantRoleConfig operation returned by the service.
+     * @sample AmazonConnectAsyncHandler.UpdateParticipantRoleConfig
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/UpdateParticipantRoleConfig"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateParticipantRoleConfigResult> updateParticipantRoleConfigAsync(
+            UpdateParticipantRoleConfigRequest updateParticipantRoleConfigRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateParticipantRoleConfigRequest, UpdateParticipantRoleConfigResult> asyncHandler);
 
     /**
      * <p>

@@ -53,6 +53,11 @@ public class AbstractAWSComputeOptimizer implements AWSComputeOptimizer {
     }
 
     @Override
+    public ExportECSServiceRecommendationsResult exportECSServiceRecommendations(ExportECSServiceRecommendationsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ExportLambdaFunctionRecommendationsResult exportLambdaFunctionRecommendations(ExportLambdaFunctionRecommendationsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -74,6 +79,17 @@ public class AbstractAWSComputeOptimizer implements AWSComputeOptimizer {
 
     @Override
     public GetEC2RecommendationProjectedMetricsResult getEC2RecommendationProjectedMetrics(GetEC2RecommendationProjectedMetricsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetECSServiceRecommendationProjectedMetricsResult getECSServiceRecommendationProjectedMetrics(
+            GetECSServiceRecommendationProjectedMetricsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetECSServiceRecommendationsResult getECSServiceRecommendations(GetECSServiceRecommendationsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

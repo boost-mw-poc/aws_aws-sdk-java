@@ -500,6 +500,11 @@ public class DBInstanceStaxUnmarshaller implements Unmarshaller<DBInstance, Stax
                     dBInstance.setDBSystemId(StringStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("MasterUserSecret", targetDepth)) {
+                    dBInstance.setMasterUserSecret(MasterUserSecretStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return dBInstance;

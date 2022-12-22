@@ -293,6 +293,14 @@ public class RestoreDBInstanceFromS3RequestMarshaller implements Marshaller<Requ
             request.addParameter("StorageThroughput", StringUtils.fromInteger(restoreDBInstanceFromS3Request.getStorageThroughput()));
         }
 
+        if (restoreDBInstanceFromS3Request.getManageMasterUserPassword() != null) {
+            request.addParameter("ManageMasterUserPassword", StringUtils.fromBoolean(restoreDBInstanceFromS3Request.getManageMasterUserPassword()));
+        }
+
+        if (restoreDBInstanceFromS3Request.getMasterUserSecretKmsKeyId() != null) {
+            request.addParameter("MasterUserSecretKmsKeyId", StringUtils.fromString(restoreDBInstanceFromS3Request.getMasterUserSecretKmsKeyId()));
+        }
+
         return request;
     }
 

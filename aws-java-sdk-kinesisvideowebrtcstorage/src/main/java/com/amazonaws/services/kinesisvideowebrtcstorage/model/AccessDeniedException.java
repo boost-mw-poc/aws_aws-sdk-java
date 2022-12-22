@@ -15,20 +15,9 @@ package com.amazonaws.services.kinesisvideowebrtcstorage.model;
 import javax.annotation.Generated;
 
 /**
- * <ol>
- * <li>
  * <p>
- * You do not have required permissions to perform this operation
+ * You do not have required permissions to perform this operation.
  * </p>
- * </li>
- * </ol>
- * <ol>
- * <li>
- * <p>
- * The <code>AccessDeniedException</code> can be thrown for operation access as well as tokens or resource access
- * </p>
- * </li>
- * </ol>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class AccessDeniedException extends com.amazonaws.services.kinesisvideowebrtcstorage.model.AmazonKinesisVideoWebRTCStorageException {

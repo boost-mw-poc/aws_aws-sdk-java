@@ -37,7 +37,7 @@ public class UpdateSuiteDefinitionResult extends com.amazonaws.AmazonWebServiceR
     private String suiteDefinitionArn;
     /**
      * <p>
-     * Suite definition name of the updated test suite.
+     * Updates the suite definition name. This is a required parameter.
      * </p>
      */
     private String suiteDefinitionName;
@@ -142,11 +142,11 @@ public class UpdateSuiteDefinitionResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Suite definition name of the updated test suite.
+     * Updates the suite definition name. This is a required parameter.
      * </p>
      * 
      * @param suiteDefinitionName
-     *        Suite definition name of the updated test suite.
+     *        Updates the suite definition name. This is a required parameter.
      */
 
     public void setSuiteDefinitionName(String suiteDefinitionName) {
@@ -155,10 +155,10 @@ public class UpdateSuiteDefinitionResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Suite definition name of the updated test suite.
+     * Updates the suite definition name. This is a required parameter.
      * </p>
      * 
-     * @return Suite definition name of the updated test suite.
+     * @return Updates the suite definition name. This is a required parameter.
      */
 
     public String getSuiteDefinitionName() {
@@ -167,11 +167,11 @@ public class UpdateSuiteDefinitionResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Suite definition name of the updated test suite.
+     * Updates the suite definition name. This is a required parameter.
      * </p>
      * 
      * @param suiteDefinitionName
-     *        Suite definition name of the updated test suite.
+     *        Updates the suite definition name. This is a required parameter.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

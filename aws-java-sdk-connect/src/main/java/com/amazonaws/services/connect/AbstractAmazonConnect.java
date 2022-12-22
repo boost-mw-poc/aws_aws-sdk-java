@@ -753,6 +753,11 @@ public class AbstractAmazonConnect implements AmazonConnect {
     }
 
     @Override
+    public UpdateParticipantRoleConfigResult updateParticipantRoleConfig(UpdateParticipantRoleConfigRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public UpdatePhoneNumberResult updatePhoneNumber(UpdatePhoneNumberRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

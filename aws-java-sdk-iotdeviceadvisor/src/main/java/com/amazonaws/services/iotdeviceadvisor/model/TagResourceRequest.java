@@ -27,7 +27,7 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The resource ARN of an IoT Device Advisor resource.
+     * The resource ARN of an IoT Device Advisor resource. This can be SuiteDefinition ARN or SuiteRun ARN.
      * </p>
      */
     private String resourceArn;
@@ -40,11 +40,11 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The resource ARN of an IoT Device Advisor resource.
+     * The resource ARN of an IoT Device Advisor resource. This can be SuiteDefinition ARN or SuiteRun ARN.
      * </p>
      * 
      * @param resourceArn
-     *        The resource ARN of an IoT Device Advisor resource.
+     *        The resource ARN of an IoT Device Advisor resource. This can be SuiteDefinition ARN or SuiteRun ARN.
      */
 
     public void setResourceArn(String resourceArn) {
@@ -53,10 +53,10 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The resource ARN of an IoT Device Advisor resource.
+     * The resource ARN of an IoT Device Advisor resource. This can be SuiteDefinition ARN or SuiteRun ARN.
      * </p>
      * 
-     * @return The resource ARN of an IoT Device Advisor resource.
+     * @return The resource ARN of an IoT Device Advisor resource. This can be SuiteDefinition ARN or SuiteRun ARN.
      */
 
     public String getResourceArn() {
@@ -65,11 +65,11 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The resource ARN of an IoT Device Advisor resource.
+     * The resource ARN of an IoT Device Advisor resource. This can be SuiteDefinition ARN or SuiteRun ARN.
      * </p>
      * 
      * @param resourceArn
-     *        The resource ARN of an IoT Device Advisor resource.
+     *        The resource ARN of an IoT Device Advisor resource. This can be SuiteDefinition ARN or SuiteRun ARN.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -10,35 +10,35 @@
  * CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions
  * and limitations under the License.
  */
-package com.amazonaws.services.kinesisvideowebrtcstorage.model.transform;
+package com.amazonaws.services.connect.model.transform;
 
 import java.math.*;
 
 import javax.annotation.Generated;
 
-import com.amazonaws.services.kinesisvideowebrtcstorage.model.*;
+import com.amazonaws.services.connect.model.*;
 import com.amazonaws.transform.SimpleTypeJsonUnmarshallers.*;
 import com.amazonaws.transform.*;
 
 import static com.fasterxml.jackson.core.JsonToken.*;
 
 /**
- * JoinStorageSessionAsViewerResult JSON Unmarshaller
+ * UpdateParticipantRoleConfigResult JSON Unmarshaller
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
-public class JoinStorageSessionAsViewerResultJsonUnmarshaller implements Unmarshaller<JoinStorageSessionAsViewerResult, JsonUnmarshallerContext> {
+public class UpdateParticipantRoleConfigResultJsonUnmarshaller implements Unmarshaller<UpdateParticipantRoleConfigResult, JsonUnmarshallerContext> {
 
-    public JoinStorageSessionAsViewerResult unmarshall(JsonUnmarshallerContext context) throws Exception {
-        JoinStorageSessionAsViewerResult joinStorageSessionAsViewerResult = new JoinStorageSessionAsViewerResult();
+    public UpdateParticipantRoleConfigResult unmarshall(JsonUnmarshallerContext context) throws Exception {
+        UpdateParticipantRoleConfigResult updateParticipantRoleConfigResult = new UpdateParticipantRoleConfigResult();
 
-        return joinStorageSessionAsViewerResult;
+        return updateParticipantRoleConfigResult;
     }
 
-    private static JoinStorageSessionAsViewerResultJsonUnmarshaller instance;
+    private static UpdateParticipantRoleConfigResultJsonUnmarshaller instance;
 
-    public static JoinStorageSessionAsViewerResultJsonUnmarshaller getInstance() {
+    public static UpdateParticipantRoleConfigResultJsonUnmarshaller getInstance() {
         if (instance == null)
-            instance = new JoinStorageSessionAsViewerResultJsonUnmarshaller();
+            instance = new UpdateParticipantRoleConfigResultJsonUnmarshaller();
         return instance;
     }
 }

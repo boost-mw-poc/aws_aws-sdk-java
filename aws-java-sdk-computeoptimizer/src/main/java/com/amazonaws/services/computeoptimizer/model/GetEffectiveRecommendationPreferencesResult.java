@@ -63,7 +63,7 @@ public class GetEffectiveRecommendationPreferencesResult extends com.amazonaws.A
      * </p>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/enhanced-infrastructure-metrics.html">Enhanced
+     * href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/external-metrics-ingestion.html">Enhanced
      * infrastructure metrics</a> in the <i>Compute Optimizer User Guide</i>.
      * </p>
      */
@@ -261,7 +261,7 @@ public class GetEffectiveRecommendationPreferencesResult extends com.amazonaws.A
      * </p>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/enhanced-infrastructure-metrics.html">Enhanced
+     * href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/external-metrics-ingestion.html">Enhanced
      * infrastructure metrics</a> in the <i>Compute Optimizer User Guide</i>.
      * </p>
      * 
@@ -280,8 +280,8 @@ public class GetEffectiveRecommendationPreferencesResult extends com.amazonaws.A
      *        </p>
      *        <p>
      *        For more information, see <a
-     *        href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/enhanced-infrastructure-metrics.html"
-     *        >Enhanced infrastructure metrics</a> in the <i>Compute Optimizer User Guide</i>.
+     *        href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/external-metrics-ingestion.html">Enhanced
+     *        infrastructure metrics</a> in the <i>Compute Optimizer User Guide</i>.
      */
 
     public void setExternalMetricsPreference(ExternalMetricsPreference externalMetricsPreference) {
@@ -305,7 +305,7 @@ public class GetEffectiveRecommendationPreferencesResult extends com.amazonaws.A
      * </p>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/enhanced-infrastructure-metrics.html">Enhanced
+     * href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/external-metrics-ingestion.html">Enhanced
      * infrastructure metrics</a> in the <i>Compute Optimizer User Guide</i>.
      * </p>
      * 
@@ -323,8 +323,8 @@ public class GetEffectiveRecommendationPreferencesResult extends com.amazonaws.A
      *         </p>
      *         <p>
      *         For more information, see <a
-     *         href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/enhanced-infrastructure-metrics.html"
-     *         >Enhanced infrastructure metrics</a> in the <i>Compute Optimizer User Guide</i>.
+     *         href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/external-metrics-ingestion.html">Enhanced
+     *         infrastructure metrics</a> in the <i>Compute Optimizer User Guide</i>.
      */
 
     public ExternalMetricsPreference getExternalMetricsPreference() {
@@ -348,7 +348,7 @@ public class GetEffectiveRecommendationPreferencesResult extends com.amazonaws.A
      * </p>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/enhanced-infrastructure-metrics.html">Enhanced
+     * href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/external-metrics-ingestion.html">Enhanced
      * infrastructure metrics</a> in the <i>Compute Optimizer User Guide</i>.
      * </p>
      * 
@@ -367,8 +367,8 @@ public class GetEffectiveRecommendationPreferencesResult extends com.amazonaws.A
      *        </p>
      *        <p>
      *        For more information, see <a
-     *        href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/enhanced-infrastructure-metrics.html"
-     *        >Enhanced infrastructure metrics</a> in the <i>Compute Optimizer User Guide</i>.
+     *        href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/external-metrics-ingestion.html">Enhanced
+     *        infrastructure metrics</a> in the <i>Compute Optimizer User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

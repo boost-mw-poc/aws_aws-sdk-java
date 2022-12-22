@@ -24,7 +24,8 @@ public enum ResourceType {
     AutoScalingGroup("AutoScalingGroup"),
     EbsVolume("EbsVolume"),
     LambdaFunction("LambdaFunction"),
-    NotApplicable("NotApplicable");
+    NotApplicable("NotApplicable"),
+    EcsService("EcsService");
 
     private String value;
 

@@ -10,19 +10,18 @@
  * CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions
  * and limitations under the License.
  */
-package com.amazonaws.services.kinesisvideowebrtcstorage.model;
+package com.amazonaws.services.connect.model;
 
 import java.io.Serializable;
 import javax.annotation.Generated;
 
 /**
  * 
- * @see <a
- *      href="http://docs.aws.amazon.com/goto/WebAPI/kinesis-video-webrtc-storage-2018-05-10/JoinStorageSessionAsViewer"
+ * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/UpdateParticipantRoleConfig"
  *      target="_top">AWS API Documentation</a>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
-public class JoinStorageSessionAsViewerResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
+public class UpdateParticipantRoleConfigResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
     /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
@@ -47,9 +46,9 @@ public class JoinStorageSessionAsViewerResult extends com.amazonaws.AmazonWebSer
         if (obj == null)
             return false;
 
-        if (obj instanceof JoinStorageSessionAsViewerResult == false)
+        if (obj instanceof UpdateParticipantRoleConfigResult == false)
             return false;
-        JoinStorageSessionAsViewerResult other = (JoinStorageSessionAsViewerResult) obj;
+        UpdateParticipantRoleConfigResult other = (UpdateParticipantRoleConfigResult) obj;
         return true;
     }
 
@@ -62,9 +61,9 @@ public class JoinStorageSessionAsViewerResult extends com.amazonaws.AmazonWebSer
     }
 
     @Override
-    public JoinStorageSessionAsViewerResult clone() {
+    public UpdateParticipantRoleConfigResult clone() {
         try {
-            return (JoinStorageSessionAsViewerResult) super.clone();
+            return (UpdateParticipantRoleConfigResult) super.clone();
         } catch (CloneNotSupportedException e) {
             throw new IllegalStateException("Got a CloneNotSupportedException from Object.clone() " + "even though we're Cloneable!", e);
         }

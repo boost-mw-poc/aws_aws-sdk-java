@@ -1,3 +1,28 @@
+# __1.12.371__ __2022-12-22__
+## __AWS Compute Optimizer__
+  - ### Features
+    - This release enables AWS Compute Optimizer to analyze and generate optimization recommendations for ecs services running on Fargate.
+
+## __AWS IoT Core Device Advisor__
+  - ### Features
+    - This release adds the following new features: 1) Documentation updates for IoT Device Advisor APIs. 2) Updated required request parameters for IoT Device Advisor APIs. 3) Added new service feature: ability to provide the test endpoint when customer executing the StartSuiteRun API.
+
+## __AWS Secrets Manager__
+  - ### Features
+    - Documentation updates for Secrets Manager
+
+## __Amazon Connect Service__
+  - ### Features
+    - Amazon Connect Chat introduces the Idle Participant/Autodisconnect feature, which allows users to set timeouts relating to the activity of chat participants, using the new UpdateParticipantRoleConfig API.
+
+## __Amazon Kinesis Video WebRTC Storage__
+  - ### Features
+    - Amazon Kinesis Video Streams offers capabilities to stream video and audio in real-time via WebRTC to the cloud for storage, playback, and analytical processing. Customers can use our enhanced WebRTC SDK and cloud APIs to enable real-time streaming, as well as media ingestion to the cloud.
+
+## __Amazon Relational Database Service__
+  - ### Features
+    - Add support for managing master user password in AWS Secrets Manager for the DBInstance and DBCluster.
+
 # __1.12.370__ __2022-12-21__
 ## __AWS License Manager Linux Subscriptions__
   - ### Features

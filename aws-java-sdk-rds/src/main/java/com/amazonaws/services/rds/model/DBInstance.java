@@ -727,6 +727,17 @@ public class DBInstance implements Serializable, Cloneable {
      * </p>
      */
     private String dBSystemId;
+    /**
+     * <p>
+     * Contains the secret managed by RDS in Amazon Web Services Secrets Manager for the master user password.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-secrets-manager.html">Password management with
+     * Amazon Web Services Secrets Manager</a> in the <i>Amazon RDS User Guide.</i>
+     * </p>
+     */
+    private MasterUserSecret masterUserSecret;
 
     /**
      * <p>
@@ -5993,6 +6004,76 @@ public class DBInstance implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * Contains the secret managed by RDS in Amazon Web Services Secrets Manager for the master user password.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-secrets-manager.html">Password management with
+     * Amazon Web Services Secrets Manager</a> in the <i>Amazon RDS User Guide.</i>
+     * </p>
+     * 
+     * @param masterUserSecret
+     *        Contains the secret managed by RDS in Amazon Web Services Secrets Manager for the master user
+     *        password.</p>
+     *        <p>
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-secrets-manager.html">Password management
+     *        with Amazon Web Services Secrets Manager</a> in the <i>Amazon RDS User Guide.</i>
+     */
+
+    public void setMasterUserSecret(MasterUserSecret masterUserSecret) {
+        this.masterUserSecret = masterUserSecret;
+    }
+
+    /**
+     * <p>
+     * Contains the secret managed by RDS in Amazon Web Services Secrets Manager for the master user password.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-secrets-manager.html">Password management with
+     * Amazon Web Services Secrets Manager</a> in the <i>Amazon RDS User Guide.</i>
+     * </p>
+     * 
+     * @return Contains the secret managed by RDS in Amazon Web Services Secrets Manager for the master user
+     *         password.</p>
+     *         <p>
+     *         For more information, see <a
+     *         href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-secrets-manager.html">Password
+     *         management with Amazon Web Services Secrets Manager</a> in the <i>Amazon RDS User Guide.</i>
+     */
+
+    public MasterUserSecret getMasterUserSecret() {
+        return this.masterUserSecret;
+    }
+
+    /**
+     * <p>
+     * Contains the secret managed by RDS in Amazon Web Services Secrets Manager for the master user password.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-secrets-manager.html">Password management with
+     * Amazon Web Services Secrets Manager</a> in the <i>Amazon RDS User Guide.</i>
+     * </p>
+     * 
+     * @param masterUserSecret
+     *        Contains the secret managed by RDS in Amazon Web Services Secrets Manager for the master user
+     *        password.</p>
+     *        <p>
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-secrets-manager.html">Password management
+     *        with Amazon Web Services Secrets Manager</a> in the <i>Amazon RDS User Guide.</i>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DBInstance withMasterUserSecret(MasterUserSecret masterUserSecret) {
+        setMasterUserSecret(masterUserSecret);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -6159,7 +6240,9 @@ public class DBInstance implements Serializable, Cloneable {
         if (getStorageThroughput() != null)
             sb.append("StorageThroughput: ").append(getStorageThroughput()).append(",");
         if (getDBSystemId() != null)
-            sb.append("DBSystemId: ").append(getDBSystemId());
+            sb.append("DBSystemId: ").append(getDBSystemId()).append(",");
+        if (getMasterUserSecret() != null)
+            sb.append("MasterUserSecret: ").append(getMasterUserSecret());
         sb.append("}");
         return sb.toString();
     }
@@ -6495,6 +6578,10 @@ public class DBInstance implements Serializable, Cloneable {
             return false;
         if (other.getDBSystemId() != null && other.getDBSystemId().equals(this.getDBSystemId()) == false)
             return false;
+        if (other.getMasterUserSecret() == null ^ this.getMasterUserSecret() == null)
+            return false;
+        if (other.getMasterUserSecret() != null && other.getMasterUserSecret().equals(this.getMasterUserSecret()) == false)
+            return false;
         return true;
     }
 
@@ -6582,6 +6669,7 @@ public class DBInstance implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getActivityStreamPolicyStatus() == null) ? 0 : getActivityStreamPolicyStatus().hashCode());
         hashCode = prime * hashCode + ((getStorageThroughput() == null) ? 0 : getStorageThroughput().hashCode());
         hashCode = prime * hashCode + ((getDBSystemId() == null) ? 0 : getDBSystemId().hashCode());
+        hashCode = prime * hashCode + ((getMasterUserSecret() == null) ? 0 : getMasterUserSecret().hashCode());
         return hashCode;
     }
 

@@ -7886,7 +7886,7 @@ public class AmazonConnectClient extends AmazonWebServiceClient implements Amazo
     /**
      * <p>
      * Initiates silent monitoring of a contact. The Contact Control Panel (CCP) of the user specified by <i>userId</i>
-     * will be set to silent monitoring mode on the contact.
+     * will be set to silent monitoring mode on the contact. Supports voice and chat contacts.
      * </p>
      * 
      * @param monitorContactRequest
@@ -10458,6 +10458,103 @@ public class AmazonConnectClient extends AmazonWebServiceClient implements Amazo
             HttpResponseHandler<AmazonWebServiceResponse<UpdateInstanceStorageConfigResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new UpdateInstanceStorageConfigResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Updates timeouts for when human chat participants are to be considered idle, and when agents are automatically
+     * disconnected from a chat due to idleness. You can set four timers:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Customer idle timeout
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Customer auto-disconnect timeout
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Agent idle timeout
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Agent auto-disconnect timeout
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For more information about how chat timeouts work, see <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/setup-chat-timeouts.html">Set up chat timeouts for
+     * human participants</a>.
+     * </p>
+     * 
+     * @param updateParticipantRoleConfigRequest
+     * @return Result of the UpdateParticipantRoleConfig operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws AccessDeniedException
+     *         You do not have sufficient permissions to perform this action.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @sample AmazonConnect.UpdateParticipantRoleConfig
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/UpdateParticipantRoleConfig"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public UpdateParticipantRoleConfigResult updateParticipantRoleConfig(UpdateParticipantRoleConfigRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateParticipantRoleConfig(request);
+    }
+
+    @SdkInternalApi
+    final UpdateParticipantRoleConfigResult executeUpdateParticipantRoleConfig(UpdateParticipantRoleConfigRequest updateParticipantRoleConfigRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateParticipantRoleConfigRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateParticipantRoleConfigRequest> request = null;
+        Response<UpdateParticipantRoleConfigResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateParticipantRoleConfigRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(updateParticipantRoleConfigRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Connect");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateParticipantRoleConfig");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdateParticipantRoleConfigResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new UpdateParticipantRoleConfigResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

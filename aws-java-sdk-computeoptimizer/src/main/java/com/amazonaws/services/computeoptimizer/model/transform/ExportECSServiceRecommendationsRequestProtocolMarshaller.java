@@ -10,7 +10,7 @@
  * CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions
  * and limitations under the License.
  */
-package com.amazonaws.services.kinesisvideowebrtcstorage.model.transform;
+package com.amazonaws.services.computeoptimizer.model.transform;
 
 import javax.annotation.Generated;
 
@@ -18,7 +18,7 @@ import com.amazonaws.SdkClientException;
 import com.amazonaws.Request;
 
 import com.amazonaws.http.HttpMethodName;
-import com.amazonaws.services.kinesisvideowebrtcstorage.model.*;
+import com.amazonaws.services.computeoptimizer.model.*;
 import com.amazonaws.transform.Marshaller;
 
 import com.amazonaws.protocol.*;
@@ -26,34 +26,35 @@ import com.amazonaws.protocol.Protocol;
 import com.amazonaws.annotation.SdkInternalApi;
 
 /**
- * JoinStorageSessionAsViewerRequest Marshaller
+ * ExportECSServiceRecommendationsRequest Marshaller
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 @SdkInternalApi
-public class JoinStorageSessionAsViewerRequestProtocolMarshaller implements
-        Marshaller<Request<JoinStorageSessionAsViewerRequest>, JoinStorageSessionAsViewerRequest> {
+public class ExportECSServiceRecommendationsRequestProtocolMarshaller implements
+        Marshaller<Request<ExportECSServiceRecommendationsRequest>, ExportECSServiceRecommendationsRequest> {
 
-    private static final OperationInfo SDK_OPERATION_BINDING = OperationInfo.builder().protocol(Protocol.REST_JSON).requestUri("/joinStorageSessionAsViewer")
-            .httpMethodName(HttpMethodName.POST).hasExplicitPayloadMember(false).hasPayloadMembers(true).serviceName("AmazonKinesisVideoWebRTCStorage").build();
+    private static final OperationInfo SDK_OPERATION_BINDING = OperationInfo.builder().protocol(Protocol.AWS_JSON).requestUri("/")
+            .httpMethodName(HttpMethodName.POST).hasExplicitPayloadMember(false).hasPayloadMembers(true)
+            .operationIdentifier("ComputeOptimizerService.ExportECSServiceRecommendations").serviceName("AWSComputeOptimizer").build();
 
     private final com.amazonaws.protocol.json.SdkJsonProtocolFactory protocolFactory;
 
-    public JoinStorageSessionAsViewerRequestProtocolMarshaller(com.amazonaws.protocol.json.SdkJsonProtocolFactory protocolFactory) {
+    public ExportECSServiceRecommendationsRequestProtocolMarshaller(com.amazonaws.protocol.json.SdkJsonProtocolFactory protocolFactory) {
         this.protocolFactory = protocolFactory;
     }
 
-    public Request<JoinStorageSessionAsViewerRequest> marshall(JoinStorageSessionAsViewerRequest joinStorageSessionAsViewerRequest) {
+    public Request<ExportECSServiceRecommendationsRequest> marshall(ExportECSServiceRecommendationsRequest exportECSServiceRecommendationsRequest) {
 
-        if (joinStorageSessionAsViewerRequest == null) {
+        if (exportECSServiceRecommendationsRequest == null) {
             throw new SdkClientException("Invalid argument passed to marshall(...)");
         }
 
         try {
-            final ProtocolRequestMarshaller<JoinStorageSessionAsViewerRequest> protocolMarshaller = protocolFactory.createProtocolMarshaller(
-                    SDK_OPERATION_BINDING, joinStorageSessionAsViewerRequest);
+            final ProtocolRequestMarshaller<ExportECSServiceRecommendationsRequest> protocolMarshaller = protocolFactory.createProtocolMarshaller(
+                    SDK_OPERATION_BINDING, exportECSServiceRecommendationsRequest);
 
             protocolMarshaller.startMarshalling();
-            JoinStorageSessionAsViewerRequestMarshaller.getInstance().marshall(joinStorageSessionAsViewerRequest, protocolMarshaller);
+            ExportECSServiceRecommendationsRequestMarshaller.getInstance().marshall(exportECSServiceRecommendationsRequest, protocolMarshaller);
             return protocolMarshaller.finishMarshalling();
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
