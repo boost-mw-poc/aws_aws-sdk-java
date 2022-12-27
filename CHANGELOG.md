@@ -1,3 +1,12 @@
+# __1.12.373__ __2022-12-27__
+## __AWS Transfer Family__
+  - ### Features
+    - Add additional operations to throw ThrottlingExceptions
+
+## __Amazon MemoryDB__
+  - ### Features
+    - This release adds support for MemoryDB Reserved nodes which provides a significant discount compared to on-demand node pricing. Reserved nodes are not physical nodes, but rather a billing discount applied to the use of on-demand nodes in your account.
+
 # __1.12.372__ __2022-12-23__
 ## __Amazon Connect Participant Service__
   - ### Features

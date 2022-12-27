@@ -128,6 +128,16 @@ public class AbstractAmazonMemoryDB implements AmazonMemoryDB {
     }
 
     @Override
+    public DescribeReservedNodesResult describeReservedNodes(DescribeReservedNodesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DescribeReservedNodesOfferingsResult describeReservedNodesOfferings(DescribeReservedNodesOfferingsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DescribeServiceUpdatesResult describeServiceUpdates(DescribeServiceUpdatesRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -159,6 +169,11 @@ public class AbstractAmazonMemoryDB implements AmazonMemoryDB {
 
     @Override
     public ListTagsResult listTags(ListTagsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public PurchaseReservedNodesOfferingResult purchaseReservedNodesOffering(PurchaseReservedNodesOfferingRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
