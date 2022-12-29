@@ -20012,6 +20012,11 @@
           }
         }
       },
+      "pi" : {
+        "endpoints" : {
+          "us-gov-east-1" : { }
+        }
+      },
       "pinpoint" : {
         "defaults" : {
           "credentialScope" : {

@@ -92,6 +92,10 @@ public class DescribeSecretResultJsonUnmarshaller implements Unmarshaller<Descri
                     context.nextToken();
                     describeSecretResult.setDeletedDate(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
                 }
+                if (context.testExpression("NextRotationDate", targetDepth)) {
+                    context.nextToken();
+                    describeSecretResult.setNextRotationDate(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
+                }
                 if (context.testExpression("Tags", targetDepth)) {
                     context.nextToken();
                     describeSecretResult.setTags(new ListUnmarshaller<Tag>(TagJsonUnmarshaller.getInstance())

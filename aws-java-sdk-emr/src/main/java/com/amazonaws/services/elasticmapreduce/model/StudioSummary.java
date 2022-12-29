@@ -61,7 +61,7 @@ public class StudioSummary implements Serializable, Cloneable, StructuredPojo {
     private String url;
     /**
      * <p>
-     * Specifies whether the Studio authenticates users using IAM or Amazon Web Services SSO.
+     * Specifies whether the Studio authenticates users using IAM or IAM Identity Center.
      * </p>
      */
     private String authMode;
@@ -274,11 +274,11 @@ public class StudioSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Specifies whether the Studio authenticates users using IAM or Amazon Web Services SSO.
+     * Specifies whether the Studio authenticates users using IAM or IAM Identity Center.
      * </p>
      * 
      * @param authMode
-     *        Specifies whether the Studio authenticates users using IAM or Amazon Web Services SSO.
+     *        Specifies whether the Studio authenticates users using IAM or IAM Identity Center.
      * @see AuthMode
      */
 
@@ -288,10 +288,10 @@ public class StudioSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Specifies whether the Studio authenticates users using IAM or Amazon Web Services SSO.
+     * Specifies whether the Studio authenticates users using IAM or IAM Identity Center.
      * </p>
      * 
-     * @return Specifies whether the Studio authenticates users using IAM or Amazon Web Services SSO.
+     * @return Specifies whether the Studio authenticates users using IAM or IAM Identity Center.
      * @see AuthMode
      */
 
@@ -301,11 +301,11 @@ public class StudioSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Specifies whether the Studio authenticates users using IAM or Amazon Web Services SSO.
+     * Specifies whether the Studio authenticates users using IAM or IAM Identity Center.
      * </p>
      * 
      * @param authMode
-     *        Specifies whether the Studio authenticates users using IAM or Amazon Web Services SSO.
+     *        Specifies whether the Studio authenticates users using IAM or IAM Identity Center.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AuthMode
      */
@@ -317,11 +317,11 @@ public class StudioSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Specifies whether the Studio authenticates users using IAM or Amazon Web Services SSO.
+     * Specifies whether the Studio authenticates users using IAM or IAM Identity Center.
      * </p>
      * 
      * @param authMode
-     *        Specifies whether the Studio authenticates users using IAM or Amazon Web Services SSO.
+     *        Specifies whether the Studio authenticates users using IAM or IAM Identity Center.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AuthMode
      */

@@ -949,6 +949,39 @@ public class AmazonElasticMapReduceAsyncClient extends AmazonElasticMapReduceCli
     }
 
     @Override
+    public java.util.concurrent.Future<GetClusterSessionCredentialsResult> getClusterSessionCredentialsAsync(GetClusterSessionCredentialsRequest request) {
+
+        return getClusterSessionCredentialsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetClusterSessionCredentialsResult> getClusterSessionCredentialsAsync(final GetClusterSessionCredentialsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetClusterSessionCredentialsRequest, GetClusterSessionCredentialsResult> asyncHandler) {
+        final GetClusterSessionCredentialsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetClusterSessionCredentialsResult>() {
+            @Override
+            public GetClusterSessionCredentialsResult call() throws Exception {
+                GetClusterSessionCredentialsResult result = null;
+
+                try {
+                    result = executeGetClusterSessionCredentials(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetManagedScalingPolicyResult> getManagedScalingPolicyAsync(GetManagedScalingPolicyRequest request) {
 
         return getManagedScalingPolicyAsync(request, null);

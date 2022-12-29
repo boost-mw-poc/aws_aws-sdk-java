@@ -59,12 +59,7 @@ public class RotateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
     private String clientRequestToken;
     /**
      * <p>
-     * For secrets that use a Lambda rotation function to rotate, the ARN of the Lambda rotation function.
-     * </p>
-     * <p>
-     * For secrets that use <i>managed rotation</i>, omit this field. For more information, see <a
-     * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotate-secrets_managed.html">Managed
-     * rotation</a> in the <i>Secrets Manager User Guide</i>.
+     * The ARN of the Lambda rotation function that can rotate the secret.
      * </p>
      */
     private String rotationLambdaARN;
@@ -80,8 +75,7 @@ public class RotateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
      * schedule is defined in <a>RotateSecretRequest$RotationRules</a>.
      * </p>
      * <p>
-     * For secrets that use a Lambda rotation function to rotate, if you don't immediately rotate the secret, Secrets
-     * Manager tests the rotation configuration by running the <a
+     * If you don't immediately rotate the secret, Secrets Manager tests the rotation configuration by running the <a
      * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotate-secrets_how.html">
      * <code>testSecret</code> step</a> of the Lambda rotation function. The test creates an <code>AWSPENDING</code>
      * version of the secret and then removes it.
@@ -288,20 +282,11 @@ public class RotateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * For secrets that use a Lambda rotation function to rotate, the ARN of the Lambda rotation function.
-     * </p>
-     * <p>
-     * For secrets that use <i>managed rotation</i>, omit this field. For more information, see <a
-     * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotate-secrets_managed.html">Managed
-     * rotation</a> in the <i>Secrets Manager User Guide</i>.
+     * The ARN of the Lambda rotation function that can rotate the secret.
      * </p>
      * 
      * @param rotationLambdaARN
-     *        For secrets that use a Lambda rotation function to rotate, the ARN of the Lambda rotation function. </p>
-     *        <p>
-     *        For secrets that use <i>managed rotation</i>, omit this field. For more information, see <a
-     *        href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotate-secrets_managed.html">Managed
-     *        rotation</a> in the <i>Secrets Manager User Guide</i>.
+     *        The ARN of the Lambda rotation function that can rotate the secret.
      */
 
     public void setRotationLambdaARN(String rotationLambdaARN) {
@@ -310,19 +295,10 @@ public class RotateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * For secrets that use a Lambda rotation function to rotate, the ARN of the Lambda rotation function.
-     * </p>
-     * <p>
-     * For secrets that use <i>managed rotation</i>, omit this field. For more information, see <a
-     * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotate-secrets_managed.html">Managed
-     * rotation</a> in the <i>Secrets Manager User Guide</i>.
+     * The ARN of the Lambda rotation function that can rotate the secret.
      * </p>
      * 
-     * @return For secrets that use a Lambda rotation function to rotate, the ARN of the Lambda rotation function. </p>
-     *         <p>
-     *         For secrets that use <i>managed rotation</i>, omit this field. For more information, see <a
-     *         href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotate-secrets_managed.html">Managed
-     *         rotation</a> in the <i>Secrets Manager User Guide</i>.
+     * @return The ARN of the Lambda rotation function that can rotate the secret.
      */
 
     public String getRotationLambdaARN() {
@@ -331,20 +307,11 @@ public class RotateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * For secrets that use a Lambda rotation function to rotate, the ARN of the Lambda rotation function.
-     * </p>
-     * <p>
-     * For secrets that use <i>managed rotation</i>, omit this field. For more information, see <a
-     * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotate-secrets_managed.html">Managed
-     * rotation</a> in the <i>Secrets Manager User Guide</i>.
+     * The ARN of the Lambda rotation function that can rotate the secret.
      * </p>
      * 
      * @param rotationLambdaARN
-     *        For secrets that use a Lambda rotation function to rotate, the ARN of the Lambda rotation function. </p>
-     *        <p>
-     *        For secrets that use <i>managed rotation</i>, omit this field. For more information, see <a
-     *        href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotate-secrets_managed.html">Managed
-     *        rotation</a> in the <i>Secrets Manager User Guide</i>.
+     *        The ARN of the Lambda rotation function that can rotate the secret.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -399,8 +366,7 @@ public class RotateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
      * schedule is defined in <a>RotateSecretRequest$RotationRules</a>.
      * </p>
      * <p>
-     * For secrets that use a Lambda rotation function to rotate, if you don't immediately rotate the secret, Secrets
-     * Manager tests the rotation configuration by running the <a
+     * If you don't immediately rotate the secret, Secrets Manager tests the rotation configuration by running the <a
      * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotate-secrets_how.html">
      * <code>testSecret</code> step</a> of the Lambda rotation function. The test creates an <code>AWSPENDING</code>
      * version of the secret and then removes it.
@@ -413,9 +379,8 @@ public class RotateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        Specifies whether to rotate the secret immediately or wait until the next scheduled rotation window. The
      *        rotation schedule is defined in <a>RotateSecretRequest$RotationRules</a>.</p>
      *        <p>
-     *        For secrets that use a Lambda rotation function to rotate, if you don't immediately rotate the secret,
-     *        Secrets Manager tests the rotation configuration by running the <a
-     *        href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotate-secrets_how.html">
+     *        If you don't immediately rotate the secret, Secrets Manager tests the rotation configuration by running
+     *        the <a href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotate-secrets_how.html">
      *        <code>testSecret</code> step</a> of the Lambda rotation function. The test creates an
      *        <code>AWSPENDING</code> version of the secret and then removes it.
      *        </p>
@@ -433,8 +398,7 @@ public class RotateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
      * schedule is defined in <a>RotateSecretRequest$RotationRules</a>.
      * </p>
      * <p>
-     * For secrets that use a Lambda rotation function to rotate, if you don't immediately rotate the secret, Secrets
-     * Manager tests the rotation configuration by running the <a
+     * If you don't immediately rotate the secret, Secrets Manager tests the rotation configuration by running the <a
      * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotate-secrets_how.html">
      * <code>testSecret</code> step</a> of the Lambda rotation function. The test creates an <code>AWSPENDING</code>
      * version of the secret and then removes it.
@@ -446,9 +410,8 @@ public class RotateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
      * @return Specifies whether to rotate the secret immediately or wait until the next scheduled rotation window. The
      *         rotation schedule is defined in <a>RotateSecretRequest$RotationRules</a>.</p>
      *         <p>
-     *         For secrets that use a Lambda rotation function to rotate, if you don't immediately rotate the secret,
-     *         Secrets Manager tests the rotation configuration by running the <a
-     *         href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotate-secrets_how.html">
+     *         If you don't immediately rotate the secret, Secrets Manager tests the rotation configuration by running
+     *         the <a href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotate-secrets_how.html">
      *         <code>testSecret</code> step</a> of the Lambda rotation function. The test creates an
      *         <code>AWSPENDING</code> version of the secret and then removes it.
      *         </p>
@@ -466,8 +429,7 @@ public class RotateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
      * schedule is defined in <a>RotateSecretRequest$RotationRules</a>.
      * </p>
      * <p>
-     * For secrets that use a Lambda rotation function to rotate, if you don't immediately rotate the secret, Secrets
-     * Manager tests the rotation configuration by running the <a
+     * If you don't immediately rotate the secret, Secrets Manager tests the rotation configuration by running the <a
      * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotate-secrets_how.html">
      * <code>testSecret</code> step</a> of the Lambda rotation function. The test creates an <code>AWSPENDING</code>
      * version of the secret and then removes it.
@@ -480,9 +442,8 @@ public class RotateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        Specifies whether to rotate the secret immediately or wait until the next scheduled rotation window. The
      *        rotation schedule is defined in <a>RotateSecretRequest$RotationRules</a>.</p>
      *        <p>
-     *        For secrets that use a Lambda rotation function to rotate, if you don't immediately rotate the secret,
-     *        Secrets Manager tests the rotation configuration by running the <a
-     *        href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotate-secrets_how.html">
+     *        If you don't immediately rotate the secret, Secrets Manager tests the rotation configuration by running
+     *        the <a href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotate-secrets_how.html">
      *        <code>testSecret</code> step</a> of the Lambda rotation function. The test creates an
      *        <code>AWSPENDING</code> version of the secret and then removes it.
      *        </p>
@@ -502,8 +463,7 @@ public class RotateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
      * schedule is defined in <a>RotateSecretRequest$RotationRules</a>.
      * </p>
      * <p>
-     * For secrets that use a Lambda rotation function to rotate, if you don't immediately rotate the secret, Secrets
-     * Manager tests the rotation configuration by running the <a
+     * If you don't immediately rotate the secret, Secrets Manager tests the rotation configuration by running the <a
      * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotate-secrets_how.html">
      * <code>testSecret</code> step</a> of the Lambda rotation function. The test creates an <code>AWSPENDING</code>
      * version of the secret and then removes it.
@@ -515,9 +475,8 @@ public class RotateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
      * @return Specifies whether to rotate the secret immediately or wait until the next scheduled rotation window. The
      *         rotation schedule is defined in <a>RotateSecretRequest$RotationRules</a>.</p>
      *         <p>
-     *         For secrets that use a Lambda rotation function to rotate, if you don't immediately rotate the secret,
-     *         Secrets Manager tests the rotation configuration by running the <a
-     *         href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotate-secrets_how.html">
+     *         If you don't immediately rotate the secret, Secrets Manager tests the rotation configuration by running
+     *         the <a href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotate-secrets_how.html">
      *         <code>testSecret</code> step</a> of the Lambda rotation function. The test creates an
      *         <code>AWSPENDING</code> version of the secret and then removes it.
      *         </p>

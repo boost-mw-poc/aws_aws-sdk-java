@@ -28,6 +28,8 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class ListSecretsRequestMarshaller {
 
+    private static final MarshallingInfo<Boolean> INCLUDEPLANNEDDELETION_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("IncludePlannedDeletion").build();
     private static final MarshallingInfo<Integer> MAXRESULTS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MaxResults").build();
     private static final MarshallingInfo<String> NEXTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
@@ -53,6 +55,7 @@ public class ListSecretsRequestMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(listSecretsRequest.getIncludePlannedDeletion(), INCLUDEPLANNEDDELETION_BINDING);
             protocolMarshaller.marshall(listSecretsRequest.getMaxResults(), MAXRESULTS_BINDING);
             protocolMarshaller.marshall(listSecretsRequest.getNextToken(), NEXTTOKEN_BINDING);
             protocolMarshaller.marshall(listSecretsRequest.getFilters(), FILTERS_BINDING);

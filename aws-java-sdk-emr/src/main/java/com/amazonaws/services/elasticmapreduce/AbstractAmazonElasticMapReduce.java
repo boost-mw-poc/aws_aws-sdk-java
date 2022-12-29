@@ -146,6 +146,11 @@ public class AbstractAmazonElasticMapReduce implements AmazonElasticMapReduce {
     }
 
     @Override
+    public GetClusterSessionCredentialsResult getClusterSessionCredentials(GetClusterSessionCredentialsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetManagedScalingPolicyResult getManagedScalingPolicy(GetManagedScalingPolicyRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

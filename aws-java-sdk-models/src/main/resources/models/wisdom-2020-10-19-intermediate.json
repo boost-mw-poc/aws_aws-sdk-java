@@ -20,7 +20,7 @@
     "customServiceMetadata" : null,
     "customServiceNameForRequest" : null,
     "customSignerProvider" : null,
-    "deprecatedSuppressions" : [ "ClientMutationMethods", "ClientConstructors", "EnumSetterOverload" ],
+    "deprecatedSuppressions" : [ "ClientMutationMethods", "EnumSetterOverload", "ClientConstructors" ],
     "emitLegacyEnumSetterFor" : null,
     "operationModifiers" : null,
     "operationsWithResponseStreamContentLengthValidation" : null,
@@ -15520,7 +15520,7 @@
         "xmlNameSpaceUri" : null
       }, {
         "c2jName" : "uploadId",
-        "c2jShape" : "NonEmptyString",
+        "c2jShape" : "UploadId",
         "deprecated" : false,
         "documentation" : "<p>A pointer to the uploaded asset. This value is returned by <a href=\"https://docs.aws.amazon.com/wisdom/latest/APIReference/API_StartContentUpload.html\">StartContentUpload</a>.</p>",
         "endpointDiscoveryId" : false,
@@ -16249,7 +16249,7 @@
         },
         "UploadId" : {
           "c2jName" : "uploadId",
-          "c2jShape" : "NonEmptyString",
+          "c2jShape" : "UploadId",
           "deprecated" : false,
           "documentation" : "<p>A pointer to the uploaded asset. This value is returned by <a href=\"https://docs.aws.amazon.com/wisdom/latest/APIReference/API_StartContentUpload.html\">StartContentUpload</a>.</p>",
           "endpointDiscoveryId" : false,
@@ -45082,7 +45082,7 @@
         "xmlNameSpaceUri" : null
       }, {
         "c2jName" : "uploadId",
-        "c2jShape" : "NonEmptyString",
+        "c2jShape" : "UploadId",
         "deprecated" : false,
         "documentation" : "<p>The identifier of the upload.</p>",
         "endpointDiscoveryId" : false,
@@ -45445,7 +45445,7 @@
         },
         "UploadId" : {
           "c2jName" : "uploadId",
-          "c2jShape" : "NonEmptyString",
+          "c2jShape" : "UploadId",
           "deprecated" : false,
           "documentation" : "<p>The identifier of the upload.</p>",
           "endpointDiscoveryId" : false,
@@ -47531,7 +47531,7 @@
         "xmlNameSpaceUri" : null
       }, {
         "c2jName" : "uploadId",
-        "c2jShape" : "NonEmptyString",
+        "c2jShape" : "UploadId",
         "deprecated" : false,
         "documentation" : "<p>A pointer to the uploaded asset. This value is returned by <a href=\"https://docs.aws.amazon.com/wisdom/latest/APIReference/API_StartContentUpload.html\">StartContentUpload</a>. </p>",
         "endpointDiscoveryId" : false,
@@ -48176,7 +48176,7 @@
         },
         "UploadId" : {
           "c2jName" : "uploadId",
-          "c2jShape" : "NonEmptyString",
+          "c2jShape" : "UploadId",
           "deprecated" : false,
           "documentation" : "<p>A pointer to the uploaded asset. This value is returned by <a href=\"https://docs.aws.amazon.com/wisdom/latest/APIReference/API_StartContentUpload.html\">StartContentUpload</a>. </p>",
           "endpointDiscoveryId" : false,

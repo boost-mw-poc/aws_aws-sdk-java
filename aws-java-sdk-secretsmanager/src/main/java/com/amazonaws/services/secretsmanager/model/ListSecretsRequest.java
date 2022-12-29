@@ -25,6 +25,7 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ListSecretsRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
+    private Boolean includePlannedDeletion;
     /**
      * <p>
      * The number of results to include in the response.
@@ -54,6 +55,40 @@ public class ListSecretsRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      */
     private String sortOrder;
+
+    /**
+     * @param includePlannedDeletion
+     */
+
+    public void setIncludePlannedDeletion(Boolean includePlannedDeletion) {
+        this.includePlannedDeletion = includePlannedDeletion;
+    }
+
+    /**
+     * @return
+     */
+
+    public Boolean getIncludePlannedDeletion() {
+        return this.includePlannedDeletion;
+    }
+
+    /**
+     * @param includePlannedDeletion
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListSecretsRequest withIncludePlannedDeletion(Boolean includePlannedDeletion) {
+        setIncludePlannedDeletion(includePlannedDeletion);
+        return this;
+    }
+
+    /**
+     * @return
+     */
+
+    public Boolean isIncludePlannedDeletion() {
+        return this.includePlannedDeletion;
+    }
 
     /**
      * <p>
@@ -303,6 +338,8 @@ public class ListSecretsRequest extends com.amazonaws.AmazonWebServiceRequest im
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getIncludePlannedDeletion() != null)
+            sb.append("IncludePlannedDeletion: ").append(getIncludePlannedDeletion()).append(",");
         if (getMaxResults() != null)
             sb.append("MaxResults: ").append(getMaxResults()).append(",");
         if (getNextToken() != null)
@@ -325,6 +362,10 @@ public class ListSecretsRequest extends com.amazonaws.AmazonWebServiceRequest im
         if (obj instanceof ListSecretsRequest == false)
             return false;
         ListSecretsRequest other = (ListSecretsRequest) obj;
+        if (other.getIncludePlannedDeletion() == null ^ this.getIncludePlannedDeletion() == null)
+            return false;
+        if (other.getIncludePlannedDeletion() != null && other.getIncludePlannedDeletion().equals(this.getIncludePlannedDeletion()) == false)
+            return false;
         if (other.getMaxResults() == null ^ this.getMaxResults() == null)
             return false;
         if (other.getMaxResults() != null && other.getMaxResults().equals(this.getMaxResults()) == false)
@@ -349,6 +390,7 @@ public class ListSecretsRequest extends com.amazonaws.AmazonWebServiceRequest im
         final int prime = 31;
         int hashCode = 1;
 
+        hashCode = prime * hashCode + ((getIncludePlannedDeletion() == null) ? 0 : getIncludePlannedDeletion().hashCode());
         hashCode = prime * hashCode + ((getMaxResults() == null) ? 0 : getMaxResults().hashCode());
         hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
         hashCode = prime * hashCode + ((getFilters() == null) ? 0 : getFilters().hashCode());

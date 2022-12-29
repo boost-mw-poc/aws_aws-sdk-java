@@ -220,7 +220,8 @@ public class RunJobFlowRequest extends com.amazonaws.AmazonWebServiceRequest imp
     private String jobFlowRole;
     /**
      * <p>
-     * The IAM role that Amazon EMR assumes in order to access Amazon Web Services resources on your behalf.
+     * The IAM role that Amazon EMR assumes in order to access Amazon Web Services resources on your behalf. If you've
+     * created a custom service role path, you must specify it for the service role when you launch your cluster.
      * </p>
      */
     private String serviceRole;
@@ -1959,11 +1960,14 @@ public class RunJobFlowRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The IAM role that Amazon EMR assumes in order to access Amazon Web Services resources on your behalf.
+     * The IAM role that Amazon EMR assumes in order to access Amazon Web Services resources on your behalf. If you've
+     * created a custom service role path, you must specify it for the service role when you launch your cluster.
      * </p>
      * 
      * @param serviceRole
-     *        The IAM role that Amazon EMR assumes in order to access Amazon Web Services resources on your behalf.
+     *        The IAM role that Amazon EMR assumes in order to access Amazon Web Services resources on your behalf. If
+     *        you've created a custom service role path, you must specify it for the service role when you launch your
+     *        cluster.
      */
 
     public void setServiceRole(String serviceRole) {
@@ -1972,10 +1976,13 @@ public class RunJobFlowRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The IAM role that Amazon EMR assumes in order to access Amazon Web Services resources on your behalf.
+     * The IAM role that Amazon EMR assumes in order to access Amazon Web Services resources on your behalf. If you've
+     * created a custom service role path, you must specify it for the service role when you launch your cluster.
      * </p>
      * 
-     * @return The IAM role that Amazon EMR assumes in order to access Amazon Web Services resources on your behalf.
+     * @return The IAM role that Amazon EMR assumes in order to access Amazon Web Services resources on your behalf. If
+     *         you've created a custom service role path, you must specify it for the service role when you launch your
+     *         cluster.
      */
 
     public String getServiceRole() {
@@ -1984,11 +1991,14 @@ public class RunJobFlowRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The IAM role that Amazon EMR assumes in order to access Amazon Web Services resources on your behalf.
+     * The IAM role that Amazon EMR assumes in order to access Amazon Web Services resources on your behalf. If you've
+     * created a custom service role path, you must specify it for the service role when you launch your cluster.
      * </p>
      * 
      * @param serviceRole
-     *        The IAM role that Amazon EMR assumes in order to access Amazon Web Services resources on your behalf.
+     *        The IAM role that Amazon EMR assumes in order to access Amazon Web Services resources on your behalf. If
+     *        you've created a custom service role path, you must specify it for the service role when you launch your
+     *        cluster.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

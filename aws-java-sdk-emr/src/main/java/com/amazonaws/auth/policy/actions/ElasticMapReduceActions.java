@@ -65,6 +65,8 @@ public enum ElasticMapReduceActions implements Action {
     GetAutoTerminationPolicy("elasticmapreduce:GetAutoTerminationPolicy"),
     /** Action for the GetBlockPublicAccessConfiguration operation. */
     GetBlockPublicAccessConfiguration("elasticmapreduce:GetBlockPublicAccessConfiguration"),
+    /** Action for the GetClusterSessionCredentials operation. */
+    GetClusterSessionCredentials("elasticmapreduce:GetClusterSessionCredentials"),
     /** Action for the GetManagedScalingPolicy operation. */
     GetManagedScalingPolicy("elasticmapreduce:GetManagedScalingPolicy"),
     /** Action for the GetStudioSessionMapping operation. */

@@ -317,6 +317,19 @@ public class AbstractAmazonElasticMapReduceAsync extends AbstractAmazonElasticMa
     }
 
     @Override
+    public java.util.concurrent.Future<GetClusterSessionCredentialsResult> getClusterSessionCredentialsAsync(GetClusterSessionCredentialsRequest request) {
+
+        return getClusterSessionCredentialsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetClusterSessionCredentialsResult> getClusterSessionCredentialsAsync(GetClusterSessionCredentialsRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetClusterSessionCredentialsRequest, GetClusterSessionCredentialsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetManagedScalingPolicyResult> getManagedScalingPolicyAsync(GetManagedScalingPolicyRequest request) {
 
         return getManagedScalingPolicyAsync(request, null);

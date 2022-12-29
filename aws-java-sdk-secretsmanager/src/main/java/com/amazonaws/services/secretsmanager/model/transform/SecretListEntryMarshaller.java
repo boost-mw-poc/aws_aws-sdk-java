@@ -51,6 +51,8 @@ public class SecretListEntryMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LastAccessedDate").timestampFormat("unixTimestamp").build();
     private static final MarshallingInfo<java.util.Date> DELETEDDATE_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DeletedDate").timestampFormat("unixTimestamp").build();
+    private static final MarshallingInfo<java.util.Date> NEXTROTATIONDATE_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("NextRotationDate").timestampFormat("unixTimestamp").build();
     private static final MarshallingInfo<List> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Tags").build();
     private static final MarshallingInfo<Map> SECRETVERSIONSTOSTAGES_BINDING = MarshallingInfo.builder(MarshallingType.MAP)
@@ -89,6 +91,7 @@ public class SecretListEntryMarshaller {
             protocolMarshaller.marshall(secretListEntry.getLastChangedDate(), LASTCHANGEDDATE_BINDING);
             protocolMarshaller.marshall(secretListEntry.getLastAccessedDate(), LASTACCESSEDDATE_BINDING);
             protocolMarshaller.marshall(secretListEntry.getDeletedDate(), DELETEDDATE_BINDING);
+            protocolMarshaller.marshall(secretListEntry.getNextRotationDate(), NEXTROTATIONDATE_BINDING);
             protocolMarshaller.marshall(secretListEntry.getTags(), TAGS_BINDING);
             protocolMarshaller.marshall(secretListEntry.getSecretVersionsToStages(), SECRETVERSIONSTOSTAGES_BINDING);
             protocolMarshaller.marshall(secretListEntry.getOwningService(), OWNINGSERVICE_BINDING);

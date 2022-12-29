@@ -92,6 +92,10 @@ public class SecretListEntryJsonUnmarshaller implements Unmarshaller<SecretListE
                     context.nextToken();
                     secretListEntry.setDeletedDate(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
                 }
+                if (context.testExpression("NextRotationDate", targetDepth)) {
+                    context.nextToken();
+                    secretListEntry.setNextRotationDate(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
+                }
                 if (context.testExpression("Tags", targetDepth)) {
                     context.nextToken();
                     secretListEntry.setTags(new ListUnmarshaller<Tag>(TagJsonUnmarshaller.getInstance())
