@@ -157,6 +157,20 @@ public class CalculateRouteMatrixRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      * </li>
      * </ul>
+     * <note>
+     * <p>
+     * <code>Bicycle</code> or <code>Motorcycle</code> are only valid when using <code>Grab</code> as a data provider,
+     * and only within Southeast Asia.
+     * </p>
+     * <p>
+     * <code>Truck</code> is not available for Grab.
+     * </p>
+     * <p>
+     * For more information about using Grab as a data provider, see <a
+     * href="https://docs.aws.amazon.com/location/latest/developerguide/grab.html">GrabMaps</a> in the <i>Amazon
+     * Location Service Developer Guide</i>.
+     * </p>
+     * </note>
      * <p>
      * Default Value: <code>Car</code>
      * </p>
@@ -1061,6 +1075,20 @@ public class CalculateRouteMatrixRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      * </li>
      * </ul>
+     * <note>
+     * <p>
+     * <code>Bicycle</code> or <code>Motorcycle</code> are only valid when using <code>Grab</code> as a data provider,
+     * and only within Southeast Asia.
+     * </p>
+     * <p>
+     * <code>Truck</code> is not available for Grab.
+     * </p>
+     * <p>
+     * For more information about using Grab as a data provider, see <a
+     * href="https://docs.aws.amazon.com/location/latest/developerguide/grab.html">GrabMaps</a> in the <i>Amazon
+     * Location Service Developer Guide</i>.
+     * </p>
+     * </note>
      * <p>
      * Default Value: <code>Car</code>
      * </p>
@@ -1083,6 +1111,20 @@ public class CalculateRouteMatrixRequest extends com.amazonaws.AmazonWebServiceR
      *        </p>
      *        </li>
      *        </ul>
+     *        <note>
+     *        <p>
+     *        <code>Bicycle</code> or <code>Motorcycle</code> are only valid when using <code>Grab</code> as a data
+     *        provider, and only within Southeast Asia.
+     *        </p>
+     *        <p>
+     *        <code>Truck</code> is not available for Grab.
+     *        </p>
+     *        <p>
+     *        For more information about using Grab as a data provider, see <a
+     *        href="https://docs.aws.amazon.com/location/latest/developerguide/grab.html">GrabMaps</a> in the <i>Amazon
+     *        Location Service Developer Guide</i>.
+     *        </p>
+     *        </note>
      *        <p>
      *        Default Value: <code>Car</code>
      * @see TravelMode
@@ -1112,6 +1154,20 @@ public class CalculateRouteMatrixRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      * </li>
      * </ul>
+     * <note>
+     * <p>
+     * <code>Bicycle</code> or <code>Motorcycle</code> are only valid when using <code>Grab</code> as a data provider,
+     * and only within Southeast Asia.
+     * </p>
+     * <p>
+     * <code>Truck</code> is not available for Grab.
+     * </p>
+     * <p>
+     * For more information about using Grab as a data provider, see <a
+     * href="https://docs.aws.amazon.com/location/latest/developerguide/grab.html">GrabMaps</a> in the <i>Amazon
+     * Location Service Developer Guide</i>.
+     * </p>
+     * </note>
      * <p>
      * Default Value: <code>Car</code>
      * </p>
@@ -1133,6 +1189,20 @@ public class CalculateRouteMatrixRequest extends com.amazonaws.AmazonWebServiceR
      *         </p>
      *         </li>
      *         </ul>
+     *         <note>
+     *         <p>
+     *         <code>Bicycle</code> or <code>Motorcycle</code> are only valid when using <code>Grab</code> as a data
+     *         provider, and only within Southeast Asia.
+     *         </p>
+     *         <p>
+     *         <code>Truck</code> is not available for Grab.
+     *         </p>
+     *         <p>
+     *         For more information about using Grab as a data provider, see <a
+     *         href="https://docs.aws.amazon.com/location/latest/developerguide/grab.html">GrabMaps</a> in the <i>Amazon
+     *         Location Service Developer Guide</i>.
+     *         </p>
+     *         </note>
      *         <p>
      *         Default Value: <code>Car</code>
      * @see TravelMode
@@ -1162,6 +1232,20 @@ public class CalculateRouteMatrixRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      * </li>
      * </ul>
+     * <note>
+     * <p>
+     * <code>Bicycle</code> or <code>Motorcycle</code> are only valid when using <code>Grab</code> as a data provider,
+     * and only within Southeast Asia.
+     * </p>
+     * <p>
+     * <code>Truck</code> is not available for Grab.
+     * </p>
+     * <p>
+     * For more information about using Grab as a data provider, see <a
+     * href="https://docs.aws.amazon.com/location/latest/developerguide/grab.html">GrabMaps</a> in the <i>Amazon
+     * Location Service Developer Guide</i>.
+     * </p>
+     * </note>
      * <p>
      * Default Value: <code>Car</code>
      * </p>
@@ -1184,6 +1268,20 @@ public class CalculateRouteMatrixRequest extends com.amazonaws.AmazonWebServiceR
      *        </p>
      *        </li>
      *        </ul>
+     *        <note>
+     *        <p>
+     *        <code>Bicycle</code> or <code>Motorcycle</code> are only valid when using <code>Grab</code> as a data
+     *        provider, and only within Southeast Asia.
+     *        </p>
+     *        <p>
+     *        <code>Truck</code> is not available for Grab.
+     *        </p>
+     *        <p>
+     *        For more information about using Grab as a data provider, see <a
+     *        href="https://docs.aws.amazon.com/location/latest/developerguide/grab.html">GrabMaps</a> in the <i>Amazon
+     *        Location Service Developer Guide</i>.
+     *        </p>
+     *        </note>
      *        <p>
      *        Default Value: <code>Car</code>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -1215,6 +1313,20 @@ public class CalculateRouteMatrixRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      * </li>
      * </ul>
+     * <note>
+     * <p>
+     * <code>Bicycle</code> or <code>Motorcycle</code> are only valid when using <code>Grab</code> as a data provider,
+     * and only within Southeast Asia.
+     * </p>
+     * <p>
+     * <code>Truck</code> is not available for Grab.
+     * </p>
+     * <p>
+     * For more information about using Grab as a data provider, see <a
+     * href="https://docs.aws.amazon.com/location/latest/developerguide/grab.html">GrabMaps</a> in the <i>Amazon
+     * Location Service Developer Guide</i>.
+     * </p>
+     * </note>
      * <p>
      * Default Value: <code>Car</code>
      * </p>
@@ -1237,6 +1349,20 @@ public class CalculateRouteMatrixRequest extends com.amazonaws.AmazonWebServiceR
      *        </p>
      *        </li>
      *        </ul>
+     *        <note>
+     *        <p>
+     *        <code>Bicycle</code> or <code>Motorcycle</code> are only valid when using <code>Grab</code> as a data
+     *        provider, and only within Southeast Asia.
+     *        </p>
+     *        <p>
+     *        <code>Truck</code> is not available for Grab.
+     *        </p>
+     *        <p>
+     *        For more information about using Grab as a data provider, see <a
+     *        href="https://docs.aws.amazon.com/location/latest/developerguide/grab.html">GrabMaps</a> in the <i>Amazon
+     *        Location Service Developer Guide</i>.
+     *        </p>
+     *        </note>
      *        <p>
      *        Default Value: <code>Car</code>
      * @return Returns a reference to this object so that method calls can be chained together.

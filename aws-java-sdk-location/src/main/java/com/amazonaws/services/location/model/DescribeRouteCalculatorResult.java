@@ -70,6 +70,11 @@ public class DescribeRouteCalculatorResult extends com.amazonaws.AmazonWebServic
      * </li>
      * <li>
      * <p>
+     * <code>Grab</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>Here</code>
      * </p>
      * </li>
@@ -344,6 +349,11 @@ public class DescribeRouteCalculatorResult extends com.amazonaws.AmazonWebServic
      * </li>
      * <li>
      * <p>
+     * <code>Grab</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>Here</code>
      * </p>
      * </li>
@@ -360,6 +370,11 @@ public class DescribeRouteCalculatorResult extends com.amazonaws.AmazonWebServic
      *        <li>
      *        <p>
      *        <code>Esri</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>Grab</code>
      *        </p>
      *        </li>
      *        <li>
@@ -390,6 +405,11 @@ public class DescribeRouteCalculatorResult extends com.amazonaws.AmazonWebServic
      * </li>
      * <li>
      * <p>
+     * <code>Grab</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>Here</code>
      * </p>
      * </li>
@@ -405,6 +425,11 @@ public class DescribeRouteCalculatorResult extends com.amazonaws.AmazonWebServic
      *         <li>
      *         <p>
      *         <code>Esri</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>Grab</code>
      *         </p>
      *         </li>
      *         <li>
@@ -435,6 +460,11 @@ public class DescribeRouteCalculatorResult extends com.amazonaws.AmazonWebServic
      * </li>
      * <li>
      * <p>
+     * <code>Grab</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>Here</code>
      * </p>
      * </li>
@@ -451,6 +481,11 @@ public class DescribeRouteCalculatorResult extends com.amazonaws.AmazonWebServic
      *        <li>
      *        <p>
      *        <code>Esri</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>Grab</code>
      *        </p>
      *        </li>
      *        <li>

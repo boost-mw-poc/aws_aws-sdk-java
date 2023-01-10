@@ -1,3 +1,12 @@
+# __1.12.382__ __2023-01-10__
+## __Amazon Location Service__
+  - ### Features
+    - This release adds support for two new route travel models, Bicycle and Motorcycle which can be used with Grab data source.
+
+## __Amazon Relational Database Service__
+  - ### Features
+    - This release adds support for configuring allocated storage on the CreateDBInstanceReadReplica, RestoreDBInstanceFromDBSnapshot, and RestoreDBInstanceToPointInTime APIs.
+
 # __1.12.381__ __2023-01-09__
 ## __AWS Network Firewall__
   - ### Features

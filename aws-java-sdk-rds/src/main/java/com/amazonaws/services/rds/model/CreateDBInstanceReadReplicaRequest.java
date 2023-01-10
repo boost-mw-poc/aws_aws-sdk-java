@@ -752,6 +752,19 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      * </p>
      */
     private Boolean enableCustomerOwnedIp;
+    /**
+     * <p>
+     * The amount of storage (in gibibytes) to allocate initially for the read replica. Follow the allocation rules
+     * specified in <code>CreateDBInstance</code>.
+     * </p>
+     * <note>
+     * <p>
+     * Be sure to allocate enough memory for your read replica so that the create operation can succeed. You can also
+     * allocate additional memory for future growth.
+     * </p>
+     * </note>
+     */
+    private Integer allocatedStorage;
     /** The region where the source instance is located. */
     private String sourceRegion;
 
@@ -5749,6 +5762,82 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
     }
 
     /**
+     * <p>
+     * The amount of storage (in gibibytes) to allocate initially for the read replica. Follow the allocation rules
+     * specified in <code>CreateDBInstance</code>.
+     * </p>
+     * <note>
+     * <p>
+     * Be sure to allocate enough memory for your read replica so that the create operation can succeed. You can also
+     * allocate additional memory for future growth.
+     * </p>
+     * </note>
+     * 
+     * @param allocatedStorage
+     *        The amount of storage (in gibibytes) to allocate initially for the read replica. Follow the allocation
+     *        rules specified in <code>CreateDBInstance</code>.</p> <note>
+     *        <p>
+     *        Be sure to allocate enough memory for your read replica so that the create operation can succeed. You can
+     *        also allocate additional memory for future growth.
+     *        </p>
+     */
+
+    public void setAllocatedStorage(Integer allocatedStorage) {
+        this.allocatedStorage = allocatedStorage;
+    }
+
+    /**
+     * <p>
+     * The amount of storage (in gibibytes) to allocate initially for the read replica. Follow the allocation rules
+     * specified in <code>CreateDBInstance</code>.
+     * </p>
+     * <note>
+     * <p>
+     * Be sure to allocate enough memory for your read replica so that the create operation can succeed. You can also
+     * allocate additional memory for future growth.
+     * </p>
+     * </note>
+     * 
+     * @return The amount of storage (in gibibytes) to allocate initially for the read replica. Follow the allocation
+     *         rules specified in <code>CreateDBInstance</code>.</p> <note>
+     *         <p>
+     *         Be sure to allocate enough memory for your read replica so that the create operation can succeed. You can
+     *         also allocate additional memory for future growth.
+     *         </p>
+     */
+
+    public Integer getAllocatedStorage() {
+        return this.allocatedStorage;
+    }
+
+    /**
+     * <p>
+     * The amount of storage (in gibibytes) to allocate initially for the read replica. Follow the allocation rules
+     * specified in <code>CreateDBInstance</code>.
+     * </p>
+     * <note>
+     * <p>
+     * Be sure to allocate enough memory for your read replica so that the create operation can succeed. You can also
+     * allocate additional memory for future growth.
+     * </p>
+     * </note>
+     * 
+     * @param allocatedStorage
+     *        The amount of storage (in gibibytes) to allocate initially for the read replica. Follow the allocation
+     *        rules specified in <code>CreateDBInstance</code>.</p> <note>
+     *        <p>
+     *        Be sure to allocate enough memory for your read replica so that the create operation can succeed. You can
+     *        also allocate additional memory for future growth.
+     *        </p>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateDBInstanceReadReplicaRequest withAllocatedStorage(Integer allocatedStorage) {
+        setAllocatedStorage(allocatedStorage);
+        return this;
+    }
+
+    /**
      * The region where the source instance is located.
      * 
      * @param sourceRegion
@@ -5866,6 +5955,8 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
             sb.append("StorageThroughput: ").append(getStorageThroughput()).append(",");
         if (getEnableCustomerOwnedIp() != null)
             sb.append("EnableCustomerOwnedIp: ").append(getEnableCustomerOwnedIp()).append(",");
+        if (getAllocatedStorage() != null)
+            sb.append("AllocatedStorage: ").append(getAllocatedStorage()).append(",");
         if (getSourceRegion() != null)
             sb.append("SourceRegion: ").append(getSourceRegion());
         sb.append("}");
@@ -6028,6 +6119,10 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
             return false;
         if (other.getEnableCustomerOwnedIp() != null && other.getEnableCustomerOwnedIp().equals(this.getEnableCustomerOwnedIp()) == false)
             return false;
+        if (other.getAllocatedStorage() == null ^ this.getAllocatedStorage() == null)
+            return false;
+        if (other.getAllocatedStorage() != null && other.getAllocatedStorage().equals(this.getAllocatedStorage()) == false)
+            return false;
         if (other.getSourceRegion() == null ^ this.getSourceRegion() == null)
             return false;
         if (other.getSourceRegion() != null && other.getSourceRegion().equals(this.getSourceRegion()) == false)
@@ -6076,6 +6171,7 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
         hashCode = prime * hashCode + ((getNetworkType() == null) ? 0 : getNetworkType().hashCode());
         hashCode = prime * hashCode + ((getStorageThroughput() == null) ? 0 : getStorageThroughput().hashCode());
         hashCode = prime * hashCode + ((getEnableCustomerOwnedIp() == null) ? 0 : getEnableCustomerOwnedIp().hashCode());
+        hashCode = prime * hashCode + ((getAllocatedStorage() == null) ? 0 : getAllocatedStorage().hashCode());
         hashCode = prime * hashCode + ((getSourceRegion() == null) ? 0 : getSourceRegion().hashCode());
         return hashCode;
     }

@@ -36,7 +36,7 @@ public class SearchForSuggestionsResult implements Serializable, Cloneable, Stru
      * <note>
      * <p>
      * For <code>SearchPlaceIndexForSuggestions</code> operations, the <code>PlaceId</code> is returned by place indexes
-     * that use HERE or Esri as data providers.
+     * that use Esri, Grab, or HERE as data providers.
      * </p>
      * </note>
      */
@@ -56,7 +56,7 @@ public class SearchForSuggestionsResult implements Serializable, Cloneable, Stru
      * <note>
      * <p>
      * For <code>SearchPlaceIndexForSuggestions</code> operations, the <code>PlaceId</code> is returned by place indexes
-     * that use HERE or Esri as data providers.
+     * that use Esri, Grab, or HERE as data providers.
      * </p>
      * </note>
      * 
@@ -65,7 +65,7 @@ public class SearchForSuggestionsResult implements Serializable, Cloneable, Stru
      *        place again later.</p> <note>
      *        <p>
      *        For <code>SearchPlaceIndexForSuggestions</code> operations, the <code>PlaceId</code> is returned by place
-     *        indexes that use HERE or Esri as data providers.
+     *        indexes that use Esri, Grab, or HERE as data providers.
      *        </p>
      */
 
@@ -81,7 +81,7 @@ public class SearchForSuggestionsResult implements Serializable, Cloneable, Stru
      * <note>
      * <p>
      * For <code>SearchPlaceIndexForSuggestions</code> operations, the <code>PlaceId</code> is returned by place indexes
-     * that use HERE or Esri as data providers.
+     * that use Esri, Grab, or HERE as data providers.
      * </p>
      * </note>
      * 
@@ -89,7 +89,7 @@ public class SearchForSuggestionsResult implements Serializable, Cloneable, Stru
      *         place again later.</p> <note>
      *         <p>
      *         For <code>SearchPlaceIndexForSuggestions</code> operations, the <code>PlaceId</code> is returned by place
-     *         indexes that use HERE or Esri as data providers.
+     *         indexes that use Esri, Grab, or HERE as data providers.
      *         </p>
      */
 
@@ -105,7 +105,7 @@ public class SearchForSuggestionsResult implements Serializable, Cloneable, Stru
      * <note>
      * <p>
      * For <code>SearchPlaceIndexForSuggestions</code> operations, the <code>PlaceId</code> is returned by place indexes
-     * that use HERE or Esri as data providers.
+     * that use Esri, Grab, or HERE as data providers.
      * </p>
      * </note>
      * 
@@ -114,7 +114,7 @@ public class SearchForSuggestionsResult implements Serializable, Cloneable, Stru
      *        place again later.</p> <note>
      *        <p>
      *        For <code>SearchPlaceIndexForSuggestions</code> operations, the <code>PlaceId</code> is returned by place
-     *        indexes that use HERE or Esri as data providers.
+     *        indexes that use Esri, Grab, or HERE as data providers.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */

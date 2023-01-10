@@ -22,7 +22,9 @@ public enum TravelMode {
 
     Car("Car"),
     Truck("Truck"),
-    Walking("Walking");
+    Walking("Walking"),
+    Bicycle("Bicycle"),
+    Motorcycle("Motorcycle");
 
     private String value;
 

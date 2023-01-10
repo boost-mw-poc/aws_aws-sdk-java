@@ -6846,8 +6846,10 @@ public interface AmazonRDSAsync extends AmazonRDS {
     /**
      * <p>
      * Starts a database activity stream to monitor activity on the database. For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/DBActivityStreams.html">Database Activity
-     * Streams</a> in the <i>Amazon Aurora User Guide</i>.
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/DBActivityStreams.html"> Monitoring Amazon
+     * Aurora with Database Activity Streams</a> in the <i>Amazon Aurora User Guide</i> or <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/DBActivityStreams.html"> Monitoring Amazon RDS with
+     * Database Activity Streams</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * 
      * @param startActivityStreamRequest
@@ -6861,8 +6863,10 @@ public interface AmazonRDSAsync extends AmazonRDS {
     /**
      * <p>
      * Starts a database activity stream to monitor activity on the database. For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/DBActivityStreams.html">Database Activity
-     * Streams</a> in the <i>Amazon Aurora User Guide</i>.
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/DBActivityStreams.html"> Monitoring Amazon
+     * Aurora with Database Activity Streams</a> in the <i>Amazon Aurora User Guide</i> or <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/DBActivityStreams.html"> Monitoring Amazon RDS with
+     * Database Activity Streams</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * 
      * @param startActivityStreamRequest
@@ -7081,8 +7085,10 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * </p>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/DBActivityStreams.html">Database Activity
-     * Streams</a> in the <i>Amazon Aurora User Guide</i>.
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/DBActivityStreams.html"> Monitoring Amazon
+     * Aurora with Database Activity Streams</a> in the <i>Amazon Aurora User Guide</i> or <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/DBActivityStreams.html"> Monitoring Amazon RDS with
+     * Database Activity Streams</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * 
      * @param stopActivityStreamRequest
@@ -7100,8 +7106,10 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * </p>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/DBActivityStreams.html">Database Activity
-     * Streams</a> in the <i>Amazon Aurora User Guide</i>.
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/DBActivityStreams.html"> Monitoring Amazon
+     * Aurora with Database Activity Streams</a> in the <i>Amazon Aurora User Guide</i> or <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/DBActivityStreams.html"> Monitoring Amazon RDS with
+     * Database Activity Streams</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * 
      * @param stopActivityStreamRequest

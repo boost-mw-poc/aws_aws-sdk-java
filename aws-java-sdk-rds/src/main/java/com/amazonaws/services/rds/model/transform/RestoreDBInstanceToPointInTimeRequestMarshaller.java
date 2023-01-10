@@ -254,6 +254,10 @@ public class RestoreDBInstanceToPointInTimeRequestMarshaller implements
             request.addParameter("StorageThroughput", StringUtils.fromInteger(restoreDBInstanceToPointInTimeRequest.getStorageThroughput()));
         }
 
+        if (restoreDBInstanceToPointInTimeRequest.getAllocatedStorage() != null) {
+            request.addParameter("AllocatedStorage", StringUtils.fromInteger(restoreDBInstanceToPointInTimeRequest.getAllocatedStorage()));
+        }
+
         return request;
     }
 

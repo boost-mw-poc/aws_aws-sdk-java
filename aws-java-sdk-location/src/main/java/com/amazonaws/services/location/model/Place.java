@@ -104,7 +104,7 @@ public class Place implements Serializable, Cloneable, StructuredPojo {
     private String street;
     /**
      * <p>
-     * A country, or an area that's part of a larger region. For example, <code>Metro Vancouver</code>.
+     * A county, or an area that's part of a larger region. For example, <code>Metro Vancouver</code>.
      * </p>
      */
     private String subRegion;
@@ -642,11 +642,11 @@ public class Place implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A country, or an area that's part of a larger region. For example, <code>Metro Vancouver</code>.
+     * A county, or an area that's part of a larger region. For example, <code>Metro Vancouver</code>.
      * </p>
      * 
      * @param subRegion
-     *        A country, or an area that's part of a larger region. For example, <code>Metro Vancouver</code>.
+     *        A county, or an area that's part of a larger region. For example, <code>Metro Vancouver</code>.
      */
 
     public void setSubRegion(String subRegion) {
@@ -655,10 +655,10 @@ public class Place implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A country, or an area that's part of a larger region. For example, <code>Metro Vancouver</code>.
+     * A county, or an area that's part of a larger region. For example, <code>Metro Vancouver</code>.
      * </p>
      * 
-     * @return A country, or an area that's part of a larger region. For example, <code>Metro Vancouver</code>.
+     * @return A county, or an area that's part of a larger region. For example, <code>Metro Vancouver</code>.
      */
 
     public String getSubRegion() {
@@ -667,11 +667,11 @@ public class Place implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A country, or an area that's part of a larger region. For example, <code>Metro Vancouver</code>.
+     * A county, or an area that's part of a larger region. For example, <code>Metro Vancouver</code>.
      * </p>
      * 
      * @param subRegion
-     *        A country, or an area that's part of a larger region. For example, <code>Metro Vancouver</code>.
+     *        A county, or an area that's part of a larger region. For example, <code>Metro Vancouver</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

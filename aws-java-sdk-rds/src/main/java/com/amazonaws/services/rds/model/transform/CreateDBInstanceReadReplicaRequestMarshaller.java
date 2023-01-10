@@ -245,6 +245,10 @@ public class CreateDBInstanceReadReplicaRequestMarshaller implements
             request.addParameter("EnableCustomerOwnedIp", StringUtils.fromBoolean(createDBInstanceReadReplicaRequest.getEnableCustomerOwnedIp()));
         }
 
+        if (createDBInstanceReadReplicaRequest.getAllocatedStorage() != null) {
+            request.addParameter("AllocatedStorage", StringUtils.fromInteger(createDBInstanceReadReplicaRequest.getAllocatedStorage()));
+        }
+
         if (createDBInstanceReadReplicaRequest.getSourceRegion() != null) {
             request.addParameter("SourceRegion", StringUtils.fromString(createDBInstanceReadReplicaRequest.getSourceRegion()));
         }

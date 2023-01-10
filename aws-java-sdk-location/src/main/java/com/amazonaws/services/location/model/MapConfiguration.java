@@ -124,6 +124,31 @@ public class MapConfiguration implements Serializable, Cloneable, StructuredPojo
      * </note></li>
      * </ul>
      * <p>
+     * Valid <a href="https://docs.aws.amazon.com/location/latest/developerguide/grab.html">GrabMaps map styles</a>:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>VectorGrabStandardLight</code> – The Grab Standard Light map style provides a basemap with detailed land
+     * use coloring, area names, roads, landmarks, and points of interest covering Southeast Asia.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>VectorGrabStandardDark</code> – The Grab Standard Dark map style provides a dark variation of the standard
+     * basemap covering Southeast Asia.
+     * </p>
+     * </li>
+     * </ul>
+     * <note>
+     * <p>
+     * Grab provides maps only for countries in Southeast Asia, and is only available in the Asia Pacific (Singapore)
+     * Region (<code>ap-southeast-1</code>). For more information, see <a
+     * href="https://docs.aws.amazon.com/location/latest/developerguide/grab.html#grab-coverage-area">GrabMaps countries
+     * and area covered</a>.
+     * </p>
+     * </note>
+     * <p>
      * Valid <a href="https://docs.aws.amazon.com/location/latest/developerguide/open-data.html">Open Data (Preview) map
      * styles</a>:
      * </p>
@@ -243,6 +268,31 @@ public class MapConfiguration implements Serializable, Cloneable, StructuredPojo
      * </note></li>
      * </ul>
      * <p>
+     * Valid <a href="https://docs.aws.amazon.com/location/latest/developerguide/grab.html">GrabMaps map styles</a>:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>VectorGrabStandardLight</code> – The Grab Standard Light map style provides a basemap with detailed land
+     * use coloring, area names, roads, landmarks, and points of interest covering Southeast Asia.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>VectorGrabStandardDark</code> – The Grab Standard Dark map style provides a dark variation of the standard
+     * basemap covering Southeast Asia.
+     * </p>
+     * </li>
+     * </ul>
+     * <note>
+     * <p>
+     * Grab provides maps only for countries in Southeast Asia, and is only available in the Asia Pacific (Singapore)
+     * Region (<code>ap-southeast-1</code>). For more information, see <a
+     * href="https://docs.aws.amazon.com/location/latest/developerguide/grab.html#grab-coverage-area">GrabMaps countries
+     * and area covered</a>.
+     * </p>
+     * </note>
+     * <p>
      * Valid <a href="https://docs.aws.amazon.com/location/latest/developerguide/open-data.html">Open Data (Preview) map
      * styles</a>:
      * </p>
@@ -361,6 +411,32 @@ public class MapConfiguration implements Serializable, Cloneable, StructuredPojo
      *        </p>
      *        </note></li>
      *        </ul>
+     *        <p>
+     *        Valid <a href="https://docs.aws.amazon.com/location/latest/developerguide/grab.html">GrabMaps map
+     *        styles</a>:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>VectorGrabStandardLight</code> – The Grab Standard Light map style provides a basemap with detailed
+     *        land use coloring, area names, roads, landmarks, and points of interest covering Southeast Asia.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>VectorGrabStandardDark</code> – The Grab Standard Dark map style provides a dark variation of the
+     *        standard basemap covering Southeast Asia.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <note>
+     *        <p>
+     *        Grab provides maps only for countries in Southeast Asia, and is only available in the Asia Pacific
+     *        (Singapore) Region (<code>ap-southeast-1</code>). For more information, see <a
+     *        href="https://docs.aws.amazon.com/location/latest/developerguide/grab.html#grab-coverage-area">GrabMaps
+     *        countries and area covered</a>.
+     *        </p>
+     *        </note>
      *        <p>
      *        Valid <a href="https://docs.aws.amazon.com/location/latest/developerguide/open-data.html">Open Data
      *        (Preview) map styles</a>:
@@ -483,6 +559,31 @@ public class MapConfiguration implements Serializable, Cloneable, StructuredPojo
      * </note></li>
      * </ul>
      * <p>
+     * Valid <a href="https://docs.aws.amazon.com/location/latest/developerguide/grab.html">GrabMaps map styles</a>:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>VectorGrabStandardLight</code> – The Grab Standard Light map style provides a basemap with detailed land
+     * use coloring, area names, roads, landmarks, and points of interest covering Southeast Asia.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>VectorGrabStandardDark</code> – The Grab Standard Dark map style provides a dark variation of the standard
+     * basemap covering Southeast Asia.
+     * </p>
+     * </li>
+     * </ul>
+     * <note>
+     * <p>
+     * Grab provides maps only for countries in Southeast Asia, and is only available in the Asia Pacific (Singapore)
+     * Region (<code>ap-southeast-1</code>). For more information, see <a
+     * href="https://docs.aws.amazon.com/location/latest/developerguide/grab.html#grab-coverage-area">GrabMaps countries
+     * and area covered</a>.
+     * </p>
+     * </note>
+     * <p>
      * Valid <a href="https://docs.aws.amazon.com/location/latest/developerguide/open-data.html">Open Data (Preview) map
      * styles</a>:
      * </p>
@@ -600,6 +701,32 @@ public class MapConfiguration implements Serializable, Cloneable, StructuredPojo
      *         </p>
      *         </note></li>
      *         </ul>
+     *         <p>
+     *         Valid <a href="https://docs.aws.amazon.com/location/latest/developerguide/grab.html">GrabMaps map
+     *         styles</a>:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>VectorGrabStandardLight</code> – The Grab Standard Light map style provides a basemap with detailed
+     *         land use coloring, area names, roads, landmarks, and points of interest covering Southeast Asia.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>VectorGrabStandardDark</code> – The Grab Standard Dark map style provides a dark variation of the
+     *         standard basemap covering Southeast Asia.
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <note>
+     *         <p>
+     *         Grab provides maps only for countries in Southeast Asia, and is only available in the Asia Pacific
+     *         (Singapore) Region (<code>ap-southeast-1</code>). For more information, see <a
+     *         href="https://docs.aws.amazon.com/location/latest/developerguide/grab.html#grab-coverage-area">GrabMaps
+     *         countries and area covered</a>.
+     *         </p>
+     *         </note>
      *         <p>
      *         Valid <a href="https://docs.aws.amazon.com/location/latest/developerguide/open-data.html">Open Data
      *         (Preview) map styles</a>:
@@ -722,6 +849,31 @@ public class MapConfiguration implements Serializable, Cloneable, StructuredPojo
      * </note></li>
      * </ul>
      * <p>
+     * Valid <a href="https://docs.aws.amazon.com/location/latest/developerguide/grab.html">GrabMaps map styles</a>:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>VectorGrabStandardLight</code> – The Grab Standard Light map style provides a basemap with detailed land
+     * use coloring, area names, roads, landmarks, and points of interest covering Southeast Asia.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>VectorGrabStandardDark</code> – The Grab Standard Dark map style provides a dark variation of the standard
+     * basemap covering Southeast Asia.
+     * </p>
+     * </li>
+     * </ul>
+     * <note>
+     * <p>
+     * Grab provides maps only for countries in Southeast Asia, and is only available in the Asia Pacific (Singapore)
+     * Region (<code>ap-southeast-1</code>). For more information, see <a
+     * href="https://docs.aws.amazon.com/location/latest/developerguide/grab.html#grab-coverage-area">GrabMaps countries
+     * and area covered</a>.
+     * </p>
+     * </note>
+     * <p>
      * Valid <a href="https://docs.aws.amazon.com/location/latest/developerguide/open-data.html">Open Data (Preview) map
      * styles</a>:
      * </p>
@@ -840,6 +992,32 @@ public class MapConfiguration implements Serializable, Cloneable, StructuredPojo
      *        </p>
      *        </note></li>
      *        </ul>
+     *        <p>
+     *        Valid <a href="https://docs.aws.amazon.com/location/latest/developerguide/grab.html">GrabMaps map
+     *        styles</a>:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>VectorGrabStandardLight</code> – The Grab Standard Light map style provides a basemap with detailed
+     *        land use coloring, area names, roads, landmarks, and points of interest covering Southeast Asia.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>VectorGrabStandardDark</code> – The Grab Standard Dark map style provides a dark variation of the
+     *        standard basemap covering Southeast Asia.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <note>
+     *        <p>
+     *        Grab provides maps only for countries in Southeast Asia, and is only available in the Asia Pacific
+     *        (Singapore) Region (<code>ap-southeast-1</code>). For more information, see <a
+     *        href="https://docs.aws.amazon.com/location/latest/developerguide/grab.html#grab-coverage-area">GrabMaps
+     *        countries and area covered</a>.
+     *        </p>
+     *        </note>
      *        <p>
      *        Valid <a href="https://docs.aws.amazon.com/location/latest/developerguide/open-data.html">Open Data
      *        (Preview) map styles</a>:

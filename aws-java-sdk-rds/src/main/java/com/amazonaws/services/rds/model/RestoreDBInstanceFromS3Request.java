@@ -63,7 +63,7 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
     private String dBInstanceIdentifier;
     /**
      * <p>
-     * The amount of storage (in gigabytes) to allocate initially for the DB instance. Follow the allocation rules
+     * The amount of storage (in gibibytes) to allocate initially for the DB instance. Follow the allocation rules
      * specified in <code>CreateDBInstance</code>.
      * </p>
      * <note>
@@ -939,7 +939,7 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The amount of storage (in gigabytes) to allocate initially for the DB instance. Follow the allocation rules
+     * The amount of storage (in gibibytes) to allocate initially for the DB instance. Follow the allocation rules
      * specified in <code>CreateDBInstance</code>.
      * </p>
      * <note>
@@ -950,7 +950,7 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * </note>
      * 
      * @param allocatedStorage
-     *        The amount of storage (in gigabytes) to allocate initially for the DB instance. Follow the allocation
+     *        The amount of storage (in gibibytes) to allocate initially for the DB instance. Follow the allocation
      *        rules specified in <code>CreateDBInstance</code>.</p> <note>
      *        <p>
      *        Be sure to allocate enough memory for your new DB instance so that the restore operation can succeed. You
@@ -964,7 +964,7 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The amount of storage (in gigabytes) to allocate initially for the DB instance. Follow the allocation rules
+     * The amount of storage (in gibibytes) to allocate initially for the DB instance. Follow the allocation rules
      * specified in <code>CreateDBInstance</code>.
      * </p>
      * <note>
@@ -974,7 +974,7 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * </p>
      * </note>
      * 
-     * @return The amount of storage (in gigabytes) to allocate initially for the DB instance. Follow the allocation
+     * @return The amount of storage (in gibibytes) to allocate initially for the DB instance. Follow the allocation
      *         rules specified in <code>CreateDBInstance</code>.</p> <note>
      *         <p>
      *         Be sure to allocate enough memory for your new DB instance so that the restore operation can succeed. You
@@ -988,7 +988,7 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The amount of storage (in gigabytes) to allocate initially for the DB instance. Follow the allocation rules
+     * The amount of storage (in gibibytes) to allocate initially for the DB instance. Follow the allocation rules
      * specified in <code>CreateDBInstance</code>.
      * </p>
      * <note>
@@ -999,7 +999,7 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * </note>
      * 
      * @param allocatedStorage
-     *        The amount of storage (in gigabytes) to allocate initially for the DB instance. Follow the allocation
+     *        The amount of storage (in gibibytes) to allocate initially for the DB instance. Follow the allocation
      *        rules specified in <code>CreateDBInstance</code>.</p> <note>
      *        <p>
      *        Be sure to allocate enough memory for your new DB instance so that the restore operation can succeed. You

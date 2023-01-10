@@ -641,6 +641,19 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
      * </p>
      */
     private Integer storageThroughput;
+    /**
+     * <p>
+     * The amount of storage (in gibibytes) to allocate initially for the DB instance. Follow the allocation rules
+     * specified in <code>CreateDBInstance</code>.
+     * </p>
+     * <note>
+     * <p>
+     * Be sure to allocate enough memory for your new DB instance so that the restore operation can succeed. You can
+     * also allocate additional memory for future growth.
+     * </p>
+     * </note>
+     */
+    private Integer allocatedStorage;
 
     /**
      * Default constructor for RestoreDBInstanceToPointInTimeRequest object. Callers should use the setter or fluent
@@ -4845,6 +4858,82 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
     }
 
     /**
+     * <p>
+     * The amount of storage (in gibibytes) to allocate initially for the DB instance. Follow the allocation rules
+     * specified in <code>CreateDBInstance</code>.
+     * </p>
+     * <note>
+     * <p>
+     * Be sure to allocate enough memory for your new DB instance so that the restore operation can succeed. You can
+     * also allocate additional memory for future growth.
+     * </p>
+     * </note>
+     * 
+     * @param allocatedStorage
+     *        The amount of storage (in gibibytes) to allocate initially for the DB instance. Follow the allocation
+     *        rules specified in <code>CreateDBInstance</code>.</p> <note>
+     *        <p>
+     *        Be sure to allocate enough memory for your new DB instance so that the restore operation can succeed. You
+     *        can also allocate additional memory for future growth.
+     *        </p>
+     */
+
+    public void setAllocatedStorage(Integer allocatedStorage) {
+        this.allocatedStorage = allocatedStorage;
+    }
+
+    /**
+     * <p>
+     * The amount of storage (in gibibytes) to allocate initially for the DB instance. Follow the allocation rules
+     * specified in <code>CreateDBInstance</code>.
+     * </p>
+     * <note>
+     * <p>
+     * Be sure to allocate enough memory for your new DB instance so that the restore operation can succeed. You can
+     * also allocate additional memory for future growth.
+     * </p>
+     * </note>
+     * 
+     * @return The amount of storage (in gibibytes) to allocate initially for the DB instance. Follow the allocation
+     *         rules specified in <code>CreateDBInstance</code>.</p> <note>
+     *         <p>
+     *         Be sure to allocate enough memory for your new DB instance so that the restore operation can succeed. You
+     *         can also allocate additional memory for future growth.
+     *         </p>
+     */
+
+    public Integer getAllocatedStorage() {
+        return this.allocatedStorage;
+    }
+
+    /**
+     * <p>
+     * The amount of storage (in gibibytes) to allocate initially for the DB instance. Follow the allocation rules
+     * specified in <code>CreateDBInstance</code>.
+     * </p>
+     * <note>
+     * <p>
+     * Be sure to allocate enough memory for your new DB instance so that the restore operation can succeed. You can
+     * also allocate additional memory for future growth.
+     * </p>
+     * </note>
+     * 
+     * @param allocatedStorage
+     *        The amount of storage (in gibibytes) to allocate initially for the DB instance. Follow the allocation
+     *        rules specified in <code>CreateDBInstance</code>.</p> <note>
+     *        <p>
+     *        Be sure to allocate enough memory for your new DB instance so that the restore operation can succeed. You
+     *        can also allocate additional memory for future growth.
+     *        </p>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RestoreDBInstanceToPointInTimeRequest withAllocatedStorage(Integer allocatedStorage) {
+        setAllocatedStorage(allocatedStorage);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -4931,7 +5020,9 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
         if (getNetworkType() != null)
             sb.append("NetworkType: ").append(getNetworkType()).append(",");
         if (getStorageThroughput() != null)
-            sb.append("StorageThroughput: ").append(getStorageThroughput());
+            sb.append("StorageThroughput: ").append(getStorageThroughput()).append(",");
+        if (getAllocatedStorage() != null)
+            sb.append("AllocatedStorage: ").append(getAllocatedStorage());
         sb.append("}");
         return sb.toString();
     }
@@ -5100,6 +5191,10 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
             return false;
         if (other.getStorageThroughput() != null && other.getStorageThroughput().equals(this.getStorageThroughput()) == false)
             return false;
+        if (other.getAllocatedStorage() == null ^ this.getAllocatedStorage() == null)
+            return false;
+        if (other.getAllocatedStorage() != null && other.getAllocatedStorage().equals(this.getAllocatedStorage()) == false)
+            return false;
         return true;
     }
 
@@ -5146,6 +5241,7 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
         hashCode = prime * hashCode + ((getBackupTarget() == null) ? 0 : getBackupTarget().hashCode());
         hashCode = prime * hashCode + ((getNetworkType() == null) ? 0 : getNetworkType().hashCode());
         hashCode = prime * hashCode + ((getStorageThroughput() == null) ? 0 : getStorageThroughput().hashCode());
+        hashCode = prime * hashCode + ((getAllocatedStorage() == null) ? 0 : getAllocatedStorage().hashCode());
         return hashCode;
     }
 

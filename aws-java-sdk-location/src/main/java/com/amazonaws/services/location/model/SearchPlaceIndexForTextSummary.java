@@ -55,6 +55,11 @@ public class SearchPlaceIndexForTextSummary implements Serializable, Cloneable, 
      * </li>
      * <li>
      * <p>
+     * Grab
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * Here
      * </p>
      * </li>
@@ -253,6 +258,11 @@ public class SearchPlaceIndexForTextSummary implements Serializable, Cloneable, 
      * </li>
      * <li>
      * <p>
+     * Grab
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * Here
      * </p>
      * </li>
@@ -270,6 +280,11 @@ public class SearchPlaceIndexForTextSummary implements Serializable, Cloneable, 
      *        <li>
      *        <p>
      *        Esri
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Grab
      *        </p>
      *        </li>
      *        <li>
@@ -301,6 +316,11 @@ public class SearchPlaceIndexForTextSummary implements Serializable, Cloneable, 
      * </li>
      * <li>
      * <p>
+     * Grab
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * Here
      * </p>
      * </li>
@@ -317,6 +337,11 @@ public class SearchPlaceIndexForTextSummary implements Serializable, Cloneable, 
      *         <li>
      *         <p>
      *         Esri
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Grab
      *         </p>
      *         </li>
      *         <li>
@@ -348,6 +373,11 @@ public class SearchPlaceIndexForTextSummary implements Serializable, Cloneable, 
      * </li>
      * <li>
      * <p>
+     * Grab
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * Here
      * </p>
      * </li>
@@ -365,6 +395,11 @@ public class SearchPlaceIndexForTextSummary implements Serializable, Cloneable, 
      *        <li>
      *        <p>
      *        Esri
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Grab
      *        </p>
      *        </li>
      *        <li>

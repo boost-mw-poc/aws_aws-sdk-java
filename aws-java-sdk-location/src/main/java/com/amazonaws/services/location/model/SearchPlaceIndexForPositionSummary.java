@@ -41,6 +41,11 @@ public class SearchPlaceIndexForPositionSummary implements Serializable, Cloneab
      * </li>
      * <li>
      * <p>
+     * Grab
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * Here
      * </p>
      * </li>
@@ -88,6 +93,11 @@ public class SearchPlaceIndexForPositionSummary implements Serializable, Cloneab
      * </li>
      * <li>
      * <p>
+     * Grab
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * Here
      * </p>
      * </li>
@@ -105,6 +115,11 @@ public class SearchPlaceIndexForPositionSummary implements Serializable, Cloneab
      *        <li>
      *        <p>
      *        Esri
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Grab
      *        </p>
      *        </li>
      *        <li>
@@ -136,6 +151,11 @@ public class SearchPlaceIndexForPositionSummary implements Serializable, Cloneab
      * </li>
      * <li>
      * <p>
+     * Grab
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * Here
      * </p>
      * </li>
@@ -152,6 +172,11 @@ public class SearchPlaceIndexForPositionSummary implements Serializable, Cloneab
      *         <li>
      *         <p>
      *         Esri
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Grab
      *         </p>
      *         </li>
      *         <li>
@@ -183,6 +208,11 @@ public class SearchPlaceIndexForPositionSummary implements Serializable, Cloneab
      * </li>
      * <li>
      * <p>
+     * Grab
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * Here
      * </p>
      * </li>
@@ -200,6 +230,11 @@ public class SearchPlaceIndexForPositionSummary implements Serializable, Cloneab
      *        <li>
      *        <p>
      *        Esri
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Grab
      *        </p>
      *        </li>
      *        <li>

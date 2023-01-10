@@ -240,6 +240,10 @@ public class RestoreDBInstanceFromDBSnapshotRequestMarshaller implements
             request.addParameter("DBClusterSnapshotIdentifier", StringUtils.fromString(restoreDBInstanceFromDBSnapshotRequest.getDBClusterSnapshotIdentifier()));
         }
 
+        if (restoreDBInstanceFromDBSnapshotRequest.getAllocatedStorage() != null) {
+            request.addParameter("AllocatedStorage", StringUtils.fromInteger(restoreDBInstanceFromDBSnapshotRequest.getAllocatedStorage()));
+        }
+
         return request;
     }
 

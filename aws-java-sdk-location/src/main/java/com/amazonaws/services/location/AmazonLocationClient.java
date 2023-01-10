@@ -1007,6 +1007,10 @@ public class AmazonLocationClient extends AmazonWebServiceClient implements Amaz
      *         verify your permissions.
      * @throws ValidationException
      *         The input failed to meet the constraints specified by the AWS service.
+     * @throws ServiceQuotaExceededException
+     *         The operation was denied because the request would exceed the maximum <a
+     *         href="https://docs.aws.amazon.com/location/latest/developerguide/location-quotas.html">quota</a> set for
+     *         Amazon Location Service.
      * @throws ThrottlingException
      *         The request was denied because of request throttling.
      * @sample AmazonLocation.CreateGeofenceCollection
@@ -1076,7 +1080,7 @@ public class AmazonLocationClient extends AmazonWebServiceClient implements Amaz
      * <note>
      * <p>
      * If your application is tracking or routing assets you use in your business, such as delivery vehicles or
-     * employees, you may only use HERE as your geolocation provider. See section 82 of the <a
+     * employees, you must not use Esri as your geolocation provider. See section 82 of the <a
      * href="http://aws.amazon.com/service-terms">AWS service terms</a> for more details.
      * </p>
      * </note>
@@ -1092,6 +1096,10 @@ public class AmazonLocationClient extends AmazonWebServiceClient implements Amaz
      *         verify your permissions.
      * @throws ValidationException
      *         The input failed to meet the constraints specified by the AWS service.
+     * @throws ServiceQuotaExceededException
+     *         The operation was denied because the request would exceed the maximum <a
+     *         href="https://docs.aws.amazon.com/location/latest/developerguide/location-quotas.html">quota</a> set for
+     *         Amazon Location Service.
      * @throws ThrottlingException
      *         The request was denied because of request throttling.
      * @sample AmazonLocation.CreateMap
@@ -1161,7 +1169,7 @@ public class AmazonLocationClient extends AmazonWebServiceClient implements Amaz
      * <note>
      * <p>
      * If your application is tracking or routing assets you use in your business, such as delivery vehicles or
-     * employees, you may only use HERE as your geolocation provider. See section 82 of the <a
+     * employees, you must not use Esri as your geolocation provider. See section 82 of the <a
      * href="http://aws.amazon.com/service-terms">AWS service terms</a> for more details.
      * </p>
      * </note>
@@ -1177,6 +1185,10 @@ public class AmazonLocationClient extends AmazonWebServiceClient implements Amaz
      *         verify your permissions.
      * @throws ValidationException
      *         The input failed to meet the constraints specified by the AWS service.
+     * @throws ServiceQuotaExceededException
+     *         The operation was denied because the request would exceed the maximum <a
+     *         href="https://docs.aws.amazon.com/location/latest/developerguide/location-quotas.html">quota</a> set for
+     *         Amazon Location Service.
      * @throws ThrottlingException
      *         The request was denied because of request throttling.
      * @sample AmazonLocation.CreatePlaceIndex
@@ -1247,7 +1259,7 @@ public class AmazonLocationClient extends AmazonWebServiceClient implements Amaz
      * <note>
      * <p>
      * If your application is tracking or routing assets you use in your business, such as delivery vehicles or
-     * employees, you may only use HERE as your geolocation provider. See section 82 of the <a
+     * employees, you must not use Esri as your geolocation provider. See section 82 of the <a
      * href="http://aws.amazon.com/service-terms">AWS service terms</a> for more details.
      * </p>
      * </note>
@@ -1263,6 +1275,10 @@ public class AmazonLocationClient extends AmazonWebServiceClient implements Amaz
      *         verify your permissions.
      * @throws ValidationException
      *         The input failed to meet the constraints specified by the AWS service.
+     * @throws ServiceQuotaExceededException
+     *         The operation was denied because the request would exceed the maximum <a
+     *         href="https://docs.aws.amazon.com/location/latest/developerguide/location-quotas.html">quota</a> set for
+     *         Amazon Location Service.
      * @throws ThrottlingException
      *         The request was denied because of request throttling.
      * @sample AmazonLocation.CreateRouteCalculator
@@ -3920,10 +3936,19 @@ public class AmazonLocationClient extends AmazonWebServiceClient implements Amaz
      * <p>
      * Assigns one or more tags (key-value pairs) to the specified Amazon Location Service resource.
      * </p>
-     * 
-     * <pre>
-     * <code> &lt;p&gt;Tags can help you organize and categorize your resources. You can also use them to scope user permissions, by granting a user permission to access or change only resources with certain tag values.&lt;/p&gt; &lt;p&gt;You can use the &lt;code&gt;TagResource&lt;/code&gt; operation with an Amazon Location Service resource that already has tags. If you specify a new tag key for the resource, this tag is appended to the tags already associated with the resource. If you specify a tag key that's already associated with the resource, the new tag value that you specify replaces the previous value for that tag. &lt;/p&gt; &lt;p&gt;You can associate up to 50 tags with a resource.&lt;/p&gt; </code>
-     * </pre>
+     * <p>
+     * Tags can help you organize and categorize your resources. You can also use them to scope user permissions, by
+     * granting a user permission to access or change only resources with certain tag values.
+     * </p>
+     * <p>
+     * You can use the <code>TagResource</code> operation with an Amazon Location Service resource that already has
+     * tags. If you specify a new tag key for the resource, this tag is appended to the tags already associated with the
+     * resource. If you specify a tag key that's already associated with the resource, the new tag value that you
+     * specify replaces the previous value for that tag.
+     * </p>
+     * <p>
+     * You can associate up to 50 tags with a resource.
+     * </p>
      * 
      * @param tagResourceRequest
      * @return Result of the TagResource operation returned by the service.
