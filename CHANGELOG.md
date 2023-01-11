@@ -1,3 +1,8 @@
+# __1.12.383__ __2023-01-11__
+## __AWSKendraFrontendService__
+  - ### Features
+    - This release adds support to new document types - RTF, XML, XSLT, MS_EXCEL, CSV, JSON, MD
+
 # __1.12.382__ __2023-01-10__
 ## __Amazon Location Service__
   - ### Features

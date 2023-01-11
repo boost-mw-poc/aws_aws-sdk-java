@@ -1728,7 +1728,7 @@ public interface AWSkendra {
      * </li>
      * </ul>
      * <p>
-     * You can specify that the query return only one type of result using the <code>QueryResultTypeConfig</code>
+     * You can specify that the query return only one type of result using the <code>QueryResultTypeFilter</code>
      * parameter.
      * </p>
      * <p>

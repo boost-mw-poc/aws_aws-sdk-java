@@ -24,7 +24,14 @@ public enum ContentType {
     HTML("HTML"),
     MS_WORD("MS_WORD"),
     PLAIN_TEXT("PLAIN_TEXT"),
-    PPT("PPT");
+    PPT("PPT"),
+    RTF("RTF"),
+    XML("XML"),
+    XSLT("XSLT"),
+    MS_EXCEL("MS_EXCEL"),
+    CSV("CSV"),
+    JSON("JSON"),
+    MD("MD");
 
     private String value;
 

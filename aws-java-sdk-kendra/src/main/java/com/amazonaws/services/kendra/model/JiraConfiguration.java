@@ -30,8 +30,7 @@ public class JiraConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The URL of the Jira account. For example, <i>company.atlassian.net</i> or <i>https://jira.company.com</i>. You
-     * can find your Jira account URL in the URL of your profile page for Jira desktop.
+     * The URL of the Jira account. For example, <i>company.atlassian.net</i>.
      * </p>
      */
     private String jiraAccountUrl;
@@ -43,13 +42,13 @@ public class JiraConfiguration implements Serializable, Cloneable, StructuredPoj
      * <ul>
      * <li>
      * <p>
-     * jiraId—The Jira username.
+     * jiraId—The Jira user name or email.
      * </p>
      * </li>
      * <li>
      * <p>
-     * jiraCredentials—The Jira API token. For more information on creating an API token in Jira, see <a
-     * href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-jira.html"> Using a Jira data source</a>.
+     * jiraCredentials—The Jira API token. For more information, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-jira.html">Using a Jira data source</a>.
      * </p>
      * </li>
      * </ul>
@@ -90,46 +89,50 @@ public class JiraConfiguration implements Serializable, Cloneable, StructuredPoj
     private java.util.List<String> issueSubEntityFilter;
     /**
      * <p>
-     * A list of DataSourceToIndexFieldMapping objects that map attributes or field names of Jira attachments to Amazon
-     * Kendra index field names. To create custom fields, use the UpdateIndex API before you map to Jira fields. For
-     * more information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html"> Mapping data
-     * source fields</a>. The Jira data source field names must exist in your Jira custom metadata.
+     * A list of <code>DataSourceToIndexFieldMapping</code> objects that map attributes or field names of Jira
+     * attachments to Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code> API
+     * before you map to Jira fields. For more information, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html"> Mapping data source fields</a>. The Jira
+     * data source field names must exist in your Jira custom metadata.
      * </p>
      */
     private java.util.List<DataSourceToIndexFieldMapping> attachmentFieldMappings;
     /**
      * <p>
-     * A list of DataSourceToIndexFieldMapping objects that map attributes or field names of Jira comments to Amazon
-     * Kendra index field names. To create custom fields, use the UpdateIndex API before you map to Jira fields. For
-     * more information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html"> Mapping data
-     * source fields</a>. The Jira data source field names must exist in your Jira custom metadata.
+     * A list of <code>DataSourceToIndexFieldMapping</code> objects that map attributes or field names of Jira comments
+     * to Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code> API before you map
+     * to Jira fields. For more information, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html"> Mapping data source fields</a>. The Jira
+     * data source field names must exist in your Jira custom metadata.
      * </p>
      */
     private java.util.List<DataSourceToIndexFieldMapping> commentFieldMappings;
     /**
      * <p>
-     * A list of DataSourceToIndexFieldMapping objects that map attributes or field names of Jira issues to Amazon
-     * Kendra index field names. To create custom fields, use the UpdateIndex API before you map to Jira fields. For
-     * more information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html"> Mapping data
-     * source fields</a>. The Jira data source field names must exist in your Jira custom metadata.
+     * A list of <code>DataSourceToIndexFieldMapping</code> objects that map attributes or field names of Jira issues to
+     * Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code> API before you map to
+     * Jira fields. For more information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">
+     * Mapping data source fields</a>. The Jira data source field names must exist in your Jira custom metadata.
      * </p>
      */
     private java.util.List<DataSourceToIndexFieldMapping> issueFieldMappings;
     /**
      * <p>
-     * A list of DataSourceToIndexFieldMapping objects that map attributes or field names of Jira projects to Amazon
-     * Kendra index field names. To create custom fields, use the UpdateIndex API before you map to Jira fields. For
-     * more information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html"> Mapping data
-     * source fields</a>. The Jira data source field names must exist in your Jira custom metadata.
+     * A list of <code>DataSourceToIndexFieldMapping</code> objects that map attributes or field names of Jira projects
+     * to Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code> API before you map
+     * to Jira fields. For more information, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html"> Mapping data source fields</a>. The Jira
+     * data source field names must exist in your Jira custom metadata.
      * </p>
      */
     private java.util.List<DataSourceToIndexFieldMapping> projectFieldMappings;
     /**
      * <p>
-     * A list of DataSourceToIndexFieldMapping objects that map attributes or field names of Jira work logs to Amazon
-     * Kendra index field names. To create custom fields, use the UpdateIndex API before you map to Jira fields. For
-     * more information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html"> Mapping data
-     * source fields</a>. The Jira data source field names must exist in your Jira custom metadata.
+     * A list of <code>DataSourceToIndexFieldMapping</code> objects that map attributes or field names of Jira work logs
+     * to Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code> API before you map
+     * to Jira fields. For more information, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html"> Mapping data source fields</a>. The Jira
+     * data source field names must exist in your Jira custom metadata.
      * </p>
      */
     private java.util.List<DataSourceToIndexFieldMapping> workLogFieldMappings;
@@ -153,21 +156,19 @@ public class JiraConfiguration implements Serializable, Cloneable, StructuredPoj
     private java.util.List<String> exclusionPatterns;
     /**
      * <p>
-     * Configuration information for an Amazon Virtual Private Cloud to connect to your Jira. Your Jira account must
-     * reside inside your VPC.
+     * Configuration information for an Amazon Virtual Private Cloud to connect to your Jira. For more information, see
+     * <a href="https://docs.aws.amazon.com/kendra/latest/dg/vpc-configuration.html">Configuring a VPC</a>.
      * </p>
      */
     private DataSourceVpcConfiguration vpcConfiguration;
 
     /**
      * <p>
-     * The URL of the Jira account. For example, <i>company.atlassian.net</i> or <i>https://jira.company.com</i>. You
-     * can find your Jira account URL in the URL of your profile page for Jira desktop.
+     * The URL of the Jira account. For example, <i>company.atlassian.net</i>.
      * </p>
      * 
      * @param jiraAccountUrl
-     *        The URL of the Jira account. For example, <i>company.atlassian.net</i> or <i>https://jira.company.com</i>.
-     *        You can find your Jira account URL in the URL of your profile page for Jira desktop.
+     *        The URL of the Jira account. For example, <i>company.atlassian.net</i>.
      */
 
     public void setJiraAccountUrl(String jiraAccountUrl) {
@@ -176,13 +177,10 @@ public class JiraConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The URL of the Jira account. For example, <i>company.atlassian.net</i> or <i>https://jira.company.com</i>. You
-     * can find your Jira account URL in the URL of your profile page for Jira desktop.
+     * The URL of the Jira account. For example, <i>company.atlassian.net</i>.
      * </p>
      * 
-     * @return The URL of the Jira account. For example, <i>company.atlassian.net</i> or
-     *         <i>https://jira.company.com</i>. You can find your Jira account URL in the URL of your profile page for
-     *         Jira desktop.
+     * @return The URL of the Jira account. For example, <i>company.atlassian.net</i>.
      */
 
     public String getJiraAccountUrl() {
@@ -191,13 +189,11 @@ public class JiraConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The URL of the Jira account. For example, <i>company.atlassian.net</i> or <i>https://jira.company.com</i>. You
-     * can find your Jira account URL in the URL of your profile page for Jira desktop.
+     * The URL of the Jira account. For example, <i>company.atlassian.net</i>.
      * </p>
      * 
      * @param jiraAccountUrl
-     *        The URL of the Jira account. For example, <i>company.atlassian.net</i> or <i>https://jira.company.com</i>.
-     *        You can find your Jira account URL in the URL of your profile page for Jira desktop.
+     *        The URL of the Jira account. For example, <i>company.atlassian.net</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -214,13 +210,13 @@ public class JiraConfiguration implements Serializable, Cloneable, StructuredPoj
      * <ul>
      * <li>
      * <p>
-     * jiraId—The Jira username.
+     * jiraId—The Jira user name or email.
      * </p>
      * </li>
      * <li>
      * <p>
-     * jiraCredentials—The Jira API token. For more information on creating an API token in Jira, see <a
-     * href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-jira.html"> Using a Jira data source</a>.
+     * jiraCredentials—The Jira API token. For more information, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-jira.html">Using a Jira data source</a>.
      * </p>
      * </li>
      * </ul>
@@ -231,13 +227,13 @@ public class JiraConfiguration implements Serializable, Cloneable, StructuredPoj
      *        <ul>
      *        <li>
      *        <p>
-     *        jiraId—The Jira username.
+     *        jiraId—The Jira user name or email.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        jiraCredentials—The Jira API token. For more information on creating an API token in Jira, see <a
-     *        href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-jira.html"> Using a Jira data source</a>.
+     *        jiraCredentials—The Jira API token. For more information, see <a
+     *        href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-jira.html">Using a Jira data source</a>.
      *        </p>
      *        </li>
      */
@@ -254,13 +250,13 @@ public class JiraConfiguration implements Serializable, Cloneable, StructuredPoj
      * <ul>
      * <li>
      * <p>
-     * jiraId—The Jira username.
+     * jiraId—The Jira user name or email.
      * </p>
      * </li>
      * <li>
      * <p>
-     * jiraCredentials—The Jira API token. For more information on creating an API token in Jira, see <a
-     * href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-jira.html"> Using a Jira data source</a>.
+     * jiraCredentials—The Jira API token. For more information, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-jira.html">Using a Jira data source</a>.
      * </p>
      * </li>
      * </ul>
@@ -270,13 +266,13 @@ public class JiraConfiguration implements Serializable, Cloneable, StructuredPoj
      *         <ul>
      *         <li>
      *         <p>
-     *         jiraId—The Jira username.
+     *         jiraId—The Jira user name or email.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         jiraCredentials—The Jira API token. For more information on creating an API token in Jira, see <a
-     *         href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-jira.html"> Using a Jira data source</a>.
+     *         jiraCredentials—The Jira API token. For more information, see <a
+     *         href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-jira.html">Using a Jira data source</a>.
      *         </p>
      *         </li>
      */
@@ -293,13 +289,13 @@ public class JiraConfiguration implements Serializable, Cloneable, StructuredPoj
      * <ul>
      * <li>
      * <p>
-     * jiraId—The Jira username.
+     * jiraId—The Jira user name or email.
      * </p>
      * </li>
      * <li>
      * <p>
-     * jiraCredentials—The Jira API token. For more information on creating an API token in Jira, see <a
-     * href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-jira.html"> Using a Jira data source</a>.
+     * jiraCredentials—The Jira API token. For more information, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-jira.html">Using a Jira data source</a>.
      * </p>
      * </li>
      * </ul>
@@ -310,13 +306,13 @@ public class JiraConfiguration implements Serializable, Cloneable, StructuredPoj
      *        <ul>
      *        <li>
      *        <p>
-     *        jiraId—The Jira username.
+     *        jiraId—The Jira user name or email.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        jiraCredentials—The Jira API token. For more information on creating an API token in Jira, see <a
-     *        href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-jira.html"> Using a Jira data source</a>.
+     *        jiraCredentials—The Jira API token. For more information, see <a
+     *        href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-jira.html">Using a Jira data source</a>.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -722,15 +718,16 @@ public class JiraConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * A list of DataSourceToIndexFieldMapping objects that map attributes or field names of Jira attachments to Amazon
-     * Kendra index field names. To create custom fields, use the UpdateIndex API before you map to Jira fields. For
-     * more information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html"> Mapping data
-     * source fields</a>. The Jira data source field names must exist in your Jira custom metadata.
+     * A list of <code>DataSourceToIndexFieldMapping</code> objects that map attributes or field names of Jira
+     * attachments to Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code> API
+     * before you map to Jira fields. For more information, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html"> Mapping data source fields</a>. The Jira
+     * data source field names must exist in your Jira custom metadata.
      * </p>
      * 
-     * @return A list of DataSourceToIndexFieldMapping objects that map attributes or field names of Jira attachments to
-     *         Amazon Kendra index field names. To create custom fields, use the UpdateIndex API before you map to Jira
-     *         fields. For more information, see <a
+     * @return A list of <code>DataSourceToIndexFieldMapping</code> objects that map attributes or field names of Jira
+     *         attachments to Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code>
+     *         API before you map to Jira fields. For more information, see <a
      *         href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html"> Mapping data source fields</a>.
      *         The Jira data source field names must exist in your Jira custom metadata.
      */
@@ -741,16 +738,17 @@ public class JiraConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * A list of DataSourceToIndexFieldMapping objects that map attributes or field names of Jira attachments to Amazon
-     * Kendra index field names. To create custom fields, use the UpdateIndex API before you map to Jira fields. For
-     * more information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html"> Mapping data
-     * source fields</a>. The Jira data source field names must exist in your Jira custom metadata.
+     * A list of <code>DataSourceToIndexFieldMapping</code> objects that map attributes or field names of Jira
+     * attachments to Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code> API
+     * before you map to Jira fields. For more information, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html"> Mapping data source fields</a>. The Jira
+     * data source field names must exist in your Jira custom metadata.
      * </p>
      * 
      * @param attachmentFieldMappings
-     *        A list of DataSourceToIndexFieldMapping objects that map attributes or field names of Jira attachments to
-     *        Amazon Kendra index field names. To create custom fields, use the UpdateIndex API before you map to Jira
-     *        fields. For more information, see <a
+     *        A list of <code>DataSourceToIndexFieldMapping</code> objects that map attributes or field names of Jira
+     *        attachments to Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code>
+     *        API before you map to Jira fields. For more information, see <a
      *        href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html"> Mapping data source fields</a>.
      *        The Jira data source field names must exist in your Jira custom metadata.
      */
@@ -766,10 +764,11 @@ public class JiraConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * A list of DataSourceToIndexFieldMapping objects that map attributes or field names of Jira attachments to Amazon
-     * Kendra index field names. To create custom fields, use the UpdateIndex API before you map to Jira fields. For
-     * more information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html"> Mapping data
-     * source fields</a>. The Jira data source field names must exist in your Jira custom metadata.
+     * A list of <code>DataSourceToIndexFieldMapping</code> objects that map attributes or field names of Jira
+     * attachments to Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code> API
+     * before you map to Jira fields. For more information, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html"> Mapping data source fields</a>. The Jira
+     * data source field names must exist in your Jira custom metadata.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -778,9 +777,9 @@ public class JiraConfiguration implements Serializable, Cloneable, StructuredPoj
      * </p>
      * 
      * @param attachmentFieldMappings
-     *        A list of DataSourceToIndexFieldMapping objects that map attributes or field names of Jira attachments to
-     *        Amazon Kendra index field names. To create custom fields, use the UpdateIndex API before you map to Jira
-     *        fields. For more information, see <a
+     *        A list of <code>DataSourceToIndexFieldMapping</code> objects that map attributes or field names of Jira
+     *        attachments to Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code>
+     *        API before you map to Jira fields. For more information, see <a
      *        href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html"> Mapping data source fields</a>.
      *        The Jira data source field names must exist in your Jira custom metadata.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -798,16 +797,17 @@ public class JiraConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * A list of DataSourceToIndexFieldMapping objects that map attributes or field names of Jira attachments to Amazon
-     * Kendra index field names. To create custom fields, use the UpdateIndex API before you map to Jira fields. For
-     * more information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html"> Mapping data
-     * source fields</a>. The Jira data source field names must exist in your Jira custom metadata.
+     * A list of <code>DataSourceToIndexFieldMapping</code> objects that map attributes or field names of Jira
+     * attachments to Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code> API
+     * before you map to Jira fields. For more information, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html"> Mapping data source fields</a>. The Jira
+     * data source field names must exist in your Jira custom metadata.
      * </p>
      * 
      * @param attachmentFieldMappings
-     *        A list of DataSourceToIndexFieldMapping objects that map attributes or field names of Jira attachments to
-     *        Amazon Kendra index field names. To create custom fields, use the UpdateIndex API before you map to Jira
-     *        fields. For more information, see <a
+     *        A list of <code>DataSourceToIndexFieldMapping</code> objects that map attributes or field names of Jira
+     *        attachments to Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code>
+     *        API before you map to Jira fields. For more information, see <a
      *        href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html"> Mapping data source fields</a>.
      *        The Jira data source field names must exist in your Jira custom metadata.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -820,15 +820,16 @@ public class JiraConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * A list of DataSourceToIndexFieldMapping objects that map attributes or field names of Jira comments to Amazon
-     * Kendra index field names. To create custom fields, use the UpdateIndex API before you map to Jira fields. For
-     * more information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html"> Mapping data
-     * source fields</a>. The Jira data source field names must exist in your Jira custom metadata.
+     * A list of <code>DataSourceToIndexFieldMapping</code> objects that map attributes or field names of Jira comments
+     * to Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code> API before you map
+     * to Jira fields. For more information, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html"> Mapping data source fields</a>. The Jira
+     * data source field names must exist in your Jira custom metadata.
      * </p>
      * 
-     * @return A list of DataSourceToIndexFieldMapping objects that map attributes or field names of Jira comments to
-     *         Amazon Kendra index field names. To create custom fields, use the UpdateIndex API before you map to Jira
-     *         fields. For more information, see <a
+     * @return A list of <code>DataSourceToIndexFieldMapping</code> objects that map attributes or field names of Jira
+     *         comments to Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code>
+     *         API before you map to Jira fields. For more information, see <a
      *         href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html"> Mapping data source fields</a>.
      *         The Jira data source field names must exist in your Jira custom metadata.
      */
@@ -839,16 +840,17 @@ public class JiraConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * A list of DataSourceToIndexFieldMapping objects that map attributes or field names of Jira comments to Amazon
-     * Kendra index field names. To create custom fields, use the UpdateIndex API before you map to Jira fields. For
-     * more information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html"> Mapping data
-     * source fields</a>. The Jira data source field names must exist in your Jira custom metadata.
+     * A list of <code>DataSourceToIndexFieldMapping</code> objects that map attributes or field names of Jira comments
+     * to Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code> API before you map
+     * to Jira fields. For more information, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html"> Mapping data source fields</a>. The Jira
+     * data source field names must exist in your Jira custom metadata.
      * </p>
      * 
      * @param commentFieldMappings
-     *        A list of DataSourceToIndexFieldMapping objects that map attributes or field names of Jira comments to
-     *        Amazon Kendra index field names. To create custom fields, use the UpdateIndex API before you map to Jira
-     *        fields. For more information, see <a
+     *        A list of <code>DataSourceToIndexFieldMapping</code> objects that map attributes or field names of Jira
+     *        comments to Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code> API
+     *        before you map to Jira fields. For more information, see <a
      *        href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html"> Mapping data source fields</a>.
      *        The Jira data source field names must exist in your Jira custom metadata.
      */
@@ -864,10 +866,11 @@ public class JiraConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * A list of DataSourceToIndexFieldMapping objects that map attributes or field names of Jira comments to Amazon
-     * Kendra index field names. To create custom fields, use the UpdateIndex API before you map to Jira fields. For
-     * more information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html"> Mapping data
-     * source fields</a>. The Jira data source field names must exist in your Jira custom metadata.
+     * A list of <code>DataSourceToIndexFieldMapping</code> objects that map attributes or field names of Jira comments
+     * to Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code> API before you map
+     * to Jira fields. For more information, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html"> Mapping data source fields</a>. The Jira
+     * data source field names must exist in your Jira custom metadata.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -876,9 +879,9 @@ public class JiraConfiguration implements Serializable, Cloneable, StructuredPoj
      * </p>
      * 
      * @param commentFieldMappings
-     *        A list of DataSourceToIndexFieldMapping objects that map attributes or field names of Jira comments to
-     *        Amazon Kendra index field names. To create custom fields, use the UpdateIndex API before you map to Jira
-     *        fields. For more information, see <a
+     *        A list of <code>DataSourceToIndexFieldMapping</code> objects that map attributes or field names of Jira
+     *        comments to Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code> API
+     *        before you map to Jira fields. For more information, see <a
      *        href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html"> Mapping data source fields</a>.
      *        The Jira data source field names must exist in your Jira custom metadata.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -896,16 +899,17 @@ public class JiraConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * A list of DataSourceToIndexFieldMapping objects that map attributes or field names of Jira comments to Amazon
-     * Kendra index field names. To create custom fields, use the UpdateIndex API before you map to Jira fields. For
-     * more information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html"> Mapping data
-     * source fields</a>. The Jira data source field names must exist in your Jira custom metadata.
+     * A list of <code>DataSourceToIndexFieldMapping</code> objects that map attributes or field names of Jira comments
+     * to Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code> API before you map
+     * to Jira fields. For more information, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html"> Mapping data source fields</a>. The Jira
+     * data source field names must exist in your Jira custom metadata.
      * </p>
      * 
      * @param commentFieldMappings
-     *        A list of DataSourceToIndexFieldMapping objects that map attributes or field names of Jira comments to
-     *        Amazon Kendra index field names. To create custom fields, use the UpdateIndex API before you map to Jira
-     *        fields. For more information, see <a
+     *        A list of <code>DataSourceToIndexFieldMapping</code> objects that map attributes or field names of Jira
+     *        comments to Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code> API
+     *        before you map to Jira fields. For more information, see <a
      *        href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html"> Mapping data source fields</a>.
      *        The Jira data source field names must exist in your Jira custom metadata.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -918,15 +922,15 @@ public class JiraConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * A list of DataSourceToIndexFieldMapping objects that map attributes or field names of Jira issues to Amazon
-     * Kendra index field names. To create custom fields, use the UpdateIndex API before you map to Jira fields. For
-     * more information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html"> Mapping data
-     * source fields</a>. The Jira data source field names must exist in your Jira custom metadata.
+     * A list of <code>DataSourceToIndexFieldMapping</code> objects that map attributes or field names of Jira issues to
+     * Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code> API before you map to
+     * Jira fields. For more information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">
+     * Mapping data source fields</a>. The Jira data source field names must exist in your Jira custom metadata.
      * </p>
      * 
-     * @return A list of DataSourceToIndexFieldMapping objects that map attributes or field names of Jira issues to
-     *         Amazon Kendra index field names. To create custom fields, use the UpdateIndex API before you map to Jira
-     *         fields. For more information, see <a
+     * @return A list of <code>DataSourceToIndexFieldMapping</code> objects that map attributes or field names of Jira
+     *         issues to Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code> API
+     *         before you map to Jira fields. For more information, see <a
      *         href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html"> Mapping data source fields</a>.
      *         The Jira data source field names must exist in your Jira custom metadata.
      */
@@ -937,16 +941,16 @@ public class JiraConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * A list of DataSourceToIndexFieldMapping objects that map attributes or field names of Jira issues to Amazon
-     * Kendra index field names. To create custom fields, use the UpdateIndex API before you map to Jira fields. For
-     * more information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html"> Mapping data
-     * source fields</a>. The Jira data source field names must exist in your Jira custom metadata.
+     * A list of <code>DataSourceToIndexFieldMapping</code> objects that map attributes or field names of Jira issues to
+     * Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code> API before you map to
+     * Jira fields. For more information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">
+     * Mapping data source fields</a>. The Jira data source field names must exist in your Jira custom metadata.
      * </p>
      * 
      * @param issueFieldMappings
-     *        A list of DataSourceToIndexFieldMapping objects that map attributes or field names of Jira issues to
-     *        Amazon Kendra index field names. To create custom fields, use the UpdateIndex API before you map to Jira
-     *        fields. For more information, see <a
+     *        A list of <code>DataSourceToIndexFieldMapping</code> objects that map attributes or field names of Jira
+     *        issues to Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code> API
+     *        before you map to Jira fields. For more information, see <a
      *        href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html"> Mapping data source fields</a>.
      *        The Jira data source field names must exist in your Jira custom metadata.
      */
@@ -962,10 +966,10 @@ public class JiraConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * A list of DataSourceToIndexFieldMapping objects that map attributes or field names of Jira issues to Amazon
-     * Kendra index field names. To create custom fields, use the UpdateIndex API before you map to Jira fields. For
-     * more information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html"> Mapping data
-     * source fields</a>. The Jira data source field names must exist in your Jira custom metadata.
+     * A list of <code>DataSourceToIndexFieldMapping</code> objects that map attributes or field names of Jira issues to
+     * Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code> API before you map to
+     * Jira fields. For more information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">
+     * Mapping data source fields</a>. The Jira data source field names must exist in your Jira custom metadata.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -974,9 +978,9 @@ public class JiraConfiguration implements Serializable, Cloneable, StructuredPoj
      * </p>
      * 
      * @param issueFieldMappings
-     *        A list of DataSourceToIndexFieldMapping objects that map attributes or field names of Jira issues to
-     *        Amazon Kendra index field names. To create custom fields, use the UpdateIndex API before you map to Jira
-     *        fields. For more information, see <a
+     *        A list of <code>DataSourceToIndexFieldMapping</code> objects that map attributes or field names of Jira
+     *        issues to Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code> API
+     *        before you map to Jira fields. For more information, see <a
      *        href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html"> Mapping data source fields</a>.
      *        The Jira data source field names must exist in your Jira custom metadata.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -994,16 +998,16 @@ public class JiraConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * A list of DataSourceToIndexFieldMapping objects that map attributes or field names of Jira issues to Amazon
-     * Kendra index field names. To create custom fields, use the UpdateIndex API before you map to Jira fields. For
-     * more information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html"> Mapping data
-     * source fields</a>. The Jira data source field names must exist in your Jira custom metadata.
+     * A list of <code>DataSourceToIndexFieldMapping</code> objects that map attributes or field names of Jira issues to
+     * Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code> API before you map to
+     * Jira fields. For more information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">
+     * Mapping data source fields</a>. The Jira data source field names must exist in your Jira custom metadata.
      * </p>
      * 
      * @param issueFieldMappings
-     *        A list of DataSourceToIndexFieldMapping objects that map attributes or field names of Jira issues to
-     *        Amazon Kendra index field names. To create custom fields, use the UpdateIndex API before you map to Jira
-     *        fields. For more information, see <a
+     *        A list of <code>DataSourceToIndexFieldMapping</code> objects that map attributes or field names of Jira
+     *        issues to Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code> API
+     *        before you map to Jira fields. For more information, see <a
      *        href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html"> Mapping data source fields</a>.
      *        The Jira data source field names must exist in your Jira custom metadata.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -1016,15 +1020,16 @@ public class JiraConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * A list of DataSourceToIndexFieldMapping objects that map attributes or field names of Jira projects to Amazon
-     * Kendra index field names. To create custom fields, use the UpdateIndex API before you map to Jira fields. For
-     * more information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html"> Mapping data
-     * source fields</a>. The Jira data source field names must exist in your Jira custom metadata.
+     * A list of <code>DataSourceToIndexFieldMapping</code> objects that map attributes or field names of Jira projects
+     * to Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code> API before you map
+     * to Jira fields. For more information, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html"> Mapping data source fields</a>. The Jira
+     * data source field names must exist in your Jira custom metadata.
      * </p>
      * 
-     * @return A list of DataSourceToIndexFieldMapping objects that map attributes or field names of Jira projects to
-     *         Amazon Kendra index field names. To create custom fields, use the UpdateIndex API before you map to Jira
-     *         fields. For more information, see <a
+     * @return A list of <code>DataSourceToIndexFieldMapping</code> objects that map attributes or field names of Jira
+     *         projects to Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code>
+     *         API before you map to Jira fields. For more information, see <a
      *         href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html"> Mapping data source fields</a>.
      *         The Jira data source field names must exist in your Jira custom metadata.
      */
@@ -1035,16 +1040,17 @@ public class JiraConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * A list of DataSourceToIndexFieldMapping objects that map attributes or field names of Jira projects to Amazon
-     * Kendra index field names. To create custom fields, use the UpdateIndex API before you map to Jira fields. For
-     * more information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html"> Mapping data
-     * source fields</a>. The Jira data source field names must exist in your Jira custom metadata.
+     * A list of <code>DataSourceToIndexFieldMapping</code> objects that map attributes or field names of Jira projects
+     * to Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code> API before you map
+     * to Jira fields. For more information, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html"> Mapping data source fields</a>. The Jira
+     * data source field names must exist in your Jira custom metadata.
      * </p>
      * 
      * @param projectFieldMappings
-     *        A list of DataSourceToIndexFieldMapping objects that map attributes or field names of Jira projects to
-     *        Amazon Kendra index field names. To create custom fields, use the UpdateIndex API before you map to Jira
-     *        fields. For more information, see <a
+     *        A list of <code>DataSourceToIndexFieldMapping</code> objects that map attributes or field names of Jira
+     *        projects to Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code> API
+     *        before you map to Jira fields. For more information, see <a
      *        href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html"> Mapping data source fields</a>.
      *        The Jira data source field names must exist in your Jira custom metadata.
      */
@@ -1060,10 +1066,11 @@ public class JiraConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * A list of DataSourceToIndexFieldMapping objects that map attributes or field names of Jira projects to Amazon
-     * Kendra index field names. To create custom fields, use the UpdateIndex API before you map to Jira fields. For
-     * more information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html"> Mapping data
-     * source fields</a>. The Jira data source field names must exist in your Jira custom metadata.
+     * A list of <code>DataSourceToIndexFieldMapping</code> objects that map attributes or field names of Jira projects
+     * to Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code> API before you map
+     * to Jira fields. For more information, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html"> Mapping data source fields</a>. The Jira
+     * data source field names must exist in your Jira custom metadata.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -1072,9 +1079,9 @@ public class JiraConfiguration implements Serializable, Cloneable, StructuredPoj
      * </p>
      * 
      * @param projectFieldMappings
-     *        A list of DataSourceToIndexFieldMapping objects that map attributes or field names of Jira projects to
-     *        Amazon Kendra index field names. To create custom fields, use the UpdateIndex API before you map to Jira
-     *        fields. For more information, see <a
+     *        A list of <code>DataSourceToIndexFieldMapping</code> objects that map attributes or field names of Jira
+     *        projects to Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code> API
+     *        before you map to Jira fields. For more information, see <a
      *        href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html"> Mapping data source fields</a>.
      *        The Jira data source field names must exist in your Jira custom metadata.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -1092,16 +1099,17 @@ public class JiraConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * A list of DataSourceToIndexFieldMapping objects that map attributes or field names of Jira projects to Amazon
-     * Kendra index field names. To create custom fields, use the UpdateIndex API before you map to Jira fields. For
-     * more information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html"> Mapping data
-     * source fields</a>. The Jira data source field names must exist in your Jira custom metadata.
+     * A list of <code>DataSourceToIndexFieldMapping</code> objects that map attributes or field names of Jira projects
+     * to Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code> API before you map
+     * to Jira fields. For more information, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html"> Mapping data source fields</a>. The Jira
+     * data source field names must exist in your Jira custom metadata.
      * </p>
      * 
      * @param projectFieldMappings
-     *        A list of DataSourceToIndexFieldMapping objects that map attributes or field names of Jira projects to
-     *        Amazon Kendra index field names. To create custom fields, use the UpdateIndex API before you map to Jira
-     *        fields. For more information, see <a
+     *        A list of <code>DataSourceToIndexFieldMapping</code> objects that map attributes or field names of Jira
+     *        projects to Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code> API
+     *        before you map to Jira fields. For more information, see <a
      *        href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html"> Mapping data source fields</a>.
      *        The Jira data source field names must exist in your Jira custom metadata.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -1114,15 +1122,16 @@ public class JiraConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * A list of DataSourceToIndexFieldMapping objects that map attributes or field names of Jira work logs to Amazon
-     * Kendra index field names. To create custom fields, use the UpdateIndex API before you map to Jira fields. For
-     * more information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html"> Mapping data
-     * source fields</a>. The Jira data source field names must exist in your Jira custom metadata.
+     * A list of <code>DataSourceToIndexFieldMapping</code> objects that map attributes or field names of Jira work logs
+     * to Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code> API before you map
+     * to Jira fields. For more information, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html"> Mapping data source fields</a>. The Jira
+     * data source field names must exist in your Jira custom metadata.
      * </p>
      * 
-     * @return A list of DataSourceToIndexFieldMapping objects that map attributes or field names of Jira work logs to
-     *         Amazon Kendra index field names. To create custom fields, use the UpdateIndex API before you map to Jira
-     *         fields. For more information, see <a
+     * @return A list of <code>DataSourceToIndexFieldMapping</code> objects that map attributes or field names of Jira
+     *         work logs to Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code>
+     *         API before you map to Jira fields. For more information, see <a
      *         href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html"> Mapping data source fields</a>.
      *         The Jira data source field names must exist in your Jira custom metadata.
      */
@@ -1133,16 +1142,17 @@ public class JiraConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * A list of DataSourceToIndexFieldMapping objects that map attributes or field names of Jira work logs to Amazon
-     * Kendra index field names. To create custom fields, use the UpdateIndex API before you map to Jira fields. For
-     * more information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html"> Mapping data
-     * source fields</a>. The Jira data source field names must exist in your Jira custom metadata.
+     * A list of <code>DataSourceToIndexFieldMapping</code> objects that map attributes or field names of Jira work logs
+     * to Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code> API before you map
+     * to Jira fields. For more information, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html"> Mapping data source fields</a>. The Jira
+     * data source field names must exist in your Jira custom metadata.
      * </p>
      * 
      * @param workLogFieldMappings
-     *        A list of DataSourceToIndexFieldMapping objects that map attributes or field names of Jira work logs to
-     *        Amazon Kendra index field names. To create custom fields, use the UpdateIndex API before you map to Jira
-     *        fields. For more information, see <a
+     *        A list of <code>DataSourceToIndexFieldMapping</code> objects that map attributes or field names of Jira
+     *        work logs to Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code>
+     *        API before you map to Jira fields. For more information, see <a
      *        href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html"> Mapping data source fields</a>.
      *        The Jira data source field names must exist in your Jira custom metadata.
      */
@@ -1158,10 +1168,11 @@ public class JiraConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * A list of DataSourceToIndexFieldMapping objects that map attributes or field names of Jira work logs to Amazon
-     * Kendra index field names. To create custom fields, use the UpdateIndex API before you map to Jira fields. For
-     * more information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html"> Mapping data
-     * source fields</a>. The Jira data source field names must exist in your Jira custom metadata.
+     * A list of <code>DataSourceToIndexFieldMapping</code> objects that map attributes or field names of Jira work logs
+     * to Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code> API before you map
+     * to Jira fields. For more information, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html"> Mapping data source fields</a>. The Jira
+     * data source field names must exist in your Jira custom metadata.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -1170,9 +1181,9 @@ public class JiraConfiguration implements Serializable, Cloneable, StructuredPoj
      * </p>
      * 
      * @param workLogFieldMappings
-     *        A list of DataSourceToIndexFieldMapping objects that map attributes or field names of Jira work logs to
-     *        Amazon Kendra index field names. To create custom fields, use the UpdateIndex API before you map to Jira
-     *        fields. For more information, see <a
+     *        A list of <code>DataSourceToIndexFieldMapping</code> objects that map attributes or field names of Jira
+     *        work logs to Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code>
+     *        API before you map to Jira fields. For more information, see <a
      *        href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html"> Mapping data source fields</a>.
      *        The Jira data source field names must exist in your Jira custom metadata.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -1190,16 +1201,17 @@ public class JiraConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * A list of DataSourceToIndexFieldMapping objects that map attributes or field names of Jira work logs to Amazon
-     * Kendra index field names. To create custom fields, use the UpdateIndex API before you map to Jira fields. For
-     * more information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html"> Mapping data
-     * source fields</a>. The Jira data source field names must exist in your Jira custom metadata.
+     * A list of <code>DataSourceToIndexFieldMapping</code> objects that map attributes or field names of Jira work logs
+     * to Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code> API before you map
+     * to Jira fields. For more information, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html"> Mapping data source fields</a>. The Jira
+     * data source field names must exist in your Jira custom metadata.
      * </p>
      * 
      * @param workLogFieldMappings
-     *        A list of DataSourceToIndexFieldMapping objects that map attributes or field names of Jira work logs to
-     *        Amazon Kendra index field names. To create custom fields, use the UpdateIndex API before you map to Jira
-     *        fields. For more information, see <a
+     *        A list of <code>DataSourceToIndexFieldMapping</code> objects that map attributes or field names of Jira
+     *        work logs to Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code>
+     *        API before you map to Jira fields. For more information, see <a
      *        href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html"> Mapping data source fields</a>.
      *        The Jira data source field names must exist in your Jira custom metadata.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -1400,13 +1412,14 @@ public class JiraConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Configuration information for an Amazon Virtual Private Cloud to connect to your Jira. Your Jira account must
-     * reside inside your VPC.
+     * Configuration information for an Amazon Virtual Private Cloud to connect to your Jira. For more information, see
+     * <a href="https://docs.aws.amazon.com/kendra/latest/dg/vpc-configuration.html">Configuring a VPC</a>.
      * </p>
      * 
      * @param vpcConfiguration
-     *        Configuration information for an Amazon Virtual Private Cloud to connect to your Jira. Your Jira account
-     *        must reside inside your VPC.
+     *        Configuration information for an Amazon Virtual Private Cloud to connect to your Jira. For more
+     *        information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/vpc-configuration.html">Configuring
+     *        a VPC</a>.
      */
 
     public void setVpcConfiguration(DataSourceVpcConfiguration vpcConfiguration) {
@@ -1415,12 +1428,13 @@ public class JiraConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Configuration information for an Amazon Virtual Private Cloud to connect to your Jira. Your Jira account must
-     * reside inside your VPC.
+     * Configuration information for an Amazon Virtual Private Cloud to connect to your Jira. For more information, see
+     * <a href="https://docs.aws.amazon.com/kendra/latest/dg/vpc-configuration.html">Configuring a VPC</a>.
      * </p>
      * 
-     * @return Configuration information for an Amazon Virtual Private Cloud to connect to your Jira. Your Jira account
-     *         must reside inside your VPC.
+     * @return Configuration information for an Amazon Virtual Private Cloud to connect to your Jira. For more
+     *         information, see <a
+     *         href="https://docs.aws.amazon.com/kendra/latest/dg/vpc-configuration.html">Configuring a VPC</a>.
      */
 
     public DataSourceVpcConfiguration getVpcConfiguration() {
@@ -1429,13 +1443,14 @@ public class JiraConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Configuration information for an Amazon Virtual Private Cloud to connect to your Jira. Your Jira account must
-     * reside inside your VPC.
+     * Configuration information for an Amazon Virtual Private Cloud to connect to your Jira. For more information, see
+     * <a href="https://docs.aws.amazon.com/kendra/latest/dg/vpc-configuration.html">Configuring a VPC</a>.
      * </p>
      * 
      * @param vpcConfiguration
-     *        Configuration information for an Amazon Virtual Private Cloud to connect to your Jira. Your Jira account
-     *        must reside inside your VPC.
+     *        Configuration information for an Amazon Virtual Private Cloud to connect to your Jira. For more
+     *        information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/vpc-configuration.html">Configuring
+     *        a VPC</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
