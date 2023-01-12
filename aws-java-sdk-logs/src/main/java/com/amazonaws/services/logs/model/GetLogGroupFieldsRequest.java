@@ -29,10 +29,12 @@ public class GetLogGroupFieldsRequest extends com.amazonaws.AmazonWebServiceRequ
      * <p>
      * The name of the log group to search.
      * </p>
+     * <note>
      * <p>
      * If you specify values for both <code>logGroupName</code> and <code>logGroupIdentifier</code>, the action returns
      * an <code>InvalidParameterException</code> error.
      * </p>
+     * </note>
      */
     private String logGroupName;
     /**
@@ -51,10 +53,12 @@ public class GetLogGroupFieldsRequest extends com.amazonaws.AmazonWebServiceRequ
      * Specify either the name or ARN of the log group to view. If the log group is in a source account and you are
      * using a monitoring account, you must specify the ARN.
      * </p>
+     * <note>
      * <p>
      * If you specify values for both <code>logGroupName</code> and <code>logGroupIdentifier</code>, the action returns
      * an <code>InvalidParameterException</code> error.
      * </p>
+     * </note>
      */
     private String logGroupIdentifier;
 
@@ -62,16 +66,19 @@ public class GetLogGroupFieldsRequest extends com.amazonaws.AmazonWebServiceRequ
      * <p>
      * The name of the log group to search.
      * </p>
+     * <note>
      * <p>
      * If you specify values for both <code>logGroupName</code> and <code>logGroupIdentifier</code>, the action returns
      * an <code>InvalidParameterException</code> error.
      * </p>
+     * </note>
      * 
      * @param logGroupName
-     *        The name of the log group to search.</p>
+     *        The name of the log group to search.</p> <note>
      *        <p>
      *        If you specify values for both <code>logGroupName</code> and <code>logGroupIdentifier</code>, the action
      *        returns an <code>InvalidParameterException</code> error.
+     *        </p>
      */
 
     public void setLogGroupName(String logGroupName) {
@@ -82,15 +89,18 @@ public class GetLogGroupFieldsRequest extends com.amazonaws.AmazonWebServiceRequ
      * <p>
      * The name of the log group to search.
      * </p>
+     * <note>
      * <p>
      * If you specify values for both <code>logGroupName</code> and <code>logGroupIdentifier</code>, the action returns
      * an <code>InvalidParameterException</code> error.
      * </p>
+     * </note>
      * 
-     * @return The name of the log group to search.</p>
+     * @return The name of the log group to search.</p> <note>
      *         <p>
      *         If you specify values for both <code>logGroupName</code> and <code>logGroupIdentifier</code>, the action
      *         returns an <code>InvalidParameterException</code> error.
+     *         </p>
      */
 
     public String getLogGroupName() {
@@ -101,16 +111,19 @@ public class GetLogGroupFieldsRequest extends com.amazonaws.AmazonWebServiceRequ
      * <p>
      * The name of the log group to search.
      * </p>
+     * <note>
      * <p>
      * If you specify values for both <code>logGroupName</code> and <code>logGroupIdentifier</code>, the action returns
      * an <code>InvalidParameterException</code> error.
      * </p>
+     * </note>
      * 
      * @param logGroupName
-     *        The name of the log group to search.</p>
+     *        The name of the log group to search.</p> <note>
      *        <p>
      *        If you specify values for both <code>logGroupName</code> and <code>logGroupIdentifier</code>, the action
      *        returns an <code>InvalidParameterException</code> error.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -194,17 +207,20 @@ public class GetLogGroupFieldsRequest extends com.amazonaws.AmazonWebServiceRequ
      * Specify either the name or ARN of the log group to view. If the log group is in a source account and you are
      * using a monitoring account, you must specify the ARN.
      * </p>
+     * <note>
      * <p>
      * If you specify values for both <code>logGroupName</code> and <code>logGroupIdentifier</code>, the action returns
      * an <code>InvalidParameterException</code> error.
      * </p>
+     * </note>
      * 
      * @param logGroupIdentifier
      *        Specify either the name or ARN of the log group to view. If the log group is in a source account and you
-     *        are using a monitoring account, you must specify the ARN.</p>
+     *        are using a monitoring account, you must specify the ARN.</p> <note>
      *        <p>
      *        If you specify values for both <code>logGroupName</code> and <code>logGroupIdentifier</code>, the action
      *        returns an <code>InvalidParameterException</code> error.
+     *        </p>
      */
 
     public void setLogGroupIdentifier(String logGroupIdentifier) {
@@ -216,16 +232,19 @@ public class GetLogGroupFieldsRequest extends com.amazonaws.AmazonWebServiceRequ
      * Specify either the name or ARN of the log group to view. If the log group is in a source account and you are
      * using a monitoring account, you must specify the ARN.
      * </p>
+     * <note>
      * <p>
      * If you specify values for both <code>logGroupName</code> and <code>logGroupIdentifier</code>, the action returns
      * an <code>InvalidParameterException</code> error.
      * </p>
+     * </note>
      * 
      * @return Specify either the name or ARN of the log group to view. If the log group is in a source account and you
-     *         are using a monitoring account, you must specify the ARN.</p>
+     *         are using a monitoring account, you must specify the ARN.</p> <note>
      *         <p>
      *         If you specify values for both <code>logGroupName</code> and <code>logGroupIdentifier</code>, the action
      *         returns an <code>InvalidParameterException</code> error.
+     *         </p>
      */
 
     public String getLogGroupIdentifier() {
@@ -237,17 +256,20 @@ public class GetLogGroupFieldsRequest extends com.amazonaws.AmazonWebServiceRequ
      * Specify either the name or ARN of the log group to view. If the log group is in a source account and you are
      * using a monitoring account, you must specify the ARN.
      * </p>
+     * <note>
      * <p>
      * If you specify values for both <code>logGroupName</code> and <code>logGroupIdentifier</code>, the action returns
      * an <code>InvalidParameterException</code> error.
      * </p>
+     * </note>
      * 
      * @param logGroupIdentifier
      *        Specify either the name or ARN of the log group to view. If the log group is in a source account and you
-     *        are using a monitoring account, you must specify the ARN.</p>
+     *        are using a monitoring account, you must specify the ARN.</p> <note>
      *        <p>
      *        If you specify values for both <code>logGroupName</code> and <code>logGroupIdentifier</code>, the action
      *        returns an <code>InvalidParameterException</code> error.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

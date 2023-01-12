@@ -56,6 +56,8 @@ public class UpdateEventSourceMappingRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("TumblingWindowInSeconds").build();
     private static final MarshallingInfo<List> FUNCTIONRESPONSETYPES_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("FunctionResponseTypes").build();
+    private static final MarshallingInfo<StructuredPojo> SCALINGCONFIG_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ScalingConfig").build();
 
     private static final UpdateEventSourceMappingRequestMarshaller instance = new UpdateEventSourceMappingRequestMarshaller();
 
@@ -87,6 +89,7 @@ public class UpdateEventSourceMappingRequestMarshaller {
             protocolMarshaller.marshall(updateEventSourceMappingRequest.getSourceAccessConfigurations(), SOURCEACCESSCONFIGURATIONS_BINDING);
             protocolMarshaller.marshall(updateEventSourceMappingRequest.getTumblingWindowInSeconds(), TUMBLINGWINDOWINSECONDS_BINDING);
             protocolMarshaller.marshall(updateEventSourceMappingRequest.getFunctionResponseTypes(), FUNCTIONRESPONSETYPES_BINDING);
+            protocolMarshaller.marshall(updateEventSourceMappingRequest.getScalingConfig(), SCALINGCONFIG_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -42,10 +42,12 @@ public class DescribeLogStreamsRequest extends com.amazonaws.AmazonWebServiceReq
      * Specify either the name or ARN of the log group to view. If the log group is in a source account and you are
      * using a monitoring account, you must use the log group ARN.
      * </p>
+     * <note>
      * <p>
      * If you specify values for both <code>logGroupName</code> and <code>logGroupIdentifier</code>, the action returns
      * an <code>InvalidParameterException</code> error.
      * </p>
+     * </note>
      */
     private String logGroupIdentifier;
     /**
@@ -191,17 +193,20 @@ public class DescribeLogStreamsRequest extends com.amazonaws.AmazonWebServiceReq
      * Specify either the name or ARN of the log group to view. If the log group is in a source account and you are
      * using a monitoring account, you must use the log group ARN.
      * </p>
+     * <note>
      * <p>
      * If you specify values for both <code>logGroupName</code> and <code>logGroupIdentifier</code>, the action returns
      * an <code>InvalidParameterException</code> error.
      * </p>
+     * </note>
      * 
      * @param logGroupIdentifier
      *        Specify either the name or ARN of the log group to view. If the log group is in a source account and you
-     *        are using a monitoring account, you must use the log group ARN.</p>
+     *        are using a monitoring account, you must use the log group ARN.</p> <note>
      *        <p>
      *        If you specify values for both <code>logGroupName</code> and <code>logGroupIdentifier</code>, the action
      *        returns an <code>InvalidParameterException</code> error.
+     *        </p>
      */
 
     public void setLogGroupIdentifier(String logGroupIdentifier) {
@@ -213,16 +218,19 @@ public class DescribeLogStreamsRequest extends com.amazonaws.AmazonWebServiceReq
      * Specify either the name or ARN of the log group to view. If the log group is in a source account and you are
      * using a monitoring account, you must use the log group ARN.
      * </p>
+     * <note>
      * <p>
      * If you specify values for both <code>logGroupName</code> and <code>logGroupIdentifier</code>, the action returns
      * an <code>InvalidParameterException</code> error.
      * </p>
+     * </note>
      * 
      * @return Specify either the name or ARN of the log group to view. If the log group is in a source account and you
-     *         are using a monitoring account, you must use the log group ARN.</p>
+     *         are using a monitoring account, you must use the log group ARN.</p> <note>
      *         <p>
      *         If you specify values for both <code>logGroupName</code> and <code>logGroupIdentifier</code>, the action
      *         returns an <code>InvalidParameterException</code> error.
+     *         </p>
      */
 
     public String getLogGroupIdentifier() {
@@ -234,17 +242,20 @@ public class DescribeLogStreamsRequest extends com.amazonaws.AmazonWebServiceReq
      * Specify either the name or ARN of the log group to view. If the log group is in a source account and you are
      * using a monitoring account, you must use the log group ARN.
      * </p>
+     * <note>
      * <p>
      * If you specify values for both <code>logGroupName</code> and <code>logGroupIdentifier</code>, the action returns
      * an <code>InvalidParameterException</code> error.
      * </p>
+     * </note>
      * 
      * @param logGroupIdentifier
      *        Specify either the name or ARN of the log group to view. If the log group is in a source account and you
-     *        are using a monitoring account, you must use the log group ARN.</p>
+     *        are using a monitoring account, you must use the log group ARN.</p> <note>
      *        <p>
      *        If you specify values for both <code>logGroupName</code> and <code>logGroupIdentifier</code>, the action
      *        returns an <code>InvalidParameterException</code> error.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

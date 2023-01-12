@@ -209,6 +209,14 @@ public class EventSourceMappingConfiguration implements Serializable, Cloneable,
      * </p>
      */
     private SelfManagedKafkaEventSourceConfig selfManagedKafkaEventSourceConfig;
+    /**
+     * <p>
+     * (Amazon SQS only) The scaling configuration for the event source. For more information, see <a
+     * href="https://docs.aws.amazon.com/lambda/latest/dg/with-sqs.html#events-sqs-max-concurrency">Configuring maximum
+     * concurrency for Amazon SQS event sources</a>.
+     * </p>
+     */
+    private ScalingConfig scalingConfig;
 
     /**
      * <p>
@@ -1597,6 +1605,58 @@ public class EventSourceMappingConfiguration implements Serializable, Cloneable,
     }
 
     /**
+     * <p>
+     * (Amazon SQS only) The scaling configuration for the event source. For more information, see <a
+     * href="https://docs.aws.amazon.com/lambda/latest/dg/with-sqs.html#events-sqs-max-concurrency">Configuring maximum
+     * concurrency for Amazon SQS event sources</a>.
+     * </p>
+     * 
+     * @param scalingConfig
+     *        (Amazon SQS only) The scaling configuration for the event source. For more information, see <a
+     *        href="https://docs.aws.amazon.com/lambda/latest/dg/with-sqs.html#events-sqs-max-concurrency">Configuring
+     *        maximum concurrency for Amazon SQS event sources</a>.
+     */
+
+    public void setScalingConfig(ScalingConfig scalingConfig) {
+        this.scalingConfig = scalingConfig;
+    }
+
+    /**
+     * <p>
+     * (Amazon SQS only) The scaling configuration for the event source. For more information, see <a
+     * href="https://docs.aws.amazon.com/lambda/latest/dg/with-sqs.html#events-sqs-max-concurrency">Configuring maximum
+     * concurrency for Amazon SQS event sources</a>.
+     * </p>
+     * 
+     * @return (Amazon SQS only) The scaling configuration for the event source. For more information, see <a
+     *         href="https://docs.aws.amazon.com/lambda/latest/dg/with-sqs.html#events-sqs-max-concurrency">Configuring
+     *         maximum concurrency for Amazon SQS event sources</a>.
+     */
+
+    public ScalingConfig getScalingConfig() {
+        return this.scalingConfig;
+    }
+
+    /**
+     * <p>
+     * (Amazon SQS only) The scaling configuration for the event source. For more information, see <a
+     * href="https://docs.aws.amazon.com/lambda/latest/dg/with-sqs.html#events-sqs-max-concurrency">Configuring maximum
+     * concurrency for Amazon SQS event sources</a>.
+     * </p>
+     * 
+     * @param scalingConfig
+     *        (Amazon SQS only) The scaling configuration for the event source. For more information, see <a
+     *        href="https://docs.aws.amazon.com/lambda/latest/dg/with-sqs.html#events-sqs-max-concurrency">Configuring
+     *        maximum concurrency for Amazon SQS event sources</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public EventSourceMappingConfiguration withScalingConfig(ScalingConfig scalingConfig) {
+        setScalingConfig(scalingConfig);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1657,7 +1717,9 @@ public class EventSourceMappingConfiguration implements Serializable, Cloneable,
         if (getAmazonManagedKafkaEventSourceConfig() != null)
             sb.append("AmazonManagedKafkaEventSourceConfig: ").append(getAmazonManagedKafkaEventSourceConfig()).append(",");
         if (getSelfManagedKafkaEventSourceConfig() != null)
-            sb.append("SelfManagedKafkaEventSourceConfig: ").append(getSelfManagedKafkaEventSourceConfig());
+            sb.append("SelfManagedKafkaEventSourceConfig: ").append(getSelfManagedKafkaEventSourceConfig()).append(",");
+        if (getScalingConfig() != null)
+            sb.append("ScalingConfig: ").append(getScalingConfig());
         sb.append("}");
         return sb.toString();
     }
@@ -1775,6 +1837,10 @@ public class EventSourceMappingConfiguration implements Serializable, Cloneable,
         if (other.getSelfManagedKafkaEventSourceConfig() != null
                 && other.getSelfManagedKafkaEventSourceConfig().equals(this.getSelfManagedKafkaEventSourceConfig()) == false)
             return false;
+        if (other.getScalingConfig() == null ^ this.getScalingConfig() == null)
+            return false;
+        if (other.getScalingConfig() != null && other.getScalingConfig().equals(this.getScalingConfig()) == false)
+            return false;
         return true;
     }
 
@@ -1808,6 +1874,7 @@ public class EventSourceMappingConfiguration implements Serializable, Cloneable,
         hashCode = prime * hashCode + ((getFunctionResponseTypes() == null) ? 0 : getFunctionResponseTypes().hashCode());
         hashCode = prime * hashCode + ((getAmazonManagedKafkaEventSourceConfig() == null) ? 0 : getAmazonManagedKafkaEventSourceConfig().hashCode());
         hashCode = prime * hashCode + ((getSelfManagedKafkaEventSourceConfig() == null) ? 0 : getSelfManagedKafkaEventSourceConfig().hashCode());
+        hashCode = prime * hashCode + ((getScalingConfig() == null) ? 0 : getScalingConfig().hashCode());
         return hashCode;
     }
 

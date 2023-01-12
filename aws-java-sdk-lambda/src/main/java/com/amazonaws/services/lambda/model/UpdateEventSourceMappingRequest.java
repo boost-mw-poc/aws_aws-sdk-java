@@ -41,22 +41,22 @@ public class UpdateEventSourceMappingRequest extends com.amazonaws.AmazonWebServ
      * <ul>
      * <li>
      * <p>
-     * <b>Function name</b> - <code>MyFunction</code>.
+     * <b>Function name</b> – <code>MyFunction</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b>Function ARN</b> - <code>arn:aws:lambda:us-west-2:123456789012:function:MyFunction</code>.
+     * <b>Function ARN</b> – <code>arn:aws:lambda:us-west-2:123456789012:function:MyFunction</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b>Version or Alias ARN</b> - <code>arn:aws:lambda:us-west-2:123456789012:function:MyFunction:PROD</code>.
+     * <b>Version or Alias ARN</b> – <code>arn:aws:lambda:us-west-2:123456789012:function:MyFunction:PROD</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b>Partial ARN</b> - <code>123456789012:function:MyFunction</code>.
+     * <b>Partial ARN</b> – <code>123456789012:function:MyFunction</code>.
      * </p>
      * </li>
      * </ul>
@@ -84,33 +84,33 @@ public class UpdateEventSourceMappingRequest extends com.amazonaws.AmazonWebServ
      * <ul>
      * <li>
      * <p>
-     * <b>Amazon Kinesis</b> - Default 100. Max 10,000.
+     * <b>Amazon Kinesis</b> – Default 100. Max 10,000.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b>Amazon DynamoDB Streams</b> - Default 100. Max 10,000.
+     * <b>Amazon DynamoDB Streams</b> – Default 100. Max 10,000.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b>Amazon Simple Queue Service</b> - Default 10. For standard queues the max is 10,000. For FIFO queues the max
+     * <b>Amazon Simple Queue Service</b> – Default 10. For standard queues the max is 10,000. For FIFO queues the max
      * is 10.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b>Amazon Managed Streaming for Apache Kafka</b> - Default 100. Max 10,000.
+     * <b>Amazon Managed Streaming for Apache Kafka</b> – Default 100. Max 10,000.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b>Self-managed Apache Kafka</b> - Default 100. Max 10,000.
+     * <b>Self-managed Apache Kafka</b> – Default 100. Max 10,000.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b>Amazon MQ (ActiveMQ and RabbitMQ)</b> - Default 100. Max 10,000.
+     * <b>Amazon MQ (ActiveMQ and RabbitMQ)</b> – Default 100. Max 10,000.
      * </p>
      * </li>
      * </ul>
@@ -192,6 +192,14 @@ public class UpdateEventSourceMappingRequest extends com.amazonaws.AmazonWebServ
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> functionResponseTypes;
+    /**
+     * <p>
+     * (Amazon SQS only) The scaling configuration for the event source. For more information, see <a
+     * href="https://docs.aws.amazon.com/lambda/latest/dg/with-sqs.html#events-sqs-max-concurrency">Configuring maximum
+     * concurrency for Amazon SQS event sources</a>.
+     * </p>
+     */
+    private ScalingConfig scalingConfig;
 
     /**
      * <p>
@@ -243,22 +251,22 @@ public class UpdateEventSourceMappingRequest extends com.amazonaws.AmazonWebServ
      * <ul>
      * <li>
      * <p>
-     * <b>Function name</b> - <code>MyFunction</code>.
+     * <b>Function name</b> – <code>MyFunction</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b>Function ARN</b> - <code>arn:aws:lambda:us-west-2:123456789012:function:MyFunction</code>.
+     * <b>Function ARN</b> – <code>arn:aws:lambda:us-west-2:123456789012:function:MyFunction</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b>Version or Alias ARN</b> - <code>arn:aws:lambda:us-west-2:123456789012:function:MyFunction:PROD</code>.
+     * <b>Version or Alias ARN</b> – <code>arn:aws:lambda:us-west-2:123456789012:function:MyFunction:PROD</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b>Partial ARN</b> - <code>123456789012:function:MyFunction</code>.
+     * <b>Partial ARN</b> – <code>123456789012:function:MyFunction</code>.
      * </p>
      * </li>
      * </ul>
@@ -275,22 +283,22 @@ public class UpdateEventSourceMappingRequest extends com.amazonaws.AmazonWebServ
      *        <ul>
      *        <li>
      *        <p>
-     *        <b>Function name</b> - <code>MyFunction</code>.
+     *        <b>Function name</b> – <code>MyFunction</code>.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <b>Function ARN</b> - <code>arn:aws:lambda:us-west-2:123456789012:function:MyFunction</code>.
+     *        <b>Function ARN</b> – <code>arn:aws:lambda:us-west-2:123456789012:function:MyFunction</code>.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <b>Version or Alias ARN</b> - <code>arn:aws:lambda:us-west-2:123456789012:function:MyFunction:PROD</code>.
+     *        <b>Version or Alias ARN</b> – <code>arn:aws:lambda:us-west-2:123456789012:function:MyFunction:PROD</code>.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <b>Partial ARN</b> - <code>123456789012:function:MyFunction</code>.
+     *        <b>Partial ARN</b> – <code>123456789012:function:MyFunction</code>.
      *        </p>
      *        </li>
      *        </ul>
@@ -313,22 +321,22 @@ public class UpdateEventSourceMappingRequest extends com.amazonaws.AmazonWebServ
      * <ul>
      * <li>
      * <p>
-     * <b>Function name</b> - <code>MyFunction</code>.
+     * <b>Function name</b> – <code>MyFunction</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b>Function ARN</b> - <code>arn:aws:lambda:us-west-2:123456789012:function:MyFunction</code>.
+     * <b>Function ARN</b> – <code>arn:aws:lambda:us-west-2:123456789012:function:MyFunction</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b>Version or Alias ARN</b> - <code>arn:aws:lambda:us-west-2:123456789012:function:MyFunction:PROD</code>.
+     * <b>Version or Alias ARN</b> – <code>arn:aws:lambda:us-west-2:123456789012:function:MyFunction:PROD</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b>Partial ARN</b> - <code>123456789012:function:MyFunction</code>.
+     * <b>Partial ARN</b> – <code>123456789012:function:MyFunction</code>.
      * </p>
      * </li>
      * </ul>
@@ -344,23 +352,23 @@ public class UpdateEventSourceMappingRequest extends com.amazonaws.AmazonWebServ
      *         <ul>
      *         <li>
      *         <p>
-     *         <b>Function name</b> - <code>MyFunction</code>.
+     *         <b>Function name</b> – <code>MyFunction</code>.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <b>Function ARN</b> - <code>arn:aws:lambda:us-west-2:123456789012:function:MyFunction</code>.
+     *         <b>Function ARN</b> – <code>arn:aws:lambda:us-west-2:123456789012:function:MyFunction</code>.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <b>Version or Alias ARN</b> - <code>arn:aws:lambda:us-west-2:123456789012:function:MyFunction:PROD</code>
+     *         <b>Version or Alias ARN</b> – <code>arn:aws:lambda:us-west-2:123456789012:function:MyFunction:PROD</code>
      *         .
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <b>Partial ARN</b> - <code>123456789012:function:MyFunction</code>.
+     *         <b>Partial ARN</b> – <code>123456789012:function:MyFunction</code>.
      *         </p>
      *         </li>
      *         </ul>
@@ -383,22 +391,22 @@ public class UpdateEventSourceMappingRequest extends com.amazonaws.AmazonWebServ
      * <ul>
      * <li>
      * <p>
-     * <b>Function name</b> - <code>MyFunction</code>.
+     * <b>Function name</b> – <code>MyFunction</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b>Function ARN</b> - <code>arn:aws:lambda:us-west-2:123456789012:function:MyFunction</code>.
+     * <b>Function ARN</b> – <code>arn:aws:lambda:us-west-2:123456789012:function:MyFunction</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b>Version or Alias ARN</b> - <code>arn:aws:lambda:us-west-2:123456789012:function:MyFunction:PROD</code>.
+     * <b>Version or Alias ARN</b> – <code>arn:aws:lambda:us-west-2:123456789012:function:MyFunction:PROD</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b>Partial ARN</b> - <code>123456789012:function:MyFunction</code>.
+     * <b>Partial ARN</b> – <code>123456789012:function:MyFunction</code>.
      * </p>
      * </li>
      * </ul>
@@ -415,22 +423,22 @@ public class UpdateEventSourceMappingRequest extends com.amazonaws.AmazonWebServ
      *        <ul>
      *        <li>
      *        <p>
-     *        <b>Function name</b> - <code>MyFunction</code>.
+     *        <b>Function name</b> – <code>MyFunction</code>.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <b>Function ARN</b> - <code>arn:aws:lambda:us-west-2:123456789012:function:MyFunction</code>.
+     *        <b>Function ARN</b> – <code>arn:aws:lambda:us-west-2:123456789012:function:MyFunction</code>.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <b>Version or Alias ARN</b> - <code>arn:aws:lambda:us-west-2:123456789012:function:MyFunction:PROD</code>.
+     *        <b>Version or Alias ARN</b> – <code>arn:aws:lambda:us-west-2:123456789012:function:MyFunction:PROD</code>.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <b>Partial ARN</b> - <code>123456789012:function:MyFunction</code>.
+     *        <b>Partial ARN</b> – <code>123456789012:function:MyFunction</code>.
      *        </p>
      *        </li>
      *        </ul>
@@ -526,33 +534,33 @@ public class UpdateEventSourceMappingRequest extends com.amazonaws.AmazonWebServ
      * <ul>
      * <li>
      * <p>
-     * <b>Amazon Kinesis</b> - Default 100. Max 10,000.
+     * <b>Amazon Kinesis</b> – Default 100. Max 10,000.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b>Amazon DynamoDB Streams</b> - Default 100. Max 10,000.
+     * <b>Amazon DynamoDB Streams</b> – Default 100. Max 10,000.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b>Amazon Simple Queue Service</b> - Default 10. For standard queues the max is 10,000. For FIFO queues the max
+     * <b>Amazon Simple Queue Service</b> – Default 10. For standard queues the max is 10,000. For FIFO queues the max
      * is 10.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b>Amazon Managed Streaming for Apache Kafka</b> - Default 100. Max 10,000.
+     * <b>Amazon Managed Streaming for Apache Kafka</b> – Default 100. Max 10,000.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b>Self-managed Apache Kafka</b> - Default 100. Max 10,000.
+     * <b>Self-managed Apache Kafka</b> – Default 100. Max 10,000.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b>Amazon MQ (ActiveMQ and RabbitMQ)</b> - Default 100. Max 10,000.
+     * <b>Amazon MQ (ActiveMQ and RabbitMQ)</b> – Default 100. Max 10,000.
      * </p>
      * </li>
      * </ul>
@@ -564,33 +572,33 @@ public class UpdateEventSourceMappingRequest extends com.amazonaws.AmazonWebServ
      *        <ul>
      *        <li>
      *        <p>
-     *        <b>Amazon Kinesis</b> - Default 100. Max 10,000.
+     *        <b>Amazon Kinesis</b> – Default 100. Max 10,000.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <b>Amazon DynamoDB Streams</b> - Default 100. Max 10,000.
+     *        <b>Amazon DynamoDB Streams</b> – Default 100. Max 10,000.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <b>Amazon Simple Queue Service</b> - Default 10. For standard queues the max is 10,000. For FIFO queues
+     *        <b>Amazon Simple Queue Service</b> – Default 10. For standard queues the max is 10,000. For FIFO queues
      *        the max is 10.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <b>Amazon Managed Streaming for Apache Kafka</b> - Default 100. Max 10,000.
+     *        <b>Amazon Managed Streaming for Apache Kafka</b> – Default 100. Max 10,000.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <b>Self-managed Apache Kafka</b> - Default 100. Max 10,000.
+     *        <b>Self-managed Apache Kafka</b> – Default 100. Max 10,000.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <b>Amazon MQ (ActiveMQ and RabbitMQ)</b> - Default 100. Max 10,000.
+     *        <b>Amazon MQ (ActiveMQ and RabbitMQ)</b> – Default 100. Max 10,000.
      *        </p>
      *        </li>
      */
@@ -608,33 +616,33 @@ public class UpdateEventSourceMappingRequest extends com.amazonaws.AmazonWebServ
      * <ul>
      * <li>
      * <p>
-     * <b>Amazon Kinesis</b> - Default 100. Max 10,000.
+     * <b>Amazon Kinesis</b> – Default 100. Max 10,000.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b>Amazon DynamoDB Streams</b> - Default 100. Max 10,000.
+     * <b>Amazon DynamoDB Streams</b> – Default 100. Max 10,000.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b>Amazon Simple Queue Service</b> - Default 10. For standard queues the max is 10,000. For FIFO queues the max
+     * <b>Amazon Simple Queue Service</b> – Default 10. For standard queues the max is 10,000. For FIFO queues the max
      * is 10.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b>Amazon Managed Streaming for Apache Kafka</b> - Default 100. Max 10,000.
+     * <b>Amazon Managed Streaming for Apache Kafka</b> – Default 100. Max 10,000.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b>Self-managed Apache Kafka</b> - Default 100. Max 10,000.
+     * <b>Self-managed Apache Kafka</b> – Default 100. Max 10,000.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b>Amazon MQ (ActiveMQ and RabbitMQ)</b> - Default 100. Max 10,000.
+     * <b>Amazon MQ (ActiveMQ and RabbitMQ)</b> – Default 100. Max 10,000.
      * </p>
      * </li>
      * </ul>
@@ -645,33 +653,33 @@ public class UpdateEventSourceMappingRequest extends com.amazonaws.AmazonWebServ
      *         <ul>
      *         <li>
      *         <p>
-     *         <b>Amazon Kinesis</b> - Default 100. Max 10,000.
+     *         <b>Amazon Kinesis</b> – Default 100. Max 10,000.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <b>Amazon DynamoDB Streams</b> - Default 100. Max 10,000.
+     *         <b>Amazon DynamoDB Streams</b> – Default 100. Max 10,000.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <b>Amazon Simple Queue Service</b> - Default 10. For standard queues the max is 10,000. For FIFO queues
+     *         <b>Amazon Simple Queue Service</b> – Default 10. For standard queues the max is 10,000. For FIFO queues
      *         the max is 10.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <b>Amazon Managed Streaming for Apache Kafka</b> - Default 100. Max 10,000.
+     *         <b>Amazon Managed Streaming for Apache Kafka</b> – Default 100. Max 10,000.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <b>Self-managed Apache Kafka</b> - Default 100. Max 10,000.
+     *         <b>Self-managed Apache Kafka</b> – Default 100. Max 10,000.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <b>Amazon MQ (ActiveMQ and RabbitMQ)</b> - Default 100. Max 10,000.
+     *         <b>Amazon MQ (ActiveMQ and RabbitMQ)</b> – Default 100. Max 10,000.
      *         </p>
      *         </li>
      */
@@ -689,33 +697,33 @@ public class UpdateEventSourceMappingRequest extends com.amazonaws.AmazonWebServ
      * <ul>
      * <li>
      * <p>
-     * <b>Amazon Kinesis</b> - Default 100. Max 10,000.
+     * <b>Amazon Kinesis</b> – Default 100. Max 10,000.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b>Amazon DynamoDB Streams</b> - Default 100. Max 10,000.
+     * <b>Amazon DynamoDB Streams</b> – Default 100. Max 10,000.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b>Amazon Simple Queue Service</b> - Default 10. For standard queues the max is 10,000. For FIFO queues the max
+     * <b>Amazon Simple Queue Service</b> – Default 10. For standard queues the max is 10,000. For FIFO queues the max
      * is 10.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b>Amazon Managed Streaming for Apache Kafka</b> - Default 100. Max 10,000.
+     * <b>Amazon Managed Streaming for Apache Kafka</b> – Default 100. Max 10,000.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b>Self-managed Apache Kafka</b> - Default 100. Max 10,000.
+     * <b>Self-managed Apache Kafka</b> – Default 100. Max 10,000.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b>Amazon MQ (ActiveMQ and RabbitMQ)</b> - Default 100. Max 10,000.
+     * <b>Amazon MQ (ActiveMQ and RabbitMQ)</b> – Default 100. Max 10,000.
      * </p>
      * </li>
      * </ul>
@@ -727,33 +735,33 @@ public class UpdateEventSourceMappingRequest extends com.amazonaws.AmazonWebServ
      *        <ul>
      *        <li>
      *        <p>
-     *        <b>Amazon Kinesis</b> - Default 100. Max 10,000.
+     *        <b>Amazon Kinesis</b> – Default 100. Max 10,000.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <b>Amazon DynamoDB Streams</b> - Default 100. Max 10,000.
+     *        <b>Amazon DynamoDB Streams</b> – Default 100. Max 10,000.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <b>Amazon Simple Queue Service</b> - Default 10. For standard queues the max is 10,000. For FIFO queues
+     *        <b>Amazon Simple Queue Service</b> – Default 10. For standard queues the max is 10,000. For FIFO queues
      *        the max is 10.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <b>Amazon Managed Streaming for Apache Kafka</b> - Default 100. Max 10,000.
+     *        <b>Amazon Managed Streaming for Apache Kafka</b> – Default 100. Max 10,000.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <b>Self-managed Apache Kafka</b> - Default 100. Max 10,000.
+     *        <b>Self-managed Apache Kafka</b> – Default 100. Max 10,000.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <b>Amazon MQ (ActiveMQ and RabbitMQ)</b> - Default 100. Max 10,000.
+     *        <b>Amazon MQ (ActiveMQ and RabbitMQ)</b> – Default 100. Max 10,000.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -1371,6 +1379,58 @@ public class UpdateEventSourceMappingRequest extends com.amazonaws.AmazonWebServ
     }
 
     /**
+     * <p>
+     * (Amazon SQS only) The scaling configuration for the event source. For more information, see <a
+     * href="https://docs.aws.amazon.com/lambda/latest/dg/with-sqs.html#events-sqs-max-concurrency">Configuring maximum
+     * concurrency for Amazon SQS event sources</a>.
+     * </p>
+     * 
+     * @param scalingConfig
+     *        (Amazon SQS only) The scaling configuration for the event source. For more information, see <a
+     *        href="https://docs.aws.amazon.com/lambda/latest/dg/with-sqs.html#events-sqs-max-concurrency">Configuring
+     *        maximum concurrency for Amazon SQS event sources</a>.
+     */
+
+    public void setScalingConfig(ScalingConfig scalingConfig) {
+        this.scalingConfig = scalingConfig;
+    }
+
+    /**
+     * <p>
+     * (Amazon SQS only) The scaling configuration for the event source. For more information, see <a
+     * href="https://docs.aws.amazon.com/lambda/latest/dg/with-sqs.html#events-sqs-max-concurrency">Configuring maximum
+     * concurrency for Amazon SQS event sources</a>.
+     * </p>
+     * 
+     * @return (Amazon SQS only) The scaling configuration for the event source. For more information, see <a
+     *         href="https://docs.aws.amazon.com/lambda/latest/dg/with-sqs.html#events-sqs-max-concurrency">Configuring
+     *         maximum concurrency for Amazon SQS event sources</a>.
+     */
+
+    public ScalingConfig getScalingConfig() {
+        return this.scalingConfig;
+    }
+
+    /**
+     * <p>
+     * (Amazon SQS only) The scaling configuration for the event source. For more information, see <a
+     * href="https://docs.aws.amazon.com/lambda/latest/dg/with-sqs.html#events-sqs-max-concurrency">Configuring maximum
+     * concurrency for Amazon SQS event sources</a>.
+     * </p>
+     * 
+     * @param scalingConfig
+     *        (Amazon SQS only) The scaling configuration for the event source. For more information, see <a
+     *        href="https://docs.aws.amazon.com/lambda/latest/dg/with-sqs.html#events-sqs-max-concurrency">Configuring
+     *        maximum concurrency for Amazon SQS event sources</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateEventSourceMappingRequest withScalingConfig(ScalingConfig scalingConfig) {
+        setScalingConfig(scalingConfig);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1409,7 +1469,9 @@ public class UpdateEventSourceMappingRequest extends com.amazonaws.AmazonWebServ
         if (getTumblingWindowInSeconds() != null)
             sb.append("TumblingWindowInSeconds: ").append(getTumblingWindowInSeconds()).append(",");
         if (getFunctionResponseTypes() != null)
-            sb.append("FunctionResponseTypes: ").append(getFunctionResponseTypes());
+            sb.append("FunctionResponseTypes: ").append(getFunctionResponseTypes()).append(",");
+        if (getScalingConfig() != null)
+            sb.append("ScalingConfig: ").append(getScalingConfig());
         sb.append("}");
         return sb.toString();
     }
@@ -1481,6 +1543,10 @@ public class UpdateEventSourceMappingRequest extends com.amazonaws.AmazonWebServ
             return false;
         if (other.getFunctionResponseTypes() != null && other.getFunctionResponseTypes().equals(this.getFunctionResponseTypes()) == false)
             return false;
+        if (other.getScalingConfig() == null ^ this.getScalingConfig() == null)
+            return false;
+        if (other.getScalingConfig() != null && other.getScalingConfig().equals(this.getScalingConfig()) == false)
+            return false;
         return true;
     }
 
@@ -1503,6 +1569,7 @@ public class UpdateEventSourceMappingRequest extends com.amazonaws.AmazonWebServ
         hashCode = prime * hashCode + ((getSourceAccessConfigurations() == null) ? 0 : getSourceAccessConfigurations().hashCode());
         hashCode = prime * hashCode + ((getTumblingWindowInSeconds() == null) ? 0 : getTumblingWindowInSeconds().hashCode());
         hashCode = prime * hashCode + ((getFunctionResponseTypes() == null) ? 0 : getFunctionResponseTypes().hashCode());
+        hashCode = prime * hashCode + ((getScalingConfig() == null) ? 0 : getScalingConfig().hashCode());
         return hashCode;
     }
 

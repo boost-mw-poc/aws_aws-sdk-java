@@ -50,6 +50,14 @@ public class CmafGroupSettings implements Serializable, Cloneable, StructuredPoj
     /** Specification to use (RFC-6381 or the default RFC-4281) during m3u8 playlist generation. */
     private String codecSpecification;
     /**
+     * Specify how MediaConvert writes SegmentTimeline in your output DASH manifest. To write a SegmentTimeline in each
+     * video Representation: Keep the default value, Basic. To write a common SegmentTimeline in the video
+     * AdaptationSet: Choose Compact. Note that MediaConvert will still write a SegmentTimeline in any Representation
+     * that does not share a common timeline. To write a video AdaptationSet for each different output framerate, and a
+     * common SegmentTimeline in each AdaptationSet: Choose Distinct.
+     */
+    private String dashManifestStyle;
+    /**
      * Use Destination (Destination) to specify the S3 output location and the output filename base. Destination accepts
      * format identifiers. If you do not specify the base filename in the URI, the service will use the filename of the
      * input file. If your job has multiple inputs, the service uses the filename of the first input file.
@@ -417,6 +425,89 @@ public class CmafGroupSettings implements Serializable, Cloneable, StructuredPoj
 
     public CmafGroupSettings withCodecSpecification(CmafCodecSpecification codecSpecification) {
         this.codecSpecification = codecSpecification.toString();
+        return this;
+    }
+
+    /**
+     * Specify how MediaConvert writes SegmentTimeline in your output DASH manifest. To write a SegmentTimeline in each
+     * video Representation: Keep the default value, Basic. To write a common SegmentTimeline in the video
+     * AdaptationSet: Choose Compact. Note that MediaConvert will still write a SegmentTimeline in any Representation
+     * that does not share a common timeline. To write a video AdaptationSet for each different output framerate, and a
+     * common SegmentTimeline in each AdaptationSet: Choose Distinct.
+     * 
+     * @param dashManifestStyle
+     *        Specify how MediaConvert writes SegmentTimeline in your output DASH manifest. To write a SegmentTimeline
+     *        in each video Representation: Keep the default value, Basic. To write a common SegmentTimeline in the
+     *        video AdaptationSet: Choose Compact. Note that MediaConvert will still write a SegmentTimeline in any
+     *        Representation that does not share a common timeline. To write a video AdaptationSet for each different
+     *        output framerate, and a common SegmentTimeline in each AdaptationSet: Choose Distinct.
+     * @see DashManifestStyle
+     */
+
+    public void setDashManifestStyle(String dashManifestStyle) {
+        this.dashManifestStyle = dashManifestStyle;
+    }
+
+    /**
+     * Specify how MediaConvert writes SegmentTimeline in your output DASH manifest. To write a SegmentTimeline in each
+     * video Representation: Keep the default value, Basic. To write a common SegmentTimeline in the video
+     * AdaptationSet: Choose Compact. Note that MediaConvert will still write a SegmentTimeline in any Representation
+     * that does not share a common timeline. To write a video AdaptationSet for each different output framerate, and a
+     * common SegmentTimeline in each AdaptationSet: Choose Distinct.
+     * 
+     * @return Specify how MediaConvert writes SegmentTimeline in your output DASH manifest. To write a SegmentTimeline
+     *         in each video Representation: Keep the default value, Basic. To write a common SegmentTimeline in the
+     *         video AdaptationSet: Choose Compact. Note that MediaConvert will still write a SegmentTimeline in any
+     *         Representation that does not share a common timeline. To write a video AdaptationSet for each different
+     *         output framerate, and a common SegmentTimeline in each AdaptationSet: Choose Distinct.
+     * @see DashManifestStyle
+     */
+
+    public String getDashManifestStyle() {
+        return this.dashManifestStyle;
+    }
+
+    /**
+     * Specify how MediaConvert writes SegmentTimeline in your output DASH manifest. To write a SegmentTimeline in each
+     * video Representation: Keep the default value, Basic. To write a common SegmentTimeline in the video
+     * AdaptationSet: Choose Compact. Note that MediaConvert will still write a SegmentTimeline in any Representation
+     * that does not share a common timeline. To write a video AdaptationSet for each different output framerate, and a
+     * common SegmentTimeline in each AdaptationSet: Choose Distinct.
+     * 
+     * @param dashManifestStyle
+     *        Specify how MediaConvert writes SegmentTimeline in your output DASH manifest. To write a SegmentTimeline
+     *        in each video Representation: Keep the default value, Basic. To write a common SegmentTimeline in the
+     *        video AdaptationSet: Choose Compact. Note that MediaConvert will still write a SegmentTimeline in any
+     *        Representation that does not share a common timeline. To write a video AdaptationSet for each different
+     *        output framerate, and a common SegmentTimeline in each AdaptationSet: Choose Distinct.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see DashManifestStyle
+     */
+
+    public CmafGroupSettings withDashManifestStyle(String dashManifestStyle) {
+        setDashManifestStyle(dashManifestStyle);
+        return this;
+    }
+
+    /**
+     * Specify how MediaConvert writes SegmentTimeline in your output DASH manifest. To write a SegmentTimeline in each
+     * video Representation: Keep the default value, Basic. To write a common SegmentTimeline in the video
+     * AdaptationSet: Choose Compact. Note that MediaConvert will still write a SegmentTimeline in any Representation
+     * that does not share a common timeline. To write a video AdaptationSet for each different output framerate, and a
+     * common SegmentTimeline in each AdaptationSet: Choose Distinct.
+     * 
+     * @param dashManifestStyle
+     *        Specify how MediaConvert writes SegmentTimeline in your output DASH manifest. To write a SegmentTimeline
+     *        in each video Representation: Keep the default value, Basic. To write a common SegmentTimeline in the
+     *        video AdaptationSet: Choose Compact. Note that MediaConvert will still write a SegmentTimeline in any
+     *        Representation that does not share a common timeline. To write a video AdaptationSet for each different
+     *        output framerate, and a common SegmentTimeline in each AdaptationSet: Choose Distinct.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see DashManifestStyle
+     */
+
+    public CmafGroupSettings withDashManifestStyle(DashManifestStyle dashManifestStyle) {
+        this.dashManifestStyle = dashManifestStyle.toString();
         return this;
     }
 
@@ -1825,6 +1916,8 @@ public class CmafGroupSettings implements Serializable, Cloneable, StructuredPoj
             sb.append("ClientCache: ").append(getClientCache()).append(",");
         if (getCodecSpecification() != null)
             sb.append("CodecSpecification: ").append(getCodecSpecification()).append(",");
+        if (getDashManifestStyle() != null)
+            sb.append("DashManifestStyle: ").append(getDashManifestStyle()).append(",");
         if (getDestination() != null)
             sb.append("Destination: ").append(getDestination()).append(",");
         if (getDestinationSettings() != null)
@@ -1898,6 +1991,10 @@ public class CmafGroupSettings implements Serializable, Cloneable, StructuredPoj
         if (other.getCodecSpecification() == null ^ this.getCodecSpecification() == null)
             return false;
         if (other.getCodecSpecification() != null && other.getCodecSpecification().equals(this.getCodecSpecification()) == false)
+            return false;
+        if (other.getDashManifestStyle() == null ^ this.getDashManifestStyle() == null)
+            return false;
+        if (other.getDashManifestStyle() != null && other.getDashManifestStyle().equals(this.getDashManifestStyle()) == false)
             return false;
         if (other.getDestination() == null ^ this.getDestination() == null)
             return false;
@@ -2001,6 +2098,7 @@ public class CmafGroupSettings implements Serializable, Cloneable, StructuredPoj
         hashCode = prime * hashCode + ((getBaseUrl() == null) ? 0 : getBaseUrl().hashCode());
         hashCode = prime * hashCode + ((getClientCache() == null) ? 0 : getClientCache().hashCode());
         hashCode = prime * hashCode + ((getCodecSpecification() == null) ? 0 : getCodecSpecification().hashCode());
+        hashCode = prime * hashCode + ((getDashManifestStyle() == null) ? 0 : getDashManifestStyle().hashCode());
         hashCode = prime * hashCode + ((getDestination() == null) ? 0 : getDestination().hashCode());
         hashCode = prime * hashCode + ((getDestinationSettings() == null) ? 0 : getDestinationSettings().hashCode());
         hashCode = prime * hashCode + ((getEncryption() == null) ? 0 : getEncryption().hashCode());

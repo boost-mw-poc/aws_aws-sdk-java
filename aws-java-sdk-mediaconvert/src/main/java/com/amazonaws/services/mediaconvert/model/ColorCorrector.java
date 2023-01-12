@@ -28,6 +28,8 @@ public class ColorCorrector implements Serializable, Cloneable, StructuredPojo {
 
     /** Brightness level. */
     private Integer brightness;
+    /** Specify YUV limits and RGB tolerances when you set Sample range conversion to Limited range clip. */
+    private ClipLimits clipLimits;
     /**
      * Specify the color space you want for this output. The service supports conversion between HDR formats, between
      * SDR formats, from SDR to HDR, and from HDR to SDR. SDR to HDR conversion doesn't upgrade the dynamic range. The
@@ -53,13 +55,16 @@ public class ColorCorrector implements Serializable, Cloneable, StructuredPojo {
     /** Hue in degrees. */
     private Integer hue;
     /**
-     * Specify the video color sample range for this output. To create a full range output, you must start with a full
-     * range YUV input and keep the default value, None (NONE). To create a limited range output from a full range
-     * input, choose Limited range (LIMITED_RANGE_SQUEEZE). With RGB inputs, your output is always limited range,
-     * regardless of your choice here. When you create a limited range output from a full range input, MediaConvert
-     * limits the active pixel values in a way that depends on the output's bit depth: 8-bit outputs contain only values
-     * from 16 through 235 and 10-bit outputs contain only values from 64 through 940. With this conversion, MediaConvert
-     * also changes the output metadata to note the limited range.
+     * Specify how MediaConvert limits the color sample range for this output. To create a limited range output from a
+     * full range input: Choose Limited range squeeze. For full range inputs, MediaConvert performs a linear offset to
+     * color samples equally across all pixels and frames. Color samples in 10-bit outputs are limited to 64 through 940,
+     * and 8-bit outputs are limited to 16 through 235. Note: For limited range inputs, values for color samples are
+     * passed through to your output unchanged. MediaConvert does not limit the sample range. To correct pixels in your
+     * input that are out of range or out of gamut: Choose Limited range clip. Use for broadcast applications.
+     * MediaConvert conforms any pixels outside of the values that you specify under Minimum YUV and Maximum YUV to
+     * limited range bounds. MediaConvert also corrects any YUV values that, when converted to RGB, would be outside the
+     * bounds you specify under Minimum RGB tolerance and Maximum RGB tolerance. With either limited range conversion,
+     * MediaConvert writes the sample range metadata in the output.
      */
     private String sampleRangeConversion;
     /** Saturation level. */
@@ -105,6 +110,40 @@ public class ColorCorrector implements Serializable, Cloneable, StructuredPojo {
 
     public ColorCorrector withBrightness(Integer brightness) {
         setBrightness(brightness);
+        return this;
+    }
+
+    /**
+     * Specify YUV limits and RGB tolerances when you set Sample range conversion to Limited range clip.
+     * 
+     * @param clipLimits
+     *        Specify YUV limits and RGB tolerances when you set Sample range conversion to Limited range clip.
+     */
+
+    public void setClipLimits(ClipLimits clipLimits) {
+        this.clipLimits = clipLimits;
+    }
+
+    /**
+     * Specify YUV limits and RGB tolerances when you set Sample range conversion to Limited range clip.
+     * 
+     * @return Specify YUV limits and RGB tolerances when you set Sample range conversion to Limited range clip.
+     */
+
+    public ClipLimits getClipLimits() {
+        return this.clipLimits;
+    }
+
+    /**
+     * Specify YUV limits and RGB tolerances when you set Sample range conversion to Limited range clip.
+     * 
+     * @param clipLimits
+     *        Specify YUV limits and RGB tolerances when you set Sample range conversion to Limited range clip.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ColorCorrector withClipLimits(ClipLimits clipLimits) {
+        setClipLimits(clipLimits);
         return this;
     }
 
@@ -351,22 +390,29 @@ public class ColorCorrector implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Specify the video color sample range for this output. To create a full range output, you must start with a full
-     * range YUV input and keep the default value, None (NONE). To create a limited range output from a full range
-     * input, choose Limited range (LIMITED_RANGE_SQUEEZE). With RGB inputs, your output is always limited range,
-     * regardless of your choice here. When you create a limited range output from a full range input, MediaConvert
-     * limits the active pixel values in a way that depends on the output's bit depth: 8-bit outputs contain only values
-     * from 16 through 235 and 10-bit outputs contain only values from 64 through 940. With this conversion, MediaConvert
-     * also changes the output metadata to note the limited range.
+     * Specify how MediaConvert limits the color sample range for this output. To create a limited range output from a
+     * full range input: Choose Limited range squeeze. For full range inputs, MediaConvert performs a linear offset to
+     * color samples equally across all pixels and frames. Color samples in 10-bit outputs are limited to 64 through 940,
+     * and 8-bit outputs are limited to 16 through 235. Note: For limited range inputs, values for color samples are
+     * passed through to your output unchanged. MediaConvert does not limit the sample range. To correct pixels in your
+     * input that are out of range or out of gamut: Choose Limited range clip. Use for broadcast applications.
+     * MediaConvert conforms any pixels outside of the values that you specify under Minimum YUV and Maximum YUV to
+     * limited range bounds. MediaConvert also corrects any YUV values that, when converted to RGB, would be outside the
+     * bounds you specify under Minimum RGB tolerance and Maximum RGB tolerance. With either limited range conversion,
+     * MediaConvert writes the sample range metadata in the output.
      * 
      * @param sampleRangeConversion
-     *        Specify the video color sample range for this output. To create a full range output, you must start with a
-     *        full range YUV input and keep the default value, None (NONE). To create a limited range output from a full
-     *        range input, choose Limited range (LIMITED_RANGE_SQUEEZE). With RGB inputs, your output is always limited
-     *        range, regardless of your choice here. When you create a limited range output from a full range input,
-     *        MediaConvert limits the active pixel values in a way that depends on the output's bit depth: 8-bit outputs
-     *        contain only values from 16 through 235 and 10-bit outputs contain only values from 64 through 940. With
-     *        this conversion, MediaConvert also changes the output metadata to note the limited range.
+     *        Specify how MediaConvert limits the color sample range for this output. To create a limited range output
+     *        from a full range input: Choose Limited range squeeze. For full range inputs, MediaConvert performs a
+     *        linear offset to color samples equally across all pixels and frames. Color samples in 10-bit outputs are
+     *        limited to 64 through 940, and 8-bit outputs are limited to 16 through 235. Note: For limited range
+     *        inputs, values for color samples are passed through to your output unchanged. MediaConvert does not limit
+     *        the sample range. To correct pixels in your input that are out of range or out of gamut: Choose Limited
+     *        range clip. Use for broadcast applications. MediaConvert conforms any pixels outside of the values that
+     *        you specify under Minimum YUV and Maximum YUV to limited range bounds. MediaConvert also corrects any YUV
+     *        values that, when converted to RGB, would be outside the bounds you specify under Minimum RGB tolerance
+     *        and Maximum RGB tolerance. With either limited range conversion, MediaConvert writes the sample range
+     *        metadata in the output.
      * @see SampleRangeConversion
      */
 
@@ -375,21 +421,28 @@ public class ColorCorrector implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Specify the video color sample range for this output. To create a full range output, you must start with a full
-     * range YUV input and keep the default value, None (NONE). To create a limited range output from a full range
-     * input, choose Limited range (LIMITED_RANGE_SQUEEZE). With RGB inputs, your output is always limited range,
-     * regardless of your choice here. When you create a limited range output from a full range input, MediaConvert
-     * limits the active pixel values in a way that depends on the output's bit depth: 8-bit outputs contain only values
-     * from 16 through 235 and 10-bit outputs contain only values from 64 through 940. With this conversion, MediaConvert
-     * also changes the output metadata to note the limited range.
+     * Specify how MediaConvert limits the color sample range for this output. To create a limited range output from a
+     * full range input: Choose Limited range squeeze. For full range inputs, MediaConvert performs a linear offset to
+     * color samples equally across all pixels and frames. Color samples in 10-bit outputs are limited to 64 through 940,
+     * and 8-bit outputs are limited to 16 through 235. Note: For limited range inputs, values for color samples are
+     * passed through to your output unchanged. MediaConvert does not limit the sample range. To correct pixels in your
+     * input that are out of range or out of gamut: Choose Limited range clip. Use for broadcast applications.
+     * MediaConvert conforms any pixels outside of the values that you specify under Minimum YUV and Maximum YUV to
+     * limited range bounds. MediaConvert also corrects any YUV values that, when converted to RGB, would be outside the
+     * bounds you specify under Minimum RGB tolerance and Maximum RGB tolerance. With either limited range conversion,
+     * MediaConvert writes the sample range metadata in the output.
      * 
-     * @return Specify the video color sample range for this output. To create a full range output, you must start with
-     *         a full range YUV input and keep the default value, None (NONE). To create a limited range output from a
-     *         full range input, choose Limited range (LIMITED_RANGE_SQUEEZE). With RGB inputs, your output is always
-     *         limited range, regardless of your choice here. When you create a limited range output from a full range
-     *         input, MediaConvert limits the active pixel values in a way that depends on the output's bit depth: 8-bit
-     *         outputs contain only values from 16 through 235 and 10-bit outputs contain only values from 64 through
-     *         940. With this conversion, MediaConvert also changes the output metadata to note the limited range.
+     * @return Specify how MediaConvert limits the color sample range for this output. To create a limited range output
+     *         from a full range input: Choose Limited range squeeze. For full range inputs, MediaConvert performs a
+     *         linear offset to color samples equally across all pixels and frames. Color samples in 10-bit outputs are
+     *         limited to 64 through 940, and 8-bit outputs are limited to 16 through 235. Note: For limited range
+     *         inputs, values for color samples are passed through to your output unchanged. MediaConvert does not limit
+     *         the sample range. To correct pixels in your input that are out of range or out of gamut: Choose Limited
+     *         range clip. Use for broadcast applications. MediaConvert conforms any pixels outside of the values that
+     *         you specify under Minimum YUV and Maximum YUV to limited range bounds. MediaConvert also corrects any YUV
+     *         values that, when converted to RGB, would be outside the bounds you specify under Minimum RGB tolerance
+     *         and Maximum RGB tolerance. With either limited range conversion, MediaConvert writes the sample range
+     *         metadata in the output.
      * @see SampleRangeConversion
      */
 
@@ -398,22 +451,29 @@ public class ColorCorrector implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Specify the video color sample range for this output. To create a full range output, you must start with a full
-     * range YUV input and keep the default value, None (NONE). To create a limited range output from a full range
-     * input, choose Limited range (LIMITED_RANGE_SQUEEZE). With RGB inputs, your output is always limited range,
-     * regardless of your choice here. When you create a limited range output from a full range input, MediaConvert
-     * limits the active pixel values in a way that depends on the output's bit depth: 8-bit outputs contain only values
-     * from 16 through 235 and 10-bit outputs contain only values from 64 through 940. With this conversion, MediaConvert
-     * also changes the output metadata to note the limited range.
+     * Specify how MediaConvert limits the color sample range for this output. To create a limited range output from a
+     * full range input: Choose Limited range squeeze. For full range inputs, MediaConvert performs a linear offset to
+     * color samples equally across all pixels and frames. Color samples in 10-bit outputs are limited to 64 through 940,
+     * and 8-bit outputs are limited to 16 through 235. Note: For limited range inputs, values for color samples are
+     * passed through to your output unchanged. MediaConvert does not limit the sample range. To correct pixels in your
+     * input that are out of range or out of gamut: Choose Limited range clip. Use for broadcast applications.
+     * MediaConvert conforms any pixels outside of the values that you specify under Minimum YUV and Maximum YUV to
+     * limited range bounds. MediaConvert also corrects any YUV values that, when converted to RGB, would be outside the
+     * bounds you specify under Minimum RGB tolerance and Maximum RGB tolerance. With either limited range conversion,
+     * MediaConvert writes the sample range metadata in the output.
      * 
      * @param sampleRangeConversion
-     *        Specify the video color sample range for this output. To create a full range output, you must start with a
-     *        full range YUV input and keep the default value, None (NONE). To create a limited range output from a full
-     *        range input, choose Limited range (LIMITED_RANGE_SQUEEZE). With RGB inputs, your output is always limited
-     *        range, regardless of your choice here. When you create a limited range output from a full range input,
-     *        MediaConvert limits the active pixel values in a way that depends on the output's bit depth: 8-bit outputs
-     *        contain only values from 16 through 235 and 10-bit outputs contain only values from 64 through 940. With
-     *        this conversion, MediaConvert also changes the output metadata to note the limited range.
+     *        Specify how MediaConvert limits the color sample range for this output. To create a limited range output
+     *        from a full range input: Choose Limited range squeeze. For full range inputs, MediaConvert performs a
+     *        linear offset to color samples equally across all pixels and frames. Color samples in 10-bit outputs are
+     *        limited to 64 through 940, and 8-bit outputs are limited to 16 through 235. Note: For limited range
+     *        inputs, values for color samples are passed through to your output unchanged. MediaConvert does not limit
+     *        the sample range. To correct pixels in your input that are out of range or out of gamut: Choose Limited
+     *        range clip. Use for broadcast applications. MediaConvert conforms any pixels outside of the values that
+     *        you specify under Minimum YUV and Maximum YUV to limited range bounds. MediaConvert also corrects any YUV
+     *        values that, when converted to RGB, would be outside the bounds you specify under Minimum RGB tolerance
+     *        and Maximum RGB tolerance. With either limited range conversion, MediaConvert writes the sample range
+     *        metadata in the output.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see SampleRangeConversion
      */
@@ -424,22 +484,29 @@ public class ColorCorrector implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Specify the video color sample range for this output. To create a full range output, you must start with a full
-     * range YUV input and keep the default value, None (NONE). To create a limited range output from a full range
-     * input, choose Limited range (LIMITED_RANGE_SQUEEZE). With RGB inputs, your output is always limited range,
-     * regardless of your choice here. When you create a limited range output from a full range input, MediaConvert
-     * limits the active pixel values in a way that depends on the output's bit depth: 8-bit outputs contain only values
-     * from 16 through 235 and 10-bit outputs contain only values from 64 through 940. With this conversion, MediaConvert
-     * also changes the output metadata to note the limited range.
+     * Specify how MediaConvert limits the color sample range for this output. To create a limited range output from a
+     * full range input: Choose Limited range squeeze. For full range inputs, MediaConvert performs a linear offset to
+     * color samples equally across all pixels and frames. Color samples in 10-bit outputs are limited to 64 through 940,
+     * and 8-bit outputs are limited to 16 through 235. Note: For limited range inputs, values for color samples are
+     * passed through to your output unchanged. MediaConvert does not limit the sample range. To correct pixels in your
+     * input that are out of range or out of gamut: Choose Limited range clip. Use for broadcast applications.
+     * MediaConvert conforms any pixels outside of the values that you specify under Minimum YUV and Maximum YUV to
+     * limited range bounds. MediaConvert also corrects any YUV values that, when converted to RGB, would be outside the
+     * bounds you specify under Minimum RGB tolerance and Maximum RGB tolerance. With either limited range conversion,
+     * MediaConvert writes the sample range metadata in the output.
      * 
      * @param sampleRangeConversion
-     *        Specify the video color sample range for this output. To create a full range output, you must start with a
-     *        full range YUV input and keep the default value, None (NONE). To create a limited range output from a full
-     *        range input, choose Limited range (LIMITED_RANGE_SQUEEZE). With RGB inputs, your output is always limited
-     *        range, regardless of your choice here. When you create a limited range output from a full range input,
-     *        MediaConvert limits the active pixel values in a way that depends on the output's bit depth: 8-bit outputs
-     *        contain only values from 16 through 235 and 10-bit outputs contain only values from 64 through 940. With
-     *        this conversion, MediaConvert also changes the output metadata to note the limited range.
+     *        Specify how MediaConvert limits the color sample range for this output. To create a limited range output
+     *        from a full range input: Choose Limited range squeeze. For full range inputs, MediaConvert performs a
+     *        linear offset to color samples equally across all pixels and frames. Color samples in 10-bit outputs are
+     *        limited to 64 through 940, and 8-bit outputs are limited to 16 through 235. Note: For limited range
+     *        inputs, values for color samples are passed through to your output unchanged. MediaConvert does not limit
+     *        the sample range. To correct pixels in your input that are out of range or out of gamut: Choose Limited
+     *        range clip. Use for broadcast applications. MediaConvert conforms any pixels outside of the values that
+     *        you specify under Minimum YUV and Maximum YUV to limited range bounds. MediaConvert also corrects any YUV
+     *        values that, when converted to RGB, would be outside the bounds you specify under Minimum RGB tolerance
+     *        and Maximum RGB tolerance. With either limited range conversion, MediaConvert writes the sample range
+     *        metadata in the output.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see SampleRangeConversion
      */
@@ -561,6 +628,8 @@ public class ColorCorrector implements Serializable, Cloneable, StructuredPojo {
         sb.append("{");
         if (getBrightness() != null)
             sb.append("Brightness: ").append(getBrightness()).append(",");
+        if (getClipLimits() != null)
+            sb.append("ClipLimits: ").append(getClipLimits()).append(",");
         if (getColorSpaceConversion() != null)
             sb.append("ColorSpaceConversion: ").append(getColorSpaceConversion()).append(",");
         if (getContrast() != null)
@@ -592,6 +661,10 @@ public class ColorCorrector implements Serializable, Cloneable, StructuredPojo {
         if (other.getBrightness() == null ^ this.getBrightness() == null)
             return false;
         if (other.getBrightness() != null && other.getBrightness().equals(this.getBrightness()) == false)
+            return false;
+        if (other.getClipLimits() == null ^ this.getClipLimits() == null)
+            return false;
+        if (other.getClipLimits() != null && other.getClipLimits().equals(this.getClipLimits()) == false)
             return false;
         if (other.getColorSpaceConversion() == null ^ this.getColorSpaceConversion() == null)
             return false;
@@ -630,6 +703,7 @@ public class ColorCorrector implements Serializable, Cloneable, StructuredPojo {
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getBrightness() == null) ? 0 : getBrightness().hashCode());
+        hashCode = prime * hashCode + ((getClipLimits() == null) ? 0 : getClipLimits().hashCode());
         hashCode = prime * hashCode + ((getColorSpaceConversion() == null) ? 0 : getColorSpaceConversion().hashCode());
         hashCode = prime * hashCode + ((getContrast() == null) ? 0 : getContrast().hashCode());
         hashCode = prime * hashCode + ((getHdr10Metadata() == null) ? 0 : getHdr10Metadata().hashCode());

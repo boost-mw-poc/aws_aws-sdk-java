@@ -62,6 +62,11 @@ public class Filter implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
+     * <b>owning-service</b>: Prefix match, case-sensitive.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <b>all</b>: Breaks the filter value string into words and then searches all attributes for matches. Not
      * case-sensitive.
      * </p>
@@ -111,6 +116,11 @@ public class Filter implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
+     * <b>owning-service</b>: Prefix match, case-sensitive.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <b>all</b>: Breaks the filter value string into words and then searches all attributes for matches. Not
      * case-sensitive.
      * </p>
@@ -143,6 +153,11 @@ public class Filter implements Serializable, Cloneable, StructuredPojo {
      *        <li>
      *        <p>
      *        <b>primary-region</b>: Prefix match, case-sensitive.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <b>owning-service</b>: Prefix match, case-sensitive.
      *        </p>
      *        </li>
      *        <li>
@@ -190,6 +205,11 @@ public class Filter implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
+     * <b>owning-service</b>: Prefix match, case-sensitive.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <b>all</b>: Breaks the filter value string into words and then searches all attributes for matches. Not
      * case-sensitive.
      * </p>
@@ -221,6 +241,11 @@ public class Filter implements Serializable, Cloneable, StructuredPojo {
      *         <li>
      *         <p>
      *         <b>primary-region</b>: Prefix match, case-sensitive.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <b>owning-service</b>: Prefix match, case-sensitive.
      *         </p>
      *         </li>
      *         <li>
@@ -268,6 +293,11 @@ public class Filter implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
+     * <b>owning-service</b>: Prefix match, case-sensitive.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <b>all</b>: Breaks the filter value string into words and then searches all attributes for matches. Not
      * case-sensitive.
      * </p>
@@ -300,6 +330,11 @@ public class Filter implements Serializable, Cloneable, StructuredPojo {
      *        <li>
      *        <p>
      *        <b>primary-region</b>: Prefix match, case-sensitive.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <b>owning-service</b>: Prefix match, case-sensitive.
      *        </p>
      *        </li>
      *        <li>
@@ -349,6 +384,11 @@ public class Filter implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
+     * <b>owning-service</b>: Prefix match, case-sensitive.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <b>all</b>: Breaks the filter value string into words and then searches all attributes for matches. Not
      * case-sensitive.
      * </p>
@@ -381,6 +421,11 @@ public class Filter implements Serializable, Cloneable, StructuredPojo {
      *        <li>
      *        <p>
      *        <b>primary-region</b>: Prefix match, case-sensitive.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <b>owning-service</b>: Prefix match, case-sensitive.
      *        </p>
      *        </li>
      *        <li>

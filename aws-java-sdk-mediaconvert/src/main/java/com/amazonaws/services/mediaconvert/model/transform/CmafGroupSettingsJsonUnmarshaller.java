@@ -66,6 +66,10 @@ public class CmafGroupSettingsJsonUnmarshaller implements Unmarshaller<CmafGroup
                     context.nextToken();
                     cmafGroupSettings.setCodecSpecification(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("dashManifestStyle", targetDepth)) {
+                    context.nextToken();
+                    cmafGroupSettings.setDashManifestStyle(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("destination", targetDepth)) {
                     context.nextToken();
                     cmafGroupSettings.setDestination(context.getUnmarshaller(String.class).unmarshall(context));

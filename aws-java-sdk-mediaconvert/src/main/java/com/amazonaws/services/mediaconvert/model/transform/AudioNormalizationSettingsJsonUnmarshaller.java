@@ -72,6 +72,10 @@ public class AudioNormalizationSettingsJsonUnmarshaller implements Unmarshaller<
                     context.nextToken();
                     audioNormalizationSettings.setTargetLkfs(context.getUnmarshaller(Double.class).unmarshall(context));
                 }
+                if (context.testExpression("truePeakLimiterThreshold", targetDepth)) {
+                    context.nextToken();
+                    audioNormalizationSettings.setTruePeakLimiterThreshold(context.getUnmarshaller(Double.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

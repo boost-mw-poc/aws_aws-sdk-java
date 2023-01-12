@@ -1,0 +1,1147 @@
+/*
+ * Copyright 2018-2023 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License"). You may not use this file except in compliance with
+ * the License. A copy of the License is located at
+ * 
+ * http://aws.amazon.com/apache2.0
+ * 
+ * or in the "license" file accompanying this file. This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
+ * CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions
+ * and limitations under the License.
+ */
+package com.amazonaws.services.cleanrooms;
+
+import javax.annotation.Generated;
+
+import com.amazonaws.services.cleanrooms.model.*;
+
+/**
+ * Interface for accessing AWS Clean Rooms Service asynchronously. Each asynchronous method will return a Java Future
+ * object representing the asynchronous operation; overloads which accept an {@code AsyncHandler} can be used to receive
+ * notification when an asynchronous operation completes.
+ * <p>
+ * <b>Note:</b> Do not directly implement this interface, new methods are added to it regularly. Extend from
+ * {@link com.amazonaws.services.cleanrooms.AbstractAWSCleanRoomsAsync} instead.
+ * </p>
+ * <p>
+ * <note>
+ * <p>
+ * AWS Clean Rooms is in preview release and is subject to change.
+ * </p>
+ * </note>
+ * <p>
+ * Welcome to the <i>AWS Clean Rooms API Reference</i>.
+ * </p>
+ * <p>
+ * AWS Clean Rooms is an AWS service that helps multiple parties to join their data together in a secure collaboration
+ * workspace. In the collaboration, members who can query and receive results can get insights into the combined data
+ * without either party getting access to the other party's raw data.
+ * </p>
+ * <p>
+ * To learn more about AWS Clean Rooms concepts, procedures, and best practices, see the <a
+ * href="https://docs.aws.amazon.com/clean-rooms/latest/userguide/what-is.html">AWS Clean Rooms User Guide</a>.
+ * </p>
+ */
+@Generated("com.amazonaws:aws-java-sdk-code-generator")
+public interface AWSCleanRoomsAsync extends AWSCleanRooms {
+
+    /**
+     * <p>
+     * Retrieves multiple schemas by their identifiers.
+     * </p>
+     * 
+     * @param batchGetSchemaRequest
+     * @return A Java Future containing the result of the BatchGetSchema operation returned by the service.
+     * @sample AWSCleanRoomsAsync.BatchGetSchema
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/BatchGetSchema" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<BatchGetSchemaResult> batchGetSchemaAsync(BatchGetSchemaRequest batchGetSchemaRequest);
+
+    /**
+     * <p>
+     * Retrieves multiple schemas by their identifiers.
+     * </p>
+     * 
+     * @param batchGetSchemaRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the BatchGetSchema operation returned by the service.
+     * @sample AWSCleanRoomsAsyncHandler.BatchGetSchema
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/BatchGetSchema" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<BatchGetSchemaResult> batchGetSchemaAsync(BatchGetSchemaRequest batchGetSchemaRequest,
+            com.amazonaws.handlers.AsyncHandler<BatchGetSchemaRequest, BatchGetSchemaResult> asyncHandler);
+
+    /**
+     * <p>
+     * Creates a new collaboration.
+     * </p>
+     * 
+     * @param createCollaborationRequest
+     * @return A Java Future containing the result of the CreateCollaboration operation returned by the service.
+     * @sample AWSCleanRoomsAsync.CreateCollaboration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/CreateCollaboration" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateCollaborationResult> createCollaborationAsync(CreateCollaborationRequest createCollaborationRequest);
+
+    /**
+     * <p>
+     * Creates a new collaboration.
+     * </p>
+     * 
+     * @param createCollaborationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateCollaboration operation returned by the service.
+     * @sample AWSCleanRoomsAsyncHandler.CreateCollaboration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/CreateCollaboration" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateCollaborationResult> createCollaborationAsync(CreateCollaborationRequest createCollaborationRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateCollaborationRequest, CreateCollaborationResult> asyncHandler);
+
+    /**
+     * <p>
+     * Creates a new configured table resource.
+     * </p>
+     * 
+     * @param createConfiguredTableRequest
+     * @return A Java Future containing the result of the CreateConfiguredTable operation returned by the service.
+     * @sample AWSCleanRoomsAsync.CreateConfiguredTable
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/CreateConfiguredTable"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateConfiguredTableResult> createConfiguredTableAsync(CreateConfiguredTableRequest createConfiguredTableRequest);
+
+    /**
+     * <p>
+     * Creates a new configured table resource.
+     * </p>
+     * 
+     * @param createConfiguredTableRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateConfiguredTable operation returned by the service.
+     * @sample AWSCleanRoomsAsyncHandler.CreateConfiguredTable
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/CreateConfiguredTable"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateConfiguredTableResult> createConfiguredTableAsync(CreateConfiguredTableRequest createConfiguredTableRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateConfiguredTableRequest, CreateConfiguredTableResult> asyncHandler);
+
+    /**
+     * <p>
+     * Creates a new analysis rule for a configured table. Currently, only one analysis rule can be created for a given
+     * configured table.
+     * </p>
+     * 
+     * @param createConfiguredTableAnalysisRuleRequest
+     * @return A Java Future containing the result of the CreateConfiguredTableAnalysisRule operation returned by the
+     *         service.
+     * @sample AWSCleanRoomsAsync.CreateConfiguredTableAnalysisRule
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/CreateConfiguredTableAnalysisRule"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateConfiguredTableAnalysisRuleResult> createConfiguredTableAnalysisRuleAsync(
+            CreateConfiguredTableAnalysisRuleRequest createConfiguredTableAnalysisRuleRequest);
+
+    /**
+     * <p>
+     * Creates a new analysis rule for a configured table. Currently, only one analysis rule can be created for a given
+     * configured table.
+     * </p>
+     * 
+     * @param createConfiguredTableAnalysisRuleRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateConfiguredTableAnalysisRule operation returned by the
+     *         service.
+     * @sample AWSCleanRoomsAsyncHandler.CreateConfiguredTableAnalysisRule
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/CreateConfiguredTableAnalysisRule"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateConfiguredTableAnalysisRuleResult> createConfiguredTableAnalysisRuleAsync(
+            CreateConfiguredTableAnalysisRuleRequest createConfiguredTableAnalysisRuleRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateConfiguredTableAnalysisRuleRequest, CreateConfiguredTableAnalysisRuleResult> asyncHandler);
+
+    /**
+     * <p>
+     * Creates a configured table association. A configured table association links a configured table with a
+     * collaboration.
+     * </p>
+     * 
+     * @param createConfiguredTableAssociationRequest
+     * @return A Java Future containing the result of the CreateConfiguredTableAssociation operation returned by the
+     *         service.
+     * @sample AWSCleanRoomsAsync.CreateConfiguredTableAssociation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/CreateConfiguredTableAssociation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateConfiguredTableAssociationResult> createConfiguredTableAssociationAsync(
+            CreateConfiguredTableAssociationRequest createConfiguredTableAssociationRequest);
+
+    /**
+     * <p>
+     * Creates a configured table association. A configured table association links a configured table with a
+     * collaboration.
+     * </p>
+     * 
+     * @param createConfiguredTableAssociationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateConfiguredTableAssociation operation returned by the
+     *         service.
+     * @sample AWSCleanRoomsAsyncHandler.CreateConfiguredTableAssociation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/CreateConfiguredTableAssociation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateConfiguredTableAssociationResult> createConfiguredTableAssociationAsync(
+            CreateConfiguredTableAssociationRequest createConfiguredTableAssociationRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateConfiguredTableAssociationRequest, CreateConfiguredTableAssociationResult> asyncHandler);
+
+    /**
+     * <p>
+     * Creates a membership for a specific collaboration identifier and joins the collaboration.
+     * </p>
+     * 
+     * @param createMembershipRequest
+     * @return A Java Future containing the result of the CreateMembership operation returned by the service.
+     * @sample AWSCleanRoomsAsync.CreateMembership
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/CreateMembership" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateMembershipResult> createMembershipAsync(CreateMembershipRequest createMembershipRequest);
+
+    /**
+     * <p>
+     * Creates a membership for a specific collaboration identifier and joins the collaboration.
+     * </p>
+     * 
+     * @param createMembershipRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateMembership operation returned by the service.
+     * @sample AWSCleanRoomsAsyncHandler.CreateMembership
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/CreateMembership" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateMembershipResult> createMembershipAsync(CreateMembershipRequest createMembershipRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateMembershipRequest, CreateMembershipResult> asyncHandler);
+
+    /**
+     * <p>
+     * Deletes a collaboration. It can only be called by the collaboration owner.
+     * </p>
+     * 
+     * @param deleteCollaborationRequest
+     * @return A Java Future containing the result of the DeleteCollaboration operation returned by the service.
+     * @sample AWSCleanRoomsAsync.DeleteCollaboration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/DeleteCollaboration" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteCollaborationResult> deleteCollaborationAsync(DeleteCollaborationRequest deleteCollaborationRequest);
+
+    /**
+     * <p>
+     * Deletes a collaboration. It can only be called by the collaboration owner.
+     * </p>
+     * 
+     * @param deleteCollaborationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteCollaboration operation returned by the service.
+     * @sample AWSCleanRoomsAsyncHandler.DeleteCollaboration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/DeleteCollaboration" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteCollaborationResult> deleteCollaborationAsync(DeleteCollaborationRequest deleteCollaborationRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteCollaborationRequest, DeleteCollaborationResult> asyncHandler);
+
+    /**
+     * <p>
+     * Deletes a configured table.
+     * </p>
+     * 
+     * @param deleteConfiguredTableRequest
+     * @return A Java Future containing the result of the DeleteConfiguredTable operation returned by the service.
+     * @sample AWSCleanRoomsAsync.DeleteConfiguredTable
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/DeleteConfiguredTable"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteConfiguredTableResult> deleteConfiguredTableAsync(DeleteConfiguredTableRequest deleteConfiguredTableRequest);
+
+    /**
+     * <p>
+     * Deletes a configured table.
+     * </p>
+     * 
+     * @param deleteConfiguredTableRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteConfiguredTable operation returned by the service.
+     * @sample AWSCleanRoomsAsyncHandler.DeleteConfiguredTable
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/DeleteConfiguredTable"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteConfiguredTableResult> deleteConfiguredTableAsync(DeleteConfiguredTableRequest deleteConfiguredTableRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteConfiguredTableRequest, DeleteConfiguredTableResult> asyncHandler);
+
+    /**
+     * <p>
+     * Deletes a configured table analysis rule.
+     * </p>
+     * 
+     * @param deleteConfiguredTableAnalysisRuleRequest
+     * @return A Java Future containing the result of the DeleteConfiguredTableAnalysisRule operation returned by the
+     *         service.
+     * @sample AWSCleanRoomsAsync.DeleteConfiguredTableAnalysisRule
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/DeleteConfiguredTableAnalysisRule"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteConfiguredTableAnalysisRuleResult> deleteConfiguredTableAnalysisRuleAsync(
+            DeleteConfiguredTableAnalysisRuleRequest deleteConfiguredTableAnalysisRuleRequest);
+
+    /**
+     * <p>
+     * Deletes a configured table analysis rule.
+     * </p>
+     * 
+     * @param deleteConfiguredTableAnalysisRuleRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteConfiguredTableAnalysisRule operation returned by the
+     *         service.
+     * @sample AWSCleanRoomsAsyncHandler.DeleteConfiguredTableAnalysisRule
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/DeleteConfiguredTableAnalysisRule"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteConfiguredTableAnalysisRuleResult> deleteConfiguredTableAnalysisRuleAsync(
+            DeleteConfiguredTableAnalysisRuleRequest deleteConfiguredTableAnalysisRuleRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteConfiguredTableAnalysisRuleRequest, DeleteConfiguredTableAnalysisRuleResult> asyncHandler);
+
+    /**
+     * <p>
+     * Deletes a configured table association.
+     * </p>
+     * 
+     * @param deleteConfiguredTableAssociationRequest
+     * @return A Java Future containing the result of the DeleteConfiguredTableAssociation operation returned by the
+     *         service.
+     * @sample AWSCleanRoomsAsync.DeleteConfiguredTableAssociation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/DeleteConfiguredTableAssociation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteConfiguredTableAssociationResult> deleteConfiguredTableAssociationAsync(
+            DeleteConfiguredTableAssociationRequest deleteConfiguredTableAssociationRequest);
+
+    /**
+     * <p>
+     * Deletes a configured table association.
+     * </p>
+     * 
+     * @param deleteConfiguredTableAssociationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteConfiguredTableAssociation operation returned by the
+     *         service.
+     * @sample AWSCleanRoomsAsyncHandler.DeleteConfiguredTableAssociation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/DeleteConfiguredTableAssociation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteConfiguredTableAssociationResult> deleteConfiguredTableAssociationAsync(
+            DeleteConfiguredTableAssociationRequest deleteConfiguredTableAssociationRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteConfiguredTableAssociationRequest, DeleteConfiguredTableAssociationResult> asyncHandler);
+
+    /**
+     * <p>
+     * Removes the specified member from a collaboration. The removed member is placed in the Removed status and can't
+     * interact with the collaboration. The removed member's data is inaccessible to active members of the
+     * collaboration.
+     * </p>
+     * 
+     * @param deleteMemberRequest
+     * @return A Java Future containing the result of the DeleteMember operation returned by the service.
+     * @sample AWSCleanRoomsAsync.DeleteMember
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/DeleteMember" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteMemberResult> deleteMemberAsync(DeleteMemberRequest deleteMemberRequest);
+
+    /**
+     * <p>
+     * Removes the specified member from a collaboration. The removed member is placed in the Removed status and can't
+     * interact with the collaboration. The removed member's data is inaccessible to active members of the
+     * collaboration.
+     * </p>
+     * 
+     * @param deleteMemberRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteMember operation returned by the service.
+     * @sample AWSCleanRoomsAsyncHandler.DeleteMember
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/DeleteMember" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteMemberResult> deleteMemberAsync(DeleteMemberRequest deleteMemberRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteMemberRequest, DeleteMemberResult> asyncHandler);
+
+    /**
+     * <p>
+     * Deletes a specified membership. All resources under a membership must be deleted.
+     * </p>
+     * 
+     * @param deleteMembershipRequest
+     * @return A Java Future containing the result of the DeleteMembership operation returned by the service.
+     * @sample AWSCleanRoomsAsync.DeleteMembership
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/DeleteMembership" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteMembershipResult> deleteMembershipAsync(DeleteMembershipRequest deleteMembershipRequest);
+
+    /**
+     * <p>
+     * Deletes a specified membership. All resources under a membership must be deleted.
+     * </p>
+     * 
+     * @param deleteMembershipRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteMembership operation returned by the service.
+     * @sample AWSCleanRoomsAsyncHandler.DeleteMembership
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/DeleteMembership" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteMembershipResult> deleteMembershipAsync(DeleteMembershipRequest deleteMembershipRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteMembershipRequest, DeleteMembershipResult> asyncHandler);
+
+    /**
+     * <p>
+     * Returns metadata about a collaboration.
+     * </p>
+     * 
+     * @param getCollaborationRequest
+     * @return A Java Future containing the result of the GetCollaboration operation returned by the service.
+     * @sample AWSCleanRoomsAsync.GetCollaboration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/GetCollaboration" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<GetCollaborationResult> getCollaborationAsync(GetCollaborationRequest getCollaborationRequest);
+
+    /**
+     * <p>
+     * Returns metadata about a collaboration.
+     * </p>
+     * 
+     * @param getCollaborationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetCollaboration operation returned by the service.
+     * @sample AWSCleanRoomsAsyncHandler.GetCollaboration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/GetCollaboration" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<GetCollaborationResult> getCollaborationAsync(GetCollaborationRequest getCollaborationRequest,
+            com.amazonaws.handlers.AsyncHandler<GetCollaborationRequest, GetCollaborationResult> asyncHandler);
+
+    /**
+     * <p>
+     * Retrieves a configured table.
+     * </p>
+     * 
+     * @param getConfiguredTableRequest
+     * @return A Java Future containing the result of the GetConfiguredTable operation returned by the service.
+     * @sample AWSCleanRoomsAsync.GetConfiguredTable
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/GetConfiguredTable" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<GetConfiguredTableResult> getConfiguredTableAsync(GetConfiguredTableRequest getConfiguredTableRequest);
+
+    /**
+     * <p>
+     * Retrieves a configured table.
+     * </p>
+     * 
+     * @param getConfiguredTableRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetConfiguredTable operation returned by the service.
+     * @sample AWSCleanRoomsAsyncHandler.GetConfiguredTable
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/GetConfiguredTable" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<GetConfiguredTableResult> getConfiguredTableAsync(GetConfiguredTableRequest getConfiguredTableRequest,
+            com.amazonaws.handlers.AsyncHandler<GetConfiguredTableRequest, GetConfiguredTableResult> asyncHandler);
+
+    /**
+     * <p>
+     * Retrieves a configured table analysis rule.
+     * </p>
+     * 
+     * @param getConfiguredTableAnalysisRuleRequest
+     * @return A Java Future containing the result of the GetConfiguredTableAnalysisRule operation returned by the
+     *         service.
+     * @sample AWSCleanRoomsAsync.GetConfiguredTableAnalysisRule
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/GetConfiguredTableAnalysisRule"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetConfiguredTableAnalysisRuleResult> getConfiguredTableAnalysisRuleAsync(
+            GetConfiguredTableAnalysisRuleRequest getConfiguredTableAnalysisRuleRequest);
+
+    /**
+     * <p>
+     * Retrieves a configured table analysis rule.
+     * </p>
+     * 
+     * @param getConfiguredTableAnalysisRuleRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetConfiguredTableAnalysisRule operation returned by the
+     *         service.
+     * @sample AWSCleanRoomsAsyncHandler.GetConfiguredTableAnalysisRule
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/GetConfiguredTableAnalysisRule"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetConfiguredTableAnalysisRuleResult> getConfiguredTableAnalysisRuleAsync(
+            GetConfiguredTableAnalysisRuleRequest getConfiguredTableAnalysisRuleRequest,
+            com.amazonaws.handlers.AsyncHandler<GetConfiguredTableAnalysisRuleRequest, GetConfiguredTableAnalysisRuleResult> asyncHandler);
+
+    /**
+     * <p>
+     * Retrieves a configured table association.
+     * </p>
+     * 
+     * @param getConfiguredTableAssociationRequest
+     * @return A Java Future containing the result of the GetConfiguredTableAssociation operation returned by the
+     *         service.
+     * @sample AWSCleanRoomsAsync.GetConfiguredTableAssociation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/GetConfiguredTableAssociation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetConfiguredTableAssociationResult> getConfiguredTableAssociationAsync(
+            GetConfiguredTableAssociationRequest getConfiguredTableAssociationRequest);
+
+    /**
+     * <p>
+     * Retrieves a configured table association.
+     * </p>
+     * 
+     * @param getConfiguredTableAssociationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetConfiguredTableAssociation operation returned by the
+     *         service.
+     * @sample AWSCleanRoomsAsyncHandler.GetConfiguredTableAssociation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/GetConfiguredTableAssociation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetConfiguredTableAssociationResult> getConfiguredTableAssociationAsync(
+            GetConfiguredTableAssociationRequest getConfiguredTableAssociationRequest,
+            com.amazonaws.handlers.AsyncHandler<GetConfiguredTableAssociationRequest, GetConfiguredTableAssociationResult> asyncHandler);
+
+    /**
+     * <p>
+     * Retrieves a specified membership for an identifier.
+     * </p>
+     * 
+     * @param getMembershipRequest
+     * @return A Java Future containing the result of the GetMembership operation returned by the service.
+     * @sample AWSCleanRoomsAsync.GetMembership
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/GetMembership" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetMembershipResult> getMembershipAsync(GetMembershipRequest getMembershipRequest);
+
+    /**
+     * <p>
+     * Retrieves a specified membership for an identifier.
+     * </p>
+     * 
+     * @param getMembershipRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetMembership operation returned by the service.
+     * @sample AWSCleanRoomsAsyncHandler.GetMembership
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/GetMembership" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetMembershipResult> getMembershipAsync(GetMembershipRequest getMembershipRequest,
+            com.amazonaws.handlers.AsyncHandler<GetMembershipRequest, GetMembershipResult> asyncHandler);
+
+    /**
+     * <p>
+     * Returns query processing metadata.
+     * </p>
+     * 
+     * @param getProtectedQueryRequest
+     * @return A Java Future containing the result of the GetProtectedQuery operation returned by the service.
+     * @sample AWSCleanRoomsAsync.GetProtectedQuery
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/GetProtectedQuery" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<GetProtectedQueryResult> getProtectedQueryAsync(GetProtectedQueryRequest getProtectedQueryRequest);
+
+    /**
+     * <p>
+     * Returns query processing metadata.
+     * </p>
+     * 
+     * @param getProtectedQueryRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetProtectedQuery operation returned by the service.
+     * @sample AWSCleanRoomsAsyncHandler.GetProtectedQuery
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/GetProtectedQuery" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<GetProtectedQueryResult> getProtectedQueryAsync(GetProtectedQueryRequest getProtectedQueryRequest,
+            com.amazonaws.handlers.AsyncHandler<GetProtectedQueryRequest, GetProtectedQueryResult> asyncHandler);
+
+    /**
+     * <p>
+     * Retrieves the schema for a relation within a collaboration.
+     * </p>
+     * 
+     * @param getSchemaRequest
+     * @return A Java Future containing the result of the GetSchema operation returned by the service.
+     * @sample AWSCleanRoomsAsync.GetSchema
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/GetSchema" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetSchemaResult> getSchemaAsync(GetSchemaRequest getSchemaRequest);
+
+    /**
+     * <p>
+     * Retrieves the schema for a relation within a collaboration.
+     * </p>
+     * 
+     * @param getSchemaRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetSchema operation returned by the service.
+     * @sample AWSCleanRoomsAsyncHandler.GetSchema
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/GetSchema" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetSchemaResult> getSchemaAsync(GetSchemaRequest getSchemaRequest,
+            com.amazonaws.handlers.AsyncHandler<GetSchemaRequest, GetSchemaResult> asyncHandler);
+
+    /**
+     * <p>
+     * Retrieves a schema analysis rule.
+     * </p>
+     * 
+     * @param getSchemaAnalysisRuleRequest
+     * @return A Java Future containing the result of the GetSchemaAnalysisRule operation returned by the service.
+     * @sample AWSCleanRoomsAsync.GetSchemaAnalysisRule
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/GetSchemaAnalysisRule"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetSchemaAnalysisRuleResult> getSchemaAnalysisRuleAsync(GetSchemaAnalysisRuleRequest getSchemaAnalysisRuleRequest);
+
+    /**
+     * <p>
+     * Retrieves a schema analysis rule.
+     * </p>
+     * 
+     * @param getSchemaAnalysisRuleRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetSchemaAnalysisRule operation returned by the service.
+     * @sample AWSCleanRoomsAsyncHandler.GetSchemaAnalysisRule
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/GetSchemaAnalysisRule"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetSchemaAnalysisRuleResult> getSchemaAnalysisRuleAsync(GetSchemaAnalysisRuleRequest getSchemaAnalysisRuleRequest,
+            com.amazonaws.handlers.AsyncHandler<GetSchemaAnalysisRuleRequest, GetSchemaAnalysisRuleResult> asyncHandler);
+
+    /**
+     * <p>
+     * Lists collaborations the caller owns, is active in, or has been invited to.
+     * </p>
+     * 
+     * @param listCollaborationsRequest
+     * @return A Java Future containing the result of the ListCollaborations operation returned by the service.
+     * @sample AWSCleanRoomsAsync.ListCollaborations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/ListCollaborations" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ListCollaborationsResult> listCollaborationsAsync(ListCollaborationsRequest listCollaborationsRequest);
+
+    /**
+     * <p>
+     * Lists collaborations the caller owns, is active in, or has been invited to.
+     * </p>
+     * 
+     * @param listCollaborationsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListCollaborations operation returned by the service.
+     * @sample AWSCleanRoomsAsyncHandler.ListCollaborations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/ListCollaborations" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ListCollaborationsResult> listCollaborationsAsync(ListCollaborationsRequest listCollaborationsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListCollaborationsRequest, ListCollaborationsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Lists configured table associations for a membership.
+     * </p>
+     * 
+     * @param listConfiguredTableAssociationsRequest
+     * @return A Java Future containing the result of the ListConfiguredTableAssociations operation returned by the
+     *         service.
+     * @sample AWSCleanRoomsAsync.ListConfiguredTableAssociations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/ListConfiguredTableAssociations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListConfiguredTableAssociationsResult> listConfiguredTableAssociationsAsync(
+            ListConfiguredTableAssociationsRequest listConfiguredTableAssociationsRequest);
+
+    /**
+     * <p>
+     * Lists configured table associations for a membership.
+     * </p>
+     * 
+     * @param listConfiguredTableAssociationsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListConfiguredTableAssociations operation returned by the
+     *         service.
+     * @sample AWSCleanRoomsAsyncHandler.ListConfiguredTableAssociations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/ListConfiguredTableAssociations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListConfiguredTableAssociationsResult> listConfiguredTableAssociationsAsync(
+            ListConfiguredTableAssociationsRequest listConfiguredTableAssociationsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListConfiguredTableAssociationsRequest, ListConfiguredTableAssociationsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Lists configured tables.
+     * </p>
+     * 
+     * @param listConfiguredTablesRequest
+     * @return A Java Future containing the result of the ListConfiguredTables operation returned by the service.
+     * @sample AWSCleanRoomsAsync.ListConfiguredTables
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/ListConfiguredTables"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListConfiguredTablesResult> listConfiguredTablesAsync(ListConfiguredTablesRequest listConfiguredTablesRequest);
+
+    /**
+     * <p>
+     * Lists configured tables.
+     * </p>
+     * 
+     * @param listConfiguredTablesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListConfiguredTables operation returned by the service.
+     * @sample AWSCleanRoomsAsyncHandler.ListConfiguredTables
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/ListConfiguredTables"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListConfiguredTablesResult> listConfiguredTablesAsync(ListConfiguredTablesRequest listConfiguredTablesRequest,
+            com.amazonaws.handlers.AsyncHandler<ListConfiguredTablesRequest, ListConfiguredTablesResult> asyncHandler);
+
+    /**
+     * <p>
+     * Lists all members within a collaboration.
+     * </p>
+     * 
+     * @param listMembersRequest
+     * @return A Java Future containing the result of the ListMembers operation returned by the service.
+     * @sample AWSCleanRoomsAsync.ListMembers
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/ListMembers" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListMembersResult> listMembersAsync(ListMembersRequest listMembersRequest);
+
+    /**
+     * <p>
+     * Lists all members within a collaboration.
+     * </p>
+     * 
+     * @param listMembersRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListMembers operation returned by the service.
+     * @sample AWSCleanRoomsAsyncHandler.ListMembers
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/ListMembers" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListMembersResult> listMembersAsync(ListMembersRequest listMembersRequest,
+            com.amazonaws.handlers.AsyncHandler<ListMembersRequest, ListMembersResult> asyncHandler);
+
+    /**
+     * <p>
+     * Lists all memberships resources within the caller's account.
+     * </p>
+     * 
+     * @param listMembershipsRequest
+     * @return A Java Future containing the result of the ListMemberships operation returned by the service.
+     * @sample AWSCleanRoomsAsync.ListMemberships
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/ListMemberships" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListMembershipsResult> listMembershipsAsync(ListMembershipsRequest listMembershipsRequest);
+
+    /**
+     * <p>
+     * Lists all memberships resources within the caller's account.
+     * </p>
+     * 
+     * @param listMembershipsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListMemberships operation returned by the service.
+     * @sample AWSCleanRoomsAsyncHandler.ListMemberships
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/ListMemberships" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListMembershipsResult> listMembershipsAsync(ListMembershipsRequest listMembershipsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListMembershipsRequest, ListMembershipsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Lists protected queries, sorted by the most recent query.
+     * </p>
+     * 
+     * @param listProtectedQueriesRequest
+     * @return A Java Future containing the result of the ListProtectedQueries operation returned by the service.
+     * @sample AWSCleanRoomsAsync.ListProtectedQueries
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/ListProtectedQueries"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListProtectedQueriesResult> listProtectedQueriesAsync(ListProtectedQueriesRequest listProtectedQueriesRequest);
+
+    /**
+     * <p>
+     * Lists protected queries, sorted by the most recent query.
+     * </p>
+     * 
+     * @param listProtectedQueriesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListProtectedQueries operation returned by the service.
+     * @sample AWSCleanRoomsAsyncHandler.ListProtectedQueries
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/ListProtectedQueries"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListProtectedQueriesResult> listProtectedQueriesAsync(ListProtectedQueriesRequest listProtectedQueriesRequest,
+            com.amazonaws.handlers.AsyncHandler<ListProtectedQueriesRequest, ListProtectedQueriesResult> asyncHandler);
+
+    /**
+     * <p>
+     * Lists the schemas for relations within a collaboration.
+     * </p>
+     * 
+     * @param listSchemasRequest
+     * @return A Java Future containing the result of the ListSchemas operation returned by the service.
+     * @sample AWSCleanRoomsAsync.ListSchemas
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/ListSchemas" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListSchemasResult> listSchemasAsync(ListSchemasRequest listSchemasRequest);
+
+    /**
+     * <p>
+     * Lists the schemas for relations within a collaboration.
+     * </p>
+     * 
+     * @param listSchemasRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListSchemas operation returned by the service.
+     * @sample AWSCleanRoomsAsyncHandler.ListSchemas
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/ListSchemas" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListSchemasResult> listSchemasAsync(ListSchemasRequest listSchemasRequest,
+            com.amazonaws.handlers.AsyncHandler<ListSchemasRequest, ListSchemasResult> asyncHandler);
+
+    /**
+     * <p>
+     * Creates a protected query that is started by AWS Clean Rooms.
+     * </p>
+     * 
+     * @param startProtectedQueryRequest
+     * @return A Java Future containing the result of the StartProtectedQuery operation returned by the service.
+     * @sample AWSCleanRoomsAsync.StartProtectedQuery
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/StartProtectedQuery" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<StartProtectedQueryResult> startProtectedQueryAsync(StartProtectedQueryRequest startProtectedQueryRequest);
+
+    /**
+     * <p>
+     * Creates a protected query that is started by AWS Clean Rooms.
+     * </p>
+     * 
+     * @param startProtectedQueryRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the StartProtectedQuery operation returned by the service.
+     * @sample AWSCleanRoomsAsyncHandler.StartProtectedQuery
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/StartProtectedQuery" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<StartProtectedQueryResult> startProtectedQueryAsync(StartProtectedQueryRequest startProtectedQueryRequest,
+            com.amazonaws.handlers.AsyncHandler<StartProtectedQueryRequest, StartProtectedQueryResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates collaboration metadata and can only be called by the collaboration owner.
+     * </p>
+     * 
+     * @param updateCollaborationRequest
+     * @return A Java Future containing the result of the UpdateCollaboration operation returned by the service.
+     * @sample AWSCleanRoomsAsync.UpdateCollaboration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/UpdateCollaboration" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateCollaborationResult> updateCollaborationAsync(UpdateCollaborationRequest updateCollaborationRequest);
+
+    /**
+     * <p>
+     * Updates collaboration metadata and can only be called by the collaboration owner.
+     * </p>
+     * 
+     * @param updateCollaborationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateCollaboration operation returned by the service.
+     * @sample AWSCleanRoomsAsyncHandler.UpdateCollaboration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/UpdateCollaboration" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateCollaborationResult> updateCollaborationAsync(UpdateCollaborationRequest updateCollaborationRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateCollaborationRequest, UpdateCollaborationResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates a configured table.
+     * </p>
+     * 
+     * @param updateConfiguredTableRequest
+     * @return A Java Future containing the result of the UpdateConfiguredTable operation returned by the service.
+     * @sample AWSCleanRoomsAsync.UpdateConfiguredTable
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/UpdateConfiguredTable"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateConfiguredTableResult> updateConfiguredTableAsync(UpdateConfiguredTableRequest updateConfiguredTableRequest);
+
+    /**
+     * <p>
+     * Updates a configured table.
+     * </p>
+     * 
+     * @param updateConfiguredTableRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateConfiguredTable operation returned by the service.
+     * @sample AWSCleanRoomsAsyncHandler.UpdateConfiguredTable
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/UpdateConfiguredTable"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateConfiguredTableResult> updateConfiguredTableAsync(UpdateConfiguredTableRequest updateConfiguredTableRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateConfiguredTableRequest, UpdateConfiguredTableResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates a configured table analysis rule.
+     * </p>
+     * 
+     * @param updateConfiguredTableAnalysisRuleRequest
+     * @return A Java Future containing the result of the UpdateConfiguredTableAnalysisRule operation returned by the
+     *         service.
+     * @sample AWSCleanRoomsAsync.UpdateConfiguredTableAnalysisRule
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/UpdateConfiguredTableAnalysisRule"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateConfiguredTableAnalysisRuleResult> updateConfiguredTableAnalysisRuleAsync(
+            UpdateConfiguredTableAnalysisRuleRequest updateConfiguredTableAnalysisRuleRequest);
+
+    /**
+     * <p>
+     * Updates a configured table analysis rule.
+     * </p>
+     * 
+     * @param updateConfiguredTableAnalysisRuleRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateConfiguredTableAnalysisRule operation returned by the
+     *         service.
+     * @sample AWSCleanRoomsAsyncHandler.UpdateConfiguredTableAnalysisRule
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/UpdateConfiguredTableAnalysisRule"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateConfiguredTableAnalysisRuleResult> updateConfiguredTableAnalysisRuleAsync(
+            UpdateConfiguredTableAnalysisRuleRequest updateConfiguredTableAnalysisRuleRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateConfiguredTableAnalysisRuleRequest, UpdateConfiguredTableAnalysisRuleResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates a configured table association.
+     * </p>
+     * 
+     * @param updateConfiguredTableAssociationRequest
+     * @return A Java Future containing the result of the UpdateConfiguredTableAssociation operation returned by the
+     *         service.
+     * @sample AWSCleanRoomsAsync.UpdateConfiguredTableAssociation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/UpdateConfiguredTableAssociation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateConfiguredTableAssociationResult> updateConfiguredTableAssociationAsync(
+            UpdateConfiguredTableAssociationRequest updateConfiguredTableAssociationRequest);
+
+    /**
+     * <p>
+     * Updates a configured table association.
+     * </p>
+     * 
+     * @param updateConfiguredTableAssociationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateConfiguredTableAssociation operation returned by the
+     *         service.
+     * @sample AWSCleanRoomsAsyncHandler.UpdateConfiguredTableAssociation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/UpdateConfiguredTableAssociation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateConfiguredTableAssociationResult> updateConfiguredTableAssociationAsync(
+            UpdateConfiguredTableAssociationRequest updateConfiguredTableAssociationRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateConfiguredTableAssociationRequest, UpdateConfiguredTableAssociationResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates a membership.
+     * </p>
+     * 
+     * @param updateMembershipRequest
+     * @return A Java Future containing the result of the UpdateMembership operation returned by the service.
+     * @sample AWSCleanRoomsAsync.UpdateMembership
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/UpdateMembership" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateMembershipResult> updateMembershipAsync(UpdateMembershipRequest updateMembershipRequest);
+
+    /**
+     * <p>
+     * Updates a membership.
+     * </p>
+     * 
+     * @param updateMembershipRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateMembership operation returned by the service.
+     * @sample AWSCleanRoomsAsyncHandler.UpdateMembership
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/UpdateMembership" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateMembershipResult> updateMembershipAsync(UpdateMembershipRequest updateMembershipRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateMembershipRequest, UpdateMembershipResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates the processing of a currently running query.
+     * </p>
+     * 
+     * @param updateProtectedQueryRequest
+     * @return A Java Future containing the result of the UpdateProtectedQuery operation returned by the service.
+     * @sample AWSCleanRoomsAsync.UpdateProtectedQuery
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/UpdateProtectedQuery"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateProtectedQueryResult> updateProtectedQueryAsync(UpdateProtectedQueryRequest updateProtectedQueryRequest);
+
+    /**
+     * <p>
+     * Updates the processing of a currently running query.
+     * </p>
+     * 
+     * @param updateProtectedQueryRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateProtectedQuery operation returned by the service.
+     * @sample AWSCleanRoomsAsyncHandler.UpdateProtectedQuery
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cleanrooms-2022-02-17/UpdateProtectedQuery"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateProtectedQueryResult> updateProtectedQueryAsync(UpdateProtectedQueryRequest updateProtectedQueryRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateProtectedQueryRequest, UpdateProtectedQueryResult> asyncHandler);
+
+}

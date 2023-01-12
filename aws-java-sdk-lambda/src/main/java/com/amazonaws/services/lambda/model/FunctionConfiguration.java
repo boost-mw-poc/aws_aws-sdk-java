@@ -240,7 +240,7 @@ public class FunctionConfiguration implements Serializable, Cloneable, Structure
      * <p>
      * Set <code>ApplyOn</code> to <code>PublishedVersions</code> to create a snapshot of the initialized execution
      * environment when you publish a function version. For more information, see <a
-     * href="https://docs.aws.amazon.com/lambda/latest/dg/snapstart.html">Reducing startup time with Lambda
+     * href="https://docs.aws.amazon.com/lambda/latest/dg/snapstart.html">Improving startup performance with Lambda
      * SnapStart</a>.
      * </p>
      */
@@ -1988,15 +1988,15 @@ public class FunctionConfiguration implements Serializable, Cloneable, Structure
      * <p>
      * Set <code>ApplyOn</code> to <code>PublishedVersions</code> to create a snapshot of the initialized execution
      * environment when you publish a function version. For more information, see <a
-     * href="https://docs.aws.amazon.com/lambda/latest/dg/snapstart.html">Reducing startup time with Lambda
+     * href="https://docs.aws.amazon.com/lambda/latest/dg/snapstart.html">Improving startup performance with Lambda
      * SnapStart</a>.
      * </p>
      * 
      * @param snapStart
      *        Set <code>ApplyOn</code> to <code>PublishedVersions</code> to create a snapshot of the initialized
      *        execution environment when you publish a function version. For more information, see <a
-     *        href="https://docs.aws.amazon.com/lambda/latest/dg/snapstart.html">Reducing startup time with Lambda
-     *        SnapStart</a>.
+     *        href="https://docs.aws.amazon.com/lambda/latest/dg/snapstart.html">Improving startup performance with
+     *        Lambda SnapStart</a>.
      */
 
     public void setSnapStart(SnapStartResponse snapStart) {
@@ -2007,14 +2007,14 @@ public class FunctionConfiguration implements Serializable, Cloneable, Structure
      * <p>
      * Set <code>ApplyOn</code> to <code>PublishedVersions</code> to create a snapshot of the initialized execution
      * environment when you publish a function version. For more information, see <a
-     * href="https://docs.aws.amazon.com/lambda/latest/dg/snapstart.html">Reducing startup time with Lambda
+     * href="https://docs.aws.amazon.com/lambda/latest/dg/snapstart.html">Improving startup performance with Lambda
      * SnapStart</a>.
      * </p>
      * 
      * @return Set <code>ApplyOn</code> to <code>PublishedVersions</code> to create a snapshot of the initialized
      *         execution environment when you publish a function version. For more information, see <a
-     *         href="https://docs.aws.amazon.com/lambda/latest/dg/snapstart.html">Reducing startup time with Lambda
-     *         SnapStart</a>.
+     *         href="https://docs.aws.amazon.com/lambda/latest/dg/snapstart.html">Improving startup performance with
+     *         Lambda SnapStart</a>.
      */
 
     public SnapStartResponse getSnapStart() {
@@ -2025,15 +2025,15 @@ public class FunctionConfiguration implements Serializable, Cloneable, Structure
      * <p>
      * Set <code>ApplyOn</code> to <code>PublishedVersions</code> to create a snapshot of the initialized execution
      * environment when you publish a function version. For more information, see <a
-     * href="https://docs.aws.amazon.com/lambda/latest/dg/snapstart.html">Reducing startup time with Lambda
+     * href="https://docs.aws.amazon.com/lambda/latest/dg/snapstart.html">Improving startup performance with Lambda
      * SnapStart</a>.
      * </p>
      * 
      * @param snapStart
      *        Set <code>ApplyOn</code> to <code>PublishedVersions</code> to create a snapshot of the initialized
      *        execution environment when you publish a function version. For more information, see <a
-     *        href="https://docs.aws.amazon.com/lambda/latest/dg/snapstart.html">Reducing startup time with Lambda
-     *        SnapStart</a>.
+     *        href="https://docs.aws.amazon.com/lambda/latest/dg/snapstart.html">Improving startup performance with
+     *        Lambda SnapStart</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

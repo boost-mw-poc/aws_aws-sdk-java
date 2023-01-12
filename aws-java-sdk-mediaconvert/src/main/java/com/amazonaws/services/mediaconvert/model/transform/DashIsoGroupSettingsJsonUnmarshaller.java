@@ -63,6 +63,10 @@ public class DashIsoGroupSettingsJsonUnmarshaller implements Unmarshaller<DashIs
                     context.nextToken();
                     dashIsoGroupSettings.setBaseUrl(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("dashManifestStyle", targetDepth)) {
+                    context.nextToken();
+                    dashIsoGroupSettings.setDashManifestStyle(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("destination", targetDepth)) {
                     context.nextToken();
                     dashIsoGroupSettings.setDestination(context.getUnmarshaller(String.class).unmarshall(context));

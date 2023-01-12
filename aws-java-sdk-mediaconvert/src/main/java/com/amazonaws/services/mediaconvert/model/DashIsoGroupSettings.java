@@ -51,6 +51,14 @@ public class DashIsoGroupSettings implements Serializable, Cloneable, Structured
      */
     private String baseUrl;
     /**
+     * Specify how MediaConvert writes SegmentTimeline in your output DASH manifest. To write a SegmentTimeline in each
+     * video Representation: Keep the default value, Basic. To write a common SegmentTimeline in the video
+     * AdaptationSet: Choose Compact. Note that MediaConvert will still write a SegmentTimeline in any Representation
+     * that does not share a common timeline. To write a video AdaptationSet for each different output framerate, and a
+     * common SegmentTimeline in each AdaptationSet: Choose Distinct.
+     */
+    private String dashManifestStyle;
+    /**
      * Use Destination (Destination) to specify the S3 output location and the output filename base. Destination accepts
      * format identifiers. If you do not specify the base filename in the URI, the service will use the filename of the
      * input file. If your job has multiple inputs, the service uses the filename of the first input file.
@@ -370,6 +378,89 @@ public class DashIsoGroupSettings implements Serializable, Cloneable, Structured
 
     public DashIsoGroupSettings withBaseUrl(String baseUrl) {
         setBaseUrl(baseUrl);
+        return this;
+    }
+
+    /**
+     * Specify how MediaConvert writes SegmentTimeline in your output DASH manifest. To write a SegmentTimeline in each
+     * video Representation: Keep the default value, Basic. To write a common SegmentTimeline in the video
+     * AdaptationSet: Choose Compact. Note that MediaConvert will still write a SegmentTimeline in any Representation
+     * that does not share a common timeline. To write a video AdaptationSet for each different output framerate, and a
+     * common SegmentTimeline in each AdaptationSet: Choose Distinct.
+     * 
+     * @param dashManifestStyle
+     *        Specify how MediaConvert writes SegmentTimeline in your output DASH manifest. To write a SegmentTimeline
+     *        in each video Representation: Keep the default value, Basic. To write a common SegmentTimeline in the
+     *        video AdaptationSet: Choose Compact. Note that MediaConvert will still write a SegmentTimeline in any
+     *        Representation that does not share a common timeline. To write a video AdaptationSet for each different
+     *        output framerate, and a common SegmentTimeline in each AdaptationSet: Choose Distinct.
+     * @see DashManifestStyle
+     */
+
+    public void setDashManifestStyle(String dashManifestStyle) {
+        this.dashManifestStyle = dashManifestStyle;
+    }
+
+    /**
+     * Specify how MediaConvert writes SegmentTimeline in your output DASH manifest. To write a SegmentTimeline in each
+     * video Representation: Keep the default value, Basic. To write a common SegmentTimeline in the video
+     * AdaptationSet: Choose Compact. Note that MediaConvert will still write a SegmentTimeline in any Representation
+     * that does not share a common timeline. To write a video AdaptationSet for each different output framerate, and a
+     * common SegmentTimeline in each AdaptationSet: Choose Distinct.
+     * 
+     * @return Specify how MediaConvert writes SegmentTimeline in your output DASH manifest. To write a SegmentTimeline
+     *         in each video Representation: Keep the default value, Basic. To write a common SegmentTimeline in the
+     *         video AdaptationSet: Choose Compact. Note that MediaConvert will still write a SegmentTimeline in any
+     *         Representation that does not share a common timeline. To write a video AdaptationSet for each different
+     *         output framerate, and a common SegmentTimeline in each AdaptationSet: Choose Distinct.
+     * @see DashManifestStyle
+     */
+
+    public String getDashManifestStyle() {
+        return this.dashManifestStyle;
+    }
+
+    /**
+     * Specify how MediaConvert writes SegmentTimeline in your output DASH manifest. To write a SegmentTimeline in each
+     * video Representation: Keep the default value, Basic. To write a common SegmentTimeline in the video
+     * AdaptationSet: Choose Compact. Note that MediaConvert will still write a SegmentTimeline in any Representation
+     * that does not share a common timeline. To write a video AdaptationSet for each different output framerate, and a
+     * common SegmentTimeline in each AdaptationSet: Choose Distinct.
+     * 
+     * @param dashManifestStyle
+     *        Specify how MediaConvert writes SegmentTimeline in your output DASH manifest. To write a SegmentTimeline
+     *        in each video Representation: Keep the default value, Basic. To write a common SegmentTimeline in the
+     *        video AdaptationSet: Choose Compact. Note that MediaConvert will still write a SegmentTimeline in any
+     *        Representation that does not share a common timeline. To write a video AdaptationSet for each different
+     *        output framerate, and a common SegmentTimeline in each AdaptationSet: Choose Distinct.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see DashManifestStyle
+     */
+
+    public DashIsoGroupSettings withDashManifestStyle(String dashManifestStyle) {
+        setDashManifestStyle(dashManifestStyle);
+        return this;
+    }
+
+    /**
+     * Specify how MediaConvert writes SegmentTimeline in your output DASH manifest. To write a SegmentTimeline in each
+     * video Representation: Keep the default value, Basic. To write a common SegmentTimeline in the video
+     * AdaptationSet: Choose Compact. Note that MediaConvert will still write a SegmentTimeline in any Representation
+     * that does not share a common timeline. To write a video AdaptationSet for each different output framerate, and a
+     * common SegmentTimeline in each AdaptationSet: Choose Distinct.
+     * 
+     * @param dashManifestStyle
+     *        Specify how MediaConvert writes SegmentTimeline in your output DASH manifest. To write a SegmentTimeline
+     *        in each video Representation: Keep the default value, Basic. To write a common SegmentTimeline in the
+     *        video AdaptationSet: Choose Compact. Note that MediaConvert will still write a SegmentTimeline in any
+     *        Representation that does not share a common timeline. To write a video AdaptationSet for each different
+     *        output framerate, and a common SegmentTimeline in each AdaptationSet: Choose Distinct.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see DashManifestStyle
+     */
+
+    public DashIsoGroupSettings withDashManifestStyle(DashManifestStyle dashManifestStyle) {
+        this.dashManifestStyle = dashManifestStyle.toString();
         return this;
     }
 
@@ -1470,6 +1561,8 @@ public class DashIsoGroupSettings implements Serializable, Cloneable, Structured
             sb.append("AudioChannelConfigSchemeIdUri: ").append(getAudioChannelConfigSchemeIdUri()).append(",");
         if (getBaseUrl() != null)
             sb.append("BaseUrl: ").append(getBaseUrl()).append(",");
+        if (getDashManifestStyle() != null)
+            sb.append("DashManifestStyle: ").append(getDashManifestStyle()).append(",");
         if (getDestination() != null)
             sb.append("Destination: ").append(getDestination()).append(",");
         if (getDestinationSettings() != null)
@@ -1530,6 +1623,10 @@ public class DashIsoGroupSettings implements Serializable, Cloneable, Structured
         if (other.getBaseUrl() == null ^ this.getBaseUrl() == null)
             return false;
         if (other.getBaseUrl() != null && other.getBaseUrl().equals(this.getBaseUrl()) == false)
+            return false;
+        if (other.getDashManifestStyle() == null ^ this.getDashManifestStyle() == null)
+            return false;
+        if (other.getDashManifestStyle() != null && other.getDashManifestStyle().equals(this.getDashManifestStyle()) == false)
             return false;
         if (other.getDestination() == null ^ this.getDestination() == null)
             return false;
@@ -1611,6 +1708,7 @@ public class DashIsoGroupSettings implements Serializable, Cloneable, Structured
         hashCode = prime * hashCode + ((getAdditionalManifests() == null) ? 0 : getAdditionalManifests().hashCode());
         hashCode = prime * hashCode + ((getAudioChannelConfigSchemeIdUri() == null) ? 0 : getAudioChannelConfigSchemeIdUri().hashCode());
         hashCode = prime * hashCode + ((getBaseUrl() == null) ? 0 : getBaseUrl().hashCode());
+        hashCode = prime * hashCode + ((getDashManifestStyle() == null) ? 0 : getDashManifestStyle().hashCode());
         hashCode = prime * hashCode + ((getDestination() == null) ? 0 : getDestination().hashCode());
         hashCode = prime * hashCode + ((getDestinationSettings() == null) ? 0 : getDestinationSettings().hashCode());
         hashCode = prime * hashCode + ((getEncryption() == null) ? 0 : getEncryption().hashCode());

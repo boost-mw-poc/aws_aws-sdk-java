@@ -34,6 +34,8 @@ public class DashIsoGroupSettingsMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("audioChannelConfigSchemeIdUri").build();
     private static final MarshallingInfo<String> BASEURL_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("baseUrl").build();
+    private static final MarshallingInfo<String> DASHMANIFESTSTYLE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("dashManifestStyle").build();
     private static final MarshallingInfo<String> DESTINATION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("destination").build();
     private static final MarshallingInfo<StructuredPojo> DESTINATIONSETTINGS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
@@ -88,6 +90,7 @@ public class DashIsoGroupSettingsMarshaller {
             protocolMarshaller.marshall(dashIsoGroupSettings.getAdditionalManifests(), ADDITIONALMANIFESTS_BINDING);
             protocolMarshaller.marshall(dashIsoGroupSettings.getAudioChannelConfigSchemeIdUri(), AUDIOCHANNELCONFIGSCHEMEIDURI_BINDING);
             protocolMarshaller.marshall(dashIsoGroupSettings.getBaseUrl(), BASEURL_BINDING);
+            protocolMarshaller.marshall(dashIsoGroupSettings.getDashManifestStyle(), DASHMANIFESTSTYLE_BINDING);
             protocolMarshaller.marshall(dashIsoGroupSettings.getDestination(), DESTINATION_BINDING);
             protocolMarshaller.marshall(dashIsoGroupSettings.getDestinationSettings(), DESTINATIONSETTINGS_BINDING);
             protocolMarshaller.marshall(dashIsoGroupSettings.getEncryption(), ENCRYPTION_BINDING);

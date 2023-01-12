@@ -57,6 +57,12 @@ public class AudioNormalizationSettings implements Serializable, Cloneable, Stru
      * encoder will choose -23 LKFS.
      */
     private Double targetLkfs;
+    /**
+     * Specify the True-peak limiter threshold in decibels relative to full scale (dBFS). The peak inter-audio sample
+     * loudness in your output will be limited to the value that you specify, without affecting the overall target LKFS.
+     * Enter a value from 0 to -20. Leave blank to use the default value 0.
+     */
+    private Double truePeakLimiterThreshold;
 
     /**
      * Choose one of the following audio normalization algorithms: ITU-R BS.1770-1: Ungated loudness. A measurement of
@@ -411,6 +417,52 @@ public class AudioNormalizationSettings implements Serializable, Cloneable, Stru
     }
 
     /**
+     * Specify the True-peak limiter threshold in decibels relative to full scale (dBFS). The peak inter-audio sample
+     * loudness in your output will be limited to the value that you specify, without affecting the overall target LKFS.
+     * Enter a value from 0 to -20. Leave blank to use the default value 0.
+     * 
+     * @param truePeakLimiterThreshold
+     *        Specify the True-peak limiter threshold in decibels relative to full scale (dBFS). The peak inter-audio
+     *        sample loudness in your output will be limited to the value that you specify, without affecting the
+     *        overall target LKFS. Enter a value from 0 to -20. Leave blank to use the default value 0.
+     */
+
+    public void setTruePeakLimiterThreshold(Double truePeakLimiterThreshold) {
+        this.truePeakLimiterThreshold = truePeakLimiterThreshold;
+    }
+
+    /**
+     * Specify the True-peak limiter threshold in decibels relative to full scale (dBFS). The peak inter-audio sample
+     * loudness in your output will be limited to the value that you specify, without affecting the overall target LKFS.
+     * Enter a value from 0 to -20. Leave blank to use the default value 0.
+     * 
+     * @return Specify the True-peak limiter threshold in decibels relative to full scale (dBFS). The peak inter-audio
+     *         sample loudness in your output will be limited to the value that you specify, without affecting the
+     *         overall target LKFS. Enter a value from 0 to -20. Leave blank to use the default value 0.
+     */
+
+    public Double getTruePeakLimiterThreshold() {
+        return this.truePeakLimiterThreshold;
+    }
+
+    /**
+     * Specify the True-peak limiter threshold in decibels relative to full scale (dBFS). The peak inter-audio sample
+     * loudness in your output will be limited to the value that you specify, without affecting the overall target LKFS.
+     * Enter a value from 0 to -20. Leave blank to use the default value 0.
+     * 
+     * @param truePeakLimiterThreshold
+     *        Specify the True-peak limiter threshold in decibels relative to full scale (dBFS). The peak inter-audio
+     *        sample loudness in your output will be limited to the value that you specify, without affecting the
+     *        overall target LKFS. Enter a value from 0 to -20. Leave blank to use the default value 0.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AudioNormalizationSettings withTruePeakLimiterThreshold(Double truePeakLimiterThreshold) {
+        setTruePeakLimiterThreshold(truePeakLimiterThreshold);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -433,7 +485,9 @@ public class AudioNormalizationSettings implements Serializable, Cloneable, Stru
         if (getPeakCalculation() != null)
             sb.append("PeakCalculation: ").append(getPeakCalculation()).append(",");
         if (getTargetLkfs() != null)
-            sb.append("TargetLkfs: ").append(getTargetLkfs());
+            sb.append("TargetLkfs: ").append(getTargetLkfs()).append(",");
+        if (getTruePeakLimiterThreshold() != null)
+            sb.append("TruePeakLimiterThreshold: ").append(getTruePeakLimiterThreshold());
         sb.append("}");
         return sb.toString();
     }
@@ -472,6 +526,10 @@ public class AudioNormalizationSettings implements Serializable, Cloneable, Stru
             return false;
         if (other.getTargetLkfs() != null && other.getTargetLkfs().equals(this.getTargetLkfs()) == false)
             return false;
+        if (other.getTruePeakLimiterThreshold() == null ^ this.getTruePeakLimiterThreshold() == null)
+            return false;
+        if (other.getTruePeakLimiterThreshold() != null && other.getTruePeakLimiterThreshold().equals(this.getTruePeakLimiterThreshold()) == false)
+            return false;
         return true;
     }
 
@@ -486,6 +544,7 @@ public class AudioNormalizationSettings implements Serializable, Cloneable, Stru
         hashCode = prime * hashCode + ((getLoudnessLogging() == null) ? 0 : getLoudnessLogging().hashCode());
         hashCode = prime * hashCode + ((getPeakCalculation() == null) ? 0 : getPeakCalculation().hashCode());
         hashCode = prime * hashCode + ((getTargetLkfs() == null) ? 0 : getTargetLkfs().hashCode());
+        hashCode = prime * hashCode + ((getTruePeakLimiterThreshold() == null) ? 0 : getTruePeakLimiterThreshold().hashCode());
         return hashCode;
     }
 

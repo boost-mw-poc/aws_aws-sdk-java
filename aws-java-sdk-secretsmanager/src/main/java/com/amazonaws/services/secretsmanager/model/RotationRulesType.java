@@ -30,8 +30,10 @@ public class RotationRulesType implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The number of days between automatic scheduled rotations of the secret. You can use this value to check that your
-     * secret meets your compliance guidelines for how often secrets must be rotated.
+     * The number of days between rotations of the secret. You can use this value to check that your secret meets your
+     * compliance guidelines for how often secrets must be rotated. If you use this field to set the rotation schedule,
+     * Secrets Manager calculates the next rotation date based on the previous rotation. Manually updating the secret
+     * value by calling <code>PutSecretValue</code> or <code>UpdateSecret</code> is considered a valid rotation.
      * </p>
      * <p>
      * In <code>DescribeSecret</code> and <code>ListSecrets</code>, this value is calculated from the rotation schedule
@@ -83,8 +85,10 @@ public class RotationRulesType implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The number of days between automatic scheduled rotations of the secret. You can use this value to check that your
-     * secret meets your compliance guidelines for how often secrets must be rotated.
+     * The number of days between rotations of the secret. You can use this value to check that your secret meets your
+     * compliance guidelines for how often secrets must be rotated. If you use this field to set the rotation schedule,
+     * Secrets Manager calculates the next rotation date based on the previous rotation. Manually updating the secret
+     * value by calling <code>PutSecretValue</code> or <code>UpdateSecret</code> is considered a valid rotation.
      * </p>
      * <p>
      * In <code>DescribeSecret</code> and <code>ListSecrets</code>, this value is calculated from the rotation schedule
@@ -94,8 +98,11 @@ public class RotationRulesType implements Serializable, Cloneable, StructuredPoj
      * </p>
      * 
      * @param automaticallyAfterDays
-     *        The number of days between automatic scheduled rotations of the secret. You can use this value to check
-     *        that your secret meets your compliance guidelines for how often secrets must be rotated.</p>
+     *        The number of days between rotations of the secret. You can use this value to check that your secret meets
+     *        your compliance guidelines for how often secrets must be rotated. If you use this field to set the
+     *        rotation schedule, Secrets Manager calculates the next rotation date based on the previous rotation.
+     *        Manually updating the secret value by calling <code>PutSecretValue</code> or <code>UpdateSecret</code> is
+     *        considered a valid rotation.</p>
      *        <p>
      *        In <code>DescribeSecret</code> and <code>ListSecrets</code>, this value is calculated from the rotation
      *        schedule after every successful rotation. In <code>RotateSecret</code>, you can set the rotation schedule
@@ -109,8 +116,10 @@ public class RotationRulesType implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The number of days between automatic scheduled rotations of the secret. You can use this value to check that your
-     * secret meets your compliance guidelines for how often secrets must be rotated.
+     * The number of days between rotations of the secret. You can use this value to check that your secret meets your
+     * compliance guidelines for how often secrets must be rotated. If you use this field to set the rotation schedule,
+     * Secrets Manager calculates the next rotation date based on the previous rotation. Manually updating the secret
+     * value by calling <code>PutSecretValue</code> or <code>UpdateSecret</code> is considered a valid rotation.
      * </p>
      * <p>
      * In <code>DescribeSecret</code> and <code>ListSecrets</code>, this value is calculated from the rotation schedule
@@ -119,8 +128,11 @@ public class RotationRulesType implements Serializable, Cloneable, StructuredPoj
      * both. To set a rotation schedule in hours, use <code>ScheduleExpression</code>.
      * </p>
      * 
-     * @return The number of days between automatic scheduled rotations of the secret. You can use this value to check
-     *         that your secret meets your compliance guidelines for how often secrets must be rotated.</p>
+     * @return The number of days between rotations of the secret. You can use this value to check that your secret
+     *         meets your compliance guidelines for how often secrets must be rotated. If you use this field to set the
+     *         rotation schedule, Secrets Manager calculates the next rotation date based on the previous rotation.
+     *         Manually updating the secret value by calling <code>PutSecretValue</code> or <code>UpdateSecret</code> is
+     *         considered a valid rotation.</p>
      *         <p>
      *         In <code>DescribeSecret</code> and <code>ListSecrets</code>, this value is calculated from the rotation
      *         schedule after every successful rotation. In <code>RotateSecret</code>, you can set the rotation schedule
@@ -134,8 +146,10 @@ public class RotationRulesType implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The number of days between automatic scheduled rotations of the secret. You can use this value to check that your
-     * secret meets your compliance guidelines for how often secrets must be rotated.
+     * The number of days between rotations of the secret. You can use this value to check that your secret meets your
+     * compliance guidelines for how often secrets must be rotated. If you use this field to set the rotation schedule,
+     * Secrets Manager calculates the next rotation date based on the previous rotation. Manually updating the secret
+     * value by calling <code>PutSecretValue</code> or <code>UpdateSecret</code> is considered a valid rotation.
      * </p>
      * <p>
      * In <code>DescribeSecret</code> and <code>ListSecrets</code>, this value is calculated from the rotation schedule
@@ -145,8 +159,11 @@ public class RotationRulesType implements Serializable, Cloneable, StructuredPoj
      * </p>
      * 
      * @param automaticallyAfterDays
-     *        The number of days between automatic scheduled rotations of the secret. You can use this value to check
-     *        that your secret meets your compliance guidelines for how often secrets must be rotated.</p>
+     *        The number of days between rotations of the secret. You can use this value to check that your secret meets
+     *        your compliance guidelines for how often secrets must be rotated. If you use this field to set the
+     *        rotation schedule, Secrets Manager calculates the next rotation date based on the previous rotation.
+     *        Manually updating the secret value by calling <code>PutSecretValue</code> or <code>UpdateSecret</code> is
+     *        considered a valid rotation.</p>
      *        <p>
      *        In <code>DescribeSecret</code> and <code>ListSecrets</code>, this value is calculated from the rotation
      *        schedule after every successful rotation. In <code>RotateSecret</code>, you can set the rotation schedule

@@ -107,7 +107,12 @@ public class SecretListEntry implements Serializable, Cloneable, StructuredPojo 
      * </p>
      */
     private java.util.Date deletedDate;
-
+    /**
+     * <p>
+     * The next date and time that Secrets Manager will attempt to rotate the secret, rounded to the nearest hour. This
+     * value is null if the secret is not set up for rotation.
+     * </p>
+     */
     private java.util.Date nextRotationDate;
     /**
      * <p>
@@ -674,7 +679,14 @@ public class SecretListEntry implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
+     * <p>
+     * The next date and time that Secrets Manager will attempt to rotate the secret, rounded to the nearest hour. This
+     * value is null if the secret is not set up for rotation.
+     * </p>
+     * 
      * @param nextRotationDate
+     *        The next date and time that Secrets Manager will attempt to rotate the secret, rounded to the nearest
+     *        hour. This value is null if the secret is not set up for rotation.
      */
 
     public void setNextRotationDate(java.util.Date nextRotationDate) {
@@ -682,7 +694,13 @@ public class SecretListEntry implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
-     * @return
+     * <p>
+     * The next date and time that Secrets Manager will attempt to rotate the secret, rounded to the nearest hour. This
+     * value is null if the secret is not set up for rotation.
+     * </p>
+     * 
+     * @return The next date and time that Secrets Manager will attempt to rotate the secret, rounded to the nearest
+     *         hour. This value is null if the secret is not set up for rotation.
      */
 
     public java.util.Date getNextRotationDate() {
@@ -690,7 +708,14 @@ public class SecretListEntry implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
+     * <p>
+     * The next date and time that Secrets Manager will attempt to rotate the secret, rounded to the nearest hour. This
+     * value is null if the secret is not set up for rotation.
+     * </p>
+     * 
      * @param nextRotationDate
+     *        The next date and time that Secrets Manager will attempt to rotate the secret, rounded to the nearest
+     *        hour. This value is null if the secret is not set up for rotation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

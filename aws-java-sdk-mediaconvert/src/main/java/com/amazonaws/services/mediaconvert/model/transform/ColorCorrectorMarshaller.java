@@ -29,6 +29,8 @@ public class ColorCorrectorMarshaller {
 
     private static final MarshallingInfo<Integer> BRIGHTNESS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("brightness").build();
+    private static final MarshallingInfo<StructuredPojo> CLIPLIMITS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("clipLimits").build();
     private static final MarshallingInfo<String> COLORSPACECONVERSION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("colorSpaceConversion").build();
     private static final MarshallingInfo<Integer> CONTRAST_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
@@ -61,6 +63,7 @@ public class ColorCorrectorMarshaller {
 
         try {
             protocolMarshaller.marshall(colorCorrector.getBrightness(), BRIGHTNESS_BINDING);
+            protocolMarshaller.marshall(colorCorrector.getClipLimits(), CLIPLIMITS_BINDING);
             protocolMarshaller.marshall(colorCorrector.getColorSpaceConversion(), COLORSPACECONVERSION_BINDING);
             protocolMarshaller.marshall(colorCorrector.getContrast(), CONTRAST_BINDING);
             protocolMarshaller.marshall(colorCorrector.getHdr10Metadata(), HDR10METADATA_BINDING);

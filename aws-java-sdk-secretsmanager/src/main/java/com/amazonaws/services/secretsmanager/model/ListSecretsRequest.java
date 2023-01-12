@@ -25,6 +25,11 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ListSecretsRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * Specifies whether to include secrets scheduled for deletion.
+     * </p>
+     */
     private Boolean includePlannedDeletion;
     /**
      * <p>
@@ -57,7 +62,12 @@ public class ListSecretsRequest extends com.amazonaws.AmazonWebServiceRequest im
     private String sortOrder;
 
     /**
+     * <p>
+     * Specifies whether to include secrets scheduled for deletion.
+     * </p>
+     * 
      * @param includePlannedDeletion
+     *        Specifies whether to include secrets scheduled for deletion.
      */
 
     public void setIncludePlannedDeletion(Boolean includePlannedDeletion) {
@@ -65,7 +75,11 @@ public class ListSecretsRequest extends com.amazonaws.AmazonWebServiceRequest im
     }
 
     /**
-     * @return
+     * <p>
+     * Specifies whether to include secrets scheduled for deletion.
+     * </p>
+     * 
+     * @return Specifies whether to include secrets scheduled for deletion.
      */
 
     public Boolean getIncludePlannedDeletion() {
@@ -73,7 +87,12 @@ public class ListSecretsRequest extends com.amazonaws.AmazonWebServiceRequest im
     }
 
     /**
+     * <p>
+     * Specifies whether to include secrets scheduled for deletion.
+     * </p>
+     * 
      * @param includePlannedDeletion
+     *        Specifies whether to include secrets scheduled for deletion.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -83,7 +102,11 @@ public class ListSecretsRequest extends com.amazonaws.AmazonWebServiceRequest im
     }
 
     /**
-     * @return
+     * <p>
+     * Specifies whether to include secrets scheduled for deletion.
+     * </p>
+     * 
+     * @return Specifies whether to include secrets scheduled for deletion.
      */
 
     public Boolean isIncludePlannedDeletion() {

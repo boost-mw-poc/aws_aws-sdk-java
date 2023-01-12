@@ -52,6 +52,10 @@ public class ColorCorrectorJsonUnmarshaller implements Unmarshaller<ColorCorrect
                     context.nextToken();
                     colorCorrector.setBrightness(context.getUnmarshaller(Integer.class).unmarshall(context));
                 }
+                if (context.testExpression("clipLimits", targetDepth)) {
+                    context.nextToken();
+                    colorCorrector.setClipLimits(ClipLimitsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("colorSpaceConversion", targetDepth)) {
                     context.nextToken();
                     colorCorrector.setColorSpaceConversion(context.getUnmarshaller(String.class).unmarshall(context));
