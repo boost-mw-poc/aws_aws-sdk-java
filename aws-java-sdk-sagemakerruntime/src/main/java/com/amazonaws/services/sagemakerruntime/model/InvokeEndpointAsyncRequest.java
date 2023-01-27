@@ -84,6 +84,12 @@ public class InvokeEndpointAsyncRequest extends com.amazonaws.AmazonWebServiceRe
      * </p>
      */
     private Integer requestTTLSeconds;
+    /**
+     * <p>
+     * Maximum amount of time in seconds a request can be processed before it is marked as expired.
+     * </p>
+     */
+    private Integer invocationTimeoutSeconds;
 
     /**
      * <p>
@@ -469,6 +475,46 @@ public class InvokeEndpointAsyncRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
+     * <p>
+     * Maximum amount of time in seconds a request can be processed before it is marked as expired.
+     * </p>
+     * 
+     * @param invocationTimeoutSeconds
+     *        Maximum amount of time in seconds a request can be processed before it is marked as expired.
+     */
+
+    public void setInvocationTimeoutSeconds(Integer invocationTimeoutSeconds) {
+        this.invocationTimeoutSeconds = invocationTimeoutSeconds;
+    }
+
+    /**
+     * <p>
+     * Maximum amount of time in seconds a request can be processed before it is marked as expired.
+     * </p>
+     * 
+     * @return Maximum amount of time in seconds a request can be processed before it is marked as expired.
+     */
+
+    public Integer getInvocationTimeoutSeconds() {
+        return this.invocationTimeoutSeconds;
+    }
+
+    /**
+     * <p>
+     * Maximum amount of time in seconds a request can be processed before it is marked as expired.
+     * </p>
+     * 
+     * @param invocationTimeoutSeconds
+     *        Maximum amount of time in seconds a request can be processed before it is marked as expired.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public InvokeEndpointAsyncRequest withInvocationTimeoutSeconds(Integer invocationTimeoutSeconds) {
+        setInvocationTimeoutSeconds(invocationTimeoutSeconds);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -493,7 +539,9 @@ public class InvokeEndpointAsyncRequest extends com.amazonaws.AmazonWebServiceRe
         if (getInputLocation() != null)
             sb.append("InputLocation: ").append(getInputLocation()).append(",");
         if (getRequestTTLSeconds() != null)
-            sb.append("RequestTTLSeconds: ").append(getRequestTTLSeconds());
+            sb.append("RequestTTLSeconds: ").append(getRequestTTLSeconds()).append(",");
+        if (getInvocationTimeoutSeconds() != null)
+            sb.append("InvocationTimeoutSeconds: ").append(getInvocationTimeoutSeconds());
         sb.append("}");
         return sb.toString();
     }
@@ -536,6 +584,10 @@ public class InvokeEndpointAsyncRequest extends com.amazonaws.AmazonWebServiceRe
             return false;
         if (other.getRequestTTLSeconds() != null && other.getRequestTTLSeconds().equals(this.getRequestTTLSeconds()) == false)
             return false;
+        if (other.getInvocationTimeoutSeconds() == null ^ this.getInvocationTimeoutSeconds() == null)
+            return false;
+        if (other.getInvocationTimeoutSeconds() != null && other.getInvocationTimeoutSeconds().equals(this.getInvocationTimeoutSeconds()) == false)
+            return false;
         return true;
     }
 
@@ -551,6 +603,7 @@ public class InvokeEndpointAsyncRequest extends com.amazonaws.AmazonWebServiceRe
         hashCode = prime * hashCode + ((getInferenceId() == null) ? 0 : getInferenceId().hashCode());
         hashCode = prime * hashCode + ((getInputLocation() == null) ? 0 : getInputLocation().hashCode());
         hashCode = prime * hashCode + ((getRequestTTLSeconds() == null) ? 0 : getRequestTTLSeconds().hashCode());
+        hashCode = prime * hashCode + ((getInvocationTimeoutSeconds() == null) ? 0 : getInvocationTimeoutSeconds().hashCode());
         return hashCode;
     }
 

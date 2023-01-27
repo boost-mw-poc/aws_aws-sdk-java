@@ -104,6 +104,12 @@ public class Order implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private java.util.Date orderFulfilledDate;
+    /**
+     * <p>
+     * The payment term.
+     * </p>
+     */
+    private String paymentTerm;
 
     /**
      * <p>
@@ -721,6 +727,65 @@ public class Order implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The payment term.
+     * </p>
+     * 
+     * @param paymentTerm
+     *        The payment term.
+     * @see PaymentTerm
+     */
+
+    public void setPaymentTerm(String paymentTerm) {
+        this.paymentTerm = paymentTerm;
+    }
+
+    /**
+     * <p>
+     * The payment term.
+     * </p>
+     * 
+     * @return The payment term.
+     * @see PaymentTerm
+     */
+
+    public String getPaymentTerm() {
+        return this.paymentTerm;
+    }
+
+    /**
+     * <p>
+     * The payment term.
+     * </p>
+     * 
+     * @param paymentTerm
+     *        The payment term.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see PaymentTerm
+     */
+
+    public Order withPaymentTerm(String paymentTerm) {
+        setPaymentTerm(paymentTerm);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The payment term.
+     * </p>
+     * 
+     * @param paymentTerm
+     *        The payment term.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see PaymentTerm
+     */
+
+    public Order withPaymentTerm(PaymentTerm paymentTerm) {
+        this.paymentTerm = paymentTerm.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -745,7 +810,9 @@ public class Order implements Serializable, Cloneable, StructuredPojo {
         if (getOrderSubmissionDate() != null)
             sb.append("OrderSubmissionDate: ").append(getOrderSubmissionDate()).append(",");
         if (getOrderFulfilledDate() != null)
-            sb.append("OrderFulfilledDate: ").append(getOrderFulfilledDate());
+            sb.append("OrderFulfilledDate: ").append(getOrderFulfilledDate()).append(",");
+        if (getPaymentTerm() != null)
+            sb.append("PaymentTerm: ").append(getPaymentTerm());
         sb.append("}");
         return sb.toString();
     }
@@ -788,6 +855,10 @@ public class Order implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getOrderFulfilledDate() != null && other.getOrderFulfilledDate().equals(this.getOrderFulfilledDate()) == false)
             return false;
+        if (other.getPaymentTerm() == null ^ this.getPaymentTerm() == null)
+            return false;
+        if (other.getPaymentTerm() != null && other.getPaymentTerm().equals(this.getPaymentTerm()) == false)
+            return false;
         return true;
     }
 
@@ -803,6 +874,7 @@ public class Order implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getPaymentOption() == null) ? 0 : getPaymentOption().hashCode());
         hashCode = prime * hashCode + ((getOrderSubmissionDate() == null) ? 0 : getOrderSubmissionDate().hashCode());
         hashCode = prime * hashCode + ((getOrderFulfilledDate() == null) ? 0 : getOrderFulfilledDate().hashCode());
+        hashCode = prime * hashCode + ((getPaymentTerm() == null) ? 0 : getPaymentTerm().hashCode());
         return hashCode;
     }
 

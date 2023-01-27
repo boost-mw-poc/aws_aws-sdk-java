@@ -147,6 +147,12 @@ public class AlgorithmSpecification implements Serializable, Cloneable, Structur
      * </p>
      */
     private java.util.List<String> containerArguments;
+    /**
+     * <p>
+     * The configuration to use an image from a private Docker registry for a training job.
+     * </p>
+     */
+    private TrainingImageConfig trainingImageConfig;
 
     /**
      * <p>
@@ -1055,6 +1061,46 @@ public class AlgorithmSpecification implements Serializable, Cloneable, Structur
     }
 
     /**
+     * <p>
+     * The configuration to use an image from a private Docker registry for a training job.
+     * </p>
+     * 
+     * @param trainingImageConfig
+     *        The configuration to use an image from a private Docker registry for a training job.
+     */
+
+    public void setTrainingImageConfig(TrainingImageConfig trainingImageConfig) {
+        this.trainingImageConfig = trainingImageConfig;
+    }
+
+    /**
+     * <p>
+     * The configuration to use an image from a private Docker registry for a training job.
+     * </p>
+     * 
+     * @return The configuration to use an image from a private Docker registry for a training job.
+     */
+
+    public TrainingImageConfig getTrainingImageConfig() {
+        return this.trainingImageConfig;
+    }
+
+    /**
+     * <p>
+     * The configuration to use an image from a private Docker registry for a training job.
+     * </p>
+     * 
+     * @param trainingImageConfig
+     *        The configuration to use an image from a private Docker registry for a training job.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AlgorithmSpecification withTrainingImageConfig(TrainingImageConfig trainingImageConfig) {
+        setTrainingImageConfig(trainingImageConfig);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1079,7 +1125,9 @@ public class AlgorithmSpecification implements Serializable, Cloneable, Structur
         if (getContainerEntrypoint() != null)
             sb.append("ContainerEntrypoint: ").append(getContainerEntrypoint()).append(",");
         if (getContainerArguments() != null)
-            sb.append("ContainerArguments: ").append(getContainerArguments());
+            sb.append("ContainerArguments: ").append(getContainerArguments()).append(",");
+        if (getTrainingImageConfig() != null)
+            sb.append("TrainingImageConfig: ").append(getTrainingImageConfig());
         sb.append("}");
         return sb.toString();
     }
@@ -1123,6 +1171,10 @@ public class AlgorithmSpecification implements Serializable, Cloneable, Structur
             return false;
         if (other.getContainerArguments() != null && other.getContainerArguments().equals(this.getContainerArguments()) == false)
             return false;
+        if (other.getTrainingImageConfig() == null ^ this.getTrainingImageConfig() == null)
+            return false;
+        if (other.getTrainingImageConfig() != null && other.getTrainingImageConfig().equals(this.getTrainingImageConfig()) == false)
+            return false;
         return true;
     }
 
@@ -1138,6 +1190,7 @@ public class AlgorithmSpecification implements Serializable, Cloneable, Structur
         hashCode = prime * hashCode + ((getEnableSageMakerMetricsTimeSeries() == null) ? 0 : getEnableSageMakerMetricsTimeSeries().hashCode());
         hashCode = prime * hashCode + ((getContainerEntrypoint() == null) ? 0 : getContainerEntrypoint().hashCode());
         hashCode = prime * hashCode + ((getContainerArguments() == null) ? 0 : getContainerArguments().hashCode());
+        hashCode = prime * hashCode + ((getTrainingImageConfig() == null) ? 0 : getTrainingImageConfig().hashCode());
         return hashCode;
     }
 

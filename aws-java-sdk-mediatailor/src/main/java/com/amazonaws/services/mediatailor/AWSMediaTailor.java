@@ -52,6 +52,19 @@ public interface AWSMediaTailor {
 
     /**
      * <p>
+     * Configures Amazon CloudWatch log settings for a channel.
+     * </p>
+     * 
+     * @param configureLogsForChannelRequest
+     * @return Result of the ConfigureLogsForChannel operation returned by the service.
+     * @sample AWSMediaTailor.ConfigureLogsForChannel
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mediatailor-2018-04-23/ConfigureLogsForChannel"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ConfigureLogsForChannelResult configureLogsForChannel(ConfigureLogsForChannelRequest configureLogsForChannelRequest);
+
+    /**
+     * <p>
      * Amazon CloudWatch log settings for a playback configuration.
      * </p>
      * 

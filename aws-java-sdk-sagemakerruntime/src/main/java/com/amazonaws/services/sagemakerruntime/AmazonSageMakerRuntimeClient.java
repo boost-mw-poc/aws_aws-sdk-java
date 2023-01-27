@@ -244,8 +244,8 @@ public class AmazonSageMakerRuntimeClient extends AmazonWebServiceClient impleme
      * </p>
      * <p>
      * Inference requests sent to this API are enqueued for asynchronous processing. The processing of the inference
-     * request may or may not complete before the you receive a response from this API. The response from this API will
-     * not contain the result of the inference request but contain information about where you can locate it.
+     * request may or may not complete before you receive a response from this API. The response from this API will not
+     * contain the result of the inference request but contain information about where you can locate it.
      * </p>
      * <p>
      * Amazon SageMaker strips all <code>POST</code> headers except those supported by the API. Amazon SageMaker might
@@ -254,9 +254,9 @@ public class AmazonSageMakerRuntimeClient extends AmazonWebServiceClient impleme
      * </p>
      * <p>
      * Calls to <code>InvokeEndpointAsync</code> are authenticated by using Amazon Web Services Signature Version 4. For
-     * information, see <a href=
-     * "https://docs.aws.amazon.com/https:/docs.aws.amazon.com/AmazonS3/latest/API/sig-v4-authenticating-requests.html"
-     * >Authenticating Requests (Amazon Web Services Signature Version 4)</a> in the <i>Amazon S3 API Reference</i>.
+     * information, see <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/API/sig-v4-authenticating-requests.html">Authenticating
+     * Requests (Amazon Web Services Signature Version 4)</a> in the <i>Amazon S3 API Reference</i>.
      * </p>
      * 
      * @param invokeEndpointAsyncRequest

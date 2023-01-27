@@ -28,6 +28,11 @@ public class AbstractAWSMediaTailor implements AWSMediaTailor {
     }
 
     @Override
+    public ConfigureLogsForChannelResult configureLogsForChannel(ConfigureLogsForChannelRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ConfigureLogsForPlaybackConfigurationResult configureLogsForPlaybackConfiguration(ConfigureLogsForPlaybackConfigurationRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

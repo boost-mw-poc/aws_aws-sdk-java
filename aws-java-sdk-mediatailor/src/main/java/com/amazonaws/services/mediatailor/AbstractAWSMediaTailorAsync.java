@@ -28,6 +28,19 @@ public class AbstractAWSMediaTailorAsync extends AbstractAWSMediaTailor implemen
     }
 
     @Override
+    public java.util.concurrent.Future<ConfigureLogsForChannelResult> configureLogsForChannelAsync(ConfigureLogsForChannelRequest request) {
+
+        return configureLogsForChannelAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ConfigureLogsForChannelResult> configureLogsForChannelAsync(ConfigureLogsForChannelRequest request,
+            com.amazonaws.handlers.AsyncHandler<ConfigureLogsForChannelRequest, ConfigureLogsForChannelResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ConfigureLogsForPlaybackConfigurationResult> configureLogsForPlaybackConfigurationAsync(
             ConfigureLogsForPlaybackConfigurationRequest request) {
 

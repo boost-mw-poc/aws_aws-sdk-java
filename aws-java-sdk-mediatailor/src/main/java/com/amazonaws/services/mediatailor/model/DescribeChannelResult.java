@@ -61,6 +61,12 @@ public class DescribeChannelResult extends com.amazonaws.AmazonWebServiceResult<
     private java.util.Date lastModifiedTime;
     /**
      * <p>
+     * The log configuration for the channel.
+     * </p>
+     */
+    private LogConfigurationForChannel logConfiguration;
+    /**
+     * <p>
      * The channel's output properties.
      * </p>
      */
@@ -348,6 +354,46 @@ public class DescribeChannelResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
+     * The log configuration for the channel.
+     * </p>
+     * 
+     * @param logConfiguration
+     *        The log configuration for the channel.
+     */
+
+    public void setLogConfiguration(LogConfigurationForChannel logConfiguration) {
+        this.logConfiguration = logConfiguration;
+    }
+
+    /**
+     * <p>
+     * The log configuration for the channel.
+     * </p>
+     * 
+     * @return The log configuration for the channel.
+     */
+
+    public LogConfigurationForChannel getLogConfiguration() {
+        return this.logConfiguration;
+    }
+
+    /**
+     * <p>
+     * The log configuration for the channel.
+     * </p>
+     * 
+     * @param logConfiguration
+     *        The log configuration for the channel.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeChannelResult withLogConfiguration(LogConfigurationForChannel logConfiguration) {
+        setLogConfiguration(logConfiguration);
+        return this;
+    }
+
+    /**
+     * <p>
      * The channel's output properties.
      * </p>
      * 
@@ -606,6 +652,8 @@ public class DescribeChannelResult extends com.amazonaws.AmazonWebServiceResult<
             sb.append("FillerSlate: ").append(getFillerSlate()).append(",");
         if (getLastModifiedTime() != null)
             sb.append("LastModifiedTime: ").append(getLastModifiedTime()).append(",");
+        if (getLogConfiguration() != null)
+            sb.append("LogConfiguration: ").append(getLogConfiguration()).append(",");
         if (getOutputs() != null)
             sb.append("Outputs: ").append(getOutputs()).append(",");
         if (getPlaybackMode() != null)
@@ -652,6 +700,10 @@ public class DescribeChannelResult extends com.amazonaws.AmazonWebServiceResult<
             return false;
         if (other.getLastModifiedTime() != null && other.getLastModifiedTime().equals(this.getLastModifiedTime()) == false)
             return false;
+        if (other.getLogConfiguration() == null ^ this.getLogConfiguration() == null)
+            return false;
+        if (other.getLogConfiguration() != null && other.getLogConfiguration().equals(this.getLogConfiguration()) == false)
+            return false;
         if (other.getOutputs() == null ^ this.getOutputs() == null)
             return false;
         if (other.getOutputs() != null && other.getOutputs().equals(this.getOutputs()) == false)
@@ -682,6 +734,7 @@ public class DescribeChannelResult extends com.amazonaws.AmazonWebServiceResult<
         hashCode = prime * hashCode + ((getCreationTime() == null) ? 0 : getCreationTime().hashCode());
         hashCode = prime * hashCode + ((getFillerSlate() == null) ? 0 : getFillerSlate().hashCode());
         hashCode = prime * hashCode + ((getLastModifiedTime() == null) ? 0 : getLastModifiedTime().hashCode());
+        hashCode = prime * hashCode + ((getLogConfiguration() == null) ? 0 : getLogConfiguration().hashCode());
         hashCode = prime * hashCode + ((getOutputs() == null) ? 0 : getOutputs().hashCode());
         hashCode = prime * hashCode + ((getPlaybackMode() == null) ? 0 : getPlaybackMode().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());

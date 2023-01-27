@@ -139,6 +139,63 @@ public class AWSMediaTailorClient extends AmazonWebServiceClient implements AWSM
 
     /**
      * <p>
+     * Configures Amazon CloudWatch log settings for a channel.
+     * </p>
+     * 
+     * @param configureLogsForChannelRequest
+     * @return Result of the ConfigureLogsForChannel operation returned by the service.
+     * @sample AWSMediaTailor.ConfigureLogsForChannel
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mediatailor-2018-04-23/ConfigureLogsForChannel"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ConfigureLogsForChannelResult configureLogsForChannel(ConfigureLogsForChannelRequest request) {
+        request = beforeClientExecution(request);
+        return executeConfigureLogsForChannel(request);
+    }
+
+    @SdkInternalApi
+    final ConfigureLogsForChannelResult executeConfigureLogsForChannel(ConfigureLogsForChannelRequest configureLogsForChannelRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(configureLogsForChannelRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ConfigureLogsForChannelRequest> request = null;
+        Response<ConfigureLogsForChannelResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ConfigureLogsForChannelRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(configureLogsForChannelRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "MediaTailor");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ConfigureLogsForChannel");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ConfigureLogsForChannelResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new ConfigureLogsForChannelResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Amazon CloudWatch log settings for a playback configuration.
      * </p>
      * 

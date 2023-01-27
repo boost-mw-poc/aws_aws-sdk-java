@@ -41,6 +41,8 @@ public class ChannelMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("FillerSlate").build();
     private static final MarshallingInfo<java.util.Date> LASTMODIFIEDTIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LastModifiedTime").timestampFormat("unixTimestamp").build();
+    private static final MarshallingInfo<StructuredPojo> LOGCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LogConfiguration").build();
     private static final MarshallingInfo<List> OUTPUTS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Outputs").build();
     private static final MarshallingInfo<String> PLAYBACKMODE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
@@ -72,6 +74,7 @@ public class ChannelMarshaller {
             protocolMarshaller.marshall(channel.getCreationTime(), CREATIONTIME_BINDING);
             protocolMarshaller.marshall(channel.getFillerSlate(), FILLERSLATE_BINDING);
             protocolMarshaller.marshall(channel.getLastModifiedTime(), LASTMODIFIEDTIME_BINDING);
+            protocolMarshaller.marshall(channel.getLogConfiguration(), LOGCONFIGURATION_BINDING);
             protocolMarshaller.marshall(channel.getOutputs(), OUTPUTS_BINDING);
             protocolMarshaller.marshall(channel.getPlaybackMode(), PLAYBACKMODE_BINDING);
             protocolMarshaller.marshall(channel.getTags(), TAGS_BINDING);
