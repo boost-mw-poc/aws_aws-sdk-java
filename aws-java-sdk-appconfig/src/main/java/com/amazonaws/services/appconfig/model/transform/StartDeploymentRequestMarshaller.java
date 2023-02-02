@@ -43,6 +43,8 @@ public class StartDeploymentRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Description").build();
     private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Tags").build();
+    private static final MarshallingInfo<String> KMSKEYIDENTIFIER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("KmsKeyIdentifier").build();
 
     private static final StartDeploymentRequestMarshaller instance = new StartDeploymentRequestMarshaller();
 
@@ -67,6 +69,7 @@ public class StartDeploymentRequestMarshaller {
             protocolMarshaller.marshall(startDeploymentRequest.getConfigurationVersion(), CONFIGURATIONVERSION_BINDING);
             protocolMarshaller.marshall(startDeploymentRequest.getDescription(), DESCRIPTION_BINDING);
             protocolMarshaller.marshall(startDeploymentRequest.getTags(), TAGS_BINDING);
+            protocolMarshaller.marshall(startDeploymentRequest.getKmsKeyIdentifier(), KMSKEYIDENTIFIER_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

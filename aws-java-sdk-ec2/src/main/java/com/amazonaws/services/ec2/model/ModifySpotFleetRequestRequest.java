@@ -30,8 +30,11 @@ public class ModifySpotFleetRequestRequest extends AmazonWebServiceRequest imple
 
     /**
      * <p>
-     * Indicates whether running Spot Instances should be terminated if the target capacity of the Spot Fleet request is
+     * Indicates whether running instances should be terminated if the target capacity of the Spot Fleet request is
      * decreased below the current size of the Spot Fleet.
+     * </p>
+     * <p>
+     * Supported only for fleets of type <code>maintain</code>.
      * </p>
      */
     private String excessCapacityTerminationPolicy;
@@ -70,13 +73,18 @@ public class ModifySpotFleetRequestRequest extends AmazonWebServiceRequest imple
 
     /**
      * <p>
-     * Indicates whether running Spot Instances should be terminated if the target capacity of the Spot Fleet request is
+     * Indicates whether running instances should be terminated if the target capacity of the Spot Fleet request is
      * decreased below the current size of the Spot Fleet.
+     * </p>
+     * <p>
+     * Supported only for fleets of type <code>maintain</code>.
      * </p>
      * 
      * @param excessCapacityTerminationPolicy
-     *        Indicates whether running Spot Instances should be terminated if the target capacity of the Spot Fleet
-     *        request is decreased below the current size of the Spot Fleet.
+     *        Indicates whether running instances should be terminated if the target capacity of the Spot Fleet request
+     *        is decreased below the current size of the Spot Fleet.</p>
+     *        <p>
+     *        Supported only for fleets of type <code>maintain</code>.
      * @see ExcessCapacityTerminationPolicy
      */
 
@@ -86,12 +94,17 @@ public class ModifySpotFleetRequestRequest extends AmazonWebServiceRequest imple
 
     /**
      * <p>
-     * Indicates whether running Spot Instances should be terminated if the target capacity of the Spot Fleet request is
+     * Indicates whether running instances should be terminated if the target capacity of the Spot Fleet request is
      * decreased below the current size of the Spot Fleet.
      * </p>
+     * <p>
+     * Supported only for fleets of type <code>maintain</code>.
+     * </p>
      * 
-     * @return Indicates whether running Spot Instances should be terminated if the target capacity of the Spot Fleet
-     *         request is decreased below the current size of the Spot Fleet.
+     * @return Indicates whether running instances should be terminated if the target capacity of the Spot Fleet request
+     *         is decreased below the current size of the Spot Fleet.</p>
+     *         <p>
+     *         Supported only for fleets of type <code>maintain</code>.
      * @see ExcessCapacityTerminationPolicy
      */
 
@@ -101,13 +114,18 @@ public class ModifySpotFleetRequestRequest extends AmazonWebServiceRequest imple
 
     /**
      * <p>
-     * Indicates whether running Spot Instances should be terminated if the target capacity of the Spot Fleet request is
+     * Indicates whether running instances should be terminated if the target capacity of the Spot Fleet request is
      * decreased below the current size of the Spot Fleet.
+     * </p>
+     * <p>
+     * Supported only for fleets of type <code>maintain</code>.
      * </p>
      * 
      * @param excessCapacityTerminationPolicy
-     *        Indicates whether running Spot Instances should be terminated if the target capacity of the Spot Fleet
-     *        request is decreased below the current size of the Spot Fleet.
+     *        Indicates whether running instances should be terminated if the target capacity of the Spot Fleet request
+     *        is decreased below the current size of the Spot Fleet.</p>
+     *        <p>
+     *        Supported only for fleets of type <code>maintain</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ExcessCapacityTerminationPolicy
      */
@@ -119,13 +137,18 @@ public class ModifySpotFleetRequestRequest extends AmazonWebServiceRequest imple
 
     /**
      * <p>
-     * Indicates whether running Spot Instances should be terminated if the target capacity of the Spot Fleet request is
+     * Indicates whether running instances should be terminated if the target capacity of the Spot Fleet request is
      * decreased below the current size of the Spot Fleet.
+     * </p>
+     * <p>
+     * Supported only for fleets of type <code>maintain</code>.
      * </p>
      * 
      * @param excessCapacityTerminationPolicy
-     *        Indicates whether running Spot Instances should be terminated if the target capacity of the Spot Fleet
-     *        request is decreased below the current size of the Spot Fleet.
+     *        Indicates whether running instances should be terminated if the target capacity of the Spot Fleet request
+     *        is decreased below the current size of the Spot Fleet.</p>
+     *        <p>
+     *        Supported only for fleets of type <code>maintain</code>.
      * @see ExcessCapacityTerminationPolicy
      */
 
@@ -135,13 +158,18 @@ public class ModifySpotFleetRequestRequest extends AmazonWebServiceRequest imple
 
     /**
      * <p>
-     * Indicates whether running Spot Instances should be terminated if the target capacity of the Spot Fleet request is
+     * Indicates whether running instances should be terminated if the target capacity of the Spot Fleet request is
      * decreased below the current size of the Spot Fleet.
+     * </p>
+     * <p>
+     * Supported only for fleets of type <code>maintain</code>.
      * </p>
      * 
      * @param excessCapacityTerminationPolicy
-     *        Indicates whether running Spot Instances should be terminated if the target capacity of the Spot Fleet
-     *        request is decreased below the current size of the Spot Fleet.
+     *        Indicates whether running instances should be terminated if the target capacity of the Spot Fleet request
+     *        is decreased below the current size of the Spot Fleet.</p>
+     *        <p>
+     *        Supported only for fleets of type <code>maintain</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ExcessCapacityTerminationPolicy
      */

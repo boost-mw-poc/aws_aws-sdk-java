@@ -180,6 +180,12 @@ public class EbsBlockDevice implements Serializable, Cloneable {
      * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeImageAttribute.html"
      * >DescribeImageAttribute</a>.
      * </p>
+     * <p>
+     * For <a>CreateImage</a> and <a>RegisterImage</a>, you can specify this parameter only for block device mappings
+     * that result in new, empty volumes when instances are launched from the image. Omit this parameter on block device
+     * mappings that include an existing volume or snapshot. If you include this parameter, and specify an encryption
+     * setting that is different from the existing volume or snapshot, the request will fail.
+     * </p>
      */
     private Boolean encrypted;
 
@@ -1074,6 +1080,12 @@ public class EbsBlockDevice implements Serializable, Cloneable {
      * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeImageAttribute.html"
      * >DescribeImageAttribute</a>.
      * </p>
+     * <p>
+     * For <a>CreateImage</a> and <a>RegisterImage</a>, you can specify this parameter only for block device mappings
+     * that result in new, empty volumes when instances are launched from the image. Omit this parameter on block device
+     * mappings that include an existing volume or snapshot. If you include this parameter, and specify an encryption
+     * setting that is different from the existing volume or snapshot, the request will fail.
+     * </p>
      * 
      * @param encrypted
      *        Indicates whether the encryption state of an EBS volume is changed while being restored from a backing
@@ -1095,6 +1107,13 @@ public class EbsBlockDevice implements Serializable, Cloneable {
      *        This parameter is not returned by <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeImageAttribute.html"
      *        >DescribeImageAttribute</a>.
+     *        </p>
+     *        <p>
+     *        For <a>CreateImage</a> and <a>RegisterImage</a>, you can specify this parameter only for block device
+     *        mappings that result in new, empty volumes when instances are launched from the image. Omit this parameter
+     *        on block device mappings that include an existing volume or snapshot. If you include this parameter, and
+     *        specify an encryption setting that is different from the existing volume or snapshot, the request will
+     *        fail.
      */
 
     public void setEncrypted(Boolean encrypted) {
@@ -1124,6 +1143,12 @@ public class EbsBlockDevice implements Serializable, Cloneable {
      * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeImageAttribute.html"
      * >DescribeImageAttribute</a>.
      * </p>
+     * <p>
+     * For <a>CreateImage</a> and <a>RegisterImage</a>, you can specify this parameter only for block device mappings
+     * that result in new, empty volumes when instances are launched from the image. Omit this parameter on block device
+     * mappings that include an existing volume or snapshot. If you include this parameter, and specify an encryption
+     * setting that is different from the existing volume or snapshot, the request will fail.
+     * </p>
      * 
      * @return Indicates whether the encryption state of an EBS volume is changed while being restored from a backing
      *         snapshot. The effect of setting the encryption state to <code>true</code> depends on the volume origin
@@ -1144,6 +1169,13 @@ public class EbsBlockDevice implements Serializable, Cloneable {
      *         This parameter is not returned by <a
      *         href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeImageAttribute.html"
      *         >DescribeImageAttribute</a>.
+     *         </p>
+     *         <p>
+     *         For <a>CreateImage</a> and <a>RegisterImage</a>, you can specify this parameter only for block device
+     *         mappings that result in new, empty volumes when instances are launched from the image. Omit this
+     *         parameter on block device mappings that include an existing volume or snapshot. If you include this
+     *         parameter, and specify an encryption setting that is different from the existing volume or snapshot, the
+     *         request will fail.
      */
 
     public Boolean getEncrypted() {
@@ -1173,6 +1205,12 @@ public class EbsBlockDevice implements Serializable, Cloneable {
      * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeImageAttribute.html"
      * >DescribeImageAttribute</a>.
      * </p>
+     * <p>
+     * For <a>CreateImage</a> and <a>RegisterImage</a>, you can specify this parameter only for block device mappings
+     * that result in new, empty volumes when instances are launched from the image. Omit this parameter on block device
+     * mappings that include an existing volume or snapshot. If you include this parameter, and specify an encryption
+     * setting that is different from the existing volume or snapshot, the request will fail.
+     * </p>
      * 
      * @param encrypted
      *        Indicates whether the encryption state of an EBS volume is changed while being restored from a backing
@@ -1194,6 +1232,13 @@ public class EbsBlockDevice implements Serializable, Cloneable {
      *        This parameter is not returned by <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeImageAttribute.html"
      *        >DescribeImageAttribute</a>.
+     *        </p>
+     *        <p>
+     *        For <a>CreateImage</a> and <a>RegisterImage</a>, you can specify this parameter only for block device
+     *        mappings that result in new, empty volumes when instances are launched from the image. Omit this parameter
+     *        on block device mappings that include an existing volume or snapshot. If you include this parameter, and
+     *        specify an encryption setting that is different from the existing volume or snapshot, the request will
+     *        fail.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1225,6 +1270,12 @@ public class EbsBlockDevice implements Serializable, Cloneable {
      * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeImageAttribute.html"
      * >DescribeImageAttribute</a>.
      * </p>
+     * <p>
+     * For <a>CreateImage</a> and <a>RegisterImage</a>, you can specify this parameter only for block device mappings
+     * that result in new, empty volumes when instances are launched from the image. Omit this parameter on block device
+     * mappings that include an existing volume or snapshot. If you include this parameter, and specify an encryption
+     * setting that is different from the existing volume or snapshot, the request will fail.
+     * </p>
      * 
      * @return Indicates whether the encryption state of an EBS volume is changed while being restored from a backing
      *         snapshot. The effect of setting the encryption state to <code>true</code> depends on the volume origin
@@ -1245,6 +1296,13 @@ public class EbsBlockDevice implements Serializable, Cloneable {
      *         This parameter is not returned by <a
      *         href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeImageAttribute.html"
      *         >DescribeImageAttribute</a>.
+     *         </p>
+     *         <p>
+     *         For <a>CreateImage</a> and <a>RegisterImage</a>, you can specify this parameter only for block device
+     *         mappings that result in new, empty volumes when instances are launched from the image. Omit this
+     *         parameter on block device mappings that include an existing volume or snapshot. If you include this
+     *         parameter, and specify an encryption setting that is different from the existing volume or snapshot, the
+     *         request will fail.
      */
 
     public Boolean isEncrypted() {

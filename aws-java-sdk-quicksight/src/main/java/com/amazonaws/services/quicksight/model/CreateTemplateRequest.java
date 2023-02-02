@@ -65,6 +65,10 @@ public class CreateTemplateRequest extends com.amazonaws.AmazonWebServiceRequest
      * to list the replacement datasets for the placeholders listed in the original. The schema in each dataset must
      * match its placeholder.
      * </p>
+     * <p>
+     * Either a <code>SourceEntity</code> or a <code>Definition</code> must be provided in order for the request to be
+     * valid.
+     * </p>
      */
     private TemplateSourceEntity sourceEntity;
     /**
@@ -87,6 +91,10 @@ public class CreateTemplateRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      * <p>
      * A definition is the data model of all features in a Dashboard, Template, or Analysis.
+     * </p>
+     * <p>
+     * Either a <code>SourceEntity</code> or a <code>Definition</code> must be provided in order for the request to be
+     * valid.
      * </p>
      */
     private TemplateVersionDefinition definition;
@@ -307,6 +315,10 @@ public class CreateTemplateRequest extends com.amazonaws.AmazonWebServiceRequest
      * to list the replacement datasets for the placeholders listed in the original. The schema in each dataset must
      * match its placeholder.
      * </p>
+     * <p>
+     * Either a <code>SourceEntity</code> or a <code>Definition</code> must be provided in order for the request to be
+     * valid.
+     * </p>
      * 
      * @param sourceEntity
      *        The entity that you are using as a source when you create the template. In <code>SourceEntity</code>, you
@@ -319,6 +331,10 @@ public class CreateTemplateRequest extends com.amazonaws.AmazonWebServiceRequest
      *        Use the <code>DataSetReferences</code> entity within <code>SourceTemplate</code> or
      *        <code>SourceAnalysis</code> to list the replacement datasets for the placeholders listed in the original.
      *        The schema in each dataset must match its placeholder.
+     *        </p>
+     *        <p>
+     *        Either a <code>SourceEntity</code> or a <code>Definition</code> must be provided in order for the request
+     *        to be valid.
      */
 
     public void setSourceEntity(TemplateSourceEntity sourceEntity) {
@@ -339,6 +355,10 @@ public class CreateTemplateRequest extends com.amazonaws.AmazonWebServiceRequest
      * to list the replacement datasets for the placeholders listed in the original. The schema in each dataset must
      * match its placeholder.
      * </p>
+     * <p>
+     * Either a <code>SourceEntity</code> or a <code>Definition</code> must be provided in order for the request to be
+     * valid.
+     * </p>
      * 
      * @return The entity that you are using as a source when you create the template. In <code>SourceEntity</code>, you
      *         specify the type of object you're using as source: <code>SourceTemplate</code> for a template or
@@ -350,6 +370,10 @@ public class CreateTemplateRequest extends com.amazonaws.AmazonWebServiceRequest
      *         Use the <code>DataSetReferences</code> entity within <code>SourceTemplate</code> or
      *         <code>SourceAnalysis</code> to list the replacement datasets for the placeholders listed in the original.
      *         The schema in each dataset must match its placeholder.
+     *         </p>
+     *         <p>
+     *         Either a <code>SourceEntity</code> or a <code>Definition</code> must be provided in order for the request
+     *         to be valid.
      */
 
     public TemplateSourceEntity getSourceEntity() {
@@ -370,6 +394,10 @@ public class CreateTemplateRequest extends com.amazonaws.AmazonWebServiceRequest
      * to list the replacement datasets for the placeholders listed in the original. The schema in each dataset must
      * match its placeholder.
      * </p>
+     * <p>
+     * Either a <code>SourceEntity</code> or a <code>Definition</code> must be provided in order for the request to be
+     * valid.
+     * </p>
      * 
      * @param sourceEntity
      *        The entity that you are using as a source when you create the template. In <code>SourceEntity</code>, you
@@ -382,6 +410,10 @@ public class CreateTemplateRequest extends com.amazonaws.AmazonWebServiceRequest
      *        Use the <code>DataSetReferences</code> entity within <code>SourceTemplate</code> or
      *        <code>SourceAnalysis</code> to list the replacement datasets for the placeholders listed in the original.
      *        The schema in each dataset must match its placeholder.
+     *        </p>
+     *        <p>
+     *        Either a <code>SourceEntity</code> or a <code>Definition</code> must be provided in order for the request
+     *        to be valid.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -519,11 +551,19 @@ public class CreateTemplateRequest extends com.amazonaws.AmazonWebServiceRequest
      * <p>
      * A definition is the data model of all features in a Dashboard, Template, or Analysis.
      * </p>
+     * <p>
+     * Either a <code>SourceEntity</code> or a <code>Definition</code> must be provided in order for the request to be
+     * valid.
+     * </p>
      * 
      * @param definition
      *        The definition of a template.</p>
      *        <p>
      *        A definition is the data model of all features in a Dashboard, Template, or Analysis.
+     *        </p>
+     *        <p>
+     *        Either a <code>SourceEntity</code> or a <code>Definition</code> must be provided in order for the request
+     *        to be valid.
      */
 
     public void setDefinition(TemplateVersionDefinition definition) {
@@ -537,10 +577,18 @@ public class CreateTemplateRequest extends com.amazonaws.AmazonWebServiceRequest
      * <p>
      * A definition is the data model of all features in a Dashboard, Template, or Analysis.
      * </p>
+     * <p>
+     * Either a <code>SourceEntity</code> or a <code>Definition</code> must be provided in order for the request to be
+     * valid.
+     * </p>
      * 
      * @return The definition of a template.</p>
      *         <p>
      *         A definition is the data model of all features in a Dashboard, Template, or Analysis.
+     *         </p>
+     *         <p>
+     *         Either a <code>SourceEntity</code> or a <code>Definition</code> must be provided in order for the request
+     *         to be valid.
      */
 
     public TemplateVersionDefinition getDefinition() {
@@ -554,11 +602,19 @@ public class CreateTemplateRequest extends com.amazonaws.AmazonWebServiceRequest
      * <p>
      * A definition is the data model of all features in a Dashboard, Template, or Analysis.
      * </p>
+     * <p>
+     * Either a <code>SourceEntity</code> or a <code>Definition</code> must be provided in order for the request to be
+     * valid.
+     * </p>
      * 
      * @param definition
      *        The definition of a template.</p>
      *        <p>
      *        A definition is the data model of all features in a Dashboard, Template, or Analysis.
+     *        </p>
+     *        <p>
+     *        Either a <code>SourceEntity</code> or a <code>Definition</code> must be provided in order for the request
+     *        to be valid.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

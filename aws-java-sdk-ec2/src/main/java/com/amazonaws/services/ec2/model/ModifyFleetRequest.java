@@ -30,6 +30,9 @@ public class ModifyFleetRequest extends AmazonWebServiceRequest implements Seria
      * Indicates whether running instances should be terminated if the total target capacity of the EC2 Fleet is
      * decreased below the current size of the EC2 Fleet.
      * </p>
+     * <p>
+     * Supported only for fleets of type <code>maintain</code>.
+     * </p>
      */
     private String excessCapacityTerminationPolicy;
     /**
@@ -62,10 +65,15 @@ public class ModifyFleetRequest extends AmazonWebServiceRequest implements Seria
      * Indicates whether running instances should be terminated if the total target capacity of the EC2 Fleet is
      * decreased below the current size of the EC2 Fleet.
      * </p>
+     * <p>
+     * Supported only for fleets of type <code>maintain</code>.
+     * </p>
      * 
      * @param excessCapacityTerminationPolicy
      *        Indicates whether running instances should be terminated if the total target capacity of the EC2 Fleet is
-     *        decreased below the current size of the EC2 Fleet.
+     *        decreased below the current size of the EC2 Fleet.</p>
+     *        <p>
+     *        Supported only for fleets of type <code>maintain</code>.
      * @see FleetExcessCapacityTerminationPolicy
      */
 
@@ -78,9 +86,14 @@ public class ModifyFleetRequest extends AmazonWebServiceRequest implements Seria
      * Indicates whether running instances should be terminated if the total target capacity of the EC2 Fleet is
      * decreased below the current size of the EC2 Fleet.
      * </p>
+     * <p>
+     * Supported only for fleets of type <code>maintain</code>.
+     * </p>
      * 
      * @return Indicates whether running instances should be terminated if the total target capacity of the EC2 Fleet is
-     *         decreased below the current size of the EC2 Fleet.
+     *         decreased below the current size of the EC2 Fleet.</p>
+     *         <p>
+     *         Supported only for fleets of type <code>maintain</code>.
      * @see FleetExcessCapacityTerminationPolicy
      */
 
@@ -93,10 +106,15 @@ public class ModifyFleetRequest extends AmazonWebServiceRequest implements Seria
      * Indicates whether running instances should be terminated if the total target capacity of the EC2 Fleet is
      * decreased below the current size of the EC2 Fleet.
      * </p>
+     * <p>
+     * Supported only for fleets of type <code>maintain</code>.
+     * </p>
      * 
      * @param excessCapacityTerminationPolicy
      *        Indicates whether running instances should be terminated if the total target capacity of the EC2 Fleet is
-     *        decreased below the current size of the EC2 Fleet.
+     *        decreased below the current size of the EC2 Fleet.</p>
+     *        <p>
+     *        Supported only for fleets of type <code>maintain</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see FleetExcessCapacityTerminationPolicy
      */
@@ -111,10 +129,15 @@ public class ModifyFleetRequest extends AmazonWebServiceRequest implements Seria
      * Indicates whether running instances should be terminated if the total target capacity of the EC2 Fleet is
      * decreased below the current size of the EC2 Fleet.
      * </p>
+     * <p>
+     * Supported only for fleets of type <code>maintain</code>.
+     * </p>
      * 
      * @param excessCapacityTerminationPolicy
      *        Indicates whether running instances should be terminated if the total target capacity of the EC2 Fleet is
-     *        decreased below the current size of the EC2 Fleet.
+     *        decreased below the current size of the EC2 Fleet.</p>
+     *        <p>
+     *        Supported only for fleets of type <code>maintain</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see FleetExcessCapacityTerminationPolicy
      */

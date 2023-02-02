@@ -67,6 +67,10 @@ public class CreateAnalysisRequest extends com.amazonaws.AmazonWebServiceRequest
      * A source entity to use for the analysis that you're creating. This metadata structure contains details that
      * describe a source template and one or more datasets.
      * </p>
+     * <p>
+     * Either a <code>SourceEntity</code> or a <code>Definition</code> must be provided in order for the request to be
+     * valid.
+     * </p>
      */
     private AnalysisSourceEntity sourceEntity;
     /**
@@ -88,6 +92,10 @@ public class CreateAnalysisRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      * <p>
      * A definition is the data model of all features in a Dashboard, Template, or Analysis.
+     * </p>
+     * <p>
+     * Either a <code>SourceEntity</code> or a <code>Definition</code> must be provided in order for the request to be
+     * valid.
      * </p>
      */
     private AnalysisDefinition definition;
@@ -375,10 +383,17 @@ public class CreateAnalysisRequest extends com.amazonaws.AmazonWebServiceRequest
      * A source entity to use for the analysis that you're creating. This metadata structure contains details that
      * describe a source template and one or more datasets.
      * </p>
+     * <p>
+     * Either a <code>SourceEntity</code> or a <code>Definition</code> must be provided in order for the request to be
+     * valid.
+     * </p>
      * 
      * @param sourceEntity
      *        A source entity to use for the analysis that you're creating. This metadata structure contains details
-     *        that describe a source template and one or more datasets.
+     *        that describe a source template and one or more datasets.</p>
+     *        <p>
+     *        Either a <code>SourceEntity</code> or a <code>Definition</code> must be provided in order for the request
+     *        to be valid.
      */
 
     public void setSourceEntity(AnalysisSourceEntity sourceEntity) {
@@ -390,9 +405,16 @@ public class CreateAnalysisRequest extends com.amazonaws.AmazonWebServiceRequest
      * A source entity to use for the analysis that you're creating. This metadata structure contains details that
      * describe a source template and one or more datasets.
      * </p>
+     * <p>
+     * Either a <code>SourceEntity</code> or a <code>Definition</code> must be provided in order for the request to be
+     * valid.
+     * </p>
      * 
      * @return A source entity to use for the analysis that you're creating. This metadata structure contains details
-     *         that describe a source template and one or more datasets.
+     *         that describe a source template and one or more datasets.</p>
+     *         <p>
+     *         Either a <code>SourceEntity</code> or a <code>Definition</code> must be provided in order for the request
+     *         to be valid.
      */
 
     public AnalysisSourceEntity getSourceEntity() {
@@ -404,10 +426,17 @@ public class CreateAnalysisRequest extends com.amazonaws.AmazonWebServiceRequest
      * A source entity to use for the analysis that you're creating. This metadata structure contains details that
      * describe a source template and one or more datasets.
      * </p>
+     * <p>
+     * Either a <code>SourceEntity</code> or a <code>Definition</code> must be provided in order for the request to be
+     * valid.
+     * </p>
      * 
      * @param sourceEntity
      *        A source entity to use for the analysis that you're creating. This metadata structure contains details
-     *        that describe a source template and one or more datasets.
+     *        that describe a source template and one or more datasets.</p>
+     *        <p>
+     *        Either a <code>SourceEntity</code> or a <code>Definition</code> must be provided in order for the request
+     *        to be valid.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -539,11 +568,19 @@ public class CreateAnalysisRequest extends com.amazonaws.AmazonWebServiceRequest
      * <p>
      * A definition is the data model of all features in a Dashboard, Template, or Analysis.
      * </p>
+     * <p>
+     * Either a <code>SourceEntity</code> or a <code>Definition</code> must be provided in order for the request to be
+     * valid.
+     * </p>
      * 
      * @param definition
      *        The definition of an analysis.</p>
      *        <p>
      *        A definition is the data model of all features in a Dashboard, Template, or Analysis.
+     *        </p>
+     *        <p>
+     *        Either a <code>SourceEntity</code> or a <code>Definition</code> must be provided in order for the request
+     *        to be valid.
      */
 
     public void setDefinition(AnalysisDefinition definition) {
@@ -557,10 +594,18 @@ public class CreateAnalysisRequest extends com.amazonaws.AmazonWebServiceRequest
      * <p>
      * A definition is the data model of all features in a Dashboard, Template, or Analysis.
      * </p>
+     * <p>
+     * Either a <code>SourceEntity</code> or a <code>Definition</code> must be provided in order for the request to be
+     * valid.
+     * </p>
      * 
      * @return The definition of an analysis.</p>
      *         <p>
      *         A definition is the data model of all features in a Dashboard, Template, or Analysis.
+     *         </p>
+     *         <p>
+     *         Either a <code>SourceEntity</code> or a <code>Definition</code> must be provided in order for the request
+     *         to be valid.
      */
 
     public AnalysisDefinition getDefinition() {
@@ -574,11 +619,19 @@ public class CreateAnalysisRequest extends com.amazonaws.AmazonWebServiceRequest
      * <p>
      * A definition is the data model of all features in a Dashboard, Template, or Analysis.
      * </p>
+     * <p>
+     * Either a <code>SourceEntity</code> or a <code>Definition</code> must be provided in order for the request to be
+     * valid.
+     * </p>
      * 
      * @param definition
      *        The definition of an analysis.</p>
      *        <p>
      *        A definition is the data model of all features in a Dashboard, Template, or Analysis.
+     *        </p>
+     *        <p>
+     *        Either a <code>SourceEntity</code> or a <code>Definition</code> must be provided in order for the request
+     *        to be valid.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

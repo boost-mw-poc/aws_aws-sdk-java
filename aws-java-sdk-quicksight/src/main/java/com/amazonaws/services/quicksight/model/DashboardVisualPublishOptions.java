@@ -18,7 +18,9 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
- * <p/>
+ * <p>
+ * The visual publish options of a visual in a dashboard
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/DashboardVisualPublishOptions"
  *      target="_top">AWS API Documentation</a>
@@ -26,13 +28,20 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class DashboardVisualPublishOptions implements Serializable, Cloneable, StructuredPojo {
 
-    /** <p/> */
+    /**
+     * <p>
+     * Determines if hidden fields are included in an exported dashboard.
+     * </p>
+     */
     private ExportHiddenFieldsOption exportHiddenFieldsOption;
 
     /**
-     * <p/>
+     * <p>
+     * Determines if hidden fields are included in an exported dashboard.
+     * </p>
      * 
      * @param exportHiddenFieldsOption
+     *        Determines if hidden fields are included in an exported dashboard.
      */
 
     public void setExportHiddenFieldsOption(ExportHiddenFieldsOption exportHiddenFieldsOption) {
@@ -40,9 +49,11 @@ public class DashboardVisualPublishOptions implements Serializable, Cloneable, S
     }
 
     /**
-     * <p/>
+     * <p>
+     * Determines if hidden fields are included in an exported dashboard.
+     * </p>
      * 
-     * @return
+     * @return Determines if hidden fields are included in an exported dashboard.
      */
 
     public ExportHiddenFieldsOption getExportHiddenFieldsOption() {
@@ -50,9 +61,12 @@ public class DashboardVisualPublishOptions implements Serializable, Cloneable, S
     }
 
     /**
-     * <p/>
+     * <p>
+     * Determines if hidden fields are included in an exported dashboard.
+     * </p>
      * 
      * @param exportHiddenFieldsOption
+     *        Determines if hidden fields are included in an exported dashboard.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

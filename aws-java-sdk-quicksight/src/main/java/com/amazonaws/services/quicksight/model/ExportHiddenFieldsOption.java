@@ -18,7 +18,9 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
- * <p/>
+ * <p>
+ * Determines if hidden fields are included in an exported dashboard.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/ExportHiddenFieldsOption"
  *      target="_top">AWS API Documentation</a>
@@ -26,13 +28,20 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ExportHiddenFieldsOption implements Serializable, Cloneable, StructuredPojo {
 
-    /** <p/> */
+    /**
+     * <p>
+     * The status of the export hidden fields options of a dashbaord.
+     * </p>
+     */
     private String availabilityStatus;
 
     /**
-     * <p/>
+     * <p>
+     * The status of the export hidden fields options of a dashbaord.
+     * </p>
      * 
      * @param availabilityStatus
+     *        The status of the export hidden fields options of a dashbaord.
      * @see DashboardBehavior
      */
 
@@ -41,9 +50,11 @@ public class ExportHiddenFieldsOption implements Serializable, Cloneable, Struct
     }
 
     /**
-     * <p/>
+     * <p>
+     * The status of the export hidden fields options of a dashbaord.
+     * </p>
      * 
-     * @return
+     * @return The status of the export hidden fields options of a dashbaord.
      * @see DashboardBehavior
      */
 
@@ -52,9 +63,12 @@ public class ExportHiddenFieldsOption implements Serializable, Cloneable, Struct
     }
 
     /**
-     * <p/>
+     * <p>
+     * The status of the export hidden fields options of a dashbaord.
+     * </p>
      * 
      * @param availabilityStatus
+     *        The status of the export hidden fields options of a dashbaord.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see DashboardBehavior
      */
@@ -65,9 +79,12 @@ public class ExportHiddenFieldsOption implements Serializable, Cloneable, Struct
     }
 
     /**
-     * <p/>
+     * <p>
+     * The status of the export hidden fields options of a dashbaord.
+     * </p>
      * 
      * @param availabilityStatus
+     *        The status of the export hidden fields options of a dashbaord.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see DashboardBehavior
      */

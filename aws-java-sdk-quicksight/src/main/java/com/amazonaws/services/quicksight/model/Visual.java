@@ -251,6 +251,16 @@ public class Visual implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private EmptyVisual emptyVisual;
+    /**
+     * <p>
+     * A radar chart visual.
+     * </p>
+     * <p>
+     * For more information, see <a href="https://docs.aws.amazon.com/quicksight/latest/user/radar-chart.html">Using
+     * radar charts</a> in the <i>Amazon QuickSight User Guide</i>.
+     * </p>
+     */
+    private RadarChartVisual radarChartVisual;
 
     /**
      * <p>
@@ -1639,6 +1649,70 @@ public class Visual implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * A radar chart visual.
+     * </p>
+     * <p>
+     * For more information, see <a href="https://docs.aws.amazon.com/quicksight/latest/user/radar-chart.html">Using
+     * radar charts</a> in the <i>Amazon QuickSight User Guide</i>.
+     * </p>
+     * 
+     * @param radarChartVisual
+     *        A radar chart visual.</p>
+     *        <p>
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/quicksight/latest/user/radar-chart.html">Using radar charts</a> in the
+     *        <i>Amazon QuickSight User Guide</i>.
+     */
+
+    public void setRadarChartVisual(RadarChartVisual radarChartVisual) {
+        this.radarChartVisual = radarChartVisual;
+    }
+
+    /**
+     * <p>
+     * A radar chart visual.
+     * </p>
+     * <p>
+     * For more information, see <a href="https://docs.aws.amazon.com/quicksight/latest/user/radar-chart.html">Using
+     * radar charts</a> in the <i>Amazon QuickSight User Guide</i>.
+     * </p>
+     * 
+     * @return A radar chart visual.</p>
+     *         <p>
+     *         For more information, see <a
+     *         href="https://docs.aws.amazon.com/quicksight/latest/user/radar-chart.html">Using radar charts</a> in the
+     *         <i>Amazon QuickSight User Guide</i>.
+     */
+
+    public RadarChartVisual getRadarChartVisual() {
+        return this.radarChartVisual;
+    }
+
+    /**
+     * <p>
+     * A radar chart visual.
+     * </p>
+     * <p>
+     * For more information, see <a href="https://docs.aws.amazon.com/quicksight/latest/user/radar-chart.html">Using
+     * radar charts</a> in the <i>Amazon QuickSight User Guide</i>.
+     * </p>
+     * 
+     * @param radarChartVisual
+     *        A radar chart visual.</p>
+     *        <p>
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/quicksight/latest/user/radar-chart.html">Using radar charts</a> in the
+     *        <i>Amazon QuickSight User Guide</i>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Visual withRadarChartVisual(RadarChartVisual radarChartVisual) {
+        setRadarChartVisual(radarChartVisual);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1693,7 +1767,9 @@ public class Visual implements Serializable, Cloneable, StructuredPojo {
         if (getCustomContentVisual() != null)
             sb.append("CustomContentVisual: ").append(getCustomContentVisual()).append(",");
         if (getEmptyVisual() != null)
-            sb.append("EmptyVisual: ").append(getEmptyVisual());
+            sb.append("EmptyVisual: ").append(getEmptyVisual()).append(",");
+        if (getRadarChartVisual() != null)
+            sb.append("RadarChartVisual: ").append(getRadarChartVisual());
         sb.append("}");
         return sb.toString();
     }
@@ -1796,6 +1872,10 @@ public class Visual implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getEmptyVisual() != null && other.getEmptyVisual().equals(this.getEmptyVisual()) == false)
             return false;
+        if (other.getRadarChartVisual() == null ^ this.getRadarChartVisual() == null)
+            return false;
+        if (other.getRadarChartVisual() != null && other.getRadarChartVisual().equals(this.getRadarChartVisual()) == false)
+            return false;
         return true;
     }
 
@@ -1826,6 +1906,7 @@ public class Visual implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getSankeyDiagramVisual() == null) ? 0 : getSankeyDiagramVisual().hashCode());
         hashCode = prime * hashCode + ((getCustomContentVisual() == null) ? 0 : getCustomContentVisual().hashCode());
         hashCode = prime * hashCode + ((getEmptyVisual() == null) ? 0 : getEmptyVisual().hashCode());
+        hashCode = prime * hashCode + ((getRadarChartVisual() == null) ? 0 : getRadarChartVisual().hashCode());
         return hashCode;
     }
 

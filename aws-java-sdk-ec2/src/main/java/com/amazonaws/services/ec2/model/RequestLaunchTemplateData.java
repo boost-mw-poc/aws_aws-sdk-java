@@ -104,8 +104,8 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
      * </ul>
      * <p>
      * For more information, see <a href=
-     * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-templates.html#use-an-ssm-parameter-instead-of-an-ami-id"
-     * >Use a Systems Manager parameter instead of an AMI ID</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/finding-an-ami.html#using-systems-manager-parameter-to-find-AMI"
+     * >Use a Systems Manager parameter to find an AMI</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      */
     private String imageId;
@@ -743,8 +743,8 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
      * </ul>
      * <p>
      * For more information, see <a href=
-     * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-templates.html#use-an-ssm-parameter-instead-of-an-ami-id"
-     * >Use a Systems Manager parameter instead of an AMI ID</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/finding-an-ami.html#using-systems-manager-parameter-to-find-AMI"
+     * >Use a Systems Manager parameter to find an AMI</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * 
      * @param imageId
@@ -777,9 +777,8 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
      *        </ul>
      *        <p>
      *        For more information, see <a href=
-     *        "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-templates.html#use-an-ssm-parameter-instead-of-an-ami-id"
-     *        >Use a Systems Manager parameter instead of an AMI ID</a> in the <i>Amazon Elastic Compute Cloud User
-     *        Guide</i>.
+     *        "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/finding-an-ami.html#using-systems-manager-parameter-to-find-AMI"
+     *        >Use a Systems Manager parameter to find an AMI</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      */
 
     public void setImageId(String imageId) {
@@ -818,8 +817,8 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
      * </ul>
      * <p>
      * For more information, see <a href=
-     * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-templates.html#use-an-ssm-parameter-instead-of-an-ami-id"
-     * >Use a Systems Manager parameter instead of an AMI ID</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/finding-an-ami.html#using-systems-manager-parameter-to-find-AMI"
+     * >Use a Systems Manager parameter to find an AMI</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * 
      * @return The ID of the AMI. Alternatively, you can specify a Systems Manager parameter, which will resolve to an
@@ -851,8 +850,8 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
      *         </ul>
      *         <p>
      *         For more information, see <a href=
-     *         "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-templates.html#use-an-ssm-parameter-instead-of-an-ami-id"
-     *         >Use a Systems Manager parameter instead of an AMI ID</a> in the <i>Amazon Elastic Compute Cloud User
+     *         "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/finding-an-ami.html#using-systems-manager-parameter-to-find-AMI"
+     *         >Use a Systems Manager parameter to find an AMI</a> in the <i>Amazon Elastic Compute Cloud User
      *         Guide</i>.
      */
 
@@ -892,8 +891,8 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
      * </ul>
      * <p>
      * For more information, see <a href=
-     * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-templates.html#use-an-ssm-parameter-instead-of-an-ami-id"
-     * >Use a Systems Manager parameter instead of an AMI ID</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/finding-an-ami.html#using-systems-manager-parameter-to-find-AMI"
+     * >Use a Systems Manager parameter to find an AMI</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * 
      * @param imageId
@@ -926,9 +925,8 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
      *        </ul>
      *        <p>
      *        For more information, see <a href=
-     *        "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-templates.html#use-an-ssm-parameter-instead-of-an-ami-id"
-     *        >Use a Systems Manager parameter instead of an AMI ID</a> in the <i>Amazon Elastic Compute Cloud User
-     *        Guide</i>.
+     *        "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/finding-an-ami.html#using-systems-manager-parameter-to-find-AMI"
+     *        >Use a Systems Manager parameter to find an AMI</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

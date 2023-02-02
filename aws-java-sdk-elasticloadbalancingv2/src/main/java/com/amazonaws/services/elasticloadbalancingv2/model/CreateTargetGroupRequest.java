@@ -127,7 +127,7 @@ public class CreateTargetGroupRequest extends com.amazonaws.AmazonWebServiceRequ
      * <p>
      * The number of consecutive health check successes required before considering a target healthy. The range is 2-10.
      * If the target group protocol is TCP, TCP_UDP, UDP, TLS, HTTP or HTTPS, the default is 5. For target groups with a
-     * protocol of GENEVE, the default is 3. If the target type is <code>lambda</code>, the default is 5.
+     * protocol of GENEVE, the default is 5. If the target type is <code>lambda</code>, the default is 5.
      * </p>
      */
     private Integer healthyThresholdCount;
@@ -135,7 +135,7 @@ public class CreateTargetGroupRequest extends com.amazonaws.AmazonWebServiceRequ
      * <p>
      * The number of consecutive health check failures required before considering a target unhealthy. The range is
      * 2-10. If the target group protocol is TCP, TCP_UDP, UDP, TLS, HTTP or HTTPS, the default is 2. For target groups
-     * with a protocol of GENEVE, the default is 3. If the target type is <code>lambda</code>, the default is 5.
+     * with a protocol of GENEVE, the default is 2. If the target type is <code>lambda</code>, the default is 5.
      * </p>
      */
     private Integer unhealthyThresholdCount;
@@ -932,13 +932,13 @@ public class CreateTargetGroupRequest extends com.amazonaws.AmazonWebServiceRequ
      * <p>
      * The number of consecutive health check successes required before considering a target healthy. The range is 2-10.
      * If the target group protocol is TCP, TCP_UDP, UDP, TLS, HTTP or HTTPS, the default is 5. For target groups with a
-     * protocol of GENEVE, the default is 3. If the target type is <code>lambda</code>, the default is 5.
+     * protocol of GENEVE, the default is 5. If the target type is <code>lambda</code>, the default is 5.
      * </p>
      * 
      * @param healthyThresholdCount
      *        The number of consecutive health check successes required before considering a target healthy. The range
      *        is 2-10. If the target group protocol is TCP, TCP_UDP, UDP, TLS, HTTP or HTTPS, the default is 5. For
-     *        target groups with a protocol of GENEVE, the default is 3. If the target type is <code>lambda</code>, the
+     *        target groups with a protocol of GENEVE, the default is 5. If the target type is <code>lambda</code>, the
      *        default is 5.
      */
 
@@ -950,12 +950,12 @@ public class CreateTargetGroupRequest extends com.amazonaws.AmazonWebServiceRequ
      * <p>
      * The number of consecutive health check successes required before considering a target healthy. The range is 2-10.
      * If the target group protocol is TCP, TCP_UDP, UDP, TLS, HTTP or HTTPS, the default is 5. For target groups with a
-     * protocol of GENEVE, the default is 3. If the target type is <code>lambda</code>, the default is 5.
+     * protocol of GENEVE, the default is 5. If the target type is <code>lambda</code>, the default is 5.
      * </p>
      * 
      * @return The number of consecutive health check successes required before considering a target healthy. The range
      *         is 2-10. If the target group protocol is TCP, TCP_UDP, UDP, TLS, HTTP or HTTPS, the default is 5. For
-     *         target groups with a protocol of GENEVE, the default is 3. If the target type is <code>lambda</code>, the
+     *         target groups with a protocol of GENEVE, the default is 5. If the target type is <code>lambda</code>, the
      *         default is 5.
      */
 
@@ -967,13 +967,13 @@ public class CreateTargetGroupRequest extends com.amazonaws.AmazonWebServiceRequ
      * <p>
      * The number of consecutive health check successes required before considering a target healthy. The range is 2-10.
      * If the target group protocol is TCP, TCP_UDP, UDP, TLS, HTTP or HTTPS, the default is 5. For target groups with a
-     * protocol of GENEVE, the default is 3. If the target type is <code>lambda</code>, the default is 5.
+     * protocol of GENEVE, the default is 5. If the target type is <code>lambda</code>, the default is 5.
      * </p>
      * 
      * @param healthyThresholdCount
      *        The number of consecutive health check successes required before considering a target healthy. The range
      *        is 2-10. If the target group protocol is TCP, TCP_UDP, UDP, TLS, HTTP or HTTPS, the default is 5. For
-     *        target groups with a protocol of GENEVE, the default is 3. If the target type is <code>lambda</code>, the
+     *        target groups with a protocol of GENEVE, the default is 5. If the target type is <code>lambda</code>, the
      *        default is 5.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -987,13 +987,13 @@ public class CreateTargetGroupRequest extends com.amazonaws.AmazonWebServiceRequ
      * <p>
      * The number of consecutive health check failures required before considering a target unhealthy. The range is
      * 2-10. If the target group protocol is TCP, TCP_UDP, UDP, TLS, HTTP or HTTPS, the default is 2. For target groups
-     * with a protocol of GENEVE, the default is 3. If the target type is <code>lambda</code>, the default is 5.
+     * with a protocol of GENEVE, the default is 2. If the target type is <code>lambda</code>, the default is 5.
      * </p>
      * 
      * @param unhealthyThresholdCount
      *        The number of consecutive health check failures required before considering a target unhealthy. The range
      *        is 2-10. If the target group protocol is TCP, TCP_UDP, UDP, TLS, HTTP or HTTPS, the default is 2. For
-     *        target groups with a protocol of GENEVE, the default is 3. If the target type is <code>lambda</code>, the
+     *        target groups with a protocol of GENEVE, the default is 2. If the target type is <code>lambda</code>, the
      *        default is 5.
      */
 
@@ -1005,12 +1005,12 @@ public class CreateTargetGroupRequest extends com.amazonaws.AmazonWebServiceRequ
      * <p>
      * The number of consecutive health check failures required before considering a target unhealthy. The range is
      * 2-10. If the target group protocol is TCP, TCP_UDP, UDP, TLS, HTTP or HTTPS, the default is 2. For target groups
-     * with a protocol of GENEVE, the default is 3. If the target type is <code>lambda</code>, the default is 5.
+     * with a protocol of GENEVE, the default is 2. If the target type is <code>lambda</code>, the default is 5.
      * </p>
      * 
      * @return The number of consecutive health check failures required before considering a target unhealthy. The range
      *         is 2-10. If the target group protocol is TCP, TCP_UDP, UDP, TLS, HTTP or HTTPS, the default is 2. For
-     *         target groups with a protocol of GENEVE, the default is 3. If the target type is <code>lambda</code>, the
+     *         target groups with a protocol of GENEVE, the default is 2. If the target type is <code>lambda</code>, the
      *         default is 5.
      */
 
@@ -1022,13 +1022,13 @@ public class CreateTargetGroupRequest extends com.amazonaws.AmazonWebServiceRequ
      * <p>
      * The number of consecutive health check failures required before considering a target unhealthy. The range is
      * 2-10. If the target group protocol is TCP, TCP_UDP, UDP, TLS, HTTP or HTTPS, the default is 2. For target groups
-     * with a protocol of GENEVE, the default is 3. If the target type is <code>lambda</code>, the default is 5.
+     * with a protocol of GENEVE, the default is 2. If the target type is <code>lambda</code>, the default is 5.
      * </p>
      * 
      * @param unhealthyThresholdCount
      *        The number of consecutive health check failures required before considering a target unhealthy. The range
      *        is 2-10. If the target group protocol is TCP, TCP_UDP, UDP, TLS, HTTP or HTTPS, the default is 2. For
-     *        target groups with a protocol of GENEVE, the default is 3. If the target type is <code>lambda</code>, the
+     *        target groups with a protocol of GENEVE, the default is 2. If the target type is <code>lambda</code>, the
      *        default is 5.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

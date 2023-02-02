@@ -128,6 +128,14 @@ public class StopDeploymentResultJsonUnmarshaller implements Unmarshaller<StopDe
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("KmsKeyArn", targetDepth)) {
+                    context.nextToken();
+                    stopDeploymentResult.setKmsKeyArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("KmsKeyIdentifier", targetDepth)) {
+                    context.nextToken();
+                    stopDeploymentResult.setKmsKeyIdentifier(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

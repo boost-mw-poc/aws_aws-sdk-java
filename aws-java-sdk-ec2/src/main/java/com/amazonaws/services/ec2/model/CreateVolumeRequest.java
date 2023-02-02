@@ -199,6 +199,12 @@ public class CreateVolumeRequest extends AmazonWebServiceRequest implements Seri
      * </p>
      * </li>
      * </ul>
+     * <important>
+     * <p>
+     * Throughput Optimized HDD (<code>st1</code>) and Cold HDD (<code>sc1</code>) volumes can't be used as boot
+     * volumes.
+     * </p>
+     * </important>
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html">Amazon EBS volume types</a> in the
@@ -1246,6 +1252,12 @@ public class CreateVolumeRequest extends AmazonWebServiceRequest implements Seri
      * </p>
      * </li>
      * </ul>
+     * <important>
+     * <p>
+     * Throughput Optimized HDD (<code>st1</code>) and Cold HDD (<code>sc1</code>) volumes can't be used as boot
+     * volumes.
+     * </p>
+     * </important>
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html">Amazon EBS volume types</a> in the
@@ -1284,6 +1296,12 @@ public class CreateVolumeRequest extends AmazonWebServiceRequest implements Seri
      *        </p>
      *        </li>
      *        </ul>
+     *        <important>
+     *        <p>
+     *        Throughput Optimized HDD (<code>st1</code>) and Cold HDD (<code>sc1</code>) volumes can't be used as boot
+     *        volumes.
+     *        </p>
+     *        </important>
      *        <p>
      *        For more information, see <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html">Amazon EBS volume types</a>
@@ -1329,6 +1347,12 @@ public class CreateVolumeRequest extends AmazonWebServiceRequest implements Seri
      * </p>
      * </li>
      * </ul>
+     * <important>
+     * <p>
+     * Throughput Optimized HDD (<code>st1</code>) and Cold HDD (<code>sc1</code>) volumes can't be used as boot
+     * volumes.
+     * </p>
+     * </important>
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html">Amazon EBS volume types</a> in the
@@ -1366,6 +1390,12 @@ public class CreateVolumeRequest extends AmazonWebServiceRequest implements Seri
      *         </p>
      *         </li>
      *         </ul>
+     *         <important>
+     *         <p>
+     *         Throughput Optimized HDD (<code>st1</code>) and Cold HDD (<code>sc1</code>) volumes can't be used as boot
+     *         volumes.
+     *         </p>
+     *         </important>
      *         <p>
      *         For more information, see <a
      *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html">Amazon EBS volume
@@ -1411,6 +1441,12 @@ public class CreateVolumeRequest extends AmazonWebServiceRequest implements Seri
      * </p>
      * </li>
      * </ul>
+     * <important>
+     * <p>
+     * Throughput Optimized HDD (<code>st1</code>) and Cold HDD (<code>sc1</code>) volumes can't be used as boot
+     * volumes.
+     * </p>
+     * </important>
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html">Amazon EBS volume types</a> in the
@@ -1449,6 +1485,12 @@ public class CreateVolumeRequest extends AmazonWebServiceRequest implements Seri
      *        </p>
      *        </li>
      *        </ul>
+     *        <important>
+     *        <p>
+     *        Throughput Optimized HDD (<code>st1</code>) and Cold HDD (<code>sc1</code>) volumes can't be used as boot
+     *        volumes.
+     *        </p>
+     *        </important>
      *        <p>
      *        For more information, see <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html">Amazon EBS volume types</a>
@@ -1496,6 +1538,12 @@ public class CreateVolumeRequest extends AmazonWebServiceRequest implements Seri
      * </p>
      * </li>
      * </ul>
+     * <important>
+     * <p>
+     * Throughput Optimized HDD (<code>st1</code>) and Cold HDD (<code>sc1</code>) volumes can't be used as boot
+     * volumes.
+     * </p>
+     * </important>
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html">Amazon EBS volume types</a> in the
@@ -1534,6 +1582,12 @@ public class CreateVolumeRequest extends AmazonWebServiceRequest implements Seri
      *        </p>
      *        </li>
      *        </ul>
+     *        <important>
+     *        <p>
+     *        Throughput Optimized HDD (<code>st1</code>) and Cold HDD (<code>sc1</code>) volumes can't be used as boot
+     *        volumes.
+     *        </p>
+     *        </important>
      *        <p>
      *        For more information, see <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html">Amazon EBS volume types</a>
@@ -1579,6 +1633,12 @@ public class CreateVolumeRequest extends AmazonWebServiceRequest implements Seri
      * </p>
      * </li>
      * </ul>
+     * <important>
+     * <p>
+     * Throughput Optimized HDD (<code>st1</code>) and Cold HDD (<code>sc1</code>) volumes can't be used as boot
+     * volumes.
+     * </p>
+     * </important>
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html">Amazon EBS volume types</a> in the
@@ -1617,6 +1677,12 @@ public class CreateVolumeRequest extends AmazonWebServiceRequest implements Seri
      *        </p>
      *        </li>
      *        </ul>
+     *        <important>
+     *        <p>
+     *        Throughput Optimized HDD (<code>st1</code>) and Cold HDD (<code>sc1</code>) volumes can't be used as boot
+     *        volumes.
+     *        </p>
+     *        </important>
      *        <p>
      *        For more information, see <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html">Amazon EBS volume types</a>

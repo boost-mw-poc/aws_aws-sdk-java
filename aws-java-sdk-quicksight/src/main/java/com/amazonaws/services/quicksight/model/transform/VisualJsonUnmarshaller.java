@@ -136,6 +136,10 @@ public class VisualJsonUnmarshaller implements Unmarshaller<Visual, JsonUnmarsha
                     context.nextToken();
                     visual.setEmptyVisual(EmptyVisualJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("RadarChartVisual", targetDepth)) {
+                    context.nextToken();
+                    visual.setRadarChartVisual(RadarChartVisualJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

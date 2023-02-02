@@ -111,6 +111,35 @@ public class DescribeDashboardDefinitionResult extends com.amazonaws.AmazonWebSe
      * </p>
      */
     private String requestId;
+    /**
+     * <p>
+     * Options for publishing the dashboard:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>AvailabilityStatus</code> for <code>AdHocFilteringOption</code> - This status can be either
+     * <code>ENABLED</code> or <code>DISABLED</code>. When this is set to <code>DISABLED</code>, Amazon QuickSight
+     * disables the left filter pane on the published dashboard, which can be used for ad hoc (one-time) filtering. This
+     * option is <code>ENABLED</code> by default.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AvailabilityStatus</code> for <code>ExportToCSVOption</code> - This status can be either
+     * <code>ENABLED</code> or <code>DISABLED</code>. The visual option to export data to .CSV format isn't enabled when
+     * this is set to <code>DISABLED</code>. This option is <code>ENABLED</code> by default.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>VisibilityState</code> for <code>SheetControlsOption</code> - This visibility state can be either
+     * <code>COLLAPSED</code> or <code>EXPANDED</code>. This option is <code>COLLAPSED</code> by default.
+     * </p>
+     * </li>
+     * </ul>
+     */
+    private DashboardPublishOptions dashboardPublishOptions;
 
     /**
      * <p>
@@ -789,6 +818,181 @@ public class DescribeDashboardDefinitionResult extends com.amazonaws.AmazonWebSe
     }
 
     /**
+     * <p>
+     * Options for publishing the dashboard:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>AvailabilityStatus</code> for <code>AdHocFilteringOption</code> - This status can be either
+     * <code>ENABLED</code> or <code>DISABLED</code>. When this is set to <code>DISABLED</code>, Amazon QuickSight
+     * disables the left filter pane on the published dashboard, which can be used for ad hoc (one-time) filtering. This
+     * option is <code>ENABLED</code> by default.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AvailabilityStatus</code> for <code>ExportToCSVOption</code> - This status can be either
+     * <code>ENABLED</code> or <code>DISABLED</code>. The visual option to export data to .CSV format isn't enabled when
+     * this is set to <code>DISABLED</code>. This option is <code>ENABLED</code> by default.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>VisibilityState</code> for <code>SheetControlsOption</code> - This visibility state can be either
+     * <code>COLLAPSED</code> or <code>EXPANDED</code>. This option is <code>COLLAPSED</code> by default.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param dashboardPublishOptions
+     *        Options for publishing the dashboard:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>AvailabilityStatus</code> for <code>AdHocFilteringOption</code> - This status can be either
+     *        <code>ENABLED</code> or <code>DISABLED</code>. When this is set to <code>DISABLED</code>, Amazon
+     *        QuickSight disables the left filter pane on the published dashboard, which can be used for ad hoc
+     *        (one-time) filtering. This option is <code>ENABLED</code> by default.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AvailabilityStatus</code> for <code>ExportToCSVOption</code> - This status can be either
+     *        <code>ENABLED</code> or <code>DISABLED</code>. The visual option to export data to .CSV format isn't
+     *        enabled when this is set to <code>DISABLED</code>. This option is <code>ENABLED</code> by default.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>VisibilityState</code> for <code>SheetControlsOption</code> - This visibility state can be either
+     *        <code>COLLAPSED</code> or <code>EXPANDED</code>. This option is <code>COLLAPSED</code> by default.
+     *        </p>
+     *        </li>
+     */
+
+    public void setDashboardPublishOptions(DashboardPublishOptions dashboardPublishOptions) {
+        this.dashboardPublishOptions = dashboardPublishOptions;
+    }
+
+    /**
+     * <p>
+     * Options for publishing the dashboard:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>AvailabilityStatus</code> for <code>AdHocFilteringOption</code> - This status can be either
+     * <code>ENABLED</code> or <code>DISABLED</code>. When this is set to <code>DISABLED</code>, Amazon QuickSight
+     * disables the left filter pane on the published dashboard, which can be used for ad hoc (one-time) filtering. This
+     * option is <code>ENABLED</code> by default.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AvailabilityStatus</code> for <code>ExportToCSVOption</code> - This status can be either
+     * <code>ENABLED</code> or <code>DISABLED</code>. The visual option to export data to .CSV format isn't enabled when
+     * this is set to <code>DISABLED</code>. This option is <code>ENABLED</code> by default.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>VisibilityState</code> for <code>SheetControlsOption</code> - This visibility state can be either
+     * <code>COLLAPSED</code> or <code>EXPANDED</code>. This option is <code>COLLAPSED</code> by default.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @return Options for publishing the dashboard:</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>AvailabilityStatus</code> for <code>AdHocFilteringOption</code> - This status can be either
+     *         <code>ENABLED</code> or <code>DISABLED</code>. When this is set to <code>DISABLED</code>, Amazon
+     *         QuickSight disables the left filter pane on the published dashboard, which can be used for ad hoc
+     *         (one-time) filtering. This option is <code>ENABLED</code> by default.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>AvailabilityStatus</code> for <code>ExportToCSVOption</code> - This status can be either
+     *         <code>ENABLED</code> or <code>DISABLED</code>. The visual option to export data to .CSV format isn't
+     *         enabled when this is set to <code>DISABLED</code>. This option is <code>ENABLED</code> by default.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>VisibilityState</code> for <code>SheetControlsOption</code> - This visibility state can be either
+     *         <code>COLLAPSED</code> or <code>EXPANDED</code>. This option is <code>COLLAPSED</code> by default.
+     *         </p>
+     *         </li>
+     */
+
+    public DashboardPublishOptions getDashboardPublishOptions() {
+        return this.dashboardPublishOptions;
+    }
+
+    /**
+     * <p>
+     * Options for publishing the dashboard:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>AvailabilityStatus</code> for <code>AdHocFilteringOption</code> - This status can be either
+     * <code>ENABLED</code> or <code>DISABLED</code>. When this is set to <code>DISABLED</code>, Amazon QuickSight
+     * disables the left filter pane on the published dashboard, which can be used for ad hoc (one-time) filtering. This
+     * option is <code>ENABLED</code> by default.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AvailabilityStatus</code> for <code>ExportToCSVOption</code> - This status can be either
+     * <code>ENABLED</code> or <code>DISABLED</code>. The visual option to export data to .CSV format isn't enabled when
+     * this is set to <code>DISABLED</code>. This option is <code>ENABLED</code> by default.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>VisibilityState</code> for <code>SheetControlsOption</code> - This visibility state can be either
+     * <code>COLLAPSED</code> or <code>EXPANDED</code>. This option is <code>COLLAPSED</code> by default.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param dashboardPublishOptions
+     *        Options for publishing the dashboard:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>AvailabilityStatus</code> for <code>AdHocFilteringOption</code> - This status can be either
+     *        <code>ENABLED</code> or <code>DISABLED</code>. When this is set to <code>DISABLED</code>, Amazon
+     *        QuickSight disables the left filter pane on the published dashboard, which can be used for ad hoc
+     *        (one-time) filtering. This option is <code>ENABLED</code> by default.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AvailabilityStatus</code> for <code>ExportToCSVOption</code> - This status can be either
+     *        <code>ENABLED</code> or <code>DISABLED</code>. The visual option to export data to .CSV format isn't
+     *        enabled when this is set to <code>DISABLED</code>. This option is <code>ENABLED</code> by default.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>VisibilityState</code> for <code>SheetControlsOption</code> - This visibility state can be either
+     *        <code>COLLAPSED</code> or <code>EXPANDED</code>. This option is <code>COLLAPSED</code> by default.
+     *        </p>
+     *        </li>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeDashboardDefinitionResult withDashboardPublishOptions(DashboardPublishOptions dashboardPublishOptions) {
+        setDashboardPublishOptions(dashboardPublishOptions);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -815,7 +1019,9 @@ public class DescribeDashboardDefinitionResult extends com.amazonaws.AmazonWebSe
         if (getStatus() != null)
             sb.append("Status: ").append(getStatus()).append(",");
         if (getRequestId() != null)
-            sb.append("RequestId: ").append(getRequestId());
+            sb.append("RequestId: ").append(getRequestId()).append(",");
+        if (getDashboardPublishOptions() != null)
+            sb.append("DashboardPublishOptions: ").append(getDashboardPublishOptions());
         sb.append("}");
         return sb.toString();
     }
@@ -862,6 +1068,10 @@ public class DescribeDashboardDefinitionResult extends com.amazonaws.AmazonWebSe
             return false;
         if (other.getRequestId() != null && other.getRequestId().equals(this.getRequestId()) == false)
             return false;
+        if (other.getDashboardPublishOptions() == null ^ this.getDashboardPublishOptions() == null)
+            return false;
+        if (other.getDashboardPublishOptions() != null && other.getDashboardPublishOptions().equals(this.getDashboardPublishOptions()) == false)
+            return false;
         return true;
     }
 
@@ -878,6 +1088,7 @@ public class DescribeDashboardDefinitionResult extends com.amazonaws.AmazonWebSe
         hashCode = prime * hashCode + ((getDefinition() == null) ? 0 : getDefinition().hashCode());
         hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
         hashCode = prime * hashCode + ((getRequestId() == null) ? 0 : getRequestId().hashCode());
+        hashCode = prime * hashCode + ((getDashboardPublishOptions() == null) ? 0 : getDashboardPublishOptions().hashCode());
         return hashCode;
     }
 

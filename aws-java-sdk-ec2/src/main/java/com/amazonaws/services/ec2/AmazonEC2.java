@@ -627,7 +627,7 @@ public interface AmazonEC2 {
     /**
      * <p>
      * Associates an IPAM resource discovery with an Amazon VPC IPAM. A resource discovery is an IPAM component that
-     * enables IPAM Service to manage and monitor resources that belong to the owning account.
+     * enables IPAM to manage and monitor resources that belong to the owning account.
      * </p>
      * 
      * @param associateIpamResourceDiscoveryRequest
@@ -1864,8 +1864,8 @@ public interface AmazonEC2 {
 
     /**
      * <p>
-     * Creates an IPAM resource discovery. A resource discovery is an IPAM component that enables IPAM Service to manage
-     * and monitor resources that belong to the owning account.
+     * Creates an IPAM resource discovery. A resource discovery is an IPAM component that enables IPAM to manage and
+     * monitor resources that belong to the owning account.
      * </p>
      * 
      * @param createIpamResourceDiscoveryRequest
@@ -3522,8 +3522,8 @@ public interface AmazonEC2 {
 
     /**
      * <p>
-     * Deletes an IPAM resource discovery. A resource discovery is an IPAM component that enables IPAM Service to manage
-     * and monitor resources that belong to the owning account.
+     * Deletes an IPAM resource discovery. A resource discovery is an IPAM component that enables IPAM to manage and
+     * monitor resources that belong to the owning account.
      * </p>
      * 
      * @param deleteIpamResourceDiscoveryRequest
@@ -5665,8 +5665,8 @@ public interface AmazonEC2 {
 
     /**
      * <p>
-     * Describes IPAM resource discoveries. A resource discovery is an IPAM component that enables IPAM Service to
-     * manage and monitor resources that belong to the owning account.
+     * Describes IPAM resource discoveries. A resource discovery is an IPAM component that enables IPAM to manage and
+     * monitor resources that belong to the owning account.
      * </p>
      * 
      * @param describeIpamResourceDiscoveriesRequest
@@ -7903,7 +7903,7 @@ public interface AmazonEC2 {
     /**
      * <p>
      * Disassociates a resource discovery from an Amazon VPC IPAM. A resource discovery is an IPAM component that
-     * enables IPAM Service to manage and monitor resources that belong to the owning account.
+     * enables IPAM to manage and monitor resources that belong to the owning account.
      * </p>
      * 
      * @param disassociateIpamResourceDiscoveryRequest
@@ -8765,7 +8765,7 @@ public interface AmazonEC2 {
      * <p>
      * Returns resource CIDRs managed by IPAM in a given scope. If an IPAM is associated with more than one resource
      * discovery, the resource CIDRs across all of the resource discoveries is returned. A resource discovery is an IPAM
-     * component that enables IPAM Service to manage and monitor resources that belong to the owning account.
+     * component that enables IPAM to manage and monitor resources that belong to the owning account.
      * </p>
      * 
      * @param getIpamResourceCidrsRequest
@@ -9835,8 +9835,8 @@ public interface AmazonEC2 {
 
     /**
      * <p>
-     * Modifies a resource discovery. A resource discovery is an IPAM component that enables IPAM Service to manage and
-     * monitor resources that belong to the owning account.
+     * Modifies a resource discovery. A resource discovery is an IPAM component that enables IPAM to manage and monitor
+     * resources that belong to the owning account.
      * </p>
      * 
      * @param modifyIpamResourceDiscoveryRequest

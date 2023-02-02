@@ -75,6 +75,10 @@ public class CreateDashboardRequest extends com.amazonaws.AmazonWebServiceReques
      * Use the <code>DataSetReferences</code> entity within <code>SourceTemplate</code> to list the replacement datasets
      * for the placeholders listed in the original. The schema in each dataset must match its placeholder.
      * </p>
+     * <p>
+     * Either a <code>SourceEntity</code> or a <code>Definition</code> must be provided in order for the request to be
+     * valid.
+     * </p>
      */
     private DashboardSourceEntity sourceEntity;
     /**
@@ -132,6 +136,10 @@ public class CreateDashboardRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * A definition is the data model of all features in a Dashboard, Template, or Analysis.
+     * </p>
+     * <p>
+     * Either a <code>SourceEntity</code> or a <code>Definition</code> must be provided in order for the request to be
+     * valid.
      * </p>
      */
     private DashboardVersionDefinition definition;
@@ -415,6 +423,10 @@ public class CreateDashboardRequest extends com.amazonaws.AmazonWebServiceReques
      * Use the <code>DataSetReferences</code> entity within <code>SourceTemplate</code> to list the replacement datasets
      * for the placeholders listed in the original. The schema in each dataset must match its placeholder.
      * </p>
+     * <p>
+     * Either a <code>SourceEntity</code> or a <code>Definition</code> must be provided in order for the request to be
+     * valid.
+     * </p>
      * 
      * @param sourceEntity
      *        The entity that you are using as a source when you create the dashboard. In <code>SourceEntity</code>, you
@@ -429,6 +441,10 @@ public class CreateDashboardRequest extends com.amazonaws.AmazonWebServiceReques
      *        Use the <code>DataSetReferences</code> entity within <code>SourceTemplate</code> to list the replacement
      *        datasets for the placeholders listed in the original. The schema in each dataset must match its
      *        placeholder.
+     *        </p>
+     *        <p>
+     *        Either a <code>SourceEntity</code> or a <code>Definition</code> must be provided in order for the request
+     *        to be valid.
      */
 
     public void setSourceEntity(DashboardSourceEntity sourceEntity) {
@@ -450,6 +466,10 @@ public class CreateDashboardRequest extends com.amazonaws.AmazonWebServiceReques
      * Use the <code>DataSetReferences</code> entity within <code>SourceTemplate</code> to list the replacement datasets
      * for the placeholders listed in the original. The schema in each dataset must match its placeholder.
      * </p>
+     * <p>
+     * Either a <code>SourceEntity</code> or a <code>Definition</code> must be provided in order for the request to be
+     * valid.
+     * </p>
      * 
      * @return The entity that you are using as a source when you create the dashboard. In <code>SourceEntity</code>,
      *         you specify the type of object you're using as source. You can only create a dashboard from a template,
@@ -463,6 +483,10 @@ public class CreateDashboardRequest extends com.amazonaws.AmazonWebServiceReques
      *         Use the <code>DataSetReferences</code> entity within <code>SourceTemplate</code> to list the replacement
      *         datasets for the placeholders listed in the original. The schema in each dataset must match its
      *         placeholder.
+     *         </p>
+     *         <p>
+     *         Either a <code>SourceEntity</code> or a <code>Definition</code> must be provided in order for the request
+     *         to be valid.
      */
 
     public DashboardSourceEntity getSourceEntity() {
@@ -484,6 +508,10 @@ public class CreateDashboardRequest extends com.amazonaws.AmazonWebServiceReques
      * Use the <code>DataSetReferences</code> entity within <code>SourceTemplate</code> to list the replacement datasets
      * for the placeholders listed in the original. The schema in each dataset must match its placeholder.
      * </p>
+     * <p>
+     * Either a <code>SourceEntity</code> or a <code>Definition</code> must be provided in order for the request to be
+     * valid.
+     * </p>
      * 
      * @param sourceEntity
      *        The entity that you are using as a source when you create the dashboard. In <code>SourceEntity</code>, you
@@ -498,6 +526,10 @@ public class CreateDashboardRequest extends com.amazonaws.AmazonWebServiceReques
      *        Use the <code>DataSetReferences</code> entity within <code>SourceTemplate</code> to list the replacement
      *        datasets for the placeholders listed in the original. The schema in each dataset must match its
      *        placeholder.
+     *        </p>
+     *        <p>
+     *        Either a <code>SourceEntity</code> or a <code>Definition</code> must be provided in order for the request
+     *        to be valid.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -850,11 +882,19 @@ public class CreateDashboardRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * A definition is the data model of all features in a Dashboard, Template, or Analysis.
      * </p>
+     * <p>
+     * Either a <code>SourceEntity</code> or a <code>Definition</code> must be provided in order for the request to be
+     * valid.
+     * </p>
      * 
      * @param definition
      *        The definition of a dashboard.</p>
      *        <p>
      *        A definition is the data model of all features in a Dashboard, Template, or Analysis.
+     *        </p>
+     *        <p>
+     *        Either a <code>SourceEntity</code> or a <code>Definition</code> must be provided in order for the request
+     *        to be valid.
      */
 
     public void setDefinition(DashboardVersionDefinition definition) {
@@ -868,10 +908,18 @@ public class CreateDashboardRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * A definition is the data model of all features in a Dashboard, Template, or Analysis.
      * </p>
+     * <p>
+     * Either a <code>SourceEntity</code> or a <code>Definition</code> must be provided in order for the request to be
+     * valid.
+     * </p>
      * 
      * @return The definition of a dashboard.</p>
      *         <p>
      *         A definition is the data model of all features in a Dashboard, Template, or Analysis.
+     *         </p>
+     *         <p>
+     *         Either a <code>SourceEntity</code> or a <code>Definition</code> must be provided in order for the request
+     *         to be valid.
      */
 
     public DashboardVersionDefinition getDefinition() {
@@ -885,11 +933,19 @@ public class CreateDashboardRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * A definition is the data model of all features in a Dashboard, Template, or Analysis.
      * </p>
+     * <p>
+     * Either a <code>SourceEntity</code> or a <code>Definition</code> must be provided in order for the request to be
+     * valid.
+     * </p>
      * 
      * @param definition
      *        The definition of a dashboard.</p>
      *        <p>
      *        A definition is the data model of all features in a Dashboard, Template, or Analysis.
+     *        </p>
+     *        <p>
+     *        Either a <code>SourceEntity</code> or a <code>Definition</code> must be provided in order for the request
+     *        to be valid.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

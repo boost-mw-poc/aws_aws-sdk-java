@@ -68,6 +68,13 @@ public class StartDeploymentRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      */
     private java.util.Map<String, String> tags;
+    /**
+     * <p>
+     * The KMS key identifier (key ID, key alias, or key ARN). AppConfig uses this ID to encrypt the configuration data
+     * using a customer managed key.
+     * </p>
+     */
+    private String kmsKeyIdentifier;
 
     /**
      * <p>
@@ -384,6 +391,52 @@ public class StartDeploymentRequest extends com.amazonaws.AmazonWebServiceReques
     }
 
     /**
+     * <p>
+     * The KMS key identifier (key ID, key alias, or key ARN). AppConfig uses this ID to encrypt the configuration data
+     * using a customer managed key.
+     * </p>
+     * 
+     * @param kmsKeyIdentifier
+     *        The KMS key identifier (key ID, key alias, or key ARN). AppConfig uses this ID to encrypt the
+     *        configuration data using a customer managed key.
+     */
+
+    public void setKmsKeyIdentifier(String kmsKeyIdentifier) {
+        this.kmsKeyIdentifier = kmsKeyIdentifier;
+    }
+
+    /**
+     * <p>
+     * The KMS key identifier (key ID, key alias, or key ARN). AppConfig uses this ID to encrypt the configuration data
+     * using a customer managed key.
+     * </p>
+     * 
+     * @return The KMS key identifier (key ID, key alias, or key ARN). AppConfig uses this ID to encrypt the
+     *         configuration data using a customer managed key.
+     */
+
+    public String getKmsKeyIdentifier() {
+        return this.kmsKeyIdentifier;
+    }
+
+    /**
+     * <p>
+     * The KMS key identifier (key ID, key alias, or key ARN). AppConfig uses this ID to encrypt the configuration data
+     * using a customer managed key.
+     * </p>
+     * 
+     * @param kmsKeyIdentifier
+     *        The KMS key identifier (key ID, key alias, or key ARN). AppConfig uses this ID to encrypt the
+     *        configuration data using a customer managed key.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public StartDeploymentRequest withKmsKeyIdentifier(String kmsKeyIdentifier) {
+        setKmsKeyIdentifier(kmsKeyIdentifier);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -408,7 +461,9 @@ public class StartDeploymentRequest extends com.amazonaws.AmazonWebServiceReques
         if (getDescription() != null)
             sb.append("Description: ").append(getDescription()).append(",");
         if (getTags() != null)
-            sb.append("Tags: ").append(getTags());
+            sb.append("Tags: ").append(getTags()).append(",");
+        if (getKmsKeyIdentifier() != null)
+            sb.append("KmsKeyIdentifier: ").append(getKmsKeyIdentifier());
         sb.append("}");
         return sb.toString();
     }
@@ -451,6 +506,10 @@ public class StartDeploymentRequest extends com.amazonaws.AmazonWebServiceReques
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
             return false;
+        if (other.getKmsKeyIdentifier() == null ^ this.getKmsKeyIdentifier() == null)
+            return false;
+        if (other.getKmsKeyIdentifier() != null && other.getKmsKeyIdentifier().equals(this.getKmsKeyIdentifier()) == false)
+            return false;
         return true;
     }
 
@@ -466,6 +525,7 @@ public class StartDeploymentRequest extends com.amazonaws.AmazonWebServiceReques
         hashCode = prime * hashCode + ((getConfigurationVersion() == null) ? 0 : getConfigurationVersion().hashCode());
         hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
+        hashCode = prime * hashCode + ((getKmsKeyIdentifier() == null) ? 0 : getKmsKeyIdentifier().hashCode());
         return hashCode;
     }
 

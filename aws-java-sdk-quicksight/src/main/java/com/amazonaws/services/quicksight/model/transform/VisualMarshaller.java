@@ -71,6 +71,8 @@ public class VisualMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CustomContentVisual").build();
     private static final MarshallingInfo<StructuredPojo> EMPTYVISUAL_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EmptyVisual").build();
+    private static final MarshallingInfo<StructuredPojo> RADARCHARTVISUAL_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("RadarChartVisual").build();
 
     private static final VisualMarshaller instance = new VisualMarshaller();
 
@@ -110,6 +112,7 @@ public class VisualMarshaller {
             protocolMarshaller.marshall(visual.getSankeyDiagramVisual(), SANKEYDIAGRAMVISUAL_BINDING);
             protocolMarshaller.marshall(visual.getCustomContentVisual(), CUSTOMCONTENTVISUAL_BINDING);
             protocolMarshaller.marshall(visual.getEmptyVisual(), EMPTYVISUAL_BINDING);
+            protocolMarshaller.marshall(visual.getRadarChartVisual(), RADARCHARTVISUAL_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }
