@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Defines the compliance of an application component against the resiliency policy.
+ * Defines the compliance of an Application Component against the resiliency policy.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/resiliencehub-2020-04-30/AppComponentCompliance"
@@ -30,13 +30,13 @@ public class AppComponentCompliance implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The name of the application component.
+     * The name of the Application Component.
      * </p>
      */
     private String appComponentName;
     /**
      * <p>
-     * The compliance of the application component against the resiliency policy.
+     * The compliance of the Application Component against the resiliency policy.
      * </p>
      */
     private java.util.Map<String, DisruptionCompliance> compliance;
@@ -67,11 +67,11 @@ public class AppComponentCompliance implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The name of the application component.
+     * The name of the Application Component.
      * </p>
      * 
      * @param appComponentName
-     *        The name of the application component.
+     *        The name of the Application Component.
      */
 
     public void setAppComponentName(String appComponentName) {
@@ -80,10 +80,10 @@ public class AppComponentCompliance implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The name of the application component.
+     * The name of the Application Component.
      * </p>
      * 
-     * @return The name of the application component.
+     * @return The name of the Application Component.
      */
 
     public String getAppComponentName() {
@@ -92,11 +92,11 @@ public class AppComponentCompliance implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The name of the application component.
+     * The name of the Application Component.
      * </p>
      * 
      * @param appComponentName
-     *        The name of the application component.
+     *        The name of the Application Component.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -107,10 +107,10 @@ public class AppComponentCompliance implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The compliance of the application component against the resiliency policy.
+     * The compliance of the Application Component against the resiliency policy.
      * </p>
      * 
-     * @return The compliance of the application component against the resiliency policy.
+     * @return The compliance of the Application Component against the resiliency policy.
      */
 
     public java.util.Map<String, DisruptionCompliance> getCompliance() {
@@ -119,11 +119,11 @@ public class AppComponentCompliance implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The compliance of the application component against the resiliency policy.
+     * The compliance of the Application Component against the resiliency policy.
      * </p>
      * 
      * @param compliance
-     *        The compliance of the application component against the resiliency policy.
+     *        The compliance of the Application Component against the resiliency policy.
      */
 
     public void setCompliance(java.util.Map<String, DisruptionCompliance> compliance) {
@@ -132,11 +132,11 @@ public class AppComponentCompliance implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The compliance of the application component against the resiliency policy.
+     * The compliance of the Application Component against the resiliency policy.
      * </p>
      * 
      * @param compliance
-     *        The compliance of the application component against the resiliency policy.
+     *        The compliance of the Application Component against the resiliency policy.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

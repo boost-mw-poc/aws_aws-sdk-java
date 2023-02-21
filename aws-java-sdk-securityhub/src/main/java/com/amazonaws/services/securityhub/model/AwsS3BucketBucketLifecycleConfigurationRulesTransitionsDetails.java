@@ -36,8 +36,8 @@ public class AwsS3BucketBucketLifecycleConfigurationRulesTransitionsDetails impl
      * </p>
      * <p>
      * Uses the <code>date-time</code> format specified in <a href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC
-     * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces. For example,
-     * <code>2020-03-22T13:22:13.933Z</code>.
+     * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces, and date and time should be
+     * separated by <code>T</code>. For example, <code>2020-03-22T13:22:13.933Z</code>.
      * </p>
      */
     private String date;
@@ -89,8 +89,8 @@ public class AwsS3BucketBucketLifecycleConfigurationRulesTransitionsDetails impl
      * </p>
      * <p>
      * Uses the <code>date-time</code> format specified in <a href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC
-     * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces. For example,
-     * <code>2020-03-22T13:22:13.933Z</code>.
+     * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces, and date and time should be
+     * separated by <code>T</code>. For example, <code>2020-03-22T13:22:13.933Z</code>.
      * </p>
      * 
      * @param date
@@ -99,7 +99,8 @@ public class AwsS3BucketBucketLifecycleConfigurationRulesTransitionsDetails impl
      *        <p>
      *        Uses the <code>date-time</code> format specified in <a
      *        href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
-     *        Format</a>. The value cannot contain spaces. For example, <code>2020-03-22T13:22:13.933Z</code>.
+     *        Format</a>. The value cannot contain spaces, and date and time should be separated by <code>T</code>. For
+     *        example, <code>2020-03-22T13:22:13.933Z</code>.
      */
 
     public void setDate(String date) {
@@ -113,8 +114,8 @@ public class AwsS3BucketBucketLifecycleConfigurationRulesTransitionsDetails impl
      * </p>
      * <p>
      * Uses the <code>date-time</code> format specified in <a href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC
-     * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces. For example,
-     * <code>2020-03-22T13:22:13.933Z</code>.
+     * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces, and date and time should be
+     * separated by <code>T</code>. For example, <code>2020-03-22T13:22:13.933Z</code>.
      * </p>
      * 
      * @return A date on which to transition objects to the specified storage class. If you provide <code>Date</code>,
@@ -122,7 +123,8 @@ public class AwsS3BucketBucketLifecycleConfigurationRulesTransitionsDetails impl
      *         <p>
      *         Uses the <code>date-time</code> format specified in <a
      *         href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
-     *         Format</a>. The value cannot contain spaces. For example, <code>2020-03-22T13:22:13.933Z</code>.
+     *         Format</a>. The value cannot contain spaces, and date and time should be separated by <code>T</code>. For
+     *         example, <code>2020-03-22T13:22:13.933Z</code>.
      */
 
     public String getDate() {
@@ -136,8 +138,8 @@ public class AwsS3BucketBucketLifecycleConfigurationRulesTransitionsDetails impl
      * </p>
      * <p>
      * Uses the <code>date-time</code> format specified in <a href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC
-     * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces. For example,
-     * <code>2020-03-22T13:22:13.933Z</code>.
+     * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces, and date and time should be
+     * separated by <code>T</code>. For example, <code>2020-03-22T13:22:13.933Z</code>.
      * </p>
      * 
      * @param date
@@ -146,7 +148,8 @@ public class AwsS3BucketBucketLifecycleConfigurationRulesTransitionsDetails impl
      *        <p>
      *        Uses the <code>date-time</code> format specified in <a
      *        href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
-     *        Format</a>. The value cannot contain spaces. For example, <code>2020-03-22T13:22:13.933Z</code>.
+     *        Format</a>. The value cannot contain spaces, and date and time should be separated by <code>T</code>. For
+     *        example, <code>2020-03-22T13:22:13.933Z</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

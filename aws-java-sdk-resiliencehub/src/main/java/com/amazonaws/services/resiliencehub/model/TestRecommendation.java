@@ -30,7 +30,7 @@ public class TestRecommendation implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The name of the application component.
+     * The name of the Application Component.
      * </p>
      */
     private String appComponentName;
@@ -97,11 +97,11 @@ public class TestRecommendation implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The name of the application component.
+     * The name of the Application Component.
      * </p>
      * 
      * @param appComponentName
-     *        The name of the application component.
+     *        The name of the Application Component.
      */
 
     public void setAppComponentName(String appComponentName) {
@@ -110,10 +110,10 @@ public class TestRecommendation implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The name of the application component.
+     * The name of the Application Component.
      * </p>
      * 
-     * @return The name of the application component.
+     * @return The name of the Application Component.
      */
 
     public String getAppComponentName() {
@@ -122,11 +122,11 @@ public class TestRecommendation implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The name of the application component.
+     * The name of the Application Component.
      * </p>
      * 
      * @param appComponentName
-     *        The name of the application component.
+     *        The name of the Application Component.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

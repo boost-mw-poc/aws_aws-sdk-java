@@ -16,9 +16,9 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * Occurs when a conflict with a previous successful write is detected. This generally occurs when the previous write
- * did not have time to propagate to the host serving the current request. A retry (with appropriate backoff logic) is
- * the recommended response to this exception.
+ * This exception occurs when a conflict with a previous successful write is detected. This generally occurs when the
+ * previous write did not have time to propagate to the host serving the current request. A retry (with appropriate
+ * backoff logic) is the recommended response to this exception.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

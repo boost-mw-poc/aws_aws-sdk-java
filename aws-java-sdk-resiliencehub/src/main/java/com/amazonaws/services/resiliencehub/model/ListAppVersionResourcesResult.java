@@ -37,7 +37,7 @@ public class ListAppVersionResourcesResult extends com.amazonaws.AmazonWebServic
     private java.util.List<PhysicalResource> physicalResources;
     /**
      * <p>
-     * The identifier for a specific resolution.
+     * The ID for a specific resolution.
      * </p>
      */
     private String resolutionId;
@@ -154,11 +154,11 @@ public class ListAppVersionResourcesResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The identifier for a specific resolution.
+     * The ID for a specific resolution.
      * </p>
      * 
      * @param resolutionId
-     *        The identifier for a specific resolution.
+     *        The ID for a specific resolution.
      */
 
     public void setResolutionId(String resolutionId) {
@@ -167,10 +167,10 @@ public class ListAppVersionResourcesResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The identifier for a specific resolution.
+     * The ID for a specific resolution.
      * </p>
      * 
-     * @return The identifier for a specific resolution.
+     * @return The ID for a specific resolution.
      */
 
     public String getResolutionId() {
@@ -179,11 +179,11 @@ public class ListAppVersionResourcesResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The identifier for a specific resolution.
+     * The ID for a specific resolution.
      * </p>
      * 
      * @param resolutionId
-     *        The identifier for a specific resolution.
+     *        The ID for a specific resolution.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -27,13 +27,19 @@ public class ImportResourcesToDraftAppVersionRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>
-     * :resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs,
-     * see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names
-     * (ARNs)</a> in the <i>AWS General Reference</i>.
+     * The Amazon Resource Name (ARN) of the AWS Resilience Hub application. The format for this ARN is: arn:
+     * <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more
+     * information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">
+     * Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i> guide.
      * </p>
      */
     private String appArn;
+    /**
+     * <p>
+     * The import strategy you would like to set to import resources into AWS Resilience Hub application.
+     * </p>
+     */
+    private String importStrategy;
     /**
      * <p>
      * The Amazon Resource Names (ARNs) for the resources that you want to import.
@@ -49,17 +55,18 @@ public class ImportResourcesToDraftAppVersionRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>
-     * :resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs,
-     * see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names
-     * (ARNs)</a> in the <i>AWS General Reference</i>.
+     * The Amazon Resource Name (ARN) of the AWS Resilience Hub application. The format for this ARN is: arn:
+     * <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more
+     * information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">
+     * Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i> guide.
      * </p>
      * 
      * @param appArn
-     *        The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>
-     *        :resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information
-     *        about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">
-     *        Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.
+     *        The Amazon Resource Name (ARN) of the AWS Resilience Hub application. The format for this ARN is: arn:
+     *        <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For
+     *        more information about ARNs, see <a
+     *        href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names
+     *        (ARNs)</a> in the <i>AWS General Reference</i> guide.
      */
 
     public void setAppArn(String appArn) {
@@ -68,16 +75,17 @@ public class ImportResourcesToDraftAppVersionRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>
-     * :resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs,
-     * see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names
-     * (ARNs)</a> in the <i>AWS General Reference</i>.
+     * The Amazon Resource Name (ARN) of the AWS Resilience Hub application. The format for this ARN is: arn:
+     * <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more
+     * information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">
+     * Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i> guide.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>
-     *         :resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information
-     *         about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">
-     *         Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.
+     * @return The Amazon Resource Name (ARN) of the AWS Resilience Hub application. The format for this ARN is: arn:
+     *         <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>.
+     *         For more information about ARNs, see <a
+     *         href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names
+     *         (ARNs)</a> in the <i>AWS General Reference</i> guide.
      */
 
     public String getAppArn() {
@@ -86,22 +94,82 @@ public class ImportResourcesToDraftAppVersionRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>
-     * :resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs,
-     * see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names
-     * (ARNs)</a> in the <i>AWS General Reference</i>.
+     * The Amazon Resource Name (ARN) of the AWS Resilience Hub application. The format for this ARN is: arn:
+     * <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more
+     * information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">
+     * Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i> guide.
      * </p>
      * 
      * @param appArn
-     *        The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>
-     *        :resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information
-     *        about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">
-     *        Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.
+     *        The Amazon Resource Name (ARN) of the AWS Resilience Hub application. The format for this ARN is: arn:
+     *        <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For
+     *        more information about ARNs, see <a
+     *        href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names
+     *        (ARNs)</a> in the <i>AWS General Reference</i> guide.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public ImportResourcesToDraftAppVersionRequest withAppArn(String appArn) {
         setAppArn(appArn);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The import strategy you would like to set to import resources into AWS Resilience Hub application.
+     * </p>
+     * 
+     * @param importStrategy
+     *        The import strategy you would like to set to import resources into AWS Resilience Hub application.
+     * @see ResourceImportStrategyType
+     */
+
+    public void setImportStrategy(String importStrategy) {
+        this.importStrategy = importStrategy;
+    }
+
+    /**
+     * <p>
+     * The import strategy you would like to set to import resources into AWS Resilience Hub application.
+     * </p>
+     * 
+     * @return The import strategy you would like to set to import resources into AWS Resilience Hub application.
+     * @see ResourceImportStrategyType
+     */
+
+    public String getImportStrategy() {
+        return this.importStrategy;
+    }
+
+    /**
+     * <p>
+     * The import strategy you would like to set to import resources into AWS Resilience Hub application.
+     * </p>
+     * 
+     * @param importStrategy
+     *        The import strategy you would like to set to import resources into AWS Resilience Hub application.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ResourceImportStrategyType
+     */
+
+    public ImportResourcesToDraftAppVersionRequest withImportStrategy(String importStrategy) {
+        setImportStrategy(importStrategy);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The import strategy you would like to set to import resources into AWS Resilience Hub application.
+     * </p>
+     * 
+     * @param importStrategy
+     *        The import strategy you would like to set to import resources into AWS Resilience Hub application.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ResourceImportStrategyType
+     */
+
+    public ImportResourcesToDraftAppVersionRequest withImportStrategy(ResourceImportStrategyType importStrategy) {
+        this.importStrategy = importStrategy.toString();
         return this;
     }
 
@@ -259,6 +327,8 @@ public class ImportResourcesToDraftAppVersionRequest extends com.amazonaws.Amazo
         sb.append("{");
         if (getAppArn() != null)
             sb.append("AppArn: ").append(getAppArn()).append(",");
+        if (getImportStrategy() != null)
+            sb.append("ImportStrategy: ").append(getImportStrategy()).append(",");
         if (getSourceArns() != null)
             sb.append("SourceArns: ").append(getSourceArns()).append(",");
         if (getTerraformSources() != null)
@@ -281,6 +351,10 @@ public class ImportResourcesToDraftAppVersionRequest extends com.amazonaws.Amazo
             return false;
         if (other.getAppArn() != null && other.getAppArn().equals(this.getAppArn()) == false)
             return false;
+        if (other.getImportStrategy() == null ^ this.getImportStrategy() == null)
+            return false;
+        if (other.getImportStrategy() != null && other.getImportStrategy().equals(this.getImportStrategy()) == false)
+            return false;
         if (other.getSourceArns() == null ^ this.getSourceArns() == null)
             return false;
         if (other.getSourceArns() != null && other.getSourceArns().equals(this.getSourceArns()) == false)
@@ -298,6 +372,7 @@ public class ImportResourcesToDraftAppVersionRequest extends com.amazonaws.Amazo
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getAppArn() == null) ? 0 : getAppArn().hashCode());
+        hashCode = prime * hashCode + ((getImportStrategy() == null) ? 0 : getImportStrategy().hashCode());
         hashCode = prime * hashCode + ((getSourceArns() == null) ? 0 : getSourceArns().hashCode());
         hashCode = prime * hashCode + ((getTerraformSources() == null) ? 0 : getTerraformSources().hashCode());
         return hashCode;

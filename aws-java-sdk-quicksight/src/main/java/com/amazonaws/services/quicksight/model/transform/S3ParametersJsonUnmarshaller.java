@@ -52,6 +52,10 @@ public class S3ParametersJsonUnmarshaller implements Unmarshaller<S3Parameters, 
                     context.nextToken();
                     s3Parameters.setManifestFileLocation(ManifestFileLocationJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("RoleArn", targetDepth)) {
+                    context.nextToken();
+                    s3Parameters.setRoleArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

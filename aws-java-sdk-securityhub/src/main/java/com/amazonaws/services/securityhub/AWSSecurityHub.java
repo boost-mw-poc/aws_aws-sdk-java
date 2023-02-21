@@ -1132,12 +1132,12 @@ public interface AWSSecurityHub {
      * </p>
      * <p>
      * When you use the <code>EnableSecurityHub</code> operation to enable Security Hub, you also automatically enable
-     * the following standards.
+     * the following standards:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * CIS Amazon Web Services Foundations
+     * Center for Internet Security (CIS) Amazon Web Services Foundations Benchmark v1.2.0
      * </p>
      * </li>
      * <li>
@@ -1147,10 +1147,10 @@ public interface AWSSecurityHub {
      * </li>
      * </ul>
      * <p>
-     * You do not enable the Payment Card Industry Data Security Standard (PCI DSS) standard.
+     * Other standards are not automatically enabled.
      * </p>
      * <p>
-     * To not enable the automatically enabled standards, set <code>EnableDefaultStandards</code> to <code>false</code>.
+     * To opt out of automatically enabled standards, set <code>EnableDefaultStandards</code> to <code>false</code>.
      * </p>
      * <p>
      * After you enable Security Hub, to enable a standard, use the <code>BatchEnableStandards</code> operation. To

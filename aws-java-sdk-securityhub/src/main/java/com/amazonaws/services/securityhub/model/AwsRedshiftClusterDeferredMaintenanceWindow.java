@@ -35,8 +35,8 @@ public class AwsRedshiftClusterDeferredMaintenanceWindow implements Serializable
      * </p>
      * <p>
      * Uses the <code>date-time</code> format specified in <a href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC
-     * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces. For example,
-     * <code>2020-03-22T13:22:13.933Z</code>.
+     * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces, and date and time should be
+     * separated by <code>T</code>. For example, <code>2020-03-22T13:22:13.933Z</code>.
      * </p>
      */
     private String deferMaintenanceEndTime;
@@ -52,8 +52,8 @@ public class AwsRedshiftClusterDeferredMaintenanceWindow implements Serializable
      * </p>
      * <p>
      * Uses the <code>date-time</code> format specified in <a href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC
-     * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces. For example,
-     * <code>2020-03-22T13:22:13.933Z</code>.
+     * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces, and date and time should be
+     * separated by <code>T</code>. For example, <code>2020-03-22T13:22:13.933Z</code>.
      * </p>
      */
     private String deferMaintenanceStartTime;
@@ -64,8 +64,8 @@ public class AwsRedshiftClusterDeferredMaintenanceWindow implements Serializable
      * </p>
      * <p>
      * Uses the <code>date-time</code> format specified in <a href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC
-     * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces. For example,
-     * <code>2020-03-22T13:22:13.933Z</code>.
+     * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces, and date and time should be
+     * separated by <code>T</code>. For example, <code>2020-03-22T13:22:13.933Z</code>.
      * </p>
      * 
      * @param deferMaintenanceEndTime
@@ -73,7 +73,8 @@ public class AwsRedshiftClusterDeferredMaintenanceWindow implements Serializable
      *        <p>
      *        Uses the <code>date-time</code> format specified in <a
      *        href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
-     *        Format</a>. The value cannot contain spaces. For example, <code>2020-03-22T13:22:13.933Z</code>.
+     *        Format</a>. The value cannot contain spaces, and date and time should be separated by <code>T</code>. For
+     *        example, <code>2020-03-22T13:22:13.933Z</code>.
      */
 
     public void setDeferMaintenanceEndTime(String deferMaintenanceEndTime) {
@@ -86,15 +87,16 @@ public class AwsRedshiftClusterDeferredMaintenanceWindow implements Serializable
      * </p>
      * <p>
      * Uses the <code>date-time</code> format specified in <a href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC
-     * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces. For example,
-     * <code>2020-03-22T13:22:13.933Z</code>.
+     * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces, and date and time should be
+     * separated by <code>T</code>. For example, <code>2020-03-22T13:22:13.933Z</code>.
      * </p>
      * 
      * @return The end of the time window for which maintenance was deferred.</p>
      *         <p>
      *         Uses the <code>date-time</code> format specified in <a
      *         href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
-     *         Format</a>. The value cannot contain spaces. For example, <code>2020-03-22T13:22:13.933Z</code>.
+     *         Format</a>. The value cannot contain spaces, and date and time should be separated by <code>T</code>. For
+     *         example, <code>2020-03-22T13:22:13.933Z</code>.
      */
 
     public String getDeferMaintenanceEndTime() {
@@ -107,8 +109,8 @@ public class AwsRedshiftClusterDeferredMaintenanceWindow implements Serializable
      * </p>
      * <p>
      * Uses the <code>date-time</code> format specified in <a href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC
-     * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces. For example,
-     * <code>2020-03-22T13:22:13.933Z</code>.
+     * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces, and date and time should be
+     * separated by <code>T</code>. For example, <code>2020-03-22T13:22:13.933Z</code>.
      * </p>
      * 
      * @param deferMaintenanceEndTime
@@ -116,7 +118,8 @@ public class AwsRedshiftClusterDeferredMaintenanceWindow implements Serializable
      *        <p>
      *        Uses the <code>date-time</code> format specified in <a
      *        href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
-     *        Format</a>. The value cannot contain spaces. For example, <code>2020-03-22T13:22:13.933Z</code>.
+     *        Format</a>. The value cannot contain spaces, and date and time should be separated by <code>T</code>. For
+     *        example, <code>2020-03-22T13:22:13.933Z</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -171,8 +174,8 @@ public class AwsRedshiftClusterDeferredMaintenanceWindow implements Serializable
      * </p>
      * <p>
      * Uses the <code>date-time</code> format specified in <a href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC
-     * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces. For example,
-     * <code>2020-03-22T13:22:13.933Z</code>.
+     * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces, and date and time should be
+     * separated by <code>T</code>. For example, <code>2020-03-22T13:22:13.933Z</code>.
      * </p>
      * 
      * @param deferMaintenanceStartTime
@@ -180,7 +183,8 @@ public class AwsRedshiftClusterDeferredMaintenanceWindow implements Serializable
      *        <p>
      *        Uses the <code>date-time</code> format specified in <a
      *        href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
-     *        Format</a>. The value cannot contain spaces. For example, <code>2020-03-22T13:22:13.933Z</code>.
+     *        Format</a>. The value cannot contain spaces, and date and time should be separated by <code>T</code>. For
+     *        example, <code>2020-03-22T13:22:13.933Z</code>.
      */
 
     public void setDeferMaintenanceStartTime(String deferMaintenanceStartTime) {
@@ -193,15 +197,16 @@ public class AwsRedshiftClusterDeferredMaintenanceWindow implements Serializable
      * </p>
      * <p>
      * Uses the <code>date-time</code> format specified in <a href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC
-     * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces. For example,
-     * <code>2020-03-22T13:22:13.933Z</code>.
+     * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces, and date and time should be
+     * separated by <code>T</code>. For example, <code>2020-03-22T13:22:13.933Z</code>.
      * </p>
      * 
      * @return The start of the time window for which maintenance was deferred.</p>
      *         <p>
      *         Uses the <code>date-time</code> format specified in <a
      *         href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
-     *         Format</a>. The value cannot contain spaces. For example, <code>2020-03-22T13:22:13.933Z</code>.
+     *         Format</a>. The value cannot contain spaces, and date and time should be separated by <code>T</code>. For
+     *         example, <code>2020-03-22T13:22:13.933Z</code>.
      */
 
     public String getDeferMaintenanceStartTime() {
@@ -214,8 +219,8 @@ public class AwsRedshiftClusterDeferredMaintenanceWindow implements Serializable
      * </p>
      * <p>
      * Uses the <code>date-time</code> format specified in <a href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC
-     * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces. For example,
-     * <code>2020-03-22T13:22:13.933Z</code>.
+     * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces, and date and time should be
+     * separated by <code>T</code>. For example, <code>2020-03-22T13:22:13.933Z</code>.
      * </p>
      * 
      * @param deferMaintenanceStartTime
@@ -223,7 +228,8 @@ public class AwsRedshiftClusterDeferredMaintenanceWindow implements Serializable
      *        <p>
      *        Uses the <code>date-time</code> format specified in <a
      *        href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
-     *        Format</a>. The value cannot contain spaces. For example, <code>2020-03-22T13:22:13.933Z</code>.
+     *        Format</a>. The value cannot contain spaces, and date and time should be separated by <code>T</code>. For
+     *        example, <code>2020-03-22T13:22:13.933Z</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

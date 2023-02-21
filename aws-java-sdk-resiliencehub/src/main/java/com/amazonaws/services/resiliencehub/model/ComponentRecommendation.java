@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Defines recommendations for a Resilience Hub application component, returned as an object. This object contains
+ * Defines recommendations for an AWS Resilience Hub Application Component, returned as an object. This object contains
  * component names, configuration recommendations, and recommendation statuses.
  * </p>
  * 
@@ -31,7 +31,7 @@ public class ComponentRecommendation implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The name of the application component.
+     * The name of the Application Component.
      * </p>
      */
     private String appComponentName;
@@ -50,11 +50,11 @@ public class ComponentRecommendation implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The name of the application component.
+     * The name of the Application Component.
      * </p>
      * 
      * @param appComponentName
-     *        The name of the application component.
+     *        The name of the Application Component.
      */
 
     public void setAppComponentName(String appComponentName) {
@@ -63,10 +63,10 @@ public class ComponentRecommendation implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The name of the application component.
+     * The name of the Application Component.
      * </p>
      * 
-     * @return The name of the application component.
+     * @return The name of the Application Component.
      */
 
     public String getAppComponentName() {
@@ -75,11 +75,11 @@ public class ComponentRecommendation implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The name of the application component.
+     * The name of the Application Component.
      * </p>
      * 
      * @param appComponentName
-     *        The name of the application component.
+     *        The name of the Application Component.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

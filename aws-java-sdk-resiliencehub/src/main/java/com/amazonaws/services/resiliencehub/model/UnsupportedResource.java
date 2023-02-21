@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Defines a resource that is not supported by Resilience Hub.
+ * Defines a resource that is not supported by AWS Resilience Hub.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/resiliencehub-2020-04-30/UnsupportedResource" target="_top">AWS

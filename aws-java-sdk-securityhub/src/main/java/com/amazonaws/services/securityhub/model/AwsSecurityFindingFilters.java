@@ -76,12 +76,22 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
      * An ISO8601-formatted timestamp that indicates when the security-findings provider first observed the potential
      * security issue that a finding captured.
      * </p>
+     * <p>
+     * A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces, and date
+     * and time should be separated by <code>T</code>. For more information, see <a
+     * href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time Format</a>.
+     * </p>
      */
     private java.util.List<DateFilter> firstObservedAt;
     /**
      * <p>
      * An ISO8601-formatted timestamp that indicates when the security-findings provider most recently observed the
      * potential security issue that a finding captured.
+     * </p>
+     * <p>
+     * A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces, and date
+     * and time should be separated by <code>T</code>. For more information, see <a
+     * href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time Format</a>.
      * </p>
      */
     private java.util.List<DateFilter> lastObservedAt;
@@ -90,12 +100,22 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
      * An ISO8601-formatted timestamp that indicates when the security-findings provider captured the potential security
      * issue that a finding captured.
      * </p>
+     * <p>
+     * A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces, and date
+     * and time should be separated by <code>T</code>. For more information, see <a
+     * href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time Format</a>.
+     * </p>
      */
     private java.util.List<DateFilter> createdAt;
     /**
      * <p>
      * An ISO8601-formatted timestamp that indicates when the security-findings provider last updated the finding
      * record.
+     * </p>
+     * <p>
+     * A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces, and date
+     * and time should be separated by <code>T</code>. For more information, see <a
+     * href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time Format</a>.
      * </p>
      */
     private java.util.List<DateFilter> updatedAt;
@@ -306,13 +326,23 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
     private java.util.List<NumberFilter> processParentPid;
     /**
      * <p>
-     * The date/time that the process was launched.
+     * A timestamp that identifies when the process was launched.
+     * </p>
+     * <p>
+     * A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces, and date
+     * and time should be separated by <code>T</code>. For more information, see <a
+     * href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time Format</a>.
      * </p>
      */
     private java.util.List<DateFilter> processLaunchedAt;
     /**
      * <p>
-     * The date/time that the process was terminated.
+     * A timestamp that identifies when the process was terminated.
+     * </p>
+     * <p>
+     * A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces, and date
+     * and time should be separated by <code>T</code>. For more information, see <a
+     * href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time Format</a>.
      * </p>
      */
     private java.util.List<DateFilter> processTerminatedAt;
@@ -336,7 +366,7 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
     private java.util.List<StringFilter> threatIntelIndicatorCategory;
     /**
      * <p>
-     * The date/time of the last observation of a threat intelligence indicator.
+     * A timestamp that identifies the last observation of a threat intelligence indicator.
      * </p>
      */
     private java.util.List<DateFilter> threatIntelIndicatorLastObservedAt;
@@ -499,7 +529,12 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
     private java.util.List<StringFilter> resourceContainerImageName;
     /**
      * <p>
-     * The date/time that the container was started.
+     * A timestamp that identifies when the container was started.
+     * </p>
+     * <p>
+     * A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces, and date
+     * and time should be separated by <code>T</code>. For more information, see <a
+     * href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time Format</a>.
      * </p>
      */
     private java.util.List<DateFilter> resourceContainerLaunchedAt;
@@ -1197,9 +1232,19 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
      * An ISO8601-formatted timestamp that indicates when the security-findings provider first observed the potential
      * security issue that a finding captured.
      * </p>
+     * <p>
+     * A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces, and date
+     * and time should be separated by <code>T</code>. For more information, see <a
+     * href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time Format</a>.
+     * </p>
      * 
      * @return An ISO8601-formatted timestamp that indicates when the security-findings provider first observed the
-     *         potential security issue that a finding captured.
+     *         potential security issue that a finding captured.</p>
+     *         <p>
+     *         A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces,
+     *         and date and time should be separated by <code>T</code>. For more information, see <a
+     *         href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
+     *         Format</a>.
      */
 
     public java.util.List<DateFilter> getFirstObservedAt() {
@@ -1211,10 +1256,20 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
      * An ISO8601-formatted timestamp that indicates when the security-findings provider first observed the potential
      * security issue that a finding captured.
      * </p>
+     * <p>
+     * A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces, and date
+     * and time should be separated by <code>T</code>. For more information, see <a
+     * href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time Format</a>.
+     * </p>
      * 
      * @param firstObservedAt
      *        An ISO8601-formatted timestamp that indicates when the security-findings provider first observed the
-     *        potential security issue that a finding captured.
+     *        potential security issue that a finding captured.</p>
+     *        <p>
+     *        A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces,
+     *        and date and time should be separated by <code>T</code>. For more information, see <a
+     *        href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
+     *        Format</a>.
      */
 
     public void setFirstObservedAt(java.util.Collection<DateFilter> firstObservedAt) {
@@ -1232,6 +1287,11 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
      * security issue that a finding captured.
      * </p>
      * <p>
+     * A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces, and date
+     * and time should be separated by <code>T</code>. For more information, see <a
+     * href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time Format</a>.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setFirstObservedAt(java.util.Collection)} or {@link #withFirstObservedAt(java.util.Collection)} if you
      * want to override the existing values.
@@ -1239,7 +1299,12 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
      * 
      * @param firstObservedAt
      *        An ISO8601-formatted timestamp that indicates when the security-findings provider first observed the
-     *        potential security issue that a finding captured.
+     *        potential security issue that a finding captured.</p>
+     *        <p>
+     *        A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces,
+     *        and date and time should be separated by <code>T</code>. For more information, see <a
+     *        href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
+     *        Format</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1258,10 +1323,20 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
      * An ISO8601-formatted timestamp that indicates when the security-findings provider first observed the potential
      * security issue that a finding captured.
      * </p>
+     * <p>
+     * A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces, and date
+     * and time should be separated by <code>T</code>. For more information, see <a
+     * href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time Format</a>.
+     * </p>
      * 
      * @param firstObservedAt
      *        An ISO8601-formatted timestamp that indicates when the security-findings provider first observed the
-     *        potential security issue that a finding captured.
+     *        potential security issue that a finding captured.</p>
+     *        <p>
+     *        A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces,
+     *        and date and time should be separated by <code>T</code>. For more information, see <a
+     *        href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
+     *        Format</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1275,9 +1350,19 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
      * An ISO8601-formatted timestamp that indicates when the security-findings provider most recently observed the
      * potential security issue that a finding captured.
      * </p>
+     * <p>
+     * A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces, and date
+     * and time should be separated by <code>T</code>. For more information, see <a
+     * href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time Format</a>.
+     * </p>
      * 
      * @return An ISO8601-formatted timestamp that indicates when the security-findings provider most recently observed
-     *         the potential security issue that a finding captured.
+     *         the potential security issue that a finding captured.</p>
+     *         <p>
+     *         A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces,
+     *         and date and time should be separated by <code>T</code>. For more information, see <a
+     *         href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
+     *         Format</a>.
      */
 
     public java.util.List<DateFilter> getLastObservedAt() {
@@ -1289,10 +1374,20 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
      * An ISO8601-formatted timestamp that indicates when the security-findings provider most recently observed the
      * potential security issue that a finding captured.
      * </p>
+     * <p>
+     * A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces, and date
+     * and time should be separated by <code>T</code>. For more information, see <a
+     * href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time Format</a>.
+     * </p>
      * 
      * @param lastObservedAt
      *        An ISO8601-formatted timestamp that indicates when the security-findings provider most recently observed
-     *        the potential security issue that a finding captured.
+     *        the potential security issue that a finding captured.</p>
+     *        <p>
+     *        A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces,
+     *        and date and time should be separated by <code>T</code>. For more information, see <a
+     *        href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
+     *        Format</a>.
      */
 
     public void setLastObservedAt(java.util.Collection<DateFilter> lastObservedAt) {
@@ -1310,6 +1405,11 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
      * potential security issue that a finding captured.
      * </p>
      * <p>
+     * A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces, and date
+     * and time should be separated by <code>T</code>. For more information, see <a
+     * href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time Format</a>.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setLastObservedAt(java.util.Collection)} or {@link #withLastObservedAt(java.util.Collection)} if you want
      * to override the existing values.
@@ -1317,7 +1417,12 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
      * 
      * @param lastObservedAt
      *        An ISO8601-formatted timestamp that indicates when the security-findings provider most recently observed
-     *        the potential security issue that a finding captured.
+     *        the potential security issue that a finding captured.</p>
+     *        <p>
+     *        A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces,
+     *        and date and time should be separated by <code>T</code>. For more information, see <a
+     *        href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
+     *        Format</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1336,10 +1441,20 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
      * An ISO8601-formatted timestamp that indicates when the security-findings provider most recently observed the
      * potential security issue that a finding captured.
      * </p>
+     * <p>
+     * A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces, and date
+     * and time should be separated by <code>T</code>. For more information, see <a
+     * href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time Format</a>.
+     * </p>
      * 
      * @param lastObservedAt
      *        An ISO8601-formatted timestamp that indicates when the security-findings provider most recently observed
-     *        the potential security issue that a finding captured.
+     *        the potential security issue that a finding captured.</p>
+     *        <p>
+     *        A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces,
+     *        and date and time should be separated by <code>T</code>. For more information, see <a
+     *        href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
+     *        Format</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1353,9 +1468,19 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
      * An ISO8601-formatted timestamp that indicates when the security-findings provider captured the potential security
      * issue that a finding captured.
      * </p>
+     * <p>
+     * A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces, and date
+     * and time should be separated by <code>T</code>. For more information, see <a
+     * href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time Format</a>.
+     * </p>
      * 
      * @return An ISO8601-formatted timestamp that indicates when the security-findings provider captured the potential
-     *         security issue that a finding captured.
+     *         security issue that a finding captured.</p>
+     *         <p>
+     *         A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces,
+     *         and date and time should be separated by <code>T</code>. For more information, see <a
+     *         href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
+     *         Format</a>.
      */
 
     public java.util.List<DateFilter> getCreatedAt() {
@@ -1367,10 +1492,20 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
      * An ISO8601-formatted timestamp that indicates when the security-findings provider captured the potential security
      * issue that a finding captured.
      * </p>
+     * <p>
+     * A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces, and date
+     * and time should be separated by <code>T</code>. For more information, see <a
+     * href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time Format</a>.
+     * </p>
      * 
      * @param createdAt
      *        An ISO8601-formatted timestamp that indicates when the security-findings provider captured the potential
-     *        security issue that a finding captured.
+     *        security issue that a finding captured.</p>
+     *        <p>
+     *        A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces,
+     *        and date and time should be separated by <code>T</code>. For more information, see <a
+     *        href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
+     *        Format</a>.
      */
 
     public void setCreatedAt(java.util.Collection<DateFilter> createdAt) {
@@ -1388,6 +1523,11 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
      * issue that a finding captured.
      * </p>
      * <p>
+     * A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces, and date
+     * and time should be separated by <code>T</code>. For more information, see <a
+     * href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time Format</a>.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setCreatedAt(java.util.Collection)} or {@link #withCreatedAt(java.util.Collection)} if you want to
      * override the existing values.
@@ -1395,7 +1535,12 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
      * 
      * @param createdAt
      *        An ISO8601-formatted timestamp that indicates when the security-findings provider captured the potential
-     *        security issue that a finding captured.
+     *        security issue that a finding captured.</p>
+     *        <p>
+     *        A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces,
+     *        and date and time should be separated by <code>T</code>. For more information, see <a
+     *        href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
+     *        Format</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1414,10 +1559,20 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
      * An ISO8601-formatted timestamp that indicates when the security-findings provider captured the potential security
      * issue that a finding captured.
      * </p>
+     * <p>
+     * A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces, and date
+     * and time should be separated by <code>T</code>. For more information, see <a
+     * href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time Format</a>.
+     * </p>
      * 
      * @param createdAt
      *        An ISO8601-formatted timestamp that indicates when the security-findings provider captured the potential
-     *        security issue that a finding captured.
+     *        security issue that a finding captured.</p>
+     *        <p>
+     *        A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces,
+     *        and date and time should be separated by <code>T</code>. For more information, see <a
+     *        href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
+     *        Format</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1431,9 +1586,19 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
      * An ISO8601-formatted timestamp that indicates when the security-findings provider last updated the finding
      * record.
      * </p>
+     * <p>
+     * A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces, and date
+     * and time should be separated by <code>T</code>. For more information, see <a
+     * href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time Format</a>.
+     * </p>
      * 
      * @return An ISO8601-formatted timestamp that indicates when the security-findings provider last updated the
-     *         finding record.
+     *         finding record. </p>
+     *         <p>
+     *         A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces,
+     *         and date and time should be separated by <code>T</code>. For more information, see <a
+     *         href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
+     *         Format</a>.
      */
 
     public java.util.List<DateFilter> getUpdatedAt() {
@@ -1445,10 +1610,20 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
      * An ISO8601-formatted timestamp that indicates when the security-findings provider last updated the finding
      * record.
      * </p>
+     * <p>
+     * A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces, and date
+     * and time should be separated by <code>T</code>. For more information, see <a
+     * href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time Format</a>.
+     * </p>
      * 
      * @param updatedAt
      *        An ISO8601-formatted timestamp that indicates when the security-findings provider last updated the finding
-     *        record.
+     *        record. </p>
+     *        <p>
+     *        A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces,
+     *        and date and time should be separated by <code>T</code>. For more information, see <a
+     *        href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
+     *        Format</a>.
      */
 
     public void setUpdatedAt(java.util.Collection<DateFilter> updatedAt) {
@@ -1466,6 +1641,11 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
      * record.
      * </p>
      * <p>
+     * A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces, and date
+     * and time should be separated by <code>T</code>. For more information, see <a
+     * href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time Format</a>.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setUpdatedAt(java.util.Collection)} or {@link #withUpdatedAt(java.util.Collection)} if you want to
      * override the existing values.
@@ -1473,7 +1653,12 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
      * 
      * @param updatedAt
      *        An ISO8601-formatted timestamp that indicates when the security-findings provider last updated the finding
-     *        record.
+     *        record. </p>
+     *        <p>
+     *        A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces,
+     *        and date and time should be separated by <code>T</code>. For more information, see <a
+     *        href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
+     *        Format</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1492,10 +1677,20 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
      * An ISO8601-formatted timestamp that indicates when the security-findings provider last updated the finding
      * record.
      * </p>
+     * <p>
+     * A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces, and date
+     * and time should be separated by <code>T</code>. For more information, see <a
+     * href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time Format</a>.
+     * </p>
      * 
      * @param updatedAt
      *        An ISO8601-formatted timestamp that indicates when the security-findings provider last updated the finding
-     *        record.
+     *        record. </p>
+     *        <p>
+     *        A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces,
+     *        and date and time should be separated by <code>T</code>. For more information, see <a
+     *        href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
+     *        Format</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -3826,10 +4021,20 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The date/time that the process was launched.
+     * A timestamp that identifies when the process was launched.
+     * </p>
+     * <p>
+     * A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces, and date
+     * and time should be separated by <code>T</code>. For more information, see <a
+     * href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time Format</a>.
      * </p>
      * 
-     * @return The date/time that the process was launched.
+     * @return A timestamp that identifies when the process was launched.</p>
+     *         <p>
+     *         A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces,
+     *         and date and time should be separated by <code>T</code>. For more information, see <a
+     *         href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
+     *         Format</a>.
      */
 
     public java.util.List<DateFilter> getProcessLaunchedAt() {
@@ -3838,11 +4043,21 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The date/time that the process was launched.
+     * A timestamp that identifies when the process was launched.
+     * </p>
+     * <p>
+     * A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces, and date
+     * and time should be separated by <code>T</code>. For more information, see <a
+     * href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time Format</a>.
      * </p>
      * 
      * @param processLaunchedAt
-     *        The date/time that the process was launched.
+     *        A timestamp that identifies when the process was launched.</p>
+     *        <p>
+     *        A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces,
+     *        and date and time should be separated by <code>T</code>. For more information, see <a
+     *        href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
+     *        Format</a>.
      */
 
     public void setProcessLaunchedAt(java.util.Collection<DateFilter> processLaunchedAt) {
@@ -3856,7 +4071,12 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The date/time that the process was launched.
+     * A timestamp that identifies when the process was launched.
+     * </p>
+     * <p>
+     * A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces, and date
+     * and time should be separated by <code>T</code>. For more information, see <a
+     * href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time Format</a>.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -3865,7 +4085,12 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
      * </p>
      * 
      * @param processLaunchedAt
-     *        The date/time that the process was launched.
+     *        A timestamp that identifies when the process was launched.</p>
+     *        <p>
+     *        A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces,
+     *        and date and time should be separated by <code>T</code>. For more information, see <a
+     *        href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
+     *        Format</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -3881,11 +4106,21 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The date/time that the process was launched.
+     * A timestamp that identifies when the process was launched.
+     * </p>
+     * <p>
+     * A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces, and date
+     * and time should be separated by <code>T</code>. For more information, see <a
+     * href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time Format</a>.
      * </p>
      * 
      * @param processLaunchedAt
-     *        The date/time that the process was launched.
+     *        A timestamp that identifies when the process was launched.</p>
+     *        <p>
+     *        A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces,
+     *        and date and time should be separated by <code>T</code>. For more information, see <a
+     *        href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
+     *        Format</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -3896,10 +4131,20 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The date/time that the process was terminated.
+     * A timestamp that identifies when the process was terminated.
+     * </p>
+     * <p>
+     * A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces, and date
+     * and time should be separated by <code>T</code>. For more information, see <a
+     * href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time Format</a>.
      * </p>
      * 
-     * @return The date/time that the process was terminated.
+     * @return A timestamp that identifies when the process was terminated.</p>
+     *         <p>
+     *         A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces,
+     *         and date and time should be separated by <code>T</code>. For more information, see <a
+     *         href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
+     *         Format</a>.
      */
 
     public java.util.List<DateFilter> getProcessTerminatedAt() {
@@ -3908,11 +4153,21 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The date/time that the process was terminated.
+     * A timestamp that identifies when the process was terminated.
+     * </p>
+     * <p>
+     * A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces, and date
+     * and time should be separated by <code>T</code>. For more information, see <a
+     * href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time Format</a>.
      * </p>
      * 
      * @param processTerminatedAt
-     *        The date/time that the process was terminated.
+     *        A timestamp that identifies when the process was terminated.</p>
+     *        <p>
+     *        A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces,
+     *        and date and time should be separated by <code>T</code>. For more information, see <a
+     *        href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
+     *        Format</a>.
      */
 
     public void setProcessTerminatedAt(java.util.Collection<DateFilter> processTerminatedAt) {
@@ -3926,7 +4181,12 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The date/time that the process was terminated.
+     * A timestamp that identifies when the process was terminated.
+     * </p>
+     * <p>
+     * A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces, and date
+     * and time should be separated by <code>T</code>. For more information, see <a
+     * href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time Format</a>.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -3935,7 +4195,12 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
      * </p>
      * 
      * @param processTerminatedAt
-     *        The date/time that the process was terminated.
+     *        A timestamp that identifies when the process was terminated.</p>
+     *        <p>
+     *        A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces,
+     *        and date and time should be separated by <code>T</code>. For more information, see <a
+     *        href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
+     *        Format</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -3951,11 +4216,21 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The date/time that the process was terminated.
+     * A timestamp that identifies when the process was terminated.
+     * </p>
+     * <p>
+     * A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces, and date
+     * and time should be separated by <code>T</code>. For more information, see <a
+     * href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time Format</a>.
      * </p>
      * 
      * @param processTerminatedAt
-     *        The date/time that the process was terminated.
+     *        A timestamp that identifies when the process was terminated.</p>
+     *        <p>
+     *        A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces,
+     *        and date and time should be separated by <code>T</code>. For more information, see <a
+     *        href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
+     *        Format</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -4176,10 +4451,10 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The date/time of the last observation of a threat intelligence indicator.
+     * A timestamp that identifies the last observation of a threat intelligence indicator.
      * </p>
      * 
-     * @return The date/time of the last observation of a threat intelligence indicator.
+     * @return A timestamp that identifies the last observation of a threat intelligence indicator.
      */
 
     public java.util.List<DateFilter> getThreatIntelIndicatorLastObservedAt() {
@@ -4188,11 +4463,11 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The date/time of the last observation of a threat intelligence indicator.
+     * A timestamp that identifies the last observation of a threat intelligence indicator.
      * </p>
      * 
      * @param threatIntelIndicatorLastObservedAt
-     *        The date/time of the last observation of a threat intelligence indicator.
+     *        A timestamp that identifies the last observation of a threat intelligence indicator.
      */
 
     public void setThreatIntelIndicatorLastObservedAt(java.util.Collection<DateFilter> threatIntelIndicatorLastObservedAt) {
@@ -4206,7 +4481,7 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The date/time of the last observation of a threat intelligence indicator.
+     * A timestamp that identifies the last observation of a threat intelligence indicator.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -4216,7 +4491,7 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
      * </p>
      * 
      * @param threatIntelIndicatorLastObservedAt
-     *        The date/time of the last observation of a threat intelligence indicator.
+     *        A timestamp that identifies the last observation of a threat intelligence indicator.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -4232,11 +4507,11 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The date/time of the last observation of a threat intelligence indicator.
+     * A timestamp that identifies the last observation of a threat intelligence indicator.
      * </p>
      * 
      * @param threatIntelIndicatorLastObservedAt
-     *        The date/time of the last observation of a threat intelligence indicator.
+     *        A timestamp that identifies the last observation of a threat intelligence indicator.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -6072,10 +6347,20 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The date/time that the container was started.
+     * A timestamp that identifies when the container was started.
+     * </p>
+     * <p>
+     * A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces, and date
+     * and time should be separated by <code>T</code>. For more information, see <a
+     * href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time Format</a>.
      * </p>
      * 
-     * @return The date/time that the container was started.
+     * @return A timestamp that identifies when the container was started.</p>
+     *         <p>
+     *         A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces,
+     *         and date and time should be separated by <code>T</code>. For more information, see <a
+     *         href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
+     *         Format</a>.
      */
 
     public java.util.List<DateFilter> getResourceContainerLaunchedAt() {
@@ -6084,11 +6369,21 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The date/time that the container was started.
+     * A timestamp that identifies when the container was started.
+     * </p>
+     * <p>
+     * A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces, and date
+     * and time should be separated by <code>T</code>. For more information, see <a
+     * href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time Format</a>.
      * </p>
      * 
      * @param resourceContainerLaunchedAt
-     *        The date/time that the container was started.
+     *        A timestamp that identifies when the container was started.</p>
+     *        <p>
+     *        A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces,
+     *        and date and time should be separated by <code>T</code>. For more information, see <a
+     *        href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
+     *        Format</a>.
      */
 
     public void setResourceContainerLaunchedAt(java.util.Collection<DateFilter> resourceContainerLaunchedAt) {
@@ -6102,7 +6397,12 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The date/time that the container was started.
+     * A timestamp that identifies when the container was started.
+     * </p>
+     * <p>
+     * A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces, and date
+     * and time should be separated by <code>T</code>. For more information, see <a
+     * href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time Format</a>.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -6111,7 +6411,12 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
      * </p>
      * 
      * @param resourceContainerLaunchedAt
-     *        The date/time that the container was started.
+     *        A timestamp that identifies when the container was started.</p>
+     *        <p>
+     *        A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces,
+     *        and date and time should be separated by <code>T</code>. For more information, see <a
+     *        href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
+     *        Format</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -6127,11 +6432,21 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The date/time that the container was started.
+     * A timestamp that identifies when the container was started.
+     * </p>
+     * <p>
+     * A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces, and date
+     * and time should be separated by <code>T</code>. For more information, see <a
+     * href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time Format</a>.
      * </p>
      * 
      * @param resourceContainerLaunchedAt
-     *        The date/time that the container was started.
+     *        A timestamp that identifies when the container was started.</p>
+     *        <p>
+     *        A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces,
+     *        and date and time should be separated by <code>T</code>. For more information, see <a
+     *        href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
+     *        Format</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -30,7 +30,7 @@ public class AlarmRecommendation implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The application component for the CloudWatch alarm recommendation.
+     * The Application Component for the CloudWatch alarm recommendation.
      * </p>
      */
     private String appComponentName;
@@ -79,11 +79,11 @@ public class AlarmRecommendation implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The application component for the CloudWatch alarm recommendation.
+     * The Application Component for the CloudWatch alarm recommendation.
      * </p>
      * 
      * @param appComponentName
-     *        The application component for the CloudWatch alarm recommendation.
+     *        The Application Component for the CloudWatch alarm recommendation.
      */
 
     public void setAppComponentName(String appComponentName) {
@@ -92,10 +92,10 @@ public class AlarmRecommendation implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The application component for the CloudWatch alarm recommendation.
+     * The Application Component for the CloudWatch alarm recommendation.
      * </p>
      * 
-     * @return The application component for the CloudWatch alarm recommendation.
+     * @return The Application Component for the CloudWatch alarm recommendation.
      */
 
     public String getAppComponentName() {
@@ -104,11 +104,11 @@ public class AlarmRecommendation implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The application component for the CloudWatch alarm recommendation.
+     * The Application Component for the CloudWatch alarm recommendation.
      * </p>
      * 
      * @param appComponentName
-     *        The application component for the CloudWatch alarm recommendation.
+     *        The Application Component for the CloudWatch alarm recommendation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

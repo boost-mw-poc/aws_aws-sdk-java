@@ -40,8 +40,8 @@ public class AwsCertificateManagerCertificateDetails implements Serializable, Cl
      * </p>
      * <p>
      * Uses the <code>date-time</code> format specified in <a href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC
-     * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces. For example,
-     * <code>2020-03-22T13:22:13.933Z</code>.
+     * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces, and date and time should be
+     * separated by <code>T</code>. For example, <code>2020-03-22T13:22:13.933Z</code>.
      * </p>
      */
     private String createdAt;
@@ -88,8 +88,8 @@ public class AwsCertificateManagerCertificateDetails implements Serializable, Cl
      * </p>
      * <p>
      * Uses the <code>date-time</code> format specified in <a href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC
-     * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces. For example,
-     * <code>2020-03-22T13:22:13.933Z</code>.
+     * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces, and date and time should be
+     * separated by <code>T</code>. For example, <code>2020-03-22T13:22:13.933Z</code>.
      * </p>
      */
     private String importedAt;
@@ -105,8 +105,8 @@ public class AwsCertificateManagerCertificateDetails implements Serializable, Cl
      * </p>
      * <p>
      * Uses the <code>date-time</code> format specified in <a href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC
-     * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces. For example,
-     * <code>2020-03-22T13:22:13.933Z</code>.
+     * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces, and date and time should be
+     * separated by <code>T</code>. For example, <code>2020-03-22T13:22:13.933Z</code>.
      * </p>
      */
     private String issuedAt;
@@ -138,8 +138,8 @@ public class AwsCertificateManagerCertificateDetails implements Serializable, Cl
      * </p>
      * <p>
      * Uses the <code>date-time</code> format specified in <a href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC
-     * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces. For example,
-     * <code>2020-03-22T13:22:13.933Z</code>.
+     * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces, and date and time should be
+     * separated by <code>T</code>. For example, <code>2020-03-22T13:22:13.933Z</code>.
      * </p>
      */
     private String notAfter;
@@ -149,8 +149,8 @@ public class AwsCertificateManagerCertificateDetails implements Serializable, Cl
      * </p>
      * <p>
      * Uses the <code>date-time</code> format specified in <a href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC
-     * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces. For example,
-     * <code>2020-03-22T13:22:13.933Z</code>.
+     * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces, and date and time should be
+     * separated by <code>T</code>. For example, <code>2020-03-22T13:22:13.933Z</code>.
      * </p>
      */
     private String notBefore;
@@ -273,8 +273,8 @@ public class AwsCertificateManagerCertificateDetails implements Serializable, Cl
      * </p>
      * <p>
      * Uses the <code>date-time</code> format specified in <a href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC
-     * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces. For example,
-     * <code>2020-03-22T13:22:13.933Z</code>.
+     * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces, and date and time should be
+     * separated by <code>T</code>. For example, <code>2020-03-22T13:22:13.933Z</code>.
      * </p>
      * 
      * @param createdAt
@@ -282,7 +282,8 @@ public class AwsCertificateManagerCertificateDetails implements Serializable, Cl
      *        <p>
      *        Uses the <code>date-time</code> format specified in <a
      *        href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
-     *        Format</a>. The value cannot contain spaces. For example, <code>2020-03-22T13:22:13.933Z</code>.
+     *        Format</a>. The value cannot contain spaces, and date and time should be separated by <code>T</code>. For
+     *        example, <code>2020-03-22T13:22:13.933Z</code>.
      */
 
     public void setCreatedAt(String createdAt) {
@@ -295,15 +296,16 @@ public class AwsCertificateManagerCertificateDetails implements Serializable, Cl
      * </p>
      * <p>
      * Uses the <code>date-time</code> format specified in <a href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC
-     * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces. For example,
-     * <code>2020-03-22T13:22:13.933Z</code>.
+     * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces, and date and time should be
+     * separated by <code>T</code>. For example, <code>2020-03-22T13:22:13.933Z</code>.
      * </p>
      * 
      * @return Indicates when the certificate was requested.</p>
      *         <p>
      *         Uses the <code>date-time</code> format specified in <a
      *         href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
-     *         Format</a>. The value cannot contain spaces. For example, <code>2020-03-22T13:22:13.933Z</code>.
+     *         Format</a>. The value cannot contain spaces, and date and time should be separated by <code>T</code>. For
+     *         example, <code>2020-03-22T13:22:13.933Z</code>.
      */
 
     public String getCreatedAt() {
@@ -316,8 +318,8 @@ public class AwsCertificateManagerCertificateDetails implements Serializable, Cl
      * </p>
      * <p>
      * Uses the <code>date-time</code> format specified in <a href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC
-     * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces. For example,
-     * <code>2020-03-22T13:22:13.933Z</code>.
+     * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces, and date and time should be
+     * separated by <code>T</code>. For example, <code>2020-03-22T13:22:13.933Z</code>.
      * </p>
      * 
      * @param createdAt
@@ -325,7 +327,8 @@ public class AwsCertificateManagerCertificateDetails implements Serializable, Cl
      *        <p>
      *        Uses the <code>date-time</code> format specified in <a
      *        href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
-     *        Format</a>. The value cannot contain spaces. For example, <code>2020-03-22T13:22:13.933Z</code>.
+     *        Format</a>. The value cannot contain spaces, and date and time should be separated by <code>T</code>. For
+     *        example, <code>2020-03-22T13:22:13.933Z</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -647,8 +650,8 @@ public class AwsCertificateManagerCertificateDetails implements Serializable, Cl
      * </p>
      * <p>
      * Uses the <code>date-time</code> format specified in <a href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC
-     * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces. For example,
-     * <code>2020-03-22T13:22:13.933Z</code>.
+     * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces, and date and time should be
+     * separated by <code>T</code>. For example, <code>2020-03-22T13:22:13.933Z</code>.
      * </p>
      * 
      * @param importedAt
@@ -657,7 +660,8 @@ public class AwsCertificateManagerCertificateDetails implements Serializable, Cl
      *        <p>
      *        Uses the <code>date-time</code> format specified in <a
      *        href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
-     *        Format</a>. The value cannot contain spaces. For example, <code>2020-03-22T13:22:13.933Z</code>.
+     *        Format</a>. The value cannot contain spaces, and date and time should be separated by <code>T</code>. For
+     *        example, <code>2020-03-22T13:22:13.933Z</code>.
      */
 
     public void setImportedAt(String importedAt) {
@@ -670,8 +674,8 @@ public class AwsCertificateManagerCertificateDetails implements Serializable, Cl
      * </p>
      * <p>
      * Uses the <code>date-time</code> format specified in <a href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC
-     * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces. For example,
-     * <code>2020-03-22T13:22:13.933Z</code>.
+     * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces, and date and time should be
+     * separated by <code>T</code>. For example, <code>2020-03-22T13:22:13.933Z</code>.
      * </p>
      * 
      * @return Indicates when the certificate was imported. Provided if the certificate type is <code>IMPORTED</code>
@@ -679,7 +683,8 @@ public class AwsCertificateManagerCertificateDetails implements Serializable, Cl
      *         <p>
      *         Uses the <code>date-time</code> format specified in <a
      *         href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
-     *         Format</a>. The value cannot contain spaces. For example, <code>2020-03-22T13:22:13.933Z</code>.
+     *         Format</a>. The value cannot contain spaces, and date and time should be separated by <code>T</code>. For
+     *         example, <code>2020-03-22T13:22:13.933Z</code>.
      */
 
     public String getImportedAt() {
@@ -692,8 +697,8 @@ public class AwsCertificateManagerCertificateDetails implements Serializable, Cl
      * </p>
      * <p>
      * Uses the <code>date-time</code> format specified in <a href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC
-     * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces. For example,
-     * <code>2020-03-22T13:22:13.933Z</code>.
+     * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces, and date and time should be
+     * separated by <code>T</code>. For example, <code>2020-03-22T13:22:13.933Z</code>.
      * </p>
      * 
      * @param importedAt
@@ -702,7 +707,8 @@ public class AwsCertificateManagerCertificateDetails implements Serializable, Cl
      *        <p>
      *        Uses the <code>date-time</code> format specified in <a
      *        href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
-     *        Format</a>. The value cannot contain spaces. For example, <code>2020-03-22T13:22:13.933Z</code>.
+     *        Format</a>. The value cannot contain spaces, and date and time should be separated by <code>T</code>. For
+     *        example, <code>2020-03-22T13:22:13.933Z</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -787,8 +793,8 @@ public class AwsCertificateManagerCertificateDetails implements Serializable, Cl
      * </p>
      * <p>
      * Uses the <code>date-time</code> format specified in <a href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC
-     * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces. For example,
-     * <code>2020-03-22T13:22:13.933Z</code>.
+     * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces, and date and time should be
+     * separated by <code>T</code>. For example, <code>2020-03-22T13:22:13.933Z</code>.
      * </p>
      * 
      * @param issuedAt
@@ -797,7 +803,8 @@ public class AwsCertificateManagerCertificateDetails implements Serializable, Cl
      *        <p>
      *        Uses the <code>date-time</code> format specified in <a
      *        href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
-     *        Format</a>. The value cannot contain spaces. For example, <code>2020-03-22T13:22:13.933Z</code>.
+     *        Format</a>. The value cannot contain spaces, and date and time should be separated by <code>T</code>. For
+     *        example, <code>2020-03-22T13:22:13.933Z</code>.
      */
 
     public void setIssuedAt(String issuedAt) {
@@ -810,8 +817,8 @@ public class AwsCertificateManagerCertificateDetails implements Serializable, Cl
      * </p>
      * <p>
      * Uses the <code>date-time</code> format specified in <a href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC
-     * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces. For example,
-     * <code>2020-03-22T13:22:13.933Z</code>.
+     * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces, and date and time should be
+     * separated by <code>T</code>. For example, <code>2020-03-22T13:22:13.933Z</code>.
      * </p>
      * 
      * @return Indicates when the certificate was issued. Provided if the certificate type is <code>AMAZON_ISSUED</code>
@@ -819,7 +826,8 @@ public class AwsCertificateManagerCertificateDetails implements Serializable, Cl
      *         <p>
      *         Uses the <code>date-time</code> format specified in <a
      *         href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
-     *         Format</a>. The value cannot contain spaces. For example, <code>2020-03-22T13:22:13.933Z</code>.
+     *         Format</a>. The value cannot contain spaces, and date and time should be separated by <code>T</code>. For
+     *         example, <code>2020-03-22T13:22:13.933Z</code>.
      */
 
     public String getIssuedAt() {
@@ -832,8 +840,8 @@ public class AwsCertificateManagerCertificateDetails implements Serializable, Cl
      * </p>
      * <p>
      * Uses the <code>date-time</code> format specified in <a href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC
-     * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces. For example,
-     * <code>2020-03-22T13:22:13.933Z</code>.
+     * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces, and date and time should be
+     * separated by <code>T</code>. For example, <code>2020-03-22T13:22:13.933Z</code>.
      * </p>
      * 
      * @param issuedAt
@@ -842,7 +850,8 @@ public class AwsCertificateManagerCertificateDetails implements Serializable, Cl
      *        <p>
      *        Uses the <code>date-time</code> format specified in <a
      *        href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
-     *        Format</a>. The value cannot contain spaces. For example, <code>2020-03-22T13:22:13.933Z</code>.
+     *        Format</a>. The value cannot contain spaces, and date and time should be separated by <code>T</code>. For
+     *        example, <code>2020-03-22T13:22:13.933Z</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1028,8 +1037,8 @@ public class AwsCertificateManagerCertificateDetails implements Serializable, Cl
      * </p>
      * <p>
      * Uses the <code>date-time</code> format specified in <a href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC
-     * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces. For example,
-     * <code>2020-03-22T13:22:13.933Z</code>.
+     * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces, and date and time should be
+     * separated by <code>T</code>. For example, <code>2020-03-22T13:22:13.933Z</code>.
      * </p>
      * 
      * @param notAfter
@@ -1037,7 +1046,8 @@ public class AwsCertificateManagerCertificateDetails implements Serializable, Cl
      *        <p>
      *        Uses the <code>date-time</code> format specified in <a
      *        href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
-     *        Format</a>. The value cannot contain spaces. For example, <code>2020-03-22T13:22:13.933Z</code>.
+     *        Format</a>. The value cannot contain spaces, and date and time should be separated by <code>T</code>. For
+     *        example, <code>2020-03-22T13:22:13.933Z</code>.
      */
 
     public void setNotAfter(String notAfter) {
@@ -1050,15 +1060,16 @@ public class AwsCertificateManagerCertificateDetails implements Serializable, Cl
      * </p>
      * <p>
      * Uses the <code>date-time</code> format specified in <a href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC
-     * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces. For example,
-     * <code>2020-03-22T13:22:13.933Z</code>.
+     * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces, and date and time should be
+     * separated by <code>T</code>. For example, <code>2020-03-22T13:22:13.933Z</code>.
      * </p>
      * 
      * @return The time after which the certificate becomes invalid.</p>
      *         <p>
      *         Uses the <code>date-time</code> format specified in <a
      *         href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
-     *         Format</a>. The value cannot contain spaces. For example, <code>2020-03-22T13:22:13.933Z</code>.
+     *         Format</a>. The value cannot contain spaces, and date and time should be separated by <code>T</code>. For
+     *         example, <code>2020-03-22T13:22:13.933Z</code>.
      */
 
     public String getNotAfter() {
@@ -1071,8 +1082,8 @@ public class AwsCertificateManagerCertificateDetails implements Serializable, Cl
      * </p>
      * <p>
      * Uses the <code>date-time</code> format specified in <a href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC
-     * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces. For example,
-     * <code>2020-03-22T13:22:13.933Z</code>.
+     * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces, and date and time should be
+     * separated by <code>T</code>. For example, <code>2020-03-22T13:22:13.933Z</code>.
      * </p>
      * 
      * @param notAfter
@@ -1080,7 +1091,8 @@ public class AwsCertificateManagerCertificateDetails implements Serializable, Cl
      *        <p>
      *        Uses the <code>date-time</code> format specified in <a
      *        href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
-     *        Format</a>. The value cannot contain spaces. For example, <code>2020-03-22T13:22:13.933Z</code>.
+     *        Format</a>. The value cannot contain spaces, and date and time should be separated by <code>T</code>. For
+     *        example, <code>2020-03-22T13:22:13.933Z</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1095,8 +1107,8 @@ public class AwsCertificateManagerCertificateDetails implements Serializable, Cl
      * </p>
      * <p>
      * Uses the <code>date-time</code> format specified in <a href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC
-     * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces. For example,
-     * <code>2020-03-22T13:22:13.933Z</code>.
+     * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces, and date and time should be
+     * separated by <code>T</code>. For example, <code>2020-03-22T13:22:13.933Z</code>.
      * </p>
      * 
      * @param notBefore
@@ -1104,7 +1116,8 @@ public class AwsCertificateManagerCertificateDetails implements Serializable, Cl
      *        <p>
      *        Uses the <code>date-time</code> format specified in <a
      *        href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
-     *        Format</a>. The value cannot contain spaces. For example, <code>2020-03-22T13:22:13.933Z</code>.
+     *        Format</a>. The value cannot contain spaces, and date and time should be separated by <code>T</code>. For
+     *        example, <code>2020-03-22T13:22:13.933Z</code>.
      */
 
     public void setNotBefore(String notBefore) {
@@ -1117,15 +1130,16 @@ public class AwsCertificateManagerCertificateDetails implements Serializable, Cl
      * </p>
      * <p>
      * Uses the <code>date-time</code> format specified in <a href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC
-     * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces. For example,
-     * <code>2020-03-22T13:22:13.933Z</code>.
+     * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces, and date and time should be
+     * separated by <code>T</code>. For example, <code>2020-03-22T13:22:13.933Z</code>.
      * </p>
      * 
      * @return The time before which the certificate is not valid.</p>
      *         <p>
      *         Uses the <code>date-time</code> format specified in <a
      *         href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
-     *         Format</a>. The value cannot contain spaces. For example, <code>2020-03-22T13:22:13.933Z</code>.
+     *         Format</a>. The value cannot contain spaces, and date and time should be separated by <code>T</code>. For
+     *         example, <code>2020-03-22T13:22:13.933Z</code>.
      */
 
     public String getNotBefore() {
@@ -1138,8 +1152,8 @@ public class AwsCertificateManagerCertificateDetails implements Serializable, Cl
      * </p>
      * <p>
      * Uses the <code>date-time</code> format specified in <a href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC
-     * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces. For example,
-     * <code>2020-03-22T13:22:13.933Z</code>.
+     * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces, and date and time should be
+     * separated by <code>T</code>. For example, <code>2020-03-22T13:22:13.933Z</code>.
      * </p>
      * 
      * @param notBefore
@@ -1147,7 +1161,8 @@ public class AwsCertificateManagerCertificateDetails implements Serializable, Cl
      *        <p>
      *        Uses the <code>date-time</code> format specified in <a
      *        href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
-     *        Format</a>. The value cannot contain spaces. For example, <code>2020-03-22T13:22:13.933Z</code>.
+     *        Format</a>. The value cannot contain spaces, and date and time should be separated by <code>T</code>. For
+     *        example, <code>2020-03-22T13:22:13.933Z</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

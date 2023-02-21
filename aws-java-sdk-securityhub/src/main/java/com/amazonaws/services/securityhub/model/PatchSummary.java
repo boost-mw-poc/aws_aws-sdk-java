@@ -78,8 +78,8 @@ public class PatchSummary implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * Uses the <code>date-time</code> format specified in <a href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC
-     * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces. For example,
-     * <code>2020-03-22T13:22:13.933Z</code>.
+     * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces, and date and time should be
+     * separated by <code>T</code>. For example, <code>2020-03-22T13:22:13.933Z</code>.
      * </p>
      */
     private String operationStartTime;
@@ -89,8 +89,8 @@ public class PatchSummary implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * Uses the <code>date-time</code> format specified in <a href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC
-     * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces. For example,
-     * <code>2020-03-22T13:22:13.933Z</code>.
+     * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces, and date and time should be
+     * separated by <code>T</code>. For example, <code>2020-03-22T13:22:13.933Z</code>.
      * </p>
      */
     private String operationEndTime;
@@ -406,8 +406,8 @@ public class PatchSummary implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * Uses the <code>date-time</code> format specified in <a href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC
-     * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces. For example,
-     * <code>2020-03-22T13:22:13.933Z</code>.
+     * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces, and date and time should be
+     * separated by <code>T</code>. For example, <code>2020-03-22T13:22:13.933Z</code>.
      * </p>
      * 
      * @param operationStartTime
@@ -415,7 +415,8 @@ public class PatchSummary implements Serializable, Cloneable, StructuredPojo {
      *        <p>
      *        Uses the <code>date-time</code> format specified in <a
      *        href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
-     *        Format</a>. The value cannot contain spaces. For example, <code>2020-03-22T13:22:13.933Z</code>.
+     *        Format</a>. The value cannot contain spaces, and date and time should be separated by <code>T</code>. For
+     *        example, <code>2020-03-22T13:22:13.933Z</code>.
      */
 
     public void setOperationStartTime(String operationStartTime) {
@@ -428,15 +429,16 @@ public class PatchSummary implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * Uses the <code>date-time</code> format specified in <a href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC
-     * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces. For example,
-     * <code>2020-03-22T13:22:13.933Z</code>.
+     * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces, and date and time should be
+     * separated by <code>T</code>. For example, <code>2020-03-22T13:22:13.933Z</code>.
      * </p>
      * 
      * @return Indicates when the operation started.</p>
      *         <p>
      *         Uses the <code>date-time</code> format specified in <a
      *         href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
-     *         Format</a>. The value cannot contain spaces. For example, <code>2020-03-22T13:22:13.933Z</code>.
+     *         Format</a>. The value cannot contain spaces, and date and time should be separated by <code>T</code>. For
+     *         example, <code>2020-03-22T13:22:13.933Z</code>.
      */
 
     public String getOperationStartTime() {
@@ -449,8 +451,8 @@ public class PatchSummary implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * Uses the <code>date-time</code> format specified in <a href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC
-     * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces. For example,
-     * <code>2020-03-22T13:22:13.933Z</code>.
+     * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces, and date and time should be
+     * separated by <code>T</code>. For example, <code>2020-03-22T13:22:13.933Z</code>.
      * </p>
      * 
      * @param operationStartTime
@@ -458,7 +460,8 @@ public class PatchSummary implements Serializable, Cloneable, StructuredPojo {
      *        <p>
      *        Uses the <code>date-time</code> format specified in <a
      *        href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
-     *        Format</a>. The value cannot contain spaces. For example, <code>2020-03-22T13:22:13.933Z</code>.
+     *        Format</a>. The value cannot contain spaces, and date and time should be separated by <code>T</code>. For
+     *        example, <code>2020-03-22T13:22:13.933Z</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -473,8 +476,8 @@ public class PatchSummary implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * Uses the <code>date-time</code> format specified in <a href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC
-     * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces. For example,
-     * <code>2020-03-22T13:22:13.933Z</code>.
+     * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces, and date and time should be
+     * separated by <code>T</code>. For example, <code>2020-03-22T13:22:13.933Z</code>.
      * </p>
      * 
      * @param operationEndTime
@@ -482,7 +485,8 @@ public class PatchSummary implements Serializable, Cloneable, StructuredPojo {
      *        <p>
      *        Uses the <code>date-time</code> format specified in <a
      *        href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
-     *        Format</a>. The value cannot contain spaces. For example, <code>2020-03-22T13:22:13.933Z</code>.
+     *        Format</a>. The value cannot contain spaces, and date and time should be separated by <code>T</code>. For
+     *        example, <code>2020-03-22T13:22:13.933Z</code>.
      */
 
     public void setOperationEndTime(String operationEndTime) {
@@ -495,15 +499,16 @@ public class PatchSummary implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * Uses the <code>date-time</code> format specified in <a href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC
-     * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces. For example,
-     * <code>2020-03-22T13:22:13.933Z</code>.
+     * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces, and date and time should be
+     * separated by <code>T</code>. For example, <code>2020-03-22T13:22:13.933Z</code>.
      * </p>
      * 
      * @return Indicates when the operation completed.</p>
      *         <p>
      *         Uses the <code>date-time</code> format specified in <a
      *         href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
-     *         Format</a>. The value cannot contain spaces. For example, <code>2020-03-22T13:22:13.933Z</code>.
+     *         Format</a>. The value cannot contain spaces, and date and time should be separated by <code>T</code>. For
+     *         example, <code>2020-03-22T13:22:13.933Z</code>.
      */
 
     public String getOperationEndTime() {
@@ -516,8 +521,8 @@ public class PatchSummary implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * Uses the <code>date-time</code> format specified in <a href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC
-     * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces. For example,
-     * <code>2020-03-22T13:22:13.933Z</code>.
+     * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces, and date and time should be
+     * separated by <code>T</code>. For example, <code>2020-03-22T13:22:13.933Z</code>.
      * </p>
      * 
      * @param operationEndTime
@@ -525,7 +530,8 @@ public class PatchSummary implements Serializable, Cloneable, StructuredPojo {
      *        <p>
      *        Uses the <code>date-time</code> format specified in <a
      *        href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
-     *        Format</a>. The value cannot contain spaces. For example, <code>2020-03-22T13:22:13.933Z</code>.
+     *        Format</a>. The value cannot contain spaces, and date and time should be separated by <code>T</code>. For
+     *        example, <code>2020-03-22T13:22:13.933Z</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

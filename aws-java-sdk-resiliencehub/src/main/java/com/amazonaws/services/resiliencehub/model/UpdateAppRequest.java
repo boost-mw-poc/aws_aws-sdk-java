@@ -27,10 +27,10 @@ public class UpdateAppRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>
-     * :resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs,
-     * see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names
-     * (ARNs)</a> in the <i>AWS General Reference</i>.
+     * The Amazon Resource Name (ARN) of the AWS Resilience Hub application. The format for this ARN is: arn:
+     * <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more
+     * information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">
+     * Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i> guide.
      * </p>
      */
     private String appArn;
@@ -57,24 +57,25 @@ public class UpdateAppRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * The Amazon Resource Name (ARN) of the resiliency policy. The format for this ARN is: arn:<code>partition</code>
      * :resiliencehub:<code>region</code>:<code>account</code>:resiliency-policy/<code>policy-id</code>. For more
      * information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">
-     * Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.
+     * Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i> guide.
      * </p>
      */
     private String policyArn;
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>
-     * :resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs,
-     * see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names
-     * (ARNs)</a> in the <i>AWS General Reference</i>.
+     * The Amazon Resource Name (ARN) of the AWS Resilience Hub application. The format for this ARN is: arn:
+     * <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more
+     * information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">
+     * Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i> guide.
      * </p>
      * 
      * @param appArn
-     *        The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>
-     *        :resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information
-     *        about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">
-     *        Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.
+     *        The Amazon Resource Name (ARN) of the AWS Resilience Hub application. The format for this ARN is: arn:
+     *        <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For
+     *        more information about ARNs, see <a
+     *        href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names
+     *        (ARNs)</a> in the <i>AWS General Reference</i> guide.
      */
 
     public void setAppArn(String appArn) {
@@ -83,16 +84,17 @@ public class UpdateAppRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>
-     * :resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs,
-     * see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names
-     * (ARNs)</a> in the <i>AWS General Reference</i>.
+     * The Amazon Resource Name (ARN) of the AWS Resilience Hub application. The format for this ARN is: arn:
+     * <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more
+     * information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">
+     * Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i> guide.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>
-     *         :resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information
-     *         about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">
-     *         Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.
+     * @return The Amazon Resource Name (ARN) of the AWS Resilience Hub application. The format for this ARN is: arn:
+     *         <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>.
+     *         For more information about ARNs, see <a
+     *         href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names
+     *         (ARNs)</a> in the <i>AWS General Reference</i> guide.
      */
 
     public String getAppArn() {
@@ -101,17 +103,18 @@ public class UpdateAppRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>
-     * :resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs,
-     * see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names
-     * (ARNs)</a> in the <i>AWS General Reference</i>.
+     * The Amazon Resource Name (ARN) of the AWS Resilience Hub application. The format for this ARN is: arn:
+     * <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more
+     * information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">
+     * Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i> guide.
      * </p>
      * 
      * @param appArn
-     *        The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>
-     *        :resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information
-     *        about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">
-     *        Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.
+     *        The Amazon Resource Name (ARN) of the AWS Resilience Hub application. The format for this ARN is: arn:
+     *        <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For
+     *        more information about ARNs, see <a
+     *        href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names
+     *        (ARNs)</a> in the <i>AWS General Reference</i> guide.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -276,7 +279,7 @@ public class UpdateAppRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * The Amazon Resource Name (ARN) of the resiliency policy. The format for this ARN is: arn:<code>partition</code>
      * :resiliencehub:<code>region</code>:<code>account</code>:resiliency-policy/<code>policy-id</code>. For more
      * information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">
-     * Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.
+     * Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i> guide.
      * </p>
      * 
      * @param policyArn
@@ -284,7 +287,7 @@ public class UpdateAppRequest extends com.amazonaws.AmazonWebServiceRequest impl
      *        <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:resiliency-policy/
      *        <code>policy-id</code>. For more information about ARNs, see <a
      *        href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names
-     *        (ARNs)</a> in the <i>AWS General Reference</i>.
+     *        (ARNs)</a> in the <i>AWS General Reference</i> guide.
      */
 
     public void setPolicyArn(String policyArn) {
@@ -296,14 +299,14 @@ public class UpdateAppRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * The Amazon Resource Name (ARN) of the resiliency policy. The format for this ARN is: arn:<code>partition</code>
      * :resiliencehub:<code>region</code>:<code>account</code>:resiliency-policy/<code>policy-id</code>. For more
      * information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">
-     * Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.
+     * Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i> guide.
      * </p>
      * 
      * @return The Amazon Resource Name (ARN) of the resiliency policy. The format for this ARN is: arn:
      *         <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:resiliency-policy/
      *         <code>policy-id</code>. For more information about ARNs, see <a
      *         href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names
-     *         (ARNs)</a> in the <i>AWS General Reference</i>.
+     *         (ARNs)</a> in the <i>AWS General Reference</i> guide.
      */
 
     public String getPolicyArn() {
@@ -315,7 +318,7 @@ public class UpdateAppRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * The Amazon Resource Name (ARN) of the resiliency policy. The format for this ARN is: arn:<code>partition</code>
      * :resiliencehub:<code>region</code>:<code>account</code>:resiliency-policy/<code>policy-id</code>. For more
      * information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">
-     * Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.
+     * Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i> guide.
      * </p>
      * 
      * @param policyArn
@@ -323,7 +326,7 @@ public class UpdateAppRequest extends com.amazonaws.AmazonWebServiceRequest impl
      *        <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:resiliency-policy/
      *        <code>policy-id</code>. For more information about ARNs, see <a
      *        href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names
-     *        (ARNs)</a> in the <i>AWS General Reference</i>.
+     *        (ARNs)</a> in the <i>AWS General Reference</i> guide.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

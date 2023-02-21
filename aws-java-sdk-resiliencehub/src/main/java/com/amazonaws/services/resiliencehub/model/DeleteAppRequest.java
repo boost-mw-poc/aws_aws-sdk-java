@@ -27,10 +27,10 @@ public class DeleteAppRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>
-     * :resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs,
-     * see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names
-     * (ARNs)</a> in the <i>AWS General Reference</i>.
+     * The Amazon Resource Name (ARN) of the AWS Resilience Hub application. The format for this ARN is: arn:
+     * <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more
+     * information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">
+     * Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i> guide.
      * </p>
      */
     private String appArn;
@@ -43,24 +43,25 @@ public class DeleteAppRequest extends com.amazonaws.AmazonWebServiceRequest impl
     private String clientToken;
     /**
      * <p>
-     * A boolean option to force the deletion of a Resilience Hub application.
+     * A boolean option to force the deletion of an AWS Resilience Hub application.
      * </p>
      */
     private Boolean forceDelete;
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>
-     * :resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs,
-     * see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names
-     * (ARNs)</a> in the <i>AWS General Reference</i>.
+     * The Amazon Resource Name (ARN) of the AWS Resilience Hub application. The format for this ARN is: arn:
+     * <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more
+     * information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">
+     * Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i> guide.
      * </p>
      * 
      * @param appArn
-     *        The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>
-     *        :resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information
-     *        about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">
-     *        Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.
+     *        The Amazon Resource Name (ARN) of the AWS Resilience Hub application. The format for this ARN is: arn:
+     *        <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For
+     *        more information about ARNs, see <a
+     *        href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names
+     *        (ARNs)</a> in the <i>AWS General Reference</i> guide.
      */
 
     public void setAppArn(String appArn) {
@@ -69,16 +70,17 @@ public class DeleteAppRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>
-     * :resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs,
-     * see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names
-     * (ARNs)</a> in the <i>AWS General Reference</i>.
+     * The Amazon Resource Name (ARN) of the AWS Resilience Hub application. The format for this ARN is: arn:
+     * <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more
+     * information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">
+     * Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i> guide.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>
-     *         :resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information
-     *         about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">
-     *         Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.
+     * @return The Amazon Resource Name (ARN) of the AWS Resilience Hub application. The format for this ARN is: arn:
+     *         <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>.
+     *         For more information about ARNs, see <a
+     *         href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names
+     *         (ARNs)</a> in the <i>AWS General Reference</i> guide.
      */
 
     public String getAppArn() {
@@ -87,17 +89,18 @@ public class DeleteAppRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>
-     * :resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs,
-     * see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names
-     * (ARNs)</a> in the <i>AWS General Reference</i>.
+     * The Amazon Resource Name (ARN) of the AWS Resilience Hub application. The format for this ARN is: arn:
+     * <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more
+     * information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">
+     * Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i> guide.
      * </p>
      * 
      * @param appArn
-     *        The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>
-     *        :resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information
-     *        about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">
-     *        Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.
+     *        The Amazon Resource Name (ARN) of the AWS Resilience Hub application. The format for this ARN is: arn:
+     *        <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For
+     *        more information about ARNs, see <a
+     *        href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names
+     *        (ARNs)</a> in the <i>AWS General Reference</i> guide.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -154,11 +157,11 @@ public class DeleteAppRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * A boolean option to force the deletion of a Resilience Hub application.
+     * A boolean option to force the deletion of an AWS Resilience Hub application.
      * </p>
      * 
      * @param forceDelete
-     *        A boolean option to force the deletion of a Resilience Hub application.
+     *        A boolean option to force the deletion of an AWS Resilience Hub application.
      */
 
     public void setForceDelete(Boolean forceDelete) {
@@ -167,10 +170,10 @@ public class DeleteAppRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * A boolean option to force the deletion of a Resilience Hub application.
+     * A boolean option to force the deletion of an AWS Resilience Hub application.
      * </p>
      * 
-     * @return A boolean option to force the deletion of a Resilience Hub application.
+     * @return A boolean option to force the deletion of an AWS Resilience Hub application.
      */
 
     public Boolean getForceDelete() {
@@ -179,11 +182,11 @@ public class DeleteAppRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * A boolean option to force the deletion of a Resilience Hub application.
+     * A boolean option to force the deletion of an AWS Resilience Hub application.
      * </p>
      * 
      * @param forceDelete
-     *        A boolean option to force the deletion of a Resilience Hub application.
+     *        A boolean option to force the deletion of an AWS Resilience Hub application.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -194,10 +197,10 @@ public class DeleteAppRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * A boolean option to force the deletion of a Resilience Hub application.
+     * A boolean option to force the deletion of an AWS Resilience Hub application.
      * </p>
      * 
-     * @return A boolean option to force the deletion of a Resilience Hub application.
+     * @return A boolean option to force the deletion of an AWS Resilience Hub application.
      */
 
     public Boolean isForceDelete() {

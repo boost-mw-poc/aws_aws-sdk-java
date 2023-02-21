@@ -26,7 +26,7 @@ public class ListAlarmRecommendationsResult extends com.amazonaws.AmazonWebServi
     /**
      * <p>
      * The alarm recommendations for an AWS Resilience Hub application, returned as an object. This object includes
-     * application component names, descriptions, information about whether a recommendation has already been
+     * Application Component names, descriptions, information about whether a recommendation has already been
      * implemented or not, prerequisites, and more.
      * </p>
      */
@@ -41,12 +41,12 @@ public class ListAlarmRecommendationsResult extends com.amazonaws.AmazonWebServi
     /**
      * <p>
      * The alarm recommendations for an AWS Resilience Hub application, returned as an object. This object includes
-     * application component names, descriptions, information about whether a recommendation has already been
+     * Application Component names, descriptions, information about whether a recommendation has already been
      * implemented or not, prerequisites, and more.
      * </p>
      * 
      * @return The alarm recommendations for an AWS Resilience Hub application, returned as an object. This object
-     *         includes application component names, descriptions, information about whether a recommendation has
+     *         includes Application Component names, descriptions, information about whether a recommendation has
      *         already been implemented or not, prerequisites, and more.
      */
 
@@ -57,13 +57,13 @@ public class ListAlarmRecommendationsResult extends com.amazonaws.AmazonWebServi
     /**
      * <p>
      * The alarm recommendations for an AWS Resilience Hub application, returned as an object. This object includes
-     * application component names, descriptions, information about whether a recommendation has already been
+     * Application Component names, descriptions, information about whether a recommendation has already been
      * implemented or not, prerequisites, and more.
      * </p>
      * 
      * @param alarmRecommendations
      *        The alarm recommendations for an AWS Resilience Hub application, returned as an object. This object
-     *        includes application component names, descriptions, information about whether a recommendation has already
+     *        includes Application Component names, descriptions, information about whether a recommendation has already
      *        been implemented or not, prerequisites, and more.
      */
 
@@ -79,7 +79,7 @@ public class ListAlarmRecommendationsResult extends com.amazonaws.AmazonWebServi
     /**
      * <p>
      * The alarm recommendations for an AWS Resilience Hub application, returned as an object. This object includes
-     * application component names, descriptions, information about whether a recommendation has already been
+     * Application Component names, descriptions, information about whether a recommendation has already been
      * implemented or not, prerequisites, and more.
      * </p>
      * <p>
@@ -90,7 +90,7 @@ public class ListAlarmRecommendationsResult extends com.amazonaws.AmazonWebServi
      * 
      * @param alarmRecommendations
      *        The alarm recommendations for an AWS Resilience Hub application, returned as an object. This object
-     *        includes application component names, descriptions, information about whether a recommendation has already
+     *        includes Application Component names, descriptions, information about whether a recommendation has already
      *        been implemented or not, prerequisites, and more.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -108,13 +108,13 @@ public class ListAlarmRecommendationsResult extends com.amazonaws.AmazonWebServi
     /**
      * <p>
      * The alarm recommendations for an AWS Resilience Hub application, returned as an object. This object includes
-     * application component names, descriptions, information about whether a recommendation has already been
+     * Application Component names, descriptions, information about whether a recommendation has already been
      * implemented or not, prerequisites, and more.
      * </p>
      * 
      * @param alarmRecommendations
      *        The alarm recommendations for an AWS Resilience Hub application, returned as an object. This object
-     *        includes application component names, descriptions, information about whether a recommendation has already
+     *        includes Application Component names, descriptions, information about whether a recommendation has already
      *        been implemented or not, prerequisites, and more.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

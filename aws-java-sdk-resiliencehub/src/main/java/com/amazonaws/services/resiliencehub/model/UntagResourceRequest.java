@@ -33,7 +33,7 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
     private String resourceArn;
     /**
      * <p>
-     * The keys of the tags to remove.
+     * The keys of the tags you want to remove.
      * </p>
      */
     private java.util.List<String> tagKeys;
@@ -80,10 +80,10 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The keys of the tags to remove.
+     * The keys of the tags you want to remove.
      * </p>
      * 
-     * @return The keys of the tags to remove.
+     * @return The keys of the tags you want to remove.
      */
 
     public java.util.List<String> getTagKeys() {
@@ -92,11 +92,11 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The keys of the tags to remove.
+     * The keys of the tags you want to remove.
      * </p>
      * 
      * @param tagKeys
-     *        The keys of the tags to remove.
+     *        The keys of the tags you want to remove.
      */
 
     public void setTagKeys(java.util.Collection<String> tagKeys) {
@@ -110,7 +110,7 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The keys of the tags to remove.
+     * The keys of the tags you want to remove.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -119,7 +119,7 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      * 
      * @param tagKeys
-     *        The keys of the tags to remove.
+     *        The keys of the tags you want to remove.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -135,11 +135,11 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The keys of the tags to remove.
+     * The keys of the tags you want to remove.
      * </p>
      * 
      * @param tagKeys
-     *        The keys of the tags to remove.
+     *        The keys of the tags you want to remove.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

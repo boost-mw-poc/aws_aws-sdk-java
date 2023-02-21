@@ -72,11 +72,21 @@ public class AwsApiCallAction implements Serializable, Cloneable, StructuredPojo
      * <p>
      * An ISO8601-formatted timestamp that indicates when the API call was first observed.
      * </p>
+     * <p>
+     * A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces, and date
+     * and time should be separated by <code>T</code>. For more information, see <a
+     * href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time Format</a>.
+     * </p>
      */
     private String firstSeen;
     /**
      * <p>
      * An ISO8601-formatted timestamp that indicates when the API call was most recently observed.
+     * </p>
+     * <p>
+     * A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces, and date
+     * and time should be separated by <code>T</code>. For more information, see <a
+     * href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time Format</a>.
      * </p>
      */
     private String lastSeen;
@@ -371,9 +381,19 @@ public class AwsApiCallAction implements Serializable, Cloneable, StructuredPojo
      * <p>
      * An ISO8601-formatted timestamp that indicates when the API call was first observed.
      * </p>
+     * <p>
+     * A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces, and date
+     * and time should be separated by <code>T</code>. For more information, see <a
+     * href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time Format</a>.
+     * </p>
      * 
      * @param firstSeen
-     *        An ISO8601-formatted timestamp that indicates when the API call was first observed.
+     *        An ISO8601-formatted timestamp that indicates when the API call was first observed.</p>
+     *        <p>
+     *        A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces,
+     *        and date and time should be separated by <code>T</code>. For more information, see <a
+     *        href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
+     *        Format</a>.
      */
 
     public void setFirstSeen(String firstSeen) {
@@ -384,8 +404,18 @@ public class AwsApiCallAction implements Serializable, Cloneable, StructuredPojo
      * <p>
      * An ISO8601-formatted timestamp that indicates when the API call was first observed.
      * </p>
+     * <p>
+     * A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces, and date
+     * and time should be separated by <code>T</code>. For more information, see <a
+     * href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time Format</a>.
+     * </p>
      * 
-     * @return An ISO8601-formatted timestamp that indicates when the API call was first observed.
+     * @return An ISO8601-formatted timestamp that indicates when the API call was first observed.</p>
+     *         <p>
+     *         A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces,
+     *         and date and time should be separated by <code>T</code>. For more information, see <a
+     *         href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
+     *         Format</a>.
      */
 
     public String getFirstSeen() {
@@ -396,9 +426,19 @@ public class AwsApiCallAction implements Serializable, Cloneable, StructuredPojo
      * <p>
      * An ISO8601-formatted timestamp that indicates when the API call was first observed.
      * </p>
+     * <p>
+     * A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces, and date
+     * and time should be separated by <code>T</code>. For more information, see <a
+     * href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time Format</a>.
+     * </p>
      * 
      * @param firstSeen
-     *        An ISO8601-formatted timestamp that indicates when the API call was first observed.
+     *        An ISO8601-formatted timestamp that indicates when the API call was first observed.</p>
+     *        <p>
+     *        A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces,
+     *        and date and time should be separated by <code>T</code>. For more information, see <a
+     *        href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
+     *        Format</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -411,9 +451,19 @@ public class AwsApiCallAction implements Serializable, Cloneable, StructuredPojo
      * <p>
      * An ISO8601-formatted timestamp that indicates when the API call was most recently observed.
      * </p>
+     * <p>
+     * A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces, and date
+     * and time should be separated by <code>T</code>. For more information, see <a
+     * href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time Format</a>.
+     * </p>
      * 
      * @param lastSeen
-     *        An ISO8601-formatted timestamp that indicates when the API call was most recently observed.
+     *        An ISO8601-formatted timestamp that indicates when the API call was most recently observed.</p>
+     *        <p>
+     *        A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces,
+     *        and date and time should be separated by <code>T</code>. For more information, see <a
+     *        href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
+     *        Format</a>.
      */
 
     public void setLastSeen(String lastSeen) {
@@ -424,8 +474,18 @@ public class AwsApiCallAction implements Serializable, Cloneable, StructuredPojo
      * <p>
      * An ISO8601-formatted timestamp that indicates when the API call was most recently observed.
      * </p>
+     * <p>
+     * A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces, and date
+     * and time should be separated by <code>T</code>. For more information, see <a
+     * href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time Format</a>.
+     * </p>
      * 
-     * @return An ISO8601-formatted timestamp that indicates when the API call was most recently observed.
+     * @return An ISO8601-formatted timestamp that indicates when the API call was most recently observed.</p>
+     *         <p>
+     *         A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces,
+     *         and date and time should be separated by <code>T</code>. For more information, see <a
+     *         href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
+     *         Format</a>.
      */
 
     public String getLastSeen() {
@@ -436,9 +496,19 @@ public class AwsApiCallAction implements Serializable, Cloneable, StructuredPojo
      * <p>
      * An ISO8601-formatted timestamp that indicates when the API call was most recently observed.
      * </p>
+     * <p>
+     * A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces, and date
+     * and time should be separated by <code>T</code>. For more information, see <a
+     * href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time Format</a>.
+     * </p>
      * 
      * @param lastSeen
-     *        An ISO8601-formatted timestamp that indicates when the API call was most recently observed.
+     *        An ISO8601-formatted timestamp that indicates when the API call was most recently observed.</p>
+     *        <p>
+     *        A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces,
+     *        and date and time should be separated by <code>T</code>. For more information, see <a
+     *        href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
+     *        Format</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

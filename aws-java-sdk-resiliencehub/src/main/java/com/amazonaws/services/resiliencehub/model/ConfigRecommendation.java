@@ -30,7 +30,7 @@ public class ConfigRecommendation implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The application component name.
+     * The name of the Application Component.
      * </p>
      */
     private String appComponentName;
@@ -91,11 +91,11 @@ public class ConfigRecommendation implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The application component name.
+     * The name of the Application Component.
      * </p>
      * 
      * @param appComponentName
-     *        The application component name.
+     *        The name of the Application Component.
      */
 
     public void setAppComponentName(String appComponentName) {
@@ -104,10 +104,10 @@ public class ConfigRecommendation implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The application component name.
+     * The name of the Application Component.
      * </p>
      * 
-     * @return The application component name.
+     * @return The name of the Application Component.
      */
 
     public String getAppComponentName() {
@@ -116,11 +116,11 @@ public class ConfigRecommendation implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The application component name.
+     * The name of the Application Component.
      * </p>
      * 
      * @param appComponentName
-     *        The application component name.
+     *        The name of the Application Component.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

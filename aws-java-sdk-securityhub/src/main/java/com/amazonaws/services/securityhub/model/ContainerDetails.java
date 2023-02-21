@@ -58,8 +58,8 @@ public class ContainerDetails implements Serializable, Cloneable, StructuredPojo
      * </p>
      * <p>
      * Uses the <code>date-time</code> format specified in <a href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC
-     * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces. For example,
-     * <code>2020-03-22T13:22:13.933Z</code>.
+     * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces, and date and time should be
+     * separated by <code>T</code>. For example, <code>2020-03-22T13:22:13.933Z</code>.
      * </p>
      */
     private String launchedAt;
@@ -243,8 +243,8 @@ public class ContainerDetails implements Serializable, Cloneable, StructuredPojo
      * </p>
      * <p>
      * Uses the <code>date-time</code> format specified in <a href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC
-     * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces. For example,
-     * <code>2020-03-22T13:22:13.933Z</code>.
+     * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces, and date and time should be
+     * separated by <code>T</code>. For example, <code>2020-03-22T13:22:13.933Z</code>.
      * </p>
      * 
      * @param launchedAt
@@ -252,7 +252,8 @@ public class ContainerDetails implements Serializable, Cloneable, StructuredPojo
      *        <p>
      *        Uses the <code>date-time</code> format specified in <a
      *        href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
-     *        Format</a>. The value cannot contain spaces. For example, <code>2020-03-22T13:22:13.933Z</code>.
+     *        Format</a>. The value cannot contain spaces, and date and time should be separated by <code>T</code>. For
+     *        example, <code>2020-03-22T13:22:13.933Z</code>.
      */
 
     public void setLaunchedAt(String launchedAt) {
@@ -265,15 +266,16 @@ public class ContainerDetails implements Serializable, Cloneable, StructuredPojo
      * </p>
      * <p>
      * Uses the <code>date-time</code> format specified in <a href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC
-     * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces. For example,
-     * <code>2020-03-22T13:22:13.933Z</code>.
+     * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces, and date and time should be
+     * separated by <code>T</code>. For example, <code>2020-03-22T13:22:13.933Z</code>.
      * </p>
      * 
      * @return Indicates when the container started.</p>
      *         <p>
      *         Uses the <code>date-time</code> format specified in <a
      *         href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
-     *         Format</a>. The value cannot contain spaces. For example, <code>2020-03-22T13:22:13.933Z</code>.
+     *         Format</a>. The value cannot contain spaces, and date and time should be separated by <code>T</code>. For
+     *         example, <code>2020-03-22T13:22:13.933Z</code>.
      */
 
     public String getLaunchedAt() {
@@ -286,8 +288,8 @@ public class ContainerDetails implements Serializable, Cloneable, StructuredPojo
      * </p>
      * <p>
      * Uses the <code>date-time</code> format specified in <a href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC
-     * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces. For example,
-     * <code>2020-03-22T13:22:13.933Z</code>.
+     * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces, and date and time should be
+     * separated by <code>T</code>. For example, <code>2020-03-22T13:22:13.933Z</code>.
      * </p>
      * 
      * @param launchedAt
@@ -295,7 +297,8 @@ public class ContainerDetails implements Serializable, Cloneable, StructuredPojo
      *        <p>
      *        Uses the <code>date-time</code> format specified in <a
      *        href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
-     *        Format</a>. The value cannot contain spaces. For example, <code>2020-03-22T13:22:13.933Z</code>.
+     *        Format</a>. The value cannot contain spaces, and date and time should be separated by <code>T</code>. For
+     *        example, <code>2020-03-22T13:22:13.933Z</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

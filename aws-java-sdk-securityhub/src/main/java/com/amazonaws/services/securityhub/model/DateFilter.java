@@ -30,13 +30,23 @@ public class DateFilter implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A start date for the date filter.
+     * A timestamp that provides the start date for the date filter.
+     * </p>
+     * <p>
+     * A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces, and date
+     * and time should be separated by <code>T</code>. For more information, see <a
+     * href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time Format</a>.
      * </p>
      */
     private String start;
     /**
      * <p>
-     * An end date for the date filter.
+     * A timestamp that provides the end date for the date filter.
+     * </p>
+     * <p>
+     * A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces, and date
+     * and time should be separated by <code>T</code>. For more information, see <a
+     * href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time Format</a>.
      * </p>
      */
     private String end;
@@ -49,11 +59,21 @@ public class DateFilter implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A start date for the date filter.
+     * A timestamp that provides the start date for the date filter.
+     * </p>
+     * <p>
+     * A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces, and date
+     * and time should be separated by <code>T</code>. For more information, see <a
+     * href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time Format</a>.
      * </p>
      * 
      * @param start
-     *        A start date for the date filter.
+     *        A timestamp that provides the start date for the date filter.</p>
+     *        <p>
+     *        A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces,
+     *        and date and time should be separated by <code>T</code>. For more information, see <a
+     *        href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
+     *        Format</a>.
      */
 
     public void setStart(String start) {
@@ -62,10 +82,20 @@ public class DateFilter implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A start date for the date filter.
+     * A timestamp that provides the start date for the date filter.
+     * </p>
+     * <p>
+     * A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces, and date
+     * and time should be separated by <code>T</code>. For more information, see <a
+     * href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time Format</a>.
      * </p>
      * 
-     * @return A start date for the date filter.
+     * @return A timestamp that provides the start date for the date filter.</p>
+     *         <p>
+     *         A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces,
+     *         and date and time should be separated by <code>T</code>. For more information, see <a
+     *         href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
+     *         Format</a>.
      */
 
     public String getStart() {
@@ -74,11 +104,21 @@ public class DateFilter implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A start date for the date filter.
+     * A timestamp that provides the start date for the date filter.
+     * </p>
+     * <p>
+     * A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces, and date
+     * and time should be separated by <code>T</code>. For more information, see <a
+     * href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time Format</a>.
      * </p>
      * 
      * @param start
-     *        A start date for the date filter.
+     *        A timestamp that provides the start date for the date filter.</p>
+     *        <p>
+     *        A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces,
+     *        and date and time should be separated by <code>T</code>. For more information, see <a
+     *        href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
+     *        Format</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -89,11 +129,21 @@ public class DateFilter implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * An end date for the date filter.
+     * A timestamp that provides the end date for the date filter.
+     * </p>
+     * <p>
+     * A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces, and date
+     * and time should be separated by <code>T</code>. For more information, see <a
+     * href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time Format</a>.
      * </p>
      * 
      * @param end
-     *        An end date for the date filter.
+     *        A timestamp that provides the end date for the date filter.</p>
+     *        <p>
+     *        A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces,
+     *        and date and time should be separated by <code>T</code>. For more information, see <a
+     *        href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
+     *        Format</a>.
      */
 
     public void setEnd(String end) {
@@ -102,10 +152,20 @@ public class DateFilter implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * An end date for the date filter.
+     * A timestamp that provides the end date for the date filter.
+     * </p>
+     * <p>
+     * A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces, and date
+     * and time should be separated by <code>T</code>. For more information, see <a
+     * href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time Format</a>.
      * </p>
      * 
-     * @return An end date for the date filter.
+     * @return A timestamp that provides the end date for the date filter.</p>
+     *         <p>
+     *         A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces,
+     *         and date and time should be separated by <code>T</code>. For more information, see <a
+     *         href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
+     *         Format</a>.
      */
 
     public String getEnd() {
@@ -114,11 +174,21 @@ public class DateFilter implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * An end date for the date filter.
+     * A timestamp that provides the end date for the date filter.
+     * </p>
+     * <p>
+     * A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces, and date
+     * and time should be separated by <code>T</code>. For more information, see <a
+     * href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time Format</a>.
      * </p>
      * 
      * @param end
-     *        An end date for the date filter.
+     *        A timestamp that provides the end date for the date filter.</p>
+     *        <p>
+     *        A correctly formatted example is <code>2020-05-21T20:16:34.724Z</code>. The value cannot contain spaces,
+     *        and date and time should be separated by <code>T</code>. For more information, see <a
+     *        href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
+     *        Format</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

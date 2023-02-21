@@ -28,7 +28,7 @@ public class DeleteAppAssessmentResult extends com.amazonaws.AmazonWebServiceRes
      * The Amazon Resource Name (ARN) of the assessment. The format for this ARN is: arn:<code>partition</code>
      * :resiliencehub:<code>region</code>:<code>account</code>:app-assessment/<code>app-id</code>. For more information
      * about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon
-     * Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.
+     * Resource Names (ARNs)</a> in the <i>AWS General Reference</i> guide.
      * </p>
      */
     private String assessmentArn;
@@ -44,7 +44,7 @@ public class DeleteAppAssessmentResult extends com.amazonaws.AmazonWebServiceRes
      * The Amazon Resource Name (ARN) of the assessment. The format for this ARN is: arn:<code>partition</code>
      * :resiliencehub:<code>region</code>:<code>account</code>:app-assessment/<code>app-id</code>. For more information
      * about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon
-     * Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.
+     * Resource Names (ARNs)</a> in the <i>AWS General Reference</i> guide.
      * </p>
      * 
      * @param assessmentArn
@@ -52,7 +52,7 @@ public class DeleteAppAssessmentResult extends com.amazonaws.AmazonWebServiceRes
      *        :resiliencehub:<code>region</code>:<code>account</code>:app-assessment/<code>app-id</code>. For more
      *        information about ARNs, see <a
      *        href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names
-     *        (ARNs)</a> in the <i>AWS General Reference</i>.
+     *        (ARNs)</a> in the <i>AWS General Reference</i> guide.
      */
 
     public void setAssessmentArn(String assessmentArn) {
@@ -64,14 +64,14 @@ public class DeleteAppAssessmentResult extends com.amazonaws.AmazonWebServiceRes
      * The Amazon Resource Name (ARN) of the assessment. The format for this ARN is: arn:<code>partition</code>
      * :resiliencehub:<code>region</code>:<code>account</code>:app-assessment/<code>app-id</code>. For more information
      * about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon
-     * Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.
+     * Resource Names (ARNs)</a> in the <i>AWS General Reference</i> guide.
      * </p>
      * 
      * @return The Amazon Resource Name (ARN) of the assessment. The format for this ARN is: arn:<code>partition</code>
      *         :resiliencehub:<code>region</code>:<code>account</code>:app-assessment/<code>app-id</code>. For more
      *         information about ARNs, see <a
      *         href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names
-     *         (ARNs)</a> in the <i>AWS General Reference</i>.
+     *         (ARNs)</a> in the <i>AWS General Reference</i> guide.
      */
 
     public String getAssessmentArn() {
@@ -83,7 +83,7 @@ public class DeleteAppAssessmentResult extends com.amazonaws.AmazonWebServiceRes
      * The Amazon Resource Name (ARN) of the assessment. The format for this ARN is: arn:<code>partition</code>
      * :resiliencehub:<code>region</code>:<code>account</code>:app-assessment/<code>app-id</code>. For more information
      * about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon
-     * Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.
+     * Resource Names (ARNs)</a> in the <i>AWS General Reference</i> guide.
      * </p>
      * 
      * @param assessmentArn
@@ -91,7 +91,7 @@ public class DeleteAppAssessmentResult extends com.amazonaws.AmazonWebServiceRes
      *        :resiliencehub:<code>region</code>:<code>account</code>:app-assessment/<code>app-id</code>. For more
      *        information about ARNs, see <a
      *        href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names
-     *        (ARNs)</a> in the <i>AWS General Reference</i>.
+     *        (ARNs)</a> in the <i>AWS General Reference</i> guide.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

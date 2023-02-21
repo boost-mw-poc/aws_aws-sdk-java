@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * Indicates that a request was not valid.
+ * This exception occurs when a request is not valid.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

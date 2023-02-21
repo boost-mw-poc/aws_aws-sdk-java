@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.resiliencehub.model.transform;
 
+import java.util.Map;
 import java.util.List;
 import javax.annotation.Generated;
 
@@ -28,8 +29,12 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class PhysicalResourceMarshaller {
 
+    private static final MarshallingInfo<Map> ADDITIONALINFO_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("additionalInfo").build();
     private static final MarshallingInfo<List> APPCOMPONENTS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("appComponents").build();
+    private static final MarshallingInfo<Boolean> EXCLUDED_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("excluded").build();
     private static final MarshallingInfo<StructuredPojo> LOGICALRESOURCEID_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("logicalResourceId").build();
     private static final MarshallingInfo<StructuredPojo> PHYSICALRESOURCEID_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
@@ -55,7 +60,9 @@ public class PhysicalResourceMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(physicalResource.getAdditionalInfo(), ADDITIONALINFO_BINDING);
             protocolMarshaller.marshall(physicalResource.getAppComponents(), APPCOMPONENTS_BINDING);
+            protocolMarshaller.marshall(physicalResource.getExcluded(), EXCLUDED_BINDING);
             protocolMarshaller.marshall(physicalResource.getLogicalResourceId(), LOGICALRESOURCEID_BINDING);
             protocolMarshaller.marshall(physicalResource.getPhysicalResourceId(), PHYSICALRESOURCEID_BINDING);
             protocolMarshaller.marshall(physicalResource.getResourceName(), RESOURCENAME_BINDING);

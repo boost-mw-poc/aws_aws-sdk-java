@@ -29,6 +29,8 @@ public class S3ParametersMarshaller {
 
     private static final MarshallingInfo<StructuredPojo> MANIFESTFILELOCATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ManifestFileLocation").build();
+    private static final MarshallingInfo<String> ROLEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("RoleArn").build();
 
     private static final S3ParametersMarshaller instance = new S3ParametersMarshaller();
 
@@ -47,6 +49,7 @@ public class S3ParametersMarshaller {
 
         try {
             protocolMarshaller.marshall(s3Parameters.getManifestFileLocation(), MANIFESTFILELOCATION_BINDING);
+            protocolMarshaller.marshall(s3Parameters.getRoleArn(), ROLEARN_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

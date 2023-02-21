@@ -48,6 +48,17 @@ public class AppComponentJsonUnmarshaller implements Unmarshaller<AppComponent, 
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("additionalInfo", targetDepth)) {
+                    context.nextToken();
+                    appComponent.setAdditionalInfo(new MapUnmarshaller<String, java.util.List<String>>(context.getUnmarshaller(String.class),
+                            new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
+
+                    ).unmarshall(context));
+                }
+                if (context.testExpression("id", targetDepth)) {
+                    context.nextToken();
+                    appComponent.setId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("name", targetDepth)) {
                     context.nextToken();
                     appComponent.setName(context.getUnmarshaller(String.class).unmarshall(context));

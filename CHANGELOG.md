@@ -1,3 +1,20 @@
+# __1.12.412__ __2023-02-21__
+## __AWS Resilience Hub__
+  - ### Features
+    - In this release we improved resilience hub application creation and maintenance by introducing new resource and app component crud APIs, improving visibility and maintenance of application input sources and added support for additional information attributes to be provided by customers.
+
+## __AWS SecurityHub__
+  - ### Features
+    - Documentation updates for AWS Security Hub
+
+## __AWS Telco Network Builder__
+  - ### Features
+    - This is the initial SDK release for AWS Telco Network Builder (TNB). AWS Telco Network Builder is a network automation service that helps you deploy and manage telecom networks.
+
+## __Amazon QuickSight__
+  - ### Features
+    - S3 data sources now accept a custom IAM role.
+
 # __1.12.411__ __2023-02-20__
 ## __AWS Audit Manager__
   - ### Features

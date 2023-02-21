@@ -12,6 +12,8 @@
  */
 package com.amazonaws.services.resiliencehub.model.transform;
 
+import java.util.Map;
+
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -27,6 +29,10 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class AppComponentMarshaller {
 
+    private static final MarshallingInfo<Map> ADDITIONALINFO_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("additionalInfo").build();
+    private static final MarshallingInfo<String> ID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("id").build();
     private static final MarshallingInfo<String> NAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("name").build();
     private static final MarshallingInfo<String> TYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
@@ -48,6 +54,8 @@ public class AppComponentMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(appComponent.getAdditionalInfo(), ADDITIONALINFO_BINDING);
+            protocolMarshaller.marshall(appComponent.getId(), ID_BINDING);
             protocolMarshaller.marshall(appComponent.getName(), NAME_BINDING);
             protocolMarshaller.marshall(appComponent.getType(), TYPE_BINDING);
         } catch (Exception e) {
