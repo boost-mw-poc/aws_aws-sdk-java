@@ -175,6 +175,39 @@ public class AmazonS3OutpostsAsyncClient extends AmazonS3OutpostsClient implemen
     }
 
     @Override
+    public java.util.concurrent.Future<ListOutpostsWithS3Result> listOutpostsWithS3Async(ListOutpostsWithS3Request request) {
+
+        return listOutpostsWithS3Async(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListOutpostsWithS3Result> listOutpostsWithS3Async(final ListOutpostsWithS3Request request,
+            final com.amazonaws.handlers.AsyncHandler<ListOutpostsWithS3Request, ListOutpostsWithS3Result> asyncHandler) {
+        final ListOutpostsWithS3Request finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListOutpostsWithS3Result>() {
+            @Override
+            public ListOutpostsWithS3Result call() throws Exception {
+                ListOutpostsWithS3Result result = null;
+
+                try {
+                    result = executeListOutpostsWithS3(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ListSharedEndpointsResult> listSharedEndpointsAsync(ListSharedEndpointsRequest request) {
 
         return listSharedEndpointsAsync(request, null);

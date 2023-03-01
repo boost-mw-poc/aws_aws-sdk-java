@@ -171,6 +171,39 @@ public class AWSPricingAsyncClient extends AWSPricingClient implements AWSPricin
     }
 
     @Override
+    public java.util.concurrent.Future<GetPriceListFileUrlResult> getPriceListFileUrlAsync(GetPriceListFileUrlRequest request) {
+
+        return getPriceListFileUrlAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetPriceListFileUrlResult> getPriceListFileUrlAsync(final GetPriceListFileUrlRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetPriceListFileUrlRequest, GetPriceListFileUrlResult> asyncHandler) {
+        final GetPriceListFileUrlRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetPriceListFileUrlResult>() {
+            @Override
+            public GetPriceListFileUrlResult call() throws Exception {
+                GetPriceListFileUrlResult result = null;
+
+                try {
+                    result = executeGetPriceListFileUrl(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetProductsResult> getProductsAsync(GetProductsRequest request) {
 
         return getProductsAsync(request, null);
@@ -188,6 +221,39 @@ public class AWSPricingAsyncClient extends AWSPricingClient implements AWSPricin
 
                 try {
                     result = executeGetProducts(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListPriceListsResult> listPriceListsAsync(ListPriceListsRequest request) {
+
+        return listPriceListsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListPriceListsResult> listPriceListsAsync(final ListPriceListsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListPriceListsRequest, ListPriceListsResult> asyncHandler) {
+        final ListPriceListsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListPriceListsResult>() {
+            @Override
+            public ListPriceListsResult call() throws Exception {
+                ListPriceListsResult result = null;
+
+                try {
+                    result = executeListPriceLists(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

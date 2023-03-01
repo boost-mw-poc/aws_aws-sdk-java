@@ -241,6 +241,39 @@ public interface AmazonS3OutpostsAsync extends AmazonS3Outposts {
 
     /**
      * <p>
+     * Lists the Outposts with S3 on Outposts capacity for your Amazon Web Services account. Includes S3 on Outposts
+     * that you have access to as the Outposts owner, or as a shared user from Resource Access Manager (RAM).
+     * </p>
+     * 
+     * @param listOutpostsWithS3Request
+     * @return A Java Future containing the result of the ListOutpostsWithS3 operation returned by the service.
+     * @sample AmazonS3OutpostsAsync.ListOutpostsWithS3
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3outposts-2017-07-25/ListOutpostsWithS3" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ListOutpostsWithS3Result> listOutpostsWithS3Async(ListOutpostsWithS3Request listOutpostsWithS3Request);
+
+    /**
+     * <p>
+     * Lists the Outposts with S3 on Outposts capacity for your Amazon Web Services account. Includes S3 on Outposts
+     * that you have access to as the Outposts owner, or as a shared user from Resource Access Manager (RAM).
+     * </p>
+     * 
+     * @param listOutpostsWithS3Request
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListOutpostsWithS3 operation returned by the service.
+     * @sample AmazonS3OutpostsAsyncHandler.ListOutpostsWithS3
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3outposts-2017-07-25/ListOutpostsWithS3" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ListOutpostsWithS3Result> listOutpostsWithS3Async(ListOutpostsWithS3Request listOutpostsWithS3Request,
+            com.amazonaws.handlers.AsyncHandler<ListOutpostsWithS3Request, ListOutpostsWithS3Result> asyncHandler);
+
+    /**
+     * <p>
      * Lists all endpoints associated with an Outpost that has been shared by Amazon Web Services Resource Access
      * Manager (RAM).
      * </p>

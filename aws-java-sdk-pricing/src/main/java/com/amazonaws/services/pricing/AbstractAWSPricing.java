@@ -38,7 +38,17 @@ public class AbstractAWSPricing implements AWSPricing {
     }
 
     @Override
+    public GetPriceListFileUrlResult getPriceListFileUrl(GetPriceListFileUrlRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetProductsResult getProducts(GetProductsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListPriceListsResult listPriceLists(ListPriceListsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

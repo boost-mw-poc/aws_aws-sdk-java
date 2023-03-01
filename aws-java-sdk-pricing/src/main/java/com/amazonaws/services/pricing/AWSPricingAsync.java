@@ -145,6 +145,53 @@ public interface AWSPricingAsync extends AWSPricing {
 
     /**
      * <p>
+     * <i> <b>This feature is in preview release and is subject to change. Your use of Amazon Web Services Price List
+     * API is subject to the Beta Service Participation terms of the <a
+     * href="https://aws.amazon.com/service-terms/">Amazon Web Services Service Terms</a> (Section 1.10).</b> </i>
+     * </p>
+     * <p>
+     * This returns the URL that you can retrieve your Price List file from. This URL is based on the
+     * <code>PriceListArn</code> and <code>FileFormat</code> that you retrieve from the <a
+     * href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_pricing_ListPriceLists.html">
+     * <code>ListPriceLists</code> </a> response.
+     * </p>
+     * 
+     * @param getPriceListFileUrlRequest
+     * @return A Java Future containing the result of the GetPriceListFileUrl operation returned by the service.
+     * @sample AWSPricingAsync.GetPriceListFileUrl
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/pricing-2017-10-15/GetPriceListFileUrl" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<GetPriceListFileUrlResult> getPriceListFileUrlAsync(GetPriceListFileUrlRequest getPriceListFileUrlRequest);
+
+    /**
+     * <p>
+     * <i> <b>This feature is in preview release and is subject to change. Your use of Amazon Web Services Price List
+     * API is subject to the Beta Service Participation terms of the <a
+     * href="https://aws.amazon.com/service-terms/">Amazon Web Services Service Terms</a> (Section 1.10).</b> </i>
+     * </p>
+     * <p>
+     * This returns the URL that you can retrieve your Price List file from. This URL is based on the
+     * <code>PriceListArn</code> and <code>FileFormat</code> that you retrieve from the <a
+     * href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_pricing_ListPriceLists.html">
+     * <code>ListPriceLists</code> </a> response.
+     * </p>
+     * 
+     * @param getPriceListFileUrlRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetPriceListFileUrl operation returned by the service.
+     * @sample AWSPricingAsyncHandler.GetPriceListFileUrl
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/pricing-2017-10-15/GetPriceListFileUrl" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<GetPriceListFileUrlResult> getPriceListFileUrlAsync(GetPriceListFileUrlRequest getPriceListFileUrlRequest,
+            com.amazonaws.handlers.AsyncHandler<GetPriceListFileUrlRequest, GetPriceListFileUrlResult> asyncHandler);
+
+    /**
+     * <p>
      * Returns a list of all products that match the filter criteria.
      * </p>
      * 
@@ -173,5 +220,60 @@ public interface AWSPricingAsync extends AWSPricing {
      */
     java.util.concurrent.Future<GetProductsResult> getProductsAsync(GetProductsRequest getProductsRequest,
             com.amazonaws.handlers.AsyncHandler<GetProductsRequest, GetProductsResult> asyncHandler);
+
+    /**
+     * <p>
+     * <i> <b>This feature is in preview release and is subject to change. Your use of Amazon Web Services Price List
+     * API is subject to the Beta Service Participation terms of the <a
+     * href="https://aws.amazon.com/service-terms/">Amazon Web Services Service Terms</a> (Section 1.10).</b> </i>
+     * </p>
+     * <p>
+     * This returns a list of Price List references that the requester if authorized to view, given a
+     * <code>ServiceCode</code>, <code>CurrencyCode</code>, and an <code>EffectiveDate</code>. Use without a
+     * <code>RegionCode</code> filter to list Price List references from all available Amazon Web Services Regions. Use
+     * with a <code>RegionCode</code> filter to get the Price List reference that's specific to a specific Amazon Web
+     * Services Region. You can use the <code>PriceListArn</code> from the response to get your preferred Price List
+     * files through the <a
+     * href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_pricing_GetPriceListFileUrl.html">
+     * <code>GetPriceListFileUrl</code> </a> API.
+     * </p>
+     * 
+     * @param listPriceListsRequest
+     * @return A Java Future containing the result of the ListPriceLists operation returned by the service.
+     * @sample AWSPricingAsync.ListPriceLists
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/pricing-2017-10-15/ListPriceLists" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListPriceListsResult> listPriceListsAsync(ListPriceListsRequest listPriceListsRequest);
+
+    /**
+     * <p>
+     * <i> <b>This feature is in preview release and is subject to change. Your use of Amazon Web Services Price List
+     * API is subject to the Beta Service Participation terms of the <a
+     * href="https://aws.amazon.com/service-terms/">Amazon Web Services Service Terms</a> (Section 1.10).</b> </i>
+     * </p>
+     * <p>
+     * This returns a list of Price List references that the requester if authorized to view, given a
+     * <code>ServiceCode</code>, <code>CurrencyCode</code>, and an <code>EffectiveDate</code>. Use without a
+     * <code>RegionCode</code> filter to list Price List references from all available Amazon Web Services Regions. Use
+     * with a <code>RegionCode</code> filter to get the Price List reference that's specific to a specific Amazon Web
+     * Services Region. You can use the <code>PriceListArn</code> from the response to get your preferred Price List
+     * files through the <a
+     * href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_pricing_GetPriceListFileUrl.html">
+     * <code>GetPriceListFileUrl</code> </a> API.
+     * </p>
+     * 
+     * @param listPriceListsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListPriceLists operation returned by the service.
+     * @sample AWSPricingAsyncHandler.ListPriceLists
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/pricing-2017-10-15/ListPriceLists" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListPriceListsResult> listPriceListsAsync(ListPriceListsRequest listPriceListsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListPriceListsRequest, ListPriceListsResult> asyncHandler);
 
 }

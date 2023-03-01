@@ -129,6 +129,35 @@ public interface AWSPricing {
 
     /**
      * <p>
+     * <i> <b>This feature is in preview release and is subject to change. Your use of Amazon Web Services Price List
+     * API is subject to the Beta Service Participation terms of the <a
+     * href="https://aws.amazon.com/service-terms/">Amazon Web Services Service Terms</a> (Section 1.10).</b> </i>
+     * </p>
+     * <p>
+     * This returns the URL that you can retrieve your Price List file from. This URL is based on the
+     * <code>PriceListArn</code> and <code>FileFormat</code> that you retrieve from the <a
+     * href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_pricing_ListPriceLists.html">
+     * <code>ListPriceLists</code> </a> response.
+     * </p>
+     * 
+     * @param getPriceListFileUrlRequest
+     * @return Result of the GetPriceListFileUrl operation returned by the service.
+     * @throws InternalErrorException
+     *         An error on the server occurred during the processing of your request. Try again later.
+     * @throws InvalidParameterException
+     *         One or more parameters had an invalid value.
+     * @throws NotFoundException
+     *         The requested resource can't be found.
+     * @throws AccessDeniedException
+     *         General authentication failure. The request wasn't signed correctly.
+     * @sample AWSPricing.GetPriceListFileUrl
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/pricing-2017-10-15/GetPriceListFileUrl" target="_top">AWS
+     *      API Documentation</a>
+     */
+    GetPriceListFileUrlResult getPriceListFileUrl(GetPriceListFileUrlRequest getPriceListFileUrlRequest);
+
+    /**
+     * <p>
      * Returns a list of all products that match the filter criteria.
      * </p>
      * 
@@ -149,6 +178,43 @@ public interface AWSPricing {
      *      Documentation</a>
      */
     GetProductsResult getProducts(GetProductsRequest getProductsRequest);
+
+    /**
+     * <p>
+     * <i> <b>This feature is in preview release and is subject to change. Your use of Amazon Web Services Price List
+     * API is subject to the Beta Service Participation terms of the <a
+     * href="https://aws.amazon.com/service-terms/">Amazon Web Services Service Terms</a> (Section 1.10).</b> </i>
+     * </p>
+     * <p>
+     * This returns a list of Price List references that the requester if authorized to view, given a
+     * <code>ServiceCode</code>, <code>CurrencyCode</code>, and an <code>EffectiveDate</code>. Use without a
+     * <code>RegionCode</code> filter to list Price List references from all available Amazon Web Services Regions. Use
+     * with a <code>RegionCode</code> filter to get the Price List reference that's specific to a specific Amazon Web
+     * Services Region. You can use the <code>PriceListArn</code> from the response to get your preferred Price List
+     * files through the <a
+     * href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_pricing_GetPriceListFileUrl.html">
+     * <code>GetPriceListFileUrl</code> </a> API.
+     * </p>
+     * 
+     * @param listPriceListsRequest
+     * @return Result of the ListPriceLists operation returned by the service.
+     * @throws InternalErrorException
+     *         An error on the server occurred during the processing of your request. Try again later.
+     * @throws InvalidParameterException
+     *         One or more parameters had an invalid value.
+     * @throws NotFoundException
+     *         The requested resource can't be found.
+     * @throws InvalidNextTokenException
+     *         The pagination token is invalid. Try again without a pagination token.
+     * @throws ExpiredNextTokenException
+     *         The pagination token expired. Try again without a pagination token.
+     * @throws AccessDeniedException
+     *         General authentication failure. The request wasn't signed correctly.
+     * @sample AWSPricing.ListPriceLists
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/pricing-2017-10-15/ListPriceLists" target="_top">AWS API
+     *      Documentation</a>
+     */
+    ListPriceListsResult listPriceLists(ListPriceListsRequest listPriceListsRequest);
 
     /**
      * Shuts down this client object, releasing any resources that might be held open. This is an optional method, and

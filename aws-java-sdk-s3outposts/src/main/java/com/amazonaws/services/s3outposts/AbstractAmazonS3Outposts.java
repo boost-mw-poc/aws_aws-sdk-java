@@ -43,6 +43,11 @@ public class AbstractAmazonS3Outposts implements AmazonS3Outposts {
     }
 
     @Override
+    public ListOutpostsWithS3Result listOutpostsWithS3(ListOutpostsWithS3Request request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListSharedEndpointsResult listSharedEndpoints(ListSharedEndpointsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

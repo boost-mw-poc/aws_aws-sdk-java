@@ -54,6 +54,19 @@ public class AbstractAWSPricingAsync extends AbstractAWSPricing implements AWSPr
     }
 
     @Override
+    public java.util.concurrent.Future<GetPriceListFileUrlResult> getPriceListFileUrlAsync(GetPriceListFileUrlRequest request) {
+
+        return getPriceListFileUrlAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetPriceListFileUrlResult> getPriceListFileUrlAsync(GetPriceListFileUrlRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetPriceListFileUrlRequest, GetPriceListFileUrlResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetProductsResult> getProductsAsync(GetProductsRequest request) {
 
         return getProductsAsync(request, null);
@@ -62,6 +75,19 @@ public class AbstractAWSPricingAsync extends AbstractAWSPricing implements AWSPr
     @Override
     public java.util.concurrent.Future<GetProductsResult> getProductsAsync(GetProductsRequest request,
             com.amazonaws.handlers.AsyncHandler<GetProductsRequest, GetProductsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListPriceListsResult> listPriceListsAsync(ListPriceListsRequest request) {
+
+        return listPriceListsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListPriceListsResult> listPriceListsAsync(ListPriceListsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListPriceListsRequest, ListPriceListsResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

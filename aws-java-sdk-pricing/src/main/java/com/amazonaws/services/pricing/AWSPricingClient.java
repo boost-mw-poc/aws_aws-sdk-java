@@ -108,6 +108,9 @@ public class AWSPricingClient extends AmazonWebServiceClient implements AWSPrici
                     .withSupportsCbor(false)
                     .withSupportsIon(false)
                     .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("AccessDeniedException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.pricing.model.transform.AccessDeniedExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("NotFoundException").withExceptionUnmarshaller(
                                     com.amazonaws.services.pricing.model.transform.NotFoundExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
@@ -311,6 +314,77 @@ public class AWSPricingClient extends AmazonWebServiceClient implements AWSPrici
 
     /**
      * <p>
+     * <i> <b>This feature is in preview release and is subject to change. Your use of Amazon Web Services Price List
+     * API is subject to the Beta Service Participation terms of the <a
+     * href="https://aws.amazon.com/service-terms/">Amazon Web Services Service Terms</a> (Section 1.10).</b> </i>
+     * </p>
+     * <p>
+     * This returns the URL that you can retrieve your Price List file from. This URL is based on the
+     * <code>PriceListArn</code> and <code>FileFormat</code> that you retrieve from the <a
+     * href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_pricing_ListPriceLists.html">
+     * <code>ListPriceLists</code> </a> response.
+     * </p>
+     * 
+     * @param getPriceListFileUrlRequest
+     * @return Result of the GetPriceListFileUrl operation returned by the service.
+     * @throws InternalErrorException
+     *         An error on the server occurred during the processing of your request. Try again later.
+     * @throws InvalidParameterException
+     *         One or more parameters had an invalid value.
+     * @throws NotFoundException
+     *         The requested resource can't be found.
+     * @throws AccessDeniedException
+     *         General authentication failure. The request wasn't signed correctly.
+     * @sample AWSPricing.GetPriceListFileUrl
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/pricing-2017-10-15/GetPriceListFileUrl" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public GetPriceListFileUrlResult getPriceListFileUrl(GetPriceListFileUrlRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetPriceListFileUrl(request);
+    }
+
+    @SdkInternalApi
+    final GetPriceListFileUrlResult executeGetPriceListFileUrl(GetPriceListFileUrlRequest getPriceListFileUrlRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getPriceListFileUrlRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetPriceListFileUrlRequest> request = null;
+        Response<GetPriceListFileUrlResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetPriceListFileUrlRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getPriceListFileUrlRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Pricing");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetPriceListFileUrl");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetPriceListFileUrlResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetPriceListFileUrlResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Returns a list of all products that match the filter criteria.
      * </p>
      * 
@@ -364,6 +438,85 @@ public class AWSPricingClient extends AmazonWebServiceClient implements AWSPrici
 
             HttpResponseHandler<AmazonWebServiceResponse<GetProductsResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetProductsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * <i> <b>This feature is in preview release and is subject to change. Your use of Amazon Web Services Price List
+     * API is subject to the Beta Service Participation terms of the <a
+     * href="https://aws.amazon.com/service-terms/">Amazon Web Services Service Terms</a> (Section 1.10).</b> </i>
+     * </p>
+     * <p>
+     * This returns a list of Price List references that the requester if authorized to view, given a
+     * <code>ServiceCode</code>, <code>CurrencyCode</code>, and an <code>EffectiveDate</code>. Use without a
+     * <code>RegionCode</code> filter to list Price List references from all available Amazon Web Services Regions. Use
+     * with a <code>RegionCode</code> filter to get the Price List reference that's specific to a specific Amazon Web
+     * Services Region. You can use the <code>PriceListArn</code> from the response to get your preferred Price List
+     * files through the <a
+     * href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_pricing_GetPriceListFileUrl.html">
+     * <code>GetPriceListFileUrl</code> </a> API.
+     * </p>
+     * 
+     * @param listPriceListsRequest
+     * @return Result of the ListPriceLists operation returned by the service.
+     * @throws InternalErrorException
+     *         An error on the server occurred during the processing of your request. Try again later.
+     * @throws InvalidParameterException
+     *         One or more parameters had an invalid value.
+     * @throws NotFoundException
+     *         The requested resource can't be found.
+     * @throws InvalidNextTokenException
+     *         The pagination token is invalid. Try again without a pagination token.
+     * @throws ExpiredNextTokenException
+     *         The pagination token expired. Try again without a pagination token.
+     * @throws AccessDeniedException
+     *         General authentication failure. The request wasn't signed correctly.
+     * @sample AWSPricing.ListPriceLists
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/pricing-2017-10-15/ListPriceLists" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public ListPriceListsResult listPriceLists(ListPriceListsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListPriceLists(request);
+    }
+
+    @SdkInternalApi
+    final ListPriceListsResult executeListPriceLists(ListPriceListsRequest listPriceListsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listPriceListsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListPriceListsRequest> request = null;
+        Response<ListPriceListsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListPriceListsRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listPriceListsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Pricing");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListPriceLists");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListPriceListsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListPriceListsResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
