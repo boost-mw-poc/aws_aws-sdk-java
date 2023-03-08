@@ -15,7 +15,10 @@ package com.amazonaws.services.route53resolver.model;
 import javax.annotation.Generated;
 
 /**
- * <p/>
+ * <p>
+ * The requested state transition isn't valid. For example, you can't delete a firewall domain list if it is in the
+ * process of being deleted, or you can't import domains into a domain list that is in the process of being deleted.
+ * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ConflictException extends com.amazonaws.services.route53resolver.model.AmazonRoute53ResolverException {

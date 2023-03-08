@@ -15,7 +15,10 @@ package com.amazonaws.services.route53resolver.model;
 import javax.annotation.Generated;
 
 /**
- * <p/>
+ * <p>
+ * You have provided an invalid command. Supported values are <code>ADD</code>, <code>REMOVE</code>, or
+ * <code>REPLACE</code> a domain.
+ * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ValidationException extends com.amazonaws.services.route53resolver.model.AmazonRoute53ResolverException {

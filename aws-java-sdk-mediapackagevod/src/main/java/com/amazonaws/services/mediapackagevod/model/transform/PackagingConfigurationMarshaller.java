@@ -33,6 +33,8 @@ public class PackagingConfigurationMarshaller {
             .marshallLocationName("arn").build();
     private static final MarshallingInfo<StructuredPojo> CMAFPACKAGE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("cmafPackage").build();
+    private static final MarshallingInfo<String> CREATEDAT_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("createdAt").build();
     private static final MarshallingInfo<StructuredPojo> DASHPACKAGE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("dashPackage").build();
     private static final MarshallingInfo<StructuredPojo> HLSPACKAGE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
@@ -64,6 +66,7 @@ public class PackagingConfigurationMarshaller {
         try {
             protocolMarshaller.marshall(packagingConfiguration.getArn(), ARN_BINDING);
             protocolMarshaller.marshall(packagingConfiguration.getCmafPackage(), CMAFPACKAGE_BINDING);
+            protocolMarshaller.marshall(packagingConfiguration.getCreatedAt(), CREATEDAT_BINDING);
             protocolMarshaller.marshall(packagingConfiguration.getDashPackage(), DASHPACKAGE_BINDING);
             protocolMarshaller.marshall(packagingConfiguration.getHlsPackage(), HLSPACKAGE_BINDING);
             protocolMarshaller.marshall(packagingConfiguration.getId(), ID_BINDING);

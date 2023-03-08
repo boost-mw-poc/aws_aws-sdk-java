@@ -50,6 +50,8 @@ public class QueryExecutionMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EngineVersion").build();
     private static final MarshallingInfo<List> EXECUTIONPARAMETERS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ExecutionParameters").build();
+    private static final MarshallingInfo<String> SUBSTATEMENTTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SubstatementType").build();
 
     private static final QueryExecutionMarshaller instance = new QueryExecutionMarshaller();
 
@@ -78,6 +80,7 @@ public class QueryExecutionMarshaller {
             protocolMarshaller.marshall(queryExecution.getWorkGroup(), WORKGROUP_BINDING);
             protocolMarshaller.marshall(queryExecution.getEngineVersion(), ENGINEVERSION_BINDING);
             protocolMarshaller.marshall(queryExecution.getExecutionParameters(), EXECUTIONPARAMETERS_BINDING);
+            protocolMarshaller.marshall(queryExecution.getSubstatementType(), SUBSTATEMENTTYPE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

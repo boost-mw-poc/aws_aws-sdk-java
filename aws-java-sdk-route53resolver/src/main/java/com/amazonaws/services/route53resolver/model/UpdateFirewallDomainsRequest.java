@@ -58,6 +58,11 @@ public class UpdateFirewallDomainsRequest extends com.amazonaws.AmazonWebService
      * <p>
      * A list of domains to use in the update operation.
      * </p>
+     * <important>
+     * <p>
+     * There is a limit of 1000 domains per request.
+     * </p>
+     * </important>
      * <p>
      * Each domain specification in your domain list must satisfy the following requirements:
      * </p>
@@ -317,6 +322,11 @@ public class UpdateFirewallDomainsRequest extends com.amazonaws.AmazonWebService
      * <p>
      * A list of domains to use in the update operation.
      * </p>
+     * <important>
+     * <p>
+     * There is a limit of 1000 domains per request.
+     * </p>
+     * </important>
      * <p>
      * Each domain specification in your domain list must satisfy the following requirements:
      * </p>
@@ -339,7 +349,11 @@ public class UpdateFirewallDomainsRequest extends com.amazonaws.AmazonWebService
      * </li>
      * </ul>
      * 
-     * @return A list of domains to use in the update operation.</p>
+     * @return A list of domains to use in the update operation.</p> <important>
+     *         <p>
+     *         There is a limit of 1000 domains per request.
+     *         </p>
+     *         </important>
      *         <p>
      *         Each domain specification in your domain list must satisfy the following requirements:
      *         </p>
@@ -370,6 +384,11 @@ public class UpdateFirewallDomainsRequest extends com.amazonaws.AmazonWebService
      * <p>
      * A list of domains to use in the update operation.
      * </p>
+     * <important>
+     * <p>
+     * There is a limit of 1000 domains per request.
+     * </p>
+     * </important>
      * <p>
      * Each domain specification in your domain list must satisfy the following requirements:
      * </p>
@@ -393,7 +412,11 @@ public class UpdateFirewallDomainsRequest extends com.amazonaws.AmazonWebService
      * </ul>
      * 
      * @param domains
-     *        A list of domains to use in the update operation.</p>
+     *        A list of domains to use in the update operation.</p> <important>
+     *        <p>
+     *        There is a limit of 1000 domains per request.
+     *        </p>
+     *        </important>
      *        <p>
      *        Each domain specification in your domain list must satisfy the following requirements:
      *        </p>
@@ -429,6 +452,11 @@ public class UpdateFirewallDomainsRequest extends com.amazonaws.AmazonWebService
      * <p>
      * A list of domains to use in the update operation.
      * </p>
+     * <important>
+     * <p>
+     * There is a limit of 1000 domains per request.
+     * </p>
+     * </important>
      * <p>
      * Each domain specification in your domain list must satisfy the following requirements:
      * </p>
@@ -457,7 +485,11 @@ public class UpdateFirewallDomainsRequest extends com.amazonaws.AmazonWebService
      * </p>
      * 
      * @param domains
-     *        A list of domains to use in the update operation.</p>
+     *        A list of domains to use in the update operation.</p> <important>
+     *        <p>
+     *        There is a limit of 1000 domains per request.
+     *        </p>
+     *        </important>
      *        <p>
      *        Each domain specification in your domain list must satisfy the following requirements:
      *        </p>
@@ -495,6 +527,11 @@ public class UpdateFirewallDomainsRequest extends com.amazonaws.AmazonWebService
      * <p>
      * A list of domains to use in the update operation.
      * </p>
+     * <important>
+     * <p>
+     * There is a limit of 1000 domains per request.
+     * </p>
+     * </important>
      * <p>
      * Each domain specification in your domain list must satisfy the following requirements:
      * </p>
@@ -518,7 +555,11 @@ public class UpdateFirewallDomainsRequest extends com.amazonaws.AmazonWebService
      * </ul>
      * 
      * @param domains
-     *        A list of domains to use in the update operation.</p>
+     *        A list of domains to use in the update operation.</p> <important>
+     *        <p>
+     *        There is a limit of 1000 domains per request.
+     *        </p>
+     *        </important>
      *        <p>
      *        Each domain specification in your domain list must satisfy the following requirements:
      *        </p>

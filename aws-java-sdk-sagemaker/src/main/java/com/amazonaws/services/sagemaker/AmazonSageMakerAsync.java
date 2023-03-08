@@ -11815,7 +11815,7 @@ public interface AmazonSageMakerAsync extends AmazonSageMaker {
      * </p>
      * <p>
      * To restrict access to all the workers in public internet, add the <code>SourceIpConfig</code> CIDR value as
-     * "0.0.0.0/0".
+     * "10.0.0.0/16".
      * </p>
      * <important>
      * <p>
@@ -11868,7 +11868,7 @@ public interface AmazonSageMakerAsync extends AmazonSageMaker {
      * </p>
      * <p>
      * To restrict access to all the workers in public internet, add the <code>SourceIpConfig</code> CIDR value as
-     * "0.0.0.0/0".
+     * "10.0.0.0/16".
      * </p>
      * <important>
      * <p>

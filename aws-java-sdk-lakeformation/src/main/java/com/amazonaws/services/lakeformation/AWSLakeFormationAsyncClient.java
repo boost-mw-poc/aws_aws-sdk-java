@@ -572,6 +572,39 @@ public class AWSLakeFormationAsyncClient extends AWSLakeFormationClient implemen
     }
 
     @Override
+    public java.util.concurrent.Future<GetDataCellsFilterResult> getDataCellsFilterAsync(GetDataCellsFilterRequest request) {
+
+        return getDataCellsFilterAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetDataCellsFilterResult> getDataCellsFilterAsync(final GetDataCellsFilterRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetDataCellsFilterRequest, GetDataCellsFilterResult> asyncHandler) {
+        final GetDataCellsFilterRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetDataCellsFilterResult>() {
+            @Override
+            public GetDataCellsFilterResult call() throws Exception {
+                GetDataCellsFilterResult result = null;
+
+                try {
+                    result = executeGetDataCellsFilter(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetDataLakeSettingsResult> getDataLakeSettingsAsync(GetDataLakeSettingsRequest request) {
 
         return getDataLakeSettingsAsync(request, null);
@@ -1419,6 +1452,39 @@ public class AWSLakeFormationAsyncClient extends AWSLakeFormationClient implemen
 
                 try {
                     result = executeStartTransaction(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateDataCellsFilterResult> updateDataCellsFilterAsync(UpdateDataCellsFilterRequest request) {
+
+        return updateDataCellsFilterAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateDataCellsFilterResult> updateDataCellsFilterAsync(final UpdateDataCellsFilterRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateDataCellsFilterRequest, UpdateDataCellsFilterResult> asyncHandler) {
+        final UpdateDataCellsFilterRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateDataCellsFilterResult>() {
+            @Override
+            public UpdateDataCellsFilterResult call() throws Exception {
+                UpdateDataCellsFilterResult result = null;
+
+                try {
+                    result = executeUpdateDataCellsFilter(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

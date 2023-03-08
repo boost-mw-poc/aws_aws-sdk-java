@@ -37,6 +37,7 @@ public class UpdateFirewallDomainsResult extends com.amazonaws.AmazonWebServiceR
     private String name;
     /**
      * <p>
+     * Status of the <code>UpdateFirewallDomains</code> request.
      * </p>
      */
     private String status;
@@ -129,9 +130,11 @@ public class UpdateFirewallDomainsResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
+     * Status of the <code>UpdateFirewallDomains</code> request.
      * </p>
      * 
      * @param status
+     *        Status of the <code>UpdateFirewallDomains</code> request.
      * @see FirewallDomainListStatus
      */
 
@@ -141,9 +144,10 @@ public class UpdateFirewallDomainsResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
+     * Status of the <code>UpdateFirewallDomains</code> request.
      * </p>
      * 
-     * @return
+     * @return Status of the <code>UpdateFirewallDomains</code> request.
      * @see FirewallDomainListStatus
      */
 
@@ -153,9 +157,11 @@ public class UpdateFirewallDomainsResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
+     * Status of the <code>UpdateFirewallDomains</code> request.
      * </p>
      * 
      * @param status
+     *        Status of the <code>UpdateFirewallDomains</code> request.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see FirewallDomainListStatus
      */
@@ -167,9 +173,11 @@ public class UpdateFirewallDomainsResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
+     * Status of the <code>UpdateFirewallDomains</code> request.
      * </p>
      * 
      * @param status
+     *        Status of the <code>UpdateFirewallDomains</code> request.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see FirewallDomainListStatus
      */

@@ -638,7 +638,26 @@ public enum InstanceType {
     R6idn12xlarge("r6idn.12xlarge"),
     R6idn16xlarge("r6idn.16xlarge"),
     R6idn24xlarge("r6idn.24xlarge"),
-    R6idn32xlarge("r6idn.32xlarge");
+    R6idn32xlarge("r6idn.32xlarge"),
+    C7gMetal("c7g.metal"),
+    M7gMedium("m7g.medium"),
+    M7gLarge("m7g.large"),
+    M7gXlarge("m7g.xlarge"),
+    M7g2xlarge("m7g.2xlarge"),
+    M7g4xlarge("m7g.4xlarge"),
+    M7g8xlarge("m7g.8xlarge"),
+    M7g12xlarge("m7g.12xlarge"),
+    M7g16xlarge("m7g.16xlarge"),
+    M7gMetal("m7g.metal"),
+    R7gMedium("r7g.medium"),
+    R7gLarge("r7g.large"),
+    R7gXlarge("r7g.xlarge"),
+    R7g2xlarge("r7g.2xlarge"),
+    R7g4xlarge("r7g.4xlarge"),
+    R7g8xlarge("r7g.8xlarge"),
+    R7g12xlarge("r7g.12xlarge"),
+    R7g16xlarge("r7g.16xlarge"),
+    R7gMetal("r7g.metal");
 
     private String value;
 

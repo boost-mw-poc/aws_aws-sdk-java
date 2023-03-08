@@ -103,6 +103,12 @@ public class QueryExecution implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private java.util.List<String> executionParameters;
+    /**
+     * <p>
+     * The kind of query statement that was run.
+     * </p>
+     */
+    private String substatementType;
 
     /**
      * <p>
@@ -656,6 +662,46 @@ public class QueryExecution implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The kind of query statement that was run.
+     * </p>
+     * 
+     * @param substatementType
+     *        The kind of query statement that was run.
+     */
+
+    public void setSubstatementType(String substatementType) {
+        this.substatementType = substatementType;
+    }
+
+    /**
+     * <p>
+     * The kind of query statement that was run.
+     * </p>
+     * 
+     * @return The kind of query statement that was run.
+     */
+
+    public String getSubstatementType() {
+        return this.substatementType;
+    }
+
+    /**
+     * <p>
+     * The kind of query statement that was run.
+     * </p>
+     * 
+     * @param substatementType
+     *        The kind of query statement that was run.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public QueryExecution withSubstatementType(String substatementType) {
+        setSubstatementType(substatementType);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -688,7 +734,9 @@ public class QueryExecution implements Serializable, Cloneable, StructuredPojo {
         if (getEngineVersion() != null)
             sb.append("EngineVersion: ").append(getEngineVersion()).append(",");
         if (getExecutionParameters() != null)
-            sb.append("ExecutionParameters: ").append(getExecutionParameters());
+            sb.append("ExecutionParameters: ").append(getExecutionParameters()).append(",");
+        if (getSubstatementType() != null)
+            sb.append("SubstatementType: ").append(getSubstatementType());
         sb.append("}");
         return sb.toString();
     }
@@ -747,6 +795,10 @@ public class QueryExecution implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getExecutionParameters() != null && other.getExecutionParameters().equals(this.getExecutionParameters()) == false)
             return false;
+        if (other.getSubstatementType() == null ^ this.getSubstatementType() == null)
+            return false;
+        if (other.getSubstatementType() != null && other.getSubstatementType().equals(this.getSubstatementType()) == false)
+            return false;
         return true;
     }
 
@@ -766,6 +818,7 @@ public class QueryExecution implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getWorkGroup() == null) ? 0 : getWorkGroup().hashCode());
         hashCode = prime * hashCode + ((getEngineVersion() == null) ? 0 : getEngineVersion().hashCode());
         hashCode = prime * hashCode + ((getExecutionParameters() == null) ? 0 : getExecutionParameters().hashCode());
+        hashCode = prime * hashCode + ((getSubstatementType() == null) ? 0 : getSubstatementType().hashCode());
         return hashCode;
     }
 

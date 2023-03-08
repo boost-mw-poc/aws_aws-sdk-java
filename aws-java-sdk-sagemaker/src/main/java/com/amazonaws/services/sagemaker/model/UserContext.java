@@ -47,6 +47,13 @@ public class UserContext implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private String domainId;
+    /**
+     * <p>
+     * The IAM Identity details associated with the user. These details are associated with model package groups, model
+     * packages, and project entities only.
+     * </p>
+     */
+    private IamIdentity iamIdentity;
 
     /**
      * <p>
@@ -169,6 +176,52 @@ public class UserContext implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The IAM Identity details associated with the user. These details are associated with model package groups, model
+     * packages, and project entities only.
+     * </p>
+     * 
+     * @param iamIdentity
+     *        The IAM Identity details associated with the user. These details are associated with model package groups,
+     *        model packages, and project entities only.
+     */
+
+    public void setIamIdentity(IamIdentity iamIdentity) {
+        this.iamIdentity = iamIdentity;
+    }
+
+    /**
+     * <p>
+     * The IAM Identity details associated with the user. These details are associated with model package groups, model
+     * packages, and project entities only.
+     * </p>
+     * 
+     * @return The IAM Identity details associated with the user. These details are associated with model package
+     *         groups, model packages, and project entities only.
+     */
+
+    public IamIdentity getIamIdentity() {
+        return this.iamIdentity;
+    }
+
+    /**
+     * <p>
+     * The IAM Identity details associated with the user. These details are associated with model package groups, model
+     * packages, and project entities only.
+     * </p>
+     * 
+     * @param iamIdentity
+     *        The IAM Identity details associated with the user. These details are associated with model package groups,
+     *        model packages, and project entities only.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UserContext withIamIdentity(IamIdentity iamIdentity) {
+        setIamIdentity(iamIdentity);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -185,7 +238,9 @@ public class UserContext implements Serializable, Cloneable, StructuredPojo {
         if (getUserProfileName() != null)
             sb.append("UserProfileName: ").append(getUserProfileName()).append(",");
         if (getDomainId() != null)
-            sb.append("DomainId: ").append(getDomainId());
+            sb.append("DomainId: ").append(getDomainId()).append(",");
+        if (getIamIdentity() != null)
+            sb.append("IamIdentity: ").append(getIamIdentity());
         sb.append("}");
         return sb.toString();
     }
@@ -212,6 +267,10 @@ public class UserContext implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getDomainId() != null && other.getDomainId().equals(this.getDomainId()) == false)
             return false;
+        if (other.getIamIdentity() == null ^ this.getIamIdentity() == null)
+            return false;
+        if (other.getIamIdentity() != null && other.getIamIdentity().equals(this.getIamIdentity()) == false)
+            return false;
         return true;
     }
 
@@ -223,6 +282,7 @@ public class UserContext implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getUserProfileArn() == null) ? 0 : getUserProfileArn().hashCode());
         hashCode = prime * hashCode + ((getUserProfileName() == null) ? 0 : getUserProfileName().hashCode());
         hashCode = prime * hashCode + ((getDomainId() == null) ? 0 : getDomainId().hashCode());
+        hashCode = prime * hashCode + ((getIamIdentity() == null) ? 0 : getIamIdentity().hashCode());
         return hashCode;
     }
 

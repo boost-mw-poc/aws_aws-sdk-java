@@ -52,6 +52,10 @@ public class RotateChannelCredentialsResultJsonUnmarshaller implements Unmarshal
                     context.nextToken();
                     rotateChannelCredentialsResult.setArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("createdAt", targetDepth)) {
+                    context.nextToken();
+                    rotateChannelCredentialsResult.setCreatedAt(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("description", targetDepth)) {
                     context.nextToken();
                     rotateChannelCredentialsResult.setDescription(context.getUnmarshaller(String.class).unmarshall(context));

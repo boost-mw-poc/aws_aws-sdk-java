@@ -31,7 +31,7 @@ public class EngineVersion implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The engine version requested by the user. Possible values are determined by the output of
-     * <code>ListEngineVersions</code>, including Auto. The default is Auto.
+     * <code>ListEngineVersions</code>, including AUTO. The default is AUTO.
      * </p>
      */
     private String selectedEngineVersion;
@@ -49,12 +49,12 @@ public class EngineVersion implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The engine version requested by the user. Possible values are determined by the output of
-     * <code>ListEngineVersions</code>, including Auto. The default is Auto.
+     * <code>ListEngineVersions</code>, including AUTO. The default is AUTO.
      * </p>
      * 
      * @param selectedEngineVersion
      *        The engine version requested by the user. Possible values are determined by the output of
-     *        <code>ListEngineVersions</code>, including Auto. The default is Auto.
+     *        <code>ListEngineVersions</code>, including AUTO. The default is AUTO.
      */
 
     public void setSelectedEngineVersion(String selectedEngineVersion) {
@@ -64,11 +64,11 @@ public class EngineVersion implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The engine version requested by the user. Possible values are determined by the output of
-     * <code>ListEngineVersions</code>, including Auto. The default is Auto.
+     * <code>ListEngineVersions</code>, including AUTO. The default is AUTO.
      * </p>
      * 
      * @return The engine version requested by the user. Possible values are determined by the output of
-     *         <code>ListEngineVersions</code>, including Auto. The default is Auto.
+     *         <code>ListEngineVersions</code>, including AUTO. The default is AUTO.
      */
 
     public String getSelectedEngineVersion() {
@@ -78,12 +78,12 @@ public class EngineVersion implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The engine version requested by the user. Possible values are determined by the output of
-     * <code>ListEngineVersions</code>, including Auto. The default is Auto.
+     * <code>ListEngineVersions</code>, including AUTO. The default is AUTO.
      * </p>
      * 
      * @param selectedEngineVersion
      *        The engine version requested by the user. Possible values are determined by the output of
-     *        <code>ListEngineVersions</code>, including Auto. The default is Auto.
+     *        <code>ListEngineVersions</code>, including AUTO. The default is AUTO.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

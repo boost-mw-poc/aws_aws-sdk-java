@@ -25,9 +25,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_DeleteResolverEndpoint.html"
  * >DeleteResolverEndpoint</a>, <a
  * href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_GetResolverEndpoint.html"
- * >GetResolverEndpoint</a>, <a
- * href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_ListResolverEndpoints.html"
- * >ListResolverEndpoints</a>, or <a
+ * >GetResolverEndpoint</a>, Updates the name, or ResolverEndpointType for an endpoint, or <a
  * href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_UpdateResolverEndpoint.html"
  * >UpdateResolverEndpoint</a> request, a complex type that contains settings for an existing inbound or outbound
  * Resolver endpoint.
@@ -185,6 +183,12 @@ public class ResolverEndpoint implements Serializable, Cloneable, StructuredPojo
      * </p>
      */
     private String modificationTime;
+    /**
+     * <p>
+     * The Resolver endpoint IP address type.
+     * </p>
+     */
+    private String resolverEndpointType;
 
     /**
      * <p>
@@ -1322,6 +1326,65 @@ public class ResolverEndpoint implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * <p>
+     * The Resolver endpoint IP address type.
+     * </p>
+     * 
+     * @param resolverEndpointType
+     *        The Resolver endpoint IP address type.
+     * @see ResolverEndpointType
+     */
+
+    public void setResolverEndpointType(String resolverEndpointType) {
+        this.resolverEndpointType = resolverEndpointType;
+    }
+
+    /**
+     * <p>
+     * The Resolver endpoint IP address type.
+     * </p>
+     * 
+     * @return The Resolver endpoint IP address type.
+     * @see ResolverEndpointType
+     */
+
+    public String getResolverEndpointType() {
+        return this.resolverEndpointType;
+    }
+
+    /**
+     * <p>
+     * The Resolver endpoint IP address type.
+     * </p>
+     * 
+     * @param resolverEndpointType
+     *        The Resolver endpoint IP address type.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ResolverEndpointType
+     */
+
+    public ResolverEndpoint withResolverEndpointType(String resolverEndpointType) {
+        setResolverEndpointType(resolverEndpointType);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The Resolver endpoint IP address type.
+     * </p>
+     * 
+     * @param resolverEndpointType
+     *        The Resolver endpoint IP address type.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ResolverEndpointType
+     */
+
+    public ResolverEndpoint withResolverEndpointType(ResolverEndpointType resolverEndpointType) {
+        this.resolverEndpointType = resolverEndpointType.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1356,7 +1419,9 @@ public class ResolverEndpoint implements Serializable, Cloneable, StructuredPojo
         if (getCreationTime() != null)
             sb.append("CreationTime: ").append(getCreationTime()).append(",");
         if (getModificationTime() != null)
-            sb.append("ModificationTime: ").append(getModificationTime());
+            sb.append("ModificationTime: ").append(getModificationTime()).append(",");
+        if (getResolverEndpointType() != null)
+            sb.append("ResolverEndpointType: ").append(getResolverEndpointType());
         sb.append("}");
         return sb.toString();
     }
@@ -1419,6 +1484,10 @@ public class ResolverEndpoint implements Serializable, Cloneable, StructuredPojo
             return false;
         if (other.getModificationTime() != null && other.getModificationTime().equals(this.getModificationTime()) == false)
             return false;
+        if (other.getResolverEndpointType() == null ^ this.getResolverEndpointType() == null)
+            return false;
+        if (other.getResolverEndpointType() != null && other.getResolverEndpointType().equals(this.getResolverEndpointType()) == false)
+            return false;
         return true;
     }
 
@@ -1439,6 +1508,7 @@ public class ResolverEndpoint implements Serializable, Cloneable, StructuredPojo
         hashCode = prime * hashCode + ((getStatusMessage() == null) ? 0 : getStatusMessage().hashCode());
         hashCode = prime * hashCode + ((getCreationTime() == null) ? 0 : getCreationTime().hashCode());
         hashCode = prime * hashCode + ((getModificationTime() == null) ? 0 : getModificationTime().hashCode());
+        hashCode = prime * hashCode + ((getResolverEndpointType() == null) ? 0 : getResolverEndpointType().hashCode());
         return hashCode;
     }
 

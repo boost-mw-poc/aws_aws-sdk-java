@@ -56,6 +56,10 @@ public class DescribePackagingConfigurationResultJsonUnmarshaller implements Unm
                     context.nextToken();
                     describePackagingConfigurationResult.setCmafPackage(CmafPackageJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("createdAt", targetDepth)) {
+                    context.nextToken();
+                    describePackagingConfigurationResult.setCreatedAt(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("dashPackage", targetDepth)) {
                     context.nextToken();
                     describePackagingConfigurationResult.setDashPackage(DashPackageJsonUnmarshaller.getInstance().unmarshall(context));

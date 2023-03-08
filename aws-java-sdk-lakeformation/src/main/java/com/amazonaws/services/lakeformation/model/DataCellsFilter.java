@@ -74,6 +74,8 @@ public class DataCellsFilter implements Serializable, Cloneable, StructuredPojo 
      */
     private ColumnWildcard columnWildcard;
 
+    private String versionId;
+
     /**
      * <p>
      * The ID of the catalog to which the table belongs.
@@ -400,6 +402,32 @@ public class DataCellsFilter implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
+     * @param versionId
+     */
+
+    public void setVersionId(String versionId) {
+        this.versionId = versionId;
+    }
+
+    /**
+     * @return
+     */
+
+    public String getVersionId() {
+        return this.versionId;
+    }
+
+    /**
+     * @param versionId
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DataCellsFilter withVersionId(String versionId) {
+        setVersionId(versionId);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -424,7 +452,9 @@ public class DataCellsFilter implements Serializable, Cloneable, StructuredPojo 
         if (getColumnNames() != null)
             sb.append("ColumnNames: ").append(getColumnNames()).append(",");
         if (getColumnWildcard() != null)
-            sb.append("ColumnWildcard: ").append(getColumnWildcard());
+            sb.append("ColumnWildcard: ").append(getColumnWildcard()).append(",");
+        if (getVersionId() != null)
+            sb.append("VersionId: ").append(getVersionId());
         sb.append("}");
         return sb.toString();
     }
@@ -467,6 +497,10 @@ public class DataCellsFilter implements Serializable, Cloneable, StructuredPojo 
             return false;
         if (other.getColumnWildcard() != null && other.getColumnWildcard().equals(this.getColumnWildcard()) == false)
             return false;
+        if (other.getVersionId() == null ^ this.getVersionId() == null)
+            return false;
+        if (other.getVersionId() != null && other.getVersionId().equals(this.getVersionId()) == false)
+            return false;
         return true;
     }
 
@@ -482,6 +516,7 @@ public class DataCellsFilter implements Serializable, Cloneable, StructuredPojo 
         hashCode = prime * hashCode + ((getRowFilter() == null) ? 0 : getRowFilter().hashCode());
         hashCode = prime * hashCode + ((getColumnNames() == null) ? 0 : getColumnNames().hashCode());
         hashCode = prime * hashCode + ((getColumnWildcard() == null) ? 0 : getColumnWildcard().hashCode());
+        hashCode = prime * hashCode + ((getVersionId() == null) ? 0 : getVersionId().hashCode());
         return hashCode;
     }
 

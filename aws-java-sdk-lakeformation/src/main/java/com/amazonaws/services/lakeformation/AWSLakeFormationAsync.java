@@ -562,6 +562,37 @@ public interface AWSLakeFormationAsync extends AWSLakeFormation {
 
     /**
      * <p>
+     * Returns a data cells filter.
+     * </p>
+     * 
+     * @param getDataCellsFilterRequest
+     * @return A Java Future containing the result of the GetDataCellsFilter operation returned by the service.
+     * @sample AWSLakeFormationAsync.GetDataCellsFilter
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lakeformation-2017-03-31/GetDataCellsFilter"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetDataCellsFilterResult> getDataCellsFilterAsync(GetDataCellsFilterRequest getDataCellsFilterRequest);
+
+    /**
+     * <p>
+     * Returns a data cells filter.
+     * </p>
+     * 
+     * @param getDataCellsFilterRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetDataCellsFilter operation returned by the service.
+     * @sample AWSLakeFormationAsyncHandler.GetDataCellsFilter
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lakeformation-2017-03-31/GetDataCellsFilter"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetDataCellsFilterResult> getDataCellsFilterAsync(GetDataCellsFilterRequest getDataCellsFilterRequest,
+            com.amazonaws.handlers.AsyncHandler<GetDataCellsFilterRequest, GetDataCellsFilterResult> asyncHandler);
+
+    /**
+     * <p>
      * Retrieves the list of the data lake administrators of a Lake Formation-managed data lake.
      * </p>
      * 
@@ -938,7 +969,7 @@ public interface AWSLakeFormationAsync extends AWSLakeFormation {
      * </p>
      * <p>
      * For information about permissions, see <a
-     * href="https://docs-aws.amazon.com/lake-formation/latest/dg/security-data-access.html">Security and Access Control
+     * href="https://docs.aws.amazon.com/lake-formation/latest/dg/security-data-access.html">Security and Access Control
      * to Metadata and Data</a>.
      * </p>
      * 
@@ -957,7 +988,7 @@ public interface AWSLakeFormationAsync extends AWSLakeFormation {
      * </p>
      * <p>
      * For information about permissions, see <a
-     * href="https://docs-aws.amazon.com/lake-formation/latest/dg/security-data-access.html">Security and Access Control
+     * href="https://docs.aws.amazon.com/lake-formation/latest/dg/security-data-access.html">Security and Access Control
      * to Metadata and Data</a>.
      * </p>
      * 
@@ -1515,6 +1546,37 @@ public interface AWSLakeFormationAsync extends AWSLakeFormation {
      */
     java.util.concurrent.Future<StartTransactionResult> startTransactionAsync(StartTransactionRequest startTransactionRequest,
             com.amazonaws.handlers.AsyncHandler<StartTransactionRequest, StartTransactionResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates a data cell filter.
+     * </p>
+     * 
+     * @param updateDataCellsFilterRequest
+     * @return A Java Future containing the result of the UpdateDataCellsFilter operation returned by the service.
+     * @sample AWSLakeFormationAsync.UpdateDataCellsFilter
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lakeformation-2017-03-31/UpdateDataCellsFilter"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateDataCellsFilterResult> updateDataCellsFilterAsync(UpdateDataCellsFilterRequest updateDataCellsFilterRequest);
+
+    /**
+     * <p>
+     * Updates a data cell filter.
+     * </p>
+     * 
+     * @param updateDataCellsFilterRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateDataCellsFilter operation returned by the service.
+     * @sample AWSLakeFormationAsyncHandler.UpdateDataCellsFilter
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lakeformation-2017-03-31/UpdateDataCellsFilter"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateDataCellsFilterResult> updateDataCellsFilterAsync(UpdateDataCellsFilterRequest updateDataCellsFilterRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateDataCellsFilterRequest, UpdateDataCellsFilterResult> asyncHandler);
 
     /**
      * <p>

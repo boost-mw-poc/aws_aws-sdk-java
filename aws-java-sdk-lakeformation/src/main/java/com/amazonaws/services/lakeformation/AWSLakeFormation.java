@@ -428,6 +428,29 @@ public interface AWSLakeFormation {
 
     /**
      * <p>
+     * Returns a data cells filter.
+     * </p>
+     * 
+     * @param getDataCellsFilterRequest
+     * @return Result of the GetDataCellsFilter operation returned by the service.
+     * @throws EntityNotFoundException
+     *         A specified entity does not exist
+     * @throws InvalidInputException
+     *         The input provided was not valid.
+     * @throws OperationTimeoutException
+     *         The operation timed out.
+     * @throws InternalServiceException
+     *         An internal service error occurred.
+     * @throws AccessDeniedException
+     *         Access to a resource was denied.
+     * @sample AWSLakeFormation.GetDataCellsFilter
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lakeformation-2017-03-31/GetDataCellsFilter"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetDataCellsFilterResult getDataCellsFilter(GetDataCellsFilterRequest getDataCellsFilterRequest);
+
+    /**
+     * <p>
      * Retrieves the list of the data lake administrators of a Lake Formation-managed data lake.
      * </p>
      * 
@@ -705,7 +728,7 @@ public interface AWSLakeFormation {
      * </p>
      * <p>
      * For information about permissions, see <a
-     * href="https://docs-aws.amazon.com/lake-formation/latest/dg/security-data-access.html">Security and Access Control
+     * href="https://docs.aws.amazon.com/lake-formation/latest/dg/security-data-access.html">Security and Access Control
      * to Metadata and Data</a>.
      * </p>
      * 
@@ -1075,6 +1098,31 @@ public interface AWSLakeFormation {
      *      API Documentation</a>
      */
     StartTransactionResult startTransaction(StartTransactionRequest startTransactionRequest);
+
+    /**
+     * <p>
+     * Updates a data cell filter.
+     * </p>
+     * 
+     * @param updateDataCellsFilterRequest
+     * @return Result of the UpdateDataCellsFilter operation returned by the service.
+     * @throws ConcurrentModificationException
+     *         Two processes are trying to modify a resource simultaneously.
+     * @throws InvalidInputException
+     *         The input provided was not valid.
+     * @throws EntityNotFoundException
+     *         A specified entity does not exist
+     * @throws InternalServiceException
+     *         An internal service error occurred.
+     * @throws OperationTimeoutException
+     *         The operation timed out.
+     * @throws AccessDeniedException
+     *         Access to a resource was denied.
+     * @sample AWSLakeFormation.UpdateDataCellsFilter
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lakeformation-2017-03-31/UpdateDataCellsFilter"
+     *      target="_top">AWS API Documentation</a>
+     */
+    UpdateDataCellsFilterResult updateDataCellsFilter(UpdateDataCellsFilterRequest updateDataCellsFilterRequest);
 
     /**
      * <p>

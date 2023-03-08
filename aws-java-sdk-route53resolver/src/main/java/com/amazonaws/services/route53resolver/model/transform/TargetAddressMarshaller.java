@@ -31,6 +31,8 @@ public class TargetAddressMarshaller {
             .marshallLocationName("Ip").build();
     private static final MarshallingInfo<Integer> PORT_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Port").build();
+    private static final MarshallingInfo<String> IPV6_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Ipv6").build();
 
     private static final TargetAddressMarshaller instance = new TargetAddressMarshaller();
 
@@ -50,6 +52,7 @@ public class TargetAddressMarshaller {
         try {
             protocolMarshaller.marshall(targetAddress.getIp(), IP_BINDING);
             protocolMarshaller.marshall(targetAddress.getPort(), PORT_BINDING);
+            protocolMarshaller.marshall(targetAddress.getIpv6(), IPV6_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

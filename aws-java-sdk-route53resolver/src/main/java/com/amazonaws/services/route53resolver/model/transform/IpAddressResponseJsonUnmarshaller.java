@@ -60,6 +60,10 @@ public class IpAddressResponseJsonUnmarshaller implements Unmarshaller<IpAddress
                     context.nextToken();
                     ipAddressResponse.setIp(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("Ipv6", targetDepth)) {
+                    context.nextToken();
+                    ipAddressResponse.setIpv6(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("Status", targetDepth)) {
                     context.nextToken();
                     ipAddressResponse.setStatus(context.getUnmarshaller(String.class).unmarshall(context));

@@ -21,7 +21,8 @@ import javax.annotation.Generated;
 public enum FirewallFailOpenStatus {
 
     ENABLED("ENABLED"),
-    DISABLED("DISABLED");
+    DISABLED("DISABLED"),
+    USE_LOCAL_RESOURCE_SETTING("USE_LOCAL_RESOURCE_SETTING");
 
     private String value;
 

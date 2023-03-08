@@ -21,6 +21,12 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * <p>
  * Contains information about a data catalog in an Amazon Web Services account.
  * </p>
+ * <note>
+ * <p>
+ * In the Athena console, data catalogs are listed as "data sources" on the <b>Data sources</b> page under the <b>Data
+ * source name</b> column.
+ * </p>
+ * </note>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/athena-2017-05-18/DataCatalog" target="_top">AWS API
  *      Documentation</a>

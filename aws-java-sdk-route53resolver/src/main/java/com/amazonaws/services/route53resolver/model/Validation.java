@@ -21,7 +21,8 @@ import javax.annotation.Generated;
 public enum Validation {
 
     ENABLE("ENABLE"),
-    DISABLE("DISABLE");
+    DISABLE("DISABLE"),
+    USE_LOCAL_RESOURCE_SETTING("USE_LOCAL_RESOURCE_SETTING");
 
     private String value;
 

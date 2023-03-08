@@ -98,6 +98,10 @@ public class ResolverEndpointJsonUnmarshaller implements Unmarshaller<ResolverEn
                     context.nextToken();
                     resolverEndpoint.setModificationTime(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("ResolverEndpointType", targetDepth)) {
+                    context.nextToken();
+                    resolverEndpoint.setResolverEndpointType(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

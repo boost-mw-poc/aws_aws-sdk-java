@@ -25,7 +25,7 @@ public class GetResolverConfigResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * Information about the behavior configuration of Route 53 Resolver behavior for the VPC you specified in the
+     * Information about the behavior configuration of Route 53 Resolver behavior for the VPC you specified in the
      * <code>GetResolverConfig</code> request.
      * </p>
      */
@@ -33,12 +33,12 @@ public class GetResolverConfigResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * Information about the behavior configuration of Route 53 Resolver behavior for the VPC you specified in the
+     * Information about the behavior configuration of Route 53 Resolver behavior for the VPC you specified in the
      * <code>GetResolverConfig</code> request.
      * </p>
      * 
      * @param resolverConfig
-     *        Information about the behavior configuration of Route 53 Resolver behavior for the VPC you specified in
+     *        Information about the behavior configuration of Route 53 Resolver behavior for the VPC you specified in
      *        the <code>GetResolverConfig</code> request.
      */
 
@@ -48,11 +48,11 @@ public class GetResolverConfigResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * Information about the behavior configuration of Route 53 Resolver behavior for the VPC you specified in the
+     * Information about the behavior configuration of Route 53 Resolver behavior for the VPC you specified in the
      * <code>GetResolverConfig</code> request.
      * </p>
      * 
-     * @return Information about the behavior configuration of Route 53 Resolver behavior for the VPC you specified in
+     * @return Information about the behavior configuration of Route 53 Resolver behavior for the VPC you specified in
      *         the <code>GetResolverConfig</code> request.
      */
 
@@ -62,12 +62,12 @@ public class GetResolverConfigResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * Information about the behavior configuration of Route 53 Resolver behavior for the VPC you specified in the
+     * Information about the behavior configuration of Route 53 Resolver behavior for the VPC you specified in the
      * <code>GetResolverConfig</code> request.
      * </p>
      * 
      * @param resolverConfig
-     *        Information about the behavior configuration of Route 53 Resolver behavior for the VPC you specified in
+     *        Information about the behavior configuration of Route 53 Resolver behavior for the VPC you specified in
      *        the <code>GetResolverConfig</code> request.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

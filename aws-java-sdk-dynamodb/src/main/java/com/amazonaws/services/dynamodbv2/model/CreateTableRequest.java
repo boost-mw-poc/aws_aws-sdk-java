@@ -333,6 +333,12 @@ public class CreateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      */
     private String tableClass;
+    /**
+     * <p>
+     * Indicates whether deletion protection is to be enabled (true) or disabled (false) on the table.
+     * </p>
+     */
+    private Boolean deletionProtectionEnabled;
 
     /**
      * Default constructor for CreateTableRequest object. Callers should use the setter or fluent setter (with...)
@@ -2945,6 +2951,58 @@ public class CreateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
     }
 
     /**
+     * <p>
+     * Indicates whether deletion protection is to be enabled (true) or disabled (false) on the table.
+     * </p>
+     * 
+     * @param deletionProtectionEnabled
+     *        Indicates whether deletion protection is to be enabled (true) or disabled (false) on the table.
+     */
+
+    public void setDeletionProtectionEnabled(Boolean deletionProtectionEnabled) {
+        this.deletionProtectionEnabled = deletionProtectionEnabled;
+    }
+
+    /**
+     * <p>
+     * Indicates whether deletion protection is to be enabled (true) or disabled (false) on the table.
+     * </p>
+     * 
+     * @return Indicates whether deletion protection is to be enabled (true) or disabled (false) on the table.
+     */
+
+    public Boolean getDeletionProtectionEnabled() {
+        return this.deletionProtectionEnabled;
+    }
+
+    /**
+     * <p>
+     * Indicates whether deletion protection is to be enabled (true) or disabled (false) on the table.
+     * </p>
+     * 
+     * @param deletionProtectionEnabled
+     *        Indicates whether deletion protection is to be enabled (true) or disabled (false) on the table.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateTableRequest withDeletionProtectionEnabled(Boolean deletionProtectionEnabled) {
+        setDeletionProtectionEnabled(deletionProtectionEnabled);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Indicates whether deletion protection is to be enabled (true) or disabled (false) on the table.
+     * </p>
+     * 
+     * @return Indicates whether deletion protection is to be enabled (true) or disabled (false) on the table.
+     */
+
+    public Boolean isDeletionProtectionEnabled() {
+        return this.deletionProtectionEnabled;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -2977,7 +3035,9 @@ public class CreateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
         if (getTags() != null)
             sb.append("Tags: ").append(getTags()).append(",");
         if (getTableClass() != null)
-            sb.append("TableClass: ").append(getTableClass());
+            sb.append("TableClass: ").append(getTableClass()).append(",");
+        if (getDeletionProtectionEnabled() != null)
+            sb.append("DeletionProtectionEnabled: ").append(getDeletionProtectionEnabled());
         sb.append("}");
         return sb.toString();
     }
@@ -3036,6 +3096,10 @@ public class CreateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
             return false;
         if (other.getTableClass() != null && other.getTableClass().equals(this.getTableClass()) == false)
             return false;
+        if (other.getDeletionProtectionEnabled() == null ^ this.getDeletionProtectionEnabled() == null)
+            return false;
+        if (other.getDeletionProtectionEnabled() != null && other.getDeletionProtectionEnabled().equals(this.getDeletionProtectionEnabled()) == false)
+            return false;
         return true;
     }
 
@@ -3055,6 +3119,7 @@ public class CreateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
         hashCode = prime * hashCode + ((getSSESpecification() == null) ? 0 : getSSESpecification().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getTableClass() == null) ? 0 : getTableClass().hashCode());
+        hashCode = prime * hashCode + ((getDeletionProtectionEnabled() == null) ? 0 : getDeletionProtectionEnabled().hashCode());
         return hashCode;
     }
 

@@ -1121,7 +1121,7 @@ public interface AmazonRoute53ResolverAsync extends AmazonRoute53Resolver {
 
     /**
      * <p>
-     * Retrieves the behavior configuration of Route 53 Resolver behavior for a single VPC from Amazon Virtual Private
+     * Retrieves the behavior configuration of Route 53 Resolver behavior for a single VPC from Amazon Virtual Private
      * Cloud.
      * </p>
      * 
@@ -1135,7 +1135,7 @@ public interface AmazonRoute53ResolverAsync extends AmazonRoute53Resolver {
 
     /**
      * <p>
-     * Retrieves the behavior configuration of Route 53 Resolver behavior for a single VPC from Amazon Virtual Private
+     * Retrieves the behavior configuration of Route 53 Resolver behavior for a single VPC from Amazon Virtual Private
      * Cloud.
      * </p>
      * 
@@ -1751,7 +1751,7 @@ public interface AmazonRoute53ResolverAsync extends AmazonRoute53Resolver {
 
     /**
      * <p>
-     * Retrieves the Resolver configurations that you have defined. Route 53 Resolver uses the configurations to manage
+     * Retrieves the Resolver configurations that you have defined. Route 53 Resolver uses the configurations to manage
      * DNS resolution behavior for your VPCs.
      * </p>
      * 
@@ -1765,7 +1765,7 @@ public interface AmazonRoute53ResolverAsync extends AmazonRoute53Resolver {
 
     /**
      * <p>
-     * Retrieves the Resolver configurations that you have defined. Route 53 Resolver uses the configurations to manage
+     * Retrieves the Resolver configurations that you have defined. Route 53 Resolver uses the configurations to manage
      * DNS resolution behavior for your VPCs.
      * </p>
      * 
@@ -2357,7 +2357,7 @@ public interface AmazonRoute53ResolverAsync extends AmazonRoute53Resolver {
 
     /**
      * <p>
-     * Updates the behavior configuration of Route 53 Resolver behavior for a single VPC from Amazon Virtual Private
+     * Updates the behavior configuration of Route 53 Resolver behavior for a single VPC from Amazon Virtual Private
      * Cloud.
      * </p>
      * 
@@ -2371,7 +2371,7 @@ public interface AmazonRoute53ResolverAsync extends AmazonRoute53Resolver {
 
     /**
      * <p>
-     * Updates the behavior configuration of Route 53 Resolver behavior for a single VPC from Amazon Virtual Private
+     * Updates the behavior configuration of Route 53 Resolver behavior for a single VPC from Amazon Virtual Private
      * Cloud.
      * </p>
      * 
@@ -2425,7 +2425,8 @@ public interface AmazonRoute53ResolverAsync extends AmazonRoute53Resolver {
 
     /**
      * <p>
-     * Updates the name of an inbound or an outbound Resolver endpoint.
+     * Updates the name, or enpoint type for an inbound or an outbound Resolver endpoint. You can only update between
+     * IPV4 and DUALSTACK, IPV6 endpoint type can't be updated to other type.
      * </p>
      * 
      * @param updateResolverEndpointRequest
@@ -2438,7 +2439,8 @@ public interface AmazonRoute53ResolverAsync extends AmazonRoute53Resolver {
 
     /**
      * <p>
-     * Updates the name of an inbound or an outbound Resolver endpoint.
+     * Updates the name, or enpoint type for an inbound or an outbound Resolver endpoint. You can only update between
+     * IPV4 and DUALSTACK, IPV6 endpoint type can't be updated to other type.
      * </p>
      * 
      * @param updateResolverEndpointRequest

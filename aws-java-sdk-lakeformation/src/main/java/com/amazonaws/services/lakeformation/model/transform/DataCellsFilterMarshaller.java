@@ -42,6 +42,8 @@ public class DataCellsFilterMarshaller {
             .marshallLocationName("ColumnNames").build();
     private static final MarshallingInfo<StructuredPojo> COLUMNWILDCARD_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ColumnWildcard").build();
+    private static final MarshallingInfo<String> VERSIONID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("VersionId").build();
 
     private static final DataCellsFilterMarshaller instance = new DataCellsFilterMarshaller();
 
@@ -66,6 +68,7 @@ public class DataCellsFilterMarshaller {
             protocolMarshaller.marshall(dataCellsFilter.getRowFilter(), ROWFILTER_BINDING);
             protocolMarshaller.marshall(dataCellsFilter.getColumnNames(), COLUMNNAMES_BINDING);
             protocolMarshaller.marshall(dataCellsFilter.getColumnWildcard(), COLUMNWILDCARD_BINDING);
+            protocolMarshaller.marshall(dataCellsFilter.getVersionId(), VERSIONID_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

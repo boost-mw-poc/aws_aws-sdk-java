@@ -1203,6 +1203,71 @@ public class AWSLakeFormationClient extends AmazonWebServiceClient implements AW
 
     /**
      * <p>
+     * Returns a data cells filter.
+     * </p>
+     * 
+     * @param getDataCellsFilterRequest
+     * @return Result of the GetDataCellsFilter operation returned by the service.
+     * @throws EntityNotFoundException
+     *         A specified entity does not exist
+     * @throws InvalidInputException
+     *         The input provided was not valid.
+     * @throws OperationTimeoutException
+     *         The operation timed out.
+     * @throws InternalServiceException
+     *         An internal service error occurred.
+     * @throws AccessDeniedException
+     *         Access to a resource was denied.
+     * @sample AWSLakeFormation.GetDataCellsFilter
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lakeformation-2017-03-31/GetDataCellsFilter"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetDataCellsFilterResult getDataCellsFilter(GetDataCellsFilterRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetDataCellsFilter(request);
+    }
+
+    @SdkInternalApi
+    final GetDataCellsFilterResult executeGetDataCellsFilter(GetDataCellsFilterRequest getDataCellsFilterRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getDataCellsFilterRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetDataCellsFilterRequest> request = null;
+        Response<GetDataCellsFilterResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetDataCellsFilterRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getDataCellsFilterRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "LakeFormation");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetDataCellsFilter");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetDataCellsFilterResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetDataCellsFilterResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Retrieves the list of the data lake administrators of a Lake Formation-managed data lake.
      * </p>
      * 
@@ -1987,7 +2052,7 @@ public class AWSLakeFormationClient extends AmazonWebServiceClient implements AW
      * </p>
      * <p>
      * For information about permissions, see <a
-     * href="https://docs-aws.amazon.com/lake-formation/latest/dg/security-data-access.html">Security and Access Control
+     * href="https://docs.aws.amazon.com/lake-formation/latest/dg/security-data-access.html">Security and Access Control
      * to Metadata and Data</a>.
      * </p>
      * 
@@ -2993,6 +3058,74 @@ public class AWSLakeFormationClient extends AmazonWebServiceClient implements AW
 
             HttpResponseHandler<AmazonWebServiceResponse<StartTransactionResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new StartTransactionResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Updates a data cell filter.
+     * </p>
+     * 
+     * @param updateDataCellsFilterRequest
+     * @return Result of the UpdateDataCellsFilter operation returned by the service.
+     * @throws ConcurrentModificationException
+     *         Two processes are trying to modify a resource simultaneously.
+     * @throws InvalidInputException
+     *         The input provided was not valid.
+     * @throws EntityNotFoundException
+     *         A specified entity does not exist
+     * @throws InternalServiceException
+     *         An internal service error occurred.
+     * @throws OperationTimeoutException
+     *         The operation timed out.
+     * @throws AccessDeniedException
+     *         Access to a resource was denied.
+     * @sample AWSLakeFormation.UpdateDataCellsFilter
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lakeformation-2017-03-31/UpdateDataCellsFilter"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public UpdateDataCellsFilterResult updateDataCellsFilter(UpdateDataCellsFilterRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateDataCellsFilter(request);
+    }
+
+    @SdkInternalApi
+    final UpdateDataCellsFilterResult executeUpdateDataCellsFilter(UpdateDataCellsFilterRequest updateDataCellsFilterRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateDataCellsFilterRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateDataCellsFilterRequest> request = null;
+        Response<UpdateDataCellsFilterResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateDataCellsFilterRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(updateDataCellsFilterRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "LakeFormation");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateDataCellsFilter");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdateDataCellsFilterResult>> responseHandler = protocolFactory
+                    .createResponseHandler(new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                            new UpdateDataCellsFilterResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

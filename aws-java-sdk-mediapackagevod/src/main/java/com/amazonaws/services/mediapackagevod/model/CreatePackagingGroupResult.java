@@ -27,6 +27,8 @@ public class CreatePackagingGroupResult extends com.amazonaws.AmazonWebServiceRe
     private String arn;
 
     private Authorization authorization;
+    /** The time the PackagingGroup was created. */
+    private String createdAt;
     /** The fully qualified domain name for Assets in the PackagingGroup. */
     private String domainName;
 
@@ -93,6 +95,40 @@ public class CreatePackagingGroupResult extends com.amazonaws.AmazonWebServiceRe
 
     public CreatePackagingGroupResult withAuthorization(Authorization authorization) {
         setAuthorization(authorization);
+        return this;
+    }
+
+    /**
+     * The time the PackagingGroup was created.
+     * 
+     * @param createdAt
+     *        The time the PackagingGroup was created.
+     */
+
+    public void setCreatedAt(String createdAt) {
+        this.createdAt = createdAt;
+    }
+
+    /**
+     * The time the PackagingGroup was created.
+     * 
+     * @return The time the PackagingGroup was created.
+     */
+
+    public String getCreatedAt() {
+        return this.createdAt;
+    }
+
+    /**
+     * The time the PackagingGroup was created.
+     * 
+     * @param createdAt
+     *        The time the PackagingGroup was created.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreatePackagingGroupResult withCreatedAt(String createdAt) {
+        setCreatedAt(createdAt);
         return this;
     }
 
@@ -260,6 +296,8 @@ public class CreatePackagingGroupResult extends com.amazonaws.AmazonWebServiceRe
             sb.append("Arn: ").append(getArn()).append(",");
         if (getAuthorization() != null)
             sb.append("Authorization: ").append(getAuthorization()).append(",");
+        if (getCreatedAt() != null)
+            sb.append("CreatedAt: ").append(getCreatedAt()).append(",");
         if (getDomainName() != null)
             sb.append("DomainName: ").append(getDomainName()).append(",");
         if (getEgressAccessLogs() != null)
@@ -290,6 +328,10 @@ public class CreatePackagingGroupResult extends com.amazonaws.AmazonWebServiceRe
             return false;
         if (other.getAuthorization() != null && other.getAuthorization().equals(this.getAuthorization()) == false)
             return false;
+        if (other.getCreatedAt() == null ^ this.getCreatedAt() == null)
+            return false;
+        if (other.getCreatedAt() != null && other.getCreatedAt().equals(this.getCreatedAt()) == false)
+            return false;
         if (other.getDomainName() == null ^ this.getDomainName() == null)
             return false;
         if (other.getDomainName() != null && other.getDomainName().equals(this.getDomainName()) == false)
@@ -316,6 +358,7 @@ public class CreatePackagingGroupResult extends com.amazonaws.AmazonWebServiceRe
 
         hashCode = prime * hashCode + ((getArn() == null) ? 0 : getArn().hashCode());
         hashCode = prime * hashCode + ((getAuthorization() == null) ? 0 : getAuthorization().hashCode());
+        hashCode = prime * hashCode + ((getCreatedAt() == null) ? 0 : getCreatedAt().hashCode());
         hashCode = prime * hashCode + ((getDomainName() == null) ? 0 : getDomainName().hashCode());
         hashCode = prime * hashCode + ((getEgressAccessLogs() == null) ? 0 : getEgressAccessLogs().hashCode());
         hashCode = prime * hashCode + ((getId() == null) ? 0 : getId().hashCode());

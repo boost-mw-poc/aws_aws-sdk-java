@@ -52,6 +52,10 @@ public class UpdateChannelResultJsonUnmarshaller implements Unmarshaller<UpdateC
                     context.nextToken();
                     updateChannelResult.setArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("createdAt", targetDepth)) {
+                    context.nextToken();
+                    updateChannelResult.setCreatedAt(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("description", targetDepth)) {
                     context.nextToken();
                     updateChannelResult.setDescription(context.getUnmarshaller(String.class).unmarshall(context));

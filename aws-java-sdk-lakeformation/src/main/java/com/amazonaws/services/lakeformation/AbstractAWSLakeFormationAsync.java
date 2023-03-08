@@ -223,6 +223,19 @@ public class AbstractAWSLakeFormationAsync extends AbstractAWSLakeFormation impl
     }
 
     @Override
+    public java.util.concurrent.Future<GetDataCellsFilterResult> getDataCellsFilterAsync(GetDataCellsFilterRequest request) {
+
+        return getDataCellsFilterAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetDataCellsFilterResult> getDataCellsFilterAsync(GetDataCellsFilterRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetDataCellsFilterRequest, GetDataCellsFilterResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetDataLakeSettingsResult> getDataLakeSettingsAsync(GetDataLakeSettingsRequest request) {
 
         return getDataLakeSettingsAsync(request, null);
@@ -560,6 +573,19 @@ public class AbstractAWSLakeFormationAsync extends AbstractAWSLakeFormation impl
     @Override
     public java.util.concurrent.Future<StartTransactionResult> startTransactionAsync(StartTransactionRequest request,
             com.amazonaws.handlers.AsyncHandler<StartTransactionRequest, StartTransactionResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateDataCellsFilterResult> updateDataCellsFilterAsync(UpdateDataCellsFilterRequest request) {
+
+        return updateDataCellsFilterAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateDataCellsFilterResult> updateDataCellsFilterAsync(UpdateDataCellsFilterRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateDataCellsFilterRequest, UpdateDataCellsFilterResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

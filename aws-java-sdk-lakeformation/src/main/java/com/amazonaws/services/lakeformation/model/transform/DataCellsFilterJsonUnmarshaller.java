@@ -78,6 +78,10 @@ public class DataCellsFilterJsonUnmarshaller implements Unmarshaller<DataCellsFi
                     context.nextToken();
                     dataCellsFilter.setColumnWildcard(ColumnWildcardJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("VersionId", targetDepth)) {
+                    context.nextToken();
+                    dataCellsFilter.setVersionId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

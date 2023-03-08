@@ -470,6 +470,12 @@ public class TableDescription implements Serializable, Cloneable, StructuredPojo
      * </p>
      */
     private TableClassSummary tableClassSummary;
+    /**
+     * <p>
+     * Indicates whether deletion protection is enabled (true) or disabled (false) on the table.
+     * </p>
+     */
+    private Boolean deletionProtectionEnabled;
 
     /**
      * <p>
@@ -4033,6 +4039,58 @@ public class TableDescription implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * <p>
+     * Indicates whether deletion protection is enabled (true) or disabled (false) on the table.
+     * </p>
+     * 
+     * @param deletionProtectionEnabled
+     *        Indicates whether deletion protection is enabled (true) or disabled (false) on the table.
+     */
+
+    public void setDeletionProtectionEnabled(Boolean deletionProtectionEnabled) {
+        this.deletionProtectionEnabled = deletionProtectionEnabled;
+    }
+
+    /**
+     * <p>
+     * Indicates whether deletion protection is enabled (true) or disabled (false) on the table.
+     * </p>
+     * 
+     * @return Indicates whether deletion protection is enabled (true) or disabled (false) on the table.
+     */
+
+    public Boolean getDeletionProtectionEnabled() {
+        return this.deletionProtectionEnabled;
+    }
+
+    /**
+     * <p>
+     * Indicates whether deletion protection is enabled (true) or disabled (false) on the table.
+     * </p>
+     * 
+     * @param deletionProtectionEnabled
+     *        Indicates whether deletion protection is enabled (true) or disabled (false) on the table.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public TableDescription withDeletionProtectionEnabled(Boolean deletionProtectionEnabled) {
+        setDeletionProtectionEnabled(deletionProtectionEnabled);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Indicates whether deletion protection is enabled (true) or disabled (false) on the table.
+     * </p>
+     * 
+     * @return Indicates whether deletion protection is enabled (true) or disabled (false) on the table.
+     */
+
+    public Boolean isDeletionProtectionEnabled() {
+        return this.deletionProtectionEnabled;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -4087,7 +4145,9 @@ public class TableDescription implements Serializable, Cloneable, StructuredPojo
         if (getArchivalSummary() != null)
             sb.append("ArchivalSummary: ").append(getArchivalSummary()).append(",");
         if (getTableClassSummary() != null)
-            sb.append("TableClassSummary: ").append(getTableClassSummary());
+            sb.append("TableClassSummary: ").append(getTableClassSummary()).append(",");
+        if (getDeletionProtectionEnabled() != null)
+            sb.append("DeletionProtectionEnabled: ").append(getDeletionProtectionEnabled());
         sb.append("}");
         return sb.toString();
     }
@@ -4190,6 +4250,10 @@ public class TableDescription implements Serializable, Cloneable, StructuredPojo
             return false;
         if (other.getTableClassSummary() != null && other.getTableClassSummary().equals(this.getTableClassSummary()) == false)
             return false;
+        if (other.getDeletionProtectionEnabled() == null ^ this.getDeletionProtectionEnabled() == null)
+            return false;
+        if (other.getDeletionProtectionEnabled() != null && other.getDeletionProtectionEnabled().equals(this.getDeletionProtectionEnabled()) == false)
+            return false;
         return true;
     }
 
@@ -4220,6 +4284,7 @@ public class TableDescription implements Serializable, Cloneable, StructuredPojo
         hashCode = prime * hashCode + ((getSSEDescription() == null) ? 0 : getSSEDescription().hashCode());
         hashCode = prime * hashCode + ((getArchivalSummary() == null) ? 0 : getArchivalSummary().hashCode());
         hashCode = prime * hashCode + ((getTableClassSummary() == null) ? 0 : getTableClassSummary().hashCode());
+        hashCode = prime * hashCode + ((getDeletionProtectionEnabled() == null) ? 0 : getDeletionProtectionEnabled().hashCode());
         return hashCode;
     }
 

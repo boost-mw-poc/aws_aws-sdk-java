@@ -40,6 +40,8 @@ public class CreateResolverEndpointRequestMarshaller {
             .marshallLocationName("IpAddresses").build();
     private static final MarshallingInfo<List> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Tags").build();
+    private static final MarshallingInfo<String> RESOLVERENDPOINTTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ResolverEndpointType").build();
 
     private static final CreateResolverEndpointRequestMarshaller instance = new CreateResolverEndpointRequestMarshaller();
 
@@ -63,6 +65,7 @@ public class CreateResolverEndpointRequestMarshaller {
             protocolMarshaller.marshall(createResolverEndpointRequest.getDirection(), DIRECTION_BINDING);
             protocolMarshaller.marshall(createResolverEndpointRequest.getIpAddresses(), IPADDRESSES_BINDING);
             protocolMarshaller.marshall(createResolverEndpointRequest.getTags(), TAGS_BINDING);
+            protocolMarshaller.marshall(createResolverEndpointRequest.getResolverEndpointType(), RESOLVERENDPOINTTYPE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -60,6 +60,10 @@ public class UpdatePackagingGroupResultJsonUnmarshaller implements Unmarshaller<
                     context.nextToken();
                     updatePackagingGroupResult.setAuthorization(AuthorizationJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("createdAt", targetDepth)) {
+                    context.nextToken();
+                    updatePackagingGroupResult.setCreatedAt(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("domainName", targetDepth)) {
                     context.nextToken();
                     updatePackagingGroupResult.setDomainName(context.getUnmarshaller(String.class).unmarshall(context));

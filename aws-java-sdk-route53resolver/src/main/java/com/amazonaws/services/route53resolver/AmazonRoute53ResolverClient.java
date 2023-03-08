@@ -216,9 +216,14 @@ public class AmazonRoute53ResolverClient extends AmazonWebServiceClient implemen
      * @throws ResourceNotFoundException
      *         The specified resource doesn't exist.
      * @throws ValidationException
+     *         You have provided an invalid command. Supported values are <code>ADD</code>, <code>REMOVE</code>, or
+     *         <code>REPLACE</code> a domain.
      * @throws LimitExceededException
      *         The request caused one or more limits to be exceeded.
      * @throws ConflictException
+     *         The requested state transition isn't valid. For example, you can't delete a firewall domain list if it is
+     *         in the process of being deleted, or you can't import domains into a domain list that is in the process of
+     *         being deleted.
      * @throws AccessDeniedException
      *         The current account doesn't have the IAM permissions required to perform the specified Resolver
      *         operation.
@@ -530,6 +535,8 @@ public class AmazonRoute53ResolverClient extends AmazonWebServiceClient implemen
      * @throws LimitExceededException
      *         The request caused one or more limits to be exceeded.
      * @throws ValidationException
+     *         You have provided an invalid command. Supported values are <code>ADD</code>, <code>REMOVE</code>, or
+     *         <code>REPLACE</code> a domain.
      * @throws AccessDeniedException
      *         The current account doesn't have the IAM permissions required to perform the specified Resolver
      *         operation.
@@ -597,6 +604,8 @@ public class AmazonRoute53ResolverClient extends AmazonWebServiceClient implemen
      * @throws ResourceNotFoundException
      *         The specified resource doesn't exist.
      * @throws ValidationException
+     *         You have provided an invalid command. Supported values are <code>ADD</code>, <code>REMOVE</code>, or
+     *         <code>REPLACE</code> a domain.
      * @throws LimitExceededException
      *         The request caused one or more limits to be exceeded.
      * @throws AccessDeniedException
@@ -665,6 +674,8 @@ public class AmazonRoute53ResolverClient extends AmazonWebServiceClient implemen
      * @throws LimitExceededException
      *         The request caused one or more limits to be exceeded.
      * @throws ValidationException
+     *         You have provided an invalid command. Supported values are <code>ADD</code>, <code>REMOVE</code>, or
+     *         <code>REPLACE</code> a domain.
      * @throws AccessDeniedException
      *         The current account doesn't have the IAM permissions required to perform the specified Resolver
      *         operation.
@@ -974,6 +985,9 @@ public class AmazonRoute53ResolverClient extends AmazonWebServiceClient implemen
      * @throws ResourceNotFoundException
      *         The specified resource doesn't exist.
      * @throws ConflictException
+     *         The requested state transition isn't valid. For example, you can't delete a firewall domain list if it is
+     *         in the process of being deleted, or you can't import domains into a domain list that is in the process of
+     *         being deleted.
      * @throws AccessDeniedException
      *         The current account doesn't have the IAM permissions required to perform the specified Resolver
      *         operation.
@@ -1105,7 +1119,12 @@ public class AmazonRoute53ResolverClient extends AmazonWebServiceClient implemen
      * @throws ResourceNotFoundException
      *         The specified resource doesn't exist.
      * @throws ConflictException
+     *         The requested state transition isn't valid. For example, you can't delete a firewall domain list if it is
+     *         in the process of being deleted, or you can't import domains into a domain list that is in the process of
+     *         being deleted.
      * @throws ValidationException
+     *         You have provided an invalid command. Supported values are <code>ADD</code>, <code>REMOVE</code>, or
+     *         <code>REPLACE</code> a domain.
      * @throws AccessDeniedException
      *         The current account doesn't have the IAM permissions required to perform the specified Resolver
      *         operation.
@@ -1406,10 +1425,15 @@ public class AmazonRoute53ResolverClient extends AmazonWebServiceClient implemen
      * @throws ResourceNotFoundException
      *         The specified resource doesn't exist.
      * @throws ValidationException
+     *         You have provided an invalid command. Supported values are <code>ADD</code>, <code>REMOVE</code>, or
+     *         <code>REPLACE</code> a domain.
      * @throws AccessDeniedException
      *         The current account doesn't have the IAM permissions required to perform the specified Resolver
      *         operation.
      * @throws ConflictException
+     *         The requested state transition isn't valid. For example, you can't delete a firewall domain list if it is
+     *         in the process of being deleted, or you can't import domains into a domain list that is in the process of
+     *         being deleted.
      * @throws InternalServiceErrorException
      *         We encountered an unknown error. Try again in a few minutes.
      * @throws ThrottlingException
@@ -1721,6 +1745,8 @@ public class AmazonRoute53ResolverClient extends AmazonWebServiceClient implemen
      * @throws ThrottlingException
      *         The request was throttled. Try again in a few minutes.
      * @throws ValidationException
+     *         You have provided an invalid command. Supported values are <code>ADD</code>, <code>REMOVE</code>, or
+     *         <code>REPLACE</code> a domain.
      * @sample AmazonRoute53Resolver.GetFirewallConfig
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/route53resolver-2018-04-01/GetFirewallConfig"
      *      target="_top">AWS API Documentation</a>
@@ -1975,6 +2001,8 @@ public class AmazonRoute53ResolverClient extends AmazonWebServiceClient implemen
      * @param getFirewallRuleGroupPolicyRequest
      * @return Result of the GetFirewallRuleGroupPolicy operation returned by the service.
      * @throws ValidationException
+     *         You have provided an invalid command. Supported values are <code>ADD</code>, <code>REMOVE</code>, or
+     *         <code>REPLACE</code> a domain.
      * @throws ResourceNotFoundException
      *         The specified resource doesn't exist.
      * @throws AccessDeniedException
@@ -2036,7 +2064,7 @@ public class AmazonRoute53ResolverClient extends AmazonWebServiceClient implemen
 
     /**
      * <p>
-     * Retrieves the behavior configuration of Route 53 Resolver behavior for a single VPC from Amazon Virtual Private
+     * Retrieves the behavior configuration of Route 53 Resolver behavior for a single VPC from Amazon Virtual Private
      * Cloud.
      * </p>
      * 
@@ -2053,6 +2081,9 @@ public class AmazonRoute53ResolverClient extends AmazonWebServiceClient implemen
      * @throws AccessDeniedException
      *         The current account doesn't have the IAM permissions required to perform the specified Resolver
      *         operation.
+     * @throws ValidationException
+     *         You have provided an invalid command. Supported values are <code>ADD</code>, <code>REMOVE</code>, or
+     *         <code>REPLACE</code> a domain.
      * @sample AmazonRoute53Resolver.GetResolverConfig
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/route53resolver-2018-04-01/GetResolverConfig"
      *      target="_top">AWS API Documentation</a>
@@ -2597,6 +2628,9 @@ public class AmazonRoute53ResolverClient extends AmazonWebServiceClient implemen
      *         The specified resource doesn't exist.
      * @throws InternalServiceErrorException
      *         We encountered an unknown error. Try again in a few minutes.
+     * @throws AccessDeniedException
+     *         The current account doesn't have the IAM permissions required to perform the specified Resolver
+     *         operation.
      * @sample AmazonRoute53Resolver.GetResolverRulePolicy
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/route53resolver-2018-04-01/GetResolverRulePolicy"
      *      target="_top">AWS API Documentation</a>
@@ -2675,6 +2709,8 @@ public class AmazonRoute53ResolverClient extends AmazonWebServiceClient implemen
      * @param importFirewallDomainsRequest
      * @return Result of the ImportFirewallDomains operation returned by the service.
      * @throws ValidationException
+     *         You have provided an invalid command. Supported values are <code>ADD</code>, <code>REMOVE</code>, or
+     *         <code>REPLACE</code> a domain.
      * @throws AccessDeniedException
      *         The current account doesn't have the IAM permissions required to perform the specified Resolver
      *         operation.
@@ -2683,6 +2719,9 @@ public class AmazonRoute53ResolverClient extends AmazonWebServiceClient implemen
      * @throws LimitExceededException
      *         The request caused one or more limits to be exceeded.
      * @throws ConflictException
+     *         The requested state transition isn't valid. For example, you can't delete a firewall domain list if it is
+     *         in the process of being deleted, or you can't import domains into a domain list that is in the process of
+     *         being deleted.
      * @throws InternalServiceErrorException
      *         We encountered an unknown error. Try again in a few minutes.
      * @throws ThrottlingException
@@ -2749,6 +2788,8 @@ public class AmazonRoute53ResolverClient extends AmazonWebServiceClient implemen
      * @param listFirewallConfigsRequest
      * @return Result of the ListFirewallConfigs operation returned by the service.
      * @throws ValidationException
+     *         You have provided an invalid command. Supported values are <code>ADD</code>, <code>REMOVE</code>, or
+     *         <code>REPLACE</code> a domain.
      * @throws AccessDeniedException
      *         The current account doesn't have the IAM permissions required to perform the specified Resolver
      *         operation.
@@ -2817,6 +2858,8 @@ public class AmazonRoute53ResolverClient extends AmazonWebServiceClient implemen
      * @param listFirewallDomainListsRequest
      * @return Result of the ListFirewallDomainLists operation returned by the service.
      * @throws ValidationException
+     *         You have provided an invalid command. Supported values are <code>ADD</code>, <code>REMOVE</code>, or
+     *         <code>REPLACE</code> a domain.
      * @throws AccessDeniedException
      *         The current account doesn't have the IAM permissions required to perform the specified Resolver
      *         operation.
@@ -2887,6 +2930,8 @@ public class AmazonRoute53ResolverClient extends AmazonWebServiceClient implemen
      * @throws ResourceNotFoundException
      *         The specified resource doesn't exist.
      * @throws ValidationException
+     *         You have provided an invalid command. Supported values are <code>ADD</code>, <code>REMOVE</code>, or
+     *         <code>REPLACE</code> a domain.
      * @throws AccessDeniedException
      *         The current account doesn't have the IAM permissions required to perform the specified Resolver
      *         operation.
@@ -2954,6 +2999,8 @@ public class AmazonRoute53ResolverClient extends AmazonWebServiceClient implemen
      * @param listFirewallRuleGroupAssociationsRequest
      * @return Result of the ListFirewallRuleGroupAssociations operation returned by the service.
      * @throws ValidationException
+     *         You have provided an invalid command. Supported values are <code>ADD</code>, <code>REMOVE</code>, or
+     *         <code>REPLACE</code> a domain.
      * @throws AccessDeniedException
      *         The current account doesn't have the IAM permissions required to perform the specified Resolver
      *         operation.
@@ -3024,6 +3071,8 @@ public class AmazonRoute53ResolverClient extends AmazonWebServiceClient implemen
      * @param listFirewallRuleGroupsRequest
      * @return Result of the ListFirewallRuleGroups operation returned by the service.
      * @throws ValidationException
+     *         You have provided an invalid command. Supported values are <code>ADD</code>, <code>REMOVE</code>, or
+     *         <code>REPLACE</code> a domain.
      * @throws AccessDeniedException
      *         The current account doesn't have the IAM permissions required to perform the specified Resolver
      *         operation.
@@ -3094,6 +3143,8 @@ public class AmazonRoute53ResolverClient extends AmazonWebServiceClient implemen
      * @throws ResourceNotFoundException
      *         The specified resource doesn't exist.
      * @throws ValidationException
+     *         You have provided an invalid command. Supported values are <code>ADD</code>, <code>REMOVE</code>, or
+     *         <code>REPLACE</code> a domain.
      * @throws AccessDeniedException
      *         The current account doesn't have the IAM permissions required to perform the specified Resolver
      *         operation.
@@ -3151,7 +3202,7 @@ public class AmazonRoute53ResolverClient extends AmazonWebServiceClient implemen
 
     /**
      * <p>
-     * Retrieves the Resolver configurations that you have defined. Route 53 Resolver uses the configurations to manage
+     * Retrieves the Resolver configurations that you have defined. Route 53 Resolver uses the configurations to manage
      * DNS resolution behavior for your VPCs.
      * </p>
      * 
@@ -3170,6 +3221,9 @@ public class AmazonRoute53ResolverClient extends AmazonWebServiceClient implemen
      * @throws AccessDeniedException
      *         The current account doesn't have the IAM permissions required to perform the specified Resolver
      *         operation.
+     * @throws ValidationException
+     *         You have provided an invalid command. Supported values are <code>ADD</code>, <code>REMOVE</code>, or
+     *         <code>REPLACE</code> a domain.
      * @sample AmazonRoute53Resolver.ListResolverConfigs
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/route53resolver-2018-04-01/ListResolverConfigs"
      *      target="_top">AWS API Documentation</a>
@@ -3774,6 +3828,8 @@ public class AmazonRoute53ResolverClient extends AmazonWebServiceClient implemen
      * @param putFirewallRuleGroupPolicyRequest
      * @return Result of the PutFirewallRuleGroupPolicy operation returned by the service.
      * @throws ValidationException
+     *         You have provided an invalid command. Supported values are <code>ADD</code>, <code>REMOVE</code>, or
+     *         <code>REPLACE</code> a domain.
      * @throws ResourceNotFoundException
      *         The specified resource doesn't exist.
      * @throws AccessDeniedException
@@ -3922,6 +3978,9 @@ public class AmazonRoute53ResolverClient extends AmazonWebServiceClient implemen
      *         The specified resource doesn't exist.
      * @throws InternalServiceErrorException
      *         We encountered an unknown error. Try again in a few minutes.
+     * @throws AccessDeniedException
+     *         The current account doesn't have the IAM permissions required to perform the specified Resolver
+     *         operation.
      * @sample AmazonRoute53Resolver.PutResolverRulePolicy
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/route53resolver-2018-04-01/PutResolverRulePolicy"
      *      target="_top">AWS API Documentation</a>
@@ -4114,6 +4173,8 @@ public class AmazonRoute53ResolverClient extends AmazonWebServiceClient implemen
      * @param updateFirewallConfigRequest
      * @return Result of the UpdateFirewallConfig operation returned by the service.
      * @throws ValidationException
+     *         You have provided an invalid command. Supported values are <code>ADD</code>, <code>REMOVE</code>, or
+     *         <code>REPLACE</code> a domain.
      * @throws ResourceNotFoundException
      *         The specified resource doesn't exist.
      * @throws AccessDeniedException
@@ -4179,6 +4240,8 @@ public class AmazonRoute53ResolverClient extends AmazonWebServiceClient implemen
      * @param updateFirewallDomainsRequest
      * @return Result of the UpdateFirewallDomains operation returned by the service.
      * @throws ValidationException
+     *         You have provided an invalid command. Supported values are <code>ADD</code>, <code>REMOVE</code>, or
+     *         <code>REPLACE</code> a domain.
      * @throws AccessDeniedException
      *         The current account doesn't have the IAM permissions required to perform the specified Resolver
      *         operation.
@@ -4187,6 +4250,9 @@ public class AmazonRoute53ResolverClient extends AmazonWebServiceClient implemen
      * @throws LimitExceededException
      *         The request caused one or more limits to be exceeded.
      * @throws ConflictException
+     *         The requested state transition isn't valid. For example, you can't delete a firewall domain list if it is
+     *         in the process of being deleted, or you can't import domains into a domain list that is in the process of
+     *         being deleted.
      * @throws InternalServiceErrorException
      *         We encountered an unknown error. Try again in a few minutes.
      * @throws ThrottlingException
@@ -4250,7 +4316,12 @@ public class AmazonRoute53ResolverClient extends AmazonWebServiceClient implemen
      * @throws ResourceNotFoundException
      *         The specified resource doesn't exist.
      * @throws ValidationException
+     *         You have provided an invalid command. Supported values are <code>ADD</code>, <code>REMOVE</code>, or
+     *         <code>REPLACE</code> a domain.
      * @throws ConflictException
+     *         The requested state transition isn't valid. For example, you can't delete a firewall domain list if it is
+     *         in the process of being deleted, or you can't import domains into a domain list that is in the process of
+     *         being deleted.
      * @throws AccessDeniedException
      *         The current account doesn't have the IAM permissions required to perform the specified Resolver
      *         operation.
@@ -4317,7 +4388,12 @@ public class AmazonRoute53ResolverClient extends AmazonWebServiceClient implemen
      * @throws ResourceNotFoundException
      *         The specified resource doesn't exist.
      * @throws ValidationException
+     *         You have provided an invalid command. Supported values are <code>ADD</code>, <code>REMOVE</code>, or
+     *         <code>REPLACE</code> a domain.
      * @throws ConflictException
+     *         The requested state transition isn't valid. For example, you can't delete a firewall domain list if it is
+     *         in the process of being deleted, or you can't import domains into a domain list that is in the process of
+     *         being deleted.
      * @throws AccessDeniedException
      *         The current account doesn't have the IAM permissions required to perform the specified Resolver
      *         operation.
@@ -4379,7 +4455,7 @@ public class AmazonRoute53ResolverClient extends AmazonWebServiceClient implemen
 
     /**
      * <p>
-     * Updates the behavior configuration of Route 53 Resolver behavior for a single VPC from Amazon Virtual Private
+     * Updates the behavior configuration of Route 53 Resolver behavior for a single VPC from Amazon Virtual Private
      * Cloud.
      * </p>
      * 
@@ -4402,6 +4478,9 @@ public class AmazonRoute53ResolverClient extends AmazonWebServiceClient implemen
      * @throws AccessDeniedException
      *         The current account doesn't have the IAM permissions required to perform the specified Resolver
      *         operation.
+     * @throws ValidationException
+     *         You have provided an invalid command. Supported values are <code>ADD</code>, <code>REMOVE</code>, or
+     *         <code>REPLACE</code> a domain.
      * @sample AmazonRoute53Resolver.UpdateResolverConfig
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/route53resolver-2018-04-01/UpdateResolverConfig"
      *      target="_top">AWS API Documentation</a>
@@ -4523,7 +4602,8 @@ public class AmazonRoute53ResolverClient extends AmazonWebServiceClient implemen
 
     /**
      * <p>
-     * Updates the name of an inbound or an outbound Resolver endpoint.
+     * Updates the name, or enpoint type for an inbound or an outbound Resolver endpoint. You can only update between
+     * IPV4 and DUALSTACK, IPV6 endpoint type can't be updated to other type.
      * </p>
      * 
      * @param updateResolverEndpointRequest

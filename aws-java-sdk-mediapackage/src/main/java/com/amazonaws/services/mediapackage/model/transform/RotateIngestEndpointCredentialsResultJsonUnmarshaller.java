@@ -52,6 +52,10 @@ public class RotateIngestEndpointCredentialsResultJsonUnmarshaller implements Un
                     context.nextToken();
                     rotateIngestEndpointCredentialsResult.setArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("createdAt", targetDepth)) {
+                    context.nextToken();
+                    rotateIngestEndpointCredentialsResult.setCreatedAt(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("description", targetDepth)) {
                     context.nextToken();
                     rotateIngestEndpointCredentialsResult.setDescription(context.getUnmarshaller(String.class).unmarshall(context));

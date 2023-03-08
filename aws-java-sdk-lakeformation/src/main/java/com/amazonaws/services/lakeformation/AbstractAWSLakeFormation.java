@@ -103,6 +103,11 @@ public class AbstractAWSLakeFormation implements AWSLakeFormation {
     }
 
     @Override
+    public GetDataCellsFilterResult getDataCellsFilter(GetDataCellsFilterRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetDataLakeSettingsResult getDataLakeSettings(GetDataLakeSettingsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -229,6 +234,11 @@ public class AbstractAWSLakeFormation implements AWSLakeFormation {
 
     @Override
     public StartTransactionResult startTransaction(StartTransactionRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateDataCellsFilterResult updateDataCellsFilter(UpdateDataCellsFilterRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

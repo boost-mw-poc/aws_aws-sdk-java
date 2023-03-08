@@ -56,6 +56,10 @@ public class ConfigureLogsResultJsonUnmarshaller implements Unmarshaller<Configu
                     context.nextToken();
                     configureLogsResult.setAuthorization(AuthorizationJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("createdAt", targetDepth)) {
+                    context.nextToken();
+                    configureLogsResult.setCreatedAt(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("domainName", targetDepth)) {
                     context.nextToken();
                     configureLogsResult.setDomainName(context.getUnmarshaller(String.class).unmarshall(context));

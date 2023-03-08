@@ -37,6 +37,18 @@ public class UpdateResolverEndpointRequest extends com.amazonaws.AmazonWebServic
      * </p>
      */
     private String name;
+    /**
+     * <p>
+     * Specifies the endpoint type for what type of IP address the endpoint uses to forward DNS queries.
+     * </p>
+     */
+    private String resolverEndpointType;
+    /**
+     * <p>
+     * Updates the Resolver endpoint type to IpV4, Ipv6, or dual-stack.
+     * </p>
+     */
+    private java.util.List<UpdateIpAddress> updateIpAddresses;
 
     /**
      * <p>
@@ -119,6 +131,135 @@ public class UpdateResolverEndpointRequest extends com.amazonaws.AmazonWebServic
     }
 
     /**
+     * <p>
+     * Specifies the endpoint type for what type of IP address the endpoint uses to forward DNS queries.
+     * </p>
+     * 
+     * @param resolverEndpointType
+     *        Specifies the endpoint type for what type of IP address the endpoint uses to forward DNS queries.
+     * @see ResolverEndpointType
+     */
+
+    public void setResolverEndpointType(String resolverEndpointType) {
+        this.resolverEndpointType = resolverEndpointType;
+    }
+
+    /**
+     * <p>
+     * Specifies the endpoint type for what type of IP address the endpoint uses to forward DNS queries.
+     * </p>
+     * 
+     * @return Specifies the endpoint type for what type of IP address the endpoint uses to forward DNS queries.
+     * @see ResolverEndpointType
+     */
+
+    public String getResolverEndpointType() {
+        return this.resolverEndpointType;
+    }
+
+    /**
+     * <p>
+     * Specifies the endpoint type for what type of IP address the endpoint uses to forward DNS queries.
+     * </p>
+     * 
+     * @param resolverEndpointType
+     *        Specifies the endpoint type for what type of IP address the endpoint uses to forward DNS queries.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ResolverEndpointType
+     */
+
+    public UpdateResolverEndpointRequest withResolverEndpointType(String resolverEndpointType) {
+        setResolverEndpointType(resolverEndpointType);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Specifies the endpoint type for what type of IP address the endpoint uses to forward DNS queries.
+     * </p>
+     * 
+     * @param resolverEndpointType
+     *        Specifies the endpoint type for what type of IP address the endpoint uses to forward DNS queries.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ResolverEndpointType
+     */
+
+    public UpdateResolverEndpointRequest withResolverEndpointType(ResolverEndpointType resolverEndpointType) {
+        this.resolverEndpointType = resolverEndpointType.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * Updates the Resolver endpoint type to IpV4, Ipv6, or dual-stack.
+     * </p>
+     * 
+     * @return Updates the Resolver endpoint type to IpV4, Ipv6, or dual-stack.
+     */
+
+    public java.util.List<UpdateIpAddress> getUpdateIpAddresses() {
+        return updateIpAddresses;
+    }
+
+    /**
+     * <p>
+     * Updates the Resolver endpoint type to IpV4, Ipv6, or dual-stack.
+     * </p>
+     * 
+     * @param updateIpAddresses
+     *        Updates the Resolver endpoint type to IpV4, Ipv6, or dual-stack.
+     */
+
+    public void setUpdateIpAddresses(java.util.Collection<UpdateIpAddress> updateIpAddresses) {
+        if (updateIpAddresses == null) {
+            this.updateIpAddresses = null;
+            return;
+        }
+
+        this.updateIpAddresses = new java.util.ArrayList<UpdateIpAddress>(updateIpAddresses);
+    }
+
+    /**
+     * <p>
+     * Updates the Resolver endpoint type to IpV4, Ipv6, or dual-stack.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setUpdateIpAddresses(java.util.Collection)} or {@link #withUpdateIpAddresses(java.util.Collection)} if
+     * you want to override the existing values.
+     * </p>
+     * 
+     * @param updateIpAddresses
+     *        Updates the Resolver endpoint type to IpV4, Ipv6, or dual-stack.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateResolverEndpointRequest withUpdateIpAddresses(UpdateIpAddress... updateIpAddresses) {
+        if (this.updateIpAddresses == null) {
+            setUpdateIpAddresses(new java.util.ArrayList<UpdateIpAddress>(updateIpAddresses.length));
+        }
+        for (UpdateIpAddress ele : updateIpAddresses) {
+            this.updateIpAddresses.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * Updates the Resolver endpoint type to IpV4, Ipv6, or dual-stack.
+     * </p>
+     * 
+     * @param updateIpAddresses
+     *        Updates the Resolver endpoint type to IpV4, Ipv6, or dual-stack.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateResolverEndpointRequest withUpdateIpAddresses(java.util.Collection<UpdateIpAddress> updateIpAddresses) {
+        setUpdateIpAddresses(updateIpAddresses);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -133,7 +274,11 @@ public class UpdateResolverEndpointRequest extends com.amazonaws.AmazonWebServic
         if (getResolverEndpointId() != null)
             sb.append("ResolverEndpointId: ").append(getResolverEndpointId()).append(",");
         if (getName() != null)
-            sb.append("Name: ").append(getName());
+            sb.append("Name: ").append(getName()).append(",");
+        if (getResolverEndpointType() != null)
+            sb.append("ResolverEndpointType: ").append(getResolverEndpointType()).append(",");
+        if (getUpdateIpAddresses() != null)
+            sb.append("UpdateIpAddresses: ").append(getUpdateIpAddresses());
         sb.append("}");
         return sb.toString();
     }
@@ -156,6 +301,14 @@ public class UpdateResolverEndpointRequest extends com.amazonaws.AmazonWebServic
             return false;
         if (other.getName() != null && other.getName().equals(this.getName()) == false)
             return false;
+        if (other.getResolverEndpointType() == null ^ this.getResolverEndpointType() == null)
+            return false;
+        if (other.getResolverEndpointType() != null && other.getResolverEndpointType().equals(this.getResolverEndpointType()) == false)
+            return false;
+        if (other.getUpdateIpAddresses() == null ^ this.getUpdateIpAddresses() == null)
+            return false;
+        if (other.getUpdateIpAddresses() != null && other.getUpdateIpAddresses().equals(this.getUpdateIpAddresses()) == false)
+            return false;
         return true;
     }
 
@@ -166,6 +319,8 @@ public class UpdateResolverEndpointRequest extends com.amazonaws.AmazonWebServic
 
         hashCode = prime * hashCode + ((getResolverEndpointId() == null) ? 0 : getResolverEndpointId().hashCode());
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
+        hashCode = prime * hashCode + ((getResolverEndpointType() == null) ? 0 : getResolverEndpointType().hashCode());
+        hashCode = prime * hashCode + ((getUpdateIpAddresses() == null) ? 0 : getUpdateIpAddresses().hashCode());
         return hashCode;
     }
 

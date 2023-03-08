@@ -31,7 +31,7 @@ public class TargetAddress implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * One IP address that you want to forward DNS queries to. You can specify only IPv4 addresses.
+     * One IPv4 address that you want to forward DNS queries to.
      * </p>
      */
     private String ip;
@@ -41,14 +41,20 @@ public class TargetAddress implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private Integer port;
+    /**
+     * <p>
+     * One IPv6 address that you want to forward DNS queries to.
+     * </p>
+     */
+    private String ipv6;
 
     /**
      * <p>
-     * One IP address that you want to forward DNS queries to. You can specify only IPv4 addresses.
+     * One IPv4 address that you want to forward DNS queries to.
      * </p>
      * 
      * @param ip
-     *        One IP address that you want to forward DNS queries to. You can specify only IPv4 addresses.
+     *        One IPv4 address that you want to forward DNS queries to.
      */
 
     public void setIp(String ip) {
@@ -57,10 +63,10 @@ public class TargetAddress implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * One IP address that you want to forward DNS queries to. You can specify only IPv4 addresses.
+     * One IPv4 address that you want to forward DNS queries to.
      * </p>
      * 
-     * @return One IP address that you want to forward DNS queries to. You can specify only IPv4 addresses.
+     * @return One IPv4 address that you want to forward DNS queries to.
      */
 
     public String getIp() {
@@ -69,11 +75,11 @@ public class TargetAddress implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * One IP address that you want to forward DNS queries to. You can specify only IPv4 addresses.
+     * One IPv4 address that you want to forward DNS queries to.
      * </p>
      * 
      * @param ip
-     *        One IP address that you want to forward DNS queries to. You can specify only IPv4 addresses.
+     *        One IPv4 address that you want to forward DNS queries to.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -123,6 +129,46 @@ public class TargetAddress implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * One IPv6 address that you want to forward DNS queries to.
+     * </p>
+     * 
+     * @param ipv6
+     *        One IPv6 address that you want to forward DNS queries to.
+     */
+
+    public void setIpv6(String ipv6) {
+        this.ipv6 = ipv6;
+    }
+
+    /**
+     * <p>
+     * One IPv6 address that you want to forward DNS queries to.
+     * </p>
+     * 
+     * @return One IPv6 address that you want to forward DNS queries to.
+     */
+
+    public String getIpv6() {
+        return this.ipv6;
+    }
+
+    /**
+     * <p>
+     * One IPv6 address that you want to forward DNS queries to.
+     * </p>
+     * 
+     * @param ipv6
+     *        One IPv6 address that you want to forward DNS queries to.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public TargetAddress withIpv6(String ipv6) {
+        setIpv6(ipv6);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -137,7 +183,9 @@ public class TargetAddress implements Serializable, Cloneable, StructuredPojo {
         if (getIp() != null)
             sb.append("Ip: ").append(getIp()).append(",");
         if (getPort() != null)
-            sb.append("Port: ").append(getPort());
+            sb.append("Port: ").append(getPort()).append(",");
+        if (getIpv6() != null)
+            sb.append("Ipv6: ").append(getIpv6());
         sb.append("}");
         return sb.toString();
     }
@@ -160,6 +208,10 @@ public class TargetAddress implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getPort() != null && other.getPort().equals(this.getPort()) == false)
             return false;
+        if (other.getIpv6() == null ^ this.getIpv6() == null)
+            return false;
+        if (other.getIpv6() != null && other.getIpv6().equals(this.getIpv6()) == false)
+            return false;
         return true;
     }
 
@@ -170,6 +222,7 @@ public class TargetAddress implements Serializable, Cloneable, StructuredPojo {
 
         hashCode = prime * hashCode + ((getIp() == null) ? 0 : getIp().hashCode());
         hashCode = prime * hashCode + ((getPort() == null) ? 0 : getPort().hashCode());
+        hashCode = prime * hashCode + ((getIpv6() == null) ? 0 : getIpv6().hashCode());
         return hashCode;
     }
 

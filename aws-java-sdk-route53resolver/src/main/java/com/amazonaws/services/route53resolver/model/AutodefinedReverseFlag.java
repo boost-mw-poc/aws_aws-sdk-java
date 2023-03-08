@@ -21,7 +21,8 @@ import javax.annotation.Generated;
 public enum AutodefinedReverseFlag {
 
     ENABLE("ENABLE"),
-    DISABLE("DISABLE");
+    DISABLE("DISABLE"),
+    USE_LOCAL_RESOURCE_SETTING("USE_LOCAL_RESOURCE_SETTING");
 
     private String value;
 

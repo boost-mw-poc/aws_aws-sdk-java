@@ -60,6 +60,10 @@ public class UserContextJsonUnmarshaller implements Unmarshaller<UserContext, Js
                     context.nextToken();
                     userContext.setDomainId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("IamIdentity", targetDepth)) {
+                    context.nextToken();
+                    userContext.setIamIdentity(IamIdentityJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

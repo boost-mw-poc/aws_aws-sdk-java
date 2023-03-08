@@ -56,6 +56,10 @@ public class PackagingConfigurationJsonUnmarshaller implements Unmarshaller<Pack
                     context.nextToken();
                     packagingConfiguration.setCmafPackage(CmafPackageJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("createdAt", targetDepth)) {
+                    context.nextToken();
+                    packagingConfiguration.setCreatedAt(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("dashPackage", targetDepth)) {
                     context.nextToken();
                     packagingConfiguration.setDashPackage(DashPackageJsonUnmarshaller.getInstance().unmarshall(context));

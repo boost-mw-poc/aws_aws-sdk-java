@@ -79,6 +79,13 @@ public class CreateResolverEndpointRequest extends com.amazonaws.AmazonWebServic
      * </p>
      */
     private java.util.List<Tag> tags;
+    /**
+     * <p>
+     * For the endpoint type you can choose either IPv4, IPv6. or dual-stack. A dual-stack endpoint means that it will
+     * resolve via both IPv4 and IPv6. This endpoint type is applied to all IP addresses.
+     * </p>
+     */
+    private String resolverEndpointType;
 
     /**
      * <p>
@@ -573,6 +580,73 @@ public class CreateResolverEndpointRequest extends com.amazonaws.AmazonWebServic
     }
 
     /**
+     * <p>
+     * For the endpoint type you can choose either IPv4, IPv6. or dual-stack. A dual-stack endpoint means that it will
+     * resolve via both IPv4 and IPv6. This endpoint type is applied to all IP addresses.
+     * </p>
+     * 
+     * @param resolverEndpointType
+     *        For the endpoint type you can choose either IPv4, IPv6. or dual-stack. A dual-stack endpoint means that it
+     *        will resolve via both IPv4 and IPv6. This endpoint type is applied to all IP addresses.
+     * @see ResolverEndpointType
+     */
+
+    public void setResolverEndpointType(String resolverEndpointType) {
+        this.resolverEndpointType = resolverEndpointType;
+    }
+
+    /**
+     * <p>
+     * For the endpoint type you can choose either IPv4, IPv6. or dual-stack. A dual-stack endpoint means that it will
+     * resolve via both IPv4 and IPv6. This endpoint type is applied to all IP addresses.
+     * </p>
+     * 
+     * @return For the endpoint type you can choose either IPv4, IPv6. or dual-stack. A dual-stack endpoint means that
+     *         it will resolve via both IPv4 and IPv6. This endpoint type is applied to all IP addresses.
+     * @see ResolverEndpointType
+     */
+
+    public String getResolverEndpointType() {
+        return this.resolverEndpointType;
+    }
+
+    /**
+     * <p>
+     * For the endpoint type you can choose either IPv4, IPv6. or dual-stack. A dual-stack endpoint means that it will
+     * resolve via both IPv4 and IPv6. This endpoint type is applied to all IP addresses.
+     * </p>
+     * 
+     * @param resolverEndpointType
+     *        For the endpoint type you can choose either IPv4, IPv6. or dual-stack. A dual-stack endpoint means that it
+     *        will resolve via both IPv4 and IPv6. This endpoint type is applied to all IP addresses.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ResolverEndpointType
+     */
+
+    public CreateResolverEndpointRequest withResolverEndpointType(String resolverEndpointType) {
+        setResolverEndpointType(resolverEndpointType);
+        return this;
+    }
+
+    /**
+     * <p>
+     * For the endpoint type you can choose either IPv4, IPv6. or dual-stack. A dual-stack endpoint means that it will
+     * resolve via both IPv4 and IPv6. This endpoint type is applied to all IP addresses.
+     * </p>
+     * 
+     * @param resolverEndpointType
+     *        For the endpoint type you can choose either IPv4, IPv6. or dual-stack. A dual-stack endpoint means that it
+     *        will resolve via both IPv4 and IPv6. This endpoint type is applied to all IP addresses.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ResolverEndpointType
+     */
+
+    public CreateResolverEndpointRequest withResolverEndpointType(ResolverEndpointType resolverEndpointType) {
+        this.resolverEndpointType = resolverEndpointType.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -595,7 +669,9 @@ public class CreateResolverEndpointRequest extends com.amazonaws.AmazonWebServic
         if (getIpAddresses() != null)
             sb.append("IpAddresses: ").append(getIpAddresses()).append(",");
         if (getTags() != null)
-            sb.append("Tags: ").append(getTags());
+            sb.append("Tags: ").append(getTags()).append(",");
+        if (getResolverEndpointType() != null)
+            sb.append("ResolverEndpointType: ").append(getResolverEndpointType());
         sb.append("}");
         return sb.toString();
     }
@@ -634,6 +710,10 @@ public class CreateResolverEndpointRequest extends com.amazonaws.AmazonWebServic
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
             return false;
+        if (other.getResolverEndpointType() == null ^ this.getResolverEndpointType() == null)
+            return false;
+        if (other.getResolverEndpointType() != null && other.getResolverEndpointType().equals(this.getResolverEndpointType()) == false)
+            return false;
         return true;
     }
 
@@ -648,6 +728,7 @@ public class CreateResolverEndpointRequest extends com.amazonaws.AmazonWebServic
         hashCode = prime * hashCode + ((getDirection() == null) ? 0 : getDirection().hashCode());
         hashCode = prime * hashCode + ((getIpAddresses() == null) ? 0 : getIpAddresses().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
+        hashCode = prime * hashCode + ((getResolverEndpointType() == null) ? 0 : getResolverEndpointType().hashCode());
         return hashCode;
     }
 
