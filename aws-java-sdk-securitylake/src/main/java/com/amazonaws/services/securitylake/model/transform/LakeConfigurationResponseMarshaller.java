@@ -43,6 +43,8 @@ public class LakeConfigurationResponseMarshaller {
             .marshallLocationName("status").build();
     private static final MarshallingInfo<Map> TAGSMAP_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("tagsMap").build();
+    private static final MarshallingInfo<StructuredPojo> UPDATESTATUS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("updateStatus").build();
 
     private static final LakeConfigurationResponseMarshaller instance = new LakeConfigurationResponseMarshaller();
 
@@ -67,6 +69,7 @@ public class LakeConfigurationResponseMarshaller {
             protocolMarshaller.marshall(lakeConfigurationResponse.getS3BucketArn(), S3BUCKETARN_BINDING);
             protocolMarshaller.marshall(lakeConfigurationResponse.getStatus(), STATUS_BINDING);
             protocolMarshaller.marshall(lakeConfigurationResponse.getTagsMap(), TAGSMAP_BINDING);
+            protocolMarshaller.marshall(lakeConfigurationResponse.getUpdateStatus(), UPDATESTATUS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

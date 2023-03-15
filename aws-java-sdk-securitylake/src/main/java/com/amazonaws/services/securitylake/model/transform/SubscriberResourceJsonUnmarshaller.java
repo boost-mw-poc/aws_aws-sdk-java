@@ -66,6 +66,14 @@ public class SubscriberResourceJsonUnmarshaller implements Unmarshaller<Subscrib
                     context.nextToken();
                     subscriberResource.setExternalId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("resourceShareArn", targetDepth)) {
+                    context.nextToken();
+                    subscriberResource.setResourceShareArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("resourceShareName", targetDepth)) {
+                    context.nextToken();
+                    subscriberResource.setResourceShareName(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("roleArn", targetDepth)) {
                     context.nextToken();
                     subscriberResource.setRoleArn(context.getUnmarshaller(String.class).unmarshall(context));

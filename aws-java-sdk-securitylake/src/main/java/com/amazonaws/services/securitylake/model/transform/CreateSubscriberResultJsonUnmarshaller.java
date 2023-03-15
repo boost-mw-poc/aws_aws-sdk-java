@@ -48,6 +48,14 @@ public class CreateSubscriberResultJsonUnmarshaller implements Unmarshaller<Crea
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("resourceShareArn", targetDepth)) {
+                    context.nextToken();
+                    createSubscriberResult.setResourceShareArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("resourceShareName", targetDepth)) {
+                    context.nextToken();
+                    createSubscriberResult.setResourceShareName(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("roleArn", targetDepth)) {
                     context.nextToken();
                     createSubscriberResult.setRoleArn(context.getUnmarshaller(String.class).unmarshall(context));

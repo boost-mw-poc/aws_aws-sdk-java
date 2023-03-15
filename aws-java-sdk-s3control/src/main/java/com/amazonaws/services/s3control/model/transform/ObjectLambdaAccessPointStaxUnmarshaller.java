@@ -52,6 +52,11 @@ public class ObjectLambdaAccessPointStaxUnmarshaller implements Unmarshaller<Obj
                     objectLambdaAccessPoint.setObjectLambdaAccessPointArn(StringStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("Alias", targetDepth)) {
+                    objectLambdaAccessPoint.setAlias(ObjectLambdaAccessPointAliasStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return objectLambdaAccessPoint;

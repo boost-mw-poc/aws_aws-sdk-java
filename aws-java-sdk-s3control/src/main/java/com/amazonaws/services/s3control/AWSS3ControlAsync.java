@@ -1388,7 +1388,7 @@ public interface AWSS3ControlAsync extends AWSS3Control {
      * <p>
      * For information about S3 replication on Outposts configuration, see <a
      * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/S3OutpostsReplication.html">Replicating objects for
-     * Amazon Web Services Outposts</a> in the <i>Amazon S3 User Guide</i>.
+     * S3 on Outposts</a> in the <i>Amazon S3 User Guide</i>.
      * </p>
      * <p>
      * The following operations are related to <code>DeleteBucketReplication</code>:
@@ -1458,7 +1458,7 @@ public interface AWSS3ControlAsync extends AWSS3Control {
      * <p>
      * For information about S3 replication on Outposts configuration, see <a
      * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/S3OutpostsReplication.html">Replicating objects for
-     * Amazon Web Services Outposts</a> in the <i>Amazon S3 User Guide</i>.
+     * S3 on Outposts</a> in the <i>Amazon S3 User Guide</i>.
      * </p>
      * <p>
      * The following operations are related to <code>DeleteBucketReplication</code>:
@@ -3075,7 +3075,7 @@ public interface AWSS3ControlAsync extends AWSS3Control {
      * <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/S3onOutposts.html">Using Amazon S3 on Outposts</a>
      * in the <i>Amazon S3 User Guide</i>. For information about S3 replication on Outposts configuration, see <a
      * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/S3OutpostsReplication.html">Replicating objects for
-     * Amazon Web Services Outposts</a> in the <i>Amazon S3 User Guide</i>.
+     * S3 on Outposts</a> in the <i>Amazon S3 User Guide</i>.
      * </p>
      * <note>
      * <p>
@@ -3153,7 +3153,7 @@ public interface AWSS3ControlAsync extends AWSS3Control {
      * <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/S3onOutposts.html">Using Amazon S3 on Outposts</a>
      * in the <i>Amazon S3 User Guide</i>. For information about S3 replication on Outposts configuration, see <a
      * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/S3OutpostsReplication.html">Replicating objects for
-     * Amazon Web Services Outposts</a> in the <i>Amazon S3 User Guide</i>.
+     * S3 on Outposts</a> in the <i>Amazon S3 User Guide</i>.
      * </p>
      * <note>
      * <p>
@@ -5110,9 +5110,9 @@ public interface AWSS3ControlAsync extends AWSS3Control {
      * </note>
      * <p>
      * Creates a replication configuration or replaces an existing one. For information about S3 replication on Outposts
-     * configuration, see <a href=
-     * "https://docs.aws.amazon.com/AmazonS3/latest/userguide/AmazonS3/latest/userguide/S3OutpostsReplication.html"
-     * >Replicating objects for Amazon Web Services Outposts</a> in the <i>Amazon S3 User Guide</i>.
+     * configuration, see <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/S3OutpostsReplication.html">Replicating objects for
+     * S3 on Outposts</a> in the <i>Amazon S3 User Guide</i>.
      * </p>
      * <note>
      * <p>
@@ -5189,8 +5189,10 @@ public interface AWSS3ControlAsync extends AWSS3Control {
      * </p>
      * <note>
      * <p>
-     * To perform this operation, the user or role must also have the <a
-     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_passrole.html">iam:PassRole</a> permission.
+     * To perform this operation, the user or role must also have the <code>iam:CreateRole</code> and
+     * <code>iam:PassRole</code> permissions. For more information, see <a
+     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_passrole.html">Granting a user permissions to
+     * pass a role to an Amazon Web Services service</a>.
      * </p>
      * </note>
      * <p>
@@ -5199,7 +5201,7 @@ public interface AWSS3ControlAsync extends AWSS3Control {
      * hostname prefix instead of <code>s3-control</code>. For an example of the request syntax for Amazon S3 on
      * Outposts that uses the S3 on Outposts endpoint hostname prefix and the <code>x-amz-outpost-id</code> derived by
      * using the access point ARN, see the <a href=
-     * "https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_GetBucketLifecycleConfiguration.html#API_control_GetBucketLifecycleConfiguration_Examples"
+     * "https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_PutBucketReplication.html#API_control_PutBucketReplication_Examples"
      * >Examples</a> section.
      * </p>
      * <p>
@@ -5239,9 +5241,9 @@ public interface AWSS3ControlAsync extends AWSS3Control {
      * </note>
      * <p>
      * Creates a replication configuration or replaces an existing one. For information about S3 replication on Outposts
-     * configuration, see <a href=
-     * "https://docs.aws.amazon.com/AmazonS3/latest/userguide/AmazonS3/latest/userguide/S3OutpostsReplication.html"
-     * >Replicating objects for Amazon Web Services Outposts</a> in the <i>Amazon S3 User Guide</i>.
+     * configuration, see <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/S3OutpostsReplication.html">Replicating objects for
+     * S3 on Outposts</a> in the <i>Amazon S3 User Guide</i>.
      * </p>
      * <note>
      * <p>
@@ -5318,8 +5320,10 @@ public interface AWSS3ControlAsync extends AWSS3Control {
      * </p>
      * <note>
      * <p>
-     * To perform this operation, the user or role must also have the <a
-     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_passrole.html">iam:PassRole</a> permission.
+     * To perform this operation, the user or role must also have the <code>iam:CreateRole</code> and
+     * <code>iam:PassRole</code> permissions. For more information, see <a
+     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_passrole.html">Granting a user permissions to
+     * pass a role to an Amazon Web Services service</a>.
      * </p>
      * </note>
      * <p>
@@ -5328,7 +5332,7 @@ public interface AWSS3ControlAsync extends AWSS3Control {
      * hostname prefix instead of <code>s3-control</code>. For an example of the request syntax for Amazon S3 on
      * Outposts that uses the S3 on Outposts endpoint hostname prefix and the <code>x-amz-outpost-id</code> derived by
      * using the access point ARN, see the <a href=
-     * "https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_GetBucketLifecycleConfiguration.html#API_control_GetBucketLifecycleConfiguration_Examples"
+     * "https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_PutBucketReplication.html#API_control_PutBucketReplication_Examples"
      * >Examples</a> section.
      * </p>
      * <p>
@@ -5674,10 +5678,10 @@ public interface AWSS3ControlAsync extends AWSS3Control {
      * managing a lifecycle configuration for your S3 on Outposts bucket</a> in the <i>Amazon S3 User Guide</i>.
      * </p>
      * <p>
-     * If you have an object expiration lifecycle policy in your non-versioned bucket and you want to maintain the same
-     * permanent delete behavior when you enable versioning, you must add a noncurrent expiration policy. The noncurrent
-     * expiration lifecycle policy will manage the deletions of the noncurrent object versions in the version-enabled
-     * bucket. For more information, see <a
+     * If you have an object expiration lifecycle configuration in your non-versioned bucket and you want to maintain
+     * the same permanent delete behavior when you enable versioning, you must add a noncurrent expiration policy. The
+     * noncurrent expiration lifecycle configuration will manage the deletes of the noncurrent object versions in the
+     * version-enabled bucket. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/Versioning.html">Versioning</a> in the <i>Amazon S3
      * User Guide</i>.
      * </p>
@@ -5766,10 +5770,10 @@ public interface AWSS3ControlAsync extends AWSS3Control {
      * managing a lifecycle configuration for your S3 on Outposts bucket</a> in the <i>Amazon S3 User Guide</i>.
      * </p>
      * <p>
-     * If you have an object expiration lifecycle policy in your non-versioned bucket and you want to maintain the same
-     * permanent delete behavior when you enable versioning, you must add a noncurrent expiration policy. The noncurrent
-     * expiration lifecycle policy will manage the deletions of the noncurrent object versions in the version-enabled
-     * bucket. For more information, see <a
+     * If you have an object expiration lifecycle configuration in your non-versioned bucket and you want to maintain
+     * the same permanent delete behavior when you enable versioning, you must add a noncurrent expiration policy. The
+     * noncurrent expiration lifecycle configuration will manage the deletes of the noncurrent object versions in the
+     * version-enabled bucket. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/Versioning.html">Versioning</a> in the <i>Amazon S3
      * User Guide</i>.
      * </p>

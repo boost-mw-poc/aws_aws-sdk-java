@@ -27,20 +27,17 @@ public class DeleteDatalakeAutoEnableRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * Delete Amazon Security Lake with the specified configuration settings to stop ingesting security data for new
-     * accounts in Security Lake.
+     * Remove automatic enablement of configuration settings for new member accounts in Security Lake.
      * </p>
      */
     private java.util.List<AutoEnableNewRegionConfiguration> removeFromConfigurationForNewAccounts;
 
     /**
      * <p>
-     * Delete Amazon Security Lake with the specified configuration settings to stop ingesting security data for new
-     * accounts in Security Lake.
+     * Remove automatic enablement of configuration settings for new member accounts in Security Lake.
      * </p>
      * 
-     * @return Delete Amazon Security Lake with the specified configuration settings to stop ingesting security data for
-     *         new accounts in Security Lake.
+     * @return Remove automatic enablement of configuration settings for new member accounts in Security Lake.
      */
 
     public java.util.List<AutoEnableNewRegionConfiguration> getRemoveFromConfigurationForNewAccounts() {
@@ -49,13 +46,11 @@ public class DeleteDatalakeAutoEnableRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * Delete Amazon Security Lake with the specified configuration settings to stop ingesting security data for new
-     * accounts in Security Lake.
+     * Remove automatic enablement of configuration settings for new member accounts in Security Lake.
      * </p>
      * 
      * @param removeFromConfigurationForNewAccounts
-     *        Delete Amazon Security Lake with the specified configuration settings to stop ingesting security data for
-     *        new accounts in Security Lake.
+     *        Remove automatic enablement of configuration settings for new member accounts in Security Lake.
      */
 
     public void setRemoveFromConfigurationForNewAccounts(java.util.Collection<AutoEnableNewRegionConfiguration> removeFromConfigurationForNewAccounts) {
@@ -69,8 +64,7 @@ public class DeleteDatalakeAutoEnableRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * Delete Amazon Security Lake with the specified configuration settings to stop ingesting security data for new
-     * accounts in Security Lake.
+     * Remove automatic enablement of configuration settings for new member accounts in Security Lake.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -80,8 +74,7 @@ public class DeleteDatalakeAutoEnableRequest extends com.amazonaws.AmazonWebServ
      * </p>
      * 
      * @param removeFromConfigurationForNewAccounts
-     *        Delete Amazon Security Lake with the specified configuration settings to stop ingesting security data for
-     *        new accounts in Security Lake.
+     *        Remove automatic enablement of configuration settings for new member accounts in Security Lake.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -97,13 +90,11 @@ public class DeleteDatalakeAutoEnableRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * Delete Amazon Security Lake with the specified configuration settings to stop ingesting security data for new
-     * accounts in Security Lake.
+     * Remove automatic enablement of configuration settings for new member accounts in Security Lake.
      * </p>
      * 
      * @param removeFromConfigurationForNewAccounts
-     *        Delete Amazon Security Lake with the specified configuration settings to stop ingesting security data for
-     *        new accounts in Security Lake.
+     *        Remove automatic enablement of configuration settings for new member accounts in Security Lake.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

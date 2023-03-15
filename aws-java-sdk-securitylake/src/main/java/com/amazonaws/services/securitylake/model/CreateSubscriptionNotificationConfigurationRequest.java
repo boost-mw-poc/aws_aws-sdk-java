@@ -52,7 +52,12 @@ public class CreateSubscriptionNotificationConfigurationRequest extends com.amaz
     private String httpsMethod;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the EventBridge API destinations IAM role that you created.
+     * The Amazon Resource Name (ARN) of the EventBridge API destinations IAM role that you created. For more
+     * information about ARNs and how to use them in policies, see <a
+     * href="https://docs.aws.amazon.com//security-lake/latest/userguide/subscriber-data-access.html">Managing data
+     * access</a> and <a
+     * href="https://docs.aws.amazon.com/security-lake/latest/userguide/security-iam-awsmanpol.html">Amazon Web Services
+     * Managed Policies</a> in the Amazon Security Lake User Guide.
      * </p>
      */
     private String roleArn;
@@ -65,7 +70,7 @@ public class CreateSubscriptionNotificationConfigurationRequest extends com.amaz
     private String subscriptionEndpoint;
     /**
      * <p>
-     * The subscription ID for the notification subscription/
+     * The subscription ID for the notification subscription.
      * </p>
      */
     private String subscriptionId;
@@ -263,11 +268,21 @@ public class CreateSubscriptionNotificationConfigurationRequest extends com.amaz
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the EventBridge API destinations IAM role that you created.
+     * The Amazon Resource Name (ARN) of the EventBridge API destinations IAM role that you created. For more
+     * information about ARNs and how to use them in policies, see <a
+     * href="https://docs.aws.amazon.com//security-lake/latest/userguide/subscriber-data-access.html">Managing data
+     * access</a> and <a
+     * href="https://docs.aws.amazon.com/security-lake/latest/userguide/security-iam-awsmanpol.html">Amazon Web Services
+     * Managed Policies</a> in the Amazon Security Lake User Guide.
      * </p>
      * 
      * @param roleArn
-     *        The Amazon Resource Name (ARN) of the EventBridge API destinations IAM role that you created.
+     *        The Amazon Resource Name (ARN) of the EventBridge API destinations IAM role that you created. For more
+     *        information about ARNs and how to use them in policies, see <a
+     *        href="https://docs.aws.amazon.com//security-lake/latest/userguide/subscriber-data-access.html">Managing
+     *        data access</a> and <a
+     *        href="https://docs.aws.amazon.com/security-lake/latest/userguide/security-iam-awsmanpol.html">Amazon Web
+     *        Services Managed Policies</a> in the Amazon Security Lake User Guide.
      */
 
     public void setRoleArn(String roleArn) {
@@ -276,10 +291,20 @@ public class CreateSubscriptionNotificationConfigurationRequest extends com.amaz
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the EventBridge API destinations IAM role that you created.
+     * The Amazon Resource Name (ARN) of the EventBridge API destinations IAM role that you created. For more
+     * information about ARNs and how to use them in policies, see <a
+     * href="https://docs.aws.amazon.com//security-lake/latest/userguide/subscriber-data-access.html">Managing data
+     * access</a> and <a
+     * href="https://docs.aws.amazon.com/security-lake/latest/userguide/security-iam-awsmanpol.html">Amazon Web Services
+     * Managed Policies</a> in the Amazon Security Lake User Guide.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the EventBridge API destinations IAM role that you created.
+     * @return The Amazon Resource Name (ARN) of the EventBridge API destinations IAM role that you created. For more
+     *         information about ARNs and how to use them in policies, see <a
+     *         href="https://docs.aws.amazon.com//security-lake/latest/userguide/subscriber-data-access.html">Managing
+     *         data access</a> and <a
+     *         href="https://docs.aws.amazon.com/security-lake/latest/userguide/security-iam-awsmanpol.html">Amazon Web
+     *         Services Managed Policies</a> in the Amazon Security Lake User Guide.
      */
 
     public String getRoleArn() {
@@ -288,11 +313,21 @@ public class CreateSubscriptionNotificationConfigurationRequest extends com.amaz
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the EventBridge API destinations IAM role that you created.
+     * The Amazon Resource Name (ARN) of the EventBridge API destinations IAM role that you created. For more
+     * information about ARNs and how to use them in policies, see <a
+     * href="https://docs.aws.amazon.com//security-lake/latest/userguide/subscriber-data-access.html">Managing data
+     * access</a> and <a
+     * href="https://docs.aws.amazon.com/security-lake/latest/userguide/security-iam-awsmanpol.html">Amazon Web Services
+     * Managed Policies</a> in the Amazon Security Lake User Guide.
      * </p>
      * 
      * @param roleArn
-     *        The Amazon Resource Name (ARN) of the EventBridge API destinations IAM role that you created.
+     *        The Amazon Resource Name (ARN) of the EventBridge API destinations IAM role that you created. For more
+     *        information about ARNs and how to use them in policies, see <a
+     *        href="https://docs.aws.amazon.com//security-lake/latest/userguide/subscriber-data-access.html">Managing
+     *        data access</a> and <a
+     *        href="https://docs.aws.amazon.com/security-lake/latest/userguide/security-iam-awsmanpol.html">Amazon Web
+     *        Services Managed Policies</a> in the Amazon Security Lake User Guide.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -349,11 +384,11 @@ public class CreateSubscriptionNotificationConfigurationRequest extends com.amaz
 
     /**
      * <p>
-     * The subscription ID for the notification subscription/
+     * The subscription ID for the notification subscription.
      * </p>
      * 
      * @param subscriptionId
-     *        The subscription ID for the notification subscription/
+     *        The subscription ID for the notification subscription.
      */
 
     public void setSubscriptionId(String subscriptionId) {
@@ -362,10 +397,10 @@ public class CreateSubscriptionNotificationConfigurationRequest extends com.amaz
 
     /**
      * <p>
-     * The subscription ID for the notification subscription/
+     * The subscription ID for the notification subscription.
      * </p>
      * 
-     * @return The subscription ID for the notification subscription/
+     * @return The subscription ID for the notification subscription.
      */
 
     public String getSubscriptionId() {
@@ -374,11 +409,11 @@ public class CreateSubscriptionNotificationConfigurationRequest extends com.amaz
 
     /**
      * <p>
-     * The subscription ID for the notification subscription/
+     * The subscription ID for the notification subscription.
      * </p>
      * 
      * @param subscriptionId
-     *        The subscription ID for the notification subscription/
+     *        The subscription ID for the notification subscription.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -27,6 +27,14 @@ public class AccessDeniedException extends com.amazonaws.services.securitylake.m
     private static final long serialVersionUID = 1L;
 
     /**
+     * <p>
+     * A coded string to provide more information about the access denied exception. You can use the error code to check
+     * the exception type.
+     * </p>
+     */
+    private String errorCode;
+
+    /**
      * Constructs a new AccessDeniedException with the specified error message.
      *
      * @param message
@@ -34,6 +42,54 @@ public class AccessDeniedException extends com.amazonaws.services.securitylake.m
      */
     public AccessDeniedException(String message) {
         super(message);
+    }
+
+    /**
+     * <p>
+     * A coded string to provide more information about the access denied exception. You can use the error code to check
+     * the exception type.
+     * </p>
+     * 
+     * @param errorCode
+     *        A coded string to provide more information about the access denied exception. You can use the error code
+     *        to check the exception type.
+     */
+
+    @com.fasterxml.jackson.annotation.JsonProperty("errorCode")
+    public void setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+    }
+
+    /**
+     * <p>
+     * A coded string to provide more information about the access denied exception. You can use the error code to check
+     * the exception type.
+     * </p>
+     * 
+     * @return A coded string to provide more information about the access denied exception. You can use the error code
+     *         to check the exception type.
+     */
+
+    @com.fasterxml.jackson.annotation.JsonProperty("errorCode")
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
+    /**
+     * <p>
+     * A coded string to provide more information about the access denied exception. You can use the error code to check
+     * the exception type.
+     * </p>
+     * 
+     * @param errorCode
+     *        A coded string to provide more information about the access denied exception. You can use the error code
+     *        to check the exception type.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AccessDeniedException withErrorCode(String errorCode) {
+        setErrorCode(errorCode);
+        return this;
     }
 
 }

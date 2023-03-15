@@ -29,11 +29,14 @@ import com.amazonaws.services.migrationhubstrategyrecommendations.model.*;
  * <p>
  * <p>
  * <fullname>Migration Hub Strategy Recommendations</fullname>
+ * <p>
+ * This API reference provides descriptions, syntax, and other details about each of the actions and data types for
+ * Migration Hub Strategy Recommendations (Strategy Recommendations). The topic for each action shows the API request
+ * parameters and the response. Alternatively, you can use one of the AWS SDKs to access an API that is tailored to the
+ * programming language or platform that you're using. For more information, see <a
+ * href="http://aws.amazon.com/tools/#SDKs">AWS SDKs</a>.
  * </p>
- * 
- * <pre>
- * <code> &lt;p&gt;This API reference provides descriptions, syntax, and other details about each of the actions and data types for Migration Hub Strategy Recommendations (Strategy Recommendations). The topic for each action shows the API request parameters and the response. Alternatively, you can use one of the AWS SDKs to access an API that is tailored to the programming language or platform that you're using. For more information, see &lt;a href=&quot;http://aws.amazon.com/tools/#SDKs&quot;&gt;AWS SDKs&lt;/a&gt;.&lt;/p&gt; </code>
- * </pre>
+ * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public interface AWSMigrationHubStrategyRecommendations {
@@ -96,8 +99,8 @@ public interface AWSMigrationHubStrategyRecommendations {
      * @throws ResourceNotFoundException
      *         The specified ID in the request is not found.
      * @throws AccessDeniedException
-     *         The AWS user account does not have permission to perform the action. Check the AWS Identity and Access
-     *         Management (IAM) policy associated with this account.
+     *         The user does not have permission to perform the action. Check the AWS Identity and Access Management
+     *         (IAM) policy associated with this user.
      * @throws ThrottlingException
      *         The request was denied due to request throttling.
      * @throws InternalServerException
@@ -118,8 +121,8 @@ public interface AWSMigrationHubStrategyRecommendations {
      * @throws ResourceNotFoundException
      *         The specified ID in the request is not found.
      * @throws AccessDeniedException
-     *         The AWS user account does not have permission to perform the action. Check the AWS Identity and Access
-     *         Management (IAM) policy associated with this account.
+     *         The user does not have permission to perform the action. Check the AWS Identity and Access Management
+     *         (IAM) policy associated with this user.
      * @throws ThrottlingException
      *         The request was denied due to request throttling.
      * @throws ValidationException
@@ -142,8 +145,8 @@ public interface AWSMigrationHubStrategyRecommendations {
      * @throws DependencyException
      *         Dependency encountered an error.
      * @throws AccessDeniedException
-     *         The AWS user account does not have permission to perform the action. Check the AWS Identity and Access
-     *         Management (IAM) policy associated with this account.
+     *         The user does not have permission to perform the action. Check the AWS Identity and Access Management
+     *         (IAM) policy associated with this user.
      * @throws ValidationException
      *         The request body isn't valid.
      * @throws InternalServerException
@@ -164,8 +167,8 @@ public interface AWSMigrationHubStrategyRecommendations {
      * @throws ResourceNotFoundException
      *         The specified ID in the request is not found.
      * @throws AccessDeniedException
-     *         The AWS user account does not have permission to perform the action. Check the AWS Identity and Access
-     *         Management (IAM) policy associated with this account.
+     *         The user does not have permission to perform the action. Check the AWS Identity and Access Management
+     *         (IAM) policy associated with this user.
      * @throws ThrottlingException
      *         The request was denied due to request throttling.
      * @throws InternalServerException
@@ -184,8 +187,8 @@ public interface AWSMigrationHubStrategyRecommendations {
      * @param getPortfolioSummaryRequest
      * @return Result of the GetPortfolioSummary operation returned by the service.
      * @throws AccessDeniedException
-     *         The AWS user account does not have permission to perform the action. Check the AWS Identity and Access
-     *         Management (IAM) policy associated with this account.
+     *         The user does not have permission to perform the action. Check the AWS Identity and Access Management
+     *         (IAM) policy associated with this user.
      * @throws ThrottlingException
      *         The request was denied due to request throttling.
      * @throws InternalServerException
@@ -206,8 +209,8 @@ public interface AWSMigrationHubStrategyRecommendations {
      * @throws ResourceNotFoundException
      *         The specified ID in the request is not found.
      * @throws AccessDeniedException
-     *         The AWS user account does not have permission to perform the action. Check the AWS Identity and Access
-     *         Management (IAM) policy associated with this account.
+     *         The user does not have permission to perform the action. Check the AWS Identity and Access Management
+     *         (IAM) policy associated with this user.
      * @throws ThrottlingException
      *         The request was denied due to request throttling.
      * @throws ValidationException
@@ -231,8 +234,8 @@ public interface AWSMigrationHubStrategyRecommendations {
      * @throws ResourceNotFoundException
      *         The specified ID in the request is not found.
      * @throws AccessDeniedException
-     *         The AWS user account does not have permission to perform the action. Check the AWS Identity and Access
-     *         Management (IAM) policy associated with this account.
+     *         The user does not have permission to perform the action. Check the AWS Identity and Access Management
+     *         (IAM) policy associated with this user.
      * @throws ThrottlingException
      *         The request was denied due to request throttling.
      * @throws ValidationException
@@ -255,8 +258,8 @@ public interface AWSMigrationHubStrategyRecommendations {
      * @throws ResourceNotFoundException
      *         The specified ID in the request is not found.
      * @throws AccessDeniedException
-     *         The AWS user account does not have permission to perform the action. Check the AWS Identity and Access
-     *         Management (IAM) policy associated with this account.
+     *         The user does not have permission to perform the action. Check the AWS Identity and Access Management
+     *         (IAM) policy associated with this user.
      * @throws ThrottlingException
      *         The request was denied due to request throttling.
      * @throws ValidationException
@@ -277,8 +280,8 @@ public interface AWSMigrationHubStrategyRecommendations {
      * @param listApplicationComponentsRequest
      * @return Result of the ListApplicationComponents operation returned by the service.
      * @throws AccessDeniedException
-     *         The AWS user account does not have permission to perform the action. Check the AWS Identity and Access
-     *         Management (IAM) policy associated with this account.
+     *         The user does not have permission to perform the action. Check the AWS Identity and Access Management
+     *         (IAM) policy associated with this user.
      * @throws ServiceLinkedRoleLockClientException
      *         Exception to indicate that the service-linked role (SLR) is locked.
      * @throws ValidationException
@@ -299,8 +302,8 @@ public interface AWSMigrationHubStrategyRecommendations {
      * @param listCollectorsRequest
      * @return Result of the ListCollectors operation returned by the service.
      * @throws AccessDeniedException
-     *         The AWS user account does not have permission to perform the action. Check the AWS Identity and Access
-     *         Management (IAM) policy associated with this account.
+     *         The user does not have permission to perform the action. Check the AWS Identity and Access Management
+     *         (IAM) policy associated with this user.
      * @throws ThrottlingException
      *         The request was denied due to request throttling.
      * @throws ValidationException
@@ -321,8 +324,8 @@ public interface AWSMigrationHubStrategyRecommendations {
      * @param listImportFileTaskRequest
      * @return Result of the ListImportFileTask operation returned by the service.
      * @throws AccessDeniedException
-     *         The AWS user account does not have permission to perform the action. Check the AWS Identity and Access
-     *         Management (IAM) policy associated with this account.
+     *         The user does not have permission to perform the action. Check the AWS Identity and Access Management
+     *         (IAM) policy associated with this user.
      * @throws ThrottlingException
      *         The request was denied due to request throttling.
      * @throws ValidationException
@@ -343,8 +346,8 @@ public interface AWSMigrationHubStrategyRecommendations {
      * @param listServersRequest
      * @return Result of the ListServers operation returned by the service.
      * @throws AccessDeniedException
-     *         The AWS user account does not have permission to perform the action. Check the AWS Identity and Access
-     *         Management (IAM) policy associated with this account.
+     *         The user does not have permission to perform the action. Check the AWS Identity and Access Management
+     *         (IAM) policy associated with this user.
      * @throws ThrottlingException
      *         The request was denied due to request throttling.
      * @throws ValidationException
@@ -365,8 +368,8 @@ public interface AWSMigrationHubStrategyRecommendations {
      * @param putPortfolioPreferencesRequest
      * @return Result of the PutPortfolioPreferences operation returned by the service.
      * @throws AccessDeniedException
-     *         The AWS user account does not have permission to perform the action. Check the AWS Identity and Access
-     *         Management (IAM) policy associated with this account.
+     *         The user does not have permission to perform the action. Check the AWS Identity and Access Management
+     *         (IAM) policy associated with this user.
      * @throws ThrottlingException
      *         The request was denied due to request throttling.
      * @throws ValidationException
@@ -390,8 +393,8 @@ public interface AWSMigrationHubStrategyRecommendations {
      * @param startAssessmentRequest
      * @return Result of the StartAssessment operation returned by the service.
      * @throws AccessDeniedException
-     *         The AWS user account does not have permission to perform the action. Check the AWS Identity and Access
-     *         Management (IAM) policy associated with this account.
+     *         The user does not have permission to perform the action. Check the AWS Identity and Access Management
+     *         (IAM) policy associated with this user.
      * @throws ThrottlingException
      *         The request was denied due to request throttling.
      * @throws ServiceQuotaExceededException
@@ -413,8 +416,8 @@ public interface AWSMigrationHubStrategyRecommendations {
      * @param startImportFileTaskRequest
      * @return Result of the StartImportFileTask operation returned by the service.
      * @throws AccessDeniedException
-     *         The AWS user account does not have permission to perform the action. Check the AWS Identity and Access
-     *         Management (IAM) policy associated with this account.
+     *         The user does not have permission to perform the action. Check the AWS Identity and Access Management
+     *         (IAM) policy associated with this user.
      * @throws ThrottlingException
      *         The request was denied due to request throttling.
      * @throws ServiceQuotaExceededException
@@ -438,8 +441,8 @@ public interface AWSMigrationHubStrategyRecommendations {
      * @param startRecommendationReportGenerationRequest
      * @return Result of the StartRecommendationReportGeneration operation returned by the service.
      * @throws AccessDeniedException
-     *         The AWS user account does not have permission to perform the action. Check the AWS Identity and Access
-     *         Management (IAM) policy associated with this account.
+     *         The user does not have permission to perform the action. Check the AWS Identity and Access Management
+     *         (IAM) policy associated with this user.
      * @throws ThrottlingException
      *         The request was denied due to request throttling.
      * @throws ValidationException
@@ -465,8 +468,8 @@ public interface AWSMigrationHubStrategyRecommendations {
      * @param stopAssessmentRequest
      * @return Result of the StopAssessment operation returned by the service.
      * @throws AccessDeniedException
-     *         The AWS user account does not have permission to perform the action. Check the AWS Identity and Access
-     *         Management (IAM) policy associated with this account.
+     *         The user does not have permission to perform the action. Check the AWS Identity and Access Management
+     *         (IAM) policy associated with this user.
      * @throws ThrottlingException
      *         The request was denied due to request throttling.
      * @throws ValidationException

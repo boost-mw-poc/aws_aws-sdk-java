@@ -138,6 +138,12 @@ public class ApplicationComponentDetail implements Serializable, Cloneable, Stru
     private String resourceSubType;
     /**
      * <p>
+     * A list of the analysis results.
+     * </p>
+     */
+    private java.util.List<Result> resultList;
+    /**
+     * <p>
      * The status of the application unit.
      * </p>
      */
@@ -1020,6 +1026,76 @@ public class ApplicationComponentDetail implements Serializable, Cloneable, Stru
 
     /**
      * <p>
+     * A list of the analysis results.
+     * </p>
+     * 
+     * @return A list of the analysis results.
+     */
+
+    public java.util.List<Result> getResultList() {
+        return resultList;
+    }
+
+    /**
+     * <p>
+     * A list of the analysis results.
+     * </p>
+     * 
+     * @param resultList
+     *        A list of the analysis results.
+     */
+
+    public void setResultList(java.util.Collection<Result> resultList) {
+        if (resultList == null) {
+            this.resultList = null;
+            return;
+        }
+
+        this.resultList = new java.util.ArrayList<Result>(resultList);
+    }
+
+    /**
+     * <p>
+     * A list of the analysis results.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setResultList(java.util.Collection)} or {@link #withResultList(java.util.Collection)} if you want to
+     * override the existing values.
+     * </p>
+     * 
+     * @param resultList
+     *        A list of the analysis results.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ApplicationComponentDetail withResultList(Result... resultList) {
+        if (this.resultList == null) {
+            setResultList(new java.util.ArrayList<Result>(resultList.length));
+        }
+        for (Result ele : resultList) {
+            this.resultList.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * A list of the analysis results.
+     * </p>
+     * 
+     * @param resultList
+     *        A list of the analysis results.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ApplicationComponentDetail withResultList(java.util.Collection<Result> resultList) {
+        setResultList(resultList);
+        return this;
+    }
+
+    /**
+     * <p>
      * The status of the application unit.
      * </p>
      * 
@@ -1275,6 +1351,8 @@ public class ApplicationComponentDetail implements Serializable, Cloneable, Stru
             sb.append("RecommendationSet: ").append(getRecommendationSet()).append(",");
         if (getResourceSubType() != null)
             sb.append("ResourceSubType: ").append(getResourceSubType()).append(",");
+        if (getResultList() != null)
+            sb.append("ResultList: ").append(getResultList()).append(",");
         if (getRuntimeStatus() != null)
             sb.append("RuntimeStatus: ").append(getRuntimeStatus()).append(",");
         if (getRuntimeStatusMessage() != null)
@@ -1371,6 +1449,10 @@ public class ApplicationComponentDetail implements Serializable, Cloneable, Stru
             return false;
         if (other.getResourceSubType() != null && other.getResourceSubType().equals(this.getResourceSubType()) == false)
             return false;
+        if (other.getResultList() == null ^ this.getResultList() == null)
+            return false;
+        if (other.getResultList() != null && other.getResultList().equals(this.getResultList()) == false)
+            return false;
         if (other.getRuntimeStatus() == null ^ this.getRuntimeStatus() == null)
             return false;
         if (other.getRuntimeStatus() != null && other.getRuntimeStatus().equals(this.getRuntimeStatus()) == false)
@@ -1413,6 +1495,7 @@ public class ApplicationComponentDetail implements Serializable, Cloneable, Stru
         hashCode = prime * hashCode + ((getOsVersion() == null) ? 0 : getOsVersion().hashCode());
         hashCode = prime * hashCode + ((getRecommendationSet() == null) ? 0 : getRecommendationSet().hashCode());
         hashCode = prime * hashCode + ((getResourceSubType() == null) ? 0 : getResourceSubType().hashCode());
+        hashCode = prime * hashCode + ((getResultList() == null) ? 0 : getResultList().hashCode());
         hashCode = prime * hashCode + ((getRuntimeStatus() == null) ? 0 : getRuntimeStatus().hashCode());
         hashCode = prime * hashCode + ((getRuntimeStatusMessage() == null) ? 0 : getRuntimeStatusMessage().hashCode());
         hashCode = prime * hashCode + ((getSourceCodeRepositories() == null) ? 0 : getSourceCodeRepositories().hashCode());

@@ -62,6 +62,22 @@ public class SubscriberResource implements Serializable, Cloneable, StructuredPo
     private String externalId;
     /**
      * <p>
+     * The Amazon Resource Name (ARN) which uniquely defines the AWS RAM resource share. Before accepting the RAM
+     * resource share invitation, you can view details related to the RAM resource share.
+     * </p>
+     * <p>
+     * This field is available only for Lake Formation subscribers created after March 8, 2023.
+     * </p>
+     */
+    private String resourceShareArn;
+    /**
+     * <p>
+     * The name of the resource share.
+     * </p>
+     */
+    private String resourceShareName;
+    /**
+     * <p>
      * The Amazon Resource Name (ARN) specifying the role of the subscriber.
      * </p>
      */
@@ -401,6 +417,107 @@ public class SubscriberResource implements Serializable, Cloneable, StructuredPo
 
     public SubscriberResource withExternalId(String externalId) {
         setExternalId(externalId);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) which uniquely defines the AWS RAM resource share. Before accepting the RAM
+     * resource share invitation, you can view details related to the RAM resource share.
+     * </p>
+     * <p>
+     * This field is available only for Lake Formation subscribers created after March 8, 2023.
+     * </p>
+     * 
+     * @param resourceShareArn
+     *        The Amazon Resource Name (ARN) which uniquely defines the AWS RAM resource share. Before accepting the RAM
+     *        resource share invitation, you can view details related to the RAM resource share.</p>
+     *        <p>
+     *        This field is available only for Lake Formation subscribers created after March 8, 2023.
+     */
+
+    public void setResourceShareArn(String resourceShareArn) {
+        this.resourceShareArn = resourceShareArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) which uniquely defines the AWS RAM resource share. Before accepting the RAM
+     * resource share invitation, you can view details related to the RAM resource share.
+     * </p>
+     * <p>
+     * This field is available only for Lake Formation subscribers created after March 8, 2023.
+     * </p>
+     * 
+     * @return The Amazon Resource Name (ARN) which uniquely defines the AWS RAM resource share. Before accepting the
+     *         RAM resource share invitation, you can view details related to the RAM resource share.</p>
+     *         <p>
+     *         This field is available only for Lake Formation subscribers created after March 8, 2023.
+     */
+
+    public String getResourceShareArn() {
+        return this.resourceShareArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) which uniquely defines the AWS RAM resource share. Before accepting the RAM
+     * resource share invitation, you can view details related to the RAM resource share.
+     * </p>
+     * <p>
+     * This field is available only for Lake Formation subscribers created after March 8, 2023.
+     * </p>
+     * 
+     * @param resourceShareArn
+     *        The Amazon Resource Name (ARN) which uniquely defines the AWS RAM resource share. Before accepting the RAM
+     *        resource share invitation, you can view details related to the RAM resource share.</p>
+     *        <p>
+     *        This field is available only for Lake Formation subscribers created after March 8, 2023.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public SubscriberResource withResourceShareArn(String resourceShareArn) {
+        setResourceShareArn(resourceShareArn);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The name of the resource share.
+     * </p>
+     * 
+     * @param resourceShareName
+     *        The name of the resource share.
+     */
+
+    public void setResourceShareName(String resourceShareName) {
+        this.resourceShareName = resourceShareName;
+    }
+
+    /**
+     * <p>
+     * The name of the resource share.
+     * </p>
+     * 
+     * @return The name of the resource share.
+     */
+
+    public String getResourceShareName() {
+        return this.resourceShareName;
+    }
+
+    /**
+     * <p>
+     * The name of the resource share.
+     * </p>
+     * 
+     * @param resourceShareName
+     *        The name of the resource share.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public SubscriberResource withResourceShareName(String resourceShareName) {
+        setResourceShareName(resourceShareName);
         return this;
     }
 
@@ -949,6 +1066,10 @@ public class SubscriberResource implements Serializable, Cloneable, StructuredPo
             sb.append("CreatedAt: ").append(getCreatedAt()).append(",");
         if (getExternalId() != null)
             sb.append("ExternalId: ").append(getExternalId()).append(",");
+        if (getResourceShareArn() != null)
+            sb.append("ResourceShareArn: ").append(getResourceShareArn()).append(",");
+        if (getResourceShareName() != null)
+            sb.append("ResourceShareName: ").append(getResourceShareName()).append(",");
         if (getRoleArn() != null)
             sb.append("RoleArn: ").append(getRoleArn()).append(",");
         if (getS3BucketArn() != null)
@@ -1000,6 +1121,14 @@ public class SubscriberResource implements Serializable, Cloneable, StructuredPo
         if (other.getExternalId() == null ^ this.getExternalId() == null)
             return false;
         if (other.getExternalId() != null && other.getExternalId().equals(this.getExternalId()) == false)
+            return false;
+        if (other.getResourceShareArn() == null ^ this.getResourceShareArn() == null)
+            return false;
+        if (other.getResourceShareArn() != null && other.getResourceShareArn().equals(this.getResourceShareArn()) == false)
+            return false;
+        if (other.getResourceShareName() == null ^ this.getResourceShareName() == null)
+            return false;
+        if (other.getResourceShareName() != null && other.getResourceShareName().equals(this.getResourceShareName()) == false)
             return false;
         if (other.getRoleArn() == null ^ this.getRoleArn() == null)
             return false;
@@ -1057,6 +1186,8 @@ public class SubscriberResource implements Serializable, Cloneable, StructuredPo
         hashCode = prime * hashCode + ((getAccountId() == null) ? 0 : getAccountId().hashCode());
         hashCode = prime * hashCode + ((getCreatedAt() == null) ? 0 : getCreatedAt().hashCode());
         hashCode = prime * hashCode + ((getExternalId() == null) ? 0 : getExternalId().hashCode());
+        hashCode = prime * hashCode + ((getResourceShareArn() == null) ? 0 : getResourceShareArn().hashCode());
+        hashCode = prime * hashCode + ((getResourceShareName() == null) ? 0 : getResourceShareName().hashCode());
         hashCode = prime * hashCode + ((getRoleArn() == null) ? 0 : getRoleArn().hashCode());
         hashCode = prime * hashCode + ((getS3BucketArn() == null) ? 0 : getS3BucketArn().hashCode());
         hashCode = prime * hashCode + ((getSnsArn() == null) ? 0 : getSnsArn().hashCode());

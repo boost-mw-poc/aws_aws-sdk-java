@@ -47,6 +47,11 @@ public class CreateAccessPointForObjectLambdaResultStaxUnmarshaller implements U
                     createAccessPointForObjectLambdaResult.setObjectLambdaAccessPointArn(StringStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("Alias", targetDepth)) {
+                    createAccessPointForObjectLambdaResult.setAlias(ObjectLambdaAccessPointAliasStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return createAccessPointForObjectLambdaResult;

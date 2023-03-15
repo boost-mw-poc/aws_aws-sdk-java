@@ -16,8 +16,8 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The AWS user account does not have permission to perform the action. Check the AWS Identity and Access Management
- * (IAM) policy associated with this account.
+ * The user does not have permission to perform the action. Check the AWS Identity and Access Management (IAM) policy
+ * associated with this user.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

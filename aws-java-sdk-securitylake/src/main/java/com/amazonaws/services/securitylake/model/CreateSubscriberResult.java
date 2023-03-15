@@ -25,10 +25,23 @@ public class CreateSubscriberResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
+     * The Amazon Resource Name (ARN) which uniquely defines the AWS RAM resource share. Before accepting the RAM
+     * resource share invitation, you can view details related to the RAM resource share.
+     * </p>
+     */
+    private String resourceShareArn;
+    /**
+     * <p>
+     * The name of the resource share.
+     * </p>
+     */
+    private String resourceShareName;
+    /**
+     * <p>
      * The Amazon Resource Name (ARN) created by you to provide to the subscriber. For more information about ARNs and
      * how to use them in policies, see <a
-     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html">IAM identifiers in the
-     * Identity and Access Management (IAM) User Guide</a>. .
+     * href="https://docs.aws.amazon.com/security-lake/latest/userguide/subscriber-management.html">Amazon Security Lake
+     * User Guide</a>.
      * </p>
      */
     private String roleArn;
@@ -53,17 +66,103 @@ public class CreateSubscriberResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
+     * The Amazon Resource Name (ARN) which uniquely defines the AWS RAM resource share. Before accepting the RAM
+     * resource share invitation, you can view details related to the RAM resource share.
+     * </p>
+     * 
+     * @param resourceShareArn
+     *        The Amazon Resource Name (ARN) which uniquely defines the AWS RAM resource share. Before accepting the RAM
+     *        resource share invitation, you can view details related to the RAM resource share.
+     */
+
+    public void setResourceShareArn(String resourceShareArn) {
+        this.resourceShareArn = resourceShareArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) which uniquely defines the AWS RAM resource share. Before accepting the RAM
+     * resource share invitation, you can view details related to the RAM resource share.
+     * </p>
+     * 
+     * @return The Amazon Resource Name (ARN) which uniquely defines the AWS RAM resource share. Before accepting the
+     *         RAM resource share invitation, you can view details related to the RAM resource share.
+     */
+
+    public String getResourceShareArn() {
+        return this.resourceShareArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) which uniquely defines the AWS RAM resource share. Before accepting the RAM
+     * resource share invitation, you can view details related to the RAM resource share.
+     * </p>
+     * 
+     * @param resourceShareArn
+     *        The Amazon Resource Name (ARN) which uniquely defines the AWS RAM resource share. Before accepting the RAM
+     *        resource share invitation, you can view details related to the RAM resource share.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateSubscriberResult withResourceShareArn(String resourceShareArn) {
+        setResourceShareArn(resourceShareArn);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The name of the resource share.
+     * </p>
+     * 
+     * @param resourceShareName
+     *        The name of the resource share.
+     */
+
+    public void setResourceShareName(String resourceShareName) {
+        this.resourceShareName = resourceShareName;
+    }
+
+    /**
+     * <p>
+     * The name of the resource share.
+     * </p>
+     * 
+     * @return The name of the resource share.
+     */
+
+    public String getResourceShareName() {
+        return this.resourceShareName;
+    }
+
+    /**
+     * <p>
+     * The name of the resource share.
+     * </p>
+     * 
+     * @param resourceShareName
+     *        The name of the resource share.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateSubscriberResult withResourceShareName(String resourceShareName) {
+        setResourceShareName(resourceShareName);
+        return this;
+    }
+
+    /**
+     * <p>
      * The Amazon Resource Name (ARN) created by you to provide to the subscriber. For more information about ARNs and
      * how to use them in policies, see <a
-     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html">IAM identifiers in the
-     * Identity and Access Management (IAM) User Guide</a>. .
+     * href="https://docs.aws.amazon.com/security-lake/latest/userguide/subscriber-management.html">Amazon Security Lake
+     * User Guide</a>.
      * </p>
      * 
      * @param roleArn
      *        The Amazon Resource Name (ARN) created by you to provide to the subscriber. For more information about
      *        ARNs and how to use them in policies, see <a
-     *        href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html">IAM identifiers in the
-     *        Identity and Access Management (IAM) User Guide</a>. .
+     *        href="https://docs.aws.amazon.com/security-lake/latest/userguide/subscriber-management.html">Amazon
+     *        Security Lake User Guide</a>.
      */
 
     public void setRoleArn(String roleArn) {
@@ -74,14 +173,14 @@ public class CreateSubscriberResult extends com.amazonaws.AmazonWebServiceResult
      * <p>
      * The Amazon Resource Name (ARN) created by you to provide to the subscriber. For more information about ARNs and
      * how to use them in policies, see <a
-     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html">IAM identifiers in the
-     * Identity and Access Management (IAM) User Guide</a>. .
+     * href="https://docs.aws.amazon.com/security-lake/latest/userguide/subscriber-management.html">Amazon Security Lake
+     * User Guide</a>.
      * </p>
      * 
      * @return The Amazon Resource Name (ARN) created by you to provide to the subscriber. For more information about
      *         ARNs and how to use them in policies, see <a
-     *         href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html">IAM identifiers in the
-     *         Identity and Access Management (IAM) User Guide</a>. .
+     *         href="https://docs.aws.amazon.com/security-lake/latest/userguide/subscriber-management.html">Amazon
+     *         Security Lake User Guide</a>.
      */
 
     public String getRoleArn() {
@@ -92,15 +191,15 @@ public class CreateSubscriberResult extends com.amazonaws.AmazonWebServiceResult
      * <p>
      * The Amazon Resource Name (ARN) created by you to provide to the subscriber. For more information about ARNs and
      * how to use them in policies, see <a
-     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html">IAM identifiers in the
-     * Identity and Access Management (IAM) User Guide</a>. .
+     * href="https://docs.aws.amazon.com/security-lake/latest/userguide/subscriber-management.html">Amazon Security Lake
+     * User Guide</a>.
      * </p>
      * 
      * @param roleArn
      *        The Amazon Resource Name (ARN) created by you to provide to the subscriber. For more information about
      *        ARNs and how to use them in policies, see <a
-     *        href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html">IAM identifiers in the
-     *        Identity and Access Management (IAM) User Guide</a>. .
+     *        href="https://docs.aws.amazon.com/security-lake/latest/userguide/subscriber-management.html">Amazon
+     *        Security Lake User Guide</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -241,6 +340,10 @@ public class CreateSubscriberResult extends com.amazonaws.AmazonWebServiceResult
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getResourceShareArn() != null)
+            sb.append("ResourceShareArn: ").append(getResourceShareArn()).append(",");
+        if (getResourceShareName() != null)
+            sb.append("ResourceShareName: ").append(getResourceShareName()).append(",");
         if (getRoleArn() != null)
             sb.append("RoleArn: ").append(getRoleArn()).append(",");
         if (getS3BucketArn() != null)
@@ -263,6 +366,14 @@ public class CreateSubscriberResult extends com.amazonaws.AmazonWebServiceResult
         if (obj instanceof CreateSubscriberResult == false)
             return false;
         CreateSubscriberResult other = (CreateSubscriberResult) obj;
+        if (other.getResourceShareArn() == null ^ this.getResourceShareArn() == null)
+            return false;
+        if (other.getResourceShareArn() != null && other.getResourceShareArn().equals(this.getResourceShareArn()) == false)
+            return false;
+        if (other.getResourceShareName() == null ^ this.getResourceShareName() == null)
+            return false;
+        if (other.getResourceShareName() != null && other.getResourceShareName().equals(this.getResourceShareName()) == false)
+            return false;
         if (other.getRoleArn() == null ^ this.getRoleArn() == null)
             return false;
         if (other.getRoleArn() != null && other.getRoleArn().equals(this.getRoleArn()) == false)
@@ -287,6 +398,8 @@ public class CreateSubscriberResult extends com.amazonaws.AmazonWebServiceResult
         final int prime = 31;
         int hashCode = 1;
 
+        hashCode = prime * hashCode + ((getResourceShareArn() == null) ? 0 : getResourceShareArn().hashCode());
+        hashCode = prime * hashCode + ((getResourceShareName() == null) ? 0 : getResourceShareName().hashCode());
         hashCode = prime * hashCode + ((getRoleArn() == null) ? 0 : getRoleArn().hashCode());
         hashCode = prime * hashCode + ((getS3BucketArn() == null) ? 0 : getS3BucketArn().hashCode());
         hashCode = prime * hashCode + ((getSnsArn() == null) ? 0 : getSnsArn().hashCode());

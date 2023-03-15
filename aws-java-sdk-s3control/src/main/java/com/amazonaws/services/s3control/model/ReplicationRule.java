@@ -42,7 +42,7 @@ public class ReplicationRule implements Serializable, Cloneable {
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/replication-between-outposts.html">Creating
-     * replication rules between Outposts</a> in the <i>Amazon S3 User Guide</i>.
+     * replication rules on Outposts</a> in the <i>Amazon S3 User Guide</i>.
      * </p>
      */
     private Integer priority;
@@ -172,7 +172,7 @@ public class ReplicationRule implements Serializable, Cloneable {
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/replication-between-outposts.html">Creating
-     * replication rules between Outposts</a> in the <i>Amazon S3 User Guide</i>.
+     * replication rules on Outposts</a> in the <i>Amazon S3 User Guide</i>.
      * </p>
      * 
      * @param priority
@@ -183,7 +183,7 @@ public class ReplicationRule implements Serializable, Cloneable {
      *        <p>
      *        For more information, see <a
      *        href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/replication-between-outposts.html">Creating
-     *        replication rules between Outposts</a> in the <i>Amazon S3 User Guide</i>.
+     *        replication rules on Outposts</a> in the <i>Amazon S3 User Guide</i>.
      */
 
     public void setPriority(Integer priority) {
@@ -200,7 +200,7 @@ public class ReplicationRule implements Serializable, Cloneable {
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/replication-between-outposts.html">Creating
-     * replication rules between Outposts</a> in the <i>Amazon S3 User Guide</i>.
+     * replication rules on Outposts</a> in the <i>Amazon S3 User Guide</i>.
      * </p>
      * 
      * @return The priority indicates which rule has precedence whenever two or more replication rules conflict. S3 on
@@ -210,7 +210,7 @@ public class ReplicationRule implements Serializable, Cloneable {
      *         <p>
      *         For more information, see <a
      *         href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/replication-between-outposts.html">Creating
-     *         replication rules between Outposts</a> in the <i>Amazon S3 User Guide</i>.
+     *         replication rules on Outposts</a> in the <i>Amazon S3 User Guide</i>.
      */
 
     public Integer getPriority() {
@@ -227,7 +227,7 @@ public class ReplicationRule implements Serializable, Cloneable {
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/replication-between-outposts.html">Creating
-     * replication rules between Outposts</a> in the <i>Amazon S3 User Guide</i>.
+     * replication rules on Outposts</a> in the <i>Amazon S3 User Guide</i>.
      * </p>
      * 
      * @param priority
@@ -238,7 +238,7 @@ public class ReplicationRule implements Serializable, Cloneable {
      *        <p>
      *        For more information, see <a
      *        href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/replication-between-outposts.html">Creating
-     *        replication rules between Outposts</a> in the <i>Amazon S3 User Guide</i>.
+     *        replication rules on Outposts</a> in the <i>Amazon S3 User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

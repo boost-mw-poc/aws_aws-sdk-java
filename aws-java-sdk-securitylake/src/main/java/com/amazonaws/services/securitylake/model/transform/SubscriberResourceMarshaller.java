@@ -36,6 +36,10 @@ public class SubscriberResourceMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("createdAt").timestampFormat("iso8601").build();
     private static final MarshallingInfo<String> EXTERNALID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("externalId").build();
+    private static final MarshallingInfo<String> RESOURCESHAREARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("resourceShareArn").build();
+    private static final MarshallingInfo<String> RESOURCESHARENAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("resourceShareName").build();
     private static final MarshallingInfo<String> ROLEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("roleArn").build();
     private static final MarshallingInfo<String> S3BUCKETARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
@@ -79,6 +83,8 @@ public class SubscriberResourceMarshaller {
             protocolMarshaller.marshall(subscriberResource.getAccountId(), ACCOUNTID_BINDING);
             protocolMarshaller.marshall(subscriberResource.getCreatedAt(), CREATEDAT_BINDING);
             protocolMarshaller.marshall(subscriberResource.getExternalId(), EXTERNALID_BINDING);
+            protocolMarshaller.marshall(subscriberResource.getResourceShareArn(), RESOURCESHAREARN_BINDING);
+            protocolMarshaller.marshall(subscriberResource.getResourceShareName(), RESOURCESHARENAME_BINDING);
             protocolMarshaller.marshall(subscriberResource.getRoleArn(), ROLEARN_BINDING);
             protocolMarshaller.marshall(subscriberResource.getS3BucketArn(), S3BUCKETARN_BINDING);
             protocolMarshaller.marshall(subscriberResource.getSnsArn(), SNSARN_BINDING);

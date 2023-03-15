@@ -82,6 +82,12 @@ public class LakeConfigurationResponse implements Serializable, Cloneable, Struc
      * </p>
      */
     private java.util.Map<String, String> tagsMap;
+    /**
+     * <p>
+     * The status of the last <code>UpdateDatalake </code>or <code>DeleteDatalake</code> API request.
+     * </p>
+     */
+    private UpdateStatus updateStatus;
 
     /**
      * <p>
@@ -598,6 +604,46 @@ public class LakeConfigurationResponse implements Serializable, Cloneable, Struc
     }
 
     /**
+     * <p>
+     * The status of the last <code>UpdateDatalake </code>or <code>DeleteDatalake</code> API request.
+     * </p>
+     * 
+     * @param updateStatus
+     *        The status of the last <code>UpdateDatalake </code>or <code>DeleteDatalake</code> API request.
+     */
+
+    public void setUpdateStatus(UpdateStatus updateStatus) {
+        this.updateStatus = updateStatus;
+    }
+
+    /**
+     * <p>
+     * The status of the last <code>UpdateDatalake </code>or <code>DeleteDatalake</code> API request.
+     * </p>
+     * 
+     * @return The status of the last <code>UpdateDatalake </code>or <code>DeleteDatalake</code> API request.
+     */
+
+    public UpdateStatus getUpdateStatus() {
+        return this.updateStatus;
+    }
+
+    /**
+     * <p>
+     * The status of the last <code>UpdateDatalake </code>or <code>DeleteDatalake</code> API request.
+     * </p>
+     * 
+     * @param updateStatus
+     *        The status of the last <code>UpdateDatalake </code>or <code>DeleteDatalake</code> API request.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public LakeConfigurationResponse withUpdateStatus(UpdateStatus updateStatus) {
+        setUpdateStatus(updateStatus);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -622,7 +668,9 @@ public class LakeConfigurationResponse implements Serializable, Cloneable, Struc
         if (getStatus() != null)
             sb.append("Status: ").append(getStatus()).append(",");
         if (getTagsMap() != null)
-            sb.append("TagsMap: ").append(getTagsMap());
+            sb.append("TagsMap: ").append(getTagsMap()).append(",");
+        if (getUpdateStatus() != null)
+            sb.append("UpdateStatus: ").append(getUpdateStatus());
         sb.append("}");
         return sb.toString();
     }
@@ -666,6 +714,10 @@ public class LakeConfigurationResponse implements Serializable, Cloneable, Struc
             return false;
         if (other.getTagsMap() != null && other.getTagsMap().equals(this.getTagsMap()) == false)
             return false;
+        if (other.getUpdateStatus() == null ^ this.getUpdateStatus() == null)
+            return false;
+        if (other.getUpdateStatus() != null && other.getUpdateStatus().equals(this.getUpdateStatus()) == false)
+            return false;
         return true;
     }
 
@@ -681,6 +733,7 @@ public class LakeConfigurationResponse implements Serializable, Cloneable, Struc
         hashCode = prime * hashCode + ((getS3BucketArn() == null) ? 0 : getS3BucketArn().hashCode());
         hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
         hashCode = prime * hashCode + ((getTagsMap() == null) ? 0 : getTagsMap().hashCode());
+        hashCode = prime * hashCode + ((getUpdateStatus() == null) ? 0 : getUpdateStatus().hashCode());
         return hashCode;
     }
 

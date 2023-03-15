@@ -123,6 +123,12 @@ public class ApplicationComponentDetailJsonUnmarshaller implements Unmarshaller<
                     context.nextToken();
                     applicationComponentDetail.setResourceSubType(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("resultList", targetDepth)) {
+                    context.nextToken();
+                    applicationComponentDetail.setResultList(new ListUnmarshaller<Result>(ResultJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
                 if (context.testExpression("runtimeStatus", targetDepth)) {
                     context.nextToken();
                     applicationComponentDetail.setRuntimeStatus(context.getUnmarshaller(String.class).unmarshall(context));

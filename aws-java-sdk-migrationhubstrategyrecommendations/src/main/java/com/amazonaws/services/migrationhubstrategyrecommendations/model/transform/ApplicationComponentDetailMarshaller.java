@@ -64,6 +64,8 @@ public class ApplicationComponentDetailMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("recommendationSet").build();
     private static final MarshallingInfo<String> RESOURCESUBTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("resourceSubType").build();
+    private static final MarshallingInfo<List> RESULTLIST_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("resultList").build();
     private static final MarshallingInfo<String> RUNTIMESTATUS_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("runtimeStatus").build();
     private static final MarshallingInfo<String> RUNTIMESTATUSMESSAGE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
@@ -107,6 +109,7 @@ public class ApplicationComponentDetailMarshaller {
             protocolMarshaller.marshall(applicationComponentDetail.getOsVersion(), OSVERSION_BINDING);
             protocolMarshaller.marshall(applicationComponentDetail.getRecommendationSet(), RECOMMENDATIONSET_BINDING);
             protocolMarshaller.marshall(applicationComponentDetail.getResourceSubType(), RESOURCESUBTYPE_BINDING);
+            protocolMarshaller.marshall(applicationComponentDetail.getResultList(), RESULTLIST_BINDING);
             protocolMarshaller.marshall(applicationComponentDetail.getRuntimeStatus(), RUNTIMESTATUS_BINDING);
             protocolMarshaller.marshall(applicationComponentDetail.getRuntimeStatusMessage(), RUNTIMESTATUSMESSAGE_BINDING);
             protocolMarshaller.marshall(applicationComponentDetail.getSourceCodeRepositories(), SOURCECODEREPOSITORIES_BINDING);

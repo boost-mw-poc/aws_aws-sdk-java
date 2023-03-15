@@ -58,6 +58,11 @@ public class GetAccessPointForObjectLambdaResultStaxUnmarshaller implements Unma
                     getAccessPointForObjectLambdaResult.setCreationDate(DateStaxUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("Alias", targetDepth)) {
+                    getAccessPointForObjectLambdaResult.setAlias(ObjectLambdaAccessPointAliasStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return getAccessPointForObjectLambdaResult;

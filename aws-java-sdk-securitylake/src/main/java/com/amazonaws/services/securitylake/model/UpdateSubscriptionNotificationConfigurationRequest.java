@@ -52,7 +52,12 @@ public class UpdateSubscriptionNotificationConfigurationRequest extends com.amaz
     private String httpsMethod;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) specifying the role of the subscriber.
+     * The Amazon Resource Name (ARN) specifying the role of the subscriber. For more information about ARNs and how to
+     * use them in policies, see, see the <a
+     * href="https://docs.aws.amazon.com//security-lake/latest/userguide/subscriber-data-access.html">Managing data
+     * access</a> and <a
+     * href="https://docs.aws.amazon.com/security-lake/latest/userguide/security-iam-awsmanpol.html">Amazon Web Services
+     * Managed Policies</a>in the Amazon Security Lake User Guide.
      * </p>
      */
     private String roleArn;
@@ -262,11 +267,21 @@ public class UpdateSubscriptionNotificationConfigurationRequest extends com.amaz
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) specifying the role of the subscriber.
+     * The Amazon Resource Name (ARN) specifying the role of the subscriber. For more information about ARNs and how to
+     * use them in policies, see, see the <a
+     * href="https://docs.aws.amazon.com//security-lake/latest/userguide/subscriber-data-access.html">Managing data
+     * access</a> and <a
+     * href="https://docs.aws.amazon.com/security-lake/latest/userguide/security-iam-awsmanpol.html">Amazon Web Services
+     * Managed Policies</a>in the Amazon Security Lake User Guide.
      * </p>
      * 
      * @param roleArn
-     *        The Amazon Resource Name (ARN) specifying the role of the subscriber.
+     *        The Amazon Resource Name (ARN) specifying the role of the subscriber. For more information about ARNs and
+     *        how to use them in policies, see, see the <a
+     *        href="https://docs.aws.amazon.com//security-lake/latest/userguide/subscriber-data-access.html">Managing
+     *        data access</a> and <a
+     *        href="https://docs.aws.amazon.com/security-lake/latest/userguide/security-iam-awsmanpol.html">Amazon Web
+     *        Services Managed Policies</a>in the Amazon Security Lake User Guide.
      */
 
     public void setRoleArn(String roleArn) {
@@ -275,10 +290,20 @@ public class UpdateSubscriptionNotificationConfigurationRequest extends com.amaz
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) specifying the role of the subscriber.
+     * The Amazon Resource Name (ARN) specifying the role of the subscriber. For more information about ARNs and how to
+     * use them in policies, see, see the <a
+     * href="https://docs.aws.amazon.com//security-lake/latest/userguide/subscriber-data-access.html">Managing data
+     * access</a> and <a
+     * href="https://docs.aws.amazon.com/security-lake/latest/userguide/security-iam-awsmanpol.html">Amazon Web Services
+     * Managed Policies</a>in the Amazon Security Lake User Guide.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) specifying the role of the subscriber.
+     * @return The Amazon Resource Name (ARN) specifying the role of the subscriber. For more information about ARNs and
+     *         how to use them in policies, see, see the <a
+     *         href="https://docs.aws.amazon.com//security-lake/latest/userguide/subscriber-data-access.html">Managing
+     *         data access</a> and <a
+     *         href="https://docs.aws.amazon.com/security-lake/latest/userguide/security-iam-awsmanpol.html">Amazon Web
+     *         Services Managed Policies</a>in the Amazon Security Lake User Guide.
      */
 
     public String getRoleArn() {
@@ -287,11 +312,21 @@ public class UpdateSubscriptionNotificationConfigurationRequest extends com.amaz
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) specifying the role of the subscriber.
+     * The Amazon Resource Name (ARN) specifying the role of the subscriber. For more information about ARNs and how to
+     * use them in policies, see, see the <a
+     * href="https://docs.aws.amazon.com//security-lake/latest/userguide/subscriber-data-access.html">Managing data
+     * access</a> and <a
+     * href="https://docs.aws.amazon.com/security-lake/latest/userguide/security-iam-awsmanpol.html">Amazon Web Services
+     * Managed Policies</a>in the Amazon Security Lake User Guide.
      * </p>
      * 
      * @param roleArn
-     *        The Amazon Resource Name (ARN) specifying the role of the subscriber.
+     *        The Amazon Resource Name (ARN) specifying the role of the subscriber. For more information about ARNs and
+     *        how to use them in policies, see, see the <a
+     *        href="https://docs.aws.amazon.com//security-lake/latest/userguide/subscriber-data-access.html">Managing
+     *        data access</a> and <a
+     *        href="https://docs.aws.amazon.com/security-lake/latest/userguide/security-iam-awsmanpol.html">Amazon Web
+     *        Services Managed Policies</a>in the Amazon Security Lake User Guide.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
