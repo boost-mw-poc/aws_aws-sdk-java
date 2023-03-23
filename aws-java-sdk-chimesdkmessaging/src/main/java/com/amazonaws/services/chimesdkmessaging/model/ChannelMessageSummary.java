@@ -95,6 +95,12 @@ public class ChannelMessageSummary implements Serializable, Cloneable, Structure
      * </p>
      */
     private java.util.Map<String, MessageAttributeValue> messageAttributes;
+    /**
+     * <p>
+     * The content type of the channel messsage listed in the summary.
+     * </p>
+     */
+    private String contentType;
 
     /**
      * <p>
@@ -602,6 +608,46 @@ public class ChannelMessageSummary implements Serializable, Cloneable, Structure
     }
 
     /**
+     * <p>
+     * The content type of the channel messsage listed in the summary.
+     * </p>
+     * 
+     * @param contentType
+     *        The content type of the channel messsage listed in the summary.
+     */
+
+    public void setContentType(String contentType) {
+        this.contentType = contentType;
+    }
+
+    /**
+     * <p>
+     * The content type of the channel messsage listed in the summary.
+     * </p>
+     * 
+     * @return The content type of the channel messsage listed in the summary.
+     */
+
+    public String getContentType() {
+        return this.contentType;
+    }
+
+    /**
+     * <p>
+     * The content type of the channel messsage listed in the summary.
+     * </p>
+     * 
+     * @param contentType
+     *        The content type of the channel messsage listed in the summary.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ChannelMessageSummary withContentType(String contentType) {
+        setContentType(contentType);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -634,7 +680,9 @@ public class ChannelMessageSummary implements Serializable, Cloneable, Structure
         if (getStatus() != null)
             sb.append("Status: ").append(getStatus()).append(",");
         if (getMessageAttributes() != null)
-            sb.append("MessageAttributes: ").append("***Sensitive Data Redacted***");
+            sb.append("MessageAttributes: ").append("***Sensitive Data Redacted***").append(",");
+        if (getContentType() != null)
+            sb.append("ContentType: ").append("***Sensitive Data Redacted***");
         sb.append("}");
         return sb.toString();
     }
@@ -693,6 +741,10 @@ public class ChannelMessageSummary implements Serializable, Cloneable, Structure
             return false;
         if (other.getMessageAttributes() != null && other.getMessageAttributes().equals(this.getMessageAttributes()) == false)
             return false;
+        if (other.getContentType() == null ^ this.getContentType() == null)
+            return false;
+        if (other.getContentType() != null && other.getContentType().equals(this.getContentType()) == false)
+            return false;
         return true;
     }
 
@@ -712,6 +764,7 @@ public class ChannelMessageSummary implements Serializable, Cloneable, Structure
         hashCode = prime * hashCode + ((getRedacted() == null) ? 0 : getRedacted().hashCode());
         hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
         hashCode = prime * hashCode + ((getMessageAttributes() == null) ? 0 : getMessageAttributes().hashCode());
+        hashCode = prime * hashCode + ((getContentType() == null) ? 0 : getContentType().hashCode());
         return hashCode;
     }
 

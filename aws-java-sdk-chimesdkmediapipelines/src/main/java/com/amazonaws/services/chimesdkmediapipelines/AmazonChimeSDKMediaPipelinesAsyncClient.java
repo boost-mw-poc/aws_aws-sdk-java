@@ -28,9 +28,9 @@ import java.util.concurrent.ExecutorService;
  * <p>
  * The Amazon Chime SDK media pipeline APIs in this section allow software developers to create Amazon Chime SDK media
  * pipelines that capture, concatenate, or stream your Amazon Chime SDK meetings. For more information about media
- * pipleines, see <a
- * href="http://amazonaws.com/chime/latest/APIReference/API_Operations_Amazon_Chime_SDK_Media_Pipelines.html">Amazon
- * Chime SDK media pipelines</a>.
+ * pipelines, see <a href=
+ * "https://docs.aws.amazon.com/chime-sdk/latest/APIReference/API_Operations_Amazon_Chime_SDK_Media_Pipelines.html"
+ * >Amazon Chime SDK media pipelines</a>.
  * </p>
  */
 @ThreadSafe
@@ -148,6 +148,74 @@ public class AmazonChimeSDKMediaPipelinesAsyncClient extends AmazonChimeSDKMedia
     }
 
     @Override
+    public java.util.concurrent.Future<CreateMediaInsightsPipelineResult> createMediaInsightsPipelineAsync(CreateMediaInsightsPipelineRequest request) {
+
+        return createMediaInsightsPipelineAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateMediaInsightsPipelineResult> createMediaInsightsPipelineAsync(final CreateMediaInsightsPipelineRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateMediaInsightsPipelineRequest, CreateMediaInsightsPipelineResult> asyncHandler) {
+        final CreateMediaInsightsPipelineRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateMediaInsightsPipelineResult>() {
+            @Override
+            public CreateMediaInsightsPipelineResult call() throws Exception {
+                CreateMediaInsightsPipelineResult result = null;
+
+                try {
+                    result = executeCreateMediaInsightsPipeline(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateMediaInsightsPipelineConfigurationResult> createMediaInsightsPipelineConfigurationAsync(
+            CreateMediaInsightsPipelineConfigurationRequest request) {
+
+        return createMediaInsightsPipelineConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateMediaInsightsPipelineConfigurationResult> createMediaInsightsPipelineConfigurationAsync(
+            final CreateMediaInsightsPipelineConfigurationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateMediaInsightsPipelineConfigurationRequest, CreateMediaInsightsPipelineConfigurationResult> asyncHandler) {
+        final CreateMediaInsightsPipelineConfigurationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateMediaInsightsPipelineConfigurationResult>() {
+            @Override
+            public CreateMediaInsightsPipelineConfigurationResult call() throws Exception {
+                CreateMediaInsightsPipelineConfigurationResult result = null;
+
+                try {
+                    result = executeCreateMediaInsightsPipelineConfiguration(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateMediaLiveConnectorPipelineResult> createMediaLiveConnectorPipelineAsync(
             CreateMediaLiveConnectorPipelineRequest request) {
 
@@ -200,6 +268,41 @@ public class AmazonChimeSDKMediaPipelinesAsyncClient extends AmazonChimeSDKMedia
 
                 try {
                     result = executeDeleteMediaCapturePipeline(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteMediaInsightsPipelineConfigurationResult> deleteMediaInsightsPipelineConfigurationAsync(
+            DeleteMediaInsightsPipelineConfigurationRequest request) {
+
+        return deleteMediaInsightsPipelineConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteMediaInsightsPipelineConfigurationResult> deleteMediaInsightsPipelineConfigurationAsync(
+            final DeleteMediaInsightsPipelineConfigurationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteMediaInsightsPipelineConfigurationRequest, DeleteMediaInsightsPipelineConfigurationResult> asyncHandler) {
+        final DeleteMediaInsightsPipelineConfigurationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteMediaInsightsPipelineConfigurationResult>() {
+            @Override
+            public DeleteMediaInsightsPipelineConfigurationResult call() throws Exception {
+                DeleteMediaInsightsPipelineConfigurationResult result = null;
+
+                try {
+                    result = executeDeleteMediaInsightsPipelineConfiguration(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -282,6 +385,41 @@ public class AmazonChimeSDKMediaPipelinesAsyncClient extends AmazonChimeSDKMedia
     }
 
     @Override
+    public java.util.concurrent.Future<GetMediaInsightsPipelineConfigurationResult> getMediaInsightsPipelineConfigurationAsync(
+            GetMediaInsightsPipelineConfigurationRequest request) {
+
+        return getMediaInsightsPipelineConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetMediaInsightsPipelineConfigurationResult> getMediaInsightsPipelineConfigurationAsync(
+            final GetMediaInsightsPipelineConfigurationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetMediaInsightsPipelineConfigurationRequest, GetMediaInsightsPipelineConfigurationResult> asyncHandler) {
+        final GetMediaInsightsPipelineConfigurationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetMediaInsightsPipelineConfigurationResult>() {
+            @Override
+            public GetMediaInsightsPipelineConfigurationResult call() throws Exception {
+                GetMediaInsightsPipelineConfigurationResult result = null;
+
+                try {
+                    result = executeGetMediaInsightsPipelineConfiguration(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetMediaPipelineResult> getMediaPipelineAsync(GetMediaPipelineRequest request) {
 
         return getMediaPipelineAsync(request, null);
@@ -332,6 +470,41 @@ public class AmazonChimeSDKMediaPipelinesAsyncClient extends AmazonChimeSDKMedia
 
                 try {
                     result = executeListMediaCapturePipelines(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListMediaInsightsPipelineConfigurationsResult> listMediaInsightsPipelineConfigurationsAsync(
+            ListMediaInsightsPipelineConfigurationsRequest request) {
+
+        return listMediaInsightsPipelineConfigurationsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListMediaInsightsPipelineConfigurationsResult> listMediaInsightsPipelineConfigurationsAsync(
+            final ListMediaInsightsPipelineConfigurationsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListMediaInsightsPipelineConfigurationsRequest, ListMediaInsightsPipelineConfigurationsResult> asyncHandler) {
+        final ListMediaInsightsPipelineConfigurationsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListMediaInsightsPipelineConfigurationsResult>() {
+            @Override
+            public ListMediaInsightsPipelineConfigurationsResult call() throws Exception {
+                ListMediaInsightsPipelineConfigurationsResult result = null;
+
+                try {
+                    result = executeListMediaInsightsPipelineConfigurations(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -464,6 +637,76 @@ public class AmazonChimeSDKMediaPipelinesAsyncClient extends AmazonChimeSDKMedia
 
                 try {
                     result = executeUntagResource(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateMediaInsightsPipelineConfigurationResult> updateMediaInsightsPipelineConfigurationAsync(
+            UpdateMediaInsightsPipelineConfigurationRequest request) {
+
+        return updateMediaInsightsPipelineConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateMediaInsightsPipelineConfigurationResult> updateMediaInsightsPipelineConfigurationAsync(
+            final UpdateMediaInsightsPipelineConfigurationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateMediaInsightsPipelineConfigurationRequest, UpdateMediaInsightsPipelineConfigurationResult> asyncHandler) {
+        final UpdateMediaInsightsPipelineConfigurationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateMediaInsightsPipelineConfigurationResult>() {
+            @Override
+            public UpdateMediaInsightsPipelineConfigurationResult call() throws Exception {
+                UpdateMediaInsightsPipelineConfigurationResult result = null;
+
+                try {
+                    result = executeUpdateMediaInsightsPipelineConfiguration(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateMediaInsightsPipelineStatusResult> updateMediaInsightsPipelineStatusAsync(
+            UpdateMediaInsightsPipelineStatusRequest request) {
+
+        return updateMediaInsightsPipelineStatusAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateMediaInsightsPipelineStatusResult> updateMediaInsightsPipelineStatusAsync(
+            final UpdateMediaInsightsPipelineStatusRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateMediaInsightsPipelineStatusRequest, UpdateMediaInsightsPipelineStatusResult> asyncHandler) {
+        final UpdateMediaInsightsPipelineStatusRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateMediaInsightsPipelineStatusResult>() {
+            @Override
+            public UpdateMediaInsightsPipelineStatusResult call() throws Exception {
+                UpdateMediaInsightsPipelineStatusResult result = null;
+
+                try {
+                    result = executeUpdateMediaInsightsPipelineStatus(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

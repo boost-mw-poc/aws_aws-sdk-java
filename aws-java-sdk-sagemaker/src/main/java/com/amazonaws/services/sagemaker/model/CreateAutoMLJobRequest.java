@@ -48,7 +48,7 @@ public class CreateAutoMLJobRequest extends com.amazonaws.AmazonWebServiceReques
     private AutoMLOutputDataConfig outputDataConfig;
     /**
      * <p>
-     * Defines the type of supervised learning available for the candidates. For more information, see <a
+     * Defines the type of supervised learning problem available for the candidates. For more information, see <a
      * href="https://docs.aws.amazon.com/sagemaker/latest/dg/autopilot-automate-model-development-problem-types.html">
      * Amazon SageMaker Autopilot problem types and algorithm support</a>.
      * </p>
@@ -57,7 +57,8 @@ public class CreateAutoMLJobRequest extends com.amazonaws.AmazonWebServiceReques
     /**
      * <p>
      * Defines the objective metric used to measure the predictive quality of an AutoML job. You provide an
-     * <a>AutoMLJobObjective$MetricName</a> and Autopilot infers whether to minimize or maximize it.
+     * <a>AutoMLJobObjective$MetricName</a> and Autopilot infers whether to minimize or maximize it. For , only
+     * <code>Accuracy</code> is supported.
      * </p>
      */
     private AutoMLJobObjective autoMLJobObjective;
@@ -82,7 +83,10 @@ public class CreateAutoMLJobRequest extends com.amazonaws.AmazonWebServiceReques
     private Boolean generateCandidateDefinitionsOnly;
     /**
      * <p>
-     * Each tag consists of a key and an optional value. Tag keys must be unique per resource.
+     * An array of key-value pairs. You can use tags to categorize your Amazon Web Services resources in different ways,
+     * for example, by purpose, owner, or environment. For more information, see <a
+     * href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web ServicesResources</a>.
+     * Tag keys must be unique per resource.
      * </p>
      */
     private java.util.List<Tag> tags;
@@ -271,13 +275,14 @@ public class CreateAutoMLJobRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * Defines the type of supervised learning available for the candidates. For more information, see <a
+     * Defines the type of supervised learning problem available for the candidates. For more information, see <a
      * href="https://docs.aws.amazon.com/sagemaker/latest/dg/autopilot-automate-model-development-problem-types.html">
      * Amazon SageMaker Autopilot problem types and algorithm support</a>.
      * </p>
      * 
      * @param problemType
-     *        Defines the type of supervised learning available for the candidates. For more information, see <a href=
+     *        Defines the type of supervised learning problem available for the candidates. For more information, see <a
+     *        href=
      *        "https://docs.aws.amazon.com/sagemaker/latest/dg/autopilot-automate-model-development-problem-types.html">
      *        Amazon SageMaker Autopilot problem types and algorithm support</a>.
      * @see ProblemType
@@ -289,13 +294,14 @@ public class CreateAutoMLJobRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * Defines the type of supervised learning available for the candidates. For more information, see <a
+     * Defines the type of supervised learning problem available for the candidates. For more information, see <a
      * href="https://docs.aws.amazon.com/sagemaker/latest/dg/autopilot-automate-model-development-problem-types.html">
      * Amazon SageMaker Autopilot problem types and algorithm support</a>.
      * </p>
      * 
-     * @return Defines the type of supervised learning available for the candidates. For more information, see <a
-     *         href="https://docs.aws.amazon.com/sagemaker/latest/dg/autopilot-automate-model-development-problem-types.html"
+     * @return Defines the type of supervised learning problem available for the candidates. For more information, see
+     *         <a href=
+     *         "https://docs.aws.amazon.com/sagemaker/latest/dg/autopilot-automate-model-development-problem-types.html"
      *         > Amazon SageMaker Autopilot problem types and algorithm support</a>.
      * @see ProblemType
      */
@@ -306,13 +312,14 @@ public class CreateAutoMLJobRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * Defines the type of supervised learning available for the candidates. For more information, see <a
+     * Defines the type of supervised learning problem available for the candidates. For more information, see <a
      * href="https://docs.aws.amazon.com/sagemaker/latest/dg/autopilot-automate-model-development-problem-types.html">
      * Amazon SageMaker Autopilot problem types and algorithm support</a>.
      * </p>
      * 
      * @param problemType
-     *        Defines the type of supervised learning available for the candidates. For more information, see <a href=
+     *        Defines the type of supervised learning problem available for the candidates. For more information, see <a
+     *        href=
      *        "https://docs.aws.amazon.com/sagemaker/latest/dg/autopilot-automate-model-development-problem-types.html">
      *        Amazon SageMaker Autopilot problem types and algorithm support</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -326,13 +333,14 @@ public class CreateAutoMLJobRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * Defines the type of supervised learning available for the candidates. For more information, see <a
+     * Defines the type of supervised learning problem available for the candidates. For more information, see <a
      * href="https://docs.aws.amazon.com/sagemaker/latest/dg/autopilot-automate-model-development-problem-types.html">
      * Amazon SageMaker Autopilot problem types and algorithm support</a>.
      * </p>
      * 
      * @param problemType
-     *        Defines the type of supervised learning available for the candidates. For more information, see <a href=
+     *        Defines the type of supervised learning problem available for the candidates. For more information, see <a
+     *        href=
      *        "https://docs.aws.amazon.com/sagemaker/latest/dg/autopilot-automate-model-development-problem-types.html">
      *        Amazon SageMaker Autopilot problem types and algorithm support</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -347,12 +355,14 @@ public class CreateAutoMLJobRequest extends com.amazonaws.AmazonWebServiceReques
     /**
      * <p>
      * Defines the objective metric used to measure the predictive quality of an AutoML job. You provide an
-     * <a>AutoMLJobObjective$MetricName</a> and Autopilot infers whether to minimize or maximize it.
+     * <a>AutoMLJobObjective$MetricName</a> and Autopilot infers whether to minimize or maximize it. For , only
+     * <code>Accuracy</code> is supported.
      * </p>
      * 
      * @param autoMLJobObjective
      *        Defines the objective metric used to measure the predictive quality of an AutoML job. You provide an
-     *        <a>AutoMLJobObjective$MetricName</a> and Autopilot infers whether to minimize or maximize it.
+     *        <a>AutoMLJobObjective$MetricName</a> and Autopilot infers whether to minimize or maximize it. For , only
+     *        <code>Accuracy</code> is supported.
      */
 
     public void setAutoMLJobObjective(AutoMLJobObjective autoMLJobObjective) {
@@ -362,11 +372,13 @@ public class CreateAutoMLJobRequest extends com.amazonaws.AmazonWebServiceReques
     /**
      * <p>
      * Defines the objective metric used to measure the predictive quality of an AutoML job. You provide an
-     * <a>AutoMLJobObjective$MetricName</a> and Autopilot infers whether to minimize or maximize it.
+     * <a>AutoMLJobObjective$MetricName</a> and Autopilot infers whether to minimize or maximize it. For , only
+     * <code>Accuracy</code> is supported.
      * </p>
      * 
      * @return Defines the objective metric used to measure the predictive quality of an AutoML job. You provide an
-     *         <a>AutoMLJobObjective$MetricName</a> and Autopilot infers whether to minimize or maximize it.
+     *         <a>AutoMLJobObjective$MetricName</a> and Autopilot infers whether to minimize or maximize it. For , only
+     *         <code>Accuracy</code> is supported.
      */
 
     public AutoMLJobObjective getAutoMLJobObjective() {
@@ -376,12 +388,14 @@ public class CreateAutoMLJobRequest extends com.amazonaws.AmazonWebServiceReques
     /**
      * <p>
      * Defines the objective metric used to measure the predictive quality of an AutoML job. You provide an
-     * <a>AutoMLJobObjective$MetricName</a> and Autopilot infers whether to minimize or maximize it.
+     * <a>AutoMLJobObjective$MetricName</a> and Autopilot infers whether to minimize or maximize it. For , only
+     * <code>Accuracy</code> is supported.
      * </p>
      * 
      * @param autoMLJobObjective
      *        Defines the objective metric used to measure the predictive quality of an AutoML job. You provide an
-     *        <a>AutoMLJobObjective$MetricName</a> and Autopilot infers whether to minimize or maximize it.
+     *        <a>AutoMLJobObjective$MetricName</a> and Autopilot infers whether to minimize or maximize it. For , only
+     *        <code>Accuracy</code> is supported.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -532,10 +546,16 @@ public class CreateAutoMLJobRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * Each tag consists of a key and an optional value. Tag keys must be unique per resource.
+     * An array of key-value pairs. You can use tags to categorize your Amazon Web Services resources in different ways,
+     * for example, by purpose, owner, or environment. For more information, see <a
+     * href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web ServicesResources</a>.
+     * Tag keys must be unique per resource.
      * </p>
      * 
-     * @return Each tag consists of a key and an optional value. Tag keys must be unique per resource.
+     * @return An array of key-value pairs. You can use tags to categorize your Amazon Web Services resources in
+     *         different ways, for example, by purpose, owner, or environment. For more information, see <a
+     *         href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web
+     *         ServicesResources</a>. Tag keys must be unique per resource.
      */
 
     public java.util.List<Tag> getTags() {
@@ -544,11 +564,17 @@ public class CreateAutoMLJobRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * Each tag consists of a key and an optional value. Tag keys must be unique per resource.
+     * An array of key-value pairs. You can use tags to categorize your Amazon Web Services resources in different ways,
+     * for example, by purpose, owner, or environment. For more information, see <a
+     * href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web ServicesResources</a>.
+     * Tag keys must be unique per resource.
      * </p>
      * 
      * @param tags
-     *        Each tag consists of a key and an optional value. Tag keys must be unique per resource.
+     *        An array of key-value pairs. You can use tags to categorize your Amazon Web Services resources in
+     *        different ways, for example, by purpose, owner, or environment. For more information, see <a
+     *        href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web
+     *        ServicesResources</a>. Tag keys must be unique per resource.
      */
 
     public void setTags(java.util.Collection<Tag> tags) {
@@ -562,7 +588,10 @@ public class CreateAutoMLJobRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * Each tag consists of a key and an optional value. Tag keys must be unique per resource.
+     * An array of key-value pairs. You can use tags to categorize your Amazon Web Services resources in different ways,
+     * for example, by purpose, owner, or environment. For more information, see <a
+     * href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web ServicesResources</a>.
+     * Tag keys must be unique per resource.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -571,7 +600,10 @@ public class CreateAutoMLJobRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * 
      * @param tags
-     *        Each tag consists of a key and an optional value. Tag keys must be unique per resource.
+     *        An array of key-value pairs. You can use tags to categorize your Amazon Web Services resources in
+     *        different ways, for example, by purpose, owner, or environment. For more information, see <a
+     *        href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web
+     *        ServicesResources</a>. Tag keys must be unique per resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -587,11 +619,17 @@ public class CreateAutoMLJobRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * Each tag consists of a key and an optional value. Tag keys must be unique per resource.
+     * An array of key-value pairs. You can use tags to categorize your Amazon Web Services resources in different ways,
+     * for example, by purpose, owner, or environment. For more information, see <a
+     * href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web ServicesResources</a>.
+     * Tag keys must be unique per resource.
      * </p>
      * 
      * @param tags
-     *        Each tag consists of a key and an optional value. Tag keys must be unique per resource.
+     *        An array of key-value pairs. You can use tags to categorize your Amazon Web Services resources in
+     *        different ways, for example, by purpose, owner, or environment. For more information, see <a
+     *        href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web
+     *        ServicesResources</a>. Tag keys must be unique per resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

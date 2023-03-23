@@ -31,21 +31,18 @@ public class AudioConcatenationConfiguration implements Serializable, Cloneable,
 
     /**
      * <p>
-     * Enables the <i>name</i> object, where <i>name</i> is the name of the configuration object, such as
-     * <code>AudioConcatenation</code>.
+     * Enables or disables the configuration object.
      * </p>
      */
     private String state;
 
     /**
      * <p>
-     * Enables the <i>name</i> object, where <i>name</i> is the name of the configuration object, such as
-     * <code>AudioConcatenation</code>.
+     * Enables or disables the configuration object.
      * </p>
      * 
      * @param state
-     *        Enables the <i>name</i> object, where <i>name</i> is the name of the configuration object, such as
-     *        <code>AudioConcatenation</code>.
+     *        Enables or disables the configuration object.
      * @see AudioArtifactsConcatenationState
      */
 
@@ -55,12 +52,10 @@ public class AudioConcatenationConfiguration implements Serializable, Cloneable,
 
     /**
      * <p>
-     * Enables the <i>name</i> object, where <i>name</i> is the name of the configuration object, such as
-     * <code>AudioConcatenation</code>.
+     * Enables or disables the configuration object.
      * </p>
      * 
-     * @return Enables the <i>name</i> object, where <i>name</i> is the name of the configuration object, such as
-     *         <code>AudioConcatenation</code>.
+     * @return Enables or disables the configuration object.
      * @see AudioArtifactsConcatenationState
      */
 
@@ -70,13 +65,11 @@ public class AudioConcatenationConfiguration implements Serializable, Cloneable,
 
     /**
      * <p>
-     * Enables the <i>name</i> object, where <i>name</i> is the name of the configuration object, such as
-     * <code>AudioConcatenation</code>.
+     * Enables or disables the configuration object.
      * </p>
      * 
      * @param state
-     *        Enables the <i>name</i> object, where <i>name</i> is the name of the configuration object, such as
-     *        <code>AudioConcatenation</code>.
+     *        Enables or disables the configuration object.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AudioArtifactsConcatenationState
      */
@@ -88,13 +81,11 @@ public class AudioConcatenationConfiguration implements Serializable, Cloneable,
 
     /**
      * <p>
-     * Enables the <i>name</i> object, where <i>name</i> is the name of the configuration object, such as
-     * <code>AudioConcatenation</code>.
+     * Enables or disables the configuration object.
      * </p>
      * 
      * @param state
-     *        Enables the <i>name</i> object, where <i>name</i> is the name of the configuration object, such as
-     *        <code>AudioConcatenation</code>.
+     *        Enables or disables the configuration object.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AudioArtifactsConcatenationState
      */

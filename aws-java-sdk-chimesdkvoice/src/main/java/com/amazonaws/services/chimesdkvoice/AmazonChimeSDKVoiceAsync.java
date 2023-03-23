@@ -302,6 +302,52 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<CreateVoiceConnectorGroupRequest, CreateVoiceConnectorGroupResult> asyncHandler);
 
     /**
+     * @param createVoiceProfileRequest
+     * @return A Java Future containing the result of the CreateVoiceProfile operation returned by the service.
+     * @sample AmazonChimeSDKVoiceAsync.CreateVoiceProfile
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/CreateVoiceProfile"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateVoiceProfileResult> createVoiceProfileAsync(CreateVoiceProfileRequest createVoiceProfileRequest);
+
+    /**
+     * @param createVoiceProfileRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateVoiceProfile operation returned by the service.
+     * @sample AmazonChimeSDKVoiceAsyncHandler.CreateVoiceProfile
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/CreateVoiceProfile"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateVoiceProfileResult> createVoiceProfileAsync(CreateVoiceProfileRequest createVoiceProfileRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateVoiceProfileRequest, CreateVoiceProfileResult> asyncHandler);
+
+    /**
+     * @param createVoiceProfileDomainRequest
+     * @return A Java Future containing the result of the CreateVoiceProfileDomain operation returned by the service.
+     * @sample AmazonChimeSDKVoiceAsync.CreateVoiceProfileDomain
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/CreateVoiceProfileDomain"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateVoiceProfileDomainResult> createVoiceProfileDomainAsync(CreateVoiceProfileDomainRequest createVoiceProfileDomainRequest);
+
+    /**
+     * @param createVoiceProfileDomainRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateVoiceProfileDomain operation returned by the service.
+     * @sample AmazonChimeSDKVoiceAsyncHandler.CreateVoiceProfileDomain
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/CreateVoiceProfileDomain"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateVoiceProfileDomainResult> createVoiceProfileDomainAsync(CreateVoiceProfileDomainRequest createVoiceProfileDomainRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateVoiceProfileDomainRequest, CreateVoiceProfileDomainResult> asyncHandler);
+
+    /**
      * @param deletePhoneNumberRequest
      * @return A Java Future containing the result of the DeletePhoneNumber operation returned by the service.
      * @sample AmazonChimeSDKVoiceAsync.DeletePhoneNumber
@@ -610,6 +656,52 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<DeleteVoiceConnectorTerminationCredentialsRequest, DeleteVoiceConnectorTerminationCredentialsResult> asyncHandler);
 
     /**
+     * @param deleteVoiceProfileRequest
+     * @return A Java Future containing the result of the DeleteVoiceProfile operation returned by the service.
+     * @sample AmazonChimeSDKVoiceAsync.DeleteVoiceProfile
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/DeleteVoiceProfile"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteVoiceProfileResult> deleteVoiceProfileAsync(DeleteVoiceProfileRequest deleteVoiceProfileRequest);
+
+    /**
+     * @param deleteVoiceProfileRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteVoiceProfile operation returned by the service.
+     * @sample AmazonChimeSDKVoiceAsyncHandler.DeleteVoiceProfile
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/DeleteVoiceProfile"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteVoiceProfileResult> deleteVoiceProfileAsync(DeleteVoiceProfileRequest deleteVoiceProfileRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteVoiceProfileRequest, DeleteVoiceProfileResult> asyncHandler);
+
+    /**
+     * @param deleteVoiceProfileDomainRequest
+     * @return A Java Future containing the result of the DeleteVoiceProfileDomain operation returned by the service.
+     * @sample AmazonChimeSDKVoiceAsync.DeleteVoiceProfileDomain
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/DeleteVoiceProfileDomain"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteVoiceProfileDomainResult> deleteVoiceProfileDomainAsync(DeleteVoiceProfileDomainRequest deleteVoiceProfileDomainRequest);
+
+    /**
+     * @param deleteVoiceProfileDomainRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteVoiceProfileDomain operation returned by the service.
+     * @sample AmazonChimeSDKVoiceAsyncHandler.DeleteVoiceProfileDomain
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/DeleteVoiceProfileDomain"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteVoiceProfileDomainResult> deleteVoiceProfileDomainAsync(DeleteVoiceProfileDomainRequest deleteVoiceProfileDomainRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteVoiceProfileDomainRequest, DeleteVoiceProfileDomainResult> asyncHandler);
+
+    /**
      * @param disassociatePhoneNumbersFromVoiceConnectorRequest
      * @return A Java Future containing the result of the DisassociatePhoneNumbersFromVoiceConnector operation returned
      *         by the service.
@@ -887,6 +979,29 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<GetSipRuleRequest, GetSipRuleResult> asyncHandler);
 
     /**
+     * @param getSpeakerSearchTaskRequest
+     * @return A Java Future containing the result of the GetSpeakerSearchTask operation returned by the service.
+     * @sample AmazonChimeSDKVoiceAsync.GetSpeakerSearchTask
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/GetSpeakerSearchTask"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetSpeakerSearchTaskResult> getSpeakerSearchTaskAsync(GetSpeakerSearchTaskRequest getSpeakerSearchTaskRequest);
+
+    /**
+     * @param getSpeakerSearchTaskRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetSpeakerSearchTask operation returned by the service.
+     * @sample AmazonChimeSDKVoiceAsyncHandler.GetSpeakerSearchTask
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/GetSpeakerSearchTask"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetSpeakerSearchTaskResult> getSpeakerSearchTaskAsync(GetSpeakerSearchTaskRequest getSpeakerSearchTaskRequest,
+            com.amazonaws.handlers.AsyncHandler<GetSpeakerSearchTaskRequest, GetSpeakerSearchTaskResult> asyncHandler);
+
+    /**
      * @param getVoiceConnectorRequest
      * @return A Java Future containing the result of the GetVoiceConnector operation returned by the service.
      * @sample AmazonChimeSDKVoiceAsync.GetVoiceConnector
@@ -1126,6 +1241,75 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<GetVoiceConnectorTerminationHealthRequest, GetVoiceConnectorTerminationHealthResult> asyncHandler);
 
     /**
+     * @param getVoiceProfileRequest
+     * @return A Java Future containing the result of the GetVoiceProfile operation returned by the service.
+     * @sample AmazonChimeSDKVoiceAsync.GetVoiceProfile
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/GetVoiceProfile"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetVoiceProfileResult> getVoiceProfileAsync(GetVoiceProfileRequest getVoiceProfileRequest);
+
+    /**
+     * @param getVoiceProfileRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetVoiceProfile operation returned by the service.
+     * @sample AmazonChimeSDKVoiceAsyncHandler.GetVoiceProfile
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/GetVoiceProfile"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetVoiceProfileResult> getVoiceProfileAsync(GetVoiceProfileRequest getVoiceProfileRequest,
+            com.amazonaws.handlers.AsyncHandler<GetVoiceProfileRequest, GetVoiceProfileResult> asyncHandler);
+
+    /**
+     * @param getVoiceProfileDomainRequest
+     * @return A Java Future containing the result of the GetVoiceProfileDomain operation returned by the service.
+     * @sample AmazonChimeSDKVoiceAsync.GetVoiceProfileDomain
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/GetVoiceProfileDomain"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetVoiceProfileDomainResult> getVoiceProfileDomainAsync(GetVoiceProfileDomainRequest getVoiceProfileDomainRequest);
+
+    /**
+     * @param getVoiceProfileDomainRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetVoiceProfileDomain operation returned by the service.
+     * @sample AmazonChimeSDKVoiceAsyncHandler.GetVoiceProfileDomain
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/GetVoiceProfileDomain"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetVoiceProfileDomainResult> getVoiceProfileDomainAsync(GetVoiceProfileDomainRequest getVoiceProfileDomainRequest,
+            com.amazonaws.handlers.AsyncHandler<GetVoiceProfileDomainRequest, GetVoiceProfileDomainResult> asyncHandler);
+
+    /**
+     * @param getVoiceToneAnalysisTaskRequest
+     * @return A Java Future containing the result of the GetVoiceToneAnalysisTask operation returned by the service.
+     * @sample AmazonChimeSDKVoiceAsync.GetVoiceToneAnalysisTask
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/GetVoiceToneAnalysisTask"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetVoiceToneAnalysisTaskResult> getVoiceToneAnalysisTaskAsync(GetVoiceToneAnalysisTaskRequest getVoiceToneAnalysisTaskRequest);
+
+    /**
+     * @param getVoiceToneAnalysisTaskRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetVoiceToneAnalysisTask operation returned by the service.
+     * @sample AmazonChimeSDKVoiceAsyncHandler.GetVoiceToneAnalysisTask
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/GetVoiceToneAnalysisTask"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetVoiceToneAnalysisTaskResult> getVoiceToneAnalysisTaskAsync(GetVoiceToneAnalysisTaskRequest getVoiceToneAnalysisTaskRequest,
+            com.amazonaws.handlers.AsyncHandler<GetVoiceToneAnalysisTaskRequest, GetVoiceToneAnalysisTaskResult> asyncHandler);
+
+    /**
      * @param listAvailableVoiceConnectorRegionsRequest
      * @return A Java Future containing the result of the ListAvailableVoiceConnectorRegions operation returned by the
      *         service.
@@ -1299,6 +1483,29 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<ListSupportedPhoneNumberCountriesRequest, ListSupportedPhoneNumberCountriesResult> asyncHandler);
 
     /**
+     * @param listTagsForResourceRequest
+     * @return A Java Future containing the result of the ListTagsForResource operation returned by the service.
+     * @sample AmazonChimeSDKVoiceAsync.ListTagsForResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/ListTagsForResource"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListTagsForResourceResult> listTagsForResourceAsync(ListTagsForResourceRequest listTagsForResourceRequest);
+
+    /**
+     * @param listTagsForResourceRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListTagsForResource operation returned by the service.
+     * @sample AmazonChimeSDKVoiceAsyncHandler.ListTagsForResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/ListTagsForResource"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListTagsForResourceResult> listTagsForResourceAsync(ListTagsForResourceRequest listTagsForResourceRequest,
+            com.amazonaws.handlers.AsyncHandler<ListTagsForResourceRequest, ListTagsForResourceResult> asyncHandler);
+
+    /**
      * @param listVoiceConnectorGroupsRequest
      * @return A Java Future containing the result of the ListVoiceConnectorGroups operation returned by the service.
      * @sample AmazonChimeSDKVoiceAsync.ListVoiceConnectorGroups
@@ -1372,6 +1579,52 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
      */
     java.util.concurrent.Future<ListVoiceConnectorsResult> listVoiceConnectorsAsync(ListVoiceConnectorsRequest listVoiceConnectorsRequest,
             com.amazonaws.handlers.AsyncHandler<ListVoiceConnectorsRequest, ListVoiceConnectorsResult> asyncHandler);
+
+    /**
+     * @param listVoiceProfileDomainsRequest
+     * @return A Java Future containing the result of the ListVoiceProfileDomains operation returned by the service.
+     * @sample AmazonChimeSDKVoiceAsync.ListVoiceProfileDomains
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/ListVoiceProfileDomains"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListVoiceProfileDomainsResult> listVoiceProfileDomainsAsync(ListVoiceProfileDomainsRequest listVoiceProfileDomainsRequest);
+
+    /**
+     * @param listVoiceProfileDomainsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListVoiceProfileDomains operation returned by the service.
+     * @sample AmazonChimeSDKVoiceAsyncHandler.ListVoiceProfileDomains
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/ListVoiceProfileDomains"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListVoiceProfileDomainsResult> listVoiceProfileDomainsAsync(ListVoiceProfileDomainsRequest listVoiceProfileDomainsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListVoiceProfileDomainsRequest, ListVoiceProfileDomainsResult> asyncHandler);
+
+    /**
+     * @param listVoiceProfilesRequest
+     * @return A Java Future containing the result of the ListVoiceProfiles operation returned by the service.
+     * @sample AmazonChimeSDKVoiceAsync.ListVoiceProfiles
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/ListVoiceProfiles"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListVoiceProfilesResult> listVoiceProfilesAsync(ListVoiceProfilesRequest listVoiceProfilesRequest);
+
+    /**
+     * @param listVoiceProfilesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListVoiceProfiles operation returned by the service.
+     * @sample AmazonChimeSDKVoiceAsyncHandler.ListVoiceProfiles
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/ListVoiceProfiles"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListVoiceProfilesResult> listVoiceProfilesAsync(ListVoiceProfilesRequest listVoiceProfilesRequest,
+            com.amazonaws.handlers.AsyncHandler<ListVoiceProfilesRequest, ListVoiceProfilesResult> asyncHandler);
 
     /**
      * @param putSipMediaApplicationAlexaSkillConfigurationRequest
@@ -1673,6 +1926,148 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<SearchAvailablePhoneNumbersRequest, SearchAvailablePhoneNumbersResult> asyncHandler);
 
     /**
+     * @param startSpeakerSearchTaskRequest
+     * @return A Java Future containing the result of the StartSpeakerSearchTask operation returned by the service.
+     * @sample AmazonChimeSDKVoiceAsync.StartSpeakerSearchTask
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/StartSpeakerSearchTask"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<StartSpeakerSearchTaskResult> startSpeakerSearchTaskAsync(StartSpeakerSearchTaskRequest startSpeakerSearchTaskRequest);
+
+    /**
+     * @param startSpeakerSearchTaskRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the StartSpeakerSearchTask operation returned by the service.
+     * @sample AmazonChimeSDKVoiceAsyncHandler.StartSpeakerSearchTask
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/StartSpeakerSearchTask"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<StartSpeakerSearchTaskResult> startSpeakerSearchTaskAsync(StartSpeakerSearchTaskRequest startSpeakerSearchTaskRequest,
+            com.amazonaws.handlers.AsyncHandler<StartSpeakerSearchTaskRequest, StartSpeakerSearchTaskResult> asyncHandler);
+
+    /**
+     * @param startVoiceToneAnalysisTaskRequest
+     * @return A Java Future containing the result of the StartVoiceToneAnalysisTask operation returned by the service.
+     * @sample AmazonChimeSDKVoiceAsync.StartVoiceToneAnalysisTask
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/StartVoiceToneAnalysisTask"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<StartVoiceToneAnalysisTaskResult> startVoiceToneAnalysisTaskAsync(
+            StartVoiceToneAnalysisTaskRequest startVoiceToneAnalysisTaskRequest);
+
+    /**
+     * @param startVoiceToneAnalysisTaskRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the StartVoiceToneAnalysisTask operation returned by the service.
+     * @sample AmazonChimeSDKVoiceAsyncHandler.StartVoiceToneAnalysisTask
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/StartVoiceToneAnalysisTask"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<StartVoiceToneAnalysisTaskResult> startVoiceToneAnalysisTaskAsync(
+            StartVoiceToneAnalysisTaskRequest startVoiceToneAnalysisTaskRequest,
+            com.amazonaws.handlers.AsyncHandler<StartVoiceToneAnalysisTaskRequest, StartVoiceToneAnalysisTaskResult> asyncHandler);
+
+    /**
+     * @param stopSpeakerSearchTaskRequest
+     * @return A Java Future containing the result of the StopSpeakerSearchTask operation returned by the service.
+     * @sample AmazonChimeSDKVoiceAsync.StopSpeakerSearchTask
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/StopSpeakerSearchTask"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<StopSpeakerSearchTaskResult> stopSpeakerSearchTaskAsync(StopSpeakerSearchTaskRequest stopSpeakerSearchTaskRequest);
+
+    /**
+     * @param stopSpeakerSearchTaskRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the StopSpeakerSearchTask operation returned by the service.
+     * @sample AmazonChimeSDKVoiceAsyncHandler.StopSpeakerSearchTask
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/StopSpeakerSearchTask"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<StopSpeakerSearchTaskResult> stopSpeakerSearchTaskAsync(StopSpeakerSearchTaskRequest stopSpeakerSearchTaskRequest,
+            com.amazonaws.handlers.AsyncHandler<StopSpeakerSearchTaskRequest, StopSpeakerSearchTaskResult> asyncHandler);
+
+    /**
+     * @param stopVoiceToneAnalysisTaskRequest
+     * @return A Java Future containing the result of the StopVoiceToneAnalysisTask operation returned by the service.
+     * @sample AmazonChimeSDKVoiceAsync.StopVoiceToneAnalysisTask
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/StopVoiceToneAnalysisTask"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<StopVoiceToneAnalysisTaskResult> stopVoiceToneAnalysisTaskAsync(
+            StopVoiceToneAnalysisTaskRequest stopVoiceToneAnalysisTaskRequest);
+
+    /**
+     * @param stopVoiceToneAnalysisTaskRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the StopVoiceToneAnalysisTask operation returned by the service.
+     * @sample AmazonChimeSDKVoiceAsyncHandler.StopVoiceToneAnalysisTask
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/StopVoiceToneAnalysisTask"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<StopVoiceToneAnalysisTaskResult> stopVoiceToneAnalysisTaskAsync(
+            StopVoiceToneAnalysisTaskRequest stopVoiceToneAnalysisTaskRequest,
+            com.amazonaws.handlers.AsyncHandler<StopVoiceToneAnalysisTaskRequest, StopVoiceToneAnalysisTaskResult> asyncHandler);
+
+    /**
+     * @param tagResourceRequest
+     * @return A Java Future containing the result of the TagResource operation returned by the service.
+     * @sample AmazonChimeSDKVoiceAsync.TagResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/TagResource" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<TagResourceResult> tagResourceAsync(TagResourceRequest tagResourceRequest);
+
+    /**
+     * @param tagResourceRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the TagResource operation returned by the service.
+     * @sample AmazonChimeSDKVoiceAsyncHandler.TagResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/TagResource" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<TagResourceResult> tagResourceAsync(TagResourceRequest tagResourceRequest,
+            com.amazonaws.handlers.AsyncHandler<TagResourceRequest, TagResourceResult> asyncHandler);
+
+    /**
+     * @param untagResourceRequest
+     * @return A Java Future containing the result of the UntagResource operation returned by the service.
+     * @sample AmazonChimeSDKVoiceAsync.UntagResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/UntagResource" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<UntagResourceResult> untagResourceAsync(UntagResourceRequest untagResourceRequest);
+
+    /**
+     * @param untagResourceRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UntagResource operation returned by the service.
+     * @sample AmazonChimeSDKVoiceAsyncHandler.UntagResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/UntagResource" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<UntagResourceResult> untagResourceAsync(UntagResourceRequest untagResourceRequest,
+            com.amazonaws.handlers.AsyncHandler<UntagResourceRequest, UntagResourceResult> asyncHandler);
+
+    /**
      * @param updateGlobalSettingsRequest
      * @return A Java Future containing the result of the UpdateGlobalSettings operation returned by the service.
      * @sample AmazonChimeSDKVoiceAsync.UpdateGlobalSettings
@@ -1888,6 +2283,52 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
     java.util.concurrent.Future<UpdateVoiceConnectorGroupResult> updateVoiceConnectorGroupAsync(
             UpdateVoiceConnectorGroupRequest updateVoiceConnectorGroupRequest,
             com.amazonaws.handlers.AsyncHandler<UpdateVoiceConnectorGroupRequest, UpdateVoiceConnectorGroupResult> asyncHandler);
+
+    /**
+     * @param updateVoiceProfileRequest
+     * @return A Java Future containing the result of the UpdateVoiceProfile operation returned by the service.
+     * @sample AmazonChimeSDKVoiceAsync.UpdateVoiceProfile
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/UpdateVoiceProfile"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateVoiceProfileResult> updateVoiceProfileAsync(UpdateVoiceProfileRequest updateVoiceProfileRequest);
+
+    /**
+     * @param updateVoiceProfileRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateVoiceProfile operation returned by the service.
+     * @sample AmazonChimeSDKVoiceAsyncHandler.UpdateVoiceProfile
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/UpdateVoiceProfile"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateVoiceProfileResult> updateVoiceProfileAsync(UpdateVoiceProfileRequest updateVoiceProfileRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateVoiceProfileRequest, UpdateVoiceProfileResult> asyncHandler);
+
+    /**
+     * @param updateVoiceProfileDomainRequest
+     * @return A Java Future containing the result of the UpdateVoiceProfileDomain operation returned by the service.
+     * @sample AmazonChimeSDKVoiceAsync.UpdateVoiceProfileDomain
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/UpdateVoiceProfileDomain"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateVoiceProfileDomainResult> updateVoiceProfileDomainAsync(UpdateVoiceProfileDomainRequest updateVoiceProfileDomainRequest);
+
+    /**
+     * @param updateVoiceProfileDomainRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateVoiceProfileDomain operation returned by the service.
+     * @sample AmazonChimeSDKVoiceAsyncHandler.UpdateVoiceProfileDomain
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/UpdateVoiceProfileDomain"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateVoiceProfileDomainResult> updateVoiceProfileDomainAsync(UpdateVoiceProfileDomainRequest updateVoiceProfileDomainRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateVoiceProfileDomainRequest, UpdateVoiceProfileDomainResult> asyncHandler);
 
     /**
      * @param validateE911AddressRequest

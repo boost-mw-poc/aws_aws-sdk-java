@@ -551,6 +551,19 @@ public class AbstractAmazonChimeSDKMessagingAsync extends AbstractAmazonChimeSDK
     }
 
     @Override
+    public java.util.concurrent.Future<PutChannelExpirationSettingsResult> putChannelExpirationSettingsAsync(PutChannelExpirationSettingsRequest request) {
+
+        return putChannelExpirationSettingsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<PutChannelExpirationSettingsResult> putChannelExpirationSettingsAsync(PutChannelExpirationSettingsRequest request,
+            com.amazonaws.handlers.AsyncHandler<PutChannelExpirationSettingsRequest, PutChannelExpirationSettingsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<PutChannelMembershipPreferencesResult> putChannelMembershipPreferencesAsync(
             PutChannelMembershipPreferencesRequest request) {
 

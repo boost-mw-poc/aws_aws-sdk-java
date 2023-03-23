@@ -68,6 +68,10 @@ public class AppInstanceUserJsonUnmarshaller implements Unmarshaller<AppInstance
                     context.nextToken();
                     appInstanceUser.setLastUpdatedTimestamp(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
                 }
+                if (context.testExpression("ExpirationSettings", targetDepth)) {
+                    context.nextToken();
+                    appInstanceUser.setExpirationSettings(ExpirationSettingsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

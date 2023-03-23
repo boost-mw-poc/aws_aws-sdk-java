@@ -460,6 +460,63 @@ public interface AmazonSageMakerAsync extends AmazonSageMaker {
 
     /**
      * <p>
+     * Creates an Amazon SageMaker AutoML job that uses non-tabular data such as images or text for Computer Vision or
+     * Natural Language Processing problems.
+     * </p>
+     * <p>
+     * Find the resulting model after you run an AutoML job V2 by calling .
+     * </p>
+     * <p>
+     * To create an <code>AutoMLJob</code> using tabular data, see .
+     * </p>
+     * <note>
+     * <p>
+     * This API action is callable through SageMaker Canvas only. Calling it directly from the CLI or an SDK results in
+     * an error.
+     * </p>
+     * </note>
+     * 
+     * @param createAutoMLJobV2Request
+     * @return A Java Future containing the result of the CreateAutoMLJobV2 operation returned by the service.
+     * @sample AmazonSageMakerAsync.CreateAutoMLJobV2
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateAutoMLJobV2" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateAutoMLJobV2Result> createAutoMLJobV2Async(CreateAutoMLJobV2Request createAutoMLJobV2Request);
+
+    /**
+     * <p>
+     * Creates an Amazon SageMaker AutoML job that uses non-tabular data such as images or text for Computer Vision or
+     * Natural Language Processing problems.
+     * </p>
+     * <p>
+     * Find the resulting model after you run an AutoML job V2 by calling .
+     * </p>
+     * <p>
+     * To create an <code>AutoMLJob</code> using tabular data, see .
+     * </p>
+     * <note>
+     * <p>
+     * This API action is callable through SageMaker Canvas only. Calling it directly from the CLI or an SDK results in
+     * an error.
+     * </p>
+     * </note>
+     * 
+     * @param createAutoMLJobV2Request
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateAutoMLJobV2 operation returned by the service.
+     * @sample AmazonSageMakerAsyncHandler.CreateAutoMLJobV2
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateAutoMLJobV2" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateAutoMLJobV2Result> createAutoMLJobV2Async(CreateAutoMLJobV2Request createAutoMLJobV2Request,
+            com.amazonaws.handlers.AsyncHandler<CreateAutoMLJobV2Request, CreateAutoMLJobV2Result> asyncHandler);
+
+    /**
+     * <p>
      * Creates a Git repository as a resource in your SageMaker account. You can associate the repository with notebook
      * instances so that you can use Git source control for the notebooks you create. The Git repository is a resource
      * in your SageMaker account, so it can be associated with more than one notebook instance, and it persists
@@ -5238,6 +5295,49 @@ public interface AmazonSageMakerAsync extends AmazonSageMaker {
      */
     java.util.concurrent.Future<DescribeAutoMLJobResult> describeAutoMLJobAsync(DescribeAutoMLJobRequest describeAutoMLJobRequest,
             com.amazonaws.handlers.AsyncHandler<DescribeAutoMLJobRequest, DescribeAutoMLJobResult> asyncHandler);
+
+    /**
+     * <p>
+     * Returns information about an Amazon SageMaker AutoML V2 job.
+     * </p>
+     * <note>
+     * <p>
+     * This API action is callable through SageMaker Canvas only. Calling it directly from the CLI or an SDK results in
+     * an error.
+     * </p>
+     * </note>
+     * 
+     * @param describeAutoMLJobV2Request
+     * @return A Java Future containing the result of the DescribeAutoMLJobV2 operation returned by the service.
+     * @sample AmazonSageMakerAsync.DescribeAutoMLJobV2
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeAutoMLJobV2" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeAutoMLJobV2Result> describeAutoMLJobV2Async(DescribeAutoMLJobV2Request describeAutoMLJobV2Request);
+
+    /**
+     * <p>
+     * Returns information about an Amazon SageMaker AutoML V2 job.
+     * </p>
+     * <note>
+     * <p>
+     * This API action is callable through SageMaker Canvas only. Calling it directly from the CLI or an SDK results in
+     * an error.
+     * </p>
+     * </note>
+     * 
+     * @param describeAutoMLJobV2Request
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeAutoMLJobV2 operation returned by the service.
+     * @sample AmazonSageMakerAsyncHandler.DescribeAutoMLJobV2
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeAutoMLJobV2" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeAutoMLJobV2Result> describeAutoMLJobV2Async(DescribeAutoMLJobV2Request describeAutoMLJobV2Request,
+            com.amazonaws.handlers.AsyncHandler<DescribeAutoMLJobV2Request, DescribeAutoMLJobV2Result> asyncHandler);
 
     /**
      * <p>

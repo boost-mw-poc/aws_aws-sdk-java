@@ -196,10 +196,6 @@ public class AWSServiceDiscoveryClient extends AmazonWebServiceClient implements
      * @throws TooManyTagsException
      *         The list of tags on the resource is over the quota. The maximum number of tags that can be applied to a
      *         resource is 50.
-     * @throws RequestLimitExceededException
-     *         The operation can't be completed because you've reached the quota for the number of requests. For more
-     *         information, see <a href="https://docs.aws.amazon.com/cloud-map/latest/dg/throttling.html">Cloud Map API
-     *         request throttling quota</a> in the <i>Cloud Map Developer Guide</i>.
      * @sample AWSServiceDiscovery.CreateHttpNamespace
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/servicediscovery-2017-03-14/CreateHttpNamespace"
      *      target="_top">AWS API Documentation</a>
@@ -274,10 +270,6 @@ public class AWSServiceDiscoveryClient extends AmazonWebServiceClient implements
      * @throws TooManyTagsException
      *         The list of tags on the resource is over the quota. The maximum number of tags that can be applied to a
      *         resource is 50.
-     * @throws RequestLimitExceededException
-     *         The operation can't be completed because you've reached the quota for the number of requests. For more
-     *         information, see <a href="https://docs.aws.amazon.com/cloud-map/latest/dg/throttling.html">Cloud Map API
-     *         request throttling quota</a> in the <i>Cloud Map Developer Guide</i>.
      * @sample AWSServiceDiscovery.CreatePrivateDnsNamespace
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/servicediscovery-2017-03-14/CreatePrivateDnsNamespace"
      *      target="_top">AWS API Documentation</a>
@@ -360,10 +352,6 @@ public class AWSServiceDiscoveryClient extends AmazonWebServiceClient implements
      * @throws TooManyTagsException
      *         The list of tags on the resource is over the quota. The maximum number of tags that can be applied to a
      *         resource is 50.
-     * @throws RequestLimitExceededException
-     *         The operation can't be completed because you've reached the quota for the number of requests. For more
-     *         information, see <a href="https://docs.aws.amazon.com/cloud-map/latest/dg/throttling.html">Cloud Map API
-     *         request throttling quota</a> in the <i>Cloud Map Developer Guide</i>.
      * @sample AWSServiceDiscovery.CreatePublicDnsNamespace
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/servicediscovery-2017-03-14/CreatePublicDnsNamespace"
      *      target="_top">AWS API Documentation</a>
@@ -482,10 +470,6 @@ public class AWSServiceDiscoveryClient extends AmazonWebServiceClient implements
      * @throws TooManyTagsException
      *         The list of tags on the resource is over the quota. The maximum number of tags that can be applied to a
      *         resource is 50.
-     * @throws RequestLimitExceededException
-     *         The operation can't be completed because you've reached the quota for the number of requests. For more
-     *         information, see <a href="https://docs.aws.amazon.com/cloud-map/latest/dg/throttling.html">Cloud Map API
-     *         request throttling quota</a> in the <i>Cloud Map Developer Guide</i>.
      * @sample AWSServiceDiscovery.CreateService
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/servicediscovery-2017-03-14/CreateService" target="_top">AWS
      *      API Documentation</a>
@@ -552,10 +536,6 @@ public class AWSServiceDiscoveryClient extends AmazonWebServiceClient implements
      *         delete a service that contains any instances.
      * @throws DuplicateRequestException
      *         The operation is already in progress.
-     * @throws RequestLimitExceededException
-     *         The operation can't be completed because you've reached the quota for the number of requests. For more
-     *         information, see <a href="https://docs.aws.amazon.com/cloud-map/latest/dg/throttling.html">Cloud Map API
-     *         request throttling quota</a> in the <i>Cloud Map Developer Guide</i>.
      * @sample AWSServiceDiscovery.DeleteNamespace
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/servicediscovery-2017-03-14/DeleteNamespace"
      *      target="_top">AWS API Documentation</a>
@@ -619,10 +599,6 @@ public class AWSServiceDiscoveryClient extends AmazonWebServiceClient implements
      * @throws ResourceInUseException
      *         The specified resource can't be deleted because it contains other resources. For example, you can't
      *         delete a service that contains any instances.
-     * @throws RequestLimitExceededException
-     *         The operation can't be completed because you've reached the quota for the number of requests. For more
-     *         information, see <a href="https://docs.aws.amazon.com/cloud-map/latest/dg/throttling.html">Cloud Map API
-     *         request throttling quota</a> in the <i>Cloud Map Developer Guide</i>.
      * @sample AWSServiceDiscovery.DeleteService
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/servicediscovery-2017-03-14/DeleteService" target="_top">AWS
      *      API Documentation</a>
@@ -692,10 +668,6 @@ public class AWSServiceDiscoveryClient extends AmazonWebServiceClient implements
      *         delete a service that contains any instances.
      * @throws ServiceNotFoundException
      *         No service exists with the specified ID.
-     * @throws RequestLimitExceededException
-     *         The operation can't be completed because you've reached the quota for the number of requests. For more
-     *         information, see <a href="https://docs.aws.amazon.com/cloud-map/latest/dg/throttling.html">Cloud Map API
-     *         request throttling quota</a> in the <i>Cloud Map Developer Guide</i>.
      * @sample AWSServiceDiscovery.DeregisterInstance
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/servicediscovery-2017-03-14/DeregisterInstance"
      *      target="_top">AWS API Documentation</a>
@@ -836,10 +808,6 @@ public class AWSServiceDiscoveryClient extends AmazonWebServiceClient implements
      *         value might be outside the allowed range, or a string value might exceed length constraints.
      * @throws ServiceNotFoundException
      *         No service exists with the specified ID.
-     * @throws RequestLimitExceededException
-     *         The operation can't be completed because you've reached the quota for the number of requests. For more
-     *         information, see <a href="https://docs.aws.amazon.com/cloud-map/latest/dg/throttling.html">Cloud Map API
-     *         request throttling quota</a> in the <i>Cloud Map Developer Guide</i>.
      * @sample AWSServiceDiscovery.GetInstance
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/servicediscovery-2017-03-14/GetInstance" target="_top">AWS
      *      API Documentation</a>
@@ -910,10 +878,6 @@ public class AWSServiceDiscoveryClient extends AmazonWebServiceClient implements
      *         value might be outside the allowed range, or a string value might exceed length constraints.
      * @throws ServiceNotFoundException
      *         No service exists with the specified ID.
-     * @throws RequestLimitExceededException
-     *         The operation can't be completed because you've reached the quota for the number of requests. For more
-     *         information, see <a href="https://docs.aws.amazon.com/cloud-map/latest/dg/throttling.html">Cloud Map API
-     *         request throttling quota</a> in the <i>Cloud Map Developer Guide</i>.
      * @sample AWSServiceDiscovery.GetInstancesHealthStatus
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/servicediscovery-2017-03-14/GetInstancesHealthStatus"
      *      target="_top">AWS API Documentation</a>
@@ -1043,10 +1007,6 @@ public class AWSServiceDiscoveryClient extends AmazonWebServiceClient implements
      *         value might be outside the allowed range, or a string value might exceed length constraints.
      * @throws OperationNotFoundException
      *         No operation exists with the specified ID.
-     * @throws RequestLimitExceededException
-     *         The operation can't be completed because you've reached the quota for the number of requests. For more
-     *         information, see <a href="https://docs.aws.amazon.com/cloud-map/latest/dg/throttling.html">Cloud Map API
-     *         request throttling quota</a> in the <i>Cloud Map Developer Guide</i>.
      * @sample AWSServiceDiscovery.GetOperation
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/servicediscovery-2017-03-14/GetOperation" target="_top">AWS
      *      API Documentation</a>
@@ -1107,10 +1067,6 @@ public class AWSServiceDiscoveryClient extends AmazonWebServiceClient implements
      *         value might be outside the allowed range, or a string value might exceed length constraints.
      * @throws ServiceNotFoundException
      *         No service exists with the specified ID.
-     * @throws RequestLimitExceededException
-     *         The operation can't be completed because you've reached the quota for the number of requests. For more
-     *         information, see <a href="https://docs.aws.amazon.com/cloud-map/latest/dg/throttling.html">Cloud Map API
-     *         request throttling quota</a> in the <i>Cloud Map Developer Guide</i>.
      * @sample AWSServiceDiscovery.GetService
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/servicediscovery-2017-03-14/GetService" target="_top">AWS
      *      API Documentation</a>
@@ -1171,10 +1127,6 @@ public class AWSServiceDiscoveryClient extends AmazonWebServiceClient implements
      * @throws InvalidInputException
      *         One or more specified values aren't valid. For example, a required value might be missing, a numeric
      *         value might be outside the allowed range, or a string value might exceed length constraints.
-     * @throws RequestLimitExceededException
-     *         The operation can't be completed because you've reached the quota for the number of requests. For more
-     *         information, see <a href="https://docs.aws.amazon.com/cloud-map/latest/dg/throttling.html">Cloud Map API
-     *         request throttling quota</a> in the <i>Cloud Map Developer Guide</i>.
      * @sample AWSServiceDiscovery.ListInstances
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/servicediscovery-2017-03-14/ListInstances" target="_top">AWS
      *      API Documentation</a>
@@ -1233,10 +1185,6 @@ public class AWSServiceDiscoveryClient extends AmazonWebServiceClient implements
      * @throws InvalidInputException
      *         One or more specified values aren't valid. For example, a required value might be missing, a numeric
      *         value might be outside the allowed range, or a string value might exceed length constraints.
-     * @throws RequestLimitExceededException
-     *         The operation can't be completed because you've reached the quota for the number of requests. For more
-     *         information, see <a href="https://docs.aws.amazon.com/cloud-map/latest/dg/throttling.html">Cloud Map API
-     *         request throttling quota</a> in the <i>Cloud Map Developer Guide</i>.
      * @sample AWSServiceDiscovery.ListNamespaces
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/servicediscovery-2017-03-14/ListNamespaces"
      *      target="_top">AWS API Documentation</a>
@@ -1295,10 +1243,6 @@ public class AWSServiceDiscoveryClient extends AmazonWebServiceClient implements
      * @throws InvalidInputException
      *         One or more specified values aren't valid. For example, a required value might be missing, a numeric
      *         value might be outside the allowed range, or a string value might exceed length constraints.
-     * @throws RequestLimitExceededException
-     *         The operation can't be completed because you've reached the quota for the number of requests. For more
-     *         information, see <a href="https://docs.aws.amazon.com/cloud-map/latest/dg/throttling.html">Cloud Map API
-     *         request throttling quota</a> in the <i>Cloud Map Developer Guide</i>.
      * @sample AWSServiceDiscovery.ListOperations
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/servicediscovery-2017-03-14/ListOperations"
      *      target="_top">AWS API Documentation</a>
@@ -1357,10 +1301,6 @@ public class AWSServiceDiscoveryClient extends AmazonWebServiceClient implements
      * @throws InvalidInputException
      *         One or more specified values aren't valid. For example, a required value might be missing, a numeric
      *         value might be outside the allowed range, or a string value might exceed length constraints.
-     * @throws RequestLimitExceededException
-     *         The operation can't be completed because you've reached the quota for the number of requests. For more
-     *         information, see <a href="https://docs.aws.amazon.com/cloud-map/latest/dg/throttling.html">Cloud Map API
-     *         request throttling quota</a> in the <i>Cloud Map Developer Guide</i>.
      * @sample AWSServiceDiscovery.ListServices
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/servicediscovery-2017-03-14/ListServices" target="_top">AWS
      *      API Documentation</a>
@@ -1421,10 +1361,6 @@ public class AWSServiceDiscoveryClient extends AmazonWebServiceClient implements
      * @throws InvalidInputException
      *         One or more specified values aren't valid. For example, a required value might be missing, a numeric
      *         value might be outside the allowed range, or a string value might exceed length constraints.
-     * @throws RequestLimitExceededException
-     *         The operation can't be completed because you've reached the quota for the number of requests. For more
-     *         information, see <a href="https://docs.aws.amazon.com/cloud-map/latest/dg/throttling.html">Cloud Map API
-     *         request throttling quota</a> in the <i>Cloud Map Developer Guide</i>.
      * @sample AWSServiceDiscovery.ListTagsForResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/servicediscovery-2017-03-14/ListTagsForResource"
      *      target="_top">AWS API Documentation</a>
@@ -1547,10 +1483,6 @@ public class AWSServiceDiscoveryClient extends AmazonWebServiceClient implements
      *         The resource can't be created because you've reached the quota on the number of resources.
      * @throws ServiceNotFoundException
      *         No service exists with the specified ID.
-     * @throws RequestLimitExceededException
-     *         The operation can't be completed because you've reached the quota for the number of requests. For more
-     *         information, see <a href="https://docs.aws.amazon.com/cloud-map/latest/dg/throttling.html">Cloud Map API
-     *         request throttling quota</a> in the <i>Cloud Map Developer Guide</i>.
      * @sample AWSServiceDiscovery.RegisterInstance
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/servicediscovery-2017-03-14/RegisterInstance"
      *      target="_top">AWS API Documentation</a>
@@ -1614,10 +1546,6 @@ public class AWSServiceDiscoveryClient extends AmazonWebServiceClient implements
      * @throws InvalidInputException
      *         One or more specified values aren't valid. For example, a required value might be missing, a numeric
      *         value might be outside the allowed range, or a string value might exceed length constraints.
-     * @throws RequestLimitExceededException
-     *         The operation can't be completed because you've reached the quota for the number of requests. For more
-     *         information, see <a href="https://docs.aws.amazon.com/cloud-map/latest/dg/throttling.html">Cloud Map API
-     *         request throttling quota</a> in the <i>Cloud Map Developer Guide</i>.
      * @sample AWSServiceDiscovery.TagResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/servicediscovery-2017-03-14/TagResource" target="_top">AWS
      *      API Documentation</a>
@@ -1678,10 +1606,6 @@ public class AWSServiceDiscoveryClient extends AmazonWebServiceClient implements
      * @throws InvalidInputException
      *         One or more specified values aren't valid. For example, a required value might be missing, a numeric
      *         value might be outside the allowed range, or a string value might exceed length constraints.
-     * @throws RequestLimitExceededException
-     *         The operation can't be completed because you've reached the quota for the number of requests. For more
-     *         information, see <a href="https://docs.aws.amazon.com/cloud-map/latest/dg/throttling.html">Cloud Map API
-     *         request throttling quota</a> in the <i>Cloud Map Developer Guide</i>.
      * @sample AWSServiceDiscovery.UntagResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/servicediscovery-2017-03-14/UntagResource" target="_top">AWS
      *      API Documentation</a>
@@ -1747,10 +1671,6 @@ public class AWSServiceDiscoveryClient extends AmazonWebServiceClient implements
      *         delete a service that contains any instances.
      * @throws DuplicateRequestException
      *         The operation is already in progress.
-     * @throws RequestLimitExceededException
-     *         The operation can't be completed because you've reached the quota for the number of requests. For more
-     *         information, see <a href="https://docs.aws.amazon.com/cloud-map/latest/dg/throttling.html">Cloud Map API
-     *         request throttling quota</a> in the <i>Cloud Map Developer Guide</i>.
      * @sample AWSServiceDiscovery.UpdateHttpNamespace
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/servicediscovery-2017-03-14/UpdateHttpNamespace"
      *      target="_top">AWS API Documentation</a>
@@ -1827,10 +1747,6 @@ public class AWSServiceDiscoveryClient extends AmazonWebServiceClient implements
      * @throws InvalidInputException
      *         One or more specified values aren't valid. For example, a required value might be missing, a numeric
      *         value might be outside the allowed range, or a string value might exceed length constraints.
-     * @throws RequestLimitExceededException
-     *         The operation can't be completed because you've reached the quota for the number of requests. For more
-     *         information, see <a href="https://docs.aws.amazon.com/cloud-map/latest/dg/throttling.html">Cloud Map API
-     *         request throttling quota</a> in the <i>Cloud Map Developer Guide</i>.
      * @sample AWSServiceDiscovery.UpdateInstanceCustomHealthStatus
      * @see <a
      *      href="http://docs.aws.amazon.com/goto/WebAPI/servicediscovery-2017-03-14/UpdateInstanceCustomHealthStatus"
@@ -1900,10 +1816,6 @@ public class AWSServiceDiscoveryClient extends AmazonWebServiceClient implements
      *         delete a service that contains any instances.
      * @throws DuplicateRequestException
      *         The operation is already in progress.
-     * @throws RequestLimitExceededException
-     *         The operation can't be completed because you've reached the quota for the number of requests. For more
-     *         information, see <a href="https://docs.aws.amazon.com/cloud-map/latest/dg/throttling.html">Cloud Map API
-     *         request throttling quota</a> in the <i>Cloud Map Developer Guide</i>.
      * @sample AWSServiceDiscovery.UpdatePrivateDnsNamespace
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/servicediscovery-2017-03-14/UpdatePrivateDnsNamespace"
      *      target="_top">AWS API Documentation</a>
@@ -1971,10 +1883,6 @@ public class AWSServiceDiscoveryClient extends AmazonWebServiceClient implements
      *         delete a service that contains any instances.
      * @throws DuplicateRequestException
      *         The operation is already in progress.
-     * @throws RequestLimitExceededException
-     *         The operation can't be completed because you've reached the quota for the number of requests. For more
-     *         information, see <a href="https://docs.aws.amazon.com/cloud-map/latest/dg/throttling.html">Cloud Map API
-     *         request throttling quota</a> in the <i>Cloud Map Developer Guide</i>.
      * @sample AWSServiceDiscovery.UpdatePublicDnsNamespace
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/servicediscovery-2017-03-14/UpdatePublicDnsNamespace"
      *      target="_top">AWS API Documentation</a>
@@ -2076,10 +1984,6 @@ public class AWSServiceDiscoveryClient extends AmazonWebServiceClient implements
      *         value might be outside the allowed range, or a string value might exceed length constraints.
      * @throws ServiceNotFoundException
      *         No service exists with the specified ID.
-     * @throws RequestLimitExceededException
-     *         The operation can't be completed because you've reached the quota for the number of requests. For more
-     *         information, see <a href="https://docs.aws.amazon.com/cloud-map/latest/dg/throttling.html">Cloud Map API
-     *         request throttling quota</a> in the <i>Cloud Map Developer Guide</i>.
      * @sample AWSServiceDiscovery.UpdateService
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/servicediscovery-2017-03-14/UpdateService" target="_top">AWS
      *      API Documentation</a>

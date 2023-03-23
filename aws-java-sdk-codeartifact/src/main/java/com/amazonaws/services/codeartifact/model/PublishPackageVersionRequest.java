@@ -83,7 +83,9 @@ public class PublishPackageVersionRequest extends com.amazonaws.AmazonWebService
     /**
      * <p>
      * The SHA256 hash of the <code>assetContent</code> to publish. This value must be calculated by the caller and
-     * provided with the request.
+     * provided with the request (see <a
+     * href="https://docs.aws.amazon.com/codeartifact/latest/ug/using-generic.html#publishing-generic-packages"
+     * >Publishing a generic package</a> in the <i>CodeArtifact User Guide</i>).
      * </p>
      * <p>
      * This value is used as an integrity check to verify that the <code>assetContent</code> has not changed after it
@@ -94,9 +96,9 @@ public class PublishPackageVersionRequest extends com.amazonaws.AmazonWebService
     /**
      * <p>
      * Specifies whether the package version should remain in the <code>unfinished</code> state. If omitted, the package
-     * version status will be set to <code>Published</code> (see <a href=
-     * "https://docs.aws.amazon.com/codeartifact/latest/ug/packages-overview.html#package-version-status.html#package-version-status"
-     * >Package version status</a> in the <i>CodeArtifact User Guide</i>).
+     * version status will be set to <code>Published</code> (see <a
+     * href="https://docs.aws.amazon.com/codeartifact/latest/ug/packages-overview.html#package-version-status">Package
+     * version status</a> in the <i>CodeArtifact User Guide</i>).
      * </p>
      * <p>
      * Valid values: <code>unfinished</code>
@@ -493,7 +495,9 @@ public class PublishPackageVersionRequest extends com.amazonaws.AmazonWebService
     /**
      * <p>
      * The SHA256 hash of the <code>assetContent</code> to publish. This value must be calculated by the caller and
-     * provided with the request.
+     * provided with the request (see <a
+     * href="https://docs.aws.amazon.com/codeartifact/latest/ug/using-generic.html#publishing-generic-packages"
+     * >Publishing a generic package</a> in the <i>CodeArtifact User Guide</i>).
      * </p>
      * <p>
      * This value is used as an integrity check to verify that the <code>assetContent</code> has not changed after it
@@ -502,7 +506,9 @@ public class PublishPackageVersionRequest extends com.amazonaws.AmazonWebService
      * 
      * @param assetSHA256
      *        The SHA256 hash of the <code>assetContent</code> to publish. This value must be calculated by the caller
-     *        and provided with the request.</p>
+     *        and provided with the request (see <a
+     *        href="https://docs.aws.amazon.com/codeartifact/latest/ug/using-generic.html#publishing-generic-packages"
+     *        >Publishing a generic package</a> in the <i>CodeArtifact User Guide</i>).</p>
      *        <p>
      *        This value is used as an integrity check to verify that the <code>assetContent</code> has not changed
      *        after it was originally sent.
@@ -515,7 +521,9 @@ public class PublishPackageVersionRequest extends com.amazonaws.AmazonWebService
     /**
      * <p>
      * The SHA256 hash of the <code>assetContent</code> to publish. This value must be calculated by the caller and
-     * provided with the request.
+     * provided with the request (see <a
+     * href="https://docs.aws.amazon.com/codeartifact/latest/ug/using-generic.html#publishing-generic-packages"
+     * >Publishing a generic package</a> in the <i>CodeArtifact User Guide</i>).
      * </p>
      * <p>
      * This value is used as an integrity check to verify that the <code>assetContent</code> has not changed after it
@@ -523,7 +531,9 @@ public class PublishPackageVersionRequest extends com.amazonaws.AmazonWebService
      * </p>
      * 
      * @return The SHA256 hash of the <code>assetContent</code> to publish. This value must be calculated by the caller
-     *         and provided with the request.</p>
+     *         and provided with the request (see <a href=
+     *         "https://docs.aws.amazon.com/codeartifact/latest/ug/using-generic.html#publishing-generic-packages"
+     *         >Publishing a generic package</a> in the <i>CodeArtifact User Guide</i>).</p>
      *         <p>
      *         This value is used as an integrity check to verify that the <code>assetContent</code> has not changed
      *         after it was originally sent.
@@ -536,7 +546,9 @@ public class PublishPackageVersionRequest extends com.amazonaws.AmazonWebService
     /**
      * <p>
      * The SHA256 hash of the <code>assetContent</code> to publish. This value must be calculated by the caller and
-     * provided with the request.
+     * provided with the request (see <a
+     * href="https://docs.aws.amazon.com/codeartifact/latest/ug/using-generic.html#publishing-generic-packages"
+     * >Publishing a generic package</a> in the <i>CodeArtifact User Guide</i>).
      * </p>
      * <p>
      * This value is used as an integrity check to verify that the <code>assetContent</code> has not changed after it
@@ -545,7 +557,9 @@ public class PublishPackageVersionRequest extends com.amazonaws.AmazonWebService
      * 
      * @param assetSHA256
      *        The SHA256 hash of the <code>assetContent</code> to publish. This value must be calculated by the caller
-     *        and provided with the request.</p>
+     *        and provided with the request (see <a
+     *        href="https://docs.aws.amazon.com/codeartifact/latest/ug/using-generic.html#publishing-generic-packages"
+     *        >Publishing a generic package</a> in the <i>CodeArtifact User Guide</i>).</p>
      *        <p>
      *        This value is used as an integrity check to verify that the <code>assetContent</code> has not changed
      *        after it was originally sent.
@@ -560,9 +574,9 @@ public class PublishPackageVersionRequest extends com.amazonaws.AmazonWebService
     /**
      * <p>
      * Specifies whether the package version should remain in the <code>unfinished</code> state. If omitted, the package
-     * version status will be set to <code>Published</code> (see <a href=
-     * "https://docs.aws.amazon.com/codeartifact/latest/ug/packages-overview.html#package-version-status.html#package-version-status"
-     * >Package version status</a> in the <i>CodeArtifact User Guide</i>).
+     * version status will be set to <code>Published</code> (see <a
+     * href="https://docs.aws.amazon.com/codeartifact/latest/ug/packages-overview.html#package-version-status">Package
+     * version status</a> in the <i>CodeArtifact User Guide</i>).
      * </p>
      * <p>
      * Valid values: <code>unfinished</code>
@@ -570,8 +584,8 @@ public class PublishPackageVersionRequest extends com.amazonaws.AmazonWebService
      * 
      * @param unfinished
      *        Specifies whether the package version should remain in the <code>unfinished</code> state. If omitted, the
-     *        package version status will be set to <code>Published</code> (see <a href=
-     *        "https://docs.aws.amazon.com/codeartifact/latest/ug/packages-overview.html#package-version-status.html#package-version-status"
+     *        package version status will be set to <code>Published</code> (see <a
+     *        href="https://docs.aws.amazon.com/codeartifact/latest/ug/packages-overview.html#package-version-status"
      *        >Package version status</a> in the <i>CodeArtifact User Guide</i>).</p>
      *        <p>
      *        Valid values: <code>unfinished</code>
@@ -584,17 +598,17 @@ public class PublishPackageVersionRequest extends com.amazonaws.AmazonWebService
     /**
      * <p>
      * Specifies whether the package version should remain in the <code>unfinished</code> state. If omitted, the package
-     * version status will be set to <code>Published</code> (see <a href=
-     * "https://docs.aws.amazon.com/codeartifact/latest/ug/packages-overview.html#package-version-status.html#package-version-status"
-     * >Package version status</a> in the <i>CodeArtifact User Guide</i>).
+     * version status will be set to <code>Published</code> (see <a
+     * href="https://docs.aws.amazon.com/codeartifact/latest/ug/packages-overview.html#package-version-status">Package
+     * version status</a> in the <i>CodeArtifact User Guide</i>).
      * </p>
      * <p>
      * Valid values: <code>unfinished</code>
      * </p>
      * 
      * @return Specifies whether the package version should remain in the <code>unfinished</code> state. If omitted, the
-     *         package version status will be set to <code>Published</code> (see <a href=
-     *         "https://docs.aws.amazon.com/codeartifact/latest/ug/packages-overview.html#package-version-status.html#package-version-status"
+     *         package version status will be set to <code>Published</code> (see <a
+     *         href="https://docs.aws.amazon.com/codeartifact/latest/ug/packages-overview.html#package-version-status"
      *         >Package version status</a> in the <i>CodeArtifact User Guide</i>).</p>
      *         <p>
      *         Valid values: <code>unfinished</code>
@@ -607,9 +621,9 @@ public class PublishPackageVersionRequest extends com.amazonaws.AmazonWebService
     /**
      * <p>
      * Specifies whether the package version should remain in the <code>unfinished</code> state. If omitted, the package
-     * version status will be set to <code>Published</code> (see <a href=
-     * "https://docs.aws.amazon.com/codeartifact/latest/ug/packages-overview.html#package-version-status.html#package-version-status"
-     * >Package version status</a> in the <i>CodeArtifact User Guide</i>).
+     * version status will be set to <code>Published</code> (see <a
+     * href="https://docs.aws.amazon.com/codeartifact/latest/ug/packages-overview.html#package-version-status">Package
+     * version status</a> in the <i>CodeArtifact User Guide</i>).
      * </p>
      * <p>
      * Valid values: <code>unfinished</code>
@@ -617,8 +631,8 @@ public class PublishPackageVersionRequest extends com.amazonaws.AmazonWebService
      * 
      * @param unfinished
      *        Specifies whether the package version should remain in the <code>unfinished</code> state. If omitted, the
-     *        package version status will be set to <code>Published</code> (see <a href=
-     *        "https://docs.aws.amazon.com/codeartifact/latest/ug/packages-overview.html#package-version-status.html#package-version-status"
+     *        package version status will be set to <code>Published</code> (see <a
+     *        href="https://docs.aws.amazon.com/codeartifact/latest/ug/packages-overview.html#package-version-status"
      *        >Package version status</a> in the <i>CodeArtifact User Guide</i>).</p>
      *        <p>
      *        Valid values: <code>unfinished</code>
@@ -633,17 +647,17 @@ public class PublishPackageVersionRequest extends com.amazonaws.AmazonWebService
     /**
      * <p>
      * Specifies whether the package version should remain in the <code>unfinished</code> state. If omitted, the package
-     * version status will be set to <code>Published</code> (see <a href=
-     * "https://docs.aws.amazon.com/codeartifact/latest/ug/packages-overview.html#package-version-status.html#package-version-status"
-     * >Package version status</a> in the <i>CodeArtifact User Guide</i>).
+     * version status will be set to <code>Published</code> (see <a
+     * href="https://docs.aws.amazon.com/codeartifact/latest/ug/packages-overview.html#package-version-status">Package
+     * version status</a> in the <i>CodeArtifact User Guide</i>).
      * </p>
      * <p>
      * Valid values: <code>unfinished</code>
      * </p>
      * 
      * @return Specifies whether the package version should remain in the <code>unfinished</code> state. If omitted, the
-     *         package version status will be set to <code>Published</code> (see <a href=
-     *         "https://docs.aws.amazon.com/codeartifact/latest/ug/packages-overview.html#package-version-status.html#package-version-status"
+     *         package version status will be set to <code>Published</code> (see <a
+     *         href="https://docs.aws.amazon.com/codeartifact/latest/ug/packages-overview.html#package-version-status"
      *         >Package version status</a> in the <i>CodeArtifact User Guide</i>).</p>
      *         <p>
      *         Valid values: <code>unfinished</code>

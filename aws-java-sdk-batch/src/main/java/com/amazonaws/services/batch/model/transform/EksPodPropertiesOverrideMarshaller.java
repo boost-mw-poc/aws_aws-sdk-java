@@ -30,6 +30,8 @@ public class EksPodPropertiesOverrideMarshaller {
 
     private static final MarshallingInfo<List> CONTAINERS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("containers").build();
+    private static final MarshallingInfo<StructuredPojo> METADATA_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("metadata").build();
 
     private static final EksPodPropertiesOverrideMarshaller instance = new EksPodPropertiesOverrideMarshaller();
 
@@ -48,6 +50,7 @@ public class EksPodPropertiesOverrideMarshaller {
 
         try {
             protocolMarshaller.marshall(eksPodPropertiesOverride.getContainers(), CONTAINERS_BINDING);
+            protocolMarshaller.marshall(eksPodPropertiesOverride.getMetadata(), METADATA_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

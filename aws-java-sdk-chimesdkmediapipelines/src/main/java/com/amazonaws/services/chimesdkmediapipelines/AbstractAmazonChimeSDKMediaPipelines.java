@@ -38,12 +38,27 @@ public class AbstractAmazonChimeSDKMediaPipelines implements AmazonChimeSDKMedia
     }
 
     @Override
+    public CreateMediaInsightsPipelineResult createMediaInsightsPipeline(CreateMediaInsightsPipelineRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public CreateMediaInsightsPipelineConfigurationResult createMediaInsightsPipelineConfiguration(CreateMediaInsightsPipelineConfigurationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateMediaLiveConnectorPipelineResult createMediaLiveConnectorPipeline(CreateMediaLiveConnectorPipelineRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
     @Override
     public DeleteMediaCapturePipelineResult deleteMediaCapturePipeline(DeleteMediaCapturePipelineRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteMediaInsightsPipelineConfigurationResult deleteMediaInsightsPipelineConfiguration(DeleteMediaInsightsPipelineConfigurationRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -58,12 +73,22 @@ public class AbstractAmazonChimeSDKMediaPipelines implements AmazonChimeSDKMedia
     }
 
     @Override
+    public GetMediaInsightsPipelineConfigurationResult getMediaInsightsPipelineConfiguration(GetMediaInsightsPipelineConfigurationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetMediaPipelineResult getMediaPipeline(GetMediaPipelineRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
     @Override
     public ListMediaCapturePipelinesResult listMediaCapturePipelines(ListMediaCapturePipelinesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListMediaInsightsPipelineConfigurationsResult listMediaInsightsPipelineConfigurations(ListMediaInsightsPipelineConfigurationsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -84,6 +109,16 @@ public class AbstractAmazonChimeSDKMediaPipelines implements AmazonChimeSDKMedia
 
     @Override
     public UntagResourceResult untagResource(UntagResourceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateMediaInsightsPipelineConfigurationResult updateMediaInsightsPipelineConfiguration(UpdateMediaInsightsPipelineConfigurationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateMediaInsightsPipelineStatusResult updateMediaInsightsPipelineStatus(UpdateMediaInsightsPipelineStatusRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

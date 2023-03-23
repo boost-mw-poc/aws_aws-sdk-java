@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Describes the configuration for the composited video artifacts.
+ * Specifies the configuration for compositing video artifacts.
  * </p>
  * 
  * @see <a

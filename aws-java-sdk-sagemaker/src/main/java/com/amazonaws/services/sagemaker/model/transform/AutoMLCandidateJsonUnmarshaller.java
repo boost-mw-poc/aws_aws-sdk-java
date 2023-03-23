@@ -97,6 +97,14 @@ public class AutoMLCandidateJsonUnmarshaller implements Unmarshaller<AutoMLCandi
                     context.nextToken();
                     autoMLCandidate.setCandidateProperties(CandidatePropertiesJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("InferenceContainerDefinitions", targetDepth)) {
+                    context.nextToken();
+                    autoMLCandidate.setInferenceContainerDefinitions(new MapUnmarshaller<String, java.util.List<AutoMLContainerDefinition>>(context
+                            .getUnmarshaller(String.class), new ListUnmarshaller<AutoMLContainerDefinition>(AutoMLContainerDefinitionJsonUnmarshaller
+                            .getInstance())
+
+                    ).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

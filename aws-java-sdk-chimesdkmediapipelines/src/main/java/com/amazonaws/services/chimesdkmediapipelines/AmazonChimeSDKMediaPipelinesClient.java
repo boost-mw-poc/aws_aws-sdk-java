@@ -53,9 +53,9 @@ import com.amazonaws.services.chimesdkmediapipelines.model.transform.*;
  * <p>
  * The Amazon Chime SDK media pipeline APIs in this section allow software developers to create Amazon Chime SDK media
  * pipelines that capture, concatenate, or stream your Amazon Chime SDK meetings. For more information about media
- * pipleines, see <a
- * href="http://amazonaws.com/chime/latest/APIReference/API_Operations_Amazon_Chime_SDK_Media_Pipelines.html">Amazon
- * Chime SDK media pipelines</a>.
+ * pipelines, see <a href=
+ * "https://docs.aws.amazon.com/chime-sdk/latest/APIReference/API_Operations_Amazon_Chime_SDK_Media_Pipelines.html"
+ * >Amazon Chime SDK media pipelines</a>.
  * </p>
  */
 @ThreadSafe
@@ -85,11 +85,17 @@ public class AmazonChimeSDKMediaPipelinesClient extends AmazonWebServiceClient i
                             new JsonErrorShapeMetadata().withErrorCode("UnauthorizedClientException").withExceptionUnmarshaller(
                                     com.amazonaws.services.chimesdkmediapipelines.model.transform.UnauthorizedClientExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("ThrottledClientException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.chimesdkmediapipelines.model.transform.ThrottledClientExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("NotFoundException").withExceptionUnmarshaller(
                                     com.amazonaws.services.chimesdkmediapipelines.model.transform.NotFoundExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("ServiceFailureException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.chimesdkmediapipelines.model.transform.ServiceFailureExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("ConflictException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.chimesdkmediapipelines.model.transform.ConflictExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("ThrottledClientException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.chimesdkmediapipelines.model.transform.ThrottledClientExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ServiceUnavailableException").withExceptionUnmarshaller(
                                     com.amazonaws.services.chimesdkmediapipelines.model.transform.ServiceUnavailableExceptionUnmarshaller.getInstance()))
@@ -102,9 +108,6 @@ public class AmazonChimeSDKMediaPipelinesClient extends AmazonWebServiceClient i
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("BadRequestException").withExceptionUnmarshaller(
                                     com.amazonaws.services.chimesdkmediapipelines.model.transform.BadRequestExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("ServiceFailureException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.chimesdkmediapipelines.model.transform.ServiceFailureExceptionUnmarshaller.getInstance()))
                     .withBaseServiceExceptionClass(com.amazonaws.services.chimesdkmediapipelines.model.AmazonChimeSDKMediaPipelinesException.class));
 
     public static AmazonChimeSDKMediaPipelinesClientBuilder builder() {
@@ -302,7 +305,156 @@ public class AmazonChimeSDKMediaPipelinesClient extends AmazonWebServiceClient i
 
     /**
      * <p>
-     * Creates a streaming media pipeline in an Amazon Chime SDK meeting.
+     * Creates a media insights pipeline.
+     * </p>
+     * 
+     * @param createMediaInsightsPipelineRequest
+     * @return Result of the CreateMediaInsightsPipeline operation returned by the service.
+     * @throws BadRequestException
+     *         The input parameters don't match the service's restrictions.
+     * @throws ForbiddenException
+     *         The client is permanently forbidden from making the request.
+     * @throws UnauthorizedClientException
+     *         The client is not currently authorized to make the request.
+     * @throws ThrottledClientException
+     *         The client exceeded its request rate limit.
+     * @throws ResourceLimitExceededException
+     *         The request exceeds the resource limit.
+     * @throws NotFoundException
+     *         One or more of the resources in the request does not exist in the system.
+     * @throws ServiceUnavailableException
+     *         The service is currently unavailable.
+     * @throws ServiceFailureException
+     *         The service encountered an unexpected error.
+     * @sample AmazonChimeSDKMediaPipelines.CreateMediaInsightsPipeline
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-media-pipelines-2021-07-15/CreateMediaInsightsPipeline"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public CreateMediaInsightsPipelineResult createMediaInsightsPipeline(CreateMediaInsightsPipelineRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateMediaInsightsPipeline(request);
+    }
+
+    @SdkInternalApi
+    final CreateMediaInsightsPipelineResult executeCreateMediaInsightsPipeline(CreateMediaInsightsPipelineRequest createMediaInsightsPipelineRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createMediaInsightsPipelineRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateMediaInsightsPipelineRequest> request = null;
+        Response<CreateMediaInsightsPipelineResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateMediaInsightsPipelineRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(createMediaInsightsPipelineRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Chime SDK Media Pipelines");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateMediaInsightsPipeline");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<CreateMediaInsightsPipelineResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new CreateMediaInsightsPipelineResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * A structure that contains the static configurations for a media insights pipeline.
+     * </p>
+     * 
+     * @param createMediaInsightsPipelineConfigurationRequest
+     * @return Result of the CreateMediaInsightsPipelineConfiguration operation returned by the service.
+     * @throws BadRequestException
+     *         The input parameters don't match the service's restrictions.
+     * @throws ForbiddenException
+     *         The client is permanently forbidden from making the request.
+     * @throws NotFoundException
+     *         One or more of the resources in the request does not exist in the system.
+     * @throws UnauthorizedClientException
+     *         The client is not currently authorized to make the request.
+     * @throws ThrottledClientException
+     *         The client exceeded its request rate limit.
+     * @throws ResourceLimitExceededException
+     *         The request exceeds the resource limit.
+     * @throws ServiceUnavailableException
+     *         The service is currently unavailable.
+     * @throws ServiceFailureException
+     *         The service encountered an unexpected error.
+     * @sample AmazonChimeSDKMediaPipelines.CreateMediaInsightsPipelineConfiguration
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-media-pipelines-2021-07-15/CreateMediaInsightsPipelineConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public CreateMediaInsightsPipelineConfigurationResult createMediaInsightsPipelineConfiguration(CreateMediaInsightsPipelineConfigurationRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateMediaInsightsPipelineConfiguration(request);
+    }
+
+    @SdkInternalApi
+    final CreateMediaInsightsPipelineConfigurationResult executeCreateMediaInsightsPipelineConfiguration(
+            CreateMediaInsightsPipelineConfigurationRequest createMediaInsightsPipelineConfigurationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createMediaInsightsPipelineConfigurationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateMediaInsightsPipelineConfigurationRequest> request = null;
+        Response<CreateMediaInsightsPipelineConfigurationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateMediaInsightsPipelineConfigurationRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(createMediaInsightsPipelineConfigurationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Chime SDK Media Pipelines");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateMediaInsightsPipelineConfiguration");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<CreateMediaInsightsPipelineConfigurationResult>> responseHandler = protocolFactory
+                    .createResponseHandler(new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                            new CreateMediaInsightsPipelineConfigurationResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Creates a media live connector pipeline in an Amazon Chime SDK meeting.
      * </p>
      * 
      * @param createMediaLiveConnectorPipelineRequest
@@ -435,6 +587,81 @@ public class AmazonChimeSDKMediaPipelinesClient extends AmazonWebServiceClient i
             HttpResponseHandler<AmazonWebServiceResponse<DeleteMediaCapturePipelineResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new DeleteMediaCapturePipelineResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Deletes the specified configuration settings.
+     * </p>
+     * 
+     * @param deleteMediaInsightsPipelineConfigurationRequest
+     * @return Result of the DeleteMediaInsightsPipelineConfiguration operation returned by the service.
+     * @throws BadRequestException
+     *         The input parameters don't match the service's restrictions.
+     * @throws ForbiddenException
+     *         The client is permanently forbidden from making the request.
+     * @throws ThrottledClientException
+     *         The client exceeded its request rate limit.
+     * @throws NotFoundException
+     *         One or more of the resources in the request does not exist in the system.
+     * @throws UnauthorizedClientException
+     *         The client is not currently authorized to make the request.
+     * @throws ConflictException
+     *         The request could not be processed because of conflict in the current state of the resource.
+     * @throws ServiceUnavailableException
+     *         The service is currently unavailable.
+     * @throws ServiceFailureException
+     *         The service encountered an unexpected error.
+     * @sample AmazonChimeSDKMediaPipelines.DeleteMediaInsightsPipelineConfiguration
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-media-pipelines-2021-07-15/DeleteMediaInsightsPipelineConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DeleteMediaInsightsPipelineConfigurationResult deleteMediaInsightsPipelineConfiguration(DeleteMediaInsightsPipelineConfigurationRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteMediaInsightsPipelineConfiguration(request);
+    }
+
+    @SdkInternalApi
+    final DeleteMediaInsightsPipelineConfigurationResult executeDeleteMediaInsightsPipelineConfiguration(
+            DeleteMediaInsightsPipelineConfigurationRequest deleteMediaInsightsPipelineConfigurationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteMediaInsightsPipelineConfigurationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteMediaInsightsPipelineConfigurationRequest> request = null;
+        Response<DeleteMediaInsightsPipelineConfigurationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteMediaInsightsPipelineConfigurationRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(deleteMediaInsightsPipelineConfigurationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Chime SDK Media Pipelines");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteMediaInsightsPipelineConfiguration");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeleteMediaInsightsPipelineConfigurationResult>> responseHandler = protocolFactory
+                    .createResponseHandler(new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                            new DeleteMediaInsightsPipelineConfigurationResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -588,6 +815,79 @@ public class AmazonChimeSDKMediaPipelinesClient extends AmazonWebServiceClient i
 
     /**
      * <p>
+     * Gets the configuration settings for a media insights pipeline.
+     * </p>
+     * 
+     * @param getMediaInsightsPipelineConfigurationRequest
+     * @return Result of the GetMediaInsightsPipelineConfiguration operation returned by the service.
+     * @throws BadRequestException
+     *         The input parameters don't match the service's restrictions.
+     * @throws ForbiddenException
+     *         The client is permanently forbidden from making the request.
+     * @throws UnauthorizedClientException
+     *         The client is not currently authorized to make the request.
+     * @throws ThrottledClientException
+     *         The client exceeded its request rate limit.
+     * @throws NotFoundException
+     *         One or more of the resources in the request does not exist in the system.
+     * @throws ServiceUnavailableException
+     *         The service is currently unavailable.
+     * @throws ServiceFailureException
+     *         The service encountered an unexpected error.
+     * @sample AmazonChimeSDKMediaPipelines.GetMediaInsightsPipelineConfiguration
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-media-pipelines-2021-07-15/GetMediaInsightsPipelineConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetMediaInsightsPipelineConfigurationResult getMediaInsightsPipelineConfiguration(GetMediaInsightsPipelineConfigurationRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetMediaInsightsPipelineConfiguration(request);
+    }
+
+    @SdkInternalApi
+    final GetMediaInsightsPipelineConfigurationResult executeGetMediaInsightsPipelineConfiguration(
+            GetMediaInsightsPipelineConfigurationRequest getMediaInsightsPipelineConfigurationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getMediaInsightsPipelineConfigurationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetMediaInsightsPipelineConfigurationRequest> request = null;
+        Response<GetMediaInsightsPipelineConfigurationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetMediaInsightsPipelineConfigurationRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(getMediaInsightsPipelineConfigurationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Chime SDK Media Pipelines");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetMediaInsightsPipelineConfiguration");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetMediaInsightsPipelineConfigurationResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new GetMediaInsightsPipelineConfigurationResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Gets an existing media pipeline.
      * </p>
      * 
@@ -717,6 +1017,79 @@ public class AmazonChimeSDKMediaPipelinesClient extends AmazonWebServiceClient i
             HttpResponseHandler<AmazonWebServiceResponse<ListMediaCapturePipelinesResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new ListMediaCapturePipelinesResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Lists the available media insights pipeline configurations.
+     * </p>
+     * 
+     * @param listMediaInsightsPipelineConfigurationsRequest
+     * @return Result of the ListMediaInsightsPipelineConfigurations operation returned by the service.
+     * @throws BadRequestException
+     *         The input parameters don't match the service's restrictions.
+     * @throws ForbiddenException
+     *         The client is permanently forbidden from making the request.
+     * @throws UnauthorizedClientException
+     *         The client is not currently authorized to make the request.
+     * @throws ThrottledClientException
+     *         The client exceeded its request rate limit.
+     * @throws ResourceLimitExceededException
+     *         The request exceeds the resource limit.
+     * @throws ServiceUnavailableException
+     *         The service is currently unavailable.
+     * @throws ServiceFailureException
+     *         The service encountered an unexpected error.
+     * @sample AmazonChimeSDKMediaPipelines.ListMediaInsightsPipelineConfigurations
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-media-pipelines-2021-07-15/ListMediaInsightsPipelineConfigurations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListMediaInsightsPipelineConfigurationsResult listMediaInsightsPipelineConfigurations(ListMediaInsightsPipelineConfigurationsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListMediaInsightsPipelineConfigurations(request);
+    }
+
+    @SdkInternalApi
+    final ListMediaInsightsPipelineConfigurationsResult executeListMediaInsightsPipelineConfigurations(
+            ListMediaInsightsPipelineConfigurationsRequest listMediaInsightsPipelineConfigurationsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listMediaInsightsPipelineConfigurationsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListMediaInsightsPipelineConfigurationsRequest> request = null;
+        Response<ListMediaInsightsPipelineConfigurationsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListMediaInsightsPipelineConfigurationsRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(listMediaInsightsPipelineConfigurationsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Chime SDK Media Pipelines");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListMediaInsightsPipelineConfigurations");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListMediaInsightsPipelineConfigurationsResult>> responseHandler = protocolFactory
+                    .createResponseHandler(new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                            new ListMediaInsightsPipelineConfigurationsResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -867,7 +1240,7 @@ public class AmazonChimeSDKMediaPipelinesClient extends AmazonWebServiceClient i
 
     /**
      * <p>
-     * The ARN of the media pipeline that you want to tag. Consists of he pipeline's endpoint region, resource ID, and
+     * The ARN of the media pipeline that you want to tag. Consists of the pipeline's endpoint region, resource ID, and
      * pipeline ID.
      * </p>
      * 
@@ -994,6 +1367,156 @@ public class AmazonChimeSDKMediaPipelinesClient extends AmazonWebServiceClient i
 
             HttpResponseHandler<AmazonWebServiceResponse<UntagResourceResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new UntagResourceResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Updates the media insights pipeline's configuration settings.
+     * </p>
+     * 
+     * @param updateMediaInsightsPipelineConfigurationRequest
+     * @return Result of the UpdateMediaInsightsPipelineConfiguration operation returned by the service.
+     * @throws BadRequestException
+     *         The input parameters don't match the service's restrictions.
+     * @throws ForbiddenException
+     *         The client is permanently forbidden from making the request.
+     * @throws UnauthorizedClientException
+     *         The client is not currently authorized to make the request.
+     * @throws ThrottledClientException
+     *         The client exceeded its request rate limit.
+     * @throws NotFoundException
+     *         One or more of the resources in the request does not exist in the system.
+     * @throws ConflictException
+     *         The request could not be processed because of conflict in the current state of the resource.
+     * @throws ServiceUnavailableException
+     *         The service is currently unavailable.
+     * @throws ServiceFailureException
+     *         The service encountered an unexpected error.
+     * @sample AmazonChimeSDKMediaPipelines.UpdateMediaInsightsPipelineConfiguration
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-media-pipelines-2021-07-15/UpdateMediaInsightsPipelineConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public UpdateMediaInsightsPipelineConfigurationResult updateMediaInsightsPipelineConfiguration(UpdateMediaInsightsPipelineConfigurationRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateMediaInsightsPipelineConfiguration(request);
+    }
+
+    @SdkInternalApi
+    final UpdateMediaInsightsPipelineConfigurationResult executeUpdateMediaInsightsPipelineConfiguration(
+            UpdateMediaInsightsPipelineConfigurationRequest updateMediaInsightsPipelineConfigurationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateMediaInsightsPipelineConfigurationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateMediaInsightsPipelineConfigurationRequest> request = null;
+        Response<UpdateMediaInsightsPipelineConfigurationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateMediaInsightsPipelineConfigurationRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(updateMediaInsightsPipelineConfigurationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Chime SDK Media Pipelines");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateMediaInsightsPipelineConfiguration");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdateMediaInsightsPipelineConfigurationResult>> responseHandler = protocolFactory
+                    .createResponseHandler(new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                            new UpdateMediaInsightsPipelineConfigurationResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Updates the status of a media insights pipeline.
+     * </p>
+     * 
+     * @param updateMediaInsightsPipelineStatusRequest
+     * @return Result of the UpdateMediaInsightsPipelineStatus operation returned by the service.
+     * @throws BadRequestException
+     *         The input parameters don't match the service's restrictions.
+     * @throws ForbiddenException
+     *         The client is permanently forbidden from making the request.
+     * @throws ConflictException
+     *         The request could not be processed because of conflict in the current state of the resource.
+     * @throws UnauthorizedClientException
+     *         The client is not currently authorized to make the request.
+     * @throws ThrottledClientException
+     *         The client exceeded its request rate limit.
+     * @throws NotFoundException
+     *         One or more of the resources in the request does not exist in the system.
+     * @throws ServiceUnavailableException
+     *         The service is currently unavailable.
+     * @throws ServiceFailureException
+     *         The service encountered an unexpected error.
+     * @sample AmazonChimeSDKMediaPipelines.UpdateMediaInsightsPipelineStatus
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-media-pipelines-2021-07-15/UpdateMediaInsightsPipelineStatus"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public UpdateMediaInsightsPipelineStatusResult updateMediaInsightsPipelineStatus(UpdateMediaInsightsPipelineStatusRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateMediaInsightsPipelineStatus(request);
+    }
+
+    @SdkInternalApi
+    final UpdateMediaInsightsPipelineStatusResult executeUpdateMediaInsightsPipelineStatus(
+            UpdateMediaInsightsPipelineStatusRequest updateMediaInsightsPipelineStatusRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateMediaInsightsPipelineStatusRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateMediaInsightsPipelineStatusRequest> request = null;
+        Response<UpdateMediaInsightsPipelineStatusResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateMediaInsightsPipelineStatusRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(updateMediaInsightsPipelineStatusRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Chime SDK Media Pipelines");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateMediaInsightsPipelineStatus");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdateMediaInsightsPipelineStatusResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new UpdateMediaInsightsPipelineStatusResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

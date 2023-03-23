@@ -53,8 +53,8 @@ public interface AmazonChimeSDKMessaging {
      * <note>
      * <p>
      * Only administrators or channel moderators can associate a channel flow. The <code>x-amz-chime-bearer</code>
-     * request header is mandatory. Use the <code>AppInstanceUserArn</code> of the user that makes the API call as the
-     * value in the header.
+     * request header is mandatory. Use the ARN of the <code>AppInstanceUser</code> or <code>AppInstanceBot</code> that
+     * makes the API call as the value in the header.
      * </p>
      * </note>
      * 
@@ -84,7 +84,7 @@ public interface AmazonChimeSDKMessaging {
 
     /**
      * <p>
-     * Adds a specified number of users to a channel.
+     * Adds a specified number of users and bots to a channel.
      * </p>
      * 
      * @param batchCreateChannelMembershipRequest
@@ -168,8 +168,8 @@ public interface AmazonChimeSDKMessaging {
      * </p>
      * <note>
      * <p>
-     * The <code>x-amz-chime-bearer</code> request header is mandatory. Use the <code>AppInstanceUserArn</code> of the
-     * user that makes the API call as the value in the header.
+     * The <code>x-amz-chime-bearer</code> request header is mandatory. Use the ARN of the <code>AppInstanceUser</code>
+     * or <code>AppInstanceBot</code> that makes the API call as the value in the header.
      * </p>
      * </note>
      * 
@@ -208,8 +208,8 @@ public interface AmazonChimeSDKMessaging {
      * </p>
      * <note>
      * <p>
-     * The <code>x-amz-chime-bearer</code> request header is mandatory. Use the <code>AppInstanceUserArn</code> of the
-     * user that makes the API call as the value in the header.
+     * The <code>x-amz-chime-bearer</code> request header is mandatory. Use the ARN of the <code>AppInstanceUser</code>
+     * or <code>AppInstanceBot</code> that makes the API call as the value in the header.
      * </p>
      * </note>
      * 
@@ -298,8 +298,8 @@ public interface AmazonChimeSDKMessaging {
 
     /**
      * <p>
-     * Adds a user to a channel. The <code>InvitedBy</code> field in <code>ChannelMembership</code> is derived from the
-     * request header. A channel member can:
+     * Adds a member to a channel. The <code>InvitedBy</code> field in <code>ChannelMembership</code> is derived from
+     * the request header. A channel member can:
      * </p>
      * <ul>
      * <li>
@@ -345,8 +345,9 @@ public interface AmazonChimeSDKMessaging {
      * </ul>
      * <note>
      * <p>
-     * The <code>x-amz-chime-bearer</code> request header is mandatory. Use the <code>AppInstanceUserArn</code> of the
-     * user that makes the API call as the value in the header.
+     * The <code>x-amz-chime-bearer</code> request header is mandatory. Use the ARN of the
+     * <code>AppInstanceUserArn</code> or <code>AppInstanceBot</code> that makes the API call as the value in the
+     * header.
      * </p>
      * </note>
      * 
@@ -409,8 +410,8 @@ public interface AmazonChimeSDKMessaging {
      * </ul>
      * <note>
      * <p>
-     * The <code>x-amz-chime-bearer</code> request header is mandatory. Use the <code>AppInstanceUserArn</code> of the
-     * user that makes the API call as the value in the header.
+     * The <code>x-amz-chime-bearer</code> request header is mandatory. Use the ARN of the <code>AppInstanceUser</code>
+     * or <code>AppInstanceBot</code>of the user that makes the API call as the value in the header.
      * </p>
      * </note>
      * 
@@ -445,8 +446,9 @@ public interface AmazonChimeSDKMessaging {
      * </p>
      * <note>
      * <p>
-     * The <code>x-amz-chime-bearer</code> request header is mandatory. Use the <code>AppInstanceUserArn</code> of the
-     * user that makes the API call as the value in the header.
+     * The <code>x-amz-chime-bearer</code> request header is mandatory. Use the ARN of the
+     * <code>AppInstanceUserArn</code> or <code>AppInstanceBot</code> that makes the API call as the value in the
+     * header.
      * </p>
      * </note>
      * 
@@ -472,12 +474,12 @@ public interface AmazonChimeSDKMessaging {
 
     /**
      * <p>
-     * Removes a user from a channel's ban list.
+     * Removes a member from a channel's ban list.
      * </p>
      * <note>
      * <p>
-     * The <code>x-amz-chime-bearer</code> request header is mandatory. Use the <code>AppInstanceUserArn</code> of the
-     * user that makes the API call as the value in the header.
+     * The <code>x-amz-chime-bearer</code> request header is mandatory. Use the ARN of the <code>AppInstanceUser</code>
+     * or <code>AppInstanceBot</code> that makes the API call as the value in the header.
      * </p>
      * </note>
      * 
@@ -575,8 +577,8 @@ public interface AmazonChimeSDKMessaging {
      * </p>
      * <note>
      * <p>
-     * The <code>x-amz-chime-bearer</code> request header is mandatory. Use the <code>AppInstanceUserArn</code> of the
-     * user that makes the API call as the value in the header.
+     * The <code>x-amz-chime-bearer</code> request header is mandatory. Use the ARN of the <code>AppInstanceUser</code>
+     * or <code>AppInstanceBot</code> that makes the API call as the value in the header.
      * </p>
      * </note>
      * 
@@ -606,8 +608,8 @@ public interface AmazonChimeSDKMessaging {
      * </p>
      * <note>
      * <p>
-     * The <code>x-amz-chime-bearer</code> request header is mandatory. Use the <code>AppInstanceUserArn</code> of the
-     * user that makes the API call as the value in the header.
+     * The <code>x-amz-chime-bearer</code> request header is mandatory. Use the ARN of the <code>AppInstanceUser</code>
+     * or <code>AppInstanceBot</code> that makes the API call as the value in the header.
      * </p>
      * </note>
      * 
@@ -664,8 +666,8 @@ public interface AmazonChimeSDKMessaging {
      * </p>
      * <note>
      * <p>
-     * The <code>x-amz-chime-bearer</code> request header is mandatory. Use the <code>AppInstanceUserArn</code> of the
-     * user that makes the API call as the value in the header.
+     * The <code>x-amz-chime-bearer</code> request header is mandatory. Use the ARN of the <code>AppInstanceUser</code>
+     * or <code>AppInstanceBot</code> that makes the API call as the value in the header.
      * </p>
      * </note>
      * 
@@ -695,8 +697,8 @@ public interface AmazonChimeSDKMessaging {
      * </p>
      * <note>
      * <p>
-     * The <code>x-amz-chime-bearer</code> request header is mandatory. Use the <code>AppInstanceUserArn</code> of the
-     * user that makes the API call as the value in the header.
+     * The <code>x-amz-chime-bearer</code> request header is mandatory. Use the ARN of the <code>AppInstanceUser</code>
+     * or <code>AppInstanceBot</code> that makes the API call as the value in the header.
      * </p>
      * </note>
      * 
@@ -753,8 +755,8 @@ public interface AmazonChimeSDKMessaging {
      * </p>
      * <note>
      * <p>
-     * The <code>x-amz-chime-bearer</code> request header is mandatory. Use the <code>AppInstanceUserArn</code> of the
-     * user that makes the API call as the value in the header.
+     * The <code>x-amz-chime-bearer</code> request header is mandatory. Use the ARN of the <code>AppInstanceUser</code>
+     * or <code>AppInstanceBot</code> that makes the API call as the value in the header.
      * </p>
      * </note>
      * 
@@ -782,12 +784,13 @@ public interface AmazonChimeSDKMessaging {
 
     /**
      * <p>
-     * Returns the details of a channel based on the membership of the specified <code>AppInstanceUser</code>.
+     * Returns the details of a channel based on the membership of the specified <code>AppInstanceUser</code> or
+     * <code>AppInstanceBot</code>.
      * </p>
      * <note>
      * <p>
-     * The <code>x-amz-chime-bearer</code> request header is mandatory. Use the <code>AppInstanceUserArn</code> of the
-     * user that makes the API call as the value in the header.
+     * The <code>x-amz-chime-bearer</code> request header is mandatory. Use the ARN of the <code>AppInstanceUser</code>
+     * or <code>AppInstanceBot</code> that makes the API call as the value in the header.
      * </p>
      * </note>
      * 
@@ -815,12 +818,13 @@ public interface AmazonChimeSDKMessaging {
 
     /**
      * <p>
-     * Returns the full details of a channel moderated by the specified <code>AppInstanceUser</code>.
+     * Returns the full details of a channel moderated by the specified <code>AppInstanceUser</code> or
+     * <code>AppInstanceBot</code>.
      * </p>
      * <note>
      * <p>
-     * The <code>x-amz-chime-bearer</code> request header is mandatory. Use the <code>AppInstanceUserArn</code> of the
-     * user that makes the API call as the value in the header.
+     * The <code>x-amz-chime-bearer</code> request header is mandatory. Use the ARN of the <code>AppInstanceUser</code>
+     * or <code>AppInstanceBot</code> that makes the API call as the value in the header.
      * </p>
      * </note>
      * 
@@ -886,9 +890,11 @@ public interface AmazonChimeSDKMessaging {
      * </p>
      * <note>
      * <p>
-     * Only administrators or channel moderators can disassociate a channel flow. The <code>x-amz-chime-bearer</code>
-     * request header is mandatory. Use the <code>AppInstanceUserArn</code> of the user that makes the API call as the
-     * value in the header.
+     * Only administrators or channel moderators can disassociate a channel flow.
+     * </p>
+     * <p>
+     * The <code>x-amz-chime-bearer</code> request header is mandatory. Use the ARN of the <code>AppInstanceUser</code>
+     * or <code>AppInstanceBot</code> that makes the API call as the value in the header.
      * </p>
      * </note>
      * 
@@ -918,12 +924,18 @@ public interface AmazonChimeSDKMessaging {
 
     /**
      * <p>
-     * Gets the membership preferences of an <code>AppInstanceUser</code> for the specified channel. The
-     * <code>AppInstanceUser</code> must be a member of the channel. Only the <code>AppInstanceUser</code> who owns the
-     * membership can retrieve preferences. Users in the <code>AppInstanceAdmin</code> and channel moderator roles can't
-     * retrieve preferences for other users. Banned users can't retrieve membership preferences for the channel from
-     * which they are banned.
+     * Gets the membership preferences of an <code>AppInstanceUser</code> or <code>AppInstanceBot</code> for the
+     * specified channel. A user or a bot must be a member of the channel and own the membership to be able to retrieve
+     * membership preferences. Users or bots in the <code>AppInstanceAdmin</code> and channel moderator roles can't
+     * retrieve preferences for other users or bots. Banned users or bots can't retrieve membership preferences for the
+     * channel from which they are banned.
      * </p>
+     * <note>
+     * <p>
+     * The <code>x-amz-chime-bearer</code> request header is mandatory. Use the ARN of the <code>AppInstanceUser</code>
+     * or <code>AppInstanceBot</code> that makes the API call as the value in the header.
+     * </p>
+     * </note>
      * 
      * @param getChannelMembershipPreferencesRequest
      * @return Result of the GetChannelMembershipPreferences operation returned by the service.
@@ -952,8 +964,8 @@ public interface AmazonChimeSDKMessaging {
      * </p>
      * <note>
      * <p>
-     * The x-amz-chime-bearer request header is mandatory. Use the <code>AppInstanceUserArn</code> of the user that
-     * makes the API call as the value in the header.
+     * The <code>x-amz-chime-bearer</code> request header is mandatory. Use the ARN of the <code>AppInstanceUser</code>
+     * or <code>AppInstanceBot</code> that makes the API call as the value in the header.
      * </p>
      * </note>
      * 
@@ -1029,8 +1041,8 @@ public interface AmazonChimeSDKMessaging {
      * </li>
      * <li>
      * <p>
-     * The <code>x-amz-chime-bearer</code> request header is mandatory. Use the <code>AppInstanceUserArn</code> of the
-     * user that makes the API call as the value in the header
+     * The <code>x-amz-chime-bearer</code> request header is mandatory. Use the ARN of the <code>AppInstanceUser</code>
+     * or <code>AppInstanceBot</code> that makes the API call as the value in the header.
      * </p>
      * </li>
      * </ul>
@@ -1112,12 +1124,12 @@ public interface AmazonChimeSDKMessaging {
 
     /**
      * <p>
-     * Lists all the users banned from a particular channel.
+     * Lists all the users and bots banned from a particular channel.
      * </p>
      * <note>
      * <p>
-     * The <code>x-amz-chime-bearer</code> request header is mandatory. Use the <code>AppInstanceUserArn</code> of the
-     * user that makes the API call as the value in the header.
+     * The <code>x-amz-chime-bearer</code> request header is mandatory. Use the ARN of the <code>AppInstanceUser</code>
+     * or <code>AppInstanceBot</code> that makes the API call as the value in the header.
      * </p>
      * </note>
      * 
@@ -1172,8 +1184,8 @@ public interface AmazonChimeSDKMessaging {
      * </p>
      * <note>
      * <p>
-     * The <code>x-amz-chime-bearer</code> request header is mandatory. Use the <code>AppInstanceUserArn</code> of the
-     * user that makes the API call as the value in the header.
+     * The <code>x-amz-chime-bearer</code> request header is mandatory. Use the ARN of the <code>AppInstanceUser</code>
+     * or <code>AppInstanceBot</code> that makes the API call as the value in the header.
      * </p>
      * </note>
      * <p>
@@ -1204,13 +1216,13 @@ public interface AmazonChimeSDKMessaging {
 
     /**
      * <p>
-     * Lists all channels that a particular <code>AppInstanceUser</code> is a part of. Only an
+     * Lists all channels that anr <code>AppInstanceUser</code> or <code>AppInstanceBot</code> is a part of. Only an
      * <code>AppInstanceAdmin</code> can call the API with a user ARN that is not their own.
      * </p>
      * <note>
      * <p>
-     * The <code>x-amz-chime-bearer</code> request header is mandatory. Use the <code>AppInstanceUserArn</code> of the
-     * user that makes the API call as the value in the header.
+     * The <code>x-amz-chime-bearer</code> request header is mandatory. Use the ARN of the <code>AppInstanceUser</code>
+     * or <code>AppInstanceBot</code> that makes the API call as the value in the header.
      * </p>
      * </note>
      * 
@@ -1247,8 +1259,8 @@ public interface AmazonChimeSDKMessaging {
      * not appear in the results. This action always returns the latest version of an edited message.
      * </p>
      * <p>
-     * Also, the x-amz-chime-bearer request header is mandatory. Use the <code>AppInstanceUserArn</code> of the user
-     * that makes the API call as the value in the header.
+     * Also, the <code>x-amz-chime-bearer</code> request header is mandatory. Use the ARN of the
+     * <code>AppInstanceUser</code> or <code>AppInstanceBot</code> that makes the API call as the value in the header.
      * </p>
      * </note>
      * 
@@ -1278,8 +1290,8 @@ public interface AmazonChimeSDKMessaging {
      * </p>
      * <note>
      * <p>
-     * The <code>x-amz-chime-bearer</code> request header is mandatory. Use the <code>AppInstanceUserArn</code> of the
-     * user that makes the API call as the value in the header.
+     * The <code>x-amz-chime-bearer</code> request header is mandatory. Use the ARN of the <code>AppInstanceUser</code>
+     * or <code>AppInstanceBot</code> that makes the API call as the value in the header.
      * </p>
      * </note>
      * 
@@ -1326,8 +1338,8 @@ public interface AmazonChimeSDKMessaging {
      * </ul>
      * <note>
      * <p>
-     * The <code>x-amz-chime-bearer</code> request header is mandatory. Use the <code>AppInstanceUserArn</code> of the
-     * user that makes the API call as the value in the header.
+     * The <code>x-amz-chime-bearer</code> request header is mandatory. Use the ARN of the <code>AppInstanceUser</code>
+     * or <code>AppInstanceBot</code> that makes the API call as the value in the header.
      * </p>
      * </note>
      * 
@@ -1385,8 +1397,8 @@ public interface AmazonChimeSDKMessaging {
      * </p>
      * <note>
      * <p>
-     * The <code>x-amz-chime-bearer</code> request header is mandatory. Use the <code>AppInstanceUserArn</code> of the
-     * user that makes the API call as the value in the header.
+     * The <code>x-amz-chime-bearer</code> request header is mandatory. Use the ARN of the <code>AppInstanceUser</code>
+     * or <code>AppInstanceBot</code> that makes the API call as the value in the header.
      * </p>
      * </note>
      * 
@@ -1465,12 +1477,66 @@ public interface AmazonChimeSDKMessaging {
 
     /**
      * <p>
-     * Sets the membership preferences of an <code>AppInstanceUser</code> for the specified channel. The
-     * <code>AppInstanceUser</code> must be a member of the channel. Only the <code>AppInstanceUser</code> who owns the
-     * membership can set preferences. Users in the <code>AppInstanceAdmin</code> and channel moderator roles can't set
-     * preferences for other users. Banned users can't set membership preferences for the channel from which they are
-     * banned.
+     * Sets the number of days before the channel is automatically deleted.
      * </p>
+     * <note>
+     * <ul>
+     * <li>
+     * <p>
+     * A background process deletes expired channels within 6 hours of expiration. Actual deletion times may vary.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Expired channels that have not yet been deleted appear as active, and you can update their expiration settings.
+     * The system honors the new settings.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The <code>x-amz-chime-bearer</code> request header is mandatory. Use the ARN of the <code>AppInstanceUser</code>
+     * or <code>AppInstanceBot</code> that makes the API call as the value in the header.
+     * </p>
+     * </li>
+     * </ul>
+     * </note>
+     * 
+     * @param putChannelExpirationSettingsRequest
+     * @return Result of the PutChannelExpirationSettings operation returned by the service.
+     * @throws BadRequestException
+     *         The input parameters don't match the service's restrictions.
+     * @throws ForbiddenException
+     *         The client is permanently forbidden from making the request.
+     * @throws ConflictException
+     *         The request could not be processed because of conflict in the current state of the resource.
+     * @throws UnauthorizedClientException
+     *         The client is not currently authorized to make the request.
+     * @throws ThrottledClientException
+     *         The client exceeded its request rate limit.
+     * @throws ServiceUnavailableException
+     *         The service is currently unavailable.
+     * @throws ServiceFailureException
+     *         The service encountered an unexpected error.
+     * @sample AmazonChimeSDKMessaging.PutChannelExpirationSettings
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-messaging-2021-05-15/PutChannelExpirationSettings"
+     *      target="_top">AWS API Documentation</a>
+     */
+    PutChannelExpirationSettingsResult putChannelExpirationSettings(PutChannelExpirationSettingsRequest putChannelExpirationSettingsRequest);
+
+    /**
+     * <p>
+     * Sets the membership preferences of an <code>AppInstanceUser</code> or <code>AppIntanceBot</code> for the
+     * specified channel. The user or bot must be a member of the channel. Only the user or bot who owns the membership
+     * can set preferences. Users or bots in the <code>AppInstanceAdmin</code> and channel moderator roles can't set
+     * preferences for other users or users. Banned users or bots can't set membership preferences for the channel from
+     * which they are banned.
+     * </p>
+     * <note>
+     * <p>
+     * The x-amz-chime-bearer request header is mandatory. Use the ARN of an <code>AppInstanceUser</code> or
+     * <code>AppInstanceBot</code> that makes the API call as the value in the header.
+     * </p>
+     * </note>
      * 
      * @param putChannelMembershipPreferencesRequest
      * @return Result of the PutChannelMembershipPreferences operation returned by the service.
@@ -1535,8 +1601,8 @@ public interface AmazonChimeSDKMessaging {
      * </p>
      * <note>
      * <p>
-     * The <code>x-amz-chime-bearer</code> request header is mandatory. Use the <code>AppInstanceUserArn</code> of the
-     * user that makes the API call as the value in the header.
+     * The <code>x-amz-chime-bearer</code> request header is mandatory. Use the ARN of the <code>AppInstanceUser</code>
+     * or <code>AppInstanceBot</code> that makes the API call as the value in the header.
      * </p>
      * </note>
      * 
@@ -1564,8 +1630,12 @@ public interface AmazonChimeSDKMessaging {
 
     /**
      * <p>
-     * Allows <code>ChimeBearer</code> to search channels by channel members. AppInstanceUsers can search across the
-     * channels that they belong to. AppInstanceAdmins can search across all channels.
+     * Allows the <code>ChimeBearer</code> to search channels by channel members. Users or bots can search across the
+     * channels that they belong to. Users in the <code>AppInstanceAdmin</code> role can search across all channels.
+     * </p>
+     * <p>
+     * The <code>x-amz-chime-bearer</code> request header is mandatory. Use the ARN of the <code>AppInstanceUser</code>
+     * or <code>AppInstanceBot</code> that makes the API call as the value in the header.
      * </p>
      * 
      * @param searchChannelsRequest
@@ -1594,8 +1664,8 @@ public interface AmazonChimeSDKMessaging {
      * </p>
      * <note>
      * <p>
-     * The <code>x-amz-chime-bearer</code> request header is mandatory. Use the <code>AppInstanceUserArn</code> of the
-     * user that makes the API call as the value in the header.
+     * The <code>x-amz-chime-bearer</code> request header is mandatory. Use the ARN of the <code>AppInstanceUser</code>
+     * or <code>AppInstanceBot</code> that makes the API call as the value in the header.
      * </p>
      * <p>
      * Also, <code>STANDARD</code> messages can contain 4KB of data and the 1KB of metadata. <code>CONTROL</code>
@@ -1686,8 +1756,8 @@ public interface AmazonChimeSDKMessaging {
      * </p>
      * <note>
      * <p>
-     * The <code>x-amz-chime-bearer</code> request header is mandatory. Use the <code>AppInstanceUserArn</code> of the
-     * user that makes the API call as the value in the header.
+     * The <code>x-amz-chime-bearer</code> request header is mandatory. Use the ARN of the <code>AppInstanceUser</code>
+     * or <code>AppInstanceBot</code> that makes the API call as the value in the header.
      * </p>
      * </note>
      * 
@@ -1746,8 +1816,8 @@ public interface AmazonChimeSDKMessaging {
      * </p>
      * <note>
      * <p>
-     * The <code>x-amz-chime-bearer</code> request header is mandatory. Use the <code>AppInstanceUserArn</code> of the
-     * user that makes the API call as the value in the header.
+     * The <code>x-amz-chime-bearer</code> request header is mandatory. Use the ARN of the <code>AppInstanceUser</code>
+     * or <code>AppInstanceBot</code> that makes the API call as the value in the header.
      * </p>
      * </note>
      * 
@@ -1779,8 +1849,8 @@ public interface AmazonChimeSDKMessaging {
      * </p>
      * <note>
      * <p>
-     * The <code>x-amz-chime-bearer</code> request header is mandatory. Use the <code>AppInstanceUserArn</code> of the
-     * user that makes the API call as the value in the header.
+     * The <code>x-amz-chime-bearer</code> request header is mandatory. Use the ARN of the <code>AppInstanceUser</code>
+     * or <code>AppInstanceBot</code> that makes the API call as the value in the header.
      * </p>
      * </note>
      * 

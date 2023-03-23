@@ -755,7 +755,7 @@ public class AppInstanceUserEndpoint implements Serializable, Cloneable, Structu
         if (getType() != null)
             sb.append("Type: ").append(getType()).append(",");
         if (getResourceArn() != null)
-            sb.append("ResourceArn: ").append("***Sensitive Data Redacted***").append(",");
+            sb.append("ResourceArn: ").append(getResourceArn()).append(",");
         if (getEndpointAttributes() != null)
             sb.append("EndpointAttributes: ").append(getEndpointAttributes()).append(",");
         if (getCreatedTimestamp() != null)

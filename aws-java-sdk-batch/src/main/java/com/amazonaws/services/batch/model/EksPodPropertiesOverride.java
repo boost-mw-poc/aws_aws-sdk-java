@@ -35,6 +35,8 @@ public class EksPodPropertiesOverride implements Serializable, Cloneable, Struct
      */
     private java.util.List<EksContainerOverride> containers;
 
+    private EksMetadata metadata;
+
     /**
      * <p>
      * The overrides for the container that's used on the Amazon EKS pod.
@@ -106,6 +108,32 @@ public class EksPodPropertiesOverride implements Serializable, Cloneable, Struct
     }
 
     /**
+     * @param metadata
+     */
+
+    public void setMetadata(EksMetadata metadata) {
+        this.metadata = metadata;
+    }
+
+    /**
+     * @return
+     */
+
+    public EksMetadata getMetadata() {
+        return this.metadata;
+    }
+
+    /**
+     * @param metadata
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public EksPodPropertiesOverride withMetadata(EksMetadata metadata) {
+        setMetadata(metadata);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -118,7 +146,9 @@ public class EksPodPropertiesOverride implements Serializable, Cloneable, Struct
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getContainers() != null)
-            sb.append("Containers: ").append(getContainers());
+            sb.append("Containers: ").append(getContainers()).append(",");
+        if (getMetadata() != null)
+            sb.append("Metadata: ").append(getMetadata());
         sb.append("}");
         return sb.toString();
     }
@@ -137,6 +167,10 @@ public class EksPodPropertiesOverride implements Serializable, Cloneable, Struct
             return false;
         if (other.getContainers() != null && other.getContainers().equals(this.getContainers()) == false)
             return false;
+        if (other.getMetadata() == null ^ this.getMetadata() == null)
+            return false;
+        if (other.getMetadata() != null && other.getMetadata().equals(this.getMetadata()) == false)
+            return false;
         return true;
     }
 
@@ -146,6 +180,7 @@ public class EksPodPropertiesOverride implements Serializable, Cloneable, Struct
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getContainers() == null) ? 0 : getContainers().hashCode());
+        hashCode = prime * hashCode + ((getMetadata() == null) ? 0 : getMetadata().hashCode());
         return hashCode;
     }
 

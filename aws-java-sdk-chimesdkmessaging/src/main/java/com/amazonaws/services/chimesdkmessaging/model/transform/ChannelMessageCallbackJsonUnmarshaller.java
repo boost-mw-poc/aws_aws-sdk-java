@@ -73,6 +73,10 @@ public class ChannelMessageCallbackJsonUnmarshaller implements Unmarshaller<Chan
                     context.nextToken();
                     channelMessageCallback.setSubChannelId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("ContentType", targetDepth)) {
+                    context.nextToken();
+                    channelMessageCallback.setContentType(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

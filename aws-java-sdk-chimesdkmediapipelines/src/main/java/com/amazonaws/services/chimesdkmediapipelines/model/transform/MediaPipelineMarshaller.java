@@ -33,6 +33,8 @@ public class MediaPipelineMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MediaLiveConnectorPipeline").build();
     private static final MarshallingInfo<StructuredPojo> MEDIACONCATENATIONPIPELINE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MediaConcatenationPipeline").build();
+    private static final MarshallingInfo<StructuredPojo> MEDIAINSIGHTSPIPELINE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MediaInsightsPipeline").build();
 
     private static final MediaPipelineMarshaller instance = new MediaPipelineMarshaller();
 
@@ -53,6 +55,7 @@ public class MediaPipelineMarshaller {
             protocolMarshaller.marshall(mediaPipeline.getMediaCapturePipeline(), MEDIACAPTUREPIPELINE_BINDING);
             protocolMarshaller.marshall(mediaPipeline.getMediaLiveConnectorPipeline(), MEDIALIVECONNECTORPIPELINE_BINDING);
             protocolMarshaller.marshall(mediaPipeline.getMediaConcatenationPipeline(), MEDIACONCATENATIONPIPELINE_BINDING);
+            protocolMarshaller.marshall(mediaPipeline.getMediaInsightsPipeline(), MEDIAINSIGHTSPIPELINE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

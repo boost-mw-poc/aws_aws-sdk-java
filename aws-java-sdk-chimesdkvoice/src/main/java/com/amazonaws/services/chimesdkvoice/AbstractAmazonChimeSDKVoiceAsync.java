@@ -175,6 +175,32 @@ public class AbstractAmazonChimeSDKVoiceAsync extends AbstractAmazonChimeSDKVoic
     }
 
     @Override
+    public java.util.concurrent.Future<CreateVoiceProfileResult> createVoiceProfileAsync(CreateVoiceProfileRequest request) {
+
+        return createVoiceProfileAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateVoiceProfileResult> createVoiceProfileAsync(CreateVoiceProfileRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateVoiceProfileRequest, CreateVoiceProfileResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateVoiceProfileDomainResult> createVoiceProfileDomainAsync(CreateVoiceProfileDomainRequest request) {
+
+        return createVoiceProfileDomainAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateVoiceProfileDomainResult> createVoiceProfileDomainAsync(CreateVoiceProfileDomainRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateVoiceProfileDomainRequest, CreateVoiceProfileDomainResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DeletePhoneNumberResult> deletePhoneNumberAsync(DeletePhoneNumberRequest request) {
 
         return deletePhoneNumberAsync(request, null);
@@ -341,6 +367,32 @@ public class AbstractAmazonChimeSDKVoiceAsync extends AbstractAmazonChimeSDKVoic
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteVoiceProfileResult> deleteVoiceProfileAsync(DeleteVoiceProfileRequest request) {
+
+        return deleteVoiceProfileAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteVoiceProfileResult> deleteVoiceProfileAsync(DeleteVoiceProfileRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteVoiceProfileRequest, DeleteVoiceProfileResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteVoiceProfileDomainResult> deleteVoiceProfileDomainAsync(DeleteVoiceProfileDomainRequest request) {
+
+        return deleteVoiceProfileDomainAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteVoiceProfileDomainResult> deleteVoiceProfileDomainAsync(DeleteVoiceProfileDomainRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteVoiceProfileDomainRequest, DeleteVoiceProfileDomainResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DisassociatePhoneNumbersFromVoiceConnectorResult> disassociatePhoneNumbersFromVoiceConnectorAsync(
             DisassociatePhoneNumbersFromVoiceConnectorRequest request) {
 
@@ -492,6 +544,19 @@ public class AbstractAmazonChimeSDKVoiceAsync extends AbstractAmazonChimeSDKVoic
     }
 
     @Override
+    public java.util.concurrent.Future<GetSpeakerSearchTaskResult> getSpeakerSearchTaskAsync(GetSpeakerSearchTaskRequest request) {
+
+        return getSpeakerSearchTaskAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetSpeakerSearchTaskResult> getSpeakerSearchTaskAsync(GetSpeakerSearchTaskRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetSpeakerSearchTaskRequest, GetSpeakerSearchTaskResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetVoiceConnectorResult> getVoiceConnectorAsync(GetVoiceConnectorRequest request) {
 
         return getVoiceConnectorAsync(request, null);
@@ -617,6 +682,45 @@ public class AbstractAmazonChimeSDKVoiceAsync extends AbstractAmazonChimeSDKVoic
     }
 
     @Override
+    public java.util.concurrent.Future<GetVoiceProfileResult> getVoiceProfileAsync(GetVoiceProfileRequest request) {
+
+        return getVoiceProfileAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetVoiceProfileResult> getVoiceProfileAsync(GetVoiceProfileRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetVoiceProfileRequest, GetVoiceProfileResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetVoiceProfileDomainResult> getVoiceProfileDomainAsync(GetVoiceProfileDomainRequest request) {
+
+        return getVoiceProfileDomainAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetVoiceProfileDomainResult> getVoiceProfileDomainAsync(GetVoiceProfileDomainRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetVoiceProfileDomainRequest, GetVoiceProfileDomainResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetVoiceToneAnalysisTaskResult> getVoiceToneAnalysisTaskAsync(GetVoiceToneAnalysisTaskRequest request) {
+
+        return getVoiceToneAnalysisTaskAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetVoiceToneAnalysisTaskResult> getVoiceToneAnalysisTaskAsync(GetVoiceToneAnalysisTaskRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetVoiceToneAnalysisTaskRequest, GetVoiceToneAnalysisTaskResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ListAvailableVoiceConnectorRegionsResult> listAvailableVoiceConnectorRegionsAsync(
             ListAvailableVoiceConnectorRegionsRequest request) {
 
@@ -712,6 +816,19 @@ public class AbstractAmazonChimeSDKVoiceAsync extends AbstractAmazonChimeSDKVoic
     }
 
     @Override
+    public java.util.concurrent.Future<ListTagsForResourceResult> listTagsForResourceAsync(ListTagsForResourceRequest request) {
+
+        return listTagsForResourceAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListTagsForResourceResult> listTagsForResourceAsync(ListTagsForResourceRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListTagsForResourceRequest, ListTagsForResourceResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ListVoiceConnectorGroupsResult> listVoiceConnectorGroupsAsync(ListVoiceConnectorGroupsRequest request) {
 
         return listVoiceConnectorGroupsAsync(request, null);
@@ -748,6 +865,32 @@ public class AbstractAmazonChimeSDKVoiceAsync extends AbstractAmazonChimeSDKVoic
     @Override
     public java.util.concurrent.Future<ListVoiceConnectorsResult> listVoiceConnectorsAsync(ListVoiceConnectorsRequest request,
             com.amazonaws.handlers.AsyncHandler<ListVoiceConnectorsRequest, ListVoiceConnectorsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListVoiceProfileDomainsResult> listVoiceProfileDomainsAsync(ListVoiceProfileDomainsRequest request) {
+
+        return listVoiceProfileDomainsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListVoiceProfileDomainsResult> listVoiceProfileDomainsAsync(ListVoiceProfileDomainsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListVoiceProfileDomainsRequest, ListVoiceProfileDomainsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListVoiceProfilesResult> listVoiceProfilesAsync(ListVoiceProfilesRequest request) {
+
+        return listVoiceProfilesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListVoiceProfilesResult> listVoiceProfilesAsync(ListVoiceProfilesRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListVoiceProfilesRequest, ListVoiceProfilesResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -908,6 +1051,84 @@ public class AbstractAmazonChimeSDKVoiceAsync extends AbstractAmazonChimeSDKVoic
     }
 
     @Override
+    public java.util.concurrent.Future<StartSpeakerSearchTaskResult> startSpeakerSearchTaskAsync(StartSpeakerSearchTaskRequest request) {
+
+        return startSpeakerSearchTaskAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartSpeakerSearchTaskResult> startSpeakerSearchTaskAsync(StartSpeakerSearchTaskRequest request,
+            com.amazonaws.handlers.AsyncHandler<StartSpeakerSearchTaskRequest, StartSpeakerSearchTaskResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartVoiceToneAnalysisTaskResult> startVoiceToneAnalysisTaskAsync(StartVoiceToneAnalysisTaskRequest request) {
+
+        return startVoiceToneAnalysisTaskAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartVoiceToneAnalysisTaskResult> startVoiceToneAnalysisTaskAsync(StartVoiceToneAnalysisTaskRequest request,
+            com.amazonaws.handlers.AsyncHandler<StartVoiceToneAnalysisTaskRequest, StartVoiceToneAnalysisTaskResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<StopSpeakerSearchTaskResult> stopSpeakerSearchTaskAsync(StopSpeakerSearchTaskRequest request) {
+
+        return stopSpeakerSearchTaskAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StopSpeakerSearchTaskResult> stopSpeakerSearchTaskAsync(StopSpeakerSearchTaskRequest request,
+            com.amazonaws.handlers.AsyncHandler<StopSpeakerSearchTaskRequest, StopSpeakerSearchTaskResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<StopVoiceToneAnalysisTaskResult> stopVoiceToneAnalysisTaskAsync(StopVoiceToneAnalysisTaskRequest request) {
+
+        return stopVoiceToneAnalysisTaskAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StopVoiceToneAnalysisTaskResult> stopVoiceToneAnalysisTaskAsync(StopVoiceToneAnalysisTaskRequest request,
+            com.amazonaws.handlers.AsyncHandler<StopVoiceToneAnalysisTaskRequest, StopVoiceToneAnalysisTaskResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<TagResourceResult> tagResourceAsync(TagResourceRequest request) {
+
+        return tagResourceAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<TagResourceResult> tagResourceAsync(TagResourceRequest request,
+            com.amazonaws.handlers.AsyncHandler<TagResourceRequest, TagResourceResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UntagResourceResult> untagResourceAsync(UntagResourceRequest request) {
+
+        return untagResourceAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UntagResourceResult> untagResourceAsync(UntagResourceRequest request,
+            com.amazonaws.handlers.AsyncHandler<UntagResourceRequest, UntagResourceResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<UpdateGlobalSettingsResult> updateGlobalSettingsAsync(UpdateGlobalSettingsRequest request) {
 
         return updateGlobalSettingsAsync(request, null);
@@ -1020,6 +1241,32 @@ public class AbstractAmazonChimeSDKVoiceAsync extends AbstractAmazonChimeSDKVoic
     @Override
     public java.util.concurrent.Future<UpdateVoiceConnectorGroupResult> updateVoiceConnectorGroupAsync(UpdateVoiceConnectorGroupRequest request,
             com.amazonaws.handlers.AsyncHandler<UpdateVoiceConnectorGroupRequest, UpdateVoiceConnectorGroupResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateVoiceProfileResult> updateVoiceProfileAsync(UpdateVoiceProfileRequest request) {
+
+        return updateVoiceProfileAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateVoiceProfileResult> updateVoiceProfileAsync(UpdateVoiceProfileRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateVoiceProfileRequest, UpdateVoiceProfileResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateVoiceProfileDomainResult> updateVoiceProfileDomainAsync(UpdateVoiceProfileDomainRequest request) {
+
+        return updateVoiceProfileDomainAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateVoiceProfileDomainResult> updateVoiceProfileDomainAsync(UpdateVoiceProfileDomainRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateVoiceProfileDomainRequest, UpdateVoiceProfileDomainResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

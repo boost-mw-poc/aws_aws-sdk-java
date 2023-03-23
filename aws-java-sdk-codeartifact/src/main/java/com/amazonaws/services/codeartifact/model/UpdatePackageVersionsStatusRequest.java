@@ -75,7 +75,7 @@ public class UpdatePackageVersionsStatusRequest extends com.amazonaws.AmazonWebS
      * </li>
      * <li>
      * <p>
-     * The namespace of a generic package is it’s <code>namespace</code>.
+     * The namespace of a generic package is its <code>namespace</code>.
      * </p>
      * </li>
      * </ul>
@@ -330,7 +330,7 @@ public class UpdatePackageVersionsStatusRequest extends com.amazonaws.AmazonWebS
      * </li>
      * <li>
      * <p>
-     * The namespace of a generic package is it’s <code>namespace</code>.
+     * The namespace of a generic package is its <code>namespace</code>.
      * </p>
      * </li>
      * </ul>
@@ -357,7 +357,7 @@ public class UpdatePackageVersionsStatusRequest extends com.amazonaws.AmazonWebS
      *        </li>
      *        <li>
      *        <p>
-     *        The namespace of a generic package is it’s <code>namespace</code>.
+     *        The namespace of a generic package is its <code>namespace</code>.
      *        </p>
      *        </li>
      */
@@ -390,7 +390,7 @@ public class UpdatePackageVersionsStatusRequest extends com.amazonaws.AmazonWebS
      * </li>
      * <li>
      * <p>
-     * The namespace of a generic package is it’s <code>namespace</code>.
+     * The namespace of a generic package is its <code>namespace</code>.
      * </p>
      * </li>
      * </ul>
@@ -416,7 +416,7 @@ public class UpdatePackageVersionsStatusRequest extends com.amazonaws.AmazonWebS
      *         </li>
      *         <li>
      *         <p>
-     *         The namespace of a generic package is it’s <code>namespace</code>.
+     *         The namespace of a generic package is its <code>namespace</code>.
      *         </p>
      *         </li>
      */
@@ -449,7 +449,7 @@ public class UpdatePackageVersionsStatusRequest extends com.amazonaws.AmazonWebS
      * </li>
      * <li>
      * <p>
-     * The namespace of a generic package is it’s <code>namespace</code>.
+     * The namespace of a generic package is its <code>namespace</code>.
      * </p>
      * </li>
      * </ul>
@@ -476,7 +476,7 @@ public class UpdatePackageVersionsStatusRequest extends com.amazonaws.AmazonWebS
      *        </li>
      *        <li>
      *        <p>
-     *        The namespace of a generic package is it’s <code>namespace</code>.
+     *        The namespace of a generic package is its <code>namespace</code>.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

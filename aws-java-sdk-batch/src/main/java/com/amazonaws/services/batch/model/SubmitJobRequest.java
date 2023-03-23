@@ -81,9 +81,14 @@ public class SubmitJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
     private java.util.List<JobDependency> dependsOn;
     /**
      * <p>
-     * The job definition used by this job. This value can be one of <code>name</code>, <code>name:revision</code>, or
-     * the Amazon Resource Name (ARN) for the job definition. If <code>name</code> is specified without a revision then
-     * the latest active revision is used.
+     * The job definition used by this job. This value can be one of <code>definition-name</code>,
+     * <code>definition-name:revision</code>, or the Amazon Resource Name (ARN) for the job definition, with or without
+     * the revision (
+     * <code>arn:aws:batch:<i>region</i>:<i>account</i>:job-definition/<i>definition-name</i>:<i>revision</i> </code>,
+     * or <code>arn:aws:batch:<i>region</i>:<i>account</i>:job-definition/<i>definition-name</i> </code>).
+     * </p>
+     * <p>
+     * If the revision is not specified, then the latest active revision is used.
      * </p>
      */
     private String jobDefinition;
@@ -530,15 +535,24 @@ public class SubmitJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * The job definition used by this job. This value can be one of <code>name</code>, <code>name:revision</code>, or
-     * the Amazon Resource Name (ARN) for the job definition. If <code>name</code> is specified without a revision then
-     * the latest active revision is used.
+     * The job definition used by this job. This value can be one of <code>definition-name</code>,
+     * <code>definition-name:revision</code>, or the Amazon Resource Name (ARN) for the job definition, with or without
+     * the revision (
+     * <code>arn:aws:batch:<i>region</i>:<i>account</i>:job-definition/<i>definition-name</i>:<i>revision</i> </code>,
+     * or <code>arn:aws:batch:<i>region</i>:<i>account</i>:job-definition/<i>definition-name</i> </code>).
+     * </p>
+     * <p>
+     * If the revision is not specified, then the latest active revision is used.
      * </p>
      * 
      * @param jobDefinition
-     *        The job definition used by this job. This value can be one of <code>name</code>,
-     *        <code>name:revision</code>, or the Amazon Resource Name (ARN) for the job definition. If <code>name</code>
-     *        is specified without a revision then the latest active revision is used.
+     *        The job definition used by this job. This value can be one of <code>definition-name</code>,
+     *        <code>definition-name:revision</code>, or the Amazon Resource Name (ARN) for the job definition, with or
+     *        without the revision (
+     *        <code>arn:aws:batch:<i>region</i>:<i>account</i>:job-definition/<i>definition-name</i>:<i>revision</i> </code>
+     *        , or <code>arn:aws:batch:<i>region</i>:<i>account</i>:job-definition/<i>definition-name</i> </code>).</p>
+     *        <p>
+     *        If the revision is not specified, then the latest active revision is used.
      */
 
     public void setJobDefinition(String jobDefinition) {
@@ -547,14 +561,23 @@ public class SubmitJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * The job definition used by this job. This value can be one of <code>name</code>, <code>name:revision</code>, or
-     * the Amazon Resource Name (ARN) for the job definition. If <code>name</code> is specified without a revision then
-     * the latest active revision is used.
+     * The job definition used by this job. This value can be one of <code>definition-name</code>,
+     * <code>definition-name:revision</code>, or the Amazon Resource Name (ARN) for the job definition, with or without
+     * the revision (
+     * <code>arn:aws:batch:<i>region</i>:<i>account</i>:job-definition/<i>definition-name</i>:<i>revision</i> </code>,
+     * or <code>arn:aws:batch:<i>region</i>:<i>account</i>:job-definition/<i>definition-name</i> </code>).
+     * </p>
+     * <p>
+     * If the revision is not specified, then the latest active revision is used.
      * </p>
      * 
-     * @return The job definition used by this job. This value can be one of <code>name</code>,
-     *         <code>name:revision</code>, or the Amazon Resource Name (ARN) for the job definition. If
-     *         <code>name</code> is specified without a revision then the latest active revision is used.
+     * @return The job definition used by this job. This value can be one of <code>definition-name</code>,
+     *         <code>definition-name:revision</code>, or the Amazon Resource Name (ARN) for the job definition, with or
+     *         without the revision (
+     *         <code>arn:aws:batch:<i>region</i>:<i>account</i>:job-definition/<i>definition-name</i>:<i>revision</i> </code>
+     *         , or <code>arn:aws:batch:<i>region</i>:<i>account</i>:job-definition/<i>definition-name</i> </code>).</p>
+     *         <p>
+     *         If the revision is not specified, then the latest active revision is used.
      */
 
     public String getJobDefinition() {
@@ -563,15 +586,24 @@ public class SubmitJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * The job definition used by this job. This value can be one of <code>name</code>, <code>name:revision</code>, or
-     * the Amazon Resource Name (ARN) for the job definition. If <code>name</code> is specified without a revision then
-     * the latest active revision is used.
+     * The job definition used by this job. This value can be one of <code>definition-name</code>,
+     * <code>definition-name:revision</code>, or the Amazon Resource Name (ARN) for the job definition, with or without
+     * the revision (
+     * <code>arn:aws:batch:<i>region</i>:<i>account</i>:job-definition/<i>definition-name</i>:<i>revision</i> </code>,
+     * or <code>arn:aws:batch:<i>region</i>:<i>account</i>:job-definition/<i>definition-name</i> </code>).
+     * </p>
+     * <p>
+     * If the revision is not specified, then the latest active revision is used.
      * </p>
      * 
      * @param jobDefinition
-     *        The job definition used by this job. This value can be one of <code>name</code>,
-     *        <code>name:revision</code>, or the Amazon Resource Name (ARN) for the job definition. If <code>name</code>
-     *        is specified without a revision then the latest active revision is used.
+     *        The job definition used by this job. This value can be one of <code>definition-name</code>,
+     *        <code>definition-name:revision</code>, or the Amazon Resource Name (ARN) for the job definition, with or
+     *        without the revision (
+     *        <code>arn:aws:batch:<i>region</i>:<i>account</i>:job-definition/<i>definition-name</i>:<i>revision</i> </code>
+     *        , or <code>arn:aws:batch:<i>region</i>:<i>account</i>:job-definition/<i>definition-name</i> </code>).</p>
+     *        <p>
+     *        If the revision is not specified, then the latest active revision is used.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

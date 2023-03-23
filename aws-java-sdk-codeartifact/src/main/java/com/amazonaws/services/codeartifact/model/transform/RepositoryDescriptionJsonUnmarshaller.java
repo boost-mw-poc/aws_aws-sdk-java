@@ -85,6 +85,10 @@ public class RepositoryDescriptionJsonUnmarshaller implements Unmarshaller<Repos
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("createdTime", targetDepth)) {
+                    context.nextToken();
+                    repositoryDescription.setCreatedTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

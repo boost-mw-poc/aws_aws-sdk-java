@@ -56,6 +56,34 @@ public class AbstractAmazonChimeSDKMediaPipelinesAsync extends AbstractAmazonChi
     }
 
     @Override
+    public java.util.concurrent.Future<CreateMediaInsightsPipelineResult> createMediaInsightsPipelineAsync(CreateMediaInsightsPipelineRequest request) {
+
+        return createMediaInsightsPipelineAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateMediaInsightsPipelineResult> createMediaInsightsPipelineAsync(CreateMediaInsightsPipelineRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateMediaInsightsPipelineRequest, CreateMediaInsightsPipelineResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateMediaInsightsPipelineConfigurationResult> createMediaInsightsPipelineConfigurationAsync(
+            CreateMediaInsightsPipelineConfigurationRequest request) {
+
+        return createMediaInsightsPipelineConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateMediaInsightsPipelineConfigurationResult> createMediaInsightsPipelineConfigurationAsync(
+            CreateMediaInsightsPipelineConfigurationRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateMediaInsightsPipelineConfigurationRequest, CreateMediaInsightsPipelineConfigurationResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateMediaLiveConnectorPipelineResult> createMediaLiveConnectorPipelineAsync(
             CreateMediaLiveConnectorPipelineRequest request) {
 
@@ -79,6 +107,21 @@ public class AbstractAmazonChimeSDKMediaPipelinesAsync extends AbstractAmazonChi
     @Override
     public java.util.concurrent.Future<DeleteMediaCapturePipelineResult> deleteMediaCapturePipelineAsync(DeleteMediaCapturePipelineRequest request,
             com.amazonaws.handlers.AsyncHandler<DeleteMediaCapturePipelineRequest, DeleteMediaCapturePipelineResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteMediaInsightsPipelineConfigurationResult> deleteMediaInsightsPipelineConfigurationAsync(
+            DeleteMediaInsightsPipelineConfigurationRequest request) {
+
+        return deleteMediaInsightsPipelineConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteMediaInsightsPipelineConfigurationResult> deleteMediaInsightsPipelineConfigurationAsync(
+            DeleteMediaInsightsPipelineConfigurationRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteMediaInsightsPipelineConfigurationRequest, DeleteMediaInsightsPipelineConfigurationResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -110,6 +153,21 @@ public class AbstractAmazonChimeSDKMediaPipelinesAsync extends AbstractAmazonChi
     }
 
     @Override
+    public java.util.concurrent.Future<GetMediaInsightsPipelineConfigurationResult> getMediaInsightsPipelineConfigurationAsync(
+            GetMediaInsightsPipelineConfigurationRequest request) {
+
+        return getMediaInsightsPipelineConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetMediaInsightsPipelineConfigurationResult> getMediaInsightsPipelineConfigurationAsync(
+            GetMediaInsightsPipelineConfigurationRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetMediaInsightsPipelineConfigurationRequest, GetMediaInsightsPipelineConfigurationResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetMediaPipelineResult> getMediaPipelineAsync(GetMediaPipelineRequest request) {
 
         return getMediaPipelineAsync(request, null);
@@ -131,6 +189,21 @@ public class AbstractAmazonChimeSDKMediaPipelinesAsync extends AbstractAmazonChi
     @Override
     public java.util.concurrent.Future<ListMediaCapturePipelinesResult> listMediaCapturePipelinesAsync(ListMediaCapturePipelinesRequest request,
             com.amazonaws.handlers.AsyncHandler<ListMediaCapturePipelinesRequest, ListMediaCapturePipelinesResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListMediaInsightsPipelineConfigurationsResult> listMediaInsightsPipelineConfigurationsAsync(
+            ListMediaInsightsPipelineConfigurationsRequest request) {
+
+        return listMediaInsightsPipelineConfigurationsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListMediaInsightsPipelineConfigurationsResult> listMediaInsightsPipelineConfigurationsAsync(
+            ListMediaInsightsPipelineConfigurationsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListMediaInsightsPipelineConfigurationsRequest, ListMediaInsightsPipelineConfigurationsResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -183,6 +256,36 @@ public class AbstractAmazonChimeSDKMediaPipelinesAsync extends AbstractAmazonChi
     @Override
     public java.util.concurrent.Future<UntagResourceResult> untagResourceAsync(UntagResourceRequest request,
             com.amazonaws.handlers.AsyncHandler<UntagResourceRequest, UntagResourceResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateMediaInsightsPipelineConfigurationResult> updateMediaInsightsPipelineConfigurationAsync(
+            UpdateMediaInsightsPipelineConfigurationRequest request) {
+
+        return updateMediaInsightsPipelineConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateMediaInsightsPipelineConfigurationResult> updateMediaInsightsPipelineConfigurationAsync(
+            UpdateMediaInsightsPipelineConfigurationRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateMediaInsightsPipelineConfigurationRequest, UpdateMediaInsightsPipelineConfigurationResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateMediaInsightsPipelineStatusResult> updateMediaInsightsPipelineStatusAsync(
+            UpdateMediaInsightsPipelineStatusRequest request) {
+
+        return updateMediaInsightsPipelineStatusAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateMediaInsightsPipelineStatusResult> updateMediaInsightsPipelineStatusAsync(
+            UpdateMediaInsightsPipelineStatusRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateMediaInsightsPipelineStatusRequest, UpdateMediaInsightsPipelineStatusResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

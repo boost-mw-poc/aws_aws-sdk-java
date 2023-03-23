@@ -267,6 +267,37 @@ public interface AmazonSageMaker {
 
     /**
      * <p>
+     * Creates an Amazon SageMaker AutoML job that uses non-tabular data such as images or text for Computer Vision or
+     * Natural Language Processing problems.
+     * </p>
+     * <p>
+     * Find the resulting model after you run an AutoML job V2 by calling .
+     * </p>
+     * <p>
+     * To create an <code>AutoMLJob</code> using tabular data, see .
+     * </p>
+     * <note>
+     * <p>
+     * This API action is callable through SageMaker Canvas only. Calling it directly from the CLI or an SDK results in
+     * an error.
+     * </p>
+     * </note>
+     * 
+     * @param createAutoMLJobV2Request
+     * @return Result of the CreateAutoMLJobV2 operation returned by the service.
+     * @throws ResourceInUseException
+     *         Resource being accessed is in use.
+     * @throws ResourceLimitExceededException
+     *         You have exceeded an SageMaker resource limit. For example, you might have too many training jobs
+     *         created.
+     * @sample AmazonSageMaker.CreateAutoMLJobV2
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateAutoMLJobV2" target="_top">AWS
+     *      API Documentation</a>
+     */
+    CreateAutoMLJobV2Result createAutoMLJobV2(CreateAutoMLJobV2Request createAutoMLJobV2Request);
+
+    /**
+     * <p>
      * Creates a Git repository as a resource in your SageMaker account. You can associate the repository with notebook
      * instances so that you can use Git source control for the notebooks you create. The Git repository is a resource
      * in your SageMaker account, so it can be associated with more than one notebook instance, and it persists
@@ -2689,6 +2720,27 @@ public interface AmazonSageMaker {
      *      API Documentation</a>
      */
     DescribeAutoMLJobResult describeAutoMLJob(DescribeAutoMLJobRequest describeAutoMLJobRequest);
+
+    /**
+     * <p>
+     * Returns information about an Amazon SageMaker AutoML V2 job.
+     * </p>
+     * <note>
+     * <p>
+     * This API action is callable through SageMaker Canvas only. Calling it directly from the CLI or an SDK results in
+     * an error.
+     * </p>
+     * </note>
+     * 
+     * @param describeAutoMLJobV2Request
+     * @return Result of the DescribeAutoMLJobV2 operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         Resource being access is not found.
+     * @sample AmazonSageMaker.DescribeAutoMLJobV2
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeAutoMLJobV2" target="_top">AWS
+     *      API Documentation</a>
+     */
+    DescribeAutoMLJobV2Result describeAutoMLJobV2(DescribeAutoMLJobV2Request describeAutoMLJobV2Request);
 
     /**
      * <p>

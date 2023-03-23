@@ -27,7 +27,7 @@ public class UpdateOrganizationConfigurationRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The ID of the detector to update the delegated administrator for.
+     * The ID of the detector that configures the delegated administrator.
      * </p>
      */
     private String detectorId;
@@ -36,6 +36,7 @@ public class UpdateOrganizationConfigurationRequest extends com.amazonaws.Amazon
      * Indicates whether to automatically enable member accounts in the organization.
      * </p>
      */
+    @Deprecated
     private Boolean autoEnable;
     /**
      * <p>
@@ -50,14 +51,40 @@ public class UpdateOrganizationConfigurationRequest extends com.amazonaws.Amazon
      * </p>
      */
     private java.util.List<OrganizationFeatureConfiguration> features;
+    /**
+     * <p>
+     * Indicates the auto-enablement configuration of GuardDuty for the member accounts in the organization.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>NEW</code>: Indicates that new accounts joining the organization are configured to have GuardDuty enabled
+     * automatically.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ALL</code>: Indicates that all accounts (new and existing members) in the organization are configured to
+     * have GuardDuty enabled automatically.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>NONE</code>: Indicates that no account in the organization will be configured to have GuardDuty enabled
+     * automatically.
+     * </p>
+     * </li>
+     * </ul>
+     */
+    private String autoEnableOrganizationMembers;
 
     /**
      * <p>
-     * The ID of the detector to update the delegated administrator for.
+     * The ID of the detector that configures the delegated administrator.
      * </p>
      * 
      * @param detectorId
-     *        The ID of the detector to update the delegated administrator for.
+     *        The ID of the detector that configures the delegated administrator.
      */
 
     public void setDetectorId(String detectorId) {
@@ -66,10 +93,10 @@ public class UpdateOrganizationConfigurationRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The ID of the detector to update the delegated administrator for.
+     * The ID of the detector that configures the delegated administrator.
      * </p>
      * 
-     * @return The ID of the detector to update the delegated administrator for.
+     * @return The ID of the detector that configures the delegated administrator.
      */
 
     public String getDetectorId() {
@@ -78,11 +105,11 @@ public class UpdateOrganizationConfigurationRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The ID of the detector to update the delegated administrator for.
+     * The ID of the detector that configures the delegated administrator.
      * </p>
      * 
      * @param detectorId
-     *        The ID of the detector to update the delegated administrator for.
+     *        The ID of the detector that configures the delegated administrator.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -99,7 +126,7 @@ public class UpdateOrganizationConfigurationRequest extends com.amazonaws.Amazon
      * @param autoEnable
      *        Indicates whether to automatically enable member accounts in the organization.
      */
-
+    @Deprecated
     public void setAutoEnable(Boolean autoEnable) {
         this.autoEnable = autoEnable;
     }
@@ -111,7 +138,7 @@ public class UpdateOrganizationConfigurationRequest extends com.amazonaws.Amazon
      * 
      * @return Indicates whether to automatically enable member accounts in the organization.
      */
-
+    @Deprecated
     public Boolean getAutoEnable() {
         return this.autoEnable;
     }
@@ -125,7 +152,7 @@ public class UpdateOrganizationConfigurationRequest extends com.amazonaws.Amazon
      *        Indicates whether to automatically enable member accounts in the organization.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
-
+    @Deprecated
     public UpdateOrganizationConfigurationRequest withAutoEnable(Boolean autoEnable) {
         setAutoEnable(autoEnable);
         return this;
@@ -138,7 +165,7 @@ public class UpdateOrganizationConfigurationRequest extends com.amazonaws.Amazon
      * 
      * @return Indicates whether to automatically enable member accounts in the organization.
      */
-
+    @Deprecated
     public Boolean isAutoEnable() {
         return this.autoEnable;
     }
@@ -254,6 +281,222 @@ public class UpdateOrganizationConfigurationRequest extends com.amazonaws.Amazon
     }
 
     /**
+     * <p>
+     * Indicates the auto-enablement configuration of GuardDuty for the member accounts in the organization.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>NEW</code>: Indicates that new accounts joining the organization are configured to have GuardDuty enabled
+     * automatically.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ALL</code>: Indicates that all accounts (new and existing members) in the organization are configured to
+     * have GuardDuty enabled automatically.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>NONE</code>: Indicates that no account in the organization will be configured to have GuardDuty enabled
+     * automatically.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param autoEnableOrganizationMembers
+     *        Indicates the auto-enablement configuration of GuardDuty for the member accounts in the organization. </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>NEW</code>: Indicates that new accounts joining the organization are configured to have GuardDuty
+     *        enabled automatically.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>ALL</code>: Indicates that all accounts (new and existing members) in the organization are
+     *        configured to have GuardDuty enabled automatically.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>NONE</code>: Indicates that no account in the organization will be configured to have GuardDuty
+     *        enabled automatically.
+     *        </p>
+     *        </li>
+     * @see AutoEnableMembers
+     */
+
+    public void setAutoEnableOrganizationMembers(String autoEnableOrganizationMembers) {
+        this.autoEnableOrganizationMembers = autoEnableOrganizationMembers;
+    }
+
+    /**
+     * <p>
+     * Indicates the auto-enablement configuration of GuardDuty for the member accounts in the organization.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>NEW</code>: Indicates that new accounts joining the organization are configured to have GuardDuty enabled
+     * automatically.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ALL</code>: Indicates that all accounts (new and existing members) in the organization are configured to
+     * have GuardDuty enabled automatically.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>NONE</code>: Indicates that no account in the organization will be configured to have GuardDuty enabled
+     * automatically.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @return Indicates the auto-enablement configuration of GuardDuty for the member accounts in the organization.
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>NEW</code>: Indicates that new accounts joining the organization are configured to have GuardDuty
+     *         enabled automatically.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>ALL</code>: Indicates that all accounts (new and existing members) in the organization are
+     *         configured to have GuardDuty enabled automatically.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>NONE</code>: Indicates that no account in the organization will be configured to have GuardDuty
+     *         enabled automatically.
+     *         </p>
+     *         </li>
+     * @see AutoEnableMembers
+     */
+
+    public String getAutoEnableOrganizationMembers() {
+        return this.autoEnableOrganizationMembers;
+    }
+
+    /**
+     * <p>
+     * Indicates the auto-enablement configuration of GuardDuty for the member accounts in the organization.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>NEW</code>: Indicates that new accounts joining the organization are configured to have GuardDuty enabled
+     * automatically.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ALL</code>: Indicates that all accounts (new and existing members) in the organization are configured to
+     * have GuardDuty enabled automatically.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>NONE</code>: Indicates that no account in the organization will be configured to have GuardDuty enabled
+     * automatically.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param autoEnableOrganizationMembers
+     *        Indicates the auto-enablement configuration of GuardDuty for the member accounts in the organization. </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>NEW</code>: Indicates that new accounts joining the organization are configured to have GuardDuty
+     *        enabled automatically.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>ALL</code>: Indicates that all accounts (new and existing members) in the organization are
+     *        configured to have GuardDuty enabled automatically.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>NONE</code>: Indicates that no account in the organization will be configured to have GuardDuty
+     *        enabled automatically.
+     *        </p>
+     *        </li>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see AutoEnableMembers
+     */
+
+    public UpdateOrganizationConfigurationRequest withAutoEnableOrganizationMembers(String autoEnableOrganizationMembers) {
+        setAutoEnableOrganizationMembers(autoEnableOrganizationMembers);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Indicates the auto-enablement configuration of GuardDuty for the member accounts in the organization.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>NEW</code>: Indicates that new accounts joining the organization are configured to have GuardDuty enabled
+     * automatically.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ALL</code>: Indicates that all accounts (new and existing members) in the organization are configured to
+     * have GuardDuty enabled automatically.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>NONE</code>: Indicates that no account in the organization will be configured to have GuardDuty enabled
+     * automatically.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param autoEnableOrganizationMembers
+     *        Indicates the auto-enablement configuration of GuardDuty for the member accounts in the organization. </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>NEW</code>: Indicates that new accounts joining the organization are configured to have GuardDuty
+     *        enabled automatically.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>ALL</code>: Indicates that all accounts (new and existing members) in the organization are
+     *        configured to have GuardDuty enabled automatically.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>NONE</code>: Indicates that no account in the organization will be configured to have GuardDuty
+     *        enabled automatically.
+     *        </p>
+     *        </li>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see AutoEnableMembers
+     */
+
+    public UpdateOrganizationConfigurationRequest withAutoEnableOrganizationMembers(AutoEnableMembers autoEnableOrganizationMembers) {
+        this.autoEnableOrganizationMembers = autoEnableOrganizationMembers.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -272,7 +515,9 @@ public class UpdateOrganizationConfigurationRequest extends com.amazonaws.Amazon
         if (getDataSources() != null)
             sb.append("DataSources: ").append(getDataSources()).append(",");
         if (getFeatures() != null)
-            sb.append("Features: ").append(getFeatures());
+            sb.append("Features: ").append(getFeatures()).append(",");
+        if (getAutoEnableOrganizationMembers() != null)
+            sb.append("AutoEnableOrganizationMembers: ").append(getAutoEnableOrganizationMembers());
         sb.append("}");
         return sb.toString();
     }
@@ -303,6 +548,11 @@ public class UpdateOrganizationConfigurationRequest extends com.amazonaws.Amazon
             return false;
         if (other.getFeatures() != null && other.getFeatures().equals(this.getFeatures()) == false)
             return false;
+        if (other.getAutoEnableOrganizationMembers() == null ^ this.getAutoEnableOrganizationMembers() == null)
+            return false;
+        if (other.getAutoEnableOrganizationMembers() != null
+                && other.getAutoEnableOrganizationMembers().equals(this.getAutoEnableOrganizationMembers()) == false)
+            return false;
         return true;
     }
 
@@ -315,6 +565,7 @@ public class UpdateOrganizationConfigurationRequest extends com.amazonaws.Amazon
         hashCode = prime * hashCode + ((getAutoEnable() == null) ? 0 : getAutoEnable().hashCode());
         hashCode = prime * hashCode + ((getDataSources() == null) ? 0 : getDataSources().hashCode());
         hashCode = prime * hashCode + ((getFeatures() == null) ? 0 : getFeatures().hashCode());
+        hashCode = prime * hashCode + ((getAutoEnableOrganizationMembers() == null) ? 0 : getAutoEnableOrganizationMembers().hashCode());
         return hashCode;
     }
 

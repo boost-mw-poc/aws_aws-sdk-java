@@ -31,7 +31,9 @@ public enum BlockType {
     TITLE("TITLE"),
     QUERY("QUERY"),
     QUERY_RESULT("QUERY_RESULT"),
-    SIGNATURE("SIGNATURE");
+    SIGNATURE("SIGNATURE"),
+    TABLE_TITLE("TABLE_TITLE"),
+    TABLE_FOOTER("TABLE_FOOTER");
 
     private String value;
 

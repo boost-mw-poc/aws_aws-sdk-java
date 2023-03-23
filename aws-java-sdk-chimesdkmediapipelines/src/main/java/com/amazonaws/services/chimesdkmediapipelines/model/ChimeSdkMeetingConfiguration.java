@@ -32,7 +32,7 @@ public class ChimeSdkMeetingConfiguration implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * The source configuration for a specified media pipline.
+     * The source configuration for a specified media pipeline.
      * </p>
      */
     private SourceConfiguration sourceConfiguration;
@@ -45,11 +45,11 @@ public class ChimeSdkMeetingConfiguration implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * The source configuration for a specified media pipline.
+     * The source configuration for a specified media pipeline.
      * </p>
      * 
      * @param sourceConfiguration
-     *        The source configuration for a specified media pipline.
+     *        The source configuration for a specified media pipeline.
      */
 
     public void setSourceConfiguration(SourceConfiguration sourceConfiguration) {
@@ -58,10 +58,10 @@ public class ChimeSdkMeetingConfiguration implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * The source configuration for a specified media pipline.
+     * The source configuration for a specified media pipeline.
      * </p>
      * 
-     * @return The source configuration for a specified media pipline.
+     * @return The source configuration for a specified media pipeline.
      */
 
     public SourceConfiguration getSourceConfiguration() {
@@ -70,11 +70,11 @@ public class ChimeSdkMeetingConfiguration implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * The source configuration for a specified media pipline.
+     * The source configuration for a specified media pipeline.
      * </p>
      * 
      * @param sourceConfiguration
-     *        The source configuration for a specified media pipline.
+     *        The source configuration for a specified media pipeline.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

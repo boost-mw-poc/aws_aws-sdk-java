@@ -788,6 +788,79 @@ public class AmazonSageMakerClient extends AmazonWebServiceClient implements Ama
 
     /**
      * <p>
+     * Creates an Amazon SageMaker AutoML job that uses non-tabular data such as images or text for Computer Vision or
+     * Natural Language Processing problems.
+     * </p>
+     * <p>
+     * Find the resulting model after you run an AutoML job V2 by calling .
+     * </p>
+     * <p>
+     * To create an <code>AutoMLJob</code> using tabular data, see .
+     * </p>
+     * <note>
+     * <p>
+     * This API action is callable through SageMaker Canvas only. Calling it directly from the CLI or an SDK results in
+     * an error.
+     * </p>
+     * </note>
+     * 
+     * @param createAutoMLJobV2Request
+     * @return Result of the CreateAutoMLJobV2 operation returned by the service.
+     * @throws ResourceInUseException
+     *         Resource being accessed is in use.
+     * @throws ResourceLimitExceededException
+     *         You have exceeded an SageMaker resource limit. For example, you might have too many training jobs
+     *         created.
+     * @sample AmazonSageMaker.CreateAutoMLJobV2
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateAutoMLJobV2" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public CreateAutoMLJobV2Result createAutoMLJobV2(CreateAutoMLJobV2Request request) {
+        request = beforeClientExecution(request);
+        return executeCreateAutoMLJobV2(request);
+    }
+
+    @SdkInternalApi
+    final CreateAutoMLJobV2Result executeCreateAutoMLJobV2(CreateAutoMLJobV2Request createAutoMLJobV2Request) {
+
+        ExecutionContext executionContext = createExecutionContext(createAutoMLJobV2Request);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateAutoMLJobV2Request> request = null;
+        Response<CreateAutoMLJobV2Result> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateAutoMLJobV2RequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(createAutoMLJobV2Request));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "SageMaker");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateAutoMLJobV2");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<CreateAutoMLJobV2Result>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new CreateAutoMLJobV2ResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Creates a Git repository as a resource in your SageMaker account. You can associate the repository with notebook
      * instances so that you can use Git source control for the notebooks you create. The Git repository is a resource
      * in your SageMaker account, so it can be associated with more than one notebook instance, and it persists
@@ -7422,6 +7495,69 @@ public class AmazonSageMakerClient extends AmazonWebServiceClient implements Ama
 
             HttpResponseHandler<AmazonWebServiceResponse<DescribeAutoMLJobResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DescribeAutoMLJobResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Returns information about an Amazon SageMaker AutoML V2 job.
+     * </p>
+     * <note>
+     * <p>
+     * This API action is callable through SageMaker Canvas only. Calling it directly from the CLI or an SDK results in
+     * an error.
+     * </p>
+     * </note>
+     * 
+     * @param describeAutoMLJobV2Request
+     * @return Result of the DescribeAutoMLJobV2 operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         Resource being access is not found.
+     * @sample AmazonSageMaker.DescribeAutoMLJobV2
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeAutoMLJobV2" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public DescribeAutoMLJobV2Result describeAutoMLJobV2(DescribeAutoMLJobV2Request request) {
+        request = beforeClientExecution(request);
+        return executeDescribeAutoMLJobV2(request);
+    }
+
+    @SdkInternalApi
+    final DescribeAutoMLJobV2Result executeDescribeAutoMLJobV2(DescribeAutoMLJobV2Request describeAutoMLJobV2Request) {
+
+        ExecutionContext executionContext = createExecutionContext(describeAutoMLJobV2Request);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeAutoMLJobV2Request> request = null;
+        Response<DescribeAutoMLJobV2Result> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeAutoMLJobV2RequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(describeAutoMLJobV2Request));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "SageMaker");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeAutoMLJobV2");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DescribeAutoMLJobV2Result>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DescribeAutoMLJobV2ResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

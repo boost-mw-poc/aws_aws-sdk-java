@@ -24,7 +24,8 @@ public enum MediaPipelineStatus {
     InProgress("InProgress"),
     Failed("Failed"),
     Stopping("Stopping"),
-    Stopped("Stopped");
+    Stopped("Stopped"),
+    Paused("Paused");
 
     private String value;
 

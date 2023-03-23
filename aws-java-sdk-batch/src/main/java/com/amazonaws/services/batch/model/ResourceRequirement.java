@@ -115,7 +115,7 @@ public class ResourceRequirement implements Serializable, Cloneable, StructuredP
      * <dt>value = 8192</dt>
      * <dd>
      * <p>
-     * <code>VCPU</code> = 1, 2, 4, or 8
+     * <code>VCPU</code> = 1, 2, or 4
      * </p>
      * </dd>
      * <dt>value = 9216, 10240, 11264, 12288, 13312, 14336, or 15360</dt>
@@ -326,7 +326,7 @@ public class ResourceRequirement implements Serializable, Cloneable, StructuredP
      * <dt>value = 8192</dt>
      * <dd>
      * <p>
-     * <code>VCPU</code> = 1, 2, 4, or 8
+     * <code>VCPU</code> = 1, 2, or 4
      * </p>
      * </dd>
      * <dt>value = 9216, 10240, 11264, 12288, 13312, 14336, or 15360</dt>
@@ -527,7 +527,7 @@ public class ResourceRequirement implements Serializable, Cloneable, StructuredP
      *        <dt>value = 8192</dt>
      *        <dd>
      *        <p>
-     *        <code>VCPU</code> = 1, 2, 4, or 8
+     *        <code>VCPU</code> = 1, 2, or 4
      *        </p>
      *        </dd>
      *        <dt>value = 9216, 10240, 11264, 12288, 13312, 14336, or 15360</dt>
@@ -737,7 +737,7 @@ public class ResourceRequirement implements Serializable, Cloneable, StructuredP
      * <dt>value = 8192</dt>
      * <dd>
      * <p>
-     * <code>VCPU</code> = 1, 2, 4, or 8
+     * <code>VCPU</code> = 1, 2, or 4
      * </p>
      * </dd>
      * <dt>value = 9216, 10240, 11264, 12288, 13312, 14336, or 15360</dt>
@@ -937,7 +937,7 @@ public class ResourceRequirement implements Serializable, Cloneable, StructuredP
      *         <dt>value = 8192</dt>
      *         <dd>
      *         <p>
-     *         <code>VCPU</code> = 1, 2, 4, or 8
+     *         <code>VCPU</code> = 1, 2, or 4
      *         </p>
      *         </dd>
      *         <dt>value = 9216, 10240, 11264, 12288, 13312, 14336, or 15360</dt>
@@ -1147,7 +1147,7 @@ public class ResourceRequirement implements Serializable, Cloneable, StructuredP
      * <dt>value = 8192</dt>
      * <dd>
      * <p>
-     * <code>VCPU</code> = 1, 2, 4, or 8
+     * <code>VCPU</code> = 1, 2, or 4
      * </p>
      * </dd>
      * <dt>value = 9216, 10240, 11264, 12288, 13312, 14336, or 15360</dt>
@@ -1348,7 +1348,7 @@ public class ResourceRequirement implements Serializable, Cloneable, StructuredP
      *        <dt>value = 8192</dt>
      *        <dd>
      *        <p>
-     *        <code>VCPU</code> = 1, 2, 4, or 8
+     *        <code>VCPU</code> = 1, 2, or 4
      *        </p>
      *        </dd>
      *        <dt>value = 9216, 10240, 11264, 12288, 13312, 14336, or 15360</dt>

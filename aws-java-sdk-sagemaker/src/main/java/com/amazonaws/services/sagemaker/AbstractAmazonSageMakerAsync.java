@@ -158,6 +158,19 @@ public class AbstractAmazonSageMakerAsync extends AbstractAmazonSageMaker implem
     }
 
     @Override
+    public java.util.concurrent.Future<CreateAutoMLJobV2Result> createAutoMLJobV2Async(CreateAutoMLJobV2Request request) {
+
+        return createAutoMLJobV2Async(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateAutoMLJobV2Result> createAutoMLJobV2Async(CreateAutoMLJobV2Request request,
+            com.amazonaws.handlers.AsyncHandler<CreateAutoMLJobV2Request, CreateAutoMLJobV2Result> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateCodeRepositoryResult> createCodeRepositoryAsync(CreateCodeRepositoryRequest request) {
 
         return createCodeRepositoryAsync(request, null);
@@ -1456,6 +1469,19 @@ public class AbstractAmazonSageMakerAsync extends AbstractAmazonSageMaker implem
     @Override
     public java.util.concurrent.Future<DescribeAutoMLJobResult> describeAutoMLJobAsync(DescribeAutoMLJobRequest request,
             com.amazonaws.handlers.AsyncHandler<DescribeAutoMLJobRequest, DescribeAutoMLJobResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeAutoMLJobV2Result> describeAutoMLJobV2Async(DescribeAutoMLJobV2Request request) {
+
+        return describeAutoMLJobV2Async(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeAutoMLJobV2Result> describeAutoMLJobV2Async(DescribeAutoMLJobV2Request request,
+            com.amazonaws.handlers.AsyncHandler<DescribeAutoMLJobV2Request, DescribeAutoMLJobV2Result> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

@@ -84,6 +84,16 @@ public class AbstractAmazonChimeSDKVoice implements AmazonChimeSDKVoice {
     }
 
     @Override
+    public CreateVoiceProfileResult createVoiceProfile(CreateVoiceProfileRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public CreateVoiceProfileDomainResult createVoiceProfileDomain(CreateVoiceProfileDomainRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DeletePhoneNumberResult deletePhoneNumber(DeletePhoneNumberRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -145,6 +155,16 @@ public class AbstractAmazonChimeSDKVoice implements AmazonChimeSDKVoice {
     }
 
     @Override
+    public DeleteVoiceProfileResult deleteVoiceProfile(DeleteVoiceProfileRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteVoiceProfileDomainResult deleteVoiceProfileDomain(DeleteVoiceProfileDomainRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DisassociatePhoneNumbersFromVoiceConnectorResult disassociatePhoneNumbersFromVoiceConnector(DisassociatePhoneNumbersFromVoiceConnectorRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -202,6 +222,11 @@ public class AbstractAmazonChimeSDKVoice implements AmazonChimeSDKVoice {
     }
 
     @Override
+    public GetSpeakerSearchTaskResult getSpeakerSearchTask(GetSpeakerSearchTaskRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetVoiceConnectorResult getVoiceConnector(GetVoiceConnectorRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -248,6 +273,21 @@ public class AbstractAmazonChimeSDKVoice implements AmazonChimeSDKVoice {
     }
 
     @Override
+    public GetVoiceProfileResult getVoiceProfile(GetVoiceProfileRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetVoiceProfileDomainResult getVoiceProfileDomain(GetVoiceProfileDomainRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetVoiceToneAnalysisTaskResult getVoiceToneAnalysisTask(GetVoiceToneAnalysisTaskRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListAvailableVoiceConnectorRegionsResult listAvailableVoiceConnectorRegions(ListAvailableVoiceConnectorRegionsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -283,6 +323,11 @@ public class AbstractAmazonChimeSDKVoice implements AmazonChimeSDKVoice {
     }
 
     @Override
+    public ListTagsForResourceResult listTagsForResource(ListTagsForResourceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListVoiceConnectorGroupsResult listVoiceConnectorGroups(ListVoiceConnectorGroupsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -294,6 +339,16 @@ public class AbstractAmazonChimeSDKVoice implements AmazonChimeSDKVoice {
 
     @Override
     public ListVoiceConnectorsResult listVoiceConnectors(ListVoiceConnectorsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListVoiceProfileDomainsResult listVoiceProfileDomains(ListVoiceProfileDomainsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListVoiceProfilesResult listVoiceProfiles(ListVoiceProfilesRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -355,6 +410,36 @@ public class AbstractAmazonChimeSDKVoice implements AmazonChimeSDKVoice {
     }
 
     @Override
+    public StartSpeakerSearchTaskResult startSpeakerSearchTask(StartSpeakerSearchTaskRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public StartVoiceToneAnalysisTaskResult startVoiceToneAnalysisTask(StartVoiceToneAnalysisTaskRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public StopSpeakerSearchTaskResult stopSpeakerSearchTask(StopSpeakerSearchTaskRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public StopVoiceToneAnalysisTaskResult stopVoiceToneAnalysisTask(StopVoiceToneAnalysisTaskRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public TagResourceResult tagResource(TagResourceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UntagResourceResult untagResource(UntagResourceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public UpdateGlobalSettingsResult updateGlobalSettings(UpdateGlobalSettingsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -396,6 +481,16 @@ public class AbstractAmazonChimeSDKVoice implements AmazonChimeSDKVoice {
 
     @Override
     public UpdateVoiceConnectorGroupResult updateVoiceConnectorGroup(UpdateVoiceConnectorGroupRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateVoiceProfileResult updateVoiceProfile(UpdateVoiceProfileRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateVoiceProfileDomainResult updateVoiceProfileDomain(UpdateVoiceProfileDomainRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

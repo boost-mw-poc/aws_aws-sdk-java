@@ -440,6 +440,72 @@ public class AmazonChimeSDKVoiceAsyncClient extends AmazonChimeSDKVoiceClient im
     }
 
     @Override
+    public java.util.concurrent.Future<CreateVoiceProfileResult> createVoiceProfileAsync(CreateVoiceProfileRequest request) {
+
+        return createVoiceProfileAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateVoiceProfileResult> createVoiceProfileAsync(final CreateVoiceProfileRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateVoiceProfileRequest, CreateVoiceProfileResult> asyncHandler) {
+        final CreateVoiceProfileRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateVoiceProfileResult>() {
+            @Override
+            public CreateVoiceProfileResult call() throws Exception {
+                CreateVoiceProfileResult result = null;
+
+                try {
+                    result = executeCreateVoiceProfile(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateVoiceProfileDomainResult> createVoiceProfileDomainAsync(CreateVoiceProfileDomainRequest request) {
+
+        return createVoiceProfileDomainAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateVoiceProfileDomainResult> createVoiceProfileDomainAsync(final CreateVoiceProfileDomainRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateVoiceProfileDomainRequest, CreateVoiceProfileDomainResult> asyncHandler) {
+        final CreateVoiceProfileDomainRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateVoiceProfileDomainResult>() {
+            @Override
+            public CreateVoiceProfileDomainResult call() throws Exception {
+                CreateVoiceProfileDomainResult result = null;
+
+                try {
+                    result = executeCreateVoiceProfileDomain(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DeletePhoneNumberResult> deletePhoneNumberAsync(DeletePhoneNumberRequest request) {
 
         return deletePhoneNumberAsync(request, null);
@@ -846,6 +912,72 @@ public class AmazonChimeSDKVoiceAsyncClient extends AmazonChimeSDKVoiceClient im
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteVoiceProfileResult> deleteVoiceProfileAsync(DeleteVoiceProfileRequest request) {
+
+        return deleteVoiceProfileAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteVoiceProfileResult> deleteVoiceProfileAsync(final DeleteVoiceProfileRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteVoiceProfileRequest, DeleteVoiceProfileResult> asyncHandler) {
+        final DeleteVoiceProfileRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteVoiceProfileResult>() {
+            @Override
+            public DeleteVoiceProfileResult call() throws Exception {
+                DeleteVoiceProfileResult result = null;
+
+                try {
+                    result = executeDeleteVoiceProfile(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteVoiceProfileDomainResult> deleteVoiceProfileDomainAsync(DeleteVoiceProfileDomainRequest request) {
+
+        return deleteVoiceProfileDomainAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteVoiceProfileDomainResult> deleteVoiceProfileDomainAsync(final DeleteVoiceProfileDomainRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteVoiceProfileDomainRequest, DeleteVoiceProfileDomainResult> asyncHandler) {
+        final DeleteVoiceProfileDomainRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteVoiceProfileDomainResult>() {
+            @Override
+            public DeleteVoiceProfileDomainResult call() throws Exception {
+                DeleteVoiceProfileDomainResult result = null;
+
+                try {
+                    result = executeDeleteVoiceProfileDomain(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DisassociatePhoneNumbersFromVoiceConnectorResult> disassociatePhoneNumbersFromVoiceConnectorAsync(
             DisassociatePhoneNumbersFromVoiceConnectorRequest request) {
 
@@ -1217,6 +1349,39 @@ public class AmazonChimeSDKVoiceAsyncClient extends AmazonChimeSDKVoiceClient im
     }
 
     @Override
+    public java.util.concurrent.Future<GetSpeakerSearchTaskResult> getSpeakerSearchTaskAsync(GetSpeakerSearchTaskRequest request) {
+
+        return getSpeakerSearchTaskAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetSpeakerSearchTaskResult> getSpeakerSearchTaskAsync(final GetSpeakerSearchTaskRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetSpeakerSearchTaskRequest, GetSpeakerSearchTaskResult> asyncHandler) {
+        final GetSpeakerSearchTaskRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetSpeakerSearchTaskResult>() {
+            @Override
+            public GetSpeakerSearchTaskResult call() throws Exception {
+                GetSpeakerSearchTaskResult result = null;
+
+                try {
+                    result = executeGetSpeakerSearchTask(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetVoiceConnectorResult> getVoiceConnectorAsync(GetVoiceConnectorRequest request) {
 
         return getVoiceConnectorAsync(request, null);
@@ -1522,6 +1687,105 @@ public class AmazonChimeSDKVoiceAsyncClient extends AmazonChimeSDKVoiceClient im
     }
 
     @Override
+    public java.util.concurrent.Future<GetVoiceProfileResult> getVoiceProfileAsync(GetVoiceProfileRequest request) {
+
+        return getVoiceProfileAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetVoiceProfileResult> getVoiceProfileAsync(final GetVoiceProfileRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetVoiceProfileRequest, GetVoiceProfileResult> asyncHandler) {
+        final GetVoiceProfileRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetVoiceProfileResult>() {
+            @Override
+            public GetVoiceProfileResult call() throws Exception {
+                GetVoiceProfileResult result = null;
+
+                try {
+                    result = executeGetVoiceProfile(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetVoiceProfileDomainResult> getVoiceProfileDomainAsync(GetVoiceProfileDomainRequest request) {
+
+        return getVoiceProfileDomainAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetVoiceProfileDomainResult> getVoiceProfileDomainAsync(final GetVoiceProfileDomainRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetVoiceProfileDomainRequest, GetVoiceProfileDomainResult> asyncHandler) {
+        final GetVoiceProfileDomainRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetVoiceProfileDomainResult>() {
+            @Override
+            public GetVoiceProfileDomainResult call() throws Exception {
+                GetVoiceProfileDomainResult result = null;
+
+                try {
+                    result = executeGetVoiceProfileDomain(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetVoiceToneAnalysisTaskResult> getVoiceToneAnalysisTaskAsync(GetVoiceToneAnalysisTaskRequest request) {
+
+        return getVoiceToneAnalysisTaskAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetVoiceToneAnalysisTaskResult> getVoiceToneAnalysisTaskAsync(final GetVoiceToneAnalysisTaskRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetVoiceToneAnalysisTaskRequest, GetVoiceToneAnalysisTaskResult> asyncHandler) {
+        final GetVoiceToneAnalysisTaskRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetVoiceToneAnalysisTaskResult>() {
+            @Override
+            public GetVoiceToneAnalysisTaskResult call() throws Exception {
+                GetVoiceToneAnalysisTaskResult result = null;
+
+                try {
+                    result = executeGetVoiceToneAnalysisTask(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ListAvailableVoiceConnectorRegionsResult> listAvailableVoiceConnectorRegionsAsync(
             ListAvailableVoiceConnectorRegionsRequest request) {
 
@@ -1757,6 +2021,39 @@ public class AmazonChimeSDKVoiceAsyncClient extends AmazonChimeSDKVoiceClient im
     }
 
     @Override
+    public java.util.concurrent.Future<ListTagsForResourceResult> listTagsForResourceAsync(ListTagsForResourceRequest request) {
+
+        return listTagsForResourceAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListTagsForResourceResult> listTagsForResourceAsync(final ListTagsForResourceRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListTagsForResourceRequest, ListTagsForResourceResult> asyncHandler) {
+        final ListTagsForResourceRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListTagsForResourceResult>() {
+            @Override
+            public ListTagsForResourceResult call() throws Exception {
+                ListTagsForResourceResult result = null;
+
+                try {
+                    result = executeListTagsForResource(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ListVoiceConnectorGroupsResult> listVoiceConnectorGroupsAsync(ListVoiceConnectorGroupsRequest request) {
 
         return listVoiceConnectorGroupsAsync(request, null);
@@ -1842,6 +2139,72 @@ public class AmazonChimeSDKVoiceAsyncClient extends AmazonChimeSDKVoiceClient im
 
                 try {
                     result = executeListVoiceConnectors(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListVoiceProfileDomainsResult> listVoiceProfileDomainsAsync(ListVoiceProfileDomainsRequest request) {
+
+        return listVoiceProfileDomainsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListVoiceProfileDomainsResult> listVoiceProfileDomainsAsync(final ListVoiceProfileDomainsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListVoiceProfileDomainsRequest, ListVoiceProfileDomainsResult> asyncHandler) {
+        final ListVoiceProfileDomainsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListVoiceProfileDomainsResult>() {
+            @Override
+            public ListVoiceProfileDomainsResult call() throws Exception {
+                ListVoiceProfileDomainsResult result = null;
+
+                try {
+                    result = executeListVoiceProfileDomains(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListVoiceProfilesResult> listVoiceProfilesAsync(ListVoiceProfilesRequest request) {
+
+        return listVoiceProfilesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListVoiceProfilesResult> listVoiceProfilesAsync(final ListVoiceProfilesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListVoiceProfilesRequest, ListVoiceProfilesResult> asyncHandler) {
+        final ListVoiceProfilesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListVoiceProfilesResult>() {
+            @Override
+            public ListVoiceProfilesResult call() throws Exception {
+                ListVoiceProfilesResult result = null;
+
+                try {
+                    result = executeListVoiceProfiles(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -2233,6 +2596,204 @@ public class AmazonChimeSDKVoiceAsyncClient extends AmazonChimeSDKVoiceClient im
     }
 
     @Override
+    public java.util.concurrent.Future<StartSpeakerSearchTaskResult> startSpeakerSearchTaskAsync(StartSpeakerSearchTaskRequest request) {
+
+        return startSpeakerSearchTaskAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartSpeakerSearchTaskResult> startSpeakerSearchTaskAsync(final StartSpeakerSearchTaskRequest request,
+            final com.amazonaws.handlers.AsyncHandler<StartSpeakerSearchTaskRequest, StartSpeakerSearchTaskResult> asyncHandler) {
+        final StartSpeakerSearchTaskRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<StartSpeakerSearchTaskResult>() {
+            @Override
+            public StartSpeakerSearchTaskResult call() throws Exception {
+                StartSpeakerSearchTaskResult result = null;
+
+                try {
+                    result = executeStartSpeakerSearchTask(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartVoiceToneAnalysisTaskResult> startVoiceToneAnalysisTaskAsync(StartVoiceToneAnalysisTaskRequest request) {
+
+        return startVoiceToneAnalysisTaskAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartVoiceToneAnalysisTaskResult> startVoiceToneAnalysisTaskAsync(final StartVoiceToneAnalysisTaskRequest request,
+            final com.amazonaws.handlers.AsyncHandler<StartVoiceToneAnalysisTaskRequest, StartVoiceToneAnalysisTaskResult> asyncHandler) {
+        final StartVoiceToneAnalysisTaskRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<StartVoiceToneAnalysisTaskResult>() {
+            @Override
+            public StartVoiceToneAnalysisTaskResult call() throws Exception {
+                StartVoiceToneAnalysisTaskResult result = null;
+
+                try {
+                    result = executeStartVoiceToneAnalysisTask(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<StopSpeakerSearchTaskResult> stopSpeakerSearchTaskAsync(StopSpeakerSearchTaskRequest request) {
+
+        return stopSpeakerSearchTaskAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StopSpeakerSearchTaskResult> stopSpeakerSearchTaskAsync(final StopSpeakerSearchTaskRequest request,
+            final com.amazonaws.handlers.AsyncHandler<StopSpeakerSearchTaskRequest, StopSpeakerSearchTaskResult> asyncHandler) {
+        final StopSpeakerSearchTaskRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<StopSpeakerSearchTaskResult>() {
+            @Override
+            public StopSpeakerSearchTaskResult call() throws Exception {
+                StopSpeakerSearchTaskResult result = null;
+
+                try {
+                    result = executeStopSpeakerSearchTask(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<StopVoiceToneAnalysisTaskResult> stopVoiceToneAnalysisTaskAsync(StopVoiceToneAnalysisTaskRequest request) {
+
+        return stopVoiceToneAnalysisTaskAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StopVoiceToneAnalysisTaskResult> stopVoiceToneAnalysisTaskAsync(final StopVoiceToneAnalysisTaskRequest request,
+            final com.amazonaws.handlers.AsyncHandler<StopVoiceToneAnalysisTaskRequest, StopVoiceToneAnalysisTaskResult> asyncHandler) {
+        final StopVoiceToneAnalysisTaskRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<StopVoiceToneAnalysisTaskResult>() {
+            @Override
+            public StopVoiceToneAnalysisTaskResult call() throws Exception {
+                StopVoiceToneAnalysisTaskResult result = null;
+
+                try {
+                    result = executeStopVoiceToneAnalysisTask(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<TagResourceResult> tagResourceAsync(TagResourceRequest request) {
+
+        return tagResourceAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<TagResourceResult> tagResourceAsync(final TagResourceRequest request,
+            final com.amazonaws.handlers.AsyncHandler<TagResourceRequest, TagResourceResult> asyncHandler) {
+        final TagResourceRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<TagResourceResult>() {
+            @Override
+            public TagResourceResult call() throws Exception {
+                TagResourceResult result = null;
+
+                try {
+                    result = executeTagResource(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UntagResourceResult> untagResourceAsync(UntagResourceRequest request) {
+
+        return untagResourceAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UntagResourceResult> untagResourceAsync(final UntagResourceRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UntagResourceRequest, UntagResourceResult> asyncHandler) {
+        final UntagResourceRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UntagResourceResult>() {
+            @Override
+            public UntagResourceResult call() throws Exception {
+                UntagResourceResult result = null;
+
+                try {
+                    result = executeUntagResource(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<UpdateGlobalSettingsResult> updateGlobalSettingsAsync(UpdateGlobalSettingsRequest request) {
 
         return updateGlobalSettingsAsync(request, null);
@@ -2515,6 +3076,72 @@ public class AmazonChimeSDKVoiceAsyncClient extends AmazonChimeSDKVoiceClient im
 
                 try {
                     result = executeUpdateVoiceConnectorGroup(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateVoiceProfileResult> updateVoiceProfileAsync(UpdateVoiceProfileRequest request) {
+
+        return updateVoiceProfileAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateVoiceProfileResult> updateVoiceProfileAsync(final UpdateVoiceProfileRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateVoiceProfileRequest, UpdateVoiceProfileResult> asyncHandler) {
+        final UpdateVoiceProfileRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateVoiceProfileResult>() {
+            @Override
+            public UpdateVoiceProfileResult call() throws Exception {
+                UpdateVoiceProfileResult result = null;
+
+                try {
+                    result = executeUpdateVoiceProfile(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateVoiceProfileDomainResult> updateVoiceProfileDomainAsync(UpdateVoiceProfileDomainRequest request) {
+
+        return updateVoiceProfileDomainAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateVoiceProfileDomainResult> updateVoiceProfileDomainAsync(final UpdateVoiceProfileDomainRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateVoiceProfileDomainRequest, UpdateVoiceProfileDomainResult> asyncHandler) {
+        final UpdateVoiceProfileDomainRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateVoiceProfileDomainResult>() {
+            @Override
+            public UpdateVoiceProfileDomainResult call() throws Exception {
+                UpdateVoiceProfileDomainResult result = null;
+
+                try {
+                    result = executeUpdateVoiceProfileDomain(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

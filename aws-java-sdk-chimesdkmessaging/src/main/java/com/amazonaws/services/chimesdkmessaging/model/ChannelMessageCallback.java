@@ -65,6 +65,12 @@ public class ChannelMessageCallback implements Serializable, Cloneable, Structur
      * </p>
      */
     private String subChannelId;
+    /**
+     * <p>
+     * The content type of the call-back message.
+     * </p>
+     */
+    private String contentType;
 
     /**
      * <p>
@@ -341,6 +347,46 @@ public class ChannelMessageCallback implements Serializable, Cloneable, Structur
     }
 
     /**
+     * <p>
+     * The content type of the call-back message.
+     * </p>
+     * 
+     * @param contentType
+     *        The content type of the call-back message.
+     */
+
+    public void setContentType(String contentType) {
+        this.contentType = contentType;
+    }
+
+    /**
+     * <p>
+     * The content type of the call-back message.
+     * </p>
+     * 
+     * @return The content type of the call-back message.
+     */
+
+    public String getContentType() {
+        return this.contentType;
+    }
+
+    /**
+     * <p>
+     * The content type of the call-back message.
+     * </p>
+     * 
+     * @param contentType
+     *        The content type of the call-back message.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ChannelMessageCallback withContentType(String contentType) {
+        setContentType(contentType);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -363,7 +409,9 @@ public class ChannelMessageCallback implements Serializable, Cloneable, Structur
         if (getMessageAttributes() != null)
             sb.append("MessageAttributes: ").append("***Sensitive Data Redacted***").append(",");
         if (getSubChannelId() != null)
-            sb.append("SubChannelId: ").append(getSubChannelId());
+            sb.append("SubChannelId: ").append(getSubChannelId()).append(",");
+        if (getContentType() != null)
+            sb.append("ContentType: ").append("***Sensitive Data Redacted***");
         sb.append("}");
         return sb.toString();
     }
@@ -402,6 +450,10 @@ public class ChannelMessageCallback implements Serializable, Cloneable, Structur
             return false;
         if (other.getSubChannelId() != null && other.getSubChannelId().equals(this.getSubChannelId()) == false)
             return false;
+        if (other.getContentType() == null ^ this.getContentType() == null)
+            return false;
+        if (other.getContentType() != null && other.getContentType().equals(this.getContentType()) == false)
+            return false;
         return true;
     }
 
@@ -416,6 +468,7 @@ public class ChannelMessageCallback implements Serializable, Cloneable, Structur
         hashCode = prime * hashCode + ((getPushNotification() == null) ? 0 : getPushNotification().hashCode());
         hashCode = prime * hashCode + ((getMessageAttributes() == null) ? 0 : getMessageAttributes().hashCode());
         hashCode = prime * hashCode + ((getSubChannelId() == null) ? 0 : getSubChannelId().hashCode());
+        hashCode = prime * hashCode + ((getContentType() == null) ? 0 : getContentType().hashCode());
         return hashCode;
     }
 

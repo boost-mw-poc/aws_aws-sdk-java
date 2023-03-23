@@ -72,6 +72,10 @@ public class RepositorySummaryJsonUnmarshaller implements Unmarshaller<Repositor
                     context.nextToken();
                     repositorySummary.setDescription(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("createdTime", targetDepth)) {
+                    context.nextToken();
+                    repositorySummary.setCreatedTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

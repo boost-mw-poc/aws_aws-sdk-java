@@ -26,7 +26,7 @@ public class ServiceUnavailableException extends com.amazonaws.services.chimesdk
     private String code;
     /**
      * <p>
-     * The request id associated with the call responsible for the exception.
+     * The request ID associated with the call responsible for the exception.
      * </p>
      */
     private String requestId;
@@ -85,11 +85,11 @@ public class ServiceUnavailableException extends com.amazonaws.services.chimesdk
 
     /**
      * <p>
-     * The request id associated with the call responsible for the exception.
+     * The request ID associated with the call responsible for the exception.
      * </p>
      * 
      * @param requestId
-     *        The request id associated with the call responsible for the exception.
+     *        The request ID associated with the call responsible for the exception.
      */
 
     @com.fasterxml.jackson.annotation.JsonProperty("RequestId")
@@ -99,10 +99,10 @@ public class ServiceUnavailableException extends com.amazonaws.services.chimesdk
 
     /**
      * <p>
-     * The request id associated with the call responsible for the exception.
+     * The request ID associated with the call responsible for the exception.
      * </p>
      * 
-     * @return The request id associated with the call responsible for the exception.
+     * @return The request ID associated with the call responsible for the exception.
      */
 
     @com.fasterxml.jackson.annotation.JsonProperty("RequestId")
@@ -112,11 +112,11 @@ public class ServiceUnavailableException extends com.amazonaws.services.chimesdk
 
     /**
      * <p>
-     * The request id associated with the call responsible for the exception.
+     * The request ID associated with the call responsible for the exception.
      * </p>
      * 
      * @param requestId
-     *        The request id associated with the call responsible for the exception.
+     *        The request ID associated with the call responsible for the exception.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

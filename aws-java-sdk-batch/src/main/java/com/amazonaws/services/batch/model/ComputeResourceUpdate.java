@@ -71,6 +71,17 @@ public class ComputeResourceUpdate implements Serializable, Cloneable, Structure
      * Batch doesn't support changing the desired number of vCPUs of an existing compute environment. Don't specify this
      * parameter for compute environments using Amazon EKS clusters.
      * </p>
+     * </note> <note>
+     * <p>
+     * When you update the <code>desiredvCpus</code> setting, the value must be between the <code>minvCpus</code> and
+     * <code>maxvCpus</code> values.
+     * </p>
+     * <p>
+     * Additionally, the updated <code>desiredvCpus</code> value must be greater than or equal to the current
+     * <code>desiredvCpus</code> value. For more information, see <a
+     * href="https://docs.aws.amazon.com/batch/latest/userguide/troubleshooting.html#error-desired-vcpus-update"
+     * >Troubleshooting Batch</a> in the <i>Batch User Guide</i>.
+     * </p>
      * </note>
      */
     private Integer desiredvCpus;
@@ -593,6 +604,17 @@ public class ComputeResourceUpdate implements Serializable, Cloneable, Structure
      * Batch doesn't support changing the desired number of vCPUs of an existing compute environment. Don't specify this
      * parameter for compute environments using Amazon EKS clusters.
      * </p>
+     * </note> <note>
+     * <p>
+     * When you update the <code>desiredvCpus</code> setting, the value must be between the <code>minvCpus</code> and
+     * <code>maxvCpus</code> values.
+     * </p>
+     * <p>
+     * Additionally, the updated <code>desiredvCpus</code> value must be greater than or equal to the current
+     * <code>desiredvCpus</code> value. For more information, see <a
+     * href="https://docs.aws.amazon.com/batch/latest/userguide/troubleshooting.html#error-desired-vcpus-update"
+     * >Troubleshooting Batch</a> in the <i>Batch User Guide</i>.
+     * </p>
      * </note>
      * 
      * @param desiredvCpus
@@ -605,6 +627,17 @@ public class ComputeResourceUpdate implements Serializable, Cloneable, Structure
      *        <p>
      *        Batch doesn't support changing the desired number of vCPUs of an existing compute environment. Don't
      *        specify this parameter for compute environments using Amazon EKS clusters.
+     *        </p>
+     *        </note> <note>
+     *        <p>
+     *        When you update the <code>desiredvCpus</code> setting, the value must be between the <code>minvCpus</code>
+     *        and <code>maxvCpus</code> values.
+     *        </p>
+     *        <p>
+     *        Additionally, the updated <code>desiredvCpus</code> value must be greater than or equal to the current
+     *        <code>desiredvCpus</code> value. For more information, see <a
+     *        href="https://docs.aws.amazon.com/batch/latest/userguide/troubleshooting.html#error-desired-vcpus-update"
+     *        >Troubleshooting Batch</a> in the <i>Batch User Guide</i>.
      *        </p>
      */
 
@@ -626,6 +659,17 @@ public class ComputeResourceUpdate implements Serializable, Cloneable, Structure
      * Batch doesn't support changing the desired number of vCPUs of an existing compute environment. Don't specify this
      * parameter for compute environments using Amazon EKS clusters.
      * </p>
+     * </note> <note>
+     * <p>
+     * When you update the <code>desiredvCpus</code> setting, the value must be between the <code>minvCpus</code> and
+     * <code>maxvCpus</code> values.
+     * </p>
+     * <p>
+     * Additionally, the updated <code>desiredvCpus</code> value must be greater than or equal to the current
+     * <code>desiredvCpus</code> value. For more information, see <a
+     * href="https://docs.aws.amazon.com/batch/latest/userguide/troubleshooting.html#error-desired-vcpus-update"
+     * >Troubleshooting Batch</a> in the <i>Batch User Guide</i>.
+     * </p>
      * </note>
      * 
      * @return The desired number of Amazon EC2 vCPUS in the compute environment. Batch modifies this value between the
@@ -637,6 +681,17 @@ public class ComputeResourceUpdate implements Serializable, Cloneable, Structure
      *         <p>
      *         Batch doesn't support changing the desired number of vCPUs of an existing compute environment. Don't
      *         specify this parameter for compute environments using Amazon EKS clusters.
+     *         </p>
+     *         </note> <note>
+     *         <p>
+     *         When you update the <code>desiredvCpus</code> setting, the value must be between the
+     *         <code>minvCpus</code> and <code>maxvCpus</code> values.
+     *         </p>
+     *         <p>
+     *         Additionally, the updated <code>desiredvCpus</code> value must be greater than or equal to the current
+     *         <code>desiredvCpus</code> value. For more information, see <a
+     *         href="https://docs.aws.amazon.com/batch/latest/userguide/troubleshooting.html#error-desired-vcpus-update"
+     *         >Troubleshooting Batch</a> in the <i>Batch User Guide</i>.
      *         </p>
      */
 
@@ -658,6 +713,17 @@ public class ComputeResourceUpdate implements Serializable, Cloneable, Structure
      * Batch doesn't support changing the desired number of vCPUs of an existing compute environment. Don't specify this
      * parameter for compute environments using Amazon EKS clusters.
      * </p>
+     * </note> <note>
+     * <p>
+     * When you update the <code>desiredvCpus</code> setting, the value must be between the <code>minvCpus</code> and
+     * <code>maxvCpus</code> values.
+     * </p>
+     * <p>
+     * Additionally, the updated <code>desiredvCpus</code> value must be greater than or equal to the current
+     * <code>desiredvCpus</code> value. For more information, see <a
+     * href="https://docs.aws.amazon.com/batch/latest/userguide/troubleshooting.html#error-desired-vcpus-update"
+     * >Troubleshooting Batch</a> in the <i>Batch User Guide</i>.
+     * </p>
      * </note>
      * 
      * @param desiredvCpus
@@ -670,6 +736,17 @@ public class ComputeResourceUpdate implements Serializable, Cloneable, Structure
      *        <p>
      *        Batch doesn't support changing the desired number of vCPUs of an existing compute environment. Don't
      *        specify this parameter for compute environments using Amazon EKS clusters.
+     *        </p>
+     *        </note> <note>
+     *        <p>
+     *        When you update the <code>desiredvCpus</code> setting, the value must be between the <code>minvCpus</code>
+     *        and <code>maxvCpus</code> values.
+     *        </p>
+     *        <p>
+     *        Additionally, the updated <code>desiredvCpus</code> value must be greater than or equal to the current
+     *        <code>desiredvCpus</code> value. For more information, see <a
+     *        href="https://docs.aws.amazon.com/batch/latest/userguide/troubleshooting.html#error-desired-vcpus-update"
+     *        >Troubleshooting Batch</a> in the <i>Batch User Guide</i>.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */

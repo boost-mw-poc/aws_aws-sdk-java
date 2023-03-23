@@ -60,7 +60,7 @@ public class MediaLiveConnectorPipeline implements Serializable, Cloneable, Stru
     private String status;
     /**
      * <p>
-     * Thetime at which the connector pipeline was created.
+     * The time at which the connector pipeline was created.
      * </p>
      */
     private java.util.Date createdTimestamp;
@@ -352,11 +352,11 @@ public class MediaLiveConnectorPipeline implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * Thetime at which the connector pipeline was created.
+     * The time at which the connector pipeline was created.
      * </p>
      * 
      * @param createdTimestamp
-     *        Thetime at which the connector pipeline was created.
+     *        The time at which the connector pipeline was created.
      */
 
     public void setCreatedTimestamp(java.util.Date createdTimestamp) {
@@ -365,10 +365,10 @@ public class MediaLiveConnectorPipeline implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * Thetime at which the connector pipeline was created.
+     * The time at which the connector pipeline was created.
      * </p>
      * 
-     * @return Thetime at which the connector pipeline was created.
+     * @return The time at which the connector pipeline was created.
      */
 
     public java.util.Date getCreatedTimestamp() {
@@ -377,11 +377,11 @@ public class MediaLiveConnectorPipeline implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * Thetime at which the connector pipeline was created.
+     * The time at which the connector pipeline was created.
      * </p>
      * 
      * @param createdTimestamp
-     *        Thetime at which the connector pipeline was created.
+     *        The time at which the connector pipeline was created.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

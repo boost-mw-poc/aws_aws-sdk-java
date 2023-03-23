@@ -29,6 +29,7 @@ public class DescribeOrganizationConfigurationResult extends com.amazonaws.Amazo
      * Indicates whether GuardDuty is automatically enabled for accounts added to the organization.
      * </p>
      */
+    @Deprecated
     private Boolean autoEnable;
     /**
      * <p>
@@ -56,6 +57,32 @@ public class DescribeOrganizationConfigurationResult extends com.amazonaws.Amazo
      * </p>
      */
     private String nextToken;
+    /**
+     * <p>
+     * Indicates the auto-enablement configuration of GuardDuty for the member accounts in the organization.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>NEW</code>: Indicates that new accounts joining the organization are configured to have GuardDuty enabled
+     * automatically.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ALL</code>: Indicates that all accounts (new and existing members) in the organization are configured to
+     * have GuardDuty enabled automatically.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>NONE</code>: Indicates that no account in the organization will be configured to have GuardDuty enabled
+     * automatically.
+     * </p>
+     * </li>
+     * </ul>
+     */
+    private String autoEnableOrganizationMembers;
 
     /**
      * <p>
@@ -65,7 +92,7 @@ public class DescribeOrganizationConfigurationResult extends com.amazonaws.Amazo
      * @param autoEnable
      *        Indicates whether GuardDuty is automatically enabled for accounts added to the organization.
      */
-
+    @Deprecated
     public void setAutoEnable(Boolean autoEnable) {
         this.autoEnable = autoEnable;
     }
@@ -77,7 +104,7 @@ public class DescribeOrganizationConfigurationResult extends com.amazonaws.Amazo
      * 
      * @return Indicates whether GuardDuty is automatically enabled for accounts added to the organization.
      */
-
+    @Deprecated
     public Boolean getAutoEnable() {
         return this.autoEnable;
     }
@@ -91,7 +118,7 @@ public class DescribeOrganizationConfigurationResult extends com.amazonaws.Amazo
      *        Indicates whether GuardDuty is automatically enabled for accounts added to the organization.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
-
+    @Deprecated
     public DescribeOrganizationConfigurationResult withAutoEnable(Boolean autoEnable) {
         setAutoEnable(autoEnable);
         return this;
@@ -104,7 +131,7 @@ public class DescribeOrganizationConfigurationResult extends com.amazonaws.Amazo
      * 
      * @return Indicates whether GuardDuty is automatically enabled for accounts added to the organization.
      */
-
+    @Deprecated
     public Boolean isAutoEnable() {
         return this.autoEnable;
     }
@@ -320,6 +347,221 @@ public class DescribeOrganizationConfigurationResult extends com.amazonaws.Amazo
     }
 
     /**
+     * <p>
+     * Indicates the auto-enablement configuration of GuardDuty for the member accounts in the organization.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>NEW</code>: Indicates that new accounts joining the organization are configured to have GuardDuty enabled
+     * automatically.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ALL</code>: Indicates that all accounts (new and existing members) in the organization are configured to
+     * have GuardDuty enabled automatically.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>NONE</code>: Indicates that no account in the organization will be configured to have GuardDuty enabled
+     * automatically.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param autoEnableOrganizationMembers
+     *        Indicates the auto-enablement configuration of GuardDuty for the member accounts in the organization.</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>NEW</code>: Indicates that new accounts joining the organization are configured to have GuardDuty
+     *        enabled automatically.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>ALL</code>: Indicates that all accounts (new and existing members) in the organization are
+     *        configured to have GuardDuty enabled automatically.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>NONE</code>: Indicates that no account in the organization will be configured to have GuardDuty
+     *        enabled automatically.
+     *        </p>
+     *        </li>
+     * @see AutoEnableMembers
+     */
+
+    public void setAutoEnableOrganizationMembers(String autoEnableOrganizationMembers) {
+        this.autoEnableOrganizationMembers = autoEnableOrganizationMembers;
+    }
+
+    /**
+     * <p>
+     * Indicates the auto-enablement configuration of GuardDuty for the member accounts in the organization.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>NEW</code>: Indicates that new accounts joining the organization are configured to have GuardDuty enabled
+     * automatically.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ALL</code>: Indicates that all accounts (new and existing members) in the organization are configured to
+     * have GuardDuty enabled automatically.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>NONE</code>: Indicates that no account in the organization will be configured to have GuardDuty enabled
+     * automatically.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @return Indicates the auto-enablement configuration of GuardDuty for the member accounts in the organization.</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>NEW</code>: Indicates that new accounts joining the organization are configured to have GuardDuty
+     *         enabled automatically.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>ALL</code>: Indicates that all accounts (new and existing members) in the organization are
+     *         configured to have GuardDuty enabled automatically.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>NONE</code>: Indicates that no account in the organization will be configured to have GuardDuty
+     *         enabled automatically.
+     *         </p>
+     *         </li>
+     * @see AutoEnableMembers
+     */
+
+    public String getAutoEnableOrganizationMembers() {
+        return this.autoEnableOrganizationMembers;
+    }
+
+    /**
+     * <p>
+     * Indicates the auto-enablement configuration of GuardDuty for the member accounts in the organization.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>NEW</code>: Indicates that new accounts joining the organization are configured to have GuardDuty enabled
+     * automatically.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ALL</code>: Indicates that all accounts (new and existing members) in the organization are configured to
+     * have GuardDuty enabled automatically.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>NONE</code>: Indicates that no account in the organization will be configured to have GuardDuty enabled
+     * automatically.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param autoEnableOrganizationMembers
+     *        Indicates the auto-enablement configuration of GuardDuty for the member accounts in the organization.</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>NEW</code>: Indicates that new accounts joining the organization are configured to have GuardDuty
+     *        enabled automatically.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>ALL</code>: Indicates that all accounts (new and existing members) in the organization are
+     *        configured to have GuardDuty enabled automatically.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>NONE</code>: Indicates that no account in the organization will be configured to have GuardDuty
+     *        enabled automatically.
+     *        </p>
+     *        </li>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see AutoEnableMembers
+     */
+
+    public DescribeOrganizationConfigurationResult withAutoEnableOrganizationMembers(String autoEnableOrganizationMembers) {
+        setAutoEnableOrganizationMembers(autoEnableOrganizationMembers);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Indicates the auto-enablement configuration of GuardDuty for the member accounts in the organization.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>NEW</code>: Indicates that new accounts joining the organization are configured to have GuardDuty enabled
+     * automatically.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ALL</code>: Indicates that all accounts (new and existing members) in the organization are configured to
+     * have GuardDuty enabled automatically.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>NONE</code>: Indicates that no account in the organization will be configured to have GuardDuty enabled
+     * automatically.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param autoEnableOrganizationMembers
+     *        Indicates the auto-enablement configuration of GuardDuty for the member accounts in the organization.</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>NEW</code>: Indicates that new accounts joining the organization are configured to have GuardDuty
+     *        enabled automatically.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>ALL</code>: Indicates that all accounts (new and existing members) in the organization are
+     *        configured to have GuardDuty enabled automatically.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>NONE</code>: Indicates that no account in the organization will be configured to have GuardDuty
+     *        enabled automatically.
+     *        </p>
+     *        </li>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see AutoEnableMembers
+     */
+
+    public DescribeOrganizationConfigurationResult withAutoEnableOrganizationMembers(AutoEnableMembers autoEnableOrganizationMembers) {
+        this.autoEnableOrganizationMembers = autoEnableOrganizationMembers.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -340,7 +582,9 @@ public class DescribeOrganizationConfigurationResult extends com.amazonaws.Amazo
         if (getFeatures() != null)
             sb.append("Features: ").append(getFeatures()).append(",");
         if (getNextToken() != null)
-            sb.append("NextToken: ").append(getNextToken());
+            sb.append("NextToken: ").append(getNextToken()).append(",");
+        if (getAutoEnableOrganizationMembers() != null)
+            sb.append("AutoEnableOrganizationMembers: ").append(getAutoEnableOrganizationMembers());
         sb.append("}");
         return sb.toString();
     }
@@ -375,6 +619,11 @@ public class DescribeOrganizationConfigurationResult extends com.amazonaws.Amazo
             return false;
         if (other.getNextToken() != null && other.getNextToken().equals(this.getNextToken()) == false)
             return false;
+        if (other.getAutoEnableOrganizationMembers() == null ^ this.getAutoEnableOrganizationMembers() == null)
+            return false;
+        if (other.getAutoEnableOrganizationMembers() != null
+                && other.getAutoEnableOrganizationMembers().equals(this.getAutoEnableOrganizationMembers()) == false)
+            return false;
         return true;
     }
 
@@ -388,6 +637,7 @@ public class DescribeOrganizationConfigurationResult extends com.amazonaws.Amazo
         hashCode = prime * hashCode + ((getDataSources() == null) ? 0 : getDataSources().hashCode());
         hashCode = prime * hashCode + ((getFeatures() == null) ? 0 : getFeatures().hashCode());
         hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
+        hashCode = prime * hashCode + ((getAutoEnableOrganizationMembers() == null) ? 0 : getAutoEnableOrganizationMembers().hashCode());
         return hashCode;
     }
 

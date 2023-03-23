@@ -1383,6 +1383,39 @@ public class AmazonChimeSDKMessagingAsyncClient extends AmazonChimeSDKMessagingC
     }
 
     @Override
+    public java.util.concurrent.Future<PutChannelExpirationSettingsResult> putChannelExpirationSettingsAsync(PutChannelExpirationSettingsRequest request) {
+
+        return putChannelExpirationSettingsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<PutChannelExpirationSettingsResult> putChannelExpirationSettingsAsync(final PutChannelExpirationSettingsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<PutChannelExpirationSettingsRequest, PutChannelExpirationSettingsResult> asyncHandler) {
+        final PutChannelExpirationSettingsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<PutChannelExpirationSettingsResult>() {
+            @Override
+            public PutChannelExpirationSettingsResult call() throws Exception {
+                PutChannelExpirationSettingsResult result = null;
+
+                try {
+                    result = executePutChannelExpirationSettings(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<PutChannelMembershipPreferencesResult> putChannelMembershipPreferencesAsync(
             PutChannelMembershipPreferencesRequest request) {
 

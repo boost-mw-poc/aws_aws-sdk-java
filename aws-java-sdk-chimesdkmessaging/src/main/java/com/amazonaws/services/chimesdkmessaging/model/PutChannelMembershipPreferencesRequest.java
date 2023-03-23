@@ -33,13 +33,13 @@ public class PutChannelMembershipPreferencesRequest extends com.amazonaws.Amazon
     private String channelArn;
     /**
      * <p>
-     * The <code>AppInstanceUserArn</code> of the member setting the preferences.
+     * The ARN of the member setting the preferences.
      * </p>
      */
     private String memberArn;
     /**
      * <p>
-     * The <code>AppInstanceUserARN</code> of the user making the API call.
+     * The ARN of the <code>AppInstanceUser</code> or <code>AppInstanceBot</code> that makes the API call.
      * </p>
      */
     private String chimeBearer;
@@ -92,11 +92,11 @@ public class PutChannelMembershipPreferencesRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The <code>AppInstanceUserArn</code> of the member setting the preferences.
+     * The ARN of the member setting the preferences.
      * </p>
      * 
      * @param memberArn
-     *        The <code>AppInstanceUserArn</code> of the member setting the preferences.
+     *        The ARN of the member setting the preferences.
      */
 
     public void setMemberArn(String memberArn) {
@@ -105,10 +105,10 @@ public class PutChannelMembershipPreferencesRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The <code>AppInstanceUserArn</code> of the member setting the preferences.
+     * The ARN of the member setting the preferences.
      * </p>
      * 
-     * @return The <code>AppInstanceUserArn</code> of the member setting the preferences.
+     * @return The ARN of the member setting the preferences.
      */
 
     public String getMemberArn() {
@@ -117,11 +117,11 @@ public class PutChannelMembershipPreferencesRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The <code>AppInstanceUserArn</code> of the member setting the preferences.
+     * The ARN of the member setting the preferences.
      * </p>
      * 
      * @param memberArn
-     *        The <code>AppInstanceUserArn</code> of the member setting the preferences.
+     *        The ARN of the member setting the preferences.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -132,11 +132,11 @@ public class PutChannelMembershipPreferencesRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The <code>AppInstanceUserARN</code> of the user making the API call.
+     * The ARN of the <code>AppInstanceUser</code> or <code>AppInstanceBot</code> that makes the API call.
      * </p>
      * 
      * @param chimeBearer
-     *        The <code>AppInstanceUserARN</code> of the user making the API call.
+     *        The ARN of the <code>AppInstanceUser</code> or <code>AppInstanceBot</code> that makes the API call.
      */
 
     public void setChimeBearer(String chimeBearer) {
@@ -145,10 +145,10 @@ public class PutChannelMembershipPreferencesRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The <code>AppInstanceUserARN</code> of the user making the API call.
+     * The ARN of the <code>AppInstanceUser</code> or <code>AppInstanceBot</code> that makes the API call.
      * </p>
      * 
-     * @return The <code>AppInstanceUserARN</code> of the user making the API call.
+     * @return The ARN of the <code>AppInstanceUser</code> or <code>AppInstanceBot</code> that makes the API call.
      */
 
     public String getChimeBearer() {
@@ -157,11 +157,11 @@ public class PutChannelMembershipPreferencesRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The <code>AppInstanceUserARN</code> of the user making the API call.
+     * The ARN of the <code>AppInstanceUser</code> or <code>AppInstanceBot</code> that makes the API call.
      * </p>
      * 
      * @param chimeBearer
-     *        The <code>AppInstanceUserARN</code> of the user making the API call.
+     *        The ARN of the <code>AppInstanceUser</code> or <code>AppInstanceBot</code> that makes the API call.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

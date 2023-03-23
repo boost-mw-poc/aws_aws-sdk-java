@@ -42,7 +42,7 @@ public class MediaConcatenationPipeline implements Serializable, Cloneable, Stru
     private String mediaPipelineArn;
     /**
      * <p>
-     * The data sources being concatnated.
+     * The data sources being concatenated.
      * </p>
      */
     private java.util.List<ConcatenationSource> sources;
@@ -153,10 +153,10 @@ public class MediaConcatenationPipeline implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The data sources being concatnated.
+     * The data sources being concatenated.
      * </p>
      * 
-     * @return The data sources being concatnated.
+     * @return The data sources being concatenated.
      */
 
     public java.util.List<ConcatenationSource> getSources() {
@@ -165,11 +165,11 @@ public class MediaConcatenationPipeline implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The data sources being concatnated.
+     * The data sources being concatenated.
      * </p>
      * 
      * @param sources
-     *        The data sources being concatnated.
+     *        The data sources being concatenated.
      */
 
     public void setSources(java.util.Collection<ConcatenationSource> sources) {
@@ -183,7 +183,7 @@ public class MediaConcatenationPipeline implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The data sources being concatnated.
+     * The data sources being concatenated.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -192,7 +192,7 @@ public class MediaConcatenationPipeline implements Serializable, Cloneable, Stru
      * </p>
      * 
      * @param sources
-     *        The data sources being concatnated.
+     *        The data sources being concatenated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -208,11 +208,11 @@ public class MediaConcatenationPipeline implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The data sources being concatnated.
+     * The data sources being concatenated.
      * </p>
      * 
      * @param sources
-     *        The data sources being concatnated.
+     *        The data sources being concatenated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

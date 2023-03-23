@@ -228,6 +228,44 @@ public interface AmazonChimeSDKVoice {
     CreateVoiceConnectorGroupResult createVoiceConnectorGroup(CreateVoiceConnectorGroupRequest createVoiceConnectorGroupRequest);
 
     /**
+     * @param createVoiceProfileRequest
+     * @return Result of the CreateVoiceProfile operation returned by the service.
+     * @throws BadRequestException
+     * @throws ResourceLimitExceededException
+     * @throws UnauthorizedClientException
+     * @throws ForbiddenException
+     * @throws AccessDeniedException
+     * @throws NotFoundException
+     * @throws ConflictException
+     * @throws GoneException
+     * @throws ThrottledClientException
+     * @throws ServiceUnavailableException
+     * @throws ServiceFailureException
+     * @sample AmazonChimeSDKVoice.CreateVoiceProfile
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/CreateVoiceProfile"
+     *      target="_top">AWS API Documentation</a>
+     */
+    CreateVoiceProfileResult createVoiceProfile(CreateVoiceProfileRequest createVoiceProfileRequest);
+
+    /**
+     * @param createVoiceProfileDomainRequest
+     * @return Result of the CreateVoiceProfileDomain operation returned by the service.
+     * @throws BadRequestException
+     * @throws ForbiddenException
+     * @throws AccessDeniedException
+     * @throws ConflictException
+     * @throws UnauthorizedClientException
+     * @throws ThrottledClientException
+     * @throws ResourceLimitExceededException
+     * @throws ServiceUnavailableException
+     * @throws ServiceFailureException
+     * @sample AmazonChimeSDKVoice.CreateVoiceProfileDomain
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/CreateVoiceProfileDomain"
+     *      target="_top">AWS API Documentation</a>
+     */
+    CreateVoiceProfileDomainResult createVoiceProfileDomain(CreateVoiceProfileDomainRequest createVoiceProfileDomainRequest);
+
+    /**
      * @param deletePhoneNumberRequest
      * @return Result of the DeletePhoneNumber operation returned by the service.
      * @throws UnauthorizedClientException
@@ -430,6 +468,42 @@ public interface AmazonChimeSDKVoice {
             DeleteVoiceConnectorTerminationCredentialsRequest deleteVoiceConnectorTerminationCredentialsRequest);
 
     /**
+     * @param deleteVoiceProfileRequest
+     * @return Result of the DeleteVoiceProfile operation returned by the service.
+     * @throws BadRequestException
+     * @throws UnauthorizedClientException
+     * @throws ForbiddenException
+     * @throws AccessDeniedException
+     * @throws NotFoundException
+     * @throws ConflictException
+     * @throws ThrottledClientException
+     * @throws ServiceUnavailableException
+     * @throws ServiceFailureException
+     * @sample AmazonChimeSDKVoice.DeleteVoiceProfile
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/DeleteVoiceProfile"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DeleteVoiceProfileResult deleteVoiceProfile(DeleteVoiceProfileRequest deleteVoiceProfileRequest);
+
+    /**
+     * @param deleteVoiceProfileDomainRequest
+     * @return Result of the DeleteVoiceProfileDomain operation returned by the service.
+     * @throws UnauthorizedClientException
+     * @throws NotFoundException
+     * @throws ForbiddenException
+     * @throws AccessDeniedException
+     * @throws BadRequestException
+     * @throws ConflictException
+     * @throws ThrottledClientException
+     * @throws ServiceUnavailableException
+     * @throws ServiceFailureException
+     * @sample AmazonChimeSDKVoice.DeleteVoiceProfileDomain
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/DeleteVoiceProfileDomain"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DeleteVoiceProfileDomainResult deleteVoiceProfileDomain(DeleteVoiceProfileDomainRequest deleteVoiceProfileDomainRequest);
+
+    /**
      * @param disassociatePhoneNumbersFromVoiceConnectorRequest
      * @return Result of the DisassociatePhoneNumbersFromVoiceConnector operation returned by the service.
      * @throws UnauthorizedClientException
@@ -612,6 +686,24 @@ public interface AmazonChimeSDKVoice {
     GetSipRuleResult getSipRule(GetSipRuleRequest getSipRuleRequest);
 
     /**
+     * @param getSpeakerSearchTaskRequest
+     * @return Result of the GetSpeakerSearchTask operation returned by the service.
+     * @throws BadRequestException
+     * @throws ForbiddenException
+     * @throws NotFoundException
+     * @throws ConflictException
+     * @throws ThrottledClientException
+     * @throws AccessDeniedException
+     * @throws UnauthorizedClientException
+     * @throws ServiceFailureException
+     * @throws ServiceUnavailableException
+     * @sample AmazonChimeSDKVoice.GetSpeakerSearchTask
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/GetSpeakerSearchTask"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetSpeakerSearchTaskResult getSpeakerSearchTask(GetSpeakerSearchTaskRequest getSpeakerSearchTaskRequest);
+
+    /**
      * @param getVoiceConnectorRequest
      * @return Result of the GetVoiceConnector operation returned by the service.
      * @throws UnauthorizedClientException
@@ -764,6 +856,58 @@ public interface AmazonChimeSDKVoice {
             GetVoiceConnectorTerminationHealthRequest getVoiceConnectorTerminationHealthRequest);
 
     /**
+     * @param getVoiceProfileRequest
+     * @return Result of the GetVoiceProfile operation returned by the service.
+     * @throws BadRequestException
+     * @throws UnauthorizedClientException
+     * @throws ForbiddenException
+     * @throws AccessDeniedException
+     * @throws NotFoundException
+     * @throws ThrottledClientException
+     * @throws ServiceUnavailableException
+     * @throws ServiceFailureException
+     * @sample AmazonChimeSDKVoice.GetVoiceProfile
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/GetVoiceProfile"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetVoiceProfileResult getVoiceProfile(GetVoiceProfileRequest getVoiceProfileRequest);
+
+    /**
+     * @param getVoiceProfileDomainRequest
+     * @return Result of the GetVoiceProfileDomain operation returned by the service.
+     * @throws UnauthorizedClientException
+     * @throws NotFoundException
+     * @throws ForbiddenException
+     * @throws AccessDeniedException
+     * @throws BadRequestException
+     * @throws ThrottledClientException
+     * @throws ServiceUnavailableException
+     * @throws ServiceFailureException
+     * @sample AmazonChimeSDKVoice.GetVoiceProfileDomain
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/GetVoiceProfileDomain"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetVoiceProfileDomainResult getVoiceProfileDomain(GetVoiceProfileDomainRequest getVoiceProfileDomainRequest);
+
+    /**
+     * @param getVoiceToneAnalysisTaskRequest
+     * @return Result of the GetVoiceToneAnalysisTask operation returned by the service.
+     * @throws BadRequestException
+     * @throws ForbiddenException
+     * @throws NotFoundException
+     * @throws ConflictException
+     * @throws ThrottledClientException
+     * @throws AccessDeniedException
+     * @throws UnauthorizedClientException
+     * @throws ServiceFailureException
+     * @throws ServiceUnavailableException
+     * @sample AmazonChimeSDKVoice.GetVoiceToneAnalysisTask
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/GetVoiceToneAnalysisTask"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetVoiceToneAnalysisTaskResult getVoiceToneAnalysisTask(GetVoiceToneAnalysisTaskRequest getVoiceToneAnalysisTaskRequest);
+
+    /**
      * @param listAvailableVoiceConnectorRegionsRequest
      * @return Result of the ListAvailableVoiceConnectorRegions operation returned by the service.
      * @throws UnauthorizedClientException
@@ -875,6 +1019,21 @@ public interface AmazonChimeSDKVoice {
     ListSupportedPhoneNumberCountriesResult listSupportedPhoneNumberCountries(ListSupportedPhoneNumberCountriesRequest listSupportedPhoneNumberCountriesRequest);
 
     /**
+     * @param listTagsForResourceRequest
+     * @return Result of the ListTagsForResource operation returned by the service.
+     * @throws BadRequestException
+     * @throws ForbiddenException
+     * @throws NotFoundException
+     * @throws UnauthorizedClientException
+     * @throws ServiceUnavailableException
+     * @throws ServiceFailureException
+     * @sample AmazonChimeSDKVoice.ListTagsForResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/ListTagsForResource"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListTagsForResourceResult listTagsForResource(ListTagsForResourceRequest listTagsForResourceRequest);
+
+    /**
      * @param listVoiceConnectorGroupsRequest
      * @return Result of the ListVoiceConnectorGroups operation returned by the service.
      * @throws UnauthorizedClientException
@@ -921,6 +1080,38 @@ public interface AmazonChimeSDKVoice {
      *      target="_top">AWS API Documentation</a>
      */
     ListVoiceConnectorsResult listVoiceConnectors(ListVoiceConnectorsRequest listVoiceConnectorsRequest);
+
+    /**
+     * @param listVoiceProfileDomainsRequest
+     * @return Result of the ListVoiceProfileDomains operation returned by the service.
+     * @throws NotFoundException
+     * @throws UnauthorizedClientException
+     * @throws ForbiddenException
+     * @throws BadRequestException
+     * @throws ThrottledClientException
+     * @throws ServiceUnavailableException
+     * @throws ServiceFailureException
+     * @sample AmazonChimeSDKVoice.ListVoiceProfileDomains
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/ListVoiceProfileDomains"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListVoiceProfileDomainsResult listVoiceProfileDomains(ListVoiceProfileDomainsRequest listVoiceProfileDomainsRequest);
+
+    /**
+     * @param listVoiceProfilesRequest
+     * @return Result of the ListVoiceProfiles operation returned by the service.
+     * @throws NotFoundException
+     * @throws UnauthorizedClientException
+     * @throws ForbiddenException
+     * @throws BadRequestException
+     * @throws ThrottledClientException
+     * @throws ServiceUnavailableException
+     * @throws ServiceFailureException
+     * @sample AmazonChimeSDKVoice.ListVoiceProfiles
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/ListVoiceProfiles"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListVoiceProfilesResult listVoiceProfiles(ListVoiceProfilesRequest listVoiceProfilesRequest);
 
     /**
      * @param putSipMediaApplicationAlexaSkillConfigurationRequest
@@ -1114,6 +1305,117 @@ public interface AmazonChimeSDKVoice {
     SearchAvailablePhoneNumbersResult searchAvailablePhoneNumbers(SearchAvailablePhoneNumbersRequest searchAvailablePhoneNumbersRequest);
 
     /**
+     * @param startSpeakerSearchTaskRequest
+     * @return Result of the StartSpeakerSearchTask operation returned by the service.
+     * @throws BadRequestException
+     * @throws ResourceLimitExceededException
+     * @throws UnauthorizedClientException
+     * @throws ForbiddenException
+     * @throws AccessDeniedException
+     * @throws NotFoundException
+     * @throws ConflictException
+     * @throws GoneException
+     * @throws UnprocessableEntityException
+     * @throws ThrottledClientException
+     * @throws ServiceUnavailableException
+     * @throws ServiceFailureException
+     * @sample AmazonChimeSDKVoice.StartSpeakerSearchTask
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/StartSpeakerSearchTask"
+     *      target="_top">AWS API Documentation</a>
+     */
+    StartSpeakerSearchTaskResult startSpeakerSearchTask(StartSpeakerSearchTaskRequest startSpeakerSearchTaskRequest);
+
+    /**
+     * @param startVoiceToneAnalysisTaskRequest
+     * @return Result of the StartVoiceToneAnalysisTask operation returned by the service.
+     * @throws BadRequestException
+     * @throws ResourceLimitExceededException
+     * @throws UnauthorizedClientException
+     * @throws ForbiddenException
+     * @throws AccessDeniedException
+     * @throws NotFoundException
+     * @throws ConflictException
+     * @throws GoneException
+     * @throws UnprocessableEntityException
+     * @throws ThrottledClientException
+     * @throws ServiceUnavailableException
+     * @throws ServiceFailureException
+     * @sample AmazonChimeSDKVoice.StartVoiceToneAnalysisTask
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/StartVoiceToneAnalysisTask"
+     *      target="_top">AWS API Documentation</a>
+     */
+    StartVoiceToneAnalysisTaskResult startVoiceToneAnalysisTask(StartVoiceToneAnalysisTaskRequest startVoiceToneAnalysisTaskRequest);
+
+    /**
+     * @param stopSpeakerSearchTaskRequest
+     * @return Result of the StopSpeakerSearchTask operation returned by the service.
+     * @throws BadRequestException
+     * @throws UnauthorizedClientException
+     * @throws ForbiddenException
+     * @throws AccessDeniedException
+     * @throws NotFoundException
+     * @throws ConflictException
+     * @throws UnprocessableEntityException
+     * @throws ThrottledClientException
+     * @throws ServiceUnavailableException
+     * @throws ServiceFailureException
+     * @sample AmazonChimeSDKVoice.StopSpeakerSearchTask
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/StopSpeakerSearchTask"
+     *      target="_top">AWS API Documentation</a>
+     */
+    StopSpeakerSearchTaskResult stopSpeakerSearchTask(StopSpeakerSearchTaskRequest stopSpeakerSearchTaskRequest);
+
+    /**
+     * @param stopVoiceToneAnalysisTaskRequest
+     * @return Result of the StopVoiceToneAnalysisTask operation returned by the service.
+     * @throws BadRequestException
+     * @throws UnauthorizedClientException
+     * @throws ForbiddenException
+     * @throws AccessDeniedException
+     * @throws NotFoundException
+     * @throws ConflictException
+     * @throws UnprocessableEntityException
+     * @throws ThrottledClientException
+     * @throws ServiceUnavailableException
+     * @throws ServiceFailureException
+     * @sample AmazonChimeSDKVoice.StopVoiceToneAnalysisTask
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/StopVoiceToneAnalysisTask"
+     *      target="_top">AWS API Documentation</a>
+     */
+    StopVoiceToneAnalysisTaskResult stopVoiceToneAnalysisTask(StopVoiceToneAnalysisTaskRequest stopVoiceToneAnalysisTaskRequest);
+
+    /**
+     * @param tagResourceRequest
+     * @return Result of the TagResource operation returned by the service.
+     * @throws BadRequestException
+     * @throws ForbiddenException
+     * @throws NotFoundException
+     * @throws ResourceLimitExceededException
+     * @throws UnauthorizedClientException
+     * @throws ServiceUnavailableException
+     * @throws ServiceFailureException
+     * @sample AmazonChimeSDKVoice.TagResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/TagResource" target="_top">AWS
+     *      API Documentation</a>
+     */
+    TagResourceResult tagResource(TagResourceRequest tagResourceRequest);
+
+    /**
+     * @param untagResourceRequest
+     * @return Result of the UntagResource operation returned by the service.
+     * @throws BadRequestException
+     * @throws ForbiddenException
+     * @throws NotFoundException
+     * @throws UnauthorizedClientException
+     * @throws ServiceUnavailableException
+     * @throws ServiceFailureException
+     * @sample AmazonChimeSDKVoice.UntagResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/UntagResource" target="_top">AWS
+     *      API Documentation</a>
+     */
+    UntagResourceResult untagResource(UntagResourceRequest untagResourceRequest);
+
+    /**
      * @param updateGlobalSettingsRequest
      * @return Result of the UpdateGlobalSettings operation returned by the service.
      * @throws UnauthorizedClientException
@@ -1260,6 +1562,42 @@ public interface AmazonChimeSDKVoice {
      *      target="_top">AWS API Documentation</a>
      */
     UpdateVoiceConnectorGroupResult updateVoiceConnectorGroup(UpdateVoiceConnectorGroupRequest updateVoiceConnectorGroupRequest);
+
+    /**
+     * @param updateVoiceProfileRequest
+     * @return Result of the UpdateVoiceProfile operation returned by the service.
+     * @throws BadRequestException
+     * @throws UnauthorizedClientException
+     * @throws ForbiddenException
+     * @throws AccessDeniedException
+     * @throws NotFoundException
+     * @throws ConflictException
+     * @throws GoneException
+     * @throws ThrottledClientException
+     * @throws ServiceUnavailableException
+     * @throws ServiceFailureException
+     * @sample AmazonChimeSDKVoice.UpdateVoiceProfile
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/UpdateVoiceProfile"
+     *      target="_top">AWS API Documentation</a>
+     */
+    UpdateVoiceProfileResult updateVoiceProfile(UpdateVoiceProfileRequest updateVoiceProfileRequest);
+
+    /**
+     * @param updateVoiceProfileDomainRequest
+     * @return Result of the UpdateVoiceProfileDomain operation returned by the service.
+     * @throws UnauthorizedClientException
+     * @throws NotFoundException
+     * @throws ForbiddenException
+     * @throws AccessDeniedException
+     * @throws BadRequestException
+     * @throws ThrottledClientException
+     * @throws ServiceUnavailableException
+     * @throws ServiceFailureException
+     * @sample AmazonChimeSDKVoice.UpdateVoiceProfileDomain
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/UpdateVoiceProfileDomain"
+     *      target="_top">AWS API Documentation</a>
+     */
+    UpdateVoiceProfileDomainResult updateVoiceProfileDomain(UpdateVoiceProfileDomainRequest updateVoiceProfileDomainRequest);
 
     /**
      * @param validateE911AddressRequest

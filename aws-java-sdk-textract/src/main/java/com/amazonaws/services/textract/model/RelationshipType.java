@@ -25,7 +25,10 @@ public enum RelationshipType {
     COMPLEX_FEATURES("COMPLEX_FEATURES"),
     MERGED_CELL("MERGED_CELL"),
     TITLE("TITLE"),
-    ANSWER("ANSWER");
+    ANSWER("ANSWER"),
+    TABLE("TABLE"),
+    TABLE_TITLE("TABLE_TITLE"),
+    TABLE_FOOTER("TABLE_FOOTER");
 
     private String value;
 

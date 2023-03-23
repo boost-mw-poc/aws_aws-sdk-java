@@ -34,7 +34,7 @@ public class OnlineStoreSecurityConfig implements Serializable, Cloneable, Struc
      * Amazon S3 objects at rest using Amazon S3 server-side encryption.
      * </p>
      * <p>
-     * The caller (either IAM user or IAM role) of <code>CreateFeatureGroup</code> must have below permissions to the
+     * The caller (either user or IAM role) of <code>CreateFeatureGroup</code> must have below permissions to the
      * <code>OnlineStore</code> <code>KmsKeyId</code>:
      * </p>
      * <ul>
@@ -114,7 +114,7 @@ public class OnlineStoreSecurityConfig implements Serializable, Cloneable, Struc
      * Amazon S3 objects at rest using Amazon S3 server-side encryption.
      * </p>
      * <p>
-     * The caller (either IAM user or IAM role) of <code>CreateFeatureGroup</code> must have below permissions to the
+     * The caller (either user or IAM role) of <code>CreateFeatureGroup</code> must have below permissions to the
      * <code>OnlineStore</code> <code>KmsKeyId</code>:
      * </p>
      * <ul>
@@ -190,8 +190,8 @@ public class OnlineStoreSecurityConfig implements Serializable, Cloneable, Struc
      *        The Amazon Web Services Key Management Service (KMS) key ARN that SageMaker Feature Store uses to encrypt
      *        the Amazon S3 objects at rest using Amazon S3 server-side encryption.</p>
      *        <p>
-     *        The caller (either IAM user or IAM role) of <code>CreateFeatureGroup</code> must have below permissions to
-     *        the <code>OnlineStore</code> <code>KmsKeyId</code>:
+     *        The caller (either user or IAM role) of <code>CreateFeatureGroup</code> must have below permissions to the
+     *        <code>OnlineStore</code> <code>KmsKeyId</code>:
      *        </p>
      *        <ul>
      *        <li>
@@ -273,7 +273,7 @@ public class OnlineStoreSecurityConfig implements Serializable, Cloneable, Struc
      * Amazon S3 objects at rest using Amazon S3 server-side encryption.
      * </p>
      * <p>
-     * The caller (either IAM user or IAM role) of <code>CreateFeatureGroup</code> must have below permissions to the
+     * The caller (either user or IAM role) of <code>CreateFeatureGroup</code> must have below permissions to the
      * <code>OnlineStore</code> <code>KmsKeyId</code>:
      * </p>
      * <ul>
@@ -348,8 +348,8 @@ public class OnlineStoreSecurityConfig implements Serializable, Cloneable, Struc
      * @return The Amazon Web Services Key Management Service (KMS) key ARN that SageMaker Feature Store uses to encrypt
      *         the Amazon S3 objects at rest using Amazon S3 server-side encryption.</p>
      *         <p>
-     *         The caller (either IAM user or IAM role) of <code>CreateFeatureGroup</code> must have below permissions
-     *         to the <code>OnlineStore</code> <code>KmsKeyId</code>:
+     *         The caller (either user or IAM role) of <code>CreateFeatureGroup</code> must have below permissions to
+     *         the <code>OnlineStore</code> <code>KmsKeyId</code>:
      *         </p>
      *         <ul>
      *         <li>
@@ -431,7 +431,7 @@ public class OnlineStoreSecurityConfig implements Serializable, Cloneable, Struc
      * Amazon S3 objects at rest using Amazon S3 server-side encryption.
      * </p>
      * <p>
-     * The caller (either IAM user or IAM role) of <code>CreateFeatureGroup</code> must have below permissions to the
+     * The caller (either user or IAM role) of <code>CreateFeatureGroup</code> must have below permissions to the
      * <code>OnlineStore</code> <code>KmsKeyId</code>:
      * </p>
      * <ul>
@@ -507,8 +507,8 @@ public class OnlineStoreSecurityConfig implements Serializable, Cloneable, Struc
      *        The Amazon Web Services Key Management Service (KMS) key ARN that SageMaker Feature Store uses to encrypt
      *        the Amazon S3 objects at rest using Amazon S3 server-side encryption.</p>
      *        <p>
-     *        The caller (either IAM user or IAM role) of <code>CreateFeatureGroup</code> must have below permissions to
-     *        the <code>OnlineStore</code> <code>KmsKeyId</code>:
+     *        The caller (either user or IAM role) of <code>CreateFeatureGroup</code> must have below permissions to the
+     *        <code>OnlineStore</code> <code>KmsKeyId</code>:
      *        </p>
      *        <ul>
      *        <li>

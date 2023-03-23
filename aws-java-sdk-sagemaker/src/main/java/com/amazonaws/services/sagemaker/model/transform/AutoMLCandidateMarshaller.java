@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.sagemaker.model.transform;
 
+import java.util.Map;
 import java.util.List;
 import javax.annotation.Generated;
 
@@ -50,6 +51,8 @@ public class AutoMLCandidateMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("FailureReason").build();
     private static final MarshallingInfo<StructuredPojo> CANDIDATEPROPERTIES_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CandidateProperties").build();
+    private static final MarshallingInfo<Map> INFERENCECONTAINERDEFINITIONS_BINDING = MarshallingInfo.builder(MarshallingType.MAP)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("InferenceContainerDefinitions").build();
 
     private static final AutoMLCandidateMarshaller instance = new AutoMLCandidateMarshaller();
 
@@ -78,6 +81,7 @@ public class AutoMLCandidateMarshaller {
             protocolMarshaller.marshall(autoMLCandidate.getLastModifiedTime(), LASTMODIFIEDTIME_BINDING);
             protocolMarshaller.marshall(autoMLCandidate.getFailureReason(), FAILUREREASON_BINDING);
             protocolMarshaller.marshall(autoMLCandidate.getCandidateProperties(), CANDIDATEPROPERTIES_BINDING);
+            protocolMarshaller.marshall(autoMLCandidate.getInferenceContainerDefinitions(), INFERENCECONTAINERDEFINITIONS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -77,7 +77,7 @@ public class RegisterAppInstanceUserEndpointRequest extends com.amazonaws.Amazon
     private EndpointAttributes endpointAttributes;
     /**
      * <p>
-     * The idempotency token for each client request.
+     * The unique ID assigned to the request. Use different tokens to register other endpoints.
      * </p>
      */
     private String clientRequestToken;
@@ -467,11 +467,11 @@ public class RegisterAppInstanceUserEndpointRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The idempotency token for each client request.
+     * The unique ID assigned to the request. Use different tokens to register other endpoints.
      * </p>
      * 
      * @param clientRequestToken
-     *        The idempotency token for each client request.
+     *        The unique ID assigned to the request. Use different tokens to register other endpoints.
      */
 
     public void setClientRequestToken(String clientRequestToken) {
@@ -480,10 +480,10 @@ public class RegisterAppInstanceUserEndpointRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The idempotency token for each client request.
+     * The unique ID assigned to the request. Use different tokens to register other endpoints.
      * </p>
      * 
-     * @return The idempotency token for each client request.
+     * @return The unique ID assigned to the request. Use different tokens to register other endpoints.
      */
 
     public String getClientRequestToken() {
@@ -492,11 +492,11 @@ public class RegisterAppInstanceUserEndpointRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The idempotency token for each client request.
+     * The unique ID assigned to the request. Use different tokens to register other endpoints.
      * </p>
      * 
      * @param clientRequestToken
-     *        The idempotency token for each client request.
+     *        The unique ID assigned to the request. Use different tokens to register other endpoints.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -595,11 +595,11 @@ public class RegisterAppInstanceUserEndpointRequest extends com.amazonaws.Amazon
         if (getType() != null)
             sb.append("Type: ").append(getType()).append(",");
         if (getResourceArn() != null)
-            sb.append("ResourceArn: ").append("***Sensitive Data Redacted***").append(",");
+            sb.append("ResourceArn: ").append(getResourceArn()).append(",");
         if (getEndpointAttributes() != null)
             sb.append("EndpointAttributes: ").append(getEndpointAttributes()).append(",");
         if (getClientRequestToken() != null)
-            sb.append("ClientRequestToken: ").append("***Sensitive Data Redacted***").append(",");
+            sb.append("ClientRequestToken: ").append(getClientRequestToken()).append(",");
         if (getAllowMessages() != null)
             sb.append("AllowMessages: ").append(getAllowMessages());
         sb.append("}");

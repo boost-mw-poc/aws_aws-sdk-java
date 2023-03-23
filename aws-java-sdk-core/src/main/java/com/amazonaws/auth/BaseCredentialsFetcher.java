@@ -87,7 +87,7 @@ abstract class BaseCredentialsFetcher {
     public AWSCredentials getCredentials() {
         if (needsToLoadCredentials())
             fetchCredentials();
-        if (expired()) {
+        if (!allowExpiredCredentials && expired()) {
             throw new SdkClientException(
                 "The credentials received have been expired");
         }
@@ -129,6 +129,14 @@ abstract class BaseCredentialsFetcher {
     private synchronized void fetchCredentials() {
         if (!needsToLoadCredentials()) return;
 
+        if (LOG.isDebugEnabled()) {
+            if (credentialsExpiration != null) {
+                LOG.debug("Updating credentials, because currently-cached credentials expire on " + credentialsExpiration);
+            } else {
+                LOG.debug("Retrieving credentials.");
+            }
+        }
+
         JsonNode accessKey;
         JsonNode secretKey;
         JsonNode node;
@@ -169,7 +177,7 @@ abstract class BaseCredentialsFetcher {
                     credentialsExpiration = DateUtils.parseISO8601Date(expiration);
                     credentialExpirationRefreshTime = new Date(credentialsExpiration.getTime() - EXPIRATION_THRESHOLD);
 
-                    LOG.debug("Successfully retrieved credentials from IMDS with expiration " + expiration);
+                    LOG.debug("Successfully retrieved credentials with expiration " + expiration);
                 } catch(Exception ex) {
                     handleError("Unable to parse credentials expiration date from Amazon EC2 instance", ex);
                 }
@@ -210,7 +218,7 @@ abstract class BaseCredentialsFetcher {
      */
     private void handleError(String errorMessage, Exception e) {
         // If we don't have any valid credentials to fall back on, then throw an exception
-        if (credentials == null || expired()) {
+        if (credentials == null || (!allowExpiredCredentials && expired())) {
             if (e instanceof SdkClientException) {
                 throw (SdkClientException) e;
             }
@@ -226,10 +234,6 @@ abstract class BaseCredentialsFetcher {
     }
 
     private boolean expired() {
-        if (allowExpiredCredentials) {
-            return false;
-        }
-
         if (credentialsExpiration == null) {
             return false;
         }

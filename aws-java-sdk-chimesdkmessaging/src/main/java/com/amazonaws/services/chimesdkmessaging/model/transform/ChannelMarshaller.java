@@ -49,6 +49,8 @@ public class ChannelMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ChannelFlowArn").build();
     private static final MarshallingInfo<StructuredPojo> ELASTICCHANNELCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ElasticChannelConfiguration").build();
+    private static final MarshallingInfo<StructuredPojo> EXPIRATIONSETTINGS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ExpirationSettings").build();
 
     private static final ChannelMarshaller instance = new ChannelMarshaller();
 
@@ -77,6 +79,7 @@ public class ChannelMarshaller {
             protocolMarshaller.marshall(channel.getLastUpdatedTimestamp(), LASTUPDATEDTIMESTAMP_BINDING);
             protocolMarshaller.marshall(channel.getChannelFlowArn(), CHANNELFLOWARN_BINDING);
             protocolMarshaller.marshall(channel.getElasticChannelConfiguration(), ELASTICCHANNELCONFIGURATION_BINDING);
+            protocolMarshaller.marshall(channel.getExpirationSettings(), EXPIRATIONSETTINGS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

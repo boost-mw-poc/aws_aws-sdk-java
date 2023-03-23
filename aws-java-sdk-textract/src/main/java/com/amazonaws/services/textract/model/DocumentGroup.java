@@ -30,7 +30,9 @@ public class DocumentGroup implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type of document that Amazon Textract has detected. See LINK for a list of all types returned by Textract.
+     * The type of document that Amazon Textract has detected. See <a
+     * href="https://docs.aws.amazon.com/textract/latest/dg/lending-response-objects.html">Analyze Lending Response
+     * Objects</a> for a list of all types returned by Textract.
      * </p>
      */
     private String type;
@@ -55,12 +57,15 @@ public class DocumentGroup implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type of document that Amazon Textract has detected. See LINK for a list of all types returned by Textract.
+     * The type of document that Amazon Textract has detected. See <a
+     * href="https://docs.aws.amazon.com/textract/latest/dg/lending-response-objects.html">Analyze Lending Response
+     * Objects</a> for a list of all types returned by Textract.
      * </p>
      * 
      * @param type
-     *        The type of document that Amazon Textract has detected. See LINK for a list of all types returned by
-     *        Textract.
+     *        The type of document that Amazon Textract has detected. See <a
+     *        href="https://docs.aws.amazon.com/textract/latest/dg/lending-response-objects.html">Analyze Lending
+     *        Response Objects</a> for a list of all types returned by Textract.
      */
 
     public void setType(String type) {
@@ -69,11 +74,14 @@ public class DocumentGroup implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type of document that Amazon Textract has detected. See LINK for a list of all types returned by Textract.
+     * The type of document that Amazon Textract has detected. See <a
+     * href="https://docs.aws.amazon.com/textract/latest/dg/lending-response-objects.html">Analyze Lending Response
+     * Objects</a> for a list of all types returned by Textract.
      * </p>
      * 
-     * @return The type of document that Amazon Textract has detected. See LINK for a list of all types returned by
-     *         Textract.
+     * @return The type of document that Amazon Textract has detected. See <a
+     *         href="https://docs.aws.amazon.com/textract/latest/dg/lending-response-objects.html">Analyze Lending
+     *         Response Objects</a> for a list of all types returned by Textract.
      */
 
     public String getType() {
@@ -82,12 +90,15 @@ public class DocumentGroup implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type of document that Amazon Textract has detected. See LINK for a list of all types returned by Textract.
+     * The type of document that Amazon Textract has detected. See <a
+     * href="https://docs.aws.amazon.com/textract/latest/dg/lending-response-objects.html">Analyze Lending Response
+     * Objects</a> for a list of all types returned by Textract.
      * </p>
      * 
      * @param type
-     *        The type of document that Amazon Textract has detected. See LINK for a list of all types returned by
-     *        Textract.
+     *        The type of document that Amazon Textract has detected. See <a
+     *        href="https://docs.aws.amazon.com/textract/latest/dg/lending-response-objects.html">Analyze Lending
+     *        Response Objects</a> for a list of all types returned by Textract.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

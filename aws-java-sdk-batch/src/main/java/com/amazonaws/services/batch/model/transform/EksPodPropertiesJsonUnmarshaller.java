@@ -72,6 +72,10 @@ public class EksPodPropertiesJsonUnmarshaller implements Unmarshaller<EksPodProp
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("metadata", targetDepth)) {
+                    context.nextToken();
+                    eksPodProperties.setMetadata(EksMetadataJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

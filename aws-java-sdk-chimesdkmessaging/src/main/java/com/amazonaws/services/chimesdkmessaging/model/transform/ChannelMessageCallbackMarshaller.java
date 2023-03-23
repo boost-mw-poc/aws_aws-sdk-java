@@ -41,6 +41,8 @@ public class ChannelMessageCallbackMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MessageAttributes").build();
     private static final MarshallingInfo<String> SUBCHANNELID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SubChannelId").build();
+    private static final MarshallingInfo<String> CONTENTTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ContentType").build();
 
     private static final ChannelMessageCallbackMarshaller instance = new ChannelMessageCallbackMarshaller();
 
@@ -64,6 +66,7 @@ public class ChannelMessageCallbackMarshaller {
             protocolMarshaller.marshall(channelMessageCallback.getPushNotification(), PUSHNOTIFICATION_BINDING);
             protocolMarshaller.marshall(channelMessageCallback.getMessageAttributes(), MESSAGEATTRIBUTES_BINDING);
             protocolMarshaller.marshall(channelMessageCallback.getSubChannelId(), SUBCHANNELID_BINDING);
+            protocolMarshaller.marshall(channelMessageCallback.getContentType(), CONTENTTYPE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

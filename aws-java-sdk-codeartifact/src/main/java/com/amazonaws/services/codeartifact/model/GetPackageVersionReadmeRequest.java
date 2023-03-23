@@ -59,11 +59,6 @@ public class GetPackageVersionReadmeRequest extends com.amazonaws.AmazonWebServi
      * <ul>
      * <li>
      * <p>
-     * The namespace of a Maven package version is its <code>groupId</code>.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
      * The namespace of an npm package version is its <code>scope</code>.
      * </p>
      * </li>
@@ -288,11 +283,6 @@ public class GetPackageVersionReadmeRequest extends com.amazonaws.AmazonWebServi
      * <ul>
      * <li>
      * <p>
-     * The namespace of a Maven package version is its <code>groupId</code>.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
      * The namespace of an npm package version is its <code>scope</code>.
      * </p>
      * </li>
@@ -308,11 +298,6 @@ public class GetPackageVersionReadmeRequest extends com.amazonaws.AmazonWebServi
      *        The namespace of the package version with the requested readme file. The package version component that
      *        specifies its namespace depends on its type. For example:</p>
      *        <ul>
-     *        <li>
-     *        <p>
-     *        The namespace of a Maven package version is its <code>groupId</code>.
-     *        </p>
-     *        </li>
      *        <li>
      *        <p>
      *        The namespace of an npm package version is its <code>scope</code>.
@@ -338,11 +323,6 @@ public class GetPackageVersionReadmeRequest extends com.amazonaws.AmazonWebServi
      * <ul>
      * <li>
      * <p>
-     * The namespace of a Maven package version is its <code>groupId</code>.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
      * The namespace of an npm package version is its <code>scope</code>.
      * </p>
      * </li>
@@ -357,11 +337,6 @@ public class GetPackageVersionReadmeRequest extends com.amazonaws.AmazonWebServi
      * @return The namespace of the package version with the requested readme file. The package version component that
      *         specifies its namespace depends on its type. For example:</p>
      *         <ul>
-     *         <li>
-     *         <p>
-     *         The namespace of a Maven package version is its <code>groupId</code>.
-     *         </p>
-     *         </li>
      *         <li>
      *         <p>
      *         The namespace of an npm package version is its <code>scope</code>.
@@ -387,11 +362,6 @@ public class GetPackageVersionReadmeRequest extends com.amazonaws.AmazonWebServi
      * <ul>
      * <li>
      * <p>
-     * The namespace of a Maven package version is its <code>groupId</code>.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
      * The namespace of an npm package version is its <code>scope</code>.
      * </p>
      * </li>
@@ -407,11 +377,6 @@ public class GetPackageVersionReadmeRequest extends com.amazonaws.AmazonWebServi
      *        The namespace of the package version with the requested readme file. The package version component that
      *        specifies its namespace depends on its type. For example:</p>
      *        <ul>
-     *        <li>
-     *        <p>
-     *        The namespace of a Maven package version is its <code>groupId</code>.
-     *        </p>
-     *        </li>
      *        <li>
      *        <p>
      *        The namespace of an npm package version is its <code>scope</code>.

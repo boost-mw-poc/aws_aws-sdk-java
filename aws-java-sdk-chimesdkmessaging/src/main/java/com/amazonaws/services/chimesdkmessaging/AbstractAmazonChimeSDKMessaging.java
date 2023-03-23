@@ -224,6 +224,11 @@ public class AbstractAmazonChimeSDKMessaging implements AmazonChimeSDKMessaging 
     }
 
     @Override
+    public PutChannelExpirationSettingsResult putChannelExpirationSettings(PutChannelExpirationSettingsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public PutChannelMembershipPreferencesResult putChannelMembershipPreferences(PutChannelMembershipPreferencesRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

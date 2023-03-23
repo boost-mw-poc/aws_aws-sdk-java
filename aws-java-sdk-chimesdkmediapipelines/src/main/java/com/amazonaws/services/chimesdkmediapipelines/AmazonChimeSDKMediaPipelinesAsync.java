@@ -28,9 +28,9 @@ import com.amazonaws.services.chimesdkmediapipelines.model.*;
  * <p>
  * The Amazon Chime SDK media pipeline APIs in this section allow software developers to create Amazon Chime SDK media
  * pipelines that capture, concatenate, or stream your Amazon Chime SDK meetings. For more information about media
- * pipleines, see <a
- * href="http://amazonaws.com/chime/latest/APIReference/API_Operations_Amazon_Chime_SDK_Media_Pipelines.html">Amazon
- * Chime SDK media pipelines</a>.
+ * pipelines, see <a href=
+ * "https://docs.aws.amazon.com/chime-sdk/latest/APIReference/API_Operations_Amazon_Chime_SDK_Media_Pipelines.html"
+ * >Amazon Chime SDK media pipelines</a>.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
@@ -110,7 +110,79 @@ public interface AmazonChimeSDKMediaPipelinesAsync extends AmazonChimeSDKMediaPi
 
     /**
      * <p>
-     * Creates a streaming media pipeline in an Amazon Chime SDK meeting.
+     * Creates a media insights pipeline.
+     * </p>
+     * 
+     * @param createMediaInsightsPipelineRequest
+     * @return A Java Future containing the result of the CreateMediaInsightsPipeline operation returned by the service.
+     * @sample AmazonChimeSDKMediaPipelinesAsync.CreateMediaInsightsPipeline
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-media-pipelines-2021-07-15/CreateMediaInsightsPipeline"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateMediaInsightsPipelineResult> createMediaInsightsPipelineAsync(
+            CreateMediaInsightsPipelineRequest createMediaInsightsPipelineRequest);
+
+    /**
+     * <p>
+     * Creates a media insights pipeline.
+     * </p>
+     * 
+     * @param createMediaInsightsPipelineRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateMediaInsightsPipeline operation returned by the service.
+     * @sample AmazonChimeSDKMediaPipelinesAsyncHandler.CreateMediaInsightsPipeline
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-media-pipelines-2021-07-15/CreateMediaInsightsPipeline"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateMediaInsightsPipelineResult> createMediaInsightsPipelineAsync(
+            CreateMediaInsightsPipelineRequest createMediaInsightsPipelineRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateMediaInsightsPipelineRequest, CreateMediaInsightsPipelineResult> asyncHandler);
+
+    /**
+     * <p>
+     * A structure that contains the static configurations for a media insights pipeline.
+     * </p>
+     * 
+     * @param createMediaInsightsPipelineConfigurationRequest
+     * @return A Java Future containing the result of the CreateMediaInsightsPipelineConfiguration operation returned by
+     *         the service.
+     * @sample AmazonChimeSDKMediaPipelinesAsync.CreateMediaInsightsPipelineConfiguration
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-media-pipelines-2021-07-15/CreateMediaInsightsPipelineConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateMediaInsightsPipelineConfigurationResult> createMediaInsightsPipelineConfigurationAsync(
+            CreateMediaInsightsPipelineConfigurationRequest createMediaInsightsPipelineConfigurationRequest);
+
+    /**
+     * <p>
+     * A structure that contains the static configurations for a media insights pipeline.
+     * </p>
+     * 
+     * @param createMediaInsightsPipelineConfigurationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateMediaInsightsPipelineConfiguration operation returned by
+     *         the service.
+     * @sample AmazonChimeSDKMediaPipelinesAsyncHandler.CreateMediaInsightsPipelineConfiguration
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-media-pipelines-2021-07-15/CreateMediaInsightsPipelineConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateMediaInsightsPipelineConfigurationResult> createMediaInsightsPipelineConfigurationAsync(
+            CreateMediaInsightsPipelineConfigurationRequest createMediaInsightsPipelineConfigurationRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateMediaInsightsPipelineConfigurationRequest, CreateMediaInsightsPipelineConfigurationResult> asyncHandler);
+
+    /**
+     * <p>
+     * Creates a media live connector pipeline in an Amazon Chime SDK meeting.
      * </p>
      * 
      * @param createMediaLiveConnectorPipelineRequest
@@ -126,7 +198,7 @@ public interface AmazonChimeSDKMediaPipelinesAsync extends AmazonChimeSDKMediaPi
 
     /**
      * <p>
-     * Creates a streaming media pipeline in an Amazon Chime SDK meeting.
+     * Creates a media live connector pipeline in an Amazon Chime SDK meeting.
      * </p>
      * 
      * @param createMediaLiveConnectorPipelineRequest
@@ -179,6 +251,43 @@ public interface AmazonChimeSDKMediaPipelinesAsync extends AmazonChimeSDKMediaPi
     java.util.concurrent.Future<DeleteMediaCapturePipelineResult> deleteMediaCapturePipelineAsync(
             DeleteMediaCapturePipelineRequest deleteMediaCapturePipelineRequest,
             com.amazonaws.handlers.AsyncHandler<DeleteMediaCapturePipelineRequest, DeleteMediaCapturePipelineResult> asyncHandler);
+
+    /**
+     * <p>
+     * Deletes the specified configuration settings.
+     * </p>
+     * 
+     * @param deleteMediaInsightsPipelineConfigurationRequest
+     * @return A Java Future containing the result of the DeleteMediaInsightsPipelineConfiguration operation returned by
+     *         the service.
+     * @sample AmazonChimeSDKMediaPipelinesAsync.DeleteMediaInsightsPipelineConfiguration
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-media-pipelines-2021-07-15/DeleteMediaInsightsPipelineConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteMediaInsightsPipelineConfigurationResult> deleteMediaInsightsPipelineConfigurationAsync(
+            DeleteMediaInsightsPipelineConfigurationRequest deleteMediaInsightsPipelineConfigurationRequest);
+
+    /**
+     * <p>
+     * Deletes the specified configuration settings.
+     * </p>
+     * 
+     * @param deleteMediaInsightsPipelineConfigurationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteMediaInsightsPipelineConfiguration operation returned by
+     *         the service.
+     * @sample AmazonChimeSDKMediaPipelinesAsyncHandler.DeleteMediaInsightsPipelineConfiguration
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-media-pipelines-2021-07-15/DeleteMediaInsightsPipelineConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteMediaInsightsPipelineConfigurationResult> deleteMediaInsightsPipelineConfigurationAsync(
+            DeleteMediaInsightsPipelineConfigurationRequest deleteMediaInsightsPipelineConfigurationRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteMediaInsightsPipelineConfigurationRequest, DeleteMediaInsightsPipelineConfigurationResult> asyncHandler);
 
     /**
      * <p>
@@ -243,6 +352,43 @@ public interface AmazonChimeSDKMediaPipelinesAsync extends AmazonChimeSDKMediaPi
      */
     java.util.concurrent.Future<GetMediaCapturePipelineResult> getMediaCapturePipelineAsync(GetMediaCapturePipelineRequest getMediaCapturePipelineRequest,
             com.amazonaws.handlers.AsyncHandler<GetMediaCapturePipelineRequest, GetMediaCapturePipelineResult> asyncHandler);
+
+    /**
+     * <p>
+     * Gets the configuration settings for a media insights pipeline.
+     * </p>
+     * 
+     * @param getMediaInsightsPipelineConfigurationRequest
+     * @return A Java Future containing the result of the GetMediaInsightsPipelineConfiguration operation returned by
+     *         the service.
+     * @sample AmazonChimeSDKMediaPipelinesAsync.GetMediaInsightsPipelineConfiguration
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-media-pipelines-2021-07-15/GetMediaInsightsPipelineConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetMediaInsightsPipelineConfigurationResult> getMediaInsightsPipelineConfigurationAsync(
+            GetMediaInsightsPipelineConfigurationRequest getMediaInsightsPipelineConfigurationRequest);
+
+    /**
+     * <p>
+     * Gets the configuration settings for a media insights pipeline.
+     * </p>
+     * 
+     * @param getMediaInsightsPipelineConfigurationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetMediaInsightsPipelineConfiguration operation returned by
+     *         the service.
+     * @sample AmazonChimeSDKMediaPipelinesAsyncHandler.GetMediaInsightsPipelineConfiguration
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-media-pipelines-2021-07-15/GetMediaInsightsPipelineConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetMediaInsightsPipelineConfigurationResult> getMediaInsightsPipelineConfigurationAsync(
+            GetMediaInsightsPipelineConfigurationRequest getMediaInsightsPipelineConfigurationRequest,
+            com.amazonaws.handlers.AsyncHandler<GetMediaInsightsPipelineConfigurationRequest, GetMediaInsightsPipelineConfigurationResult> asyncHandler);
 
     /**
      * <p>
@@ -312,6 +458,43 @@ public interface AmazonChimeSDKMediaPipelinesAsync extends AmazonChimeSDKMediaPi
 
     /**
      * <p>
+     * Lists the available media insights pipeline configurations.
+     * </p>
+     * 
+     * @param listMediaInsightsPipelineConfigurationsRequest
+     * @return A Java Future containing the result of the ListMediaInsightsPipelineConfigurations operation returned by
+     *         the service.
+     * @sample AmazonChimeSDKMediaPipelinesAsync.ListMediaInsightsPipelineConfigurations
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-media-pipelines-2021-07-15/ListMediaInsightsPipelineConfigurations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListMediaInsightsPipelineConfigurationsResult> listMediaInsightsPipelineConfigurationsAsync(
+            ListMediaInsightsPipelineConfigurationsRequest listMediaInsightsPipelineConfigurationsRequest);
+
+    /**
+     * <p>
+     * Lists the available media insights pipeline configurations.
+     * </p>
+     * 
+     * @param listMediaInsightsPipelineConfigurationsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListMediaInsightsPipelineConfigurations operation returned by
+     *         the service.
+     * @sample AmazonChimeSDKMediaPipelinesAsyncHandler.ListMediaInsightsPipelineConfigurations
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-media-pipelines-2021-07-15/ListMediaInsightsPipelineConfigurations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListMediaInsightsPipelineConfigurationsResult> listMediaInsightsPipelineConfigurationsAsync(
+            ListMediaInsightsPipelineConfigurationsRequest listMediaInsightsPipelineConfigurationsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListMediaInsightsPipelineConfigurationsRequest, ListMediaInsightsPipelineConfigurationsResult> asyncHandler);
+
+    /**
+     * <p>
      * Returns a list of media pipelines.
      * </p>
      * 
@@ -374,7 +557,7 @@ public interface AmazonChimeSDKMediaPipelinesAsync extends AmazonChimeSDKMediaPi
 
     /**
      * <p>
-     * The ARN of the media pipeline that you want to tag. Consists of he pipeline's endpoint region, resource ID, and
+     * The ARN of the media pipeline that you want to tag. Consists of the pipeline's endpoint region, resource ID, and
      * pipeline ID.
      * </p>
      * 
@@ -388,7 +571,7 @@ public interface AmazonChimeSDKMediaPipelinesAsync extends AmazonChimeSDKMediaPi
 
     /**
      * <p>
-     * The ARN of the media pipeline that you want to tag. Consists of he pipeline's endpoint region, resource ID, and
+     * The ARN of the media pipeline that you want to tag. Consists of the pipeline's endpoint region, resource ID, and
      * pipeline ID.
      * </p>
      * 
@@ -435,5 +618,79 @@ public interface AmazonChimeSDKMediaPipelinesAsync extends AmazonChimeSDKMediaPi
      */
     java.util.concurrent.Future<UntagResourceResult> untagResourceAsync(UntagResourceRequest untagResourceRequest,
             com.amazonaws.handlers.AsyncHandler<UntagResourceRequest, UntagResourceResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates the media insights pipeline's configuration settings.
+     * </p>
+     * 
+     * @param updateMediaInsightsPipelineConfigurationRequest
+     * @return A Java Future containing the result of the UpdateMediaInsightsPipelineConfiguration operation returned by
+     *         the service.
+     * @sample AmazonChimeSDKMediaPipelinesAsync.UpdateMediaInsightsPipelineConfiguration
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-media-pipelines-2021-07-15/UpdateMediaInsightsPipelineConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateMediaInsightsPipelineConfigurationResult> updateMediaInsightsPipelineConfigurationAsync(
+            UpdateMediaInsightsPipelineConfigurationRequest updateMediaInsightsPipelineConfigurationRequest);
+
+    /**
+     * <p>
+     * Updates the media insights pipeline's configuration settings.
+     * </p>
+     * 
+     * @param updateMediaInsightsPipelineConfigurationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateMediaInsightsPipelineConfiguration operation returned by
+     *         the service.
+     * @sample AmazonChimeSDKMediaPipelinesAsyncHandler.UpdateMediaInsightsPipelineConfiguration
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-media-pipelines-2021-07-15/UpdateMediaInsightsPipelineConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateMediaInsightsPipelineConfigurationResult> updateMediaInsightsPipelineConfigurationAsync(
+            UpdateMediaInsightsPipelineConfigurationRequest updateMediaInsightsPipelineConfigurationRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateMediaInsightsPipelineConfigurationRequest, UpdateMediaInsightsPipelineConfigurationResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates the status of a media insights pipeline.
+     * </p>
+     * 
+     * @param updateMediaInsightsPipelineStatusRequest
+     * @return A Java Future containing the result of the UpdateMediaInsightsPipelineStatus operation returned by the
+     *         service.
+     * @sample AmazonChimeSDKMediaPipelinesAsync.UpdateMediaInsightsPipelineStatus
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-media-pipelines-2021-07-15/UpdateMediaInsightsPipelineStatus"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateMediaInsightsPipelineStatusResult> updateMediaInsightsPipelineStatusAsync(
+            UpdateMediaInsightsPipelineStatusRequest updateMediaInsightsPipelineStatusRequest);
+
+    /**
+     * <p>
+     * Updates the status of a media insights pipeline.
+     * </p>
+     * 
+     * @param updateMediaInsightsPipelineStatusRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateMediaInsightsPipelineStatus operation returned by the
+     *         service.
+     * @sample AmazonChimeSDKMediaPipelinesAsyncHandler.UpdateMediaInsightsPipelineStatus
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-media-pipelines-2021-07-15/UpdateMediaInsightsPipelineStatus"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateMediaInsightsPipelineStatusResult> updateMediaInsightsPipelineStatusAsync(
+            UpdateMediaInsightsPipelineStatusRequest updateMediaInsightsPipelineStatusRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateMediaInsightsPipelineStatusRequest, UpdateMediaInsightsPipelineStatusResult> asyncHandler);
 
 }

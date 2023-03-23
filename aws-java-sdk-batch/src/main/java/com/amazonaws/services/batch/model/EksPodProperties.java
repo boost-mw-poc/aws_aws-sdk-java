@@ -77,6 +77,8 @@ public class EksPodProperties implements Serializable, Cloneable, StructuredPojo
      */
     private java.util.List<EksVolume> volumes;
 
+    private EksMetadata metadata;
+
     /**
      * <p>
      * The name of the service account that's used to run the pod. For more information, see <a
@@ -472,6 +474,32 @@ public class EksPodProperties implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * @param metadata
+     */
+
+    public void setMetadata(EksMetadata metadata) {
+        this.metadata = metadata;
+    }
+
+    /**
+     * @return
+     */
+
+    public EksMetadata getMetadata() {
+        return this.metadata;
+    }
+
+    /**
+     * @param metadata
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public EksPodProperties withMetadata(EksMetadata metadata) {
+        setMetadata(metadata);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -492,7 +520,9 @@ public class EksPodProperties implements Serializable, Cloneable, StructuredPojo
         if (getContainers() != null)
             sb.append("Containers: ").append(getContainers()).append(",");
         if (getVolumes() != null)
-            sb.append("Volumes: ").append(getVolumes());
+            sb.append("Volumes: ").append(getVolumes()).append(",");
+        if (getMetadata() != null)
+            sb.append("Metadata: ").append(getMetadata());
         sb.append("}");
         return sb.toString();
     }
@@ -527,6 +557,10 @@ public class EksPodProperties implements Serializable, Cloneable, StructuredPojo
             return false;
         if (other.getVolumes() != null && other.getVolumes().equals(this.getVolumes()) == false)
             return false;
+        if (other.getMetadata() == null ^ this.getMetadata() == null)
+            return false;
+        if (other.getMetadata() != null && other.getMetadata().equals(this.getMetadata()) == false)
+            return false;
         return true;
     }
 
@@ -540,6 +574,7 @@ public class EksPodProperties implements Serializable, Cloneable, StructuredPojo
         hashCode = prime * hashCode + ((getDnsPolicy() == null) ? 0 : getDnsPolicy().hashCode());
         hashCode = prime * hashCode + ((getContainers() == null) ? 0 : getContainers().hashCode());
         hashCode = prime * hashCode + ((getVolumes() == null) ? 0 : getVolumes().hashCode());
+        hashCode = prime * hashCode + ((getMetadata() == null) ? 0 : getMetadata().hashCode());
         return hashCode;
     }
 

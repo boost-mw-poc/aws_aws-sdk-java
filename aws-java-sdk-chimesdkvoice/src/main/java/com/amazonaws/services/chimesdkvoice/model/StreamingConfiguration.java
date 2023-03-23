@@ -31,6 +31,8 @@ public class StreamingConfiguration implements Serializable, Cloneable, Structur
 
     private java.util.List<StreamingNotificationTarget> streamingNotificationTargets;
 
+    private MediaInsightsConfiguration mediaInsightsConfiguration;
+
     /**
      * @param dataRetentionInHours
      */
@@ -144,6 +146,32 @@ public class StreamingConfiguration implements Serializable, Cloneable, Structur
     }
 
     /**
+     * @param mediaInsightsConfiguration
+     */
+
+    public void setMediaInsightsConfiguration(MediaInsightsConfiguration mediaInsightsConfiguration) {
+        this.mediaInsightsConfiguration = mediaInsightsConfiguration;
+    }
+
+    /**
+     * @return
+     */
+
+    public MediaInsightsConfiguration getMediaInsightsConfiguration() {
+        return this.mediaInsightsConfiguration;
+    }
+
+    /**
+     * @param mediaInsightsConfiguration
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public StreamingConfiguration withMediaInsightsConfiguration(MediaInsightsConfiguration mediaInsightsConfiguration) {
+        setMediaInsightsConfiguration(mediaInsightsConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -160,7 +188,9 @@ public class StreamingConfiguration implements Serializable, Cloneable, Structur
         if (getDisabled() != null)
             sb.append("Disabled: ").append(getDisabled()).append(",");
         if (getStreamingNotificationTargets() != null)
-            sb.append("StreamingNotificationTargets: ").append(getStreamingNotificationTargets());
+            sb.append("StreamingNotificationTargets: ").append(getStreamingNotificationTargets()).append(",");
+        if (getMediaInsightsConfiguration() != null)
+            sb.append("MediaInsightsConfiguration: ").append(getMediaInsightsConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -187,6 +217,10 @@ public class StreamingConfiguration implements Serializable, Cloneable, Structur
             return false;
         if (other.getStreamingNotificationTargets() != null && other.getStreamingNotificationTargets().equals(this.getStreamingNotificationTargets()) == false)
             return false;
+        if (other.getMediaInsightsConfiguration() == null ^ this.getMediaInsightsConfiguration() == null)
+            return false;
+        if (other.getMediaInsightsConfiguration() != null && other.getMediaInsightsConfiguration().equals(this.getMediaInsightsConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -198,6 +232,7 @@ public class StreamingConfiguration implements Serializable, Cloneable, Structur
         hashCode = prime * hashCode + ((getDataRetentionInHours() == null) ? 0 : getDataRetentionInHours().hashCode());
         hashCode = prime * hashCode + ((getDisabled() == null) ? 0 : getDisabled().hashCode());
         hashCode = prime * hashCode + ((getStreamingNotificationTargets() == null) ? 0 : getStreamingNotificationTargets().hashCode());
+        hashCode = prime * hashCode + ((getMediaInsightsConfiguration() == null) ? 0 : getMediaInsightsConfiguration().hashCode());
         return hashCode;
     }
 

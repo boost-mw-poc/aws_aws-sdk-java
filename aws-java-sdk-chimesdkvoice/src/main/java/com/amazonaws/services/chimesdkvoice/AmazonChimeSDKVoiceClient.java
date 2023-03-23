@@ -82,6 +82,9 @@ public class AmazonChimeSDKVoiceClient extends AmazonWebServiceClient implements
                             new JsonErrorShapeMetadata().withErrorCode("ResourceLimitExceededException").withExceptionUnmarshaller(
                                     com.amazonaws.services.chimesdkvoice.model.transform.ResourceLimitExceededExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("GoneException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.chimesdkvoice.model.transform.GoneExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("UnauthorizedClientException").withExceptionUnmarshaller(
                                     com.amazonaws.services.chimesdkvoice.model.transform.UnauthorizedClientExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
@@ -96,6 +99,9 @@ public class AmazonChimeSDKVoiceClient extends AmazonWebServiceClient implements
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ConflictException").withExceptionUnmarshaller(
                                     com.amazonaws.services.chimesdkvoice.model.transform.ConflictExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("UnprocessableEntityException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.chimesdkvoice.model.transform.UnprocessableEntityExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ThrottledClientException").withExceptionUnmarshaller(
                                     com.amazonaws.services.chimesdkvoice.model.transform.ThrottledClientExceptionUnmarshaller.getInstance()))
@@ -809,6 +815,130 @@ public class AmazonChimeSDKVoiceClient extends AmazonWebServiceClient implements
             HttpResponseHandler<AmazonWebServiceResponse<CreateVoiceConnectorGroupResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new CreateVoiceConnectorGroupResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * @param createVoiceProfileRequest
+     * @return Result of the CreateVoiceProfile operation returned by the service.
+     * @throws BadRequestException
+     * @throws ResourceLimitExceededException
+     * @throws UnauthorizedClientException
+     * @throws ForbiddenException
+     * @throws AccessDeniedException
+     * @throws NotFoundException
+     * @throws ConflictException
+     * @throws GoneException
+     * @throws ThrottledClientException
+     * @throws ServiceUnavailableException
+     * @throws ServiceFailureException
+     * @sample AmazonChimeSDKVoice.CreateVoiceProfile
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/CreateVoiceProfile"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public CreateVoiceProfileResult createVoiceProfile(CreateVoiceProfileRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateVoiceProfile(request);
+    }
+
+    @SdkInternalApi
+    final CreateVoiceProfileResult executeCreateVoiceProfile(CreateVoiceProfileRequest createVoiceProfileRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createVoiceProfileRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateVoiceProfileRequest> request = null;
+        Response<CreateVoiceProfileResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateVoiceProfileRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(createVoiceProfileRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Chime SDK Voice");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateVoiceProfile");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<CreateVoiceProfileResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new CreateVoiceProfileResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * @param createVoiceProfileDomainRequest
+     * @return Result of the CreateVoiceProfileDomain operation returned by the service.
+     * @throws BadRequestException
+     * @throws ForbiddenException
+     * @throws AccessDeniedException
+     * @throws ConflictException
+     * @throws UnauthorizedClientException
+     * @throws ThrottledClientException
+     * @throws ResourceLimitExceededException
+     * @throws ServiceUnavailableException
+     * @throws ServiceFailureException
+     * @sample AmazonChimeSDKVoice.CreateVoiceProfileDomain
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/CreateVoiceProfileDomain"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public CreateVoiceProfileDomainResult createVoiceProfileDomain(CreateVoiceProfileDomainRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateVoiceProfileDomain(request);
+    }
+
+    @SdkInternalApi
+    final CreateVoiceProfileDomainResult executeCreateVoiceProfileDomain(CreateVoiceProfileDomainRequest createVoiceProfileDomainRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createVoiceProfileDomainRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateVoiceProfileDomainRequest> request = null;
+        Response<CreateVoiceProfileDomainResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateVoiceProfileDomainRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(createVoiceProfileDomainRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Chime SDK Voice");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateVoiceProfileDomain");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<CreateVoiceProfileDomainResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new CreateVoiceProfileDomainResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -1545,6 +1675,128 @@ public class AmazonChimeSDKVoiceClient extends AmazonWebServiceClient implements
     }
 
     /**
+     * @param deleteVoiceProfileRequest
+     * @return Result of the DeleteVoiceProfile operation returned by the service.
+     * @throws BadRequestException
+     * @throws UnauthorizedClientException
+     * @throws ForbiddenException
+     * @throws AccessDeniedException
+     * @throws NotFoundException
+     * @throws ConflictException
+     * @throws ThrottledClientException
+     * @throws ServiceUnavailableException
+     * @throws ServiceFailureException
+     * @sample AmazonChimeSDKVoice.DeleteVoiceProfile
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/DeleteVoiceProfile"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DeleteVoiceProfileResult deleteVoiceProfile(DeleteVoiceProfileRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteVoiceProfile(request);
+    }
+
+    @SdkInternalApi
+    final DeleteVoiceProfileResult executeDeleteVoiceProfile(DeleteVoiceProfileRequest deleteVoiceProfileRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteVoiceProfileRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteVoiceProfileRequest> request = null;
+        Response<DeleteVoiceProfileResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteVoiceProfileRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(deleteVoiceProfileRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Chime SDK Voice");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteVoiceProfile");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeleteVoiceProfileResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DeleteVoiceProfileResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * @param deleteVoiceProfileDomainRequest
+     * @return Result of the DeleteVoiceProfileDomain operation returned by the service.
+     * @throws UnauthorizedClientException
+     * @throws NotFoundException
+     * @throws ForbiddenException
+     * @throws AccessDeniedException
+     * @throws BadRequestException
+     * @throws ConflictException
+     * @throws ThrottledClientException
+     * @throws ServiceUnavailableException
+     * @throws ServiceFailureException
+     * @sample AmazonChimeSDKVoice.DeleteVoiceProfileDomain
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/DeleteVoiceProfileDomain"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DeleteVoiceProfileDomainResult deleteVoiceProfileDomain(DeleteVoiceProfileDomainRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteVoiceProfileDomain(request);
+    }
+
+    @SdkInternalApi
+    final DeleteVoiceProfileDomainResult executeDeleteVoiceProfileDomain(DeleteVoiceProfileDomainRequest deleteVoiceProfileDomainRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteVoiceProfileDomainRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteVoiceProfileDomainRequest> request = null;
+        Response<DeleteVoiceProfileDomainResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteVoiceProfileDomainRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(deleteVoiceProfileDomainRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Chime SDK Voice");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteVoiceProfileDomain");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeleteVoiceProfileDomainResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new DeleteVoiceProfileDomainResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
      * @param disassociatePhoneNumbersFromVoiceConnectorRequest
      * @return Result of the DisassociatePhoneNumbersFromVoiceConnector operation returned by the service.
      * @throws UnauthorizedClientException
@@ -2201,6 +2453,66 @@ public class AmazonChimeSDKVoiceClient extends AmazonWebServiceClient implements
     }
 
     /**
+     * @param getSpeakerSearchTaskRequest
+     * @return Result of the GetSpeakerSearchTask operation returned by the service.
+     * @throws BadRequestException
+     * @throws ForbiddenException
+     * @throws NotFoundException
+     * @throws ConflictException
+     * @throws ThrottledClientException
+     * @throws AccessDeniedException
+     * @throws UnauthorizedClientException
+     * @throws ServiceFailureException
+     * @throws ServiceUnavailableException
+     * @sample AmazonChimeSDKVoice.GetSpeakerSearchTask
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/GetSpeakerSearchTask"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetSpeakerSearchTaskResult getSpeakerSearchTask(GetSpeakerSearchTaskRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetSpeakerSearchTask(request);
+    }
+
+    @SdkInternalApi
+    final GetSpeakerSearchTaskResult executeGetSpeakerSearchTask(GetSpeakerSearchTaskRequest getSpeakerSearchTaskRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getSpeakerSearchTaskRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetSpeakerSearchTaskRequest> request = null;
+        Response<GetSpeakerSearchTaskResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetSpeakerSearchTaskRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getSpeakerSearchTaskRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Chime SDK Voice");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetSpeakerSearchTask");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetSpeakerSearchTaskResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetSpeakerSearchTaskResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
      * @param getVoiceConnectorRequest
      * @return Result of the GetVoiceConnector operation returned by the service.
      * @throws UnauthorizedClientException
@@ -2746,6 +3058,187 @@ public class AmazonChimeSDKVoiceClient extends AmazonWebServiceClient implements
     }
 
     /**
+     * @param getVoiceProfileRequest
+     * @return Result of the GetVoiceProfile operation returned by the service.
+     * @throws BadRequestException
+     * @throws UnauthorizedClientException
+     * @throws ForbiddenException
+     * @throws AccessDeniedException
+     * @throws NotFoundException
+     * @throws ThrottledClientException
+     * @throws ServiceUnavailableException
+     * @throws ServiceFailureException
+     * @sample AmazonChimeSDKVoice.GetVoiceProfile
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/GetVoiceProfile"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetVoiceProfileResult getVoiceProfile(GetVoiceProfileRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetVoiceProfile(request);
+    }
+
+    @SdkInternalApi
+    final GetVoiceProfileResult executeGetVoiceProfile(GetVoiceProfileRequest getVoiceProfileRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getVoiceProfileRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetVoiceProfileRequest> request = null;
+        Response<GetVoiceProfileResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetVoiceProfileRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getVoiceProfileRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Chime SDK Voice");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetVoiceProfile");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetVoiceProfileResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetVoiceProfileResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * @param getVoiceProfileDomainRequest
+     * @return Result of the GetVoiceProfileDomain operation returned by the service.
+     * @throws UnauthorizedClientException
+     * @throws NotFoundException
+     * @throws ForbiddenException
+     * @throws AccessDeniedException
+     * @throws BadRequestException
+     * @throws ThrottledClientException
+     * @throws ServiceUnavailableException
+     * @throws ServiceFailureException
+     * @sample AmazonChimeSDKVoice.GetVoiceProfileDomain
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/GetVoiceProfileDomain"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetVoiceProfileDomainResult getVoiceProfileDomain(GetVoiceProfileDomainRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetVoiceProfileDomain(request);
+    }
+
+    @SdkInternalApi
+    final GetVoiceProfileDomainResult executeGetVoiceProfileDomain(GetVoiceProfileDomainRequest getVoiceProfileDomainRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getVoiceProfileDomainRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetVoiceProfileDomainRequest> request = null;
+        Response<GetVoiceProfileDomainResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetVoiceProfileDomainRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getVoiceProfileDomainRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Chime SDK Voice");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetVoiceProfileDomain");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetVoiceProfileDomainResult>> responseHandler = protocolFactory
+                    .createResponseHandler(new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                            new GetVoiceProfileDomainResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * @param getVoiceToneAnalysisTaskRequest
+     * @return Result of the GetVoiceToneAnalysisTask operation returned by the service.
+     * @throws BadRequestException
+     * @throws ForbiddenException
+     * @throws NotFoundException
+     * @throws ConflictException
+     * @throws ThrottledClientException
+     * @throws AccessDeniedException
+     * @throws UnauthorizedClientException
+     * @throws ServiceFailureException
+     * @throws ServiceUnavailableException
+     * @sample AmazonChimeSDKVoice.GetVoiceToneAnalysisTask
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/GetVoiceToneAnalysisTask"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetVoiceToneAnalysisTaskResult getVoiceToneAnalysisTask(GetVoiceToneAnalysisTaskRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetVoiceToneAnalysisTask(request);
+    }
+
+    @SdkInternalApi
+    final GetVoiceToneAnalysisTaskResult executeGetVoiceToneAnalysisTask(GetVoiceToneAnalysisTaskRequest getVoiceToneAnalysisTaskRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getVoiceToneAnalysisTaskRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetVoiceToneAnalysisTaskRequest> request = null;
+        Response<GetVoiceToneAnalysisTaskResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetVoiceToneAnalysisTaskRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(getVoiceToneAnalysisTaskRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Chime SDK Voice");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetVoiceToneAnalysisTask");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetVoiceToneAnalysisTaskResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new GetVoiceToneAnalysisTaskResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
      * @param listAvailableVoiceConnectorRegionsRequest
      * @return Result of the ListAvailableVoiceConnectorRegions operation returned by the service.
      * @throws UnauthorizedClientException
@@ -3159,6 +3652,63 @@ public class AmazonChimeSDKVoiceClient extends AmazonWebServiceClient implements
     }
 
     /**
+     * @param listTagsForResourceRequest
+     * @return Result of the ListTagsForResource operation returned by the service.
+     * @throws BadRequestException
+     * @throws ForbiddenException
+     * @throws NotFoundException
+     * @throws UnauthorizedClientException
+     * @throws ServiceUnavailableException
+     * @throws ServiceFailureException
+     * @sample AmazonChimeSDKVoice.ListTagsForResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/ListTagsForResource"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListTagsForResourceResult listTagsForResource(ListTagsForResourceRequest request) {
+        request = beforeClientExecution(request);
+        return executeListTagsForResource(request);
+    }
+
+    @SdkInternalApi
+    final ListTagsForResourceResult executeListTagsForResource(ListTagsForResourceRequest listTagsForResourceRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listTagsForResourceRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListTagsForResourceRequest> request = null;
+        Response<ListTagsForResourceResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListTagsForResourceRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listTagsForResourceRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Chime SDK Voice");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListTagsForResource");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListTagsForResourceResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListTagsForResourceResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
      * @param listVoiceConnectorGroupsRequest
      * @return Result of the ListVoiceConnectorGroups operation returned by the service.
      * @throws UnauthorizedClientException
@@ -3326,6 +3876,124 @@ public class AmazonChimeSDKVoiceClient extends AmazonWebServiceClient implements
 
             HttpResponseHandler<AmazonWebServiceResponse<ListVoiceConnectorsResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListVoiceConnectorsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * @param listVoiceProfileDomainsRequest
+     * @return Result of the ListVoiceProfileDomains operation returned by the service.
+     * @throws NotFoundException
+     * @throws UnauthorizedClientException
+     * @throws ForbiddenException
+     * @throws BadRequestException
+     * @throws ThrottledClientException
+     * @throws ServiceUnavailableException
+     * @throws ServiceFailureException
+     * @sample AmazonChimeSDKVoice.ListVoiceProfileDomains
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/ListVoiceProfileDomains"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListVoiceProfileDomainsResult listVoiceProfileDomains(ListVoiceProfileDomainsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListVoiceProfileDomains(request);
+    }
+
+    @SdkInternalApi
+    final ListVoiceProfileDomainsResult executeListVoiceProfileDomains(ListVoiceProfileDomainsRequest listVoiceProfileDomainsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listVoiceProfileDomainsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListVoiceProfileDomainsRequest> request = null;
+        Response<ListVoiceProfileDomainsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListVoiceProfileDomainsRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(listVoiceProfileDomainsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Chime SDK Voice");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListVoiceProfileDomains");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListVoiceProfileDomainsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new ListVoiceProfileDomainsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * @param listVoiceProfilesRequest
+     * @return Result of the ListVoiceProfiles operation returned by the service.
+     * @throws NotFoundException
+     * @throws UnauthorizedClientException
+     * @throws ForbiddenException
+     * @throws BadRequestException
+     * @throws ThrottledClientException
+     * @throws ServiceUnavailableException
+     * @throws ServiceFailureException
+     * @sample AmazonChimeSDKVoice.ListVoiceProfiles
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/ListVoiceProfiles"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListVoiceProfilesResult listVoiceProfiles(ListVoiceProfilesRequest request) {
+        request = beforeClientExecution(request);
+        return executeListVoiceProfiles(request);
+    }
+
+    @SdkInternalApi
+    final ListVoiceProfilesResult executeListVoiceProfiles(ListVoiceProfilesRequest listVoiceProfilesRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listVoiceProfilesRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListVoiceProfilesRequest> request = null;
+        Response<ListVoiceProfilesResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListVoiceProfilesRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listVoiceProfilesRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Chime SDK Voice");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListVoiceProfiles");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListVoiceProfilesResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListVoiceProfilesResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -4011,6 +4679,375 @@ public class AmazonChimeSDKVoiceClient extends AmazonWebServiceClient implements
     }
 
     /**
+     * @param startSpeakerSearchTaskRequest
+     * @return Result of the StartSpeakerSearchTask operation returned by the service.
+     * @throws BadRequestException
+     * @throws ResourceLimitExceededException
+     * @throws UnauthorizedClientException
+     * @throws ForbiddenException
+     * @throws AccessDeniedException
+     * @throws NotFoundException
+     * @throws ConflictException
+     * @throws GoneException
+     * @throws UnprocessableEntityException
+     * @throws ThrottledClientException
+     * @throws ServiceUnavailableException
+     * @throws ServiceFailureException
+     * @sample AmazonChimeSDKVoice.StartSpeakerSearchTask
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/StartSpeakerSearchTask"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public StartSpeakerSearchTaskResult startSpeakerSearchTask(StartSpeakerSearchTaskRequest request) {
+        request = beforeClientExecution(request);
+        return executeStartSpeakerSearchTask(request);
+    }
+
+    @SdkInternalApi
+    final StartSpeakerSearchTaskResult executeStartSpeakerSearchTask(StartSpeakerSearchTaskRequest startSpeakerSearchTaskRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(startSpeakerSearchTaskRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<StartSpeakerSearchTaskRequest> request = null;
+        Response<StartSpeakerSearchTaskResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new StartSpeakerSearchTaskRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(startSpeakerSearchTaskRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Chime SDK Voice");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "StartSpeakerSearchTask");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<StartSpeakerSearchTaskResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new StartSpeakerSearchTaskResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * @param startVoiceToneAnalysisTaskRequest
+     * @return Result of the StartVoiceToneAnalysisTask operation returned by the service.
+     * @throws BadRequestException
+     * @throws ResourceLimitExceededException
+     * @throws UnauthorizedClientException
+     * @throws ForbiddenException
+     * @throws AccessDeniedException
+     * @throws NotFoundException
+     * @throws ConflictException
+     * @throws GoneException
+     * @throws UnprocessableEntityException
+     * @throws ThrottledClientException
+     * @throws ServiceUnavailableException
+     * @throws ServiceFailureException
+     * @sample AmazonChimeSDKVoice.StartVoiceToneAnalysisTask
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/StartVoiceToneAnalysisTask"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public StartVoiceToneAnalysisTaskResult startVoiceToneAnalysisTask(StartVoiceToneAnalysisTaskRequest request) {
+        request = beforeClientExecution(request);
+        return executeStartVoiceToneAnalysisTask(request);
+    }
+
+    @SdkInternalApi
+    final StartVoiceToneAnalysisTaskResult executeStartVoiceToneAnalysisTask(StartVoiceToneAnalysisTaskRequest startVoiceToneAnalysisTaskRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(startVoiceToneAnalysisTaskRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<StartVoiceToneAnalysisTaskRequest> request = null;
+        Response<StartVoiceToneAnalysisTaskResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new StartVoiceToneAnalysisTaskRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(startVoiceToneAnalysisTaskRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Chime SDK Voice");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "StartVoiceToneAnalysisTask");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<StartVoiceToneAnalysisTaskResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new StartVoiceToneAnalysisTaskResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * @param stopSpeakerSearchTaskRequest
+     * @return Result of the StopSpeakerSearchTask operation returned by the service.
+     * @throws BadRequestException
+     * @throws UnauthorizedClientException
+     * @throws ForbiddenException
+     * @throws AccessDeniedException
+     * @throws NotFoundException
+     * @throws ConflictException
+     * @throws UnprocessableEntityException
+     * @throws ThrottledClientException
+     * @throws ServiceUnavailableException
+     * @throws ServiceFailureException
+     * @sample AmazonChimeSDKVoice.StopSpeakerSearchTask
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/StopSpeakerSearchTask"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public StopSpeakerSearchTaskResult stopSpeakerSearchTask(StopSpeakerSearchTaskRequest request) {
+        request = beforeClientExecution(request);
+        return executeStopSpeakerSearchTask(request);
+    }
+
+    @SdkInternalApi
+    final StopSpeakerSearchTaskResult executeStopSpeakerSearchTask(StopSpeakerSearchTaskRequest stopSpeakerSearchTaskRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(stopSpeakerSearchTaskRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<StopSpeakerSearchTaskRequest> request = null;
+        Response<StopSpeakerSearchTaskResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new StopSpeakerSearchTaskRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(stopSpeakerSearchTaskRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Chime SDK Voice");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "StopSpeakerSearchTask");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<StopSpeakerSearchTaskResult>> responseHandler = protocolFactory
+                    .createResponseHandler(new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                            new StopSpeakerSearchTaskResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * @param stopVoiceToneAnalysisTaskRequest
+     * @return Result of the StopVoiceToneAnalysisTask operation returned by the service.
+     * @throws BadRequestException
+     * @throws UnauthorizedClientException
+     * @throws ForbiddenException
+     * @throws AccessDeniedException
+     * @throws NotFoundException
+     * @throws ConflictException
+     * @throws UnprocessableEntityException
+     * @throws ThrottledClientException
+     * @throws ServiceUnavailableException
+     * @throws ServiceFailureException
+     * @sample AmazonChimeSDKVoice.StopVoiceToneAnalysisTask
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/StopVoiceToneAnalysisTask"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public StopVoiceToneAnalysisTaskResult stopVoiceToneAnalysisTask(StopVoiceToneAnalysisTaskRequest request) {
+        request = beforeClientExecution(request);
+        return executeStopVoiceToneAnalysisTask(request);
+    }
+
+    @SdkInternalApi
+    final StopVoiceToneAnalysisTaskResult executeStopVoiceToneAnalysisTask(StopVoiceToneAnalysisTaskRequest stopVoiceToneAnalysisTaskRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(stopVoiceToneAnalysisTaskRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<StopVoiceToneAnalysisTaskRequest> request = null;
+        Response<StopVoiceToneAnalysisTaskResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new StopVoiceToneAnalysisTaskRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(stopVoiceToneAnalysisTaskRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Chime SDK Voice");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "StopVoiceToneAnalysisTask");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<StopVoiceToneAnalysisTaskResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new StopVoiceToneAnalysisTaskResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * @param tagResourceRequest
+     * @return Result of the TagResource operation returned by the service.
+     * @throws BadRequestException
+     * @throws ForbiddenException
+     * @throws NotFoundException
+     * @throws ResourceLimitExceededException
+     * @throws UnauthorizedClientException
+     * @throws ServiceUnavailableException
+     * @throws ServiceFailureException
+     * @sample AmazonChimeSDKVoice.TagResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/TagResource" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public TagResourceResult tagResource(TagResourceRequest request) {
+        request = beforeClientExecution(request);
+        return executeTagResource(request);
+    }
+
+    @SdkInternalApi
+    final TagResourceResult executeTagResource(TagResourceRequest tagResourceRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(tagResourceRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<TagResourceRequest> request = null;
+        Response<TagResourceResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new TagResourceRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(tagResourceRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Chime SDK Voice");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "TagResource");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<TagResourceResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new TagResourceResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * @param untagResourceRequest
+     * @return Result of the UntagResource operation returned by the service.
+     * @throws BadRequestException
+     * @throws ForbiddenException
+     * @throws NotFoundException
+     * @throws UnauthorizedClientException
+     * @throws ServiceUnavailableException
+     * @throws ServiceFailureException
+     * @sample AmazonChimeSDKVoice.UntagResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/UntagResource" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public UntagResourceResult untagResource(UntagResourceRequest request) {
+        request = beforeClientExecution(request);
+        return executeUntagResource(request);
+    }
+
+    @SdkInternalApi
+    final UntagResourceResult executeUntagResource(UntagResourceRequest untagResourceRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(untagResourceRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UntagResourceRequest> request = null;
+        Response<UntagResourceResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UntagResourceRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(untagResourceRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Chime SDK Voice");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UntagResource");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UntagResourceResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new UntagResourceResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
      * @param updateGlobalSettingsRequest
      * @return Result of the UpdateGlobalSettings operation returned by the service.
      * @throws UnauthorizedClientException
@@ -4534,6 +5571,128 @@ public class AmazonChimeSDKVoiceClient extends AmazonWebServiceClient implements
             HttpResponseHandler<AmazonWebServiceResponse<UpdateVoiceConnectorGroupResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new UpdateVoiceConnectorGroupResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * @param updateVoiceProfileRequest
+     * @return Result of the UpdateVoiceProfile operation returned by the service.
+     * @throws BadRequestException
+     * @throws UnauthorizedClientException
+     * @throws ForbiddenException
+     * @throws AccessDeniedException
+     * @throws NotFoundException
+     * @throws ConflictException
+     * @throws GoneException
+     * @throws ThrottledClientException
+     * @throws ServiceUnavailableException
+     * @throws ServiceFailureException
+     * @sample AmazonChimeSDKVoice.UpdateVoiceProfile
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/UpdateVoiceProfile"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public UpdateVoiceProfileResult updateVoiceProfile(UpdateVoiceProfileRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateVoiceProfile(request);
+    }
+
+    @SdkInternalApi
+    final UpdateVoiceProfileResult executeUpdateVoiceProfile(UpdateVoiceProfileRequest updateVoiceProfileRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateVoiceProfileRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateVoiceProfileRequest> request = null;
+        Response<UpdateVoiceProfileResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateVoiceProfileRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(updateVoiceProfileRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Chime SDK Voice");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateVoiceProfile");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdateVoiceProfileResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new UpdateVoiceProfileResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * @param updateVoiceProfileDomainRequest
+     * @return Result of the UpdateVoiceProfileDomain operation returned by the service.
+     * @throws UnauthorizedClientException
+     * @throws NotFoundException
+     * @throws ForbiddenException
+     * @throws AccessDeniedException
+     * @throws BadRequestException
+     * @throws ThrottledClientException
+     * @throws ServiceUnavailableException
+     * @throws ServiceFailureException
+     * @sample AmazonChimeSDKVoice.UpdateVoiceProfileDomain
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/UpdateVoiceProfileDomain"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public UpdateVoiceProfileDomainResult updateVoiceProfileDomain(UpdateVoiceProfileDomainRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateVoiceProfileDomain(request);
+    }
+
+    @SdkInternalApi
+    final UpdateVoiceProfileDomainResult executeUpdateVoiceProfileDomain(UpdateVoiceProfileDomainRequest updateVoiceProfileDomainRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateVoiceProfileDomainRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateVoiceProfileDomainRequest> request = null;
+        Response<UpdateVoiceProfileDomainResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateVoiceProfileDomainRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(updateVoiceProfileDomainRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Chime SDK Voice");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateVoiceProfileDomain");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdateVoiceProfileDomainResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new UpdateVoiceProfileDomainResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

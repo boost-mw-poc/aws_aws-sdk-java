@@ -36,6 +36,8 @@ public class UpdateOrganizationConfigurationRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("dataSources").build();
     private static final MarshallingInfo<List> FEATURES_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("features").build();
+    private static final MarshallingInfo<String> AUTOENABLEORGANIZATIONMEMBERS_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("autoEnableOrganizationMembers").build();
 
     private static final UpdateOrganizationConfigurationRequestMarshaller instance = new UpdateOrganizationConfigurationRequestMarshaller();
 
@@ -57,6 +59,7 @@ public class UpdateOrganizationConfigurationRequestMarshaller {
             protocolMarshaller.marshall(updateOrganizationConfigurationRequest.getAutoEnable(), AUTOENABLE_BINDING);
             protocolMarshaller.marshall(updateOrganizationConfigurationRequest.getDataSources(), DATASOURCES_BINDING);
             protocolMarshaller.marshall(updateOrganizationConfigurationRequest.getFeatures(), FEATURES_BINDING);
+            protocolMarshaller.marshall(updateOrganizationConfigurationRequest.getAutoEnableOrganizationMembers(), AUTOENABLEORGANIZATIONMEMBERS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

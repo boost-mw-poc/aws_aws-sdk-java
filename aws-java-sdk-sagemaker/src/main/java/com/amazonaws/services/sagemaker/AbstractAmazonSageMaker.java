@@ -79,6 +79,11 @@ public class AbstractAmazonSageMaker implements AmazonSageMaker {
     }
 
     @Override
+    public CreateAutoMLJobV2Result createAutoMLJobV2(CreateAutoMLJobV2Request request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateCodeRepositoryResult createCodeRepository(CreateCodeRepositoryRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -570,6 +575,11 @@ public class AbstractAmazonSageMaker implements AmazonSageMaker {
 
     @Override
     public DescribeAutoMLJobResult describeAutoMLJob(DescribeAutoMLJobRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DescribeAutoMLJobV2Result describeAutoMLJobV2(DescribeAutoMLJobV2Request request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

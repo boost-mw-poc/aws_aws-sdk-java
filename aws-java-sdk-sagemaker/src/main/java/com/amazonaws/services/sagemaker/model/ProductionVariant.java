@@ -110,7 +110,7 @@ public class ProductionVariant implements Serializable, Cloneable, StructuredPoj
     /**
      * <p>
      * You can use this parameter to turn on native Amazon Web Services Systems Manager (SSM) access for a production
-     * variant behind an endpoint. By default, SSM access is disabled for all production variants behind an endpoints.
+     * variant behind an endpoint. By default, SSM access is disabled for all production variants behind an endpoint.
      * You can turn on or turn off SSM access for a production variant behind an existing endpoint by creating a new
      * endpoint configuration and calling <code>UpdateEndpoint</code>.
      * </p>
@@ -669,7 +669,7 @@ public class ProductionVariant implements Serializable, Cloneable, StructuredPoj
     /**
      * <p>
      * You can use this parameter to turn on native Amazon Web Services Systems Manager (SSM) access for a production
-     * variant behind an endpoint. By default, SSM access is disabled for all production variants behind an endpoints.
+     * variant behind an endpoint. By default, SSM access is disabled for all production variants behind an endpoint.
      * You can turn on or turn off SSM access for a production variant behind an existing endpoint by creating a new
      * endpoint configuration and calling <code>UpdateEndpoint</code>.
      * </p>
@@ -677,7 +677,7 @@ public class ProductionVariant implements Serializable, Cloneable, StructuredPoj
      * @param enableSSMAccess
      *        You can use this parameter to turn on native Amazon Web Services Systems Manager (SSM) access for a
      *        production variant behind an endpoint. By default, SSM access is disabled for all production variants
-     *        behind an endpoints. You can turn on or turn off SSM access for a production variant behind an existing
+     *        behind an endpoint. You can turn on or turn off SSM access for a production variant behind an existing
      *        endpoint by creating a new endpoint configuration and calling <code>UpdateEndpoint</code>.
      */
 
@@ -688,14 +688,14 @@ public class ProductionVariant implements Serializable, Cloneable, StructuredPoj
     /**
      * <p>
      * You can use this parameter to turn on native Amazon Web Services Systems Manager (SSM) access for a production
-     * variant behind an endpoint. By default, SSM access is disabled for all production variants behind an endpoints.
+     * variant behind an endpoint. By default, SSM access is disabled for all production variants behind an endpoint.
      * You can turn on or turn off SSM access for a production variant behind an existing endpoint by creating a new
      * endpoint configuration and calling <code>UpdateEndpoint</code>.
      * </p>
      * 
      * @return You can use this parameter to turn on native Amazon Web Services Systems Manager (SSM) access for a
      *         production variant behind an endpoint. By default, SSM access is disabled for all production variants
-     *         behind an endpoints. You can turn on or turn off SSM access for a production variant behind an existing
+     *         behind an endpoint. You can turn on or turn off SSM access for a production variant behind an existing
      *         endpoint by creating a new endpoint configuration and calling <code>UpdateEndpoint</code>.
      */
 
@@ -706,7 +706,7 @@ public class ProductionVariant implements Serializable, Cloneable, StructuredPoj
     /**
      * <p>
      * You can use this parameter to turn on native Amazon Web Services Systems Manager (SSM) access for a production
-     * variant behind an endpoint. By default, SSM access is disabled for all production variants behind an endpoints.
+     * variant behind an endpoint. By default, SSM access is disabled for all production variants behind an endpoint.
      * You can turn on or turn off SSM access for a production variant behind an existing endpoint by creating a new
      * endpoint configuration and calling <code>UpdateEndpoint</code>.
      * </p>
@@ -714,7 +714,7 @@ public class ProductionVariant implements Serializable, Cloneable, StructuredPoj
      * @param enableSSMAccess
      *        You can use this parameter to turn on native Amazon Web Services Systems Manager (SSM) access for a
      *        production variant behind an endpoint. By default, SSM access is disabled for all production variants
-     *        behind an endpoints. You can turn on or turn off SSM access for a production variant behind an existing
+     *        behind an endpoint. You can turn on or turn off SSM access for a production variant behind an existing
      *        endpoint by creating a new endpoint configuration and calling <code>UpdateEndpoint</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -727,14 +727,14 @@ public class ProductionVariant implements Serializable, Cloneable, StructuredPoj
     /**
      * <p>
      * You can use this parameter to turn on native Amazon Web Services Systems Manager (SSM) access for a production
-     * variant behind an endpoint. By default, SSM access is disabled for all production variants behind an endpoints.
+     * variant behind an endpoint. By default, SSM access is disabled for all production variants behind an endpoint.
      * You can turn on or turn off SSM access for a production variant behind an existing endpoint by creating a new
      * endpoint configuration and calling <code>UpdateEndpoint</code>.
      * </p>
      * 
      * @return You can use this parameter to turn on native Amazon Web Services Systems Manager (SSM) access for a
      *         production variant behind an endpoint. By default, SSM access is disabled for all production variants
-     *         behind an endpoints. You can turn on or turn off SSM access for a production variant behind an existing
+     *         behind an endpoint. You can turn on or turn off SSM access for a production variant behind an existing
      *         endpoint by creating a new endpoint configuration and calling <code>UpdateEndpoint</code>.
      */
 

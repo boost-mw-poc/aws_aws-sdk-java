@@ -420,6 +420,39 @@ public class AmazonSageMakerAsyncClient extends AmazonSageMakerClient implements
     }
 
     @Override
+    public java.util.concurrent.Future<CreateAutoMLJobV2Result> createAutoMLJobV2Async(CreateAutoMLJobV2Request request) {
+
+        return createAutoMLJobV2Async(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateAutoMLJobV2Result> createAutoMLJobV2Async(final CreateAutoMLJobV2Request request,
+            final com.amazonaws.handlers.AsyncHandler<CreateAutoMLJobV2Request, CreateAutoMLJobV2Result> asyncHandler) {
+        final CreateAutoMLJobV2Request finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateAutoMLJobV2Result>() {
+            @Override
+            public CreateAutoMLJobV2Result call() throws Exception {
+                CreateAutoMLJobV2Result result = null;
+
+                try {
+                    result = executeCreateAutoMLJobV2(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateCodeRepositoryResult> createCodeRepositoryAsync(CreateCodeRepositoryRequest request) {
 
         return createCodeRepositoryAsync(request, null);
@@ -3691,6 +3724,39 @@ public class AmazonSageMakerAsyncClient extends AmazonSageMakerClient implements
 
                 try {
                     result = executeDescribeAutoMLJob(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeAutoMLJobV2Result> describeAutoMLJobV2Async(DescribeAutoMLJobV2Request request) {
+
+        return describeAutoMLJobV2Async(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeAutoMLJobV2Result> describeAutoMLJobV2Async(final DescribeAutoMLJobV2Request request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeAutoMLJobV2Request, DescribeAutoMLJobV2Result> asyncHandler) {
+        final DescribeAutoMLJobV2Request finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeAutoMLJobV2Result>() {
+            @Override
+            public DescribeAutoMLJobV2Result call() throws Exception {
+                DescribeAutoMLJobV2Result result = null;
+
+                try {
+                    result = executeDescribeAutoMLJobV2(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

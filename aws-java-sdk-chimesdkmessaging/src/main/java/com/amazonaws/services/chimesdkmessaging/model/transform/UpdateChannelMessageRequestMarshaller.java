@@ -39,6 +39,8 @@ public class UpdateChannelMessageRequestMarshaller {
             .marshallLocation(MarshallLocation.HEADER).marshallLocationName("x-amz-chime-bearer").build();
     private static final MarshallingInfo<String> SUBCHANNELID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SubChannelId").build();
+    private static final MarshallingInfo<String> CONTENTTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ContentType").build();
 
     private static final UpdateChannelMessageRequestMarshaller instance = new UpdateChannelMessageRequestMarshaller();
 
@@ -62,6 +64,7 @@ public class UpdateChannelMessageRequestMarshaller {
             protocolMarshaller.marshall(updateChannelMessageRequest.getMetadata(), METADATA_BINDING);
             protocolMarshaller.marshall(updateChannelMessageRequest.getChimeBearer(), CHIMEBEARER_BINDING);
             protocolMarshaller.marshall(updateChannelMessageRequest.getSubChannelId(), SUBCHANNELID_BINDING);
+            protocolMarshaller.marshall(updateChannelMessageRequest.getContentType(), CONTENTTYPE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

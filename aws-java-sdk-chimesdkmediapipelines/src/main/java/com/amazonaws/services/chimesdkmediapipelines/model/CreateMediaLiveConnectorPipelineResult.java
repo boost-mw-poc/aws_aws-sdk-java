@@ -27,18 +27,18 @@ public class CreateMediaLiveConnectorPipelineResult extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The new media pipeline.
+     * The new media live connector pipeline.
      * </p>
      */
     private MediaLiveConnectorPipeline mediaLiveConnectorPipeline;
 
     /**
      * <p>
-     * The new media pipeline.
+     * The new media live connector pipeline.
      * </p>
      * 
      * @param mediaLiveConnectorPipeline
-     *        The new media pipeline.
+     *        The new media live connector pipeline.
      */
 
     public void setMediaLiveConnectorPipeline(MediaLiveConnectorPipeline mediaLiveConnectorPipeline) {
@@ -47,10 +47,10 @@ public class CreateMediaLiveConnectorPipelineResult extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The new media pipeline.
+     * The new media live connector pipeline.
      * </p>
      * 
-     * @return The new media pipeline.
+     * @return The new media live connector pipeline.
      */
 
     public MediaLiveConnectorPipeline getMediaLiveConnectorPipeline() {
@@ -59,11 +59,11 @@ public class CreateMediaLiveConnectorPipelineResult extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The new media pipeline.
+     * The new media live connector pipeline.
      * </p>
      * 
      * @param mediaLiveConnectorPipeline
-     *        The new media pipeline.
+     *        The new media live connector pipeline.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

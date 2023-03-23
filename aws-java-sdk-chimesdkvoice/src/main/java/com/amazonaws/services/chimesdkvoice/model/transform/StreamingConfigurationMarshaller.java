@@ -34,6 +34,8 @@ public class StreamingConfigurationMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Disabled").build();
     private static final MarshallingInfo<List> STREAMINGNOTIFICATIONTARGETS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("StreamingNotificationTargets").build();
+    private static final MarshallingInfo<StructuredPojo> MEDIAINSIGHTSCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MediaInsightsConfiguration").build();
 
     private static final StreamingConfigurationMarshaller instance = new StreamingConfigurationMarshaller();
 
@@ -54,6 +56,7 @@ public class StreamingConfigurationMarshaller {
             protocolMarshaller.marshall(streamingConfiguration.getDataRetentionInHours(), DATARETENTIONINHOURS_BINDING);
             protocolMarshaller.marshall(streamingConfiguration.getDisabled(), DISABLED_BINDING);
             protocolMarshaller.marshall(streamingConfiguration.getStreamingNotificationTargets(), STREAMINGNOTIFICATIONTARGETS_BINDING);
+            protocolMarshaller.marshall(streamingConfiguration.getMediaInsightsConfiguration(), MEDIAINSIGHTSCONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The configuration object of a video contacatentation pipeline.
+ * The configuration object of a video concatenation pipeline.
  * </p>
  * 
  * @see <a
