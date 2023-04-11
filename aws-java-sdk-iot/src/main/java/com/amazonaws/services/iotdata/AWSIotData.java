@@ -154,7 +154,8 @@ public interface AWSIotData {
      * <p>
      * This action returns the message payload of the retained message, which can incur messaging costs. To list only
      * the topic names of the retained messages, call <a
-     * href="/iot/latest/developerguide/API_iotdata_ListRetainedMessages.html">ListRetainedMessages</a>.
+     * href="https://docs.aws.amazon.com/iot/latest/apireference/API_iotdata_ListRetainedMessages.html"
+     * >ListRetainedMessages</a>.
      * </p>
      * <p>
      * Requires permission to access the <a href=
@@ -271,7 +272,7 @@ public interface AWSIotData {
      * </p>
      * <p>
      * To get the message payload of a retained message, call <a
-     * href="https://docs.aws.amazon.com/iot/latest/developerguide/API_iotdata_GetRetainedMessage.html"
+     * href="https://docs.aws.amazon.com/iot/latest/apireference/API_iotdata_GetRetainedMessage.html"
      * >GetRetainedMessage</a> with the topic name of the retained message.
      * </p>
      * <p>

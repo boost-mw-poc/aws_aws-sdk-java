@@ -177,7 +177,7 @@ public class AWSEMRServerlessClient extends AmazonWebServiceClient implements AW
      * @param cancelJobRunRequest
      * @return Result of the CancelJobRun operation returned by the service.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by an Amazon Web Services service.
      * @throws ResourceNotFoundException
      *         The specified resource was not found.
      * @throws InternalServerException
@@ -238,7 +238,7 @@ public class AWSEMRServerlessClient extends AmazonWebServiceClient implements AW
      * @param createApplicationRequest
      * @return Result of the CreateApplication operation returned by the service.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by an Amazon Web Services service.
      * @throws ResourceNotFoundException
      *         The specified resource was not found.
      * @throws InternalServerException
@@ -301,7 +301,7 @@ public class AWSEMRServerlessClient extends AmazonWebServiceClient implements AW
      * @param deleteApplicationRequest
      * @return Result of the DeleteApplication operation returned by the service.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by an Amazon Web Services service.
      * @throws ResourceNotFoundException
      *         The specified resource was not found.
      * @throws InternalServerException
@@ -362,7 +362,7 @@ public class AWSEMRServerlessClient extends AmazonWebServiceClient implements AW
      * @param getApplicationRequest
      * @return Result of the GetApplication operation returned by the service.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by an Amazon Web Services service.
      * @throws ResourceNotFoundException
      *         The specified resource was not found.
      * @throws InternalServerException
@@ -423,7 +423,7 @@ public class AWSEMRServerlessClient extends AmazonWebServiceClient implements AW
      * @param getDashboardForJobRunRequest
      * @return Result of the GetDashboardForJobRun operation returned by the service.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by an Amazon Web Services service.
      * @throws ResourceNotFoundException
      *         The specified resource was not found.
      * @throws InternalServerException
@@ -485,7 +485,7 @@ public class AWSEMRServerlessClient extends AmazonWebServiceClient implements AW
      * @param getJobRunRequest
      * @return Result of the GetJobRun operation returned by the service.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by an Amazon Web Services service.
      * @throws ResourceNotFoundException
      *         The specified resource was not found.
      * @throws InternalServerException
@@ -546,7 +546,7 @@ public class AWSEMRServerlessClient extends AmazonWebServiceClient implements AW
      * @param listApplicationsRequest
      * @return Result of the ListApplications operation returned by the service.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by an Amazon Web Services service.
      * @throws InternalServerException
      *         Request processing failed because of an error or failure with the service.
      * @sample AWSEMRServerless.ListApplications
@@ -605,7 +605,7 @@ public class AWSEMRServerlessClient extends AmazonWebServiceClient implements AW
      * @param listJobRunsRequest
      * @return Result of the ListJobRuns operation returned by the service.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by an Amazon Web Services service.
      * @throws InternalServerException
      *         Request processing failed because of an error or failure with the service.
      * @sample AWSEMRServerless.ListJobRuns
@@ -664,7 +664,7 @@ public class AWSEMRServerlessClient extends AmazonWebServiceClient implements AW
      * @param listTagsForResourceRequest
      * @return Result of the ListTagsForResource operation returned by the service.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by an Amazon Web Services service.
      * @throws ResourceNotFoundException
      *         The specified resource was not found.
      * @throws InternalServerException
@@ -725,7 +725,7 @@ public class AWSEMRServerlessClient extends AmazonWebServiceClient implements AW
      * @param startApplicationRequest
      * @return Result of the StartApplication operation returned by the service.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by an Amazon Web Services service.
      * @throws ResourceNotFoundException
      *         The specified resource was not found.
      * @throws InternalServerException
@@ -788,7 +788,7 @@ public class AWSEMRServerlessClient extends AmazonWebServiceClient implements AW
      * @param startJobRunRequest
      * @return Result of the StartJobRun operation returned by the service.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by an Amazon Web Services service.
      * @throws ResourceNotFoundException
      *         The specified resource was not found.
      * @throws InternalServerException
@@ -852,7 +852,7 @@ public class AWSEMRServerlessClient extends AmazonWebServiceClient implements AW
      * @param stopApplicationRequest
      * @return Result of the StopApplication operation returned by the service.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by an Amazon Web Services service.
      * @throws ResourceNotFoundException
      *         The specified resource was not found.
      * @throws InternalServerException
@@ -907,16 +907,16 @@ public class AWSEMRServerlessClient extends AmazonWebServiceClient implements AW
 
     /**
      * <p>
-     * Assigns tags to resources. A tag is a label that you assign to an AWS resource. Each tag consists of a key and an
-     * optional value, both of which you define. Tags enable you to categorize your AWS resources by attributes such as
-     * purpose, owner, or environment. When you have many resources of the same type, you can quickly identify a
-     * specific resource based on the tags you've assigned to it.
+     * Assigns tags to resources. A tag is a label that you assign to an Amazon Web Services resource. Each tag consists
+     * of a key and an optional value, both of which you define. Tags enable you to categorize your Amazon Web Services
+     * resources by attributes such as purpose, owner, or environment. When you have many resources of the same type,
+     * you can quickly identify a specific resource based on the tags you've assigned to it.
      * </p>
      * 
      * @param tagResourceRequest
      * @return Result of the TagResource operation returned by the service.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by an Amazon Web Services service.
      * @throws ResourceNotFoundException
      *         The specified resource was not found.
      * @throws InternalServerException
@@ -977,7 +977,7 @@ public class AWSEMRServerlessClient extends AmazonWebServiceClient implements AW
      * @param untagResourceRequest
      * @return Result of the UntagResource operation returned by the service.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by an Amazon Web Services service.
      * @throws ResourceNotFoundException
      *         The specified resource was not found.
      * @throws InternalServerException
@@ -1038,7 +1038,7 @@ public class AWSEMRServerlessClient extends AmazonWebServiceClient implements AW
      * @param updateApplicationRequest
      * @return Result of the UpdateApplication operation returned by the service.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by an Amazon Web Services service.
      * @throws ResourceNotFoundException
      *         The specified resource was not found.
      * @throws InternalServerException

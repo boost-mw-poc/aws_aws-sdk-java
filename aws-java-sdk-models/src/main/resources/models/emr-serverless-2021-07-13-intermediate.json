@@ -100,7 +100,7 @@
       "endpointTrait" : null,
       "exceptions" : [ {
         "exceptionName" : "ValidationException",
-        "documentation" : "<p>The input fails to satisfy the constraints specified by an AWS service.</p>",
+        "documentation" : "<p>The input fails to satisfy the constraints specified by an Amazon Web Services service.</p>",
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "ResourceNotFoundException",
@@ -145,7 +145,7 @@
       "endpointTrait" : null,
       "exceptions" : [ {
         "exceptionName" : "ValidationException",
-        "documentation" : "<p>The input fails to satisfy the constraints specified by an AWS service.</p>",
+        "documentation" : "<p>The input fails to satisfy the constraints specified by an Amazon Web Services service.</p>",
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "ResourceNotFoundException",
@@ -194,7 +194,7 @@
       "endpointTrait" : null,
       "exceptions" : [ {
         "exceptionName" : "ValidationException",
-        "documentation" : "<p>The input fails to satisfy the constraints specified by an AWS service.</p>",
+        "documentation" : "<p>The input fails to satisfy the constraints specified by an Amazon Web Services service.</p>",
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "ResourceNotFoundException",
@@ -239,7 +239,7 @@
       "endpointTrait" : null,
       "exceptions" : [ {
         "exceptionName" : "ValidationException",
-        "documentation" : "<p>The input fails to satisfy the constraints specified by an AWS service.</p>",
+        "documentation" : "<p>The input fails to satisfy the constraints specified by an Amazon Web Services service.</p>",
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "ResourceNotFoundException",
@@ -284,7 +284,7 @@
       "endpointTrait" : null,
       "exceptions" : [ {
         "exceptionName" : "ValidationException",
-        "documentation" : "<p>The input fails to satisfy the constraints specified by an AWS service.</p>",
+        "documentation" : "<p>The input fails to satisfy the constraints specified by an Amazon Web Services service.</p>",
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "ResourceNotFoundException",
@@ -329,7 +329,7 @@
       "endpointTrait" : null,
       "exceptions" : [ {
         "exceptionName" : "ValidationException",
-        "documentation" : "<p>The input fails to satisfy the constraints specified by an AWS service.</p>",
+        "documentation" : "<p>The input fails to satisfy the constraints specified by an Amazon Web Services service.</p>",
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "ResourceNotFoundException",
@@ -374,7 +374,7 @@
       "endpointTrait" : null,
       "exceptions" : [ {
         "exceptionName" : "ValidationException",
-        "documentation" : "<p>The input fails to satisfy the constraints specified by an AWS service.</p>",
+        "documentation" : "<p>The input fails to satisfy the constraints specified by an Amazon Web Services service.</p>",
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "InternalServerException",
@@ -415,7 +415,7 @@
       "endpointTrait" : null,
       "exceptions" : [ {
         "exceptionName" : "ValidationException",
-        "documentation" : "<p>The input fails to satisfy the constraints specified by an AWS service.</p>",
+        "documentation" : "<p>The input fails to satisfy the constraints specified by an Amazon Web Services service.</p>",
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "InternalServerException",
@@ -456,7 +456,7 @@
       "endpointTrait" : null,
       "exceptions" : [ {
         "exceptionName" : "ValidationException",
-        "documentation" : "<p>The input fails to satisfy the constraints specified by an AWS service.</p>",
+        "documentation" : "<p>The input fails to satisfy the constraints specified by an Amazon Web Services service.</p>",
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "ResourceNotFoundException",
@@ -501,7 +501,7 @@
       "endpointTrait" : null,
       "exceptions" : [ {
         "exceptionName" : "ValidationException",
-        "documentation" : "<p>The input fails to satisfy the constraints specified by an AWS service.</p>",
+        "documentation" : "<p>The input fails to satisfy the constraints specified by an Amazon Web Services service.</p>",
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "ResourceNotFoundException",
@@ -550,7 +550,7 @@
       "endpointTrait" : null,
       "exceptions" : [ {
         "exceptionName" : "ValidationException",
-        "documentation" : "<p>The input fails to satisfy the constraints specified by an AWS service.</p>",
+        "documentation" : "<p>The input fails to satisfy the constraints specified by an Amazon Web Services service.</p>",
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "ResourceNotFoundException",
@@ -599,7 +599,7 @@
       "endpointTrait" : null,
       "exceptions" : [ {
         "exceptionName" : "ValidationException",
-        "documentation" : "<p>The input fails to satisfy the constraints specified by an AWS service.</p>",
+        "documentation" : "<p>The input fails to satisfy the constraints specified by an Amazon Web Services service.</p>",
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "ResourceNotFoundException",
@@ -637,14 +637,14 @@
       "asyncReturnType" : "TagResourceResult",
       "authenticated" : true,
       "deprecated" : false,
-      "documentation" : "<p>Assigns tags to resources. A tag is a label that you assign to an AWS resource. Each tag consists of a key and an optional value, both of which you define. Tags enable you to categorize your AWS resources by attributes such as purpose, owner, or environment. When you have many resources of the same type, you can quickly identify a specific resource based on the tags you've assigned to it. </p>",
+      "documentation" : "<p>Assigns tags to resources. A tag is a label that you assign to an Amazon Web Services resource. Each tag consists of a key and an optional value, both of which you define. Tags enable you to categorize your Amazon Web Services resources by attributes such as purpose, owner, or environment. When you have many resources of the same type, you can quickly identify a specific resource based on the tags you've assigned to it. </p>",
       "endpointCacheRequired" : false,
       "endpointDiscovery" : null,
       "endpointOperation" : false,
       "endpointTrait" : null,
       "exceptions" : [ {
         "exceptionName" : "ValidationException",
-        "documentation" : "<p>The input fails to satisfy the constraints specified by an AWS service.</p>",
+        "documentation" : "<p>The input fails to satisfy the constraints specified by an Amazon Web Services service.</p>",
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "ResourceNotFoundException",
@@ -689,7 +689,7 @@
       "endpointTrait" : null,
       "exceptions" : [ {
         "exceptionName" : "ValidationException",
-        "documentation" : "<p>The input fails to satisfy the constraints specified by an AWS service.</p>",
+        "documentation" : "<p>The input fails to satisfy the constraints specified by an Amazon Web Services service.</p>",
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "ResourceNotFoundException",
@@ -734,7 +734,7 @@
       "endpointTrait" : null,
       "exceptions" : [ {
         "exceptionName" : "ValidationException",
-        "documentation" : "<p>The input fails to satisfy the constraints specified by an AWS service.</p>",
+        "documentation" : "<p>The input fails to satisfy the constraints specified by an Amazon Web Services service.</p>",
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "ResourceNotFoundException",
@@ -15236,6 +15236,75 @@
           "variableSetterType" : "Integer"
         },
         "xmlNameSpaceUri" : null
+      }, {
+        "c2jName" : "executionTimeoutMinutes",
+        "c2jShape" : "Duration",
+        "deprecated" : false,
+        "documentation" : "<p>Maximum duration for the job run to run. If the job run runs beyond this duration, it will be automatically cancelled.</p>",
+        "endpointDiscoveryId" : false,
+        "enumType" : null,
+        "fluentSetterDocumentation" : "/**<p>Maximum duration for the job run to run. If the job run runs beyond this duration, it will be automatically cancelled.</p>\n@param executionTimeoutMinutes Maximum duration for the job run to run. If the job run runs beyond this duration, it will be automatically cancelled.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "fluentSetterMethodName" : "withExecutionTimeoutMinutes",
+        "getterDocumentation" : "/**<p>Maximum duration for the job run to run. If the job run runs beyond this duration, it will be automatically cancelled.</p>\n@return Maximum duration for the job run to run. If the job run runs beyond this duration, it will be automatically cancelled.*/",
+        "getterMethodName" : "getExecutionTimeoutMinutes",
+        "getterModel" : {
+          "returnType" : "Long",
+          "documentation" : null
+        },
+        "http" : {
+          "additionalMarshallingPath" : null,
+          "additionalUnmarshallingPath" : null,
+          "flattened" : false,
+          "greedy" : false,
+          "header" : false,
+          "isPayload" : false,
+          "isStreaming" : false,
+          "location" : null,
+          "marshallLocation" : "PAYLOAD",
+          "marshallLocationName" : "executionTimeoutMinutes",
+          "queryString" : false,
+          "requiresLength" : false,
+          "statusCode" : false,
+          "unmarshallLocationName" : "executionTimeoutMinutes",
+          "uri" : false
+        },
+        "idempotencyToken" : false,
+        "isBinary" : false,
+        "jsonValue" : false,
+        "list" : false,
+        "listModel" : null,
+        "map" : false,
+        "mapModel" : null,
+        "marshallingTargetClass" : "Long",
+        "marshallingType" : "LONG",
+        "name" : "ExecutionTimeoutMinutes",
+        "sensitive" : false,
+        "setterDocumentation" : "/**<p>Maximum duration for the job run to run. If the job run runs beyond this duration, it will be automatically cancelled.</p>\n@param executionTimeoutMinutes Maximum duration for the job run to run. If the job run runs beyond this duration, it will be automatically cancelled.*/",
+        "setterMethodName" : "setExecutionTimeoutMinutes",
+        "setterModel" : {
+          "timestampFormat" : null,
+          "variableDeclarationType" : "Long",
+          "variableName" : "executionTimeoutMinutes",
+          "variableType" : "Long",
+          "documentation" : "",
+          "simpleType" : "Long",
+          "variableSetterType" : "Long"
+        },
+        "shouldEmitLegacyEnumSetter" : false,
+        "shouldFullyQualify" : false,
+        "simple" : true,
+        "unmarshallingType" : null,
+        "varargSetterDocumentation" : "/**<p>Maximum duration for the job run to run. If the job run runs beyond this duration, it will be automatically cancelled.</p>\n@param executionTimeoutMinutes Maximum duration for the job run to run. If the job run runs beyond this duration, it will be automatically cancelled.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "variable" : {
+          "timestampFormat" : null,
+          "variableDeclarationType" : "Long",
+          "variableName" : "executionTimeoutMinutes",
+          "variableType" : "Long",
+          "documentation" : "<p>Maximum duration for the job run to run. If the job run runs beyond this duration, it will be automatically cancelled.</p>",
+          "simpleType" : "Long",
+          "variableSetterType" : "Long"
+        },
+        "xmlNameSpaceUri" : null
       } ],
       "membersAsMap" : {
         "ApplicationId" : {
@@ -15655,6 +15724,76 @@
             "documentation" : "<p>The execution role ARN of the job run.</p>",
             "simpleType" : "String",
             "variableSetterType" : "String"
+          },
+          "xmlNameSpaceUri" : null
+        },
+        "ExecutionTimeoutMinutes" : {
+          "c2jName" : "executionTimeoutMinutes",
+          "c2jShape" : "Duration",
+          "deprecated" : false,
+          "documentation" : "<p>Maximum duration for the job run to run. If the job run runs beyond this duration, it will be automatically cancelled.</p>",
+          "endpointDiscoveryId" : false,
+          "enumType" : null,
+          "fluentSetterDocumentation" : "/**<p>Maximum duration for the job run to run. If the job run runs beyond this duration, it will be automatically cancelled.</p>\n@param executionTimeoutMinutes Maximum duration for the job run to run. If the job run runs beyond this duration, it will be automatically cancelled.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "fluentSetterMethodName" : "withExecutionTimeoutMinutes",
+          "getterDocumentation" : "/**<p>Maximum duration for the job run to run. If the job run runs beyond this duration, it will be automatically cancelled.</p>\n@return Maximum duration for the job run to run. If the job run runs beyond this duration, it will be automatically cancelled.*/",
+          "getterMethodName" : "getExecutionTimeoutMinutes",
+          "getterModel" : {
+            "returnType" : "Long",
+            "documentation" : null
+          },
+          "http" : {
+            "additionalMarshallingPath" : null,
+            "additionalUnmarshallingPath" : null,
+            "flattened" : false,
+            "greedy" : false,
+            "header" : false,
+            "isPayload" : false,
+            "isStreaming" : false,
+            "location" : null,
+            "marshallLocation" : "PAYLOAD",
+            "marshallLocationName" : "executionTimeoutMinutes",
+            "queryString" : false,
+            "requiresLength" : false,
+            "statusCode" : false,
+            "unmarshallLocationName" : "executionTimeoutMinutes",
+            "uri" : false
+          },
+          "idempotencyToken" : false,
+          "isBinary" : false,
+          "jsonValue" : false,
+          "list" : false,
+          "listModel" : null,
+          "map" : false,
+          "mapModel" : null,
+          "marshallingTargetClass" : "Long",
+          "marshallingType" : "LONG",
+          "name" : "ExecutionTimeoutMinutes",
+          "sensitive" : false,
+          "setterDocumentation" : "/**<p>Maximum duration for the job run to run. If the job run runs beyond this duration, it will be automatically cancelled.</p>\n@param executionTimeoutMinutes Maximum duration for the job run to run. If the job run runs beyond this duration, it will be automatically cancelled.*/",
+          "setterMethodName" : "setExecutionTimeoutMinutes",
+          "setterModel" : {
+            "timestampFormat" : null,
+            "variableDeclarationType" : "Long",
+            "variableName" : "executionTimeoutMinutes",
+            "variableType" : "Long",
+            "documentation" : "",
+            "simpleType" : "Long",
+            "variableSetterType" : "Long"
+          },
+          "shouldEmitLegacyEnumSetter" : false,
+          "shouldFullyQualify" : false,
+          "simple" : true,
+          "unmarshallingType" : null,
+          "varargSetterDocumentation" : "/**<p>Maximum duration for the job run to run. If the job run runs beyond this duration, it will be automatically cancelled.</p>\n@param executionTimeoutMinutes Maximum duration for the job run to run. If the job run runs beyond this duration, it will be automatically cancelled.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "variable" : {
+            "timestampFormat" : null,
+            "variableDeclarationType" : "Long",
+            "variableName" : "executionTimeoutMinutes",
+            "variableType" : "Long",
+            "documentation" : "<p>Maximum duration for the job run to run. If the job run runs beyond this duration, it will be automatically cancelled.</p>",
+            "simpleType" : "Long",
+            "variableSetterType" : "Long"
           },
           "xmlNameSpaceUri" : null
         },
@@ -26048,12 +26187,12 @@
         "c2jName" : "arn",
         "c2jShape" : "JobArn",
         "deprecated" : false,
-        "documentation" : "<p>The output lists the execution role ARN of the job run.</p>",
+        "documentation" : "<p>This output displays the ARN of the job run..</p>",
         "endpointDiscoveryId" : false,
         "enumType" : null,
-        "fluentSetterDocumentation" : "/**<p>The output lists the execution role ARN of the job run.</p>\n@param arn The output lists the execution role ARN of the job run.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "fluentSetterDocumentation" : "/**<p>This output displays the ARN of the job run..</p>\n@param arn This output displays the ARN of the job run..\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "fluentSetterMethodName" : "withArn",
-        "getterDocumentation" : "/**<p>The output lists the execution role ARN of the job run.</p>\n@return The output lists the execution role ARN of the job run.*/",
+        "getterDocumentation" : "/**<p>This output displays the ARN of the job run..</p>\n@return This output displays the ARN of the job run..*/",
         "getterMethodName" : "getArn",
         "getterModel" : {
           "returnType" : "String",
@@ -26087,7 +26226,7 @@
         "marshallingType" : "STRING",
         "name" : "Arn",
         "sensitive" : false,
-        "setterDocumentation" : "/**<p>The output lists the execution role ARN of the job run.</p>\n@param arn The output lists the execution role ARN of the job run.*/",
+        "setterDocumentation" : "/**<p>This output displays the ARN of the job run..</p>\n@param arn This output displays the ARN of the job run..*/",
         "setterMethodName" : "setArn",
         "setterModel" : {
           "timestampFormat" : null,
@@ -26102,13 +26241,13 @@
         "shouldFullyQualify" : false,
         "simple" : true,
         "unmarshallingType" : null,
-        "varargSetterDocumentation" : "/**<p>The output lists the execution role ARN of the job run.</p>\n@param arn The output lists the execution role ARN of the job run.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "varargSetterDocumentation" : "/**<p>This output displays the ARN of the job run..</p>\n@param arn This output displays the ARN of the job run..\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "variable" : {
           "timestampFormat" : null,
           "variableDeclarationType" : "String",
           "variableName" : "arn",
           "variableType" : "String",
-          "documentation" : "<p>The output lists the execution role ARN of the job run.</p>",
+          "documentation" : "<p>This output displays the ARN of the job run..</p>",
           "simpleType" : "String",
           "variableSetterType" : "String"
         },
@@ -26189,12 +26328,12 @@
           "c2jName" : "arn",
           "c2jShape" : "JobArn",
           "deprecated" : false,
-          "documentation" : "<p>The output lists the execution role ARN of the job run.</p>",
+          "documentation" : "<p>This output displays the ARN of the job run..</p>",
           "endpointDiscoveryId" : false,
           "enumType" : null,
-          "fluentSetterDocumentation" : "/**<p>The output lists the execution role ARN of the job run.</p>\n@param arn The output lists the execution role ARN of the job run.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "fluentSetterDocumentation" : "/**<p>This output displays the ARN of the job run..</p>\n@param arn This output displays the ARN of the job run..\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "fluentSetterMethodName" : "withArn",
-          "getterDocumentation" : "/**<p>The output lists the execution role ARN of the job run.</p>\n@return The output lists the execution role ARN of the job run.*/",
+          "getterDocumentation" : "/**<p>This output displays the ARN of the job run..</p>\n@return This output displays the ARN of the job run..*/",
           "getterMethodName" : "getArn",
           "getterModel" : {
             "returnType" : "String",
@@ -26228,7 +26367,7 @@
           "marshallingType" : "STRING",
           "name" : "Arn",
           "sensitive" : false,
-          "setterDocumentation" : "/**<p>The output lists the execution role ARN of the job run.</p>\n@param arn The output lists the execution role ARN of the job run.*/",
+          "setterDocumentation" : "/**<p>This output displays the ARN of the job run..</p>\n@param arn This output displays the ARN of the job run..*/",
           "setterMethodName" : "setArn",
           "setterModel" : {
             "timestampFormat" : null,
@@ -26243,13 +26382,13 @@
           "shouldFullyQualify" : false,
           "simple" : true,
           "unmarshallingType" : null,
-          "varargSetterDocumentation" : "/**<p>The output lists the execution role ARN of the job run.</p>\n@param arn The output lists the execution role ARN of the job run.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "varargSetterDocumentation" : "/**<p>This output displays the ARN of the job run..</p>\n@param arn This output displays the ARN of the job run..\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "variable" : {
             "timestampFormat" : null,
             "variableDeclarationType" : "String",
             "variableName" : "arn",
             "variableType" : "String",
-            "documentation" : "<p>The output lists the execution role ARN of the job run.</p>",
+            "documentation" : "<p>This output displays the ARN of the job run..</p>",
             "simpleType" : "String",
             "variableSetterType" : "String"
           },
@@ -30088,7 +30227,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<p>The input fails to satisfy the constraints specified by an AWS service.</p>",
+      "documentation" : "<p>The input fails to satisfy the constraints specified by an Amazon Web Services service.</p>",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : "ValidationException",

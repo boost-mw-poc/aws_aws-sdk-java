@@ -27,8 +27,8 @@ public class BatchDeleteImageRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The Amazon Web Services account ID that's associated with the registry that contains the image to delete. If you
-     * do not specify a registry, the default public registry is assumed.
+     * The Amazon Web Services account ID, or registry alias, that's associated with the registry that contains the
+     * image to delete. If you do not specify a registry, the default public registry is assumed.
      * </p>
      */
     private String registryId;
@@ -48,13 +48,13 @@ public class BatchDeleteImageRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The Amazon Web Services account ID that's associated with the registry that contains the image to delete. If you
-     * do not specify a registry, the default public registry is assumed.
+     * The Amazon Web Services account ID, or registry alias, that's associated with the registry that contains the
+     * image to delete. If you do not specify a registry, the default public registry is assumed.
      * </p>
      * 
      * @param registryId
-     *        The Amazon Web Services account ID that's associated with the registry that contains the image to delete.
-     *        If you do not specify a registry, the default public registry is assumed.
+     *        The Amazon Web Services account ID, or registry alias, that's associated with the registry that contains
+     *        the image to delete. If you do not specify a registry, the default public registry is assumed.
      */
 
     public void setRegistryId(String registryId) {
@@ -63,12 +63,12 @@ public class BatchDeleteImageRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The Amazon Web Services account ID that's associated with the registry that contains the image to delete. If you
-     * do not specify a registry, the default public registry is assumed.
+     * The Amazon Web Services account ID, or registry alias, that's associated with the registry that contains the
+     * image to delete. If you do not specify a registry, the default public registry is assumed.
      * </p>
      * 
-     * @return The Amazon Web Services account ID that's associated with the registry that contains the image to delete.
-     *         If you do not specify a registry, the default public registry is assumed.
+     * @return The Amazon Web Services account ID, or registry alias, that's associated with the registry that contains
+     *         the image to delete. If you do not specify a registry, the default public registry is assumed.
      */
 
     public String getRegistryId() {
@@ -77,13 +77,13 @@ public class BatchDeleteImageRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The Amazon Web Services account ID that's associated with the registry that contains the image to delete. If you
-     * do not specify a registry, the default public registry is assumed.
+     * The Amazon Web Services account ID, or registry alias, that's associated with the registry that contains the
+     * image to delete. If you do not specify a registry, the default public registry is assumed.
      * </p>
      * 
      * @param registryId
-     *        The Amazon Web Services account ID that's associated with the registry that contains the image to delete.
-     *        If you do not specify a registry, the default public registry is assumed.
+     *        The Amazon Web Services account ID, or registry alias, that's associated with the registry that contains
+     *        the image to delete. If you do not specify a registry, the default public registry is assumed.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -129,6 +129,13 @@ public class JobRun implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private Integer totalExecutionDurationSeconds;
+    /**
+     * <p>
+     * Maximum duration for the job run to run. If the job run runs beyond this duration, it will be automatically
+     * cancelled.
+     * </p>
+     */
+    private Long executionTimeoutMinutes;
 
     /**
      * <p>
@@ -856,6 +863,52 @@ public class JobRun implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Maximum duration for the job run to run. If the job run runs beyond this duration, it will be automatically
+     * cancelled.
+     * </p>
+     * 
+     * @param executionTimeoutMinutes
+     *        Maximum duration for the job run to run. If the job run runs beyond this duration, it will be
+     *        automatically cancelled.
+     */
+
+    public void setExecutionTimeoutMinutes(Long executionTimeoutMinutes) {
+        this.executionTimeoutMinutes = executionTimeoutMinutes;
+    }
+
+    /**
+     * <p>
+     * Maximum duration for the job run to run. If the job run runs beyond this duration, it will be automatically
+     * cancelled.
+     * </p>
+     * 
+     * @return Maximum duration for the job run to run. If the job run runs beyond this duration, it will be
+     *         automatically cancelled.
+     */
+
+    public Long getExecutionTimeoutMinutes() {
+        return this.executionTimeoutMinutes;
+    }
+
+    /**
+     * <p>
+     * Maximum duration for the job run to run. If the job run runs beyond this duration, it will be automatically
+     * cancelled.
+     * </p>
+     * 
+     * @param executionTimeoutMinutes
+     *        Maximum duration for the job run to run. If the job run runs beyond this duration, it will be
+     *        automatically cancelled.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public JobRun withExecutionTimeoutMinutes(Long executionTimeoutMinutes) {
+        setExecutionTimeoutMinutes(executionTimeoutMinutes);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -900,7 +953,9 @@ public class JobRun implements Serializable, Cloneable, StructuredPojo {
         if (getNetworkConfiguration() != null)
             sb.append("NetworkConfiguration: ").append(getNetworkConfiguration()).append(",");
         if (getTotalExecutionDurationSeconds() != null)
-            sb.append("TotalExecutionDurationSeconds: ").append(getTotalExecutionDurationSeconds());
+            sb.append("TotalExecutionDurationSeconds: ").append(getTotalExecutionDurationSeconds()).append(",");
+        if (getExecutionTimeoutMinutes() != null)
+            sb.append("ExecutionTimeoutMinutes: ").append(getExecutionTimeoutMinutes());
         sb.append("}");
         return sb.toString();
     }
@@ -984,6 +1039,10 @@ public class JobRun implements Serializable, Cloneable, StructuredPojo {
         if (other.getTotalExecutionDurationSeconds() != null
                 && other.getTotalExecutionDurationSeconds().equals(this.getTotalExecutionDurationSeconds()) == false)
             return false;
+        if (other.getExecutionTimeoutMinutes() == null ^ this.getExecutionTimeoutMinutes() == null)
+            return false;
+        if (other.getExecutionTimeoutMinutes() != null && other.getExecutionTimeoutMinutes().equals(this.getExecutionTimeoutMinutes()) == false)
+            return false;
         return true;
     }
 
@@ -1009,6 +1068,7 @@ public class JobRun implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getTotalResourceUtilization() == null) ? 0 : getTotalResourceUtilization().hashCode());
         hashCode = prime * hashCode + ((getNetworkConfiguration() == null) ? 0 : getNetworkConfiguration().hashCode());
         hashCode = prime * hashCode + ((getTotalExecutionDurationSeconds() == null) ? 0 : getTotalExecutionDurationSeconds().hashCode());
+        hashCode = prime * hashCode + ((getExecutionTimeoutMinutes() == null) ? 0 : getExecutionTimeoutMinutes().hashCode());
         return hashCode;
     }
 

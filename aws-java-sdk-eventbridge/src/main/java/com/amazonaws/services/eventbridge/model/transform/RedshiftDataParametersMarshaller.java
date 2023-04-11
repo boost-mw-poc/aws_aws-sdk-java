@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.eventbridge.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -39,6 +40,8 @@ public class RedshiftDataParametersMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("StatementName").build();
     private static final MarshallingInfo<Boolean> WITHEVENT_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("WithEvent").build();
+    private static final MarshallingInfo<List> SQLS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Sqls").build();
 
     private static final RedshiftDataParametersMarshaller instance = new RedshiftDataParametersMarshaller();
 
@@ -62,6 +65,7 @@ public class RedshiftDataParametersMarshaller {
             protocolMarshaller.marshall(redshiftDataParameters.getSql(), SQL_BINDING);
             protocolMarshaller.marshall(redshiftDataParameters.getStatementName(), STATEMENTNAME_BINDING);
             protocolMarshaller.marshall(redshiftDataParameters.getWithEvent(), WITHEVENT_BINDING);
+            protocolMarshaller.marshall(redshiftDataParameters.getSqls(), SQLS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -72,6 +72,12 @@ public class RedshiftDataParametersJsonUnmarshaller implements Unmarshaller<Reds
                     context.nextToken();
                     redshiftDataParameters.setWithEvent(context.getUnmarshaller(Boolean.class).unmarshall(context));
                 }
+                if (context.testExpression("Sqls", targetDepth)) {
+                    context.nextToken();
+                    redshiftDataParameters.setSqls(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)
