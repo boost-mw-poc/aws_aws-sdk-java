@@ -76,11 +76,16 @@ public class CreateMonitorRequest extends com.amazonaws.AmazonWebServiceRequest 
     private Integer maxCityNetworksToMonitor;
     /**
      * <p>
-     * Publish internet measurements for Internet Monitor to another location, such as an Amazon S3 bucket. The
-     * measurements are also published to Amazon CloudWatch Logs.
+     * Publish internet measurements for Internet Monitor to an Amazon S3 bucket in addition to CloudWatch Logs.
      * </p>
      */
     private InternetMeasurementsLogDelivery internetMeasurementsLogDelivery;
+    /**
+     * <p>
+     * The percentage of the internet-facing traffic for your application that you want to monitor with this monitor.
+     * </p>
+     */
+    private Integer trafficPercentageToMonitor;
 
     /**
      * <p>
@@ -469,13 +474,11 @@ public class CreateMonitorRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * Publish internet measurements for Internet Monitor to another location, such as an Amazon S3 bucket. The
-     * measurements are also published to Amazon CloudWatch Logs.
+     * Publish internet measurements for Internet Monitor to an Amazon S3 bucket in addition to CloudWatch Logs.
      * </p>
      * 
      * @param internetMeasurementsLogDelivery
-     *        Publish internet measurements for Internet Monitor to another location, such as an Amazon S3 bucket. The
-     *        measurements are also published to Amazon CloudWatch Logs.
+     *        Publish internet measurements for Internet Monitor to an Amazon S3 bucket in addition to CloudWatch Logs.
      */
 
     public void setInternetMeasurementsLogDelivery(InternetMeasurementsLogDelivery internetMeasurementsLogDelivery) {
@@ -484,12 +487,10 @@ public class CreateMonitorRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * Publish internet measurements for Internet Monitor to another location, such as an Amazon S3 bucket. The
-     * measurements are also published to Amazon CloudWatch Logs.
+     * Publish internet measurements for Internet Monitor to an Amazon S3 bucket in addition to CloudWatch Logs.
      * </p>
      * 
-     * @return Publish internet measurements for Internet Monitor to another location, such as an Amazon S3 bucket. The
-     *         measurements are also published to Amazon CloudWatch Logs.
+     * @return Publish internet measurements for Internet Monitor to an Amazon S3 bucket in addition to CloudWatch Logs.
      */
 
     public InternetMeasurementsLogDelivery getInternetMeasurementsLogDelivery() {
@@ -498,18 +499,59 @@ public class CreateMonitorRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * Publish internet measurements for Internet Monitor to another location, such as an Amazon S3 bucket. The
-     * measurements are also published to Amazon CloudWatch Logs.
+     * Publish internet measurements for Internet Monitor to an Amazon S3 bucket in addition to CloudWatch Logs.
      * </p>
      * 
      * @param internetMeasurementsLogDelivery
-     *        Publish internet measurements for Internet Monitor to another location, such as an Amazon S3 bucket. The
-     *        measurements are also published to Amazon CloudWatch Logs.
+     *        Publish internet measurements for Internet Monitor to an Amazon S3 bucket in addition to CloudWatch Logs.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public CreateMonitorRequest withInternetMeasurementsLogDelivery(InternetMeasurementsLogDelivery internetMeasurementsLogDelivery) {
         setInternetMeasurementsLogDelivery(internetMeasurementsLogDelivery);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The percentage of the internet-facing traffic for your application that you want to monitor with this monitor.
+     * </p>
+     * 
+     * @param trafficPercentageToMonitor
+     *        The percentage of the internet-facing traffic for your application that you want to monitor with this
+     *        monitor.
+     */
+
+    public void setTrafficPercentageToMonitor(Integer trafficPercentageToMonitor) {
+        this.trafficPercentageToMonitor = trafficPercentageToMonitor;
+    }
+
+    /**
+     * <p>
+     * The percentage of the internet-facing traffic for your application that you want to monitor with this monitor.
+     * </p>
+     * 
+     * @return The percentage of the internet-facing traffic for your application that you want to monitor with this
+     *         monitor.
+     */
+
+    public Integer getTrafficPercentageToMonitor() {
+        return this.trafficPercentageToMonitor;
+    }
+
+    /**
+     * <p>
+     * The percentage of the internet-facing traffic for your application that you want to monitor with this monitor.
+     * </p>
+     * 
+     * @param trafficPercentageToMonitor
+     *        The percentage of the internet-facing traffic for your application that you want to monitor with this
+     *        monitor.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateMonitorRequest withTrafficPercentageToMonitor(Integer trafficPercentageToMonitor) {
+        setTrafficPercentageToMonitor(trafficPercentageToMonitor);
         return this;
     }
 
@@ -536,7 +578,9 @@ public class CreateMonitorRequest extends com.amazonaws.AmazonWebServiceRequest 
         if (getMaxCityNetworksToMonitor() != null)
             sb.append("MaxCityNetworksToMonitor: ").append(getMaxCityNetworksToMonitor()).append(",");
         if (getInternetMeasurementsLogDelivery() != null)
-            sb.append("InternetMeasurementsLogDelivery: ").append(getInternetMeasurementsLogDelivery());
+            sb.append("InternetMeasurementsLogDelivery: ").append(getInternetMeasurementsLogDelivery()).append(",");
+        if (getTrafficPercentageToMonitor() != null)
+            sb.append("TrafficPercentageToMonitor: ").append(getTrafficPercentageToMonitor());
         sb.append("}");
         return sb.toString();
     }
@@ -576,6 +620,10 @@ public class CreateMonitorRequest extends com.amazonaws.AmazonWebServiceRequest 
         if (other.getInternetMeasurementsLogDelivery() != null
                 && other.getInternetMeasurementsLogDelivery().equals(this.getInternetMeasurementsLogDelivery()) == false)
             return false;
+        if (other.getTrafficPercentageToMonitor() == null ^ this.getTrafficPercentageToMonitor() == null)
+            return false;
+        if (other.getTrafficPercentageToMonitor() != null && other.getTrafficPercentageToMonitor().equals(this.getTrafficPercentageToMonitor()) == false)
+            return false;
         return true;
     }
 
@@ -590,6 +638,7 @@ public class CreateMonitorRequest extends com.amazonaws.AmazonWebServiceRequest 
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getMaxCityNetworksToMonitor() == null) ? 0 : getMaxCityNetworksToMonitor().hashCode());
         hashCode = prime * hashCode + ((getInternetMeasurementsLogDelivery() == null) ? 0 : getInternetMeasurementsLogDelivery().hashCode());
+        hashCode = prime * hashCode + ((getTrafficPercentageToMonitor() == null) ? 0 : getTrafficPercentageToMonitor().hashCode());
         return hashCode;
     }
 

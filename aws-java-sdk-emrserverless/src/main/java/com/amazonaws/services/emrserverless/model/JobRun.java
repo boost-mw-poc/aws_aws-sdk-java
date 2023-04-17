@@ -115,8 +115,8 @@ public class JobRun implements Serializable, Cloneable, StructuredPojo {
     private java.util.Map<String, String> tags;
     /**
      * <p>
-     * The aggregate vCPU, memory, and storage resources used from the time job start executing till the time job is
-     * terminated, rounded up to the nearest second.
+     * The aggregate vCPU, memory, and storage resources used from the time the job starts to execute, until the time
+     * the job terminates, rounded up to the nearest second.
      * </p>
      */
     private TotalResourceUtilization totalResourceUtilization;
@@ -131,11 +131,19 @@ public class JobRun implements Serializable, Cloneable, StructuredPojo {
     private Integer totalExecutionDurationSeconds;
     /**
      * <p>
-     * Maximum duration for the job run to run. If the job run runs beyond this duration, it will be automatically
-     * cancelled.
+     * Returns the job run timeout value from the <code>StartJobRun</code> call. If no timeout was specified, then it
+     * returns the default timeout of 720 minutes.
      * </p>
      */
     private Long executionTimeoutMinutes;
+    /**
+     * <p>
+     * The aggregate vCPU, memory, and storage that AWS has billed for the job run. The billed resources include a
+     * 1-minute minimum usage for workers, plus additional storage over 20 GB per worker. Note that billed resources do
+     * not include usage for idle pre-initialized workers.
+     * </p>
+     */
+    private ResourceUtilization billedResourceUtilization;
 
     /**
      * <p>
@@ -746,13 +754,13 @@ public class JobRun implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The aggregate vCPU, memory, and storage resources used from the time job start executing till the time job is
-     * terminated, rounded up to the nearest second.
+     * The aggregate vCPU, memory, and storage resources used from the time the job starts to execute, until the time
+     * the job terminates, rounded up to the nearest second.
      * </p>
      * 
      * @param totalResourceUtilization
-     *        The aggregate vCPU, memory, and storage resources used from the time job start executing till the time job
-     *        is terminated, rounded up to the nearest second.
+     *        The aggregate vCPU, memory, and storage resources used from the time the job starts to execute, until the
+     *        time the job terminates, rounded up to the nearest second.
      */
 
     public void setTotalResourceUtilization(TotalResourceUtilization totalResourceUtilization) {
@@ -761,12 +769,12 @@ public class JobRun implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The aggregate vCPU, memory, and storage resources used from the time job start executing till the time job is
-     * terminated, rounded up to the nearest second.
+     * The aggregate vCPU, memory, and storage resources used from the time the job starts to execute, until the time
+     * the job terminates, rounded up to the nearest second.
      * </p>
      * 
-     * @return The aggregate vCPU, memory, and storage resources used from the time job start executing till the time
-     *         job is terminated, rounded up to the nearest second.
+     * @return The aggregate vCPU, memory, and storage resources used from the time the job starts to execute, until the
+     *         time the job terminates, rounded up to the nearest second.
      */
 
     public TotalResourceUtilization getTotalResourceUtilization() {
@@ -775,13 +783,13 @@ public class JobRun implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The aggregate vCPU, memory, and storage resources used from the time job start executing till the time job is
-     * terminated, rounded up to the nearest second.
+     * The aggregate vCPU, memory, and storage resources used from the time the job starts to execute, until the time
+     * the job terminates, rounded up to the nearest second.
      * </p>
      * 
      * @param totalResourceUtilization
-     *        The aggregate vCPU, memory, and storage resources used from the time job start executing till the time job
-     *        is terminated, rounded up to the nearest second.
+     *        The aggregate vCPU, memory, and storage resources used from the time the job starts to execute, until the
+     *        time the job terminates, rounded up to the nearest second.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -864,13 +872,13 @@ public class JobRun implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Maximum duration for the job run to run. If the job run runs beyond this duration, it will be automatically
-     * cancelled.
+     * Returns the job run timeout value from the <code>StartJobRun</code> call. If no timeout was specified, then it
+     * returns the default timeout of 720 minutes.
      * </p>
      * 
      * @param executionTimeoutMinutes
-     *        Maximum duration for the job run to run. If the job run runs beyond this duration, it will be
-     *        automatically cancelled.
+     *        Returns the job run timeout value from the <code>StartJobRun</code> call. If no timeout was specified,
+     *        then it returns the default timeout of 720 minutes.
      */
 
     public void setExecutionTimeoutMinutes(Long executionTimeoutMinutes) {
@@ -879,12 +887,12 @@ public class JobRun implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Maximum duration for the job run to run. If the job run runs beyond this duration, it will be automatically
-     * cancelled.
+     * Returns the job run timeout value from the <code>StartJobRun</code> call. If no timeout was specified, then it
+     * returns the default timeout of 720 minutes.
      * </p>
      * 
-     * @return Maximum duration for the job run to run. If the job run runs beyond this duration, it will be
-     *         automatically cancelled.
+     * @return Returns the job run timeout value from the <code>StartJobRun</code> call. If no timeout was specified,
+     *         then it returns the default timeout of 720 minutes.
      */
 
     public Long getExecutionTimeoutMinutes() {
@@ -893,18 +901,70 @@ public class JobRun implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Maximum duration for the job run to run. If the job run runs beyond this duration, it will be automatically
-     * cancelled.
+     * Returns the job run timeout value from the <code>StartJobRun</code> call. If no timeout was specified, then it
+     * returns the default timeout of 720 minutes.
      * </p>
      * 
      * @param executionTimeoutMinutes
-     *        Maximum duration for the job run to run. If the job run runs beyond this duration, it will be
-     *        automatically cancelled.
+     *        Returns the job run timeout value from the <code>StartJobRun</code> call. If no timeout was specified,
+     *        then it returns the default timeout of 720 minutes.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public JobRun withExecutionTimeoutMinutes(Long executionTimeoutMinutes) {
         setExecutionTimeoutMinutes(executionTimeoutMinutes);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The aggregate vCPU, memory, and storage that AWS has billed for the job run. The billed resources include a
+     * 1-minute minimum usage for workers, plus additional storage over 20 GB per worker. Note that billed resources do
+     * not include usage for idle pre-initialized workers.
+     * </p>
+     * 
+     * @param billedResourceUtilization
+     *        The aggregate vCPU, memory, and storage that AWS has billed for the job run. The billed resources include
+     *        a 1-minute minimum usage for workers, plus additional storage over 20 GB per worker. Note that billed
+     *        resources do not include usage for idle pre-initialized workers.
+     */
+
+    public void setBilledResourceUtilization(ResourceUtilization billedResourceUtilization) {
+        this.billedResourceUtilization = billedResourceUtilization;
+    }
+
+    /**
+     * <p>
+     * The aggregate vCPU, memory, and storage that AWS has billed for the job run. The billed resources include a
+     * 1-minute minimum usage for workers, plus additional storage over 20 GB per worker. Note that billed resources do
+     * not include usage for idle pre-initialized workers.
+     * </p>
+     * 
+     * @return The aggregate vCPU, memory, and storage that AWS has billed for the job run. The billed resources include
+     *         a 1-minute minimum usage for workers, plus additional storage over 20 GB per worker. Note that billed
+     *         resources do not include usage for idle pre-initialized workers.
+     */
+
+    public ResourceUtilization getBilledResourceUtilization() {
+        return this.billedResourceUtilization;
+    }
+
+    /**
+     * <p>
+     * The aggregate vCPU, memory, and storage that AWS has billed for the job run. The billed resources include a
+     * 1-minute minimum usage for workers, plus additional storage over 20 GB per worker. Note that billed resources do
+     * not include usage for idle pre-initialized workers.
+     * </p>
+     * 
+     * @param billedResourceUtilization
+     *        The aggregate vCPU, memory, and storage that AWS has billed for the job run. The billed resources include
+     *        a 1-minute minimum usage for workers, plus additional storage over 20 GB per worker. Note that billed
+     *        resources do not include usage for idle pre-initialized workers.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public JobRun withBilledResourceUtilization(ResourceUtilization billedResourceUtilization) {
+        setBilledResourceUtilization(billedResourceUtilization);
         return this;
     }
 
@@ -955,7 +1015,9 @@ public class JobRun implements Serializable, Cloneable, StructuredPojo {
         if (getTotalExecutionDurationSeconds() != null)
             sb.append("TotalExecutionDurationSeconds: ").append(getTotalExecutionDurationSeconds()).append(",");
         if (getExecutionTimeoutMinutes() != null)
-            sb.append("ExecutionTimeoutMinutes: ").append(getExecutionTimeoutMinutes());
+            sb.append("ExecutionTimeoutMinutes: ").append(getExecutionTimeoutMinutes()).append(",");
+        if (getBilledResourceUtilization() != null)
+            sb.append("BilledResourceUtilization: ").append(getBilledResourceUtilization());
         sb.append("}");
         return sb.toString();
     }
@@ -1043,6 +1105,10 @@ public class JobRun implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getExecutionTimeoutMinutes() != null && other.getExecutionTimeoutMinutes().equals(this.getExecutionTimeoutMinutes()) == false)
             return false;
+        if (other.getBilledResourceUtilization() == null ^ this.getBilledResourceUtilization() == null)
+            return false;
+        if (other.getBilledResourceUtilization() != null && other.getBilledResourceUtilization().equals(this.getBilledResourceUtilization()) == false)
+            return false;
         return true;
     }
 
@@ -1069,6 +1135,7 @@ public class JobRun implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getNetworkConfiguration() == null) ? 0 : getNetworkConfiguration().hashCode());
         hashCode = prime * hashCode + ((getTotalExecutionDurationSeconds() == null) ? 0 : getTotalExecutionDurationSeconds().hashCode());
         hashCode = prime * hashCode + ((getExecutionTimeoutMinutes() == null) ? 0 : getExecutionTimeoutMinutes().hashCode());
+        hashCode = prime * hashCode + ((getBilledResourceUtilization() == null) ? 0 : getBilledResourceUtilization().hashCode());
         return hashCode;
     }
 

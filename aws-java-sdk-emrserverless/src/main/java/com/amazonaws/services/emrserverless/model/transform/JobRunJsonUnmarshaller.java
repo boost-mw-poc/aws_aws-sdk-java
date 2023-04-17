@@ -121,6 +121,10 @@ public class JobRunJsonUnmarshaller implements Unmarshaller<JobRun, JsonUnmarsha
                     context.nextToken();
                     jobRun.setExecutionTimeoutMinutes(context.getUnmarshaller(Long.class).unmarshall(context));
                 }
+                if (context.testExpression("billedResourceUtilization", targetDepth)) {
+                    context.nextToken();
+                    jobRun.setBilledResourceUtilization(ResourceUtilizationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

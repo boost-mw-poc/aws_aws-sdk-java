@@ -150,7 +150,8 @@ public interface AWSEMRServerless {
 
     /**
      * <p>
-     * Returns a URL to access the job run dashboard.
+     * Returns a URL to access the job run dashboard. The generated URL is valid for one hour, after which you must
+     * invoke the API again to generate a new URL.
      * </p>
      * 
      * @param getDashboardForJobRunRequest

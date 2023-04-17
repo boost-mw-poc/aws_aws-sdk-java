@@ -67,6 +67,41 @@ public interface AWSdrsAsync extends AWSdrs {
 
     /**
      * <p>
+     * Creates a new Launch Configuration Template.
+     * </p>
+     * 
+     * @param createLaunchConfigurationTemplateRequest
+     * @return A Java Future containing the result of the CreateLaunchConfigurationTemplate operation returned by the
+     *         service.
+     * @sample AWSdrsAsync.CreateLaunchConfigurationTemplate
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/drs-2020-02-26/CreateLaunchConfigurationTemplate"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateLaunchConfigurationTemplateResult> createLaunchConfigurationTemplateAsync(
+            CreateLaunchConfigurationTemplateRequest createLaunchConfigurationTemplateRequest);
+
+    /**
+     * <p>
+     * Creates a new Launch Configuration Template.
+     * </p>
+     * 
+     * @param createLaunchConfigurationTemplateRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateLaunchConfigurationTemplate operation returned by the
+     *         service.
+     * @sample AWSdrsAsyncHandler.CreateLaunchConfigurationTemplate
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/drs-2020-02-26/CreateLaunchConfigurationTemplate"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateLaunchConfigurationTemplateResult> createLaunchConfigurationTemplateAsync(
+            CreateLaunchConfigurationTemplateRequest createLaunchConfigurationTemplateRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateLaunchConfigurationTemplateRequest, CreateLaunchConfigurationTemplateResult> asyncHandler);
+
+    /**
+     * <p>
      * Creates a new ReplicationConfigurationTemplate.
      * </p>
      * 
@@ -130,6 +165,41 @@ public interface AWSdrsAsync extends AWSdrs {
      */
     java.util.concurrent.Future<DeleteJobResult> deleteJobAsync(DeleteJobRequest deleteJobRequest,
             com.amazonaws.handlers.AsyncHandler<DeleteJobRequest, DeleteJobResult> asyncHandler);
+
+    /**
+     * <p>
+     * Deletes a single Launch Configuration Template by ID.
+     * </p>
+     * 
+     * @param deleteLaunchConfigurationTemplateRequest
+     * @return A Java Future containing the result of the DeleteLaunchConfigurationTemplate operation returned by the
+     *         service.
+     * @sample AWSdrsAsync.DeleteLaunchConfigurationTemplate
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/drs-2020-02-26/DeleteLaunchConfigurationTemplate"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteLaunchConfigurationTemplateResult> deleteLaunchConfigurationTemplateAsync(
+            DeleteLaunchConfigurationTemplateRequest deleteLaunchConfigurationTemplateRequest);
+
+    /**
+     * <p>
+     * Deletes a single Launch Configuration Template by ID.
+     * </p>
+     * 
+     * @param deleteLaunchConfigurationTemplateRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteLaunchConfigurationTemplate operation returned by the
+     *         service.
+     * @sample AWSdrsAsyncHandler.DeleteLaunchConfigurationTemplate
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/drs-2020-02-26/DeleteLaunchConfigurationTemplate"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteLaunchConfigurationTemplateResult> deleteLaunchConfigurationTemplateAsync(
+            DeleteLaunchConfigurationTemplateRequest deleteLaunchConfigurationTemplateRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteLaunchConfigurationTemplateRequest, DeleteLaunchConfigurationTemplateResult> asyncHandler);
 
     /**
      * <p>
@@ -299,6 +369,41 @@ public interface AWSdrsAsync extends AWSdrs {
      */
     java.util.concurrent.Future<DescribeJobsResult> describeJobsAsync(DescribeJobsRequest describeJobsRequest,
             com.amazonaws.handlers.AsyncHandler<DescribeJobsRequest, DescribeJobsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Lists all Launch Configuration Templates, filtered by Launch Configuration Template IDs
+     * </p>
+     * 
+     * @param describeLaunchConfigurationTemplatesRequest
+     * @return A Java Future containing the result of the DescribeLaunchConfigurationTemplates operation returned by the
+     *         service.
+     * @sample AWSdrsAsync.DescribeLaunchConfigurationTemplates
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/drs-2020-02-26/DescribeLaunchConfigurationTemplates"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeLaunchConfigurationTemplatesResult> describeLaunchConfigurationTemplatesAsync(
+            DescribeLaunchConfigurationTemplatesRequest describeLaunchConfigurationTemplatesRequest);
+
+    /**
+     * <p>
+     * Lists all Launch Configuration Templates, filtered by Launch Configuration Template IDs
+     * </p>
+     * 
+     * @param describeLaunchConfigurationTemplatesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeLaunchConfigurationTemplates operation returned by the
+     *         service.
+     * @sample AWSdrsAsyncHandler.DescribeLaunchConfigurationTemplates
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/drs-2020-02-26/DescribeLaunchConfigurationTemplates"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeLaunchConfigurationTemplatesResult> describeLaunchConfigurationTemplatesAsync(
+            DescribeLaunchConfigurationTemplatesRequest describeLaunchConfigurationTemplatesRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeLaunchConfigurationTemplatesRequest, DescribeLaunchConfigurationTemplatesResult> asyncHandler);
 
     /**
      * <p>
@@ -1158,6 +1263,41 @@ public interface AWSdrsAsync extends AWSdrs {
     java.util.concurrent.Future<UpdateLaunchConfigurationResult> updateLaunchConfigurationAsync(
             UpdateLaunchConfigurationRequest updateLaunchConfigurationRequest,
             com.amazonaws.handlers.AsyncHandler<UpdateLaunchConfigurationRequest, UpdateLaunchConfigurationResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates an existing Launch Configuration Template by ID.
+     * </p>
+     * 
+     * @param updateLaunchConfigurationTemplateRequest
+     * @return A Java Future containing the result of the UpdateLaunchConfigurationTemplate operation returned by the
+     *         service.
+     * @sample AWSdrsAsync.UpdateLaunchConfigurationTemplate
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/drs-2020-02-26/UpdateLaunchConfigurationTemplate"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateLaunchConfigurationTemplateResult> updateLaunchConfigurationTemplateAsync(
+            UpdateLaunchConfigurationTemplateRequest updateLaunchConfigurationTemplateRequest);
+
+    /**
+     * <p>
+     * Updates an existing Launch Configuration Template by ID.
+     * </p>
+     * 
+     * @param updateLaunchConfigurationTemplateRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateLaunchConfigurationTemplate operation returned by the
+     *         service.
+     * @sample AWSdrsAsyncHandler.UpdateLaunchConfigurationTemplate
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/drs-2020-02-26/UpdateLaunchConfigurationTemplate"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateLaunchConfigurationTemplateResult> updateLaunchConfigurationTemplateAsync(
+            UpdateLaunchConfigurationTemplateRequest updateLaunchConfigurationTemplateRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateLaunchConfigurationTemplateRequest, UpdateLaunchConfigurationTemplateResult> asyncHandler);
 
     /**
      * <p>

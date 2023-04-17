@@ -44,6 +44,8 @@ public class CreateMonitorRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MaxCityNetworksToMonitor").build();
     private static final MarshallingInfo<StructuredPojo> INTERNETMEASUREMENTSLOGDELIVERY_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("InternetMeasurementsLogDelivery").build();
+    private static final MarshallingInfo<Integer> TRAFFICPERCENTAGETOMONITOR_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("TrafficPercentageToMonitor").build();
 
     private static final CreateMonitorRequestMarshaller instance = new CreateMonitorRequestMarshaller();
 
@@ -67,6 +69,7 @@ public class CreateMonitorRequestMarshaller {
             protocolMarshaller.marshall(createMonitorRequest.getTags(), TAGS_BINDING);
             protocolMarshaller.marshall(createMonitorRequest.getMaxCityNetworksToMonitor(), MAXCITYNETWORKSTOMONITOR_BINDING);
             protocolMarshaller.marshall(createMonitorRequest.getInternetMeasurementsLogDelivery(), INTERNETMEASUREMENTSLOGDELIVERY_BINDING);
+            protocolMarshaller.marshall(createMonitorRequest.getTrafficPercentageToMonitor(), TRAFFICPERCENTAGETOMONITOR_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

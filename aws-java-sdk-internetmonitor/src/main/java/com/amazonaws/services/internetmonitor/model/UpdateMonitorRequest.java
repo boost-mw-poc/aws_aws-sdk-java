@@ -83,6 +83,12 @@ public class UpdateMonitorRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      */
     private InternetMeasurementsLogDelivery internetMeasurementsLogDelivery;
+    /**
+     * <p>
+     * The percentage of the internet-facing traffic for your application that you want to monitor with this monitor.
+     * </p>
+     */
+    private Integer trafficPercentageToMonitor;
 
     /**
      * <p>
@@ -560,6 +566,49 @@ public class UpdateMonitorRequest extends com.amazonaws.AmazonWebServiceRequest 
     }
 
     /**
+     * <p>
+     * The percentage of the internet-facing traffic for your application that you want to monitor with this monitor.
+     * </p>
+     * 
+     * @param trafficPercentageToMonitor
+     *        The percentage of the internet-facing traffic for your application that you want to monitor with this
+     *        monitor.
+     */
+
+    public void setTrafficPercentageToMonitor(Integer trafficPercentageToMonitor) {
+        this.trafficPercentageToMonitor = trafficPercentageToMonitor;
+    }
+
+    /**
+     * <p>
+     * The percentage of the internet-facing traffic for your application that you want to monitor with this monitor.
+     * </p>
+     * 
+     * @return The percentage of the internet-facing traffic for your application that you want to monitor with this
+     *         monitor.
+     */
+
+    public Integer getTrafficPercentageToMonitor() {
+        return this.trafficPercentageToMonitor;
+    }
+
+    /**
+     * <p>
+     * The percentage of the internet-facing traffic for your application that you want to monitor with this monitor.
+     * </p>
+     * 
+     * @param trafficPercentageToMonitor
+     *        The percentage of the internet-facing traffic for your application that you want to monitor with this
+     *        monitor.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateMonitorRequest withTrafficPercentageToMonitor(Integer trafficPercentageToMonitor) {
+        setTrafficPercentageToMonitor(trafficPercentageToMonitor);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -584,7 +633,9 @@ public class UpdateMonitorRequest extends com.amazonaws.AmazonWebServiceRequest 
         if (getMaxCityNetworksToMonitor() != null)
             sb.append("MaxCityNetworksToMonitor: ").append(getMaxCityNetworksToMonitor()).append(",");
         if (getInternetMeasurementsLogDelivery() != null)
-            sb.append("InternetMeasurementsLogDelivery: ").append(getInternetMeasurementsLogDelivery());
+            sb.append("InternetMeasurementsLogDelivery: ").append(getInternetMeasurementsLogDelivery()).append(",");
+        if (getTrafficPercentageToMonitor() != null)
+            sb.append("TrafficPercentageToMonitor: ").append(getTrafficPercentageToMonitor());
         sb.append("}");
         return sb.toString();
     }
@@ -628,6 +679,10 @@ public class UpdateMonitorRequest extends com.amazonaws.AmazonWebServiceRequest 
         if (other.getInternetMeasurementsLogDelivery() != null
                 && other.getInternetMeasurementsLogDelivery().equals(this.getInternetMeasurementsLogDelivery()) == false)
             return false;
+        if (other.getTrafficPercentageToMonitor() == null ^ this.getTrafficPercentageToMonitor() == null)
+            return false;
+        if (other.getTrafficPercentageToMonitor() != null && other.getTrafficPercentageToMonitor().equals(this.getTrafficPercentageToMonitor()) == false)
+            return false;
         return true;
     }
 
@@ -643,6 +698,7 @@ public class UpdateMonitorRequest extends com.amazonaws.AmazonWebServiceRequest 
         hashCode = prime * hashCode + ((getClientToken() == null) ? 0 : getClientToken().hashCode());
         hashCode = prime * hashCode + ((getMaxCityNetworksToMonitor() == null) ? 0 : getMaxCityNetworksToMonitor().hashCode());
         hashCode = prime * hashCode + ((getInternetMeasurementsLogDelivery() == null) ? 0 : getInternetMeasurementsLogDelivery().hashCode());
+        hashCode = prime * hashCode + ((getTrafficPercentageToMonitor() == null) ? 0 : getTrafficPercentageToMonitor().hashCode());
         return hashCode;
     }
 

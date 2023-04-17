@@ -47,7 +47,8 @@ public enum Runtime {
     Ruby27("ruby2.7"),
     Provided("provided"),
     ProvidedAl2("provided.al2"),
-    Nodejs18X("nodejs18.x");
+    Nodejs18X("nodejs18.x"),
+    Python310("python3.10");
 
     private String value;
 

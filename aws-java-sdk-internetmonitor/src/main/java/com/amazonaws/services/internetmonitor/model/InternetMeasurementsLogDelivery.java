@@ -19,8 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Configuration information for other locations that you choose to publish Amazon CloudWatch Internet Monitor internet
- * measurements to, such as Amazon S3. The measurements are also published to Amazon CloudWatch Logs.
+ * Publish internet measurements to an Amazon S3 bucket in addition to CloudWatch Logs.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/internetmonitor-2021-06-03/InternetMeasurementsLogDelivery"

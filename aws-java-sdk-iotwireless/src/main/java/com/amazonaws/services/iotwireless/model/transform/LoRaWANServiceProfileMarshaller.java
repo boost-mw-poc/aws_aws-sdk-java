@@ -33,6 +33,10 @@ public class LoRaWANServiceProfileMarshaller {
             .marshallLocationName("DrMin").build();
     private static final MarshallingInfo<Integer> DRMAX_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("DrMax").build();
+    private static final MarshallingInfo<Boolean> PRALLOWED_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PrAllowed").build();
+    private static final MarshallingInfo<Boolean> RAALLOWED_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("RaAllowed").build();
 
     private static final LoRaWANServiceProfileMarshaller instance = new LoRaWANServiceProfileMarshaller();
 
@@ -53,6 +57,8 @@ public class LoRaWANServiceProfileMarshaller {
             protocolMarshaller.marshall(loRaWANServiceProfile.getAddGwMetadata(), ADDGWMETADATA_BINDING);
             protocolMarshaller.marshall(loRaWANServiceProfile.getDrMin(), DRMIN_BINDING);
             protocolMarshaller.marshall(loRaWANServiceProfile.getDrMax(), DRMAX_BINDING);
+            protocolMarshaller.marshall(loRaWANServiceProfile.getPrAllowed(), PRALLOWED_BINDING);
+            protocolMarshaller.marshall(loRaWANServiceProfile.getRaAllowed(), RAALLOWED_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

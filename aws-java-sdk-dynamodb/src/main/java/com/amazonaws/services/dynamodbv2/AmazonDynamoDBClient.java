@@ -528,7 +528,7 @@ public class AmazonDynamoDBClient extends AmazonWebServiceClient implements Amaz
      * all tables.
      * </p>
      * <p>
-     * In order to minimize response latency, <code>BatchGetItem</code> retrieves items in parallel.
+     * In order to minimize response latency, <code>BatchGetItem</code> may retrieve items in parallel.
      * </p>
      * <p>
      * When designing your application, keep in mind that DynamoDB does not return items in any particular order. To
@@ -4293,7 +4293,7 @@ public class AmazonDynamoDBClient extends AmazonWebServiceClient implements Amaz
 
     /**
      * <p>
-     * Creates a new table from an existing backup. Any number of users can execute up to 4 concurrent restores (any
+     * Creates a new table from an existing backup. Any number of users can execute up to 50 concurrent restores (any
      * type of restore) in a given account.
      * </p>
      * <p>

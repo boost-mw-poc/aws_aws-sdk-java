@@ -17,6 +17,8 @@ import javax.annotation.Generated;
 import com.amazonaws.SdkClientException;
 import com.amazonaws.services.appflow.model.*;
 
+import com.amazonaws.util.IdempotentUtils;
+
 import com.amazonaws.protocol.*;
 import com.amazonaws.annotation.SdkInternalApi;
 
@@ -33,6 +35,9 @@ public class UpdateConnectorProfileRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("connectionMode").build();
     private static final MarshallingInfo<StructuredPojo> CONNECTORPROFILECONFIG_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("connectorProfileConfig").build();
+    private static final MarshallingInfo<String> CLIENTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("clientToken")
+            .defaultValueSupplier(com.amazonaws.util.IdempotentUtils.getGenerator()).build();
 
     private static final UpdateConnectorProfileRequestMarshaller instance = new UpdateConnectorProfileRequestMarshaller();
 
@@ -53,6 +58,7 @@ public class UpdateConnectorProfileRequestMarshaller {
             protocolMarshaller.marshall(updateConnectorProfileRequest.getConnectorProfileName(), CONNECTORPROFILENAME_BINDING);
             protocolMarshaller.marshall(updateConnectorProfileRequest.getConnectionMode(), CONNECTIONMODE_BINDING);
             protocolMarshaller.marshall(updateConnectorProfileRequest.getConnectorProfileConfig(), CONNECTORPROFILECONFIG_BINDING);
+            protocolMarshaller.marshall(updateConnectorProfileRequest.getClientToken(), CLIENTTOKEN_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -222,6 +222,76 @@ public class AWSdrsClient extends AmazonWebServiceClient implements AWSdrs {
 
     /**
      * <p>
+     * Creates a new Launch Configuration Template.
+     * </p>
+     * 
+     * @param createLaunchConfigurationTemplateRequest
+     * @return Result of the CreateLaunchConfigurationTemplate operation returned by the service.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception or failure.
+     * @throws ServiceQuotaExceededException
+     *         The request could not be completed because its exceeded the service quota.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by the AWS service.
+     * @throws UninitializedAccountException
+     *         The account performing the request has not been initialized.
+     * @sample AWSdrs.CreateLaunchConfigurationTemplate
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/drs-2020-02-26/CreateLaunchConfigurationTemplate"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public CreateLaunchConfigurationTemplateResult createLaunchConfigurationTemplate(CreateLaunchConfigurationTemplateRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateLaunchConfigurationTemplate(request);
+    }
+
+    @SdkInternalApi
+    final CreateLaunchConfigurationTemplateResult executeCreateLaunchConfigurationTemplate(
+            CreateLaunchConfigurationTemplateRequest createLaunchConfigurationTemplateRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createLaunchConfigurationTemplateRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateLaunchConfigurationTemplateRequest> request = null;
+        Response<CreateLaunchConfigurationTemplateResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateLaunchConfigurationTemplateRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(createLaunchConfigurationTemplateRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "drs");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateLaunchConfigurationTemplate");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<CreateLaunchConfigurationTemplateResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new CreateLaunchConfigurationTemplateResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Creates a new ReplicationConfigurationTemplate.
      * </p>
      * 
@@ -345,6 +415,74 @@ public class AWSdrsClient extends AmazonWebServiceClient implements AWSdrs {
 
             HttpResponseHandler<AmazonWebServiceResponse<DeleteJobResult>> responseHandler = protocolFactory.createResponseHandler(new JsonOperationMetadata()
                     .withPayloadJson(true).withHasStreamingSuccessResponse(false), new DeleteJobResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Deletes a single Launch Configuration Template by ID.
+     * </p>
+     * 
+     * @param deleteLaunchConfigurationTemplateRequest
+     * @return Result of the DeleteLaunchConfigurationTemplate operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The resource for this operation was not found.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception or failure.
+     * @throws ConflictException
+     *         The request could not be completed due to a conflict with the current state of the target resource.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws UninitializedAccountException
+     *         The account performing the request has not been initialized.
+     * @sample AWSdrs.DeleteLaunchConfigurationTemplate
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/drs-2020-02-26/DeleteLaunchConfigurationTemplate"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DeleteLaunchConfigurationTemplateResult deleteLaunchConfigurationTemplate(DeleteLaunchConfigurationTemplateRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteLaunchConfigurationTemplate(request);
+    }
+
+    @SdkInternalApi
+    final DeleteLaunchConfigurationTemplateResult executeDeleteLaunchConfigurationTemplate(
+            DeleteLaunchConfigurationTemplateRequest deleteLaunchConfigurationTemplateRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteLaunchConfigurationTemplateRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteLaunchConfigurationTemplateRequest> request = null;
+        Response<DeleteLaunchConfigurationTemplateResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteLaunchConfigurationTemplateRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(deleteLaunchConfigurationTemplateRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "drs");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteLaunchConfigurationTemplate");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeleteLaunchConfigurationTemplateResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new DeleteLaunchConfigurationTemplateResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -675,6 +813,74 @@ public class AWSdrsClient extends AmazonWebServiceClient implements AWSdrs {
 
             HttpResponseHandler<AmazonWebServiceResponse<DescribeJobsResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DescribeJobsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Lists all Launch Configuration Templates, filtered by Launch Configuration Template IDs
+     * </p>
+     * 
+     * @param describeLaunchConfigurationTemplatesRequest
+     * @return Result of the DescribeLaunchConfigurationTemplates operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The resource for this operation was not found.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception or failure.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by the AWS service.
+     * @throws UninitializedAccountException
+     *         The account performing the request has not been initialized.
+     * @sample AWSdrs.DescribeLaunchConfigurationTemplates
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/drs-2020-02-26/DescribeLaunchConfigurationTemplates"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DescribeLaunchConfigurationTemplatesResult describeLaunchConfigurationTemplates(DescribeLaunchConfigurationTemplatesRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribeLaunchConfigurationTemplates(request);
+    }
+
+    @SdkInternalApi
+    final DescribeLaunchConfigurationTemplatesResult executeDescribeLaunchConfigurationTemplates(
+            DescribeLaunchConfigurationTemplatesRequest describeLaunchConfigurationTemplatesRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describeLaunchConfigurationTemplatesRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeLaunchConfigurationTemplatesRequest> request = null;
+        Response<DescribeLaunchConfigurationTemplatesResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeLaunchConfigurationTemplatesRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(describeLaunchConfigurationTemplatesRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "drs");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeLaunchConfigurationTemplates");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DescribeLaunchConfigurationTemplatesResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new DescribeLaunchConfigurationTemplatesResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -2353,6 +2559,76 @@ public class AWSdrsClient extends AmazonWebServiceClient implements AWSdrs {
             HttpResponseHandler<AmazonWebServiceResponse<UpdateLaunchConfigurationResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new UpdateLaunchConfigurationResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Updates an existing Launch Configuration Template by ID.
+     * </p>
+     * 
+     * @param updateLaunchConfigurationTemplateRequest
+     * @return Result of the UpdateLaunchConfigurationTemplate operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The resource for this operation was not found.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception or failure.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by the AWS service.
+     * @throws UninitializedAccountException
+     *         The account performing the request has not been initialized.
+     * @sample AWSdrs.UpdateLaunchConfigurationTemplate
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/drs-2020-02-26/UpdateLaunchConfigurationTemplate"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public UpdateLaunchConfigurationTemplateResult updateLaunchConfigurationTemplate(UpdateLaunchConfigurationTemplateRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateLaunchConfigurationTemplate(request);
+    }
+
+    @SdkInternalApi
+    final UpdateLaunchConfigurationTemplateResult executeUpdateLaunchConfigurationTemplate(
+            UpdateLaunchConfigurationTemplateRequest updateLaunchConfigurationTemplateRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateLaunchConfigurationTemplateRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateLaunchConfigurationTemplateRequest> request = null;
+        Response<UpdateLaunchConfigurationTemplateResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateLaunchConfigurationTemplateRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(updateLaunchConfigurationTemplateRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "drs");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateLaunchConfigurationTemplate");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdateLaunchConfigurationTemplateResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new UpdateLaunchConfigurationTemplateResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

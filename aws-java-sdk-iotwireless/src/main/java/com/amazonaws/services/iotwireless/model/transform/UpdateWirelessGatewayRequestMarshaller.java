@@ -38,6 +38,8 @@ public class UpdateWirelessGatewayRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("JoinEuiFilters").build();
     private static final MarshallingInfo<List> NETIDFILTERS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("NetIdFilters").build();
+    private static final MarshallingInfo<Float> MAXEIRP_BINDING = MarshallingInfo.builder(MarshallingType.FLOAT).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("MaxEirp").build();
 
     private static final UpdateWirelessGatewayRequestMarshaller instance = new UpdateWirelessGatewayRequestMarshaller();
 
@@ -60,6 +62,7 @@ public class UpdateWirelessGatewayRequestMarshaller {
             protocolMarshaller.marshall(updateWirelessGatewayRequest.getDescription(), DESCRIPTION_BINDING);
             protocolMarshaller.marshall(updateWirelessGatewayRequest.getJoinEuiFilters(), JOINEUIFILTERS_BINDING);
             protocolMarshaller.marshall(updateWirelessGatewayRequest.getNetIdFilters(), NETIDFILTERS_BINDING);
+            protocolMarshaller.marshall(updateWirelessGatewayRequest.getMaxEirp(), MAXEIRP_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

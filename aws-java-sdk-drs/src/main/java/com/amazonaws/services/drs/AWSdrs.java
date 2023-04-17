@@ -70,6 +70,31 @@ public interface AWSdrs {
 
     /**
      * <p>
+     * Creates a new Launch Configuration Template.
+     * </p>
+     * 
+     * @param createLaunchConfigurationTemplateRequest
+     * @return Result of the CreateLaunchConfigurationTemplate operation returned by the service.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception or failure.
+     * @throws ServiceQuotaExceededException
+     *         The request could not be completed because its exceeded the service quota.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by the AWS service.
+     * @throws UninitializedAccountException
+     *         The account performing the request has not been initialized.
+     * @sample AWSdrs.CreateLaunchConfigurationTemplate
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/drs-2020-02-26/CreateLaunchConfigurationTemplate"
+     *      target="_top">AWS API Documentation</a>
+     */
+    CreateLaunchConfigurationTemplateResult createLaunchConfigurationTemplate(CreateLaunchConfigurationTemplateRequest createLaunchConfigurationTemplateRequest);
+
+    /**
+     * <p>
      * Creates a new ReplicationConfigurationTemplate.
      * </p>
      * 
@@ -116,6 +141,29 @@ public interface AWSdrs {
      *      Documentation</a>
      */
     DeleteJobResult deleteJob(DeleteJobRequest deleteJobRequest);
+
+    /**
+     * <p>
+     * Deletes a single Launch Configuration Template by ID.
+     * </p>
+     * 
+     * @param deleteLaunchConfigurationTemplateRequest
+     * @return Result of the DeleteLaunchConfigurationTemplate operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The resource for this operation was not found.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception or failure.
+     * @throws ConflictException
+     *         The request could not be completed due to a conflict with the current state of the target resource.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws UninitializedAccountException
+     *         The account performing the request has not been initialized.
+     * @sample AWSdrs.DeleteLaunchConfigurationTemplate
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/drs-2020-02-26/DeleteLaunchConfigurationTemplate"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DeleteLaunchConfigurationTemplateResult deleteLaunchConfigurationTemplate(DeleteLaunchConfigurationTemplateRequest deleteLaunchConfigurationTemplateRequest);
 
     /**
      * <p>
@@ -233,6 +281,30 @@ public interface AWSdrs {
      *      Documentation</a>
      */
     DescribeJobsResult describeJobs(DescribeJobsRequest describeJobsRequest);
+
+    /**
+     * <p>
+     * Lists all Launch Configuration Templates, filtered by Launch Configuration Template IDs
+     * </p>
+     * 
+     * @param describeLaunchConfigurationTemplatesRequest
+     * @return Result of the DescribeLaunchConfigurationTemplates operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The resource for this operation was not found.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception or failure.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by the AWS service.
+     * @throws UninitializedAccountException
+     *         The account performing the request has not been initialized.
+     * @sample AWSdrs.DescribeLaunchConfigurationTemplates
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/drs-2020-02-26/DescribeLaunchConfigurationTemplates"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DescribeLaunchConfigurationTemplatesResult describeLaunchConfigurationTemplates(
+            DescribeLaunchConfigurationTemplatesRequest describeLaunchConfigurationTemplatesRequest);
 
     /**
      * <p>
@@ -838,6 +910,31 @@ public interface AWSdrs {
      *      API Documentation</a>
      */
     UpdateLaunchConfigurationResult updateLaunchConfiguration(UpdateLaunchConfigurationRequest updateLaunchConfigurationRequest);
+
+    /**
+     * <p>
+     * Updates an existing Launch Configuration Template by ID.
+     * </p>
+     * 
+     * @param updateLaunchConfigurationTemplateRequest
+     * @return Result of the UpdateLaunchConfigurationTemplate operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The resource for this operation was not found.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception or failure.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by the AWS service.
+     * @throws UninitializedAccountException
+     *         The account performing the request has not been initialized.
+     * @sample AWSdrs.UpdateLaunchConfigurationTemplate
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/drs-2020-02-26/UpdateLaunchConfigurationTemplate"
+     *      target="_top">AWS API Documentation</a>
+     */
+    UpdateLaunchConfigurationTemplateResult updateLaunchConfigurationTemplate(UpdateLaunchConfigurationTemplateRequest updateLaunchConfigurationTemplateRequest);
 
     /**
      * <p>

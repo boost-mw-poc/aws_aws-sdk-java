@@ -81,6 +81,10 @@ public class LoRaWANGatewayJsonUnmarshaller implements Unmarshaller<LoRaWANGatew
                     context.nextToken();
                     loRaWANGateway.setBeaconing(BeaconingJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("MaxEirp", targetDepth)) {
+                    context.nextToken();
+                    loRaWANGateway.setMaxEirp(context.getUnmarshaller(Float.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

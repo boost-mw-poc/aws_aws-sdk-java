@@ -64,6 +64,10 @@ public class LoRaWANMulticastSessionJsonUnmarshaller implements Unmarshaller<LoR
                     context.nextToken();
                     loRaWANMulticastSession.setSessionTimeout(context.getUnmarshaller(Integer.class).unmarshall(context));
                 }
+                if (context.testExpression("PingSlotPeriod", targetDepth)) {
+                    context.nextToken();
+                    loRaWANMulticastSession.setPingSlotPeriod(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

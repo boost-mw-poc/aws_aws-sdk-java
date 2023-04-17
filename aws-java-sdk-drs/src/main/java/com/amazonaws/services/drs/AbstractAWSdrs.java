@@ -33,12 +33,22 @@ public class AbstractAWSdrs implements AWSdrs {
     }
 
     @Override
+    public CreateLaunchConfigurationTemplateResult createLaunchConfigurationTemplate(CreateLaunchConfigurationTemplateRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateReplicationConfigurationTemplateResult createReplicationConfigurationTemplate(CreateReplicationConfigurationTemplateRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
     @Override
     public DeleteJobResult deleteJob(DeleteJobRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteLaunchConfigurationTemplateResult deleteLaunchConfigurationTemplate(DeleteLaunchConfigurationTemplateRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -64,6 +74,11 @@ public class AbstractAWSdrs implements AWSdrs {
 
     @Override
     public DescribeJobsResult describeJobs(DescribeJobsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DescribeLaunchConfigurationTemplatesResult describeLaunchConfigurationTemplates(DescribeLaunchConfigurationTemplatesRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -190,6 +205,11 @@ public class AbstractAWSdrs implements AWSdrs {
 
     @Override
     public UpdateLaunchConfigurationResult updateLaunchConfiguration(UpdateLaunchConfigurationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateLaunchConfigurationTemplateResult updateLaunchConfigurationTemplate(UpdateLaunchConfigurationTemplateRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

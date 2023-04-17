@@ -18,6 +18,8 @@ import javax.annotation.Generated;
 import com.amazonaws.SdkClientException;
 import com.amazonaws.services.appflow.model.*;
 
+import com.amazonaws.util.IdempotentUtils;
+
 import com.amazonaws.protocol.*;
 import com.amazonaws.annotation.SdkInternalApi;
 
@@ -42,6 +44,9 @@ public class UpdateFlowRequestMarshaller {
             .marshallLocationName("tasks").build();
     private static final MarshallingInfo<StructuredPojo> METADATACATALOGCONFIG_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("metadataCatalogConfig").build();
+    private static final MarshallingInfo<String> CLIENTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("clientToken")
+            .defaultValueSupplier(com.amazonaws.util.IdempotentUtils.getGenerator()).build();
 
     private static final UpdateFlowRequestMarshaller instance = new UpdateFlowRequestMarshaller();
 
@@ -66,6 +71,7 @@ public class UpdateFlowRequestMarshaller {
             protocolMarshaller.marshall(updateFlowRequest.getDestinationFlowConfigList(), DESTINATIONFLOWCONFIGLIST_BINDING);
             protocolMarshaller.marshall(updateFlowRequest.getTasks(), TASKS_BINDING);
             protocolMarshaller.marshall(updateFlowRequest.getMetadataCatalogConfig(), METADATACATALOGCONFIG_BINDING);
+            protocolMarshaller.marshall(updateFlowRequest.getClientToken(), CLIENTTOKEN_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }
