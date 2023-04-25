@@ -12,6 +12,8 @@
  */
 package com.amazonaws.services.pinpoint.model.transform;
 
+import java.util.Map;
+
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -53,6 +55,8 @@ public class ActivityResponseMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("TotalEndpointCount").build();
     private static final MarshallingInfo<String> TREATMENTID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("TreatmentId").build();
+    private static final MarshallingInfo<Map> EXECUTIONMETRICS_BINDING = MarshallingInfo.builder(MarshallingType.MAP)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ExecutionMetrics").build();
 
     private static final ActivityResponseMarshaller instance = new ActivityResponseMarshaller();
 
@@ -83,6 +87,7 @@ public class ActivityResponseMarshaller {
             protocolMarshaller.marshall(activityResponse.getTimezonesTotalCount(), TIMEZONESTOTALCOUNT_BINDING);
             protocolMarshaller.marshall(activityResponse.getTotalEndpointCount(), TOTALENDPOINTCOUNT_BINDING);
             protocolMarshaller.marshall(activityResponse.getTreatmentId(), TREATMENTID_BINDING);
+            protocolMarshaller.marshall(activityResponse.getExecutionMetrics(), EXECUTIONMETRICS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

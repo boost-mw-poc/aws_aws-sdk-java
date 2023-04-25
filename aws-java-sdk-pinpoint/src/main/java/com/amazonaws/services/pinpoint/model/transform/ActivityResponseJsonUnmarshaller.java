@@ -100,6 +100,11 @@ public class ActivityResponseJsonUnmarshaller implements Unmarshaller<ActivityRe
                     context.nextToken();
                     activityResponse.setTreatmentId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("ExecutionMetrics", targetDepth)) {
+                    context.nextToken();
+                    activityResponse.setExecutionMetrics(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context
+                            .getUnmarshaller(String.class)).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

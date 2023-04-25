@@ -37,12 +37,6 @@ public class UpdateChannelReadMarkerRequest extends com.amazonaws.AmazonWebServi
      * </p>
      */
     private String chimeBearer;
-    /**
-     * <p>
-     * The ID of the SubChannel in the request.
-     * </p>
-     */
-    private String subChannelId;
 
     /**
      * <p>
@@ -125,46 +119,6 @@ public class UpdateChannelReadMarkerRequest extends com.amazonaws.AmazonWebServi
     }
 
     /**
-     * <p>
-     * The ID of the SubChannel in the request.
-     * </p>
-     * 
-     * @param subChannelId
-     *        The ID of the SubChannel in the request.
-     */
-
-    public void setSubChannelId(String subChannelId) {
-        this.subChannelId = subChannelId;
-    }
-
-    /**
-     * <p>
-     * The ID of the SubChannel in the request.
-     * </p>
-     * 
-     * @return The ID of the SubChannel in the request.
-     */
-
-    public String getSubChannelId() {
-        return this.subChannelId;
-    }
-
-    /**
-     * <p>
-     * The ID of the SubChannel in the request.
-     * </p>
-     * 
-     * @param subChannelId
-     *        The ID of the SubChannel in the request.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public UpdateChannelReadMarkerRequest withSubChannelId(String subChannelId) {
-        setSubChannelId(subChannelId);
-        return this;
-    }
-
-    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -179,9 +133,7 @@ public class UpdateChannelReadMarkerRequest extends com.amazonaws.AmazonWebServi
         if (getChannelArn() != null)
             sb.append("ChannelArn: ").append(getChannelArn()).append(",");
         if (getChimeBearer() != null)
-            sb.append("ChimeBearer: ").append(getChimeBearer()).append(",");
-        if (getSubChannelId() != null)
-            sb.append("SubChannelId: ").append(getSubChannelId());
+            sb.append("ChimeBearer: ").append(getChimeBearer());
         sb.append("}");
         return sb.toString();
     }
@@ -204,10 +156,6 @@ public class UpdateChannelReadMarkerRequest extends com.amazonaws.AmazonWebServi
             return false;
         if (other.getChimeBearer() != null && other.getChimeBearer().equals(this.getChimeBearer()) == false)
             return false;
-        if (other.getSubChannelId() == null ^ this.getSubChannelId() == null)
-            return false;
-        if (other.getSubChannelId() != null && other.getSubChannelId().equals(this.getSubChannelId()) == false)
-            return false;
         return true;
     }
 
@@ -218,7 +166,6 @@ public class UpdateChannelReadMarkerRequest extends com.amazonaws.AmazonWebServi
 
         hashCode = prime * hashCode + ((getChannelArn() == null) ? 0 : getChannelArn().hashCode());
         hashCode = prime * hashCode + ((getChimeBearer() == null) ? 0 : getChimeBearer().hashCode());
-        hashCode = prime * hashCode + ((getSubChannelId() == null) ? 0 : getSubChannelId().hashCode());
         return hashCode;
     }
 

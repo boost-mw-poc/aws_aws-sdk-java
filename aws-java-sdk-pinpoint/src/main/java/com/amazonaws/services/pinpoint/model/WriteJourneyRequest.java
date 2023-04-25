@@ -158,7 +158,7 @@ public class WriteJourneyRequest implements Serializable, Cloneable, StructuredP
     private Boolean waitForQuietTime;
     /**
      * <p>
-     * Specifies whether a journey should be refreshed on segment update.
+     * Indicates whether the journey participants should be refreshed when a segment is updated.
      * </p>
      */
     private Boolean refreshOnSegmentUpdate;
@@ -170,8 +170,8 @@ public class WriteJourneyRequest implements Serializable, Cloneable, StructuredP
     private JourneyChannelSettings journeyChannelSettings;
     /**
      * <p>
-     * Indicates if journey have Advance Quiet Time (OpenHours and ClosedDays). This flag should be set to true in order
-     * to allow (OpenHours and ClosedDays)
+     * Indicates if journey has Advance Quiet Time enabled. This flag should be set to true in order to allow using
+     * OpenHours and ClosedDays.
      * </p>
      */
     private Boolean sendingSchedule;
@@ -1119,11 +1119,11 @@ public class WriteJourneyRequest implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * Specifies whether a journey should be refreshed on segment update.
+     * Indicates whether the journey participants should be refreshed when a segment is updated.
      * </p>
      * 
      * @param refreshOnSegmentUpdate
-     *        Specifies whether a journey should be refreshed on segment update.
+     *        Indicates whether the journey participants should be refreshed when a segment is updated.
      */
 
     public void setRefreshOnSegmentUpdate(Boolean refreshOnSegmentUpdate) {
@@ -1132,10 +1132,10 @@ public class WriteJourneyRequest implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * Specifies whether a journey should be refreshed on segment update.
+     * Indicates whether the journey participants should be refreshed when a segment is updated.
      * </p>
      * 
-     * @return Specifies whether a journey should be refreshed on segment update.
+     * @return Indicates whether the journey participants should be refreshed when a segment is updated.
      */
 
     public Boolean getRefreshOnSegmentUpdate() {
@@ -1144,11 +1144,11 @@ public class WriteJourneyRequest implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * Specifies whether a journey should be refreshed on segment update.
+     * Indicates whether the journey participants should be refreshed when a segment is updated.
      * </p>
      * 
      * @param refreshOnSegmentUpdate
-     *        Specifies whether a journey should be refreshed on segment update.
+     *        Indicates whether the journey participants should be refreshed when a segment is updated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1159,10 +1159,10 @@ public class WriteJourneyRequest implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * Specifies whether a journey should be refreshed on segment update.
+     * Indicates whether the journey participants should be refreshed when a segment is updated.
      * </p>
      * 
-     * @return Specifies whether a journey should be refreshed on segment update.
+     * @return Indicates whether the journey participants should be refreshed when a segment is updated.
      */
 
     public Boolean isRefreshOnSegmentUpdate() {
@@ -1211,13 +1211,13 @@ public class WriteJourneyRequest implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * Indicates if journey have Advance Quiet Time (OpenHours and ClosedDays). This flag should be set to true in order
-     * to allow (OpenHours and ClosedDays)
+     * Indicates if journey has Advance Quiet Time enabled. This flag should be set to true in order to allow using
+     * OpenHours and ClosedDays.
      * </p>
      * 
      * @param sendingSchedule
-     *        Indicates if journey have Advance Quiet Time (OpenHours and ClosedDays). This flag should be set to true
-     *        in order to allow (OpenHours and ClosedDays)
+     *        Indicates if journey has Advance Quiet Time enabled. This flag should be set to true in order to allow
+     *        using OpenHours and ClosedDays.
      */
 
     public void setSendingSchedule(Boolean sendingSchedule) {
@@ -1226,12 +1226,12 @@ public class WriteJourneyRequest implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * Indicates if journey have Advance Quiet Time (OpenHours and ClosedDays). This flag should be set to true in order
-     * to allow (OpenHours and ClosedDays)
+     * Indicates if journey has Advance Quiet Time enabled. This flag should be set to true in order to allow using
+     * OpenHours and ClosedDays.
      * </p>
      * 
-     * @return Indicates if journey have Advance Quiet Time (OpenHours and ClosedDays). This flag should be set to true
-     *         in order to allow (OpenHours and ClosedDays)
+     * @return Indicates if journey has Advance Quiet Time enabled. This flag should be set to true in order to allow
+     *         using OpenHours and ClosedDays.
      */
 
     public Boolean getSendingSchedule() {
@@ -1240,13 +1240,13 @@ public class WriteJourneyRequest implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * Indicates if journey have Advance Quiet Time (OpenHours and ClosedDays). This flag should be set to true in order
-     * to allow (OpenHours and ClosedDays)
+     * Indicates if journey has Advance Quiet Time enabled. This flag should be set to true in order to allow using
+     * OpenHours and ClosedDays.
      * </p>
      * 
      * @param sendingSchedule
-     *        Indicates if journey have Advance Quiet Time (OpenHours and ClosedDays). This flag should be set to true
-     *        in order to allow (OpenHours and ClosedDays)
+     *        Indicates if journey has Advance Quiet Time enabled. This flag should be set to true in order to allow
+     *        using OpenHours and ClosedDays.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1257,12 +1257,12 @@ public class WriteJourneyRequest implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * Indicates if journey have Advance Quiet Time (OpenHours and ClosedDays). This flag should be set to true in order
-     * to allow (OpenHours and ClosedDays)
+     * Indicates if journey has Advance Quiet Time enabled. This flag should be set to true in order to allow using
+     * OpenHours and ClosedDays.
      * </p>
      * 
-     * @return Indicates if journey have Advance Quiet Time (OpenHours and ClosedDays). This flag should be set to true
-     *         in order to allow (OpenHours and ClosedDays)
+     * @return Indicates if journey has Advance Quiet Time enabled. This flag should be set to true in order to allow
+     *         using OpenHours and ClosedDays.
      */
 
     public Boolean isSendingSchedule() {

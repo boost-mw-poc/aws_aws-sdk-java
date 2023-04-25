@@ -458,6 +458,8 @@ public interface AmazonChimeSDKMessaging {
      *         The input parameters don't match the service's restrictions.
      * @throws ForbiddenException
      *         The client is permanently forbidden from making the request.
+     * @throws ConflictException
+     *         The request could not be processed because of conflict in the current state of the resource.
      * @throws UnauthorizedClientException
      *         The client is not currently authorized to make the request.
      * @throws ThrottledClientException
@@ -642,6 +644,8 @@ public interface AmazonChimeSDKMessaging {
      * 
      * @param deleteMessagingStreamingConfigurationsRequest
      * @return Result of the DeleteMessagingStreamingConfigurations operation returned by the service.
+     * @throws BadRequestException
+     *         The input parameters don't match the service's restrictions.
      * @throws ForbiddenException
      *         The client is permanently forbidden from making the request.
      * @throws UnauthorizedClientException

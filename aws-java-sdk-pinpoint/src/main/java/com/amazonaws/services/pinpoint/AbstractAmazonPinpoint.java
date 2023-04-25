@@ -373,6 +373,21 @@ public class AbstractAmazonPinpoint implements AmazonPinpoint {
     }
 
     @Override
+    public GetJourneyRunExecutionActivityMetricsResult getJourneyRunExecutionActivityMetrics(GetJourneyRunExecutionActivityMetricsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetJourneyRunExecutionMetricsResult getJourneyRunExecutionMetrics(GetJourneyRunExecutionMetricsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetJourneyRunsResult getJourneyRuns(GetJourneyRunsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetPushTemplateResult getPushTemplate(GetPushTemplateRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

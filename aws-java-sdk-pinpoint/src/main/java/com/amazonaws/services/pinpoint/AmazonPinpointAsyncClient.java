@@ -2471,6 +2471,108 @@ public class AmazonPinpointAsyncClient extends AmazonPinpointClient implements A
     }
 
     @Override
+    public java.util.concurrent.Future<GetJourneyRunExecutionActivityMetricsResult> getJourneyRunExecutionActivityMetricsAsync(
+            GetJourneyRunExecutionActivityMetricsRequest request) {
+
+        return getJourneyRunExecutionActivityMetricsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetJourneyRunExecutionActivityMetricsResult> getJourneyRunExecutionActivityMetricsAsync(
+            final GetJourneyRunExecutionActivityMetricsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetJourneyRunExecutionActivityMetricsRequest, GetJourneyRunExecutionActivityMetricsResult> asyncHandler) {
+        final GetJourneyRunExecutionActivityMetricsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetJourneyRunExecutionActivityMetricsResult>() {
+            @Override
+            public GetJourneyRunExecutionActivityMetricsResult call() throws Exception {
+                GetJourneyRunExecutionActivityMetricsResult result = null;
+
+                try {
+                    result = executeGetJourneyRunExecutionActivityMetrics(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetJourneyRunExecutionMetricsResult> getJourneyRunExecutionMetricsAsync(GetJourneyRunExecutionMetricsRequest request) {
+
+        return getJourneyRunExecutionMetricsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetJourneyRunExecutionMetricsResult> getJourneyRunExecutionMetricsAsync(
+            final GetJourneyRunExecutionMetricsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetJourneyRunExecutionMetricsRequest, GetJourneyRunExecutionMetricsResult> asyncHandler) {
+        final GetJourneyRunExecutionMetricsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetJourneyRunExecutionMetricsResult>() {
+            @Override
+            public GetJourneyRunExecutionMetricsResult call() throws Exception {
+                GetJourneyRunExecutionMetricsResult result = null;
+
+                try {
+                    result = executeGetJourneyRunExecutionMetrics(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetJourneyRunsResult> getJourneyRunsAsync(GetJourneyRunsRequest request) {
+
+        return getJourneyRunsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetJourneyRunsResult> getJourneyRunsAsync(final GetJourneyRunsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetJourneyRunsRequest, GetJourneyRunsResult> asyncHandler) {
+        final GetJourneyRunsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetJourneyRunsResult>() {
+            @Override
+            public GetJourneyRunsResult call() throws Exception {
+                GetJourneyRunsResult result = null;
+
+                try {
+                    result = executeGetJourneyRuns(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetPushTemplateResult> getPushTemplateAsync(GetPushTemplateRequest request) {
 
         return getPushTemplateAsync(request, null);

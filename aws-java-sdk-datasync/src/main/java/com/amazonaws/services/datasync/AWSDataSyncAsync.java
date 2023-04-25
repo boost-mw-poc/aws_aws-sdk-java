@@ -42,6 +42,39 @@ public interface AWSDataSyncAsync extends AWSDataSync {
 
     /**
      * <p>
+     * Creates an Amazon Web Services resource for an on-premises storage system that you want DataSync Discovery to
+     * collect information about.
+     * </p>
+     * 
+     * @param addStorageSystemRequest
+     * @return A Java Future containing the result of the AddStorageSystem operation returned by the service.
+     * @sample AWSDataSyncAsync.AddStorageSystem
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/AddStorageSystem" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<AddStorageSystemResult> addStorageSystemAsync(AddStorageSystemRequest addStorageSystemRequest);
+
+    /**
+     * <p>
+     * Creates an Amazon Web Services resource for an on-premises storage system that you want DataSync Discovery to
+     * collect information about.
+     * </p>
+     * 
+     * @param addStorageSystemRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the AddStorageSystem operation returned by the service.
+     * @sample AWSDataSyncAsyncHandler.AddStorageSystem
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/AddStorageSystem" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<AddStorageSystemResult> addStorageSystemAsync(AddStorageSystemRequest addStorageSystemRequest,
+            com.amazonaws.handlers.AsyncHandler<AddStorageSystemRequest, AddStorageSystemResult> asyncHandler);
+
+    /**
+     * <p>
      * Stops an DataSync task execution that's in progress. The transfer of some files are abruptly interrupted. File
      * contents that're transferred to the destination might be incomplete or inconsistent with the source files.
      * </p>
@@ -444,10 +477,33 @@ public interface AWSDataSyncAsync extends AWSDataSync {
 
     /**
      * <p>
-     * Creates an endpoint for an Amazon S3 bucket that DataSync can access for a transfer. For more information, see <a
-     * href
-     * ="https://docs.aws.amazon.com/datasync/latest/userguide/create-locations-cli.html#create-location-s3-cli">Create
-     * an Amazon S3 location</a>.
+     * A <i>location</i> is an endpoint for an Amazon S3 bucket. DataSync can use the location as a source or
+     * destination for copying data.
+     * </p>
+     * <important>
+     * <p>
+     * Before you create your location, make sure that you read the following sections:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <a href="https://docs.aws.amazon.com/datasync/latest/userguide/create-s3-location.html#using-storage-classes">
+     * Storage class considerations with Amazon S3 locations</a>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <a href=
+     * "https://docs.aws.amazon.com/datasync/latest/userguide/create-s3-location.html#create-s3-location-s3-requests"
+     * >Evaluating S3 request costs when using DataSync</a>
+     * </p>
+     * </li>
+     * </ul>
+     * </important>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/datasync/latest/userguide/create-locations-cli.html#create-location-s3-cli"
+     * >Creating an Amazon S3 location</a>.
      * </p>
      * 
      * @param createLocationS3Request
@@ -461,10 +517,33 @@ public interface AWSDataSyncAsync extends AWSDataSync {
 
     /**
      * <p>
-     * Creates an endpoint for an Amazon S3 bucket that DataSync can access for a transfer. For more information, see <a
-     * href
-     * ="https://docs.aws.amazon.com/datasync/latest/userguide/create-locations-cli.html#create-location-s3-cli">Create
-     * an Amazon S3 location</a>.
+     * A <i>location</i> is an endpoint for an Amazon S3 bucket. DataSync can use the location as a source or
+     * destination for copying data.
+     * </p>
+     * <important>
+     * <p>
+     * Before you create your location, make sure that you read the following sections:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <a href="https://docs.aws.amazon.com/datasync/latest/userguide/create-s3-location.html#using-storage-classes">
+     * Storage class considerations with Amazon S3 locations</a>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <a href=
+     * "https://docs.aws.amazon.com/datasync/latest/userguide/create-s3-location.html#create-s3-location-s3-requests"
+     * >Evaluating S3 request costs when using DataSync</a>
+     * </p>
+     * </li>
+     * </ul>
+     * </important>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/datasync/latest/userguide/create-locations-cli.html#create-location-s3-cli"
+     * >Creating an Amazon S3 location</a>.
      * </p>
      * 
      * @param createLocationS3Request
@@ -528,6 +607,14 @@ public interface AWSDataSyncAsync extends AWSDataSync {
      * A task includes a source location, a destination location, and the preferences for how and when you want to
      * transfer your data (such as bandwidth limits, scheduling, among other options).
      * </p>
+     * <important>
+     * <p>
+     * If you're planning to transfer data to or from an Amazon S3 location, review <a href=
+     * "https://docs.aws.amazon.com/datasync/latest/userguide/create-s3-location.html#create-s3-location-s3-requests"
+     * >how DataSync can affect your S3 request charges</a> and the <a
+     * href="http://aws.amazon.com/datasync/pricing/">DataSync pricing page</a> before you begin.
+     * </p>
+     * </important>
      * 
      * @param createTaskRequest
      *        CreateTaskRequest
@@ -546,6 +633,14 @@ public interface AWSDataSyncAsync extends AWSDataSync {
      * A task includes a source location, a destination location, and the preferences for how and when you want to
      * transfer your data (such as bandwidth limits, scheduling, among other options).
      * </p>
+     * <important>
+     * <p>
+     * If you're planning to transfer data to or from an Amazon S3 location, review <a href=
+     * "https://docs.aws.amazon.com/datasync/latest/userguide/create-s3-location.html#create-s3-location-s3-requests"
+     * >how DataSync can affect your S3 request charges</a> and the <a
+     * href="http://aws.amazon.com/datasync/pricing/">DataSync pricing page</a> before you begin.
+     * </p>
+     * </important>
      * 
      * @param createTaskRequest
      *        CreateTaskRequest
@@ -696,6 +791,37 @@ public interface AWSDataSyncAsync extends AWSDataSync {
      */
     java.util.concurrent.Future<DescribeAgentResult> describeAgentAsync(DescribeAgentRequest describeAgentRequest,
             com.amazonaws.handlers.AsyncHandler<DescribeAgentRequest, DescribeAgentResult> asyncHandler);
+
+    /**
+     * <p>
+     * Returns information about a DataSync discovery job.
+     * </p>
+     * 
+     * @param describeDiscoveryJobRequest
+     * @return A Java Future containing the result of the DescribeDiscoveryJob operation returned by the service.
+     * @sample AWSDataSyncAsync.DescribeDiscoveryJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/DescribeDiscoveryJob" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeDiscoveryJobResult> describeDiscoveryJobAsync(DescribeDiscoveryJobRequest describeDiscoveryJobRequest);
+
+    /**
+     * <p>
+     * Returns information about a DataSync discovery job.
+     * </p>
+     * 
+     * @param describeDiscoveryJobRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeDiscoveryJob operation returned by the service.
+     * @sample AWSDataSyncAsyncHandler.DescribeDiscoveryJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/DescribeDiscoveryJob" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeDiscoveryJobResult> describeDiscoveryJobAsync(DescribeDiscoveryJobRequest describeDiscoveryJobRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeDiscoveryJobRequest, DescribeDiscoveryJobResult> asyncHandler);
 
     /**
      * <p>
@@ -1055,6 +1181,109 @@ public interface AWSDataSyncAsync extends AWSDataSync {
 
     /**
      * <p>
+     * Returns information about an on-premises storage system that you're using with DataSync Discovery.
+     * </p>
+     * 
+     * @param describeStorageSystemRequest
+     * @return A Java Future containing the result of the DescribeStorageSystem operation returned by the service.
+     * @sample AWSDataSyncAsync.DescribeStorageSystem
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/DescribeStorageSystem" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeStorageSystemResult> describeStorageSystemAsync(DescribeStorageSystemRequest describeStorageSystemRequest);
+
+    /**
+     * <p>
+     * Returns information about an on-premises storage system that you're using with DataSync Discovery.
+     * </p>
+     * 
+     * @param describeStorageSystemRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeStorageSystem operation returned by the service.
+     * @sample AWSDataSyncAsyncHandler.DescribeStorageSystem
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/DescribeStorageSystem" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeStorageSystemResult> describeStorageSystemAsync(DescribeStorageSystemRequest describeStorageSystemRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeStorageSystemRequest, DescribeStorageSystemResult> asyncHandler);
+
+    /**
+     * <p>
+     * Returns information, including performance data and capacity usage, which DataSync Discovery collects about a
+     * specific resource in your-premises storage system.
+     * </p>
+     * 
+     * @param describeStorageSystemResourceMetricsRequest
+     * @return A Java Future containing the result of the DescribeStorageSystemResourceMetrics operation returned by the
+     *         service.
+     * @sample AWSDataSyncAsync.DescribeStorageSystemResourceMetrics
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/DescribeStorageSystemResourceMetrics"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeStorageSystemResourceMetricsResult> describeStorageSystemResourceMetricsAsync(
+            DescribeStorageSystemResourceMetricsRequest describeStorageSystemResourceMetricsRequest);
+
+    /**
+     * <p>
+     * Returns information, including performance data and capacity usage, which DataSync Discovery collects about a
+     * specific resource in your-premises storage system.
+     * </p>
+     * 
+     * @param describeStorageSystemResourceMetricsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeStorageSystemResourceMetrics operation returned by the
+     *         service.
+     * @sample AWSDataSyncAsyncHandler.DescribeStorageSystemResourceMetrics
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/DescribeStorageSystemResourceMetrics"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeStorageSystemResourceMetricsResult> describeStorageSystemResourceMetricsAsync(
+            DescribeStorageSystemResourceMetricsRequest describeStorageSystemResourceMetricsRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeStorageSystemResourceMetricsRequest, DescribeStorageSystemResourceMetricsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Returns information that DataSync Discovery collects about resources in your on-premises storage system.
+     * </p>
+     * 
+     * @param describeStorageSystemResourcesRequest
+     * @return A Java Future containing the result of the DescribeStorageSystemResources operation returned by the
+     *         service.
+     * @sample AWSDataSyncAsync.DescribeStorageSystemResources
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/DescribeStorageSystemResources"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeStorageSystemResourcesResult> describeStorageSystemResourcesAsync(
+            DescribeStorageSystemResourcesRequest describeStorageSystemResourcesRequest);
+
+    /**
+     * <p>
+     * Returns information that DataSync Discovery collects about resources in your on-premises storage system.
+     * </p>
+     * 
+     * @param describeStorageSystemResourcesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeStorageSystemResources operation returned by the
+     *         service.
+     * @sample AWSDataSyncAsyncHandler.DescribeStorageSystemResources
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/DescribeStorageSystemResources"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeStorageSystemResourcesResult> describeStorageSystemResourcesAsync(
+            DescribeStorageSystemResourcesRequest describeStorageSystemResourcesRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeStorageSystemResourcesRequest, DescribeStorageSystemResourcesResult> asyncHandler);
+
+    /**
+     * <p>
      * Returns metadata about a task.
      * </p>
      * 
@@ -1121,6 +1350,71 @@ public interface AWSDataSyncAsync extends AWSDataSync {
 
     /**
      * <p>
+     * Creates recommendations about where to migrate your data to in Amazon Web Services. Recommendations are generated
+     * based on information that DataSync Discovery collects about your on-premises storage system's resources. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/datasync/latest/userguide/discovery-understand-recommendations.html"
+     * >Recommendations provided by DataSync Discovery</a>.
+     * </p>
+     * <p>
+     * Once generated, you can view your recommendations by using the <a
+     * href="https://docs.aws.amazon.com/datasync/latest/userguide/API_DescribeStorageSystemResources.html"
+     * >DescribeStorageSystemResources</a> operation.
+     * </p>
+     * <note>
+     * <p>
+     * If your <a href=
+     * "https://docs.aws.amazon.com/datasync/latest/userguide/discovery-job-statuses.html#discovery-job-statuses-table"
+     * >discovery job completes successfully</a>, you don't need to use this operation. DataSync Discovery generates the
+     * recommendations for you automatically.
+     * </p>
+     * </note>
+     * 
+     * @param generateRecommendationsRequest
+     * @return A Java Future containing the result of the GenerateRecommendations operation returned by the service.
+     * @sample AWSDataSyncAsync.GenerateRecommendations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/GenerateRecommendations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GenerateRecommendationsResult> generateRecommendationsAsync(GenerateRecommendationsRequest generateRecommendationsRequest);
+
+    /**
+     * <p>
+     * Creates recommendations about where to migrate your data to in Amazon Web Services. Recommendations are generated
+     * based on information that DataSync Discovery collects about your on-premises storage system's resources. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/datasync/latest/userguide/discovery-understand-recommendations.html"
+     * >Recommendations provided by DataSync Discovery</a>.
+     * </p>
+     * <p>
+     * Once generated, you can view your recommendations by using the <a
+     * href="https://docs.aws.amazon.com/datasync/latest/userguide/API_DescribeStorageSystemResources.html"
+     * >DescribeStorageSystemResources</a> operation.
+     * </p>
+     * <note>
+     * <p>
+     * If your <a href=
+     * "https://docs.aws.amazon.com/datasync/latest/userguide/discovery-job-statuses.html#discovery-job-statuses-table"
+     * >discovery job completes successfully</a>, you don't need to use this operation. DataSync Discovery generates the
+     * recommendations for you automatically.
+     * </p>
+     * </note>
+     * 
+     * @param generateRecommendationsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GenerateRecommendations operation returned by the service.
+     * @sample AWSDataSyncAsyncHandler.GenerateRecommendations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/GenerateRecommendations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GenerateRecommendationsResult> generateRecommendationsAsync(GenerateRecommendationsRequest generateRecommendationsRequest,
+            com.amazonaws.handlers.AsyncHandler<GenerateRecommendationsRequest, GenerateRecommendationsResult> asyncHandler);
+
+    /**
+     * <p>
      * Returns a list of DataSync agents that belong to an Amazon Web Services account in the Amazon Web Services Region
      * specified in the request.
      * </p>
@@ -1182,6 +1476,39 @@ public interface AWSDataSyncAsync extends AWSDataSync {
 
     /**
      * <p>
+     * Provides a list of the existing discovery jobs in the Amazon Web Services Region and Amazon Web Services account
+     * where you're using DataSync Discovery.
+     * </p>
+     * 
+     * @param listDiscoveryJobsRequest
+     * @return A Java Future containing the result of the ListDiscoveryJobs operation returned by the service.
+     * @sample AWSDataSyncAsync.ListDiscoveryJobs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/ListDiscoveryJobs" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListDiscoveryJobsResult> listDiscoveryJobsAsync(ListDiscoveryJobsRequest listDiscoveryJobsRequest);
+
+    /**
+     * <p>
+     * Provides a list of the existing discovery jobs in the Amazon Web Services Region and Amazon Web Services account
+     * where you're using DataSync Discovery.
+     * </p>
+     * 
+     * @param listDiscoveryJobsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListDiscoveryJobs operation returned by the service.
+     * @sample AWSDataSyncAsyncHandler.ListDiscoveryJobs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/ListDiscoveryJobs" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListDiscoveryJobsResult> listDiscoveryJobsAsync(ListDiscoveryJobsRequest listDiscoveryJobsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListDiscoveryJobsRequest, ListDiscoveryJobsResult> asyncHandler);
+
+    /**
+     * <p>
      * Returns a list of source and destination locations.
      * </p>
      * <p>
@@ -1222,6 +1549,37 @@ public interface AWSDataSyncAsync extends AWSDataSync {
      */
     java.util.concurrent.Future<ListLocationsResult> listLocationsAsync(ListLocationsRequest listLocationsRequest,
             com.amazonaws.handlers.AsyncHandler<ListLocationsRequest, ListLocationsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Lists the on-premises storage systems that you're using with DataSync Discovery.
+     * </p>
+     * 
+     * @param listStorageSystemsRequest
+     * @return A Java Future containing the result of the ListStorageSystems operation returned by the service.
+     * @sample AWSDataSyncAsync.ListStorageSystems
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/ListStorageSystems" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ListStorageSystemsResult> listStorageSystemsAsync(ListStorageSystemsRequest listStorageSystemsRequest);
+
+    /**
+     * <p>
+     * Lists the on-premises storage systems that you're using with DataSync Discovery.
+     * </p>
+     * 
+     * @param listStorageSystemsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListStorageSystems operation returned by the service.
+     * @sample AWSDataSyncAsyncHandler.ListStorageSystems
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/ListStorageSystems" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ListStorageSystemsResult> listStorageSystemsAsync(ListStorageSystemsRequest listStorageSystemsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListStorageSystemsRequest, ListStorageSystemsResult> asyncHandler);
 
     /**
      * <p>
@@ -1324,6 +1682,76 @@ public interface AWSDataSyncAsync extends AWSDataSync {
 
     /**
      * <p>
+     * Permanently removes a storage system resource from DataSync Discovery, including the associated discovery jobs,
+     * collected data, and recommendations.
+     * </p>
+     * 
+     * @param removeStorageSystemRequest
+     * @return A Java Future containing the result of the RemoveStorageSystem operation returned by the service.
+     * @sample AWSDataSyncAsync.RemoveStorageSystem
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/RemoveStorageSystem" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<RemoveStorageSystemResult> removeStorageSystemAsync(RemoveStorageSystemRequest removeStorageSystemRequest);
+
+    /**
+     * <p>
+     * Permanently removes a storage system resource from DataSync Discovery, including the associated discovery jobs,
+     * collected data, and recommendations.
+     * </p>
+     * 
+     * @param removeStorageSystemRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the RemoveStorageSystem operation returned by the service.
+     * @sample AWSDataSyncAsyncHandler.RemoveStorageSystem
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/RemoveStorageSystem" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<RemoveStorageSystemResult> removeStorageSystemAsync(RemoveStorageSystemRequest removeStorageSystemRequest,
+            com.amazonaws.handlers.AsyncHandler<RemoveStorageSystemRequest, RemoveStorageSystemResult> asyncHandler);
+
+    /**
+     * <p>
+     * Runs a DataSync discovery job on your on-premises storage system. If you haven't added the storage system to
+     * DataSync Discovery yet, do this first by using the <a
+     * href="https://docs.aws.amazon.com/datasync/latest/userguide/API_AddStorageSystem.html">AddStorageSystem</a>
+     * operation.
+     * </p>
+     * 
+     * @param startDiscoveryJobRequest
+     * @return A Java Future containing the result of the StartDiscoveryJob operation returned by the service.
+     * @sample AWSDataSyncAsync.StartDiscoveryJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/StartDiscoveryJob" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<StartDiscoveryJobResult> startDiscoveryJobAsync(StartDiscoveryJobRequest startDiscoveryJobRequest);
+
+    /**
+     * <p>
+     * Runs a DataSync discovery job on your on-premises storage system. If you haven't added the storage system to
+     * DataSync Discovery yet, do this first by using the <a
+     * href="https://docs.aws.amazon.com/datasync/latest/userguide/API_AddStorageSystem.html">AddStorageSystem</a>
+     * operation.
+     * </p>
+     * 
+     * @param startDiscoveryJobRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the StartDiscoveryJob operation returned by the service.
+     * @sample AWSDataSyncAsyncHandler.StartDiscoveryJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/StartDiscoveryJob" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<StartDiscoveryJobResult> startDiscoveryJobAsync(StartDiscoveryJobRequest startDiscoveryJobRequest,
+            com.amazonaws.handlers.AsyncHandler<StartDiscoveryJobRequest, StartDiscoveryJobResult> asyncHandler);
+
+    /**
+     * <p>
      * Starts an DataSync task. For each task, you can only run one task execution at a time.
      * </p>
      * <p>
@@ -1331,6 +1759,14 @@ public interface AWSDataSyncAsync extends AWSDataSync {
      * "https://docs.aws.amazon.com/datasync/latest/userguide/working-with-task-executions.html#understand-task-execution-statuses"
      * >Task execution statuses</a>.
      * </p>
+     * <important>
+     * <p>
+     * If you're planning to transfer data to or from an Amazon S3 location, review <a href=
+     * "https://docs.aws.amazon.com/datasync/latest/userguide/create-s3-location.html#create-s3-location-s3-requests"
+     * >how DataSync can affect your S3 request charges</a> and the <a
+     * href="http://aws.amazon.com/datasync/pricing/">DataSync pricing page</a> before you begin.
+     * </p>
+     * </important>
      * 
      * @param startTaskExecutionRequest
      *        StartTaskExecutionRequest
@@ -1350,6 +1786,14 @@ public interface AWSDataSyncAsync extends AWSDataSync {
      * "https://docs.aws.amazon.com/datasync/latest/userguide/working-with-task-executions.html#understand-task-execution-statuses"
      * >Task execution statuses</a>.
      * </p>
+     * <important>
+     * <p>
+     * If you're planning to transfer data to or from an Amazon S3 location, review <a href=
+     * "https://docs.aws.amazon.com/datasync/latest/userguide/create-s3-location.html#create-s3-location-s3-requests"
+     * >how DataSync can affect your S3 request charges</a> and the <a
+     * href="http://aws.amazon.com/datasync/pricing/">DataSync pricing page</a> before you begin.
+     * </p>
+     * </important>
      * 
      * @param startTaskExecutionRequest
      *        StartTaskExecutionRequest
@@ -1364,6 +1808,49 @@ public interface AWSDataSyncAsync extends AWSDataSync {
      */
     java.util.concurrent.Future<StartTaskExecutionResult> startTaskExecutionAsync(StartTaskExecutionRequest startTaskExecutionRequest,
             com.amazonaws.handlers.AsyncHandler<StartTaskExecutionRequest, StartTaskExecutionResult> asyncHandler);
+
+    /**
+     * <p>
+     * Stops a running DataSync discovery job.
+     * </p>
+     * <p>
+     * You can stop a discovery job anytime. A job that's stopped before it's scheduled to end likely will provide you
+     * some information about your on-premises storage system resources. To get recommendations for a stopped job, you
+     * must use the <a href="https://docs.aws.amazon.com/datasync/latest/userguide/API_GenerateRecommendations.html">
+     * GenerateRecommendations</a> operation.
+     * </p>
+     * 
+     * @param stopDiscoveryJobRequest
+     * @return A Java Future containing the result of the StopDiscoveryJob operation returned by the service.
+     * @sample AWSDataSyncAsync.StopDiscoveryJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/StopDiscoveryJob" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<StopDiscoveryJobResult> stopDiscoveryJobAsync(StopDiscoveryJobRequest stopDiscoveryJobRequest);
+
+    /**
+     * <p>
+     * Stops a running DataSync discovery job.
+     * </p>
+     * <p>
+     * You can stop a discovery job anytime. A job that's stopped before it's scheduled to end likely will provide you
+     * some information about your on-premises storage system resources. To get recommendations for a stopped job, you
+     * must use the <a href="https://docs.aws.amazon.com/datasync/latest/userguide/API_GenerateRecommendations.html">
+     * GenerateRecommendations</a> operation.
+     * </p>
+     * 
+     * @param stopDiscoveryJobRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the StopDiscoveryJob operation returned by the service.
+     * @sample AWSDataSyncAsyncHandler.StopDiscoveryJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/StopDiscoveryJob" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<StopDiscoveryJobResult> stopDiscoveryJobAsync(StopDiscoveryJobRequest stopDiscoveryJobRequest,
+            com.amazonaws.handlers.AsyncHandler<StopDiscoveryJobRequest, StopDiscoveryJobResult> asyncHandler);
 
     /**
      * <p>
@@ -1471,6 +1958,37 @@ public interface AWSDataSyncAsync extends AWSDataSync {
      */
     java.util.concurrent.Future<UpdateAgentResult> updateAgentAsync(UpdateAgentRequest updateAgentRequest,
             com.amazonaws.handlers.AsyncHandler<UpdateAgentRequest, UpdateAgentResult> asyncHandler);
+
+    /**
+     * <p>
+     * Edits a DataSync discovery job configuration.
+     * </p>
+     * 
+     * @param updateDiscoveryJobRequest
+     * @return A Java Future containing the result of the UpdateDiscoveryJob operation returned by the service.
+     * @sample AWSDataSyncAsync.UpdateDiscoveryJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/UpdateDiscoveryJob" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateDiscoveryJobResult> updateDiscoveryJobAsync(UpdateDiscoveryJobRequest updateDiscoveryJobRequest);
+
+    /**
+     * <p>
+     * Edits a DataSync discovery job configuration.
+     * </p>
+     * 
+     * @param updateDiscoveryJobRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateDiscoveryJob operation returned by the service.
+     * @sample AWSDataSyncAsyncHandler.UpdateDiscoveryJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/UpdateDiscoveryJob" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateDiscoveryJobResult> updateDiscoveryJobAsync(UpdateDiscoveryJobRequest updateDiscoveryJobRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateDiscoveryJobRequest, UpdateDiscoveryJobResult> asyncHandler);
 
     /**
      * <p>
@@ -1618,6 +2136,37 @@ public interface AWSDataSyncAsync extends AWSDataSync {
 
     /**
      * <p>
+     * Modifies some configurations of an on-premises storage system resource that you're using with DataSync Discovery.
+     * </p>
+     * 
+     * @param updateStorageSystemRequest
+     * @return A Java Future containing the result of the UpdateStorageSystem operation returned by the service.
+     * @sample AWSDataSyncAsync.UpdateStorageSystem
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/UpdateStorageSystem" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateStorageSystemResult> updateStorageSystemAsync(UpdateStorageSystemRequest updateStorageSystemRequest);
+
+    /**
+     * <p>
+     * Modifies some configurations of an on-premises storage system resource that you're using with DataSync Discovery.
+     * </p>
+     * 
+     * @param updateStorageSystemRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateStorageSystem operation returned by the service.
+     * @sample AWSDataSyncAsyncHandler.UpdateStorageSystem
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/UpdateStorageSystem" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateStorageSystemResult> updateStorageSystemAsync(UpdateStorageSystemRequest updateStorageSystemRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateStorageSystemRequest, UpdateStorageSystemResult> asyncHandler);
+
+    /**
+     * <p>
      * Updates the metadata associated with a task.
      * </p>
      * 
@@ -1651,19 +2200,13 @@ public interface AWSDataSyncAsync extends AWSDataSync {
 
     /**
      * <p>
-     * Updates execution of a task.
-     * </p>
-     * <p>
-     * You can modify bandwidth throttling for a task execution that is running or queued. For more information, see <a
-     * href=
-     * "https://docs.aws.amazon.com/datasync/latest/userguide/working-with-task-executions.html#adjust-bandwidth-throttling"
-     * >Adjusting Bandwidth Throttling for a Task Execution</a>.
+     * Modifies a running DataSync task.
      * </p>
      * <note>
      * <p>
-     * The only <code>Option</code> that can be modified by <code>UpdateTaskExecution</code> is
+     * Currently, the only <code>Option</code> that you can modify with <code>UpdateTaskExecution</code> is
      * <code> <a href="https://docs.aws.amazon.com/datasync/latest/userguide/API_Options.html#DataSync-Type-Options-BytesPerSecond">BytesPerSecond</a> </code>
-     * .
+     * , which throttles bandwidth for a running or queued task.
      * </p>
      * </note>
      * 
@@ -1677,19 +2220,13 @@ public interface AWSDataSyncAsync extends AWSDataSync {
 
     /**
      * <p>
-     * Updates execution of a task.
-     * </p>
-     * <p>
-     * You can modify bandwidth throttling for a task execution that is running or queued. For more information, see <a
-     * href=
-     * "https://docs.aws.amazon.com/datasync/latest/userguide/working-with-task-executions.html#adjust-bandwidth-throttling"
-     * >Adjusting Bandwidth Throttling for a Task Execution</a>.
+     * Modifies a running DataSync task.
      * </p>
      * <note>
      * <p>
-     * The only <code>Option</code> that can be modified by <code>UpdateTaskExecution</code> is
+     * Currently, the only <code>Option</code> that you can modify with <code>UpdateTaskExecution</code> is
      * <code> <a href="https://docs.aws.amazon.com/datasync/latest/userguide/API_Options.html#DataSync-Type-Options-BytesPerSecond">BytesPerSecond</a> </code>
-     * .
+     * , which throttles bandwidth for a running or queued task.
      * </p>
      * </note>
      * 

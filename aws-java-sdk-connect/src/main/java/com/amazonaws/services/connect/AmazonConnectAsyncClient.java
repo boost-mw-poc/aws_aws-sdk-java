@@ -90,6 +90,39 @@ public class AmazonConnectAsyncClient extends AmazonConnectClient implements Ama
     }
 
     @Override
+    public java.util.concurrent.Future<ActivateEvaluationFormResult> activateEvaluationFormAsync(ActivateEvaluationFormRequest request) {
+
+        return activateEvaluationFormAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ActivateEvaluationFormResult> activateEvaluationFormAsync(final ActivateEvaluationFormRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ActivateEvaluationFormRequest, ActivateEvaluationFormResult> asyncHandler) {
+        final ActivateEvaluationFormRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ActivateEvaluationFormResult>() {
+            @Override
+            public ActivateEvaluationFormResult call() throws Exception {
+                ActivateEvaluationFormResult result = null;
+
+                try {
+                    result = executeActivateEvaluationForm(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<AssociateApprovedOriginResult> associateApprovedOriginAsync(AssociateApprovedOriginRequest request) {
 
         return associateApprovedOriginAsync(request, null);
@@ -540,6 +573,39 @@ public class AmazonConnectAsyncClient extends AmazonConnectClient implements Ama
 
                 try {
                     result = executeCreateContactFlowModule(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateEvaluationFormResult> createEvaluationFormAsync(CreateEvaluationFormRequest request) {
+
+        return createEvaluationFormAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateEvaluationFormResult> createEvaluationFormAsync(final CreateEvaluationFormRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateEvaluationFormRequest, CreateEvaluationFormResult> asyncHandler) {
+        final CreateEvaluationFormRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateEvaluationFormResult>() {
+            @Override
+            public CreateEvaluationFormResult call() throws Exception {
+                CreateEvaluationFormResult result = null;
+
+                try {
+                    result = executeCreateEvaluationForm(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -1052,6 +1118,72 @@ public class AmazonConnectAsyncClient extends AmazonConnectClient implements Ama
     }
 
     @Override
+    public java.util.concurrent.Future<DeactivateEvaluationFormResult> deactivateEvaluationFormAsync(DeactivateEvaluationFormRequest request) {
+
+        return deactivateEvaluationFormAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeactivateEvaluationFormResult> deactivateEvaluationFormAsync(final DeactivateEvaluationFormRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeactivateEvaluationFormRequest, DeactivateEvaluationFormResult> asyncHandler) {
+        final DeactivateEvaluationFormRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeactivateEvaluationFormResult>() {
+            @Override
+            public DeactivateEvaluationFormResult call() throws Exception {
+                DeactivateEvaluationFormResult result = null;
+
+                try {
+                    result = executeDeactivateEvaluationForm(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteContactEvaluationResult> deleteContactEvaluationAsync(DeleteContactEvaluationRequest request) {
+
+        return deleteContactEvaluationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteContactEvaluationResult> deleteContactEvaluationAsync(final DeleteContactEvaluationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteContactEvaluationRequest, DeleteContactEvaluationResult> asyncHandler) {
+        final DeleteContactEvaluationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteContactEvaluationResult>() {
+            @Override
+            public DeleteContactEvaluationResult call() throws Exception {
+                DeleteContactEvaluationResult result = null;
+
+                try {
+                    result = executeDeleteContactEvaluation(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteContactFlowResult> deleteContactFlowAsync(DeleteContactFlowRequest request) {
 
         return deleteContactFlowAsync(request, null);
@@ -1102,6 +1234,39 @@ public class AmazonConnectAsyncClient extends AmazonConnectClient implements Ama
 
                 try {
                     result = executeDeleteContactFlowModule(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteEvaluationFormResult> deleteEvaluationFormAsync(DeleteEvaluationFormRequest request) {
+
+        return deleteEvaluationFormAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteEvaluationFormResult> deleteEvaluationFormAsync(final DeleteEvaluationFormRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteEvaluationFormRequest, DeleteEvaluationFormResult> asyncHandler) {
+        final DeleteEvaluationFormRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteEvaluationFormResult>() {
+            @Override
+            public DeleteEvaluationFormResult call() throws Exception {
+                DeleteEvaluationFormResult result = null;
+
+                try {
+                    result = executeDeleteEvaluationForm(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -1581,6 +1746,39 @@ public class AmazonConnectAsyncClient extends AmazonConnectClient implements Ama
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeContactEvaluationResult> describeContactEvaluationAsync(DescribeContactEvaluationRequest request) {
+
+        return describeContactEvaluationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeContactEvaluationResult> describeContactEvaluationAsync(final DescribeContactEvaluationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeContactEvaluationRequest, DescribeContactEvaluationResult> asyncHandler) {
+        final DescribeContactEvaluationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeContactEvaluationResult>() {
+            @Override
+            public DescribeContactEvaluationResult call() throws Exception {
+                DescribeContactEvaluationResult result = null;
+
+                try {
+                    result = executeDescribeContactEvaluation(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeContactFlowResult> describeContactFlowAsync(DescribeContactFlowRequest request) {
 
         return describeContactFlowAsync(request, null);
@@ -1631,6 +1829,39 @@ public class AmazonConnectAsyncClient extends AmazonConnectClient implements Ama
 
                 try {
                     result = executeDescribeContactFlowModule(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeEvaluationFormResult> describeEvaluationFormAsync(DescribeEvaluationFormRequest request) {
+
+        return describeEvaluationFormAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeEvaluationFormResult> describeEvaluationFormAsync(final DescribeEvaluationFormRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeEvaluationFormRequest, DescribeEvaluationFormResult> asyncHandler) {
+        final DescribeEvaluationFormRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeEvaluationFormResult>() {
+            @Override
+            public DescribeEvaluationFormResult call() throws Exception {
+                DescribeEvaluationFormResult result = null;
+
+                try {
+                    result = executeDescribeEvaluationForm(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -2846,6 +3077,39 @@ public class AmazonConnectAsyncClient extends AmazonConnectClient implements Ama
     }
 
     @Override
+    public java.util.concurrent.Future<ListContactEvaluationsResult> listContactEvaluationsAsync(ListContactEvaluationsRequest request) {
+
+        return listContactEvaluationsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListContactEvaluationsResult> listContactEvaluationsAsync(final ListContactEvaluationsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListContactEvaluationsRequest, ListContactEvaluationsResult> asyncHandler) {
+        final ListContactEvaluationsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListContactEvaluationsResult>() {
+            @Override
+            public ListContactEvaluationsResult call() throws Exception {
+                ListContactEvaluationsResult result = null;
+
+                try {
+                    result = executeListContactEvaluations(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ListContactFlowModulesResult> listContactFlowModulesAsync(ListContactFlowModulesRequest request) {
 
         return listContactFlowModulesAsync(request, null);
@@ -2962,6 +3226,72 @@ public class AmazonConnectAsyncClient extends AmazonConnectClient implements Ama
 
                 try {
                     result = executeListDefaultVocabularies(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListEvaluationFormVersionsResult> listEvaluationFormVersionsAsync(ListEvaluationFormVersionsRequest request) {
+
+        return listEvaluationFormVersionsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListEvaluationFormVersionsResult> listEvaluationFormVersionsAsync(final ListEvaluationFormVersionsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListEvaluationFormVersionsRequest, ListEvaluationFormVersionsResult> asyncHandler) {
+        final ListEvaluationFormVersionsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListEvaluationFormVersionsResult>() {
+            @Override
+            public ListEvaluationFormVersionsResult call() throws Exception {
+                ListEvaluationFormVersionsResult result = null;
+
+                try {
+                    result = executeListEvaluationFormVersions(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListEvaluationFormsResult> listEvaluationFormsAsync(ListEvaluationFormsRequest request) {
+
+        return listEvaluationFormsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListEvaluationFormsResult> listEvaluationFormsAsync(final ListEvaluationFormsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListEvaluationFormsRequest, ListEvaluationFormsResult> asyncHandler) {
+        final ListEvaluationFormsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListEvaluationFormsResult>() {
+            @Override
+            public ListEvaluationFormsResult call() throws Exception {
+                ListEvaluationFormsResult result = null;
+
+                try {
+                    result = executeListEvaluationForms(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -4201,6 +4531,39 @@ public class AmazonConnectAsyncClient extends AmazonConnectClient implements Ama
     }
 
     @Override
+    public java.util.concurrent.Future<StartContactEvaluationResult> startContactEvaluationAsync(StartContactEvaluationRequest request) {
+
+        return startContactEvaluationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartContactEvaluationResult> startContactEvaluationAsync(final StartContactEvaluationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<StartContactEvaluationRequest, StartContactEvaluationResult> asyncHandler) {
+        final StartContactEvaluationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<StartContactEvaluationResult>() {
+            @Override
+            public StartContactEvaluationResult call() throws Exception {
+                StartContactEvaluationResult result = null;
+
+                try {
+                    result = executeStartContactEvaluation(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<StartContactRecordingResult> startContactRecordingAsync(StartContactRecordingRequest request) {
 
         return startContactRecordingAsync(request, null);
@@ -4416,6 +4779,39 @@ public class AmazonConnectAsyncClient extends AmazonConnectClient implements Ama
 
                 try {
                     result = executeStopContactStreaming(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<SubmitContactEvaluationResult> submitContactEvaluationAsync(SubmitContactEvaluationRequest request) {
+
+        return submitContactEvaluationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<SubmitContactEvaluationResult> submitContactEvaluationAsync(final SubmitContactEvaluationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<SubmitContactEvaluationRequest, SubmitContactEvaluationResult> asyncHandler) {
+        final SubmitContactEvaluationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<SubmitContactEvaluationResult>() {
+            @Override
+            public SubmitContactEvaluationResult call() throws Exception {
+                SubmitContactEvaluationResult result = null;
+
+                try {
+                    result = executeSubmitContactEvaluation(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -4663,6 +5059,39 @@ public class AmazonConnectAsyncClient extends AmazonConnectClient implements Ama
     }
 
     @Override
+    public java.util.concurrent.Future<UpdateContactEvaluationResult> updateContactEvaluationAsync(UpdateContactEvaluationRequest request) {
+
+        return updateContactEvaluationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateContactEvaluationResult> updateContactEvaluationAsync(final UpdateContactEvaluationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateContactEvaluationRequest, UpdateContactEvaluationResult> asyncHandler) {
+        final UpdateContactEvaluationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateContactEvaluationResult>() {
+            @Override
+            public UpdateContactEvaluationResult call() throws Exception {
+                UpdateContactEvaluationResult result = null;
+
+                try {
+                    result = executeUpdateContactEvaluation(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<UpdateContactFlowContentResult> updateContactFlowContentAsync(UpdateContactFlowContentRequest request) {
 
         return updateContactFlowContentAsync(request, null);
@@ -4848,6 +5277,39 @@ public class AmazonConnectAsyncClient extends AmazonConnectClient implements Ama
 
                 try {
                     result = executeUpdateContactSchedule(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateEvaluationFormResult> updateEvaluationFormAsync(UpdateEvaluationFormRequest request) {
+
+        return updateEvaluationFormAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateEvaluationFormResult> updateEvaluationFormAsync(final UpdateEvaluationFormRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateEvaluationFormRequest, UpdateEvaluationFormResult> asyncHandler) {
+        final UpdateEvaluationFormRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateEvaluationFormResult>() {
+            @Override
+            public UpdateEvaluationFormResult call() throws Exception {
+                UpdateEvaluationFormResult result = null;
+
+                try {
+                    result = executeUpdateEvaluationForm(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

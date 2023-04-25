@@ -159,6 +159,12 @@ public enum PinpointActions implements Action {
     GetJourneyExecutionActivityMetrics("pinpoint:GetJourneyExecutionActivityMetrics"),
     /** Action for the GetJourneyExecutionMetrics operation. */
     GetJourneyExecutionMetrics("pinpoint:GetJourneyExecutionMetrics"),
+    /** Action for the GetJourneyRunExecutionActivityMetrics operation. */
+    GetJourneyRunExecutionActivityMetrics("pinpoint:GetJourneyRunExecutionActivityMetrics"),
+    /** Action for the GetJourneyRunExecutionMetrics operation. */
+    GetJourneyRunExecutionMetrics("pinpoint:GetJourneyRunExecutionMetrics"),
+    /** Action for the GetJourneyRuns operation. */
+    GetJourneyRuns("pinpoint:GetJourneyRuns"),
     /** Action for the GetPushTemplate operation. */
     GetPushTemplate("pinpoint:GetPushTemplate"),
     /** Action for the GetRecommenderConfiguration operation. */

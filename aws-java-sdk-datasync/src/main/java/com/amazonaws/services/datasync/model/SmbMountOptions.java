@@ -40,8 +40,8 @@ public class SmbMountOptions implements Serializable, Cloneable, StructuredPojo 
      * <ul>
      * <li>
      * <p>
-     * <code>AUTOMATIC</code> (default): DataSync and the SMB file server negotiate a protocol version that they
-     * mutually support. (DataSync supports SMB versions 1.0 and later.)
+     * <code>AUTOMATIC</code> (default): DataSync and the SMB file server negotiate the highest version of SMB that they
+     * mutually support between 2.1 and 3.1.1.
      * </p>
      * <p>
      * This is the recommended option. If you instead choose a specific version that your file server doesn't support,
@@ -90,8 +90,8 @@ public class SmbMountOptions implements Serializable, Cloneable, StructuredPojo 
      * <ul>
      * <li>
      * <p>
-     * <code>AUTOMATIC</code> (default): DataSync and the SMB file server negotiate a protocol version that they
-     * mutually support. (DataSync supports SMB versions 1.0 and later.)
+     * <code>AUTOMATIC</code> (default): DataSync and the SMB file server negotiate the highest version of SMB that they
+     * mutually support between 2.1 and 3.1.1.
      * </p>
      * <p>
      * This is the recommended option. If you instead choose a specific version that your file server doesn't support,
@@ -136,8 +136,8 @@ public class SmbMountOptions implements Serializable, Cloneable, StructuredPojo 
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>AUTOMATIC</code> (default): DataSync and the SMB file server negotiate a protocol version that they
-     *        mutually support. (DataSync supports SMB versions 1.0 and later.)
+     *        <code>AUTOMATIC</code> (default): DataSync and the SMB file server negotiate the highest version of SMB
+     *        that they mutually support between 2.1 and 3.1.1.
      *        </p>
      *        <p>
      *        This is the recommended option. If you instead choose a specific version that your file server doesn't
@@ -189,8 +189,8 @@ public class SmbMountOptions implements Serializable, Cloneable, StructuredPojo 
      * <ul>
      * <li>
      * <p>
-     * <code>AUTOMATIC</code> (default): DataSync and the SMB file server negotiate a protocol version that they
-     * mutually support. (DataSync supports SMB versions 1.0 and later.)
+     * <code>AUTOMATIC</code> (default): DataSync and the SMB file server negotiate the highest version of SMB that they
+     * mutually support between 2.1 and 3.1.1.
      * </p>
      * <p>
      * This is the recommended option. If you instead choose a specific version that your file server doesn't support,
@@ -234,8 +234,8 @@ public class SmbMountOptions implements Serializable, Cloneable, StructuredPojo 
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>AUTOMATIC</code> (default): DataSync and the SMB file server negotiate a protocol version that they
-     *         mutually support. (DataSync supports SMB versions 1.0 and later.)
+     *         <code>AUTOMATIC</code> (default): DataSync and the SMB file server negotiate the highest version of SMB
+     *         that they mutually support between 2.1 and 3.1.1.
      *         </p>
      *         <p>
      *         This is the recommended option. If you instead choose a specific version that your file server doesn't
@@ -287,8 +287,8 @@ public class SmbMountOptions implements Serializable, Cloneable, StructuredPojo 
      * <ul>
      * <li>
      * <p>
-     * <code>AUTOMATIC</code> (default): DataSync and the SMB file server negotiate a protocol version that they
-     * mutually support. (DataSync supports SMB versions 1.0 and later.)
+     * <code>AUTOMATIC</code> (default): DataSync and the SMB file server negotiate the highest version of SMB that they
+     * mutually support between 2.1 and 3.1.1.
      * </p>
      * <p>
      * This is the recommended option. If you instead choose a specific version that your file server doesn't support,
@@ -333,8 +333,8 @@ public class SmbMountOptions implements Serializable, Cloneable, StructuredPojo 
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>AUTOMATIC</code> (default): DataSync and the SMB file server negotiate a protocol version that they
-     *        mutually support. (DataSync supports SMB versions 1.0 and later.)
+     *        <code>AUTOMATIC</code> (default): DataSync and the SMB file server negotiate the highest version of SMB
+     *        that they mutually support between 2.1 and 3.1.1.
      *        </p>
      *        <p>
      *        This is the recommended option. If you instead choose a specific version that your file server doesn't
@@ -388,8 +388,8 @@ public class SmbMountOptions implements Serializable, Cloneable, StructuredPojo 
      * <ul>
      * <li>
      * <p>
-     * <code>AUTOMATIC</code> (default): DataSync and the SMB file server negotiate a protocol version that they
-     * mutually support. (DataSync supports SMB versions 1.0 and later.)
+     * <code>AUTOMATIC</code> (default): DataSync and the SMB file server negotiate the highest version of SMB that they
+     * mutually support between 2.1 and 3.1.1.
      * </p>
      * <p>
      * This is the recommended option. If you instead choose a specific version that your file server doesn't support,
@@ -434,8 +434,8 @@ public class SmbMountOptions implements Serializable, Cloneable, StructuredPojo 
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>AUTOMATIC</code> (default): DataSync and the SMB file server negotiate a protocol version that they
-     *        mutually support. (DataSync supports SMB versions 1.0 and later.)
+     *        <code>AUTOMATIC</code> (default): DataSync and the SMB file server negotiate the highest version of SMB
+     *        that they mutually support between 2.1 and 3.1.1.
      *        </p>
      *        <p>
      *        This is the recommended option. If you instead choose a specific version that your file server doesn't

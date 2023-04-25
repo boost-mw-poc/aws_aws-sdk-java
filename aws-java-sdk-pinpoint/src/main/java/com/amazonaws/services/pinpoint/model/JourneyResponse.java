@@ -181,13 +181,13 @@ public class JourneyResponse implements Serializable, Cloneable, StructuredPojo 
     private java.util.Map<String, String> tags;
     /**
      * <p>
-     * Specifies whether endpoints in quiet hours should enter a wait till the end of their quiet hours.
+     * Indicates whether endpoints in quiet hours should enter a wait activity until quiet hours have elapsed.
      * </p>
      */
     private Boolean waitForQuietTime;
     /**
      * <p>
-     * Specifies whether a journey should be refreshed on segment update.
+     * Indicates whether the journey participants should be refreshed when a segment is updated.
      * </p>
      */
     private Boolean refreshOnSegmentUpdate;
@@ -199,21 +199,21 @@ public class JourneyResponse implements Serializable, Cloneable, StructuredPojo 
     private JourneyChannelSettings journeyChannelSettings;
     /**
      * <p>
-     * Indicates if journey have Advance Quiet Time (OpenHours and ClosedDays). This flag should be set to true in order
-     * to allow (OpenHours and ClosedDays)
+     * Indicates if journey has Advance Quiet Time enabled. This flag should be set to true in order to allow using
+     * OpenHours and ClosedDays.
      * </p>
      */
     private Boolean sendingSchedule;
     /**
      * <p>
-     * The time when journey allow to send messages. QuietTime should be configured first and SendingSchedule should be
-     * set to true.
+     * The time when a journey can send messages. QuietTime should be configured first and SendingSchedule should be set
+     * to true.
      * </p>
      */
     private OpenHours openHours;
     /**
      * <p>
-     * The time when journey will stop sending messages. QuietTime should be configured first and SendingSchedule should
+     * The time when a journey will not send messages. QuietTime should be configured first and SendingSchedule should
      * be set to true.
      * </p>
      */
@@ -1344,11 +1344,11 @@ public class JourneyResponse implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Specifies whether endpoints in quiet hours should enter a wait till the end of their quiet hours.
+     * Indicates whether endpoints in quiet hours should enter a wait activity until quiet hours have elapsed.
      * </p>
      * 
      * @param waitForQuietTime
-     *        Specifies whether endpoints in quiet hours should enter a wait till the end of their quiet hours.
+     *        Indicates whether endpoints in quiet hours should enter a wait activity until quiet hours have elapsed.
      */
 
     public void setWaitForQuietTime(Boolean waitForQuietTime) {
@@ -1357,10 +1357,10 @@ public class JourneyResponse implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Specifies whether endpoints in quiet hours should enter a wait till the end of their quiet hours.
+     * Indicates whether endpoints in quiet hours should enter a wait activity until quiet hours have elapsed.
      * </p>
      * 
-     * @return Specifies whether endpoints in quiet hours should enter a wait till the end of their quiet hours.
+     * @return Indicates whether endpoints in quiet hours should enter a wait activity until quiet hours have elapsed.
      */
 
     public Boolean getWaitForQuietTime() {
@@ -1369,11 +1369,11 @@ public class JourneyResponse implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Specifies whether endpoints in quiet hours should enter a wait till the end of their quiet hours.
+     * Indicates whether endpoints in quiet hours should enter a wait activity until quiet hours have elapsed.
      * </p>
      * 
      * @param waitForQuietTime
-     *        Specifies whether endpoints in quiet hours should enter a wait till the end of their quiet hours.
+     *        Indicates whether endpoints in quiet hours should enter a wait activity until quiet hours have elapsed.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1384,10 +1384,10 @@ public class JourneyResponse implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Specifies whether endpoints in quiet hours should enter a wait till the end of their quiet hours.
+     * Indicates whether endpoints in quiet hours should enter a wait activity until quiet hours have elapsed.
      * </p>
      * 
-     * @return Specifies whether endpoints in quiet hours should enter a wait till the end of their quiet hours.
+     * @return Indicates whether endpoints in quiet hours should enter a wait activity until quiet hours have elapsed.
      */
 
     public Boolean isWaitForQuietTime() {
@@ -1396,11 +1396,11 @@ public class JourneyResponse implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Specifies whether a journey should be refreshed on segment update.
+     * Indicates whether the journey participants should be refreshed when a segment is updated.
      * </p>
      * 
      * @param refreshOnSegmentUpdate
-     *        Specifies whether a journey should be refreshed on segment update.
+     *        Indicates whether the journey participants should be refreshed when a segment is updated.
      */
 
     public void setRefreshOnSegmentUpdate(Boolean refreshOnSegmentUpdate) {
@@ -1409,10 +1409,10 @@ public class JourneyResponse implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Specifies whether a journey should be refreshed on segment update.
+     * Indicates whether the journey participants should be refreshed when a segment is updated.
      * </p>
      * 
-     * @return Specifies whether a journey should be refreshed on segment update.
+     * @return Indicates whether the journey participants should be refreshed when a segment is updated.
      */
 
     public Boolean getRefreshOnSegmentUpdate() {
@@ -1421,11 +1421,11 @@ public class JourneyResponse implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Specifies whether a journey should be refreshed on segment update.
+     * Indicates whether the journey participants should be refreshed when a segment is updated.
      * </p>
      * 
      * @param refreshOnSegmentUpdate
-     *        Specifies whether a journey should be refreshed on segment update.
+     *        Indicates whether the journey participants should be refreshed when a segment is updated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1436,10 +1436,10 @@ public class JourneyResponse implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Specifies whether a journey should be refreshed on segment update.
+     * Indicates whether the journey participants should be refreshed when a segment is updated.
      * </p>
      * 
-     * @return Specifies whether a journey should be refreshed on segment update.
+     * @return Indicates whether the journey participants should be refreshed when a segment is updated.
      */
 
     public Boolean isRefreshOnSegmentUpdate() {
@@ -1488,13 +1488,13 @@ public class JourneyResponse implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Indicates if journey have Advance Quiet Time (OpenHours and ClosedDays). This flag should be set to true in order
-     * to allow (OpenHours and ClosedDays)
+     * Indicates if journey has Advance Quiet Time enabled. This flag should be set to true in order to allow using
+     * OpenHours and ClosedDays.
      * </p>
      * 
      * @param sendingSchedule
-     *        Indicates if journey have Advance Quiet Time (OpenHours and ClosedDays). This flag should be set to true
-     *        in order to allow (OpenHours and ClosedDays)
+     *        Indicates if journey has Advance Quiet Time enabled. This flag should be set to true in order to allow
+     *        using OpenHours and ClosedDays.
      */
 
     public void setSendingSchedule(Boolean sendingSchedule) {
@@ -1503,12 +1503,12 @@ public class JourneyResponse implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Indicates if journey have Advance Quiet Time (OpenHours and ClosedDays). This flag should be set to true in order
-     * to allow (OpenHours and ClosedDays)
+     * Indicates if journey has Advance Quiet Time enabled. This flag should be set to true in order to allow using
+     * OpenHours and ClosedDays.
      * </p>
      * 
-     * @return Indicates if journey have Advance Quiet Time (OpenHours and ClosedDays). This flag should be set to true
-     *         in order to allow (OpenHours and ClosedDays)
+     * @return Indicates if journey has Advance Quiet Time enabled. This flag should be set to true in order to allow
+     *         using OpenHours and ClosedDays.
      */
 
     public Boolean getSendingSchedule() {
@@ -1517,13 +1517,13 @@ public class JourneyResponse implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Indicates if journey have Advance Quiet Time (OpenHours and ClosedDays). This flag should be set to true in order
-     * to allow (OpenHours and ClosedDays)
+     * Indicates if journey has Advance Quiet Time enabled. This flag should be set to true in order to allow using
+     * OpenHours and ClosedDays.
      * </p>
      * 
      * @param sendingSchedule
-     *        Indicates if journey have Advance Quiet Time (OpenHours and ClosedDays). This flag should be set to true
-     *        in order to allow (OpenHours and ClosedDays)
+     *        Indicates if journey has Advance Quiet Time enabled. This flag should be set to true in order to allow
+     *        using OpenHours and ClosedDays.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1534,12 +1534,12 @@ public class JourneyResponse implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Indicates if journey have Advance Quiet Time (OpenHours and ClosedDays). This flag should be set to true in order
-     * to allow (OpenHours and ClosedDays)
+     * Indicates if journey has Advance Quiet Time enabled. This flag should be set to true in order to allow using
+     * OpenHours and ClosedDays.
      * </p>
      * 
-     * @return Indicates if journey have Advance Quiet Time (OpenHours and ClosedDays). This flag should be set to true
-     *         in order to allow (OpenHours and ClosedDays)
+     * @return Indicates if journey has Advance Quiet Time enabled. This flag should be set to true in order to allow
+     *         using OpenHours and ClosedDays.
      */
 
     public Boolean isSendingSchedule() {
@@ -1548,13 +1548,13 @@ public class JourneyResponse implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The time when journey allow to send messages. QuietTime should be configured first and SendingSchedule should be
-     * set to true.
+     * The time when a journey can send messages. QuietTime should be configured first and SendingSchedule should be set
+     * to true.
      * </p>
      * 
      * @param openHours
-     *        The time when journey allow to send messages. QuietTime should be configured first and SendingSchedule
-     *        should be set to true.
+     *        The time when a journey can send messages. QuietTime should be configured first and SendingSchedule should
+     *        be set to true.
      */
 
     public void setOpenHours(OpenHours openHours) {
@@ -1563,11 +1563,11 @@ public class JourneyResponse implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The time when journey allow to send messages. QuietTime should be configured first and SendingSchedule should be
-     * set to true.
+     * The time when a journey can send messages. QuietTime should be configured first and SendingSchedule should be set
+     * to true.
      * </p>
      * 
-     * @return The time when journey allow to send messages. QuietTime should be configured first and SendingSchedule
+     * @return The time when a journey can send messages. QuietTime should be configured first and SendingSchedule
      *         should be set to true.
      */
 
@@ -1577,13 +1577,13 @@ public class JourneyResponse implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The time when journey allow to send messages. QuietTime should be configured first and SendingSchedule should be
-     * set to true.
+     * The time when a journey can send messages. QuietTime should be configured first and SendingSchedule should be set
+     * to true.
      * </p>
      * 
      * @param openHours
-     *        The time when journey allow to send messages. QuietTime should be configured first and SendingSchedule
-     *        should be set to true.
+     *        The time when a journey can send messages. QuietTime should be configured first and SendingSchedule should
+     *        be set to true.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1594,12 +1594,12 @@ public class JourneyResponse implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The time when journey will stop sending messages. QuietTime should be configured first and SendingSchedule should
+     * The time when a journey will not send messages. QuietTime should be configured first and SendingSchedule should
      * be set to true.
      * </p>
      * 
      * @param closedDays
-     *        The time when journey will stop sending messages. QuietTime should be configured first and SendingSchedule
+     *        The time when a journey will not send messages. QuietTime should be configured first and SendingSchedule
      *        should be set to true.
      */
 
@@ -1609,12 +1609,12 @@ public class JourneyResponse implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The time when journey will stop sending messages. QuietTime should be configured first and SendingSchedule should
+     * The time when a journey will not send messages. QuietTime should be configured first and SendingSchedule should
      * be set to true.
      * </p>
      * 
-     * @return The time when journey will stop sending messages. QuietTime should be configured first and
-     *         SendingSchedule should be set to true.
+     * @return The time when a journey will not send messages. QuietTime should be configured first and SendingSchedule
+     *         should be set to true.
      */
 
     public ClosedDays getClosedDays() {
@@ -1623,12 +1623,12 @@ public class JourneyResponse implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The time when journey will stop sending messages. QuietTime should be configured first and SendingSchedule should
+     * The time when a journey will not send messages. QuietTime should be configured first and SendingSchedule should
      * be set to true.
      * </p>
      * 
      * @param closedDays
-     *        The time when journey will stop sending messages. QuietTime should be configured first and SendingSchedule
+     *        The time when a journey will not send messages. QuietTime should be configured first and SendingSchedule
      *        should be set to true.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

@@ -59,6 +59,30 @@ public interface AmazonConnect {
 
     /**
      * <p>
+     * Activates an evaluation form in the specified Amazon Connect instance. After the evaluation form is activated, it
+     * is available to start new evaluations based on the form.
+     * </p>
+     * 
+     * @param activateEvaluationFormRequest
+     * @return Result of the ActivateEvaluationForm operation returned by the service.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @throws ResourceConflictException
+     *         A resource already has that name.
+     * @sample AmazonConnect.ActivateEvaluationForm
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/ActivateEvaluationForm" target="_top">AWS
+     *      API Documentation</a>
+     */
+    ActivateEvaluationFormResult activateEvaluationForm(ActivateEvaluationFormRequest activateEvaluationFormRequest);
+
+    /**
+     * <p>
      * This API is in preview release for Amazon Connect and is subject to change.
      * </p>
      * <p>
@@ -491,6 +515,34 @@ public interface AmazonConnect {
      *      target="_top">AWS API Documentation</a>
      */
     CreateContactFlowModuleResult createContactFlowModule(CreateContactFlowModuleRequest createContactFlowModuleRequest);
+
+    /**
+     * <p>
+     * Creates an evaluation form in the specified Amazon Connect instance. The form can be used to define questions
+     * related to agent performance, and create sections to organize such questions. An evaluation form must have a
+     * unique title within an instance. Question and section identifiers cannot be duplicated within the same evaluation
+     * form.
+     * </p>
+     * 
+     * @param createEvaluationFormRequest
+     * @return Result of the CreateEvaluationForm operation returned by the service.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws ServiceQuotaExceededException
+     *         The service quota has been exceeded.
+     * @throws ResourceConflictException
+     *         A resource already has that name.
+     * @sample AmazonConnect.CreateEvaluationForm
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/CreateEvaluationForm" target="_top">AWS
+     *      API Documentation</a>
+     */
+    CreateEvaluationFormResult createEvaluationForm(CreateEvaluationFormRequest createEvaluationFormRequest);
 
     /**
      * <p>
@@ -935,6 +987,53 @@ public interface AmazonConnect {
 
     /**
      * <p>
+     * Deactivates an evaluation form in the specified Amazon Connect instance. After a form is deactivated, it is no
+     * longer available for users to start new evaluations based on the form.
+     * </p>
+     * 
+     * @param deactivateEvaluationFormRequest
+     * @return Result of the DeactivateEvaluationForm operation returned by the service.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @throws ResourceConflictException
+     *         A resource already has that name.
+     * @sample AmazonConnect.DeactivateEvaluationForm
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DeactivateEvaluationForm"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DeactivateEvaluationFormResult deactivateEvaluationForm(DeactivateEvaluationFormRequest deactivateEvaluationFormRequest);
+
+    /**
+     * <p>
+     * Deletes a contact evaluation in the specified Amazon Connect instance.
+     * </p>
+     * 
+     * @param deleteContactEvaluationRequest
+     * @return Result of the DeleteContactEvaluation operation returned by the service.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @throws ResourceConflictException
+     *         A resource already has that name.
+     * @sample AmazonConnect.DeleteContactEvaluation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DeleteContactEvaluation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DeleteContactEvaluationResult deleteContactEvaluation(DeleteContactEvaluationRequest deleteContactEvaluationRequest);
+
+    /**
+     * <p>
      * Deletes a flow for the specified Amazon Connect instance.
      * </p>
      * 
@@ -982,6 +1081,41 @@ public interface AmazonConnect {
      *      target="_top">AWS API Documentation</a>
      */
     DeleteContactFlowModuleResult deleteContactFlowModule(DeleteContactFlowModuleRequest deleteContactFlowModuleRequest);
+
+    /**
+     * <p>
+     * Deletes an evaluation form in the specified Amazon Connect instance.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * If the version property is provided, only the specified version of the evaluation form is deleted.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If no version is provided, then the full form (all versions) is deleted.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param deleteEvaluationFormRequest
+     * @return Result of the DeleteEvaluationForm operation returned by the service.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @throws ResourceConflictException
+     *         A resource already has that name.
+     * @sample AmazonConnect.DeleteEvaluationForm
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DeleteEvaluationForm" target="_top">AWS
+     *      API Documentation</a>
+     */
+    DeleteEvaluationFormResult deleteEvaluationForm(DeleteEvaluationFormRequest deleteEvaluationFormRequest);
 
     /**
      * <p>
@@ -1349,6 +1483,27 @@ public interface AmazonConnect {
 
     /**
      * <p>
+     * Describes a contact evaluation in the specified Amazon Connect instance.
+     * </p>
+     * 
+     * @param describeContactEvaluationRequest
+     * @return Result of the DescribeContactEvaluation operation returned by the service.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @sample AmazonConnect.DescribeContactEvaluation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DescribeContactEvaluation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DescribeContactEvaluationResult describeContactEvaluation(DescribeContactEvaluationRequest describeContactEvaluationRequest);
+
+    /**
+     * <p>
      * Describes the specified flow.
      * </p>
      * <p>
@@ -1401,6 +1556,28 @@ public interface AmazonConnect {
      *      target="_top">AWS API Documentation</a>
      */
     DescribeContactFlowModuleResult describeContactFlowModule(DescribeContactFlowModuleRequest describeContactFlowModuleRequest);
+
+    /**
+     * <p>
+     * Describes an evaluation form in the specified Amazon Connect instance. If the version property is not provided,
+     * the latest version of the evaluation form is described.
+     * </p>
+     * 
+     * @param describeEvaluationFormRequest
+     * @return Result of the DescribeEvaluationForm operation returned by the service.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @sample AmazonConnect.DescribeEvaluationForm
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DescribeEvaluationForm" target="_top">AWS
+     *      API Documentation</a>
+     */
+    DescribeEvaluationFormResult describeEvaluationForm(DescribeEvaluationFormRequest describeEvaluationFormRequest);
 
     /**
      * <p>
@@ -2341,6 +2518,27 @@ public interface AmazonConnect {
 
     /**
      * <p>
+     * Lists contact evaluations in the specified Amazon Connect instance.
+     * </p>
+     * 
+     * @param listContactEvaluationsRequest
+     * @return Result of the ListContactEvaluations operation returned by the service.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @sample AmazonConnect.ListContactEvaluations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/ListContactEvaluations" target="_top">AWS
+     *      API Documentation</a>
+     */
+    ListContactEvaluationsResult listContactEvaluations(ListContactEvaluationsRequest listContactEvaluationsRequest);
+
+    /**
+     * <p>
      * Provides information about the flow modules for the specified Amazon Connect instance.
      * </p>
      * 
@@ -2443,6 +2641,48 @@ public interface AmazonConnect {
      *      target="_top">AWS API Documentation</a>
      */
     ListDefaultVocabulariesResult listDefaultVocabularies(ListDefaultVocabulariesRequest listDefaultVocabulariesRequest);
+
+    /**
+     * <p>
+     * Lists versions of an evaluation form in the specified Amazon Connect instance.
+     * </p>
+     * 
+     * @param listEvaluationFormVersionsRequest
+     * @return Result of the ListEvaluationFormVersions operation returned by the service.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @sample AmazonConnect.ListEvaluationFormVersions
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/ListEvaluationFormVersions"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListEvaluationFormVersionsResult listEvaluationFormVersions(ListEvaluationFormVersionsRequest listEvaluationFormVersionsRequest);
+
+    /**
+     * <p>
+     * Lists evaluation forms in the specified Amazon Connect instance.
+     * </p>
+     * 
+     * @param listEvaluationFormsRequest
+     * @return Result of the ListEvaluationForms operation returned by the service.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @sample AmazonConnect.ListEvaluationForms
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/ListEvaluationForms" target="_top">AWS
+     *      API Documentation</a>
+     */
+    ListEvaluationFormsResult listEvaluationForms(ListEvaluationFormsRequest listEvaluationFormsRequest);
 
     /**
      * <p>
@@ -3462,6 +3702,38 @@ public interface AmazonConnect {
 
     /**
      * <p>
+     * Starts an empty evaluation in the specified Amazon Connect instance, using the given evaluation form for the
+     * particular contact. The evaluation form version used for the contact evaluation corresponds to the currently
+     * activated version. If no version is activated for the evaluation form, the contact evaluation cannot be started.
+     * </p>
+     * <note>
+     * <p>
+     * Evaluations created through the public API do not contain answer values suggested from automation.
+     * </p>
+     * </note>
+     * 
+     * @param startContactEvaluationRequest
+     * @return Result of the StartContactEvaluation operation returned by the service.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws ServiceQuotaExceededException
+     *         The service quota has been exceeded.
+     * @throws ResourceConflictException
+     *         A resource already has that name.
+     * @sample AmazonConnect.StartContactEvaluation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/StartContactEvaluation" target="_top">AWS
+     *      API Documentation</a>
+     */
+    StartContactEvaluationResult startContactEvaluation(StartContactEvaluationRequest startContactEvaluationRequest);
+
+    /**
+     * <p>
      * Starts recording the contact:
      * </p>
      * <ul>
@@ -3699,6 +3971,35 @@ public interface AmazonConnect {
      *      API Documentation</a>
      */
     StopContactStreamingResult stopContactStreaming(StopContactStreamingRequest stopContactStreamingRequest);
+
+    /**
+     * <p>
+     * Submits a contact evaluation in the specified Amazon Connect instance. Answers included in the request are merged
+     * with existing answers for the given evaluation. If no answers or notes are passed, the evaluation is submitted
+     * with the existing answers and notes. You can delete an answer or note by passing an empty object (<code>{}</code>
+     * ) to the question identifier.
+     * </p>
+     * <p>
+     * If a contact evaluation is already in submitted state, this operation will trigger a resubmission.
+     * </p>
+     * 
+     * @param submitContactEvaluationRequest
+     * @return Result of the SubmitContactEvaluation operation returned by the service.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @throws ResourceConflictException
+     *         A resource already has that name.
+     * @sample AmazonConnect.SubmitContactEvaluation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/SubmitContactEvaluation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    SubmitContactEvaluationResult submitContactEvaluation(SubmitContactEvaluationRequest submitContactEvaluationRequest);
 
     /**
      * <p>
@@ -3942,6 +4243,31 @@ public interface AmazonConnect {
 
     /**
      * <p>
+     * Updates details about a contact evaluation in the specified Amazon Connect instance. A contact evaluation must be
+     * in draft state. Answers included in the request are merged with existing answers for the given evaluation. An
+     * answer or note can be deleted by passing an empty object (<code>{}</code>) to the question identifier.
+     * </p>
+     * 
+     * @param updateContactEvaluationRequest
+     * @return Result of the UpdateContactEvaluation operation returned by the service.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @throws ResourceConflictException
+     *         A resource already has that name.
+     * @sample AmazonConnect.UpdateContactEvaluation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/UpdateContactEvaluation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    UpdateContactEvaluationResult updateContactEvaluation(UpdateContactEvaluationRequest updateContactEvaluationRequest);
+
+    /**
+     * <p>
      * Updates the specified flow.
      * </p>
      * <p>
@@ -4101,6 +4427,36 @@ public interface AmazonConnect {
      *      API Documentation</a>
      */
     UpdateContactScheduleResult updateContactSchedule(UpdateContactScheduleRequest updateContactScheduleRequest);
+
+    /**
+     * <p>
+     * Updates details about a specific evaluation form version in the specified Amazon Connect instance. An evaluation
+     * form must have a unique title within an instance. Question and section identifiers cannot be duplicated within
+     * the same evaluation form.
+     * </p>
+     * <p>
+     * This operation does not support partial updates. Instead it does a full update of evaluation form content.
+     * </p>
+     * 
+     * @param updateEvaluationFormRequest
+     * @return Result of the UpdateEvaluationForm operation returned by the service.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @throws ServiceQuotaExceededException
+     *         The service quota has been exceeded.
+     * @throws ResourceConflictException
+     *         A resource already has that name.
+     * @sample AmazonConnect.UpdateEvaluationForm
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/UpdateEvaluationForm" target="_top">AWS
+     *      API Documentation</a>
+     */
+    UpdateEvaluationFormResult updateEvaluationForm(UpdateEvaluationFormRequest updateEvaluationFormRequest);
 
     /**
      * <p>

@@ -31,8 +31,6 @@ public class UpdateChannelReadMarkerRequestMarshaller {
             .marshallLocationName("channelArn").build();
     private static final MarshallingInfo<String> CHIMEBEARER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.HEADER).marshallLocationName("x-amz-chime-bearer").build();
-    private static final MarshallingInfo<String> SUBCHANNELID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SubChannelId").build();
 
     private static final UpdateChannelReadMarkerRequestMarshaller instance = new UpdateChannelReadMarkerRequestMarshaller();
 
@@ -52,7 +50,6 @@ public class UpdateChannelReadMarkerRequestMarshaller {
         try {
             protocolMarshaller.marshall(updateChannelReadMarkerRequest.getChannelArn(), CHANNELARN_BINDING);
             protocolMarshaller.marshall(updateChannelReadMarkerRequest.getChimeBearer(), CHIMEBEARER_BINDING);
-            protocolMarshaller.marshall(updateChannelReadMarkerRequest.getSubChannelId(), SUBCHANNELID_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

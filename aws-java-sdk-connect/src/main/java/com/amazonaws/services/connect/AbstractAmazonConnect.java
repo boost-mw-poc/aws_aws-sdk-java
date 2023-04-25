@@ -28,6 +28,11 @@ public class AbstractAmazonConnect implements AmazonConnect {
     }
 
     @Override
+    public ActivateEvaluationFormResult activateEvaluationForm(ActivateEvaluationFormRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public AssociateApprovedOriginResult associateApprovedOrigin(AssociateApprovedOriginRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -94,6 +99,11 @@ public class AbstractAmazonConnect implements AmazonConnect {
 
     @Override
     public CreateContactFlowModuleResult createContactFlowModule(CreateContactFlowModuleRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public CreateEvaluationFormResult createEvaluationForm(CreateEvaluationFormRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -173,12 +183,27 @@ public class AbstractAmazonConnect implements AmazonConnect {
     }
 
     @Override
+    public DeactivateEvaluationFormResult deactivateEvaluationForm(DeactivateEvaluationFormRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteContactEvaluationResult deleteContactEvaluation(DeleteContactEvaluationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DeleteContactFlowResult deleteContactFlow(DeleteContactFlowRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
     @Override
     public DeleteContactFlowModuleResult deleteContactFlowModule(DeleteContactFlowModuleRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteEvaluationFormResult deleteEvaluationForm(DeleteEvaluationFormRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -253,12 +278,22 @@ public class AbstractAmazonConnect implements AmazonConnect {
     }
 
     @Override
+    public DescribeContactEvaluationResult describeContactEvaluation(DescribeContactEvaluationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DescribeContactFlowResult describeContactFlow(DescribeContactFlowRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
     @Override
     public DescribeContactFlowModuleResult describeContactFlowModule(DescribeContactFlowModuleRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DescribeEvaluationFormResult describeEvaluationForm(DescribeEvaluationFormRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -443,6 +478,11 @@ public class AbstractAmazonConnect implements AmazonConnect {
     }
 
     @Override
+    public ListContactEvaluationsResult listContactEvaluations(ListContactEvaluationsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListContactFlowModulesResult listContactFlowModules(ListContactFlowModulesRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -459,6 +499,16 @@ public class AbstractAmazonConnect implements AmazonConnect {
 
     @Override
     public ListDefaultVocabulariesResult listDefaultVocabularies(ListDefaultVocabulariesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListEvaluationFormVersionsResult listEvaluationFormVersions(ListEvaluationFormVersionsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListEvaluationFormsResult listEvaluationForms(ListEvaluationFormsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -648,6 +698,11 @@ public class AbstractAmazonConnect implements AmazonConnect {
     }
 
     @Override
+    public StartContactEvaluationResult startContactEvaluation(StartContactEvaluationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public StartContactRecordingResult startContactRecording(StartContactRecordingRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -679,6 +734,11 @@ public class AbstractAmazonConnect implements AmazonConnect {
 
     @Override
     public StopContactStreamingResult stopContactStreaming(StopContactStreamingRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public SubmitContactEvaluationResult submitContactEvaluation(SubmitContactEvaluationRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -718,6 +778,11 @@ public class AbstractAmazonConnect implements AmazonConnect {
     }
 
     @Override
+    public UpdateContactEvaluationResult updateContactEvaluation(UpdateContactEvaluationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public UpdateContactFlowContentResult updateContactFlowContent(UpdateContactFlowContentRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -744,6 +809,11 @@ public class AbstractAmazonConnect implements AmazonConnect {
 
     @Override
     public UpdateContactScheduleResult updateContactSchedule(UpdateContactScheduleRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateEvaluationFormResult updateEvaluationForm(UpdateEvaluationFormRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

@@ -50,6 +50,39 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
+     * Activates an evaluation form in the specified Amazon Connect instance. After the evaluation form is activated, it
+     * is available to start new evaluations based on the form.
+     * </p>
+     * 
+     * @param activateEvaluationFormRequest
+     * @return A Java Future containing the result of the ActivateEvaluationForm operation returned by the service.
+     * @sample AmazonConnectAsync.ActivateEvaluationForm
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/ActivateEvaluationForm" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ActivateEvaluationFormResult> activateEvaluationFormAsync(ActivateEvaluationFormRequest activateEvaluationFormRequest);
+
+    /**
+     * <p>
+     * Activates an evaluation form in the specified Amazon Connect instance. After the evaluation form is activated, it
+     * is available to start new evaluations based on the form.
+     * </p>
+     * 
+     * @param activateEvaluationFormRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ActivateEvaluationForm operation returned by the service.
+     * @sample AmazonConnectAsyncHandler.ActivateEvaluationForm
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/ActivateEvaluationForm" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ActivateEvaluationFormResult> activateEvaluationFormAsync(ActivateEvaluationFormRequest activateEvaluationFormRequest,
+            com.amazonaws.handlers.AsyncHandler<ActivateEvaluationFormRequest, ActivateEvaluationFormResult> asyncHandler);
+
+    /**
+     * <p>
      * This API is in preview release for Amazon Connect and is subject to change.
      * </p>
      * <p>
@@ -634,6 +667,43 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
+     * Creates an evaluation form in the specified Amazon Connect instance. The form can be used to define questions
+     * related to agent performance, and create sections to organize such questions. An evaluation form must have a
+     * unique title within an instance. Question and section identifiers cannot be duplicated within the same evaluation
+     * form.
+     * </p>
+     * 
+     * @param createEvaluationFormRequest
+     * @return A Java Future containing the result of the CreateEvaluationForm operation returned by the service.
+     * @sample AmazonConnectAsync.CreateEvaluationForm
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/CreateEvaluationForm" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateEvaluationFormResult> createEvaluationFormAsync(CreateEvaluationFormRequest createEvaluationFormRequest);
+
+    /**
+     * <p>
+     * Creates an evaluation form in the specified Amazon Connect instance. The form can be used to define questions
+     * related to agent performance, and create sections to organize such questions. An evaluation form must have a
+     * unique title within an instance. Question and section identifiers cannot be duplicated within the same evaluation
+     * form.
+     * </p>
+     * 
+     * @param createEvaluationFormRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateEvaluationForm operation returned by the service.
+     * @sample AmazonConnectAsyncHandler.CreateEvaluationForm
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/CreateEvaluationForm" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateEvaluationFormResult> createEvaluationFormAsync(CreateEvaluationFormRequest createEvaluationFormRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateEvaluationFormRequest, CreateEvaluationFormResult> asyncHandler);
+
+    /**
+     * <p>
      * This API is in preview release for Amazon Connect and is subject to change.
      * </p>
      * <p>
@@ -1207,6 +1277,70 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
+     * Deactivates an evaluation form in the specified Amazon Connect instance. After a form is deactivated, it is no
+     * longer available for users to start new evaluations based on the form.
+     * </p>
+     * 
+     * @param deactivateEvaluationFormRequest
+     * @return A Java Future containing the result of the DeactivateEvaluationForm operation returned by the service.
+     * @sample AmazonConnectAsync.DeactivateEvaluationForm
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DeactivateEvaluationForm"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeactivateEvaluationFormResult> deactivateEvaluationFormAsync(DeactivateEvaluationFormRequest deactivateEvaluationFormRequest);
+
+    /**
+     * <p>
+     * Deactivates an evaluation form in the specified Amazon Connect instance. After a form is deactivated, it is no
+     * longer available for users to start new evaluations based on the form.
+     * </p>
+     * 
+     * @param deactivateEvaluationFormRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeactivateEvaluationForm operation returned by the service.
+     * @sample AmazonConnectAsyncHandler.DeactivateEvaluationForm
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DeactivateEvaluationForm"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeactivateEvaluationFormResult> deactivateEvaluationFormAsync(DeactivateEvaluationFormRequest deactivateEvaluationFormRequest,
+            com.amazonaws.handlers.AsyncHandler<DeactivateEvaluationFormRequest, DeactivateEvaluationFormResult> asyncHandler);
+
+    /**
+     * <p>
+     * Deletes a contact evaluation in the specified Amazon Connect instance.
+     * </p>
+     * 
+     * @param deleteContactEvaluationRequest
+     * @return A Java Future containing the result of the DeleteContactEvaluation operation returned by the service.
+     * @sample AmazonConnectAsync.DeleteContactEvaluation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DeleteContactEvaluation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteContactEvaluationResult> deleteContactEvaluationAsync(DeleteContactEvaluationRequest deleteContactEvaluationRequest);
+
+    /**
+     * <p>
+     * Deletes a contact evaluation in the specified Amazon Connect instance.
+     * </p>
+     * 
+     * @param deleteContactEvaluationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteContactEvaluation operation returned by the service.
+     * @sample AmazonConnectAsyncHandler.DeleteContactEvaluation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DeleteContactEvaluation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteContactEvaluationResult> deleteContactEvaluationAsync(DeleteContactEvaluationRequest deleteContactEvaluationRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteContactEvaluationRequest, DeleteContactEvaluationResult> asyncHandler);
+
+    /**
+     * <p>
      * Deletes a flow for the specified Amazon Connect instance.
      * </p>
      * 
@@ -1266,6 +1400,61 @@ public interface AmazonConnectAsync extends AmazonConnect {
      */
     java.util.concurrent.Future<DeleteContactFlowModuleResult> deleteContactFlowModuleAsync(DeleteContactFlowModuleRequest deleteContactFlowModuleRequest,
             com.amazonaws.handlers.AsyncHandler<DeleteContactFlowModuleRequest, DeleteContactFlowModuleResult> asyncHandler);
+
+    /**
+     * <p>
+     * Deletes an evaluation form in the specified Amazon Connect instance.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * If the version property is provided, only the specified version of the evaluation form is deleted.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If no version is provided, then the full form (all versions) is deleted.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param deleteEvaluationFormRequest
+     * @return A Java Future containing the result of the DeleteEvaluationForm operation returned by the service.
+     * @sample AmazonConnectAsync.DeleteEvaluationForm
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DeleteEvaluationForm" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteEvaluationFormResult> deleteEvaluationFormAsync(DeleteEvaluationFormRequest deleteEvaluationFormRequest);
+
+    /**
+     * <p>
+     * Deletes an evaluation form in the specified Amazon Connect instance.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * If the version property is provided, only the specified version of the evaluation form is deleted.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If no version is provided, then the full form (all versions) is deleted.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param deleteEvaluationFormRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteEvaluationForm operation returned by the service.
+     * @sample AmazonConnectAsyncHandler.DeleteEvaluationForm
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DeleteEvaluationForm" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteEvaluationFormResult> deleteEvaluationFormAsync(DeleteEvaluationFormRequest deleteEvaluationFormRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteEvaluationFormRequest, DeleteEvaluationFormResult> asyncHandler);
 
     /**
      * <p>
@@ -1795,6 +1984,39 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
+     * Describes a contact evaluation in the specified Amazon Connect instance.
+     * </p>
+     * 
+     * @param describeContactEvaluationRequest
+     * @return A Java Future containing the result of the DescribeContactEvaluation operation returned by the service.
+     * @sample AmazonConnectAsync.DescribeContactEvaluation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DescribeContactEvaluation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeContactEvaluationResult> describeContactEvaluationAsync(
+            DescribeContactEvaluationRequest describeContactEvaluationRequest);
+
+    /**
+     * <p>
+     * Describes a contact evaluation in the specified Amazon Connect instance.
+     * </p>
+     * 
+     * @param describeContactEvaluationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeContactEvaluation operation returned by the service.
+     * @sample AmazonConnectAsyncHandler.DescribeContactEvaluation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DescribeContactEvaluation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeContactEvaluationResult> describeContactEvaluationAsync(
+            DescribeContactEvaluationRequest describeContactEvaluationRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeContactEvaluationRequest, DescribeContactEvaluationResult> asyncHandler);
+
+    /**
+     * <p>
      * Describes the specified flow.
      * </p>
      * <p>
@@ -1866,6 +2088,39 @@ public interface AmazonConnectAsync extends AmazonConnect {
     java.util.concurrent.Future<DescribeContactFlowModuleResult> describeContactFlowModuleAsync(
             DescribeContactFlowModuleRequest describeContactFlowModuleRequest,
             com.amazonaws.handlers.AsyncHandler<DescribeContactFlowModuleRequest, DescribeContactFlowModuleResult> asyncHandler);
+
+    /**
+     * <p>
+     * Describes an evaluation form in the specified Amazon Connect instance. If the version property is not provided,
+     * the latest version of the evaluation form is described.
+     * </p>
+     * 
+     * @param describeEvaluationFormRequest
+     * @return A Java Future containing the result of the DescribeEvaluationForm operation returned by the service.
+     * @sample AmazonConnectAsync.DescribeEvaluationForm
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DescribeEvaluationForm" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeEvaluationFormResult> describeEvaluationFormAsync(DescribeEvaluationFormRequest describeEvaluationFormRequest);
+
+    /**
+     * <p>
+     * Describes an evaluation form in the specified Amazon Connect instance. If the version property is not provided,
+     * the latest version of the evaluation form is described.
+     * </p>
+     * 
+     * @param describeEvaluationFormRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeEvaluationForm operation returned by the service.
+     * @sample AmazonConnectAsyncHandler.DescribeEvaluationForm
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DescribeEvaluationForm" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeEvaluationFormResult> describeEvaluationFormAsync(DescribeEvaluationFormRequest describeEvaluationFormRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeEvaluationFormRequest, DescribeEvaluationFormResult> asyncHandler);
 
     /**
      * <p>
@@ -3253,6 +3508,37 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
+     * Lists contact evaluations in the specified Amazon Connect instance.
+     * </p>
+     * 
+     * @param listContactEvaluationsRequest
+     * @return A Java Future containing the result of the ListContactEvaluations operation returned by the service.
+     * @sample AmazonConnectAsync.ListContactEvaluations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/ListContactEvaluations" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ListContactEvaluationsResult> listContactEvaluationsAsync(ListContactEvaluationsRequest listContactEvaluationsRequest);
+
+    /**
+     * <p>
+     * Lists contact evaluations in the specified Amazon Connect instance.
+     * </p>
+     * 
+     * @param listContactEvaluationsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListContactEvaluations operation returned by the service.
+     * @sample AmazonConnectAsyncHandler.ListContactEvaluations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/ListContactEvaluations" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ListContactEvaluationsResult> listContactEvaluationsAsync(ListContactEvaluationsRequest listContactEvaluationsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListContactEvaluationsRequest, ListContactEvaluationsResult> asyncHandler);
+
+    /**
+     * <p>
      * Provides information about the flow modules for the specified Amazon Connect instance.
      * </p>
      * 
@@ -3400,6 +3686,70 @@ public interface AmazonConnectAsync extends AmazonConnect {
      */
     java.util.concurrent.Future<ListDefaultVocabulariesResult> listDefaultVocabulariesAsync(ListDefaultVocabulariesRequest listDefaultVocabulariesRequest,
             com.amazonaws.handlers.AsyncHandler<ListDefaultVocabulariesRequest, ListDefaultVocabulariesResult> asyncHandler);
+
+    /**
+     * <p>
+     * Lists versions of an evaluation form in the specified Amazon Connect instance.
+     * </p>
+     * 
+     * @param listEvaluationFormVersionsRequest
+     * @return A Java Future containing the result of the ListEvaluationFormVersions operation returned by the service.
+     * @sample AmazonConnectAsync.ListEvaluationFormVersions
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/ListEvaluationFormVersions"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListEvaluationFormVersionsResult> listEvaluationFormVersionsAsync(
+            ListEvaluationFormVersionsRequest listEvaluationFormVersionsRequest);
+
+    /**
+     * <p>
+     * Lists versions of an evaluation form in the specified Amazon Connect instance.
+     * </p>
+     * 
+     * @param listEvaluationFormVersionsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListEvaluationFormVersions operation returned by the service.
+     * @sample AmazonConnectAsyncHandler.ListEvaluationFormVersions
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/ListEvaluationFormVersions"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListEvaluationFormVersionsResult> listEvaluationFormVersionsAsync(
+            ListEvaluationFormVersionsRequest listEvaluationFormVersionsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListEvaluationFormVersionsRequest, ListEvaluationFormVersionsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Lists evaluation forms in the specified Amazon Connect instance.
+     * </p>
+     * 
+     * @param listEvaluationFormsRequest
+     * @return A Java Future containing the result of the ListEvaluationForms operation returned by the service.
+     * @sample AmazonConnectAsync.ListEvaluationForms
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/ListEvaluationForms" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ListEvaluationFormsResult> listEvaluationFormsAsync(ListEvaluationFormsRequest listEvaluationFormsRequest);
+
+    /**
+     * <p>
+     * Lists evaluation forms in the specified Amazon Connect instance.
+     * </p>
+     * 
+     * @param listEvaluationFormsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListEvaluationForms operation returned by the service.
+     * @sample AmazonConnectAsyncHandler.ListEvaluationForms
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/ListEvaluationForms" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ListEvaluationFormsResult> listEvaluationFormsAsync(ListEvaluationFormsRequest listEvaluationFormsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListEvaluationFormsRequest, ListEvaluationFormsResult> asyncHandler);
 
     /**
      * <p>
@@ -4902,6 +5252,51 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
+     * Starts an empty evaluation in the specified Amazon Connect instance, using the given evaluation form for the
+     * particular contact. The evaluation form version used for the contact evaluation corresponds to the currently
+     * activated version. If no version is activated for the evaluation form, the contact evaluation cannot be started.
+     * </p>
+     * <note>
+     * <p>
+     * Evaluations created through the public API do not contain answer values suggested from automation.
+     * </p>
+     * </note>
+     * 
+     * @param startContactEvaluationRequest
+     * @return A Java Future containing the result of the StartContactEvaluation operation returned by the service.
+     * @sample AmazonConnectAsync.StartContactEvaluation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/StartContactEvaluation" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<StartContactEvaluationResult> startContactEvaluationAsync(StartContactEvaluationRequest startContactEvaluationRequest);
+
+    /**
+     * <p>
+     * Starts an empty evaluation in the specified Amazon Connect instance, using the given evaluation form for the
+     * particular contact. The evaluation form version used for the contact evaluation corresponds to the currently
+     * activated version. If no version is activated for the evaluation form, the contact evaluation cannot be started.
+     * </p>
+     * <note>
+     * <p>
+     * Evaluations created through the public API do not contain answer values suggested from automation.
+     * </p>
+     * </note>
+     * 
+     * @param startContactEvaluationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the StartContactEvaluation operation returned by the service.
+     * @sample AmazonConnectAsyncHandler.StartContactEvaluation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/StartContactEvaluation" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<StartContactEvaluationResult> startContactEvaluationAsync(StartContactEvaluationRequest startContactEvaluationRequest,
+            com.amazonaws.handlers.AsyncHandler<StartContactEvaluationRequest, StartContactEvaluationResult> asyncHandler);
+
+    /**
+     * <p>
      * Starts recording the contact:
      * </p>
      * <ul>
@@ -5281,6 +5676,49 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
+     * Submits a contact evaluation in the specified Amazon Connect instance. Answers included in the request are merged
+     * with existing answers for the given evaluation. If no answers or notes are passed, the evaluation is submitted
+     * with the existing answers and notes. You can delete an answer or note by passing an empty object (<code>{}</code>
+     * ) to the question identifier.
+     * </p>
+     * <p>
+     * If a contact evaluation is already in submitted state, this operation will trigger a resubmission.
+     * </p>
+     * 
+     * @param submitContactEvaluationRequest
+     * @return A Java Future containing the result of the SubmitContactEvaluation operation returned by the service.
+     * @sample AmazonConnectAsync.SubmitContactEvaluation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/SubmitContactEvaluation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<SubmitContactEvaluationResult> submitContactEvaluationAsync(SubmitContactEvaluationRequest submitContactEvaluationRequest);
+
+    /**
+     * <p>
+     * Submits a contact evaluation in the specified Amazon Connect instance. Answers included in the request are merged
+     * with existing answers for the given evaluation. If no answers or notes are passed, the evaluation is submitted
+     * with the existing answers and notes. You can delete an answer or note by passing an empty object (<code>{}</code>
+     * ) to the question identifier.
+     * </p>
+     * <p>
+     * If a contact evaluation is already in submitted state, this operation will trigger a resubmission.
+     * </p>
+     * 
+     * @param submitContactEvaluationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the SubmitContactEvaluation operation returned by the service.
+     * @sample AmazonConnectAsyncHandler.SubmitContactEvaluation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/SubmitContactEvaluation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<SubmitContactEvaluationResult> submitContactEvaluationAsync(SubmitContactEvaluationRequest submitContactEvaluationRequest,
+            com.amazonaws.handlers.AsyncHandler<SubmitContactEvaluationRequest, SubmitContactEvaluationResult> asyncHandler);
+
+    /**
+     * <p>
      * When a contact is being recorded, this API suspends recording the call. For example, you might suspend the call
      * recording while collecting sensitive information, such as a credit card number. Then use ResumeContactRecording
      * to restart recording.
@@ -5652,6 +6090,41 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
+     * Updates details about a contact evaluation in the specified Amazon Connect instance. A contact evaluation must be
+     * in draft state. Answers included in the request are merged with existing answers for the given evaluation. An
+     * answer or note can be deleted by passing an empty object (<code>{}</code>) to the question identifier.
+     * </p>
+     * 
+     * @param updateContactEvaluationRequest
+     * @return A Java Future containing the result of the UpdateContactEvaluation operation returned by the service.
+     * @sample AmazonConnectAsync.UpdateContactEvaluation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/UpdateContactEvaluation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateContactEvaluationResult> updateContactEvaluationAsync(UpdateContactEvaluationRequest updateContactEvaluationRequest);
+
+    /**
+     * <p>
+     * Updates details about a contact evaluation in the specified Amazon Connect instance. A contact evaluation must be
+     * in draft state. Answers included in the request are merged with existing answers for the given evaluation. An
+     * answer or note can be deleted by passing an empty object (<code>{}</code>) to the question identifier.
+     * </p>
+     * 
+     * @param updateContactEvaluationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateContactEvaluation operation returned by the service.
+     * @sample AmazonConnectAsyncHandler.UpdateContactEvaluation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/UpdateContactEvaluation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateContactEvaluationResult> updateContactEvaluationAsync(UpdateContactEvaluationRequest updateContactEvaluationRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateContactEvaluationRequest, UpdateContactEvaluationResult> asyncHandler);
+
+    /**
+     * <p>
      * Updates the specified flow.
      * </p>
      * <p>
@@ -5865,6 +6338,47 @@ public interface AmazonConnectAsync extends AmazonConnect {
      */
     java.util.concurrent.Future<UpdateContactScheduleResult> updateContactScheduleAsync(UpdateContactScheduleRequest updateContactScheduleRequest,
             com.amazonaws.handlers.AsyncHandler<UpdateContactScheduleRequest, UpdateContactScheduleResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates details about a specific evaluation form version in the specified Amazon Connect instance. An evaluation
+     * form must have a unique title within an instance. Question and section identifiers cannot be duplicated within
+     * the same evaluation form.
+     * </p>
+     * <p>
+     * This operation does not support partial updates. Instead it does a full update of evaluation form content.
+     * </p>
+     * 
+     * @param updateEvaluationFormRequest
+     * @return A Java Future containing the result of the UpdateEvaluationForm operation returned by the service.
+     * @sample AmazonConnectAsync.UpdateEvaluationForm
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/UpdateEvaluationForm" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateEvaluationFormResult> updateEvaluationFormAsync(UpdateEvaluationFormRequest updateEvaluationFormRequest);
+
+    /**
+     * <p>
+     * Updates details about a specific evaluation form version in the specified Amazon Connect instance. An evaluation
+     * form must have a unique title within an instance. Question and section identifiers cannot be duplicated within
+     * the same evaluation form.
+     * </p>
+     * <p>
+     * This operation does not support partial updates. Instead it does a full update of evaluation form content.
+     * </p>
+     * 
+     * @param updateEvaluationFormRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateEvaluationForm operation returned by the service.
+     * @sample AmazonConnectAsyncHandler.UpdateEvaluationForm
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/UpdateEvaluationForm" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateEvaluationFormResult> updateEvaluationFormAsync(UpdateEvaluationFormRequest updateEvaluationFormRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateEvaluationFormRequest, UpdateEvaluationFormResult> asyncHandler);
 
     /**
      * <p>

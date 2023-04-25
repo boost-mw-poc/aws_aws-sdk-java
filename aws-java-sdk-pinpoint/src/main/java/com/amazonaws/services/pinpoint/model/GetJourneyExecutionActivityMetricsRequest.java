@@ -46,8 +46,8 @@ public class GetJourneyExecutionActivityMetricsRequest extends com.amazonaws.Ama
     private String journeyId;
     /**
      * <p>
-     * The string that specifies which page of results to return in a paginated response. This parameter is not
-     * supported for application, campaign, and journey metrics.
+     * The
+     * <code/> string that specifies which page of results to return in a paginated response. This parameter is not supported for application, campaign, and journey metrics.
      * </p>
      */
     private String nextToken;
@@ -187,13 +187,13 @@ public class GetJourneyExecutionActivityMetricsRequest extends com.amazonaws.Ama
 
     /**
      * <p>
-     * The string that specifies which page of results to return in a paginated response. This parameter is not
-     * supported for application, campaign, and journey metrics.
+     * The
+     * <code/> string that specifies which page of results to return in a paginated response. This parameter is not supported for application, campaign, and journey metrics.
      * </p>
      * 
      * @param nextToken
-     *        The string that specifies which page of results to return in a paginated response. This parameter is not
-     *        supported for application, campaign, and journey metrics.
+     *        The
+     *        <code/> string that specifies which page of results to return in a paginated response. This parameter is not supported for application, campaign, and journey metrics.
      */
 
     public void setNextToken(String nextToken) {
@@ -202,12 +202,12 @@ public class GetJourneyExecutionActivityMetricsRequest extends com.amazonaws.Ama
 
     /**
      * <p>
-     * The string that specifies which page of results to return in a paginated response. This parameter is not
-     * supported for application, campaign, and journey metrics.
+     * The
+     * <code/> string that specifies which page of results to return in a paginated response. This parameter is not supported for application, campaign, and journey metrics.
      * </p>
      * 
-     * @return The string that specifies which page of results to return in a paginated response. This parameter is not
-     *         supported for application, campaign, and journey metrics.
+     * @return The
+     *         <code/> string that specifies which page of results to return in a paginated response. This parameter is not supported for application, campaign, and journey metrics.
      */
 
     public String getNextToken() {
@@ -216,13 +216,13 @@ public class GetJourneyExecutionActivityMetricsRequest extends com.amazonaws.Ama
 
     /**
      * <p>
-     * The string that specifies which page of results to return in a paginated response. This parameter is not
-     * supported for application, campaign, and journey metrics.
+     * The
+     * <code/> string that specifies which page of results to return in a paginated response. This parameter is not supported for application, campaign, and journey metrics.
      * </p>
      * 
      * @param nextToken
-     *        The string that specifies which page of results to return in a paginated response. This parameter is not
-     *        supported for application, campaign, and journey metrics.
+     *        The
+     *        <code/> string that specifies which page of results to return in a paginated response. This parameter is not supported for application, campaign, and journey metrics.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -27,7 +27,7 @@ public class UpdateTaskExecutionRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the specific task execution that is being updated.
+     * Specifies the Amazon Resource Name (ARN) of the task execution that you're updating.
      * </p>
      */
     private String taskExecutionArn;
@@ -36,11 +36,11 @@ public class UpdateTaskExecutionRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the specific task execution that is being updated.
+     * Specifies the Amazon Resource Name (ARN) of the task execution that you're updating.
      * </p>
      * 
      * @param taskExecutionArn
-     *        The Amazon Resource Name (ARN) of the specific task execution that is being updated.
+     *        Specifies the Amazon Resource Name (ARN) of the task execution that you're updating.
      */
 
     public void setTaskExecutionArn(String taskExecutionArn) {
@@ -49,10 +49,10 @@ public class UpdateTaskExecutionRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the specific task execution that is being updated.
+     * Specifies the Amazon Resource Name (ARN) of the task execution that you're updating.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the specific task execution that is being updated.
+     * @return Specifies the Amazon Resource Name (ARN) of the task execution that you're updating.
      */
 
     public String getTaskExecutionArn() {
@@ -61,11 +61,11 @@ public class UpdateTaskExecutionRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the specific task execution that is being updated.
+     * Specifies the Amazon Resource Name (ARN) of the task execution that you're updating.
      * </p>
      * 
      * @param taskExecutionArn
-     *        The Amazon Resource Name (ARN) of the specific task execution that is being updated.
+     *        Specifies the Amazon Resource Name (ARN) of the task execution that you're updating.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

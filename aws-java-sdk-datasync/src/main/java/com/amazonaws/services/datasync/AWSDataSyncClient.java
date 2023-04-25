@@ -140,6 +140,75 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
 
     /**
      * <p>
+     * Creates an Amazon Web Services resource for an on-premises storage system that you want DataSync Discovery to
+     * collect information about.
+     * </p>
+     * 
+     * @param addStorageSystemRequest
+     * @return Result of the AddStorageSystem operation returned by the service.
+     * @throws InvalidRequestException
+     *         This exception is thrown when the client submits a malformed request.
+     * @throws InternalException
+     *         This exception is thrown when an error occurs in the DataSync service.
+     * @sample AWSDataSync.AddStorageSystem
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/AddStorageSystem" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public AddStorageSystemResult addStorageSystem(AddStorageSystemRequest request) {
+        request = beforeClientExecution(request);
+        return executeAddStorageSystem(request);
+    }
+
+    @SdkInternalApi
+    final AddStorageSystemResult executeAddStorageSystem(AddStorageSystemRequest addStorageSystemRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(addStorageSystemRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<AddStorageSystemRequest> request = null;
+        Response<AddStorageSystemResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new AddStorageSystemRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(addStorageSystemRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "DataSync");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "AddStorageSystem");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            URI endpointTraitHost = null;
+            if (!clientConfiguration.isDisableHostPrefixInjection()) {
+
+                String hostPrefix = "discovery-";
+                String resolvedHostPrefix = String.format("discovery-");
+
+                endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<AddStorageSystemResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new AddStorageSystemResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Stops an DataSync task execution that's in progress. The transfer of some files are abruptly interrupted. File
      * contents that're transferred to the destination might be incomplete or inconsistent with the source files.
      * </p>
@@ -784,10 +853,33 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
 
     /**
      * <p>
-     * Creates an endpoint for an Amazon S3 bucket that DataSync can access for a transfer. For more information, see <a
-     * href
-     * ="https://docs.aws.amazon.com/datasync/latest/userguide/create-locations-cli.html#create-location-s3-cli">Create
-     * an Amazon S3 location</a>.
+     * A <i>location</i> is an endpoint for an Amazon S3 bucket. DataSync can use the location as a source or
+     * destination for copying data.
+     * </p>
+     * <important>
+     * <p>
+     * Before you create your location, make sure that you read the following sections:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <a href="https://docs.aws.amazon.com/datasync/latest/userguide/create-s3-location.html#using-storage-classes">
+     * Storage class considerations with Amazon S3 locations</a>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <a href=
+     * "https://docs.aws.amazon.com/datasync/latest/userguide/create-s3-location.html#create-s3-location-s3-requests"
+     * >Evaluating S3 request costs when using DataSync</a>
+     * </p>
+     * </li>
+     * </ul>
+     * </important>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/datasync/latest/userguide/create-locations-cli.html#create-location-s3-cli"
+     * >Creating an Amazon S3 location</a>.
      * </p>
      * 
      * @param createLocationS3Request
@@ -916,6 +1008,14 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
      * A task includes a source location, a destination location, and the preferences for how and when you want to
      * transfer your data (such as bandwidth limits, scheduling, among other options).
      * </p>
+     * <important>
+     * <p>
+     * If you're planning to transfer data to or from an Amazon S3 location, review <a href=
+     * "https://docs.aws.amazon.com/datasync/latest/userguide/create-s3-location.html#create-s3-location-s3-requests"
+     * >how DataSync can affect your S3 request charges</a> and the <a
+     * href="http://aws.amazon.com/datasync/pricing/">DataSync pricing page</a> before you begin.
+     * </p>
+     * </important>
      * 
      * @param createTaskRequest
      *        CreateTaskRequest
@@ -1205,6 +1305,74 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
             HttpResponseHandler<AmazonWebServiceResponse<DescribeAgentResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DescribeAgentResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Returns information about a DataSync discovery job.
+     * </p>
+     * 
+     * @param describeDiscoveryJobRequest
+     * @return Result of the DescribeDiscoveryJob operation returned by the service.
+     * @throws InvalidRequestException
+     *         This exception is thrown when the client submits a malformed request.
+     * @throws InternalException
+     *         This exception is thrown when an error occurs in the DataSync service.
+     * @sample AWSDataSync.DescribeDiscoveryJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/DescribeDiscoveryJob" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public DescribeDiscoveryJobResult describeDiscoveryJob(DescribeDiscoveryJobRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribeDiscoveryJob(request);
+    }
+
+    @SdkInternalApi
+    final DescribeDiscoveryJobResult executeDescribeDiscoveryJob(DescribeDiscoveryJobRequest describeDiscoveryJobRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describeDiscoveryJobRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeDiscoveryJobRequest> request = null;
+        Response<DescribeDiscoveryJobResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeDiscoveryJobRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(describeDiscoveryJobRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "DataSync");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeDiscoveryJob");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            URI endpointTraitHost = null;
+            if (!clientConfiguration.isDisableHostPrefixInjection()) {
+
+                String hostPrefix = "discovery-";
+                String resolvedHostPrefix = String.format("discovery-");
+
+                endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DescribeDiscoveryJobResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DescribeDiscoveryJobResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
 
             return response.getAwsResponse();
 
@@ -1834,6 +2002,217 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
 
     /**
      * <p>
+     * Returns information about an on-premises storage system that you're using with DataSync Discovery.
+     * </p>
+     * 
+     * @param describeStorageSystemRequest
+     * @return Result of the DescribeStorageSystem operation returned by the service.
+     * @throws InvalidRequestException
+     *         This exception is thrown when the client submits a malformed request.
+     * @throws InternalException
+     *         This exception is thrown when an error occurs in the DataSync service.
+     * @sample AWSDataSync.DescribeStorageSystem
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/DescribeStorageSystem" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public DescribeStorageSystemResult describeStorageSystem(DescribeStorageSystemRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribeStorageSystem(request);
+    }
+
+    @SdkInternalApi
+    final DescribeStorageSystemResult executeDescribeStorageSystem(DescribeStorageSystemRequest describeStorageSystemRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describeStorageSystemRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeStorageSystemRequest> request = null;
+        Response<DescribeStorageSystemResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeStorageSystemRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(describeStorageSystemRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "DataSync");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeStorageSystem");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            URI endpointTraitHost = null;
+            if (!clientConfiguration.isDisableHostPrefixInjection()) {
+
+                String hostPrefix = "discovery-";
+                String resolvedHostPrefix = String.format("discovery-");
+
+                endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DescribeStorageSystemResult>> responseHandler = protocolFactory
+                    .createResponseHandler(new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                            new DescribeStorageSystemResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Returns information, including performance data and capacity usage, which DataSync Discovery collects about a
+     * specific resource in your-premises storage system.
+     * </p>
+     * 
+     * @param describeStorageSystemResourceMetricsRequest
+     * @return Result of the DescribeStorageSystemResourceMetrics operation returned by the service.
+     * @throws InvalidRequestException
+     *         This exception is thrown when the client submits a malformed request.
+     * @throws InternalException
+     *         This exception is thrown when an error occurs in the DataSync service.
+     * @sample AWSDataSync.DescribeStorageSystemResourceMetrics
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/DescribeStorageSystemResourceMetrics"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DescribeStorageSystemResourceMetricsResult describeStorageSystemResourceMetrics(DescribeStorageSystemResourceMetricsRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribeStorageSystemResourceMetrics(request);
+    }
+
+    @SdkInternalApi
+    final DescribeStorageSystemResourceMetricsResult executeDescribeStorageSystemResourceMetrics(
+            DescribeStorageSystemResourceMetricsRequest describeStorageSystemResourceMetricsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describeStorageSystemResourceMetricsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeStorageSystemResourceMetricsRequest> request = null;
+        Response<DescribeStorageSystemResourceMetricsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeStorageSystemResourceMetricsRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(describeStorageSystemResourceMetricsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "DataSync");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeStorageSystemResourceMetrics");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            URI endpointTraitHost = null;
+            if (!clientConfiguration.isDisableHostPrefixInjection()) {
+
+                String hostPrefix = "discovery-";
+                String resolvedHostPrefix = String.format("discovery-");
+
+                endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DescribeStorageSystemResourceMetricsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new DescribeStorageSystemResourceMetricsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Returns information that DataSync Discovery collects about resources in your on-premises storage system.
+     * </p>
+     * 
+     * @param describeStorageSystemResourcesRequest
+     * @return Result of the DescribeStorageSystemResources operation returned by the service.
+     * @throws InvalidRequestException
+     *         This exception is thrown when the client submits a malformed request.
+     * @throws InternalException
+     *         This exception is thrown when an error occurs in the DataSync service.
+     * @sample AWSDataSync.DescribeStorageSystemResources
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/DescribeStorageSystemResources"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DescribeStorageSystemResourcesResult describeStorageSystemResources(DescribeStorageSystemResourcesRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribeStorageSystemResources(request);
+    }
+
+    @SdkInternalApi
+    final DescribeStorageSystemResourcesResult executeDescribeStorageSystemResources(DescribeStorageSystemResourcesRequest describeStorageSystemResourcesRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describeStorageSystemResourcesRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeStorageSystemResourcesRequest> request = null;
+        Response<DescribeStorageSystemResourcesResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeStorageSystemResourcesRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(describeStorageSystemResourcesRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "DataSync");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeStorageSystemResources");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            URI endpointTraitHost = null;
+            if (!clientConfiguration.isDisableHostPrefixInjection()) {
+
+                String hostPrefix = "discovery-";
+                String resolvedHostPrefix = String.format("discovery-");
+
+                endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DescribeStorageSystemResourcesResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new DescribeStorageSystemResourcesResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Returns metadata about a task.
      * </p>
      * 
@@ -1955,6 +2334,93 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
 
     /**
      * <p>
+     * Creates recommendations about where to migrate your data to in Amazon Web Services. Recommendations are generated
+     * based on information that DataSync Discovery collects about your on-premises storage system's resources. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/datasync/latest/userguide/discovery-understand-recommendations.html"
+     * >Recommendations provided by DataSync Discovery</a>.
+     * </p>
+     * <p>
+     * Once generated, you can view your recommendations by using the <a
+     * href="https://docs.aws.amazon.com/datasync/latest/userguide/API_DescribeStorageSystemResources.html"
+     * >DescribeStorageSystemResources</a> operation.
+     * </p>
+     * <note>
+     * <p>
+     * If your <a href=
+     * "https://docs.aws.amazon.com/datasync/latest/userguide/discovery-job-statuses.html#discovery-job-statuses-table"
+     * >discovery job completes successfully</a>, you don't need to use this operation. DataSync Discovery generates the
+     * recommendations for you automatically.
+     * </p>
+     * </note>
+     * 
+     * @param generateRecommendationsRequest
+     * @return Result of the GenerateRecommendations operation returned by the service.
+     * @throws InvalidRequestException
+     *         This exception is thrown when the client submits a malformed request.
+     * @throws InternalException
+     *         This exception is thrown when an error occurs in the DataSync service.
+     * @sample AWSDataSync.GenerateRecommendations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/GenerateRecommendations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GenerateRecommendationsResult generateRecommendations(GenerateRecommendationsRequest request) {
+        request = beforeClientExecution(request);
+        return executeGenerateRecommendations(request);
+    }
+
+    @SdkInternalApi
+    final GenerateRecommendationsResult executeGenerateRecommendations(GenerateRecommendationsRequest generateRecommendationsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(generateRecommendationsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GenerateRecommendationsRequest> request = null;
+        Response<GenerateRecommendationsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GenerateRecommendationsRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(generateRecommendationsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "DataSync");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GenerateRecommendations");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            URI endpointTraitHost = null;
+            if (!clientConfiguration.isDisableHostPrefixInjection()) {
+
+                String hostPrefix = "discovery-";
+                String resolvedHostPrefix = String.format("discovery-");
+
+                endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GenerateRecommendationsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new GenerateRecommendationsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Returns a list of DataSync agents that belong to an Amazon Web Services account in the Amazon Web Services Region
      * specified in the request.
      * </p>
@@ -2029,6 +2495,75 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
 
     /**
      * <p>
+     * Provides a list of the existing discovery jobs in the Amazon Web Services Region and Amazon Web Services account
+     * where you're using DataSync Discovery.
+     * </p>
+     * 
+     * @param listDiscoveryJobsRequest
+     * @return Result of the ListDiscoveryJobs operation returned by the service.
+     * @throws InvalidRequestException
+     *         This exception is thrown when the client submits a malformed request.
+     * @throws InternalException
+     *         This exception is thrown when an error occurs in the DataSync service.
+     * @sample AWSDataSync.ListDiscoveryJobs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/ListDiscoveryJobs" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public ListDiscoveryJobsResult listDiscoveryJobs(ListDiscoveryJobsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListDiscoveryJobs(request);
+    }
+
+    @SdkInternalApi
+    final ListDiscoveryJobsResult executeListDiscoveryJobs(ListDiscoveryJobsRequest listDiscoveryJobsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listDiscoveryJobsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListDiscoveryJobsRequest> request = null;
+        Response<ListDiscoveryJobsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListDiscoveryJobsRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listDiscoveryJobsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "DataSync");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListDiscoveryJobs");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            URI endpointTraitHost = null;
+            if (!clientConfiguration.isDisableHostPrefixInjection()) {
+
+                String hostPrefix = "discovery-";
+                String resolvedHostPrefix = String.format("discovery-");
+
+                endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListDiscoveryJobsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListDiscoveryJobsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Returns a list of source and destination locations.
      * </p>
      * <p>
@@ -2083,6 +2618,74 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
             HttpResponseHandler<AmazonWebServiceResponse<ListLocationsResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListLocationsResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Lists the on-premises storage systems that you're using with DataSync Discovery.
+     * </p>
+     * 
+     * @param listStorageSystemsRequest
+     * @return Result of the ListStorageSystems operation returned by the service.
+     * @throws InvalidRequestException
+     *         This exception is thrown when the client submits a malformed request.
+     * @throws InternalException
+     *         This exception is thrown when an error occurs in the DataSync service.
+     * @sample AWSDataSync.ListStorageSystems
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/ListStorageSystems" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public ListStorageSystemsResult listStorageSystems(ListStorageSystemsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListStorageSystems(request);
+    }
+
+    @SdkInternalApi
+    final ListStorageSystemsResult executeListStorageSystems(ListStorageSystemsRequest listStorageSystemsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listStorageSystemsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListStorageSystemsRequest> request = null;
+        Response<ListStorageSystemsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListStorageSystemsRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listStorageSystemsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "DataSync");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListStorageSystems");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            URI endpointTraitHost = null;
+            if (!clientConfiguration.isDisableHostPrefixInjection()) {
+
+                String hostPrefix = "discovery-";
+                String resolvedHostPrefix = String.format("discovery-");
+
+                endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListStorageSystemsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListStorageSystemsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
 
             return response.getAwsResponse();
 
@@ -2274,6 +2877,146 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
 
     /**
      * <p>
+     * Permanently removes a storage system resource from DataSync Discovery, including the associated discovery jobs,
+     * collected data, and recommendations.
+     * </p>
+     * 
+     * @param removeStorageSystemRequest
+     * @return Result of the RemoveStorageSystem operation returned by the service.
+     * @throws InvalidRequestException
+     *         This exception is thrown when the client submits a malformed request.
+     * @throws InternalException
+     *         This exception is thrown when an error occurs in the DataSync service.
+     * @sample AWSDataSync.RemoveStorageSystem
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/RemoveStorageSystem" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public RemoveStorageSystemResult removeStorageSystem(RemoveStorageSystemRequest request) {
+        request = beforeClientExecution(request);
+        return executeRemoveStorageSystem(request);
+    }
+
+    @SdkInternalApi
+    final RemoveStorageSystemResult executeRemoveStorageSystem(RemoveStorageSystemRequest removeStorageSystemRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(removeStorageSystemRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<RemoveStorageSystemRequest> request = null;
+        Response<RemoveStorageSystemResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new RemoveStorageSystemRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(removeStorageSystemRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "DataSync");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "RemoveStorageSystem");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            URI endpointTraitHost = null;
+            if (!clientConfiguration.isDisableHostPrefixInjection()) {
+
+                String hostPrefix = "discovery-";
+                String resolvedHostPrefix = String.format("discovery-");
+
+                endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<RemoveStorageSystemResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new RemoveStorageSystemResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Runs a DataSync discovery job on your on-premises storage system. If you haven't added the storage system to
+     * DataSync Discovery yet, do this first by using the <a
+     * href="https://docs.aws.amazon.com/datasync/latest/userguide/API_AddStorageSystem.html">AddStorageSystem</a>
+     * operation.
+     * </p>
+     * 
+     * @param startDiscoveryJobRequest
+     * @return Result of the StartDiscoveryJob operation returned by the service.
+     * @throws InvalidRequestException
+     *         This exception is thrown when the client submits a malformed request.
+     * @throws InternalException
+     *         This exception is thrown when an error occurs in the DataSync service.
+     * @sample AWSDataSync.StartDiscoveryJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/StartDiscoveryJob" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public StartDiscoveryJobResult startDiscoveryJob(StartDiscoveryJobRequest request) {
+        request = beforeClientExecution(request);
+        return executeStartDiscoveryJob(request);
+    }
+
+    @SdkInternalApi
+    final StartDiscoveryJobResult executeStartDiscoveryJob(StartDiscoveryJobRequest startDiscoveryJobRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(startDiscoveryJobRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<StartDiscoveryJobRequest> request = null;
+        Response<StartDiscoveryJobResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new StartDiscoveryJobRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(startDiscoveryJobRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "DataSync");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "StartDiscoveryJob");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            URI endpointTraitHost = null;
+            if (!clientConfiguration.isDisableHostPrefixInjection()) {
+
+                String hostPrefix = "discovery-";
+                String resolvedHostPrefix = String.format("discovery-");
+
+                endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<StartDiscoveryJobResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new StartDiscoveryJobResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Starts an DataSync task. For each task, you can only run one task execution at a time.
      * </p>
      * <p>
@@ -2281,6 +3024,14 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
      * "https://docs.aws.amazon.com/datasync/latest/userguide/working-with-task-executions.html#understand-task-execution-statuses"
      * >Task execution statuses</a>.
      * </p>
+     * <important>
+     * <p>
+     * If you're planning to transfer data to or from an Amazon S3 location, review <a href=
+     * "https://docs.aws.amazon.com/datasync/latest/userguide/create-s3-location.html#create-s3-location-s3-requests"
+     * >how DataSync can affect your S3 request charges</a> and the <a
+     * href="http://aws.amazon.com/datasync/pricing/">DataSync pricing page</a> before you begin.
+     * </p>
+     * </important>
      * 
      * @param startTaskExecutionRequest
      *        StartTaskExecutionRequest
@@ -2328,6 +3079,80 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
             HttpResponseHandler<AmazonWebServiceResponse<StartTaskExecutionResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new StartTaskExecutionResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Stops a running DataSync discovery job.
+     * </p>
+     * <p>
+     * You can stop a discovery job anytime. A job that's stopped before it's scheduled to end likely will provide you
+     * some information about your on-premises storage system resources. To get recommendations for a stopped job, you
+     * must use the <a href="https://docs.aws.amazon.com/datasync/latest/userguide/API_GenerateRecommendations.html">
+     * GenerateRecommendations</a> operation.
+     * </p>
+     * 
+     * @param stopDiscoveryJobRequest
+     * @return Result of the StopDiscoveryJob operation returned by the service.
+     * @throws InvalidRequestException
+     *         This exception is thrown when the client submits a malformed request.
+     * @throws InternalException
+     *         This exception is thrown when an error occurs in the DataSync service.
+     * @sample AWSDataSync.StopDiscoveryJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/StopDiscoveryJob" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public StopDiscoveryJobResult stopDiscoveryJob(StopDiscoveryJobRequest request) {
+        request = beforeClientExecution(request);
+        return executeStopDiscoveryJob(request);
+    }
+
+    @SdkInternalApi
+    final StopDiscoveryJobResult executeStopDiscoveryJob(StopDiscoveryJobRequest stopDiscoveryJobRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(stopDiscoveryJobRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<StopDiscoveryJobRequest> request = null;
+        Response<StopDiscoveryJobResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new StopDiscoveryJobRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(stopDiscoveryJobRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "DataSync");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "StopDiscoveryJob");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            URI endpointTraitHost = null;
+            if (!clientConfiguration.isDisableHostPrefixInjection()) {
+
+                String hostPrefix = "discovery-";
+                String resolvedHostPrefix = String.format("discovery-");
+
+                endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<StopDiscoveryJobResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new StopDiscoveryJobResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
 
             return response.getAwsResponse();
 
@@ -2512,6 +3337,74 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
             HttpResponseHandler<AmazonWebServiceResponse<UpdateAgentResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new UpdateAgentResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Edits a DataSync discovery job configuration.
+     * </p>
+     * 
+     * @param updateDiscoveryJobRequest
+     * @return Result of the UpdateDiscoveryJob operation returned by the service.
+     * @throws InvalidRequestException
+     *         This exception is thrown when the client submits a malformed request.
+     * @throws InternalException
+     *         This exception is thrown when an error occurs in the DataSync service.
+     * @sample AWSDataSync.UpdateDiscoveryJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/UpdateDiscoveryJob" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public UpdateDiscoveryJobResult updateDiscoveryJob(UpdateDiscoveryJobRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateDiscoveryJob(request);
+    }
+
+    @SdkInternalApi
+    final UpdateDiscoveryJobResult executeUpdateDiscoveryJob(UpdateDiscoveryJobRequest updateDiscoveryJobRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateDiscoveryJobRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateDiscoveryJobRequest> request = null;
+        Response<UpdateDiscoveryJobResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateDiscoveryJobRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(updateDiscoveryJobRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "DataSync");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateDiscoveryJob");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            URI endpointTraitHost = null;
+            if (!clientConfiguration.isDisableHostPrefixInjection()) {
+
+                String hostPrefix = "discovery-";
+                String resolvedHostPrefix = String.format("discovery-");
+
+                endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdateDiscoveryJobResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new UpdateDiscoveryJobResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
 
             return response.getAwsResponse();
 
@@ -2770,6 +3663,74 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
 
     /**
      * <p>
+     * Modifies some configurations of an on-premises storage system resource that you're using with DataSync Discovery.
+     * </p>
+     * 
+     * @param updateStorageSystemRequest
+     * @return Result of the UpdateStorageSystem operation returned by the service.
+     * @throws InvalidRequestException
+     *         This exception is thrown when the client submits a malformed request.
+     * @throws InternalException
+     *         This exception is thrown when an error occurs in the DataSync service.
+     * @sample AWSDataSync.UpdateStorageSystem
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/UpdateStorageSystem" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public UpdateStorageSystemResult updateStorageSystem(UpdateStorageSystemRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateStorageSystem(request);
+    }
+
+    @SdkInternalApi
+    final UpdateStorageSystemResult executeUpdateStorageSystem(UpdateStorageSystemRequest updateStorageSystemRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateStorageSystemRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateStorageSystemRequest> request = null;
+        Response<UpdateStorageSystemResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateStorageSystemRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(updateStorageSystemRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "DataSync");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateStorageSystem");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            URI endpointTraitHost = null;
+            if (!clientConfiguration.isDisableHostPrefixInjection()) {
+
+                String hostPrefix = "discovery-";
+                String resolvedHostPrefix = String.format("discovery-");
+
+                endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdateStorageSystemResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new UpdateStorageSystemResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Updates the metadata associated with a task.
      * </p>
      * 
@@ -2830,19 +3791,13 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
 
     /**
      * <p>
-     * Updates execution of a task.
-     * </p>
-     * <p>
-     * You can modify bandwidth throttling for a task execution that is running or queued. For more information, see <a
-     * href=
-     * "https://docs.aws.amazon.com/datasync/latest/userguide/working-with-task-executions.html#adjust-bandwidth-throttling"
-     * >Adjusting Bandwidth Throttling for a Task Execution</a>.
+     * Modifies a running DataSync task.
      * </p>
      * <note>
      * <p>
-     * The only <code>Option</code> that can be modified by <code>UpdateTaskExecution</code> is
+     * Currently, the only <code>Option</code> that you can modify with <code>UpdateTaskExecution</code> is
      * <code> <a href="https://docs.aws.amazon.com/datasync/latest/userguide/API_Options.html#DataSync-Type-Options-BytesPerSecond">BytesPerSecond</a> </code>
-     * .
+     * , which throttles bandwidth for a running or queued task.
      * </p>
      * </note>
      * 
