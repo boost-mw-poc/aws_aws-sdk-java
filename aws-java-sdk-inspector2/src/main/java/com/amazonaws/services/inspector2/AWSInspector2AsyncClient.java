@@ -174,6 +174,76 @@ public class AWSInspector2AsyncClient extends AWSInspector2Client implements AWS
     }
 
     @Override
+    public java.util.concurrent.Future<BatchGetMemberEc2DeepInspectionStatusResult> batchGetMemberEc2DeepInspectionStatusAsync(
+            BatchGetMemberEc2DeepInspectionStatusRequest request) {
+
+        return batchGetMemberEc2DeepInspectionStatusAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<BatchGetMemberEc2DeepInspectionStatusResult> batchGetMemberEc2DeepInspectionStatusAsync(
+            final BatchGetMemberEc2DeepInspectionStatusRequest request,
+            final com.amazonaws.handlers.AsyncHandler<BatchGetMemberEc2DeepInspectionStatusRequest, BatchGetMemberEc2DeepInspectionStatusResult> asyncHandler) {
+        final BatchGetMemberEc2DeepInspectionStatusRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<BatchGetMemberEc2DeepInspectionStatusResult>() {
+            @Override
+            public BatchGetMemberEc2DeepInspectionStatusResult call() throws Exception {
+                BatchGetMemberEc2DeepInspectionStatusResult result = null;
+
+                try {
+                    result = executeBatchGetMemberEc2DeepInspectionStatus(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<BatchUpdateMemberEc2DeepInspectionStatusResult> batchUpdateMemberEc2DeepInspectionStatusAsync(
+            BatchUpdateMemberEc2DeepInspectionStatusRequest request) {
+
+        return batchUpdateMemberEc2DeepInspectionStatusAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<BatchUpdateMemberEc2DeepInspectionStatusResult> batchUpdateMemberEc2DeepInspectionStatusAsync(
+            final BatchUpdateMemberEc2DeepInspectionStatusRequest request,
+            final com.amazonaws.handlers.AsyncHandler<BatchUpdateMemberEc2DeepInspectionStatusRequest, BatchUpdateMemberEc2DeepInspectionStatusResult> asyncHandler) {
+        final BatchUpdateMemberEc2DeepInspectionStatusRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<BatchUpdateMemberEc2DeepInspectionStatusResult>() {
+            @Override
+            public BatchUpdateMemberEc2DeepInspectionStatusResult call() throws Exception {
+                BatchUpdateMemberEc2DeepInspectionStatusResult result = null;
+
+                try {
+                    result = executeBatchUpdateMemberEc2DeepInspectionStatus(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<CancelFindingsReportResult> cancelFindingsReportAsync(CancelFindingsReportRequest request) {
 
         return cancelFindingsReportAsync(request, null);
@@ -556,6 +626,41 @@ public class AWSInspector2AsyncClient extends AWSInspector2Client implements AWS
 
                 try {
                     result = executeGetDelegatedAdminAccount(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetEc2DeepInspectionConfigurationResult> getEc2DeepInspectionConfigurationAsync(
+            GetEc2DeepInspectionConfigurationRequest request) {
+
+        return getEc2DeepInspectionConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetEc2DeepInspectionConfigurationResult> getEc2DeepInspectionConfigurationAsync(
+            final GetEc2DeepInspectionConfigurationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetEc2DeepInspectionConfigurationRequest, GetEc2DeepInspectionConfigurationResult> asyncHandler) {
+        final GetEc2DeepInspectionConfigurationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetEc2DeepInspectionConfigurationResult>() {
+            @Override
+            public GetEc2DeepInspectionConfigurationResult call() throws Exception {
+                GetEc2DeepInspectionConfigurationResult result = null;
+
+                try {
+                    result = executeGetEc2DeepInspectionConfiguration(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -1067,6 +1172,41 @@ public class AWSInspector2AsyncClient extends AWSInspector2Client implements AWS
     }
 
     @Override
+    public java.util.concurrent.Future<UpdateEc2DeepInspectionConfigurationResult> updateEc2DeepInspectionConfigurationAsync(
+            UpdateEc2DeepInspectionConfigurationRequest request) {
+
+        return updateEc2DeepInspectionConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateEc2DeepInspectionConfigurationResult> updateEc2DeepInspectionConfigurationAsync(
+            final UpdateEc2DeepInspectionConfigurationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateEc2DeepInspectionConfigurationRequest, UpdateEc2DeepInspectionConfigurationResult> asyncHandler) {
+        final UpdateEc2DeepInspectionConfigurationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateEc2DeepInspectionConfigurationResult>() {
+            @Override
+            public UpdateEc2DeepInspectionConfigurationResult call() throws Exception {
+                UpdateEc2DeepInspectionConfigurationResult result = null;
+
+                try {
+                    result = executeUpdateEc2DeepInspectionConfiguration(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<UpdateFilterResult> updateFilterAsync(UpdateFilterRequest request) {
 
         return updateFilterAsync(request, null);
@@ -1084,6 +1224,41 @@ public class AWSInspector2AsyncClient extends AWSInspector2Client implements AWS
 
                 try {
                     result = executeUpdateFilter(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateOrgEc2DeepInspectionConfigurationResult> updateOrgEc2DeepInspectionConfigurationAsync(
+            UpdateOrgEc2DeepInspectionConfigurationRequest request) {
+
+        return updateOrgEc2DeepInspectionConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateOrgEc2DeepInspectionConfigurationResult> updateOrgEc2DeepInspectionConfigurationAsync(
+            final UpdateOrgEc2DeepInspectionConfigurationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateOrgEc2DeepInspectionConfigurationRequest, UpdateOrgEc2DeepInspectionConfigurationResult> asyncHandler) {
+        final UpdateOrgEc2DeepInspectionConfigurationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateOrgEc2DeepInspectionConfigurationResult>() {
+            @Override
+            public UpdateOrgEc2DeepInspectionConfigurationResult call() throws Exception {
+                UpdateOrgEc2DeepInspectionConfigurationResult result = null;
+
+                try {
+                    result = executeUpdateOrgEc2DeepInspectionConfiguration(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

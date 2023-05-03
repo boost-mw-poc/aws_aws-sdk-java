@@ -23,7 +23,9 @@ public enum AttachmentStatus {
     CREATING("CREATING"),
     DELETING("DELETING"),
     SCALING("SCALING"),
-    READY("READY");
+    READY("READY"),
+    FAILED("FAILED"),
+    ERROR("ERROR");
 
     private String value;
 

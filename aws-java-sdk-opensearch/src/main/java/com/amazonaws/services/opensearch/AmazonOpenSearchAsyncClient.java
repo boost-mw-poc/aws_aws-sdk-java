@@ -680,6 +680,39 @@ public class AmazonOpenSearchAsyncClient extends AmazonOpenSearchClient implemen
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeDomainHealthResult> describeDomainHealthAsync(DescribeDomainHealthRequest request) {
+
+        return describeDomainHealthAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeDomainHealthResult> describeDomainHealthAsync(final DescribeDomainHealthRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeDomainHealthRequest, DescribeDomainHealthResult> asyncHandler) {
+        final DescribeDomainHealthRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeDomainHealthResult>() {
+            @Override
+            public DescribeDomainHealthResult call() throws Exception {
+                DescribeDomainHealthResult result = null;
+
+                try {
+                    result = executeDescribeDomainHealth(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeDomainsResult> describeDomainsAsync(DescribeDomainsRequest request) {
 
         return describeDomainsAsync(request, null);

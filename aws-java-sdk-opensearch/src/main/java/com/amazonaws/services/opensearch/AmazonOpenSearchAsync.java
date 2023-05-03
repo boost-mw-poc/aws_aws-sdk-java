@@ -638,6 +638,37 @@ public interface AmazonOpenSearchAsync extends AmazonOpenSearch {
 
     /**
      * <p>
+     * Returns information about domain and node health, the standby Availability Zone, number of nodes per Availability
+     * Zone, and shard count per node.
+     * </p>
+     * 
+     * @param describeDomainHealthRequest
+     *        Container for the parameters to the <code>DescribeDomainHealth</code> operation.
+     * @return A Java Future containing the result of the DescribeDomainHealth operation returned by the service.
+     * @sample AmazonOpenSearchAsync.DescribeDomainHealth
+     */
+    java.util.concurrent.Future<DescribeDomainHealthResult> describeDomainHealthAsync(DescribeDomainHealthRequest describeDomainHealthRequest);
+
+    /**
+     * <p>
+     * Returns information about domain and node health, the standby Availability Zone, number of nodes per Availability
+     * Zone, and shard count per node.
+     * </p>
+     * 
+     * @param describeDomainHealthRequest
+     *        Container for the parameters to the <code>DescribeDomainHealth</code> operation.
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeDomainHealth operation returned by the service.
+     * @sample AmazonOpenSearchAsyncHandler.DescribeDomainHealth
+     */
+    java.util.concurrent.Future<DescribeDomainHealthResult> describeDomainHealthAsync(DescribeDomainHealthRequest describeDomainHealthRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeDomainHealthRequest, DescribeDomainHealthResult> asyncHandler);
+
+    /**
+     * <p>
      * Returns domain configuration information about the specified Amazon OpenSearch Service domains.
      * </p>
      * 
@@ -1005,8 +1036,8 @@ public interface AmazonOpenSearchAsync extends AmazonOpenSearch {
 
     /**
      * <p>
-     * Returns a list of Amazon OpenSearch Service package versions, along with their creation time and commit message.
-     * For more information, see <a
+     * Returns a list of Amazon OpenSearch Service package versions, along with their creation time, commit message, and
+     * plugin properties (if the package is a zip plugin package). For more information, see <a
      * href="https://docs.aws.amazon.com/opensearch-service/latest/developerguide/custom-packages.html">Custom packages
      * for Amazon OpenSearch Service</a>.
      * </p>
@@ -1020,8 +1051,8 @@ public interface AmazonOpenSearchAsync extends AmazonOpenSearch {
 
     /**
      * <p>
-     * Returns a list of Amazon OpenSearch Service package versions, along with their creation time and commit message.
-     * For more information, see <a
+     * Returns a list of Amazon OpenSearch Service package versions, along with their creation time, commit message, and
+     * plugin properties (if the package is a zip plugin package). For more information, see <a
      * href="https://docs.aws.amazon.com/opensearch-service/latest/developerguide/custom-packages.html">Custom packages
      * for Amazon OpenSearch Service</a>.
      * </p>

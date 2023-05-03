@@ -35,7 +35,12 @@ public interface AWSInspector2Async extends AWSInspector2 {
 
     /**
      * <p>
-     * Associates an Amazon Web Services account with an Amazon Inspector delegated administrator.
+     * Associates an Amazon Web Services account with an Amazon Inspector delegated administrator. An HTTP 200 response
+     * indicates the association was successfully started, but doesn’t indicate whether it was completed. You can check
+     * if the association completed by using <a
+     * href="https://docs.aws.amazon.com/inspector/v2/APIReference/API_ListMembers.html">ListMembers</a> for multiple
+     * accounts or <a href="https://docs.aws.amazon.com/inspector/v2/APIReference/API_GetMember.html">GetMembers</a> for
+     * a single account.
      * </p>
      * 
      * @param associateMemberRequest
@@ -48,7 +53,12 @@ public interface AWSInspector2Async extends AWSInspector2 {
 
     /**
      * <p>
-     * Associates an Amazon Web Services account with an Amazon Inspector delegated administrator.
+     * Associates an Amazon Web Services account with an Amazon Inspector delegated administrator. An HTTP 200 response
+     * indicates the association was successfully started, but doesn’t indicate whether it was completed. You can check
+     * if the association completed by using <a
+     * href="https://docs.aws.amazon.com/inspector/v2/APIReference/API_ListMembers.html">ListMembers</a> for multiple
+     * accounts or <a href="https://docs.aws.amazon.com/inspector/v2/APIReference/API_GetMember.html">GetMembers</a> for
+     * a single account.
      * </p>
      * 
      * @param associateMemberRequest
@@ -128,6 +138,82 @@ public interface AWSInspector2Async extends AWSInspector2 {
 
     /**
      * <p>
+     * Retrieves Amazon Inspector deep inspection activation status of multiple member accounts within your
+     * organization. You must be the delegated administrator of an organization in Amazon Inspector to use this API.
+     * </p>
+     * 
+     * @param batchGetMemberEc2DeepInspectionStatusRequest
+     * @return A Java Future containing the result of the BatchGetMemberEc2DeepInspectionStatus operation returned by
+     *         the service.
+     * @sample AWSInspector2Async.BatchGetMemberEc2DeepInspectionStatus
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/inspector2-2020-06-08/BatchGetMemberEc2DeepInspectionStatus"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<BatchGetMemberEc2DeepInspectionStatusResult> batchGetMemberEc2DeepInspectionStatusAsync(
+            BatchGetMemberEc2DeepInspectionStatusRequest batchGetMemberEc2DeepInspectionStatusRequest);
+
+    /**
+     * <p>
+     * Retrieves Amazon Inspector deep inspection activation status of multiple member accounts within your
+     * organization. You must be the delegated administrator of an organization in Amazon Inspector to use this API.
+     * </p>
+     * 
+     * @param batchGetMemberEc2DeepInspectionStatusRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the BatchGetMemberEc2DeepInspectionStatus operation returned by
+     *         the service.
+     * @sample AWSInspector2AsyncHandler.BatchGetMemberEc2DeepInspectionStatus
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/inspector2-2020-06-08/BatchGetMemberEc2DeepInspectionStatus"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<BatchGetMemberEc2DeepInspectionStatusResult> batchGetMemberEc2DeepInspectionStatusAsync(
+            BatchGetMemberEc2DeepInspectionStatusRequest batchGetMemberEc2DeepInspectionStatusRequest,
+            com.amazonaws.handlers.AsyncHandler<BatchGetMemberEc2DeepInspectionStatusRequest, BatchGetMemberEc2DeepInspectionStatusResult> asyncHandler);
+
+    /**
+     * <p>
+     * Activates or deactivates Amazon Inspector deep inspection for the provided member accounts in your organization.
+     * You must be the delegated administrator of an organization in Amazon Inspector to use this API.
+     * </p>
+     * 
+     * @param batchUpdateMemberEc2DeepInspectionStatusRequest
+     * @return A Java Future containing the result of the BatchUpdateMemberEc2DeepInspectionStatus operation returned by
+     *         the service.
+     * @sample AWSInspector2Async.BatchUpdateMemberEc2DeepInspectionStatus
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/inspector2-2020-06-08/BatchUpdateMemberEc2DeepInspectionStatus"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<BatchUpdateMemberEc2DeepInspectionStatusResult> batchUpdateMemberEc2DeepInspectionStatusAsync(
+            BatchUpdateMemberEc2DeepInspectionStatusRequest batchUpdateMemberEc2DeepInspectionStatusRequest);
+
+    /**
+     * <p>
+     * Activates or deactivates Amazon Inspector deep inspection for the provided member accounts in your organization.
+     * You must be the delegated administrator of an organization in Amazon Inspector to use this API.
+     * </p>
+     * 
+     * @param batchUpdateMemberEc2DeepInspectionStatusRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the BatchUpdateMemberEc2DeepInspectionStatus operation returned by
+     *         the service.
+     * @sample AWSInspector2AsyncHandler.BatchUpdateMemberEc2DeepInspectionStatus
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/inspector2-2020-06-08/BatchUpdateMemberEc2DeepInspectionStatus"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<BatchUpdateMemberEc2DeepInspectionStatusResult> batchUpdateMemberEc2DeepInspectionStatusAsync(
+            BatchUpdateMemberEc2DeepInspectionStatusRequest batchUpdateMemberEc2DeepInspectionStatusRequest,
+            com.amazonaws.handlers.AsyncHandler<BatchUpdateMemberEc2DeepInspectionStatusRequest, BatchUpdateMemberEc2DeepInspectionStatusResult> asyncHandler);
+
+    /**
+     * <p>
      * Cancels the given findings report.
      * </p>
      * 
@@ -190,7 +276,9 @@ public interface AWSInspector2Async extends AWSInspector2 {
 
     /**
      * <p>
-     * Creates a finding report.
+     * Creates a finding report. By default only <code>ACTIVE</code> findings are returned in the report. To see
+     * <code>SUPRESSED</code> or <code>CLOSED</code> findings you must specify a value for the
+     * <code>findingStatus</code> filter criteria.
      * </p>
      * 
      * @param createFindingsReportRequest
@@ -203,7 +291,9 @@ public interface AWSInspector2Async extends AWSInspector2 {
 
     /**
      * <p>
-     * Creates a finding report.
+     * Creates a finding report. By default only <code>ACTIVE</code> findings are returned in the report. To see
+     * <code>SUPRESSED</code> or <code>CLOSED</code> findings you must specify a value for the
+     * <code>findingStatus</code> filter criteria.
      * </p>
      * 
      * @param createFindingsReportRequest
@@ -509,6 +599,43 @@ public interface AWSInspector2Async extends AWSInspector2 {
      */
     java.util.concurrent.Future<GetDelegatedAdminAccountResult> getDelegatedAdminAccountAsync(GetDelegatedAdminAccountRequest getDelegatedAdminAccountRequest,
             com.amazonaws.handlers.AsyncHandler<GetDelegatedAdminAccountRequest, GetDelegatedAdminAccountResult> asyncHandler);
+
+    /**
+     * <p>
+     * Retrieves the activation status of Amazon Inspector deep inspection and custom paths associated with your
+     * account.
+     * </p>
+     * 
+     * @param getEc2DeepInspectionConfigurationRequest
+     * @return A Java Future containing the result of the GetEc2DeepInspectionConfiguration operation returned by the
+     *         service.
+     * @sample AWSInspector2Async.GetEc2DeepInspectionConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/inspector2-2020-06-08/GetEc2DeepInspectionConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetEc2DeepInspectionConfigurationResult> getEc2DeepInspectionConfigurationAsync(
+            GetEc2DeepInspectionConfigurationRequest getEc2DeepInspectionConfigurationRequest);
+
+    /**
+     * <p>
+     * Retrieves the activation status of Amazon Inspector deep inspection and custom paths associated with your
+     * account.
+     * </p>
+     * 
+     * @param getEc2DeepInspectionConfigurationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetEc2DeepInspectionConfiguration operation returned by the
+     *         service.
+     * @sample AWSInspector2AsyncHandler.GetEc2DeepInspectionConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/inspector2-2020-06-08/GetEc2DeepInspectionConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetEc2DeepInspectionConfigurationResult> getEc2DeepInspectionConfigurationAsync(
+            GetEc2DeepInspectionConfigurationRequest getEc2DeepInspectionConfigurationRequest,
+            com.amazonaws.handlers.AsyncHandler<GetEc2DeepInspectionConfigurationRequest, GetEc2DeepInspectionConfigurationResult> asyncHandler);
 
     /**
      * <p>
@@ -983,6 +1110,41 @@ public interface AWSInspector2Async extends AWSInspector2 {
 
     /**
      * <p>
+     * Activates, deactivates Amazon Inspector deep inspection, or updates custom paths for your account.
+     * </p>
+     * 
+     * @param updateEc2DeepInspectionConfigurationRequest
+     * @return A Java Future containing the result of the UpdateEc2DeepInspectionConfiguration operation returned by the
+     *         service.
+     * @sample AWSInspector2Async.UpdateEc2DeepInspectionConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/inspector2-2020-06-08/UpdateEc2DeepInspectionConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateEc2DeepInspectionConfigurationResult> updateEc2DeepInspectionConfigurationAsync(
+            UpdateEc2DeepInspectionConfigurationRequest updateEc2DeepInspectionConfigurationRequest);
+
+    /**
+     * <p>
+     * Activates, deactivates Amazon Inspector deep inspection, or updates custom paths for your account.
+     * </p>
+     * 
+     * @param updateEc2DeepInspectionConfigurationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateEc2DeepInspectionConfiguration operation returned by the
+     *         service.
+     * @sample AWSInspector2AsyncHandler.UpdateEc2DeepInspectionConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/inspector2-2020-06-08/UpdateEc2DeepInspectionConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateEc2DeepInspectionConfigurationResult> updateEc2DeepInspectionConfigurationAsync(
+            UpdateEc2DeepInspectionConfigurationRequest updateEc2DeepInspectionConfigurationRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateEc2DeepInspectionConfigurationRequest, UpdateEc2DeepInspectionConfigurationResult> asyncHandler);
+
+    /**
+     * <p>
      * Specifies the action that is to be applied to the findings that match the filter.
      * </p>
      * 
@@ -1011,6 +1173,45 @@ public interface AWSInspector2Async extends AWSInspector2 {
      */
     java.util.concurrent.Future<UpdateFilterResult> updateFilterAsync(UpdateFilterRequest updateFilterRequest,
             com.amazonaws.handlers.AsyncHandler<UpdateFilterRequest, UpdateFilterResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates the Amazon Inspector deep inspection custom paths for your organization. You must be an Amazon Inspector
+     * delegated administrator to use this API.
+     * </p>
+     * 
+     * @param updateOrgEc2DeepInspectionConfigurationRequest
+     * @return A Java Future containing the result of the UpdateOrgEc2DeepInspectionConfiguration operation returned by
+     *         the service.
+     * @sample AWSInspector2Async.UpdateOrgEc2DeepInspectionConfiguration
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/inspector2-2020-06-08/UpdateOrgEc2DeepInspectionConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateOrgEc2DeepInspectionConfigurationResult> updateOrgEc2DeepInspectionConfigurationAsync(
+            UpdateOrgEc2DeepInspectionConfigurationRequest updateOrgEc2DeepInspectionConfigurationRequest);
+
+    /**
+     * <p>
+     * Updates the Amazon Inspector deep inspection custom paths for your organization. You must be an Amazon Inspector
+     * delegated administrator to use this API.
+     * </p>
+     * 
+     * @param updateOrgEc2DeepInspectionConfigurationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateOrgEc2DeepInspectionConfiguration operation returned by
+     *         the service.
+     * @sample AWSInspector2AsyncHandler.UpdateOrgEc2DeepInspectionConfiguration
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/inspector2-2020-06-08/UpdateOrgEc2DeepInspectionConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateOrgEc2DeepInspectionConfigurationResult> updateOrgEc2DeepInspectionConfigurationAsync(
+            UpdateOrgEc2DeepInspectionConfigurationRequest updateOrgEc2DeepInspectionConfigurationRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateOrgEc2DeepInspectionConfigurationRequest, UpdateOrgEc2DeepInspectionConfigurationResult> asyncHandler);
 
     /**
      * <p>

@@ -152,7 +152,12 @@ public class AWSInspector2Client extends AmazonWebServiceClient implements AWSIn
 
     /**
      * <p>
-     * Associates an Amazon Web Services account with an Amazon Inspector delegated administrator.
+     * Associates an Amazon Web Services account with an Amazon Inspector delegated administrator. An HTTP 200 response
+     * indicates the association was successfully started, but doesn’t indicate whether it was completed. You can check
+     * if the association completed by using <a
+     * href="https://docs.aws.amazon.com/inspector/v2/APIReference/API_ListMembers.html">ListMembers</a> for multiple
+     * accounts or <a href="https://docs.aws.amazon.com/inspector/v2/APIReference/API_GetMember.html">GetMembers</a> for
+     * a single account.
      * </p>
      * 
      * @param associateMemberRequest
@@ -345,6 +350,141 @@ public class AWSInspector2Client extends AmazonWebServiceClient implements AWSIn
 
     /**
      * <p>
+     * Retrieves Amazon Inspector deep inspection activation status of multiple member accounts within your
+     * organization. You must be the delegated administrator of an organization in Amazon Inspector to use this API.
+     * </p>
+     * 
+     * @param batchGetMemberEc2DeepInspectionStatusRequest
+     * @return Result of the BatchGetMemberEc2DeepInspectionStatus operation returned by the service.
+     * @throws ValidationException
+     *         The request has failed validation due to missing required fields or having invalid inputs.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         The limit on the number of requests per second was exceeded.
+     * @throws InternalServerException
+     *         The request has failed due to an internal failure of the Amazon Inspector service.
+     * @sample AWSInspector2.BatchGetMemberEc2DeepInspectionStatus
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/inspector2-2020-06-08/BatchGetMemberEc2DeepInspectionStatus"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public BatchGetMemberEc2DeepInspectionStatusResult batchGetMemberEc2DeepInspectionStatus(BatchGetMemberEc2DeepInspectionStatusRequest request) {
+        request = beforeClientExecution(request);
+        return executeBatchGetMemberEc2DeepInspectionStatus(request);
+    }
+
+    @SdkInternalApi
+    final BatchGetMemberEc2DeepInspectionStatusResult executeBatchGetMemberEc2DeepInspectionStatus(
+            BatchGetMemberEc2DeepInspectionStatusRequest batchGetMemberEc2DeepInspectionStatusRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(batchGetMemberEc2DeepInspectionStatusRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<BatchGetMemberEc2DeepInspectionStatusRequest> request = null;
+        Response<BatchGetMemberEc2DeepInspectionStatusResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new BatchGetMemberEc2DeepInspectionStatusRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(batchGetMemberEc2DeepInspectionStatusRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Inspector2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "BatchGetMemberEc2DeepInspectionStatus");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<BatchGetMemberEc2DeepInspectionStatusResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new BatchGetMemberEc2DeepInspectionStatusResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Activates or deactivates Amazon Inspector deep inspection for the provided member accounts in your organization.
+     * You must be the delegated administrator of an organization in Amazon Inspector to use this API.
+     * </p>
+     * 
+     * @param batchUpdateMemberEc2DeepInspectionStatusRequest
+     * @return Result of the BatchUpdateMemberEc2DeepInspectionStatus operation returned by the service.
+     * @throws ValidationException
+     *         The request has failed validation due to missing required fields or having invalid inputs.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         The limit on the number of requests per second was exceeded.
+     * @throws InternalServerException
+     *         The request has failed due to an internal failure of the Amazon Inspector service.
+     * @sample AWSInspector2.BatchUpdateMemberEc2DeepInspectionStatus
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/inspector2-2020-06-08/BatchUpdateMemberEc2DeepInspectionStatus"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public BatchUpdateMemberEc2DeepInspectionStatusResult batchUpdateMemberEc2DeepInspectionStatus(BatchUpdateMemberEc2DeepInspectionStatusRequest request) {
+        request = beforeClientExecution(request);
+        return executeBatchUpdateMemberEc2DeepInspectionStatus(request);
+    }
+
+    @SdkInternalApi
+    final BatchUpdateMemberEc2DeepInspectionStatusResult executeBatchUpdateMemberEc2DeepInspectionStatus(
+            BatchUpdateMemberEc2DeepInspectionStatusRequest batchUpdateMemberEc2DeepInspectionStatusRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(batchUpdateMemberEc2DeepInspectionStatusRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<BatchUpdateMemberEc2DeepInspectionStatusRequest> request = null;
+        Response<BatchUpdateMemberEc2DeepInspectionStatusResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new BatchUpdateMemberEc2DeepInspectionStatusRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(batchUpdateMemberEc2DeepInspectionStatusRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Inspector2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "BatchUpdateMemberEc2DeepInspectionStatus");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<BatchUpdateMemberEc2DeepInspectionStatusResult>> responseHandler = protocolFactory
+                    .createResponseHandler(new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                            new BatchUpdateMemberEc2DeepInspectionStatusResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Cancels the given findings report.
      * </p>
      * 
@@ -478,7 +618,9 @@ public class AWSInspector2Client extends AmazonWebServiceClient implements AWSIn
 
     /**
      * <p>
-     * Creates a finding report.
+     * Creates a finding report. By default only <code>ACTIVE</code> findings are returned in the report. To see
+     * <code>SUPRESSED</code> or <code>CLOSED</code> findings you must specify a value for the
+     * <code>findingStatus</code> filter criteria.
      * </p>
      * 
      * @param createFindingsReportRequest
@@ -1122,6 +1264,73 @@ public class AWSInspector2Client extends AmazonWebServiceClient implements AWSIn
             HttpResponseHandler<AmazonWebServiceResponse<GetDelegatedAdminAccountResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new GetDelegatedAdminAccountResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Retrieves the activation status of Amazon Inspector deep inspection and custom paths associated with your
+     * account.
+     * </p>
+     * 
+     * @param getEc2DeepInspectionConfigurationRequest
+     * @return Result of the GetEc2DeepInspectionConfiguration operation returned by the service.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ResourceNotFoundException
+     *         The operation tried to access an invalid resource. Make sure the resource is specified correctly.
+     * @throws ThrottlingException
+     *         The limit on the number of requests per second was exceeded.
+     * @throws InternalServerException
+     *         The request has failed due to an internal failure of the Amazon Inspector service.
+     * @sample AWSInspector2.GetEc2DeepInspectionConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/inspector2-2020-06-08/GetEc2DeepInspectionConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetEc2DeepInspectionConfigurationResult getEc2DeepInspectionConfiguration(GetEc2DeepInspectionConfigurationRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetEc2DeepInspectionConfiguration(request);
+    }
+
+    @SdkInternalApi
+    final GetEc2DeepInspectionConfigurationResult executeGetEc2DeepInspectionConfiguration(
+            GetEc2DeepInspectionConfigurationRequest getEc2DeepInspectionConfigurationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getEc2DeepInspectionConfigurationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetEc2DeepInspectionConfigurationRequest> request = null;
+        Response<GetEc2DeepInspectionConfigurationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetEc2DeepInspectionConfigurationRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(getEc2DeepInspectionConfigurationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Inspector2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetEc2DeepInspectionConfiguration");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetEc2DeepInspectionConfigurationResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new GetEc2DeepInspectionConfigurationResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -2087,6 +2296,72 @@ public class AWSInspector2Client extends AmazonWebServiceClient implements AWSIn
 
     /**
      * <p>
+     * Activates, deactivates Amazon Inspector deep inspection, or updates custom paths for your account.
+     * </p>
+     * 
+     * @param updateEc2DeepInspectionConfigurationRequest
+     * @return Result of the UpdateEc2DeepInspectionConfiguration operation returned by the service.
+     * @throws ValidationException
+     *         The request has failed validation due to missing required fields or having invalid inputs.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         The limit on the number of requests per second was exceeded.
+     * @throws InternalServerException
+     *         The request has failed due to an internal failure of the Amazon Inspector service.
+     * @sample AWSInspector2.UpdateEc2DeepInspectionConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/inspector2-2020-06-08/UpdateEc2DeepInspectionConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public UpdateEc2DeepInspectionConfigurationResult updateEc2DeepInspectionConfiguration(UpdateEc2DeepInspectionConfigurationRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateEc2DeepInspectionConfiguration(request);
+    }
+
+    @SdkInternalApi
+    final UpdateEc2DeepInspectionConfigurationResult executeUpdateEc2DeepInspectionConfiguration(
+            UpdateEc2DeepInspectionConfigurationRequest updateEc2DeepInspectionConfigurationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateEc2DeepInspectionConfigurationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateEc2DeepInspectionConfigurationRequest> request = null;
+        Response<UpdateEc2DeepInspectionConfigurationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateEc2DeepInspectionConfigurationRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(updateEc2DeepInspectionConfigurationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Inspector2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateEc2DeepInspectionConfiguration");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdateEc2DeepInspectionConfigurationResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new UpdateEc2DeepInspectionConfigurationResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Specifies the action that is to be applied to the findings that match the filter.
      * </p>
      * 
@@ -2140,6 +2415,74 @@ public class AWSInspector2Client extends AmazonWebServiceClient implements AWSIn
 
             HttpResponseHandler<AmazonWebServiceResponse<UpdateFilterResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new UpdateFilterResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Updates the Amazon Inspector deep inspection custom paths for your organization. You must be an Amazon Inspector
+     * delegated administrator to use this API.
+     * </p>
+     * 
+     * @param updateOrgEc2DeepInspectionConfigurationRequest
+     * @return Result of the UpdateOrgEc2DeepInspectionConfiguration operation returned by the service.
+     * @throws ValidationException
+     *         The request has failed validation due to missing required fields or having invalid inputs.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         The limit on the number of requests per second was exceeded.
+     * @throws InternalServerException
+     *         The request has failed due to an internal failure of the Amazon Inspector service.
+     * @sample AWSInspector2.UpdateOrgEc2DeepInspectionConfiguration
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/inspector2-2020-06-08/UpdateOrgEc2DeepInspectionConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public UpdateOrgEc2DeepInspectionConfigurationResult updateOrgEc2DeepInspectionConfiguration(UpdateOrgEc2DeepInspectionConfigurationRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateOrgEc2DeepInspectionConfiguration(request);
+    }
+
+    @SdkInternalApi
+    final UpdateOrgEc2DeepInspectionConfigurationResult executeUpdateOrgEc2DeepInspectionConfiguration(
+            UpdateOrgEc2DeepInspectionConfigurationRequest updateOrgEc2DeepInspectionConfigurationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateOrgEc2DeepInspectionConfigurationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateOrgEc2DeepInspectionConfigurationRequest> request = null;
+        Response<UpdateOrgEc2DeepInspectionConfigurationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateOrgEc2DeepInspectionConfigurationRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(updateOrgEc2DeepInspectionConfigurationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Inspector2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateOrgEc2DeepInspectionConfiguration");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdateOrgEc2DeepInspectionConfigurationResult>> responseHandler = protocolFactory
+                    .createResponseHandler(new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                            new UpdateOrgEc2DeepInspectionConfigurationResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

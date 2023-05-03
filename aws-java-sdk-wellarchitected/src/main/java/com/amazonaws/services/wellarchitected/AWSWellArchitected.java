@@ -1125,7 +1125,8 @@ public interface AWSWellArchitected {
 
     /**
      * <p>
-     * Updates whether the Amazon Web Services account is opted into organization sharing features.
+     * Updates whether the Amazon Web Services account is opted into organization sharing and discovery integration
+     * features.
      * </p>
      * 
      * @param updateGlobalSettingsRequest

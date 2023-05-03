@@ -33,7 +33,7 @@ public class PackageDetails implements Serializable, Cloneable, StructuredPojo {
     private String packageID;
     /**
      * <p>
-     * User-specified name of the package.
+     * The user-specified name of the package.
      * </p>
      */
     private String packageName;
@@ -51,7 +51,9 @@ public class PackageDetails implements Serializable, Cloneable, StructuredPojo {
     private String packageDescription;
     /**
      * <p>
-     * Current status of the package.
+     * The current status of the package. The available options are <code>AVAILABLE</code>, <code>COPYING</code>,
+     * <code>COPY_FAILED</code>, <code>VALIDATNG</code>, <code>VALIDATION_FAILED</code>, <code>DELETING</code>, and
+     * <code>DELETE_FAILED</code>.
      * </p>
      */
     private String packageStatus;
@@ -122,11 +124,11 @@ public class PackageDetails implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * User-specified name of the package.
+     * The user-specified name of the package.
      * </p>
      * 
      * @param packageName
-     *        User-specified name of the package.
+     *        The user-specified name of the package.
      */
 
     public void setPackageName(String packageName) {
@@ -135,10 +137,10 @@ public class PackageDetails implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * User-specified name of the package.
+     * The user-specified name of the package.
      * </p>
      * 
-     * @return User-specified name of the package.
+     * @return The user-specified name of the package.
      */
 
     public String getPackageName() {
@@ -147,11 +149,11 @@ public class PackageDetails implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * User-specified name of the package.
+     * The user-specified name of the package.
      * </p>
      * 
      * @param packageName
-     *        User-specified name of the package.
+     *        The user-specified name of the package.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -261,11 +263,15 @@ public class PackageDetails implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Current status of the package.
+     * The current status of the package. The available options are <code>AVAILABLE</code>, <code>COPYING</code>,
+     * <code>COPY_FAILED</code>, <code>VALIDATNG</code>, <code>VALIDATION_FAILED</code>, <code>DELETING</code>, and
+     * <code>DELETE_FAILED</code>.
      * </p>
      * 
      * @param packageStatus
-     *        Current status of the package.
+     *        The current status of the package. The available options are <code>AVAILABLE</code>, <code>COPYING</code>,
+     *        <code>COPY_FAILED</code>, <code>VALIDATNG</code>, <code>VALIDATION_FAILED</code>, <code>DELETING</code>,
+     *        and <code>DELETE_FAILED</code>.
      * @see PackageStatus
      */
 
@@ -275,10 +281,14 @@ public class PackageDetails implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Current status of the package.
+     * The current status of the package. The available options are <code>AVAILABLE</code>, <code>COPYING</code>,
+     * <code>COPY_FAILED</code>, <code>VALIDATNG</code>, <code>VALIDATION_FAILED</code>, <code>DELETING</code>, and
+     * <code>DELETE_FAILED</code>.
      * </p>
      * 
-     * @return Current status of the package.
+     * @return The current status of the package. The available options are <code>AVAILABLE</code>, <code>COPYING</code>
+     *         , <code>COPY_FAILED</code>, <code>VALIDATNG</code>, <code>VALIDATION_FAILED</code>, <code>DELETING</code>
+     *         , and <code>DELETE_FAILED</code>.
      * @see PackageStatus
      */
 
@@ -288,11 +298,15 @@ public class PackageDetails implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Current status of the package.
+     * The current status of the package. The available options are <code>AVAILABLE</code>, <code>COPYING</code>,
+     * <code>COPY_FAILED</code>, <code>VALIDATNG</code>, <code>VALIDATION_FAILED</code>, <code>DELETING</code>, and
+     * <code>DELETE_FAILED</code>.
      * </p>
      * 
      * @param packageStatus
-     *        Current status of the package.
+     *        The current status of the package. The available options are <code>AVAILABLE</code>, <code>COPYING</code>,
+     *        <code>COPY_FAILED</code>, <code>VALIDATNG</code>, <code>VALIDATION_FAILED</code>, <code>DELETING</code>,
+     *        and <code>DELETE_FAILED</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PackageStatus
      */
@@ -304,11 +318,15 @@ public class PackageDetails implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Current status of the package.
+     * The current status of the package. The available options are <code>AVAILABLE</code>, <code>COPYING</code>,
+     * <code>COPY_FAILED</code>, <code>VALIDATNG</code>, <code>VALIDATION_FAILED</code>, <code>DELETING</code>, and
+     * <code>DELETE_FAILED</code>.
      * </p>
      * 
      * @param packageStatus
-     *        Current status of the package.
+     *        The current status of the package. The available options are <code>AVAILABLE</code>, <code>COPYING</code>,
+     *        <code>COPY_FAILED</code>, <code>VALIDATNG</code>, <code>VALIDATION_FAILED</code>, <code>DELETING</code>,
+     *        and <code>DELETE_FAILED</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PackageStatus
      */

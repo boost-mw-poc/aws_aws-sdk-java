@@ -80,6 +80,14 @@ public class CreateGraphqlApiRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      */
     private LambdaAuthorizerConfig lambdaAuthorizerConfig;
+    /**
+     * <p>
+     * Sets the value of the GraphQL API to public (<code>GLOBAL</code>) or private (<code>PRIVATE</code>). If no value
+     * is provided, the visibility will be set to <code>GLOBAL</code> by default. This value cannot be changed once the
+     * API has been created.
+     * </p>
+     */
+    private String visibility;
 
     /**
      * <p>
@@ -540,6 +548,81 @@ public class CreateGraphqlApiRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
+     * <p>
+     * Sets the value of the GraphQL API to public (<code>GLOBAL</code>) or private (<code>PRIVATE</code>). If no value
+     * is provided, the visibility will be set to <code>GLOBAL</code> by default. This value cannot be changed once the
+     * API has been created.
+     * </p>
+     * 
+     * @param visibility
+     *        Sets the value of the GraphQL API to public (<code>GLOBAL</code>) or private (<code>PRIVATE</code>). If no
+     *        value is provided, the visibility will be set to <code>GLOBAL</code> by default. This value cannot be
+     *        changed once the API has been created.
+     * @see GraphQLApiVisibility
+     */
+
+    public void setVisibility(String visibility) {
+        this.visibility = visibility;
+    }
+
+    /**
+     * <p>
+     * Sets the value of the GraphQL API to public (<code>GLOBAL</code>) or private (<code>PRIVATE</code>). If no value
+     * is provided, the visibility will be set to <code>GLOBAL</code> by default. This value cannot be changed once the
+     * API has been created.
+     * </p>
+     * 
+     * @return Sets the value of the GraphQL API to public (<code>GLOBAL</code>) or private (<code>PRIVATE</code>). If
+     *         no value is provided, the visibility will be set to <code>GLOBAL</code> by default. This value cannot be
+     *         changed once the API has been created.
+     * @see GraphQLApiVisibility
+     */
+
+    public String getVisibility() {
+        return this.visibility;
+    }
+
+    /**
+     * <p>
+     * Sets the value of the GraphQL API to public (<code>GLOBAL</code>) or private (<code>PRIVATE</code>). If no value
+     * is provided, the visibility will be set to <code>GLOBAL</code> by default. This value cannot be changed once the
+     * API has been created.
+     * </p>
+     * 
+     * @param visibility
+     *        Sets the value of the GraphQL API to public (<code>GLOBAL</code>) or private (<code>PRIVATE</code>). If no
+     *        value is provided, the visibility will be set to <code>GLOBAL</code> by default. This value cannot be
+     *        changed once the API has been created.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see GraphQLApiVisibility
+     */
+
+    public CreateGraphqlApiRequest withVisibility(String visibility) {
+        setVisibility(visibility);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Sets the value of the GraphQL API to public (<code>GLOBAL</code>) or private (<code>PRIVATE</code>). If no value
+     * is provided, the visibility will be set to <code>GLOBAL</code> by default. This value cannot be changed once the
+     * API has been created.
+     * </p>
+     * 
+     * @param visibility
+     *        Sets the value of the GraphQL API to public (<code>GLOBAL</code>) or private (<code>PRIVATE</code>). If no
+     *        value is provided, the visibility will be set to <code>GLOBAL</code> by default. This value cannot be
+     *        changed once the API has been created.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see GraphQLApiVisibility
+     */
+
+    public CreateGraphqlApiRequest withVisibility(GraphQLApiVisibility visibility) {
+        this.visibility = visibility.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -568,7 +651,9 @@ public class CreateGraphqlApiRequest extends com.amazonaws.AmazonWebServiceReque
         if (getXrayEnabled() != null)
             sb.append("XrayEnabled: ").append(getXrayEnabled()).append(",");
         if (getLambdaAuthorizerConfig() != null)
-            sb.append("LambdaAuthorizerConfig: ").append(getLambdaAuthorizerConfig());
+            sb.append("LambdaAuthorizerConfig: ").append(getLambdaAuthorizerConfig()).append(",");
+        if (getVisibility() != null)
+            sb.append("Visibility: ").append(getVisibility());
         sb.append("}");
         return sb.toString();
     }
@@ -620,6 +705,10 @@ public class CreateGraphqlApiRequest extends com.amazonaws.AmazonWebServiceReque
             return false;
         if (other.getLambdaAuthorizerConfig() != null && other.getLambdaAuthorizerConfig().equals(this.getLambdaAuthorizerConfig()) == false)
             return false;
+        if (other.getVisibility() == null ^ this.getVisibility() == null)
+            return false;
+        if (other.getVisibility() != null && other.getVisibility().equals(this.getVisibility()) == false)
+            return false;
         return true;
     }
 
@@ -637,6 +726,7 @@ public class CreateGraphqlApiRequest extends com.amazonaws.AmazonWebServiceReque
         hashCode = prime * hashCode + ((getAdditionalAuthenticationProviders() == null) ? 0 : getAdditionalAuthenticationProviders().hashCode());
         hashCode = prime * hashCode + ((getXrayEnabled() == null) ? 0 : getXrayEnabled().hashCode());
         hashCode = prime * hashCode + ((getLambdaAuthorizerConfig() == null) ? 0 : getLambdaAuthorizerConfig().hashCode());
+        hashCode = prime * hashCode + ((getVisibility() == null) ? 0 : getVisibility().hashCode());
         return hashCode;
     }
 

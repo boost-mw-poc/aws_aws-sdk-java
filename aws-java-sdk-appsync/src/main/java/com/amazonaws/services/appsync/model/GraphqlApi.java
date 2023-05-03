@@ -106,6 +106,20 @@ public class GraphqlApi implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private LambdaAuthorizerConfig lambdaAuthorizerConfig;
+    /**
+     * <p>
+     * The DNS records for the API.
+     * </p>
+     */
+    private java.util.Map<String, String> dns;
+    /**
+     * <p>
+     * Sets the value of the GraphQL API to public (<code>GLOBAL</code>) or private (<code>PRIVATE</code>). If no value
+     * is provided, the visibility will be set to <code>GLOBAL</code> by default. This value cannot be changed once the
+     * API has been created.
+     * </p>
+     */
+    private String visibility;
 
     /**
      * <p>
@@ -745,6 +759,149 @@ public class GraphqlApi implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The DNS records for the API.
+     * </p>
+     * 
+     * @return The DNS records for the API.
+     */
+
+    public java.util.Map<String, String> getDns() {
+        return dns;
+    }
+
+    /**
+     * <p>
+     * The DNS records for the API.
+     * </p>
+     * 
+     * @param dns
+     *        The DNS records for the API.
+     */
+
+    public void setDns(java.util.Map<String, String> dns) {
+        this.dns = dns;
+    }
+
+    /**
+     * <p>
+     * The DNS records for the API.
+     * </p>
+     * 
+     * @param dns
+     *        The DNS records for the API.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GraphqlApi withDns(java.util.Map<String, String> dns) {
+        setDns(dns);
+        return this;
+    }
+
+    /**
+     * Add a single Dns entry
+     *
+     * @see GraphqlApi#withDns
+     * @returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GraphqlApi addDnsEntry(String key, String value) {
+        if (null == this.dns) {
+            this.dns = new java.util.HashMap<String, String>();
+        }
+        if (this.dns.containsKey(key))
+            throw new IllegalArgumentException("Duplicated keys (" + key.toString() + ") are provided.");
+        this.dns.put(key, value);
+        return this;
+    }
+
+    /**
+     * Removes all the entries added into Dns.
+     *
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GraphqlApi clearDnsEntries() {
+        this.dns = null;
+        return this;
+    }
+
+    /**
+     * <p>
+     * Sets the value of the GraphQL API to public (<code>GLOBAL</code>) or private (<code>PRIVATE</code>). If no value
+     * is provided, the visibility will be set to <code>GLOBAL</code> by default. This value cannot be changed once the
+     * API has been created.
+     * </p>
+     * 
+     * @param visibility
+     *        Sets the value of the GraphQL API to public (<code>GLOBAL</code>) or private (<code>PRIVATE</code>). If no
+     *        value is provided, the visibility will be set to <code>GLOBAL</code> by default. This value cannot be
+     *        changed once the API has been created.
+     * @see GraphQLApiVisibility
+     */
+
+    public void setVisibility(String visibility) {
+        this.visibility = visibility;
+    }
+
+    /**
+     * <p>
+     * Sets the value of the GraphQL API to public (<code>GLOBAL</code>) or private (<code>PRIVATE</code>). If no value
+     * is provided, the visibility will be set to <code>GLOBAL</code> by default. This value cannot be changed once the
+     * API has been created.
+     * </p>
+     * 
+     * @return Sets the value of the GraphQL API to public (<code>GLOBAL</code>) or private (<code>PRIVATE</code>). If
+     *         no value is provided, the visibility will be set to <code>GLOBAL</code> by default. This value cannot be
+     *         changed once the API has been created.
+     * @see GraphQLApiVisibility
+     */
+
+    public String getVisibility() {
+        return this.visibility;
+    }
+
+    /**
+     * <p>
+     * Sets the value of the GraphQL API to public (<code>GLOBAL</code>) or private (<code>PRIVATE</code>). If no value
+     * is provided, the visibility will be set to <code>GLOBAL</code> by default. This value cannot be changed once the
+     * API has been created.
+     * </p>
+     * 
+     * @param visibility
+     *        Sets the value of the GraphQL API to public (<code>GLOBAL</code>) or private (<code>PRIVATE</code>). If no
+     *        value is provided, the visibility will be set to <code>GLOBAL</code> by default. This value cannot be
+     *        changed once the API has been created.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see GraphQLApiVisibility
+     */
+
+    public GraphqlApi withVisibility(String visibility) {
+        setVisibility(visibility);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Sets the value of the GraphQL API to public (<code>GLOBAL</code>) or private (<code>PRIVATE</code>). If no value
+     * is provided, the visibility will be set to <code>GLOBAL</code> by default. This value cannot be changed once the
+     * API has been created.
+     * </p>
+     * 
+     * @param visibility
+     *        Sets the value of the GraphQL API to public (<code>GLOBAL</code>) or private (<code>PRIVATE</code>). If no
+     *        value is provided, the visibility will be set to <code>GLOBAL</code> by default. This value cannot be
+     *        changed once the API has been created.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see GraphQLApiVisibility
+     */
+
+    public GraphqlApi withVisibility(GraphQLApiVisibility visibility) {
+        this.visibility = visibility.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -781,7 +938,11 @@ public class GraphqlApi implements Serializable, Cloneable, StructuredPojo {
         if (getWafWebAclArn() != null)
             sb.append("WafWebAclArn: ").append(getWafWebAclArn()).append(",");
         if (getLambdaAuthorizerConfig() != null)
-            sb.append("LambdaAuthorizerConfig: ").append(getLambdaAuthorizerConfig());
+            sb.append("LambdaAuthorizerConfig: ").append(getLambdaAuthorizerConfig()).append(",");
+        if (getDns() != null)
+            sb.append("Dns: ").append(getDns()).append(",");
+        if (getVisibility() != null)
+            sb.append("Visibility: ").append(getVisibility());
         sb.append("}");
         return sb.toString();
     }
@@ -849,6 +1010,14 @@ public class GraphqlApi implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getLambdaAuthorizerConfig() != null && other.getLambdaAuthorizerConfig().equals(this.getLambdaAuthorizerConfig()) == false)
             return false;
+        if (other.getDns() == null ^ this.getDns() == null)
+            return false;
+        if (other.getDns() != null && other.getDns().equals(this.getDns()) == false)
+            return false;
+        if (other.getVisibility() == null ^ this.getVisibility() == null)
+            return false;
+        if (other.getVisibility() != null && other.getVisibility().equals(this.getVisibility()) == false)
+            return false;
         return true;
     }
 
@@ -870,6 +1039,8 @@ public class GraphqlApi implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getXrayEnabled() == null) ? 0 : getXrayEnabled().hashCode());
         hashCode = prime * hashCode + ((getWafWebAclArn() == null) ? 0 : getWafWebAclArn().hashCode());
         hashCode = prime * hashCode + ((getLambdaAuthorizerConfig() == null) ? 0 : getLambdaAuthorizerConfig().hashCode());
+        hashCode = prime * hashCode + ((getDns() == null) ? 0 : getDns().hashCode());
+        hashCode = prime * hashCode + ((getVisibility() == null) ? 0 : getVisibility().hashCode());
         return hashCode;
     }
 

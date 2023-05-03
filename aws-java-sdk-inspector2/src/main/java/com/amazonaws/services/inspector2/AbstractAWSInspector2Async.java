@@ -67,6 +67,36 @@ public class AbstractAWSInspector2Async extends AbstractAWSInspector2 implements
     }
 
     @Override
+    public java.util.concurrent.Future<BatchGetMemberEc2DeepInspectionStatusResult> batchGetMemberEc2DeepInspectionStatusAsync(
+            BatchGetMemberEc2DeepInspectionStatusRequest request) {
+
+        return batchGetMemberEc2DeepInspectionStatusAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<BatchGetMemberEc2DeepInspectionStatusResult> batchGetMemberEc2DeepInspectionStatusAsync(
+            BatchGetMemberEc2DeepInspectionStatusRequest request,
+            com.amazonaws.handlers.AsyncHandler<BatchGetMemberEc2DeepInspectionStatusRequest, BatchGetMemberEc2DeepInspectionStatusResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<BatchUpdateMemberEc2DeepInspectionStatusResult> batchUpdateMemberEc2DeepInspectionStatusAsync(
+            BatchUpdateMemberEc2DeepInspectionStatusRequest request) {
+
+        return batchUpdateMemberEc2DeepInspectionStatusAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<BatchUpdateMemberEc2DeepInspectionStatusResult> batchUpdateMemberEc2DeepInspectionStatusAsync(
+            BatchUpdateMemberEc2DeepInspectionStatusRequest request,
+            com.amazonaws.handlers.AsyncHandler<BatchUpdateMemberEc2DeepInspectionStatusRequest, BatchUpdateMemberEc2DeepInspectionStatusResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<CancelFindingsReportResult> cancelFindingsReportAsync(CancelFindingsReportRequest request) {
 
         return cancelFindingsReportAsync(request, null);
@@ -220,6 +250,21 @@ public class AbstractAWSInspector2Async extends AbstractAWSInspector2 implements
     @Override
     public java.util.concurrent.Future<GetDelegatedAdminAccountResult> getDelegatedAdminAccountAsync(GetDelegatedAdminAccountRequest request,
             com.amazonaws.handlers.AsyncHandler<GetDelegatedAdminAccountRequest, GetDelegatedAdminAccountResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetEc2DeepInspectionConfigurationResult> getEc2DeepInspectionConfigurationAsync(
+            GetEc2DeepInspectionConfigurationRequest request) {
+
+        return getEc2DeepInspectionConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetEc2DeepInspectionConfigurationResult> getEc2DeepInspectionConfigurationAsync(
+            GetEc2DeepInspectionConfigurationRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetEc2DeepInspectionConfigurationRequest, GetEc2DeepInspectionConfigurationResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -420,6 +465,21 @@ public class AbstractAWSInspector2Async extends AbstractAWSInspector2 implements
     }
 
     @Override
+    public java.util.concurrent.Future<UpdateEc2DeepInspectionConfigurationResult> updateEc2DeepInspectionConfigurationAsync(
+            UpdateEc2DeepInspectionConfigurationRequest request) {
+
+        return updateEc2DeepInspectionConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateEc2DeepInspectionConfigurationResult> updateEc2DeepInspectionConfigurationAsync(
+            UpdateEc2DeepInspectionConfigurationRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateEc2DeepInspectionConfigurationRequest, UpdateEc2DeepInspectionConfigurationResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<UpdateFilterResult> updateFilterAsync(UpdateFilterRequest request) {
 
         return updateFilterAsync(request, null);
@@ -428,6 +488,21 @@ public class AbstractAWSInspector2Async extends AbstractAWSInspector2 implements
     @Override
     public java.util.concurrent.Future<UpdateFilterResult> updateFilterAsync(UpdateFilterRequest request,
             com.amazonaws.handlers.AsyncHandler<UpdateFilterRequest, UpdateFilterResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateOrgEc2DeepInspectionConfigurationResult> updateOrgEc2DeepInspectionConfigurationAsync(
+            UpdateOrgEc2DeepInspectionConfigurationRequest request) {
+
+        return updateOrgEc2DeepInspectionConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateOrgEc2DeepInspectionConfigurationResult> updateOrgEc2DeepInspectionConfigurationAsync(
+            UpdateOrgEc2DeepInspectionConfigurationRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateOrgEc2DeepInspectionConfigurationRequest, UpdateOrgEc2DeepInspectionConfigurationResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
