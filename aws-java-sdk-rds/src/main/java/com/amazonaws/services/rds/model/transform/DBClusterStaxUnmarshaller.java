@@ -449,6 +449,11 @@ public class DBClusterStaxUnmarshaller implements Unmarshaller<DBCluster, StaxUn
                     dBCluster.setMasterUserSecret(MasterUserSecretStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("IOOptimizedNextAllowedModificationTime", targetDepth)) {
+                    dBCluster.setIOOptimizedNextAllowedModificationTime(DateStaxUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return dBCluster;

@@ -634,8 +634,8 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * The <code>serverless</code> engine mode only applies for Aurora Serverless v1 DB clusters.
      * </p>
      * <p>
-     * Limitations and requirements apply to some DB engine modes. For more information, see the following sections in
-     * the <i>Amazon Aurora User Guide</i>:
+     * For information about limitations and requirements for Serverless DB clusters, see the following sections in the
+     * <i>Amazon Aurora User Guide</i>:
      * </p>
      * <ul>
      * <li>
@@ -649,20 +649,6 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless-v2.requirements.html">
      * Requirements for Aurora Serverless v2</a>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <a href=
-     * "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-mysql-parallel-query.html#aurora-mysql-parallel-query-limitations"
-     * >Limitations of parallel query</a>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <a href=
-     * "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-global-database.html#aurora-global-database.limitations"
-     * >Limitations of Aurora global databases</a>
      * </p>
      * </li>
      * </ul>
@@ -811,16 +797,17 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * This setting is required to create a Multi-AZ DB cluster.
      * </p>
      * <p>
-     * Valid values: <code>io1</code>
+     * When specified for a Multi-AZ DB cluster, a value for the <code>Iops</code> parameter is required.
      * </p>
      * <p>
-     * When specified, a value for the <code>Iops</code> parameter is required.
+     * Valid values: <code>aurora</code>, <code>aurora-iopt1</code> (Aurora DB clusters); <code>io1</code> (Multi-AZ DB
+     * clusters)
      * </p>
      * <p>
-     * Default: <code>io1</code>
+     * Default: <code>aurora</code> (Aurora DB clusters); <code>io1</code> (Multi-AZ DB clusters)
      * </p>
      * <p>
-     * Valid for: Multi-AZ DB clusters only
+     * Valid for: Aurora DB clusters and Multi-AZ DB clusters
      * </p>
      */
     private String storageType;
@@ -5043,8 +5030,8 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * The <code>serverless</code> engine mode only applies for Aurora Serverless v1 DB clusters.
      * </p>
      * <p>
-     * Limitations and requirements apply to some DB engine modes. For more information, see the following sections in
-     * the <i>Amazon Aurora User Guide</i>:
+     * For information about limitations and requirements for Serverless DB clusters, see the following sections in the
+     * <i>Amazon Aurora User Guide</i>:
      * </p>
      * <ul>
      * <li>
@@ -5060,20 +5047,6 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * Requirements for Aurora Serverless v2</a>
      * </p>
      * </li>
-     * <li>
-     * <p>
-     * <a href=
-     * "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-mysql-parallel-query.html#aurora-mysql-parallel-query-limitations"
-     * >Limitations of parallel query</a>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <a href=
-     * "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-global-database.html#aurora-global-database.limitations"
-     * >Limitations of Aurora global databases</a>
-     * </p>
-     * </li>
      * </ul>
      * <p>
      * Valid for: Aurora DB clusters only
@@ -5085,8 +5058,8 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      *        The <code>serverless</code> engine mode only applies for Aurora Serverless v1 DB clusters.
      *        </p>
      *        <p>
-     *        Limitations and requirements apply to some DB engine modes. For more information, see the following
-     *        sections in the <i>Amazon Aurora User Guide</i>:
+     *        For information about limitations and requirements for Serverless DB clusters, see the following sections
+     *        in the <i>Amazon Aurora User Guide</i>:
      *        </p>
      *        <ul>
      *        <li>
@@ -5101,20 +5074,6 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      *        <a href=
      *        "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless-v2.requirements.html"
      *        >Requirements for Aurora Serverless v2</a>
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <a href=
-     *        "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-mysql-parallel-query.html#aurora-mysql-parallel-query-limitations"
-     *        >Limitations of parallel query</a>
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <a href=
-     *        "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-global-database.html#aurora-global-database.limitations"
-     *        >Limitations of Aurora global databases</a>
      *        </p>
      *        </li>
      *        </ul>
@@ -5134,8 +5093,8 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * The <code>serverless</code> engine mode only applies for Aurora Serverless v1 DB clusters.
      * </p>
      * <p>
-     * Limitations and requirements apply to some DB engine modes. For more information, see the following sections in
-     * the <i>Amazon Aurora User Guide</i>:
+     * For information about limitations and requirements for Serverless DB clusters, see the following sections in the
+     * <i>Amazon Aurora User Guide</i>:
      * </p>
      * <ul>
      * <li>
@@ -5151,20 +5110,6 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * Requirements for Aurora Serverless v2</a>
      * </p>
      * </li>
-     * <li>
-     * <p>
-     * <a href=
-     * "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-mysql-parallel-query.html#aurora-mysql-parallel-query-limitations"
-     * >Limitations of parallel query</a>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <a href=
-     * "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-global-database.html#aurora-global-database.limitations"
-     * >Limitations of Aurora global databases</a>
-     * </p>
-     * </li>
      * </ul>
      * <p>
      * Valid for: Aurora DB clusters only
@@ -5175,8 +5120,8 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      *         The <code>serverless</code> engine mode only applies for Aurora Serverless v1 DB clusters.
      *         </p>
      *         <p>
-     *         Limitations and requirements apply to some DB engine modes. For more information, see the following
-     *         sections in the <i>Amazon Aurora User Guide</i>:
+     *         For information about limitations and requirements for Serverless DB clusters, see the following sections
+     *         in the <i>Amazon Aurora User Guide</i>:
      *         </p>
      *         <ul>
      *         <li>
@@ -5191,20 +5136,6 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      *         <a href=
      *         "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless-v2.requirements.html"
      *         >Requirements for Aurora Serverless v2</a>
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
-     *         <a href=
-     *         "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-mysql-parallel-query.html#aurora-mysql-parallel-query-limitations"
-     *         >Limitations of parallel query</a>
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
-     *         <a href=
-     *         "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-global-database.html#aurora-global-database.limitations"
-     *         >Limitations of Aurora global databases</a>
      *         </p>
      *         </li>
      *         </ul>
@@ -5224,8 +5155,8 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * The <code>serverless</code> engine mode only applies for Aurora Serverless v1 DB clusters.
      * </p>
      * <p>
-     * Limitations and requirements apply to some DB engine modes. For more information, see the following sections in
-     * the <i>Amazon Aurora User Guide</i>:
+     * For information about limitations and requirements for Serverless DB clusters, see the following sections in the
+     * <i>Amazon Aurora User Guide</i>:
      * </p>
      * <ul>
      * <li>
@@ -5241,20 +5172,6 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * Requirements for Aurora Serverless v2</a>
      * </p>
      * </li>
-     * <li>
-     * <p>
-     * <a href=
-     * "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-mysql-parallel-query.html#aurora-mysql-parallel-query-limitations"
-     * >Limitations of parallel query</a>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <a href=
-     * "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-global-database.html#aurora-global-database.limitations"
-     * >Limitations of Aurora global databases</a>
-     * </p>
-     * </li>
      * </ul>
      * <p>
      * Valid for: Aurora DB clusters only
@@ -5266,8 +5183,8 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      *        The <code>serverless</code> engine mode only applies for Aurora Serverless v1 DB clusters.
      *        </p>
      *        <p>
-     *        Limitations and requirements apply to some DB engine modes. For more information, see the following
-     *        sections in the <i>Amazon Aurora User Guide</i>:
+     *        For information about limitations and requirements for Serverless DB clusters, see the following sections
+     *        in the <i>Amazon Aurora User Guide</i>:
      *        </p>
      *        <ul>
      *        <li>
@@ -5282,20 +5199,6 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      *        <a href=
      *        "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless-v2.requirements.html"
      *        >Requirements for Aurora Serverless v2</a>
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <a href=
-     *        "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-mysql-parallel-query.html#aurora-mysql-parallel-query-limitations"
-     *        >Limitations of parallel query</a>
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <a href=
-     *        "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-global-database.html#aurora-global-database.limitations"
-     *        >Limitations of Aurora global databases</a>
      *        </p>
      *        </li>
      *        </ul>
@@ -6239,16 +6142,17 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * This setting is required to create a Multi-AZ DB cluster.
      * </p>
      * <p>
-     * Valid values: <code>io1</code>
+     * When specified for a Multi-AZ DB cluster, a value for the <code>Iops</code> parameter is required.
      * </p>
      * <p>
-     * When specified, a value for the <code>Iops</code> parameter is required.
+     * Valid values: <code>aurora</code>, <code>aurora-iopt1</code> (Aurora DB clusters); <code>io1</code> (Multi-AZ DB
+     * clusters)
      * </p>
      * <p>
-     * Default: <code>io1</code>
+     * Default: <code>aurora</code> (Aurora DB clusters); <code>io1</code> (Multi-AZ DB clusters)
      * </p>
      * <p>
-     * Valid for: Multi-AZ DB clusters only
+     * Valid for: Aurora DB clusters and Multi-AZ DB clusters
      * </p>
      * 
      * @param storageType
@@ -6257,16 +6161,17 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      *        This setting is required to create a Multi-AZ DB cluster.
      *        </p>
      *        <p>
-     *        Valid values: <code>io1</code>
+     *        When specified for a Multi-AZ DB cluster, a value for the <code>Iops</code> parameter is required.
      *        </p>
      *        <p>
-     *        When specified, a value for the <code>Iops</code> parameter is required.
+     *        Valid values: <code>aurora</code>, <code>aurora-iopt1</code> (Aurora DB clusters); <code>io1</code>
+     *        (Multi-AZ DB clusters)
      *        </p>
      *        <p>
-     *        Default: <code>io1</code>
+     *        Default: <code>aurora</code> (Aurora DB clusters); <code>io1</code> (Multi-AZ DB clusters)
      *        </p>
      *        <p>
-     *        Valid for: Multi-AZ DB clusters only
+     *        Valid for: Aurora DB clusters and Multi-AZ DB clusters
      */
 
     public void setStorageType(String storageType) {
@@ -6281,16 +6186,17 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * This setting is required to create a Multi-AZ DB cluster.
      * </p>
      * <p>
-     * Valid values: <code>io1</code>
+     * When specified for a Multi-AZ DB cluster, a value for the <code>Iops</code> parameter is required.
      * </p>
      * <p>
-     * When specified, a value for the <code>Iops</code> parameter is required.
+     * Valid values: <code>aurora</code>, <code>aurora-iopt1</code> (Aurora DB clusters); <code>io1</code> (Multi-AZ DB
+     * clusters)
      * </p>
      * <p>
-     * Default: <code>io1</code>
+     * Default: <code>aurora</code> (Aurora DB clusters); <code>io1</code> (Multi-AZ DB clusters)
      * </p>
      * <p>
-     * Valid for: Multi-AZ DB clusters only
+     * Valid for: Aurora DB clusters and Multi-AZ DB clusters
      * </p>
      * 
      * @return Specifies the storage type to be associated with the DB cluster.</p>
@@ -6298,16 +6204,17 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      *         This setting is required to create a Multi-AZ DB cluster.
      *         </p>
      *         <p>
-     *         Valid values: <code>io1</code>
+     *         When specified for a Multi-AZ DB cluster, a value for the <code>Iops</code> parameter is required.
      *         </p>
      *         <p>
-     *         When specified, a value for the <code>Iops</code> parameter is required.
+     *         Valid values: <code>aurora</code>, <code>aurora-iopt1</code> (Aurora DB clusters); <code>io1</code>
+     *         (Multi-AZ DB clusters)
      *         </p>
      *         <p>
-     *         Default: <code>io1</code>
+     *         Default: <code>aurora</code> (Aurora DB clusters); <code>io1</code> (Multi-AZ DB clusters)
      *         </p>
      *         <p>
-     *         Valid for: Multi-AZ DB clusters only
+     *         Valid for: Aurora DB clusters and Multi-AZ DB clusters
      */
 
     public String getStorageType() {
@@ -6322,16 +6229,17 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * This setting is required to create a Multi-AZ DB cluster.
      * </p>
      * <p>
-     * Valid values: <code>io1</code>
+     * When specified for a Multi-AZ DB cluster, a value for the <code>Iops</code> parameter is required.
      * </p>
      * <p>
-     * When specified, a value for the <code>Iops</code> parameter is required.
+     * Valid values: <code>aurora</code>, <code>aurora-iopt1</code> (Aurora DB clusters); <code>io1</code> (Multi-AZ DB
+     * clusters)
      * </p>
      * <p>
-     * Default: <code>io1</code>
+     * Default: <code>aurora</code> (Aurora DB clusters); <code>io1</code> (Multi-AZ DB clusters)
      * </p>
      * <p>
-     * Valid for: Multi-AZ DB clusters only
+     * Valid for: Aurora DB clusters and Multi-AZ DB clusters
      * </p>
      * 
      * @param storageType
@@ -6340,16 +6248,17 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      *        This setting is required to create a Multi-AZ DB cluster.
      *        </p>
      *        <p>
-     *        Valid values: <code>io1</code>
+     *        When specified for a Multi-AZ DB cluster, a value for the <code>Iops</code> parameter is required.
      *        </p>
      *        <p>
-     *        When specified, a value for the <code>Iops</code> parameter is required.
+     *        Valid values: <code>aurora</code>, <code>aurora-iopt1</code> (Aurora DB clusters); <code>io1</code>
+     *        (Multi-AZ DB clusters)
      *        </p>
      *        <p>
-     *        Default: <code>io1</code>
+     *        Default: <code>aurora</code> (Aurora DB clusters); <code>io1</code> (Multi-AZ DB clusters)
      *        </p>
      *        <p>
-     *        Valid for: Multi-AZ DB clusters only
+     *        Valid for: Aurora DB clusters and Multi-AZ DB clusters
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

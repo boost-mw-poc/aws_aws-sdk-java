@@ -869,7 +869,7 @@ public interface AmazonRDS {
      * @throws DBClusterNotFoundException
      *         <code>DBClusterIdentifier</code> doesn't refer to an existing DB cluster.
      * @throws StorageTypeNotSupportedException
-     *         Storage of the <code>StorageType</code> specified can't be associated with the DB instance.
+     *         The specified <code>StorageType</code> can't be associated with the DB instance.
      * @throws AuthorizationNotFoundException
      *         The specified CIDR IP range or Amazon EC2 security group might not be authorized for the specified DB
      *         security group.</p>
@@ -959,7 +959,7 @@ public interface AmazonRDS {
      *         The DBSubnetGroup doesn't belong to the same VPC as that of an existing cross-region read replica of the
      *         same source instance.
      * @throws StorageTypeNotSupportedException
-     *         Storage of the <code>StorageType</code> specified can't be associated with the DB instance.
+     *         The specified <code>StorageType</code> can't be associated with the DB instance.
      * @throws KMSKeyNotAccessibleException
      *         An error occurred accessing an Amazon Web Services KMS key.
      * @throws DomainNotFoundException
@@ -3005,6 +3005,9 @@ public interface AmazonRDS {
      *         The user already has a DB instance with the given identifier.
      * @throws DomainNotFoundException
      *         <code>Domain</code> doesn't refer to an existing Active Directory domain.
+     * @throws StorageTypeNotAvailableException
+     *         The <code>aurora-iopt1</code> storage type isn't available, because you modified the DB cluster to use
+     *         this storage type less than one month ago.
      * @sample AmazonRDS.ModifyDBCluster
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/ModifyDBCluster" target="_top">AWS API
      *      Documentation</a>
@@ -3163,7 +3166,7 @@ public interface AmazonRDS {
      * @throws DBUpgradeDependencyFailureException
      *         The DB upgrade failed because a resource the DB depends on can't be modified.
      * @throws StorageTypeNotSupportedException
-     *         Storage of the <code>StorageType</code> specified can't be associated with the DB instance.
+     *         The specified <code>StorageType</code> can't be associated with the DB instance.
      * @throws AuthorizationNotFoundException
      *         The specified CIDR IP range or Amazon EC2 security group might not be authorized for the specified DB
      *         security group.</p>
@@ -3865,6 +3868,8 @@ public interface AmazonRDS {
      * @throws InsufficientStorageClusterCapacityException
      *         There is insufficient storage available for the current action. You might be able to resolve this error
      *         by updating your subnet group to use different Availability Zones that have more storage available.
+     * @throws StorageTypeNotSupportedException
+     *         The specified <code>StorageType</code> can't be associated with the DB instance.
      * @sample AmazonRDS.RestoreDBClusterFromS3
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/RestoreDBClusterFromS3" target="_top">AWS API
      *      Documentation</a>
@@ -4080,7 +4085,7 @@ public interface AmazonRDS {
      * @throws OptionGroupNotFoundException
      *         The specified option group could not be found.
      * @throws StorageTypeNotSupportedException
-     *         Storage of the <code>StorageType</code> specified can't be associated with the DB instance.
+     *         The specified <code>StorageType</code> can't be associated with the DB instance.
      * @throws AuthorizationNotFoundException
      *         The specified CIDR IP range or Amazon EC2 security group might not be authorized for the specified DB
      *         security group.</p>
@@ -4151,7 +4156,7 @@ public interface AmazonRDS {
      * @throws OptionGroupNotFoundException
      *         The specified option group could not be found.
      * @throws StorageTypeNotSupportedException
-     *         Storage of the <code>StorageType</code> specified can't be associated with the DB instance.
+     *         The specified <code>StorageType</code> can't be associated with the DB instance.
      * @throws AuthorizationNotFoundException
      *         The specified CIDR IP range or Amazon EC2 security group might not be authorized for the specified DB
      *         security group.</p>
@@ -4223,7 +4228,7 @@ public interface AmazonRDS {
      * @throws OptionGroupNotFoundException
      *         The specified option group could not be found.
      * @throws StorageTypeNotSupportedException
-     *         Storage of the <code>StorageType</code> specified can't be associated with the DB instance.
+     *         The specified <code>StorageType</code> can't be associated with the DB instance.
      * @throws AuthorizationNotFoundException
      *         The specified CIDR IP range or Amazon EC2 security group might not be authorized for the specified DB
      *         security group.</p>
@@ -4420,7 +4425,7 @@ public interface AmazonRDS {
      *         The quota for retained automated backups was exceeded. This prevents you from retaining any additional
      *         automated backups. The retained automated backups quota is the same as your DB Instance quota.
      * @throws StorageTypeNotSupportedException
-     *         Storage of the <code>StorageType</code> specified can't be associated with the DB instance.
+     *         The specified <code>StorageType</code> can't be associated with the DB instance.
      * @sample AmazonRDS.StartDBInstanceAutomatedBackupsReplication
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/StartDBInstanceAutomatedBackupsReplication"
      *      target="_top">AWS API Documentation</a>

@@ -186,6 +186,15 @@ public class DBClusterSnapshot implements Serializable, Cloneable {
      * </p>
      */
     private String dBSystemId;
+    /**
+     * <p>
+     * The storage type associated with the DB cluster snapshot.
+     * </p>
+     * <p>
+     * This setting is only for Aurora DB clusters.
+     * </p>
+     */
+    private String storageType;
 
     /**
      * <p>
@@ -1317,6 +1326,61 @@ public class DBClusterSnapshot implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * The storage type associated with the DB cluster snapshot.
+     * </p>
+     * <p>
+     * This setting is only for Aurora DB clusters.
+     * </p>
+     * 
+     * @param storageType
+     *        The storage type associated with the DB cluster snapshot.</p>
+     *        <p>
+     *        This setting is only for Aurora DB clusters.
+     */
+
+    public void setStorageType(String storageType) {
+        this.storageType = storageType;
+    }
+
+    /**
+     * <p>
+     * The storage type associated with the DB cluster snapshot.
+     * </p>
+     * <p>
+     * This setting is only for Aurora DB clusters.
+     * </p>
+     * 
+     * @return The storage type associated with the DB cluster snapshot.</p>
+     *         <p>
+     *         This setting is only for Aurora DB clusters.
+     */
+
+    public String getStorageType() {
+        return this.storageType;
+    }
+
+    /**
+     * <p>
+     * The storage type associated with the DB cluster snapshot.
+     * </p>
+     * <p>
+     * This setting is only for Aurora DB clusters.
+     * </p>
+     * 
+     * @param storageType
+     *        The storage type associated with the DB cluster snapshot.</p>
+     *        <p>
+     *        This setting is only for Aurora DB clusters.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DBClusterSnapshot withStorageType(String storageType) {
+        setStorageType(storageType);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1373,7 +1437,9 @@ public class DBClusterSnapshot implements Serializable, Cloneable {
         if (getTagList() != null)
             sb.append("TagList: ").append(getTagList()).append(",");
         if (getDBSystemId() != null)
-            sb.append("DBSystemId: ").append(getDBSystemId());
+            sb.append("DBSystemId: ").append(getDBSystemId()).append(",");
+        if (getStorageType() != null)
+            sb.append("StorageType: ").append(getStorageType());
         sb.append("}");
         return sb.toString();
     }
@@ -1481,6 +1547,10 @@ public class DBClusterSnapshot implements Serializable, Cloneable {
             return false;
         if (other.getDBSystemId() != null && other.getDBSystemId().equals(this.getDBSystemId()) == false)
             return false;
+        if (other.getStorageType() == null ^ this.getStorageType() == null)
+            return false;
+        if (other.getStorageType() != null && other.getStorageType().equals(this.getStorageType()) == false)
+            return false;
         return true;
     }
 
@@ -1512,6 +1582,7 @@ public class DBClusterSnapshot implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getIAMDatabaseAuthenticationEnabled() == null) ? 0 : getIAMDatabaseAuthenticationEnabled().hashCode());
         hashCode = prime * hashCode + ((getTagList() == null) ? 0 : getTagList().hashCode());
         hashCode = prime * hashCode + ((getDBSystemId() == null) ? 0 : getDBSystemId().hashCode());
+        hashCode = prime * hashCode + ((getStorageType() == null) ? 0 : getStorageType().hashCode());
         return hashCode;
     }
 

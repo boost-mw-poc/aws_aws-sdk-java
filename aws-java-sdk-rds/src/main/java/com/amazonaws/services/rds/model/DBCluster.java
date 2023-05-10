@@ -335,8 +335,7 @@ public class DBCluster implements Serializable, Cloneable {
     private Integer capacity;
     /**
      * <p>
-     * The DB engine mode of the DB cluster, either <code>provisioned</code>, <code>serverless</code>,
-     * <code>parallelquery</code>, <code>global</code>, or <code>multimaster</code>.
+     * The DB engine mode of the DB cluster, either <code>provisioned</code> or <code>serverless</code>.
      * </p>
      * <p>
      * For more information, see <a
@@ -451,9 +450,6 @@ public class DBCluster implements Serializable, Cloneable {
     /**
      * <p>
      * The storage type associated with the DB cluster.
-     * </p>
-     * <p>
-     * This setting is only for non-Aurora Multi-AZ DB clusters.
      * </p>
      */
     private String storageType;
@@ -642,6 +638,15 @@ public class DBCluster implements Serializable, Cloneable {
      * </p>
      */
     private MasterUserSecret masterUserSecret;
+    /**
+     * <p>
+     * The next time you can modify the DB cluster to use the <code>aurora-iopt1</code> storage type.
+     * </p>
+     * <p>
+     * This setting is only for Aurora DB clusters.
+     * </p>
+     */
+    private java.util.Date iOOptimizedNextAllowedModificationTime;
 
     /**
      * <p>
@@ -2835,8 +2840,7 @@ public class DBCluster implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The DB engine mode of the DB cluster, either <code>provisioned</code>, <code>serverless</code>,
-     * <code>parallelquery</code>, <code>global</code>, or <code>multimaster</code>.
+     * The DB engine mode of the DB cluster, either <code>provisioned</code> or <code>serverless</code>.
      * </p>
      * <p>
      * For more information, see <a
@@ -2844,8 +2848,7 @@ public class DBCluster implements Serializable, Cloneable {
      * </p>
      * 
      * @param engineMode
-     *        The DB engine mode of the DB cluster, either <code>provisioned</code>, <code>serverless</code>,
-     *        <code>parallelquery</code>, <code>global</code>, or <code>multimaster</code>.</p>
+     *        The DB engine mode of the DB cluster, either <code>provisioned</code> or <code>serverless</code>.</p>
      *        <p>
      *        For more information, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBCluster.html">
@@ -2858,16 +2861,14 @@ public class DBCluster implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The DB engine mode of the DB cluster, either <code>provisioned</code>, <code>serverless</code>,
-     * <code>parallelquery</code>, <code>global</code>, or <code>multimaster</code>.
+     * The DB engine mode of the DB cluster, either <code>provisioned</code> or <code>serverless</code>.
      * </p>
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBCluster.html"> CreateDBCluster</a>.
      * </p>
      * 
-     * @return The DB engine mode of the DB cluster, either <code>provisioned</code>, <code>serverless</code>,
-     *         <code>parallelquery</code>, <code>global</code>, or <code>multimaster</code>.</p>
+     * @return The DB engine mode of the DB cluster, either <code>provisioned</code> or <code>serverless</code>.</p>
      *         <p>
      *         For more information, see <a
      *         href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBCluster.html">
@@ -2880,8 +2881,7 @@ public class DBCluster implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The DB engine mode of the DB cluster, either <code>provisioned</code>, <code>serverless</code>,
-     * <code>parallelquery</code>, <code>global</code>, or <code>multimaster</code>.
+     * The DB engine mode of the DB cluster, either <code>provisioned</code> or <code>serverless</code>.
      * </p>
      * <p>
      * For more information, see <a
@@ -2889,8 +2889,7 @@ public class DBCluster implements Serializable, Cloneable {
      * </p>
      * 
      * @param engineMode
-     *        The DB engine mode of the DB cluster, either <code>provisioned</code>, <code>serverless</code>,
-     *        <code>parallelquery</code>, <code>global</code>, or <code>multimaster</code>.</p>
+     *        The DB engine mode of the DB cluster, either <code>provisioned</code> or <code>serverless</code>.</p>
      *        <p>
      *        For more information, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBCluster.html">
@@ -3824,14 +3823,9 @@ public class DBCluster implements Serializable, Cloneable {
      * <p>
      * The storage type associated with the DB cluster.
      * </p>
-     * <p>
-     * This setting is only for non-Aurora Multi-AZ DB clusters.
-     * </p>
      * 
      * @param storageType
-     *        The storage type associated with the DB cluster.</p>
-     *        <p>
-     *        This setting is only for non-Aurora Multi-AZ DB clusters.
+     *        The storage type associated with the DB cluster.
      */
 
     public void setStorageType(String storageType) {
@@ -3842,13 +3836,8 @@ public class DBCluster implements Serializable, Cloneable {
      * <p>
      * The storage type associated with the DB cluster.
      * </p>
-     * <p>
-     * This setting is only for non-Aurora Multi-AZ DB clusters.
-     * </p>
      * 
-     * @return The storage type associated with the DB cluster.</p>
-     *         <p>
-     *         This setting is only for non-Aurora Multi-AZ DB clusters.
+     * @return The storage type associated with the DB cluster.
      */
 
     public String getStorageType() {
@@ -3859,14 +3848,9 @@ public class DBCluster implements Serializable, Cloneable {
      * <p>
      * The storage type associated with the DB cluster.
      * </p>
-     * <p>
-     * This setting is only for non-Aurora Multi-AZ DB clusters.
-     * </p>
      * 
      * @param storageType
-     *        The storage type associated with the DB cluster.</p>
-     *        <p>
-     *        This setting is only for non-Aurora Multi-AZ DB clusters.
+     *        The storage type associated with the DB cluster.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -5110,6 +5094,61 @@ public class DBCluster implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * The next time you can modify the DB cluster to use the <code>aurora-iopt1</code> storage type.
+     * </p>
+     * <p>
+     * This setting is only for Aurora DB clusters.
+     * </p>
+     * 
+     * @param iOOptimizedNextAllowedModificationTime
+     *        The next time you can modify the DB cluster to use the <code>aurora-iopt1</code> storage type.</p>
+     *        <p>
+     *        This setting is only for Aurora DB clusters.
+     */
+
+    public void setIOOptimizedNextAllowedModificationTime(java.util.Date iOOptimizedNextAllowedModificationTime) {
+        this.iOOptimizedNextAllowedModificationTime = iOOptimizedNextAllowedModificationTime;
+    }
+
+    /**
+     * <p>
+     * The next time you can modify the DB cluster to use the <code>aurora-iopt1</code> storage type.
+     * </p>
+     * <p>
+     * This setting is only for Aurora DB clusters.
+     * </p>
+     * 
+     * @return The next time you can modify the DB cluster to use the <code>aurora-iopt1</code> storage type.</p>
+     *         <p>
+     *         This setting is only for Aurora DB clusters.
+     */
+
+    public java.util.Date getIOOptimizedNextAllowedModificationTime() {
+        return this.iOOptimizedNextAllowedModificationTime;
+    }
+
+    /**
+     * <p>
+     * The next time you can modify the DB cluster to use the <code>aurora-iopt1</code> storage type.
+     * </p>
+     * <p>
+     * This setting is only for Aurora DB clusters.
+     * </p>
+     * 
+     * @param iOOptimizedNextAllowedModificationTime
+     *        The next time you can modify the DB cluster to use the <code>aurora-iopt1</code> storage type.</p>
+     *        <p>
+     *        This setting is only for Aurora DB clusters.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DBCluster withIOOptimizedNextAllowedModificationTime(java.util.Date iOOptimizedNextAllowedModificationTime) {
+        setIOOptimizedNextAllowedModificationTime(iOOptimizedNextAllowedModificationTime);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -5262,7 +5301,9 @@ public class DBCluster implements Serializable, Cloneable {
         if (getDBSystemId() != null)
             sb.append("DBSystemId: ").append(getDBSystemId()).append(",");
         if (getMasterUserSecret() != null)
-            sb.append("MasterUserSecret: ").append(getMasterUserSecret());
+            sb.append("MasterUserSecret: ").append(getMasterUserSecret()).append(",");
+        if (getIOOptimizedNextAllowedModificationTime() != null)
+            sb.append("IOOptimizedNextAllowedModificationTime: ").append(getIOOptimizedNextAllowedModificationTime());
         sb.append("}");
         return sb.toString();
     }
@@ -5568,6 +5609,11 @@ public class DBCluster implements Serializable, Cloneable {
             return false;
         if (other.getMasterUserSecret() != null && other.getMasterUserSecret().equals(this.getMasterUserSecret()) == false)
             return false;
+        if (other.getIOOptimizedNextAllowedModificationTime() == null ^ this.getIOOptimizedNextAllowedModificationTime() == null)
+            return false;
+        if (other.getIOOptimizedNextAllowedModificationTime() != null
+                && other.getIOOptimizedNextAllowedModificationTime().equals(this.getIOOptimizedNextAllowedModificationTime()) == false)
+            return false;
         return true;
     }
 
@@ -5647,6 +5693,7 @@ public class DBCluster implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getNetworkType() == null) ? 0 : getNetworkType().hashCode());
         hashCode = prime * hashCode + ((getDBSystemId() == null) ? 0 : getDBSystemId().hashCode());
         hashCode = prime * hashCode + ((getMasterUserSecret() == null) ? 0 : getMasterUserSecret().hashCode());
+        hashCode = prime * hashCode + ((getIOOptimizedNextAllowedModificationTime() == null) ? 0 : getIOOptimizedNextAllowedModificationTime().hashCode());
         return hashCode;
     }
 

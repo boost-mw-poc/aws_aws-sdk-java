@@ -433,20 +433,12 @@ public class DBInstance implements Serializable, Cloneable {
      * enabled, and otherwise false.
      * </p>
      * <p>
-     * IAM database authentication can be enabled for the following database engines:
+     * For a list of engine versions that support IAM database authentication, see <a href=
+     * "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RDS_Fea_Regions_DB-eng.Feature.IamDatabaseAuthentication.html"
+     * >IAM database authentication</a> in the <i>Amazon RDS User Guide</i> and <a href=
+     * "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Concepts.Aurora_Fea_Regions_DB-eng.Feature.IAMdbauth.html"
+     * >IAM database authentication in Aurora</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * For MySQL 5.7, minor version 5.7.16 or higher.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * For Amazon Aurora, all versions of Aurora MySQL and Aurora PostgreSQL.
-     * </p>
-     * </li>
-     * </ul>
      */
     private Boolean iAMDatabaseAuthenticationEnabled;
     /**
@@ -3718,38 +3710,22 @@ public class DBInstance implements Serializable, Cloneable {
      * enabled, and otherwise false.
      * </p>
      * <p>
-     * IAM database authentication can be enabled for the following database engines:
+     * For a list of engine versions that support IAM database authentication, see <a href=
+     * "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RDS_Fea_Regions_DB-eng.Feature.IamDatabaseAuthentication.html"
+     * >IAM database authentication</a> in the <i>Amazon RDS User Guide</i> and <a href=
+     * "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Concepts.Aurora_Fea_Regions_DB-eng.Feature.IAMdbauth.html"
+     * >IAM database authentication in Aurora</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * For MySQL 5.7, minor version 5.7.16 or higher.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * For Amazon Aurora, all versions of Aurora MySQL and Aurora PostgreSQL.
-     * </p>
-     * </li>
-     * </ul>
      * 
      * @param iAMDatabaseAuthenticationEnabled
      *        True if mapping of Amazon Web Services Identity and Access Management (IAM) accounts to database accounts
      *        is enabled, and otherwise false.</p>
      *        <p>
-     *        IAM database authentication can be enabled for the following database engines:
-     *        </p>
-     *        <ul>
-     *        <li>
-     *        <p>
-     *        For MySQL 5.7, minor version 5.7.16 or higher.
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        For Amazon Aurora, all versions of Aurora MySQL and Aurora PostgreSQL.
-     *        </p>
-     *        </li>
+     *        For a list of engine versions that support IAM database authentication, see <a href=
+     *        "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RDS_Fea_Regions_DB-eng.Feature.IamDatabaseAuthentication.html"
+     *        >IAM database authentication</a> in the <i>Amazon RDS User Guide</i> and <a href=
+     *        "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Concepts.Aurora_Fea_Regions_DB-eng.Feature.IAMdbauth.html"
+     *        >IAM database authentication in Aurora</a> in the <i>Amazon Aurora User Guide</i>.
      */
 
     public void setIAMDatabaseAuthenticationEnabled(Boolean iAMDatabaseAuthenticationEnabled) {
@@ -3762,37 +3738,21 @@ public class DBInstance implements Serializable, Cloneable {
      * enabled, and otherwise false.
      * </p>
      * <p>
-     * IAM database authentication can be enabled for the following database engines:
+     * For a list of engine versions that support IAM database authentication, see <a href=
+     * "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RDS_Fea_Regions_DB-eng.Feature.IamDatabaseAuthentication.html"
+     * >IAM database authentication</a> in the <i>Amazon RDS User Guide</i> and <a href=
+     * "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Concepts.Aurora_Fea_Regions_DB-eng.Feature.IAMdbauth.html"
+     * >IAM database authentication in Aurora</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * For MySQL 5.7, minor version 5.7.16 or higher.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * For Amazon Aurora, all versions of Aurora MySQL and Aurora PostgreSQL.
-     * </p>
-     * </li>
-     * </ul>
      * 
      * @return True if mapping of Amazon Web Services Identity and Access Management (IAM) accounts to database accounts
      *         is enabled, and otherwise false.</p>
      *         <p>
-     *         IAM database authentication can be enabled for the following database engines:
-     *         </p>
-     *         <ul>
-     *         <li>
-     *         <p>
-     *         For MySQL 5.7, minor version 5.7.16 or higher.
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
-     *         For Amazon Aurora, all versions of Aurora MySQL and Aurora PostgreSQL.
-     *         </p>
-     *         </li>
+     *         For a list of engine versions that support IAM database authentication, see <a href=
+     *         "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RDS_Fea_Regions_DB-eng.Feature.IamDatabaseAuthentication.html"
+     *         >IAM database authentication</a> in the <i>Amazon RDS User Guide</i> and <a href=
+     *         "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Concepts.Aurora_Fea_Regions_DB-eng.Feature.IAMdbauth.html"
+     *         >IAM database authentication in Aurora</a> in the <i>Amazon Aurora User Guide</i>.
      */
 
     public Boolean getIAMDatabaseAuthenticationEnabled() {
@@ -3805,38 +3765,22 @@ public class DBInstance implements Serializable, Cloneable {
      * enabled, and otherwise false.
      * </p>
      * <p>
-     * IAM database authentication can be enabled for the following database engines:
+     * For a list of engine versions that support IAM database authentication, see <a href=
+     * "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RDS_Fea_Regions_DB-eng.Feature.IamDatabaseAuthentication.html"
+     * >IAM database authentication</a> in the <i>Amazon RDS User Guide</i> and <a href=
+     * "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Concepts.Aurora_Fea_Regions_DB-eng.Feature.IAMdbauth.html"
+     * >IAM database authentication in Aurora</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * For MySQL 5.7, minor version 5.7.16 or higher.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * For Amazon Aurora, all versions of Aurora MySQL and Aurora PostgreSQL.
-     * </p>
-     * </li>
-     * </ul>
      * 
      * @param iAMDatabaseAuthenticationEnabled
      *        True if mapping of Amazon Web Services Identity and Access Management (IAM) accounts to database accounts
      *        is enabled, and otherwise false.</p>
      *        <p>
-     *        IAM database authentication can be enabled for the following database engines:
-     *        </p>
-     *        <ul>
-     *        <li>
-     *        <p>
-     *        For MySQL 5.7, minor version 5.7.16 or higher.
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        For Amazon Aurora, all versions of Aurora MySQL and Aurora PostgreSQL.
-     *        </p>
-     *        </li>
+     *        For a list of engine versions that support IAM database authentication, see <a href=
+     *        "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RDS_Fea_Regions_DB-eng.Feature.IamDatabaseAuthentication.html"
+     *        >IAM database authentication</a> in the <i>Amazon RDS User Guide</i> and <a href=
+     *        "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Concepts.Aurora_Fea_Regions_DB-eng.Feature.IAMdbauth.html"
+     *        >IAM database authentication in Aurora</a> in the <i>Amazon Aurora User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -3851,37 +3795,21 @@ public class DBInstance implements Serializable, Cloneable {
      * enabled, and otherwise false.
      * </p>
      * <p>
-     * IAM database authentication can be enabled for the following database engines:
+     * For a list of engine versions that support IAM database authentication, see <a href=
+     * "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RDS_Fea_Regions_DB-eng.Feature.IamDatabaseAuthentication.html"
+     * >IAM database authentication</a> in the <i>Amazon RDS User Guide</i> and <a href=
+     * "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Concepts.Aurora_Fea_Regions_DB-eng.Feature.IAMdbauth.html"
+     * >IAM database authentication in Aurora</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * For MySQL 5.7, minor version 5.7.16 or higher.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * For Amazon Aurora, all versions of Aurora MySQL and Aurora PostgreSQL.
-     * </p>
-     * </li>
-     * </ul>
      * 
      * @return True if mapping of Amazon Web Services Identity and Access Management (IAM) accounts to database accounts
      *         is enabled, and otherwise false.</p>
      *         <p>
-     *         IAM database authentication can be enabled for the following database engines:
-     *         </p>
-     *         <ul>
-     *         <li>
-     *         <p>
-     *         For MySQL 5.7, minor version 5.7.16 or higher.
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
-     *         For Amazon Aurora, all versions of Aurora MySQL and Aurora PostgreSQL.
-     *         </p>
-     *         </li>
+     *         For a list of engine versions that support IAM database authentication, see <a href=
+     *         "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RDS_Fea_Regions_DB-eng.Feature.IamDatabaseAuthentication.html"
+     *         >IAM database authentication</a> in the <i>Amazon RDS User Guide</i> and <a href=
+     *         "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Concepts.Aurora_Fea_Regions_DB-eng.Feature.IAMdbauth.html"
+     *         >IAM database authentication in Aurora</a> in the <i>Amazon Aurora User Guide</i>.
      */
 
     public Boolean isIAMDatabaseAuthenticationEnabled() {

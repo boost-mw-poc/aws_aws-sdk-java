@@ -1,3 +1,16 @@
+# __1.12.467__ __2023-05-10__
+## __Amazon EMR__
+  - ### Features
+    - EMR Studio now supports programmatically executing a Notebooks on an EMR on EKS cluster.  In addition, notebooks can now be executed by specifying its location in S3.
+
+## __Amazon Relational Database Service__
+  - ### Features
+    - Amazon Relational Database Service (RDS) updates for the new Aurora I/O-Optimized storage type for Amazon Aurora DB clusters
+
+## __Amazon Simple Workflow Service__
+  - ### Features
+    - This release adds a new API parameter to exclude old history events from decision tasks.
+
 # __1.12.466__ __2023-05-09__
 ## __AWS Glue__
   - ### Features

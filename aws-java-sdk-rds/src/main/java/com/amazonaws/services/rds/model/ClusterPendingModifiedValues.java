@@ -73,6 +73,12 @@ public class ClusterPendingModifiedValues implements Serializable, Cloneable {
      * </p>
      */
     private Integer iops;
+    /**
+     * <p>
+     * The storage type for the DB cluster.
+     * </p>
+     */
+    private String storageType;
 
     /**
      * @param pendingCloudwatchLogsExports
@@ -416,6 +422,46 @@ public class ClusterPendingModifiedValues implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * The storage type for the DB cluster.
+     * </p>
+     * 
+     * @param storageType
+     *        The storage type for the DB cluster.
+     */
+
+    public void setStorageType(String storageType) {
+        this.storageType = storageType;
+    }
+
+    /**
+     * <p>
+     * The storage type for the DB cluster.
+     * </p>
+     * 
+     * @return The storage type for the DB cluster.
+     */
+
+    public String getStorageType() {
+        return this.storageType;
+    }
+
+    /**
+     * <p>
+     * The storage type for the DB cluster.
+     * </p>
+     * 
+     * @param storageType
+     *        The storage type for the DB cluster.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ClusterPendingModifiedValues withStorageType(String storageType) {
+        setStorageType(storageType);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -442,7 +488,9 @@ public class ClusterPendingModifiedValues implements Serializable, Cloneable {
         if (getAllocatedStorage() != null)
             sb.append("AllocatedStorage: ").append(getAllocatedStorage()).append(",");
         if (getIops() != null)
-            sb.append("Iops: ").append(getIops());
+            sb.append("Iops: ").append(getIops()).append(",");
+        if (getStorageType() != null)
+            sb.append("StorageType: ").append(getStorageType());
         sb.append("}");
         return sb.toString();
     }
@@ -490,6 +538,10 @@ public class ClusterPendingModifiedValues implements Serializable, Cloneable {
             return false;
         if (other.getIops() != null && other.getIops().equals(this.getIops()) == false)
             return false;
+        if (other.getStorageType() == null ^ this.getStorageType() == null)
+            return false;
+        if (other.getStorageType() != null && other.getStorageType().equals(this.getStorageType()) == false)
+            return false;
         return true;
     }
 
@@ -506,6 +558,7 @@ public class ClusterPendingModifiedValues implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getBackupRetentionPeriod() == null) ? 0 : getBackupRetentionPeriod().hashCode());
         hashCode = prime * hashCode + ((getAllocatedStorage() == null) ? 0 : getAllocatedStorage().hashCode());
         hashCode = prime * hashCode + ((getIops() == null) ? 0 : getIops().hashCode());
+        hashCode = prime * hashCode + ((getStorageType() == null) ? 0 : getStorageType().hashCode());
         return hashCode;
     }
 

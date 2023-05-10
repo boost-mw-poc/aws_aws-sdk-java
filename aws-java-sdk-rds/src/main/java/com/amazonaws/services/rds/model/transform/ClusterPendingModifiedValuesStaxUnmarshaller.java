@@ -83,6 +83,11 @@ public class ClusterPendingModifiedValuesStaxUnmarshaller implements Unmarshalle
                     clusterPendingModifiedValues.setIops(IntegerStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("StorageType", targetDepth)) {
+                    clusterPendingModifiedValues.setStorageType(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return clusterPendingModifiedValues;

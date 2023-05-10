@@ -440,19 +440,20 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
     private String dBClusterInstanceClass;
     /**
      * <p>
-     * Specifies the storage type to be associated with the each DB instance in the Multi-AZ DB cluster.
+     * Specifies the storage type to be associated with the DB cluster.
      * </p>
      * <p>
-     * Valid values: <code>io1</code>
+     * When specified for a Multi-AZ DB cluster, a value for the <code>Iops</code> parameter is required.
      * </p>
      * <p>
-     * When specified, a value for the <code>Iops</code> parameter is required.
+     * Valid values: <code>aurora</code>, <code>aurora-iopt1</code> (Aurora DB clusters); <code>io1</code> (Multi-AZ DB
+     * clusters)
      * </p>
      * <p>
-     * Default: <code>io1</code>
+     * Default: <code>aurora</code> (Aurora DB clusters); <code>io1</code> (Multi-AZ DB clusters)
      * </p>
      * <p>
-     * Valid for: Multi-AZ DB clusters only
+     * Valid for: Aurora DB clusters and Multi-AZ DB clusters
      * </p>
      */
     private String storageType;
@@ -3352,34 +3353,36 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * Specifies the storage type to be associated with the each DB instance in the Multi-AZ DB cluster.
+     * Specifies the storage type to be associated with the DB cluster.
      * </p>
      * <p>
-     * Valid values: <code>io1</code>
+     * When specified for a Multi-AZ DB cluster, a value for the <code>Iops</code> parameter is required.
      * </p>
      * <p>
-     * When specified, a value for the <code>Iops</code> parameter is required.
+     * Valid values: <code>aurora</code>, <code>aurora-iopt1</code> (Aurora DB clusters); <code>io1</code> (Multi-AZ DB
+     * clusters)
      * </p>
      * <p>
-     * Default: <code>io1</code>
+     * Default: <code>aurora</code> (Aurora DB clusters); <code>io1</code> (Multi-AZ DB clusters)
      * </p>
      * <p>
-     * Valid for: Multi-AZ DB clusters only
+     * Valid for: Aurora DB clusters and Multi-AZ DB clusters
      * </p>
      * 
      * @param storageType
-     *        Specifies the storage type to be associated with the each DB instance in the Multi-AZ DB cluster.</p>
+     *        Specifies the storage type to be associated with the DB cluster.</p>
      *        <p>
-     *        Valid values: <code>io1</code>
+     *        When specified for a Multi-AZ DB cluster, a value for the <code>Iops</code> parameter is required.
      *        </p>
      *        <p>
-     *        When specified, a value for the <code>Iops</code> parameter is required.
+     *        Valid values: <code>aurora</code>, <code>aurora-iopt1</code> (Aurora DB clusters); <code>io1</code>
+     *        (Multi-AZ DB clusters)
      *        </p>
      *        <p>
-     *        Default: <code>io1</code>
+     *        Default: <code>aurora</code> (Aurora DB clusters); <code>io1</code> (Multi-AZ DB clusters)
      *        </p>
      *        <p>
-     *        Valid for: Multi-AZ DB clusters only
+     *        Valid for: Aurora DB clusters and Multi-AZ DB clusters
      */
 
     public void setStorageType(String storageType) {
@@ -3388,33 +3391,35 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * Specifies the storage type to be associated with the each DB instance in the Multi-AZ DB cluster.
+     * Specifies the storage type to be associated with the DB cluster.
      * </p>
      * <p>
-     * Valid values: <code>io1</code>
+     * When specified for a Multi-AZ DB cluster, a value for the <code>Iops</code> parameter is required.
      * </p>
      * <p>
-     * When specified, a value for the <code>Iops</code> parameter is required.
+     * Valid values: <code>aurora</code>, <code>aurora-iopt1</code> (Aurora DB clusters); <code>io1</code> (Multi-AZ DB
+     * clusters)
      * </p>
      * <p>
-     * Default: <code>io1</code>
+     * Default: <code>aurora</code> (Aurora DB clusters); <code>io1</code> (Multi-AZ DB clusters)
      * </p>
      * <p>
-     * Valid for: Multi-AZ DB clusters only
+     * Valid for: Aurora DB clusters and Multi-AZ DB clusters
      * </p>
      * 
-     * @return Specifies the storage type to be associated with the each DB instance in the Multi-AZ DB cluster.</p>
+     * @return Specifies the storage type to be associated with the DB cluster.</p>
      *         <p>
-     *         Valid values: <code>io1</code>
+     *         When specified for a Multi-AZ DB cluster, a value for the <code>Iops</code> parameter is required.
      *         </p>
      *         <p>
-     *         When specified, a value for the <code>Iops</code> parameter is required.
+     *         Valid values: <code>aurora</code>, <code>aurora-iopt1</code> (Aurora DB clusters); <code>io1</code>
+     *         (Multi-AZ DB clusters)
      *         </p>
      *         <p>
-     *         Default: <code>io1</code>
+     *         Default: <code>aurora</code> (Aurora DB clusters); <code>io1</code> (Multi-AZ DB clusters)
      *         </p>
      *         <p>
-     *         Valid for: Multi-AZ DB clusters only
+     *         Valid for: Aurora DB clusters and Multi-AZ DB clusters
      */
 
     public String getStorageType() {
@@ -3423,34 +3428,36 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * Specifies the storage type to be associated with the each DB instance in the Multi-AZ DB cluster.
+     * Specifies the storage type to be associated with the DB cluster.
      * </p>
      * <p>
-     * Valid values: <code>io1</code>
+     * When specified for a Multi-AZ DB cluster, a value for the <code>Iops</code> parameter is required.
      * </p>
      * <p>
-     * When specified, a value for the <code>Iops</code> parameter is required.
+     * Valid values: <code>aurora</code>, <code>aurora-iopt1</code> (Aurora DB clusters); <code>io1</code> (Multi-AZ DB
+     * clusters)
      * </p>
      * <p>
-     * Default: <code>io1</code>
+     * Default: <code>aurora</code> (Aurora DB clusters); <code>io1</code> (Multi-AZ DB clusters)
      * </p>
      * <p>
-     * Valid for: Multi-AZ DB clusters only
+     * Valid for: Aurora DB clusters and Multi-AZ DB clusters
      * </p>
      * 
      * @param storageType
-     *        Specifies the storage type to be associated with the each DB instance in the Multi-AZ DB cluster.</p>
+     *        Specifies the storage type to be associated with the DB cluster.</p>
      *        <p>
-     *        Valid values: <code>io1</code>
+     *        When specified for a Multi-AZ DB cluster, a value for the <code>Iops</code> parameter is required.
      *        </p>
      *        <p>
-     *        When specified, a value for the <code>Iops</code> parameter is required.
+     *        Valid values: <code>aurora</code>, <code>aurora-iopt1</code> (Aurora DB clusters); <code>io1</code>
+     *        (Multi-AZ DB clusters)
      *        </p>
      *        <p>
-     *        Default: <code>io1</code>
+     *        Default: <code>aurora</code> (Aurora DB clusters); <code>io1</code> (Multi-AZ DB clusters)
      *        </p>
      *        <p>
-     *        Valid for: Multi-AZ DB clusters only
+     *        Valid for: Aurora DB clusters and Multi-AZ DB clusters
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

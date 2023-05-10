@@ -515,6 +515,21 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
      * </p>
      */
     private String masterUserSecretKmsKeyId;
+    /**
+     * <p>
+     * Specifies the storage type to be associated with the DB cluster.
+     * </p>
+     * <p>
+     * Valid values: <code>aurora</code>, <code>aurora-iopt1</code>
+     * </p>
+     * <p>
+     * Default: <code>aurora</code>
+     * </p>
+     * <p>
+     * Valid for: Aurora DB clusters only
+     * </p>
+     */
+    private String storageType;
 
     /**
      * <p>
@@ -3829,6 +3844,97 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
     }
 
     /**
+     * <p>
+     * Specifies the storage type to be associated with the DB cluster.
+     * </p>
+     * <p>
+     * Valid values: <code>aurora</code>, <code>aurora-iopt1</code>
+     * </p>
+     * <p>
+     * Default: <code>aurora</code>
+     * </p>
+     * <p>
+     * Valid for: Aurora DB clusters only
+     * </p>
+     * 
+     * @param storageType
+     *        Specifies the storage type to be associated with the DB cluster.</p>
+     *        <p>
+     *        Valid values: <code>aurora</code>, <code>aurora-iopt1</code>
+     *        </p>
+     *        <p>
+     *        Default: <code>aurora</code>
+     *        </p>
+     *        <p>
+     *        Valid for: Aurora DB clusters only
+     */
+
+    public void setStorageType(String storageType) {
+        this.storageType = storageType;
+    }
+
+    /**
+     * <p>
+     * Specifies the storage type to be associated with the DB cluster.
+     * </p>
+     * <p>
+     * Valid values: <code>aurora</code>, <code>aurora-iopt1</code>
+     * </p>
+     * <p>
+     * Default: <code>aurora</code>
+     * </p>
+     * <p>
+     * Valid for: Aurora DB clusters only
+     * </p>
+     * 
+     * @return Specifies the storage type to be associated with the DB cluster.</p>
+     *         <p>
+     *         Valid values: <code>aurora</code>, <code>aurora-iopt1</code>
+     *         </p>
+     *         <p>
+     *         Default: <code>aurora</code>
+     *         </p>
+     *         <p>
+     *         Valid for: Aurora DB clusters only
+     */
+
+    public String getStorageType() {
+        return this.storageType;
+    }
+
+    /**
+     * <p>
+     * Specifies the storage type to be associated with the DB cluster.
+     * </p>
+     * <p>
+     * Valid values: <code>aurora</code>, <code>aurora-iopt1</code>
+     * </p>
+     * <p>
+     * Default: <code>aurora</code>
+     * </p>
+     * <p>
+     * Valid for: Aurora DB clusters only
+     * </p>
+     * 
+     * @param storageType
+     *        Specifies the storage type to be associated with the DB cluster.</p>
+     *        <p>
+     *        Valid values: <code>aurora</code>, <code>aurora-iopt1</code>
+     *        </p>
+     *        <p>
+     *        Default: <code>aurora</code>
+     *        </p>
+     *        <p>
+     *        Valid for: Aurora DB clusters only
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RestoreDBClusterFromS3Request withStorageType(String storageType) {
+        setStorageType(storageType);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -3909,7 +4015,9 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
         if (getManageMasterUserPassword() != null)
             sb.append("ManageMasterUserPassword: ").append(getManageMasterUserPassword()).append(",");
         if (getMasterUserSecretKmsKeyId() != null)
-            sb.append("MasterUserSecretKmsKeyId: ").append(getMasterUserSecretKmsKeyId());
+            sb.append("MasterUserSecretKmsKeyId: ").append(getMasterUserSecretKmsKeyId()).append(",");
+        if (getStorageType() != null)
+            sb.append("StorageType: ").append(getStorageType());
         sb.append("}");
         return sb.toString();
     }
@@ -4066,6 +4174,10 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
             return false;
         if (other.getMasterUserSecretKmsKeyId() != null && other.getMasterUserSecretKmsKeyId().equals(this.getMasterUserSecretKmsKeyId()) == false)
             return false;
+        if (other.getStorageType() == null ^ this.getStorageType() == null)
+            return false;
+        if (other.getStorageType() != null && other.getStorageType().equals(this.getStorageType()) == false)
+            return false;
         return true;
     }
 
@@ -4109,6 +4221,7 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
         hashCode = prime * hashCode + ((getNetworkType() == null) ? 0 : getNetworkType().hashCode());
         hashCode = prime * hashCode + ((getManageMasterUserPassword() == null) ? 0 : getManageMasterUserPassword().hashCode());
         hashCode = prime * hashCode + ((getMasterUserSecretKmsKeyId() == null) ? 0 : getMasterUserSecretKmsKeyId().hashCode());
+        hashCode = prime * hashCode + ((getStorageType() == null) ? 0 : getStorageType().hashCode());
         return hashCode;
     }
 
