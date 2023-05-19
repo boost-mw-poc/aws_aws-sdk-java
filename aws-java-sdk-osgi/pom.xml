@@ -5,7 +5,7 @@
   <parent>
     <groupId>com.amazonaws</groupId>
     <artifactId>aws-java-sdk-pom</artifactId>
-    <version>1.12.472-SNAPSHOT</version>
+    <version>1.12.472</version>
   </parent>
   <groupId>com.amazonaws</groupId>
   <artifactId>aws-java-sdk-osgi</artifactId>
@@ -15,6 +15,12 @@
 
   <!-- The dependencies section in pom.xml is auto generated. No manual changes are allowed -->
   <dependencies>
+    <dependency>
+        <artifactId>aws-java-sdk-mediapackagev2</artifactId>
+        <groupId>com.amazonaws</groupId>
+        <optional>false</optional>
+        <version>${awsjavasdk.version}</version>
+    </dependency>
     <dependency>
         <artifactId>aws-java-sdk-osis</artifactId>
         <groupId>com.amazonaws</groupId>
@@ -2171,7 +2177,7 @@
                           <windowtitle>AWS SDK for Java - ${project.version}</windowtitle>
                           <encoding>UTF-8</encoding>
                           <docencoding>UTF-8</docencoding>
-                          <doctitle>AWS SDK for Java API Reference - ${project.version}</doctitle>
+                          <doctitle>AWS SDK for Java 1.x API Reference - ${project.version}</doctitle>
                           <packagesheader>AWS SDK for Java</packagesheader>
                           <!-- Required for src/main/javadoc/resources/ to be copied over correctly -->
                           <docfilessubdirs>true</docfilessubdirs>
@@ -2186,6 +2192,10 @@
                               </taglet>
                           </taglets>
                           <groups>
+                              <group>
+                                  <title>AWS Elemental MediaPackage v2</title>
+                                  <packages>com.amazonaws.services.mediapackagev2*</packages>
+                              </group>
                               <group>
                                   <title>Amazon OpenSearch Ingestion</title>
                                   <packages>com.amazonaws.services.osis*</packages>
@@ -3557,11 +3567,10 @@
 
                               <!-- BEGIN-FEEDBACK-SECTION -->
                               <div id="feedback-section">
-                                  <h3>Did this page help you?</h3>
+                                  <h3>AWS SDK for Java 1.x API Reference - ${project.version}</h3>
                                   <div id="feedback-link-sectioin">
                                       <a id="go_cti" target="_blank" style="display:inline;">Submit feedback...</a>
                                   </div>
-
                               </div>
                               <script type="text/javascript">
                                   window.onload = function(){

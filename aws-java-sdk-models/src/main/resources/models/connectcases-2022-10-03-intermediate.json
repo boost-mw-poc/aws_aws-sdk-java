@@ -20,7 +20,7 @@
     "customServiceMetadata" : null,
     "customServiceNameForRequest" : null,
     "customSignerProvider" : null,
-    "deprecatedSuppressions" : [ "ClientConstructors", "EnumSetterOverload", "ClientMutationMethods" ],
+    "deprecatedSuppressions" : [ "ClientMutationMethods", "ClientConstructors", "EnumSetterOverload" ],
     "emitLegacyEnumSetterFor" : null,
     "operationModifiers" : null,
     "operationsWithResponseStreamContentLengthValidation" : null,
@@ -18233,6 +18233,9 @@
       }, {
         "name" : "SingleSelect",
         "value" : "SingleSelect"
+      }, {
+        "name" : "Url",
+        "value" : "Url"
       } ],
       "errorCode" : null,
       "fullyQualifiedName" : "com.amazonaws.services.connectcases.enum.FieldType",

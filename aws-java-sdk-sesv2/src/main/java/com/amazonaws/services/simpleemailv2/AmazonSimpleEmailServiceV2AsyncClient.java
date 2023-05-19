@@ -2297,6 +2297,41 @@ public class AmazonSimpleEmailServiceV2AsyncClient extends AmazonSimpleEmailServ
     }
 
     @Override
+    public java.util.concurrent.Future<PutDedicatedIpPoolScalingAttributesResult> putDedicatedIpPoolScalingAttributesAsync(
+            PutDedicatedIpPoolScalingAttributesRequest request) {
+
+        return putDedicatedIpPoolScalingAttributesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<PutDedicatedIpPoolScalingAttributesResult> putDedicatedIpPoolScalingAttributesAsync(
+            final PutDedicatedIpPoolScalingAttributesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<PutDedicatedIpPoolScalingAttributesRequest, PutDedicatedIpPoolScalingAttributesResult> asyncHandler) {
+        final PutDedicatedIpPoolScalingAttributesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<PutDedicatedIpPoolScalingAttributesResult>() {
+            @Override
+            public PutDedicatedIpPoolScalingAttributesResult call() throws Exception {
+                PutDedicatedIpPoolScalingAttributesResult result = null;
+
+                try {
+                    result = executePutDedicatedIpPoolScalingAttributes(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<PutDedicatedIpWarmupAttributesResult> putDedicatedIpWarmupAttributesAsync(PutDedicatedIpWarmupAttributesRequest request) {
 
         return putDedicatedIpWarmupAttributesAsync(request, null);

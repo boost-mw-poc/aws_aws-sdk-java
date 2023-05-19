@@ -358,6 +358,11 @@ public class AbstractAmazonSimpleEmailServiceV2 implements AmazonSimpleEmailServ
     }
 
     @Override
+    public PutDedicatedIpPoolScalingAttributesResult putDedicatedIpPoolScalingAttributes(PutDedicatedIpPoolScalingAttributesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public PutDedicatedIpWarmupAttributesResult putDedicatedIpWarmupAttributes(PutDedicatedIpWarmupAttributesRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

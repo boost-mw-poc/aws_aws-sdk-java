@@ -1659,6 +1659,34 @@ public interface AmazonSimpleEmailServiceV2 {
     PutDedicatedIpInPoolResult putDedicatedIpInPool(PutDedicatedIpInPoolRequest putDedicatedIpInPoolRequest);
 
     /**
+     * <p>
+     * Used to convert a dedicated IP pool to a different scaling mode.
+     * </p>
+     * <note>
+     * <p>
+     * <code>MANAGED</code> pools cannot be converted to <code>STANDARD</code> scaling mode.
+     * </p>
+     * </note>
+     * 
+     * @param putDedicatedIpPoolScalingAttributesRequest
+     *        A request to convert a dedicated IP pool to a different scaling mode.
+     * @return Result of the PutDedicatedIpPoolScalingAttributes operation returned by the service.
+     * @throws NotFoundException
+     *         The resource you attempted to access doesn't exist.
+     * @throws ConcurrentModificationException
+     *         The resource is being modified by another operation or thread.
+     * @throws TooManyRequestsException
+     *         Too many requests have been made to the operation.
+     * @throws BadRequestException
+     *         The input you provided is invalid.
+     * @sample AmazonSimpleEmailServiceV2.PutDedicatedIpPoolScalingAttributes
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sesv2-2019-09-27/PutDedicatedIpPoolScalingAttributes"
+     *      target="_top">AWS API Documentation</a>
+     */
+    PutDedicatedIpPoolScalingAttributesResult putDedicatedIpPoolScalingAttributes(
+            PutDedicatedIpPoolScalingAttributesRequest putDedicatedIpPoolScalingAttributesRequest);
+
+    /**
      * <p/>
      * 
      * @param putDedicatedIpWarmupAttributesRequest

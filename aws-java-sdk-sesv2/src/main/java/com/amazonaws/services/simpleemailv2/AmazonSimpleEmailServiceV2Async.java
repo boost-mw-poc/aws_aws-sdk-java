@@ -2803,6 +2803,53 @@ public interface AmazonSimpleEmailServiceV2Async extends AmazonSimpleEmailServic
             com.amazonaws.handlers.AsyncHandler<PutDedicatedIpInPoolRequest, PutDedicatedIpInPoolResult> asyncHandler);
 
     /**
+     * <p>
+     * Used to convert a dedicated IP pool to a different scaling mode.
+     * </p>
+     * <note>
+     * <p>
+     * <code>MANAGED</code> pools cannot be converted to <code>STANDARD</code> scaling mode.
+     * </p>
+     * </note>
+     * 
+     * @param putDedicatedIpPoolScalingAttributesRequest
+     *        A request to convert a dedicated IP pool to a different scaling mode.
+     * @return A Java Future containing the result of the PutDedicatedIpPoolScalingAttributes operation returned by the
+     *         service.
+     * @sample AmazonSimpleEmailServiceV2Async.PutDedicatedIpPoolScalingAttributes
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sesv2-2019-09-27/PutDedicatedIpPoolScalingAttributes"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<PutDedicatedIpPoolScalingAttributesResult> putDedicatedIpPoolScalingAttributesAsync(
+            PutDedicatedIpPoolScalingAttributesRequest putDedicatedIpPoolScalingAttributesRequest);
+
+    /**
+     * <p>
+     * Used to convert a dedicated IP pool to a different scaling mode.
+     * </p>
+     * <note>
+     * <p>
+     * <code>MANAGED</code> pools cannot be converted to <code>STANDARD</code> scaling mode.
+     * </p>
+     * </note>
+     * 
+     * @param putDedicatedIpPoolScalingAttributesRequest
+     *        A request to convert a dedicated IP pool to a different scaling mode.
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the PutDedicatedIpPoolScalingAttributes operation returned by the
+     *         service.
+     * @sample AmazonSimpleEmailServiceV2AsyncHandler.PutDedicatedIpPoolScalingAttributes
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sesv2-2019-09-27/PutDedicatedIpPoolScalingAttributes"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<PutDedicatedIpPoolScalingAttributesResult> putDedicatedIpPoolScalingAttributesAsync(
+            PutDedicatedIpPoolScalingAttributesRequest putDedicatedIpPoolScalingAttributesRequest,
+            com.amazonaws.handlers.AsyncHandler<PutDedicatedIpPoolScalingAttributesRequest, PutDedicatedIpPoolScalingAttributesResult> asyncHandler);
+
+    /**
      * <p/>
      * 
      * @param putDedicatedIpWarmupAttributesRequest

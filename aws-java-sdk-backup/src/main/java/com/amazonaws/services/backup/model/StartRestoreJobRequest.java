@@ -124,6 +124,11 @@ public class StartRestoreJobRequest extends com.amazonaws.AmazonWebServiceReques
      * </li>
      * <li>
      * <p>
+     * <code>CloudFormation</code> for CloudFormation
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>DynamoDB</code> for Amazon DynamoDB
      * </p>
      * </li>
@@ -159,12 +164,22 @@ public class StartRestoreJobRequest extends com.amazonaws.AmazonWebServiceReques
      * </li>
      * <li>
      * <p>
+     * <code>Redshift</code> for Amazon Redshift
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>Storage Gateway</code> for Storage Gateway
      * </p>
      * </li>
      * <li>
      * <p>
      * <code>S3</code> for Amazon S3
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Timestream</code> for Amazon Timestream
      * </p>
      * </li>
      * <li>
@@ -729,6 +744,11 @@ public class StartRestoreJobRequest extends com.amazonaws.AmazonWebServiceReques
      * </li>
      * <li>
      * <p>
+     * <code>CloudFormation</code> for CloudFormation
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>DynamoDB</code> for Amazon DynamoDB
      * </p>
      * </li>
@@ -764,12 +784,22 @@ public class StartRestoreJobRequest extends com.amazonaws.AmazonWebServiceReques
      * </li>
      * <li>
      * <p>
+     * <code>Redshift</code> for Amazon Redshift
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>Storage Gateway</code> for Storage Gateway
      * </p>
      * </li>
      * <li>
      * <p>
      * <code>S3</code> for Amazon S3
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Timestream</code> for Amazon Timestream
      * </p>
      * </li>
      * <li>
@@ -790,6 +820,11 @@ public class StartRestoreJobRequest extends com.amazonaws.AmazonWebServiceReques
      *        <li>
      *        <p>
      *        <code>DocumentDB</code> for Amazon DocumentDB (with MongoDB compatibility)
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>CloudFormation</code> for CloudFormation
      *        </p>
      *        </li>
      *        <li>
@@ -829,12 +864,22 @@ public class StartRestoreJobRequest extends com.amazonaws.AmazonWebServiceReques
      *        </li>
      *        <li>
      *        <p>
+     *        <code>Redshift</code> for Amazon Redshift
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
      *        <code>Storage Gateway</code> for Storage Gateway
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <code>S3</code> for Amazon S3
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>Timestream</code> for Amazon Timestream
      *        </p>
      *        </li>
      *        <li>
@@ -861,6 +906,11 @@ public class StartRestoreJobRequest extends com.amazonaws.AmazonWebServiceReques
      * <li>
      * <p>
      * <code>DocumentDB</code> for Amazon DocumentDB (with MongoDB compatibility)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>CloudFormation</code> for CloudFormation
      * </p>
      * </li>
      * <li>
@@ -900,12 +950,22 @@ public class StartRestoreJobRequest extends com.amazonaws.AmazonWebServiceReques
      * </li>
      * <li>
      * <p>
+     * <code>Redshift</code> for Amazon Redshift
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>Storage Gateway</code> for Storage Gateway
      * </p>
      * </li>
      * <li>
      * <p>
      * <code>S3</code> for Amazon S3
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Timestream</code> for Amazon Timestream
      * </p>
      * </li>
      * <li>
@@ -925,6 +985,11 @@ public class StartRestoreJobRequest extends com.amazonaws.AmazonWebServiceReques
      *         <li>
      *         <p>
      *         <code>DocumentDB</code> for Amazon DocumentDB (with MongoDB compatibility)
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>CloudFormation</code> for CloudFormation
      *         </p>
      *         </li>
      *         <li>
@@ -964,12 +1029,22 @@ public class StartRestoreJobRequest extends com.amazonaws.AmazonWebServiceReques
      *         </li>
      *         <li>
      *         <p>
+     *         <code>Redshift</code> for Amazon Redshift
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
      *         <code>Storage Gateway</code> for Storage Gateway
      *         </p>
      *         </li>
      *         <li>
      *         <p>
      *         <code>S3</code> for Amazon S3
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>Timestream</code> for Amazon Timestream
      *         </p>
      *         </li>
      *         <li>
@@ -996,6 +1071,11 @@ public class StartRestoreJobRequest extends com.amazonaws.AmazonWebServiceReques
      * <li>
      * <p>
      * <code>DocumentDB</code> for Amazon DocumentDB (with MongoDB compatibility)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>CloudFormation</code> for CloudFormation
      * </p>
      * </li>
      * <li>
@@ -1035,12 +1115,22 @@ public class StartRestoreJobRequest extends com.amazonaws.AmazonWebServiceReques
      * </li>
      * <li>
      * <p>
+     * <code>Redshift</code> for Amazon Redshift
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>Storage Gateway</code> for Storage Gateway
      * </p>
      * </li>
      * <li>
      * <p>
      * <code>S3</code> for Amazon S3
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Timestream</code> for Amazon Timestream
      * </p>
      * </li>
      * <li>
@@ -1061,6 +1151,11 @@ public class StartRestoreJobRequest extends com.amazonaws.AmazonWebServiceReques
      *        <li>
      *        <p>
      *        <code>DocumentDB</code> for Amazon DocumentDB (with MongoDB compatibility)
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>CloudFormation</code> for CloudFormation
      *        </p>
      *        </li>
      *        <li>
@@ -1100,12 +1195,22 @@ public class StartRestoreJobRequest extends com.amazonaws.AmazonWebServiceReques
      *        </li>
      *        <li>
      *        <p>
+     *        <code>Redshift</code> for Amazon Redshift
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
      *        <code>Storage Gateway</code> for Storage Gateway
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <code>S3</code> for Amazon S3
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>Timestream</code> for Amazon Timestream
      *        </p>
      *        </li>
      *        <li>

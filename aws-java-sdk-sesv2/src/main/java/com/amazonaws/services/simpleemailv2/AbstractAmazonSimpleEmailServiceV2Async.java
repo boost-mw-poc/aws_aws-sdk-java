@@ -920,6 +920,21 @@ public class AbstractAmazonSimpleEmailServiceV2Async extends AbstractAmazonSimpl
     }
 
     @Override
+    public java.util.concurrent.Future<PutDedicatedIpPoolScalingAttributesResult> putDedicatedIpPoolScalingAttributesAsync(
+            PutDedicatedIpPoolScalingAttributesRequest request) {
+
+        return putDedicatedIpPoolScalingAttributesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<PutDedicatedIpPoolScalingAttributesResult> putDedicatedIpPoolScalingAttributesAsync(
+            PutDedicatedIpPoolScalingAttributesRequest request,
+            com.amazonaws.handlers.AsyncHandler<PutDedicatedIpPoolScalingAttributesRequest, PutDedicatedIpPoolScalingAttributesResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<PutDedicatedIpWarmupAttributesResult> putDedicatedIpWarmupAttributesAsync(PutDedicatedIpWarmupAttributesRequest request) {
 
         return putDedicatedIpWarmupAttributesAsync(request, null);

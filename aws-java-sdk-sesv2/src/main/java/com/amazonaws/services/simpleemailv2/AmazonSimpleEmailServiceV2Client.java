@@ -4624,6 +4624,78 @@ public class AmazonSimpleEmailServiceV2Client extends AmazonWebServiceClient imp
     }
 
     /**
+     * <p>
+     * Used to convert a dedicated IP pool to a different scaling mode.
+     * </p>
+     * <note>
+     * <p>
+     * <code>MANAGED</code> pools cannot be converted to <code>STANDARD</code> scaling mode.
+     * </p>
+     * </note>
+     * 
+     * @param putDedicatedIpPoolScalingAttributesRequest
+     *        A request to convert a dedicated IP pool to a different scaling mode.
+     * @return Result of the PutDedicatedIpPoolScalingAttributes operation returned by the service.
+     * @throws NotFoundException
+     *         The resource you attempted to access doesn't exist.
+     * @throws ConcurrentModificationException
+     *         The resource is being modified by another operation or thread.
+     * @throws TooManyRequestsException
+     *         Too many requests have been made to the operation.
+     * @throws BadRequestException
+     *         The input you provided is invalid.
+     * @sample AmazonSimpleEmailServiceV2.PutDedicatedIpPoolScalingAttributes
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sesv2-2019-09-27/PutDedicatedIpPoolScalingAttributes"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public PutDedicatedIpPoolScalingAttributesResult putDedicatedIpPoolScalingAttributes(PutDedicatedIpPoolScalingAttributesRequest request) {
+        request = beforeClientExecution(request);
+        return executePutDedicatedIpPoolScalingAttributes(request);
+    }
+
+    @SdkInternalApi
+    final PutDedicatedIpPoolScalingAttributesResult executePutDedicatedIpPoolScalingAttributes(
+            PutDedicatedIpPoolScalingAttributesRequest putDedicatedIpPoolScalingAttributesRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(putDedicatedIpPoolScalingAttributesRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<PutDedicatedIpPoolScalingAttributesRequest> request = null;
+        Response<PutDedicatedIpPoolScalingAttributesResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new PutDedicatedIpPoolScalingAttributesRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(putDedicatedIpPoolScalingAttributesRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "SESv2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "PutDedicatedIpPoolScalingAttributes");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<PutDedicatedIpPoolScalingAttributesResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new PutDedicatedIpPoolScalingAttributesResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
      * <p/>
      * 
      * @param putDedicatedIpWarmupAttributesRequest
