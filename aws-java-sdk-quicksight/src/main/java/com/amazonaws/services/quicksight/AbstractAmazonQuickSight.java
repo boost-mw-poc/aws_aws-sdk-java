@@ -283,6 +283,16 @@ public class AbstractAmazonQuickSight implements AmazonQuickSight {
     }
 
     @Override
+    public DescribeAssetBundleExportJobResult describeAssetBundleExportJob(DescribeAssetBundleExportJobRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DescribeAssetBundleImportJobResult describeAssetBundleImportJob(DescribeAssetBundleImportJobRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DescribeDashboardResult describeDashboard(DescribeDashboardRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -463,6 +473,16 @@ public class AbstractAmazonQuickSight implements AmazonQuickSight {
     }
 
     @Override
+    public ListAssetBundleExportJobsResult listAssetBundleExportJobs(ListAssetBundleExportJobsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListAssetBundleImportJobsResult listAssetBundleImportJobs(ListAssetBundleImportJobsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListDashboardVersionsResult listDashboardVersions(ListDashboardVersionsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -629,6 +649,16 @@ public class AbstractAmazonQuickSight implements AmazonQuickSight {
 
     @Override
     public SearchGroupsResult searchGroups(SearchGroupsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public StartAssetBundleExportJobResult startAssetBundleExportJob(StartAssetBundleExportJobRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public StartAssetBundleImportJobResult startAssetBundleImportJob(StartAssetBundleImportJobRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

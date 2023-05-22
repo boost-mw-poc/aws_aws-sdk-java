@@ -4248,6 +4248,9 @@ public class AWSBackupClient extends AmazonWebServiceClient implements AWSBackup
      *         Indicates that a required parameter is missing.
      * @throws ServiceUnavailableException
      *         The request failed due to a temporary failure of the server.
+     * @throws InvalidRequestException
+     *         Indicates that something is wrong with the input to the request. For example, a parameter is of the wrong
+     *         type.
      * @sample AWSBackup.StartRestoreJob
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/StartRestoreJob" target="_top">AWS API
      *      Documentation</a>

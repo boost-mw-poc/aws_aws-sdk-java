@@ -2060,6 +2060,100 @@ public interface AmazonQuickSightAsync extends AmazonQuickSight {
 
     /**
      * <p>
+     * Describes an existing export job.
+     * </p>
+     * <p>
+     * Poll job descriptions after a job starts to know the status of the job. When a job succeeds, a URL is provided to
+     * download the exported assets' data from. Download URLs are valid for five minutes after they are generated. You
+     * can call the <code>DescribeAssetBundleExportJob</code> API for a new download URL as needed.
+     * </p>
+     * <p>
+     * Job descriptions are available for 14 days after the job starts.
+     * </p>
+     * 
+     * @param describeAssetBundleExportJobRequest
+     * @return A Java Future containing the result of the DescribeAssetBundleExportJob operation returned by the
+     *         service.
+     * @sample AmazonQuickSightAsync.DescribeAssetBundleExportJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/DescribeAssetBundleExportJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeAssetBundleExportJobResult> describeAssetBundleExportJobAsync(
+            DescribeAssetBundleExportJobRequest describeAssetBundleExportJobRequest);
+
+    /**
+     * <p>
+     * Describes an existing export job.
+     * </p>
+     * <p>
+     * Poll job descriptions after a job starts to know the status of the job. When a job succeeds, a URL is provided to
+     * download the exported assets' data from. Download URLs are valid for five minutes after they are generated. You
+     * can call the <code>DescribeAssetBundleExportJob</code> API for a new download URL as needed.
+     * </p>
+     * <p>
+     * Job descriptions are available for 14 days after the job starts.
+     * </p>
+     * 
+     * @param describeAssetBundleExportJobRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeAssetBundleExportJob operation returned by the
+     *         service.
+     * @sample AmazonQuickSightAsyncHandler.DescribeAssetBundleExportJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/DescribeAssetBundleExportJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeAssetBundleExportJobResult> describeAssetBundleExportJobAsync(
+            DescribeAssetBundleExportJobRequest describeAssetBundleExportJobRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeAssetBundleExportJobRequest, DescribeAssetBundleExportJobResult> asyncHandler);
+
+    /**
+     * <p>
+     * Describes an existing import job.
+     * </p>
+     * <p>
+     * Poll job descriptions after starting a job to know when it has succeeded or failed. Job descriptions are
+     * available for 14 days after job starts.
+     * </p>
+     * 
+     * @param describeAssetBundleImportJobRequest
+     * @return A Java Future containing the result of the DescribeAssetBundleImportJob operation returned by the
+     *         service.
+     * @sample AmazonQuickSightAsync.DescribeAssetBundleImportJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/DescribeAssetBundleImportJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeAssetBundleImportJobResult> describeAssetBundleImportJobAsync(
+            DescribeAssetBundleImportJobRequest describeAssetBundleImportJobRequest);
+
+    /**
+     * <p>
+     * Describes an existing import job.
+     * </p>
+     * <p>
+     * Poll job descriptions after starting a job to know when it has succeeded or failed. Job descriptions are
+     * available for 14 days after job starts.
+     * </p>
+     * 
+     * @param describeAssetBundleImportJobRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeAssetBundleImportJob operation returned by the
+     *         service.
+     * @sample AmazonQuickSightAsyncHandler.DescribeAssetBundleImportJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/DescribeAssetBundleImportJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeAssetBundleImportJobResult> describeAssetBundleImportJobAsync(
+            DescribeAssetBundleImportJobRequest describeAssetBundleImportJobRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeAssetBundleImportJobRequest, DescribeAssetBundleImportJobResult> asyncHandler);
+
+    /**
+     * <p>
      * Provides a summary for a dashboard.
      * </p>
      * 
@@ -3550,6 +3644,80 @@ public interface AmazonQuickSightAsync extends AmazonQuickSight {
 
     /**
      * <p>
+     * Lists all asset bundle export jobs that have been taken place in the last 14 days. Jobs created more than 14 days
+     * ago are deleted forever and are not returned. If you are using the same job ID for multiple jobs,
+     * <code>ListAssetBundleExportJobs</code> only returns the most recent job that uses the repeated job ID.
+     * </p>
+     * 
+     * @param listAssetBundleExportJobsRequest
+     * @return A Java Future containing the result of the ListAssetBundleExportJobs operation returned by the service.
+     * @sample AmazonQuickSightAsync.ListAssetBundleExportJobs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/ListAssetBundleExportJobs"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListAssetBundleExportJobsResult> listAssetBundleExportJobsAsync(
+            ListAssetBundleExportJobsRequest listAssetBundleExportJobsRequest);
+
+    /**
+     * <p>
+     * Lists all asset bundle export jobs that have been taken place in the last 14 days. Jobs created more than 14 days
+     * ago are deleted forever and are not returned. If you are using the same job ID for multiple jobs,
+     * <code>ListAssetBundleExportJobs</code> only returns the most recent job that uses the repeated job ID.
+     * </p>
+     * 
+     * @param listAssetBundleExportJobsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListAssetBundleExportJobs operation returned by the service.
+     * @sample AmazonQuickSightAsyncHandler.ListAssetBundleExportJobs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/ListAssetBundleExportJobs"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListAssetBundleExportJobsResult> listAssetBundleExportJobsAsync(
+            ListAssetBundleExportJobsRequest listAssetBundleExportJobsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListAssetBundleExportJobsRequest, ListAssetBundleExportJobsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Lists all asset bundle import jobs that have taken place in the last 14 days. Jobs created more than 14 days ago
+     * are deleted forever and are not returned. If you are using the same job ID for multiple jobs,
+     * <code>ListAssetBundleImportJobs</code> only returns the most recent job that uses the repeated job ID.
+     * </p>
+     * 
+     * @param listAssetBundleImportJobsRequest
+     * @return A Java Future containing the result of the ListAssetBundleImportJobs operation returned by the service.
+     * @sample AmazonQuickSightAsync.ListAssetBundleImportJobs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/ListAssetBundleImportJobs"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListAssetBundleImportJobsResult> listAssetBundleImportJobsAsync(
+            ListAssetBundleImportJobsRequest listAssetBundleImportJobsRequest);
+
+    /**
+     * <p>
+     * Lists all asset bundle import jobs that have taken place in the last 14 days. Jobs created more than 14 days ago
+     * are deleted forever and are not returned. If you are using the same job ID for multiple jobs,
+     * <code>ListAssetBundleImportJobs</code> only returns the most recent job that uses the repeated job ID.
+     * </p>
+     * 
+     * @param listAssetBundleImportJobsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListAssetBundleImportJobs operation returned by the service.
+     * @sample AmazonQuickSightAsyncHandler.ListAssetBundleImportJobs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/ListAssetBundleImportJobs"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListAssetBundleImportJobsResult> listAssetBundleImportJobsAsync(
+            ListAssetBundleImportJobsRequest listAssetBundleImportJobsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListAssetBundleImportJobsRequest, ListAssetBundleImportJobsResult> asyncHandler);
+
+    /**
+     * <p>
      * Lists all the versions of the dashboards in the Amazon QuickSight subscription.
      * </p>
      * 
@@ -4659,6 +4827,118 @@ public interface AmazonQuickSightAsync extends AmazonQuickSight {
      */
     java.util.concurrent.Future<SearchGroupsResult> searchGroupsAsync(SearchGroupsRequest searchGroupsRequest,
             com.amazonaws.handlers.AsyncHandler<SearchGroupsRequest, SearchGroupsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Starts an Asset Bundle export job.
+     * </p>
+     * <p>
+     * An Asset Bundle export job exports specified Amazon QuickSight assets. You can also choose to export any asset
+     * dependencies in the same job. Export jobs run asynchronously and can be polled with a
+     * <code>DescribeAssetBundleExportJob</code> API call. When a job is successfully completed, a download URL that
+     * contains the exported assets is returned. The URL is valid for 5 minutes and can be refreshed with a
+     * <code>DescribeAssetBundleExportJob</code> API call. Each Amazon QuickSight account can run up to 10 export jobs
+     * concurrently.
+     * </p>
+     * <p>
+     * The API caller must have the necessary permissions in their IAM role to access each resource before the resources
+     * can be exported.
+     * </p>
+     * 
+     * @param startAssetBundleExportJobRequest
+     * @return A Java Future containing the result of the StartAssetBundleExportJob operation returned by the service.
+     * @sample AmazonQuickSightAsync.StartAssetBundleExportJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/StartAssetBundleExportJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<StartAssetBundleExportJobResult> startAssetBundleExportJobAsync(
+            StartAssetBundleExportJobRequest startAssetBundleExportJobRequest);
+
+    /**
+     * <p>
+     * Starts an Asset Bundle export job.
+     * </p>
+     * <p>
+     * An Asset Bundle export job exports specified Amazon QuickSight assets. You can also choose to export any asset
+     * dependencies in the same job. Export jobs run asynchronously and can be polled with a
+     * <code>DescribeAssetBundleExportJob</code> API call. When a job is successfully completed, a download URL that
+     * contains the exported assets is returned. The URL is valid for 5 minutes and can be refreshed with a
+     * <code>DescribeAssetBundleExportJob</code> API call. Each Amazon QuickSight account can run up to 10 export jobs
+     * concurrently.
+     * </p>
+     * <p>
+     * The API caller must have the necessary permissions in their IAM role to access each resource before the resources
+     * can be exported.
+     * </p>
+     * 
+     * @param startAssetBundleExportJobRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the StartAssetBundleExportJob operation returned by the service.
+     * @sample AmazonQuickSightAsyncHandler.StartAssetBundleExportJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/StartAssetBundleExportJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<StartAssetBundleExportJobResult> startAssetBundleExportJobAsync(
+            StartAssetBundleExportJobRequest startAssetBundleExportJobRequest,
+            com.amazonaws.handlers.AsyncHandler<StartAssetBundleExportJobRequest, StartAssetBundleExportJobResult> asyncHandler);
+
+    /**
+     * <p>
+     * Starts an Asset Bundle import job.
+     * </p>
+     * <p>
+     * An Asset Bundle import job imports specified Amazon QuickSight assets into an Amazon QuickSight account. You can
+     * also choose to import a naming prefix and specified configuration overrides. The assets that are contained in the
+     * bundle file that you provide are used to create or update a new or existing asset in your Amazon QuickSight
+     * account. Each Amazon QuickSight account can run up to 10 import jobs concurrently.
+     * </p>
+     * <p>
+     * The API caller must have the necessary <code>"create"</code>, <code>"describe"</code>, and <code>"update"</code>
+     * permissions in their IAM role to access each resource type that is contained in the bundle file before the
+     * resources can be imported.
+     * </p>
+     * 
+     * @param startAssetBundleImportJobRequest
+     * @return A Java Future containing the result of the StartAssetBundleImportJob operation returned by the service.
+     * @sample AmazonQuickSightAsync.StartAssetBundleImportJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/StartAssetBundleImportJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<StartAssetBundleImportJobResult> startAssetBundleImportJobAsync(
+            StartAssetBundleImportJobRequest startAssetBundleImportJobRequest);
+
+    /**
+     * <p>
+     * Starts an Asset Bundle import job.
+     * </p>
+     * <p>
+     * An Asset Bundle import job imports specified Amazon QuickSight assets into an Amazon QuickSight account. You can
+     * also choose to import a naming prefix and specified configuration overrides. The assets that are contained in the
+     * bundle file that you provide are used to create or update a new or existing asset in your Amazon QuickSight
+     * account. Each Amazon QuickSight account can run up to 10 import jobs concurrently.
+     * </p>
+     * <p>
+     * The API caller must have the necessary <code>"create"</code>, <code>"describe"</code>, and <code>"update"</code>
+     * permissions in their IAM role to access each resource type that is contained in the bundle file before the
+     * resources can be imported.
+     * </p>
+     * 
+     * @param startAssetBundleImportJobRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the StartAssetBundleImportJob operation returned by the service.
+     * @sample AmazonQuickSightAsyncHandler.StartAssetBundleImportJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/StartAssetBundleImportJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<StartAssetBundleImportJobResult> startAssetBundleImportJobAsync(
+            StartAssetBundleImportJobRequest startAssetBundleImportJobRequest,
+            com.amazonaws.handlers.AsyncHandler<StartAssetBundleImportJobRequest, StartAssetBundleImportJobResult> asyncHandler);
 
     /**
      * <p>

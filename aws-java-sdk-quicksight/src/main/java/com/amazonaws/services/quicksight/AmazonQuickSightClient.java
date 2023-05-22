@@ -4135,6 +4135,148 @@ public class AmazonQuickSightClient extends AmazonWebServiceClient implements Am
 
     /**
      * <p>
+     * Describes an existing export job.
+     * </p>
+     * <p>
+     * Poll job descriptions after a job starts to know the status of the job. When a job succeeds, a URL is provided to
+     * download the exported assets' data from. Download URLs are valid for five minutes after they are generated. You
+     * can call the <code>DescribeAssetBundleExportJob</code> API for a new download URL as needed.
+     * </p>
+     * <p>
+     * Job descriptions are available for 14 days after the job starts.
+     * </p>
+     * 
+     * @param describeAssetBundleExportJobRequest
+     * @return Result of the DescribeAssetBundleExportJob operation returned by the service.
+     * @throws UnsupportedUserEditionException
+     *         This error indicates that you are calling an operation on an Amazon QuickSight subscription where the
+     *         edition doesn't include support for that operation. Amazon Amazon QuickSight currently has Standard
+     *         Edition and Enterprise Edition. Not every operation and capability is available in every edition.
+     * @throws ThrottlingException
+     *         Access is throttled.
+     * @throws ResourceNotFoundException
+     *         One or more resources can't be found.
+     * @sample AmazonQuickSight.DescribeAssetBundleExportJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/DescribeAssetBundleExportJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DescribeAssetBundleExportJobResult describeAssetBundleExportJob(DescribeAssetBundleExportJobRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribeAssetBundleExportJob(request);
+    }
+
+    @SdkInternalApi
+    final DescribeAssetBundleExportJobResult executeDescribeAssetBundleExportJob(DescribeAssetBundleExportJobRequest describeAssetBundleExportJobRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describeAssetBundleExportJobRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeAssetBundleExportJobRequest> request = null;
+        Response<DescribeAssetBundleExportJobResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeAssetBundleExportJobRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(describeAssetBundleExportJobRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "QuickSight");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeAssetBundleExportJob");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DescribeAssetBundleExportJobResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new DescribeAssetBundleExportJobResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Describes an existing import job.
+     * </p>
+     * <p>
+     * Poll job descriptions after starting a job to know when it has succeeded or failed. Job descriptions are
+     * available for 14 days after job starts.
+     * </p>
+     * 
+     * @param describeAssetBundleImportJobRequest
+     * @return Result of the DescribeAssetBundleImportJob operation returned by the service.
+     * @throws UnsupportedUserEditionException
+     *         This error indicates that you are calling an operation on an Amazon QuickSight subscription where the
+     *         edition doesn't include support for that operation. Amazon Amazon QuickSight currently has Standard
+     *         Edition and Enterprise Edition. Not every operation and capability is available in every edition.
+     * @throws ThrottlingException
+     *         Access is throttled.
+     * @throws ResourceNotFoundException
+     *         One or more resources can't be found.
+     * @sample AmazonQuickSight.DescribeAssetBundleImportJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/DescribeAssetBundleImportJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DescribeAssetBundleImportJobResult describeAssetBundleImportJob(DescribeAssetBundleImportJobRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribeAssetBundleImportJob(request);
+    }
+
+    @SdkInternalApi
+    final DescribeAssetBundleImportJobResult executeDescribeAssetBundleImportJob(DescribeAssetBundleImportJobRequest describeAssetBundleImportJobRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describeAssetBundleImportJobRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeAssetBundleImportJobRequest> request = null;
+        Response<DescribeAssetBundleImportJobResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeAssetBundleImportJobRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(describeAssetBundleImportJobRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "QuickSight");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeAssetBundleImportJob");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DescribeAssetBundleImportJobResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new DescribeAssetBundleImportJobResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Provides a summary for a dashboard.
      * </p>
      * 
@@ -6947,6 +7089,154 @@ public class AmazonQuickSightClient extends AmazonWebServiceClient implements Am
 
     /**
      * <p>
+     * Lists all asset bundle export jobs that have been taken place in the last 14 days. Jobs created more than 14 days
+     * ago are deleted forever and are not returned. If you are using the same job ID for multiple jobs,
+     * <code>ListAssetBundleExportJobs</code> only returns the most recent job that uses the repeated job ID.
+     * </p>
+     * 
+     * @param listAssetBundleExportJobsRequest
+     * @return Result of the ListAssetBundleExportJobs operation returned by the service.
+     * @throws UnsupportedUserEditionException
+     *         This error indicates that you are calling an operation on an Amazon QuickSight subscription where the
+     *         edition doesn't include support for that operation. Amazon Amazon QuickSight currently has Standard
+     *         Edition and Enterprise Edition. Not every operation and capability is available in every edition.
+     * @throws ThrottlingException
+     *         Access is throttled.
+     * @throws AccessDeniedException
+     *         You don't have access to this item. The provided credentials couldn't be validated. You might not be
+     *         authorized to carry out the request. Make sure that your account is authorized to use the Amazon
+     *         QuickSight service, that your policies have the correct permissions, and that you are using the correct
+     *         credentials.
+     * @throws InvalidNextTokenException
+     *         The <code>NextToken</code> value isn't valid.
+     * @throws ResourceNotFoundException
+     *         One or more resources can't be found.
+     * @sample AmazonQuickSight.ListAssetBundleExportJobs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/ListAssetBundleExportJobs"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListAssetBundleExportJobsResult listAssetBundleExportJobs(ListAssetBundleExportJobsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListAssetBundleExportJobs(request);
+    }
+
+    @SdkInternalApi
+    final ListAssetBundleExportJobsResult executeListAssetBundleExportJobs(ListAssetBundleExportJobsRequest listAssetBundleExportJobsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listAssetBundleExportJobsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListAssetBundleExportJobsRequest> request = null;
+        Response<ListAssetBundleExportJobsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListAssetBundleExportJobsRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(listAssetBundleExportJobsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "QuickSight");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListAssetBundleExportJobs");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListAssetBundleExportJobsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new ListAssetBundleExportJobsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Lists all asset bundle import jobs that have taken place in the last 14 days. Jobs created more than 14 days ago
+     * are deleted forever and are not returned. If you are using the same job ID for multiple jobs,
+     * <code>ListAssetBundleImportJobs</code> only returns the most recent job that uses the repeated job ID.
+     * </p>
+     * 
+     * @param listAssetBundleImportJobsRequest
+     * @return Result of the ListAssetBundleImportJobs operation returned by the service.
+     * @throws UnsupportedUserEditionException
+     *         This error indicates that you are calling an operation on an Amazon QuickSight subscription where the
+     *         edition doesn't include support for that operation. Amazon Amazon QuickSight currently has Standard
+     *         Edition and Enterprise Edition. Not every operation and capability is available in every edition.
+     * @throws ThrottlingException
+     *         Access is throttled.
+     * @throws AccessDeniedException
+     *         You don't have access to this item. The provided credentials couldn't be validated. You might not be
+     *         authorized to carry out the request. Make sure that your account is authorized to use the Amazon
+     *         QuickSight service, that your policies have the correct permissions, and that you are using the correct
+     *         credentials.
+     * @throws InvalidNextTokenException
+     *         The <code>NextToken</code> value isn't valid.
+     * @throws ResourceNotFoundException
+     *         One or more resources can't be found.
+     * @sample AmazonQuickSight.ListAssetBundleImportJobs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/ListAssetBundleImportJobs"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListAssetBundleImportJobsResult listAssetBundleImportJobs(ListAssetBundleImportJobsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListAssetBundleImportJobs(request);
+    }
+
+    @SdkInternalApi
+    final ListAssetBundleImportJobsResult executeListAssetBundleImportJobs(ListAssetBundleImportJobsRequest listAssetBundleImportJobsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listAssetBundleImportJobsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListAssetBundleImportJobsRequest> request = null;
+        Response<ListAssetBundleImportJobsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListAssetBundleImportJobsRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(listAssetBundleImportJobsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "QuickSight");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListAssetBundleImportJobs");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListAssetBundleImportJobsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new ListAssetBundleImportJobsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Lists all the versions of the dashboards in the Amazon QuickSight subscription.
      * </p>
      * 
@@ -9395,6 +9685,181 @@ public class AmazonQuickSightClient extends AmazonWebServiceClient implements Am
 
             HttpResponseHandler<AmazonWebServiceResponse<SearchGroupsResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new SearchGroupsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Starts an Asset Bundle export job.
+     * </p>
+     * <p>
+     * An Asset Bundle export job exports specified Amazon QuickSight assets. You can also choose to export any asset
+     * dependencies in the same job. Export jobs run asynchronously and can be polled with a
+     * <code>DescribeAssetBundleExportJob</code> API call. When a job is successfully completed, a download URL that
+     * contains the exported assets is returned. The URL is valid for 5 minutes and can be refreshed with a
+     * <code>DescribeAssetBundleExportJob</code> API call. Each Amazon QuickSight account can run up to 10 export jobs
+     * concurrently.
+     * </p>
+     * <p>
+     * The API caller must have the necessary permissions in their IAM role to access each resource before the resources
+     * can be exported.
+     * </p>
+     * 
+     * @param startAssetBundleExportJobRequest
+     * @return Result of the StartAssetBundleExportJob operation returned by the service.
+     * @throws UnsupportedUserEditionException
+     *         This error indicates that you are calling an operation on an Amazon QuickSight subscription where the
+     *         edition doesn't include support for that operation. Amazon Amazon QuickSight currently has Standard
+     *         Edition and Enterprise Edition. Not every operation and capability is available in every edition.
+     * @throws ThrottlingException
+     *         Access is throttled.
+     * @throws InvalidParameterValueException
+     *         One or more parameters has a value that isn't valid.
+     * @throws AccessDeniedException
+     *         You don't have access to this item. The provided credentials couldn't be validated. You might not be
+     *         authorized to carry out the request. Make sure that your account is authorized to use the Amazon
+     *         QuickSight service, that your policies have the correct permissions, and that you are using the correct
+     *         credentials.
+     * @throws LimitExceededException
+     *         A limit is exceeded.
+     * @throws ConflictException
+     *         Updating or deleting a resource can cause an inconsistent state.
+     * @throws ResourceNotFoundException
+     *         One or more resources can't be found.
+     * @sample AmazonQuickSight.StartAssetBundleExportJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/StartAssetBundleExportJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public StartAssetBundleExportJobResult startAssetBundleExportJob(StartAssetBundleExportJobRequest request) {
+        request = beforeClientExecution(request);
+        return executeStartAssetBundleExportJob(request);
+    }
+
+    @SdkInternalApi
+    final StartAssetBundleExportJobResult executeStartAssetBundleExportJob(StartAssetBundleExportJobRequest startAssetBundleExportJobRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(startAssetBundleExportJobRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<StartAssetBundleExportJobRequest> request = null;
+        Response<StartAssetBundleExportJobResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new StartAssetBundleExportJobRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(startAssetBundleExportJobRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "QuickSight");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "StartAssetBundleExportJob");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<StartAssetBundleExportJobResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new StartAssetBundleExportJobResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Starts an Asset Bundle import job.
+     * </p>
+     * <p>
+     * An Asset Bundle import job imports specified Amazon QuickSight assets into an Amazon QuickSight account. You can
+     * also choose to import a naming prefix and specified configuration overrides. The assets that are contained in the
+     * bundle file that you provide are used to create or update a new or existing asset in your Amazon QuickSight
+     * account. Each Amazon QuickSight account can run up to 10 import jobs concurrently.
+     * </p>
+     * <p>
+     * The API caller must have the necessary <code>"create"</code>, <code>"describe"</code>, and <code>"update"</code>
+     * permissions in their IAM role to access each resource type that is contained in the bundle file before the
+     * resources can be imported.
+     * </p>
+     * 
+     * @param startAssetBundleImportJobRequest
+     * @return Result of the StartAssetBundleImportJob operation returned by the service.
+     * @throws UnsupportedUserEditionException
+     *         This error indicates that you are calling an operation on an Amazon QuickSight subscription where the
+     *         edition doesn't include support for that operation. Amazon Amazon QuickSight currently has Standard
+     *         Edition and Enterprise Edition. Not every operation and capability is available in every edition.
+     * @throws ThrottlingException
+     *         Access is throttled.
+     * @throws InvalidParameterValueException
+     *         One or more parameters has a value that isn't valid.
+     * @throws AccessDeniedException
+     *         You don't have access to this item. The provided credentials couldn't be validated. You might not be
+     *         authorized to carry out the request. Make sure that your account is authorized to use the Amazon
+     *         QuickSight service, that your policies have the correct permissions, and that you are using the correct
+     *         credentials.
+     * @throws LimitExceededException
+     *         A limit is exceeded.
+     * @throws ConflictException
+     *         Updating or deleting a resource can cause an inconsistent state.
+     * @throws ResourceNotFoundException
+     *         One or more resources can't be found.
+     * @sample AmazonQuickSight.StartAssetBundleImportJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/StartAssetBundleImportJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public StartAssetBundleImportJobResult startAssetBundleImportJob(StartAssetBundleImportJobRequest request) {
+        request = beforeClientExecution(request);
+        return executeStartAssetBundleImportJob(request);
+    }
+
+    @SdkInternalApi
+    final StartAssetBundleImportJobResult executeStartAssetBundleImportJob(StartAssetBundleImportJobRequest startAssetBundleImportJobRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(startAssetBundleImportJobRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<StartAssetBundleImportJobRequest> request = null;
+        Response<StartAssetBundleImportJobResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new StartAssetBundleImportJobRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(startAssetBundleImportJobRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "QuickSight");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "StartAssetBundleImportJob");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<StartAssetBundleImportJobResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new StartAssetBundleImportJobResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

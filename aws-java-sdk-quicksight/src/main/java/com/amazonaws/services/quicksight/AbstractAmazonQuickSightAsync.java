@@ -691,6 +691,32 @@ public class AbstractAmazonQuickSightAsync extends AbstractAmazonQuickSight impl
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeAssetBundleExportJobResult> describeAssetBundleExportJobAsync(DescribeAssetBundleExportJobRequest request) {
+
+        return describeAssetBundleExportJobAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeAssetBundleExportJobResult> describeAssetBundleExportJobAsync(DescribeAssetBundleExportJobRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeAssetBundleExportJobRequest, DescribeAssetBundleExportJobResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeAssetBundleImportJobResult> describeAssetBundleImportJobAsync(DescribeAssetBundleImportJobRequest request) {
+
+        return describeAssetBundleImportJobAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeAssetBundleImportJobResult> describeAssetBundleImportJobAsync(DescribeAssetBundleImportJobRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeAssetBundleImportJobRequest, DescribeAssetBundleImportJobResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeDashboardResult> describeDashboardAsync(DescribeDashboardRequest request) {
 
         return describeDashboardAsync(request, null);
@@ -1167,6 +1193,32 @@ public class AbstractAmazonQuickSightAsync extends AbstractAmazonQuickSight impl
     }
 
     @Override
+    public java.util.concurrent.Future<ListAssetBundleExportJobsResult> listAssetBundleExportJobsAsync(ListAssetBundleExportJobsRequest request) {
+
+        return listAssetBundleExportJobsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListAssetBundleExportJobsResult> listAssetBundleExportJobsAsync(ListAssetBundleExportJobsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListAssetBundleExportJobsRequest, ListAssetBundleExportJobsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListAssetBundleImportJobsResult> listAssetBundleImportJobsAsync(ListAssetBundleImportJobsRequest request) {
+
+        return listAssetBundleImportJobsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListAssetBundleImportJobsResult> listAssetBundleImportJobsAsync(ListAssetBundleImportJobsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListAssetBundleImportJobsRequest, ListAssetBundleImportJobsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ListDashboardVersionsResult> listDashboardVersionsAsync(ListDashboardVersionsRequest request) {
 
         return listDashboardVersionsAsync(request, null);
@@ -1606,6 +1658,32 @@ public class AbstractAmazonQuickSightAsync extends AbstractAmazonQuickSight impl
     @Override
     public java.util.concurrent.Future<SearchGroupsResult> searchGroupsAsync(SearchGroupsRequest request,
             com.amazonaws.handlers.AsyncHandler<SearchGroupsRequest, SearchGroupsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartAssetBundleExportJobResult> startAssetBundleExportJobAsync(StartAssetBundleExportJobRequest request) {
+
+        return startAssetBundleExportJobAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartAssetBundleExportJobResult> startAssetBundleExportJobAsync(StartAssetBundleExportJobRequest request,
+            com.amazonaws.handlers.AsyncHandler<StartAssetBundleExportJobRequest, StartAssetBundleExportJobResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartAssetBundleImportJobResult> startAssetBundleImportJobAsync(StartAssetBundleImportJobRequest request) {
+
+        return startAssetBundleImportJobAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartAssetBundleImportJobResult> startAssetBundleImportJobAsync(StartAssetBundleImportJobRequest request,
+            com.amazonaws.handlers.AsyncHandler<StartAssetBundleImportJobRequest, StartAssetBundleImportJobResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

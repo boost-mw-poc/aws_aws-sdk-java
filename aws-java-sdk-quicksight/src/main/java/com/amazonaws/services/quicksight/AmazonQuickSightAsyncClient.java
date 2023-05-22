@@ -1763,6 +1763,72 @@ public class AmazonQuickSightAsyncClient extends AmazonQuickSightClient implemen
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeAssetBundleExportJobResult> describeAssetBundleExportJobAsync(DescribeAssetBundleExportJobRequest request) {
+
+        return describeAssetBundleExportJobAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeAssetBundleExportJobResult> describeAssetBundleExportJobAsync(final DescribeAssetBundleExportJobRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeAssetBundleExportJobRequest, DescribeAssetBundleExportJobResult> asyncHandler) {
+        final DescribeAssetBundleExportJobRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeAssetBundleExportJobResult>() {
+            @Override
+            public DescribeAssetBundleExportJobResult call() throws Exception {
+                DescribeAssetBundleExportJobResult result = null;
+
+                try {
+                    result = executeDescribeAssetBundleExportJob(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeAssetBundleImportJobResult> describeAssetBundleImportJobAsync(DescribeAssetBundleImportJobRequest request) {
+
+        return describeAssetBundleImportJobAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeAssetBundleImportJobResult> describeAssetBundleImportJobAsync(final DescribeAssetBundleImportJobRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeAssetBundleImportJobRequest, DescribeAssetBundleImportJobResult> asyncHandler) {
+        final DescribeAssetBundleImportJobRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeAssetBundleImportJobResult>() {
+            @Override
+            public DescribeAssetBundleImportJobResult call() throws Exception {
+                DescribeAssetBundleImportJobResult result = null;
+
+                try {
+                    result = executeDescribeAssetBundleImportJob(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeDashboardResult> describeDashboardAsync(DescribeDashboardRequest request) {
 
         return describeDashboardAsync(request, null);
@@ -2960,6 +3026,72 @@ public class AmazonQuickSightAsyncClient extends AmazonQuickSightClient implemen
     }
 
     @Override
+    public java.util.concurrent.Future<ListAssetBundleExportJobsResult> listAssetBundleExportJobsAsync(ListAssetBundleExportJobsRequest request) {
+
+        return listAssetBundleExportJobsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListAssetBundleExportJobsResult> listAssetBundleExportJobsAsync(final ListAssetBundleExportJobsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListAssetBundleExportJobsRequest, ListAssetBundleExportJobsResult> asyncHandler) {
+        final ListAssetBundleExportJobsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListAssetBundleExportJobsResult>() {
+            @Override
+            public ListAssetBundleExportJobsResult call() throws Exception {
+                ListAssetBundleExportJobsResult result = null;
+
+                try {
+                    result = executeListAssetBundleExportJobs(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListAssetBundleImportJobsResult> listAssetBundleImportJobsAsync(ListAssetBundleImportJobsRequest request) {
+
+        return listAssetBundleImportJobsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListAssetBundleImportJobsResult> listAssetBundleImportJobsAsync(final ListAssetBundleImportJobsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListAssetBundleImportJobsRequest, ListAssetBundleImportJobsResult> asyncHandler) {
+        final ListAssetBundleImportJobsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListAssetBundleImportJobsResult>() {
+            @Override
+            public ListAssetBundleImportJobsResult call() throws Exception {
+                ListAssetBundleImportJobsResult result = null;
+
+                try {
+                    result = executeListAssetBundleImportJobs(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ListDashboardVersionsResult> listDashboardVersionsAsync(ListDashboardVersionsRequest request) {
 
         return listDashboardVersionsAsync(request, null);
@@ -4068,6 +4200,72 @@ public class AmazonQuickSightAsyncClient extends AmazonQuickSightClient implemen
 
                 try {
                     result = executeSearchGroups(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartAssetBundleExportJobResult> startAssetBundleExportJobAsync(StartAssetBundleExportJobRequest request) {
+
+        return startAssetBundleExportJobAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartAssetBundleExportJobResult> startAssetBundleExportJobAsync(final StartAssetBundleExportJobRequest request,
+            final com.amazonaws.handlers.AsyncHandler<StartAssetBundleExportJobRequest, StartAssetBundleExportJobResult> asyncHandler) {
+        final StartAssetBundleExportJobRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<StartAssetBundleExportJobResult>() {
+            @Override
+            public StartAssetBundleExportJobResult call() throws Exception {
+                StartAssetBundleExportJobResult result = null;
+
+                try {
+                    result = executeStartAssetBundleExportJob(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartAssetBundleImportJobResult> startAssetBundleImportJobAsync(StartAssetBundleImportJobRequest request) {
+
+        return startAssetBundleImportJobAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartAssetBundleImportJobResult> startAssetBundleImportJobAsync(final StartAssetBundleImportJobRequest request,
+            final com.amazonaws.handlers.AsyncHandler<StartAssetBundleImportJobRequest, StartAssetBundleImportJobResult> asyncHandler) {
+        final StartAssetBundleImportJobRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<StartAssetBundleImportJobResult>() {
+            @Override
+            public StartAssetBundleImportJobResult call() throws Exception {
+                StartAssetBundleImportJobResult result = null;
+
+                try {
+                    result = executeStartAssetBundleImportJob(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
