@@ -162,7 +162,12 @@ public class StackSet implements Serializable, Cloneable {
      * </p>
      */
     private ManagedExecution managedExecution;
-
+    /**
+     * <p>
+     * Returns a list of all Amazon Web Services Regions the given StackSet has stack instances deployed in. The Amazon
+     * Web Services Regions list output is in no particular order.
+     * </p>
+     */
     private com.amazonaws.internal.SdkInternalList<String> regions;
 
     /**
@@ -1350,7 +1355,13 @@ public class StackSet implements Serializable, Cloneable {
     }
 
     /**
-     * @return
+     * <p>
+     * Returns a list of all Amazon Web Services Regions the given StackSet has stack instances deployed in. The Amazon
+     * Web Services Regions list output is in no particular order.
+     * </p>
+     * 
+     * @return Returns a list of all Amazon Web Services Regions the given StackSet has stack instances deployed in. The
+     *         Amazon Web Services Regions list output is in no particular order.
      */
 
     public java.util.List<String> getRegions() {
@@ -1361,7 +1372,14 @@ public class StackSet implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * Returns a list of all Amazon Web Services Regions the given StackSet has stack instances deployed in. The Amazon
+     * Web Services Regions list output is in no particular order.
+     * </p>
+     * 
      * @param regions
+     *        Returns a list of all Amazon Web Services Regions the given StackSet has stack instances deployed in. The
+     *        Amazon Web Services Regions list output is in no particular order.
      */
 
     public void setRegions(java.util.Collection<String> regions) {
@@ -1375,12 +1393,18 @@ public class StackSet implements Serializable, Cloneable {
 
     /**
      * <p>
+     * Returns a list of all Amazon Web Services Regions the given StackSet has stack instances deployed in. The Amazon
+     * Web Services Regions list output is in no particular order.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setRegions(java.util.Collection)} or {@link #withRegions(java.util.Collection)} if you want to override
      * the existing values.
      * </p>
      * 
      * @param regions
+     *        Returns a list of all Amazon Web Services Regions the given StackSet has stack instances deployed in. The
+     *        Amazon Web Services Regions list output is in no particular order.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1395,7 +1419,14 @@ public class StackSet implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * Returns a list of all Amazon Web Services Regions the given StackSet has stack instances deployed in. The Amazon
+     * Web Services Regions list output is in no particular order.
+     * </p>
+     * 
      * @param regions
+     *        Returns a list of all Amazon Web Services Regions the given StackSet has stack instances deployed in. The
+     *        Amazon Web Services Regions list output is in no particular order.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -1320,7 +1320,8 @@ public class AmazonFraudDetectorClient extends AmazonWebServiceClient implements
      * </p>
      * <p>
      * When you delete an event, Amazon Fraud Detector permanently deletes that event and the event data is no longer
-     * stored in Amazon Fraud Detector.
+     * stored in Amazon Fraud Detector. If <code>deleteAuditHistory</code> is <code>True</code>, event data is available
+     * through search for up to 30 seconds after the delete operation is completed.
      * </p>
      * 
      * @param deleteEventRequest

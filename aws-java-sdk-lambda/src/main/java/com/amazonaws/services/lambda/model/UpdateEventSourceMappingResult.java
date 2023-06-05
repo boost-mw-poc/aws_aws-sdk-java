@@ -170,7 +170,8 @@ public class UpdateEventSourceMappingResult extends com.amazonaws.AmazonWebServi
      * </p>
      * <note>
      * <p>
-     * The minimum value that can be set is 60 seconds.
+     * The minimum valid value for maximum record age is 60s. Although values less than 60 and greater than -1 fall
+     * within the parameter's absolute range, they are not allowed
      * </p>
      * </note>
      */
@@ -1258,7 +1259,8 @@ public class UpdateEventSourceMappingResult extends com.amazonaws.AmazonWebServi
      * </p>
      * <note>
      * <p>
-     * The minimum value that can be set is 60 seconds.
+     * The minimum valid value for maximum record age is 60s. Although values less than 60 and greater than -1 fall
+     * within the parameter's absolute range, they are not allowed
      * </p>
      * </note>
      * 
@@ -1267,7 +1269,8 @@ public class UpdateEventSourceMappingResult extends com.amazonaws.AmazonWebServi
      *        which sets the maximum age to infinite. When the value is set to infinite, Lambda never discards old
      *        records.</p> <note>
      *        <p>
-     *        The minimum value that can be set is 60 seconds.
+     *        The minimum valid value for maximum record age is 60s. Although values less than 60 and greater than -1
+     *        fall within the parameter's absolute range, they are not allowed
      *        </p>
      */
 
@@ -1282,7 +1285,8 @@ public class UpdateEventSourceMappingResult extends com.amazonaws.AmazonWebServi
      * </p>
      * <note>
      * <p>
-     * The minimum value that can be set is 60 seconds.
+     * The minimum valid value for maximum record age is 60s. Although values less than 60 and greater than -1 fall
+     * within the parameter's absolute range, they are not allowed
      * </p>
      * </note>
      * 
@@ -1290,7 +1294,8 @@ public class UpdateEventSourceMappingResult extends com.amazonaws.AmazonWebServi
      *         -1, which sets the maximum age to infinite. When the value is set to infinite, Lambda never discards old
      *         records.</p> <note>
      *         <p>
-     *         The minimum value that can be set is 60 seconds.
+     *         The minimum valid value for maximum record age is 60s. Although values less than 60 and greater than -1
+     *         fall within the parameter's absolute range, they are not allowed
      *         </p>
      */
 
@@ -1305,7 +1310,8 @@ public class UpdateEventSourceMappingResult extends com.amazonaws.AmazonWebServi
      * </p>
      * <note>
      * <p>
-     * The minimum value that can be set is 60 seconds.
+     * The minimum valid value for maximum record age is 60s. Although values less than 60 and greater than -1 fall
+     * within the parameter's absolute range, they are not allowed
      * </p>
      * </note>
      * 
@@ -1314,7 +1320,8 @@ public class UpdateEventSourceMappingResult extends com.amazonaws.AmazonWebServi
      *        which sets the maximum age to infinite. When the value is set to infinite, Lambda never discards old
      *        records.</p> <note>
      *        <p>
-     *        The minimum value that can be set is 60 seconds.
+     *        The minimum valid value for maximum record age is 60s. Although values less than 60 and greater than -1
+     *        fall within the parameter's absolute range, they are not allowed
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */

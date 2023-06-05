@@ -278,6 +278,39 @@ public class AmazonCloudFormationAsyncClient extends AmazonCloudFormationClient 
     }
 
     @Override
+    public java.util.concurrent.Future<ActivateOrganizationsAccessResult> activateOrganizationsAccessAsync(ActivateOrganizationsAccessRequest request) {
+
+        return activateOrganizationsAccessAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ActivateOrganizationsAccessResult> activateOrganizationsAccessAsync(final ActivateOrganizationsAccessRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ActivateOrganizationsAccessRequest, ActivateOrganizationsAccessResult> asyncHandler) {
+        final ActivateOrganizationsAccessRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ActivateOrganizationsAccessResult>() {
+            @Override
+            public ActivateOrganizationsAccessResult call() throws Exception {
+                ActivateOrganizationsAccessResult result = null;
+
+                try {
+                    result = executeActivateOrganizationsAccess(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ActivateTypeResult> activateTypeAsync(ActivateTypeRequest request) {
 
         return activateTypeAsync(request, null);
@@ -528,6 +561,40 @@ public class AmazonCloudFormationAsyncClient extends AmazonCloudFormationClient 
 
                 try {
                     result = executeCreateStackSet(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeactivateOrganizationsAccessResult> deactivateOrganizationsAccessAsync(DeactivateOrganizationsAccessRequest request) {
+
+        return deactivateOrganizationsAccessAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeactivateOrganizationsAccessResult> deactivateOrganizationsAccessAsync(
+            final DeactivateOrganizationsAccessRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeactivateOrganizationsAccessRequest, DeactivateOrganizationsAccessResult> asyncHandler) {
+        final DeactivateOrganizationsAccessRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeactivateOrganizationsAccessResult>() {
+            @Override
+            public DeactivateOrganizationsAccessResult call() throws Exception {
+                DeactivateOrganizationsAccessResult result = null;
+
+                try {
+                    result = executeDeactivateOrganizationsAccess(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -825,6 +892,39 @@ public class AmazonCloudFormationAsyncClient extends AmazonCloudFormationClient 
 
                 try {
                     result = executeDescribeChangeSetHooks(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeOrganizationsAccessResult> describeOrganizationsAccessAsync(DescribeOrganizationsAccessRequest request) {
+
+        return describeOrganizationsAccessAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeOrganizationsAccessResult> describeOrganizationsAccessAsync(final DescribeOrganizationsAccessRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeOrganizationsAccessRequest, DescribeOrganizationsAccessResult> asyncHandler) {
+        final DescribeOrganizationsAccessRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeOrganizationsAccessResult>() {
+            @Override
+            public DescribeOrganizationsAccessResult call() throws Exception {
+                DescribeOrganizationsAccessResult result = null;
+
+                try {
+                    result = executeDescribeOrganizationsAccess(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
