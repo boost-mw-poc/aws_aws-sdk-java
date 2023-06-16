@@ -52,28 +52,31 @@ import com.amazonaws.services.applicationdiscovery.model.transform.*;
  * <p>
  * <fullname>Amazon Web Services Application Discovery Service</fullname>
  * <p>
- * Amazon Web Services Application Discovery Service helps you plan application migration projects. It automatically
- * identifies servers, virtual machines (VMs), and network dependencies in your on-premises data centers. For more
- * information, see the <a href="http://aws.amazon.com/application-discovery/faqs/">Amazon Web Services Application
- * Discovery Service FAQ</a>. Application Discovery Service offers three ways of performing discovery and collecting
- * data about your on-premises servers:
+ * Amazon Web Services Application Discovery Service (Application Discovery Service) helps you plan application
+ * migration projects. It automatically identifies servers, virtual machines (VMs), and network dependencies in your
+ * on-premises data centers. For more information, see the <a
+ * href="http://aws.amazon.com/application-discovery/faqs/">Amazon Web Services Application Discovery Service FAQ</a>.
+ * </p>
+ * <p>
+ * Application Discovery Service offers three ways of performing discovery and collecting data about your on-premises
+ * servers:
  * </p>
  * <ul>
  * <li>
  * <p>
- * <b>Agentless discovery</b> is recommended for environments that use VMware vCenter Server. This mode doesn't require
- * you to install an agent on each host. It does not work in non-VMware environments.
+ * <b>Agentless discovery</b> using Amazon Web Services Application Discovery Service Agentless Collector (Agentless
+ * Collector), which doesn't require you to install an agent on each host.
  * </p>
  * <ul>
  * <li>
  * <p>
- * Agentless discovery gathers server information regardless of the operating systems, which minimizes the time required
+ * Agentless Collector gathers server information regardless of the operating systems, which minimizes the time required
  * for initial on-premises infrastructure assessment.
  * </p>
  * </li>
  * <li>
  * <p>
- * Agentless discovery doesn't collect information about network dependencies, only agent-based discovery collects that
+ * Agentless Collector doesn't collect information about network dependencies, only agent-based discovery collects that
  * information.
  * </p>
  * </li>
@@ -83,8 +86,8 @@ import com.amazonaws.services.applicationdiscovery.model.transform.*;
  * <ul>
  * <li>
  * <p>
- * <b>Agent-based discovery</b> collects a richer set of data than agentless discovery by using the Amazon Web Services
- * Application Discovery Agent, which you install on one or more hosts in your data center.
+ * <b>Agent-based discovery</b> using the Amazon Web Services Application Discovery Agent (Application Discovery Agent)
+ * collects a richer set of data than agentless discovery, which you install on one or more hosts in your data center.
  * </p>
  * <ul>
  * <li>
@@ -96,7 +99,9 @@ import com.amazonaws.services.applicationdiscovery.model.transform.*;
  * <li>
  * <p>
  * The information collected by agents is secured at rest and in transit to the Application Discovery Service database
- * in the cloud.
+ * in the Amazon Web Services cloud. For more information, see <a
+ * href="https://docs.aws.amazon.com/application-discovery/latest/userguide/discovery-agent.html">Amazon Web Services
+ * Application Discovery Agent</a>.
  * </p>
  * </li>
  * </ul>
@@ -106,8 +111,8 @@ import com.amazonaws.services.applicationdiscovery.model.transform.*;
  * <li>
  * <p>
  * <b>Amazon Web Services Partner Network (APN) solutions</b> integrate with Application Discovery Service, enabling you
- * to import details of your on-premises environment directly into Migration Hub without using the discovery connector
- * or discovery agent.
+ * to import details of your on-premises environment directly into Amazon Web Services Migration Hub (Migration Hub)
+ * without using Agentless Collector or Application Discovery Agent.
  * </p>
  * <ul>
  * <li>
@@ -126,15 +131,6 @@ import com.amazonaws.services.applicationdiscovery.model.transform.*;
  * </li>
  * </ul>
  * <p>
- * <b>Recommendations</b>
- * </p>
- * <p>
- * We recommend that you use agent-based discovery for non-VMware environments, and whenever you want to collect
- * information about network dependencies. You can run agent-based and agentless discovery simultaneously. Use agentless
- * discovery to complete the initial infrastructure assessment quickly, and then install agents on select hosts to
- * collect additional information.
- * </p>
- * <p>
  * <b>Working With This Guide</b>
  * </p>
  * <p>
@@ -148,42 +144,43 @@ import com.amazonaws.services.applicationdiscovery.model.transform.*;
  * <ul>
  * <li>
  * <p>
- * Remember that you must set your Migration Hub home region before you call any of these APIs.
+ * Remember that you must set your Migration Hub home Region before you call any of these APIs.
  * </p>
  * </li>
  * <li>
  * <p>
  * You must make API calls for write actions (create, notify, associate, disassociate, import, or put) while in your
- * home region, or a <code>HomeRegionNotSetException</code> error is returned.
+ * home Region, or a <code>HomeRegionNotSetException</code> error is returned.
  * </p>
  * </li>
  * <li>
  * <p>
- * API calls for read actions (list, describe, stop, and delete) are permitted outside of your home region.
+ * API calls for read actions (list, describe, stop, and delete) are permitted outside of your home Region.
  * </p>
  * </li>
  * <li>
  * <p>
- * Although it is unlikely, the Migration Hub home region could change. If you call APIs outside the home region, an
+ * Although it is unlikely, the Migration Hub home Region could change. If you call APIs outside the home Region, an
  * <code>InvalidInputException</code> is returned.
  * </p>
  * </li>
  * <li>
  * <p>
- * You must call <code>GetHomeRegion</code> to obtain the latest Migration Hub home region.
+ * You must call <code>GetHomeRegion</code> to obtain the latest Migration Hub home Region.
  * </p>
  * </li>
  * </ul>
  * </note>
  * <p>
  * This guide is intended for use with the <a
- * href="http://docs.aws.amazon.com/application-discovery/latest/userguide/">Amazon Web Services Application Discovery
+ * href="https://docs.aws.amazon.com/application-discovery/latest/userguide/">Amazon Web Services Application Discovery
  * Service User Guide</a>.
  * </p>
  * <important>
  * <p>
- * All data is handled according to the <a href="http://aws.amazon.com/privacy/">Amazon Web Services Privacy Policy</a>.
- * You can operate Application Discovery Service offline to inspect collected data before it is shared with the service.
+ * All data is handled according to the <a href="https://aws.amazon.com/privacy/">Amazon Web Services Privacy
+ * Policy</a>. You can operate Application Discovery Service offline to inspect collected data before it is shared with
+ * the service.
  * </p>
  * </important>
  */
@@ -448,8 +445,7 @@ public class AWSApplicationDiscoveryClient extends AmazonWebServiceClient implem
      * @param associateConfigurationItemsToApplicationRequest
      * @return Result of the AssociateConfigurationItemsToApplication operation returned by the service.
      * @throws AuthorizationErrorException
-     *         The Amazon Web Services user account does not have permission to perform the action. Check the IAM policy
-     *         associated with this account.
+     *         The user does not have permission to perform the action. Check the IAM policy associated with this user.
      * @throws InvalidParameterException
      *         One or more parameters are not valid. Verify the parameters and try again.
      * @throws InvalidParameterValueException
@@ -458,7 +454,7 @@ public class AWSApplicationDiscoveryClient extends AmazonWebServiceClient implem
      * @throws ServerInternalErrorException
      *         The server experienced an internal error. Try again.
      * @throws HomeRegionNotSetException
-     *         The home region is not set. Set the home region to continue.
+     *         The home Region is not set. Set the home Region to continue.
      * @sample AWSApplicationDiscovery.AssociateConfigurationItemsToApplication
      */
     @Override
@@ -523,8 +519,7 @@ public class AWSApplicationDiscoveryClient extends AmazonWebServiceClient implem
      * @param batchDeleteImportDataRequest
      * @return Result of the BatchDeleteImportData operation returned by the service.
      * @throws AuthorizationErrorException
-     *         The Amazon Web Services user account does not have permission to perform the action. Check the IAM policy
-     *         associated with this account.
+     *         The user does not have permission to perform the action. Check the IAM policy associated with this user.
      * @throws InvalidParameterException
      *         One or more parameters are not valid. Verify the parameters and try again.
      * @throws InvalidParameterValueException
@@ -533,7 +528,7 @@ public class AWSApplicationDiscoveryClient extends AmazonWebServiceClient implem
      * @throws ServerInternalErrorException
      *         The server experienced an internal error. Try again.
      * @throws HomeRegionNotSetException
-     *         The home region is not set. Set the home region to continue.
+     *         The home Region is not set. Set the home Region to continue.
      * @sample AWSApplicationDiscovery.BatchDeleteImportData
      */
     @Override
@@ -589,8 +584,7 @@ public class AWSApplicationDiscoveryClient extends AmazonWebServiceClient implem
      * @param createApplicationRequest
      * @return Result of the CreateApplication operation returned by the service.
      * @throws AuthorizationErrorException
-     *         The Amazon Web Services user account does not have permission to perform the action. Check the IAM policy
-     *         associated with this account.
+     *         The user does not have permission to perform the action. Check the IAM policy associated with this user.
      * @throws InvalidParameterException
      *         One or more parameters are not valid. Verify the parameters and try again.
      * @throws InvalidParameterValueException
@@ -599,7 +593,7 @@ public class AWSApplicationDiscoveryClient extends AmazonWebServiceClient implem
      * @throws ServerInternalErrorException
      *         The server experienced an internal error. Try again.
      * @throws HomeRegionNotSetException
-     *         The home region is not set. Set the home region to continue.
+     *         The home Region is not set. Set the home Region to continue.
      * @sample AWSApplicationDiscovery.CreateApplication
      */
     @Override
@@ -660,8 +654,7 @@ public class AWSApplicationDiscoveryClient extends AmazonWebServiceClient implem
      * @param createTagsRequest
      * @return Result of the CreateTags operation returned by the service.
      * @throws AuthorizationErrorException
-     *         The Amazon Web Services user account does not have permission to perform the action. Check the IAM policy
-     *         associated with this account.
+     *         The user does not have permission to perform the action. Check the IAM policy associated with this user.
      * @throws ResourceNotFoundException
      *         The specified configuration ID was not located. Verify the configuration ID and try again.
      * @throws InvalidParameterException
@@ -672,7 +665,7 @@ public class AWSApplicationDiscoveryClient extends AmazonWebServiceClient implem
      * @throws ServerInternalErrorException
      *         The server experienced an internal error. Try again.
      * @throws HomeRegionNotSetException
-     *         The home region is not set. Set the home region to continue.
+     *         The home Region is not set. Set the home Region to continue.
      * @sample AWSApplicationDiscovery.CreateTags
      */
     @Override
@@ -727,8 +720,7 @@ public class AWSApplicationDiscoveryClient extends AmazonWebServiceClient implem
      * @param deleteApplicationsRequest
      * @return Result of the DeleteApplications operation returned by the service.
      * @throws AuthorizationErrorException
-     *         The Amazon Web Services user account does not have permission to perform the action. Check the IAM policy
-     *         associated with this account.
+     *         The user does not have permission to perform the action. Check the IAM policy associated with this user.
      * @throws InvalidParameterException
      *         One or more parameters are not valid. Verify the parameters and try again.
      * @throws InvalidParameterValueException
@@ -737,7 +729,7 @@ public class AWSApplicationDiscoveryClient extends AmazonWebServiceClient implem
      * @throws ServerInternalErrorException
      *         The server experienced an internal error. Try again.
      * @throws HomeRegionNotSetException
-     *         The home region is not set. Set the home region to continue.
+     *         The home Region is not set. Set the home Region to continue.
      * @sample AWSApplicationDiscovery.DeleteApplications
      */
     @Override
@@ -793,8 +785,7 @@ public class AWSApplicationDiscoveryClient extends AmazonWebServiceClient implem
      * @param deleteTagsRequest
      * @return Result of the DeleteTags operation returned by the service.
      * @throws AuthorizationErrorException
-     *         The Amazon Web Services user account does not have permission to perform the action. Check the IAM policy
-     *         associated with this account.
+     *         The user does not have permission to perform the action. Check the IAM policy associated with this user.
      * @throws ResourceNotFoundException
      *         The specified configuration ID was not located. Verify the configuration ID and try again.
      * @throws InvalidParameterException
@@ -805,7 +796,7 @@ public class AWSApplicationDiscoveryClient extends AmazonWebServiceClient implem
      * @throws ServerInternalErrorException
      *         The server experienced an internal error. Try again.
      * @throws HomeRegionNotSetException
-     *         The home region is not set. Set the home region to continue.
+     *         The home Region is not set. Set the home Region to continue.
      * @sample AWSApplicationDiscovery.DeleteTags
      */
     @Override
@@ -854,15 +845,14 @@ public class AWSApplicationDiscoveryClient extends AmazonWebServiceClient implem
 
     /**
      * <p>
-     * Lists agents or connectors as specified by ID or other filters. All agents/connectors associated with your user
-     * account can be listed if you call <code>DescribeAgents</code> as is without passing any parameters.
+     * Lists agents or collectors as specified by ID or other filters. All agents/collectors associated with your user
+     * can be listed if you call <code>DescribeAgents</code> as is without passing any parameters.
      * </p>
      * 
      * @param describeAgentsRequest
      * @return Result of the DescribeAgents operation returned by the service.
      * @throws AuthorizationErrorException
-     *         The Amazon Web Services user account does not have permission to perform the action. Check the IAM policy
-     *         associated with this account.
+     *         The user does not have permission to perform the action. Check the IAM policy associated with this user.
      * @throws InvalidParameterException
      *         One or more parameters are not valid. Verify the parameters and try again.
      * @throws InvalidParameterValueException
@@ -871,7 +861,7 @@ public class AWSApplicationDiscoveryClient extends AmazonWebServiceClient implem
      * @throws ServerInternalErrorException
      *         The server experienced an internal error. Try again.
      * @throws HomeRegionNotSetException
-     *         The home region is not set. Set the home region to continue.
+     *         The home Region is not set. Set the home Region to continue.
      * @sample AWSApplicationDiscovery.DescribeAgents
      */
     @Override
@@ -964,8 +954,7 @@ public class AWSApplicationDiscoveryClient extends AmazonWebServiceClient implem
      * @param describeConfigurationsRequest
      * @return Result of the DescribeConfigurations operation returned by the service.
      * @throws AuthorizationErrorException
-     *         The Amazon Web Services user account does not have permission to perform the action. Check the IAM policy
-     *         associated with this account.
+     *         The user does not have permission to perform the action. Check the IAM policy associated with this user.
      * @throws InvalidParameterException
      *         One or more parameters are not valid. Verify the parameters and try again.
      * @throws InvalidParameterValueException
@@ -974,7 +963,7 @@ public class AWSApplicationDiscoveryClient extends AmazonWebServiceClient implem
      * @throws ServerInternalErrorException
      *         The server experienced an internal error. Try again.
      * @throws HomeRegionNotSetException
-     *         The home region is not set. Set the home region to continue.
+     *         The home Region is not set. Set the home Region to continue.
      * @sample AWSApplicationDiscovery.DescribeConfigurations
      */
     @Override
@@ -1024,15 +1013,14 @@ public class AWSApplicationDiscoveryClient extends AmazonWebServiceClient implem
 
     /**
      * <p>
-     * Lists exports as specified by ID. All continuous exports associated with your user account can be listed if you
-     * call <code>DescribeContinuousExports</code> as is without passing any parameters.
+     * Lists exports as specified by ID. All continuous exports associated with your user can be listed if you call
+     * <code>DescribeContinuousExports</code> as is without passing any parameters.
      * </p>
      * 
      * @param describeContinuousExportsRequest
      * @return Result of the DescribeContinuousExports operation returned by the service.
      * @throws AuthorizationErrorException
-     *         The Amazon Web Services user account does not have permission to perform the action. Check the IAM policy
-     *         associated with this account.
+     *         The user does not have permission to perform the action. Check the IAM policy associated with this user.
      * @throws InvalidParameterException
      *         One or more parameters are not valid. Verify the parameters and try again.
      * @throws InvalidParameterValueException
@@ -1045,7 +1033,7 @@ public class AWSApplicationDiscoveryClient extends AmazonWebServiceClient implem
      * @throws ResourceNotFoundException
      *         The specified configuration ID was not located. Verify the configuration ID and try again.
      * @throws HomeRegionNotSetException
-     *         The home region is not set. Set the home region to continue.
+     *         The home Region is not set. Set the home Region to continue.
      * @sample AWSApplicationDiscovery.DescribeContinuousExports
      */
     @Override
@@ -1104,8 +1092,7 @@ public class AWSApplicationDiscoveryClient extends AmazonWebServiceClient implem
      * @param describeExportConfigurationsRequest
      * @return Result of the DescribeExportConfigurations operation returned by the service.
      * @throws AuthorizationErrorException
-     *         The Amazon Web Services user account does not have permission to perform the action. Check the IAM policy
-     *         associated with this account.
+     *         The user does not have permission to perform the action. Check the IAM policy associated with this user.
      * @throws ResourceNotFoundException
      *         The specified configuration ID was not located. Verify the configuration ID and try again.
      * @throws InvalidParameterException
@@ -1116,7 +1103,7 @@ public class AWSApplicationDiscoveryClient extends AmazonWebServiceClient implem
      * @throws ServerInternalErrorException
      *         The server experienced an internal error. Try again.
      * @throws HomeRegionNotSetException
-     *         The home region is not set. Set the home region to continue.
+     *         The home Region is not set. Set the home Region to continue.
      * @sample AWSApplicationDiscovery.DescribeExportConfigurations
      */
     @Override
@@ -1174,8 +1161,7 @@ public class AWSApplicationDiscoveryClient extends AmazonWebServiceClient implem
      * @param describeExportTasksRequest
      * @return Result of the DescribeExportTasks operation returned by the service.
      * @throws AuthorizationErrorException
-     *         The Amazon Web Services user account does not have permission to perform the action. Check the IAM policy
-     *         associated with this account.
+     *         The user does not have permission to perform the action. Check the IAM policy associated with this user.
      * @throws InvalidParameterException
      *         One or more parameters are not valid. Verify the parameters and try again.
      * @throws InvalidParameterValueException
@@ -1184,7 +1170,7 @@ public class AWSApplicationDiscoveryClient extends AmazonWebServiceClient implem
      * @throws ServerInternalErrorException
      *         The server experienced an internal error. Try again.
      * @throws HomeRegionNotSetException
-     *         The home region is not set. Set the home region to continue.
+     *         The home Region is not set. Set the home Region to continue.
      * @sample AWSApplicationDiscovery.DescribeExportTasks
      */
     @Override
@@ -1240,8 +1226,7 @@ public class AWSApplicationDiscoveryClient extends AmazonWebServiceClient implem
      * @param describeImportTasksRequest
      * @return Result of the DescribeImportTasks operation returned by the service.
      * @throws AuthorizationErrorException
-     *         The Amazon Web Services user account does not have permission to perform the action. Check the IAM policy
-     *         associated with this account.
+     *         The user does not have permission to perform the action. Check the IAM policy associated with this user.
      * @throws InvalidParameterException
      *         One or more parameters are not valid. Verify the parameters and try again.
      * @throws InvalidParameterValueException
@@ -1250,7 +1235,7 @@ public class AWSApplicationDiscoveryClient extends AmazonWebServiceClient implem
      * @throws ServerInternalErrorException
      *         The server experienced an internal error. Try again.
      * @throws HomeRegionNotSetException
-     *         The home region is not set. Set the home region to continue.
+     *         The home Region is not set. Set the home Region to continue.
      * @sample AWSApplicationDiscovery.DescribeImportTasks
      */
     @Override
@@ -1323,15 +1308,14 @@ public class AWSApplicationDiscoveryClient extends AmazonWebServiceClient implem
      * </li>
      * </ul>
      * <p>
-     * Also, all configuration items associated with your user account that have tags can be listed if you call
+     * Also, all configuration items associated with your user that have tags can be listed if you call
      * <code>DescribeTags</code> as is without passing any parameters.
      * </p>
      * 
      * @param describeTagsRequest
      * @return Result of the DescribeTags operation returned by the service.
      * @throws AuthorizationErrorException
-     *         The Amazon Web Services user account does not have permission to perform the action. Check the IAM policy
-     *         associated with this account.
+     *         The user does not have permission to perform the action. Check the IAM policy associated with this user.
      * @throws ResourceNotFoundException
      *         The specified configuration ID was not located. Verify the configuration ID and try again.
      * @throws InvalidParameterException
@@ -1342,7 +1326,7 @@ public class AWSApplicationDiscoveryClient extends AmazonWebServiceClient implem
      * @throws ServerInternalErrorException
      *         The server experienced an internal error. Try again.
      * @throws HomeRegionNotSetException
-     *         The home region is not set. Set the home region to continue.
+     *         The home Region is not set. Set the home Region to continue.
      * @sample AWSApplicationDiscovery.DescribeTags
      */
     @Override
@@ -1397,8 +1381,7 @@ public class AWSApplicationDiscoveryClient extends AmazonWebServiceClient implem
      * @param disassociateConfigurationItemsFromApplicationRequest
      * @return Result of the DisassociateConfigurationItemsFromApplication operation returned by the service.
      * @throws AuthorizationErrorException
-     *         The Amazon Web Services user account does not have permission to perform the action. Check the IAM policy
-     *         associated with this account.
+     *         The user does not have permission to perform the action. Check the IAM policy associated with this user.
      * @throws InvalidParameterException
      *         One or more parameters are not valid. Verify the parameters and try again.
      * @throws InvalidParameterValueException
@@ -1407,7 +1390,7 @@ public class AWSApplicationDiscoveryClient extends AmazonWebServiceClient implem
      * @throws ServerInternalErrorException
      *         The server experienced an internal error. Try again.
      * @throws HomeRegionNotSetException
-     *         The home region is not set. Set the home region to continue.
+     *         The home Region is not set. Set the home Region to continue.
      * @sample AWSApplicationDiscovery.DisassociateConfigurationItemsFromApplication
      */
     @Override
@@ -1472,8 +1455,7 @@ public class AWSApplicationDiscoveryClient extends AmazonWebServiceClient implem
      * @param exportConfigurationsRequest
      * @return Result of the ExportConfigurations operation returned by the service.
      * @throws AuthorizationErrorException
-     *         The Amazon Web Services user account does not have permission to perform the action. Check the IAM policy
-     *         associated with this account.
+     *         The user does not have permission to perform the action. Check the IAM policy associated with this user.
      * @throws InvalidParameterException
      *         One or more parameters are not valid. Verify the parameters and try again.
      * @throws InvalidParameterValueException
@@ -1484,7 +1466,7 @@ public class AWSApplicationDiscoveryClient extends AmazonWebServiceClient implem
      * @throws OperationNotPermittedException
      *         This operation is not permitted.
      * @throws HomeRegionNotSetException
-     *         The home region is not set. Set the home region to continue.
+     *         The home Region is not set. Set the home Region to continue.
      * @sample AWSApplicationDiscovery.ExportConfigurations
      */
     @Override
@@ -1543,8 +1525,7 @@ public class AWSApplicationDiscoveryClient extends AmazonWebServiceClient implem
      * @param getDiscoverySummaryRequest
      * @return Result of the GetDiscoverySummary operation returned by the service.
      * @throws AuthorizationErrorException
-     *         The Amazon Web Services user account does not have permission to perform the action. Check the IAM policy
-     *         associated with this account.
+     *         The user does not have permission to perform the action. Check the IAM policy associated with this user.
      * @throws InvalidParameterException
      *         One or more parameters are not valid. Verify the parameters and try again.
      * @throws InvalidParameterValueException
@@ -1553,7 +1534,7 @@ public class AWSApplicationDiscoveryClient extends AmazonWebServiceClient implem
      * @throws ServerInternalErrorException
      *         The server experienced an internal error. Try again.
      * @throws HomeRegionNotSetException
-     *         The home region is not set. Set the home region to continue.
+     *         The home Region is not set. Set the home Region to continue.
      * @sample AWSApplicationDiscovery.GetDiscoverySummary
      */
     @Override
@@ -1609,8 +1590,7 @@ public class AWSApplicationDiscoveryClient extends AmazonWebServiceClient implem
      * @param listConfigurationsRequest
      * @return Result of the ListConfigurations operation returned by the service.
      * @throws AuthorizationErrorException
-     *         The Amazon Web Services user account does not have permission to perform the action. Check the IAM policy
-     *         associated with this account.
+     *         The user does not have permission to perform the action. Check the IAM policy associated with this user.
      * @throws ResourceNotFoundException
      *         The specified configuration ID was not located. Verify the configuration ID and try again.
      * @throws InvalidParameterException
@@ -1621,7 +1601,7 @@ public class AWSApplicationDiscoveryClient extends AmazonWebServiceClient implem
      * @throws ServerInternalErrorException
      *         The server experienced an internal error. Try again.
      * @throws HomeRegionNotSetException
-     *         The home region is not set. Set the home region to continue.
+     *         The home Region is not set. Set the home Region to continue.
      * @sample AWSApplicationDiscovery.ListConfigurations
      */
     @Override
@@ -1676,8 +1656,7 @@ public class AWSApplicationDiscoveryClient extends AmazonWebServiceClient implem
      * @param listServerNeighborsRequest
      * @return Result of the ListServerNeighbors operation returned by the service.
      * @throws AuthorizationErrorException
-     *         The Amazon Web Services user account does not have permission to perform the action. Check the IAM policy
-     *         associated with this account.
+     *         The user does not have permission to perform the action. Check the IAM policy associated with this user.
      * @throws InvalidParameterException
      *         One or more parameters are not valid. Verify the parameters and try again.
      * @throws InvalidParameterValueException
@@ -1686,7 +1665,7 @@ public class AWSApplicationDiscoveryClient extends AmazonWebServiceClient implem
      * @throws ServerInternalErrorException
      *         The server experienced an internal error. Try again.
      * @throws HomeRegionNotSetException
-     *         The home region is not set. Set the home region to continue.
+     *         The home Region is not set. Set the home Region to continue.
      * @sample AWSApplicationDiscovery.ListServerNeighbors
      */
     @Override
@@ -1742,8 +1721,7 @@ public class AWSApplicationDiscoveryClient extends AmazonWebServiceClient implem
      * @return Result of the StartContinuousExport operation returned by the service.
      * @throws ConflictErrorException
      * @throws AuthorizationErrorException
-     *         The Amazon Web Services user account does not have permission to perform the action. Check the IAM policy
-     *         associated with this account.
+     *         The user does not have permission to perform the action. Check the IAM policy associated with this user.
      * @throws InvalidParameterException
      *         One or more parameters are not valid. Verify the parameters and try again.
      * @throws InvalidParameterValueException
@@ -1759,7 +1737,7 @@ public class AWSApplicationDiscoveryClient extends AmazonWebServiceClient implem
      *         token but have two different import URLs, you can encounter this issue. If the import tasks are meant to
      *         be different, use a different <code>clientRequestToken</code>, and try again.
      * @throws HomeRegionNotSetException
-     *         The home region is not set. Set the home region to continue.
+     *         The home Region is not set. Set the home Region to continue.
      * @sample AWSApplicationDiscovery.StartContinuousExport
      */
     @Override
@@ -1809,14 +1787,13 @@ public class AWSApplicationDiscoveryClient extends AmazonWebServiceClient implem
 
     /**
      * <p>
-     * Instructs the specified agents or connectors to start collecting data.
+     * Instructs the specified agents to start collecting data.
      * </p>
      * 
      * @param startDataCollectionByAgentIdsRequest
      * @return Result of the StartDataCollectionByAgentIds operation returned by the service.
      * @throws AuthorizationErrorException
-     *         The Amazon Web Services user account does not have permission to perform the action. Check the IAM policy
-     *         associated with this account.
+     *         The user does not have permission to perform the action. Check the IAM policy associated with this user.
      * @throws InvalidParameterException
      *         One or more parameters are not valid. Verify the parameters and try again.
      * @throws InvalidParameterValueException
@@ -1825,7 +1802,7 @@ public class AWSApplicationDiscoveryClient extends AmazonWebServiceClient implem
      * @throws ServerInternalErrorException
      *         The server experienced an internal error. Try again.
      * @throws HomeRegionNotSetException
-     *         The home region is not set. Set the home region to continue.
+     *         The home Region is not set. Set the home Region to continue.
      * @sample AWSApplicationDiscovery.StartDataCollectionByAgentIds
      */
     @Override
@@ -1876,25 +1853,38 @@ public class AWSApplicationDiscoveryClient extends AmazonWebServiceClient implem
 
     /**
      * <p>
-     * Begins the export of discovered data to an S3 bucket.
+     * Begins the export of a discovered data report to an Amazon S3 bucket managed by Amazon Web Services.
+     * </p>
+     * <note>
+     * <p>
+     * Exports might provide an estimate of fees and savings based on certain information that you provide. Fee
+     * estimates do not include any taxes that might apply. Your actual fees and savings depend on a variety of factors,
+     * including your actual usage of Amazon Web Services services, which might vary from the estimates provided in this
+     * report.
+     * </p>
+     * </note>
+     * <p>
+     * If you do not specify <code>preferences</code> or <code>agentIds</code> in the filter, a summary of all servers,
+     * applications, tags, and performance is generated. This data is an aggregation of all server data collected
+     * through on-premises tooling, file import, application grouping and applying tags.
      * </p>
      * <p>
      * If you specify <code>agentIds</code> in a filter, the task exports up to 72 hours of detailed data collected by
      * the identified Application Discovery Agent, including network, process, and performance details. A time range for
      * exported agent data may be set by using <code>startTime</code> and <code>endTime</code>. Export of detailed agent
-     * data is limited to five concurrently running exports.
+     * data is limited to five concurrently running exports. Export of detailed agent data is limited to two exports per
+     * day.
      * </p>
      * <p>
-     * If you do not include an <code>agentIds</code> filter, summary data is exported that includes both Amazon Web
-     * Services Agentless Discovery Connector data and summary data from Amazon Web Services Discovery Agents. Export of
-     * summary data is limited to two exports per day.
+     * If you enable <code>ec2RecommendationsPreferences</code> in <code>preferences</code> , an Amazon EC2 instance
+     * matching the characteristics of each server in Application Discovery Service is generated. Changing the
+     * attributes of the <code>ec2RecommendationsPreferences</code> changes the criteria of the recommendation.
      * </p>
      * 
      * @param startExportTaskRequest
      * @return Result of the StartExportTask operation returned by the service.
      * @throws AuthorizationErrorException
-     *         The Amazon Web Services user account does not have permission to perform the action. Check the IAM policy
-     *         associated with this account.
+     *         The user does not have permission to perform the action. Check the IAM policy associated with this user.
      * @throws InvalidParameterException
      *         One or more parameters are not valid. Verify the parameters and try again.
      * @throws InvalidParameterValueException
@@ -1905,7 +1895,7 @@ public class AWSApplicationDiscoveryClient extends AmazonWebServiceClient implem
      * @throws OperationNotPermittedException
      *         This operation is not permitted.
      * @throws HomeRegionNotSetException
-     *         The home region is not set. Set the home region to continue.
+     *         The home Region is not set. Set the home Region to continue.
      * @sample AWSApplicationDiscovery.StartExportTask
      */
     @Override
@@ -1955,8 +1945,9 @@ public class AWSApplicationDiscoveryClient extends AmazonWebServiceClient implem
     /**
      * <p>
      * Starts an import task, which allows you to import details of your on-premises environment directly into Amazon
-     * Web Services Migration Hub without having to use the Application Discovery Service (ADS) tools such as the
-     * Discovery Connector or Discovery Agent. This gives you the option to perform migration assessment and planning
+     * Web Services Migration Hub without having to use the Amazon Web Services Application Discovery Service
+     * (Application Discovery Service) tools such as the Amazon Web Services Application Discovery Service Agentless
+     * Collector or Application Discovery Agent. This gives you the option to perform migration assessment and planning
      * directly from your imported data, including the ability to group your devices as applications and track their
      * migration status.
      * </p>
@@ -2012,8 +2003,7 @@ public class AWSApplicationDiscoveryClient extends AmazonWebServiceClient implem
      *         token but have two different import URLs, you can encounter this issue. If the import tasks are meant to
      *         be different, use a different <code>clientRequestToken</code>, and try again.
      * @throws AuthorizationErrorException
-     *         The Amazon Web Services user account does not have permission to perform the action. Check the IAM policy
-     *         associated with this account.
+     *         The user does not have permission to perform the action. Check the IAM policy associated with this user.
      * @throws InvalidParameterException
      *         One or more parameters are not valid. Verify the parameters and try again.
      * @throws InvalidParameterValueException
@@ -2022,7 +2012,7 @@ public class AWSApplicationDiscoveryClient extends AmazonWebServiceClient implem
      * @throws ServerInternalErrorException
      *         The server experienced an internal error. Try again.
      * @throws HomeRegionNotSetException
-     *         The home region is not set. Set the home region to continue.
+     *         The home Region is not set. Set the home Region to continue.
      * @sample AWSApplicationDiscovery.StartImportTask
      */
     @Override
@@ -2077,8 +2067,7 @@ public class AWSApplicationDiscoveryClient extends AmazonWebServiceClient implem
      * @param stopContinuousExportRequest
      * @return Result of the StopContinuousExport operation returned by the service.
      * @throws AuthorizationErrorException
-     *         The Amazon Web Services user account does not have permission to perform the action. Check the IAM policy
-     *         associated with this account.
+     *         The user does not have permission to perform the action. Check the IAM policy associated with this user.
      * @throws InvalidParameterException
      *         One or more parameters are not valid. Verify the parameters and try again.
      * @throws InvalidParameterValueException
@@ -2096,7 +2085,7 @@ public class AWSApplicationDiscoveryClient extends AmazonWebServiceClient implem
      *         token but have two different import URLs, you can encounter this issue. If the import tasks are meant to
      *         be different, use a different <code>clientRequestToken</code>, and try again.
      * @throws HomeRegionNotSetException
-     *         The home region is not set. Set the home region to continue.
+     *         The home Region is not set. Set the home Region to continue.
      * @sample AWSApplicationDiscovery.StopContinuousExport
      */
     @Override
@@ -2145,14 +2134,13 @@ public class AWSApplicationDiscoveryClient extends AmazonWebServiceClient implem
 
     /**
      * <p>
-     * Instructs the specified agents or connectors to stop collecting data.
+     * Instructs the specified agents to stop collecting data.
      * </p>
      * 
      * @param stopDataCollectionByAgentIdsRequest
      * @return Result of the StopDataCollectionByAgentIds operation returned by the service.
      * @throws AuthorizationErrorException
-     *         The Amazon Web Services user account does not have permission to perform the action. Check the IAM policy
-     *         associated with this account.
+     *         The user does not have permission to perform the action. Check the IAM policy associated with this user.
      * @throws InvalidParameterException
      *         One or more parameters are not valid. Verify the parameters and try again.
      * @throws InvalidParameterValueException
@@ -2161,7 +2149,7 @@ public class AWSApplicationDiscoveryClient extends AmazonWebServiceClient implem
      * @throws ServerInternalErrorException
      *         The server experienced an internal error. Try again.
      * @throws HomeRegionNotSetException
-     *         The home region is not set. Set the home region to continue.
+     *         The home Region is not set. Set the home Region to continue.
      * @sample AWSApplicationDiscovery.StopDataCollectionByAgentIds
      */
     @Override
@@ -2218,8 +2206,7 @@ public class AWSApplicationDiscoveryClient extends AmazonWebServiceClient implem
      * @param updateApplicationRequest
      * @return Result of the UpdateApplication operation returned by the service.
      * @throws AuthorizationErrorException
-     *         The Amazon Web Services user account does not have permission to perform the action. Check the IAM policy
-     *         associated with this account.
+     *         The user does not have permission to perform the action. Check the IAM policy associated with this user.
      * @throws InvalidParameterException
      *         One or more parameters are not valid. Verify the parameters and try again.
      * @throws InvalidParameterValueException
@@ -2228,7 +2215,7 @@ public class AWSApplicationDiscoveryClient extends AmazonWebServiceClient implem
      * @throws ServerInternalErrorException
      *         The server experienced an internal error. Try again.
      * @throws HomeRegionNotSetException
-     *         The home region is not set. Set the home region to continue.
+     *         The home Region is not set. Set the home Region to continue.
      * @sample AWSApplicationDiscovery.UpdateApplication
      */
     @Override

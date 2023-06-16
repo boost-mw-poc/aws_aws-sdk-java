@@ -888,7 +888,17 @@ public class AmazonS3Client extends AmazonWebServiceClient implements AmazonS3 {
         if (listVersionsRequest.getMaxResults() != null && listVersionsRequest.getMaxResults() >= 0) request.addParameter("max-keys", listVersionsRequest.getMaxResults().toString());
         request.addParameter("encoding-type", shouldSDKDecodeResponse ? Constants.URL_ENCODING : listVersionsRequest.getEncodingType());
 
-        return invoke(request, new Unmarshallers.VersionListUnmarshaller(shouldSDKDecodeResponse), listVersionsRequest.getBucketName(), null);
+        populateRequesterPaysHeader(request, listVersionsRequest.isRequesterPays());
+
+        @SuppressWarnings("unchecked")
+        ResponseHeaderHandlerChain<VersionListing> responseHandler =
+                new ResponseHeaderHandlerChain<VersionListing>(
+                        // xml payload unmarshaller
+                        new Unmarshallers.VersionListUnmarshaller(shouldSDKDecodeResponse),
+                        // header handler
+                        new S3RequesterChargedHeaderHandler<VersionListing>());
+
+        return invoke(request, responseHandler, listVersionsRequest.getBucketName(), null);
     }
 
     @Override
@@ -926,7 +936,15 @@ public class AmazonS3Client extends AmazonWebServiceClient implements AmazonS3 {
 
         populateRequesterPaysHeader(request, listObjectsRequest.isRequesterPays());
 
-        return invoke(request, new Unmarshallers.ListObjectsUnmarshaller(shouldSDKDecodeResponse), listObjectsRequest.getBucketName(), null);
+        @SuppressWarnings("unchecked")
+        ResponseHeaderHandlerChain<ObjectListing> responseHandler =
+                new ResponseHeaderHandlerChain<ObjectListing>(
+                        // xml payload unmarshaller
+                        new Unmarshallers.ListObjectsUnmarshaller(shouldSDKDecodeResponse),
+                        // header handler
+                        new S3RequesterChargedHeaderHandler<ObjectListing>());
+
+        return invoke(request, responseHandler, listObjectsRequest.getBucketName(), null);
     }
 
     @Override
@@ -969,7 +987,15 @@ public class AmazonS3Client extends AmazonWebServiceClient implements AmazonS3 {
          */
         final boolean shouldSDKDecodeResponse = Constants.URL_ENCODING.equals(listObjectsV2Request.getEncodingType());
 
-        return invoke(request, new Unmarshallers.ListObjectsV2Unmarshaller(shouldSDKDecodeResponse), listObjectsV2Request.getBucketName(), null);
+        @SuppressWarnings("unchecked")
+        ResponseHeaderHandlerChain<ListObjectsV2Result> responseHandler =
+                new ResponseHeaderHandlerChain<ListObjectsV2Result>(
+                        // xml payload unmarshaller
+                        new Unmarshallers.ListObjectsV2Unmarshaller(shouldSDKDecodeResponse),
+                        // header handler
+                        new S3RequesterChargedHeaderHandler<ListObjectsV2Result>());
+
+        return invoke(request, responseHandler, listObjectsV2Request.getBucketName(), null);
     }
 
     @Override
@@ -2914,7 +2940,17 @@ public class AmazonS3Client extends AmazonWebServiceClient implements AmazonS3 {
         request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetBucketAccelerateConfiguration");
         request.addParameter("accelerate", null);
 
-        return invoke(request, new Unmarshallers.BucketAccelerateConfigurationUnmarshaller(), bucketName, null);
+        populateRequesterPaysHeader(request, getBucketAccelerateConfigurationRequest.isRequesterPays());
+
+        @SuppressWarnings("unchecked")
+        ResponseHeaderHandlerChain<BucketAccelerateConfiguration> responseHandler =
+                new ResponseHeaderHandlerChain<BucketAccelerateConfiguration>(
+                        // xml payload unmarshaller
+                        new Unmarshallers.BucketAccelerateConfigurationUnmarshaller(),
+                        // header handler
+                        new S3RequesterChargedHeaderHandler<BucketAccelerateConfiguration>());
+
+        return invoke(request, responseHandler, bucketName, null);
     }
 
     @Override
@@ -3750,7 +3786,17 @@ public class AmazonS3Client extends AmazonWebServiceClient implements AmazonS3 {
         if (listMultipartUploadsRequest.getPrefix() != null) request.addParameter("prefix", listMultipartUploadsRequest.getPrefix());
         if (listMultipartUploadsRequest.getEncodingType() != null) request.addParameter("encoding-type", listMultipartUploadsRequest.getEncodingType());
 
-        return invoke(request, new Unmarshallers.ListMultipartUploadsResultUnmarshaller(), listMultipartUploadsRequest.getBucketName(), null);
+        populateRequesterPaysHeader(request, listMultipartUploadsRequest.isRequesterPays());
+
+        @SuppressWarnings("unchecked")
+        ResponseHeaderHandlerChain<MultipartUploadListing> responseHandler =
+                new ResponseHeaderHandlerChain<MultipartUploadListing>(
+                        // xml payload unmarshaller
+                        new Unmarshallers.ListMultipartUploadsResultUnmarshaller(),
+                        // header handler
+                        new S3RequesterChargedHeaderHandler<MultipartUploadListing>());
+
+        return invoke(request, responseHandler, listMultipartUploadsRequest.getBucketName(), null);
     }
 
     @Override

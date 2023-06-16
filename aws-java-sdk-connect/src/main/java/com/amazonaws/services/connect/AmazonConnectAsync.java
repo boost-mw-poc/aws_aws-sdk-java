@@ -5013,10 +5013,10 @@ public interface AmazonConnectAsync extends AmazonConnect {
     /**
      * <p>
      * When a contact is being recorded, and the recording has been suspended using SuspendContactRecording, this API
-     * resumes recording the call.
+     * resumes recording the call or screen.
      * </p>
      * <p>
-     * Only voice recordings are supported at this time.
+     * Voice and screen recordings are supported.
      * </p>
      * 
      * @param resumeContactRecordingRequest
@@ -5030,10 +5030,10 @@ public interface AmazonConnectAsync extends AmazonConnect {
     /**
      * <p>
      * When a contact is being recorded, and the recording has been suspended using SuspendContactRecording, this API
-     * resumes recording the call.
+     * resumes recording the call or screen.
      * </p>
      * <p>
-     * Only voice recordings are supported at this time.
+     * Voice and screen recordings are supported.
      * </p>
      * 
      * @param resumeContactRecordingRequest
@@ -5932,15 +5932,15 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
-     * When a contact is being recorded, this API suspends recording the call. For example, you might suspend the call
-     * recording while collecting sensitive information, such as a credit card number. Then use ResumeContactRecording
-     * to restart recording.
+     * When a contact is being recorded, this API suspends recording the call or screen. For example, you might suspend
+     * the call or screen recording while collecting sensitive information, such as a credit card number. Then use
+     * ResumeContactRecording to restart recording.
      * </p>
      * <p>
      * The period of time that the recording is suspended is filled with silence in the final recording.
      * </p>
      * <p>
-     * Only voice recordings are supported at this time.
+     * Voice and screen recordings are supported.
      * </p>
      * 
      * @param suspendContactRecordingRequest
@@ -5953,15 +5953,15 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
-     * When a contact is being recorded, this API suspends recording the call. For example, you might suspend the call
-     * recording while collecting sensitive information, such as a credit card number. Then use ResumeContactRecording
-     * to restart recording.
+     * When a contact is being recorded, this API suspends recording the call or screen. For example, you might suspend
+     * the call or screen recording while collecting sensitive information, such as a credit card number. Then use
+     * ResumeContactRecording to restart recording.
      * </p>
      * <p>
      * The period of time that the recording is suspended is filled with silence in the final recording.
      * </p>
      * <p>
-     * Only voice recordings are supported at this time.
+     * Voice and screen recordings are supported.
      * </p>
      * 
      * @param suspendContactRecordingRequest
