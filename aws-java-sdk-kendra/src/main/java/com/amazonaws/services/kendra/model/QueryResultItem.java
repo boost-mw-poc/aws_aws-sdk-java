@@ -56,7 +56,7 @@ public class QueryResultItem implements Serializable, Cloneable, StructuredPojo 
     private String format;
     /**
      * <p>
-     * One or more additional attributes associated with the query result.
+     * One or more additional fields/attributes associated with the query result.
      * </p>
      */
     private java.util.List<AdditionalResultAttribute> additionalAttributes;
@@ -88,21 +88,21 @@ public class QueryResultItem implements Serializable, Cloneable, StructuredPojo 
     private String documentURI;
     /**
      * <p>
-     * An array of document attributes assigned to a document in the search results. For example, the document author (
-     * <code>_author</code>) or the source URI (<code>_source_uri</code>) of the document.
+     * An array of document fields/attributes assigned to a document in the search results. For example, the document
+     * author (<code>_author</code>) or the source URI (<code>_source_uri</code>) of the document.
      * </p>
      */
     private java.util.List<DocumentAttribute> documentAttributes;
     /**
      * <p>
-     * Indicates the confidence that Amazon Kendra has that a result matches the query that you provided. Each result is
-     * placed into a bin that indicates the confidence, <code>VERY_HIGH</code>, <code>HIGH</code>, <code>MEDIUM</code>
-     * and <code>LOW</code>. You can use the score to determine if a response meets the confidence needed for your
+     * Indicates the confidence level of Amazon Kendra providing a relevant result for the query. Each result is placed
+     * into a bin that indicates the confidence, <code>VERY_HIGH</code>, <code>HIGH</code>, <code>MEDIUM</code> and
+     * <code>LOW</code>. You can use the score to determine if a response meets the confidence needed for your
      * application.
      * </p>
      * <p>
      * The field is only set to <code>LOW</code> when the <code>Type</code> field is set to <code>DOCUMENT</code> and
-     * Amazon Kendra is not confident that the result matches the query.
+     * Amazon Kendra is not confident that the result is relevant to the query.
      * </p>
      */
     private ScoreAttributes scoreAttributes;
@@ -110,7 +110,7 @@ public class QueryResultItem implements Serializable, Cloneable, StructuredPojo 
      * <p>
      * A token that identifies a particular result from a particular query. Use this token to provide click-through
      * feedback for the result. For more information, see <a
-     * href="https://docs.aws.amazon.com/kendra/latest/dg/submitting-feedback.html">Submitting feedback </a>.
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/submitting-feedback.html">Submitting feedback</a>.
      * </p>
      */
     private String feedbackToken;
@@ -309,10 +309,10 @@ public class QueryResultItem implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * One or more additional attributes associated with the query result.
+     * One or more additional fields/attributes associated with the query result.
      * </p>
      * 
-     * @return One or more additional attributes associated with the query result.
+     * @return One or more additional fields/attributes associated with the query result.
      */
 
     public java.util.List<AdditionalResultAttribute> getAdditionalAttributes() {
@@ -321,11 +321,11 @@ public class QueryResultItem implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * One or more additional attributes associated with the query result.
+     * One or more additional fields/attributes associated with the query result.
      * </p>
      * 
      * @param additionalAttributes
-     *        One or more additional attributes associated with the query result.
+     *        One or more additional fields/attributes associated with the query result.
      */
 
     public void setAdditionalAttributes(java.util.Collection<AdditionalResultAttribute> additionalAttributes) {
@@ -339,7 +339,7 @@ public class QueryResultItem implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * One or more additional attributes associated with the query result.
+     * One or more additional fields/attributes associated with the query result.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -348,7 +348,7 @@ public class QueryResultItem implements Serializable, Cloneable, StructuredPojo 
      * </p>
      * 
      * @param additionalAttributes
-     *        One or more additional attributes associated with the query result.
+     *        One or more additional fields/attributes associated with the query result.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -364,11 +364,11 @@ public class QueryResultItem implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * One or more additional attributes associated with the query result.
+     * One or more additional fields/attributes associated with the query result.
      * </p>
      * 
      * @param additionalAttributes
-     *        One or more additional attributes associated with the query result.
+     *        One or more additional fields/attributes associated with the query result.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -551,12 +551,12 @@ public class QueryResultItem implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * An array of document attributes assigned to a document in the search results. For example, the document author (
-     * <code>_author</code>) or the source URI (<code>_source_uri</code>) of the document.
+     * An array of document fields/attributes assigned to a document in the search results. For example, the document
+     * author (<code>_author</code>) or the source URI (<code>_source_uri</code>) of the document.
      * </p>
      * 
-     * @return An array of document attributes assigned to a document in the search results. For example, the document
-     *         author (<code>_author</code>) or the source URI (<code>_source_uri</code>) of the document.
+     * @return An array of document fields/attributes assigned to a document in the search results. For example, the
+     *         document author (<code>_author</code>) or the source URI (<code>_source_uri</code>) of the document.
      */
 
     public java.util.List<DocumentAttribute> getDocumentAttributes() {
@@ -565,13 +565,13 @@ public class QueryResultItem implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * An array of document attributes assigned to a document in the search results. For example, the document author (
-     * <code>_author</code>) or the source URI (<code>_source_uri</code>) of the document.
+     * An array of document fields/attributes assigned to a document in the search results. For example, the document
+     * author (<code>_author</code>) or the source URI (<code>_source_uri</code>) of the document.
      * </p>
      * 
      * @param documentAttributes
-     *        An array of document attributes assigned to a document in the search results. For example, the document
-     *        author (<code>_author</code>) or the source URI (<code>_source_uri</code>) of the document.
+     *        An array of document fields/attributes assigned to a document in the search results. For example, the
+     *        document author (<code>_author</code>) or the source URI (<code>_source_uri</code>) of the document.
      */
 
     public void setDocumentAttributes(java.util.Collection<DocumentAttribute> documentAttributes) {
@@ -585,8 +585,8 @@ public class QueryResultItem implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * An array of document attributes assigned to a document in the search results. For example, the document author (
-     * <code>_author</code>) or the source URI (<code>_source_uri</code>) of the document.
+     * An array of document fields/attributes assigned to a document in the search results. For example, the document
+     * author (<code>_author</code>) or the source URI (<code>_source_uri</code>) of the document.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -595,8 +595,8 @@ public class QueryResultItem implements Serializable, Cloneable, StructuredPojo 
      * </p>
      * 
      * @param documentAttributes
-     *        An array of document attributes assigned to a document in the search results. For example, the document
-     *        author (<code>_author</code>) or the source URI (<code>_source_uri</code>) of the document.
+     *        An array of document fields/attributes assigned to a document in the search results. For example, the
+     *        document author (<code>_author</code>) or the source URI (<code>_source_uri</code>) of the document.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -612,13 +612,13 @@ public class QueryResultItem implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * An array of document attributes assigned to a document in the search results. For example, the document author (
-     * <code>_author</code>) or the source URI (<code>_source_uri</code>) of the document.
+     * An array of document fields/attributes assigned to a document in the search results. For example, the document
+     * author (<code>_author</code>) or the source URI (<code>_source_uri</code>) of the document.
      * </p>
      * 
      * @param documentAttributes
-     *        An array of document attributes assigned to a document in the search results. For example, the document
-     *        author (<code>_author</code>) or the source URI (<code>_source_uri</code>) of the document.
+     *        An array of document fields/attributes assigned to a document in the search results. For example, the
+     *        document author (<code>_author</code>) or the source URI (<code>_source_uri</code>) of the document.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -629,24 +629,24 @@ public class QueryResultItem implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Indicates the confidence that Amazon Kendra has that a result matches the query that you provided. Each result is
-     * placed into a bin that indicates the confidence, <code>VERY_HIGH</code>, <code>HIGH</code>, <code>MEDIUM</code>
-     * and <code>LOW</code>. You can use the score to determine if a response meets the confidence needed for your
+     * Indicates the confidence level of Amazon Kendra providing a relevant result for the query. Each result is placed
+     * into a bin that indicates the confidence, <code>VERY_HIGH</code>, <code>HIGH</code>, <code>MEDIUM</code> and
+     * <code>LOW</code>. You can use the score to determine if a response meets the confidence needed for your
      * application.
      * </p>
      * <p>
      * The field is only set to <code>LOW</code> when the <code>Type</code> field is set to <code>DOCUMENT</code> and
-     * Amazon Kendra is not confident that the result matches the query.
+     * Amazon Kendra is not confident that the result is relevant to the query.
      * </p>
      * 
      * @param scoreAttributes
-     *        Indicates the confidence that Amazon Kendra has that a result matches the query that you provided. Each
-     *        result is placed into a bin that indicates the confidence, <code>VERY_HIGH</code>, <code>HIGH</code>,
+     *        Indicates the confidence level of Amazon Kendra providing a relevant result for the query. Each result is
+     *        placed into a bin that indicates the confidence, <code>VERY_HIGH</code>, <code>HIGH</code>,
      *        <code>MEDIUM</code> and <code>LOW</code>. You can use the score to determine if a response meets the
      *        confidence needed for your application.</p>
      *        <p>
      *        The field is only set to <code>LOW</code> when the <code>Type</code> field is set to <code>DOCUMENT</code>
-     *        and Amazon Kendra is not confident that the result matches the query.
+     *        and Amazon Kendra is not confident that the result is relevant to the query.
      */
 
     public void setScoreAttributes(ScoreAttributes scoreAttributes) {
@@ -655,23 +655,23 @@ public class QueryResultItem implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Indicates the confidence that Amazon Kendra has that a result matches the query that you provided. Each result is
-     * placed into a bin that indicates the confidence, <code>VERY_HIGH</code>, <code>HIGH</code>, <code>MEDIUM</code>
-     * and <code>LOW</code>. You can use the score to determine if a response meets the confidence needed for your
+     * Indicates the confidence level of Amazon Kendra providing a relevant result for the query. Each result is placed
+     * into a bin that indicates the confidence, <code>VERY_HIGH</code>, <code>HIGH</code>, <code>MEDIUM</code> and
+     * <code>LOW</code>. You can use the score to determine if a response meets the confidence needed for your
      * application.
      * </p>
      * <p>
      * The field is only set to <code>LOW</code> when the <code>Type</code> field is set to <code>DOCUMENT</code> and
-     * Amazon Kendra is not confident that the result matches the query.
+     * Amazon Kendra is not confident that the result is relevant to the query.
      * </p>
      * 
-     * @return Indicates the confidence that Amazon Kendra has that a result matches the query that you provided. Each
-     *         result is placed into a bin that indicates the confidence, <code>VERY_HIGH</code>, <code>HIGH</code>,
+     * @return Indicates the confidence level of Amazon Kendra providing a relevant result for the query. Each result is
+     *         placed into a bin that indicates the confidence, <code>VERY_HIGH</code>, <code>HIGH</code>,
      *         <code>MEDIUM</code> and <code>LOW</code>. You can use the score to determine if a response meets the
      *         confidence needed for your application.</p>
      *         <p>
      *         The field is only set to <code>LOW</code> when the <code>Type</code> field is set to
-     *         <code>DOCUMENT</code> and Amazon Kendra is not confident that the result matches the query.
+     *         <code>DOCUMENT</code> and Amazon Kendra is not confident that the result is relevant to the query.
      */
 
     public ScoreAttributes getScoreAttributes() {
@@ -680,24 +680,24 @@ public class QueryResultItem implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Indicates the confidence that Amazon Kendra has that a result matches the query that you provided. Each result is
-     * placed into a bin that indicates the confidence, <code>VERY_HIGH</code>, <code>HIGH</code>, <code>MEDIUM</code>
-     * and <code>LOW</code>. You can use the score to determine if a response meets the confidence needed for your
+     * Indicates the confidence level of Amazon Kendra providing a relevant result for the query. Each result is placed
+     * into a bin that indicates the confidence, <code>VERY_HIGH</code>, <code>HIGH</code>, <code>MEDIUM</code> and
+     * <code>LOW</code>. You can use the score to determine if a response meets the confidence needed for your
      * application.
      * </p>
      * <p>
      * The field is only set to <code>LOW</code> when the <code>Type</code> field is set to <code>DOCUMENT</code> and
-     * Amazon Kendra is not confident that the result matches the query.
+     * Amazon Kendra is not confident that the result is relevant to the query.
      * </p>
      * 
      * @param scoreAttributes
-     *        Indicates the confidence that Amazon Kendra has that a result matches the query that you provided. Each
-     *        result is placed into a bin that indicates the confidence, <code>VERY_HIGH</code>, <code>HIGH</code>,
+     *        Indicates the confidence level of Amazon Kendra providing a relevant result for the query. Each result is
+     *        placed into a bin that indicates the confidence, <code>VERY_HIGH</code>, <code>HIGH</code>,
      *        <code>MEDIUM</code> and <code>LOW</code>. You can use the score to determine if a response meets the
      *        confidence needed for your application.</p>
      *        <p>
      *        The field is only set to <code>LOW</code> when the <code>Type</code> field is set to <code>DOCUMENT</code>
-     *        and Amazon Kendra is not confident that the result matches the query.
+     *        and Amazon Kendra is not confident that the result is relevant to the query.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -710,13 +710,13 @@ public class QueryResultItem implements Serializable, Cloneable, StructuredPojo 
      * <p>
      * A token that identifies a particular result from a particular query. Use this token to provide click-through
      * feedback for the result. For more information, see <a
-     * href="https://docs.aws.amazon.com/kendra/latest/dg/submitting-feedback.html">Submitting feedback </a>.
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/submitting-feedback.html">Submitting feedback</a>.
      * </p>
      * 
      * @param feedbackToken
      *        A token that identifies a particular result from a particular query. Use this token to provide
      *        click-through feedback for the result. For more information, see <a
-     *        href="https://docs.aws.amazon.com/kendra/latest/dg/submitting-feedback.html">Submitting feedback </a>.
+     *        href="https://docs.aws.amazon.com/kendra/latest/dg/submitting-feedback.html">Submitting feedback</a>.
      */
 
     public void setFeedbackToken(String feedbackToken) {
@@ -727,12 +727,12 @@ public class QueryResultItem implements Serializable, Cloneable, StructuredPojo 
      * <p>
      * A token that identifies a particular result from a particular query. Use this token to provide click-through
      * feedback for the result. For more information, see <a
-     * href="https://docs.aws.amazon.com/kendra/latest/dg/submitting-feedback.html">Submitting feedback </a>.
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/submitting-feedback.html">Submitting feedback</a>.
      * </p>
      * 
      * @return A token that identifies a particular result from a particular query. Use this token to provide
      *         click-through feedback for the result. For more information, see <a
-     *         href="https://docs.aws.amazon.com/kendra/latest/dg/submitting-feedback.html">Submitting feedback </a>.
+     *         href="https://docs.aws.amazon.com/kendra/latest/dg/submitting-feedback.html">Submitting feedback</a>.
      */
 
     public String getFeedbackToken() {
@@ -743,13 +743,13 @@ public class QueryResultItem implements Serializable, Cloneable, StructuredPojo 
      * <p>
      * A token that identifies a particular result from a particular query. Use this token to provide click-through
      * feedback for the result. For more information, see <a
-     * href="https://docs.aws.amazon.com/kendra/latest/dg/submitting-feedback.html">Submitting feedback </a>.
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/submitting-feedback.html">Submitting feedback</a>.
      * </p>
      * 
      * @param feedbackToken
      *        A token that identifies a particular result from a particular query. Use this token to provide
      *        click-through feedback for the result. For more information, see <a
-     *        href="https://docs.aws.amazon.com/kendra/latest/dg/submitting-feedback.html">Submitting feedback </a>.
+     *        href="https://docs.aws.amazon.com/kendra/latest/dg/submitting-feedback.html">Submitting feedback</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

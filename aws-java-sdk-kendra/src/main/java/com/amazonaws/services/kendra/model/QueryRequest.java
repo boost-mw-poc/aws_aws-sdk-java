@@ -26,8 +26,7 @@ public class QueryRequest extends com.amazonaws.AmazonWebServiceRequest implemen
 
     /**
      * <p>
-     * The identifier of the index to search. The identifier is returned in the response from the
-     * <code>CreateIndex</code> API.
+     * The identifier of the index for the search.
      * </p>
      */
     private String indexId;
@@ -40,50 +39,46 @@ public class QueryRequest extends com.amazonaws.AmazonWebServiceRequest implemen
     private String queryText;
     /**
      * <p>
-     * Enables filtered searches based on document attributes. You can only provide one attribute filter; however, the
+     * Filters search results by document fields/attributes. You can only provide one attribute filter; however, the
      * <code>AndAllFilters</code>, <code>NotFilter</code>, and <code>OrAllFilters</code> parameters contain a list of
      * other filters.
      * </p>
      * <p>
-     * The <code>AttributeFilter</code> parameter enables you to create a set of filtering rules that a document must
+     * The <code>AttributeFilter</code> parameter means you can create a set of filtering rules that a document must
      * satisfy to be included in the query results.
      * </p>
      */
     private AttributeFilter attributeFilter;
     /**
      * <p>
-     * An array of documents attributes. Amazon Kendra returns a count for each attribute key specified. This helps your
-     * users narrow their search.
+     * An array of documents fields/attributes for faceted search. Amazon Kendra returns a count for each field key
+     * specified. This helps your users narrow their search.
      * </p>
      */
     private java.util.List<Facet> facets;
     /**
      * <p>
-     * An array of document attributes to include in the response. You can limit the response to include certain
-     * document attributes. By default all document attributes are included in the response.
+     * An array of document fields/attributes to include in the response. You can limit the response to include certain
+     * document fields. By default, all document attributes are included in the response.
      * </p>
      */
     private java.util.List<String> requestedDocumentAttributes;
     /**
      * <p>
-     * Sets the type of query. Only results for the specified query type are returned.
+     * Sets the type of query result or response. Only results for the specified type are returned.
      * </p>
      */
     private String queryResultTypeFilter;
     /**
      * <p>
-     * Overrides relevance tuning configurations of fields or attributes set at the index level.
+     * Overrides relevance tuning configurations of fields/attributes set at the index level.
      * </p>
      * <p>
      * If you use this API to override the relevance tuning configured at the index level, but there is no relevance
      * tuning configured at the index level, then Amazon Kendra does not apply any relevance tuning.
      * </p>
      * <p>
-     * If there is relevance tuning configured at the index level, but you do not use this API to override any relevance
-     * tuning in the index, then Amazon Kendra uses the relevance tuning that is configured at the index level.
-     * </p>
-     * <p>
-     * If there is relevance tuning configured for fields at the index level, but you use this API to override only some
+     * If there is relevance tuning configured for fields at the index level, and you use this API to override only some
      * of these fields, then for the fields you did not override, the importance is set to 1.
      * </p>
      */
@@ -137,13 +132,11 @@ public class QueryRequest extends com.amazonaws.AmazonWebServiceRequest implemen
 
     /**
      * <p>
-     * The identifier of the index to search. The identifier is returned in the response from the
-     * <code>CreateIndex</code> API.
+     * The identifier of the index for the search.
      * </p>
      * 
      * @param indexId
-     *        The identifier of the index to search. The identifier is returned in the response from the
-     *        <code>CreateIndex</code> API.
+     *        The identifier of the index for the search.
      */
 
     public void setIndexId(String indexId) {
@@ -152,12 +145,10 @@ public class QueryRequest extends com.amazonaws.AmazonWebServiceRequest implemen
 
     /**
      * <p>
-     * The identifier of the index to search. The identifier is returned in the response from the
-     * <code>CreateIndex</code> API.
+     * The identifier of the index for the search.
      * </p>
      * 
-     * @return The identifier of the index to search. The identifier is returned in the response from the
-     *         <code>CreateIndex</code> API.
+     * @return The identifier of the index for the search.
      */
 
     public String getIndexId() {
@@ -166,13 +157,11 @@ public class QueryRequest extends com.amazonaws.AmazonWebServiceRequest implemen
 
     /**
      * <p>
-     * The identifier of the index to search. The identifier is returned in the response from the
-     * <code>CreateIndex</code> API.
+     * The identifier of the index for the search.
      * </p>
      * 
      * @param indexId
-     *        The identifier of the index to search. The identifier is returned in the response from the
-     *        <code>CreateIndex</code> API.
+     *        The identifier of the index for the search.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -230,21 +219,21 @@ public class QueryRequest extends com.amazonaws.AmazonWebServiceRequest implemen
 
     /**
      * <p>
-     * Enables filtered searches based on document attributes. You can only provide one attribute filter; however, the
+     * Filters search results by document fields/attributes. You can only provide one attribute filter; however, the
      * <code>AndAllFilters</code>, <code>NotFilter</code>, and <code>OrAllFilters</code> parameters contain a list of
      * other filters.
      * </p>
      * <p>
-     * The <code>AttributeFilter</code> parameter enables you to create a set of filtering rules that a document must
+     * The <code>AttributeFilter</code> parameter means you can create a set of filtering rules that a document must
      * satisfy to be included in the query results.
      * </p>
      * 
      * @param attributeFilter
-     *        Enables filtered searches based on document attributes. You can only provide one attribute filter;
-     *        however, the <code>AndAllFilters</code>, <code>NotFilter</code>, and <code>OrAllFilters</code> parameters
-     *        contain a list of other filters.</p>
+     *        Filters search results by document fields/attributes. You can only provide one attribute filter; however,
+     *        the <code>AndAllFilters</code>, <code>NotFilter</code>, and <code>OrAllFilters</code> parameters contain a
+     *        list of other filters.</p>
      *        <p>
-     *        The <code>AttributeFilter</code> parameter enables you to create a set of filtering rules that a document
+     *        The <code>AttributeFilter</code> parameter means you can create a set of filtering rules that a document
      *        must satisfy to be included in the query results.
      */
 
@@ -254,20 +243,20 @@ public class QueryRequest extends com.amazonaws.AmazonWebServiceRequest implemen
 
     /**
      * <p>
-     * Enables filtered searches based on document attributes. You can only provide one attribute filter; however, the
+     * Filters search results by document fields/attributes. You can only provide one attribute filter; however, the
      * <code>AndAllFilters</code>, <code>NotFilter</code>, and <code>OrAllFilters</code> parameters contain a list of
      * other filters.
      * </p>
      * <p>
-     * The <code>AttributeFilter</code> parameter enables you to create a set of filtering rules that a document must
+     * The <code>AttributeFilter</code> parameter means you can create a set of filtering rules that a document must
      * satisfy to be included in the query results.
      * </p>
      * 
-     * @return Enables filtered searches based on document attributes. You can only provide one attribute filter;
-     *         however, the <code>AndAllFilters</code>, <code>NotFilter</code>, and <code>OrAllFilters</code> parameters
-     *         contain a list of other filters.</p>
+     * @return Filters search results by document fields/attributes. You can only provide one attribute filter; however,
+     *         the <code>AndAllFilters</code>, <code>NotFilter</code>, and <code>OrAllFilters</code> parameters contain
+     *         a list of other filters.</p>
      *         <p>
-     *         The <code>AttributeFilter</code> parameter enables you to create a set of filtering rules that a document
+     *         The <code>AttributeFilter</code> parameter means you can create a set of filtering rules that a document
      *         must satisfy to be included in the query results.
      */
 
@@ -277,21 +266,21 @@ public class QueryRequest extends com.amazonaws.AmazonWebServiceRequest implemen
 
     /**
      * <p>
-     * Enables filtered searches based on document attributes. You can only provide one attribute filter; however, the
+     * Filters search results by document fields/attributes. You can only provide one attribute filter; however, the
      * <code>AndAllFilters</code>, <code>NotFilter</code>, and <code>OrAllFilters</code> parameters contain a list of
      * other filters.
      * </p>
      * <p>
-     * The <code>AttributeFilter</code> parameter enables you to create a set of filtering rules that a document must
+     * The <code>AttributeFilter</code> parameter means you can create a set of filtering rules that a document must
      * satisfy to be included in the query results.
      * </p>
      * 
      * @param attributeFilter
-     *        Enables filtered searches based on document attributes. You can only provide one attribute filter;
-     *        however, the <code>AndAllFilters</code>, <code>NotFilter</code>, and <code>OrAllFilters</code> parameters
-     *        contain a list of other filters.</p>
+     *        Filters search results by document fields/attributes. You can only provide one attribute filter; however,
+     *        the <code>AndAllFilters</code>, <code>NotFilter</code>, and <code>OrAllFilters</code> parameters contain a
+     *        list of other filters.</p>
      *        <p>
-     *        The <code>AttributeFilter</code> parameter enables you to create a set of filtering rules that a document
+     *        The <code>AttributeFilter</code> parameter means you can create a set of filtering rules that a document
      *        must satisfy to be included in the query results.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -303,12 +292,12 @@ public class QueryRequest extends com.amazonaws.AmazonWebServiceRequest implemen
 
     /**
      * <p>
-     * An array of documents attributes. Amazon Kendra returns a count for each attribute key specified. This helps your
-     * users narrow their search.
+     * An array of documents fields/attributes for faceted search. Amazon Kendra returns a count for each field key
+     * specified. This helps your users narrow their search.
      * </p>
      * 
-     * @return An array of documents attributes. Amazon Kendra returns a count for each attribute key specified. This
-     *         helps your users narrow their search.
+     * @return An array of documents fields/attributes for faceted search. Amazon Kendra returns a count for each field
+     *         key specified. This helps your users narrow their search.
      */
 
     public java.util.List<Facet> getFacets() {
@@ -317,13 +306,13 @@ public class QueryRequest extends com.amazonaws.AmazonWebServiceRequest implemen
 
     /**
      * <p>
-     * An array of documents attributes. Amazon Kendra returns a count for each attribute key specified. This helps your
-     * users narrow their search.
+     * An array of documents fields/attributes for faceted search. Amazon Kendra returns a count for each field key
+     * specified. This helps your users narrow their search.
      * </p>
      * 
      * @param facets
-     *        An array of documents attributes. Amazon Kendra returns a count for each attribute key specified. This
-     *        helps your users narrow their search.
+     *        An array of documents fields/attributes for faceted search. Amazon Kendra returns a count for each field
+     *        key specified. This helps your users narrow their search.
      */
 
     public void setFacets(java.util.Collection<Facet> facets) {
@@ -337,8 +326,8 @@ public class QueryRequest extends com.amazonaws.AmazonWebServiceRequest implemen
 
     /**
      * <p>
-     * An array of documents attributes. Amazon Kendra returns a count for each attribute key specified. This helps your
-     * users narrow their search.
+     * An array of documents fields/attributes for faceted search. Amazon Kendra returns a count for each field key
+     * specified. This helps your users narrow their search.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -347,8 +336,8 @@ public class QueryRequest extends com.amazonaws.AmazonWebServiceRequest implemen
      * </p>
      * 
      * @param facets
-     *        An array of documents attributes. Amazon Kendra returns a count for each attribute key specified. This
-     *        helps your users narrow their search.
+     *        An array of documents fields/attributes for faceted search. Amazon Kendra returns a count for each field
+     *        key specified. This helps your users narrow their search.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -364,13 +353,13 @@ public class QueryRequest extends com.amazonaws.AmazonWebServiceRequest implemen
 
     /**
      * <p>
-     * An array of documents attributes. Amazon Kendra returns a count for each attribute key specified. This helps your
-     * users narrow their search.
+     * An array of documents fields/attributes for faceted search. Amazon Kendra returns a count for each field key
+     * specified. This helps your users narrow their search.
      * </p>
      * 
      * @param facets
-     *        An array of documents attributes. Amazon Kendra returns a count for each attribute key specified. This
-     *        helps your users narrow their search.
+     *        An array of documents fields/attributes for faceted search. Amazon Kendra returns a count for each field
+     *        key specified. This helps your users narrow their search.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -381,12 +370,12 @@ public class QueryRequest extends com.amazonaws.AmazonWebServiceRequest implemen
 
     /**
      * <p>
-     * An array of document attributes to include in the response. You can limit the response to include certain
-     * document attributes. By default all document attributes are included in the response.
+     * An array of document fields/attributes to include in the response. You can limit the response to include certain
+     * document fields. By default, all document attributes are included in the response.
      * </p>
      * 
-     * @return An array of document attributes to include in the response. You can limit the response to include certain
-     *         document attributes. By default all document attributes are included in the response.
+     * @return An array of document fields/attributes to include in the response. You can limit the response to include
+     *         certain document fields. By default, all document attributes are included in the response.
      */
 
     public java.util.List<String> getRequestedDocumentAttributes() {
@@ -395,13 +384,13 @@ public class QueryRequest extends com.amazonaws.AmazonWebServiceRequest implemen
 
     /**
      * <p>
-     * An array of document attributes to include in the response. You can limit the response to include certain
-     * document attributes. By default all document attributes are included in the response.
+     * An array of document fields/attributes to include in the response. You can limit the response to include certain
+     * document fields. By default, all document attributes are included in the response.
      * </p>
      * 
      * @param requestedDocumentAttributes
-     *        An array of document attributes to include in the response. You can limit the response to include certain
-     *        document attributes. By default all document attributes are included in the response.
+     *        An array of document fields/attributes to include in the response. You can limit the response to include
+     *        certain document fields. By default, all document attributes are included in the response.
      */
 
     public void setRequestedDocumentAttributes(java.util.Collection<String> requestedDocumentAttributes) {
@@ -415,8 +404,8 @@ public class QueryRequest extends com.amazonaws.AmazonWebServiceRequest implemen
 
     /**
      * <p>
-     * An array of document attributes to include in the response. You can limit the response to include certain
-     * document attributes. By default all document attributes are included in the response.
+     * An array of document fields/attributes to include in the response. You can limit the response to include certain
+     * document fields. By default, all document attributes are included in the response.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -425,8 +414,8 @@ public class QueryRequest extends com.amazonaws.AmazonWebServiceRequest implemen
      * </p>
      * 
      * @param requestedDocumentAttributes
-     *        An array of document attributes to include in the response. You can limit the response to include certain
-     *        document attributes. By default all document attributes are included in the response.
+     *        An array of document fields/attributes to include in the response. You can limit the response to include
+     *        certain document fields. By default, all document attributes are included in the response.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -442,13 +431,13 @@ public class QueryRequest extends com.amazonaws.AmazonWebServiceRequest implemen
 
     /**
      * <p>
-     * An array of document attributes to include in the response. You can limit the response to include certain
-     * document attributes. By default all document attributes are included in the response.
+     * An array of document fields/attributes to include in the response. You can limit the response to include certain
+     * document fields. By default, all document attributes are included in the response.
      * </p>
      * 
      * @param requestedDocumentAttributes
-     *        An array of document attributes to include in the response. You can limit the response to include certain
-     *        document attributes. By default all document attributes are included in the response.
+     *        An array of document fields/attributes to include in the response. You can limit the response to include
+     *        certain document fields. By default, all document attributes are included in the response.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -459,11 +448,11 @@ public class QueryRequest extends com.amazonaws.AmazonWebServiceRequest implemen
 
     /**
      * <p>
-     * Sets the type of query. Only results for the specified query type are returned.
+     * Sets the type of query result or response. Only results for the specified type are returned.
      * </p>
      * 
      * @param queryResultTypeFilter
-     *        Sets the type of query. Only results for the specified query type are returned.
+     *        Sets the type of query result or response. Only results for the specified type are returned.
      * @see QueryResultType
      */
 
@@ -473,10 +462,10 @@ public class QueryRequest extends com.amazonaws.AmazonWebServiceRequest implemen
 
     /**
      * <p>
-     * Sets the type of query. Only results for the specified query type are returned.
+     * Sets the type of query result or response. Only results for the specified type are returned.
      * </p>
      * 
-     * @return Sets the type of query. Only results for the specified query type are returned.
+     * @return Sets the type of query result or response. Only results for the specified type are returned.
      * @see QueryResultType
      */
 
@@ -486,11 +475,11 @@ public class QueryRequest extends com.amazonaws.AmazonWebServiceRequest implemen
 
     /**
      * <p>
-     * Sets the type of query. Only results for the specified query type are returned.
+     * Sets the type of query result or response. Only results for the specified type are returned.
      * </p>
      * 
      * @param queryResultTypeFilter
-     *        Sets the type of query. Only results for the specified query type are returned.
+     *        Sets the type of query result or response. Only results for the specified type are returned.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see QueryResultType
      */
@@ -502,11 +491,11 @@ public class QueryRequest extends com.amazonaws.AmazonWebServiceRequest implemen
 
     /**
      * <p>
-     * Sets the type of query. Only results for the specified query type are returned.
+     * Sets the type of query result or response. Only results for the specified type are returned.
      * </p>
      * 
      * @param queryResultTypeFilter
-     *        Sets the type of query. Only results for the specified query type are returned.
+     *        Sets the type of query result or response. Only results for the specified type are returned.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see QueryResultType
      */
@@ -518,33 +507,24 @@ public class QueryRequest extends com.amazonaws.AmazonWebServiceRequest implemen
 
     /**
      * <p>
-     * Overrides relevance tuning configurations of fields or attributes set at the index level.
+     * Overrides relevance tuning configurations of fields/attributes set at the index level.
      * </p>
      * <p>
      * If you use this API to override the relevance tuning configured at the index level, but there is no relevance
      * tuning configured at the index level, then Amazon Kendra does not apply any relevance tuning.
      * </p>
      * <p>
-     * If there is relevance tuning configured at the index level, but you do not use this API to override any relevance
-     * tuning in the index, then Amazon Kendra uses the relevance tuning that is configured at the index level.
-     * </p>
-     * <p>
-     * If there is relevance tuning configured for fields at the index level, but you use this API to override only some
+     * If there is relevance tuning configured for fields at the index level, and you use this API to override only some
      * of these fields, then for the fields you did not override, the importance is set to 1.
      * </p>
      * 
-     * @return Overrides relevance tuning configurations of fields or attributes set at the index level.</p>
+     * @return Overrides relevance tuning configurations of fields/attributes set at the index level.</p>
      *         <p>
      *         If you use this API to override the relevance tuning configured at the index level, but there is no
      *         relevance tuning configured at the index level, then Amazon Kendra does not apply any relevance tuning.
      *         </p>
      *         <p>
-     *         If there is relevance tuning configured at the index level, but you do not use this API to override any
-     *         relevance tuning in the index, then Amazon Kendra uses the relevance tuning that is configured at the
-     *         index level.
-     *         </p>
-     *         <p>
-     *         If there is relevance tuning configured for fields at the index level, but you use this API to override
+     *         If there is relevance tuning configured for fields at the index level, and you use this API to override
      *         only some of these fields, then for the fields you did not override, the importance is set to 1.
      */
 
@@ -554,34 +534,25 @@ public class QueryRequest extends com.amazonaws.AmazonWebServiceRequest implemen
 
     /**
      * <p>
-     * Overrides relevance tuning configurations of fields or attributes set at the index level.
+     * Overrides relevance tuning configurations of fields/attributes set at the index level.
      * </p>
      * <p>
      * If you use this API to override the relevance tuning configured at the index level, but there is no relevance
      * tuning configured at the index level, then Amazon Kendra does not apply any relevance tuning.
      * </p>
      * <p>
-     * If there is relevance tuning configured at the index level, but you do not use this API to override any relevance
-     * tuning in the index, then Amazon Kendra uses the relevance tuning that is configured at the index level.
-     * </p>
-     * <p>
-     * If there is relevance tuning configured for fields at the index level, but you use this API to override only some
+     * If there is relevance tuning configured for fields at the index level, and you use this API to override only some
      * of these fields, then for the fields you did not override, the importance is set to 1.
      * </p>
      * 
      * @param documentRelevanceOverrideConfigurations
-     *        Overrides relevance tuning configurations of fields or attributes set at the index level.</p>
+     *        Overrides relevance tuning configurations of fields/attributes set at the index level.</p>
      *        <p>
      *        If you use this API to override the relevance tuning configured at the index level, but there is no
      *        relevance tuning configured at the index level, then Amazon Kendra does not apply any relevance tuning.
      *        </p>
      *        <p>
-     *        If there is relevance tuning configured at the index level, but you do not use this API to override any
-     *        relevance tuning in the index, then Amazon Kendra uses the relevance tuning that is configured at the
-     *        index level.
-     *        </p>
-     *        <p>
-     *        If there is relevance tuning configured for fields at the index level, but you use this API to override
+     *        If there is relevance tuning configured for fields at the index level, and you use this API to override
      *        only some of these fields, then for the fields you did not override, the importance is set to 1.
      */
 
@@ -596,18 +567,14 @@ public class QueryRequest extends com.amazonaws.AmazonWebServiceRequest implemen
 
     /**
      * <p>
-     * Overrides relevance tuning configurations of fields or attributes set at the index level.
+     * Overrides relevance tuning configurations of fields/attributes set at the index level.
      * </p>
      * <p>
      * If you use this API to override the relevance tuning configured at the index level, but there is no relevance
      * tuning configured at the index level, then Amazon Kendra does not apply any relevance tuning.
      * </p>
      * <p>
-     * If there is relevance tuning configured at the index level, but you do not use this API to override any relevance
-     * tuning in the index, then Amazon Kendra uses the relevance tuning that is configured at the index level.
-     * </p>
-     * <p>
-     * If there is relevance tuning configured for fields at the index level, but you use this API to override only some
+     * If there is relevance tuning configured for fields at the index level, and you use this API to override only some
      * of these fields, then for the fields you did not override, the importance is set to 1.
      * </p>
      * <p>
@@ -618,18 +585,13 @@ public class QueryRequest extends com.amazonaws.AmazonWebServiceRequest implemen
      * </p>
      * 
      * @param documentRelevanceOverrideConfigurations
-     *        Overrides relevance tuning configurations of fields or attributes set at the index level.</p>
+     *        Overrides relevance tuning configurations of fields/attributes set at the index level.</p>
      *        <p>
      *        If you use this API to override the relevance tuning configured at the index level, but there is no
      *        relevance tuning configured at the index level, then Amazon Kendra does not apply any relevance tuning.
      *        </p>
      *        <p>
-     *        If there is relevance tuning configured at the index level, but you do not use this API to override any
-     *        relevance tuning in the index, then Amazon Kendra uses the relevance tuning that is configured at the
-     *        index level.
-     *        </p>
-     *        <p>
-     *        If there is relevance tuning configured for fields at the index level, but you use this API to override
+     *        If there is relevance tuning configured for fields at the index level, and you use this API to override
      *        only some of these fields, then for the fields you did not override, the importance is set to 1.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -646,34 +608,25 @@ public class QueryRequest extends com.amazonaws.AmazonWebServiceRequest implemen
 
     /**
      * <p>
-     * Overrides relevance tuning configurations of fields or attributes set at the index level.
+     * Overrides relevance tuning configurations of fields/attributes set at the index level.
      * </p>
      * <p>
      * If you use this API to override the relevance tuning configured at the index level, but there is no relevance
      * tuning configured at the index level, then Amazon Kendra does not apply any relevance tuning.
      * </p>
      * <p>
-     * If there is relevance tuning configured at the index level, but you do not use this API to override any relevance
-     * tuning in the index, then Amazon Kendra uses the relevance tuning that is configured at the index level.
-     * </p>
-     * <p>
-     * If there is relevance tuning configured for fields at the index level, but you use this API to override only some
+     * If there is relevance tuning configured for fields at the index level, and you use this API to override only some
      * of these fields, then for the fields you did not override, the importance is set to 1.
      * </p>
      * 
      * @param documentRelevanceOverrideConfigurations
-     *        Overrides relevance tuning configurations of fields or attributes set at the index level.</p>
+     *        Overrides relevance tuning configurations of fields/attributes set at the index level.</p>
      *        <p>
      *        If you use this API to override the relevance tuning configured at the index level, but there is no
      *        relevance tuning configured at the index level, then Amazon Kendra does not apply any relevance tuning.
      *        </p>
      *        <p>
-     *        If there is relevance tuning configured at the index level, but you do not use this API to override any
-     *        relevance tuning in the index, then Amazon Kendra uses the relevance tuning that is configured at the
-     *        index level.
-     *        </p>
-     *        <p>
-     *        If there is relevance tuning configured for fields at the index level, but you use this API to override
+     *        If there is relevance tuning configured for fields at the index level, and you use this API to override
      *        only some of these fields, then for the fields you did not override, the importance is set to 1.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

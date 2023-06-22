@@ -1,3 +1,20 @@
+# __1.12.494__ __2023-06-22__
+## __AWS Step Functions__
+  - ### Features
+    - Adds support for Versions and Aliases. Adds 8 operations: PublishStateMachineVersion, DeleteStateMachineVersion, ListStateMachineVersions, CreateStateMachineAlias, DescribeStateMachineAlias, UpdateStateMachineAlias, DeleteStateMachineAlias, ListStateMachineAliases
+
+## __AWSKendraFrontendService__
+  - ### Features
+    - Introducing Amazon Kendra Retrieve API that can be used to retrieve relevant passages or text excerpts given an input query.
+
+## __Amazon Chime SDK Identity__
+  - ### Features
+    - AppInstanceBots can be configured to be invoked or not using the Target or the CHIME.mentions attribute for ChannelMessages
+
+## __Amazon Chime SDK Messaging__
+  - ### Features
+    - ChannelMessages can be made visible to sender and intended recipient rather than all channel members with the target attribute. For example, a user can send messages to a bot and receive messages back in a group channel without other members seeing them.
+
 # __1.12.493__ __2023-06-21__
 ## __AWS Elemental MediaConvert__
   - ### Features

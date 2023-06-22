@@ -2185,40 +2185,40 @@ public interface AWSkendraAsync extends AWSkendra {
 
     /**
      * <p>
-     * Searches an active index. Use this API to search your documents using query. The <code>Query</code> API enables
-     * to do faceted search and to filter results based on document attributes.
+     * Searches an index given an input query.
      * </p>
      * <p>
-     * It also enables you to provide user context that Amazon Kendra uses to enforce document access control in the
-     * search results.
+     * You can configure boosting or relevance tuning at the query level to override boosting at the index level, filter
+     * based on document fields/attributes and faceted search, and filter based on the user or their group access to
+     * documents. You can also include certain fields in the response that might provide useful additional information.
      * </p>
      * <p>
-     * Amazon Kendra searches your index for text content and question and answer (FAQ) content. By default the response
-     * contains three types of results.
+     * A query response contains three types of results.
      * </p>
      * <ul>
      * <li>
      * <p>
-     * Relevant passages
+     * Relevant suggested answers. The answers can be either a text excerpt or table excerpt. The answer can be
+     * highlighted in the excerpt.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Matching FAQs
+     * Matching FAQs or questions-answer from your FAQ file.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Relevant documents
+     * Relevant documents. This result type includes an excerpt of the document with the document title. The searched
+     * terms can be highlighted in the excerpt.
      * </p>
      * </li>
      * </ul>
      * <p>
      * You can specify that the query return only one type of result using the <code>QueryResultTypeFilter</code>
-     * parameter.
-     * </p>
-     * <p>
-     * Each query returns the 100 most relevant results.
+     * parameter. Each query returns the 100 most relevant results. If you filter result type to only question-answers,
+     * a maximum of four results are returned. If you filter result type to only answers, a maximum of three results are
+     * returned.
      * </p>
      * 
      * @param queryRequest
@@ -2231,40 +2231,40 @@ public interface AWSkendraAsync extends AWSkendra {
 
     /**
      * <p>
-     * Searches an active index. Use this API to search your documents using query. The <code>Query</code> API enables
-     * to do faceted search and to filter results based on document attributes.
+     * Searches an index given an input query.
      * </p>
      * <p>
-     * It also enables you to provide user context that Amazon Kendra uses to enforce document access control in the
-     * search results.
+     * You can configure boosting or relevance tuning at the query level to override boosting at the index level, filter
+     * based on document fields/attributes and faceted search, and filter based on the user or their group access to
+     * documents. You can also include certain fields in the response that might provide useful additional information.
      * </p>
      * <p>
-     * Amazon Kendra searches your index for text content and question and answer (FAQ) content. By default the response
-     * contains three types of results.
+     * A query response contains three types of results.
      * </p>
      * <ul>
      * <li>
      * <p>
-     * Relevant passages
+     * Relevant suggested answers. The answers can be either a text excerpt or table excerpt. The answer can be
+     * highlighted in the excerpt.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Matching FAQs
+     * Matching FAQs or questions-answer from your FAQ file.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Relevant documents
+     * Relevant documents. This result type includes an excerpt of the document with the document title. The searched
+     * terms can be highlighted in the excerpt.
      * </p>
      * </li>
      * </ul>
      * <p>
      * You can specify that the query return only one type of result using the <code>QueryResultTypeFilter</code>
-     * parameter.
-     * </p>
-     * <p>
-     * Each query returns the 100 most relevant results.
+     * parameter. Each query returns the 100 most relevant results. If you filter result type to only question-answers,
+     * a maximum of four results are returned. If you filter result type to only answers, a maximum of three results are
+     * returned.
      * </p>
      * 
      * @param queryRequest
@@ -2278,6 +2278,103 @@ public interface AWSkendraAsync extends AWSkendra {
      *      Documentation</a>
      */
     java.util.concurrent.Future<QueryResult> queryAsync(QueryRequest queryRequest, com.amazonaws.handlers.AsyncHandler<QueryRequest, QueryResult> asyncHandler);
+
+    /**
+     * <p>
+     * Retrieves relevant passages or text excerpts given an input query.
+     * </p>
+     * <p>
+     * This API is similar to the <a
+     * href="https://docs.aws.amazon.com/kendra/latest/APIReference/API_Query.html">Query</a> API. However, by default,
+     * the <code>Query</code> API only returns excerpt passages of up to 100 token words. With the <code>Retrieve</code>
+     * API, you can retrieve longer passages of up to 200 token words and up to 100 semantically relevant passages. This
+     * doesn't include question-answer or FAQ type responses from your index. The passages are text excerpts that can be
+     * semantically extracted from multiple documents and multiple parts of the same document. If in extreme cases your
+     * documents produce no relevant passages using the <code>Retrieve</code> API, you can alternatively use the
+     * <code>Query</code> API.
+     * </p>
+     * <p>
+     * You can also do the following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Override boosting at the index level
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Filter based on document fields or attributes
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Filter based on the user or their group access to documents
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * You can also include certain fields in the response that might provide useful additional information.
+     * </p>
+     * 
+     * @param retrieveRequest
+     * @return A Java Future containing the result of the Retrieve operation returned by the service.
+     * @sample AWSkendraAsync.Retrieve
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/Retrieve" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<RetrieveResult> retrieveAsync(RetrieveRequest retrieveRequest);
+
+    /**
+     * <p>
+     * Retrieves relevant passages or text excerpts given an input query.
+     * </p>
+     * <p>
+     * This API is similar to the <a
+     * href="https://docs.aws.amazon.com/kendra/latest/APIReference/API_Query.html">Query</a> API. However, by default,
+     * the <code>Query</code> API only returns excerpt passages of up to 100 token words. With the <code>Retrieve</code>
+     * API, you can retrieve longer passages of up to 200 token words and up to 100 semantically relevant passages. This
+     * doesn't include question-answer or FAQ type responses from your index. The passages are text excerpts that can be
+     * semantically extracted from multiple documents and multiple parts of the same document. If in extreme cases your
+     * documents produce no relevant passages using the <code>Retrieve</code> API, you can alternatively use the
+     * <code>Query</code> API.
+     * </p>
+     * <p>
+     * You can also do the following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Override boosting at the index level
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Filter based on document fields or attributes
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Filter based on the user or their group access to documents
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * You can also include certain fields in the response that might provide useful additional information.
+     * </p>
+     * 
+     * @param retrieveRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the Retrieve operation returned by the service.
+     * @sample AWSkendraAsyncHandler.Retrieve
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/Retrieve" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<RetrieveResult> retrieveAsync(RetrieveRequest retrieveRequest,
+            com.amazonaws.handlers.AsyncHandler<RetrieveRequest, RetrieveResult> asyncHandler);
 
     /**
      * <p>
