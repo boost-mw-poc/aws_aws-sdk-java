@@ -37,6 +37,10 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * viewing the task details in the console.
  * </p>
  * <p>
+ * The health check is designed to make sure that your containers survive agent restarts, upgrades, or temporary
+ * unavailability.
+ * </p>
+ * <p>
  * The following describes the possible <code>healthStatus</code> values for a container:
  * </p>
  * <ul>
@@ -87,6 +91,18 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * The following are notes about container health check support:
  * </p>
  * <ul>
+ * <li>
+ * <p>
+ * When the Amazon ECS agent cannot connect to the Amazon ECS service, the service reports the container as
+ * <code>UNHEALTHY</code>.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * The health check statuses are the "last heard from" response from the Amazon ECS agent. There are no assumptions made
+ * about the status of the container health checks.
+ * </p>
+ * </li>
  * <li>
  * <p>
  * Container health checks require version 1.17.0 or greater of the Amazon ECS container agent. For more information,

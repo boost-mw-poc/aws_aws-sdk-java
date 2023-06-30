@@ -36,8 +36,8 @@ public class MxfSettings implements Serializable, Cloneable, StructuredPojo {
      */
     private String afdSignaling;
     /**
-     * Specify the MXF profile, also called shim, for this output. When you choose Auto, MediaConvert chooses a profile
-     * based on the video codec and resolution. For a list of codecs supported with each MXF profile, see
+     * Specify the MXF profile, also called shim, for this output. To automatically select a profile according to your
+     * output video codec and resolution, leave blank. For a list of codecs supported with each MXF profile, see
      * https://docs.aws.amazon.com/mediaconvert/latest/ug/codecs-supported-with-each-mxf-profile.html. For more
      * information about the automatic selection behavior, see
      * https://docs.aws.amazon.com/mediaconvert/latest/ug/default-automatic-selection-of-mxf-profiles.html.
@@ -142,17 +142,17 @@ public class MxfSettings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Specify the MXF profile, also called shim, for this output. When you choose Auto, MediaConvert chooses a profile
-     * based on the video codec and resolution. For a list of codecs supported with each MXF profile, see
+     * Specify the MXF profile, also called shim, for this output. To automatically select a profile according to your
+     * output video codec and resolution, leave blank. For a list of codecs supported with each MXF profile, see
      * https://docs.aws.amazon.com/mediaconvert/latest/ug/codecs-supported-with-each-mxf-profile.html. For more
      * information about the automatic selection behavior, see
      * https://docs.aws.amazon.com/mediaconvert/latest/ug/default-automatic-selection-of-mxf-profiles.html.
      * 
      * @param profile
-     *        Specify the MXF profile, also called shim, for this output. When you choose Auto, MediaConvert chooses a
-     *        profile based on the video codec and resolution. For a list of codecs supported with each MXF profile, see
-     *        https://docs.aws.amazon.com/mediaconvert/latest/ug/codecs-supported-with-each-mxf-profile.html. For more
-     *        information about the automatic selection behavior, see
+     *        Specify the MXF profile, also called shim, for this output. To automatically select a profile according to
+     *        your output video codec and resolution, leave blank. For a list of codecs supported with each MXF profile,
+     *        see https://docs.aws.amazon.com/mediaconvert/latest/ug/codecs-supported-with-each-mxf-profile.html. For
+     *        more information about the automatic selection behavior, see
      *        https://docs.aws.amazon.com/mediaconvert/latest/ug/default-automatic-selection-of-mxf-profiles.html.
      * @see MxfProfile
      */
@@ -162,16 +162,17 @@ public class MxfSettings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Specify the MXF profile, also called shim, for this output. When you choose Auto, MediaConvert chooses a profile
-     * based on the video codec and resolution. For a list of codecs supported with each MXF profile, see
+     * Specify the MXF profile, also called shim, for this output. To automatically select a profile according to your
+     * output video codec and resolution, leave blank. For a list of codecs supported with each MXF profile, see
      * https://docs.aws.amazon.com/mediaconvert/latest/ug/codecs-supported-with-each-mxf-profile.html. For more
      * information about the automatic selection behavior, see
      * https://docs.aws.amazon.com/mediaconvert/latest/ug/default-automatic-selection-of-mxf-profiles.html.
      * 
-     * @return Specify the MXF profile, also called shim, for this output. When you choose Auto, MediaConvert chooses a
-     *         profile based on the video codec and resolution. For a list of codecs supported with each MXF profile,
-     *         see https://docs.aws.amazon.com/mediaconvert/latest/ug/codecs-supported-with-each-mxf-profile.html. For
-     *         more information about the automatic selection behavior, see
+     * @return Specify the MXF profile, also called shim, for this output. To automatically select a profile according
+     *         to your output video codec and resolution, leave blank. For a list of codecs supported with each MXF
+     *         profile, see
+     *         https://docs.aws.amazon.com/mediaconvert/latest/ug/codecs-supported-with-each-mxf-profile.html. For more
+     *         information about the automatic selection behavior, see
      *         https://docs.aws.amazon.com/mediaconvert/latest/ug/default-automatic-selection-of-mxf-profiles.html.
      * @see MxfProfile
      */
@@ -181,17 +182,17 @@ public class MxfSettings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Specify the MXF profile, also called shim, for this output. When you choose Auto, MediaConvert chooses a profile
-     * based on the video codec and resolution. For a list of codecs supported with each MXF profile, see
+     * Specify the MXF profile, also called shim, for this output. To automatically select a profile according to your
+     * output video codec and resolution, leave blank. For a list of codecs supported with each MXF profile, see
      * https://docs.aws.amazon.com/mediaconvert/latest/ug/codecs-supported-with-each-mxf-profile.html. For more
      * information about the automatic selection behavior, see
      * https://docs.aws.amazon.com/mediaconvert/latest/ug/default-automatic-selection-of-mxf-profiles.html.
      * 
      * @param profile
-     *        Specify the MXF profile, also called shim, for this output. When you choose Auto, MediaConvert chooses a
-     *        profile based on the video codec and resolution. For a list of codecs supported with each MXF profile, see
-     *        https://docs.aws.amazon.com/mediaconvert/latest/ug/codecs-supported-with-each-mxf-profile.html. For more
-     *        information about the automatic selection behavior, see
+     *        Specify the MXF profile, also called shim, for this output. To automatically select a profile according to
+     *        your output video codec and resolution, leave blank. For a list of codecs supported with each MXF profile,
+     *        see https://docs.aws.amazon.com/mediaconvert/latest/ug/codecs-supported-with-each-mxf-profile.html. For
+     *        more information about the automatic selection behavior, see
      *        https://docs.aws.amazon.com/mediaconvert/latest/ug/default-automatic-selection-of-mxf-profiles.html.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see MxfProfile
@@ -203,17 +204,17 @@ public class MxfSettings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Specify the MXF profile, also called shim, for this output. When you choose Auto, MediaConvert chooses a profile
-     * based on the video codec and resolution. For a list of codecs supported with each MXF profile, see
+     * Specify the MXF profile, also called shim, for this output. To automatically select a profile according to your
+     * output video codec and resolution, leave blank. For a list of codecs supported with each MXF profile, see
      * https://docs.aws.amazon.com/mediaconvert/latest/ug/codecs-supported-with-each-mxf-profile.html. For more
      * information about the automatic selection behavior, see
      * https://docs.aws.amazon.com/mediaconvert/latest/ug/default-automatic-selection-of-mxf-profiles.html.
      * 
      * @param profile
-     *        Specify the MXF profile, also called shim, for this output. When you choose Auto, MediaConvert chooses a
-     *        profile based on the video codec and resolution. For a list of codecs supported with each MXF profile, see
-     *        https://docs.aws.amazon.com/mediaconvert/latest/ug/codecs-supported-with-each-mxf-profile.html. For more
-     *        information about the automatic selection behavior, see
+     *        Specify the MXF profile, also called shim, for this output. To automatically select a profile according to
+     *        your output video codec and resolution, leave blank. For a list of codecs supported with each MXF profile,
+     *        see https://docs.aws.amazon.com/mediaconvert/latest/ug/codecs-supported-with-each-mxf-profile.html. For
+     *        more information about the automatic selection behavior, see
      *        https://docs.aws.amazon.com/mediaconvert/latest/ug/default-automatic-selection-of-mxf-profiles.html.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see MxfProfile

@@ -23,10 +23,9 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * </p>
  * <p>
  * This data type is used as a request parameter in the <a
- * href="https://docs.aws.amazon.com/amazon-verified-permissions/latest/APIReference/API_IsAuthorized.html"
- * >IsAuthorized</a> and <a
- * href="https://docs.aws.amazon.com/amazon-verified-permissions/latest/APIReference/API_IsAuthorizedWithToken.html"
- * >IsAuthorizedWithToken</a> operations.
+ * href="https://docs.aws.amazon.com/verifiedpermissions/latest/apireference/API_IsAuthorized.html">IsAuthorized</a> and
+ * <a href="https://docs.aws.amazon.com/verifiedpermissions/latest/apireference/API_IsAuthorizedWithToken.html">
+ * IsAuthorizedWithToken</a> operations.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/verifiedpermissions-2021-12-01/EvaluationErrorItem"

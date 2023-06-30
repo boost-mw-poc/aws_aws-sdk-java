@@ -39,7 +39,7 @@ public class VideoPreprocessor implements Serializable, Cloneable, StructuredPoj
     private Deinterlacer deinterlacer;
     /** Enable Dolby Vision feature to produce Dolby Vision compatible video output. */
     private DolbyVision dolbyVision;
-    /** Enable HDR10+ analyis and metadata injection. Compatible with HEVC only. */
+    /** Enable HDR10+ analysis and metadata injection. Compatible with HEVC only. */
     private Hdr10Plus hdr10Plus;
     /**
      * Enable the Image inserter (ImageInserter) feature to include a graphic overlay on your video. Enable or disable
@@ -179,10 +179,10 @@ public class VideoPreprocessor implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
-     * Enable HDR10+ analyis and metadata injection. Compatible with HEVC only.
+     * Enable HDR10+ analysis and metadata injection. Compatible with HEVC only.
      * 
      * @param hdr10Plus
-     *        Enable HDR10+ analyis and metadata injection. Compatible with HEVC only.
+     *        Enable HDR10+ analysis and metadata injection. Compatible with HEVC only.
      */
 
     public void setHdr10Plus(Hdr10Plus hdr10Plus) {
@@ -190,9 +190,9 @@ public class VideoPreprocessor implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
-     * Enable HDR10+ analyis and metadata injection. Compatible with HEVC only.
+     * Enable HDR10+ analysis and metadata injection. Compatible with HEVC only.
      * 
-     * @return Enable HDR10+ analyis and metadata injection. Compatible with HEVC only.
+     * @return Enable HDR10+ analysis and metadata injection. Compatible with HEVC only.
      */
 
     public Hdr10Plus getHdr10Plus() {
@@ -200,10 +200,10 @@ public class VideoPreprocessor implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
-     * Enable HDR10+ analyis and metadata injection. Compatible with HEVC only.
+     * Enable HDR10+ analysis and metadata injection. Compatible with HEVC only.
      * 
      * @param hdr10Plus
-     *        Enable HDR10+ analyis and metadata injection. Compatible with HEVC only.
+     *        Enable HDR10+ analysis and metadata injection. Compatible with HEVC only.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

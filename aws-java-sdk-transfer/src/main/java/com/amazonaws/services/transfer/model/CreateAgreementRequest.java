@@ -69,6 +69,12 @@ public class CreateAgreementRequest extends com.amazonaws.AmazonWebServiceReques
      * <code>StartFileTransfer</code> request. Additionally, you need to provide read and write access to the parent
      * directory of the files that you intend to send with <code>StartFileTransfer</code>.
      * </p>
+     * <p>
+     * If you are using Basic authentication for your AS2 connector, the access role requires the
+     * <code>secretsmanager:GetSecretValue</code> permission for the secret. If the secret is encrypted using a
+     * customer-managed key instead of the Amazon Web Services managed key in Secrets Manager, then the role also needs
+     * the <code>kms:Decrypt</code> permission for that key.
+     * </p>
      */
     private String accessRole;
     /**
@@ -313,6 +319,12 @@ public class CreateAgreementRequest extends com.amazonaws.AmazonWebServiceReques
      * <code>StartFileTransfer</code> request. Additionally, you need to provide read and write access to the parent
      * directory of the files that you intend to send with <code>StartFileTransfer</code>.
      * </p>
+     * <p>
+     * If you are using Basic authentication for your AS2 connector, the access role requires the
+     * <code>secretsmanager:GetSecretValue</code> permission for the secret. If the secret is encrypted using a
+     * customer-managed key instead of the Amazon Web Services managed key in Secrets Manager, then the role also needs
+     * the <code>kms:Decrypt</code> permission for that key.
+     * </p>
      * 
      * @param accessRole
      *        With AS2, you can send files by calling <code>StartFileTransfer</code> and specifying the file paths in
@@ -322,7 +334,12 @@ public class CreateAgreementRequest extends com.amazonaws.AmazonWebServiceReques
      *        write a final JSON file containing relevant metadata of the transmission. So, the <code>AccessRole</code>
      *        needs to provide read and write access to the parent directory of the file location used in the
      *        <code>StartFileTransfer</code> request. Additionally, you need to provide read and write access to the
-     *        parent directory of the files that you intend to send with <code>StartFileTransfer</code>.
+     *        parent directory of the files that you intend to send with <code>StartFileTransfer</code>.</p>
+     *        <p>
+     *        If you are using Basic authentication for your AS2 connector, the access role requires the
+     *        <code>secretsmanager:GetSecretValue</code> permission for the secret. If the secret is encrypted using a
+     *        customer-managed key instead of the Amazon Web Services managed key in Secrets Manager, then the role also
+     *        needs the <code>kms:Decrypt</code> permission for that key.
      */
 
     public void setAccessRole(String accessRole) {
@@ -340,6 +357,12 @@ public class CreateAgreementRequest extends com.amazonaws.AmazonWebServiceReques
      * <code>StartFileTransfer</code> request. Additionally, you need to provide read and write access to the parent
      * directory of the files that you intend to send with <code>StartFileTransfer</code>.
      * </p>
+     * <p>
+     * If you are using Basic authentication for your AS2 connector, the access role requires the
+     * <code>secretsmanager:GetSecretValue</code> permission for the secret. If the secret is encrypted using a
+     * customer-managed key instead of the Amazon Web Services managed key in Secrets Manager, then the role also needs
+     * the <code>kms:Decrypt</code> permission for that key.
+     * </p>
      * 
      * @return With AS2, you can send files by calling <code>StartFileTransfer</code> and specifying the file paths in
      *         the request parameter, <code>SendFilePaths</code>. We use the file’s parent directory (for example, for
@@ -348,7 +371,12 @@ public class CreateAgreementRequest extends com.amazonaws.AmazonWebServiceReques
      *         write a final JSON file containing relevant metadata of the transmission. So, the <code>AccessRole</code>
      *         needs to provide read and write access to the parent directory of the file location used in the
      *         <code>StartFileTransfer</code> request. Additionally, you need to provide read and write access to the
-     *         parent directory of the files that you intend to send with <code>StartFileTransfer</code>.
+     *         parent directory of the files that you intend to send with <code>StartFileTransfer</code>.</p>
+     *         <p>
+     *         If you are using Basic authentication for your AS2 connector, the access role requires the
+     *         <code>secretsmanager:GetSecretValue</code> permission for the secret. If the secret is encrypted using a
+     *         customer-managed key instead of the Amazon Web Services managed key in Secrets Manager, then the role
+     *         also needs the <code>kms:Decrypt</code> permission for that key.
      */
 
     public String getAccessRole() {
@@ -366,6 +394,12 @@ public class CreateAgreementRequest extends com.amazonaws.AmazonWebServiceReques
      * <code>StartFileTransfer</code> request. Additionally, you need to provide read and write access to the parent
      * directory of the files that you intend to send with <code>StartFileTransfer</code>.
      * </p>
+     * <p>
+     * If you are using Basic authentication for your AS2 connector, the access role requires the
+     * <code>secretsmanager:GetSecretValue</code> permission for the secret. If the secret is encrypted using a
+     * customer-managed key instead of the Amazon Web Services managed key in Secrets Manager, then the role also needs
+     * the <code>kms:Decrypt</code> permission for that key.
+     * </p>
      * 
      * @param accessRole
      *        With AS2, you can send files by calling <code>StartFileTransfer</code> and specifying the file paths in
@@ -375,7 +409,12 @@ public class CreateAgreementRequest extends com.amazonaws.AmazonWebServiceReques
      *        write a final JSON file containing relevant metadata of the transmission. So, the <code>AccessRole</code>
      *        needs to provide read and write access to the parent directory of the file location used in the
      *        <code>StartFileTransfer</code> request. Additionally, you need to provide read and write access to the
-     *        parent directory of the files that you intend to send with <code>StartFileTransfer</code>.
+     *        parent directory of the files that you intend to send with <code>StartFileTransfer</code>.</p>
+     *        <p>
+     *        If you are using Basic authentication for your AS2 connector, the access role requires the
+     *        <code>secretsmanager:GetSecretValue</code> permission for the secret. If the secret is encrypted using a
+     *        customer-managed key instead of the Amazon Web Services managed key in Secrets Manager, then the role also
+     *        needs the <code>kms:Decrypt</code> permission for that key.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

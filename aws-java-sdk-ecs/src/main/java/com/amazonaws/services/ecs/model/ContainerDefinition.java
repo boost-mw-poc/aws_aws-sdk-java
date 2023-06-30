@@ -877,6 +877,27 @@ public class ContainerDefinition implements Serializable, Cloneable, StructuredP
      * </p>
      */
     private FirelensConfiguration firelensConfiguration;
+    /**
+     * <p>
+     * A list of ARNs in SSM or Amazon S3 to a credential spec (<code>credspec</code>code&gt;) file that configures a
+     * container for Active Directory authentication. This parameter is only used with domainless authentication.
+     * </p>
+     * <p>
+     * The format for each ARN is <code>credentialspecdomainless:MyARN</code>. Replace <code>MyARN</code> with the ARN
+     * in SSM or Amazon S3.
+     * </p>
+     * <p>
+     * The <code>credspec</code> must provide a ARN in Secrets Manager for a secret containing the username, password,
+     * and the domain to connect to. For better security, the instance isn't joined to the domain for domainless
+     * authentication. Other applications on the instance can't use the domainless credentials. You can use this
+     * parameter to run tasks on the same instance, even it the tasks need to join different domains. For more
+     * information, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/windows-gmsa.html">Using
+     * gMSAs for Windows Containers</a> and <a
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/linux-gmsa.html">Using gMSAs for Linux
+     * Containers</a>.
+     * </p>
+     */
+    private com.amazonaws.internal.SdkInternalList<String> credentialSpecs;
 
     /**
      * <p>
@@ -7374,6 +7395,203 @@ public class ContainerDefinition implements Serializable, Cloneable, StructuredP
     }
 
     /**
+     * <p>
+     * A list of ARNs in SSM or Amazon S3 to a credential spec (<code>credspec</code>code&gt;) file that configures a
+     * container for Active Directory authentication. This parameter is only used with domainless authentication.
+     * </p>
+     * <p>
+     * The format for each ARN is <code>credentialspecdomainless:MyARN</code>. Replace <code>MyARN</code> with the ARN
+     * in SSM or Amazon S3.
+     * </p>
+     * <p>
+     * The <code>credspec</code> must provide a ARN in Secrets Manager for a secret containing the username, password,
+     * and the domain to connect to. For better security, the instance isn't joined to the domain for domainless
+     * authentication. Other applications on the instance can't use the domainless credentials. You can use this
+     * parameter to run tasks on the same instance, even it the tasks need to join different domains. For more
+     * information, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/windows-gmsa.html">Using
+     * gMSAs for Windows Containers</a> and <a
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/linux-gmsa.html">Using gMSAs for Linux
+     * Containers</a>.
+     * </p>
+     * 
+     * @return A list of ARNs in SSM or Amazon S3 to a credential spec (<code>credspec</code>code&gt;) file that
+     *         configures a container for Active Directory authentication. This parameter is only used with domainless
+     *         authentication.</p>
+     *         <p>
+     *         The format for each ARN is <code>credentialspecdomainless:MyARN</code>. Replace <code>MyARN</code> with
+     *         the ARN in SSM or Amazon S3.
+     *         </p>
+     *         <p>
+     *         The <code>credspec</code> must provide a ARN in Secrets Manager for a secret containing the username,
+     *         password, and the domain to connect to. For better security, the instance isn't joined to the domain for
+     *         domainless authentication. Other applications on the instance can't use the domainless credentials. You
+     *         can use this parameter to run tasks on the same instance, even it the tasks need to join different
+     *         domains. For more information, see <a
+     *         href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/windows-gmsa.html">Using gMSAs for
+     *         Windows Containers</a> and <a
+     *         href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/linux-gmsa.html">Using gMSAs for Linux
+     *         Containers</a>.
+     */
+
+    public java.util.List<String> getCredentialSpecs() {
+        if (credentialSpecs == null) {
+            credentialSpecs = new com.amazonaws.internal.SdkInternalList<String>();
+        }
+        return credentialSpecs;
+    }
+
+    /**
+     * <p>
+     * A list of ARNs in SSM or Amazon S3 to a credential spec (<code>credspec</code>code&gt;) file that configures a
+     * container for Active Directory authentication. This parameter is only used with domainless authentication.
+     * </p>
+     * <p>
+     * The format for each ARN is <code>credentialspecdomainless:MyARN</code>. Replace <code>MyARN</code> with the ARN
+     * in SSM or Amazon S3.
+     * </p>
+     * <p>
+     * The <code>credspec</code> must provide a ARN in Secrets Manager for a secret containing the username, password,
+     * and the domain to connect to. For better security, the instance isn't joined to the domain for domainless
+     * authentication. Other applications on the instance can't use the domainless credentials. You can use this
+     * parameter to run tasks on the same instance, even it the tasks need to join different domains. For more
+     * information, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/windows-gmsa.html">Using
+     * gMSAs for Windows Containers</a> and <a
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/linux-gmsa.html">Using gMSAs for Linux
+     * Containers</a>.
+     * </p>
+     * 
+     * @param credentialSpecs
+     *        A list of ARNs in SSM or Amazon S3 to a credential spec (<code>credspec</code>code&gt;) file that
+     *        configures a container for Active Directory authentication. This parameter is only used with domainless
+     *        authentication.</p>
+     *        <p>
+     *        The format for each ARN is <code>credentialspecdomainless:MyARN</code>. Replace <code>MyARN</code> with
+     *        the ARN in SSM or Amazon S3.
+     *        </p>
+     *        <p>
+     *        The <code>credspec</code> must provide a ARN in Secrets Manager for a secret containing the username,
+     *        password, and the domain to connect to. For better security, the instance isn't joined to the domain for
+     *        domainless authentication. Other applications on the instance can't use the domainless credentials. You
+     *        can use this parameter to run tasks on the same instance, even it the tasks need to join different
+     *        domains. For more information, see <a
+     *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/windows-gmsa.html">Using gMSAs for
+     *        Windows Containers</a> and <a
+     *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/linux-gmsa.html">Using gMSAs for Linux
+     *        Containers</a>.
+     */
+
+    public void setCredentialSpecs(java.util.Collection<String> credentialSpecs) {
+        if (credentialSpecs == null) {
+            this.credentialSpecs = null;
+            return;
+        }
+
+        this.credentialSpecs = new com.amazonaws.internal.SdkInternalList<String>(credentialSpecs);
+    }
+
+    /**
+     * <p>
+     * A list of ARNs in SSM or Amazon S3 to a credential spec (<code>credspec</code>code&gt;) file that configures a
+     * container for Active Directory authentication. This parameter is only used with domainless authentication.
+     * </p>
+     * <p>
+     * The format for each ARN is <code>credentialspecdomainless:MyARN</code>. Replace <code>MyARN</code> with the ARN
+     * in SSM or Amazon S3.
+     * </p>
+     * <p>
+     * The <code>credspec</code> must provide a ARN in Secrets Manager for a secret containing the username, password,
+     * and the domain to connect to. For better security, the instance isn't joined to the domain for domainless
+     * authentication. Other applications on the instance can't use the domainless credentials. You can use this
+     * parameter to run tasks on the same instance, even it the tasks need to join different domains. For more
+     * information, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/windows-gmsa.html">Using
+     * gMSAs for Windows Containers</a> and <a
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/linux-gmsa.html">Using gMSAs for Linux
+     * Containers</a>.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setCredentialSpecs(java.util.Collection)} or {@link #withCredentialSpecs(java.util.Collection)} if you
+     * want to override the existing values.
+     * </p>
+     * 
+     * @param credentialSpecs
+     *        A list of ARNs in SSM or Amazon S3 to a credential spec (<code>credspec</code>code&gt;) file that
+     *        configures a container for Active Directory authentication. This parameter is only used with domainless
+     *        authentication.</p>
+     *        <p>
+     *        The format for each ARN is <code>credentialspecdomainless:MyARN</code>. Replace <code>MyARN</code> with
+     *        the ARN in SSM or Amazon S3.
+     *        </p>
+     *        <p>
+     *        The <code>credspec</code> must provide a ARN in Secrets Manager for a secret containing the username,
+     *        password, and the domain to connect to. For better security, the instance isn't joined to the domain for
+     *        domainless authentication. Other applications on the instance can't use the domainless credentials. You
+     *        can use this parameter to run tasks on the same instance, even it the tasks need to join different
+     *        domains. For more information, see <a
+     *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/windows-gmsa.html">Using gMSAs for
+     *        Windows Containers</a> and <a
+     *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/linux-gmsa.html">Using gMSAs for Linux
+     *        Containers</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ContainerDefinition withCredentialSpecs(String... credentialSpecs) {
+        if (this.credentialSpecs == null) {
+            setCredentialSpecs(new com.amazonaws.internal.SdkInternalList<String>(credentialSpecs.length));
+        }
+        for (String ele : credentialSpecs) {
+            this.credentialSpecs.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * A list of ARNs in SSM or Amazon S3 to a credential spec (<code>credspec</code>code&gt;) file that configures a
+     * container for Active Directory authentication. This parameter is only used with domainless authentication.
+     * </p>
+     * <p>
+     * The format for each ARN is <code>credentialspecdomainless:MyARN</code>. Replace <code>MyARN</code> with the ARN
+     * in SSM or Amazon S3.
+     * </p>
+     * <p>
+     * The <code>credspec</code> must provide a ARN in Secrets Manager for a secret containing the username, password,
+     * and the domain to connect to. For better security, the instance isn't joined to the domain for domainless
+     * authentication. Other applications on the instance can't use the domainless credentials. You can use this
+     * parameter to run tasks on the same instance, even it the tasks need to join different domains. For more
+     * information, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/windows-gmsa.html">Using
+     * gMSAs for Windows Containers</a> and <a
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/linux-gmsa.html">Using gMSAs for Linux
+     * Containers</a>.
+     * </p>
+     * 
+     * @param credentialSpecs
+     *        A list of ARNs in SSM or Amazon S3 to a credential spec (<code>credspec</code>code&gt;) file that
+     *        configures a container for Active Directory authentication. This parameter is only used with domainless
+     *        authentication.</p>
+     *        <p>
+     *        The format for each ARN is <code>credentialspecdomainless:MyARN</code>. Replace <code>MyARN</code> with
+     *        the ARN in SSM or Amazon S3.
+     *        </p>
+     *        <p>
+     *        The <code>credspec</code> must provide a ARN in Secrets Manager for a secret containing the username,
+     *        password, and the domain to connect to. For better security, the instance isn't joined to the domain for
+     *        domainless authentication. Other applications on the instance can't use the domainless credentials. You
+     *        can use this parameter to run tasks on the same instance, even it the tasks need to join different
+     *        domains. For more information, see <a
+     *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/windows-gmsa.html">Using gMSAs for
+     *        Windows Containers</a> and <a
+     *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/linux-gmsa.html">Using gMSAs for Linux
+     *        Containers</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ContainerDefinition withCredentialSpecs(java.util.Collection<String> credentialSpecs) {
+        setCredentialSpecs(credentialSpecs);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -7462,7 +7680,9 @@ public class ContainerDefinition implements Serializable, Cloneable, StructuredP
         if (getResourceRequirements() != null)
             sb.append("ResourceRequirements: ").append(getResourceRequirements()).append(",");
         if (getFirelensConfiguration() != null)
-            sb.append("FirelensConfiguration: ").append(getFirelensConfiguration());
+            sb.append("FirelensConfiguration: ").append(getFirelensConfiguration()).append(",");
+        if (getCredentialSpecs() != null)
+            sb.append("CredentialSpecs: ").append(getCredentialSpecs());
         sb.append("}");
         return sb.toString();
     }
@@ -7633,6 +7853,10 @@ public class ContainerDefinition implements Serializable, Cloneable, StructuredP
             return false;
         if (other.getFirelensConfiguration() != null && other.getFirelensConfiguration().equals(this.getFirelensConfiguration()) == false)
             return false;
+        if (other.getCredentialSpecs() == null ^ this.getCredentialSpecs() == null)
+            return false;
+        if (other.getCredentialSpecs() != null && other.getCredentialSpecs().equals(this.getCredentialSpecs()) == false)
+            return false;
         return true;
     }
 
@@ -7680,6 +7904,7 @@ public class ContainerDefinition implements Serializable, Cloneable, StructuredP
         hashCode = prime * hashCode + ((getSystemControls() == null) ? 0 : getSystemControls().hashCode());
         hashCode = prime * hashCode + ((getResourceRequirements() == null) ? 0 : getResourceRequirements().hashCode());
         hashCode = prime * hashCode + ((getFirelensConfiguration() == null) ? 0 : getFirelensConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getCredentialSpecs() == null) ? 0 : getCredentialSpecs().hashCode());
         return hashCode;
     }
 

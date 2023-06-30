@@ -30,7 +30,7 @@ public class CreatePolicyTemplateRequest extends com.amazonaws.AmazonWebServiceR
      * Specifies a unique, case-sensitive ID that you provide to ensure the idempotency of the request. This lets you
      * safely retry the request without accidentally performing the same operation a second time. Passing the same value
      * to a later call to an operation requires that you also pass the same value for all other parameters. We recommend
-     * that you use a <a href="https://wikipedia.org/wiki/Universally_unique_Id">UUID type of value.</a>.
+     * that you use a <a href="https://wikipedia.org/wiki/Universally_unique_identifier">UUID type of value.</a>.
      * </p>
      * <p>
      * If you don't provide this value, then Amazon Web Services generates a random one for you.
@@ -65,7 +65,7 @@ public class CreatePolicyTemplateRequest extends com.amazonaws.AmazonWebServiceR
      * Specifies a unique, case-sensitive ID that you provide to ensure the idempotency of the request. This lets you
      * safely retry the request without accidentally performing the same operation a second time. Passing the same value
      * to a later call to an operation requires that you also pass the same value for all other parameters. We recommend
-     * that you use a <a href="https://wikipedia.org/wiki/Universally_unique_Id">UUID type of value.</a>.
+     * that you use a <a href="https://wikipedia.org/wiki/Universally_unique_identifier">UUID type of value.</a>.
      * </p>
      * <p>
      * If you don't provide this value, then Amazon Web Services generates a random one for you.
@@ -79,8 +79,8 @@ public class CreatePolicyTemplateRequest extends com.amazonaws.AmazonWebServiceR
      *        Specifies a unique, case-sensitive ID that you provide to ensure the idempotency of the request. This lets
      *        you safely retry the request without accidentally performing the same operation a second time. Passing the
      *        same value to a later call to an operation requires that you also pass the same value for all other
-     *        parameters. We recommend that you use a <a href="https://wikipedia.org/wiki/Universally_unique_Id">UUID
-     *        type of value.</a>.</p>
+     *        parameters. We recommend that you use a <a
+     *        href="https://wikipedia.org/wiki/Universally_unique_identifier">UUID type of value.</a>.</p>
      *        <p>
      *        If you don't provide this value, then Amazon Web Services generates a random one for you.
      *        </p>
@@ -98,7 +98,7 @@ public class CreatePolicyTemplateRequest extends com.amazonaws.AmazonWebServiceR
      * Specifies a unique, case-sensitive ID that you provide to ensure the idempotency of the request. This lets you
      * safely retry the request without accidentally performing the same operation a second time. Passing the same value
      * to a later call to an operation requires that you also pass the same value for all other parameters. We recommend
-     * that you use a <a href="https://wikipedia.org/wiki/Universally_unique_Id">UUID type of value.</a>.
+     * that you use a <a href="https://wikipedia.org/wiki/Universally_unique_identifier">UUID type of value.</a>.
      * </p>
      * <p>
      * If you don't provide this value, then Amazon Web Services generates a random one for you.
@@ -112,7 +112,7 @@ public class CreatePolicyTemplateRequest extends com.amazonaws.AmazonWebServiceR
      *         lets you safely retry the request without accidentally performing the same operation a second time.
      *         Passing the same value to a later call to an operation requires that you also pass the same value for all
      *         other parameters. We recommend that you use a <a
-     *         href="https://wikipedia.org/wiki/Universally_unique_Id">UUID type of value.</a>.</p>
+     *         href="https://wikipedia.org/wiki/Universally_unique_identifier">UUID type of value.</a>.</p>
      *         <p>
      *         If you don't provide this value, then Amazon Web Services generates a random one for you.
      *         </p>
@@ -130,7 +130,7 @@ public class CreatePolicyTemplateRequest extends com.amazonaws.AmazonWebServiceR
      * Specifies a unique, case-sensitive ID that you provide to ensure the idempotency of the request. This lets you
      * safely retry the request without accidentally performing the same operation a second time. Passing the same value
      * to a later call to an operation requires that you also pass the same value for all other parameters. We recommend
-     * that you use a <a href="https://wikipedia.org/wiki/Universally_unique_Id">UUID type of value.</a>.
+     * that you use a <a href="https://wikipedia.org/wiki/Universally_unique_identifier">UUID type of value.</a>.
      * </p>
      * <p>
      * If you don't provide this value, then Amazon Web Services generates a random one for you.
@@ -144,8 +144,8 @@ public class CreatePolicyTemplateRequest extends com.amazonaws.AmazonWebServiceR
      *        Specifies a unique, case-sensitive ID that you provide to ensure the idempotency of the request. This lets
      *        you safely retry the request without accidentally performing the same operation a second time. Passing the
      *        same value to a later call to an operation requires that you also pass the same value for all other
-     *        parameters. We recommend that you use a <a href="https://wikipedia.org/wiki/Universally_unique_Id">UUID
-     *        type of value.</a>.</p>
+     *        parameters. We recommend that you use a <a
+     *        href="https://wikipedia.org/wiki/Universally_unique_identifier">UUID type of value.</a>.</p>
      *        <p>
      *        If you don't provide this value, then Amazon Web Services generates a random one for you.
      *        </p>
