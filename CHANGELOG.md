@@ -1,3 +1,8 @@
+# __1.12.505__ __2023-07-11__
+## __Amazon Cognito Identity Provider__
+  - ### Features
+    - API model updated in Amazon Cognito
+
 # __1.12.504__ __2023-07-07__
 ## __AWS Database Migration Service__
   - ### Features

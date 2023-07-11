@@ -1513,9 +1513,9 @@ public class AdminRespondToAuthChallengeRequest extends com.amazonaws.AmazonWebS
         if (getChallengeName() != null)
             sb.append("ChallengeName: ").append(getChallengeName()).append(",");
         if (getChallengeResponses() != null)
-            sb.append("ChallengeResponses: ").append(getChallengeResponses()).append(",");
+            sb.append("ChallengeResponses: ").append("***Sensitive Data Redacted***").append(",");
         if (getSession() != null)
-            sb.append("Session: ").append(getSession()).append(",");
+            sb.append("Session: ").append("***Sensitive Data Redacted***").append(",");
         if (getAnalyticsMetadata() != null)
             sb.append("AnalyticsMetadata: ").append(getAnalyticsMetadata()).append(",");
         if (getContextData() != null)
