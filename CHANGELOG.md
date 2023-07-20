@@ -1,3 +1,8 @@
+# __1.12.510__ __2023-07-20__
+## __AWS Savings Plans__
+  - ### Features
+    - Savings Plans endpoints update
+
 # __1.12.509__ __2023-07-19__
 ## __AWS CloudFormation__
   - ### Features
