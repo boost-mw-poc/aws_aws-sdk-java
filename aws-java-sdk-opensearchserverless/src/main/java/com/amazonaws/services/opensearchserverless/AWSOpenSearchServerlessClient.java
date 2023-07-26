@@ -357,7 +357,8 @@ public class AWSOpenSearchServerlessClient extends AmazonWebServiceClient implem
      * @param createCollectionRequest
      * @return Result of the CreateCollection operation returned by the service.
      * @throws OcuLimitExceededException
-     *         OCU Limit Exceeded for service limits
+     *         Thrown when the collection you're attempting to create results in a number of search or indexing OCUs
+     *         that exceeds the account limit.
      * @throws InternalServerException
      *         Thrown when an error internal to the service occurs while processing a request.
      * @throws ConflictException

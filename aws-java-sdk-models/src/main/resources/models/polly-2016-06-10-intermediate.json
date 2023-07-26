@@ -3351,6 +3351,9 @@
       }, {
         "name" : "EnIE",
         "value" : "en-IE"
+      }, {
+        "name" : "NlBE",
+        "value" : "nl-BE"
       } ],
       "errorCode" : null,
       "fullyQualifiedName" : "com.amazonaws.services.polly.enum.LanguageCode",
@@ -16062,6 +16065,9 @@
       }, {
         "name" : "Sofie",
         "value" : "Sofie"
+      }, {
+        "name" : "Lisa",
+        "value" : "Lisa"
       } ],
       "errorCode" : null,
       "fullyQualifiedName" : "com.amazonaws.services.polly.enum.VoiceId",

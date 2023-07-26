@@ -51,7 +51,7 @@ import com.amazonaws.services.healthlake.model.transform.*;
  * service call completes.
  * <p>
  * <p>
- * Amazon HealthLake is a HIPAA eligibile service that allows customers to store, transform, query, and analyze their
+ * AWS HealthLake is a HIPAA eligibile service that allows customers to store, transform, query, and analyze their
  * FHIR-formatted data in a consistent fashion in the cloud.
  * </p>
  */
@@ -145,7 +145,7 @@ public class AmazonHealthLakeClient extends AmazonWebServiceClient implements Am
 
     /**
      * <p>
-     * Creates a Data Store that can ingest and export FHIR formatted data.
+     * Creates a data store that can ingest and export FHIR formatted data.
      * </p>
      * 
      * @param createFHIRDatastoreRequest
@@ -208,7 +208,7 @@ public class AmazonHealthLakeClient extends AmazonWebServiceClient implements Am
 
     /**
      * <p>
-     * Deletes a Data Store.
+     * Deletes a data store.
      * </p>
      * 
      * @param deleteFHIRDatastoreRequest
@@ -216,11 +216,11 @@ public class AmazonHealthLakeClient extends AmazonWebServiceClient implements Am
      * @throws AccessDeniedException
      *         Access is denied. Your account is not authorized to perform this operation.
      * @throws ConflictException
-     *         The Data Store is in a transition state and the user requested action can not be performed.
+     *         The data store is in a transition state and the user requested action can not be performed.
      * @throws ValidationException
      *         The user input parameter was invalid.
      * @throws ResourceNotFoundException
-     *         The requested Data Store was not found.
+     *         The requested data store was not found.
      * @throws ThrottlingException
      *         The user has exceeded their maximum number of allowed calls to the given API.
      * @throws InternalServerException
@@ -275,8 +275,8 @@ public class AmazonHealthLakeClient extends AmazonWebServiceClient implements Am
 
     /**
      * <p>
-     * Gets the properties associated with the FHIR Data Store, including the Data Store ID, Data Store ARN, Data Store
-     * name, Data Store status, created at, Data Store type version, and Data Store endpoint.
+     * Gets the properties associated with the FHIR data store, including the data store ID, data store ARN, data store
+     * name, data store status, when the data store was created, data store type version, and the data store's endpoint.
      * </p>
      * 
      * @param describeFHIRDatastoreRequest
@@ -284,7 +284,7 @@ public class AmazonHealthLakeClient extends AmazonWebServiceClient implements Am
      * @throws ValidationException
      *         The user input parameter was invalid.
      * @throws ResourceNotFoundException
-     *         The requested Data Store was not found.
+     *         The requested data store was not found.
      * @throws ThrottlingException
      *         The user has exceeded their maximum number of allowed calls to the given API.
      * @throws InternalServerException
@@ -348,7 +348,7 @@ public class AmazonHealthLakeClient extends AmazonWebServiceClient implements Am
      * @throws ValidationException
      *         The user input parameter was invalid.
      * @throws ResourceNotFoundException
-     *         The requested Data Store was not found.
+     *         The requested data store was not found.
      * @throws ThrottlingException
      *         The user has exceeded their maximum number of allowed calls to the given API.
      * @throws InternalServerException
@@ -412,7 +412,7 @@ public class AmazonHealthLakeClient extends AmazonWebServiceClient implements Am
      * @throws ValidationException
      *         The user input parameter was invalid.
      * @throws ResourceNotFoundException
-     *         The requested Data Store was not found.
+     *         The requested data store was not found.
      * @throws ThrottlingException
      *         The user has exceeded their maximum number of allowed calls to the given API.
      * @throws InternalServerException
@@ -468,7 +468,7 @@ public class AmazonHealthLakeClient extends AmazonWebServiceClient implements Am
 
     /**
      * <p>
-     * Lists all FHIR Data Stores that are in the user’s account, regardless of Data Store status.
+     * Lists all FHIR data stores that are in the user’s account, regardless of data store status.
      * </p>
      * 
      * @param listFHIRDatastoresRequest
@@ -537,7 +537,7 @@ public class AmazonHealthLakeClient extends AmazonWebServiceClient implements Am
      * @throws ValidationException
      *         The user input parameter was invalid.
      * @throws ResourceNotFoundException
-     *         The requested Data Store was not found.
+     *         The requested data store was not found.
      * @throws AccessDeniedException
      *         Access is denied. Your account is not authorized to perform this operation.
      * @throws ThrottlingException
@@ -602,7 +602,7 @@ public class AmazonHealthLakeClient extends AmazonWebServiceClient implements Am
      * @throws ValidationException
      *         The user input parameter was invalid.
      * @throws ResourceNotFoundException
-     *         The requested Data Store was not found.
+     *         The requested data store was not found.
      * @throws AccessDeniedException
      *         Access is denied. Your account is not authorized to perform this operation.
      * @throws ThrottlingException
@@ -659,7 +659,7 @@ public class AmazonHealthLakeClient extends AmazonWebServiceClient implements Am
 
     /**
      * <p>
-     * Returns a list of all existing tags associated with a Data Store.
+     * Returns a list of all existing tags associated with a data store.
      * </p>
      * 
      * @param listTagsForResourceRequest
@@ -667,7 +667,7 @@ public class AmazonHealthLakeClient extends AmazonWebServiceClient implements Am
      * @throws ValidationException
      *         The user input parameter was invalid.
      * @throws ResourceNotFoundException
-     *         The requested Data Store was not found.
+     *         The requested data store was not found.
      * @sample AmazonHealthLake.ListTagsForResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/healthlake-2017-07-01/ListTagsForResource" target="_top">AWS
      *      API Documentation</a>
@@ -730,7 +730,7 @@ public class AmazonHealthLakeClient extends AmazonWebServiceClient implements Am
      * @throws AccessDeniedException
      *         Access is denied. Your account is not authorized to perform this operation.
      * @throws ResourceNotFoundException
-     *         The requested Data Store was not found.
+     *         The requested data store was not found.
      * @throws InternalServerException
      *         Unknown error occurs in the service.
      * @sample AmazonHealthLake.StartFHIRExportJob
@@ -795,7 +795,7 @@ public class AmazonHealthLakeClient extends AmazonWebServiceClient implements Am
      * @throws AccessDeniedException
      *         Access is denied. Your account is not authorized to perform this operation.
      * @throws ResourceNotFoundException
-     *         The requested Data Store was not found.
+     *         The requested data store was not found.
      * @throws InternalServerException
      *         Unknown error occurs in the service.
      * @sample AmazonHealthLake.StartFHIRImportJob
@@ -848,7 +848,7 @@ public class AmazonHealthLakeClient extends AmazonWebServiceClient implements Am
 
     /**
      * <p>
-     * Adds a user specified key and value tag to a Data Store.
+     * Adds a user specified key and value tag to a data store.
      * </p>
      * 
      * @param tagResourceRequest
@@ -856,7 +856,7 @@ public class AmazonHealthLakeClient extends AmazonWebServiceClient implements Am
      * @throws ValidationException
      *         The user input parameter was invalid.
      * @throws ResourceNotFoundException
-     *         The requested Data Store was not found.
+     *         The requested data store was not found.
      * @sample AmazonHealthLake.TagResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/healthlake-2017-07-01/TagResource" target="_top">AWS API
      *      Documentation</a>
@@ -907,7 +907,7 @@ public class AmazonHealthLakeClient extends AmazonWebServiceClient implements Am
 
     /**
      * <p>
-     * Removes tags from a Data Store.
+     * Removes tags from a data store.
      * </p>
      * 
      * @param untagResourceRequest
@@ -915,7 +915,7 @@ public class AmazonHealthLakeClient extends AmazonWebServiceClient implements Am
      * @throws ValidationException
      *         The user input parameter was invalid.
      * @throws ResourceNotFoundException
-     *         The requested Data Store was not found.
+     *         The requested data store was not found.
      * @sample AmazonHealthLake.UntagResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/healthlake-2017-07-01/UntagResource" target="_top">AWS API
      *      Documentation</a>

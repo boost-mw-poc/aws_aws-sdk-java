@@ -28,34 +28,33 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 public class AudioCodecSettings implements Serializable, Cloneable, StructuredPojo {
 
     /**
-     * Required when you set (Codec) under (AudioDescriptions)>(CodecSettings) to the value AAC. The service accepts one
-     * of two mutually exclusive groups of AAC settings--VBR and CBR. To select one of these modes, set the value of
-     * Bitrate control mode (rateControlMode) to "VBR" or "CBR". In VBR mode, you control the audio quality with the
-     * setting VBR quality (vbrQuality). In CBR mode, you use the setting Bitrate (bitrate). Defaults and valid values
-     * depend on the rate control mode.
+     * Required when you set Codec to the value AAC. The service accepts one of two mutually exclusive groups of AAC
+     * settings--VBR and CBR. To select one of these modes, set the value of Bitrate control mode to "VBR" or "CBR". In
+     * VBR mode, you control the audio quality with the setting VBR quality. In CBR mode, you use the setting Bitrate.
+     * Defaults and valid values depend on the rate control mode.
      */
     private AacSettings aacSettings;
-    /** Required when you set (Codec) under (AudioDescriptions)>(CodecSettings) to the value AC3. */
+    /** Required when you set Codec to the value AC3. */
     private Ac3Settings ac3Settings;
-    /** Required when you set (Codec) under (AudioDescriptions)>(CodecSettings) to the value AIFF. */
+    /** Required when you set Codec to the value AIFF. */
     private AiffSettings aiffSettings;
     /**
-     * Choose the audio codec for this output. Note that the option Dolby Digital passthrough (PASSTHROUGH) applies only
-     * to Dolby Digital and Dolby Digital Plus audio inputs. Make sure that you choose a codec that's supported with
-     * your output container:
-     * https://docs.aws.amazon.com/mediaconvert/latest/ug/reference-codecs-containers.html#reference
-     * -codecs-containers-output-audio For audio-only outputs, make sure that both your input audio codec and your output
-     * audio codec are supported for audio-only workflows. For more information, see:
-     * https://docs.aws.amazon.com/mediaconvert
-     * /latest/ug/reference-codecs-containers-input.html#reference-codecs-containers-input-audio-only and
+     * Choose the audio codec for this output. Note that the option Dolby Digital passthrough applies only to Dolby
+     * Digital and Dolby Digital Plus audio inputs. Make sure that you choose a codec that's supported with your output
+     * container:
+     * https://docs.aws.amazon.com/mediaconvert/latest/ug/reference-codecs-containers.html#reference-codecs-containers
+     * -output-audio For audio-only outputs, make sure that both your input audio codec and your output audio codec are
+     * supported for audio-only workflows. For more information, see:
+     * https://docs.aws.amazon.com/mediaconvert/latest/ug/reference
+     * -codecs-containers-input.html#reference-codecs-containers-input-audio-only and
      * https://docs.aws.amazon.com/mediaconvert/latest/ug/reference-codecs-containers.html#audio-only-output
      */
     private String codec;
-    /** Required when you set (Codec) under (AudioDescriptions)>(CodecSettings) to the value EAC3_ATMOS. */
+    /** Required when you set Codec to the value EAC3_ATMOS. */
     private Eac3AtmosSettings eac3AtmosSettings;
-    /** Required when you set (Codec) under (AudioDescriptions)>(CodecSettings) to the value EAC3. */
+    /** Required when you set Codec to the value EAC3. */
     private Eac3Settings eac3Settings;
-    /** Required when you set (Codec) under (AudioDescriptions)>(CodecSettings) to the value MP2. */
+    /** Required when you set Codec to the value MP2. */
     private Mp2Settings mp2Settings;
     /** Required when you set Codec, under AudioDescriptions>CodecSettings, to the value MP3. */
     private Mp3Settings mp3Settings;
@@ -63,22 +62,20 @@ public class AudioCodecSettings implements Serializable, Cloneable, StructuredPo
     private OpusSettings opusSettings;
     /** Required when you set Codec, under AudioDescriptions>CodecSettings, to the value Vorbis. */
     private VorbisSettings vorbisSettings;
-    /** Required when you set (Codec) under (AudioDescriptions)>(CodecSettings) to the value WAV. */
+    /** Required when you set Codec to the value WAV. */
     private WavSettings wavSettings;
 
     /**
-     * Required when you set (Codec) under (AudioDescriptions)>(CodecSettings) to the value AAC. The service accepts one
-     * of two mutually exclusive groups of AAC settings--VBR and CBR. To select one of these modes, set the value of
-     * Bitrate control mode (rateControlMode) to "VBR" or "CBR". In VBR mode, you control the audio quality with the
-     * setting VBR quality (vbrQuality). In CBR mode, you use the setting Bitrate (bitrate). Defaults and valid values
-     * depend on the rate control mode.
+     * Required when you set Codec to the value AAC. The service accepts one of two mutually exclusive groups of AAC
+     * settings--VBR and CBR. To select one of these modes, set the value of Bitrate control mode to "VBR" or "CBR". In
+     * VBR mode, you control the audio quality with the setting VBR quality. In CBR mode, you use the setting Bitrate.
+     * Defaults and valid values depend on the rate control mode.
      * 
      * @param aacSettings
-     *        Required when you set (Codec) under (AudioDescriptions)>(CodecSettings) to the value AAC. The service
-     *        accepts one of two mutually exclusive groups of AAC settings--VBR and CBR. To select one of these modes,
-     *        set the value of Bitrate control mode (rateControlMode) to "VBR" or "CBR". In VBR mode, you control the
-     *        audio quality with the setting VBR quality (vbrQuality). In CBR mode, you use the setting Bitrate
-     *        (bitrate). Defaults and valid values depend on the rate control mode.
+     *        Required when you set Codec to the value AAC. The service accepts one of two mutually exclusive groups of
+     *        AAC settings--VBR and CBR. To select one of these modes, set the value of Bitrate control mode to "VBR" or
+     *        "CBR". In VBR mode, you control the audio quality with the setting VBR quality. In CBR mode, you use the
+     *        setting Bitrate. Defaults and valid values depend on the rate control mode.
      */
 
     public void setAacSettings(AacSettings aacSettings) {
@@ -86,17 +83,15 @@ public class AudioCodecSettings implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * Required when you set (Codec) under (AudioDescriptions)>(CodecSettings) to the value AAC. The service accepts one
-     * of two mutually exclusive groups of AAC settings--VBR and CBR. To select one of these modes, set the value of
-     * Bitrate control mode (rateControlMode) to "VBR" or "CBR". In VBR mode, you control the audio quality with the
-     * setting VBR quality (vbrQuality). In CBR mode, you use the setting Bitrate (bitrate). Defaults and valid values
-     * depend on the rate control mode.
+     * Required when you set Codec to the value AAC. The service accepts one of two mutually exclusive groups of AAC
+     * settings--VBR and CBR. To select one of these modes, set the value of Bitrate control mode to "VBR" or "CBR". In
+     * VBR mode, you control the audio quality with the setting VBR quality. In CBR mode, you use the setting Bitrate.
+     * Defaults and valid values depend on the rate control mode.
      * 
-     * @return Required when you set (Codec) under (AudioDescriptions)>(CodecSettings) to the value AAC. The service
-     *         accepts one of two mutually exclusive groups of AAC settings--VBR and CBR. To select one of these modes,
-     *         set the value of Bitrate control mode (rateControlMode) to "VBR" or "CBR". In VBR mode, you control the
-     *         audio quality with the setting VBR quality (vbrQuality). In CBR mode, you use the setting Bitrate
-     *         (bitrate). Defaults and valid values depend on the rate control mode.
+     * @return Required when you set Codec to the value AAC. The service accepts one of two mutually exclusive groups of
+     *         AAC settings--VBR and CBR. To select one of these modes, set the value of Bitrate control mode to "VBR"
+     *         or "CBR". In VBR mode, you control the audio quality with the setting VBR quality. In CBR mode, you use
+     *         the setting Bitrate. Defaults and valid values depend on the rate control mode.
      */
 
     public AacSettings getAacSettings() {
@@ -104,18 +99,16 @@ public class AudioCodecSettings implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * Required when you set (Codec) under (AudioDescriptions)>(CodecSettings) to the value AAC. The service accepts one
-     * of two mutually exclusive groups of AAC settings--VBR and CBR. To select one of these modes, set the value of
-     * Bitrate control mode (rateControlMode) to "VBR" or "CBR". In VBR mode, you control the audio quality with the
-     * setting VBR quality (vbrQuality). In CBR mode, you use the setting Bitrate (bitrate). Defaults and valid values
-     * depend on the rate control mode.
+     * Required when you set Codec to the value AAC. The service accepts one of two mutually exclusive groups of AAC
+     * settings--VBR and CBR. To select one of these modes, set the value of Bitrate control mode to "VBR" or "CBR". In
+     * VBR mode, you control the audio quality with the setting VBR quality. In CBR mode, you use the setting Bitrate.
+     * Defaults and valid values depend on the rate control mode.
      * 
      * @param aacSettings
-     *        Required when you set (Codec) under (AudioDescriptions)>(CodecSettings) to the value AAC. The service
-     *        accepts one of two mutually exclusive groups of AAC settings--VBR and CBR. To select one of these modes,
-     *        set the value of Bitrate control mode (rateControlMode) to "VBR" or "CBR". In VBR mode, you control the
-     *        audio quality with the setting VBR quality (vbrQuality). In CBR mode, you use the setting Bitrate
-     *        (bitrate). Defaults and valid values depend on the rate control mode.
+     *        Required when you set Codec to the value AAC. The service accepts one of two mutually exclusive groups of
+     *        AAC settings--VBR and CBR. To select one of these modes, set the value of Bitrate control mode to "VBR" or
+     *        "CBR". In VBR mode, you control the audio quality with the setting VBR quality. In CBR mode, you use the
+     *        setting Bitrate. Defaults and valid values depend on the rate control mode.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -125,10 +118,10 @@ public class AudioCodecSettings implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * Required when you set (Codec) under (AudioDescriptions)>(CodecSettings) to the value AC3.
+     * Required when you set Codec to the value AC3.
      * 
      * @param ac3Settings
-     *        Required when you set (Codec) under (AudioDescriptions)>(CodecSettings) to the value AC3.
+     *        Required when you set Codec to the value AC3.
      */
 
     public void setAc3Settings(Ac3Settings ac3Settings) {
@@ -136,9 +129,9 @@ public class AudioCodecSettings implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * Required when you set (Codec) under (AudioDescriptions)>(CodecSettings) to the value AC3.
+     * Required when you set Codec to the value AC3.
      * 
-     * @return Required when you set (Codec) under (AudioDescriptions)>(CodecSettings) to the value AC3.
+     * @return Required when you set Codec to the value AC3.
      */
 
     public Ac3Settings getAc3Settings() {
@@ -146,10 +139,10 @@ public class AudioCodecSettings implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * Required when you set (Codec) under (AudioDescriptions)>(CodecSettings) to the value AC3.
+     * Required when you set Codec to the value AC3.
      * 
      * @param ac3Settings
-     *        Required when you set (Codec) under (AudioDescriptions)>(CodecSettings) to the value AC3.
+     *        Required when you set Codec to the value AC3.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -159,10 +152,10 @@ public class AudioCodecSettings implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * Required when you set (Codec) under (AudioDescriptions)>(CodecSettings) to the value AIFF.
+     * Required when you set Codec to the value AIFF.
      * 
      * @param aiffSettings
-     *        Required when you set (Codec) under (AudioDescriptions)>(CodecSettings) to the value AIFF.
+     *        Required when you set Codec to the value AIFF.
      */
 
     public void setAiffSettings(AiffSettings aiffSettings) {
@@ -170,9 +163,9 @@ public class AudioCodecSettings implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * Required when you set (Codec) under (AudioDescriptions)>(CodecSettings) to the value AIFF.
+     * Required when you set Codec to the value AIFF.
      * 
-     * @return Required when you set (Codec) under (AudioDescriptions)>(CodecSettings) to the value AIFF.
+     * @return Required when you set Codec to the value AIFF.
      */
 
     public AiffSettings getAiffSettings() {
@@ -180,10 +173,10 @@ public class AudioCodecSettings implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * Required when you set (Codec) under (AudioDescriptions)>(CodecSettings) to the value AIFF.
+     * Required when you set Codec to the value AIFF.
      * 
      * @param aiffSettings
-     *        Required when you set (Codec) under (AudioDescriptions)>(CodecSettings) to the value AIFF.
+     *        Required when you set Codec to the value AIFF.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -193,26 +186,26 @@ public class AudioCodecSettings implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * Choose the audio codec for this output. Note that the option Dolby Digital passthrough (PASSTHROUGH) applies only
-     * to Dolby Digital and Dolby Digital Plus audio inputs. Make sure that you choose a codec that's supported with
-     * your output container:
-     * https://docs.aws.amazon.com/mediaconvert/latest/ug/reference-codecs-containers.html#reference
-     * -codecs-containers-output-audio For audio-only outputs, make sure that both your input audio codec and your output
-     * audio codec are supported for audio-only workflows. For more information, see:
-     * https://docs.aws.amazon.com/mediaconvert
-     * /latest/ug/reference-codecs-containers-input.html#reference-codecs-containers-input-audio-only and
+     * Choose the audio codec for this output. Note that the option Dolby Digital passthrough applies only to Dolby
+     * Digital and Dolby Digital Plus audio inputs. Make sure that you choose a codec that's supported with your output
+     * container:
+     * https://docs.aws.amazon.com/mediaconvert/latest/ug/reference-codecs-containers.html#reference-codecs-containers
+     * -output-audio For audio-only outputs, make sure that both your input audio codec and your output audio codec are
+     * supported for audio-only workflows. For more information, see:
+     * https://docs.aws.amazon.com/mediaconvert/latest/ug/reference
+     * -codecs-containers-input.html#reference-codecs-containers-input-audio-only and
      * https://docs.aws.amazon.com/mediaconvert/latest/ug/reference-codecs-containers.html#audio-only-output
      * 
      * @param codec
-     *        Choose the audio codec for this output. Note that the option Dolby Digital passthrough (PASSTHROUGH)
-     *        applies only to Dolby Digital and Dolby Digital Plus audio inputs. Make sure that you choose a codec
-     *        that's supported with your output container:
-     *        https://docs.aws.amazon.com/mediaconvert/latest/ug/reference-codecs
-     *        -containers.html#reference-codecs-containers-output-audio For audio-only outputs, make sure that both your
-     *        input audio codec and your output audio codec are supported for audio-only workflows. For more
-     *        information, see:
-     *        https://docs.aws.amazon.com/mediaconvert/latest/ug/reference-codecs-containers-input.html
-     *        #reference-codecs-containers-input-audio-only and
+     *        Choose the audio codec for this output. Note that the option Dolby Digital passthrough applies only to
+     *        Dolby Digital and Dolby Digital Plus audio inputs. Make sure that you choose a codec that's supported with
+     *        your output container:
+     *        https://docs.aws.amazon.com/mediaconvert/latest/ug/reference-codecs-containers.html#
+     *        reference-codecs-containers-output-audio For audio-only outputs, make sure that both your input audio
+     *        codec and your output audio codec are supported for audio-only workflows. For more information, see:
+     *        https:
+     *        //docs.aws.amazon.com/mediaconvert/latest/ug/reference-codecs-containers-input.html#reference-codecs-
+     *        containers-input-audio-only and
      *        https://docs.aws.amazon.com/mediaconvert/latest/ug/reference-codecs-containers.html#audio-only-output
      * @see AudioCodec
      */
@@ -222,25 +215,24 @@ public class AudioCodecSettings implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * Choose the audio codec for this output. Note that the option Dolby Digital passthrough (PASSTHROUGH) applies only
-     * to Dolby Digital and Dolby Digital Plus audio inputs. Make sure that you choose a codec that's supported with
-     * your output container:
-     * https://docs.aws.amazon.com/mediaconvert/latest/ug/reference-codecs-containers.html#reference
-     * -codecs-containers-output-audio For audio-only outputs, make sure that both your input audio codec and your output
-     * audio codec are supported for audio-only workflows. For more information, see:
-     * https://docs.aws.amazon.com/mediaconvert
-     * /latest/ug/reference-codecs-containers-input.html#reference-codecs-containers-input-audio-only and
+     * Choose the audio codec for this output. Note that the option Dolby Digital passthrough applies only to Dolby
+     * Digital and Dolby Digital Plus audio inputs. Make sure that you choose a codec that's supported with your output
+     * container:
+     * https://docs.aws.amazon.com/mediaconvert/latest/ug/reference-codecs-containers.html#reference-codecs-containers
+     * -output-audio For audio-only outputs, make sure that both your input audio codec and your output audio codec are
+     * supported for audio-only workflows. For more information, see:
+     * https://docs.aws.amazon.com/mediaconvert/latest/ug/reference
+     * -codecs-containers-input.html#reference-codecs-containers-input-audio-only and
      * https://docs.aws.amazon.com/mediaconvert/latest/ug/reference-codecs-containers.html#audio-only-output
      * 
-     * @return Choose the audio codec for this output. Note that the option Dolby Digital passthrough (PASSTHROUGH)
-     *         applies only to Dolby Digital and Dolby Digital Plus audio inputs. Make sure that you choose a codec
-     *         that's supported with your output container:
-     *         https://docs.aws.amazon.com/mediaconvert/latest/ug/reference-
-     *         codecs-containers.html#reference-codecs-containers-output-audio For audio-only outputs, make sure that
-     *         both your input audio codec and your output audio codec are supported for audio-only workflows. For more
-     *         information, see:
-     *         https://docs.aws.amazon.com/mediaconvert/latest/ug/reference-codecs-containers-input.html
-     *         #reference-codecs-containers-input-audio-only and
+     * @return Choose the audio codec for this output. Note that the option Dolby Digital passthrough applies only to
+     *         Dolby Digital and Dolby Digital Plus audio inputs. Make sure that you choose a codec that's supported
+     *         with your output container:
+     *         https://docs.aws.amazon.com/mediaconvert/latest/ug/reference-codecs-containers
+     *         .html#reference-codecs-containers-output-audio For audio-only outputs, make sure that both your input
+     *         audio codec and your output audio codec are supported for audio-only workflows. For more information,
+     *         see: https://docs.aws.amazon.com/mediaconvert/latest/ug/reference-codecs-containers-input.html#reference-
+     *         codecs-containers-input-audio-only and
      *         https://docs.aws.amazon.com/mediaconvert/latest/ug/reference-codecs-containers.html#audio-only-output
      * @see AudioCodec
      */
@@ -250,26 +242,26 @@ public class AudioCodecSettings implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * Choose the audio codec for this output. Note that the option Dolby Digital passthrough (PASSTHROUGH) applies only
-     * to Dolby Digital and Dolby Digital Plus audio inputs. Make sure that you choose a codec that's supported with
-     * your output container:
-     * https://docs.aws.amazon.com/mediaconvert/latest/ug/reference-codecs-containers.html#reference
-     * -codecs-containers-output-audio For audio-only outputs, make sure that both your input audio codec and your output
-     * audio codec are supported for audio-only workflows. For more information, see:
-     * https://docs.aws.amazon.com/mediaconvert
-     * /latest/ug/reference-codecs-containers-input.html#reference-codecs-containers-input-audio-only and
+     * Choose the audio codec for this output. Note that the option Dolby Digital passthrough applies only to Dolby
+     * Digital and Dolby Digital Plus audio inputs. Make sure that you choose a codec that's supported with your output
+     * container:
+     * https://docs.aws.amazon.com/mediaconvert/latest/ug/reference-codecs-containers.html#reference-codecs-containers
+     * -output-audio For audio-only outputs, make sure that both your input audio codec and your output audio codec are
+     * supported for audio-only workflows. For more information, see:
+     * https://docs.aws.amazon.com/mediaconvert/latest/ug/reference
+     * -codecs-containers-input.html#reference-codecs-containers-input-audio-only and
      * https://docs.aws.amazon.com/mediaconvert/latest/ug/reference-codecs-containers.html#audio-only-output
      * 
      * @param codec
-     *        Choose the audio codec for this output. Note that the option Dolby Digital passthrough (PASSTHROUGH)
-     *        applies only to Dolby Digital and Dolby Digital Plus audio inputs. Make sure that you choose a codec
-     *        that's supported with your output container:
-     *        https://docs.aws.amazon.com/mediaconvert/latest/ug/reference-codecs
-     *        -containers.html#reference-codecs-containers-output-audio For audio-only outputs, make sure that both your
-     *        input audio codec and your output audio codec are supported for audio-only workflows. For more
-     *        information, see:
-     *        https://docs.aws.amazon.com/mediaconvert/latest/ug/reference-codecs-containers-input.html
-     *        #reference-codecs-containers-input-audio-only and
+     *        Choose the audio codec for this output. Note that the option Dolby Digital passthrough applies only to
+     *        Dolby Digital and Dolby Digital Plus audio inputs. Make sure that you choose a codec that's supported with
+     *        your output container:
+     *        https://docs.aws.amazon.com/mediaconvert/latest/ug/reference-codecs-containers.html#
+     *        reference-codecs-containers-output-audio For audio-only outputs, make sure that both your input audio
+     *        codec and your output audio codec are supported for audio-only workflows. For more information, see:
+     *        https:
+     *        //docs.aws.amazon.com/mediaconvert/latest/ug/reference-codecs-containers-input.html#reference-codecs-
+     *        containers-input-audio-only and
      *        https://docs.aws.amazon.com/mediaconvert/latest/ug/reference-codecs-containers.html#audio-only-output
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AudioCodec
@@ -281,26 +273,26 @@ public class AudioCodecSettings implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * Choose the audio codec for this output. Note that the option Dolby Digital passthrough (PASSTHROUGH) applies only
-     * to Dolby Digital and Dolby Digital Plus audio inputs. Make sure that you choose a codec that's supported with
-     * your output container:
-     * https://docs.aws.amazon.com/mediaconvert/latest/ug/reference-codecs-containers.html#reference
-     * -codecs-containers-output-audio For audio-only outputs, make sure that both your input audio codec and your output
-     * audio codec are supported for audio-only workflows. For more information, see:
-     * https://docs.aws.amazon.com/mediaconvert
-     * /latest/ug/reference-codecs-containers-input.html#reference-codecs-containers-input-audio-only and
+     * Choose the audio codec for this output. Note that the option Dolby Digital passthrough applies only to Dolby
+     * Digital and Dolby Digital Plus audio inputs. Make sure that you choose a codec that's supported with your output
+     * container:
+     * https://docs.aws.amazon.com/mediaconvert/latest/ug/reference-codecs-containers.html#reference-codecs-containers
+     * -output-audio For audio-only outputs, make sure that both your input audio codec and your output audio codec are
+     * supported for audio-only workflows. For more information, see:
+     * https://docs.aws.amazon.com/mediaconvert/latest/ug/reference
+     * -codecs-containers-input.html#reference-codecs-containers-input-audio-only and
      * https://docs.aws.amazon.com/mediaconvert/latest/ug/reference-codecs-containers.html#audio-only-output
      * 
      * @param codec
-     *        Choose the audio codec for this output. Note that the option Dolby Digital passthrough (PASSTHROUGH)
-     *        applies only to Dolby Digital and Dolby Digital Plus audio inputs. Make sure that you choose a codec
-     *        that's supported with your output container:
-     *        https://docs.aws.amazon.com/mediaconvert/latest/ug/reference-codecs
-     *        -containers.html#reference-codecs-containers-output-audio For audio-only outputs, make sure that both your
-     *        input audio codec and your output audio codec are supported for audio-only workflows. For more
-     *        information, see:
-     *        https://docs.aws.amazon.com/mediaconvert/latest/ug/reference-codecs-containers-input.html
-     *        #reference-codecs-containers-input-audio-only and
+     *        Choose the audio codec for this output. Note that the option Dolby Digital passthrough applies only to
+     *        Dolby Digital and Dolby Digital Plus audio inputs. Make sure that you choose a codec that's supported with
+     *        your output container:
+     *        https://docs.aws.amazon.com/mediaconvert/latest/ug/reference-codecs-containers.html#
+     *        reference-codecs-containers-output-audio For audio-only outputs, make sure that both your input audio
+     *        codec and your output audio codec are supported for audio-only workflows. For more information, see:
+     *        https:
+     *        //docs.aws.amazon.com/mediaconvert/latest/ug/reference-codecs-containers-input.html#reference-codecs-
+     *        containers-input-audio-only and
      *        https://docs.aws.amazon.com/mediaconvert/latest/ug/reference-codecs-containers.html#audio-only-output
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AudioCodec
@@ -312,10 +304,10 @@ public class AudioCodecSettings implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * Required when you set (Codec) under (AudioDescriptions)>(CodecSettings) to the value EAC3_ATMOS.
+     * Required when you set Codec to the value EAC3_ATMOS.
      * 
      * @param eac3AtmosSettings
-     *        Required when you set (Codec) under (AudioDescriptions)>(CodecSettings) to the value EAC3_ATMOS.
+     *        Required when you set Codec to the value EAC3_ATMOS.
      */
 
     public void setEac3AtmosSettings(Eac3AtmosSettings eac3AtmosSettings) {
@@ -323,9 +315,9 @@ public class AudioCodecSettings implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * Required when you set (Codec) under (AudioDescriptions)>(CodecSettings) to the value EAC3_ATMOS.
+     * Required when you set Codec to the value EAC3_ATMOS.
      * 
-     * @return Required when you set (Codec) under (AudioDescriptions)>(CodecSettings) to the value EAC3_ATMOS.
+     * @return Required when you set Codec to the value EAC3_ATMOS.
      */
 
     public Eac3AtmosSettings getEac3AtmosSettings() {
@@ -333,10 +325,10 @@ public class AudioCodecSettings implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * Required when you set (Codec) under (AudioDescriptions)>(CodecSettings) to the value EAC3_ATMOS.
+     * Required when you set Codec to the value EAC3_ATMOS.
      * 
      * @param eac3AtmosSettings
-     *        Required when you set (Codec) under (AudioDescriptions)>(CodecSettings) to the value EAC3_ATMOS.
+     *        Required when you set Codec to the value EAC3_ATMOS.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -346,10 +338,10 @@ public class AudioCodecSettings implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * Required when you set (Codec) under (AudioDescriptions)>(CodecSettings) to the value EAC3.
+     * Required when you set Codec to the value EAC3.
      * 
      * @param eac3Settings
-     *        Required when you set (Codec) under (AudioDescriptions)>(CodecSettings) to the value EAC3.
+     *        Required when you set Codec to the value EAC3.
      */
 
     public void setEac3Settings(Eac3Settings eac3Settings) {
@@ -357,9 +349,9 @@ public class AudioCodecSettings implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * Required when you set (Codec) under (AudioDescriptions)>(CodecSettings) to the value EAC3.
+     * Required when you set Codec to the value EAC3.
      * 
-     * @return Required when you set (Codec) under (AudioDescriptions)>(CodecSettings) to the value EAC3.
+     * @return Required when you set Codec to the value EAC3.
      */
 
     public Eac3Settings getEac3Settings() {
@@ -367,10 +359,10 @@ public class AudioCodecSettings implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * Required when you set (Codec) under (AudioDescriptions)>(CodecSettings) to the value EAC3.
+     * Required when you set Codec to the value EAC3.
      * 
      * @param eac3Settings
-     *        Required when you set (Codec) under (AudioDescriptions)>(CodecSettings) to the value EAC3.
+     *        Required when you set Codec to the value EAC3.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -380,10 +372,10 @@ public class AudioCodecSettings implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * Required when you set (Codec) under (AudioDescriptions)>(CodecSettings) to the value MP2.
+     * Required when you set Codec to the value MP2.
      * 
      * @param mp2Settings
-     *        Required when you set (Codec) under (AudioDescriptions)>(CodecSettings) to the value MP2.
+     *        Required when you set Codec to the value MP2.
      */
 
     public void setMp2Settings(Mp2Settings mp2Settings) {
@@ -391,9 +383,9 @@ public class AudioCodecSettings implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * Required when you set (Codec) under (AudioDescriptions)>(CodecSettings) to the value MP2.
+     * Required when you set Codec to the value MP2.
      * 
-     * @return Required when you set (Codec) under (AudioDescriptions)>(CodecSettings) to the value MP2.
+     * @return Required when you set Codec to the value MP2.
      */
 
     public Mp2Settings getMp2Settings() {
@@ -401,10 +393,10 @@ public class AudioCodecSettings implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * Required when you set (Codec) under (AudioDescriptions)>(CodecSettings) to the value MP2.
+     * Required when you set Codec to the value MP2.
      * 
      * @param mp2Settings
-     *        Required when you set (Codec) under (AudioDescriptions)>(CodecSettings) to the value MP2.
+     *        Required when you set Codec to the value MP2.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -516,10 +508,10 @@ public class AudioCodecSettings implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * Required when you set (Codec) under (AudioDescriptions)>(CodecSettings) to the value WAV.
+     * Required when you set Codec to the value WAV.
      * 
      * @param wavSettings
-     *        Required when you set (Codec) under (AudioDescriptions)>(CodecSettings) to the value WAV.
+     *        Required when you set Codec to the value WAV.
      */
 
     public void setWavSettings(WavSettings wavSettings) {
@@ -527,9 +519,9 @@ public class AudioCodecSettings implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * Required when you set (Codec) under (AudioDescriptions)>(CodecSettings) to the value WAV.
+     * Required when you set Codec to the value WAV.
      * 
-     * @return Required when you set (Codec) under (AudioDescriptions)>(CodecSettings) to the value WAV.
+     * @return Required when you set Codec to the value WAV.
      */
 
     public WavSettings getWavSettings() {
@@ -537,10 +529,10 @@ public class AudioCodecSettings implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * Required when you set (Codec) under (AudioDescriptions)>(CodecSettings) to the value WAV.
+     * Required when you set Codec to the value WAV.
      * 
      * @param wavSettings
-     *        Required when you set (Codec) under (AudioDescriptions)>(CodecSettings) to the value WAV.
+     *        Required when you set Codec to the value WAV.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

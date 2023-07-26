@@ -20,7 +20,7 @@
     "customServiceMetadata" : null,
     "customServiceNameForRequest" : null,
     "customSignerProvider" : null,
-    "deprecatedSuppressions" : [ "ClientMutationMethods", "ClientConstructors", "EnumSetterOverload" ],
+    "deprecatedSuppressions" : [ "EnumSetterOverload", "ClientConstructors", "ClientMutationMethods" ],
     "emitLegacyEnumSetterFor" : null,
     "operationModifiers" : null,
     "operationsWithResponseStreamContentLengthValidation" : null,
@@ -231,7 +231,7 @@
       "endpointTrait" : null,
       "exceptions" : [ {
         "exceptionName" : "OcuLimitExceededException",
-        "documentation" : "<p>OCU Limit Exceeded for service limits</p>",
+        "documentation" : "<p>Thrown when the collection you're attempting to create results in a number of search or indexing OCUs that exceeds the account limit. </p>",
         "httpStatusCode" : null
       }, {
         "exceptionName" : "InternalServerException",
@@ -9516,6 +9516,9 @@
       }, {
         "name" : "TIMESERIES",
         "value" : "TIMESERIES"
+      }, {
+        "name" : "VECTORSEARCH",
+        "value" : "VECTORSEARCH"
       } ],
       "errorCode" : null,
       "fullyQualifiedName" : "com.amazonaws.services.opensearchserverless.enum.CollectionType",
@@ -28093,7 +28096,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<p>OCU Limit Exceeded for service limits</p>",
+      "documentation" : "<p>Thrown when the collection you're attempting to create results in a number of search or indexing OCUs that exceeds the account limit. </p>",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : "OcuLimitExceededException",

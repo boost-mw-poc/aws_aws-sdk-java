@@ -29,13 +29,13 @@ public class CmfcSettings implements Serializable, Cloneable, StructuredPojo {
     /**
      * Specify this setting only when your output will be consumed by a downstream repackaging workflow that is
      * sensitive to very small duration differences between video and audio. For this situation, choose Match video
-     * duration (MATCH_VIDEO_DURATION). In all other cases, keep the default value, Default codec duration
-     * (DEFAULT_CODEC_DURATION). When you choose Match video duration, MediaConvert pads the output audio streams with
-     * silence or trims them to ensure that the total duration of each audio stream is at least as long as the total
-     * duration of the video stream. After padding or trimming, the audio stream duration is no more than one frame
-     * longer than the video stream. MediaConvert applies audio padding or trimming only to the end of the last segment
-     * of the output. For unsegmented outputs, MediaConvert adds padding only to the end of the file. When you keep the
-     * default value, any minor discrepancies between audio and video duration will depend on your output audio codec.
+     * duration. In all other cases, keep the default value, Default codec duration. When you choose Match video
+     * duration, MediaConvert pads the output audio streams with silence or trims them to ensure that the total duration
+     * of each audio stream is at least as long as the total duration of the video stream. After padding or trimming, the
+     * audio stream duration is no more than one frame longer than the video stream. MediaConvert applies audio padding
+     * or trimming only to the end of the last segment of the output. For unsegmented outputs, MediaConvert adds padding
+     * only to the end of the file. When you keep the default value, any minor discrepancies between audio and video
+     * duration will depend on your output audio codec.
      */
     private String audioDuration;
     /**
@@ -44,7 +44,7 @@ public class CmfcSettings implements Serializable, Cloneable, StructuredPojo {
      * for the GROUP-ID attribute. For example, if you specify "audio_aac_1" for Audio group ID, it appears in your
      * manifest like this: #EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID="audio_aac_1". Related setting: To associate the rendition
      * group that this audio track belongs to with a video rendition, include the same value that you provide here for
-     * that video output's setting Audio rendition sets (audioRenditionSets).
+     * that video output's setting Audio rendition sets.
      */
     private String audioGroupId;
     /**
@@ -52,13 +52,13 @@ public class CmfcSettings implements Serializable, Cloneable, StructuredPojo {
      * example, say you want to include the audio rendition groups that have the audio group IDs "audio_aac_1" and
      * "audio_dolby". Then you would specify this value: "audio_aac_1,audio_dolby". Related setting: The rendition groups
      * that you include in your comma-separated list should all match values that you specify in the setting Audio group
-     * ID (AudioGroupId) for audio renditions in the same output group as this video rendition. Default behavior: If you
-     * don't specify anything here and for Audio group ID, MediaConvert puts each audio variant in its own audio
-     * rendition group and associates it with every video variant. Each value in your list appears in your HLS parent
-     * manifest in the EXT-X-STREAM-INF tag as the value for the AUDIO attribute. To continue the previous example, say
-     * that the file name for the child manifest for your video rendition is "amazing_video_1.m3u8". Then, in your parent
-     * manifest, each value will appear on separate lines, like this: #EXT-X-STREAM-INF:AUDIO="audio_aac_1"...
-     * amazing_video_1.m3u8 #EXT-X-STREAM-INF:AUDIO="audio_dolby"... amazing_video_1.m3u8
+     * ID for audio renditions in the same output group as this video rendition. Default behavior: If you don't specify
+     * anything here and for Audio group ID, MediaConvert puts each audio variant in its own audio rendition group and
+     * associates it with every video variant. Each value in your list appears in your HLS parent manifest in the
+     * EXT-X-STREAM-INF tag as the value for the AUDIO attribute. To continue the previous example, say that the file
+     * name for the child manifest for your video rendition is "amazing_video_1.m3u8". Then, in your parent manifest,
+     * each value will appear on separate lines, like this: #EXT-X-STREAM-INF:AUDIO="audio_aac_1"... amazing_video_1.m3u8
+     * #EXT-X-STREAM-INF:AUDIO="audio_dolby"... amazing_video_1.m3u8
      */
     private String audioRenditionSets;
     /**
@@ -68,28 +68,26 @@ public class CmfcSettings implements Serializable, Cloneable, StructuredPojo {
      * more information about these attributes, see the Apple documentation article
      * https://developer.apple.com/documentation
      * /http_live_streaming/example_playlists_for_http_live_streaming/adding_alternate_media_to_a_playlist. Choose
-     * Alternate audio, auto select, default (ALTERNATE_AUDIO_AUTO_SELECT_DEFAULT) to set DEFAULT=YES and AUTOSELECT=YES.
-     * Choose this value for only one variant in your output group. Choose Alternate audio, auto select, not default
-     * (ALTERNATE_AUDIO_AUTO_SELECT) to set DEFAULT=NO and AUTOSELECT=YES. Choose Alternate Audio, Not Auto Select to set
-     * DEFAULT=NO and AUTOSELECT=NO. When you don't specify a value for this setting, MediaConvert defaults to Alternate
-     * audio, auto select, default. When there is more than one variant in your output group, you must explicitly choose
-     * a value for this setting.
+     * Alternate audio, auto select, default to set DEFAULT=YES and AUTOSELECT=YES. Choose this value for only one
+     * variant in your output group. Choose Alternate audio, auto select, not default to set DEFAULT=NO and
+     * AUTOSELECT=YES. Choose Alternate Audio, Not Auto Select to set DEFAULT=NO and AUTOSELECT=NO. When you don't
+     * specify a value for this setting, MediaConvert defaults to Alternate audio, auto select, default. When there is
+     * more than one variant in your output group, you must explicitly choose a value for this setting.
      */
     private String audioTrackType;
     /**
      * Specify whether to flag this audio track as descriptive video service (DVS) in your HLS parent manifest. When you
-     * choose Flag (FLAG), MediaConvert includes the parameter CHARACTERISTICS="public.accessibility.describes-video" in
-     * the EXT-X-MEDIA entry for this track. When you keep the default choice, Don't flag (DONT_FLAG), MediaConvert
-     * leaves this parameter out. The DVS flag can help with accessibility on Apple devices. For more information, see
-     * the Apple documentation.
+     * choose Flag, MediaConvert includes the parameter CHARACTERISTICS="public.accessibility.describes-video" in the
+     * EXT-X-MEDIA entry for this track. When you keep the default choice, Don't flag, MediaConvert leaves this parameter
+     * out. The DVS flag can help with accessibility on Apple devices. For more information, see the Apple documentation.
      */
     private String descriptiveVideoServiceFlag;
     /**
-     * Choose Include (INCLUDE) to have MediaConvert generate an HLS child manifest that lists only the I-frames for
-     * this rendition, in addition to your regular manifest for this rendition. You might use this manifest as part of a
+     * Choose Include to have MediaConvert generate an HLS child manifest that lists only the I-frames for this
+     * rendition, in addition to your regular manifest for this rendition. You might use this manifest as part of a
      * workflow that creates preview functions for your video. MediaConvert adds both the I-frame only child manifest and
      * the regular child manifest to the parent manifest. When you don't need the I-frame only child manifest, keep the
-     * default value Exclude (EXCLUDE).
+     * default value Exclude.
      */
     private String iFrameOnlyManifest;
     /**
@@ -104,70 +102,68 @@ public class CmfcSettings implements Serializable, Cloneable, StructuredPojo {
      * value that you specify for ID3 metadata scheme ID URI. For SCTE35 event messages, the InbandEventStream element
      * schemeIdUri will be "urn:scte:scte35:2013:bin". To leave these elements out of your output MPD manifest, set
      * Manifest metadata signaling to Disabled. To enable Manifest metadata signaling, you must also set SCTE-35 source
-     * to Passthrough, ESAM SCTE-35 to insert, or ID3 metadata (TimedMetadata) to Passthrough.
+     * to Passthrough, ESAM SCTE-35 to insert, or ID3 metadata to Passthrough.
      */
     private String manifestMetadataSignaling;
     /**
      * Use this setting only when you specify SCTE-35 markers from ESAM. Choose INSERT to put SCTE-35 markers in this
      * output at the insertion points that you specify in an ESAM XML document. Provide the document in the setting SCC
-     * XML (sccXml).
+     * XML.
      */
     private String scte35Esam;
     /**
-     * Ignore this setting unless you have SCTE-35 markers in your input video file. Choose Passthrough (PASSTHROUGH) if
-     * you want SCTE-35 markers that appear in your input to also appear in this output. Choose None (NONE) if you don't
-     * want those SCTE-35 markers in this output.
+     * Ignore this setting unless you have SCTE-35 markers in your input video file. Choose Passthrough if you want
+     * SCTE-35 markers that appear in your input to also appear in this output. Choose None if you don't want those
+     * SCTE-35 markers in this output.
      */
     private String scte35Source;
     /**
-     * To include ID3 metadata in this output: Set ID3 metadata (timedMetadata) to Passthrough (PASSTHROUGH). Specify
-     * this ID3 metadata in Custom ID3 metadata inserter (timedMetadataInsertion). MediaConvert writes each instance of
-     * ID3 metadata in a separate Event Message (eMSG) box. To exclude this ID3 metadata: Set ID3 metadata to None (NONE)
-     * or leave blank.
+     * To include ID3 metadata in this output: Set ID3 metadata to Passthrough. Specify this ID3 metadata in Custom ID3
+     * metadata inserter. MediaConvert writes each instance of ID3 metadata in a separate Event Message (eMSG) box. To
+     * exclude this ID3 metadata: Set ID3 metadata to None or leave blank.
      */
     private String timedMetadata;
     /**
      * Specify the event message box (eMSG) version for ID3 timed metadata in your output. For more information, see
      * ISO/IEC 23009-1:2022 section 5.10.3.3.3 Syntax. Leave blank to use the default value Version 0. When you specify
-     * Version 1, you must also set ID3 metadata (timedMetadata) to Passthrough.
+     * Version 1, you must also set ID3 metadata to Passthrough.
      */
     private String timedMetadataBoxVersion;
     /**
-     * Specify the event message box (eMSG) scheme ID URI (scheme_id_uri) for ID3 timed metadata in your output. For
-     * more information, see ISO/IEC 23009-1:2022 section 5.10.3.3.4 Semantics. Leave blank to use the default value:
+     * Specify the event message box (eMSG) scheme ID URI for ID3 timed metadata in your output. For more information,
+     * see ISO/IEC 23009-1:2022 section 5.10.3.3.4 Semantics. Leave blank to use the default value:
      * https://aomedia.org/emsg/ID3 When you specify a value for ID3 metadata scheme ID URI, you must also set ID3
-     * metadata (timedMetadata) to Passthrough.
+     * metadata to Passthrough.
      */
     private String timedMetadataSchemeIdUri;
     /**
      * Specify the event message box (eMSG) value for ID3 timed metadata in your output. For more information, see
      * ISO/IEC 23009-1:2022 section 5.10.3.3.4 Semantics. When you specify a value for ID3 Metadata Value, you must also
-     * set ID3 metadata (timedMetadata) to Passthrough.
+     * set ID3 metadata to Passthrough.
      */
     private String timedMetadataValue;
 
     /**
      * Specify this setting only when your output will be consumed by a downstream repackaging workflow that is
      * sensitive to very small duration differences between video and audio. For this situation, choose Match video
-     * duration (MATCH_VIDEO_DURATION). In all other cases, keep the default value, Default codec duration
-     * (DEFAULT_CODEC_DURATION). When you choose Match video duration, MediaConvert pads the output audio streams with
-     * silence or trims them to ensure that the total duration of each audio stream is at least as long as the total
-     * duration of the video stream. After padding or trimming, the audio stream duration is no more than one frame
-     * longer than the video stream. MediaConvert applies audio padding or trimming only to the end of the last segment
-     * of the output. For unsegmented outputs, MediaConvert adds padding only to the end of the file. When you keep the
-     * default value, any minor discrepancies between audio and video duration will depend on your output audio codec.
+     * duration. In all other cases, keep the default value, Default codec duration. When you choose Match video
+     * duration, MediaConvert pads the output audio streams with silence or trims them to ensure that the total duration
+     * of each audio stream is at least as long as the total duration of the video stream. After padding or trimming, the
+     * audio stream duration is no more than one frame longer than the video stream. MediaConvert applies audio padding
+     * or trimming only to the end of the last segment of the output. For unsegmented outputs, MediaConvert adds padding
+     * only to the end of the file. When you keep the default value, any minor discrepancies between audio and video
+     * duration will depend on your output audio codec.
      * 
      * @param audioDuration
      *        Specify this setting only when your output will be consumed by a downstream repackaging workflow that is
      *        sensitive to very small duration differences between video and audio. For this situation, choose Match
-     *        video duration (MATCH_VIDEO_DURATION). In all other cases, keep the default value, Default codec duration
-     *        (DEFAULT_CODEC_DURATION). When you choose Match video duration, MediaConvert pads the output audio streams
-     *        with silence or trims them to ensure that the total duration of each audio stream is at least as long as
-     *        the total duration of the video stream. After padding or trimming, the audio stream duration is no more
-     *        than one frame longer than the video stream. MediaConvert applies audio padding or trimming only to the
-     *        end of the last segment of the output. For unsegmented outputs, MediaConvert adds padding only to the end
-     *        of the file. When you keep the default value, any minor discrepancies between audio and video duration
-     *        will depend on your output audio codec.
+     *        video duration. In all other cases, keep the default value, Default codec duration. When you choose Match
+     *        video duration, MediaConvert pads the output audio streams with silence or trims them to ensure that the
+     *        total duration of each audio stream is at least as long as the total duration of the video stream. After
+     *        padding or trimming, the audio stream duration is no more than one frame longer than the video stream.
+     *        MediaConvert applies audio padding or trimming only to the end of the last segment of the output. For
+     *        unsegmented outputs, MediaConvert adds padding only to the end of the file. When you keep the default
+     *        value, any minor discrepancies between audio and video duration will depend on your output audio codec.
      * @see CmfcAudioDuration
      */
 
@@ -178,24 +174,23 @@ public class CmfcSettings implements Serializable, Cloneable, StructuredPojo {
     /**
      * Specify this setting only when your output will be consumed by a downstream repackaging workflow that is
      * sensitive to very small duration differences between video and audio. For this situation, choose Match video
-     * duration (MATCH_VIDEO_DURATION). In all other cases, keep the default value, Default codec duration
-     * (DEFAULT_CODEC_DURATION). When you choose Match video duration, MediaConvert pads the output audio streams with
-     * silence or trims them to ensure that the total duration of each audio stream is at least as long as the total
-     * duration of the video stream. After padding or trimming, the audio stream duration is no more than one frame
-     * longer than the video stream. MediaConvert applies audio padding or trimming only to the end of the last segment
-     * of the output. For unsegmented outputs, MediaConvert adds padding only to the end of the file. When you keep the
-     * default value, any minor discrepancies between audio and video duration will depend on your output audio codec.
+     * duration. In all other cases, keep the default value, Default codec duration. When you choose Match video
+     * duration, MediaConvert pads the output audio streams with silence or trims them to ensure that the total duration
+     * of each audio stream is at least as long as the total duration of the video stream. After padding or trimming, the
+     * audio stream duration is no more than one frame longer than the video stream. MediaConvert applies audio padding
+     * or trimming only to the end of the last segment of the output. For unsegmented outputs, MediaConvert adds padding
+     * only to the end of the file. When you keep the default value, any minor discrepancies between audio and video
+     * duration will depend on your output audio codec.
      * 
      * @return Specify this setting only when your output will be consumed by a downstream repackaging workflow that is
      *         sensitive to very small duration differences between video and audio. For this situation, choose Match
-     *         video duration (MATCH_VIDEO_DURATION). In all other cases, keep the default value, Default codec duration
-     *         (DEFAULT_CODEC_DURATION). When you choose Match video duration, MediaConvert pads the output audio
-     *         streams with silence or trims them to ensure that the total duration of each audio stream is at least as
-     *         long as the total duration of the video stream. After padding or trimming, the audio stream duration is
-     *         no more than one frame longer than the video stream. MediaConvert applies audio padding or trimming only
-     *         to the end of the last segment of the output. For unsegmented outputs, MediaConvert adds padding only to
-     *         the end of the file. When you keep the default value, any minor discrepancies between audio and video
-     *         duration will depend on your output audio codec.
+     *         video duration. In all other cases, keep the default value, Default codec duration. When you choose Match
+     *         video duration, MediaConvert pads the output audio streams with silence or trims them to ensure that the
+     *         total duration of each audio stream is at least as long as the total duration of the video stream. After
+     *         padding or trimming, the audio stream duration is no more than one frame longer than the video stream.
+     *         MediaConvert applies audio padding or trimming only to the end of the last segment of the output. For
+     *         unsegmented outputs, MediaConvert adds padding only to the end of the file. When you keep the default
+     *         value, any minor discrepancies between audio and video duration will depend on your output audio codec.
      * @see CmfcAudioDuration
      */
 
@@ -206,25 +201,24 @@ public class CmfcSettings implements Serializable, Cloneable, StructuredPojo {
     /**
      * Specify this setting only when your output will be consumed by a downstream repackaging workflow that is
      * sensitive to very small duration differences between video and audio. For this situation, choose Match video
-     * duration (MATCH_VIDEO_DURATION). In all other cases, keep the default value, Default codec duration
-     * (DEFAULT_CODEC_DURATION). When you choose Match video duration, MediaConvert pads the output audio streams with
-     * silence or trims them to ensure that the total duration of each audio stream is at least as long as the total
-     * duration of the video stream. After padding or trimming, the audio stream duration is no more than one frame
-     * longer than the video stream. MediaConvert applies audio padding or trimming only to the end of the last segment
-     * of the output. For unsegmented outputs, MediaConvert adds padding only to the end of the file. When you keep the
-     * default value, any minor discrepancies between audio and video duration will depend on your output audio codec.
+     * duration. In all other cases, keep the default value, Default codec duration. When you choose Match video
+     * duration, MediaConvert pads the output audio streams with silence or trims them to ensure that the total duration
+     * of each audio stream is at least as long as the total duration of the video stream. After padding or trimming, the
+     * audio stream duration is no more than one frame longer than the video stream. MediaConvert applies audio padding
+     * or trimming only to the end of the last segment of the output. For unsegmented outputs, MediaConvert adds padding
+     * only to the end of the file. When you keep the default value, any minor discrepancies between audio and video
+     * duration will depend on your output audio codec.
      * 
      * @param audioDuration
      *        Specify this setting only when your output will be consumed by a downstream repackaging workflow that is
      *        sensitive to very small duration differences between video and audio. For this situation, choose Match
-     *        video duration (MATCH_VIDEO_DURATION). In all other cases, keep the default value, Default codec duration
-     *        (DEFAULT_CODEC_DURATION). When you choose Match video duration, MediaConvert pads the output audio streams
-     *        with silence or trims them to ensure that the total duration of each audio stream is at least as long as
-     *        the total duration of the video stream. After padding or trimming, the audio stream duration is no more
-     *        than one frame longer than the video stream. MediaConvert applies audio padding or trimming only to the
-     *        end of the last segment of the output. For unsegmented outputs, MediaConvert adds padding only to the end
-     *        of the file. When you keep the default value, any minor discrepancies between audio and video duration
-     *        will depend on your output audio codec.
+     *        video duration. In all other cases, keep the default value, Default codec duration. When you choose Match
+     *        video duration, MediaConvert pads the output audio streams with silence or trims them to ensure that the
+     *        total duration of each audio stream is at least as long as the total duration of the video stream. After
+     *        padding or trimming, the audio stream duration is no more than one frame longer than the video stream.
+     *        MediaConvert applies audio padding or trimming only to the end of the last segment of the output. For
+     *        unsegmented outputs, MediaConvert adds padding only to the end of the file. When you keep the default
+     *        value, any minor discrepancies between audio and video duration will depend on your output audio codec.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see CmfcAudioDuration
      */
@@ -237,25 +231,24 @@ public class CmfcSettings implements Serializable, Cloneable, StructuredPojo {
     /**
      * Specify this setting only when your output will be consumed by a downstream repackaging workflow that is
      * sensitive to very small duration differences between video and audio. For this situation, choose Match video
-     * duration (MATCH_VIDEO_DURATION). In all other cases, keep the default value, Default codec duration
-     * (DEFAULT_CODEC_DURATION). When you choose Match video duration, MediaConvert pads the output audio streams with
-     * silence or trims them to ensure that the total duration of each audio stream is at least as long as the total
-     * duration of the video stream. After padding or trimming, the audio stream duration is no more than one frame
-     * longer than the video stream. MediaConvert applies audio padding or trimming only to the end of the last segment
-     * of the output. For unsegmented outputs, MediaConvert adds padding only to the end of the file. When you keep the
-     * default value, any minor discrepancies between audio and video duration will depend on your output audio codec.
+     * duration. In all other cases, keep the default value, Default codec duration. When you choose Match video
+     * duration, MediaConvert pads the output audio streams with silence or trims them to ensure that the total duration
+     * of each audio stream is at least as long as the total duration of the video stream. After padding or trimming, the
+     * audio stream duration is no more than one frame longer than the video stream. MediaConvert applies audio padding
+     * or trimming only to the end of the last segment of the output. For unsegmented outputs, MediaConvert adds padding
+     * only to the end of the file. When you keep the default value, any minor discrepancies between audio and video
+     * duration will depend on your output audio codec.
      * 
      * @param audioDuration
      *        Specify this setting only when your output will be consumed by a downstream repackaging workflow that is
      *        sensitive to very small duration differences between video and audio. For this situation, choose Match
-     *        video duration (MATCH_VIDEO_DURATION). In all other cases, keep the default value, Default codec duration
-     *        (DEFAULT_CODEC_DURATION). When you choose Match video duration, MediaConvert pads the output audio streams
-     *        with silence or trims them to ensure that the total duration of each audio stream is at least as long as
-     *        the total duration of the video stream. After padding or trimming, the audio stream duration is no more
-     *        than one frame longer than the video stream. MediaConvert applies audio padding or trimming only to the
-     *        end of the last segment of the output. For unsegmented outputs, MediaConvert adds padding only to the end
-     *        of the file. When you keep the default value, any minor discrepancies between audio and video duration
-     *        will depend on your output audio codec.
+     *        video duration. In all other cases, keep the default value, Default codec duration. When you choose Match
+     *        video duration, MediaConvert pads the output audio streams with silence or trims them to ensure that the
+     *        total duration of each audio stream is at least as long as the total duration of the video stream. After
+     *        padding or trimming, the audio stream duration is no more than one frame longer than the video stream.
+     *        MediaConvert applies audio padding or trimming only to the end of the last segment of the output. For
+     *        unsegmented outputs, MediaConvert adds padding only to the end of the file. When you keep the default
+     *        value, any minor discrepancies between audio and video duration will depend on your output audio codec.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see CmfcAudioDuration
      */
@@ -271,7 +264,7 @@ public class CmfcSettings implements Serializable, Cloneable, StructuredPojo {
      * for the GROUP-ID attribute. For example, if you specify "audio_aac_1" for Audio group ID, it appears in your
      * manifest like this: #EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID="audio_aac_1". Related setting: To associate the rendition
      * group that this audio track belongs to with a video rendition, include the same value that you provide here for
-     * that video output's setting Audio rendition sets (audioRenditionSets).
+     * that video output's setting Audio rendition sets.
      * 
      * @param audioGroupId
      *        Specify the audio rendition group for this audio rendition. Specify up to one value for each audio output
@@ -279,7 +272,7 @@ public class CmfcSettings implements Serializable, Cloneable, StructuredPojo {
      *        as the value for the GROUP-ID attribute. For example, if you specify "audio_aac_1" for Audio group ID, it
      *        appears in your manifest like this: #EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID="audio_aac_1". Related setting: To
      *        associate the rendition group that this audio track belongs to with a video rendition, include the same
-     *        value that you provide here for that video output's setting Audio rendition sets (audioRenditionSets).
+     *        value that you provide here for that video output's setting Audio rendition sets.
      */
 
     public void setAudioGroupId(String audioGroupId) {
@@ -292,15 +285,14 @@ public class CmfcSettings implements Serializable, Cloneable, StructuredPojo {
      * for the GROUP-ID attribute. For example, if you specify "audio_aac_1" for Audio group ID, it appears in your
      * manifest like this: #EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID="audio_aac_1". Related setting: To associate the rendition
      * group that this audio track belongs to with a video rendition, include the same value that you provide here for
-     * that video output's setting Audio rendition sets (audioRenditionSets).
+     * that video output's setting Audio rendition sets.
      * 
      * @return Specify the audio rendition group for this audio rendition. Specify up to one value for each audio output
      *         in your output group. This value appears in your HLS parent manifest in the EXT-X-MEDIA tag of
      *         TYPE=AUDIO, as the value for the GROUP-ID attribute. For example, if you specify "audio_aac_1" for Audio
      *         group ID, it appears in your manifest like this: #EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID="audio_aac_1". Related
      *         setting: To associate the rendition group that this audio track belongs to with a video rendition,
-     *         include the same value that you provide here for that video output's setting Audio rendition sets
-     *         (audioRenditionSets).
+     *         include the same value that you provide here for that video output's setting Audio rendition sets.
      */
 
     public String getAudioGroupId() {
@@ -313,7 +305,7 @@ public class CmfcSettings implements Serializable, Cloneable, StructuredPojo {
      * for the GROUP-ID attribute. For example, if you specify "audio_aac_1" for Audio group ID, it appears in your
      * manifest like this: #EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID="audio_aac_1". Related setting: To associate the rendition
      * group that this audio track belongs to with a video rendition, include the same value that you provide here for
-     * that video output's setting Audio rendition sets (audioRenditionSets).
+     * that video output's setting Audio rendition sets.
      * 
      * @param audioGroupId
      *        Specify the audio rendition group for this audio rendition. Specify up to one value for each audio output
@@ -321,7 +313,7 @@ public class CmfcSettings implements Serializable, Cloneable, StructuredPojo {
      *        as the value for the GROUP-ID attribute. For example, if you specify "audio_aac_1" for Audio group ID, it
      *        appears in your manifest like this: #EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID="audio_aac_1". Related setting: To
      *        associate the rendition group that this audio track belongs to with a video rendition, include the same
-     *        value that you provide here for that video output's setting Audio rendition sets (audioRenditionSets).
+     *        value that you provide here for that video output's setting Audio rendition sets.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -335,26 +327,26 @@ public class CmfcSettings implements Serializable, Cloneable, StructuredPojo {
      * example, say you want to include the audio rendition groups that have the audio group IDs "audio_aac_1" and
      * "audio_dolby". Then you would specify this value: "audio_aac_1,audio_dolby". Related setting: The rendition groups
      * that you include in your comma-separated list should all match values that you specify in the setting Audio group
-     * ID (AudioGroupId) for audio renditions in the same output group as this video rendition. Default behavior: If you
-     * don't specify anything here and for Audio group ID, MediaConvert puts each audio variant in its own audio
-     * rendition group and associates it with every video variant. Each value in your list appears in your HLS parent
-     * manifest in the EXT-X-STREAM-INF tag as the value for the AUDIO attribute. To continue the previous example, say
-     * that the file name for the child manifest for your video rendition is "amazing_video_1.m3u8". Then, in your parent
-     * manifest, each value will appear on separate lines, like this: #EXT-X-STREAM-INF:AUDIO="audio_aac_1"...
-     * amazing_video_1.m3u8 #EXT-X-STREAM-INF:AUDIO="audio_dolby"... amazing_video_1.m3u8
+     * ID for audio renditions in the same output group as this video rendition. Default behavior: If you don't specify
+     * anything here and for Audio group ID, MediaConvert puts each audio variant in its own audio rendition group and
+     * associates it with every video variant. Each value in your list appears in your HLS parent manifest in the
+     * EXT-X-STREAM-INF tag as the value for the AUDIO attribute. To continue the previous example, say that the file
+     * name for the child manifest for your video rendition is "amazing_video_1.m3u8". Then, in your parent manifest,
+     * each value will appear on separate lines, like this: #EXT-X-STREAM-INF:AUDIO="audio_aac_1"... amazing_video_1.m3u8
+     * #EXT-X-STREAM-INF:AUDIO="audio_dolby"... amazing_video_1.m3u8
      * 
      * @param audioRenditionSets
      *        List the audio rendition groups that you want included with this video rendition. Use a comma-separated
      *        list. For example, say you want to include the audio rendition groups that have the audio group IDs
      *        "audio_aac_1" and "audio_dolby". Then you would specify this value: "audio_aac_1,audio_dolby". Related
      *        setting: The rendition groups that you include in your comma-separated list should all match values that
-     *        you specify in the setting Audio group ID (AudioGroupId) for audio renditions in the same output group as
-     *        this video rendition. Default behavior: If you don't specify anything here and for Audio group ID,
-     *        MediaConvert puts each audio variant in its own audio rendition group and associates it with every video
-     *        variant. Each value in your list appears in your HLS parent manifest in the EXT-X-STREAM-INF tag as the
-     *        value for the AUDIO attribute. To continue the previous example, say that the file name for the child
-     *        manifest for your video rendition is "amazing_video_1.m3u8". Then, in your parent manifest, each value
-     *        will appear on separate lines, like this: #EXT-X-STREAM-INF:AUDIO="audio_aac_1"... amazing_video_1.m3u8
+     *        you specify in the setting Audio group ID for audio renditions in the same output group as this video
+     *        rendition. Default behavior: If you don't specify anything here and for Audio group ID, MediaConvert puts
+     *        each audio variant in its own audio rendition group and associates it with every video variant. Each value
+     *        in your list appears in your HLS parent manifest in the EXT-X-STREAM-INF tag as the value for the AUDIO
+     *        attribute. To continue the previous example, say that the file name for the child manifest for your video
+     *        rendition is "amazing_video_1.m3u8". Then, in your parent manifest, each value will appear on separate
+     *        lines, like this: #EXT-X-STREAM-INF:AUDIO="audio_aac_1"... amazing_video_1.m3u8
      *        #EXT-X-STREAM-INF:AUDIO="audio_dolby"... amazing_video_1.m3u8
      */
 
@@ -367,25 +359,25 @@ public class CmfcSettings implements Serializable, Cloneable, StructuredPojo {
      * example, say you want to include the audio rendition groups that have the audio group IDs "audio_aac_1" and
      * "audio_dolby". Then you would specify this value: "audio_aac_1,audio_dolby". Related setting: The rendition groups
      * that you include in your comma-separated list should all match values that you specify in the setting Audio group
-     * ID (AudioGroupId) for audio renditions in the same output group as this video rendition. Default behavior: If you
-     * don't specify anything here and for Audio group ID, MediaConvert puts each audio variant in its own audio
-     * rendition group and associates it with every video variant. Each value in your list appears in your HLS parent
-     * manifest in the EXT-X-STREAM-INF tag as the value for the AUDIO attribute. To continue the previous example, say
-     * that the file name for the child manifest for your video rendition is "amazing_video_1.m3u8". Then, in your parent
-     * manifest, each value will appear on separate lines, like this: #EXT-X-STREAM-INF:AUDIO="audio_aac_1"...
-     * amazing_video_1.m3u8 #EXT-X-STREAM-INF:AUDIO="audio_dolby"... amazing_video_1.m3u8
+     * ID for audio renditions in the same output group as this video rendition. Default behavior: If you don't specify
+     * anything here and for Audio group ID, MediaConvert puts each audio variant in its own audio rendition group and
+     * associates it with every video variant. Each value in your list appears in your HLS parent manifest in the
+     * EXT-X-STREAM-INF tag as the value for the AUDIO attribute. To continue the previous example, say that the file
+     * name for the child manifest for your video rendition is "amazing_video_1.m3u8". Then, in your parent manifest,
+     * each value will appear on separate lines, like this: #EXT-X-STREAM-INF:AUDIO="audio_aac_1"... amazing_video_1.m3u8
+     * #EXT-X-STREAM-INF:AUDIO="audio_dolby"... amazing_video_1.m3u8
      * 
      * @return List the audio rendition groups that you want included with this video rendition. Use a comma-separated
      *         list. For example, say you want to include the audio rendition groups that have the audio group IDs
      *         "audio_aac_1" and "audio_dolby". Then you would specify this value: "audio_aac_1,audio_dolby". Related
      *         setting: The rendition groups that you include in your comma-separated list should all match values that
-     *         you specify in the setting Audio group ID (AudioGroupId) for audio renditions in the same output group as
-     *         this video rendition. Default behavior: If you don't specify anything here and for Audio group ID,
-     *         MediaConvert puts each audio variant in its own audio rendition group and associates it with every video
-     *         variant. Each value in your list appears in your HLS parent manifest in the EXT-X-STREAM-INF tag as the
-     *         value for the AUDIO attribute. To continue the previous example, say that the file name for the child
-     *         manifest for your video rendition is "amazing_video_1.m3u8". Then, in your parent manifest, each value
-     *         will appear on separate lines, like this: #EXT-X-STREAM-INF:AUDIO="audio_aac_1"... amazing_video_1.m3u8
+     *         you specify in the setting Audio group ID for audio renditions in the same output group as this video
+     *         rendition. Default behavior: If you don't specify anything here and for Audio group ID, MediaConvert puts
+     *         each audio variant in its own audio rendition group and associates it with every video variant. Each
+     *         value in your list appears in your HLS parent manifest in the EXT-X-STREAM-INF tag as the value for the
+     *         AUDIO attribute. To continue the previous example, say that the file name for the child manifest for your
+     *         video rendition is "amazing_video_1.m3u8". Then, in your parent manifest, each value will appear on
+     *         separate lines, like this: #EXT-X-STREAM-INF:AUDIO="audio_aac_1"... amazing_video_1.m3u8
      *         #EXT-X-STREAM-INF:AUDIO="audio_dolby"... amazing_video_1.m3u8
      */
 
@@ -398,26 +390,26 @@ public class CmfcSettings implements Serializable, Cloneable, StructuredPojo {
      * example, say you want to include the audio rendition groups that have the audio group IDs "audio_aac_1" and
      * "audio_dolby". Then you would specify this value: "audio_aac_1,audio_dolby". Related setting: The rendition groups
      * that you include in your comma-separated list should all match values that you specify in the setting Audio group
-     * ID (AudioGroupId) for audio renditions in the same output group as this video rendition. Default behavior: If you
-     * don't specify anything here and for Audio group ID, MediaConvert puts each audio variant in its own audio
-     * rendition group and associates it with every video variant. Each value in your list appears in your HLS parent
-     * manifest in the EXT-X-STREAM-INF tag as the value for the AUDIO attribute. To continue the previous example, say
-     * that the file name for the child manifest for your video rendition is "amazing_video_1.m3u8". Then, in your parent
-     * manifest, each value will appear on separate lines, like this: #EXT-X-STREAM-INF:AUDIO="audio_aac_1"...
-     * amazing_video_1.m3u8 #EXT-X-STREAM-INF:AUDIO="audio_dolby"... amazing_video_1.m3u8
+     * ID for audio renditions in the same output group as this video rendition. Default behavior: If you don't specify
+     * anything here and for Audio group ID, MediaConvert puts each audio variant in its own audio rendition group and
+     * associates it with every video variant. Each value in your list appears in your HLS parent manifest in the
+     * EXT-X-STREAM-INF tag as the value for the AUDIO attribute. To continue the previous example, say that the file
+     * name for the child manifest for your video rendition is "amazing_video_1.m3u8". Then, in your parent manifest,
+     * each value will appear on separate lines, like this: #EXT-X-STREAM-INF:AUDIO="audio_aac_1"... amazing_video_1.m3u8
+     * #EXT-X-STREAM-INF:AUDIO="audio_dolby"... amazing_video_1.m3u8
      * 
      * @param audioRenditionSets
      *        List the audio rendition groups that you want included with this video rendition. Use a comma-separated
      *        list. For example, say you want to include the audio rendition groups that have the audio group IDs
      *        "audio_aac_1" and "audio_dolby". Then you would specify this value: "audio_aac_1,audio_dolby". Related
      *        setting: The rendition groups that you include in your comma-separated list should all match values that
-     *        you specify in the setting Audio group ID (AudioGroupId) for audio renditions in the same output group as
-     *        this video rendition. Default behavior: If you don't specify anything here and for Audio group ID,
-     *        MediaConvert puts each audio variant in its own audio rendition group and associates it with every video
-     *        variant. Each value in your list appears in your HLS parent manifest in the EXT-X-STREAM-INF tag as the
-     *        value for the AUDIO attribute. To continue the previous example, say that the file name for the child
-     *        manifest for your video rendition is "amazing_video_1.m3u8". Then, in your parent manifest, each value
-     *        will appear on separate lines, like this: #EXT-X-STREAM-INF:AUDIO="audio_aac_1"... amazing_video_1.m3u8
+     *        you specify in the setting Audio group ID for audio renditions in the same output group as this video
+     *        rendition. Default behavior: If you don't specify anything here and for Audio group ID, MediaConvert puts
+     *        each audio variant in its own audio rendition group and associates it with every video variant. Each value
+     *        in your list appears in your HLS parent manifest in the EXT-X-STREAM-INF tag as the value for the AUDIO
+     *        attribute. To continue the previous example, say that the file name for the child manifest for your video
+     *        rendition is "amazing_video_1.m3u8". Then, in your parent manifest, each value will appear on separate
+     *        lines, like this: #EXT-X-STREAM-INF:AUDIO="audio_aac_1"... amazing_video_1.m3u8
      *        #EXT-X-STREAM-INF:AUDIO="audio_dolby"... amazing_video_1.m3u8
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -434,12 +426,11 @@ public class CmfcSettings implements Serializable, Cloneable, StructuredPojo {
      * more information about these attributes, see the Apple documentation article
      * https://developer.apple.com/documentation
      * /http_live_streaming/example_playlists_for_http_live_streaming/adding_alternate_media_to_a_playlist. Choose
-     * Alternate audio, auto select, default (ALTERNATE_AUDIO_AUTO_SELECT_DEFAULT) to set DEFAULT=YES and AUTOSELECT=YES.
-     * Choose this value for only one variant in your output group. Choose Alternate audio, auto select, not default
-     * (ALTERNATE_AUDIO_AUTO_SELECT) to set DEFAULT=NO and AUTOSELECT=YES. Choose Alternate Audio, Not Auto Select to set
-     * DEFAULT=NO and AUTOSELECT=NO. When you don't specify a value for this setting, MediaConvert defaults to Alternate
-     * audio, auto select, default. When there is more than one variant in your output group, you must explicitly choose
-     * a value for this setting.
+     * Alternate audio, auto select, default to set DEFAULT=YES and AUTOSELECT=YES. Choose this value for only one
+     * variant in your output group. Choose Alternate audio, auto select, not default to set DEFAULT=NO and
+     * AUTOSELECT=YES. Choose Alternate Audio, Not Auto Select to set DEFAULT=NO and AUTOSELECT=NO. When you don't
+     * specify a value for this setting, MediaConvert defaults to Alternate audio, auto select, default. When there is
+     * more than one variant in your output group, you must explicitly choose a value for this setting.
      * 
      * @param audioTrackType
      *        Use this setting to control the values that MediaConvert puts in your HLS parent playlist to control how
@@ -447,13 +438,12 @@ public class CmfcSettings implements Serializable, Cloneable, StructuredPojo {
      *        values that MediaConvert writes for the DEFAULT and AUTOSELECT attributes of the EXT-X-MEDIA entry for the
      *        audio variant. For more information about these attributes, see the Apple documentation article
      *        https://developer.apple.com/documentation/http_live_streaming/example_playlists_for_http_live_streaming/
-     *        adding_alternate_media_to_a_playlist. Choose Alternate audio, auto select, default
-     *        (ALTERNATE_AUDIO_AUTO_SELECT_DEFAULT) to set DEFAULT=YES and AUTOSELECT=YES. Choose this value for only
-     *        one variant in your output group. Choose Alternate audio, auto select, not default
-     *        (ALTERNATE_AUDIO_AUTO_SELECT) to set DEFAULT=NO and AUTOSELECT=YES. Choose Alternate Audio, Not Auto
-     *        Select to set DEFAULT=NO and AUTOSELECT=NO. When you don't specify a value for this setting, MediaConvert
-     *        defaults to Alternate audio, auto select, default. When there is more than one variant in your output
-     *        group, you must explicitly choose a value for this setting.
+     *        adding_alternate_media_to_a_playlist. Choose Alternate audio, auto select, default to set DEFAULT=YES and
+     *        AUTOSELECT=YES. Choose this value for only one variant in your output group. Choose Alternate audio, auto
+     *        select, not default to set DEFAULT=NO and AUTOSELECT=YES. Choose Alternate Audio, Not Auto Select to set
+     *        DEFAULT=NO and AUTOSELECT=NO. When you don't specify a value for this setting, MediaConvert defaults to
+     *        Alternate audio, auto select, default. When there is more than one variant in your output group, you must
+     *        explicitly choose a value for this setting.
      * @see CmfcAudioTrackType
      */
 
@@ -468,25 +458,23 @@ public class CmfcSettings implements Serializable, Cloneable, StructuredPojo {
      * more information about these attributes, see the Apple documentation article
      * https://developer.apple.com/documentation
      * /http_live_streaming/example_playlists_for_http_live_streaming/adding_alternate_media_to_a_playlist. Choose
-     * Alternate audio, auto select, default (ALTERNATE_AUDIO_AUTO_SELECT_DEFAULT) to set DEFAULT=YES and AUTOSELECT=YES.
-     * Choose this value for only one variant in your output group. Choose Alternate audio, auto select, not default
-     * (ALTERNATE_AUDIO_AUTO_SELECT) to set DEFAULT=NO and AUTOSELECT=YES. Choose Alternate Audio, Not Auto Select to set
-     * DEFAULT=NO and AUTOSELECT=NO. When you don't specify a value for this setting, MediaConvert defaults to Alternate
-     * audio, auto select, default. When there is more than one variant in your output group, you must explicitly choose
-     * a value for this setting.
+     * Alternate audio, auto select, default to set DEFAULT=YES and AUTOSELECT=YES. Choose this value for only one
+     * variant in your output group. Choose Alternate audio, auto select, not default to set DEFAULT=NO and
+     * AUTOSELECT=YES. Choose Alternate Audio, Not Auto Select to set DEFAULT=NO and AUTOSELECT=NO. When you don't
+     * specify a value for this setting, MediaConvert defaults to Alternate audio, auto select, default. When there is
+     * more than one variant in your output group, you must explicitly choose a value for this setting.
      * 
      * @return Use this setting to control the values that MediaConvert puts in your HLS parent playlist to control how
      *         the client player selects which audio track to play. The other options for this setting determine the
      *         values that MediaConvert writes for the DEFAULT and AUTOSELECT attributes of the EXT-X-MEDIA entry for
      *         the audio variant. For more information about these attributes, see the Apple documentation article
      *         https://developer.apple.com/documentation/http_live_streaming/example_playlists_for_http_live_streaming/
-     *         adding_alternate_media_to_a_playlist. Choose Alternate audio, auto select, default
-     *         (ALTERNATE_AUDIO_AUTO_SELECT_DEFAULT) to set DEFAULT=YES and AUTOSELECT=YES. Choose this value for only
-     *         one variant in your output group. Choose Alternate audio, auto select, not default
-     *         (ALTERNATE_AUDIO_AUTO_SELECT) to set DEFAULT=NO and AUTOSELECT=YES. Choose Alternate Audio, Not Auto
-     *         Select to set DEFAULT=NO and AUTOSELECT=NO. When you don't specify a value for this setting, MediaConvert
-     *         defaults to Alternate audio, auto select, default. When there is more than one variant in your output
-     *         group, you must explicitly choose a value for this setting.
+     *         adding_alternate_media_to_a_playlist. Choose Alternate audio, auto select, default to set DEFAULT=YES and
+     *         AUTOSELECT=YES. Choose this value for only one variant in your output group. Choose Alternate audio, auto
+     *         select, not default to set DEFAULT=NO and AUTOSELECT=YES. Choose Alternate Audio, Not Auto Select to set
+     *         DEFAULT=NO and AUTOSELECT=NO. When you don't specify a value for this setting, MediaConvert defaults to
+     *         Alternate audio, auto select, default. When there is more than one variant in your output group, you must
+     *         explicitly choose a value for this setting.
      * @see CmfcAudioTrackType
      */
 
@@ -501,12 +489,11 @@ public class CmfcSettings implements Serializable, Cloneable, StructuredPojo {
      * more information about these attributes, see the Apple documentation article
      * https://developer.apple.com/documentation
      * /http_live_streaming/example_playlists_for_http_live_streaming/adding_alternate_media_to_a_playlist. Choose
-     * Alternate audio, auto select, default (ALTERNATE_AUDIO_AUTO_SELECT_DEFAULT) to set DEFAULT=YES and AUTOSELECT=YES.
-     * Choose this value for only one variant in your output group. Choose Alternate audio, auto select, not default
-     * (ALTERNATE_AUDIO_AUTO_SELECT) to set DEFAULT=NO and AUTOSELECT=YES. Choose Alternate Audio, Not Auto Select to set
-     * DEFAULT=NO and AUTOSELECT=NO. When you don't specify a value for this setting, MediaConvert defaults to Alternate
-     * audio, auto select, default. When there is more than one variant in your output group, you must explicitly choose
-     * a value for this setting.
+     * Alternate audio, auto select, default to set DEFAULT=YES and AUTOSELECT=YES. Choose this value for only one
+     * variant in your output group. Choose Alternate audio, auto select, not default to set DEFAULT=NO and
+     * AUTOSELECT=YES. Choose Alternate Audio, Not Auto Select to set DEFAULT=NO and AUTOSELECT=NO. When you don't
+     * specify a value for this setting, MediaConvert defaults to Alternate audio, auto select, default. When there is
+     * more than one variant in your output group, you must explicitly choose a value for this setting.
      * 
      * @param audioTrackType
      *        Use this setting to control the values that MediaConvert puts in your HLS parent playlist to control how
@@ -514,13 +501,12 @@ public class CmfcSettings implements Serializable, Cloneable, StructuredPojo {
      *        values that MediaConvert writes for the DEFAULT and AUTOSELECT attributes of the EXT-X-MEDIA entry for the
      *        audio variant. For more information about these attributes, see the Apple documentation article
      *        https://developer.apple.com/documentation/http_live_streaming/example_playlists_for_http_live_streaming/
-     *        adding_alternate_media_to_a_playlist. Choose Alternate audio, auto select, default
-     *        (ALTERNATE_AUDIO_AUTO_SELECT_DEFAULT) to set DEFAULT=YES and AUTOSELECT=YES. Choose this value for only
-     *        one variant in your output group. Choose Alternate audio, auto select, not default
-     *        (ALTERNATE_AUDIO_AUTO_SELECT) to set DEFAULT=NO and AUTOSELECT=YES. Choose Alternate Audio, Not Auto
-     *        Select to set DEFAULT=NO and AUTOSELECT=NO. When you don't specify a value for this setting, MediaConvert
-     *        defaults to Alternate audio, auto select, default. When there is more than one variant in your output
-     *        group, you must explicitly choose a value for this setting.
+     *        adding_alternate_media_to_a_playlist. Choose Alternate audio, auto select, default to set DEFAULT=YES and
+     *        AUTOSELECT=YES. Choose this value for only one variant in your output group. Choose Alternate audio, auto
+     *        select, not default to set DEFAULT=NO and AUTOSELECT=YES. Choose Alternate Audio, Not Auto Select to set
+     *        DEFAULT=NO and AUTOSELECT=NO. When you don't specify a value for this setting, MediaConvert defaults to
+     *        Alternate audio, auto select, default. When there is more than one variant in your output group, you must
+     *        explicitly choose a value for this setting.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see CmfcAudioTrackType
      */
@@ -537,12 +523,11 @@ public class CmfcSettings implements Serializable, Cloneable, StructuredPojo {
      * more information about these attributes, see the Apple documentation article
      * https://developer.apple.com/documentation
      * /http_live_streaming/example_playlists_for_http_live_streaming/adding_alternate_media_to_a_playlist. Choose
-     * Alternate audio, auto select, default (ALTERNATE_AUDIO_AUTO_SELECT_DEFAULT) to set DEFAULT=YES and AUTOSELECT=YES.
-     * Choose this value for only one variant in your output group. Choose Alternate audio, auto select, not default
-     * (ALTERNATE_AUDIO_AUTO_SELECT) to set DEFAULT=NO and AUTOSELECT=YES. Choose Alternate Audio, Not Auto Select to set
-     * DEFAULT=NO and AUTOSELECT=NO. When you don't specify a value for this setting, MediaConvert defaults to Alternate
-     * audio, auto select, default. When there is more than one variant in your output group, you must explicitly choose
-     * a value for this setting.
+     * Alternate audio, auto select, default to set DEFAULT=YES and AUTOSELECT=YES. Choose this value for only one
+     * variant in your output group. Choose Alternate audio, auto select, not default to set DEFAULT=NO and
+     * AUTOSELECT=YES. Choose Alternate Audio, Not Auto Select to set DEFAULT=NO and AUTOSELECT=NO. When you don't
+     * specify a value for this setting, MediaConvert defaults to Alternate audio, auto select, default. When there is
+     * more than one variant in your output group, you must explicitly choose a value for this setting.
      * 
      * @param audioTrackType
      *        Use this setting to control the values that MediaConvert puts in your HLS parent playlist to control how
@@ -550,13 +535,12 @@ public class CmfcSettings implements Serializable, Cloneable, StructuredPojo {
      *        values that MediaConvert writes for the DEFAULT and AUTOSELECT attributes of the EXT-X-MEDIA entry for the
      *        audio variant. For more information about these attributes, see the Apple documentation article
      *        https://developer.apple.com/documentation/http_live_streaming/example_playlists_for_http_live_streaming/
-     *        adding_alternate_media_to_a_playlist. Choose Alternate audio, auto select, default
-     *        (ALTERNATE_AUDIO_AUTO_SELECT_DEFAULT) to set DEFAULT=YES and AUTOSELECT=YES. Choose this value for only
-     *        one variant in your output group. Choose Alternate audio, auto select, not default
-     *        (ALTERNATE_AUDIO_AUTO_SELECT) to set DEFAULT=NO and AUTOSELECT=YES. Choose Alternate Audio, Not Auto
-     *        Select to set DEFAULT=NO and AUTOSELECT=NO. When you don't specify a value for this setting, MediaConvert
-     *        defaults to Alternate audio, auto select, default. When there is more than one variant in your output
-     *        group, you must explicitly choose a value for this setting.
+     *        adding_alternate_media_to_a_playlist. Choose Alternate audio, auto select, default to set DEFAULT=YES and
+     *        AUTOSELECT=YES. Choose this value for only one variant in your output group. Choose Alternate audio, auto
+     *        select, not default to set DEFAULT=NO and AUTOSELECT=YES. Choose Alternate Audio, Not Auto Select to set
+     *        DEFAULT=NO and AUTOSELECT=NO. When you don't specify a value for this setting, MediaConvert defaults to
+     *        Alternate audio, auto select, default. When there is more than one variant in your output group, you must
+     *        explicitly choose a value for this setting.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see CmfcAudioTrackType
      */
@@ -568,17 +552,16 @@ public class CmfcSettings implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * Specify whether to flag this audio track as descriptive video service (DVS) in your HLS parent manifest. When you
-     * choose Flag (FLAG), MediaConvert includes the parameter CHARACTERISTICS="public.accessibility.describes-video" in
-     * the EXT-X-MEDIA entry for this track. When you keep the default choice, Don't flag (DONT_FLAG), MediaConvert
-     * leaves this parameter out. The DVS flag can help with accessibility on Apple devices. For more information, see
-     * the Apple documentation.
+     * choose Flag, MediaConvert includes the parameter CHARACTERISTICS="public.accessibility.describes-video" in the
+     * EXT-X-MEDIA entry for this track. When you keep the default choice, Don't flag, MediaConvert leaves this parameter
+     * out. The DVS flag can help with accessibility on Apple devices. For more information, see the Apple documentation.
      * 
      * @param descriptiveVideoServiceFlag
      *        Specify whether to flag this audio track as descriptive video service (DVS) in your HLS parent manifest.
-     *        When you choose Flag (FLAG), MediaConvert includes the parameter
+     *        When you choose Flag, MediaConvert includes the parameter
      *        CHARACTERISTICS="public.accessibility.describes-video" in the EXT-X-MEDIA entry for this track. When you
-     *        keep the default choice, Don't flag (DONT_FLAG), MediaConvert leaves this parameter out. The DVS flag can
-     *        help with accessibility on Apple devices. For more information, see the Apple documentation.
+     *        keep the default choice, Don't flag, MediaConvert leaves this parameter out. The DVS flag can help with
+     *        accessibility on Apple devices. For more information, see the Apple documentation.
      * @see CmfcDescriptiveVideoServiceFlag
      */
 
@@ -588,16 +571,15 @@ public class CmfcSettings implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * Specify whether to flag this audio track as descriptive video service (DVS) in your HLS parent manifest. When you
-     * choose Flag (FLAG), MediaConvert includes the parameter CHARACTERISTICS="public.accessibility.describes-video" in
-     * the EXT-X-MEDIA entry for this track. When you keep the default choice, Don't flag (DONT_FLAG), MediaConvert
-     * leaves this parameter out. The DVS flag can help with accessibility on Apple devices. For more information, see
-     * the Apple documentation.
+     * choose Flag, MediaConvert includes the parameter CHARACTERISTICS="public.accessibility.describes-video" in the
+     * EXT-X-MEDIA entry for this track. When you keep the default choice, Don't flag, MediaConvert leaves this parameter
+     * out. The DVS flag can help with accessibility on Apple devices. For more information, see the Apple documentation.
      * 
      * @return Specify whether to flag this audio track as descriptive video service (DVS) in your HLS parent manifest.
-     *         When you choose Flag (FLAG), MediaConvert includes the parameter
+     *         When you choose Flag, MediaConvert includes the parameter
      *         CHARACTERISTICS="public.accessibility.describes-video" in the EXT-X-MEDIA entry for this track. When you
-     *         keep the default choice, Don't flag (DONT_FLAG), MediaConvert leaves this parameter out. The DVS flag can
-     *         help with accessibility on Apple devices. For more information, see the Apple documentation.
+     *         keep the default choice, Don't flag, MediaConvert leaves this parameter out. The DVS flag can help with
+     *         accessibility on Apple devices. For more information, see the Apple documentation.
      * @see CmfcDescriptiveVideoServiceFlag
      */
 
@@ -607,17 +589,16 @@ public class CmfcSettings implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * Specify whether to flag this audio track as descriptive video service (DVS) in your HLS parent manifest. When you
-     * choose Flag (FLAG), MediaConvert includes the parameter CHARACTERISTICS="public.accessibility.describes-video" in
-     * the EXT-X-MEDIA entry for this track. When you keep the default choice, Don't flag (DONT_FLAG), MediaConvert
-     * leaves this parameter out. The DVS flag can help with accessibility on Apple devices. For more information, see
-     * the Apple documentation.
+     * choose Flag, MediaConvert includes the parameter CHARACTERISTICS="public.accessibility.describes-video" in the
+     * EXT-X-MEDIA entry for this track. When you keep the default choice, Don't flag, MediaConvert leaves this parameter
+     * out. The DVS flag can help with accessibility on Apple devices. For more information, see the Apple documentation.
      * 
      * @param descriptiveVideoServiceFlag
      *        Specify whether to flag this audio track as descriptive video service (DVS) in your HLS parent manifest.
-     *        When you choose Flag (FLAG), MediaConvert includes the parameter
+     *        When you choose Flag, MediaConvert includes the parameter
      *        CHARACTERISTICS="public.accessibility.describes-video" in the EXT-X-MEDIA entry for this track. When you
-     *        keep the default choice, Don't flag (DONT_FLAG), MediaConvert leaves this parameter out. The DVS flag can
-     *        help with accessibility on Apple devices. For more information, see the Apple documentation.
+     *        keep the default choice, Don't flag, MediaConvert leaves this parameter out. The DVS flag can help with
+     *        accessibility on Apple devices. For more information, see the Apple documentation.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see CmfcDescriptiveVideoServiceFlag
      */
@@ -629,17 +610,16 @@ public class CmfcSettings implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * Specify whether to flag this audio track as descriptive video service (DVS) in your HLS parent manifest. When you
-     * choose Flag (FLAG), MediaConvert includes the parameter CHARACTERISTICS="public.accessibility.describes-video" in
-     * the EXT-X-MEDIA entry for this track. When you keep the default choice, Don't flag (DONT_FLAG), MediaConvert
-     * leaves this parameter out. The DVS flag can help with accessibility on Apple devices. For more information, see
-     * the Apple documentation.
+     * choose Flag, MediaConvert includes the parameter CHARACTERISTICS="public.accessibility.describes-video" in the
+     * EXT-X-MEDIA entry for this track. When you keep the default choice, Don't flag, MediaConvert leaves this parameter
+     * out. The DVS flag can help with accessibility on Apple devices. For more information, see the Apple documentation.
      * 
      * @param descriptiveVideoServiceFlag
      *        Specify whether to flag this audio track as descriptive video service (DVS) in your HLS parent manifest.
-     *        When you choose Flag (FLAG), MediaConvert includes the parameter
+     *        When you choose Flag, MediaConvert includes the parameter
      *        CHARACTERISTICS="public.accessibility.describes-video" in the EXT-X-MEDIA entry for this track. When you
-     *        keep the default choice, Don't flag (DONT_FLAG), MediaConvert leaves this parameter out. The DVS flag can
-     *        help with accessibility on Apple devices. For more information, see the Apple documentation.
+     *        keep the default choice, Don't flag, MediaConvert leaves this parameter out. The DVS flag can help with
+     *        accessibility on Apple devices. For more information, see the Apple documentation.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see CmfcDescriptiveVideoServiceFlag
      */
@@ -650,18 +630,18 @@ public class CmfcSettings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Choose Include (INCLUDE) to have MediaConvert generate an HLS child manifest that lists only the I-frames for
-     * this rendition, in addition to your regular manifest for this rendition. You might use this manifest as part of a
+     * Choose Include to have MediaConvert generate an HLS child manifest that lists only the I-frames for this
+     * rendition, in addition to your regular manifest for this rendition. You might use this manifest as part of a
      * workflow that creates preview functions for your video. MediaConvert adds both the I-frame only child manifest and
      * the regular child manifest to the parent manifest. When you don't need the I-frame only child manifest, keep the
-     * default value Exclude (EXCLUDE).
+     * default value Exclude.
      * 
      * @param iFrameOnlyManifest
-     *        Choose Include (INCLUDE) to have MediaConvert generate an HLS child manifest that lists only the I-frames
-     *        for this rendition, in addition to your regular manifest for this rendition. You might use this manifest
-     *        as part of a workflow that creates preview functions for your video. MediaConvert adds both the I-frame
-     *        only child manifest and the regular child manifest to the parent manifest. When you don't need the I-frame
-     *        only child manifest, keep the default value Exclude (EXCLUDE).
+     *        Choose Include to have MediaConvert generate an HLS child manifest that lists only the I-frames for this
+     *        rendition, in addition to your regular manifest for this rendition. You might use this manifest as part of
+     *        a workflow that creates preview functions for your video. MediaConvert adds both the I-frame only child
+     *        manifest and the regular child manifest to the parent manifest. When you don't need the I-frame only child
+     *        manifest, keep the default value Exclude.
      * @see CmfcIFrameOnlyManifest
      */
 
@@ -670,17 +650,17 @@ public class CmfcSettings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Choose Include (INCLUDE) to have MediaConvert generate an HLS child manifest that lists only the I-frames for
-     * this rendition, in addition to your regular manifest for this rendition. You might use this manifest as part of a
+     * Choose Include to have MediaConvert generate an HLS child manifest that lists only the I-frames for this
+     * rendition, in addition to your regular manifest for this rendition. You might use this manifest as part of a
      * workflow that creates preview functions for your video. MediaConvert adds both the I-frame only child manifest and
      * the regular child manifest to the parent manifest. When you don't need the I-frame only child manifest, keep the
-     * default value Exclude (EXCLUDE).
+     * default value Exclude.
      * 
-     * @return Choose Include (INCLUDE) to have MediaConvert generate an HLS child manifest that lists only the I-frames
-     *         for this rendition, in addition to your regular manifest for this rendition. You might use this manifest
-     *         as part of a workflow that creates preview functions for your video. MediaConvert adds both the I-frame
-     *         only child manifest and the regular child manifest to the parent manifest. When you don't need the
-     *         I-frame only child manifest, keep the default value Exclude (EXCLUDE).
+     * @return Choose Include to have MediaConvert generate an HLS child manifest that lists only the I-frames for this
+     *         rendition, in addition to your regular manifest for this rendition. You might use this manifest as part
+     *         of a workflow that creates preview functions for your video. MediaConvert adds both the I-frame only
+     *         child manifest and the regular child manifest to the parent manifest. When you don't need the I-frame
+     *         only child manifest, keep the default value Exclude.
      * @see CmfcIFrameOnlyManifest
      */
 
@@ -689,18 +669,18 @@ public class CmfcSettings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Choose Include (INCLUDE) to have MediaConvert generate an HLS child manifest that lists only the I-frames for
-     * this rendition, in addition to your regular manifest for this rendition. You might use this manifest as part of a
+     * Choose Include to have MediaConvert generate an HLS child manifest that lists only the I-frames for this
+     * rendition, in addition to your regular manifest for this rendition. You might use this manifest as part of a
      * workflow that creates preview functions for your video. MediaConvert adds both the I-frame only child manifest and
      * the regular child manifest to the parent manifest. When you don't need the I-frame only child manifest, keep the
-     * default value Exclude (EXCLUDE).
+     * default value Exclude.
      * 
      * @param iFrameOnlyManifest
-     *        Choose Include (INCLUDE) to have MediaConvert generate an HLS child manifest that lists only the I-frames
-     *        for this rendition, in addition to your regular manifest for this rendition. You might use this manifest
-     *        as part of a workflow that creates preview functions for your video. MediaConvert adds both the I-frame
-     *        only child manifest and the regular child manifest to the parent manifest. When you don't need the I-frame
-     *        only child manifest, keep the default value Exclude (EXCLUDE).
+     *        Choose Include to have MediaConvert generate an HLS child manifest that lists only the I-frames for this
+     *        rendition, in addition to your regular manifest for this rendition. You might use this manifest as part of
+     *        a workflow that creates preview functions for your video. MediaConvert adds both the I-frame only child
+     *        manifest and the regular child manifest to the parent manifest. When you don't need the I-frame only child
+     *        manifest, keep the default value Exclude.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see CmfcIFrameOnlyManifest
      */
@@ -711,18 +691,18 @@ public class CmfcSettings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Choose Include (INCLUDE) to have MediaConvert generate an HLS child manifest that lists only the I-frames for
-     * this rendition, in addition to your regular manifest for this rendition. You might use this manifest as part of a
+     * Choose Include to have MediaConvert generate an HLS child manifest that lists only the I-frames for this
+     * rendition, in addition to your regular manifest for this rendition. You might use this manifest as part of a
      * workflow that creates preview functions for your video. MediaConvert adds both the I-frame only child manifest and
      * the regular child manifest to the parent manifest. When you don't need the I-frame only child manifest, keep the
-     * default value Exclude (EXCLUDE).
+     * default value Exclude.
      * 
      * @param iFrameOnlyManifest
-     *        Choose Include (INCLUDE) to have MediaConvert generate an HLS child manifest that lists only the I-frames
-     *        for this rendition, in addition to your regular manifest for this rendition. You might use this manifest
-     *        as part of a workflow that creates preview functions for your video. MediaConvert adds both the I-frame
-     *        only child manifest and the regular child manifest to the parent manifest. When you don't need the I-frame
-     *        only child manifest, keep the default value Exclude (EXCLUDE).
+     *        Choose Include to have MediaConvert generate an HLS child manifest that lists only the I-frames for this
+     *        rendition, in addition to your regular manifest for this rendition. You might use this manifest as part of
+     *        a workflow that creates preview functions for your video. MediaConvert adds both the I-frame only child
+     *        manifest and the regular child manifest to the parent manifest. When you don't need the I-frame only child
+     *        manifest, keep the default value Exclude.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see CmfcIFrameOnlyManifest
      */
@@ -809,7 +789,7 @@ public class CmfcSettings implements Serializable, Cloneable, StructuredPojo {
      * value that you specify for ID3 metadata scheme ID URI. For SCTE35 event messages, the InbandEventStream element
      * schemeIdUri will be "urn:scte:scte35:2013:bin". To leave these elements out of your output MPD manifest, set
      * Manifest metadata signaling to Disabled. To enable Manifest metadata signaling, you must also set SCTE-35 source
-     * to Passthrough, ESAM SCTE-35 to insert, or ID3 metadata (TimedMetadata) to Passthrough.
+     * to Passthrough, ESAM SCTE-35 to insert, or ID3 metadata to Passthrough.
      * 
      * @param manifestMetadataSignaling
      *        To add an InbandEventStream element in your output MPD manifest for each type of event message, set
@@ -817,8 +797,8 @@ public class CmfcSettings implements Serializable, Cloneable, StructuredPojo {
      *        will be same value that you specify for ID3 metadata scheme ID URI. For SCTE35 event messages, the
      *        InbandEventStream element schemeIdUri will be "urn:scte:scte35:2013:bin". To leave these elements out of
      *        your output MPD manifest, set Manifest metadata signaling to Disabled. To enable Manifest metadata
-     *        signaling, you must also set SCTE-35 source to Passthrough, ESAM SCTE-35 to insert, or ID3 metadata
-     *        (TimedMetadata) to Passthrough.
+     *        signaling, you must also set SCTE-35 source to Passthrough, ESAM SCTE-35 to insert, or ID3 metadata to
+     *        Passthrough.
      * @see CmfcManifestMetadataSignaling
      */
 
@@ -832,15 +812,15 @@ public class CmfcSettings implements Serializable, Cloneable, StructuredPojo {
      * value that you specify for ID3 metadata scheme ID URI. For SCTE35 event messages, the InbandEventStream element
      * schemeIdUri will be "urn:scte:scte35:2013:bin". To leave these elements out of your output MPD manifest, set
      * Manifest metadata signaling to Disabled. To enable Manifest metadata signaling, you must also set SCTE-35 source
-     * to Passthrough, ESAM SCTE-35 to insert, or ID3 metadata (TimedMetadata) to Passthrough.
+     * to Passthrough, ESAM SCTE-35 to insert, or ID3 metadata to Passthrough.
      * 
      * @return To add an InbandEventStream element in your output MPD manifest for each type of event message, set
      *         Manifest metadata signaling to Enabled. For ID3 event messages, the InbandEventStream element schemeIdUri
      *         will be same value that you specify for ID3 metadata scheme ID URI. For SCTE35 event messages, the
      *         InbandEventStream element schemeIdUri will be "urn:scte:scte35:2013:bin". To leave these elements out of
      *         your output MPD manifest, set Manifest metadata signaling to Disabled. To enable Manifest metadata
-     *         signaling, you must also set SCTE-35 source to Passthrough, ESAM SCTE-35 to insert, or ID3 metadata
-     *         (TimedMetadata) to Passthrough.
+     *         signaling, you must also set SCTE-35 source to Passthrough, ESAM SCTE-35 to insert, or ID3 metadata to
+     *         Passthrough.
      * @see CmfcManifestMetadataSignaling
      */
 
@@ -854,7 +834,7 @@ public class CmfcSettings implements Serializable, Cloneable, StructuredPojo {
      * value that you specify for ID3 metadata scheme ID URI. For SCTE35 event messages, the InbandEventStream element
      * schemeIdUri will be "urn:scte:scte35:2013:bin". To leave these elements out of your output MPD manifest, set
      * Manifest metadata signaling to Disabled. To enable Manifest metadata signaling, you must also set SCTE-35 source
-     * to Passthrough, ESAM SCTE-35 to insert, or ID3 metadata (TimedMetadata) to Passthrough.
+     * to Passthrough, ESAM SCTE-35 to insert, or ID3 metadata to Passthrough.
      * 
      * @param manifestMetadataSignaling
      *        To add an InbandEventStream element in your output MPD manifest for each type of event message, set
@@ -862,8 +842,8 @@ public class CmfcSettings implements Serializable, Cloneable, StructuredPojo {
      *        will be same value that you specify for ID3 metadata scheme ID URI. For SCTE35 event messages, the
      *        InbandEventStream element schemeIdUri will be "urn:scte:scte35:2013:bin". To leave these elements out of
      *        your output MPD manifest, set Manifest metadata signaling to Disabled. To enable Manifest metadata
-     *        signaling, you must also set SCTE-35 source to Passthrough, ESAM SCTE-35 to insert, or ID3 metadata
-     *        (TimedMetadata) to Passthrough.
+     *        signaling, you must also set SCTE-35 source to Passthrough, ESAM SCTE-35 to insert, or ID3 metadata to
+     *        Passthrough.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see CmfcManifestMetadataSignaling
      */
@@ -879,7 +859,7 @@ public class CmfcSettings implements Serializable, Cloneable, StructuredPojo {
      * value that you specify for ID3 metadata scheme ID URI. For SCTE35 event messages, the InbandEventStream element
      * schemeIdUri will be "urn:scte:scte35:2013:bin". To leave these elements out of your output MPD manifest, set
      * Manifest metadata signaling to Disabled. To enable Manifest metadata signaling, you must also set SCTE-35 source
-     * to Passthrough, ESAM SCTE-35 to insert, or ID3 metadata (TimedMetadata) to Passthrough.
+     * to Passthrough, ESAM SCTE-35 to insert, or ID3 metadata to Passthrough.
      * 
      * @param manifestMetadataSignaling
      *        To add an InbandEventStream element in your output MPD manifest for each type of event message, set
@@ -887,8 +867,8 @@ public class CmfcSettings implements Serializable, Cloneable, StructuredPojo {
      *        will be same value that you specify for ID3 metadata scheme ID URI. For SCTE35 event messages, the
      *        InbandEventStream element schemeIdUri will be "urn:scte:scte35:2013:bin". To leave these elements out of
      *        your output MPD manifest, set Manifest metadata signaling to Disabled. To enable Manifest metadata
-     *        signaling, you must also set SCTE-35 source to Passthrough, ESAM SCTE-35 to insert, or ID3 metadata
-     *        (TimedMetadata) to Passthrough.
+     *        signaling, you must also set SCTE-35 source to Passthrough, ESAM SCTE-35 to insert, or ID3 metadata to
+     *        Passthrough.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see CmfcManifestMetadataSignaling
      */
@@ -901,12 +881,12 @@ public class CmfcSettings implements Serializable, Cloneable, StructuredPojo {
     /**
      * Use this setting only when you specify SCTE-35 markers from ESAM. Choose INSERT to put SCTE-35 markers in this
      * output at the insertion points that you specify in an ESAM XML document. Provide the document in the setting SCC
-     * XML (sccXml).
+     * XML.
      * 
      * @param scte35Esam
      *        Use this setting only when you specify SCTE-35 markers from ESAM. Choose INSERT to put SCTE-35 markers in
      *        this output at the insertion points that you specify in an ESAM XML document. Provide the document in the
-     *        setting SCC XML (sccXml).
+     *        setting SCC XML.
      * @see CmfcScte35Esam
      */
 
@@ -917,11 +897,11 @@ public class CmfcSettings implements Serializable, Cloneable, StructuredPojo {
     /**
      * Use this setting only when you specify SCTE-35 markers from ESAM. Choose INSERT to put SCTE-35 markers in this
      * output at the insertion points that you specify in an ESAM XML document. Provide the document in the setting SCC
-     * XML (sccXml).
+     * XML.
      * 
      * @return Use this setting only when you specify SCTE-35 markers from ESAM. Choose INSERT to put SCTE-35 markers in
      *         this output at the insertion points that you specify in an ESAM XML document. Provide the document in the
-     *         setting SCC XML (sccXml).
+     *         setting SCC XML.
      * @see CmfcScte35Esam
      */
 
@@ -932,12 +912,12 @@ public class CmfcSettings implements Serializable, Cloneable, StructuredPojo {
     /**
      * Use this setting only when you specify SCTE-35 markers from ESAM. Choose INSERT to put SCTE-35 markers in this
      * output at the insertion points that you specify in an ESAM XML document. Provide the document in the setting SCC
-     * XML (sccXml).
+     * XML.
      * 
      * @param scte35Esam
      *        Use this setting only when you specify SCTE-35 markers from ESAM. Choose INSERT to put SCTE-35 markers in
      *        this output at the insertion points that you specify in an ESAM XML document. Provide the document in the
-     *        setting SCC XML (sccXml).
+     *        setting SCC XML.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see CmfcScte35Esam
      */
@@ -950,12 +930,12 @@ public class CmfcSettings implements Serializable, Cloneable, StructuredPojo {
     /**
      * Use this setting only when you specify SCTE-35 markers from ESAM. Choose INSERT to put SCTE-35 markers in this
      * output at the insertion points that you specify in an ESAM XML document. Provide the document in the setting SCC
-     * XML (sccXml).
+     * XML.
      * 
      * @param scte35Esam
      *        Use this setting only when you specify SCTE-35 markers from ESAM. Choose INSERT to put SCTE-35 markers in
      *        this output at the insertion points that you specify in an ESAM XML document. Provide the document in the
-     *        setting SCC XML (sccXml).
+     *        setting SCC XML.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see CmfcScte35Esam
      */
@@ -966,14 +946,14 @@ public class CmfcSettings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Ignore this setting unless you have SCTE-35 markers in your input video file. Choose Passthrough (PASSTHROUGH) if
-     * you want SCTE-35 markers that appear in your input to also appear in this output. Choose None (NONE) if you don't
-     * want those SCTE-35 markers in this output.
+     * Ignore this setting unless you have SCTE-35 markers in your input video file. Choose Passthrough if you want
+     * SCTE-35 markers that appear in your input to also appear in this output. Choose None if you don't want those
+     * SCTE-35 markers in this output.
      * 
      * @param scte35Source
-     *        Ignore this setting unless you have SCTE-35 markers in your input video file. Choose Passthrough
-     *        (PASSTHROUGH) if you want SCTE-35 markers that appear in your input to also appear in this output. Choose
-     *        None (NONE) if you don't want those SCTE-35 markers in this output.
+     *        Ignore this setting unless you have SCTE-35 markers in your input video file. Choose Passthrough if you
+     *        want SCTE-35 markers that appear in your input to also appear in this output. Choose None if you don't
+     *        want those SCTE-35 markers in this output.
      * @see CmfcScte35Source
      */
 
@@ -982,13 +962,13 @@ public class CmfcSettings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Ignore this setting unless you have SCTE-35 markers in your input video file. Choose Passthrough (PASSTHROUGH) if
-     * you want SCTE-35 markers that appear in your input to also appear in this output. Choose None (NONE) if you don't
-     * want those SCTE-35 markers in this output.
+     * Ignore this setting unless you have SCTE-35 markers in your input video file. Choose Passthrough if you want
+     * SCTE-35 markers that appear in your input to also appear in this output. Choose None if you don't want those
+     * SCTE-35 markers in this output.
      * 
-     * @return Ignore this setting unless you have SCTE-35 markers in your input video file. Choose Passthrough
-     *         (PASSTHROUGH) if you want SCTE-35 markers that appear in your input to also appear in this output. Choose
-     *         None (NONE) if you don't want those SCTE-35 markers in this output.
+     * @return Ignore this setting unless you have SCTE-35 markers in your input video file. Choose Passthrough if you
+     *         want SCTE-35 markers that appear in your input to also appear in this output. Choose None if you don't
+     *         want those SCTE-35 markers in this output.
      * @see CmfcScte35Source
      */
 
@@ -997,14 +977,14 @@ public class CmfcSettings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Ignore this setting unless you have SCTE-35 markers in your input video file. Choose Passthrough (PASSTHROUGH) if
-     * you want SCTE-35 markers that appear in your input to also appear in this output. Choose None (NONE) if you don't
-     * want those SCTE-35 markers in this output.
+     * Ignore this setting unless you have SCTE-35 markers in your input video file. Choose Passthrough if you want
+     * SCTE-35 markers that appear in your input to also appear in this output. Choose None if you don't want those
+     * SCTE-35 markers in this output.
      * 
      * @param scte35Source
-     *        Ignore this setting unless you have SCTE-35 markers in your input video file. Choose Passthrough
-     *        (PASSTHROUGH) if you want SCTE-35 markers that appear in your input to also appear in this output. Choose
-     *        None (NONE) if you don't want those SCTE-35 markers in this output.
+     *        Ignore this setting unless you have SCTE-35 markers in your input video file. Choose Passthrough if you
+     *        want SCTE-35 markers that appear in your input to also appear in this output. Choose None if you don't
+     *        want those SCTE-35 markers in this output.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see CmfcScte35Source
      */
@@ -1015,14 +995,14 @@ public class CmfcSettings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Ignore this setting unless you have SCTE-35 markers in your input video file. Choose Passthrough (PASSTHROUGH) if
-     * you want SCTE-35 markers that appear in your input to also appear in this output. Choose None (NONE) if you don't
-     * want those SCTE-35 markers in this output.
+     * Ignore this setting unless you have SCTE-35 markers in your input video file. Choose Passthrough if you want
+     * SCTE-35 markers that appear in your input to also appear in this output. Choose None if you don't want those
+     * SCTE-35 markers in this output.
      * 
      * @param scte35Source
-     *        Ignore this setting unless you have SCTE-35 markers in your input video file. Choose Passthrough
-     *        (PASSTHROUGH) if you want SCTE-35 markers that appear in your input to also appear in this output. Choose
-     *        None (NONE) if you don't want those SCTE-35 markers in this output.
+     *        Ignore this setting unless you have SCTE-35 markers in your input video file. Choose Passthrough if you
+     *        want SCTE-35 markers that appear in your input to also appear in this output. Choose None if you don't
+     *        want those SCTE-35 markers in this output.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see CmfcScte35Source
      */
@@ -1033,16 +1013,14 @@ public class CmfcSettings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * To include ID3 metadata in this output: Set ID3 metadata (timedMetadata) to Passthrough (PASSTHROUGH). Specify
-     * this ID3 metadata in Custom ID3 metadata inserter (timedMetadataInsertion). MediaConvert writes each instance of
-     * ID3 metadata in a separate Event Message (eMSG) box. To exclude this ID3 metadata: Set ID3 metadata to None (NONE)
-     * or leave blank.
+     * To include ID3 metadata in this output: Set ID3 metadata to Passthrough. Specify this ID3 metadata in Custom ID3
+     * metadata inserter. MediaConvert writes each instance of ID3 metadata in a separate Event Message (eMSG) box. To
+     * exclude this ID3 metadata: Set ID3 metadata to None or leave blank.
      * 
      * @param timedMetadata
-     *        To include ID3 metadata in this output: Set ID3 metadata (timedMetadata) to Passthrough (PASSTHROUGH).
-     *        Specify this ID3 metadata in Custom ID3 metadata inserter (timedMetadataInsertion). MediaConvert writes
-     *        each instance of ID3 metadata in a separate Event Message (eMSG) box. To exclude this ID3 metadata: Set
-     *        ID3 metadata to None (NONE) or leave blank.
+     *        To include ID3 metadata in this output: Set ID3 metadata to Passthrough. Specify this ID3 metadata in
+     *        Custom ID3 metadata inserter. MediaConvert writes each instance of ID3 metadata in a separate Event
+     *        Message (eMSG) box. To exclude this ID3 metadata: Set ID3 metadata to None or leave blank.
      * @see CmfcTimedMetadata
      */
 
@@ -1051,15 +1029,13 @@ public class CmfcSettings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * To include ID3 metadata in this output: Set ID3 metadata (timedMetadata) to Passthrough (PASSTHROUGH). Specify
-     * this ID3 metadata in Custom ID3 metadata inserter (timedMetadataInsertion). MediaConvert writes each instance of
-     * ID3 metadata in a separate Event Message (eMSG) box. To exclude this ID3 metadata: Set ID3 metadata to None (NONE)
-     * or leave blank.
+     * To include ID3 metadata in this output: Set ID3 metadata to Passthrough. Specify this ID3 metadata in Custom ID3
+     * metadata inserter. MediaConvert writes each instance of ID3 metadata in a separate Event Message (eMSG) box. To
+     * exclude this ID3 metadata: Set ID3 metadata to None or leave blank.
      * 
-     * @return To include ID3 metadata in this output: Set ID3 metadata (timedMetadata) to Passthrough (PASSTHROUGH).
-     *         Specify this ID3 metadata in Custom ID3 metadata inserter (timedMetadataInsertion). MediaConvert writes
-     *         each instance of ID3 metadata in a separate Event Message (eMSG) box. To exclude this ID3 metadata: Set
-     *         ID3 metadata to None (NONE) or leave blank.
+     * @return To include ID3 metadata in this output: Set ID3 metadata to Passthrough. Specify this ID3 metadata in
+     *         Custom ID3 metadata inserter. MediaConvert writes each instance of ID3 metadata in a separate Event
+     *         Message (eMSG) box. To exclude this ID3 metadata: Set ID3 metadata to None or leave blank.
      * @see CmfcTimedMetadata
      */
 
@@ -1068,16 +1044,14 @@ public class CmfcSettings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * To include ID3 metadata in this output: Set ID3 metadata (timedMetadata) to Passthrough (PASSTHROUGH). Specify
-     * this ID3 metadata in Custom ID3 metadata inserter (timedMetadataInsertion). MediaConvert writes each instance of
-     * ID3 metadata in a separate Event Message (eMSG) box. To exclude this ID3 metadata: Set ID3 metadata to None (NONE)
-     * or leave blank.
+     * To include ID3 metadata in this output: Set ID3 metadata to Passthrough. Specify this ID3 metadata in Custom ID3
+     * metadata inserter. MediaConvert writes each instance of ID3 metadata in a separate Event Message (eMSG) box. To
+     * exclude this ID3 metadata: Set ID3 metadata to None or leave blank.
      * 
      * @param timedMetadata
-     *        To include ID3 metadata in this output: Set ID3 metadata (timedMetadata) to Passthrough (PASSTHROUGH).
-     *        Specify this ID3 metadata in Custom ID3 metadata inserter (timedMetadataInsertion). MediaConvert writes
-     *        each instance of ID3 metadata in a separate Event Message (eMSG) box. To exclude this ID3 metadata: Set
-     *        ID3 metadata to None (NONE) or leave blank.
+     *        To include ID3 metadata in this output: Set ID3 metadata to Passthrough. Specify this ID3 metadata in
+     *        Custom ID3 metadata inserter. MediaConvert writes each instance of ID3 metadata in a separate Event
+     *        Message (eMSG) box. To exclude this ID3 metadata: Set ID3 metadata to None or leave blank.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see CmfcTimedMetadata
      */
@@ -1088,16 +1062,14 @@ public class CmfcSettings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * To include ID3 metadata in this output: Set ID3 metadata (timedMetadata) to Passthrough (PASSTHROUGH). Specify
-     * this ID3 metadata in Custom ID3 metadata inserter (timedMetadataInsertion). MediaConvert writes each instance of
-     * ID3 metadata in a separate Event Message (eMSG) box. To exclude this ID3 metadata: Set ID3 metadata to None (NONE)
-     * or leave blank.
+     * To include ID3 metadata in this output: Set ID3 metadata to Passthrough. Specify this ID3 metadata in Custom ID3
+     * metadata inserter. MediaConvert writes each instance of ID3 metadata in a separate Event Message (eMSG) box. To
+     * exclude this ID3 metadata: Set ID3 metadata to None or leave blank.
      * 
      * @param timedMetadata
-     *        To include ID3 metadata in this output: Set ID3 metadata (timedMetadata) to Passthrough (PASSTHROUGH).
-     *        Specify this ID3 metadata in Custom ID3 metadata inserter (timedMetadataInsertion). MediaConvert writes
-     *        each instance of ID3 metadata in a separate Event Message (eMSG) box. To exclude this ID3 metadata: Set
-     *        ID3 metadata to None (NONE) or leave blank.
+     *        To include ID3 metadata in this output: Set ID3 metadata to Passthrough. Specify this ID3 metadata in
+     *        Custom ID3 metadata inserter. MediaConvert writes each instance of ID3 metadata in a separate Event
+     *        Message (eMSG) box. To exclude this ID3 metadata: Set ID3 metadata to None or leave blank.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see CmfcTimedMetadata
      */
@@ -1110,12 +1082,12 @@ public class CmfcSettings implements Serializable, Cloneable, StructuredPojo {
     /**
      * Specify the event message box (eMSG) version for ID3 timed metadata in your output. For more information, see
      * ISO/IEC 23009-1:2022 section 5.10.3.3.3 Syntax. Leave blank to use the default value Version 0. When you specify
-     * Version 1, you must also set ID3 metadata (timedMetadata) to Passthrough.
+     * Version 1, you must also set ID3 metadata to Passthrough.
      * 
      * @param timedMetadataBoxVersion
      *        Specify the event message box (eMSG) version for ID3 timed metadata in your output. For more information,
      *        see ISO/IEC 23009-1:2022 section 5.10.3.3.3 Syntax. Leave blank to use the default value Version 0. When
-     *        you specify Version 1, you must also set ID3 metadata (timedMetadata) to Passthrough.
+     *        you specify Version 1, you must also set ID3 metadata to Passthrough.
      * @see CmfcTimedMetadataBoxVersion
      */
 
@@ -1126,11 +1098,11 @@ public class CmfcSettings implements Serializable, Cloneable, StructuredPojo {
     /**
      * Specify the event message box (eMSG) version for ID3 timed metadata in your output. For more information, see
      * ISO/IEC 23009-1:2022 section 5.10.3.3.3 Syntax. Leave blank to use the default value Version 0. When you specify
-     * Version 1, you must also set ID3 metadata (timedMetadata) to Passthrough.
+     * Version 1, you must also set ID3 metadata to Passthrough.
      * 
      * @return Specify the event message box (eMSG) version for ID3 timed metadata in your output. For more information,
      *         see ISO/IEC 23009-1:2022 section 5.10.3.3.3 Syntax. Leave blank to use the default value Version 0. When
-     *         you specify Version 1, you must also set ID3 metadata (timedMetadata) to Passthrough.
+     *         you specify Version 1, you must also set ID3 metadata to Passthrough.
      * @see CmfcTimedMetadataBoxVersion
      */
 
@@ -1141,12 +1113,12 @@ public class CmfcSettings implements Serializable, Cloneable, StructuredPojo {
     /**
      * Specify the event message box (eMSG) version for ID3 timed metadata in your output. For more information, see
      * ISO/IEC 23009-1:2022 section 5.10.3.3.3 Syntax. Leave blank to use the default value Version 0. When you specify
-     * Version 1, you must also set ID3 metadata (timedMetadata) to Passthrough.
+     * Version 1, you must also set ID3 metadata to Passthrough.
      * 
      * @param timedMetadataBoxVersion
      *        Specify the event message box (eMSG) version for ID3 timed metadata in your output. For more information,
      *        see ISO/IEC 23009-1:2022 section 5.10.3.3.3 Syntax. Leave blank to use the default value Version 0. When
-     *        you specify Version 1, you must also set ID3 metadata (timedMetadata) to Passthrough.
+     *        you specify Version 1, you must also set ID3 metadata to Passthrough.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see CmfcTimedMetadataBoxVersion
      */
@@ -1159,12 +1131,12 @@ public class CmfcSettings implements Serializable, Cloneable, StructuredPojo {
     /**
      * Specify the event message box (eMSG) version for ID3 timed metadata in your output. For more information, see
      * ISO/IEC 23009-1:2022 section 5.10.3.3.3 Syntax. Leave blank to use the default value Version 0. When you specify
-     * Version 1, you must also set ID3 metadata (timedMetadata) to Passthrough.
+     * Version 1, you must also set ID3 metadata to Passthrough.
      * 
      * @param timedMetadataBoxVersion
      *        Specify the event message box (eMSG) version for ID3 timed metadata in your output. For more information,
      *        see ISO/IEC 23009-1:2022 section 5.10.3.3.3 Syntax. Leave blank to use the default value Version 0. When
-     *        you specify Version 1, you must also set ID3 metadata (timedMetadata) to Passthrough.
+     *        you specify Version 1, you must also set ID3 metadata to Passthrough.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see CmfcTimedMetadataBoxVersion
      */
@@ -1175,16 +1147,16 @@ public class CmfcSettings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Specify the event message box (eMSG) scheme ID URI (scheme_id_uri) for ID3 timed metadata in your output. For
-     * more information, see ISO/IEC 23009-1:2022 section 5.10.3.3.4 Semantics. Leave blank to use the default value:
+     * Specify the event message box (eMSG) scheme ID URI for ID3 timed metadata in your output. For more information,
+     * see ISO/IEC 23009-1:2022 section 5.10.3.3.4 Semantics. Leave blank to use the default value:
      * https://aomedia.org/emsg/ID3 When you specify a value for ID3 metadata scheme ID URI, you must also set ID3
-     * metadata (timedMetadata) to Passthrough.
+     * metadata to Passthrough.
      * 
      * @param timedMetadataSchemeIdUri
-     *        Specify the event message box (eMSG) scheme ID URI (scheme_id_uri) for ID3 timed metadata in your output.
-     *        For more information, see ISO/IEC 23009-1:2022 section 5.10.3.3.4 Semantics. Leave blank to use the
-     *        default value: https://aomedia.org/emsg/ID3 When you specify a value for ID3 metadata scheme ID URI, you
-     *        must also set ID3 metadata (timedMetadata) to Passthrough.
+     *        Specify the event message box (eMSG) scheme ID URI for ID3 timed metadata in your output. For more
+     *        information, see ISO/IEC 23009-1:2022 section 5.10.3.3.4 Semantics. Leave blank to use the default value:
+     *        https://aomedia.org/emsg/ID3 When you specify a value for ID3 metadata scheme ID URI, you must also set
+     *        ID3 metadata to Passthrough.
      */
 
     public void setTimedMetadataSchemeIdUri(String timedMetadataSchemeIdUri) {
@@ -1192,15 +1164,15 @@ public class CmfcSettings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Specify the event message box (eMSG) scheme ID URI (scheme_id_uri) for ID3 timed metadata in your output. For
-     * more information, see ISO/IEC 23009-1:2022 section 5.10.3.3.4 Semantics. Leave blank to use the default value:
+     * Specify the event message box (eMSG) scheme ID URI for ID3 timed metadata in your output. For more information,
+     * see ISO/IEC 23009-1:2022 section 5.10.3.3.4 Semantics. Leave blank to use the default value:
      * https://aomedia.org/emsg/ID3 When you specify a value for ID3 metadata scheme ID URI, you must also set ID3
-     * metadata (timedMetadata) to Passthrough.
+     * metadata to Passthrough.
      * 
-     * @return Specify the event message box (eMSG) scheme ID URI (scheme_id_uri) for ID3 timed metadata in your output.
-     *         For more information, see ISO/IEC 23009-1:2022 section 5.10.3.3.4 Semantics. Leave blank to use the
-     *         default value: https://aomedia.org/emsg/ID3 When you specify a value for ID3 metadata scheme ID URI, you
-     *         must also set ID3 metadata (timedMetadata) to Passthrough.
+     * @return Specify the event message box (eMSG) scheme ID URI for ID3 timed metadata in your output. For more
+     *         information, see ISO/IEC 23009-1:2022 section 5.10.3.3.4 Semantics. Leave blank to use the default value:
+     *         https://aomedia.org/emsg/ID3 When you specify a value for ID3 metadata scheme ID URI, you must also set
+     *         ID3 metadata to Passthrough.
      */
 
     public String getTimedMetadataSchemeIdUri() {
@@ -1208,16 +1180,16 @@ public class CmfcSettings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Specify the event message box (eMSG) scheme ID URI (scheme_id_uri) for ID3 timed metadata in your output. For
-     * more information, see ISO/IEC 23009-1:2022 section 5.10.3.3.4 Semantics. Leave blank to use the default value:
+     * Specify the event message box (eMSG) scheme ID URI for ID3 timed metadata in your output. For more information,
+     * see ISO/IEC 23009-1:2022 section 5.10.3.3.4 Semantics. Leave blank to use the default value:
      * https://aomedia.org/emsg/ID3 When you specify a value for ID3 metadata scheme ID URI, you must also set ID3
-     * metadata (timedMetadata) to Passthrough.
+     * metadata to Passthrough.
      * 
      * @param timedMetadataSchemeIdUri
-     *        Specify the event message box (eMSG) scheme ID URI (scheme_id_uri) for ID3 timed metadata in your output.
-     *        For more information, see ISO/IEC 23009-1:2022 section 5.10.3.3.4 Semantics. Leave blank to use the
-     *        default value: https://aomedia.org/emsg/ID3 When you specify a value for ID3 metadata scheme ID URI, you
-     *        must also set ID3 metadata (timedMetadata) to Passthrough.
+     *        Specify the event message box (eMSG) scheme ID URI for ID3 timed metadata in your output. For more
+     *        information, see ISO/IEC 23009-1:2022 section 5.10.3.3.4 Semantics. Leave blank to use the default value:
+     *        https://aomedia.org/emsg/ID3 When you specify a value for ID3 metadata scheme ID URI, you must also set
+     *        ID3 metadata to Passthrough.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1229,12 +1201,12 @@ public class CmfcSettings implements Serializable, Cloneable, StructuredPojo {
     /**
      * Specify the event message box (eMSG) value for ID3 timed metadata in your output. For more information, see
      * ISO/IEC 23009-1:2022 section 5.10.3.3.4 Semantics. When you specify a value for ID3 Metadata Value, you must also
-     * set ID3 metadata (timedMetadata) to Passthrough.
+     * set ID3 metadata to Passthrough.
      * 
      * @param timedMetadataValue
      *        Specify the event message box (eMSG) value for ID3 timed metadata in your output. For more information,
      *        see ISO/IEC 23009-1:2022 section 5.10.3.3.4 Semantics. When you specify a value for ID3 Metadata Value,
-     *        you must also set ID3 metadata (timedMetadata) to Passthrough.
+     *        you must also set ID3 metadata to Passthrough.
      */
 
     public void setTimedMetadataValue(String timedMetadataValue) {
@@ -1244,11 +1216,11 @@ public class CmfcSettings implements Serializable, Cloneable, StructuredPojo {
     /**
      * Specify the event message box (eMSG) value for ID3 timed metadata in your output. For more information, see
      * ISO/IEC 23009-1:2022 section 5.10.3.3.4 Semantics. When you specify a value for ID3 Metadata Value, you must also
-     * set ID3 metadata (timedMetadata) to Passthrough.
+     * set ID3 metadata to Passthrough.
      * 
      * @return Specify the event message box (eMSG) value for ID3 timed metadata in your output. For more information,
      *         see ISO/IEC 23009-1:2022 section 5.10.3.3.4 Semantics. When you specify a value for ID3 Metadata Value,
-     *         you must also set ID3 metadata (timedMetadata) to Passthrough.
+     *         you must also set ID3 metadata to Passthrough.
      */
 
     public String getTimedMetadataValue() {
@@ -1258,12 +1230,12 @@ public class CmfcSettings implements Serializable, Cloneable, StructuredPojo {
     /**
      * Specify the event message box (eMSG) value for ID3 timed metadata in your output. For more information, see
      * ISO/IEC 23009-1:2022 section 5.10.3.3.4 Semantics. When you specify a value for ID3 Metadata Value, you must also
-     * set ID3 metadata (timedMetadata) to Passthrough.
+     * set ID3 metadata to Passthrough.
      * 
      * @param timedMetadataValue
      *        Specify the event message box (eMSG) value for ID3 timed metadata in your output. For more information,
      *        see ISO/IEC 23009-1:2022 section 5.10.3.3.4 Semantics. When you specify a value for ID3 Metadata Value,
-     *        you must also set ID3 metadata (timedMetadata) to Passthrough.
+     *        you must also set ID3 metadata to Passthrough.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

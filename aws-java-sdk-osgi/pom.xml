@@ -5,7 +5,7 @@
   <parent>
     <groupId>com.amazonaws</groupId>
     <artifactId>aws-java-sdk-pom</artifactId>
-    <version>1.12.515-SNAPSHOT</version>
+    <version>1.12.515</version>
   </parent>
   <groupId>com.amazonaws</groupId>
   <artifactId>aws-java-sdk-osgi</artifactId>
@@ -15,6 +15,18 @@
 
   <!-- The dependencies section in pom.xml is auto generated. No manual changes are allowed -->
   <dependencies>
+    <dependency>
+        <artifactId>aws-java-sdk-managedblockchainquery</artifactId>
+        <groupId>com.amazonaws</groupId>
+        <optional>false</optional>
+        <version>${awsjavasdk.version}</version>
+    </dependency>
+    <dependency>
+        <artifactId>aws-java-sdk-entityresolution</artifactId>
+        <groupId>com.amazonaws</groupId>
+        <optional>false</optional>
+        <version>${awsjavasdk.version}</version>
+    </dependency>
     <dependency>
         <artifactId>aws-java-sdk-medicalimaging</artifactId>
         <groupId>com.amazonaws</groupId>
@@ -2228,6 +2240,14 @@
                               </taglet>
                           </taglets>
                           <groups>
+                              <group>
+                                  <title>Amazon Managed Blockchain Query</title>
+                                  <packages>com.amazonaws.services.managedblockchainquery*</packages>
+                              </group>
+                              <group>
+                                  <title>AWS EntityResolution</title>
+                                  <packages>com.amazonaws.services.entityresolution*</packages>
+                              </group>
                               <group>
                                   <title>AWS Health Imaging</title>
                                   <packages>com.amazonaws.services.medicalimaging*</packages>

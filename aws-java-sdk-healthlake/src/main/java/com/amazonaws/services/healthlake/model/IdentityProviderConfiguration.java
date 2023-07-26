@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The identity provider configuration that you gave when the Data Store was created.
+ * The identity provider configuration that you gave when the data store was created.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/healthlake-2017-07-01/IdentityProviderConfiguration"
@@ -30,13 +30,13 @@ public class IdentityProviderConfiguration implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * The authorization strategy that you selected when you created the Data Store.
+     * The authorization strategy that you selected when you created the data store.
      * </p>
      */
     private String authorizationStrategy;
     /**
      * <p>
-     * If you enabled fine-grained authorization when you created the Data Store.
+     * If you enabled fine-grained authorization when you created the data store.
      * </p>
      */
     private Boolean fineGrainedAuthorizationEnabled;
@@ -77,11 +77,11 @@ public class IdentityProviderConfiguration implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * The authorization strategy that you selected when you created the Data Store.
+     * The authorization strategy that you selected when you created the data store.
      * </p>
      * 
      * @param authorizationStrategy
-     *        The authorization strategy that you selected when you created the Data Store.
+     *        The authorization strategy that you selected when you created the data store.
      * @see AuthorizationStrategy
      */
 
@@ -91,10 +91,10 @@ public class IdentityProviderConfiguration implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * The authorization strategy that you selected when you created the Data Store.
+     * The authorization strategy that you selected when you created the data store.
      * </p>
      * 
-     * @return The authorization strategy that you selected when you created the Data Store.
+     * @return The authorization strategy that you selected when you created the data store.
      * @see AuthorizationStrategy
      */
 
@@ -104,11 +104,11 @@ public class IdentityProviderConfiguration implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * The authorization strategy that you selected when you created the Data Store.
+     * The authorization strategy that you selected when you created the data store.
      * </p>
      * 
      * @param authorizationStrategy
-     *        The authorization strategy that you selected when you created the Data Store.
+     *        The authorization strategy that you selected when you created the data store.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AuthorizationStrategy
      */
@@ -120,11 +120,11 @@ public class IdentityProviderConfiguration implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * The authorization strategy that you selected when you created the Data Store.
+     * The authorization strategy that you selected when you created the data store.
      * </p>
      * 
      * @param authorizationStrategy
-     *        The authorization strategy that you selected when you created the Data Store.
+     *        The authorization strategy that you selected when you created the data store.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AuthorizationStrategy
      */
@@ -136,11 +136,11 @@ public class IdentityProviderConfiguration implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * If you enabled fine-grained authorization when you created the Data Store.
+     * If you enabled fine-grained authorization when you created the data store.
      * </p>
      * 
      * @param fineGrainedAuthorizationEnabled
-     *        If you enabled fine-grained authorization when you created the Data Store.
+     *        If you enabled fine-grained authorization when you created the data store.
      */
 
     public void setFineGrainedAuthorizationEnabled(Boolean fineGrainedAuthorizationEnabled) {
@@ -149,10 +149,10 @@ public class IdentityProviderConfiguration implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * If you enabled fine-grained authorization when you created the Data Store.
+     * If you enabled fine-grained authorization when you created the data store.
      * </p>
      * 
-     * @return If you enabled fine-grained authorization when you created the Data Store.
+     * @return If you enabled fine-grained authorization when you created the data store.
      */
 
     public Boolean getFineGrainedAuthorizationEnabled() {
@@ -161,11 +161,11 @@ public class IdentityProviderConfiguration implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * If you enabled fine-grained authorization when you created the Data Store.
+     * If you enabled fine-grained authorization when you created the data store.
      * </p>
      * 
      * @param fineGrainedAuthorizationEnabled
-     *        If you enabled fine-grained authorization when you created the Data Store.
+     *        If you enabled fine-grained authorization when you created the data store.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -176,10 +176,10 @@ public class IdentityProviderConfiguration implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * If you enabled fine-grained authorization when you created the Data Store.
+     * If you enabled fine-grained authorization when you created the data store.
      * </p>
      * 
-     * @return If you enabled fine-grained authorization when you created the Data Store.
+     * @return If you enabled fine-grained authorization when you created the data store.
      */
 
     public Boolean isFineGrainedAuthorizationEnabled() {

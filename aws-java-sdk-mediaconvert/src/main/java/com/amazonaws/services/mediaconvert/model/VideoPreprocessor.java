@@ -18,8 +18,8 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
- * Find additional transcoding features under Preprocessors (VideoPreprocessors). Enable the features at each output
- * individually. These features are disabled by default.
+ * Find additional transcoding features under Preprocessors. Enable the features at each output individually. These
+ * features are disabled by default.
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mediaconvert-2017-08-29/VideoPreprocessor" target="_top">AWS API
  *      Documentation</a>
@@ -42,8 +42,8 @@ public class VideoPreprocessor implements Serializable, Cloneable, StructuredPoj
     /** Enable HDR10+ analysis and metadata injection. Compatible with HEVC only. */
     private Hdr10Plus hdr10Plus;
     /**
-     * Enable the Image inserter (ImageInserter) feature to include a graphic overlay on your video. Enable or disable
-     * this feature for each output individually. This setting is disabled by default.
+     * Enable the Image inserter feature to include a graphic overlay on your video. Enable or disable this feature for
+     * each output individually. This setting is disabled by default.
      */
     private ImageInserter imageInserter;
     /**
@@ -213,12 +213,12 @@ public class VideoPreprocessor implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
-     * Enable the Image inserter (ImageInserter) feature to include a graphic overlay on your video. Enable or disable
-     * this feature for each output individually. This setting is disabled by default.
+     * Enable the Image inserter feature to include a graphic overlay on your video. Enable or disable this feature for
+     * each output individually. This setting is disabled by default.
      * 
      * @param imageInserter
-     *        Enable the Image inserter (ImageInserter) feature to include a graphic overlay on your video. Enable or
-     *        disable this feature for each output individually. This setting is disabled by default.
+     *        Enable the Image inserter feature to include a graphic overlay on your video. Enable or disable this
+     *        feature for each output individually. This setting is disabled by default.
      */
 
     public void setImageInserter(ImageInserter imageInserter) {
@@ -226,11 +226,11 @@ public class VideoPreprocessor implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
-     * Enable the Image inserter (ImageInserter) feature to include a graphic overlay on your video. Enable or disable
-     * this feature for each output individually. This setting is disabled by default.
+     * Enable the Image inserter feature to include a graphic overlay on your video. Enable or disable this feature for
+     * each output individually. This setting is disabled by default.
      * 
-     * @return Enable the Image inserter (ImageInserter) feature to include a graphic overlay on your video. Enable or
-     *         disable this feature for each output individually. This setting is disabled by default.
+     * @return Enable the Image inserter feature to include a graphic overlay on your video. Enable or disable this
+     *         feature for each output individually. This setting is disabled by default.
      */
 
     public ImageInserter getImageInserter() {
@@ -238,12 +238,12 @@ public class VideoPreprocessor implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
-     * Enable the Image inserter (ImageInserter) feature to include a graphic overlay on your video. Enable or disable
-     * this feature for each output individually. This setting is disabled by default.
+     * Enable the Image inserter feature to include a graphic overlay on your video. Enable or disable this feature for
+     * each output individually. This setting is disabled by default.
      * 
      * @param imageInserter
-     *        Enable the Image inserter (ImageInserter) feature to include a graphic overlay on your video. Enable or
-     *        disable this feature for each output individually. This setting is disabled by default.
+     *        Enable the Image inserter feature to include a graphic overlay on your video. Enable or disable this
+     *        feature for each output individually. This setting is disabled by default.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

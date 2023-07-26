@@ -26,8 +26,9 @@ import com.amazonaws.services.omics.model.*;
  * </p>
  * <p>
  * <p>
- * This is the <i>Amazon Omics API Reference</i>. For an introduction to the service, see <a
- * href="https://docs.aws.amazon.com/omics/latest/dev/">What is Amazon Omics?</a> in the <i>Amazon Omics User Guide</i>.
+ * This is the <i>AWS HealthOmics API Reference</i>. For an introduction to the service, see <a
+ * href="https://docs.aws.amazon.com/omics/latest/dev/">What is AWS HealthOmics?</a> in the <i>AWS HealthOmics User
+ * Guide</i>.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

@@ -443,6 +443,18 @@ public class CodeGenConfigurationNode implements Serializable, Cloneable, Struct
      * </p>
      */
     private Recipe recipe;
+    /**
+     * <p>
+     * Specifies a Snowflake data source.
+     * </p>
+     */
+    private SnowflakeSource snowflakeSource;
+    /**
+     * <p>
+     * Specifies a target that writes to a Snowflake data source.
+     * </p>
+     */
+    private SnowflakeTarget snowflakeTarget;
 
     /**
      * <p>
@@ -3213,6 +3225,86 @@ public class CodeGenConfigurationNode implements Serializable, Cloneable, Struct
     }
 
     /**
+     * <p>
+     * Specifies a Snowflake data source.
+     * </p>
+     * 
+     * @param snowflakeSource
+     *        Specifies a Snowflake data source.
+     */
+
+    public void setSnowflakeSource(SnowflakeSource snowflakeSource) {
+        this.snowflakeSource = snowflakeSource;
+    }
+
+    /**
+     * <p>
+     * Specifies a Snowflake data source.
+     * </p>
+     * 
+     * @return Specifies a Snowflake data source.
+     */
+
+    public SnowflakeSource getSnowflakeSource() {
+        return this.snowflakeSource;
+    }
+
+    /**
+     * <p>
+     * Specifies a Snowflake data source.
+     * </p>
+     * 
+     * @param snowflakeSource
+     *        Specifies a Snowflake data source.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CodeGenConfigurationNode withSnowflakeSource(SnowflakeSource snowflakeSource) {
+        setSnowflakeSource(snowflakeSource);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Specifies a target that writes to a Snowflake data source.
+     * </p>
+     * 
+     * @param snowflakeTarget
+     *        Specifies a target that writes to a Snowflake data source.
+     */
+
+    public void setSnowflakeTarget(SnowflakeTarget snowflakeTarget) {
+        this.snowflakeTarget = snowflakeTarget;
+    }
+
+    /**
+     * <p>
+     * Specifies a target that writes to a Snowflake data source.
+     * </p>
+     * 
+     * @return Specifies a target that writes to a Snowflake data source.
+     */
+
+    public SnowflakeTarget getSnowflakeTarget() {
+        return this.snowflakeTarget;
+    }
+
+    /**
+     * <p>
+     * Specifies a target that writes to a Snowflake data source.
+     * </p>
+     * 
+     * @param snowflakeTarget
+     *        Specifies a target that writes to a Snowflake data source.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CodeGenConfigurationNode withSnowflakeTarget(SnowflakeTarget snowflakeTarget) {
+        setSnowflakeTarget(snowflakeTarget);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -3357,7 +3449,11 @@ public class CodeGenConfigurationNode implements Serializable, Cloneable, Struct
         if (getEvaluateDataQualityMultiFrame() != null)
             sb.append("EvaluateDataQualityMultiFrame: ").append(getEvaluateDataQualityMultiFrame()).append(",");
         if (getRecipe() != null)
-            sb.append("Recipe: ").append(getRecipe());
+            sb.append("Recipe: ").append(getRecipe()).append(",");
+        if (getSnowflakeSource() != null)
+            sb.append("SnowflakeSource: ").append(getSnowflakeSource()).append(",");
+        if (getSnowflakeTarget() != null)
+            sb.append("SnowflakeTarget: ").append(getSnowflakeTarget());
         sb.append("}");
         return sb.toString();
     }
@@ -3643,6 +3739,14 @@ public class CodeGenConfigurationNode implements Serializable, Cloneable, Struct
             return false;
         if (other.getRecipe() != null && other.getRecipe().equals(this.getRecipe()) == false)
             return false;
+        if (other.getSnowflakeSource() == null ^ this.getSnowflakeSource() == null)
+            return false;
+        if (other.getSnowflakeSource() != null && other.getSnowflakeSource().equals(this.getSnowflakeSource()) == false)
+            return false;
+        if (other.getSnowflakeTarget() == null ^ this.getSnowflakeTarget() == null)
+            return false;
+        if (other.getSnowflakeTarget() != null && other.getSnowflakeTarget().equals(this.getSnowflakeTarget()) == false)
+            return false;
         return true;
     }
 
@@ -3718,6 +3822,8 @@ public class CodeGenConfigurationNode implements Serializable, Cloneable, Struct
         hashCode = prime * hashCode + ((getAmazonRedshiftTarget() == null) ? 0 : getAmazonRedshiftTarget().hashCode());
         hashCode = prime * hashCode + ((getEvaluateDataQualityMultiFrame() == null) ? 0 : getEvaluateDataQualityMultiFrame().hashCode());
         hashCode = prime * hashCode + ((getRecipe() == null) ? 0 : getRecipe().hashCode());
+        hashCode = prime * hashCode + ((getSnowflakeSource() == null) ? 0 : getSnowflakeSource().hashCode());
+        hashCode = prime * hashCode + ((getSnowflakeTarget() == null) ? 0 : getSnowflakeTarget().hashCode());
         return hashCode;
     }
 

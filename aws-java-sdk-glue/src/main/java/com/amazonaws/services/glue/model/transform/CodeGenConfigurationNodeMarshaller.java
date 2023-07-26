@@ -161,6 +161,10 @@ public class CodeGenConfigurationNodeMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EvaluateDataQualityMultiFrame").build();
     private static final MarshallingInfo<StructuredPojo> RECIPE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Recipe").build();
+    private static final MarshallingInfo<StructuredPojo> SNOWFLAKESOURCE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SnowflakeSource").build();
+    private static final MarshallingInfo<StructuredPojo> SNOWFLAKETARGET_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SnowflakeTarget").build();
 
     private static final CodeGenConfigurationNodeMarshaller instance = new CodeGenConfigurationNodeMarshaller();
 
@@ -245,6 +249,8 @@ public class CodeGenConfigurationNodeMarshaller {
             protocolMarshaller.marshall(codeGenConfigurationNode.getAmazonRedshiftTarget(), AMAZONREDSHIFTTARGET_BINDING);
             protocolMarshaller.marshall(codeGenConfigurationNode.getEvaluateDataQualityMultiFrame(), EVALUATEDATAQUALITYMULTIFRAME_BINDING);
             protocolMarshaller.marshall(codeGenConfigurationNode.getRecipe(), RECIPE_BINDING);
+            protocolMarshaller.marshall(codeGenConfigurationNode.getSnowflakeSource(), SNOWFLAKESOURCE_BINDING);
+            protocolMarshaller.marshall(codeGenConfigurationNode.getSnowflakeTarget(), SNOWFLAKETARGET_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

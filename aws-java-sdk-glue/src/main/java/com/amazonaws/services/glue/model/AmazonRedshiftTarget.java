@@ -36,7 +36,7 @@ public class AmazonRedshiftTarget implements Serializable, Cloneable, Structured
     private String name;
     /**
      * <p>
-     * Specifies the data of the Amazon Reshift target node.
+     * Specifies the data of the Amazon Redshift target node.
      * </p>
      */
     private AmazonRedshiftNodeData data;
@@ -89,11 +89,11 @@ public class AmazonRedshiftTarget implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * Specifies the data of the Amazon Reshift target node.
+     * Specifies the data of the Amazon Redshift target node.
      * </p>
      * 
      * @param data
-     *        Specifies the data of the Amazon Reshift target node.
+     *        Specifies the data of the Amazon Redshift target node.
      */
 
     public void setData(AmazonRedshiftNodeData data) {
@@ -102,10 +102,10 @@ public class AmazonRedshiftTarget implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * Specifies the data of the Amazon Reshift target node.
+     * Specifies the data of the Amazon Redshift target node.
      * </p>
      * 
-     * @return Specifies the data of the Amazon Reshift target node.
+     * @return Specifies the data of the Amazon Redshift target node.
      */
 
     public AmazonRedshiftNodeData getData() {
@@ -114,11 +114,11 @@ public class AmazonRedshiftTarget implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * Specifies the data of the Amazon Reshift target node.
+     * Specifies the data of the Amazon Redshift target node.
      * </p>
      * 
      * @param data
-     *        Specifies the data of the Amazon Reshift target node.
+     *        Specifies the data of the Amazon Redshift target node.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

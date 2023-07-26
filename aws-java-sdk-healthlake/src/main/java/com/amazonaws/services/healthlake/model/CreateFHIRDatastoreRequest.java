@@ -27,26 +27,26 @@ public class CreateFHIRDatastoreRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The user generated name for the Data Store.
+     * The user generated name for the data store.
      * </p>
      */
     private String datastoreName;
     /**
      * <p>
-     * The FHIR version of the Data Store. The only supported version is R4.
+     * The FHIR version of the data store. The only supported version is R4.
      * </p>
      */
     private String datastoreTypeVersion;
     /**
      * <p>
-     * The server-side encryption key configuration for a customer provided encryption key specified for creating a Data
-     * Store.
+     * The server-side encryption key configuration for a customer provided encryption key specified for creating a data
+     * store.
      * </p>
      */
     private SseConfiguration sseConfiguration;
     /**
      * <p>
-     * Optional parameter to preload data upon creation of the Data Store. Currently, the only supported preloaded data
+     * Optional parameter to preload data upon creation of the data store. Currently, the only supported preloaded data
      * is synthetic data generated from Synthea.
      * </p>
      */
@@ -59,24 +59,24 @@ public class CreateFHIRDatastoreRequest extends com.amazonaws.AmazonWebServiceRe
     private String clientToken;
     /**
      * <p>
-     * Resource tags that are applied to a Data Store when it is created.
+     * Resource tags that are applied to a data store when it is created.
      * </p>
      */
     private java.util.List<Tag> tags;
     /**
      * <p>
-     * The configuration of the identity provider that you want to use for your Data Store.
+     * The configuration of the identity provider that you want to use for your data store.
      * </p>
      */
     private IdentityProviderConfiguration identityProviderConfiguration;
 
     /**
      * <p>
-     * The user generated name for the Data Store.
+     * The user generated name for the data store.
      * </p>
      * 
      * @param datastoreName
-     *        The user generated name for the Data Store.
+     *        The user generated name for the data store.
      */
 
     public void setDatastoreName(String datastoreName) {
@@ -85,10 +85,10 @@ public class CreateFHIRDatastoreRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The user generated name for the Data Store.
+     * The user generated name for the data store.
      * </p>
      * 
-     * @return The user generated name for the Data Store.
+     * @return The user generated name for the data store.
      */
 
     public String getDatastoreName() {
@@ -97,11 +97,11 @@ public class CreateFHIRDatastoreRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The user generated name for the Data Store.
+     * The user generated name for the data store.
      * </p>
      * 
      * @param datastoreName
-     *        The user generated name for the Data Store.
+     *        The user generated name for the data store.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -112,11 +112,11 @@ public class CreateFHIRDatastoreRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The FHIR version of the Data Store. The only supported version is R4.
+     * The FHIR version of the data store. The only supported version is R4.
      * </p>
      * 
      * @param datastoreTypeVersion
-     *        The FHIR version of the Data Store. The only supported version is R4.
+     *        The FHIR version of the data store. The only supported version is R4.
      * @see FHIRVersion
      */
 
@@ -126,10 +126,10 @@ public class CreateFHIRDatastoreRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The FHIR version of the Data Store. The only supported version is R4.
+     * The FHIR version of the data store. The only supported version is R4.
      * </p>
      * 
-     * @return The FHIR version of the Data Store. The only supported version is R4.
+     * @return The FHIR version of the data store. The only supported version is R4.
      * @see FHIRVersion
      */
 
@@ -139,11 +139,11 @@ public class CreateFHIRDatastoreRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The FHIR version of the Data Store. The only supported version is R4.
+     * The FHIR version of the data store. The only supported version is R4.
      * </p>
      * 
      * @param datastoreTypeVersion
-     *        The FHIR version of the Data Store. The only supported version is R4.
+     *        The FHIR version of the data store. The only supported version is R4.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see FHIRVersion
      */
@@ -155,11 +155,11 @@ public class CreateFHIRDatastoreRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The FHIR version of the Data Store. The only supported version is R4.
+     * The FHIR version of the data store. The only supported version is R4.
      * </p>
      * 
      * @param datastoreTypeVersion
-     *        The FHIR version of the Data Store. The only supported version is R4.
+     *        The FHIR version of the data store. The only supported version is R4.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see FHIRVersion
      */
@@ -171,13 +171,13 @@ public class CreateFHIRDatastoreRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The server-side encryption key configuration for a customer provided encryption key specified for creating a Data
-     * Store.
+     * The server-side encryption key configuration for a customer provided encryption key specified for creating a data
+     * store.
      * </p>
      * 
      * @param sseConfiguration
      *        The server-side encryption key configuration for a customer provided encryption key specified for creating
-     *        a Data Store.
+     *        a data store.
      */
 
     public void setSseConfiguration(SseConfiguration sseConfiguration) {
@@ -186,12 +186,12 @@ public class CreateFHIRDatastoreRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The server-side encryption key configuration for a customer provided encryption key specified for creating a Data
-     * Store.
+     * The server-side encryption key configuration for a customer provided encryption key specified for creating a data
+     * store.
      * </p>
      * 
      * @return The server-side encryption key configuration for a customer provided encryption key specified for
-     *         creating a Data Store.
+     *         creating a data store.
      */
 
     public SseConfiguration getSseConfiguration() {
@@ -200,13 +200,13 @@ public class CreateFHIRDatastoreRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The server-side encryption key configuration for a customer provided encryption key specified for creating a Data
-     * Store.
+     * The server-side encryption key configuration for a customer provided encryption key specified for creating a data
+     * store.
      * </p>
      * 
      * @param sseConfiguration
      *        The server-side encryption key configuration for a customer provided encryption key specified for creating
-     *        a Data Store.
+     *        a data store.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -217,12 +217,12 @@ public class CreateFHIRDatastoreRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * Optional parameter to preload data upon creation of the Data Store. Currently, the only supported preloaded data
+     * Optional parameter to preload data upon creation of the data store. Currently, the only supported preloaded data
      * is synthetic data generated from Synthea.
      * </p>
      * 
      * @param preloadDataConfig
-     *        Optional parameter to preload data upon creation of the Data Store. Currently, the only supported
+     *        Optional parameter to preload data upon creation of the data store. Currently, the only supported
      *        preloaded data is synthetic data generated from Synthea.
      */
 
@@ -232,11 +232,11 @@ public class CreateFHIRDatastoreRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * Optional parameter to preload data upon creation of the Data Store. Currently, the only supported preloaded data
+     * Optional parameter to preload data upon creation of the data store. Currently, the only supported preloaded data
      * is synthetic data generated from Synthea.
      * </p>
      * 
-     * @return Optional parameter to preload data upon creation of the Data Store. Currently, the only supported
+     * @return Optional parameter to preload data upon creation of the data store. Currently, the only supported
      *         preloaded data is synthetic data generated from Synthea.
      */
 
@@ -246,12 +246,12 @@ public class CreateFHIRDatastoreRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * Optional parameter to preload data upon creation of the Data Store. Currently, the only supported preloaded data
+     * Optional parameter to preload data upon creation of the data store. Currently, the only supported preloaded data
      * is synthetic data generated from Synthea.
      * </p>
      * 
      * @param preloadDataConfig
-     *        Optional parameter to preload data upon creation of the Data Store. Currently, the only supported
+     *        Optional parameter to preload data upon creation of the data store. Currently, the only supported
      *        preloaded data is synthetic data generated from Synthea.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -303,10 +303,10 @@ public class CreateFHIRDatastoreRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * Resource tags that are applied to a Data Store when it is created.
+     * Resource tags that are applied to a data store when it is created.
      * </p>
      * 
-     * @return Resource tags that are applied to a Data Store when it is created.
+     * @return Resource tags that are applied to a data store when it is created.
      */
 
     public java.util.List<Tag> getTags() {
@@ -315,11 +315,11 @@ public class CreateFHIRDatastoreRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * Resource tags that are applied to a Data Store when it is created.
+     * Resource tags that are applied to a data store when it is created.
      * </p>
      * 
      * @param tags
-     *        Resource tags that are applied to a Data Store when it is created.
+     *        Resource tags that are applied to a data store when it is created.
      */
 
     public void setTags(java.util.Collection<Tag> tags) {
@@ -333,7 +333,7 @@ public class CreateFHIRDatastoreRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * Resource tags that are applied to a Data Store when it is created.
+     * Resource tags that are applied to a data store when it is created.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -342,7 +342,7 @@ public class CreateFHIRDatastoreRequest extends com.amazonaws.AmazonWebServiceRe
      * </p>
      * 
      * @param tags
-     *        Resource tags that are applied to a Data Store when it is created.
+     *        Resource tags that are applied to a data store when it is created.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -358,11 +358,11 @@ public class CreateFHIRDatastoreRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * Resource tags that are applied to a Data Store when it is created.
+     * Resource tags that are applied to a data store when it is created.
      * </p>
      * 
      * @param tags
-     *        Resource tags that are applied to a Data Store when it is created.
+     *        Resource tags that are applied to a data store when it is created.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -373,11 +373,11 @@ public class CreateFHIRDatastoreRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The configuration of the identity provider that you want to use for your Data Store.
+     * The configuration of the identity provider that you want to use for your data store.
      * </p>
      * 
      * @param identityProviderConfiguration
-     *        The configuration of the identity provider that you want to use for your Data Store.
+     *        The configuration of the identity provider that you want to use for your data store.
      */
 
     public void setIdentityProviderConfiguration(IdentityProviderConfiguration identityProviderConfiguration) {
@@ -386,10 +386,10 @@ public class CreateFHIRDatastoreRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The configuration of the identity provider that you want to use for your Data Store.
+     * The configuration of the identity provider that you want to use for your data store.
      * </p>
      * 
-     * @return The configuration of the identity provider that you want to use for your Data Store.
+     * @return The configuration of the identity provider that you want to use for your data store.
      */
 
     public IdentityProviderConfiguration getIdentityProviderConfiguration() {
@@ -398,11 +398,11 @@ public class CreateFHIRDatastoreRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The configuration of the identity provider that you want to use for your Data Store.
+     * The configuration of the identity provider that you want to use for your data store.
      * </p>
      * 
      * @param identityProviderConfiguration
-     *        The configuration of the identity provider that you want to use for your Data Store.
+     *        The configuration of the identity provider that you want to use for your data store.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
