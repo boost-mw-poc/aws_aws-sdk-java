@@ -48,6 +48,10 @@ public class ApplicationInfoJsonUnmarshaller implements Unmarshaller<Application
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("AccountId", targetDepth)) {
+                    context.nextToken();
+                    applicationInfo.setAccountId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("ResourceGroupName", targetDepth)) {
                     context.nextToken();
                     applicationInfo.setResourceGroupName(context.getUnmarshaller(String.class).unmarshall(context));

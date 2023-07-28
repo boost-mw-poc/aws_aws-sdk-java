@@ -44,6 +44,16 @@ public class RollbackStackRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      */
     private String clientRequestToken;
+    /**
+     * <p>
+     * This deletion policy deletes newly created resources, but retains existing resources, when a stack operation is
+     * rolled back. This ensures new, empty, and unused resources are deleted, while critical resources and their data
+     * are retained. <code>RetainExceptOnCreate</code> can be specified for any resource that supports the <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-deletionpolicy.html">
+     * DeletionPolicy</a> attribute.
+     * </p>
+     */
+    private Boolean retainExceptOnCreate;
 
     /**
      * <p>
@@ -172,6 +182,94 @@ public class RollbackStackRequest extends com.amazonaws.AmazonWebServiceRequest 
     }
 
     /**
+     * <p>
+     * This deletion policy deletes newly created resources, but retains existing resources, when a stack operation is
+     * rolled back. This ensures new, empty, and unused resources are deleted, while critical resources and their data
+     * are retained. <code>RetainExceptOnCreate</code> can be specified for any resource that supports the <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-deletionpolicy.html">
+     * DeletionPolicy</a> attribute.
+     * </p>
+     * 
+     * @param retainExceptOnCreate
+     *        This deletion policy deletes newly created resources, but retains existing resources, when a stack
+     *        operation is rolled back. This ensures new, empty, and unused resources are deleted, while critical
+     *        resources and their data are retained. <code>RetainExceptOnCreate</code> can be specified for any resource
+     *        that supports the <a
+     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-deletionpolicy.html">
+     *        DeletionPolicy</a> attribute.
+     */
+
+    public void setRetainExceptOnCreate(Boolean retainExceptOnCreate) {
+        this.retainExceptOnCreate = retainExceptOnCreate;
+    }
+
+    /**
+     * <p>
+     * This deletion policy deletes newly created resources, but retains existing resources, when a stack operation is
+     * rolled back. This ensures new, empty, and unused resources are deleted, while critical resources and their data
+     * are retained. <code>RetainExceptOnCreate</code> can be specified for any resource that supports the <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-deletionpolicy.html">
+     * DeletionPolicy</a> attribute.
+     * </p>
+     * 
+     * @return This deletion policy deletes newly created resources, but retains existing resources, when a stack
+     *         operation is rolled back. This ensures new, empty, and unused resources are deleted, while critical
+     *         resources and their data are retained. <code>RetainExceptOnCreate</code> can be specified for any
+     *         resource that supports the <a
+     *         href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-deletionpolicy.html">
+     *         DeletionPolicy</a> attribute.
+     */
+
+    public Boolean getRetainExceptOnCreate() {
+        return this.retainExceptOnCreate;
+    }
+
+    /**
+     * <p>
+     * This deletion policy deletes newly created resources, but retains existing resources, when a stack operation is
+     * rolled back. This ensures new, empty, and unused resources are deleted, while critical resources and their data
+     * are retained. <code>RetainExceptOnCreate</code> can be specified for any resource that supports the <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-deletionpolicy.html">
+     * DeletionPolicy</a> attribute.
+     * </p>
+     * 
+     * @param retainExceptOnCreate
+     *        This deletion policy deletes newly created resources, but retains existing resources, when a stack
+     *        operation is rolled back. This ensures new, empty, and unused resources are deleted, while critical
+     *        resources and their data are retained. <code>RetainExceptOnCreate</code> can be specified for any resource
+     *        that supports the <a
+     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-deletionpolicy.html">
+     *        DeletionPolicy</a> attribute.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RollbackStackRequest withRetainExceptOnCreate(Boolean retainExceptOnCreate) {
+        setRetainExceptOnCreate(retainExceptOnCreate);
+        return this;
+    }
+
+    /**
+     * <p>
+     * This deletion policy deletes newly created resources, but retains existing resources, when a stack operation is
+     * rolled back. This ensures new, empty, and unused resources are deleted, while critical resources and their data
+     * are retained. <code>RetainExceptOnCreate</code> can be specified for any resource that supports the <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-deletionpolicy.html">
+     * DeletionPolicy</a> attribute.
+     * </p>
+     * 
+     * @return This deletion policy deletes newly created resources, but retains existing resources, when a stack
+     *         operation is rolled back. This ensures new, empty, and unused resources are deleted, while critical
+     *         resources and their data are retained. <code>RetainExceptOnCreate</code> can be specified for any
+     *         resource that supports the <a
+     *         href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-deletionpolicy.html">
+     *         DeletionPolicy</a> attribute.
+     */
+
+    public Boolean isRetainExceptOnCreate() {
+        return this.retainExceptOnCreate;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -188,7 +286,9 @@ public class RollbackStackRequest extends com.amazonaws.AmazonWebServiceRequest 
         if (getRoleARN() != null)
             sb.append("RoleARN: ").append(getRoleARN()).append(",");
         if (getClientRequestToken() != null)
-            sb.append("ClientRequestToken: ").append(getClientRequestToken());
+            sb.append("ClientRequestToken: ").append(getClientRequestToken()).append(",");
+        if (getRetainExceptOnCreate() != null)
+            sb.append("RetainExceptOnCreate: ").append(getRetainExceptOnCreate());
         sb.append("}");
         return sb.toString();
     }
@@ -215,6 +315,10 @@ public class RollbackStackRequest extends com.amazonaws.AmazonWebServiceRequest 
             return false;
         if (other.getClientRequestToken() != null && other.getClientRequestToken().equals(this.getClientRequestToken()) == false)
             return false;
+        if (other.getRetainExceptOnCreate() == null ^ this.getRetainExceptOnCreate() == null)
+            return false;
+        if (other.getRetainExceptOnCreate() != null && other.getRetainExceptOnCreate().equals(this.getRetainExceptOnCreate()) == false)
+            return false;
         return true;
     }
 
@@ -226,6 +330,7 @@ public class RollbackStackRequest extends com.amazonaws.AmazonWebServiceRequest 
         hashCode = prime * hashCode + ((getStackName() == null) ? 0 : getStackName().hashCode());
         hashCode = prime * hashCode + ((getRoleARN() == null) ? 0 : getRoleARN().hashCode());
         hashCode = prime * hashCode + ((getClientRequestToken() == null) ? 0 : getClientRequestToken().hashCode());
+        hashCode = prime * hashCode + ((getRetainExceptOnCreate() == null) ? 0 : getRetainExceptOnCreate().hashCode());
         return hashCode;
     }
 

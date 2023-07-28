@@ -196,6 +196,16 @@ public class Stack implements Serializable, Cloneable {
      * </p>
      */
     private StackDriftInformation driftInformation;
+    /**
+     * <p>
+     * This deletion policy deletes newly created resources, but retains existing resources, when a stack operation is
+     * rolled back. This ensures new, empty, and unused resources are deleted, while critical resources and their data
+     * are retained. <code>RetainExceptOnCreate</code> can be specified for any resource that supports the <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-deletionpolicy.html">
+     * DeletionPolicy</a> attribute.
+     * </p>
+     */
+    private Boolean retainExceptOnCreate;
 
     /**
      * <p>
@@ -1583,6 +1593,94 @@ public class Stack implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * This deletion policy deletes newly created resources, but retains existing resources, when a stack operation is
+     * rolled back. This ensures new, empty, and unused resources are deleted, while critical resources and their data
+     * are retained. <code>RetainExceptOnCreate</code> can be specified for any resource that supports the <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-deletionpolicy.html">
+     * DeletionPolicy</a> attribute.
+     * </p>
+     * 
+     * @param retainExceptOnCreate
+     *        This deletion policy deletes newly created resources, but retains existing resources, when a stack
+     *        operation is rolled back. This ensures new, empty, and unused resources are deleted, while critical
+     *        resources and their data are retained. <code>RetainExceptOnCreate</code> can be specified for any resource
+     *        that supports the <a
+     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-deletionpolicy.html">
+     *        DeletionPolicy</a> attribute.
+     */
+
+    public void setRetainExceptOnCreate(Boolean retainExceptOnCreate) {
+        this.retainExceptOnCreate = retainExceptOnCreate;
+    }
+
+    /**
+     * <p>
+     * This deletion policy deletes newly created resources, but retains existing resources, when a stack operation is
+     * rolled back. This ensures new, empty, and unused resources are deleted, while critical resources and their data
+     * are retained. <code>RetainExceptOnCreate</code> can be specified for any resource that supports the <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-deletionpolicy.html">
+     * DeletionPolicy</a> attribute.
+     * </p>
+     * 
+     * @return This deletion policy deletes newly created resources, but retains existing resources, when a stack
+     *         operation is rolled back. This ensures new, empty, and unused resources are deleted, while critical
+     *         resources and their data are retained. <code>RetainExceptOnCreate</code> can be specified for any
+     *         resource that supports the <a
+     *         href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-deletionpolicy.html">
+     *         DeletionPolicy</a> attribute.
+     */
+
+    public Boolean getRetainExceptOnCreate() {
+        return this.retainExceptOnCreate;
+    }
+
+    /**
+     * <p>
+     * This deletion policy deletes newly created resources, but retains existing resources, when a stack operation is
+     * rolled back. This ensures new, empty, and unused resources are deleted, while critical resources and their data
+     * are retained. <code>RetainExceptOnCreate</code> can be specified for any resource that supports the <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-deletionpolicy.html">
+     * DeletionPolicy</a> attribute.
+     * </p>
+     * 
+     * @param retainExceptOnCreate
+     *        This deletion policy deletes newly created resources, but retains existing resources, when a stack
+     *        operation is rolled back. This ensures new, empty, and unused resources are deleted, while critical
+     *        resources and their data are retained. <code>RetainExceptOnCreate</code> can be specified for any resource
+     *        that supports the <a
+     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-deletionpolicy.html">
+     *        DeletionPolicy</a> attribute.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Stack withRetainExceptOnCreate(Boolean retainExceptOnCreate) {
+        setRetainExceptOnCreate(retainExceptOnCreate);
+        return this;
+    }
+
+    /**
+     * <p>
+     * This deletion policy deletes newly created resources, but retains existing resources, when a stack operation is
+     * rolled back. This ensures new, empty, and unused resources are deleted, while critical resources and their data
+     * are retained. <code>RetainExceptOnCreate</code> can be specified for any resource that supports the <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-deletionpolicy.html">
+     * DeletionPolicy</a> attribute.
+     * </p>
+     * 
+     * @return This deletion policy deletes newly created resources, but retains existing resources, when a stack
+     *         operation is rolled back. This ensures new, empty, and unused resources are deleted, while critical
+     *         resources and their data are retained. <code>RetainExceptOnCreate</code> can be specified for any
+     *         resource that supports the <a
+     *         href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-deletionpolicy.html">
+     *         DeletionPolicy</a> attribute.
+     */
+
+    public Boolean isRetainExceptOnCreate() {
+        return this.retainExceptOnCreate;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1637,7 +1735,9 @@ public class Stack implements Serializable, Cloneable {
         if (getRootId() != null)
             sb.append("RootId: ").append(getRootId()).append(",");
         if (getDriftInformation() != null)
-            sb.append("DriftInformation: ").append(getDriftInformation());
+            sb.append("DriftInformation: ").append(getDriftInformation()).append(",");
+        if (getRetainExceptOnCreate() != null)
+            sb.append("RetainExceptOnCreate: ").append(getRetainExceptOnCreate());
         sb.append("}");
         return sb.toString();
     }
@@ -1740,6 +1840,10 @@ public class Stack implements Serializable, Cloneable {
             return false;
         if (other.getDriftInformation() != null && other.getDriftInformation().equals(this.getDriftInformation()) == false)
             return false;
+        if (other.getRetainExceptOnCreate() == null ^ this.getRetainExceptOnCreate() == null)
+            return false;
+        if (other.getRetainExceptOnCreate() != null && other.getRetainExceptOnCreate().equals(this.getRetainExceptOnCreate()) == false)
+            return false;
         return true;
     }
 
@@ -1770,6 +1874,7 @@ public class Stack implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getParentId() == null) ? 0 : getParentId().hashCode());
         hashCode = prime * hashCode + ((getRootId() == null) ? 0 : getRootId().hashCode());
         hashCode = prime * hashCode + ((getDriftInformation() == null) ? 0 : getDriftInformation().hashCode());
+        hashCode = prime * hashCode + ((getRetainExceptOnCreate() == null) ? 0 : getRetainExceptOnCreate().hashCode());
         return hashCode;
     }
 

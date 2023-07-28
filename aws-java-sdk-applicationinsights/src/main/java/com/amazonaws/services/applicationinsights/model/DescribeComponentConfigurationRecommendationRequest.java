@@ -44,6 +44,12 @@ public class DescribeComponentConfigurationRecommendationRequest extends com.ama
      * </p>
      */
     private String tier;
+    /**
+     * <p>
+     * The recommended configuration type.
+     * </p>
+     */
+    private String recommendationType;
 
     /**
      * <p>
@@ -185,6 +191,65 @@ public class DescribeComponentConfigurationRecommendationRequest extends com.ama
     }
 
     /**
+     * <p>
+     * The recommended configuration type.
+     * </p>
+     * 
+     * @param recommendationType
+     *        The recommended configuration type.
+     * @see RecommendationType
+     */
+
+    public void setRecommendationType(String recommendationType) {
+        this.recommendationType = recommendationType;
+    }
+
+    /**
+     * <p>
+     * The recommended configuration type.
+     * </p>
+     * 
+     * @return The recommended configuration type.
+     * @see RecommendationType
+     */
+
+    public String getRecommendationType() {
+        return this.recommendationType;
+    }
+
+    /**
+     * <p>
+     * The recommended configuration type.
+     * </p>
+     * 
+     * @param recommendationType
+     *        The recommended configuration type.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see RecommendationType
+     */
+
+    public DescribeComponentConfigurationRecommendationRequest withRecommendationType(String recommendationType) {
+        setRecommendationType(recommendationType);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The recommended configuration type.
+     * </p>
+     * 
+     * @param recommendationType
+     *        The recommended configuration type.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see RecommendationType
+     */
+
+    public DescribeComponentConfigurationRecommendationRequest withRecommendationType(RecommendationType recommendationType) {
+        this.recommendationType = recommendationType.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -201,7 +266,9 @@ public class DescribeComponentConfigurationRecommendationRequest extends com.ama
         if (getComponentName() != null)
             sb.append("ComponentName: ").append(getComponentName()).append(",");
         if (getTier() != null)
-            sb.append("Tier: ").append(getTier());
+            sb.append("Tier: ").append(getTier()).append(",");
+        if (getRecommendationType() != null)
+            sb.append("RecommendationType: ").append(getRecommendationType());
         sb.append("}");
         return sb.toString();
     }
@@ -228,6 +295,10 @@ public class DescribeComponentConfigurationRecommendationRequest extends com.ama
             return false;
         if (other.getTier() != null && other.getTier().equals(this.getTier()) == false)
             return false;
+        if (other.getRecommendationType() == null ^ this.getRecommendationType() == null)
+            return false;
+        if (other.getRecommendationType() != null && other.getRecommendationType().equals(this.getRecommendationType()) == false)
+            return false;
         return true;
     }
 
@@ -239,6 +310,7 @@ public class DescribeComponentConfigurationRecommendationRequest extends com.ama
         hashCode = prime * hashCode + ((getResourceGroupName() == null) ? 0 : getResourceGroupName().hashCode());
         hashCode = prime * hashCode + ((getComponentName() == null) ? 0 : getComponentName().hashCode());
         hashCode = prime * hashCode + ((getTier() == null) ? 0 : getTier().hashCode());
+        hashCode = prime * hashCode + ((getRecommendationType() == null) ? 0 : getRecommendationType().hashCode());
         return hashCode;
     }
 

@@ -183,6 +183,19 @@ public class AbstractAWSKafkaAsync extends AbstractAWSKafka implements AWSKafkaA
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeClusterOperationV2Result> describeClusterOperationV2Async(DescribeClusterOperationV2Request request) {
+
+        return describeClusterOperationV2Async(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeClusterOperationV2Result> describeClusterOperationV2Async(DescribeClusterOperationV2Request request,
+            com.amazonaws.handlers.AsyncHandler<DescribeClusterOperationV2Request, DescribeClusterOperationV2Result> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeClusterV2Result> describeClusterV2Async(DescribeClusterV2Request request) {
 
         return describeClusterV2Async(request, null);
@@ -295,6 +308,19 @@ public class AbstractAWSKafkaAsync extends AbstractAWSKafka implements AWSKafkaA
     @Override
     public java.util.concurrent.Future<ListClusterOperationsResult> listClusterOperationsAsync(ListClusterOperationsRequest request,
             com.amazonaws.handlers.AsyncHandler<ListClusterOperationsRequest, ListClusterOperationsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListClusterOperationsV2Result> listClusterOperationsV2Async(ListClusterOperationsV2Request request) {
+
+        return listClusterOperationsV2Async(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListClusterOperationsV2Result> listClusterOperationsV2Async(ListClusterOperationsV2Request request,
+            com.amazonaws.handlers.AsyncHandler<ListClusterOperationsV2Request, ListClusterOperationsV2Result> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

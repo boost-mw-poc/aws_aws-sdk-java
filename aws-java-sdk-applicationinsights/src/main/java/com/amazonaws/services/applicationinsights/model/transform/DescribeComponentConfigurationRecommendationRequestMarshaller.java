@@ -33,6 +33,8 @@ public class DescribeComponentConfigurationRecommendationRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ComponentName").build();
     private static final MarshallingInfo<String> TIER_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Tier").build();
+    private static final MarshallingInfo<String> RECOMMENDATIONTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("RecommendationType").build();
 
     private static final DescribeComponentConfigurationRecommendationRequestMarshaller instance = new DescribeComponentConfigurationRecommendationRequestMarshaller();
 
@@ -54,6 +56,7 @@ public class DescribeComponentConfigurationRecommendationRequestMarshaller {
             protocolMarshaller.marshall(describeComponentConfigurationRecommendationRequest.getResourceGroupName(), RESOURCEGROUPNAME_BINDING);
             protocolMarshaller.marshall(describeComponentConfigurationRecommendationRequest.getComponentName(), COMPONENTNAME_BINDING);
             protocolMarshaller.marshall(describeComponentConfigurationRecommendationRequest.getTier(), TIER_BINDING);
+            protocolMarshaller.marshall(describeComponentConfigurationRecommendationRequest.getRecommendationType(), RECOMMENDATIONTYPE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

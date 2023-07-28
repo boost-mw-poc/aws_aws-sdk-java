@@ -30,6 +30,12 @@ public class ApplicationInfo implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
+     * The AWS account ID for the owner of the application.
+     * </p>
+     */
+    private String accountId;
+    /**
+     * <p>
      * The name of the resource group used for the application.
      * </p>
      */
@@ -92,6 +98,46 @@ public class ApplicationInfo implements Serializable, Cloneable, StructuredPojo 
      * </p>
      */
     private String discoveryType;
+
+    /**
+     * <p>
+     * The AWS account ID for the owner of the application.
+     * </p>
+     * 
+     * @param accountId
+     *        The AWS account ID for the owner of the application.
+     */
+
+    public void setAccountId(String accountId) {
+        this.accountId = accountId;
+    }
+
+    /**
+     * <p>
+     * The AWS account ID for the owner of the application.
+     * </p>
+     * 
+     * @return The AWS account ID for the owner of the application.
+     */
+
+    public String getAccountId() {
+        return this.accountId;
+    }
+
+    /**
+     * <p>
+     * The AWS account ID for the owner of the application.
+     * </p>
+     * 
+     * @param accountId
+     *        The AWS account ID for the owner of the application.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ApplicationInfo withAccountId(String accountId) {
+        setAccountId(accountId);
+        return this;
+    }
 
     /**
      * <p>
@@ -577,6 +623,8 @@ public class ApplicationInfo implements Serializable, Cloneable, StructuredPojo 
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getAccountId() != null)
+            sb.append("AccountId: ").append(getAccountId()).append(",");
         if (getResourceGroupName() != null)
             sb.append("ResourceGroupName: ").append(getResourceGroupName()).append(",");
         if (getLifeCycle() != null)
@@ -607,6 +655,10 @@ public class ApplicationInfo implements Serializable, Cloneable, StructuredPojo 
         if (obj instanceof ApplicationInfo == false)
             return false;
         ApplicationInfo other = (ApplicationInfo) obj;
+        if (other.getAccountId() == null ^ this.getAccountId() == null)
+            return false;
+        if (other.getAccountId() != null && other.getAccountId().equals(this.getAccountId()) == false)
+            return false;
         if (other.getResourceGroupName() == null ^ this.getResourceGroupName() == null)
             return false;
         if (other.getResourceGroupName() != null && other.getResourceGroupName().equals(this.getResourceGroupName()) == false)
@@ -647,6 +699,7 @@ public class ApplicationInfo implements Serializable, Cloneable, StructuredPojo 
         final int prime = 31;
         int hashCode = 1;
 
+        hashCode = prime * hashCode + ((getAccountId() == null) ? 0 : getAccountId().hashCode());
         hashCode = prime * hashCode + ((getResourceGroupName() == null) ? 0 : getResourceGroupName().hashCode());
         hashCode = prime * hashCode + ((getLifeCycle() == null) ? 0 : getLifeCycle().hashCode());
         hashCode = prime * hashCode + ((getOpsItemSNSTopicArn() == null) ? 0 : getOpsItemSNSTopicArn().hashCode());
