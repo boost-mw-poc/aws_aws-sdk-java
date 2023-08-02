@@ -225,12 +225,82 @@ public class AWSResilienceHubClient extends AmazonWebServiceClient implements AW
 
     /**
      * <p>
+     * Enables you to include or exclude one or more operational recommendations.
+     * </p>
+     * 
+     * @param batchUpdateRecommendationStatusRequest
+     * @return Result of the BatchUpdateRecommendationStatus operation returned by the service.
+     * @throws InternalServerException
+     *         This exception occurs when there is an internal failure in the Resilience Hub service.
+     * @throws ResourceNotFoundException
+     *         This exception occurs when the specified resource could not be found.
+     * @throws ThrottlingException
+     *         This exception occurs when you have exceeded the limit on the number of requests per second.
+     * @throws ValidationException
+     *         This exception occurs when a request is not valid.
+     * @throws AccessDeniedException
+     *         You don't have permissions to perform the requested operation. The user or role that is making the
+     *         request must have at least one IAM permissions policy attached that grants the required permissions.
+     * @sample AWSResilienceHub.BatchUpdateRecommendationStatus
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/resiliencehub-2020-04-30/BatchUpdateRecommendationStatus"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public BatchUpdateRecommendationStatusResult batchUpdateRecommendationStatus(BatchUpdateRecommendationStatusRequest request) {
+        request = beforeClientExecution(request);
+        return executeBatchUpdateRecommendationStatus(request);
+    }
+
+    @SdkInternalApi
+    final BatchUpdateRecommendationStatusResult executeBatchUpdateRecommendationStatus(
+            BatchUpdateRecommendationStatusRequest batchUpdateRecommendationStatusRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(batchUpdateRecommendationStatusRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<BatchUpdateRecommendationStatusRequest> request = null;
+        Response<BatchUpdateRecommendationStatusResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new BatchUpdateRecommendationStatusRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(batchUpdateRecommendationStatusRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "resiliencehub");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "BatchUpdateRecommendationStatus");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<BatchUpdateRecommendationStatusResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new BatchUpdateRecommendationStatusResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Creates an Resilience Hub application. An Resilience Hub application is a collection of Amazon Web Services
-     * resources structured to prevent and recover Amazon Web Services application disruptions. To describe an
-     * Resilience Hub application, you provide an application name, resources from one or more CloudFormation stacks,
-     * Resource Groups, Terraform state files, AppRegistry applications, and an appropriate resiliency policy. For more
-     * information about the number of resources supported per application, see <a
-     * href="https://docs.aws.amazon.com/general/latest/gr/resiliencehub.html#limits_resiliencehub">Service Quotas</a>.
+     * resources structured to prevent and recover Amazon Web Services application disruptions. To describe a Resilience
+     * Hub application, you provide an application name, resources from one or more CloudFormation stacks, Resource
+     * Groups, Terraform state files, AppRegistry applications, and an appropriate resiliency policy. In addition, you
+     * can also add resources that are located on Amazon Elastic Kubernetes Service (Amazon EKS) clusters as optional
+     * resources. For more information about the number of resources supported per application, see <a
+     * href="https://docs.aws.amazon.com/general/latest/gr/resiliencehub.html#limits_resiliencehub">Service quotas</a>.
      * </p>
      * <p>
      * After you create an Resilience Hub application, you publish it so that you can run a resiliency assessment on it.
@@ -1829,6 +1899,9 @@ public class AWSResilienceHubClient extends AmazonWebServiceClient implements AW
      *         This exception occurs when a conflict with a previous successful write is detected. This generally occurs
      *         when the previous write did not have time to propagate to the host serving the current request. A retry
      *         (with appropriate backoff logic) is the recommended response to this exception.
+     * @throws ServiceQuotaExceededException
+     *         This exception occurs when you have exceeded your service quota. To perform the requested action, remove
+     *         some of the relevant resources, or use Service Quotas to request a service quota increase.
      * @throws ThrottlingException
      *         This exception occurs when you have exceeded the limit on the number of requests per second.
      * @throws ValidationException
@@ -1945,6 +2018,73 @@ public class AWSResilienceHubClient extends AmazonWebServiceClient implements AW
             HttpResponseHandler<AmazonWebServiceResponse<ListAlarmRecommendationsResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new ListAlarmRecommendationsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * List of compliance drifts that were detected while running an assessment.
+     * </p>
+     * 
+     * @param listAppAssessmentComplianceDriftsRequest
+     * @return Result of the ListAppAssessmentComplianceDrifts operation returned by the service.
+     * @throws InternalServerException
+     *         This exception occurs when there is an internal failure in the Resilience Hub service.
+     * @throws ThrottlingException
+     *         This exception occurs when you have exceeded the limit on the number of requests per second.
+     * @throws ValidationException
+     *         This exception occurs when a request is not valid.
+     * @throws AccessDeniedException
+     *         You don't have permissions to perform the requested operation. The user or role that is making the
+     *         request must have at least one IAM permissions policy attached that grants the required permissions.
+     * @sample AWSResilienceHub.ListAppAssessmentComplianceDrifts
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/resiliencehub-2020-04-30/ListAppAssessmentComplianceDrifts"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListAppAssessmentComplianceDriftsResult listAppAssessmentComplianceDrifts(ListAppAssessmentComplianceDriftsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListAppAssessmentComplianceDrifts(request);
+    }
+
+    @SdkInternalApi
+    final ListAppAssessmentComplianceDriftsResult executeListAppAssessmentComplianceDrifts(
+            ListAppAssessmentComplianceDriftsRequest listAppAssessmentComplianceDriftsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listAppAssessmentComplianceDriftsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListAppAssessmentComplianceDriftsRequest> request = null;
+        Response<ListAppAssessmentComplianceDriftsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListAppAssessmentComplianceDriftsRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(listAppAssessmentComplianceDriftsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "resiliencehub");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListAppAssessmentComplianceDrifts");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListAppAssessmentComplianceDriftsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new ListAppAssessmentComplianceDriftsResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

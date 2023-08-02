@@ -25,7 +25,7 @@ public class DeleteAppVersionAppComponentResult extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
+     * Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
      * <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more
      * information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">
      * Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i> guide.
@@ -34,27 +34,27 @@ public class DeleteAppVersionAppComponentResult extends com.amazonaws.AmazonWebS
     private String appArn;
     /**
      * <p>
-     * The list of Application Components that belong to this resource.
+     * List of Application Components that belong to this resource.
      * </p>
      */
     private AppComponent appComponent;
     /**
      * <p>
-     * The Resilience Hub application version.
+     * Resilience Hub application version.
      * </p>
      */
     private String appVersion;
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
+     * Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
      * <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more
      * information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">
      * Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i> guide.
      * </p>
      * 
      * @param appArn
-     *        The Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
+     *        Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
      *        <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For
      *        more information about ARNs, see <a
      *        href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names
@@ -67,13 +67,13 @@ public class DeleteAppVersionAppComponentResult extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
+     * Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
      * <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more
      * information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">
      * Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i> guide.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
+     * @return Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
      *         <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>.
      *         For more information about ARNs, see <a
      *         href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names
@@ -86,14 +86,14 @@ public class DeleteAppVersionAppComponentResult extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
+     * Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
      * <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more
      * information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">
      * Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i> guide.
      * </p>
      * 
      * @param appArn
-     *        The Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
+     *        Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
      *        <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For
      *        more information about ARNs, see <a
      *        href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names
@@ -108,11 +108,11 @@ public class DeleteAppVersionAppComponentResult extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The list of Application Components that belong to this resource.
+     * List of Application Components that belong to this resource.
      * </p>
      * 
      * @param appComponent
-     *        The list of Application Components that belong to this resource.
+     *        List of Application Components that belong to this resource.
      */
 
     public void setAppComponent(AppComponent appComponent) {
@@ -121,10 +121,10 @@ public class DeleteAppVersionAppComponentResult extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The list of Application Components that belong to this resource.
+     * List of Application Components that belong to this resource.
      * </p>
      * 
-     * @return The list of Application Components that belong to this resource.
+     * @return List of Application Components that belong to this resource.
      */
 
     public AppComponent getAppComponent() {
@@ -133,11 +133,11 @@ public class DeleteAppVersionAppComponentResult extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The list of Application Components that belong to this resource.
+     * List of Application Components that belong to this resource.
      * </p>
      * 
      * @param appComponent
-     *        The list of Application Components that belong to this resource.
+     *        List of Application Components that belong to this resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -148,11 +148,11 @@ public class DeleteAppVersionAppComponentResult extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The Resilience Hub application version.
+     * Resilience Hub application version.
      * </p>
      * 
      * @param appVersion
-     *        The Resilience Hub application version.
+     *        Resilience Hub application version.
      */
 
     public void setAppVersion(String appVersion) {
@@ -161,10 +161,10 @@ public class DeleteAppVersionAppComponentResult extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The Resilience Hub application version.
+     * Resilience Hub application version.
      * </p>
      * 
-     * @return The Resilience Hub application version.
+     * @return Resilience Hub application version.
      */
 
     public String getAppVersion() {
@@ -173,11 +173,11 @@ public class DeleteAppVersionAppComponentResult extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The Resilience Hub application version.
+     * Resilience Hub application version.
      * </p>
      * 
      * @param appVersion
-     *        The Resilience Hub application version.
+     *        Resilience Hub application version.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

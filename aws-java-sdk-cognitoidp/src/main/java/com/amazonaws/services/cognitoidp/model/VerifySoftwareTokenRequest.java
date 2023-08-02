@@ -239,9 +239,9 @@ public class VerifySoftwareTokenRequest extends com.amazonaws.AmazonWebServiceRe
         if (getAccessToken() != null)
             sb.append("AccessToken: ").append("***Sensitive Data Redacted***").append(",");
         if (getSession() != null)
-            sb.append("Session: ").append("***Sensitive Data Redacted***").append(",");
+            sb.append("Session: ").append(getSession()).append(",");
         if (getUserCode() != null)
-            sb.append("UserCode: ").append("***Sensitive Data Redacted***").append(",");
+            sb.append("UserCode: ").append(getUserCode()).append(",");
         if (getFriendlyDeviceName() != null)
             sb.append("FriendlyDeviceName: ").append(getFriendlyDeviceName());
         sb.append("}");

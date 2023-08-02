@@ -37,6 +37,8 @@ public class AppSummaryMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("creationTime").timestampFormat("unixTimestamp").build();
     private static final MarshallingInfo<String> DESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("description").build();
+    private static final MarshallingInfo<String> DRIFTSTATUS_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("driftStatus").build();
     private static final MarshallingInfo<String> NAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("name").build();
     private static final MarshallingInfo<Double> RESILIENCYSCORE_BINDING = MarshallingInfo.builder(MarshallingType.DOUBLE)
@@ -65,6 +67,7 @@ public class AppSummaryMarshaller {
             protocolMarshaller.marshall(appSummary.getComplianceStatus(), COMPLIANCESTATUS_BINDING);
             protocolMarshaller.marshall(appSummary.getCreationTime(), CREATIONTIME_BINDING);
             protocolMarshaller.marshall(appSummary.getDescription(), DESCRIPTION_BINDING);
+            protocolMarshaller.marshall(appSummary.getDriftStatus(), DRIFTSTATUS_BINDING);
             protocolMarshaller.marshall(appSummary.getName(), NAME_BINDING);
             protocolMarshaller.marshall(appSummary.getResiliencyScore(), RESILIENCYSCORE_BINDING);
             protocolMarshaller.marshall(appSummary.getStatus(), STATUS_BINDING);

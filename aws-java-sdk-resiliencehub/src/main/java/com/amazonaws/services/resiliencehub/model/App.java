@@ -30,7 +30,7 @@ public class App implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
+     * Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
      * <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more
      * information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">
      * Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i> guide.
@@ -45,43 +45,69 @@ public class App implements Serializable, Cloneable, StructuredPojo {
     private String assessmentSchedule;
     /**
      * <p>
-     * The current status of compliance for the resiliency policy.
+     * Current status of compliance for the resiliency policy.
      * </p>
      */
     private String complianceStatus;
     /**
      * <p>
-     * The timestamp for when the app was created.
+     * Timestamp for when the app was created.
      * </p>
      */
     private java.util.Date creationTime;
     /**
      * <p>
-     * The optional description for an app.
+     * Optional description for an application.
      * </p>
      */
     private String description;
     /**
      * <p>
-     * The timestamp for the most recent compliance evaluation.
+     * Indicates if compliance drifts (deviations) were detected while running an assessment for your application.
+     * </p>
+     */
+    private String driftStatus;
+    /**
+     * <p>
+     * The list of events you would like to subscribe and get notification for. Currently, Resilience Hub supports
+     * notifications only for <b>Drift detected</b> and <b>Scheduled assessment failure</b> events.
+     * </p>
+     */
+    private java.util.List<EventSubscription> eventSubscriptions;
+    /**
+     * <p>
+     * Timestamp for the most recent compliance evaluation.
      * </p>
      */
     private java.util.Date lastAppComplianceEvaluationTime;
     /**
      * <p>
-     * The timestamp for the most recent resiliency score evaluation.
+     * Indicates the last time that a drift was evaluated.
+     * </p>
+     */
+    private java.util.Date lastDriftEvaluationTime;
+    /**
+     * <p>
+     * Timestamp for the most recent resiliency score evaluation.
      * </p>
      */
     private java.util.Date lastResiliencyScoreEvaluationTime;
     /**
      * <p>
-     * The name for the application.
+     * Name for the application.
      * </p>
      */
     private String name;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the resiliency policy. The format for this ARN is: arn:<code>partition</code>
+     * Defines the roles and credentials that Resilience Hub would use while creating the application, importing its
+     * resources, and running an assessment.
+     * </p>
+     */
+    private PermissionModel permissionModel;
+    /**
+     * <p>
+     * Amazon Resource Name (ARN) of the resiliency policy. The format for this ARN is: arn:<code>partition</code>
      * :resiliencehub:<code>region</code>:<code>account</code>:resiliency-policy/<code>policy-id</code>. For more
      * information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">
      * Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i> guide.
@@ -90,19 +116,19 @@ public class App implements Serializable, Cloneable, StructuredPojo {
     private String policyArn;
     /**
      * <p>
-     * The current resiliency score for the application.
+     * Current resiliency score for the application.
      * </p>
      */
     private Double resiliencyScore;
     /**
      * <p>
-     * The status of the application.
+     * Status of the application.
      * </p>
      */
     private String status;
     /**
      * <p>
-     * The tags assigned to the resource. A tag is a label that you assign to an Amazon Web Services resource. Each tag
+     * Tags assigned to the resource. A tag is a label that you assign to an Amazon Web Services resource. Each tag
      * consists of a key/value pair.
      * </p>
      */
@@ -110,14 +136,14 @@ public class App implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
+     * Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
      * <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more
      * information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">
      * Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i> guide.
      * </p>
      * 
      * @param appArn
-     *        The Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
+     *        Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
      *        <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For
      *        more information about ARNs, see <a
      *        href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names
@@ -130,13 +156,13 @@ public class App implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
+     * Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
      * <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more
      * information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">
      * Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i> guide.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
+     * @return Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
      *         <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>.
      *         For more information about ARNs, see <a
      *         href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names
@@ -149,14 +175,14 @@ public class App implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
+     * Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
      * <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more
      * information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">
      * Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i> guide.
      * </p>
      * 
      * @param appArn
-     *        The Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
+     *        Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
      *        <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For
      *        more information about ARNs, see <a
      *        href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names
@@ -230,11 +256,11 @@ public class App implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The current status of compliance for the resiliency policy.
+     * Current status of compliance for the resiliency policy.
      * </p>
      * 
      * @param complianceStatus
-     *        The current status of compliance for the resiliency policy.
+     *        Current status of compliance for the resiliency policy.
      * @see AppComplianceStatusType
      */
 
@@ -244,10 +270,10 @@ public class App implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The current status of compliance for the resiliency policy.
+     * Current status of compliance for the resiliency policy.
      * </p>
      * 
-     * @return The current status of compliance for the resiliency policy.
+     * @return Current status of compliance for the resiliency policy.
      * @see AppComplianceStatusType
      */
 
@@ -257,11 +283,11 @@ public class App implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The current status of compliance for the resiliency policy.
+     * Current status of compliance for the resiliency policy.
      * </p>
      * 
      * @param complianceStatus
-     *        The current status of compliance for the resiliency policy.
+     *        Current status of compliance for the resiliency policy.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AppComplianceStatusType
      */
@@ -273,11 +299,11 @@ public class App implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The current status of compliance for the resiliency policy.
+     * Current status of compliance for the resiliency policy.
      * </p>
      * 
      * @param complianceStatus
-     *        The current status of compliance for the resiliency policy.
+     *        Current status of compliance for the resiliency policy.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AppComplianceStatusType
      */
@@ -289,11 +315,11 @@ public class App implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The timestamp for when the app was created.
+     * Timestamp for when the app was created.
      * </p>
      * 
      * @param creationTime
-     *        The timestamp for when the app was created.
+     *        Timestamp for when the app was created.
      */
 
     public void setCreationTime(java.util.Date creationTime) {
@@ -302,10 +328,10 @@ public class App implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The timestamp for when the app was created.
+     * Timestamp for when the app was created.
      * </p>
      * 
-     * @return The timestamp for when the app was created.
+     * @return Timestamp for when the app was created.
      */
 
     public java.util.Date getCreationTime() {
@@ -314,11 +340,11 @@ public class App implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The timestamp for when the app was created.
+     * Timestamp for when the app was created.
      * </p>
      * 
      * @param creationTime
-     *        The timestamp for when the app was created.
+     *        Timestamp for when the app was created.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -329,11 +355,11 @@ public class App implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The optional description for an app.
+     * Optional description for an application.
      * </p>
      * 
      * @param description
-     *        The optional description for an app.
+     *        Optional description for an application.
      */
 
     public void setDescription(String description) {
@@ -342,10 +368,10 @@ public class App implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The optional description for an app.
+     * Optional description for an application.
      * </p>
      * 
-     * @return The optional description for an app.
+     * @return Optional description for an application.
      */
 
     public String getDescription() {
@@ -354,11 +380,11 @@ public class App implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The optional description for an app.
+     * Optional description for an application.
      * </p>
      * 
      * @param description
-     *        The optional description for an app.
+     *        Optional description for an application.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -369,11 +395,152 @@ public class App implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The timestamp for the most recent compliance evaluation.
+     * Indicates if compliance drifts (deviations) were detected while running an assessment for your application.
+     * </p>
+     * 
+     * @param driftStatus
+     *        Indicates if compliance drifts (deviations) were detected while running an assessment for your
+     *        application.
+     * @see AppDriftStatusType
+     */
+
+    public void setDriftStatus(String driftStatus) {
+        this.driftStatus = driftStatus;
+    }
+
+    /**
+     * <p>
+     * Indicates if compliance drifts (deviations) were detected while running an assessment for your application.
+     * </p>
+     * 
+     * @return Indicates if compliance drifts (deviations) were detected while running an assessment for your
+     *         application.
+     * @see AppDriftStatusType
+     */
+
+    public String getDriftStatus() {
+        return this.driftStatus;
+    }
+
+    /**
+     * <p>
+     * Indicates if compliance drifts (deviations) were detected while running an assessment for your application.
+     * </p>
+     * 
+     * @param driftStatus
+     *        Indicates if compliance drifts (deviations) were detected while running an assessment for your
+     *        application.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see AppDriftStatusType
+     */
+
+    public App withDriftStatus(String driftStatus) {
+        setDriftStatus(driftStatus);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Indicates if compliance drifts (deviations) were detected while running an assessment for your application.
+     * </p>
+     * 
+     * @param driftStatus
+     *        Indicates if compliance drifts (deviations) were detected while running an assessment for your
+     *        application.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see AppDriftStatusType
+     */
+
+    public App withDriftStatus(AppDriftStatusType driftStatus) {
+        this.driftStatus = driftStatus.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * The list of events you would like to subscribe and get notification for. Currently, Resilience Hub supports
+     * notifications only for <b>Drift detected</b> and <b>Scheduled assessment failure</b> events.
+     * </p>
+     * 
+     * @return The list of events you would like to subscribe and get notification for. Currently, Resilience Hub
+     *         supports notifications only for <b>Drift detected</b> and <b>Scheduled assessment failure</b> events.
+     */
+
+    public java.util.List<EventSubscription> getEventSubscriptions() {
+        return eventSubscriptions;
+    }
+
+    /**
+     * <p>
+     * The list of events you would like to subscribe and get notification for. Currently, Resilience Hub supports
+     * notifications only for <b>Drift detected</b> and <b>Scheduled assessment failure</b> events.
+     * </p>
+     * 
+     * @param eventSubscriptions
+     *        The list of events you would like to subscribe and get notification for. Currently, Resilience Hub
+     *        supports notifications only for <b>Drift detected</b> and <b>Scheduled assessment failure</b> events.
+     */
+
+    public void setEventSubscriptions(java.util.Collection<EventSubscription> eventSubscriptions) {
+        if (eventSubscriptions == null) {
+            this.eventSubscriptions = null;
+            return;
+        }
+
+        this.eventSubscriptions = new java.util.ArrayList<EventSubscription>(eventSubscriptions);
+    }
+
+    /**
+     * <p>
+     * The list of events you would like to subscribe and get notification for. Currently, Resilience Hub supports
+     * notifications only for <b>Drift detected</b> and <b>Scheduled assessment failure</b> events.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setEventSubscriptions(java.util.Collection)} or {@link #withEventSubscriptions(java.util.Collection)} if
+     * you want to override the existing values.
+     * </p>
+     * 
+     * @param eventSubscriptions
+     *        The list of events you would like to subscribe and get notification for. Currently, Resilience Hub
+     *        supports notifications only for <b>Drift detected</b> and <b>Scheduled assessment failure</b> events.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public App withEventSubscriptions(EventSubscription... eventSubscriptions) {
+        if (this.eventSubscriptions == null) {
+            setEventSubscriptions(new java.util.ArrayList<EventSubscription>(eventSubscriptions.length));
+        }
+        for (EventSubscription ele : eventSubscriptions) {
+            this.eventSubscriptions.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The list of events you would like to subscribe and get notification for. Currently, Resilience Hub supports
+     * notifications only for <b>Drift detected</b> and <b>Scheduled assessment failure</b> events.
+     * </p>
+     * 
+     * @param eventSubscriptions
+     *        The list of events you would like to subscribe and get notification for. Currently, Resilience Hub
+     *        supports notifications only for <b>Drift detected</b> and <b>Scheduled assessment failure</b> events.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public App withEventSubscriptions(java.util.Collection<EventSubscription> eventSubscriptions) {
+        setEventSubscriptions(eventSubscriptions);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Timestamp for the most recent compliance evaluation.
      * </p>
      * 
      * @param lastAppComplianceEvaluationTime
-     *        The timestamp for the most recent compliance evaluation.
+     *        Timestamp for the most recent compliance evaluation.
      */
 
     public void setLastAppComplianceEvaluationTime(java.util.Date lastAppComplianceEvaluationTime) {
@@ -382,10 +549,10 @@ public class App implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The timestamp for the most recent compliance evaluation.
+     * Timestamp for the most recent compliance evaluation.
      * </p>
      * 
-     * @return The timestamp for the most recent compliance evaluation.
+     * @return Timestamp for the most recent compliance evaluation.
      */
 
     public java.util.Date getLastAppComplianceEvaluationTime() {
@@ -394,11 +561,11 @@ public class App implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The timestamp for the most recent compliance evaluation.
+     * Timestamp for the most recent compliance evaluation.
      * </p>
      * 
      * @param lastAppComplianceEvaluationTime
-     *        The timestamp for the most recent compliance evaluation.
+     *        Timestamp for the most recent compliance evaluation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -409,11 +576,51 @@ public class App implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The timestamp for the most recent resiliency score evaluation.
+     * Indicates the last time that a drift was evaluated.
+     * </p>
+     * 
+     * @param lastDriftEvaluationTime
+     *        Indicates the last time that a drift was evaluated.
+     */
+
+    public void setLastDriftEvaluationTime(java.util.Date lastDriftEvaluationTime) {
+        this.lastDriftEvaluationTime = lastDriftEvaluationTime;
+    }
+
+    /**
+     * <p>
+     * Indicates the last time that a drift was evaluated.
+     * </p>
+     * 
+     * @return Indicates the last time that a drift was evaluated.
+     */
+
+    public java.util.Date getLastDriftEvaluationTime() {
+        return this.lastDriftEvaluationTime;
+    }
+
+    /**
+     * <p>
+     * Indicates the last time that a drift was evaluated.
+     * </p>
+     * 
+     * @param lastDriftEvaluationTime
+     *        Indicates the last time that a drift was evaluated.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public App withLastDriftEvaluationTime(java.util.Date lastDriftEvaluationTime) {
+        setLastDriftEvaluationTime(lastDriftEvaluationTime);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Timestamp for the most recent resiliency score evaluation.
      * </p>
      * 
      * @param lastResiliencyScoreEvaluationTime
-     *        The timestamp for the most recent resiliency score evaluation.
+     *        Timestamp for the most recent resiliency score evaluation.
      */
 
     public void setLastResiliencyScoreEvaluationTime(java.util.Date lastResiliencyScoreEvaluationTime) {
@@ -422,10 +629,10 @@ public class App implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The timestamp for the most recent resiliency score evaluation.
+     * Timestamp for the most recent resiliency score evaluation.
      * </p>
      * 
-     * @return The timestamp for the most recent resiliency score evaluation.
+     * @return Timestamp for the most recent resiliency score evaluation.
      */
 
     public java.util.Date getLastResiliencyScoreEvaluationTime() {
@@ -434,11 +641,11 @@ public class App implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The timestamp for the most recent resiliency score evaluation.
+     * Timestamp for the most recent resiliency score evaluation.
      * </p>
      * 
      * @param lastResiliencyScoreEvaluationTime
-     *        The timestamp for the most recent resiliency score evaluation.
+     *        Timestamp for the most recent resiliency score evaluation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -449,11 +656,11 @@ public class App implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name for the application.
+     * Name for the application.
      * </p>
      * 
      * @param name
-     *        The name for the application.
+     *        Name for the application.
      */
 
     public void setName(String name) {
@@ -462,10 +669,10 @@ public class App implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name for the application.
+     * Name for the application.
      * </p>
      * 
-     * @return The name for the application.
+     * @return Name for the application.
      */
 
     public String getName() {
@@ -474,11 +681,11 @@ public class App implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name for the application.
+     * Name for the application.
      * </p>
      * 
      * @param name
-     *        The name for the application.
+     *        Name for the application.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -489,14 +696,60 @@ public class App implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the resiliency policy. The format for this ARN is: arn:<code>partition</code>
+     * Defines the roles and credentials that Resilience Hub would use while creating the application, importing its
+     * resources, and running an assessment.
+     * </p>
+     * 
+     * @param permissionModel
+     *        Defines the roles and credentials that Resilience Hub would use while creating the application, importing
+     *        its resources, and running an assessment.
+     */
+
+    public void setPermissionModel(PermissionModel permissionModel) {
+        this.permissionModel = permissionModel;
+    }
+
+    /**
+     * <p>
+     * Defines the roles and credentials that Resilience Hub would use while creating the application, importing its
+     * resources, and running an assessment.
+     * </p>
+     * 
+     * @return Defines the roles and credentials that Resilience Hub would use while creating the application, importing
+     *         its resources, and running an assessment.
+     */
+
+    public PermissionModel getPermissionModel() {
+        return this.permissionModel;
+    }
+
+    /**
+     * <p>
+     * Defines the roles and credentials that Resilience Hub would use while creating the application, importing its
+     * resources, and running an assessment.
+     * </p>
+     * 
+     * @param permissionModel
+     *        Defines the roles and credentials that Resilience Hub would use while creating the application, importing
+     *        its resources, and running an assessment.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public App withPermissionModel(PermissionModel permissionModel) {
+        setPermissionModel(permissionModel);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Amazon Resource Name (ARN) of the resiliency policy. The format for this ARN is: arn:<code>partition</code>
      * :resiliencehub:<code>region</code>:<code>account</code>:resiliency-policy/<code>policy-id</code>. For more
      * information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">
      * Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i> guide.
      * </p>
      * 
      * @param policyArn
-     *        The Amazon Resource Name (ARN) of the resiliency policy. The format for this ARN is: arn:
+     *        Amazon Resource Name (ARN) of the resiliency policy. The format for this ARN is: arn:
      *        <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:resiliency-policy/
      *        <code>policy-id</code>. For more information about ARNs, see <a
      *        href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names
@@ -509,13 +762,13 @@ public class App implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the resiliency policy. The format for this ARN is: arn:<code>partition</code>
+     * Amazon Resource Name (ARN) of the resiliency policy. The format for this ARN is: arn:<code>partition</code>
      * :resiliencehub:<code>region</code>:<code>account</code>:resiliency-policy/<code>policy-id</code>. For more
      * information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">
      * Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i> guide.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the resiliency policy. The format for this ARN is: arn:
+     * @return Amazon Resource Name (ARN) of the resiliency policy. The format for this ARN is: arn:
      *         <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:resiliency-policy/
      *         <code>policy-id</code>. For more information about ARNs, see <a
      *         href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names
@@ -528,14 +781,14 @@ public class App implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the resiliency policy. The format for this ARN is: arn:<code>partition</code>
+     * Amazon Resource Name (ARN) of the resiliency policy. The format for this ARN is: arn:<code>partition</code>
      * :resiliencehub:<code>region</code>:<code>account</code>:resiliency-policy/<code>policy-id</code>. For more
      * information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">
      * Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i> guide.
      * </p>
      * 
      * @param policyArn
-     *        The Amazon Resource Name (ARN) of the resiliency policy. The format for this ARN is: arn:
+     *        Amazon Resource Name (ARN) of the resiliency policy. The format for this ARN is: arn:
      *        <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:resiliency-policy/
      *        <code>policy-id</code>. For more information about ARNs, see <a
      *        href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names
@@ -550,11 +803,11 @@ public class App implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The current resiliency score for the application.
+     * Current resiliency score for the application.
      * </p>
      * 
      * @param resiliencyScore
-     *        The current resiliency score for the application.
+     *        Current resiliency score for the application.
      */
 
     public void setResiliencyScore(Double resiliencyScore) {
@@ -563,10 +816,10 @@ public class App implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The current resiliency score for the application.
+     * Current resiliency score for the application.
      * </p>
      * 
-     * @return The current resiliency score for the application.
+     * @return Current resiliency score for the application.
      */
 
     public Double getResiliencyScore() {
@@ -575,11 +828,11 @@ public class App implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The current resiliency score for the application.
+     * Current resiliency score for the application.
      * </p>
      * 
      * @param resiliencyScore
-     *        The current resiliency score for the application.
+     *        Current resiliency score for the application.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -590,11 +843,11 @@ public class App implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The status of the application.
+     * Status of the application.
      * </p>
      * 
      * @param status
-     *        The status of the application.
+     *        Status of the application.
      * @see AppStatusType
      */
 
@@ -604,10 +857,10 @@ public class App implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The status of the application.
+     * Status of the application.
      * </p>
      * 
-     * @return The status of the application.
+     * @return Status of the application.
      * @see AppStatusType
      */
 
@@ -617,11 +870,11 @@ public class App implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The status of the application.
+     * Status of the application.
      * </p>
      * 
      * @param status
-     *        The status of the application.
+     *        Status of the application.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AppStatusType
      */
@@ -633,11 +886,11 @@ public class App implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The status of the application.
+     * Status of the application.
      * </p>
      * 
      * @param status
-     *        The status of the application.
+     *        Status of the application.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AppStatusType
      */
@@ -649,12 +902,12 @@ public class App implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The tags assigned to the resource. A tag is a label that you assign to an Amazon Web Services resource. Each tag
+     * Tags assigned to the resource. A tag is a label that you assign to an Amazon Web Services resource. Each tag
      * consists of a key/value pair.
      * </p>
      * 
-     * @return The tags assigned to the resource. A tag is a label that you assign to an Amazon Web Services resource.
-     *         Each tag consists of a key/value pair.
+     * @return Tags assigned to the resource. A tag is a label that you assign to an Amazon Web Services resource. Each
+     *         tag consists of a key/value pair.
      */
 
     public java.util.Map<String, String> getTags() {
@@ -663,13 +916,13 @@ public class App implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The tags assigned to the resource. A tag is a label that you assign to an Amazon Web Services resource. Each tag
+     * Tags assigned to the resource. A tag is a label that you assign to an Amazon Web Services resource. Each tag
      * consists of a key/value pair.
      * </p>
      * 
      * @param tags
-     *        The tags assigned to the resource. A tag is a label that you assign to an Amazon Web Services resource.
-     *        Each tag consists of a key/value pair.
+     *        Tags assigned to the resource. A tag is a label that you assign to an Amazon Web Services resource. Each
+     *        tag consists of a key/value pair.
      */
 
     public void setTags(java.util.Map<String, String> tags) {
@@ -678,13 +931,13 @@ public class App implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The tags assigned to the resource. A tag is a label that you assign to an Amazon Web Services resource. Each tag
+     * Tags assigned to the resource. A tag is a label that you assign to an Amazon Web Services resource. Each tag
      * consists of a key/value pair.
      * </p>
      * 
      * @param tags
-     *        The tags assigned to the resource. A tag is a label that you assign to an Amazon Web Services resource.
-     *        Each tag consists of a key/value pair.
+     *        Tags assigned to the resource. A tag is a label that you assign to an Amazon Web Services resource. Each
+     *        tag consists of a key/value pair.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -743,12 +996,20 @@ public class App implements Serializable, Cloneable, StructuredPojo {
             sb.append("CreationTime: ").append(getCreationTime()).append(",");
         if (getDescription() != null)
             sb.append("Description: ").append(getDescription()).append(",");
+        if (getDriftStatus() != null)
+            sb.append("DriftStatus: ").append(getDriftStatus()).append(",");
+        if (getEventSubscriptions() != null)
+            sb.append("EventSubscriptions: ").append(getEventSubscriptions()).append(",");
         if (getLastAppComplianceEvaluationTime() != null)
             sb.append("LastAppComplianceEvaluationTime: ").append(getLastAppComplianceEvaluationTime()).append(",");
+        if (getLastDriftEvaluationTime() != null)
+            sb.append("LastDriftEvaluationTime: ").append(getLastDriftEvaluationTime()).append(",");
         if (getLastResiliencyScoreEvaluationTime() != null)
             sb.append("LastResiliencyScoreEvaluationTime: ").append(getLastResiliencyScoreEvaluationTime()).append(",");
         if (getName() != null)
             sb.append("Name: ").append(getName()).append(",");
+        if (getPermissionModel() != null)
+            sb.append("PermissionModel: ").append(getPermissionModel()).append(",");
         if (getPolicyArn() != null)
             sb.append("PolicyArn: ").append(getPolicyArn()).append(",");
         if (getResiliencyScore() != null)
@@ -791,10 +1052,22 @@ public class App implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
             return false;
+        if (other.getDriftStatus() == null ^ this.getDriftStatus() == null)
+            return false;
+        if (other.getDriftStatus() != null && other.getDriftStatus().equals(this.getDriftStatus()) == false)
+            return false;
+        if (other.getEventSubscriptions() == null ^ this.getEventSubscriptions() == null)
+            return false;
+        if (other.getEventSubscriptions() != null && other.getEventSubscriptions().equals(this.getEventSubscriptions()) == false)
+            return false;
         if (other.getLastAppComplianceEvaluationTime() == null ^ this.getLastAppComplianceEvaluationTime() == null)
             return false;
         if (other.getLastAppComplianceEvaluationTime() != null
                 && other.getLastAppComplianceEvaluationTime().equals(this.getLastAppComplianceEvaluationTime()) == false)
+            return false;
+        if (other.getLastDriftEvaluationTime() == null ^ this.getLastDriftEvaluationTime() == null)
+            return false;
+        if (other.getLastDriftEvaluationTime() != null && other.getLastDriftEvaluationTime().equals(this.getLastDriftEvaluationTime()) == false)
             return false;
         if (other.getLastResiliencyScoreEvaluationTime() == null ^ this.getLastResiliencyScoreEvaluationTime() == null)
             return false;
@@ -804,6 +1077,10 @@ public class App implements Serializable, Cloneable, StructuredPojo {
         if (other.getName() == null ^ this.getName() == null)
             return false;
         if (other.getName() != null && other.getName().equals(this.getName()) == false)
+            return false;
+        if (other.getPermissionModel() == null ^ this.getPermissionModel() == null)
+            return false;
+        if (other.getPermissionModel() != null && other.getPermissionModel().equals(this.getPermissionModel()) == false)
             return false;
         if (other.getPolicyArn() == null ^ this.getPolicyArn() == null)
             return false;
@@ -834,9 +1111,13 @@ public class App implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getComplianceStatus() == null) ? 0 : getComplianceStatus().hashCode());
         hashCode = prime * hashCode + ((getCreationTime() == null) ? 0 : getCreationTime().hashCode());
         hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
+        hashCode = prime * hashCode + ((getDriftStatus() == null) ? 0 : getDriftStatus().hashCode());
+        hashCode = prime * hashCode + ((getEventSubscriptions() == null) ? 0 : getEventSubscriptions().hashCode());
         hashCode = prime * hashCode + ((getLastAppComplianceEvaluationTime() == null) ? 0 : getLastAppComplianceEvaluationTime().hashCode());
+        hashCode = prime * hashCode + ((getLastDriftEvaluationTime() == null) ? 0 : getLastDriftEvaluationTime().hashCode());
         hashCode = prime * hashCode + ((getLastResiliencyScoreEvaluationTime() == null) ? 0 : getLastResiliencyScoreEvaluationTime().hashCode());
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
+        hashCode = prime * hashCode + ((getPermissionModel() == null) ? 0 : getPermissionModel().hashCode());
         hashCode = prime * hashCode + ((getPolicyArn() == null) ? 0 : getPolicyArn().hashCode());
         hashCode = prime * hashCode + ((getResiliencyScore() == null) ? 0 : getResiliencyScore().hashCode());
         hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());

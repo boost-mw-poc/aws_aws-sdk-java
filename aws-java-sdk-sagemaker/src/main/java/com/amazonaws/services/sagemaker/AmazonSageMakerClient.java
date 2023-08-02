@@ -11059,6 +11059,67 @@ public class AmazonSageMakerClient extends AmazonWebServiceClient implements Ama
 
     /**
      * <p>
+     * Starts an Amazon SageMaker Inference Recommender autoscaling recommendation job. Returns recommendations for
+     * autoscaling policies that you can apply to your SageMaker endpoint.
+     * </p>
+     * 
+     * @param getScalingConfigurationRecommendationRequest
+     * @return Result of the GetScalingConfigurationRecommendation operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         Resource being access is not found.
+     * @sample AmazonSageMaker.GetScalingConfigurationRecommendation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/GetScalingConfigurationRecommendation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetScalingConfigurationRecommendationResult getScalingConfigurationRecommendation(GetScalingConfigurationRecommendationRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetScalingConfigurationRecommendation(request);
+    }
+
+    @SdkInternalApi
+    final GetScalingConfigurationRecommendationResult executeGetScalingConfigurationRecommendation(
+            GetScalingConfigurationRecommendationRequest getScalingConfigurationRecommendationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getScalingConfigurationRecommendationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetScalingConfigurationRecommendationRequest> request = null;
+        Response<GetScalingConfigurationRecommendationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetScalingConfigurationRecommendationRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(getScalingConfigurationRecommendationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "SageMaker");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetScalingConfigurationRecommendation");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetScalingConfigurationRecommendationResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new GetScalingConfigurationRecommendationResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * An auto-complete API for the search functionality in the SageMaker console. It returns suggestions of possible
      * matches for the property name to use in <code>Search</code> queries. Provides suggestions for
      * <code>HyperParameters</code>, <code>Tags</code>, and <code>Metrics</code>.

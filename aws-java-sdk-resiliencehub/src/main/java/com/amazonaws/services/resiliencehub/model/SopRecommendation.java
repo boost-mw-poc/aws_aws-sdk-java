@@ -30,13 +30,13 @@ public class SopRecommendation implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The name of the Application Component.
+     * Name of the Application Component.
      * </p>
      */
     private String appComponentName;
     /**
      * <p>
-     * The description of the SOP recommendation.
+     * Description of the SOP recommendation.
      * </p>
      */
     private String description;
@@ -48,13 +48,13 @@ public class SopRecommendation implements Serializable, Cloneable, StructuredPoj
     private java.util.List<RecommendationItem> items;
     /**
      * <p>
-     * The name of the SOP recommendation.
+     * Name of the SOP recommendation.
      * </p>
      */
     private String name;
     /**
      * <p>
-     * The prerequisite for the SOP recommendation.
+     * Prerequisite for the SOP recommendation.
      * </p>
      */
     private String prerequisite;
@@ -66,7 +66,7 @@ public class SopRecommendation implements Serializable, Cloneable, StructuredPoj
     private String recommendationId;
     /**
      * <p>
-     * The reference identifier for the SOP recommendation.
+     * Reference identifier for the SOP recommendation.
      * </p>
      */
     private String referenceId;
@@ -79,11 +79,11 @@ public class SopRecommendation implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The name of the Application Component.
+     * Name of the Application Component.
      * </p>
      * 
      * @param appComponentName
-     *        The name of the Application Component.
+     *        Name of the Application Component.
      */
 
     public void setAppComponentName(String appComponentName) {
@@ -92,10 +92,10 @@ public class SopRecommendation implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The name of the Application Component.
+     * Name of the Application Component.
      * </p>
      * 
-     * @return The name of the Application Component.
+     * @return Name of the Application Component.
      */
 
     public String getAppComponentName() {
@@ -104,11 +104,11 @@ public class SopRecommendation implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The name of the Application Component.
+     * Name of the Application Component.
      * </p>
      * 
      * @param appComponentName
-     *        The name of the Application Component.
+     *        Name of the Application Component.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -119,11 +119,11 @@ public class SopRecommendation implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The description of the SOP recommendation.
+     * Description of the SOP recommendation.
      * </p>
      * 
      * @param description
-     *        The description of the SOP recommendation.
+     *        Description of the SOP recommendation.
      */
 
     public void setDescription(String description) {
@@ -132,10 +132,10 @@ public class SopRecommendation implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The description of the SOP recommendation.
+     * Description of the SOP recommendation.
      * </p>
      * 
-     * @return The description of the SOP recommendation.
+     * @return Description of the SOP recommendation.
      */
 
     public String getDescription() {
@@ -144,11 +144,11 @@ public class SopRecommendation implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The description of the SOP recommendation.
+     * Description of the SOP recommendation.
      * </p>
      * 
      * @param description
-     *        The description of the SOP recommendation.
+     *        Description of the SOP recommendation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -229,11 +229,11 @@ public class SopRecommendation implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The name of the SOP recommendation.
+     * Name of the SOP recommendation.
      * </p>
      * 
      * @param name
-     *        The name of the SOP recommendation.
+     *        Name of the SOP recommendation.
      */
 
     public void setName(String name) {
@@ -242,10 +242,10 @@ public class SopRecommendation implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The name of the SOP recommendation.
+     * Name of the SOP recommendation.
      * </p>
      * 
-     * @return The name of the SOP recommendation.
+     * @return Name of the SOP recommendation.
      */
 
     public String getName() {
@@ -254,11 +254,11 @@ public class SopRecommendation implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The name of the SOP recommendation.
+     * Name of the SOP recommendation.
      * </p>
      * 
      * @param name
-     *        The name of the SOP recommendation.
+     *        Name of the SOP recommendation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -269,11 +269,11 @@ public class SopRecommendation implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The prerequisite for the SOP recommendation.
+     * Prerequisite for the SOP recommendation.
      * </p>
      * 
      * @param prerequisite
-     *        The prerequisite for the SOP recommendation.
+     *        Prerequisite for the SOP recommendation.
      */
 
     public void setPrerequisite(String prerequisite) {
@@ -282,10 +282,10 @@ public class SopRecommendation implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The prerequisite for the SOP recommendation.
+     * Prerequisite for the SOP recommendation.
      * </p>
      * 
-     * @return The prerequisite for the SOP recommendation.
+     * @return Prerequisite for the SOP recommendation.
      */
 
     public String getPrerequisite() {
@@ -294,11 +294,11 @@ public class SopRecommendation implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The prerequisite for the SOP recommendation.
+     * Prerequisite for the SOP recommendation.
      * </p>
      * 
      * @param prerequisite
-     *        The prerequisite for the SOP recommendation.
+     *        Prerequisite for the SOP recommendation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -349,11 +349,11 @@ public class SopRecommendation implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The reference identifier for the SOP recommendation.
+     * Reference identifier for the SOP recommendation.
      * </p>
      * 
      * @param referenceId
-     *        The reference identifier for the SOP recommendation.
+     *        Reference identifier for the SOP recommendation.
      */
 
     public void setReferenceId(String referenceId) {
@@ -362,10 +362,10 @@ public class SopRecommendation implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The reference identifier for the SOP recommendation.
+     * Reference identifier for the SOP recommendation.
      * </p>
      * 
-     * @return The reference identifier for the SOP recommendation.
+     * @return Reference identifier for the SOP recommendation.
      */
 
     public String getReferenceId() {
@@ -374,11 +374,11 @@ public class SopRecommendation implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The reference identifier for the SOP recommendation.
+     * Reference identifier for the SOP recommendation.
      * </p>
      * 
      * @param referenceId
-     *        The reference identifier for the SOP recommendation.
+     *        Reference identifier for the SOP recommendation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

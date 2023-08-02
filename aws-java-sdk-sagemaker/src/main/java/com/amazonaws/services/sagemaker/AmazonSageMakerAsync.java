@@ -7509,6 +7509,43 @@ public interface AmazonSageMakerAsync extends AmazonSageMaker {
 
     /**
      * <p>
+     * Starts an Amazon SageMaker Inference Recommender autoscaling recommendation job. Returns recommendations for
+     * autoscaling policies that you can apply to your SageMaker endpoint.
+     * </p>
+     * 
+     * @param getScalingConfigurationRecommendationRequest
+     * @return A Java Future containing the result of the GetScalingConfigurationRecommendation operation returned by
+     *         the service.
+     * @sample AmazonSageMakerAsync.GetScalingConfigurationRecommendation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/GetScalingConfigurationRecommendation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetScalingConfigurationRecommendationResult> getScalingConfigurationRecommendationAsync(
+            GetScalingConfigurationRecommendationRequest getScalingConfigurationRecommendationRequest);
+
+    /**
+     * <p>
+     * Starts an Amazon SageMaker Inference Recommender autoscaling recommendation job. Returns recommendations for
+     * autoscaling policies that you can apply to your SageMaker endpoint.
+     * </p>
+     * 
+     * @param getScalingConfigurationRecommendationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetScalingConfigurationRecommendation operation returned by
+     *         the service.
+     * @sample AmazonSageMakerAsyncHandler.GetScalingConfigurationRecommendation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/GetScalingConfigurationRecommendation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetScalingConfigurationRecommendationResult> getScalingConfigurationRecommendationAsync(
+            GetScalingConfigurationRecommendationRequest getScalingConfigurationRecommendationRequest,
+            com.amazonaws.handlers.AsyncHandler<GetScalingConfigurationRecommendationRequest, GetScalingConfigurationRecommendationResult> asyncHandler);
+
+    /**
+     * <p>
      * An auto-complete API for the search functionality in the SageMaker console. It returns suggestions of possible
      * matches for the property name to use in <code>Search</code> queries. Provides suggestions for
      * <code>HyperParameters</code>, <code>Tags</code>, and <code>Metrics</code>.

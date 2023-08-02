@@ -111,9 +111,9 @@ public class AdminCreateUserRequest extends com.amazonaws.AmazonWebServiceReques
      * This parameter isn't required. If you don't specify a value, Amazon Cognito generates one for you.
      * </p>
      * <p>
-     * The temporary password can only be used until the user account expiration limit that you specified when you
-     * created the user pool. To reset the account after that time limit, you must call <code>AdminCreateUser</code>
-     * again, specifying <code>"RESEND"</code> for the <code>MessageAction</code> parameter.
+     * The temporary password can only be used until the user account expiration limit that you set for your user pool.
+     * To reset the account after that time limit, you must call <code>AdminCreateUser</code> again and specify
+     * <code>RESEND</code> for the <code>MessageAction</code> parameter.
      * </p>
      */
     private String temporaryPassword;
@@ -792,9 +792,9 @@ public class AdminCreateUserRequest extends com.amazonaws.AmazonWebServiceReques
      * This parameter isn't required. If you don't specify a value, Amazon Cognito generates one for you.
      * </p>
      * <p>
-     * The temporary password can only be used until the user account expiration limit that you specified when you
-     * created the user pool. To reset the account after that time limit, you must call <code>AdminCreateUser</code>
-     * again, specifying <code>"RESEND"</code> for the <code>MessageAction</code> parameter.
+     * The temporary password can only be used until the user account expiration limit that you set for your user pool.
+     * To reset the account after that time limit, you must call <code>AdminCreateUser</code> again and specify
+     * <code>RESEND</code> for the <code>MessageAction</code> parameter.
      * </p>
      * 
      * @param temporaryPassword
@@ -808,10 +808,9 @@ public class AdminCreateUserRequest extends com.amazonaws.AmazonWebServiceReques
      *        This parameter isn't required. If you don't specify a value, Amazon Cognito generates one for you.
      *        </p>
      *        <p>
-     *        The temporary password can only be used until the user account expiration limit that you specified when
-     *        you created the user pool. To reset the account after that time limit, you must call
-     *        <code>AdminCreateUser</code> again, specifying <code>"RESEND"</code> for the <code>MessageAction</code>
-     *        parameter.
+     *        The temporary password can only be used until the user account expiration limit that you set for your user
+     *        pool. To reset the account after that time limit, you must call <code>AdminCreateUser</code> again and
+     *        specify <code>RESEND</code> for the <code>MessageAction</code> parameter.
      */
 
     public void setTemporaryPassword(String temporaryPassword) {
@@ -831,9 +830,9 @@ public class AdminCreateUserRequest extends com.amazonaws.AmazonWebServiceReques
      * This parameter isn't required. If you don't specify a value, Amazon Cognito generates one for you.
      * </p>
      * <p>
-     * The temporary password can only be used until the user account expiration limit that you specified when you
-     * created the user pool. To reset the account after that time limit, you must call <code>AdminCreateUser</code>
-     * again, specifying <code>"RESEND"</code> for the <code>MessageAction</code> parameter.
+     * The temporary password can only be used until the user account expiration limit that you set for your user pool.
+     * To reset the account after that time limit, you must call <code>AdminCreateUser</code> again and specify
+     * <code>RESEND</code> for the <code>MessageAction</code> parameter.
      * </p>
      * 
      * @return The user's temporary password. This password must conform to the password policy that you specified when
@@ -846,10 +845,9 @@ public class AdminCreateUserRequest extends com.amazonaws.AmazonWebServiceReques
      *         This parameter isn't required. If you don't specify a value, Amazon Cognito generates one for you.
      *         </p>
      *         <p>
-     *         The temporary password can only be used until the user account expiration limit that you specified when
-     *         you created the user pool. To reset the account after that time limit, you must call
-     *         <code>AdminCreateUser</code> again, specifying <code>"RESEND"</code> for the <code>MessageAction</code>
-     *         parameter.
+     *         The temporary password can only be used until the user account expiration limit that you set for your
+     *         user pool. To reset the account after that time limit, you must call <code>AdminCreateUser</code> again
+     *         and specify <code>RESEND</code> for the <code>MessageAction</code> parameter.
      */
 
     public String getTemporaryPassword() {
@@ -869,9 +867,9 @@ public class AdminCreateUserRequest extends com.amazonaws.AmazonWebServiceReques
      * This parameter isn't required. If you don't specify a value, Amazon Cognito generates one for you.
      * </p>
      * <p>
-     * The temporary password can only be used until the user account expiration limit that you specified when you
-     * created the user pool. To reset the account after that time limit, you must call <code>AdminCreateUser</code>
-     * again, specifying <code>"RESEND"</code> for the <code>MessageAction</code> parameter.
+     * The temporary password can only be used until the user account expiration limit that you set for your user pool.
+     * To reset the account after that time limit, you must call <code>AdminCreateUser</code> again and specify
+     * <code>RESEND</code> for the <code>MessageAction</code> parameter.
      * </p>
      * 
      * @param temporaryPassword
@@ -885,10 +883,9 @@ public class AdminCreateUserRequest extends com.amazonaws.AmazonWebServiceReques
      *        This parameter isn't required. If you don't specify a value, Amazon Cognito generates one for you.
      *        </p>
      *        <p>
-     *        The temporary password can only be used until the user account expiration limit that you specified when
-     *        you created the user pool. To reset the account after that time limit, you must call
-     *        <code>AdminCreateUser</code> again, specifying <code>"RESEND"</code> for the <code>MessageAction</code>
-     *        parameter.
+     *        The temporary password can only be used until the user account expiration limit that you set for your user
+     *        pool. To reset the account after that time limit, you must call <code>AdminCreateUser</code> again and
+     *        specify <code>RESEND</code> for the <code>MessageAction</code> parameter.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

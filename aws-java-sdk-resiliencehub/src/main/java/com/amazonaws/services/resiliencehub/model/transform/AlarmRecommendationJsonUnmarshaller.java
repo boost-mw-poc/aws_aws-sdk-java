@@ -52,6 +52,12 @@ public class AlarmRecommendationJsonUnmarshaller implements Unmarshaller<AlarmRe
                     context.nextToken();
                     alarmRecommendation.setAppComponentName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("appComponentNames", targetDepth)) {
+                    context.nextToken();
+                    alarmRecommendation.setAppComponentNames(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
+
+                    .unmarshall(context));
+                }
                 if (context.testExpression("description", targetDepth)) {
                     context.nextToken();
                     alarmRecommendation.setDescription(context.getUnmarshaller(String.class).unmarshall(context));

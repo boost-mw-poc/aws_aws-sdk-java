@@ -54,13 +54,15 @@ public class UserPoolDescriptionType implements Serializable, Cloneable, Structu
     private String status;
     /**
      * <p>
-     * The date the user pool description was last modified.
+     * The date and time, in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format, when
+     * the item was modified.
      * </p>
      */
     private java.util.Date lastModifiedDate;
     /**
      * <p>
-     * The date the user pool description was created.
+     * The date and time, in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format, when
+     * the item was created.
      * </p>
      */
     private java.util.Date creationDate;
@@ -260,11 +262,13 @@ public class UserPoolDescriptionType implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The date the user pool description was last modified.
+     * The date and time, in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format, when
+     * the item was modified.
      * </p>
      * 
      * @param lastModifiedDate
-     *        The date the user pool description was last modified.
+     *        The date and time, in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a>
+     *        format, when the item was modified.
      */
 
     public void setLastModifiedDate(java.util.Date lastModifiedDate) {
@@ -273,10 +277,12 @@ public class UserPoolDescriptionType implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The date the user pool description was last modified.
+     * The date and time, in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format, when
+     * the item was modified.
      * </p>
      * 
-     * @return The date the user pool description was last modified.
+     * @return The date and time, in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a>
+     *         format, when the item was modified.
      */
 
     public java.util.Date getLastModifiedDate() {
@@ -285,11 +291,13 @@ public class UserPoolDescriptionType implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The date the user pool description was last modified.
+     * The date and time, in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format, when
+     * the item was modified.
      * </p>
      * 
      * @param lastModifiedDate
-     *        The date the user pool description was last modified.
+     *        The date and time, in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a>
+     *        format, when the item was modified.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -300,11 +308,13 @@ public class UserPoolDescriptionType implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The date the user pool description was created.
+     * The date and time, in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format, when
+     * the item was created.
      * </p>
      * 
      * @param creationDate
-     *        The date the user pool description was created.
+     *        The date and time, in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a>
+     *        format, when the item was created.
      */
 
     public void setCreationDate(java.util.Date creationDate) {
@@ -313,10 +323,12 @@ public class UserPoolDescriptionType implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The date the user pool description was created.
+     * The date and time, in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format, when
+     * the item was created.
      * </p>
      * 
-     * @return The date the user pool description was created.
+     * @return The date and time, in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a>
+     *         format, when the item was created.
      */
 
     public java.util.Date getCreationDate() {
@@ -325,11 +337,13 @@ public class UserPoolDescriptionType implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The date the user pool description was created.
+     * The date and time, in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format, when
+     * the item was created.
      * </p>
      * 
      * @param creationDate
-     *        The date the user pool description was created.
+     *        The date and time, in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a>
+     *        format, when the item was created.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

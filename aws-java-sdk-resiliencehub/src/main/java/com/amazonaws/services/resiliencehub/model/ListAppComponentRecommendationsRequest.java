@@ -27,7 +27,7 @@ public class ListAppComponentRecommendationsRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the assessment. The format for this ARN is: arn:<code>partition</code>
+     * Amazon Resource Name (ARN) of the assessment. The format for this ARN is: arn:<code>partition</code>
      * :resiliencehub:<code>region</code>:<code>account</code>:app-assessment/<code>app-id</code>. For more information
      * about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon
      * Resource Names (ARNs)</a> in the <i>AWS General Reference</i> guide.
@@ -36,7 +36,7 @@ public class ListAppComponentRecommendationsRequest extends com.amazonaws.Amazon
     private String assessmentArn;
     /**
      * <p>
-     * The maximum number of results to include in the response. If more results exist than the specified
+     * Maximum number of results to include in the response. If more results exist than the specified
      * <code>MaxResults</code> value, a token is included in the response so that the remaining results can be
      * retrieved.
      * </p>
@@ -51,14 +51,14 @@ public class ListAppComponentRecommendationsRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the assessment. The format for this ARN is: arn:<code>partition</code>
+     * Amazon Resource Name (ARN) of the assessment. The format for this ARN is: arn:<code>partition</code>
      * :resiliencehub:<code>region</code>:<code>account</code>:app-assessment/<code>app-id</code>. For more information
      * about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon
      * Resource Names (ARNs)</a> in the <i>AWS General Reference</i> guide.
      * </p>
      * 
      * @param assessmentArn
-     *        The Amazon Resource Name (ARN) of the assessment. The format for this ARN is: arn:<code>partition</code>
+     *        Amazon Resource Name (ARN) of the assessment. The format for this ARN is: arn:<code>partition</code>
      *        :resiliencehub:<code>region</code>:<code>account</code>:app-assessment/<code>app-id</code>. For more
      *        information about ARNs, see <a
      *        href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names
@@ -71,13 +71,13 @@ public class ListAppComponentRecommendationsRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the assessment. The format for this ARN is: arn:<code>partition</code>
+     * Amazon Resource Name (ARN) of the assessment. The format for this ARN is: arn:<code>partition</code>
      * :resiliencehub:<code>region</code>:<code>account</code>:app-assessment/<code>app-id</code>. For more information
      * about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon
      * Resource Names (ARNs)</a> in the <i>AWS General Reference</i> guide.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the assessment. The format for this ARN is: arn:<code>partition</code>
+     * @return Amazon Resource Name (ARN) of the assessment. The format for this ARN is: arn:<code>partition</code>
      *         :resiliencehub:<code>region</code>:<code>account</code>:app-assessment/<code>app-id</code>. For more
      *         information about ARNs, see <a
      *         href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names
@@ -90,14 +90,14 @@ public class ListAppComponentRecommendationsRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the assessment. The format for this ARN is: arn:<code>partition</code>
+     * Amazon Resource Name (ARN) of the assessment. The format for this ARN is: arn:<code>partition</code>
      * :resiliencehub:<code>region</code>:<code>account</code>:app-assessment/<code>app-id</code>. For more information
      * about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon
      * Resource Names (ARNs)</a> in the <i>AWS General Reference</i> guide.
      * </p>
      * 
      * @param assessmentArn
-     *        The Amazon Resource Name (ARN) of the assessment. The format for this ARN is: arn:<code>partition</code>
+     *        Amazon Resource Name (ARN) of the assessment. The format for this ARN is: arn:<code>partition</code>
      *        :resiliencehub:<code>region</code>:<code>account</code>:app-assessment/<code>app-id</code>. For more
      *        information about ARNs, see <a
      *        href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names
@@ -112,13 +112,13 @@ public class ListAppComponentRecommendationsRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The maximum number of results to include in the response. If more results exist than the specified
+     * Maximum number of results to include in the response. If more results exist than the specified
      * <code>MaxResults</code> value, a token is included in the response so that the remaining results can be
      * retrieved.
      * </p>
      * 
      * @param maxResults
-     *        The maximum number of results to include in the response. If more results exist than the specified
+     *        Maximum number of results to include in the response. If more results exist than the specified
      *        <code>MaxResults</code> value, a token is included in the response so that the remaining results can be
      *        retrieved.
      */
@@ -129,12 +129,12 @@ public class ListAppComponentRecommendationsRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The maximum number of results to include in the response. If more results exist than the specified
+     * Maximum number of results to include in the response. If more results exist than the specified
      * <code>MaxResults</code> value, a token is included in the response so that the remaining results can be
      * retrieved.
      * </p>
      * 
-     * @return The maximum number of results to include in the response. If more results exist than the specified
+     * @return Maximum number of results to include in the response. If more results exist than the specified
      *         <code>MaxResults</code> value, a token is included in the response so that the remaining results can be
      *         retrieved.
      */
@@ -145,13 +145,13 @@ public class ListAppComponentRecommendationsRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The maximum number of results to include in the response. If more results exist than the specified
+     * Maximum number of results to include in the response. If more results exist than the specified
      * <code>MaxResults</code> value, a token is included in the response so that the remaining results can be
      * retrieved.
      * </p>
      * 
      * @param maxResults
-     *        The maximum number of results to include in the response. If more results exist than the specified
+     *        Maximum number of results to include in the response. If more results exist than the specified
      *        <code>MaxResults</code> value, a token is included in the response so that the remaining results can be
      *        retrieved.
      * @return Returns a reference to this object so that method calls can be chained together.

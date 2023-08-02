@@ -73,19 +73,30 @@ public class UserPoolType implements Serializable, Cloneable, StructuredPojo {
     private String status;
     /**
      * <p>
-     * The date the user pool was last modified.
+     * The date and time, in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format, when
+     * the item was modified.
      * </p>
      */
     private java.util.Date lastModifiedDate;
     /**
      * <p>
-     * The date the user pool was created.
+     * The date and time, in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format, when
+     * the item was created.
      * </p>
      */
     private java.util.Date creationDate;
     /**
      * <p>
-     * A container with the schema attributes of a user pool.
+     * A list of the user attributes and their properties in your user pool. The attribute schema contains standard
+     * attributes, custom attributes with a <code>custom:</code> prefix, and developer attributes with a
+     * <code>dev:</code> prefix. For more information, see <a
+     * href="https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-attributes.html">User pool
+     * attributes</a>.
+     * </p>
+     * <p>
+     * Developer-only attributes are a legacy feature of user pools, are read-only to all app clients. You can create
+     * and update developer-only attributes only with IAM-authenticated API operations. Use app client read/write
+     * permissions instead.
      * </p>
      */
     private java.util.List<SchemaAttributeType> schemaAttributes;
@@ -200,7 +211,7 @@ public class UserPoolType implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The email configuration of your user pool. The email configuration type sets your preferred sending method,
-     * Amazon Web Services Region, and sender for messages tfrom your user pool.
+     * Amazon Web Services Region, and sender for messages from your user pool.
      * </p>
      */
     private EmailConfigurationType emailConfiguration;
@@ -242,8 +253,8 @@ public class UserPoolType implements Serializable, Cloneable, StructuredPojo {
      * <dd>
      * <p>
      * The Amazon Web Services account is in the SNS SMS Sandbox and messages will only reach verified end users. This
-     * parameter won’t get populated with SNSSandbox if the IAM user creating the user pool doesn’t have SNS
-     * permissions. To learn how to move your Amazon Web Services account out of the sandbox, see <a
+     * parameter won’t get populated with SNSSandbox if the user creating the user pool doesn’t have SNS permissions. To
+     * learn how to move your Amazon Web Services account out of the sandbox, see <a
      * href="https://docs.aws.amazon.com/sns/latest/dg/sns-sms-sandbox-moving-to-production.html">Moving out of the SMS
      * sandbox</a>.
      * </p>
@@ -285,7 +296,14 @@ public class UserPoolType implements Serializable, Cloneable, StructuredPojo {
     private AdminCreateUserConfigType adminCreateUserConfig;
     /**
      * <p>
-     * The user pool add-ons.
+     * User pool add-ons. Contains settings for activation of advanced security features. To log user security
+     * information but take no action, set to <code>AUDIT</code>. To configure automatic security responses to risky
+     * traffic to your user pool, set to <code>ENFORCED</code>.
+     * </p>
+     * <p>
+     * For more information, see <a href=
+     * "https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-settings-advanced-security.html"
+     * >Adding advanced security to a user pool</a>.
      * </p>
      */
     private UserPoolAddOnsType userPoolAddOns;
@@ -689,11 +707,13 @@ public class UserPoolType implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The date the user pool was last modified.
+     * The date and time, in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format, when
+     * the item was modified.
      * </p>
      * 
      * @param lastModifiedDate
-     *        The date the user pool was last modified.
+     *        The date and time, in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a>
+     *        format, when the item was modified.
      */
 
     public void setLastModifiedDate(java.util.Date lastModifiedDate) {
@@ -702,10 +722,12 @@ public class UserPoolType implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The date the user pool was last modified.
+     * The date and time, in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format, when
+     * the item was modified.
      * </p>
      * 
-     * @return The date the user pool was last modified.
+     * @return The date and time, in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a>
+     *         format, when the item was modified.
      */
 
     public java.util.Date getLastModifiedDate() {
@@ -714,11 +736,13 @@ public class UserPoolType implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The date the user pool was last modified.
+     * The date and time, in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format, when
+     * the item was modified.
      * </p>
      * 
      * @param lastModifiedDate
-     *        The date the user pool was last modified.
+     *        The date and time, in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a>
+     *        format, when the item was modified.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -729,11 +753,13 @@ public class UserPoolType implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The date the user pool was created.
+     * The date and time, in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format, when
+     * the item was created.
      * </p>
      * 
      * @param creationDate
-     *        The date the user pool was created.
+     *        The date and time, in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a>
+     *        format, when the item was created.
      */
 
     public void setCreationDate(java.util.Date creationDate) {
@@ -742,10 +768,12 @@ public class UserPoolType implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The date the user pool was created.
+     * The date and time, in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format, when
+     * the item was created.
      * </p>
      * 
-     * @return The date the user pool was created.
+     * @return The date and time, in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a>
+     *         format, when the item was created.
      */
 
     public java.util.Date getCreationDate() {
@@ -754,11 +782,13 @@ public class UserPoolType implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The date the user pool was created.
+     * The date and time, in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format, when
+     * the item was created.
      * </p>
      * 
      * @param creationDate
-     *        The date the user pool was created.
+     *        The date and time, in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a>
+     *        format, when the item was created.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -769,10 +799,27 @@ public class UserPoolType implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A container with the schema attributes of a user pool.
+     * A list of the user attributes and their properties in your user pool. The attribute schema contains standard
+     * attributes, custom attributes with a <code>custom:</code> prefix, and developer attributes with a
+     * <code>dev:</code> prefix. For more information, see <a
+     * href="https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-attributes.html">User pool
+     * attributes</a>.
+     * </p>
+     * <p>
+     * Developer-only attributes are a legacy feature of user pools, are read-only to all app clients. You can create
+     * and update developer-only attributes only with IAM-authenticated API operations. Use app client read/write
+     * permissions instead.
      * </p>
      * 
-     * @return A container with the schema attributes of a user pool.
+     * @return A list of the user attributes and their properties in your user pool. The attribute schema contains
+     *         standard attributes, custom attributes with a <code>custom:</code> prefix, and developer attributes with
+     *         a <code>dev:</code> prefix. For more information, see <a
+     *         href="https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-attributes.html">User
+     *         pool attributes</a>.</p>
+     *         <p>
+     *         Developer-only attributes are a legacy feature of user pools, are read-only to all app clients. You can
+     *         create and update developer-only attributes only with IAM-authenticated API operations. Use app client
+     *         read/write permissions instead.
      */
 
     public java.util.List<SchemaAttributeType> getSchemaAttributes() {
@@ -781,11 +828,28 @@ public class UserPoolType implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A container with the schema attributes of a user pool.
+     * A list of the user attributes and their properties in your user pool. The attribute schema contains standard
+     * attributes, custom attributes with a <code>custom:</code> prefix, and developer attributes with a
+     * <code>dev:</code> prefix. For more information, see <a
+     * href="https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-attributes.html">User pool
+     * attributes</a>.
+     * </p>
+     * <p>
+     * Developer-only attributes are a legacy feature of user pools, are read-only to all app clients. You can create
+     * and update developer-only attributes only with IAM-authenticated API operations. Use app client read/write
+     * permissions instead.
      * </p>
      * 
      * @param schemaAttributes
-     *        A container with the schema attributes of a user pool.
+     *        A list of the user attributes and their properties in your user pool. The attribute schema contains
+     *        standard attributes, custom attributes with a <code>custom:</code> prefix, and developer attributes with a
+     *        <code>dev:</code> prefix. For more information, see <a
+     *        href="https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-attributes.html">User
+     *        pool attributes</a>.</p>
+     *        <p>
+     *        Developer-only attributes are a legacy feature of user pools, are read-only to all app clients. You can
+     *        create and update developer-only attributes only with IAM-authenticated API operations. Use app client
+     *        read/write permissions instead.
      */
 
     public void setSchemaAttributes(java.util.Collection<SchemaAttributeType> schemaAttributes) {
@@ -799,7 +863,16 @@ public class UserPoolType implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A container with the schema attributes of a user pool.
+     * A list of the user attributes and their properties in your user pool. The attribute schema contains standard
+     * attributes, custom attributes with a <code>custom:</code> prefix, and developer attributes with a
+     * <code>dev:</code> prefix. For more information, see <a
+     * href="https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-attributes.html">User pool
+     * attributes</a>.
+     * </p>
+     * <p>
+     * Developer-only attributes are a legacy feature of user pools, are read-only to all app clients. You can create
+     * and update developer-only attributes only with IAM-authenticated API operations. Use app client read/write
+     * permissions instead.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -808,7 +881,15 @@ public class UserPoolType implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param schemaAttributes
-     *        A container with the schema attributes of a user pool.
+     *        A list of the user attributes and their properties in your user pool. The attribute schema contains
+     *        standard attributes, custom attributes with a <code>custom:</code> prefix, and developer attributes with a
+     *        <code>dev:</code> prefix. For more information, see <a
+     *        href="https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-attributes.html">User
+     *        pool attributes</a>.</p>
+     *        <p>
+     *        Developer-only attributes are a legacy feature of user pools, are read-only to all app clients. You can
+     *        create and update developer-only attributes only with IAM-authenticated API operations. Use app client
+     *        read/write permissions instead.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -824,11 +905,28 @@ public class UserPoolType implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A container with the schema attributes of a user pool.
+     * A list of the user attributes and their properties in your user pool. The attribute schema contains standard
+     * attributes, custom attributes with a <code>custom:</code> prefix, and developer attributes with a
+     * <code>dev:</code> prefix. For more information, see <a
+     * href="https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-attributes.html">User pool
+     * attributes</a>.
+     * </p>
+     * <p>
+     * Developer-only attributes are a legacy feature of user pools, are read-only to all app clients. You can create
+     * and update developer-only attributes only with IAM-authenticated API operations. Use app client read/write
+     * permissions instead.
      * </p>
      * 
      * @param schemaAttributes
-     *        A container with the schema attributes of a user pool.
+     *        A list of the user attributes and their properties in your user pool. The attribute schema contains
+     *        standard attributes, custom attributes with a <code>custom:</code> prefix, and developer attributes with a
+     *        <code>dev:</code> prefix. For more information, see <a
+     *        href="https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-attributes.html">User
+     *        pool attributes</a>.</p>
+     *        <p>
+     *        Developer-only attributes are a legacy feature of user pools, are read-only to all app clients. You can
+     *        create and update developer-only attributes only with IAM-authenticated API operations. Use app client
+     *        read/write permissions instead.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1804,12 +1902,12 @@ public class UserPoolType implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The email configuration of your user pool. The email configuration type sets your preferred sending method,
-     * Amazon Web Services Region, and sender for messages tfrom your user pool.
+     * Amazon Web Services Region, and sender for messages from your user pool.
      * </p>
      * 
      * @param emailConfiguration
      *        The email configuration of your user pool. The email configuration type sets your preferred sending
-     *        method, Amazon Web Services Region, and sender for messages tfrom your user pool.
+     *        method, Amazon Web Services Region, and sender for messages from your user pool.
      */
 
     public void setEmailConfiguration(EmailConfigurationType emailConfiguration) {
@@ -1819,11 +1917,11 @@ public class UserPoolType implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The email configuration of your user pool. The email configuration type sets your preferred sending method,
-     * Amazon Web Services Region, and sender for messages tfrom your user pool.
+     * Amazon Web Services Region, and sender for messages from your user pool.
      * </p>
      * 
      * @return The email configuration of your user pool. The email configuration type sets your preferred sending
-     *         method, Amazon Web Services Region, and sender for messages tfrom your user pool.
+     *         method, Amazon Web Services Region, and sender for messages from your user pool.
      */
 
     public EmailConfigurationType getEmailConfiguration() {
@@ -1833,12 +1931,12 @@ public class UserPoolType implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The email configuration of your user pool. The email configuration type sets your preferred sending method,
-     * Amazon Web Services Region, and sender for messages tfrom your user pool.
+     * Amazon Web Services Region, and sender for messages from your user pool.
      * </p>
      * 
      * @param emailConfiguration
      *        The email configuration of your user pool. The email configuration type sets your preferred sending
-     *        method, Amazon Web Services Region, and sender for messages tfrom your user pool.
+     *        method, Amazon Web Services Region, and sender for messages from your user pool.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2001,8 +2099,8 @@ public class UserPoolType implements Serializable, Cloneable, StructuredPojo {
      * <dd>
      * <p>
      * The Amazon Web Services account is in the SNS SMS Sandbox and messages will only reach verified end users. This
-     * parameter won’t get populated with SNSSandbox if the IAM user creating the user pool doesn’t have SNS
-     * permissions. To learn how to move your Amazon Web Services account out of the sandbox, see <a
+     * parameter won’t get populated with SNSSandbox if the user creating the user pool doesn’t have SNS permissions. To
+     * learn how to move your Amazon Web Services account out of the sandbox, see <a
      * href="https://docs.aws.amazon.com/sns/latest/dg/sns-sms-sandbox-moving-to-production.html">Moving out of the SMS
      * sandbox</a>.
      * </p>
@@ -2029,7 +2127,7 @@ public class UserPoolType implements Serializable, Cloneable, StructuredPojo {
      *        <dd>
      *        <p>
      *        The Amazon Web Services account is in the SNS SMS Sandbox and messages will only reach verified end users.
-     *        This parameter won’t get populated with SNSSandbox if the IAM user creating the user pool doesn’t have SNS
+     *        This parameter won’t get populated with SNSSandbox if the user creating the user pool doesn’t have SNS
      *        permissions. To learn how to move your Amazon Web Services account out of the sandbox, see <a
      *        href="https://docs.aws.amazon.com/sns/latest/dg/sns-sms-sandbox-moving-to-production.html">Moving out of
      *        the SMS sandbox</a>.
@@ -2063,8 +2161,8 @@ public class UserPoolType implements Serializable, Cloneable, StructuredPojo {
      * <dd>
      * <p>
      * The Amazon Web Services account is in the SNS SMS Sandbox and messages will only reach verified end users. This
-     * parameter won’t get populated with SNSSandbox if the IAM user creating the user pool doesn’t have SNS
-     * permissions. To learn how to move your Amazon Web Services account out of the sandbox, see <a
+     * parameter won’t get populated with SNSSandbox if the user creating the user pool doesn’t have SNS permissions. To
+     * learn how to move your Amazon Web Services account out of the sandbox, see <a
      * href="https://docs.aws.amazon.com/sns/latest/dg/sns-sms-sandbox-moving-to-production.html">Moving out of the SMS
      * sandbox</a>.
      * </p>
@@ -2090,8 +2188,8 @@ public class UserPoolType implements Serializable, Cloneable, StructuredPojo {
      *         <dd>
      *         <p>
      *         The Amazon Web Services account is in the SNS SMS Sandbox and messages will only reach verified end
-     *         users. This parameter won’t get populated with SNSSandbox if the IAM user creating the user pool doesn’t
-     *         have SNS permissions. To learn how to move your Amazon Web Services account out of the sandbox, see <a
+     *         users. This parameter won’t get populated with SNSSandbox if the user creating the user pool doesn’t have
+     *         SNS permissions. To learn how to move your Amazon Web Services account out of the sandbox, see <a
      *         href="https://docs.aws.amazon.com/sns/latest/dg/sns-sms-sandbox-moving-to-production.html">Moving out of
      *         the SMS sandbox</a>.
      *         </p>
@@ -2124,8 +2222,8 @@ public class UserPoolType implements Serializable, Cloneable, StructuredPojo {
      * <dd>
      * <p>
      * The Amazon Web Services account is in the SNS SMS Sandbox and messages will only reach verified end users. This
-     * parameter won’t get populated with SNSSandbox if the IAM user creating the user pool doesn’t have SNS
-     * permissions. To learn how to move your Amazon Web Services account out of the sandbox, see <a
+     * parameter won’t get populated with SNSSandbox if the user creating the user pool doesn’t have SNS permissions. To
+     * learn how to move your Amazon Web Services account out of the sandbox, see <a
      * href="https://docs.aws.amazon.com/sns/latest/dg/sns-sms-sandbox-moving-to-production.html">Moving out of the SMS
      * sandbox</a>.
      * </p>
@@ -2152,7 +2250,7 @@ public class UserPoolType implements Serializable, Cloneable, StructuredPojo {
      *        <dd>
      *        <p>
      *        The Amazon Web Services account is in the SNS SMS Sandbox and messages will only reach verified end users.
-     *        This parameter won’t get populated with SNSSandbox if the IAM user creating the user pool doesn’t have SNS
+     *        This parameter won’t get populated with SNSSandbox if the user creating the user pool doesn’t have SNS
      *        permissions. To learn how to move your Amazon Web Services account out of the sandbox, see <a
      *        href="https://docs.aws.amazon.com/sns/latest/dg/sns-sms-sandbox-moving-to-production.html">Moving out of
      *        the SMS sandbox</a>.
@@ -2373,11 +2471,24 @@ public class UserPoolType implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The user pool add-ons.
+     * User pool add-ons. Contains settings for activation of advanced security features. To log user security
+     * information but take no action, set to <code>AUDIT</code>. To configure automatic security responses to risky
+     * traffic to your user pool, set to <code>ENFORCED</code>.
+     * </p>
+     * <p>
+     * For more information, see <a href=
+     * "https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-settings-advanced-security.html"
+     * >Adding advanced security to a user pool</a>.
      * </p>
      * 
      * @param userPoolAddOns
-     *        The user pool add-ons.
+     *        User pool add-ons. Contains settings for activation of advanced security features. To log user security
+     *        information but take no action, set to <code>AUDIT</code>. To configure automatic security responses to
+     *        risky traffic to your user pool, set to <code>ENFORCED</code>.</p>
+     *        <p>
+     *        For more information, see <a href=
+     *        "https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-settings-advanced-security.html"
+     *        >Adding advanced security to a user pool</a>.
      */
 
     public void setUserPoolAddOns(UserPoolAddOnsType userPoolAddOns) {
@@ -2386,10 +2497,23 @@ public class UserPoolType implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The user pool add-ons.
+     * User pool add-ons. Contains settings for activation of advanced security features. To log user security
+     * information but take no action, set to <code>AUDIT</code>. To configure automatic security responses to risky
+     * traffic to your user pool, set to <code>ENFORCED</code>.
+     * </p>
+     * <p>
+     * For more information, see <a href=
+     * "https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-settings-advanced-security.html"
+     * >Adding advanced security to a user pool</a>.
      * </p>
      * 
-     * @return The user pool add-ons.
+     * @return User pool add-ons. Contains settings for activation of advanced security features. To log user security
+     *         information but take no action, set to <code>AUDIT</code>. To configure automatic security responses to
+     *         risky traffic to your user pool, set to <code>ENFORCED</code>.</p>
+     *         <p>
+     *         For more information, see <a href=
+     *         "https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-settings-advanced-security.html"
+     *         >Adding advanced security to a user pool</a>.
      */
 
     public UserPoolAddOnsType getUserPoolAddOns() {
@@ -2398,11 +2522,24 @@ public class UserPoolType implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The user pool add-ons.
+     * User pool add-ons. Contains settings for activation of advanced security features. To log user security
+     * information but take no action, set to <code>AUDIT</code>. To configure automatic security responses to risky
+     * traffic to your user pool, set to <code>ENFORCED</code>.
+     * </p>
+     * <p>
+     * For more information, see <a href=
+     * "https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-settings-advanced-security.html"
+     * >Adding advanced security to a user pool</a>.
      * </p>
      * 
      * @param userPoolAddOns
-     *        The user pool add-ons.
+     *        User pool add-ons. Contains settings for activation of advanced security features. To log user security
+     *        information but take no action, set to <code>AUDIT</code>. To configure automatic security responses to
+     *        risky traffic to your user pool, set to <code>ENFORCED</code>.</p>
+     *        <p>
+     *        For more information, see <a href=
+     *        "https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-settings-advanced-security.html"
+     *        >Adding advanced security to a user pool</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -3739,6 +3739,23 @@ public interface AmazonSageMaker {
 
     /**
      * <p>
+     * Starts an Amazon SageMaker Inference Recommender autoscaling recommendation job. Returns recommendations for
+     * autoscaling policies that you can apply to your SageMaker endpoint.
+     * </p>
+     * 
+     * @param getScalingConfigurationRecommendationRequest
+     * @return Result of the GetScalingConfigurationRecommendation operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         Resource being access is not found.
+     * @sample AmazonSageMaker.GetScalingConfigurationRecommendation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/GetScalingConfigurationRecommendation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetScalingConfigurationRecommendationResult getScalingConfigurationRecommendation(
+            GetScalingConfigurationRecommendationRequest getScalingConfigurationRecommendationRequest);
+
+    /**
+     * <p>
      * An auto-complete API for the search functionality in the SageMaker console. It returns suggestions of possible
      * matches for the property name to use in <code>Search</code> queries. Provides suggestions for
      * <code>HyperParameters</code>, <code>Tags</code>, and <code>Metrics</code>.

@@ -68,9 +68,23 @@ public class AppJsonUnmarshaller implements Unmarshaller<App, JsonUnmarshallerCo
                     context.nextToken();
                     app.setDescription(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("driftStatus", targetDepth)) {
+                    context.nextToken();
+                    app.setDriftStatus(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("eventSubscriptions", targetDepth)) {
+                    context.nextToken();
+                    app.setEventSubscriptions(new ListUnmarshaller<EventSubscription>(EventSubscriptionJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
                 if (context.testExpression("lastAppComplianceEvaluationTime", targetDepth)) {
                     context.nextToken();
                     app.setLastAppComplianceEvaluationTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
+                }
+                if (context.testExpression("lastDriftEvaluationTime", targetDepth)) {
+                    context.nextToken();
+                    app.setLastDriftEvaluationTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
                 }
                 if (context.testExpression("lastResiliencyScoreEvaluationTime", targetDepth)) {
                     context.nextToken();
@@ -79,6 +93,10 @@ public class AppJsonUnmarshaller implements Unmarshaller<App, JsonUnmarshallerCo
                 if (context.testExpression("name", targetDepth)) {
                     context.nextToken();
                     app.setName(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("permissionModel", targetDepth)) {
+                    context.nextToken();
+                    app.setPermissionModel(PermissionModelJsonUnmarshaller.getInstance().unmarshall(context));
                 }
                 if (context.testExpression("policyArn", targetDepth)) {
                     context.nextToken();

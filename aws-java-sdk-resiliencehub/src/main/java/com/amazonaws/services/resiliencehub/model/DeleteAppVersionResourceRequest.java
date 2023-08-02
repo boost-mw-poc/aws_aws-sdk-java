@@ -27,7 +27,7 @@ public class DeleteAppVersionResourceRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
+     * Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
      * <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more
      * information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">
      * Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i> guide.
@@ -36,13 +36,13 @@ public class DeleteAppVersionResourceRequest extends com.amazonaws.AmazonWebServ
     private String appArn;
     /**
      * <p>
-     * The Amazon Web Services account that owns the physical resource.
+     * Amazon Web Services account that owns the physical resource.
      * </p>
      */
     private String awsAccountId;
     /**
      * <p>
-     * The Amazon Web Services region that owns the physical resource.
+     * Amazon Web Services region that owns the physical resource.
      * </p>
      */
     private String awsRegion;
@@ -55,33 +55,33 @@ public class DeleteAppVersionResourceRequest extends com.amazonaws.AmazonWebServ
     private String clientToken;
     /**
      * <p>
-     * The logical identifier of the resource.
+     * Logical identifier of the resource.
      * </p>
      */
     private LogicalResourceId logicalResourceId;
     /**
      * <p>
-     * The physical identifier of the resource.
+     * Physical identifier of the resource.
      * </p>
      */
     private String physicalResourceId;
     /**
      * <p>
-     * The name of the resource.
+     * Name of the resource.
      * </p>
      */
     private String resourceName;
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
+     * Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
      * <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more
      * information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">
      * Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i> guide.
      * </p>
      * 
      * @param appArn
-     *        The Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
+     *        Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
      *        <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For
      *        more information about ARNs, see <a
      *        href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names
@@ -94,13 +94,13 @@ public class DeleteAppVersionResourceRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
+     * Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
      * <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more
      * information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">
      * Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i> guide.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
+     * @return Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
      *         <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>.
      *         For more information about ARNs, see <a
      *         href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names
@@ -113,14 +113,14 @@ public class DeleteAppVersionResourceRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
+     * Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
      * <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more
      * information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">
      * Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i> guide.
      * </p>
      * 
      * @param appArn
-     *        The Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
+     *        Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
      *        <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For
      *        more information about ARNs, see <a
      *        href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names
@@ -135,11 +135,11 @@ public class DeleteAppVersionResourceRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The Amazon Web Services account that owns the physical resource.
+     * Amazon Web Services account that owns the physical resource.
      * </p>
      * 
      * @param awsAccountId
-     *        The Amazon Web Services account that owns the physical resource.
+     *        Amazon Web Services account that owns the physical resource.
      */
 
     public void setAwsAccountId(String awsAccountId) {
@@ -148,10 +148,10 @@ public class DeleteAppVersionResourceRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The Amazon Web Services account that owns the physical resource.
+     * Amazon Web Services account that owns the physical resource.
      * </p>
      * 
-     * @return The Amazon Web Services account that owns the physical resource.
+     * @return Amazon Web Services account that owns the physical resource.
      */
 
     public String getAwsAccountId() {
@@ -160,11 +160,11 @@ public class DeleteAppVersionResourceRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The Amazon Web Services account that owns the physical resource.
+     * Amazon Web Services account that owns the physical resource.
      * </p>
      * 
      * @param awsAccountId
-     *        The Amazon Web Services account that owns the physical resource.
+     *        Amazon Web Services account that owns the physical resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -175,11 +175,11 @@ public class DeleteAppVersionResourceRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The Amazon Web Services region that owns the physical resource.
+     * Amazon Web Services region that owns the physical resource.
      * </p>
      * 
      * @param awsRegion
-     *        The Amazon Web Services region that owns the physical resource.
+     *        Amazon Web Services region that owns the physical resource.
      */
 
     public void setAwsRegion(String awsRegion) {
@@ -188,10 +188,10 @@ public class DeleteAppVersionResourceRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The Amazon Web Services region that owns the physical resource.
+     * Amazon Web Services region that owns the physical resource.
      * </p>
      * 
-     * @return The Amazon Web Services region that owns the physical resource.
+     * @return Amazon Web Services region that owns the physical resource.
      */
 
     public String getAwsRegion() {
@@ -200,11 +200,11 @@ public class DeleteAppVersionResourceRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The Amazon Web Services region that owns the physical resource.
+     * Amazon Web Services region that owns the physical resource.
      * </p>
      * 
      * @param awsRegion
-     *        The Amazon Web Services region that owns the physical resource.
+     *        Amazon Web Services region that owns the physical resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -261,11 +261,11 @@ public class DeleteAppVersionResourceRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The logical identifier of the resource.
+     * Logical identifier of the resource.
      * </p>
      * 
      * @param logicalResourceId
-     *        The logical identifier of the resource.
+     *        Logical identifier of the resource.
      */
 
     public void setLogicalResourceId(LogicalResourceId logicalResourceId) {
@@ -274,10 +274,10 @@ public class DeleteAppVersionResourceRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The logical identifier of the resource.
+     * Logical identifier of the resource.
      * </p>
      * 
-     * @return The logical identifier of the resource.
+     * @return Logical identifier of the resource.
      */
 
     public LogicalResourceId getLogicalResourceId() {
@@ -286,11 +286,11 @@ public class DeleteAppVersionResourceRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The logical identifier of the resource.
+     * Logical identifier of the resource.
      * </p>
      * 
      * @param logicalResourceId
-     *        The logical identifier of the resource.
+     *        Logical identifier of the resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -301,11 +301,11 @@ public class DeleteAppVersionResourceRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The physical identifier of the resource.
+     * Physical identifier of the resource.
      * </p>
      * 
      * @param physicalResourceId
-     *        The physical identifier of the resource.
+     *        Physical identifier of the resource.
      */
 
     public void setPhysicalResourceId(String physicalResourceId) {
@@ -314,10 +314,10 @@ public class DeleteAppVersionResourceRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The physical identifier of the resource.
+     * Physical identifier of the resource.
      * </p>
      * 
-     * @return The physical identifier of the resource.
+     * @return Physical identifier of the resource.
      */
 
     public String getPhysicalResourceId() {
@@ -326,11 +326,11 @@ public class DeleteAppVersionResourceRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The physical identifier of the resource.
+     * Physical identifier of the resource.
      * </p>
      * 
      * @param physicalResourceId
-     *        The physical identifier of the resource.
+     *        Physical identifier of the resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -341,11 +341,11 @@ public class DeleteAppVersionResourceRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The name of the resource.
+     * Name of the resource.
      * </p>
      * 
      * @param resourceName
-     *        The name of the resource.
+     *        Name of the resource.
      */
 
     public void setResourceName(String resourceName) {
@@ -354,10 +354,10 @@ public class DeleteAppVersionResourceRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The name of the resource.
+     * Name of the resource.
      * </p>
      * 
-     * @return The name of the resource.
+     * @return Name of the resource.
      */
 
     public String getResourceName() {
@@ -366,11 +366,11 @@ public class DeleteAppVersionResourceRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The name of the resource.
+     * Name of the resource.
      * </p>
      * 
      * @param resourceName
-     *        The name of the resource.
+     *        Name of the resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

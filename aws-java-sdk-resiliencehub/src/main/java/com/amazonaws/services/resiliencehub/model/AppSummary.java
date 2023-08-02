@@ -30,7 +30,7 @@ public class AppSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
+     * Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
      * <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more
      * information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">
      * Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i> guide.
@@ -63,6 +63,12 @@ public class AppSummary implements Serializable, Cloneable, StructuredPojo {
     private String description;
     /**
      * <p>
+     * Indicates if compliance drifts (deviations) were detected while running an assessment for your application.
+     * </p>
+     */
+    private String driftStatus;
+    /**
+     * <p>
      * The name of the application.
      * </p>
      */
@@ -75,21 +81,21 @@ public class AppSummary implements Serializable, Cloneable, StructuredPojo {
     private Double resiliencyScore;
     /**
      * <p>
-     * The status of the application.
+     * Status of the application.
      * </p>
      */
     private String status;
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
+     * Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
      * <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more
      * information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">
      * Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i> guide.
      * </p>
      * 
      * @param appArn
-     *        The Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
+     *        Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
      *        <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For
      *        more information about ARNs, see <a
      *        href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names
@@ -102,13 +108,13 @@ public class AppSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
+     * Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
      * <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more
      * information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">
      * Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i> guide.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
+     * @return Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
      *         <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>.
      *         For more information about ARNs, see <a
      *         href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names
@@ -121,14 +127,14 @@ public class AppSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
+     * Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
      * <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more
      * information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">
      * Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i> guide.
      * </p>
      * 
      * @param appArn
-     *        The Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
+     *        Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
      *        <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For
      *        more information about ARNs, see <a
      *        href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names
@@ -341,6 +347,69 @@ public class AppSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
+     * Indicates if compliance drifts (deviations) were detected while running an assessment for your application.
+     * </p>
+     * 
+     * @param driftStatus
+     *        Indicates if compliance drifts (deviations) were detected while running an assessment for your
+     *        application.
+     * @see AppDriftStatusType
+     */
+
+    public void setDriftStatus(String driftStatus) {
+        this.driftStatus = driftStatus;
+    }
+
+    /**
+     * <p>
+     * Indicates if compliance drifts (deviations) were detected while running an assessment for your application.
+     * </p>
+     * 
+     * @return Indicates if compliance drifts (deviations) were detected while running an assessment for your
+     *         application.
+     * @see AppDriftStatusType
+     */
+
+    public String getDriftStatus() {
+        return this.driftStatus;
+    }
+
+    /**
+     * <p>
+     * Indicates if compliance drifts (deviations) were detected while running an assessment for your application.
+     * </p>
+     * 
+     * @param driftStatus
+     *        Indicates if compliance drifts (deviations) were detected while running an assessment for your
+     *        application.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see AppDriftStatusType
+     */
+
+    public AppSummary withDriftStatus(String driftStatus) {
+        setDriftStatus(driftStatus);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Indicates if compliance drifts (deviations) were detected while running an assessment for your application.
+     * </p>
+     * 
+     * @param driftStatus
+     *        Indicates if compliance drifts (deviations) were detected while running an assessment for your
+     *        application.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see AppDriftStatusType
+     */
+
+    public AppSummary withDriftStatus(AppDriftStatusType driftStatus) {
+        this.driftStatus = driftStatus.toString();
+        return this;
+    }
+
+    /**
+     * <p>
      * The name of the application.
      * </p>
      * 
@@ -421,11 +490,11 @@ public class AppSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The status of the application.
+     * Status of the application.
      * </p>
      * 
      * @param status
-     *        The status of the application.
+     *        Status of the application.
      * @see AppStatusType
      */
 
@@ -435,10 +504,10 @@ public class AppSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The status of the application.
+     * Status of the application.
      * </p>
      * 
-     * @return The status of the application.
+     * @return Status of the application.
      * @see AppStatusType
      */
 
@@ -448,11 +517,11 @@ public class AppSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The status of the application.
+     * Status of the application.
      * </p>
      * 
      * @param status
-     *        The status of the application.
+     *        Status of the application.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AppStatusType
      */
@@ -464,11 +533,11 @@ public class AppSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The status of the application.
+     * Status of the application.
      * </p>
      * 
      * @param status
-     *        The status of the application.
+     *        Status of the application.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AppStatusType
      */
@@ -500,6 +569,8 @@ public class AppSummary implements Serializable, Cloneable, StructuredPojo {
             sb.append("CreationTime: ").append(getCreationTime()).append(",");
         if (getDescription() != null)
             sb.append("Description: ").append(getDescription()).append(",");
+        if (getDriftStatus() != null)
+            sb.append("DriftStatus: ").append(getDriftStatus()).append(",");
         if (getName() != null)
             sb.append("Name: ").append(getName()).append(",");
         if (getResiliencyScore() != null)
@@ -540,6 +611,10 @@ public class AppSummary implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
             return false;
+        if (other.getDriftStatus() == null ^ this.getDriftStatus() == null)
+            return false;
+        if (other.getDriftStatus() != null && other.getDriftStatus().equals(this.getDriftStatus()) == false)
+            return false;
         if (other.getName() == null ^ this.getName() == null)
             return false;
         if (other.getName() != null && other.getName().equals(this.getName()) == false)
@@ -565,6 +640,7 @@ public class AppSummary implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getComplianceStatus() == null) ? 0 : getComplianceStatus().hashCode());
         hashCode = prime * hashCode + ((getCreationTime() == null) ? 0 : getCreationTime().hashCode());
         hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
+        hashCode = prime * hashCode + ((getDriftStatus() == null) ? 0 : getDriftStatus().hashCode());
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
         hashCode = prime * hashCode + ((getResiliencyScore() == null) ? 0 : getResiliencyScore().hashCode());
         hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());

@@ -5709,6 +5709,41 @@ public class AmazonSageMakerAsyncClient extends AmazonSageMakerClient implements
     }
 
     @Override
+    public java.util.concurrent.Future<GetScalingConfigurationRecommendationResult> getScalingConfigurationRecommendationAsync(
+            GetScalingConfigurationRecommendationRequest request) {
+
+        return getScalingConfigurationRecommendationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetScalingConfigurationRecommendationResult> getScalingConfigurationRecommendationAsync(
+            final GetScalingConfigurationRecommendationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetScalingConfigurationRecommendationRequest, GetScalingConfigurationRecommendationResult> asyncHandler) {
+        final GetScalingConfigurationRecommendationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetScalingConfigurationRecommendationResult>() {
+            @Override
+            public GetScalingConfigurationRecommendationResult call() throws Exception {
+                GetScalingConfigurationRecommendationResult result = null;
+
+                try {
+                    result = executeGetScalingConfigurationRecommendation(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetSearchSuggestionsResult> getSearchSuggestionsAsync(GetSearchSuggestionsRequest request) {
 
         return getSearchSuggestionsAsync(request, null);

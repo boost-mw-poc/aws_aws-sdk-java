@@ -27,7 +27,7 @@ public class ListAppAssessmentsRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
+     * Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
      * <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more
      * information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">
      * Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i> guide.
@@ -60,7 +60,7 @@ public class ListAppAssessmentsRequest extends com.amazonaws.AmazonWebServiceReq
     private String invoker;
     /**
      * <p>
-     * The maximum number of results to include in the response. If more results exist than the specified
+     * Maximum number of results to include in the response. If more results exist than the specified
      * <code>MaxResults</code> value, a token is included in the response so that the remaining results can be
      * retrieved.
      * </p>
@@ -82,14 +82,14 @@ public class ListAppAssessmentsRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
+     * Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
      * <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more
      * information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">
      * Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i> guide.
      * </p>
      * 
      * @param appArn
-     *        The Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
+     *        Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
      *        <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For
      *        more information about ARNs, see <a
      *        href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names
@@ -102,13 +102,13 @@ public class ListAppAssessmentsRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
+     * Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
      * <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more
      * information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">
      * Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i> guide.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
+     * @return Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
      *         <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>.
      *         For more information about ARNs, see <a
      *         href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names
@@ -121,14 +121,14 @@ public class ListAppAssessmentsRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
+     * Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
      * <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more
      * information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">
      * Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i> guide.
      * </p>
      * 
      * @param appArn
-     *        The Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
+     *        Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:
      *        <code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For
      *        more information about ARNs, see <a
      *        href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names
@@ -403,13 +403,13 @@ public class ListAppAssessmentsRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The maximum number of results to include in the response. If more results exist than the specified
+     * Maximum number of results to include in the response. If more results exist than the specified
      * <code>MaxResults</code> value, a token is included in the response so that the remaining results can be
      * retrieved.
      * </p>
      * 
      * @param maxResults
-     *        The maximum number of results to include in the response. If more results exist than the specified
+     *        Maximum number of results to include in the response. If more results exist than the specified
      *        <code>MaxResults</code> value, a token is included in the response so that the remaining results can be
      *        retrieved.
      */
@@ -420,12 +420,12 @@ public class ListAppAssessmentsRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The maximum number of results to include in the response. If more results exist than the specified
+     * Maximum number of results to include in the response. If more results exist than the specified
      * <code>MaxResults</code> value, a token is included in the response so that the remaining results can be
      * retrieved.
      * </p>
      * 
-     * @return The maximum number of results to include in the response. If more results exist than the specified
+     * @return Maximum number of results to include in the response. If more results exist than the specified
      *         <code>MaxResults</code> value, a token is included in the response so that the remaining results can be
      *         retrieved.
      */
@@ -436,13 +436,13 @@ public class ListAppAssessmentsRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The maximum number of results to include in the response. If more results exist than the specified
+     * Maximum number of results to include in the response. If more results exist than the specified
      * <code>MaxResults</code> value, a token is included in the response so that the remaining results can be
      * retrieved.
      * </p>
      * 
      * @param maxResults
-     *        The maximum number of results to include in the response. If more results exist than the specified
+     *        Maximum number of results to include in the response. If more results exist than the specified
      *        <code>MaxResults</code> value, a token is included in the response so that the remaining results can be
      *        retrieved.
      * @return Returns a reference to this object so that method calls can be chained together.

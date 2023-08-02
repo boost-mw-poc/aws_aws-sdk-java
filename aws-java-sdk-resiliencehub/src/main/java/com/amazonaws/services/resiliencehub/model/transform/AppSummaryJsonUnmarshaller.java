@@ -68,6 +68,10 @@ public class AppSummaryJsonUnmarshaller implements Unmarshaller<AppSummary, Json
                     context.nextToken();
                     appSummary.setDescription(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("driftStatus", targetDepth)) {
+                    context.nextToken();
+                    appSummary.setDriftStatus(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("name", targetDepth)) {
                     context.nextToken();
                     appSummary.setName(context.getUnmarshaller(String.class).unmarshall(context));

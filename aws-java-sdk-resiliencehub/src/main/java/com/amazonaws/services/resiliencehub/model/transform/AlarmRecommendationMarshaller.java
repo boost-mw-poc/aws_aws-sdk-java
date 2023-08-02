@@ -30,6 +30,8 @@ public class AlarmRecommendationMarshaller {
 
     private static final MarshallingInfo<String> APPCOMPONENTNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("appComponentName").build();
+    private static final MarshallingInfo<List> APPCOMPONENTNAMES_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("appComponentNames").build();
     private static final MarshallingInfo<String> DESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("description").build();
     private static final MarshallingInfo<List> ITEMS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
@@ -62,6 +64,7 @@ public class AlarmRecommendationMarshaller {
 
         try {
             protocolMarshaller.marshall(alarmRecommendation.getAppComponentName(), APPCOMPONENTNAME_BINDING);
+            protocolMarshaller.marshall(alarmRecommendation.getAppComponentNames(), APPCOMPONENTNAMES_BINDING);
             protocolMarshaller.marshall(alarmRecommendation.getDescription(), DESCRIPTION_BINDING);
             protocolMarshaller.marshall(alarmRecommendation.getItems(), ITEMS_BINDING);
             protocolMarshaller.marshall(alarmRecommendation.getName(), NAME_BINDING);
