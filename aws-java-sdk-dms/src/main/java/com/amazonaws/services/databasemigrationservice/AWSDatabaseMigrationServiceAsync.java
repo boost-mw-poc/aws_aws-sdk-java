@@ -210,6 +210,39 @@ public interface AWSDatabaseMigrationServiceAsync extends AWSDatabaseMigrationSe
 
     /**
      * <p>
+     * Creates a data provider using the provided settings. A data provider stores a data store type and location
+     * information about your database.
+     * </p>
+     * 
+     * @param createDataProviderRequest
+     * @return A Java Future containing the result of the CreateDataProvider operation returned by the service.
+     * @sample AWSDatabaseMigrationServiceAsync.CreateDataProvider
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/CreateDataProvider" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<CreateDataProviderResult> createDataProviderAsync(CreateDataProviderRequest createDataProviderRequest);
+
+    /**
+     * <p>
+     * Creates a data provider using the provided settings. A data provider stores a data store type and location
+     * information about your database.
+     * </p>
+     * 
+     * @param createDataProviderRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateDataProvider operation returned by the service.
+     * @sample AWSDatabaseMigrationServiceAsyncHandler.CreateDataProvider
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/CreateDataProvider" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<CreateDataProviderResult> createDataProviderAsync(CreateDataProviderRequest createDataProviderRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateDataProviderRequest, CreateDataProviderResult> asyncHandler);
+
+    /**
+     * <p>
      * Creates an endpoint using the provided settings.
      * </p>
      * <note>
@@ -350,6 +383,80 @@ public interface AWSDatabaseMigrationServiceAsync extends AWSDatabaseMigrationSe
     java.util.concurrent.Future<CreateFleetAdvisorCollectorResult> createFleetAdvisorCollectorAsync(
             CreateFleetAdvisorCollectorRequest createFleetAdvisorCollectorRequest,
             com.amazonaws.handlers.AsyncHandler<CreateFleetAdvisorCollectorRequest, CreateFleetAdvisorCollectorResult> asyncHandler);
+
+    /**
+     * <p>
+     * Creates the instance profile using the specified parameters.
+     * </p>
+     * 
+     * @param createInstanceProfileRequest
+     * @return A Java Future containing the result of the CreateInstanceProfile operation returned by the service.
+     * @sample AWSDatabaseMigrationServiceAsync.CreateInstanceProfile
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/CreateInstanceProfile" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<CreateInstanceProfileResult> createInstanceProfileAsync(CreateInstanceProfileRequest createInstanceProfileRequest);
+
+    /**
+     * <p>
+     * Creates the instance profile using the specified parameters.
+     * </p>
+     * 
+     * @param createInstanceProfileRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateInstanceProfile operation returned by the service.
+     * @sample AWSDatabaseMigrationServiceAsyncHandler.CreateInstanceProfile
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/CreateInstanceProfile" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<CreateInstanceProfileResult> createInstanceProfileAsync(CreateInstanceProfileRequest createInstanceProfileRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateInstanceProfileRequest, CreateInstanceProfileResult> asyncHandler);
+
+    /**
+     * <p>
+     * Creates the migration project using the specified parameters.
+     * </p>
+     * <p>
+     * You can run this action only after you create an instance profile and data providers using <a
+     * href="https://docs.aws.amazon.com/dms/latest/APIReference/API_CreateInstanceProfile.html"
+     * >CreateInstanceProfile</a> and <a
+     * href="https://docs.aws.amazon.com/dms/latest/APIReference/API_CreateDataProvider.html">CreateDataProvider</a>.
+     * </p>
+     * 
+     * @param createMigrationProjectRequest
+     * @return A Java Future containing the result of the CreateMigrationProject operation returned by the service.
+     * @sample AWSDatabaseMigrationServiceAsync.CreateMigrationProject
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/CreateMigrationProject" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<CreateMigrationProjectResult> createMigrationProjectAsync(CreateMigrationProjectRequest createMigrationProjectRequest);
+
+    /**
+     * <p>
+     * Creates the migration project using the specified parameters.
+     * </p>
+     * <p>
+     * You can run this action only after you create an instance profile and data providers using <a
+     * href="https://docs.aws.amazon.com/dms/latest/APIReference/API_CreateInstanceProfile.html"
+     * >CreateInstanceProfile</a> and <a
+     * href="https://docs.aws.amazon.com/dms/latest/APIReference/API_CreateDataProvider.html">CreateDataProvider</a>.
+     * </p>
+     * 
+     * @param createMigrationProjectRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateMigrationProject operation returned by the service.
+     * @sample AWSDatabaseMigrationServiceAsyncHandler.CreateMigrationProject
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/CreateMigrationProject" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<CreateMigrationProjectResult> createMigrationProjectAsync(CreateMigrationProjectRequest createMigrationProjectRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateMigrationProjectRequest, CreateMigrationProjectResult> asyncHandler);
 
     /**
      * <p>
@@ -587,6 +694,49 @@ public interface AWSDatabaseMigrationServiceAsync extends AWSDatabaseMigrationSe
 
     /**
      * <p>
+     * Deletes the specified data provider.
+     * </p>
+     * <note>
+     * <p>
+     * All migration projects associated with the data provider must be deleted or modified before you can delete the
+     * data provider.
+     * </p>
+     * </note>
+     * 
+     * @param deleteDataProviderRequest
+     * @return A Java Future containing the result of the DeleteDataProvider operation returned by the service.
+     * @sample AWSDatabaseMigrationServiceAsync.DeleteDataProvider
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/DeleteDataProvider" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteDataProviderResult> deleteDataProviderAsync(DeleteDataProviderRequest deleteDataProviderRequest);
+
+    /**
+     * <p>
+     * Deletes the specified data provider.
+     * </p>
+     * <note>
+     * <p>
+     * All migration projects associated with the data provider must be deleted or modified before you can delete the
+     * data provider.
+     * </p>
+     * </note>
+     * 
+     * @param deleteDataProviderRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteDataProvider operation returned by the service.
+     * @sample AWSDatabaseMigrationServiceAsyncHandler.DeleteDataProvider
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/DeleteDataProvider" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteDataProviderResult> deleteDataProviderAsync(DeleteDataProviderRequest deleteDataProviderRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteDataProviderRequest, DeleteDataProviderResult> asyncHandler);
+
+    /**
+     * <p>
      * Deletes the specified endpoint.
      * </p>
      * <note>
@@ -724,6 +874,90 @@ public interface AWSDatabaseMigrationServiceAsync extends AWSDatabaseMigrationSe
     java.util.concurrent.Future<DeleteFleetAdvisorDatabasesResult> deleteFleetAdvisorDatabasesAsync(
             DeleteFleetAdvisorDatabasesRequest deleteFleetAdvisorDatabasesRequest,
             com.amazonaws.handlers.AsyncHandler<DeleteFleetAdvisorDatabasesRequest, DeleteFleetAdvisorDatabasesResult> asyncHandler);
+
+    /**
+     * <p>
+     * Deletes the specified instance profile.
+     * </p>
+     * <note>
+     * <p>
+     * All migration projects associated with the instance profile must be deleted or modified before you can delete the
+     * instance profile.
+     * </p>
+     * </note>
+     * 
+     * @param deleteInstanceProfileRequest
+     * @return A Java Future containing the result of the DeleteInstanceProfile operation returned by the service.
+     * @sample AWSDatabaseMigrationServiceAsync.DeleteInstanceProfile
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/DeleteInstanceProfile" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteInstanceProfileResult> deleteInstanceProfileAsync(DeleteInstanceProfileRequest deleteInstanceProfileRequest);
+
+    /**
+     * <p>
+     * Deletes the specified instance profile.
+     * </p>
+     * <note>
+     * <p>
+     * All migration projects associated with the instance profile must be deleted or modified before you can delete the
+     * instance profile.
+     * </p>
+     * </note>
+     * 
+     * @param deleteInstanceProfileRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteInstanceProfile operation returned by the service.
+     * @sample AWSDatabaseMigrationServiceAsyncHandler.DeleteInstanceProfile
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/DeleteInstanceProfile" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteInstanceProfileResult> deleteInstanceProfileAsync(DeleteInstanceProfileRequest deleteInstanceProfileRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteInstanceProfileRequest, DeleteInstanceProfileResult> asyncHandler);
+
+    /**
+     * <p>
+     * Deletes the specified migration project.
+     * </p>
+     * <note>
+     * <p>
+     * The migration project must be closed before you can delete it.
+     * </p>
+     * </note>
+     * 
+     * @param deleteMigrationProjectRequest
+     * @return A Java Future containing the result of the DeleteMigrationProject operation returned by the service.
+     * @sample AWSDatabaseMigrationServiceAsync.DeleteMigrationProject
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/DeleteMigrationProject" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteMigrationProjectResult> deleteMigrationProjectAsync(DeleteMigrationProjectRequest deleteMigrationProjectRequest);
+
+    /**
+     * <p>
+     * Deletes the specified migration project.
+     * </p>
+     * <note>
+     * <p>
+     * The migration project must be closed before you can delete it.
+     * </p>
+     * </note>
+     * 
+     * @param deleteMigrationProjectRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteMigrationProject operation returned by the service.
+     * @sample AWSDatabaseMigrationServiceAsyncHandler.DeleteMigrationProject
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/DeleteMigrationProject" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteMigrationProjectResult> deleteMigrationProjectAsync(DeleteMigrationProjectRequest deleteMigrationProjectRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteMigrationProjectRequest, DeleteMigrationProjectResult> asyncHandler);
 
     /**
      * <p>
@@ -1100,6 +1334,72 @@ public interface AWSDatabaseMigrationServiceAsync extends AWSDatabaseMigrationSe
 
     /**
      * <p>
+     * Returns configuration parameters for a schema conversion project.
+     * </p>
+     * 
+     * @param describeConversionConfigurationRequest
+     * @return A Java Future containing the result of the DescribeConversionConfiguration operation returned by the
+     *         service.
+     * @sample AWSDatabaseMigrationServiceAsync.DescribeConversionConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/DescribeConversionConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeConversionConfigurationResult> describeConversionConfigurationAsync(
+            DescribeConversionConfigurationRequest describeConversionConfigurationRequest);
+
+    /**
+     * <p>
+     * Returns configuration parameters for a schema conversion project.
+     * </p>
+     * 
+     * @param describeConversionConfigurationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeConversionConfiguration operation returned by the
+     *         service.
+     * @sample AWSDatabaseMigrationServiceAsyncHandler.DescribeConversionConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/DescribeConversionConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeConversionConfigurationResult> describeConversionConfigurationAsync(
+            DescribeConversionConfigurationRequest describeConversionConfigurationRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeConversionConfigurationRequest, DescribeConversionConfigurationResult> asyncHandler);
+
+    /**
+     * <p>
+     * Returns a paginated list of data providers for your account in the current region.
+     * </p>
+     * 
+     * @param describeDataProvidersRequest
+     * @return A Java Future containing the result of the DescribeDataProviders operation returned by the service.
+     * @sample AWSDatabaseMigrationServiceAsync.DescribeDataProviders
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/DescribeDataProviders" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeDataProvidersResult> describeDataProvidersAsync(DescribeDataProvidersRequest describeDataProvidersRequest);
+
+    /**
+     * <p>
+     * Returns a paginated list of data providers for your account in the current region.
+     * </p>
+     * 
+     * @param describeDataProvidersRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeDataProviders operation returned by the service.
+     * @sample AWSDatabaseMigrationServiceAsyncHandler.DescribeDataProviders
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/DescribeDataProviders" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeDataProvidersResult> describeDataProvidersAsync(DescribeDataProvidersRequest describeDataProvidersRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeDataProvidersRequest, DescribeDataProvidersResult> asyncHandler);
+
+    /**
+     * <p>
      * Returns information about the possible endpoint settings available when you create an endpoint for a specific
      * database engine.
      * </p>
@@ -1343,6 +1643,45 @@ public interface AWSDatabaseMigrationServiceAsync extends AWSDatabaseMigrationSe
 
     /**
      * <p>
+     * Returns a paginated list of extension pack associations for the specified migration project. An extension pack is
+     * an add-on module that emulates functions present in a source database that are required when converting objects
+     * to the target database.
+     * </p>
+     * 
+     * @param describeExtensionPackAssociationsRequest
+     * @return A Java Future containing the result of the DescribeExtensionPackAssociations operation returned by the
+     *         service.
+     * @sample AWSDatabaseMigrationServiceAsync.DescribeExtensionPackAssociations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/DescribeExtensionPackAssociations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeExtensionPackAssociationsResult> describeExtensionPackAssociationsAsync(
+            DescribeExtensionPackAssociationsRequest describeExtensionPackAssociationsRequest);
+
+    /**
+     * <p>
+     * Returns a paginated list of extension pack associations for the specified migration project. An extension pack is
+     * an add-on module that emulates functions present in a source database that are required when converting objects
+     * to the target database.
+     * </p>
+     * 
+     * @param describeExtensionPackAssociationsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeExtensionPackAssociations operation returned by the
+     *         service.
+     * @sample AWSDatabaseMigrationServiceAsyncHandler.DescribeExtensionPackAssociations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/DescribeExtensionPackAssociations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeExtensionPackAssociationsResult> describeExtensionPackAssociationsAsync(
+            DescribeExtensionPackAssociationsRequest describeExtensionPackAssociationsRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeExtensionPackAssociationsRequest, DescribeExtensionPackAssociationsResult> asyncHandler);
+
+    /**
+     * <p>
      * Returns a list of the Fleet Advisor collectors in your account.
      * </p>
      * 
@@ -1513,6 +1852,245 @@ public interface AWSDatabaseMigrationServiceAsync extends AWSDatabaseMigrationSe
     java.util.concurrent.Future<DescribeFleetAdvisorSchemasResult> describeFleetAdvisorSchemasAsync(
             DescribeFleetAdvisorSchemasRequest describeFleetAdvisorSchemasRequest,
             com.amazonaws.handlers.AsyncHandler<DescribeFleetAdvisorSchemasRequest, DescribeFleetAdvisorSchemasResult> asyncHandler);
+
+    /**
+     * <p>
+     * Returns a paginated list of instance profiles for your account in the current region.
+     * </p>
+     * 
+     * @param describeInstanceProfilesRequest
+     * @return A Java Future containing the result of the DescribeInstanceProfiles operation returned by the service.
+     * @sample AWSDatabaseMigrationServiceAsync.DescribeInstanceProfiles
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/DescribeInstanceProfiles" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeInstanceProfilesResult> describeInstanceProfilesAsync(DescribeInstanceProfilesRequest describeInstanceProfilesRequest);
+
+    /**
+     * <p>
+     * Returns a paginated list of instance profiles for your account in the current region.
+     * </p>
+     * 
+     * @param describeInstanceProfilesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeInstanceProfiles operation returned by the service.
+     * @sample AWSDatabaseMigrationServiceAsyncHandler.DescribeInstanceProfiles
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/DescribeInstanceProfiles" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeInstanceProfilesResult> describeInstanceProfilesAsync(DescribeInstanceProfilesRequest describeInstanceProfilesRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeInstanceProfilesRequest, DescribeInstanceProfilesResult> asyncHandler);
+
+    /**
+     * <p>
+     * Returns a paginated list of metadata model assessments for your account in the current region.
+     * </p>
+     * 
+     * @param describeMetadataModelAssessmentsRequest
+     * @return A Java Future containing the result of the DescribeMetadataModelAssessments operation returned by the
+     *         service.
+     * @sample AWSDatabaseMigrationServiceAsync.DescribeMetadataModelAssessments
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/DescribeMetadataModelAssessments"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeMetadataModelAssessmentsResult> describeMetadataModelAssessmentsAsync(
+            DescribeMetadataModelAssessmentsRequest describeMetadataModelAssessmentsRequest);
+
+    /**
+     * <p>
+     * Returns a paginated list of metadata model assessments for your account in the current region.
+     * </p>
+     * 
+     * @param describeMetadataModelAssessmentsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeMetadataModelAssessments operation returned by the
+     *         service.
+     * @sample AWSDatabaseMigrationServiceAsyncHandler.DescribeMetadataModelAssessments
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/DescribeMetadataModelAssessments"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeMetadataModelAssessmentsResult> describeMetadataModelAssessmentsAsync(
+            DescribeMetadataModelAssessmentsRequest describeMetadataModelAssessmentsRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeMetadataModelAssessmentsRequest, DescribeMetadataModelAssessmentsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Returns a paginated list of metadata model conversions for a migration project.
+     * </p>
+     * 
+     * @param describeMetadataModelConversionsRequest
+     * @return A Java Future containing the result of the DescribeMetadataModelConversions operation returned by the
+     *         service.
+     * @sample AWSDatabaseMigrationServiceAsync.DescribeMetadataModelConversions
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/DescribeMetadataModelConversions"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeMetadataModelConversionsResult> describeMetadataModelConversionsAsync(
+            DescribeMetadataModelConversionsRequest describeMetadataModelConversionsRequest);
+
+    /**
+     * <p>
+     * Returns a paginated list of metadata model conversions for a migration project.
+     * </p>
+     * 
+     * @param describeMetadataModelConversionsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeMetadataModelConversions operation returned by the
+     *         service.
+     * @sample AWSDatabaseMigrationServiceAsyncHandler.DescribeMetadataModelConversions
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/DescribeMetadataModelConversions"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeMetadataModelConversionsResult> describeMetadataModelConversionsAsync(
+            DescribeMetadataModelConversionsRequest describeMetadataModelConversionsRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeMetadataModelConversionsRequest, DescribeMetadataModelConversionsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Returns a paginated list of metadata model exports.
+     * </p>
+     * 
+     * @param describeMetadataModelExportsAsScriptRequest
+     * @return A Java Future containing the result of the DescribeMetadataModelExportsAsScript operation returned by the
+     *         service.
+     * @sample AWSDatabaseMigrationServiceAsync.DescribeMetadataModelExportsAsScript
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/DescribeMetadataModelExportsAsScript"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeMetadataModelExportsAsScriptResult> describeMetadataModelExportsAsScriptAsync(
+            DescribeMetadataModelExportsAsScriptRequest describeMetadataModelExportsAsScriptRequest);
+
+    /**
+     * <p>
+     * Returns a paginated list of metadata model exports.
+     * </p>
+     * 
+     * @param describeMetadataModelExportsAsScriptRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeMetadataModelExportsAsScript operation returned by the
+     *         service.
+     * @sample AWSDatabaseMigrationServiceAsyncHandler.DescribeMetadataModelExportsAsScript
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/DescribeMetadataModelExportsAsScript"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeMetadataModelExportsAsScriptResult> describeMetadataModelExportsAsScriptAsync(
+            DescribeMetadataModelExportsAsScriptRequest describeMetadataModelExportsAsScriptRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeMetadataModelExportsAsScriptRequest, DescribeMetadataModelExportsAsScriptResult> asyncHandler);
+
+    /**
+     * <p>
+     * Returns a paginated list of metadata model exports.
+     * </p>
+     * 
+     * @param describeMetadataModelExportsToTargetRequest
+     * @return A Java Future containing the result of the DescribeMetadataModelExportsToTarget operation returned by the
+     *         service.
+     * @sample AWSDatabaseMigrationServiceAsync.DescribeMetadataModelExportsToTarget
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/DescribeMetadataModelExportsToTarget"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeMetadataModelExportsToTargetResult> describeMetadataModelExportsToTargetAsync(
+            DescribeMetadataModelExportsToTargetRequest describeMetadataModelExportsToTargetRequest);
+
+    /**
+     * <p>
+     * Returns a paginated list of metadata model exports.
+     * </p>
+     * 
+     * @param describeMetadataModelExportsToTargetRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeMetadataModelExportsToTarget operation returned by the
+     *         service.
+     * @sample AWSDatabaseMigrationServiceAsyncHandler.DescribeMetadataModelExportsToTarget
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/DescribeMetadataModelExportsToTarget"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeMetadataModelExportsToTargetResult> describeMetadataModelExportsToTargetAsync(
+            DescribeMetadataModelExportsToTargetRequest describeMetadataModelExportsToTargetRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeMetadataModelExportsToTargetRequest, DescribeMetadataModelExportsToTargetResult> asyncHandler);
+
+    /**
+     * <p>
+     * Returns a paginated list of metadata model imports.
+     * </p>
+     * 
+     * @param describeMetadataModelImportsRequest
+     * @return A Java Future containing the result of the DescribeMetadataModelImports operation returned by the
+     *         service.
+     * @sample AWSDatabaseMigrationServiceAsync.DescribeMetadataModelImports
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/DescribeMetadataModelImports"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeMetadataModelImportsResult> describeMetadataModelImportsAsync(
+            DescribeMetadataModelImportsRequest describeMetadataModelImportsRequest);
+
+    /**
+     * <p>
+     * Returns a paginated list of metadata model imports.
+     * </p>
+     * 
+     * @param describeMetadataModelImportsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeMetadataModelImports operation returned by the
+     *         service.
+     * @sample AWSDatabaseMigrationServiceAsyncHandler.DescribeMetadataModelImports
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/DescribeMetadataModelImports"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeMetadataModelImportsResult> describeMetadataModelImportsAsync(
+            DescribeMetadataModelImportsRequest describeMetadataModelImportsRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeMetadataModelImportsRequest, DescribeMetadataModelImportsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Returns a paginated list of migration projects for your account in the current region.
+     * </p>
+     * 
+     * @param describeMigrationProjectsRequest
+     * @return A Java Future containing the result of the DescribeMigrationProjects operation returned by the service.
+     * @sample AWSDatabaseMigrationServiceAsync.DescribeMigrationProjects
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/DescribeMigrationProjects" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeMigrationProjectsResult> describeMigrationProjectsAsync(
+            DescribeMigrationProjectsRequest describeMigrationProjectsRequest);
+
+    /**
+     * <p>
+     * Returns a paginated list of migration projects for your account in the current region.
+     * </p>
+     * 
+     * @param describeMigrationProjectsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeMigrationProjects operation returned by the service.
+     * @sample AWSDatabaseMigrationServiceAsyncHandler.DescribeMigrationProjects
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/DescribeMigrationProjects" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeMigrationProjectsResult> describeMigrationProjectsAsync(
+            DescribeMigrationProjectsRequest describeMigrationProjectsRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeMigrationProjectsRequest, DescribeMigrationProjectsResult> asyncHandler);
 
     /**
      * <p>
@@ -2145,6 +2723,43 @@ public interface AWSDatabaseMigrationServiceAsync extends AWSDatabaseMigrationSe
 
     /**
      * <p>
+     * Saves a copy of a database migration assessment report to your Amazon S3 bucket. DMS can save your assessment
+     * report as a comma-separated value (CSV) or a PDF file.
+     * </p>
+     * 
+     * @param exportMetadataModelAssessmentRequest
+     * @return A Java Future containing the result of the ExportMetadataModelAssessment operation returned by the
+     *         service.
+     * @sample AWSDatabaseMigrationServiceAsync.ExportMetadataModelAssessment
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/ExportMetadataModelAssessment"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ExportMetadataModelAssessmentResult> exportMetadataModelAssessmentAsync(
+            ExportMetadataModelAssessmentRequest exportMetadataModelAssessmentRequest);
+
+    /**
+     * <p>
+     * Saves a copy of a database migration assessment report to your Amazon S3 bucket. DMS can save your assessment
+     * report as a comma-separated value (CSV) or a PDF file.
+     * </p>
+     * 
+     * @param exportMetadataModelAssessmentRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ExportMetadataModelAssessment operation returned by the
+     *         service.
+     * @sample AWSDatabaseMigrationServiceAsyncHandler.ExportMetadataModelAssessment
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/ExportMetadataModelAssessment"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ExportMetadataModelAssessmentResult> exportMetadataModelAssessmentAsync(
+            ExportMetadataModelAssessmentRequest exportMetadataModelAssessmentRequest,
+            com.amazonaws.handlers.AsyncHandler<ExportMetadataModelAssessmentRequest, ExportMetadataModelAssessmentResult> asyncHandler);
+
+    /**
+     * <p>
      * Uploads the specified certificate.
      * </p>
      * 
@@ -2210,6 +2825,82 @@ public interface AWSDatabaseMigrationServiceAsync extends AWSDatabaseMigrationSe
      */
     java.util.concurrent.Future<ListTagsForResourceResult> listTagsForResourceAsync(ListTagsForResourceRequest listTagsForResourceRequest,
             com.amazonaws.handlers.AsyncHandler<ListTagsForResourceRequest, ListTagsForResourceResult> asyncHandler);
+
+    /**
+     * <p>
+     * Modifies the specified schema conversion configuration using the provided parameters.
+     * </p>
+     * 
+     * @param modifyConversionConfigurationRequest
+     * @return A Java Future containing the result of the ModifyConversionConfiguration operation returned by the
+     *         service.
+     * @sample AWSDatabaseMigrationServiceAsync.ModifyConversionConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/ModifyConversionConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ModifyConversionConfigurationResult> modifyConversionConfigurationAsync(
+            ModifyConversionConfigurationRequest modifyConversionConfigurationRequest);
+
+    /**
+     * <p>
+     * Modifies the specified schema conversion configuration using the provided parameters.
+     * </p>
+     * 
+     * @param modifyConversionConfigurationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ModifyConversionConfiguration operation returned by the
+     *         service.
+     * @sample AWSDatabaseMigrationServiceAsyncHandler.ModifyConversionConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/ModifyConversionConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ModifyConversionConfigurationResult> modifyConversionConfigurationAsync(
+            ModifyConversionConfigurationRequest modifyConversionConfigurationRequest,
+            com.amazonaws.handlers.AsyncHandler<ModifyConversionConfigurationRequest, ModifyConversionConfigurationResult> asyncHandler);
+
+    /**
+     * <p>
+     * Modifies the specified data provider using the provided settings.
+     * </p>
+     * <note>
+     * <p>
+     * You must remove the data provider from all migration projects before you can modify it.
+     * </p>
+     * </note>
+     * 
+     * @param modifyDataProviderRequest
+     * @return A Java Future containing the result of the ModifyDataProvider operation returned by the service.
+     * @sample AWSDatabaseMigrationServiceAsync.ModifyDataProvider
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/ModifyDataProvider" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ModifyDataProviderResult> modifyDataProviderAsync(ModifyDataProviderRequest modifyDataProviderRequest);
+
+    /**
+     * <p>
+     * Modifies the specified data provider using the provided settings.
+     * </p>
+     * <note>
+     * <p>
+     * You must remove the data provider from all migration projects before you can modify it.
+     * </p>
+     * </note>
+     * 
+     * @param modifyDataProviderRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ModifyDataProvider operation returned by the service.
+     * @sample AWSDatabaseMigrationServiceAsyncHandler.ModifyDataProvider
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/ModifyDataProvider" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ModifyDataProviderResult> modifyDataProviderAsync(ModifyDataProviderRequest modifyDataProviderRequest,
+            com.amazonaws.handlers.AsyncHandler<ModifyDataProviderRequest, ModifyDataProviderResult> asyncHandler);
 
     /**
      * <p>
@@ -2288,6 +2979,90 @@ public interface AWSDatabaseMigrationServiceAsync extends AWSDatabaseMigrationSe
      */
     java.util.concurrent.Future<ModifyEventSubscriptionResult> modifyEventSubscriptionAsync(ModifyEventSubscriptionRequest modifyEventSubscriptionRequest,
             com.amazonaws.handlers.AsyncHandler<ModifyEventSubscriptionRequest, ModifyEventSubscriptionResult> asyncHandler);
+
+    /**
+     * <p>
+     * Modifies the specified instance profile using the provided parameters.
+     * </p>
+     * <note>
+     * <p>
+     * All migration projects associated with the instance profile must be deleted or modified before you can modify the
+     * instance profile.
+     * </p>
+     * </note>
+     * 
+     * @param modifyInstanceProfileRequest
+     * @return A Java Future containing the result of the ModifyInstanceProfile operation returned by the service.
+     * @sample AWSDatabaseMigrationServiceAsync.ModifyInstanceProfile
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/ModifyInstanceProfile" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ModifyInstanceProfileResult> modifyInstanceProfileAsync(ModifyInstanceProfileRequest modifyInstanceProfileRequest);
+
+    /**
+     * <p>
+     * Modifies the specified instance profile using the provided parameters.
+     * </p>
+     * <note>
+     * <p>
+     * All migration projects associated with the instance profile must be deleted or modified before you can modify the
+     * instance profile.
+     * </p>
+     * </note>
+     * 
+     * @param modifyInstanceProfileRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ModifyInstanceProfile operation returned by the service.
+     * @sample AWSDatabaseMigrationServiceAsyncHandler.ModifyInstanceProfile
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/ModifyInstanceProfile" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ModifyInstanceProfileResult> modifyInstanceProfileAsync(ModifyInstanceProfileRequest modifyInstanceProfileRequest,
+            com.amazonaws.handlers.AsyncHandler<ModifyInstanceProfileRequest, ModifyInstanceProfileResult> asyncHandler);
+
+    /**
+     * <p>
+     * Modifies the specified migration project using the provided parameters.
+     * </p>
+     * <note>
+     * <p>
+     * The migration project must be closed before you can modify it.
+     * </p>
+     * </note>
+     * 
+     * @param modifyMigrationProjectRequest
+     * @return A Java Future containing the result of the ModifyMigrationProject operation returned by the service.
+     * @sample AWSDatabaseMigrationServiceAsync.ModifyMigrationProject
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/ModifyMigrationProject" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ModifyMigrationProjectResult> modifyMigrationProjectAsync(ModifyMigrationProjectRequest modifyMigrationProjectRequest);
+
+    /**
+     * <p>
+     * Modifies the specified migration project using the provided parameters.
+     * </p>
+     * <note>
+     * <p>
+     * The migration project must be closed before you can modify it.
+     * </p>
+     * </note>
+     * 
+     * @param modifyMigrationProjectRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ModifyMigrationProject operation returned by the service.
+     * @sample AWSDatabaseMigrationServiceAsyncHandler.ModifyMigrationProject
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/ModifyMigrationProject" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ModifyMigrationProjectResult> modifyMigrationProjectAsync(ModifyMigrationProjectRequest modifyMigrationProjectRequest,
+            com.amazonaws.handlers.AsyncHandler<ModifyMigrationProjectRequest, ModifyMigrationProjectResult> asyncHandler);
 
     /**
      * <p>
@@ -2711,6 +3486,224 @@ public interface AWSDatabaseMigrationServiceAsync extends AWSDatabaseMigrationSe
     java.util.concurrent.Future<RunFleetAdvisorLsaAnalysisResult> runFleetAdvisorLsaAnalysisAsync(
             RunFleetAdvisorLsaAnalysisRequest runFleetAdvisorLsaAnalysisRequest,
             com.amazonaws.handlers.AsyncHandler<RunFleetAdvisorLsaAnalysisRequest, RunFleetAdvisorLsaAnalysisResult> asyncHandler);
+
+    /**
+     * <p>
+     * Applies the extension pack to your target database. An extension pack is an add-on module that emulates functions
+     * present in a source database that are required when converting objects to the target database.
+     * </p>
+     * 
+     * @param startExtensionPackAssociationRequest
+     * @return A Java Future containing the result of the StartExtensionPackAssociation operation returned by the
+     *         service.
+     * @sample AWSDatabaseMigrationServiceAsync.StartExtensionPackAssociation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/StartExtensionPackAssociation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<StartExtensionPackAssociationResult> startExtensionPackAssociationAsync(
+            StartExtensionPackAssociationRequest startExtensionPackAssociationRequest);
+
+    /**
+     * <p>
+     * Applies the extension pack to your target database. An extension pack is an add-on module that emulates functions
+     * present in a source database that are required when converting objects to the target database.
+     * </p>
+     * 
+     * @param startExtensionPackAssociationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the StartExtensionPackAssociation operation returned by the
+     *         service.
+     * @sample AWSDatabaseMigrationServiceAsyncHandler.StartExtensionPackAssociation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/StartExtensionPackAssociation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<StartExtensionPackAssociationResult> startExtensionPackAssociationAsync(
+            StartExtensionPackAssociationRequest startExtensionPackAssociationRequest,
+            com.amazonaws.handlers.AsyncHandler<StartExtensionPackAssociationRequest, StartExtensionPackAssociationResult> asyncHandler);
+
+    /**
+     * <p>
+     * Creates a database migration assessment report by assessing the migration complexity for your source database. A
+     * database migration assessment report summarizes all of the schema conversion tasks. It also details the action
+     * items for database objects that can't be converted to the database engine of your target database instance.
+     * </p>
+     * 
+     * @param startMetadataModelAssessmentRequest
+     * @return A Java Future containing the result of the StartMetadataModelAssessment operation returned by the
+     *         service.
+     * @sample AWSDatabaseMigrationServiceAsync.StartMetadataModelAssessment
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/StartMetadataModelAssessment"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<StartMetadataModelAssessmentResult> startMetadataModelAssessmentAsync(
+            StartMetadataModelAssessmentRequest startMetadataModelAssessmentRequest);
+
+    /**
+     * <p>
+     * Creates a database migration assessment report by assessing the migration complexity for your source database. A
+     * database migration assessment report summarizes all of the schema conversion tasks. It also details the action
+     * items for database objects that can't be converted to the database engine of your target database instance.
+     * </p>
+     * 
+     * @param startMetadataModelAssessmentRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the StartMetadataModelAssessment operation returned by the
+     *         service.
+     * @sample AWSDatabaseMigrationServiceAsyncHandler.StartMetadataModelAssessment
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/StartMetadataModelAssessment"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<StartMetadataModelAssessmentResult> startMetadataModelAssessmentAsync(
+            StartMetadataModelAssessmentRequest startMetadataModelAssessmentRequest,
+            com.amazonaws.handlers.AsyncHandler<StartMetadataModelAssessmentRequest, StartMetadataModelAssessmentResult> asyncHandler);
+
+    /**
+     * <p>
+     * Converts your source database objects to a format compatible with the target database.
+     * </p>
+     * 
+     * @param startMetadataModelConversionRequest
+     * @return A Java Future containing the result of the StartMetadataModelConversion operation returned by the
+     *         service.
+     * @sample AWSDatabaseMigrationServiceAsync.StartMetadataModelConversion
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/StartMetadataModelConversion"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<StartMetadataModelConversionResult> startMetadataModelConversionAsync(
+            StartMetadataModelConversionRequest startMetadataModelConversionRequest);
+
+    /**
+     * <p>
+     * Converts your source database objects to a format compatible with the target database.
+     * </p>
+     * 
+     * @param startMetadataModelConversionRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the StartMetadataModelConversion operation returned by the
+     *         service.
+     * @sample AWSDatabaseMigrationServiceAsyncHandler.StartMetadataModelConversion
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/StartMetadataModelConversion"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<StartMetadataModelConversionResult> startMetadataModelConversionAsync(
+            StartMetadataModelConversionRequest startMetadataModelConversionRequest,
+            com.amazonaws.handlers.AsyncHandler<StartMetadataModelConversionRequest, StartMetadataModelConversionResult> asyncHandler);
+
+    /**
+     * <p>
+     * Saves your converted code to a file as a SQL script, and stores this file on your Amazon S3 bucket.
+     * </p>
+     * 
+     * @param startMetadataModelExportAsScriptRequest
+     * @return A Java Future containing the result of the StartMetadataModelExportAsScript operation returned by the
+     *         service.
+     * @sample AWSDatabaseMigrationServiceAsync.StartMetadataModelExportAsScript
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/StartMetadataModelExportAsScript"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<StartMetadataModelExportAsScriptResult> startMetadataModelExportAsScriptAsync(
+            StartMetadataModelExportAsScriptRequest startMetadataModelExportAsScriptRequest);
+
+    /**
+     * <p>
+     * Saves your converted code to a file as a SQL script, and stores this file on your Amazon S3 bucket.
+     * </p>
+     * 
+     * @param startMetadataModelExportAsScriptRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the StartMetadataModelExportAsScript operation returned by the
+     *         service.
+     * @sample AWSDatabaseMigrationServiceAsyncHandler.StartMetadataModelExportAsScript
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/StartMetadataModelExportAsScript"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<StartMetadataModelExportAsScriptResult> startMetadataModelExportAsScriptAsync(
+            StartMetadataModelExportAsScriptRequest startMetadataModelExportAsScriptRequest,
+            com.amazonaws.handlers.AsyncHandler<StartMetadataModelExportAsScriptRequest, StartMetadataModelExportAsScriptResult> asyncHandler);
+
+    /**
+     * <p>
+     * Applies converted database objects to your target database.
+     * </p>
+     * 
+     * @param startMetadataModelExportToTargetRequest
+     * @return A Java Future containing the result of the StartMetadataModelExportToTarget operation returned by the
+     *         service.
+     * @sample AWSDatabaseMigrationServiceAsync.StartMetadataModelExportToTarget
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/StartMetadataModelExportToTarget"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<StartMetadataModelExportToTargetResult> startMetadataModelExportToTargetAsync(
+            StartMetadataModelExportToTargetRequest startMetadataModelExportToTargetRequest);
+
+    /**
+     * <p>
+     * Applies converted database objects to your target database.
+     * </p>
+     * 
+     * @param startMetadataModelExportToTargetRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the StartMetadataModelExportToTarget operation returned by the
+     *         service.
+     * @sample AWSDatabaseMigrationServiceAsyncHandler.StartMetadataModelExportToTarget
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/StartMetadataModelExportToTarget"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<StartMetadataModelExportToTargetResult> startMetadataModelExportToTargetAsync(
+            StartMetadataModelExportToTargetRequest startMetadataModelExportToTargetRequest,
+            com.amazonaws.handlers.AsyncHandler<StartMetadataModelExportToTargetRequest, StartMetadataModelExportToTargetResult> asyncHandler);
+
+    /**
+     * <p>
+     * Loads the metadata for all the dependent database objects of the parent object.
+     * </p>
+     * <p>
+     * This operation uses your project's Amazon S3 bucket as a metadata cache to improve performance.
+     * </p>
+     * 
+     * @param startMetadataModelImportRequest
+     * @return A Java Future containing the result of the StartMetadataModelImport operation returned by the service.
+     * @sample AWSDatabaseMigrationServiceAsync.StartMetadataModelImport
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/StartMetadataModelImport" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<StartMetadataModelImportResult> startMetadataModelImportAsync(StartMetadataModelImportRequest startMetadataModelImportRequest);
+
+    /**
+     * <p>
+     * Loads the metadata for all the dependent database objects of the parent object.
+     * </p>
+     * <p>
+     * This operation uses your project's Amazon S3 bucket as a metadata cache to improve performance.
+     * </p>
+     * 
+     * @param startMetadataModelImportRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the StartMetadataModelImport operation returned by the service.
+     * @sample AWSDatabaseMigrationServiceAsyncHandler.StartMetadataModelImport
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/StartMetadataModelImport" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<StartMetadataModelImportResult> startMetadataModelImportAsync(StartMetadataModelImportRequest startMetadataModelImportRequest,
+            com.amazonaws.handlers.AsyncHandler<StartMetadataModelImportRequest, StartMetadataModelImportResult> asyncHandler);
 
     /**
      * <p>

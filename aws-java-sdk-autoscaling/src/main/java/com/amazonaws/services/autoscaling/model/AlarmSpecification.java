@@ -28,17 +28,18 @@ public class AlarmSpecification implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The names of one or more CloudWatch alarms to monitor for the instance refresh.
+     * The names of one or more CloudWatch alarms to monitor for the instance refresh. You can specify up to 10 alarms.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> alarms;
 
     /**
      * <p>
-     * The names of one or more CloudWatch alarms to monitor for the instance refresh.
+     * The names of one or more CloudWatch alarms to monitor for the instance refresh. You can specify up to 10 alarms.
      * </p>
      * 
-     * @return The names of one or more CloudWatch alarms to monitor for the instance refresh.
+     * @return The names of one or more CloudWatch alarms to monitor for the instance refresh. You can specify up to 10
+     *         alarms.
      */
 
     public java.util.List<String> getAlarms() {
@@ -50,11 +51,12 @@ public class AlarmSpecification implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The names of one or more CloudWatch alarms to monitor for the instance refresh.
+     * The names of one or more CloudWatch alarms to monitor for the instance refresh. You can specify up to 10 alarms.
      * </p>
      * 
      * @param alarms
-     *        The names of one or more CloudWatch alarms to monitor for the instance refresh.
+     *        The names of one or more CloudWatch alarms to monitor for the instance refresh. You can specify up to 10
+     *        alarms.
      */
 
     public void setAlarms(java.util.Collection<String> alarms) {
@@ -68,7 +70,7 @@ public class AlarmSpecification implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The names of one or more CloudWatch alarms to monitor for the instance refresh.
+     * The names of one or more CloudWatch alarms to monitor for the instance refresh. You can specify up to 10 alarms.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -77,7 +79,8 @@ public class AlarmSpecification implements Serializable, Cloneable {
      * </p>
      * 
      * @param alarms
-     *        The names of one or more CloudWatch alarms to monitor for the instance refresh.
+     *        The names of one or more CloudWatch alarms to monitor for the instance refresh. You can specify up to 10
+     *        alarms.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -93,11 +96,12 @@ public class AlarmSpecification implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The names of one or more CloudWatch alarms to monitor for the instance refresh.
+     * The names of one or more CloudWatch alarms to monitor for the instance refresh. You can specify up to 10 alarms.
      * </p>
      * 
      * @param alarms
-     *        The names of one or more CloudWatch alarms to monitor for the instance refresh.
+     *        The names of one or more CloudWatch alarms to monitor for the instance refresh. You can specify up to 10
+     *        alarms.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -1,3 +1,24 @@
+# __1.12.522__ __2023-08-03__
+## __AWS Cloud9__
+  - ### Features
+    - Updated the deprecation date for Amazon Linux. Doc only update.
+
+## __AWS Database Migration Service__
+  - ### Features
+    - The release makes public API for DMS Schema Conversion feature.
+
+## __Amazon Elastic Compute Cloud__
+  - ### Features
+    - This release adds new parameter isPrimaryIPv6 to  allow assigning an IPv6 address as a primary IPv6 address to a network interface which cannot be changed to give equivalent functionality available for network interfaces with primary IPv4 address.
+
+## __Amazon SageMaker Service__
+  - ### Features
+    - Amazon SageMaker now supports running training jobs on p5.48xlarge instance types.
+
+## __Auto Scaling__
+  - ### Features
+    - Documentation changes related to Amazon EC2 Auto Scaling APIs.
+
 # __1.12.521__ __2023-08-02__
 ## __AWS Budgets__
   - ### Features
