@@ -2356,6 +2356,19 @@ public class AbstractAmazonRDSAsync extends AbstractAmazonRDS implements AmazonR
     }
 
     @Override
+    public java.util.concurrent.Future<GlobalCluster> switchoverGlobalClusterAsync(SwitchoverGlobalClusterRequest request) {
+
+        return switchoverGlobalClusterAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GlobalCluster> switchoverGlobalClusterAsync(SwitchoverGlobalClusterRequest request,
+            com.amazonaws.handlers.AsyncHandler<SwitchoverGlobalClusterRequest, GlobalCluster> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DBInstance> switchoverReadReplicaAsync(SwitchoverReadReplicaRequest request) {
 
         return switchoverReadReplicaAsync(request, null);

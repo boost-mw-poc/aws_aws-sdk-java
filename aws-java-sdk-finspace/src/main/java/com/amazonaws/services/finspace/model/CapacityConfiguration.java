@@ -19,8 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * A structure for the metadata of a cluster. It includes information like the CPUs needed, memory of instances, number
- * of instances, and the port used while establishing a connection.
+ * A structure for the metadata of a cluster. It includes information like the CPUs needed, memory of instances, and
+ * number of instances.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2021-03-12/CapacityConfiguration" target="_top">AWS API

@@ -18,6 +18,8 @@ import javax.annotation.Generated;
 import com.amazonaws.SdkClientException;
 import com.amazonaws.services.finspace.model.*;
 
+import com.amazonaws.util.IdempotentUtils;
+
 import com.amazonaws.protocol.*;
 import com.amazonaws.annotation.SdkInternalApi;
 
@@ -33,9 +35,12 @@ public class UpdateKxClusterDatabasesRequestMarshaller {
     private static final MarshallingInfo<String> CLUSTERNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PATH)
             .marshallLocationName("clusterName").build();
     private static final MarshallingInfo<String> CLIENTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("clientToken").build();
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("clientToken")
+            .defaultValueSupplier(com.amazonaws.util.IdempotentUtils.getGenerator()).build();
     private static final MarshallingInfo<List> DATABASES_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("databases").build();
+    private static final MarshallingInfo<StructuredPojo> DEPLOYMENTCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("deploymentConfiguration").build();
 
     private static final UpdateKxClusterDatabasesRequestMarshaller instance = new UpdateKxClusterDatabasesRequestMarshaller();
 
@@ -57,6 +62,7 @@ public class UpdateKxClusterDatabasesRequestMarshaller {
             protocolMarshaller.marshall(updateKxClusterDatabasesRequest.getClusterName(), CLUSTERNAME_BINDING);
             protocolMarshaller.marshall(updateKxClusterDatabasesRequest.getClientToken(), CLIENTTOKEN_BINDING);
             protocolMarshaller.marshall(updateKxClusterDatabasesRequest.getDatabases(), DATABASES_BINDING);
+            protocolMarshaller.marshall(updateKxClusterDatabasesRequest.getDeploymentConfiguration(), DEPLOYMENTCONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

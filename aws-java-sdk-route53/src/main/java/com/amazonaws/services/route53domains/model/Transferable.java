@@ -54,7 +54,7 @@ import javax.annotation.Generated;
  * <dt>DOMAIN_IN_ANOTHER_ACCOUNT</dt>
  * <dd>
  * <p>
- * The domain exists in another Amazon Web Services account.
+ * the domain exists in another Amazon Web Services account.
  * </p>
  * </dd>
  * <dt>PREMIUM_DOMAIN</dt>

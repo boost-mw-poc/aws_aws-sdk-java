@@ -44,7 +44,7 @@ public class KxSavedownStorageConfiguration implements Serializable, Cloneable, 
     private String type;
     /**
      * <p>
-     * The size of temporary storage in bytes.
+     * The size of temporary storage in gibibytes.
      * </p>
      */
     private Integer size;
@@ -162,11 +162,11 @@ public class KxSavedownStorageConfiguration implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The size of temporary storage in bytes.
+     * The size of temporary storage in gibibytes.
      * </p>
      * 
      * @param size
-     *        The size of temporary storage in bytes.
+     *        The size of temporary storage in gibibytes.
      */
 
     public void setSize(Integer size) {
@@ -175,10 +175,10 @@ public class KxSavedownStorageConfiguration implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The size of temporary storage in bytes.
+     * The size of temporary storage in gibibytes.
      * </p>
      * 
-     * @return The size of temporary storage in bytes.
+     * @return The size of temporary storage in gibibytes.
      */
 
     public Integer getSize() {
@@ -187,11 +187,11 @@ public class KxSavedownStorageConfiguration implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The size of temporary storage in bytes.
+     * The size of temporary storage in gibibytes.
      * </p>
      * 
      * @param size
-     *        The size of temporary storage in bytes.
+     *        The size of temporary storage in gibibytes.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

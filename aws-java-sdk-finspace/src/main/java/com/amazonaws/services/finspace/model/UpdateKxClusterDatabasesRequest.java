@@ -49,6 +49,12 @@ public class UpdateKxClusterDatabasesRequest extends com.amazonaws.AmazonWebServ
      * </p>
      */
     private java.util.List<KxDatabaseConfiguration> databases;
+    /**
+     * <p>
+     * The configuration that allows you to choose how you want to update the databases on a cluster.
+     * </p>
+     */
+    private KxDeploymentConfiguration deploymentConfiguration;
 
     /**
      * <p>
@@ -241,6 +247,46 @@ public class UpdateKxClusterDatabasesRequest extends com.amazonaws.AmazonWebServ
     }
 
     /**
+     * <p>
+     * The configuration that allows you to choose how you want to update the databases on a cluster.
+     * </p>
+     * 
+     * @param deploymentConfiguration
+     *        The configuration that allows you to choose how you want to update the databases on a cluster.
+     */
+
+    public void setDeploymentConfiguration(KxDeploymentConfiguration deploymentConfiguration) {
+        this.deploymentConfiguration = deploymentConfiguration;
+    }
+
+    /**
+     * <p>
+     * The configuration that allows you to choose how you want to update the databases on a cluster.
+     * </p>
+     * 
+     * @return The configuration that allows you to choose how you want to update the databases on a cluster.
+     */
+
+    public KxDeploymentConfiguration getDeploymentConfiguration() {
+        return this.deploymentConfiguration;
+    }
+
+    /**
+     * <p>
+     * The configuration that allows you to choose how you want to update the databases on a cluster.
+     * </p>
+     * 
+     * @param deploymentConfiguration
+     *        The configuration that allows you to choose how you want to update the databases on a cluster.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateKxClusterDatabasesRequest withDeploymentConfiguration(KxDeploymentConfiguration deploymentConfiguration) {
+        setDeploymentConfiguration(deploymentConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -259,7 +305,9 @@ public class UpdateKxClusterDatabasesRequest extends com.amazonaws.AmazonWebServ
         if (getClientToken() != null)
             sb.append("ClientToken: ").append(getClientToken()).append(",");
         if (getDatabases() != null)
-            sb.append("Databases: ").append(getDatabases());
+            sb.append("Databases: ").append(getDatabases()).append(",");
+        if (getDeploymentConfiguration() != null)
+            sb.append("DeploymentConfiguration: ").append(getDeploymentConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -290,6 +338,10 @@ public class UpdateKxClusterDatabasesRequest extends com.amazonaws.AmazonWebServ
             return false;
         if (other.getDatabases() != null && other.getDatabases().equals(this.getDatabases()) == false)
             return false;
+        if (other.getDeploymentConfiguration() == null ^ this.getDeploymentConfiguration() == null)
+            return false;
+        if (other.getDeploymentConfiguration() != null && other.getDeploymentConfiguration().equals(this.getDeploymentConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -302,6 +354,7 @@ public class UpdateKxClusterDatabasesRequest extends com.amazonaws.AmazonWebServ
         hashCode = prime * hashCode + ((getClusterName() == null) ? 0 : getClusterName().hashCode());
         hashCode = prime * hashCode + ((getClientToken() == null) ? 0 : getClientToken().hashCode());
         hashCode = prime * hashCode + ((getDatabases() == null) ? 0 : getDatabases().hashCode());
+        hashCode = prime * hashCode + ((getDeploymentConfiguration() == null) ? 0 : getDeploymentConfiguration().hashCode());
         return hashCode;
     }
 

@@ -309,6 +309,8 @@ public enum RDSActions implements Action {
     StopDBInstanceAutomatedBackupsReplication("rds:StopDBInstanceAutomatedBackupsReplication"),
     /** Action for the SwitchoverBlueGreenDeployment operation. */
     SwitchoverBlueGreenDeployment("rds:SwitchoverBlueGreenDeployment"),
+    /** Action for the SwitchoverGlobalCluster operation. */
+    SwitchoverGlobalCluster("rds:SwitchoverGlobalCluster"),
     /** Action for the SwitchoverReadReplica operation. */
     SwitchoverReadReplica("rds:SwitchoverReadReplica"),
 

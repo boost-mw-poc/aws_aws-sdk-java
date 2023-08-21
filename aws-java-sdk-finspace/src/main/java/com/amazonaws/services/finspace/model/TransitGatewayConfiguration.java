@@ -44,6 +44,12 @@ public class TransitGatewayConfiguration implements Serializable, Cloneable, Str
      * </p>
      */
     private String routableCIDRSpace;
+    /**
+     * <p>
+     * The rules that define how you manage the outbound traffic from kdb network to your internal network.
+     * </p>
+     */
+    private java.util.List<NetworkACLEntry> attachmentNetworkAclConfiguration;
 
     /**
      * <p>
@@ -144,6 +150,76 @@ public class TransitGatewayConfiguration implements Serializable, Cloneable, Str
     }
 
     /**
+     * <p>
+     * The rules that define how you manage the outbound traffic from kdb network to your internal network.
+     * </p>
+     * 
+     * @return The rules that define how you manage the outbound traffic from kdb network to your internal network.
+     */
+
+    public java.util.List<NetworkACLEntry> getAttachmentNetworkAclConfiguration() {
+        return attachmentNetworkAclConfiguration;
+    }
+
+    /**
+     * <p>
+     * The rules that define how you manage the outbound traffic from kdb network to your internal network.
+     * </p>
+     * 
+     * @param attachmentNetworkAclConfiguration
+     *        The rules that define how you manage the outbound traffic from kdb network to your internal network.
+     */
+
+    public void setAttachmentNetworkAclConfiguration(java.util.Collection<NetworkACLEntry> attachmentNetworkAclConfiguration) {
+        if (attachmentNetworkAclConfiguration == null) {
+            this.attachmentNetworkAclConfiguration = null;
+            return;
+        }
+
+        this.attachmentNetworkAclConfiguration = new java.util.ArrayList<NetworkACLEntry>(attachmentNetworkAclConfiguration);
+    }
+
+    /**
+     * <p>
+     * The rules that define how you manage the outbound traffic from kdb network to your internal network.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setAttachmentNetworkAclConfiguration(java.util.Collection)} or
+     * {@link #withAttachmentNetworkAclConfiguration(java.util.Collection)} if you want to override the existing values.
+     * </p>
+     * 
+     * @param attachmentNetworkAclConfiguration
+     *        The rules that define how you manage the outbound traffic from kdb network to your internal network.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public TransitGatewayConfiguration withAttachmentNetworkAclConfiguration(NetworkACLEntry... attachmentNetworkAclConfiguration) {
+        if (this.attachmentNetworkAclConfiguration == null) {
+            setAttachmentNetworkAclConfiguration(new java.util.ArrayList<NetworkACLEntry>(attachmentNetworkAclConfiguration.length));
+        }
+        for (NetworkACLEntry ele : attachmentNetworkAclConfiguration) {
+            this.attachmentNetworkAclConfiguration.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The rules that define how you manage the outbound traffic from kdb network to your internal network.
+     * </p>
+     * 
+     * @param attachmentNetworkAclConfiguration
+     *        The rules that define how you manage the outbound traffic from kdb network to your internal network.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public TransitGatewayConfiguration withAttachmentNetworkAclConfiguration(java.util.Collection<NetworkACLEntry> attachmentNetworkAclConfiguration) {
+        setAttachmentNetworkAclConfiguration(attachmentNetworkAclConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -158,7 +234,9 @@ public class TransitGatewayConfiguration implements Serializable, Cloneable, Str
         if (getTransitGatewayID() != null)
             sb.append("TransitGatewayID: ").append(getTransitGatewayID()).append(",");
         if (getRoutableCIDRSpace() != null)
-            sb.append("RoutableCIDRSpace: ").append(getRoutableCIDRSpace());
+            sb.append("RoutableCIDRSpace: ").append(getRoutableCIDRSpace()).append(",");
+        if (getAttachmentNetworkAclConfiguration() != null)
+            sb.append("AttachmentNetworkAclConfiguration: ").append(getAttachmentNetworkAclConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -181,6 +259,11 @@ public class TransitGatewayConfiguration implements Serializable, Cloneable, Str
             return false;
         if (other.getRoutableCIDRSpace() != null && other.getRoutableCIDRSpace().equals(this.getRoutableCIDRSpace()) == false)
             return false;
+        if (other.getAttachmentNetworkAclConfiguration() == null ^ this.getAttachmentNetworkAclConfiguration() == null)
+            return false;
+        if (other.getAttachmentNetworkAclConfiguration() != null
+                && other.getAttachmentNetworkAclConfiguration().equals(this.getAttachmentNetworkAclConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -191,6 +274,7 @@ public class TransitGatewayConfiguration implements Serializable, Cloneable, Str
 
         hashCode = prime * hashCode + ((getTransitGatewayID() == null) ? 0 : getTransitGatewayID().hashCode());
         hashCode = prime * hashCode + ((getRoutableCIDRSpace() == null) ? 0 : getRoutableCIDRSpace().hashCode());
+        hashCode = prime * hashCode + ((getAttachmentNetworkAclConfiguration() == null) ? 0 : getAttachmentNetworkAclConfiguration().hashCode());
         return hashCode;
     }
 

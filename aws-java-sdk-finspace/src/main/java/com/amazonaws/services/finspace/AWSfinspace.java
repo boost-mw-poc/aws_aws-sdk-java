@@ -752,6 +752,8 @@ public interface AWSfinspace {
      *         A service limit or quota is exceeded.
      * @throws ValidationException
      *         The input fails to satisfy the constraints specified by an AWS service.
+     * @throws ConflictException
+     *         There was a conflict with this action, and it could not be completed.
      * @throws ResourceNotFoundException
      *         One or more resources can't be found.
      * @sample AWSfinspace.UpdateKxClusterDatabases

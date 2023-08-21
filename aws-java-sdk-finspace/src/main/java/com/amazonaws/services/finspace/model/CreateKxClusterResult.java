@@ -145,8 +145,8 @@ public class CreateKxClusterResult extends com.amazonaws.AmazonWebServiceResult<
     private String clusterDescription;
     /**
      * <p>
-     * A structure for the metadata of a cluster. It includes information like the CPUs needed, memory of instances,
-     * number of instances, and the port used while establishing a connection.
+     * A structure for the metadata of a cluster. It includes information like the CPUs needed, memory of instances, and
+     * number of instances.
      * </p>
      */
     private CapacityConfiguration capacityConfiguration;
@@ -1222,13 +1222,13 @@ public class CreateKxClusterResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * A structure for the metadata of a cluster. It includes information like the CPUs needed, memory of instances,
-     * number of instances, and the port used while establishing a connection.
+     * A structure for the metadata of a cluster. It includes information like the CPUs needed, memory of instances, and
+     * number of instances.
      * </p>
      * 
      * @param capacityConfiguration
      *        A structure for the metadata of a cluster. It includes information like the CPUs needed, memory of
-     *        instances, number of instances, and the port used while establishing a connection.
+     *        instances, and number of instances.
      */
 
     public void setCapacityConfiguration(CapacityConfiguration capacityConfiguration) {
@@ -1237,12 +1237,12 @@ public class CreateKxClusterResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * A structure for the metadata of a cluster. It includes information like the CPUs needed, memory of instances,
-     * number of instances, and the port used while establishing a connection.
+     * A structure for the metadata of a cluster. It includes information like the CPUs needed, memory of instances, and
+     * number of instances.
      * </p>
      * 
      * @return A structure for the metadata of a cluster. It includes information like the CPUs needed, memory of
-     *         instances, number of instances, and the port used while establishing a connection.
+     *         instances, and number of instances.
      */
 
     public CapacityConfiguration getCapacityConfiguration() {
@@ -1251,13 +1251,13 @@ public class CreateKxClusterResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * A structure for the metadata of a cluster. It includes information like the CPUs needed, memory of instances,
-     * number of instances, and the port used while establishing a connection.
+     * A structure for the metadata of a cluster. It includes information like the CPUs needed, memory of instances, and
+     * number of instances.
      * </p>
      * 
      * @param capacityConfiguration
      *        A structure for the metadata of a cluster. It includes information like the CPUs needed, memory of
-     *        instances, number of instances, and the port used while establishing a connection.
+     *        instances, and number of instances.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

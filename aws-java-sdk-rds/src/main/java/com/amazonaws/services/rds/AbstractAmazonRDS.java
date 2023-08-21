@@ -849,6 +849,11 @@ public class AbstractAmazonRDS implements AmazonRDS {
     }
 
     @Override
+    public GlobalCluster switchoverGlobalCluster(SwitchoverGlobalClusterRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DBInstance switchoverReadReplica(SwitchoverReadReplicaRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

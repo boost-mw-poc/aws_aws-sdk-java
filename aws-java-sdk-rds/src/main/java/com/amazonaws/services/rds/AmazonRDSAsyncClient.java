@@ -5499,6 +5499,39 @@ public class AmazonRDSAsyncClient extends AmazonRDSClient implements AmazonRDSAs
     }
 
     @Override
+    public java.util.concurrent.Future<GlobalCluster> switchoverGlobalClusterAsync(SwitchoverGlobalClusterRequest request) {
+
+        return switchoverGlobalClusterAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GlobalCluster> switchoverGlobalClusterAsync(final SwitchoverGlobalClusterRequest request,
+            final com.amazonaws.handlers.AsyncHandler<SwitchoverGlobalClusterRequest, GlobalCluster> asyncHandler) {
+        final SwitchoverGlobalClusterRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GlobalCluster>() {
+            @Override
+            public GlobalCluster call() throws Exception {
+                GlobalCluster result = null;
+
+                try {
+                    result = executeSwitchoverGlobalCluster(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DBInstance> switchoverReadReplicaAsync(SwitchoverReadReplicaRequest request) {
 
         return switchoverReadReplicaAsync(request, null);

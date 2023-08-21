@@ -56,6 +56,13 @@ public class TransitGatewayConfigurationJsonUnmarshaller implements Unmarshaller
                     context.nextToken();
                     transitGatewayConfiguration.setRoutableCIDRSpace(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("attachmentNetworkAclConfiguration", targetDepth)) {
+                    context.nextToken();
+                    transitGatewayConfiguration.setAttachmentNetworkAclConfiguration(new ListUnmarshaller<NetworkACLEntry>(NetworkACLEntryJsonUnmarshaller
+                            .getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

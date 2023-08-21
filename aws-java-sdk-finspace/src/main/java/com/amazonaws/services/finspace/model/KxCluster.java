@@ -146,7 +146,7 @@ public class KxCluster implements Serializable, Cloneable, StructuredPojo {
     private String executionRole;
     /**
      * <p>
-     * The number of availability zones assigned per cluster. This can be one of the following
+     * The number of availability zones assigned per cluster. This can be one of the following:
      * </p>
      * <ul>
      * <li>
@@ -1077,7 +1077,7 @@ public class KxCluster implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The number of availability zones assigned per cluster. This can be one of the following
+     * The number of availability zones assigned per cluster. This can be one of the following:
      * </p>
      * <ul>
      * <li>
@@ -1093,7 +1093,7 @@ public class KxCluster implements Serializable, Cloneable, StructuredPojo {
      * </ul>
      * 
      * @param azMode
-     *        The number of availability zones assigned per cluster. This can be one of the following </p>
+     *        The number of availability zones assigned per cluster. This can be one of the following:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -1114,7 +1114,7 @@ public class KxCluster implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The number of availability zones assigned per cluster. This can be one of the following
+     * The number of availability zones assigned per cluster. This can be one of the following:
      * </p>
      * <ul>
      * <li>
@@ -1129,7 +1129,7 @@ public class KxCluster implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * </ul>
      * 
-     * @return The number of availability zones assigned per cluster. This can be one of the following </p>
+     * @return The number of availability zones assigned per cluster. This can be one of the following:</p>
      *         <ul>
      *         <li>
      *         <p>
@@ -1150,7 +1150,7 @@ public class KxCluster implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The number of availability zones assigned per cluster. This can be one of the following
+     * The number of availability zones assigned per cluster. This can be one of the following:
      * </p>
      * <ul>
      * <li>
@@ -1166,7 +1166,7 @@ public class KxCluster implements Serializable, Cloneable, StructuredPojo {
      * </ul>
      * 
      * @param azMode
-     *        The number of availability zones assigned per cluster. This can be one of the following </p>
+     *        The number of availability zones assigned per cluster. This can be one of the following:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -1189,7 +1189,7 @@ public class KxCluster implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The number of availability zones assigned per cluster. This can be one of the following
+     * The number of availability zones assigned per cluster. This can be one of the following:
      * </p>
      * <ul>
      * <li>
@@ -1205,7 +1205,7 @@ public class KxCluster implements Serializable, Cloneable, StructuredPojo {
      * </ul>
      * 
      * @param azMode
-     *        The number of availability zones assigned per cluster. This can be one of the following </p>
+     *        The number of availability zones assigned per cluster. This can be one of the following:</p>
      *        <ul>
      *        <li>
      *        <p>

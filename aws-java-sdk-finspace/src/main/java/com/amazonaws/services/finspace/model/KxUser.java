@@ -31,8 +31,8 @@ public class KxUser implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The Amazon Resource Name (ARN) that identifies the user. For more information about ARNs and how to use ARNs in
-     * policies, see <a href="IAM/latest/UserGuide/reference_identifiers.html">IAM Identifiers</a> in the <i>IAM User
-     * Guide</i>.
+     * policies, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html">IAM
+     * Identifiers</a> in the <i>IAM User Guide</i>.
      * </p>
      */
     private String userArn;
@@ -64,14 +64,15 @@ public class KxUser implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The Amazon Resource Name (ARN) that identifies the user. For more information about ARNs and how to use ARNs in
-     * policies, see <a href="IAM/latest/UserGuide/reference_identifiers.html">IAM Identifiers</a> in the <i>IAM User
-     * Guide</i>.
+     * policies, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html">IAM
+     * Identifiers</a> in the <i>IAM User Guide</i>.
      * </p>
      * 
      * @param userArn
      *        The Amazon Resource Name (ARN) that identifies the user. For more information about ARNs and how to use
-     *        ARNs in policies, see <a href="IAM/latest/UserGuide/reference_identifiers.html">IAM Identifiers</a> in the
-     *        <i>IAM User Guide</i>.
+     *        ARNs in policies, see <a
+     *        href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html">IAM Identifiers</a> in
+     *        the <i>IAM User Guide</i>.
      */
 
     public void setUserArn(String userArn) {
@@ -81,12 +82,13 @@ public class KxUser implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The Amazon Resource Name (ARN) that identifies the user. For more information about ARNs and how to use ARNs in
-     * policies, see <a href="IAM/latest/UserGuide/reference_identifiers.html">IAM Identifiers</a> in the <i>IAM User
-     * Guide</i>.
+     * policies, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html">IAM
+     * Identifiers</a> in the <i>IAM User Guide</i>.
      * </p>
      * 
      * @return The Amazon Resource Name (ARN) that identifies the user. For more information about ARNs and how to use
-     *         ARNs in policies, see <a href="IAM/latest/UserGuide/reference_identifiers.html">IAM Identifiers</a> in
+     *         ARNs in policies, see <a
+     *         href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html">IAM Identifiers</a> in
      *         the <i>IAM User Guide</i>.
      */
 
@@ -97,14 +99,15 @@ public class KxUser implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The Amazon Resource Name (ARN) that identifies the user. For more information about ARNs and how to use ARNs in
-     * policies, see <a href="IAM/latest/UserGuide/reference_identifiers.html">IAM Identifiers</a> in the <i>IAM User
-     * Guide</i>.
+     * policies, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html">IAM
+     * Identifiers</a> in the <i>IAM User Guide</i>.
      * </p>
      * 
      * @param userArn
      *        The Amazon Resource Name (ARN) that identifies the user. For more information about ARNs and how to use
-     *        ARNs in policies, see <a href="IAM/latest/UserGuide/reference_identifiers.html">IAM Identifiers</a> in the
-     *        <i>IAM User Guide</i>.
+     *        ARNs in policies, see <a
+     *        href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html">IAM Identifiers</a> in
+     *        the <i>IAM User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

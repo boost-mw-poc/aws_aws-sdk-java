@@ -851,6 +851,12 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * </li>
      * </ul>
+     * <note>
+     * <p>
+     * When you create an Aurora DB cluster with the storage type set to <code>aurora-iopt1</code>, the storage type is
+     * returned in the response. The storage type isn't returned when you set it to <code>aurora</code>.
+     * </p>
+     * </note>
      */
     private String storageType;
     /**
@@ -6280,6 +6286,12 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * </li>
      * </ul>
+     * <note>
+     * <p>
+     * When you create an Aurora DB cluster with the storage type set to <code>aurora-iopt1</code>, the storage type is
+     * returned in the response. The storage type isn't returned when you set it to <code>aurora</code>.
+     * </p>
+     * </note>
      * 
      * @param storageType
      *        The storage type to associate with the DB cluster.</p>
@@ -6329,6 +6341,12 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      *        Multi-AZ DB clusters - <code>io1</code>
      *        </p>
      *        </li>
+     *        </ul>
+     *        <note>
+     *        <p>
+     *        When you create an Aurora DB cluster with the storage type set to <code>aurora-iopt1</code>, the storage
+     *        type is returned in the response. The storage type isn't returned when you set it to <code>aurora</code>.
+     *        </p>
      */
 
     public void setStorageType(String storageType) {
@@ -6386,6 +6404,12 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * </li>
      * </ul>
+     * <note>
+     * <p>
+     * When you create an Aurora DB cluster with the storage type set to <code>aurora-iopt1</code>, the storage type is
+     * returned in the response. The storage type isn't returned when you set it to <code>aurora</code>.
+     * </p>
+     * </note>
      * 
      * @return The storage type to associate with the DB cluster.</p>
      *         <p>
@@ -6434,6 +6458,12 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      *         Multi-AZ DB clusters - <code>io1</code>
      *         </p>
      *         </li>
+     *         </ul>
+     *         <note>
+     *         <p>
+     *         When you create an Aurora DB cluster with the storage type set to <code>aurora-iopt1</code>, the storage
+     *         type is returned in the response. The storage type isn't returned when you set it to <code>aurora</code>.
+     *         </p>
      */
 
     public String getStorageType() {
@@ -6491,6 +6521,12 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * </li>
      * </ul>
+     * <note>
+     * <p>
+     * When you create an Aurora DB cluster with the storage type set to <code>aurora-iopt1</code>, the storage type is
+     * returned in the response. The storage type isn't returned when you set it to <code>aurora</code>.
+     * </p>
+     * </note>
      * 
      * @param storageType
      *        The storage type to associate with the DB cluster.</p>
@@ -6540,6 +6576,12 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      *        Multi-AZ DB clusters - <code>io1</code>
      *        </p>
      *        </li>
+     *        </ul>
+     *        <note>
+     *        <p>
+     *        When you create an Aurora DB cluster with the storage type set to <code>aurora-iopt1</code>, the storage
+     *        type is returned in the response. The storage type isn't returned when you set it to <code>aurora</code>.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
