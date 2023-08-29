@@ -60,13 +60,14 @@ public class CreateFileSystemOpenZFSConfiguration implements Serializable, Clone
      * <li>
      * <p>
      * <code>MULTI_AZ_1</code>- Creates file systems with high availability that are configured for Multi-AZ redundancy
-     * to tolerate temporary unavailability in Availability Zones (AZs). <code>Multi_AZ_1</code> is available in the
-     * following Amazon Web Services Regions:
+     * to tolerate temporary unavailability in Availability Zones (AZs). <code>Multi_AZ_1</code> is available only in
+     * the US East (N. Virginia), US East (Ohio), US West (Oregon), Asia Pacific (Singapore), Asia Pacific (Tokyo), and
+     * Europe (Ireland) Amazon Web Services Regions.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>SINGLE_AZ_1</code>- (Default) Creates file systems with throughput capacities of 64 - 4,096 MB/s.
+     * <code>SINGLE_AZ_1</code>- Creates file systems with throughput capacities of 64 - 4,096 MB/s.
      * <code>Single_AZ_1</code> is available in all Amazon Web Services Regions where Amazon FSx for OpenZFS is
      * available.
      * </p>
@@ -75,12 +76,12 @@ public class CreateFileSystemOpenZFSConfiguration implements Serializable, Clone
      * <p>
      * <code>SINGLE_AZ_2</code>- Creates file systems with throughput capacities of 160 - 10,240 MB/s using an NVMe
      * L2ARC cache. <code>Single_AZ_2</code> is available only in the US East (N. Virginia), US East (Ohio), US West
-     * (Oregon), and Europe (Ireland) Amazon Web Services Regions.
+     * (Oregon), Asia Pacific (Singapore), Asia Pacific (Tokyo), and Europe (Ireland) Amazon Web Services Regions.
      * </p>
      * </li>
      * </ul>
      * <p>
-     * For more information, see: <a
+     * For more information, see <a
      * href="https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/availability-durability.html#available-aws-regions"
      * >Deployment type availability</a> and <a
      * href="https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/performance.html#zfs-fs-performance">File system
@@ -96,12 +97,13 @@ public class CreateFileSystemOpenZFSConfiguration implements Serializable, Clone
      * <ul>
      * <li>
      * <p>
-     * For <code>SINGLE_AZ_1</code>, valid values are 64, 128, 256, 512, 1024, 2048, 3072, or 4096 MBps.
+     * For <code>MULTI_AZ_1</code> and <code>SINGLE_AZ_2</code>, valid values are 160, 320, 640, 1280, 2560, 3840, 5120,
+     * 7680, or 10240 MBps.
      * </p>
      * </li>
      * <li>
      * <p>
-     * For <code>SINGLE_AZ_2</code>, valid values are 160, 320, 640, 1280, 2560, 3840, 5120, 7680, or 10240 MBps.
+     * For <code>SINGLE_AZ_1</code>, valid values are 64, 128, 256, 512, 1024, 2048, 3072, or 4096 MBps.
      * </p>
      * </li>
      * </ul>
@@ -139,9 +141,9 @@ public class CreateFileSystemOpenZFSConfiguration implements Serializable, Clone
     private String endpointIpAddressRange;
     /**
      * <p>
-     * (Multi-AZ only) Specifies the virtual private cloud (VPC) route tables in which your file system's endpoints will
-     * be created. You should specify all VPC route tables associated with the subnets in which your clients are
-     * located. By default, Amazon FSx selects your VPC's default route table.
+     * (Multi-AZ only) Specifies the route tables in which Amazon FSx creates the rules for routing traffic to the
+     * correct file server. You should specify all virtual private cloud (VPC) route tables associated with the subnets
+     * in which your clients are located. By default, Amazon FSx selects your VPC's default route table.
      * </p>
      */
     private java.util.List<String> routeTableIds;
@@ -379,13 +381,14 @@ public class CreateFileSystemOpenZFSConfiguration implements Serializable, Clone
      * <li>
      * <p>
      * <code>MULTI_AZ_1</code>- Creates file systems with high availability that are configured for Multi-AZ redundancy
-     * to tolerate temporary unavailability in Availability Zones (AZs). <code>Multi_AZ_1</code> is available in the
-     * following Amazon Web Services Regions:
+     * to tolerate temporary unavailability in Availability Zones (AZs). <code>Multi_AZ_1</code> is available only in
+     * the US East (N. Virginia), US East (Ohio), US West (Oregon), Asia Pacific (Singapore), Asia Pacific (Tokyo), and
+     * Europe (Ireland) Amazon Web Services Regions.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>SINGLE_AZ_1</code>- (Default) Creates file systems with throughput capacities of 64 - 4,096 MB/s.
+     * <code>SINGLE_AZ_1</code>- Creates file systems with throughput capacities of 64 - 4,096 MB/s.
      * <code>Single_AZ_1</code> is available in all Amazon Web Services Regions where Amazon FSx for OpenZFS is
      * available.
      * </p>
@@ -394,12 +397,12 @@ public class CreateFileSystemOpenZFSConfiguration implements Serializable, Clone
      * <p>
      * <code>SINGLE_AZ_2</code>- Creates file systems with throughput capacities of 160 - 10,240 MB/s using an NVMe
      * L2ARC cache. <code>Single_AZ_2</code> is available only in the US East (N. Virginia), US East (Ohio), US West
-     * (Oregon), and Europe (Ireland) Amazon Web Services Regions.
+     * (Oregon), Asia Pacific (Singapore), Asia Pacific (Tokyo), and Europe (Ireland) Amazon Web Services Regions.
      * </p>
      * </li>
      * </ul>
      * <p>
-     * For more information, see: <a
+     * For more information, see <a
      * href="https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/availability-durability.html#available-aws-regions"
      * >Deployment type availability</a> and <a
      * href="https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/performance.html#zfs-fs-performance">File system
@@ -414,12 +417,13 @@ public class CreateFileSystemOpenZFSConfiguration implements Serializable, Clone
      *        <p>
      *        <code>MULTI_AZ_1</code>- Creates file systems with high availability that are configured for Multi-AZ
      *        redundancy to tolerate temporary unavailability in Availability Zones (AZs). <code>Multi_AZ_1</code> is
-     *        available in the following Amazon Web Services Regions:
+     *        available only in the US East (N. Virginia), US East (Ohio), US West (Oregon), Asia Pacific (Singapore),
+     *        Asia Pacific (Tokyo), and Europe (Ireland) Amazon Web Services Regions.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>SINGLE_AZ_1</code>- (Default) Creates file systems with throughput capacities of 64 - 4,096 MB/s.
+     *        <code>SINGLE_AZ_1</code>- Creates file systems with throughput capacities of 64 - 4,096 MB/s.
      *        <code>Single_AZ_1</code> is available in all Amazon Web Services Regions where Amazon FSx for OpenZFS is
      *        available.
      *        </p>
@@ -428,12 +432,13 @@ public class CreateFileSystemOpenZFSConfiguration implements Serializable, Clone
      *        <p>
      *        <code>SINGLE_AZ_2</code>- Creates file systems with throughput capacities of 160 - 10,240 MB/s using an
      *        NVMe L2ARC cache. <code>Single_AZ_2</code> is available only in the US East (N. Virginia), US East (Ohio),
-     *        US West (Oregon), and Europe (Ireland) Amazon Web Services Regions.
+     *        US West (Oregon), Asia Pacific (Singapore), Asia Pacific (Tokyo), and Europe (Ireland) Amazon Web Services
+     *        Regions.
      *        </p>
      *        </li>
      *        </ul>
      *        <p>
-     *        For more information, see: <a href=
+     *        For more information, see <a href=
      *        "https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/availability-durability.html#available-aws-regions"
      *        >Deployment type availability</a> and <a
      *        href="https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/performance.html#zfs-fs-performance">File system
@@ -454,13 +459,14 @@ public class CreateFileSystemOpenZFSConfiguration implements Serializable, Clone
      * <li>
      * <p>
      * <code>MULTI_AZ_1</code>- Creates file systems with high availability that are configured for Multi-AZ redundancy
-     * to tolerate temporary unavailability in Availability Zones (AZs). <code>Multi_AZ_1</code> is available in the
-     * following Amazon Web Services Regions:
+     * to tolerate temporary unavailability in Availability Zones (AZs). <code>Multi_AZ_1</code> is available only in
+     * the US East (N. Virginia), US East (Ohio), US West (Oregon), Asia Pacific (Singapore), Asia Pacific (Tokyo), and
+     * Europe (Ireland) Amazon Web Services Regions.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>SINGLE_AZ_1</code>- (Default) Creates file systems with throughput capacities of 64 - 4,096 MB/s.
+     * <code>SINGLE_AZ_1</code>- Creates file systems with throughput capacities of 64 - 4,096 MB/s.
      * <code>Single_AZ_1</code> is available in all Amazon Web Services Regions where Amazon FSx for OpenZFS is
      * available.
      * </p>
@@ -469,12 +475,12 @@ public class CreateFileSystemOpenZFSConfiguration implements Serializable, Clone
      * <p>
      * <code>SINGLE_AZ_2</code>- Creates file systems with throughput capacities of 160 - 10,240 MB/s using an NVMe
      * L2ARC cache. <code>Single_AZ_2</code> is available only in the US East (N. Virginia), US East (Ohio), US West
-     * (Oregon), and Europe (Ireland) Amazon Web Services Regions.
+     * (Oregon), Asia Pacific (Singapore), Asia Pacific (Tokyo), and Europe (Ireland) Amazon Web Services Regions.
      * </p>
      * </li>
      * </ul>
      * <p>
-     * For more information, see: <a
+     * For more information, see <a
      * href="https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/availability-durability.html#available-aws-regions"
      * >Deployment type availability</a> and <a
      * href="https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/performance.html#zfs-fs-performance">File system
@@ -488,12 +494,13 @@ public class CreateFileSystemOpenZFSConfiguration implements Serializable, Clone
      *         <p>
      *         <code>MULTI_AZ_1</code>- Creates file systems with high availability that are configured for Multi-AZ
      *         redundancy to tolerate temporary unavailability in Availability Zones (AZs). <code>Multi_AZ_1</code> is
-     *         available in the following Amazon Web Services Regions:
+     *         available only in the US East (N. Virginia), US East (Ohio), US West (Oregon), Asia Pacific (Singapore),
+     *         Asia Pacific (Tokyo), and Europe (Ireland) Amazon Web Services Regions.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>SINGLE_AZ_1</code>- (Default) Creates file systems with throughput capacities of 64 - 4,096 MB/s.
+     *         <code>SINGLE_AZ_1</code>- Creates file systems with throughput capacities of 64 - 4,096 MB/s.
      *         <code>Single_AZ_1</code> is available in all Amazon Web Services Regions where Amazon FSx for OpenZFS is
      *         available.
      *         </p>
@@ -502,12 +509,13 @@ public class CreateFileSystemOpenZFSConfiguration implements Serializable, Clone
      *         <p>
      *         <code>SINGLE_AZ_2</code>- Creates file systems with throughput capacities of 160 - 10,240 MB/s using an
      *         NVMe L2ARC cache. <code>Single_AZ_2</code> is available only in the US East (N. Virginia), US East
-     *         (Ohio), US West (Oregon), and Europe (Ireland) Amazon Web Services Regions.
+     *         (Ohio), US West (Oregon), Asia Pacific (Singapore), Asia Pacific (Tokyo), and Europe (Ireland) Amazon Web
+     *         Services Regions.
      *         </p>
      *         </li>
      *         </ul>
      *         <p>
-     *         For more information, see: <a href=
+     *         For more information, see <a href=
      *         "https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/availability-durability.html#available-aws-regions"
      *         >Deployment type availability</a> and <a
      *         href="https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/performance.html#zfs-fs-performance">File
@@ -528,13 +536,14 @@ public class CreateFileSystemOpenZFSConfiguration implements Serializable, Clone
      * <li>
      * <p>
      * <code>MULTI_AZ_1</code>- Creates file systems with high availability that are configured for Multi-AZ redundancy
-     * to tolerate temporary unavailability in Availability Zones (AZs). <code>Multi_AZ_1</code> is available in the
-     * following Amazon Web Services Regions:
+     * to tolerate temporary unavailability in Availability Zones (AZs). <code>Multi_AZ_1</code> is available only in
+     * the US East (N. Virginia), US East (Ohio), US West (Oregon), Asia Pacific (Singapore), Asia Pacific (Tokyo), and
+     * Europe (Ireland) Amazon Web Services Regions.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>SINGLE_AZ_1</code>- (Default) Creates file systems with throughput capacities of 64 - 4,096 MB/s.
+     * <code>SINGLE_AZ_1</code>- Creates file systems with throughput capacities of 64 - 4,096 MB/s.
      * <code>Single_AZ_1</code> is available in all Amazon Web Services Regions where Amazon FSx for OpenZFS is
      * available.
      * </p>
@@ -543,12 +552,12 @@ public class CreateFileSystemOpenZFSConfiguration implements Serializable, Clone
      * <p>
      * <code>SINGLE_AZ_2</code>- Creates file systems with throughput capacities of 160 - 10,240 MB/s using an NVMe
      * L2ARC cache. <code>Single_AZ_2</code> is available only in the US East (N. Virginia), US East (Ohio), US West
-     * (Oregon), and Europe (Ireland) Amazon Web Services Regions.
+     * (Oregon), Asia Pacific (Singapore), Asia Pacific (Tokyo), and Europe (Ireland) Amazon Web Services Regions.
      * </p>
      * </li>
      * </ul>
      * <p>
-     * For more information, see: <a
+     * For more information, see <a
      * href="https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/availability-durability.html#available-aws-regions"
      * >Deployment type availability</a> and <a
      * href="https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/performance.html#zfs-fs-performance">File system
@@ -563,12 +572,13 @@ public class CreateFileSystemOpenZFSConfiguration implements Serializable, Clone
      *        <p>
      *        <code>MULTI_AZ_1</code>- Creates file systems with high availability that are configured for Multi-AZ
      *        redundancy to tolerate temporary unavailability in Availability Zones (AZs). <code>Multi_AZ_1</code> is
-     *        available in the following Amazon Web Services Regions:
+     *        available only in the US East (N. Virginia), US East (Ohio), US West (Oregon), Asia Pacific (Singapore),
+     *        Asia Pacific (Tokyo), and Europe (Ireland) Amazon Web Services Regions.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>SINGLE_AZ_1</code>- (Default) Creates file systems with throughput capacities of 64 - 4,096 MB/s.
+     *        <code>SINGLE_AZ_1</code>- Creates file systems with throughput capacities of 64 - 4,096 MB/s.
      *        <code>Single_AZ_1</code> is available in all Amazon Web Services Regions where Amazon FSx for OpenZFS is
      *        available.
      *        </p>
@@ -577,12 +587,13 @@ public class CreateFileSystemOpenZFSConfiguration implements Serializable, Clone
      *        <p>
      *        <code>SINGLE_AZ_2</code>- Creates file systems with throughput capacities of 160 - 10,240 MB/s using an
      *        NVMe L2ARC cache. <code>Single_AZ_2</code> is available only in the US East (N. Virginia), US East (Ohio),
-     *        US West (Oregon), and Europe (Ireland) Amazon Web Services Regions.
+     *        US West (Oregon), Asia Pacific (Singapore), Asia Pacific (Tokyo), and Europe (Ireland) Amazon Web Services
+     *        Regions.
      *        </p>
      *        </li>
      *        </ul>
      *        <p>
-     *        For more information, see: <a href=
+     *        For more information, see <a href=
      *        "https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/availability-durability.html#available-aws-regions"
      *        >Deployment type availability</a> and <a
      *        href="https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/performance.html#zfs-fs-performance">File system
@@ -605,13 +616,14 @@ public class CreateFileSystemOpenZFSConfiguration implements Serializable, Clone
      * <li>
      * <p>
      * <code>MULTI_AZ_1</code>- Creates file systems with high availability that are configured for Multi-AZ redundancy
-     * to tolerate temporary unavailability in Availability Zones (AZs). <code>Multi_AZ_1</code> is available in the
-     * following Amazon Web Services Regions:
+     * to tolerate temporary unavailability in Availability Zones (AZs). <code>Multi_AZ_1</code> is available only in
+     * the US East (N. Virginia), US East (Ohio), US West (Oregon), Asia Pacific (Singapore), Asia Pacific (Tokyo), and
+     * Europe (Ireland) Amazon Web Services Regions.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>SINGLE_AZ_1</code>- (Default) Creates file systems with throughput capacities of 64 - 4,096 MB/s.
+     * <code>SINGLE_AZ_1</code>- Creates file systems with throughput capacities of 64 - 4,096 MB/s.
      * <code>Single_AZ_1</code> is available in all Amazon Web Services Regions where Amazon FSx for OpenZFS is
      * available.
      * </p>
@@ -620,12 +632,12 @@ public class CreateFileSystemOpenZFSConfiguration implements Serializable, Clone
      * <p>
      * <code>SINGLE_AZ_2</code>- Creates file systems with throughput capacities of 160 - 10,240 MB/s using an NVMe
      * L2ARC cache. <code>Single_AZ_2</code> is available only in the US East (N. Virginia), US East (Ohio), US West
-     * (Oregon), and Europe (Ireland) Amazon Web Services Regions.
+     * (Oregon), Asia Pacific (Singapore), Asia Pacific (Tokyo), and Europe (Ireland) Amazon Web Services Regions.
      * </p>
      * </li>
      * </ul>
      * <p>
-     * For more information, see: <a
+     * For more information, see <a
      * href="https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/availability-durability.html#available-aws-regions"
      * >Deployment type availability</a> and <a
      * href="https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/performance.html#zfs-fs-performance">File system
@@ -640,12 +652,13 @@ public class CreateFileSystemOpenZFSConfiguration implements Serializable, Clone
      *        <p>
      *        <code>MULTI_AZ_1</code>- Creates file systems with high availability that are configured for Multi-AZ
      *        redundancy to tolerate temporary unavailability in Availability Zones (AZs). <code>Multi_AZ_1</code> is
-     *        available in the following Amazon Web Services Regions:
+     *        available only in the US East (N. Virginia), US East (Ohio), US West (Oregon), Asia Pacific (Singapore),
+     *        Asia Pacific (Tokyo), and Europe (Ireland) Amazon Web Services Regions.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>SINGLE_AZ_1</code>- (Default) Creates file systems with throughput capacities of 64 - 4,096 MB/s.
+     *        <code>SINGLE_AZ_1</code>- Creates file systems with throughput capacities of 64 - 4,096 MB/s.
      *        <code>Single_AZ_1</code> is available in all Amazon Web Services Regions where Amazon FSx for OpenZFS is
      *        available.
      *        </p>
@@ -654,12 +667,13 @@ public class CreateFileSystemOpenZFSConfiguration implements Serializable, Clone
      *        <p>
      *        <code>SINGLE_AZ_2</code>- Creates file systems with throughput capacities of 160 - 10,240 MB/s using an
      *        NVMe L2ARC cache. <code>Single_AZ_2</code> is available only in the US East (N. Virginia), US East (Ohio),
-     *        US West (Oregon), and Europe (Ireland) Amazon Web Services Regions.
+     *        US West (Oregon), Asia Pacific (Singapore), Asia Pacific (Tokyo), and Europe (Ireland) Amazon Web Services
+     *        Regions.
      *        </p>
      *        </li>
      *        </ul>
      *        <p>
-     *        For more information, see: <a href=
+     *        For more information, see <a href=
      *        "https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/availability-durability.html#available-aws-regions"
      *        >Deployment type availability</a> and <a
      *        href="https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/performance.html#zfs-fs-performance">File system
@@ -681,12 +695,13 @@ public class CreateFileSystemOpenZFSConfiguration implements Serializable, Clone
      * <ul>
      * <li>
      * <p>
-     * For <code>SINGLE_AZ_1</code>, valid values are 64, 128, 256, 512, 1024, 2048, 3072, or 4096 MBps.
+     * For <code>MULTI_AZ_1</code> and <code>SINGLE_AZ_2</code>, valid values are 160, 320, 640, 1280, 2560, 3840, 5120,
+     * 7680, or 10240 MBps.
      * </p>
      * </li>
      * <li>
      * <p>
-     * For <code>SINGLE_AZ_2</code>, valid values are 160, 320, 640, 1280, 2560, 3840, 5120, 7680, or 10240 MBps.
+     * For <code>SINGLE_AZ_1</code>, valid values are 64, 128, 256, 512, 1024, 2048, 3072, or 4096 MBps.
      * </p>
      * </li>
      * </ul>
@@ -700,12 +715,13 @@ public class CreateFileSystemOpenZFSConfiguration implements Serializable, Clone
      *        <ul>
      *        <li>
      *        <p>
-     *        For <code>SINGLE_AZ_1</code>, valid values are 64, 128, 256, 512, 1024, 2048, 3072, or 4096 MBps.
+     *        For <code>MULTI_AZ_1</code> and <code>SINGLE_AZ_2</code>, valid values are 160, 320, 640, 1280, 2560,
+     *        3840, 5120, 7680, or 10240 MBps.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        For <code>SINGLE_AZ_2</code>, valid values are 160, 320, 640, 1280, 2560, 3840, 5120, 7680, or 10240 MBps.
+     *        For <code>SINGLE_AZ_1</code>, valid values are 64, 128, 256, 512, 1024, 2048, 3072, or 4096 MBps.
      *        </p>
      *        </li>
      *        </ul>
@@ -725,12 +741,13 @@ public class CreateFileSystemOpenZFSConfiguration implements Serializable, Clone
      * <ul>
      * <li>
      * <p>
-     * For <code>SINGLE_AZ_1</code>, valid values are 64, 128, 256, 512, 1024, 2048, 3072, or 4096 MBps.
+     * For <code>MULTI_AZ_1</code> and <code>SINGLE_AZ_2</code>, valid values are 160, 320, 640, 1280, 2560, 3840, 5120,
+     * 7680, or 10240 MBps.
      * </p>
      * </li>
      * <li>
      * <p>
-     * For <code>SINGLE_AZ_2</code>, valid values are 160, 320, 640, 1280, 2560, 3840, 5120, 7680, or 10240 MBps.
+     * For <code>SINGLE_AZ_1</code>, valid values are 64, 128, 256, 512, 1024, 2048, 3072, or 4096 MBps.
      * </p>
      * </li>
      * </ul>
@@ -743,13 +760,13 @@ public class CreateFileSystemOpenZFSConfiguration implements Serializable, Clone
      *         <ul>
      *         <li>
      *         <p>
-     *         For <code>SINGLE_AZ_1</code>, valid values are 64, 128, 256, 512, 1024, 2048, 3072, or 4096 MBps.
+     *         For <code>MULTI_AZ_1</code> and <code>SINGLE_AZ_2</code>, valid values are 160, 320, 640, 1280, 2560,
+     *         3840, 5120, 7680, or 10240 MBps.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         For <code>SINGLE_AZ_2</code>, valid values are 160, 320, 640, 1280, 2560, 3840, 5120, 7680, or 10240
-     *         MBps.
+     *         For <code>SINGLE_AZ_1</code>, valid values are 64, 128, 256, 512, 1024, 2048, 3072, or 4096 MBps.
      *         </p>
      *         </li>
      *         </ul>
@@ -769,12 +786,13 @@ public class CreateFileSystemOpenZFSConfiguration implements Serializable, Clone
      * <ul>
      * <li>
      * <p>
-     * For <code>SINGLE_AZ_1</code>, valid values are 64, 128, 256, 512, 1024, 2048, 3072, or 4096 MBps.
+     * For <code>MULTI_AZ_1</code> and <code>SINGLE_AZ_2</code>, valid values are 160, 320, 640, 1280, 2560, 3840, 5120,
+     * 7680, or 10240 MBps.
      * </p>
      * </li>
      * <li>
      * <p>
-     * For <code>SINGLE_AZ_2</code>, valid values are 160, 320, 640, 1280, 2560, 3840, 5120, 7680, or 10240 MBps.
+     * For <code>SINGLE_AZ_1</code>, valid values are 64, 128, 256, 512, 1024, 2048, 3072, or 4096 MBps.
      * </p>
      * </li>
      * </ul>
@@ -788,12 +806,13 @@ public class CreateFileSystemOpenZFSConfiguration implements Serializable, Clone
      *        <ul>
      *        <li>
      *        <p>
-     *        For <code>SINGLE_AZ_1</code>, valid values are 64, 128, 256, 512, 1024, 2048, 3072, or 4096 MBps.
+     *        For <code>MULTI_AZ_1</code> and <code>SINGLE_AZ_2</code>, valid values are 160, 320, 640, 1280, 2560,
+     *        3840, 5120, 7680, or 10240 MBps.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        For <code>SINGLE_AZ_2</code>, valid values are 160, 320, 640, 1280, 2560, 3840, 5120, 7680, or 10240 MBps.
+     *        For <code>SINGLE_AZ_1</code>, valid values are 64, 128, 256, 512, 1024, 2048, 3072, or 4096 MBps.
      *        </p>
      *        </li>
      *        </ul>
@@ -1011,14 +1030,15 @@ public class CreateFileSystemOpenZFSConfiguration implements Serializable, Clone
 
     /**
      * <p>
-     * (Multi-AZ only) Specifies the virtual private cloud (VPC) route tables in which your file system's endpoints will
-     * be created. You should specify all VPC route tables associated with the subnets in which your clients are
-     * located. By default, Amazon FSx selects your VPC's default route table.
+     * (Multi-AZ only) Specifies the route tables in which Amazon FSx creates the rules for routing traffic to the
+     * correct file server. You should specify all virtual private cloud (VPC) route tables associated with the subnets
+     * in which your clients are located. By default, Amazon FSx selects your VPC's default route table.
      * </p>
      * 
-     * @return (Multi-AZ only) Specifies the virtual private cloud (VPC) route tables in which your file system's
-     *         endpoints will be created. You should specify all VPC route tables associated with the subnets in which
-     *         your clients are located. By default, Amazon FSx selects your VPC's default route table.
+     * @return (Multi-AZ only) Specifies the route tables in which Amazon FSx creates the rules for routing traffic to
+     *         the correct file server. You should specify all virtual private cloud (VPC) route tables associated with
+     *         the subnets in which your clients are located. By default, Amazon FSx selects your VPC's default route
+     *         table.
      */
 
     public java.util.List<String> getRouteTableIds() {
@@ -1027,15 +1047,16 @@ public class CreateFileSystemOpenZFSConfiguration implements Serializable, Clone
 
     /**
      * <p>
-     * (Multi-AZ only) Specifies the virtual private cloud (VPC) route tables in which your file system's endpoints will
-     * be created. You should specify all VPC route tables associated with the subnets in which your clients are
-     * located. By default, Amazon FSx selects your VPC's default route table.
+     * (Multi-AZ only) Specifies the route tables in which Amazon FSx creates the rules for routing traffic to the
+     * correct file server. You should specify all virtual private cloud (VPC) route tables associated with the subnets
+     * in which your clients are located. By default, Amazon FSx selects your VPC's default route table.
      * </p>
      * 
      * @param routeTableIds
-     *        (Multi-AZ only) Specifies the virtual private cloud (VPC) route tables in which your file system's
-     *        endpoints will be created. You should specify all VPC route tables associated with the subnets in which
-     *        your clients are located. By default, Amazon FSx selects your VPC's default route table.
+     *        (Multi-AZ only) Specifies the route tables in which Amazon FSx creates the rules for routing traffic to
+     *        the correct file server. You should specify all virtual private cloud (VPC) route tables associated with
+     *        the subnets in which your clients are located. By default, Amazon FSx selects your VPC's default route
+     *        table.
      */
 
     public void setRouteTableIds(java.util.Collection<String> routeTableIds) {
@@ -1049,9 +1070,9 @@ public class CreateFileSystemOpenZFSConfiguration implements Serializable, Clone
 
     /**
      * <p>
-     * (Multi-AZ only) Specifies the virtual private cloud (VPC) route tables in which your file system's endpoints will
-     * be created. You should specify all VPC route tables associated with the subnets in which your clients are
-     * located. By default, Amazon FSx selects your VPC's default route table.
+     * (Multi-AZ only) Specifies the route tables in which Amazon FSx creates the rules for routing traffic to the
+     * correct file server. You should specify all virtual private cloud (VPC) route tables associated with the subnets
+     * in which your clients are located. By default, Amazon FSx selects your VPC's default route table.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -1060,9 +1081,10 @@ public class CreateFileSystemOpenZFSConfiguration implements Serializable, Clone
      * </p>
      * 
      * @param routeTableIds
-     *        (Multi-AZ only) Specifies the virtual private cloud (VPC) route tables in which your file system's
-     *        endpoints will be created. You should specify all VPC route tables associated with the subnets in which
-     *        your clients are located. By default, Amazon FSx selects your VPC's default route table.
+     *        (Multi-AZ only) Specifies the route tables in which Amazon FSx creates the rules for routing traffic to
+     *        the correct file server. You should specify all virtual private cloud (VPC) route tables associated with
+     *        the subnets in which your clients are located. By default, Amazon FSx selects your VPC's default route
+     *        table.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1078,15 +1100,16 @@ public class CreateFileSystemOpenZFSConfiguration implements Serializable, Clone
 
     /**
      * <p>
-     * (Multi-AZ only) Specifies the virtual private cloud (VPC) route tables in which your file system's endpoints will
-     * be created. You should specify all VPC route tables associated with the subnets in which your clients are
-     * located. By default, Amazon FSx selects your VPC's default route table.
+     * (Multi-AZ only) Specifies the route tables in which Amazon FSx creates the rules for routing traffic to the
+     * correct file server. You should specify all virtual private cloud (VPC) route tables associated with the subnets
+     * in which your clients are located. By default, Amazon FSx selects your VPC's default route table.
      * </p>
      * 
      * @param routeTableIds
-     *        (Multi-AZ only) Specifies the virtual private cloud (VPC) route tables in which your file system's
-     *        endpoints will be created. You should specify all VPC route tables associated with the subnets in which
-     *        your clients are located. By default, Amazon FSx selects your VPC's default route table.
+     *        (Multi-AZ only) Specifies the route tables in which Amazon FSx creates the rules for routing traffic to
+     *        the correct file server. You should specify all virtual private cloud (VPC) route tables associated with
+     *        the subnets in which your clients are located. By default, Amazon FSx selects your VPC's default route
+     *        table.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

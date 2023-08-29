@@ -1310,13 +1310,13 @@ public class RespondToAuthChallengeRequest extends com.amazonaws.AmazonWebServic
         if (getChallengeName() != null)
             sb.append("ChallengeName: ").append(getChallengeName()).append(",");
         if (getSession() != null)
-            sb.append("Session: ").append(getSession()).append(",");
+            sb.append("Session: ").append("***Sensitive Data Redacted***").append(",");
         if (getChallengeResponses() != null)
-            sb.append("ChallengeResponses: ").append(getChallengeResponses()).append(",");
+            sb.append("ChallengeResponses: ").append("***Sensitive Data Redacted***").append(",");
         if (getAnalyticsMetadata() != null)
             sb.append("AnalyticsMetadata: ").append(getAnalyticsMetadata()).append(",");
         if (getUserContextData() != null)
-            sb.append("UserContextData: ").append(getUserContextData()).append(",");
+            sb.append("UserContextData: ").append("***Sensitive Data Redacted***").append(",");
         if (getClientMetadata() != null)
             sb.append("ClientMetadata: ").append(getClientMetadata());
         sb.append("}");

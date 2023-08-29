@@ -1901,7 +1901,7 @@ public class InitiateAuthRequest extends com.amazonaws.AmazonWebServiceRequest i
         if (getAnalyticsMetadata() != null)
             sb.append("AnalyticsMetadata: ").append(getAnalyticsMetadata()).append(",");
         if (getUserContextData() != null)
-            sb.append("UserContextData: ").append(getUserContextData());
+            sb.append("UserContextData: ").append("***Sensitive Data Redacted***");
         sb.append("}");
         return sb.toString();
     }

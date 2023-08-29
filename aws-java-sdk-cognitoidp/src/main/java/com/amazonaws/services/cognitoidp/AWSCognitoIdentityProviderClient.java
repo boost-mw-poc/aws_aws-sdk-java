@@ -3130,6 +3130,7 @@ public class AWSCognitoIdentityProviderClient extends AmazonWebServiceClient imp
      * </note>
      * <p>
      * Updates the specified user's attributes, including developer attributes, as an administrator. Works on any user.
+     * To delete an attribute from your user, submit the attribute in your API request with a blank value.
      * </p>
      * <p>
      * For custom attributes, you must prepend the <code>custom:</code> prefix to the attribute name.
@@ -3437,7 +3438,7 @@ public class AWSCognitoIdentityProviderClient extends AmazonWebServiceClient imp
             HttpResponseHandler<AmazonWebServiceResponse<AssociateSoftwareTokenResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new AssociateSoftwareTokenResultJsonUnmarshaller());
-            response = invoke(request, responseHandler, executionContext);
+            response = anonymousInvoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
 
@@ -3617,7 +3618,7 @@ public class AWSCognitoIdentityProviderClient extends AmazonWebServiceClient imp
 
             HttpResponseHandler<AmazonWebServiceResponse<ConfirmDeviceResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ConfirmDeviceResultJsonUnmarshaller());
-            response = invoke(request, responseHandler, executionContext);
+            response = anonymousInvoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
 
@@ -5684,7 +5685,7 @@ public class AWSCognitoIdentityProviderClient extends AmazonWebServiceClient imp
 
             HttpResponseHandler<AmazonWebServiceResponse<ForgetDeviceResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ForgetDeviceResultJsonUnmarshaller());
-            response = invoke(request, responseHandler, executionContext);
+            response = anonymousInvoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
 
@@ -5968,7 +5969,7 @@ public class AWSCognitoIdentityProviderClient extends AmazonWebServiceClient imp
 
             HttpResponseHandler<AmazonWebServiceResponse<GetDeviceResult>> responseHandler = protocolFactory.createResponseHandler(new JsonOperationMetadata()
                     .withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetDeviceResultJsonUnmarshaller());
-            response = invoke(request, responseHandler, executionContext);
+            response = anonymousInvoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
 
@@ -6672,7 +6673,7 @@ public class AWSCognitoIdentityProviderClient extends AmazonWebServiceClient imp
 
             HttpResponseHandler<AmazonWebServiceResponse<GlobalSignOutResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GlobalSignOutResultJsonUnmarshaller());
-            response = invoke(request, responseHandler, executionContext);
+            response = anonymousInvoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
 
@@ -6879,7 +6880,7 @@ public class AWSCognitoIdentityProviderClient extends AmazonWebServiceClient imp
 
             HttpResponseHandler<AmazonWebServiceResponse<ListDevicesResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListDevicesResultJsonUnmarshaller());
-            response = invoke(request, responseHandler, executionContext);
+            response = anonymousInvoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
 
@@ -8004,7 +8005,7 @@ public class AWSCognitoIdentityProviderClient extends AmazonWebServiceClient imp
 
             HttpResponseHandler<AmazonWebServiceResponse<RevokeTokenResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new RevokeTokenResultJsonUnmarshaller());
-            response = invoke(request, responseHandler, executionContext);
+            response = anonymousInvoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
 
@@ -8312,7 +8313,7 @@ public class AWSCognitoIdentityProviderClient extends AmazonWebServiceClient imp
 
             HttpResponseHandler<AmazonWebServiceResponse<SetUserMFAPreferenceResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new SetUserMFAPreferenceResultJsonUnmarshaller());
-            response = invoke(request, responseHandler, executionContext);
+            response = anonymousInvoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
 
@@ -8971,7 +8972,7 @@ public class AWSCognitoIdentityProviderClient extends AmazonWebServiceClient imp
             HttpResponseHandler<AmazonWebServiceResponse<UpdateAuthEventFeedbackResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new UpdateAuthEventFeedbackResultJsonUnmarshaller());
-            response = invoke(request, responseHandler, executionContext);
+            response = anonymousInvoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
 
@@ -9057,7 +9058,7 @@ public class AWSCognitoIdentityProviderClient extends AmazonWebServiceClient imp
 
             HttpResponseHandler<AmazonWebServiceResponse<UpdateDeviceStatusResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new UpdateDeviceStatusResultJsonUnmarshaller());
-            response = invoke(request, responseHandler, executionContext);
+            response = anonymousInvoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
 
@@ -9925,7 +9926,7 @@ public class AWSCognitoIdentityProviderClient extends AmazonWebServiceClient imp
 
             HttpResponseHandler<AmazonWebServiceResponse<VerifySoftwareTokenResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new VerifySoftwareTokenResultJsonUnmarshaller());
-            response = invoke(request, responseHandler, executionContext);
+            response = anonymousInvoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
 

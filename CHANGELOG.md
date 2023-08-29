@@ -1,3 +1,20 @@
+# __1.12.540__ __2023-08-29__
+## __Amazon Cognito Identity Provider__
+  - ### Features
+    - Added API example requests and responses for several operations. Fixed the validation regex for user pools Identity Provider name.
+
+## __Amazon FSx__
+  - ### Features
+    - Documentation updates for project quotas.
+
+## __Amazon Omics__
+  - ### Features
+    - Add RetentionMode support for Runs.
+
+## __Amazon Simple Email Service__
+  - ### Features
+    - Adds support for the new Export and Message Insights features: create, get, list and cancel export jobs; get message insights.
+
 # __1.12.539__ __2023-08-28__
 ## __AWS Backup__
   - ### Features

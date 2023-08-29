@@ -19,9 +19,9 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Defines the minimum amount of time since last access for a file to be eligible for release. Only archived files that
- * were last accessed or modified before this point-in-time are eligible to be released from the Amazon FSx for Lustre
- * file system.
+ * Defines the minimum amount of time since last access for a file to be eligible for release. Only files that have been
+ * exported to S3 and that were last accessed or modified before this point-in-time are eligible to be released from the
+ * Amazon FSx for Lustre file system.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/DurationSinceLastAccess" target="_top">AWS API
@@ -40,13 +40,13 @@ public class DurationSinceLastAccess implements Serializable, Cloneable, Structu
     /**
      * <p>
      * An integer that represents the minimum amount of time (in days) since a file was last accessed in the file
-     * system. Only archived files with a <code>MAX(atime, ctime, mtime)</code> timestamp that is more than this amount
+     * system. Only exported files with a <code>MAX(atime, ctime, mtime)</code> timestamp that is more than this amount
      * of time in the past (relative to the task create time) will be released. The default of <code>Value</code> is
      * <code>0</code>. This is a required parameter.
      * </p>
      * <note>
      * <p>
-     * If an archived file meets the last accessed time criteria, its file or directory path must also be specified in
+     * If an exported file meets the last accessed time criteria, its file or directory path must also be specified in
      * the <code>Paths</code> parameter of the operation in order for the file to be released.
      * </p>
      * </note>
@@ -124,24 +124,24 @@ public class DurationSinceLastAccess implements Serializable, Cloneable, Structu
     /**
      * <p>
      * An integer that represents the minimum amount of time (in days) since a file was last accessed in the file
-     * system. Only archived files with a <code>MAX(atime, ctime, mtime)</code> timestamp that is more than this amount
+     * system. Only exported files with a <code>MAX(atime, ctime, mtime)</code> timestamp that is more than this amount
      * of time in the past (relative to the task create time) will be released. The default of <code>Value</code> is
      * <code>0</code>. This is a required parameter.
      * </p>
      * <note>
      * <p>
-     * If an archived file meets the last accessed time criteria, its file or directory path must also be specified in
+     * If an exported file meets the last accessed time criteria, its file or directory path must also be specified in
      * the <code>Paths</code> parameter of the operation in order for the file to be released.
      * </p>
      * </note>
      * 
      * @param value
      *        An integer that represents the minimum amount of time (in days) since a file was last accessed in the file
-     *        system. Only archived files with a <code>MAX(atime, ctime, mtime)</code> timestamp that is more than this
+     *        system. Only exported files with a <code>MAX(atime, ctime, mtime)</code> timestamp that is more than this
      *        amount of time in the past (relative to the task create time) will be released. The default of
      *        <code>Value</code> is <code>0</code>. This is a required parameter.</p> <note>
      *        <p>
-     *        If an archived file meets the last accessed time criteria, its file or directory path must also be
+     *        If an exported file meets the last accessed time criteria, its file or directory path must also be
      *        specified in the <code>Paths</code> parameter of the operation in order for the file to be released.
      *        </p>
      */
@@ -153,23 +153,23 @@ public class DurationSinceLastAccess implements Serializable, Cloneable, Structu
     /**
      * <p>
      * An integer that represents the minimum amount of time (in days) since a file was last accessed in the file
-     * system. Only archived files with a <code>MAX(atime, ctime, mtime)</code> timestamp that is more than this amount
+     * system. Only exported files with a <code>MAX(atime, ctime, mtime)</code> timestamp that is more than this amount
      * of time in the past (relative to the task create time) will be released. The default of <code>Value</code> is
      * <code>0</code>. This is a required parameter.
      * </p>
      * <note>
      * <p>
-     * If an archived file meets the last accessed time criteria, its file or directory path must also be specified in
+     * If an exported file meets the last accessed time criteria, its file or directory path must also be specified in
      * the <code>Paths</code> parameter of the operation in order for the file to be released.
      * </p>
      * </note>
      * 
      * @return An integer that represents the minimum amount of time (in days) since a file was last accessed in the
-     *         file system. Only archived files with a <code>MAX(atime, ctime, mtime)</code> timestamp that is more than
+     *         file system. Only exported files with a <code>MAX(atime, ctime, mtime)</code> timestamp that is more than
      *         this amount of time in the past (relative to the task create time) will be released. The default of
      *         <code>Value</code> is <code>0</code>. This is a required parameter.</p> <note>
      *         <p>
-     *         If an archived file meets the last accessed time criteria, its file or directory path must also be
+     *         If an exported file meets the last accessed time criteria, its file or directory path must also be
      *         specified in the <code>Paths</code> parameter of the operation in order for the file to be released.
      *         </p>
      */
@@ -181,24 +181,24 @@ public class DurationSinceLastAccess implements Serializable, Cloneable, Structu
     /**
      * <p>
      * An integer that represents the minimum amount of time (in days) since a file was last accessed in the file
-     * system. Only archived files with a <code>MAX(atime, ctime, mtime)</code> timestamp that is more than this amount
+     * system. Only exported files with a <code>MAX(atime, ctime, mtime)</code> timestamp that is more than this amount
      * of time in the past (relative to the task create time) will be released. The default of <code>Value</code> is
      * <code>0</code>. This is a required parameter.
      * </p>
      * <note>
      * <p>
-     * If an archived file meets the last accessed time criteria, its file or directory path must also be specified in
+     * If an exported file meets the last accessed time criteria, its file or directory path must also be specified in
      * the <code>Paths</code> parameter of the operation in order for the file to be released.
      * </p>
      * </note>
      * 
      * @param value
      *        An integer that represents the minimum amount of time (in days) since a file was last accessed in the file
-     *        system. Only archived files with a <code>MAX(atime, ctime, mtime)</code> timestamp that is more than this
+     *        system. Only exported files with a <code>MAX(atime, ctime, mtime)</code> timestamp that is more than this
      *        amount of time in the past (relative to the task create time) will be released. The default of
      *        <code>Value</code> is <code>0</code>. This is a required parameter.</p> <note>
      *        <p>
-     *        If an archived file meets the last accessed time criteria, its file or directory path must also be
+     *        If an exported file meets the last accessed time criteria, its file or directory path must also be
      *        specified in the <code>Paths</code> parameter of the operation in order for the file to be released.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.

@@ -59,12 +59,13 @@ public class UpdateFileSystemOpenZFSConfiguration implements Serializable, Clone
      * <ul>
      * <li>
      * <p>
-     * For <code>SINGLE_AZ_1</code>, valid values are 64, 128, 256, 512, 1024, 2048, 3072, or 4096 MB/s.
+     * For <code>MULTI_AZ_1</code> and <code>SINGLE_AZ_2</code>, valid values are 160, 320, 640, 1280, 2560, 3840, 5120,
+     * 7680, or 10240 MBps.
      * </p>
      * </li>
      * <li>
      * <p>
-     * For <code>SINGLE_AZ_2</code>, valid values are 160, 320, 640, 1280, 2560, 3840, 5120, 7680, or 10240 MB/s.
+     * For <code>SINGLE_AZ_1</code>, valid values are 64, 128, 256, 512, 1024, 2048, 3072, or 4096 MB/s.
      * </p>
      * </li>
      * </ul>
@@ -322,12 +323,13 @@ public class UpdateFileSystemOpenZFSConfiguration implements Serializable, Clone
      * <ul>
      * <li>
      * <p>
-     * For <code>SINGLE_AZ_1</code>, valid values are 64, 128, 256, 512, 1024, 2048, 3072, or 4096 MB/s.
+     * For <code>MULTI_AZ_1</code> and <code>SINGLE_AZ_2</code>, valid values are 160, 320, 640, 1280, 2560, 3840, 5120,
+     * 7680, or 10240 MBps.
      * </p>
      * </li>
      * <li>
      * <p>
-     * For <code>SINGLE_AZ_2</code>, valid values are 160, 320, 640, 1280, 2560, 3840, 5120, 7680, or 10240 MB/s.
+     * For <code>SINGLE_AZ_1</code>, valid values are 64, 128, 256, 512, 1024, 2048, 3072, or 4096 MB/s.
      * </p>
      * </li>
      * </ul>
@@ -338,12 +340,13 @@ public class UpdateFileSystemOpenZFSConfiguration implements Serializable, Clone
      *        <ul>
      *        <li>
      *        <p>
-     *        For <code>SINGLE_AZ_1</code>, valid values are 64, 128, 256, 512, 1024, 2048, 3072, or 4096 MB/s.
+     *        For <code>MULTI_AZ_1</code> and <code>SINGLE_AZ_2</code>, valid values are 160, 320, 640, 1280, 2560,
+     *        3840, 5120, 7680, or 10240 MBps.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        For <code>SINGLE_AZ_2</code>, valid values are 160, 320, 640, 1280, 2560, 3840, 5120, 7680, or 10240 MB/s.
+     *        For <code>SINGLE_AZ_1</code>, valid values are 64, 128, 256, 512, 1024, 2048, 3072, or 4096 MB/s.
      *        </p>
      *        </li>
      */
@@ -360,12 +363,13 @@ public class UpdateFileSystemOpenZFSConfiguration implements Serializable, Clone
      * <ul>
      * <li>
      * <p>
-     * For <code>SINGLE_AZ_1</code>, valid values are 64, 128, 256, 512, 1024, 2048, 3072, or 4096 MB/s.
+     * For <code>MULTI_AZ_1</code> and <code>SINGLE_AZ_2</code>, valid values are 160, 320, 640, 1280, 2560, 3840, 5120,
+     * 7680, or 10240 MBps.
      * </p>
      * </li>
      * <li>
      * <p>
-     * For <code>SINGLE_AZ_2</code>, valid values are 160, 320, 640, 1280, 2560, 3840, 5120, 7680, or 10240 MB/s.
+     * For <code>SINGLE_AZ_1</code>, valid values are 64, 128, 256, 512, 1024, 2048, 3072, or 4096 MB/s.
      * </p>
      * </li>
      * </ul>
@@ -375,13 +379,13 @@ public class UpdateFileSystemOpenZFSConfiguration implements Serializable, Clone
      *         <ul>
      *         <li>
      *         <p>
-     *         For <code>SINGLE_AZ_1</code>, valid values are 64, 128, 256, 512, 1024, 2048, 3072, or 4096 MB/s.
+     *         For <code>MULTI_AZ_1</code> and <code>SINGLE_AZ_2</code>, valid values are 160, 320, 640, 1280, 2560,
+     *         3840, 5120, 7680, or 10240 MBps.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         For <code>SINGLE_AZ_2</code>, valid values are 160, 320, 640, 1280, 2560, 3840, 5120, 7680, or 10240
-     *         MB/s.
+     *         For <code>SINGLE_AZ_1</code>, valid values are 64, 128, 256, 512, 1024, 2048, 3072, or 4096 MB/s.
      *         </p>
      *         </li>
      */
@@ -398,12 +402,13 @@ public class UpdateFileSystemOpenZFSConfiguration implements Serializable, Clone
      * <ul>
      * <li>
      * <p>
-     * For <code>SINGLE_AZ_1</code>, valid values are 64, 128, 256, 512, 1024, 2048, 3072, or 4096 MB/s.
+     * For <code>MULTI_AZ_1</code> and <code>SINGLE_AZ_2</code>, valid values are 160, 320, 640, 1280, 2560, 3840, 5120,
+     * 7680, or 10240 MBps.
      * </p>
      * </li>
      * <li>
      * <p>
-     * For <code>SINGLE_AZ_2</code>, valid values are 160, 320, 640, 1280, 2560, 3840, 5120, 7680, or 10240 MB/s.
+     * For <code>SINGLE_AZ_1</code>, valid values are 64, 128, 256, 512, 1024, 2048, 3072, or 4096 MB/s.
      * </p>
      * </li>
      * </ul>
@@ -414,12 +419,13 @@ public class UpdateFileSystemOpenZFSConfiguration implements Serializable, Clone
      *        <ul>
      *        <li>
      *        <p>
-     *        For <code>SINGLE_AZ_1</code>, valid values are 64, 128, 256, 512, 1024, 2048, 3072, or 4096 MB/s.
+     *        For <code>MULTI_AZ_1</code> and <code>SINGLE_AZ_2</code>, valid values are 160, 320, 640, 1280, 2560,
+     *        3840, 5120, 7680, or 10240 MBps.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        For <code>SINGLE_AZ_2</code>, valid values are 160, 320, 640, 1280, 2560, 3840, 5120, 7680, or 10240 MB/s.
+     *        For <code>SINGLE_AZ_1</code>, valid values are 64, 128, 256, 512, 1024, 2048, 3072, or 4096 MB/s.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

@@ -44,8 +44,8 @@ public class CreateDataRepositoryTaskRequest extends com.amazonaws.AmazonWebServ
      * </li>
      * <li>
      * <p>
-     * <code>RELEASE_DATA_FROM_FILESYSTEM</code> tasks release files in your Amazon FSx for Lustre file system that are
-     * archived and that meet your specified release criteria.
+     * <code>RELEASE_DATA_FROM_FILESYSTEM</code> tasks release files in your Amazon FSx for Lustre file system that have
+     * been exported to a linked S3 bucket and that meet your specified release criteria.
      * </p>
      * </li>
      * <li>
@@ -60,7 +60,7 @@ public class CreateDataRepositoryTaskRequest extends com.amazonaws.AmazonWebServ
      * <p>
      * A list of paths for the data repository task to use when the task is processed. If a path that you provide isn't
      * valid, the task fails. If you don't provide paths, the default behavior is to export all files to S3 (for export
-     * tasks), import all files from S3 (for import tasks), or release all archived files that meet the last accessed
+     * tasks), import all files from S3 (for import tasks), or release all exported files that meet the last accessed
      * time criteria (for release tasks).
      * </p>
      * <ul>
@@ -83,8 +83,8 @@ public class CreateDataRepositoryTaskRequest extends com.amazonaws.AmazonWebServ
      * <li>
      * <p>
      * For release tasks, the list contains directory or file paths on the FSx for Lustre file system from which to
-     * release archived files. If a directory is specified, files within the directory are released. If a file path is
-     * specified, only that file is released. To release all archived files in the file system, specify a forward slash
+     * release exported files. If a directory is specified, files within the directory are released. If a file path is
+     * specified, only that file is released. To release all exported files in the file system, specify a forward slash
      * (/) as the path.
      * </p>
      * <note>
@@ -145,8 +145,8 @@ public class CreateDataRepositoryTaskRequest extends com.amazonaws.AmazonWebServ
      * </li>
      * <li>
      * <p>
-     * <code>RELEASE_DATA_FROM_FILESYSTEM</code> tasks release files in your Amazon FSx for Lustre file system that are
-     * archived and that meet your specified release criteria.
+     * <code>RELEASE_DATA_FROM_FILESYSTEM</code> tasks release files in your Amazon FSx for Lustre file system that have
+     * been exported to a linked S3 bucket and that meet your specified release criteria.
      * </p>
      * </li>
      * <li>
@@ -174,7 +174,7 @@ public class CreateDataRepositoryTaskRequest extends com.amazonaws.AmazonWebServ
      *        <li>
      *        <p>
      *        <code>RELEASE_DATA_FROM_FILESYSTEM</code> tasks release files in your Amazon FSx for Lustre file system
-     *        that are archived and that meet your specified release criteria.
+     *        that have been exported to a linked S3 bucket and that meet your specified release criteria.
      *        </p>
      *        </li>
      *        <li>
@@ -208,8 +208,8 @@ public class CreateDataRepositoryTaskRequest extends com.amazonaws.AmazonWebServ
      * </li>
      * <li>
      * <p>
-     * <code>RELEASE_DATA_FROM_FILESYSTEM</code> tasks release files in your Amazon FSx for Lustre file system that are
-     * archived and that meet your specified release criteria.
+     * <code>RELEASE_DATA_FROM_FILESYSTEM</code> tasks release files in your Amazon FSx for Lustre file system that have
+     * been exported to a linked S3 bucket and that meet your specified release criteria.
      * </p>
      * </li>
      * <li>
@@ -236,7 +236,7 @@ public class CreateDataRepositoryTaskRequest extends com.amazonaws.AmazonWebServ
      *         <li>
      *         <p>
      *         <code>RELEASE_DATA_FROM_FILESYSTEM</code> tasks release files in your Amazon FSx for Lustre file system
-     *         that are archived and that meet your specified release criteria.
+     *         that have been exported to a linked S3 bucket and that meet your specified release criteria.
      *         </p>
      *         </li>
      *         <li>
@@ -270,8 +270,8 @@ public class CreateDataRepositoryTaskRequest extends com.amazonaws.AmazonWebServ
      * </li>
      * <li>
      * <p>
-     * <code>RELEASE_DATA_FROM_FILESYSTEM</code> tasks release files in your Amazon FSx for Lustre file system that are
-     * archived and that meet your specified release criteria.
+     * <code>RELEASE_DATA_FROM_FILESYSTEM</code> tasks release files in your Amazon FSx for Lustre file system that have
+     * been exported to a linked S3 bucket and that meet your specified release criteria.
      * </p>
      * </li>
      * <li>
@@ -299,7 +299,7 @@ public class CreateDataRepositoryTaskRequest extends com.amazonaws.AmazonWebServ
      *        <li>
      *        <p>
      *        <code>RELEASE_DATA_FROM_FILESYSTEM</code> tasks release files in your Amazon FSx for Lustre file system
-     *        that are archived and that meet your specified release criteria.
+     *        that have been exported to a linked S3 bucket and that meet your specified release criteria.
      *        </p>
      *        </li>
      *        <li>
@@ -335,8 +335,8 @@ public class CreateDataRepositoryTaskRequest extends com.amazonaws.AmazonWebServ
      * </li>
      * <li>
      * <p>
-     * <code>RELEASE_DATA_FROM_FILESYSTEM</code> tasks release files in your Amazon FSx for Lustre file system that are
-     * archived and that meet your specified release criteria.
+     * <code>RELEASE_DATA_FROM_FILESYSTEM</code> tasks release files in your Amazon FSx for Lustre file system that have
+     * been exported to a linked S3 bucket and that meet your specified release criteria.
      * </p>
      * </li>
      * <li>
@@ -364,7 +364,7 @@ public class CreateDataRepositoryTaskRequest extends com.amazonaws.AmazonWebServ
      *        <li>
      *        <p>
      *        <code>RELEASE_DATA_FROM_FILESYSTEM</code> tasks release files in your Amazon FSx for Lustre file system
-     *        that are archived and that meet your specified release criteria.
+     *        that have been exported to a linked S3 bucket and that meet your specified release criteria.
      *        </p>
      *        </li>
      *        <li>
@@ -385,7 +385,7 @@ public class CreateDataRepositoryTaskRequest extends com.amazonaws.AmazonWebServ
      * <p>
      * A list of paths for the data repository task to use when the task is processed. If a path that you provide isn't
      * valid, the task fails. If you don't provide paths, the default behavior is to export all files to S3 (for export
-     * tasks), import all files from S3 (for import tasks), or release all archived files that meet the last accessed
+     * tasks), import all files from S3 (for import tasks), or release all exported files that meet the last accessed
      * time criteria (for release tasks).
      * </p>
      * <ul>
@@ -408,8 +408,8 @@ public class CreateDataRepositoryTaskRequest extends com.amazonaws.AmazonWebServ
      * <li>
      * <p>
      * For release tasks, the list contains directory or file paths on the FSx for Lustre file system from which to
-     * release archived files. If a directory is specified, files within the directory are released. If a file path is
-     * specified, only that file is released. To release all archived files in the file system, specify a forward slash
+     * release exported files. If a directory is specified, files within the directory are released. If a file path is
+     * specified, only that file is released. To release all exported files in the file system, specify a forward slash
      * (/) as the path.
      * </p>
      * <note>
@@ -421,7 +421,7 @@ public class CreateDataRepositoryTaskRequest extends com.amazonaws.AmazonWebServ
      * 
      * @return A list of paths for the data repository task to use when the task is processed. If a path that you
      *         provide isn't valid, the task fails. If you don't provide paths, the default behavior is to export all
-     *         files to S3 (for export tasks), import all files from S3 (for import tasks), or release all archived
+     *         files to S3 (for export tasks), import all files from S3 (for import tasks), or release all exported
      *         files that meet the last accessed time criteria (for release tasks).</p>
      *         <ul>
      *         <li>
@@ -443,8 +443,8 @@ public class CreateDataRepositoryTaskRequest extends com.amazonaws.AmazonWebServ
      *         <li>
      *         <p>
      *         For release tasks, the list contains directory or file paths on the FSx for Lustre file system from which
-     *         to release archived files. If a directory is specified, files within the directory are released. If a
-     *         file path is specified, only that file is released. To release all archived files in the file system,
+     *         to release exported files. If a directory is specified, files within the directory are released. If a
+     *         file path is specified, only that file is released. To release all exported files in the file system,
      *         specify a forward slash (/) as the path.
      *         </p>
      *         <note>
@@ -462,7 +462,7 @@ public class CreateDataRepositoryTaskRequest extends com.amazonaws.AmazonWebServ
      * <p>
      * A list of paths for the data repository task to use when the task is processed. If a path that you provide isn't
      * valid, the task fails. If you don't provide paths, the default behavior is to export all files to S3 (for export
-     * tasks), import all files from S3 (for import tasks), or release all archived files that meet the last accessed
+     * tasks), import all files from S3 (for import tasks), or release all exported files that meet the last accessed
      * time criteria (for release tasks).
      * </p>
      * <ul>
@@ -485,8 +485,8 @@ public class CreateDataRepositoryTaskRequest extends com.amazonaws.AmazonWebServ
      * <li>
      * <p>
      * For release tasks, the list contains directory or file paths on the FSx for Lustre file system from which to
-     * release archived files. If a directory is specified, files within the directory are released. If a file path is
-     * specified, only that file is released. To release all archived files in the file system, specify a forward slash
+     * release exported files. If a directory is specified, files within the directory are released. If a file path is
+     * specified, only that file is released. To release all exported files in the file system, specify a forward slash
      * (/) as the path.
      * </p>
      * <note>
@@ -499,7 +499,7 @@ public class CreateDataRepositoryTaskRequest extends com.amazonaws.AmazonWebServ
      * @param paths
      *        A list of paths for the data repository task to use when the task is processed. If a path that you provide
      *        isn't valid, the task fails. If you don't provide paths, the default behavior is to export all files to S3
-     *        (for export tasks), import all files from S3 (for import tasks), or release all archived files that meet
+     *        (for export tasks), import all files from S3 (for import tasks), or release all exported files that meet
      *        the last accessed time criteria (for release tasks).</p>
      *        <ul>
      *        <li>
@@ -521,8 +521,8 @@ public class CreateDataRepositoryTaskRequest extends com.amazonaws.AmazonWebServ
      *        <li>
      *        <p>
      *        For release tasks, the list contains directory or file paths on the FSx for Lustre file system from which
-     *        to release archived files. If a directory is specified, files within the directory are released. If a file
-     *        path is specified, only that file is released. To release all archived files in the file system, specify a
+     *        to release exported files. If a directory is specified, files within the directory are released. If a file
+     *        path is specified, only that file is released. To release all exported files in the file system, specify a
      *        forward slash (/) as the path.
      *        </p>
      *        <note>
@@ -545,7 +545,7 @@ public class CreateDataRepositoryTaskRequest extends com.amazonaws.AmazonWebServ
      * <p>
      * A list of paths for the data repository task to use when the task is processed. If a path that you provide isn't
      * valid, the task fails. If you don't provide paths, the default behavior is to export all files to S3 (for export
-     * tasks), import all files from S3 (for import tasks), or release all archived files that meet the last accessed
+     * tasks), import all files from S3 (for import tasks), or release all exported files that meet the last accessed
      * time criteria (for release tasks).
      * </p>
      * <ul>
@@ -568,8 +568,8 @@ public class CreateDataRepositoryTaskRequest extends com.amazonaws.AmazonWebServ
      * <li>
      * <p>
      * For release tasks, the list contains directory or file paths on the FSx for Lustre file system from which to
-     * release archived files. If a directory is specified, files within the directory are released. If a file path is
-     * specified, only that file is released. To release all archived files in the file system, specify a forward slash
+     * release exported files. If a directory is specified, files within the directory are released. If a file path is
+     * specified, only that file is released. To release all exported files in the file system, specify a forward slash
      * (/) as the path.
      * </p>
      * <note>
@@ -587,7 +587,7 @@ public class CreateDataRepositoryTaskRequest extends com.amazonaws.AmazonWebServ
      * @param paths
      *        A list of paths for the data repository task to use when the task is processed. If a path that you provide
      *        isn't valid, the task fails. If you don't provide paths, the default behavior is to export all files to S3
-     *        (for export tasks), import all files from S3 (for import tasks), or release all archived files that meet
+     *        (for export tasks), import all files from S3 (for import tasks), or release all exported files that meet
      *        the last accessed time criteria (for release tasks).</p>
      *        <ul>
      *        <li>
@@ -609,8 +609,8 @@ public class CreateDataRepositoryTaskRequest extends com.amazonaws.AmazonWebServ
      *        <li>
      *        <p>
      *        For release tasks, the list contains directory or file paths on the FSx for Lustre file system from which
-     *        to release archived files. If a directory is specified, files within the directory are released. If a file
-     *        path is specified, only that file is released. To release all archived files in the file system, specify a
+     *        to release exported files. If a directory is specified, files within the directory are released. If a file
+     *        path is specified, only that file is released. To release all exported files in the file system, specify a
      *        forward slash (/) as the path.
      *        </p>
      *        <note>
@@ -635,7 +635,7 @@ public class CreateDataRepositoryTaskRequest extends com.amazonaws.AmazonWebServ
      * <p>
      * A list of paths for the data repository task to use when the task is processed. If a path that you provide isn't
      * valid, the task fails. If you don't provide paths, the default behavior is to export all files to S3 (for export
-     * tasks), import all files from S3 (for import tasks), or release all archived files that meet the last accessed
+     * tasks), import all files from S3 (for import tasks), or release all exported files that meet the last accessed
      * time criteria (for release tasks).
      * </p>
      * <ul>
@@ -658,8 +658,8 @@ public class CreateDataRepositoryTaskRequest extends com.amazonaws.AmazonWebServ
      * <li>
      * <p>
      * For release tasks, the list contains directory or file paths on the FSx for Lustre file system from which to
-     * release archived files. If a directory is specified, files within the directory are released. If a file path is
-     * specified, only that file is released. To release all archived files in the file system, specify a forward slash
+     * release exported files. If a directory is specified, files within the directory are released. If a file path is
+     * specified, only that file is released. To release all exported files in the file system, specify a forward slash
      * (/) as the path.
      * </p>
      * <note>
@@ -672,7 +672,7 @@ public class CreateDataRepositoryTaskRequest extends com.amazonaws.AmazonWebServ
      * @param paths
      *        A list of paths for the data repository task to use when the task is processed. If a path that you provide
      *        isn't valid, the task fails. If you don't provide paths, the default behavior is to export all files to S3
-     *        (for export tasks), import all files from S3 (for import tasks), or release all archived files that meet
+     *        (for export tasks), import all files from S3 (for import tasks), or release all exported files that meet
      *        the last accessed time criteria (for release tasks).</p>
      *        <ul>
      *        <li>
@@ -694,8 +694,8 @@ public class CreateDataRepositoryTaskRequest extends com.amazonaws.AmazonWebServ
      *        <li>
      *        <p>
      *        For release tasks, the list contains directory or file paths on the FSx for Lustre file system from which
-     *        to release archived files. If a directory is specified, files within the directory are released. If a file
-     *        path is specified, only that file is released. To release all archived files in the file system, specify a
+     *        to release exported files. If a directory is specified, files within the directory are released. If a file
+     *        path is specified, only that file is released. To release all exported files in the file system, specify a
      *        forward slash (/) as the path.
      *        </p>
      *        <note>

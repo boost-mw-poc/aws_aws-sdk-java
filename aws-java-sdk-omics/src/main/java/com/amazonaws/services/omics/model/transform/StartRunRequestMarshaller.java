@@ -55,6 +55,8 @@ public class StartRunRequestMarshaller {
             .marshallLocationName("tags").build();
     private static final MarshallingInfo<String> REQUESTID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("requestId").defaultValueSupplier(com.amazonaws.util.IdempotentUtils.getGenerator()).build();
+    private static final MarshallingInfo<String> RETENTIONMODE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("retentionMode").build();
 
     private static final StartRunRequestMarshaller instance = new StartRunRequestMarshaller();
 
@@ -84,6 +86,7 @@ public class StartRunRequestMarshaller {
             protocolMarshaller.marshall(startRunRequest.getLogLevel(), LOGLEVEL_BINDING);
             protocolMarshaller.marshall(startRunRequest.getTags(), TAGS_BINDING);
             protocolMarshaller.marshall(startRunRequest.getRequestId(), REQUESTID_BINDING);
+            protocolMarshaller.marshall(startRunRequest.getRetentionMode(), RETENTIONMODE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

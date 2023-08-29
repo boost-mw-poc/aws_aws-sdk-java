@@ -30,7 +30,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * </li>
  * <li>
  * <p>
- * You use release data repository tasks to release archived files from your Amazon FSx for Lustre file system.
+ * You use release data repository tasks to release have been exported to a linked S3 bucketed files from your Amazon
+ * FSx for Lustre file system.
  * </p>
  * </li>
  * <li>
@@ -123,8 +124,8 @@ public class DataRepositoryTask implements Serializable, Cloneable, StructuredPo
      * </li>
      * <li>
      * <p>
-     * <code>RELEASE_DATA_FROM_FILESYSTEM</code> tasks release files in your Amazon FSx for Lustre file system that are
-     * archived and that meet your specified release criteria.
+     * <code>RELEASE_DATA_FROM_FILESYSTEM</code> tasks release files in your Amazon FSx for Lustre file system that have
+     * been exported to a linked S3 bucket and that meet your specified release criteria.
      * </p>
      * </li>
      * <li>
@@ -659,8 +660,8 @@ public class DataRepositoryTask implements Serializable, Cloneable, StructuredPo
      * </li>
      * <li>
      * <p>
-     * <code>RELEASE_DATA_FROM_FILESYSTEM</code> tasks release files in your Amazon FSx for Lustre file system that are
-     * archived and that meet your specified release criteria.
+     * <code>RELEASE_DATA_FROM_FILESYSTEM</code> tasks release files in your Amazon FSx for Lustre file system that have
+     * been exported to a linked S3 bucket and that meet your specified release criteria.
      * </p>
      * </li>
      * <li>
@@ -688,7 +689,7 @@ public class DataRepositoryTask implements Serializable, Cloneable, StructuredPo
      *        <li>
      *        <p>
      *        <code>RELEASE_DATA_FROM_FILESYSTEM</code> tasks release files in your Amazon FSx for Lustre file system
-     *        that are archived and that meet your specified release criteria.
+     *        that have been exported to a linked S3 bucket and that meet your specified release criteria.
      *        </p>
      *        </li>
      *        <li>
@@ -722,8 +723,8 @@ public class DataRepositoryTask implements Serializable, Cloneable, StructuredPo
      * </li>
      * <li>
      * <p>
-     * <code>RELEASE_DATA_FROM_FILESYSTEM</code> tasks release files in your Amazon FSx for Lustre file system that are
-     * archived and that meet your specified release criteria.
+     * <code>RELEASE_DATA_FROM_FILESYSTEM</code> tasks release files in your Amazon FSx for Lustre file system that have
+     * been exported to a linked S3 bucket and that meet your specified release criteria.
      * </p>
      * </li>
      * <li>
@@ -750,7 +751,7 @@ public class DataRepositoryTask implements Serializable, Cloneable, StructuredPo
      *         <li>
      *         <p>
      *         <code>RELEASE_DATA_FROM_FILESYSTEM</code> tasks release files in your Amazon FSx for Lustre file system
-     *         that are archived and that meet your specified release criteria.
+     *         that have been exported to a linked S3 bucket and that meet your specified release criteria.
      *         </p>
      *         </li>
      *         <li>
@@ -784,8 +785,8 @@ public class DataRepositoryTask implements Serializable, Cloneable, StructuredPo
      * </li>
      * <li>
      * <p>
-     * <code>RELEASE_DATA_FROM_FILESYSTEM</code> tasks release files in your Amazon FSx for Lustre file system that are
-     * archived and that meet your specified release criteria.
+     * <code>RELEASE_DATA_FROM_FILESYSTEM</code> tasks release files in your Amazon FSx for Lustre file system that have
+     * been exported to a linked S3 bucket and that meet your specified release criteria.
      * </p>
      * </li>
      * <li>
@@ -813,7 +814,7 @@ public class DataRepositoryTask implements Serializable, Cloneable, StructuredPo
      *        <li>
      *        <p>
      *        <code>RELEASE_DATA_FROM_FILESYSTEM</code> tasks release files in your Amazon FSx for Lustre file system
-     *        that are archived and that meet your specified release criteria.
+     *        that have been exported to a linked S3 bucket and that meet your specified release criteria.
      *        </p>
      *        </li>
      *        <li>
@@ -849,8 +850,8 @@ public class DataRepositoryTask implements Serializable, Cloneable, StructuredPo
      * </li>
      * <li>
      * <p>
-     * <code>RELEASE_DATA_FROM_FILESYSTEM</code> tasks release files in your Amazon FSx for Lustre file system that are
-     * archived and that meet your specified release criteria.
+     * <code>RELEASE_DATA_FROM_FILESYSTEM</code> tasks release files in your Amazon FSx for Lustre file system that have
+     * been exported to a linked S3 bucket and that meet your specified release criteria.
      * </p>
      * </li>
      * <li>
@@ -878,7 +879,7 @@ public class DataRepositoryTask implements Serializable, Cloneable, StructuredPo
      *        <li>
      *        <p>
      *        <code>RELEASE_DATA_FROM_FILESYSTEM</code> tasks release files in your Amazon FSx for Lustre file system
-     *        that are archived and that meet your specified release criteria.
+     *        that have been exported to a linked S3 bucket and that meet your specified release criteria.
      *        </p>
      *        </li>
      *        <li>

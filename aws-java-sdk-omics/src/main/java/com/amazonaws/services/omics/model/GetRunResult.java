@@ -160,6 +160,12 @@ public class GetRunResult extends com.amazonaws.AmazonWebServiceResult<com.amazo
      * </p>
      */
     private String accelerators;
+    /**
+     * <p>
+     * The run's retention mode.
+     * </p>
+     */
+    private String retentionMode;
 
     /**
      * <p>
@@ -1214,6 +1220,65 @@ public class GetRunResult extends com.amazonaws.AmazonWebServiceResult<com.amazo
     }
 
     /**
+     * <p>
+     * The run's retention mode.
+     * </p>
+     * 
+     * @param retentionMode
+     *        The run's retention mode.
+     * @see RunRetentionMode
+     */
+
+    public void setRetentionMode(String retentionMode) {
+        this.retentionMode = retentionMode;
+    }
+
+    /**
+     * <p>
+     * The run's retention mode.
+     * </p>
+     * 
+     * @return The run's retention mode.
+     * @see RunRetentionMode
+     */
+
+    public String getRetentionMode() {
+        return this.retentionMode;
+    }
+
+    /**
+     * <p>
+     * The run's retention mode.
+     * </p>
+     * 
+     * @param retentionMode
+     *        The run's retention mode.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see RunRetentionMode
+     */
+
+    public GetRunResult withRetentionMode(String retentionMode) {
+        setRetentionMode(retentionMode);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The run's retention mode.
+     * </p>
+     * 
+     * @param retentionMode
+     *        The run's retention mode.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see RunRetentionMode
+     */
+
+    public GetRunResult withRetentionMode(RunRetentionMode retentionMode) {
+        this.retentionMode = retentionMode.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1270,7 +1335,9 @@ public class GetRunResult extends com.amazonaws.AmazonWebServiceResult<com.amazo
         if (getTags() != null)
             sb.append("Tags: ").append(getTags()).append(",");
         if (getAccelerators() != null)
-            sb.append("Accelerators: ").append(getAccelerators());
+            sb.append("Accelerators: ").append(getAccelerators()).append(",");
+        if (getRetentionMode() != null)
+            sb.append("RetentionMode: ").append(getRetentionMode());
         sb.append("}");
         return sb.toString();
     }
@@ -1377,6 +1444,10 @@ public class GetRunResult extends com.amazonaws.AmazonWebServiceResult<com.amazo
             return false;
         if (other.getAccelerators() != null && other.getAccelerators().equals(this.getAccelerators()) == false)
             return false;
+        if (other.getRetentionMode() == null ^ this.getRetentionMode() == null)
+            return false;
+        if (other.getRetentionMode() != null && other.getRetentionMode().equals(this.getRetentionMode()) == false)
+            return false;
         return true;
     }
 
@@ -1408,6 +1479,7 @@ public class GetRunResult extends com.amazonaws.AmazonWebServiceResult<com.amazo
         hashCode = prime * hashCode + ((getStatusMessage() == null) ? 0 : getStatusMessage().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getAccelerators() == null) ? 0 : getAccelerators().hashCode());
+        hashCode = prime * hashCode + ((getRetentionMode() == null) ? 0 : getRetentionMode().hashCode());
         return hashCode;
     }
 

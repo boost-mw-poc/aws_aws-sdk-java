@@ -34,6 +34,12 @@ public class CloudWatchLogsConfigurationType implements Serializable, Cloneable,
      * not be encrypted with Key Management Service and must be in the same Amazon Web Services account as your user
      * pool.
      * </p>
+     * <p>
+     * To send logs to log groups with a resource policy of a size greater than 5120 characters, configure a log group
+     * with a path that starts with <code>/aws/vendedlogs</code>. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/AWS-logs-and-resource-policy.html">Enabling
+     * logging from certain Amazon Web Services services</a>.
+     * </p>
      */
     private String logGroupArn;
 
@@ -43,11 +49,22 @@ public class CloudWatchLogsConfigurationType implements Serializable, Cloneable,
      * not be encrypted with Key Management Service and must be in the same Amazon Web Services account as your user
      * pool.
      * </p>
+     * <p>
+     * To send logs to log groups with a resource policy of a size greater than 5120 characters, configure a log group
+     * with a path that starts with <code>/aws/vendedlogs</code>. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/AWS-logs-and-resource-policy.html">Enabling
+     * logging from certain Amazon Web Services services</a>.
+     * </p>
      * 
      * @param logGroupArn
      *        The Amazon Resource Name (arn) of a CloudWatch Logs log group where your user pool sends logs. The log
      *        group must not be encrypted with Key Management Service and must be in the same Amazon Web Services
-     *        account as your user pool.
+     *        account as your user pool.</p>
+     *        <p>
+     *        To send logs to log groups with a resource policy of a size greater than 5120 characters, configure a log
+     *        group with a path that starts with <code>/aws/vendedlogs</code>. For more information, see <a
+     *        href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/AWS-logs-and-resource-policy.html">Enabling
+     *        logging from certain Amazon Web Services services</a>.
      */
 
     public void setLogGroupArn(String logGroupArn) {
@@ -60,10 +77,21 @@ public class CloudWatchLogsConfigurationType implements Serializable, Cloneable,
      * not be encrypted with Key Management Service and must be in the same Amazon Web Services account as your user
      * pool.
      * </p>
+     * <p>
+     * To send logs to log groups with a resource policy of a size greater than 5120 characters, configure a log group
+     * with a path that starts with <code>/aws/vendedlogs</code>. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/AWS-logs-and-resource-policy.html">Enabling
+     * logging from certain Amazon Web Services services</a>.
+     * </p>
      * 
      * @return The Amazon Resource Name (arn) of a CloudWatch Logs log group where your user pool sends logs. The log
      *         group must not be encrypted with Key Management Service and must be in the same Amazon Web Services
-     *         account as your user pool.
+     *         account as your user pool.</p>
+     *         <p>
+     *         To send logs to log groups with a resource policy of a size greater than 5120 characters, configure a log
+     *         group with a path that starts with <code>/aws/vendedlogs</code>. For more information, see <a
+     *         href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/AWS-logs-and-resource-policy.html"
+     *         >Enabling logging from certain Amazon Web Services services</a>.
      */
 
     public String getLogGroupArn() {
@@ -76,11 +104,22 @@ public class CloudWatchLogsConfigurationType implements Serializable, Cloneable,
      * not be encrypted with Key Management Service and must be in the same Amazon Web Services account as your user
      * pool.
      * </p>
+     * <p>
+     * To send logs to log groups with a resource policy of a size greater than 5120 characters, configure a log group
+     * with a path that starts with <code>/aws/vendedlogs</code>. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/AWS-logs-and-resource-policy.html">Enabling
+     * logging from certain Amazon Web Services services</a>.
+     * </p>
      * 
      * @param logGroupArn
      *        The Amazon Resource Name (arn) of a CloudWatch Logs log group where your user pool sends logs. The log
      *        group must not be encrypted with Key Management Service and must be in the same Amazon Web Services
-     *        account as your user pool.
+     *        account as your user pool.</p>
+     *        <p>
+     *        To send logs to log groups with a resource policy of a size greater than 5120 characters, configure a log
+     *        group with a path that starts with <code>/aws/vendedlogs</code>. For more information, see <a
+     *        href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/AWS-logs-and-resource-policy.html">Enabling
+     *        logging from certain Amazon Web Services services</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

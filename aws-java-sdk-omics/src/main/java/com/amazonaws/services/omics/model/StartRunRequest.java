@@ -34,13 +34,13 @@ public class StartRunRequest extends com.amazonaws.AmazonWebServiceRequest imple
     private String workflowId;
     /**
      * <p>
-     * The run's workflows type.
+     * The run's workflow type.
      * </p>
      */
     private String workflowType;
     /**
      * <p>
-     * The run's ID.
+     * The ID of a run to duplicate.
      * </p>
      */
     private String runId;
@@ -98,6 +98,12 @@ public class StartRunRequest extends com.amazonaws.AmazonWebServiceRequest imple
      * </p>
      */
     private String requestId;
+    /**
+     * <p>
+     * The retention mode for the run.
+     * </p>
+     */
+    private String retentionMode;
 
     /**
      * <p>
@@ -141,11 +147,11 @@ public class StartRunRequest extends com.amazonaws.AmazonWebServiceRequest imple
 
     /**
      * <p>
-     * The run's workflows type.
+     * The run's workflow type.
      * </p>
      * 
      * @param workflowType
-     *        The run's workflows type.
+     *        The run's workflow type.
      * @see WorkflowType
      */
 
@@ -155,10 +161,10 @@ public class StartRunRequest extends com.amazonaws.AmazonWebServiceRequest imple
 
     /**
      * <p>
-     * The run's workflows type.
+     * The run's workflow type.
      * </p>
      * 
-     * @return The run's workflows type.
+     * @return The run's workflow type.
      * @see WorkflowType
      */
 
@@ -168,11 +174,11 @@ public class StartRunRequest extends com.amazonaws.AmazonWebServiceRequest imple
 
     /**
      * <p>
-     * The run's workflows type.
+     * The run's workflow type.
      * </p>
      * 
      * @param workflowType
-     *        The run's workflows type.
+     *        The run's workflow type.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see WorkflowType
      */
@@ -184,11 +190,11 @@ public class StartRunRequest extends com.amazonaws.AmazonWebServiceRequest imple
 
     /**
      * <p>
-     * The run's workflows type.
+     * The run's workflow type.
      * </p>
      * 
      * @param workflowType
-     *        The run's workflows type.
+     *        The run's workflow type.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see WorkflowType
      */
@@ -200,11 +206,11 @@ public class StartRunRequest extends com.amazonaws.AmazonWebServiceRequest imple
 
     /**
      * <p>
-     * The run's ID.
+     * The ID of a run to duplicate.
      * </p>
      * 
      * @param runId
-     *        The run's ID.
+     *        The ID of a run to duplicate.
      */
 
     public void setRunId(String runId) {
@@ -213,10 +219,10 @@ public class StartRunRequest extends com.amazonaws.AmazonWebServiceRequest imple
 
     /**
      * <p>
-     * The run's ID.
+     * The ID of a run to duplicate.
      * </p>
      * 
-     * @return The run's ID.
+     * @return The ID of a run to duplicate.
      */
 
     public String getRunId() {
@@ -225,11 +231,11 @@ public class StartRunRequest extends com.amazonaws.AmazonWebServiceRequest imple
 
     /**
      * <p>
-     * The run's ID.
+     * The ID of a run to duplicate.
      * </p>
      * 
      * @param runId
-     *        The run's ID.
+     *        The ID of a run to duplicate.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -646,6 +652,65 @@ public class StartRunRequest extends com.amazonaws.AmazonWebServiceRequest imple
     }
 
     /**
+     * <p>
+     * The retention mode for the run.
+     * </p>
+     * 
+     * @param retentionMode
+     *        The retention mode for the run.
+     * @see RunRetentionMode
+     */
+
+    public void setRetentionMode(String retentionMode) {
+        this.retentionMode = retentionMode;
+    }
+
+    /**
+     * <p>
+     * The retention mode for the run.
+     * </p>
+     * 
+     * @return The retention mode for the run.
+     * @see RunRetentionMode
+     */
+
+    public String getRetentionMode() {
+        return this.retentionMode;
+    }
+
+    /**
+     * <p>
+     * The retention mode for the run.
+     * </p>
+     * 
+     * @param retentionMode
+     *        The retention mode for the run.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see RunRetentionMode
+     */
+
+    public StartRunRequest withRetentionMode(String retentionMode) {
+        setRetentionMode(retentionMode);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The retention mode for the run.
+     * </p>
+     * 
+     * @param retentionMode
+     *        The retention mode for the run.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see RunRetentionMode
+     */
+
+    public StartRunRequest withRetentionMode(RunRetentionMode retentionMode) {
+        this.retentionMode = retentionMode.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -680,7 +745,9 @@ public class StartRunRequest extends com.amazonaws.AmazonWebServiceRequest imple
         if (getTags() != null)
             sb.append("Tags: ").append(getTags()).append(",");
         if (getRequestId() != null)
-            sb.append("RequestId: ").append(getRequestId());
+            sb.append("RequestId: ").append(getRequestId()).append(",");
+        if (getRetentionMode() != null)
+            sb.append("RetentionMode: ").append(getRetentionMode());
         sb.append("}");
         return sb.toString();
     }
@@ -743,6 +810,10 @@ public class StartRunRequest extends com.amazonaws.AmazonWebServiceRequest imple
             return false;
         if (other.getRequestId() != null && other.getRequestId().equals(this.getRequestId()) == false)
             return false;
+        if (other.getRetentionMode() == null ^ this.getRetentionMode() == null)
+            return false;
+        if (other.getRetentionMode() != null && other.getRetentionMode().equals(this.getRetentionMode()) == false)
+            return false;
         return true;
     }
 
@@ -763,6 +834,7 @@ public class StartRunRequest extends com.amazonaws.AmazonWebServiceRequest imple
         hashCode = prime * hashCode + ((getLogLevel() == null) ? 0 : getLogLevel().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getRequestId() == null) ? 0 : getRequestId().hashCode());
+        hashCode = prime * hashCode + ((getRetentionMode() == null) ? 0 : getRetentionMode().hashCode());
         return hashCode;
     }
 

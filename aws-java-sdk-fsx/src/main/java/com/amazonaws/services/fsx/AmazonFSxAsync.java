@@ -460,7 +460,7 @@ public interface AmazonFSxAsync extends AmazonFSx {
      * Creates an Amazon FSx for Lustre data repository association (DRA). A data repository association is a link
      * between a directory on the file system and an Amazon S3 bucket or prefix. You can have a maximum of 8 data
      * repository associations on a file system. Data repository associations are supported on all FSx for Lustre 2.12
-     * and newer file systems, excluding <code>scratch_1</code> deployment type.
+     * and 2.15 file systems, excluding <code>scratch_1</code> deployment type.
      * </p>
      * <p>
      * Each data repository association must have a unique Amazon FSx file system directory and a unique S3 bucket or
@@ -491,7 +491,7 @@ public interface AmazonFSxAsync extends AmazonFSx {
      * Creates an Amazon FSx for Lustre data repository association (DRA). A data repository association is a link
      * between a directory on the file system and an Amazon S3 bucket or prefix. You can have a maximum of 8 data
      * repository associations on a file system. Data repository associations are supported on all FSx for Lustre 2.12
-     * and newer file systems, excluding <code>scratch_1</code> deployment type.
+     * and 2.15 file systems, excluding <code>scratch_1</code> deployment type.
      * </p>
      * <p>
      * Each data repository association must have a unique Amazon FSx file system directory and a unique S3 bucket or
@@ -534,7 +534,7 @@ public interface AmazonFSxAsync extends AmazonFSx {
      * to a linked data repository.
      * </p>
      * <p>
-     * You use release data repository tasks to release data from your file system for files that are archived to S3.
+     * You use release data repository tasks to release data from your file system for files that are exported to S3.
      * The metadata of released files remains on the file system so users or applications can still access released
      * files by reading the files again, which will restore data from Amazon S3 to the FSx for Lustre file system.
      * </p>
@@ -566,7 +566,7 @@ public interface AmazonFSxAsync extends AmazonFSx {
      * to a linked data repository.
      * </p>
      * <p>
-     * You use release data repository tasks to release data from your file system for files that are archived to S3.
+     * You use release data repository tasks to release data from your file system for files that are exported to S3.
      * The metadata of released files remains on the file system so users or applications can still access released
      * files by reading the files again, which will restore data from Amazon S3 to the FSx for Lustre file system.
      * </p>
@@ -1190,7 +1190,7 @@ public interface AmazonFSxAsync extends AmazonFSx {
      * Deletes a data repository association on an Amazon FSx for Lustre file system. Deleting the data repository
      * association unlinks the file system from the Amazon S3 bucket. When deleting a data repository association, you
      * have the option of deleting the data in the file system that corresponds to the data repository association. Data
-     * repository associations are supported on all FSx for Lustre 2.12 and newer file systems, excluding
+     * repository associations are supported on all FSx for Lustre 2.12 and 2.15 file systems, excluding
      * <code>scratch_1</code> deployment type.
      * </p>
      * 
@@ -1209,7 +1209,7 @@ public interface AmazonFSxAsync extends AmazonFSx {
      * Deletes a data repository association on an Amazon FSx for Lustre file system. Deleting the data repository
      * association unlinks the file system from the Amazon S3 bucket. When deleting a data repository association, you
      * have the option of deleting the data in the file system that corresponds to the data repository association. Data
-     * repository associations are supported on all FSx for Lustre 2.12 and newer file systems, excluding
+     * repository associations are supported on all FSx for Lustre 2.12 and 2.15 file systems, excluding
      * <code>scratch_1</code> deployment type.
      * </p>
      * 
@@ -1298,6 +1298,20 @@ public interface AmazonFSxAsync extends AmazonFSx {
      * deletion. This final backup isn't subject to the file system's retention policy, and must be manually deleted.
      * </p>
      * <p>
+     * To delete an Amazon FSx for Lustre file system, first <a
+     * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/unmounting-fs.html">unmount</a> it from every connected
+     * Amazon EC2 instance, then provide a <code>FileSystemId</code> value to the <code>DeleFileSystem</code> operation.
+     * By default, Amazon FSx will not take a final backup when the <code>DeleteFileSystem</code> operation is invoked.
+     * On file systems not linked to an Amazon S3 bucket, set <code>SkipFinalBackup</code> to <code>false</code> to take
+     * a final backup of the file system you are deleting. Backups cannot be enabled on S3-linked file systems. To
+     * ensure all of your data is written back to S3 before deleting your file system, you can either monitor for the <a
+     * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/monitoring-cloudwatch.html#auto-import-export-metrics">
+     * AgeOfOldestQueuedMessage</a> metric to be zero (if using automatic export) or you can run an <a
+     * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/export-data-repo-task-dra.html">export data repository
+     * task</a>. If you have automatic export enabled and want to use an export data repository task, you have to
+     * disable automatic export before executing the export data repository task.
+     * </p>
+     * <p>
      * The <code>DeleteFileSystem</code> operation returns while the file system has the <code>DELETING</code> status.
      * You can check the file system deletion status by calling the <a
      * href="https://docs.aws.amazon.com/fsx/latest/APIReference/API_DescribeFileSystems.html">DescribeFileSystems</a>
@@ -1337,6 +1351,20 @@ public interface AmazonFSxAsync extends AmazonFSx {
      * <p>
      * By default, when you delete an Amazon FSx for Windows File Server file system, a final backup is created upon
      * deletion. This final backup isn't subject to the file system's retention policy, and must be manually deleted.
+     * </p>
+     * <p>
+     * To delete an Amazon FSx for Lustre file system, first <a
+     * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/unmounting-fs.html">unmount</a> it from every connected
+     * Amazon EC2 instance, then provide a <code>FileSystemId</code> value to the <code>DeleFileSystem</code> operation.
+     * By default, Amazon FSx will not take a final backup when the <code>DeleteFileSystem</code> operation is invoked.
+     * On file systems not linked to an Amazon S3 bucket, set <code>SkipFinalBackup</code> to <code>false</code> to take
+     * a final backup of the file system you are deleting. Backups cannot be enabled on S3-linked file systems. To
+     * ensure all of your data is written back to S3 before deleting your file system, you can either monitor for the <a
+     * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/monitoring-cloudwatch.html#auto-import-export-metrics">
+     * AgeOfOldestQueuedMessage</a> metric to be zero (if using automatic export) or you can run an <a
+     * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/export-data-repo-task-dra.html">export data repository
+     * task</a>. If you have automatic export enabled and want to use an export data repository task, you have to
+     * disable automatic export before executing the export data repository task.
      * </p>
      * <p>
      * The <code>DeleteFileSystem</code> operation returns while the file system has the <code>DELETING</code> status.
@@ -1577,7 +1605,7 @@ public interface AmazonFSxAsync extends AmazonFSx {
      * Returns the description of specific Amazon FSx for Lustre or Amazon File Cache data repository associations, if
      * one or more <code>AssociationIds</code> values are provided in the request, or if filters are used in the
      * request. Data repository associations are supported on Amazon File Cache resources and all FSx for Lustre 2.12
-     * and newer file systems, excluding <code>scratch_1</code> deployment type.
+     * and 2,15 file systems, excluding <code>scratch_1</code> deployment type.
      * </p>
      * <p>
      * You can use filters to narrow the response to include just data repository associations for specific file systems
@@ -1610,7 +1638,7 @@ public interface AmazonFSxAsync extends AmazonFSx {
      * Returns the description of specific Amazon FSx for Lustre or Amazon File Cache data repository associations, if
      * one or more <code>AssociationIds</code> values are provided in the request, or if filters are used in the
      * request. Data repository associations are supported on Amazon File Cache resources and all FSx for Lustre 2.12
-     * and newer file systems, excluding <code>scratch_1</code> deployment type.
+     * and 2,15 file systems, excluding <code>scratch_1</code> deployment type.
      * </p>
      * <p>
      * You can use filters to narrow the response to include just data repository associations for specific file systems
@@ -2363,7 +2391,7 @@ public interface AmazonFSxAsync extends AmazonFSx {
     /**
      * <p>
      * Updates the configuration of an existing data repository association on an Amazon FSx for Lustre file system.
-     * Data repository associations are supported on all FSx for Lustre 2.12 and newer file systems, excluding
+     * Data repository associations are supported on all FSx for Lustre 2.12 and 2.15 file systems, excluding
      * <code>scratch_1</code> deployment type.
      * </p>
      * 
@@ -2380,7 +2408,7 @@ public interface AmazonFSxAsync extends AmazonFSx {
     /**
      * <p>
      * Updates the configuration of an existing data repository association on an Amazon FSx for Lustre file system.
-     * Data repository associations are supported on all FSx for Lustre 2.12 and newer file systems, excluding
+     * Data repository associations are supported on all FSx for Lustre 2.12 and 2.15 file systems, excluding
      * <code>scratch_1</code> deployment type.
      * </p>
      * 
@@ -2588,6 +2616,11 @@ public interface AmazonFSxAsync extends AmazonFSx {
      * <ul>
      * <li>
      * <p>
+     * <code>AddRouteTableIds</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>AutomaticBackupRetentionDays</code>
      * </p>
      * </li>
@@ -2609,6 +2642,11 @@ public interface AmazonFSxAsync extends AmazonFSx {
      * <li>
      * <p>
      * <code>DiskIopsConfiguration</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>RemoveRouteTableIds</code>
      * </p>
      * </li>
      * <li>
@@ -2793,6 +2831,11 @@ public interface AmazonFSxAsync extends AmazonFSx {
      * <ul>
      * <li>
      * <p>
+     * <code>AddRouteTableIds</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>AutomaticBackupRetentionDays</code>
      * </p>
      * </li>
@@ -2814,6 +2857,11 @@ public interface AmazonFSxAsync extends AmazonFSx {
      * <li>
      * <p>
      * <code>DiskIopsConfiguration</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>RemoveRouteTableIds</code>
      * </p>
      * </li>
      * <li>

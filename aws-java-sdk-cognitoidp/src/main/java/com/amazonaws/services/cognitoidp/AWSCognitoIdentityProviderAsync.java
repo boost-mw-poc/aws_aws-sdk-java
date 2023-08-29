@@ -2502,6 +2502,7 @@ public interface AWSCognitoIdentityProviderAsync extends AWSCognitoIdentityProvi
      * </note>
      * <p>
      * Updates the specified user's attributes, including developer attributes, as an administrator. Works on any user.
+     * To delete an attribute from your user, submit the attribute in your API request with a blank value.
      * </p>
      * <p>
      * For custom attributes, you must prepend the <code>custom:</code> prefix to the attribute name.
@@ -2566,6 +2567,7 @@ public interface AWSCognitoIdentityProviderAsync extends AWSCognitoIdentityProvi
      * </note>
      * <p>
      * Updates the specified user's attributes, including developer attributes, as an administrator. Works on any user.
+     * To delete an attribute from your user, submit the attribute in your API request with a blank value.
      * </p>
      * <p>
      * For custom attributes, you must prepend the <code>custom:</code> prefix to the attribute name.
