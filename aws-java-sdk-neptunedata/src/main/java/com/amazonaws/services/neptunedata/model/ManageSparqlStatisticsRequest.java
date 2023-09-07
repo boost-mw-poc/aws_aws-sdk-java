@@ -16,7 +16,6 @@ import java.io.Serializable;
 import javax.annotation.Generated;
 
 import com.amazonaws.AmazonWebServiceRequest;
-import com.amazonaws.auth.SignerTypeAware;
 
 /**
  * 
@@ -24,7 +23,7 @@ import com.amazonaws.auth.SignerTypeAware;
  *      API Documentation</a>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
-public class ManageSparqlStatisticsRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable, SignerTypeAware {
+public class ManageSparqlStatisticsRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
     /**
      * <p>
@@ -148,11 +147,6 @@ public class ManageSparqlStatisticsRequest extends com.amazonaws.AmazonWebServic
     @Override
     public ManageSparqlStatisticsRequest clone() {
         return (ManageSparqlStatisticsRequest) super.clone();
-    }
-
-    @Override
-    public String getSignerType() {
-        return "AWS4SignerType";
     }
 
 }

@@ -16,7 +16,6 @@ import java.io.Serializable;
 import javax.annotation.Generated;
 
 import com.amazonaws.AmazonWebServiceRequest;
-import com.amazonaws.auth.SignerTypeAware;
 
 /**
  * 
@@ -24,7 +23,7 @@ import com.amazonaws.auth.SignerTypeAware;
  *      target="_top">AWS API Documentation</a>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
-public class StartMLDataProcessingJobRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable, SignerTypeAware {
+public class StartMLDataProcessingJobRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
     /**
      * <p>
@@ -1014,11 +1013,6 @@ public class StartMLDataProcessingJobRequest extends com.amazonaws.AmazonWebServ
     @Override
     public StartMLDataProcessingJobRequest clone() {
         return (StartMLDataProcessingJobRequest) super.clone();
-    }
-
-    @Override
-    public String getSignerType() {
-        return "AWS4SignerType";
     }
 
 }

@@ -1,3 +1,16 @@
+# __1.12.546__ __2023-09-07__
+## __AWS SecurityHub__
+  - ### Features
+    - Documentation updates for AWS Security Hub
+
+## __AWS SimSpace Weaver__
+  - ### Features
+    - BucketName and ObjectKey are now required for the S3Location data type. BucketName is now required for the S3Destination data type.
+
+## __Amazon NeptuneData__
+  - ### Features
+    - Minor changes to send unsigned requests to Neptune clusters
+
 # __1.12.545__ __2023-09-06__
 ## __AWS Elemental MediaLive__
   - ### Features

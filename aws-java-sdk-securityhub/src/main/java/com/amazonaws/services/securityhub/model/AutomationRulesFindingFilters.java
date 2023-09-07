@@ -32,11 +32,17 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * <p>
      * The Amazon Resource Name (ARN) for a third-party product that generated a finding in Security Hub.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      */
     private java.util.List<StringFilter> productArn;
     /**
      * <p>
      * The Amazon Web Services account ID in which a finding was generated.
+     * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 100 items.
      * </p>
      */
     private java.util.List<StringFilter> awsAccountId;
@@ -44,11 +50,17 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * <p>
      * The product-specific identifier for a finding.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      */
     private java.util.List<StringFilter> id;
     /**
      * <p>
      * The identifier for the solution-specific component that generated a finding.
+     * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 100 items.
      * </p>
      */
     private java.util.List<StringFilter> generatorId;
@@ -58,6 +70,9 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * namespaces, classifiers, and categories, see <a
      * href="https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-findings-format-type-taxonomy.html"
      * >Types taxonomy for ASFF</a> in the <i>Security Hub User Guide</i>.
+     * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
      * </p>
      */
     private java.util.List<StringFilter> type;
@@ -71,6 +86,9 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces. For example,
      * <code>2020-03-22T13:22:13.933Z</code>.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      */
     private java.util.List<DateFilter> firstObservedAt;
     /**
@@ -83,6 +101,9 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces. For example,
      * <code>2020-03-22T13:22:13.933Z</code>.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      */
     private java.util.List<DateFilter> lastObservedAt;
     /**
@@ -94,6 +115,9 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces. For example,
      * <code>2020-03-22T13:22:13.933Z</code>.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      */
     private java.util.List<DateFilter> createdAt;
     /**
@@ -104,6 +128,9 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * Uses the <code>date-time</code> format specified in <a href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC
      * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces. For example,
      * <code>2020-03-22T13:22:13.933Z</code>.
+     * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
      * </p>
      */
     private java.util.List<DateFilter> updatedAt;
@@ -117,6 +144,9 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * href="https://docs.aws.amazon.com/securityhub/latest/userguide/asff-top-level-attributes.html#asff-confidence"
      * >Confidence</a> in the <i>Security Hub User Guide</i>.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      */
     private java.util.List<NumberFilter> confidence;
     /**
@@ -128,11 +158,17 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * href="https://docs.aws.amazon.com/securityhub/latest/userguide/asff-top-level-attributes.html#asff-criticality"
      * >Criticality</a> in the <i>Security Hub User Guide</i>.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      */
     private java.util.List<NumberFilter> criticality;
     /**
      * <p>
      * A finding's title.
+     * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 100 items.
      * </p>
      */
     private java.util.List<StringFilter> title;
@@ -140,11 +176,17 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * <p>
      * A finding's description.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      */
     private java.util.List<StringFilter> description;
     /**
      * <p>
      * Provides a URL that links to a page about the current finding in the finding product.
+     * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
      * </p>
      */
     private java.util.List<StringFilter> sourceUrl;
@@ -153,6 +195,9 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * Provides the name of the product that generated the finding. For control-based findings, the product name is
      * Security Hub.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      */
     private java.util.List<StringFilter> productName;
     /**
@@ -160,17 +205,26 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * The name of the company for the product that generated the finding. For control-based findings, the company is
      * Amazon Web Services.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      */
     private java.util.List<StringFilter> companyName;
     /**
      * <p>
      * The severity value of the finding.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      */
     private java.util.List<StringFilter> severityLabel;
     /**
      * <p>
      * The type of resource that the finding pertains to.
+     * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
      * </p>
      */
     private java.util.List<StringFilter> resourceType;
@@ -181,6 +235,9 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * as defined by the Amazon Web Service that created the resource. For non-Amazon Web Services resources, this is a
      * unique identifier that is associated with the resource.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 100 items.
+     * </p>
      */
     private java.util.List<StringFilter> resourceId;
     /**
@@ -188,11 +245,17 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * The partition in which the resource that the finding pertains to is located. A partition is a group of Amazon Web
      * Services Regions. Each Amazon Web Services account is scoped to one partition.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      */
     private java.util.List<StringFilter> resourcePartition;
     /**
      * <p>
      * The Amazon Web Services Region where the resource that a finding pertains to is located.
+     * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
      * </p>
      */
     private java.util.List<StringFilter> resourceRegion;
@@ -200,11 +263,17 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * <p>
      * A list of Amazon Web Services tags associated with a resource at the time the finding was processed.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      */
     private java.util.List<MapFilter> resourceTags;
     /**
      * <p>
      * Custom fields and values about the resource that a finding pertains to.
+     * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
      * </p>
      */
     private java.util.List<MapFilter> resourceDetailsOther;
@@ -212,11 +281,17 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * <p>
      * The result of a security check. This field is only used for findings generated from controls.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      */
     private java.util.List<StringFilter> complianceStatus;
     /**
      * <p>
      * The security control ID for which a finding was generated. Security control IDs are the same across standards.
+     * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
      * </p>
      */
     private java.util.List<StringFilter> complianceSecurityControlId;
@@ -227,11 +302,17 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * href="https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_DescribeStandards.html">DescribeStandards</a>
      * API response.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      */
     private java.util.List<StringFilter> complianceAssociatedStandardsId;
     /**
      * <p>
      * Provides the veracity of a finding.
+     * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
      * </p>
      */
     private java.util.List<StringFilter> verificationState;
@@ -239,11 +320,17 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * <p>
      * Provides information about the status of the investigation into a finding.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      */
     private java.util.List<StringFilter> workflowStatus;
     /**
      * <p>
      * Provides the current state of a finding.
+     * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
      * </p>
      */
     private java.util.List<StringFilter> recordState;
@@ -251,17 +338,26 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * <p>
      * The ARN for the product that generated a related finding.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      */
     private java.util.List<StringFilter> relatedFindingsProductArn;
     /**
      * <p>
      * The product-generated identifier for a related finding.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      */
     private java.util.List<StringFilter> relatedFindingsId;
     /**
      * <p>
      * The text of a user-defined note that's added to a finding.
+     * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
      * </p>
      */
     private java.util.List<StringFilter> noteText;
@@ -271,17 +367,26 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time Format</a>.
      * The value cannot contain spaces. For example, <code>2020-03-22T13:22:13.933Z</code>.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      */
     private java.util.List<DateFilter> noteUpdatedAt;
     /**
      * <p>
      * The principal that created a note.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      */
     private java.util.List<StringFilter> noteUpdatedBy;
     /**
      * <p>
      * A list of user-defined name and value string pairs added to a finding.
+     * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
      * </p>
      */
     private java.util.List<MapFilter> userDefinedFields;
@@ -290,8 +395,13 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * <p>
      * The Amazon Resource Name (ARN) for a third-party product that generated a finding in Security Hub.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      * 
-     * @return The Amazon Resource Name (ARN) for a third-party product that generated a finding in Security Hub.
+     * @return The Amazon Resource Name (ARN) for a third-party product that generated a finding in Security Hub. </p>
+     *         <p>
+     *         Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
 
     public java.util.List<StringFilter> getProductArn() {
@@ -302,9 +412,14 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * <p>
      * The Amazon Resource Name (ARN) for a third-party product that generated a finding in Security Hub.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      * 
      * @param productArn
-     *        The Amazon Resource Name (ARN) for a third-party product that generated a finding in Security Hub.
+     *        The Amazon Resource Name (ARN) for a third-party product that generated a finding in Security Hub. </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
 
     public void setProductArn(java.util.Collection<StringFilter> productArn) {
@@ -321,13 +436,18 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * The Amazon Resource Name (ARN) for a third-party product that generated a finding in Security Hub.
      * </p>
      * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setProductArn(java.util.Collection)} or {@link #withProductArn(java.util.Collection)} if you want to
      * override the existing values.
      * </p>
      * 
      * @param productArn
-     *        The Amazon Resource Name (ARN) for a third-party product that generated a finding in Security Hub.
+     *        The Amazon Resource Name (ARN) for a third-party product that generated a finding in Security Hub. </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -345,9 +465,14 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * <p>
      * The Amazon Resource Name (ARN) for a third-party product that generated a finding in Security Hub.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      * 
      * @param productArn
-     *        The Amazon Resource Name (ARN) for a third-party product that generated a finding in Security Hub.
+     *        The Amazon Resource Name (ARN) for a third-party product that generated a finding in Security Hub. </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -360,8 +485,13 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * <p>
      * The Amazon Web Services account ID in which a finding was generated.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 100 items.
+     * </p>
      * 
-     * @return The Amazon Web Services account ID in which a finding was generated.
+     * @return The Amazon Web Services account ID in which a finding was generated. </p>
+     *         <p>
+     *         Array Members: Minimum number of 1 item. Maximum number of 100 items.
      */
 
     public java.util.List<StringFilter> getAwsAccountId() {
@@ -372,9 +502,14 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * <p>
      * The Amazon Web Services account ID in which a finding was generated.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 100 items.
+     * </p>
      * 
      * @param awsAccountId
-     *        The Amazon Web Services account ID in which a finding was generated.
+     *        The Amazon Web Services account ID in which a finding was generated. </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 100 items.
      */
 
     public void setAwsAccountId(java.util.Collection<StringFilter> awsAccountId) {
@@ -391,13 +526,18 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * The Amazon Web Services account ID in which a finding was generated.
      * </p>
      * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 100 items.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setAwsAccountId(java.util.Collection)} or {@link #withAwsAccountId(java.util.Collection)} if you want to
      * override the existing values.
      * </p>
      * 
      * @param awsAccountId
-     *        The Amazon Web Services account ID in which a finding was generated.
+     *        The Amazon Web Services account ID in which a finding was generated. </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 100 items.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -415,9 +555,14 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * <p>
      * The Amazon Web Services account ID in which a finding was generated.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 100 items.
+     * </p>
      * 
      * @param awsAccountId
-     *        The Amazon Web Services account ID in which a finding was generated.
+     *        The Amazon Web Services account ID in which a finding was generated. </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 100 items.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -430,8 +575,13 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * <p>
      * The product-specific identifier for a finding.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      * 
-     * @return The product-specific identifier for a finding.
+     * @return The product-specific identifier for a finding. </p>
+     *         <p>
+     *         Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
 
     public java.util.List<StringFilter> getId() {
@@ -442,9 +592,14 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * <p>
      * The product-specific identifier for a finding.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      * 
      * @param id
-     *        The product-specific identifier for a finding.
+     *        The product-specific identifier for a finding. </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
 
     public void setId(java.util.Collection<StringFilter> id) {
@@ -461,13 +616,18 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * The product-specific identifier for a finding.
      * </p>
      * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setId(java.util.Collection)} or {@link #withId(java.util.Collection)} if you want to override the
      * existing values.
      * </p>
      * 
      * @param id
-     *        The product-specific identifier for a finding.
+     *        The product-specific identifier for a finding. </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -485,9 +645,14 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * <p>
      * The product-specific identifier for a finding.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      * 
      * @param id
-     *        The product-specific identifier for a finding.
+     *        The product-specific identifier for a finding. </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -500,8 +665,13 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * <p>
      * The identifier for the solution-specific component that generated a finding.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 100 items.
+     * </p>
      * 
-     * @return The identifier for the solution-specific component that generated a finding.
+     * @return The identifier for the solution-specific component that generated a finding. </p>
+     *         <p>
+     *         Array Members: Minimum number of 1 item. Maximum number of 100 items.
      */
 
     public java.util.List<StringFilter> getGeneratorId() {
@@ -512,9 +682,14 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * <p>
      * The identifier for the solution-specific component that generated a finding.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 100 items.
+     * </p>
      * 
      * @param generatorId
-     *        The identifier for the solution-specific component that generated a finding.
+     *        The identifier for the solution-specific component that generated a finding. </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 100 items.
      */
 
     public void setGeneratorId(java.util.Collection<StringFilter> generatorId) {
@@ -531,13 +706,18 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * The identifier for the solution-specific component that generated a finding.
      * </p>
      * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 100 items.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setGeneratorId(java.util.Collection)} or {@link #withGeneratorId(java.util.Collection)} if you want to
      * override the existing values.
      * </p>
      * 
      * @param generatorId
-     *        The identifier for the solution-specific component that generated a finding.
+     *        The identifier for the solution-specific component that generated a finding. </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 100 items.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -555,9 +735,14 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * <p>
      * The identifier for the solution-specific component that generated a finding.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 100 items.
+     * </p>
      * 
      * @param generatorId
-     *        The identifier for the solution-specific component that generated a finding.
+     *        The identifier for the solution-specific component that generated a finding. </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 100 items.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -573,11 +758,16 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * href="https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-findings-format-type-taxonomy.html"
      * >Types taxonomy for ASFF</a> in the <i>Security Hub User Guide</i>.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      * 
      * @return One or more finding types in the format of namespace/category/classifier that classify a finding. For a
      *         list of namespaces, classifiers, and categories, see <a href=
      *         "https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-findings-format-type-taxonomy.html"
-     *         >Types taxonomy for ASFF</a> in the <i>Security Hub User Guide</i>.
+     *         >Types taxonomy for ASFF</a> in the <i>Security Hub User Guide</i>.</p>
+     *         <p>
+     *         Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
 
     public java.util.List<StringFilter> getType() {
@@ -591,12 +781,17 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * href="https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-findings-format-type-taxonomy.html"
      * >Types taxonomy for ASFF</a> in the <i>Security Hub User Guide</i>.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      * 
      * @param type
      *        One or more finding types in the format of namespace/category/classifier that classify a finding. For a
      *        list of namespaces, classifiers, and categories, see <a href=
      *        "https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-findings-format-type-taxonomy.html"
-     *        >Types taxonomy for ASFF</a> in the <i>Security Hub User Guide</i>.
+     *        >Types taxonomy for ASFF</a> in the <i>Security Hub User Guide</i>.</p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
 
     public void setType(java.util.Collection<StringFilter> type) {
@@ -616,6 +811,9 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * >Types taxonomy for ASFF</a> in the <i>Security Hub User Guide</i>.
      * </p>
      * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setType(java.util.Collection)} or {@link #withType(java.util.Collection)} if you want to override the
      * existing values.
@@ -625,7 +823,9 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      *        One or more finding types in the format of namespace/category/classifier that classify a finding. For a
      *        list of namespaces, classifiers, and categories, see <a href=
      *        "https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-findings-format-type-taxonomy.html"
-     *        >Types taxonomy for ASFF</a> in the <i>Security Hub User Guide</i>.
+     *        >Types taxonomy for ASFF</a> in the <i>Security Hub User Guide</i>.</p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -646,12 +846,17 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * href="https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-findings-format-type-taxonomy.html"
      * >Types taxonomy for ASFF</a> in the <i>Security Hub User Guide</i>.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      * 
      * @param type
      *        One or more finding types in the format of namespace/category/classifier that classify a finding. For a
      *        list of namespaces, classifiers, and categories, see <a href=
      *        "https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-findings-format-type-taxonomy.html"
-     *        >Types taxonomy for ASFF</a> in the <i>Security Hub User Guide</i>.
+     *        >Types taxonomy for ASFF</a> in the <i>Security Hub User Guide</i>.</p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -670,6 +875,9 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces. For example,
      * <code>2020-03-22T13:22:13.933Z</code>.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      * 
      * @return A timestamp that indicates when the potential security issue captured by a finding was first observed by
      *         the security findings product. </p>
@@ -677,6 +885,9 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      *         Uses the <code>date-time</code> format specified in <a
      *         href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
      *         Format</a>. The value cannot contain spaces. For example, <code>2020-03-22T13:22:13.933Z</code>.
+     *         </p>
+     *         <p>
+     *         Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
 
     public java.util.List<DateFilter> getFirstObservedAt() {
@@ -693,6 +904,9 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces. For example,
      * <code>2020-03-22T13:22:13.933Z</code>.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      * 
      * @param firstObservedAt
      *        A timestamp that indicates when the potential security issue captured by a finding was first observed by
@@ -701,6 +915,9 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      *        Uses the <code>date-time</code> format specified in <a
      *        href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
      *        Format</a>. The value cannot contain spaces. For example, <code>2020-03-22T13:22:13.933Z</code>.
+     *        </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
 
     public void setFirstObservedAt(java.util.Collection<DateFilter> firstObservedAt) {
@@ -723,6 +940,9 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * <code>2020-03-22T13:22:13.933Z</code>.
      * </p>
      * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setFirstObservedAt(java.util.Collection)} or {@link #withFirstObservedAt(java.util.Collection)} if you
      * want to override the existing values.
@@ -735,6 +955,9 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      *        Uses the <code>date-time</code> format specified in <a
      *        href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
      *        Format</a>. The value cannot contain spaces. For example, <code>2020-03-22T13:22:13.933Z</code>.
+     *        </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -758,6 +981,9 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces. For example,
      * <code>2020-03-22T13:22:13.933Z</code>.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      * 
      * @param firstObservedAt
      *        A timestamp that indicates when the potential security issue captured by a finding was first observed by
@@ -766,6 +992,9 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      *        Uses the <code>date-time</code> format specified in <a
      *        href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
      *        Format</a>. The value cannot contain spaces. For example, <code>2020-03-22T13:22:13.933Z</code>.
+     *        </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -784,6 +1013,9 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces. For example,
      * <code>2020-03-22T13:22:13.933Z</code>.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      * 
      * @return A timestamp that indicates when the potential security issue captured by a finding was most recently
      *         observed by the security findings product. </p>
@@ -791,6 +1023,9 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      *         Uses the <code>date-time</code> format specified in <a
      *         href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
      *         Format</a>. The value cannot contain spaces. For example, <code>2020-03-22T13:22:13.933Z</code>.
+     *         </p>
+     *         <p>
+     *         Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
 
     public java.util.List<DateFilter> getLastObservedAt() {
@@ -807,6 +1042,9 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces. For example,
      * <code>2020-03-22T13:22:13.933Z</code>.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      * 
      * @param lastObservedAt
      *        A timestamp that indicates when the potential security issue captured by a finding was most recently
@@ -815,6 +1053,9 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      *        Uses the <code>date-time</code> format specified in <a
      *        href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
      *        Format</a>. The value cannot contain spaces. For example, <code>2020-03-22T13:22:13.933Z</code>.
+     *        </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
 
     public void setLastObservedAt(java.util.Collection<DateFilter> lastObservedAt) {
@@ -837,6 +1078,9 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * <code>2020-03-22T13:22:13.933Z</code>.
      * </p>
      * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setLastObservedAt(java.util.Collection)} or {@link #withLastObservedAt(java.util.Collection)} if you want
      * to override the existing values.
@@ -849,6 +1093,9 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      *        Uses the <code>date-time</code> format specified in <a
      *        href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
      *        Format</a>. The value cannot contain spaces. For example, <code>2020-03-22T13:22:13.933Z</code>.
+     *        </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -872,6 +1119,9 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces. For example,
      * <code>2020-03-22T13:22:13.933Z</code>.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      * 
      * @param lastObservedAt
      *        A timestamp that indicates when the potential security issue captured by a finding was most recently
@@ -880,6 +1130,9 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      *        Uses the <code>date-time</code> format specified in <a
      *        href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
      *        Format</a>. The value cannot contain spaces. For example, <code>2020-03-22T13:22:13.933Z</code>.
+     *        </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -897,12 +1150,18 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces. For example,
      * <code>2020-03-22T13:22:13.933Z</code>.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      * 
      * @return A timestamp that indicates when this finding record was created. </p>
      *         <p>
      *         Uses the <code>date-time</code> format specified in <a
      *         href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
      *         Format</a>. The value cannot contain spaces. For example, <code>2020-03-22T13:22:13.933Z</code>.
+     *         </p>
+     *         <p>
+     *         Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
 
     public java.util.List<DateFilter> getCreatedAt() {
@@ -918,6 +1177,9 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces. For example,
      * <code>2020-03-22T13:22:13.933Z</code>.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      * 
      * @param createdAt
      *        A timestamp that indicates when this finding record was created. </p>
@@ -925,6 +1187,9 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      *        Uses the <code>date-time</code> format specified in <a
      *        href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
      *        Format</a>. The value cannot contain spaces. For example, <code>2020-03-22T13:22:13.933Z</code>.
+     *        </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
 
     public void setCreatedAt(java.util.Collection<DateFilter> createdAt) {
@@ -946,6 +1211,9 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * <code>2020-03-22T13:22:13.933Z</code>.
      * </p>
      * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setCreatedAt(java.util.Collection)} or {@link #withCreatedAt(java.util.Collection)} if you want to
      * override the existing values.
@@ -957,6 +1225,9 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      *        Uses the <code>date-time</code> format specified in <a
      *        href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
      *        Format</a>. The value cannot contain spaces. For example, <code>2020-03-22T13:22:13.933Z</code>.
+     *        </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -979,6 +1250,9 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces. For example,
      * <code>2020-03-22T13:22:13.933Z</code>.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      * 
      * @param createdAt
      *        A timestamp that indicates when this finding record was created. </p>
@@ -986,6 +1260,9 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      *        Uses the <code>date-time</code> format specified in <a
      *        href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
      *        Format</a>. The value cannot contain spaces. For example, <code>2020-03-22T13:22:13.933Z</code>.
+     *        </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1003,12 +1280,18 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces. For example,
      * <code>2020-03-22T13:22:13.933Z</code>.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      * 
      * @return A timestamp that indicates when the finding record was most recently updated. </p>
      *         <p>
      *         Uses the <code>date-time</code> format specified in <a
      *         href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
      *         Format</a>. The value cannot contain spaces. For example, <code>2020-03-22T13:22:13.933Z</code>.
+     *         </p>
+     *         <p>
+     *         Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
 
     public java.util.List<DateFilter> getUpdatedAt() {
@@ -1024,6 +1307,9 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces. For example,
      * <code>2020-03-22T13:22:13.933Z</code>.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      * 
      * @param updatedAt
      *        A timestamp that indicates when the finding record was most recently updated. </p>
@@ -1031,6 +1317,9 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      *        Uses the <code>date-time</code> format specified in <a
      *        href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
      *        Format</a>. The value cannot contain spaces. For example, <code>2020-03-22T13:22:13.933Z</code>.
+     *        </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
 
     public void setUpdatedAt(java.util.Collection<DateFilter> updatedAt) {
@@ -1052,6 +1341,9 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * <code>2020-03-22T13:22:13.933Z</code>.
      * </p>
      * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setUpdatedAt(java.util.Collection)} or {@link #withUpdatedAt(java.util.Collection)} if you want to
      * override the existing values.
@@ -1063,6 +1355,9 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      *        Uses the <code>date-time</code> format specified in <a
      *        href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
      *        Format</a>. The value cannot contain spaces. For example, <code>2020-03-22T13:22:13.933Z</code>.
+     *        </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1085,6 +1380,9 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * 3339 section 5.6, Internet Date/Time Format</a>. The value cannot contain spaces. For example,
      * <code>2020-03-22T13:22:13.933Z</code>.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      * 
      * @param updatedAt
      *        A timestamp that indicates when the finding record was most recently updated. </p>
@@ -1092,6 +1390,9 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      *        Uses the <code>date-time</code> format specified in <a
      *        href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
      *        Format</a>. The value cannot contain spaces. For example, <code>2020-03-22T13:22:13.933Z</code>.
+     *        </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1110,6 +1411,9 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * href="https://docs.aws.amazon.com/securityhub/latest/userguide/asff-top-level-attributes.html#asff-confidence"
      * >Confidence</a> in the <i>Security Hub User Guide</i>.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      * 
      * @return The likelihood that a finding accurately identifies the behavior or issue that it was intended to
      *         identify. <code>Confidence</code> is scored on a 0–100 basis using a ratio scale. A value of
@@ -1117,7 +1421,9 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      *         For example, a data exfiltration detection based on a statistical deviation of network traffic has low
      *         confidence because an actual exfiltration hasn't been verified. For more information, see <a href=
      *         "https://docs.aws.amazon.com/securityhub/latest/userguide/asff-top-level-attributes.html#asff-confidence"
-     *         >Confidence</a> in the <i>Security Hub User Guide</i>.
+     *         >Confidence</a> in the <i>Security Hub User Guide</i>.</p>
+     *         <p>
+     *         Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
 
     public java.util.List<NumberFilter> getConfidence() {
@@ -1134,6 +1440,9 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * href="https://docs.aws.amazon.com/securityhub/latest/userguide/asff-top-level-attributes.html#asff-confidence"
      * >Confidence</a> in the <i>Security Hub User Guide</i>.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      * 
      * @param confidence
      *        The likelihood that a finding accurately identifies the behavior or issue that it was intended to
@@ -1142,7 +1451,9 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      *        For example, a data exfiltration detection based on a statistical deviation of network traffic has low
      *        confidence because an actual exfiltration hasn't been verified. For more information, see <a href=
      *        "https://docs.aws.amazon.com/securityhub/latest/userguide/asff-top-level-attributes.html#asff-confidence"
-     *        >Confidence</a> in the <i>Security Hub User Guide</i>.
+     *        >Confidence</a> in the <i>Security Hub User Guide</i>.</p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
 
     public void setConfidence(java.util.Collection<NumberFilter> confidence) {
@@ -1165,6 +1476,9 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * >Confidence</a> in the <i>Security Hub User Guide</i>.
      * </p>
      * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setConfidence(java.util.Collection)} or {@link #withConfidence(java.util.Collection)} if you want to
      * override the existing values.
@@ -1177,7 +1491,9 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      *        For example, a data exfiltration detection based on a statistical deviation of network traffic has low
      *        confidence because an actual exfiltration hasn't been verified. For more information, see <a href=
      *        "https://docs.aws.amazon.com/securityhub/latest/userguide/asff-top-level-attributes.html#asff-confidence"
-     *        >Confidence</a> in the <i>Security Hub User Guide</i>.
+     *        >Confidence</a> in the <i>Security Hub User Guide</i>.</p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1201,6 +1517,9 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * href="https://docs.aws.amazon.com/securityhub/latest/userguide/asff-top-level-attributes.html#asff-confidence"
      * >Confidence</a> in the <i>Security Hub User Guide</i>.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      * 
      * @param confidence
      *        The likelihood that a finding accurately identifies the behavior or issue that it was intended to
@@ -1209,7 +1528,9 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      *        For example, a data exfiltration detection based on a statistical deviation of network traffic has low
      *        confidence because an actual exfiltration hasn't been verified. For more information, see <a href=
      *        "https://docs.aws.amazon.com/securityhub/latest/userguide/asff-top-level-attributes.html#asff-confidence"
-     *        >Confidence</a> in the <i>Security Hub User Guide</i>.
+     *        >Confidence</a> in the <i>Security Hub User Guide</i>.</p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1227,13 +1548,18 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * href="https://docs.aws.amazon.com/securityhub/latest/userguide/asff-top-level-attributes.html#asff-criticality"
      * >Criticality</a> in the <i>Security Hub User Guide</i>.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      * 
      * @return The level of importance that is assigned to the resources that are associated with a finding.
      *         <code>Criticality</code> is scored on a 0–100 basis, using a ratio scale that supports only full
      *         integers. A score of <code>0</code> means that the underlying resources have no criticality, and a score
      *         of <code>100</code> is reserved for the most critical resources. For more information, see <a
      *         href="https://docs.aws.amazon.com/securityhub/latest/userguide/asff-top-level-attributes.html#asff-criticality"
-     *         >Criticality</a> in the <i>Security Hub User Guide</i>.
+     *         >Criticality</a> in the <i>Security Hub User Guide</i>.</p>
+     *         <p>
+     *         Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
 
     public java.util.List<NumberFilter> getCriticality() {
@@ -1249,6 +1575,9 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * href="https://docs.aws.amazon.com/securityhub/latest/userguide/asff-top-level-attributes.html#asff-criticality"
      * >Criticality</a> in the <i>Security Hub User Guide</i>.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      * 
      * @param criticality
      *        The level of importance that is assigned to the resources that are associated with a finding.
@@ -1256,7 +1585,9 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      *        A score of <code>0</code> means that the underlying resources have no criticality, and a score of
      *        <code>100</code> is reserved for the most critical resources. For more information, see <a
      *        href="https://docs.aws.amazon.com/securityhub/latest/userguide/asff-top-level-attributes.html#asff-criticality"
-     *        >Criticality</a> in the <i>Security Hub User Guide</i>.
+     *        >Criticality</a> in the <i>Security Hub User Guide</i>.</p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
 
     public void setCriticality(java.util.Collection<NumberFilter> criticality) {
@@ -1278,6 +1609,9 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * >Criticality</a> in the <i>Security Hub User Guide</i>.
      * </p>
      * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setCriticality(java.util.Collection)} or {@link #withCriticality(java.util.Collection)} if you want to
      * override the existing values.
@@ -1289,7 +1623,9 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      *        A score of <code>0</code> means that the underlying resources have no criticality, and a score of
      *        <code>100</code> is reserved for the most critical resources. For more information, see <a
      *        href="https://docs.aws.amazon.com/securityhub/latest/userguide/asff-top-level-attributes.html#asff-criticality"
-     *        >Criticality</a> in the <i>Security Hub User Guide</i>.
+     *        >Criticality</a> in the <i>Security Hub User Guide</i>.</p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1312,6 +1648,9 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * href="https://docs.aws.amazon.com/securityhub/latest/userguide/asff-top-level-attributes.html#asff-criticality"
      * >Criticality</a> in the <i>Security Hub User Guide</i>.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      * 
      * @param criticality
      *        The level of importance that is assigned to the resources that are associated with a finding.
@@ -1319,7 +1658,9 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      *        A score of <code>0</code> means that the underlying resources have no criticality, and a score of
      *        <code>100</code> is reserved for the most critical resources. For more information, see <a
      *        href="https://docs.aws.amazon.com/securityhub/latest/userguide/asff-top-level-attributes.html#asff-criticality"
-     *        >Criticality</a> in the <i>Security Hub User Guide</i>.
+     *        >Criticality</a> in the <i>Security Hub User Guide</i>.</p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1332,8 +1673,13 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * <p>
      * A finding's title.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 100 items.
+     * </p>
      * 
-     * @return A finding's title.
+     * @return A finding's title. </p>
+     *         <p>
+     *         Array Members: Minimum number of 1 item. Maximum number of 100 items.
      */
 
     public java.util.List<StringFilter> getTitle() {
@@ -1344,9 +1690,14 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * <p>
      * A finding's title.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 100 items.
+     * </p>
      * 
      * @param title
-     *        A finding's title.
+     *        A finding's title. </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 100 items.
      */
 
     public void setTitle(java.util.Collection<StringFilter> title) {
@@ -1363,13 +1714,18 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * A finding's title.
      * </p>
      * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 100 items.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setTitle(java.util.Collection)} or {@link #withTitle(java.util.Collection)} if you want to override the
      * existing values.
      * </p>
      * 
      * @param title
-     *        A finding's title.
+     *        A finding's title. </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 100 items.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1387,9 +1743,14 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * <p>
      * A finding's title.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 100 items.
+     * </p>
      * 
      * @param title
-     *        A finding's title.
+     *        A finding's title. </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 100 items.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1402,8 +1763,13 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * <p>
      * A finding's description.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      * 
-     * @return A finding's description.
+     * @return A finding's description. </p>
+     *         <p>
+     *         Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
 
     public java.util.List<StringFilter> getDescription() {
@@ -1414,9 +1780,14 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * <p>
      * A finding's description.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      * 
      * @param description
-     *        A finding's description.
+     *        A finding's description. </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
 
     public void setDescription(java.util.Collection<StringFilter> description) {
@@ -1433,13 +1804,18 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * A finding's description.
      * </p>
      * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setDescription(java.util.Collection)} or {@link #withDescription(java.util.Collection)} if you want to
      * override the existing values.
      * </p>
      * 
      * @param description
-     *        A finding's description.
+     *        A finding's description. </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1457,9 +1833,14 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * <p>
      * A finding's description.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      * 
      * @param description
-     *        A finding's description.
+     *        A finding's description. </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1472,8 +1853,13 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * <p>
      * Provides a URL that links to a page about the current finding in the finding product.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      * 
-     * @return Provides a URL that links to a page about the current finding in the finding product.
+     * @return Provides a URL that links to a page about the current finding in the finding product. </p>
+     *         <p>
+     *         Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
 
     public java.util.List<StringFilter> getSourceUrl() {
@@ -1484,9 +1870,14 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * <p>
      * Provides a URL that links to a page about the current finding in the finding product.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      * 
      * @param sourceUrl
-     *        Provides a URL that links to a page about the current finding in the finding product.
+     *        Provides a URL that links to a page about the current finding in the finding product. </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
 
     public void setSourceUrl(java.util.Collection<StringFilter> sourceUrl) {
@@ -1503,13 +1894,18 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * Provides a URL that links to a page about the current finding in the finding product.
      * </p>
      * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setSourceUrl(java.util.Collection)} or {@link #withSourceUrl(java.util.Collection)} if you want to
      * override the existing values.
      * </p>
      * 
      * @param sourceUrl
-     *        Provides a URL that links to a page about the current finding in the finding product.
+     *        Provides a URL that links to a page about the current finding in the finding product. </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1527,9 +1923,14 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * <p>
      * Provides a URL that links to a page about the current finding in the finding product.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      * 
      * @param sourceUrl
-     *        Provides a URL that links to a page about the current finding in the finding product.
+     *        Provides a URL that links to a page about the current finding in the finding product. </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1543,9 +1944,14 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * Provides the name of the product that generated the finding. For control-based findings, the product name is
      * Security Hub.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      * 
      * @return Provides the name of the product that generated the finding. For control-based findings, the product name
-     *         is Security Hub.
+     *         is Security Hub. </p>
+     *         <p>
+     *         Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
 
     public java.util.List<StringFilter> getProductName() {
@@ -1557,10 +1963,15 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * Provides the name of the product that generated the finding. For control-based findings, the product name is
      * Security Hub.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      * 
      * @param productName
      *        Provides the name of the product that generated the finding. For control-based findings, the product name
-     *        is Security Hub.
+     *        is Security Hub. </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
 
     public void setProductName(java.util.Collection<StringFilter> productName) {
@@ -1578,6 +1989,9 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * Security Hub.
      * </p>
      * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setProductName(java.util.Collection)} or {@link #withProductName(java.util.Collection)} if you want to
      * override the existing values.
@@ -1585,7 +1999,9 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * 
      * @param productName
      *        Provides the name of the product that generated the finding. For control-based findings, the product name
-     *        is Security Hub.
+     *        is Security Hub. </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1604,10 +2020,15 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * Provides the name of the product that generated the finding. For control-based findings, the product name is
      * Security Hub.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      * 
      * @param productName
      *        Provides the name of the product that generated the finding. For control-based findings, the product name
-     *        is Security Hub.
+     *        is Security Hub. </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1621,9 +2042,14 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * The name of the company for the product that generated the finding. For control-based findings, the company is
      * Amazon Web Services.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      * 
      * @return The name of the company for the product that generated the finding. For control-based findings, the
-     *         company is Amazon Web Services.
+     *         company is Amazon Web Services. </p>
+     *         <p>
+     *         Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
 
     public java.util.List<StringFilter> getCompanyName() {
@@ -1635,10 +2061,15 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * The name of the company for the product that generated the finding. For control-based findings, the company is
      * Amazon Web Services.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      * 
      * @param companyName
      *        The name of the company for the product that generated the finding. For control-based findings, the
-     *        company is Amazon Web Services.
+     *        company is Amazon Web Services. </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
 
     public void setCompanyName(java.util.Collection<StringFilter> companyName) {
@@ -1656,6 +2087,9 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * Amazon Web Services.
      * </p>
      * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setCompanyName(java.util.Collection)} or {@link #withCompanyName(java.util.Collection)} if you want to
      * override the existing values.
@@ -1663,7 +2097,9 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * 
      * @param companyName
      *        The name of the company for the product that generated the finding. For control-based findings, the
-     *        company is Amazon Web Services.
+     *        company is Amazon Web Services. </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1682,10 +2118,15 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * The name of the company for the product that generated the finding. For control-based findings, the company is
      * Amazon Web Services.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      * 
      * @param companyName
      *        The name of the company for the product that generated the finding. For control-based findings, the
-     *        company is Amazon Web Services.
+     *        company is Amazon Web Services. </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1698,8 +2139,13 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * <p>
      * The severity value of the finding.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      * 
-     * @return The severity value of the finding.
+     * @return The severity value of the finding. </p>
+     *         <p>
+     *         Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
 
     public java.util.List<StringFilter> getSeverityLabel() {
@@ -1710,9 +2156,14 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * <p>
      * The severity value of the finding.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      * 
      * @param severityLabel
-     *        The severity value of the finding.
+     *        The severity value of the finding. </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
 
     public void setSeverityLabel(java.util.Collection<StringFilter> severityLabel) {
@@ -1729,13 +2180,18 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * The severity value of the finding.
      * </p>
      * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setSeverityLabel(java.util.Collection)} or {@link #withSeverityLabel(java.util.Collection)} if you want
      * to override the existing values.
      * </p>
      * 
      * @param severityLabel
-     *        The severity value of the finding.
+     *        The severity value of the finding. </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1753,9 +2209,14 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * <p>
      * The severity value of the finding.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      * 
      * @param severityLabel
-     *        The severity value of the finding.
+     *        The severity value of the finding. </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1768,8 +2229,13 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * <p>
      * The type of resource that the finding pertains to.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      * 
-     * @return The type of resource that the finding pertains to.
+     * @return The type of resource that the finding pertains to. </p>
+     *         <p>
+     *         Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
 
     public java.util.List<StringFilter> getResourceType() {
@@ -1780,9 +2246,14 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * <p>
      * The type of resource that the finding pertains to.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      * 
      * @param resourceType
-     *        The type of resource that the finding pertains to.
+     *        The type of resource that the finding pertains to. </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
 
     public void setResourceType(java.util.Collection<StringFilter> resourceType) {
@@ -1799,13 +2270,18 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * The type of resource that the finding pertains to.
      * </p>
      * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setResourceType(java.util.Collection)} or {@link #withResourceType(java.util.Collection)} if you want to
      * override the existing values.
      * </p>
      * 
      * @param resourceType
-     *        The type of resource that the finding pertains to.
+     *        The type of resource that the finding pertains to. </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1823,9 +2299,14 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * <p>
      * The type of resource that the finding pertains to.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      * 
      * @param resourceType
-     *        The type of resource that the finding pertains to.
+     *        The type of resource that the finding pertains to. </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1841,11 +2322,16 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * as defined by the Amazon Web Service that created the resource. For non-Amazon Web Services resources, this is a
      * unique identifier that is associated with the resource.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 100 items.
+     * </p>
      * 
      * @return The identifier for the given resource type. For Amazon Web Services resources that are identified by
      *         Amazon Resource Names (ARNs), this is the ARN. For Amazon Web Services resources that lack ARNs, this is
      *         the identifier as defined by the Amazon Web Service that created the resource. For non-Amazon Web
-     *         Services resources, this is a unique identifier that is associated with the resource.
+     *         Services resources, this is a unique identifier that is associated with the resource. </p>
+     *         <p>
+     *         Array Members: Minimum number of 1 item. Maximum number of 100 items.
      */
 
     public java.util.List<StringFilter> getResourceId() {
@@ -1859,12 +2345,17 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * as defined by the Amazon Web Service that created the resource. For non-Amazon Web Services resources, this is a
      * unique identifier that is associated with the resource.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 100 items.
+     * </p>
      * 
      * @param resourceId
      *        The identifier for the given resource type. For Amazon Web Services resources that are identified by
      *        Amazon Resource Names (ARNs), this is the ARN. For Amazon Web Services resources that lack ARNs, this is
      *        the identifier as defined by the Amazon Web Service that created the resource. For non-Amazon Web Services
-     *        resources, this is a unique identifier that is associated with the resource.
+     *        resources, this is a unique identifier that is associated with the resource. </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 100 items.
      */
 
     public void setResourceId(java.util.Collection<StringFilter> resourceId) {
@@ -1884,6 +2375,9 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * unique identifier that is associated with the resource.
      * </p>
      * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 100 items.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setResourceId(java.util.Collection)} or {@link #withResourceId(java.util.Collection)} if you want to
      * override the existing values.
@@ -1893,7 +2387,9 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      *        The identifier for the given resource type. For Amazon Web Services resources that are identified by
      *        Amazon Resource Names (ARNs), this is the ARN. For Amazon Web Services resources that lack ARNs, this is
      *        the identifier as defined by the Amazon Web Service that created the resource. For non-Amazon Web Services
-     *        resources, this is a unique identifier that is associated with the resource.
+     *        resources, this is a unique identifier that is associated with the resource. </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 100 items.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1914,12 +2410,17 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * as defined by the Amazon Web Service that created the resource. For non-Amazon Web Services resources, this is a
      * unique identifier that is associated with the resource.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 100 items.
+     * </p>
      * 
      * @param resourceId
      *        The identifier for the given resource type. For Amazon Web Services resources that are identified by
      *        Amazon Resource Names (ARNs), this is the ARN. For Amazon Web Services resources that lack ARNs, this is
      *        the identifier as defined by the Amazon Web Service that created the resource. For non-Amazon Web Services
-     *        resources, this is a unique identifier that is associated with the resource.
+     *        resources, this is a unique identifier that is associated with the resource. </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 100 items.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1933,9 +2434,14 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * The partition in which the resource that the finding pertains to is located. A partition is a group of Amazon Web
      * Services Regions. Each Amazon Web Services account is scoped to one partition.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      * 
      * @return The partition in which the resource that the finding pertains to is located. A partition is a group of
-     *         Amazon Web Services Regions. Each Amazon Web Services account is scoped to one partition.
+     *         Amazon Web Services Regions. Each Amazon Web Services account is scoped to one partition. </p>
+     *         <p>
+     *         Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
 
     public java.util.List<StringFilter> getResourcePartition() {
@@ -1947,10 +2453,15 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * The partition in which the resource that the finding pertains to is located. A partition is a group of Amazon Web
      * Services Regions. Each Amazon Web Services account is scoped to one partition.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      * 
      * @param resourcePartition
      *        The partition in which the resource that the finding pertains to is located. A partition is a group of
-     *        Amazon Web Services Regions. Each Amazon Web Services account is scoped to one partition.
+     *        Amazon Web Services Regions. Each Amazon Web Services account is scoped to one partition. </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
 
     public void setResourcePartition(java.util.Collection<StringFilter> resourcePartition) {
@@ -1968,6 +2479,9 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * Services Regions. Each Amazon Web Services account is scoped to one partition.
      * </p>
      * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setResourcePartition(java.util.Collection)} or {@link #withResourcePartition(java.util.Collection)} if
      * you want to override the existing values.
@@ -1975,7 +2489,9 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * 
      * @param resourcePartition
      *        The partition in which the resource that the finding pertains to is located. A partition is a group of
-     *        Amazon Web Services Regions. Each Amazon Web Services account is scoped to one partition.
+     *        Amazon Web Services Regions. Each Amazon Web Services account is scoped to one partition. </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1994,10 +2510,15 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * The partition in which the resource that the finding pertains to is located. A partition is a group of Amazon Web
      * Services Regions. Each Amazon Web Services account is scoped to one partition.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      * 
      * @param resourcePartition
      *        The partition in which the resource that the finding pertains to is located. A partition is a group of
-     *        Amazon Web Services Regions. Each Amazon Web Services account is scoped to one partition.
+     *        Amazon Web Services Regions. Each Amazon Web Services account is scoped to one partition. </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2010,8 +2531,13 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * <p>
      * The Amazon Web Services Region where the resource that a finding pertains to is located.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      * 
-     * @return The Amazon Web Services Region where the resource that a finding pertains to is located.
+     * @return The Amazon Web Services Region where the resource that a finding pertains to is located. </p>
+     *         <p>
+     *         Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
 
     public java.util.List<StringFilter> getResourceRegion() {
@@ -2022,9 +2548,14 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * <p>
      * The Amazon Web Services Region where the resource that a finding pertains to is located.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      * 
      * @param resourceRegion
-     *        The Amazon Web Services Region where the resource that a finding pertains to is located.
+     *        The Amazon Web Services Region where the resource that a finding pertains to is located. </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
 
     public void setResourceRegion(java.util.Collection<StringFilter> resourceRegion) {
@@ -2041,13 +2572,18 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * The Amazon Web Services Region where the resource that a finding pertains to is located.
      * </p>
      * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setResourceRegion(java.util.Collection)} or {@link #withResourceRegion(java.util.Collection)} if you want
      * to override the existing values.
      * </p>
      * 
      * @param resourceRegion
-     *        The Amazon Web Services Region where the resource that a finding pertains to is located.
+     *        The Amazon Web Services Region where the resource that a finding pertains to is located. </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2065,9 +2601,14 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * <p>
      * The Amazon Web Services Region where the resource that a finding pertains to is located.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      * 
      * @param resourceRegion
-     *        The Amazon Web Services Region where the resource that a finding pertains to is located.
+     *        The Amazon Web Services Region where the resource that a finding pertains to is located. </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2080,8 +2621,13 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * <p>
      * A list of Amazon Web Services tags associated with a resource at the time the finding was processed.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      * 
-     * @return A list of Amazon Web Services tags associated with a resource at the time the finding was processed.
+     * @return A list of Amazon Web Services tags associated with a resource at the time the finding was processed. </p>
+     *         <p>
+     *         Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
 
     public java.util.List<MapFilter> getResourceTags() {
@@ -2092,9 +2638,14 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * <p>
      * A list of Amazon Web Services tags associated with a resource at the time the finding was processed.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      * 
      * @param resourceTags
-     *        A list of Amazon Web Services tags associated with a resource at the time the finding was processed.
+     *        A list of Amazon Web Services tags associated with a resource at the time the finding was processed. </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
 
     public void setResourceTags(java.util.Collection<MapFilter> resourceTags) {
@@ -2111,13 +2662,18 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * A list of Amazon Web Services tags associated with a resource at the time the finding was processed.
      * </p>
      * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setResourceTags(java.util.Collection)} or {@link #withResourceTags(java.util.Collection)} if you want to
      * override the existing values.
      * </p>
      * 
      * @param resourceTags
-     *        A list of Amazon Web Services tags associated with a resource at the time the finding was processed.
+     *        A list of Amazon Web Services tags associated with a resource at the time the finding was processed. </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2135,9 +2691,14 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * <p>
      * A list of Amazon Web Services tags associated with a resource at the time the finding was processed.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      * 
      * @param resourceTags
-     *        A list of Amazon Web Services tags associated with a resource at the time the finding was processed.
+     *        A list of Amazon Web Services tags associated with a resource at the time the finding was processed. </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2150,8 +2711,13 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * <p>
      * Custom fields and values about the resource that a finding pertains to.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      * 
-     * @return Custom fields and values about the resource that a finding pertains to.
+     * @return Custom fields and values about the resource that a finding pertains to. </p>
+     *         <p>
+     *         Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
 
     public java.util.List<MapFilter> getResourceDetailsOther() {
@@ -2162,9 +2728,14 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * <p>
      * Custom fields and values about the resource that a finding pertains to.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      * 
      * @param resourceDetailsOther
-     *        Custom fields and values about the resource that a finding pertains to.
+     *        Custom fields and values about the resource that a finding pertains to. </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
 
     public void setResourceDetailsOther(java.util.Collection<MapFilter> resourceDetailsOther) {
@@ -2181,13 +2752,18 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * Custom fields and values about the resource that a finding pertains to.
      * </p>
      * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setResourceDetailsOther(java.util.Collection)} or {@link #withResourceDetailsOther(java.util.Collection)}
      * if you want to override the existing values.
      * </p>
      * 
      * @param resourceDetailsOther
-     *        Custom fields and values about the resource that a finding pertains to.
+     *        Custom fields and values about the resource that a finding pertains to. </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2205,9 +2781,14 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * <p>
      * Custom fields and values about the resource that a finding pertains to.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      * 
      * @param resourceDetailsOther
-     *        Custom fields and values about the resource that a finding pertains to.
+     *        Custom fields and values about the resource that a finding pertains to. </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2220,8 +2801,13 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * <p>
      * The result of a security check. This field is only used for findings generated from controls.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      * 
-     * @return The result of a security check. This field is only used for findings generated from controls.
+     * @return The result of a security check. This field is only used for findings generated from controls. </p>
+     *         <p>
+     *         Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
 
     public java.util.List<StringFilter> getComplianceStatus() {
@@ -2232,9 +2818,14 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * <p>
      * The result of a security check. This field is only used for findings generated from controls.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      * 
      * @param complianceStatus
-     *        The result of a security check. This field is only used for findings generated from controls.
+     *        The result of a security check. This field is only used for findings generated from controls. </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
 
     public void setComplianceStatus(java.util.Collection<StringFilter> complianceStatus) {
@@ -2251,13 +2842,18 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * The result of a security check. This field is only used for findings generated from controls.
      * </p>
      * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setComplianceStatus(java.util.Collection)} or {@link #withComplianceStatus(java.util.Collection)} if you
      * want to override the existing values.
      * </p>
      * 
      * @param complianceStatus
-     *        The result of a security check. This field is only used for findings generated from controls.
+     *        The result of a security check. This field is only used for findings generated from controls. </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2275,9 +2871,14 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * <p>
      * The result of a security check. This field is only used for findings generated from controls.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      * 
      * @param complianceStatus
-     *        The result of a security check. This field is only used for findings generated from controls.
+     *        The result of a security check. This field is only used for findings generated from controls. </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2290,9 +2891,14 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * <p>
      * The security control ID for which a finding was generated. Security control IDs are the same across standards.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      * 
      * @return The security control ID for which a finding was generated. Security control IDs are the same across
-     *         standards.
+     *         standards.</p>
+     *         <p>
+     *         Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
 
     public java.util.List<StringFilter> getComplianceSecurityControlId() {
@@ -2303,10 +2909,15 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * <p>
      * The security control ID for which a finding was generated. Security control IDs are the same across standards.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      * 
      * @param complianceSecurityControlId
      *        The security control ID for which a finding was generated. Security control IDs are the same across
-     *        standards.
+     *        standards.</p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
 
     public void setComplianceSecurityControlId(java.util.Collection<StringFilter> complianceSecurityControlId) {
@@ -2323,6 +2934,9 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * The security control ID for which a finding was generated. Security control IDs are the same across standards.
      * </p>
      * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setComplianceSecurityControlId(java.util.Collection)} or
      * {@link #withComplianceSecurityControlId(java.util.Collection)} if you want to override the existing values.
@@ -2330,7 +2944,9 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * 
      * @param complianceSecurityControlId
      *        The security control ID for which a finding was generated. Security control IDs are the same across
-     *        standards.
+     *        standards.</p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2348,10 +2964,15 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * <p>
      * The security control ID for which a finding was generated. Security control IDs are the same across standards.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      * 
      * @param complianceSecurityControlId
      *        The security control ID for which a finding was generated. Security control IDs are the same across
-     *        standards.
+     *        standards.</p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2367,11 +2988,16 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * href="https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_DescribeStandards.html">DescribeStandards</a>
      * API response.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      * 
      * @return The unique identifier of a standard in which a control is enabled. This field consists of the resource
      *         portion of the Amazon Resource Name (ARN) returned for a standard in the <a
      *         href="https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_DescribeStandards.html"
-     *         >DescribeStandards</a> API response.
+     *         >DescribeStandards</a> API response.</p>
+     *         <p>
+     *         Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
 
     public java.util.List<StringFilter> getComplianceAssociatedStandardsId() {
@@ -2385,12 +3011,17 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * href="https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_DescribeStandards.html">DescribeStandards</a>
      * API response.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      * 
      * @param complianceAssociatedStandardsId
      *        The unique identifier of a standard in which a control is enabled. This field consists of the resource
      *        portion of the Amazon Resource Name (ARN) returned for a standard in the <a
      *        href="https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_DescribeStandards.html"
-     *        >DescribeStandards</a> API response.
+     *        >DescribeStandards</a> API response.</p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
 
     public void setComplianceAssociatedStandardsId(java.util.Collection<StringFilter> complianceAssociatedStandardsId) {
@@ -2410,6 +3041,9 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * API response.
      * </p>
      * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setComplianceAssociatedStandardsId(java.util.Collection)} or
      * {@link #withComplianceAssociatedStandardsId(java.util.Collection)} if you want to override the existing values.
@@ -2419,7 +3053,9 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      *        The unique identifier of a standard in which a control is enabled. This field consists of the resource
      *        portion of the Amazon Resource Name (ARN) returned for a standard in the <a
      *        href="https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_DescribeStandards.html"
-     *        >DescribeStandards</a> API response.
+     *        >DescribeStandards</a> API response.</p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2440,12 +3076,17 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * href="https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_DescribeStandards.html">DescribeStandards</a>
      * API response.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      * 
      * @param complianceAssociatedStandardsId
      *        The unique identifier of a standard in which a control is enabled. This field consists of the resource
      *        portion of the Amazon Resource Name (ARN) returned for a standard in the <a
      *        href="https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_DescribeStandards.html"
-     *        >DescribeStandards</a> API response.
+     *        >DescribeStandards</a> API response.</p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2458,8 +3099,13 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * <p>
      * Provides the veracity of a finding.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      * 
-     * @return Provides the veracity of a finding.
+     * @return Provides the veracity of a finding. </p>
+     *         <p>
+     *         Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
 
     public java.util.List<StringFilter> getVerificationState() {
@@ -2470,9 +3116,14 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * <p>
      * Provides the veracity of a finding.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      * 
      * @param verificationState
-     *        Provides the veracity of a finding.
+     *        Provides the veracity of a finding. </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
 
     public void setVerificationState(java.util.Collection<StringFilter> verificationState) {
@@ -2489,13 +3140,18 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * Provides the veracity of a finding.
      * </p>
      * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setVerificationState(java.util.Collection)} or {@link #withVerificationState(java.util.Collection)} if
      * you want to override the existing values.
      * </p>
      * 
      * @param verificationState
-     *        Provides the veracity of a finding.
+     *        Provides the veracity of a finding. </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2513,9 +3169,14 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * <p>
      * Provides the veracity of a finding.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      * 
      * @param verificationState
-     *        Provides the veracity of a finding.
+     *        Provides the veracity of a finding. </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2528,8 +3189,13 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * <p>
      * Provides information about the status of the investigation into a finding.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      * 
-     * @return Provides information about the status of the investigation into a finding.
+     * @return Provides information about the status of the investigation into a finding. </p>
+     *         <p>
+     *         Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
 
     public java.util.List<StringFilter> getWorkflowStatus() {
@@ -2540,9 +3206,14 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * <p>
      * Provides information about the status of the investigation into a finding.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      * 
      * @param workflowStatus
-     *        Provides information about the status of the investigation into a finding.
+     *        Provides information about the status of the investigation into a finding. </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
 
     public void setWorkflowStatus(java.util.Collection<StringFilter> workflowStatus) {
@@ -2559,13 +3230,18 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * Provides information about the status of the investigation into a finding.
      * </p>
      * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setWorkflowStatus(java.util.Collection)} or {@link #withWorkflowStatus(java.util.Collection)} if you want
      * to override the existing values.
      * </p>
      * 
      * @param workflowStatus
-     *        Provides information about the status of the investigation into a finding.
+     *        Provides information about the status of the investigation into a finding. </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2583,9 +3259,14 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * <p>
      * Provides information about the status of the investigation into a finding.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      * 
      * @param workflowStatus
-     *        Provides information about the status of the investigation into a finding.
+     *        Provides information about the status of the investigation into a finding. </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2598,8 +3279,13 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * <p>
      * Provides the current state of a finding.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      * 
-     * @return Provides the current state of a finding.
+     * @return Provides the current state of a finding. </p>
+     *         <p>
+     *         Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
 
     public java.util.List<StringFilter> getRecordState() {
@@ -2610,9 +3296,14 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * <p>
      * Provides the current state of a finding.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      * 
      * @param recordState
-     *        Provides the current state of a finding.
+     *        Provides the current state of a finding. </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
 
     public void setRecordState(java.util.Collection<StringFilter> recordState) {
@@ -2629,13 +3320,18 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * Provides the current state of a finding.
      * </p>
      * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setRecordState(java.util.Collection)} or {@link #withRecordState(java.util.Collection)} if you want to
      * override the existing values.
      * </p>
      * 
      * @param recordState
-     *        Provides the current state of a finding.
+     *        Provides the current state of a finding. </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2653,9 +3349,14 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * <p>
      * Provides the current state of a finding.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      * 
      * @param recordState
-     *        Provides the current state of a finding.
+     *        Provides the current state of a finding. </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2668,8 +3369,13 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * <p>
      * The ARN for the product that generated a related finding.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      * 
-     * @return The ARN for the product that generated a related finding.
+     * @return The ARN for the product that generated a related finding. </p>
+     *         <p>
+     *         Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
 
     public java.util.List<StringFilter> getRelatedFindingsProductArn() {
@@ -2680,9 +3386,14 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * <p>
      * The ARN for the product that generated a related finding.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      * 
      * @param relatedFindingsProductArn
-     *        The ARN for the product that generated a related finding.
+     *        The ARN for the product that generated a related finding. </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
 
     public void setRelatedFindingsProductArn(java.util.Collection<StringFilter> relatedFindingsProductArn) {
@@ -2699,13 +3410,18 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * The ARN for the product that generated a related finding.
      * </p>
      * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setRelatedFindingsProductArn(java.util.Collection)} or
      * {@link #withRelatedFindingsProductArn(java.util.Collection)} if you want to override the existing values.
      * </p>
      * 
      * @param relatedFindingsProductArn
-     *        The ARN for the product that generated a related finding.
+     *        The ARN for the product that generated a related finding. </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2723,9 +3439,14 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * <p>
      * The ARN for the product that generated a related finding.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      * 
      * @param relatedFindingsProductArn
-     *        The ARN for the product that generated a related finding.
+     *        The ARN for the product that generated a related finding. </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2738,8 +3459,13 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * <p>
      * The product-generated identifier for a related finding.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      * 
-     * @return The product-generated identifier for a related finding.
+     * @return The product-generated identifier for a related finding. </p>
+     *         <p>
+     *         Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
 
     public java.util.List<StringFilter> getRelatedFindingsId() {
@@ -2750,9 +3476,14 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * <p>
      * The product-generated identifier for a related finding.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      * 
      * @param relatedFindingsId
-     *        The product-generated identifier for a related finding.
+     *        The product-generated identifier for a related finding. </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
 
     public void setRelatedFindingsId(java.util.Collection<StringFilter> relatedFindingsId) {
@@ -2769,13 +3500,18 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * The product-generated identifier for a related finding.
      * </p>
      * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setRelatedFindingsId(java.util.Collection)} or {@link #withRelatedFindingsId(java.util.Collection)} if
      * you want to override the existing values.
      * </p>
      * 
      * @param relatedFindingsId
-     *        The product-generated identifier for a related finding.
+     *        The product-generated identifier for a related finding. </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2793,9 +3529,14 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * <p>
      * The product-generated identifier for a related finding.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      * 
      * @param relatedFindingsId
-     *        The product-generated identifier for a related finding.
+     *        The product-generated identifier for a related finding. </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2808,8 +3549,13 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * <p>
      * The text of a user-defined note that's added to a finding.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      * 
-     * @return The text of a user-defined note that's added to a finding.
+     * @return The text of a user-defined note that's added to a finding. </p>
+     *         <p>
+     *         Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
 
     public java.util.List<StringFilter> getNoteText() {
@@ -2820,9 +3566,14 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * <p>
      * The text of a user-defined note that's added to a finding.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      * 
      * @param noteText
-     *        The text of a user-defined note that's added to a finding.
+     *        The text of a user-defined note that's added to a finding. </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
 
     public void setNoteText(java.util.Collection<StringFilter> noteText) {
@@ -2839,13 +3590,18 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * The text of a user-defined note that's added to a finding.
      * </p>
      * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setNoteText(java.util.Collection)} or {@link #withNoteText(java.util.Collection)} if you want to override
      * the existing values.
      * </p>
      * 
      * @param noteText
-     *        The text of a user-defined note that's added to a finding.
+     *        The text of a user-defined note that's added to a finding. </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2863,9 +3619,14 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * <p>
      * The text of a user-defined note that's added to a finding.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      * 
      * @param noteText
-     *        The text of a user-defined note that's added to a finding.
+     *        The text of a user-defined note that's added to a finding. </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2880,10 +3641,15 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time Format</a>.
      * The value cannot contain spaces. For example, <code>2020-03-22T13:22:13.933Z</code>.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      * 
      * @return The timestamp of when the note was updated. Uses the date-time format specified in <a
      *         href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
-     *         Format</a>. The value cannot contain spaces. For example, <code>2020-03-22T13:22:13.933Z</code>.
+     *         Format</a>. The value cannot contain spaces. For example, <code>2020-03-22T13:22:13.933Z</code>. </p>
+     *         <p>
+     *         Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
 
     public java.util.List<DateFilter> getNoteUpdatedAt() {
@@ -2896,11 +3662,16 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time Format</a>.
      * The value cannot contain spaces. For example, <code>2020-03-22T13:22:13.933Z</code>.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      * 
      * @param noteUpdatedAt
      *        The timestamp of when the note was updated. Uses the date-time format specified in <a
      *        href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
-     *        Format</a>. The value cannot contain spaces. For example, <code>2020-03-22T13:22:13.933Z</code>.
+     *        Format</a>. The value cannot contain spaces. For example, <code>2020-03-22T13:22:13.933Z</code>. </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
 
     public void setNoteUpdatedAt(java.util.Collection<DateFilter> noteUpdatedAt) {
@@ -2919,6 +3690,9 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * The value cannot contain spaces. For example, <code>2020-03-22T13:22:13.933Z</code>.
      * </p>
      * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setNoteUpdatedAt(java.util.Collection)} or {@link #withNoteUpdatedAt(java.util.Collection)} if you want
      * to override the existing values.
@@ -2927,7 +3701,9 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * @param noteUpdatedAt
      *        The timestamp of when the note was updated. Uses the date-time format specified in <a
      *        href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
-     *        Format</a>. The value cannot contain spaces. For example, <code>2020-03-22T13:22:13.933Z</code>.
+     *        Format</a>. The value cannot contain spaces. For example, <code>2020-03-22T13:22:13.933Z</code>. </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2947,11 +3723,16 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time Format</a>.
      * The value cannot contain spaces. For example, <code>2020-03-22T13:22:13.933Z</code>.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      * 
      * @param noteUpdatedAt
      *        The timestamp of when the note was updated. Uses the date-time format specified in <a
      *        href="https://www.rfc-editor.org/rfc/rfc3339#section-5.6">RFC 3339 section 5.6, Internet Date/Time
-     *        Format</a>. The value cannot contain spaces. For example, <code>2020-03-22T13:22:13.933Z</code>.
+     *        Format</a>. The value cannot contain spaces. For example, <code>2020-03-22T13:22:13.933Z</code>. </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2964,8 +3745,13 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * <p>
      * The principal that created a note.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      * 
-     * @return The principal that created a note.
+     * @return The principal that created a note. </p>
+     *         <p>
+     *         Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
 
     public java.util.List<StringFilter> getNoteUpdatedBy() {
@@ -2976,9 +3762,14 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * <p>
      * The principal that created a note.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      * 
      * @param noteUpdatedBy
-     *        The principal that created a note.
+     *        The principal that created a note. </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
 
     public void setNoteUpdatedBy(java.util.Collection<StringFilter> noteUpdatedBy) {
@@ -2995,13 +3786,18 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * The principal that created a note.
      * </p>
      * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setNoteUpdatedBy(java.util.Collection)} or {@link #withNoteUpdatedBy(java.util.Collection)} if you want
      * to override the existing values.
      * </p>
      * 
      * @param noteUpdatedBy
-     *        The principal that created a note.
+     *        The principal that created a note. </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -3019,9 +3815,14 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * <p>
      * The principal that created a note.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      * 
      * @param noteUpdatedBy
-     *        The principal that created a note.
+     *        The principal that created a note. </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -3034,8 +3835,13 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * <p>
      * A list of user-defined name and value string pairs added to a finding.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      * 
-     * @return A list of user-defined name and value string pairs added to a finding.
+     * @return A list of user-defined name and value string pairs added to a finding. </p>
+     *         <p>
+     *         Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
 
     public java.util.List<MapFilter> getUserDefinedFields() {
@@ -3046,9 +3852,14 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * <p>
      * A list of user-defined name and value string pairs added to a finding.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      * 
      * @param userDefinedFields
-     *        A list of user-defined name and value string pairs added to a finding.
+     *        A list of user-defined name and value string pairs added to a finding. </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
      */
 
     public void setUserDefinedFields(java.util.Collection<MapFilter> userDefinedFields) {
@@ -3065,13 +3876,18 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * A list of user-defined name and value string pairs added to a finding.
      * </p>
      * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setUserDefinedFields(java.util.Collection)} or {@link #withUserDefinedFields(java.util.Collection)} if
      * you want to override the existing values.
      * </p>
      * 
      * @param userDefinedFields
-     *        A list of user-defined name and value string pairs added to a finding.
+     *        A list of user-defined name and value string pairs added to a finding. </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -3089,9 +3905,14 @@ public class AutomationRulesFindingFilters implements Serializable, Cloneable, S
      * <p>
      * A list of user-defined name and value string pairs added to a finding.
      * </p>
+     * <p>
+     * Array Members: Minimum number of 1 item. Maximum number of 20 items.
+     * </p>
      * 
      * @param userDefinedFields
-     *        A list of user-defined name and value string pairs added to a finding.
+     *        A list of user-defined name and value string pairs added to a finding. </p>
+     *        <p>
+     *        Array Members: Minimum number of 1 item. Maximum number of 20 items.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

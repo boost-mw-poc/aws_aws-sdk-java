@@ -16,7 +16,6 @@ import java.io.Serializable;
 import javax.annotation.Generated;
 
 import com.amazonaws.AmazonWebServiceRequest;
-import com.amazonaws.auth.SignerTypeAware;
 
 /**
  * 
@@ -24,7 +23,7 @@ import com.amazonaws.auth.SignerTypeAware;
  *      target="_top">AWS API Documentation</a>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
-public class GetPropertygraphStatisticsRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable, SignerTypeAware {
+public class GetPropertygraphStatisticsRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
     /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
@@ -66,11 +65,6 @@ public class GetPropertygraphStatisticsRequest extends com.amazonaws.AmazonWebSe
     @Override
     public GetPropertygraphStatisticsRequest clone() {
         return (GetPropertygraphStatisticsRequest) super.clone();
-    }
-
-    @Override
-    public String getSignerType() {
-        return "AWS4SignerType";
     }
 
 }
