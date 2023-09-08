@@ -42,6 +42,8 @@ public class TimeSeriesForecastingJobConfigMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Transformations").build();
     private static final MarshallingInfo<StructuredPojo> TIMESERIESCONFIG_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("TimeSeriesConfig").build();
+    private static final MarshallingInfo<List> HOLIDAYCONFIG_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("HolidayConfig").build();
 
     private static final TimeSeriesForecastingJobConfigMarshaller instance = new TimeSeriesForecastingJobConfigMarshaller();
 
@@ -66,6 +68,7 @@ public class TimeSeriesForecastingJobConfigMarshaller {
             protocolMarshaller.marshall(timeSeriesForecastingJobConfig.getForecastQuantiles(), FORECASTQUANTILES_BINDING);
             protocolMarshaller.marshall(timeSeriesForecastingJobConfig.getTransformations(), TRANSFORMATIONS_BINDING);
             protocolMarshaller.marshall(timeSeriesForecastingJobConfig.getTimeSeriesConfig(), TIMESERIESCONFIG_BINDING);
+            protocolMarshaller.marshall(timeSeriesForecastingJobConfig.getHolidayConfig(), HOLIDAYCONFIG_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

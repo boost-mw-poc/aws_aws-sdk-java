@@ -78,6 +78,13 @@ public class TimeSeriesForecastingJobConfigJsonUnmarshaller implements Unmarshal
                     context.nextToken();
                     timeSeriesForecastingJobConfig.setTimeSeriesConfig(TimeSeriesConfigJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("HolidayConfig", targetDepth)) {
+                    context.nextToken();
+                    timeSeriesForecastingJobConfig.setHolidayConfig(new ListUnmarshaller<HolidayConfigAttributes>(HolidayConfigAttributesJsonUnmarshaller
+                            .getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

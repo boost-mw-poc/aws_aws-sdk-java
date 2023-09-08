@@ -21,12 +21,6 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * <p>
  * The collection of settings used by an AutoML job V2 for the time-series forecasting problem type.
  * </p>
- * <note>
- * <p>
- * The <code>TimeSeriesForecastingJobConfig</code> problem type is only available in private beta. Contact Amazon Web
- * Services Support or your account manager to learn more about access privileges.
- * </p>
- * </note>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/TimeSeriesForecastingJobConfig"
  *      target="_top">AWS API Documentation</a>
@@ -143,6 +137,13 @@ public class TimeSeriesForecastingJobConfig implements Serializable, Cloneable, 
      * </p>
      */
     private TimeSeriesConfig timeSeriesConfig;
+    /**
+     * <p>
+     * The collection of holiday featurization attributes used to incorporate national holiday information into your
+     * forecasting model.
+     * </p>
+     */
+    private java.util.List<HolidayConfigAttributes> holidayConfig;
 
     /**
      * <p>
@@ -870,6 +871,84 @@ public class TimeSeriesForecastingJobConfig implements Serializable, Cloneable, 
     }
 
     /**
+     * <p>
+     * The collection of holiday featurization attributes used to incorporate national holiday information into your
+     * forecasting model.
+     * </p>
+     * 
+     * @return The collection of holiday featurization attributes used to incorporate national holiday information into
+     *         your forecasting model.
+     */
+
+    public java.util.List<HolidayConfigAttributes> getHolidayConfig() {
+        return holidayConfig;
+    }
+
+    /**
+     * <p>
+     * The collection of holiday featurization attributes used to incorporate national holiday information into your
+     * forecasting model.
+     * </p>
+     * 
+     * @param holidayConfig
+     *        The collection of holiday featurization attributes used to incorporate national holiday information into
+     *        your forecasting model.
+     */
+
+    public void setHolidayConfig(java.util.Collection<HolidayConfigAttributes> holidayConfig) {
+        if (holidayConfig == null) {
+            this.holidayConfig = null;
+            return;
+        }
+
+        this.holidayConfig = new java.util.ArrayList<HolidayConfigAttributes>(holidayConfig);
+    }
+
+    /**
+     * <p>
+     * The collection of holiday featurization attributes used to incorporate national holiday information into your
+     * forecasting model.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setHolidayConfig(java.util.Collection)} or {@link #withHolidayConfig(java.util.Collection)} if you want
+     * to override the existing values.
+     * </p>
+     * 
+     * @param holidayConfig
+     *        The collection of holiday featurization attributes used to incorporate national holiday information into
+     *        your forecasting model.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public TimeSeriesForecastingJobConfig withHolidayConfig(HolidayConfigAttributes... holidayConfig) {
+        if (this.holidayConfig == null) {
+            setHolidayConfig(new java.util.ArrayList<HolidayConfigAttributes>(holidayConfig.length));
+        }
+        for (HolidayConfigAttributes ele : holidayConfig) {
+            this.holidayConfig.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The collection of holiday featurization attributes used to incorporate national holiday information into your
+     * forecasting model.
+     * </p>
+     * 
+     * @param holidayConfig
+     *        The collection of holiday featurization attributes used to incorporate national holiday information into
+     *        your forecasting model.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public TimeSeriesForecastingJobConfig withHolidayConfig(java.util.Collection<HolidayConfigAttributes> holidayConfig) {
+        setHolidayConfig(holidayConfig);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -894,7 +973,9 @@ public class TimeSeriesForecastingJobConfig implements Serializable, Cloneable, 
         if (getTransformations() != null)
             sb.append("Transformations: ").append(getTransformations()).append(",");
         if (getTimeSeriesConfig() != null)
-            sb.append("TimeSeriesConfig: ").append(getTimeSeriesConfig());
+            sb.append("TimeSeriesConfig: ").append(getTimeSeriesConfig()).append(",");
+        if (getHolidayConfig() != null)
+            sb.append("HolidayConfig: ").append(getHolidayConfig());
         sb.append("}");
         return sb.toString();
     }
@@ -937,6 +1018,10 @@ public class TimeSeriesForecastingJobConfig implements Serializable, Cloneable, 
             return false;
         if (other.getTimeSeriesConfig() != null && other.getTimeSeriesConfig().equals(this.getTimeSeriesConfig()) == false)
             return false;
+        if (other.getHolidayConfig() == null ^ this.getHolidayConfig() == null)
+            return false;
+        if (other.getHolidayConfig() != null && other.getHolidayConfig().equals(this.getHolidayConfig()) == false)
+            return false;
         return true;
     }
 
@@ -952,6 +1037,7 @@ public class TimeSeriesForecastingJobConfig implements Serializable, Cloneable, 
         hashCode = prime * hashCode + ((getForecastQuantiles() == null) ? 0 : getForecastQuantiles().hashCode());
         hashCode = prime * hashCode + ((getTransformations() == null) ? 0 : getTransformations().hashCode());
         hashCode = prime * hashCode + ((getTimeSeriesConfig() == null) ? 0 : getTimeSeriesConfig().hashCode());
+        hashCode = prime * hashCode + ((getHolidayConfig() == null) ? 0 : getHolidayConfig().hashCode());
         return hashCode;
     }
 

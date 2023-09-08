@@ -225,8 +225,8 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
     private OntapFileSystemConfiguration ontapConfiguration;
     /**
      * <p>
-     * The Lustre version of the Amazon FSx for Lustre file system, which is <code>2.10</code>, <code>2.12</code>, or
-     * <code>2.15</code>.
+     * The Lustre version of the Amazon FSx for Lustre file system, which can be <code>2.10</code>, <code>2.12</code>,
+     * or <code>2.15</code>.
      * </p>
      */
     private String fileSystemTypeVersion;
@@ -1792,13 +1792,13 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Lustre version of the Amazon FSx for Lustre file system, which is <code>2.10</code>, <code>2.12</code>, or
-     * <code>2.15</code>.
+     * The Lustre version of the Amazon FSx for Lustre file system, which can be <code>2.10</code>, <code>2.12</code>,
+     * or <code>2.15</code>.
      * </p>
      * 
      * @param fileSystemTypeVersion
-     *        The Lustre version of the Amazon FSx for Lustre file system, which is <code>2.10</code>, <code>2.12</code>
-     *        , or <code>2.15</code>.
+     *        The Lustre version of the Amazon FSx for Lustre file system, which can be <code>2.10</code>,
+     *        <code>2.12</code>, or <code>2.15</code>.
      */
 
     public void setFileSystemTypeVersion(String fileSystemTypeVersion) {
@@ -1807,11 +1807,11 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Lustre version of the Amazon FSx for Lustre file system, which is <code>2.10</code>, <code>2.12</code>, or
-     * <code>2.15</code>.
+     * The Lustre version of the Amazon FSx for Lustre file system, which can be <code>2.10</code>, <code>2.12</code>,
+     * or <code>2.15</code>.
      * </p>
      * 
-     * @return The Lustre version of the Amazon FSx for Lustre file system, which is <code>2.10</code>,
+     * @return The Lustre version of the Amazon FSx for Lustre file system, which can be <code>2.10</code>,
      *         <code>2.12</code>, or <code>2.15</code>.
      */
 
@@ -1821,13 +1821,13 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Lustre version of the Amazon FSx for Lustre file system, which is <code>2.10</code>, <code>2.12</code>, or
-     * <code>2.15</code>.
+     * The Lustre version of the Amazon FSx for Lustre file system, which can be <code>2.10</code>, <code>2.12</code>,
+     * or <code>2.15</code>.
      * </p>
      * 
      * @param fileSystemTypeVersion
-     *        The Lustre version of the Amazon FSx for Lustre file system, which is <code>2.10</code>, <code>2.12</code>
-     *        , or <code>2.15</code>.
+     *        The Lustre version of the Amazon FSx for Lustre file system, which can be <code>2.10</code>,
+     *        <code>2.12</code>, or <code>2.15</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

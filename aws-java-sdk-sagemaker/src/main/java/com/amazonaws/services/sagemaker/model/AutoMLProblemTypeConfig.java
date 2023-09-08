@@ -51,12 +51,6 @@ public class AutoMLProblemTypeConfig implements Serializable, Cloneable, Structu
      * <p>
      * Settings used to configure an AutoML job V2 for a time-series forecasting problem type.
      * </p>
-     * <note>
-     * <p>
-     * The <code>TimeSeriesForecastingJobConfig</code> problem type is only available in private beta. Contact Amazon
-     * Web Services Support or your account manager to learn more about access privileges.
-     * </p>
-     * </note>
      */
     private TimeSeriesForecastingJobConfig timeSeriesForecastingJobConfig;
 
@@ -184,19 +178,9 @@ public class AutoMLProblemTypeConfig implements Serializable, Cloneable, Structu
      * <p>
      * Settings used to configure an AutoML job V2 for a time-series forecasting problem type.
      * </p>
-     * <note>
-     * <p>
-     * The <code>TimeSeriesForecastingJobConfig</code> problem type is only available in private beta. Contact Amazon
-     * Web Services Support or your account manager to learn more about access privileges.
-     * </p>
-     * </note>
      * 
      * @param timeSeriesForecastingJobConfig
-     *        Settings used to configure an AutoML job V2 for a time-series forecasting problem type.</p> <note>
-     *        <p>
-     *        The <code>TimeSeriesForecastingJobConfig</code> problem type is only available in private beta. Contact
-     *        Amazon Web Services Support or your account manager to learn more about access privileges.
-     *        </p>
+     *        Settings used to configure an AutoML job V2 for a time-series forecasting problem type.
      */
 
     public void setTimeSeriesForecastingJobConfig(TimeSeriesForecastingJobConfig timeSeriesForecastingJobConfig) {
@@ -207,18 +191,8 @@ public class AutoMLProblemTypeConfig implements Serializable, Cloneable, Structu
      * <p>
      * Settings used to configure an AutoML job V2 for a time-series forecasting problem type.
      * </p>
-     * <note>
-     * <p>
-     * The <code>TimeSeriesForecastingJobConfig</code> problem type is only available in private beta. Contact Amazon
-     * Web Services Support or your account manager to learn more about access privileges.
-     * </p>
-     * </note>
      * 
-     * @return Settings used to configure an AutoML job V2 for a time-series forecasting problem type.</p> <note>
-     *         <p>
-     *         The <code>TimeSeriesForecastingJobConfig</code> problem type is only available in private beta. Contact
-     *         Amazon Web Services Support or your account manager to learn more about access privileges.
-     *         </p>
+     * @return Settings used to configure an AutoML job V2 for a time-series forecasting problem type.
      */
 
     public TimeSeriesForecastingJobConfig getTimeSeriesForecastingJobConfig() {
@@ -229,19 +203,9 @@ public class AutoMLProblemTypeConfig implements Serializable, Cloneable, Structu
      * <p>
      * Settings used to configure an AutoML job V2 for a time-series forecasting problem type.
      * </p>
-     * <note>
-     * <p>
-     * The <code>TimeSeriesForecastingJobConfig</code> problem type is only available in private beta. Contact Amazon
-     * Web Services Support or your account manager to learn more about access privileges.
-     * </p>
-     * </note>
      * 
      * @param timeSeriesForecastingJobConfig
-     *        Settings used to configure an AutoML job V2 for a time-series forecasting problem type.</p> <note>
-     *        <p>
-     *        The <code>TimeSeriesForecastingJobConfig</code> problem type is only available in private beta. Contact
-     *        Amazon Web Services Support or your account manager to learn more about access privileges.
-     *        </p>
+     *        Settings used to configure an AutoML job V2 for a time-series forecasting problem type.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
