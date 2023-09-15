@@ -1490,14 +1490,6 @@ public interface AWSDataSyncAsync extends AWSDataSync {
      * href="https://docs.aws.amazon.com/datasync/latest/userguide/API_DescribeStorageSystemResources.html"
      * >DescribeStorageSystemResources</a> operation.
      * </p>
-     * <note>
-     * <p>
-     * If your <a href=
-     * "https://docs.aws.amazon.com/datasync/latest/userguide/discovery-job-statuses.html#discovery-job-statuses-table"
-     * >discovery job completes successfully</a>, you don't need to use this operation. DataSync Discovery generates the
-     * recommendations for you automatically.
-     * </p>
-     * </note>
      * 
      * @param generateRecommendationsRequest
      * @return A Java Future containing the result of the GenerateRecommendations operation returned by the service.
@@ -1520,14 +1512,6 @@ public interface AWSDataSyncAsync extends AWSDataSync {
      * href="https://docs.aws.amazon.com/datasync/latest/userguide/API_DescribeStorageSystemResources.html"
      * >DescribeStorageSystemResources</a> operation.
      * </p>
-     * <note>
-     * <p>
-     * If your <a href=
-     * "https://docs.aws.amazon.com/datasync/latest/userguide/discovery-job-statuses.html#discovery-job-statuses-table"
-     * >discovery job completes successfully</a>, you don't need to use this operation. DataSync Discovery generates the
-     * recommendations for you automatically.
-     * </p>
-     * </note>
      * 
      * @param generateRecommendationsRequest
      * @param asyncHandler

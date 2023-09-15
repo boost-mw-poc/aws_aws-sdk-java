@@ -72,26 +72,6 @@ public class ComputeCapacityStatusJsonUnmarshaller implements Unmarshaller<Compu
                     context.nextToken();
                     computeCapacityStatus.setAvailable(context.getUnmarshaller(Integer.class).unmarshall(context));
                 }
-                if (context.testExpression("DesiredUserSessions", targetDepth)) {
-                    knownMember = true;
-                    context.nextToken();
-                    computeCapacityStatus.setDesiredUserSessions(context.getUnmarshaller(Integer.class).unmarshall(context));
-                }
-                if (context.testExpression("AvailableUserSessions", targetDepth)) {
-                    knownMember = true;
-                    context.nextToken();
-                    computeCapacityStatus.setAvailableUserSessions(context.getUnmarshaller(Integer.class).unmarshall(context));
-                }
-                if (context.testExpression("ActiveUserSessions", targetDepth)) {
-                    knownMember = true;
-                    context.nextToken();
-                    computeCapacityStatus.setActiveUserSessions(context.getUnmarshaller(Integer.class).unmarshall(context));
-                }
-                if (context.testExpression("ActualUserSessions", targetDepth)) {
-                    knownMember = true;
-                    context.nextToken();
-                    computeCapacityStatus.setActualUserSessions(context.getUnmarshaller(Integer.class).unmarshall(context));
-                }
                 if (token == FIELD_NAME && !knownMember) {
                     context.nextToken();
                     com.amazonaws.transform.UnknownMemberJsonUnmarshaller.getInstance().unmarshall(context);

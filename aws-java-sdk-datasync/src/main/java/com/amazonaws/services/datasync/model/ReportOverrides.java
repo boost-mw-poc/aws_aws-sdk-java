@@ -38,9 +38,7 @@ public class ReportOverrides implements Serializable, Cloneable, StructuredPojo 
     /**
      * <p>
      * Specifies the level of reporting for the files, objects, and directories that DataSync attempted to verify at the
-     * end of your transfer. This only applies if you <a
-     * href="https://docs.aws.amazon.com/datasync/latest/userguide/configure-data-verification-options.html">configure
-     * your task</a> to verify data during and after the transfer (which DataSync does by default).
+     * end of your transfer.
      * </p>
      */
     private ReportOverride verified;
@@ -107,16 +105,12 @@ public class ReportOverrides implements Serializable, Cloneable, StructuredPojo 
     /**
      * <p>
      * Specifies the level of reporting for the files, objects, and directories that DataSync attempted to verify at the
-     * end of your transfer. This only applies if you <a
-     * href="https://docs.aws.amazon.com/datasync/latest/userguide/configure-data-verification-options.html">configure
-     * your task</a> to verify data during and after the transfer (which DataSync does by default).
+     * end of your transfer.
      * </p>
      * 
      * @param verified
      *        Specifies the level of reporting for the files, objects, and directories that DataSync attempted to verify
-     *        at the end of your transfer. This only applies if you <a
-     *        href="https://docs.aws.amazon.com/datasync/latest/userguide/configure-data-verification-options.html"
-     *        >configure your task</a> to verify data during and after the transfer (which DataSync does by default).
+     *        at the end of your transfer.
      */
 
     public void setVerified(ReportOverride verified) {
@@ -126,15 +120,11 @@ public class ReportOverrides implements Serializable, Cloneable, StructuredPojo 
     /**
      * <p>
      * Specifies the level of reporting for the files, objects, and directories that DataSync attempted to verify at the
-     * end of your transfer. This only applies if you <a
-     * href="https://docs.aws.amazon.com/datasync/latest/userguide/configure-data-verification-options.html">configure
-     * your task</a> to verify data during and after the transfer (which DataSync does by default).
+     * end of your transfer.
      * </p>
      * 
      * @return Specifies the level of reporting for the files, objects, and directories that DataSync attempted to
-     *         verify at the end of your transfer. This only applies if you <a
-     *         href="https://docs.aws.amazon.com/datasync/latest/userguide/configure-data-verification-options.html"
-     *         >configure your task</a> to verify data during and after the transfer (which DataSync does by default).
+     *         verify at the end of your transfer.
      */
 
     public ReportOverride getVerified() {
@@ -144,16 +134,12 @@ public class ReportOverrides implements Serializable, Cloneable, StructuredPojo 
     /**
      * <p>
      * Specifies the level of reporting for the files, objects, and directories that DataSync attempted to verify at the
-     * end of your transfer. This only applies if you <a
-     * href="https://docs.aws.amazon.com/datasync/latest/userguide/configure-data-verification-options.html">configure
-     * your task</a> to verify data during and after the transfer (which DataSync does by default).
+     * end of your transfer.
      * </p>
      * 
      * @param verified
      *        Specifies the level of reporting for the files, objects, and directories that DataSync attempted to verify
-     *        at the end of your transfer. This only applies if you <a
-     *        href="https://docs.aws.amazon.com/datasync/latest/userguide/configure-data-verification-options.html"
-     *        >configure your task</a> to verify data during and after the transfer (which DataSync does by default).
+     *        at the end of your transfer.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

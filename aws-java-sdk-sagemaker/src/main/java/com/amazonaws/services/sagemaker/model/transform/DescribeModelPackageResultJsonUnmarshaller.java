@@ -182,6 +182,11 @@ public class DescribeModelPackageResultJsonUnmarshaller implements Unmarshaller<
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("SkipModelValidation", targetDepth)) {
+                    knownMember = true;
+                    context.nextToken();
+                    describeModelPackageResult.setSkipModelValidation(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (token == FIELD_NAME && !knownMember) {
                     context.nextToken();
                     com.amazonaws.transform.UnknownMemberJsonUnmarshaller.getInstance().unmarshall(context);

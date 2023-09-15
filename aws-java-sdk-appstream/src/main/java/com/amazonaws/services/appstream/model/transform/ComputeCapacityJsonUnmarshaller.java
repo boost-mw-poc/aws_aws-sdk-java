@@ -57,11 +57,6 @@ public class ComputeCapacityJsonUnmarshaller implements Unmarshaller<ComputeCapa
                     context.nextToken();
                     computeCapacity.setDesiredInstances(context.getUnmarshaller(Integer.class).unmarshall(context));
                 }
-                if (context.testExpression("DesiredSessions", targetDepth)) {
-                    knownMember = true;
-                    context.nextToken();
-                    computeCapacity.setDesiredSessions(context.getUnmarshaller(Integer.class).unmarshall(context));
-                }
                 if (token == FIELD_NAME && !knownMember) {
                     context.nextToken();
                     com.amazonaws.transform.UnknownMemberJsonUnmarshaller.getInstance().unmarshall(context);

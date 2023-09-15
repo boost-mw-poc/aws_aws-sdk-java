@@ -47,8 +47,6 @@ public class SessionMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AuthenticationType").build();
     private static final MarshallingInfo<StructuredPojo> NETWORKACCESSCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("NetworkAccessConfiguration").build();
-    private static final MarshallingInfo<String> INSTANCEID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("InstanceId").build();
 
     private static final SessionMarshaller instance = new SessionMarshaller();
 
@@ -76,7 +74,6 @@ public class SessionMarshaller {
             protocolMarshaller.marshall(session.getMaxExpirationTime(), MAXEXPIRATIONTIME_BINDING);
             protocolMarshaller.marshall(session.getAuthenticationType(), AUTHENTICATIONTYPE_BINDING);
             protocolMarshaller.marshall(session.getNetworkAccessConfiguration(), NETWORKACCESSCONFIGURATION_BINDING);
-            protocolMarshaller.marshall(session.getInstanceId(), INSTANCEID_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -102,11 +102,6 @@ public class SessionJsonUnmarshaller implements Unmarshaller<Session, JsonUnmars
                     context.nextToken();
                     session.setNetworkAccessConfiguration(NetworkAccessConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
                 }
-                if (context.testExpression("InstanceId", targetDepth)) {
-                    knownMember = true;
-                    context.nextToken();
-                    session.setInstanceId(context.getUnmarshaller(String.class).unmarshall(context));
-                }
                 if (token == FIELD_NAME && !knownMember) {
                     context.nextToken();
                     com.amazonaws.transform.UnknownMemberJsonUnmarshaller.getInstance().unmarshall(context);

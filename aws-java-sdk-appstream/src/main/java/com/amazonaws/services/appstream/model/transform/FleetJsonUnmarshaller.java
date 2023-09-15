@@ -176,11 +176,6 @@ public class FleetJsonUnmarshaller implements Unmarshaller<Fleet, JsonUnmarshall
                     context.nextToken();
                     fleet.setSessionScriptS3Location(S3LocationJsonUnmarshaller.getInstance().unmarshall(context));
                 }
-                if (context.testExpression("MaxSessionsPerInstance", targetDepth)) {
-                    knownMember = true;
-                    context.nextToken();
-                    fleet.setMaxSessionsPerInstance(context.getUnmarshaller(Integer.class).unmarshall(context));
-                }
                 if (token == FIELD_NAME && !knownMember) {
                     context.nextToken();
                     com.amazonaws.transform.UnknownMemberJsonUnmarshaller.getInstance().unmarshall(context);
