@@ -1635,8 +1635,8 @@ public interface AmazonGuardDutyAsync extends AmazonGuardDuty {
     /**
      * <p>
      * Invites Amazon Web Services accounts to become members of an organization administered by the Amazon Web Services
-     * account that invokes this API. If you are using organizations to manager your GuardDuty environment, this step is
-     * not needed. For more information, see <a
+     * account that invokes this API. If you are using Amazon Web Services Organizations to manage your GuardDuty
+     * environment, this step is not needed. For more information, see <a
      * href="https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_organizations.html">Managing accounts with
      * organizations</a>.
      * </p>
@@ -1671,8 +1671,8 @@ public interface AmazonGuardDutyAsync extends AmazonGuardDuty {
     /**
      * <p>
      * Invites Amazon Web Services accounts to become members of an organization administered by the Amazon Web Services
-     * account that invokes this API. If you are using organizations to manager your GuardDuty environment, this step is
-     * not needed. For more information, see <a
+     * account that invokes this API. If you are using Amazon Web Services Organizations to manage your GuardDuty
+     * environment, this step is not needed. For more information, see <a
      * href="https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_organizations.html">Managing accounts with
      * organizations</a>.
      * </p>
@@ -1938,7 +1938,7 @@ public interface AmazonGuardDutyAsync extends AmazonGuardDuty {
 
     /**
      * <p>
-     * Lists the accounts configured as GuardDuty delegated administrators. Only the organization's management account
+     * Lists the accounts designated as GuardDuty delegated administrators. Only the organization's management account
      * can run this API operation.
      * </p>
      * 
@@ -1954,7 +1954,7 @@ public interface AmazonGuardDutyAsync extends AmazonGuardDuty {
 
     /**
      * <p>
-     * Lists the accounts configured as GuardDuty delegated administrators. Only the organization's management account
+     * Lists the accounts designated as GuardDuty delegated administrators. Only the organization's management account
      * can run this API operation.
      * </p>
      * 

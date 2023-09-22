@@ -503,6 +503,13 @@ public interface AWSDatabaseMigrationServiceAsync extends AWSDatabaseMigrationSe
      * href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Security.html#CHAP_Security.IAMPermissions">IAM
      * Permissions Needed to Use DMS</a>.
      * </p>
+     * <note>
+     * <p>
+     * If you don't specify a version when creating a replication instance, DMS will create the instance using the
+     * default engine version. For information about the default engine version, see <a
+     * href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_ReleaseNotes.html">Release Notes</a>.
+     * </p>
+     * </note>
      * 
      * @param createReplicationInstanceRequest
      * @return A Java Future containing the result of the CreateReplicationInstance operation returned by the service.
@@ -525,6 +532,13 @@ public interface AWSDatabaseMigrationServiceAsync extends AWSDatabaseMigrationSe
      * href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Security.html#CHAP_Security.IAMPermissions">IAM
      * Permissions Needed to Use DMS</a>.
      * </p>
+     * <note>
+     * <p>
+     * If you don't specify a version when creating a replication instance, DMS will create the instance using the
+     * default engine version. For information about the default engine version, see <a
+     * href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_ReleaseNotes.html">Release Notes</a>.
+     * </p>
+     * </note>
      * 
      * @param createReplicationInstanceRequest
      * @param asyncHandler
@@ -4051,10 +4065,10 @@ public interface AWSDatabaseMigrationServiceAsync extends AWSDatabaseMigrationSe
      * <p>
      * Migrates 10 active and enabled Amazon SNS subscriptions at a time and converts them to corresponding Amazon
      * EventBridge rules. By default, this operation migrates subscriptions only when all your replication instance
-     * versions are 3.4.6 or higher. If any replication instances are from versions earlier than 3.4.6, the operation
-     * raises an error and tells you to upgrade these instances to version 3.4.6 or higher. To enable migration
+     * versions are 3.4.5 or higher. If any replication instances are from versions earlier than 3.4.5, the operation
+     * raises an error and tells you to upgrade these instances to version 3.4.5 or higher. To enable migration
      * regardless of version, set the <code>Force</code> option to true. However, if you don't upgrade instances earlier
-     * than version 3.4.6, some types of events might not be available when you use Amazon EventBridge.
+     * than version 3.4.5, some types of events might not be available when you use Amazon EventBridge.
      * </p>
      * <p>
      * To call this operation, make sure that you have certain permissions added to your user account. For more
@@ -4078,10 +4092,10 @@ public interface AWSDatabaseMigrationServiceAsync extends AWSDatabaseMigrationSe
      * <p>
      * Migrates 10 active and enabled Amazon SNS subscriptions at a time and converts them to corresponding Amazon
      * EventBridge rules. By default, this operation migrates subscriptions only when all your replication instance
-     * versions are 3.4.6 or higher. If any replication instances are from versions earlier than 3.4.6, the operation
-     * raises an error and tells you to upgrade these instances to version 3.4.6 or higher. To enable migration
+     * versions are 3.4.5 or higher. If any replication instances are from versions earlier than 3.4.5, the operation
+     * raises an error and tells you to upgrade these instances to version 3.4.5 or higher. To enable migration
      * regardless of version, set the <code>Force</code> option to true. However, if you don't upgrade instances earlier
-     * than version 3.4.6, some types of events might not be available when you use Amazon EventBridge.
+     * than version 3.4.5, some types of events might not be available when you use Amazon EventBridge.
      * </p>
      * <p>
      * To call this operation, make sure that you have certain permissions added to your user account. For more

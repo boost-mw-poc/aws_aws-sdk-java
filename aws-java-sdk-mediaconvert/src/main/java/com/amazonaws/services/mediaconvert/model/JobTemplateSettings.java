@@ -43,6 +43,14 @@ public class JobTemplateSettings implements Serializable, Cloneable, StructuredP
      */
     private ExtendedDataServices extendedDataServices;
     /**
+     * Specifies which input metadata to use for the default "Follow input" option for the following settings:
+     * resolution, frame rate, and pixel aspect ratio. In the simplest case, specify which input is used based on its
+     * index in the job. For example if you specify 3, then the fourth input will be used from each input. If the job
+     * does not have a fourth input, then the first input will be used. If no followInputIndex is specified, then 0 will
+     * be chosen automatically.
+     */
+    private Integer followInputIndex;
+    /**
      * Use Inputs to define the source file used in the transcode job. There can only be one input in a job template.
      * Using the API, you can include multiple inputs when referencing a job template.
      */
@@ -251,6 +259,64 @@ public class JobTemplateSettings implements Serializable, Cloneable, StructuredP
 
     public JobTemplateSettings withExtendedDataServices(ExtendedDataServices extendedDataServices) {
         setExtendedDataServices(extendedDataServices);
+        return this;
+    }
+
+    /**
+     * Specifies which input metadata to use for the default "Follow input" option for the following settings:
+     * resolution, frame rate, and pixel aspect ratio. In the simplest case, specify which input is used based on its
+     * index in the job. For example if you specify 3, then the fourth input will be used from each input. If the job
+     * does not have a fourth input, then the first input will be used. If no followInputIndex is specified, then 0 will
+     * be chosen automatically.
+     * 
+     * @param followInputIndex
+     *        Specifies which input metadata to use for the default "Follow input" option for the following settings:
+     *        resolution, frame rate, and pixel aspect ratio. In the simplest case, specify which input is used based on
+     *        its index in the job. For example if you specify 3, then the fourth input will be used from each input. If
+     *        the job does not have a fourth input, then the first input will be used. If no followInputIndex is
+     *        specified, then 0 will be chosen automatically.
+     */
+
+    public void setFollowInputIndex(Integer followInputIndex) {
+        this.followInputIndex = followInputIndex;
+    }
+
+    /**
+     * Specifies which input metadata to use for the default "Follow input" option for the following settings:
+     * resolution, frame rate, and pixel aspect ratio. In the simplest case, specify which input is used based on its
+     * index in the job. For example if you specify 3, then the fourth input will be used from each input. If the job
+     * does not have a fourth input, then the first input will be used. If no followInputIndex is specified, then 0 will
+     * be chosen automatically.
+     * 
+     * @return Specifies which input metadata to use for the default "Follow input" option for the following settings:
+     *         resolution, frame rate, and pixel aspect ratio. In the simplest case, specify which input is used based
+     *         on its index in the job. For example if you specify 3, then the fourth input will be used from each
+     *         input. If the job does not have a fourth input, then the first input will be used. If no followInputIndex
+     *         is specified, then 0 will be chosen automatically.
+     */
+
+    public Integer getFollowInputIndex() {
+        return this.followInputIndex;
+    }
+
+    /**
+     * Specifies which input metadata to use for the default "Follow input" option for the following settings:
+     * resolution, frame rate, and pixel aspect ratio. In the simplest case, specify which input is used based on its
+     * index in the job. For example if you specify 3, then the fourth input will be used from each input. If the job
+     * does not have a fourth input, then the first input will be used. If no followInputIndex is specified, then 0 will
+     * be chosen automatically.
+     * 
+     * @param followInputIndex
+     *        Specifies which input metadata to use for the default "Follow input" option for the following settings:
+     *        resolution, frame rate, and pixel aspect ratio. In the simplest case, specify which input is used based on
+     *        its index in the job. For example if you specify 3, then the fourth input will be used from each input. If
+     *        the job does not have a fourth input, then the first input will be used. If no followInputIndex is
+     *        specified, then 0 will be chosen automatically.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public JobTemplateSettings withFollowInputIndex(Integer followInputIndex) {
+        setFollowInputIndex(followInputIndex);
         return this;
     }
 
@@ -734,6 +800,8 @@ public class JobTemplateSettings implements Serializable, Cloneable, StructuredP
             sb.append("Esam: ").append(getEsam()).append(",");
         if (getExtendedDataServices() != null)
             sb.append("ExtendedDataServices: ").append(getExtendedDataServices()).append(",");
+        if (getFollowInputIndex() != null)
+            sb.append("FollowInputIndex: ").append(getFollowInputIndex()).append(",");
         if (getInputs() != null)
             sb.append("Inputs: ").append(getInputs()).append(",");
         if (getKantarWatermark() != null)
@@ -780,6 +848,10 @@ public class JobTemplateSettings implements Serializable, Cloneable, StructuredP
             return false;
         if (other.getExtendedDataServices() != null && other.getExtendedDataServices().equals(this.getExtendedDataServices()) == false)
             return false;
+        if (other.getFollowInputIndex() == null ^ this.getFollowInputIndex() == null)
+            return false;
+        if (other.getFollowInputIndex() != null && other.getFollowInputIndex().equals(this.getFollowInputIndex()) == false)
+            return false;
         if (other.getInputs() == null ^ this.getInputs() == null)
             return false;
         if (other.getInputs() != null && other.getInputs().equals(this.getInputs()) == false)
@@ -824,6 +896,7 @@ public class JobTemplateSettings implements Serializable, Cloneable, StructuredP
         hashCode = prime * hashCode + ((getAvailBlanking() == null) ? 0 : getAvailBlanking().hashCode());
         hashCode = prime * hashCode + ((getEsam() == null) ? 0 : getEsam().hashCode());
         hashCode = prime * hashCode + ((getExtendedDataServices() == null) ? 0 : getExtendedDataServices().hashCode());
+        hashCode = prime * hashCode + ((getFollowInputIndex() == null) ? 0 : getFollowInputIndex().hashCode());
         hashCode = prime * hashCode + ((getInputs() == null) ? 0 : getInputs().hashCode());
         hashCode = prime * hashCode + ((getKantarWatermark() == null) ? 0 : getKantarWatermark().hashCode());
         hashCode = prime * hashCode + ((getMotionImageInserter() == null) ? 0 : getMotionImageInserter().hashCode());

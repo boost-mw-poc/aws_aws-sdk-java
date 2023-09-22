@@ -48,6 +48,10 @@ public class DataProviderSettingsJsonUnmarshaller implements Unmarshaller<DataPr
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("RedshiftSettings", targetDepth)) {
+                    context.nextToken();
+                    dataProviderSettings.setRedshiftSettings(RedshiftDataProviderSettingsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("PostgreSqlSettings", targetDepth)) {
                     context.nextToken();
                     dataProviderSettings.setPostgreSqlSettings(PostgreSqlDataProviderSettingsJsonUnmarshaller.getInstance().unmarshall(context));
@@ -64,6 +68,18 @@ public class DataProviderSettingsJsonUnmarshaller implements Unmarshaller<DataPr
                     context.nextToken();
                     dataProviderSettings
                             .setMicrosoftSqlServerSettings(MicrosoftSqlServerDataProviderSettingsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("DocDbSettings", targetDepth)) {
+                    context.nextToken();
+                    dataProviderSettings.setDocDbSettings(DocDbDataProviderSettingsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("MariaDbSettings", targetDepth)) {
+                    context.nextToken();
+                    dataProviderSettings.setMariaDbSettings(MariaDbDataProviderSettingsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("MongoDbSettings", targetDepth)) {
+                    context.nextToken();
+                    dataProviderSettings.setMongoDbSettings(MongoDbDataProviderSettingsJsonUnmarshaller.getInstance().unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

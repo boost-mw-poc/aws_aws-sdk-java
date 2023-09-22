@@ -42,7 +42,8 @@ public class MongoDbSettings implements Serializable, Cloneable, StructuredPojo 
     private String password;
     /**
      * <p>
-     * The name of the server on the MongoDB source endpoint.
+     * The name of the server on the MongoDB source endpoint. For MongoDB Atlas, provide the server name for any of the
+     * servers in the replication set.
      * </p>
      */
     private String serverName;
@@ -265,11 +266,13 @@ public class MongoDbSettings implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The name of the server on the MongoDB source endpoint.
+     * The name of the server on the MongoDB source endpoint. For MongoDB Atlas, provide the server name for any of the
+     * servers in the replication set.
      * </p>
      * 
      * @param serverName
-     *        The name of the server on the MongoDB source endpoint.
+     *        The name of the server on the MongoDB source endpoint. For MongoDB Atlas, provide the server name for any
+     *        of the servers in the replication set.
      */
 
     public void setServerName(String serverName) {
@@ -278,10 +281,12 @@ public class MongoDbSettings implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The name of the server on the MongoDB source endpoint.
+     * The name of the server on the MongoDB source endpoint. For MongoDB Atlas, provide the server name for any of the
+     * servers in the replication set.
      * </p>
      * 
-     * @return The name of the server on the MongoDB source endpoint.
+     * @return The name of the server on the MongoDB source endpoint. For MongoDB Atlas, provide the server name for any
+     *         of the servers in the replication set.
      */
 
     public String getServerName() {
@@ -290,11 +295,13 @@ public class MongoDbSettings implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The name of the server on the MongoDB source endpoint.
+     * The name of the server on the MongoDB source endpoint. For MongoDB Atlas, provide the server name for any of the
+     * servers in the replication set.
      * </p>
      * 
      * @param serverName
-     *        The name of the server on the MongoDB source endpoint.
+     *        The name of the server on the MongoDB source endpoint. For MongoDB Atlas, provide the server name for any
+     *        of the servers in the replication set.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -33,7 +33,11 @@ public class S3DestinationSettings implements Serializable, Cloneable, Structure
     private S3DestinationAccessControl accessControl;
     /** Settings for how your job outputs are encrypted as they are uploaded to Amazon S3. */
     private S3EncryptionSettings encryption;
-    /** Specify the S3 storage class to use for this destination. */
+    /**
+     * Specify the S3 storage class to use for this output. To use your destination's default storage class: Keep the
+     * default value, Not set. For more information about S3 storage classes, see
+     * https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage-class-intro.html
+     */
     private String storageClass;
 
     /**
@@ -111,10 +115,14 @@ public class S3DestinationSettings implements Serializable, Cloneable, Structure
     }
 
     /**
-     * Specify the S3 storage class to use for this destination.
+     * Specify the S3 storage class to use for this output. To use your destination's default storage class: Keep the
+     * default value, Not set. For more information about S3 storage classes, see
+     * https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage-class-intro.html
      * 
      * @param storageClass
-     *        Specify the S3 storage class to use for this destination.
+     *        Specify the S3 storage class to use for this output. To use your destination's default storage class: Keep
+     *        the default value, Not set. For more information about S3 storage classes, see
+     *        https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage-class-intro.html
      * @see S3StorageClass
      */
 
@@ -123,9 +131,13 @@ public class S3DestinationSettings implements Serializable, Cloneable, Structure
     }
 
     /**
-     * Specify the S3 storage class to use for this destination.
+     * Specify the S3 storage class to use for this output. To use your destination's default storage class: Keep the
+     * default value, Not set. For more information about S3 storage classes, see
+     * https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage-class-intro.html
      * 
-     * @return Specify the S3 storage class to use for this destination.
+     * @return Specify the S3 storage class to use for this output. To use your destination's default storage class:
+     *         Keep the default value, Not set. For more information about S3 storage classes, see
+     *         https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage-class-intro.html
      * @see S3StorageClass
      */
 
@@ -134,10 +146,14 @@ public class S3DestinationSettings implements Serializable, Cloneable, Structure
     }
 
     /**
-     * Specify the S3 storage class to use for this destination.
+     * Specify the S3 storage class to use for this output. To use your destination's default storage class: Keep the
+     * default value, Not set. For more information about S3 storage classes, see
+     * https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage-class-intro.html
      * 
      * @param storageClass
-     *        Specify the S3 storage class to use for this destination.
+     *        Specify the S3 storage class to use for this output. To use your destination's default storage class: Keep
+     *        the default value, Not set. For more information about S3 storage classes, see
+     *        https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage-class-intro.html
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see S3StorageClass
      */
@@ -148,10 +164,14 @@ public class S3DestinationSettings implements Serializable, Cloneable, Structure
     }
 
     /**
-     * Specify the S3 storage class to use for this destination.
+     * Specify the S3 storage class to use for this output. To use your destination's default storage class: Keep the
+     * default value, Not set. For more information about S3 storage classes, see
+     * https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage-class-intro.html
      * 
      * @param storageClass
-     *        Specify the S3 storage class to use for this destination.
+     *        Specify the S3 storage class to use for this output. To use your destination's default storage class: Keep
+     *        the default value, Not set. For more information about S3 storage classes, see
+     *        https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage-class-intro.html
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see S3StorageClass
      */

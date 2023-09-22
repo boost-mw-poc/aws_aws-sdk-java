@@ -64,6 +64,10 @@ public class JobSettingsJsonUnmarshaller implements Unmarshaller<JobSettings, Js
                     context.nextToken();
                     jobSettings.setExtendedDataServices(ExtendedDataServicesJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("followInputIndex", targetDepth)) {
+                    context.nextToken();
+                    jobSettings.setFollowInputIndex(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
                 if (context.testExpression("inputs", targetDepth)) {
                     context.nextToken();
                     jobSettings.setInputs(new ListUnmarshaller<Input>(InputJsonUnmarshaller.getInstance())

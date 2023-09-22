@@ -33,11 +33,11 @@ public class UpdateOrganizationConfigurationRequest extends com.amazonaws.Amazon
     private String detectorId;
     /**
      * <p>
-     * Indicates whether to automatically enable member accounts in the organization.
+     * Represents whether or not to automatically enable member accounts in the organization.
      * </p>
      * <p>
      * Even though this is still supported, we recommend using <code>AutoEnableOrganizationMembers</code> to achieve the
-     * similar results. You must provide the value for either <code>autoEnableOrganizationMembers</code> or
+     * similar results. You must provide a value for either <code>autoEnableOrganizationMembers</code> or
      * <code>autoEnable</code>.
      * </p>
      */
@@ -133,19 +133,19 @@ public class UpdateOrganizationConfigurationRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * Indicates whether to automatically enable member accounts in the organization.
+     * Represents whether or not to automatically enable member accounts in the organization.
      * </p>
      * <p>
      * Even though this is still supported, we recommend using <code>AutoEnableOrganizationMembers</code> to achieve the
-     * similar results. You must provide the value for either <code>autoEnableOrganizationMembers</code> or
+     * similar results. You must provide a value for either <code>autoEnableOrganizationMembers</code> or
      * <code>autoEnable</code>.
      * </p>
      * 
      * @param autoEnable
-     *        Indicates whether to automatically enable member accounts in the organization.</p>
+     *        Represents whether or not to automatically enable member accounts in the organization.</p>
      *        <p>
      *        Even though this is still supported, we recommend using <code>AutoEnableOrganizationMembers</code> to
-     *        achieve the similar results. You must provide the value for either
+     *        achieve the similar results. You must provide a value for either
      *        <code>autoEnableOrganizationMembers</code> or <code>autoEnable</code>.
      */
     @Deprecated
@@ -155,18 +155,18 @@ public class UpdateOrganizationConfigurationRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * Indicates whether to automatically enable member accounts in the organization.
+     * Represents whether or not to automatically enable member accounts in the organization.
      * </p>
      * <p>
      * Even though this is still supported, we recommend using <code>AutoEnableOrganizationMembers</code> to achieve the
-     * similar results. You must provide the value for either <code>autoEnableOrganizationMembers</code> or
+     * similar results. You must provide a value for either <code>autoEnableOrganizationMembers</code> or
      * <code>autoEnable</code>.
      * </p>
      * 
-     * @return Indicates whether to automatically enable member accounts in the organization.</p>
+     * @return Represents whether or not to automatically enable member accounts in the organization.</p>
      *         <p>
      *         Even though this is still supported, we recommend using <code>AutoEnableOrganizationMembers</code> to
-     *         achieve the similar results. You must provide the value for either
+     *         achieve the similar results. You must provide a value for either
      *         <code>autoEnableOrganizationMembers</code> or <code>autoEnable</code>.
      */
     @Deprecated
@@ -176,19 +176,19 @@ public class UpdateOrganizationConfigurationRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * Indicates whether to automatically enable member accounts in the organization.
+     * Represents whether or not to automatically enable member accounts in the organization.
      * </p>
      * <p>
      * Even though this is still supported, we recommend using <code>AutoEnableOrganizationMembers</code> to achieve the
-     * similar results. You must provide the value for either <code>autoEnableOrganizationMembers</code> or
+     * similar results. You must provide a value for either <code>autoEnableOrganizationMembers</code> or
      * <code>autoEnable</code>.
      * </p>
      * 
      * @param autoEnable
-     *        Indicates whether to automatically enable member accounts in the organization.</p>
+     *        Represents whether or not to automatically enable member accounts in the organization.</p>
      *        <p>
      *        Even though this is still supported, we recommend using <code>AutoEnableOrganizationMembers</code> to
-     *        achieve the similar results. You must provide the value for either
+     *        achieve the similar results. You must provide a value for either
      *        <code>autoEnableOrganizationMembers</code> or <code>autoEnable</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -200,18 +200,18 @@ public class UpdateOrganizationConfigurationRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * Indicates whether to automatically enable member accounts in the organization.
+     * Represents whether or not to automatically enable member accounts in the organization.
      * </p>
      * <p>
      * Even though this is still supported, we recommend using <code>AutoEnableOrganizationMembers</code> to achieve the
-     * similar results. You must provide the value for either <code>autoEnableOrganizationMembers</code> or
+     * similar results. You must provide a value for either <code>autoEnableOrganizationMembers</code> or
      * <code>autoEnable</code>.
      * </p>
      * 
-     * @return Indicates whether to automatically enable member accounts in the organization.</p>
+     * @return Represents whether or not to automatically enable member accounts in the organization.</p>
      *         <p>
      *         Even though this is still supported, we recommend using <code>AutoEnableOrganizationMembers</code> to
-     *         achieve the similar results. You must provide the value for either
+     *         achieve the similar results. You must provide a value for either
      *         <code>autoEnableOrganizationMembers</code> or <code>autoEnable</code>.
      */
     @Deprecated

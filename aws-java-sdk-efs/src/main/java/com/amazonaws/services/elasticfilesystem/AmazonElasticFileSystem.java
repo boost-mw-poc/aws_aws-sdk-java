@@ -515,9 +515,11 @@ public interface AmazonElasticFileSystem {
      * <li>
      * <p>
      * <b>Amazon Web Services Region</b> - The Amazon Web Services Region in which the destination file system is
-     * created. Amazon EFS replication is available in all Amazon Web Services Regions that Amazon EFS is available in,
-     * except Africa (Cape Town), Asia Pacific (Hong Kong), Asia Pacific (Jakarta), Europe (Milan), and Middle East
-     * (Bahrain).
+     * created. Amazon EFS replication is available in all Amazon Web Services Regions in which EFS is available. To use
+     * EFS replication in a Region that is disabled by default, you must first opt in to the Region. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/general/latest/gr/rande-manage.html#rande-manage-enable">Managing Amazon Web
+     * Services Regions</a> in the <i>Amazon Web Services General Reference Reference Guide</i>
      * </p>
      * </li>
      * <li>
@@ -573,7 +575,7 @@ public interface AmazonElasticFileSystem {
      * </li>
      * <li>
      * <p>
-     * <b>Automatic backups</b> - Automatic daily backups not enabled on the destination file system. After the file
+     * <b>Automatic backups</b> - Automatic daily backups are enabled on the destination file system. After the file
      * system is created, you can change this setting.
      * </p>
      * </li>
@@ -819,11 +821,9 @@ public interface AmazonElasticFileSystem {
 
     /**
      * <p>
-     * Deletes an existing replication configuration. To delete a replication configuration, you must make the request
-     * from the Amazon Web Services Region in which the destination file system is located. Deleting a replication
-     * configuration ends the replication process. After a replication configuration is deleted, the destination file
-     * system is no longer read-only. You can write to the destination file system after its status becomes
-     * <code>Writeable</code>.
+     * Deletes an existing replication configuration. Deleting a replication configuration ends the replication process.
+     * After a replication configuration is deleted, the destination file system is no longer read-only. You can write
+     * to the destination file system after its status becomes <code>Writeable</code>.
      * </p>
      * 
      * @param deleteReplicationConfigurationRequest
@@ -910,8 +910,7 @@ public interface AmazonElasticFileSystem {
     /**
      * <p>
      * Returns the account preferences settings for the Amazon Web Services account associated with the user making the
-     * request, in the current Amazon Web Services Region. For more information, see <a
-     * href="efs/latest/ug/manage-efs-resource-ids.html">Managing Amazon EFS resource IDs</a>.
+     * request, in the current Amazon Web Services Region.
      * </p>
      * 
      * @param describeAccountPreferencesRequest

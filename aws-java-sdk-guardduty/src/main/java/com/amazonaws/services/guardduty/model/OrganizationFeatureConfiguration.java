@@ -36,8 +36,8 @@ public class OrganizationFeatureConfiguration implements Serializable, Cloneable
     private String name;
     /**
      * <p>
-     * The status of the feature that will be configured for the organization. Use one of the following values to
-     * configure the feature status for the entire organization:
+     * Describes the status of the feature that is configured for the member accounts within the organization. One of
+     * the following values is the status for the entire organization:
      * </p>
      * <ul>
      * <li>
@@ -133,8 +133,8 @@ public class OrganizationFeatureConfiguration implements Serializable, Cloneable
 
     /**
      * <p>
-     * The status of the feature that will be configured for the organization. Use one of the following values to
-     * configure the feature status for the entire organization:
+     * Describes the status of the feature that is configured for the member accounts within the organization. One of
+     * the following values is the status for the entire organization:
      * </p>
      * <ul>
      * <li>
@@ -162,8 +162,8 @@ public class OrganizationFeatureConfiguration implements Serializable, Cloneable
      * </ul>
      * 
      * @param autoEnable
-     *        The status of the feature that will be configured for the organization. Use one of the following values to
-     *        configure the feature status for the entire organization:</p>
+     *        Describes the status of the feature that is configured for the member accounts within the organization.
+     *        One of the following values is the status for the entire organization:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -196,8 +196,8 @@ public class OrganizationFeatureConfiguration implements Serializable, Cloneable
 
     /**
      * <p>
-     * The status of the feature that will be configured for the organization. Use one of the following values to
-     * configure the feature status for the entire organization:
+     * Describes the status of the feature that is configured for the member accounts within the organization. One of
+     * the following values is the status for the entire organization:
      * </p>
      * <ul>
      * <li>
@@ -224,8 +224,8 @@ public class OrganizationFeatureConfiguration implements Serializable, Cloneable
      * </li>
      * </ul>
      * 
-     * @return The status of the feature that will be configured for the organization. Use one of the following values
-     *         to configure the feature status for the entire organization:</p>
+     * @return Describes the status of the feature that is configured for the member accounts within the organization.
+     *         One of the following values is the status for the entire organization:</p>
      *         <ul>
      *         <li>
      *         <p>
@@ -258,8 +258,8 @@ public class OrganizationFeatureConfiguration implements Serializable, Cloneable
 
     /**
      * <p>
-     * The status of the feature that will be configured for the organization. Use one of the following values to
-     * configure the feature status for the entire organization:
+     * Describes the status of the feature that is configured for the member accounts within the organization. One of
+     * the following values is the status for the entire organization:
      * </p>
      * <ul>
      * <li>
@@ -287,8 +287,8 @@ public class OrganizationFeatureConfiguration implements Serializable, Cloneable
      * </ul>
      * 
      * @param autoEnable
-     *        The status of the feature that will be configured for the organization. Use one of the following values to
-     *        configure the feature status for the entire organization:</p>
+     *        Describes the status of the feature that is configured for the member accounts within the organization.
+     *        One of the following values is the status for the entire organization:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -323,8 +323,8 @@ public class OrganizationFeatureConfiguration implements Serializable, Cloneable
 
     /**
      * <p>
-     * The status of the feature that will be configured for the organization. Use one of the following values to
-     * configure the feature status for the entire organization:
+     * Describes the status of the feature that is configured for the member accounts within the organization. One of
+     * the following values is the status for the entire organization:
      * </p>
      * <ul>
      * <li>
@@ -352,8 +352,8 @@ public class OrganizationFeatureConfiguration implements Serializable, Cloneable
      * </ul>
      * 
      * @param autoEnable
-     *        The status of the feature that will be configured for the organization. Use one of the following values to
-     *        configure the feature status for the entire organization:</p>
+     *        Describes the status of the feature that is configured for the member accounts within the organization.
+     *        One of the following values is the status for the entire organization:</p>
      *        <ul>
      *        <li>
      *        <p>

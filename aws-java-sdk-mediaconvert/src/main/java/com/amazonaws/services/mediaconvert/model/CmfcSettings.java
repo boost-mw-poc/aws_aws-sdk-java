@@ -63,9 +63,11 @@ public class CmfcSettings implements Serializable, Cloneable, StructuredPojo {
     private String audioRenditionSets;
     /**
      * Use this setting to control the values that MediaConvert puts in your HLS parent playlist to control how the
-     * client player selects which audio track to play. The other options for this setting determine the values that
-     * MediaConvert writes for the DEFAULT and AUTOSELECT attributes of the EXT-X-MEDIA entry for the audio variant. For
-     * more information about these attributes, see the Apple documentation article
+     * client player selects which audio track to play. Choose Audio-only variant stream (AUDIO_ONLY_VARIANT_STREAM) for
+     * any variant that you want to prohibit the client from playing with video. This causes MediaConvert to represent
+     * the variant as an EXT-X-STREAM-INF in the HLS manifest. The other options for this setting determine the values
+     * that MediaConvert writes for the DEFAULT and AUTOSELECT attributes of the EXT-X-MEDIA entry for the audio variant.
+     * For more information about these attributes, see the Apple documentation article
      * https://developer.apple.com/documentation
      * /http_live_streaming/example_playlists_for_http_live_streaming/adding_alternate_media_to_a_playlist. Choose
      * Alternate audio, auto select, default to set DEFAULT=YES and AUTOSELECT=YES. Choose this value for only one
@@ -421,9 +423,11 @@ public class CmfcSettings implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * Use this setting to control the values that MediaConvert puts in your HLS parent playlist to control how the
-     * client player selects which audio track to play. The other options for this setting determine the values that
-     * MediaConvert writes for the DEFAULT and AUTOSELECT attributes of the EXT-X-MEDIA entry for the audio variant. For
-     * more information about these attributes, see the Apple documentation article
+     * client player selects which audio track to play. Choose Audio-only variant stream (AUDIO_ONLY_VARIANT_STREAM) for
+     * any variant that you want to prohibit the client from playing with video. This causes MediaConvert to represent
+     * the variant as an EXT-X-STREAM-INF in the HLS manifest. The other options for this setting determine the values
+     * that MediaConvert writes for the DEFAULT and AUTOSELECT attributes of the EXT-X-MEDIA entry for the audio variant.
+     * For more information about these attributes, see the Apple documentation article
      * https://developer.apple.com/documentation
      * /http_live_streaming/example_playlists_for_http_live_streaming/adding_alternate_media_to_a_playlist. Choose
      * Alternate audio, auto select, default to set DEFAULT=YES and AUTOSELECT=YES. Choose this value for only one
@@ -434,11 +438,14 @@ public class CmfcSettings implements Serializable, Cloneable, StructuredPojo {
      * 
      * @param audioTrackType
      *        Use this setting to control the values that MediaConvert puts in your HLS parent playlist to control how
-     *        the client player selects which audio track to play. The other options for this setting determine the
-     *        values that MediaConvert writes for the DEFAULT and AUTOSELECT attributes of the EXT-X-MEDIA entry for the
-     *        audio variant. For more information about these attributes, see the Apple documentation article
-     *        https://developer.apple.com/documentation/http_live_streaming/example_playlists_for_http_live_streaming/
-     *        adding_alternate_media_to_a_playlist. Choose Alternate audio, auto select, default to set DEFAULT=YES and
+     *        the client player selects which audio track to play. Choose Audio-only variant stream
+     *        (AUDIO_ONLY_VARIANT_STREAM) for any variant that you want to prohibit the client from playing with video.
+     *        This causes MediaConvert to represent the variant as an EXT-X-STREAM-INF in the HLS manifest. The other
+     *        options for this setting determine the values that MediaConvert writes for the DEFAULT and AUTOSELECT
+     *        attributes of the EXT-X-MEDIA entry for the audio variant. For more information about these attributes,
+     *        see the Apple documentation article
+     *        https://developer.apple.com/documentation/http_live_streaming/example_playlists_for_http_live_streaming
+     *        /adding_alternate_media_to_a_playlist. Choose Alternate audio, auto select, default to set DEFAULT=YES and
      *        AUTOSELECT=YES. Choose this value for only one variant in your output group. Choose Alternate audio, auto
      *        select, not default to set DEFAULT=NO and AUTOSELECT=YES. Choose Alternate Audio, Not Auto Select to set
      *        DEFAULT=NO and AUTOSELECT=NO. When you don't specify a value for this setting, MediaConvert defaults to
@@ -453,9 +460,11 @@ public class CmfcSettings implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * Use this setting to control the values that MediaConvert puts in your HLS parent playlist to control how the
-     * client player selects which audio track to play. The other options for this setting determine the values that
-     * MediaConvert writes for the DEFAULT and AUTOSELECT attributes of the EXT-X-MEDIA entry for the audio variant. For
-     * more information about these attributes, see the Apple documentation article
+     * client player selects which audio track to play. Choose Audio-only variant stream (AUDIO_ONLY_VARIANT_STREAM) for
+     * any variant that you want to prohibit the client from playing with video. This causes MediaConvert to represent
+     * the variant as an EXT-X-STREAM-INF in the HLS manifest. The other options for this setting determine the values
+     * that MediaConvert writes for the DEFAULT and AUTOSELECT attributes of the EXT-X-MEDIA entry for the audio variant.
+     * For more information about these attributes, see the Apple documentation article
      * https://developer.apple.com/documentation
      * /http_live_streaming/example_playlists_for_http_live_streaming/adding_alternate_media_to_a_playlist. Choose
      * Alternate audio, auto select, default to set DEFAULT=YES and AUTOSELECT=YES. Choose this value for only one
@@ -465,16 +474,19 @@ public class CmfcSettings implements Serializable, Cloneable, StructuredPojo {
      * more than one variant in your output group, you must explicitly choose a value for this setting.
      * 
      * @return Use this setting to control the values that MediaConvert puts in your HLS parent playlist to control how
-     *         the client player selects which audio track to play. The other options for this setting determine the
-     *         values that MediaConvert writes for the DEFAULT and AUTOSELECT attributes of the EXT-X-MEDIA entry for
-     *         the audio variant. For more information about these attributes, see the Apple documentation article
-     *         https://developer.apple.com/documentation/http_live_streaming/example_playlists_for_http_live_streaming/
-     *         adding_alternate_media_to_a_playlist. Choose Alternate audio, auto select, default to set DEFAULT=YES and
-     *         AUTOSELECT=YES. Choose this value for only one variant in your output group. Choose Alternate audio, auto
-     *         select, not default to set DEFAULT=NO and AUTOSELECT=YES. Choose Alternate Audio, Not Auto Select to set
-     *         DEFAULT=NO and AUTOSELECT=NO. When you don't specify a value for this setting, MediaConvert defaults to
-     *         Alternate audio, auto select, default. When there is more than one variant in your output group, you must
-     *         explicitly choose a value for this setting.
+     *         the client player selects which audio track to play. Choose Audio-only variant stream
+     *         (AUDIO_ONLY_VARIANT_STREAM) for any variant that you want to prohibit the client from playing with video.
+     *         This causes MediaConvert to represent the variant as an EXT-X-STREAM-INF in the HLS manifest. The other
+     *         options for this setting determine the values that MediaConvert writes for the DEFAULT and AUTOSELECT
+     *         attributes of the EXT-X-MEDIA entry for the audio variant. For more information about these attributes,
+     *         see the Apple documentation article
+     *         https://developer.apple.com/documentation/http_live_streaming/example_playlists_for_http_live_streaming
+     *         /adding_alternate_media_to_a_playlist. Choose Alternate audio, auto select, default to set DEFAULT=YES
+     *         and AUTOSELECT=YES. Choose this value for only one variant in your output group. Choose Alternate audio,
+     *         auto select, not default to set DEFAULT=NO and AUTOSELECT=YES. Choose Alternate Audio, Not Auto Select to
+     *         set DEFAULT=NO and AUTOSELECT=NO. When you don't specify a value for this setting, MediaConvert defaults
+     *         to Alternate audio, auto select, default. When there is more than one variant in your output group, you
+     *         must explicitly choose a value for this setting.
      * @see CmfcAudioTrackType
      */
 
@@ -484,9 +496,11 @@ public class CmfcSettings implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * Use this setting to control the values that MediaConvert puts in your HLS parent playlist to control how the
-     * client player selects which audio track to play. The other options for this setting determine the values that
-     * MediaConvert writes for the DEFAULT and AUTOSELECT attributes of the EXT-X-MEDIA entry for the audio variant. For
-     * more information about these attributes, see the Apple documentation article
+     * client player selects which audio track to play. Choose Audio-only variant stream (AUDIO_ONLY_VARIANT_STREAM) for
+     * any variant that you want to prohibit the client from playing with video. This causes MediaConvert to represent
+     * the variant as an EXT-X-STREAM-INF in the HLS manifest. The other options for this setting determine the values
+     * that MediaConvert writes for the DEFAULT and AUTOSELECT attributes of the EXT-X-MEDIA entry for the audio variant.
+     * For more information about these attributes, see the Apple documentation article
      * https://developer.apple.com/documentation
      * /http_live_streaming/example_playlists_for_http_live_streaming/adding_alternate_media_to_a_playlist. Choose
      * Alternate audio, auto select, default to set DEFAULT=YES and AUTOSELECT=YES. Choose this value for only one
@@ -497,11 +511,14 @@ public class CmfcSettings implements Serializable, Cloneable, StructuredPojo {
      * 
      * @param audioTrackType
      *        Use this setting to control the values that MediaConvert puts in your HLS parent playlist to control how
-     *        the client player selects which audio track to play. The other options for this setting determine the
-     *        values that MediaConvert writes for the DEFAULT and AUTOSELECT attributes of the EXT-X-MEDIA entry for the
-     *        audio variant. For more information about these attributes, see the Apple documentation article
-     *        https://developer.apple.com/documentation/http_live_streaming/example_playlists_for_http_live_streaming/
-     *        adding_alternate_media_to_a_playlist. Choose Alternate audio, auto select, default to set DEFAULT=YES and
+     *        the client player selects which audio track to play. Choose Audio-only variant stream
+     *        (AUDIO_ONLY_VARIANT_STREAM) for any variant that you want to prohibit the client from playing with video.
+     *        This causes MediaConvert to represent the variant as an EXT-X-STREAM-INF in the HLS manifest. The other
+     *        options for this setting determine the values that MediaConvert writes for the DEFAULT and AUTOSELECT
+     *        attributes of the EXT-X-MEDIA entry for the audio variant. For more information about these attributes,
+     *        see the Apple documentation article
+     *        https://developer.apple.com/documentation/http_live_streaming/example_playlists_for_http_live_streaming
+     *        /adding_alternate_media_to_a_playlist. Choose Alternate audio, auto select, default to set DEFAULT=YES and
      *        AUTOSELECT=YES. Choose this value for only one variant in your output group. Choose Alternate audio, auto
      *        select, not default to set DEFAULT=NO and AUTOSELECT=YES. Choose Alternate Audio, Not Auto Select to set
      *        DEFAULT=NO and AUTOSELECT=NO. When you don't specify a value for this setting, MediaConvert defaults to
@@ -518,9 +535,11 @@ public class CmfcSettings implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * Use this setting to control the values that MediaConvert puts in your HLS parent playlist to control how the
-     * client player selects which audio track to play. The other options for this setting determine the values that
-     * MediaConvert writes for the DEFAULT and AUTOSELECT attributes of the EXT-X-MEDIA entry for the audio variant. For
-     * more information about these attributes, see the Apple documentation article
+     * client player selects which audio track to play. Choose Audio-only variant stream (AUDIO_ONLY_VARIANT_STREAM) for
+     * any variant that you want to prohibit the client from playing with video. This causes MediaConvert to represent
+     * the variant as an EXT-X-STREAM-INF in the HLS manifest. The other options for this setting determine the values
+     * that MediaConvert writes for the DEFAULT and AUTOSELECT attributes of the EXT-X-MEDIA entry for the audio variant.
+     * For more information about these attributes, see the Apple documentation article
      * https://developer.apple.com/documentation
      * /http_live_streaming/example_playlists_for_http_live_streaming/adding_alternate_media_to_a_playlist. Choose
      * Alternate audio, auto select, default to set DEFAULT=YES and AUTOSELECT=YES. Choose this value for only one
@@ -531,11 +550,14 @@ public class CmfcSettings implements Serializable, Cloneable, StructuredPojo {
      * 
      * @param audioTrackType
      *        Use this setting to control the values that MediaConvert puts in your HLS parent playlist to control how
-     *        the client player selects which audio track to play. The other options for this setting determine the
-     *        values that MediaConvert writes for the DEFAULT and AUTOSELECT attributes of the EXT-X-MEDIA entry for the
-     *        audio variant. For more information about these attributes, see the Apple documentation article
-     *        https://developer.apple.com/documentation/http_live_streaming/example_playlists_for_http_live_streaming/
-     *        adding_alternate_media_to_a_playlist. Choose Alternate audio, auto select, default to set DEFAULT=YES and
+     *        the client player selects which audio track to play. Choose Audio-only variant stream
+     *        (AUDIO_ONLY_VARIANT_STREAM) for any variant that you want to prohibit the client from playing with video.
+     *        This causes MediaConvert to represent the variant as an EXT-X-STREAM-INF in the HLS manifest. The other
+     *        options for this setting determine the values that MediaConvert writes for the DEFAULT and AUTOSELECT
+     *        attributes of the EXT-X-MEDIA entry for the audio variant. For more information about these attributes,
+     *        see the Apple documentation article
+     *        https://developer.apple.com/documentation/http_live_streaming/example_playlists_for_http_live_streaming
+     *        /adding_alternate_media_to_a_playlist. Choose Alternate audio, auto select, default to set DEFAULT=YES and
      *        AUTOSELECT=YES. Choose this value for only one variant in your output group. Choose Alternate audio, auto
      *        select, not default to set DEFAULT=NO and AUTOSELECT=YES. Choose Alternate Audio, Not Auto Select to set
      *        DEFAULT=NO and AUTOSELECT=NO. When you don't specify a value for this setting, MediaConvert defaults to

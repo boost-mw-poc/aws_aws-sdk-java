@@ -27,6 +27,8 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class DataProviderSettingsMarshaller {
 
+    private static final MarshallingInfo<StructuredPojo> REDSHIFTSETTINGS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("RedshiftSettings").build();
     private static final MarshallingInfo<StructuredPojo> POSTGRESQLSETTINGS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PostgreSqlSettings").build();
     private static final MarshallingInfo<StructuredPojo> MYSQLSETTINGS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
@@ -35,6 +37,12 @@ public class DataProviderSettingsMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("OracleSettings").build();
     private static final MarshallingInfo<StructuredPojo> MICROSOFTSQLSERVERSETTINGS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MicrosoftSqlServerSettings").build();
+    private static final MarshallingInfo<StructuredPojo> DOCDBSETTINGS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DocDbSettings").build();
+    private static final MarshallingInfo<StructuredPojo> MARIADBSETTINGS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MariaDbSettings").build();
+    private static final MarshallingInfo<StructuredPojo> MONGODBSETTINGS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MongoDbSettings").build();
 
     private static final DataProviderSettingsMarshaller instance = new DataProviderSettingsMarshaller();
 
@@ -52,10 +60,14 @@ public class DataProviderSettingsMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(dataProviderSettings.getRedshiftSettings(), REDSHIFTSETTINGS_BINDING);
             protocolMarshaller.marshall(dataProviderSettings.getPostgreSqlSettings(), POSTGRESQLSETTINGS_BINDING);
             protocolMarshaller.marshall(dataProviderSettings.getMySqlSettings(), MYSQLSETTINGS_BINDING);
             protocolMarshaller.marshall(dataProviderSettings.getOracleSettings(), ORACLESETTINGS_BINDING);
             protocolMarshaller.marshall(dataProviderSettings.getMicrosoftSqlServerSettings(), MICROSOFTSQLSERVERSETTINGS_BINDING);
+            protocolMarshaller.marshall(dataProviderSettings.getDocDbSettings(), DOCDBSETTINGS_BINDING);
+            protocolMarshaller.marshall(dataProviderSettings.getMariaDbSettings(), MARIADBSETTINGS_BINDING);
+            protocolMarshaller.marshall(dataProviderSettings.getMongoDbSettings(), MONGODBSETTINGS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

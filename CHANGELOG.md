@@ -1,3 +1,32 @@
+# __1.12.556__ __2023-09-22__
+## __AWS Database Migration Service__
+  - ### Features
+    - new vendors for DMS CSF: MongoDB, MariaDB, DocumentDb and Redshift
+
+## __AWS Elemental MediaConvert__
+  - ### Features
+    - This release supports the creation of of audio-only tracks in CMAF output groups.
+
+## __Amazon CloudWatch Events__
+  - ### Features
+    - Adds sensitive trait to various shapes in Jetstream Connections API model.
+
+## __Amazon Elastic Compute Cloud__
+  - ### Features
+    - EC2 M2 Pro Mac instances are powered by Apple M2 Pro Mac Mini computers featuring 12 core CPU, 19 core GPU, 32 GiB of memory, and 16 core Apple Neural Engine and uniquely enabled by the AWS Nitro System through high-speed Thunderbolt connections.
+
+## __Amazon Elastic File System__
+  - ### Features
+    - Documentation updates for Elastic File System
+
+## __Amazon GuardDuty__
+  - ### Features
+    - Add `EKS_CLUSTER_NAME` to filter and sort key.
+
+## __Braket__
+  - ### Features
+    - This release adds support to view the device queue depth (the number of queued quantum tasks and hybrid jobs on a device) and queue position for a quantum task and hybrid job.
+
 # __1.12.555__ __2023-09-20__
 ## __AWS App Runner__
   - ### Features

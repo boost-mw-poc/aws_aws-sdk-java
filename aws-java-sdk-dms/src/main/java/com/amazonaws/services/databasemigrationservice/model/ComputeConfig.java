@@ -63,8 +63,8 @@ public class ComputeConfig implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * Specifies the maximum value of the DMS capacity units (DCUs) for which a given DMS Serverless replication can be
-     * provisioned. A single DCU is 2GB of RAM, with 2 DCUs as the minimum value allowed. The list of valid DCU values
-     * includes 2, 4, 8, 16, 32, 64, 128, 192, 256, and 384. So, the maximum value that you can specify for DMS
+     * provisioned. A single DCU is 2GB of RAM, with 1 DCU as the minimum value allowed. The list of valid DCU values
+     * includes 1, 2, 4, 8, 16, 32, 64, 128, 192, 256, and 384. So, the maximum value that you can specify for DMS
      * Serverless is 384. The <code>MaxCapacityUnits</code> parameter is the only DCU parameter you are required to
      * specify.
      * </p>
@@ -73,12 +73,12 @@ public class ComputeConfig implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * Specifies the minimum value of the DMS capacity units (DCUs) for which a given DMS Serverless replication can be
-     * provisioned. A single DCU is 2GB of RAM, with 2 DCUs as the minimum value allowed. The list of valid DCU values
-     * includes 2, 4, 8, 16, 32, 64, 128, 192, 256, and 384. So, the minimum DCU value that you can specify for DMS
-     * Serverless is 2. You don't have to specify a value for the <code>MinCapacityUnits</code> parameter. If you don't
+     * provisioned. A single DCU is 2GB of RAM, with 1 DCU as the minimum value allowed. The list of valid DCU values
+     * includes 1, 2, 4, 8, 16, 32, 64, 128, 192, 256, and 384. So, the minimum DCU value that you can specify for DMS
+     * Serverless is 1. You don't have to specify a value for the <code>MinCapacityUnits</code> parameter. If you don't
      * set this value, DMS scans the current activity of available source tables to identify an optimum setting for this
      * parameter. If there is no current source activity or DMS can't otherwise identify a more appropriate value, it
-     * sets this parameter to the minimum DCU value allowed, 2.
+     * sets this parameter to the minimum DCU value allowed, 1.
      * </p>
      */
     private Integer minCapacityUnits;
@@ -325,16 +325,16 @@ public class ComputeConfig implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * Specifies the maximum value of the DMS capacity units (DCUs) for which a given DMS Serverless replication can be
-     * provisioned. A single DCU is 2GB of RAM, with 2 DCUs as the minimum value allowed. The list of valid DCU values
-     * includes 2, 4, 8, 16, 32, 64, 128, 192, 256, and 384. So, the maximum value that you can specify for DMS
+     * provisioned. A single DCU is 2GB of RAM, with 1 DCU as the minimum value allowed. The list of valid DCU values
+     * includes 1, 2, 4, 8, 16, 32, 64, 128, 192, 256, and 384. So, the maximum value that you can specify for DMS
      * Serverless is 384. The <code>MaxCapacityUnits</code> parameter is the only DCU parameter you are required to
      * specify.
      * </p>
      * 
      * @param maxCapacityUnits
      *        Specifies the maximum value of the DMS capacity units (DCUs) for which a given DMS Serverless replication
-     *        can be provisioned. A single DCU is 2GB of RAM, with 2 DCUs as the minimum value allowed. The list of
-     *        valid DCU values includes 2, 4, 8, 16, 32, 64, 128, 192, 256, and 384. So, the maximum value that you can
+     *        can be provisioned. A single DCU is 2GB of RAM, with 1 DCU as the minimum value allowed. The list of valid
+     *        DCU values includes 1, 2, 4, 8, 16, 32, 64, 128, 192, 256, and 384. So, the maximum value that you can
      *        specify for DMS Serverless is 384. The <code>MaxCapacityUnits</code> parameter is the only DCU parameter
      *        you are required to specify.
      */
@@ -346,17 +346,17 @@ public class ComputeConfig implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * Specifies the maximum value of the DMS capacity units (DCUs) for which a given DMS Serverless replication can be
-     * provisioned. A single DCU is 2GB of RAM, with 2 DCUs as the minimum value allowed. The list of valid DCU values
-     * includes 2, 4, 8, 16, 32, 64, 128, 192, 256, and 384. So, the maximum value that you can specify for DMS
+     * provisioned. A single DCU is 2GB of RAM, with 1 DCU as the minimum value allowed. The list of valid DCU values
+     * includes 1, 2, 4, 8, 16, 32, 64, 128, 192, 256, and 384. So, the maximum value that you can specify for DMS
      * Serverless is 384. The <code>MaxCapacityUnits</code> parameter is the only DCU parameter you are required to
      * specify.
      * </p>
      * 
      * @return Specifies the maximum value of the DMS capacity units (DCUs) for which a given DMS Serverless replication
-     *         can be provisioned. A single DCU is 2GB of RAM, with 2 DCUs as the minimum value allowed. The list of
-     *         valid DCU values includes 2, 4, 8, 16, 32, 64, 128, 192, 256, and 384. So, the maximum value that you can
-     *         specify for DMS Serverless is 384. The <code>MaxCapacityUnits</code> parameter is the only DCU parameter
-     *         you are required to specify.
+     *         can be provisioned. A single DCU is 2GB of RAM, with 1 DCU as the minimum value allowed. The list of
+     *         valid DCU values includes 1, 2, 4, 8, 16, 32, 64, 128, 192, 256, and 384. So, the maximum value that you
+     *         can specify for DMS Serverless is 384. The <code>MaxCapacityUnits</code> parameter is the only DCU
+     *         parameter you are required to specify.
      */
 
     public Integer getMaxCapacityUnits() {
@@ -366,16 +366,16 @@ public class ComputeConfig implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * Specifies the maximum value of the DMS capacity units (DCUs) for which a given DMS Serverless replication can be
-     * provisioned. A single DCU is 2GB of RAM, with 2 DCUs as the minimum value allowed. The list of valid DCU values
-     * includes 2, 4, 8, 16, 32, 64, 128, 192, 256, and 384. So, the maximum value that you can specify for DMS
+     * provisioned. A single DCU is 2GB of RAM, with 1 DCU as the minimum value allowed. The list of valid DCU values
+     * includes 1, 2, 4, 8, 16, 32, 64, 128, 192, 256, and 384. So, the maximum value that you can specify for DMS
      * Serverless is 384. The <code>MaxCapacityUnits</code> parameter is the only DCU parameter you are required to
      * specify.
      * </p>
      * 
      * @param maxCapacityUnits
      *        Specifies the maximum value of the DMS capacity units (DCUs) for which a given DMS Serverless replication
-     *        can be provisioned. A single DCU is 2GB of RAM, with 2 DCUs as the minimum value allowed. The list of
-     *        valid DCU values includes 2, 4, 8, 16, 32, 64, 128, 192, 256, and 384. So, the maximum value that you can
+     *        can be provisioned. A single DCU is 2GB of RAM, with 1 DCU as the minimum value allowed. The list of valid
+     *        DCU values includes 1, 2, 4, 8, 16, 32, 64, 128, 192, 256, and 384. So, the maximum value that you can
      *        specify for DMS Serverless is 384. The <code>MaxCapacityUnits</code> parameter is the only DCU parameter
      *        you are required to specify.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -389,23 +389,22 @@ public class ComputeConfig implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * Specifies the minimum value of the DMS capacity units (DCUs) for which a given DMS Serverless replication can be
-     * provisioned. A single DCU is 2GB of RAM, with 2 DCUs as the minimum value allowed. The list of valid DCU values
-     * includes 2, 4, 8, 16, 32, 64, 128, 192, 256, and 384. So, the minimum DCU value that you can specify for DMS
-     * Serverless is 2. You don't have to specify a value for the <code>MinCapacityUnits</code> parameter. If you don't
+     * provisioned. A single DCU is 2GB of RAM, with 1 DCU as the minimum value allowed. The list of valid DCU values
+     * includes 1, 2, 4, 8, 16, 32, 64, 128, 192, 256, and 384. So, the minimum DCU value that you can specify for DMS
+     * Serverless is 1. You don't have to specify a value for the <code>MinCapacityUnits</code> parameter. If you don't
      * set this value, DMS scans the current activity of available source tables to identify an optimum setting for this
      * parameter. If there is no current source activity or DMS can't otherwise identify a more appropriate value, it
-     * sets this parameter to the minimum DCU value allowed, 2.
+     * sets this parameter to the minimum DCU value allowed, 1.
      * </p>
      * 
      * @param minCapacityUnits
      *        Specifies the minimum value of the DMS capacity units (DCUs) for which a given DMS Serverless replication
-     *        can be provisioned. A single DCU is 2GB of RAM, with 2 DCUs as the minimum value allowed. The list of
-     *        valid DCU values includes 2, 4, 8, 16, 32, 64, 128, 192, 256, and 384. So, the minimum DCU value that you
-     *        can specify for DMS Serverless is 2. You don't have to specify a value for the
-     *        <code>MinCapacityUnits</code> parameter. If you don't set this value, DMS scans the current activity of
-     *        available source tables to identify an optimum setting for this parameter. If there is no current source
-     *        activity or DMS can't otherwise identify a more appropriate value, it sets this parameter to the minimum
-     *        DCU value allowed, 2.
+     *        can be provisioned. A single DCU is 2GB of RAM, with 1 DCU as the minimum value allowed. The list of valid
+     *        DCU values includes 1, 2, 4, 8, 16, 32, 64, 128, 192, 256, and 384. So, the minimum DCU value that you can
+     *        specify for DMS Serverless is 1. You don't have to specify a value for the <code>MinCapacityUnits</code>
+     *        parameter. If you don't set this value, DMS scans the current activity of available source tables to
+     *        identify an optimum setting for this parameter. If there is no current source activity or DMS can't
+     *        otherwise identify a more appropriate value, it sets this parameter to the minimum DCU value allowed, 1.
      */
 
     public void setMinCapacityUnits(Integer minCapacityUnits) {
@@ -415,22 +414,22 @@ public class ComputeConfig implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * Specifies the minimum value of the DMS capacity units (DCUs) for which a given DMS Serverless replication can be
-     * provisioned. A single DCU is 2GB of RAM, with 2 DCUs as the minimum value allowed. The list of valid DCU values
-     * includes 2, 4, 8, 16, 32, 64, 128, 192, 256, and 384. So, the minimum DCU value that you can specify for DMS
-     * Serverless is 2. You don't have to specify a value for the <code>MinCapacityUnits</code> parameter. If you don't
+     * provisioned. A single DCU is 2GB of RAM, with 1 DCU as the minimum value allowed. The list of valid DCU values
+     * includes 1, 2, 4, 8, 16, 32, 64, 128, 192, 256, and 384. So, the minimum DCU value that you can specify for DMS
+     * Serverless is 1. You don't have to specify a value for the <code>MinCapacityUnits</code> parameter. If you don't
      * set this value, DMS scans the current activity of available source tables to identify an optimum setting for this
      * parameter. If there is no current source activity or DMS can't otherwise identify a more appropriate value, it
-     * sets this parameter to the minimum DCU value allowed, 2.
+     * sets this parameter to the minimum DCU value allowed, 1.
      * </p>
      * 
      * @return Specifies the minimum value of the DMS capacity units (DCUs) for which a given DMS Serverless replication
-     *         can be provisioned. A single DCU is 2GB of RAM, with 2 DCUs as the minimum value allowed. The list of
-     *         valid DCU values includes 2, 4, 8, 16, 32, 64, 128, 192, 256, and 384. So, the minimum DCU value that you
-     *         can specify for DMS Serverless is 2. You don't have to specify a value for the
+     *         can be provisioned. A single DCU is 2GB of RAM, with 1 DCU as the minimum value allowed. The list of
+     *         valid DCU values includes 1, 2, 4, 8, 16, 32, 64, 128, 192, 256, and 384. So, the minimum DCU value that
+     *         you can specify for DMS Serverless is 1. You don't have to specify a value for the
      *         <code>MinCapacityUnits</code> parameter. If you don't set this value, DMS scans the current activity of
      *         available source tables to identify an optimum setting for this parameter. If there is no current source
      *         activity or DMS can't otherwise identify a more appropriate value, it sets this parameter to the minimum
-     *         DCU value allowed, 2.
+     *         DCU value allowed, 1.
      */
 
     public Integer getMinCapacityUnits() {
@@ -440,23 +439,22 @@ public class ComputeConfig implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * Specifies the minimum value of the DMS capacity units (DCUs) for which a given DMS Serverless replication can be
-     * provisioned. A single DCU is 2GB of RAM, with 2 DCUs as the minimum value allowed. The list of valid DCU values
-     * includes 2, 4, 8, 16, 32, 64, 128, 192, 256, and 384. So, the minimum DCU value that you can specify for DMS
-     * Serverless is 2. You don't have to specify a value for the <code>MinCapacityUnits</code> parameter. If you don't
+     * provisioned. A single DCU is 2GB of RAM, with 1 DCU as the minimum value allowed. The list of valid DCU values
+     * includes 1, 2, 4, 8, 16, 32, 64, 128, 192, 256, and 384. So, the minimum DCU value that you can specify for DMS
+     * Serverless is 1. You don't have to specify a value for the <code>MinCapacityUnits</code> parameter. If you don't
      * set this value, DMS scans the current activity of available source tables to identify an optimum setting for this
      * parameter. If there is no current source activity or DMS can't otherwise identify a more appropriate value, it
-     * sets this parameter to the minimum DCU value allowed, 2.
+     * sets this parameter to the minimum DCU value allowed, 1.
      * </p>
      * 
      * @param minCapacityUnits
      *        Specifies the minimum value of the DMS capacity units (DCUs) for which a given DMS Serverless replication
-     *        can be provisioned. A single DCU is 2GB of RAM, with 2 DCUs as the minimum value allowed. The list of
-     *        valid DCU values includes 2, 4, 8, 16, 32, 64, 128, 192, 256, and 384. So, the minimum DCU value that you
-     *        can specify for DMS Serverless is 2. You don't have to specify a value for the
-     *        <code>MinCapacityUnits</code> parameter. If you don't set this value, DMS scans the current activity of
-     *        available source tables to identify an optimum setting for this parameter. If there is no current source
-     *        activity or DMS can't otherwise identify a more appropriate value, it sets this parameter to the minimum
-     *        DCU value allowed, 2.
+     *        can be provisioned. A single DCU is 2GB of RAM, with 1 DCU as the minimum value allowed. The list of valid
+     *        DCU values includes 1, 2, 4, 8, 16, 32, 64, 128, 192, 256, and 384. So, the minimum DCU value that you can
+     *        specify for DMS Serverless is 1. You don't have to specify a value for the <code>MinCapacityUnits</code>
+     *        parameter. If you don't set this value, DMS scans the current activity of available source tables to
+     *        identify an optimum setting for this parameter. If there is no current source activity or DMS can't
+     *        otherwise identify a more appropriate value, it sets this parameter to the minimum DCU value allowed, 1.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

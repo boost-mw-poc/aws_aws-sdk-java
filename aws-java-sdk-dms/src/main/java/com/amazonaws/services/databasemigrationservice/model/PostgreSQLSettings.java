@@ -217,7 +217,7 @@ public class PostgreSQLSettings implements Serializable, Cloneable, StructuredPo
     /**
      * <p>
      * When true, lets PostgreSQL migrate the boolean type as boolean. By default, PostgreSQL migrates booleans as
-     * <code>varchar(5)</code>.
+     * <code>varchar(5)</code>. You must set this setting on both the source and target endpoints for it to take effect.
      * </p>
      */
     private Boolean mapBooleanAsBoolean;
@@ -1514,12 +1514,13 @@ public class PostgreSQLSettings implements Serializable, Cloneable, StructuredPo
     /**
      * <p>
      * When true, lets PostgreSQL migrate the boolean type as boolean. By default, PostgreSQL migrates booleans as
-     * <code>varchar(5)</code>.
+     * <code>varchar(5)</code>. You must set this setting on both the source and target endpoints for it to take effect.
      * </p>
      * 
      * @param mapBooleanAsBoolean
      *        When true, lets PostgreSQL migrate the boolean type as boolean. By default, PostgreSQL migrates booleans
-     *        as <code>varchar(5)</code>.
+     *        as <code>varchar(5)</code>. You must set this setting on both the source and target endpoints for it to
+     *        take effect.
      */
 
     public void setMapBooleanAsBoolean(Boolean mapBooleanAsBoolean) {
@@ -1529,11 +1530,12 @@ public class PostgreSQLSettings implements Serializable, Cloneable, StructuredPo
     /**
      * <p>
      * When true, lets PostgreSQL migrate the boolean type as boolean. By default, PostgreSQL migrates booleans as
-     * <code>varchar(5)</code>.
+     * <code>varchar(5)</code>. You must set this setting on both the source and target endpoints for it to take effect.
      * </p>
      * 
      * @return When true, lets PostgreSQL migrate the boolean type as boolean. By default, PostgreSQL migrates booleans
-     *         as <code>varchar(5)</code>.
+     *         as <code>varchar(5)</code>. You must set this setting on both the source and target endpoints for it to
+     *         take effect.
      */
 
     public Boolean getMapBooleanAsBoolean() {
@@ -1543,12 +1545,13 @@ public class PostgreSQLSettings implements Serializable, Cloneable, StructuredPo
     /**
      * <p>
      * When true, lets PostgreSQL migrate the boolean type as boolean. By default, PostgreSQL migrates booleans as
-     * <code>varchar(5)</code>.
+     * <code>varchar(5)</code>. You must set this setting on both the source and target endpoints for it to take effect.
      * </p>
      * 
      * @param mapBooleanAsBoolean
      *        When true, lets PostgreSQL migrate the boolean type as boolean. By default, PostgreSQL migrates booleans
-     *        as <code>varchar(5)</code>.
+     *        as <code>varchar(5)</code>. You must set this setting on both the source and target endpoints for it to
+     *        take effect.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1560,11 +1563,12 @@ public class PostgreSQLSettings implements Serializable, Cloneable, StructuredPo
     /**
      * <p>
      * When true, lets PostgreSQL migrate the boolean type as boolean. By default, PostgreSQL migrates booleans as
-     * <code>varchar(5)</code>.
+     * <code>varchar(5)</code>. You must set this setting on both the source and target endpoints for it to take effect.
      * </p>
      * 
      * @return When true, lets PostgreSQL migrate the boolean type as boolean. By default, PostgreSQL migrates booleans
-     *         as <code>varchar(5)</code>.
+     *         as <code>varchar(5)</code>. You must set this setting on both the source and target endpoints for it to
+     *         take effect.
      */
 
     public Boolean isMapBooleanAsBoolean() {
