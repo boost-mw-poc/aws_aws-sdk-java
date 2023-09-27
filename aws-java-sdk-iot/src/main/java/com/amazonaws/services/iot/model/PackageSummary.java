@@ -27,7 +27,7 @@ public class PackageSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name for the target package.
+     * The name for the target software package.
      * </p>
      */
     private String packageName;
@@ -52,11 +52,11 @@ public class PackageSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name for the target package.
+     * The name for the target software package.
      * </p>
      * 
      * @param packageName
-     *        The name for the target package.
+     *        The name for the target software package.
      */
 
     public void setPackageName(String packageName) {
@@ -65,10 +65,10 @@ public class PackageSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name for the target package.
+     * The name for the target software package.
      * </p>
      * 
-     * @return The name for the target package.
+     * @return The name for the target software package.
      */
 
     public String getPackageName() {
@@ -77,11 +77,11 @@ public class PackageSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name for the target package.
+     * The name for the target software package.
      * </p>
      * 
      * @param packageName
-     *        The name for the target package.
+     *        The name for the target software package.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

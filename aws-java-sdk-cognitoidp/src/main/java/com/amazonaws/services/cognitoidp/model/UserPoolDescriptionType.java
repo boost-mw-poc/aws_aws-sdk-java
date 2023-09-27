@@ -51,6 +51,7 @@ public class UserPoolDescriptionType implements Serializable, Cloneable, Structu
      * The user pool status in a user pool description.
      * </p>
      */
+    @Deprecated
     private String status;
     /**
      * <p>
@@ -196,7 +197,7 @@ public class UserPoolDescriptionType implements Serializable, Cloneable, Structu
      *        The user pool status in a user pool description.
      * @see StatusType
      */
-
+    @Deprecated
     public void setStatus(String status) {
         this.status = status;
     }
@@ -209,7 +210,7 @@ public class UserPoolDescriptionType implements Serializable, Cloneable, Structu
      * @return The user pool status in a user pool description.
      * @see StatusType
      */
-
+    @Deprecated
     public String getStatus() {
         return this.status;
     }
@@ -224,7 +225,7 @@ public class UserPoolDescriptionType implements Serializable, Cloneable, Structu
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see StatusType
      */
-
+    @Deprecated
     public UserPoolDescriptionType withStatus(String status) {
         setStatus(status);
         return this;
@@ -239,7 +240,7 @@ public class UserPoolDescriptionType implements Serializable, Cloneable, Structu
      *        The user pool status in a user pool description.
      * @see StatusType
      */
-
+    @Deprecated
     public void setStatus(StatusType status) {
         withStatus(status);
     }
@@ -254,7 +255,7 @@ public class UserPoolDescriptionType implements Serializable, Cloneable, Structu
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see StatusType
      */
-
+    @Deprecated
     public UserPoolDescriptionType withStatus(StatusType status) {
         this.status = status.toString();
         return this;

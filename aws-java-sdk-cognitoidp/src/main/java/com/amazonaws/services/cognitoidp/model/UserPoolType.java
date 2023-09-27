@@ -70,6 +70,7 @@ public class UserPoolType implements Serializable, Cloneable, StructuredPojo {
      * The status of a user pool.
      * </p>
      */
+    @Deprecated
     private String status;
     /**
      * <p>
@@ -641,7 +642,7 @@ public class UserPoolType implements Serializable, Cloneable, StructuredPojo {
      *        The status of a user pool.
      * @see StatusType
      */
-
+    @Deprecated
     public void setStatus(String status) {
         this.status = status;
     }
@@ -654,7 +655,7 @@ public class UserPoolType implements Serializable, Cloneable, StructuredPojo {
      * @return The status of a user pool.
      * @see StatusType
      */
-
+    @Deprecated
     public String getStatus() {
         return this.status;
     }
@@ -669,7 +670,7 @@ public class UserPoolType implements Serializable, Cloneable, StructuredPojo {
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see StatusType
      */
-
+    @Deprecated
     public UserPoolType withStatus(String status) {
         setStatus(status);
         return this;
@@ -684,7 +685,7 @@ public class UserPoolType implements Serializable, Cloneable, StructuredPojo {
      *        The status of a user pool.
      * @see StatusType
      */
-
+    @Deprecated
     public void setStatus(StatusType status) {
         withStatus(status);
     }
@@ -699,7 +700,7 @@ public class UserPoolType implements Serializable, Cloneable, StructuredPojo {
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see StatusType
      */
-
+    @Deprecated
     public UserPoolType withStatus(StatusType status) {
         this.status = status.toString();
         return this;

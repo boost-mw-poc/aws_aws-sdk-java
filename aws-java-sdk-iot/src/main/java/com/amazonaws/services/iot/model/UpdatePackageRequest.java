@@ -22,7 +22,7 @@ public class UpdatePackageRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The name of the target package.
+     * The name of the target software package.
      * </p>
      */
     private String packageName;
@@ -63,11 +63,11 @@ public class UpdatePackageRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The name of the target package.
+     * The name of the target software package.
      * </p>
      * 
      * @param packageName
-     *        The name of the target package.
+     *        The name of the target software package.
      */
 
     public void setPackageName(String packageName) {
@@ -76,10 +76,10 @@ public class UpdatePackageRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The name of the target package.
+     * The name of the target software package.
      * </p>
      * 
-     * @return The name of the target package.
+     * @return The name of the target software package.
      */
 
     public String getPackageName() {
@@ -88,11 +88,11 @@ public class UpdatePackageRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The name of the target package.
+     * The name of the target software package.
      * </p>
      * 
      * @param packageName
-     *        The name of the target package.
+     *        The name of the target software package.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

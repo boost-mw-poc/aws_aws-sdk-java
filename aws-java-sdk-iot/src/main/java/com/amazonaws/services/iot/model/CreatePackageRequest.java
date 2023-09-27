@@ -22,7 +22,7 @@ public class CreatePackageRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The name of the new package.
+     * The name of the new software package.
      * </p>
      */
     private String packageName;
@@ -48,11 +48,11 @@ public class CreatePackageRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The name of the new package.
+     * The name of the new software package.
      * </p>
      * 
      * @param packageName
-     *        The name of the new package.
+     *        The name of the new software package.
      */
 
     public void setPackageName(String packageName) {
@@ -61,10 +61,10 @@ public class CreatePackageRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The name of the new package.
+     * The name of the new software package.
      * </p>
      * 
-     * @return The name of the new package.
+     * @return The name of the new software package.
      */
 
     public String getPackageName() {
@@ -73,11 +73,11 @@ public class CreatePackageRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The name of the new package.
+     * The name of the new software package.
      * </p>
      * 
      * @param packageName
-     *        The name of the new package.
+     *        The name of the new software package.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

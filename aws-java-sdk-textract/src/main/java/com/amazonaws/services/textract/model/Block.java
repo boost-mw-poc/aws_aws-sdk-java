@@ -129,7 +129,7 @@ public class Block implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <i>SIGNATURE</i> - The location and confidene score of a signature detected on a document page. Can be returned
+     * <i>SIGNATURE</i> - The location and confidence score of a signature detected on a document page. Can be returned
      * as part of a Key-Value pair or a detected cell.
      * </p>
      * </li>
@@ -297,8 +297,6 @@ public class Block implements Serializable, Cloneable, StructuredPojo {
      * Page values greater than 1 are only returned for multipage documents that are in PDF or TIFF format. A scanned
      * image (JPEG/PNG) provided to an asynchronous operation, even if it contains multiple document pages, is
      * considered a single-page document. This means that for scanned images the value of <code>Page</code> is always 1.
-     * Synchronous operations will also return a <code>Page</code> value of 1 because every input document is considered
-     * to be a single-page document.
      * </p>
      */
     private Integer page;
@@ -393,7 +391,7 @@ public class Block implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <i>SIGNATURE</i> - The location and confidene score of a signature detected on a document page. Can be returned
+     * <i>SIGNATURE</i> - The location and confidence score of a signature detected on a document page. Can be returned
      * as part of a Key-Value pair or a detected cell.
      * </p>
      * </li>
@@ -498,7 +496,7 @@ public class Block implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        <i>SIGNATURE</i> - The location and confidene score of a signature detected on a document page. Can be
+     *        <i>SIGNATURE</i> - The location and confidence score of a signature detected on a document page. Can be
      *        returned as part of a Key-Value pair or a detected cell.
      *        </p>
      *        </li>
@@ -609,7 +607,7 @@ public class Block implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <i>SIGNATURE</i> - The location and confidene score of a signature detected on a document page. Can be returned
+     * <i>SIGNATURE</i> - The location and confidence score of a signature detected on a document page. Can be returned
      * as part of a Key-Value pair or a detected cell.
      * </p>
      * </li>
@@ -714,7 +712,7 @@ public class Block implements Serializable, Cloneable, StructuredPojo {
      *         </li>
      *         <li>
      *         <p>
-     *         <i>SIGNATURE</i> - The location and confidene score of a signature detected on a document page. Can be
+     *         <i>SIGNATURE</i> - The location and confidence score of a signature detected on a document page. Can be
      *         returned as part of a Key-Value pair or a detected cell.
      *         </p>
      *         </li>
@@ -825,7 +823,7 @@ public class Block implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <i>SIGNATURE</i> - The location and confidene score of a signature detected on a document page. Can be returned
+     * <i>SIGNATURE</i> - The location and confidence score of a signature detected on a document page. Can be returned
      * as part of a Key-Value pair or a detected cell.
      * </p>
      * </li>
@@ -930,7 +928,7 @@ public class Block implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        <i>SIGNATURE</i> - The location and confidene score of a signature detected on a document page. Can be
+     *        <i>SIGNATURE</i> - The location and confidence score of a signature detected on a document page. Can be
      *        returned as part of a Key-Value pair or a detected cell.
      *        </p>
      *        </li>
@@ -1043,7 +1041,7 @@ public class Block implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <i>SIGNATURE</i> - The location and confidene score of a signature detected on a document page. Can be returned
+     * <i>SIGNATURE</i> - The location and confidence score of a signature detected on a document page. Can be returned
      * as part of a Key-Value pair or a detected cell.
      * </p>
      * </li>
@@ -1148,7 +1146,7 @@ public class Block implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        <i>SIGNATURE</i> - The location and confidene score of a signature detected on a document page. Can be
+     *        <i>SIGNATURE</i> - The location and confidence score of a signature detected on a document page. Can be
      *        returned as part of a Key-Value pair or a detected cell.
      *        </p>
      *        </li>
@@ -2460,8 +2458,6 @@ public class Block implements Serializable, Cloneable, StructuredPojo {
      * Page values greater than 1 are only returned for multipage documents that are in PDF or TIFF format. A scanned
      * image (JPEG/PNG) provided to an asynchronous operation, even if it contains multiple document pages, is
      * considered a single-page document. This means that for scanned images the value of <code>Page</code> is always 1.
-     * Synchronous operations will also return a <code>Page</code> value of 1 because every input document is considered
-     * to be a single-page document.
      * </p>
      * 
      * @param page
@@ -2469,8 +2465,7 @@ public class Block implements Serializable, Cloneable, StructuredPojo {
      *        operations. Page values greater than 1 are only returned for multipage documents that are in PDF or TIFF
      *        format. A scanned image (JPEG/PNG) provided to an asynchronous operation, even if it contains multiple
      *        document pages, is considered a single-page document. This means that for scanned images the value of
-     *        <code>Page</code> is always 1. Synchronous operations will also return a <code>Page</code> value of 1
-     *        because every input document is considered to be a single-page document.
+     *        <code>Page</code> is always 1.
      */
 
     public void setPage(Integer page) {
@@ -2483,16 +2478,13 @@ public class Block implements Serializable, Cloneable, StructuredPojo {
      * Page values greater than 1 are only returned for multipage documents that are in PDF or TIFF format. A scanned
      * image (JPEG/PNG) provided to an asynchronous operation, even if it contains multiple document pages, is
      * considered a single-page document. This means that for scanned images the value of <code>Page</code> is always 1.
-     * Synchronous operations will also return a <code>Page</code> value of 1 because every input document is considered
-     * to be a single-page document.
      * </p>
      * 
      * @return The page on which a block was detected. <code>Page</code> is returned by synchronous and asynchronous
      *         operations. Page values greater than 1 are only returned for multipage documents that are in PDF or TIFF
      *         format. A scanned image (JPEG/PNG) provided to an asynchronous operation, even if it contains multiple
      *         document pages, is considered a single-page document. This means that for scanned images the value of
-     *         <code>Page</code> is always 1. Synchronous operations will also return a <code>Page</code> value of 1
-     *         because every input document is considered to be a single-page document.
+     *         <code>Page</code> is always 1.
      */
 
     public Integer getPage() {
@@ -2505,8 +2497,6 @@ public class Block implements Serializable, Cloneable, StructuredPojo {
      * Page values greater than 1 are only returned for multipage documents that are in PDF or TIFF format. A scanned
      * image (JPEG/PNG) provided to an asynchronous operation, even if it contains multiple document pages, is
      * considered a single-page document. This means that for scanned images the value of <code>Page</code> is always 1.
-     * Synchronous operations will also return a <code>Page</code> value of 1 because every input document is considered
-     * to be a single-page document.
      * </p>
      * 
      * @param page
@@ -2514,8 +2504,7 @@ public class Block implements Serializable, Cloneable, StructuredPojo {
      *        operations. Page values greater than 1 are only returned for multipage documents that are in PDF or TIFF
      *        format. A scanned image (JPEG/PNG) provided to an asynchronous operation, even if it contains multiple
      *        document pages, is considered a single-page document. This means that for scanned images the value of
-     *        <code>Page</code> is always 1. Synchronous operations will also return a <code>Page</code> value of 1
-     *        because every input document is considered to be a single-page document.
+     *        <code>Page</code> is always 1.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

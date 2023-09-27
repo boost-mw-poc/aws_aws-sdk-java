@@ -35,23 +35,18 @@ public class CreateJobTemplateRequest extends com.amazonaws.AmazonWebServiceRequ
     private String jobArn;
     /**
      * <p>
-     * An S3 link to the job document to use in the template. Required if you don't specify a value for
-     * <code>document</code>.
-     * </p>
-     * <note>
-     * <p>
-     * If the job document resides in an S3 bucket, you must use a placeholder link when specifying the document.
+     * An S3 link, or S3 object URL, to the job document. The link is an Amazon S3 object URL and is required if you
+     * don't specify a value for <code>document</code>.
      * </p>
      * <p>
-     * The placeholder link is of the following form:
+     * For example,
+     * <code>--document-source https://s3.<i>region-code</i>.amazonaws.com/example-firmware/device-firmware.1.0</code>
      * </p>
      * <p>
-     * <code>${aws:iot:s3-presigned-url:https://s3.amazonaws.com/<i>bucket</i>/<i>key</i>}</code>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-bucket-intro.html">Methods for accessing a
+     * bucket</a>.
      * </p>
-     * <p>
-     * where <i>bucket</i> is your bucket name and <i>key</i> is the object in the bucket to which you are linking.
-     * </p>
-     * </note>
      */
     private String documentSource;
     /**
@@ -192,40 +187,30 @@ public class CreateJobTemplateRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * An S3 link to the job document to use in the template. Required if you don't specify a value for
-     * <code>document</code>.
-     * </p>
-     * <note>
-     * <p>
-     * If the job document resides in an S3 bucket, you must use a placeholder link when specifying the document.
+     * An S3 link, or S3 object URL, to the job document. The link is an Amazon S3 object URL and is required if you
+     * don't specify a value for <code>document</code>.
      * </p>
      * <p>
-     * The placeholder link is of the following form:
+     * For example,
+     * <code>--document-source https://s3.<i>region-code</i>.amazonaws.com/example-firmware/device-firmware.1.0</code>
      * </p>
      * <p>
-     * <code>${aws:iot:s3-presigned-url:https://s3.amazonaws.com/<i>bucket</i>/<i>key</i>}</code>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-bucket-intro.html">Methods for accessing a
+     * bucket</a>.
      * </p>
-     * <p>
-     * where <i>bucket</i> is your bucket name and <i>key</i> is the object in the bucket to which you are linking.
-     * </p>
-     * </note>
      * 
      * @param documentSource
-     *        An S3 link to the job document to use in the template. Required if you don't specify a value for
-     *        <code>document</code>.</p> <note>
+     *        An S3 link, or S3 object URL, to the job document. The link is an Amazon S3 object URL and is required if
+     *        you don't specify a value for <code>document</code>.</p>
      *        <p>
-     *        If the job document resides in an S3 bucket, you must use a placeholder link when specifying the document.
+     *        For example,
+     *        <code>--document-source https://s3.<i>region-code</i>.amazonaws.com/example-firmware/device-firmware.1.0</code>
      *        </p>
      *        <p>
-     *        The placeholder link is of the following form:
-     *        </p>
-     *        <p>
-     *        <code>${aws:iot:s3-presigned-url:https://s3.amazonaws.com/<i>bucket</i>/<i>key</i>}</code>
-     *        </p>
-     *        <p>
-     *        where <i>bucket</i> is your bucket name and <i>key</i> is the object in the bucket to which you are
-     *        linking.
-     *        </p>
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-bucket-intro.html">Methods for
+     *        accessing a bucket</a>.
      */
 
     public void setDocumentSource(String documentSource) {
@@ -234,40 +219,29 @@ public class CreateJobTemplateRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * An S3 link to the job document to use in the template. Required if you don't specify a value for
-     * <code>document</code>.
-     * </p>
-     * <note>
-     * <p>
-     * If the job document resides in an S3 bucket, you must use a placeholder link when specifying the document.
+     * An S3 link, or S3 object URL, to the job document. The link is an Amazon S3 object URL and is required if you
+     * don't specify a value for <code>document</code>.
      * </p>
      * <p>
-     * The placeholder link is of the following form:
+     * For example,
+     * <code>--document-source https://s3.<i>region-code</i>.amazonaws.com/example-firmware/device-firmware.1.0</code>
      * </p>
      * <p>
-     * <code>${aws:iot:s3-presigned-url:https://s3.amazonaws.com/<i>bucket</i>/<i>key</i>}</code>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-bucket-intro.html">Methods for accessing a
+     * bucket</a>.
      * </p>
-     * <p>
-     * where <i>bucket</i> is your bucket name and <i>key</i> is the object in the bucket to which you are linking.
-     * </p>
-     * </note>
      * 
-     * @return An S3 link to the job document to use in the template. Required if you don't specify a value for
-     *         <code>document</code>.</p> <note>
+     * @return An S3 link, or S3 object URL, to the job document. The link is an Amazon S3 object URL and is required if
+     *         you don't specify a value for <code>document</code>.</p>
      *         <p>
-     *         If the job document resides in an S3 bucket, you must use a placeholder link when specifying the
-     *         document.
+     *         For example,
+     *         <code>--document-source https://s3.<i>region-code</i>.amazonaws.com/example-firmware/device-firmware.1.0</code>
      *         </p>
      *         <p>
-     *         The placeholder link is of the following form:
-     *         </p>
-     *         <p>
-     *         <code>${aws:iot:s3-presigned-url:https://s3.amazonaws.com/<i>bucket</i>/<i>key</i>}</code>
-     *         </p>
-     *         <p>
-     *         where <i>bucket</i> is your bucket name and <i>key</i> is the object in the bucket to which you are
-     *         linking.
-     *         </p>
+     *         For more information, see <a
+     *         href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-bucket-intro.html">Methods for
+     *         accessing a bucket</a>.
      */
 
     public String getDocumentSource() {
@@ -276,40 +250,30 @@ public class CreateJobTemplateRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * An S3 link to the job document to use in the template. Required if you don't specify a value for
-     * <code>document</code>.
-     * </p>
-     * <note>
-     * <p>
-     * If the job document resides in an S3 bucket, you must use a placeholder link when specifying the document.
+     * An S3 link, or S3 object URL, to the job document. The link is an Amazon S3 object URL and is required if you
+     * don't specify a value for <code>document</code>.
      * </p>
      * <p>
-     * The placeholder link is of the following form:
+     * For example,
+     * <code>--document-source https://s3.<i>region-code</i>.amazonaws.com/example-firmware/device-firmware.1.0</code>
      * </p>
      * <p>
-     * <code>${aws:iot:s3-presigned-url:https://s3.amazonaws.com/<i>bucket</i>/<i>key</i>}</code>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-bucket-intro.html">Methods for accessing a
+     * bucket</a>.
      * </p>
-     * <p>
-     * where <i>bucket</i> is your bucket name and <i>key</i> is the object in the bucket to which you are linking.
-     * </p>
-     * </note>
      * 
      * @param documentSource
-     *        An S3 link to the job document to use in the template. Required if you don't specify a value for
-     *        <code>document</code>.</p> <note>
+     *        An S3 link, or S3 object URL, to the job document. The link is an Amazon S3 object URL and is required if
+     *        you don't specify a value for <code>document</code>.</p>
      *        <p>
-     *        If the job document resides in an S3 bucket, you must use a placeholder link when specifying the document.
+     *        For example,
+     *        <code>--document-source https://s3.<i>region-code</i>.amazonaws.com/example-firmware/device-firmware.1.0</code>
      *        </p>
      *        <p>
-     *        The placeholder link is of the following form:
-     *        </p>
-     *        <p>
-     *        <code>${aws:iot:s3-presigned-url:https://s3.amazonaws.com/<i>bucket</i>/<i>key</i>}</code>
-     *        </p>
-     *        <p>
-     *        where <i>bucket</i> is your bucket name and <i>key</i> is the object in the bucket to which you are
-     *        linking.
-     *        </p>
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-bucket-intro.html">Methods for
+     *        accessing a bucket</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

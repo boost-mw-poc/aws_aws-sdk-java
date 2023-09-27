@@ -26,7 +26,7 @@ public class GetPackageVersionResult extends com.amazonaws.AmazonWebServiceResul
     private String packageVersionArn;
     /**
      * <p>
-     * The name of the package.
+     * The name of the software package.
      * </p>
      */
     private String packageName;
@@ -117,11 +117,11 @@ public class GetPackageVersionResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * The name of the package.
+     * The name of the software package.
      * </p>
      * 
      * @param packageName
-     *        The name of the package.
+     *        The name of the software package.
      */
 
     public void setPackageName(String packageName) {
@@ -130,10 +130,10 @@ public class GetPackageVersionResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * The name of the package.
+     * The name of the software package.
      * </p>
      * 
-     * @return The name of the package.
+     * @return The name of the software package.
      */
 
     public String getPackageName() {
@@ -142,11 +142,11 @@ public class GetPackageVersionResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * The name of the package.
+     * The name of the software package.
      * </p>
      * 
      * @param packageName
-     *        The name of the package.
+     *        The name of the software package.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
