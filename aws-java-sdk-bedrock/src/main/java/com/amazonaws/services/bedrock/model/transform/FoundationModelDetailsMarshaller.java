@@ -28,24 +28,24 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class FoundationModelDetailsMarshaller {
 
-    private static final MarshallingInfo<List> CUSTOMIZATIONSSUPPORTED_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("customizationsSupported").build();
-    private static final MarshallingInfo<List> INFERENCETYPESSUPPORTED_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("inferenceTypesSupported").build();
-    private static final MarshallingInfo<List> INPUTMODALITIES_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("inputModalities").build();
     private static final MarshallingInfo<String> MODELARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("modelArn").build();
     private static final MarshallingInfo<String> MODELID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("modelId").build();
     private static final MarshallingInfo<String> MODELNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("modelName").build();
-    private static final MarshallingInfo<List> OUTPUTMODALITIES_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("outputModalities").build();
     private static final MarshallingInfo<String> PROVIDERNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("providerName").build();
+    private static final MarshallingInfo<List> INPUTMODALITIES_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("inputModalities").build();
+    private static final MarshallingInfo<List> OUTPUTMODALITIES_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("outputModalities").build();
     private static final MarshallingInfo<Boolean> RESPONSESTREAMINGSUPPORTED_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("responseStreamingSupported").build();
+    private static final MarshallingInfo<List> CUSTOMIZATIONSSUPPORTED_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("customizationsSupported").build();
+    private static final MarshallingInfo<List> INFERENCETYPESSUPPORTED_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("inferenceTypesSupported").build();
 
     private static final FoundationModelDetailsMarshaller instance = new FoundationModelDetailsMarshaller();
 
@@ -63,15 +63,15 @@ public class FoundationModelDetailsMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(foundationModelDetails.getCustomizationsSupported(), CUSTOMIZATIONSSUPPORTED_BINDING);
-            protocolMarshaller.marshall(foundationModelDetails.getInferenceTypesSupported(), INFERENCETYPESSUPPORTED_BINDING);
-            protocolMarshaller.marshall(foundationModelDetails.getInputModalities(), INPUTMODALITIES_BINDING);
             protocolMarshaller.marshall(foundationModelDetails.getModelArn(), MODELARN_BINDING);
             protocolMarshaller.marshall(foundationModelDetails.getModelId(), MODELID_BINDING);
             protocolMarshaller.marshall(foundationModelDetails.getModelName(), MODELNAME_BINDING);
-            protocolMarshaller.marshall(foundationModelDetails.getOutputModalities(), OUTPUTMODALITIES_BINDING);
             protocolMarshaller.marshall(foundationModelDetails.getProviderName(), PROVIDERNAME_BINDING);
+            protocolMarshaller.marshall(foundationModelDetails.getInputModalities(), INPUTMODALITIES_BINDING);
+            protocolMarshaller.marshall(foundationModelDetails.getOutputModalities(), OUTPUTMODALITIES_BINDING);
             protocolMarshaller.marshall(foundationModelDetails.getResponseStreamingSupported(), RESPONSESTREAMINGSUPPORTED_BINDING);
+            protocolMarshaller.marshall(foundationModelDetails.getCustomizationsSupported(), CUSTOMIZATIONSSUPPORTED_BINDING);
+            protocolMarshaller.marshall(foundationModelDetails.getInferenceTypesSupported(), INFERENCETYPESSUPPORTED_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

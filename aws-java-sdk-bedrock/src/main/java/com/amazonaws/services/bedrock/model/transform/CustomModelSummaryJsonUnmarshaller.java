@@ -48,18 +48,6 @@ public class CustomModelSummaryJsonUnmarshaller implements Unmarshaller<CustomMo
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("baseModelArn", targetDepth)) {
-                    context.nextToken();
-                    customModelSummary.setBaseModelArn(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("baseModelName", targetDepth)) {
-                    context.nextToken();
-                    customModelSummary.setBaseModelName(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("creationTime", targetDepth)) {
-                    context.nextToken();
-                    customModelSummary.setCreationTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
-                }
                 if (context.testExpression("modelArn", targetDepth)) {
                     context.nextToken();
                     customModelSummary.setModelArn(context.getUnmarshaller(String.class).unmarshall(context));
@@ -67,6 +55,18 @@ public class CustomModelSummaryJsonUnmarshaller implements Unmarshaller<CustomMo
                 if (context.testExpression("modelName", targetDepth)) {
                     context.nextToken();
                     customModelSummary.setModelName(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("creationTime", targetDepth)) {
+                    context.nextToken();
+                    customModelSummary.setCreationTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
+                }
+                if (context.testExpression("baseModelArn", targetDepth)) {
+                    context.nextToken();
+                    customModelSummary.setBaseModelArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("baseModelName", targetDepth)) {
+                    context.nextToken();
+                    customModelSummary.setBaseModelName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

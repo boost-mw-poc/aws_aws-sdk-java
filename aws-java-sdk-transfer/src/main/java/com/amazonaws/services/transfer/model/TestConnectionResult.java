@@ -38,31 +38,29 @@ public class TestConnectionResult extends com.amazonaws.AmazonWebServiceResult<c
     /**
      * <p>
      * Returns <code>Connection succeeded</code> if the test is successful. Or, returns a descriptive error message if
-     * the test fails. The following list provides the details for some error messages and troubleshooting steps for
-     * each.
+     * the test fails. The following list provides troubleshooting details, depending on the error message that you
+     * receive.
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <b>Unable to access secrets manager</b>: Verify that your secret name aligns with the one in Transfer Role
-     * permissions.
+     * Verify that your secret name aligns with the one in Transfer Role permissions.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b>Unknown Host/Connection failed</b>: Verify the server URL in the connector configuration , and verify that the
-     * login credentials work successfully outside of the connector.
+     * Verify the server URL in the connector configuration , and verify that the login credentials work successfully
+     * outside of the connector.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b>Private key not found</b>: Verify that the secret exists and is formatted correctly.
+     * Verify that the secret exists and is formatted correctly.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b>Invalid trusted host keys</b>: Verify that the trusted host key in the connector configuration matches the
-     * <code>ssh-keyscan</code> output.
+     * Verify that the trusted host key in the connector configuration matches the <code>ssh-keyscan</code> output.
      * </p>
      * </li>
      * </ul>
@@ -152,61 +150,58 @@ public class TestConnectionResult extends com.amazonaws.AmazonWebServiceResult<c
     /**
      * <p>
      * Returns <code>Connection succeeded</code> if the test is successful. Or, returns a descriptive error message if
-     * the test fails. The following list provides the details for some error messages and troubleshooting steps for
-     * each.
+     * the test fails. The following list provides troubleshooting details, depending on the error message that you
+     * receive.
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <b>Unable to access secrets manager</b>: Verify that your secret name aligns with the one in Transfer Role
-     * permissions.
+     * Verify that your secret name aligns with the one in Transfer Role permissions.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b>Unknown Host/Connection failed</b>: Verify the server URL in the connector configuration , and verify that the
-     * login credentials work successfully outside of the connector.
+     * Verify the server URL in the connector configuration , and verify that the login credentials work successfully
+     * outside of the connector.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b>Private key not found</b>: Verify that the secret exists and is formatted correctly.
+     * Verify that the secret exists and is formatted correctly.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b>Invalid trusted host keys</b>: Verify that the trusted host key in the connector configuration matches the
-     * <code>ssh-keyscan</code> output.
+     * Verify that the trusted host key in the connector configuration matches the <code>ssh-keyscan</code> output.
      * </p>
      * </li>
      * </ul>
      * 
      * @param statusMessage
      *        Returns <code>Connection succeeded</code> if the test is successful. Or, returns a descriptive error
-     *        message if the test fails. The following list provides the details for some error messages and
-     *        troubleshooting steps for each.</p>
+     *        message if the test fails. The following list provides troubleshooting details, depending on the error
+     *        message that you receive.</p>
      *        <ul>
      *        <li>
      *        <p>
-     *        <b>Unable to access secrets manager</b>: Verify that your secret name aligns with the one in Transfer Role
-     *        permissions.
+     *        Verify that your secret name aligns with the one in Transfer Role permissions.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <b>Unknown Host/Connection failed</b>: Verify the server URL in the connector configuration , and verify
-     *        that the login credentials work successfully outside of the connector.
+     *        Verify the server URL in the connector configuration , and verify that the login credentials work
+     *        successfully outside of the connector.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <b>Private key not found</b>: Verify that the secret exists and is formatted correctly.
+     *        Verify that the secret exists and is formatted correctly.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <b>Invalid trusted host keys</b>: Verify that the trusted host key in the connector configuration matches
-     *        the <code>ssh-keyscan</code> output.
+     *        Verify that the trusted host key in the connector configuration matches the <code>ssh-keyscan</code>
+     *        output.
      *        </p>
      *        </li>
      */
@@ -218,60 +213,57 @@ public class TestConnectionResult extends com.amazonaws.AmazonWebServiceResult<c
     /**
      * <p>
      * Returns <code>Connection succeeded</code> if the test is successful. Or, returns a descriptive error message if
-     * the test fails. The following list provides the details for some error messages and troubleshooting steps for
-     * each.
+     * the test fails. The following list provides troubleshooting details, depending on the error message that you
+     * receive.
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <b>Unable to access secrets manager</b>: Verify that your secret name aligns with the one in Transfer Role
-     * permissions.
+     * Verify that your secret name aligns with the one in Transfer Role permissions.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b>Unknown Host/Connection failed</b>: Verify the server URL in the connector configuration , and verify that the
-     * login credentials work successfully outside of the connector.
+     * Verify the server URL in the connector configuration , and verify that the login credentials work successfully
+     * outside of the connector.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b>Private key not found</b>: Verify that the secret exists and is formatted correctly.
+     * Verify that the secret exists and is formatted correctly.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b>Invalid trusted host keys</b>: Verify that the trusted host key in the connector configuration matches the
-     * <code>ssh-keyscan</code> output.
+     * Verify that the trusted host key in the connector configuration matches the <code>ssh-keyscan</code> output.
      * </p>
      * </li>
      * </ul>
      * 
      * @return Returns <code>Connection succeeded</code> if the test is successful. Or, returns a descriptive error
-     *         message if the test fails. The following list provides the details for some error messages and
-     *         troubleshooting steps for each.</p>
+     *         message if the test fails. The following list provides troubleshooting details, depending on the error
+     *         message that you receive.</p>
      *         <ul>
      *         <li>
      *         <p>
-     *         <b>Unable to access secrets manager</b>: Verify that your secret name aligns with the one in Transfer
-     *         Role permissions.
+     *         Verify that your secret name aligns with the one in Transfer Role permissions.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <b>Unknown Host/Connection failed</b>: Verify the server URL in the connector configuration , and verify
-     *         that the login credentials work successfully outside of the connector.
+     *         Verify the server URL in the connector configuration , and verify that the login credentials work
+     *         successfully outside of the connector.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <b>Private key not found</b>: Verify that the secret exists and is formatted correctly.
+     *         Verify that the secret exists and is formatted correctly.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <b>Invalid trusted host keys</b>: Verify that the trusted host key in the connector configuration matches
-     *         the <code>ssh-keyscan</code> output.
+     *         Verify that the trusted host key in the connector configuration matches the <code>ssh-keyscan</code>
+     *         output.
      *         </p>
      *         </li>
      */
@@ -283,61 +275,58 @@ public class TestConnectionResult extends com.amazonaws.AmazonWebServiceResult<c
     /**
      * <p>
      * Returns <code>Connection succeeded</code> if the test is successful. Or, returns a descriptive error message if
-     * the test fails. The following list provides the details for some error messages and troubleshooting steps for
-     * each.
+     * the test fails. The following list provides troubleshooting details, depending on the error message that you
+     * receive.
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <b>Unable to access secrets manager</b>: Verify that your secret name aligns with the one in Transfer Role
-     * permissions.
+     * Verify that your secret name aligns with the one in Transfer Role permissions.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b>Unknown Host/Connection failed</b>: Verify the server URL in the connector configuration , and verify that the
-     * login credentials work successfully outside of the connector.
+     * Verify the server URL in the connector configuration , and verify that the login credentials work successfully
+     * outside of the connector.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b>Private key not found</b>: Verify that the secret exists and is formatted correctly.
+     * Verify that the secret exists and is formatted correctly.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b>Invalid trusted host keys</b>: Verify that the trusted host key in the connector configuration matches the
-     * <code>ssh-keyscan</code> output.
+     * Verify that the trusted host key in the connector configuration matches the <code>ssh-keyscan</code> output.
      * </p>
      * </li>
      * </ul>
      * 
      * @param statusMessage
      *        Returns <code>Connection succeeded</code> if the test is successful. Or, returns a descriptive error
-     *        message if the test fails. The following list provides the details for some error messages and
-     *        troubleshooting steps for each.</p>
+     *        message if the test fails. The following list provides troubleshooting details, depending on the error
+     *        message that you receive.</p>
      *        <ul>
      *        <li>
      *        <p>
-     *        <b>Unable to access secrets manager</b>: Verify that your secret name aligns with the one in Transfer Role
-     *        permissions.
+     *        Verify that your secret name aligns with the one in Transfer Role permissions.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <b>Unknown Host/Connection failed</b>: Verify the server URL in the connector configuration , and verify
-     *        that the login credentials work successfully outside of the connector.
+     *        Verify the server URL in the connector configuration , and verify that the login credentials work
+     *        successfully outside of the connector.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <b>Private key not found</b>: Verify that the secret exists and is formatted correctly.
+     *        Verify that the secret exists and is formatted correctly.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <b>Invalid trusted host keys</b>: Verify that the trusted host key in the connector configuration matches
-     *        the <code>ssh-keyscan</code> output.
+     *        Verify that the trusted host key in the connector configuration matches the <code>ssh-keyscan</code>
+     *        output.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

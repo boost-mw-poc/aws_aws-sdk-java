@@ -27,10 +27,10 @@ public class ListCustomModelsRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Return custom models only if the base model ARN matches this parameter.
+     * Return custom models created before the specified time.
      * </p>
      */
-    private String baseModelArnEquals;
+    private java.util.Date creationTimeBefore;
     /**
      * <p>
      * Return custom models created after the specified time.
@@ -39,10 +39,16 @@ public class ListCustomModelsRequest extends com.amazonaws.AmazonWebServiceReque
     private java.util.Date creationTimeAfter;
     /**
      * <p>
-     * Return custom models created before the specified time.
+     * Return custom models only if the job name contains these characters.
      * </p>
      */
-    private java.util.Date creationTimeBefore;
+    private String nameContains;
+    /**
+     * <p>
+     * Return custom models only if the base model ARN matches this parameter.
+     * </p>
+     */
+    private String baseModelArnEquals;
     /**
      * <p>
      * Return custom models only if the foundation model ARN matches this parameter.
@@ -55,12 +61,6 @@ public class ListCustomModelsRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      */
     private Integer maxResults;
-    /**
-     * <p>
-     * Return custom models only if the job name contains these characters.
-     * </p>
-     */
-    private String nameContains;
     /**
      * <p>
      * Continuation token from the previous response, for Bedrock to list the next set of results.
@@ -82,41 +82,41 @@ public class ListCustomModelsRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Return custom models only if the base model ARN matches this parameter.
+     * Return custom models created before the specified time.
      * </p>
      * 
-     * @param baseModelArnEquals
-     *        Return custom models only if the base model ARN matches this parameter.
+     * @param creationTimeBefore
+     *        Return custom models created before the specified time.
      */
 
-    public void setBaseModelArnEquals(String baseModelArnEquals) {
-        this.baseModelArnEquals = baseModelArnEquals;
+    public void setCreationTimeBefore(java.util.Date creationTimeBefore) {
+        this.creationTimeBefore = creationTimeBefore;
     }
 
     /**
      * <p>
-     * Return custom models only if the base model ARN matches this parameter.
+     * Return custom models created before the specified time.
      * </p>
      * 
-     * @return Return custom models only if the base model ARN matches this parameter.
+     * @return Return custom models created before the specified time.
      */
 
-    public String getBaseModelArnEquals() {
-        return this.baseModelArnEquals;
+    public java.util.Date getCreationTimeBefore() {
+        return this.creationTimeBefore;
     }
 
     /**
      * <p>
-     * Return custom models only if the base model ARN matches this parameter.
+     * Return custom models created before the specified time.
      * </p>
      * 
-     * @param baseModelArnEquals
-     *        Return custom models only if the base model ARN matches this parameter.
+     * @param creationTimeBefore
+     *        Return custom models created before the specified time.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public ListCustomModelsRequest withBaseModelArnEquals(String baseModelArnEquals) {
-        setBaseModelArnEquals(baseModelArnEquals);
+    public ListCustomModelsRequest withCreationTimeBefore(java.util.Date creationTimeBefore) {
+        setCreationTimeBefore(creationTimeBefore);
         return this;
     }
 
@@ -162,41 +162,81 @@ public class ListCustomModelsRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Return custom models created before the specified time.
+     * Return custom models only if the job name contains these characters.
      * </p>
      * 
-     * @param creationTimeBefore
-     *        Return custom models created before the specified time.
+     * @param nameContains
+     *        Return custom models only if the job name contains these characters.
      */
 
-    public void setCreationTimeBefore(java.util.Date creationTimeBefore) {
-        this.creationTimeBefore = creationTimeBefore;
+    public void setNameContains(String nameContains) {
+        this.nameContains = nameContains;
     }
 
     /**
      * <p>
-     * Return custom models created before the specified time.
+     * Return custom models only if the job name contains these characters.
      * </p>
      * 
-     * @return Return custom models created before the specified time.
+     * @return Return custom models only if the job name contains these characters.
      */
 
-    public java.util.Date getCreationTimeBefore() {
-        return this.creationTimeBefore;
+    public String getNameContains() {
+        return this.nameContains;
     }
 
     /**
      * <p>
-     * Return custom models created before the specified time.
+     * Return custom models only if the job name contains these characters.
      * </p>
      * 
-     * @param creationTimeBefore
-     *        Return custom models created before the specified time.
+     * @param nameContains
+     *        Return custom models only if the job name contains these characters.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public ListCustomModelsRequest withCreationTimeBefore(java.util.Date creationTimeBefore) {
-        setCreationTimeBefore(creationTimeBefore);
+    public ListCustomModelsRequest withNameContains(String nameContains) {
+        setNameContains(nameContains);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Return custom models only if the base model ARN matches this parameter.
+     * </p>
+     * 
+     * @param baseModelArnEquals
+     *        Return custom models only if the base model ARN matches this parameter.
+     */
+
+    public void setBaseModelArnEquals(String baseModelArnEquals) {
+        this.baseModelArnEquals = baseModelArnEquals;
+    }
+
+    /**
+     * <p>
+     * Return custom models only if the base model ARN matches this parameter.
+     * </p>
+     * 
+     * @return Return custom models only if the base model ARN matches this parameter.
+     */
+
+    public String getBaseModelArnEquals() {
+        return this.baseModelArnEquals;
+    }
+
+    /**
+     * <p>
+     * Return custom models only if the base model ARN matches this parameter.
+     * </p>
+     * 
+     * @param baseModelArnEquals
+     *        Return custom models only if the base model ARN matches this parameter.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListCustomModelsRequest withBaseModelArnEquals(String baseModelArnEquals) {
+        setBaseModelArnEquals(baseModelArnEquals);
         return this;
     }
 
@@ -277,46 +317,6 @@ public class ListCustomModelsRequest extends com.amazonaws.AmazonWebServiceReque
 
     public ListCustomModelsRequest withMaxResults(Integer maxResults) {
         setMaxResults(maxResults);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Return custom models only if the job name contains these characters.
-     * </p>
-     * 
-     * @param nameContains
-     *        Return custom models only if the job name contains these characters.
-     */
-
-    public void setNameContains(String nameContains) {
-        this.nameContains = nameContains;
-    }
-
-    /**
-     * <p>
-     * Return custom models only if the job name contains these characters.
-     * </p>
-     * 
-     * @return Return custom models only if the job name contains these characters.
-     */
-
-    public String getNameContains() {
-        return this.nameContains;
-    }
-
-    /**
-     * <p>
-     * Return custom models only if the job name contains these characters.
-     * </p>
-     * 
-     * @param nameContains
-     *        Return custom models only if the job name contains these characters.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ListCustomModelsRequest withNameContains(String nameContains) {
-        setNameContains(nameContains);
         return this;
     }
 
@@ -490,18 +490,18 @@ public class ListCustomModelsRequest extends com.amazonaws.AmazonWebServiceReque
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getBaseModelArnEquals() != null)
-            sb.append("BaseModelArnEquals: ").append(getBaseModelArnEquals()).append(",");
-        if (getCreationTimeAfter() != null)
-            sb.append("CreationTimeAfter: ").append(getCreationTimeAfter()).append(",");
         if (getCreationTimeBefore() != null)
             sb.append("CreationTimeBefore: ").append(getCreationTimeBefore()).append(",");
+        if (getCreationTimeAfter() != null)
+            sb.append("CreationTimeAfter: ").append(getCreationTimeAfter()).append(",");
+        if (getNameContains() != null)
+            sb.append("NameContains: ").append(getNameContains()).append(",");
+        if (getBaseModelArnEquals() != null)
+            sb.append("BaseModelArnEquals: ").append(getBaseModelArnEquals()).append(",");
         if (getFoundationModelArnEquals() != null)
             sb.append("FoundationModelArnEquals: ").append(getFoundationModelArnEquals()).append(",");
         if (getMaxResults() != null)
             sb.append("MaxResults: ").append(getMaxResults()).append(",");
-        if (getNameContains() != null)
-            sb.append("NameContains: ").append(getNameContains()).append(",");
         if (getNextToken() != null)
             sb.append("NextToken: ").append(getNextToken()).append(",");
         if (getSortBy() != null)
@@ -522,17 +522,21 @@ public class ListCustomModelsRequest extends com.amazonaws.AmazonWebServiceReque
         if (obj instanceof ListCustomModelsRequest == false)
             return false;
         ListCustomModelsRequest other = (ListCustomModelsRequest) obj;
-        if (other.getBaseModelArnEquals() == null ^ this.getBaseModelArnEquals() == null)
+        if (other.getCreationTimeBefore() == null ^ this.getCreationTimeBefore() == null)
             return false;
-        if (other.getBaseModelArnEquals() != null && other.getBaseModelArnEquals().equals(this.getBaseModelArnEquals()) == false)
+        if (other.getCreationTimeBefore() != null && other.getCreationTimeBefore().equals(this.getCreationTimeBefore()) == false)
             return false;
         if (other.getCreationTimeAfter() == null ^ this.getCreationTimeAfter() == null)
             return false;
         if (other.getCreationTimeAfter() != null && other.getCreationTimeAfter().equals(this.getCreationTimeAfter()) == false)
             return false;
-        if (other.getCreationTimeBefore() == null ^ this.getCreationTimeBefore() == null)
+        if (other.getNameContains() == null ^ this.getNameContains() == null)
             return false;
-        if (other.getCreationTimeBefore() != null && other.getCreationTimeBefore().equals(this.getCreationTimeBefore()) == false)
+        if (other.getNameContains() != null && other.getNameContains().equals(this.getNameContains()) == false)
+            return false;
+        if (other.getBaseModelArnEquals() == null ^ this.getBaseModelArnEquals() == null)
+            return false;
+        if (other.getBaseModelArnEquals() != null && other.getBaseModelArnEquals().equals(this.getBaseModelArnEquals()) == false)
             return false;
         if (other.getFoundationModelArnEquals() == null ^ this.getFoundationModelArnEquals() == null)
             return false;
@@ -541,10 +545,6 @@ public class ListCustomModelsRequest extends com.amazonaws.AmazonWebServiceReque
         if (other.getMaxResults() == null ^ this.getMaxResults() == null)
             return false;
         if (other.getMaxResults() != null && other.getMaxResults().equals(this.getMaxResults()) == false)
-            return false;
-        if (other.getNameContains() == null ^ this.getNameContains() == null)
-            return false;
-        if (other.getNameContains() != null && other.getNameContains().equals(this.getNameContains()) == false)
             return false;
         if (other.getNextToken() == null ^ this.getNextToken() == null)
             return false;
@@ -566,12 +566,12 @@ public class ListCustomModelsRequest extends com.amazonaws.AmazonWebServiceReque
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getBaseModelArnEquals() == null) ? 0 : getBaseModelArnEquals().hashCode());
-        hashCode = prime * hashCode + ((getCreationTimeAfter() == null) ? 0 : getCreationTimeAfter().hashCode());
         hashCode = prime * hashCode + ((getCreationTimeBefore() == null) ? 0 : getCreationTimeBefore().hashCode());
+        hashCode = prime * hashCode + ((getCreationTimeAfter() == null) ? 0 : getCreationTimeAfter().hashCode());
+        hashCode = prime * hashCode + ((getNameContains() == null) ? 0 : getNameContains().hashCode());
+        hashCode = prime * hashCode + ((getBaseModelArnEquals() == null) ? 0 : getBaseModelArnEquals().hashCode());
         hashCode = prime * hashCode + ((getFoundationModelArnEquals() == null) ? 0 : getFoundationModelArnEquals().hashCode());
         hashCode = prime * hashCode + ((getMaxResults() == null) ? 0 : getMaxResults().hashCode());
-        hashCode = prime * hashCode + ((getNameContains() == null) ? 0 : getNameContains().hashCode());
         hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
         hashCode = prime * hashCode + ((getSortBy() == null) ? 0 : getSortBy().hashCode());
         hashCode = prime * hashCode + ((getSortOrder() == null) ? 0 : getSortOrder().hashCode());

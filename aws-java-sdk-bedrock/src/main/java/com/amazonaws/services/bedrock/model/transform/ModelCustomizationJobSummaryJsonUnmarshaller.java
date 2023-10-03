@@ -48,13 +48,33 @@ public class ModelCustomizationJobSummaryJsonUnmarshaller implements Unmarshalle
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("jobArn", targetDepth)) {
+                    context.nextToken();
+                    modelCustomizationJobSummary.setJobArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("baseModelArn", targetDepth)) {
                     context.nextToken();
                     modelCustomizationJobSummary.setBaseModelArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("jobName", targetDepth)) {
+                    context.nextToken();
+                    modelCustomizationJobSummary.setJobName(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("status", targetDepth)) {
+                    context.nextToken();
+                    modelCustomizationJobSummary.setStatus(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("lastModifiedTime", targetDepth)) {
+                    context.nextToken();
+                    modelCustomizationJobSummary.setLastModifiedTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
+                }
                 if (context.testExpression("creationTime", targetDepth)) {
                     context.nextToken();
                     modelCustomizationJobSummary.setCreationTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
+                }
+                if (context.testExpression("endTime", targetDepth)) {
+                    context.nextToken();
+                    modelCustomizationJobSummary.setEndTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
                 }
                 if (context.testExpression("customModelArn", targetDepth)) {
                     context.nextToken();
@@ -63,26 +83,6 @@ public class ModelCustomizationJobSummaryJsonUnmarshaller implements Unmarshalle
                 if (context.testExpression("customModelName", targetDepth)) {
                     context.nextToken();
                     modelCustomizationJobSummary.setCustomModelName(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("endTime", targetDepth)) {
-                    context.nextToken();
-                    modelCustomizationJobSummary.setEndTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
-                }
-                if (context.testExpression("jobArn", targetDepth)) {
-                    context.nextToken();
-                    modelCustomizationJobSummary.setJobArn(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("jobName", targetDepth)) {
-                    context.nextToken();
-                    modelCustomizationJobSummary.setJobName(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("lastModifiedTime", targetDepth)) {
-                    context.nextToken();
-                    modelCustomizationJobSummary.setLastModifiedTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
-                }
-                if (context.testExpression("status", targetDepth)) {
-                    context.nextToken();
-                    modelCustomizationJobSummary.setStatus(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

@@ -38,8 +38,8 @@ public interface AmazonBedrockRuntimeAsync extends AmazonBedrockRuntime {
      * InvokeModel to run inference for text models, image models, and embedding models.
      * </p>
      * <p>
-     * For more information about invoking models, see Using the API in the <a
-     * href="https://d2eo22ngex1n9g.cloudfront.net/Documentation/BedrockUserGuide.pdf">Bedrock User Guide</a>.
+     * For more information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/api-methods-run.html">Run
+     * inference</a> in the Bedrock User Guide.
      * </p>
      * <p>
      * For example requests, see Examples (after the Errors section).
@@ -59,8 +59,8 @@ public interface AmazonBedrockRuntimeAsync extends AmazonBedrockRuntime {
      * InvokeModel to run inference for text models, image models, and embedding models.
      * </p>
      * <p>
-     * For more information about invoking models, see Using the API in the <a
-     * href="https://d2eo22ngex1n9g.cloudfront.net/Documentation/BedrockUserGuide.pdf">Bedrock User Guide</a>.
+     * For more information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/api-methods-run.html">Run
+     * inference</a> in the Bedrock User Guide.
      * </p>
      * <p>
      * For example requests, see Examples (after the Errors section).

@@ -39,16 +39,22 @@ public class ListModelCustomizationJobsRequest extends com.amazonaws.AmazonWebSe
     private java.util.Date creationTimeBefore;
     /**
      * <p>
-     * Maximum number of results to return in the response.
+     * Return customization jobs with the specified status.
      * </p>
      */
-    private Integer maxResults;
+    private String statusEquals;
     /**
      * <p>
      * Return customization jobs only if the job name contains these characters.
      * </p>
      */
     private String nameContains;
+    /**
+     * <p>
+     * Maximum number of results to return in the response.
+     * </p>
+     */
+    private Integer maxResults;
     /**
      * <p>
      * Continuation token from the previous response, for Bedrock to list the next set of results.
@@ -67,12 +73,6 @@ public class ListModelCustomizationJobsRequest extends com.amazonaws.AmazonWebSe
      * </p>
      */
     private String sortOrder;
-    /**
-     * <p>
-     * Return customization jobs with the specified status.
-     * </p>
-     */
-    private String statusEquals;
 
     /**
      * <p>
@@ -156,41 +156,60 @@ public class ListModelCustomizationJobsRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * Maximum number of results to return in the response.
+     * Return customization jobs with the specified status.
      * </p>
      * 
-     * @param maxResults
-     *        Maximum number of results to return in the response.
+     * @param statusEquals
+     *        Return customization jobs with the specified status.
+     * @see FineTuningJobStatus
      */
 
-    public void setMaxResults(Integer maxResults) {
-        this.maxResults = maxResults;
+    public void setStatusEquals(String statusEquals) {
+        this.statusEquals = statusEquals;
     }
 
     /**
      * <p>
-     * Maximum number of results to return in the response.
+     * Return customization jobs with the specified status.
      * </p>
      * 
-     * @return Maximum number of results to return in the response.
+     * @return Return customization jobs with the specified status.
+     * @see FineTuningJobStatus
      */
 
-    public Integer getMaxResults() {
-        return this.maxResults;
+    public String getStatusEquals() {
+        return this.statusEquals;
     }
 
     /**
      * <p>
-     * Maximum number of results to return in the response.
+     * Return customization jobs with the specified status.
      * </p>
      * 
-     * @param maxResults
-     *        Maximum number of results to return in the response.
+     * @param statusEquals
+     *        Return customization jobs with the specified status.
      * @return Returns a reference to this object so that method calls can be chained together.
+     * @see FineTuningJobStatus
      */
 
-    public ListModelCustomizationJobsRequest withMaxResults(Integer maxResults) {
-        setMaxResults(maxResults);
+    public ListModelCustomizationJobsRequest withStatusEquals(String statusEquals) {
+        setStatusEquals(statusEquals);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Return customization jobs with the specified status.
+     * </p>
+     * 
+     * @param statusEquals
+     *        Return customization jobs with the specified status.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see FineTuningJobStatus
+     */
+
+    public ListModelCustomizationJobsRequest withStatusEquals(FineTuningJobStatus statusEquals) {
+        this.statusEquals = statusEquals.toString();
         return this;
     }
 
@@ -231,6 +250,46 @@ public class ListModelCustomizationJobsRequest extends com.amazonaws.AmazonWebSe
 
     public ListModelCustomizationJobsRequest withNameContains(String nameContains) {
         setNameContains(nameContains);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Maximum number of results to return in the response.
+     * </p>
+     * 
+     * @param maxResults
+     *        Maximum number of results to return in the response.
+     */
+
+    public void setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
+    }
+
+    /**
+     * <p>
+     * Maximum number of results to return in the response.
+     * </p>
+     * 
+     * @return Maximum number of results to return in the response.
+     */
+
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    /**
+     * <p>
+     * Maximum number of results to return in the response.
+     * </p>
+     * 
+     * @param maxResults
+     *        Maximum number of results to return in the response.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListModelCustomizationJobsRequest withMaxResults(Integer maxResults) {
+        setMaxResults(maxResults);
         return this;
     }
 
@@ -393,65 +452,6 @@ public class ListModelCustomizationJobsRequest extends com.amazonaws.AmazonWebSe
     }
 
     /**
-     * <p>
-     * Return customization jobs with the specified status.
-     * </p>
-     * 
-     * @param statusEquals
-     *        Return customization jobs with the specified status.
-     * @see FineTuningJobStatus
-     */
-
-    public void setStatusEquals(String statusEquals) {
-        this.statusEquals = statusEquals;
-    }
-
-    /**
-     * <p>
-     * Return customization jobs with the specified status.
-     * </p>
-     * 
-     * @return Return customization jobs with the specified status.
-     * @see FineTuningJobStatus
-     */
-
-    public String getStatusEquals() {
-        return this.statusEquals;
-    }
-
-    /**
-     * <p>
-     * Return customization jobs with the specified status.
-     * </p>
-     * 
-     * @param statusEquals
-     *        Return customization jobs with the specified status.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     * @see FineTuningJobStatus
-     */
-
-    public ListModelCustomizationJobsRequest withStatusEquals(String statusEquals) {
-        setStatusEquals(statusEquals);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Return customization jobs with the specified status.
-     * </p>
-     * 
-     * @param statusEquals
-     *        Return customization jobs with the specified status.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     * @see FineTuningJobStatus
-     */
-
-    public ListModelCustomizationJobsRequest withStatusEquals(FineTuningJobStatus statusEquals) {
-        this.statusEquals = statusEquals.toString();
-        return this;
-    }
-
-    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -467,18 +467,18 @@ public class ListModelCustomizationJobsRequest extends com.amazonaws.AmazonWebSe
             sb.append("CreationTimeAfter: ").append(getCreationTimeAfter()).append(",");
         if (getCreationTimeBefore() != null)
             sb.append("CreationTimeBefore: ").append(getCreationTimeBefore()).append(",");
-        if (getMaxResults() != null)
-            sb.append("MaxResults: ").append(getMaxResults()).append(",");
+        if (getStatusEquals() != null)
+            sb.append("StatusEquals: ").append(getStatusEquals()).append(",");
         if (getNameContains() != null)
             sb.append("NameContains: ").append(getNameContains()).append(",");
+        if (getMaxResults() != null)
+            sb.append("MaxResults: ").append(getMaxResults()).append(",");
         if (getNextToken() != null)
             sb.append("NextToken: ").append(getNextToken()).append(",");
         if (getSortBy() != null)
             sb.append("SortBy: ").append(getSortBy()).append(",");
         if (getSortOrder() != null)
-            sb.append("SortOrder: ").append(getSortOrder()).append(",");
-        if (getStatusEquals() != null)
-            sb.append("StatusEquals: ").append(getStatusEquals());
+            sb.append("SortOrder: ").append(getSortOrder());
         sb.append("}");
         return sb.toString();
     }
@@ -501,13 +501,17 @@ public class ListModelCustomizationJobsRequest extends com.amazonaws.AmazonWebSe
             return false;
         if (other.getCreationTimeBefore() != null && other.getCreationTimeBefore().equals(this.getCreationTimeBefore()) == false)
             return false;
-        if (other.getMaxResults() == null ^ this.getMaxResults() == null)
+        if (other.getStatusEquals() == null ^ this.getStatusEquals() == null)
             return false;
-        if (other.getMaxResults() != null && other.getMaxResults().equals(this.getMaxResults()) == false)
+        if (other.getStatusEquals() != null && other.getStatusEquals().equals(this.getStatusEquals()) == false)
             return false;
         if (other.getNameContains() == null ^ this.getNameContains() == null)
             return false;
         if (other.getNameContains() != null && other.getNameContains().equals(this.getNameContains()) == false)
+            return false;
+        if (other.getMaxResults() == null ^ this.getMaxResults() == null)
+            return false;
+        if (other.getMaxResults() != null && other.getMaxResults().equals(this.getMaxResults()) == false)
             return false;
         if (other.getNextToken() == null ^ this.getNextToken() == null)
             return false;
@@ -521,10 +525,6 @@ public class ListModelCustomizationJobsRequest extends com.amazonaws.AmazonWebSe
             return false;
         if (other.getSortOrder() != null && other.getSortOrder().equals(this.getSortOrder()) == false)
             return false;
-        if (other.getStatusEquals() == null ^ this.getStatusEquals() == null)
-            return false;
-        if (other.getStatusEquals() != null && other.getStatusEquals().equals(this.getStatusEquals()) == false)
-            return false;
         return true;
     }
 
@@ -535,12 +535,12 @@ public class ListModelCustomizationJobsRequest extends com.amazonaws.AmazonWebSe
 
         hashCode = prime * hashCode + ((getCreationTimeAfter() == null) ? 0 : getCreationTimeAfter().hashCode());
         hashCode = prime * hashCode + ((getCreationTimeBefore() == null) ? 0 : getCreationTimeBefore().hashCode());
-        hashCode = prime * hashCode + ((getMaxResults() == null) ? 0 : getMaxResults().hashCode());
+        hashCode = prime * hashCode + ((getStatusEquals() == null) ? 0 : getStatusEquals().hashCode());
         hashCode = prime * hashCode + ((getNameContains() == null) ? 0 : getNameContains().hashCode());
+        hashCode = prime * hashCode + ((getMaxResults() == null) ? 0 : getMaxResults().hashCode());
         hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
         hashCode = prime * hashCode + ((getSortBy() == null) ? 0 : getSortBy().hashCode());
         hashCode = prime * hashCode + ((getSortOrder() == null) ? 0 : getSortOrder().hashCode());
-        hashCode = prime * hashCode + ((getStatusEquals() == null) ? 0 : getStatusEquals().hashCode());
         return hashCode;
     }
 

@@ -324,8 +324,11 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
     private com.amazonaws.internal.SdkInternalList<String> enableCloudwatchLogsExports;
     /**
      * <p>
-     * The name of the DB cluster parameter group to associate with this DB cluster. If this argument is omitted, the
-     * default DB cluster parameter group for the specified engine is used.
+     * The name of the custom DB cluster parameter group to associate with this DB cluster.
+     * </p>
+     * <p>
+     * If the <code>DBClusterParameterGroupName</code> parameter is omitted, the default DB cluster parameter group for
+     * the specified engine is used.
      * </p>
      * <p>
      * Constraints:
@@ -431,7 +434,7 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
      * <p>
      * For the full list of DB instance classes, and availability for your engine, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html">DB instance class</a>
-     * in the <i>Amazon RDS User Guide.</i>
+     * in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * Valid for: Multi-AZ DB clusters only
@@ -2611,8 +2614,11 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * The name of the DB cluster parameter group to associate with this DB cluster. If this argument is omitted, the
-     * default DB cluster parameter group for the specified engine is used.
+     * The name of the custom DB cluster parameter group to associate with this DB cluster.
+     * </p>
+     * <p>
+     * If the <code>DBClusterParameterGroupName</code> parameter is omitted, the default DB cluster parameter group for
+     * the specified engine is used.
      * </p>
      * <p>
      * Constraints:
@@ -2644,8 +2650,11 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
      * </p>
      * 
      * @param dBClusterParameterGroupName
-     *        The name of the DB cluster parameter group to associate with this DB cluster. If this argument is omitted,
-     *        the default DB cluster parameter group for the specified engine is used.</p>
+     *        The name of the custom DB cluster parameter group to associate with this DB cluster.</p>
+     *        <p>
+     *        If the <code>DBClusterParameterGroupName</code> parameter is omitted, the default DB cluster parameter
+     *        group for the specified engine is used.
+     *        </p>
      *        <p>
      *        Constraints:
      *        </p>
@@ -2681,8 +2690,11 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * The name of the DB cluster parameter group to associate with this DB cluster. If this argument is omitted, the
-     * default DB cluster parameter group for the specified engine is used.
+     * The name of the custom DB cluster parameter group to associate with this DB cluster.
+     * </p>
+     * <p>
+     * If the <code>DBClusterParameterGroupName</code> parameter is omitted, the default DB cluster parameter group for
+     * the specified engine is used.
      * </p>
      * <p>
      * Constraints:
@@ -2713,8 +2725,11 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
      * Valid for: Aurora DB clusters and Multi-AZ DB clusters
      * </p>
      * 
-     * @return The name of the DB cluster parameter group to associate with this DB cluster. If this argument is
-     *         omitted, the default DB cluster parameter group for the specified engine is used.</p>
+     * @return The name of the custom DB cluster parameter group to associate with this DB cluster.</p>
+     *         <p>
+     *         If the <code>DBClusterParameterGroupName</code> parameter is omitted, the default DB cluster parameter
+     *         group for the specified engine is used.
+     *         </p>
      *         <p>
      *         Constraints:
      *         </p>
@@ -2750,8 +2765,11 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * The name of the DB cluster parameter group to associate with this DB cluster. If this argument is omitted, the
-     * default DB cluster parameter group for the specified engine is used.
+     * The name of the custom DB cluster parameter group to associate with this DB cluster.
+     * </p>
+     * <p>
+     * If the <code>DBClusterParameterGroupName</code> parameter is omitted, the default DB cluster parameter group for
+     * the specified engine is used.
      * </p>
      * <p>
      * Constraints:
@@ -2783,8 +2801,11 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
      * </p>
      * 
      * @param dBClusterParameterGroupName
-     *        The name of the DB cluster parameter group to associate with this DB cluster. If this argument is omitted,
-     *        the default DB cluster parameter group for the specified engine is used.</p>
+     *        The name of the custom DB cluster parameter group to associate with this DB cluster.</p>
+     *        <p>
+     *        If the <code>DBClusterParameterGroupName</code> parameter is omitted, the default DB cluster parameter
+     *        group for the specified engine is used.
+     *        </p>
      *        <p>
      *        Constraints:
      *        </p>
@@ -3271,7 +3292,7 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
      * <p>
      * For the full list of DB instance classes, and availability for your engine, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html">DB instance class</a>
-     * in the <i>Amazon RDS User Guide.</i>
+     * in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * Valid for: Multi-AZ DB clusters only
@@ -3284,7 +3305,7 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
      *        <p>
      *        For the full list of DB instance classes, and availability for your engine, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html">DB instance
-     *        class</a> in the <i>Amazon RDS User Guide.</i>
+     *        class</a> in the <i>Amazon RDS User Guide</i>.
      *        </p>
      *        <p>
      *        Valid for: Multi-AZ DB clusters only
@@ -3302,7 +3323,7 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
      * <p>
      * For the full list of DB instance classes, and availability for your engine, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html">DB instance class</a>
-     * in the <i>Amazon RDS User Guide.</i>
+     * in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * Valid for: Multi-AZ DB clusters only
@@ -3314,7 +3335,7 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
      *         <p>
      *         For the full list of DB instance classes, and availability for your engine, see <a
      *         href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html">DB instance
-     *         class</a> in the <i>Amazon RDS User Guide.</i>
+     *         class</a> in the <i>Amazon RDS User Guide</i>.
      *         </p>
      *         <p>
      *         Valid for: Multi-AZ DB clusters only
@@ -3332,7 +3353,7 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
      * <p>
      * For the full list of DB instance classes, and availability for your engine, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html">DB instance class</a>
-     * in the <i>Amazon RDS User Guide.</i>
+     * in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * Valid for: Multi-AZ DB clusters only
@@ -3345,7 +3366,7 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
      *        <p>
      *        For the full list of DB instance classes, and availability for your engine, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html">DB instance
-     *        class</a> in the <i>Amazon RDS User Guide.</i>
+     *        class</a> in the <i>Amazon RDS User Guide</i>.
      *        </p>
      *        <p>
      *        Valid for: Multi-AZ DB clusters only

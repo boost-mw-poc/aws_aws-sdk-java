@@ -25,42 +25,6 @@ public class GetModelCustomizationJobResult extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * ARN of the base model.
-     * </p>
-     */
-    private String baseModelArn;
-    /**
-     * <p>
-     * The token that you specified in the CreateCustomizationJob request.
-     * </p>
-     */
-    private String clientRequestToken;
-    /**
-     * <p>
-     * Time that the resource was created.
-     * </p>
-     */
-    private java.util.Date creationTime;
-    /**
-     * <p>
-     * Time that the resource transitioned to terminal state.
-     * </p>
-     */
-    private java.util.Date endTime;
-    /**
-     * <p>
-     * Information about why the job failed.
-     * </p>
-     */
-    private String failureMessage;
-    /**
-     * <p>
-     * The hyperparameter values for the job.
-     * </p>
-     */
-    private java.util.Map<String, String> hyperParameters;
-    /**
-     * <p>
      * The ARN of the customization job.
      * </p>
      */
@@ -73,16 +37,10 @@ public class GetModelCustomizationJobResult extends com.amazonaws.AmazonWebServi
     private String jobName;
     /**
      * <p>
-     * Time that the resource was last modified.
+     * The name of the output model.
      * </p>
      */
-    private java.util.Date lastModifiedTime;
-    /**
-     * <p>
-     * Output data configuration
-     * </p>
-     */
-    private OutputDataConfig outputDataConfig;
+    private String outputModelName;
     /**
      * <p>
      * The ARN of the output model.
@@ -91,16 +49,10 @@ public class GetModelCustomizationJobResult extends com.amazonaws.AmazonWebServi
     private String outputModelArn;
     /**
      * <p>
-     * The custom model is encrypted at rest using this key.
+     * The token that you specified in the CreateCustomizationJob request.
      * </p>
      */
-    private String outputModelKmsKeyArn;
-    /**
-     * <p>
-     * The name of the output model.
-     * </p>
-     */
-    private String outputModelName;
+    private String clientRequestToken;
     /**
      * <p>
      * The ARN of the IAM role.
@@ -114,12 +66,60 @@ public class GetModelCustomizationJobResult extends com.amazonaws.AmazonWebServi
      * </p>
      */
     private String status;
+    /**
+     * <p>
+     * Information about why the job failed.
+     * </p>
+     */
+    private String failureMessage;
+    /**
+     * <p>
+     * Time that the resource was created.
+     * </p>
+     */
+    private java.util.Date creationTime;
+    /**
+     * <p>
+     * Time that the resource was last modified.
+     * </p>
+     */
+    private java.util.Date lastModifiedTime;
+    /**
+     * <p>
+     * Time that the resource transitioned to terminal state.
+     * </p>
+     */
+    private java.util.Date endTime;
+    /**
+     * <p>
+     * ARN of the base model.
+     * </p>
+     */
+    private String baseModelArn;
+    /**
+     * <p>
+     * The hyperparameter values for the job.
+     * </p>
+     */
+    private java.util.Map<String, String> hyperParameters;
 
     private TrainingDataConfig trainingDataConfig;
 
-    private TrainingMetrics trainingMetrics;
-
     private ValidationDataConfig validationDataConfig;
+    /**
+     * <p>
+     * Output data configuration
+     * </p>
+     */
+    private OutputDataConfig outputDataConfig;
+    /**
+     * <p>
+     * The custom model is encrypted at rest using this key.
+     * </p>
+     */
+    private String outputModelKmsKeyArn;
+
+    private TrainingMetrics trainingMetrics;
     /**
      * <p>
      * The loss metric for each validator that you provided in the createjob request.
@@ -132,274 +132,6 @@ public class GetModelCustomizationJobResult extends com.amazonaws.AmazonWebServi
      * </p>
      */
     private VpcConfig vpcConfig;
-
-    /**
-     * <p>
-     * ARN of the base model.
-     * </p>
-     * 
-     * @param baseModelArn
-     *        ARN of the base model.
-     */
-
-    public void setBaseModelArn(String baseModelArn) {
-        this.baseModelArn = baseModelArn;
-    }
-
-    /**
-     * <p>
-     * ARN of the base model.
-     * </p>
-     * 
-     * @return ARN of the base model.
-     */
-
-    public String getBaseModelArn() {
-        return this.baseModelArn;
-    }
-
-    /**
-     * <p>
-     * ARN of the base model.
-     * </p>
-     * 
-     * @param baseModelArn
-     *        ARN of the base model.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public GetModelCustomizationJobResult withBaseModelArn(String baseModelArn) {
-        setBaseModelArn(baseModelArn);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The token that you specified in the CreateCustomizationJob request.
-     * </p>
-     * 
-     * @param clientRequestToken
-     *        The token that you specified in the CreateCustomizationJob request.
-     */
-
-    public void setClientRequestToken(String clientRequestToken) {
-        this.clientRequestToken = clientRequestToken;
-    }
-
-    /**
-     * <p>
-     * The token that you specified in the CreateCustomizationJob request.
-     * </p>
-     * 
-     * @return The token that you specified in the CreateCustomizationJob request.
-     */
-
-    public String getClientRequestToken() {
-        return this.clientRequestToken;
-    }
-
-    /**
-     * <p>
-     * The token that you specified in the CreateCustomizationJob request.
-     * </p>
-     * 
-     * @param clientRequestToken
-     *        The token that you specified in the CreateCustomizationJob request.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public GetModelCustomizationJobResult withClientRequestToken(String clientRequestToken) {
-        setClientRequestToken(clientRequestToken);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Time that the resource was created.
-     * </p>
-     * 
-     * @param creationTime
-     *        Time that the resource was created.
-     */
-
-    public void setCreationTime(java.util.Date creationTime) {
-        this.creationTime = creationTime;
-    }
-
-    /**
-     * <p>
-     * Time that the resource was created.
-     * </p>
-     * 
-     * @return Time that the resource was created.
-     */
-
-    public java.util.Date getCreationTime() {
-        return this.creationTime;
-    }
-
-    /**
-     * <p>
-     * Time that the resource was created.
-     * </p>
-     * 
-     * @param creationTime
-     *        Time that the resource was created.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public GetModelCustomizationJobResult withCreationTime(java.util.Date creationTime) {
-        setCreationTime(creationTime);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Time that the resource transitioned to terminal state.
-     * </p>
-     * 
-     * @param endTime
-     *        Time that the resource transitioned to terminal state.
-     */
-
-    public void setEndTime(java.util.Date endTime) {
-        this.endTime = endTime;
-    }
-
-    /**
-     * <p>
-     * Time that the resource transitioned to terminal state.
-     * </p>
-     * 
-     * @return Time that the resource transitioned to terminal state.
-     */
-
-    public java.util.Date getEndTime() {
-        return this.endTime;
-    }
-
-    /**
-     * <p>
-     * Time that the resource transitioned to terminal state.
-     * </p>
-     * 
-     * @param endTime
-     *        Time that the resource transitioned to terminal state.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public GetModelCustomizationJobResult withEndTime(java.util.Date endTime) {
-        setEndTime(endTime);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Information about why the job failed.
-     * </p>
-     * 
-     * @param failureMessage
-     *        Information about why the job failed.
-     */
-
-    public void setFailureMessage(String failureMessage) {
-        this.failureMessage = failureMessage;
-    }
-
-    /**
-     * <p>
-     * Information about why the job failed.
-     * </p>
-     * 
-     * @return Information about why the job failed.
-     */
-
-    public String getFailureMessage() {
-        return this.failureMessage;
-    }
-
-    /**
-     * <p>
-     * Information about why the job failed.
-     * </p>
-     * 
-     * @param failureMessage
-     *        Information about why the job failed.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public GetModelCustomizationJobResult withFailureMessage(String failureMessage) {
-        setFailureMessage(failureMessage);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The hyperparameter values for the job.
-     * </p>
-     * 
-     * @return The hyperparameter values for the job.
-     */
-
-    public java.util.Map<String, String> getHyperParameters() {
-        return hyperParameters;
-    }
-
-    /**
-     * <p>
-     * The hyperparameter values for the job.
-     * </p>
-     * 
-     * @param hyperParameters
-     *        The hyperparameter values for the job.
-     */
-
-    public void setHyperParameters(java.util.Map<String, String> hyperParameters) {
-        this.hyperParameters = hyperParameters;
-    }
-
-    /**
-     * <p>
-     * The hyperparameter values for the job.
-     * </p>
-     * 
-     * @param hyperParameters
-     *        The hyperparameter values for the job.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public GetModelCustomizationJobResult withHyperParameters(java.util.Map<String, String> hyperParameters) {
-        setHyperParameters(hyperParameters);
-        return this;
-    }
-
-    /**
-     * Add a single HyperParameters entry
-     *
-     * @see GetModelCustomizationJobResult#withHyperParameters
-     * @returns a reference to this object so that method calls can be chained together.
-     */
-
-    public GetModelCustomizationJobResult addHyperParametersEntry(String key, String value) {
-        if (null == this.hyperParameters) {
-            this.hyperParameters = new java.util.HashMap<String, String>();
-        }
-        if (this.hyperParameters.containsKey(key))
-            throw new IllegalArgumentException("Duplicated keys (" + key.toString() + ") are provided.");
-        this.hyperParameters.put(key, value);
-        return this;
-    }
-
-    /**
-     * Removes all the entries added into HyperParameters.
-     *
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public GetModelCustomizationJobResult clearHyperParametersEntries() {
-        this.hyperParameters = null;
-        return this;
-    }
 
     /**
      * <p>
@@ -483,81 +215,41 @@ public class GetModelCustomizationJobResult extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * Time that the resource was last modified.
+     * The name of the output model.
      * </p>
      * 
-     * @param lastModifiedTime
-     *        Time that the resource was last modified.
+     * @param outputModelName
+     *        The name of the output model.
      */
 
-    public void setLastModifiedTime(java.util.Date lastModifiedTime) {
-        this.lastModifiedTime = lastModifiedTime;
+    public void setOutputModelName(String outputModelName) {
+        this.outputModelName = outputModelName;
     }
 
     /**
      * <p>
-     * Time that the resource was last modified.
+     * The name of the output model.
      * </p>
      * 
-     * @return Time that the resource was last modified.
+     * @return The name of the output model.
      */
 
-    public java.util.Date getLastModifiedTime() {
-        return this.lastModifiedTime;
+    public String getOutputModelName() {
+        return this.outputModelName;
     }
 
     /**
      * <p>
-     * Time that the resource was last modified.
+     * The name of the output model.
      * </p>
      * 
-     * @param lastModifiedTime
-     *        Time that the resource was last modified.
+     * @param outputModelName
+     *        The name of the output model.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public GetModelCustomizationJobResult withLastModifiedTime(java.util.Date lastModifiedTime) {
-        setLastModifiedTime(lastModifiedTime);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Output data configuration
-     * </p>
-     * 
-     * @param outputDataConfig
-     *        Output data configuration
-     */
-
-    public void setOutputDataConfig(OutputDataConfig outputDataConfig) {
-        this.outputDataConfig = outputDataConfig;
-    }
-
-    /**
-     * <p>
-     * Output data configuration
-     * </p>
-     * 
-     * @return Output data configuration
-     */
-
-    public OutputDataConfig getOutputDataConfig() {
-        return this.outputDataConfig;
-    }
-
-    /**
-     * <p>
-     * Output data configuration
-     * </p>
-     * 
-     * @param outputDataConfig
-     *        Output data configuration
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public GetModelCustomizationJobResult withOutputDataConfig(OutputDataConfig outputDataConfig) {
-        setOutputDataConfig(outputDataConfig);
+    public GetModelCustomizationJobResult withOutputModelName(String outputModelName) {
+        setOutputModelName(outputModelName);
         return this;
     }
 
@@ -603,81 +295,41 @@ public class GetModelCustomizationJobResult extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The custom model is encrypted at rest using this key.
+     * The token that you specified in the CreateCustomizationJob request.
      * </p>
      * 
-     * @param outputModelKmsKeyArn
-     *        The custom model is encrypted at rest using this key.
+     * @param clientRequestToken
+     *        The token that you specified in the CreateCustomizationJob request.
      */
 
-    public void setOutputModelKmsKeyArn(String outputModelKmsKeyArn) {
-        this.outputModelKmsKeyArn = outputModelKmsKeyArn;
+    public void setClientRequestToken(String clientRequestToken) {
+        this.clientRequestToken = clientRequestToken;
     }
 
     /**
      * <p>
-     * The custom model is encrypted at rest using this key.
+     * The token that you specified in the CreateCustomizationJob request.
      * </p>
      * 
-     * @return The custom model is encrypted at rest using this key.
+     * @return The token that you specified in the CreateCustomizationJob request.
      */
 
-    public String getOutputModelKmsKeyArn() {
-        return this.outputModelKmsKeyArn;
+    public String getClientRequestToken() {
+        return this.clientRequestToken;
     }
 
     /**
      * <p>
-     * The custom model is encrypted at rest using this key.
+     * The token that you specified in the CreateCustomizationJob request.
      * </p>
      * 
-     * @param outputModelKmsKeyArn
-     *        The custom model is encrypted at rest using this key.
+     * @param clientRequestToken
+     *        The token that you specified in the CreateCustomizationJob request.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public GetModelCustomizationJobResult withOutputModelKmsKeyArn(String outputModelKmsKeyArn) {
-        setOutputModelKmsKeyArn(outputModelKmsKeyArn);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The name of the output model.
-     * </p>
-     * 
-     * @param outputModelName
-     *        The name of the output model.
-     */
-
-    public void setOutputModelName(String outputModelName) {
-        this.outputModelName = outputModelName;
-    }
-
-    /**
-     * <p>
-     * The name of the output model.
-     * </p>
-     * 
-     * @return The name of the output model.
-     */
-
-    public String getOutputModelName() {
-        return this.outputModelName;
-    }
-
-    /**
-     * <p>
-     * The name of the output model.
-     * </p>
-     * 
-     * @param outputModelName
-     *        The name of the output model.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public GetModelCustomizationJobResult withOutputModelName(String outputModelName) {
-        setOutputModelName(outputModelName);
+    public GetModelCustomizationJobResult withClientRequestToken(String clientRequestToken) {
+        setClientRequestToken(clientRequestToken);
         return this;
     }
 
@@ -789,6 +441,274 @@ public class GetModelCustomizationJobResult extends com.amazonaws.AmazonWebServi
     }
 
     /**
+     * <p>
+     * Information about why the job failed.
+     * </p>
+     * 
+     * @param failureMessage
+     *        Information about why the job failed.
+     */
+
+    public void setFailureMessage(String failureMessage) {
+        this.failureMessage = failureMessage;
+    }
+
+    /**
+     * <p>
+     * Information about why the job failed.
+     * </p>
+     * 
+     * @return Information about why the job failed.
+     */
+
+    public String getFailureMessage() {
+        return this.failureMessage;
+    }
+
+    /**
+     * <p>
+     * Information about why the job failed.
+     * </p>
+     * 
+     * @param failureMessage
+     *        Information about why the job failed.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetModelCustomizationJobResult withFailureMessage(String failureMessage) {
+        setFailureMessage(failureMessage);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Time that the resource was created.
+     * </p>
+     * 
+     * @param creationTime
+     *        Time that the resource was created.
+     */
+
+    public void setCreationTime(java.util.Date creationTime) {
+        this.creationTime = creationTime;
+    }
+
+    /**
+     * <p>
+     * Time that the resource was created.
+     * </p>
+     * 
+     * @return Time that the resource was created.
+     */
+
+    public java.util.Date getCreationTime() {
+        return this.creationTime;
+    }
+
+    /**
+     * <p>
+     * Time that the resource was created.
+     * </p>
+     * 
+     * @param creationTime
+     *        Time that the resource was created.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetModelCustomizationJobResult withCreationTime(java.util.Date creationTime) {
+        setCreationTime(creationTime);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Time that the resource was last modified.
+     * </p>
+     * 
+     * @param lastModifiedTime
+     *        Time that the resource was last modified.
+     */
+
+    public void setLastModifiedTime(java.util.Date lastModifiedTime) {
+        this.lastModifiedTime = lastModifiedTime;
+    }
+
+    /**
+     * <p>
+     * Time that the resource was last modified.
+     * </p>
+     * 
+     * @return Time that the resource was last modified.
+     */
+
+    public java.util.Date getLastModifiedTime() {
+        return this.lastModifiedTime;
+    }
+
+    /**
+     * <p>
+     * Time that the resource was last modified.
+     * </p>
+     * 
+     * @param lastModifiedTime
+     *        Time that the resource was last modified.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetModelCustomizationJobResult withLastModifiedTime(java.util.Date lastModifiedTime) {
+        setLastModifiedTime(lastModifiedTime);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Time that the resource transitioned to terminal state.
+     * </p>
+     * 
+     * @param endTime
+     *        Time that the resource transitioned to terminal state.
+     */
+
+    public void setEndTime(java.util.Date endTime) {
+        this.endTime = endTime;
+    }
+
+    /**
+     * <p>
+     * Time that the resource transitioned to terminal state.
+     * </p>
+     * 
+     * @return Time that the resource transitioned to terminal state.
+     */
+
+    public java.util.Date getEndTime() {
+        return this.endTime;
+    }
+
+    /**
+     * <p>
+     * Time that the resource transitioned to terminal state.
+     * </p>
+     * 
+     * @param endTime
+     *        Time that the resource transitioned to terminal state.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetModelCustomizationJobResult withEndTime(java.util.Date endTime) {
+        setEndTime(endTime);
+        return this;
+    }
+
+    /**
+     * <p>
+     * ARN of the base model.
+     * </p>
+     * 
+     * @param baseModelArn
+     *        ARN of the base model.
+     */
+
+    public void setBaseModelArn(String baseModelArn) {
+        this.baseModelArn = baseModelArn;
+    }
+
+    /**
+     * <p>
+     * ARN of the base model.
+     * </p>
+     * 
+     * @return ARN of the base model.
+     */
+
+    public String getBaseModelArn() {
+        return this.baseModelArn;
+    }
+
+    /**
+     * <p>
+     * ARN of the base model.
+     * </p>
+     * 
+     * @param baseModelArn
+     *        ARN of the base model.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetModelCustomizationJobResult withBaseModelArn(String baseModelArn) {
+        setBaseModelArn(baseModelArn);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The hyperparameter values for the job.
+     * </p>
+     * 
+     * @return The hyperparameter values for the job.
+     */
+
+    public java.util.Map<String, String> getHyperParameters() {
+        return hyperParameters;
+    }
+
+    /**
+     * <p>
+     * The hyperparameter values for the job.
+     * </p>
+     * 
+     * @param hyperParameters
+     *        The hyperparameter values for the job.
+     */
+
+    public void setHyperParameters(java.util.Map<String, String> hyperParameters) {
+        this.hyperParameters = hyperParameters;
+    }
+
+    /**
+     * <p>
+     * The hyperparameter values for the job.
+     * </p>
+     * 
+     * @param hyperParameters
+     *        The hyperparameter values for the job.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetModelCustomizationJobResult withHyperParameters(java.util.Map<String, String> hyperParameters) {
+        setHyperParameters(hyperParameters);
+        return this;
+    }
+
+    /**
+     * Add a single HyperParameters entry
+     *
+     * @see GetModelCustomizationJobResult#withHyperParameters
+     * @returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetModelCustomizationJobResult addHyperParametersEntry(String key, String value) {
+        if (null == this.hyperParameters) {
+            this.hyperParameters = new java.util.HashMap<String, String>();
+        }
+        if (this.hyperParameters.containsKey(key))
+            throw new IllegalArgumentException("Duplicated keys (" + key.toString() + ") are provided.");
+        this.hyperParameters.put(key, value);
+        return this;
+    }
+
+    /**
+     * Removes all the entries added into HyperParameters.
+     *
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetModelCustomizationJobResult clearHyperParametersEntries() {
+        this.hyperParameters = null;
+        return this;
+    }
+
+    /**
      * @param trainingDataConfig
      */
 
@@ -815,32 +735,6 @@ public class GetModelCustomizationJobResult extends com.amazonaws.AmazonWebServi
     }
 
     /**
-     * @param trainingMetrics
-     */
-
-    public void setTrainingMetrics(TrainingMetrics trainingMetrics) {
-        this.trainingMetrics = trainingMetrics;
-    }
-
-    /**
-     * @return
-     */
-
-    public TrainingMetrics getTrainingMetrics() {
-        return this.trainingMetrics;
-    }
-
-    /**
-     * @param trainingMetrics
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public GetModelCustomizationJobResult withTrainingMetrics(TrainingMetrics trainingMetrics) {
-        setTrainingMetrics(trainingMetrics);
-        return this;
-    }
-
-    /**
      * @param validationDataConfig
      */
 
@@ -863,6 +757,112 @@ public class GetModelCustomizationJobResult extends com.amazonaws.AmazonWebServi
 
     public GetModelCustomizationJobResult withValidationDataConfig(ValidationDataConfig validationDataConfig) {
         setValidationDataConfig(validationDataConfig);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Output data configuration
+     * </p>
+     * 
+     * @param outputDataConfig
+     *        Output data configuration
+     */
+
+    public void setOutputDataConfig(OutputDataConfig outputDataConfig) {
+        this.outputDataConfig = outputDataConfig;
+    }
+
+    /**
+     * <p>
+     * Output data configuration
+     * </p>
+     * 
+     * @return Output data configuration
+     */
+
+    public OutputDataConfig getOutputDataConfig() {
+        return this.outputDataConfig;
+    }
+
+    /**
+     * <p>
+     * Output data configuration
+     * </p>
+     * 
+     * @param outputDataConfig
+     *        Output data configuration
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetModelCustomizationJobResult withOutputDataConfig(OutputDataConfig outputDataConfig) {
+        setOutputDataConfig(outputDataConfig);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The custom model is encrypted at rest using this key.
+     * </p>
+     * 
+     * @param outputModelKmsKeyArn
+     *        The custom model is encrypted at rest using this key.
+     */
+
+    public void setOutputModelKmsKeyArn(String outputModelKmsKeyArn) {
+        this.outputModelKmsKeyArn = outputModelKmsKeyArn;
+    }
+
+    /**
+     * <p>
+     * The custom model is encrypted at rest using this key.
+     * </p>
+     * 
+     * @return The custom model is encrypted at rest using this key.
+     */
+
+    public String getOutputModelKmsKeyArn() {
+        return this.outputModelKmsKeyArn;
+    }
+
+    /**
+     * <p>
+     * The custom model is encrypted at rest using this key.
+     * </p>
+     * 
+     * @param outputModelKmsKeyArn
+     *        The custom model is encrypted at rest using this key.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetModelCustomizationJobResult withOutputModelKmsKeyArn(String outputModelKmsKeyArn) {
+        setOutputModelKmsKeyArn(outputModelKmsKeyArn);
+        return this;
+    }
+
+    /**
+     * @param trainingMetrics
+     */
+
+    public void setTrainingMetrics(TrainingMetrics trainingMetrics) {
+        this.trainingMetrics = trainingMetrics;
+    }
+
+    /**
+     * @return
+     */
+
+    public TrainingMetrics getTrainingMetrics() {
+        return this.trainingMetrics;
+    }
+
+    /**
+     * @param trainingMetrics
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetModelCustomizationJobResult withTrainingMetrics(TrainingMetrics trainingMetrics) {
+        setTrainingMetrics(trainingMetrics);
         return this;
     }
 
@@ -988,42 +988,42 @@ public class GetModelCustomizationJobResult extends com.amazonaws.AmazonWebServi
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getBaseModelArn() != null)
-            sb.append("BaseModelArn: ").append(getBaseModelArn()).append(",");
-        if (getClientRequestToken() != null)
-            sb.append("ClientRequestToken: ").append(getClientRequestToken()).append(",");
-        if (getCreationTime() != null)
-            sb.append("CreationTime: ").append(getCreationTime()).append(",");
-        if (getEndTime() != null)
-            sb.append("EndTime: ").append(getEndTime()).append(",");
-        if (getFailureMessage() != null)
-            sb.append("FailureMessage: ").append(getFailureMessage()).append(",");
-        if (getHyperParameters() != null)
-            sb.append("HyperParameters: ").append(getHyperParameters()).append(",");
         if (getJobArn() != null)
             sb.append("JobArn: ").append(getJobArn()).append(",");
         if (getJobName() != null)
             sb.append("JobName: ").append(getJobName()).append(",");
-        if (getLastModifiedTime() != null)
-            sb.append("LastModifiedTime: ").append(getLastModifiedTime()).append(",");
-        if (getOutputDataConfig() != null)
-            sb.append("OutputDataConfig: ").append(getOutputDataConfig()).append(",");
-        if (getOutputModelArn() != null)
-            sb.append("OutputModelArn: ").append(getOutputModelArn()).append(",");
-        if (getOutputModelKmsKeyArn() != null)
-            sb.append("OutputModelKmsKeyArn: ").append(getOutputModelKmsKeyArn()).append(",");
         if (getOutputModelName() != null)
             sb.append("OutputModelName: ").append(getOutputModelName()).append(",");
+        if (getOutputModelArn() != null)
+            sb.append("OutputModelArn: ").append(getOutputModelArn()).append(",");
+        if (getClientRequestToken() != null)
+            sb.append("ClientRequestToken: ").append(getClientRequestToken()).append(",");
         if (getRoleArn() != null)
             sb.append("RoleArn: ").append(getRoleArn()).append(",");
         if (getStatus() != null)
             sb.append("Status: ").append(getStatus()).append(",");
+        if (getFailureMessage() != null)
+            sb.append("FailureMessage: ").append(getFailureMessage()).append(",");
+        if (getCreationTime() != null)
+            sb.append("CreationTime: ").append(getCreationTime()).append(",");
+        if (getLastModifiedTime() != null)
+            sb.append("LastModifiedTime: ").append(getLastModifiedTime()).append(",");
+        if (getEndTime() != null)
+            sb.append("EndTime: ").append(getEndTime()).append(",");
+        if (getBaseModelArn() != null)
+            sb.append("BaseModelArn: ").append(getBaseModelArn()).append(",");
+        if (getHyperParameters() != null)
+            sb.append("HyperParameters: ").append(getHyperParameters()).append(",");
         if (getTrainingDataConfig() != null)
             sb.append("TrainingDataConfig: ").append(getTrainingDataConfig()).append(",");
-        if (getTrainingMetrics() != null)
-            sb.append("TrainingMetrics: ").append(getTrainingMetrics()).append(",");
         if (getValidationDataConfig() != null)
             sb.append("ValidationDataConfig: ").append(getValidationDataConfig()).append(",");
+        if (getOutputDataConfig() != null)
+            sb.append("OutputDataConfig: ").append(getOutputDataConfig()).append(",");
+        if (getOutputModelKmsKeyArn() != null)
+            sb.append("OutputModelKmsKeyArn: ").append(getOutputModelKmsKeyArn()).append(",");
+        if (getTrainingMetrics() != null)
+            sb.append("TrainingMetrics: ").append(getTrainingMetrics()).append(",");
         if (getValidationMetrics() != null)
             sb.append("ValidationMetrics: ").append(getValidationMetrics()).append(",");
         if (getVpcConfig() != null)
@@ -1042,30 +1042,6 @@ public class GetModelCustomizationJobResult extends com.amazonaws.AmazonWebServi
         if (obj instanceof GetModelCustomizationJobResult == false)
             return false;
         GetModelCustomizationJobResult other = (GetModelCustomizationJobResult) obj;
-        if (other.getBaseModelArn() == null ^ this.getBaseModelArn() == null)
-            return false;
-        if (other.getBaseModelArn() != null && other.getBaseModelArn().equals(this.getBaseModelArn()) == false)
-            return false;
-        if (other.getClientRequestToken() == null ^ this.getClientRequestToken() == null)
-            return false;
-        if (other.getClientRequestToken() != null && other.getClientRequestToken().equals(this.getClientRequestToken()) == false)
-            return false;
-        if (other.getCreationTime() == null ^ this.getCreationTime() == null)
-            return false;
-        if (other.getCreationTime() != null && other.getCreationTime().equals(this.getCreationTime()) == false)
-            return false;
-        if (other.getEndTime() == null ^ this.getEndTime() == null)
-            return false;
-        if (other.getEndTime() != null && other.getEndTime().equals(this.getEndTime()) == false)
-            return false;
-        if (other.getFailureMessage() == null ^ this.getFailureMessage() == null)
-            return false;
-        if (other.getFailureMessage() != null && other.getFailureMessage().equals(this.getFailureMessage()) == false)
-            return false;
-        if (other.getHyperParameters() == null ^ this.getHyperParameters() == null)
-            return false;
-        if (other.getHyperParameters() != null && other.getHyperParameters().equals(this.getHyperParameters()) == false)
-            return false;
         if (other.getJobArn() == null ^ this.getJobArn() == null)
             return false;
         if (other.getJobArn() != null && other.getJobArn().equals(this.getJobArn()) == false)
@@ -1074,25 +1050,17 @@ public class GetModelCustomizationJobResult extends com.amazonaws.AmazonWebServi
             return false;
         if (other.getJobName() != null && other.getJobName().equals(this.getJobName()) == false)
             return false;
-        if (other.getLastModifiedTime() == null ^ this.getLastModifiedTime() == null)
+        if (other.getOutputModelName() == null ^ this.getOutputModelName() == null)
             return false;
-        if (other.getLastModifiedTime() != null && other.getLastModifiedTime().equals(this.getLastModifiedTime()) == false)
-            return false;
-        if (other.getOutputDataConfig() == null ^ this.getOutputDataConfig() == null)
-            return false;
-        if (other.getOutputDataConfig() != null && other.getOutputDataConfig().equals(this.getOutputDataConfig()) == false)
+        if (other.getOutputModelName() != null && other.getOutputModelName().equals(this.getOutputModelName()) == false)
             return false;
         if (other.getOutputModelArn() == null ^ this.getOutputModelArn() == null)
             return false;
         if (other.getOutputModelArn() != null && other.getOutputModelArn().equals(this.getOutputModelArn()) == false)
             return false;
-        if (other.getOutputModelKmsKeyArn() == null ^ this.getOutputModelKmsKeyArn() == null)
+        if (other.getClientRequestToken() == null ^ this.getClientRequestToken() == null)
             return false;
-        if (other.getOutputModelKmsKeyArn() != null && other.getOutputModelKmsKeyArn().equals(this.getOutputModelKmsKeyArn()) == false)
-            return false;
-        if (other.getOutputModelName() == null ^ this.getOutputModelName() == null)
-            return false;
-        if (other.getOutputModelName() != null && other.getOutputModelName().equals(this.getOutputModelName()) == false)
+        if (other.getClientRequestToken() != null && other.getClientRequestToken().equals(this.getClientRequestToken()) == false)
             return false;
         if (other.getRoleArn() == null ^ this.getRoleArn() == null)
             return false;
@@ -1102,17 +1070,49 @@ public class GetModelCustomizationJobResult extends com.amazonaws.AmazonWebServi
             return false;
         if (other.getStatus() != null && other.getStatus().equals(this.getStatus()) == false)
             return false;
+        if (other.getFailureMessage() == null ^ this.getFailureMessage() == null)
+            return false;
+        if (other.getFailureMessage() != null && other.getFailureMessage().equals(this.getFailureMessage()) == false)
+            return false;
+        if (other.getCreationTime() == null ^ this.getCreationTime() == null)
+            return false;
+        if (other.getCreationTime() != null && other.getCreationTime().equals(this.getCreationTime()) == false)
+            return false;
+        if (other.getLastModifiedTime() == null ^ this.getLastModifiedTime() == null)
+            return false;
+        if (other.getLastModifiedTime() != null && other.getLastModifiedTime().equals(this.getLastModifiedTime()) == false)
+            return false;
+        if (other.getEndTime() == null ^ this.getEndTime() == null)
+            return false;
+        if (other.getEndTime() != null && other.getEndTime().equals(this.getEndTime()) == false)
+            return false;
+        if (other.getBaseModelArn() == null ^ this.getBaseModelArn() == null)
+            return false;
+        if (other.getBaseModelArn() != null && other.getBaseModelArn().equals(this.getBaseModelArn()) == false)
+            return false;
+        if (other.getHyperParameters() == null ^ this.getHyperParameters() == null)
+            return false;
+        if (other.getHyperParameters() != null && other.getHyperParameters().equals(this.getHyperParameters()) == false)
+            return false;
         if (other.getTrainingDataConfig() == null ^ this.getTrainingDataConfig() == null)
             return false;
         if (other.getTrainingDataConfig() != null && other.getTrainingDataConfig().equals(this.getTrainingDataConfig()) == false)
             return false;
-        if (other.getTrainingMetrics() == null ^ this.getTrainingMetrics() == null)
-            return false;
-        if (other.getTrainingMetrics() != null && other.getTrainingMetrics().equals(this.getTrainingMetrics()) == false)
-            return false;
         if (other.getValidationDataConfig() == null ^ this.getValidationDataConfig() == null)
             return false;
         if (other.getValidationDataConfig() != null && other.getValidationDataConfig().equals(this.getValidationDataConfig()) == false)
+            return false;
+        if (other.getOutputDataConfig() == null ^ this.getOutputDataConfig() == null)
+            return false;
+        if (other.getOutputDataConfig() != null && other.getOutputDataConfig().equals(this.getOutputDataConfig()) == false)
+            return false;
+        if (other.getOutputModelKmsKeyArn() == null ^ this.getOutputModelKmsKeyArn() == null)
+            return false;
+        if (other.getOutputModelKmsKeyArn() != null && other.getOutputModelKmsKeyArn().equals(this.getOutputModelKmsKeyArn()) == false)
+            return false;
+        if (other.getTrainingMetrics() == null ^ this.getTrainingMetrics() == null)
+            return false;
+        if (other.getTrainingMetrics() != null && other.getTrainingMetrics().equals(this.getTrainingMetrics()) == false)
             return false;
         if (other.getValidationMetrics() == null ^ this.getValidationMetrics() == null)
             return false;
@@ -1130,24 +1130,24 @@ public class GetModelCustomizationJobResult extends com.amazonaws.AmazonWebServi
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getBaseModelArn() == null) ? 0 : getBaseModelArn().hashCode());
-        hashCode = prime * hashCode + ((getClientRequestToken() == null) ? 0 : getClientRequestToken().hashCode());
-        hashCode = prime * hashCode + ((getCreationTime() == null) ? 0 : getCreationTime().hashCode());
-        hashCode = prime * hashCode + ((getEndTime() == null) ? 0 : getEndTime().hashCode());
-        hashCode = prime * hashCode + ((getFailureMessage() == null) ? 0 : getFailureMessage().hashCode());
-        hashCode = prime * hashCode + ((getHyperParameters() == null) ? 0 : getHyperParameters().hashCode());
         hashCode = prime * hashCode + ((getJobArn() == null) ? 0 : getJobArn().hashCode());
         hashCode = prime * hashCode + ((getJobName() == null) ? 0 : getJobName().hashCode());
-        hashCode = prime * hashCode + ((getLastModifiedTime() == null) ? 0 : getLastModifiedTime().hashCode());
-        hashCode = prime * hashCode + ((getOutputDataConfig() == null) ? 0 : getOutputDataConfig().hashCode());
-        hashCode = prime * hashCode + ((getOutputModelArn() == null) ? 0 : getOutputModelArn().hashCode());
-        hashCode = prime * hashCode + ((getOutputModelKmsKeyArn() == null) ? 0 : getOutputModelKmsKeyArn().hashCode());
         hashCode = prime * hashCode + ((getOutputModelName() == null) ? 0 : getOutputModelName().hashCode());
+        hashCode = prime * hashCode + ((getOutputModelArn() == null) ? 0 : getOutputModelArn().hashCode());
+        hashCode = prime * hashCode + ((getClientRequestToken() == null) ? 0 : getClientRequestToken().hashCode());
         hashCode = prime * hashCode + ((getRoleArn() == null) ? 0 : getRoleArn().hashCode());
         hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
+        hashCode = prime * hashCode + ((getFailureMessage() == null) ? 0 : getFailureMessage().hashCode());
+        hashCode = prime * hashCode + ((getCreationTime() == null) ? 0 : getCreationTime().hashCode());
+        hashCode = prime * hashCode + ((getLastModifiedTime() == null) ? 0 : getLastModifiedTime().hashCode());
+        hashCode = prime * hashCode + ((getEndTime() == null) ? 0 : getEndTime().hashCode());
+        hashCode = prime * hashCode + ((getBaseModelArn() == null) ? 0 : getBaseModelArn().hashCode());
+        hashCode = prime * hashCode + ((getHyperParameters() == null) ? 0 : getHyperParameters().hashCode());
         hashCode = prime * hashCode + ((getTrainingDataConfig() == null) ? 0 : getTrainingDataConfig().hashCode());
-        hashCode = prime * hashCode + ((getTrainingMetrics() == null) ? 0 : getTrainingMetrics().hashCode());
         hashCode = prime * hashCode + ((getValidationDataConfig() == null) ? 0 : getValidationDataConfig().hashCode());
+        hashCode = prime * hashCode + ((getOutputDataConfig() == null) ? 0 : getOutputDataConfig().hashCode());
+        hashCode = prime * hashCode + ((getOutputModelKmsKeyArn() == null) ? 0 : getOutputModelKmsKeyArn().hashCode());
+        hashCode = prime * hashCode + ((getTrainingMetrics() == null) ? 0 : getTrainingMetrics().hashCode());
         hashCode = prime * hashCode + ((getValidationMetrics() == null) ? 0 : getValidationMetrics().hashCode());
         hashCode = prime * hashCode + ((getVpcConfig() == null) ? 0 : getVpcConfig().hashCode());
         return hashCode;

@@ -31,18 +31,18 @@ public class ListModelCustomizationJobsRequestMarshaller {
             .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("creationTimeAfter").timestampFormat("iso8601").build();
     private static final MarshallingInfo<java.util.Date> CREATIONTIMEBEFORE_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("creationTimeBefore").timestampFormat("iso8601").build();
-    private static final MarshallingInfo<Integer> MAXRESULTS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
-            .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("maxResults").build();
+    private static final MarshallingInfo<String> STATUSEQUALS_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("statusEquals").build();
     private static final MarshallingInfo<String> NAMECONTAINS_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("nameContains").build();
+    private static final MarshallingInfo<Integer> MAXRESULTS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("maxResults").build();
     private static final MarshallingInfo<String> NEXTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("nextToken").build();
     private static final MarshallingInfo<String> SORTBY_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("sortBy").build();
     private static final MarshallingInfo<String> SORTORDER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("sortOrder").build();
-    private static final MarshallingInfo<String> STATUSEQUALS_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("statusEquals").build();
 
     private static final ListModelCustomizationJobsRequestMarshaller instance = new ListModelCustomizationJobsRequestMarshaller();
 
@@ -62,12 +62,12 @@ public class ListModelCustomizationJobsRequestMarshaller {
         try {
             protocolMarshaller.marshall(listModelCustomizationJobsRequest.getCreationTimeAfter(), CREATIONTIMEAFTER_BINDING);
             protocolMarshaller.marshall(listModelCustomizationJobsRequest.getCreationTimeBefore(), CREATIONTIMEBEFORE_BINDING);
-            protocolMarshaller.marshall(listModelCustomizationJobsRequest.getMaxResults(), MAXRESULTS_BINDING);
+            protocolMarshaller.marshall(listModelCustomizationJobsRequest.getStatusEquals(), STATUSEQUALS_BINDING);
             protocolMarshaller.marshall(listModelCustomizationJobsRequest.getNameContains(), NAMECONTAINS_BINDING);
+            protocolMarshaller.marshall(listModelCustomizationJobsRequest.getMaxResults(), MAXRESULTS_BINDING);
             protocolMarshaller.marshall(listModelCustomizationJobsRequest.getNextToken(), NEXTTOKEN_BINDING);
             protocolMarshaller.marshall(listModelCustomizationJobsRequest.getSortBy(), SORTBY_BINDING);
             protocolMarshaller.marshall(listModelCustomizationJobsRequest.getSortOrder(), SORTORDER_BINDING);
-            protocolMarshaller.marshall(listModelCustomizationJobsRequest.getStatusEquals(), STATUSEQUALS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

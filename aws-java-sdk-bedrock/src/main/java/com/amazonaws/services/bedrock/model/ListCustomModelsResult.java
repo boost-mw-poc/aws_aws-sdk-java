@@ -25,16 +25,56 @@ public class ListCustomModelsResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * Model summaries.
-     * </p>
-     */
-    private java.util.List<CustomModelSummary> modelSummaries;
-    /**
-     * <p>
      * Continuation token for the next request to list the next set of results.
      * </p>
      */
     private String nextToken;
+    /**
+     * <p>
+     * Model summaries.
+     * </p>
+     */
+    private java.util.List<CustomModelSummary> modelSummaries;
+
+    /**
+     * <p>
+     * Continuation token for the next request to list the next set of results.
+     * </p>
+     * 
+     * @param nextToken
+     *        Continuation token for the next request to list the next set of results.
+     */
+
+    public void setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+    }
+
+    /**
+     * <p>
+     * Continuation token for the next request to list the next set of results.
+     * </p>
+     * 
+     * @return Continuation token for the next request to list the next set of results.
+     */
+
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    /**
+     * <p>
+     * Continuation token for the next request to list the next set of results.
+     * </p>
+     * 
+     * @param nextToken
+     *        Continuation token for the next request to list the next set of results.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListCustomModelsResult withNextToken(String nextToken) {
+        setNextToken(nextToken);
+        return this;
+    }
 
     /**
      * <p>
@@ -107,46 +147,6 @@ public class ListCustomModelsResult extends com.amazonaws.AmazonWebServiceResult
     }
 
     /**
-     * <p>
-     * Continuation token for the next request to list the next set of results.
-     * </p>
-     * 
-     * @param nextToken
-     *        Continuation token for the next request to list the next set of results.
-     */
-
-    public void setNextToken(String nextToken) {
-        this.nextToken = nextToken;
-    }
-
-    /**
-     * <p>
-     * Continuation token for the next request to list the next set of results.
-     * </p>
-     * 
-     * @return Continuation token for the next request to list the next set of results.
-     */
-
-    public String getNextToken() {
-        return this.nextToken;
-    }
-
-    /**
-     * <p>
-     * Continuation token for the next request to list the next set of results.
-     * </p>
-     * 
-     * @param nextToken
-     *        Continuation token for the next request to list the next set of results.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ListCustomModelsResult withNextToken(String nextToken) {
-        setNextToken(nextToken);
-        return this;
-    }
-
-    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -158,10 +158,10 @@ public class ListCustomModelsResult extends com.amazonaws.AmazonWebServiceResult
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getModelSummaries() != null)
-            sb.append("ModelSummaries: ").append(getModelSummaries()).append(",");
         if (getNextToken() != null)
-            sb.append("NextToken: ").append(getNextToken());
+            sb.append("NextToken: ").append(getNextToken()).append(",");
+        if (getModelSummaries() != null)
+            sb.append("ModelSummaries: ").append(getModelSummaries());
         sb.append("}");
         return sb.toString();
     }
@@ -176,13 +176,13 @@ public class ListCustomModelsResult extends com.amazonaws.AmazonWebServiceResult
         if (obj instanceof ListCustomModelsResult == false)
             return false;
         ListCustomModelsResult other = (ListCustomModelsResult) obj;
-        if (other.getModelSummaries() == null ^ this.getModelSummaries() == null)
-            return false;
-        if (other.getModelSummaries() != null && other.getModelSummaries().equals(this.getModelSummaries()) == false)
-            return false;
         if (other.getNextToken() == null ^ this.getNextToken() == null)
             return false;
         if (other.getNextToken() != null && other.getNextToken().equals(this.getNextToken()) == false)
+            return false;
+        if (other.getModelSummaries() == null ^ this.getModelSummaries() == null)
+            return false;
+        if (other.getModelSummaries() != null && other.getModelSummaries().equals(this.getModelSummaries()) == false)
             return false;
         return true;
     }
@@ -192,8 +192,8 @@ public class ListCustomModelsResult extends com.amazonaws.AmazonWebServiceResult
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getModelSummaries() == null) ? 0 : getModelSummaries().hashCode());
         hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
+        hashCode = prime * hashCode + ((getModelSummaries() == null) ? 0 : getModelSummaries().hashCode());
         return hashCode;
     }
 

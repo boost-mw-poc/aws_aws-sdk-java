@@ -760,7 +760,15 @@ public enum InstanceType {
     C7i16xlarge("c7i.16xlarge"),
     C7i24xlarge("c7i.24xlarge"),
     C7i48xlarge("c7i.48xlarge"),
-    Mac2M2proMetal("mac2-m2pro.metal");
+    Mac2M2proMetal("mac2-m2pro.metal"),
+    R7izLarge("r7iz.large"),
+    R7izXlarge("r7iz.xlarge"),
+    R7iz2xlarge("r7iz.2xlarge"),
+    R7iz4xlarge("r7iz.4xlarge"),
+    R7iz8xlarge("r7iz.8xlarge"),
+    R7iz12xlarge("r7iz.12xlarge"),
+    R7iz16xlarge("r7iz.16xlarge"),
+    R7iz32xlarge("r7iz.32xlarge");
 
     private String value;
 

@@ -48,15 +48,15 @@ public class VpcConfigJsonUnmarshaller implements Unmarshaller<VpcConfig, JsonUn
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("securityGroupIds", targetDepth)) {
-                    context.nextToken();
-                    vpcConfig.setSecurityGroupIds(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
-
-                    .unmarshall(context));
-                }
                 if (context.testExpression("subnetIds", targetDepth)) {
                     context.nextToken();
                     vpcConfig.setSubnetIds(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
+
+                    .unmarshall(context));
+                }
+                if (context.testExpression("securityGroupIds", targetDepth)) {
+                    context.nextToken();
+                    vpcConfig.setSecurityGroupIds(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
 
                     .unmarshall(context));
                 }

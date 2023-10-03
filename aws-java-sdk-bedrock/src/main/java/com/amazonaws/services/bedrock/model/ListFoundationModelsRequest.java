@@ -27,16 +27,16 @@ public class ListFoundationModelsRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
+     * A Bedrock model provider.
+     * </p>
+     */
+    private String byProvider;
+    /**
+     * <p>
      * List by customization type.
      * </p>
      */
     private String byCustomizationType;
-    /**
-     * <p>
-     * List by inference type.
-     * </p>
-     */
-    private String byInferenceType;
     /**
      * <p>
      * List by output modality type.
@@ -45,10 +45,50 @@ public class ListFoundationModelsRequest extends com.amazonaws.AmazonWebServiceR
     private String byOutputModality;
     /**
      * <p>
-     * A Bedrock model provider.
+     * List by inference type.
      * </p>
      */
-    private String byProvider;
+    private String byInferenceType;
+
+    /**
+     * <p>
+     * A Bedrock model provider.
+     * </p>
+     * 
+     * @param byProvider
+     *        A Bedrock model provider.
+     */
+
+    public void setByProvider(String byProvider) {
+        this.byProvider = byProvider;
+    }
+
+    /**
+     * <p>
+     * A Bedrock model provider.
+     * </p>
+     * 
+     * @return A Bedrock model provider.
+     */
+
+    public String getByProvider() {
+        return this.byProvider;
+    }
+
+    /**
+     * <p>
+     * A Bedrock model provider.
+     * </p>
+     * 
+     * @param byProvider
+     *        A Bedrock model provider.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListFoundationModelsRequest withByProvider(String byProvider) {
+        setByProvider(byProvider);
+        return this;
+    }
 
     /**
      * <p>
@@ -106,65 +146,6 @@ public class ListFoundationModelsRequest extends com.amazonaws.AmazonWebServiceR
 
     public ListFoundationModelsRequest withByCustomizationType(ModelCustomization byCustomizationType) {
         this.byCustomizationType = byCustomizationType.toString();
-        return this;
-    }
-
-    /**
-     * <p>
-     * List by inference type.
-     * </p>
-     * 
-     * @param byInferenceType
-     *        List by inference type.
-     * @see InferenceType
-     */
-
-    public void setByInferenceType(String byInferenceType) {
-        this.byInferenceType = byInferenceType;
-    }
-
-    /**
-     * <p>
-     * List by inference type.
-     * </p>
-     * 
-     * @return List by inference type.
-     * @see InferenceType
-     */
-
-    public String getByInferenceType() {
-        return this.byInferenceType;
-    }
-
-    /**
-     * <p>
-     * List by inference type.
-     * </p>
-     * 
-     * @param byInferenceType
-     *        List by inference type.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     * @see InferenceType
-     */
-
-    public ListFoundationModelsRequest withByInferenceType(String byInferenceType) {
-        setByInferenceType(byInferenceType);
-        return this;
-    }
-
-    /**
-     * <p>
-     * List by inference type.
-     * </p>
-     * 
-     * @param byInferenceType
-     *        List by inference type.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     * @see InferenceType
-     */
-
-    public ListFoundationModelsRequest withByInferenceType(InferenceType byInferenceType) {
-        this.byInferenceType = byInferenceType.toString();
         return this;
     }
 
@@ -229,41 +210,60 @@ public class ListFoundationModelsRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * A Bedrock model provider.
+     * List by inference type.
      * </p>
      * 
-     * @param byProvider
-     *        A Bedrock model provider.
+     * @param byInferenceType
+     *        List by inference type.
+     * @see InferenceType
      */
 
-    public void setByProvider(String byProvider) {
-        this.byProvider = byProvider;
+    public void setByInferenceType(String byInferenceType) {
+        this.byInferenceType = byInferenceType;
     }
 
     /**
      * <p>
-     * A Bedrock model provider.
+     * List by inference type.
      * </p>
      * 
-     * @return A Bedrock model provider.
+     * @return List by inference type.
+     * @see InferenceType
      */
 
-    public String getByProvider() {
-        return this.byProvider;
+    public String getByInferenceType() {
+        return this.byInferenceType;
     }
 
     /**
      * <p>
-     * A Bedrock model provider.
+     * List by inference type.
      * </p>
      * 
-     * @param byProvider
-     *        A Bedrock model provider.
+     * @param byInferenceType
+     *        List by inference type.
      * @return Returns a reference to this object so that method calls can be chained together.
+     * @see InferenceType
      */
 
-    public ListFoundationModelsRequest withByProvider(String byProvider) {
-        setByProvider(byProvider);
+    public ListFoundationModelsRequest withByInferenceType(String byInferenceType) {
+        setByInferenceType(byInferenceType);
+        return this;
+    }
+
+    /**
+     * <p>
+     * List by inference type.
+     * </p>
+     * 
+     * @param byInferenceType
+     *        List by inference type.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see InferenceType
+     */
+
+    public ListFoundationModelsRequest withByInferenceType(InferenceType byInferenceType) {
+        this.byInferenceType = byInferenceType.toString();
         return this;
     }
 
@@ -279,14 +279,14 @@ public class ListFoundationModelsRequest extends com.amazonaws.AmazonWebServiceR
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getByProvider() != null)
+            sb.append("ByProvider: ").append(getByProvider()).append(",");
         if (getByCustomizationType() != null)
             sb.append("ByCustomizationType: ").append(getByCustomizationType()).append(",");
-        if (getByInferenceType() != null)
-            sb.append("ByInferenceType: ").append(getByInferenceType()).append(",");
         if (getByOutputModality() != null)
             sb.append("ByOutputModality: ").append(getByOutputModality()).append(",");
-        if (getByProvider() != null)
-            sb.append("ByProvider: ").append(getByProvider());
+        if (getByInferenceType() != null)
+            sb.append("ByInferenceType: ").append(getByInferenceType());
         sb.append("}");
         return sb.toString();
     }
@@ -301,21 +301,21 @@ public class ListFoundationModelsRequest extends com.amazonaws.AmazonWebServiceR
         if (obj instanceof ListFoundationModelsRequest == false)
             return false;
         ListFoundationModelsRequest other = (ListFoundationModelsRequest) obj;
+        if (other.getByProvider() == null ^ this.getByProvider() == null)
+            return false;
+        if (other.getByProvider() != null && other.getByProvider().equals(this.getByProvider()) == false)
+            return false;
         if (other.getByCustomizationType() == null ^ this.getByCustomizationType() == null)
             return false;
         if (other.getByCustomizationType() != null && other.getByCustomizationType().equals(this.getByCustomizationType()) == false)
-            return false;
-        if (other.getByInferenceType() == null ^ this.getByInferenceType() == null)
-            return false;
-        if (other.getByInferenceType() != null && other.getByInferenceType().equals(this.getByInferenceType()) == false)
             return false;
         if (other.getByOutputModality() == null ^ this.getByOutputModality() == null)
             return false;
         if (other.getByOutputModality() != null && other.getByOutputModality().equals(this.getByOutputModality()) == false)
             return false;
-        if (other.getByProvider() == null ^ this.getByProvider() == null)
+        if (other.getByInferenceType() == null ^ this.getByInferenceType() == null)
             return false;
-        if (other.getByProvider() != null && other.getByProvider().equals(this.getByProvider()) == false)
+        if (other.getByInferenceType() != null && other.getByInferenceType().equals(this.getByInferenceType()) == false)
             return false;
         return true;
     }
@@ -325,10 +325,10 @@ public class ListFoundationModelsRequest extends com.amazonaws.AmazonWebServiceR
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getByCustomizationType() == null) ? 0 : getByCustomizationType().hashCode());
-        hashCode = prime * hashCode + ((getByInferenceType() == null) ? 0 : getByInferenceType().hashCode());
-        hashCode = prime * hashCode + ((getByOutputModality() == null) ? 0 : getByOutputModality().hashCode());
         hashCode = prime * hashCode + ((getByProvider() == null) ? 0 : getByProvider().hashCode());
+        hashCode = prime * hashCode + ((getByCustomizationType() == null) ? 0 : getByCustomizationType().hashCode());
+        hashCode = prime * hashCode + ((getByOutputModality() == null) ? 0 : getByOutputModality().hashCode());
+        hashCode = prime * hashCode + ((getByInferenceType() == null) ? 0 : getByInferenceType().hashCode());
         return hashCode;
     }
 

@@ -30,12 +30,6 @@ public class CloudWatchConfig implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * S3 configuration for delivering a large amount of data.
-     * </p>
-     */
-    private S3Config largeDataDeliveryS3Config;
-    /**
-     * <p>
      * The log group name.
      * </p>
      */
@@ -46,46 +40,12 @@ public class CloudWatchConfig implements Serializable, Cloneable, StructuredPojo
      * </p>
      */
     private String roleArn;
-
     /**
      * <p>
      * S3 configuration for delivering a large amount of data.
      * </p>
-     * 
-     * @param largeDataDeliveryS3Config
-     *        S3 configuration for delivering a large amount of data.
      */
-
-    public void setLargeDataDeliveryS3Config(S3Config largeDataDeliveryS3Config) {
-        this.largeDataDeliveryS3Config = largeDataDeliveryS3Config;
-    }
-
-    /**
-     * <p>
-     * S3 configuration for delivering a large amount of data.
-     * </p>
-     * 
-     * @return S3 configuration for delivering a large amount of data.
-     */
-
-    public S3Config getLargeDataDeliveryS3Config() {
-        return this.largeDataDeliveryS3Config;
-    }
-
-    /**
-     * <p>
-     * S3 configuration for delivering a large amount of data.
-     * </p>
-     * 
-     * @param largeDataDeliveryS3Config
-     *        S3 configuration for delivering a large amount of data.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public CloudWatchConfig withLargeDataDeliveryS3Config(S3Config largeDataDeliveryS3Config) {
-        setLargeDataDeliveryS3Config(largeDataDeliveryS3Config);
-        return this;
-    }
+    private S3Config largeDataDeliveryS3Config;
 
     /**
      * <p>
@@ -168,6 +128,46 @@ public class CloudWatchConfig implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * <p>
+     * S3 configuration for delivering a large amount of data.
+     * </p>
+     * 
+     * @param largeDataDeliveryS3Config
+     *        S3 configuration for delivering a large amount of data.
+     */
+
+    public void setLargeDataDeliveryS3Config(S3Config largeDataDeliveryS3Config) {
+        this.largeDataDeliveryS3Config = largeDataDeliveryS3Config;
+    }
+
+    /**
+     * <p>
+     * S3 configuration for delivering a large amount of data.
+     * </p>
+     * 
+     * @return S3 configuration for delivering a large amount of data.
+     */
+
+    public S3Config getLargeDataDeliveryS3Config() {
+        return this.largeDataDeliveryS3Config;
+    }
+
+    /**
+     * <p>
+     * S3 configuration for delivering a large amount of data.
+     * </p>
+     * 
+     * @param largeDataDeliveryS3Config
+     *        S3 configuration for delivering a large amount of data.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CloudWatchConfig withLargeDataDeliveryS3Config(S3Config largeDataDeliveryS3Config) {
+        setLargeDataDeliveryS3Config(largeDataDeliveryS3Config);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -179,12 +179,12 @@ public class CloudWatchConfig implements Serializable, Cloneable, StructuredPojo
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getLargeDataDeliveryS3Config() != null)
-            sb.append("LargeDataDeliveryS3Config: ").append(getLargeDataDeliveryS3Config()).append(",");
         if (getLogGroupName() != null)
             sb.append("LogGroupName: ").append(getLogGroupName()).append(",");
         if (getRoleArn() != null)
-            sb.append("RoleArn: ").append(getRoleArn());
+            sb.append("RoleArn: ").append(getRoleArn()).append(",");
+        if (getLargeDataDeliveryS3Config() != null)
+            sb.append("LargeDataDeliveryS3Config: ").append(getLargeDataDeliveryS3Config());
         sb.append("}");
         return sb.toString();
     }
@@ -199,10 +199,6 @@ public class CloudWatchConfig implements Serializable, Cloneable, StructuredPojo
         if (obj instanceof CloudWatchConfig == false)
             return false;
         CloudWatchConfig other = (CloudWatchConfig) obj;
-        if (other.getLargeDataDeliveryS3Config() == null ^ this.getLargeDataDeliveryS3Config() == null)
-            return false;
-        if (other.getLargeDataDeliveryS3Config() != null && other.getLargeDataDeliveryS3Config().equals(this.getLargeDataDeliveryS3Config()) == false)
-            return false;
         if (other.getLogGroupName() == null ^ this.getLogGroupName() == null)
             return false;
         if (other.getLogGroupName() != null && other.getLogGroupName().equals(this.getLogGroupName()) == false)
@@ -210,6 +206,10 @@ public class CloudWatchConfig implements Serializable, Cloneable, StructuredPojo
         if (other.getRoleArn() == null ^ this.getRoleArn() == null)
             return false;
         if (other.getRoleArn() != null && other.getRoleArn().equals(this.getRoleArn()) == false)
+            return false;
+        if (other.getLargeDataDeliveryS3Config() == null ^ this.getLargeDataDeliveryS3Config() == null)
+            return false;
+        if (other.getLargeDataDeliveryS3Config() != null && other.getLargeDataDeliveryS3Config().equals(this.getLargeDataDeliveryS3Config()) == false)
             return false;
         return true;
     }
@@ -219,9 +219,9 @@ public class CloudWatchConfig implements Serializable, Cloneable, StructuredPojo
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getLargeDataDeliveryS3Config() == null) ? 0 : getLargeDataDeliveryS3Config().hashCode());
         hashCode = prime * hashCode + ((getLogGroupName() == null) ? 0 : getLogGroupName().hashCode());
         hashCode = prime * hashCode + ((getRoleArn() == null) ? 0 : getRoleArn().hashCode());
+        hashCode = prime * hashCode + ((getLargeDataDeliveryS3Config() == null) ? 0 : getLargeDataDeliveryS3Config().hashCode());
         return hashCode;
     }
 

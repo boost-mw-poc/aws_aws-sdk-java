@@ -30,24 +30,6 @@ public class CustomModelSummary implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The base model ARN.
-     * </p>
-     */
-    private String baseModelArn;
-    /**
-     * <p>
-     * The base model name.
-     * </p>
-     */
-    private String baseModelName;
-    /**
-     * <p>
-     * Creation time of the model.
-     * </p>
-     */
-    private java.util.Date creationTime;
-    /**
-     * <p>
      * The ARN of the custom model.
      * </p>
      */
@@ -58,126 +40,24 @@ public class CustomModelSummary implements Serializable, Cloneable, StructuredPo
      * </p>
      */
     private String modelName;
-
-    /**
-     * <p>
-     * The base model ARN.
-     * </p>
-     * 
-     * @param baseModelArn
-     *        The base model ARN.
-     */
-
-    public void setBaseModelArn(String baseModelArn) {
-        this.baseModelArn = baseModelArn;
-    }
-
-    /**
-     * <p>
-     * The base model ARN.
-     * </p>
-     * 
-     * @return The base model ARN.
-     */
-
-    public String getBaseModelArn() {
-        return this.baseModelArn;
-    }
-
-    /**
-     * <p>
-     * The base model ARN.
-     * </p>
-     * 
-     * @param baseModelArn
-     *        The base model ARN.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public CustomModelSummary withBaseModelArn(String baseModelArn) {
-        setBaseModelArn(baseModelArn);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The base model name.
-     * </p>
-     * 
-     * @param baseModelName
-     *        The base model name.
-     */
-
-    public void setBaseModelName(String baseModelName) {
-        this.baseModelName = baseModelName;
-    }
-
-    /**
-     * <p>
-     * The base model name.
-     * </p>
-     * 
-     * @return The base model name.
-     */
-
-    public String getBaseModelName() {
-        return this.baseModelName;
-    }
-
-    /**
-     * <p>
-     * The base model name.
-     * </p>
-     * 
-     * @param baseModelName
-     *        The base model name.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public CustomModelSummary withBaseModelName(String baseModelName) {
-        setBaseModelName(baseModelName);
-        return this;
-    }
-
     /**
      * <p>
      * Creation time of the model.
      * </p>
-     * 
-     * @param creationTime
-     *        Creation time of the model.
      */
-
-    public void setCreationTime(java.util.Date creationTime) {
-        this.creationTime = creationTime;
-    }
-
+    private java.util.Date creationTime;
     /**
      * <p>
-     * Creation time of the model.
+     * The base model ARN.
      * </p>
-     * 
-     * @return Creation time of the model.
      */
-
-    public java.util.Date getCreationTime() {
-        return this.creationTime;
-    }
-
+    private String baseModelArn;
     /**
      * <p>
-     * Creation time of the model.
+     * The base model name.
      * </p>
-     * 
-     * @param creationTime
-     *        Creation time of the model.
-     * @return Returns a reference to this object so that method calls can be chained together.
      */
-
-    public CustomModelSummary withCreationTime(java.util.Date creationTime) {
-        setCreationTime(creationTime);
-        return this;
-    }
+    private String baseModelName;
 
     /**
      * <p>
@@ -260,6 +140,126 @@ public class CustomModelSummary implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * Creation time of the model.
+     * </p>
+     * 
+     * @param creationTime
+     *        Creation time of the model.
+     */
+
+    public void setCreationTime(java.util.Date creationTime) {
+        this.creationTime = creationTime;
+    }
+
+    /**
+     * <p>
+     * Creation time of the model.
+     * </p>
+     * 
+     * @return Creation time of the model.
+     */
+
+    public java.util.Date getCreationTime() {
+        return this.creationTime;
+    }
+
+    /**
+     * <p>
+     * Creation time of the model.
+     * </p>
+     * 
+     * @param creationTime
+     *        Creation time of the model.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CustomModelSummary withCreationTime(java.util.Date creationTime) {
+        setCreationTime(creationTime);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The base model ARN.
+     * </p>
+     * 
+     * @param baseModelArn
+     *        The base model ARN.
+     */
+
+    public void setBaseModelArn(String baseModelArn) {
+        this.baseModelArn = baseModelArn;
+    }
+
+    /**
+     * <p>
+     * The base model ARN.
+     * </p>
+     * 
+     * @return The base model ARN.
+     */
+
+    public String getBaseModelArn() {
+        return this.baseModelArn;
+    }
+
+    /**
+     * <p>
+     * The base model ARN.
+     * </p>
+     * 
+     * @param baseModelArn
+     *        The base model ARN.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CustomModelSummary withBaseModelArn(String baseModelArn) {
+        setBaseModelArn(baseModelArn);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The base model name.
+     * </p>
+     * 
+     * @param baseModelName
+     *        The base model name.
+     */
+
+    public void setBaseModelName(String baseModelName) {
+        this.baseModelName = baseModelName;
+    }
+
+    /**
+     * <p>
+     * The base model name.
+     * </p>
+     * 
+     * @return The base model name.
+     */
+
+    public String getBaseModelName() {
+        return this.baseModelName;
+    }
+
+    /**
+     * <p>
+     * The base model name.
+     * </p>
+     * 
+     * @param baseModelName
+     *        The base model name.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CustomModelSummary withBaseModelName(String baseModelName) {
+        setBaseModelName(baseModelName);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -271,16 +271,16 @@ public class CustomModelSummary implements Serializable, Cloneable, StructuredPo
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getBaseModelArn() != null)
-            sb.append("BaseModelArn: ").append(getBaseModelArn()).append(",");
-        if (getBaseModelName() != null)
-            sb.append("BaseModelName: ").append(getBaseModelName()).append(",");
-        if (getCreationTime() != null)
-            sb.append("CreationTime: ").append(getCreationTime()).append(",");
         if (getModelArn() != null)
             sb.append("ModelArn: ").append(getModelArn()).append(",");
         if (getModelName() != null)
-            sb.append("ModelName: ").append(getModelName());
+            sb.append("ModelName: ").append(getModelName()).append(",");
+        if (getCreationTime() != null)
+            sb.append("CreationTime: ").append(getCreationTime()).append(",");
+        if (getBaseModelArn() != null)
+            sb.append("BaseModelArn: ").append(getBaseModelArn()).append(",");
+        if (getBaseModelName() != null)
+            sb.append("BaseModelName: ").append(getBaseModelName());
         sb.append("}");
         return sb.toString();
     }
@@ -295,18 +295,6 @@ public class CustomModelSummary implements Serializable, Cloneable, StructuredPo
         if (obj instanceof CustomModelSummary == false)
             return false;
         CustomModelSummary other = (CustomModelSummary) obj;
-        if (other.getBaseModelArn() == null ^ this.getBaseModelArn() == null)
-            return false;
-        if (other.getBaseModelArn() != null && other.getBaseModelArn().equals(this.getBaseModelArn()) == false)
-            return false;
-        if (other.getBaseModelName() == null ^ this.getBaseModelName() == null)
-            return false;
-        if (other.getBaseModelName() != null && other.getBaseModelName().equals(this.getBaseModelName()) == false)
-            return false;
-        if (other.getCreationTime() == null ^ this.getCreationTime() == null)
-            return false;
-        if (other.getCreationTime() != null && other.getCreationTime().equals(this.getCreationTime()) == false)
-            return false;
         if (other.getModelArn() == null ^ this.getModelArn() == null)
             return false;
         if (other.getModelArn() != null && other.getModelArn().equals(this.getModelArn()) == false)
@@ -314,6 +302,18 @@ public class CustomModelSummary implements Serializable, Cloneable, StructuredPo
         if (other.getModelName() == null ^ this.getModelName() == null)
             return false;
         if (other.getModelName() != null && other.getModelName().equals(this.getModelName()) == false)
+            return false;
+        if (other.getCreationTime() == null ^ this.getCreationTime() == null)
+            return false;
+        if (other.getCreationTime() != null && other.getCreationTime().equals(this.getCreationTime()) == false)
+            return false;
+        if (other.getBaseModelArn() == null ^ this.getBaseModelArn() == null)
+            return false;
+        if (other.getBaseModelArn() != null && other.getBaseModelArn().equals(this.getBaseModelArn()) == false)
+            return false;
+        if (other.getBaseModelName() == null ^ this.getBaseModelName() == null)
+            return false;
+        if (other.getBaseModelName() != null && other.getBaseModelName().equals(this.getBaseModelName()) == false)
             return false;
         return true;
     }
@@ -323,11 +323,11 @@ public class CustomModelSummary implements Serializable, Cloneable, StructuredPo
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getBaseModelArn() == null) ? 0 : getBaseModelArn().hashCode());
-        hashCode = prime * hashCode + ((getBaseModelName() == null) ? 0 : getBaseModelName().hashCode());
-        hashCode = prime * hashCode + ((getCreationTime() == null) ? 0 : getCreationTime().hashCode());
         hashCode = prime * hashCode + ((getModelArn() == null) ? 0 : getModelArn().hashCode());
         hashCode = prime * hashCode + ((getModelName() == null) ? 0 : getModelName().hashCode());
+        hashCode = prime * hashCode + ((getCreationTime() == null) ? 0 : getCreationTime().hashCode());
+        hashCode = prime * hashCode + ((getBaseModelArn() == null) ? 0 : getBaseModelArn().hashCode());
+        hashCode = prime * hashCode + ((getBaseModelName() == null) ? 0 : getBaseModelName().hashCode());
         return hashCode;
     }
 

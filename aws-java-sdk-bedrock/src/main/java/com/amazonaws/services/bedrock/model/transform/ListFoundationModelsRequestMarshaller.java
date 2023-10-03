@@ -27,14 +27,14 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class ListFoundationModelsRequestMarshaller {
 
-    private static final MarshallingInfo<String> BYCUSTOMIZATIONTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("byCustomizationType").build();
-    private static final MarshallingInfo<String> BYINFERENCETYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("byInferenceType").build();
-    private static final MarshallingInfo<String> BYOUTPUTMODALITY_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("byOutputModality").build();
     private static final MarshallingInfo<String> BYPROVIDER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("byProvider").build();
+    private static final MarshallingInfo<String> BYCUSTOMIZATIONTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("byCustomizationType").build();
+    private static final MarshallingInfo<String> BYOUTPUTMODALITY_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("byOutputModality").build();
+    private static final MarshallingInfo<String> BYINFERENCETYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("byInferenceType").build();
 
     private static final ListFoundationModelsRequestMarshaller instance = new ListFoundationModelsRequestMarshaller();
 
@@ -52,10 +52,10 @@ public class ListFoundationModelsRequestMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(listFoundationModelsRequest.getByCustomizationType(), BYCUSTOMIZATIONTYPE_BINDING);
-            protocolMarshaller.marshall(listFoundationModelsRequest.getByInferenceType(), BYINFERENCETYPE_BINDING);
-            protocolMarshaller.marshall(listFoundationModelsRequest.getByOutputModality(), BYOUTPUTMODALITY_BINDING);
             protocolMarshaller.marshall(listFoundationModelsRequest.getByProvider(), BYPROVIDER_BINDING);
+            protocolMarshaller.marshall(listFoundationModelsRequest.getByCustomizationType(), BYCUSTOMIZATIONTYPE_BINDING);
+            protocolMarshaller.marshall(listFoundationModelsRequest.getByOutputModality(), BYOUTPUTMODALITY_BINDING);
+            protocolMarshaller.marshall(listFoundationModelsRequest.getByInferenceType(), BYINFERENCETYPE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

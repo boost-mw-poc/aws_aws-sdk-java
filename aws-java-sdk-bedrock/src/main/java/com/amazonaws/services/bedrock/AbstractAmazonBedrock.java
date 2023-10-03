@@ -33,12 +33,22 @@ public class AbstractAmazonBedrock implements AmazonBedrock {
     }
 
     @Override
+    public CreateProvisionedModelThroughputResult createProvisionedModelThroughput(CreateProvisionedModelThroughputRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DeleteCustomModelResult deleteCustomModel(DeleteCustomModelRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
     @Override
     public DeleteModelInvocationLoggingConfigurationResult deleteModelInvocationLoggingConfiguration(DeleteModelInvocationLoggingConfigurationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteProvisionedModelThroughputResult deleteProvisionedModelThroughput(DeleteProvisionedModelThroughputRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -63,6 +73,11 @@ public class AbstractAmazonBedrock implements AmazonBedrock {
     }
 
     @Override
+    public GetProvisionedModelThroughputResult getProvisionedModelThroughput(GetProvisionedModelThroughputRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListCustomModelsResult listCustomModels(ListCustomModelsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -74,6 +89,11 @@ public class AbstractAmazonBedrock implements AmazonBedrock {
 
     @Override
     public ListModelCustomizationJobsResult listModelCustomizationJobs(ListModelCustomizationJobsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListProvisionedModelThroughputsResult listProvisionedModelThroughputs(ListProvisionedModelThroughputsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -99,6 +119,11 @@ public class AbstractAmazonBedrock implements AmazonBedrock {
 
     @Override
     public UntagResourceResult untagResource(UntagResourceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateProvisionedModelThroughputResult updateProvisionedModelThroughput(UpdateProvisionedModelThroughputRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

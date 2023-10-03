@@ -1811,7 +1811,8 @@ public interface AmazonRDS {
 
     /**
      * <p>
-     * Lists the set of CA certificates provided by Amazon RDS for this Amazon Web Services account.
+     * Lists the set of certificate authority (CA) certificates provided by Amazon RDS for this Amazon Web Services
+     * account.
      * </p>
      * <p>
      * For more information, see <a
@@ -4268,8 +4269,8 @@ public interface AmazonRDS {
     /**
      * <p>
      * Restores a DB instance to an arbitrary point in time. You can restore to any point in time before the time
-     * identified by the LatestRestorableTime property. You can restore to a point up to the number of days specified by
-     * the BackupRetentionPeriod property.
+     * identified by the <code>LatestRestorableTime</code> property. You can restore to a point up to the number of days
+     * specified by the <code>BackupRetentionPeriod</code> property.
      * </p>
      * <p>
      * The target database is created with most of the original configuration, but in a system-selected Availability

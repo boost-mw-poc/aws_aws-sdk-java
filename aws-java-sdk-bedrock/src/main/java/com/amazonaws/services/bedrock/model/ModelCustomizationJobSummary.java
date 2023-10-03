@@ -30,16 +30,46 @@ public class ModelCustomizationJobSummary implements Serializable, Cloneable, St
 
     /**
      * <p>
+     * ARN of the customization job.
+     * </p>
+     */
+    private String jobArn;
+    /**
+     * <p>
      * ARN of the base model.
      * </p>
      */
     private String baseModelArn;
     /**
      * <p>
+     * Name of the customization job.
+     * </p>
+     */
+    private String jobName;
+    /**
+     * <p>
+     * Status of the customization job.
+     * </p>
+     */
+    private String status;
+    /**
+     * <p>
+     * Time that the customization job was last modified.
+     * </p>
+     */
+    private java.util.Date lastModifiedTime;
+    /**
+     * <p>
      * Creation time of the custom model.
      * </p>
      */
     private java.util.Date creationTime;
+    /**
+     * <p>
+     * Time that the customization job ended.
+     * </p>
+     */
+    private java.util.Date endTime;
     /**
      * <p>
      * ARN of the custom model.
@@ -52,36 +82,46 @@ public class ModelCustomizationJobSummary implements Serializable, Cloneable, St
      * </p>
      */
     private String customModelName;
-    /**
-     * <p>
-     * Time that the customization job ended.
-     * </p>
-     */
-    private java.util.Date endTime;
+
     /**
      * <p>
      * ARN of the customization job.
      * </p>
+     * 
+     * @param jobArn
+     *        ARN of the customization job.
      */
-    private String jobArn;
+
+    public void setJobArn(String jobArn) {
+        this.jobArn = jobArn;
+    }
+
     /**
      * <p>
-     * Name of the customization job.
+     * ARN of the customization job.
      * </p>
+     * 
+     * @return ARN of the customization job.
      */
-    private String jobName;
+
+    public String getJobArn() {
+        return this.jobArn;
+    }
+
     /**
      * <p>
-     * Time that the customization job was last modified.
+     * ARN of the customization job.
      * </p>
+     * 
+     * @param jobArn
+     *        ARN of the customization job.
+     * @return Returns a reference to this object so that method calls can be chained together.
      */
-    private java.util.Date lastModifiedTime;
-    /**
-     * <p>
-     * Status of the customization job.
-     * </p>
-     */
-    private String status;
+
+    public ModelCustomizationJobSummary withJobArn(String jobArn) {
+        setJobArn(jobArn);
+        return this;
+    }
 
     /**
      * <p>
@@ -125,6 +165,145 @@ public class ModelCustomizationJobSummary implements Serializable, Cloneable, St
 
     /**
      * <p>
+     * Name of the customization job.
+     * </p>
+     * 
+     * @param jobName
+     *        Name of the customization job.
+     */
+
+    public void setJobName(String jobName) {
+        this.jobName = jobName;
+    }
+
+    /**
+     * <p>
+     * Name of the customization job.
+     * </p>
+     * 
+     * @return Name of the customization job.
+     */
+
+    public String getJobName() {
+        return this.jobName;
+    }
+
+    /**
+     * <p>
+     * Name of the customization job.
+     * </p>
+     * 
+     * @param jobName
+     *        Name of the customization job.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ModelCustomizationJobSummary withJobName(String jobName) {
+        setJobName(jobName);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Status of the customization job.
+     * </p>
+     * 
+     * @param status
+     *        Status of the customization job.
+     * @see ModelCustomizationJobStatus
+     */
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    /**
+     * <p>
+     * Status of the customization job.
+     * </p>
+     * 
+     * @return Status of the customization job.
+     * @see ModelCustomizationJobStatus
+     */
+
+    public String getStatus() {
+        return this.status;
+    }
+
+    /**
+     * <p>
+     * Status of the customization job.
+     * </p>
+     * 
+     * @param status
+     *        Status of the customization job.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ModelCustomizationJobStatus
+     */
+
+    public ModelCustomizationJobSummary withStatus(String status) {
+        setStatus(status);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Status of the customization job.
+     * </p>
+     * 
+     * @param status
+     *        Status of the customization job.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ModelCustomizationJobStatus
+     */
+
+    public ModelCustomizationJobSummary withStatus(ModelCustomizationJobStatus status) {
+        this.status = status.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * Time that the customization job was last modified.
+     * </p>
+     * 
+     * @param lastModifiedTime
+     *        Time that the customization job was last modified.
+     */
+
+    public void setLastModifiedTime(java.util.Date lastModifiedTime) {
+        this.lastModifiedTime = lastModifiedTime;
+    }
+
+    /**
+     * <p>
+     * Time that the customization job was last modified.
+     * </p>
+     * 
+     * @return Time that the customization job was last modified.
+     */
+
+    public java.util.Date getLastModifiedTime() {
+        return this.lastModifiedTime;
+    }
+
+    /**
+     * <p>
+     * Time that the customization job was last modified.
+     * </p>
+     * 
+     * @param lastModifiedTime
+     *        Time that the customization job was last modified.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ModelCustomizationJobSummary withLastModifiedTime(java.util.Date lastModifiedTime) {
+        setLastModifiedTime(lastModifiedTime);
+        return this;
+    }
+
+    /**
+     * <p>
      * Creation time of the custom model.
      * </p>
      * 
@@ -160,6 +339,46 @@ public class ModelCustomizationJobSummary implements Serializable, Cloneable, St
 
     public ModelCustomizationJobSummary withCreationTime(java.util.Date creationTime) {
         setCreationTime(creationTime);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Time that the customization job ended.
+     * </p>
+     * 
+     * @param endTime
+     *        Time that the customization job ended.
+     */
+
+    public void setEndTime(java.util.Date endTime) {
+        this.endTime = endTime;
+    }
+
+    /**
+     * <p>
+     * Time that the customization job ended.
+     * </p>
+     * 
+     * @return Time that the customization job ended.
+     */
+
+    public java.util.Date getEndTime() {
+        return this.endTime;
+    }
+
+    /**
+     * <p>
+     * Time that the customization job ended.
+     * </p>
+     * 
+     * @param endTime
+     *        Time that the customization job ended.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ModelCustomizationJobSummary withEndTime(java.util.Date endTime) {
+        setEndTime(endTime);
         return this;
     }
 
@@ -244,225 +463,6 @@ public class ModelCustomizationJobSummary implements Serializable, Cloneable, St
     }
 
     /**
-     * <p>
-     * Time that the customization job ended.
-     * </p>
-     * 
-     * @param endTime
-     *        Time that the customization job ended.
-     */
-
-    public void setEndTime(java.util.Date endTime) {
-        this.endTime = endTime;
-    }
-
-    /**
-     * <p>
-     * Time that the customization job ended.
-     * </p>
-     * 
-     * @return Time that the customization job ended.
-     */
-
-    public java.util.Date getEndTime() {
-        return this.endTime;
-    }
-
-    /**
-     * <p>
-     * Time that the customization job ended.
-     * </p>
-     * 
-     * @param endTime
-     *        Time that the customization job ended.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ModelCustomizationJobSummary withEndTime(java.util.Date endTime) {
-        setEndTime(endTime);
-        return this;
-    }
-
-    /**
-     * <p>
-     * ARN of the customization job.
-     * </p>
-     * 
-     * @param jobArn
-     *        ARN of the customization job.
-     */
-
-    public void setJobArn(String jobArn) {
-        this.jobArn = jobArn;
-    }
-
-    /**
-     * <p>
-     * ARN of the customization job.
-     * </p>
-     * 
-     * @return ARN of the customization job.
-     */
-
-    public String getJobArn() {
-        return this.jobArn;
-    }
-
-    /**
-     * <p>
-     * ARN of the customization job.
-     * </p>
-     * 
-     * @param jobArn
-     *        ARN of the customization job.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ModelCustomizationJobSummary withJobArn(String jobArn) {
-        setJobArn(jobArn);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Name of the customization job.
-     * </p>
-     * 
-     * @param jobName
-     *        Name of the customization job.
-     */
-
-    public void setJobName(String jobName) {
-        this.jobName = jobName;
-    }
-
-    /**
-     * <p>
-     * Name of the customization job.
-     * </p>
-     * 
-     * @return Name of the customization job.
-     */
-
-    public String getJobName() {
-        return this.jobName;
-    }
-
-    /**
-     * <p>
-     * Name of the customization job.
-     * </p>
-     * 
-     * @param jobName
-     *        Name of the customization job.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ModelCustomizationJobSummary withJobName(String jobName) {
-        setJobName(jobName);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Time that the customization job was last modified.
-     * </p>
-     * 
-     * @param lastModifiedTime
-     *        Time that the customization job was last modified.
-     */
-
-    public void setLastModifiedTime(java.util.Date lastModifiedTime) {
-        this.lastModifiedTime = lastModifiedTime;
-    }
-
-    /**
-     * <p>
-     * Time that the customization job was last modified.
-     * </p>
-     * 
-     * @return Time that the customization job was last modified.
-     */
-
-    public java.util.Date getLastModifiedTime() {
-        return this.lastModifiedTime;
-    }
-
-    /**
-     * <p>
-     * Time that the customization job was last modified.
-     * </p>
-     * 
-     * @param lastModifiedTime
-     *        Time that the customization job was last modified.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ModelCustomizationJobSummary withLastModifiedTime(java.util.Date lastModifiedTime) {
-        setLastModifiedTime(lastModifiedTime);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Status of the customization job.
-     * </p>
-     * 
-     * @param status
-     *        Status of the customization job.
-     * @see ModelCustomizationJobStatus
-     */
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
-    /**
-     * <p>
-     * Status of the customization job.
-     * </p>
-     * 
-     * @return Status of the customization job.
-     * @see ModelCustomizationJobStatus
-     */
-
-    public String getStatus() {
-        return this.status;
-    }
-
-    /**
-     * <p>
-     * Status of the customization job.
-     * </p>
-     * 
-     * @param status
-     *        Status of the customization job.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     * @see ModelCustomizationJobStatus
-     */
-
-    public ModelCustomizationJobSummary withStatus(String status) {
-        setStatus(status);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Status of the customization job.
-     * </p>
-     * 
-     * @param status
-     *        Status of the customization job.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     * @see ModelCustomizationJobStatus
-     */
-
-    public ModelCustomizationJobSummary withStatus(ModelCustomizationJobStatus status) {
-        this.status = status.toString();
-        return this;
-    }
-
-    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -474,24 +474,24 @@ public class ModelCustomizationJobSummary implements Serializable, Cloneable, St
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getJobArn() != null)
+            sb.append("JobArn: ").append(getJobArn()).append(",");
         if (getBaseModelArn() != null)
             sb.append("BaseModelArn: ").append(getBaseModelArn()).append(",");
+        if (getJobName() != null)
+            sb.append("JobName: ").append(getJobName()).append(",");
+        if (getStatus() != null)
+            sb.append("Status: ").append(getStatus()).append(",");
+        if (getLastModifiedTime() != null)
+            sb.append("LastModifiedTime: ").append(getLastModifiedTime()).append(",");
         if (getCreationTime() != null)
             sb.append("CreationTime: ").append(getCreationTime()).append(",");
+        if (getEndTime() != null)
+            sb.append("EndTime: ").append(getEndTime()).append(",");
         if (getCustomModelArn() != null)
             sb.append("CustomModelArn: ").append(getCustomModelArn()).append(",");
         if (getCustomModelName() != null)
-            sb.append("CustomModelName: ").append(getCustomModelName()).append(",");
-        if (getEndTime() != null)
-            sb.append("EndTime: ").append(getEndTime()).append(",");
-        if (getJobArn() != null)
-            sb.append("JobArn: ").append(getJobArn()).append(",");
-        if (getJobName() != null)
-            sb.append("JobName: ").append(getJobName()).append(",");
-        if (getLastModifiedTime() != null)
-            sb.append("LastModifiedTime: ").append(getLastModifiedTime()).append(",");
-        if (getStatus() != null)
-            sb.append("Status: ").append(getStatus());
+            sb.append("CustomModelName: ").append(getCustomModelName());
         sb.append("}");
         return sb.toString();
     }
@@ -506,13 +506,33 @@ public class ModelCustomizationJobSummary implements Serializable, Cloneable, St
         if (obj instanceof ModelCustomizationJobSummary == false)
             return false;
         ModelCustomizationJobSummary other = (ModelCustomizationJobSummary) obj;
+        if (other.getJobArn() == null ^ this.getJobArn() == null)
+            return false;
+        if (other.getJobArn() != null && other.getJobArn().equals(this.getJobArn()) == false)
+            return false;
         if (other.getBaseModelArn() == null ^ this.getBaseModelArn() == null)
             return false;
         if (other.getBaseModelArn() != null && other.getBaseModelArn().equals(this.getBaseModelArn()) == false)
             return false;
+        if (other.getJobName() == null ^ this.getJobName() == null)
+            return false;
+        if (other.getJobName() != null && other.getJobName().equals(this.getJobName()) == false)
+            return false;
+        if (other.getStatus() == null ^ this.getStatus() == null)
+            return false;
+        if (other.getStatus() != null && other.getStatus().equals(this.getStatus()) == false)
+            return false;
+        if (other.getLastModifiedTime() == null ^ this.getLastModifiedTime() == null)
+            return false;
+        if (other.getLastModifiedTime() != null && other.getLastModifiedTime().equals(this.getLastModifiedTime()) == false)
+            return false;
         if (other.getCreationTime() == null ^ this.getCreationTime() == null)
             return false;
         if (other.getCreationTime() != null && other.getCreationTime().equals(this.getCreationTime()) == false)
+            return false;
+        if (other.getEndTime() == null ^ this.getEndTime() == null)
+            return false;
+        if (other.getEndTime() != null && other.getEndTime().equals(this.getEndTime()) == false)
             return false;
         if (other.getCustomModelArn() == null ^ this.getCustomModelArn() == null)
             return false;
@@ -522,26 +542,6 @@ public class ModelCustomizationJobSummary implements Serializable, Cloneable, St
             return false;
         if (other.getCustomModelName() != null && other.getCustomModelName().equals(this.getCustomModelName()) == false)
             return false;
-        if (other.getEndTime() == null ^ this.getEndTime() == null)
-            return false;
-        if (other.getEndTime() != null && other.getEndTime().equals(this.getEndTime()) == false)
-            return false;
-        if (other.getJobArn() == null ^ this.getJobArn() == null)
-            return false;
-        if (other.getJobArn() != null && other.getJobArn().equals(this.getJobArn()) == false)
-            return false;
-        if (other.getJobName() == null ^ this.getJobName() == null)
-            return false;
-        if (other.getJobName() != null && other.getJobName().equals(this.getJobName()) == false)
-            return false;
-        if (other.getLastModifiedTime() == null ^ this.getLastModifiedTime() == null)
-            return false;
-        if (other.getLastModifiedTime() != null && other.getLastModifiedTime().equals(this.getLastModifiedTime()) == false)
-            return false;
-        if (other.getStatus() == null ^ this.getStatus() == null)
-            return false;
-        if (other.getStatus() != null && other.getStatus().equals(this.getStatus()) == false)
-            return false;
         return true;
     }
 
@@ -550,15 +550,15 @@ public class ModelCustomizationJobSummary implements Serializable, Cloneable, St
         final int prime = 31;
         int hashCode = 1;
 
+        hashCode = prime * hashCode + ((getJobArn() == null) ? 0 : getJobArn().hashCode());
         hashCode = prime * hashCode + ((getBaseModelArn() == null) ? 0 : getBaseModelArn().hashCode());
+        hashCode = prime * hashCode + ((getJobName() == null) ? 0 : getJobName().hashCode());
+        hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
+        hashCode = prime * hashCode + ((getLastModifiedTime() == null) ? 0 : getLastModifiedTime().hashCode());
         hashCode = prime * hashCode + ((getCreationTime() == null) ? 0 : getCreationTime().hashCode());
+        hashCode = prime * hashCode + ((getEndTime() == null) ? 0 : getEndTime().hashCode());
         hashCode = prime * hashCode + ((getCustomModelArn() == null) ? 0 : getCustomModelArn().hashCode());
         hashCode = prime * hashCode + ((getCustomModelName() == null) ? 0 : getCustomModelName().hashCode());
-        hashCode = prime * hashCode + ((getEndTime() == null) ? 0 : getEndTime().hashCode());
-        hashCode = prime * hashCode + ((getJobArn() == null) ? 0 : getJobArn().hashCode());
-        hashCode = prime * hashCode + ((getJobName() == null) ? 0 : getJobName().hashCode());
-        hashCode = prime * hashCode + ((getLastModifiedTime() == null) ? 0 : getLastModifiedTime().hashCode());
-        hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
         return hashCode;
     }
 

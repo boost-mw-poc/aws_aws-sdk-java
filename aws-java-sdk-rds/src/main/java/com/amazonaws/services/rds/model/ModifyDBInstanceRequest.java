@@ -77,6 +77,19 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * Default: Uses existing setting
      * </p>
+     * <p>
+     * Constraints:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * If you are modifying the DB instance class and upgrading the engine version at the same time, the currently
+     * running engine version must be supported on the specified DB instance class. Otherwise, the operation returns an
+     * error. In this case, first run the operation to modify the DB instance class, and then run it again to upgrade
+     * the engine version.
+     * </p>
+     * </li>
+     * </ul>
      */
     private String dBInstanceClass;
     /**
@@ -458,6 +471,19 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * In RDS Custom for Oracle, this parameter is supported for read replicas only if they are in the
      * <code>PATCH_DB_FAILURE</code> lifecycle.
      * </p>
+     * <p>
+     * Constraints:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * If you are upgrading the engine version and modifying the DB instance class at the same time, the currently
+     * running engine version must be supported on the specified DB instance class. Otherwise, the operation returns an
+     * error. In this case, first run the operation to modify the DB instance class, and then run it again to upgrade
+     * the engine version.
+     * </p>
+     * </li>
+     * </ul>
      */
     private String engineVersion;
     /**
@@ -1638,6 +1664,19 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * Default: Uses existing setting
      * </p>
+     * <p>
+     * Constraints:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * If you are modifying the DB instance class and upgrading the engine version at the same time, the currently
+     * running engine version must be supported on the specified DB instance class. Otherwise, the operation returns an
+     * error. In this case, first run the operation to modify the DB instance class, and then run it again to upgrade
+     * the engine version.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param dBInstanceClass
      *        The new compute and memory capacity of the DB instance, for example <code>db.m4.large</code>. Not all DB
@@ -1657,6 +1696,19 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        </p>
      *        <p>
      *        Default: Uses existing setting
+     *        </p>
+     *        <p>
+     *        Constraints:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        If you are modifying the DB instance class and upgrading the engine version at the same time, the
+     *        currently running engine version must be supported on the specified DB instance class. Otherwise, the
+     *        operation returns an error. In this case, first run the operation to modify the DB instance class, and
+     *        then run it again to upgrade the engine version.
+     *        </p>
+     *        </li>
      */
 
     public void setDBInstanceClass(String dBInstanceClass) {
@@ -1684,6 +1736,19 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * Default: Uses existing setting
      * </p>
+     * <p>
+     * Constraints:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * If you are modifying the DB instance class and upgrading the engine version at the same time, the currently
+     * running engine version must be supported on the specified DB instance class. Otherwise, the operation returns an
+     * error. In this case, first run the operation to modify the DB instance class, and then run it again to upgrade
+     * the engine version.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @return The new compute and memory capacity of the DB instance, for example <code>db.m4.large</code>. Not all DB
      *         instance classes are available in all Amazon Web Services Regions, or for all database engines. For the
@@ -1702,6 +1767,19 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         </p>
      *         <p>
      *         Default: Uses existing setting
+     *         </p>
+     *         <p>
+     *         Constraints:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         If you are modifying the DB instance class and upgrading the engine version at the same time, the
+     *         currently running engine version must be supported on the specified DB instance class. Otherwise, the
+     *         operation returns an error. In this case, first run the operation to modify the DB instance class, and
+     *         then run it again to upgrade the engine version.
+     *         </p>
+     *         </li>
      */
 
     public String getDBInstanceClass() {
@@ -1729,6 +1807,19 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * Default: Uses existing setting
      * </p>
+     * <p>
+     * Constraints:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * If you are modifying the DB instance class and upgrading the engine version at the same time, the currently
+     * running engine version must be supported on the specified DB instance class. Otherwise, the operation returns an
+     * error. In this case, first run the operation to modify the DB instance class, and then run it again to upgrade
+     * the engine version.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param dBInstanceClass
      *        The new compute and memory capacity of the DB instance, for example <code>db.m4.large</code>. Not all DB
@@ -1748,6 +1839,19 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        </p>
      *        <p>
      *        Default: Uses existing setting
+     *        </p>
+     *        <p>
+     *        Constraints:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        If you are modifying the DB instance class and upgrading the engine version at the same time, the
+     *        currently running engine version must be supported on the specified DB instance class. Otherwise, the
+     *        operation returns an error. In this case, first run the operation to modify the DB instance class, and
+     *        then run it again to upgrade the engine version.
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -4123,6 +4227,19 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * In RDS Custom for Oracle, this parameter is supported for read replicas only if they are in the
      * <code>PATCH_DB_FAILURE</code> lifecycle.
      * </p>
+     * <p>
+     * Constraints:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * If you are upgrading the engine version and modifying the DB instance class at the same time, the currently
+     * running engine version must be supported on the specified DB instance class. Otherwise, the operation returns an
+     * error. In this case, first run the operation to modify the DB instance class, and then run it again to upgrade
+     * the engine version.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param engineVersion
      *        The version number of the database engine to upgrade to. Changing this parameter results in an outage and
@@ -4145,6 +4262,19 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        <p>
      *        In RDS Custom for Oracle, this parameter is supported for read replicas only if they are in the
      *        <code>PATCH_DB_FAILURE</code> lifecycle.
+     *        </p>
+     *        <p>
+     *        Constraints:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        If you are upgrading the engine version and modifying the DB instance class at the same time, the
+     *        currently running engine version must be supported on the specified DB instance class. Otherwise, the
+     *        operation returns an error. In this case, first run the operation to modify the DB instance class, and
+     *        then run it again to upgrade the engine version.
+     *        </p>
+     *        </li>
      */
 
     public void setEngineVersion(String engineVersion) {
@@ -4175,6 +4305,19 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * In RDS Custom for Oracle, this parameter is supported for read replicas only if they are in the
      * <code>PATCH_DB_FAILURE</code> lifecycle.
      * </p>
+     * <p>
+     * Constraints:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * If you are upgrading the engine version and modifying the DB instance class at the same time, the currently
+     * running engine version must be supported on the specified DB instance class. Otherwise, the operation returns an
+     * error. In this case, first run the operation to modify the DB instance class, and then run it again to upgrade
+     * the engine version.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @return The version number of the database engine to upgrade to. Changing this parameter results in an outage and
      *         the change is applied during the next maintenance window unless the <code>ApplyImmediately</code>
@@ -4196,6 +4339,19 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         <p>
      *         In RDS Custom for Oracle, this parameter is supported for read replicas only if they are in the
      *         <code>PATCH_DB_FAILURE</code> lifecycle.
+     *         </p>
+     *         <p>
+     *         Constraints:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         If you are upgrading the engine version and modifying the DB instance class at the same time, the
+     *         currently running engine version must be supported on the specified DB instance class. Otherwise, the
+     *         operation returns an error. In this case, first run the operation to modify the DB instance class, and
+     *         then run it again to upgrade the engine version.
+     *         </p>
+     *         </li>
      */
 
     public String getEngineVersion() {
@@ -4226,6 +4382,19 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * In RDS Custom for Oracle, this parameter is supported for read replicas only if they are in the
      * <code>PATCH_DB_FAILURE</code> lifecycle.
      * </p>
+     * <p>
+     * Constraints:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * If you are upgrading the engine version and modifying the DB instance class at the same time, the currently
+     * running engine version must be supported on the specified DB instance class. Otherwise, the operation returns an
+     * error. In this case, first run the operation to modify the DB instance class, and then run it again to upgrade
+     * the engine version.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param engineVersion
      *        The version number of the database engine to upgrade to. Changing this parameter results in an outage and
@@ -4248,6 +4417,19 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        <p>
      *        In RDS Custom for Oracle, this parameter is supported for read replicas only if they are in the
      *        <code>PATCH_DB_FAILURE</code> lifecycle.
+     *        </p>
+     *        <p>
+     *        Constraints:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        If you are upgrading the engine version and modifying the DB instance class at the same time, the
+     *        currently running engine version must be supported on the specified DB instance class. Otherwise, the
+     *        operation returns an error. In this case, first run the operation to modify the DB instance class, and
+     *        then run it again to upgrade the engine version.
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

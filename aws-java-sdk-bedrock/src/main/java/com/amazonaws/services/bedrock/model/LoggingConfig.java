@@ -36,18 +36,6 @@ public class LoggingConfig implements Serializable, Cloneable, StructuredPojo {
     private CloudWatchConfig cloudWatchConfig;
     /**
      * <p>
-     * Set to include embeddings data in the log delivery.
-     * </p>
-     */
-    private Boolean embeddingDataDeliveryEnabled;
-    /**
-     * <p>
-     * Set to include image data in the log delivery.
-     * </p>
-     */
-    private Boolean imageDataDeliveryEnabled;
-    /**
-     * <p>
      * S3 configuration for storing log data.
      * </p>
      */
@@ -58,6 +46,18 @@ public class LoggingConfig implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private Boolean textDataDeliveryEnabled;
+    /**
+     * <p>
+     * Set to include image data in the log delivery.
+     * </p>
+     */
+    private Boolean imageDataDeliveryEnabled;
+    /**
+     * <p>
+     * Set to include embeddings data in the log delivery.
+     * </p>
+     */
+    private Boolean embeddingDataDeliveryEnabled;
 
     /**
      * <p>
@@ -97,110 +97,6 @@ public class LoggingConfig implements Serializable, Cloneable, StructuredPojo {
     public LoggingConfig withCloudWatchConfig(CloudWatchConfig cloudWatchConfig) {
         setCloudWatchConfig(cloudWatchConfig);
         return this;
-    }
-
-    /**
-     * <p>
-     * Set to include embeddings data in the log delivery.
-     * </p>
-     * 
-     * @param embeddingDataDeliveryEnabled
-     *        Set to include embeddings data in the log delivery.
-     */
-
-    public void setEmbeddingDataDeliveryEnabled(Boolean embeddingDataDeliveryEnabled) {
-        this.embeddingDataDeliveryEnabled = embeddingDataDeliveryEnabled;
-    }
-
-    /**
-     * <p>
-     * Set to include embeddings data in the log delivery.
-     * </p>
-     * 
-     * @return Set to include embeddings data in the log delivery.
-     */
-
-    public Boolean getEmbeddingDataDeliveryEnabled() {
-        return this.embeddingDataDeliveryEnabled;
-    }
-
-    /**
-     * <p>
-     * Set to include embeddings data in the log delivery.
-     * </p>
-     * 
-     * @param embeddingDataDeliveryEnabled
-     *        Set to include embeddings data in the log delivery.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public LoggingConfig withEmbeddingDataDeliveryEnabled(Boolean embeddingDataDeliveryEnabled) {
-        setEmbeddingDataDeliveryEnabled(embeddingDataDeliveryEnabled);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Set to include embeddings data in the log delivery.
-     * </p>
-     * 
-     * @return Set to include embeddings data in the log delivery.
-     */
-
-    public Boolean isEmbeddingDataDeliveryEnabled() {
-        return this.embeddingDataDeliveryEnabled;
-    }
-
-    /**
-     * <p>
-     * Set to include image data in the log delivery.
-     * </p>
-     * 
-     * @param imageDataDeliveryEnabled
-     *        Set to include image data in the log delivery.
-     */
-
-    public void setImageDataDeliveryEnabled(Boolean imageDataDeliveryEnabled) {
-        this.imageDataDeliveryEnabled = imageDataDeliveryEnabled;
-    }
-
-    /**
-     * <p>
-     * Set to include image data in the log delivery.
-     * </p>
-     * 
-     * @return Set to include image data in the log delivery.
-     */
-
-    public Boolean getImageDataDeliveryEnabled() {
-        return this.imageDataDeliveryEnabled;
-    }
-
-    /**
-     * <p>
-     * Set to include image data in the log delivery.
-     * </p>
-     * 
-     * @param imageDataDeliveryEnabled
-     *        Set to include image data in the log delivery.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public LoggingConfig withImageDataDeliveryEnabled(Boolean imageDataDeliveryEnabled) {
-        setImageDataDeliveryEnabled(imageDataDeliveryEnabled);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Set to include image data in the log delivery.
-     * </p>
-     * 
-     * @return Set to include image data in the log delivery.
-     */
-
-    public Boolean isImageDataDeliveryEnabled() {
-        return this.imageDataDeliveryEnabled;
     }
 
     /**
@@ -296,6 +192,110 @@ public class LoggingConfig implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Set to include image data in the log delivery.
+     * </p>
+     * 
+     * @param imageDataDeliveryEnabled
+     *        Set to include image data in the log delivery.
+     */
+
+    public void setImageDataDeliveryEnabled(Boolean imageDataDeliveryEnabled) {
+        this.imageDataDeliveryEnabled = imageDataDeliveryEnabled;
+    }
+
+    /**
+     * <p>
+     * Set to include image data in the log delivery.
+     * </p>
+     * 
+     * @return Set to include image data in the log delivery.
+     */
+
+    public Boolean getImageDataDeliveryEnabled() {
+        return this.imageDataDeliveryEnabled;
+    }
+
+    /**
+     * <p>
+     * Set to include image data in the log delivery.
+     * </p>
+     * 
+     * @param imageDataDeliveryEnabled
+     *        Set to include image data in the log delivery.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public LoggingConfig withImageDataDeliveryEnabled(Boolean imageDataDeliveryEnabled) {
+        setImageDataDeliveryEnabled(imageDataDeliveryEnabled);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Set to include image data in the log delivery.
+     * </p>
+     * 
+     * @return Set to include image data in the log delivery.
+     */
+
+    public Boolean isImageDataDeliveryEnabled() {
+        return this.imageDataDeliveryEnabled;
+    }
+
+    /**
+     * <p>
+     * Set to include embeddings data in the log delivery.
+     * </p>
+     * 
+     * @param embeddingDataDeliveryEnabled
+     *        Set to include embeddings data in the log delivery.
+     */
+
+    public void setEmbeddingDataDeliveryEnabled(Boolean embeddingDataDeliveryEnabled) {
+        this.embeddingDataDeliveryEnabled = embeddingDataDeliveryEnabled;
+    }
+
+    /**
+     * <p>
+     * Set to include embeddings data in the log delivery.
+     * </p>
+     * 
+     * @return Set to include embeddings data in the log delivery.
+     */
+
+    public Boolean getEmbeddingDataDeliveryEnabled() {
+        return this.embeddingDataDeliveryEnabled;
+    }
+
+    /**
+     * <p>
+     * Set to include embeddings data in the log delivery.
+     * </p>
+     * 
+     * @param embeddingDataDeliveryEnabled
+     *        Set to include embeddings data in the log delivery.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public LoggingConfig withEmbeddingDataDeliveryEnabled(Boolean embeddingDataDeliveryEnabled) {
+        setEmbeddingDataDeliveryEnabled(embeddingDataDeliveryEnabled);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Set to include embeddings data in the log delivery.
+     * </p>
+     * 
+     * @return Set to include embeddings data in the log delivery.
+     */
+
+    public Boolean isEmbeddingDataDeliveryEnabled() {
+        return this.embeddingDataDeliveryEnabled;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -309,14 +309,14 @@ public class LoggingConfig implements Serializable, Cloneable, StructuredPojo {
         sb.append("{");
         if (getCloudWatchConfig() != null)
             sb.append("CloudWatchConfig: ").append(getCloudWatchConfig()).append(",");
-        if (getEmbeddingDataDeliveryEnabled() != null)
-            sb.append("EmbeddingDataDeliveryEnabled: ").append(getEmbeddingDataDeliveryEnabled()).append(",");
-        if (getImageDataDeliveryEnabled() != null)
-            sb.append("ImageDataDeliveryEnabled: ").append(getImageDataDeliveryEnabled()).append(",");
         if (getS3Config() != null)
             sb.append("S3Config: ").append(getS3Config()).append(",");
         if (getTextDataDeliveryEnabled() != null)
-            sb.append("TextDataDeliveryEnabled: ").append(getTextDataDeliveryEnabled());
+            sb.append("TextDataDeliveryEnabled: ").append(getTextDataDeliveryEnabled()).append(",");
+        if (getImageDataDeliveryEnabled() != null)
+            sb.append("ImageDataDeliveryEnabled: ").append(getImageDataDeliveryEnabled()).append(",");
+        if (getEmbeddingDataDeliveryEnabled() != null)
+            sb.append("EmbeddingDataDeliveryEnabled: ").append(getEmbeddingDataDeliveryEnabled());
         sb.append("}");
         return sb.toString();
     }
@@ -335,14 +335,6 @@ public class LoggingConfig implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getCloudWatchConfig() != null && other.getCloudWatchConfig().equals(this.getCloudWatchConfig()) == false)
             return false;
-        if (other.getEmbeddingDataDeliveryEnabled() == null ^ this.getEmbeddingDataDeliveryEnabled() == null)
-            return false;
-        if (other.getEmbeddingDataDeliveryEnabled() != null && other.getEmbeddingDataDeliveryEnabled().equals(this.getEmbeddingDataDeliveryEnabled()) == false)
-            return false;
-        if (other.getImageDataDeliveryEnabled() == null ^ this.getImageDataDeliveryEnabled() == null)
-            return false;
-        if (other.getImageDataDeliveryEnabled() != null && other.getImageDataDeliveryEnabled().equals(this.getImageDataDeliveryEnabled()) == false)
-            return false;
         if (other.getS3Config() == null ^ this.getS3Config() == null)
             return false;
         if (other.getS3Config() != null && other.getS3Config().equals(this.getS3Config()) == false)
@@ -350,6 +342,14 @@ public class LoggingConfig implements Serializable, Cloneable, StructuredPojo {
         if (other.getTextDataDeliveryEnabled() == null ^ this.getTextDataDeliveryEnabled() == null)
             return false;
         if (other.getTextDataDeliveryEnabled() != null && other.getTextDataDeliveryEnabled().equals(this.getTextDataDeliveryEnabled()) == false)
+            return false;
+        if (other.getImageDataDeliveryEnabled() == null ^ this.getImageDataDeliveryEnabled() == null)
+            return false;
+        if (other.getImageDataDeliveryEnabled() != null && other.getImageDataDeliveryEnabled().equals(this.getImageDataDeliveryEnabled()) == false)
+            return false;
+        if (other.getEmbeddingDataDeliveryEnabled() == null ^ this.getEmbeddingDataDeliveryEnabled() == null)
+            return false;
+        if (other.getEmbeddingDataDeliveryEnabled() != null && other.getEmbeddingDataDeliveryEnabled().equals(this.getEmbeddingDataDeliveryEnabled()) == false)
             return false;
         return true;
     }
@@ -360,10 +360,10 @@ public class LoggingConfig implements Serializable, Cloneable, StructuredPojo {
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getCloudWatchConfig() == null) ? 0 : getCloudWatchConfig().hashCode());
-        hashCode = prime * hashCode + ((getEmbeddingDataDeliveryEnabled() == null) ? 0 : getEmbeddingDataDeliveryEnabled().hashCode());
-        hashCode = prime * hashCode + ((getImageDataDeliveryEnabled() == null) ? 0 : getImageDataDeliveryEnabled().hashCode());
         hashCode = prime * hashCode + ((getS3Config() == null) ? 0 : getS3Config().hashCode());
         hashCode = prime * hashCode + ((getTextDataDeliveryEnabled() == null) ? 0 : getTextDataDeliveryEnabled().hashCode());
+        hashCode = prime * hashCode + ((getImageDataDeliveryEnabled() == null) ? 0 : getImageDataDeliveryEnabled().hashCode());
+        hashCode = prime * hashCode + ((getEmbeddingDataDeliveryEnabled() == null) ? 0 : getEmbeddingDataDeliveryEnabled().hashCode());
         return hashCode;
     }
 

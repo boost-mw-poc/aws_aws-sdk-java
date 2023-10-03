@@ -27,18 +27,18 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class ListCustomModelsRequestMarshaller {
 
-    private static final MarshallingInfo<String> BASEMODELARNEQUALS_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("baseModelArnEquals").build();
-    private static final MarshallingInfo<java.util.Date> CREATIONTIMEAFTER_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
-            .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("creationTimeAfter").timestampFormat("iso8601").build();
     private static final MarshallingInfo<java.util.Date> CREATIONTIMEBEFORE_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("creationTimeBefore").timestampFormat("iso8601").build();
+    private static final MarshallingInfo<java.util.Date> CREATIONTIMEAFTER_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
+            .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("creationTimeAfter").timestampFormat("iso8601").build();
+    private static final MarshallingInfo<String> NAMECONTAINS_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("nameContains").build();
+    private static final MarshallingInfo<String> BASEMODELARNEQUALS_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("baseModelArnEquals").build();
     private static final MarshallingInfo<String> FOUNDATIONMODELARNEQUALS_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("foundationModelArnEquals").build();
     private static final MarshallingInfo<Integer> MAXRESULTS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("maxResults").build();
-    private static final MarshallingInfo<String> NAMECONTAINS_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("nameContains").build();
     private static final MarshallingInfo<String> NEXTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("nextToken").build();
     private static final MarshallingInfo<String> SORTBY_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
@@ -62,12 +62,12 @@ public class ListCustomModelsRequestMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(listCustomModelsRequest.getBaseModelArnEquals(), BASEMODELARNEQUALS_BINDING);
-            protocolMarshaller.marshall(listCustomModelsRequest.getCreationTimeAfter(), CREATIONTIMEAFTER_BINDING);
             protocolMarshaller.marshall(listCustomModelsRequest.getCreationTimeBefore(), CREATIONTIMEBEFORE_BINDING);
+            protocolMarshaller.marshall(listCustomModelsRequest.getCreationTimeAfter(), CREATIONTIMEAFTER_BINDING);
+            protocolMarshaller.marshall(listCustomModelsRequest.getNameContains(), NAMECONTAINS_BINDING);
+            protocolMarshaller.marshall(listCustomModelsRequest.getBaseModelArnEquals(), BASEMODELARNEQUALS_BINDING);
             protocolMarshaller.marshall(listCustomModelsRequest.getFoundationModelArnEquals(), FOUNDATIONMODELARNEQUALS_BINDING);
             protocolMarshaller.marshall(listCustomModelsRequest.getMaxResults(), MAXRESULTS_BINDING);
-            protocolMarshaller.marshall(listCustomModelsRequest.getNameContains(), NAMECONTAINS_BINDING);
             protocolMarshaller.marshall(listCustomModelsRequest.getNextToken(), NEXTTOKEN_BINDING);
             protocolMarshaller.marshall(listCustomModelsRequest.getSortBy(), SORTBY_BINDING);
             protocolMarshaller.marshall(listCustomModelsRequest.getSortOrder(), SORTORDER_BINDING);

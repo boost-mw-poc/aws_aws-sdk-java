@@ -48,31 +48,6 @@ public class GetModelCustomizationJobResultJsonUnmarshaller implements Unmarshal
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("baseModelArn", targetDepth)) {
-                    context.nextToken();
-                    getModelCustomizationJobResult.setBaseModelArn(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("clientRequestToken", targetDepth)) {
-                    context.nextToken();
-                    getModelCustomizationJobResult.setClientRequestToken(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("creationTime", targetDepth)) {
-                    context.nextToken();
-                    getModelCustomizationJobResult.setCreationTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
-                }
-                if (context.testExpression("endTime", targetDepth)) {
-                    context.nextToken();
-                    getModelCustomizationJobResult.setEndTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
-                }
-                if (context.testExpression("failureMessage", targetDepth)) {
-                    context.nextToken();
-                    getModelCustomizationJobResult.setFailureMessage(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("hyperParameters", targetDepth)) {
-                    context.nextToken();
-                    getModelCustomizationJobResult.setHyperParameters(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context
-                            .getUnmarshaller(String.class)).unmarshall(context));
-                }
                 if (context.testExpression("jobArn", targetDepth)) {
                     context.nextToken();
                     getModelCustomizationJobResult.setJobArn(context.getUnmarshaller(String.class).unmarshall(context));
@@ -81,25 +56,17 @@ public class GetModelCustomizationJobResultJsonUnmarshaller implements Unmarshal
                     context.nextToken();
                     getModelCustomizationJobResult.setJobName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("lastModifiedTime", targetDepth)) {
+                if (context.testExpression("outputModelName", targetDepth)) {
                     context.nextToken();
-                    getModelCustomizationJobResult.setLastModifiedTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
-                }
-                if (context.testExpression("outputDataConfig", targetDepth)) {
-                    context.nextToken();
-                    getModelCustomizationJobResult.setOutputDataConfig(OutputDataConfigJsonUnmarshaller.getInstance().unmarshall(context));
+                    getModelCustomizationJobResult.setOutputModelName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("outputModelArn", targetDepth)) {
                     context.nextToken();
                     getModelCustomizationJobResult.setOutputModelArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("outputModelKmsKeyArn", targetDepth)) {
+                if (context.testExpression("clientRequestToken", targetDepth)) {
                     context.nextToken();
-                    getModelCustomizationJobResult.setOutputModelKmsKeyArn(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("outputModelName", targetDepth)) {
-                    context.nextToken();
-                    getModelCustomizationJobResult.setOutputModelName(context.getUnmarshaller(String.class).unmarshall(context));
+                    getModelCustomizationJobResult.setClientRequestToken(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("roleArn", targetDepth)) {
                     context.nextToken();
@@ -109,17 +76,50 @@ public class GetModelCustomizationJobResultJsonUnmarshaller implements Unmarshal
                     context.nextToken();
                     getModelCustomizationJobResult.setStatus(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("failureMessage", targetDepth)) {
+                    context.nextToken();
+                    getModelCustomizationJobResult.setFailureMessage(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("creationTime", targetDepth)) {
+                    context.nextToken();
+                    getModelCustomizationJobResult.setCreationTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
+                }
+                if (context.testExpression("lastModifiedTime", targetDepth)) {
+                    context.nextToken();
+                    getModelCustomizationJobResult.setLastModifiedTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
+                }
+                if (context.testExpression("endTime", targetDepth)) {
+                    context.nextToken();
+                    getModelCustomizationJobResult.setEndTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
+                }
+                if (context.testExpression("baseModelArn", targetDepth)) {
+                    context.nextToken();
+                    getModelCustomizationJobResult.setBaseModelArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("hyperParameters", targetDepth)) {
+                    context.nextToken();
+                    getModelCustomizationJobResult.setHyperParameters(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context
+                            .getUnmarshaller(String.class)).unmarshall(context));
+                }
                 if (context.testExpression("trainingDataConfig", targetDepth)) {
                     context.nextToken();
                     getModelCustomizationJobResult.setTrainingDataConfig(TrainingDataConfigJsonUnmarshaller.getInstance().unmarshall(context));
                 }
-                if (context.testExpression("trainingMetrics", targetDepth)) {
-                    context.nextToken();
-                    getModelCustomizationJobResult.setTrainingMetrics(TrainingMetricsJsonUnmarshaller.getInstance().unmarshall(context));
-                }
                 if (context.testExpression("validationDataConfig", targetDepth)) {
                     context.nextToken();
                     getModelCustomizationJobResult.setValidationDataConfig(ValidationDataConfigJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("outputDataConfig", targetDepth)) {
+                    context.nextToken();
+                    getModelCustomizationJobResult.setOutputDataConfig(OutputDataConfigJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("outputModelKmsKeyArn", targetDepth)) {
+                    context.nextToken();
+                    getModelCustomizationJobResult.setOutputModelKmsKeyArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("trainingMetrics", targetDepth)) {
+                    context.nextToken();
+                    getModelCustomizationJobResult.setTrainingMetrics(TrainingMetricsJsonUnmarshaller.getInstance().unmarshall(context));
                 }
                 if (context.testExpression("validationMetrics", targetDepth)) {
                     context.nextToken();

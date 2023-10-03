@@ -107,6 +107,41 @@ public class AmazonBedrockAsyncClient extends AmazonBedrockClient implements Ama
     }
 
     @Override
+    public java.util.concurrent.Future<CreateProvisionedModelThroughputResult> createProvisionedModelThroughputAsync(
+            CreateProvisionedModelThroughputRequest request) {
+
+        return createProvisionedModelThroughputAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateProvisionedModelThroughputResult> createProvisionedModelThroughputAsync(
+            final CreateProvisionedModelThroughputRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateProvisionedModelThroughputRequest, CreateProvisionedModelThroughputResult> asyncHandler) {
+        final CreateProvisionedModelThroughputRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateProvisionedModelThroughputResult>() {
+            @Override
+            public CreateProvisionedModelThroughputResult call() throws Exception {
+                CreateProvisionedModelThroughputResult result = null;
+
+                try {
+                    result = executeCreateProvisionedModelThroughput(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteCustomModelResult> deleteCustomModelAsync(DeleteCustomModelRequest request) {
 
         return deleteCustomModelAsync(request, null);
@@ -159,6 +194,41 @@ public class AmazonBedrockAsyncClient extends AmazonBedrockClient implements Ama
 
                 try {
                     result = executeDeleteModelInvocationLoggingConfiguration(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteProvisionedModelThroughputResult> deleteProvisionedModelThroughputAsync(
+            DeleteProvisionedModelThroughputRequest request) {
+
+        return deleteProvisionedModelThroughputAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteProvisionedModelThroughputResult> deleteProvisionedModelThroughputAsync(
+            final DeleteProvisionedModelThroughputRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteProvisionedModelThroughputRequest, DeleteProvisionedModelThroughputResult> asyncHandler) {
+        final DeleteProvisionedModelThroughputRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteProvisionedModelThroughputResult>() {
+            @Override
+            public DeleteProvisionedModelThroughputResult call() throws Exception {
+                DeleteProvisionedModelThroughputResult result = null;
+
+                try {
+                    result = executeDeleteProvisionedModelThroughput(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -309,6 +379,40 @@ public class AmazonBedrockAsyncClient extends AmazonBedrockClient implements Ama
     }
 
     @Override
+    public java.util.concurrent.Future<GetProvisionedModelThroughputResult> getProvisionedModelThroughputAsync(GetProvisionedModelThroughputRequest request) {
+
+        return getProvisionedModelThroughputAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetProvisionedModelThroughputResult> getProvisionedModelThroughputAsync(
+            final GetProvisionedModelThroughputRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetProvisionedModelThroughputRequest, GetProvisionedModelThroughputResult> asyncHandler) {
+        final GetProvisionedModelThroughputRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetProvisionedModelThroughputResult>() {
+            @Override
+            public GetProvisionedModelThroughputResult call() throws Exception {
+                GetProvisionedModelThroughputResult result = null;
+
+                try {
+                    result = executeGetProvisionedModelThroughput(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ListCustomModelsResult> listCustomModelsAsync(ListCustomModelsRequest request) {
 
         return listCustomModelsAsync(request, null);
@@ -392,6 +496,41 @@ public class AmazonBedrockAsyncClient extends AmazonBedrockClient implements Ama
 
                 try {
                     result = executeListModelCustomizationJobs(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListProvisionedModelThroughputsResult> listProvisionedModelThroughputsAsync(
+            ListProvisionedModelThroughputsRequest request) {
+
+        return listProvisionedModelThroughputsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListProvisionedModelThroughputsResult> listProvisionedModelThroughputsAsync(
+            final ListProvisionedModelThroughputsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListProvisionedModelThroughputsRequest, ListProvisionedModelThroughputsResult> asyncHandler) {
+        final ListProvisionedModelThroughputsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListProvisionedModelThroughputsResult>() {
+            @Override
+            public ListProvisionedModelThroughputsResult call() throws Exception {
+                ListProvisionedModelThroughputsResult result = null;
+
+                try {
+                    result = executeListProvisionedModelThroughputs(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -559,6 +698,41 @@ public class AmazonBedrockAsyncClient extends AmazonBedrockClient implements Ama
 
                 try {
                     result = executeUntagResource(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateProvisionedModelThroughputResult> updateProvisionedModelThroughputAsync(
+            UpdateProvisionedModelThroughputRequest request) {
+
+        return updateProvisionedModelThroughputAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateProvisionedModelThroughputResult> updateProvisionedModelThroughputAsync(
+            final UpdateProvisionedModelThroughputRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateProvisionedModelThroughputRequest, UpdateProvisionedModelThroughputResult> asyncHandler) {
+        final UpdateProvisionedModelThroughputRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateProvisionedModelThroughputResult>() {
+            @Override
+            public UpdateProvisionedModelThroughputResult call() throws Exception {
+                UpdateProvisionedModelThroughputResult result = null;
+
+                try {
+                    result = executeUpdateProvisionedModelThroughput(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

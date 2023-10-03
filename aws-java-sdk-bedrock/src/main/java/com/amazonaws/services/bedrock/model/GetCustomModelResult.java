@@ -25,46 +25,10 @@ public class GetCustomModelResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * ARN of the base model.
-     * </p>
-     */
-    private String baseModelArn;
-    /**
-     * <p>
-     * Creation time of the model.
-     * </p>
-     */
-    private java.util.Date creationTime;
-    /**
-     * <p>
-     * Hyperparameter values associated with this model.
-     * </p>
-     */
-    private java.util.Map<String, String> hyperParameters;
-    /**
-     * <p>
-     * Job ARN associated with this model.
-     * </p>
-     */
-    private String jobArn;
-    /**
-     * <p>
-     * Job name associated with this model.
-     * </p>
-     */
-    private String jobName;
-    /**
-     * <p>
      * ARN associated with this model.
      * </p>
      */
     private String modelArn;
-    /**
-     * <p>
-     * The custom model is encrypted at rest using this key.
-     * </p>
-     */
-    private String modelKmsKeyArn;
     /**
      * <p>
      * Model name associated with this model.
@@ -73,30 +37,226 @@ public class GetCustomModelResult extends com.amazonaws.AmazonWebServiceResult<c
     private String modelName;
     /**
      * <p>
-     * Output data configuration associated with this custom model.
+     * Job name associated with this model.
      * </p>
      */
-    private OutputDataConfig outputDataConfig;
+    private String jobName;
+    /**
+     * <p>
+     * Job ARN associated with this model.
+     * </p>
+     */
+    private String jobArn;
+    /**
+     * <p>
+     * ARN of the base model.
+     * </p>
+     */
+    private String baseModelArn;
+    /**
+     * <p>
+     * The custom model is encrypted at rest using this key.
+     * </p>
+     */
+    private String modelKmsKeyArn;
+    /**
+     * <p>
+     * Hyperparameter values associated with this model.
+     * </p>
+     */
+    private java.util.Map<String, String> hyperParameters;
     /**
      * <p>
      * Information about the training dataset.
      * </p>
      */
     private TrainingDataConfig trainingDataConfig;
+
+    private ValidationDataConfig validationDataConfig;
+    /**
+     * <p>
+     * Output data configuration associated with this custom model.
+     * </p>
+     */
+    private OutputDataConfig outputDataConfig;
     /**
      * <p>
      * The training metrics from the job creation.
      * </p>
      */
     private TrainingMetrics trainingMetrics;
-
-    private ValidationDataConfig validationDataConfig;
     /**
      * <p>
      * The validation metrics from the job creation.
      * </p>
      */
     private java.util.List<ValidatorMetric> validationMetrics;
+    /**
+     * <p>
+     * Creation time of the model.
+     * </p>
+     */
+    private java.util.Date creationTime;
+
+    /**
+     * <p>
+     * ARN associated with this model.
+     * </p>
+     * 
+     * @param modelArn
+     *        ARN associated with this model.
+     */
+
+    public void setModelArn(String modelArn) {
+        this.modelArn = modelArn;
+    }
+
+    /**
+     * <p>
+     * ARN associated with this model.
+     * </p>
+     * 
+     * @return ARN associated with this model.
+     */
+
+    public String getModelArn() {
+        return this.modelArn;
+    }
+
+    /**
+     * <p>
+     * ARN associated with this model.
+     * </p>
+     * 
+     * @param modelArn
+     *        ARN associated with this model.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetCustomModelResult withModelArn(String modelArn) {
+        setModelArn(modelArn);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Model name associated with this model.
+     * </p>
+     * 
+     * @param modelName
+     *        Model name associated with this model.
+     */
+
+    public void setModelName(String modelName) {
+        this.modelName = modelName;
+    }
+
+    /**
+     * <p>
+     * Model name associated with this model.
+     * </p>
+     * 
+     * @return Model name associated with this model.
+     */
+
+    public String getModelName() {
+        return this.modelName;
+    }
+
+    /**
+     * <p>
+     * Model name associated with this model.
+     * </p>
+     * 
+     * @param modelName
+     *        Model name associated with this model.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetCustomModelResult withModelName(String modelName) {
+        setModelName(modelName);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Job name associated with this model.
+     * </p>
+     * 
+     * @param jobName
+     *        Job name associated with this model.
+     */
+
+    public void setJobName(String jobName) {
+        this.jobName = jobName;
+    }
+
+    /**
+     * <p>
+     * Job name associated with this model.
+     * </p>
+     * 
+     * @return Job name associated with this model.
+     */
+
+    public String getJobName() {
+        return this.jobName;
+    }
+
+    /**
+     * <p>
+     * Job name associated with this model.
+     * </p>
+     * 
+     * @param jobName
+     *        Job name associated with this model.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetCustomModelResult withJobName(String jobName) {
+        setJobName(jobName);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Job ARN associated with this model.
+     * </p>
+     * 
+     * @param jobArn
+     *        Job ARN associated with this model.
+     */
+
+    public void setJobArn(String jobArn) {
+        this.jobArn = jobArn;
+    }
+
+    /**
+     * <p>
+     * Job ARN associated with this model.
+     * </p>
+     * 
+     * @return Job ARN associated with this model.
+     */
+
+    public String getJobArn() {
+        return this.jobArn;
+    }
+
+    /**
+     * <p>
+     * Job ARN associated with this model.
+     * </p>
+     * 
+     * @param jobArn
+     *        Job ARN associated with this model.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetCustomModelResult withJobArn(String jobArn) {
+        setJobArn(jobArn);
+        return this;
+    }
 
     /**
      * <p>
@@ -140,41 +300,41 @@ public class GetCustomModelResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * Creation time of the model.
+     * The custom model is encrypted at rest using this key.
      * </p>
      * 
-     * @param creationTime
-     *        Creation time of the model.
+     * @param modelKmsKeyArn
+     *        The custom model is encrypted at rest using this key.
      */
 
-    public void setCreationTime(java.util.Date creationTime) {
-        this.creationTime = creationTime;
+    public void setModelKmsKeyArn(String modelKmsKeyArn) {
+        this.modelKmsKeyArn = modelKmsKeyArn;
     }
 
     /**
      * <p>
-     * Creation time of the model.
+     * The custom model is encrypted at rest using this key.
      * </p>
      * 
-     * @return Creation time of the model.
+     * @return The custom model is encrypted at rest using this key.
      */
 
-    public java.util.Date getCreationTime() {
-        return this.creationTime;
+    public String getModelKmsKeyArn() {
+        return this.modelKmsKeyArn;
     }
 
     /**
      * <p>
-     * Creation time of the model.
+     * The custom model is encrypted at rest using this key.
      * </p>
      * 
-     * @param creationTime
-     *        Creation time of the model.
+     * @param modelKmsKeyArn
+     *        The custom model is encrypted at rest using this key.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public GetCustomModelResult withCreationTime(java.util.Date creationTime) {
-        setCreationTime(creationTime);
+    public GetCustomModelResult withModelKmsKeyArn(String modelKmsKeyArn) {
+        setModelKmsKeyArn(modelKmsKeyArn);
         return this;
     }
 
@@ -248,201 +408,67 @@ public class GetCustomModelResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * Job ARN associated with this model.
+     * Information about the training dataset.
      * </p>
      * 
-     * @param jobArn
-     *        Job ARN associated with this model.
+     * @param trainingDataConfig
+     *        Information about the training dataset.
      */
 
-    public void setJobArn(String jobArn) {
-        this.jobArn = jobArn;
+    public void setTrainingDataConfig(TrainingDataConfig trainingDataConfig) {
+        this.trainingDataConfig = trainingDataConfig;
     }
 
     /**
      * <p>
-     * Job ARN associated with this model.
+     * Information about the training dataset.
      * </p>
      * 
-     * @return Job ARN associated with this model.
+     * @return Information about the training dataset.
      */
 
-    public String getJobArn() {
-        return this.jobArn;
+    public TrainingDataConfig getTrainingDataConfig() {
+        return this.trainingDataConfig;
     }
 
     /**
      * <p>
-     * Job ARN associated with this model.
+     * Information about the training dataset.
      * </p>
      * 
-     * @param jobArn
-     *        Job ARN associated with this model.
+     * @param trainingDataConfig
+     *        Information about the training dataset.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public GetCustomModelResult withJobArn(String jobArn) {
-        setJobArn(jobArn);
+    public GetCustomModelResult withTrainingDataConfig(TrainingDataConfig trainingDataConfig) {
+        setTrainingDataConfig(trainingDataConfig);
         return this;
     }
 
     /**
-     * <p>
-     * Job name associated with this model.
-     * </p>
-     * 
-     * @param jobName
-     *        Job name associated with this model.
+     * @param validationDataConfig
      */
 
-    public void setJobName(String jobName) {
-        this.jobName = jobName;
+    public void setValidationDataConfig(ValidationDataConfig validationDataConfig) {
+        this.validationDataConfig = validationDataConfig;
     }
 
     /**
-     * <p>
-     * Job name associated with this model.
-     * </p>
-     * 
-     * @return Job name associated with this model.
+     * @return
      */
 
-    public String getJobName() {
-        return this.jobName;
+    public ValidationDataConfig getValidationDataConfig() {
+        return this.validationDataConfig;
     }
 
     /**
-     * <p>
-     * Job name associated with this model.
-     * </p>
-     * 
-     * @param jobName
-     *        Job name associated with this model.
+     * @param validationDataConfig
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public GetCustomModelResult withJobName(String jobName) {
-        setJobName(jobName);
-        return this;
-    }
-
-    /**
-     * <p>
-     * ARN associated with this model.
-     * </p>
-     * 
-     * @param modelArn
-     *        ARN associated with this model.
-     */
-
-    public void setModelArn(String modelArn) {
-        this.modelArn = modelArn;
-    }
-
-    /**
-     * <p>
-     * ARN associated with this model.
-     * </p>
-     * 
-     * @return ARN associated with this model.
-     */
-
-    public String getModelArn() {
-        return this.modelArn;
-    }
-
-    /**
-     * <p>
-     * ARN associated with this model.
-     * </p>
-     * 
-     * @param modelArn
-     *        ARN associated with this model.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public GetCustomModelResult withModelArn(String modelArn) {
-        setModelArn(modelArn);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The custom model is encrypted at rest using this key.
-     * </p>
-     * 
-     * @param modelKmsKeyArn
-     *        The custom model is encrypted at rest using this key.
-     */
-
-    public void setModelKmsKeyArn(String modelKmsKeyArn) {
-        this.modelKmsKeyArn = modelKmsKeyArn;
-    }
-
-    /**
-     * <p>
-     * The custom model is encrypted at rest using this key.
-     * </p>
-     * 
-     * @return The custom model is encrypted at rest using this key.
-     */
-
-    public String getModelKmsKeyArn() {
-        return this.modelKmsKeyArn;
-    }
-
-    /**
-     * <p>
-     * The custom model is encrypted at rest using this key.
-     * </p>
-     * 
-     * @param modelKmsKeyArn
-     *        The custom model is encrypted at rest using this key.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public GetCustomModelResult withModelKmsKeyArn(String modelKmsKeyArn) {
-        setModelKmsKeyArn(modelKmsKeyArn);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Model name associated with this model.
-     * </p>
-     * 
-     * @param modelName
-     *        Model name associated with this model.
-     */
-
-    public void setModelName(String modelName) {
-        this.modelName = modelName;
-    }
-
-    /**
-     * <p>
-     * Model name associated with this model.
-     * </p>
-     * 
-     * @return Model name associated with this model.
-     */
-
-    public String getModelName() {
-        return this.modelName;
-    }
-
-    /**
-     * <p>
-     * Model name associated with this model.
-     * </p>
-     * 
-     * @param modelName
-     *        Model name associated with this model.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public GetCustomModelResult withModelName(String modelName) {
-        setModelName(modelName);
+    public GetCustomModelResult withValidationDataConfig(ValidationDataConfig validationDataConfig) {
+        setValidationDataConfig(validationDataConfig);
         return this;
     }
 
@@ -488,46 +514,6 @@ public class GetCustomModelResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * Information about the training dataset.
-     * </p>
-     * 
-     * @param trainingDataConfig
-     *        Information about the training dataset.
-     */
-
-    public void setTrainingDataConfig(TrainingDataConfig trainingDataConfig) {
-        this.trainingDataConfig = trainingDataConfig;
-    }
-
-    /**
-     * <p>
-     * Information about the training dataset.
-     * </p>
-     * 
-     * @return Information about the training dataset.
-     */
-
-    public TrainingDataConfig getTrainingDataConfig() {
-        return this.trainingDataConfig;
-    }
-
-    /**
-     * <p>
-     * Information about the training dataset.
-     * </p>
-     * 
-     * @param trainingDataConfig
-     *        Information about the training dataset.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public GetCustomModelResult withTrainingDataConfig(TrainingDataConfig trainingDataConfig) {
-        setTrainingDataConfig(trainingDataConfig);
-        return this;
-    }
-
-    /**
-     * <p>
      * The training metrics from the job creation.
      * </p>
      * 
@@ -563,32 +549,6 @@ public class GetCustomModelResult extends com.amazonaws.AmazonWebServiceResult<c
 
     public GetCustomModelResult withTrainingMetrics(TrainingMetrics trainingMetrics) {
         setTrainingMetrics(trainingMetrics);
-        return this;
-    }
-
-    /**
-     * @param validationDataConfig
-     */
-
-    public void setValidationDataConfig(ValidationDataConfig validationDataConfig) {
-        this.validationDataConfig = validationDataConfig;
-    }
-
-    /**
-     * @return
-     */
-
-    public ValidationDataConfig getValidationDataConfig() {
-        return this.validationDataConfig;
-    }
-
-    /**
-     * @param validationDataConfig
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public GetCustomModelResult withValidationDataConfig(ValidationDataConfig validationDataConfig) {
-        setValidationDataConfig(validationDataConfig);
         return this;
     }
 
@@ -663,6 +623,46 @@ public class GetCustomModelResult extends com.amazonaws.AmazonWebServiceResult<c
     }
 
     /**
+     * <p>
+     * Creation time of the model.
+     * </p>
+     * 
+     * @param creationTime
+     *        Creation time of the model.
+     */
+
+    public void setCreationTime(java.util.Date creationTime) {
+        this.creationTime = creationTime;
+    }
+
+    /**
+     * <p>
+     * Creation time of the model.
+     * </p>
+     * 
+     * @return Creation time of the model.
+     */
+
+    public java.util.Date getCreationTime() {
+        return this.creationTime;
+    }
+
+    /**
+     * <p>
+     * Creation time of the model.
+     * </p>
+     * 
+     * @param creationTime
+     *        Creation time of the model.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetCustomModelResult withCreationTime(java.util.Date creationTime) {
+        setCreationTime(creationTime);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -674,32 +674,32 @@ public class GetCustomModelResult extends com.amazonaws.AmazonWebServiceResult<c
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getBaseModelArn() != null)
-            sb.append("BaseModelArn: ").append(getBaseModelArn()).append(",");
-        if (getCreationTime() != null)
-            sb.append("CreationTime: ").append(getCreationTime()).append(",");
-        if (getHyperParameters() != null)
-            sb.append("HyperParameters: ").append(getHyperParameters()).append(",");
-        if (getJobArn() != null)
-            sb.append("JobArn: ").append(getJobArn()).append(",");
-        if (getJobName() != null)
-            sb.append("JobName: ").append(getJobName()).append(",");
         if (getModelArn() != null)
             sb.append("ModelArn: ").append(getModelArn()).append(",");
-        if (getModelKmsKeyArn() != null)
-            sb.append("ModelKmsKeyArn: ").append(getModelKmsKeyArn()).append(",");
         if (getModelName() != null)
             sb.append("ModelName: ").append(getModelName()).append(",");
-        if (getOutputDataConfig() != null)
-            sb.append("OutputDataConfig: ").append(getOutputDataConfig()).append(",");
+        if (getJobName() != null)
+            sb.append("JobName: ").append(getJobName()).append(",");
+        if (getJobArn() != null)
+            sb.append("JobArn: ").append(getJobArn()).append(",");
+        if (getBaseModelArn() != null)
+            sb.append("BaseModelArn: ").append(getBaseModelArn()).append(",");
+        if (getModelKmsKeyArn() != null)
+            sb.append("ModelKmsKeyArn: ").append(getModelKmsKeyArn()).append(",");
+        if (getHyperParameters() != null)
+            sb.append("HyperParameters: ").append(getHyperParameters()).append(",");
         if (getTrainingDataConfig() != null)
             sb.append("TrainingDataConfig: ").append(getTrainingDataConfig()).append(",");
-        if (getTrainingMetrics() != null)
-            sb.append("TrainingMetrics: ").append(getTrainingMetrics()).append(",");
         if (getValidationDataConfig() != null)
             sb.append("ValidationDataConfig: ").append(getValidationDataConfig()).append(",");
+        if (getOutputDataConfig() != null)
+            sb.append("OutputDataConfig: ").append(getOutputDataConfig()).append(",");
+        if (getTrainingMetrics() != null)
+            sb.append("TrainingMetrics: ").append(getTrainingMetrics()).append(",");
         if (getValidationMetrics() != null)
-            sb.append("ValidationMetrics: ").append(getValidationMetrics());
+            sb.append("ValidationMetrics: ").append(getValidationMetrics()).append(",");
+        if (getCreationTime() != null)
+            sb.append("CreationTime: ").append(getCreationTime());
         sb.append("}");
         return sb.toString();
     }
@@ -714,57 +714,57 @@ public class GetCustomModelResult extends com.amazonaws.AmazonWebServiceResult<c
         if (obj instanceof GetCustomModelResult == false)
             return false;
         GetCustomModelResult other = (GetCustomModelResult) obj;
-        if (other.getBaseModelArn() == null ^ this.getBaseModelArn() == null)
-            return false;
-        if (other.getBaseModelArn() != null && other.getBaseModelArn().equals(this.getBaseModelArn()) == false)
-            return false;
-        if (other.getCreationTime() == null ^ this.getCreationTime() == null)
-            return false;
-        if (other.getCreationTime() != null && other.getCreationTime().equals(this.getCreationTime()) == false)
-            return false;
-        if (other.getHyperParameters() == null ^ this.getHyperParameters() == null)
-            return false;
-        if (other.getHyperParameters() != null && other.getHyperParameters().equals(this.getHyperParameters()) == false)
-            return false;
-        if (other.getJobArn() == null ^ this.getJobArn() == null)
-            return false;
-        if (other.getJobArn() != null && other.getJobArn().equals(this.getJobArn()) == false)
-            return false;
-        if (other.getJobName() == null ^ this.getJobName() == null)
-            return false;
-        if (other.getJobName() != null && other.getJobName().equals(this.getJobName()) == false)
-            return false;
         if (other.getModelArn() == null ^ this.getModelArn() == null)
             return false;
         if (other.getModelArn() != null && other.getModelArn().equals(this.getModelArn()) == false)
-            return false;
-        if (other.getModelKmsKeyArn() == null ^ this.getModelKmsKeyArn() == null)
-            return false;
-        if (other.getModelKmsKeyArn() != null && other.getModelKmsKeyArn().equals(this.getModelKmsKeyArn()) == false)
             return false;
         if (other.getModelName() == null ^ this.getModelName() == null)
             return false;
         if (other.getModelName() != null && other.getModelName().equals(this.getModelName()) == false)
             return false;
-        if (other.getOutputDataConfig() == null ^ this.getOutputDataConfig() == null)
+        if (other.getJobName() == null ^ this.getJobName() == null)
             return false;
-        if (other.getOutputDataConfig() != null && other.getOutputDataConfig().equals(this.getOutputDataConfig()) == false)
+        if (other.getJobName() != null && other.getJobName().equals(this.getJobName()) == false)
+            return false;
+        if (other.getJobArn() == null ^ this.getJobArn() == null)
+            return false;
+        if (other.getJobArn() != null && other.getJobArn().equals(this.getJobArn()) == false)
+            return false;
+        if (other.getBaseModelArn() == null ^ this.getBaseModelArn() == null)
+            return false;
+        if (other.getBaseModelArn() != null && other.getBaseModelArn().equals(this.getBaseModelArn()) == false)
+            return false;
+        if (other.getModelKmsKeyArn() == null ^ this.getModelKmsKeyArn() == null)
+            return false;
+        if (other.getModelKmsKeyArn() != null && other.getModelKmsKeyArn().equals(this.getModelKmsKeyArn()) == false)
+            return false;
+        if (other.getHyperParameters() == null ^ this.getHyperParameters() == null)
+            return false;
+        if (other.getHyperParameters() != null && other.getHyperParameters().equals(this.getHyperParameters()) == false)
             return false;
         if (other.getTrainingDataConfig() == null ^ this.getTrainingDataConfig() == null)
             return false;
         if (other.getTrainingDataConfig() != null && other.getTrainingDataConfig().equals(this.getTrainingDataConfig()) == false)
             return false;
-        if (other.getTrainingMetrics() == null ^ this.getTrainingMetrics() == null)
-            return false;
-        if (other.getTrainingMetrics() != null && other.getTrainingMetrics().equals(this.getTrainingMetrics()) == false)
-            return false;
         if (other.getValidationDataConfig() == null ^ this.getValidationDataConfig() == null)
             return false;
         if (other.getValidationDataConfig() != null && other.getValidationDataConfig().equals(this.getValidationDataConfig()) == false)
             return false;
+        if (other.getOutputDataConfig() == null ^ this.getOutputDataConfig() == null)
+            return false;
+        if (other.getOutputDataConfig() != null && other.getOutputDataConfig().equals(this.getOutputDataConfig()) == false)
+            return false;
+        if (other.getTrainingMetrics() == null ^ this.getTrainingMetrics() == null)
+            return false;
+        if (other.getTrainingMetrics() != null && other.getTrainingMetrics().equals(this.getTrainingMetrics()) == false)
+            return false;
         if (other.getValidationMetrics() == null ^ this.getValidationMetrics() == null)
             return false;
         if (other.getValidationMetrics() != null && other.getValidationMetrics().equals(this.getValidationMetrics()) == false)
+            return false;
+        if (other.getCreationTime() == null ^ this.getCreationTime() == null)
+            return false;
+        if (other.getCreationTime() != null && other.getCreationTime().equals(this.getCreationTime()) == false)
             return false;
         return true;
     }
@@ -774,19 +774,19 @@ public class GetCustomModelResult extends com.amazonaws.AmazonWebServiceResult<c
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getBaseModelArn() == null) ? 0 : getBaseModelArn().hashCode());
-        hashCode = prime * hashCode + ((getCreationTime() == null) ? 0 : getCreationTime().hashCode());
-        hashCode = prime * hashCode + ((getHyperParameters() == null) ? 0 : getHyperParameters().hashCode());
-        hashCode = prime * hashCode + ((getJobArn() == null) ? 0 : getJobArn().hashCode());
-        hashCode = prime * hashCode + ((getJobName() == null) ? 0 : getJobName().hashCode());
         hashCode = prime * hashCode + ((getModelArn() == null) ? 0 : getModelArn().hashCode());
-        hashCode = prime * hashCode + ((getModelKmsKeyArn() == null) ? 0 : getModelKmsKeyArn().hashCode());
         hashCode = prime * hashCode + ((getModelName() == null) ? 0 : getModelName().hashCode());
-        hashCode = prime * hashCode + ((getOutputDataConfig() == null) ? 0 : getOutputDataConfig().hashCode());
+        hashCode = prime * hashCode + ((getJobName() == null) ? 0 : getJobName().hashCode());
+        hashCode = prime * hashCode + ((getJobArn() == null) ? 0 : getJobArn().hashCode());
+        hashCode = prime * hashCode + ((getBaseModelArn() == null) ? 0 : getBaseModelArn().hashCode());
+        hashCode = prime * hashCode + ((getModelKmsKeyArn() == null) ? 0 : getModelKmsKeyArn().hashCode());
+        hashCode = prime * hashCode + ((getHyperParameters() == null) ? 0 : getHyperParameters().hashCode());
         hashCode = prime * hashCode + ((getTrainingDataConfig() == null) ? 0 : getTrainingDataConfig().hashCode());
-        hashCode = prime * hashCode + ((getTrainingMetrics() == null) ? 0 : getTrainingMetrics().hashCode());
         hashCode = prime * hashCode + ((getValidationDataConfig() == null) ? 0 : getValidationDataConfig().hashCode());
+        hashCode = prime * hashCode + ((getOutputDataConfig() == null) ? 0 : getOutputDataConfig().hashCode());
+        hashCode = prime * hashCode + ((getTrainingMetrics() == null) ? 0 : getTrainingMetrics().hashCode());
         hashCode = prime * hashCode + ((getValidationMetrics() == null) ? 0 : getValidationMetrics().hashCode());
+        hashCode = prime * hashCode + ((getCreationTime() == null) ? 0 : getCreationTime().hashCode());
         return hashCode;
     }
 

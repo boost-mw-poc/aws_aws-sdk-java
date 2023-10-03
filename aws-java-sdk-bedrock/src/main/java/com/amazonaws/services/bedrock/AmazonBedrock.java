@@ -89,6 +89,39 @@ public interface AmazonBedrock {
 
     /**
      * <p>
+     * Creates a provisioned throughput with dedicated capacity for a foundation model or a fine-tuned model.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/what-is-service.html">Provisioned throughput</a> in
+     * the Bedrock User Guide.
+     * </p>
+     * 
+     * @param createProvisionedModelThroughputRequest
+     * @return Result of the CreateProvisionedModelThroughput operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The specified resource ARN was not found. Check the ARN and try your request again.
+     * @throws AccessDeniedException
+     *         The request is denied because of missing access permissions.
+     * @throws ValidationException
+     *         Input validation failed. Check your request parameters and retry the request.
+     * @throws InternalServerException
+     *         An internal server error occurred. Retry your request.
+     * @throws TooManyTagsException
+     *         The request contains more tags than can be associated with a resource (50 tags per resource). The maximum
+     *         number of tags includes both existing tags and those included in your current request.
+     * @throws ServiceQuotaExceededException
+     *         The number of requests exceeds the service quota. Resubmit your request later.
+     * @throws ThrottlingException
+     *         The number of requests exceeds the limit. Resubmit your request later.
+     * @sample AmazonBedrock.CreateProvisionedModelThroughput
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-2023-04-20/CreateProvisionedModelThroughput"
+     *      target="_top">AWS API Documentation</a>
+     */
+    CreateProvisionedModelThroughputResult createProvisionedModelThroughput(CreateProvisionedModelThroughputRequest createProvisionedModelThroughputRequest);
+
+    /**
+     * <p>
      * Deletes a custom model that you created earlier. For more information, see <a
      * href="https://docs.aws.amazon.com/bedrock/latest/userguide/custom-models.html">Custom models</a> in the Bedrock
      * User Guide.
@@ -134,6 +167,33 @@ public interface AmazonBedrock {
      */
     DeleteModelInvocationLoggingConfigurationResult deleteModelInvocationLoggingConfiguration(
             DeleteModelInvocationLoggingConfigurationRequest deleteModelInvocationLoggingConfigurationRequest);
+
+    /**
+     * <p>
+     * Deletes a provisioned throughput. For more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/what-is-service.html">Provisioned throughput</a> in
+     * the Bedrock User Guide.
+     * </p>
+     * 
+     * @param deleteProvisionedModelThroughputRequest
+     * @return Result of the DeleteProvisionedModelThroughput operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The specified resource ARN was not found. Check the ARN and try your request again.
+     * @throws AccessDeniedException
+     *         The request is denied because of missing access permissions.
+     * @throws ValidationException
+     *         Input validation failed. Check your request parameters and retry the request.
+     * @throws ConflictException
+     *         Error occurred because of a conflict while performing an operation.
+     * @throws InternalServerException
+     *         An internal server error occurred. Retry your request.
+     * @throws ThrottlingException
+     *         The number of requests exceeds the limit. Resubmit your request later.
+     * @sample AmazonBedrock.DeleteProvisionedModelThroughput
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-2023-04-20/DeleteProvisionedModelThroughput"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DeleteProvisionedModelThroughputResult deleteProvisionedModelThroughput(DeleteProvisionedModelThroughputRequest deleteProvisionedModelThroughputRequest);
 
     /**
      * <p>
@@ -230,6 +290,31 @@ public interface AmazonBedrock {
 
     /**
      * <p>
+     * Get details for a provisioned throughput. For more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/what-is-service.html">Provisioned throughput</a> in
+     * the Bedrock User Guide.
+     * </p>
+     * 
+     * @param getProvisionedModelThroughputRequest
+     * @return Result of the GetProvisionedModelThroughput operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The specified resource ARN was not found. Check the ARN and try your request again.
+     * @throws AccessDeniedException
+     *         The request is denied because of missing access permissions.
+     * @throws ValidationException
+     *         Input validation failed. Check your request parameters and retry the request.
+     * @throws InternalServerException
+     *         An internal server error occurred. Retry your request.
+     * @throws ThrottlingException
+     *         The number of requests exceeds the limit. Resubmit your request later.
+     * @sample AmazonBedrock.GetProvisionedModelThroughput
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-2023-04-20/GetProvisionedModelThroughput"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetProvisionedModelThroughputResult getProvisionedModelThroughput(GetProvisionedModelThroughputRequest getProvisionedModelThroughputRequest);
+
+    /**
+     * <p>
      * Returns a list of the custom models that you have created with the <code>CreateModelCustomizationJob</code>
      * operation.
      * </p>
@@ -304,6 +389,29 @@ public interface AmazonBedrock {
      *      target="_top">AWS API Documentation</a>
      */
     ListModelCustomizationJobsResult listModelCustomizationJobs(ListModelCustomizationJobsRequest listModelCustomizationJobsRequest);
+
+    /**
+     * <p>
+     * List the provisioned capacities. For more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/what-is-service.html">Provisioned throughput</a> in
+     * the Bedrock User Guide.
+     * </p>
+     * 
+     * @param listProvisionedModelThroughputsRequest
+     * @return Result of the ListProvisionedModelThroughputs operation returned by the service.
+     * @throws AccessDeniedException
+     *         The request is denied because of missing access permissions.
+     * @throws ValidationException
+     *         Input validation failed. Check your request parameters and retry the request.
+     * @throws InternalServerException
+     *         An internal server error occurred. Retry your request.
+     * @throws ThrottlingException
+     *         The number of requests exceeds the limit. Resubmit your request later.
+     * @sample AmazonBedrock.ListProvisionedModelThroughputs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-2023-04-20/ListProvisionedModelThroughputs"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListProvisionedModelThroughputsResult listProvisionedModelThroughputs(ListProvisionedModelThroughputsRequest listProvisionedModelThroughputsRequest);
 
     /**
      * <p>
@@ -434,6 +542,31 @@ public interface AmazonBedrock {
      *      Documentation</a>
      */
     UntagResourceResult untagResource(UntagResourceRequest untagResourceRequest);
+
+    /**
+     * <p>
+     * Update a provisioned throughput. For more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/what-is-service.html">Provisioned throughput</a> in
+     * the Bedrock User Guide.
+     * </p>
+     * 
+     * @param updateProvisionedModelThroughputRequest
+     * @return Result of the UpdateProvisionedModelThroughput operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The specified resource ARN was not found. Check the ARN and try your request again.
+     * @throws AccessDeniedException
+     *         The request is denied because of missing access permissions.
+     * @throws ValidationException
+     *         Input validation failed. Check your request parameters and retry the request.
+     * @throws InternalServerException
+     *         An internal server error occurred. Retry your request.
+     * @throws ThrottlingException
+     *         The number of requests exceeds the limit. Resubmit your request later.
+     * @sample AmazonBedrock.UpdateProvisionedModelThroughput
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-2023-04-20/UpdateProvisionedModelThroughput"
+     *      target="_top">AWS API Documentation</a>
+     */
+    UpdateProvisionedModelThroughputResult updateProvisionedModelThroughput(UpdateProvisionedModelThroughputRequest updateProvisionedModelThroughputRequest);
 
     /**
      * Shuts down this client object, releasing any resources that might be held open. This is an optional method, and

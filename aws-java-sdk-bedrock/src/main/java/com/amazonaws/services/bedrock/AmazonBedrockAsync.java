@@ -99,6 +99,51 @@ public interface AmazonBedrockAsync extends AmazonBedrock {
 
     /**
      * <p>
+     * Creates a provisioned throughput with dedicated capacity for a foundation model or a fine-tuned model.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/what-is-service.html">Provisioned throughput</a> in
+     * the Bedrock User Guide.
+     * </p>
+     * 
+     * @param createProvisionedModelThroughputRequest
+     * @return A Java Future containing the result of the CreateProvisionedModelThroughput operation returned by the
+     *         service.
+     * @sample AmazonBedrockAsync.CreateProvisionedModelThroughput
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-2023-04-20/CreateProvisionedModelThroughput"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateProvisionedModelThroughputResult> createProvisionedModelThroughputAsync(
+            CreateProvisionedModelThroughputRequest createProvisionedModelThroughputRequest);
+
+    /**
+     * <p>
+     * Creates a provisioned throughput with dedicated capacity for a foundation model or a fine-tuned model.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/what-is-service.html">Provisioned throughput</a> in
+     * the Bedrock User Guide.
+     * </p>
+     * 
+     * @param createProvisionedModelThroughputRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateProvisionedModelThroughput operation returned by the
+     *         service.
+     * @sample AmazonBedrockAsyncHandler.CreateProvisionedModelThroughput
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-2023-04-20/CreateProvisionedModelThroughput"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateProvisionedModelThroughputResult> createProvisionedModelThroughputAsync(
+            CreateProvisionedModelThroughputRequest createProvisionedModelThroughputRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateProvisionedModelThroughputRequest, CreateProvisionedModelThroughputResult> asyncHandler);
+
+    /**
+     * <p>
      * Deletes a custom model that you created earlier. For more information, see <a
      * href="https://docs.aws.amazon.com/bedrock/latest/userguide/custom-models.html">Custom models</a> in the Bedrock
      * User Guide.
@@ -168,6 +213,45 @@ public interface AmazonBedrockAsync extends AmazonBedrock {
     java.util.concurrent.Future<DeleteModelInvocationLoggingConfigurationResult> deleteModelInvocationLoggingConfigurationAsync(
             DeleteModelInvocationLoggingConfigurationRequest deleteModelInvocationLoggingConfigurationRequest,
             com.amazonaws.handlers.AsyncHandler<DeleteModelInvocationLoggingConfigurationRequest, DeleteModelInvocationLoggingConfigurationResult> asyncHandler);
+
+    /**
+     * <p>
+     * Deletes a provisioned throughput. For more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/what-is-service.html">Provisioned throughput</a> in
+     * the Bedrock User Guide.
+     * </p>
+     * 
+     * @param deleteProvisionedModelThroughputRequest
+     * @return A Java Future containing the result of the DeleteProvisionedModelThroughput operation returned by the
+     *         service.
+     * @sample AmazonBedrockAsync.DeleteProvisionedModelThroughput
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-2023-04-20/DeleteProvisionedModelThroughput"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteProvisionedModelThroughputResult> deleteProvisionedModelThroughputAsync(
+            DeleteProvisionedModelThroughputRequest deleteProvisionedModelThroughputRequest);
+
+    /**
+     * <p>
+     * Deletes a provisioned throughput. For more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/what-is-service.html">Provisioned throughput</a> in
+     * the Bedrock User Guide.
+     * </p>
+     * 
+     * @param deleteProvisionedModelThroughputRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteProvisionedModelThroughput operation returned by the
+     *         service.
+     * @sample AmazonBedrockAsyncHandler.DeleteProvisionedModelThroughput
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-2023-04-20/DeleteProvisionedModelThroughput"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteProvisionedModelThroughputResult> deleteProvisionedModelThroughputAsync(
+            DeleteProvisionedModelThroughputRequest deleteProvisionedModelThroughputRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteProvisionedModelThroughputRequest, DeleteProvisionedModelThroughputResult> asyncHandler);
 
     /**
      * <p>
@@ -307,6 +391,45 @@ public interface AmazonBedrockAsync extends AmazonBedrock {
 
     /**
      * <p>
+     * Get details for a provisioned throughput. For more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/what-is-service.html">Provisioned throughput</a> in
+     * the Bedrock User Guide.
+     * </p>
+     * 
+     * @param getProvisionedModelThroughputRequest
+     * @return A Java Future containing the result of the GetProvisionedModelThroughput operation returned by the
+     *         service.
+     * @sample AmazonBedrockAsync.GetProvisionedModelThroughput
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-2023-04-20/GetProvisionedModelThroughput"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetProvisionedModelThroughputResult> getProvisionedModelThroughputAsync(
+            GetProvisionedModelThroughputRequest getProvisionedModelThroughputRequest);
+
+    /**
+     * <p>
+     * Get details for a provisioned throughput. For more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/what-is-service.html">Provisioned throughput</a> in
+     * the Bedrock User Guide.
+     * </p>
+     * 
+     * @param getProvisionedModelThroughputRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetProvisionedModelThroughput operation returned by the
+     *         service.
+     * @sample AmazonBedrockAsyncHandler.GetProvisionedModelThroughput
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-2023-04-20/GetProvisionedModelThroughput"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetProvisionedModelThroughputResult> getProvisionedModelThroughputAsync(
+            GetProvisionedModelThroughputRequest getProvisionedModelThroughputRequest,
+            com.amazonaws.handlers.AsyncHandler<GetProvisionedModelThroughputRequest, GetProvisionedModelThroughputResult> asyncHandler);
+
+    /**
+     * <p>
      * Returns a list of the custom models that you have created with the <code>CreateModelCustomizationJob</code>
      * operation.
      * </p>
@@ -427,6 +550,45 @@ public interface AmazonBedrockAsync extends AmazonBedrock {
     java.util.concurrent.Future<ListModelCustomizationJobsResult> listModelCustomizationJobsAsync(
             ListModelCustomizationJobsRequest listModelCustomizationJobsRequest,
             com.amazonaws.handlers.AsyncHandler<ListModelCustomizationJobsRequest, ListModelCustomizationJobsResult> asyncHandler);
+
+    /**
+     * <p>
+     * List the provisioned capacities. For more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/what-is-service.html">Provisioned throughput</a> in
+     * the Bedrock User Guide.
+     * </p>
+     * 
+     * @param listProvisionedModelThroughputsRequest
+     * @return A Java Future containing the result of the ListProvisionedModelThroughputs operation returned by the
+     *         service.
+     * @sample AmazonBedrockAsync.ListProvisionedModelThroughputs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-2023-04-20/ListProvisionedModelThroughputs"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListProvisionedModelThroughputsResult> listProvisionedModelThroughputsAsync(
+            ListProvisionedModelThroughputsRequest listProvisionedModelThroughputsRequest);
+
+    /**
+     * <p>
+     * List the provisioned capacities. For more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/what-is-service.html">Provisioned throughput</a> in
+     * the Bedrock User Guide.
+     * </p>
+     * 
+     * @param listProvisionedModelThroughputsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListProvisionedModelThroughputs operation returned by the
+     *         service.
+     * @sample AmazonBedrockAsyncHandler.ListProvisionedModelThroughputs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-2023-04-20/ListProvisionedModelThroughputs"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListProvisionedModelThroughputsResult> listProvisionedModelThroughputsAsync(
+            ListProvisionedModelThroughputsRequest listProvisionedModelThroughputsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListProvisionedModelThroughputsRequest, ListProvisionedModelThroughputsResult> asyncHandler);
 
     /**
      * <p>
@@ -610,5 +772,44 @@ public interface AmazonBedrockAsync extends AmazonBedrock {
      */
     java.util.concurrent.Future<UntagResourceResult> untagResourceAsync(UntagResourceRequest untagResourceRequest,
             com.amazonaws.handlers.AsyncHandler<UntagResourceRequest, UntagResourceResult> asyncHandler);
+
+    /**
+     * <p>
+     * Update a provisioned throughput. For more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/what-is-service.html">Provisioned throughput</a> in
+     * the Bedrock User Guide.
+     * </p>
+     * 
+     * @param updateProvisionedModelThroughputRequest
+     * @return A Java Future containing the result of the UpdateProvisionedModelThroughput operation returned by the
+     *         service.
+     * @sample AmazonBedrockAsync.UpdateProvisionedModelThroughput
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-2023-04-20/UpdateProvisionedModelThroughput"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateProvisionedModelThroughputResult> updateProvisionedModelThroughputAsync(
+            UpdateProvisionedModelThroughputRequest updateProvisionedModelThroughputRequest);
+
+    /**
+     * <p>
+     * Update a provisioned throughput. For more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/what-is-service.html">Provisioned throughput</a> in
+     * the Bedrock User Guide.
+     * </p>
+     * 
+     * @param updateProvisionedModelThroughputRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateProvisionedModelThroughput operation returned by the
+     *         service.
+     * @sample AmazonBedrockAsyncHandler.UpdateProvisionedModelThroughput
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-2023-04-20/UpdateProvisionedModelThroughput"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateProvisionedModelThroughputResult> updateProvisionedModelThroughputAsync(
+            UpdateProvisionedModelThroughputRequest updateProvisionedModelThroughputRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateProvisionedModelThroughputRequest, UpdateProvisionedModelThroughputResult> asyncHandler);
 
 }

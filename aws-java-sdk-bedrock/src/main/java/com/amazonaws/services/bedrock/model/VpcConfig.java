@@ -30,86 +30,16 @@ public class VpcConfig implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * VPC configuration security group Ids.
-     * </p>
-     */
-    private java.util.List<String> securityGroupIds;
-    /**
-     * <p>
      * VPC configuration subnets.
      * </p>
      */
     private java.util.List<String> subnetIds;
-
     /**
      * <p>
      * VPC configuration security group Ids.
      * </p>
-     * 
-     * @return VPC configuration security group Ids.
      */
-
-    public java.util.List<String> getSecurityGroupIds() {
-        return securityGroupIds;
-    }
-
-    /**
-     * <p>
-     * VPC configuration security group Ids.
-     * </p>
-     * 
-     * @param securityGroupIds
-     *        VPC configuration security group Ids.
-     */
-
-    public void setSecurityGroupIds(java.util.Collection<String> securityGroupIds) {
-        if (securityGroupIds == null) {
-            this.securityGroupIds = null;
-            return;
-        }
-
-        this.securityGroupIds = new java.util.ArrayList<String>(securityGroupIds);
-    }
-
-    /**
-     * <p>
-     * VPC configuration security group Ids.
-     * </p>
-     * <p>
-     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
-     * {@link #setSecurityGroupIds(java.util.Collection)} or {@link #withSecurityGroupIds(java.util.Collection)} if you
-     * want to override the existing values.
-     * </p>
-     * 
-     * @param securityGroupIds
-     *        VPC configuration security group Ids.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public VpcConfig withSecurityGroupIds(String... securityGroupIds) {
-        if (this.securityGroupIds == null) {
-            setSecurityGroupIds(new java.util.ArrayList<String>(securityGroupIds.length));
-        }
-        for (String ele : securityGroupIds) {
-            this.securityGroupIds.add(ele);
-        }
-        return this;
-    }
-
-    /**
-     * <p>
-     * VPC configuration security group Ids.
-     * </p>
-     * 
-     * @param securityGroupIds
-     *        VPC configuration security group Ids.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public VpcConfig withSecurityGroupIds(java.util.Collection<String> securityGroupIds) {
-        setSecurityGroupIds(securityGroupIds);
-        return this;
-    }
+    private java.util.List<String> securityGroupIds;
 
     /**
      * <p>
@@ -182,6 +112,76 @@ public class VpcConfig implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * VPC configuration security group Ids.
+     * </p>
+     * 
+     * @return VPC configuration security group Ids.
+     */
+
+    public java.util.List<String> getSecurityGroupIds() {
+        return securityGroupIds;
+    }
+
+    /**
+     * <p>
+     * VPC configuration security group Ids.
+     * </p>
+     * 
+     * @param securityGroupIds
+     *        VPC configuration security group Ids.
+     */
+
+    public void setSecurityGroupIds(java.util.Collection<String> securityGroupIds) {
+        if (securityGroupIds == null) {
+            this.securityGroupIds = null;
+            return;
+        }
+
+        this.securityGroupIds = new java.util.ArrayList<String>(securityGroupIds);
+    }
+
+    /**
+     * <p>
+     * VPC configuration security group Ids.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setSecurityGroupIds(java.util.Collection)} or {@link #withSecurityGroupIds(java.util.Collection)} if you
+     * want to override the existing values.
+     * </p>
+     * 
+     * @param securityGroupIds
+     *        VPC configuration security group Ids.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public VpcConfig withSecurityGroupIds(String... securityGroupIds) {
+        if (this.securityGroupIds == null) {
+            setSecurityGroupIds(new java.util.ArrayList<String>(securityGroupIds.length));
+        }
+        for (String ele : securityGroupIds) {
+            this.securityGroupIds.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * VPC configuration security group Ids.
+     * </p>
+     * 
+     * @param securityGroupIds
+     *        VPC configuration security group Ids.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public VpcConfig withSecurityGroupIds(java.util.Collection<String> securityGroupIds) {
+        setSecurityGroupIds(securityGroupIds);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -193,10 +193,10 @@ public class VpcConfig implements Serializable, Cloneable, StructuredPojo {
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getSecurityGroupIds() != null)
-            sb.append("SecurityGroupIds: ").append(getSecurityGroupIds()).append(",");
         if (getSubnetIds() != null)
-            sb.append("SubnetIds: ").append(getSubnetIds());
+            sb.append("SubnetIds: ").append(getSubnetIds()).append(",");
+        if (getSecurityGroupIds() != null)
+            sb.append("SecurityGroupIds: ").append(getSecurityGroupIds());
         sb.append("}");
         return sb.toString();
     }
@@ -211,13 +211,13 @@ public class VpcConfig implements Serializable, Cloneable, StructuredPojo {
         if (obj instanceof VpcConfig == false)
             return false;
         VpcConfig other = (VpcConfig) obj;
-        if (other.getSecurityGroupIds() == null ^ this.getSecurityGroupIds() == null)
-            return false;
-        if (other.getSecurityGroupIds() != null && other.getSecurityGroupIds().equals(this.getSecurityGroupIds()) == false)
-            return false;
         if (other.getSubnetIds() == null ^ this.getSubnetIds() == null)
             return false;
         if (other.getSubnetIds() != null && other.getSubnetIds().equals(this.getSubnetIds()) == false)
+            return false;
+        if (other.getSecurityGroupIds() == null ^ this.getSecurityGroupIds() == null)
+            return false;
+        if (other.getSecurityGroupIds() != null && other.getSecurityGroupIds().equals(this.getSecurityGroupIds()) == false)
             return false;
         return true;
     }
@@ -227,8 +227,8 @@ public class VpcConfig implements Serializable, Cloneable, StructuredPojo {
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getSecurityGroupIds() == null) ? 0 : getSecurityGroupIds().hashCode());
         hashCode = prime * hashCode + ((getSubnetIds() == null) ? 0 : getSubnetIds().hashCode());
+        hashCode = prime * hashCode + ((getSecurityGroupIds() == null) ? 0 : getSecurityGroupIds().hashCode());
         return hashCode;
     }
 

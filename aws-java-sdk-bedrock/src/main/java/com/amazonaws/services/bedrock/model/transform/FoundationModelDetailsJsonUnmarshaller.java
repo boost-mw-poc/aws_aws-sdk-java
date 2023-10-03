@@ -48,24 +48,6 @@ public class FoundationModelDetailsJsonUnmarshaller implements Unmarshaller<Foun
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("customizationsSupported", targetDepth)) {
-                    context.nextToken();
-                    foundationModelDetails.setCustomizationsSupported(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
-
-                    .unmarshall(context));
-                }
-                if (context.testExpression("inferenceTypesSupported", targetDepth)) {
-                    context.nextToken();
-                    foundationModelDetails.setInferenceTypesSupported(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
-
-                    .unmarshall(context));
-                }
-                if (context.testExpression("inputModalities", targetDepth)) {
-                    context.nextToken();
-                    foundationModelDetails.setInputModalities(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
-
-                    .unmarshall(context));
-                }
                 if (context.testExpression("modelArn", targetDepth)) {
                     context.nextToken();
                     foundationModelDetails.setModelArn(context.getUnmarshaller(String.class).unmarshall(context));
@@ -78,19 +60,37 @@ public class FoundationModelDetailsJsonUnmarshaller implements Unmarshaller<Foun
                     context.nextToken();
                     foundationModelDetails.setModelName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("providerName", targetDepth)) {
+                    context.nextToken();
+                    foundationModelDetails.setProviderName(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("inputModalities", targetDepth)) {
+                    context.nextToken();
+                    foundationModelDetails.setInputModalities(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
+
+                    .unmarshall(context));
+                }
                 if (context.testExpression("outputModalities", targetDepth)) {
                     context.nextToken();
                     foundationModelDetails.setOutputModalities(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
 
                     .unmarshall(context));
                 }
-                if (context.testExpression("providerName", targetDepth)) {
-                    context.nextToken();
-                    foundationModelDetails.setProviderName(context.getUnmarshaller(String.class).unmarshall(context));
-                }
                 if (context.testExpression("responseStreamingSupported", targetDepth)) {
                     context.nextToken();
                     foundationModelDetails.setResponseStreamingSupported(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
+                if (context.testExpression("customizationsSupported", targetDepth)) {
+                    context.nextToken();
+                    foundationModelDetails.setCustomizationsSupported(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
+
+                    .unmarshall(context));
+                }
+                if (context.testExpression("inferenceTypesSupported", targetDepth)) {
+                    context.nextToken();
+                    foundationModelDetails.setInferenceTypesSupported(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
+
+                    .unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

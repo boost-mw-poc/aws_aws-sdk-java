@@ -41,6 +41,21 @@ public class AbstractAmazonBedrockAsync extends AbstractAmazonBedrock implements
     }
 
     @Override
+    public java.util.concurrent.Future<CreateProvisionedModelThroughputResult> createProvisionedModelThroughputAsync(
+            CreateProvisionedModelThroughputRequest request) {
+
+        return createProvisionedModelThroughputAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateProvisionedModelThroughputResult> createProvisionedModelThroughputAsync(
+            CreateProvisionedModelThroughputRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateProvisionedModelThroughputRequest, CreateProvisionedModelThroughputResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteCustomModelResult> deleteCustomModelAsync(DeleteCustomModelRequest request) {
 
         return deleteCustomModelAsync(request, null);
@@ -64,6 +79,21 @@ public class AbstractAmazonBedrockAsync extends AbstractAmazonBedrock implements
     public java.util.concurrent.Future<DeleteModelInvocationLoggingConfigurationResult> deleteModelInvocationLoggingConfigurationAsync(
             DeleteModelInvocationLoggingConfigurationRequest request,
             com.amazonaws.handlers.AsyncHandler<DeleteModelInvocationLoggingConfigurationRequest, DeleteModelInvocationLoggingConfigurationResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteProvisionedModelThroughputResult> deleteProvisionedModelThroughputAsync(
+            DeleteProvisionedModelThroughputRequest request) {
+
+        return deleteProvisionedModelThroughputAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteProvisionedModelThroughputResult> deleteProvisionedModelThroughputAsync(
+            DeleteProvisionedModelThroughputRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteProvisionedModelThroughputRequest, DeleteProvisionedModelThroughputResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -123,6 +153,19 @@ public class AbstractAmazonBedrockAsync extends AbstractAmazonBedrock implements
     }
 
     @Override
+    public java.util.concurrent.Future<GetProvisionedModelThroughputResult> getProvisionedModelThroughputAsync(GetProvisionedModelThroughputRequest request) {
+
+        return getProvisionedModelThroughputAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetProvisionedModelThroughputResult> getProvisionedModelThroughputAsync(GetProvisionedModelThroughputRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetProvisionedModelThroughputRequest, GetProvisionedModelThroughputResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ListCustomModelsResult> listCustomModelsAsync(ListCustomModelsRequest request) {
 
         return listCustomModelsAsync(request, null);
@@ -157,6 +200,21 @@ public class AbstractAmazonBedrockAsync extends AbstractAmazonBedrock implements
     @Override
     public java.util.concurrent.Future<ListModelCustomizationJobsResult> listModelCustomizationJobsAsync(ListModelCustomizationJobsRequest request,
             com.amazonaws.handlers.AsyncHandler<ListModelCustomizationJobsRequest, ListModelCustomizationJobsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListProvisionedModelThroughputsResult> listProvisionedModelThroughputsAsync(
+            ListProvisionedModelThroughputsRequest request) {
+
+        return listProvisionedModelThroughputsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListProvisionedModelThroughputsResult> listProvisionedModelThroughputsAsync(
+            ListProvisionedModelThroughputsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListProvisionedModelThroughputsRequest, ListProvisionedModelThroughputsResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -224,6 +282,21 @@ public class AbstractAmazonBedrockAsync extends AbstractAmazonBedrock implements
     @Override
     public java.util.concurrent.Future<UntagResourceResult> untagResourceAsync(UntagResourceRequest request,
             com.amazonaws.handlers.AsyncHandler<UntagResourceRequest, UntagResourceResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateProvisionedModelThroughputResult> updateProvisionedModelThroughputAsync(
+            UpdateProvisionedModelThroughputRequest request) {
+
+        return updateProvisionedModelThroughputAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateProvisionedModelThroughputResult> updateProvisionedModelThroughputAsync(
+            UpdateProvisionedModelThroughputRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateProvisionedModelThroughputRequest, UpdateProvisionedModelThroughputResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

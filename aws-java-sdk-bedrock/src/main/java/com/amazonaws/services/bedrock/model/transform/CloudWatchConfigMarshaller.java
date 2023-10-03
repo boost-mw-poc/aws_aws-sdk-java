@@ -27,12 +27,12 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class CloudWatchConfigMarshaller {
 
-    private static final MarshallingInfo<StructuredPojo> LARGEDATADELIVERYS3CONFIG_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("largeDataDeliveryS3Config").build();
     private static final MarshallingInfo<String> LOGGROUPNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("logGroupName").build();
     private static final MarshallingInfo<String> ROLEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("roleArn").build();
+    private static final MarshallingInfo<StructuredPojo> LARGEDATADELIVERYS3CONFIG_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("largeDataDeliveryS3Config").build();
 
     private static final CloudWatchConfigMarshaller instance = new CloudWatchConfigMarshaller();
 
@@ -50,9 +50,9 @@ public class CloudWatchConfigMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(cloudWatchConfig.getLargeDataDeliveryS3Config(), LARGEDATADELIVERYS3CONFIG_BINDING);
             protocolMarshaller.marshall(cloudWatchConfig.getLogGroupName(), LOGGROUPNAME_BINDING);
             protocolMarshaller.marshall(cloudWatchConfig.getRoleArn(), ROLEARN_BINDING);
+            protocolMarshaller.marshall(cloudWatchConfig.getLargeDataDeliveryS3Config(), LARGEDATADELIVERYS3CONFIG_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -48,16 +48,16 @@ public class ListModelCustomizationJobsResultJsonUnmarshaller implements Unmarsh
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("nextToken", targetDepth)) {
+                    context.nextToken();
+                    listModelCustomizationJobsResult.setNextToken(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("modelCustomizationJobSummaries", targetDepth)) {
                     context.nextToken();
                     listModelCustomizationJobsResult.setModelCustomizationJobSummaries(new ListUnmarshaller<ModelCustomizationJobSummary>(
                             ModelCustomizationJobSummaryJsonUnmarshaller.getInstance())
 
                     .unmarshall(context));
-                }
-                if (context.testExpression("nextToken", targetDepth)) {
-                    context.nextToken();
-                    listModelCustomizationJobsResult.setNextToken(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

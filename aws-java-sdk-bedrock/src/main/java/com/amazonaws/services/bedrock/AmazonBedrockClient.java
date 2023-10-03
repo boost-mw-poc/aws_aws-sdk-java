@@ -242,6 +242,84 @@ public class AmazonBedrockClient extends AmazonWebServiceClient implements Amazo
 
     /**
      * <p>
+     * Creates a provisioned throughput with dedicated capacity for a foundation model or a fine-tuned model.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/what-is-service.html">Provisioned throughput</a> in
+     * the Bedrock User Guide.
+     * </p>
+     * 
+     * @param createProvisionedModelThroughputRequest
+     * @return Result of the CreateProvisionedModelThroughput operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The specified resource ARN was not found. Check the ARN and try your request again.
+     * @throws AccessDeniedException
+     *         The request is denied because of missing access permissions.
+     * @throws ValidationException
+     *         Input validation failed. Check your request parameters and retry the request.
+     * @throws InternalServerException
+     *         An internal server error occurred. Retry your request.
+     * @throws TooManyTagsException
+     *         The request contains more tags than can be associated with a resource (50 tags per resource). The maximum
+     *         number of tags includes both existing tags and those included in your current request.
+     * @throws ServiceQuotaExceededException
+     *         The number of requests exceeds the service quota. Resubmit your request later.
+     * @throws ThrottlingException
+     *         The number of requests exceeds the limit. Resubmit your request later.
+     * @sample AmazonBedrock.CreateProvisionedModelThroughput
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-2023-04-20/CreateProvisionedModelThroughput"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public CreateProvisionedModelThroughputResult createProvisionedModelThroughput(CreateProvisionedModelThroughputRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateProvisionedModelThroughput(request);
+    }
+
+    @SdkInternalApi
+    final CreateProvisionedModelThroughputResult executeCreateProvisionedModelThroughput(
+            CreateProvisionedModelThroughputRequest createProvisionedModelThroughputRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createProvisionedModelThroughputRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateProvisionedModelThroughputRequest> request = null;
+        Response<CreateProvisionedModelThroughputResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateProvisionedModelThroughputRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(createProvisionedModelThroughputRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Bedrock");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateProvisionedModelThroughput");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<CreateProvisionedModelThroughputResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new CreateProvisionedModelThroughputResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Deletes a custom model that you created earlier. For more information, see <a
      * href="https://docs.aws.amazon.com/bedrock/latest/userguide/custom-models.html">Custom models</a> in the Bedrock
      * User Guide.
@@ -364,6 +442,78 @@ public class AmazonBedrockClient extends AmazonWebServiceClient implements Amazo
             HttpResponseHandler<AmazonWebServiceResponse<DeleteModelInvocationLoggingConfigurationResult>> responseHandler = protocolFactory
                     .createResponseHandler(new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                             new DeleteModelInvocationLoggingConfigurationResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Deletes a provisioned throughput. For more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/what-is-service.html">Provisioned throughput</a> in
+     * the Bedrock User Guide.
+     * </p>
+     * 
+     * @param deleteProvisionedModelThroughputRequest
+     * @return Result of the DeleteProvisionedModelThroughput operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The specified resource ARN was not found. Check the ARN and try your request again.
+     * @throws AccessDeniedException
+     *         The request is denied because of missing access permissions.
+     * @throws ValidationException
+     *         Input validation failed. Check your request parameters and retry the request.
+     * @throws ConflictException
+     *         Error occurred because of a conflict while performing an operation.
+     * @throws InternalServerException
+     *         An internal server error occurred. Retry your request.
+     * @throws ThrottlingException
+     *         The number of requests exceeds the limit. Resubmit your request later.
+     * @sample AmazonBedrock.DeleteProvisionedModelThroughput
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-2023-04-20/DeleteProvisionedModelThroughput"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DeleteProvisionedModelThroughputResult deleteProvisionedModelThroughput(DeleteProvisionedModelThroughputRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteProvisionedModelThroughput(request);
+    }
+
+    @SdkInternalApi
+    final DeleteProvisionedModelThroughputResult executeDeleteProvisionedModelThroughput(
+            DeleteProvisionedModelThroughputRequest deleteProvisionedModelThroughputRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteProvisionedModelThroughputRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteProvisionedModelThroughputRequest> request = null;
+        Response<DeleteProvisionedModelThroughputResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteProvisionedModelThroughputRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(deleteProvisionedModelThroughputRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Bedrock");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteProvisionedModelThroughput");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeleteProvisionedModelThroughputResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new DeleteProvisionedModelThroughputResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -641,6 +791,75 @@ public class AmazonBedrockClient extends AmazonWebServiceClient implements Amazo
 
     /**
      * <p>
+     * Get details for a provisioned throughput. For more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/what-is-service.html">Provisioned throughput</a> in
+     * the Bedrock User Guide.
+     * </p>
+     * 
+     * @param getProvisionedModelThroughputRequest
+     * @return Result of the GetProvisionedModelThroughput operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The specified resource ARN was not found. Check the ARN and try your request again.
+     * @throws AccessDeniedException
+     *         The request is denied because of missing access permissions.
+     * @throws ValidationException
+     *         Input validation failed. Check your request parameters and retry the request.
+     * @throws InternalServerException
+     *         An internal server error occurred. Retry your request.
+     * @throws ThrottlingException
+     *         The number of requests exceeds the limit. Resubmit your request later.
+     * @sample AmazonBedrock.GetProvisionedModelThroughput
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-2023-04-20/GetProvisionedModelThroughput"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetProvisionedModelThroughputResult getProvisionedModelThroughput(GetProvisionedModelThroughputRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetProvisionedModelThroughput(request);
+    }
+
+    @SdkInternalApi
+    final GetProvisionedModelThroughputResult executeGetProvisionedModelThroughput(GetProvisionedModelThroughputRequest getProvisionedModelThroughputRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getProvisionedModelThroughputRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetProvisionedModelThroughputRequest> request = null;
+        Response<GetProvisionedModelThroughputResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetProvisionedModelThroughputRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(getProvisionedModelThroughputRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Bedrock");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetProvisionedModelThroughput");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetProvisionedModelThroughputResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new GetProvisionedModelThroughputResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Returns a list of the custom models that you have created with the <code>CreateModelCustomizationJob</code>
      * operation.
      * </p>
@@ -834,6 +1053,74 @@ public class AmazonBedrockClient extends AmazonWebServiceClient implements Amazo
             HttpResponseHandler<AmazonWebServiceResponse<ListModelCustomizationJobsResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new ListModelCustomizationJobsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * List the provisioned capacities. For more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/what-is-service.html">Provisioned throughput</a> in
+     * the Bedrock User Guide.
+     * </p>
+     * 
+     * @param listProvisionedModelThroughputsRequest
+     * @return Result of the ListProvisionedModelThroughputs operation returned by the service.
+     * @throws AccessDeniedException
+     *         The request is denied because of missing access permissions.
+     * @throws ValidationException
+     *         Input validation failed. Check your request parameters and retry the request.
+     * @throws InternalServerException
+     *         An internal server error occurred. Retry your request.
+     * @throws ThrottlingException
+     *         The number of requests exceeds the limit. Resubmit your request later.
+     * @sample AmazonBedrock.ListProvisionedModelThroughputs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-2023-04-20/ListProvisionedModelThroughputs"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListProvisionedModelThroughputsResult listProvisionedModelThroughputs(ListProvisionedModelThroughputsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListProvisionedModelThroughputs(request);
+    }
+
+    @SdkInternalApi
+    final ListProvisionedModelThroughputsResult executeListProvisionedModelThroughputs(
+            ListProvisionedModelThroughputsRequest listProvisionedModelThroughputsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listProvisionedModelThroughputsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListProvisionedModelThroughputsRequest> request = null;
+        Response<ListProvisionedModelThroughputsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListProvisionedModelThroughputsRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(listProvisionedModelThroughputsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Bedrock");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListProvisionedModelThroughputs");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListProvisionedModelThroughputsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new ListProvisionedModelThroughputsResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -1178,6 +1465,76 @@ public class AmazonBedrockClient extends AmazonWebServiceClient implements Amazo
 
             HttpResponseHandler<AmazonWebServiceResponse<UntagResourceResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new UntagResourceResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Update a provisioned throughput. For more information, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/what-is-service.html">Provisioned throughput</a> in
+     * the Bedrock User Guide.
+     * </p>
+     * 
+     * @param updateProvisionedModelThroughputRequest
+     * @return Result of the UpdateProvisionedModelThroughput operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The specified resource ARN was not found. Check the ARN and try your request again.
+     * @throws AccessDeniedException
+     *         The request is denied because of missing access permissions.
+     * @throws ValidationException
+     *         Input validation failed. Check your request parameters and retry the request.
+     * @throws InternalServerException
+     *         An internal server error occurred. Retry your request.
+     * @throws ThrottlingException
+     *         The number of requests exceeds the limit. Resubmit your request later.
+     * @sample AmazonBedrock.UpdateProvisionedModelThroughput
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-2023-04-20/UpdateProvisionedModelThroughput"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public UpdateProvisionedModelThroughputResult updateProvisionedModelThroughput(UpdateProvisionedModelThroughputRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateProvisionedModelThroughput(request);
+    }
+
+    @SdkInternalApi
+    final UpdateProvisionedModelThroughputResult executeUpdateProvisionedModelThroughput(
+            UpdateProvisionedModelThroughputRequest updateProvisionedModelThroughputRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateProvisionedModelThroughputRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateProvisionedModelThroughputRequest> request = null;
+        Response<UpdateProvisionedModelThroughputResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateProvisionedModelThroughputRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(updateProvisionedModelThroughputRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Bedrock");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateProvisionedModelThroughput");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdateProvisionedModelThroughputResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new UpdateProvisionedModelThroughputResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

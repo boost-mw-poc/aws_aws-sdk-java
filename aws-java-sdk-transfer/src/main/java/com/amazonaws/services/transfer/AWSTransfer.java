@@ -62,11 +62,12 @@ public interface AWSTransfer {
      * @throws ServiceUnavailableException
      *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
      * @throws InternalServiceErrorException
-     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     *         This exception is thrown when an error occurs in the Transfer Family service.
      * @throws InvalidRequestException
      *         This exception is thrown when the client submits a malformed request.
      * @throws ResourceExistsException
-     *         The requested resource does not exist.
+     *         The requested resource does not exist, or exists in a region other than the one specified for the
+     *         command.
      * @throws ResourceNotFoundException
      *         This exception is thrown when a resource is not found by the Amazon Web ServicesTransfer Family service.
      * @sample AWSTransfer.CreateAccess
@@ -92,11 +93,12 @@ public interface AWSTransfer {
      * @throws ServiceUnavailableException
      *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
      * @throws InternalServiceErrorException
-     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     *         This exception is thrown when an error occurs in the Transfer Family service.
      * @throws InvalidRequestException
      *         This exception is thrown when the client submits a malformed request.
      * @throws ResourceExistsException
-     *         The requested resource does not exist.
+     *         The requested resource does not exist, or exists in a region other than the one specified for the
+     *         command.
      * @throws ResourceNotFoundException
      *         This exception is thrown when a resource is not found by the Amazon Web ServicesTransfer Family service.
      * @throws ThrottlingException
@@ -130,11 +132,12 @@ public interface AWSTransfer {
      * @throws ServiceUnavailableException
      *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
      * @throws InternalServiceErrorException
-     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     *         This exception is thrown when an error occurs in the Transfer Family service.
      * @throws InvalidRequestException
      *         This exception is thrown when the client submits a malformed request.
      * @throws ResourceExistsException
-     *         The requested resource does not exist.
+     *         The requested resource does not exist, or exists in a region other than the one specified for the
+     *         command.
      * @throws ResourceNotFoundException
      *         This exception is thrown when a resource is not found by the Amazon Web ServicesTransfer Family service.
      * @throws ThrottlingException
@@ -155,7 +158,7 @@ public interface AWSTransfer {
      * @throws ServiceUnavailableException
      *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
      * @throws InternalServiceErrorException
-     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     *         This exception is thrown when an error occurs in the Transfer Family service.
      * @throws InvalidRequestException
      *         This exception is thrown when the client submits a malformed request.
      * @throws ResourceNotFoundException
@@ -182,11 +185,12 @@ public interface AWSTransfer {
      * @throws ServiceUnavailableException
      *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
      * @throws InternalServiceErrorException
-     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     *         This exception is thrown when an error occurs in the Transfer Family service.
      * @throws InvalidRequestException
      *         This exception is thrown when the client submits a malformed request.
      * @throws ResourceExistsException
-     *         The requested resource does not exist.
+     *         The requested resource does not exist, or exists in a region other than the one specified for the
+     *         command.
      * @throws ResourceNotFoundException
      *         This exception is thrown when a resource is not found by the Amazon Web ServicesTransfer Family service.
      * @throws ThrottlingException
@@ -212,11 +216,12 @@ public interface AWSTransfer {
      * @throws ServiceUnavailableException
      *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
      * @throws InternalServiceErrorException
-     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     *         This exception is thrown when an error occurs in the Transfer Family service.
      * @throws InvalidRequestException
      *         This exception is thrown when the client submits a malformed request.
      * @throws ResourceExistsException
-     *         The requested resource does not exist.
+     *         The requested resource does not exist, or exists in a region other than the one specified for the
+     *         command.
      * @throws ResourceNotFoundException
      *         This exception is thrown when a resource is not found by the Amazon Web ServicesTransfer Family service.
      * @sample AWSTransfer.CreateUser
@@ -240,11 +245,12 @@ public interface AWSTransfer {
      * @throws ServiceUnavailableException
      *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
      * @throws InternalServiceErrorException
-     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     *         This exception is thrown when an error occurs in the Transfer Family service.
      * @throws InvalidRequestException
      *         This exception is thrown when the client submits a malformed request.
      * @throws ResourceExistsException
-     *         The requested resource does not exist.
+     *         The requested resource does not exist, or exists in a region other than the one specified for the
+     *         command.
      * @throws ThrottlingException
      *         The request was denied due to request throttling.
      * @sample AWSTransfer.CreateWorkflow
@@ -263,7 +269,7 @@ public interface AWSTransfer {
      * @throws ServiceUnavailableException
      *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
      * @throws InternalServiceErrorException
-     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     *         This exception is thrown when an error occurs in the Transfer Family service.
      * @throws InvalidRequestException
      *         This exception is thrown when the client submits a malformed request.
      * @throws ResourceNotFoundException
@@ -284,7 +290,7 @@ public interface AWSTransfer {
      * @throws ServiceUnavailableException
      *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
      * @throws InternalServiceErrorException
-     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     *         This exception is thrown when an error occurs in the Transfer Family service.
      * @throws InvalidRequestException
      *         This exception is thrown when the client submits a malformed request.
      * @throws ResourceNotFoundException
@@ -305,7 +311,7 @@ public interface AWSTransfer {
      * @throws ServiceUnavailableException
      *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
      * @throws InternalServiceErrorException
-     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     *         This exception is thrown when an error occurs in the Transfer Family service.
      * @throws InvalidRequestException
      *         This exception is thrown when the client submits a malformed request.
      * @throws ResourceNotFoundException
@@ -326,7 +332,7 @@ public interface AWSTransfer {
      * @throws ServiceUnavailableException
      *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
      * @throws InternalServiceErrorException
-     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     *         This exception is thrown when an error occurs in the Transfer Family service.
      * @throws InvalidRequestException
      *         This exception is thrown when the client submits a malformed request.
      * @throws ResourceNotFoundException
@@ -347,7 +353,7 @@ public interface AWSTransfer {
      * @throws ServiceUnavailableException
      *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
      * @throws InternalServiceErrorException
-     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     *         This exception is thrown when an error occurs in the Transfer Family service.
      * @throws InvalidRequestException
      *         This exception is thrown when the client submits a malformed request.
      * @throws ResourceNotFoundException
@@ -370,7 +376,7 @@ public interface AWSTransfer {
      * @throws ServiceUnavailableException
      *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
      * @throws InternalServiceErrorException
-     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     *         This exception is thrown when an error occurs in the Transfer Family service.
      * @throws InvalidRequestException
      *         This exception is thrown when the client submits a malformed request.
      * @throws ResourceNotFoundException
@@ -396,7 +402,7 @@ public interface AWSTransfer {
      * @throws ServiceUnavailableException
      *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
      * @throws InternalServiceErrorException
-     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     *         This exception is thrown when an error occurs in the Transfer Family service.
      * @throws InvalidRequestException
      *         This exception is thrown when the client submits a malformed request.
      * @throws ResourceNotFoundException
@@ -417,7 +423,7 @@ public interface AWSTransfer {
      * @throws ServiceUnavailableException
      *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
      * @throws InternalServiceErrorException
-     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     *         This exception is thrown when an error occurs in the Transfer Family service.
      * @throws InvalidRequestException
      *         This exception is thrown when the client submits a malformed request.
      * @throws ResourceNotFoundException
@@ -448,7 +454,7 @@ public interface AWSTransfer {
      * @throws ServiceUnavailableException
      *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
      * @throws InternalServiceErrorException
-     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     *         This exception is thrown when an error occurs in the Transfer Family service.
      * @throws InvalidRequestException
      *         This exception is thrown when the client submits a malformed request.
      * @throws ResourceNotFoundException
@@ -471,7 +477,7 @@ public interface AWSTransfer {
      * @throws ServiceUnavailableException
      *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
      * @throws InternalServiceErrorException
-     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     *         This exception is thrown when an error occurs in the Transfer Family service.
      * @throws InvalidRequestException
      *         This exception is thrown when the client submits a malformed request.
      * @throws ResourceNotFoundException
@@ -497,7 +503,7 @@ public interface AWSTransfer {
      * @throws ServiceUnavailableException
      *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
      * @throws InternalServiceErrorException
-     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     *         This exception is thrown when an error occurs in the Transfer Family service.
      * @throws InvalidRequestException
      *         This exception is thrown when the client submits a malformed request.
      * @throws ResourceNotFoundException
@@ -518,7 +524,7 @@ public interface AWSTransfer {
      * @throws ServiceUnavailableException
      *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
      * @throws InternalServiceErrorException
-     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     *         This exception is thrown when an error occurs in the Transfer Family service.
      * @throws InvalidRequestException
      *         This exception is thrown when the client submits a malformed request.
      * @throws ResourceNotFoundException
@@ -539,7 +545,7 @@ public interface AWSTransfer {
      * @throws ServiceUnavailableException
      *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
      * @throws InternalServiceErrorException
-     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     *         This exception is thrown when an error occurs in the Transfer Family service.
      * @throws InvalidRequestException
      *         This exception is thrown when the client submits a malformed request.
      * @throws ResourceNotFoundException
@@ -560,7 +566,7 @@ public interface AWSTransfer {
      * @throws ServiceUnavailableException
      *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
      * @throws InternalServiceErrorException
-     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     *         This exception is thrown when an error occurs in the Transfer Family service.
      * @throws InvalidRequestException
      *         This exception is thrown when the client submits a malformed request.
      * @throws ResourceNotFoundException
@@ -590,7 +596,7 @@ public interface AWSTransfer {
      * @throws ServiceUnavailableException
      *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
      * @throws InternalServiceErrorException
-     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     *         This exception is thrown when an error occurs in the Transfer Family service.
      * @throws InvalidRequestException
      *         This exception is thrown when the client submits a malformed request.
      * @throws ResourceNotFoundException
@@ -611,7 +617,7 @@ public interface AWSTransfer {
      * @throws ServiceUnavailableException
      *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
      * @throws InternalServiceErrorException
-     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     *         This exception is thrown when an error occurs in the Transfer Family service.
      * @throws InvalidRequestException
      *         This exception is thrown when the client submits a malformed request.
      * @throws ResourceNotFoundException
@@ -632,7 +638,7 @@ public interface AWSTransfer {
      * @throws ServiceUnavailableException
      *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
      * @throws InternalServiceErrorException
-     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     *         This exception is thrown when an error occurs in the Transfer Family service.
      * @throws InvalidRequestException
      *         This exception is thrown when the client submits a malformed request.
      * @throws ResourceNotFoundException
@@ -656,7 +662,7 @@ public interface AWSTransfer {
      * @throws ServiceUnavailableException
      *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
      * @throws InternalServiceErrorException
-     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     *         This exception is thrown when an error occurs in the Transfer Family service.
      * @throws InvalidRequestException
      *         This exception is thrown when the client submits a malformed request.
      * @throws ResourceNotFoundException
@@ -682,7 +688,7 @@ public interface AWSTransfer {
      * @throws ServiceUnavailableException
      *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
      * @throws InternalServiceErrorException
-     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     *         This exception is thrown when an error occurs in the Transfer Family service.
      * @throws InvalidRequestException
      *         This exception is thrown when the client submits a malformed request.
      * @throws ResourceNotFoundException
@@ -708,7 +714,7 @@ public interface AWSTransfer {
      * @throws ServiceUnavailableException
      *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
      * @throws InternalServiceErrorException
-     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     *         This exception is thrown when an error occurs in the Transfer Family service.
      * @throws InvalidRequestException
      *         This exception is thrown when the client submits a malformed request.
      * @throws ResourceNotFoundException
@@ -729,7 +735,7 @@ public interface AWSTransfer {
      * @throws ServiceUnavailableException
      *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
      * @throws InternalServiceErrorException
-     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     *         This exception is thrown when an error occurs in the Transfer Family service.
      * @throws InvalidRequestException
      *         This exception is thrown when the client submits a malformed request.
      * @throws ResourceNotFoundException
@@ -751,7 +757,7 @@ public interface AWSTransfer {
      * @throws ServiceUnavailableException
      *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
      * @throws InternalServiceErrorException
-     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     *         This exception is thrown when an error occurs in the Transfer Family service.
      * @throws InvalidRequestException
      *         This exception is thrown when the client submits a malformed request.
      * @throws ResourceNotFoundException
@@ -772,11 +778,12 @@ public interface AWSTransfer {
      * @throws ServiceUnavailableException
      *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
      * @throws InternalServiceErrorException
-     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     *         This exception is thrown when an error occurs in the Transfer Family service.
      * @throws InvalidRequestException
      *         This exception is thrown when the client submits a malformed request.
      * @throws ResourceExistsException
-     *         The requested resource does not exist.
+     *         The requested resource does not exist, or exists in a region other than the one specified for the
+     *         command.
      * @throws ResourceNotFoundException
      *         This exception is thrown when a resource is not found by the Amazon Web ServicesTransfer Family service.
      * @throws ThrottlingException
@@ -802,11 +809,12 @@ public interface AWSTransfer {
      * @throws ServiceUnavailableException
      *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
      * @throws InternalServiceErrorException
-     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     *         This exception is thrown when an error occurs in the Transfer Family service.
      * @throws InvalidRequestException
      *         This exception is thrown when the client submits a malformed request.
      * @throws ResourceExistsException
-     *         The requested resource does not exist.
+     *         The requested resource does not exist, or exists in a region other than the one specified for the
+     *         command.
      * @throws ResourceNotFoundException
      *         This exception is thrown when a resource is not found by the Amazon Web ServicesTransfer Family service.
      * @throws ThrottlingException
@@ -827,7 +835,7 @@ public interface AWSTransfer {
      * @throws ServiceUnavailableException
      *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
      * @throws InternalServiceErrorException
-     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     *         This exception is thrown when an error occurs in the Transfer Family service.
      * @throws InvalidNextTokenException
      *         The <code>NextToken</code> parameter that was passed is invalid.
      * @throws InvalidRequestException
@@ -853,7 +861,7 @@ public interface AWSTransfer {
      * @throws ServiceUnavailableException
      *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
      * @throws InternalServiceErrorException
-     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     *         This exception is thrown when an error occurs in the Transfer Family service.
      * @throws InvalidNextTokenException
      *         The <code>NextToken</code> parameter that was passed is invalid.
      * @throws InvalidRequestException
@@ -879,7 +887,7 @@ public interface AWSTransfer {
      * @throws ServiceUnavailableException
      *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
      * @throws InternalServiceErrorException
-     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     *         This exception is thrown when an error occurs in the Transfer Family service.
      * @throws InvalidNextTokenException
      *         The <code>NextToken</code> parameter that was passed is invalid.
      * @throws InvalidRequestException
@@ -902,7 +910,7 @@ public interface AWSTransfer {
      * @throws ServiceUnavailableException
      *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
      * @throws InternalServiceErrorException
-     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     *         This exception is thrown when an error occurs in the Transfer Family service.
      * @throws InvalidNextTokenException
      *         The <code>NextToken</code> parameter that was passed is invalid.
      * @throws InvalidRequestException
@@ -931,7 +939,7 @@ public interface AWSTransfer {
      * @throws ServiceUnavailableException
      *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
      * @throws InternalServiceErrorException
-     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     *         This exception is thrown when an error occurs in the Transfer Family service.
      * @throws InvalidNextTokenException
      *         The <code>NextToken</code> parameter that was passed is invalid.
      * @throws InvalidRequestException
@@ -954,7 +962,7 @@ public interface AWSTransfer {
      * @throws ServiceUnavailableException
      *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
      * @throws InternalServiceErrorException
-     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     *         This exception is thrown when an error occurs in the Transfer Family service.
      * @throws InvalidNextTokenException
      *         The <code>NextToken</code> parameter that was passed is invalid.
      * @throws InvalidRequestException
@@ -979,7 +987,7 @@ public interface AWSTransfer {
      * @throws ServiceUnavailableException
      *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
      * @throws InternalServiceErrorException
-     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     *         This exception is thrown when an error occurs in the Transfer Family service.
      * @throws InvalidNextTokenException
      *         The <code>NextToken</code> parameter that was passed is invalid.
      * @throws InvalidRequestException
@@ -1002,7 +1010,7 @@ public interface AWSTransfer {
      * @throws ServiceUnavailableException
      *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
      * @throws InternalServiceErrorException
-     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     *         This exception is thrown when an error occurs in the Transfer Family service.
      * @throws InvalidNextTokenException
      *         The <code>NextToken</code> parameter that was passed is invalid.
      * @throws InvalidRequestException
@@ -1023,7 +1031,7 @@ public interface AWSTransfer {
      * @throws ServiceUnavailableException
      *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
      * @throws InternalServiceErrorException
-     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     *         This exception is thrown when an error occurs in the Transfer Family service.
      * @throws InvalidNextTokenException
      *         The <code>NextToken</code> parameter that was passed is invalid.
      * @throws InvalidRequestException
@@ -1045,7 +1053,7 @@ public interface AWSTransfer {
      * @throws ServiceUnavailableException
      *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
      * @throws InternalServiceErrorException
-     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     *         This exception is thrown when an error occurs in the Transfer Family service.
      * @throws InvalidNextTokenException
      *         The <code>NextToken</code> parameter that was passed is invalid.
      * @throws InvalidRequestException
@@ -1067,7 +1075,7 @@ public interface AWSTransfer {
      * @throws ServiceUnavailableException
      *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
      * @throws InternalServiceErrorException
-     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     *         This exception is thrown when an error occurs in the Transfer Family service.
      * @throws InvalidNextTokenException
      *         The <code>NextToken</code> parameter that was passed is invalid.
      * @throws InvalidRequestException
@@ -1090,7 +1098,7 @@ public interface AWSTransfer {
      * @throws ServiceUnavailableException
      *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
      * @throws InternalServiceErrorException
-     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     *         This exception is thrown when an error occurs in the Transfer Family service.
      * @throws InvalidNextTokenException
      *         The <code>NextToken</code> parameter that was passed is invalid.
      * @throws InvalidRequestException
@@ -1118,7 +1126,7 @@ public interface AWSTransfer {
      * @throws ServiceUnavailableException
      *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
      * @throws InternalServiceErrorException
-     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     *         This exception is thrown when an error occurs in the Transfer Family service.
      * @throws InvalidRequestException
      *         This exception is thrown when the client submits a malformed request.
      * @throws ResourceNotFoundException
@@ -1171,7 +1179,7 @@ public interface AWSTransfer {
      * @throws ServiceUnavailableException
      *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
      * @throws InternalServiceErrorException
-     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     *         This exception is thrown when an error occurs in the Transfer Family service.
      * @throws InvalidRequestException
      *         This exception is thrown when the client submits a malformed request.
      * @throws ResourceNotFoundException
@@ -1203,7 +1211,7 @@ public interface AWSTransfer {
      * @throws ServiceUnavailableException
      *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
      * @throws InternalServiceErrorException
-     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     *         This exception is thrown when an error occurs in the Transfer Family service.
      * @throws InvalidRequestException
      *         This exception is thrown when the client submits a malformed request.
      * @throws ResourceNotFoundException
@@ -1241,7 +1249,7 @@ public interface AWSTransfer {
      * @throws ServiceUnavailableException
      *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
      * @throws InternalServiceErrorException
-     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     *         This exception is thrown when an error occurs in the Transfer Family service.
      * @throws InvalidRequestException
      *         This exception is thrown when the client submits a malformed request.
      * @throws ResourceNotFoundException
@@ -1268,7 +1276,7 @@ public interface AWSTransfer {
      * @throws ServiceUnavailableException
      *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
      * @throws InternalServiceErrorException
-     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     *         This exception is thrown when an error occurs in the Transfer Family service.
      * @throws InvalidRequestException
      *         This exception is thrown when the client submits a malformed request.
      * @throws ResourceNotFoundException
@@ -1282,7 +1290,8 @@ public interface AWSTransfer {
     /**
      * <p>
      * Tests whether your SFTP connector is set up successfully. We highly recommend that you call this operation to
-     * test your ability to transfer files between a Transfer Family server and a trading partner's SFTP server.
+     * test your ability to transfer files between local Amazon Web Services storage and a trading partner's SFTP
+     * server.
      * </p>
      * 
      * @param testConnectionRequest
@@ -1290,7 +1299,7 @@ public interface AWSTransfer {
      * @throws ServiceUnavailableException
      *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
      * @throws InternalServiceErrorException
-     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     *         This exception is thrown when an error occurs in the Transfer Family service.
      * @throws InvalidRequestException
      *         This exception is thrown when the client submits a malformed request.
      * @throws ResourceNotFoundException
@@ -1369,7 +1378,7 @@ public interface AWSTransfer {
      * @throws ServiceUnavailableException
      *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
      * @throws InternalServiceErrorException
-     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     *         This exception is thrown when an error occurs in the Transfer Family service.
      * @throws InvalidRequestException
      *         This exception is thrown when the client submits a malformed request.
      * @throws ResourceNotFoundException
@@ -1394,7 +1403,7 @@ public interface AWSTransfer {
      * @throws ServiceUnavailableException
      *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
      * @throws InternalServiceErrorException
-     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     *         This exception is thrown when an error occurs in the Transfer Family service.
      * @throws InvalidRequestException
      *         This exception is thrown when the client submits a malformed request.
      * @throws ResourceNotFoundException
@@ -1416,11 +1425,12 @@ public interface AWSTransfer {
      * @throws ServiceUnavailableException
      *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
      * @throws InternalServiceErrorException
-     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     *         This exception is thrown when an error occurs in the Transfer Family service.
      * @throws InvalidRequestException
      *         This exception is thrown when the client submits a malformed request.
      * @throws ResourceExistsException
-     *         The requested resource does not exist.
+     *         The requested resource does not exist, or exists in a region other than the one specified for the
+     *         command.
      * @throws ResourceNotFoundException
      *         This exception is thrown when a resource is not found by the Amazon Web ServicesTransfer Family service.
      * @throws ThrottlingException
@@ -1443,11 +1453,12 @@ public interface AWSTransfer {
      * @throws ServiceUnavailableException
      *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
      * @throws InternalServiceErrorException
-     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     *         This exception is thrown when an error occurs in the Transfer Family service.
      * @throws InvalidRequestException
      *         This exception is thrown when the client submits a malformed request.
      * @throws ResourceExistsException
-     *         The requested resource does not exist.
+     *         The requested resource does not exist, or exists in a region other than the one specified for the
+     *         command.
      * @throws ResourceNotFoundException
      *         This exception is thrown when a resource is not found by the Amazon Web ServicesTransfer Family service.
      * @throws ThrottlingException
@@ -1468,7 +1479,7 @@ public interface AWSTransfer {
      * @throws ServiceUnavailableException
      *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
      * @throws InternalServiceErrorException
-     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     *         This exception is thrown when an error occurs in the Transfer Family service.
      * @throws InvalidRequestException
      *         This exception is thrown when the client submits a malformed request.
      * @throws ResourceNotFoundException
@@ -1492,11 +1503,12 @@ public interface AWSTransfer {
      * @throws ServiceUnavailableException
      *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
      * @throws InternalServiceErrorException
-     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     *         This exception is thrown when an error occurs in the Transfer Family service.
      * @throws InvalidRequestException
      *         This exception is thrown when the client submits a malformed request.
      * @throws ResourceExistsException
-     *         The requested resource does not exist.
+     *         The requested resource does not exist, or exists in a region other than the one specified for the
+     *         command.
      * @throws ResourceNotFoundException
      *         This exception is thrown when a resource is not found by the Amazon Web ServicesTransfer Family service.
      * @throws ThrottlingException
@@ -1518,7 +1530,7 @@ public interface AWSTransfer {
      * @throws ServiceUnavailableException
      *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
      * @throws InternalServiceErrorException
-     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     *         This exception is thrown when an error occurs in the Transfer Family service.
      * @throws InvalidRequestException
      *         This exception is thrown when the client submits a malformed request.
      * @throws ResourceNotFoundException
@@ -1542,7 +1554,7 @@ public interface AWSTransfer {
      * @throws ServiceUnavailableException
      *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
      * @throws InternalServiceErrorException
-     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     *         This exception is thrown when an error occurs in the Transfer Family service.
      * @throws InvalidRequestException
      *         This exception is thrown when the client submits a malformed request.
      * @throws ResourceNotFoundException
@@ -1574,11 +1586,12 @@ public interface AWSTransfer {
      *         protocol-enabled server that has VPC as the endpoint type and the server's <code>VpcEndpointID</code> is
      *         not in the available state.
      * @throws InternalServiceErrorException
-     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     *         This exception is thrown when an error occurs in the Transfer Family service.
      * @throws InvalidRequestException
      *         This exception is thrown when the client submits a malformed request.
      * @throws ResourceExistsException
-     *         The requested resource does not exist.
+     *         The requested resource does not exist, or exists in a region other than the one specified for the
+     *         command.
      * @throws ResourceNotFoundException
      *         This exception is thrown when a resource is not found by the Amazon Web ServicesTransfer Family service.
      * @throws ThrottlingException
@@ -1603,7 +1616,7 @@ public interface AWSTransfer {
      * @throws ServiceUnavailableException
      *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
      * @throws InternalServiceErrorException
-     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     *         This exception is thrown when an error occurs in the Transfer Family service.
      * @throws InvalidRequestException
      *         This exception is thrown when the client submits a malformed request.
      * @throws ResourceNotFoundException

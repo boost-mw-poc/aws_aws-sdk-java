@@ -396,7 +396,7 @@ public class ModifyDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * Specifies whether major version upgrades are allowed.
      * </p>
      * <p>
-     * Valid for Cluster Type: Aurora DB clusters only
+     * Valid for Cluster Type: Aurora DB clusters and Multi-AZ DB clusters
      * </p>
      * <p>
      * Constraints:
@@ -3254,7 +3254,7 @@ public class ModifyDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * Specifies whether major version upgrades are allowed.
      * </p>
      * <p>
-     * Valid for Cluster Type: Aurora DB clusters only
+     * Valid for Cluster Type: Aurora DB clusters and Multi-AZ DB clusters
      * </p>
      * <p>
      * Constraints:
@@ -3271,7 +3271,7 @@ public class ModifyDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * @param allowMajorVersionUpgrade
      *        Specifies whether major version upgrades are allowed.</p>
      *        <p>
-     *        Valid for Cluster Type: Aurora DB clusters only
+     *        Valid for Cluster Type: Aurora DB clusters and Multi-AZ DB clusters
      *        </p>
      *        <p>
      *        Constraints:
@@ -3294,7 +3294,7 @@ public class ModifyDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * Specifies whether major version upgrades are allowed.
      * </p>
      * <p>
-     * Valid for Cluster Type: Aurora DB clusters only
+     * Valid for Cluster Type: Aurora DB clusters and Multi-AZ DB clusters
      * </p>
      * <p>
      * Constraints:
@@ -3310,7 +3310,7 @@ public class ModifyDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * 
      * @return Specifies whether major version upgrades are allowed.</p>
      *         <p>
-     *         Valid for Cluster Type: Aurora DB clusters only
+     *         Valid for Cluster Type: Aurora DB clusters and Multi-AZ DB clusters
      *         </p>
      *         <p>
      *         Constraints:
@@ -3333,7 +3333,7 @@ public class ModifyDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * Specifies whether major version upgrades are allowed.
      * </p>
      * <p>
-     * Valid for Cluster Type: Aurora DB clusters only
+     * Valid for Cluster Type: Aurora DB clusters and Multi-AZ DB clusters
      * </p>
      * <p>
      * Constraints:
@@ -3350,7 +3350,7 @@ public class ModifyDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * @param allowMajorVersionUpgrade
      *        Specifies whether major version upgrades are allowed.</p>
      *        <p>
-     *        Valid for Cluster Type: Aurora DB clusters only
+     *        Valid for Cluster Type: Aurora DB clusters and Multi-AZ DB clusters
      *        </p>
      *        <p>
      *        Constraints:
@@ -3375,7 +3375,7 @@ public class ModifyDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * Specifies whether major version upgrades are allowed.
      * </p>
      * <p>
-     * Valid for Cluster Type: Aurora DB clusters only
+     * Valid for Cluster Type: Aurora DB clusters and Multi-AZ DB clusters
      * </p>
      * <p>
      * Constraints:
@@ -3391,7 +3391,7 @@ public class ModifyDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * 
      * @return Specifies whether major version upgrades are allowed.</p>
      *         <p>
-     *         Valid for Cluster Type: Aurora DB clusters only
+     *         Valid for Cluster Type: Aurora DB clusters and Multi-AZ DB clusters
      *         </p>
      *         <p>
      *         Constraints:

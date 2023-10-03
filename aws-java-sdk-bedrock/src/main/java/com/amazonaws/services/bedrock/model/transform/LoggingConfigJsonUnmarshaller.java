@@ -52,14 +52,6 @@ public class LoggingConfigJsonUnmarshaller implements Unmarshaller<LoggingConfig
                     context.nextToken();
                     loggingConfig.setCloudWatchConfig(CloudWatchConfigJsonUnmarshaller.getInstance().unmarshall(context));
                 }
-                if (context.testExpression("embeddingDataDeliveryEnabled", targetDepth)) {
-                    context.nextToken();
-                    loggingConfig.setEmbeddingDataDeliveryEnabled(context.getUnmarshaller(Boolean.class).unmarshall(context));
-                }
-                if (context.testExpression("imageDataDeliveryEnabled", targetDepth)) {
-                    context.nextToken();
-                    loggingConfig.setImageDataDeliveryEnabled(context.getUnmarshaller(Boolean.class).unmarshall(context));
-                }
                 if (context.testExpression("s3Config", targetDepth)) {
                     context.nextToken();
                     loggingConfig.setS3Config(S3ConfigJsonUnmarshaller.getInstance().unmarshall(context));
@@ -67,6 +59,14 @@ public class LoggingConfigJsonUnmarshaller implements Unmarshaller<LoggingConfig
                 if (context.testExpression("textDataDeliveryEnabled", targetDepth)) {
                     context.nextToken();
                     loggingConfig.setTextDataDeliveryEnabled(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
+                if (context.testExpression("imageDataDeliveryEnabled", targetDepth)) {
+                    context.nextToken();
+                    loggingConfig.setImageDataDeliveryEnabled(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
+                if (context.testExpression("embeddingDataDeliveryEnabled", targetDepth)) {
+                    context.nextToken();
+                    loggingConfig.setEmbeddingDataDeliveryEnabled(context.getUnmarshaller(Boolean.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

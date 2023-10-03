@@ -29,14 +29,14 @@ public class LoggingConfigMarshaller {
 
     private static final MarshallingInfo<StructuredPojo> CLOUDWATCHCONFIG_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("cloudWatchConfig").build();
-    private static final MarshallingInfo<Boolean> EMBEDDINGDATADELIVERYENABLED_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("embeddingDataDeliveryEnabled").build();
-    private static final MarshallingInfo<Boolean> IMAGEDATADELIVERYENABLED_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("imageDataDeliveryEnabled").build();
     private static final MarshallingInfo<StructuredPojo> S3CONFIG_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("s3Config").build();
     private static final MarshallingInfo<Boolean> TEXTDATADELIVERYENABLED_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("textDataDeliveryEnabled").build();
+    private static final MarshallingInfo<Boolean> IMAGEDATADELIVERYENABLED_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("imageDataDeliveryEnabled").build();
+    private static final MarshallingInfo<Boolean> EMBEDDINGDATADELIVERYENABLED_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("embeddingDataDeliveryEnabled").build();
 
     private static final LoggingConfigMarshaller instance = new LoggingConfigMarshaller();
 
@@ -55,10 +55,10 @@ public class LoggingConfigMarshaller {
 
         try {
             protocolMarshaller.marshall(loggingConfig.getCloudWatchConfig(), CLOUDWATCHCONFIG_BINDING);
-            protocolMarshaller.marshall(loggingConfig.getEmbeddingDataDeliveryEnabled(), EMBEDDINGDATADELIVERYENABLED_BINDING);
-            protocolMarshaller.marshall(loggingConfig.getImageDataDeliveryEnabled(), IMAGEDATADELIVERYENABLED_BINDING);
             protocolMarshaller.marshall(loggingConfig.getS3Config(), S3CONFIG_BINDING);
             protocolMarshaller.marshall(loggingConfig.getTextDataDeliveryEnabled(), TEXTDATADELIVERYENABLED_BINDING);
+            protocolMarshaller.marshall(loggingConfig.getImageDataDeliveryEnabled(), IMAGEDATADELIVERYENABLED_BINDING);
+            protocolMarshaller.marshall(loggingConfig.getEmbeddingDataDeliveryEnabled(), EMBEDDINGDATADELIVERYENABLED_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -45,6 +45,8 @@ public class SftpConnectorConfig implements Serializable, Cloneable, StructuredP
      * <p>
      * The three standard SSH public key format elements are <code>&lt;key type&gt;</code>,
      * <code>&lt;body base64&gt;</code>, and an optional <code>&lt;comment&gt;</code>, with spaces between each element.
+     * Specify only the <code>&lt;key type&gt;</code> and <code>&lt;body base64&gt;</code>: do not enter the
+     * <code>&lt;comment&gt;</code> portion of the key.
      * </p>
      * <p>
      * For the trusted host key, Transfer Family accepts RSA and ECDSA keys.
@@ -123,6 +125,8 @@ public class SftpConnectorConfig implements Serializable, Cloneable, StructuredP
      * <p>
      * The three standard SSH public key format elements are <code>&lt;key type&gt;</code>,
      * <code>&lt;body base64&gt;</code>, and an optional <code>&lt;comment&gt;</code>, with spaces between each element.
+     * Specify only the <code>&lt;key type&gt;</code> and <code>&lt;body base64&gt;</code>: do not enter the
+     * <code>&lt;comment&gt;</code> portion of the key.
      * </p>
      * <p>
      * For the trusted host key, Transfer Family accepts RSA and ECDSA keys.
@@ -147,7 +151,8 @@ public class SftpConnectorConfig implements Serializable, Cloneable, StructuredP
      *         <p>
      *         The three standard SSH public key format elements are <code>&lt;key type&gt;</code>,
      *         <code>&lt;body base64&gt;</code>, and an optional <code>&lt;comment&gt;</code>, with spaces between each
-     *         element.
+     *         element. Specify only the <code>&lt;key type&gt;</code> and <code>&lt;body base64&gt;</code>: do not
+     *         enter the <code>&lt;comment&gt;</code> portion of the key.
      *         </p>
      *         <p>
      *         For the trusted host key, Transfer Family accepts RSA and ECDSA keys.
@@ -179,6 +184,8 @@ public class SftpConnectorConfig implements Serializable, Cloneable, StructuredP
      * <p>
      * The three standard SSH public key format elements are <code>&lt;key type&gt;</code>,
      * <code>&lt;body base64&gt;</code>, and an optional <code>&lt;comment&gt;</code>, with spaces between each element.
+     * Specify only the <code>&lt;key type&gt;</code> and <code>&lt;body base64&gt;</code>: do not enter the
+     * <code>&lt;comment&gt;</code> portion of the key.
      * </p>
      * <p>
      * For the trusted host key, Transfer Family accepts RSA and ECDSA keys.
@@ -204,7 +211,8 @@ public class SftpConnectorConfig implements Serializable, Cloneable, StructuredP
      *        <p>
      *        The three standard SSH public key format elements are <code>&lt;key type&gt;</code>,
      *        <code>&lt;body base64&gt;</code>, and an optional <code>&lt;comment&gt;</code>, with spaces between each
-     *        element.
+     *        element. Specify only the <code>&lt;key type&gt;</code> and <code>&lt;body base64&gt;</code>: do not enter
+     *        the <code>&lt;comment&gt;</code> portion of the key.
      *        </p>
      *        <p>
      *        For the trusted host key, Transfer Family accepts RSA and ECDSA keys.
@@ -241,6 +249,8 @@ public class SftpConnectorConfig implements Serializable, Cloneable, StructuredP
      * <p>
      * The three standard SSH public key format elements are <code>&lt;key type&gt;</code>,
      * <code>&lt;body base64&gt;</code>, and an optional <code>&lt;comment&gt;</code>, with spaces between each element.
+     * Specify only the <code>&lt;key type&gt;</code> and <code>&lt;body base64&gt;</code>: do not enter the
+     * <code>&lt;comment&gt;</code> portion of the key.
      * </p>
      * <p>
      * For the trusted host key, Transfer Family accepts RSA and ECDSA keys.
@@ -271,7 +281,8 @@ public class SftpConnectorConfig implements Serializable, Cloneable, StructuredP
      *        <p>
      *        The three standard SSH public key format elements are <code>&lt;key type&gt;</code>,
      *        <code>&lt;body base64&gt;</code>, and an optional <code>&lt;comment&gt;</code>, with spaces between each
-     *        element.
+     *        element. Specify only the <code>&lt;key type&gt;</code> and <code>&lt;body base64&gt;</code>: do not enter
+     *        the <code>&lt;comment&gt;</code> portion of the key.
      *        </p>
      *        <p>
      *        For the trusted host key, Transfer Family accepts RSA and ECDSA keys.
@@ -310,6 +321,8 @@ public class SftpConnectorConfig implements Serializable, Cloneable, StructuredP
      * <p>
      * The three standard SSH public key format elements are <code>&lt;key type&gt;</code>,
      * <code>&lt;body base64&gt;</code>, and an optional <code>&lt;comment&gt;</code>, with spaces between each element.
+     * Specify only the <code>&lt;key type&gt;</code> and <code>&lt;body base64&gt;</code>: do not enter the
+     * <code>&lt;comment&gt;</code> portion of the key.
      * </p>
      * <p>
      * For the trusted host key, Transfer Family accepts RSA and ECDSA keys.
@@ -335,7 +348,8 @@ public class SftpConnectorConfig implements Serializable, Cloneable, StructuredP
      *        <p>
      *        The three standard SSH public key format elements are <code>&lt;key type&gt;</code>,
      *        <code>&lt;body base64&gt;</code>, and an optional <code>&lt;comment&gt;</code>, with spaces between each
-     *        element.
+     *        element. Specify only the <code>&lt;key type&gt;</code> and <code>&lt;body base64&gt;</code>: do not enter
+     *        the <code>&lt;comment&gt;</code> portion of the key.
      *        </p>
      *        <p>
      *        For the trusted host key, Transfer Family accepts RSA and ECDSA keys.

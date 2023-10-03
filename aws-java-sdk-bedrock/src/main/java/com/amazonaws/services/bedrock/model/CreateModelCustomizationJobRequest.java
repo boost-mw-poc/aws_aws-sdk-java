@@ -27,58 +27,16 @@ public class CreateModelCustomizationJobRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * Name of the base model.
-     * </p>
-     */
-    private String baseModelIdentifier;
-    /**
-     * <p>
-     * Unique token value that you can provide. The GetModelCustomizationJob response includes the same token value.
-     * </p>
-     */
-    private String clientRequestToken;
-    /**
-     * <p>
-     * The custom model is encrypted at rest using this key.
-     * </p>
-     */
-    private String customModelKmsKeyId;
-    /**
-     * <p>
-     * Enter a name for the custom model.
-     * </p>
-     */
-    private String customModelName;
-    /**
-     * <p>
-     * Assign tags to the custom model.
-     * </p>
-     */
-    private java.util.List<Tag> customModelTags;
-    /**
-     * <p>
-     * Parameters related to tuning the model.
-     * </p>
-     */
-    private java.util.Map<String, String> hyperParameters;
-    /**
-     * <p>
      * Enter a unique name for the fine-tuning job.
      * </p>
      */
     private String jobName;
     /**
      * <p>
-     * Assign tags to the job.
+     * Enter a name for the custom model.
      * </p>
      */
-    private java.util.List<Tag> jobTags;
-    /**
-     * <p>
-     * S3 location for the output data.
-     * </p>
-     */
-    private OutputDataConfig outputDataConfig;
+    private String customModelName;
     /**
      * <p>
      * The Amazon Resource Name (ARN) of an IAM role that Bedrock can assume to perform tasks on your behalf. For
@@ -88,6 +46,36 @@ public class CreateModelCustomizationJobRequest extends com.amazonaws.AmazonWebS
      * </p>
      */
     private String roleArn;
+    /**
+     * <p>
+     * Unique token value that you can provide. The GetModelCustomizationJob response includes the same token value.
+     * </p>
+     */
+    private String clientRequestToken;
+    /**
+     * <p>
+     * Name of the base model.
+     * </p>
+     */
+    private String baseModelIdentifier;
+    /**
+     * <p>
+     * The custom model is encrypted at rest using this key.
+     * </p>
+     */
+    private String customModelKmsKeyId;
+    /**
+     * <p>
+     * Assign tags to the job.
+     * </p>
+     */
+    private java.util.List<Tag> jobTags;
+    /**
+     * <p>
+     * Assign tags to the custom model.
+     * </p>
+     */
+    private java.util.List<Tag> customModelTags;
     /**
      * <p>
      * Information about the training dataset.
@@ -102,6 +90,18 @@ public class CreateModelCustomizationJobRequest extends com.amazonaws.AmazonWebS
     private ValidationDataConfig validationDataConfig;
     /**
      * <p>
+     * S3 location for the output data.
+     * </p>
+     */
+    private OutputDataConfig outputDataConfig;
+    /**
+     * <p>
+     * Parameters related to tuning the model.
+     * </p>
+     */
+    private java.util.Map<String, String> hyperParameters;
+    /**
+     * <p>
      * VPC configuration (optional). Configuration parameters for the private Virtual Private Cloud (VPC) that contains
      * the resources you are using for this job.
      * </p>
@@ -110,41 +110,139 @@ public class CreateModelCustomizationJobRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * Name of the base model.
+     * Enter a unique name for the fine-tuning job.
      * </p>
      * 
-     * @param baseModelIdentifier
-     *        Name of the base model.
+     * @param jobName
+     *        Enter a unique name for the fine-tuning job.
      */
 
-    public void setBaseModelIdentifier(String baseModelIdentifier) {
-        this.baseModelIdentifier = baseModelIdentifier;
+    public void setJobName(String jobName) {
+        this.jobName = jobName;
     }
 
     /**
      * <p>
-     * Name of the base model.
+     * Enter a unique name for the fine-tuning job.
      * </p>
      * 
-     * @return Name of the base model.
+     * @return Enter a unique name for the fine-tuning job.
      */
 
-    public String getBaseModelIdentifier() {
-        return this.baseModelIdentifier;
+    public String getJobName() {
+        return this.jobName;
     }
 
     /**
      * <p>
-     * Name of the base model.
+     * Enter a unique name for the fine-tuning job.
      * </p>
      * 
-     * @param baseModelIdentifier
-     *        Name of the base model.
+     * @param jobName
+     *        Enter a unique name for the fine-tuning job.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public CreateModelCustomizationJobRequest withBaseModelIdentifier(String baseModelIdentifier) {
-        setBaseModelIdentifier(baseModelIdentifier);
+    public CreateModelCustomizationJobRequest withJobName(String jobName) {
+        setJobName(jobName);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Enter a name for the custom model.
+     * </p>
+     * 
+     * @param customModelName
+     *        Enter a name for the custom model.
+     */
+
+    public void setCustomModelName(String customModelName) {
+        this.customModelName = customModelName;
+    }
+
+    /**
+     * <p>
+     * Enter a name for the custom model.
+     * </p>
+     * 
+     * @return Enter a name for the custom model.
+     */
+
+    public String getCustomModelName() {
+        return this.customModelName;
+    }
+
+    /**
+     * <p>
+     * Enter a name for the custom model.
+     * </p>
+     * 
+     * @param customModelName
+     *        Enter a name for the custom model.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateModelCustomizationJobRequest withCustomModelName(String customModelName) {
+        setCustomModelName(customModelName);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of an IAM role that Bedrock can assume to perform tasks on your behalf. For
+     * example, during model training, Bedrock needs your permission to read input data from an S3 bucket, write model
+     * artifacts to an S3 bucket. To pass this role to Bedrock, the caller of this API must have the
+     * <code>iam:PassRole</code> permission.
+     * </p>
+     * 
+     * @param roleArn
+     *        The Amazon Resource Name (ARN) of an IAM role that Bedrock can assume to perform tasks on your behalf. For
+     *        example, during model training, Bedrock needs your permission to read input data from an S3 bucket, write
+     *        model artifacts to an S3 bucket. To pass this role to Bedrock, the caller of this API must have the
+     *        <code>iam:PassRole</code> permission.
+     */
+
+    public void setRoleArn(String roleArn) {
+        this.roleArn = roleArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of an IAM role that Bedrock can assume to perform tasks on your behalf. For
+     * example, during model training, Bedrock needs your permission to read input data from an S3 bucket, write model
+     * artifacts to an S3 bucket. To pass this role to Bedrock, the caller of this API must have the
+     * <code>iam:PassRole</code> permission.
+     * </p>
+     * 
+     * @return The Amazon Resource Name (ARN) of an IAM role that Bedrock can assume to perform tasks on your behalf.
+     *         For example, during model training, Bedrock needs your permission to read input data from an S3 bucket,
+     *         write model artifacts to an S3 bucket. To pass this role to Bedrock, the caller of this API must have the
+     *         <code>iam:PassRole</code> permission.
+     */
+
+    public String getRoleArn() {
+        return this.roleArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of an IAM role that Bedrock can assume to perform tasks on your behalf. For
+     * example, during model training, Bedrock needs your permission to read input data from an S3 bucket, write model
+     * artifacts to an S3 bucket. To pass this role to Bedrock, the caller of this API must have the
+     * <code>iam:PassRole</code> permission.
+     * </p>
+     * 
+     * @param roleArn
+     *        The Amazon Resource Name (ARN) of an IAM role that Bedrock can assume to perform tasks on your behalf. For
+     *        example, during model training, Bedrock needs your permission to read input data from an S3 bucket, write
+     *        model artifacts to an S3 bucket. To pass this role to Bedrock, the caller of this API must have the
+     *        <code>iam:PassRole</code> permission.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateModelCustomizationJobRequest withRoleArn(String roleArn) {
+        setRoleArn(roleArn);
         return this;
     }
 
@@ -193,6 +291,46 @@ public class CreateModelCustomizationJobRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
+     * Name of the base model.
+     * </p>
+     * 
+     * @param baseModelIdentifier
+     *        Name of the base model.
+     */
+
+    public void setBaseModelIdentifier(String baseModelIdentifier) {
+        this.baseModelIdentifier = baseModelIdentifier;
+    }
+
+    /**
+     * <p>
+     * Name of the base model.
+     * </p>
+     * 
+     * @return Name of the base model.
+     */
+
+    public String getBaseModelIdentifier() {
+        return this.baseModelIdentifier;
+    }
+
+    /**
+     * <p>
+     * Name of the base model.
+     * </p>
+     * 
+     * @param baseModelIdentifier
+     *        Name of the base model.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateModelCustomizationJobRequest withBaseModelIdentifier(String baseModelIdentifier) {
+        setBaseModelIdentifier(baseModelIdentifier);
+        return this;
+    }
+
+    /**
+     * <p>
      * The custom model is encrypted at rest using this key.
      * </p>
      * 
@@ -228,224 +366,6 @@ public class CreateModelCustomizationJobRequest extends com.amazonaws.AmazonWebS
 
     public CreateModelCustomizationJobRequest withCustomModelKmsKeyId(String customModelKmsKeyId) {
         setCustomModelKmsKeyId(customModelKmsKeyId);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Enter a name for the custom model.
-     * </p>
-     * 
-     * @param customModelName
-     *        Enter a name for the custom model.
-     */
-
-    public void setCustomModelName(String customModelName) {
-        this.customModelName = customModelName;
-    }
-
-    /**
-     * <p>
-     * Enter a name for the custom model.
-     * </p>
-     * 
-     * @return Enter a name for the custom model.
-     */
-
-    public String getCustomModelName() {
-        return this.customModelName;
-    }
-
-    /**
-     * <p>
-     * Enter a name for the custom model.
-     * </p>
-     * 
-     * @param customModelName
-     *        Enter a name for the custom model.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public CreateModelCustomizationJobRequest withCustomModelName(String customModelName) {
-        setCustomModelName(customModelName);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Assign tags to the custom model.
-     * </p>
-     * 
-     * @return Assign tags to the custom model.
-     */
-
-    public java.util.List<Tag> getCustomModelTags() {
-        return customModelTags;
-    }
-
-    /**
-     * <p>
-     * Assign tags to the custom model.
-     * </p>
-     * 
-     * @param customModelTags
-     *        Assign tags to the custom model.
-     */
-
-    public void setCustomModelTags(java.util.Collection<Tag> customModelTags) {
-        if (customModelTags == null) {
-            this.customModelTags = null;
-            return;
-        }
-
-        this.customModelTags = new java.util.ArrayList<Tag>(customModelTags);
-    }
-
-    /**
-     * <p>
-     * Assign tags to the custom model.
-     * </p>
-     * <p>
-     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
-     * {@link #setCustomModelTags(java.util.Collection)} or {@link #withCustomModelTags(java.util.Collection)} if you
-     * want to override the existing values.
-     * </p>
-     * 
-     * @param customModelTags
-     *        Assign tags to the custom model.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public CreateModelCustomizationJobRequest withCustomModelTags(Tag... customModelTags) {
-        if (this.customModelTags == null) {
-            setCustomModelTags(new java.util.ArrayList<Tag>(customModelTags.length));
-        }
-        for (Tag ele : customModelTags) {
-            this.customModelTags.add(ele);
-        }
-        return this;
-    }
-
-    /**
-     * <p>
-     * Assign tags to the custom model.
-     * </p>
-     * 
-     * @param customModelTags
-     *        Assign tags to the custom model.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public CreateModelCustomizationJobRequest withCustomModelTags(java.util.Collection<Tag> customModelTags) {
-        setCustomModelTags(customModelTags);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Parameters related to tuning the model.
-     * </p>
-     * 
-     * @return Parameters related to tuning the model.
-     */
-
-    public java.util.Map<String, String> getHyperParameters() {
-        return hyperParameters;
-    }
-
-    /**
-     * <p>
-     * Parameters related to tuning the model.
-     * </p>
-     * 
-     * @param hyperParameters
-     *        Parameters related to tuning the model.
-     */
-
-    public void setHyperParameters(java.util.Map<String, String> hyperParameters) {
-        this.hyperParameters = hyperParameters;
-    }
-
-    /**
-     * <p>
-     * Parameters related to tuning the model.
-     * </p>
-     * 
-     * @param hyperParameters
-     *        Parameters related to tuning the model.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public CreateModelCustomizationJobRequest withHyperParameters(java.util.Map<String, String> hyperParameters) {
-        setHyperParameters(hyperParameters);
-        return this;
-    }
-
-    /**
-     * Add a single HyperParameters entry
-     *
-     * @see CreateModelCustomizationJobRequest#withHyperParameters
-     * @returns a reference to this object so that method calls can be chained together.
-     */
-
-    public CreateModelCustomizationJobRequest addHyperParametersEntry(String key, String value) {
-        if (null == this.hyperParameters) {
-            this.hyperParameters = new java.util.HashMap<String, String>();
-        }
-        if (this.hyperParameters.containsKey(key))
-            throw new IllegalArgumentException("Duplicated keys (" + key.toString() + ") are provided.");
-        this.hyperParameters.put(key, value);
-        return this;
-    }
-
-    /**
-     * Removes all the entries added into HyperParameters.
-     *
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public CreateModelCustomizationJobRequest clearHyperParametersEntries() {
-        this.hyperParameters = null;
-        return this;
-    }
-
-    /**
-     * <p>
-     * Enter a unique name for the fine-tuning job.
-     * </p>
-     * 
-     * @param jobName
-     *        Enter a unique name for the fine-tuning job.
-     */
-
-    public void setJobName(String jobName) {
-        this.jobName = jobName;
-    }
-
-    /**
-     * <p>
-     * Enter a unique name for the fine-tuning job.
-     * </p>
-     * 
-     * @return Enter a unique name for the fine-tuning job.
-     */
-
-    public String getJobName() {
-        return this.jobName;
-    }
-
-    /**
-     * <p>
-     * Enter a unique name for the fine-tuning job.
-     * </p>
-     * 
-     * @param jobName
-     *        Enter a unique name for the fine-tuning job.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public CreateModelCustomizationJobRequest withJobName(String jobName) {
-        setJobName(jobName);
         return this;
     }
 
@@ -521,99 +441,71 @@ public class CreateModelCustomizationJobRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * S3 location for the output data.
+     * Assign tags to the custom model.
      * </p>
      * 
-     * @param outputDataConfig
-     *        S3 location for the output data.
+     * @return Assign tags to the custom model.
      */
 
-    public void setOutputDataConfig(OutputDataConfig outputDataConfig) {
-        this.outputDataConfig = outputDataConfig;
+    public java.util.List<Tag> getCustomModelTags() {
+        return customModelTags;
     }
 
     /**
      * <p>
-     * S3 location for the output data.
+     * Assign tags to the custom model.
      * </p>
      * 
-     * @return S3 location for the output data.
+     * @param customModelTags
+     *        Assign tags to the custom model.
      */
 
-    public OutputDataConfig getOutputDataConfig() {
-        return this.outputDataConfig;
+    public void setCustomModelTags(java.util.Collection<Tag> customModelTags) {
+        if (customModelTags == null) {
+            this.customModelTags = null;
+            return;
+        }
+
+        this.customModelTags = new java.util.ArrayList<Tag>(customModelTags);
     }
 
     /**
      * <p>
-     * S3 location for the output data.
+     * Assign tags to the custom model.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setCustomModelTags(java.util.Collection)} or {@link #withCustomModelTags(java.util.Collection)} if you
+     * want to override the existing values.
      * </p>
      * 
-     * @param outputDataConfig
-     *        S3 location for the output data.
+     * @param customModelTags
+     *        Assign tags to the custom model.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public CreateModelCustomizationJobRequest withOutputDataConfig(OutputDataConfig outputDataConfig) {
-        setOutputDataConfig(outputDataConfig);
+    public CreateModelCustomizationJobRequest withCustomModelTags(Tag... customModelTags) {
+        if (this.customModelTags == null) {
+            setCustomModelTags(new java.util.ArrayList<Tag>(customModelTags.length));
+        }
+        for (Tag ele : customModelTags) {
+            this.customModelTags.add(ele);
+        }
         return this;
     }
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of an IAM role that Bedrock can assume to perform tasks on your behalf. For
-     * example, during model training, Bedrock needs your permission to read input data from an S3 bucket, write model
-     * artifacts to an S3 bucket. To pass this role to Bedrock, the caller of this API must have the
-     * <code>iam:PassRole</code> permission.
+     * Assign tags to the custom model.
      * </p>
      * 
-     * @param roleArn
-     *        The Amazon Resource Name (ARN) of an IAM role that Bedrock can assume to perform tasks on your behalf. For
-     *        example, during model training, Bedrock needs your permission to read input data from an S3 bucket, write
-     *        model artifacts to an S3 bucket. To pass this role to Bedrock, the caller of this API must have the
-     *        <code>iam:PassRole</code> permission.
-     */
-
-    public void setRoleArn(String roleArn) {
-        this.roleArn = roleArn;
-    }
-
-    /**
-     * <p>
-     * The Amazon Resource Name (ARN) of an IAM role that Bedrock can assume to perform tasks on your behalf. For
-     * example, during model training, Bedrock needs your permission to read input data from an S3 bucket, write model
-     * artifacts to an S3 bucket. To pass this role to Bedrock, the caller of this API must have the
-     * <code>iam:PassRole</code> permission.
-     * </p>
-     * 
-     * @return The Amazon Resource Name (ARN) of an IAM role that Bedrock can assume to perform tasks on your behalf.
-     *         For example, during model training, Bedrock needs your permission to read input data from an S3 bucket,
-     *         write model artifacts to an S3 bucket. To pass this role to Bedrock, the caller of this API must have the
-     *         <code>iam:PassRole</code> permission.
-     */
-
-    public String getRoleArn() {
-        return this.roleArn;
-    }
-
-    /**
-     * <p>
-     * The Amazon Resource Name (ARN) of an IAM role that Bedrock can assume to perform tasks on your behalf. For
-     * example, during model training, Bedrock needs your permission to read input data from an S3 bucket, write model
-     * artifacts to an S3 bucket. To pass this role to Bedrock, the caller of this API must have the
-     * <code>iam:PassRole</code> permission.
-     * </p>
-     * 
-     * @param roleArn
-     *        The Amazon Resource Name (ARN) of an IAM role that Bedrock can assume to perform tasks on your behalf. For
-     *        example, during model training, Bedrock needs your permission to read input data from an S3 bucket, write
-     *        model artifacts to an S3 bucket. To pass this role to Bedrock, the caller of this API must have the
-     *        <code>iam:PassRole</code> permission.
+     * @param customModelTags
+     *        Assign tags to the custom model.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public CreateModelCustomizationJobRequest withRoleArn(String roleArn) {
-        setRoleArn(roleArn);
+    public CreateModelCustomizationJobRequest withCustomModelTags(java.util.Collection<Tag> customModelTags) {
+        setCustomModelTags(customModelTags);
         return this;
     }
 
@@ -699,6 +591,114 @@ public class CreateModelCustomizationJobRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
+     * S3 location for the output data.
+     * </p>
+     * 
+     * @param outputDataConfig
+     *        S3 location for the output data.
+     */
+
+    public void setOutputDataConfig(OutputDataConfig outputDataConfig) {
+        this.outputDataConfig = outputDataConfig;
+    }
+
+    /**
+     * <p>
+     * S3 location for the output data.
+     * </p>
+     * 
+     * @return S3 location for the output data.
+     */
+
+    public OutputDataConfig getOutputDataConfig() {
+        return this.outputDataConfig;
+    }
+
+    /**
+     * <p>
+     * S3 location for the output data.
+     * </p>
+     * 
+     * @param outputDataConfig
+     *        S3 location for the output data.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateModelCustomizationJobRequest withOutputDataConfig(OutputDataConfig outputDataConfig) {
+        setOutputDataConfig(outputDataConfig);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Parameters related to tuning the model.
+     * </p>
+     * 
+     * @return Parameters related to tuning the model.
+     */
+
+    public java.util.Map<String, String> getHyperParameters() {
+        return hyperParameters;
+    }
+
+    /**
+     * <p>
+     * Parameters related to tuning the model.
+     * </p>
+     * 
+     * @param hyperParameters
+     *        Parameters related to tuning the model.
+     */
+
+    public void setHyperParameters(java.util.Map<String, String> hyperParameters) {
+        this.hyperParameters = hyperParameters;
+    }
+
+    /**
+     * <p>
+     * Parameters related to tuning the model.
+     * </p>
+     * 
+     * @param hyperParameters
+     *        Parameters related to tuning the model.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateModelCustomizationJobRequest withHyperParameters(java.util.Map<String, String> hyperParameters) {
+        setHyperParameters(hyperParameters);
+        return this;
+    }
+
+    /**
+     * Add a single HyperParameters entry
+     *
+     * @see CreateModelCustomizationJobRequest#withHyperParameters
+     * @returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateModelCustomizationJobRequest addHyperParametersEntry(String key, String value) {
+        if (null == this.hyperParameters) {
+            this.hyperParameters = new java.util.HashMap<String, String>();
+        }
+        if (this.hyperParameters.containsKey(key))
+            throw new IllegalArgumentException("Duplicated keys (" + key.toString() + ") are provided.");
+        this.hyperParameters.put(key, value);
+        return this;
+    }
+
+    /**
+     * Removes all the entries added into HyperParameters.
+     *
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateModelCustomizationJobRequest clearHyperParametersEntries() {
+        this.hyperParameters = null;
+        return this;
+    }
+
+    /**
+     * <p>
      * VPC configuration (optional). Configuration parameters for the private Virtual Private Cloud (VPC) that contains
      * the resources you are using for this job.
      * </p>
@@ -755,30 +755,30 @@ public class CreateModelCustomizationJobRequest extends com.amazonaws.AmazonWebS
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getBaseModelIdentifier() != null)
-            sb.append("BaseModelIdentifier: ").append(getBaseModelIdentifier()).append(",");
-        if (getClientRequestToken() != null)
-            sb.append("ClientRequestToken: ").append(getClientRequestToken()).append(",");
-        if (getCustomModelKmsKeyId() != null)
-            sb.append("CustomModelKmsKeyId: ").append(getCustomModelKmsKeyId()).append(",");
-        if (getCustomModelName() != null)
-            sb.append("CustomModelName: ").append(getCustomModelName()).append(",");
-        if (getCustomModelTags() != null)
-            sb.append("CustomModelTags: ").append(getCustomModelTags()).append(",");
-        if (getHyperParameters() != null)
-            sb.append("HyperParameters: ").append(getHyperParameters()).append(",");
         if (getJobName() != null)
             sb.append("JobName: ").append(getJobName()).append(",");
-        if (getJobTags() != null)
-            sb.append("JobTags: ").append(getJobTags()).append(",");
-        if (getOutputDataConfig() != null)
-            sb.append("OutputDataConfig: ").append(getOutputDataConfig()).append(",");
+        if (getCustomModelName() != null)
+            sb.append("CustomModelName: ").append(getCustomModelName()).append(",");
         if (getRoleArn() != null)
             sb.append("RoleArn: ").append(getRoleArn()).append(",");
+        if (getClientRequestToken() != null)
+            sb.append("ClientRequestToken: ").append(getClientRequestToken()).append(",");
+        if (getBaseModelIdentifier() != null)
+            sb.append("BaseModelIdentifier: ").append(getBaseModelIdentifier()).append(",");
+        if (getCustomModelKmsKeyId() != null)
+            sb.append("CustomModelKmsKeyId: ").append(getCustomModelKmsKeyId()).append(",");
+        if (getJobTags() != null)
+            sb.append("JobTags: ").append(getJobTags()).append(",");
+        if (getCustomModelTags() != null)
+            sb.append("CustomModelTags: ").append(getCustomModelTags()).append(",");
         if (getTrainingDataConfig() != null)
             sb.append("TrainingDataConfig: ").append(getTrainingDataConfig()).append(",");
         if (getValidationDataConfig() != null)
             sb.append("ValidationDataConfig: ").append(getValidationDataConfig()).append(",");
+        if (getOutputDataConfig() != null)
+            sb.append("OutputDataConfig: ").append(getOutputDataConfig()).append(",");
+        if (getHyperParameters() != null)
+            sb.append("HyperParameters: ").append(getHyperParameters()).append(",");
         if (getVpcConfig() != null)
             sb.append("VpcConfig: ").append(getVpcConfig());
         sb.append("}");
@@ -795,45 +795,37 @@ public class CreateModelCustomizationJobRequest extends com.amazonaws.AmazonWebS
         if (obj instanceof CreateModelCustomizationJobRequest == false)
             return false;
         CreateModelCustomizationJobRequest other = (CreateModelCustomizationJobRequest) obj;
-        if (other.getBaseModelIdentifier() == null ^ this.getBaseModelIdentifier() == null)
+        if (other.getJobName() == null ^ this.getJobName() == null)
             return false;
-        if (other.getBaseModelIdentifier() != null && other.getBaseModelIdentifier().equals(this.getBaseModelIdentifier()) == false)
-            return false;
-        if (other.getClientRequestToken() == null ^ this.getClientRequestToken() == null)
-            return false;
-        if (other.getClientRequestToken() != null && other.getClientRequestToken().equals(this.getClientRequestToken()) == false)
-            return false;
-        if (other.getCustomModelKmsKeyId() == null ^ this.getCustomModelKmsKeyId() == null)
-            return false;
-        if (other.getCustomModelKmsKeyId() != null && other.getCustomModelKmsKeyId().equals(this.getCustomModelKmsKeyId()) == false)
+        if (other.getJobName() != null && other.getJobName().equals(this.getJobName()) == false)
             return false;
         if (other.getCustomModelName() == null ^ this.getCustomModelName() == null)
             return false;
         if (other.getCustomModelName() != null && other.getCustomModelName().equals(this.getCustomModelName()) == false)
             return false;
-        if (other.getCustomModelTags() == null ^ this.getCustomModelTags() == null)
+        if (other.getRoleArn() == null ^ this.getRoleArn() == null)
             return false;
-        if (other.getCustomModelTags() != null && other.getCustomModelTags().equals(this.getCustomModelTags()) == false)
+        if (other.getRoleArn() != null && other.getRoleArn().equals(this.getRoleArn()) == false)
             return false;
-        if (other.getHyperParameters() == null ^ this.getHyperParameters() == null)
+        if (other.getClientRequestToken() == null ^ this.getClientRequestToken() == null)
             return false;
-        if (other.getHyperParameters() != null && other.getHyperParameters().equals(this.getHyperParameters()) == false)
+        if (other.getClientRequestToken() != null && other.getClientRequestToken().equals(this.getClientRequestToken()) == false)
             return false;
-        if (other.getJobName() == null ^ this.getJobName() == null)
+        if (other.getBaseModelIdentifier() == null ^ this.getBaseModelIdentifier() == null)
             return false;
-        if (other.getJobName() != null && other.getJobName().equals(this.getJobName()) == false)
+        if (other.getBaseModelIdentifier() != null && other.getBaseModelIdentifier().equals(this.getBaseModelIdentifier()) == false)
+            return false;
+        if (other.getCustomModelKmsKeyId() == null ^ this.getCustomModelKmsKeyId() == null)
+            return false;
+        if (other.getCustomModelKmsKeyId() != null && other.getCustomModelKmsKeyId().equals(this.getCustomModelKmsKeyId()) == false)
             return false;
         if (other.getJobTags() == null ^ this.getJobTags() == null)
             return false;
         if (other.getJobTags() != null && other.getJobTags().equals(this.getJobTags()) == false)
             return false;
-        if (other.getOutputDataConfig() == null ^ this.getOutputDataConfig() == null)
+        if (other.getCustomModelTags() == null ^ this.getCustomModelTags() == null)
             return false;
-        if (other.getOutputDataConfig() != null && other.getOutputDataConfig().equals(this.getOutputDataConfig()) == false)
-            return false;
-        if (other.getRoleArn() == null ^ this.getRoleArn() == null)
-            return false;
-        if (other.getRoleArn() != null && other.getRoleArn().equals(this.getRoleArn()) == false)
+        if (other.getCustomModelTags() != null && other.getCustomModelTags().equals(this.getCustomModelTags()) == false)
             return false;
         if (other.getTrainingDataConfig() == null ^ this.getTrainingDataConfig() == null)
             return false;
@@ -842,6 +834,14 @@ public class CreateModelCustomizationJobRequest extends com.amazonaws.AmazonWebS
         if (other.getValidationDataConfig() == null ^ this.getValidationDataConfig() == null)
             return false;
         if (other.getValidationDataConfig() != null && other.getValidationDataConfig().equals(this.getValidationDataConfig()) == false)
+            return false;
+        if (other.getOutputDataConfig() == null ^ this.getOutputDataConfig() == null)
+            return false;
+        if (other.getOutputDataConfig() != null && other.getOutputDataConfig().equals(this.getOutputDataConfig()) == false)
+            return false;
+        if (other.getHyperParameters() == null ^ this.getHyperParameters() == null)
+            return false;
+        if (other.getHyperParameters() != null && other.getHyperParameters().equals(this.getHyperParameters()) == false)
             return false;
         if (other.getVpcConfig() == null ^ this.getVpcConfig() == null)
             return false;
@@ -855,18 +855,18 @@ public class CreateModelCustomizationJobRequest extends com.amazonaws.AmazonWebS
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getBaseModelIdentifier() == null) ? 0 : getBaseModelIdentifier().hashCode());
-        hashCode = prime * hashCode + ((getClientRequestToken() == null) ? 0 : getClientRequestToken().hashCode());
-        hashCode = prime * hashCode + ((getCustomModelKmsKeyId() == null) ? 0 : getCustomModelKmsKeyId().hashCode());
-        hashCode = prime * hashCode + ((getCustomModelName() == null) ? 0 : getCustomModelName().hashCode());
-        hashCode = prime * hashCode + ((getCustomModelTags() == null) ? 0 : getCustomModelTags().hashCode());
-        hashCode = prime * hashCode + ((getHyperParameters() == null) ? 0 : getHyperParameters().hashCode());
         hashCode = prime * hashCode + ((getJobName() == null) ? 0 : getJobName().hashCode());
-        hashCode = prime * hashCode + ((getJobTags() == null) ? 0 : getJobTags().hashCode());
-        hashCode = prime * hashCode + ((getOutputDataConfig() == null) ? 0 : getOutputDataConfig().hashCode());
+        hashCode = prime * hashCode + ((getCustomModelName() == null) ? 0 : getCustomModelName().hashCode());
         hashCode = prime * hashCode + ((getRoleArn() == null) ? 0 : getRoleArn().hashCode());
+        hashCode = prime * hashCode + ((getClientRequestToken() == null) ? 0 : getClientRequestToken().hashCode());
+        hashCode = prime * hashCode + ((getBaseModelIdentifier() == null) ? 0 : getBaseModelIdentifier().hashCode());
+        hashCode = prime * hashCode + ((getCustomModelKmsKeyId() == null) ? 0 : getCustomModelKmsKeyId().hashCode());
+        hashCode = prime * hashCode + ((getJobTags() == null) ? 0 : getJobTags().hashCode());
+        hashCode = prime * hashCode + ((getCustomModelTags() == null) ? 0 : getCustomModelTags().hashCode());
         hashCode = prime * hashCode + ((getTrainingDataConfig() == null) ? 0 : getTrainingDataConfig().hashCode());
         hashCode = prime * hashCode + ((getValidationDataConfig() == null) ? 0 : getValidationDataConfig().hashCode());
+        hashCode = prime * hashCode + ((getOutputDataConfig() == null) ? 0 : getOutputDataConfig().hashCode());
+        hashCode = prime * hashCode + ((getHyperParameters() == null) ? 0 : getHyperParameters().hashCode());
         hashCode = prime * hashCode + ((getVpcConfig() == null) ? 0 : getVpcConfig().hashCode());
         return hashCode;
     }

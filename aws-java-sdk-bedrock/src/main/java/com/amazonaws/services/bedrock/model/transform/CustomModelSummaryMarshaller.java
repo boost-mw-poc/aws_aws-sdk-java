@@ -27,16 +27,16 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class CustomModelSummaryMarshaller {
 
-    private static final MarshallingInfo<String> BASEMODELARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("baseModelArn").build();
-    private static final MarshallingInfo<String> BASEMODELNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("baseModelName").build();
-    private static final MarshallingInfo<java.util.Date> CREATIONTIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("creationTime").timestampFormat("iso8601").build();
     private static final MarshallingInfo<String> MODELARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("modelArn").build();
     private static final MarshallingInfo<String> MODELNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("modelName").build();
+    private static final MarshallingInfo<java.util.Date> CREATIONTIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("creationTime").timestampFormat("iso8601").build();
+    private static final MarshallingInfo<String> BASEMODELARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("baseModelArn").build();
+    private static final MarshallingInfo<String> BASEMODELNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("baseModelName").build();
 
     private static final CustomModelSummaryMarshaller instance = new CustomModelSummaryMarshaller();
 
@@ -54,11 +54,11 @@ public class CustomModelSummaryMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(customModelSummary.getBaseModelArn(), BASEMODELARN_BINDING);
-            protocolMarshaller.marshall(customModelSummary.getBaseModelName(), BASEMODELNAME_BINDING);
-            protocolMarshaller.marshall(customModelSummary.getCreationTime(), CREATIONTIME_BINDING);
             protocolMarshaller.marshall(customModelSummary.getModelArn(), MODELARN_BINDING);
             protocolMarshaller.marshall(customModelSummary.getModelName(), MODELNAME_BINDING);
+            protocolMarshaller.marshall(customModelSummary.getCreationTime(), CREATIONTIME_BINDING);
+            protocolMarshaller.marshall(customModelSummary.getBaseModelArn(), BASEMODELARN_BINDING);
+            protocolMarshaller.marshall(customModelSummary.getBaseModelName(), BASEMODELNAME_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

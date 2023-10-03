@@ -48,15 +48,15 @@ public class ListCustomModelsResultJsonUnmarshaller implements Unmarshaller<List
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("nextToken", targetDepth)) {
+                    context.nextToken();
+                    listCustomModelsResult.setNextToken(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("modelSummaries", targetDepth)) {
                     context.nextToken();
                     listCustomModelsResult.setModelSummaries(new ListUnmarshaller<CustomModelSummary>(CustomModelSummaryJsonUnmarshaller.getInstance())
 
                     .unmarshall(context));
-                }
-                if (context.testExpression("nextToken", targetDepth)) {
-                    context.nextToken();
-                    listCustomModelsResult.setNextToken(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
