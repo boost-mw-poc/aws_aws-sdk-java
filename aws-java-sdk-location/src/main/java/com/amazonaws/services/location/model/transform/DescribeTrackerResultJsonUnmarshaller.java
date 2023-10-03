@@ -60,6 +60,10 @@ public class DescribeTrackerResultJsonUnmarshaller implements Unmarshaller<Descr
                     context.nextToken();
                     describeTrackerResult.setEventBridgeEnabled(context.getUnmarshaller(Boolean.class).unmarshall(context));
                 }
+                if (context.testExpression("KmsKeyEnableGeospatialQueries", targetDepth)) {
+                    context.nextToken();
+                    describeTrackerResult.setKmsKeyEnableGeospatialQueries(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
                 if (context.testExpression("KmsKeyId", targetDepth)) {
                     context.nextToken();
                     describeTrackerResult.setKmsKeyId(context.getUnmarshaller(String.class).unmarshall(context));

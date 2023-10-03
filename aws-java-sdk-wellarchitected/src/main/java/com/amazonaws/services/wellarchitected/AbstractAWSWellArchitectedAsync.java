@@ -119,6 +119,32 @@ public class AbstractAWSWellArchitectedAsync extends AbstractAWSWellArchitected 
     }
 
     @Override
+    public java.util.concurrent.Future<CreateReviewTemplateResult> createReviewTemplateAsync(CreateReviewTemplateRequest request) {
+
+        return createReviewTemplateAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateReviewTemplateResult> createReviewTemplateAsync(CreateReviewTemplateRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateReviewTemplateRequest, CreateReviewTemplateResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateTemplateShareResult> createTemplateShareAsync(CreateTemplateShareRequest request) {
+
+        return createTemplateShareAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateTemplateShareResult> createTemplateShareAsync(CreateTemplateShareRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateTemplateShareRequest, CreateTemplateShareResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateWorkloadResult> createWorkloadAsync(CreateWorkloadRequest request) {
 
         return createWorkloadAsync(request, null);
@@ -192,6 +218,32 @@ public class AbstractAWSWellArchitectedAsync extends AbstractAWSWellArchitected 
     @Override
     public java.util.concurrent.Future<DeleteProfileShareResult> deleteProfileShareAsync(DeleteProfileShareRequest request,
             com.amazonaws.handlers.AsyncHandler<DeleteProfileShareRequest, DeleteProfileShareResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteReviewTemplateResult> deleteReviewTemplateAsync(DeleteReviewTemplateRequest request) {
+
+        return deleteReviewTemplateAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteReviewTemplateResult> deleteReviewTemplateAsync(DeleteReviewTemplateRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteReviewTemplateRequest, DeleteReviewTemplateResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteTemplateShareResult> deleteTemplateShareAsync(DeleteTemplateShareRequest request) {
+
+        return deleteTemplateShareAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteTemplateShareResult> deleteTemplateShareAsync(DeleteTemplateShareRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteTemplateShareRequest, DeleteTemplateShareResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -379,6 +431,45 @@ public class AbstractAWSWellArchitectedAsync extends AbstractAWSWellArchitected 
     }
 
     @Override
+    public java.util.concurrent.Future<GetReviewTemplateResult> getReviewTemplateAsync(GetReviewTemplateRequest request) {
+
+        return getReviewTemplateAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetReviewTemplateResult> getReviewTemplateAsync(GetReviewTemplateRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetReviewTemplateRequest, GetReviewTemplateResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetReviewTemplateAnswerResult> getReviewTemplateAnswerAsync(GetReviewTemplateAnswerRequest request) {
+
+        return getReviewTemplateAnswerAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetReviewTemplateAnswerResult> getReviewTemplateAnswerAsync(GetReviewTemplateAnswerRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetReviewTemplateAnswerRequest, GetReviewTemplateAnswerResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetReviewTemplateLensReviewResult> getReviewTemplateLensReviewAsync(GetReviewTemplateLensReviewRequest request) {
+
+        return getReviewTemplateLensReviewAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetReviewTemplateLensReviewResult> getReviewTemplateLensReviewAsync(GetReviewTemplateLensReviewRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetReviewTemplateLensReviewRequest, GetReviewTemplateLensReviewResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetWorkloadResult> getWorkloadAsync(GetWorkloadRequest request) {
 
         return getWorkloadAsync(request, null);
@@ -561,6 +652,32 @@ public class AbstractAWSWellArchitectedAsync extends AbstractAWSWellArchitected 
     }
 
     @Override
+    public java.util.concurrent.Future<ListReviewTemplateAnswersResult> listReviewTemplateAnswersAsync(ListReviewTemplateAnswersRequest request) {
+
+        return listReviewTemplateAnswersAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListReviewTemplateAnswersResult> listReviewTemplateAnswersAsync(ListReviewTemplateAnswersRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListReviewTemplateAnswersRequest, ListReviewTemplateAnswersResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListReviewTemplatesResult> listReviewTemplatesAsync(ListReviewTemplatesRequest request) {
+
+        return listReviewTemplatesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListReviewTemplatesResult> listReviewTemplatesAsync(ListReviewTemplatesRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListReviewTemplatesRequest, ListReviewTemplatesResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ListShareInvitationsResult> listShareInvitationsAsync(ListShareInvitationsRequest request) {
 
         return listShareInvitationsAsync(request, null);
@@ -582,6 +699,19 @@ public class AbstractAWSWellArchitectedAsync extends AbstractAWSWellArchitected 
     @Override
     public java.util.concurrent.Future<ListTagsForResourceResult> listTagsForResourceAsync(ListTagsForResourceRequest request,
             com.amazonaws.handlers.AsyncHandler<ListTagsForResourceRequest, ListTagsForResourceResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListTemplateSharesResult> listTemplateSharesAsync(ListTemplateSharesRequest request) {
+
+        return listTemplateSharesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListTemplateSharesResult> listTemplateSharesAsync(ListTemplateSharesRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListTemplateSharesRequest, ListTemplateSharesResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -691,6 +821,45 @@ public class AbstractAWSWellArchitectedAsync extends AbstractAWSWellArchitected 
     }
 
     @Override
+    public java.util.concurrent.Future<UpdateReviewTemplateResult> updateReviewTemplateAsync(UpdateReviewTemplateRequest request) {
+
+        return updateReviewTemplateAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateReviewTemplateResult> updateReviewTemplateAsync(UpdateReviewTemplateRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateReviewTemplateRequest, UpdateReviewTemplateResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateReviewTemplateAnswerResult> updateReviewTemplateAnswerAsync(UpdateReviewTemplateAnswerRequest request) {
+
+        return updateReviewTemplateAnswerAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateReviewTemplateAnswerResult> updateReviewTemplateAnswerAsync(UpdateReviewTemplateAnswerRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateReviewTemplateAnswerRequest, UpdateReviewTemplateAnswerResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateReviewTemplateLensReviewResult> updateReviewTemplateLensReviewAsync(UpdateReviewTemplateLensReviewRequest request) {
+
+        return updateReviewTemplateLensReviewAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateReviewTemplateLensReviewResult> updateReviewTemplateLensReviewAsync(UpdateReviewTemplateLensReviewRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateReviewTemplateLensReviewRequest, UpdateReviewTemplateLensReviewResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<UpdateShareInvitationResult> updateShareInvitationAsync(UpdateShareInvitationRequest request) {
 
         return updateShareInvitationAsync(request, null);
@@ -751,6 +920,21 @@ public class AbstractAWSWellArchitectedAsync extends AbstractAWSWellArchitected 
     @Override
     public java.util.concurrent.Future<UpgradeProfileVersionResult> upgradeProfileVersionAsync(UpgradeProfileVersionRequest request,
             com.amazonaws.handlers.AsyncHandler<UpgradeProfileVersionRequest, UpgradeProfileVersionResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpgradeReviewTemplateLensReviewResult> upgradeReviewTemplateLensReviewAsync(
+            UpgradeReviewTemplateLensReviewRequest request) {
+
+        return upgradeReviewTemplateLensReviewAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpgradeReviewTemplateLensReviewResult> upgradeReviewTemplateLensReviewAsync(
+            UpgradeReviewTemplateLensReviewRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpgradeReviewTemplateLensReviewRequest, UpgradeReviewTemplateLensReviewResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

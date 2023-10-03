@@ -51,10 +51,16 @@ public class ListShareInvitationsRequest extends com.amazonaws.AmazonWebServiceR
     private Integer maxResults;
     /**
      * <p>
-     * Profile name prefix.
+     * An optional string added to the beginning of each profile name returned in the results.
      * </p>
      */
     private String profileNamePrefix;
+    /**
+     * <p>
+     * An optional string added to the beginning of each review template name returned in the results.
+     * </p>
+     */
+    private String templateNamePrefix;
 
     /**
      * @param workloadNamePrefix
@@ -249,11 +255,11 @@ public class ListShareInvitationsRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Profile name prefix.
+     * An optional string added to the beginning of each profile name returned in the results.
      * </p>
      * 
      * @param profileNamePrefix
-     *        Profile name prefix.
+     *        An optional string added to the beginning of each profile name returned in the results.
      */
 
     public void setProfileNamePrefix(String profileNamePrefix) {
@@ -262,10 +268,10 @@ public class ListShareInvitationsRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Profile name prefix.
+     * An optional string added to the beginning of each profile name returned in the results.
      * </p>
      * 
-     * @return Profile name prefix.
+     * @return An optional string added to the beginning of each profile name returned in the results.
      */
 
     public String getProfileNamePrefix() {
@@ -274,16 +280,56 @@ public class ListShareInvitationsRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Profile name prefix.
+     * An optional string added to the beginning of each profile name returned in the results.
      * </p>
      * 
      * @param profileNamePrefix
-     *        Profile name prefix.
+     *        An optional string added to the beginning of each profile name returned in the results.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public ListShareInvitationsRequest withProfileNamePrefix(String profileNamePrefix) {
         setProfileNamePrefix(profileNamePrefix);
+        return this;
+    }
+
+    /**
+     * <p>
+     * An optional string added to the beginning of each review template name returned in the results.
+     * </p>
+     * 
+     * @param templateNamePrefix
+     *        An optional string added to the beginning of each review template name returned in the results.
+     */
+
+    public void setTemplateNamePrefix(String templateNamePrefix) {
+        this.templateNamePrefix = templateNamePrefix;
+    }
+
+    /**
+     * <p>
+     * An optional string added to the beginning of each review template name returned in the results.
+     * </p>
+     * 
+     * @return An optional string added to the beginning of each review template name returned in the results.
+     */
+
+    public String getTemplateNamePrefix() {
+        return this.templateNamePrefix;
+    }
+
+    /**
+     * <p>
+     * An optional string added to the beginning of each review template name returned in the results.
+     * </p>
+     * 
+     * @param templateNamePrefix
+     *        An optional string added to the beginning of each review template name returned in the results.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListShareInvitationsRequest withTemplateNamePrefix(String templateNamePrefix) {
+        setTemplateNamePrefix(templateNamePrefix);
         return this;
     }
 
@@ -310,7 +356,9 @@ public class ListShareInvitationsRequest extends com.amazonaws.AmazonWebServiceR
         if (getMaxResults() != null)
             sb.append("MaxResults: ").append(getMaxResults()).append(",");
         if (getProfileNamePrefix() != null)
-            sb.append("ProfileNamePrefix: ").append(getProfileNamePrefix());
+            sb.append("ProfileNamePrefix: ").append(getProfileNamePrefix()).append(",");
+        if (getTemplateNamePrefix() != null)
+            sb.append("TemplateNamePrefix: ").append(getTemplateNamePrefix());
         sb.append("}");
         return sb.toString();
     }
@@ -349,6 +397,10 @@ public class ListShareInvitationsRequest extends com.amazonaws.AmazonWebServiceR
             return false;
         if (other.getProfileNamePrefix() != null && other.getProfileNamePrefix().equals(this.getProfileNamePrefix()) == false)
             return false;
+        if (other.getTemplateNamePrefix() == null ^ this.getTemplateNamePrefix() == null)
+            return false;
+        if (other.getTemplateNamePrefix() != null && other.getTemplateNamePrefix().equals(this.getTemplateNamePrefix()) == false)
+            return false;
         return true;
     }
 
@@ -363,6 +415,7 @@ public class ListShareInvitationsRequest extends com.amazonaws.AmazonWebServiceR
         hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
         hashCode = prime * hashCode + ((getMaxResults() == null) ? 0 : getMaxResults().hashCode());
         hashCode = prime * hashCode + ((getProfileNamePrefix() == null) ? 0 : getProfileNamePrefix().hashCode());
+        hashCode = prime * hashCode + ((getTemplateNamePrefix() == null) ? 0 : getTemplateNamePrefix().hashCode());
         return hashCode;
     }
 

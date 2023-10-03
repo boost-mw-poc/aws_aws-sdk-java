@@ -22,7 +22,8 @@ public enum ShareResourceType {
 
     WORKLOAD("WORKLOAD"),
     LENS("LENS"),
-    PROFILE("PROFILE");
+    PROFILE("PROFILE"),
+    TEMPLATE("TEMPLATE");
 
     private String value;
 

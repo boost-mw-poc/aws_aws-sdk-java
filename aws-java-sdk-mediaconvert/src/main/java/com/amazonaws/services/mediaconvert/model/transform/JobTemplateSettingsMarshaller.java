@@ -36,8 +36,6 @@ public class JobTemplateSettingsMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("esam").build();
     private static final MarshallingInfo<StructuredPojo> EXTENDEDDATASERVICES_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("extendedDataServices").build();
-    private static final MarshallingInfo<Integer> FOLLOWINPUTINDEX_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("followInputIndex").build();
     private static final MarshallingInfo<List> INPUTS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("inputs").build();
     private static final MarshallingInfo<StructuredPojo> KANTARWATERMARK_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
@@ -75,7 +73,6 @@ public class JobTemplateSettingsMarshaller {
             protocolMarshaller.marshall(jobTemplateSettings.getAvailBlanking(), AVAILBLANKING_BINDING);
             protocolMarshaller.marshall(jobTemplateSettings.getEsam(), ESAM_BINDING);
             protocolMarshaller.marshall(jobTemplateSettings.getExtendedDataServices(), EXTENDEDDATASERVICES_BINDING);
-            protocolMarshaller.marshall(jobTemplateSettings.getFollowInputIndex(), FOLLOWINPUTINDEX_BINDING);
             protocolMarshaller.marshall(jobTemplateSettings.getInputs(), INPUTS_BINDING);
             protocolMarshaller.marshall(jobTemplateSettings.getKantarWatermark(), KANTARWATERMARK_BINDING);
             protocolMarshaller.marshall(jobTemplateSettings.getMotionImageInserter(), MOTIONIMAGEINSERTER_BINDING);

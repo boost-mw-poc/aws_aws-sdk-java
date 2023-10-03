@@ -41,6 +41,8 @@ public class H265SettingsMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("codecProfile").build();
     private static final MarshallingInfo<String> DYNAMICSUBGOP_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("dynamicSubGop").build();
+    private static final MarshallingInfo<String> ENDOFSTREAMMARKERS_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("endOfStreamMarkers").build();
     private static final MarshallingInfo<String> FLICKERADAPTIVEQUANTIZATION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("flickerAdaptiveQuantization").build();
     private static final MarshallingInfo<String> FRAMERATECONTROL_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
@@ -135,6 +137,7 @@ public class H265SettingsMarshaller {
             protocolMarshaller.marshall(h265Settings.getCodecLevel(), CODECLEVEL_BINDING);
             protocolMarshaller.marshall(h265Settings.getCodecProfile(), CODECPROFILE_BINDING);
             protocolMarshaller.marshall(h265Settings.getDynamicSubGop(), DYNAMICSUBGOP_BINDING);
+            protocolMarshaller.marshall(h265Settings.getEndOfStreamMarkers(), ENDOFSTREAMMARKERS_BINDING);
             protocolMarshaller.marshall(h265Settings.getFlickerAdaptiveQuantization(), FLICKERADAPTIVEQUANTIZATION_BINDING);
             protocolMarshaller.marshall(h265Settings.getFramerateControl(), FRAMERATECONTROL_BINDING);
             protocolMarshaller.marshall(h265Settings.getFramerateConversionAlgorithm(), FRAMERATECONVERSIONALGORITHM_BINDING);

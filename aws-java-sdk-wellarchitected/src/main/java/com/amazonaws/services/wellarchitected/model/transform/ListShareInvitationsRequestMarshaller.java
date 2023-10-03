@@ -39,6 +39,8 @@ public class ListShareInvitationsRequestMarshaller {
             .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("MaxResults").build();
     private static final MarshallingInfo<String> PROFILENAMEPREFIX_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("ProfileNamePrefix").build();
+    private static final MarshallingInfo<String> TEMPLATENAMEPREFIX_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("TemplateNamePrefix").build();
 
     private static final ListShareInvitationsRequestMarshaller instance = new ListShareInvitationsRequestMarshaller();
 
@@ -62,6 +64,7 @@ public class ListShareInvitationsRequestMarshaller {
             protocolMarshaller.marshall(listShareInvitationsRequest.getNextToken(), NEXTTOKEN_BINDING);
             protocolMarshaller.marshall(listShareInvitationsRequest.getMaxResults(), MAXRESULTS_BINDING);
             protocolMarshaller.marshall(listShareInvitationsRequest.getProfileNamePrefix(), PROFILENAMEPREFIX_BINDING);
+            protocolMarshaller.marshall(listShareInvitationsRequest.getTemplateNamePrefix(), TEMPLATENAMEPREFIX_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

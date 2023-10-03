@@ -79,6 +79,12 @@ public class CreateWorkloadRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      */
     private java.util.List<String> profileArns;
+    /**
+     * <p>
+     * The list of review template ARNs to associate with the workload.
+     * </p>
+     */
+    private java.util.List<String> reviewTemplateArns;
 
     /**
      * @param workloadName
@@ -837,6 +843,76 @@ public class CreateWorkloadRequest extends com.amazonaws.AmazonWebServiceRequest
     }
 
     /**
+     * <p>
+     * The list of review template ARNs to associate with the workload.
+     * </p>
+     * 
+     * @return The list of review template ARNs to associate with the workload.
+     */
+
+    public java.util.List<String> getReviewTemplateArns() {
+        return reviewTemplateArns;
+    }
+
+    /**
+     * <p>
+     * The list of review template ARNs to associate with the workload.
+     * </p>
+     * 
+     * @param reviewTemplateArns
+     *        The list of review template ARNs to associate with the workload.
+     */
+
+    public void setReviewTemplateArns(java.util.Collection<String> reviewTemplateArns) {
+        if (reviewTemplateArns == null) {
+            this.reviewTemplateArns = null;
+            return;
+        }
+
+        this.reviewTemplateArns = new java.util.ArrayList<String>(reviewTemplateArns);
+    }
+
+    /**
+     * <p>
+     * The list of review template ARNs to associate with the workload.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setReviewTemplateArns(java.util.Collection)} or {@link #withReviewTemplateArns(java.util.Collection)} if
+     * you want to override the existing values.
+     * </p>
+     * 
+     * @param reviewTemplateArns
+     *        The list of review template ARNs to associate with the workload.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateWorkloadRequest withReviewTemplateArns(String... reviewTemplateArns) {
+        if (this.reviewTemplateArns == null) {
+            setReviewTemplateArns(new java.util.ArrayList<String>(reviewTemplateArns.length));
+        }
+        for (String ele : reviewTemplateArns) {
+            this.reviewTemplateArns.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The list of review template ARNs to associate with the workload.
+     * </p>
+     * 
+     * @param reviewTemplateArns
+     *        The list of review template ARNs to associate with the workload.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateWorkloadRequest withReviewTemplateArns(java.util.Collection<String> reviewTemplateArns) {
+        setReviewTemplateArns(reviewTemplateArns);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -883,7 +959,9 @@ public class CreateWorkloadRequest extends com.amazonaws.AmazonWebServiceRequest
         if (getApplications() != null)
             sb.append("Applications: ").append(getApplications()).append(",");
         if (getProfileArns() != null)
-            sb.append("ProfileArns: ").append(getProfileArns());
+            sb.append("ProfileArns: ").append(getProfileArns()).append(",");
+        if (getReviewTemplateArns() != null)
+            sb.append("ReviewTemplateArns: ").append(getReviewTemplateArns());
         sb.append("}");
         return sb.toString();
     }
@@ -970,6 +1048,10 @@ public class CreateWorkloadRequest extends com.amazonaws.AmazonWebServiceRequest
             return false;
         if (other.getProfileArns() != null && other.getProfileArns().equals(this.getProfileArns()) == false)
             return false;
+        if (other.getReviewTemplateArns() == null ^ this.getReviewTemplateArns() == null)
+            return false;
+        if (other.getReviewTemplateArns() != null && other.getReviewTemplateArns().equals(this.getReviewTemplateArns()) == false)
+            return false;
         return true;
     }
 
@@ -996,6 +1078,7 @@ public class CreateWorkloadRequest extends com.amazonaws.AmazonWebServiceRequest
         hashCode = prime * hashCode + ((getDiscoveryConfig() == null) ? 0 : getDiscoveryConfig().hashCode());
         hashCode = prime * hashCode + ((getApplications() == null) ? 0 : getApplications().hashCode());
         hashCode = prime * hashCode + ((getProfileArns() == null) ? 0 : getProfileArns().hashCode());
+        hashCode = prime * hashCode + ((getReviewTemplateArns() == null) ? 0 : getReviewTemplateArns().hashCode());
         return hashCode;
     }
 

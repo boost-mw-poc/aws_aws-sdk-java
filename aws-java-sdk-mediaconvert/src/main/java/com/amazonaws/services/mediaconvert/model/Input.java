@@ -180,6 +180,8 @@ public class Input implements Serializable, Cloneable, StructuredPojo {
      * https://docs.aws.amazon.com/mediaconvert/latest/ug/video-generator.html
      */
     private InputVideoGenerator videoGenerator;
+    /** Contains an array of video overlays. */
+    private java.util.List<VideoOverlay> videoOverlays;
     /**
      * Input video selectors contain the video settings for the input. Each of your inputs can have up to one video
      * selector.
@@ -1663,6 +1665,68 @@ public class Input implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * Contains an array of video overlays.
+     * 
+     * @return Contains an array of video overlays.
+     */
+
+    public java.util.List<VideoOverlay> getVideoOverlays() {
+        return videoOverlays;
+    }
+
+    /**
+     * Contains an array of video overlays.
+     * 
+     * @param videoOverlays
+     *        Contains an array of video overlays.
+     */
+
+    public void setVideoOverlays(java.util.Collection<VideoOverlay> videoOverlays) {
+        if (videoOverlays == null) {
+            this.videoOverlays = null;
+            return;
+        }
+
+        this.videoOverlays = new java.util.ArrayList<VideoOverlay>(videoOverlays);
+    }
+
+    /**
+     * Contains an array of video overlays.
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setVideoOverlays(java.util.Collection)} or {@link #withVideoOverlays(java.util.Collection)} if you want
+     * to override the existing values.
+     * </p>
+     * 
+     * @param videoOverlays
+     *        Contains an array of video overlays.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Input withVideoOverlays(VideoOverlay... videoOverlays) {
+        if (this.videoOverlays == null) {
+            setVideoOverlays(new java.util.ArrayList<VideoOverlay>(videoOverlays.length));
+        }
+        for (VideoOverlay ele : videoOverlays) {
+            this.videoOverlays.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * Contains an array of video overlays.
+     * 
+     * @param videoOverlays
+     *        Contains an array of video overlays.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Input withVideoOverlays(java.util.Collection<VideoOverlay> videoOverlays) {
+        setVideoOverlays(videoOverlays);
+        return this;
+    }
+
+    /**
      * Input video selectors contain the video settings for the input. Each of your inputs can have up to one video
      * selector.
      * 
@@ -1760,6 +1824,8 @@ public class Input implements Serializable, Cloneable, StructuredPojo {
             sb.append("TimecodeStart: ").append(getTimecodeStart()).append(",");
         if (getVideoGenerator() != null)
             sb.append("VideoGenerator: ").append(getVideoGenerator()).append(",");
+        if (getVideoOverlays() != null)
+            sb.append("VideoOverlays: ").append(getVideoOverlays()).append(",");
         if (getVideoSelector() != null)
             sb.append("VideoSelector: ").append(getVideoSelector());
         sb.append("}");
@@ -1868,6 +1934,10 @@ public class Input implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getVideoGenerator() != null && other.getVideoGenerator().equals(this.getVideoGenerator()) == false)
             return false;
+        if (other.getVideoOverlays() == null ^ this.getVideoOverlays() == null)
+            return false;
+        if (other.getVideoOverlays() != null && other.getVideoOverlays().equals(this.getVideoOverlays()) == false)
+            return false;
         if (other.getVideoSelector() == null ^ this.getVideoSelector() == null)
             return false;
         if (other.getVideoSelector() != null && other.getVideoSelector().equals(this.getVideoSelector()) == false)
@@ -1903,6 +1973,7 @@ public class Input implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getTimecodeSource() == null) ? 0 : getTimecodeSource().hashCode());
         hashCode = prime * hashCode + ((getTimecodeStart() == null) ? 0 : getTimecodeStart().hashCode());
         hashCode = prime * hashCode + ((getVideoGenerator() == null) ? 0 : getVideoGenerator().hashCode());
+        hashCode = prime * hashCode + ((getVideoOverlays() == null) ? 0 : getVideoOverlays().hashCode());
         hashCode = prime * hashCode + ((getVideoSelector() == null) ? 0 : getVideoSelector().hashCode());
         return hashCode;
     }

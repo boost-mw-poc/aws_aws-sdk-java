@@ -33,8 +33,8 @@ public class ListProfileSharesRequest extends com.amazonaws.AmazonWebServiceRequ
     private String profileArn;
     /**
      * <p>
-     * The Amazon Web Services account ID, IAM role, organization ID, or organizational unit (OU) ID with which the
-     * profile is shared.
+     * The Amazon Web Services account ID, organization ID, or organizational unit (OU) ID with which the profile is
+     * shared.
      * </p>
      */
     private String sharedWithPrefix;
@@ -91,13 +91,13 @@ public class ListProfileSharesRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The Amazon Web Services account ID, IAM role, organization ID, or organizational unit (OU) ID with which the
-     * profile is shared.
+     * The Amazon Web Services account ID, organization ID, or organizational unit (OU) ID with which the profile is
+     * shared.
      * </p>
      * 
      * @param sharedWithPrefix
-     *        The Amazon Web Services account ID, IAM role, organization ID, or organizational unit (OU) ID with which
-     *        the profile is shared.
+     *        The Amazon Web Services account ID, organization ID, or organizational unit (OU) ID with which the profile
+     *        is shared.
      */
 
     public void setSharedWithPrefix(String sharedWithPrefix) {
@@ -106,12 +106,12 @@ public class ListProfileSharesRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The Amazon Web Services account ID, IAM role, organization ID, or organizational unit (OU) ID with which the
-     * profile is shared.
+     * The Amazon Web Services account ID, organization ID, or organizational unit (OU) ID with which the profile is
+     * shared.
      * </p>
      * 
-     * @return The Amazon Web Services account ID, IAM role, organization ID, or organizational unit (OU) ID with which
-     *         the profile is shared.
+     * @return The Amazon Web Services account ID, organization ID, or organizational unit (OU) ID with which the
+     *         profile is shared.
      */
 
     public String getSharedWithPrefix() {
@@ -120,13 +120,13 @@ public class ListProfileSharesRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The Amazon Web Services account ID, IAM role, organization ID, or organizational unit (OU) ID with which the
-     * profile is shared.
+     * The Amazon Web Services account ID, organization ID, or organizational unit (OU) ID with which the profile is
+     * shared.
      * </p>
      * 
      * @param sharedWithPrefix
-     *        The Amazon Web Services account ID, IAM role, organization ID, or organizational unit (OU) ID with which
-     *        the profile is shared.
+     *        The Amazon Web Services account ID, organization ID, or organizational unit (OU) ID with which the profile
+     *        is shared.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

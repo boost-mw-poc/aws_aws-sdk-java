@@ -64,6 +64,12 @@ public class H264Settings implements Serializable, Cloneable, StructuredPojo {
      * reference frames. To use the same number B-frames for all types of content: Choose Static.
      */
     private String dynamicSubGop;
+    /**
+     * Optionally include or suppress markers at the end of your output that signal the end of the video stream. To
+     * include end of stream markers: Leave blank or keep the default value, Include. To not include end of stream
+     * markers: Choose Suppress. This is useful when your output will be inserted into another stream.
+     */
+    private String endOfStreamMarkers;
     /** Entropy encoding mode. Use CABAC (must be in Main or High profile) or CAVLC. */
     private String entropyEncoding;
     /**
@@ -721,6 +727,73 @@ public class H264Settings implements Serializable, Cloneable, StructuredPojo {
 
     public H264Settings withDynamicSubGop(H264DynamicSubGop dynamicSubGop) {
         this.dynamicSubGop = dynamicSubGop.toString();
+        return this;
+    }
+
+    /**
+     * Optionally include or suppress markers at the end of your output that signal the end of the video stream. To
+     * include end of stream markers: Leave blank or keep the default value, Include. To not include end of stream
+     * markers: Choose Suppress. This is useful when your output will be inserted into another stream.
+     * 
+     * @param endOfStreamMarkers
+     *        Optionally include or suppress markers at the end of your output that signal the end of the video stream.
+     *        To include end of stream markers: Leave blank or keep the default value, Include. To not include end of
+     *        stream markers: Choose Suppress. This is useful when your output will be inserted into another stream.
+     * @see H264EndOfStreamMarkers
+     */
+
+    public void setEndOfStreamMarkers(String endOfStreamMarkers) {
+        this.endOfStreamMarkers = endOfStreamMarkers;
+    }
+
+    /**
+     * Optionally include or suppress markers at the end of your output that signal the end of the video stream. To
+     * include end of stream markers: Leave blank or keep the default value, Include. To not include end of stream
+     * markers: Choose Suppress. This is useful when your output will be inserted into another stream.
+     * 
+     * @return Optionally include or suppress markers at the end of your output that signal the end of the video stream.
+     *         To include end of stream markers: Leave blank or keep the default value, Include. To not include end of
+     *         stream markers: Choose Suppress. This is useful when your output will be inserted into another stream.
+     * @see H264EndOfStreamMarkers
+     */
+
+    public String getEndOfStreamMarkers() {
+        return this.endOfStreamMarkers;
+    }
+
+    /**
+     * Optionally include or suppress markers at the end of your output that signal the end of the video stream. To
+     * include end of stream markers: Leave blank or keep the default value, Include. To not include end of stream
+     * markers: Choose Suppress. This is useful when your output will be inserted into another stream.
+     * 
+     * @param endOfStreamMarkers
+     *        Optionally include or suppress markers at the end of your output that signal the end of the video stream.
+     *        To include end of stream markers: Leave blank or keep the default value, Include. To not include end of
+     *        stream markers: Choose Suppress. This is useful when your output will be inserted into another stream.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see H264EndOfStreamMarkers
+     */
+
+    public H264Settings withEndOfStreamMarkers(String endOfStreamMarkers) {
+        setEndOfStreamMarkers(endOfStreamMarkers);
+        return this;
+    }
+
+    /**
+     * Optionally include or suppress markers at the end of your output that signal the end of the video stream. To
+     * include end of stream markers: Leave blank or keep the default value, Include. To not include end of stream
+     * markers: Choose Suppress. This is useful when your output will be inserted into another stream.
+     * 
+     * @param endOfStreamMarkers
+     *        Optionally include or suppress markers at the end of your output that signal the end of the video stream.
+     *        To include end of stream markers: Leave blank or keep the default value, Include. To not include end of
+     *        stream markers: Choose Suppress. This is useful when your output will be inserted into another stream.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see H264EndOfStreamMarkers
+     */
+
+    public H264Settings withEndOfStreamMarkers(H264EndOfStreamMarkers endOfStreamMarkers) {
+        this.endOfStreamMarkers = endOfStreamMarkers.toString();
         return this;
     }
 
@@ -3313,6 +3386,8 @@ public class H264Settings implements Serializable, Cloneable, StructuredPojo {
             sb.append("CodecProfile: ").append(getCodecProfile()).append(",");
         if (getDynamicSubGop() != null)
             sb.append("DynamicSubGop: ").append(getDynamicSubGop()).append(",");
+        if (getEndOfStreamMarkers() != null)
+            sb.append("EndOfStreamMarkers: ").append(getEndOfStreamMarkers()).append(",");
         if (getEntropyEncoding() != null)
             sb.append("EntropyEncoding: ").append(getEntropyEncoding()).append(",");
         if (getFieldEncoding() != null)
@@ -3422,6 +3497,10 @@ public class H264Settings implements Serializable, Cloneable, StructuredPojo {
         if (other.getDynamicSubGop() == null ^ this.getDynamicSubGop() == null)
             return false;
         if (other.getDynamicSubGop() != null && other.getDynamicSubGop().equals(this.getDynamicSubGop()) == false)
+            return false;
+        if (other.getEndOfStreamMarkers() == null ^ this.getEndOfStreamMarkers() == null)
+            return false;
+        if (other.getEndOfStreamMarkers() != null && other.getEndOfStreamMarkers().equals(this.getEndOfStreamMarkers()) == false)
             return false;
         if (other.getEntropyEncoding() == null ^ this.getEntropyEncoding() == null)
             return false;
@@ -3583,6 +3662,7 @@ public class H264Settings implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getCodecLevel() == null) ? 0 : getCodecLevel().hashCode());
         hashCode = prime * hashCode + ((getCodecProfile() == null) ? 0 : getCodecProfile().hashCode());
         hashCode = prime * hashCode + ((getDynamicSubGop() == null) ? 0 : getDynamicSubGop().hashCode());
+        hashCode = prime * hashCode + ((getEndOfStreamMarkers() == null) ? 0 : getEndOfStreamMarkers().hashCode());
         hashCode = prime * hashCode + ((getEntropyEncoding() == null) ? 0 : getEntropyEncoding().hashCode());
         hashCode = prime * hashCode + ((getFieldEncoding() == null) ? 0 : getFieldEncoding().hashCode());
         hashCode = prime * hashCode + ((getFlickerAdaptiveQuantization() == null) ? 0 : getFlickerAdaptiveQuantization().hashCode());

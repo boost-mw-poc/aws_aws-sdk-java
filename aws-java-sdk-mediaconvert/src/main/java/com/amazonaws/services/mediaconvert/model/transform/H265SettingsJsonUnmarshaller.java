@@ -76,6 +76,10 @@ public class H265SettingsJsonUnmarshaller implements Unmarshaller<H265Settings, 
                     context.nextToken();
                     h265Settings.setDynamicSubGop(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("endOfStreamMarkers", targetDepth)) {
+                    context.nextToken();
+                    h265Settings.setEndOfStreamMarkers(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("flickerAdaptiveQuantization", targetDepth)) {
                     context.nextToken();
                     h265Settings.setFlickerAdaptiveQuantization(context.getUnmarshaller(String.class).unmarshall(context));

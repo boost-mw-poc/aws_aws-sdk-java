@@ -26,6 +26,9 @@ public class ListSecurityProfileApplicationsResult extends com.amazonaws.AmazonW
 
     /**
      * <p>
+     * This API is in preview release for Amazon Connect and is subject to change.
+     * </p>
+     * <p>
      * A list of the third party application's metadata.
      * </p>
      */
@@ -40,10 +43,15 @@ public class ListSecurityProfileApplicationsResult extends com.amazonaws.AmazonW
 
     /**
      * <p>
+     * This API is in preview release for Amazon Connect and is subject to change.
+     * </p>
+     * <p>
      * A list of the third party application's metadata.
      * </p>
      * 
-     * @return A list of the third party application's metadata.
+     * @return This API is in preview release for Amazon Connect and is subject to change.</p>
+     *         <p>
+     *         A list of the third party application's metadata.
      */
 
     public java.util.List<Application> getApplications() {
@@ -52,10 +60,15 @@ public class ListSecurityProfileApplicationsResult extends com.amazonaws.AmazonW
 
     /**
      * <p>
+     * This API is in preview release for Amazon Connect and is subject to change.
+     * </p>
+     * <p>
      * A list of the third party application's metadata.
      * </p>
      * 
      * @param applications
+     *        This API is in preview release for Amazon Connect and is subject to change.</p>
+     *        <p>
      *        A list of the third party application's metadata.
      */
 
@@ -70,6 +83,9 @@ public class ListSecurityProfileApplicationsResult extends com.amazonaws.AmazonW
 
     /**
      * <p>
+     * This API is in preview release for Amazon Connect and is subject to change.
+     * </p>
+     * <p>
      * A list of the third party application's metadata.
      * </p>
      * <p>
@@ -79,6 +95,8 @@ public class ListSecurityProfileApplicationsResult extends com.amazonaws.AmazonW
      * </p>
      * 
      * @param applications
+     *        This API is in preview release for Amazon Connect and is subject to change.</p>
+     *        <p>
      *        A list of the third party application's metadata.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -95,10 +113,15 @@ public class ListSecurityProfileApplicationsResult extends com.amazonaws.AmazonW
 
     /**
      * <p>
+     * This API is in preview release for Amazon Connect and is subject to change.
+     * </p>
+     * <p>
      * A list of the third party application's metadata.
      * </p>
      * 
      * @param applications
+     *        This API is in preview release for Amazon Connect and is subject to change.</p>
+     *        <p>
      *        A list of the third party application's metadata.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

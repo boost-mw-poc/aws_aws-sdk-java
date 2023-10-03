@@ -1,3 +1,28 @@
+# __1.12.562__ __2023-10-03__
+## __AWS Elemental MediaConvert__
+  - ### Features
+    - This release adds the ability to replace video frames without modifying the audio essence.
+
+## __AWS Well-Architected Tool__
+  - ### Features
+    - AWS Well-Architected now supports Review Templates that allows you to create templates with pre-filled answers for Well-Architected and Custom Lens best practices.
+
+## __Amazon Connect Service__
+  - ### Features
+    - GetMetricDataV2 API: Update to include new metrics CONTACTS_RESOLVED_IN_X , AVG_HOLD_TIME_ALL_CONTACTS , AVG_RESOLUTION_TIME , ABANDONMENT_RATE , AGENT_NON_RESPONSE_WITHOUT_CUSTOMER_ABANDONS with added features: Interval Period, TimeZone, Negate MetricFilters, Extended date time range.
+
+## __Amazon Location Service__
+  - ### Features
+    - Amazon Location Service adds support for bounding polygon queries. Additionally, the GeofenceCount field has been added to the DescribeGeofenceCollection API response.
+
+## __Amazon SageMaker Service__
+  - ### Features
+    - This release allows users to run Selective Execution in SageMaker Pipelines without SourcePipelineExecutionArn if selected steps do not have any dependent steps.
+
+## __CloudWatch Observability Access Manager__
+  - ### Features
+    - This release adds support for sharing AWS::ApplicationInsights::Application resources.
+
 # __1.12.561__ __2023-10-02__
 ## __AWS Security Token Service__
   - ### Features

@@ -69,6 +69,12 @@ public class H265Settings implements Serializable, Cloneable, StructuredPojo {
      */
     private String dynamicSubGop;
     /**
+     * Optionally include or suppress markers at the end of your output that signal the end of the video stream. To
+     * include end of stream markers: Leave blank or keep the default value, Include. To not include end of stream
+     * markers: Choose Suppress. This is useful when your output will be inserted into another stream.
+     */
+    private String endOfStreamMarkers;
+    /**
      * Enable this setting to have the encoder reduce I-frame pop. I-frame pop appears as a visual flicker that can
      * arise when the encoder saves bits by copying some macroblocks many times from frame to frame, and then refreshes
      * them at the I-frame. When you enable this setting, the encoder updates these macroblocks slightly more often to
@@ -767,6 +773,73 @@ public class H265Settings implements Serializable, Cloneable, StructuredPojo {
 
     public H265Settings withDynamicSubGop(H265DynamicSubGop dynamicSubGop) {
         this.dynamicSubGop = dynamicSubGop.toString();
+        return this;
+    }
+
+    /**
+     * Optionally include or suppress markers at the end of your output that signal the end of the video stream. To
+     * include end of stream markers: Leave blank or keep the default value, Include. To not include end of stream
+     * markers: Choose Suppress. This is useful when your output will be inserted into another stream.
+     * 
+     * @param endOfStreamMarkers
+     *        Optionally include or suppress markers at the end of your output that signal the end of the video stream.
+     *        To include end of stream markers: Leave blank or keep the default value, Include. To not include end of
+     *        stream markers: Choose Suppress. This is useful when your output will be inserted into another stream.
+     * @see H265EndOfStreamMarkers
+     */
+
+    public void setEndOfStreamMarkers(String endOfStreamMarkers) {
+        this.endOfStreamMarkers = endOfStreamMarkers;
+    }
+
+    /**
+     * Optionally include or suppress markers at the end of your output that signal the end of the video stream. To
+     * include end of stream markers: Leave blank or keep the default value, Include. To not include end of stream
+     * markers: Choose Suppress. This is useful when your output will be inserted into another stream.
+     * 
+     * @return Optionally include or suppress markers at the end of your output that signal the end of the video stream.
+     *         To include end of stream markers: Leave blank or keep the default value, Include. To not include end of
+     *         stream markers: Choose Suppress. This is useful when your output will be inserted into another stream.
+     * @see H265EndOfStreamMarkers
+     */
+
+    public String getEndOfStreamMarkers() {
+        return this.endOfStreamMarkers;
+    }
+
+    /**
+     * Optionally include or suppress markers at the end of your output that signal the end of the video stream. To
+     * include end of stream markers: Leave blank or keep the default value, Include. To not include end of stream
+     * markers: Choose Suppress. This is useful when your output will be inserted into another stream.
+     * 
+     * @param endOfStreamMarkers
+     *        Optionally include or suppress markers at the end of your output that signal the end of the video stream.
+     *        To include end of stream markers: Leave blank or keep the default value, Include. To not include end of
+     *        stream markers: Choose Suppress. This is useful when your output will be inserted into another stream.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see H265EndOfStreamMarkers
+     */
+
+    public H265Settings withEndOfStreamMarkers(String endOfStreamMarkers) {
+        setEndOfStreamMarkers(endOfStreamMarkers);
+        return this;
+    }
+
+    /**
+     * Optionally include or suppress markers at the end of your output that signal the end of the video stream. To
+     * include end of stream markers: Leave blank or keep the default value, Include. To not include end of stream
+     * markers: Choose Suppress. This is useful when your output will be inserted into another stream.
+     * 
+     * @param endOfStreamMarkers
+     *        Optionally include or suppress markers at the end of your output that signal the end of the video stream.
+     *        To include end of stream markers: Leave blank or keep the default value, Include. To not include end of
+     *        stream markers: Choose Suppress. This is useful when your output will be inserted into another stream.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see H265EndOfStreamMarkers
+     */
+
+    public H265Settings withEndOfStreamMarkers(H265EndOfStreamMarkers endOfStreamMarkers) {
+        this.endOfStreamMarkers = endOfStreamMarkers.toString();
         return this;
     }
 
@@ -3218,6 +3291,8 @@ public class H265Settings implements Serializable, Cloneable, StructuredPojo {
             sb.append("CodecProfile: ").append(getCodecProfile()).append(",");
         if (getDynamicSubGop() != null)
             sb.append("DynamicSubGop: ").append(getDynamicSubGop()).append(",");
+        if (getEndOfStreamMarkers() != null)
+            sb.append("EndOfStreamMarkers: ").append(getEndOfStreamMarkers()).append(",");
         if (getFlickerAdaptiveQuantization() != null)
             sb.append("FlickerAdaptiveQuantization: ").append(getFlickerAdaptiveQuantization()).append(",");
         if (getFramerateControl() != null)
@@ -3329,6 +3404,10 @@ public class H265Settings implements Serializable, Cloneable, StructuredPojo {
         if (other.getDynamicSubGop() == null ^ this.getDynamicSubGop() == null)
             return false;
         if (other.getDynamicSubGop() != null && other.getDynamicSubGop().equals(this.getDynamicSubGop()) == false)
+            return false;
+        if (other.getEndOfStreamMarkers() == null ^ this.getEndOfStreamMarkers() == null)
+            return false;
+        if (other.getEndOfStreamMarkers() != null && other.getEndOfStreamMarkers().equals(this.getEndOfStreamMarkers()) == false)
             return false;
         if (other.getFlickerAdaptiveQuantization() == null ^ this.getFlickerAdaptiveQuantization() == null)
             return false;
@@ -3488,6 +3567,7 @@ public class H265Settings implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getCodecLevel() == null) ? 0 : getCodecLevel().hashCode());
         hashCode = prime * hashCode + ((getCodecProfile() == null) ? 0 : getCodecProfile().hashCode());
         hashCode = prime * hashCode + ((getDynamicSubGop() == null) ? 0 : getDynamicSubGop().hashCode());
+        hashCode = prime * hashCode + ((getEndOfStreamMarkers() == null) ? 0 : getEndOfStreamMarkers().hashCode());
         hashCode = prime * hashCode + ((getFlickerAdaptiveQuantization() == null) ? 0 : getFlickerAdaptiveQuantization().hashCode());
         hashCode = prime * hashCode + ((getFramerateControl() == null) ? 0 : getFramerateControl().hashCode());
         hashCode = prime * hashCode + ((getFramerateConversionAlgorithm() == null) ? 0 : getFramerateConversionAlgorithm().hashCode());

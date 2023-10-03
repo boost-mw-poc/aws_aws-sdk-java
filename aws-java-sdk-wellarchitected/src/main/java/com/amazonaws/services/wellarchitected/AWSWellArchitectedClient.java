@@ -683,6 +683,175 @@ public class AWSWellArchitectedClient extends AmazonWebServiceClient implements 
 
     /**
      * <p>
+     * Create a review template.
+     * </p>
+     * <note>
+     * <p>
+     * <b>Disclaimer</b>
+     * </p>
+     * <p>
+     * Do not include or gather personal identifiable information (PII) of end users or other identifiable individuals
+     * in or via your review templates. If your review template or those shared with you and used in your account do
+     * include or collect PII you are responsible for: ensuring that the included PII is processed in accordance with
+     * applicable law, providing adequate privacy notices, and obtaining necessary consents for processing such data.
+     * </p>
+     * </note>
+     * 
+     * @param createReviewTemplateRequest
+     * @return Result of the CreateReviewTemplate operation returned by the service.
+     * @throws ValidationException
+     *         The user input is not valid.
+     * @throws ConflictException
+     *         The resource has already been processed, was deleted, or is too large.
+     * @throws ServiceQuotaExceededException
+     *         The user has reached their resource quota.
+     * @throws InternalServerException
+     *         There is a problem with the Well-Architected Tool API service.
+     * @throws AccessDeniedException
+     *         User does not have sufficient access to perform this action.
+     * @throws ResourceNotFoundException
+     *         The requested resource was not found.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @sample AWSWellArchitected.CreateReviewTemplate
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/CreateReviewTemplate"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public CreateReviewTemplateResult createReviewTemplate(CreateReviewTemplateRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateReviewTemplate(request);
+    }
+
+    @SdkInternalApi
+    final CreateReviewTemplateResult executeCreateReviewTemplate(CreateReviewTemplateRequest createReviewTemplateRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createReviewTemplateRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateReviewTemplateRequest> request = null;
+        Response<CreateReviewTemplateResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateReviewTemplateRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(createReviewTemplateRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "WellArchitected");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateReviewTemplate");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<CreateReviewTemplateResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new CreateReviewTemplateResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Create a review template share.
+     * </p>
+     * <p>
+     * The owner of a review template can share it with other Amazon Web Services accounts, users, an organization, and
+     * organizational units (OUs) in the same Amazon Web Services Region.
+     * </p>
+     * <p>
+     * Shared access to a review template is not removed until the review template share invitation is deleted.
+     * </p>
+     * <p>
+     * If you share a review template with an organization or OU, all accounts in the organization or OU are granted
+     * access to the review template.
+     * </p>
+     * <note>
+     * <p>
+     * <b>Disclaimer</b>
+     * </p>
+     * <p>
+     * By sharing your review template with other Amazon Web Services accounts, you acknowledge that Amazon Web Services
+     * will make your review template available to those other accounts.
+     * </p>
+     * </note>
+     * 
+     * @param createTemplateShareRequest
+     * @return Result of the CreateTemplateShare operation returned by the service.
+     * @throws ValidationException
+     *         The user input is not valid.
+     * @throws ConflictException
+     *         The resource has already been processed, was deleted, or is too large.
+     * @throws InternalServerException
+     *         There is a problem with the Well-Architected Tool API service.
+     * @throws ResourceNotFoundException
+     *         The requested resource was not found.
+     * @throws ServiceQuotaExceededException
+     *         The user has reached their resource quota.
+     * @throws AccessDeniedException
+     *         User does not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @sample AWSWellArchitected.CreateTemplateShare
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/CreateTemplateShare"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public CreateTemplateShareResult createTemplateShare(CreateTemplateShareRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateTemplateShare(request);
+    }
+
+    @SdkInternalApi
+    final CreateTemplateShareResult executeCreateTemplateShare(CreateTemplateShareRequest createTemplateShareRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createTemplateShareRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateTemplateShareRequest> request = null;
+        Response<CreateTemplateShareResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateTemplateShareRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(createTemplateShareRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "WellArchitected");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateTemplateShare");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<CreateTemplateShareResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new CreateTemplateShareResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Create a new workload.
      * </p>
      * <p>
@@ -704,6 +873,31 @@ public class AWSWellArchitectedClient extends AmazonWebServiceClient implements 
      * following section.
      * </p>
      * </important>
+     * <p>
+     * When creating a workload using a review template, you must have the following IAM permissions:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>wellarchitected:GetReviewTemplate</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>wellarchitected:GetReviewTemplateAnswer</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>wellarchitected:ListReviewTemplateAnswers</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>wellarchitected:GetReviewTemplateLensReview</code>
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param createWorkloadRequest
      *        Input for workload creation.
@@ -1153,6 +1347,152 @@ public class AWSWellArchitectedClient extends AmazonWebServiceClient implements 
 
             HttpResponseHandler<AmazonWebServiceResponse<DeleteProfileShareResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DeleteProfileShareResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Delete a review template.
+     * </p>
+     * <p>
+     * Only the owner of a review template can delete it.
+     * </p>
+     * <p>
+     * After the review template is deleted, Amazon Web Services accounts, users, organizations, and organizational
+     * units (OUs) that you shared the review template with will no longer be able to apply it to new workloads.
+     * </p>
+     * 
+     * @param deleteReviewTemplateRequest
+     * @return Result of the DeleteReviewTemplate operation returned by the service.
+     * @throws ValidationException
+     *         The user input is not valid.
+     * @throws ResourceNotFoundException
+     *         The requested resource was not found.
+     * @throws ConflictException
+     *         The resource has already been processed, was deleted, or is too large.
+     * @throws InternalServerException
+     *         There is a problem with the Well-Architected Tool API service.
+     * @throws AccessDeniedException
+     *         User does not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @sample AWSWellArchitected.DeleteReviewTemplate
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/DeleteReviewTemplate"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DeleteReviewTemplateResult deleteReviewTemplate(DeleteReviewTemplateRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteReviewTemplate(request);
+    }
+
+    @SdkInternalApi
+    final DeleteReviewTemplateResult executeDeleteReviewTemplate(DeleteReviewTemplateRequest deleteReviewTemplateRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteReviewTemplateRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteReviewTemplateRequest> request = null;
+        Response<DeleteReviewTemplateResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteReviewTemplateRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(deleteReviewTemplateRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "WellArchitected");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteReviewTemplate");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeleteReviewTemplateResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DeleteReviewTemplateResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Delete a review template share.
+     * </p>
+     * <p>
+     * After the review template share is deleted, Amazon Web Services accounts, users, organizations, and
+     * organizational units (OUs) that you shared the review template with will no longer be able to apply it to new
+     * workloads.
+     * </p>
+     * 
+     * @param deleteTemplateShareRequest
+     * @return Result of the DeleteTemplateShare operation returned by the service.
+     * @throws ValidationException
+     *         The user input is not valid.
+     * @throws InternalServerException
+     *         There is a problem with the Well-Architected Tool API service.
+     * @throws ResourceNotFoundException
+     *         The requested resource was not found.
+     * @throws ConflictException
+     *         The resource has already been processed, was deleted, or is too large.
+     * @throws AccessDeniedException
+     *         User does not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @sample AWSWellArchitected.DeleteTemplateShare
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/DeleteTemplateShare"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DeleteTemplateShareResult deleteTemplateShare(DeleteTemplateShareRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteTemplateShare(request);
+    }
+
+    @SdkInternalApi
+    final DeleteTemplateShareResult executeDeleteTemplateShare(DeleteTemplateShareRequest deleteTemplateShareRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteTemplateShareRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteTemplateShareRequest> request = null;
+        Response<DeleteTemplateShareResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteTemplateShareRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(deleteTemplateShareRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "WellArchitected");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteTemplateShare");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeleteTemplateShareResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DeleteTemplateShareResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -2125,6 +2465,205 @@ public class AWSWellArchitectedClient extends AmazonWebServiceClient implements 
 
     /**
      * <p>
+     * Get review template.
+     * </p>
+     * 
+     * @param getReviewTemplateRequest
+     * @return Result of the GetReviewTemplate operation returned by the service.
+     * @throws ValidationException
+     *         The user input is not valid.
+     * @throws ResourceNotFoundException
+     *         The requested resource was not found.
+     * @throws InternalServerException
+     *         There is a problem with the Well-Architected Tool API service.
+     * @throws AccessDeniedException
+     *         User does not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @sample AWSWellArchitected.GetReviewTemplate
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/GetReviewTemplate"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetReviewTemplateResult getReviewTemplate(GetReviewTemplateRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetReviewTemplate(request);
+    }
+
+    @SdkInternalApi
+    final GetReviewTemplateResult executeGetReviewTemplate(GetReviewTemplateRequest getReviewTemplateRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getReviewTemplateRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetReviewTemplateRequest> request = null;
+        Response<GetReviewTemplateResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetReviewTemplateRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getReviewTemplateRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "WellArchitected");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetReviewTemplate");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetReviewTemplateResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetReviewTemplateResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Get review template answer.
+     * </p>
+     * 
+     * @param getReviewTemplateAnswerRequest
+     * @return Result of the GetReviewTemplateAnswer operation returned by the service.
+     * @throws ValidationException
+     *         The user input is not valid.
+     * @throws ResourceNotFoundException
+     *         The requested resource was not found.
+     * @throws InternalServerException
+     *         There is a problem with the Well-Architected Tool API service.
+     * @throws AccessDeniedException
+     *         User does not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @sample AWSWellArchitected.GetReviewTemplateAnswer
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/GetReviewTemplateAnswer"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetReviewTemplateAnswerResult getReviewTemplateAnswer(GetReviewTemplateAnswerRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetReviewTemplateAnswer(request);
+    }
+
+    @SdkInternalApi
+    final GetReviewTemplateAnswerResult executeGetReviewTemplateAnswer(GetReviewTemplateAnswerRequest getReviewTemplateAnswerRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getReviewTemplateAnswerRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetReviewTemplateAnswerRequest> request = null;
+        Response<GetReviewTemplateAnswerResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetReviewTemplateAnswerRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(getReviewTemplateAnswerRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "WellArchitected");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetReviewTemplateAnswer");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetReviewTemplateAnswerResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new GetReviewTemplateAnswerResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Get a lens review associated with a review template.
+     * </p>
+     * 
+     * @param getReviewTemplateLensReviewRequest
+     * @return Result of the GetReviewTemplateLensReview operation returned by the service.
+     * @throws ValidationException
+     *         The user input is not valid.
+     * @throws ResourceNotFoundException
+     *         The requested resource was not found.
+     * @throws InternalServerException
+     *         There is a problem with the Well-Architected Tool API service.
+     * @throws AccessDeniedException
+     *         User does not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @sample AWSWellArchitected.GetReviewTemplateLensReview
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/GetReviewTemplateLensReview"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetReviewTemplateLensReviewResult getReviewTemplateLensReview(GetReviewTemplateLensReviewRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetReviewTemplateLensReview(request);
+    }
+
+    @SdkInternalApi
+    final GetReviewTemplateLensReviewResult executeGetReviewTemplateLensReview(GetReviewTemplateLensReviewRequest getReviewTemplateLensReviewRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getReviewTemplateLensReviewRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetReviewTemplateLensReviewRequest> request = null;
+        Response<GetReviewTemplateLensReviewResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetReviewTemplateLensReviewRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(getReviewTemplateLensReviewRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "WellArchitected");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetReviewTemplateLensReview");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetReviewTemplateLensReviewResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new GetReviewTemplateLensReviewResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Get an existing workload.
      * </p>
      * 
@@ -3068,7 +3607,142 @@ public class AWSWellArchitectedClient extends AmazonWebServiceClient implements 
 
     /**
      * <p>
-     * List the workload invitations.
+     * List the answers of a review template.
+     * </p>
+     * 
+     * @param listReviewTemplateAnswersRequest
+     * @return Result of the ListReviewTemplateAnswers operation returned by the service.
+     * @throws ValidationException
+     *         The user input is not valid.
+     * @throws InternalServerException
+     *         There is a problem with the Well-Architected Tool API service.
+     * @throws ResourceNotFoundException
+     *         The requested resource was not found.
+     * @throws AccessDeniedException
+     *         User does not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @sample AWSWellArchitected.ListReviewTemplateAnswers
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/ListReviewTemplateAnswers"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListReviewTemplateAnswersResult listReviewTemplateAnswers(ListReviewTemplateAnswersRequest request) {
+        request = beforeClientExecution(request);
+        return executeListReviewTemplateAnswers(request);
+    }
+
+    @SdkInternalApi
+    final ListReviewTemplateAnswersResult executeListReviewTemplateAnswers(ListReviewTemplateAnswersRequest listReviewTemplateAnswersRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listReviewTemplateAnswersRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListReviewTemplateAnswersRequest> request = null;
+        Response<ListReviewTemplateAnswersResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListReviewTemplateAnswersRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(listReviewTemplateAnswersRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "WellArchitected");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListReviewTemplateAnswers");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListReviewTemplateAnswersResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new ListReviewTemplateAnswersResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * List review templates.
+     * </p>
+     * 
+     * @param listReviewTemplatesRequest
+     * @return Result of the ListReviewTemplates operation returned by the service.
+     * @throws ValidationException
+     *         The user input is not valid.
+     * @throws InternalServerException
+     *         There is a problem with the Well-Architected Tool API service.
+     * @throws AccessDeniedException
+     *         User does not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @sample AWSWellArchitected.ListReviewTemplates
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/ListReviewTemplates"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListReviewTemplatesResult listReviewTemplates(ListReviewTemplatesRequest request) {
+        request = beforeClientExecution(request);
+        return executeListReviewTemplates(request);
+    }
+
+    @SdkInternalApi
+    final ListReviewTemplatesResult executeListReviewTemplates(ListReviewTemplatesRequest listReviewTemplatesRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listReviewTemplatesRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListReviewTemplatesRequest> request = null;
+        Response<ListReviewTemplatesResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListReviewTemplatesRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listReviewTemplatesRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "WellArchitected");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListReviewTemplates");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListReviewTemplatesResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListReviewTemplatesResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * List the share invitations.
+     * </p>
+     * <p>
+     * <code>WorkloadNamePrefix</code>, <code>LensNamePrefix</code>, <code>ProfileNamePrefix</code>, and
+     * <code>TemplateNamePrefix</code> are mutually exclusive. Use the parameter that matches your
+     * <code>ShareResourceType</code>.
      * </p>
      * 
      * @param listShareInvitationsRequest
@@ -3136,7 +3810,7 @@ public class AWSWellArchitectedClient extends AmazonWebServiceClient implements 
      * </p>
      * <note>
      * <p>
-     * The WorkloadArn parameter can be a workload ARN, a custom lens ARN, or a profile ARN.
+     * The WorkloadArn parameter can be a workload ARN, a custom lens ARN, a profile ARN, or review template ARN.
      * </p>
      * </note>
      * 
@@ -3184,6 +3858,71 @@ public class AWSWellArchitectedClient extends AmazonWebServiceClient implements 
 
             HttpResponseHandler<AmazonWebServiceResponse<ListTagsForResourceResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListTagsForResourceResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * List review template shares.
+     * </p>
+     * 
+     * @param listTemplateSharesRequest
+     * @return Result of the ListTemplateShares operation returned by the service.
+     * @throws ValidationException
+     *         The user input is not valid.
+     * @throws InternalServerException
+     *         There is a problem with the Well-Architected Tool API service.
+     * @throws ResourceNotFoundException
+     *         The requested resource was not found.
+     * @throws AccessDeniedException
+     *         User does not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @sample AWSWellArchitected.ListTemplateShares
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/ListTemplateShares"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListTemplateSharesResult listTemplateShares(ListTemplateSharesRequest request) {
+        request = beforeClientExecution(request);
+        return executeListTemplateShares(request);
+    }
+
+    @SdkInternalApi
+    final ListTemplateSharesResult executeListTemplateShares(ListTemplateSharesRequest listTemplateSharesRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listTemplateSharesRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListTemplateSharesRequest> request = null;
+        Response<ListTemplateSharesResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListTemplateSharesRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listTemplateSharesRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "WellArchitected");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListTemplateShares");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListTemplateSharesResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListTemplateSharesResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -3330,7 +4069,7 @@ public class AWSWellArchitectedClient extends AmazonWebServiceClient implements 
      * </p>
      * <note>
      * <p>
-     * The WorkloadArn parameter can be a workload ARN, a custom lens ARN, or a profile ARN.
+     * The WorkloadArn parameter can be a workload ARN, a custom lens ARN, a profile ARN, or review template ARN.
      * </p>
      * </note>
      * 
@@ -3394,7 +4133,7 @@ public class AWSWellArchitectedClient extends AmazonWebServiceClient implements 
      * </p>
      * <note>
      * <p>
-     * The WorkloadArn parameter can be a workload ARN, a custom lens ARN, or a profile ARN.
+     * The WorkloadArn parameter can be a workload ARN, a custom lens ARN, a profile ARN, or review template ARN.
      * </p>
      * </note>
      * <p>
@@ -3717,6 +4456,211 @@ public class AWSWellArchitectedClient extends AmazonWebServiceClient implements 
 
             HttpResponseHandler<AmazonWebServiceResponse<UpdateProfileResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new UpdateProfileResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Update a review template.
+     * </p>
+     * 
+     * @param updateReviewTemplateRequest
+     * @return Result of the UpdateReviewTemplate operation returned by the service.
+     * @throws ValidationException
+     *         The user input is not valid.
+     * @throws ResourceNotFoundException
+     *         The requested resource was not found.
+     * @throws ConflictException
+     *         The resource has already been processed, was deleted, or is too large.
+     * @throws InternalServerException
+     *         There is a problem with the Well-Architected Tool API service.
+     * @throws AccessDeniedException
+     *         User does not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @sample AWSWellArchitected.UpdateReviewTemplate
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/UpdateReviewTemplate"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public UpdateReviewTemplateResult updateReviewTemplate(UpdateReviewTemplateRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateReviewTemplate(request);
+    }
+
+    @SdkInternalApi
+    final UpdateReviewTemplateResult executeUpdateReviewTemplate(UpdateReviewTemplateRequest updateReviewTemplateRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateReviewTemplateRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateReviewTemplateRequest> request = null;
+        Response<UpdateReviewTemplateResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateReviewTemplateRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(updateReviewTemplateRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "WellArchitected");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateReviewTemplate");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdateReviewTemplateResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new UpdateReviewTemplateResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Update a review template answer.
+     * </p>
+     * 
+     * @param updateReviewTemplateAnswerRequest
+     * @return Result of the UpdateReviewTemplateAnswer operation returned by the service.
+     * @throws ValidationException
+     *         The user input is not valid.
+     * @throws ResourceNotFoundException
+     *         The requested resource was not found.
+     * @throws ConflictException
+     *         The resource has already been processed, was deleted, or is too large.
+     * @throws InternalServerException
+     *         There is a problem with the Well-Architected Tool API service.
+     * @throws AccessDeniedException
+     *         User does not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @sample AWSWellArchitected.UpdateReviewTemplateAnswer
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/UpdateReviewTemplateAnswer"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public UpdateReviewTemplateAnswerResult updateReviewTemplateAnswer(UpdateReviewTemplateAnswerRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateReviewTemplateAnswer(request);
+    }
+
+    @SdkInternalApi
+    final UpdateReviewTemplateAnswerResult executeUpdateReviewTemplateAnswer(UpdateReviewTemplateAnswerRequest updateReviewTemplateAnswerRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateReviewTemplateAnswerRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateReviewTemplateAnswerRequest> request = null;
+        Response<UpdateReviewTemplateAnswerResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateReviewTemplateAnswerRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(updateReviewTemplateAnswerRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "WellArchitected");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateReviewTemplateAnswer");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdateReviewTemplateAnswerResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new UpdateReviewTemplateAnswerResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Update a lens review associated with a review template.
+     * </p>
+     * 
+     * @param updateReviewTemplateLensReviewRequest
+     * @return Result of the UpdateReviewTemplateLensReview operation returned by the service.
+     * @throws ValidationException
+     *         The user input is not valid.
+     * @throws ResourceNotFoundException
+     *         The requested resource was not found.
+     * @throws ConflictException
+     *         The resource has already been processed, was deleted, or is too large.
+     * @throws InternalServerException
+     *         There is a problem with the Well-Architected Tool API service.
+     * @throws AccessDeniedException
+     *         User does not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @sample AWSWellArchitected.UpdateReviewTemplateLensReview
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/UpdateReviewTemplateLensReview"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public UpdateReviewTemplateLensReviewResult updateReviewTemplateLensReview(UpdateReviewTemplateLensReviewRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateReviewTemplateLensReview(request);
+    }
+
+    @SdkInternalApi
+    final UpdateReviewTemplateLensReviewResult executeUpdateReviewTemplateLensReview(UpdateReviewTemplateLensReviewRequest updateReviewTemplateLensReviewRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateReviewTemplateLensReviewRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateReviewTemplateLensReviewRequest> request = null;
+        Response<UpdateReviewTemplateLensReviewResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateReviewTemplateLensReviewRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(updateReviewTemplateLensReviewRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "WellArchitected");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateReviewTemplateLensReview");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdateReviewTemplateLensReviewResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new UpdateReviewTemplateLensReviewResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -4063,6 +5007,76 @@ public class AWSWellArchitectedClient extends AmazonWebServiceClient implements 
             HttpResponseHandler<AmazonWebServiceResponse<UpgradeProfileVersionResult>> responseHandler = protocolFactory
                     .createResponseHandler(new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                             new UpgradeProfileVersionResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Upgrade the lens review of a review template.
+     * </p>
+     * 
+     * @param upgradeReviewTemplateLensReviewRequest
+     * @return Result of the UpgradeReviewTemplateLensReview operation returned by the service.
+     * @throws ValidationException
+     *         The user input is not valid.
+     * @throws ResourceNotFoundException
+     *         The requested resource was not found.
+     * @throws ConflictException
+     *         The resource has already been processed, was deleted, or is too large.
+     * @throws InternalServerException
+     *         There is a problem with the Well-Architected Tool API service.
+     * @throws AccessDeniedException
+     *         User does not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @sample AWSWellArchitected.UpgradeReviewTemplateLensReview
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/UpgradeReviewTemplateLensReview"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public UpgradeReviewTemplateLensReviewResult upgradeReviewTemplateLensReview(UpgradeReviewTemplateLensReviewRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpgradeReviewTemplateLensReview(request);
+    }
+
+    @SdkInternalApi
+    final UpgradeReviewTemplateLensReviewResult executeUpgradeReviewTemplateLensReview(
+            UpgradeReviewTemplateLensReviewRequest upgradeReviewTemplateLensReviewRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(upgradeReviewTemplateLensReviewRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpgradeReviewTemplateLensReviewRequest> request = null;
+        Response<UpgradeReviewTemplateLensReviewResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpgradeReviewTemplateLensReviewRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(upgradeReviewTemplateLensReviewRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "WellArchitected");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpgradeReviewTemplateLensReview");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpgradeReviewTemplateLensReviewResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new UpgradeReviewTemplateLensReviewResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

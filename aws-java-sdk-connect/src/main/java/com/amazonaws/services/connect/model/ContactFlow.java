@@ -68,7 +68,9 @@ public class ContactFlow implements Serializable, Cloneable, StructuredPojo {
     private String description;
     /**
      * <p>
-     * The content of the flow.
+     * The JSON string that represents the content of the flow. For an example, see <a
+     * href="https://docs.aws.amazon.com/connect/latest/APIReference/flow-language-example.html">Example contact flow in
+     * Amazon Connect Flow language</a>.
      * </p>
      */
     private String content;
@@ -376,11 +378,15 @@ public class ContactFlow implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The content of the flow.
+     * The JSON string that represents the content of the flow. For an example, see <a
+     * href="https://docs.aws.amazon.com/connect/latest/APIReference/flow-language-example.html">Example contact flow in
+     * Amazon Connect Flow language</a>.
      * </p>
      * 
      * @param content
-     *        The content of the flow.
+     *        The JSON string that represents the content of the flow. For an example, see <a
+     *        href="https://docs.aws.amazon.com/connect/latest/APIReference/flow-language-example.html">Example contact
+     *        flow in Amazon Connect Flow language</a>.
      */
 
     public void setContent(String content) {
@@ -389,10 +395,14 @@ public class ContactFlow implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The content of the flow.
+     * The JSON string that represents the content of the flow. For an example, see <a
+     * href="https://docs.aws.amazon.com/connect/latest/APIReference/flow-language-example.html">Example contact flow in
+     * Amazon Connect Flow language</a>.
      * </p>
      * 
-     * @return The content of the flow.
+     * @return The JSON string that represents the content of the flow. For an example, see <a
+     *         href="https://docs.aws.amazon.com/connect/latest/APIReference/flow-language-example.html">Example contact
+     *         flow in Amazon Connect Flow language</a>.
      */
 
     public String getContent() {
@@ -401,11 +411,15 @@ public class ContactFlow implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The content of the flow.
+     * The JSON string that represents the content of the flow. For an example, see <a
+     * href="https://docs.aws.amazon.com/connect/latest/APIReference/flow-language-example.html">Example contact flow in
+     * Amazon Connect Flow language</a>.
      * </p>
      * 
      * @param content
-     *        The content of the flow.
+     *        The JSON string that represents the content of the flow. For an example, see <a
+     *        href="https://docs.aws.amazon.com/connect/latest/APIReference/flow-language-example.html">Example contact
+     *        flow in Amazon Connect Flow language</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

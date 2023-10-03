@@ -166,7 +166,8 @@ public enum ProductionVariantInstanceType {
     MlInf2Xlarge("ml.inf2.xlarge"),
     MlInf28xlarge("ml.inf2.8xlarge"),
     MlInf224xlarge("ml.inf2.24xlarge"),
-    MlInf248xlarge("ml.inf2.48xlarge");
+    MlInf248xlarge("ml.inf2.48xlarge"),
+    MlP548xlarge("ml.p5.48xlarge");
 
     private String value;
 

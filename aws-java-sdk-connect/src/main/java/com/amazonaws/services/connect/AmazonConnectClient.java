@@ -2141,9 +2141,6 @@ public class AmazonConnectClient extends AmazonWebServiceClient implements Amazo
 
     /**
      * <p>
-     * This API is in preview release for Amazon Connect and is subject to change.
-     * </p>
-     * <p>
      * Creates a security profile.
      * </p>
      * 
@@ -3691,9 +3688,6 @@ public class AmazonConnectClient extends AmazonWebServiceClient implements Amazo
     }
 
     /**
-     * <p>
-     * This API is in preview release for Amazon Connect and is subject to change.
-     * </p>
      * <p>
      * Deletes a security profile.
      * </p>
@@ -5410,9 +5404,6 @@ public class AmazonConnectClient extends AmazonWebServiceClient implements Amazo
 
     /**
      * <p>
-     * This API is in preview release for Amazon Connect and is subject to change.
-     * </p>
-     * <p>
      * Gets basic information about the security profle.
      * </p>
      * 
@@ -7014,7 +7005,7 @@ public class AmazonConnectClient extends AmazonWebServiceClient implements Amazo
      * href="https://docs.aws.amazon.com/connect/latest/APIReference/API_GetMetricData.html">GetMetricData</a>, the
      * previous version of this API. It has new metrics, offers filtering at a metric level, and offers the ability to
      * filter and group data by channels, queues, routing profiles, agents, and agent hierarchy levels. It can retrieve
-     * historical data for the last 35 days, in 24-hour intervals.
+     * historical data for the last 3 months, at varying intervals.
      * </p>
      * <p>
      * For a description of the historical metrics that are supported by <code>GetMetricDataV2</code> and
@@ -9225,9 +9216,6 @@ public class AmazonConnectClient extends AmazonWebServiceClient implements Amazo
     }
 
     /**
-     * <p>
-     * This API is in preview release for Amazon Connect and is subject to change.
-     * </p>
      * <p>
      * Lists the permissions granted to a security profile.
      * </p>
@@ -14296,9 +14284,6 @@ public class AmazonConnectClient extends AmazonWebServiceClient implements Amazo
     }
 
     /**
-     * <p>
-     * This API is in preview release for Amazon Connect and is subject to change.
-     * </p>
      * <p>
      * Updates a security profile.
      * </p>

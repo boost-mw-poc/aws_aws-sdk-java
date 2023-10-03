@@ -31,7 +31,7 @@ public class GetMapGlyphsRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <code>Noto Sans Regular, Arial Unicode</code>.
      * </p>
      * <p>
-     * Valid fonts stacks for <a href="https://docs.aws.amazon.com/location/latest/developerguide/esri.html">Esri</a>
+     * Valid font stacks for <a href="https://docs.aws.amazon.com/location/latest/developerguide/esri.html">Esri</a>
      * styles:
      * </p>
      * <ul>
@@ -152,7 +152,7 @@ public class GetMapGlyphsRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <code>Noto Sans Regular, Arial Unicode</code>.
      * </p>
      * <p>
-     * Valid fonts stacks for <a href="https://docs.aws.amazon.com/location/latest/developerguide/esri.html">Esri</a>
+     * Valid font stacks for <a href="https://docs.aws.amazon.com/location/latest/developerguide/esri.html">Esri</a>
      * styles:
      * </p>
      * <ul>
@@ -248,7 +248,7 @@ public class GetMapGlyphsRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        A comma-separated list of fonts to load glyphs from in order of preference. For example,
      *        <code>Noto Sans Regular, Arial Unicode</code>.</p>
      *        <p>
-     *        Valid fonts stacks for <a
+     *        Valid font stacks for <a
      *        href="https://docs.aws.amazon.com/location/latest/developerguide/esri.html">Esri</a> styles:
      *        </p>
      *        <ul>
@@ -350,7 +350,7 @@ public class GetMapGlyphsRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <code>Noto Sans Regular, Arial Unicode</code>.
      * </p>
      * <p>
-     * Valid fonts stacks for <a href="https://docs.aws.amazon.com/location/latest/developerguide/esri.html">Esri</a>
+     * Valid font stacks for <a href="https://docs.aws.amazon.com/location/latest/developerguide/esri.html">Esri</a>
      * styles:
      * </p>
      * <ul>
@@ -445,7 +445,7 @@ public class GetMapGlyphsRequest extends com.amazonaws.AmazonWebServiceRequest i
      * @return A comma-separated list of fonts to load glyphs from in order of preference. For example,
      *         <code>Noto Sans Regular, Arial Unicode</code>.</p>
      *         <p>
-     *         Valid fonts stacks for <a
+     *         Valid font stacks for <a
      *         href="https://docs.aws.amazon.com/location/latest/developerguide/esri.html">Esri</a> styles:
      *         </p>
      *         <ul>
@@ -548,7 +548,7 @@ public class GetMapGlyphsRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <code>Noto Sans Regular, Arial Unicode</code>.
      * </p>
      * <p>
-     * Valid fonts stacks for <a href="https://docs.aws.amazon.com/location/latest/developerguide/esri.html">Esri</a>
+     * Valid font stacks for <a href="https://docs.aws.amazon.com/location/latest/developerguide/esri.html">Esri</a>
      * styles:
      * </p>
      * <ul>
@@ -644,7 +644,7 @@ public class GetMapGlyphsRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        A comma-separated list of fonts to load glyphs from in order of preference. For example,
      *        <code>Noto Sans Regular, Arial Unicode</code>.</p>
      *        <p>
-     *        Valid fonts stacks for <a
+     *        Valid font stacks for <a
      *        href="https://docs.aws.amazon.com/location/latest/developerguide/esri.html">Esri</a> styles:
      *        </p>
      *        <ul>

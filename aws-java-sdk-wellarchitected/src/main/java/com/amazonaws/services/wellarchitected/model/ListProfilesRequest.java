@@ -27,7 +27,7 @@ public class ListProfilesRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * Prefix for profile name.
+     * An optional string added to the beginning of each profile name returned in the results.
      * </p>
      */
     private String profileNamePrefix;
@@ -44,11 +44,11 @@ public class ListProfilesRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * Prefix for profile name.
+     * An optional string added to the beginning of each profile name returned in the results.
      * </p>
      * 
      * @param profileNamePrefix
-     *        Prefix for profile name.
+     *        An optional string added to the beginning of each profile name returned in the results.
      */
 
     public void setProfileNamePrefix(String profileNamePrefix) {
@@ -57,10 +57,10 @@ public class ListProfilesRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * Prefix for profile name.
+     * An optional string added to the beginning of each profile name returned in the results.
      * </p>
      * 
-     * @return Prefix for profile name.
+     * @return An optional string added to the beginning of each profile name returned in the results.
      */
 
     public String getProfileNamePrefix() {
@@ -69,11 +69,11 @@ public class ListProfilesRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * Prefix for profile name.
+     * An optional string added to the beginning of each profile name returned in the results.
      * </p>
      * 
      * @param profileNamePrefix
-     *        Prefix for profile name.
+     *        An optional string added to the beginning of each profile name returned in the results.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
