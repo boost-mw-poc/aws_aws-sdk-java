@@ -56,6 +56,10 @@ public class PauseReplicationResultJsonUnmarshaller implements Unmarshaller<Paus
                     context.nextToken();
                     pauseReplicationResult.setArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("connectorAction", targetDepth)) {
+                    context.nextToken();
+                    pauseReplicationResult.setConnectorAction(SourceServerConnectorActionJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("dataReplicationInfo", targetDepth)) {
                     context.nextToken();
                     pauseReplicationResult.setDataReplicationInfo(DataReplicationInfoJsonUnmarshaller.getInstance().unmarshall(context));

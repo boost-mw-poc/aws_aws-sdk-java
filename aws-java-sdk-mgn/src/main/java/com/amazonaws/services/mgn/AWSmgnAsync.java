@@ -226,6 +226,37 @@ public interface AWSmgnAsync extends AWSmgn {
 
     /**
      * <p>
+     * Create Connector.
+     * </p>
+     * 
+     * @param createConnectorRequest
+     * @return A Java Future containing the result of the CreateConnector operation returned by the service.
+     * @sample AWSmgnAsync.CreateConnector
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mgn-2020-02-26/CreateConnector" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<CreateConnectorResult> createConnectorAsync(CreateConnectorRequest createConnectorRequest);
+
+    /**
+     * <p>
+     * Create Connector.
+     * </p>
+     * 
+     * @param createConnectorRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateConnector operation returned by the service.
+     * @sample AWSmgnAsyncHandler.CreateConnector
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mgn-2020-02-26/CreateConnector" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<CreateConnectorResult> createConnectorAsync(CreateConnectorRequest createConnectorRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateConnectorRequest, CreateConnectorResult> asyncHandler);
+
+    /**
+     * <p>
      * Creates a new Launch Configuration Template.
      * </p>
      * 
@@ -355,6 +386,37 @@ public interface AWSmgnAsync extends AWSmgn {
      */
     java.util.concurrent.Future<DeleteApplicationResult> deleteApplicationAsync(DeleteApplicationRequest deleteApplicationRequest,
             com.amazonaws.handlers.AsyncHandler<DeleteApplicationRequest, DeleteApplicationResult> asyncHandler);
+
+    /**
+     * <p>
+     * Delete Connector.
+     * </p>
+     * 
+     * @param deleteConnectorRequest
+     * @return A Java Future containing the result of the DeleteConnector operation returned by the service.
+     * @sample AWSmgnAsync.DeleteConnector
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mgn-2020-02-26/DeleteConnector" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteConnectorResult> deleteConnectorAsync(DeleteConnectorRequest deleteConnectorRequest);
+
+    /**
+     * <p>
+     * Delete Connector.
+     * </p>
+     * 
+     * @param deleteConnectorRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteConnector operation returned by the service.
+     * @sample AWSmgnAsyncHandler.DeleteConnector
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mgn-2020-02-26/DeleteConnector" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteConnectorResult> deleteConnectorAsync(DeleteConnectorRequest deleteConnectorRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteConnectorRequest, DeleteConnectorResult> asyncHandler);
 
     /**
      * <p>
@@ -1029,6 +1091,37 @@ public interface AWSmgnAsync extends AWSmgn {
      */
     java.util.concurrent.Future<ListApplicationsResult> listApplicationsAsync(ListApplicationsRequest listApplicationsRequest,
             com.amazonaws.handlers.AsyncHandler<ListApplicationsRequest, ListApplicationsResult> asyncHandler);
+
+    /**
+     * <p>
+     * List Connectors.
+     * </p>
+     * 
+     * @param listConnectorsRequest
+     * @return A Java Future containing the result of the ListConnectors operation returned by the service.
+     * @sample AWSmgnAsync.ListConnectors
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mgn-2020-02-26/ListConnectors" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListConnectorsResult> listConnectorsAsync(ListConnectorsRequest listConnectorsRequest);
+
+    /**
+     * <p>
+     * List Connectors.
+     * </p>
+     * 
+     * @param listConnectorsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListConnectors operation returned by the service.
+     * @sample AWSmgnAsyncHandler.ListConnectors
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mgn-2020-02-26/ListConnectors" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListConnectorsResult> listConnectorsAsync(ListConnectorsRequest listConnectorsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListConnectorsRequest, ListConnectorsResult> asyncHandler);
 
     /**
      * <p>
@@ -1963,6 +2056,37 @@ public interface AWSmgnAsync extends AWSmgn {
 
     /**
      * <p>
+     * Update Connector.
+     * </p>
+     * 
+     * @param updateConnectorRequest
+     * @return A Java Future containing the result of the UpdateConnector operation returned by the service.
+     * @sample AWSmgnAsync.UpdateConnector
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mgn-2020-02-26/UpdateConnector" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateConnectorResult> updateConnectorAsync(UpdateConnectorRequest updateConnectorRequest);
+
+    /**
+     * <p>
+     * Update Connector.
+     * </p>
+     * 
+     * @param updateConnectorRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateConnector operation returned by the service.
+     * @sample AWSmgnAsyncHandler.UpdateConnector
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mgn-2020-02-26/UpdateConnector" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateConnectorResult> updateConnectorAsync(UpdateConnectorRequest updateConnectorRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateConnectorRequest, UpdateConnectorResult> asyncHandler);
+
+    /**
+     * <p>
      * Updates multiple LaunchConfigurations by Source Server ID.
      * </p>
      * 
@@ -2098,6 +2222,37 @@ public interface AWSmgnAsync extends AWSmgn {
     java.util.concurrent.Future<UpdateReplicationConfigurationTemplateResult> updateReplicationConfigurationTemplateAsync(
             UpdateReplicationConfigurationTemplateRequest updateReplicationConfigurationTemplateRequest,
             com.amazonaws.handlers.AsyncHandler<UpdateReplicationConfigurationTemplateRequest, UpdateReplicationConfigurationTemplateResult> asyncHandler);
+
+    /**
+     * <p>
+     * Update Source Server.
+     * </p>
+     * 
+     * @param updateSourceServerRequest
+     * @return A Java Future containing the result of the UpdateSourceServer operation returned by the service.
+     * @sample AWSmgnAsync.UpdateSourceServer
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mgn-2020-02-26/UpdateSourceServer" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateSourceServerResult> updateSourceServerAsync(UpdateSourceServerRequest updateSourceServerRequest);
+
+    /**
+     * <p>
+     * Update Source Server.
+     * </p>
+     * 
+     * @param updateSourceServerRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateSourceServer operation returned by the service.
+     * @sample AWSmgnAsyncHandler.UpdateSourceServer
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mgn-2020-02-26/UpdateSourceServer" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateSourceServerResult> updateSourceServerAsync(UpdateSourceServerRequest updateSourceServerRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateSourceServerRequest, UpdateSourceServerResult> asyncHandler);
 
     /**
      * <p>

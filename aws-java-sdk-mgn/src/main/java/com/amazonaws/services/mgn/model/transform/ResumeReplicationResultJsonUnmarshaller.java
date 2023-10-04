@@ -56,6 +56,10 @@ public class ResumeReplicationResultJsonUnmarshaller implements Unmarshaller<Res
                     context.nextToken();
                     resumeReplicationResult.setArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("connectorAction", targetDepth)) {
+                    context.nextToken();
+                    resumeReplicationResult.setConnectorAction(SourceServerConnectorActionJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("dataReplicationInfo", targetDepth)) {
                     context.nextToken();
                     resumeReplicationResult.setDataReplicationInfo(DataReplicationInfoJsonUnmarshaller.getInstance().unmarshall(context));

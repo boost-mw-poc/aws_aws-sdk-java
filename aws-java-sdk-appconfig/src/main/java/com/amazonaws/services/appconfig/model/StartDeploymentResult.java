@@ -150,8 +150,8 @@ public class StartDeploymentResult extends com.amazonaws.AmazonWebServiceResult<
     private String kmsKeyArn;
     /**
      * <p>
-     * The KMS key identifier (key ID, key alias, or key ARN). AppConfig uses this ID to encrypt the configuration data
-     * using a customer managed key.
+     * The Key Management Service key identifier (key ID, key alias, or key ARN) provided when the resource was created
+     * or updated.
      * </p>
      */
     private String kmsKeyIdentifier;
@@ -1096,13 +1096,13 @@ public class StartDeploymentResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * The KMS key identifier (key ID, key alias, or key ARN). AppConfig uses this ID to encrypt the configuration data
-     * using a customer managed key.
+     * The Key Management Service key identifier (key ID, key alias, or key ARN) provided when the resource was created
+     * or updated.
      * </p>
      * 
      * @param kmsKeyIdentifier
-     *        The KMS key identifier (key ID, key alias, or key ARN). AppConfig uses this ID to encrypt the
-     *        configuration data using a customer managed key.
+     *        The Key Management Service key identifier (key ID, key alias, or key ARN) provided when the resource was
+     *        created or updated.
      */
 
     public void setKmsKeyIdentifier(String kmsKeyIdentifier) {
@@ -1111,12 +1111,12 @@ public class StartDeploymentResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * The KMS key identifier (key ID, key alias, or key ARN). AppConfig uses this ID to encrypt the configuration data
-     * using a customer managed key.
+     * The Key Management Service key identifier (key ID, key alias, or key ARN) provided when the resource was created
+     * or updated.
      * </p>
      * 
-     * @return The KMS key identifier (key ID, key alias, or key ARN). AppConfig uses this ID to encrypt the
-     *         configuration data using a customer managed key.
+     * @return The Key Management Service key identifier (key ID, key alias, or key ARN) provided when the resource was
+     *         created or updated.
      */
 
     public String getKmsKeyIdentifier() {
@@ -1125,13 +1125,13 @@ public class StartDeploymentResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * The KMS key identifier (key ID, key alias, or key ARN). AppConfig uses this ID to encrypt the configuration data
-     * using a customer managed key.
+     * The Key Management Service key identifier (key ID, key alias, or key ARN) provided when the resource was created
+     * or updated.
      * </p>
      * 
      * @param kmsKeyIdentifier
-     *        The KMS key identifier (key ID, key alias, or key ARN). AppConfig uses this ID to encrypt the
-     *        configuration data using a customer managed key.
+     *        The Key Management Service key identifier (key ID, key alias, or key ARN) provided when the resource was
+     *        created or updated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

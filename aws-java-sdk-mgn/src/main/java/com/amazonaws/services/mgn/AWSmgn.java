@@ -169,6 +169,23 @@ public interface AWSmgn {
 
     /**
      * <p>
+     * Create Connector.
+     * </p>
+     * 
+     * @param createConnectorRequest
+     * @return Result of the CreateConnector operation returned by the service.
+     * @throws UninitializedAccountException
+     *         Uninitialized account exception.
+     * @throws ValidationException
+     *         Validate exception.
+     * @sample AWSmgn.CreateConnector
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mgn-2020-02-26/CreateConnector" target="_top">AWS API
+     *      Documentation</a>
+     */
+    CreateConnectorResult createConnector(CreateConnectorRequest createConnectorRequest);
+
+    /**
+     * <p>
      * Creates a new Launch Configuration Template.
      * </p>
      * 
@@ -243,6 +260,25 @@ public interface AWSmgn {
      *      Documentation</a>
      */
     DeleteApplicationResult deleteApplication(DeleteApplicationRequest deleteApplicationRequest);
+
+    /**
+     * <p>
+     * Delete Connector.
+     * </p>
+     * 
+     * @param deleteConnectorRequest
+     * @return Result of the DeleteConnector operation returned by the service.
+     * @throws UninitializedAccountException
+     *         Uninitialized account exception.
+     * @throws ResourceNotFoundException
+     *         Resource not found exception.
+     * @throws ValidationException
+     *         Validate exception.
+     * @sample AWSmgn.DeleteConnector
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mgn-2020-02-26/DeleteConnector" target="_top">AWS API
+     *      Documentation</a>
+     */
+    DeleteConnectorResult deleteConnector(DeleteConnectorRequest deleteConnectorRequest);
 
     /**
      * <p>
@@ -629,6 +665,23 @@ public interface AWSmgn {
      *      Documentation</a>
      */
     ListApplicationsResult listApplications(ListApplicationsRequest listApplicationsRequest);
+
+    /**
+     * <p>
+     * List Connectors.
+     * </p>
+     * 
+     * @param listConnectorsRequest
+     * @return Result of the ListConnectors operation returned by the service.
+     * @throws UninitializedAccountException
+     *         Uninitialized account exception.
+     * @throws ValidationException
+     *         Validate exception.
+     * @sample AWSmgn.ListConnectors
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mgn-2020-02-26/ListConnectors" target="_top">AWS API
+     *      Documentation</a>
+     */
+    ListConnectorsResult listConnectors(ListConnectorsRequest listConnectorsRequest);
 
     /**
      * <p>
@@ -1215,6 +1268,25 @@ public interface AWSmgn {
 
     /**
      * <p>
+     * Update Connector.
+     * </p>
+     * 
+     * @param updateConnectorRequest
+     * @return Result of the UpdateConnector operation returned by the service.
+     * @throws UninitializedAccountException
+     *         Uninitialized account exception.
+     * @throws ResourceNotFoundException
+     *         Resource not found exception.
+     * @throws ValidationException
+     *         Validate exception.
+     * @sample AWSmgn.UpdateConnector
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mgn-2020-02-26/UpdateConnector" target="_top">AWS API
+     *      Documentation</a>
+     */
+    UpdateConnectorResult updateConnector(UpdateConnectorRequest updateConnectorRequest);
+
+    /**
+     * <p>
      * Updates multiple LaunchConfigurations by Source Server ID.
      * </p>
      * 
@@ -1299,6 +1371,25 @@ public interface AWSmgn {
      */
     UpdateReplicationConfigurationTemplateResult updateReplicationConfigurationTemplate(
             UpdateReplicationConfigurationTemplateRequest updateReplicationConfigurationTemplateRequest);
+
+    /**
+     * <p>
+     * Update Source Server.
+     * </p>
+     * 
+     * @param updateSourceServerRequest
+     * @return Result of the UpdateSourceServer operation returned by the service.
+     * @throws UninitializedAccountException
+     *         Uninitialized account exception.
+     * @throws ResourceNotFoundException
+     *         Resource not found exception.
+     * @throws ConflictException
+     *         The request could not be completed due to a conflict with the current state of the target resource.
+     * @sample AWSmgn.UpdateSourceServer
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mgn-2020-02-26/UpdateSourceServer" target="_top">AWS API
+     *      Documentation</a>
+     */
+    UpdateSourceServerResult updateSourceServer(UpdateSourceServerRequest updateSourceServerRequest);
 
     /**
      * <p>

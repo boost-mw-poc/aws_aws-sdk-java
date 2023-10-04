@@ -1,3 +1,24 @@
+# __1.12.563__ __2023-10-04__
+## __AWS MediaTailor__
+  - ### Features
+    - Updates DescribeVodSource to include a list of ad break opportunities in the response
+
+## __Amazon AppConfig__
+  - ### Features
+    - AWS AppConfig introduces KMS customer-managed key (CMK) encryption support for data saved to AppConfig's hosted configuration store.
+
+## __Amazon DataZone__
+  - ### Features
+    - Initial release of Amazon DataZone
+
+## __Amazon SageMaker Service__
+  - ### Features
+    - Adding support for AdditionalS3DataSource, a data source used for training or inference that is in addition to the input dataset or model data.
+
+## __Application Migration Service__
+  - ### Features
+    - This release includes the following new APIs: ListConnectors, CreateConnector,  UpdateConnector, DeleteConnector and UpdateSourceServer to support the source action framework feature.
+
 # __1.12.562__ __2023-10-03__
 ## __AWS Elemental MediaConvert__
   - ### Features

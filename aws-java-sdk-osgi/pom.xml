@@ -5,7 +5,7 @@
   <parent>
     <groupId>com.amazonaws</groupId>
     <artifactId>aws-java-sdk-pom</artifactId>
-    <version>1.12.563-SNAPSHOT</version>
+    <version>1.12.563</version>
   </parent>
   <groupId>com.amazonaws</groupId>
   <artifactId>aws-java-sdk-osgi</artifactId>
@@ -15,6 +15,12 @@
 
   <!-- The dependencies section in pom.xml is auto generated. No manual changes are allowed -->
   <dependencies>
+    <dependency>
+        <artifactId>aws-java-sdk-datazoneexternal</artifactId>
+        <groupId>com.amazonaws</groupId>
+        <optional>false</optional>
+        <version>${awsjavasdk.version}</version>
+    </dependency>
     <dependency>
         <artifactId>aws-java-sdk-bedrock</artifactId>
         <groupId>com.amazonaws</groupId>
@@ -2264,6 +2270,10 @@
                               </taglet>
                           </taglets>
                           <groups>
+                              <group>
+                                  <title>Amazon DataZone</title>
+                                  <packages>com.amazonaws.services.datazoneexternal*</packages>
+                              </group>
                               <group>
                                   <title>Amazon Bedrock</title>
                                   <packages>com.amazonaws.services.bedrock*</packages>

@@ -56,6 +56,10 @@ public class StopReplicationResultJsonUnmarshaller implements Unmarshaller<StopR
                     context.nextToken();
                     stopReplicationResult.setArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("connectorAction", targetDepth)) {
+                    context.nextToken();
+                    stopReplicationResult.setConnectorAction(SourceServerConnectorActionJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("dataReplicationInfo", targetDepth)) {
                     context.nextToken();
                     stopReplicationResult.setDataReplicationInfo(DataReplicationInfoJsonUnmarshaller.getInstance().unmarshall(context));
