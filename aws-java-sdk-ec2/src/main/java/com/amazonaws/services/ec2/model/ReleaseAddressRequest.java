@@ -45,10 +45,6 @@ public class ReleaseAddressRequest extends AmazonWebServiceRequest implements Se
      * <p>
      * If you provide an incorrect network border group, you receive an <code>InvalidAddress.NotFound</code> error.
      * </p>
-     * <p>
-     * You cannot use a network border group with EC2 Classic. If you attempt this operation on EC2 classic, you receive
-     * an <code>InvalidParameterCombination</code> error.
-     * </p>
      */
     private String networkBorderGroup;
 
@@ -158,10 +154,6 @@ public class ReleaseAddressRequest extends AmazonWebServiceRequest implements Se
      * <p>
      * If you provide an incorrect network border group, you receive an <code>InvalidAddress.NotFound</code> error.
      * </p>
-     * <p>
-     * You cannot use a network border group with EC2 Classic. If you attempt this operation on EC2 classic, you receive
-     * an <code>InvalidParameterCombination</code> error.
-     * </p>
      * 
      * @param networkBorderGroup
      *        The set of Availability Zones, Local Zones, or Wavelength Zones from which Amazon Web Services advertises
@@ -169,10 +161,6 @@ public class ReleaseAddressRequest extends AmazonWebServiceRequest implements Se
      *        <p>
      *        If you provide an incorrect network border group, you receive an <code>InvalidAddress.NotFound</code>
      *        error.
-     *        </p>
-     *        <p>
-     *        You cannot use a network border group with EC2 Classic. If you attempt this operation on EC2 classic, you
-     *        receive an <code>InvalidParameterCombination</code> error.
      */
 
     public void setNetworkBorderGroup(String networkBorderGroup) {
@@ -187,20 +175,12 @@ public class ReleaseAddressRequest extends AmazonWebServiceRequest implements Se
      * <p>
      * If you provide an incorrect network border group, you receive an <code>InvalidAddress.NotFound</code> error.
      * </p>
-     * <p>
-     * You cannot use a network border group with EC2 Classic. If you attempt this operation on EC2 classic, you receive
-     * an <code>InvalidParameterCombination</code> error.
-     * </p>
      * 
      * @return The set of Availability Zones, Local Zones, or Wavelength Zones from which Amazon Web Services advertises
      *         IP addresses.</p>
      *         <p>
      *         If you provide an incorrect network border group, you receive an <code>InvalidAddress.NotFound</code>
      *         error.
-     *         </p>
-     *         <p>
-     *         You cannot use a network border group with EC2 Classic. If you attempt this operation on EC2 classic, you
-     *         receive an <code>InvalidParameterCombination</code> error.
      */
 
     public String getNetworkBorderGroup() {
@@ -215,10 +195,6 @@ public class ReleaseAddressRequest extends AmazonWebServiceRequest implements Se
      * <p>
      * If you provide an incorrect network border group, you receive an <code>InvalidAddress.NotFound</code> error.
      * </p>
-     * <p>
-     * You cannot use a network border group with EC2 Classic. If you attempt this operation on EC2 classic, you receive
-     * an <code>InvalidParameterCombination</code> error.
-     * </p>
      * 
      * @param networkBorderGroup
      *        The set of Availability Zones, Local Zones, or Wavelength Zones from which Amazon Web Services advertises
@@ -226,10 +202,6 @@ public class ReleaseAddressRequest extends AmazonWebServiceRequest implements Se
      *        <p>
      *        If you provide an incorrect network border group, you receive an <code>InvalidAddress.NotFound</code>
      *        error.
-     *        </p>
-     *        <p>
-     *        You cannot use a network border group with EC2 Classic. If you attempt this operation on EC2 classic, you
-     *        receive an <code>InvalidParameterCombination</code> error.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

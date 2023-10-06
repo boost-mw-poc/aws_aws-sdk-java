@@ -38,7 +38,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * </li>
  * <li>
  * <p>
- * <code>ImportedChunkSize</code>
+ * <code>ImportedFileChunkSize</code>
  * </p>
  * </li>
  * <li>

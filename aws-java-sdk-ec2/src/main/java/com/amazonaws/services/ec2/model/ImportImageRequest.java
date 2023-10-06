@@ -181,6 +181,13 @@ public class ImportImageRequest extends AmazonWebServiceRequest implements Seria
      * <p>
      * The boot mode of the virtual machine.
      * </p>
+     * <note>
+     * <p>
+     * The <code>uefi-preferred</code> boot mode isn't supported for importing images. For more information, see <a
+     * href="https://docs.aws.amazon.com/vm-import/latest/userguide/prerequisites.html#vmimport-boot-modes">Boot
+     * modes</a> in the <i>VM Import/Export User Guide</i>.
+     * </p>
+     * </note>
      */
     private String bootMode;
 
@@ -1274,9 +1281,21 @@ public class ImportImageRequest extends AmazonWebServiceRequest implements Seria
      * <p>
      * The boot mode of the virtual machine.
      * </p>
+     * <note>
+     * <p>
+     * The <code>uefi-preferred</code> boot mode isn't supported for importing images. For more information, see <a
+     * href="https://docs.aws.amazon.com/vm-import/latest/userguide/prerequisites.html#vmimport-boot-modes">Boot
+     * modes</a> in the <i>VM Import/Export User Guide</i>.
+     * </p>
+     * </note>
      * 
      * @param bootMode
-     *        The boot mode of the virtual machine.
+     *        The boot mode of the virtual machine.</p> <note>
+     *        <p>
+     *        The <code>uefi-preferred</code> boot mode isn't supported for importing images. For more information, see
+     *        <a href="https://docs.aws.amazon.com/vm-import/latest/userguide/prerequisites.html#vmimport-boot-modes">
+     *        Boot modes</a> in the <i>VM Import/Export User Guide</i>.
+     *        </p>
      * @see BootModeValues
      */
 
@@ -1288,8 +1307,20 @@ public class ImportImageRequest extends AmazonWebServiceRequest implements Seria
      * <p>
      * The boot mode of the virtual machine.
      * </p>
+     * <note>
+     * <p>
+     * The <code>uefi-preferred</code> boot mode isn't supported for importing images. For more information, see <a
+     * href="https://docs.aws.amazon.com/vm-import/latest/userguide/prerequisites.html#vmimport-boot-modes">Boot
+     * modes</a> in the <i>VM Import/Export User Guide</i>.
+     * </p>
+     * </note>
      * 
-     * @return The boot mode of the virtual machine.
+     * @return The boot mode of the virtual machine.</p> <note>
+     *         <p>
+     *         The <code>uefi-preferred</code> boot mode isn't supported for importing images. For more information, see
+     *         <a href="https://docs.aws.amazon.com/vm-import/latest/userguide/prerequisites.html#vmimport-boot-modes">
+     *         Boot modes</a> in the <i>VM Import/Export User Guide</i>.
+     *         </p>
      * @see BootModeValues
      */
 
@@ -1301,9 +1332,21 @@ public class ImportImageRequest extends AmazonWebServiceRequest implements Seria
      * <p>
      * The boot mode of the virtual machine.
      * </p>
+     * <note>
+     * <p>
+     * The <code>uefi-preferred</code> boot mode isn't supported for importing images. For more information, see <a
+     * href="https://docs.aws.amazon.com/vm-import/latest/userguide/prerequisites.html#vmimport-boot-modes">Boot
+     * modes</a> in the <i>VM Import/Export User Guide</i>.
+     * </p>
+     * </note>
      * 
      * @param bootMode
-     *        The boot mode of the virtual machine.
+     *        The boot mode of the virtual machine.</p> <note>
+     *        <p>
+     *        The <code>uefi-preferred</code> boot mode isn't supported for importing images. For more information, see
+     *        <a href="https://docs.aws.amazon.com/vm-import/latest/userguide/prerequisites.html#vmimport-boot-modes">
+     *        Boot modes</a> in the <i>VM Import/Export User Guide</i>.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see BootModeValues
      */
@@ -1317,9 +1360,21 @@ public class ImportImageRequest extends AmazonWebServiceRequest implements Seria
      * <p>
      * The boot mode of the virtual machine.
      * </p>
+     * <note>
+     * <p>
+     * The <code>uefi-preferred</code> boot mode isn't supported for importing images. For more information, see <a
+     * href="https://docs.aws.amazon.com/vm-import/latest/userguide/prerequisites.html#vmimport-boot-modes">Boot
+     * modes</a> in the <i>VM Import/Export User Guide</i>.
+     * </p>
+     * </note>
      * 
      * @param bootMode
-     *        The boot mode of the virtual machine.
+     *        The boot mode of the virtual machine.</p> <note>
+     *        <p>
+     *        The <code>uefi-preferred</code> boot mode isn't supported for importing images. For more information, see
+     *        <a href="https://docs.aws.amazon.com/vm-import/latest/userguide/prerequisites.html#vmimport-boot-modes">
+     *        Boot modes</a> in the <i>VM Import/Export User Guide</i>.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see BootModeValues
      */

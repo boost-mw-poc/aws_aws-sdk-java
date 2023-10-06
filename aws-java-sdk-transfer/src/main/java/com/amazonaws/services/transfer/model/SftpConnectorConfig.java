@@ -38,9 +38,9 @@ public class SftpConnectorConfig implements Serializable, Cloneable, StructuredP
     private String userSecretId;
     /**
      * <p>
-     * The public portion of the host key, or keys, that are used to authenticate the user to the external server to
-     * which you are connecting. You can use the <code>ssh-keyscan</code> command against the SFTP server to retrieve
-     * the necessary key.
+     * The public portion of the host key, or keys, that are used to identify the external server to which you are
+     * connecting. You can use the <code>ssh-keyscan</code> command against the SFTP server to retrieve the necessary
+     * key.
      * </p>
      * <p>
      * The three standard SSH public key format elements are <code>&lt;key type&gt;</code>,
@@ -54,13 +54,14 @@ public class SftpConnectorConfig implements Serializable, Cloneable, StructuredP
      * <ul>
      * <li>
      * <p>
-     * For RSA keys, the key type is <code>ssh-rsa</code>.
+     * For RSA keys, the <code>&lt;key type&gt;</code> string is <code>ssh-rsa</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * For ECDSA keys, the key type is either <code>ecdsa-sha2-nistp256</code>, <code>ecdsa-sha2-nistp384</code>, or
-     * <code>ecdsa-sha2-nistp521</code>, depending on the size of the key you generated.
+     * For ECDSA keys, the <code>&lt;key type&gt;</code> string is either <code>ecdsa-sha2-nistp256</code>,
+     * <code>ecdsa-sha2-nistp384</code>, or <code>ecdsa-sha2-nistp521</code>, depending on the size of the key you
+     * generated.
      * </p>
      * </li>
      * </ul>
@@ -118,9 +119,9 @@ public class SftpConnectorConfig implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The public portion of the host key, or keys, that are used to authenticate the user to the external server to
-     * which you are connecting. You can use the <code>ssh-keyscan</code> command against the SFTP server to retrieve
-     * the necessary key.
+     * The public portion of the host key, or keys, that are used to identify the external server to which you are
+     * connecting. You can use the <code>ssh-keyscan</code> command against the SFTP server to retrieve the necessary
+     * key.
      * </p>
      * <p>
      * The three standard SSH public key format elements are <code>&lt;key type&gt;</code>,
@@ -134,20 +135,21 @@ public class SftpConnectorConfig implements Serializable, Cloneable, StructuredP
      * <ul>
      * <li>
      * <p>
-     * For RSA keys, the key type is <code>ssh-rsa</code>.
+     * For RSA keys, the <code>&lt;key type&gt;</code> string is <code>ssh-rsa</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * For ECDSA keys, the key type is either <code>ecdsa-sha2-nistp256</code>, <code>ecdsa-sha2-nistp384</code>, or
-     * <code>ecdsa-sha2-nistp521</code>, depending on the size of the key you generated.
+     * For ECDSA keys, the <code>&lt;key type&gt;</code> string is either <code>ecdsa-sha2-nistp256</code>,
+     * <code>ecdsa-sha2-nistp384</code>, or <code>ecdsa-sha2-nistp521</code>, depending on the size of the key you
+     * generated.
      * </p>
      * </li>
      * </ul>
      * 
-     * @return The public portion of the host key, or keys, that are used to authenticate the user to the external
-     *         server to which you are connecting. You can use the <code>ssh-keyscan</code> command against the SFTP
-     *         server to retrieve the necessary key.</p>
+     * @return The public portion of the host key, or keys, that are used to identify the external server to which you
+     *         are connecting. You can use the <code>ssh-keyscan</code> command against the SFTP server to retrieve the
+     *         necessary key.</p>
      *         <p>
      *         The three standard SSH public key format elements are <code>&lt;key type&gt;</code>,
      *         <code>&lt;body base64&gt;</code>, and an optional <code>&lt;comment&gt;</code>, with spaces between each
@@ -160,13 +162,14 @@ public class SftpConnectorConfig implements Serializable, Cloneable, StructuredP
      *         <ul>
      *         <li>
      *         <p>
-     *         For RSA keys, the key type is <code>ssh-rsa</code>.
+     *         For RSA keys, the <code>&lt;key type&gt;</code> string is <code>ssh-rsa</code>.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         For ECDSA keys, the key type is either <code>ecdsa-sha2-nistp256</code>, <code>ecdsa-sha2-nistp384</code>
-     *         , or <code>ecdsa-sha2-nistp521</code>, depending on the size of the key you generated.
+     *         For ECDSA keys, the <code>&lt;key type&gt;</code> string is either <code>ecdsa-sha2-nistp256</code>,
+     *         <code>ecdsa-sha2-nistp384</code>, or <code>ecdsa-sha2-nistp521</code>, depending on the size of the key
+     *         you generated.
      *         </p>
      *         </li>
      */
@@ -177,9 +180,9 @@ public class SftpConnectorConfig implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The public portion of the host key, or keys, that are used to authenticate the user to the external server to
-     * which you are connecting. You can use the <code>ssh-keyscan</code> command against the SFTP server to retrieve
-     * the necessary key.
+     * The public portion of the host key, or keys, that are used to identify the external server to which you are
+     * connecting. You can use the <code>ssh-keyscan</code> command against the SFTP server to retrieve the necessary
+     * key.
      * </p>
      * <p>
      * The three standard SSH public key format elements are <code>&lt;key type&gt;</code>,
@@ -193,21 +196,22 @@ public class SftpConnectorConfig implements Serializable, Cloneable, StructuredP
      * <ul>
      * <li>
      * <p>
-     * For RSA keys, the key type is <code>ssh-rsa</code>.
+     * For RSA keys, the <code>&lt;key type&gt;</code> string is <code>ssh-rsa</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * For ECDSA keys, the key type is either <code>ecdsa-sha2-nistp256</code>, <code>ecdsa-sha2-nistp384</code>, or
-     * <code>ecdsa-sha2-nistp521</code>, depending on the size of the key you generated.
+     * For ECDSA keys, the <code>&lt;key type&gt;</code> string is either <code>ecdsa-sha2-nistp256</code>,
+     * <code>ecdsa-sha2-nistp384</code>, or <code>ecdsa-sha2-nistp521</code>, depending on the size of the key you
+     * generated.
      * </p>
      * </li>
      * </ul>
      * 
      * @param trustedHostKeys
-     *        The public portion of the host key, or keys, that are used to authenticate the user to the external server
-     *        to which you are connecting. You can use the <code>ssh-keyscan</code> command against the SFTP server to
-     *        retrieve the necessary key.</p>
+     *        The public portion of the host key, or keys, that are used to identify the external server to which you
+     *        are connecting. You can use the <code>ssh-keyscan</code> command against the SFTP server to retrieve the
+     *        necessary key.</p>
      *        <p>
      *        The three standard SSH public key format elements are <code>&lt;key type&gt;</code>,
      *        <code>&lt;body base64&gt;</code>, and an optional <code>&lt;comment&gt;</code>, with spaces between each
@@ -220,13 +224,14 @@ public class SftpConnectorConfig implements Serializable, Cloneable, StructuredP
      *        <ul>
      *        <li>
      *        <p>
-     *        For RSA keys, the key type is <code>ssh-rsa</code>.
+     *        For RSA keys, the <code>&lt;key type&gt;</code> string is <code>ssh-rsa</code>.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        For ECDSA keys, the key type is either <code>ecdsa-sha2-nistp256</code>, <code>ecdsa-sha2-nistp384</code>,
-     *        or <code>ecdsa-sha2-nistp521</code>, depending on the size of the key you generated.
+     *        For ECDSA keys, the <code>&lt;key type&gt;</code> string is either <code>ecdsa-sha2-nistp256</code>,
+     *        <code>ecdsa-sha2-nistp384</code>, or <code>ecdsa-sha2-nistp521</code>, depending on the size of the key
+     *        you generated.
      *        </p>
      *        </li>
      */
@@ -242,9 +247,9 @@ public class SftpConnectorConfig implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The public portion of the host key, or keys, that are used to authenticate the user to the external server to
-     * which you are connecting. You can use the <code>ssh-keyscan</code> command against the SFTP server to retrieve
-     * the necessary key.
+     * The public portion of the host key, or keys, that are used to identify the external server to which you are
+     * connecting. You can use the <code>ssh-keyscan</code> command against the SFTP server to retrieve the necessary
+     * key.
      * </p>
      * <p>
      * The three standard SSH public key format elements are <code>&lt;key type&gt;</code>,
@@ -258,13 +263,14 @@ public class SftpConnectorConfig implements Serializable, Cloneable, StructuredP
      * <ul>
      * <li>
      * <p>
-     * For RSA keys, the key type is <code>ssh-rsa</code>.
+     * For RSA keys, the <code>&lt;key type&gt;</code> string is <code>ssh-rsa</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * For ECDSA keys, the key type is either <code>ecdsa-sha2-nistp256</code>, <code>ecdsa-sha2-nistp384</code>, or
-     * <code>ecdsa-sha2-nistp521</code>, depending on the size of the key you generated.
+     * For ECDSA keys, the <code>&lt;key type&gt;</code> string is either <code>ecdsa-sha2-nistp256</code>,
+     * <code>ecdsa-sha2-nistp384</code>, or <code>ecdsa-sha2-nistp521</code>, depending on the size of the key you
+     * generated.
      * </p>
      * </li>
      * </ul>
@@ -275,9 +281,9 @@ public class SftpConnectorConfig implements Serializable, Cloneable, StructuredP
      * </p>
      * 
      * @param trustedHostKeys
-     *        The public portion of the host key, or keys, that are used to authenticate the user to the external server
-     *        to which you are connecting. You can use the <code>ssh-keyscan</code> command against the SFTP server to
-     *        retrieve the necessary key.</p>
+     *        The public portion of the host key, or keys, that are used to identify the external server to which you
+     *        are connecting. You can use the <code>ssh-keyscan</code> command against the SFTP server to retrieve the
+     *        necessary key.</p>
      *        <p>
      *        The three standard SSH public key format elements are <code>&lt;key type&gt;</code>,
      *        <code>&lt;body base64&gt;</code>, and an optional <code>&lt;comment&gt;</code>, with spaces between each
@@ -290,13 +296,14 @@ public class SftpConnectorConfig implements Serializable, Cloneable, StructuredP
      *        <ul>
      *        <li>
      *        <p>
-     *        For RSA keys, the key type is <code>ssh-rsa</code>.
+     *        For RSA keys, the <code>&lt;key type&gt;</code> string is <code>ssh-rsa</code>.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        For ECDSA keys, the key type is either <code>ecdsa-sha2-nistp256</code>, <code>ecdsa-sha2-nistp384</code>,
-     *        or <code>ecdsa-sha2-nistp521</code>, depending on the size of the key you generated.
+     *        For ECDSA keys, the <code>&lt;key type&gt;</code> string is either <code>ecdsa-sha2-nistp256</code>,
+     *        <code>ecdsa-sha2-nistp384</code>, or <code>ecdsa-sha2-nistp521</code>, depending on the size of the key
+     *        you generated.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -314,9 +321,9 @@ public class SftpConnectorConfig implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The public portion of the host key, or keys, that are used to authenticate the user to the external server to
-     * which you are connecting. You can use the <code>ssh-keyscan</code> command against the SFTP server to retrieve
-     * the necessary key.
+     * The public portion of the host key, or keys, that are used to identify the external server to which you are
+     * connecting. You can use the <code>ssh-keyscan</code> command against the SFTP server to retrieve the necessary
+     * key.
      * </p>
      * <p>
      * The three standard SSH public key format elements are <code>&lt;key type&gt;</code>,
@@ -330,21 +337,22 @@ public class SftpConnectorConfig implements Serializable, Cloneable, StructuredP
      * <ul>
      * <li>
      * <p>
-     * For RSA keys, the key type is <code>ssh-rsa</code>.
+     * For RSA keys, the <code>&lt;key type&gt;</code> string is <code>ssh-rsa</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * For ECDSA keys, the key type is either <code>ecdsa-sha2-nistp256</code>, <code>ecdsa-sha2-nistp384</code>, or
-     * <code>ecdsa-sha2-nistp521</code>, depending on the size of the key you generated.
+     * For ECDSA keys, the <code>&lt;key type&gt;</code> string is either <code>ecdsa-sha2-nistp256</code>,
+     * <code>ecdsa-sha2-nistp384</code>, or <code>ecdsa-sha2-nistp521</code>, depending on the size of the key you
+     * generated.
      * </p>
      * </li>
      * </ul>
      * 
      * @param trustedHostKeys
-     *        The public portion of the host key, or keys, that are used to authenticate the user to the external server
-     *        to which you are connecting. You can use the <code>ssh-keyscan</code> command against the SFTP server to
-     *        retrieve the necessary key.</p>
+     *        The public portion of the host key, or keys, that are used to identify the external server to which you
+     *        are connecting. You can use the <code>ssh-keyscan</code> command against the SFTP server to retrieve the
+     *        necessary key.</p>
      *        <p>
      *        The three standard SSH public key format elements are <code>&lt;key type&gt;</code>,
      *        <code>&lt;body base64&gt;</code>, and an optional <code>&lt;comment&gt;</code>, with spaces between each
@@ -357,13 +365,14 @@ public class SftpConnectorConfig implements Serializable, Cloneable, StructuredP
      *        <ul>
      *        <li>
      *        <p>
-     *        For RSA keys, the key type is <code>ssh-rsa</code>.
+     *        For RSA keys, the <code>&lt;key type&gt;</code> string is <code>ssh-rsa</code>.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        For ECDSA keys, the key type is either <code>ecdsa-sha2-nistp256</code>, <code>ecdsa-sha2-nistp384</code>,
-     *        or <code>ecdsa-sha2-nistp521</code>, depending on the size of the key you generated.
+     *        For ECDSA keys, the <code>&lt;key type&gt;</code> string is either <code>ecdsa-sha2-nistp256</code>,
+     *        <code>ecdsa-sha2-nistp384</code>, or <code>ecdsa-sha2-nistp521</code>, depending on the size of the key
+     *        you generated.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

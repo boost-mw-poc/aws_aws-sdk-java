@@ -1481,6 +1481,26 @@ public interface AmazonFSx {
 
     /**
      * <p>
+     * After performing steps to repair the Active Directory configuration of an FSx for Windows File Server file
+     * system, use this action to initiate the process of Amazon FSx attempting to reconnect to the file system.
+     * </p>
+     * 
+     * @param startMisconfiguredStateRecoveryRequest
+     * @return Result of the StartMisconfiguredStateRecovery operation returned by the service.
+     * @throws BadRequestException
+     *         A generic error indicating a failure with a client request.
+     * @throws FileSystemNotFoundException
+     *         No Amazon FSx file systems were found based upon supplied parameters.
+     * @throws InternalServerErrorException
+     *         A generic error indicating a server-side failure.
+     * @sample AmazonFSx.StartMisconfiguredStateRecovery
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/StartMisconfiguredStateRecovery"
+     *      target="_top">AWS API Documentation</a>
+     */
+    StartMisconfiguredStateRecoveryResult startMisconfiguredStateRecovery(StartMisconfiguredStateRecoveryRequest startMisconfiguredStateRecoveryRequest);
+
+    /**
+     * <p>
      * Tags an Amazon FSx resource.
      * </p>
      * 

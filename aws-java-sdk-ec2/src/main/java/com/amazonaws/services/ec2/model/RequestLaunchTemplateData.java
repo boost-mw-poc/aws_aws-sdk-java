@@ -262,8 +262,21 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
     private com.amazonaws.internal.SdkInternalList<ElasticGpuSpecification> elasticGpuSpecifications;
     /**
      * <p>
-     * The elastic inference accelerator for the instance.
+     * An elastic inference accelerator to associate with the instance. Elastic inference accelerators are a resource
+     * you can attach to your Amazon EC2 instances to accelerate your Deep Learning (DL) inference workloads.
      * </p>
+     * <p>
+     * You cannot specify accelerators from different generations in the same request.
+     * </p>
+     * <note>
+     * <p>
+     * Starting April 15, 2023, Amazon Web Services will not onboard new customers to Amazon Elastic Inference (EI), and
+     * will help current customers migrate their workloads to options that offer better price and performance. After
+     * April 15, 2023, new customers will not be able to launch instances with Amazon EI accelerators in Amazon
+     * SageMaker, Amazon ECS, or Amazon EC2. However, customers who have used Amazon EI at least once during the past
+     * 30-day period are considered current customers and will be able to continue using the service.
+     * </p>
+     * </note>
      */
     private com.amazonaws.internal.SdkInternalList<LaunchTemplateElasticInferenceAccelerator> elasticInferenceAccelerators;
     /**
@@ -2148,10 +2161,37 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The elastic inference accelerator for the instance.
+     * An elastic inference accelerator to associate with the instance. Elastic inference accelerators are a resource
+     * you can attach to your Amazon EC2 instances to accelerate your Deep Learning (DL) inference workloads.
      * </p>
+     * <p>
+     * You cannot specify accelerators from different generations in the same request.
+     * </p>
+     * <note>
+     * <p>
+     * Starting April 15, 2023, Amazon Web Services will not onboard new customers to Amazon Elastic Inference (EI), and
+     * will help current customers migrate their workloads to options that offer better price and performance. After
+     * April 15, 2023, new customers will not be able to launch instances with Amazon EI accelerators in Amazon
+     * SageMaker, Amazon ECS, or Amazon EC2. However, customers who have used Amazon EI at least once during the past
+     * 30-day period are considered current customers and will be able to continue using the service.
+     * </p>
+     * </note>
      * 
-     * @return The elastic inference accelerator for the instance.
+     * @return An elastic inference accelerator to associate with the instance. Elastic inference accelerators are a
+     *         resource you can attach to your Amazon EC2 instances to accelerate your Deep Learning (DL) inference
+     *         workloads.</p>
+     *         <p>
+     *         You cannot specify accelerators from different generations in the same request.
+     *         </p>
+     *         <note>
+     *         <p>
+     *         Starting April 15, 2023, Amazon Web Services will not onboard new customers to Amazon Elastic Inference
+     *         (EI), and will help current customers migrate their workloads to options that offer better price and
+     *         performance. After April 15, 2023, new customers will not be able to launch instances with Amazon EI
+     *         accelerators in Amazon SageMaker, Amazon ECS, or Amazon EC2. However, customers who have used Amazon EI
+     *         at least once during the past 30-day period are considered current customers and will be able to continue
+     *         using the service.
+     *         </p>
      */
 
     public java.util.List<LaunchTemplateElasticInferenceAccelerator> getElasticInferenceAccelerators() {
@@ -2163,11 +2203,38 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The elastic inference accelerator for the instance.
+     * An elastic inference accelerator to associate with the instance. Elastic inference accelerators are a resource
+     * you can attach to your Amazon EC2 instances to accelerate your Deep Learning (DL) inference workloads.
      * </p>
+     * <p>
+     * You cannot specify accelerators from different generations in the same request.
+     * </p>
+     * <note>
+     * <p>
+     * Starting April 15, 2023, Amazon Web Services will not onboard new customers to Amazon Elastic Inference (EI), and
+     * will help current customers migrate their workloads to options that offer better price and performance. After
+     * April 15, 2023, new customers will not be able to launch instances with Amazon EI accelerators in Amazon
+     * SageMaker, Amazon ECS, or Amazon EC2. However, customers who have used Amazon EI at least once during the past
+     * 30-day period are considered current customers and will be able to continue using the service.
+     * </p>
+     * </note>
      * 
      * @param elasticInferenceAccelerators
-     *        The elastic inference accelerator for the instance.
+     *        An elastic inference accelerator to associate with the instance. Elastic inference accelerators are a
+     *        resource you can attach to your Amazon EC2 instances to accelerate your Deep Learning (DL) inference
+     *        workloads.</p>
+     *        <p>
+     *        You cannot specify accelerators from different generations in the same request.
+     *        </p>
+     *        <note>
+     *        <p>
+     *        Starting April 15, 2023, Amazon Web Services will not onboard new customers to Amazon Elastic Inference
+     *        (EI), and will help current customers migrate their workloads to options that offer better price and
+     *        performance. After April 15, 2023, new customers will not be able to launch instances with Amazon EI
+     *        accelerators in Amazon SageMaker, Amazon ECS, or Amazon EC2. However, customers who have used Amazon EI at
+     *        least once during the past 30-day period are considered current customers and will be able to continue
+     *        using the service.
+     *        </p>
      */
 
     public void setElasticInferenceAccelerators(java.util.Collection<LaunchTemplateElasticInferenceAccelerator> elasticInferenceAccelerators) {
@@ -2181,8 +2248,21 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The elastic inference accelerator for the instance.
+     * An elastic inference accelerator to associate with the instance. Elastic inference accelerators are a resource
+     * you can attach to your Amazon EC2 instances to accelerate your Deep Learning (DL) inference workloads.
      * </p>
+     * <p>
+     * You cannot specify accelerators from different generations in the same request.
+     * </p>
+     * <note>
+     * <p>
+     * Starting April 15, 2023, Amazon Web Services will not onboard new customers to Amazon Elastic Inference (EI), and
+     * will help current customers migrate their workloads to options that offer better price and performance. After
+     * April 15, 2023, new customers will not be able to launch instances with Amazon EI accelerators in Amazon
+     * SageMaker, Amazon ECS, or Amazon EC2. However, customers who have used Amazon EI at least once during the past
+     * 30-day period are considered current customers and will be able to continue using the service.
+     * </p>
+     * </note>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setElasticInferenceAccelerators(java.util.Collection)} or
@@ -2190,7 +2270,21 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
      * </p>
      * 
      * @param elasticInferenceAccelerators
-     *        The elastic inference accelerator for the instance.
+     *        An elastic inference accelerator to associate with the instance. Elastic inference accelerators are a
+     *        resource you can attach to your Amazon EC2 instances to accelerate your Deep Learning (DL) inference
+     *        workloads.</p>
+     *        <p>
+     *        You cannot specify accelerators from different generations in the same request.
+     *        </p>
+     *        <note>
+     *        <p>
+     *        Starting April 15, 2023, Amazon Web Services will not onboard new customers to Amazon Elastic Inference
+     *        (EI), and will help current customers migrate their workloads to options that offer better price and
+     *        performance. After April 15, 2023, new customers will not be able to launch instances with Amazon EI
+     *        accelerators in Amazon SageMaker, Amazon ECS, or Amazon EC2. However, customers who have used Amazon EI at
+     *        least once during the past 30-day period are considered current customers and will be able to continue
+     *        using the service.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2207,11 +2301,38 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The elastic inference accelerator for the instance.
+     * An elastic inference accelerator to associate with the instance. Elastic inference accelerators are a resource
+     * you can attach to your Amazon EC2 instances to accelerate your Deep Learning (DL) inference workloads.
      * </p>
+     * <p>
+     * You cannot specify accelerators from different generations in the same request.
+     * </p>
+     * <note>
+     * <p>
+     * Starting April 15, 2023, Amazon Web Services will not onboard new customers to Amazon Elastic Inference (EI), and
+     * will help current customers migrate their workloads to options that offer better price and performance. After
+     * April 15, 2023, new customers will not be able to launch instances with Amazon EI accelerators in Amazon
+     * SageMaker, Amazon ECS, or Amazon EC2. However, customers who have used Amazon EI at least once during the past
+     * 30-day period are considered current customers and will be able to continue using the service.
+     * </p>
+     * </note>
      * 
      * @param elasticInferenceAccelerators
-     *        The elastic inference accelerator for the instance.
+     *        An elastic inference accelerator to associate with the instance. Elastic inference accelerators are a
+     *        resource you can attach to your Amazon EC2 instances to accelerate your Deep Learning (DL) inference
+     *        workloads.</p>
+     *        <p>
+     *        You cannot specify accelerators from different generations in the same request.
+     *        </p>
+     *        <note>
+     *        <p>
+     *        Starting April 15, 2023, Amazon Web Services will not onboard new customers to Amazon Elastic Inference
+     *        (EI), and will help current customers migrate their workloads to options that offer better price and
+     *        performance. After April 15, 2023, new customers will not be able to launch instances with Amazon EI
+     *        accelerators in Amazon SageMaker, Amazon ECS, or Amazon EC2. However, customers who have used Amazon EI at
+     *        least once during the past 30-day period are considered current customers and will be able to continue
+     *        using the service.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

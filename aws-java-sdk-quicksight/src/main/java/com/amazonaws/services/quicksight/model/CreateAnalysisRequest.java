@@ -99,6 +99,13 @@ public class CreateAnalysisRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      */
     private AnalysisDefinition definition;
+    /**
+     * <p>
+     * The option to relax the validation needed to create an analysis with definition objects. This skips the
+     * validation step for specific errors.
+     * </p>
+     */
+    private ValidationStrategy validationStrategy;
 
     /**
      * <p>
@@ -641,6 +648,52 @@ public class CreateAnalysisRequest extends com.amazonaws.AmazonWebServiceRequest
     }
 
     /**
+     * <p>
+     * The option to relax the validation needed to create an analysis with definition objects. This skips the
+     * validation step for specific errors.
+     * </p>
+     * 
+     * @param validationStrategy
+     *        The option to relax the validation needed to create an analysis with definition objects. This skips the
+     *        validation step for specific errors.
+     */
+
+    public void setValidationStrategy(ValidationStrategy validationStrategy) {
+        this.validationStrategy = validationStrategy;
+    }
+
+    /**
+     * <p>
+     * The option to relax the validation needed to create an analysis with definition objects. This skips the
+     * validation step for specific errors.
+     * </p>
+     * 
+     * @return The option to relax the validation needed to create an analysis with definition objects. This skips the
+     *         validation step for specific errors.
+     */
+
+    public ValidationStrategy getValidationStrategy() {
+        return this.validationStrategy;
+    }
+
+    /**
+     * <p>
+     * The option to relax the validation needed to create an analysis with definition objects. This skips the
+     * validation step for specific errors.
+     * </p>
+     * 
+     * @param validationStrategy
+     *        The option to relax the validation needed to create an analysis with definition objects. This skips the
+     *        validation step for specific errors.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateAnalysisRequest withValidationStrategy(ValidationStrategy validationStrategy) {
+        setValidationStrategy(validationStrategy);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -669,7 +722,9 @@ public class CreateAnalysisRequest extends com.amazonaws.AmazonWebServiceRequest
         if (getTags() != null)
             sb.append("Tags: ").append(getTags()).append(",");
         if (getDefinition() != null)
-            sb.append("Definition: ").append(getDefinition());
+            sb.append("Definition: ").append(getDefinition()).append(",");
+        if (getValidationStrategy() != null)
+            sb.append("ValidationStrategy: ").append(getValidationStrategy());
         sb.append("}");
         return sb.toString();
     }
@@ -720,6 +775,10 @@ public class CreateAnalysisRequest extends com.amazonaws.AmazonWebServiceRequest
             return false;
         if (other.getDefinition() != null && other.getDefinition().equals(this.getDefinition()) == false)
             return false;
+        if (other.getValidationStrategy() == null ^ this.getValidationStrategy() == null)
+            return false;
+        if (other.getValidationStrategy() != null && other.getValidationStrategy().equals(this.getValidationStrategy()) == false)
+            return false;
         return true;
     }
 
@@ -737,6 +796,7 @@ public class CreateAnalysisRequest extends com.amazonaws.AmazonWebServiceRequest
         hashCode = prime * hashCode + ((getThemeArn() == null) ? 0 : getThemeArn().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getDefinition() == null) ? 0 : getDefinition().hashCode());
+        hashCode = prime * hashCode + ((getValidationStrategy() == null) ? 0 : getValidationStrategy().hashCode());
         return hashCode;
     }
 

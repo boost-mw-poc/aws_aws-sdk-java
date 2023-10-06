@@ -249,11 +249,6 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      * </li>
      * <li>
      * <p>
-     * <code>license-pool</code> -
-     * </p>
-     * </li>
-     * <li>
-     * <p>
      * <code>maintenance-options.auto-recovery</code> - The current automatic recovery behavior of the instance (
      * <code>disabled</code> | <code>default</code>).
      * </p>
@@ -308,20 +303,22 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      * </li>
      * <li>
      * <p>
-     * <code>network-interface.addresses.primary</code> - Specifies whether the IPv4 address of the network interface is
-     * the primary private IPv4 address.
+     * <code>network-interface.addresses.association.allocation-id</code> - The allocation ID.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>network-interface.addresses.private-ip-address</code> - The private IPv4 address associated with the
-     * network interface.
+     * <code>network-interface.addresses.association.association-id</code> - The association ID.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>network-interface.addresses.association.public-ip</code> - The ID of the association of an Elastic IP
-     * address (IPv4) with a network interface.
+     * <code>network-interface.addresses.association.carrier-ip</code> - The carrier IP address.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.addresses.association.customer-owned-ip</code> - The customer-owned IP address.
      * </p>
      * </li>
      * <li>
@@ -332,14 +329,30 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      * </li>
      * <li>
      * <p>
-     * <code>network-interface.association.public-ip</code> - The address of the Elastic IP address (IPv4) bound to the
-     * network interface.
+     * <code>network-interface.addresses.association.public-dns-name</code> - The public DNS name.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>network-interface.association.ip-owner-id</code> - The owner of the Elastic IP address (IPv4) associated
-     * with the network interface.
+     * <code>network-interface.addresses.association.public-ip</code> - The ID of the association of an Elastic IP
+     * address (IPv4) with a network interface.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.addresses.primary</code> - Specifies whether the IPv4 address of the network interface is
+     * the primary private IPv4 address.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.addresses.private-dns-name</code> - The private DNS name.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.addresses.private-ip-address</code> - The private IPv4 address associated with the
+     * network interface.
      * </p>
      * </li>
      * <li>
@@ -356,7 +369,52 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      * </li>
      * <li>
      * <p>
+     * <code>network-interface.association.carrier-ip</code> - The customer-owned IP address.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.association.customer-owned-ip</code> - The customer-owned IP address.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.association.ip-owner-id</code> - The owner of the Elastic IP address (IPv4) associated
+     * with the network interface.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.association.public-dns-name</code> - The public DNS name.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.association.public-ip</code> - The address of the Elastic IP address (IPv4) bound to the
+     * network interface.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.attachment.attach-time</code> - The time that the network interface was attached to an
+     * instance.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>network-interface.attachment.attachment-id</code> - The ID of the interface attachment.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.attachment.delete-on-termination</code> - Specifies whether the attachment is deleted
+     * when an instance is terminated.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.attachment.device-index</code> - The device index to which the network interface is
+     * attached.
      * </p>
      * </li>
      * <li>
@@ -373,8 +431,7 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      * </li>
      * <li>
      * <p>
-     * <code>network-interface.attachment.device-index</code> - The device index to which the network interface is
-     * attached.
+     * <code>network-interface.attachment.network-card-index</code> - The index of the network card.
      * </p>
      * </li>
      * <li>
@@ -385,19 +442,13 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      * </li>
      * <li>
      * <p>
-     * <code>network-interface.attachment.attach-time</code> - The time that the network interface was attached to an
-     * instance.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>network-interface.attachment.delete-on-termination</code> - Specifies whether the attachment is deleted
-     * when an instance is terminated.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
      * <code>network-interface.availability-zone</code> - The Availability Zone for the network interface.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.deny-all-igw-traffic</code> - A Boolean that indicates whether a network interface with
+     * an IPv6 address is unreachable from the public internet.
      * </p>
      * </li>
      * <li>
@@ -417,8 +468,36 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      * </li>
      * <li>
      * <p>
+     * <code>network-interface.ipv4-prefixes.ipv4-prefix</code> - The IPv4 prefixes that are assigned to the network
+     * interface.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.ipv6-address</code> - The IPv6 address associated with the network interface.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>network-interface.ipv6-addresses.ipv6-address</code> - The IPv6 address associated with the network
      * interface.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.ipv6-addresses.is-primary-ipv6</code> - A Boolean that indicates whether this is the
+     * primary IPv6 address.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.ipv6-native</code> - A Boolean that indicates whether this is an IPv6 only network
+     * interface.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.ipv6-prefixes.ipv6-prefix</code> - The IPv6 prefix assigned to the network interface.
      * </p>
      * </li>
      * <li>
@@ -433,12 +512,27 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      * </li>
      * <li>
      * <p>
+     * <code>network-interface.outpost-arn</code> - The ARN of the Outpost.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>network-interface.owner-id</code> - The ID of the owner of the network interface.
      * </p>
      * </li>
      * <li>
      * <p>
      * <code>network-interface.private-dns-name</code> - The private DNS name of the network interface.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.private-ip-address</code> - The private IPv4 address.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.public-dns-name</code> - The public DNS name.
      * </p>
      * </li>
      * <li>
@@ -469,6 +563,16 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      * <li>
      * <p>
      * <code>network-interface.subnet-id</code> - The ID of the subnet for the network interface.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.tag-key</code> - The key of a tag assigned to the network interface.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.tag-value</code> - The value of a tag assigned to the network interface.
      * </p>
      * </li>
      * <li>
@@ -926,11 +1030,6 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      * </li>
      * <li>
      * <p>
-     * <code>license-pool</code> -
-     * </p>
-     * </li>
-     * <li>
-     * <p>
      * <code>maintenance-options.auto-recovery</code> - The current automatic recovery behavior of the instance (
      * <code>disabled</code> | <code>default</code>).
      * </p>
@@ -985,20 +1084,22 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      * </li>
      * <li>
      * <p>
-     * <code>network-interface.addresses.primary</code> - Specifies whether the IPv4 address of the network interface is
-     * the primary private IPv4 address.
+     * <code>network-interface.addresses.association.allocation-id</code> - The allocation ID.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>network-interface.addresses.private-ip-address</code> - The private IPv4 address associated with the
-     * network interface.
+     * <code>network-interface.addresses.association.association-id</code> - The association ID.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>network-interface.addresses.association.public-ip</code> - The ID of the association of an Elastic IP
-     * address (IPv4) with a network interface.
+     * <code>network-interface.addresses.association.carrier-ip</code> - The carrier IP address.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.addresses.association.customer-owned-ip</code> - The customer-owned IP address.
      * </p>
      * </li>
      * <li>
@@ -1009,14 +1110,30 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      * </li>
      * <li>
      * <p>
-     * <code>network-interface.association.public-ip</code> - The address of the Elastic IP address (IPv4) bound to the
-     * network interface.
+     * <code>network-interface.addresses.association.public-dns-name</code> - The public DNS name.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>network-interface.association.ip-owner-id</code> - The owner of the Elastic IP address (IPv4) associated
-     * with the network interface.
+     * <code>network-interface.addresses.association.public-ip</code> - The ID of the association of an Elastic IP
+     * address (IPv4) with a network interface.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.addresses.primary</code> - Specifies whether the IPv4 address of the network interface is
+     * the primary private IPv4 address.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.addresses.private-dns-name</code> - The private DNS name.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.addresses.private-ip-address</code> - The private IPv4 address associated with the
+     * network interface.
      * </p>
      * </li>
      * <li>
@@ -1033,7 +1150,52 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      * </li>
      * <li>
      * <p>
+     * <code>network-interface.association.carrier-ip</code> - The customer-owned IP address.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.association.customer-owned-ip</code> - The customer-owned IP address.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.association.ip-owner-id</code> - The owner of the Elastic IP address (IPv4) associated
+     * with the network interface.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.association.public-dns-name</code> - The public DNS name.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.association.public-ip</code> - The address of the Elastic IP address (IPv4) bound to the
+     * network interface.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.attachment.attach-time</code> - The time that the network interface was attached to an
+     * instance.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>network-interface.attachment.attachment-id</code> - The ID of the interface attachment.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.attachment.delete-on-termination</code> - Specifies whether the attachment is deleted
+     * when an instance is terminated.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.attachment.device-index</code> - The device index to which the network interface is
+     * attached.
      * </p>
      * </li>
      * <li>
@@ -1050,8 +1212,7 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      * </li>
      * <li>
      * <p>
-     * <code>network-interface.attachment.device-index</code> - The device index to which the network interface is
-     * attached.
+     * <code>network-interface.attachment.network-card-index</code> - The index of the network card.
      * </p>
      * </li>
      * <li>
@@ -1062,19 +1223,13 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      * </li>
      * <li>
      * <p>
-     * <code>network-interface.attachment.attach-time</code> - The time that the network interface was attached to an
-     * instance.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>network-interface.attachment.delete-on-termination</code> - Specifies whether the attachment is deleted
-     * when an instance is terminated.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
      * <code>network-interface.availability-zone</code> - The Availability Zone for the network interface.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.deny-all-igw-traffic</code> - A Boolean that indicates whether a network interface with
+     * an IPv6 address is unreachable from the public internet.
      * </p>
      * </li>
      * <li>
@@ -1094,8 +1249,36 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      * </li>
      * <li>
      * <p>
+     * <code>network-interface.ipv4-prefixes.ipv4-prefix</code> - The IPv4 prefixes that are assigned to the network
+     * interface.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.ipv6-address</code> - The IPv6 address associated with the network interface.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>network-interface.ipv6-addresses.ipv6-address</code> - The IPv6 address associated with the network
      * interface.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.ipv6-addresses.is-primary-ipv6</code> - A Boolean that indicates whether this is the
+     * primary IPv6 address.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.ipv6-native</code> - A Boolean that indicates whether this is an IPv6 only network
+     * interface.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.ipv6-prefixes.ipv6-prefix</code> - The IPv6 prefix assigned to the network interface.
      * </p>
      * </li>
      * <li>
@@ -1110,12 +1293,27 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      * </li>
      * <li>
      * <p>
+     * <code>network-interface.outpost-arn</code> - The ARN of the Outpost.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>network-interface.owner-id</code> - The ID of the owner of the network interface.
      * </p>
      * </li>
      * <li>
      * <p>
      * <code>network-interface.private-dns-name</code> - The private DNS name of the network interface.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.private-ip-address</code> - The private IPv4 address.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.public-dns-name</code> - The public DNS name.
      * </p>
      * </li>
      * <li>
@@ -1146,6 +1344,16 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      * <li>
      * <p>
      * <code>network-interface.subnet-id</code> - The ID of the subnet for the network interface.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.tag-key</code> - The key of a tag assigned to the network interface.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.tag-value</code> - The value of a tag assigned to the network interface.
      * </p>
      * </li>
      * <li>
@@ -1577,11 +1785,6 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      *         </li>
      *         <li>
      *         <p>
-     *         <code>license-pool</code> -
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
      *         <code>maintenance-options.auto-recovery</code> - The current automatic recovery behavior of the instance
      *         (<code>disabled</code> | <code>default</code>).
      *         </p>
@@ -1636,20 +1839,22 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      *         </li>
      *         <li>
      *         <p>
-     *         <code>network-interface.addresses.primary</code> - Specifies whether the IPv4 address of the network
-     *         interface is the primary private IPv4 address.
+     *         <code>network-interface.addresses.association.allocation-id</code> - The allocation ID.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>network-interface.addresses.private-ip-address</code> - The private IPv4 address associated with
-     *         the network interface.
+     *         <code>network-interface.addresses.association.association-id</code> - The association ID.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>network-interface.addresses.association.public-ip</code> - The ID of the association of an Elastic
-     *         IP address (IPv4) with a network interface.
+     *         <code>network-interface.addresses.association.carrier-ip</code> - The carrier IP address.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>network-interface.addresses.association.customer-owned-ip</code> - The customer-owned IP address.
      *         </p>
      *         </li>
      *         <li>
@@ -1660,14 +1865,30 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      *         </li>
      *         <li>
      *         <p>
-     *         <code>network-interface.association.public-ip</code> - The address of the Elastic IP address (IPv4) bound
-     *         to the network interface.
+     *         <code>network-interface.addresses.association.public-dns-name</code> - The public DNS name.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>network-interface.association.ip-owner-id</code> - The owner of the Elastic IP address (IPv4)
-     *         associated with the network interface.
+     *         <code>network-interface.addresses.association.public-ip</code> - The ID of the association of an Elastic
+     *         IP address (IPv4) with a network interface.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>network-interface.addresses.primary</code> - Specifies whether the IPv4 address of the network
+     *         interface is the primary private IPv4 address.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>network-interface.addresses.private-dns-name</code> - The private DNS name.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>network-interface.addresses.private-ip-address</code> - The private IPv4 address associated with
+     *         the network interface.
      *         </p>
      *         </li>
      *         <li>
@@ -1684,7 +1905,52 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      *         </li>
      *         <li>
      *         <p>
+     *         <code>network-interface.association.carrier-ip</code> - The customer-owned IP address.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>network-interface.association.customer-owned-ip</code> - The customer-owned IP address.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>network-interface.association.ip-owner-id</code> - The owner of the Elastic IP address (IPv4)
+     *         associated with the network interface.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>network-interface.association.public-dns-name</code> - The public DNS name.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>network-interface.association.public-ip</code> - The address of the Elastic IP address (IPv4) bound
+     *         to the network interface.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>network-interface.attachment.attach-time</code> - The time that the network interface was attached
+     *         to an instance.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
      *         <code>network-interface.attachment.attachment-id</code> - The ID of the interface attachment.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>network-interface.attachment.delete-on-termination</code> - Specifies whether the attachment is
+     *         deleted when an instance is terminated.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>network-interface.attachment.device-index</code> - The device index to which the network interface
+     *         is attached.
      *         </p>
      *         </li>
      *         <li>
@@ -1701,8 +1967,7 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      *         </li>
      *         <li>
      *         <p>
-     *         <code>network-interface.attachment.device-index</code> - The device index to which the network interface
-     *         is attached.
+     *         <code>network-interface.attachment.network-card-index</code> - The index of the network card.
      *         </p>
      *         </li>
      *         <li>
@@ -1713,19 +1978,13 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      *         </li>
      *         <li>
      *         <p>
-     *         <code>network-interface.attachment.attach-time</code> - The time that the network interface was attached
-     *         to an instance.
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
-     *         <code>network-interface.attachment.delete-on-termination</code> - Specifies whether the attachment is
-     *         deleted when an instance is terminated.
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
      *         <code>network-interface.availability-zone</code> - The Availability Zone for the network interface.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>network-interface.deny-all-igw-traffic</code> - A Boolean that indicates whether a network
+     *         interface with an IPv6 address is unreachable from the public internet.
      *         </p>
      *         </li>
      *         <li>
@@ -1747,7 +2006,36 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      *         </li>
      *         <li>
      *         <p>
+     *         <code>network-interface.ipv4-prefixes.ipv4-prefix</code> - The IPv4 prefixes that are assigned to the
+     *         network interface.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>network-interface.ipv6-address</code> - The IPv6 address associated with the network interface.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
      *         <code>network-interface.ipv6-addresses.ipv6-address</code> - The IPv6 address associated with the network
+     *         interface.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>network-interface.ipv6-addresses.is-primary-ipv6</code> - A Boolean that indicates whether this is
+     *         the primary IPv6 address.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>network-interface.ipv6-native</code> - A Boolean that indicates whether this is an IPv6 only
+     *         network interface.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>network-interface.ipv6-prefixes.ipv6-prefix</code> - The IPv6 prefix assigned to the network
      *         interface.
      *         </p>
      *         </li>
@@ -1763,12 +2051,27 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      *         </li>
      *         <li>
      *         <p>
+     *         <code>network-interface.outpost-arn</code> - The ARN of the Outpost.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
      *         <code>network-interface.owner-id</code> - The ID of the owner of the network interface.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
      *         <code>network-interface.private-dns-name</code> - The private DNS name of the network interface.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>network-interface.private-ip-address</code> - The private IPv4 address.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>network-interface.public-dns-name</code> - The public DNS name.
      *         </p>
      *         </li>
      *         <li>
@@ -1799,6 +2102,16 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      *         <li>
      *         <p>
      *         <code>network-interface.subnet-id</code> - The ID of the subnet for the network interface.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>network-interface.tag-key</code> - The key of a tag assigned to the network interface.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>network-interface.tag-value</code> - The value of a tag assigned to the network interface.
      *         </p>
      *         </li>
      *         <li>
@@ -2239,11 +2552,6 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      * </li>
      * <li>
      * <p>
-     * <code>license-pool</code> -
-     * </p>
-     * </li>
-     * <li>
-     * <p>
      * <code>maintenance-options.auto-recovery</code> - The current automatic recovery behavior of the instance (
      * <code>disabled</code> | <code>default</code>).
      * </p>
@@ -2298,20 +2606,22 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      * </li>
      * <li>
      * <p>
-     * <code>network-interface.addresses.primary</code> - Specifies whether the IPv4 address of the network interface is
-     * the primary private IPv4 address.
+     * <code>network-interface.addresses.association.allocation-id</code> - The allocation ID.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>network-interface.addresses.private-ip-address</code> - The private IPv4 address associated with the
-     * network interface.
+     * <code>network-interface.addresses.association.association-id</code> - The association ID.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>network-interface.addresses.association.public-ip</code> - The ID of the association of an Elastic IP
-     * address (IPv4) with a network interface.
+     * <code>network-interface.addresses.association.carrier-ip</code> - The carrier IP address.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.addresses.association.customer-owned-ip</code> - The customer-owned IP address.
      * </p>
      * </li>
      * <li>
@@ -2322,14 +2632,30 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      * </li>
      * <li>
      * <p>
-     * <code>network-interface.association.public-ip</code> - The address of the Elastic IP address (IPv4) bound to the
-     * network interface.
+     * <code>network-interface.addresses.association.public-dns-name</code> - The public DNS name.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>network-interface.association.ip-owner-id</code> - The owner of the Elastic IP address (IPv4) associated
-     * with the network interface.
+     * <code>network-interface.addresses.association.public-ip</code> - The ID of the association of an Elastic IP
+     * address (IPv4) with a network interface.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.addresses.primary</code> - Specifies whether the IPv4 address of the network interface is
+     * the primary private IPv4 address.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.addresses.private-dns-name</code> - The private DNS name.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.addresses.private-ip-address</code> - The private IPv4 address associated with the
+     * network interface.
      * </p>
      * </li>
      * <li>
@@ -2346,7 +2672,52 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      * </li>
      * <li>
      * <p>
+     * <code>network-interface.association.carrier-ip</code> - The customer-owned IP address.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.association.customer-owned-ip</code> - The customer-owned IP address.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.association.ip-owner-id</code> - The owner of the Elastic IP address (IPv4) associated
+     * with the network interface.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.association.public-dns-name</code> - The public DNS name.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.association.public-ip</code> - The address of the Elastic IP address (IPv4) bound to the
+     * network interface.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.attachment.attach-time</code> - The time that the network interface was attached to an
+     * instance.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>network-interface.attachment.attachment-id</code> - The ID of the interface attachment.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.attachment.delete-on-termination</code> - Specifies whether the attachment is deleted
+     * when an instance is terminated.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.attachment.device-index</code> - The device index to which the network interface is
+     * attached.
      * </p>
      * </li>
      * <li>
@@ -2363,8 +2734,7 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      * </li>
      * <li>
      * <p>
-     * <code>network-interface.attachment.device-index</code> - The device index to which the network interface is
-     * attached.
+     * <code>network-interface.attachment.network-card-index</code> - The index of the network card.
      * </p>
      * </li>
      * <li>
@@ -2375,19 +2745,13 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      * </li>
      * <li>
      * <p>
-     * <code>network-interface.attachment.attach-time</code> - The time that the network interface was attached to an
-     * instance.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>network-interface.attachment.delete-on-termination</code> - Specifies whether the attachment is deleted
-     * when an instance is terminated.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
      * <code>network-interface.availability-zone</code> - The Availability Zone for the network interface.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.deny-all-igw-traffic</code> - A Boolean that indicates whether a network interface with
+     * an IPv6 address is unreachable from the public internet.
      * </p>
      * </li>
      * <li>
@@ -2407,8 +2771,36 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      * </li>
      * <li>
      * <p>
+     * <code>network-interface.ipv4-prefixes.ipv4-prefix</code> - The IPv4 prefixes that are assigned to the network
+     * interface.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.ipv6-address</code> - The IPv6 address associated with the network interface.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>network-interface.ipv6-addresses.ipv6-address</code> - The IPv6 address associated with the network
      * interface.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.ipv6-addresses.is-primary-ipv6</code> - A Boolean that indicates whether this is the
+     * primary IPv6 address.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.ipv6-native</code> - A Boolean that indicates whether this is an IPv6 only network
+     * interface.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.ipv6-prefixes.ipv6-prefix</code> - The IPv6 prefix assigned to the network interface.
      * </p>
      * </li>
      * <li>
@@ -2423,12 +2815,27 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      * </li>
      * <li>
      * <p>
+     * <code>network-interface.outpost-arn</code> - The ARN of the Outpost.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>network-interface.owner-id</code> - The ID of the owner of the network interface.
      * </p>
      * </li>
      * <li>
      * <p>
      * <code>network-interface.private-dns-name</code> - The private DNS name of the network interface.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.private-ip-address</code> - The private IPv4 address.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.public-dns-name</code> - The public DNS name.
      * </p>
      * </li>
      * <li>
@@ -2459,6 +2866,16 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      * <li>
      * <p>
      * <code>network-interface.subnet-id</code> - The ID of the subnet for the network interface.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.tag-key</code> - The key of a tag assigned to the network interface.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.tag-value</code> - The value of a tag assigned to the network interface.
      * </p>
      * </li>
      * <li>
@@ -2891,11 +3308,6 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      *        </li>
      *        <li>
      *        <p>
-     *        <code>license-pool</code> -
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
      *        <code>maintenance-options.auto-recovery</code> - The current automatic recovery behavior of the instance (
      *        <code>disabled</code> | <code>default</code>).
      *        </p>
@@ -2950,20 +3362,22 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      *        </li>
      *        <li>
      *        <p>
-     *        <code>network-interface.addresses.primary</code> - Specifies whether the IPv4 address of the network
-     *        interface is the primary private IPv4 address.
+     *        <code>network-interface.addresses.association.allocation-id</code> - The allocation ID.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>network-interface.addresses.private-ip-address</code> - The private IPv4 address associated with the
-     *        network interface.
+     *        <code>network-interface.addresses.association.association-id</code> - The association ID.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>network-interface.addresses.association.public-ip</code> - The ID of the association of an Elastic
-     *        IP address (IPv4) with a network interface.
+     *        <code>network-interface.addresses.association.carrier-ip</code> - The carrier IP address.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>network-interface.addresses.association.customer-owned-ip</code> - The customer-owned IP address.
      *        </p>
      *        </li>
      *        <li>
@@ -2974,14 +3388,30 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      *        </li>
      *        <li>
      *        <p>
-     *        <code>network-interface.association.public-ip</code> - The address of the Elastic IP address (IPv4) bound
-     *        to the network interface.
+     *        <code>network-interface.addresses.association.public-dns-name</code> - The public DNS name.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>network-interface.association.ip-owner-id</code> - The owner of the Elastic IP address (IPv4)
-     *        associated with the network interface.
+     *        <code>network-interface.addresses.association.public-ip</code> - The ID of the association of an Elastic
+     *        IP address (IPv4) with a network interface.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>network-interface.addresses.primary</code> - Specifies whether the IPv4 address of the network
+     *        interface is the primary private IPv4 address.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>network-interface.addresses.private-dns-name</code> - The private DNS name.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>network-interface.addresses.private-ip-address</code> - The private IPv4 address associated with the
+     *        network interface.
      *        </p>
      *        </li>
      *        <li>
@@ -2998,7 +3428,52 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      *        </li>
      *        <li>
      *        <p>
+     *        <code>network-interface.association.carrier-ip</code> - The customer-owned IP address.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>network-interface.association.customer-owned-ip</code> - The customer-owned IP address.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>network-interface.association.ip-owner-id</code> - The owner of the Elastic IP address (IPv4)
+     *        associated with the network interface.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>network-interface.association.public-dns-name</code> - The public DNS name.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>network-interface.association.public-ip</code> - The address of the Elastic IP address (IPv4) bound
+     *        to the network interface.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>network-interface.attachment.attach-time</code> - The time that the network interface was attached
+     *        to an instance.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
      *        <code>network-interface.attachment.attachment-id</code> - The ID of the interface attachment.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>network-interface.attachment.delete-on-termination</code> - Specifies whether the attachment is
+     *        deleted when an instance is terminated.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>network-interface.attachment.device-index</code> - The device index to which the network interface
+     *        is attached.
      *        </p>
      *        </li>
      *        <li>
@@ -3015,8 +3490,7 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      *        </li>
      *        <li>
      *        <p>
-     *        <code>network-interface.attachment.device-index</code> - The device index to which the network interface
-     *        is attached.
+     *        <code>network-interface.attachment.network-card-index</code> - The index of the network card.
      *        </p>
      *        </li>
      *        <li>
@@ -3027,19 +3501,13 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      *        </li>
      *        <li>
      *        <p>
-     *        <code>network-interface.attachment.attach-time</code> - The time that the network interface was attached
-     *        to an instance.
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>network-interface.attachment.delete-on-termination</code> - Specifies whether the attachment is
-     *        deleted when an instance is terminated.
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
      *        <code>network-interface.availability-zone</code> - The Availability Zone for the network interface.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>network-interface.deny-all-igw-traffic</code> - A Boolean that indicates whether a network interface
+     *        with an IPv6 address is unreachable from the public internet.
      *        </p>
      *        </li>
      *        <li>
@@ -3061,7 +3529,36 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      *        </li>
      *        <li>
      *        <p>
+     *        <code>network-interface.ipv4-prefixes.ipv4-prefix</code> - The IPv4 prefixes that are assigned to the
+     *        network interface.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>network-interface.ipv6-address</code> - The IPv6 address associated with the network interface.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
      *        <code>network-interface.ipv6-addresses.ipv6-address</code> - The IPv6 address associated with the network
+     *        interface.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>network-interface.ipv6-addresses.is-primary-ipv6</code> - A Boolean that indicates whether this is
+     *        the primary IPv6 address.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>network-interface.ipv6-native</code> - A Boolean that indicates whether this is an IPv6 only network
+     *        interface.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>network-interface.ipv6-prefixes.ipv6-prefix</code> - The IPv6 prefix assigned to the network
      *        interface.
      *        </p>
      *        </li>
@@ -3077,12 +3574,27 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      *        </li>
      *        <li>
      *        <p>
+     *        <code>network-interface.outpost-arn</code> - The ARN of the Outpost.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
      *        <code>network-interface.owner-id</code> - The ID of the owner of the network interface.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <code>network-interface.private-dns-name</code> - The private DNS name of the network interface.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>network-interface.private-ip-address</code> - The private IPv4 address.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>network-interface.public-dns-name</code> - The public DNS name.
      *        </p>
      *        </li>
      *        <li>
@@ -3113,6 +3625,16 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      *        <li>
      *        <p>
      *        <code>network-interface.subnet-id</code> - The ID of the subnet for the network interface.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>network-interface.tag-key</code> - The key of a tag assigned to the network interface.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>network-interface.tag-value</code> - The value of a tag assigned to the network interface.
      *        </p>
      *        </li>
      *        <li>
@@ -3554,11 +4076,6 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      * </li>
      * <li>
      * <p>
-     * <code>license-pool</code> -
-     * </p>
-     * </li>
-     * <li>
-     * <p>
      * <code>maintenance-options.auto-recovery</code> - The current automatic recovery behavior of the instance (
      * <code>disabled</code> | <code>default</code>).
      * </p>
@@ -3613,20 +4130,22 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      * </li>
      * <li>
      * <p>
-     * <code>network-interface.addresses.primary</code> - Specifies whether the IPv4 address of the network interface is
-     * the primary private IPv4 address.
+     * <code>network-interface.addresses.association.allocation-id</code> - The allocation ID.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>network-interface.addresses.private-ip-address</code> - The private IPv4 address associated with the
-     * network interface.
+     * <code>network-interface.addresses.association.association-id</code> - The association ID.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>network-interface.addresses.association.public-ip</code> - The ID of the association of an Elastic IP
-     * address (IPv4) with a network interface.
+     * <code>network-interface.addresses.association.carrier-ip</code> - The carrier IP address.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.addresses.association.customer-owned-ip</code> - The customer-owned IP address.
      * </p>
      * </li>
      * <li>
@@ -3637,14 +4156,30 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      * </li>
      * <li>
      * <p>
-     * <code>network-interface.association.public-ip</code> - The address of the Elastic IP address (IPv4) bound to the
-     * network interface.
+     * <code>network-interface.addresses.association.public-dns-name</code> - The public DNS name.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>network-interface.association.ip-owner-id</code> - The owner of the Elastic IP address (IPv4) associated
-     * with the network interface.
+     * <code>network-interface.addresses.association.public-ip</code> - The ID of the association of an Elastic IP
+     * address (IPv4) with a network interface.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.addresses.primary</code> - Specifies whether the IPv4 address of the network interface is
+     * the primary private IPv4 address.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.addresses.private-dns-name</code> - The private DNS name.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.addresses.private-ip-address</code> - The private IPv4 address associated with the
+     * network interface.
      * </p>
      * </li>
      * <li>
@@ -3661,7 +4196,52 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      * </li>
      * <li>
      * <p>
+     * <code>network-interface.association.carrier-ip</code> - The customer-owned IP address.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.association.customer-owned-ip</code> - The customer-owned IP address.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.association.ip-owner-id</code> - The owner of the Elastic IP address (IPv4) associated
+     * with the network interface.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.association.public-dns-name</code> - The public DNS name.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.association.public-ip</code> - The address of the Elastic IP address (IPv4) bound to the
+     * network interface.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.attachment.attach-time</code> - The time that the network interface was attached to an
+     * instance.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>network-interface.attachment.attachment-id</code> - The ID of the interface attachment.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.attachment.delete-on-termination</code> - Specifies whether the attachment is deleted
+     * when an instance is terminated.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.attachment.device-index</code> - The device index to which the network interface is
+     * attached.
      * </p>
      * </li>
      * <li>
@@ -3678,8 +4258,7 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      * </li>
      * <li>
      * <p>
-     * <code>network-interface.attachment.device-index</code> - The device index to which the network interface is
-     * attached.
+     * <code>network-interface.attachment.network-card-index</code> - The index of the network card.
      * </p>
      * </li>
      * <li>
@@ -3690,19 +4269,13 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      * </li>
      * <li>
      * <p>
-     * <code>network-interface.attachment.attach-time</code> - The time that the network interface was attached to an
-     * instance.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>network-interface.attachment.delete-on-termination</code> - Specifies whether the attachment is deleted
-     * when an instance is terminated.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
      * <code>network-interface.availability-zone</code> - The Availability Zone for the network interface.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.deny-all-igw-traffic</code> - A Boolean that indicates whether a network interface with
+     * an IPv6 address is unreachable from the public internet.
      * </p>
      * </li>
      * <li>
@@ -3722,8 +4295,36 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      * </li>
      * <li>
      * <p>
+     * <code>network-interface.ipv4-prefixes.ipv4-prefix</code> - The IPv4 prefixes that are assigned to the network
+     * interface.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.ipv6-address</code> - The IPv6 address associated with the network interface.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>network-interface.ipv6-addresses.ipv6-address</code> - The IPv6 address associated with the network
      * interface.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.ipv6-addresses.is-primary-ipv6</code> - A Boolean that indicates whether this is the
+     * primary IPv6 address.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.ipv6-native</code> - A Boolean that indicates whether this is an IPv6 only network
+     * interface.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.ipv6-prefixes.ipv6-prefix</code> - The IPv6 prefix assigned to the network interface.
      * </p>
      * </li>
      * <li>
@@ -3738,12 +4339,27 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      * </li>
      * <li>
      * <p>
+     * <code>network-interface.outpost-arn</code> - The ARN of the Outpost.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>network-interface.owner-id</code> - The ID of the owner of the network interface.
      * </p>
      * </li>
      * <li>
      * <p>
      * <code>network-interface.private-dns-name</code> - The private DNS name of the network interface.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.private-ip-address</code> - The private IPv4 address.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.public-dns-name</code> - The public DNS name.
      * </p>
      * </li>
      * <li>
@@ -3774,6 +4390,16 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      * <li>
      * <p>
      * <code>network-interface.subnet-id</code> - The ID of the subnet for the network interface.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.tag-key</code> - The key of a tag assigned to the network interface.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.tag-value</code> - The value of a tag assigned to the network interface.
      * </p>
      * </li>
      * <li>
@@ -4211,11 +4837,6 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      *        </li>
      *        <li>
      *        <p>
-     *        <code>license-pool</code> -
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
      *        <code>maintenance-options.auto-recovery</code> - The current automatic recovery behavior of the instance (
      *        <code>disabled</code> | <code>default</code>).
      *        </p>
@@ -4270,20 +4891,22 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      *        </li>
      *        <li>
      *        <p>
-     *        <code>network-interface.addresses.primary</code> - Specifies whether the IPv4 address of the network
-     *        interface is the primary private IPv4 address.
+     *        <code>network-interface.addresses.association.allocation-id</code> - The allocation ID.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>network-interface.addresses.private-ip-address</code> - The private IPv4 address associated with the
-     *        network interface.
+     *        <code>network-interface.addresses.association.association-id</code> - The association ID.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>network-interface.addresses.association.public-ip</code> - The ID of the association of an Elastic
-     *        IP address (IPv4) with a network interface.
+     *        <code>network-interface.addresses.association.carrier-ip</code> - The carrier IP address.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>network-interface.addresses.association.customer-owned-ip</code> - The customer-owned IP address.
      *        </p>
      *        </li>
      *        <li>
@@ -4294,14 +4917,30 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      *        </li>
      *        <li>
      *        <p>
-     *        <code>network-interface.association.public-ip</code> - The address of the Elastic IP address (IPv4) bound
-     *        to the network interface.
+     *        <code>network-interface.addresses.association.public-dns-name</code> - The public DNS name.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>network-interface.association.ip-owner-id</code> - The owner of the Elastic IP address (IPv4)
-     *        associated with the network interface.
+     *        <code>network-interface.addresses.association.public-ip</code> - The ID of the association of an Elastic
+     *        IP address (IPv4) with a network interface.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>network-interface.addresses.primary</code> - Specifies whether the IPv4 address of the network
+     *        interface is the primary private IPv4 address.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>network-interface.addresses.private-dns-name</code> - The private DNS name.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>network-interface.addresses.private-ip-address</code> - The private IPv4 address associated with the
+     *        network interface.
      *        </p>
      *        </li>
      *        <li>
@@ -4318,7 +4957,52 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      *        </li>
      *        <li>
      *        <p>
+     *        <code>network-interface.association.carrier-ip</code> - The customer-owned IP address.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>network-interface.association.customer-owned-ip</code> - The customer-owned IP address.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>network-interface.association.ip-owner-id</code> - The owner of the Elastic IP address (IPv4)
+     *        associated with the network interface.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>network-interface.association.public-dns-name</code> - The public DNS name.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>network-interface.association.public-ip</code> - The address of the Elastic IP address (IPv4) bound
+     *        to the network interface.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>network-interface.attachment.attach-time</code> - The time that the network interface was attached
+     *        to an instance.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
      *        <code>network-interface.attachment.attachment-id</code> - The ID of the interface attachment.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>network-interface.attachment.delete-on-termination</code> - Specifies whether the attachment is
+     *        deleted when an instance is terminated.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>network-interface.attachment.device-index</code> - The device index to which the network interface
+     *        is attached.
      *        </p>
      *        </li>
      *        <li>
@@ -4335,8 +5019,7 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      *        </li>
      *        <li>
      *        <p>
-     *        <code>network-interface.attachment.device-index</code> - The device index to which the network interface
-     *        is attached.
+     *        <code>network-interface.attachment.network-card-index</code> - The index of the network card.
      *        </p>
      *        </li>
      *        <li>
@@ -4347,19 +5030,13 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      *        </li>
      *        <li>
      *        <p>
-     *        <code>network-interface.attachment.attach-time</code> - The time that the network interface was attached
-     *        to an instance.
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>network-interface.attachment.delete-on-termination</code> - Specifies whether the attachment is
-     *        deleted when an instance is terminated.
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
      *        <code>network-interface.availability-zone</code> - The Availability Zone for the network interface.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>network-interface.deny-all-igw-traffic</code> - A Boolean that indicates whether a network interface
+     *        with an IPv6 address is unreachable from the public internet.
      *        </p>
      *        </li>
      *        <li>
@@ -4381,7 +5058,36 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      *        </li>
      *        <li>
      *        <p>
+     *        <code>network-interface.ipv4-prefixes.ipv4-prefix</code> - The IPv4 prefixes that are assigned to the
+     *        network interface.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>network-interface.ipv6-address</code> - The IPv6 address associated with the network interface.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
      *        <code>network-interface.ipv6-addresses.ipv6-address</code> - The IPv6 address associated with the network
+     *        interface.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>network-interface.ipv6-addresses.is-primary-ipv6</code> - A Boolean that indicates whether this is
+     *        the primary IPv6 address.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>network-interface.ipv6-native</code> - A Boolean that indicates whether this is an IPv6 only network
+     *        interface.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>network-interface.ipv6-prefixes.ipv6-prefix</code> - The IPv6 prefix assigned to the network
      *        interface.
      *        </p>
      *        </li>
@@ -4397,12 +5103,27 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      *        </li>
      *        <li>
      *        <p>
+     *        <code>network-interface.outpost-arn</code> - The ARN of the Outpost.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
      *        <code>network-interface.owner-id</code> - The ID of the owner of the network interface.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <code>network-interface.private-dns-name</code> - The private DNS name of the network interface.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>network-interface.private-ip-address</code> - The private IPv4 address.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>network-interface.public-dns-name</code> - The public DNS name.
      *        </p>
      *        </li>
      *        <li>
@@ -4433,6 +5154,16 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      *        <li>
      *        <p>
      *        <code>network-interface.subnet-id</code> - The ID of the subnet for the network interface.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>network-interface.tag-key</code> - The key of a tag assigned to the network interface.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>network-interface.tag-value</code> - The value of a tag assigned to the network interface.
      *        </p>
      *        </li>
      *        <li>
@@ -4876,11 +5607,6 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      * </li>
      * <li>
      * <p>
-     * <code>license-pool</code> -
-     * </p>
-     * </li>
-     * <li>
-     * <p>
      * <code>maintenance-options.auto-recovery</code> - The current automatic recovery behavior of the instance (
      * <code>disabled</code> | <code>default</code>).
      * </p>
@@ -4935,20 +5661,22 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      * </li>
      * <li>
      * <p>
-     * <code>network-interface.addresses.primary</code> - Specifies whether the IPv4 address of the network interface is
-     * the primary private IPv4 address.
+     * <code>network-interface.addresses.association.allocation-id</code> - The allocation ID.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>network-interface.addresses.private-ip-address</code> - The private IPv4 address associated with the
-     * network interface.
+     * <code>network-interface.addresses.association.association-id</code> - The association ID.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>network-interface.addresses.association.public-ip</code> - The ID of the association of an Elastic IP
-     * address (IPv4) with a network interface.
+     * <code>network-interface.addresses.association.carrier-ip</code> - The carrier IP address.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.addresses.association.customer-owned-ip</code> - The customer-owned IP address.
      * </p>
      * </li>
      * <li>
@@ -4959,14 +5687,30 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      * </li>
      * <li>
      * <p>
-     * <code>network-interface.association.public-ip</code> - The address of the Elastic IP address (IPv4) bound to the
-     * network interface.
+     * <code>network-interface.addresses.association.public-dns-name</code> - The public DNS name.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>network-interface.association.ip-owner-id</code> - The owner of the Elastic IP address (IPv4) associated
-     * with the network interface.
+     * <code>network-interface.addresses.association.public-ip</code> - The ID of the association of an Elastic IP
+     * address (IPv4) with a network interface.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.addresses.primary</code> - Specifies whether the IPv4 address of the network interface is
+     * the primary private IPv4 address.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.addresses.private-dns-name</code> - The private DNS name.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.addresses.private-ip-address</code> - The private IPv4 address associated with the
+     * network interface.
      * </p>
      * </li>
      * <li>
@@ -4983,7 +5727,52 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      * </li>
      * <li>
      * <p>
+     * <code>network-interface.association.carrier-ip</code> - The customer-owned IP address.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.association.customer-owned-ip</code> - The customer-owned IP address.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.association.ip-owner-id</code> - The owner of the Elastic IP address (IPv4) associated
+     * with the network interface.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.association.public-dns-name</code> - The public DNS name.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.association.public-ip</code> - The address of the Elastic IP address (IPv4) bound to the
+     * network interface.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.attachment.attach-time</code> - The time that the network interface was attached to an
+     * instance.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>network-interface.attachment.attachment-id</code> - The ID of the interface attachment.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.attachment.delete-on-termination</code> - Specifies whether the attachment is deleted
+     * when an instance is terminated.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.attachment.device-index</code> - The device index to which the network interface is
+     * attached.
      * </p>
      * </li>
      * <li>
@@ -5000,8 +5789,7 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      * </li>
      * <li>
      * <p>
-     * <code>network-interface.attachment.device-index</code> - The device index to which the network interface is
-     * attached.
+     * <code>network-interface.attachment.network-card-index</code> - The index of the network card.
      * </p>
      * </li>
      * <li>
@@ -5012,19 +5800,13 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      * </li>
      * <li>
      * <p>
-     * <code>network-interface.attachment.attach-time</code> - The time that the network interface was attached to an
-     * instance.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>network-interface.attachment.delete-on-termination</code> - Specifies whether the attachment is deleted
-     * when an instance is terminated.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
      * <code>network-interface.availability-zone</code> - The Availability Zone for the network interface.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.deny-all-igw-traffic</code> - A Boolean that indicates whether a network interface with
+     * an IPv6 address is unreachable from the public internet.
      * </p>
      * </li>
      * <li>
@@ -5044,8 +5826,36 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      * </li>
      * <li>
      * <p>
+     * <code>network-interface.ipv4-prefixes.ipv4-prefix</code> - The IPv4 prefixes that are assigned to the network
+     * interface.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.ipv6-address</code> - The IPv6 address associated with the network interface.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>network-interface.ipv6-addresses.ipv6-address</code> - The IPv6 address associated with the network
      * interface.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.ipv6-addresses.is-primary-ipv6</code> - A Boolean that indicates whether this is the
+     * primary IPv6 address.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.ipv6-native</code> - A Boolean that indicates whether this is an IPv6 only network
+     * interface.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.ipv6-prefixes.ipv6-prefix</code> - The IPv6 prefix assigned to the network interface.
      * </p>
      * </li>
      * <li>
@@ -5060,12 +5870,27 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      * </li>
      * <li>
      * <p>
+     * <code>network-interface.outpost-arn</code> - The ARN of the Outpost.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>network-interface.owner-id</code> - The ID of the owner of the network interface.
      * </p>
      * </li>
      * <li>
      * <p>
      * <code>network-interface.private-dns-name</code> - The private DNS name of the network interface.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.private-ip-address</code> - The private IPv4 address.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.public-dns-name</code> - The public DNS name.
      * </p>
      * </li>
      * <li>
@@ -5096,6 +5921,16 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      * <li>
      * <p>
      * <code>network-interface.subnet-id</code> - The ID of the subnet for the network interface.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.tag-key</code> - The key of a tag assigned to the network interface.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-interface.tag-value</code> - The value of a tag assigned to the network interface.
      * </p>
      * </li>
      * <li>
@@ -5528,11 +6363,6 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      *        </li>
      *        <li>
      *        <p>
-     *        <code>license-pool</code> -
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
      *        <code>maintenance-options.auto-recovery</code> - The current automatic recovery behavior of the instance (
      *        <code>disabled</code> | <code>default</code>).
      *        </p>
@@ -5587,20 +6417,22 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      *        </li>
      *        <li>
      *        <p>
-     *        <code>network-interface.addresses.primary</code> - Specifies whether the IPv4 address of the network
-     *        interface is the primary private IPv4 address.
+     *        <code>network-interface.addresses.association.allocation-id</code> - The allocation ID.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>network-interface.addresses.private-ip-address</code> - The private IPv4 address associated with the
-     *        network interface.
+     *        <code>network-interface.addresses.association.association-id</code> - The association ID.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>network-interface.addresses.association.public-ip</code> - The ID of the association of an Elastic
-     *        IP address (IPv4) with a network interface.
+     *        <code>network-interface.addresses.association.carrier-ip</code> - The carrier IP address.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>network-interface.addresses.association.customer-owned-ip</code> - The customer-owned IP address.
      *        </p>
      *        </li>
      *        <li>
@@ -5611,14 +6443,30 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      *        </li>
      *        <li>
      *        <p>
-     *        <code>network-interface.association.public-ip</code> - The address of the Elastic IP address (IPv4) bound
-     *        to the network interface.
+     *        <code>network-interface.addresses.association.public-dns-name</code> - The public DNS name.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>network-interface.association.ip-owner-id</code> - The owner of the Elastic IP address (IPv4)
-     *        associated with the network interface.
+     *        <code>network-interface.addresses.association.public-ip</code> - The ID of the association of an Elastic
+     *        IP address (IPv4) with a network interface.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>network-interface.addresses.primary</code> - Specifies whether the IPv4 address of the network
+     *        interface is the primary private IPv4 address.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>network-interface.addresses.private-dns-name</code> - The private DNS name.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>network-interface.addresses.private-ip-address</code> - The private IPv4 address associated with the
+     *        network interface.
      *        </p>
      *        </li>
      *        <li>
@@ -5635,7 +6483,52 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      *        </li>
      *        <li>
      *        <p>
+     *        <code>network-interface.association.carrier-ip</code> - The customer-owned IP address.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>network-interface.association.customer-owned-ip</code> - The customer-owned IP address.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>network-interface.association.ip-owner-id</code> - The owner of the Elastic IP address (IPv4)
+     *        associated with the network interface.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>network-interface.association.public-dns-name</code> - The public DNS name.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>network-interface.association.public-ip</code> - The address of the Elastic IP address (IPv4) bound
+     *        to the network interface.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>network-interface.attachment.attach-time</code> - The time that the network interface was attached
+     *        to an instance.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
      *        <code>network-interface.attachment.attachment-id</code> - The ID of the interface attachment.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>network-interface.attachment.delete-on-termination</code> - Specifies whether the attachment is
+     *        deleted when an instance is terminated.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>network-interface.attachment.device-index</code> - The device index to which the network interface
+     *        is attached.
      *        </p>
      *        </li>
      *        <li>
@@ -5652,8 +6545,7 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      *        </li>
      *        <li>
      *        <p>
-     *        <code>network-interface.attachment.device-index</code> - The device index to which the network interface
-     *        is attached.
+     *        <code>network-interface.attachment.network-card-index</code> - The index of the network card.
      *        </p>
      *        </li>
      *        <li>
@@ -5664,19 +6556,13 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      *        </li>
      *        <li>
      *        <p>
-     *        <code>network-interface.attachment.attach-time</code> - The time that the network interface was attached
-     *        to an instance.
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>network-interface.attachment.delete-on-termination</code> - Specifies whether the attachment is
-     *        deleted when an instance is terminated.
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
      *        <code>network-interface.availability-zone</code> - The Availability Zone for the network interface.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>network-interface.deny-all-igw-traffic</code> - A Boolean that indicates whether a network interface
+     *        with an IPv6 address is unreachable from the public internet.
      *        </p>
      *        </li>
      *        <li>
@@ -5698,7 +6584,36 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      *        </li>
      *        <li>
      *        <p>
+     *        <code>network-interface.ipv4-prefixes.ipv4-prefix</code> - The IPv4 prefixes that are assigned to the
+     *        network interface.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>network-interface.ipv6-address</code> - The IPv6 address associated with the network interface.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
      *        <code>network-interface.ipv6-addresses.ipv6-address</code> - The IPv6 address associated with the network
+     *        interface.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>network-interface.ipv6-addresses.is-primary-ipv6</code> - A Boolean that indicates whether this is
+     *        the primary IPv6 address.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>network-interface.ipv6-native</code> - A Boolean that indicates whether this is an IPv6 only network
+     *        interface.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>network-interface.ipv6-prefixes.ipv6-prefix</code> - The IPv6 prefix assigned to the network
      *        interface.
      *        </p>
      *        </li>
@@ -5714,12 +6629,27 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      *        </li>
      *        <li>
      *        <p>
+     *        <code>network-interface.outpost-arn</code> - The ARN of the Outpost.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
      *        <code>network-interface.owner-id</code> - The ID of the owner of the network interface.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <code>network-interface.private-dns-name</code> - The private DNS name of the network interface.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>network-interface.private-ip-address</code> - The private IPv4 address.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>network-interface.public-dns-name</code> - The public DNS name.
      *        </p>
      *        </li>
      *        <li>
@@ -5750,6 +6680,16 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      *        <li>
      *        <p>
      *        <code>network-interface.subnet-id</code> - The ID of the subnet for the network interface.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>network-interface.tag-key</code> - The key of a tag assigned to the network interface.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>network-interface.tag-value</code> - The value of a tag assigned to the network interface.
      *        </p>
      *        </li>
      *        <li>

@@ -2324,6 +2324,43 @@ public interface AmazonFSxAsync extends AmazonFSx {
 
     /**
      * <p>
+     * After performing steps to repair the Active Directory configuration of an FSx for Windows File Server file
+     * system, use this action to initiate the process of Amazon FSx attempting to reconnect to the file system.
+     * </p>
+     * 
+     * @param startMisconfiguredStateRecoveryRequest
+     * @return A Java Future containing the result of the StartMisconfiguredStateRecovery operation returned by the
+     *         service.
+     * @sample AmazonFSxAsync.StartMisconfiguredStateRecovery
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/StartMisconfiguredStateRecovery"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<StartMisconfiguredStateRecoveryResult> startMisconfiguredStateRecoveryAsync(
+            StartMisconfiguredStateRecoveryRequest startMisconfiguredStateRecoveryRequest);
+
+    /**
+     * <p>
+     * After performing steps to repair the Active Directory configuration of an FSx for Windows File Server file
+     * system, use this action to initiate the process of Amazon FSx attempting to reconnect to the file system.
+     * </p>
+     * 
+     * @param startMisconfiguredStateRecoveryRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the StartMisconfiguredStateRecovery operation returned by the
+     *         service.
+     * @sample AmazonFSxAsyncHandler.StartMisconfiguredStateRecovery
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/StartMisconfiguredStateRecovery"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<StartMisconfiguredStateRecoveryResult> startMisconfiguredStateRecoveryAsync(
+            StartMisconfiguredStateRecoveryRequest startMisconfiguredStateRecoveryRequest,
+            com.amazonaws.handlers.AsyncHandler<StartMisconfiguredStateRecoveryRequest, StartMisconfiguredStateRecoveryResult> asyncHandler);
+
+    /**
+     * <p>
      * Tags an Amazon FSx resource.
      * </p>
      * 

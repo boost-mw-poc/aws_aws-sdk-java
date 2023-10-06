@@ -3089,6 +3089,71 @@ public class AmazonFSxClient extends AmazonWebServiceClient implements AmazonFSx
 
     /**
      * <p>
+     * After performing steps to repair the Active Directory configuration of an FSx for Windows File Server file
+     * system, use this action to initiate the process of Amazon FSx attempting to reconnect to the file system.
+     * </p>
+     * 
+     * @param startMisconfiguredStateRecoveryRequest
+     * @return Result of the StartMisconfiguredStateRecovery operation returned by the service.
+     * @throws BadRequestException
+     *         A generic error indicating a failure with a client request.
+     * @throws FileSystemNotFoundException
+     *         No Amazon FSx file systems were found based upon supplied parameters.
+     * @throws InternalServerErrorException
+     *         A generic error indicating a server-side failure.
+     * @sample AmazonFSx.StartMisconfiguredStateRecovery
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/StartMisconfiguredStateRecovery"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public StartMisconfiguredStateRecoveryResult startMisconfiguredStateRecovery(StartMisconfiguredStateRecoveryRequest request) {
+        request = beforeClientExecution(request);
+        return executeStartMisconfiguredStateRecovery(request);
+    }
+
+    @SdkInternalApi
+    final StartMisconfiguredStateRecoveryResult executeStartMisconfiguredStateRecovery(
+            StartMisconfiguredStateRecoveryRequest startMisconfiguredStateRecoveryRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(startMisconfiguredStateRecoveryRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<StartMisconfiguredStateRecoveryRequest> request = null;
+        Response<StartMisconfiguredStateRecoveryResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new StartMisconfiguredStateRecoveryRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(startMisconfiguredStateRecoveryRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "FSx");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "StartMisconfiguredStateRecovery");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<StartMisconfiguredStateRecoveryResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new StartMisconfiguredStateRecoveryResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Tags an Amazon FSx resource.
      * </p>
      * 
