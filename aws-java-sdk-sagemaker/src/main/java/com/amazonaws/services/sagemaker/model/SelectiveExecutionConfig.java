@@ -34,6 +34,12 @@ public class SelectiveExecutionConfig implements Serializable, Cloneable, Struct
      * selected steps to run. The execution status of the pipeline can be either <code>Failed</code> or
      * <code>Success</code>.
      * </p>
+     * <p>
+     * This field is required if the steps you specify for <code>SelectedSteps</code> depend on output collaterals from
+     * any non-specified pipeline steps. For more information, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/pipelines-selective-ex.html">Selective Execution for
+     * Pipeline Steps</a>.
+     * </p>
      */
     private String sourcePipelineExecutionArn;
     /**
@@ -49,11 +55,22 @@ public class SelectiveExecutionConfig implements Serializable, Cloneable, Struct
      * selected steps to run. The execution status of the pipeline can be either <code>Failed</code> or
      * <code>Success</code>.
      * </p>
+     * <p>
+     * This field is required if the steps you specify for <code>SelectedSteps</code> depend on output collaterals from
+     * any non-specified pipeline steps. For more information, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/pipelines-selective-ex.html">Selective Execution for
+     * Pipeline Steps</a>.
+     * </p>
      * 
      * @param sourcePipelineExecutionArn
      *        The ARN from a reference execution of the current pipeline. Used to copy input collaterals needed for the
      *        selected steps to run. The execution status of the pipeline can be either <code>Failed</code> or
-     *        <code>Success</code>.
+     *        <code>Success</code>.</p>
+     *        <p>
+     *        This field is required if the steps you specify for <code>SelectedSteps</code> depend on output
+     *        collaterals from any non-specified pipeline steps. For more information, see <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/dg/pipelines-selective-ex.html">Selective Execution for
+     *        Pipeline Steps</a>.
      */
 
     public void setSourcePipelineExecutionArn(String sourcePipelineExecutionArn) {
@@ -66,10 +83,21 @@ public class SelectiveExecutionConfig implements Serializable, Cloneable, Struct
      * selected steps to run. The execution status of the pipeline can be either <code>Failed</code> or
      * <code>Success</code>.
      * </p>
+     * <p>
+     * This field is required if the steps you specify for <code>SelectedSteps</code> depend on output collaterals from
+     * any non-specified pipeline steps. For more information, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/pipelines-selective-ex.html">Selective Execution for
+     * Pipeline Steps</a>.
+     * </p>
      * 
      * @return The ARN from a reference execution of the current pipeline. Used to copy input collaterals needed for the
      *         selected steps to run. The execution status of the pipeline can be either <code>Failed</code> or
-     *         <code>Success</code>.
+     *         <code>Success</code>.</p>
+     *         <p>
+     *         This field is required if the steps you specify for <code>SelectedSteps</code> depend on output
+     *         collaterals from any non-specified pipeline steps. For more information, see <a
+     *         href="https://docs.aws.amazon.com/sagemaker/latest/dg/pipelines-selective-ex.html">Selective Execution
+     *         for Pipeline Steps</a>.
      */
 
     public String getSourcePipelineExecutionArn() {
@@ -82,11 +110,22 @@ public class SelectiveExecutionConfig implements Serializable, Cloneable, Struct
      * selected steps to run. The execution status of the pipeline can be either <code>Failed</code> or
      * <code>Success</code>.
      * </p>
+     * <p>
+     * This field is required if the steps you specify for <code>SelectedSteps</code> depend on output collaterals from
+     * any non-specified pipeline steps. For more information, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/pipelines-selective-ex.html">Selective Execution for
+     * Pipeline Steps</a>.
+     * </p>
      * 
      * @param sourcePipelineExecutionArn
      *        The ARN from a reference execution of the current pipeline. Used to copy input collaterals needed for the
      *        selected steps to run. The execution status of the pipeline can be either <code>Failed</code> or
-     *        <code>Success</code>.
+     *        <code>Success</code>.</p>
+     *        <p>
+     *        This field is required if the steps you specify for <code>SelectedSteps</code> depend on output
+     *        collaterals from any non-specified pipeline steps. For more information, see <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/dg/pipelines-selective-ex.html">Selective Execution for
+     *        Pipeline Steps</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

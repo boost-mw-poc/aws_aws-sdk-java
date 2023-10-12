@@ -715,6 +715,12 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * </p>
      */
     private String masterUserSecretKmsKeyId;
+    /**
+     * <p>
+     * Specifies whether to enable a dedicated log volume (DLV) for the DB instance.
+     * </p>
+     */
+    private Boolean dedicatedLogVolume;
 
     /**
      * <p>
@@ -5369,6 +5375,58 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
     }
 
     /**
+     * <p>
+     * Specifies whether to enable a dedicated log volume (DLV) for the DB instance.
+     * </p>
+     * 
+     * @param dedicatedLogVolume
+     *        Specifies whether to enable a dedicated log volume (DLV) for the DB instance.
+     */
+
+    public void setDedicatedLogVolume(Boolean dedicatedLogVolume) {
+        this.dedicatedLogVolume = dedicatedLogVolume;
+    }
+
+    /**
+     * <p>
+     * Specifies whether to enable a dedicated log volume (DLV) for the DB instance.
+     * </p>
+     * 
+     * @return Specifies whether to enable a dedicated log volume (DLV) for the DB instance.
+     */
+
+    public Boolean getDedicatedLogVolume() {
+        return this.dedicatedLogVolume;
+    }
+
+    /**
+     * <p>
+     * Specifies whether to enable a dedicated log volume (DLV) for the DB instance.
+     * </p>
+     * 
+     * @param dedicatedLogVolume
+     *        Specifies whether to enable a dedicated log volume (DLV) for the DB instance.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RestoreDBInstanceFromS3Request withDedicatedLogVolume(Boolean dedicatedLogVolume) {
+        setDedicatedLogVolume(dedicatedLogVolume);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Specifies whether to enable a dedicated log volume (DLV) for the DB instance.
+     * </p>
+     * 
+     * @return Specifies whether to enable a dedicated log volume (DLV) for the DB instance.
+     */
+
+    public Boolean isDedicatedLogVolume() {
+        return this.dedicatedLogVolume;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -5475,7 +5533,9 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
         if (getManageMasterUserPassword() != null)
             sb.append("ManageMasterUserPassword: ").append(getManageMasterUserPassword()).append(",");
         if (getMasterUserSecretKmsKeyId() != null)
-            sb.append("MasterUserSecretKmsKeyId: ").append(getMasterUserSecretKmsKeyId());
+            sb.append("MasterUserSecretKmsKeyId: ").append(getMasterUserSecretKmsKeyId()).append(",");
+        if (getDedicatedLogVolume() != null)
+            sb.append("DedicatedLogVolume: ").append(getDedicatedLogVolume());
         sb.append("}");
         return sb.toString();
     }
@@ -5684,6 +5744,10 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
             return false;
         if (other.getMasterUserSecretKmsKeyId() != null && other.getMasterUserSecretKmsKeyId().equals(this.getMasterUserSecretKmsKeyId()) == false)
             return false;
+        if (other.getDedicatedLogVolume() == null ^ this.getDedicatedLogVolume() == null)
+            return false;
+        if (other.getDedicatedLogVolume() != null && other.getDedicatedLogVolume().equals(this.getDedicatedLogVolume()) == false)
+            return false;
         return true;
     }
 
@@ -5740,6 +5804,7 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
         hashCode = prime * hashCode + ((getStorageThroughput() == null) ? 0 : getStorageThroughput().hashCode());
         hashCode = prime * hashCode + ((getManageMasterUserPassword() == null) ? 0 : getManageMasterUserPassword().hashCode());
         hashCode = prime * hashCode + ((getMasterUserSecretKmsKeyId() == null) ? 0 : getMasterUserSecretKmsKeyId().hashCode());
+        hashCode = prime * hashCode + ((getDedicatedLogVolume() == null) ? 0 : getDedicatedLogVolume().hashCode());
         return hashCode;
     }
 

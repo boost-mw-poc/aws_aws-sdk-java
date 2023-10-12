@@ -354,6 +354,10 @@ public class ModifyDBInstanceRequestMarshaller implements Marshaller<Request<Mod
             request.addParameter("Engine", StringUtils.fromString(modifyDBInstanceRequest.getEngine()));
         }
 
+        if (modifyDBInstanceRequest.getDedicatedLogVolume() != null) {
+            request.addParameter("DedicatedLogVolume", StringUtils.fromBoolean(modifyDBInstanceRequest.getDedicatedLogVolume()));
+        }
+
         return request;
     }
 

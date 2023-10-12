@@ -357,6 +357,10 @@ public class CreateDBInstanceRequestMarshaller implements Marshaller<Request<Cre
             request.addParameter("DBSystemId", StringUtils.fromString(createDBInstanceRequest.getDBSystemId()));
         }
 
+        if (createDBInstanceRequest.getDedicatedLogVolume() != null) {
+            request.addParameter("DedicatedLogVolume", StringUtils.fromBoolean(createDBInstanceRequest.getDedicatedLogVolume()));
+        }
+
         return request;
     }
 

@@ -38,10 +38,40 @@ public class Participant implements Serializable, Cloneable, StructuredPojo {
     private java.util.Map<String, String> attributes;
     /**
      * <p>
+     * The participant’s browser.
+     * </p>
+     */
+    private String browserName;
+    /**
+     * <p>
+     * The participant’s browser version.
+     * </p>
+     */
+    private String browserVersion;
+    /**
+     * <p>
      * ISO 8601 timestamp (returned as a string) when the participant first joined the stage session.
      * </p>
      */
     private java.util.Date firstJoinTime;
+    /**
+     * <p>
+     * The participant’s Internet Service Provider.
+     * </p>
+     */
+    private String ispName;
+    /**
+     * <p>
+     * The participant’s operating system.
+     * </p>
+     */
+    private String osName;
+    /**
+     * <p>
+     * The participant’s operating system version.
+     * </p>
+     */
+    private String osVersion;
     /**
      * <p>
      * Unique identifier for this participant, assigned by IVS.
@@ -54,6 +84,12 @@ public class Participant implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private Boolean published;
+    /**
+     * <p>
+     * The participant’s SDK version.
+     * </p>
+     */
+    private String sdkVersion;
     /**
      * <p>
      * Whether the participant is connected to or disconnected from the stage.
@@ -154,6 +190,86 @@ public class Participant implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
+     * The participant’s browser.
+     * </p>
+     * 
+     * @param browserName
+     *        The participant’s browser.
+     */
+
+    public void setBrowserName(String browserName) {
+        this.browserName = browserName;
+    }
+
+    /**
+     * <p>
+     * The participant’s browser.
+     * </p>
+     * 
+     * @return The participant’s browser.
+     */
+
+    public String getBrowserName() {
+        return this.browserName;
+    }
+
+    /**
+     * <p>
+     * The participant’s browser.
+     * </p>
+     * 
+     * @param browserName
+     *        The participant’s browser.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Participant withBrowserName(String browserName) {
+        setBrowserName(browserName);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The participant’s browser version.
+     * </p>
+     * 
+     * @param browserVersion
+     *        The participant’s browser version.
+     */
+
+    public void setBrowserVersion(String browserVersion) {
+        this.browserVersion = browserVersion;
+    }
+
+    /**
+     * <p>
+     * The participant’s browser version.
+     * </p>
+     * 
+     * @return The participant’s browser version.
+     */
+
+    public String getBrowserVersion() {
+        return this.browserVersion;
+    }
+
+    /**
+     * <p>
+     * The participant’s browser version.
+     * </p>
+     * 
+     * @param browserVersion
+     *        The participant’s browser version.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Participant withBrowserVersion(String browserVersion) {
+        setBrowserVersion(browserVersion);
+        return this;
+    }
+
+    /**
+     * <p>
      * ISO 8601 timestamp (returned as a string) when the participant first joined the stage session.
      * </p>
      * 
@@ -189,6 +305,126 @@ public class Participant implements Serializable, Cloneable, StructuredPojo {
 
     public Participant withFirstJoinTime(java.util.Date firstJoinTime) {
         setFirstJoinTime(firstJoinTime);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The participant’s Internet Service Provider.
+     * </p>
+     * 
+     * @param ispName
+     *        The participant’s Internet Service Provider.
+     */
+
+    public void setIspName(String ispName) {
+        this.ispName = ispName;
+    }
+
+    /**
+     * <p>
+     * The participant’s Internet Service Provider.
+     * </p>
+     * 
+     * @return The participant’s Internet Service Provider.
+     */
+
+    public String getIspName() {
+        return this.ispName;
+    }
+
+    /**
+     * <p>
+     * The participant’s Internet Service Provider.
+     * </p>
+     * 
+     * @param ispName
+     *        The participant’s Internet Service Provider.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Participant withIspName(String ispName) {
+        setIspName(ispName);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The participant’s operating system.
+     * </p>
+     * 
+     * @param osName
+     *        The participant’s operating system.
+     */
+
+    public void setOsName(String osName) {
+        this.osName = osName;
+    }
+
+    /**
+     * <p>
+     * The participant’s operating system.
+     * </p>
+     * 
+     * @return The participant’s operating system.
+     */
+
+    public String getOsName() {
+        return this.osName;
+    }
+
+    /**
+     * <p>
+     * The participant’s operating system.
+     * </p>
+     * 
+     * @param osName
+     *        The participant’s operating system.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Participant withOsName(String osName) {
+        setOsName(osName);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The participant’s operating system version.
+     * </p>
+     * 
+     * @param osVersion
+     *        The participant’s operating system version.
+     */
+
+    public void setOsVersion(String osVersion) {
+        this.osVersion = osVersion;
+    }
+
+    /**
+     * <p>
+     * The participant’s operating system version.
+     * </p>
+     * 
+     * @return The participant’s operating system version.
+     */
+
+    public String getOsVersion() {
+        return this.osVersion;
+    }
+
+    /**
+     * <p>
+     * The participant’s operating system version.
+     * </p>
+     * 
+     * @param osVersion
+     *        The participant’s operating system version.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Participant withOsVersion(String osVersion) {
+        setOsVersion(osVersion);
         return this;
     }
 
@@ -282,6 +518,46 @@ public class Participant implements Serializable, Cloneable, StructuredPojo {
 
     public Boolean isPublished() {
         return this.published;
+    }
+
+    /**
+     * <p>
+     * The participant’s SDK version.
+     * </p>
+     * 
+     * @param sdkVersion
+     *        The participant’s SDK version.
+     */
+
+    public void setSdkVersion(String sdkVersion) {
+        this.sdkVersion = sdkVersion;
+    }
+
+    /**
+     * <p>
+     * The participant’s SDK version.
+     * </p>
+     * 
+     * @return The participant’s SDK version.
+     */
+
+    public String getSdkVersion() {
+        return this.sdkVersion;
+    }
+
+    /**
+     * <p>
+     * The participant’s SDK version.
+     * </p>
+     * 
+     * @param sdkVersion
+     *        The participant’s SDK version.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Participant withSdkVersion(String sdkVersion) {
+        setSdkVersion(sdkVersion);
+        return this;
     }
 
     /**
@@ -412,12 +688,24 @@ public class Participant implements Serializable, Cloneable, StructuredPojo {
         sb.append("{");
         if (getAttributes() != null)
             sb.append("Attributes: ").append(getAttributes()).append(",");
+        if (getBrowserName() != null)
+            sb.append("BrowserName: ").append(getBrowserName()).append(",");
+        if (getBrowserVersion() != null)
+            sb.append("BrowserVersion: ").append(getBrowserVersion()).append(",");
         if (getFirstJoinTime() != null)
             sb.append("FirstJoinTime: ").append(getFirstJoinTime()).append(",");
+        if (getIspName() != null)
+            sb.append("IspName: ").append(getIspName()).append(",");
+        if (getOsName() != null)
+            sb.append("OsName: ").append(getOsName()).append(",");
+        if (getOsVersion() != null)
+            sb.append("OsVersion: ").append(getOsVersion()).append(",");
         if (getParticipantId() != null)
             sb.append("ParticipantId: ").append(getParticipantId()).append(",");
         if (getPublished() != null)
             sb.append("Published: ").append(getPublished()).append(",");
+        if (getSdkVersion() != null)
+            sb.append("SdkVersion: ").append(getSdkVersion()).append(",");
         if (getState() != null)
             sb.append("State: ").append(getState()).append(",");
         if (getUserId() != null)
@@ -440,9 +728,29 @@ public class Participant implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getAttributes() != null && other.getAttributes().equals(this.getAttributes()) == false)
             return false;
+        if (other.getBrowserName() == null ^ this.getBrowserName() == null)
+            return false;
+        if (other.getBrowserName() != null && other.getBrowserName().equals(this.getBrowserName()) == false)
+            return false;
+        if (other.getBrowserVersion() == null ^ this.getBrowserVersion() == null)
+            return false;
+        if (other.getBrowserVersion() != null && other.getBrowserVersion().equals(this.getBrowserVersion()) == false)
+            return false;
         if (other.getFirstJoinTime() == null ^ this.getFirstJoinTime() == null)
             return false;
         if (other.getFirstJoinTime() != null && other.getFirstJoinTime().equals(this.getFirstJoinTime()) == false)
+            return false;
+        if (other.getIspName() == null ^ this.getIspName() == null)
+            return false;
+        if (other.getIspName() != null && other.getIspName().equals(this.getIspName()) == false)
+            return false;
+        if (other.getOsName() == null ^ this.getOsName() == null)
+            return false;
+        if (other.getOsName() != null && other.getOsName().equals(this.getOsName()) == false)
+            return false;
+        if (other.getOsVersion() == null ^ this.getOsVersion() == null)
+            return false;
+        if (other.getOsVersion() != null && other.getOsVersion().equals(this.getOsVersion()) == false)
             return false;
         if (other.getParticipantId() == null ^ this.getParticipantId() == null)
             return false;
@@ -451,6 +759,10 @@ public class Participant implements Serializable, Cloneable, StructuredPojo {
         if (other.getPublished() == null ^ this.getPublished() == null)
             return false;
         if (other.getPublished() != null && other.getPublished().equals(this.getPublished()) == false)
+            return false;
+        if (other.getSdkVersion() == null ^ this.getSdkVersion() == null)
+            return false;
+        if (other.getSdkVersion() != null && other.getSdkVersion().equals(this.getSdkVersion()) == false)
             return false;
         if (other.getState() == null ^ this.getState() == null)
             return false;
@@ -469,9 +781,15 @@ public class Participant implements Serializable, Cloneable, StructuredPojo {
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getAttributes() == null) ? 0 : getAttributes().hashCode());
+        hashCode = prime * hashCode + ((getBrowserName() == null) ? 0 : getBrowserName().hashCode());
+        hashCode = prime * hashCode + ((getBrowserVersion() == null) ? 0 : getBrowserVersion().hashCode());
         hashCode = prime * hashCode + ((getFirstJoinTime() == null) ? 0 : getFirstJoinTime().hashCode());
+        hashCode = prime * hashCode + ((getIspName() == null) ? 0 : getIspName().hashCode());
+        hashCode = prime * hashCode + ((getOsName() == null) ? 0 : getOsName().hashCode());
+        hashCode = prime * hashCode + ((getOsVersion() == null) ? 0 : getOsVersion().hashCode());
         hashCode = prime * hashCode + ((getParticipantId() == null) ? 0 : getParticipantId().hashCode());
         hashCode = prime * hashCode + ((getPublished() == null) ? 0 : getPublished().hashCode());
+        hashCode = prime * hashCode + ((getSdkVersion() == null) ? 0 : getSdkVersion().hashCode());
         hashCode = prime * hashCode + ((getState() == null) ? 0 : getState().hashCode());
         hashCode = prime * hashCode + ((getUserId() == null) ? 0 : getUserId().hashCode());
         return hashCode;

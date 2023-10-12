@@ -745,6 +745,12 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * </note>
      */
     private Integer allocatedStorage;
+    /**
+     * <p>
+     * Specifies whether to enable a dedicated log volume (DLV) for the DB instance.
+     * </p>
+     */
+    private Boolean dedicatedLogVolume;
 
     /**
      * Default constructor for RestoreDBInstanceFromDBSnapshotRequest object. Callers should use the setter or fluent
@@ -5633,6 +5639,58 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
     }
 
     /**
+     * <p>
+     * Specifies whether to enable a dedicated log volume (DLV) for the DB instance.
+     * </p>
+     * 
+     * @param dedicatedLogVolume
+     *        Specifies whether to enable a dedicated log volume (DLV) for the DB instance.
+     */
+
+    public void setDedicatedLogVolume(Boolean dedicatedLogVolume) {
+        this.dedicatedLogVolume = dedicatedLogVolume;
+    }
+
+    /**
+     * <p>
+     * Specifies whether to enable a dedicated log volume (DLV) for the DB instance.
+     * </p>
+     * 
+     * @return Specifies whether to enable a dedicated log volume (DLV) for the DB instance.
+     */
+
+    public Boolean getDedicatedLogVolume() {
+        return this.dedicatedLogVolume;
+    }
+
+    /**
+     * <p>
+     * Specifies whether to enable a dedicated log volume (DLV) for the DB instance.
+     * </p>
+     * 
+     * @param dedicatedLogVolume
+     *        Specifies whether to enable a dedicated log volume (DLV) for the DB instance.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RestoreDBInstanceFromDBSnapshotRequest withDedicatedLogVolume(Boolean dedicatedLogVolume) {
+        setDedicatedLogVolume(dedicatedLogVolume);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Specifies whether to enable a dedicated log volume (DLV) for the DB instance.
+     * </p>
+     * 
+     * @return Specifies whether to enable a dedicated log volume (DLV) for the DB instance.
+     */
+
+    public Boolean isDedicatedLogVolume() {
+        return this.dedicatedLogVolume;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -5721,7 +5779,9 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
         if (getDBClusterSnapshotIdentifier() != null)
             sb.append("DBClusterSnapshotIdentifier: ").append(getDBClusterSnapshotIdentifier()).append(",");
         if (getAllocatedStorage() != null)
-            sb.append("AllocatedStorage: ").append(getAllocatedStorage());
+            sb.append("AllocatedStorage: ").append(getAllocatedStorage()).append(",");
+        if (getDedicatedLogVolume() != null)
+            sb.append("DedicatedLogVolume: ").append(getDedicatedLogVolume());
         sb.append("}");
         return sb.toString();
     }
@@ -5893,6 +5953,10 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
             return false;
         if (other.getAllocatedStorage() != null && other.getAllocatedStorage().equals(this.getAllocatedStorage()) == false)
             return false;
+        if (other.getDedicatedLogVolume() == null ^ this.getDedicatedLogVolume() == null)
+            return false;
+        if (other.getDedicatedLogVolume() != null && other.getDedicatedLogVolume().equals(this.getDedicatedLogVolume()) == false)
+            return false;
         return true;
     }
 
@@ -5940,6 +6004,7 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
         hashCode = prime * hashCode + ((getStorageThroughput() == null) ? 0 : getStorageThroughput().hashCode());
         hashCode = prime * hashCode + ((getDBClusterSnapshotIdentifier() == null) ? 0 : getDBClusterSnapshotIdentifier().hashCode());
         hashCode = prime * hashCode + ((getAllocatedStorage() == null) ? 0 : getAllocatedStorage().hashCode());
+        hashCode = prime * hashCode + ((getDedicatedLogVolume() == null) ? 0 : getDedicatedLogVolume().hashCode());
         return hashCode;
     }
 

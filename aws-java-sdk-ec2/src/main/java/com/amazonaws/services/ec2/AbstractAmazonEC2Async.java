@@ -6289,6 +6289,19 @@ public class AbstractAmazonEC2Async extends AbstractAmazonEC2 implements AmazonE
     }
 
     @Override
+    public java.util.concurrent.Future<DisableImageResult> disableImageAsync(DisableImageRequest request) {
+
+        return disableImageAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DisableImageResult> disableImageAsync(DisableImageRequest request,
+            com.amazonaws.handlers.AsyncHandler<DisableImageRequest, DisableImageResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DisableImageBlockPublicAccessResult> disableImageBlockPublicAccessAsync(DisableImageBlockPublicAccessRequest request) {
 
         return disableImageBlockPublicAccessAsync(request, null);
@@ -6657,6 +6670,19 @@ public class AbstractAmazonEC2Async extends AbstractAmazonEC2 implements AmazonE
     @Override
     public java.util.concurrent.Future<EnableFastSnapshotRestoresResult> enableFastSnapshotRestoresAsync(EnableFastSnapshotRestoresRequest request,
             com.amazonaws.handlers.AsyncHandler<EnableFastSnapshotRestoresRequest, EnableFastSnapshotRestoresResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<EnableImageResult> enableImageAsync(EnableImageRequest request) {
+
+        return enableImageAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<EnableImageResult> enableImageAsync(EnableImageRequest request,
+            com.amazonaws.handlers.AsyncHandler<EnableImageRequest, EnableImageResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

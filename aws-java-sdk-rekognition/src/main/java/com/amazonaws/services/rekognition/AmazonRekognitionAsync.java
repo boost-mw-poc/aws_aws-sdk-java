@@ -695,6 +695,11 @@ public interface AmazonRekognitionAsync extends AmazonRekognition {
             com.amazonaws.handlers.AsyncHandler<CompareFacesRequest, CompareFacesResult> asyncHandler);
 
     /**
+     * <note>
+     * <p>
+     * This operation applies only to Amazon Rekognition Custom Labels.
+     * </p>
+     * </note>
      * <p>
      * Copies a version of an Amazon Rekognition Custom Labels model from a source project to a destination project. The
      * source and destination projects can be in different AWS accounts but must be in the same AWS Region. You can't
@@ -714,6 +719,9 @@ public interface AmazonRekognitionAsync extends AmazonRekognition {
      * policy.
      * </p>
      * <note>
+     * <p>
+     * Copying project versions is supported only for Custom Labels models.
+     * </p>
      * <p>
      * To copy a model, the destination project, source project, and source model version must already exist.
      * </p>
@@ -734,6 +742,11 @@ public interface AmazonRekognitionAsync extends AmazonRekognition {
     java.util.concurrent.Future<CopyProjectVersionResult> copyProjectVersionAsync(CopyProjectVersionRequest copyProjectVersionRequest);
 
     /**
+     * <note>
+     * <p>
+     * This operation applies only to Amazon Rekognition Custom Labels.
+     * </p>
+     * </note>
      * <p>
      * Copies a version of an Amazon Rekognition Custom Labels model from a source project to a destination project. The
      * source and destination projects can be in different AWS accounts but must be in the same AWS Region. You can't
@@ -753,6 +766,9 @@ public interface AmazonRekognitionAsync extends AmazonRekognition {
      * policy.
      * </p>
      * <note>
+     * <p>
+     * Copying project versions is supported only for Custom Labels models.
+     * </p>
      * <p>
      * To copy a model, the destination project, source project, and source model version must already exist.
      * </p>
@@ -841,6 +857,11 @@ public interface AmazonRekognitionAsync extends AmazonRekognition {
             com.amazonaws.handlers.AsyncHandler<CreateCollectionRequest, CreateCollectionResult> asyncHandler);
 
     /**
+     * <note>
+     * <p>
+     * This operation applies only to Amazon Rekognition Custom Labels.
+     * </p>
+     * </note>
      * <p>
      * Creates a new Amazon Rekognition Custom Labels dataset. You can create a dataset by using an Amazon Sagemaker
      * format manifest file or by copying an existing Amazon Rekognition Custom Labels dataset.
@@ -878,6 +899,11 @@ public interface AmazonRekognitionAsync extends AmazonRekognition {
     java.util.concurrent.Future<CreateDatasetResult> createDatasetAsync(CreateDatasetRequest createDatasetRequest);
 
     /**
+     * <note>
+     * <p>
+     * This operation applies only to Amazon Rekognition Custom Labels.
+     * </p>
+     * </note>
      * <p>
      * Creates a new Amazon Rekognition Custom Labels dataset. You can create a dataset by using an Amazon Sagemaker
      * format manifest file or by copying an existing Amazon Rekognition Custom Labels dataset.
@@ -972,11 +998,11 @@ public interface AmazonRekognitionAsync extends AmazonRekognition {
 
     /**
      * <p>
-     * Creates a new Amazon Rekognition Custom Labels project. A project is a group of resources (datasets, model
-     * versions) that you use to create and manage Amazon Rekognition Custom Labels models.
-     * </p>
-     * <p>
-     * This operation requires permissions to perform the <code>rekognition:CreateProject</code> action.
+     * Creates a new Amazon Rekognition project. A project is a group of resources (datasets, model versions) that you
+     * use to create and manage a Amazon Rekognition Custom Labels Model or custom adapter. You can specify a feature to
+     * create the project with, if no feature is specified then Custom Labels is used by default. For adapters, you can
+     * also choose whether or not to have the project auto update by using the AutoUpdate argument. This operation
+     * requires permissions to perform the <code>rekognition:CreateProject</code> action.
      * </p>
      * 
      * @param createProjectRequest
@@ -987,11 +1013,11 @@ public interface AmazonRekognitionAsync extends AmazonRekognition {
 
     /**
      * <p>
-     * Creates a new Amazon Rekognition Custom Labels project. A project is a group of resources (datasets, model
-     * versions) that you use to create and manage Amazon Rekognition Custom Labels models.
-     * </p>
-     * <p>
-     * This operation requires permissions to perform the <code>rekognition:CreateProject</code> action.
+     * Creates a new Amazon Rekognition project. A project is a group of resources (datasets, model versions) that you
+     * use to create and manage a Amazon Rekognition Custom Labels Model or custom adapter. You can specify a feature to
+     * create the project with, if no feature is specified then Custom Labels is used by default. For adapters, you can
+     * also choose whether or not to have the project auto update by using the AutoUpdate argument. This operation
+     * requires permissions to perform the <code>rekognition:CreateProject</code> action.
      * </p>
      * 
      * @param createProjectRequest
@@ -1007,15 +1033,24 @@ public interface AmazonRekognitionAsync extends AmazonRekognition {
 
     /**
      * <p>
-     * Creates a new version of a model and begins training. Models are managed as part of an Amazon Rekognition Custom
-     * Labels project. The response from <code>CreateProjectVersion</code> is an Amazon Resource Name (ARN) for the
-     * version of the model.
+     * Creates a new version of Amazon Rekognition project (like a Custom Labels model or a custom adapter) and begins
+     * training. Models and adapters are managed as part of a Rekognition project. The response from
+     * <code>CreateProjectVersion</code> is an Amazon Resource Name (ARN) for the project version.
      * </p>
      * <p>
-     * Training uses the training and test datasets associated with the project. For more information, see Creating
-     * training and test dataset in the <i>Amazon Rekognition Custom Labels Developer Guide</i>.
+     * The FeatureConfig operation argument allows you to configure specific model or adapter settings. You can provide
+     * a description to the project version by using the VersionDescription argment. Training can take a while to
+     * complete. You can get the current status by calling <a>DescribeProjectVersions</a>. Training completed
+     * successfully if the value of the <code>Status</code> field is <code>TRAINING_COMPLETED</code>. Once training has
+     * successfully completed, call <a>DescribeProjectVersions</a> to get the training results and evaluate the model.
+     * </p>
+     * <p>
+     * This operation requires permissions to perform the <code>rekognition:CreateProjectVersion</code> action.
      * </p>
      * <note>
+     * <p>
+     * <i>The following applies only to projects with Amazon Rekognition Custom Labels as the chosen feature:</i>
+     * </p>
      * <p>
      * You can train a model in a project that doesn't have associated datasets by specifying manifest files in the
      * <code>TrainingData</code> and <code>TestingData</code> fields.
@@ -1030,25 +1065,7 @@ public interface AmazonRekognitionAsync extends AmazonRekognition {
      * create training and test datasets for the project.
      * </p>
      * </note>
-     * <p>
-     * Training takes a while to complete. You can get the current status by calling <a>DescribeProjectVersions</a>.
-     * Training completed successfully if the value of the <code>Status</code> field is <code>TRAINING_COMPLETED</code>.
-     * </p>
-     * <p>
-     * If training fails, see Debugging a failed model training in the <i>Amazon Rekognition Custom Labels</i> developer
-     * guide.
-     * </p>
-     * <p>
-     * Once training has successfully completed, call <a>DescribeProjectVersions</a> to get the training results and
-     * evaluate the model. For more information, see Improving a trained Amazon Rekognition Custom Labels model in the
-     * <i>Amazon Rekognition Custom Labels</i> developers guide.
-     * </p>
-     * <p>
-     * After evaluating the model, you start the model by calling <a>StartProjectVersion</a>.
-     * </p>
-     * <p>
-     * This operation requires permissions to perform the <code>rekognition:CreateProjectVersion</code> action.
-     * </p>
+     * <p/>
      * 
      * @param createProjectVersionRequest
      * @return A Java Future containing the result of the CreateProjectVersion operation returned by the service.
@@ -1058,15 +1075,24 @@ public interface AmazonRekognitionAsync extends AmazonRekognition {
 
     /**
      * <p>
-     * Creates a new version of a model and begins training. Models are managed as part of an Amazon Rekognition Custom
-     * Labels project. The response from <code>CreateProjectVersion</code> is an Amazon Resource Name (ARN) for the
-     * version of the model.
+     * Creates a new version of Amazon Rekognition project (like a Custom Labels model or a custom adapter) and begins
+     * training. Models and adapters are managed as part of a Rekognition project. The response from
+     * <code>CreateProjectVersion</code> is an Amazon Resource Name (ARN) for the project version.
      * </p>
      * <p>
-     * Training uses the training and test datasets associated with the project. For more information, see Creating
-     * training and test dataset in the <i>Amazon Rekognition Custom Labels Developer Guide</i>.
+     * The FeatureConfig operation argument allows you to configure specific model or adapter settings. You can provide
+     * a description to the project version by using the VersionDescription argment. Training can take a while to
+     * complete. You can get the current status by calling <a>DescribeProjectVersions</a>. Training completed
+     * successfully if the value of the <code>Status</code> field is <code>TRAINING_COMPLETED</code>. Once training has
+     * successfully completed, call <a>DescribeProjectVersions</a> to get the training results and evaluate the model.
+     * </p>
+     * <p>
+     * This operation requires permissions to perform the <code>rekognition:CreateProjectVersion</code> action.
      * </p>
      * <note>
+     * <p>
+     * <i>The following applies only to projects with Amazon Rekognition Custom Labels as the chosen feature:</i>
+     * </p>
      * <p>
      * You can train a model in a project that doesn't have associated datasets by specifying manifest files in the
      * <code>TrainingData</code> and <code>TestingData</code> fields.
@@ -1081,25 +1107,7 @@ public interface AmazonRekognitionAsync extends AmazonRekognition {
      * create training and test datasets for the project.
      * </p>
      * </note>
-     * <p>
-     * Training takes a while to complete. You can get the current status by calling <a>DescribeProjectVersions</a>.
-     * Training completed successfully if the value of the <code>Status</code> field is <code>TRAINING_COMPLETED</code>.
-     * </p>
-     * <p>
-     * If training fails, see Debugging a failed model training in the <i>Amazon Rekognition Custom Labels</i> developer
-     * guide.
-     * </p>
-     * <p>
-     * Once training has successfully completed, call <a>DescribeProjectVersions</a> to get the training results and
-     * evaluate the model. For more information, see Improving a trained Amazon Rekognition Custom Labels model in the
-     * <i>Amazon Rekognition Custom Labels</i> developers guide.
-     * </p>
-     * <p>
-     * After evaluating the model, you start the model by calling <a>StartProjectVersion</a>.
-     * </p>
-     * <p>
-     * This operation requires permissions to perform the <code>rekognition:CreateProjectVersion</code> action.
-     * </p>
+     * <p/>
      * 
      * @param createProjectVersionRequest
      * @param asyncHandler
@@ -1294,6 +1302,11 @@ public interface AmazonRekognitionAsync extends AmazonRekognition {
             com.amazonaws.handlers.AsyncHandler<DeleteCollectionRequest, DeleteCollectionResult> asyncHandler);
 
     /**
+     * <note>
+     * <p>
+     * This operation applies only to Amazon Rekognition Custom Labels.
+     * </p>
+     * </note>
      * <p>
      * Deletes an existing Amazon Rekognition Custom Labels dataset. Deleting a dataset might take while. Use
      * <a>DescribeDataset</a> to check the current status. The dataset is still deleting if the value of
@@ -1315,6 +1328,11 @@ public interface AmazonRekognitionAsync extends AmazonRekognition {
     java.util.concurrent.Future<DeleteDatasetResult> deleteDatasetAsync(DeleteDatasetRequest deleteDatasetRequest);
 
     /**
+     * <note>
+     * <p>
+     * This operation applies only to Amazon Rekognition Custom Labels.
+     * </p>
+     * </note>
      * <p>
      * Deletes an existing Amazon Rekognition Custom Labels dataset. Deleting a dataset might take while. Use
      * <a>DescribeDataset</a> to check the current status. The dataset is still deleting if the value of
@@ -1377,8 +1395,8 @@ public interface AmazonRekognitionAsync extends AmazonRekognition {
 
     /**
      * <p>
-     * Deletes an Amazon Rekognition Custom Labels project. To delete a project you must first delete all models
-     * associated with the project. To delete a model, see <a>DeleteProjectVersion</a>.
+     * Deletes a Amazon Rekognition project. To delete a project you must first delete all models or adapters associated
+     * with the project. To delete a model or adapter, see <a>DeleteProjectVersion</a>.
      * </p>
      * <p>
      * <code>DeleteProject</code> is an asynchronous operation. To check if the project is deleted, call
@@ -1397,8 +1415,8 @@ public interface AmazonRekognitionAsync extends AmazonRekognition {
 
     /**
      * <p>
-     * Deletes an Amazon Rekognition Custom Labels project. To delete a project you must first delete all models
-     * associated with the project. To delete a model, see <a>DeleteProjectVersion</a>.
+     * Deletes a Amazon Rekognition project. To delete a project you must first delete all models or adapters associated
+     * with the project. To delete a model or adapter, see <a>DeleteProjectVersion</a>.
      * </p>
      * <p>
      * <code>DeleteProject</code> is an asynchronous operation. To check if the project is deleted, call
@@ -1421,6 +1439,11 @@ public interface AmazonRekognitionAsync extends AmazonRekognition {
             com.amazonaws.handlers.AsyncHandler<DeleteProjectRequest, DeleteProjectResult> asyncHandler);
 
     /**
+     * <note>
+     * <p>
+     * This operation applies only to Amazon Rekognition Custom Labels.
+     * </p>
+     * </note>
      * <p>
      * Deletes an existing project policy.
      * </p>
@@ -1439,6 +1462,11 @@ public interface AmazonRekognitionAsync extends AmazonRekognition {
     java.util.concurrent.Future<DeleteProjectPolicyResult> deleteProjectPolicyAsync(DeleteProjectPolicyRequest deleteProjectPolicyRequest);
 
     /**
+     * <note>
+     * <p>
+     * This operation applies only to Amazon Rekognition Custom Labels.
+     * </p>
+     * </note>
      * <p>
      * Deletes an existing project policy.
      * </p>
@@ -1463,12 +1491,13 @@ public interface AmazonRekognitionAsync extends AmazonRekognition {
 
     /**
      * <p>
-     * Deletes an Amazon Rekognition Custom Labels model.
+     * Deletes a Rekognition project model or project version, like a Amazon Rekognition Custom Labels model or a custom
+     * adapter.
      * </p>
      * <p>
-     * You can't delete a model if it is running or if it is training. To check the status of a model, use the
-     * <code>Status</code> field returned from <a>DescribeProjectVersions</a>. To stop a running model call
-     * <a>StopProjectVersion</a>. If the model is training, wait until it finishes.
+     * You can't delete a project version if it is running or if it is training. To check the status of a project
+     * version, use the Status field returned from <a>DescribeProjectVersions</a>. To stop a project version call
+     * <a>StopProjectVersion</a>. If the project version is training, wait until it finishes.
      * </p>
      * <p>
      * This operation requires permissions to perform the <code>rekognition:DeleteProjectVersion</code> action.
@@ -1482,12 +1511,13 @@ public interface AmazonRekognitionAsync extends AmazonRekognition {
 
     /**
      * <p>
-     * Deletes an Amazon Rekognition Custom Labels model.
+     * Deletes a Rekognition project model or project version, like a Amazon Rekognition Custom Labels model or a custom
+     * adapter.
      * </p>
      * <p>
-     * You can't delete a model if it is running or if it is training. To check the status of a model, use the
-     * <code>Status</code> field returned from <a>DescribeProjectVersions</a>. To stop a running model call
-     * <a>StopProjectVersion</a>. If the model is training, wait until it finishes.
+     * You can't delete a project version if it is running or if it is training. To check the status of a project
+     * version, use the Status field returned from <a>DescribeProjectVersions</a>. To stop a project version call
+     * <a>StopProjectVersion</a>. If the project version is training, wait until it finishes.
      * </p>
      * <p>
      * This operation requires permissions to perform the <code>rekognition:DeleteProjectVersion</code> action.
@@ -1604,6 +1634,11 @@ public interface AmazonRekognitionAsync extends AmazonRekognition {
             com.amazonaws.handlers.AsyncHandler<DescribeCollectionRequest, DescribeCollectionResult> asyncHandler);
 
     /**
+     * <note>
+     * <p>
+     * This operation applies only to Amazon Rekognition Custom Labels.
+     * </p>
+     * </note>
      * <p>
      * Describes an Amazon Rekognition Custom Labels dataset. You can get information such as the current status of a
      * dataset and statistics about the images and labels in a dataset.
@@ -1619,6 +1654,11 @@ public interface AmazonRekognitionAsync extends AmazonRekognition {
     java.util.concurrent.Future<DescribeDatasetResult> describeDatasetAsync(DescribeDatasetRequest describeDatasetRequest);
 
     /**
+     * <note>
+     * <p>
+     * This operation applies only to Amazon Rekognition Custom Labels.
+     * </p>
+     * </note>
      * <p>
      * Describes an Amazon Rekognition Custom Labels dataset. You can get information such as the current status of a
      * dataset and statistics about the images and labels in a dataset.
@@ -1640,8 +1680,8 @@ public interface AmazonRekognitionAsync extends AmazonRekognition {
 
     /**
      * <p>
-     * Lists and describes the versions of a model in an Amazon Rekognition Custom Labels project. You can specify up to
-     * 10 model versions in <code>ProjectVersionArns</code>. If you don't specify a value, descriptions for all model
+     * Lists and describes the versions of an Amazon Rekognition project. You can specify up to 10 model or adapter
+     * versions in <code>ProjectVersionArns</code>. If you don't specify a value, descriptions for all model/adapter
      * versions in the project are returned.
      * </p>
      * <p>
@@ -1656,8 +1696,8 @@ public interface AmazonRekognitionAsync extends AmazonRekognition {
 
     /**
      * <p>
-     * Lists and describes the versions of a model in an Amazon Rekognition Custom Labels project. You can specify up to
-     * 10 model versions in <code>ProjectVersionArns</code>. If you don't specify a value, descriptions for all model
+     * Lists and describes the versions of an Amazon Rekognition project. You can specify up to 10 model or adapter
+     * versions in <code>ProjectVersionArns</code>. If you don't specify a value, descriptions for all model/adapter
      * versions in the project are returned.
      * </p>
      * <p>
@@ -1677,7 +1717,7 @@ public interface AmazonRekognitionAsync extends AmazonRekognition {
 
     /**
      * <p>
-     * Gets information about your Amazon Rekognition Custom Labels projects.
+     * Gets information about your Rekognition projects.
      * </p>
      * <p>
      * This operation requires permissions to perform the <code>rekognition:DescribeProjects</code> action.
@@ -1691,7 +1731,7 @@ public interface AmazonRekognitionAsync extends AmazonRekognition {
 
     /**
      * <p>
-     * Gets information about your Amazon Rekognition Custom Labels projects.
+     * Gets information about your Rekognition projects.
      * </p>
      * <p>
      * This operation requires permissions to perform the <code>rekognition:DescribeProjects</code> action.
@@ -1740,6 +1780,11 @@ public interface AmazonRekognitionAsync extends AmazonRekognition {
             com.amazonaws.handlers.AsyncHandler<DescribeStreamProcessorRequest, DescribeStreamProcessorResult> asyncHandler);
 
     /**
+     * <note>
+     * <p>
+     * This operation applies only to Amazon Rekognition Custom Labels.
+     * </p>
+     * </note>
      * <p>
      * Detects custom labels in a supplied image by using an Amazon Rekognition Custom Labels model.
      * </p>
@@ -1789,6 +1834,11 @@ public interface AmazonRekognitionAsync extends AmazonRekognition {
     java.util.concurrent.Future<DetectCustomLabelsResult> detectCustomLabelsAsync(DetectCustomLabelsRequest detectCustomLabelsRequest);
 
     /**
+     * <note>
+     * <p>
+     * This operation applies only to Amazon Rekognition Custom Labels.
+     * </p>
+     * </note>
      * <p>
      * Detects custom labels in a supplied image by using an Amazon Rekognition Custom Labels model.
      * </p>
@@ -2252,6 +2302,10 @@ public interface AmazonRekognitionAsync extends AmazonRekognition {
      * bucket. If you use the AWS CLI to call Amazon Rekognition operations, passing image bytes is not supported. The
      * image must be either a PNG or JPEG formatted file.
      * </p>
+     * <p>
+     * You can specify an adapter to use when retrieving label predictions by providing a <code>ProjectVersionArn</code>
+     * to the <code>ProjectVersion</code> argument.
+     * </p>
      * 
      * @param detectModerationLabelsRequest
      * @return A Java Future containing the result of the DetectModerationLabels operation returned by the service.
@@ -2276,6 +2330,10 @@ public interface AmazonRekognitionAsync extends AmazonRekognition {
      * You pass the input image either as base64-encoded image bytes or as a reference to an image in an Amazon S3
      * bucket. If you use the AWS CLI to call Amazon Rekognition operations, passing image bytes is not supported. The
      * image must be either a PNG or JPEG formatted file.
+     * </p>
+     * <p>
+     * You can specify an adapter to use when retrieving label predictions by providing a <code>ProjectVersionArn</code>
+     * to the <code>ProjectVersion</code> argument.
      * </p>
      * 
      * @param detectModerationLabelsRequest
@@ -2567,6 +2625,11 @@ public interface AmazonRekognitionAsync extends AmazonRekognition {
             com.amazonaws.handlers.AsyncHandler<DisassociateFacesRequest, DisassociateFacesResult> asyncHandler);
 
     /**
+     * <note>
+     * <p>
+     * This operation applies only to Amazon Rekognition Custom Labels.
+     * </p>
+     * </note>
      * <p>
      * Distributes the entries (images) in a training dataset across the training dataset and the test dataset for a
      * project. <code>DistributeDatasetEntries</code> moves 20% of the training dataset images to the test dataset. An
@@ -2594,6 +2657,11 @@ public interface AmazonRekognitionAsync extends AmazonRekognition {
     java.util.concurrent.Future<DistributeDatasetEntriesResult> distributeDatasetEntriesAsync(DistributeDatasetEntriesRequest distributeDatasetEntriesRequest);
 
     /**
+     * <note>
+     * <p>
+     * This operation applies only to Amazon Rekognition Custom Labels.
+     * </p>
+     * </note>
      * <p>
      * Distributes the entries (images) in a training dataset across the training dataset and the test dataset for a
      * project. <code>DistributeDatasetEntries</code> moves 20% of the training dataset images to the test dataset. An
@@ -3916,6 +3984,11 @@ public interface AmazonRekognitionAsync extends AmazonRekognition {
             com.amazonaws.handlers.AsyncHandler<ListCollectionsRequest, ListCollectionsResult> asyncHandler);
 
     /**
+     * <note>
+     * <p>
+     * This operation applies only to Amazon Rekognition Custom Labels.
+     * </p>
+     * </note>
      * <p>
      * Lists the entries (images) within a dataset. An entry is a JSON Line that contains the information for a single
      * image, including the image location, assigned labels, and object location bounding boxes. For more information,
@@ -3943,6 +4016,11 @@ public interface AmazonRekognitionAsync extends AmazonRekognition {
     java.util.concurrent.Future<ListDatasetEntriesResult> listDatasetEntriesAsync(ListDatasetEntriesRequest listDatasetEntriesRequest);
 
     /**
+     * <note>
+     * <p>
+     * This operation applies only to Amazon Rekognition Custom Labels.
+     * </p>
+     * </note>
      * <p>
      * Lists the entries (images) within a dataset. An entry is a JSON Line that contains the information for a single
      * image, including the image location, assigned labels, and object location bounding boxes. For more information,
@@ -3975,6 +4053,11 @@ public interface AmazonRekognitionAsync extends AmazonRekognition {
             com.amazonaws.handlers.AsyncHandler<ListDatasetEntriesRequest, ListDatasetEntriesResult> asyncHandler);
 
     /**
+     * <note>
+     * <p>
+     * This operation applies only to Amazon Rekognition Custom Labels.
+     * </p>
+     * </note>
      * <p>
      * Lists the labels in a dataset. Amazon Rekognition Custom Labels uses labels to describe images. For more
      * information, see <a
@@ -3993,6 +4076,11 @@ public interface AmazonRekognitionAsync extends AmazonRekognition {
     java.util.concurrent.Future<ListDatasetLabelsResult> listDatasetLabelsAsync(ListDatasetLabelsRequest listDatasetLabelsRequest);
 
     /**
+     * <note>
+     * <p>
+     * This operation applies only to Amazon Rekognition Custom Labels.
+     * </p>
+     * </note>
      * <p>
      * Lists the labels in a dataset. Amazon Rekognition Custom Labels uses labels to describe images. For more
      * information, see <a
@@ -4053,6 +4141,11 @@ public interface AmazonRekognitionAsync extends AmazonRekognition {
             com.amazonaws.handlers.AsyncHandler<ListFacesRequest, ListFacesResult> asyncHandler);
 
     /**
+     * <note>
+     * <p>
+     * This operation applies only to Amazon Rekognition Custom Labels.
+     * </p>
+     * </note>
      * <p>
      * Gets a list of the project policies attached to a project.
      * </p>
@@ -4071,6 +4164,11 @@ public interface AmazonRekognitionAsync extends AmazonRekognition {
     java.util.concurrent.Future<ListProjectPoliciesResult> listProjectPoliciesAsync(ListProjectPoliciesRequest listProjectPoliciesRequest);
 
     /**
+     * <note>
+     * <p>
+     * This operation applies only to Amazon Rekognition Custom Labels.
+     * </p>
+     * </note>
      * <p>
      * Gets a list of the project policies attached to a project.
      * </p>
@@ -4187,10 +4285,16 @@ public interface AmazonRekognitionAsync extends AmazonRekognition {
             com.amazonaws.handlers.AsyncHandler<ListUsersRequest, ListUsersResult> asyncHandler);
 
     /**
+     * <note>
+     * <p>
+     * This operation applies only to Amazon Rekognition Custom Labels.
+     * </p>
+     * </note>
      * <p>
      * Attaches a project policy to a Amazon Rekognition Custom Labels project in a trusting AWS account. A project
      * policy specifies that a trusted AWS account can copy a model version from a trusting AWS account to a project in
-     * the trusted AWS account. To copy a model version you use the <a>CopyProjectVersion</a> operation.
+     * the trusted AWS account. To copy a model version you use the <a>CopyProjectVersion</a> operation. Only applies to
+     * Custom Labels projects.
      * </p>
      * <p>
      * For more information about the format of a project policy document, see Attaching a project policy (SDK) in the
@@ -4219,10 +4323,16 @@ public interface AmazonRekognitionAsync extends AmazonRekognition {
     java.util.concurrent.Future<PutProjectPolicyResult> putProjectPolicyAsync(PutProjectPolicyRequest putProjectPolicyRequest);
 
     /**
+     * <note>
+     * <p>
+     * This operation applies only to Amazon Rekognition Custom Labels.
+     * </p>
+     * </note>
      * <p>
      * Attaches a project policy to a Amazon Rekognition Custom Labels project in a trusting AWS account. A project
      * policy specifies that a trusted AWS account can copy a model version from a trusting AWS account to a project in
-     * the trusted AWS account. To copy a model version you use the <a>CopyProjectVersion</a> operation.
+     * the trusted AWS account. To copy a model version you use the <a>CopyProjectVersion</a> operation. Only applies to
+     * Custom Labels projects.
      * </p>
      * <p>
      * For more information about the format of a project policy document, see Attaching a project policy (SDK) in the
@@ -4965,6 +5075,11 @@ public interface AmazonRekognitionAsync extends AmazonRekognition {
             com.amazonaws.handlers.AsyncHandler<StartPersonTrackingRequest, StartPersonTrackingResult> asyncHandler);
 
     /**
+     * <note>
+     * <p>
+     * This operation applies only to Amazon Rekognition Custom Labels.
+     * </p>
+     * </note>
      * <p>
      * Starts the running of the version of a model. Starting a model takes a while to complete. To check the current
      * state of the model, use <a>DescribeProjectVersions</a>.
@@ -4978,10 +5093,6 @@ public interface AmazonRekognitionAsync extends AmazonRekognition {
      * <a>StopProjectVersion</a>.
      * </p>
      * </note>
-     * <p>
-     * For more information, see <i>Running a trained Amazon Rekognition Custom Labels model</i> in the Amazon
-     * Rekognition Custom Labels Guide.
-     * </p>
      * <p>
      * This operation requires permissions to perform the <code>rekognition:StartProjectVersion</code> action.
      * </p>
@@ -4993,6 +5104,11 @@ public interface AmazonRekognitionAsync extends AmazonRekognition {
     java.util.concurrent.Future<StartProjectVersionResult> startProjectVersionAsync(StartProjectVersionRequest startProjectVersionRequest);
 
     /**
+     * <note>
+     * <p>
+     * This operation applies only to Amazon Rekognition Custom Labels.
+     * </p>
+     * </note>
      * <p>
      * Starts the running of the version of a model. Starting a model takes a while to complete. To check the current
      * state of the model, use <a>DescribeProjectVersions</a>.
@@ -5006,10 +5122,6 @@ public interface AmazonRekognitionAsync extends AmazonRekognition {
      * <a>StopProjectVersion</a>.
      * </p>
      * </note>
-     * <p>
-     * For more information, see <i>Running a trained Amazon Rekognition Custom Labels model</i> in the Amazon
-     * Rekognition Custom Labels Guide.
-     * </p>
      * <p>
      * This operation requires permissions to perform the <code>rekognition:StartProjectVersion</code> action.
      * </p>
@@ -5187,9 +5299,14 @@ public interface AmazonRekognitionAsync extends AmazonRekognition {
             com.amazonaws.handlers.AsyncHandler<StartTextDetectionRequest, StartTextDetectionResult> asyncHandler);
 
     /**
+     * <note>
+     * <p>
+     * This operation applies only to Amazon Rekognition Custom Labels.
+     * </p>
+     * </note>
      * <p>
      * Stops a running model. The operation might take a while to complete. To check the current status, call
-     * <a>DescribeProjectVersions</a>.
+     * <a>DescribeProjectVersions</a>. Only applies to Custom Labels projects.
      * </p>
      * <p>
      * This operation requires permissions to perform the <code>rekognition:StopProjectVersion</code> action.
@@ -5202,9 +5319,14 @@ public interface AmazonRekognitionAsync extends AmazonRekognition {
     java.util.concurrent.Future<StopProjectVersionResult> stopProjectVersionAsync(StopProjectVersionRequest stopProjectVersionRequest);
 
     /**
+     * <note>
+     * <p>
+     * This operation applies only to Amazon Rekognition Custom Labels.
+     * </p>
+     * </note>
      * <p>
      * Stops a running model. The operation might take a while to complete. To check the current status, call
-     * <a>DescribeProjectVersions</a>.
+     * <a>DescribeProjectVersions</a>. Only applies to Custom Labels projects.
      * </p>
      * <p>
      * This operation requires permissions to perform the <code>rekognition:StopProjectVersion</code> action.
@@ -5319,6 +5441,11 @@ public interface AmazonRekognitionAsync extends AmazonRekognition {
             com.amazonaws.handlers.AsyncHandler<UntagResourceRequest, UntagResourceResult> asyncHandler);
 
     /**
+     * <note>
+     * <p>
+     * This operation applies only to Amazon Rekognition Custom Labels.
+     * </p>
+     * </note>
      * <p>
      * Adds or updates one or more entries (images) in a dataset. An entry is a JSON Line which contains the information
      * for a single image, including the image location, assigned labels, and object location bounding boxes. For more
@@ -5358,6 +5485,11 @@ public interface AmazonRekognitionAsync extends AmazonRekognition {
     java.util.concurrent.Future<UpdateDatasetEntriesResult> updateDatasetEntriesAsync(UpdateDatasetEntriesRequest updateDatasetEntriesRequest);
 
     /**
+     * <note>
+     * <p>
+     * This operation applies only to Amazon Rekognition Custom Labels.
+     * </p>
+     * </note>
      * <p>
      * Adds or updates one or more entries (images) in a dataset. An entry is a JSON Line which contains the information
      * for a single image, including the image location, assigned labels, and object location bounding boxes. For more

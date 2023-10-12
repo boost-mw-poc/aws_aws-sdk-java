@@ -53,9 +53,29 @@ public class ParticipantJsonUnmarshaller implements Unmarshaller<Participant, Js
                     participant.setAttributes(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context.getUnmarshaller(String.class))
                             .unmarshall(context));
                 }
+                if (context.testExpression("browserName", targetDepth)) {
+                    context.nextToken();
+                    participant.setBrowserName(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("browserVersion", targetDepth)) {
+                    context.nextToken();
+                    participant.setBrowserVersion(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("firstJoinTime", targetDepth)) {
                     context.nextToken();
                     participant.setFirstJoinTime(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
+                }
+                if (context.testExpression("ispName", targetDepth)) {
+                    context.nextToken();
+                    participant.setIspName(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("osName", targetDepth)) {
+                    context.nextToken();
+                    participant.setOsName(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("osVersion", targetDepth)) {
+                    context.nextToken();
+                    participant.setOsVersion(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("participantId", targetDepth)) {
                     context.nextToken();
@@ -64,6 +84,10 @@ public class ParticipantJsonUnmarshaller implements Unmarshaller<Participant, Js
                 if (context.testExpression("published", targetDepth)) {
                     context.nextToken();
                     participant.setPublished(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
+                if (context.testExpression("sdkVersion", targetDepth)) {
+                    context.nextToken();
+                    participant.setSdkVersion(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("state", targetDepth)) {
                     context.nextToken();

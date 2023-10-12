@@ -2183,6 +2183,11 @@ public class AbstractAmazonEC2 implements AmazonEC2 {
     }
 
     @Override
+    public DisableImageResult disableImage(DisableImageRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DisableImageBlockPublicAccessResult disableImageBlockPublicAccess(DisableImageBlockPublicAccessRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -2315,6 +2320,11 @@ public class AbstractAmazonEC2 implements AmazonEC2 {
 
     @Override
     public EnableFastSnapshotRestoresResult enableFastSnapshotRestores(EnableFastSnapshotRestoresRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public EnableImageResult enableImage(EnableImageRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

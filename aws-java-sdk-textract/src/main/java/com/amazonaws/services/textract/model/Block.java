@@ -146,6 +146,61 @@ public class Block implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * </li>
      * </ul>
+     * <p>
+     * The following BlockTypes are only returned for Amazon Textract Layout.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>LAYOUT_TITLE</code> - The main title of the document.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>LAYOUT_HEADER</code> - Text located in the top margin of the document.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>LAYOUT_FOOTER</code> - Text located in the bottom margin of the document.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>LAYOUT_SECTION_HEADER</code> - The titles of sections within a document.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>LAYOUT_PAGE_NUMBER</code> - The page number of the documents.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>LAYOUT_LIST</code> - Any information grouped together in list form.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>LAYOUT_FIGURE</code> - Indicates the location of an image in a document.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>LAYOUT_TABLE</code> - Indicates the location of a table in the document.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>LAYOUT_KEY_VALUE</code> - Indicates the location of form key-values in a document.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>LAYOUT_TEXT</code> - Text that is present typically as a part of paragraphs in documents.
+     * </p>
+     * </li>
+     * </ul>
      */
     private String blockType;
     /**
@@ -408,6 +463,61 @@ public class Block implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * </li>
      * </ul>
+     * <p>
+     * The following BlockTypes are only returned for Amazon Textract Layout.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>LAYOUT_TITLE</code> - The main title of the document.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>LAYOUT_HEADER</code> - Text located in the top margin of the document.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>LAYOUT_FOOTER</code> - Text located in the bottom margin of the document.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>LAYOUT_SECTION_HEADER</code> - The titles of sections within a document.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>LAYOUT_PAGE_NUMBER</code> - The page number of the documents.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>LAYOUT_LIST</code> - Any information grouped together in list form.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>LAYOUT_FIGURE</code> - Indicates the location of an image in a document.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>LAYOUT_TABLE</code> - Indicates the location of a table in the document.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>LAYOUT_KEY_VALUE</code> - Indicates the location of form key-values in a document.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>LAYOUT_TEXT</code> - Text that is present typically as a part of paragraphs in documents.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param blockType
      *        The type of text item that's recognized. In operations for text detection, the following types are
@@ -510,6 +620,61 @@ public class Block implements Serializable, Cloneable, StructuredPojo {
      *        <p>
      *        <i>QUERY_RESULT</i> - A response to a question asked during the call of analyze document. Comes with an
      *        alias and ID for ease of locating in a response. Also contains location and confidence score.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        The following BlockTypes are only returned for Amazon Textract Layout.
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>LAYOUT_TITLE</code> - The main title of the document.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>LAYOUT_HEADER</code> - Text located in the top margin of the document.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>LAYOUT_FOOTER</code> - Text located in the bottom margin of the document.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>LAYOUT_SECTION_HEADER</code> - The titles of sections within a document.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>LAYOUT_PAGE_NUMBER</code> - The page number of the documents.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>LAYOUT_LIST</code> - Any information grouped together in list form.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>LAYOUT_FIGURE</code> - Indicates the location of an image in a document.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>LAYOUT_TABLE</code> - Indicates the location of a table in the document.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>LAYOUT_KEY_VALUE</code> - Indicates the location of form key-values in a document.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>LAYOUT_TEXT</code> - Text that is present typically as a part of paragraphs in documents.
      *        </p>
      *        </li>
      * @see BlockType
@@ -624,6 +789,61 @@ public class Block implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * </li>
      * </ul>
+     * <p>
+     * The following BlockTypes are only returned for Amazon Textract Layout.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>LAYOUT_TITLE</code> - The main title of the document.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>LAYOUT_HEADER</code> - Text located in the top margin of the document.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>LAYOUT_FOOTER</code> - Text located in the bottom margin of the document.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>LAYOUT_SECTION_HEADER</code> - The titles of sections within a document.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>LAYOUT_PAGE_NUMBER</code> - The page number of the documents.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>LAYOUT_LIST</code> - Any information grouped together in list form.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>LAYOUT_FIGURE</code> - Indicates the location of an image in a document.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>LAYOUT_TABLE</code> - Indicates the location of a table in the document.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>LAYOUT_KEY_VALUE</code> - Indicates the location of form key-values in a document.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>LAYOUT_TEXT</code> - Text that is present typically as a part of paragraphs in documents.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @return The type of text item that's recognized. In operations for text detection, the following types are
      *         returned:</p>
@@ -726,6 +946,61 @@ public class Block implements Serializable, Cloneable, StructuredPojo {
      *         <p>
      *         <i>QUERY_RESULT</i> - A response to a question asked during the call of analyze document. Comes with an
      *         alias and ID for ease of locating in a response. Also contains location and confidence score.
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         The following BlockTypes are only returned for Amazon Textract Layout.
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>LAYOUT_TITLE</code> - The main title of the document.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>LAYOUT_HEADER</code> - Text located in the top margin of the document.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>LAYOUT_FOOTER</code> - Text located in the bottom margin of the document.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>LAYOUT_SECTION_HEADER</code> - The titles of sections within a document.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>LAYOUT_PAGE_NUMBER</code> - The page number of the documents.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>LAYOUT_LIST</code> - Any information grouped together in list form.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>LAYOUT_FIGURE</code> - Indicates the location of an image in a document.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>LAYOUT_TABLE</code> - Indicates the location of a table in the document.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>LAYOUT_KEY_VALUE</code> - Indicates the location of form key-values in a document.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>LAYOUT_TEXT</code> - Text that is present typically as a part of paragraphs in documents.
      *         </p>
      *         </li>
      * @see BlockType
@@ -840,6 +1115,61 @@ public class Block implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * </li>
      * </ul>
+     * <p>
+     * The following BlockTypes are only returned for Amazon Textract Layout.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>LAYOUT_TITLE</code> - The main title of the document.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>LAYOUT_HEADER</code> - Text located in the top margin of the document.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>LAYOUT_FOOTER</code> - Text located in the bottom margin of the document.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>LAYOUT_SECTION_HEADER</code> - The titles of sections within a document.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>LAYOUT_PAGE_NUMBER</code> - The page number of the documents.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>LAYOUT_LIST</code> - Any information grouped together in list form.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>LAYOUT_FIGURE</code> - Indicates the location of an image in a document.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>LAYOUT_TABLE</code> - Indicates the location of a table in the document.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>LAYOUT_KEY_VALUE</code> - Indicates the location of form key-values in a document.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>LAYOUT_TEXT</code> - Text that is present typically as a part of paragraphs in documents.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param blockType
      *        The type of text item that's recognized. In operations for text detection, the following types are
@@ -942,6 +1272,61 @@ public class Block implements Serializable, Cloneable, StructuredPojo {
      *        <p>
      *        <i>QUERY_RESULT</i> - A response to a question asked during the call of analyze document. Comes with an
      *        alias and ID for ease of locating in a response. Also contains location and confidence score.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        The following BlockTypes are only returned for Amazon Textract Layout.
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>LAYOUT_TITLE</code> - The main title of the document.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>LAYOUT_HEADER</code> - Text located in the top margin of the document.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>LAYOUT_FOOTER</code> - Text located in the bottom margin of the document.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>LAYOUT_SECTION_HEADER</code> - The titles of sections within a document.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>LAYOUT_PAGE_NUMBER</code> - The page number of the documents.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>LAYOUT_LIST</code> - Any information grouped together in list form.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>LAYOUT_FIGURE</code> - Indicates the location of an image in a document.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>LAYOUT_TABLE</code> - Indicates the location of a table in the document.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>LAYOUT_KEY_VALUE</code> - Indicates the location of form key-values in a document.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>LAYOUT_TEXT</code> - Text that is present typically as a part of paragraphs in documents.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -1058,6 +1443,61 @@ public class Block implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * </li>
      * </ul>
+     * <p>
+     * The following BlockTypes are only returned for Amazon Textract Layout.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>LAYOUT_TITLE</code> - The main title of the document.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>LAYOUT_HEADER</code> - Text located in the top margin of the document.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>LAYOUT_FOOTER</code> - Text located in the bottom margin of the document.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>LAYOUT_SECTION_HEADER</code> - The titles of sections within a document.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>LAYOUT_PAGE_NUMBER</code> - The page number of the documents.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>LAYOUT_LIST</code> - Any information grouped together in list form.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>LAYOUT_FIGURE</code> - Indicates the location of an image in a document.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>LAYOUT_TABLE</code> - Indicates the location of a table in the document.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>LAYOUT_KEY_VALUE</code> - Indicates the location of form key-values in a document.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>LAYOUT_TEXT</code> - Text that is present typically as a part of paragraphs in documents.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param blockType
      *        The type of text item that's recognized. In operations for text detection, the following types are
@@ -1160,6 +1600,61 @@ public class Block implements Serializable, Cloneable, StructuredPojo {
      *        <p>
      *        <i>QUERY_RESULT</i> - A response to a question asked during the call of analyze document. Comes with an
      *        alias and ID for ease of locating in a response. Also contains location and confidence score.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        The following BlockTypes are only returned for Amazon Textract Layout.
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>LAYOUT_TITLE</code> - The main title of the document.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>LAYOUT_HEADER</code> - Text located in the top margin of the document.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>LAYOUT_FOOTER</code> - Text located in the bottom margin of the document.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>LAYOUT_SECTION_HEADER</code> - The titles of sections within a document.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>LAYOUT_PAGE_NUMBER</code> - The page number of the documents.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>LAYOUT_LIST</code> - Any information grouped together in list form.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>LAYOUT_FIGURE</code> - Indicates the location of an image in a document.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>LAYOUT_TABLE</code> - Indicates the location of a table in the document.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>LAYOUT_KEY_VALUE</code> - Indicates the location of form key-values in a document.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>LAYOUT_TEXT</code> - Text that is present typically as a part of paragraphs in documents.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

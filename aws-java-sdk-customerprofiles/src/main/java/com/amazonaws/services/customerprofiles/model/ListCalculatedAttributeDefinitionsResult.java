@@ -160,7 +160,7 @@ public class ListCalculatedAttributeDefinitionsResult extends com.amazonaws.Amaz
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getItems() != null)
-            sb.append("Items: ").append(getItems()).append(",");
+            sb.append("Items: ").append("***Sensitive Data Redacted***").append(",");
         if (getNextToken() != null)
             sb.append("NextToken: ").append(getNextToken());
         sb.append("}");

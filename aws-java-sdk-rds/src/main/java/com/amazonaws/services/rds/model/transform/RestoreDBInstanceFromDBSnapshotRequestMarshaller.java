@@ -270,6 +270,10 @@ public class RestoreDBInstanceFromDBSnapshotRequestMarshaller implements
             request.addParameter("AllocatedStorage", StringUtils.fromInteger(restoreDBInstanceFromDBSnapshotRequest.getAllocatedStorage()));
         }
 
+        if (restoreDBInstanceFromDBSnapshotRequest.getDedicatedLogVolume() != null) {
+            request.addParameter("DedicatedLogVolume", StringUtils.fromBoolean(restoreDBInstanceFromDBSnapshotRequest.getDedicatedLogVolume()));
+        }
+
         return request;
     }
 

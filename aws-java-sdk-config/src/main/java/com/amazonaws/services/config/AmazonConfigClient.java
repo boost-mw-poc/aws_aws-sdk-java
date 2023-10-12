@@ -5360,6 +5360,14 @@ public class AmazonConfigClient extends AmazonWebServiceClient implements Amazon
     }
 
     /**
+     * <important>
+     * <p>
+     * For accurate reporting on the compliance status, you must record the <code>AWS::Config::ResourceCompliance</code>
+     * resource type. For more information, see <a
+     * href="https://docs.aws.amazon.com/config/latest/developerguide/select-resources.html">Selecting Which Resources
+     * Config Records</a>.
+     * </p>
+     * </important>
      * <p>
      * Returns a list of <code>ConfigurationItems</code> for the specified resource. The list contains details about
      * each state of the resource during the specified time interval. If you specified a retention period to retain your
@@ -6729,8 +6737,10 @@ public class AmazonConfigClient extends AmazonWebServiceClient implements Amazon
 
     /**
      * <p>
-     * Creates a delivery channel object to deliver configuration information to an Amazon S3 bucket and Amazon SNS
-     * topic.
+     * Creates a delivery channel object to deliver configuration information and other compliance information to an
+     * Amazon S3 bucket and Amazon SNS topic. For more information, see <a
+     * href="https://docs.aws.amazon.com/config/latest/developerguide/notifications-for-AWS-Config.html">Notifications
+     * that Config Sends to an Amazon SNS topic</a>.
      * </p>
      * <p>
      * Before you can create a delivery channel, you must create a configuration recorder.

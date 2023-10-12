@@ -372,7 +372,26 @@ public enum ResourceType {
     AWSPinpointEmailChannel("AWS::Pinpoint::EmailChannel"),
     AWSS3AccessPoint("AWS::S3::AccessPoint"),
     AWSNetworkManagerCustomerGatewayAssociation("AWS::NetworkManager::CustomerGatewayAssociation"),
-    AWSNetworkManagerLinkAssociation("AWS::NetworkManager::LinkAssociation");
+    AWSNetworkManagerLinkAssociation("AWS::NetworkManager::LinkAssociation"),
+    AWSIoTWirelessMulticastGroup("AWS::IoTWireless::MulticastGroup"),
+    AWSPersonalizeDatasetGroup("AWS::Personalize::DatasetGroup"),
+    AWSIoTTwinMakerComponentType("AWS::IoTTwinMaker::ComponentType"),
+    AWSCodeBuildReportGroup("AWS::CodeBuild::ReportGroup"),
+    AWSSageMakerFeatureGroup("AWS::SageMaker::FeatureGroup"),
+    AWSMSKBatchScramSecret("AWS::MSK::BatchScramSecret"),
+    AWSAppStreamStack("AWS::AppStream::Stack"),
+    AWSIoTJobTemplate("AWS::IoT::JobTemplate"),
+    AWSIoTWirelessFuotaTask("AWS::IoTWireless::FuotaTask"),
+    AWSIoTProvisioningTemplate("AWS::IoT::ProvisioningTemplate"),
+    AWSInspectorV2Filter("AWS::InspectorV2::Filter"),
+    AWSRoute53ResolverResolverQueryLoggingConfigAssociation("AWS::Route53Resolver::ResolverQueryLoggingConfigAssociation"),
+    AWSServiceDiscoveryInstance("AWS::ServiceDiscovery::Instance"),
+    AWSTransferCertificate("AWS::Transfer::Certificate"),
+    AWSMediaConnectFlowSource("AWS::MediaConnect::FlowSource"),
+    AWSAPSRuleGroupsNamespace("AWS::APS::RuleGroupsNamespace"),
+    AWSCodeGuruProfilerProfilingGroup("AWS::CodeGuruProfiler::ProfilingGroup"),
+    AWSRoute53ResolverResolverQueryLoggingConfig("AWS::Route53Resolver::ResolverQueryLoggingConfig"),
+    AWSBatchSchedulingPolicy("AWS::Batch::SchedulingPolicy");
 
     private String value;
 

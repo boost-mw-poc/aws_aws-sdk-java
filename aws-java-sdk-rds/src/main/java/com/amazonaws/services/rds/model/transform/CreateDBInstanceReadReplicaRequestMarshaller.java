@@ -279,6 +279,10 @@ public class CreateDBInstanceReadReplicaRequestMarshaller implements
             request.addParameter("SourceDBClusterIdentifier", StringUtils.fromString(createDBInstanceReadReplicaRequest.getSourceDBClusterIdentifier()));
         }
 
+        if (createDBInstanceReadReplicaRequest.getDedicatedLogVolume() != null) {
+            request.addParameter("DedicatedLogVolume", StringUtils.fromBoolean(createDBInstanceReadReplicaRequest.getDedicatedLogVolume()));
+        }
+
         if (createDBInstanceReadReplicaRequest.getSourceRegion() != null) {
             request.addParameter("SourceRegion", StringUtils.fromString(createDBInstanceReadReplicaRequest.getSourceRegion()));
         }

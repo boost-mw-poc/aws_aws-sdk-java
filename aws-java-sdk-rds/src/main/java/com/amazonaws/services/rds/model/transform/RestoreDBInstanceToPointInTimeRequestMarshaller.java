@@ -284,6 +284,10 @@ public class RestoreDBInstanceToPointInTimeRequestMarshaller implements
             request.addParameter("AllocatedStorage", StringUtils.fromInteger(restoreDBInstanceToPointInTimeRequest.getAllocatedStorage()));
         }
 
+        if (restoreDBInstanceToPointInTimeRequest.getDedicatedLogVolume() != null) {
+            request.addParameter("DedicatedLogVolume", StringUtils.fromBoolean(restoreDBInstanceToPointInTimeRequest.getDedicatedLogVolume()));
+        }
+
         return request;
     }
 

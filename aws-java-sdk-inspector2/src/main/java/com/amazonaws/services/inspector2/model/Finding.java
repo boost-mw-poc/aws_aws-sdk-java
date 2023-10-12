@@ -122,13 +122,19 @@ public class Finding implements Serializable, Cloneable, StructuredPojo {
     private Remediation remediation;
     /**
      * <p>
-     * Contains information on the resources involved in a finding.
+     * Contains information on the resources involved in a finding. The <code>resource</code> value determines the valid
+     * values for <code>type</code> in your request. For more information, see <a
+     * href="https://docs.aws.amazon.com/inspector/latest/user/findings-types.html">Finding types</a> in the Amazon
+     * Inspector user guide.
      * </p>
      */
     private java.util.List<Resource> resources;
     /**
      * <p>
-     * The severity of the finding.
+     * The severity of the finding. <code>UNTRIAGED</code> applies to <code>PACKAGE_VULNERABILITY</code> type findings
+     * that the vendor has not assigned a severity yet. For more information, see <a
+     * href="https://docs.aws.amazon.com/inspector/latest/user/findings-understanding-severity.html">Severity levels for
+     * findings</a> in the Amazon Inspector user guide.
      * </p>
      */
     private String severity;
@@ -146,7 +152,10 @@ public class Finding implements Serializable, Cloneable, StructuredPojo {
     private String title;
     /**
      * <p>
-     * The type of the finding.
+     * The type of the finding. The <code>type</code> value determines the valid values for <code>resource</code> in
+     * your request. For more information, see <a
+     * href="https://docs.aws.amazon.com/inspector/latest/user/findings-types.html">Finding types</a> in the Amazon
+     * Inspector user guide.
      * </p>
      */
     private String type;
@@ -813,10 +822,16 @@ public class Finding implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Contains information on the resources involved in a finding.
+     * Contains information on the resources involved in a finding. The <code>resource</code> value determines the valid
+     * values for <code>type</code> in your request. For more information, see <a
+     * href="https://docs.aws.amazon.com/inspector/latest/user/findings-types.html">Finding types</a> in the Amazon
+     * Inspector user guide.
      * </p>
      * 
-     * @return Contains information on the resources involved in a finding.
+     * @return Contains information on the resources involved in a finding. The <code>resource</code> value determines
+     *         the valid values for <code>type</code> in your request. For more information, see <a
+     *         href="https://docs.aws.amazon.com/inspector/latest/user/findings-types.html">Finding types</a> in the
+     *         Amazon Inspector user guide.
      */
 
     public java.util.List<Resource> getResources() {
@@ -825,11 +840,17 @@ public class Finding implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Contains information on the resources involved in a finding.
+     * Contains information on the resources involved in a finding. The <code>resource</code> value determines the valid
+     * values for <code>type</code> in your request. For more information, see <a
+     * href="https://docs.aws.amazon.com/inspector/latest/user/findings-types.html">Finding types</a> in the Amazon
+     * Inspector user guide.
      * </p>
      * 
      * @param resources
-     *        Contains information on the resources involved in a finding.
+     *        Contains information on the resources involved in a finding. The <code>resource</code> value determines
+     *        the valid values for <code>type</code> in your request. For more information, see <a
+     *        href="https://docs.aws.amazon.com/inspector/latest/user/findings-types.html">Finding types</a> in the
+     *        Amazon Inspector user guide.
      */
 
     public void setResources(java.util.Collection<Resource> resources) {
@@ -843,7 +864,10 @@ public class Finding implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Contains information on the resources involved in a finding.
+     * Contains information on the resources involved in a finding. The <code>resource</code> value determines the valid
+     * values for <code>type</code> in your request. For more information, see <a
+     * href="https://docs.aws.amazon.com/inspector/latest/user/findings-types.html">Finding types</a> in the Amazon
+     * Inspector user guide.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -852,7 +876,10 @@ public class Finding implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param resources
-     *        Contains information on the resources involved in a finding.
+     *        Contains information on the resources involved in a finding. The <code>resource</code> value determines
+     *        the valid values for <code>type</code> in your request. For more information, see <a
+     *        href="https://docs.aws.amazon.com/inspector/latest/user/findings-types.html">Finding types</a> in the
+     *        Amazon Inspector user guide.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -868,11 +895,17 @@ public class Finding implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Contains information on the resources involved in a finding.
+     * Contains information on the resources involved in a finding. The <code>resource</code> value determines the valid
+     * values for <code>type</code> in your request. For more information, see <a
+     * href="https://docs.aws.amazon.com/inspector/latest/user/findings-types.html">Finding types</a> in the Amazon
+     * Inspector user guide.
      * </p>
      * 
      * @param resources
-     *        Contains information on the resources involved in a finding.
+     *        Contains information on the resources involved in a finding. The <code>resource</code> value determines
+     *        the valid values for <code>type</code> in your request. For more information, see <a
+     *        href="https://docs.aws.amazon.com/inspector/latest/user/findings-types.html">Finding types</a> in the
+     *        Amazon Inspector user guide.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -883,11 +916,17 @@ public class Finding implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The severity of the finding.
+     * The severity of the finding. <code>UNTRIAGED</code> applies to <code>PACKAGE_VULNERABILITY</code> type findings
+     * that the vendor has not assigned a severity yet. For more information, see <a
+     * href="https://docs.aws.amazon.com/inspector/latest/user/findings-understanding-severity.html">Severity levels for
+     * findings</a> in the Amazon Inspector user guide.
      * </p>
      * 
      * @param severity
-     *        The severity of the finding.
+     *        The severity of the finding. <code>UNTRIAGED</code> applies to <code>PACKAGE_VULNERABILITY</code> type
+     *        findings that the vendor has not assigned a severity yet. For more information, see <a
+     *        href="https://docs.aws.amazon.com/inspector/latest/user/findings-understanding-severity.html">Severity
+     *        levels for findings</a> in the Amazon Inspector user guide.
      * @see Severity
      */
 
@@ -897,10 +936,16 @@ public class Finding implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The severity of the finding.
+     * The severity of the finding. <code>UNTRIAGED</code> applies to <code>PACKAGE_VULNERABILITY</code> type findings
+     * that the vendor has not assigned a severity yet. For more information, see <a
+     * href="https://docs.aws.amazon.com/inspector/latest/user/findings-understanding-severity.html">Severity levels for
+     * findings</a> in the Amazon Inspector user guide.
      * </p>
      * 
-     * @return The severity of the finding.
+     * @return The severity of the finding. <code>UNTRIAGED</code> applies to <code>PACKAGE_VULNERABILITY</code> type
+     *         findings that the vendor has not assigned a severity yet. For more information, see <a
+     *         href="https://docs.aws.amazon.com/inspector/latest/user/findings-understanding-severity.html">Severity
+     *         levels for findings</a> in the Amazon Inspector user guide.
      * @see Severity
      */
 
@@ -910,11 +955,17 @@ public class Finding implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The severity of the finding.
+     * The severity of the finding. <code>UNTRIAGED</code> applies to <code>PACKAGE_VULNERABILITY</code> type findings
+     * that the vendor has not assigned a severity yet. For more information, see <a
+     * href="https://docs.aws.amazon.com/inspector/latest/user/findings-understanding-severity.html">Severity levels for
+     * findings</a> in the Amazon Inspector user guide.
      * </p>
      * 
      * @param severity
-     *        The severity of the finding.
+     *        The severity of the finding. <code>UNTRIAGED</code> applies to <code>PACKAGE_VULNERABILITY</code> type
+     *        findings that the vendor has not assigned a severity yet. For more information, see <a
+     *        href="https://docs.aws.amazon.com/inspector/latest/user/findings-understanding-severity.html">Severity
+     *        levels for findings</a> in the Amazon Inspector user guide.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Severity
      */
@@ -926,11 +977,17 @@ public class Finding implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The severity of the finding.
+     * The severity of the finding. <code>UNTRIAGED</code> applies to <code>PACKAGE_VULNERABILITY</code> type findings
+     * that the vendor has not assigned a severity yet. For more information, see <a
+     * href="https://docs.aws.amazon.com/inspector/latest/user/findings-understanding-severity.html">Severity levels for
+     * findings</a> in the Amazon Inspector user guide.
      * </p>
      * 
      * @param severity
-     *        The severity of the finding.
+     *        The severity of the finding. <code>UNTRIAGED</code> applies to <code>PACKAGE_VULNERABILITY</code> type
+     *        findings that the vendor has not assigned a severity yet. For more information, see <a
+     *        href="https://docs.aws.amazon.com/inspector/latest/user/findings-understanding-severity.html">Severity
+     *        levels for findings</a> in the Amazon Inspector user guide.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Severity
      */
@@ -1041,11 +1098,17 @@ public class Finding implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type of the finding.
+     * The type of the finding. The <code>type</code> value determines the valid values for <code>resource</code> in
+     * your request. For more information, see <a
+     * href="https://docs.aws.amazon.com/inspector/latest/user/findings-types.html">Finding types</a> in the Amazon
+     * Inspector user guide.
      * </p>
      * 
      * @param type
-     *        The type of the finding.
+     *        The type of the finding. The <code>type</code> value determines the valid values for <code>resource</code>
+     *        in your request. For more information, see <a
+     *        href="https://docs.aws.amazon.com/inspector/latest/user/findings-types.html">Finding types</a> in the
+     *        Amazon Inspector user guide.
      * @see FindingType
      */
 
@@ -1055,10 +1118,16 @@ public class Finding implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type of the finding.
+     * The type of the finding. The <code>type</code> value determines the valid values for <code>resource</code> in
+     * your request. For more information, see <a
+     * href="https://docs.aws.amazon.com/inspector/latest/user/findings-types.html">Finding types</a> in the Amazon
+     * Inspector user guide.
      * </p>
      * 
-     * @return The type of the finding.
+     * @return The type of the finding. The <code>type</code> value determines the valid values for
+     *         <code>resource</code> in your request. For more information, see <a
+     *         href="https://docs.aws.amazon.com/inspector/latest/user/findings-types.html">Finding types</a> in the
+     *         Amazon Inspector user guide.
      * @see FindingType
      */
 
@@ -1068,11 +1137,17 @@ public class Finding implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type of the finding.
+     * The type of the finding. The <code>type</code> value determines the valid values for <code>resource</code> in
+     * your request. For more information, see <a
+     * href="https://docs.aws.amazon.com/inspector/latest/user/findings-types.html">Finding types</a> in the Amazon
+     * Inspector user guide.
      * </p>
      * 
      * @param type
-     *        The type of the finding.
+     *        The type of the finding. The <code>type</code> value determines the valid values for <code>resource</code>
+     *        in your request. For more information, see <a
+     *        href="https://docs.aws.amazon.com/inspector/latest/user/findings-types.html">Finding types</a> in the
+     *        Amazon Inspector user guide.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see FindingType
      */
@@ -1084,11 +1159,17 @@ public class Finding implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type of the finding.
+     * The type of the finding. The <code>type</code> value determines the valid values for <code>resource</code> in
+     * your request. For more information, see <a
+     * href="https://docs.aws.amazon.com/inspector/latest/user/findings-types.html">Finding types</a> in the Amazon
+     * Inspector user guide.
      * </p>
      * 
      * @param type
-     *        The type of the finding.
+     *        The type of the finding. The <code>type</code> value determines the valid values for <code>resource</code>
+     *        in your request. For more information, see <a
+     *        href="https://docs.aws.amazon.com/inspector/latest/user/findings-types.html">Finding types</a> in the
+     *        Amazon Inspector user guide.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see FindingType
      */

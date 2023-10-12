@@ -7646,6 +7646,42 @@ public interface AmazonEC2 {
 
     /**
      * <p>
+     * Sets the AMI state to <code>disabled</code> and removes all launch permissions from the AMI. A disabled AMI can't
+     * be used for instance launches.
+     * </p>
+     * <p>
+     * A disabled AMI can't be shared. If a public or shared AMI was previously shared, it is made private. If an AMI
+     * was shared with an Amazon Web Services account, organization, or Organizational Unit, they lose access to the
+     * disabled AMI.
+     * </p>
+     * <p>
+     * A disabled AMI does not appear in <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeImages.html">DescribeImages</a> API
+     * calls by default.
+     * </p>
+     * <p>
+     * Only the AMI owner can disable an AMI.
+     * </p>
+     * <p>
+     * You can re-enable a disabled AMI using <a
+     * href="http://amazonaws.com/AWSEC2/latest/APIReference/API_EnableImage.html">EnableImage</a>.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/disable-an-ami.html">Disable an AMI</a> in the
+     * <i>Amazon EC2 User Guide</i>.
+     * </p>
+     * 
+     * @param disableImageRequest
+     * @return Result of the DisableImage operation returned by the service.
+     * @sample AmazonEC2.DisableImage
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DisableImage" target="_top">AWS API
+     *      Documentation</a>
+     */
+    DisableImageResult disableImage(DisableImageRequest disableImageRequest);
+
+    /**
+     * <p>
      * Disables <i>block public access for AMIs</i> at the account level in the specified Amazon Web Services Region.
      * This removes the <i>block public access</i> restriction from your account. With the restriction removed, you can
      * publicly share your AMIs in the specified Amazon Web Services Region.
@@ -8151,6 +8187,30 @@ public interface AmazonEC2 {
      *      API Documentation</a>
      */
     EnableFastSnapshotRestoresResult enableFastSnapshotRestores(EnableFastSnapshotRestoresRequest enableFastSnapshotRestoresRequest);
+
+    /**
+     * <p>
+     * Re-enables a disabled AMI. The re-enabled AMI is marked as <code>available</code> and can be used for instance
+     * launches, appears in describe operations, and can be shared. Amazon Web Services accounts, organizations, and
+     * Organizational Units that lost access to the AMI when it was disabled do not regain access automatically. Once
+     * the AMI is available, it can be shared with them again.
+     * </p>
+     * <p>
+     * Only the AMI owner can re-enable a disabled AMI.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/disable-an-ami.html">Disable an AMI</a> in the
+     * <i>Amazon EC2 User Guide</i>.
+     * </p>
+     * 
+     * @param enableImageRequest
+     * @return Result of the EnableImage operation returned by the service.
+     * @sample AmazonEC2.EnableImage
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/EnableImage" target="_top">AWS API
+     *      Documentation</a>
+     */
+    EnableImageResult enableImage(EnableImageRequest enableImageRequest);
 
     /**
      * <p>

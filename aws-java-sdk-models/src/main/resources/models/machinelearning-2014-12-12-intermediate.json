@@ -47697,7 +47697,7 @@
         "marshallingTargetClass" : "String",
         "marshallingType" : "STRING",
         "name" : "Password",
-        "sensitive" : false,
+        "sensitive" : true,
         "setterDocumentation" : "/**\n@param password */",
         "setterMethodName" : "setPassword",
         "setterModel" : {
@@ -47768,7 +47768,7 @@
           "marshallingTargetClass" : "String",
           "marshallingType" : "STRING",
           "name" : "Password",
-          "sensitive" : false,
+          "sensitive" : true,
           "setterDocumentation" : "/**\n@param password */",
           "setterMethodName" : "setPassword",
           "setterModel" : {
@@ -50897,7 +50897,7 @@
         "marshallingTargetClass" : "String",
         "marshallingType" : "STRING",
         "name" : "Password",
-        "sensitive" : false,
+        "sensitive" : true,
         "setterDocumentation" : "/**\n@param password */",
         "setterMethodName" : "setPassword",
         "setterModel" : {
@@ -50968,7 +50968,7 @@
           "marshallingTargetClass" : "String",
           "marshallingType" : "STRING",
           "name" : "Password",
-          "sensitive" : false,
+          "sensitive" : true,
           "setterDocumentation" : "/**\n@param password */",
           "setterMethodName" : "setPassword",
           "setterModel" : {

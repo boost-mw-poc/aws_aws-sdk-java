@@ -632,11 +632,20 @@ public interface AmazonWorkspacesAsync extends AmazonWorkspaces {
      * This operation is asynchronous and returns before the WorkSpaces are created.
      * </p>
      * <note>
+     * <ul>
+     * <li>
      * <p>
      * The <code>MANUAL</code> running mode value is only supported by Amazon WorkSpaces Core. Contact your account team
      * to be allow-listed to use this value. For more information, see <a
      * href="http://aws.amazon.com/workspaces/core/">Amazon WorkSpaces Core</a>.
      * </p>
+     * </li>
+     * <li>
+     * <p>
+     * PCoIP is only available for Windows bundles.
+     * </p>
+     * </li>
+     * </ul>
      * </note>
      * 
      * @param createWorkspacesRequest
@@ -655,11 +664,20 @@ public interface AmazonWorkspacesAsync extends AmazonWorkspaces {
      * This operation is asynchronous and returns before the WorkSpaces are created.
      * </p>
      * <note>
+     * <ul>
+     * <li>
      * <p>
      * The <code>MANUAL</code> running mode value is only supported by Amazon WorkSpaces Core. Contact your account team
      * to be allow-listed to use this value. For more information, see <a
      * href="http://aws.amazon.com/workspaces/core/">Amazon WorkSpaces Core</a>.
      * </p>
+     * </li>
+     * <li>
+     * <p>
+     * PCoIP is only available for Windows bundles.
+     * </p>
+     * </li>
+     * </ul>
      * </note>
      * 
      * @param createWorkspacesRequest

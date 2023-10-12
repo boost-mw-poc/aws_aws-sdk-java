@@ -19,8 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The Amazon SageMaker Canvas app setting where you configure OAuth for connecting to an external data source, such as
- * Snowflake.
+ * The Amazon SageMaker Canvas application setting where you configure OAuth for connecting to an external data source,
+ * such as Snowflake.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/IdentityProviderOAuthSetting"

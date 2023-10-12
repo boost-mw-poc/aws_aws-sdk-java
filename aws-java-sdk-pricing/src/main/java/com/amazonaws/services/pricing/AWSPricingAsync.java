@@ -62,20 +62,10 @@ import com.amazonaws.services.pricing.model.*;
  * <code>Provisioned IOPS</code> <code>volumeType</code>.
  * </p>
  * <p>
- * You can use the following endpoints for the Amazon Web Services Price List API:
+ * For more information, see <a
+ * href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/price-changes.html">Using the Amazon Web Services
+ * Price List API</a> in the <i>Billing User Guide</i>.
  * </p>
- * <ul>
- * <li>
- * <p>
- * https://api.pricing.us-east-1.amazonaws.com
- * </p>
- * </li>
- * <li>
- * <p>
- * https://api.pricing.ap-south-1.amazonaws.com
- * </p>
- * </li>
- * </ul>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public interface AWSPricingAsync extends AWSPricing {
@@ -169,8 +159,8 @@ public interface AWSPricingAsync extends AWSPricing {
      * <p>
      * This returns the URL that you can retrieve your Price List file from. This URL is based on the
      * <code>PriceListArn</code> and <code>FileFormat</code> that you retrieve from the <a
-     * href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_pricing_ListPriceLists.html">
-     * <code>ListPriceLists</code> </a> response.
+     * href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_pricing_ListPriceLists.html"
+     * >ListPriceLists</a> response.
      * </p>
      * 
      * @param getPriceListFileUrlRequest
@@ -190,8 +180,8 @@ public interface AWSPricingAsync extends AWSPricing {
      * <p>
      * This returns the URL that you can retrieve your Price List file from. This URL is based on the
      * <code>PriceListArn</code> and <code>FileFormat</code> that you retrieve from the <a
-     * href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_pricing_ListPriceLists.html">
-     * <code>ListPriceLists</code> </a> response.
+     * href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_pricing_ListPriceLists.html"
+     * >ListPriceLists</a> response.
      * </p>
      * 
      * @param getPriceListFileUrlRequest
@@ -251,8 +241,8 @@ public interface AWSPricingAsync extends AWSPricing {
      * with a <code>RegionCode</code> filter to get the Price List reference that's specific to a specific Amazon Web
      * Services Region. You can use the <code>PriceListArn</code> from the response to get your preferred Price List
      * files through the <a
-     * href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_pricing_GetPriceListFileUrl.html">
-     * <code>GetPriceListFileUrl</code> </a> API.
+     * href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_pricing_GetPriceListFileUrl.html"
+     * >GetPriceListFileUrl</a> API.
      * </p>
      * 
      * @param listPriceListsRequest
@@ -276,8 +266,8 @@ public interface AWSPricingAsync extends AWSPricing {
      * with a <code>RegionCode</code> filter to get the Price List reference that's specific to a specific Amazon Web
      * Services Region. You can use the <code>PriceListArn</code> from the response to get your preferred Price List
      * files through the <a
-     * href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_pricing_GetPriceListFileUrl.html">
-     * <code>GetPriceListFileUrl</code> </a> API.
+     * href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_pricing_GetPriceListFileUrl.html"
+     * >GetPriceListFileUrl</a> API.
      * </p>
      * 
      * @param listPriceListsRequest

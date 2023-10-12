@@ -92,7 +92,9 @@ public class CoverageFilterCriteria implements Serializable, Cloneable, Structur
     private java.util.List<CoverageStringFilter> resourceType;
     /**
      * <p>
-     * The scan status code to filter on.
+     * The scan status code to filter on. Valid values are: <code>ValidationException</code>,
+     * <code>InternalServerException</code>, <code>ResourceNotFoundException</code>, <code>BadRequestException</code>,
+     * and <code>ThrottlingException</code>.
      * </p>
      */
     private java.util.List<CoverageStringFilter> scanStatusCode;
@@ -827,10 +829,14 @@ public class CoverageFilterCriteria implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The scan status code to filter on.
+     * The scan status code to filter on. Valid values are: <code>ValidationException</code>,
+     * <code>InternalServerException</code>, <code>ResourceNotFoundException</code>, <code>BadRequestException</code>,
+     * and <code>ThrottlingException</code>.
      * </p>
      * 
-     * @return The scan status code to filter on.
+     * @return The scan status code to filter on. Valid values are: <code>ValidationException</code>,
+     *         <code>InternalServerException</code>, <code>ResourceNotFoundException</code>,
+     *         <code>BadRequestException</code>, and <code>ThrottlingException</code>.
      */
 
     public java.util.List<CoverageStringFilter> getScanStatusCode() {
@@ -839,11 +845,15 @@ public class CoverageFilterCriteria implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The scan status code to filter on.
+     * The scan status code to filter on. Valid values are: <code>ValidationException</code>,
+     * <code>InternalServerException</code>, <code>ResourceNotFoundException</code>, <code>BadRequestException</code>,
+     * and <code>ThrottlingException</code>.
      * </p>
      * 
      * @param scanStatusCode
-     *        The scan status code to filter on.
+     *        The scan status code to filter on. Valid values are: <code>ValidationException</code>,
+     *        <code>InternalServerException</code>, <code>ResourceNotFoundException</code>,
+     *        <code>BadRequestException</code>, and <code>ThrottlingException</code>.
      */
 
     public void setScanStatusCode(java.util.Collection<CoverageStringFilter> scanStatusCode) {
@@ -857,7 +867,9 @@ public class CoverageFilterCriteria implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The scan status code to filter on.
+     * The scan status code to filter on. Valid values are: <code>ValidationException</code>,
+     * <code>InternalServerException</code>, <code>ResourceNotFoundException</code>, <code>BadRequestException</code>,
+     * and <code>ThrottlingException</code>.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -866,7 +878,9 @@ public class CoverageFilterCriteria implements Serializable, Cloneable, Structur
      * </p>
      * 
      * @param scanStatusCode
-     *        The scan status code to filter on.
+     *        The scan status code to filter on. Valid values are: <code>ValidationException</code>,
+     *        <code>InternalServerException</code>, <code>ResourceNotFoundException</code>,
+     *        <code>BadRequestException</code>, and <code>ThrottlingException</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -882,11 +896,15 @@ public class CoverageFilterCriteria implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The scan status code to filter on.
+     * The scan status code to filter on. Valid values are: <code>ValidationException</code>,
+     * <code>InternalServerException</code>, <code>ResourceNotFoundException</code>, <code>BadRequestException</code>,
+     * and <code>ThrottlingException</code>.
      * </p>
      * 
      * @param scanStatusCode
-     *        The scan status code to filter on.
+     *        The scan status code to filter on. Valid values are: <code>ValidationException</code>,
+     *        <code>InternalServerException</code>, <code>ResourceNotFoundException</code>,
+     *        <code>BadRequestException</code>, and <code>ThrottlingException</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

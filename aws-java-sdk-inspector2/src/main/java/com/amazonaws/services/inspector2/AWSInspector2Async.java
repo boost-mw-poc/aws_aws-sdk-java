@@ -27,7 +27,7 @@ import com.amazonaws.services.inspector2.model.*;
  * <p>
  * <p>
  * Amazon Inspector is a vulnerability discovery service that automates continuous scanning for security vulnerabilities
- * within your Amazon EC2 and Amazon ECR environments.
+ * within your Amazon EC2, Amazon ECR, and Amazon Web Services Lambda environments.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
@@ -338,7 +338,8 @@ public interface AWSInspector2Async extends AWSInspector2 {
 
     /**
      * <p>
-     * Creates a filter resource using specified filter criteria.
+     * Creates a filter resource using specified filter criteria. When the filter action is set to <code>SUPPRESS</code>
+     * this action creates a suppression rule.
      * </p>
      * 
      * @param createFilterRequest
@@ -351,7 +352,8 @@ public interface AWSInspector2Async extends AWSInspector2 {
 
     /**
      * <p>
-     * Creates a filter resource using specified filter criteria.
+     * Creates a filter resource using specified filter criteria. When the filter action is set to <code>SUPPRESS</code>
+     * this action creates a suppression rule.
      * </p>
      * 
      * @param createFilterRequest

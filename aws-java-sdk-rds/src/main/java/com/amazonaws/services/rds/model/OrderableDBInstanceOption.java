@@ -260,6 +260,12 @@ public class OrderableDBInstanceOption implements Serializable, Cloneable {
      * </p>
      */
     private Double maxStorageThroughputPerIops;
+    /**
+     * <p>
+     * Indicates whether a DB instance supports using a dedicated log volume (DLV).
+     * </p>
+     */
+    private Boolean supportsDedicatedLogVolume;
 
     /**
      * <p>
@@ -2155,6 +2161,58 @@ public class OrderableDBInstanceOption implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * Indicates whether a DB instance supports using a dedicated log volume (DLV).
+     * </p>
+     * 
+     * @param supportsDedicatedLogVolume
+     *        Indicates whether a DB instance supports using a dedicated log volume (DLV).
+     */
+
+    public void setSupportsDedicatedLogVolume(Boolean supportsDedicatedLogVolume) {
+        this.supportsDedicatedLogVolume = supportsDedicatedLogVolume;
+    }
+
+    /**
+     * <p>
+     * Indicates whether a DB instance supports using a dedicated log volume (DLV).
+     * </p>
+     * 
+     * @return Indicates whether a DB instance supports using a dedicated log volume (DLV).
+     */
+
+    public Boolean getSupportsDedicatedLogVolume() {
+        return this.supportsDedicatedLogVolume;
+    }
+
+    /**
+     * <p>
+     * Indicates whether a DB instance supports using a dedicated log volume (DLV).
+     * </p>
+     * 
+     * @param supportsDedicatedLogVolume
+     *        Indicates whether a DB instance supports using a dedicated log volume (DLV).
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public OrderableDBInstanceOption withSupportsDedicatedLogVolume(Boolean supportsDedicatedLogVolume) {
+        setSupportsDedicatedLogVolume(supportsDedicatedLogVolume);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Indicates whether a DB instance supports using a dedicated log volume (DLV).
+     * </p>
+     * 
+     * @return Indicates whether a DB instance supports using a dedicated log volume (DLV).
+     */
+
+    public Boolean isSupportsDedicatedLogVolume() {
+        return this.supportsDedicatedLogVolume;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -2235,7 +2293,9 @@ public class OrderableDBInstanceOption implements Serializable, Cloneable {
         if (getMinStorageThroughputPerIops() != null)
             sb.append("MinStorageThroughputPerIops: ").append(getMinStorageThroughputPerIops()).append(",");
         if (getMaxStorageThroughputPerIops() != null)
-            sb.append("MaxStorageThroughputPerIops: ").append(getMaxStorageThroughputPerIops());
+            sb.append("MaxStorageThroughputPerIops: ").append(getMaxStorageThroughputPerIops()).append(",");
+        if (getSupportsDedicatedLogVolume() != null)
+            sb.append("SupportsDedicatedLogVolume: ").append(getSupportsDedicatedLogVolume());
         sb.append("}");
         return sb.toString();
     }
@@ -2394,6 +2454,10 @@ public class OrderableDBInstanceOption implements Serializable, Cloneable {
             return false;
         if (other.getMaxStorageThroughputPerIops() != null && other.getMaxStorageThroughputPerIops().equals(this.getMaxStorageThroughputPerIops()) == false)
             return false;
+        if (other.getSupportsDedicatedLogVolume() == null ^ this.getSupportsDedicatedLogVolume() == null)
+            return false;
+        if (other.getSupportsDedicatedLogVolume() != null && other.getSupportsDedicatedLogVolume().equals(this.getSupportsDedicatedLogVolume()) == false)
+            return false;
         return true;
     }
 
@@ -2437,6 +2501,7 @@ public class OrderableDBInstanceOption implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getMaxStorageThroughputPerDbInstance() == null) ? 0 : getMaxStorageThroughputPerDbInstance().hashCode());
         hashCode = prime * hashCode + ((getMinStorageThroughputPerIops() == null) ? 0 : getMinStorageThroughputPerIops().hashCode());
         hashCode = prime * hashCode + ((getMaxStorageThroughputPerIops() == null) ? 0 : getMaxStorageThroughputPerIops().hashCode());
+        hashCode = prime * hashCode + ((getSupportsDedicatedLogVolume() == null) ? 0 : getSupportsDedicatedLogVolume().hashCode());
         return hashCode;
     }
 

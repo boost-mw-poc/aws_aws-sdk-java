@@ -276,7 +276,7 @@ public class UpdateCalculatedAttributeDefinitionRequest extends com.amazonaws.Am
         if (getDisplayName() != null)
             sb.append("DisplayName: ").append(getDisplayName()).append(",");
         if (getDescription() != null)
-            sb.append("Description: ").append(getDescription()).append(",");
+            sb.append("Description: ").append("***Sensitive Data Redacted***").append(",");
         if (getConditions() != null)
             sb.append("Conditions: ").append("***Sensitive Data Redacted***");
         sb.append("}");

@@ -1557,12 +1557,16 @@ public interface AmazonSageMakerAsync extends AmazonSageMaker {
      * in the <code>FeatureStore</code> to describe a <code>Record</code>.
      * </p>
      * <p>
-     * The <code>FeatureGroup</code> defines the schema and features contained in the FeatureGroup. A
+     * The <code>FeatureGroup</code> defines the schema and features contained in the <code>FeatureGroup</code>. A
      * <code>FeatureGroup</code> definition is composed of a list of <code>Features</code>, a
      * <code>RecordIdentifierFeatureName</code>, an <code>EventTimeFeatureName</code> and configurations for its
      * <code>OnlineStore</code> and <code>OfflineStore</code>. Check <a
      * href="https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html">Amazon Web Services service
      * quotas</a> to see the <code>FeatureGroup</code>s quota for your Amazon Web Services account.
+     * </p>
+     * <p>
+     * Note that it can take approximately 10-15 minutes to provision an <code>OnlineStore</code>
+     * <code>FeatureGroup</code> with the <code>InMemory</code> <code>StorageType</code>.
      * </p>
      * <important>
      * <p>
@@ -1585,12 +1589,16 @@ public interface AmazonSageMakerAsync extends AmazonSageMaker {
      * in the <code>FeatureStore</code> to describe a <code>Record</code>.
      * </p>
      * <p>
-     * The <code>FeatureGroup</code> defines the schema and features contained in the FeatureGroup. A
+     * The <code>FeatureGroup</code> defines the schema and features contained in the <code>FeatureGroup</code>. A
      * <code>FeatureGroup</code> definition is composed of a list of <code>Features</code>, a
      * <code>RecordIdentifierFeatureName</code>, an <code>EventTimeFeatureName</code> and configurations for its
      * <code>OnlineStore</code> and <code>OfflineStore</code>. Check <a
      * href="https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html">Amazon Web Services service
      * quotas</a> to see the <code>FeatureGroup</code>s quota for your Amazon Web Services account.
+     * </p>
+     * <p>
+     * Note that it can take approximately 10-15 minutes to provision an <code>OnlineStore</code>
+     * <code>FeatureGroup</code> with the <code>InMemory</code> <code>StorageType</code>.
      * </p>
      * <important>
      * <p>
@@ -4170,6 +4178,10 @@ public interface AmazonSageMakerAsync extends AmazonSageMaker {
      * Data written into the <code>OfflineStore</code> will not be deleted. The Amazon Web Services Glue database and
      * tables that are automatically created for your <code>OfflineStore</code> are not deleted.
      * </p>
+     * <p>
+     * Note that it can take approximately 10-15 minutes to delete an <code>OnlineStore</code> <code>FeatureGroup</code>
+     * with the <code>InMemory</code> <code>StorageType</code>.
+     * </p>
      * 
      * @param deleteFeatureGroupRequest
      * @return A Java Future containing the result of the DeleteFeatureGroup operation returned by the service.
@@ -4188,6 +4200,10 @@ public interface AmazonSageMakerAsync extends AmazonSageMaker {
      * <p>
      * Data written into the <code>OfflineStore</code> will not be deleted. The Amazon Web Services Glue database and
      * tables that are automatically created for your <code>OfflineStore</code> are not deleted.
+     * </p>
+     * <p>
+     * Note that it can take approximately 10-15 minutes to delete an <code>OnlineStore</code> <code>FeatureGroup</code>
+     * with the <code>InMemory</code> <code>StorageType</code>.
      * </p>
      * 
      * @param deleteFeatureGroupRequest
