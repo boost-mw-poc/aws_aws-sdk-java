@@ -248,6 +248,27 @@ public interface AWSApplicationDiscovery {
 
     /**
      * <p>
+     * Deletes one or more agents or collectors as specified by ID. Deleting an agent or collector does not delete the
+     * previously discovered data. To delete the data collected, use <code>StartBatchDeleteConfigurationTask</code>.
+     * </p>
+     * 
+     * @param batchDeleteAgentsRequest
+     * @return Result of the BatchDeleteAgents operation returned by the service.
+     * @throws AuthorizationErrorException
+     *         The user does not have permission to perform the action. Check the IAM policy associated with this user.
+     * @throws InvalidParameterException
+     *         One or more parameters are not valid. Verify the parameters and try again.
+     * @throws InvalidParameterValueException
+     *         The value of one or more parameters are either invalid or out of range. Verify the parameter values and
+     *         try again.
+     * @throws ServerInternalErrorException
+     *         The server experienced an internal error. Try again.
+     * @sample AWSApplicationDiscovery.BatchDeleteAgents
+     */
+    BatchDeleteAgentsResult batchDeleteAgents(BatchDeleteAgentsRequest batchDeleteAgentsRequest);
+
+    /**
+     * <p>
      * Deletes one or more import tasks, each identified by their import ID. Each import task has a number of records
      * that can identify servers or applications.
      * </p>
@@ -396,6 +417,27 @@ public interface AWSApplicationDiscovery {
      * @sample AWSApplicationDiscovery.DescribeAgents
      */
     DescribeAgentsResult describeAgents(DescribeAgentsRequest describeAgentsRequest);
+
+    /**
+     * <p>
+     * Takes a unique deletion task identifier as input and returns metadata about a configuration deletion task.
+     * </p>
+     * 
+     * @param describeBatchDeleteConfigurationTaskRequest
+     * @return Result of the DescribeBatchDeleteConfigurationTask operation returned by the service.
+     * @throws AuthorizationErrorException
+     *         The user does not have permission to perform the action. Check the IAM policy associated with this user.
+     * @throws InvalidParameterValueException
+     *         The value of one or more parameters are either invalid or out of range. Verify the parameter values and
+     *         try again.
+     * @throws ServerInternalErrorException
+     *         The server experienced an internal error. Try again.
+     * @throws HomeRegionNotSetException
+     *         The home Region is not set. Set the home Region to continue.
+     * @sample AWSApplicationDiscovery.DescribeBatchDeleteConfigurationTask
+     */
+    DescribeBatchDeleteConfigurationTaskResult describeBatchDeleteConfigurationTask(
+            DescribeBatchDeleteConfigurationTaskRequest describeBatchDeleteConfigurationTaskRequest);
 
     /**
      * <p>
@@ -730,6 +772,31 @@ public interface AWSApplicationDiscovery {
      * @sample AWSApplicationDiscovery.ListServerNeighbors
      */
     ListServerNeighborsResult listServerNeighbors(ListServerNeighborsRequest listServerNeighborsRequest);
+
+    /**
+     * <p>
+     * Takes a list of configurationId as input and starts an asynchronous deletion task to remove the
+     * configurationItems. Returns a unique deletion task identifier.
+     * </p>
+     * 
+     * @param startBatchDeleteConfigurationTaskRequest
+     * @return Result of the StartBatchDeleteConfigurationTask operation returned by the service.
+     * @throws LimitExceededException
+     *         The limit of 200 configuration IDs per request has been exceeded.
+     * @throws AuthorizationErrorException
+     *         The user does not have permission to perform the action. Check the IAM policy associated with this user.
+     * @throws ServerInternalErrorException
+     *         The server experienced an internal error. Try again.
+     * @throws HomeRegionNotSetException
+     *         The home Region is not set. Set the home Region to continue.
+     * @throws OperationNotPermittedException
+     *         This operation is not permitted.
+     * @throws InvalidParameterValueException
+     *         The value of one or more parameters are either invalid or out of range. Verify the parameter values and
+     *         try again.
+     * @sample AWSApplicationDiscovery.StartBatchDeleteConfigurationTask
+     */
+    StartBatchDeleteConfigurationTaskResult startBatchDeleteConfigurationTask(StartBatchDeleteConfigurationTaskRequest startBatchDeleteConfigurationTaskRequest);
 
     /**
      * <p>

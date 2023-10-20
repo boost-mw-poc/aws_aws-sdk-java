@@ -49,11 +49,8 @@ public class ContactFlowModule implements Serializable, Cloneable, StructuredPoj
     /**
      * <p>
      * The JSON string that represents the content of the flow. For an example, see <a
-     * href="https://docs.aws.amazon.com/connect/latest/APIReference/flow-language-example.html">Example contact flow in
-     * Amazon Connect Flow language</a>.
-     * </p>
-     * <p>
-     * Length Constraints: Minimum length of 1. Maximum length of 256000.
+     * href="https://docs.aws.amazon.com/connect/latest/APIReference/flow-language-example.html">Example flow in Amazon
+     * Connect Flow language</a>.
      * </p>
      */
     private String content;
@@ -206,19 +203,14 @@ public class ContactFlowModule implements Serializable, Cloneable, StructuredPoj
     /**
      * <p>
      * The JSON string that represents the content of the flow. For an example, see <a
-     * href="https://docs.aws.amazon.com/connect/latest/APIReference/flow-language-example.html">Example contact flow in
-     * Amazon Connect Flow language</a>.
-     * </p>
-     * <p>
-     * Length Constraints: Minimum length of 1. Maximum length of 256000.
+     * href="https://docs.aws.amazon.com/connect/latest/APIReference/flow-language-example.html">Example flow in Amazon
+     * Connect Flow language</a>.
      * </p>
      * 
      * @param content
      *        The JSON string that represents the content of the flow. For an example, see <a
-     *        href="https://docs.aws.amazon.com/connect/latest/APIReference/flow-language-example.html">Example contact
-     *        flow in Amazon Connect Flow language</a>. </p>
-     *        <p>
-     *        Length Constraints: Minimum length of 1. Maximum length of 256000.
+     *        href="https://docs.aws.amazon.com/connect/latest/APIReference/flow-language-example.html">Example flow in
+     *        Amazon Connect Flow language</a>.
      */
 
     public void setContent(String content) {
@@ -228,18 +220,13 @@ public class ContactFlowModule implements Serializable, Cloneable, StructuredPoj
     /**
      * <p>
      * The JSON string that represents the content of the flow. For an example, see <a
-     * href="https://docs.aws.amazon.com/connect/latest/APIReference/flow-language-example.html">Example contact flow in
-     * Amazon Connect Flow language</a>.
-     * </p>
-     * <p>
-     * Length Constraints: Minimum length of 1. Maximum length of 256000.
+     * href="https://docs.aws.amazon.com/connect/latest/APIReference/flow-language-example.html">Example flow in Amazon
+     * Connect Flow language</a>.
      * </p>
      * 
      * @return The JSON string that represents the content of the flow. For an example, see <a
-     *         href="https://docs.aws.amazon.com/connect/latest/APIReference/flow-language-example.html">Example contact
-     *         flow in Amazon Connect Flow language</a>. </p>
-     *         <p>
-     *         Length Constraints: Minimum length of 1. Maximum length of 256000.
+     *         href="https://docs.aws.amazon.com/connect/latest/APIReference/flow-language-example.html">Example flow in
+     *         Amazon Connect Flow language</a>.
      */
 
     public String getContent() {
@@ -249,19 +236,14 @@ public class ContactFlowModule implements Serializable, Cloneable, StructuredPoj
     /**
      * <p>
      * The JSON string that represents the content of the flow. For an example, see <a
-     * href="https://docs.aws.amazon.com/connect/latest/APIReference/flow-language-example.html">Example contact flow in
-     * Amazon Connect Flow language</a>.
-     * </p>
-     * <p>
-     * Length Constraints: Minimum length of 1. Maximum length of 256000.
+     * href="https://docs.aws.amazon.com/connect/latest/APIReference/flow-language-example.html">Example flow in Amazon
+     * Connect Flow language</a>.
      * </p>
      * 
      * @param content
      *        The JSON string that represents the content of the flow. For an example, see <a
-     *        href="https://docs.aws.amazon.com/connect/latest/APIReference/flow-language-example.html">Example contact
-     *        flow in Amazon Connect Flow language</a>. </p>
-     *        <p>
-     *        Length Constraints: Minimum length of 1. Maximum length of 256000.
+     *        href="https://docs.aws.amazon.com/connect/latest/APIReference/flow-language-example.html">Example flow in
+     *        Amazon Connect Flow language</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

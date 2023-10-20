@@ -42,8 +42,8 @@ public class UpdateContactFlowModuleContentRequest extends com.amazonaws.AmazonW
     /**
      * <p>
      * The JSON string that represents the content of the flow. For an example, see <a
-     * href="https://docs.aws.amazon.com/connect/latest/APIReference/flow-language-example.html">Example contact flow in
-     * Amazon Connect Flow language</a>.
+     * href="https://docs.aws.amazon.com/connect/latest/APIReference/flow-language-example.html">Example flow in Amazon
+     * Connect Flow language</a>.
      * </p>
      */
     private String content;
@@ -143,14 +143,14 @@ public class UpdateContactFlowModuleContentRequest extends com.amazonaws.AmazonW
     /**
      * <p>
      * The JSON string that represents the content of the flow. For an example, see <a
-     * href="https://docs.aws.amazon.com/connect/latest/APIReference/flow-language-example.html">Example contact flow in
-     * Amazon Connect Flow language</a>.
+     * href="https://docs.aws.amazon.com/connect/latest/APIReference/flow-language-example.html">Example flow in Amazon
+     * Connect Flow language</a>.
      * </p>
      * 
      * @param content
      *        The JSON string that represents the content of the flow. For an example, see <a
-     *        href="https://docs.aws.amazon.com/connect/latest/APIReference/flow-language-example.html">Example contact
-     *        flow in Amazon Connect Flow language</a>.
+     *        href="https://docs.aws.amazon.com/connect/latest/APIReference/flow-language-example.html">Example flow in
+     *        Amazon Connect Flow language</a>.
      */
 
     public void setContent(String content) {
@@ -160,13 +160,13 @@ public class UpdateContactFlowModuleContentRequest extends com.amazonaws.AmazonW
     /**
      * <p>
      * The JSON string that represents the content of the flow. For an example, see <a
-     * href="https://docs.aws.amazon.com/connect/latest/APIReference/flow-language-example.html">Example contact flow in
-     * Amazon Connect Flow language</a>.
+     * href="https://docs.aws.amazon.com/connect/latest/APIReference/flow-language-example.html">Example flow in Amazon
+     * Connect Flow language</a>.
      * </p>
      * 
      * @return The JSON string that represents the content of the flow. For an example, see <a
-     *         href="https://docs.aws.amazon.com/connect/latest/APIReference/flow-language-example.html">Example contact
-     *         flow in Amazon Connect Flow language</a>.
+     *         href="https://docs.aws.amazon.com/connect/latest/APIReference/flow-language-example.html">Example flow in
+     *         Amazon Connect Flow language</a>.
      */
 
     public String getContent() {
@@ -176,14 +176,14 @@ public class UpdateContactFlowModuleContentRequest extends com.amazonaws.AmazonW
     /**
      * <p>
      * The JSON string that represents the content of the flow. For an example, see <a
-     * href="https://docs.aws.amazon.com/connect/latest/APIReference/flow-language-example.html">Example contact flow in
-     * Amazon Connect Flow language</a>.
+     * href="https://docs.aws.amazon.com/connect/latest/APIReference/flow-language-example.html">Example flow in Amazon
+     * Connect Flow language</a>.
      * </p>
      * 
      * @param content
      *        The JSON string that represents the content of the flow. For an example, see <a
-     *        href="https://docs.aws.amazon.com/connect/latest/APIReference/flow-language-example.html">Example contact
-     *        flow in Amazon Connect Flow language</a>.
+     *        href="https://docs.aws.amazon.com/connect/latest/APIReference/flow-language-example.html">Example flow in
+     *        Amazon Connect Flow language</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

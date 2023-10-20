@@ -42,14 +42,14 @@ public class ImageSetsMetadataSummary implements Serializable, Cloneable, Struct
     private Integer version;
     /**
      * <p>
-     * The time an image set is created in AWS HealthImaging. Sample creation date is provided in
-     * <code>1985-04-12T23:20:50.52Z</code> format.
+     * The time an image set is created. Sample creation date is provided in <code>1985-04-12T23:20:50.52Z</code>
+     * format.
      * </p>
      */
     private java.util.Date createdAt;
     /**
      * <p>
-     * The time when an image was last updated in AWS HealthImaging.
+     * The time an image set was last updated.
      * </p>
      */
     private java.util.Date updatedAt;
@@ -142,13 +142,13 @@ public class ImageSetsMetadataSummary implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The time an image set is created in AWS HealthImaging. Sample creation date is provided in
-     * <code>1985-04-12T23:20:50.52Z</code> format.
+     * The time an image set is created. Sample creation date is provided in <code>1985-04-12T23:20:50.52Z</code>
+     * format.
      * </p>
      * 
      * @param createdAt
-     *        The time an image set is created in AWS HealthImaging. Sample creation date is provided in
-     *        <code>1985-04-12T23:20:50.52Z</code> format.
+     *        The time an image set is created. Sample creation date is provided in <code>1985-04-12T23:20:50.52Z</code>
+     *        format.
      */
 
     public void setCreatedAt(java.util.Date createdAt) {
@@ -157,11 +157,11 @@ public class ImageSetsMetadataSummary implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The time an image set is created in AWS HealthImaging. Sample creation date is provided in
-     * <code>1985-04-12T23:20:50.52Z</code> format.
+     * The time an image set is created. Sample creation date is provided in <code>1985-04-12T23:20:50.52Z</code>
+     * format.
      * </p>
      * 
-     * @return The time an image set is created in AWS HealthImaging. Sample creation date is provided in
+     * @return The time an image set is created. Sample creation date is provided in
      *         <code>1985-04-12T23:20:50.52Z</code> format.
      */
 
@@ -171,13 +171,13 @@ public class ImageSetsMetadataSummary implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The time an image set is created in AWS HealthImaging. Sample creation date is provided in
-     * <code>1985-04-12T23:20:50.52Z</code> format.
+     * The time an image set is created. Sample creation date is provided in <code>1985-04-12T23:20:50.52Z</code>
+     * format.
      * </p>
      * 
      * @param createdAt
-     *        The time an image set is created in AWS HealthImaging. Sample creation date is provided in
-     *        <code>1985-04-12T23:20:50.52Z</code> format.
+     *        The time an image set is created. Sample creation date is provided in <code>1985-04-12T23:20:50.52Z</code>
+     *        format.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -188,11 +188,11 @@ public class ImageSetsMetadataSummary implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The time when an image was last updated in AWS HealthImaging.
+     * The time an image set was last updated.
      * </p>
      * 
      * @param updatedAt
-     *        The time when an image was last updated in AWS HealthImaging.
+     *        The time an image set was last updated.
      */
 
     public void setUpdatedAt(java.util.Date updatedAt) {
@@ -201,10 +201,10 @@ public class ImageSetsMetadataSummary implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The time when an image was last updated in AWS HealthImaging.
+     * The time an image set was last updated.
      * </p>
      * 
-     * @return The time when an image was last updated in AWS HealthImaging.
+     * @return The time an image set was last updated.
      */
 
     public java.util.Date getUpdatedAt() {
@@ -213,11 +213,11 @@ public class ImageSetsMetadataSummary implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The time when an image was last updated in AWS HealthImaging.
+     * The time an image set was last updated.
      * </p>
      * 
      * @param updatedAt
-     *        The time when an image was last updated in AWS HealthImaging.
+     *        The time an image set was last updated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

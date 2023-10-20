@@ -35,7 +35,7 @@ import java.util.concurrent.ExecutorService;
  * </p>
  * <p>
  * There are limits to the number of Amazon Connect resources that you can create. There are also limits to the number
- * of requests that you can make per second. For more information, see <a
+ * of requests that you can make per second. For more information, seeP98941055 <a
  * href="https://docs.aws.amazon.com/connect/latest/adminguide/amazon-connect-service-limits.html">Amazon Connect
  * Service Quotas</a> in the <i>Amazon Connect Administrator Guide</i>.
  * </p>
@@ -6176,6 +6176,39 @@ public class AmazonConnectAsyncClient extends AmazonConnectClient implements Ama
 
                 try {
                     result = executeUpdatePhoneNumber(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdatePhoneNumberMetadataResult> updatePhoneNumberMetadataAsync(UpdatePhoneNumberMetadataRequest request) {
+
+        return updatePhoneNumberMetadataAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdatePhoneNumberMetadataResult> updatePhoneNumberMetadataAsync(final UpdatePhoneNumberMetadataRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdatePhoneNumberMetadataRequest, UpdatePhoneNumberMetadataResult> asyncHandler) {
+        final UpdatePhoneNumberMetadataRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdatePhoneNumberMetadataResult>() {
+            @Override
+            public UpdatePhoneNumberMetadataResult call() throws Exception {
+                UpdatePhoneNumberMetadataResult result = null;
+
+                try {
+                    result = executeUpdatePhoneNumberMetadata(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

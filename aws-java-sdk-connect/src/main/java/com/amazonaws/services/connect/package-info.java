@@ -22,7 +22,7 @@
  * </p>
  * <p>
  * There are limits to the number of Amazon Connect resources that you can create. There are also limits to the number
- * of requests that you can make per second. For more information, see <a
+ * of requests that you can make per second. For more information, seeP98941055 <a
  * href="https://docs.aws.amazon.com/connect/latest/adminguide/amazon-connect-service-limits.html">Amazon Connect
  * Service Quotas</a> in the <i>Amazon Connect Administrator Guide</i>.
  * </p>

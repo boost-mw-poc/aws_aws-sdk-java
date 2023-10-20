@@ -71,7 +71,7 @@ import com.amazonaws.services.simplesystemsmanagement.model.transform.*;
  * <li>
  * <p>
  * For information about each of the capabilities that comprise Systems Manager, see <a href=
- * "https://docs.aws.amazon.com/systems-manager/latest/userguide/what-is-systems-manager.html#systems-manager-capabilities"
+ * "https://docs.aws.amazon.com/systems-manager-automation-runbooks/latest/userguide/systems-manager-capabilities.html"
  * >Systems Manager capabilities</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
  * </p>
  * </li>
@@ -529,6 +529,9 @@ public class AWSSimpleSystemsManagementClient extends AmazonWebServiceClient imp
                                     com.amazonaws.services.simplesystemsmanagement.model.transform.InvalidAutomationStatusUpdateExceptionUnmarshaller
                                             .getInstance()))
                     .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("OpsItemConflictException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.simplesystemsmanagement.model.transform.OpsItemConflictExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("DoesNotExistException").withExceptionUnmarshaller(
                                     com.amazonaws.services.simplesystemsmanagement.model.transform.DoesNotExistExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
@@ -888,6 +891,8 @@ public class AWSSimpleSystemsManagementClient extends AmazonWebServiceClient imp
      *         A specified parameter argument isn't valid. Verify the available arguments and try again.
      * @throws OpsItemRelatedItemAlreadyExistsException
      *         The Amazon Resource Name (ARN) is already associated with the OpsItem.
+     * @throws OpsItemConflictException
+     *         The specified OpsItem is in the process of being deleted.
      * @sample AWSSimpleSystemsManagement.AssociateOpsItemRelatedItem
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/AssociateOpsItemRelatedItem"
      *      target="_top">AWS API Documentation</a>
@@ -2203,6 +2208,100 @@ public class AWSSimpleSystemsManagementClient extends AmazonWebServiceClient imp
             HttpResponseHandler<AmazonWebServiceResponse<DeleteMaintenanceWindowResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new DeleteMaintenanceWindowResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Delete an OpsItem. You must have permission in Identity and Access Management (IAM) to delete an OpsItem.
+     * </p>
+     * <important>
+     * <p>
+     * Note the following important information about this operation.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Deleting an OpsItem is irreversible. You can't restore a deleted OpsItem.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * This operation uses an <i>eventual consistency model</i>, which means the system can take a few minutes to
+     * complete this operation. If you delete an OpsItem and immediately call, for example, <a>GetOpsItem</a>, the
+     * deleted OpsItem might still appear in the response.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * This operation is idempotent. The system doesn't throw an exception if you repeatedly call this operation for the
+     * same OpsItem. If the first call is successful, all additional calls return the same successful response as the
+     * first call.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * This operation doesn't support cross-account calls. A delegated administrator or management account can't delete
+     * OpsItems in other accounts, even if OpsCenter has been set up for cross-account administration. For more
+     * information about cross-account administration, see <a
+     * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/OpsCenter-setting-up-cross-account.html"
+     * >Setting up OpsCenter to centrally manage OpsItems across accounts</a> in the <i>Systems Manager User Guide</i>.
+     * </p>
+     * </li>
+     * </ul>
+     * </important>
+     * 
+     * @param deleteOpsItemRequest
+     * @return Result of the DeleteOpsItem operation returned by the service.
+     * @throws InternalServerErrorException
+     *         An error occurred on the server side.
+     * @throws OpsItemInvalidParameterException
+     *         A specified parameter argument isn't valid. Verify the available arguments and try again.
+     * @sample AWSSimpleSystemsManagement.DeleteOpsItem
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/DeleteOpsItem" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public DeleteOpsItemResult deleteOpsItem(DeleteOpsItemRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteOpsItem(request);
+    }
+
+    @SdkInternalApi
+    final DeleteOpsItemResult executeDeleteOpsItem(DeleteOpsItemRequest deleteOpsItemRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteOpsItemRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteOpsItemRequest> request = null;
+        Response<DeleteOpsItemResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteOpsItemRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(deleteOpsItemRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "SSM");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteOpsItem");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeleteOpsItemResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DeleteOpsItemResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -5154,6 +5253,8 @@ public class AWSSimpleSystemsManagementClient extends AmazonWebServiceClient imp
      *         The specified OpsItem ID doesn't exist. Verify the ID and try again.
      * @throws OpsItemInvalidParameterException
      *         A specified parameter argument isn't valid. Verify the available arguments and try again.
+     * @throws OpsItemConflictException
+     *         The specified OpsItem is in the process of being deleted.
      * @sample AWSSimpleSystemsManagement.DisassociateOpsItemRelatedItem
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/DisassociateOpsItemRelatedItem"
      *      target="_top">AWS API Documentation</a>
@@ -10667,6 +10768,8 @@ public class AWSSimpleSystemsManagementClient extends AmazonWebServiceClient imp
      *         You don't have permission to view OpsItems in the specified account. Verify that your account is
      *         configured either as a Systems Manager delegated administrator or that you are logged into the
      *         Organizations management account.
+     * @throws OpsItemConflictException
+     *         The specified OpsItem is in the process of being deleted.
      * @sample AWSSimpleSystemsManagement.UpdateOpsItem
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/UpdateOpsItem" target="_top">AWS API
      *      Documentation</a>

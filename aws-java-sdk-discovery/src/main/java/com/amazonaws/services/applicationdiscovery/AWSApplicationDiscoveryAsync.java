@@ -195,6 +195,35 @@ public interface AWSApplicationDiscoveryAsync extends AWSApplicationDiscovery {
 
     /**
      * <p>
+     * Deletes one or more agents or collectors as specified by ID. Deleting an agent or collector does not delete the
+     * previously discovered data. To delete the data collected, use <code>StartBatchDeleteConfigurationTask</code>.
+     * </p>
+     * 
+     * @param batchDeleteAgentsRequest
+     * @return A Java Future containing the result of the BatchDeleteAgents operation returned by the service.
+     * @sample AWSApplicationDiscoveryAsync.BatchDeleteAgents
+     */
+    java.util.concurrent.Future<BatchDeleteAgentsResult> batchDeleteAgentsAsync(BatchDeleteAgentsRequest batchDeleteAgentsRequest);
+
+    /**
+     * <p>
+     * Deletes one or more agents or collectors as specified by ID. Deleting an agent or collector does not delete the
+     * previously discovered data. To delete the data collected, use <code>StartBatchDeleteConfigurationTask</code>.
+     * </p>
+     * 
+     * @param batchDeleteAgentsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the BatchDeleteAgents operation returned by the service.
+     * @sample AWSApplicationDiscoveryAsyncHandler.BatchDeleteAgents
+     */
+    java.util.concurrent.Future<BatchDeleteAgentsResult> batchDeleteAgentsAsync(BatchDeleteAgentsRequest batchDeleteAgentsRequest,
+            com.amazonaws.handlers.AsyncHandler<BatchDeleteAgentsRequest, BatchDeleteAgentsResult> asyncHandler);
+
+    /**
+     * <p>
      * Deletes one or more import tasks, each identified by their import ID. Each import task has a number of records
      * that can identify servers or applications.
      * </p>
@@ -384,6 +413,37 @@ public interface AWSApplicationDiscoveryAsync extends AWSApplicationDiscovery {
      */
     java.util.concurrent.Future<DescribeAgentsResult> describeAgentsAsync(DescribeAgentsRequest describeAgentsRequest,
             com.amazonaws.handlers.AsyncHandler<DescribeAgentsRequest, DescribeAgentsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Takes a unique deletion task identifier as input and returns metadata about a configuration deletion task.
+     * </p>
+     * 
+     * @param describeBatchDeleteConfigurationTaskRequest
+     * @return A Java Future containing the result of the DescribeBatchDeleteConfigurationTask operation returned by the
+     *         service.
+     * @sample AWSApplicationDiscoveryAsync.DescribeBatchDeleteConfigurationTask
+     */
+    java.util.concurrent.Future<DescribeBatchDeleteConfigurationTaskResult> describeBatchDeleteConfigurationTaskAsync(
+            DescribeBatchDeleteConfigurationTaskRequest describeBatchDeleteConfigurationTaskRequest);
+
+    /**
+     * <p>
+     * Takes a unique deletion task identifier as input and returns metadata about a configuration deletion task.
+     * </p>
+     * 
+     * @param describeBatchDeleteConfigurationTaskRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeBatchDeleteConfigurationTask operation returned by the
+     *         service.
+     * @sample AWSApplicationDiscoveryAsyncHandler.DescribeBatchDeleteConfigurationTask
+     */
+    java.util.concurrent.Future<DescribeBatchDeleteConfigurationTaskResult> describeBatchDeleteConfigurationTaskAsync(
+            DescribeBatchDeleteConfigurationTaskRequest describeBatchDeleteConfigurationTaskRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeBatchDeleteConfigurationTaskRequest, DescribeBatchDeleteConfigurationTaskResult> asyncHandler);
 
     /**
      * <p>
@@ -849,6 +909,39 @@ public interface AWSApplicationDiscoveryAsync extends AWSApplicationDiscovery {
      */
     java.util.concurrent.Future<ListServerNeighborsResult> listServerNeighborsAsync(ListServerNeighborsRequest listServerNeighborsRequest,
             com.amazonaws.handlers.AsyncHandler<ListServerNeighborsRequest, ListServerNeighborsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Takes a list of configurationId as input and starts an asynchronous deletion task to remove the
+     * configurationItems. Returns a unique deletion task identifier.
+     * </p>
+     * 
+     * @param startBatchDeleteConfigurationTaskRequest
+     * @return A Java Future containing the result of the StartBatchDeleteConfigurationTask operation returned by the
+     *         service.
+     * @sample AWSApplicationDiscoveryAsync.StartBatchDeleteConfigurationTask
+     */
+    java.util.concurrent.Future<StartBatchDeleteConfigurationTaskResult> startBatchDeleteConfigurationTaskAsync(
+            StartBatchDeleteConfigurationTaskRequest startBatchDeleteConfigurationTaskRequest);
+
+    /**
+     * <p>
+     * Takes a list of configurationId as input and starts an asynchronous deletion task to remove the
+     * configurationItems. Returns a unique deletion task identifier.
+     * </p>
+     * 
+     * @param startBatchDeleteConfigurationTaskRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the StartBatchDeleteConfigurationTask operation returned by the
+     *         service.
+     * @sample AWSApplicationDiscoveryAsyncHandler.StartBatchDeleteConfigurationTask
+     */
+    java.util.concurrent.Future<StartBatchDeleteConfigurationTaskResult> startBatchDeleteConfigurationTaskAsync(
+            StartBatchDeleteConfigurationTaskRequest startBatchDeleteConfigurationTaskRequest,
+            com.amazonaws.handlers.AsyncHandler<StartBatchDeleteConfigurationTaskRequest, StartBatchDeleteConfigurationTaskResult> asyncHandler);
 
     /**
      * <p>

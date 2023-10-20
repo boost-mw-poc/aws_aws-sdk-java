@@ -48,8 +48,7 @@ public class DatastoreProperties implements Serializable, Cloneable, StructuredP
     private String datastoreStatus;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) assigned to the AWS Key Management Service (AWS KMS) key for accessing encrypted
-     * data.
+     * The Amazon Resource Name (ARN) assigned to the Key Management Service (KMS) key for accessing encrypted data.
      * </p>
      */
     private String kmsKeyArn;
@@ -213,13 +212,12 @@ public class DatastoreProperties implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) assigned to the AWS Key Management Service (AWS KMS) key for accessing encrypted
-     * data.
+     * The Amazon Resource Name (ARN) assigned to the Key Management Service (KMS) key for accessing encrypted data.
      * </p>
      * 
      * @param kmsKeyArn
-     *        The Amazon Resource Name (ARN) assigned to the AWS Key Management Service (AWS KMS) key for accessing
-     *        encrypted data.
+     *        The Amazon Resource Name (ARN) assigned to the Key Management Service (KMS) key for accessing encrypted
+     *        data.
      */
 
     public void setKmsKeyArn(String kmsKeyArn) {
@@ -228,12 +226,11 @@ public class DatastoreProperties implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) assigned to the AWS Key Management Service (AWS KMS) key for accessing encrypted
-     * data.
+     * The Amazon Resource Name (ARN) assigned to the Key Management Service (KMS) key for accessing encrypted data.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) assigned to the AWS Key Management Service (AWS KMS) key for accessing
-     *         encrypted data.
+     * @return The Amazon Resource Name (ARN) assigned to the Key Management Service (KMS) key for accessing encrypted
+     *         data.
      */
 
     public String getKmsKeyArn() {
@@ -242,13 +239,12 @@ public class DatastoreProperties implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) assigned to the AWS Key Management Service (AWS KMS) key for accessing encrypted
-     * data.
+     * The Amazon Resource Name (ARN) assigned to the Key Management Service (KMS) key for accessing encrypted data.
      * </p>
      * 
      * @param kmsKeyArn
-     *        The Amazon Resource Name (ARN) assigned to the AWS Key Management Service (AWS KMS) key for accessing
-     *        encrypted data.
+     *        The Amazon Resource Name (ARN) assigned to the Key Management Service (KMS) key for accessing encrypted
+     *        data.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

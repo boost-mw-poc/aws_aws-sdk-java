@@ -220,14 +220,17 @@ public class AWSApplicationDiscoveryClient extends AmazonWebServiceClient implem
                             new JsonErrorShapeMetadata().withErrorCode("ResourceInUseException").withExceptionUnmarshaller(
                                     com.amazonaws.services.applicationdiscovery.model.transform.ResourceInUseExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("ResourceNotFoundException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.applicationdiscovery.model.transform.ResourceNotFoundExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ConflictErrorException").withExceptionUnmarshaller(
                                     com.amazonaws.services.applicationdiscovery.model.transform.ConflictErrorExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("OperationNotPermittedException").withExceptionUnmarshaller(
                                     com.amazonaws.services.applicationdiscovery.model.transform.OperationNotPermittedExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("LimitExceededException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.applicationdiscovery.model.transform.LimitExceededExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("ResourceNotFoundException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.applicationdiscovery.model.transform.ResourceNotFoundExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("HomeRegionNotSetException").withExceptionUnmarshaller(
                                     com.amazonaws.services.applicationdiscovery.model.transform.HomeRegionNotSetExceptionUnmarshaller.getInstance()))
@@ -495,6 +498,69 @@ public class AWSApplicationDiscoveryClient extends AmazonWebServiceClient implem
             HttpResponseHandler<AmazonWebServiceResponse<AssociateConfigurationItemsToApplicationResult>> responseHandler = protocolFactory
                     .createResponseHandler(new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                             new AssociateConfigurationItemsToApplicationResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Deletes one or more agents or collectors as specified by ID. Deleting an agent or collector does not delete the
+     * previously discovered data. To delete the data collected, use <code>StartBatchDeleteConfigurationTask</code>.
+     * </p>
+     * 
+     * @param batchDeleteAgentsRequest
+     * @return Result of the BatchDeleteAgents operation returned by the service.
+     * @throws AuthorizationErrorException
+     *         The user does not have permission to perform the action. Check the IAM policy associated with this user.
+     * @throws InvalidParameterException
+     *         One or more parameters are not valid. Verify the parameters and try again.
+     * @throws InvalidParameterValueException
+     *         The value of one or more parameters are either invalid or out of range. Verify the parameter values and
+     *         try again.
+     * @throws ServerInternalErrorException
+     *         The server experienced an internal error. Try again.
+     * @sample AWSApplicationDiscovery.BatchDeleteAgents
+     */
+    @Override
+    public BatchDeleteAgentsResult batchDeleteAgents(BatchDeleteAgentsRequest request) {
+        request = beforeClientExecution(request);
+        return executeBatchDeleteAgents(request);
+    }
+
+    @SdkInternalApi
+    final BatchDeleteAgentsResult executeBatchDeleteAgents(BatchDeleteAgentsRequest batchDeleteAgentsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(batchDeleteAgentsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<BatchDeleteAgentsRequest> request = null;
+        Response<BatchDeleteAgentsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new BatchDeleteAgentsRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(batchDeleteAgentsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Application Discovery Service");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "BatchDeleteAgents");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<BatchDeleteAgentsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new BatchDeleteAgentsResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -899,6 +965,71 @@ public class AWSApplicationDiscoveryClient extends AmazonWebServiceClient implem
 
             HttpResponseHandler<AmazonWebServiceResponse<DescribeAgentsResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DescribeAgentsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Takes a unique deletion task identifier as input and returns metadata about a configuration deletion task.
+     * </p>
+     * 
+     * @param describeBatchDeleteConfigurationTaskRequest
+     * @return Result of the DescribeBatchDeleteConfigurationTask operation returned by the service.
+     * @throws AuthorizationErrorException
+     *         The user does not have permission to perform the action. Check the IAM policy associated with this user.
+     * @throws InvalidParameterValueException
+     *         The value of one or more parameters are either invalid or out of range. Verify the parameter values and
+     *         try again.
+     * @throws ServerInternalErrorException
+     *         The server experienced an internal error. Try again.
+     * @throws HomeRegionNotSetException
+     *         The home Region is not set. Set the home Region to continue.
+     * @sample AWSApplicationDiscovery.DescribeBatchDeleteConfigurationTask
+     */
+    @Override
+    public DescribeBatchDeleteConfigurationTaskResult describeBatchDeleteConfigurationTask(DescribeBatchDeleteConfigurationTaskRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribeBatchDeleteConfigurationTask(request);
+    }
+
+    @SdkInternalApi
+    final DescribeBatchDeleteConfigurationTaskResult executeDescribeBatchDeleteConfigurationTask(
+            DescribeBatchDeleteConfigurationTaskRequest describeBatchDeleteConfigurationTaskRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describeBatchDeleteConfigurationTaskRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeBatchDeleteConfigurationTaskRequest> request = null;
+        Response<DescribeBatchDeleteConfigurationTaskResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeBatchDeleteConfigurationTaskRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(describeBatchDeleteConfigurationTaskRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Application Discovery Service");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeBatchDeleteConfigurationTask");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DescribeBatchDeleteConfigurationTaskResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new DescribeBatchDeleteConfigurationTaskResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -1703,6 +1834,76 @@ public class AWSApplicationDiscoveryClient extends AmazonWebServiceClient implem
 
             HttpResponseHandler<AmazonWebServiceResponse<ListServerNeighborsResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListServerNeighborsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Takes a list of configurationId as input and starts an asynchronous deletion task to remove the
+     * configurationItems. Returns a unique deletion task identifier.
+     * </p>
+     * 
+     * @param startBatchDeleteConfigurationTaskRequest
+     * @return Result of the StartBatchDeleteConfigurationTask operation returned by the service.
+     * @throws LimitExceededException
+     *         The limit of 200 configuration IDs per request has been exceeded.
+     * @throws AuthorizationErrorException
+     *         The user does not have permission to perform the action. Check the IAM policy associated with this user.
+     * @throws ServerInternalErrorException
+     *         The server experienced an internal error. Try again.
+     * @throws HomeRegionNotSetException
+     *         The home Region is not set. Set the home Region to continue.
+     * @throws OperationNotPermittedException
+     *         This operation is not permitted.
+     * @throws InvalidParameterValueException
+     *         The value of one or more parameters are either invalid or out of range. Verify the parameter values and
+     *         try again.
+     * @sample AWSApplicationDiscovery.StartBatchDeleteConfigurationTask
+     */
+    @Override
+    public StartBatchDeleteConfigurationTaskResult startBatchDeleteConfigurationTask(StartBatchDeleteConfigurationTaskRequest request) {
+        request = beforeClientExecution(request);
+        return executeStartBatchDeleteConfigurationTask(request);
+    }
+
+    @SdkInternalApi
+    final StartBatchDeleteConfigurationTaskResult executeStartBatchDeleteConfigurationTask(
+            StartBatchDeleteConfigurationTaskRequest startBatchDeleteConfigurationTaskRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(startBatchDeleteConfigurationTaskRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<StartBatchDeleteConfigurationTaskRequest> request = null;
+        Response<StartBatchDeleteConfigurationTaskResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new StartBatchDeleteConfigurationTaskRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(startBatchDeleteConfigurationTaskRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Application Discovery Service");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "StartBatchDeleteConfigurationTask");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<StartBatchDeleteConfigurationTaskResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new StartBatchDeleteConfigurationTaskResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

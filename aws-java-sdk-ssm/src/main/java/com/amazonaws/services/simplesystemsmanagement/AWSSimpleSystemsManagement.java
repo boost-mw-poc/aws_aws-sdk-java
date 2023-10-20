@@ -46,7 +46,7 @@ import com.amazonaws.services.simplesystemsmanagement.waiters.AWSSimpleSystemsMa
  * <li>
  * <p>
  * For information about each of the capabilities that comprise Systems Manager, see <a href=
- * "https://docs.aws.amazon.com/systems-manager/latest/userguide/what-is-systems-manager.html#systems-manager-capabilities"
+ * "https://docs.aws.amazon.com/systems-manager-automation-runbooks/latest/userguide/systems-manager-capabilities.html"
  * >Systems Manager capabilities</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
  * </p>
  * </li>
@@ -232,6 +232,8 @@ public interface AWSSimpleSystemsManagement {
      *         A specified parameter argument isn't valid. Verify the available arguments and try again.
      * @throws OpsItemRelatedItemAlreadyExistsException
      *         The Amazon Resource Name (ARN) is already associated with the OpsItem.
+     * @throws OpsItemConflictException
+     *         The specified OpsItem is in the process of being deleted.
      * @sample AWSSimpleSystemsManagement.AssociateOpsItemRelatedItem
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/AssociateOpsItemRelatedItem"
      *      target="_top">AWS API Documentation</a>
@@ -831,6 +833,58 @@ public interface AWSSimpleSystemsManagement {
      *      API Documentation</a>
      */
     DeleteMaintenanceWindowResult deleteMaintenanceWindow(DeleteMaintenanceWindowRequest deleteMaintenanceWindowRequest);
+
+    /**
+     * <p>
+     * Delete an OpsItem. You must have permission in Identity and Access Management (IAM) to delete an OpsItem.
+     * </p>
+     * <important>
+     * <p>
+     * Note the following important information about this operation.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Deleting an OpsItem is irreversible. You can't restore a deleted OpsItem.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * This operation uses an <i>eventual consistency model</i>, which means the system can take a few minutes to
+     * complete this operation. If you delete an OpsItem and immediately call, for example, <a>GetOpsItem</a>, the
+     * deleted OpsItem might still appear in the response.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * This operation is idempotent. The system doesn't throw an exception if you repeatedly call this operation for the
+     * same OpsItem. If the first call is successful, all additional calls return the same successful response as the
+     * first call.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * This operation doesn't support cross-account calls. A delegated administrator or management account can't delete
+     * OpsItems in other accounts, even if OpsCenter has been set up for cross-account administration. For more
+     * information about cross-account administration, see <a
+     * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/OpsCenter-setting-up-cross-account.html"
+     * >Setting up OpsCenter to centrally manage OpsItems across accounts</a> in the <i>Systems Manager User Guide</i>.
+     * </p>
+     * </li>
+     * </ul>
+     * </important>
+     * 
+     * @param deleteOpsItemRequest
+     * @return Result of the DeleteOpsItem operation returned by the service.
+     * @throws InternalServerErrorException
+     *         An error occurred on the server side.
+     * @throws OpsItemInvalidParameterException
+     *         A specified parameter argument isn't valid. Verify the available arguments and try again.
+     * @sample AWSSimpleSystemsManagement.DeleteOpsItem
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/DeleteOpsItem" target="_top">AWS API
+     *      Documentation</a>
+     */
+    DeleteOpsItemResult deleteOpsItem(DeleteOpsItemRequest deleteOpsItemRequest);
 
     /**
      * <p>
@@ -1947,6 +2001,8 @@ public interface AWSSimpleSystemsManagement {
      *         The specified OpsItem ID doesn't exist. Verify the ID and try again.
      * @throws OpsItemInvalidParameterException
      *         A specified parameter argument isn't valid. Verify the available arguments and try again.
+     * @throws OpsItemConflictException
+     *         The specified OpsItem is in the process of being deleted.
      * @sample AWSSimpleSystemsManagement.DisassociateOpsItemRelatedItem
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/DisassociateOpsItemRelatedItem"
      *      target="_top">AWS API Documentation</a>
@@ -4330,6 +4386,8 @@ public interface AWSSimpleSystemsManagement {
      *         You don't have permission to view OpsItems in the specified account. Verify that your account is
      *         configured either as a Systems Manager delegated administrator or that you are logged into the
      *         Organizations management account.
+     * @throws OpsItemConflictException
+     *         The specified OpsItem is in the process of being deleted.
      * @sample AWSSimpleSystemsManagement.UpdateOpsItem
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/UpdateOpsItem" target="_top">AWS API
      *      Documentation</a>

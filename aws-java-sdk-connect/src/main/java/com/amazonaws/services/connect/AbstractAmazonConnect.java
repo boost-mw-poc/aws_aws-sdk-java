@@ -948,6 +948,11 @@ public class AbstractAmazonConnect implements AmazonConnect {
     }
 
     @Override
+    public UpdatePhoneNumberMetadataResult updatePhoneNumberMetadata(UpdatePhoneNumberMetadataRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public UpdatePromptResult updatePrompt(UpdatePromptRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

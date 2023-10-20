@@ -19,7 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The distribution of allowing signing in to the instance and its replica(s).
+ * The distribution that determines which Amazon Web Services Regions should be used to sign in agents in to both the
+ * instance and its replica(s).
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/SignInConfig" target="_top">AWS API

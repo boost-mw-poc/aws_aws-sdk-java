@@ -44,7 +44,7 @@ import com.amazonaws.services.simplesystemsmanagement.model.*;
  * <li>
  * <p>
  * For information about each of the capabilities that comprise Systems Manager, see <a href=
- * "https://docs.aws.amazon.com/systems-manager/latest/userguide/what-is-systems-manager.html#systems-manager-capabilities"
+ * "https://docs.aws.amazon.com/systems-manager-automation-runbooks/latest/userguide/systems-manager-capabilities.html"
  * >Systems Manager capabilities</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
  * </p>
  * </li>
@@ -957,6 +957,107 @@ public interface AWSSimpleSystemsManagementAsync extends AWSSimpleSystemsManagem
      */
     java.util.concurrent.Future<DeleteMaintenanceWindowResult> deleteMaintenanceWindowAsync(DeleteMaintenanceWindowRequest deleteMaintenanceWindowRequest,
             com.amazonaws.handlers.AsyncHandler<DeleteMaintenanceWindowRequest, DeleteMaintenanceWindowResult> asyncHandler);
+
+    /**
+     * <p>
+     * Delete an OpsItem. You must have permission in Identity and Access Management (IAM) to delete an OpsItem.
+     * </p>
+     * <important>
+     * <p>
+     * Note the following important information about this operation.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Deleting an OpsItem is irreversible. You can't restore a deleted OpsItem.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * This operation uses an <i>eventual consistency model</i>, which means the system can take a few minutes to
+     * complete this operation. If you delete an OpsItem and immediately call, for example, <a>GetOpsItem</a>, the
+     * deleted OpsItem might still appear in the response.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * This operation is idempotent. The system doesn't throw an exception if you repeatedly call this operation for the
+     * same OpsItem. If the first call is successful, all additional calls return the same successful response as the
+     * first call.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * This operation doesn't support cross-account calls. A delegated administrator or management account can't delete
+     * OpsItems in other accounts, even if OpsCenter has been set up for cross-account administration. For more
+     * information about cross-account administration, see <a
+     * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/OpsCenter-setting-up-cross-account.html"
+     * >Setting up OpsCenter to centrally manage OpsItems across accounts</a> in the <i>Systems Manager User Guide</i>.
+     * </p>
+     * </li>
+     * </ul>
+     * </important>
+     * 
+     * @param deleteOpsItemRequest
+     * @return A Java Future containing the result of the DeleteOpsItem operation returned by the service.
+     * @sample AWSSimpleSystemsManagementAsync.DeleteOpsItem
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/DeleteOpsItem" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteOpsItemResult> deleteOpsItemAsync(DeleteOpsItemRequest deleteOpsItemRequest);
+
+    /**
+     * <p>
+     * Delete an OpsItem. You must have permission in Identity and Access Management (IAM) to delete an OpsItem.
+     * </p>
+     * <important>
+     * <p>
+     * Note the following important information about this operation.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Deleting an OpsItem is irreversible. You can't restore a deleted OpsItem.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * This operation uses an <i>eventual consistency model</i>, which means the system can take a few minutes to
+     * complete this operation. If you delete an OpsItem and immediately call, for example, <a>GetOpsItem</a>, the
+     * deleted OpsItem might still appear in the response.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * This operation is idempotent. The system doesn't throw an exception if you repeatedly call this operation for the
+     * same OpsItem. If the first call is successful, all additional calls return the same successful response as the
+     * first call.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * This operation doesn't support cross-account calls. A delegated administrator or management account can't delete
+     * OpsItems in other accounts, even if OpsCenter has been set up for cross-account administration. For more
+     * information about cross-account administration, see <a
+     * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/OpsCenter-setting-up-cross-account.html"
+     * >Setting up OpsCenter to centrally manage OpsItems across accounts</a> in the <i>Systems Manager User Guide</i>.
+     * </p>
+     * </li>
+     * </ul>
+     * </important>
+     * 
+     * @param deleteOpsItemRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteOpsItem operation returned by the service.
+     * @sample AWSSimpleSystemsManagementAsyncHandler.DeleteOpsItem
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/DeleteOpsItem" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteOpsItemResult> deleteOpsItemAsync(DeleteOpsItemRequest deleteOpsItemRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteOpsItemRequest, DeleteOpsItemResult> asyncHandler);
 
     /**
      * <p>

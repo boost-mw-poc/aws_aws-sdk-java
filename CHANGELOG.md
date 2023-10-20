@@ -1,3 +1,28 @@
+# __1.12.571__ __2023-10-20__
+## __AWS Application Discovery Service__
+  - ### Features
+    - This release introduces three new APIs: StartBatchDeleteConfigurationTask, DescribeBatchDeleteConfigurationTask, and BatchDeleteAgents.
+
+## __AWS Health Imaging__
+  - ### Features
+    - Updates on documentation links
+
+## __Amazon AppConfig__
+  - ### Features
+    - Update KmsKeyIdentifier constraints to support AWS KMS multi-Region keys.
+
+## __Amazon AppIntegrations Service__
+  - ### Features
+    - Updated ScheduleConfig to be an optional input to CreateDataIntegration to support event driven downloading of files from sources such as Amazon s3 using Amazon Connect AppIntegrations.
+
+## __Amazon Connect Service__
+  - ### Features
+    - This release adds support for updating phone number metadata, such as phone number description.
+
+## __Amazon Simple Systems Manager (SSM)__
+  - ### Features
+    - This release introduces a new API: DeleteOpsItem. This allows deletion of an OpsItem.
+
 # __1.12.570__ __2023-10-19__
 ## __AWS Secrets Manager__
   - ### Features

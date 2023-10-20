@@ -57,7 +57,7 @@
     "defaultEndpoint" : "medical-imaging.us-east-1.amazonaws.com",
     "defaultEndpointWithoutHttpProtocol" : "medical-imaging.us-east-1.amazonaws.com",
     "defaultRegion" : null,
-    "documentation" : "<p>This is the <i>AWS HealthImaging API Reference</i>. AWS HealthImaging is an AWS service for storing, accessing, and analyzing medical images. For an introduction to the service, see the <a href=\"https://docs.aws.amazon.com/medical-imaging/latest/devguide\"> <i>AWS HealthImaging Developer Guide</i> </a>.</p> <note> <p>We recommend using one of the AWS Software Development Kits (SDKs) for your programming language, as they take care of request authentication, serialization, and connection management. For more information, see <a href=\"http://aws.amazon.com/developer/tools\">Tools to build on AWS</a>.</p> <p>For information about using AWS HealthImaging API actions in one of the language-specific AWS SDKs, refer to the <i>See Also</i> link at the end of each section that describes an API action or data type.</p> </note> <p>The following sections list AWS HealthImaging API actions categorized according to functionality. Links are provided to actions within this Reference, along with links back to corresponding sections in the <i>AWS HealthImaging Developer Guide</i> so you can view console procedures and CLI/SDK code examples.</p> <p class=\"title\"> <b>Data store actions</b> </p> <ul> <li> <p> <a href=\"https://docs.aws.amazon.com/medical-imaging/latest/APIReference/API_CreateDatastore.html\">CreateDatastore</a> – See <a href=\"https://docs.aws.amazon.com/medical-imaging/latest/devguide/create-data-store.html\">Creating a data store</a>.</p> </li> <li> <p> <a href=\"https://docs.aws.amazon.com/medical-imaging/latest/APIReference/API_GetDatastore.html\">GetDatastore</a> – See <a href=\"https://docs.aws.amazon.com/medical-imaging/latest/devguide/get-data-store.html\">Getting data store properties</a>.</p> </li> <li> <p> <a href=\"https://docs.aws.amazon.com/medical-imaging/latest/APIReference/API_ListDatastores.html\">ListDatastores</a> – See <a href=\"https://docs.aws.amazon.com/medical-imaging/latest/devguide/list-data-stores.html\">Listing data stores</a>.</p> </li> <li> <p> <a href=\"https://docs.aws.amazon.com/medical-imaging/latest/APIReference/API_DeleteDatastore.html\">DeleteDatastore</a> – See <a href=\"https://docs.aws.amazon.com/medical-imaging/latest/devguide/delete-data-store.html\">Deleting a data store</a>.</p> </li> </ul> <p class=\"title\"> <b>Import job actions</b> </p> <ul> <li> <p> <a href=\"https://docs.aws.amazon.com/medical-imaging/latest/APIReference/API_StartDICOMImportJob.html\">StartDICOMImportJob</a> – See <a href=\"https://docs.aws.amazon.com/medical-imaging/latest/devguide/start-dicom-import-job.html\">Starting an import job</a>.</p> </li> <li> <p> <a href=\"https://docs.aws.amazon.com/medical-imaging/latest/APIReference/API_GetDICOMImportJob.html\">GetDICOMImportJob</a> – See <a href=\"https://docs.aws.amazon.com/medical-imaging/latest/devguide/get-dicom-import-job.html\">Getting import job properties</a>.</p> </li> <li> <p> <a href=\"https://docs.aws.amazon.com/medical-imaging/latest/APIReference/API_ListDICOMImportJobs.html\">ListDICOMImportJobs</a> – See <a href=\"https://docs.aws.amazon.com/medical-imaging/latest/devguide/list-dicom-import-jobs.html\">Listing import jobs</a>.</p> </li> </ul> <p class=\"title\"> <b>Image set access actions</b> </p> <ul> <li> <p> <a href=\"https://docs.aws.amazon.com/medical-imaging/latest/APIReference/API_SearchImageSets.html\">SearchImageSets</a> – See <a href=\"https://docs.aws.amazon.com/medical-imaging/latest/devguide/search-image-sets.html\">Searching image sets</a>.</p> </li> <li> <p> <a href=\"https://docs.aws.amazon.com/medical-imaging/latest/APIReference/API_GetImageSet.html\">GetImageSet</a> – See <a href=\"https://docs.aws.amazon.com/medical-imaging/latest/devguide/get-image-set-properties.html\">Getting image set properties</a>.</p> </li> <li> <p> <a href=\"https://docs.aws.amazon.com/medical-imaging/latest/APIReference/API_GetImageSetMetadata.html\">GetImageSetMetadata</a> – See <a href=\"https://docs.aws.amazon.com/medical-imaging/latest/devguide/get-image-set-metadata.html\">Getting image set metadata</a>.</p> </li> <li> <p> <a href=\"https://docs.aws.amazon.com/medical-imaging/latest/APIReference/API_GetImageFrame.html\">GetImageFrame</a> – See <a href=\"https://docs.aws.amazon.com/medical-imaging/latest/devguide/get-image-frame.html\">Getting image set pixel data</a>.</p> </li> </ul> <p class=\"title\"> <b>Image set modification actions</b> </p> <ul> <li> <p> <a href=\"https://docs.aws.amazon.com/medical-imaging/latest/APIReference/API_ListImageSetVersions.html\">ListImageSetVersions</a> – See <a href=\"https://docs.aws.amazon.com/medical-imaging/latest/devguide/list-image-set-versions.html\">Listing image set versions</a>.</p> </li> <li> <p> <a href=\"https://docs.aws.amazon.com/medical-imaging/latest/APIReference/API_UpdateImageSetMetadata.html\">UpdateImageSetMetadata</a> – See <a href=\"https://docs.aws.amazon.com/medical-imaging/latest/devguide/update-image-set-metadata.html\">Updating image set metadata</a>.</p> </li> <li> <p> <a href=\"https://docs.aws.amazon.com/medical-imaging/latest/APIReference/API_CopyImageSet.html\">CopyImageSet</a> – See <a href=\"https://docs.aws.amazon.com/medical-imaging/latest/devguide/copy-image-set.html\">Copying an image set</a>.</p> </li> <li> <p> <a href=\"https://docs.aws.amazon.com/medical-imaging/latest/APIReference/API_DeleteImageSet.html\">DeleteImageSet</a> – See <a href=\"https://docs.aws.amazon.com/medical-imaging/latest/devguide/delete-image-set.html\">Deleting an image set</a>.</p> </li> </ul> <p class=\"title\"> <b>Tagging actions</b> </p> <ul> <li> <p> <a href=\"https://docs.aws.amazon.com/medical-imaging/latest/APIReference/API_TagResource.html\">TagResource</a> – See <a href=\"https://docs.aws.amazon.com/medical-imaging/latest/devguide/tag-list-untag-data-store.html\">Tagging a data store</a> and <a href=\"https://docs.aws.amazon.com/medical-imaging/latest/devguide/tag-list-untag-image-set.html\">Tagging an image set</a>.</p> </li> <li> <p> <a href=\"https://docs.aws.amazon.com/medical-imaging/latest/APIReference/API_ListTagsForResource.html\">ListTagsForResource</a> – See <a href=\"https://docs.aws.amazon.com/medical-imaging/latest/devguide/tag-list-untag-data-store.html\">Tagging a data store</a> and <a href=\"https://docs.aws.amazon.com/medical-imaging/latest/devguide/tag-list-untag-image-set.html\">Tagging an image set</a>.</p> </li> <li> <p> <a href=\"https://docs.aws.amazon.com/medical-imaging/latest/APIReference/API_UntagResource.html\">UntagResource</a> – See <a href=\"https://docs.aws.amazon.com/medical-imaging/latest/devguide/tag-list-untag-data-store.html\">Tagging a data store</a> and <a href=\"https://docs.aws.amazon.com/medical-imaging/latest/devguide/tag-list-untag-image-set.html\">Tagging an image set</a>.</p> </li> </ul>",
+    "documentation" : "<p>This is the <i>AWS HealthImaging API Reference</i>. AWS HealthImaging is a HIPAA-eligible service that helps health care providers and their medical imaging ISV partners store, transform, and apply machine learning to medical images. For an introduction to the service, see the <a href=\"https://docs.aws.amazon.com/healthimaging/latest/devguide/what-is.html\"> <i>AWS HealthImaging Developer Guide</i> </a>.</p> <note> <p>We recommend using one of the AWS Software Development Kits (SDKs) for your programming language, as they take care of request authentication, serialization, and connection management. For more information, see <a href=\"http://aws.amazon.com/developer/tools\">Tools to build on AWS</a>.</p> <p>For information about using HealthImaging API actions in one of the language-specific AWS SDKs, refer to the <i>See Also</i> link at the end of each section that describes an API action or data type.</p> </note> <p>The following sections list AWS HealthImaging API actions categorized according to functionality. Links are provided to actions within this Reference, along with links back to corresponding sections in the <i>AWS HealthImaging Developer Guide</i> where you can view console procedures and CLI/SDK code examples.</p> <p class=\"title\"> <b>Data store actions</b> </p> <ul> <li> <p> <a href=\"https://docs.aws.amazon.com/healthimaging/latest/APIReference/API_CreateDatastore.html\">CreateDatastore</a> – See <a href=\"https://docs.aws.amazon.com/healthimaging/latest/devguide/create-data-store.html\">Creating a data store</a>.</p> </li> <li> <p> <a href=\"https://docs.aws.amazon.com/healthimaging/latest/APIReference/API_GetDatastore.html\">GetDatastore</a> – See <a href=\"https://docs.aws.amazon.com/healthimaging/latest/devguide/get-data-store.html\">Getting data store properties</a>.</p> </li> <li> <p> <a href=\"https://docs.aws.amazon.com/healthimaging/latest/APIReference/API_ListDatastores.html\">ListDatastores</a> – See <a href=\"https://docs.aws.amazon.com/healthimaging/latest/devguide/list-data-stores.html\">Listing data stores</a>.</p> </li> <li> <p> <a href=\"https://docs.aws.amazon.com/healthimaging/latest/APIReference/API_DeleteDatastore.html\">DeleteDatastore</a> – See <a href=\"https://docs.aws.amazon.com/healthimaging/latest/devguide/delete-data-store.html\">Deleting a data store</a>.</p> </li> </ul> <p class=\"title\"> <b>Import job actions</b> </p> <ul> <li> <p> <a href=\"https://docs.aws.amazon.com/healthimaging/latest/APIReference/API_StartDICOMImportJob.html\">StartDICOMImportJob</a> – See <a href=\"https://docs.aws.amazon.com/healthimaging/latest/devguide/start-dicom-import-job.html\">Starting an import job</a>.</p> </li> <li> <p> <a href=\"https://docs.aws.amazon.com/healthimaging/latest/APIReference/API_GetDICOMImportJob.html\">GetDICOMImportJob</a> – See <a href=\"https://docs.aws.amazon.com/healthimaging/latest/devguide/get-dicom-import-job.html\">Getting import job properties</a>.</p> </li> <li> <p> <a href=\"https://docs.aws.amazon.com/healthimaging/latest/APIReference/API_ListDICOMImportJobs.html\">ListDICOMImportJobs</a> – See <a href=\"https://docs.aws.amazon.com/healthimaging/latest/devguide/list-dicom-import-jobs.html\">Listing import jobs</a>.</p> </li> </ul> <p class=\"title\"> <b>Image set access actions</b> </p> <ul> <li> <p> <a href=\"https://docs.aws.amazon.com/healthimaging/latest/APIReference/API_SearchImageSets.html\">SearchImageSets</a> – See <a href=\"https://docs.aws.amazon.com/healthimaging/latest/devguide/search-image-sets.html\">Searching image sets</a>.</p> </li> <li> <p> <a href=\"https://docs.aws.amazon.com/healthimaging/latest/APIReference/API_GetImageSet.html\">GetImageSet</a> – See <a href=\"https://docs.aws.amazon.com/healthimaging/latest/devguide/get-image-set-properties.html\">Getting image set properties</a>.</p> </li> <li> <p> <a href=\"https://docs.aws.amazon.com/healthimaging/latest/APIReference/API_GetImageSetMetadata.html\">GetImageSetMetadata</a> – See <a href=\"https://docs.aws.amazon.com/healthimaging/latest/devguide/get-image-set-metadata.html\">Getting image set metadata</a>.</p> </li> <li> <p> <a href=\"https://docs.aws.amazon.com/healthimaging/latest/APIReference/API_GetImageFrame.html\">GetImageFrame</a> – See <a href=\"https://docs.aws.amazon.com/healthimaging/latest/devguide/get-image-frame.html\">Getting image set pixel data</a>.</p> </li> </ul> <p class=\"title\"> <b>Image set modification actions</b> </p> <ul> <li> <p> <a href=\"https://docs.aws.amazon.com/healthimaging/latest/APIReference/API_ListImageSetVersions.html\">ListImageSetVersions</a> – See <a href=\"https://docs.aws.amazon.com/healthimaging/latest/devguide/list-image-set-versions.html\">Listing image set versions</a>.</p> </li> <li> <p> <a href=\"https://docs.aws.amazon.com/healthimaging/latest/APIReference/API_UpdateImageSetMetadata.html\">UpdateImageSetMetadata</a> – See <a href=\"https://docs.aws.amazon.com/healthimaging/latest/devguide/update-image-set-metadata.html\">Updating image set metadata</a>.</p> </li> <li> <p> <a href=\"https://docs.aws.amazon.com/healthimaging/latest/APIReference/API_CopyImageSet.html\">CopyImageSet</a> – See <a href=\"https://docs.aws.amazon.com/healthimaging/latest/devguide/copy-image-set.html\">Copying an image set</a>.</p> </li> <li> <p> <a href=\"https://docs.aws.amazon.com/healthimaging/latest/APIReference/API_DeleteImageSet.html\">DeleteImageSet</a> – See <a href=\"https://docs.aws.amazon.com/healthimaging/latest/devguide/delete-image-set.html\">Deleting an image set</a>.</p> </li> </ul> <p class=\"title\"> <b>Tagging actions</b> </p> <ul> <li> <p> <a href=\"https://docs.aws.amazon.com/healthimaging/latest/APIReference/API_TagResource.html\">TagResource</a> – See <a href=\"https://docs.aws.amazon.com/healthimaging/latest/devguide/tag-list-untag-data-store.html\">Tagging a data store</a> and <a href=\"https://docs.aws.amazon.com/healthimaging/latest/devguide/tag-list-untag-image-set.html\">Tagging an image set</a>.</p> </li> <li> <p> <a href=\"https://docs.aws.amazon.com/healthimaging/latest/APIReference/API_ListTagsForResource.html\">ListTagsForResource</a> – See <a href=\"https://docs.aws.amazon.com/healthimaging/latest/devguide/tag-list-untag-data-store.html\">Tagging a data store</a> and <a href=\"https://docs.aws.amazon.com/healthimaging/latest/devguide/tag-list-untag-image-set.html\">Tagging an image set</a>.</p> </li> <li> <p> <a href=\"https://docs.aws.amazon.com/healthimaging/latest/APIReference/API_UntagResource.html\">UntagResource</a> – See <a href=\"https://docs.aws.amazon.com/healthimaging/latest/devguide/tag-list-untag-data-store.html\">Tagging a data store</a> and <a href=\"https://docs.aws.amazon.com/healthimaging/latest/devguide/tag-list-untag-image-set.html\">Tagging an image set</a>.</p> </li> </ul>",
     "endpointPrefix" : "medical-imaging",
     "hasApiWithStreamInput" : false,
     "ionProtocol" : false,
@@ -114,7 +114,7 @@
         "httpStatusCode" : 403
       }, {
         "exceptionName" : "ValidationException",
-        "documentation" : "<p>The input fails to satisfy the constraints specified by an AWS service.</p>",
+        "documentation" : "<p>The input fails to satisfy the constraints set by the service.</p>",
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "InternalServerException",
@@ -178,7 +178,7 @@
         "httpStatusCode" : 403
       }, {
         "exceptionName" : "ValidationException",
-        "documentation" : "<p>The input fails to satisfy the constraints specified by an AWS service.</p>",
+        "documentation" : "<p>The input fails to satisfy the constraints set by the service.</p>",
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "InternalServerException",
@@ -235,7 +235,7 @@
         "httpStatusCode" : 403
       }, {
         "exceptionName" : "ValidationException",
-        "documentation" : "<p>The input fails to satisfy the constraints specified by an AWS service.</p>",
+        "documentation" : "<p>The input fails to satisfy the constraints set by the service.</p>",
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "InternalServerException",
@@ -294,7 +294,7 @@
         "httpStatusCode" : 403
       }, {
         "exceptionName" : "ValidationException",
-        "documentation" : "<p>The input fails to satisfy the constraints specified by an AWS service.</p>",
+        "documentation" : "<p>The input fails to satisfy the constraints set by the service.</p>",
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "InternalServerException",
@@ -354,7 +354,7 @@
         "httpStatusCode" : 403
       }, {
         "exceptionName" : "ValidationException",
-        "documentation" : "<p>The input fails to satisfy the constraints specified by an AWS service.</p>",
+        "documentation" : "<p>The input fails to satisfy the constraints set by the service.</p>",
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "InternalServerException",
@@ -407,7 +407,7 @@
         "httpStatusCode" : 403
       }, {
         "exceptionName" : "ValidationException",
-        "documentation" : "<p>The input fails to satisfy the constraints specified by an AWS service.</p>",
+        "documentation" : "<p>The input fails to satisfy the constraints set by the service.</p>",
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "InternalServerException",
@@ -466,7 +466,7 @@
         "httpStatusCode" : 403
       }, {
         "exceptionName" : "ValidationException",
-        "documentation" : "<p>The input fails to satisfy the constraints specified by an AWS service.</p>",
+        "documentation" : "<p>The input fails to satisfy the constraints set by the service.</p>",
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "InternalServerException",
@@ -528,7 +528,7 @@
         "httpStatusCode" : 403
       }, {
         "exceptionName" : "ValidationException",
-        "documentation" : "<p>The input fails to satisfy the constraints specified by an AWS service.</p>",
+        "documentation" : "<p>The input fails to satisfy the constraints set by the service.</p>",
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "InternalServerException",
@@ -590,7 +590,7 @@
         "httpStatusCode" : 403
       }, {
         "exceptionName" : "ValidationException",
-        "documentation" : "<p>The input fails to satisfy the constraints specified by an AWS service.</p>",
+        "documentation" : "<p>The input fails to satisfy the constraints set by the service.</p>",
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "InternalServerException",
@@ -631,7 +631,7 @@
       "asyncReturnType" : "ListDICOMImportJobsResult",
       "authenticated" : true,
       "deprecated" : false,
-      "documentation" : "<p>List import jobs created by this AWS account for a specific data store.</p>",
+      "documentation" : "<p>List import jobs created for a specific data store.</p>",
       "endpointCacheRequired" : false,
       "endpointDiscovery" : null,
       "endpointOperation" : false,
@@ -650,7 +650,7 @@
         "httpStatusCode" : 403
       }, {
         "exceptionName" : "ValidationException",
-        "documentation" : "<p>The input fails to satisfy the constraints specified by an AWS service.</p>",
+        "documentation" : "<p>The input fails to satisfy the constraints set by the service.</p>",
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "InternalServerException",
@@ -688,7 +688,7 @@
       "asyncReturnType" : "ListDatastoresResult",
       "authenticated" : true,
       "deprecated" : false,
-      "documentation" : "<p>List data stores created by this AWS account.</p>",
+      "documentation" : "<p>List data stores.</p>",
       "endpointCacheRequired" : false,
       "endpointDiscovery" : null,
       "endpointOperation" : false,
@@ -703,7 +703,7 @@
         "httpStatusCode" : 403
       }, {
         "exceptionName" : "ValidationException",
-        "documentation" : "<p>The input fails to satisfy the constraints specified by an AWS service.</p>",
+        "documentation" : "<p>The input fails to satisfy the constraints set by the service.</p>",
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "InternalServerException",
@@ -758,7 +758,7 @@
         "httpStatusCode" : 403
       }, {
         "exceptionName" : "ValidationException",
-        "documentation" : "<p>The input fails to satisfy the constraints specified by an AWS service.</p>",
+        "documentation" : "<p>The input fails to satisfy the constraints set by the service.</p>",
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "InternalServerException",
@@ -814,7 +814,7 @@
         "httpStatusCode" : 403
       }, {
         "exceptionName" : "ValidationException",
-        "documentation" : "<p>The input fails to satisfy the constraints specified by an AWS service.</p>",
+        "documentation" : "<p>The input fails to satisfy the constraints set by the service.</p>",
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "InternalServerException",
@@ -852,7 +852,7 @@
       "asyncReturnType" : "SearchImageSetsResult",
       "authenticated" : true,
       "deprecated" : false,
-      "documentation" : "<p>Search image sets based on defined input attributes.</p>",
+      "documentation" : "<p>Search image sets based on defined input attributes.</p> <note> <p> <code>SearchImageSets</code> accepts a single search query parameter and returns a paginated response of all image sets that have the matching criteria. All range queries must be input as <code>(lowerBound, upperBound)</code>.</p> <p> <code>SearchImageSets</code> uses the <code>updatedAt</code> field for sorting in decreasing order from latest to oldest.</p> </note>",
       "endpointCacheRequired" : false,
       "endpointDiscovery" : null,
       "endpointOperation" : false,
@@ -873,7 +873,7 @@
         "httpStatusCode" : 403
       }, {
         "exceptionName" : "ValidationException",
-        "documentation" : "<p>The input fails to satisfy the constraints specified by an AWS service.</p>",
+        "documentation" : "<p>The input fails to satisfy the constraints set by the service.</p>",
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "InternalServerException",
@@ -933,7 +933,7 @@
         "httpStatusCode" : 403
       }, {
         "exceptionName" : "ValidationException",
-        "documentation" : "<p>The input fails to satisfy the constraints specified by an AWS service.</p>",
+        "documentation" : "<p>The input fails to satisfy the constraints set by the service.</p>",
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "InternalServerException",
@@ -990,7 +990,7 @@
         "httpStatusCode" : 403
       }, {
         "exceptionName" : "ValidationException",
-        "documentation" : "<p>The input fails to satisfy the constraints specified by an AWS service.</p>",
+        "documentation" : "<p>The input fails to satisfy the constraints set by the service.</p>",
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "InternalServerException",
@@ -1043,7 +1043,7 @@
         "httpStatusCode" : 403
       }, {
         "exceptionName" : "ValidationException",
-        "documentation" : "<p>The input fails to satisfy the constraints specified by an AWS service.</p>",
+        "documentation" : "<p>The input fails to satisfy the constraints set by the service.</p>",
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "InternalServerException",
@@ -1102,7 +1102,7 @@
         "httpStatusCode" : 403
       }, {
         "exceptionName" : "ValidationException",
-        "documentation" : "<p>The input fails to satisfy the constraints specified by an AWS service.</p>",
+        "documentation" : "<p>The input fails to satisfy the constraints set by the service.</p>",
         "httpStatusCode" : 400
       }, {
         "exceptionName" : "InternalServerException",
@@ -5340,12 +5340,12 @@
         "c2jName" : "kmsKeyArn",
         "c2jShape" : "KmsKeyArn",
         "deprecated" : false,
-        "documentation" : "<p>The Amazon Resource Name (ARN) assigned to the AWS Key Management Service (AWS KMS) key for accessing encrypted data.</p>",
+        "documentation" : "<p>The Amazon Resource Name (ARN) assigned to the Key Management Service (KMS) key for accessing encrypted data.</p>",
         "endpointDiscoveryId" : false,
         "enumType" : null,
-        "fluentSetterDocumentation" : "/**<p>The Amazon Resource Name (ARN) assigned to the AWS Key Management Service (AWS KMS) key for accessing encrypted data.</p>\n@param kmsKeyArn The Amazon Resource Name (ARN) assigned to the AWS Key Management Service (AWS KMS) key for accessing encrypted data.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "fluentSetterDocumentation" : "/**<p>The Amazon Resource Name (ARN) assigned to the Key Management Service (KMS) key for accessing encrypted data.</p>\n@param kmsKeyArn The Amazon Resource Name (ARN) assigned to the Key Management Service (KMS) key for accessing encrypted data.\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "fluentSetterMethodName" : "withKmsKeyArn",
-        "getterDocumentation" : "/**<p>The Amazon Resource Name (ARN) assigned to the AWS Key Management Service (AWS KMS) key for accessing encrypted data.</p>\n@return The Amazon Resource Name (ARN) assigned to the AWS Key Management Service (AWS KMS) key for accessing encrypted data.*/",
+        "getterDocumentation" : "/**<p>The Amazon Resource Name (ARN) assigned to the Key Management Service (KMS) key for accessing encrypted data.</p>\n@return The Amazon Resource Name (ARN) assigned to the Key Management Service (KMS) key for accessing encrypted data.*/",
         "getterMethodName" : "getKmsKeyArn",
         "getterModel" : {
           "returnType" : "String",
@@ -5379,7 +5379,7 @@
         "marshallingType" : "STRING",
         "name" : "KmsKeyArn",
         "sensitive" : false,
-        "setterDocumentation" : "/**<p>The Amazon Resource Name (ARN) assigned to the AWS Key Management Service (AWS KMS) key for accessing encrypted data.</p>\n@param kmsKeyArn The Amazon Resource Name (ARN) assigned to the AWS Key Management Service (AWS KMS) key for accessing encrypted data.*/",
+        "setterDocumentation" : "/**<p>The Amazon Resource Name (ARN) assigned to the Key Management Service (KMS) key for accessing encrypted data.</p>\n@param kmsKeyArn The Amazon Resource Name (ARN) assigned to the Key Management Service (KMS) key for accessing encrypted data.*/",
         "setterMethodName" : "setKmsKeyArn",
         "setterModel" : {
           "timestampFormat" : null,
@@ -5394,13 +5394,13 @@
         "shouldFullyQualify" : false,
         "simple" : true,
         "unmarshallingType" : null,
-        "varargSetterDocumentation" : "/**<p>The Amazon Resource Name (ARN) assigned to the AWS Key Management Service (AWS KMS) key for accessing encrypted data.</p>\n@param kmsKeyArn The Amazon Resource Name (ARN) assigned to the AWS Key Management Service (AWS KMS) key for accessing encrypted data.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "varargSetterDocumentation" : "/**<p>The Amazon Resource Name (ARN) assigned to the Key Management Service (KMS) key for accessing encrypted data.</p>\n@param kmsKeyArn The Amazon Resource Name (ARN) assigned to the Key Management Service (KMS) key for accessing encrypted data.\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "variable" : {
           "timestampFormat" : null,
           "variableDeclarationType" : "String",
           "variableName" : "kmsKeyArn",
           "variableType" : "String",
-          "documentation" : "<p>The Amazon Resource Name (ARN) assigned to the AWS Key Management Service (AWS KMS) key for accessing encrypted data.</p>",
+          "documentation" : "<p>The Amazon Resource Name (ARN) assigned to the Key Management Service (KMS) key for accessing encrypted data.</p>",
           "simpleType" : "String",
           "variableSetterType" : "String"
         },
@@ -5551,12 +5551,12 @@
           "c2jName" : "kmsKeyArn",
           "c2jShape" : "KmsKeyArn",
           "deprecated" : false,
-          "documentation" : "<p>The Amazon Resource Name (ARN) assigned to the AWS Key Management Service (AWS KMS) key for accessing encrypted data.</p>",
+          "documentation" : "<p>The Amazon Resource Name (ARN) assigned to the Key Management Service (KMS) key for accessing encrypted data.</p>",
           "endpointDiscoveryId" : false,
           "enumType" : null,
-          "fluentSetterDocumentation" : "/**<p>The Amazon Resource Name (ARN) assigned to the AWS Key Management Service (AWS KMS) key for accessing encrypted data.</p>\n@param kmsKeyArn The Amazon Resource Name (ARN) assigned to the AWS Key Management Service (AWS KMS) key for accessing encrypted data.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "fluentSetterDocumentation" : "/**<p>The Amazon Resource Name (ARN) assigned to the Key Management Service (KMS) key for accessing encrypted data.</p>\n@param kmsKeyArn The Amazon Resource Name (ARN) assigned to the Key Management Service (KMS) key for accessing encrypted data.\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "fluentSetterMethodName" : "withKmsKeyArn",
-          "getterDocumentation" : "/**<p>The Amazon Resource Name (ARN) assigned to the AWS Key Management Service (AWS KMS) key for accessing encrypted data.</p>\n@return The Amazon Resource Name (ARN) assigned to the AWS Key Management Service (AWS KMS) key for accessing encrypted data.*/",
+          "getterDocumentation" : "/**<p>The Amazon Resource Name (ARN) assigned to the Key Management Service (KMS) key for accessing encrypted data.</p>\n@return The Amazon Resource Name (ARN) assigned to the Key Management Service (KMS) key for accessing encrypted data.*/",
           "getterMethodName" : "getKmsKeyArn",
           "getterModel" : {
             "returnType" : "String",
@@ -5590,7 +5590,7 @@
           "marshallingType" : "STRING",
           "name" : "KmsKeyArn",
           "sensitive" : false,
-          "setterDocumentation" : "/**<p>The Amazon Resource Name (ARN) assigned to the AWS Key Management Service (AWS KMS) key for accessing encrypted data.</p>\n@param kmsKeyArn The Amazon Resource Name (ARN) assigned to the AWS Key Management Service (AWS KMS) key for accessing encrypted data.*/",
+          "setterDocumentation" : "/**<p>The Amazon Resource Name (ARN) assigned to the Key Management Service (KMS) key for accessing encrypted data.</p>\n@param kmsKeyArn The Amazon Resource Name (ARN) assigned to the Key Management Service (KMS) key for accessing encrypted data.*/",
           "setterMethodName" : "setKmsKeyArn",
           "setterModel" : {
             "timestampFormat" : null,
@@ -5605,13 +5605,13 @@
           "shouldFullyQualify" : false,
           "simple" : true,
           "unmarshallingType" : null,
-          "varargSetterDocumentation" : "/**<p>The Amazon Resource Name (ARN) assigned to the AWS Key Management Service (AWS KMS) key for accessing encrypted data.</p>\n@param kmsKeyArn The Amazon Resource Name (ARN) assigned to the AWS Key Management Service (AWS KMS) key for accessing encrypted data.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "varargSetterDocumentation" : "/**<p>The Amazon Resource Name (ARN) assigned to the Key Management Service (KMS) key for accessing encrypted data.</p>\n@param kmsKeyArn The Amazon Resource Name (ARN) assigned to the Key Management Service (KMS) key for accessing encrypted data.\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "variable" : {
             "timestampFormat" : null,
             "variableDeclarationType" : "String",
             "variableName" : "kmsKeyArn",
             "variableType" : "String",
-            "documentation" : "<p>The Amazon Resource Name (ARN) assigned to the AWS Key Management Service (AWS KMS) key for accessing encrypted data.</p>",
+            "documentation" : "<p>The Amazon Resource Name (ARN) assigned to the Key Management Service (KMS) key for accessing encrypted data.</p>",
             "simpleType" : "String",
             "variableSetterType" : "String"
           },
@@ -11296,12 +11296,12 @@
         "c2jName" : "kmsKeyArn",
         "c2jShape" : "KmsKeyArn",
         "deprecated" : false,
-        "documentation" : "<p>The Amazon Resource Name (ARN) assigned to the AWS Key Management Service (AWS KMS) key for accessing encrypted data.</p>",
+        "documentation" : "<p>The Amazon Resource Name (ARN) assigned to the Key Management Service (KMS) key for accessing encrypted data.</p>",
         "endpointDiscoveryId" : false,
         "enumType" : null,
-        "fluentSetterDocumentation" : "/**<p>The Amazon Resource Name (ARN) assigned to the AWS Key Management Service (AWS KMS) key for accessing encrypted data.</p>\n@param kmsKeyArn The Amazon Resource Name (ARN) assigned to the AWS Key Management Service (AWS KMS) key for accessing encrypted data.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "fluentSetterDocumentation" : "/**<p>The Amazon Resource Name (ARN) assigned to the Key Management Service (KMS) key for accessing encrypted data.</p>\n@param kmsKeyArn The Amazon Resource Name (ARN) assigned to the Key Management Service (KMS) key for accessing encrypted data.\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "fluentSetterMethodName" : "withKmsKeyArn",
-        "getterDocumentation" : "/**<p>The Amazon Resource Name (ARN) assigned to the AWS Key Management Service (AWS KMS) key for accessing encrypted data.</p>\n@return The Amazon Resource Name (ARN) assigned to the AWS Key Management Service (AWS KMS) key for accessing encrypted data.*/",
+        "getterDocumentation" : "/**<p>The Amazon Resource Name (ARN) assigned to the Key Management Service (KMS) key for accessing encrypted data.</p>\n@return The Amazon Resource Name (ARN) assigned to the Key Management Service (KMS) key for accessing encrypted data.*/",
         "getterMethodName" : "getKmsKeyArn",
         "getterModel" : {
           "returnType" : "String",
@@ -11335,7 +11335,7 @@
         "marshallingType" : "STRING",
         "name" : "KmsKeyArn",
         "sensitive" : false,
-        "setterDocumentation" : "/**<p>The Amazon Resource Name (ARN) assigned to the AWS Key Management Service (AWS KMS) key for accessing encrypted data.</p>\n@param kmsKeyArn The Amazon Resource Name (ARN) assigned to the AWS Key Management Service (AWS KMS) key for accessing encrypted data.*/",
+        "setterDocumentation" : "/**<p>The Amazon Resource Name (ARN) assigned to the Key Management Service (KMS) key for accessing encrypted data.</p>\n@param kmsKeyArn The Amazon Resource Name (ARN) assigned to the Key Management Service (KMS) key for accessing encrypted data.*/",
         "setterMethodName" : "setKmsKeyArn",
         "setterModel" : {
           "timestampFormat" : null,
@@ -11350,13 +11350,13 @@
         "shouldFullyQualify" : false,
         "simple" : true,
         "unmarshallingType" : null,
-        "varargSetterDocumentation" : "/**<p>The Amazon Resource Name (ARN) assigned to the AWS Key Management Service (AWS KMS) key for accessing encrypted data.</p>\n@param kmsKeyArn The Amazon Resource Name (ARN) assigned to the AWS Key Management Service (AWS KMS) key for accessing encrypted data.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "varargSetterDocumentation" : "/**<p>The Amazon Resource Name (ARN) assigned to the Key Management Service (KMS) key for accessing encrypted data.</p>\n@param kmsKeyArn The Amazon Resource Name (ARN) assigned to the Key Management Service (KMS) key for accessing encrypted data.\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "variable" : {
           "timestampFormat" : null,
           "variableDeclarationType" : "String",
           "variableName" : "kmsKeyArn",
           "variableType" : "String",
-          "documentation" : "<p>The Amazon Resource Name (ARN) assigned to the AWS Key Management Service (AWS KMS) key for accessing encrypted data.</p>",
+          "documentation" : "<p>The Amazon Resource Name (ARN) assigned to the Key Management Service (KMS) key for accessing encrypted data.</p>",
           "simpleType" : "String",
           "variableSetterType" : "String"
         },
@@ -11924,12 +11924,12 @@
           "c2jName" : "kmsKeyArn",
           "c2jShape" : "KmsKeyArn",
           "deprecated" : false,
-          "documentation" : "<p>The Amazon Resource Name (ARN) assigned to the AWS Key Management Service (AWS KMS) key for accessing encrypted data.</p>",
+          "documentation" : "<p>The Amazon Resource Name (ARN) assigned to the Key Management Service (KMS) key for accessing encrypted data.</p>",
           "endpointDiscoveryId" : false,
           "enumType" : null,
-          "fluentSetterDocumentation" : "/**<p>The Amazon Resource Name (ARN) assigned to the AWS Key Management Service (AWS KMS) key for accessing encrypted data.</p>\n@param kmsKeyArn The Amazon Resource Name (ARN) assigned to the AWS Key Management Service (AWS KMS) key for accessing encrypted data.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "fluentSetterDocumentation" : "/**<p>The Amazon Resource Name (ARN) assigned to the Key Management Service (KMS) key for accessing encrypted data.</p>\n@param kmsKeyArn The Amazon Resource Name (ARN) assigned to the Key Management Service (KMS) key for accessing encrypted data.\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "fluentSetterMethodName" : "withKmsKeyArn",
-          "getterDocumentation" : "/**<p>The Amazon Resource Name (ARN) assigned to the AWS Key Management Service (AWS KMS) key for accessing encrypted data.</p>\n@return The Amazon Resource Name (ARN) assigned to the AWS Key Management Service (AWS KMS) key for accessing encrypted data.*/",
+          "getterDocumentation" : "/**<p>The Amazon Resource Name (ARN) assigned to the Key Management Service (KMS) key for accessing encrypted data.</p>\n@return The Amazon Resource Name (ARN) assigned to the Key Management Service (KMS) key for accessing encrypted data.*/",
           "getterMethodName" : "getKmsKeyArn",
           "getterModel" : {
             "returnType" : "String",
@@ -11963,7 +11963,7 @@
           "marshallingType" : "STRING",
           "name" : "KmsKeyArn",
           "sensitive" : false,
-          "setterDocumentation" : "/**<p>The Amazon Resource Name (ARN) assigned to the AWS Key Management Service (AWS KMS) key for accessing encrypted data.</p>\n@param kmsKeyArn The Amazon Resource Name (ARN) assigned to the AWS Key Management Service (AWS KMS) key for accessing encrypted data.*/",
+          "setterDocumentation" : "/**<p>The Amazon Resource Name (ARN) assigned to the Key Management Service (KMS) key for accessing encrypted data.</p>\n@param kmsKeyArn The Amazon Resource Name (ARN) assigned to the Key Management Service (KMS) key for accessing encrypted data.*/",
           "setterMethodName" : "setKmsKeyArn",
           "setterModel" : {
             "timestampFormat" : null,
@@ -11978,13 +11978,13 @@
           "shouldFullyQualify" : false,
           "simple" : true,
           "unmarshallingType" : null,
-          "varargSetterDocumentation" : "/**<p>The Amazon Resource Name (ARN) assigned to the AWS Key Management Service (AWS KMS) key for accessing encrypted data.</p>\n@param kmsKeyArn The Amazon Resource Name (ARN) assigned to the AWS Key Management Service (AWS KMS) key for accessing encrypted data.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "varargSetterDocumentation" : "/**<p>The Amazon Resource Name (ARN) assigned to the Key Management Service (KMS) key for accessing encrypted data.</p>\n@param kmsKeyArn The Amazon Resource Name (ARN) assigned to the Key Management Service (KMS) key for accessing encrypted data.\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "variable" : {
             "timestampFormat" : null,
             "variableDeclarationType" : "String",
             "variableName" : "kmsKeyArn",
             "variableType" : "String",
-            "documentation" : "<p>The Amazon Resource Name (ARN) assigned to the AWS Key Management Service (AWS KMS) key for accessing encrypted data.</p>",
+            "documentation" : "<p>The Amazon Resource Name (ARN) assigned to the Key Management Service (KMS) key for accessing encrypted data.</p>",
             "simpleType" : "String",
             "variableSetterType" : "String"
           },
@@ -20591,12 +20591,12 @@
         "c2jName" : "createdAt",
         "c2jShape" : "Date",
         "deprecated" : false,
-        "documentation" : "<p>The time an image set is created in AWS HealthImaging. Sample creation date is provided in <code>1985-04-12T23:20:50.52Z</code> format.</p>",
+        "documentation" : "<p>The time an image set is created. Sample creation date is provided in <code>1985-04-12T23:20:50.52Z</code> format.</p>",
         "endpointDiscoveryId" : false,
         "enumType" : null,
-        "fluentSetterDocumentation" : "/**<p>The time an image set is created in AWS HealthImaging. Sample creation date is provided in <code>1985-04-12T23:20:50.52Z</code> format.</p>\n@param createdAt The time an image set is created in AWS HealthImaging. Sample creation date is provided in <code>1985-04-12T23:20:50.52Z</code> format.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "fluentSetterDocumentation" : "/**<p>The time an image set is created. Sample creation date is provided in <code>1985-04-12T23:20:50.52Z</code> format.</p>\n@param createdAt The time an image set is created. Sample creation date is provided in <code>1985-04-12T23:20:50.52Z</code> format.\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "fluentSetterMethodName" : "withCreatedAt",
-        "getterDocumentation" : "/**<p>The time an image set is created in AWS HealthImaging. Sample creation date is provided in <code>1985-04-12T23:20:50.52Z</code> format.</p>\n@return The time an image set is created in AWS HealthImaging. Sample creation date is provided in <code>1985-04-12T23:20:50.52Z</code> format.*/",
+        "getterDocumentation" : "/**<p>The time an image set is created. Sample creation date is provided in <code>1985-04-12T23:20:50.52Z</code> format.</p>\n@return The time an image set is created. Sample creation date is provided in <code>1985-04-12T23:20:50.52Z</code> format.*/",
         "getterMethodName" : "getCreatedAt",
         "getterModel" : {
           "returnType" : "java.util.Date",
@@ -20630,7 +20630,7 @@
         "marshallingType" : "DATE",
         "name" : "CreatedAt",
         "sensitive" : false,
-        "setterDocumentation" : "/**<p>The time an image set is created in AWS HealthImaging. Sample creation date is provided in <code>1985-04-12T23:20:50.52Z</code> format.</p>\n@param createdAt The time an image set is created in AWS HealthImaging. Sample creation date is provided in <code>1985-04-12T23:20:50.52Z</code> format.*/",
+        "setterDocumentation" : "/**<p>The time an image set is created. Sample creation date is provided in <code>1985-04-12T23:20:50.52Z</code> format.</p>\n@param createdAt The time an image set is created. Sample creation date is provided in <code>1985-04-12T23:20:50.52Z</code> format.*/",
         "setterMethodName" : "setCreatedAt",
         "setterModel" : {
           "timestampFormat" : null,
@@ -20645,13 +20645,13 @@
         "shouldFullyQualify" : false,
         "simple" : true,
         "unmarshallingType" : null,
-        "varargSetterDocumentation" : "/**<p>The time an image set is created in AWS HealthImaging. Sample creation date is provided in <code>1985-04-12T23:20:50.52Z</code> format.</p>\n@param createdAt The time an image set is created in AWS HealthImaging. Sample creation date is provided in <code>1985-04-12T23:20:50.52Z</code> format.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "varargSetterDocumentation" : "/**<p>The time an image set is created. Sample creation date is provided in <code>1985-04-12T23:20:50.52Z</code> format.</p>\n@param createdAt The time an image set is created. Sample creation date is provided in <code>1985-04-12T23:20:50.52Z</code> format.\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "variable" : {
           "timestampFormat" : "unixTimestamp",
           "variableDeclarationType" : "java.util.Date",
           "variableName" : "createdAt",
           "variableType" : "java.util.Date",
-          "documentation" : "<p>The time an image set is created in AWS HealthImaging. Sample creation date is provided in <code>1985-04-12T23:20:50.52Z</code> format.</p>",
+          "documentation" : "<p>The time an image set is created. Sample creation date is provided in <code>1985-04-12T23:20:50.52Z</code> format.</p>",
           "simpleType" : "Date",
           "variableSetterType" : "java.util.Date"
         },
@@ -20660,12 +20660,12 @@
         "c2jName" : "updatedAt",
         "c2jShape" : "Date",
         "deprecated" : false,
-        "documentation" : "<p>The time when an image was last updated in AWS HealthImaging.</p>",
+        "documentation" : "<p>The time an image set was last updated.</p>",
         "endpointDiscoveryId" : false,
         "enumType" : null,
-        "fluentSetterDocumentation" : "/**<p>The time when an image was last updated in AWS HealthImaging.</p>\n@param updatedAt The time when an image was last updated in AWS HealthImaging.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "fluentSetterDocumentation" : "/**<p>The time an image set was last updated.</p>\n@param updatedAt The time an image set was last updated.\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "fluentSetterMethodName" : "withUpdatedAt",
-        "getterDocumentation" : "/**<p>The time when an image was last updated in AWS HealthImaging.</p>\n@return The time when an image was last updated in AWS HealthImaging.*/",
+        "getterDocumentation" : "/**<p>The time an image set was last updated.</p>\n@return The time an image set was last updated.*/",
         "getterMethodName" : "getUpdatedAt",
         "getterModel" : {
           "returnType" : "java.util.Date",
@@ -20699,7 +20699,7 @@
         "marshallingType" : "DATE",
         "name" : "UpdatedAt",
         "sensitive" : false,
-        "setterDocumentation" : "/**<p>The time when an image was last updated in AWS HealthImaging.</p>\n@param updatedAt The time when an image was last updated in AWS HealthImaging.*/",
+        "setterDocumentation" : "/**<p>The time an image set was last updated.</p>\n@param updatedAt The time an image set was last updated.*/",
         "setterMethodName" : "setUpdatedAt",
         "setterModel" : {
           "timestampFormat" : null,
@@ -20714,13 +20714,13 @@
         "shouldFullyQualify" : false,
         "simple" : true,
         "unmarshallingType" : null,
-        "varargSetterDocumentation" : "/**<p>The time when an image was last updated in AWS HealthImaging.</p>\n@param updatedAt The time when an image was last updated in AWS HealthImaging.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "varargSetterDocumentation" : "/**<p>The time an image set was last updated.</p>\n@param updatedAt The time an image set was last updated.\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "variable" : {
           "timestampFormat" : "unixTimestamp",
           "variableDeclarationType" : "java.util.Date",
           "variableName" : "updatedAt",
           "variableType" : "java.util.Date",
-          "documentation" : "<p>The time when an image was last updated in AWS HealthImaging.</p>",
+          "documentation" : "<p>The time an image set was last updated.</p>",
           "simpleType" : "Date",
           "variableSetterType" : "java.util.Date"
         },
@@ -20800,12 +20800,12 @@
           "c2jName" : "createdAt",
           "c2jShape" : "Date",
           "deprecated" : false,
-          "documentation" : "<p>The time an image set is created in AWS HealthImaging. Sample creation date is provided in <code>1985-04-12T23:20:50.52Z</code> format.</p>",
+          "documentation" : "<p>The time an image set is created. Sample creation date is provided in <code>1985-04-12T23:20:50.52Z</code> format.</p>",
           "endpointDiscoveryId" : false,
           "enumType" : null,
-          "fluentSetterDocumentation" : "/**<p>The time an image set is created in AWS HealthImaging. Sample creation date is provided in <code>1985-04-12T23:20:50.52Z</code> format.</p>\n@param createdAt The time an image set is created in AWS HealthImaging. Sample creation date is provided in <code>1985-04-12T23:20:50.52Z</code> format.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "fluentSetterDocumentation" : "/**<p>The time an image set is created. Sample creation date is provided in <code>1985-04-12T23:20:50.52Z</code> format.</p>\n@param createdAt The time an image set is created. Sample creation date is provided in <code>1985-04-12T23:20:50.52Z</code> format.\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "fluentSetterMethodName" : "withCreatedAt",
-          "getterDocumentation" : "/**<p>The time an image set is created in AWS HealthImaging. Sample creation date is provided in <code>1985-04-12T23:20:50.52Z</code> format.</p>\n@return The time an image set is created in AWS HealthImaging. Sample creation date is provided in <code>1985-04-12T23:20:50.52Z</code> format.*/",
+          "getterDocumentation" : "/**<p>The time an image set is created. Sample creation date is provided in <code>1985-04-12T23:20:50.52Z</code> format.</p>\n@return The time an image set is created. Sample creation date is provided in <code>1985-04-12T23:20:50.52Z</code> format.*/",
           "getterMethodName" : "getCreatedAt",
           "getterModel" : {
             "returnType" : "java.util.Date",
@@ -20839,7 +20839,7 @@
           "marshallingType" : "DATE",
           "name" : "CreatedAt",
           "sensitive" : false,
-          "setterDocumentation" : "/**<p>The time an image set is created in AWS HealthImaging. Sample creation date is provided in <code>1985-04-12T23:20:50.52Z</code> format.</p>\n@param createdAt The time an image set is created in AWS HealthImaging. Sample creation date is provided in <code>1985-04-12T23:20:50.52Z</code> format.*/",
+          "setterDocumentation" : "/**<p>The time an image set is created. Sample creation date is provided in <code>1985-04-12T23:20:50.52Z</code> format.</p>\n@param createdAt The time an image set is created. Sample creation date is provided in <code>1985-04-12T23:20:50.52Z</code> format.*/",
           "setterMethodName" : "setCreatedAt",
           "setterModel" : {
             "timestampFormat" : null,
@@ -20854,13 +20854,13 @@
           "shouldFullyQualify" : false,
           "simple" : true,
           "unmarshallingType" : null,
-          "varargSetterDocumentation" : "/**<p>The time an image set is created in AWS HealthImaging. Sample creation date is provided in <code>1985-04-12T23:20:50.52Z</code> format.</p>\n@param createdAt The time an image set is created in AWS HealthImaging. Sample creation date is provided in <code>1985-04-12T23:20:50.52Z</code> format.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "varargSetterDocumentation" : "/**<p>The time an image set is created. Sample creation date is provided in <code>1985-04-12T23:20:50.52Z</code> format.</p>\n@param createdAt The time an image set is created. Sample creation date is provided in <code>1985-04-12T23:20:50.52Z</code> format.\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "variable" : {
             "timestampFormat" : "unixTimestamp",
             "variableDeclarationType" : "java.util.Date",
             "variableName" : "createdAt",
             "variableType" : "java.util.Date",
-            "documentation" : "<p>The time an image set is created in AWS HealthImaging. Sample creation date is provided in <code>1985-04-12T23:20:50.52Z</code> format.</p>",
+            "documentation" : "<p>The time an image set is created. Sample creation date is provided in <code>1985-04-12T23:20:50.52Z</code> format.</p>",
             "simpleType" : "Date",
             "variableSetterType" : "java.util.Date"
           },
@@ -21010,12 +21010,12 @@
           "c2jName" : "updatedAt",
           "c2jShape" : "Date",
           "deprecated" : false,
-          "documentation" : "<p>The time when an image was last updated in AWS HealthImaging.</p>",
+          "documentation" : "<p>The time an image set was last updated.</p>",
           "endpointDiscoveryId" : false,
           "enumType" : null,
-          "fluentSetterDocumentation" : "/**<p>The time when an image was last updated in AWS HealthImaging.</p>\n@param updatedAt The time when an image was last updated in AWS HealthImaging.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "fluentSetterDocumentation" : "/**<p>The time an image set was last updated.</p>\n@param updatedAt The time an image set was last updated.\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "fluentSetterMethodName" : "withUpdatedAt",
-          "getterDocumentation" : "/**<p>The time when an image was last updated in AWS HealthImaging.</p>\n@return The time when an image was last updated in AWS HealthImaging.*/",
+          "getterDocumentation" : "/**<p>The time an image set was last updated.</p>\n@return The time an image set was last updated.*/",
           "getterMethodName" : "getUpdatedAt",
           "getterModel" : {
             "returnType" : "java.util.Date",
@@ -21049,7 +21049,7 @@
           "marshallingType" : "DATE",
           "name" : "UpdatedAt",
           "sensitive" : false,
-          "setterDocumentation" : "/**<p>The time when an image was last updated in AWS HealthImaging.</p>\n@param updatedAt The time when an image was last updated in AWS HealthImaging.*/",
+          "setterDocumentation" : "/**<p>The time an image set was last updated.</p>\n@param updatedAt The time an image set was last updated.*/",
           "setterMethodName" : "setUpdatedAt",
           "setterModel" : {
             "timestampFormat" : null,
@@ -21064,13 +21064,13 @@
           "shouldFullyQualify" : false,
           "simple" : true,
           "unmarshallingType" : null,
-          "varargSetterDocumentation" : "/**<p>The time when an image was last updated in AWS HealthImaging.</p>\n@param updatedAt The time when an image was last updated in AWS HealthImaging.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "varargSetterDocumentation" : "/**<p>The time an image set was last updated.</p>\n@param updatedAt The time an image set was last updated.\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "variable" : {
             "timestampFormat" : "unixTimestamp",
             "variableDeclarationType" : "java.util.Date",
             "variableName" : "updatedAt",
             "variableType" : "java.util.Date",
-            "documentation" : "<p>The time when an image was last updated in AWS HealthImaging.</p>",
+            "documentation" : "<p>The time an image set was last updated.</p>",
             "simpleType" : "Date",
             "variableSetterType" : "java.util.Date"
           },
@@ -32463,7 +32463,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<p>The input fails to satisfy the constraints specified by an AWS service.</p>",
+      "documentation" : "<p>The input fails to satisfy the constraints set by the service.</p>",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : "ValidationException",

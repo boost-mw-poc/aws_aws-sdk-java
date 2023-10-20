@@ -40,8 +40,8 @@ public class UpdateContactFlowContentRequest extends com.amazonaws.AmazonWebServ
     /**
      * <p>
      * The JSON string that represents the content of the flow. For an example, see <a
-     * href="https://docs.aws.amazon.com/connect/latest/APIReference/flow-language-example.html">Example contact flow in
-     * Amazon Connect Flow language</a>.
+     * href="https://docs.aws.amazon.com/connect/latest/APIReference/flow-language-example.html">Example flow in Amazon
+     * Connect Flow language</a>.
      * </p>
      * <p>
      * Length Constraints: Minimum length of 1. Maximum length of 256000.
@@ -132,8 +132,8 @@ public class UpdateContactFlowContentRequest extends com.amazonaws.AmazonWebServ
     /**
      * <p>
      * The JSON string that represents the content of the flow. For an example, see <a
-     * href="https://docs.aws.amazon.com/connect/latest/APIReference/flow-language-example.html">Example contact flow in
-     * Amazon Connect Flow language</a>.
+     * href="https://docs.aws.amazon.com/connect/latest/APIReference/flow-language-example.html">Example flow in Amazon
+     * Connect Flow language</a>.
      * </p>
      * <p>
      * Length Constraints: Minimum length of 1. Maximum length of 256000.
@@ -141,8 +141,8 @@ public class UpdateContactFlowContentRequest extends com.amazonaws.AmazonWebServ
      * 
      * @param content
      *        The JSON string that represents the content of the flow. For an example, see <a
-     *        href="https://docs.aws.amazon.com/connect/latest/APIReference/flow-language-example.html">Example contact
-     *        flow in Amazon Connect Flow language</a>. </p>
+     *        href="https://docs.aws.amazon.com/connect/latest/APIReference/flow-language-example.html">Example flow in
+     *        Amazon Connect Flow language</a>. </p>
      *        <p>
      *        Length Constraints: Minimum length of 1. Maximum length of 256000.
      */
@@ -154,16 +154,16 @@ public class UpdateContactFlowContentRequest extends com.amazonaws.AmazonWebServ
     /**
      * <p>
      * The JSON string that represents the content of the flow. For an example, see <a
-     * href="https://docs.aws.amazon.com/connect/latest/APIReference/flow-language-example.html">Example contact flow in
-     * Amazon Connect Flow language</a>.
+     * href="https://docs.aws.amazon.com/connect/latest/APIReference/flow-language-example.html">Example flow in Amazon
+     * Connect Flow language</a>.
      * </p>
      * <p>
      * Length Constraints: Minimum length of 1. Maximum length of 256000.
      * </p>
      * 
      * @return The JSON string that represents the content of the flow. For an example, see <a
-     *         href="https://docs.aws.amazon.com/connect/latest/APIReference/flow-language-example.html">Example contact
-     *         flow in Amazon Connect Flow language</a>. </p>
+     *         href="https://docs.aws.amazon.com/connect/latest/APIReference/flow-language-example.html">Example flow in
+     *         Amazon Connect Flow language</a>. </p>
      *         <p>
      *         Length Constraints: Minimum length of 1. Maximum length of 256000.
      */
@@ -175,8 +175,8 @@ public class UpdateContactFlowContentRequest extends com.amazonaws.AmazonWebServ
     /**
      * <p>
      * The JSON string that represents the content of the flow. For an example, see <a
-     * href="https://docs.aws.amazon.com/connect/latest/APIReference/flow-language-example.html">Example contact flow in
-     * Amazon Connect Flow language</a>.
+     * href="https://docs.aws.amazon.com/connect/latest/APIReference/flow-language-example.html">Example flow in Amazon
+     * Connect Flow language</a>.
      * </p>
      * <p>
      * Length Constraints: Minimum length of 1. Maximum length of 256000.
@@ -184,8 +184,8 @@ public class UpdateContactFlowContentRequest extends com.amazonaws.AmazonWebServ
      * 
      * @param content
      *        The JSON string that represents the content of the flow. For an example, see <a
-     *        href="https://docs.aws.amazon.com/connect/latest/APIReference/flow-language-example.html">Example contact
-     *        flow in Amazon Connect Flow language</a>. </p>
+     *        href="https://docs.aws.amazon.com/connect/latest/APIReference/flow-language-example.html">Example flow in
+     *        Amazon Connect Flow language</a>. </p>
      *        <p>
      *        Length Constraints: Minimum length of 1. Maximum length of 256000.
      * @return Returns a reference to this object so that method calls can be chained together.

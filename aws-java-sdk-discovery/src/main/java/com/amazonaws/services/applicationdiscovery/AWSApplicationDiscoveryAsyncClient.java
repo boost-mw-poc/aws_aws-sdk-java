@@ -424,6 +424,39 @@ public class AWSApplicationDiscoveryAsyncClient extends AWSApplicationDiscoveryC
     }
 
     @Override
+    public java.util.concurrent.Future<BatchDeleteAgentsResult> batchDeleteAgentsAsync(BatchDeleteAgentsRequest request) {
+
+        return batchDeleteAgentsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<BatchDeleteAgentsResult> batchDeleteAgentsAsync(final BatchDeleteAgentsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<BatchDeleteAgentsRequest, BatchDeleteAgentsResult> asyncHandler) {
+        final BatchDeleteAgentsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<BatchDeleteAgentsResult>() {
+            @Override
+            public BatchDeleteAgentsResult call() throws Exception {
+                BatchDeleteAgentsResult result = null;
+
+                try {
+                    result = executeBatchDeleteAgents(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<BatchDeleteImportDataResult> batchDeleteImportDataAsync(BatchDeleteImportDataRequest request) {
 
         return batchDeleteImportDataAsync(request, null);
@@ -606,6 +639,41 @@ public class AWSApplicationDiscoveryAsyncClient extends AWSApplicationDiscoveryC
 
                 try {
                     result = executeDescribeAgents(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeBatchDeleteConfigurationTaskResult> describeBatchDeleteConfigurationTaskAsync(
+            DescribeBatchDeleteConfigurationTaskRequest request) {
+
+        return describeBatchDeleteConfigurationTaskAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeBatchDeleteConfigurationTaskResult> describeBatchDeleteConfigurationTaskAsync(
+            final DescribeBatchDeleteConfigurationTaskRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeBatchDeleteConfigurationTaskRequest, DescribeBatchDeleteConfigurationTaskResult> asyncHandler) {
+        final DescribeBatchDeleteConfigurationTaskRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeBatchDeleteConfigurationTaskResult>() {
+            @Override
+            public DescribeBatchDeleteConfigurationTaskResult call() throws Exception {
+                DescribeBatchDeleteConfigurationTaskResult result = null;
+
+                try {
+                    result = executeDescribeBatchDeleteConfigurationTask(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -975,6 +1043,41 @@ public class AWSApplicationDiscoveryAsyncClient extends AWSApplicationDiscoveryC
 
                 try {
                     result = executeListServerNeighbors(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartBatchDeleteConfigurationTaskResult> startBatchDeleteConfigurationTaskAsync(
+            StartBatchDeleteConfigurationTaskRequest request) {
+
+        return startBatchDeleteConfigurationTaskAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartBatchDeleteConfigurationTaskResult> startBatchDeleteConfigurationTaskAsync(
+            final StartBatchDeleteConfigurationTaskRequest request,
+            final com.amazonaws.handlers.AsyncHandler<StartBatchDeleteConfigurationTaskRequest, StartBatchDeleteConfigurationTaskResult> asyncHandler) {
+        final StartBatchDeleteConfigurationTaskRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<StartBatchDeleteConfigurationTaskResult>() {
+            @Override
+            public StartBatchDeleteConfigurationTaskResult call() throws Exception {
+                StartBatchDeleteConfigurationTaskResult result = null;
+
+                try {
+                    result = executeStartBatchDeleteConfigurationTask(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

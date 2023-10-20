@@ -41,7 +41,8 @@ public class UpdateTrafficDistributionRequest extends com.amazonaws.AmazonWebSer
     private TelephonyConfig telephonyConfig;
     /**
      * <p>
-     * The distribution of allowing signing in to the instance and its replica(s).
+     * The distribution that determines which Amazon Web Services Regions should be used to sign in agents in to both
+     * the instance and its replica(s).
      * </p>
      */
     private SignInConfig signInConfig;
@@ -146,11 +147,13 @@ public class UpdateTrafficDistributionRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The distribution of allowing signing in to the instance and its replica(s).
+     * The distribution that determines which Amazon Web Services Regions should be used to sign in agents in to both
+     * the instance and its replica(s).
      * </p>
      * 
      * @param signInConfig
-     *        The distribution of allowing signing in to the instance and its replica(s).
+     *        The distribution that determines which Amazon Web Services Regions should be used to sign in agents in to
+     *        both the instance and its replica(s).
      */
 
     public void setSignInConfig(SignInConfig signInConfig) {
@@ -159,10 +162,12 @@ public class UpdateTrafficDistributionRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The distribution of allowing signing in to the instance and its replica(s).
+     * The distribution that determines which Amazon Web Services Regions should be used to sign in agents in to both
+     * the instance and its replica(s).
      * </p>
      * 
-     * @return The distribution of allowing signing in to the instance and its replica(s).
+     * @return The distribution that determines which Amazon Web Services Regions should be used to sign in agents in to
+     *         both the instance and its replica(s).
      */
 
     public SignInConfig getSignInConfig() {
@@ -171,11 +176,13 @@ public class UpdateTrafficDistributionRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The distribution of allowing signing in to the instance and its replica(s).
+     * The distribution that determines which Amazon Web Services Regions should be used to sign in agents in to both
+     * the instance and its replica(s).
      * </p>
      * 
      * @param signInConfig
-     *        The distribution of allowing signing in to the instance and its replica(s).
+     *        The distribution that determines which Amazon Web Services Regions should be used to sign in agents in to
+     *        both the instance and its replica(s).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

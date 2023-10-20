@@ -103,8 +103,8 @@ public class TrafficDistributionGroup implements Serializable, Cloneable, Struct
      * <li>
      * <p>
      * <code>UPDATE_IN_PROGRESS</code> means the previous <a
-     * href="https://docs.aws.amazon.com/connect/latest/APIReference/API_UpdateTrafficDistributionGroup.html"
-     * >UpdateTrafficDistributionGroup</a> operation is still in progress and has not yet completed.
+     * href="https://docs.aws.amazon.com/connect/latest/APIReference/API_UpdateTrafficDistribution.html"
+     * >UpdateTrafficDistribution</a> operation is still in progress and has not yet completed.
      * </p>
      * </li>
      * </ul>
@@ -125,12 +125,9 @@ public class TrafficDistributionGroup implements Serializable, Cloneable, Struct
      * </p>
      * <note>
      * <p>
-     * You can change the <code>SignInConfig</code> distribution only for a default
-     * <code>TrafficDistributionGroup</code> (see the <code>IsDefault</code> parameter in the <a
-     * href="https://docs.aws.amazon.com/connect/latest/APIReference/API_TrafficDistributionGroup.html"
-     * >TrafficDistributionGroup</a> data type). If you call <code>UpdateTrafficDistribution</code> with a modified
-     * <code>SignInConfig</code> and a non-default <code>TrafficDistributionGroup</code>, an
-     * <code>InvalidRequestException</code> is returned.
+     * The <code>SignInConfig</code> distribution is available only on the default <code>TrafficDistributionGroup</code>
+     * . If you call <code>UpdateTrafficDistribution</code> with a modified <code>SignInConfig</code> and a non-default
+     * <code>TrafficDistributionGroup</code>, an <code>InvalidRequestException</code> is returned.
      * </p>
      * </note>
      */
@@ -391,8 +388,8 @@ public class TrafficDistributionGroup implements Serializable, Cloneable, Struct
      * <li>
      * <p>
      * <code>UPDATE_IN_PROGRESS</code> means the previous <a
-     * href="https://docs.aws.amazon.com/connect/latest/APIReference/API_UpdateTrafficDistributionGroup.html"
-     * >UpdateTrafficDistributionGroup</a> operation is still in progress and has not yet completed.
+     * href="https://docs.aws.amazon.com/connect/latest/APIReference/API_UpdateTrafficDistribution.html"
+     * >UpdateTrafficDistribution</a> operation is still in progress and has not yet completed.
      * </p>
      * </li>
      * </ul>
@@ -438,8 +435,8 @@ public class TrafficDistributionGroup implements Serializable, Cloneable, Struct
      *        <li>
      *        <p>
      *        <code>UPDATE_IN_PROGRESS</code> means the previous <a
-     *        href="https://docs.aws.amazon.com/connect/latest/APIReference/API_UpdateTrafficDistributionGroup.html"
-     *        >UpdateTrafficDistributionGroup</a> operation is still in progress and has not yet completed.
+     *        href="https://docs.aws.amazon.com/connect/latest/APIReference/API_UpdateTrafficDistribution.html"
+     *        >UpdateTrafficDistribution</a> operation is still in progress and has not yet completed.
      *        </p>
      *        </li>
      * @see TrafficDistributionGroupStatus
@@ -492,8 +489,8 @@ public class TrafficDistributionGroup implements Serializable, Cloneable, Struct
      * <li>
      * <p>
      * <code>UPDATE_IN_PROGRESS</code> means the previous <a
-     * href="https://docs.aws.amazon.com/connect/latest/APIReference/API_UpdateTrafficDistributionGroup.html"
-     * >UpdateTrafficDistributionGroup</a> operation is still in progress and has not yet completed.
+     * href="https://docs.aws.amazon.com/connect/latest/APIReference/API_UpdateTrafficDistribution.html"
+     * >UpdateTrafficDistribution</a> operation is still in progress and has not yet completed.
      * </p>
      * </li>
      * </ul>
@@ -538,8 +535,8 @@ public class TrafficDistributionGroup implements Serializable, Cloneable, Struct
      *         <li>
      *         <p>
      *         <code>UPDATE_IN_PROGRESS</code> means the previous <a
-     *         href="https://docs.aws.amazon.com/connect/latest/APIReference/API_UpdateTrafficDistributionGroup.html"
-     *         >UpdateTrafficDistributionGroup</a> operation is still in progress and has not yet completed.
+     *         href="https://docs.aws.amazon.com/connect/latest/APIReference/API_UpdateTrafficDistribution.html"
+     *         >UpdateTrafficDistribution</a> operation is still in progress and has not yet completed.
      *         </p>
      *         </li>
      * @see TrafficDistributionGroupStatus
@@ -592,8 +589,8 @@ public class TrafficDistributionGroup implements Serializable, Cloneable, Struct
      * <li>
      * <p>
      * <code>UPDATE_IN_PROGRESS</code> means the previous <a
-     * href="https://docs.aws.amazon.com/connect/latest/APIReference/API_UpdateTrafficDistributionGroup.html"
-     * >UpdateTrafficDistributionGroup</a> operation is still in progress and has not yet completed.
+     * href="https://docs.aws.amazon.com/connect/latest/APIReference/API_UpdateTrafficDistribution.html"
+     * >UpdateTrafficDistribution</a> operation is still in progress and has not yet completed.
      * </p>
      * </li>
      * </ul>
@@ -639,8 +636,8 @@ public class TrafficDistributionGroup implements Serializable, Cloneable, Struct
      *        <li>
      *        <p>
      *        <code>UPDATE_IN_PROGRESS</code> means the previous <a
-     *        href="https://docs.aws.amazon.com/connect/latest/APIReference/API_UpdateTrafficDistributionGroup.html"
-     *        >UpdateTrafficDistributionGroup</a> operation is still in progress and has not yet completed.
+     *        href="https://docs.aws.amazon.com/connect/latest/APIReference/API_UpdateTrafficDistribution.html"
+     *        >UpdateTrafficDistribution</a> operation is still in progress and has not yet completed.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -695,8 +692,8 @@ public class TrafficDistributionGroup implements Serializable, Cloneable, Struct
      * <li>
      * <p>
      * <code>UPDATE_IN_PROGRESS</code> means the previous <a
-     * href="https://docs.aws.amazon.com/connect/latest/APIReference/API_UpdateTrafficDistributionGroup.html"
-     * >UpdateTrafficDistributionGroup</a> operation is still in progress and has not yet completed.
+     * href="https://docs.aws.amazon.com/connect/latest/APIReference/API_UpdateTrafficDistribution.html"
+     * >UpdateTrafficDistribution</a> operation is still in progress and has not yet completed.
      * </p>
      * </li>
      * </ul>
@@ -742,8 +739,8 @@ public class TrafficDistributionGroup implements Serializable, Cloneable, Struct
      *        <li>
      *        <p>
      *        <code>UPDATE_IN_PROGRESS</code> means the previous <a
-     *        href="https://docs.aws.amazon.com/connect/latest/APIReference/API_UpdateTrafficDistributionGroup.html"
-     *        >UpdateTrafficDistributionGroup</a> operation is still in progress and has not yet completed.
+     *        href="https://docs.aws.amazon.com/connect/latest/APIReference/API_UpdateTrafficDistribution.html"
+     *        >UpdateTrafficDistribution</a> operation is still in progress and has not yet completed.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -837,12 +834,9 @@ public class TrafficDistributionGroup implements Serializable, Cloneable, Struct
      * </p>
      * <note>
      * <p>
-     * You can change the <code>SignInConfig</code> distribution only for a default
-     * <code>TrafficDistributionGroup</code> (see the <code>IsDefault</code> parameter in the <a
-     * href="https://docs.aws.amazon.com/connect/latest/APIReference/API_TrafficDistributionGroup.html"
-     * >TrafficDistributionGroup</a> data type). If you call <code>UpdateTrafficDistribution</code> with a modified
-     * <code>SignInConfig</code> and a non-default <code>TrafficDistributionGroup</code>, an
-     * <code>InvalidRequestException</code> is returned.
+     * The <code>SignInConfig</code> distribution is available only on the default <code>TrafficDistributionGroup</code>
+     * . If you call <code>UpdateTrafficDistribution</code> with a modified <code>SignInConfig</code> and a non-default
+     * <code>TrafficDistributionGroup</code>, an <code>InvalidRequestException</code> is returned.
      * </p>
      * </note>
      * 
@@ -851,11 +845,9 @@ public class TrafficDistributionGroup implements Serializable, Cloneable, Struct
      *        traffic distribution group cannot be deleted by the <code>DeleteTrafficDistributionGroup</code> API. The
      *        default traffic distribution group is deleted as part of the process for deleting a replica.</p> <note>
      *        <p>
-     *        You can change the <code>SignInConfig</code> distribution only for a default
-     *        <code>TrafficDistributionGroup</code> (see the <code>IsDefault</code> parameter in the <a
-     *        href="https://docs.aws.amazon.com/connect/latest/APIReference/API_TrafficDistributionGroup.html"
-     *        >TrafficDistributionGroup</a> data type). If you call <code>UpdateTrafficDistribution</code> with a
-     *        modified <code>SignInConfig</code> and a non-default <code>TrafficDistributionGroup</code>, an
+     *        The <code>SignInConfig</code> distribution is available only on the default
+     *        <code>TrafficDistributionGroup</code>. If you call <code>UpdateTrafficDistribution</code> with a modified
+     *        <code>SignInConfig</code> and a non-default <code>TrafficDistributionGroup</code>, an
      *        <code>InvalidRequestException</code> is returned.
      *        </p>
      */
@@ -872,12 +864,9 @@ public class TrafficDistributionGroup implements Serializable, Cloneable, Struct
      * </p>
      * <note>
      * <p>
-     * You can change the <code>SignInConfig</code> distribution only for a default
-     * <code>TrafficDistributionGroup</code> (see the <code>IsDefault</code> parameter in the <a
-     * href="https://docs.aws.amazon.com/connect/latest/APIReference/API_TrafficDistributionGroup.html"
-     * >TrafficDistributionGroup</a> data type). If you call <code>UpdateTrafficDistribution</code> with a modified
-     * <code>SignInConfig</code> and a non-default <code>TrafficDistributionGroup</code>, an
-     * <code>InvalidRequestException</code> is returned.
+     * The <code>SignInConfig</code> distribution is available only on the default <code>TrafficDistributionGroup</code>
+     * . If you call <code>UpdateTrafficDistribution</code> with a modified <code>SignInConfig</code> and a non-default
+     * <code>TrafficDistributionGroup</code>, an <code>InvalidRequestException</code> is returned.
      * </p>
      * </note>
      * 
@@ -885,11 +874,9 @@ public class TrafficDistributionGroup implements Serializable, Cloneable, Struct
      *         traffic distribution group cannot be deleted by the <code>DeleteTrafficDistributionGroup</code> API. The
      *         default traffic distribution group is deleted as part of the process for deleting a replica.</p> <note>
      *         <p>
-     *         You can change the <code>SignInConfig</code> distribution only for a default
-     *         <code>TrafficDistributionGroup</code> (see the <code>IsDefault</code> parameter in the <a
-     *         href="https://docs.aws.amazon.com/connect/latest/APIReference/API_TrafficDistributionGroup.html"
-     *         >TrafficDistributionGroup</a> data type). If you call <code>UpdateTrafficDistribution</code> with a
-     *         modified <code>SignInConfig</code> and a non-default <code>TrafficDistributionGroup</code>, an
+     *         The <code>SignInConfig</code> distribution is available only on the default
+     *         <code>TrafficDistributionGroup</code>. If you call <code>UpdateTrafficDistribution</code> with a modified
+     *         <code>SignInConfig</code> and a non-default <code>TrafficDistributionGroup</code>, an
      *         <code>InvalidRequestException</code> is returned.
      *         </p>
      */
@@ -906,12 +893,9 @@ public class TrafficDistributionGroup implements Serializable, Cloneable, Struct
      * </p>
      * <note>
      * <p>
-     * You can change the <code>SignInConfig</code> distribution only for a default
-     * <code>TrafficDistributionGroup</code> (see the <code>IsDefault</code> parameter in the <a
-     * href="https://docs.aws.amazon.com/connect/latest/APIReference/API_TrafficDistributionGroup.html"
-     * >TrafficDistributionGroup</a> data type). If you call <code>UpdateTrafficDistribution</code> with a modified
-     * <code>SignInConfig</code> and a non-default <code>TrafficDistributionGroup</code>, an
-     * <code>InvalidRequestException</code> is returned.
+     * The <code>SignInConfig</code> distribution is available only on the default <code>TrafficDistributionGroup</code>
+     * . If you call <code>UpdateTrafficDistribution</code> with a modified <code>SignInConfig</code> and a non-default
+     * <code>TrafficDistributionGroup</code>, an <code>InvalidRequestException</code> is returned.
      * </p>
      * </note>
      * 
@@ -920,11 +904,9 @@ public class TrafficDistributionGroup implements Serializable, Cloneable, Struct
      *        traffic distribution group cannot be deleted by the <code>DeleteTrafficDistributionGroup</code> API. The
      *        default traffic distribution group is deleted as part of the process for deleting a replica.</p> <note>
      *        <p>
-     *        You can change the <code>SignInConfig</code> distribution only for a default
-     *        <code>TrafficDistributionGroup</code> (see the <code>IsDefault</code> parameter in the <a
-     *        href="https://docs.aws.amazon.com/connect/latest/APIReference/API_TrafficDistributionGroup.html"
-     *        >TrafficDistributionGroup</a> data type). If you call <code>UpdateTrafficDistribution</code> with a
-     *        modified <code>SignInConfig</code> and a non-default <code>TrafficDistributionGroup</code>, an
+     *        The <code>SignInConfig</code> distribution is available only on the default
+     *        <code>TrafficDistributionGroup</code>. If you call <code>UpdateTrafficDistribution</code> with a modified
+     *        <code>SignInConfig</code> and a non-default <code>TrafficDistributionGroup</code>, an
      *        <code>InvalidRequestException</code> is returned.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -943,12 +925,9 @@ public class TrafficDistributionGroup implements Serializable, Cloneable, Struct
      * </p>
      * <note>
      * <p>
-     * You can change the <code>SignInConfig</code> distribution only for a default
-     * <code>TrafficDistributionGroup</code> (see the <code>IsDefault</code> parameter in the <a
-     * href="https://docs.aws.amazon.com/connect/latest/APIReference/API_TrafficDistributionGroup.html"
-     * >TrafficDistributionGroup</a> data type). If you call <code>UpdateTrafficDistribution</code> with a modified
-     * <code>SignInConfig</code> and a non-default <code>TrafficDistributionGroup</code>, an
-     * <code>InvalidRequestException</code> is returned.
+     * The <code>SignInConfig</code> distribution is available only on the default <code>TrafficDistributionGroup</code>
+     * . If you call <code>UpdateTrafficDistribution</code> with a modified <code>SignInConfig</code> and a non-default
+     * <code>TrafficDistributionGroup</code>, an <code>InvalidRequestException</code> is returned.
      * </p>
      * </note>
      * 
@@ -956,11 +935,9 @@ public class TrafficDistributionGroup implements Serializable, Cloneable, Struct
      *         traffic distribution group cannot be deleted by the <code>DeleteTrafficDistributionGroup</code> API. The
      *         default traffic distribution group is deleted as part of the process for deleting a replica.</p> <note>
      *         <p>
-     *         You can change the <code>SignInConfig</code> distribution only for a default
-     *         <code>TrafficDistributionGroup</code> (see the <code>IsDefault</code> parameter in the <a
-     *         href="https://docs.aws.amazon.com/connect/latest/APIReference/API_TrafficDistributionGroup.html"
-     *         >TrafficDistributionGroup</a> data type). If you call <code>UpdateTrafficDistribution</code> with a
-     *         modified <code>SignInConfig</code> and a non-default <code>TrafficDistributionGroup</code>, an
+     *         The <code>SignInConfig</code> distribution is available only on the default
+     *         <code>TrafficDistributionGroup</code>. If you call <code>UpdateTrafficDistribution</code> with a modified
+     *         <code>SignInConfig</code> and a non-default <code>TrafficDistributionGroup</code>, an
      *         <code>InvalidRequestException</code> is returned.
      *         </p>
      */
