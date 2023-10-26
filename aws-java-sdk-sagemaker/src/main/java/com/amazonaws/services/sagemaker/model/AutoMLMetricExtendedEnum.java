@@ -38,7 +38,14 @@ public enum AutoMLMetricExtendedEnum {
     MAPE("MAPE"),
     MASE("MASE"),
     WAPE("WAPE"),
-    AverageWeightedQuantileLoss("AverageWeightedQuantileLoss");
+    AverageWeightedQuantileLoss("AverageWeightedQuantileLoss"),
+    Rouge1("Rouge1"),
+    Rouge2("Rouge2"),
+    RougeL("RougeL"),
+    RougeLSum("RougeLSum"),
+    Perplexity("Perplexity"),
+    ValidationLoss("ValidationLoss"),
+    TrainingLoss("TrainingLoss");
 
     private String value;
 

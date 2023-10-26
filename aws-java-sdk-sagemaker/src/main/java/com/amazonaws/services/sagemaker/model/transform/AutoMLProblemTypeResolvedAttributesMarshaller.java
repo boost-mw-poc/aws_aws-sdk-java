@@ -29,6 +29,8 @@ public class AutoMLProblemTypeResolvedAttributesMarshaller {
 
     private static final MarshallingInfo<StructuredPojo> TABULARRESOLVEDATTRIBUTES_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("TabularResolvedAttributes").build();
+    private static final MarshallingInfo<StructuredPojo> TEXTGENERATIONRESOLVEDATTRIBUTES_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("TextGenerationResolvedAttributes").build();
 
     private static final AutoMLProblemTypeResolvedAttributesMarshaller instance = new AutoMLProblemTypeResolvedAttributesMarshaller();
 
@@ -47,6 +49,7 @@ public class AutoMLProblemTypeResolvedAttributesMarshaller {
 
         try {
             protocolMarshaller.marshall(autoMLProblemTypeResolvedAttributes.getTabularResolvedAttributes(), TABULARRESOLVEDATTRIBUTES_BINDING);
+            protocolMarshaller.marshall(autoMLProblemTypeResolvedAttributes.getTextGenerationResolvedAttributes(), TEXTGENERATIONRESOLVEDATTRIBUTES_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

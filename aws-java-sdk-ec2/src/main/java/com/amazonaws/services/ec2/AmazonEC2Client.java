@@ -28339,6 +28339,63 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
     /**
      * <p>
+     * Gets security groups that can be associated by the Amazon Web Services account making the request with network
+     * interfaces in the specified VPC.
+     * </p>
+     * 
+     * @param getSecurityGroupsForVpcRequest
+     * @return Result of the GetSecurityGroupsForVpc operation returned by the service.
+     * @sample AmazonEC2.GetSecurityGroupsForVpc
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/GetSecurityGroupsForVpc" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public GetSecurityGroupsForVpcResult getSecurityGroupsForVpc(GetSecurityGroupsForVpcRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetSecurityGroupsForVpc(request);
+    }
+
+    @SdkInternalApi
+    final GetSecurityGroupsForVpcResult executeGetSecurityGroupsForVpc(GetSecurityGroupsForVpcRequest getSecurityGroupsForVpcRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getSecurityGroupsForVpcRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetSecurityGroupsForVpcRequest> request = null;
+        Response<GetSecurityGroupsForVpcResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetSecurityGroupsForVpcRequestMarshaller().marshall(super.beforeMarshalling(getSecurityGroupsForVpcRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetSecurityGroupsForVpc");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<GetSecurityGroupsForVpcResult> responseHandler = new StaxResponseHandler<GetSecurityGroupsForVpcResult>(
+                    new GetSecurityGroupsForVpcResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Retrieves the access status of your account to the EC2 serial console of all instances. By default, access to the
      * EC2 serial console is disabled for your account. For more information, see <a href=
      * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configure-access-to-serial-console.html#serial-console-account-access"

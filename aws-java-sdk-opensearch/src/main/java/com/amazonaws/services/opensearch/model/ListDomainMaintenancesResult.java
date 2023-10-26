@@ -17,7 +17,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The result of a <code>ListDomainMaintenances</code> request. Contains information about the requested actions.
+ * The result of a <code>ListDomainMaintenances</code> request that contains information about the requested actions.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
@@ -25,7 +25,7 @@ public class ListDomainMaintenancesResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * List of the submitted maintenance actions.
+     * A list of the submitted maintenance actions.
      * </p>
      */
     private java.util.List<DomainMaintenanceDetails> domainMaintenances;
@@ -39,10 +39,10 @@ public class ListDomainMaintenancesResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * List of the submitted maintenance actions.
+     * A list of the submitted maintenance actions.
      * </p>
      * 
-     * @return List of the submitted maintenance actions.
+     * @return A list of the submitted maintenance actions.
      */
 
     public java.util.List<DomainMaintenanceDetails> getDomainMaintenances() {
@@ -51,11 +51,11 @@ public class ListDomainMaintenancesResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * List of the submitted maintenance actions.
+     * A list of the submitted maintenance actions.
      * </p>
      * 
      * @param domainMaintenances
-     *        List of the submitted maintenance actions.
+     *        A list of the submitted maintenance actions.
      */
 
     public void setDomainMaintenances(java.util.Collection<DomainMaintenanceDetails> domainMaintenances) {
@@ -69,7 +69,7 @@ public class ListDomainMaintenancesResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * List of the submitted maintenance actions.
+     * A list of the submitted maintenance actions.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -78,7 +78,7 @@ public class ListDomainMaintenancesResult extends com.amazonaws.AmazonWebService
      * </p>
      * 
      * @param domainMaintenances
-     *        List of the submitted maintenance actions.
+     *        A list of the submitted maintenance actions.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -94,11 +94,11 @@ public class ListDomainMaintenancesResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * List of the submitted maintenance actions.
+     * A list of the submitted maintenance actions.
      * </p>
      * 
      * @param domainMaintenances
-     *        List of the submitted maintenance actions.
+     *        A list of the submitted maintenance actions.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

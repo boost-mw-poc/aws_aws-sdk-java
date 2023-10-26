@@ -49,6 +49,13 @@ public class UpdateApplicationSettingsRequest extends com.amazonaws.AmazonWebSer
      * </p>
      */
     private BackintConfig backint;
+    /**
+     * <p>
+     * The Amazon Resource Name of the SAP HANA database that replaces the current SAP HANA connection with the SAP_ABAP
+     * application.
+     * </p>
+     */
+    private String databaseArn;
 
     /**
      * <p>
@@ -271,6 +278,52 @@ public class UpdateApplicationSettingsRequest extends com.amazonaws.AmazonWebSer
     }
 
     /**
+     * <p>
+     * The Amazon Resource Name of the SAP HANA database that replaces the current SAP HANA connection with the SAP_ABAP
+     * application.
+     * </p>
+     * 
+     * @param databaseArn
+     *        The Amazon Resource Name of the SAP HANA database that replaces the current SAP HANA connection with the
+     *        SAP_ABAP application.
+     */
+
+    public void setDatabaseArn(String databaseArn) {
+        this.databaseArn = databaseArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name of the SAP HANA database that replaces the current SAP HANA connection with the SAP_ABAP
+     * application.
+     * </p>
+     * 
+     * @return The Amazon Resource Name of the SAP HANA database that replaces the current SAP HANA connection with the
+     *         SAP_ABAP application.
+     */
+
+    public String getDatabaseArn() {
+        return this.databaseArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name of the SAP HANA database that replaces the current SAP HANA connection with the SAP_ABAP
+     * application.
+     * </p>
+     * 
+     * @param databaseArn
+     *        The Amazon Resource Name of the SAP HANA database that replaces the current SAP HANA connection with the
+     *        SAP_ABAP application.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateApplicationSettingsRequest withDatabaseArn(String databaseArn) {
+        setDatabaseArn(databaseArn);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -289,7 +342,9 @@ public class UpdateApplicationSettingsRequest extends com.amazonaws.AmazonWebSer
         if (getCredentialsToRemove() != null)
             sb.append("CredentialsToRemove: ").append(getCredentialsToRemove()).append(",");
         if (getBackint() != null)
-            sb.append("Backint: ").append(getBackint());
+            sb.append("Backint: ").append(getBackint()).append(",");
+        if (getDatabaseArn() != null)
+            sb.append("DatabaseArn: ").append(getDatabaseArn());
         sb.append("}");
         return sb.toString();
     }
@@ -320,6 +375,10 @@ public class UpdateApplicationSettingsRequest extends com.amazonaws.AmazonWebSer
             return false;
         if (other.getBackint() != null && other.getBackint().equals(this.getBackint()) == false)
             return false;
+        if (other.getDatabaseArn() == null ^ this.getDatabaseArn() == null)
+            return false;
+        if (other.getDatabaseArn() != null && other.getDatabaseArn().equals(this.getDatabaseArn()) == false)
+            return false;
         return true;
     }
 
@@ -332,6 +391,7 @@ public class UpdateApplicationSettingsRequest extends com.amazonaws.AmazonWebSer
         hashCode = prime * hashCode + ((getCredentialsToAddOrUpdate() == null) ? 0 : getCredentialsToAddOrUpdate().hashCode());
         hashCode = prime * hashCode + ((getCredentialsToRemove() == null) ? 0 : getCredentialsToRemove().hashCode());
         hashCode = prime * hashCode + ((getBackint() == null) ? 0 : getBackint().hashCode());
+        hashCode = prime * hashCode + ((getDatabaseArn() == null) ? 0 : getDatabaseArn().hashCode());
         return hashCode;
     }
 

@@ -52,8 +52,8 @@ public class ListDomainMaintenancesRequest extends com.amazonaws.AmazonWebServic
     private Integer maxResults;
     /**
      * <p>
-     * If your initial <code>ListDomainMaintenances</code> operation returns a <code>nextToken</code>, you can include
-     * the returned <code>nextToken</code> in subsequent <code>ListDomainMaintenances</code> operations, which returns
+     * If your initial <code>ListDomainMaintenances</code> operation returns a <code>nextToken</code>, include the
+     * returned <code>nextToken</code> in subsequent <code>ListDomainMaintenances</code> operations, which returns
      * results in the next page.
      * </p>
      */
@@ -265,15 +265,15 @@ public class ListDomainMaintenancesRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * If your initial <code>ListDomainMaintenances</code> operation returns a <code>nextToken</code>, you can include
-     * the returned <code>nextToken</code> in subsequent <code>ListDomainMaintenances</code> operations, which returns
+     * If your initial <code>ListDomainMaintenances</code> operation returns a <code>nextToken</code>, include the
+     * returned <code>nextToken</code> in subsequent <code>ListDomainMaintenances</code> operations, which returns
      * results in the next page.
      * </p>
      * 
      * @param nextToken
-     *        If your initial <code>ListDomainMaintenances</code> operation returns a <code>nextToken</code>, you can
-     *        include the returned <code>nextToken</code> in subsequent <code>ListDomainMaintenances</code> operations,
-     *        which returns results in the next page.
+     *        If your initial <code>ListDomainMaintenances</code> operation returns a <code>nextToken</code>, include
+     *        the returned <code>nextToken</code> in subsequent <code>ListDomainMaintenances</code> operations, which
+     *        returns results in the next page.
      */
 
     public void setNextToken(String nextToken) {
@@ -282,14 +282,14 @@ public class ListDomainMaintenancesRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * If your initial <code>ListDomainMaintenances</code> operation returns a <code>nextToken</code>, you can include
-     * the returned <code>nextToken</code> in subsequent <code>ListDomainMaintenances</code> operations, which returns
+     * If your initial <code>ListDomainMaintenances</code> operation returns a <code>nextToken</code>, include the
+     * returned <code>nextToken</code> in subsequent <code>ListDomainMaintenances</code> operations, which returns
      * results in the next page.
      * </p>
      * 
-     * @return If your initial <code>ListDomainMaintenances</code> operation returns a <code>nextToken</code>, you can
-     *         include the returned <code>nextToken</code> in subsequent <code>ListDomainMaintenances</code> operations,
-     *         which returns results in the next page.
+     * @return If your initial <code>ListDomainMaintenances</code> operation returns a <code>nextToken</code>, include
+     *         the returned <code>nextToken</code> in subsequent <code>ListDomainMaintenances</code> operations, which
+     *         returns results in the next page.
      */
 
     public String getNextToken() {
@@ -298,15 +298,15 @@ public class ListDomainMaintenancesRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * If your initial <code>ListDomainMaintenances</code> operation returns a <code>nextToken</code>, you can include
-     * the returned <code>nextToken</code> in subsequent <code>ListDomainMaintenances</code> operations, which returns
+     * If your initial <code>ListDomainMaintenances</code> operation returns a <code>nextToken</code>, include the
+     * returned <code>nextToken</code> in subsequent <code>ListDomainMaintenances</code> operations, which returns
      * results in the next page.
      * </p>
      * 
      * @param nextToken
-     *        If your initial <code>ListDomainMaintenances</code> operation returns a <code>nextToken</code>, you can
-     *        include the returned <code>nextToken</code> in subsequent <code>ListDomainMaintenances</code> operations,
-     *        which returns results in the next page.
+     *        If your initial <code>ListDomainMaintenances</code> operation returns a <code>nextToken</code>, include
+     *        the returned <code>nextToken</code> in subsequent <code>ListDomainMaintenances</code> operations, which
+     *        returns results in the next page.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

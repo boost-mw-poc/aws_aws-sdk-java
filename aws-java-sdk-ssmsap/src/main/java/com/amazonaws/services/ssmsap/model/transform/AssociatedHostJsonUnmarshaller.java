@@ -56,6 +56,12 @@ public class AssociatedHostJsonUnmarshaller implements Unmarshaller<AssociatedHo
                     context.nextToken();
                     associatedHost.setEc2InstanceId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("IpAddresses", targetDepth)) {
+                    context.nextToken();
+                    associatedHost.setIpAddresses(new ListUnmarshaller<IpAddressMember>(IpAddressMemberJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
                 if (context.testExpression("OsVersion", targetDepth)) {
                     context.nextToken();
                     associatedHost.setOsVersion(context.getUnmarshaller(String.class).unmarshall(context));

@@ -239,6 +239,11 @@ public class AbstractAmazonRedshift implements AmazonRedshift {
     }
 
     @Override
+    public DeleteResourcePolicyResult deleteResourcePolicy(DeleteResourcePolicyRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DeleteScheduledActionResult deleteScheduledAction(DeleteScheduledActionRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -434,6 +439,11 @@ public class AbstractAmazonRedshift implements AmazonRedshift {
     }
 
     @Override
+    public DescribeInboundIntegrationsResult describeInboundIntegrations(DescribeInboundIntegrationsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DescribeLoggingStatusResult describeLoggingStatus(DescribeLoggingStatusRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -585,6 +595,11 @@ public class AbstractAmazonRedshift implements AmazonRedshift {
     }
 
     @Override
+    public GetResourcePolicyResult getResourcePolicy(GetResourcePolicyRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ModifyAquaConfigurationResult modifyAquaConfiguration(ModifyAquaConfigurationRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -676,6 +691,11 @@ public class AbstractAmazonRedshift implements AmazonRedshift {
 
     @Override
     public ReservedNode purchaseReservedNodeOffering(PurchaseReservedNodeOfferingRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public PutResourcePolicyResult putResourcePolicy(PutResourcePolicyRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

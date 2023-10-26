@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The collection of settings used by an AutoML job V2 for the <code>TABULAR</code> problem type.
+ * The collection of settings used by an AutoML job V2 for the tabular problem type.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/TabularJobConfig" target="_top">AWS API

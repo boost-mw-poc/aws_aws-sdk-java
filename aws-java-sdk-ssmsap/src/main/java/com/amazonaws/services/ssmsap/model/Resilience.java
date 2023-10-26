@@ -52,6 +52,12 @@ public class Resilience implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private String clusterStatus;
+    /**
+     * <p>
+     * Indicates if or not enqueue replication is enabled for the ASCS component.
+     * </p>
+     */
+    private Boolean enqueueReplication;
 
     /**
      * <p>
@@ -271,6 +277,58 @@ public class Resilience implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Indicates if or not enqueue replication is enabled for the ASCS component.
+     * </p>
+     * 
+     * @param enqueueReplication
+     *        Indicates if or not enqueue replication is enabled for the ASCS component.
+     */
+
+    public void setEnqueueReplication(Boolean enqueueReplication) {
+        this.enqueueReplication = enqueueReplication;
+    }
+
+    /**
+     * <p>
+     * Indicates if or not enqueue replication is enabled for the ASCS component.
+     * </p>
+     * 
+     * @return Indicates if or not enqueue replication is enabled for the ASCS component.
+     */
+
+    public Boolean getEnqueueReplication() {
+        return this.enqueueReplication;
+    }
+
+    /**
+     * <p>
+     * Indicates if or not enqueue replication is enabled for the ASCS component.
+     * </p>
+     * 
+     * @param enqueueReplication
+     *        Indicates if or not enqueue replication is enabled for the ASCS component.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Resilience withEnqueueReplication(Boolean enqueueReplication) {
+        setEnqueueReplication(enqueueReplication);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Indicates if or not enqueue replication is enabled for the ASCS component.
+     * </p>
+     * 
+     * @return Indicates if or not enqueue replication is enabled for the ASCS component.
+     */
+
+    public Boolean isEnqueueReplication() {
+        return this.enqueueReplication;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -289,7 +347,9 @@ public class Resilience implements Serializable, Cloneable, StructuredPojo {
         if (getHsrOperationMode() != null)
             sb.append("HsrOperationMode: ").append(getHsrOperationMode()).append(",");
         if (getClusterStatus() != null)
-            sb.append("ClusterStatus: ").append(getClusterStatus());
+            sb.append("ClusterStatus: ").append(getClusterStatus()).append(",");
+        if (getEnqueueReplication() != null)
+            sb.append("EnqueueReplication: ").append(getEnqueueReplication());
         sb.append("}");
         return sb.toString();
     }
@@ -320,6 +380,10 @@ public class Resilience implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getClusterStatus() != null && other.getClusterStatus().equals(this.getClusterStatus()) == false)
             return false;
+        if (other.getEnqueueReplication() == null ^ this.getEnqueueReplication() == null)
+            return false;
+        if (other.getEnqueueReplication() != null && other.getEnqueueReplication().equals(this.getEnqueueReplication()) == false)
+            return false;
         return true;
     }
 
@@ -332,6 +396,7 @@ public class Resilience implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getHsrReplicationMode() == null) ? 0 : getHsrReplicationMode().hashCode());
         hashCode = prime * hashCode + ((getHsrOperationMode() == null) ? 0 : getHsrOperationMode().hashCode());
         hashCode = prime * hashCode + ((getClusterStatus() == null) ? 0 : getClusterStatus().hashCode());
+        hashCode = prime * hashCode + ((getEnqueueReplication() == null) ? 0 : getEnqueueReplication().hashCode());
         return hashCode;
     }
 

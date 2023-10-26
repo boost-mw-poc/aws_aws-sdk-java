@@ -17,7 +17,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The result of a <code>StartDomainMaintenance</code> request. Contains information about the requested action.
+ * The result of a <code>StartDomainMaintenance</code> request that information about the requested action.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
@@ -25,18 +25,18 @@ public class StartDomainMaintenanceResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * Contains request id of requested action.
+     * The request ID of requested action.
      * </p>
      */
     private String maintenanceId;
 
     /**
      * <p>
-     * Contains request id of requested action.
+     * The request ID of requested action.
      * </p>
      * 
      * @param maintenanceId
-     *        Contains request id of requested action.
+     *        The request ID of requested action.
      */
 
     public void setMaintenanceId(String maintenanceId) {
@@ -45,10 +45,10 @@ public class StartDomainMaintenanceResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * Contains request id of requested action.
+     * The request ID of requested action.
      * </p>
      * 
-     * @return Contains request id of requested action.
+     * @return The request ID of requested action.
      */
 
     public String getMaintenanceId() {
@@ -57,11 +57,11 @@ public class StartDomainMaintenanceResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * Contains request id of requested action.
+     * The request ID of requested action.
      * </p>
      * 
      * @param maintenanceId
-     *        Contains request id of requested action.
+     *        The request ID of requested action.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

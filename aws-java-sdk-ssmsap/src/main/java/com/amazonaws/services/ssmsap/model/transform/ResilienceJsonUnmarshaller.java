@@ -64,6 +64,10 @@ public class ResilienceJsonUnmarshaller implements Unmarshaller<Resilience, Json
                     context.nextToken();
                     resilience.setClusterStatus(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("EnqueueReplication", targetDepth)) {
+                    context.nextToken();
+                    resilience.setEnqueueReplication(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

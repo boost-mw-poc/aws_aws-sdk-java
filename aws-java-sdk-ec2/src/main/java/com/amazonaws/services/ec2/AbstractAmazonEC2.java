@@ -2547,6 +2547,11 @@ public class AbstractAmazonEC2 implements AmazonEC2 {
     }
 
     @Override
+    public GetSecurityGroupsForVpcResult getSecurityGroupsForVpc(GetSecurityGroupsForVpcRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetSerialConsoleAccessStatusResult getSerialConsoleAccessStatus(GetSerialConsoleAccessStatusRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

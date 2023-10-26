@@ -32,7 +32,7 @@ public class SftpConnectorConfig implements Serializable, Cloneable, StructuredP
     /**
      * <p>
      * The identifier for the secret (in Amazon Web Services Secrets Manager) that contains the SFTP user's private key,
-     * password, or both. The identifier can be either the Amazon Resource Name (ARN) or the name of the secret.
+     * password, or both. The identifier must be the Amazon Resource Name (ARN) of the secret.
      * </p>
      */
     private String userSecretId;
@@ -71,13 +71,12 @@ public class SftpConnectorConfig implements Serializable, Cloneable, StructuredP
     /**
      * <p>
      * The identifier for the secret (in Amazon Web Services Secrets Manager) that contains the SFTP user's private key,
-     * password, or both. The identifier can be either the Amazon Resource Name (ARN) or the name of the secret.
+     * password, or both. The identifier must be the Amazon Resource Name (ARN) of the secret.
      * </p>
      * 
      * @param userSecretId
      *        The identifier for the secret (in Amazon Web Services Secrets Manager) that contains the SFTP user's
-     *        private key, password, or both. The identifier can be either the Amazon Resource Name (ARN) or the name of
-     *        the secret.
+     *        private key, password, or both. The identifier must be the Amazon Resource Name (ARN) of the secret.
      */
 
     public void setUserSecretId(String userSecretId) {
@@ -87,12 +86,11 @@ public class SftpConnectorConfig implements Serializable, Cloneable, StructuredP
     /**
      * <p>
      * The identifier for the secret (in Amazon Web Services Secrets Manager) that contains the SFTP user's private key,
-     * password, or both. The identifier can be either the Amazon Resource Name (ARN) or the name of the secret.
+     * password, or both. The identifier must be the Amazon Resource Name (ARN) of the secret.
      * </p>
      * 
      * @return The identifier for the secret (in Amazon Web Services Secrets Manager) that contains the SFTP user's
-     *         private key, password, or both. The identifier can be either the Amazon Resource Name (ARN) or the name
-     *         of the secret.
+     *         private key, password, or both. The identifier must be the Amazon Resource Name (ARN) of the secret.
      */
 
     public String getUserSecretId() {
@@ -102,13 +100,12 @@ public class SftpConnectorConfig implements Serializable, Cloneable, StructuredP
     /**
      * <p>
      * The identifier for the secret (in Amazon Web Services Secrets Manager) that contains the SFTP user's private key,
-     * password, or both. The identifier can be either the Amazon Resource Name (ARN) or the name of the secret.
+     * password, or both. The identifier must be the Amazon Resource Name (ARN) of the secret.
      * </p>
      * 
      * @param userSecretId
      *        The identifier for the secret (in Amazon Web Services Secrets Manager) that contains the SFTP user's
-     *        private key, password, or both. The identifier can be either the Amazon Resource Name (ARN) or the name of
-     *        the secret.
+     *        private key, password, or both. The identifier must be the Amazon Resource Name (ARN) of the secret.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

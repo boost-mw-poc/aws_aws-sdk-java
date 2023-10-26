@@ -42,6 +42,12 @@ public class AssociatedHost implements Serializable, Cloneable, StructuredPojo {
     private String ec2InstanceId;
     /**
      * <p>
+     * The IP addresses of the associated host.
+     * </p>
+     */
+    private java.util.List<IpAddressMember> ipAddresses;
+    /**
+     * <p>
      * The version of the operating system.
      * </p>
      */
@@ -129,6 +135,76 @@ public class AssociatedHost implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
+     * The IP addresses of the associated host.
+     * </p>
+     * 
+     * @return The IP addresses of the associated host.
+     */
+
+    public java.util.List<IpAddressMember> getIpAddresses() {
+        return ipAddresses;
+    }
+
+    /**
+     * <p>
+     * The IP addresses of the associated host.
+     * </p>
+     * 
+     * @param ipAddresses
+     *        The IP addresses of the associated host.
+     */
+
+    public void setIpAddresses(java.util.Collection<IpAddressMember> ipAddresses) {
+        if (ipAddresses == null) {
+            this.ipAddresses = null;
+            return;
+        }
+
+        this.ipAddresses = new java.util.ArrayList<IpAddressMember>(ipAddresses);
+    }
+
+    /**
+     * <p>
+     * The IP addresses of the associated host.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setIpAddresses(java.util.Collection)} or {@link #withIpAddresses(java.util.Collection)} if you want to
+     * override the existing values.
+     * </p>
+     * 
+     * @param ipAddresses
+     *        The IP addresses of the associated host.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AssociatedHost withIpAddresses(IpAddressMember... ipAddresses) {
+        if (this.ipAddresses == null) {
+            setIpAddresses(new java.util.ArrayList<IpAddressMember>(ipAddresses.length));
+        }
+        for (IpAddressMember ele : ipAddresses) {
+            this.ipAddresses.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The IP addresses of the associated host.
+     * </p>
+     * 
+     * @param ipAddresses
+     *        The IP addresses of the associated host.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AssociatedHost withIpAddresses(java.util.Collection<IpAddressMember> ipAddresses) {
+        setIpAddresses(ipAddresses);
+        return this;
+    }
+
+    /**
+     * <p>
      * The version of the operating system.
      * </p>
      * 
@@ -183,6 +259,8 @@ public class AssociatedHost implements Serializable, Cloneable, StructuredPojo {
             sb.append("Hostname: ").append(getHostname()).append(",");
         if (getEc2InstanceId() != null)
             sb.append("Ec2InstanceId: ").append(getEc2InstanceId()).append(",");
+        if (getIpAddresses() != null)
+            sb.append("IpAddresses: ").append(getIpAddresses()).append(",");
         if (getOsVersion() != null)
             sb.append("OsVersion: ").append(getOsVersion());
         sb.append("}");
@@ -207,6 +285,10 @@ public class AssociatedHost implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getEc2InstanceId() != null && other.getEc2InstanceId().equals(this.getEc2InstanceId()) == false)
             return false;
+        if (other.getIpAddresses() == null ^ this.getIpAddresses() == null)
+            return false;
+        if (other.getIpAddresses() != null && other.getIpAddresses().equals(this.getIpAddresses()) == false)
+            return false;
         if (other.getOsVersion() == null ^ this.getOsVersion() == null)
             return false;
         if (other.getOsVersion() != null && other.getOsVersion().equals(this.getOsVersion()) == false)
@@ -221,6 +303,7 @@ public class AssociatedHost implements Serializable, Cloneable, StructuredPojo {
 
         hashCode = prime * hashCode + ((getHostname() == null) ? 0 : getHostname().hashCode());
         hashCode = prime * hashCode + ((getEc2InstanceId() == null) ? 0 : getEc2InstanceId().hashCode());
+        hashCode = prime * hashCode + ((getIpAddresses() == null) ? 0 : getIpAddresses().hashCode());
         hashCode = prime * hashCode + ((getOsVersion() == null) ? 0 : getOsVersion().hashCode());
         return hashCode;
     }

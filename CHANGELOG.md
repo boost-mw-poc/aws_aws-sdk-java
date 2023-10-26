@@ -1,3 +1,40 @@
+# __1.12.575__ __2023-10-26__
+## __AWS Network Firewall__
+  - ### Features
+    - Network Firewall now supports inspection of outbound SSL/TLS traffic.
+
+## __AWS Systems Manager for SAP__
+  - ### Features
+    - AWS Systems Manager for SAP added support for registration and discovery of SAP ABAP applications
+
+## __AWS Transfer Family__
+  - ### Features
+    - No API changes from previous release. This release migrated the model to Smithy keeping all features unchanged.
+
+## __Amazon AppStream__
+  - ### Features
+    - This release introduces multi-session fleets, allowing customers to provision more than one user session on a single fleet instance.
+
+## __Amazon Elastic Compute Cloud__
+  - ### Features
+    - Launching GetSecurityGroupsForVpc API. This API gets security groups that can be associated by the AWS account making the request with network interfaces in the specified VPC.
+
+## __Amazon OpenSearch Service__
+  - ### Features
+    - You can specify ipv4 or dualstack IPAddressType for cluster endpoints. If you specify IPAddressType as dualstack, the new endpoint will be visible under the 'EndpointV2' parameter and will support IPv4 and IPv6 requests. Whereas, the 'Endpoint' will continue to serve IPv4 requests.
+
+## __Amazon Redshift__
+  - ### Features
+    - Add Redshift APIs GetResourcePolicy, DeleteResourcePolicy, PutResourcePolicy and DescribeInboundIntegrations for the new Amazon Redshift Zero-ETL integration feature, which can be used to control data ingress into Redshift namespace, and view inbound integrations.
+
+## __Amazon SageMaker Service__
+  - ### Features
+    - Amazon Sagemaker Autopilot now supports Text Generation jobs.
+
+## __Amazon Simple Notification Service__
+  - ### Features
+    - Message Archiving and Replay is now supported in Amazon SNS for FIFO topics.
+
 # __1.12.574__ __2023-10-25__
 ## __AWS Ground Station__
   - ### Features

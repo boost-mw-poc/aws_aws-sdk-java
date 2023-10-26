@@ -9009,6 +9009,20 @@ public interface AmazonEC2 {
 
     /**
      * <p>
+     * Gets security groups that can be associated by the Amazon Web Services account making the request with network
+     * interfaces in the specified VPC.
+     * </p>
+     * 
+     * @param getSecurityGroupsForVpcRequest
+     * @return Result of the GetSecurityGroupsForVpc operation returned by the service.
+     * @sample AmazonEC2.GetSecurityGroupsForVpc
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/GetSecurityGroupsForVpc" target="_top">AWS
+     *      API Documentation</a>
+     */
+    GetSecurityGroupsForVpcResult getSecurityGroupsForVpc(GetSecurityGroupsForVpcRequest getSecurityGroupsForVpcRequest);
+
+    /**
+     * <p>
      * Retrieves the access status of your account to the EC2 serial console of all instances. By default, access to the
      * EC2 serial console is disabled for your account. For more information, see <a href=
      * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configure-access-to-serial-console.html#serial-console-account-access"

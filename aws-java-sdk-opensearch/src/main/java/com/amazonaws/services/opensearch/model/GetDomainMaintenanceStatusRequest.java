@@ -33,7 +33,7 @@ public class GetDomainMaintenanceStatusRequest extends com.amazonaws.AmazonWebSe
     private String domainName;
     /**
      * <p>
-     * The request id of the maintenance action.
+     * The request ID of the maintenance action.
      * </p>
      */
     private String maintenanceId;
@@ -80,11 +80,11 @@ public class GetDomainMaintenanceStatusRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The request id of the maintenance action.
+     * The request ID of the maintenance action.
      * </p>
      * 
      * @param maintenanceId
-     *        The request id of the maintenance action.
+     *        The request ID of the maintenance action.
      */
 
     public void setMaintenanceId(String maintenanceId) {
@@ -93,10 +93,10 @@ public class GetDomainMaintenanceStatusRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The request id of the maintenance action.
+     * The request ID of the maintenance action.
      * </p>
      * 
-     * @return The request id of the maintenance action.
+     * @return The request ID of the maintenance action.
      */
 
     public String getMaintenanceId() {
@@ -105,11 +105,11 @@ public class GetDomainMaintenanceStatusRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The request id of the maintenance action.
+     * The request ID of the maintenance action.
      * </p>
      * 
      * @param maintenanceId
-     *        The request id of the maintenance action.
+     *        The request ID of the maintenance action.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

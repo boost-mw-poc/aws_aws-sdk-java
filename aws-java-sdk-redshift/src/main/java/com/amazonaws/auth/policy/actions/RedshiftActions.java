@@ -105,6 +105,8 @@ public enum RedshiftActions implements Action {
     DeleteHsmConfiguration("redshift:DeleteHsmConfiguration"),
     /** Action for the DeletePartner operation. */
     DeletePartner("redshift:DeletePartner"),
+    /** Action for the DeleteResourcePolicy operation. */
+    DeleteResourcePolicy("redshift:DeleteResourcePolicy"),
     /** Action for the DeleteScheduledAction operation. */
     DeleteScheduledAction("redshift:DeleteScheduledAction"),
     /** Action for the DeleteSnapshotCopyGrant operation. */
@@ -161,6 +163,8 @@ public enum RedshiftActions implements Action {
     DescribeHsmClientCertificates("redshift:DescribeHsmClientCertificates"),
     /** Action for the DescribeHsmConfigurations operation. */
     DescribeHsmConfigurations("redshift:DescribeHsmConfigurations"),
+    /** Action for the DescribeInboundIntegrations operation. */
+    DescribeInboundIntegrations("redshift:DescribeInboundIntegrations"),
     /** Action for the DescribeLoggingStatus operation. */
     DescribeLoggingStatus("redshift:DescribeLoggingStatus"),
     /** Action for the DescribeNodeConfigurationOptions operation. */
@@ -209,6 +213,8 @@ public enum RedshiftActions implements Action {
     GetReservedNodeExchangeConfigurationOptions("redshift:GetReservedNodeExchangeConfigurationOptions"),
     /** Action for the GetReservedNodeExchangeOfferings operation. */
     GetReservedNodeExchangeOfferings("redshift:GetReservedNodeExchangeOfferings"),
+    /** Action for the GetResourcePolicy operation. */
+    GetResourcePolicy("redshift:GetResourcePolicy"),
     /** Action for the ModifyAquaConfiguration operation. */
     ModifyAquaConfiguration("redshift:ModifyAquaConfiguration"),
     /** Action for the ModifyAuthenticationProfile operation. */
@@ -247,6 +253,8 @@ public enum RedshiftActions implements Action {
     PauseCluster("redshift:PauseCluster"),
     /** Action for the PurchaseReservedNodeOffering operation. */
     PurchaseReservedNodeOffering("redshift:PurchaseReservedNodeOffering"),
+    /** Action for the PutResourcePolicy operation. */
+    PutResourcePolicy("redshift:PutResourcePolicy"),
     /** Action for the RebootCluster operation. */
     RebootCluster("redshift:RebootCluster"),
     /** Action for the RejectDataShare operation. */

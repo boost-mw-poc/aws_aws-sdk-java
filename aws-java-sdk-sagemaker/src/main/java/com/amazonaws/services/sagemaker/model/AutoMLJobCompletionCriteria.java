@@ -33,8 +33,8 @@ public class AutoMLJobCompletionCriteria implements Serializable, Cloneable, Str
      * The maximum number of times a training job is allowed to run.
      * </p>
      * <p>
-     * For text and image classification, as well as time-series forecasting problem types, the supported value is 1.
-     * For tabular problem types, the maximum value is 750.
+     * For text and image classification, time-series forecasting, as well as text generation (LLMs fine-tuning) problem
+     * types, the supported value is 1. For tabular problem types, the maximum value is 750.
      * </p>
      */
     private Integer maxCandidates;
@@ -71,15 +71,15 @@ public class AutoMLJobCompletionCriteria implements Serializable, Cloneable, Str
      * The maximum number of times a training job is allowed to run.
      * </p>
      * <p>
-     * For text and image classification, as well as time-series forecasting problem types, the supported value is 1.
-     * For tabular problem types, the maximum value is 750.
+     * For text and image classification, time-series forecasting, as well as text generation (LLMs fine-tuning) problem
+     * types, the supported value is 1. For tabular problem types, the maximum value is 750.
      * </p>
      * 
      * @param maxCandidates
      *        The maximum number of times a training job is allowed to run.</p>
      *        <p>
-     *        For text and image classification, as well as time-series forecasting problem types, the supported value
-     *        is 1. For tabular problem types, the maximum value is 750.
+     *        For text and image classification, time-series forecasting, as well as text generation (LLMs fine-tuning)
+     *        problem types, the supported value is 1. For tabular problem types, the maximum value is 750.
      */
 
     public void setMaxCandidates(Integer maxCandidates) {
@@ -91,14 +91,14 @@ public class AutoMLJobCompletionCriteria implements Serializable, Cloneable, Str
      * The maximum number of times a training job is allowed to run.
      * </p>
      * <p>
-     * For text and image classification, as well as time-series forecasting problem types, the supported value is 1.
-     * For tabular problem types, the maximum value is 750.
+     * For text and image classification, time-series forecasting, as well as text generation (LLMs fine-tuning) problem
+     * types, the supported value is 1. For tabular problem types, the maximum value is 750.
      * </p>
      * 
      * @return The maximum number of times a training job is allowed to run.</p>
      *         <p>
-     *         For text and image classification, as well as time-series forecasting problem types, the supported value
-     *         is 1. For tabular problem types, the maximum value is 750.
+     *         For text and image classification, time-series forecasting, as well as text generation (LLMs fine-tuning)
+     *         problem types, the supported value is 1. For tabular problem types, the maximum value is 750.
      */
 
     public Integer getMaxCandidates() {
@@ -110,15 +110,15 @@ public class AutoMLJobCompletionCriteria implements Serializable, Cloneable, Str
      * The maximum number of times a training job is allowed to run.
      * </p>
      * <p>
-     * For text and image classification, as well as time-series forecasting problem types, the supported value is 1.
-     * For tabular problem types, the maximum value is 750.
+     * For text and image classification, time-series forecasting, as well as text generation (LLMs fine-tuning) problem
+     * types, the supported value is 1. For tabular problem types, the maximum value is 750.
      * </p>
      * 
      * @param maxCandidates
      *        The maximum number of times a training job is allowed to run.</p>
      *        <p>
-     *        For text and image classification, as well as time-series forecasting problem types, the supported value
-     *        is 1. For tabular problem types, the maximum value is 750.
+     *        For text and image classification, time-series forecasting, as well as text generation (LLMs fine-tuning)
+     *        problem types, the supported value is 1. For tabular problem types, the maximum value is 750.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.ssmsap.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -31,6 +32,8 @@ public class AssociatedHostMarshaller {
             .marshallLocationName("Hostname").build();
     private static final MarshallingInfo<String> EC2INSTANCEID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Ec2InstanceId").build();
+    private static final MarshallingInfo<List> IPADDRESSES_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("IpAddresses").build();
     private static final MarshallingInfo<String> OSVERSION_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("OsVersion").build();
 
@@ -52,6 +55,7 @@ public class AssociatedHostMarshaller {
         try {
             protocolMarshaller.marshall(associatedHost.getHostname(), HOSTNAME_BINDING);
             protocolMarshaller.marshall(associatedHost.getEc2InstanceId(), EC2INSTANCEID_BINDING);
+            protocolMarshaller.marshall(associatedHost.getIpAddresses(), IPADDRESSES_BINDING);
             protocolMarshaller.marshall(associatedHost.getOsVersion(), OSVERSION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

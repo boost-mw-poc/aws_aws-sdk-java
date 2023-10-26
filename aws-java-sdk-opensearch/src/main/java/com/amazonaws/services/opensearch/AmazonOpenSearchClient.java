@@ -2209,7 +2209,7 @@ public class AmazonOpenSearchClient extends AmazonWebServiceClient implements Am
 
     /**
      * <p>
-     * Get the status of the maintenance action.
+     * The status of the maintenance action.
      * </p>
      * 
      * @param getDomainMaintenanceStatusRequest
@@ -2473,7 +2473,7 @@ public class AmazonOpenSearchClient extends AmazonWebServiceClient implements Am
 
     /**
      * <p>
-     * Get the list of the maintenance action.
+     * A list of maintenance actions for the domain.
      * </p>
      * 
      * @param listDomainMaintenancesRequest
@@ -3428,8 +3428,8 @@ public class AmazonOpenSearchClient extends AmazonWebServiceClient implements Am
 
     /**
      * <p>
-     * Starts the node maintenance (Node restart, Node reboot, Opensearch/Elasticsearch process restart,
-     * Dashboard/kibana restart) on the data node.
+     * Starts the node maintenance process on the data node. These processes can include a node reboot, an Opensearch or
+     * Elasticsearch process restart, or a Dashboard or Kibana restart.
      * </p>
      * 
      * @param startDomainMaintenanceRequest

@@ -17,7 +17,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The result of a <code>GetDomainMaintenanceStatus</code> request. Contains information about the requested action.
+ * The result of a <code>GetDomainMaintenanceStatus</code> request that information about the requested action.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
@@ -25,48 +25,48 @@ public class GetDomainMaintenanceStatusResult extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * Contains status of the maintenance action.
+     * The status of the maintenance action.
      * </p>
      */
     private String status;
     /**
      * <p>
-     * Contains status message of the maintenance action.
+     * The status message of the maintenance action.
      * </p>
      */
     private String statusMessage;
     /**
      * <p>
-     * Contains node id of maintenance action.
+     * The node ID of the maintenance action.
      * </p>
      */
     private String nodeId;
     /**
      * <p>
-     * Contains action name.
+     * The action name.
      * </p>
      */
     private String action;
     /**
      * <p>
-     * Contains time at which action created.
+     * The time at which the action was created.
      * </p>
      */
     private java.util.Date createdAt;
     /**
      * <p>
-     * Contains time at which action updated.
+     * The time at which the action was updated.
      * </p>
      */
     private java.util.Date updatedAt;
 
     /**
      * <p>
-     * Contains status of the maintenance action.
+     * The status of the maintenance action.
      * </p>
      * 
      * @param status
-     *        Contains status of the maintenance action.
+     *        The status of the maintenance action.
      * @see MaintenanceStatus
      */
 
@@ -76,10 +76,10 @@ public class GetDomainMaintenanceStatusResult extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * Contains status of the maintenance action.
+     * The status of the maintenance action.
      * </p>
      * 
-     * @return Contains status of the maintenance action.
+     * @return The status of the maintenance action.
      * @see MaintenanceStatus
      */
 
@@ -89,11 +89,11 @@ public class GetDomainMaintenanceStatusResult extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * Contains status of the maintenance action.
+     * The status of the maintenance action.
      * </p>
      * 
      * @param status
-     *        Contains status of the maintenance action.
+     *        The status of the maintenance action.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see MaintenanceStatus
      */
@@ -105,11 +105,11 @@ public class GetDomainMaintenanceStatusResult extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * Contains status of the maintenance action.
+     * The status of the maintenance action.
      * </p>
      * 
      * @param status
-     *        Contains status of the maintenance action.
+     *        The status of the maintenance action.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see MaintenanceStatus
      */
@@ -121,11 +121,11 @@ public class GetDomainMaintenanceStatusResult extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * Contains status message of the maintenance action.
+     * The status message of the maintenance action.
      * </p>
      * 
      * @param statusMessage
-     *        Contains status message of the maintenance action.
+     *        The status message of the maintenance action.
      */
 
     public void setStatusMessage(String statusMessage) {
@@ -134,10 +134,10 @@ public class GetDomainMaintenanceStatusResult extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * Contains status message of the maintenance action.
+     * The status message of the maintenance action.
      * </p>
      * 
-     * @return Contains status message of the maintenance action.
+     * @return The status message of the maintenance action.
      */
 
     public String getStatusMessage() {
@@ -146,11 +146,11 @@ public class GetDomainMaintenanceStatusResult extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * Contains status message of the maintenance action.
+     * The status message of the maintenance action.
      * </p>
      * 
      * @param statusMessage
-     *        Contains status message of the maintenance action.
+     *        The status message of the maintenance action.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -161,11 +161,11 @@ public class GetDomainMaintenanceStatusResult extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * Contains node id of maintenance action.
+     * The node ID of the maintenance action.
      * </p>
      * 
      * @param nodeId
-     *        Contains node id of maintenance action.
+     *        The node ID of the maintenance action.
      */
 
     public void setNodeId(String nodeId) {
@@ -174,10 +174,10 @@ public class GetDomainMaintenanceStatusResult extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * Contains node id of maintenance action.
+     * The node ID of the maintenance action.
      * </p>
      * 
-     * @return Contains node id of maintenance action.
+     * @return The node ID of the maintenance action.
      */
 
     public String getNodeId() {
@@ -186,11 +186,11 @@ public class GetDomainMaintenanceStatusResult extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * Contains node id of maintenance action.
+     * The node ID of the maintenance action.
      * </p>
      * 
      * @param nodeId
-     *        Contains node id of maintenance action.
+     *        The node ID of the maintenance action.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -201,11 +201,11 @@ public class GetDomainMaintenanceStatusResult extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * Contains action name.
+     * The action name.
      * </p>
      * 
      * @param action
-     *        Contains action name.
+     *        The action name.
      * @see MaintenanceType
      */
 
@@ -215,10 +215,10 @@ public class GetDomainMaintenanceStatusResult extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * Contains action name.
+     * The action name.
      * </p>
      * 
-     * @return Contains action name.
+     * @return The action name.
      * @see MaintenanceType
      */
 
@@ -228,11 +228,11 @@ public class GetDomainMaintenanceStatusResult extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * Contains action name.
+     * The action name.
      * </p>
      * 
      * @param action
-     *        Contains action name.
+     *        The action name.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see MaintenanceType
      */
@@ -244,11 +244,11 @@ public class GetDomainMaintenanceStatusResult extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * Contains action name.
+     * The action name.
      * </p>
      * 
      * @param action
-     *        Contains action name.
+     *        The action name.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see MaintenanceType
      */
@@ -260,11 +260,11 @@ public class GetDomainMaintenanceStatusResult extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * Contains time at which action created.
+     * The time at which the action was created.
      * </p>
      * 
      * @param createdAt
-     *        Contains time at which action created.
+     *        The time at which the action was created.
      */
 
     public void setCreatedAt(java.util.Date createdAt) {
@@ -273,10 +273,10 @@ public class GetDomainMaintenanceStatusResult extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * Contains time at which action created.
+     * The time at which the action was created.
      * </p>
      * 
-     * @return Contains time at which action created.
+     * @return The time at which the action was created.
      */
 
     public java.util.Date getCreatedAt() {
@@ -285,11 +285,11 @@ public class GetDomainMaintenanceStatusResult extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * Contains time at which action created.
+     * The time at which the action was created.
      * </p>
      * 
      * @param createdAt
-     *        Contains time at which action created.
+     *        The time at which the action was created.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -300,11 +300,11 @@ public class GetDomainMaintenanceStatusResult extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * Contains time at which action updated.
+     * The time at which the action was updated.
      * </p>
      * 
      * @param updatedAt
-     *        Contains time at which action updated.
+     *        The time at which the action was updated.
      */
 
     public void setUpdatedAt(java.util.Date updatedAt) {
@@ -313,10 +313,10 @@ public class GetDomainMaintenanceStatusResult extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * Contains time at which action updated.
+     * The time at which the action was updated.
      * </p>
      * 
-     * @return Contains time at which action updated.
+     * @return The time at which the action was updated.
      */
 
     public java.util.Date getUpdatedAt() {
@@ -325,11 +325,11 @@ public class GetDomainMaintenanceStatusResult extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * Contains time at which action updated.
+     * The time at which the action was updated.
      * </p>
      * 
      * @param updatedAt
-     *        Contains time at which action updated.
+     *        The time at which the action was updated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

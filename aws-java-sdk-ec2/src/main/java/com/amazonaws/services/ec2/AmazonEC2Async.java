@@ -20782,6 +20782,39 @@ public interface AmazonEC2Async extends AmazonEC2 {
 
     /**
      * <p>
+     * Gets security groups that can be associated by the Amazon Web Services account making the request with network
+     * interfaces in the specified VPC.
+     * </p>
+     * 
+     * @param getSecurityGroupsForVpcRequest
+     * @return A Java Future containing the result of the GetSecurityGroupsForVpc operation returned by the service.
+     * @sample AmazonEC2Async.GetSecurityGroupsForVpc
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/GetSecurityGroupsForVpc" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<GetSecurityGroupsForVpcResult> getSecurityGroupsForVpcAsync(GetSecurityGroupsForVpcRequest getSecurityGroupsForVpcRequest);
+
+    /**
+     * <p>
+     * Gets security groups that can be associated by the Amazon Web Services account making the request with network
+     * interfaces in the specified VPC.
+     * </p>
+     * 
+     * @param getSecurityGroupsForVpcRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetSecurityGroupsForVpc operation returned by the service.
+     * @sample AmazonEC2AsyncHandler.GetSecurityGroupsForVpc
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/GetSecurityGroupsForVpc" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<GetSecurityGroupsForVpcResult> getSecurityGroupsForVpcAsync(GetSecurityGroupsForVpcRequest getSecurityGroupsForVpcRequest,
+            com.amazonaws.handlers.AsyncHandler<GetSecurityGroupsForVpcRequest, GetSecurityGroupsForVpcResult> asyncHandler);
+
+    /**
+     * <p>
      * Retrieves the access status of your account to the EC2 serial console of all instances. By default, access to the
      * EC2 serial console is disabled for your account. For more information, see <a href=
      * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configure-access-to-serial-console.html#serial-console-account-access"

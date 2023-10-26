@@ -60,6 +60,11 @@ public class CreateAutoMLJobV2Request extends com.amazonaws.AmazonWebServiceRequ
      * For time-series forecasting: <code>S3Prefix</code>.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * For text generation (LLMs fine-tuning): <code>S3Prefix</code>.
+     * </p>
+     * </li>
      * </ul>
      */
     private java.util.List<AutoMLJobChannel> autoMLJobInputDataConfig;
@@ -104,11 +109,26 @@ public class CreateAutoMLJobV2Request extends com.amazonaws.AmazonWebServiceRequ
      * >AutoMLJobObjective</a>.
      * </p>
      * <note>
+     * <ul>
+     * <li>
      * <p>
-     * For tabular problem types, you must either provide both the <code>AutoMLJobObjective</code> and indicate the type
+     * For tabular problem types: You must either provide both the <code>AutoMLJobObjective</code> and indicate the type
      * of supervised learning problem in <code>AutoMLProblemTypeConfig</code> (<code>TabularJobConfig.ProblemType</code>
      * ), or none at all.
      * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For text generation problem types (LLMs fine-tuning): Fine-tuning language models in Autopilot does not require
+     * setting the <code>AutoMLJobObjective</code> field. Autopilot fine-tunes LLMs without requiring multiple
+     * candidates to be trained and evaluated. Instead, using your dataset, Autopilot directly fine-tunes your target
+     * model to enhance a default objective metric, the cross-entropy loss. After fine-tuning a language model, you can
+     * evaluate the quality of its generated text using different metrics. For a list of the available metrics, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/llms-finetuning-models.html">Metrics for fine-tuning LLMs
+     * in Autopilot</a>.
+     * </p>
+     * </li>
+     * </ul>
      * </note>
      */
     private AutoMLJobObjective autoMLJobObjective;
@@ -204,6 +224,11 @@ public class CreateAutoMLJobV2Request extends com.amazonaws.AmazonWebServiceRequ
      * For time-series forecasting: <code>S3Prefix</code>.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * For text generation (LLMs fine-tuning): <code>S3Prefix</code>.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @return An array of channel objects describing the input data and their location. Each channel is a named input
@@ -231,6 +256,11 @@ public class CreateAutoMLJobV2Request extends com.amazonaws.AmazonWebServiceRequ
      *         <li>
      *         <p>
      *         For time-series forecasting: <code>S3Prefix</code>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         For text generation (LLMs fine-tuning): <code>S3Prefix</code>.
      *         </p>
      *         </li>
      */
@@ -268,6 +298,11 @@ public class CreateAutoMLJobV2Request extends com.amazonaws.AmazonWebServiceRequ
      * For time-series forecasting: <code>S3Prefix</code>.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * For text generation (LLMs fine-tuning): <code>S3Prefix</code>.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param autoMLJobInputDataConfig
@@ -296,6 +331,11 @@ public class CreateAutoMLJobV2Request extends com.amazonaws.AmazonWebServiceRequ
      *        <li>
      *        <p>
      *        For time-series forecasting: <code>S3Prefix</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        For text generation (LLMs fine-tuning): <code>S3Prefix</code>.
      *        </p>
      *        </li>
      */
@@ -338,6 +378,11 @@ public class CreateAutoMLJobV2Request extends com.amazonaws.AmazonWebServiceRequ
      * For time-series forecasting: <code>S3Prefix</code>.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * For text generation (LLMs fine-tuning): <code>S3Prefix</code>.
+     * </p>
+     * </li>
      * </ul>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -371,6 +416,11 @@ public class CreateAutoMLJobV2Request extends com.amazonaws.AmazonWebServiceRequ
      *        <li>
      *        <p>
      *        For time-series forecasting: <code>S3Prefix</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        For text generation (LLMs fine-tuning): <code>S3Prefix</code>.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -415,6 +465,11 @@ public class CreateAutoMLJobV2Request extends com.amazonaws.AmazonWebServiceRequ
      * For time-series forecasting: <code>S3Prefix</code>.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * For text generation (LLMs fine-tuning): <code>S3Prefix</code>.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param autoMLJobInputDataConfig
@@ -443,6 +498,11 @@ public class CreateAutoMLJobV2Request extends com.amazonaws.AmazonWebServiceRequ
      *        <li>
      *        <p>
      *        For time-series forecasting: <code>S3Prefix</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        For text generation (LLMs fine-tuning): <code>S3Prefix</code>.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -718,11 +778,26 @@ public class CreateAutoMLJobV2Request extends com.amazonaws.AmazonWebServiceRequ
      * >AutoMLJobObjective</a>.
      * </p>
      * <note>
+     * <ul>
+     * <li>
      * <p>
-     * For tabular problem types, you must either provide both the <code>AutoMLJobObjective</code> and indicate the type
+     * For tabular problem types: You must either provide both the <code>AutoMLJobObjective</code> and indicate the type
      * of supervised learning problem in <code>AutoMLProblemTypeConfig</code> (<code>TabularJobConfig.ProblemType</code>
      * ), or none at all.
      * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For text generation problem types (LLMs fine-tuning): Fine-tuning language models in Autopilot does not require
+     * setting the <code>AutoMLJobObjective</code> field. Autopilot fine-tunes LLMs without requiring multiple
+     * candidates to be trained and evaluated. Instead, using your dataset, Autopilot directly fine-tunes your target
+     * model to enhance a default objective metric, the cross-entropy loss. After fine-tuning a language model, you can
+     * evaluate the quality of its generated text using different metrics. For a list of the available metrics, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/llms-finetuning-models.html">Metrics for fine-tuning LLMs
+     * in Autopilot</a>.
+     * </p>
+     * </li>
+     * </ul>
      * </note>
      * 
      * @param autoMLJobObjective
@@ -730,11 +805,27 @@ public class CreateAutoMLJobV2Request extends com.amazonaws.AmazonWebServiceRequ
      *        objective metric depends on the problem type. For the list of default values per problem type, see <a
      *        href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AutoMLJobObjective.html">
      *        AutoMLJobObjective</a>.</p> <note>
+     *        <ul>
+     *        <li>
      *        <p>
-     *        For tabular problem types, you must either provide both the <code>AutoMLJobObjective</code> and indicate
+     *        For tabular problem types: You must either provide both the <code>AutoMLJobObjective</code> and indicate
      *        the type of supervised learning problem in <code>AutoMLProblemTypeConfig</code> (
      *        <code>TabularJobConfig.ProblemType</code>), or none at all.
      *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        For text generation problem types (LLMs fine-tuning): Fine-tuning language models in Autopilot does not
+     *        require setting the <code>AutoMLJobObjective</code> field. Autopilot fine-tunes LLMs without requiring
+     *        multiple candidates to be trained and evaluated. Instead, using your dataset, Autopilot directly
+     *        fine-tunes your target model to enhance a default objective metric, the cross-entropy loss. After
+     *        fine-tuning a language model, you can evaluate the quality of its generated text using different metrics.
+     *        For a list of the available metrics, see <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/dg/llms-finetuning-models.html">Metrics for fine-tuning
+     *        LLMs in Autopilot</a>.
+     *        </p>
+     *        </li>
+     *        </ul>
      */
 
     public void setAutoMLJobObjective(AutoMLJobObjective autoMLJobObjective) {
@@ -749,22 +840,53 @@ public class CreateAutoMLJobV2Request extends com.amazonaws.AmazonWebServiceRequ
      * >AutoMLJobObjective</a>.
      * </p>
      * <note>
+     * <ul>
+     * <li>
      * <p>
-     * For tabular problem types, you must either provide both the <code>AutoMLJobObjective</code> and indicate the type
+     * For tabular problem types: You must either provide both the <code>AutoMLJobObjective</code> and indicate the type
      * of supervised learning problem in <code>AutoMLProblemTypeConfig</code> (<code>TabularJobConfig.ProblemType</code>
      * ), or none at all.
      * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For text generation problem types (LLMs fine-tuning): Fine-tuning language models in Autopilot does not require
+     * setting the <code>AutoMLJobObjective</code> field. Autopilot fine-tunes LLMs without requiring multiple
+     * candidates to be trained and evaluated. Instead, using your dataset, Autopilot directly fine-tunes your target
+     * model to enhance a default objective metric, the cross-entropy loss. After fine-tuning a language model, you can
+     * evaluate the quality of its generated text using different metrics. For a list of the available metrics, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/llms-finetuning-models.html">Metrics for fine-tuning LLMs
+     * in Autopilot</a>.
+     * </p>
+     * </li>
+     * </ul>
      * </note>
      * 
      * @return Specifies a metric to minimize or maximize as the objective of a job. If not specified, the default
      *         objective metric depends on the problem type. For the list of default values per problem type, see <a
      *         href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AutoMLJobObjective.html">
      *         AutoMLJobObjective</a>.</p> <note>
+     *         <ul>
+     *         <li>
      *         <p>
-     *         For tabular problem types, you must either provide both the <code>AutoMLJobObjective</code> and indicate
+     *         For tabular problem types: You must either provide both the <code>AutoMLJobObjective</code> and indicate
      *         the type of supervised learning problem in <code>AutoMLProblemTypeConfig</code> (
      *         <code>TabularJobConfig.ProblemType</code>), or none at all.
      *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         For text generation problem types (LLMs fine-tuning): Fine-tuning language models in Autopilot does not
+     *         require setting the <code>AutoMLJobObjective</code> field. Autopilot fine-tunes LLMs without requiring
+     *         multiple candidates to be trained and evaluated. Instead, using your dataset, Autopilot directly
+     *         fine-tunes your target model to enhance a default objective metric, the cross-entropy loss. After
+     *         fine-tuning a language model, you can evaluate the quality of its generated text using different metrics.
+     *         For a list of the available metrics, see <a
+     *         href="https://docs.aws.amazon.com/sagemaker/latest/dg/llms-finetuning-models.html">Metrics for
+     *         fine-tuning LLMs in Autopilot</a>.
+     *         </p>
+     *         </li>
+     *         </ul>
      */
 
     public AutoMLJobObjective getAutoMLJobObjective() {
@@ -779,11 +901,26 @@ public class CreateAutoMLJobV2Request extends com.amazonaws.AmazonWebServiceRequ
      * >AutoMLJobObjective</a>.
      * </p>
      * <note>
+     * <ul>
+     * <li>
      * <p>
-     * For tabular problem types, you must either provide both the <code>AutoMLJobObjective</code> and indicate the type
+     * For tabular problem types: You must either provide both the <code>AutoMLJobObjective</code> and indicate the type
      * of supervised learning problem in <code>AutoMLProblemTypeConfig</code> (<code>TabularJobConfig.ProblemType</code>
      * ), or none at all.
      * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For text generation problem types (LLMs fine-tuning): Fine-tuning language models in Autopilot does not require
+     * setting the <code>AutoMLJobObjective</code> field. Autopilot fine-tunes LLMs without requiring multiple
+     * candidates to be trained and evaluated. Instead, using your dataset, Autopilot directly fine-tunes your target
+     * model to enhance a default objective metric, the cross-entropy loss. After fine-tuning a language model, you can
+     * evaluate the quality of its generated text using different metrics. For a list of the available metrics, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/llms-finetuning-models.html">Metrics for fine-tuning LLMs
+     * in Autopilot</a>.
+     * </p>
+     * </li>
+     * </ul>
      * </note>
      * 
      * @param autoMLJobObjective
@@ -791,11 +928,27 @@ public class CreateAutoMLJobV2Request extends com.amazonaws.AmazonWebServiceRequ
      *        objective metric depends on the problem type. For the list of default values per problem type, see <a
      *        href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AutoMLJobObjective.html">
      *        AutoMLJobObjective</a>.</p> <note>
+     *        <ul>
+     *        <li>
      *        <p>
-     *        For tabular problem types, you must either provide both the <code>AutoMLJobObjective</code> and indicate
+     *        For tabular problem types: You must either provide both the <code>AutoMLJobObjective</code> and indicate
      *        the type of supervised learning problem in <code>AutoMLProblemTypeConfig</code> (
      *        <code>TabularJobConfig.ProblemType</code>), or none at all.
      *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        For text generation problem types (LLMs fine-tuning): Fine-tuning language models in Autopilot does not
+     *        require setting the <code>AutoMLJobObjective</code> field. Autopilot fine-tunes LLMs without requiring
+     *        multiple candidates to be trained and evaluated. Instead, using your dataset, Autopilot directly
+     *        fine-tunes your target model to enhance a default objective metric, the cross-entropy loss. After
+     *        fine-tuning a language model, you can evaluate the quality of its generated text using different metrics.
+     *        For a list of the available metrics, see <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/dg/llms-finetuning-models.html">Metrics for fine-tuning
+     *        LLMs in Autopilot</a>.
+     *        </p>
+     *        </li>
+     *        </ul>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -7273,6 +7273,19 @@ public class AbstractAmazonEC2Async extends AbstractAmazonEC2 implements AmazonE
     }
 
     @Override
+    public java.util.concurrent.Future<GetSecurityGroupsForVpcResult> getSecurityGroupsForVpcAsync(GetSecurityGroupsForVpcRequest request) {
+
+        return getSecurityGroupsForVpcAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetSecurityGroupsForVpcResult> getSecurityGroupsForVpcAsync(GetSecurityGroupsForVpcRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetSecurityGroupsForVpcRequest, GetSecurityGroupsForVpcResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetSerialConsoleAccessStatusResult> getSerialConsoleAccessStatusAsync(GetSerialConsoleAccessStatusRequest request) {
 
         return getSerialConsoleAccessStatusAsync(request, null);

@@ -39,7 +39,7 @@ public class StartDomainMaintenanceRequest extends com.amazonaws.AmazonWebServic
     private String action;
     /**
      * <p>
-     * Id of the data node.
+     * The ID of the data node.
      * </p>
      */
     private String nodeId;
@@ -145,11 +145,11 @@ public class StartDomainMaintenanceRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * Id of the data node.
+     * The ID of the data node.
      * </p>
      * 
      * @param nodeId
-     *        Id of the data node.
+     *        The ID of the data node.
      */
 
     public void setNodeId(String nodeId) {
@@ -158,10 +158,10 @@ public class StartDomainMaintenanceRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * Id of the data node.
+     * The ID of the data node.
      * </p>
      * 
-     * @return Id of the data node.
+     * @return The ID of the data node.
      */
 
     public String getNodeId() {
@@ -170,11 +170,11 @@ public class StartDomainMaintenanceRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * Id of the data node.
+     * The ID of the data node.
      * </p>
      * 
      * @param nodeId
-     *        Id of the data node.
+     *        The ID of the data node.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -35,6 +35,8 @@ public class ResilienceMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("HsrOperationMode").build();
     private static final MarshallingInfo<String> CLUSTERSTATUS_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ClusterStatus").build();
+    private static final MarshallingInfo<Boolean> ENQUEUEREPLICATION_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EnqueueReplication").build();
 
     private static final ResilienceMarshaller instance = new ResilienceMarshaller();
 
@@ -56,6 +58,7 @@ public class ResilienceMarshaller {
             protocolMarshaller.marshall(resilience.getHsrReplicationMode(), HSRREPLICATIONMODE_BINDING);
             protocolMarshaller.marshall(resilience.getHsrOperationMode(), HSROPERATIONMODE_BINDING);
             protocolMarshaller.marshall(resilience.getClusterStatus(), CLUSTERSTATUS_BINDING);
+            protocolMarshaller.marshall(resilience.getEnqueueReplication(), ENQUEUEREPLICATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

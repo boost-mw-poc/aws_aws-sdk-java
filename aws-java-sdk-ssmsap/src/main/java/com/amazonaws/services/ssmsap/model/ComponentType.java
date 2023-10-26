@@ -21,7 +21,13 @@ import javax.annotation.Generated;
 public enum ComponentType {
 
     HANA("HANA"),
-    HANA_NODE("HANA_NODE");
+    HANA_NODE("HANA_NODE"),
+    ABAP("ABAP"),
+    ASCS("ASCS"),
+    DIALOG("DIALOG"),
+    WEBDISP("WEBDISP"),
+    WD("WD"),
+    ERS("ERS");
 
     private String value;
 

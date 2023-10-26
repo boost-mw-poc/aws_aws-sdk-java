@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The resolved attributes specific to the problem type of an AutoML job V2.
+ * Stores resolved attributes specific to the problem type of an AutoML job V2.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/AutoMLProblemTypeResolvedAttributes"
@@ -30,18 +30,24 @@ public class AutoMLProblemTypeResolvedAttributes implements Serializable, Clonea
 
     /**
      * <p>
-     * Defines the resolved attributes for the <code>TABULAR</code> problem type.
+     * The resolved attributes for the tabular problem type.
      * </p>
      */
     private TabularResolvedAttributes tabularResolvedAttributes;
+    /**
+     * <p>
+     * The resolved attributes for the text generation problem type.
+     * </p>
+     */
+    private TextGenerationResolvedAttributes textGenerationResolvedAttributes;
 
     /**
      * <p>
-     * Defines the resolved attributes for the <code>TABULAR</code> problem type.
+     * The resolved attributes for the tabular problem type.
      * </p>
      * 
      * @param tabularResolvedAttributes
-     *        Defines the resolved attributes for the <code>TABULAR</code> problem type.
+     *        The resolved attributes for the tabular problem type.
      */
 
     public void setTabularResolvedAttributes(TabularResolvedAttributes tabularResolvedAttributes) {
@@ -50,10 +56,10 @@ public class AutoMLProblemTypeResolvedAttributes implements Serializable, Clonea
 
     /**
      * <p>
-     * Defines the resolved attributes for the <code>TABULAR</code> problem type.
+     * The resolved attributes for the tabular problem type.
      * </p>
      * 
-     * @return Defines the resolved attributes for the <code>TABULAR</code> problem type.
+     * @return The resolved attributes for the tabular problem type.
      */
 
     public TabularResolvedAttributes getTabularResolvedAttributes() {
@@ -62,16 +68,56 @@ public class AutoMLProblemTypeResolvedAttributes implements Serializable, Clonea
 
     /**
      * <p>
-     * Defines the resolved attributes for the <code>TABULAR</code> problem type.
+     * The resolved attributes for the tabular problem type.
      * </p>
      * 
      * @param tabularResolvedAttributes
-     *        Defines the resolved attributes for the <code>TABULAR</code> problem type.
+     *        The resolved attributes for the tabular problem type.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public AutoMLProblemTypeResolvedAttributes withTabularResolvedAttributes(TabularResolvedAttributes tabularResolvedAttributes) {
         setTabularResolvedAttributes(tabularResolvedAttributes);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The resolved attributes for the text generation problem type.
+     * </p>
+     * 
+     * @param textGenerationResolvedAttributes
+     *        The resolved attributes for the text generation problem type.
+     */
+
+    public void setTextGenerationResolvedAttributes(TextGenerationResolvedAttributes textGenerationResolvedAttributes) {
+        this.textGenerationResolvedAttributes = textGenerationResolvedAttributes;
+    }
+
+    /**
+     * <p>
+     * The resolved attributes for the text generation problem type.
+     * </p>
+     * 
+     * @return The resolved attributes for the text generation problem type.
+     */
+
+    public TextGenerationResolvedAttributes getTextGenerationResolvedAttributes() {
+        return this.textGenerationResolvedAttributes;
+    }
+
+    /**
+     * <p>
+     * The resolved attributes for the text generation problem type.
+     * </p>
+     * 
+     * @param textGenerationResolvedAttributes
+     *        The resolved attributes for the text generation problem type.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AutoMLProblemTypeResolvedAttributes withTextGenerationResolvedAttributes(TextGenerationResolvedAttributes textGenerationResolvedAttributes) {
+        setTextGenerationResolvedAttributes(textGenerationResolvedAttributes);
         return this;
     }
 
@@ -88,7 +134,9 @@ public class AutoMLProblemTypeResolvedAttributes implements Serializable, Clonea
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getTabularResolvedAttributes() != null)
-            sb.append("TabularResolvedAttributes: ").append(getTabularResolvedAttributes());
+            sb.append("TabularResolvedAttributes: ").append(getTabularResolvedAttributes()).append(",");
+        if (getTextGenerationResolvedAttributes() != null)
+            sb.append("TextGenerationResolvedAttributes: ").append(getTextGenerationResolvedAttributes());
         sb.append("}");
         return sb.toString();
     }
@@ -107,6 +155,11 @@ public class AutoMLProblemTypeResolvedAttributes implements Serializable, Clonea
             return false;
         if (other.getTabularResolvedAttributes() != null && other.getTabularResolvedAttributes().equals(this.getTabularResolvedAttributes()) == false)
             return false;
+        if (other.getTextGenerationResolvedAttributes() == null ^ this.getTextGenerationResolvedAttributes() == null)
+            return false;
+        if (other.getTextGenerationResolvedAttributes() != null
+                && other.getTextGenerationResolvedAttributes().equals(this.getTextGenerationResolvedAttributes()) == false)
+            return false;
         return true;
     }
 
@@ -116,6 +169,7 @@ public class AutoMLProblemTypeResolvedAttributes implements Serializable, Clonea
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getTabularResolvedAttributes() == null) ? 0 : getTabularResolvedAttributes().hashCode());
+        hashCode = prime * hashCode + ((getTextGenerationResolvedAttributes() == null) ? 0 : getTextGenerationResolvedAttributes().hashCode());
         return hashCode;
     }
 

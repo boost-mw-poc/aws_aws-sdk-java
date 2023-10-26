@@ -73,6 +73,12 @@ public class AutoMLJobChannel implements Serializable, Cloneable, StructuredPojo
      * <code>x-application/vnd.amazon+parquet</code>. The default value is <code>text/csv;header=present</code>.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * For text generation (LLMs fine-tuning): <code>text/csv;header=present</code> or
+     * <code>x-application/vnd.amazon+parquet</code>. The default value is <code>text/csv;header=present</code>.
+     * </p>
+     * </li>
      * </ul>
      */
     private String contentType;
@@ -228,6 +234,12 @@ public class AutoMLJobChannel implements Serializable, Cloneable, StructuredPojo
      * <code>x-application/vnd.amazon+parquet</code>. The default value is <code>text/csv;header=present</code>.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * For text generation (LLMs fine-tuning): <code>text/csv;header=present</code> or
+     * <code>x-application/vnd.amazon+parquet</code>. The default value is <code>text/csv;header=present</code>.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param contentType
@@ -255,6 +267,12 @@ public class AutoMLJobChannel implements Serializable, Cloneable, StructuredPojo
      *        <li>
      *        <p>
      *        For time-series forecasting: <code>text/csv;header=present</code> or
+     *        <code>x-application/vnd.amazon+parquet</code>. The default value is <code>text/csv;header=present</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        For text generation (LLMs fine-tuning): <code>text/csv;header=present</code> or
      *        <code>x-application/vnd.amazon+parquet</code>. The default value is <code>text/csv;header=present</code>.
      *        </p>
      *        </li>
@@ -294,6 +312,12 @@ public class AutoMLJobChannel implements Serializable, Cloneable, StructuredPojo
      * <code>x-application/vnd.amazon+parquet</code>. The default value is <code>text/csv;header=present</code>.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * For text generation (LLMs fine-tuning): <code>text/csv;header=present</code> or
+     * <code>x-application/vnd.amazon+parquet</code>. The default value is <code>text/csv;header=present</code>.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @return The content type of the data from the input source. The following are the allowed content types for
@@ -320,6 +344,12 @@ public class AutoMLJobChannel implements Serializable, Cloneable, StructuredPojo
      *         <li>
      *         <p>
      *         For time-series forecasting: <code>text/csv;header=present</code> or
+     *         <code>x-application/vnd.amazon+parquet</code>. The default value is <code>text/csv;header=present</code>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         For text generation (LLMs fine-tuning): <code>text/csv;header=present</code> or
      *         <code>x-application/vnd.amazon+parquet</code>. The default value is <code>text/csv;header=present</code>.
      *         </p>
      *         </li>
@@ -359,6 +389,12 @@ public class AutoMLJobChannel implements Serializable, Cloneable, StructuredPojo
      * <code>x-application/vnd.amazon+parquet</code>. The default value is <code>text/csv;header=present</code>.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * For text generation (LLMs fine-tuning): <code>text/csv;header=present</code> or
+     * <code>x-application/vnd.amazon+parquet</code>. The default value is <code>text/csv;header=present</code>.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param contentType
@@ -386,6 +422,12 @@ public class AutoMLJobChannel implements Serializable, Cloneable, StructuredPojo
      *        <li>
      *        <p>
      *        For time-series forecasting: <code>text/csv;header=present</code> or
+     *        <code>x-application/vnd.amazon+parquet</code>. The default value is <code>text/csv;header=present</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        For text generation (LLMs fine-tuning): <code>text/csv;header=present</code> or
      *        <code>x-application/vnd.amazon+parquet</code>. The default value is <code>text/csv;header=present</code>.
      *        </p>
      *        </li>

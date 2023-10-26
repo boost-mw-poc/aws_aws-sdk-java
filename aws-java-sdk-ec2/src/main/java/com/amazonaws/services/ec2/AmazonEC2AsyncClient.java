@@ -16471,6 +16471,39 @@ public class AmazonEC2AsyncClient extends AmazonEC2Client implements AmazonEC2As
     }
 
     @Override
+    public java.util.concurrent.Future<GetSecurityGroupsForVpcResult> getSecurityGroupsForVpcAsync(GetSecurityGroupsForVpcRequest request) {
+
+        return getSecurityGroupsForVpcAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetSecurityGroupsForVpcResult> getSecurityGroupsForVpcAsync(final GetSecurityGroupsForVpcRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetSecurityGroupsForVpcRequest, GetSecurityGroupsForVpcResult> asyncHandler) {
+        final GetSecurityGroupsForVpcRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetSecurityGroupsForVpcResult>() {
+            @Override
+            public GetSecurityGroupsForVpcResult call() throws Exception {
+                GetSecurityGroupsForVpcResult result = null;
+
+                try {
+                    result = executeGetSecurityGroupsForVpc(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetSerialConsoleAccessStatusResult> getSerialConsoleAccessStatusAsync(GetSerialConsoleAccessStatusRequest request) {
 
         return getSerialConsoleAccessStatusAsync(request, null);

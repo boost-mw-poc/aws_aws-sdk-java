@@ -27,7 +27,7 @@ public class DomainMaintenanceDetails implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * Id of the requested action.
+     * The ID of the requested action.
      * </p>
      */
     private String maintenanceId;
@@ -45,7 +45,7 @@ public class DomainMaintenanceDetails implements Serializable, Cloneable, Struct
     private String action;
     /**
      * <p>
-     * Id of the data node.
+     * The ID of the data node.
      * </p>
      */
     private String nodeId;
@@ -57,30 +57,30 @@ public class DomainMaintenanceDetails implements Serializable, Cloneable, Struct
     private String status;
     /**
      * <p>
-     * The status message of the action.
+     * The status message for the action.
      * </p>
      */
     private String statusMessage;
     /**
      * <p>
-     * Contains time at which action created.
+     * The time at which the action was created.
      * </p>
      */
     private java.util.Date createdAt;
     /**
      * <p>
-     * Contains time at which action updated.
+     * The time at which the action was updated.
      * </p>
      */
     private java.util.Date updatedAt;
 
     /**
      * <p>
-     * Id of the requested action.
+     * The ID of the requested action.
      * </p>
      * 
      * @param maintenanceId
-     *        Id of the requested action.
+     *        The ID of the requested action.
      */
 
     public void setMaintenanceId(String maintenanceId) {
@@ -89,10 +89,10 @@ public class DomainMaintenanceDetails implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * Id of the requested action.
+     * The ID of the requested action.
      * </p>
      * 
-     * @return Id of the requested action.
+     * @return The ID of the requested action.
      */
 
     public String getMaintenanceId() {
@@ -101,11 +101,11 @@ public class DomainMaintenanceDetails implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * Id of the requested action.
+     * The ID of the requested action.
      * </p>
      * 
      * @param maintenanceId
-     *        Id of the requested action.
+     *        The ID of the requested action.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -215,11 +215,11 @@ public class DomainMaintenanceDetails implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * Id of the data node.
+     * The ID of the data node.
      * </p>
      * 
      * @param nodeId
-     *        Id of the data node.
+     *        The ID of the data node.
      */
 
     public void setNodeId(String nodeId) {
@@ -228,10 +228,10 @@ public class DomainMaintenanceDetails implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * Id of the data node.
+     * The ID of the data node.
      * </p>
      * 
-     * @return Id of the data node.
+     * @return The ID of the data node.
      */
 
     public String getNodeId() {
@@ -240,11 +240,11 @@ public class DomainMaintenanceDetails implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * Id of the data node.
+     * The ID of the data node.
      * </p>
      * 
      * @param nodeId
-     *        Id of the data node.
+     *        The ID of the data node.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -314,11 +314,11 @@ public class DomainMaintenanceDetails implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The status message of the action.
+     * The status message for the action.
      * </p>
      * 
      * @param statusMessage
-     *        The status message of the action.
+     *        The status message for the action.
      */
 
     public void setStatusMessage(String statusMessage) {
@@ -327,10 +327,10 @@ public class DomainMaintenanceDetails implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The status message of the action.
+     * The status message for the action.
      * </p>
      * 
-     * @return The status message of the action.
+     * @return The status message for the action.
      */
 
     public String getStatusMessage() {
@@ -339,11 +339,11 @@ public class DomainMaintenanceDetails implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The status message of the action.
+     * The status message for the action.
      * </p>
      * 
      * @param statusMessage
-     *        The status message of the action.
+     *        The status message for the action.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -354,11 +354,11 @@ public class DomainMaintenanceDetails implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * Contains time at which action created.
+     * The time at which the action was created.
      * </p>
      * 
      * @param createdAt
-     *        Contains time at which action created.
+     *        The time at which the action was created.
      */
 
     public void setCreatedAt(java.util.Date createdAt) {
@@ -367,10 +367,10 @@ public class DomainMaintenanceDetails implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * Contains time at which action created.
+     * The time at which the action was created.
      * </p>
      * 
-     * @return Contains time at which action created.
+     * @return The time at which the action was created.
      */
 
     public java.util.Date getCreatedAt() {
@@ -379,11 +379,11 @@ public class DomainMaintenanceDetails implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * Contains time at which action created.
+     * The time at which the action was created.
      * </p>
      * 
      * @param createdAt
-     *        Contains time at which action created.
+     *        The time at which the action was created.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -394,11 +394,11 @@ public class DomainMaintenanceDetails implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * Contains time at which action updated.
+     * The time at which the action was updated.
      * </p>
      * 
      * @param updatedAt
-     *        Contains time at which action updated.
+     *        The time at which the action was updated.
      */
 
     public void setUpdatedAt(java.util.Date updatedAt) {
@@ -407,10 +407,10 @@ public class DomainMaintenanceDetails implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * Contains time at which action updated.
+     * The time at which the action was updated.
      * </p>
      * 
-     * @return Contains time at which action updated.
+     * @return The time at which the action was updated.
      */
 
     public java.util.Date getUpdatedAt() {
@@ -419,11 +419,11 @@ public class DomainMaintenanceDetails implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * Contains time at which action updated.
+     * The time at which the action was updated.
      * </p>
      * 
      * @param updatedAt
-     *        Contains time at which action updated.
+     *        The time at which the action was updated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

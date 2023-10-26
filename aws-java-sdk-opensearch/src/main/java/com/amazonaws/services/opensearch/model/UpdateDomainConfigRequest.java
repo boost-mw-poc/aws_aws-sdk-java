@@ -106,6 +106,12 @@ public class UpdateDomainConfigRequest extends com.amazonaws.AmazonWebServiceReq
     private String accessPolicies;
     /**
      * <p>
+     * The type of IP addresses supported by the endpoint for the domain.
+     * </p>
+     */
+    private String iPAddressType;
+    /**
+     * <p>
      * Options to publish OpenSearch logs to Amazon CloudWatch Logs.
      * </p>
      */
@@ -716,6 +722,65 @@ public class UpdateDomainConfigRequest extends com.amazonaws.AmazonWebServiceReq
 
     public UpdateDomainConfigRequest withAccessPolicies(String accessPolicies) {
         setAccessPolicies(accessPolicies);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The type of IP addresses supported by the endpoint for the domain.
+     * </p>
+     * 
+     * @param iPAddressType
+     *        The type of IP addresses supported by the endpoint for the domain.
+     * @see IPAddressType
+     */
+
+    public void setIPAddressType(String iPAddressType) {
+        this.iPAddressType = iPAddressType;
+    }
+
+    /**
+     * <p>
+     * The type of IP addresses supported by the endpoint for the domain.
+     * </p>
+     * 
+     * @return The type of IP addresses supported by the endpoint for the domain.
+     * @see IPAddressType
+     */
+
+    public String getIPAddressType() {
+        return this.iPAddressType;
+    }
+
+    /**
+     * <p>
+     * The type of IP addresses supported by the endpoint for the domain.
+     * </p>
+     * 
+     * @param iPAddressType
+     *        The type of IP addresses supported by the endpoint for the domain.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see IPAddressType
+     */
+
+    public UpdateDomainConfigRequest withIPAddressType(String iPAddressType) {
+        setIPAddressType(iPAddressType);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The type of IP addresses supported by the endpoint for the domain.
+     * </p>
+     * 
+     * @param iPAddressType
+     *        The type of IP addresses supported by the endpoint for the domain.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see IPAddressType
+     */
+
+    public UpdateDomainConfigRequest withIPAddressType(IPAddressType iPAddressType) {
+        this.iPAddressType = iPAddressType.toString();
         return this;
     }
 
@@ -1339,6 +1404,8 @@ public class UpdateDomainConfigRequest extends com.amazonaws.AmazonWebServiceReq
             sb.append("AdvancedOptions: ").append(getAdvancedOptions()).append(",");
         if (getAccessPolicies() != null)
             sb.append("AccessPolicies: ").append(getAccessPolicies()).append(",");
+        if (getIPAddressType() != null)
+            sb.append("IPAddressType: ").append(getIPAddressType()).append(",");
         if (getLogPublishingOptions() != null)
             sb.append("LogPublishingOptions: ").append(getLogPublishingOptions()).append(",");
         if (getEncryptionAtRestOptions() != null)
@@ -1405,6 +1472,10 @@ public class UpdateDomainConfigRequest extends com.amazonaws.AmazonWebServiceReq
             return false;
         if (other.getAccessPolicies() != null && other.getAccessPolicies().equals(this.getAccessPolicies()) == false)
             return false;
+        if (other.getIPAddressType() == null ^ this.getIPAddressType() == null)
+            return false;
+        if (other.getIPAddressType() != null && other.getIPAddressType().equals(this.getIPAddressType()) == false)
+            return false;
         if (other.getLogPublishingOptions() == null ^ this.getLogPublishingOptions() == null)
             return false;
         if (other.getLogPublishingOptions() != null && other.getLogPublishingOptions().equals(this.getLogPublishingOptions()) == false)
@@ -1461,6 +1532,7 @@ public class UpdateDomainConfigRequest extends com.amazonaws.AmazonWebServiceReq
         hashCode = prime * hashCode + ((getCognitoOptions() == null) ? 0 : getCognitoOptions().hashCode());
         hashCode = prime * hashCode + ((getAdvancedOptions() == null) ? 0 : getAdvancedOptions().hashCode());
         hashCode = prime * hashCode + ((getAccessPolicies() == null) ? 0 : getAccessPolicies().hashCode());
+        hashCode = prime * hashCode + ((getIPAddressType() == null) ? 0 : getIPAddressType().hashCode());
         hashCode = prime * hashCode + ((getLogPublishingOptions() == null) ? 0 : getLogPublishingOptions().hashCode());
         hashCode = prime * hashCode + ((getEncryptionAtRestOptions() == null) ? 0 : getEncryptionAtRestOptions().hashCode());
         hashCode = prime * hashCode + ((getDomainEndpointOptions() == null) ? 0 : getDomainEndpointOptions().hashCode());

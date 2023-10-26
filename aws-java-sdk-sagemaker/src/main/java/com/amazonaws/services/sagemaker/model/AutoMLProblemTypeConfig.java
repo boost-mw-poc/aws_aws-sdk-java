@@ -43,16 +43,29 @@ public class AutoMLProblemTypeConfig implements Serializable, Cloneable, Structu
     private TextClassificationJobConfig textClassificationJobConfig;
     /**
      * <p>
-     * Settings used to configure an AutoML job V2 for a tabular problem type (regression, classification).
+     * Settings used to configure an AutoML job V2 for the tabular problem type (regression, classification).
      * </p>
      */
     private TabularJobConfig tabularJobConfig;
     /**
      * <p>
-     * Settings used to configure an AutoML job V2 for a time-series forecasting problem type.
+     * Settings used to configure an AutoML job V2 for the time-series forecasting problem type.
      * </p>
      */
     private TimeSeriesForecastingJobConfig timeSeriesForecastingJobConfig;
+    /**
+     * <p>
+     * Settings used to configure an AutoML job V2 for the text generation (LLMs fine-tuning) problem type.
+     * </p>
+     * <note>
+     * <p>
+     * The text generation models that support fine-tuning in Autopilot are currently accessible exclusively in regions
+     * supported by Canvas. Refer to the documentation of Canvas for the <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/canvas.html">full list of its supported Regions</a>.
+     * </p>
+     * </note>
+     */
+    private TextGenerationJobConfig textGenerationJobConfig;
 
     /**
      * <p>
@@ -136,11 +149,11 @@ public class AutoMLProblemTypeConfig implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * Settings used to configure an AutoML job V2 for a tabular problem type (regression, classification).
+     * Settings used to configure an AutoML job V2 for the tabular problem type (regression, classification).
      * </p>
      * 
      * @param tabularJobConfig
-     *        Settings used to configure an AutoML job V2 for a tabular problem type (regression, classification).
+     *        Settings used to configure an AutoML job V2 for the tabular problem type (regression, classification).
      */
 
     public void setTabularJobConfig(TabularJobConfig tabularJobConfig) {
@@ -149,10 +162,10 @@ public class AutoMLProblemTypeConfig implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * Settings used to configure an AutoML job V2 for a tabular problem type (regression, classification).
+     * Settings used to configure an AutoML job V2 for the tabular problem type (regression, classification).
      * </p>
      * 
-     * @return Settings used to configure an AutoML job V2 for a tabular problem type (regression, classification).
+     * @return Settings used to configure an AutoML job V2 for the tabular problem type (regression, classification).
      */
 
     public TabularJobConfig getTabularJobConfig() {
@@ -161,11 +174,11 @@ public class AutoMLProblemTypeConfig implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * Settings used to configure an AutoML job V2 for a tabular problem type (regression, classification).
+     * Settings used to configure an AutoML job V2 for the tabular problem type (regression, classification).
      * </p>
      * 
      * @param tabularJobConfig
-     *        Settings used to configure an AutoML job V2 for a tabular problem type (regression, classification).
+     *        Settings used to configure an AutoML job V2 for the tabular problem type (regression, classification).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -176,11 +189,11 @@ public class AutoMLProblemTypeConfig implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * Settings used to configure an AutoML job V2 for a time-series forecasting problem type.
+     * Settings used to configure an AutoML job V2 for the time-series forecasting problem type.
      * </p>
      * 
      * @param timeSeriesForecastingJobConfig
-     *        Settings used to configure an AutoML job V2 for a time-series forecasting problem type.
+     *        Settings used to configure an AutoML job V2 for the time-series forecasting problem type.
      */
 
     public void setTimeSeriesForecastingJobConfig(TimeSeriesForecastingJobConfig timeSeriesForecastingJobConfig) {
@@ -189,10 +202,10 @@ public class AutoMLProblemTypeConfig implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * Settings used to configure an AutoML job V2 for a time-series forecasting problem type.
+     * Settings used to configure an AutoML job V2 for the time-series forecasting problem type.
      * </p>
      * 
-     * @return Settings used to configure an AutoML job V2 for a time-series forecasting problem type.
+     * @return Settings used to configure an AutoML job V2 for the time-series forecasting problem type.
      */
 
     public TimeSeriesForecastingJobConfig getTimeSeriesForecastingJobConfig() {
@@ -201,16 +214,96 @@ public class AutoMLProblemTypeConfig implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * Settings used to configure an AutoML job V2 for a time-series forecasting problem type.
+     * Settings used to configure an AutoML job V2 for the time-series forecasting problem type.
      * </p>
      * 
      * @param timeSeriesForecastingJobConfig
-     *        Settings used to configure an AutoML job V2 for a time-series forecasting problem type.
+     *        Settings used to configure an AutoML job V2 for the time-series forecasting problem type.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public AutoMLProblemTypeConfig withTimeSeriesForecastingJobConfig(TimeSeriesForecastingJobConfig timeSeriesForecastingJobConfig) {
         setTimeSeriesForecastingJobConfig(timeSeriesForecastingJobConfig);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Settings used to configure an AutoML job V2 for the text generation (LLMs fine-tuning) problem type.
+     * </p>
+     * <note>
+     * <p>
+     * The text generation models that support fine-tuning in Autopilot are currently accessible exclusively in regions
+     * supported by Canvas. Refer to the documentation of Canvas for the <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/canvas.html">full list of its supported Regions</a>.
+     * </p>
+     * </note>
+     * 
+     * @param textGenerationJobConfig
+     *        Settings used to configure an AutoML job V2 for the text generation (LLMs fine-tuning) problem type.</p>
+     *        <note>
+     *        <p>
+     *        The text generation models that support fine-tuning in Autopilot are currently accessible exclusively in
+     *        regions supported by Canvas. Refer to the documentation of Canvas for the <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/dg/canvas.html">full list of its supported Regions</a>.
+     *        </p>
+     */
+
+    public void setTextGenerationJobConfig(TextGenerationJobConfig textGenerationJobConfig) {
+        this.textGenerationJobConfig = textGenerationJobConfig;
+    }
+
+    /**
+     * <p>
+     * Settings used to configure an AutoML job V2 for the text generation (LLMs fine-tuning) problem type.
+     * </p>
+     * <note>
+     * <p>
+     * The text generation models that support fine-tuning in Autopilot are currently accessible exclusively in regions
+     * supported by Canvas. Refer to the documentation of Canvas for the <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/canvas.html">full list of its supported Regions</a>.
+     * </p>
+     * </note>
+     * 
+     * @return Settings used to configure an AutoML job V2 for the text generation (LLMs fine-tuning) problem type.</p>
+     *         <note>
+     *         <p>
+     *         The text generation models that support fine-tuning in Autopilot are currently accessible exclusively in
+     *         regions supported by Canvas. Refer to the documentation of Canvas for the <a
+     *         href="https://docs.aws.amazon.com/sagemaker/latest/dg/canvas.html">full list of its supported
+     *         Regions</a>.
+     *         </p>
+     */
+
+    public TextGenerationJobConfig getTextGenerationJobConfig() {
+        return this.textGenerationJobConfig;
+    }
+
+    /**
+     * <p>
+     * Settings used to configure an AutoML job V2 for the text generation (LLMs fine-tuning) problem type.
+     * </p>
+     * <note>
+     * <p>
+     * The text generation models that support fine-tuning in Autopilot are currently accessible exclusively in regions
+     * supported by Canvas. Refer to the documentation of Canvas for the <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/canvas.html">full list of its supported Regions</a>.
+     * </p>
+     * </note>
+     * 
+     * @param textGenerationJobConfig
+     *        Settings used to configure an AutoML job V2 for the text generation (LLMs fine-tuning) problem type.</p>
+     *        <note>
+     *        <p>
+     *        The text generation models that support fine-tuning in Autopilot are currently accessible exclusively in
+     *        regions supported by Canvas. Refer to the documentation of Canvas for the <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/dg/canvas.html">full list of its supported Regions</a>.
+     *        </p>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AutoMLProblemTypeConfig withTextGenerationJobConfig(TextGenerationJobConfig textGenerationJobConfig) {
+        setTextGenerationJobConfig(textGenerationJobConfig);
         return this;
     }
 
@@ -233,7 +326,9 @@ public class AutoMLProblemTypeConfig implements Serializable, Cloneable, Structu
         if (getTabularJobConfig() != null)
             sb.append("TabularJobConfig: ").append(getTabularJobConfig()).append(",");
         if (getTimeSeriesForecastingJobConfig() != null)
-            sb.append("TimeSeriesForecastingJobConfig: ").append(getTimeSeriesForecastingJobConfig());
+            sb.append("TimeSeriesForecastingJobConfig: ").append(getTimeSeriesForecastingJobConfig()).append(",");
+        if (getTextGenerationJobConfig() != null)
+            sb.append("TextGenerationJobConfig: ").append(getTextGenerationJobConfig());
         sb.append("}");
         return sb.toString();
     }
@@ -265,6 +360,10 @@ public class AutoMLProblemTypeConfig implements Serializable, Cloneable, Structu
         if (other.getTimeSeriesForecastingJobConfig() != null
                 && other.getTimeSeriesForecastingJobConfig().equals(this.getTimeSeriesForecastingJobConfig()) == false)
             return false;
+        if (other.getTextGenerationJobConfig() == null ^ this.getTextGenerationJobConfig() == null)
+            return false;
+        if (other.getTextGenerationJobConfig() != null && other.getTextGenerationJobConfig().equals(this.getTextGenerationJobConfig()) == false)
+            return false;
         return true;
     }
 
@@ -277,6 +376,7 @@ public class AutoMLProblemTypeConfig implements Serializable, Cloneable, Structu
         hashCode = prime * hashCode + ((getTextClassificationJobConfig() == null) ? 0 : getTextClassificationJobConfig().hashCode());
         hashCode = prime * hashCode + ((getTabularJobConfig() == null) ? 0 : getTabularJobConfig().hashCode());
         hashCode = prime * hashCode + ((getTimeSeriesForecastingJobConfig() == null) ? 0 : getTimeSeriesForecastingJobConfig().hashCode());
+        hashCode = prime * hashCode + ((getTextGenerationJobConfig() == null) ? 0 : getTextGenerationJobConfig().hashCode());
         return hashCode;
     }
 

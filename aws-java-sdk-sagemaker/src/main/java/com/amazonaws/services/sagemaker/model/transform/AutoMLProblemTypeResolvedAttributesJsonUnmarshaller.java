@@ -53,6 +53,11 @@ public class AutoMLProblemTypeResolvedAttributesJsonUnmarshaller implements Unma
                     autoMLProblemTypeResolvedAttributes.setTabularResolvedAttributes(TabularResolvedAttributesJsonUnmarshaller.getInstance()
                             .unmarshall(context));
                 }
+                if (context.testExpression("TextGenerationResolvedAttributes", targetDepth)) {
+                    context.nextToken();
+                    autoMLProblemTypeResolvedAttributes.setTextGenerationResolvedAttributes(TextGenerationResolvedAttributesJsonUnmarshaller.getInstance()
+                            .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

@@ -89,6 +89,9 @@ public class AWSSsmSapClient extends AmazonWebServiceClient implements AWSSsmSap
                             new JsonErrorShapeMetadata().withErrorCode("ValidationException").withExceptionUnmarshaller(
                                     com.amazonaws.services.ssmsap.model.transform.ValidationExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("UnauthorizedException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.ssmsap.model.transform.UnauthorizedExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("InternalServerException").withExceptionUnmarshaller(
                                     com.amazonaws.services.ssmsap.model.transform.InternalServerExceptionUnmarshaller.getInstance()))
                     .withBaseServiceExceptionClass(com.amazonaws.services.ssmsap.model.AWSSsmSapException.class));
@@ -210,6 +213,8 @@ public class AWSSsmSapClient extends AmazonWebServiceClient implements AWSSsmSap
      * 
      * @param deregisterApplicationRequest
      * @return Result of the DeregisterApplication operation returned by the service.
+     * @throws UnauthorizedException
+     *         The request is not authorized.
      * @throws ValidationException
      *         The input fails to satisfy the constraints specified by an AWS service.
      * @throws InternalServerException
@@ -330,6 +335,8 @@ public class AWSSsmSapClient extends AmazonWebServiceClient implements AWSSsmSap
      * 
      * @param getComponentRequest
      * @return Result of the GetComponent operation returned by the service.
+     * @throws UnauthorizedException
+     *         The request is not authorized.
      * @throws ValidationException
      *         The input fails to satisfy the constraints specified by an AWS service.
      * @throws InternalServerException
@@ -630,6 +637,8 @@ public class AWSSsmSapClient extends AmazonWebServiceClient implements AWSSsmSap
      * 
      * @param listComponentsRequest
      * @return Result of the ListComponents operation returned by the service.
+     * @throws UnauthorizedException
+     *         The request is not authorized.
      * @throws ResourceNotFoundException
      *         The resource is not available.
      * @throws ValidationException
@@ -945,6 +954,8 @@ public class AWSSsmSapClient extends AmazonWebServiceClient implements AWSSsmSap
      * 
      * @param registerApplicationRequest
      * @return Result of the RegisterApplication operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The resource is not available.
      * @throws ValidationException
      *         The input fails to satisfy the constraints specified by an AWS service.
      * @throws ConflictException
@@ -1006,6 +1017,8 @@ public class AWSSsmSapClient extends AmazonWebServiceClient implements AWSSsmSap
      * 
      * @param startApplicationRefreshRequest
      * @return Result of the StartApplicationRefresh operation returned by the service.
+     * @throws UnauthorizedException
+     *         The request is not authorized.
      * @throws ResourceNotFoundException
      *         The resource is not available.
      * @throws ValidationException
@@ -1193,6 +1206,8 @@ public class AWSSsmSapClient extends AmazonWebServiceClient implements AWSSsmSap
      * 
      * @param updateApplicationSettingsRequest
      * @return Result of the UpdateApplicationSettings operation returned by the service.
+     * @throws UnauthorizedException
+     *         The request is not authorized.
      * @throws ResourceNotFoundException
      *         The resource is not available.
      * @throws ValidationException
