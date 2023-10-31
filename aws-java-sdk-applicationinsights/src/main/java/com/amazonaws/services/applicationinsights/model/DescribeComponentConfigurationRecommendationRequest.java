@@ -46,6 +46,12 @@ public class DescribeComponentConfigurationRecommendationRequest extends com.ama
     private String tier;
     /**
      * <p>
+     * The name of the workload.
+     * </p>
+     */
+    private String workloadName;
+    /**
+     * <p>
      * The recommended configuration type.
      * </p>
      */
@@ -192,6 +198,46 @@ public class DescribeComponentConfigurationRecommendationRequest extends com.ama
 
     /**
      * <p>
+     * The name of the workload.
+     * </p>
+     * 
+     * @param workloadName
+     *        The name of the workload.
+     */
+
+    public void setWorkloadName(String workloadName) {
+        this.workloadName = workloadName;
+    }
+
+    /**
+     * <p>
+     * The name of the workload.
+     * </p>
+     * 
+     * @return The name of the workload.
+     */
+
+    public String getWorkloadName() {
+        return this.workloadName;
+    }
+
+    /**
+     * <p>
+     * The name of the workload.
+     * </p>
+     * 
+     * @param workloadName
+     *        The name of the workload.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeComponentConfigurationRecommendationRequest withWorkloadName(String workloadName) {
+        setWorkloadName(workloadName);
+        return this;
+    }
+
+    /**
+     * <p>
      * The recommended configuration type.
      * </p>
      * 
@@ -267,6 +313,8 @@ public class DescribeComponentConfigurationRecommendationRequest extends com.ama
             sb.append("ComponentName: ").append(getComponentName()).append(",");
         if (getTier() != null)
             sb.append("Tier: ").append(getTier()).append(",");
+        if (getWorkloadName() != null)
+            sb.append("WorkloadName: ").append(getWorkloadName()).append(",");
         if (getRecommendationType() != null)
             sb.append("RecommendationType: ").append(getRecommendationType());
         sb.append("}");
@@ -295,6 +343,10 @@ public class DescribeComponentConfigurationRecommendationRequest extends com.ama
             return false;
         if (other.getTier() != null && other.getTier().equals(this.getTier()) == false)
             return false;
+        if (other.getWorkloadName() == null ^ this.getWorkloadName() == null)
+            return false;
+        if (other.getWorkloadName() != null && other.getWorkloadName().equals(this.getWorkloadName()) == false)
+            return false;
         if (other.getRecommendationType() == null ^ this.getRecommendationType() == null)
             return false;
         if (other.getRecommendationType() != null && other.getRecommendationType().equals(this.getRecommendationType()) == false)
@@ -310,6 +362,7 @@ public class DescribeComponentConfigurationRecommendationRequest extends com.ama
         hashCode = prime * hashCode + ((getResourceGroupName() == null) ? 0 : getResourceGroupName().hashCode());
         hashCode = prime * hashCode + ((getComponentName() == null) ? 0 : getComponentName().hashCode());
         hashCode = prime * hashCode + ((getTier() == null) ? 0 : getTier().hashCode());
+        hashCode = prime * hashCode + ((getWorkloadName() == null) ? 0 : getWorkloadName().hashCode());
         hashCode = prime * hashCode + ((getRecommendationType() == null) ? 0 : getRecommendationType().hashCode());
         return hashCode;
     }

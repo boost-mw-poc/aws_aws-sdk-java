@@ -1227,6 +1227,11 @@ public class AbstractAmazonEC2 implements AmazonEC2 {
     }
 
     @Override
+    public DescribeCapacityBlockOfferingsResult describeCapacityBlockOfferings(DescribeCapacityBlockOfferingsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DescribeCapacityReservationFleetsResult describeCapacityReservationFleets(DescribeCapacityReservationFleetsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -3028,6 +3033,11 @@ public class AbstractAmazonEC2 implements AmazonEC2 {
 
     @Override
     public ProvisionPublicIpv4PoolCidrResult provisionPublicIpv4PoolCidr(ProvisionPublicIpv4PoolCidrRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public PurchaseCapacityBlockResult purchaseCapacityBlock(PurchaseCapacityBlockRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

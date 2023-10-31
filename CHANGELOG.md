@@ -1,3 +1,28 @@
+# __1.12.578__ __2023-10-31__
+## __AWS Amplify__
+  - ### Features
+    - Add backend field to CreateBranch and UpdateBranch requests. Add pagination support for ListApps, ListDomainAssociations, ListBranches, and ListJobs
+
+## __AWSMainframeModernization__
+  - ### Features
+    - Added name filter ability for ListDataSets API, added ForceUpdate for Updating environment and BatchJob submission using S3BatchJobIdentifier
+
+## __Amazon CloudWatch Application Insights__
+  - ### Features
+    - Automate attaching managed policies
+
+## __Amazon Elastic Compute Cloud__
+  - ### Features
+    - Capacity Blocks for ML are a new EC2 purchasing option for reserving GPU instances on a future date to support short duration machine learning (ML) workloads. Capacity Blocks automatically place instances close together inside Amazon EC2 UltraClusters for low-latency, high-throughput networking.
+
+## __Amazon NeptuneData__
+  - ### Features
+    - Minor change to not retry CancelledByUserException
+
+## __Amazon Translate__
+  - ### Features
+    - Added support for Brevity translation settings feature.
+
 # __1.12.577__ __2023-10-30__
 ## __AWS Data Exchange__
   - ### Features

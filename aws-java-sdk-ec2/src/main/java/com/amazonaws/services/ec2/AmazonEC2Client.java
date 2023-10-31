@@ -14681,6 +14681,63 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
     /**
      * <p>
+     * Describes Capacity Block offerings available for purchase. With Capacity Blocks, you purchase a specific instance
+     * type for a period of time.
+     * </p>
+     * 
+     * @param describeCapacityBlockOfferingsRequest
+     * @return Result of the DescribeCapacityBlockOfferings operation returned by the service.
+     * @sample AmazonEC2.DescribeCapacityBlockOfferings
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeCapacityBlockOfferings"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DescribeCapacityBlockOfferingsResult describeCapacityBlockOfferings(DescribeCapacityBlockOfferingsRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribeCapacityBlockOfferings(request);
+    }
+
+    @SdkInternalApi
+    final DescribeCapacityBlockOfferingsResult executeDescribeCapacityBlockOfferings(DescribeCapacityBlockOfferingsRequest describeCapacityBlockOfferingsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describeCapacityBlockOfferingsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeCapacityBlockOfferingsRequest> request = null;
+        Response<DescribeCapacityBlockOfferingsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeCapacityBlockOfferingsRequestMarshaller().marshall(super.beforeMarshalling(describeCapacityBlockOfferingsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeCapacityBlockOfferings");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<DescribeCapacityBlockOfferingsResult> responseHandler = new StaxResponseHandler<DescribeCapacityBlockOfferingsResult>(
+                    new DescribeCapacityBlockOfferingsResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Describes one or more Capacity Reservation Fleets.
      * </p>
      * 
@@ -34271,6 +34328,63 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
             StaxResponseHandler<ProvisionPublicIpv4PoolCidrResult> responseHandler = new StaxResponseHandler<ProvisionPublicIpv4PoolCidrResult>(
                     new ProvisionPublicIpv4PoolCidrResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Purchase the Capacity Block for use with your account. With Capacity Blocks you ensure GPU capacity is available
+     * for machine learning (ML) workloads. You must specify the ID of the Capacity Block offering you are purchasing.
+     * </p>
+     * 
+     * @param purchaseCapacityBlockRequest
+     * @return Result of the PurchaseCapacityBlock operation returned by the service.
+     * @sample AmazonEC2.PurchaseCapacityBlock
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/PurchaseCapacityBlock" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public PurchaseCapacityBlockResult purchaseCapacityBlock(PurchaseCapacityBlockRequest request) {
+        request = beforeClientExecution(request);
+        return executePurchaseCapacityBlock(request);
+    }
+
+    @SdkInternalApi
+    final PurchaseCapacityBlockResult executePurchaseCapacityBlock(PurchaseCapacityBlockRequest purchaseCapacityBlockRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(purchaseCapacityBlockRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<PurchaseCapacityBlockRequest> request = null;
+        Response<PurchaseCapacityBlockResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new PurchaseCapacityBlockRequestMarshaller().marshall(super.beforeMarshalling(purchaseCapacityBlockRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "PurchaseCapacityBlock");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<PurchaseCapacityBlockResult> responseHandler = new StaxResponseHandler<PurchaseCapacityBlockResult>(
+                    new PurchaseCapacityBlockResultStaxUnmarshaller());
 
             response = invoke(request, responseHandler, executionContext);
 

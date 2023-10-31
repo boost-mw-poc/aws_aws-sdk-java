@@ -308,7 +308,7 @@ public class StartLoaderJobRequest extends com.amazonaws.AmazonWebServiceRequest
      * <p>
      * You don't have to wait for one load job to complete before issuing the next one, because Neptune can queue up as
      * many as 64 jobs at a time, provided that their <code>queueRequest</code> parameters are all set to
-     * <code>"TRUE"</code>.
+     * <code>"TRUE"</code>. The queue order of the jobs will be first-in-first-out (FIFO).
      * </p>
      * <p>
      * If the <code>queueRequest</code> parameter is omitted or set to <code>"FALSE"</code>, the load request will fail
@@ -2510,7 +2510,7 @@ public class StartLoaderJobRequest extends com.amazonaws.AmazonWebServiceRequest
      * <p>
      * You don't have to wait for one load job to complete before issuing the next one, because Neptune can queue up as
      * many as 64 jobs at a time, provided that their <code>queueRequest</code> parameters are all set to
-     * <code>"TRUE"</code>.
+     * <code>"TRUE"</code>. The queue order of the jobs will be first-in-first-out (FIFO).
      * </p>
      * <p>
      * If the <code>queueRequest</code> parameter is omitted or set to <code>"FALSE"</code>, the load request will fail
@@ -2528,7 +2528,7 @@ public class StartLoaderJobRequest extends com.amazonaws.AmazonWebServiceRequest
      *        <p>
      *        You don't have to wait for one load job to complete before issuing the next one, because Neptune can queue
      *        up as many as 64 jobs at a time, provided that their <code>queueRequest</code> parameters are all set to
-     *        <code>"TRUE"</code>.
+     *        <code>"TRUE"</code>. The queue order of the jobs will be first-in-first-out (FIFO).
      *        </p>
      *        <p>
      *        If the <code>queueRequest</code> parameter is omitted or set to <code>"FALSE"</code>, the load request
@@ -2552,7 +2552,7 @@ public class StartLoaderJobRequest extends com.amazonaws.AmazonWebServiceRequest
      * <p>
      * You don't have to wait for one load job to complete before issuing the next one, because Neptune can queue up as
      * many as 64 jobs at a time, provided that their <code>queueRequest</code> parameters are all set to
-     * <code>"TRUE"</code>.
+     * <code>"TRUE"</code>. The queue order of the jobs will be first-in-first-out (FIFO).
      * </p>
      * <p>
      * If the <code>queueRequest</code> parameter is omitted or set to <code>"FALSE"</code>, the load request will fail
@@ -2569,7 +2569,7 @@ public class StartLoaderJobRequest extends com.amazonaws.AmazonWebServiceRequest
      *         <p>
      *         You don't have to wait for one load job to complete before issuing the next one, because Neptune can
      *         queue up as many as 64 jobs at a time, provided that their <code>queueRequest</code> parameters are all
-     *         set to <code>"TRUE"</code>.
+     *         set to <code>"TRUE"</code>. The queue order of the jobs will be first-in-first-out (FIFO).
      *         </p>
      *         <p>
      *         If the <code>queueRequest</code> parameter is omitted or set to <code>"FALSE"</code>, the load request
@@ -2593,7 +2593,7 @@ public class StartLoaderJobRequest extends com.amazonaws.AmazonWebServiceRequest
      * <p>
      * You don't have to wait for one load job to complete before issuing the next one, because Neptune can queue up as
      * many as 64 jobs at a time, provided that their <code>queueRequest</code> parameters are all set to
-     * <code>"TRUE"</code>.
+     * <code>"TRUE"</code>. The queue order of the jobs will be first-in-first-out (FIFO).
      * </p>
      * <p>
      * If the <code>queueRequest</code> parameter is omitted or set to <code>"FALSE"</code>, the load request will fail
@@ -2611,7 +2611,7 @@ public class StartLoaderJobRequest extends com.amazonaws.AmazonWebServiceRequest
      *        <p>
      *        You don't have to wait for one load job to complete before issuing the next one, because Neptune can queue
      *        up as many as 64 jobs at a time, provided that their <code>queueRequest</code> parameters are all set to
-     *        <code>"TRUE"</code>.
+     *        <code>"TRUE"</code>. The queue order of the jobs will be first-in-first-out (FIFO).
      *        </p>
      *        <p>
      *        If the <code>queueRequest</code> parameter is omitted or set to <code>"FALSE"</code>, the load request
@@ -2637,7 +2637,7 @@ public class StartLoaderJobRequest extends com.amazonaws.AmazonWebServiceRequest
      * <p>
      * You don't have to wait for one load job to complete before issuing the next one, because Neptune can queue up as
      * many as 64 jobs at a time, provided that their <code>queueRequest</code> parameters are all set to
-     * <code>"TRUE"</code>.
+     * <code>"TRUE"</code>. The queue order of the jobs will be first-in-first-out (FIFO).
      * </p>
      * <p>
      * If the <code>queueRequest</code> parameter is omitted or set to <code>"FALSE"</code>, the load request will fail
@@ -2654,7 +2654,7 @@ public class StartLoaderJobRequest extends com.amazonaws.AmazonWebServiceRequest
      *         <p>
      *         You don't have to wait for one load job to complete before issuing the next one, because Neptune can
      *         queue up as many as 64 jobs at a time, provided that their <code>queueRequest</code> parameters are all
-     *         set to <code>"TRUE"</code>.
+     *         set to <code>"TRUE"</code>. The queue order of the jobs will be first-in-first-out (FIFO).
      *         </p>
      *         <p>
      *         If the <code>queueRequest</code> parameter is omitted or set to <code>"FALSE"</code>, the load request

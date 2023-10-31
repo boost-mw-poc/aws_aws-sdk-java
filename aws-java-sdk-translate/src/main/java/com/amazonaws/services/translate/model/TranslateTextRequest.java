@@ -75,9 +75,25 @@ public class TranslateTextRequest extends com.amazonaws.AmazonWebServiceRequest 
     private String targetLanguageCode;
     /**
      * <p>
-     * Settings to configure your translation output, including the option to set the formality level of the output text
-     * and the option to mask profane words and phrases.
+     * Settings to configure your translation output. You can configure the following options:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Brevity: reduces the length of the translated output for most translations.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Formality: sets the formality level of the output text.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Profanity: masks profane words and phrases in your translation output.
+     * </p>
+     * </li>
+     * </ul>
      */
     private TranslationSettings settings;
 
@@ -433,13 +449,44 @@ public class TranslateTextRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * Settings to configure your translation output, including the option to set the formality level of the output text
-     * and the option to mask profane words and phrases.
+     * Settings to configure your translation output. You can configure the following options:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Brevity: reduces the length of the translated output for most translations.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Formality: sets the formality level of the output text.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Profanity: masks profane words and phrases in your translation output.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param settings
-     *        Settings to configure your translation output, including the option to set the formality level of the
-     *        output text and the option to mask profane words and phrases.
+     *        Settings to configure your translation output. You can configure the following options:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        Brevity: reduces the length of the translated output for most translations.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Formality: sets the formality level of the output text.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Profanity: masks profane words and phrases in your translation output.
+     *        </p>
+     *        </li>
      */
 
     public void setSettings(TranslationSettings settings) {
@@ -448,12 +495,43 @@ public class TranslateTextRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * Settings to configure your translation output, including the option to set the formality level of the output text
-     * and the option to mask profane words and phrases.
+     * Settings to configure your translation output. You can configure the following options:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Brevity: reduces the length of the translated output for most translations.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Formality: sets the formality level of the output text.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Profanity: masks profane words and phrases in your translation output.
+     * </p>
+     * </li>
+     * </ul>
      * 
-     * @return Settings to configure your translation output, including the option to set the formality level of the
-     *         output text and the option to mask profane words and phrases.
+     * @return Settings to configure your translation output. You can configure the following options:</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         Brevity: reduces the length of the translated output for most translations.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Formality: sets the formality level of the output text.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Profanity: masks profane words and phrases in your translation output.
+     *         </p>
+     *         </li>
      */
 
     public TranslationSettings getSettings() {
@@ -462,13 +540,44 @@ public class TranslateTextRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * Settings to configure your translation output, including the option to set the formality level of the output text
-     * and the option to mask profane words and phrases.
+     * Settings to configure your translation output. You can configure the following options:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Brevity: reduces the length of the translated output for most translations.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Formality: sets the formality level of the output text.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Profanity: masks profane words and phrases in your translation output.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param settings
-     *        Settings to configure your translation output, including the option to set the formality level of the
-     *        output text and the option to mask profane words and phrases.
+     *        Settings to configure your translation output. You can configure the following options:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        Brevity: reduces the length of the translated output for most translations.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Formality: sets the formality level of the output text.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Profanity: masks profane words and phrases in your translation output.
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

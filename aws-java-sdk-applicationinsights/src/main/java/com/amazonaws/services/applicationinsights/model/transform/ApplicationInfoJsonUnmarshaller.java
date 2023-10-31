@@ -84,6 +84,10 @@ public class ApplicationInfoJsonUnmarshaller implements Unmarshaller<Application
                     context.nextToken();
                     applicationInfo.setDiscoveryType(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("AttachMissingPermission", targetDepth)) {
+                    context.nextToken();
+                    applicationInfo.setAttachMissingPermission(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

@@ -662,6 +662,8 @@ public interface AmazonApplicationInsights {
      *         The parameter is not valid.
      * @throws InternalServerException
      *         The server encountered an internal error and is unable to complete the request.
+     * @throws ResourceInUseException
+     *         The resource is already created or in use.
      * @sample AmazonApplicationInsights.UpdateComponentConfiguration
      * @see <a
      *      href="http://docs.aws.amazon.com/goto/WebAPI/application-insights-2018-11-25/UpdateComponentConfiguration"

@@ -4755,6 +4755,20 @@ public interface AmazonEC2 {
 
     /**
      * <p>
+     * Describes Capacity Block offerings available for purchase. With Capacity Blocks, you purchase a specific instance
+     * type for a period of time.
+     * </p>
+     * 
+     * @param describeCapacityBlockOfferingsRequest
+     * @return Result of the DescribeCapacityBlockOfferings operation returned by the service.
+     * @sample AmazonEC2.DescribeCapacityBlockOfferings
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeCapacityBlockOfferings"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DescribeCapacityBlockOfferingsResult describeCapacityBlockOfferings(DescribeCapacityBlockOfferingsRequest describeCapacityBlockOfferingsRequest);
+
+    /**
+     * <p>
      * Describes one or more Capacity Reservation Fleets.
      * </p>
      * 
@@ -10888,6 +10902,20 @@ public interface AmazonEC2 {
      *      target="_top">AWS API Documentation</a>
      */
     ProvisionPublicIpv4PoolCidrResult provisionPublicIpv4PoolCidr(ProvisionPublicIpv4PoolCidrRequest provisionPublicIpv4PoolCidrRequest);
+
+    /**
+     * <p>
+     * Purchase the Capacity Block for use with your account. With Capacity Blocks you ensure GPU capacity is available
+     * for machine learning (ML) workloads. You must specify the ID of the Capacity Block offering you are purchasing.
+     * </p>
+     * 
+     * @param purchaseCapacityBlockRequest
+     * @return Result of the PurchaseCapacityBlock operation returned by the service.
+     * @sample AmazonEC2.PurchaseCapacityBlock
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/PurchaseCapacityBlock" target="_top">AWS API
+     *      Documentation</a>
+     */
+    PurchaseCapacityBlockResult purchaseCapacityBlock(PurchaseCapacityBlockRequest purchaseCapacityBlockRequest);
 
     /**
      * <p>

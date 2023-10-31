@@ -45,6 +45,8 @@ public class ApplicationInfoMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AutoConfigEnabled").build();
     private static final MarshallingInfo<String> DISCOVERYTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DiscoveryType").build();
+    private static final MarshallingInfo<Boolean> ATTACHMISSINGPERMISSION_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AttachMissingPermission").build();
 
     private static final ApplicationInfoMarshaller instance = new ApplicationInfoMarshaller();
 
@@ -71,6 +73,7 @@ public class ApplicationInfoMarshaller {
             protocolMarshaller.marshall(applicationInfo.getRemarks(), REMARKS_BINDING);
             protocolMarshaller.marshall(applicationInfo.getAutoConfigEnabled(), AUTOCONFIGENABLED_BINDING);
             protocolMarshaller.marshall(applicationInfo.getDiscoveryType(), DISCOVERYTYPE_BINDING);
+            protocolMarshaller.marshall(applicationInfo.getAttachMissingPermission(), ATTACHMISSINGPERMISSION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

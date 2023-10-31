@@ -102,6 +102,12 @@ public class AWSMainframeModernizationClient extends AmazonWebServiceClient impl
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ValidationException").withExceptionUnmarshaller(
                                     com.amazonaws.services.mainframemodernization.model.transform.ValidationExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("ServiceUnavailableException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.mainframemodernization.model.transform.ServiceUnavailableExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("ExecutionTimeoutException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.mainframemodernization.model.transform.ExecutionTimeoutExceptionUnmarshaller.getInstance()))
                     .withBaseServiceExceptionClass(com.amazonaws.services.mainframemodernization.model.AWSMainframeModernizationException.class));
 
     public static AWSMainframeModernizationClientBuilder builder() {
@@ -903,10 +909,16 @@ public class AWSMainframeModernizationClient extends AmazonWebServiceClient impl
      * @return Result of the GetDataSetDetails operation returned by the service.
      * @throws ResourceNotFoundException
      *         The specified resource was not found.
+     * @throws ExecutionTimeoutException
+     *         Failed to connect to server, or didn’t receive response within expected time period.
+     * @throws ServiceUnavailableException
+     *         Server cannot process the request at the moment.
      * @throws ThrottlingException
      *         The number of requests made exceeds the limit.
      * @throws AccessDeniedException
      *         The account or role doesn't have the right permissions to make the request.
+     * @throws ConflictException
+     *         The parameters provided in the request conflict with existing resources.
      * @throws ValidationException
      *         One or more parameters provided in the request is not valid.
      * @throws InternalServerException
@@ -1563,10 +1575,16 @@ public class AWSMainframeModernizationClient extends AmazonWebServiceClient impl
      * @return Result of the ListDataSets operation returned by the service.
      * @throws ResourceNotFoundException
      *         The specified resource was not found.
+     * @throws ExecutionTimeoutException
+     *         Failed to connect to server, or didn’t receive response within expected time period.
+     * @throws ServiceUnavailableException
+     *         Server cannot process the request at the moment.
      * @throws ThrottlingException
      *         The number of requests made exceeds the limit.
      * @throws AccessDeniedException
      *         The account or role doesn't have the right permissions to make the request.
+     * @throws ConflictException
+     *         The parameters provided in the request conflict with existing resources.
      * @throws ValidationException
      *         One or more parameters provided in the request is not valid.
      * @throws InternalServerException
