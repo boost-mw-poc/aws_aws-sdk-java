@@ -931,6 +931,8 @@ public class AmazonRedshiftClient extends AmazonWebServiceClient implements Amaz
      *         The <code>ClusterIdentifier</code> parameter does not refer to an existing cluster.
      * @throws UnauthorizedPartnerIntegrationException
      *         The partner integration is not authorized.
+     * @throws UnsupportedOperationException
+     *         The requested operation isn't supported.
      * @sample AmazonRedshift.AddPartner
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/AddPartner" target="_top">AWS API
      *      Documentation</a>
@@ -1533,6 +1535,8 @@ public class AmazonRedshiftClient extends AmazonWebServiceClient implements Amaz
      * 
      * @param copyClusterSnapshotRequest
      * @return Result of the CopyClusterSnapshot operation returned by the service.
+     * @throws ClusterNotFoundException
+     *         The <code>ClusterIdentifier</code> parameter does not refer to an existing cluster.
      * @throws ClusterSnapshotAlreadyExistsException
      *         The value specified as a snapshot identifier is already used by an existing snapshot.
      * @throws ClusterSnapshotNotFoundException
@@ -1728,6 +1732,8 @@ public class AmazonRedshiftClient extends AmazonWebServiceClient implements Amaz
      * @throws Ipv6CidrBlockNotFoundException
      *         There are no subnets in your VPC with associated IPv6 CIDR blocks. To use dual-stack mode, associate an
      *         IPv6 CIDR block with each subnet in your VPC.
+     * @throws UnsupportedOperationException
+     *         The requested operation isn't supported.
      * @sample AmazonRedshift.CreateCluster
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/CreateCluster" target="_top">AWS API
      *      Documentation</a>
@@ -2480,6 +2486,8 @@ public class AmazonRedshiftClient extends AmazonWebServiceClient implements Amaz
      * 
      * @param createScheduledActionRequest
      * @return Result of the CreateScheduledAction operation returned by the service.
+     * @throws ClusterNotFoundException
+     *         The <code>ClusterIdentifier</code> parameter does not refer to an existing cluster.
      * @throws ScheduledActionAlreadyExistsException
      *         The scheduled action already exists.
      * @throws ScheduledActionQuotaExceededException
@@ -2492,6 +2500,8 @@ public class AmazonRedshiftClient extends AmazonWebServiceClient implements Amaz
      *         The scheduled action is not valid.
      * @throws UnauthorizedOperationException
      *         Your account is not authorized to perform the requested operation.
+     * @throws UnsupportedOperationException
+     *         The requested operation isn't supported.
      * @sample AmazonRedshift.CreateScheduledAction
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/CreateScheduledAction" target="_top">AWS
      *      API Documentation</a>
@@ -3622,6 +3632,8 @@ public class AmazonRedshiftClient extends AmazonWebServiceClient implements Amaz
      *         The <code>ClusterIdentifier</code> parameter does not refer to an existing cluster.
      * @throws UnauthorizedPartnerIntegrationException
      *         The partner integration is not authorized.
+     * @throws UnsupportedOperationException
+     *         The requested operation isn't supported.
      * @sample AmazonRedshift.DeletePartner
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/DeletePartner" target="_top">AWS API
      *      Documentation</a>
@@ -5651,6 +5663,8 @@ public class AmazonRedshiftClient extends AmazonWebServiceClient implements Amaz
      * @return Result of the DescribeLoggingStatus operation returned by the service.
      * @throws ClusterNotFoundException
      *         The <code>ClusterIdentifier</code> parameter does not refer to an existing cluster.
+     * @throws UnsupportedOperationException
+     *         The requested operation isn't supported.
      * @sample AmazonRedshift.DescribeLoggingStatus
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/DescribeLoggingStatus" target="_top">AWS
      *      API Documentation</a>
@@ -5848,6 +5862,8 @@ public class AmazonRedshiftClient extends AmazonWebServiceClient implements Amaz
      *         The <code>ClusterIdentifier</code> parameter does not refer to an existing cluster.
      * @throws UnauthorizedPartnerIntegrationException
      *         The partner integration is not authorized.
+     * @throws UnsupportedOperationException
+     *         The requested operation isn't supported.
      * @sample AmazonRedshift.DescribePartners
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/DescribePartners" target="_top">AWS API
      *      Documentation</a>
@@ -6122,6 +6138,8 @@ public class AmazonRedshiftClient extends AmazonWebServiceClient implements Amaz
      *         The <code>ClusterIdentifier</code> parameter does not refer to an existing cluster.
      * @throws ResizeNotFoundException
      *         A resize operation for the specified cluster is not found.
+     * @throws UnsupportedOperationException
+     *         The requested operation isn't supported.
      * @sample AmazonRedshift.DescribeResize
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/DescribeResize" target="_top">AWS API
      *      Documentation</a>
@@ -6675,6 +6693,8 @@ public class AmazonRedshiftClient extends AmazonWebServiceClient implements Amaz
      *         The <code>ClusterIdentifier</code> parameter does not refer to an existing cluster.
      * @throws InvalidClusterStateException
      *         The specified cluster is not in the <code>available</code> state.
+     * @throws UnsupportedOperationException
+     *         The requested operation isn't supported.
      * @sample AmazonRedshift.DisableLogging
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/DisableLogging" target="_top">AWS API
      *      Documentation</a>
@@ -6744,6 +6764,8 @@ public class AmazonRedshiftClient extends AmazonWebServiceClient implements Amaz
      *         The specified cluster is not in the <code>available</code> state.
      * @throws UnauthorizedOperationException
      *         Your account is not authorized to perform the requested operation.
+     * @throws UnsupportedOperationException
+     *         The requested operation isn't supported.
      * @sample AmazonRedshift.DisableSnapshotCopy
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/DisableSnapshotCopy" target="_top">AWS
      *      API Documentation</a>
@@ -6874,6 +6896,8 @@ public class AmazonRedshiftClient extends AmazonWebServiceClient implements Amaz
      *         Limitations</a> in the Amazon Simple Storage Service (S3) Developer Guide.
      * @throws InvalidClusterStateException
      *         The specified cluster is not in the <code>available</code> state.
+     * @throws UnsupportedOperationException
+     *         The requested operation isn't supported.
      * @sample AmazonRedshift.EnableLogging
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/EnableLogging" target="_top">AWS API
      *      Documentation</a>
@@ -6985,6 +7009,69 @@ public class AmazonRedshiftClient extends AmazonWebServiceClient implements Amaz
                 request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
                 request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Redshift");
                 request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "EnableSnapshotCopy");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<Cluster> responseHandler = new StaxResponseHandler<Cluster>(new ClusterStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Fails over the primary compute unit of the specified Multi-AZ cluster to another Availability Zone.
+     * </p>
+     * 
+     * @param failoverPrimaryComputeRequest
+     * @return Result of the FailoverPrimaryCompute operation returned by the service.
+     * @throws ClusterNotFoundException
+     *         The <code>ClusterIdentifier</code> parameter does not refer to an existing cluster.
+     * @throws UnsupportedOperationException
+     *         The requested operation isn't supported.
+     * @throws UnauthorizedOperationException
+     *         Your account is not authorized to perform the requested operation.
+     * @throws InvalidClusterStateException
+     *         The specified cluster is not in the <code>available</code> state.
+     * @sample AmazonRedshift.FailoverPrimaryCompute
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/FailoverPrimaryCompute"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public Cluster failoverPrimaryCompute(FailoverPrimaryComputeRequest request) {
+        request = beforeClientExecution(request);
+        return executeFailoverPrimaryCompute(request);
+    }
+
+    @SdkInternalApi
+    final Cluster executeFailoverPrimaryCompute(FailoverPrimaryComputeRequest failoverPrimaryComputeRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(failoverPrimaryComputeRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<FailoverPrimaryComputeRequest> request = null;
+        Response<Cluster> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new FailoverPrimaryComputeRequestMarshaller().marshall(super.beforeMarshalling(failoverPrimaryComputeRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Redshift");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "FailoverPrimaryCompute");
                 request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
 
             } finally {
@@ -7630,6 +7717,8 @@ public class AmazonRedshiftClient extends AmazonWebServiceClient implements Amaz
      *         Cluster is already on the latest database revision.
      * @throws InvalidClusterStateException
      *         The specified cluster is not in the <code>available</code> state.
+     * @throws UnsupportedOperationException
+     *         The requested operation isn't supported.
      * @sample AmazonRedshift.ModifyClusterDbRevision
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/ModifyClusterDbRevision"
      *      target="_top">AWS API Documentation</a>
@@ -8284,6 +8373,8 @@ public class AmazonRedshiftClient extends AmazonWebServiceClient implements Amaz
      * 
      * @param modifyScheduledActionRequest
      * @return Result of the ModifyScheduledAction operation returned by the service.
+     * @throws ClusterNotFoundException
+     *         The <code>ClusterIdentifier</code> parameter does not refer to an existing cluster.
      * @throws ScheduledActionNotFoundException
      *         The scheduled action cannot be found.
      * @throws ScheduledActionTypeUnsupportedException
@@ -8294,6 +8385,8 @@ public class AmazonRedshiftClient extends AmazonWebServiceClient implements Amaz
      *         The scheduled action is not valid.
      * @throws UnauthorizedOperationException
      *         Your account is not authorized to perform the requested operation.
+     * @throws UnsupportedOperationException
+     *         The requested operation isn't supported.
      * @sample AmazonRedshift.ModifyScheduledAction
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/ModifyScheduledAction" target="_top">AWS
      *      API Documentation</a>
@@ -8552,6 +8645,8 @@ public class AmazonRedshiftClient extends AmazonWebServiceClient implements Amaz
      *         The <code>ClusterIdentifier</code> parameter does not refer to an existing cluster.
      * @throws InvalidClusterStateException
      *         The specified cluster is not in the <code>available</code> state.
+     * @throws UnsupportedOperationException
+     *         The requested operation isn't supported.
      * @sample AmazonRedshift.PauseCluster
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/PauseCluster" target="_top">AWS API
      *      Documentation</a>
@@ -9323,6 +9418,8 @@ public class AmazonRedshiftClient extends AmazonWebServiceClient implements Amaz
      *         The specified cluster is not in the <code>available</code> state.
      * @throws InsufficientClusterCapacityException
      *         The number of nodes specified exceeds the allotted capacity of the cluster.
+     * @throws UnsupportedOperationException
+     *         The requested operation isn't supported.
      * @sample AmazonRedshift.ResumeCluster
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/ResumeCluster" target="_top">AWS API
      *      Documentation</a>
@@ -9592,6 +9689,8 @@ public class AmazonRedshiftClient extends AmazonWebServiceClient implements Amaz
      * @throws DependentServiceRequestThrottlingException
      *         The request cannot be completed because a dependent service is throttling requests made by Amazon
      *         Redshift on your behalf. Wait and retry the request.
+     * @throws UnsupportedOperationException
+     *         The requested operation isn't supported.
      * @sample AmazonRedshift.RotateEncryptionKey
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/RotateEncryptionKey" target="_top">AWS
      *      API Documentation</a>
@@ -9653,6 +9752,8 @@ public class AmazonRedshiftClient extends AmazonWebServiceClient implements Amaz
      *         The <code>ClusterIdentifier</code> parameter does not refer to an existing cluster.
      * @throws UnauthorizedPartnerIntegrationException
      *         The partner integration is not authorized.
+     * @throws UnsupportedOperationException
+     *         The requested operation isn't supported.
      * @sample AmazonRedshift.UpdatePartnerStatus
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/UpdatePartnerStatus" target="_top">AWS
      *      API Documentation</a>

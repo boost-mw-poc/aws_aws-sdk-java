@@ -51,6 +51,12 @@ public class RoutingProfileMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("NumberOfAssociatedUsers").build();
     private static final MarshallingInfo<String> AGENTAVAILABILITYTIMER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AgentAvailabilityTimer").build();
+    private static final MarshallingInfo<java.util.Date> LASTMODIFIEDTIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LastModifiedTime").timestampFormat("unixTimestamp").build();
+    private static final MarshallingInfo<String> LASTMODIFIEDREGION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LastModifiedRegion").build();
+    private static final MarshallingInfo<Boolean> ISDEFAULT_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("IsDefault").build();
 
     private static final RoutingProfileMarshaller instance = new RoutingProfileMarshaller();
 
@@ -79,6 +85,9 @@ public class RoutingProfileMarshaller {
             protocolMarshaller.marshall(routingProfile.getNumberOfAssociatedQueues(), NUMBEROFASSOCIATEDQUEUES_BINDING);
             protocolMarshaller.marshall(routingProfile.getNumberOfAssociatedUsers(), NUMBEROFASSOCIATEDUSERS_BINDING);
             protocolMarshaller.marshall(routingProfile.getAgentAvailabilityTimer(), AGENTAVAILABILITYTIMER_BINDING);
+            protocolMarshaller.marshall(routingProfile.getLastModifiedTime(), LASTMODIFIEDTIME_BINDING);
+            protocolMarshaller.marshall(routingProfile.getLastModifiedRegion(), LASTMODIFIEDREGION_BINDING);
+            protocolMarshaller.marshall(routingProfile.getIsDefault(), ISDEFAULT_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

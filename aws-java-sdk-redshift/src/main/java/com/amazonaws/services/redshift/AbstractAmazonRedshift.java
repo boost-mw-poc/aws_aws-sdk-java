@@ -574,6 +574,11 @@ public class AbstractAmazonRedshift implements AmazonRedshift {
     }
 
     @Override
+    public Cluster failoverPrimaryCompute(FailoverPrimaryComputeRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetClusterCredentialsResult getClusterCredentials(GetClusterCredentialsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

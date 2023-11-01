@@ -79,6 +79,12 @@ public class ClusterPendingModifiedValuesStaxUnmarshaller implements Unmarshalle
                     continue;
                 }
 
+                if (context.testExpression("RdsCustomClusterConfiguration", targetDepth)) {
+                    clusterPendingModifiedValues.setRdsCustomClusterConfiguration(RdsCustomClusterConfigurationStaxUnmarshaller.getInstance().unmarshall(
+                            context));
+                    continue;
+                }
+
                 if (context.testExpression("Iops", targetDepth)) {
                     clusterPendingModifiedValues.setIops(IntegerStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;

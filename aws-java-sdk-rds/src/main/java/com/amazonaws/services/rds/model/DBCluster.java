@@ -348,6 +348,12 @@ public class DBCluster implements Serializable, Cloneable {
     private ScalingConfigurationInfo scalingConfigurationInfo;
     /**
      * <p>
+     * Reserved for future use.
+     * </p>
+     */
+    private RdsCustomClusterConfiguration rdsCustomClusterConfiguration;
+    /**
+     * <p>
      * Indicates whether the DB cluster has deletion protection enabled. The database can't be deleted when deletion
      * protection is enabled.
      * </p>
@@ -2912,6 +2918,46 @@ public class DBCluster implements Serializable, Cloneable {
 
     /**
      * <p>
+     * Reserved for future use.
+     * </p>
+     * 
+     * @param rdsCustomClusterConfiguration
+     *        Reserved for future use.
+     */
+
+    public void setRdsCustomClusterConfiguration(RdsCustomClusterConfiguration rdsCustomClusterConfiguration) {
+        this.rdsCustomClusterConfiguration = rdsCustomClusterConfiguration;
+    }
+
+    /**
+     * <p>
+     * Reserved for future use.
+     * </p>
+     * 
+     * @return Reserved for future use.
+     */
+
+    public RdsCustomClusterConfiguration getRdsCustomClusterConfiguration() {
+        return this.rdsCustomClusterConfiguration;
+    }
+
+    /**
+     * <p>
+     * Reserved for future use.
+     * </p>
+     * 
+     * @param rdsCustomClusterConfiguration
+     *        Reserved for future use.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DBCluster withRdsCustomClusterConfiguration(RdsCustomClusterConfiguration rdsCustomClusterConfiguration) {
+        setRdsCustomClusterConfiguration(rdsCustomClusterConfiguration);
+        return this;
+    }
+
+    /**
+     * <p>
      * Indicates whether the DB cluster has deletion protection enabled. The database can't be deleted when deletion
      * protection is enabled.
      * </p>
@@ -5137,6 +5183,8 @@ public class DBCluster implements Serializable, Cloneable {
             sb.append("EngineMode: ").append(getEngineMode()).append(",");
         if (getScalingConfigurationInfo() != null)
             sb.append("ScalingConfigurationInfo: ").append(getScalingConfigurationInfo()).append(",");
+        if (getRdsCustomClusterConfiguration() != null)
+            sb.append("RdsCustomClusterConfiguration: ").append(getRdsCustomClusterConfiguration()).append(",");
         if (getDeletionProtection() != null)
             sb.append("DeletionProtection: ").append(getDeletionProtection()).append(",");
         if (getHttpEndpointEnabled() != null)
@@ -5390,6 +5438,11 @@ public class DBCluster implements Serializable, Cloneable {
             return false;
         if (other.getScalingConfigurationInfo() != null && other.getScalingConfigurationInfo().equals(this.getScalingConfigurationInfo()) == false)
             return false;
+        if (other.getRdsCustomClusterConfiguration() == null ^ this.getRdsCustomClusterConfiguration() == null)
+            return false;
+        if (other.getRdsCustomClusterConfiguration() != null
+                && other.getRdsCustomClusterConfiguration().equals(this.getRdsCustomClusterConfiguration()) == false)
+            return false;
         if (other.getDeletionProtection() == null ^ this.getDeletionProtection() == null)
             return false;
         if (other.getDeletionProtection() != null && other.getDeletionProtection().equals(this.getDeletionProtection()) == false)
@@ -5567,6 +5620,7 @@ public class DBCluster implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getCapacity() == null) ? 0 : getCapacity().hashCode());
         hashCode = prime * hashCode + ((getEngineMode() == null) ? 0 : getEngineMode().hashCode());
         hashCode = prime * hashCode + ((getScalingConfigurationInfo() == null) ? 0 : getScalingConfigurationInfo().hashCode());
+        hashCode = prime * hashCode + ((getRdsCustomClusterConfiguration() == null) ? 0 : getRdsCustomClusterConfiguration().hashCode());
         hashCode = prime * hashCode + ((getDeletionProtection() == null) ? 0 : getDeletionProtection().hashCode());
         hashCode = prime * hashCode + ((getHttpEndpointEnabled() == null) ? 0 : getHttpEndpointEnabled().hashCode());
         hashCode = prime * hashCode + ((getActivityStreamMode() == null) ? 0 : getActivityStreamMode().hashCode());

@@ -410,6 +410,12 @@ public class RestoreFromClusterSnapshotRequest extends com.amazonaws.AmazonWebSe
      * </p>
      */
     private String ipAddressType;
+    /**
+     * <p>
+     * If true, the snapshot will be restored to a cluster deployed in two Availability Zones.
+     * </p>
+     */
+    private Boolean multiAZ;
 
     /**
      * <p>
@@ -3085,6 +3091,58 @@ public class RestoreFromClusterSnapshotRequest extends com.amazonaws.AmazonWebSe
     }
 
     /**
+     * <p>
+     * If true, the snapshot will be restored to a cluster deployed in two Availability Zones.
+     * </p>
+     * 
+     * @param multiAZ
+     *        If true, the snapshot will be restored to a cluster deployed in two Availability Zones.
+     */
+
+    public void setMultiAZ(Boolean multiAZ) {
+        this.multiAZ = multiAZ;
+    }
+
+    /**
+     * <p>
+     * If true, the snapshot will be restored to a cluster deployed in two Availability Zones.
+     * </p>
+     * 
+     * @return If true, the snapshot will be restored to a cluster deployed in two Availability Zones.
+     */
+
+    public Boolean getMultiAZ() {
+        return this.multiAZ;
+    }
+
+    /**
+     * <p>
+     * If true, the snapshot will be restored to a cluster deployed in two Availability Zones.
+     * </p>
+     * 
+     * @param multiAZ
+     *        If true, the snapshot will be restored to a cluster deployed in two Availability Zones.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RestoreFromClusterSnapshotRequest withMultiAZ(Boolean multiAZ) {
+        setMultiAZ(multiAZ);
+        return this;
+    }
+
+    /**
+     * <p>
+     * If true, the snapshot will be restored to a cluster deployed in two Availability Zones.
+     * </p>
+     * 
+     * @return If true, the snapshot will be restored to a cluster deployed in two Availability Zones.
+     */
+
+    public Boolean isMultiAZ() {
+        return this.multiAZ;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -3167,7 +3225,9 @@ public class RestoreFromClusterSnapshotRequest extends com.amazonaws.AmazonWebSe
         if (getMasterPasswordSecretKmsKeyId() != null)
             sb.append("MasterPasswordSecretKmsKeyId: ").append(getMasterPasswordSecretKmsKeyId()).append(",");
         if (getIpAddressType() != null)
-            sb.append("IpAddressType: ").append(getIpAddressType());
+            sb.append("IpAddressType: ").append(getIpAddressType()).append(",");
+        if (getMultiAZ() != null)
+            sb.append("MultiAZ: ").append(getMultiAZ());
         sb.append("}");
         return sb.toString();
     }
@@ -3329,6 +3389,10 @@ public class RestoreFromClusterSnapshotRequest extends com.amazonaws.AmazonWebSe
             return false;
         if (other.getIpAddressType() != null && other.getIpAddressType().equals(this.getIpAddressType()) == false)
             return false;
+        if (other.getMultiAZ() == null ^ this.getMultiAZ() == null)
+            return false;
+        if (other.getMultiAZ() != null && other.getMultiAZ().equals(this.getMultiAZ()) == false)
+            return false;
         return true;
     }
 
@@ -3373,6 +3437,7 @@ public class RestoreFromClusterSnapshotRequest extends com.amazonaws.AmazonWebSe
         hashCode = prime * hashCode + ((getManageMasterPassword() == null) ? 0 : getManageMasterPassword().hashCode());
         hashCode = prime * hashCode + ((getMasterPasswordSecretKmsKeyId() == null) ? 0 : getMasterPasswordSecretKmsKeyId().hashCode());
         hashCode = prime * hashCode + ((getIpAddressType() == null) ? 0 : getIpAddressType().hashCode());
+        hashCode = prime * hashCode + ((getMultiAZ() == null) ? 0 : getMultiAZ().hashCode());
         return hashCode;
     }
 

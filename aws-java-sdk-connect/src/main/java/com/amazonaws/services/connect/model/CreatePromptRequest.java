@@ -47,7 +47,9 @@ public class CreatePromptRequest extends com.amazonaws.AmazonWebServiceRequest i
     private String description;
     /**
      * <p>
-     * The URI for the S3 bucket where the prompt is stored.
+     * The URI for the S3 bucket where the prompt is stored. You can provide S3 pre-signed URLs returned by the <a
+     * href="https://docs.aws.amazon.com/connect/latest/APIReference/API_GetPromptFile.html">GetPromptFile</a> API
+     * instead of providing S3 URIs.
      * </p>
      */
     private String s3Uri;
@@ -193,11 +195,15 @@ public class CreatePromptRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The URI for the S3 bucket where the prompt is stored.
+     * The URI for the S3 bucket where the prompt is stored. You can provide S3 pre-signed URLs returned by the <a
+     * href="https://docs.aws.amazon.com/connect/latest/APIReference/API_GetPromptFile.html">GetPromptFile</a> API
+     * instead of providing S3 URIs.
      * </p>
      * 
      * @param s3Uri
-     *        The URI for the S3 bucket where the prompt is stored.
+     *        The URI for the S3 bucket where the prompt is stored. You can provide S3 pre-signed URLs returned by the
+     *        <a href="https://docs.aws.amazon.com/connect/latest/APIReference/API_GetPromptFile.html">GetPromptFile</a>
+     *        API instead of providing S3 URIs.
      */
 
     public void setS3Uri(String s3Uri) {
@@ -206,10 +212,15 @@ public class CreatePromptRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The URI for the S3 bucket where the prompt is stored.
+     * The URI for the S3 bucket where the prompt is stored. You can provide S3 pre-signed URLs returned by the <a
+     * href="https://docs.aws.amazon.com/connect/latest/APIReference/API_GetPromptFile.html">GetPromptFile</a> API
+     * instead of providing S3 URIs.
      * </p>
      * 
-     * @return The URI for the S3 bucket where the prompt is stored.
+     * @return The URI for the S3 bucket where the prompt is stored. You can provide S3 pre-signed URLs returned by the
+     *         <a
+     *         href="https://docs.aws.amazon.com/connect/latest/APIReference/API_GetPromptFile.html">GetPromptFile</a>
+     *         API instead of providing S3 URIs.
      */
 
     public String getS3Uri() {
@@ -218,11 +229,15 @@ public class CreatePromptRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The URI for the S3 bucket where the prompt is stored.
+     * The URI for the S3 bucket where the prompt is stored. You can provide S3 pre-signed URLs returned by the <a
+     * href="https://docs.aws.amazon.com/connect/latest/APIReference/API_GetPromptFile.html">GetPromptFile</a> API
+     * instead of providing S3 URIs.
      * </p>
      * 
      * @param s3Uri
-     *        The URI for the S3 bucket where the prompt is stored.
+     *        The URI for the S3 bucket where the prompt is stored. You can provide S3 pre-signed URLs returned by the
+     *        <a href="https://docs.aws.amazon.com/connect/latest/APIReference/API_GetPromptFile.html">GetPromptFile</a>
+     *        API instead of providing S3 URIs.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

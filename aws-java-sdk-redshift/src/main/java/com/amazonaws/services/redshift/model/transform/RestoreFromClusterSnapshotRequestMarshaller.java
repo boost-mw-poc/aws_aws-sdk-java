@@ -219,6 +219,10 @@ public class RestoreFromClusterSnapshotRequestMarshaller implements Marshaller<R
             request.addParameter("IpAddressType", StringUtils.fromString(restoreFromClusterSnapshotRequest.getIpAddressType()));
         }
 
+        if (restoreFromClusterSnapshotRequest.getMultiAZ() != null) {
+            request.addParameter("MultiAZ", StringUtils.fromBoolean(restoreFromClusterSnapshotRequest.getMultiAZ()));
+        }
+
         return request;
     }
 

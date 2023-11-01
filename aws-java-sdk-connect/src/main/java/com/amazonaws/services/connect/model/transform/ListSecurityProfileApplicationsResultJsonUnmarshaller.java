@@ -58,6 +58,14 @@ public class ListSecurityProfileApplicationsResultJsonUnmarshaller implements Un
                     context.nextToken();
                     listSecurityProfileApplicationsResult.setNextToken(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("LastModifiedTime", targetDepth)) {
+                    context.nextToken();
+                    listSecurityProfileApplicationsResult.setLastModifiedTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
+                }
+                if (context.testExpression("LastModifiedRegion", targetDepth)) {
+                    context.nextToken();
+                    listSecurityProfileApplicationsResult.setLastModifiedRegion(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

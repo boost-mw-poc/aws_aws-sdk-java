@@ -217,6 +217,22 @@ public class CreateDBClusterRequestMarshaller implements Marshaller<Request<Crea
             }
         }
 
+        {
+            RdsCustomClusterConfiguration rdsCustomClusterConfiguration = createDBClusterRequest.getRdsCustomClusterConfiguration();
+            if (rdsCustomClusterConfiguration != null) {
+
+                if (rdsCustomClusterConfiguration.getInterconnectSubnetId() != null) {
+                    request.addParameter("RdsCustomClusterConfiguration.InterconnectSubnetId",
+                            StringUtils.fromString(rdsCustomClusterConfiguration.getInterconnectSubnetId()));
+                }
+
+                if (rdsCustomClusterConfiguration.getTransitGatewayMulticastDomainId() != null) {
+                    request.addParameter("RdsCustomClusterConfiguration.TransitGatewayMulticastDomainId",
+                            StringUtils.fromString(rdsCustomClusterConfiguration.getTransitGatewayMulticastDomainId()));
+                }
+            }
+        }
+
         if (createDBClusterRequest.getDeletionProtection() != null) {
             request.addParameter("DeletionProtection", StringUtils.fromBoolean(createDBClusterRequest.getDeletionProtection()));
         }

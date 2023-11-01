@@ -426,6 +426,13 @@ public class ModifyClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      */
     private String ipAddressType;
+    /**
+     * <p>
+     * If true and the cluster is currently only deployed in a single Availability Zone, the cluster will be modified to
+     * be deployed in two Availability Zones.
+     * </p>
+     */
+    private Boolean multiAZ;
 
     /**
      * <p>
@@ -3131,6 +3138,66 @@ public class ModifyClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
     }
 
     /**
+     * <p>
+     * If true and the cluster is currently only deployed in a single Availability Zone, the cluster will be modified to
+     * be deployed in two Availability Zones.
+     * </p>
+     * 
+     * @param multiAZ
+     *        If true and the cluster is currently only deployed in a single Availability Zone, the cluster will be
+     *        modified to be deployed in two Availability Zones.
+     */
+
+    public void setMultiAZ(Boolean multiAZ) {
+        this.multiAZ = multiAZ;
+    }
+
+    /**
+     * <p>
+     * If true and the cluster is currently only deployed in a single Availability Zone, the cluster will be modified to
+     * be deployed in two Availability Zones.
+     * </p>
+     * 
+     * @return If true and the cluster is currently only deployed in a single Availability Zone, the cluster will be
+     *         modified to be deployed in two Availability Zones.
+     */
+
+    public Boolean getMultiAZ() {
+        return this.multiAZ;
+    }
+
+    /**
+     * <p>
+     * If true and the cluster is currently only deployed in a single Availability Zone, the cluster will be modified to
+     * be deployed in two Availability Zones.
+     * </p>
+     * 
+     * @param multiAZ
+     *        If true and the cluster is currently only deployed in a single Availability Zone, the cluster will be
+     *        modified to be deployed in two Availability Zones.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ModifyClusterRequest withMultiAZ(Boolean multiAZ) {
+        setMultiAZ(multiAZ);
+        return this;
+    }
+
+    /**
+     * <p>
+     * If true and the cluster is currently only deployed in a single Availability Zone, the cluster will be modified to
+     * be deployed in two Availability Zones.
+     * </p>
+     * 
+     * @return If true and the cluster is currently only deployed in a single Availability Zone, the cluster will be
+     *         modified to be deployed in two Availability Zones.
+     */
+
+    public Boolean isMultiAZ() {
+        return this.multiAZ;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -3197,7 +3264,9 @@ public class ModifyClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
         if (getMasterPasswordSecretKmsKeyId() != null)
             sb.append("MasterPasswordSecretKmsKeyId: ").append(getMasterPasswordSecretKmsKeyId()).append(",");
         if (getIpAddressType() != null)
-            sb.append("IpAddressType: ").append(getIpAddressType());
+            sb.append("IpAddressType: ").append(getIpAddressType()).append(",");
+        if (getMultiAZ() != null)
+            sb.append("MultiAZ: ").append(getMultiAZ());
         sb.append("}");
         return sb.toString();
     }
@@ -3327,6 +3396,10 @@ public class ModifyClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
             return false;
         if (other.getIpAddressType() != null && other.getIpAddressType().equals(this.getIpAddressType()) == false)
             return false;
+        if (other.getMultiAZ() == null ^ this.getMultiAZ() == null)
+            return false;
+        if (other.getMultiAZ() != null && other.getMultiAZ().equals(this.getMultiAZ()) == false)
+            return false;
         return true;
     }
 
@@ -3363,6 +3436,7 @@ public class ModifyClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
         hashCode = prime * hashCode + ((getManageMasterPassword() == null) ? 0 : getManageMasterPassword().hashCode());
         hashCode = prime * hashCode + ((getMasterPasswordSecretKmsKeyId() == null) ? 0 : getMasterPasswordSecretKmsKeyId().hashCode());
         hashCode = prime * hashCode + ((getIpAddressType() == null) ? 0 : getIpAddressType().hashCode());
+        hashCode = prime * hashCode + ((getMultiAZ() == null) ? 0 : getMultiAZ().hashCode());
         return hashCode;
     }
 

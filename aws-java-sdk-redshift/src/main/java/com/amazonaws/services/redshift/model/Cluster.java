@@ -560,6 +560,18 @@ public class Cluster implements Serializable, Cloneable {
      * </p>
      */
     private String ipAddressType;
+    /**
+     * <p>
+     * A boolean value that, if true, indicates that the cluster is deployed in two Availability Zones.
+     * </p>
+     */
+    private String multiAZ;
+    /**
+     * <p>
+     * The secondary compute unit of a cluster, if Multi-AZ deployment is turned on.
+     * </p>
+     */
+    private SecondaryClusterInfo multiAZSecondary;
 
     /**
      * <p>
@@ -4369,6 +4381,86 @@ public class Cluster implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * A boolean value that, if true, indicates that the cluster is deployed in two Availability Zones.
+     * </p>
+     * 
+     * @param multiAZ
+     *        A boolean value that, if true, indicates that the cluster is deployed in two Availability Zones.
+     */
+
+    public void setMultiAZ(String multiAZ) {
+        this.multiAZ = multiAZ;
+    }
+
+    /**
+     * <p>
+     * A boolean value that, if true, indicates that the cluster is deployed in two Availability Zones.
+     * </p>
+     * 
+     * @return A boolean value that, if true, indicates that the cluster is deployed in two Availability Zones.
+     */
+
+    public String getMultiAZ() {
+        return this.multiAZ;
+    }
+
+    /**
+     * <p>
+     * A boolean value that, if true, indicates that the cluster is deployed in two Availability Zones.
+     * </p>
+     * 
+     * @param multiAZ
+     *        A boolean value that, if true, indicates that the cluster is deployed in two Availability Zones.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Cluster withMultiAZ(String multiAZ) {
+        setMultiAZ(multiAZ);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The secondary compute unit of a cluster, if Multi-AZ deployment is turned on.
+     * </p>
+     * 
+     * @param multiAZSecondary
+     *        The secondary compute unit of a cluster, if Multi-AZ deployment is turned on.
+     */
+
+    public void setMultiAZSecondary(SecondaryClusterInfo multiAZSecondary) {
+        this.multiAZSecondary = multiAZSecondary;
+    }
+
+    /**
+     * <p>
+     * The secondary compute unit of a cluster, if Multi-AZ deployment is turned on.
+     * </p>
+     * 
+     * @return The secondary compute unit of a cluster, if Multi-AZ deployment is turned on.
+     */
+
+    public SecondaryClusterInfo getMultiAZSecondary() {
+        return this.multiAZSecondary;
+    }
+
+    /**
+     * <p>
+     * The secondary compute unit of a cluster, if Multi-AZ deployment is turned on.
+     * </p>
+     * 
+     * @param multiAZSecondary
+     *        The secondary compute unit of a cluster, if Multi-AZ deployment is turned on.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Cluster withMultiAZSecondary(SecondaryClusterInfo multiAZSecondary) {
+        setMultiAZSecondary(multiAZSecondary);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -4495,7 +4587,11 @@ public class Cluster implements Serializable, Cloneable {
         if (getMasterPasswordSecretKmsKeyId() != null)
             sb.append("MasterPasswordSecretKmsKeyId: ").append(getMasterPasswordSecretKmsKeyId()).append(",");
         if (getIpAddressType() != null)
-            sb.append("IpAddressType: ").append(getIpAddressType());
+            sb.append("IpAddressType: ").append(getIpAddressType()).append(",");
+        if (getMultiAZ() != null)
+            sb.append("MultiAZ: ").append(getMultiAZ()).append(",");
+        if (getMultiAZSecondary() != null)
+            sb.append("MultiAZSecondary: ").append(getMultiAZSecondary());
         sb.append("}");
         return sb.toString();
     }
@@ -4751,6 +4847,14 @@ public class Cluster implements Serializable, Cloneable {
             return false;
         if (other.getIpAddressType() != null && other.getIpAddressType().equals(this.getIpAddressType()) == false)
             return false;
+        if (other.getMultiAZ() == null ^ this.getMultiAZ() == null)
+            return false;
+        if (other.getMultiAZ() != null && other.getMultiAZ().equals(this.getMultiAZ()) == false)
+            return false;
+        if (other.getMultiAZSecondary() == null ^ this.getMultiAZSecondary() == null)
+            return false;
+        if (other.getMultiAZSecondary() != null && other.getMultiAZSecondary().equals(this.getMultiAZSecondary()) == false)
+            return false;
         return true;
     }
 
@@ -4817,6 +4921,8 @@ public class Cluster implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getMasterPasswordSecretArn() == null) ? 0 : getMasterPasswordSecretArn().hashCode());
         hashCode = prime * hashCode + ((getMasterPasswordSecretKmsKeyId() == null) ? 0 : getMasterPasswordSecretKmsKeyId().hashCode());
         hashCode = prime * hashCode + ((getIpAddressType() == null) ? 0 : getIpAddressType().hashCode());
+        hashCode = prime * hashCode + ((getMultiAZ() == null) ? 0 : getMultiAZ().hashCode());
+        hashCode = prime * hashCode + ((getMultiAZSecondary() == null) ? 0 : getMultiAZSecondary().hashCode());
         return hashCode;
     }
 

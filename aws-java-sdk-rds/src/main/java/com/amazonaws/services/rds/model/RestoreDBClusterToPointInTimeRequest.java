@@ -575,6 +575,12 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
      * </p>
      */
     private String sourceDbClusterResourceId;
+    /**
+     * <p>
+     * Reserved for future use.
+     * </p>
+     */
+    private RdsCustomClusterConfiguration rdsCustomClusterConfiguration;
 
     /**
      * <p>
@@ -4322,6 +4328,46 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
     }
 
     /**
+     * <p>
+     * Reserved for future use.
+     * </p>
+     * 
+     * @param rdsCustomClusterConfiguration
+     *        Reserved for future use.
+     */
+
+    public void setRdsCustomClusterConfiguration(RdsCustomClusterConfiguration rdsCustomClusterConfiguration) {
+        this.rdsCustomClusterConfiguration = rdsCustomClusterConfiguration;
+    }
+
+    /**
+     * <p>
+     * Reserved for future use.
+     * </p>
+     * 
+     * @return Reserved for future use.
+     */
+
+    public RdsCustomClusterConfiguration getRdsCustomClusterConfiguration() {
+        return this.rdsCustomClusterConfiguration;
+    }
+
+    /**
+     * <p>
+     * Reserved for future use.
+     * </p>
+     * 
+     * @param rdsCustomClusterConfiguration
+     *        Reserved for future use.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RestoreDBClusterToPointInTimeRequest withRdsCustomClusterConfiguration(RdsCustomClusterConfiguration rdsCustomClusterConfiguration) {
+        setRdsCustomClusterConfiguration(rdsCustomClusterConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -4388,7 +4434,9 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
         if (getNetworkType() != null)
             sb.append("NetworkType: ").append(getNetworkType()).append(",");
         if (getSourceDbClusterResourceId() != null)
-            sb.append("SourceDbClusterResourceId: ").append(getSourceDbClusterResourceId());
+            sb.append("SourceDbClusterResourceId: ").append(getSourceDbClusterResourceId()).append(",");
+        if (getRdsCustomClusterConfiguration() != null)
+            sb.append("RdsCustomClusterConfiguration: ").append(getRdsCustomClusterConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -4517,6 +4565,11 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
             return false;
         if (other.getSourceDbClusterResourceId() != null && other.getSourceDbClusterResourceId().equals(this.getSourceDbClusterResourceId()) == false)
             return false;
+        if (other.getRdsCustomClusterConfiguration() == null ^ this.getRdsCustomClusterConfiguration() == null)
+            return false;
+        if (other.getRdsCustomClusterConfiguration() != null
+                && other.getRdsCustomClusterConfiguration().equals(this.getRdsCustomClusterConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -4553,6 +4606,7 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
         hashCode = prime * hashCode + ((getServerlessV2ScalingConfiguration() == null) ? 0 : getServerlessV2ScalingConfiguration().hashCode());
         hashCode = prime * hashCode + ((getNetworkType() == null) ? 0 : getNetworkType().hashCode());
         hashCode = prime * hashCode + ((getSourceDbClusterResourceId() == null) ? 0 : getSourceDbClusterResourceId().hashCode());
+        hashCode = prime * hashCode + ((getRdsCustomClusterConfiguration() == null) ? 0 : getRdsCustomClusterConfiguration().hashCode());
         return hashCode;
     }
 

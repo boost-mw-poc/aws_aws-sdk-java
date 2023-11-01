@@ -88,6 +88,11 @@ public class AbstractAmazonConnect implements AmazonConnect {
     }
 
     @Override
+    public BatchGetFlowAssociationResult batchGetFlowAssociation(BatchGetFlowAssociationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ClaimPhoneNumberResult claimPhoneNumber(ClaimPhoneNumberRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

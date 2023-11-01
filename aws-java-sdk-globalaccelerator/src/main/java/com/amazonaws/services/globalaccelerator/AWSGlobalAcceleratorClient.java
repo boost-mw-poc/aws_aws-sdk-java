@@ -91,7 +91,7 @@ import com.amazonaws.services.globalaccelerator.model.transform.*;
  * static IPv4 addresses. For dual-stack, Global Accelerator provides a total of four addresses: two static IPv4
  * addresses and two static IPv6 addresses. With a standard accelerator for IPv4, instead of using the addresses that
  * Global Accelerator provides, you can configure these entry points to be IPv4 addresses from your own IP address
- * ranges that you bring toGlobal Accelerator (BYOIP).
+ * ranges that you bring to Global Accelerator (BYOIP).
  * </p>
  * <p>
  * For a standard accelerator, they distribute incoming application traffic across multiple endpoint resources in
@@ -173,6 +173,9 @@ public class AWSGlobalAcceleratorClient extends AmazonWebServiceClient implement
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("AccessDeniedException").withExceptionUnmarshaller(
                                     com.amazonaws.services.globalaccelerator.model.transform.AccessDeniedExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("AttachmentNotFoundException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.globalaccelerator.model.transform.AttachmentNotFoundExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ConflictException").withExceptionUnmarshaller(
                                     com.amazonaws.services.globalaccelerator.model.transform.ConflictExceptionUnmarshaller.getInstance()))
@@ -650,6 +653,82 @@ public class AWSGlobalAcceleratorClient extends AmazonWebServiceClient implement
 
     /**
      * <p>
+     * Create a cross-account attachment in Global Accelerator. You create a cross-account attachment to specify the
+     * <i>principals</i> who have permission to add to accelerators in their own account the resources in your account
+     * that you also list in the attachment.
+     * </p>
+     * <p>
+     * A principal can be an Amazon Web Services account number or the Amazon Resource Name (ARN) for an accelerator.
+     * For account numbers that are listed as principals, to add a resource listed in the attachment to an accelerator,
+     * you must sign in to an account specified as a principal. Then you can add the resources that are listed to any of
+     * your accelerators. If an accelerator ARN is listed in the cross-account attachment as a principal, anyone with
+     * permission to make updates to the accelerator can add as endpoints resources that are listed in the attachment.
+     * </p>
+     * 
+     * @param createCrossAccountAttachmentRequest
+     * @return Result of the CreateCrossAccountAttachment operation returned by the service.
+     * @throws InternalServiceErrorException
+     *         There was an internal error for Global Accelerator.
+     * @throws InvalidArgumentException
+     *         An argument that you specified is invalid.
+     * @throws LimitExceededException
+     *         Processing your request would cause you to exceed an Global Accelerator limit.
+     * @throws AccessDeniedException
+     *         You don't have access permission.
+     * @throws TransactionInProgressException
+     *         There's already a transaction in progress. Another transaction can't be processed.
+     * @sample AWSGlobalAccelerator.CreateCrossAccountAttachment
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/globalaccelerator-2018-08-08/CreateCrossAccountAttachment"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public CreateCrossAccountAttachmentResult createCrossAccountAttachment(CreateCrossAccountAttachmentRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateCrossAccountAttachment(request);
+    }
+
+    @SdkInternalApi
+    final CreateCrossAccountAttachmentResult executeCreateCrossAccountAttachment(CreateCrossAccountAttachmentRequest createCrossAccountAttachmentRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createCrossAccountAttachmentRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateCrossAccountAttachmentRequest> request = null;
+        Response<CreateCrossAccountAttachmentResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateCrossAccountAttachmentRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(createCrossAccountAttachmentRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Global Accelerator");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateCrossAccountAttachment");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<CreateCrossAccountAttachmentResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new CreateCrossAccountAttachmentResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Create a custom routing accelerator. A custom routing accelerator directs traffic to one of possibly thousands of
      * Amazon EC2 instance destinations running in a single or multiple virtual private clouds (VPC) subnet endpoints.
      * </p>
@@ -1087,6 +1166,96 @@ public class AWSGlobalAcceleratorClient extends AmazonWebServiceClient implement
 
             HttpResponseHandler<AmazonWebServiceResponse<DeleteAcceleratorResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DeleteAcceleratorResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Delete a cross-account attachment. When you delete an attachment, Global Accelerator revokes the permission to
+     * use the resources in the attachment from all principals in the list of principals. Global Accelerator revokes the
+     * permission for specific resources by doing the following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * If the principal is an account ID, Global Accelerator reviews every accelerator in the account and removes
+     * cross-account endpoints from all accelerators.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If the principal is an accelerator, Global Accelerator reviews just that accelerator and removes cross-account
+     * endpoints from it.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * If there are overlapping permissions provided by multiple cross-account attachments, Global Accelerator only
+     * removes endpoints if there are no current cross-account attachments that provide access permission. For example,
+     * if you delete a cross-account attachment that lists an accelerator as a principal, but another cross-account
+     * attachment includes the account ID that owns that accelerator, endpoints will not be removed from the
+     * accelerator.
+     * </p>
+     * 
+     * @param deleteCrossAccountAttachmentRequest
+     * @return Result of the DeleteCrossAccountAttachment operation returned by the service.
+     * @throws AttachmentNotFoundException
+     *         No cross-account attachment was found.
+     * @throws AccessDeniedException
+     *         You don't have access permission.
+     * @throws InternalServiceErrorException
+     *         There was an internal error for Global Accelerator.
+     * @throws InvalidArgumentException
+     *         An argument that you specified is invalid.
+     * @throws TransactionInProgressException
+     *         There's already a transaction in progress. Another transaction can't be processed.
+     * @sample AWSGlobalAccelerator.DeleteCrossAccountAttachment
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/globalaccelerator-2018-08-08/DeleteCrossAccountAttachment"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DeleteCrossAccountAttachmentResult deleteCrossAccountAttachment(DeleteCrossAccountAttachmentRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteCrossAccountAttachment(request);
+    }
+
+    @SdkInternalApi
+    final DeleteCrossAccountAttachmentResult executeDeleteCrossAccountAttachment(DeleteCrossAccountAttachmentRequest deleteCrossAccountAttachmentRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteCrossAccountAttachmentRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteCrossAccountAttachmentRequest> request = null;
+        Response<DeleteCrossAccountAttachmentResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteCrossAccountAttachmentRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(deleteCrossAccountAttachmentRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Global Accelerator");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteCrossAccountAttachment");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeleteCrossAccountAttachmentResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new DeleteCrossAccountAttachmentResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -1712,6 +1881,71 @@ public class AWSGlobalAcceleratorClient extends AmazonWebServiceClient implement
 
     /**
      * <p>
+     * Gets configuration information about a cross-account attachment.
+     * </p>
+     * 
+     * @param describeCrossAccountAttachmentRequest
+     * @return Result of the DescribeCrossAccountAttachment operation returned by the service.
+     * @throws AttachmentNotFoundException
+     *         No cross-account attachment was found.
+     * @throws AccessDeniedException
+     *         You don't have access permission.
+     * @throws InternalServiceErrorException
+     *         There was an internal error for Global Accelerator.
+     * @throws InvalidArgumentException
+     *         An argument that you specified is invalid.
+     * @sample AWSGlobalAccelerator.DescribeCrossAccountAttachment
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/globalaccelerator-2018-08-08/DescribeCrossAccountAttachment"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DescribeCrossAccountAttachmentResult describeCrossAccountAttachment(DescribeCrossAccountAttachmentRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribeCrossAccountAttachment(request);
+    }
+
+    @SdkInternalApi
+    final DescribeCrossAccountAttachmentResult executeDescribeCrossAccountAttachment(DescribeCrossAccountAttachmentRequest describeCrossAccountAttachmentRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describeCrossAccountAttachmentRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeCrossAccountAttachmentRequest> request = null;
+        Response<DescribeCrossAccountAttachmentResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeCrossAccountAttachmentRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(describeCrossAccountAttachmentRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Global Accelerator");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeCrossAccountAttachment");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DescribeCrossAccountAttachmentResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new DescribeCrossAccountAttachmentResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Describe a custom routing accelerator.
      * </p>
      * 
@@ -2207,6 +2441,201 @@ public class AWSGlobalAcceleratorClient extends AmazonWebServiceClient implement
 
             HttpResponseHandler<AmazonWebServiceResponse<ListByoipCidrsResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListByoipCidrsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * List the cross-account attachments that have been created in Global Accelerator.
+     * </p>
+     * 
+     * @param listCrossAccountAttachmentsRequest
+     * @return Result of the ListCrossAccountAttachments operation returned by the service.
+     * @throws AccessDeniedException
+     *         You don't have access permission.
+     * @throws InvalidArgumentException
+     *         An argument that you specified is invalid.
+     * @throws InvalidNextTokenException
+     *         There isn't another item to return.
+     * @throws InternalServiceErrorException
+     *         There was an internal error for Global Accelerator.
+     * @sample AWSGlobalAccelerator.ListCrossAccountAttachments
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/globalaccelerator-2018-08-08/ListCrossAccountAttachments"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListCrossAccountAttachmentsResult listCrossAccountAttachments(ListCrossAccountAttachmentsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListCrossAccountAttachments(request);
+    }
+
+    @SdkInternalApi
+    final ListCrossAccountAttachmentsResult executeListCrossAccountAttachments(ListCrossAccountAttachmentsRequest listCrossAccountAttachmentsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listCrossAccountAttachmentsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListCrossAccountAttachmentsRequest> request = null;
+        Response<ListCrossAccountAttachmentsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListCrossAccountAttachmentsRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(listCrossAccountAttachmentsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Global Accelerator");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListCrossAccountAttachments");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListCrossAccountAttachmentsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new ListCrossAccountAttachmentsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * List the accounts that have cross-account endpoints.
+     * </p>
+     * 
+     * @param listCrossAccountResourceAccountsRequest
+     * @return Result of the ListCrossAccountResourceAccounts operation returned by the service.
+     * @throws AccessDeniedException
+     *         You don't have access permission.
+     * @throws InternalServiceErrorException
+     *         There was an internal error for Global Accelerator.
+     * @sample AWSGlobalAccelerator.ListCrossAccountResourceAccounts
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/globalaccelerator-2018-08-08/ListCrossAccountResourceAccounts"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListCrossAccountResourceAccountsResult listCrossAccountResourceAccounts(ListCrossAccountResourceAccountsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListCrossAccountResourceAccounts(request);
+    }
+
+    @SdkInternalApi
+    final ListCrossAccountResourceAccountsResult executeListCrossAccountResourceAccounts(
+            ListCrossAccountResourceAccountsRequest listCrossAccountResourceAccountsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listCrossAccountResourceAccountsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListCrossAccountResourceAccountsRequest> request = null;
+        Response<ListCrossAccountResourceAccountsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListCrossAccountResourceAccountsRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(listCrossAccountResourceAccountsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Global Accelerator");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListCrossAccountResourceAccounts");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListCrossAccountResourceAccountsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new ListCrossAccountResourceAccountsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * List the cross-account endpoints available to add to an accelerator.
+     * </p>
+     * 
+     * @param listCrossAccountResourcesRequest
+     * @return Result of the ListCrossAccountResources operation returned by the service.
+     * @throws InternalServiceErrorException
+     *         There was an internal error for Global Accelerator.
+     * @throws InvalidArgumentException
+     *         An argument that you specified is invalid.
+     * @throws InvalidNextTokenException
+     *         There isn't another item to return.
+     * @throws AccessDeniedException
+     *         You don't have access permission.
+     * @throws AcceleratorNotFoundException
+     *         The accelerator that you specified doesn't exist.
+     * @sample AWSGlobalAccelerator.ListCrossAccountResources
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/globalaccelerator-2018-08-08/ListCrossAccountResources"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListCrossAccountResourcesResult listCrossAccountResources(ListCrossAccountResourcesRequest request) {
+        request = beforeClientExecution(request);
+        return executeListCrossAccountResources(request);
+    }
+
+    @SdkInternalApi
+    final ListCrossAccountResourcesResult executeListCrossAccountResources(ListCrossAccountResourcesRequest listCrossAccountResourcesRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listCrossAccountResourcesRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListCrossAccountResourcesRequest> request = null;
+        Response<ListCrossAccountResourcesResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListCrossAccountResourcesRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(listCrossAccountResourcesRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Global Accelerator");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListCrossAccountResources");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListCrossAccountResourcesResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new ListCrossAccountResourcesResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -3272,6 +3701,98 @@ public class AWSGlobalAcceleratorClient extends AmazonWebServiceClient implement
             HttpResponseHandler<AmazonWebServiceResponse<UpdateAcceleratorAttributesResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new UpdateAcceleratorAttributesResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Update a cross-account attachment to add or remove principals or resources. When you update an attachment to
+     * remove a principal (account ID or accelerator) or a resource, Global Accelerator revokes the permission for
+     * specific resources by doing the following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * If the principal is an account ID, Global Accelerator reviews every accelerator in the account and removes
+     * cross-account endpoints from all accelerators.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If the principal is an accelerator, Global Accelerator reviews just that accelerator and removes cross-account
+     * endpoints from it.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * If there are overlapping permissions provided by multiple cross-account attachments, Global Accelerator only
+     * removes endpoints if there are no current cross-account attachments that provide access permission. For example,
+     * if you delete a cross-account attachment that lists an accelerator as a principal, but another cross-account
+     * attachment includes the account ID that owns that accelerator, endpoints will not be removed from the
+     * accelerator.
+     * </p>
+     * 
+     * @param updateCrossAccountAttachmentRequest
+     * @return Result of the UpdateCrossAccountAttachment operation returned by the service.
+     * @throws AttachmentNotFoundException
+     *         No cross-account attachment was found.
+     * @throws AccessDeniedException
+     *         You don't have access permission.
+     * @throws InternalServiceErrorException
+     *         There was an internal error for Global Accelerator.
+     * @throws InvalidArgumentException
+     *         An argument that you specified is invalid.
+     * @throws LimitExceededException
+     *         Processing your request would cause you to exceed an Global Accelerator limit.
+     * @throws TransactionInProgressException
+     *         There's already a transaction in progress. Another transaction can't be processed.
+     * @sample AWSGlobalAccelerator.UpdateCrossAccountAttachment
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/globalaccelerator-2018-08-08/UpdateCrossAccountAttachment"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public UpdateCrossAccountAttachmentResult updateCrossAccountAttachment(UpdateCrossAccountAttachmentRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateCrossAccountAttachment(request);
+    }
+
+    @SdkInternalApi
+    final UpdateCrossAccountAttachmentResult executeUpdateCrossAccountAttachment(UpdateCrossAccountAttachmentRequest updateCrossAccountAttachmentRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateCrossAccountAttachmentRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateCrossAccountAttachmentRequest> request = null;
+        Response<UpdateCrossAccountAttachmentResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateCrossAccountAttachmentRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(updateCrossAccountAttachmentRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Global Accelerator");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateCrossAccountAttachment");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdateCrossAccountAttachmentResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new UpdateCrossAccountAttachmentResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

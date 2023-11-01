@@ -522,6 +522,37 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
+     * Retrieve the flow associations for the given resources.
+     * </p>
+     * 
+     * @param batchGetFlowAssociationRequest
+     * @return A Java Future containing the result of the BatchGetFlowAssociation operation returned by the service.
+     * @sample AmazonConnectAsync.BatchGetFlowAssociation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/BatchGetFlowAssociation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<BatchGetFlowAssociationResult> batchGetFlowAssociationAsync(BatchGetFlowAssociationRequest batchGetFlowAssociationRequest);
+
+    /**
+     * <p>
+     * Retrieve the flow associations for the given resources.
+     * </p>
+     * 
+     * @param batchGetFlowAssociationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the BatchGetFlowAssociation operation returned by the service.
+     * @sample AmazonConnectAsyncHandler.BatchGetFlowAssociation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/BatchGetFlowAssociation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<BatchGetFlowAssociationResult> batchGetFlowAssociationAsync(BatchGetFlowAssociationRequest batchGetFlowAssociationRequest,
+            com.amazonaws.handlers.AsyncHandler<BatchGetFlowAssociationRequest, BatchGetFlowAssociationResult> asyncHandler);
+
+    /**
+     * <p>
      * Claims an available phone number to your Amazon Connect instance or traffic distribution group. You can call this
      * API only in the same Amazon Web Services Region where the Amazon Connect instance or traffic distribution group
      * was created.
@@ -5666,7 +5697,8 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
-     * Replicates an Amazon Connect instance in the specified Amazon Web Services Region.
+     * Replicates an Amazon Connect instance in the specified Amazon Web Services Region and copies configuration
+     * information for Amazon Connect resources across Amazon Web Services Regions.
      * </p>
      * <p>
      * For more information about replicating an Amazon Connect instance, see <a
@@ -5684,7 +5716,8 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
-     * Replicates an Amazon Connect instance in the specified Amazon Web Services Region.
+     * Replicates an Amazon Connect instance in the specified Amazon Web Services Region and copies configuration
+     * information for Amazon Connect resources across Amazon Web Services Regions.
      * </p>
      * <p>
      * For more information about replicating an Amazon Connect instance, see <a

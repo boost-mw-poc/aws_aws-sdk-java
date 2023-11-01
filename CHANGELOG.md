@@ -1,3 +1,24 @@
+# __1.12.579__ __2023-11-01__
+## __AWS Global Accelerator__
+  - ### Features
+    - Global Accelerator now support accelerators with cross account endpoints.
+
+## __Amazon Connect Service__
+  - ### Features
+    - Adds the BatchGetFlowAssociation API which returns flow associations (flow-resource) corresponding to the list of resourceArns supplied in the request. This release also adds IsDefault, LastModifiedRegion and LastModifiedTime fields to the responses of several Describe and List APIs.
+
+## __Amazon Redshift__
+  - ### Features
+    - Added support for Multi-AZ deployments for Provisioned RA3 clusters that provide 99.99% SLA availability.
+
+## __Amazon Relational Database Service__
+  - ### Features
+    - This release adds support for customized networking resources to Amazon RDS Custom.
+
+## __Amazon SageMaker Service__
+  - ### Features
+    - Support for batch transform input in Model dashboard
+
 # __1.12.578__ __2023-10-31__
 ## __AWS Amplify__
   - ### Features

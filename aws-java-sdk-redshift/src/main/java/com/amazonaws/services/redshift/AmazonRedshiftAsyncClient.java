@@ -3668,6 +3668,39 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient implements A
     }
 
     @Override
+    public java.util.concurrent.Future<Cluster> failoverPrimaryComputeAsync(FailoverPrimaryComputeRequest request) {
+
+        return failoverPrimaryComputeAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<Cluster> failoverPrimaryComputeAsync(final FailoverPrimaryComputeRequest request,
+            final com.amazonaws.handlers.AsyncHandler<FailoverPrimaryComputeRequest, Cluster> asyncHandler) {
+        final FailoverPrimaryComputeRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<Cluster>() {
+            @Override
+            public Cluster call() throws Exception {
+                Cluster result = null;
+
+                try {
+                    result = executeFailoverPrimaryCompute(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetClusterCredentialsResult> getClusterCredentialsAsync(GetClusterCredentialsRequest request) {
 
         return getClusterCredentialsAsync(request, null);

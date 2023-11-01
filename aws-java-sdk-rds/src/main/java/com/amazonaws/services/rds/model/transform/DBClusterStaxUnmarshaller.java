@@ -305,6 +305,11 @@ public class DBClusterStaxUnmarshaller implements Unmarshaller<DBCluster, StaxUn
                     continue;
                 }
 
+                if (context.testExpression("RdsCustomClusterConfiguration", targetDepth)) {
+                    dBCluster.setRdsCustomClusterConfiguration(RdsCustomClusterConfigurationStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
                 if (context.testExpression("DeletionProtection", targetDepth)) {
                     dBCluster.setDeletionProtection(BooleanStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;

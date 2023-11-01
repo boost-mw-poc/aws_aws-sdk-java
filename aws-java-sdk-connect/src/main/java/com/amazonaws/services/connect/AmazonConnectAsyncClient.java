@@ -492,6 +492,39 @@ public class AmazonConnectAsyncClient extends AmazonConnectClient implements Ama
     }
 
     @Override
+    public java.util.concurrent.Future<BatchGetFlowAssociationResult> batchGetFlowAssociationAsync(BatchGetFlowAssociationRequest request) {
+
+        return batchGetFlowAssociationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<BatchGetFlowAssociationResult> batchGetFlowAssociationAsync(final BatchGetFlowAssociationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<BatchGetFlowAssociationRequest, BatchGetFlowAssociationResult> asyncHandler) {
+        final BatchGetFlowAssociationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<BatchGetFlowAssociationResult>() {
+            @Override
+            public BatchGetFlowAssociationResult call() throws Exception {
+                BatchGetFlowAssociationResult result = null;
+
+                try {
+                    result = executeBatchGetFlowAssociation(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ClaimPhoneNumberResult> claimPhoneNumberAsync(ClaimPhoneNumberRequest request) {
 
         return claimPhoneNumberAsync(request, null);

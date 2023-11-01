@@ -402,6 +402,31 @@ public interface AmazonConnect {
 
     /**
      * <p>
+     * Retrieve the flow associations for the given resources.
+     * </p>
+     * 
+     * @param batchGetFlowAssociationRequest
+     * @return Result of the BatchGetFlowAssociation operation returned by the service.
+     * @throws AccessDeniedException
+     *         You do not have sufficient permissions to perform this action.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @sample AmazonConnect.BatchGetFlowAssociation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/BatchGetFlowAssociation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    BatchGetFlowAssociationResult batchGetFlowAssociation(BatchGetFlowAssociationRequest batchGetFlowAssociationRequest);
+
+    /**
+     * <p>
      * Claims an available phone number to your Amazon Connect instance or traffic distribution group. You can call this
      * API only in the same Amazon Web Services Region where the Amazon Connect instance or traffic distribution group
      * was created.
@@ -4002,7 +4027,8 @@ public interface AmazonConnect {
 
     /**
      * <p>
-     * Replicates an Amazon Connect instance in the specified Amazon Web Services Region.
+     * Replicates an Amazon Connect instance in the specified Amazon Web Services Region and copies configuration
+     * information for Amazon Connect resources across Amazon Web Services Regions.
      * </p>
      * <p>
      * For more information about replicating an Amazon Connect instance, see <a

@@ -234,6 +234,10 @@ public class CreateClusterRequestMarshaller implements Marshaller<Request<Create
             request.addParameter("IpAddressType", StringUtils.fromString(createClusterRequest.getIpAddressType()));
         }
 
+        if (createClusterRequest.getMultiAZ() != null) {
+            request.addParameter("MultiAZ", StringUtils.fromBoolean(createClusterRequest.getMultiAZ()));
+        }
+
         return request;
     }
 
