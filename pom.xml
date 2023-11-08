@@ -515,6 +515,13 @@
                 </goals>
               </execution>
             </executions>
+            <configuration>
+              <gpgArguments>
+                <arg>--batch</arg>
+                <arg>--pinentry-mode</arg>
+                <arg>loopback</arg>
+              </gpgArguments>
+            </configuration>
           </plugin>
           <plugin>
             <groupId>org.sonatype.plugins</groupId>
@@ -600,4 +607,10 @@
         </build>
     </profile>
   </profiles>
+    <distributionManagement>
+        <repository>
+            <id>local-repo</id>
+            <url>file://${project.build.directory}/deploy</url>
+        </repository>
+    </distributionManagement>
 </project>
