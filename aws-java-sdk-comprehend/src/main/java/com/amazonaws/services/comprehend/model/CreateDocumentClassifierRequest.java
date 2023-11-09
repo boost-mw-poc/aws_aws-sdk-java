@@ -62,7 +62,7 @@ public class CreateDocumentClassifierRequest extends com.amazonaws.AmazonWebServ
     /**
      * <p>
      * Specifies the location for the output files from a custom classifier job. This parameter is required for a
-     * request that creates a native classifier model.
+     * request that creates a native document model.
      * </p>
      */
     private DocumentClassifierOutputDataConfig outputDataConfig;
@@ -427,12 +427,12 @@ public class CreateDocumentClassifierRequest extends com.amazonaws.AmazonWebServ
     /**
      * <p>
      * Specifies the location for the output files from a custom classifier job. This parameter is required for a
-     * request that creates a native classifier model.
+     * request that creates a native document model.
      * </p>
      * 
      * @param outputDataConfig
      *        Specifies the location for the output files from a custom classifier job. This parameter is required for a
-     *        request that creates a native classifier model.
+     *        request that creates a native document model.
      */
 
     public void setOutputDataConfig(DocumentClassifierOutputDataConfig outputDataConfig) {
@@ -442,11 +442,11 @@ public class CreateDocumentClassifierRequest extends com.amazonaws.AmazonWebServ
     /**
      * <p>
      * Specifies the location for the output files from a custom classifier job. This parameter is required for a
-     * request that creates a native classifier model.
+     * request that creates a native document model.
      * </p>
      * 
      * @return Specifies the location for the output files from a custom classifier job. This parameter is required for
-     *         a request that creates a native classifier model.
+     *         a request that creates a native document model.
      */
 
     public DocumentClassifierOutputDataConfig getOutputDataConfig() {
@@ -456,12 +456,12 @@ public class CreateDocumentClassifierRequest extends com.amazonaws.AmazonWebServ
     /**
      * <p>
      * Specifies the location for the output files from a custom classifier job. This parameter is required for a
-     * request that creates a native classifier model.
+     * request that creates a native document model.
      * </p>
      * 
      * @param outputDataConfig
      *        Specifies the location for the output files from a custom classifier job. This parameter is required for a
-     *        request that creates a native classifier model.
+     *        request that creates a native document model.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

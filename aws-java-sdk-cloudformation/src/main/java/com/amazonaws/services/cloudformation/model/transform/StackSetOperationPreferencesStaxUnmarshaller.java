@@ -79,6 +79,11 @@ public class StackSetOperationPreferencesStaxUnmarshaller implements Unmarshalle
                     stackSetOperationPreferences.setMaxConcurrentPercentage(IntegerStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("ConcurrencyMode", targetDepth)) {
+                    stackSetOperationPreferences.setConcurrencyMode(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return stackSetOperationPreferences;

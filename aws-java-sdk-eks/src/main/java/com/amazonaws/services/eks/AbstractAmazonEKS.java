@@ -49,6 +49,11 @@ public class AbstractAmazonEKS implements AmazonEKS {
     }
 
     @Override
+    public CreateEksAnywhereSubscriptionResult createEksAnywhereSubscription(CreateEksAnywhereSubscriptionRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateFargateProfileResult createFargateProfile(CreateFargateProfileRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -65,6 +70,11 @@ public class AbstractAmazonEKS implements AmazonEKS {
 
     @Override
     public DeleteClusterResult deleteCluster(DeleteClusterRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteEksAnywhereSubscriptionResult deleteEksAnywhereSubscription(DeleteEksAnywhereSubscriptionRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -104,6 +114,11 @@ public class AbstractAmazonEKS implements AmazonEKS {
     }
 
     @Override
+    public DescribeEksAnywhereSubscriptionResult describeEksAnywhereSubscription(DescribeEksAnywhereSubscriptionRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DescribeFargateProfileResult describeFargateProfile(DescribeFargateProfileRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -135,6 +150,11 @@ public class AbstractAmazonEKS implements AmazonEKS {
 
     @Override
     public ListClustersResult listClusters(ListClustersRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListEksAnywhereSubscriptionsResult listEksAnywhereSubscriptions(ListEksAnywhereSubscriptionsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -190,6 +210,11 @@ public class AbstractAmazonEKS implements AmazonEKS {
 
     @Override
     public UpdateClusterVersionResult updateClusterVersion(UpdateClusterVersionRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateEksAnywhereSubscriptionResult updateEksAnywhereSubscription(UpdateEksAnywhereSubscriptionRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

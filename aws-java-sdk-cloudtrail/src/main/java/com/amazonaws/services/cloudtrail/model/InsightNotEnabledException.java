@@ -16,8 +16,8 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * If you run <code>GetInsightSelectors</code> on a trail that does not have Insights events enabled, the operation
- * throws the exception <code>InsightNotEnabledException</code>.
+ * If you run <code>GetInsightSelectors</code> on a trail or event data store that does not have Insights events
+ * enabled, the operation throws the exception <code>InsightNotEnabledException</code>.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

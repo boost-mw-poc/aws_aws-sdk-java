@@ -16,15 +16,10 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * This exception is thrown when an operation is called with a trail ARN that is not valid. The following is the format
- * of a trail ARN.
+ * This exception is thrown when an operation is called with an ARN that is not valid.
  * </p>
  * <p>
- * <code>arn:aws:cloudtrail:us-east-2:123456789012:trail/MyTrail</code>
- * </p>
- * <p>
- * This exception is also thrown when you call <code>AddTags</code> or <code>RemoveTags</code> on a trail, event data
- * store, or channel with a resource ARN that is not valid.
+ * The following is the format of a trail ARN: <code>arn:aws:cloudtrail:us-east-2:123456789012:trail/MyTrail</code>
  * </p>
  * <p>
  * The following is the format of an event data store ARN:

@@ -64,6 +64,10 @@ public class InvalidRequestExceptionUnmarshaller extends EnhancedJsonErrorUnmars
                     context.nextToken();
                     invalidRequestException.setAddonName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("subscriptionId", targetDepth)) {
+                    context.nextToken();
+                    invalidRequestException.setSubscriptionId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

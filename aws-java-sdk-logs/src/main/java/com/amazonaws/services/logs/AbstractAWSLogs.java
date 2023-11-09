@@ -48,6 +48,11 @@ public class AbstractAWSLogs implements AWSLogs {
     }
 
     @Override
+    public CreateDeliveryResult createDelivery(CreateDeliveryRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateExportTaskResult createExportTask(CreateExportTaskRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -69,6 +74,26 @@ public class AbstractAWSLogs implements AWSLogs {
 
     @Override
     public DeleteDataProtectionPolicyResult deleteDataProtectionPolicy(DeleteDataProtectionPolicyRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteDeliveryResult deleteDelivery(DeleteDeliveryRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteDeliveryDestinationResult deleteDeliveryDestination(DeleteDeliveryDestinationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteDeliveryDestinationPolicyResult deleteDeliveryDestinationPolicy(DeleteDeliveryDestinationPolicyRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteDeliverySourceResult deleteDeliverySource(DeleteDeliverySourceRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -114,6 +139,21 @@ public class AbstractAWSLogs implements AWSLogs {
 
     @Override
     public DescribeAccountPoliciesResult describeAccountPolicies(DescribeAccountPoliciesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DescribeDeliveriesResult describeDeliveries(DescribeDeliveriesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DescribeDeliveryDestinationsResult describeDeliveryDestinations(DescribeDeliveryDestinationsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DescribeDeliverySourcesResult describeDeliverySources(DescribeDeliverySourcesRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -188,6 +228,26 @@ public class AbstractAWSLogs implements AWSLogs {
     }
 
     @Override
+    public GetDeliveryResult getDelivery(GetDeliveryRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetDeliveryDestinationResult getDeliveryDestination(GetDeliveryDestinationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetDeliveryDestinationPolicyResult getDeliveryDestinationPolicy(GetDeliveryDestinationPolicyRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetDeliverySourceResult getDeliverySource(GetDeliverySourceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetLogEventsResult getLogEvents(GetLogEventsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -225,6 +285,21 @@ public class AbstractAWSLogs implements AWSLogs {
 
     @Override
     public PutDataProtectionPolicyResult putDataProtectionPolicy(PutDataProtectionPolicyRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public PutDeliveryDestinationResult putDeliveryDestination(PutDeliveryDestinationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public PutDeliveryDestinationPolicyResult putDeliveryDestinationPolicy(PutDeliveryDestinationPolicyRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public PutDeliverySourceResult putDeliverySource(PutDeliverySourceRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

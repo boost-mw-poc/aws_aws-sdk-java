@@ -29,6 +29,10 @@ public class ClassifyDocumentResult extends com.amazonaws.AmazonWebServiceResult
      * classes are mutually exclusive and each document is expected to have only a single class assigned to it. For
      * example, an animal can be a dog or a cat, but not both at the same time.
      * </p>
+     * <p>
+     * For prompt classification, the response includes a single class (<code>UNDESIRED_PROMPT</code>), along with a
+     * confidence score. A higher confidence score indicates that the input prompt is undesired in nature.
+     * </p>
      */
     private java.util.List<DocumentClass> classes;
     /**
@@ -79,10 +83,18 @@ public class ClassifyDocumentResult extends com.amazonaws.AmazonWebServiceResult
      * classes are mutually exclusive and each document is expected to have only a single class assigned to it. For
      * example, an animal can be a dog or a cat, but not both at the same time.
      * </p>
+     * <p>
+     * For prompt classification, the response includes a single class (<code>UNDESIRED_PROMPT</code>), along with a
+     * confidence score. A higher confidence score indicates that the input prompt is undesired in nature.
+     * </p>
      * 
      * @return The classes used by the document being analyzed. These are used for multi-class trained models.
      *         Individual classes are mutually exclusive and each document is expected to have only a single class
-     *         assigned to it. For example, an animal can be a dog or a cat, but not both at the same time.
+     *         assigned to it. For example, an animal can be a dog or a cat, but not both at the same time. </p>
+     *         <p>
+     *         For prompt classification, the response includes a single class (<code>UNDESIRED_PROMPT</code>), along
+     *         with a confidence score. A higher confidence score indicates that the input prompt is undesired in
+     *         nature.
      */
 
     public java.util.List<DocumentClass> getClasses() {
@@ -95,11 +107,18 @@ public class ClassifyDocumentResult extends com.amazonaws.AmazonWebServiceResult
      * classes are mutually exclusive and each document is expected to have only a single class assigned to it. For
      * example, an animal can be a dog or a cat, but not both at the same time.
      * </p>
+     * <p>
+     * For prompt classification, the response includes a single class (<code>UNDESIRED_PROMPT</code>), along with a
+     * confidence score. A higher confidence score indicates that the input prompt is undesired in nature.
+     * </p>
      * 
      * @param classes
      *        The classes used by the document being analyzed. These are used for multi-class trained models. Individual
      *        classes are mutually exclusive and each document is expected to have only a single class assigned to it.
-     *        For example, an animal can be a dog or a cat, but not both at the same time.
+     *        For example, an animal can be a dog or a cat, but not both at the same time. </p>
+     *        <p>
+     *        For prompt classification, the response includes a single class (<code>UNDESIRED_PROMPT</code>), along
+     *        with a confidence score. A higher confidence score indicates that the input prompt is undesired in nature.
      */
 
     public void setClasses(java.util.Collection<DocumentClass> classes) {
@@ -118,6 +137,10 @@ public class ClassifyDocumentResult extends com.amazonaws.AmazonWebServiceResult
      * example, an animal can be a dog or a cat, but not both at the same time.
      * </p>
      * <p>
+     * For prompt classification, the response includes a single class (<code>UNDESIRED_PROMPT</code>), along with a
+     * confidence score. A higher confidence score indicates that the input prompt is undesired in nature.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setClasses(java.util.Collection)} or {@link #withClasses(java.util.Collection)} if you want to override
      * the existing values.
@@ -126,7 +149,10 @@ public class ClassifyDocumentResult extends com.amazonaws.AmazonWebServiceResult
      * @param classes
      *        The classes used by the document being analyzed. These are used for multi-class trained models. Individual
      *        classes are mutually exclusive and each document is expected to have only a single class assigned to it.
-     *        For example, an animal can be a dog or a cat, but not both at the same time.
+     *        For example, an animal can be a dog or a cat, but not both at the same time. </p>
+     *        <p>
+     *        For prompt classification, the response includes a single class (<code>UNDESIRED_PROMPT</code>), along
+     *        with a confidence score. A higher confidence score indicates that the input prompt is undesired in nature.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -146,11 +172,18 @@ public class ClassifyDocumentResult extends com.amazonaws.AmazonWebServiceResult
      * classes are mutually exclusive and each document is expected to have only a single class assigned to it. For
      * example, an animal can be a dog or a cat, but not both at the same time.
      * </p>
+     * <p>
+     * For prompt classification, the response includes a single class (<code>UNDESIRED_PROMPT</code>), along with a
+     * confidence score. A higher confidence score indicates that the input prompt is undesired in nature.
+     * </p>
      * 
      * @param classes
      *        The classes used by the document being analyzed. These are used for multi-class trained models. Individual
      *        classes are mutually exclusive and each document is expected to have only a single class assigned to it.
-     *        For example, an animal can be a dog or a cat, but not both at the same time.
+     *        For example, an animal can be a dog or a cat, but not both at the same time. </p>
+     *        <p>
+     *        For prompt classification, the response includes a single class (<code>UNDESIRED_PROMPT</code>), along
+     *        with a confidence score. A higher confidence score indicates that the input prompt is undesired in nature.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

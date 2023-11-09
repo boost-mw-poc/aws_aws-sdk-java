@@ -217,6 +217,40 @@ public class AmazonEKSAsyncClient extends AmazonEKSClient implements AmazonEKSAs
     }
 
     @Override
+    public java.util.concurrent.Future<CreateEksAnywhereSubscriptionResult> createEksAnywhereSubscriptionAsync(CreateEksAnywhereSubscriptionRequest request) {
+
+        return createEksAnywhereSubscriptionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateEksAnywhereSubscriptionResult> createEksAnywhereSubscriptionAsync(
+            final CreateEksAnywhereSubscriptionRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateEksAnywhereSubscriptionRequest, CreateEksAnywhereSubscriptionResult> asyncHandler) {
+        final CreateEksAnywhereSubscriptionRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateEksAnywhereSubscriptionResult>() {
+            @Override
+            public CreateEksAnywhereSubscriptionResult call() throws Exception {
+                CreateEksAnywhereSubscriptionResult result = null;
+
+                try {
+                    result = executeCreateEksAnywhereSubscription(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateFargateProfileResult> createFargateProfileAsync(CreateFargateProfileRequest request) {
 
         return createFargateProfileAsync(request, null);
@@ -333,6 +367,40 @@ public class AmazonEKSAsyncClient extends AmazonEKSClient implements AmazonEKSAs
 
                 try {
                     result = executeDeleteCluster(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteEksAnywhereSubscriptionResult> deleteEksAnywhereSubscriptionAsync(DeleteEksAnywhereSubscriptionRequest request) {
+
+        return deleteEksAnywhereSubscriptionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteEksAnywhereSubscriptionResult> deleteEksAnywhereSubscriptionAsync(
+            final DeleteEksAnywhereSubscriptionRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteEksAnywhereSubscriptionRequest, DeleteEksAnywhereSubscriptionResult> asyncHandler) {
+        final DeleteEksAnywhereSubscriptionRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteEksAnywhereSubscriptionResult>() {
+            @Override
+            public DeleteEksAnywhereSubscriptionResult call() throws Exception {
+                DeleteEksAnywhereSubscriptionResult result = null;
+
+                try {
+                    result = executeDeleteEksAnywhereSubscription(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -580,6 +648,41 @@ public class AmazonEKSAsyncClient extends AmazonEKSClient implements AmazonEKSAs
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeEksAnywhereSubscriptionResult> describeEksAnywhereSubscriptionAsync(
+            DescribeEksAnywhereSubscriptionRequest request) {
+
+        return describeEksAnywhereSubscriptionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeEksAnywhereSubscriptionResult> describeEksAnywhereSubscriptionAsync(
+            final DescribeEksAnywhereSubscriptionRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeEksAnywhereSubscriptionRequest, DescribeEksAnywhereSubscriptionResult> asyncHandler) {
+        final DescribeEksAnywhereSubscriptionRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeEksAnywhereSubscriptionResult>() {
+            @Override
+            public DescribeEksAnywhereSubscriptionResult call() throws Exception {
+                DescribeEksAnywhereSubscriptionResult result = null;
+
+                try {
+                    result = executeDescribeEksAnywhereSubscription(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeFargateProfileResult> describeFargateProfileAsync(DescribeFargateProfileRequest request) {
 
         return describeFargateProfileAsync(request, null);
@@ -798,6 +901,39 @@ public class AmazonEKSAsyncClient extends AmazonEKSClient implements AmazonEKSAs
 
                 try {
                     result = executeListClusters(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListEksAnywhereSubscriptionsResult> listEksAnywhereSubscriptionsAsync(ListEksAnywhereSubscriptionsRequest request) {
+
+        return listEksAnywhereSubscriptionsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListEksAnywhereSubscriptionsResult> listEksAnywhereSubscriptionsAsync(final ListEksAnywhereSubscriptionsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListEksAnywhereSubscriptionsRequest, ListEksAnywhereSubscriptionsResult> asyncHandler) {
+        final ListEksAnywhereSubscriptionsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListEksAnywhereSubscriptionsResult>() {
+            @Override
+            public ListEksAnywhereSubscriptionsResult call() throws Exception {
+                ListEksAnywhereSubscriptionsResult result = null;
+
+                try {
+                    result = executeListEksAnywhereSubscriptions(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -1161,6 +1297,40 @@ public class AmazonEKSAsyncClient extends AmazonEKSClient implements AmazonEKSAs
 
                 try {
                     result = executeUpdateClusterVersion(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateEksAnywhereSubscriptionResult> updateEksAnywhereSubscriptionAsync(UpdateEksAnywhereSubscriptionRequest request) {
+
+        return updateEksAnywhereSubscriptionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateEksAnywhereSubscriptionResult> updateEksAnywhereSubscriptionAsync(
+            final UpdateEksAnywhereSubscriptionRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateEksAnywhereSubscriptionRequest, UpdateEksAnywhereSubscriptionResult> asyncHandler) {
+        final UpdateEksAnywhereSubscriptionRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateEksAnywhereSubscriptionResult>() {
+            @Override
+            public UpdateEksAnywhereSubscriptionResult call() throws Exception {
+                UpdateEksAnywhereSubscriptionResult result = null;
+
+                try {
+                    result = executeUpdateEksAnywhereSubscription(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

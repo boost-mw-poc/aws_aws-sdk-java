@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * A JSON string that contains a list of Insights types that are logged on a trail.
+ * A JSON string that contains a list of Insights types that are logged on a trail or event data store.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/InsightSelector" target="_top">AWS API
@@ -30,7 +30,7 @@ public class InsightSelector implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The type of Insights events to log on a trail. <code>ApiCallRateInsight</code> and
+     * The type of Insights events to log on a trail or event data store. <code>ApiCallRateInsight</code> and
      * <code>ApiErrorRateInsight</code> are valid Insight types.
      * </p>
      * <p>
@@ -46,7 +46,7 @@ public class InsightSelector implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The type of Insights events to log on a trail. <code>ApiCallRateInsight</code> and
+     * The type of Insights events to log on a trail or event data store. <code>ApiCallRateInsight</code> and
      * <code>ApiErrorRateInsight</code> are valid Insight types.
      * </p>
      * <p>
@@ -59,7 +59,7 @@ public class InsightSelector implements Serializable, Cloneable, StructuredPojo 
      * </p>
      * 
      * @param insightType
-     *        The type of Insights events to log on a trail. <code>ApiCallRateInsight</code> and
+     *        The type of Insights events to log on a trail or event data store. <code>ApiCallRateInsight</code> and
      *        <code>ApiErrorRateInsight</code> are valid Insight types.</p>
      *        <p>
      *        The <code>ApiCallRateInsight</code> Insights type analyzes write-only management API calls that are
@@ -77,7 +77,7 @@ public class InsightSelector implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The type of Insights events to log on a trail. <code>ApiCallRateInsight</code> and
+     * The type of Insights events to log on a trail or event data store. <code>ApiCallRateInsight</code> and
      * <code>ApiErrorRateInsight</code> are valid Insight types.
      * </p>
      * <p>
@@ -89,7 +89,7 @@ public class InsightSelector implements Serializable, Cloneable, StructuredPojo 
      * error is shown if the API call is unsuccessful.
      * </p>
      * 
-     * @return The type of Insights events to log on a trail. <code>ApiCallRateInsight</code> and
+     * @return The type of Insights events to log on a trail or event data store. <code>ApiCallRateInsight</code> and
      *         <code>ApiErrorRateInsight</code> are valid Insight types.</p>
      *         <p>
      *         The <code>ApiCallRateInsight</code> Insights type analyzes write-only management API calls that are
@@ -107,7 +107,7 @@ public class InsightSelector implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The type of Insights events to log on a trail. <code>ApiCallRateInsight</code> and
+     * The type of Insights events to log on a trail or event data store. <code>ApiCallRateInsight</code> and
      * <code>ApiErrorRateInsight</code> are valid Insight types.
      * </p>
      * <p>
@@ -120,7 +120,7 @@ public class InsightSelector implements Serializable, Cloneable, StructuredPojo 
      * </p>
      * 
      * @param insightType
-     *        The type of Insights events to log on a trail. <code>ApiCallRateInsight</code> and
+     *        The type of Insights events to log on a trail or event data store. <code>ApiCallRateInsight</code> and
      *        <code>ApiErrorRateInsight</code> are valid Insight types.</p>
      *        <p>
      *        The <code>ApiCallRateInsight</code> Insights type analyzes write-only management API calls that are
@@ -140,7 +140,7 @@ public class InsightSelector implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The type of Insights events to log on a trail. <code>ApiCallRateInsight</code> and
+     * The type of Insights events to log on a trail or event data store. <code>ApiCallRateInsight</code> and
      * <code>ApiErrorRateInsight</code> are valid Insight types.
      * </p>
      * <p>
@@ -153,7 +153,7 @@ public class InsightSelector implements Serializable, Cloneable, StructuredPojo 
      * </p>
      * 
      * @param insightType
-     *        The type of Insights events to log on a trail. <code>ApiCallRateInsight</code> and
+     *        The type of Insights events to log on a trail or event data store. <code>ApiCallRateInsight</code> and
      *        <code>ApiErrorRateInsight</code> are valid Insight types.</p>
      *        <p>
      *        The <code>ApiCallRateInsight</code> Insights type analyzes write-only management API calls that are

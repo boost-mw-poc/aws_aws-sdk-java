@@ -69,6 +69,10 @@ public class ResourceNotFoundExceptionUnmarshaller extends EnhancedJsonErrorUnma
                     context.nextToken();
                     resourceNotFoundException.setAddonName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("subscriptionId", targetDepth)) {
+                    context.nextToken();
+                    resourceNotFoundException.setSubscriptionId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

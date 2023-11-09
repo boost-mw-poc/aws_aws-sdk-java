@@ -713,15 +713,21 @@ public interface AWSCloudTrailAsync extends AWSCloudTrail {
 
     /**
      * <p>
-     * Describes the settings for the Insights event selectors that you configured for your trail.
-     * <code>GetInsightSelectors</code> shows if CloudTrail Insights event logging is enabled on the trail, and if it
-     * is, which insight types are enabled. If you run <code>GetInsightSelectors</code> on a trail that does not have
-     * Insights events enabled, the operation throws the exception <code>InsightNotEnabledException</code>
+     * Describes the settings for the Insights event selectors that you configured for your trail or event data store.
+     * <code>GetInsightSelectors</code> shows if CloudTrail Insights event logging is enabled on the trail or event data
+     * store, and if it is, which Insights types are enabled. If you run <code>GetInsightSelectors</code> on a trail or
+     * event data store that does not have Insights events enabled, the operation throws the exception
+     * <code>InsightNotEnabledException</code>
+     * </p>
+     * <p>
+     * Specify either the <code>EventDataStore</code> parameter to get Insights event selectors for an event data store,
+     * or the <code>TrailName</code> parameter to the get Insights event selectors for a trail. You cannot specify these
+     * parameters together.
      * </p>
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-insights-events-with-cloudtrail.html"
-     * >Logging CloudTrail Insights Events for Trails </a> in the <i>CloudTrail User Guide</i>.
+     * >Logging CloudTrail Insights events</a> in the <i>CloudTrail User Guide</i>.
      * </p>
      * 
      * @param getInsightSelectorsRequest
@@ -734,15 +740,21 @@ public interface AWSCloudTrailAsync extends AWSCloudTrail {
 
     /**
      * <p>
-     * Describes the settings for the Insights event selectors that you configured for your trail.
-     * <code>GetInsightSelectors</code> shows if CloudTrail Insights event logging is enabled on the trail, and if it
-     * is, which insight types are enabled. If you run <code>GetInsightSelectors</code> on a trail that does not have
-     * Insights events enabled, the operation throws the exception <code>InsightNotEnabledException</code>
+     * Describes the settings for the Insights event selectors that you configured for your trail or event data store.
+     * <code>GetInsightSelectors</code> shows if CloudTrail Insights event logging is enabled on the trail or event data
+     * store, and if it is, which Insights types are enabled. If you run <code>GetInsightSelectors</code> on a trail or
+     * event data store that does not have Insights events enabled, the operation throws the exception
+     * <code>InsightNotEnabledException</code>
+     * </p>
+     * <p>
+     * Specify either the <code>EventDataStore</code> parameter to get Insights event selectors for an event data store,
+     * or the <code>TrailName</code> parameter to the get Insights event selectors for a trail. You cannot specify these
+     * parameters together.
      * </p>
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-insights-events-with-cloudtrail.html"
-     * >Logging CloudTrail Insights Events for Trails </a> in the <i>CloudTrail User Guide</i>.
+     * >Logging CloudTrail Insights events</a> in the <i>CloudTrail User Guide</i>.
      * </p>
      * 
      * @param getInsightSelectorsRequest
@@ -1194,7 +1206,17 @@ public interface AWSCloudTrailAsync extends AWSCloudTrail {
      * >management events</a> or <a href=
      * "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-concepts.html#cloudtrail-concepts-insights-events"
      * >CloudTrail Insights events</a> that are captured by CloudTrail. You can look up events that occurred in a Region
-     * within the last 90 days. Lookup supports the following attributes for management events:
+     * within the last 90 days.
+     * </p>
+     * <note>
+     * <p>
+     * <code>LookupEvents</code> returns recent Insights events for trails that enable Insights. To view Insights events
+     * for an event data store, you can run queries on your Insights event data store, and you can also view the Lake
+     * dashboard for Insights.
+     * </p>
+     * </note>
+     * <p>
+     * Lookup supports the following attributes for management events:
      * </p>
      * <ul>
      * <li>
@@ -1285,7 +1307,17 @@ public interface AWSCloudTrailAsync extends AWSCloudTrail {
      * >management events</a> or <a href=
      * "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-concepts.html#cloudtrail-concepts-insights-events"
      * >CloudTrail Insights events</a> that are captured by CloudTrail. You can look up events that occurred in a Region
-     * within the last 90 days. Lookup supports the following attributes for management events:
+     * within the last 90 days.
+     * </p>
+     * <note>
+     * <p>
+     * <code>LookupEvents</code> returns recent Insights events for trails that enable Insights. To view Insights events
+     * for an event data store, you can run queries on your Insights event data store, and you can also view the Lake
+     * dashboard for Insights.
+     * </p>
+     * </note>
+     * <p>
+     * Lookup supports the following attributes for management events:
      * </p>
      * <ul>
      * <li>
@@ -1550,15 +1582,32 @@ public interface AWSCloudTrailAsync extends AWSCloudTrail {
     /**
      * <p>
      * Lets you enable Insights event logging by specifying the Insights selectors that you want to enable on an
-     * existing trail. You also use <code>PutInsightSelectors</code> to turn off Insights event logging, by passing an
-     * empty list of insight types. The valid Insights event types in this release are <code>ApiErrorRateInsight</code>
-     * and <code>ApiCallRateInsight</code>.
+     * existing trail or event data store. You also use <code>PutInsightSelectors</code> to turn off Insights event
+     * logging, by passing an empty list of Insights types. The valid Insights event types are
+     * <code>ApiErrorRateInsight</code> and <code>ApiCallRateInsight</code>.
      * </p>
      * <p>
-     * To log CloudTrail Insights events on API call volume, the trail must log <code>write</code> management events. To
-     * log CloudTrail Insights events on API error rate, the trail must log <code>read</code> or <code>write</code>
-     * management events. You can call <code>GetEventSelectors</code> on a trail to check whether the trail logs
-     * management events.
+     * To enable Insights on an event data store, you must specify the ARNs (or ID suffix of the ARNs) for the source
+     * event data store (<code>EventDataStore</code>) and the destination event data store (
+     * <code>InsightsDestination</code>). The source event data store logs management events and enables Insights. The
+     * destination event data store logs Insights events based upon the management event activity of the source event
+     * data store. The source and destination event data stores must belong to the same Amazon Web Services account.
+     * </p>
+     * <p>
+     * To log Insights events for a trail, you must specify the name (<code>TrailName</code>) of the CloudTrail trail
+     * for which you want to change or add Insights selectors.
+     * </p>
+     * <p>
+     * To log CloudTrail Insights events on API call volume, the trail or event data store must log <code>write</code>
+     * management events. To log CloudTrail Insights events on API error rate, the trail or event data store must log
+     * <code>read</code> or <code>write</code> management events. You can call <code>GetEventSelectors</code> on a trail
+     * to check whether the trail logs management events. You can call <code>GetEventDataStore</code> on an event data
+     * store to check whether the event data store logs management events.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-insights-events-with-cloudtrail.html"
+     * >Logging CloudTrail Insights events</a> in the <i>CloudTrail User Guide</i>.
      * </p>
      * 
      * @param putInsightSelectorsRequest
@@ -1572,15 +1621,32 @@ public interface AWSCloudTrailAsync extends AWSCloudTrail {
     /**
      * <p>
      * Lets you enable Insights event logging by specifying the Insights selectors that you want to enable on an
-     * existing trail. You also use <code>PutInsightSelectors</code> to turn off Insights event logging, by passing an
-     * empty list of insight types. The valid Insights event types in this release are <code>ApiErrorRateInsight</code>
-     * and <code>ApiCallRateInsight</code>.
+     * existing trail or event data store. You also use <code>PutInsightSelectors</code> to turn off Insights event
+     * logging, by passing an empty list of Insights types. The valid Insights event types are
+     * <code>ApiErrorRateInsight</code> and <code>ApiCallRateInsight</code>.
      * </p>
      * <p>
-     * To log CloudTrail Insights events on API call volume, the trail must log <code>write</code> management events. To
-     * log CloudTrail Insights events on API error rate, the trail must log <code>read</code> or <code>write</code>
-     * management events. You can call <code>GetEventSelectors</code> on a trail to check whether the trail logs
-     * management events.
+     * To enable Insights on an event data store, you must specify the ARNs (or ID suffix of the ARNs) for the source
+     * event data store (<code>EventDataStore</code>) and the destination event data store (
+     * <code>InsightsDestination</code>). The source event data store logs management events and enables Insights. The
+     * destination event data store logs Insights events based upon the management event activity of the source event
+     * data store. The source and destination event data stores must belong to the same Amazon Web Services account.
+     * </p>
+     * <p>
+     * To log Insights events for a trail, you must specify the name (<code>TrailName</code>) of the CloudTrail trail
+     * for which you want to change or add Insights selectors.
+     * </p>
+     * <p>
+     * To log CloudTrail Insights events on API call volume, the trail or event data store must log <code>write</code>
+     * management events. To log CloudTrail Insights events on API error rate, the trail or event data store must log
+     * <code>read</code> or <code>write</code> management events. You can call <code>GetEventSelectors</code> on a trail
+     * to check whether the trail logs management events. You can call <code>GetEventDataStore</code> on an event data
+     * store to check whether the event data store logs management events.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-insights-events-with-cloudtrail.html"
+     * >Logging CloudTrail Insights events</a> in the <i>CloudTrail User Guide</i>.
      * </p>
      * 
      * @param putInsightSelectorsRequest
@@ -1635,7 +1701,9 @@ public interface AWSCloudTrailAsync extends AWSCloudTrail {
 
     /**
      * <p>
-     * Registers an organization’s member account as the CloudTrail delegated administrator.
+     * Registers an organization’s member account as the CloudTrail <a
+     * href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-delegated-administrator.html"
+     * >delegated administrator</a>.
      * </p>
      * 
      * @param registerOrganizationDelegatedAdminRequest
@@ -1651,7 +1719,9 @@ public interface AWSCloudTrailAsync extends AWSCloudTrail {
 
     /**
      * <p>
-     * Registers an organization’s member account as the CloudTrail delegated administrator.
+     * Registers an organization’s member account as the CloudTrail <a
+     * href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-delegated-administrator.html"
+     * >delegated administrator</a>.
      * </p>
      * 
      * @param registerOrganizationDelegatedAdminRequest
@@ -2086,9 +2156,9 @@ public interface AWSCloudTrailAsync extends AWSCloudTrail {
      * <code>TerminationProtection</code> is enabled.
      * </p>
      * <p>
-     * For event data stores for CloudTrail events, <code>AdvancedEventSelectors</code> includes or excludes management
-     * and data events in your event data store. For more information about <code>AdvancedEventSelectors</code>, see <a
-     * href="https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_AdvancedEventSelector.html">
+     * For event data stores for CloudTrail events, <code>AdvancedEventSelectors</code> includes or excludes management,
+     * data, or Insights events in your event data store. For more information about <code>AdvancedEventSelectors</code>
+     * , see <a href="https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_AdvancedEventSelector.html">
      * AdvancedEventSelectors</a>.
      * </p>
      * <p>
@@ -2112,9 +2182,9 @@ public interface AWSCloudTrailAsync extends AWSCloudTrail {
      * <code>TerminationProtection</code> is enabled.
      * </p>
      * <p>
-     * For event data stores for CloudTrail events, <code>AdvancedEventSelectors</code> includes or excludes management
-     * and data events in your event data store. For more information about <code>AdvancedEventSelectors</code>, see <a
-     * href="https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_AdvancedEventSelector.html">
+     * For event data stores for CloudTrail events, <code>AdvancedEventSelectors</code> includes or excludes management,
+     * data, or Insights events in your event data store. For more information about <code>AdvancedEventSelectors</code>
+     * , see <a href="https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_AdvancedEventSelector.html">
      * AdvancedEventSelectors</a>.
      * </p>
      * <p>

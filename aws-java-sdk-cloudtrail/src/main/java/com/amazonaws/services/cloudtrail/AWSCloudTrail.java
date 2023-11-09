@@ -131,14 +131,10 @@ public interface AWSCloudTrail {
      * @throws ResourceNotFoundException
      *         This exception is thrown when the specified resource is not found.
      * @throws CloudTrailARNInvalidException
-     *         This exception is thrown when an operation is called with a trail ARN that is not valid. The following is
-     *         the format of a trail ARN.</p>
+     *         This exception is thrown when an operation is called with an ARN that is not valid.</p>
      *         <p>
+     *         The following is the format of a trail ARN:
      *         <code>arn:aws:cloudtrail:us-east-2:123456789012:trail/MyTrail</code>
-     *         </p>
-     *         <p>
-     *         This exception is also thrown when you call <code>AddTags</code> or <code>RemoveTags</code> on a trail,
-     *         event data store, or channel with a resource ARN that is not valid.
      *         </p>
      *         <p>
      *         The following is the format of an event data store ARN:
@@ -684,14 +680,10 @@ public interface AWSCloudTrail {
      *         </p>
      *         </li>
      * @throws CloudTrailARNInvalidException
-     *         This exception is thrown when an operation is called with a trail ARN that is not valid. The following is
-     *         the format of a trail ARN.</p>
+     *         This exception is thrown when an operation is called with an ARN that is not valid.</p>
      *         <p>
-     *         <code>arn:aws:cloudtrail:us-east-2:123456789012:trail/MyTrail</code>
-     *         </p>
-     *         <p>
-     *         This exception is also thrown when you call <code>AddTags</code> or <code>RemoveTags</code> on a trail,
-     *         event data store, or channel with a resource ARN that is not valid.
+     *         The following is the format of a trail ARN: <code>arn:aws:cloudtrail:us-east-2:123456789012:trail/MyTrail
+     *         </code>
      *         </p>
      *         <p>
      *         The following is the format of an event data store ARN: <code>
@@ -1001,14 +993,10 @@ public interface AWSCloudTrail {
      *         </p>
      *         </li>
      * @throws CloudTrailARNInvalidException
-     *         This exception is thrown when an operation is called with a trail ARN that is not valid. The following is
-     *         the format of a trail ARN.</p>
+     *         This exception is thrown when an operation is called with an ARN that is not valid.</p>
      *         <p>
-     *         <code>arn:aws:cloudtrail:us-east-2:123456789012:trail/MyTrail</code>
-     *         </p>
-     *         <p>
-     *         This exception is also thrown when you call <code>AddTags</code> or <code>RemoveTags</code> on a trail,
-     *         event data store, or channel with a resource ARN that is not valid.
+     *         The following is the format of a trail ARN: <code>arn:aws:cloudtrail:us-east-2:123456789012:trail/MyTrail
+     *         </code>
      *         </p>
      *         <p>
      *         The following is the format of an event data store ARN: <code>
@@ -1052,19 +1040,29 @@ public interface AWSCloudTrail {
 
     /**
      * <p>
-     * Describes the settings for the Insights event selectors that you configured for your trail.
-     * <code>GetInsightSelectors</code> shows if CloudTrail Insights event logging is enabled on the trail, and if it
-     * is, which insight types are enabled. If you run <code>GetInsightSelectors</code> on a trail that does not have
-     * Insights events enabled, the operation throws the exception <code>InsightNotEnabledException</code>
+     * Describes the settings for the Insights event selectors that you configured for your trail or event data store.
+     * <code>GetInsightSelectors</code> shows if CloudTrail Insights event logging is enabled on the trail or event data
+     * store, and if it is, which Insights types are enabled. If you run <code>GetInsightSelectors</code> on a trail or
+     * event data store that does not have Insights events enabled, the operation throws the exception
+     * <code>InsightNotEnabledException</code>
+     * </p>
+     * <p>
+     * Specify either the <code>EventDataStore</code> parameter to get Insights event selectors for an event data store,
+     * or the <code>TrailName</code> parameter to the get Insights event selectors for a trail. You cannot specify these
+     * parameters together.
      * </p>
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-insights-events-with-cloudtrail.html"
-     * >Logging CloudTrail Insights Events for Trails </a> in the <i>CloudTrail User Guide</i>.
+     * >Logging CloudTrail Insights events</a> in the <i>CloudTrail User Guide</i>.
      * </p>
      * 
      * @param getInsightSelectorsRequest
      * @return Result of the GetInsightSelectors operation returned by the service.
+     * @throws InvalidParameterException
+     *         The request includes a parameter that is not valid.
+     * @throws InvalidParameterCombinationException
+     *         This exception is thrown when the combination of parameters provided is not valid.
      * @throws TrailNotFoundException
      *         This exception is thrown when the trail with the given name is not found.
      * @throws InvalidTrailNameException
@@ -1098,14 +1096,10 @@ public interface AWSCloudTrail {
      *         </p>
      *         </li>
      * @throws CloudTrailARNInvalidException
-     *         This exception is thrown when an operation is called with a trail ARN that is not valid. The following is
-     *         the format of a trail ARN.</p>
+     *         This exception is thrown when an operation is called with an ARN that is not valid.</p>
      *         <p>
-     *         <code>arn:aws:cloudtrail:us-east-2:123456789012:trail/MyTrail</code>
-     *         </p>
-     *         <p>
-     *         This exception is also thrown when you call <code>AddTags</code> or <code>RemoveTags</code> on a trail,
-     *         event data store, or channel with a resource ARN that is not valid.
+     *         The following is the format of a trail ARN: <code>arn:aws:cloudtrail:us-east-2:123456789012:trail/MyTrail
+     *         </code>
      *         </p>
      *         <p>
      *         The following is the format of an event data store ARN: <code>
@@ -1119,8 +1113,8 @@ public interface AWSCloudTrail {
      * @throws OperationNotPermittedException
      *         This exception is thrown when the requested operation is not permitted.
      * @throws InsightNotEnabledException
-     *         If you run <code>GetInsightSelectors</code> on a trail that does not have Insights events enabled, the
-     *         operation throws the exception <code>InsightNotEnabledException</code>.
+     *         If you run <code>GetInsightSelectors</code> on a trail or event data store that does not have Insights
+     *         events enabled, the operation throws the exception <code>InsightNotEnabledException</code>.
      * @throws NoManagementAccountSLRExistsException
      *         This exception is thrown when the management account does not have a service-linked role.
      * @throws ThrottlingException
@@ -1204,14 +1198,10 @@ public interface AWSCloudTrail {
      * @param getTrailRequest
      * @return Result of the GetTrail operation returned by the service.
      * @throws CloudTrailARNInvalidException
-     *         This exception is thrown when an operation is called with a trail ARN that is not valid. The following is
-     *         the format of a trail ARN.</p>
+     *         This exception is thrown when an operation is called with an ARN that is not valid.</p>
      *         <p>
+     *         The following is the format of a trail ARN:
      *         <code>arn:aws:cloudtrail:us-east-2:123456789012:trail/MyTrail</code>
-     *         </p>
-     *         <p>
-     *         This exception is also thrown when you call <code>AddTags</code> or <code>RemoveTags</code> on a trail,
-     *         event data store, or channel with a resource ARN that is not valid.
      *         </p>
      *         <p>
      *         The following is the format of an event data store ARN:
@@ -1275,14 +1265,10 @@ public interface AWSCloudTrail {
      *        The name of a trail about which you want the current status.
      * @return Result of the GetTrailStatus operation returned by the service.
      * @throws CloudTrailARNInvalidException
-     *         This exception is thrown when an operation is called with a trail ARN that is not valid. The following is
-     *         the format of a trail ARN.</p>
+     *         This exception is thrown when an operation is called with an ARN that is not valid.</p>
      *         <p>
+     *         The following is the format of a trail ARN:
      *         <code>arn:aws:cloudtrail:us-east-2:123456789012:trail/MyTrail</code>
-     *         </p>
-     *         <p>
-     *         This exception is also thrown when you call <code>AddTags</code> or <code>RemoveTags</code> on a trail,
-     *         event data store, or channel with a resource ARN that is not valid.
      *         </p>
      *         <p>
      *         The following is the format of an event data store ARN:
@@ -1516,14 +1502,10 @@ public interface AWSCloudTrail {
      * @throws ResourceNotFoundException
      *         This exception is thrown when the specified resource is not found.
      * @throws CloudTrailARNInvalidException
-     *         This exception is thrown when an operation is called with a trail ARN that is not valid. The following is
-     *         the format of a trail ARN.</p>
+     *         This exception is thrown when an operation is called with an ARN that is not valid.</p>
      *         <p>
+     *         The following is the format of a trail ARN:
      *         <code>arn:aws:cloudtrail:us-east-2:123456789012:trail/MyTrail</code>
-     *         </p>
-     *         <p>
-     *         This exception is also thrown when you call <code>AddTags</code> or <code>RemoveTags</code> on a trail,
-     *         event data store, or channel with a resource ARN that is not valid.
      *         </p>
      *         <p>
      *         The following is the format of an event data store ARN:
@@ -1611,7 +1593,17 @@ public interface AWSCloudTrail {
      * >management events</a> or <a href=
      * "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-concepts.html#cloudtrail-concepts-insights-events"
      * >CloudTrail Insights events</a> that are captured by CloudTrail. You can look up events that occurred in a Region
-     * within the last 90 days. Lookup supports the following attributes for management events:
+     * within the last 90 days.
+     * </p>
+     * <note>
+     * <p>
+     * <code>LookupEvents</code> returns recent Insights events for trails that enable Insights. To view Insights events
+     * for an event data store, you can run queries on your Insights event data store, and you can also view the Lake
+     * dashboard for Insights.
+     * </p>
+     * </note>
+     * <p>
+     * Lookup supports the following attributes for management events:
      * </p>
      * <ul>
      * <li>
@@ -1822,14 +1814,10 @@ public interface AWSCloudTrail {
      *         </p>
      *         </li>
      * @throws CloudTrailARNInvalidException
-     *         This exception is thrown when an operation is called with a trail ARN that is not valid. The following is
-     *         the format of a trail ARN.</p>
+     *         This exception is thrown when an operation is called with an ARN that is not valid.</p>
      *         <p>
-     *         <code>arn:aws:cloudtrail:us-east-2:123456789012:trail/MyTrail</code>
-     *         </p>
-     *         <p>
-     *         This exception is also thrown when you call <code>AddTags</code> or <code>RemoveTags</code> on a trail,
-     *         event data store, or channel with a resource ARN that is not valid.
+     *         The following is the format of a trail ARN: <code>arn:aws:cloudtrail:us-east-2:123456789012:trail/MyTrail
+     *         </code>
      *         </p>
      *         <p>
      *         The following is the format of an event data store ARN: <code>
@@ -1909,19 +1897,40 @@ public interface AWSCloudTrail {
     /**
      * <p>
      * Lets you enable Insights event logging by specifying the Insights selectors that you want to enable on an
-     * existing trail. You also use <code>PutInsightSelectors</code> to turn off Insights event logging, by passing an
-     * empty list of insight types. The valid Insights event types in this release are <code>ApiErrorRateInsight</code>
-     * and <code>ApiCallRateInsight</code>.
+     * existing trail or event data store. You also use <code>PutInsightSelectors</code> to turn off Insights event
+     * logging, by passing an empty list of Insights types. The valid Insights event types are
+     * <code>ApiErrorRateInsight</code> and <code>ApiCallRateInsight</code>.
      * </p>
      * <p>
-     * To log CloudTrail Insights events on API call volume, the trail must log <code>write</code> management events. To
-     * log CloudTrail Insights events on API error rate, the trail must log <code>read</code> or <code>write</code>
-     * management events. You can call <code>GetEventSelectors</code> on a trail to check whether the trail logs
-     * management events.
+     * To enable Insights on an event data store, you must specify the ARNs (or ID suffix of the ARNs) for the source
+     * event data store (<code>EventDataStore</code>) and the destination event data store (
+     * <code>InsightsDestination</code>). The source event data store logs management events and enables Insights. The
+     * destination event data store logs Insights events based upon the management event activity of the source event
+     * data store. The source and destination event data stores must belong to the same Amazon Web Services account.
+     * </p>
+     * <p>
+     * To log Insights events for a trail, you must specify the name (<code>TrailName</code>) of the CloudTrail trail
+     * for which you want to change or add Insights selectors.
+     * </p>
+     * <p>
+     * To log CloudTrail Insights events on API call volume, the trail or event data store must log <code>write</code>
+     * management events. To log CloudTrail Insights events on API error rate, the trail or event data store must log
+     * <code>read</code> or <code>write</code> management events. You can call <code>GetEventSelectors</code> on a trail
+     * to check whether the trail logs management events. You can call <code>GetEventDataStore</code> on an event data
+     * store to check whether the event data store logs management events.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-insights-events-with-cloudtrail.html"
+     * >Logging CloudTrail Insights events</a> in the <i>CloudTrail User Guide</i>.
      * </p>
      * 
      * @param putInsightSelectorsRequest
      * @return Result of the PutInsightSelectors operation returned by the service.
+     * @throws InvalidParameterException
+     *         The request includes a parameter that is not valid.
+     * @throws InvalidParameterCombinationException
+     *         This exception is thrown when the combination of parameters provided is not valid.
      * @throws TrailNotFoundException
      *         This exception is thrown when the trail with the given name is not found.
      * @throws InvalidTrailNameException
@@ -1955,14 +1964,10 @@ public interface AWSCloudTrail {
      *         </p>
      *         </li>
      * @throws CloudTrailARNInvalidException
-     *         This exception is thrown when an operation is called with a trail ARN that is not valid. The following is
-     *         the format of a trail ARN.</p>
+     *         This exception is thrown when an operation is called with an ARN that is not valid.</p>
      *         <p>
-     *         <code>arn:aws:cloudtrail:us-east-2:123456789012:trail/MyTrail</code>
-     *         </p>
-     *         <p>
-     *         This exception is also thrown when you call <code>AddTags</code> or <code>RemoveTags</code> on a trail,
-     *         event data store, or channel with a resource ARN that is not valid.
+     *         The following is the format of a trail ARN: <code>arn:aws:cloudtrail:us-east-2:123456789012:trail/MyTrail
+     *         </code>
      *         </p>
      *         <p>
      *         The following is the format of an event data store ARN: <code>
@@ -1975,9 +1980,21 @@ public interface AWSCloudTrail {
      *         This exception is thrown when an operation is called on a trail from a Region other than the Region in
      *         which the trail was created.
      * @throws InvalidInsightSelectorsException
-     *         The formatting or syntax of the <code>InsightSelectors</code> JSON statement in your <code>
-     *         PutInsightSelectors</code> or <code>GetInsightSelectors</code> request is not valid, or the specified
-     *         insight type in the <code>InsightSelectors</code> statement is not a valid insight type.
+     *         For <code>PutInsightSelectors</code>, this exception is thrown when the formatting or syntax of the
+     *         <code>InsightSelectors</code> JSON statement is not valid, or the specified <code>InsightType</code> in
+     *         the <code>InsightSelectors</code> statement is not valid. Valid values for <code>InsightType</code> are
+     *         <code>ApiCallRateInsight</code> and <code>ApiErrorRateInsight</code>. To enable Insights on an event data
+     *         store, the destination event data store specified by the <code>InsightsDestination</code> parameter must
+     *         log Insights events and the source event data store specified by the <code>EventDataStore</code>
+     *         parameter must log management events.
+     *         </p>
+     *         <p>
+     *         For <code>UpdateEventDataStore</code>, this exception is thrown if Insights are enabled on the event data
+     *         store and the updated advanced event selectors are not compatible with the configured <code>
+     *         InsightSelectors</code>. If the <code>InsightSelectors</code> includes an <code>InsightType</code> of
+     *         <code>ApiCallRateInsight</code>, the source event data store must log <code>write</code> management
+     *         events. If the <code>InsightSelectors</code> includes an <code>InsightType</code> of <code>
+     *         ApiErrorRateInsight</code>, the source event data store must log management events.
      * @throws InsufficientS3BucketPolicyException
      *         This exception is thrown when the policy on the S3 bucket is not sufficient.
      * @throws InsufficientEncryptionPolicyException
@@ -2062,7 +2079,9 @@ public interface AWSCloudTrail {
 
     /**
      * <p>
-     * Registers an organization’s member account as the CloudTrail delegated administrator.
+     * Registers an organization’s member account as the CloudTrail <a
+     * href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-delegated-administrator.html"
+     * >delegated administrator</a>.
      * </p>
      * 
      * @param registerOrganizationDelegatedAdminRequest
@@ -2127,14 +2146,10 @@ public interface AWSCloudTrail {
      * @throws ResourceNotFoundException
      *         This exception is thrown when the specified resource is not found.
      * @throws CloudTrailARNInvalidException
-     *         This exception is thrown when an operation is called with a trail ARN that is not valid. The following is
-     *         the format of a trail ARN.</p>
+     *         This exception is thrown when an operation is called with an ARN that is not valid.</p>
      *         <p>
+     *         The following is the format of a trail ARN:
      *         <code>arn:aws:cloudtrail:us-east-2:123456789012:trail/MyTrail</code>
-     *         </p>
-     *         <p>
-     *         This exception is also thrown when you call <code>AddTags</code> or <code>RemoveTags</code> on a trail,
-     *         event data store, or channel with a resource ARN that is not valid.
      *         </p>
      *         <p>
      *         The following is the format of an event data store ARN:
@@ -2383,14 +2398,10 @@ public interface AWSCloudTrail {
      *        The request to CloudTrail to start logging Amazon Web Services API calls for an account.
      * @return Result of the StartLogging operation returned by the service.
      * @throws CloudTrailARNInvalidException
-     *         This exception is thrown when an operation is called with a trail ARN that is not valid. The following is
-     *         the format of a trail ARN.</p>
+     *         This exception is thrown when an operation is called with an ARN that is not valid.</p>
      *         <p>
+     *         The following is the format of a trail ARN:
      *         <code>arn:aws:cloudtrail:us-east-2:123456789012:trail/MyTrail</code>
-     *         </p>
-     *         <p>
-     *         This exception is also thrown when you call <code>AddTags</code> or <code>RemoveTags</code> on a trail,
-     *         event data store, or channel with a resource ARN that is not valid.
      *         </p>
      *         <p>
      *         The following is the format of an event data store ARN:
@@ -2627,14 +2638,10 @@ public interface AWSCloudTrail {
      *         </p>
      *         </li>
      * @throws CloudTrailARNInvalidException
-     *         This exception is thrown when an operation is called with a trail ARN that is not valid. The following is
-     *         the format of a trail ARN.</p>
+     *         This exception is thrown when an operation is called with an ARN that is not valid.</p>
      *         <p>
-     *         <code>arn:aws:cloudtrail:us-east-2:123456789012:trail/MyTrail</code>
-     *         </p>
-     *         <p>
-     *         This exception is also thrown when you call <code>AddTags</code> or <code>RemoveTags</code> on a trail,
-     *         event data store, or channel with a resource ARN that is not valid.
+     *         The following is the format of a trail ARN: <code>arn:aws:cloudtrail:us-east-2:123456789012:trail/MyTrail
+     *         </code>
      *         </p>
      *         <p>
      *         The following is the format of an event data store ARN: <code>
@@ -2717,9 +2724,9 @@ public interface AWSCloudTrail {
      * <code>TerminationProtection</code> is enabled.
      * </p>
      * <p>
-     * For event data stores for CloudTrail events, <code>AdvancedEventSelectors</code> includes or excludes management
-     * and data events in your event data store. For more information about <code>AdvancedEventSelectors</code>, see <a
-     * href="https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_AdvancedEventSelector.html">
+     * For event data stores for CloudTrail events, <code>AdvancedEventSelectors</code> includes or excludes management,
+     * data, or Insights events in your event data store. For more information about <code>AdvancedEventSelectors</code>
+     * , see <a href="https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_AdvancedEventSelector.html">
      * AdvancedEventSelectors</a>.
      * </p>
      * <p>
@@ -2769,6 +2776,21 @@ public interface AWSCloudTrail {
      *         with a value of <code>read-only</code> is not valid.
      *         </p>
      *         </li>
+     * @throws InvalidInsightSelectorsException
+     *         For <code>PutInsightSelectors</code>, this exception is thrown when the formatting or syntax of the
+     *         <code>InsightSelectors</code> JSON statement is not valid, or the specified <code>InsightType</code> in
+     *         the <code>InsightSelectors</code> statement is not valid. Valid values for <code>InsightType</code> are
+     *         <code>ApiCallRateInsight</code> and <code>ApiErrorRateInsight</code>. To enable Insights on an event data
+     *         store, the destination event data store specified by the <code>InsightsDestination</code> parameter must
+     *         log Insights events and the source event data store specified by the <code>EventDataStore</code>
+     *         parameter must log management events.</p>
+     *         <p>
+     *         For <code>UpdateEventDataStore</code>, this exception is thrown if Insights are enabled on the event data
+     *         store and the updated advanced event selectors are not compatible with the configured <code>
+     *         InsightSelectors</code>. If the <code>InsightSelectors</code> includes an <code>InsightType</code> of
+     *         <code>ApiCallRateInsight</code>, the source event data store must log <code>write</code> management
+     *         events. If the <code>InsightSelectors</code> includes an <code>InsightType</code> of <code>
+     *         ApiErrorRateInsight</code>, the source event data store must log management events.
      * @throws EventDataStoreHasOngoingImportException
      *         This exception is thrown when you try to update or delete an event data store that currently has an
      *         import in progress.
@@ -2923,14 +2945,10 @@ public interface AWSCloudTrail {
      *         </p>
      *         </li>
      * @throws CloudTrailARNInvalidException
-     *         This exception is thrown when an operation is called with a trail ARN that is not valid. The following is
-     *         the format of a trail ARN.</p>
+     *         This exception is thrown when an operation is called with an ARN that is not valid.</p>
      *         <p>
-     *         <code>arn:aws:cloudtrail:us-east-2:123456789012:trail/MyTrail</code>
-     *         </p>
-     *         <p>
-     *         This exception is also thrown when you call <code>AddTags</code> or <code>RemoveTags</code> on a trail,
-     *         event data store, or channel with a resource ARN that is not valid.
+     *         The following is the format of a trail ARN: <code>arn:aws:cloudtrail:us-east-2:123456789012:trail/MyTrail
+     *         </code>
      *         </p>
      *         <p>
      *         The following is the format of an event data store ARN: <code>

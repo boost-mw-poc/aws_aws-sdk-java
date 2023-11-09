@@ -14241,6 +14241,41 @@ public class AmazonEC2AsyncClient extends AmazonEC2Client implements AmazonEC2As
     }
 
     @Override
+    public java.util.concurrent.Future<DisableSnapshotBlockPublicAccessResult> disableSnapshotBlockPublicAccessAsync(
+            DisableSnapshotBlockPublicAccessRequest request) {
+
+        return disableSnapshotBlockPublicAccessAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DisableSnapshotBlockPublicAccessResult> disableSnapshotBlockPublicAccessAsync(
+            final DisableSnapshotBlockPublicAccessRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DisableSnapshotBlockPublicAccessRequest, DisableSnapshotBlockPublicAccessResult> asyncHandler) {
+        final DisableSnapshotBlockPublicAccessRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DisableSnapshotBlockPublicAccessResult>() {
+            @Override
+            public DisableSnapshotBlockPublicAccessResult call() throws Exception {
+                DisableSnapshotBlockPublicAccessResult result = null;
+
+                try {
+                    result = executeDisableSnapshotBlockPublicAccess(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DisableTransitGatewayRouteTablePropagationResult> disableTransitGatewayRouteTablePropagationAsync(
             DisableTransitGatewayRouteTablePropagationRequest request) {
 
@@ -15208,6 +15243,41 @@ public class AmazonEC2AsyncClient extends AmazonEC2Client implements AmazonEC2As
 
                 try {
                     result = executeEnableSerialConsoleAccess(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<EnableSnapshotBlockPublicAccessResult> enableSnapshotBlockPublicAccessAsync(
+            EnableSnapshotBlockPublicAccessRequest request) {
+
+        return enableSnapshotBlockPublicAccessAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<EnableSnapshotBlockPublicAccessResult> enableSnapshotBlockPublicAccessAsync(
+            final EnableSnapshotBlockPublicAccessRequest request,
+            final com.amazonaws.handlers.AsyncHandler<EnableSnapshotBlockPublicAccessRequest, EnableSnapshotBlockPublicAccessResult> asyncHandler) {
+        final EnableSnapshotBlockPublicAccessRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<EnableSnapshotBlockPublicAccessResult>() {
+            @Override
+            public EnableSnapshotBlockPublicAccessResult call() throws Exception {
+                EnableSnapshotBlockPublicAccessResult result = null;
+
+                try {
+                    result = executeEnableSnapshotBlockPublicAccess(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -16555,6 +16625,41 @@ public class AmazonEC2AsyncClient extends AmazonEC2Client implements AmazonEC2As
 
                 try {
                     result = executeGetSerialConsoleAccessStatus(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetSnapshotBlockPublicAccessStateResult> getSnapshotBlockPublicAccessStateAsync(
+            GetSnapshotBlockPublicAccessStateRequest request) {
+
+        return getSnapshotBlockPublicAccessStateAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetSnapshotBlockPublicAccessStateResult> getSnapshotBlockPublicAccessStateAsync(
+            final GetSnapshotBlockPublicAccessStateRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetSnapshotBlockPublicAccessStateRequest, GetSnapshotBlockPublicAccessStateResult> asyncHandler) {
+        final GetSnapshotBlockPublicAccessStateRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetSnapshotBlockPublicAccessStateResult>() {
+            @Override
+            public GetSnapshotBlockPublicAccessStateResult call() throws Exception {
+                GetSnapshotBlockPublicAccessStateResult result = null;
+
+                try {
+                    result = executeGetSnapshotBlockPublicAccessState(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

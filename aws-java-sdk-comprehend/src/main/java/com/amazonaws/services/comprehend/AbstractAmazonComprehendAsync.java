@@ -569,6 +569,19 @@ public class AbstractAmazonComprehendAsync extends AbstractAmazonComprehend impl
     }
 
     @Override
+    public java.util.concurrent.Future<DetectToxicContentResult> detectToxicContentAsync(DetectToxicContentRequest request) {
+
+        return detectToxicContentAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DetectToxicContentResult> detectToxicContentAsync(DetectToxicContentRequest request,
+            com.amazonaws.handlers.AsyncHandler<DetectToxicContentRequest, DetectToxicContentResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ImportModelResult> importModelAsync(ImportModelRequest request) {
 
         return importModelAsync(request, null);

@@ -257,6 +257,45 @@ public interface AmazonEKSAsync extends AmazonEKS {
 
     /**
      * <p>
+     * Creates an EKS Anywhere subscription. When a subscription is created, it is a contract agreement for the length
+     * of the term specified in the request. Licenses that are used to validate support are provisioned in Amazon Web
+     * Services License Manager and the caller account is granted access to EKS Anywhere Curated Packages.
+     * </p>
+     * 
+     * @param createEksAnywhereSubscriptionRequest
+     * @return A Java Future containing the result of the CreateEksAnywhereSubscription operation returned by the
+     *         service.
+     * @sample AmazonEKSAsync.CreateEksAnywhereSubscription
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/eks-2017-11-01/CreateEksAnywhereSubscription"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateEksAnywhereSubscriptionResult> createEksAnywhereSubscriptionAsync(
+            CreateEksAnywhereSubscriptionRequest createEksAnywhereSubscriptionRequest);
+
+    /**
+     * <p>
+     * Creates an EKS Anywhere subscription. When a subscription is created, it is a contract agreement for the length
+     * of the term specified in the request. Licenses that are used to validate support are provisioned in Amazon Web
+     * Services License Manager and the caller account is granted access to EKS Anywhere Curated Packages.
+     * </p>
+     * 
+     * @param createEksAnywhereSubscriptionRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateEksAnywhereSubscription operation returned by the
+     *         service.
+     * @sample AmazonEKSAsyncHandler.CreateEksAnywhereSubscription
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/eks-2017-11-01/CreateEksAnywhereSubscription"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateEksAnywhereSubscriptionResult> createEksAnywhereSubscriptionAsync(
+            CreateEksAnywhereSubscriptionRequest createEksAnywhereSubscriptionRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateEksAnywhereSubscriptionRequest, CreateEksAnywhereSubscriptionResult> asyncHandler);
+
+    /**
+     * <p>
      * Creates an Fargate profile for your Amazon EKS cluster. You must have at least one Fargate profile in a cluster
      * to be able to run pods on Fargate.
      * </p>
@@ -270,7 +309,7 @@ public interface AmazonEKSAsync extends AmazonEKS {
      * <p>
      * When you create a Fargate profile, you must specify a pod execution role to use with the pods that are scheduled
      * with the profile. This role is added to the cluster's Kubernetes <a
-     * href="https://kubernetes.io/docs/admin/authorization/rbac/">Role Based Access Control</a> (RBAC) for
+     * href="https://kubernetes.io/docs/reference/access-authn-authz/rbac/">Role Based Access Control</a> (RBAC) for
      * authorization so that the <code>kubelet</code> that is running on the Fargate infrastructure can register with
      * your Amazon EKS cluster so that it can appear in your cluster as a node. The pod execution role also provides IAM
      * permissions to the Fargate infrastructure to allow read access to Amazon ECR image repositories. For more
@@ -313,7 +352,7 @@ public interface AmazonEKSAsync extends AmazonEKS {
      * <p>
      * When you create a Fargate profile, you must specify a pod execution role to use with the pods that are scheduled
      * with the profile. This role is added to the cluster's Kubernetes <a
-     * href="https://kubernetes.io/docs/admin/authorization/rbac/">Role Based Access Control</a> (RBAC) for
+     * href="https://kubernetes.io/docs/reference/access-authn-authz/rbac/">Role Based Access Control</a> (RBAC) for
      * authorization so that the <code>kubelet</code> that is running on the Fargate infrastructure can register with
      * your Amazon EKS cluster so that it can appear in your cluster as a node. The pod execution role also provides IAM
      * permissions to the Fargate infrastructure to allow read access to Amazon ECR image repositories. For more
@@ -349,10 +388,7 @@ public interface AmazonEKSAsync extends AmazonEKS {
     /**
      * <p>
      * Creates a managed node group for an Amazon EKS cluster. You can only create a node group for your cluster that is
-     * equal to the current Kubernetes version for the cluster. All node groups are created with the latest AMI release
-     * version for the respective minor Kubernetes version of the cluster, unless you deploy a custom AMI using a launch
-     * template. For more information about using launch templates, see <a
-     * href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Launch template support</a>.
+     * equal to the current Kubernetes version for the cluster.
      * </p>
      * <p>
      * An Amazon EKS managed node group is an Amazon EC2 Auto Scaling group and associated Amazon EC2 instances that are
@@ -377,10 +413,7 @@ public interface AmazonEKSAsync extends AmazonEKS {
     /**
      * <p>
      * Creates a managed node group for an Amazon EKS cluster. You can only create a node group for your cluster that is
-     * equal to the current Kubernetes version for the cluster. All node groups are created with the latest AMI release
-     * version for the respective minor Kubernetes version of the cluster, unless you deploy a custom AMI using a launch
-     * template. For more information about using launch templates, see <a
-     * href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Launch template support</a>.
+     * equal to the current Kubernetes version for the cluster.
      * </p>
      * <p>
      * An Amazon EKS managed node group is an Amazon EC2 Auto Scaling group and associated Amazon EC2 instances that are
@@ -498,6 +531,45 @@ public interface AmazonEKSAsync extends AmazonEKS {
      */
     java.util.concurrent.Future<DeleteClusterResult> deleteClusterAsync(DeleteClusterRequest deleteClusterRequest,
             com.amazonaws.handlers.AsyncHandler<DeleteClusterRequest, DeleteClusterResult> asyncHandler);
+
+    /**
+     * <p>
+     * Deletes an expired / inactive subscription. Deleting inactive subscriptions removes them from the Amazon Web
+     * Services Management Console view and from list/describe API responses. Subscriptions can only be cancelled within
+     * 7 days of creation, and are cancelled by creating a ticket in the Amazon Web Services Support Center.
+     * </p>
+     * 
+     * @param deleteEksAnywhereSubscriptionRequest
+     * @return A Java Future containing the result of the DeleteEksAnywhereSubscription operation returned by the
+     *         service.
+     * @sample AmazonEKSAsync.DeleteEksAnywhereSubscription
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/eks-2017-11-01/DeleteEksAnywhereSubscription"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteEksAnywhereSubscriptionResult> deleteEksAnywhereSubscriptionAsync(
+            DeleteEksAnywhereSubscriptionRequest deleteEksAnywhereSubscriptionRequest);
+
+    /**
+     * <p>
+     * Deletes an expired / inactive subscription. Deleting inactive subscriptions removes them from the Amazon Web
+     * Services Management Console view and from list/describe API responses. Subscriptions can only be cancelled within
+     * 7 days of creation, and are cancelled by creating a ticket in the Amazon Web Services Support Center.
+     * </p>
+     * 
+     * @param deleteEksAnywhereSubscriptionRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteEksAnywhereSubscription operation returned by the
+     *         service.
+     * @sample AmazonEKSAsyncHandler.DeleteEksAnywhereSubscription
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/eks-2017-11-01/DeleteEksAnywhereSubscription"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteEksAnywhereSubscriptionResult> deleteEksAnywhereSubscriptionAsync(
+            DeleteEksAnywhereSubscriptionRequest deleteEksAnywhereSubscriptionRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteEksAnywhereSubscriptionRequest, DeleteEksAnywhereSubscriptionResult> asyncHandler);
 
     /**
      * <p>
@@ -764,6 +836,41 @@ public interface AmazonEKSAsync extends AmazonEKS {
 
     /**
      * <p>
+     * Returns descriptive information about a subscription.
+     * </p>
+     * 
+     * @param describeEksAnywhereSubscriptionRequest
+     * @return A Java Future containing the result of the DescribeEksAnywhereSubscription operation returned by the
+     *         service.
+     * @sample AmazonEKSAsync.DescribeEksAnywhereSubscription
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/eks-2017-11-01/DescribeEksAnywhereSubscription"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeEksAnywhereSubscriptionResult> describeEksAnywhereSubscriptionAsync(
+            DescribeEksAnywhereSubscriptionRequest describeEksAnywhereSubscriptionRequest);
+
+    /**
+     * <p>
+     * Returns descriptive information about a subscription.
+     * </p>
+     * 
+     * @param describeEksAnywhereSubscriptionRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeEksAnywhereSubscription operation returned by the
+     *         service.
+     * @sample AmazonEKSAsyncHandler.DescribeEksAnywhereSubscription
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/eks-2017-11-01/DescribeEksAnywhereSubscription"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeEksAnywhereSubscriptionResult> describeEksAnywhereSubscriptionAsync(
+            DescribeEksAnywhereSubscriptionRequest describeEksAnywhereSubscriptionRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeEksAnywhereSubscriptionRequest, DescribeEksAnywhereSubscriptionResult> asyncHandler);
+
+    /**
+     * <p>
      * Returns descriptive information about an Fargate profile.
      * </p>
      * 
@@ -904,7 +1011,8 @@ public interface AmazonEKSAsync extends AmazonEKS {
      * <p>
      * Disassociates an identity provider configuration from a cluster. If you disassociate an identity provider from
      * your cluster, users included in the provider can no longer access the cluster. However, you can still access the
-     * cluster with Amazon Web Services IAM users.
+     * cluster with <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html">IAM
+     * principals</a>.
      * </p>
      * 
      * @param disassociateIdentityProviderConfigRequest
@@ -921,7 +1029,8 @@ public interface AmazonEKSAsync extends AmazonEKS {
      * <p>
      * Disassociates an identity provider configuration from a cluster. If you disassociate an identity provider from
      * your cluster, users included in the provider can no longer access the cluster. However, you can still access the
-     * cluster with Amazon Web Services IAM users.
+     * cluster with <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html">IAM
+     * principals</a>.
      * </p>
      * 
      * @param disassociateIdentityProviderConfigRequest
@@ -941,7 +1050,7 @@ public interface AmazonEKSAsync extends AmazonEKS {
 
     /**
      * <p>
-     * Lists the available add-ons.
+     * Lists the installed add-ons.
      * </p>
      * 
      * @param listAddonsRequest
@@ -954,7 +1063,7 @@ public interface AmazonEKSAsync extends AmazonEKS {
 
     /**
      * <p>
-     * Lists the available add-ons.
+     * Lists the installed add-ons.
      * </p>
      * 
      * @param listAddonsRequest
@@ -1000,6 +1109,41 @@ public interface AmazonEKSAsync extends AmazonEKS {
      */
     java.util.concurrent.Future<ListClustersResult> listClustersAsync(ListClustersRequest listClustersRequest,
             com.amazonaws.handlers.AsyncHandler<ListClustersRequest, ListClustersResult> asyncHandler);
+
+    /**
+     * <p>
+     * Displays the full description of the subscription.
+     * </p>
+     * 
+     * @param listEksAnywhereSubscriptionsRequest
+     * @return A Java Future containing the result of the ListEksAnywhereSubscriptions operation returned by the
+     *         service.
+     * @sample AmazonEKSAsync.ListEksAnywhereSubscriptions
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/eks-2017-11-01/ListEksAnywhereSubscriptions"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListEksAnywhereSubscriptionsResult> listEksAnywhereSubscriptionsAsync(
+            ListEksAnywhereSubscriptionsRequest listEksAnywhereSubscriptionsRequest);
+
+    /**
+     * <p>
+     * Displays the full description of the subscription.
+     * </p>
+     * 
+     * @param listEksAnywhereSubscriptionsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListEksAnywhereSubscriptions operation returned by the
+     *         service.
+     * @sample AmazonEKSAsyncHandler.ListEksAnywhereSubscriptions
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/eks-2017-11-01/ListEksAnywhereSubscriptions"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListEksAnywhereSubscriptionsResult> listEksAnywhereSubscriptionsAsync(
+            ListEksAnywhereSubscriptionsRequest listEksAnywhereSubscriptionsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListEksAnywhereSubscriptionsRequest, ListEksAnywhereSubscriptionsResult> asyncHandler);
 
     /**
      * <p>
@@ -1481,6 +1625,41 @@ public interface AmazonEKSAsync extends AmazonEKS {
      */
     java.util.concurrent.Future<UpdateClusterVersionResult> updateClusterVersionAsync(UpdateClusterVersionRequest updateClusterVersionRequest,
             com.amazonaws.handlers.AsyncHandler<UpdateClusterVersionRequest, UpdateClusterVersionResult> asyncHandler);
+
+    /**
+     * <p>
+     * Update an EKS Anywhere Subscription. Only auto renewal and tags can be updated after subscription creation.
+     * </p>
+     * 
+     * @param updateEksAnywhereSubscriptionRequest
+     * @return A Java Future containing the result of the UpdateEksAnywhereSubscription operation returned by the
+     *         service.
+     * @sample AmazonEKSAsync.UpdateEksAnywhereSubscription
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/eks-2017-11-01/UpdateEksAnywhereSubscription"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateEksAnywhereSubscriptionResult> updateEksAnywhereSubscriptionAsync(
+            UpdateEksAnywhereSubscriptionRequest updateEksAnywhereSubscriptionRequest);
+
+    /**
+     * <p>
+     * Update an EKS Anywhere Subscription. Only auto renewal and tags can be updated after subscription creation.
+     * </p>
+     * 
+     * @param updateEksAnywhereSubscriptionRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateEksAnywhereSubscription operation returned by the
+     *         service.
+     * @sample AmazonEKSAsyncHandler.UpdateEksAnywhereSubscription
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/eks-2017-11-01/UpdateEksAnywhereSubscription"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateEksAnywhereSubscriptionResult> updateEksAnywhereSubscriptionAsync(
+            UpdateEksAnywhereSubscriptionRequest updateEksAnywhereSubscriptionRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateEksAnywhereSubscriptionRequest, UpdateEksAnywhereSubscriptionResult> asyncHandler);
 
     /**
      * <p>

@@ -67,7 +67,9 @@ public interface AmazonEKS {
      *         The specified parameter is invalid. Review the available parameters for the API request.
      * @throws ClientException
      *         These errors are usually caused by a client action. Actions can include using an action or resource on
-     *         behalf of a user that doesn't have permissions to use the action or resource or specifying an identifier
+     *         behalf of an <a
+     *         href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html">IAM
+     *         principal</a> that doesn't have permissions to use the action or resource or specifying an identifier
      *         that is not valid.
      * @throws ServerException
      *         These errors are usually caused by a server-side issue.
@@ -105,7 +107,9 @@ public interface AmazonEKS {
      *         The specified parameter is invalid. Review the available parameters for the API request.
      * @throws ClientException
      *         These errors are usually caused by a client action. Actions can include using an action or resource on
-     *         behalf of a user that doesn't have permissions to use the action or resource or specifying an identifier
+     *         behalf of an <a
+     *         href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html">IAM
+     *         principal</a> that doesn't have permissions to use the action or resource or specifying an identifier
      *         that is not valid.
      * @throws ServerException
      *         These errors are usually caused by a server-side issue.
@@ -150,7 +154,9 @@ public interface AmazonEKS {
      *         The specified resource is in use.
      * @throws ClientException
      *         These errors are usually caused by a client action. Actions can include using an action or resource on
-     *         behalf of a user that doesn't have permissions to use the action or resource or specifying an identifier
+     *         behalf of an <a
+     *         href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html">IAM
+     *         principal</a> that doesn't have permissions to use the action or resource or specifying an identifier
      *         that is not valid.
      * @throws ServerException
      *         These errors are usually caused by a server-side issue.
@@ -198,7 +204,9 @@ public interface AmazonEKS {
      *         The specified parameter is invalid. Review the available parameters for the API request.
      * @throws ClientException
      *         These errors are usually caused by a client action. Actions can include using an action or resource on
-     *         behalf of a user that doesn't have permissions to use the action or resource or specifying an identifier
+     *         behalf of an <a
+     *         href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html">IAM
+     *         principal</a> that doesn't have permissions to use the action or resource or specifying an identifier
      *         that is not valid.
      * @throws ServerException
      *         These errors are usually caused by a server-side issue.
@@ -216,6 +224,35 @@ public interface AmazonEKS {
 
     /**
      * <p>
+     * Creates an EKS Anywhere subscription. When a subscription is created, it is a contract agreement for the length
+     * of the term specified in the request. Licenses that are used to validate support are provisioned in Amazon Web
+     * Services License Manager and the caller account is granted access to EKS Anywhere Curated Packages.
+     * </p>
+     * 
+     * @param createEksAnywhereSubscriptionRequest
+     * @return Result of the CreateEksAnywhereSubscription operation returned by the service.
+     * @throws ResourceLimitExceededException
+     *         You have encountered a service limit on the specified resource.
+     * @throws InvalidParameterException
+     *         The specified parameter is invalid. Review the available parameters for the API request.
+     * @throws ClientException
+     *         These errors are usually caused by a client action. Actions can include using an action or resource on
+     *         behalf of an <a
+     *         href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html">IAM
+     *         principal</a> that doesn't have permissions to use the action or resource or specifying an identifier
+     *         that is not valid.
+     * @throws ServerException
+     *         These errors are usually caused by a server-side issue.
+     * @throws ServiceUnavailableException
+     *         The service is unavailable. Back off and retry the operation.
+     * @sample AmazonEKS.CreateEksAnywhereSubscription
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/eks-2017-11-01/CreateEksAnywhereSubscription"
+     *      target="_top">AWS API Documentation</a>
+     */
+    CreateEksAnywhereSubscriptionResult createEksAnywhereSubscription(CreateEksAnywhereSubscriptionRequest createEksAnywhereSubscriptionRequest);
+
+    /**
+     * <p>
      * Creates an Fargate profile for your Amazon EKS cluster. You must have at least one Fargate profile in a cluster
      * to be able to run pods on Fargate.
      * </p>
@@ -229,7 +266,7 @@ public interface AmazonEKS {
      * <p>
      * When you create a Fargate profile, you must specify a pod execution role to use with the pods that are scheduled
      * with the profile. This role is added to the cluster's Kubernetes <a
-     * href="https://kubernetes.io/docs/admin/authorization/rbac/">Role Based Access Control</a> (RBAC) for
+     * href="https://kubernetes.io/docs/reference/access-authn-authz/rbac/">Role Based Access Control</a> (RBAC) for
      * authorization so that the <code>kubelet</code> that is running on the Fargate infrastructure can register with
      * your Amazon EKS cluster so that it can appear in your cluster as a node. The pod execution role also provides IAM
      * permissions to the Fargate infrastructure to allow read access to Amazon ECR image repositories. For more
@@ -258,7 +295,9 @@ public interface AmazonEKS {
      *         operations.
      * @throws ClientException
      *         These errors are usually caused by a client action. Actions can include using an action or resource on
-     *         behalf of a user that doesn't have permissions to use the action or resource or specifying an identifier
+     *         behalf of an <a
+     *         href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html">IAM
+     *         principal</a> that doesn't have permissions to use the action or resource or specifying an identifier
      *         that is not valid.
      * @throws ServerException
      *         These errors are usually caused by a server-side issue.
@@ -277,10 +316,7 @@ public interface AmazonEKS {
     /**
      * <p>
      * Creates a managed node group for an Amazon EKS cluster. You can only create a node group for your cluster that is
-     * equal to the current Kubernetes version for the cluster. All node groups are created with the latest AMI release
-     * version for the respective minor Kubernetes version of the cluster, unless you deploy a custom AMI using a launch
-     * template. For more information about using launch templates, see <a
-     * href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Launch template support</a>.
+     * equal to the current Kubernetes version for the cluster.
      * </p>
      * <p>
      * An Amazon EKS managed node group is an Amazon EC2 Auto Scaling group and associated Amazon EC2 instances that are
@@ -307,7 +343,9 @@ public interface AmazonEKS {
      *         The specified parameter is invalid. Review the available parameters for the API request.
      * @throws ClientException
      *         These errors are usually caused by a client action. Actions can include using an action or resource on
-     *         behalf of a user that doesn't have permissions to use the action or resource or specifying an identifier
+     *         behalf of an <a
+     *         href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html">IAM
+     *         principal</a> that doesn't have permissions to use the action or resource or specifying an identifier
      *         that is not valid.
      * @throws ServerException
      *         These errors are usually caused by a server-side issue.
@@ -341,7 +379,9 @@ public interface AmazonEKS {
      *         groups are Region-specific.
      * @throws ClientException
      *         These errors are usually caused by a client action. Actions can include using an action or resource on
-     *         behalf of a user that doesn't have permissions to use the action or resource or specifying an identifier
+     *         behalf of an <a
+     *         href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html">IAM
+     *         principal</a> that doesn't have permissions to use the action or resource or specifying an identifier
      *         that is not valid.
      * @throws ServerException
      *         These errors are usually caused by a server-side issue.
@@ -377,7 +417,9 @@ public interface AmazonEKS {
      *         groups are Region-specific.
      * @throws ClientException
      *         These errors are usually caused by a client action. Actions can include using an action or resource on
-     *         behalf of a user that doesn't have permissions to use the action or resource or specifying an identifier
+     *         behalf of an <a
+     *         href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html">IAM
+     *         principal</a> that doesn't have permissions to use the action or resource or specifying an identifier
      *         that is not valid.
      * @throws ServerException
      *         These errors are usually caused by a server-side issue.
@@ -388,6 +430,36 @@ public interface AmazonEKS {
      *      Documentation</a>
      */
     DeleteClusterResult deleteCluster(DeleteClusterRequest deleteClusterRequest);
+
+    /**
+     * <p>
+     * Deletes an expired / inactive subscription. Deleting inactive subscriptions removes them from the Amazon Web
+     * Services Management Console view and from list/describe API responses. Subscriptions can only be cancelled within
+     * 7 days of creation, and are cancelled by creating a ticket in the Amazon Web Services Support Center.
+     * </p>
+     * 
+     * @param deleteEksAnywhereSubscriptionRequest
+     * @return Result of the DeleteEksAnywhereSubscription operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The specified resource could not be found. You can view your available clusters with <a>ListClusters</a>.
+     *         You can view your available managed node groups with <a>ListNodegroups</a>. Amazon EKS clusters and node
+     *         groups are Region-specific.
+     * @throws ClientException
+     *         These errors are usually caused by a client action. Actions can include using an action or resource on
+     *         behalf of an <a
+     *         href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html">IAM
+     *         principal</a> that doesn't have permissions to use the action or resource or specifying an identifier
+     *         that is not valid.
+     * @throws InvalidRequestException
+     *         The request is invalid given the state of the cluster. Check the state of the cluster and the associated
+     *         operations.
+     * @throws ServerException
+     *         These errors are usually caused by a server-side issue.
+     * @sample AmazonEKS.DeleteEksAnywhereSubscription
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/eks-2017-11-01/DeleteEksAnywhereSubscription"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DeleteEksAnywhereSubscriptionResult deleteEksAnywhereSubscription(DeleteEksAnywhereSubscriptionRequest deleteEksAnywhereSubscriptionRequest);
 
     /**
      * <p>
@@ -409,7 +481,9 @@ public interface AmazonEKS {
      *         The specified parameter is invalid. Review the available parameters for the API request.
      * @throws ClientException
      *         These errors are usually caused by a client action. Actions can include using an action or resource on
-     *         behalf of a user that doesn't have permissions to use the action or resource or specifying an identifier
+     *         behalf of an <a
+     *         href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html">IAM
+     *         principal</a> that doesn't have permissions to use the action or resource or specifying an identifier
      *         that is not valid.
      * @throws ServerException
      *         These errors are usually caused by a server-side issue.
@@ -440,7 +514,9 @@ public interface AmazonEKS {
      *         The specified parameter is invalid. Review the available parameters for the API request.
      * @throws ClientException
      *         These errors are usually caused by a client action. Actions can include using an action or resource on
-     *         behalf of a user that doesn't have permissions to use the action or resource or specifying an identifier
+     *         behalf of an <a
+     *         href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html">IAM
+     *         principal</a> that doesn't have permissions to use the action or resource or specifying an identifier
      *         that is not valid.
      * @throws ServerException
      *         These errors are usually caused by a server-side issue.
@@ -467,17 +543,21 @@ public interface AmazonEKS {
      *         groups are Region-specific.
      * @throws ClientException
      *         These errors are usually caused by a client action. Actions can include using an action or resource on
-     *         behalf of a user that doesn't have permissions to use the action or resource or specifying an identifier
+     *         behalf of an <a
+     *         href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html">IAM
+     *         principal</a> that doesn't have permissions to use the action or resource or specifying an identifier
      *         that is not valid.
      * @throws ServerException
      *         These errors are usually caused by a server-side issue.
      * @throws ServiceUnavailableException
      *         The service is unavailable. Back off and retry the operation.
      * @throws AccessDeniedException
-     *         You don't have permissions to perform the requested operation. The user or role that is making the
-     *         request must have at least one IAM permissions policy attached that grants the required permissions. For
-     *         more information, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access.html">Access
-     *         Management</a> in the <i>IAM User Guide</i>.
+     *         You don't have permissions to perform the requested operation. The <a
+     *         href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html">IAM
+     *         principal</a> making the request must have at least one IAM permissions policy attached that grants the
+     *         required permissions. For more information, see <a
+     *         href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access.html">Access management</a> in the <i>IAM
+     *         User Guide</i>.
      * @sample AmazonEKS.DeregisterCluster
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/eks-2017-11-01/DeregisterCluster" target="_top">AWS API
      *      Documentation</a>
@@ -502,7 +582,9 @@ public interface AmazonEKS {
      *         groups are Region-specific.
      * @throws ClientException
      *         These errors are usually caused by a client action. Actions can include using an action or resource on
-     *         behalf of a user that doesn't have permissions to use the action or resource or specifying an identifier
+     *         behalf of an <a
+     *         href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html">IAM
+     *         principal</a> that doesn't have permissions to use the action or resource or specifying an identifier
      *         that is not valid.
      * @throws ServerException
      *         These errors are usually caused by a server-side issue.
@@ -580,7 +662,9 @@ public interface AmazonEKS {
      *         groups are Region-specific.
      * @throws ClientException
      *         These errors are usually caused by a client action. Actions can include using an action or resource on
-     *         behalf of a user that doesn't have permissions to use the action or resource or specifying an identifier
+     *         behalf of an <a
+     *         href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html">IAM
+     *         principal</a> that doesn't have permissions to use the action or resource or specifying an identifier
      *         that is not valid.
      * @throws ServerException
      *         These errors are usually caused by a server-side issue.
@@ -594,6 +678,33 @@ public interface AmazonEKS {
 
     /**
      * <p>
+     * Returns descriptive information about a subscription.
+     * </p>
+     * 
+     * @param describeEksAnywhereSubscriptionRequest
+     * @return Result of the DescribeEksAnywhereSubscription operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The specified resource could not be found. You can view your available clusters with <a>ListClusters</a>.
+     *         You can view your available managed node groups with <a>ListNodegroups</a>. Amazon EKS clusters and node
+     *         groups are Region-specific.
+     * @throws ClientException
+     *         These errors are usually caused by a client action. Actions can include using an action or resource on
+     *         behalf of an <a
+     *         href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html">IAM
+     *         principal</a> that doesn't have permissions to use the action or resource or specifying an identifier
+     *         that is not valid.
+     * @throws ServerException
+     *         These errors are usually caused by a server-side issue.
+     * @throws ServiceUnavailableException
+     *         The service is unavailable. Back off and retry the operation.
+     * @sample AmazonEKS.DescribeEksAnywhereSubscription
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/eks-2017-11-01/DescribeEksAnywhereSubscription"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DescribeEksAnywhereSubscriptionResult describeEksAnywhereSubscription(DescribeEksAnywhereSubscriptionRequest describeEksAnywhereSubscriptionRequest);
+
+    /**
+     * <p>
      * Returns descriptive information about an Fargate profile.
      * </p>
      * 
@@ -603,7 +714,9 @@ public interface AmazonEKS {
      *         The specified parameter is invalid. Review the available parameters for the API request.
      * @throws ClientException
      *         These errors are usually caused by a client action. Actions can include using an action or resource on
-     *         behalf of a user that doesn't have permissions to use the action or resource or specifying an identifier
+     *         behalf of an <a
+     *         href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html">IAM
+     *         principal</a> that doesn't have permissions to use the action or resource or specifying an identifier
      *         that is not valid.
      * @throws ServerException
      *         These errors are usually caused by a server-side issue.
@@ -632,7 +745,9 @@ public interface AmazonEKS {
      *         groups are Region-specific.
      * @throws ClientException
      *         These errors are usually caused by a client action. Actions can include using an action or resource on
-     *         behalf of a user that doesn't have permissions to use the action or resource or specifying an identifier
+     *         behalf of an <a
+     *         href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html">IAM
+     *         principal</a> that doesn't have permissions to use the action or resource or specifying an identifier
      *         that is not valid.
      * @throws ServerException
      *         These errors are usually caused by a server-side issue.
@@ -659,7 +774,9 @@ public interface AmazonEKS {
      *         groups are Region-specific.
      * @throws ClientException
      *         These errors are usually caused by a client action. Actions can include using an action or resource on
-     *         behalf of a user that doesn't have permissions to use the action or resource or specifying an identifier
+     *         behalf of an <a
+     *         href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html">IAM
+     *         principal</a> that doesn't have permissions to use the action or resource or specifying an identifier
      *         that is not valid.
      * @throws ServerException
      *         These errors are usually caused by a server-side issue.
@@ -687,7 +804,9 @@ public interface AmazonEKS {
      *         The specified parameter is invalid. Review the available parameters for the API request.
      * @throws ClientException
      *         These errors are usually caused by a client action. Actions can include using an action or resource on
-     *         behalf of a user that doesn't have permissions to use the action or resource or specifying an identifier
+     *         behalf of an <a
+     *         href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html">IAM
+     *         principal</a> that doesn't have permissions to use the action or resource or specifying an identifier
      *         that is not valid.
      * @throws ServerException
      *         These errors are usually caused by a server-side issue.
@@ -705,7 +824,8 @@ public interface AmazonEKS {
      * <p>
      * Disassociates an identity provider configuration from a cluster. If you disassociate an identity provider from
      * your cluster, users included in the provider can no longer access the cluster. However, you can still access the
-     * cluster with Amazon Web Services IAM users.
+     * cluster with <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html">IAM
+     * principals</a>.
      * </p>
      * 
      * @param disassociateIdentityProviderConfigRequest
@@ -714,7 +834,9 @@ public interface AmazonEKS {
      *         The specified parameter is invalid. Review the available parameters for the API request.
      * @throws ClientException
      *         These errors are usually caused by a client action. Actions can include using an action or resource on
-     *         behalf of a user that doesn't have permissions to use the action or resource or specifying an identifier
+     *         behalf of an <a
+     *         href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html">IAM
+     *         principal</a> that doesn't have permissions to use the action or resource or specifying an identifier
      *         that is not valid.
      * @throws ServerException
      *         These errors are usually caused by a server-side issue.
@@ -736,7 +858,7 @@ public interface AmazonEKS {
 
     /**
      * <p>
-     * Lists the available add-ons.
+     * Lists the installed add-ons.
      * </p>
      * 
      * @param listAddonsRequest
@@ -748,7 +870,9 @@ public interface AmazonEKS {
      *         operations.
      * @throws ClientException
      *         These errors are usually caused by a client action. Actions can include using an action or resource on
-     *         behalf of a user that doesn't have permissions to use the action or resource or specifying an identifier
+     *         behalf of an <a
+     *         href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html">IAM
+     *         principal</a> that doesn't have permissions to use the action or resource or specifying an identifier
      *         that is not valid.
      * @throws ResourceNotFoundException
      *         The specified resource could not be found. You can view your available clusters with <a>ListClusters</a>.
@@ -773,7 +897,9 @@ public interface AmazonEKS {
      *         The specified parameter is invalid. Review the available parameters for the API request.
      * @throws ClientException
      *         These errors are usually caused by a client action. Actions can include using an action or resource on
-     *         behalf of a user that doesn't have permissions to use the action or resource or specifying an identifier
+     *         behalf of an <a
+     *         href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html">IAM
+     *         principal</a> that doesn't have permissions to use the action or resource or specifying an identifier
      *         that is not valid.
      * @throws ServerException
      *         These errors are usually caused by a server-side issue.
@@ -784,6 +910,31 @@ public interface AmazonEKS {
      *      Documentation</a>
      */
     ListClustersResult listClusters(ListClustersRequest listClustersRequest);
+
+    /**
+     * <p>
+     * Displays the full description of the subscription.
+     * </p>
+     * 
+     * @param listEksAnywhereSubscriptionsRequest
+     * @return Result of the ListEksAnywhereSubscriptions operation returned by the service.
+     * @throws InvalidParameterException
+     *         The specified parameter is invalid. Review the available parameters for the API request.
+     * @throws ClientException
+     *         These errors are usually caused by a client action. Actions can include using an action or resource on
+     *         behalf of an <a
+     *         href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html">IAM
+     *         principal</a> that doesn't have permissions to use the action or resource or specifying an identifier
+     *         that is not valid.
+     * @throws ServerException
+     *         These errors are usually caused by a server-side issue.
+     * @throws ServiceUnavailableException
+     *         The service is unavailable. Back off and retry the operation.
+     * @sample AmazonEKS.ListEksAnywhereSubscriptions
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/eks-2017-11-01/ListEksAnywhereSubscriptions"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListEksAnywhereSubscriptionsResult listEksAnywhereSubscriptions(ListEksAnywhereSubscriptionsRequest listEksAnywhereSubscriptionsRequest);
 
     /**
      * <p>
@@ -801,7 +952,9 @@ public interface AmazonEKS {
      *         groups are Region-specific.
      * @throws ClientException
      *         These errors are usually caused by a client action. Actions can include using an action or resource on
-     *         behalf of a user that doesn't have permissions to use the action or resource or specifying an identifier
+     *         behalf of an <a
+     *         href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html">IAM
+     *         principal</a> that doesn't have permissions to use the action or resource or specifying an identifier
      *         that is not valid.
      * @throws ServerException
      *         These errors are usually caused by a server-side issue.
@@ -822,7 +975,9 @@ public interface AmazonEKS {
      *         The specified parameter is invalid. Review the available parameters for the API request.
      * @throws ClientException
      *         These errors are usually caused by a client action. Actions can include using an action or resource on
-     *         behalf of a user that doesn't have permissions to use the action or resource or specifying an identifier
+     *         behalf of an <a
+     *         href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html">IAM
+     *         principal</a> that doesn't have permissions to use the action or resource or specifying an identifier
      *         that is not valid.
      * @throws ServerException
      *         These errors are usually caused by a server-side issue.
@@ -850,7 +1005,9 @@ public interface AmazonEKS {
      *         The specified parameter is invalid. Review the available parameters for the API request.
      * @throws ClientException
      *         These errors are usually caused by a client action. Actions can include using an action or resource on
-     *         behalf of a user that doesn't have permissions to use the action or resource or specifying an identifier
+     *         behalf of an <a
+     *         href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html">IAM
+     *         principal</a> that doesn't have permissions to use the action or resource or specifying an identifier
      *         that is not valid.
      * @throws ServerException
      *         These errors are usually caused by a server-side issue.
@@ -897,7 +1054,9 @@ public interface AmazonEKS {
      *         The specified parameter is invalid. Review the available parameters for the API request.
      * @throws ClientException
      *         These errors are usually caused by a client action. Actions can include using an action or resource on
-     *         behalf of a user that doesn't have permissions to use the action or resource or specifying an identifier
+     *         behalf of an <a
+     *         href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html">IAM
+     *         principal</a> that doesn't have permissions to use the action or resource or specifying an identifier
      *         that is not valid.
      * @throws ServerException
      *         These errors are usually caused by a server-side issue.
@@ -943,17 +1102,21 @@ public interface AmazonEKS {
      *         The specified parameter is invalid. Review the available parameters for the API request.
      * @throws ClientException
      *         These errors are usually caused by a client action. Actions can include using an action or resource on
-     *         behalf of a user that doesn't have permissions to use the action or resource or specifying an identifier
+     *         behalf of an <a
+     *         href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html">IAM
+     *         principal</a> that doesn't have permissions to use the action or resource or specifying an identifier
      *         that is not valid.
      * @throws ServerException
      *         These errors are usually caused by a server-side issue.
      * @throws ServiceUnavailableException
      *         The service is unavailable. Back off and retry the operation.
      * @throws AccessDeniedException
-     *         You don't have permissions to perform the requested operation. The user or role that is making the
-     *         request must have at least one IAM permissions policy attached that grants the required permissions. For
-     *         more information, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access.html">Access
-     *         Management</a> in the <i>IAM User Guide</i>.
+     *         You don't have permissions to perform the requested operation. The <a
+     *         href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html">IAM
+     *         principal</a> making the request must have at least one IAM permissions policy attached that grants the
+     *         required permissions. For more information, see <a
+     *         href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access.html">Access management</a> in the <i>IAM
+     *         User Guide</i>.
      * @throws ResourceInUseException
      *         The specified resource is in use.
      * @throws ResourcePropagationDelayException
@@ -1026,7 +1189,9 @@ public interface AmazonEKS {
      *         The specified resource is in use.
      * @throws ClientException
      *         These errors are usually caused by a client action. Actions can include using an action or resource on
-     *         behalf of a user that doesn't have permissions to use the action or resource or specifying an identifier
+     *         behalf of an <a
+     *         href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html">IAM
+     *         principal</a> that doesn't have permissions to use the action or resource or specifying an identifier
      *         that is not valid.
      * @throws ServerException
      *         These errors are usually caused by a server-side issue.
@@ -1078,7 +1243,9 @@ public interface AmazonEKS {
      *         The specified parameter is invalid. Review the available parameters for the API request.
      * @throws ClientException
      *         These errors are usually caused by a client action. Actions can include using an action or resource on
-     *         behalf of a user that doesn't have permissions to use the action or resource or specifying an identifier
+     *         behalf of an <a
+     *         href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html">IAM
+     *         principal</a> that doesn't have permissions to use the action or resource or specifying an identifier
      *         that is not valid.
      * @throws ServerException
      *         These errors are usually caused by a server-side issue.
@@ -1120,7 +1287,9 @@ public interface AmazonEKS {
      *         The specified parameter is invalid. Review the available parameters for the API request.
      * @throws ClientException
      *         These errors are usually caused by a client action. Actions can include using an action or resource on
-     *         behalf of a user that doesn't have permissions to use the action or resource or specifying an identifier
+     *         behalf of an <a
+     *         href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html">IAM
+     *         principal</a> that doesn't have permissions to use the action or resource or specifying an identifier
      *         that is not valid.
      * @throws ServerException
      *         These errors are usually caused by a server-side issue.
@@ -1141,6 +1310,36 @@ public interface AmazonEKS {
 
     /**
      * <p>
+     * Update an EKS Anywhere Subscription. Only auto renewal and tags can be updated after subscription creation.
+     * </p>
+     * 
+     * @param updateEksAnywhereSubscriptionRequest
+     * @return Result of the UpdateEksAnywhereSubscription operation returned by the service.
+     * @throws InvalidParameterException
+     *         The specified parameter is invalid. Review the available parameters for the API request.
+     * @throws ClientException
+     *         These errors are usually caused by a client action. Actions can include using an action or resource on
+     *         behalf of an <a
+     *         href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html">IAM
+     *         principal</a> that doesn't have permissions to use the action or resource or specifying an identifier
+     *         that is not valid.
+     * @throws ServerException
+     *         These errors are usually caused by a server-side issue.
+     * @throws ResourceNotFoundException
+     *         The specified resource could not be found. You can view your available clusters with <a>ListClusters</a>.
+     *         You can view your available managed node groups with <a>ListNodegroups</a>. Amazon EKS clusters and node
+     *         groups are Region-specific.
+     * @throws InvalidRequestException
+     *         The request is invalid given the state of the cluster. Check the state of the cluster and the associated
+     *         operations.
+     * @sample AmazonEKS.UpdateEksAnywhereSubscription
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/eks-2017-11-01/UpdateEksAnywhereSubscription"
+     *      target="_top">AWS API Documentation</a>
+     */
+    UpdateEksAnywhereSubscriptionResult updateEksAnywhereSubscription(UpdateEksAnywhereSubscriptionRequest updateEksAnywhereSubscriptionRequest);
+
+    /**
+     * <p>
      * Updates an Amazon EKS managed node group configuration. Your node group continues to function during the update.
      * The response output includes an update ID that you can use to track the status of your node group update with the
      * <a>DescribeUpdate</a> API operation. Currently you can update the Kubernetes labels for a node group or the
@@ -1153,7 +1352,9 @@ public interface AmazonEKS {
      *         The specified parameter is invalid. Review the available parameters for the API request.
      * @throws ClientException
      *         These errors are usually caused by a client action. Actions can include using an action or resource on
-     *         behalf of a user that doesn't have permissions to use the action or resource or specifying an identifier
+     *         behalf of an <a
+     *         href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html">IAM
+     *         principal</a> that doesn't have permissions to use the action or resource or specifying an identifier
      *         that is not valid.
      * @throws ServerException
      *         These errors are usually caused by a server-side issue.
@@ -1208,7 +1409,9 @@ public interface AmazonEKS {
      *         The specified parameter is invalid. Review the available parameters for the API request.
      * @throws ClientException
      *         These errors are usually caused by a client action. Actions can include using an action or resource on
-     *         behalf of a user that doesn't have permissions to use the action or resource or specifying an identifier
+     *         behalf of an <a
+     *         href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html">IAM
+     *         principal</a> that doesn't have permissions to use the action or resource or specifying an identifier
      *         that is not valid.
      * @throws ServerException
      *         These errors are usually caused by a server-side issue.

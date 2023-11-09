@@ -20,7 +20,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 /**
  * <p>
  * Provide the location for output data from a custom classifier job. This field is mandatory if you are training a
- * native classifier model.
+ * native document model.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/comprehend-2017-11-27/DocumentClassifierOutputDataConfig"

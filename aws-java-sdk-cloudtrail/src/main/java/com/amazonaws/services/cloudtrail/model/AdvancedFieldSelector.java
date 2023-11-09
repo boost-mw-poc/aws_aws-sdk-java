@@ -54,8 +54,9 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * <li>
      * <p>
-     * <b> <code>eventSource</code> </b> - For filtering management events only. This can be set only to
-     * <code>NotEquals</code> <code>kms.amazonaws.com</code>.
+     * <b> <code>eventSource</code> </b> - For filtering management events only. This can be set to
+     * <code>NotEquals</code> <code>kms.amazonaws.com</code> or <code>NotEquals</code>
+     * <code>rdsdata.amazonaws.com</code>.
      * </p>
      * </li>
      * <li>
@@ -73,6 +74,11 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * For CloudTrail event records, the value must be <code>Management</code> or <code>Data</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For CloudTrail Insights event records, the value must be <code>Insight</code>.
      * </p>
      * </li>
      * <li>
@@ -117,6 +123,11 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <code>AWS::CloudTrail::Channel</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::CodeWhisperer::Customization</code>
      * </p>
      * </li>
      * <li>
@@ -166,6 +177,11 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * <li>
      * <p>
+     * <code>AWS::KinesisVideo::Stream</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>AWS::ManagedBlockchain::Network</code>
      * </p>
      * </li>
@@ -181,12 +197,32 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * <li>
      * <p>
+     * <code>AWS::PCAConnectorAD::Connector</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::SageMaker::Endpoint</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>AWS::SageMaker::ExperimentTrialComponent</code>
      * </p>
      * </li>
      * <li>
      * <p>
      * <code>AWS::SageMaker::FeatureGroup</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::SNS::PlatformEndpoint</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::SNS::Topic</code>
      * </p>
      * </li>
      * <li>
@@ -207,6 +243,16 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <code>AWS::SSMMessages::ControlChannel</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::Timestream::Database</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::Timestream::Table</code>
      * </p>
      * </li>
      * <li>
@@ -275,6 +321,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <code>arn:&lt;partition&gt;:cloudtrail:&lt;region&gt;:&lt;account_ID&gt;:channel/&lt;channel_UUID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When resources.type equals <code>AWS::CodeWhisperer::Customization</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:codewhisperer:&lt;region&gt;:&lt;account_ID&gt;:customization/&lt;customization_ID&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -378,6 +435,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * </ul>
      * <p>
+     * When <code>resources.type</code> equals <code>AWS::KinesisVideo::Stream</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:kinesisvideo:&lt;region&gt;:&lt;account_ID&gt;:stream/&lt;stream_name/&lt;creation_time&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
      * When <code>resources.type</code> equals <code>AWS::ManagedBlockchain::Network</code>, and the operator is set to
      * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      * </p>
@@ -411,6 +479,28 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * </ul>
      * <p>
+     * When <code>resources.type</code> equals <code>AWS::PCAConnectorAD::Connector</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:pca-connector-ad:&lt;region&gt;:&lt;account_ID&gt;:connector/&lt;connector_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::SageMaker::Endpoint</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:sagemaker:&lt;region&gt;:&lt;account_ID&gt;:endpoint/&lt;endpoint_name&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
      * When <code>resources.type</code> equals <code>AWS::SageMaker::ExperimentTrialComponent</code>, and the operator
      * is set to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      * </p>
@@ -429,6 +519,28 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <code>arn:&lt;partition&gt;:sagemaker:&lt;region&gt;:&lt;account_ID&gt;:feature-group/&lt;feature_group_name&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::SNS::PlatformEndpoint</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:sns:&lt;region&gt;:&lt;account_ID&gt;:endpoint/&lt;endpoint_type&gt;/&lt;endpoint_name&gt;/&lt;endpoint_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::SNS::Topic</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:sns:&lt;region&gt;:&lt;account_ID&gt;:&lt;topic_name&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -480,6 +592,28 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <code>arn:&lt;partition&gt;:ssmmessages:&lt;region&gt;:&lt;account_ID&gt;:control-channel/&lt;channel_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::Timestream::Database</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:timestream:&lt;region&gt;:&lt;account_ID&gt;:database/&lt;database_name&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::Timestream::Table</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:timestream:&lt;region&gt;:&lt;account_ID&gt;:database/&lt;database_name&gt;/table/&lt;table_name&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -568,8 +702,9 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * <li>
      * <p>
-     * <b> <code>eventSource</code> </b> - For filtering management events only. This can be set only to
-     * <code>NotEquals</code> <code>kms.amazonaws.com</code>.
+     * <b> <code>eventSource</code> </b> - For filtering management events only. This can be set to
+     * <code>NotEquals</code> <code>kms.amazonaws.com</code> or <code>NotEquals</code>
+     * <code>rdsdata.amazonaws.com</code>.
      * </p>
      * </li>
      * <li>
@@ -587,6 +722,11 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * For CloudTrail event records, the value must be <code>Management</code> or <code>Data</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For CloudTrail Insights event records, the value must be <code>Insight</code>.
      * </p>
      * </li>
      * <li>
@@ -631,6 +771,11 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <code>AWS::CloudTrail::Channel</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::CodeWhisperer::Customization</code>
      * </p>
      * </li>
      * <li>
@@ -680,6 +825,11 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * <li>
      * <p>
+     * <code>AWS::KinesisVideo::Stream</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>AWS::ManagedBlockchain::Network</code>
      * </p>
      * </li>
@@ -695,12 +845,32 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * <li>
      * <p>
+     * <code>AWS::PCAConnectorAD::Connector</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::SageMaker::Endpoint</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>AWS::SageMaker::ExperimentTrialComponent</code>
      * </p>
      * </li>
      * <li>
      * <p>
      * <code>AWS::SageMaker::FeatureGroup</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::SNS::PlatformEndpoint</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::SNS::Topic</code>
      * </p>
      * </li>
      * <li>
@@ -721,6 +891,16 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <code>AWS::SSMMessages::ControlChannel</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::Timestream::Database</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::Timestream::Table</code>
      * </p>
      * </li>
      * <li>
@@ -789,6 +969,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <code>arn:&lt;partition&gt;:cloudtrail:&lt;region&gt;:&lt;account_ID&gt;:channel/&lt;channel_UUID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When resources.type equals <code>AWS::CodeWhisperer::Customization</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:codewhisperer:&lt;region&gt;:&lt;account_ID&gt;:customization/&lt;customization_ID&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -892,6 +1083,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * </ul>
      * <p>
+     * When <code>resources.type</code> equals <code>AWS::KinesisVideo::Stream</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:kinesisvideo:&lt;region&gt;:&lt;account_ID&gt;:stream/&lt;stream_name/&lt;creation_time&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
      * When <code>resources.type</code> equals <code>AWS::ManagedBlockchain::Network</code>, and the operator is set to
      * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      * </p>
@@ -925,6 +1127,28 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * </ul>
      * <p>
+     * When <code>resources.type</code> equals <code>AWS::PCAConnectorAD::Connector</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:pca-connector-ad:&lt;region&gt;:&lt;account_ID&gt;:connector/&lt;connector_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::SageMaker::Endpoint</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:sagemaker:&lt;region&gt;:&lt;account_ID&gt;:endpoint/&lt;endpoint_name&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
      * When <code>resources.type</code> equals <code>AWS::SageMaker::ExperimentTrialComponent</code>, and the operator
      * is set to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      * </p>
@@ -943,6 +1167,28 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <code>arn:&lt;partition&gt;:sagemaker:&lt;region&gt;:&lt;account_ID&gt;:feature-group/&lt;feature_group_name&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::SNS::PlatformEndpoint</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:sns:&lt;region&gt;:&lt;account_ID&gt;:endpoint/&lt;endpoint_type&gt;/&lt;endpoint_name&gt;/&lt;endpoint_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::SNS::Topic</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:sns:&lt;region&gt;:&lt;account_ID&gt;:&lt;topic_name&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -998,6 +1244,28 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * </ul>
      * <p>
+     * When <code>resources.type</code> equals <code>AWS::Timestream::Database</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:timestream:&lt;region&gt;:&lt;account_ID&gt;:database/&lt;database_name&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::Timestream::Table</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:timestream:&lt;region&gt;:&lt;account_ID&gt;:database/&lt;database_name&gt;/table/&lt;table_name&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
      * When resources.type equals <code>AWS::VerifiedPermissions::PolicyStore</code>, and the operator is set to
      * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      * </p>
@@ -1035,8 +1303,9 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        </li>
      *        <li>
      *        <p>
-     *        <b> <code>eventSource</code> </b> - For filtering management events only. This can be set only to
-     *        <code>NotEquals</code> <code>kms.amazonaws.com</code>.
+     *        <b> <code>eventSource</code> </b> - For filtering management events only. This can be set to
+     *        <code>NotEquals</code> <code>kms.amazonaws.com</code> or <code>NotEquals</code>
+     *        <code>rdsdata.amazonaws.com</code>.
      *        </p>
      *        </li>
      *        <li>
@@ -1054,6 +1323,11 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        <li>
      *        <p>
      *        For CloudTrail event records, the value must be <code>Management</code> or <code>Data</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        For CloudTrail Insights event records, the value must be <code>Insight</code>.
      *        </p>
      *        </li>
      *        <li>
@@ -1098,6 +1372,11 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        <li>
      *        <p>
      *        <code>AWS::CloudTrail::Channel</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::CodeWhisperer::Customization</code>
      *        </p>
      *        </li>
      *        <li>
@@ -1147,6 +1426,11 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        </li>
      *        <li>
      *        <p>
+     *        <code>AWS::KinesisVideo::Stream</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
      *        <code>AWS::ManagedBlockchain::Network</code>
      *        </p>
      *        </li>
@@ -1162,12 +1446,32 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        </li>
      *        <li>
      *        <p>
+     *        <code>AWS::PCAConnectorAD::Connector</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::SageMaker::Endpoint</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
      *        <code>AWS::SageMaker::ExperimentTrialComponent</code>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <code>AWS::SageMaker::FeatureGroup</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::SNS::PlatformEndpoint</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::SNS::Topic</code>
      *        </p>
      *        </li>
      *        <li>
@@ -1188,6 +1492,16 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        <li>
      *        <p>
      *        <code>AWS::SSMMessages::ControlChannel</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::Timestream::Database</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::Timestream::Table</code>
      *        </p>
      *        </li>
      *        <li>
@@ -1256,6 +1570,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        <li>
      *        <p>
      *        <code>arn:&lt;partition&gt;:cloudtrail:&lt;region&gt;:&lt;account_ID&gt;:channel/&lt;channel_UUID&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        When resources.type equals <code>AWS::CodeWhisperer::Customization</code>, and the operator is set to
+     *        <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:codewhisperer:&lt;region&gt;:&lt;account_ID&gt;:customization/&lt;customization_ID&gt;</code>
      *        </p>
      *        </li>
      *        </ul>
@@ -1359,6 +1684,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        </li>
      *        </ul>
      *        <p>
+     *        When <code>resources.type</code> equals <code>AWS::KinesisVideo::Stream</code>, and the operator is set to
+     *        <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:kinesisvideo:&lt;region&gt;:&lt;account_ID&gt;:stream/&lt;stream_name/&lt;creation_time&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
      *        When <code>resources.type</code> equals <code>AWS::ManagedBlockchain::Network</code>, and the operator is
      *        set to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      *        </p>
@@ -1392,6 +1728,28 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        </li>
      *        </ul>
      *        <p>
+     *        When <code>resources.type</code> equals <code>AWS::PCAConnectorAD::Connector</code>, and the operator is
+     *        set to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:pca-connector-ad:&lt;region&gt;:&lt;account_ID&gt;:connector/&lt;connector_ID&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        When <code>resources.type</code> equals <code>AWS::SageMaker::Endpoint</code>, and the operator is set to
+     *        <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:sagemaker:&lt;region&gt;:&lt;account_ID&gt;:endpoint/&lt;endpoint_name&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
      *        When <code>resources.type</code> equals <code>AWS::SageMaker::ExperimentTrialComponent</code>, and the
      *        operator is set to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      *        </p>
@@ -1410,6 +1768,28 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        <li>
      *        <p>
      *        <code>arn:&lt;partition&gt;:sagemaker:&lt;region&gt;:&lt;account_ID&gt;:feature-group/&lt;feature_group_name&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        When <code>resources.type</code> equals <code>AWS::SNS::PlatformEndpoint</code>, and the operator is set
+     *        to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:sns:&lt;region&gt;:&lt;account_ID&gt;:endpoint/&lt;endpoint_type&gt;/&lt;endpoint_name&gt;/&lt;endpoint_ID&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        When <code>resources.type</code> equals <code>AWS::SNS::Topic</code>, and the operator is set to
+     *        <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:sns:&lt;region&gt;:&lt;account_ID&gt;:&lt;topic_name&gt;</code>
      *        </p>
      *        </li>
      *        </ul>
@@ -1465,6 +1845,28 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        </li>
      *        </ul>
      *        <p>
+     *        When <code>resources.type</code> equals <code>AWS::Timestream::Database</code>, and the operator is set to
+     *        <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:timestream:&lt;region&gt;:&lt;account_ID&gt;:database/&lt;database_name&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        When <code>resources.type</code> equals <code>AWS::Timestream::Table</code>, and the operator is set to
+     *        <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:timestream:&lt;region&gt;:&lt;account_ID&gt;:database/&lt;database_name&gt;/table/&lt;table_name&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
      *        When resources.type equals <code>AWS::VerifiedPermissions::PolicyStore</code>, and the operator is set to
      *        <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      *        </p>
@@ -1508,8 +1910,9 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * <li>
      * <p>
-     * <b> <code>eventSource</code> </b> - For filtering management events only. This can be set only to
-     * <code>NotEquals</code> <code>kms.amazonaws.com</code>.
+     * <b> <code>eventSource</code> </b> - For filtering management events only. This can be set to
+     * <code>NotEquals</code> <code>kms.amazonaws.com</code> or <code>NotEquals</code>
+     * <code>rdsdata.amazonaws.com</code>.
      * </p>
      * </li>
      * <li>
@@ -1527,6 +1930,11 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * For CloudTrail event records, the value must be <code>Management</code> or <code>Data</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For CloudTrail Insights event records, the value must be <code>Insight</code>.
      * </p>
      * </li>
      * <li>
@@ -1571,6 +1979,11 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <code>AWS::CloudTrail::Channel</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::CodeWhisperer::Customization</code>
      * </p>
      * </li>
      * <li>
@@ -1620,6 +2033,11 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * <li>
      * <p>
+     * <code>AWS::KinesisVideo::Stream</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>AWS::ManagedBlockchain::Network</code>
      * </p>
      * </li>
@@ -1635,12 +2053,32 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * <li>
      * <p>
+     * <code>AWS::PCAConnectorAD::Connector</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::SageMaker::Endpoint</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>AWS::SageMaker::ExperimentTrialComponent</code>
      * </p>
      * </li>
      * <li>
      * <p>
      * <code>AWS::SageMaker::FeatureGroup</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::SNS::PlatformEndpoint</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::SNS::Topic</code>
      * </p>
      * </li>
      * <li>
@@ -1661,6 +2099,16 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <code>AWS::SSMMessages::ControlChannel</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::Timestream::Database</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::Timestream::Table</code>
      * </p>
      * </li>
      * <li>
@@ -1729,6 +2177,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <code>arn:&lt;partition&gt;:cloudtrail:&lt;region&gt;:&lt;account_ID&gt;:channel/&lt;channel_UUID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When resources.type equals <code>AWS::CodeWhisperer::Customization</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:codewhisperer:&lt;region&gt;:&lt;account_ID&gt;:customization/&lt;customization_ID&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -1832,6 +2291,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * </ul>
      * <p>
+     * When <code>resources.type</code> equals <code>AWS::KinesisVideo::Stream</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:kinesisvideo:&lt;region&gt;:&lt;account_ID&gt;:stream/&lt;stream_name/&lt;creation_time&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
      * When <code>resources.type</code> equals <code>AWS::ManagedBlockchain::Network</code>, and the operator is set to
      * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      * </p>
@@ -1865,6 +2335,28 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * </ul>
      * <p>
+     * When <code>resources.type</code> equals <code>AWS::PCAConnectorAD::Connector</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:pca-connector-ad:&lt;region&gt;:&lt;account_ID&gt;:connector/&lt;connector_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::SageMaker::Endpoint</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:sagemaker:&lt;region&gt;:&lt;account_ID&gt;:endpoint/&lt;endpoint_name&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
      * When <code>resources.type</code> equals <code>AWS::SageMaker::ExperimentTrialComponent</code>, and the operator
      * is set to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      * </p>
@@ -1883,6 +2375,28 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <code>arn:&lt;partition&gt;:sagemaker:&lt;region&gt;:&lt;account_ID&gt;:feature-group/&lt;feature_group_name&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::SNS::PlatformEndpoint</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:sns:&lt;region&gt;:&lt;account_ID&gt;:endpoint/&lt;endpoint_type&gt;/&lt;endpoint_name&gt;/&lt;endpoint_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::SNS::Topic</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:sns:&lt;region&gt;:&lt;account_ID&gt;:&lt;topic_name&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -1938,6 +2452,28 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * </ul>
      * <p>
+     * When <code>resources.type</code> equals <code>AWS::Timestream::Database</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:timestream:&lt;region&gt;:&lt;account_ID&gt;:database/&lt;database_name&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::Timestream::Table</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:timestream:&lt;region&gt;:&lt;account_ID&gt;:database/&lt;database_name&gt;/table/&lt;table_name&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
      * When resources.type equals <code>AWS::VerifiedPermissions::PolicyStore</code>, and the operator is set to
      * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      * </p>
@@ -1974,8 +2510,9 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *         </li>
      *         <li>
      *         <p>
-     *         <b> <code>eventSource</code> </b> - For filtering management events only. This can be set only to
-     *         <code>NotEquals</code> <code>kms.amazonaws.com</code>.
+     *         <b> <code>eventSource</code> </b> - For filtering management events only. This can be set to
+     *         <code>NotEquals</code> <code>kms.amazonaws.com</code> or <code>NotEquals</code>
+     *         <code>rdsdata.amazonaws.com</code>.
      *         </p>
      *         </li>
      *         <li>
@@ -1993,6 +2530,11 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *         <li>
      *         <p>
      *         For CloudTrail event records, the value must be <code>Management</code> or <code>Data</code>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         For CloudTrail Insights event records, the value must be <code>Insight</code>.
      *         </p>
      *         </li>
      *         <li>
@@ -2037,6 +2579,11 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *         <li>
      *         <p>
      *         <code>AWS::CloudTrail::Channel</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>AWS::CodeWhisperer::Customization</code>
      *         </p>
      *         </li>
      *         <li>
@@ -2086,6 +2633,11 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *         </li>
      *         <li>
      *         <p>
+     *         <code>AWS::KinesisVideo::Stream</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
      *         <code>AWS::ManagedBlockchain::Network</code>
      *         </p>
      *         </li>
@@ -2101,12 +2653,32 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *         </li>
      *         <li>
      *         <p>
+     *         <code>AWS::PCAConnectorAD::Connector</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>AWS::SageMaker::Endpoint</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
      *         <code>AWS::SageMaker::ExperimentTrialComponent</code>
      *         </p>
      *         </li>
      *         <li>
      *         <p>
      *         <code>AWS::SageMaker::FeatureGroup</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>AWS::SNS::PlatformEndpoint</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>AWS::SNS::Topic</code>
      *         </p>
      *         </li>
      *         <li>
@@ -2127,6 +2699,16 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *         <li>
      *         <p>
      *         <code>AWS::SSMMessages::ControlChannel</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>AWS::Timestream::Database</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>AWS::Timestream::Table</code>
      *         </p>
      *         </li>
      *         <li>
@@ -2195,6 +2777,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *         <li>
      *         <p>
      *         <code>arn:&lt;partition&gt;:cloudtrail:&lt;region&gt;:&lt;account_ID&gt;:channel/&lt;channel_UUID&gt;</code>
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         When resources.type equals <code>AWS::CodeWhisperer::Customization</code>, and the operator is set to
+     *         <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>arn:&lt;partition&gt;:codewhisperer:&lt;region&gt;:&lt;account_ID&gt;:customization/&lt;customization_ID&gt;</code>
      *         </p>
      *         </li>
      *         </ul>
@@ -2298,6 +2891,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *         </li>
      *         </ul>
      *         <p>
+     *         When <code>resources.type</code> equals <code>AWS::KinesisVideo::Stream</code>, and the operator is set
+     *         to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>arn:&lt;partition&gt;:kinesisvideo:&lt;region&gt;:&lt;account_ID&gt;:stream/&lt;stream_name/&lt;creation_time&gt;</code>
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
      *         When <code>resources.type</code> equals <code>AWS::ManagedBlockchain::Network</code>, and the operator is
      *         set to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      *         </p>
@@ -2331,6 +2935,28 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *         </li>
      *         </ul>
      *         <p>
+     *         When <code>resources.type</code> equals <code>AWS::PCAConnectorAD::Connector</code>, and the operator is
+     *         set to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>arn:&lt;partition&gt;:pca-connector-ad:&lt;region&gt;:&lt;account_ID&gt;:connector/&lt;connector_ID&gt;</code>
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         When <code>resources.type</code> equals <code>AWS::SageMaker::Endpoint</code>, and the operator is set to
+     *         <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>arn:&lt;partition&gt;:sagemaker:&lt;region&gt;:&lt;account_ID&gt;:endpoint/&lt;endpoint_name&gt;</code>
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
      *         When <code>resources.type</code> equals <code>AWS::SageMaker::ExperimentTrialComponent</code>, and the
      *         operator is set to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following
      *         format:
@@ -2350,6 +2976,28 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *         <li>
      *         <p>
      *         <code>arn:&lt;partition&gt;:sagemaker:&lt;region&gt;:&lt;account_ID&gt;:feature-group/&lt;feature_group_name&gt;</code>
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         When <code>resources.type</code> equals <code>AWS::SNS::PlatformEndpoint</code>, and the operator is set
+     *         to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>arn:&lt;partition&gt;:sns:&lt;region&gt;:&lt;account_ID&gt;:endpoint/&lt;endpoint_type&gt;/&lt;endpoint_name&gt;/&lt;endpoint_ID&gt;</code>
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         When <code>resources.type</code> equals <code>AWS::SNS::Topic</code>, and the operator is set to
+     *         <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>arn:&lt;partition&gt;:sns:&lt;region&gt;:&lt;account_ID&gt;:&lt;topic_name&gt;</code>
      *         </p>
      *         </li>
      *         </ul>
@@ -2405,6 +3053,28 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *         </li>
      *         </ul>
      *         <p>
+     *         When <code>resources.type</code> equals <code>AWS::Timestream::Database</code>, and the operator is set
+     *         to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>arn:&lt;partition&gt;:timestream:&lt;region&gt;:&lt;account_ID&gt;:database/&lt;database_name&gt;</code>
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         When <code>resources.type</code> equals <code>AWS::Timestream::Table</code>, and the operator is set to
+     *         <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>arn:&lt;partition&gt;:timestream:&lt;region&gt;:&lt;account_ID&gt;:database/&lt;database_name&gt;/table/&lt;table_name&gt;</code>
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
      *         When resources.type equals <code>AWS::VerifiedPermissions::PolicyStore</code>, and the operator is set to
      *         <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      *         </p>
@@ -2448,8 +3118,9 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * <li>
      * <p>
-     * <b> <code>eventSource</code> </b> - For filtering management events only. This can be set only to
-     * <code>NotEquals</code> <code>kms.amazonaws.com</code>.
+     * <b> <code>eventSource</code> </b> - For filtering management events only. This can be set to
+     * <code>NotEquals</code> <code>kms.amazonaws.com</code> or <code>NotEquals</code>
+     * <code>rdsdata.amazonaws.com</code>.
      * </p>
      * </li>
      * <li>
@@ -2467,6 +3138,11 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * For CloudTrail event records, the value must be <code>Management</code> or <code>Data</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For CloudTrail Insights event records, the value must be <code>Insight</code>.
      * </p>
      * </li>
      * <li>
@@ -2511,6 +3187,11 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <code>AWS::CloudTrail::Channel</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::CodeWhisperer::Customization</code>
      * </p>
      * </li>
      * <li>
@@ -2560,6 +3241,11 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * <li>
      * <p>
+     * <code>AWS::KinesisVideo::Stream</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>AWS::ManagedBlockchain::Network</code>
      * </p>
      * </li>
@@ -2575,12 +3261,32 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * <li>
      * <p>
+     * <code>AWS::PCAConnectorAD::Connector</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::SageMaker::Endpoint</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>AWS::SageMaker::ExperimentTrialComponent</code>
      * </p>
      * </li>
      * <li>
      * <p>
      * <code>AWS::SageMaker::FeatureGroup</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::SNS::PlatformEndpoint</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::SNS::Topic</code>
      * </p>
      * </li>
      * <li>
@@ -2601,6 +3307,16 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <code>AWS::SSMMessages::ControlChannel</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::Timestream::Database</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::Timestream::Table</code>
      * </p>
      * </li>
      * <li>
@@ -2669,6 +3385,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <code>arn:&lt;partition&gt;:cloudtrail:&lt;region&gt;:&lt;account_ID&gt;:channel/&lt;channel_UUID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When resources.type equals <code>AWS::CodeWhisperer::Customization</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:codewhisperer:&lt;region&gt;:&lt;account_ID&gt;:customization/&lt;customization_ID&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -2772,6 +3499,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * </ul>
      * <p>
+     * When <code>resources.type</code> equals <code>AWS::KinesisVideo::Stream</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:kinesisvideo:&lt;region&gt;:&lt;account_ID&gt;:stream/&lt;stream_name/&lt;creation_time&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
      * When <code>resources.type</code> equals <code>AWS::ManagedBlockchain::Network</code>, and the operator is set to
      * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      * </p>
@@ -2805,6 +3543,28 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * </ul>
      * <p>
+     * When <code>resources.type</code> equals <code>AWS::PCAConnectorAD::Connector</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:pca-connector-ad:&lt;region&gt;:&lt;account_ID&gt;:connector/&lt;connector_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::SageMaker::Endpoint</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:sagemaker:&lt;region&gt;:&lt;account_ID&gt;:endpoint/&lt;endpoint_name&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
      * When <code>resources.type</code> equals <code>AWS::SageMaker::ExperimentTrialComponent</code>, and the operator
      * is set to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      * </p>
@@ -2823,6 +3583,28 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <code>arn:&lt;partition&gt;:sagemaker:&lt;region&gt;:&lt;account_ID&gt;:feature-group/&lt;feature_group_name&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::SNS::PlatformEndpoint</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:sns:&lt;region&gt;:&lt;account_ID&gt;:endpoint/&lt;endpoint_type&gt;/&lt;endpoint_name&gt;/&lt;endpoint_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::SNS::Topic</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:sns:&lt;region&gt;:&lt;account_ID&gt;:&lt;topic_name&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -2878,6 +3660,28 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * </ul>
      * <p>
+     * When <code>resources.type</code> equals <code>AWS::Timestream::Database</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:timestream:&lt;region&gt;:&lt;account_ID&gt;:database/&lt;database_name&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::Timestream::Table</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:timestream:&lt;region&gt;:&lt;account_ID&gt;:database/&lt;database_name&gt;/table/&lt;table_name&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
      * When resources.type equals <code>AWS::VerifiedPermissions::PolicyStore</code>, and the operator is set to
      * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      * </p>
@@ -2915,8 +3719,9 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        </li>
      *        <li>
      *        <p>
-     *        <b> <code>eventSource</code> </b> - For filtering management events only. This can be set only to
-     *        <code>NotEquals</code> <code>kms.amazonaws.com</code>.
+     *        <b> <code>eventSource</code> </b> - For filtering management events only. This can be set to
+     *        <code>NotEquals</code> <code>kms.amazonaws.com</code> or <code>NotEquals</code>
+     *        <code>rdsdata.amazonaws.com</code>.
      *        </p>
      *        </li>
      *        <li>
@@ -2934,6 +3739,11 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        <li>
      *        <p>
      *        For CloudTrail event records, the value must be <code>Management</code> or <code>Data</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        For CloudTrail Insights event records, the value must be <code>Insight</code>.
      *        </p>
      *        </li>
      *        <li>
@@ -2978,6 +3788,11 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        <li>
      *        <p>
      *        <code>AWS::CloudTrail::Channel</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::CodeWhisperer::Customization</code>
      *        </p>
      *        </li>
      *        <li>
@@ -3027,6 +3842,11 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        </li>
      *        <li>
      *        <p>
+     *        <code>AWS::KinesisVideo::Stream</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
      *        <code>AWS::ManagedBlockchain::Network</code>
      *        </p>
      *        </li>
@@ -3042,12 +3862,32 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        </li>
      *        <li>
      *        <p>
+     *        <code>AWS::PCAConnectorAD::Connector</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::SageMaker::Endpoint</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
      *        <code>AWS::SageMaker::ExperimentTrialComponent</code>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <code>AWS::SageMaker::FeatureGroup</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::SNS::PlatformEndpoint</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::SNS::Topic</code>
      *        </p>
      *        </li>
      *        <li>
@@ -3068,6 +3908,16 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        <li>
      *        <p>
      *        <code>AWS::SSMMessages::ControlChannel</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::Timestream::Database</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::Timestream::Table</code>
      *        </p>
      *        </li>
      *        <li>
@@ -3136,6 +3986,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        <li>
      *        <p>
      *        <code>arn:&lt;partition&gt;:cloudtrail:&lt;region&gt;:&lt;account_ID&gt;:channel/&lt;channel_UUID&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        When resources.type equals <code>AWS::CodeWhisperer::Customization</code>, and the operator is set to
+     *        <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:codewhisperer:&lt;region&gt;:&lt;account_ID&gt;:customization/&lt;customization_ID&gt;</code>
      *        </p>
      *        </li>
      *        </ul>
@@ -3239,6 +4100,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        </li>
      *        </ul>
      *        <p>
+     *        When <code>resources.type</code> equals <code>AWS::KinesisVideo::Stream</code>, and the operator is set to
+     *        <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:kinesisvideo:&lt;region&gt;:&lt;account_ID&gt;:stream/&lt;stream_name/&lt;creation_time&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
      *        When <code>resources.type</code> equals <code>AWS::ManagedBlockchain::Network</code>, and the operator is
      *        set to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      *        </p>
@@ -3272,6 +4144,28 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        </li>
      *        </ul>
      *        <p>
+     *        When <code>resources.type</code> equals <code>AWS::PCAConnectorAD::Connector</code>, and the operator is
+     *        set to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:pca-connector-ad:&lt;region&gt;:&lt;account_ID&gt;:connector/&lt;connector_ID&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        When <code>resources.type</code> equals <code>AWS::SageMaker::Endpoint</code>, and the operator is set to
+     *        <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:sagemaker:&lt;region&gt;:&lt;account_ID&gt;:endpoint/&lt;endpoint_name&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
      *        When <code>resources.type</code> equals <code>AWS::SageMaker::ExperimentTrialComponent</code>, and the
      *        operator is set to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      *        </p>
@@ -3290,6 +4184,28 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        <li>
      *        <p>
      *        <code>arn:&lt;partition&gt;:sagemaker:&lt;region&gt;:&lt;account_ID&gt;:feature-group/&lt;feature_group_name&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        When <code>resources.type</code> equals <code>AWS::SNS::PlatformEndpoint</code>, and the operator is set
+     *        to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:sns:&lt;region&gt;:&lt;account_ID&gt;:endpoint/&lt;endpoint_type&gt;/&lt;endpoint_name&gt;/&lt;endpoint_ID&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        When <code>resources.type</code> equals <code>AWS::SNS::Topic</code>, and the operator is set to
+     *        <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:sns:&lt;region&gt;:&lt;account_ID&gt;:&lt;topic_name&gt;</code>
      *        </p>
      *        </li>
      *        </ul>
@@ -3341,6 +4257,28 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        <li>
      *        <p>
      *        <code>arn:&lt;partition&gt;:ssmmessages:&lt;region&gt;:&lt;account_ID&gt;:control-channel/&lt;channel_ID&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        When <code>resources.type</code> equals <code>AWS::Timestream::Database</code>, and the operator is set to
+     *        <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:timestream:&lt;region&gt;:&lt;account_ID&gt;:database/&lt;database_name&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        When <code>resources.type</code> equals <code>AWS::Timestream::Table</code>, and the operator is set to
+     *        <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:timestream:&lt;region&gt;:&lt;account_ID&gt;:database/&lt;database_name&gt;/table/&lt;table_name&gt;</code>
      *        </p>
      *        </li>
      *        </ul>

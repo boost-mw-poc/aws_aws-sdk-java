@@ -37,6 +37,12 @@ public class InvalidRequestException extends com.amazonaws.services.eks.model.Am
     private String nodegroupName;
 
     private String addonName;
+    /**
+     * <p>
+     * The Amazon EKS subscription ID with the exception.
+     * </p>
+     */
+    private String subscriptionId;
 
     /**
      * Constructs a new InvalidRequestException with the specified error message.
@@ -157,6 +163,48 @@ public class InvalidRequestException extends com.amazonaws.services.eks.model.Am
 
     public InvalidRequestException withAddonName(String addonName) {
         setAddonName(addonName);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The Amazon EKS subscription ID with the exception.
+     * </p>
+     * 
+     * @param subscriptionId
+     *        The Amazon EKS subscription ID with the exception.
+     */
+
+    @com.fasterxml.jackson.annotation.JsonProperty("subscriptionId")
+    public void setSubscriptionId(String subscriptionId) {
+        this.subscriptionId = subscriptionId;
+    }
+
+    /**
+     * <p>
+     * The Amazon EKS subscription ID with the exception.
+     * </p>
+     * 
+     * @return The Amazon EKS subscription ID with the exception.
+     */
+
+    @com.fasterxml.jackson.annotation.JsonProperty("subscriptionId")
+    public String getSubscriptionId() {
+        return this.subscriptionId;
+    }
+
+    /**
+     * <p>
+     * The Amazon EKS subscription ID with the exception.
+     * </p>
+     * 
+     * @param subscriptionId
+     *        The Amazon EKS subscription ID with the exception.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public InvalidRequestException withSubscriptionId(String subscriptionId) {
+        setSubscriptionId(subscriptionId);
         return this;
     }
 

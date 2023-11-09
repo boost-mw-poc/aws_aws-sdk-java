@@ -133,6 +133,11 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
+     * <code>AWS::CodeWhisperer::Customization</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>AWS::CodeWhisperer::Profile</code>
      * </p>
      * </li>
@@ -178,6 +183,11 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
+     * <code>AWS::KinesisVideo::Stream</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>AWS::ManagedBlockchain::Network</code>
      * </p>
      * </li>
@@ -193,12 +203,32 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
+     * <code>AWS::PCAConnectorAD::Connector</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::SageMaker::Endpoint</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>AWS::SageMaker::ExperimentTrialComponent</code>
      * </p>
      * </li>
      * <li>
      * <p>
      * <code>AWS::SageMaker::FeatureGroup</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::SNS::PlatformEndpoint</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::SNS::Topic</code>
      * </p>
      * </li>
      * <li>
@@ -219,6 +249,16 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      * <li>
      * <p>
      * <code>AWS::SSMMessages::ControlChannel</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::Timestream::Database</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::Timestream::Table</code>
      * </p>
      * </li>
      * <li>
@@ -329,6 +369,11 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
+     * <code>AWS::CodeWhisperer::Customization</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>AWS::CodeWhisperer::Profile</code>
      * </p>
      * </li>
@@ -374,6 +419,11 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
+     * <code>AWS::KinesisVideo::Stream</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>AWS::ManagedBlockchain::Network</code>
      * </p>
      * </li>
@@ -389,12 +439,32 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
+     * <code>AWS::PCAConnectorAD::Connector</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::SageMaker::Endpoint</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>AWS::SageMaker::ExperimentTrialComponent</code>
      * </p>
      * </li>
      * <li>
      * <p>
      * <code>AWS::SageMaker::FeatureGroup</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::SNS::PlatformEndpoint</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::SNS::Topic</code>
      * </p>
      * </li>
      * <li>
@@ -415,6 +485,16 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      * <li>
      * <p>
      * <code>AWS::SSMMessages::ControlChannel</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::Timestream::Database</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::Timestream::Table</code>
      * </p>
      * </li>
      * <li>
@@ -455,6 +535,11 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      *        <li>
      *        <p>
      *        <code>AWS::CloudTrail::Channel</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::CodeWhisperer::Customization</code>
      *        </p>
      *        </li>
      *        <li>
@@ -504,6 +589,11 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
+     *        <code>AWS::KinesisVideo::Stream</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
      *        <code>AWS::ManagedBlockchain::Network</code>
      *        </p>
      *        </li>
@@ -519,12 +609,32 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
+     *        <code>AWS::PCAConnectorAD::Connector</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::SageMaker::Endpoint</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
      *        <code>AWS::SageMaker::ExperimentTrialComponent</code>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <code>AWS::SageMaker::FeatureGroup</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::SNS::PlatformEndpoint</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::SNS::Topic</code>
      *        </p>
      *        </li>
      *        <li>
@@ -545,6 +655,16 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      *        <li>
      *        <p>
      *        <code>AWS::SSMMessages::ControlChannel</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::Timestream::Database</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::Timestream::Table</code>
      *        </p>
      *        </li>
      *        <li>
@@ -595,6 +715,11 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
+     * <code>AWS::CodeWhisperer::Customization</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>AWS::CodeWhisperer::Profile</code>
      * </p>
      * </li>
@@ -640,6 +765,11 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
+     * <code>AWS::KinesisVideo::Stream</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>AWS::ManagedBlockchain::Network</code>
      * </p>
      * </li>
@@ -655,12 +785,32 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
+     * <code>AWS::PCAConnectorAD::Connector</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::SageMaker::Endpoint</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>AWS::SageMaker::ExperimentTrialComponent</code>
      * </p>
      * </li>
      * <li>
      * <p>
      * <code>AWS::SageMaker::FeatureGroup</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::SNS::PlatformEndpoint</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::SNS::Topic</code>
      * </p>
      * </li>
      * <li>
@@ -681,6 +831,16 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      * <li>
      * <p>
      * <code>AWS::SSMMessages::ControlChannel</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::Timestream::Database</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::Timestream::Table</code>
      * </p>
      * </li>
      * <li>
@@ -720,6 +880,11 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      *         <li>
      *         <p>
      *         <code>AWS::CloudTrail::Channel</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>AWS::CodeWhisperer::Customization</code>
      *         </p>
      *         </li>
      *         <li>
@@ -769,6 +934,11 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      *         </li>
      *         <li>
      *         <p>
+     *         <code>AWS::KinesisVideo::Stream</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
      *         <code>AWS::ManagedBlockchain::Network</code>
      *         </p>
      *         </li>
@@ -784,12 +954,32 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      *         </li>
      *         <li>
      *         <p>
+     *         <code>AWS::PCAConnectorAD::Connector</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>AWS::SageMaker::Endpoint</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
      *         <code>AWS::SageMaker::ExperimentTrialComponent</code>
      *         </p>
      *         </li>
      *         <li>
      *         <p>
      *         <code>AWS::SageMaker::FeatureGroup</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>AWS::SNS::PlatformEndpoint</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>AWS::SNS::Topic</code>
      *         </p>
      *         </li>
      *         <li>
@@ -810,6 +1000,16 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      *         <li>
      *         <p>
      *         <code>AWS::SSMMessages::ControlChannel</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>AWS::Timestream::Database</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>AWS::Timestream::Table</code>
      *         </p>
      *         </li>
      *         <li>
@@ -860,6 +1060,11 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
+     * <code>AWS::CodeWhisperer::Customization</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>AWS::CodeWhisperer::Profile</code>
      * </p>
      * </li>
@@ -905,6 +1110,11 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
+     * <code>AWS::KinesisVideo::Stream</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>AWS::ManagedBlockchain::Network</code>
      * </p>
      * </li>
@@ -920,12 +1130,32 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
+     * <code>AWS::PCAConnectorAD::Connector</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::SageMaker::Endpoint</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>AWS::SageMaker::ExperimentTrialComponent</code>
      * </p>
      * </li>
      * <li>
      * <p>
      * <code>AWS::SageMaker::FeatureGroup</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::SNS::PlatformEndpoint</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::SNS::Topic</code>
      * </p>
      * </li>
      * <li>
@@ -946,6 +1176,16 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      * <li>
      * <p>
      * <code>AWS::SSMMessages::ControlChannel</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::Timestream::Database</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::Timestream::Table</code>
      * </p>
      * </li>
      * <li>
@@ -986,6 +1226,11 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      *        <li>
      *        <p>
      *        <code>AWS::CloudTrail::Channel</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::CodeWhisperer::Customization</code>
      *        </p>
      *        </li>
      *        <li>
@@ -1035,6 +1280,11 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
+     *        <code>AWS::KinesisVideo::Stream</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
      *        <code>AWS::ManagedBlockchain::Network</code>
      *        </p>
      *        </li>
@@ -1050,12 +1300,32 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
+     *        <code>AWS::PCAConnectorAD::Connector</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::SageMaker::Endpoint</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
      *        <code>AWS::SageMaker::ExperimentTrialComponent</code>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <code>AWS::SageMaker::FeatureGroup</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::SNS::PlatformEndpoint</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::SNS::Topic</code>
      *        </p>
      *        </li>
      *        <li>
@@ -1076,6 +1346,16 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      *        <li>
      *        <p>
      *        <code>AWS::SSMMessages::ControlChannel</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::Timestream::Database</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::Timestream::Table</code>
      *        </p>
      *        </li>
      *        <li>

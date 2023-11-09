@@ -117,14 +117,26 @@ public class AWSLogsClient extends AmazonWebServiceClient implements AWSLogs {
                             new JsonErrorShapeMetadata().withErrorCode("InvalidOperationException").withExceptionUnmarshaller(
                                     com.amazonaws.services.logs.model.transform.InvalidOperationExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("ThrottlingException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.logs.model.transform.ThrottlingExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("ServiceQuotaExceededException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.logs.model.transform.ServiceQuotaExceededExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("OperationAbortedException").withExceptionUnmarshaller(
                                     com.amazonaws.services.logs.model.transform.OperationAbortedExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("LimitExceededException").withExceptionUnmarshaller(
                                     com.amazonaws.services.logs.model.transform.LimitExceededExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("AccessDeniedException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.logs.model.transform.AccessDeniedExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("UnrecognizedClientException").withExceptionUnmarshaller(
                                     com.amazonaws.services.logs.model.transform.UnrecognizedClientExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("ConflictException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.logs.model.transform.ConflictExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("TooManyTagsException").withExceptionUnmarshaller(
                                     com.amazonaws.services.logs.model.transform.TooManyTagsExceptionUnmarshaller.getInstance()))
@@ -140,6 +152,9 @@ public class AWSLogsClient extends AmazonWebServiceClient implements AWSLogs {
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("InvalidSequenceTokenException").withExceptionUnmarshaller(
                                     com.amazonaws.services.logs.model.transform.InvalidSequenceTokenExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("ValidationException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.logs.model.transform.ValidationExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ServiceUnavailableException").withExceptionUnmarshaller(
                                     com.amazonaws.services.logs.model.transform.ServiceUnavailableExceptionUnmarshaller.getInstance()))
@@ -528,6 +543,130 @@ public class AWSLogsClient extends AmazonWebServiceClient implements AWSLogs {
 
             HttpResponseHandler<AmazonWebServiceResponse<CancelExportTaskResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new CancelExportTaskResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Creates a <i>delivery</i>. A delivery is a connection between a logical <i>delivery source</i> and a logical
+     * <i>delivery destination</i> that you have already created.
+     * </p>
+     * <p>
+     * Only some Amazon Web Services services support being configured as a delivery source using this operation. These
+     * services are listed as <b>Supported [V2 Permissions]</b> in the table at <a href=
+     * "https://docs.aws.amazon.com/ AmazonCloudWatch/latest/logs/AWS-logs-and-resource-policy.html#AWS-vended-logs-permissions"
+     * >Enabling logging from Amazon Web Services services.</a>
+     * </p>
+     * <p>
+     * A delivery destination can represent a log group in CloudWatch Logs, an Amazon S3 bucket, or a delivery stream in
+     * Kinesis Data Firehose.
+     * </p>
+     * <p>
+     * To configure logs delivery between a supported Amazon Web Services service and a destination, you must do the
+     * following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Create a delivery source, which is a logical object that represents the resource that is actually sending the
+     * logs. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_PutDeliverySource.html"
+     * >PutDeliverySource</a>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Create a <i>delivery destination</i>, which is a logical object that represents the actual delivery destination.
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_PutDeliveryDestination.html"
+     * >PutDeliveryDestination</a>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you are delivering logs cross-account, you must use <a href=
+     * "https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_PutDeliveryDestinationolicy.html"
+     * >PutDeliveryDestinationPolicy</a> in the destination account to assign an IAM policy to the destination. This
+     * policy allows delivery to that destination.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Use <code>CreateDelivery</code> to create a <i>delivery</i> by pairing exactly one delivery source and one
+     * delivery destination.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * You can configure a single delivery source to send logs to multiple destinations by creating multiple deliveries.
+     * You can also create multiple deliveries to configure multiple delivery sources to send logs to the same delivery
+     * destination.
+     * </p>
+     * <p>
+     * You can't update an existing delivery. You can only create and delete deliveries.
+     * </p>
+     * 
+     * @param createDeliveryRequest
+     * @return Result of the CreateDelivery operation returned by the service.
+     * @throws ServiceUnavailableException
+     *         The service cannot complete the request.
+     * @throws ConflictException
+     *         This operation attempted to create a resource that already exists.
+     * @throws ResourceNotFoundException
+     *         The specified resource does not exist.
+     * @throws ValidationException
+     *         One of the parameters for the request is not valid.
+     * @throws AccessDeniedException
+     *         You don't have sufficient permissions to perform this action.
+     * @throws ServiceQuotaExceededException
+     *         This request exceeds a service quota.
+     * @throws ThrottlingException
+     *         The request was throttled because of quota limits.
+     * @sample AWSLogs.CreateDelivery
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/CreateDelivery" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public CreateDeliveryResult createDelivery(CreateDeliveryRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateDelivery(request);
+    }
+
+    @SdkInternalApi
+    final CreateDeliveryResult executeCreateDelivery(CreateDeliveryRequest createDeliveryRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createDeliveryRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateDeliveryRequest> request = null;
+        Response<CreateDeliveryResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateDeliveryRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(createDeliveryRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "CloudWatch Logs");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateDelivery");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<CreateDeliveryResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new CreateDeliveryResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -957,6 +1096,293 @@ public class AWSLogsClient extends AmazonWebServiceClient implements AWSLogs {
             HttpResponseHandler<AmazonWebServiceResponse<DeleteDataProtectionPolicyResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new DeleteDataProtectionPolicyResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Deletes s <i>delivery</i>. A delivery is a connection between a logical <i>delivery source</i> and a logical
+     * <i>delivery destination</i>. Deleting a delivery only deletes the connection between the delivery source and
+     * delivery destination. It does not delete the delivery destination or the delivery source.
+     * </p>
+     * 
+     * @param deleteDeliveryRequest
+     * @return Result of the DeleteDelivery operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The specified resource does not exist.
+     * @throws ServiceUnavailableException
+     *         The service cannot complete the request.
+     * @throws ConflictException
+     *         This operation attempted to create a resource that already exists.
+     * @throws ValidationException
+     *         One of the parameters for the request is not valid.
+     * @throws ServiceQuotaExceededException
+     *         This request exceeds a service quota.
+     * @throws ThrottlingException
+     *         The request was throttled because of quota limits.
+     * @sample AWSLogs.DeleteDelivery
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/DeleteDelivery" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public DeleteDeliveryResult deleteDelivery(DeleteDeliveryRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteDelivery(request);
+    }
+
+    @SdkInternalApi
+    final DeleteDeliveryResult executeDeleteDelivery(DeleteDeliveryRequest deleteDeliveryRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteDeliveryRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteDeliveryRequest> request = null;
+        Response<DeleteDeliveryResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteDeliveryRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(deleteDeliveryRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "CloudWatch Logs");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteDelivery");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeleteDeliveryResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DeleteDeliveryResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Deletes a <i>delivery destination</i>. A delivery is a connection between a logical <i>delivery source</i> and a
+     * logical <i>delivery destination</i>.
+     * </p>
+     * <p>
+     * You can't delete a delivery destination if any current deliveries are associated with it. To find whether any
+     * deliveries are associated with this delivery destination, use the <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_DescribeDeliveries.html"
+     * >DescribeDeliveries</a> operation and check the <code>deliveryDestinationArn</code> field in the results.
+     * </p>
+     * 
+     * @param deleteDeliveryDestinationRequest
+     * @return Result of the DeleteDeliveryDestination operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The specified resource does not exist.
+     * @throws ServiceUnavailableException
+     *         The service cannot complete the request.
+     * @throws ConflictException
+     *         This operation attempted to create a resource that already exists.
+     * @throws ValidationException
+     *         One of the parameters for the request is not valid.
+     * @throws ServiceQuotaExceededException
+     *         This request exceeds a service quota.
+     * @throws ThrottlingException
+     *         The request was throttled because of quota limits.
+     * @sample AWSLogs.DeleteDeliveryDestination
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/DeleteDeliveryDestination" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public DeleteDeliveryDestinationResult deleteDeliveryDestination(DeleteDeliveryDestinationRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteDeliveryDestination(request);
+    }
+
+    @SdkInternalApi
+    final DeleteDeliveryDestinationResult executeDeleteDeliveryDestination(DeleteDeliveryDestinationRequest deleteDeliveryDestinationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteDeliveryDestinationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteDeliveryDestinationRequest> request = null;
+        Response<DeleteDeliveryDestinationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteDeliveryDestinationRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(deleteDeliveryDestinationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "CloudWatch Logs");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteDeliveryDestination");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeleteDeliveryDestinationResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new DeleteDeliveryDestinationResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Deletes a delivery destination policy. For more information about these policies, see <a href=
+     * "https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_PutDeliveryDestinationPolicy.html"
+     * >PutDeliveryDestinationPolicy</a>.
+     * </p>
+     * 
+     * @param deleteDeliveryDestinationPolicyRequest
+     * @return Result of the DeleteDeliveryDestinationPolicy operation returned by the service.
+     * @throws ServiceUnavailableException
+     *         The service cannot complete the request.
+     * @throws ValidationException
+     *         One of the parameters for the request is not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource does not exist.
+     * @throws ConflictException
+     *         This operation attempted to create a resource that already exists.
+     * @sample AWSLogs.DeleteDeliveryDestinationPolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/DeleteDeliveryDestinationPolicy"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DeleteDeliveryDestinationPolicyResult deleteDeliveryDestinationPolicy(DeleteDeliveryDestinationPolicyRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteDeliveryDestinationPolicy(request);
+    }
+
+    @SdkInternalApi
+    final DeleteDeliveryDestinationPolicyResult executeDeleteDeliveryDestinationPolicy(
+            DeleteDeliveryDestinationPolicyRequest deleteDeliveryDestinationPolicyRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteDeliveryDestinationPolicyRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteDeliveryDestinationPolicyRequest> request = null;
+        Response<DeleteDeliveryDestinationPolicyResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteDeliveryDestinationPolicyRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(deleteDeliveryDestinationPolicyRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "CloudWatch Logs");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteDeliveryDestinationPolicy");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeleteDeliveryDestinationPolicyResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new DeleteDeliveryDestinationPolicyResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Deletes a <i>delivery source</i>. A delivery is a connection between a logical <i>delivery source</i> and a
+     * logical <i>delivery destination</i>.
+     * </p>
+     * <p>
+     * You can't delete a delivery source if any current deliveries are associated with it. To find whether any
+     * deliveries are associated with this delivery source, use the <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_DescribeDeliveries.html"
+     * >DescribeDeliveries</a> operation and check the <code>deliverySourceName</code> field in the results.
+     * </p>
+     * 
+     * @param deleteDeliverySourceRequest
+     * @return Result of the DeleteDeliverySource operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The specified resource does not exist.
+     * @throws ServiceUnavailableException
+     *         The service cannot complete the request.
+     * @throws ConflictException
+     *         This operation attempted to create a resource that already exists.
+     * @throws ValidationException
+     *         One of the parameters for the request is not valid.
+     * @throws ServiceQuotaExceededException
+     *         This request exceeds a service quota.
+     * @throws ThrottlingException
+     *         The request was throttled because of quota limits.
+     * @sample AWSLogs.DeleteDeliverySource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/DeleteDeliverySource" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public DeleteDeliverySourceResult deleteDeliverySource(DeleteDeliverySourceRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteDeliverySource(request);
+    }
+
+    @SdkInternalApi
+    final DeleteDeliverySourceResult executeDeleteDeliverySource(DeleteDeliverySourceRequest deleteDeliverySourceRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteDeliverySourceRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteDeliverySourceRequest> request = null;
+        Response<DeleteDeliverySourceResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteDeliverySourceRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(deleteDeliverySourceRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "CloudWatch Logs");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteDeliverySource");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeleteDeliverySourceResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DeleteDeliverySourceResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -1540,6 +1966,199 @@ public class AWSLogsClient extends AmazonWebServiceClient implements AWSLogs {
             HttpResponseHandler<AmazonWebServiceResponse<DescribeAccountPoliciesResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new DescribeAccountPoliciesResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Retrieves a list of the deliveries that have been created in the account.
+     * </p>
+     * 
+     * @param describeDeliveriesRequest
+     * @return Result of the DescribeDeliveries operation returned by the service.
+     * @throws ServiceUnavailableException
+     *         The service cannot complete the request.
+     * @throws ServiceQuotaExceededException
+     *         This request exceeds a service quota.
+     * @throws ValidationException
+     *         One of the parameters for the request is not valid.
+     * @throws ThrottlingException
+     *         The request was throttled because of quota limits.
+     * @sample AWSLogs.DescribeDeliveries
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/DescribeDeliveries" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public DescribeDeliveriesResult describeDeliveries(DescribeDeliveriesRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribeDeliveries(request);
+    }
+
+    @SdkInternalApi
+    final DescribeDeliveriesResult executeDescribeDeliveries(DescribeDeliveriesRequest describeDeliveriesRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describeDeliveriesRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeDeliveriesRequest> request = null;
+        Response<DescribeDeliveriesResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeDeliveriesRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(describeDeliveriesRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "CloudWatch Logs");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeDeliveries");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DescribeDeliveriesResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DescribeDeliveriesResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Retrieves a list of the delivery destinations that have been created in the account.
+     * </p>
+     * 
+     * @param describeDeliveryDestinationsRequest
+     * @return Result of the DescribeDeliveryDestinations operation returned by the service.
+     * @throws ServiceUnavailableException
+     *         The service cannot complete the request.
+     * @throws ServiceQuotaExceededException
+     *         This request exceeds a service quota.
+     * @throws ValidationException
+     *         One of the parameters for the request is not valid.
+     * @throws ThrottlingException
+     *         The request was throttled because of quota limits.
+     * @sample AWSLogs.DescribeDeliveryDestinations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/DescribeDeliveryDestinations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DescribeDeliveryDestinationsResult describeDeliveryDestinations(DescribeDeliveryDestinationsRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribeDeliveryDestinations(request);
+    }
+
+    @SdkInternalApi
+    final DescribeDeliveryDestinationsResult executeDescribeDeliveryDestinations(DescribeDeliveryDestinationsRequest describeDeliveryDestinationsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describeDeliveryDestinationsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeDeliveryDestinationsRequest> request = null;
+        Response<DescribeDeliveryDestinationsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeDeliveryDestinationsRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(describeDeliveryDestinationsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "CloudWatch Logs");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeDeliveryDestinations");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DescribeDeliveryDestinationsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new DescribeDeliveryDestinationsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Retrieves a list of the delivery sources that have been created in the account.
+     * </p>
+     * 
+     * @param describeDeliverySourcesRequest
+     * @return Result of the DescribeDeliverySources operation returned by the service.
+     * @throws ServiceUnavailableException
+     *         The service cannot complete the request.
+     * @throws ServiceQuotaExceededException
+     *         This request exceeds a service quota.
+     * @throws ValidationException
+     *         One of the parameters for the request is not valid.
+     * @throws ThrottlingException
+     *         The request was throttled because of quota limits.
+     * @sample AWSLogs.DescribeDeliverySources
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/DescribeDeliverySources" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public DescribeDeliverySourcesResult describeDeliverySources(DescribeDeliverySourcesRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribeDeliverySources(request);
+    }
+
+    @SdkInternalApi
+    final DescribeDeliverySourcesResult executeDescribeDeliverySources(DescribeDeliverySourcesRequest describeDeliverySourcesRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describeDeliverySourcesRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeDeliverySourcesRequest> request = null;
+        Response<DescribeDeliverySourcesResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeDeliverySourcesRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(describeDeliverySourcesRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "CloudWatch Logs");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeDeliverySources");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DescribeDeliverySourcesResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new DescribeDeliverySourcesResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -2387,6 +3006,275 @@ public class AWSLogsClient extends AmazonWebServiceClient implements AWSLogs {
 
     /**
      * <p>
+     * Returns complete information about one <i>delivery</i>. A delivery is a connection between a logical <i>delivery
+     * source</i> and a logical <i>delivery destination</i>
+     * </p>
+     * <p>
+     * You need to specify the delivery <code>id</code> in this operation. You can find the IDs of the deliveries in
+     * your account with the <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_DescribeDeliveries.html"
+     * >DescribeDeliveries</a> operation.
+     * </p>
+     * 
+     * @param getDeliveryRequest
+     * @return Result of the GetDelivery operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The specified resource does not exist.
+     * @throws ServiceUnavailableException
+     *         The service cannot complete the request.
+     * @throws ValidationException
+     *         One of the parameters for the request is not valid.
+     * @throws ServiceQuotaExceededException
+     *         This request exceeds a service quota.
+     * @throws ThrottlingException
+     *         The request was throttled because of quota limits.
+     * @sample AWSLogs.GetDelivery
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/GetDelivery" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public GetDeliveryResult getDelivery(GetDeliveryRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetDelivery(request);
+    }
+
+    @SdkInternalApi
+    final GetDeliveryResult executeGetDelivery(GetDeliveryRequest getDeliveryRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getDeliveryRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetDeliveryRequest> request = null;
+        Response<GetDeliveryResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetDeliveryRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getDeliveryRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "CloudWatch Logs");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetDelivery");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetDeliveryResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetDeliveryResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Retrieves complete information about one delivery destination.
+     * </p>
+     * 
+     * @param getDeliveryDestinationRequest
+     * @return Result of the GetDeliveryDestination operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The specified resource does not exist.
+     * @throws ServiceUnavailableException
+     *         The service cannot complete the request.
+     * @throws ValidationException
+     *         One of the parameters for the request is not valid.
+     * @throws ServiceQuotaExceededException
+     *         This request exceeds a service quota.
+     * @throws ThrottlingException
+     *         The request was throttled because of quota limits.
+     * @sample AWSLogs.GetDeliveryDestination
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/GetDeliveryDestination" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public GetDeliveryDestinationResult getDeliveryDestination(GetDeliveryDestinationRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetDeliveryDestination(request);
+    }
+
+    @SdkInternalApi
+    final GetDeliveryDestinationResult executeGetDeliveryDestination(GetDeliveryDestinationRequest getDeliveryDestinationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getDeliveryDestinationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetDeliveryDestinationRequest> request = null;
+        Response<GetDeliveryDestinationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetDeliveryDestinationRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getDeliveryDestinationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "CloudWatch Logs");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetDeliveryDestination");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetDeliveryDestinationResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new GetDeliveryDestinationResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Retrieves the delivery destination policy assigned to the delivery destination that you specify. For more
+     * information about delivery destinations and their policies, see <a href=
+     * "https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_PutDeliveryDestinationPolicy.html"
+     * >PutDeliveryDestinationPolicy</a>.
+     * </p>
+     * 
+     * @param getDeliveryDestinationPolicyRequest
+     * @return Result of the GetDeliveryDestinationPolicy operation returned by the service.
+     * @throws ServiceUnavailableException
+     *         The service cannot complete the request.
+     * @throws ValidationException
+     *         One of the parameters for the request is not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource does not exist.
+     * @sample AWSLogs.GetDeliveryDestinationPolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/GetDeliveryDestinationPolicy"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetDeliveryDestinationPolicyResult getDeliveryDestinationPolicy(GetDeliveryDestinationPolicyRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetDeliveryDestinationPolicy(request);
+    }
+
+    @SdkInternalApi
+    final GetDeliveryDestinationPolicyResult executeGetDeliveryDestinationPolicy(GetDeliveryDestinationPolicyRequest getDeliveryDestinationPolicyRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getDeliveryDestinationPolicyRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetDeliveryDestinationPolicyRequest> request = null;
+        Response<GetDeliveryDestinationPolicyResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetDeliveryDestinationPolicyRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(getDeliveryDestinationPolicyRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "CloudWatch Logs");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetDeliveryDestinationPolicy");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetDeliveryDestinationPolicyResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new GetDeliveryDestinationPolicyResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Retrieves complete information about one delivery source.
+     * </p>
+     * 
+     * @param getDeliverySourceRequest
+     * @return Result of the GetDeliverySource operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The specified resource does not exist.
+     * @throws ServiceUnavailableException
+     *         The service cannot complete the request.
+     * @throws ValidationException
+     *         One of the parameters for the request is not valid.
+     * @throws ServiceQuotaExceededException
+     *         This request exceeds a service quota.
+     * @throws ThrottlingException
+     *         The request was throttled because of quota limits.
+     * @sample AWSLogs.GetDeliverySource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/GetDeliverySource" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public GetDeliverySourceResult getDeliverySource(GetDeliverySourceRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetDeliverySource(request);
+    }
+
+    @SdkInternalApi
+    final GetDeliverySourceResult executeGetDeliverySource(GetDeliverySourceRequest getDeliverySourceRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getDeliverySourceRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetDeliverySourceRequest> request = null;
+        Response<GetDeliverySourceResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetDeliverySourceRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getDeliverySourceRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "CloudWatch Logs");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetDeliverySource");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetDeliverySourceResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetDeliverySourceResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Lists log events from the specified log stream. You can list all of the log events or filter using a time range.
      * </p>
      * <p>
@@ -2626,6 +3514,9 @@ public class AWSLogsClient extends AmazonWebServiceClient implements AWSLogs {
      * <p>
      * <code>GetQueryResults</code> does not start running a query. To run a query, use <a
      * href="https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_StartQuery.html">StartQuery</a>.
+     * For more information about how long results of previous queries are available, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/cloudwatch_limits_cwl.html">CloudWatch Logs
+     * quotas</a>.
      * </p>
      * <p>
      * If the value of the <code>Status</code> field in the output is <code>Running</code>, this operation returns only
@@ -3014,6 +3905,356 @@ public class AWSLogsClient extends AmazonWebServiceClient implements AWSLogs {
             HttpResponseHandler<AmazonWebServiceResponse<PutDataProtectionPolicyResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new PutDataProtectionPolicyResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Creates or updates a logical <i>delivery destination</i>. A delivery destination is an Amazon Web Services
+     * resource that represents an Amazon Web Services service that logs can be sent to. CloudWatch Logs, Amazon S3, and
+     * Kinesis Data Firehose are supported as logs delivery destinations.
+     * </p>
+     * <p>
+     * To configure logs delivery between a supported Amazon Web Services service and a destination, you must do the
+     * following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Create a delivery source, which is a logical object that represents the resource that is actually sending the
+     * logs. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_PutDeliverySource.html"
+     * >PutDeliverySource</a>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Use <code>PutDeliveryDestination</code> to create a <i>delivery destination</i>, which is a logical object that
+     * represents the actual delivery destination.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you are delivering logs cross-account, you must use <a href=
+     * "https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_PutDeliveryDestinationolicy.html"
+     * >PutDeliveryDestinationPolicy</a> in the destination account to assign an IAM policy to the destination. This
+     * policy allows delivery to that destination.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Use <code>CreateDelivery</code> to create a <i>delivery</i> by pairing exactly one delivery source and one
+     * delivery destination. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_CreateDelivery.html"
+     * >CreateDelivery</a>.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * You can configure a single delivery source to send logs to multiple destinations by creating multiple deliveries.
+     * You can also create multiple deliveries to configure multiple delivery sources to send logs to the same delivery
+     * destination.
+     * </p>
+     * <p>
+     * Only some Amazon Web Services services support being configured as a delivery source. These services are listed
+     * as <b>Supported [V2 Permissions]</b> in the table at <a href=
+     * "https://docs.aws.amazon.com/ AmazonCloudWatch/latest/logs/AWS-logs-and-resource-policy.html#AWS-vended-logs-permissions"
+     * >Enabling logging from Amazon Web Services services.</a>
+     * </p>
+     * <p>
+     * If you use this operation to update an existing delivery destination, all the current delivery destination
+     * parameters are overwritten with the new parameter values that you specify.
+     * </p>
+     * 
+     * @param putDeliveryDestinationRequest
+     * @return Result of the PutDeliveryDestination operation returned by the service.
+     * @throws ServiceUnavailableException
+     *         The service cannot complete the request.
+     * @throws ConflictException
+     *         This operation attempted to create a resource that already exists.
+     * @throws ValidationException
+     *         One of the parameters for the request is not valid.
+     * @throws ServiceQuotaExceededException
+     *         This request exceeds a service quota.
+     * @throws ThrottlingException
+     *         The request was throttled because of quota limits.
+     * @throws ResourceNotFoundException
+     *         The specified resource does not exist.
+     * @sample AWSLogs.PutDeliveryDestination
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/PutDeliveryDestination" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public PutDeliveryDestinationResult putDeliveryDestination(PutDeliveryDestinationRequest request) {
+        request = beforeClientExecution(request);
+        return executePutDeliveryDestination(request);
+    }
+
+    @SdkInternalApi
+    final PutDeliveryDestinationResult executePutDeliveryDestination(PutDeliveryDestinationRequest putDeliveryDestinationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(putDeliveryDestinationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<PutDeliveryDestinationRequest> request = null;
+        Response<PutDeliveryDestinationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new PutDeliveryDestinationRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(putDeliveryDestinationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "CloudWatch Logs");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "PutDeliveryDestination");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<PutDeliveryDestinationResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new PutDeliveryDestinationResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Creates and assigns an IAM policy that grants permissions to CloudWatch Logs to deliver logs cross-account to a
+     * specified destination in this account. To configure the delivery of logs from an Amazon Web Services service in
+     * another account to a logs delivery destination in the current account, you must do the following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Create a delivery source, which is a logical object that represents the resource that is actually sending the
+     * logs. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_PutDeliverySource.html"
+     * >PutDeliverySource</a>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Create a <i>delivery destination</i>, which is a logical object that represents the actual delivery destination.
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_PutDeliveryDestination.html"
+     * >PutDeliveryDestination</a>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Use this operation in the destination account to assign an IAM policy to the destination. This policy allows
+     * delivery to that destination.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Create a <i>delivery</i> by pairing exactly one delivery source and one delivery destination. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_CreateDelivery.html"
+     * >CreateDelivery</a>.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Only some Amazon Web Services services support being configured as a delivery source. These services are listed
+     * as <b>Supported [V2 Permissions]</b> in the table at <a href=
+     * "https://docs.aws.amazon.com/ AmazonCloudWatch/latest/logs/AWS-logs-and-resource-policy.html#AWS-vended-logs-permissions"
+     * >Enabling logging from Amazon Web Services services.</a>
+     * </p>
+     * <p>
+     * The contents of the policy must include two statements. One statement enables general logs delivery, and the
+     * other allows delivery to the chosen destination. See the examples for the needed policies.
+     * </p>
+     * 
+     * @param putDeliveryDestinationPolicyRequest
+     * @return Result of the PutDeliveryDestinationPolicy operation returned by the service.
+     * @throws ServiceUnavailableException
+     *         The service cannot complete the request.
+     * @throws ValidationException
+     *         One of the parameters for the request is not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource does not exist.
+     * @throws ConflictException
+     *         This operation attempted to create a resource that already exists.
+     * @sample AWSLogs.PutDeliveryDestinationPolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/PutDeliveryDestinationPolicy"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public PutDeliveryDestinationPolicyResult putDeliveryDestinationPolicy(PutDeliveryDestinationPolicyRequest request) {
+        request = beforeClientExecution(request);
+        return executePutDeliveryDestinationPolicy(request);
+    }
+
+    @SdkInternalApi
+    final PutDeliveryDestinationPolicyResult executePutDeliveryDestinationPolicy(PutDeliveryDestinationPolicyRequest putDeliveryDestinationPolicyRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(putDeliveryDestinationPolicyRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<PutDeliveryDestinationPolicyRequest> request = null;
+        Response<PutDeliveryDestinationPolicyResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new PutDeliveryDestinationPolicyRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(putDeliveryDestinationPolicyRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "CloudWatch Logs");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "PutDeliveryDestinationPolicy");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<PutDeliveryDestinationPolicyResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new PutDeliveryDestinationPolicyResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Creates or updates a logical <i>delivery source</i>. A delivery source represents an Amazon Web Services resource
+     * that sends logs to an logs delivery destination. The destination can be CloudWatch Logs, Amazon S3, or Kinesis
+     * Data Firehose.
+     * </p>
+     * <p>
+     * To configure logs delivery between a delivery destination and an Amazon Web Services service that is supported as
+     * a delivery source, you must do the following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Use <code>PutDeliverySource</code> to create a delivery source, which is a logical object that represents the
+     * resource that is actually sending the logs.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Use <code>PutDeliveryDestination</code> to create a <i>delivery destination</i>, which is a logical object that
+     * represents the actual delivery destination. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_PutDeliveryDestination.html"
+     * >PutDeliveryDestination</a>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you are delivering logs cross-account, you must use <a href=
+     * "https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_PutDeliveryDestinationolicy.html"
+     * >PutDeliveryDestinationPolicy</a> in the destination account to assign an IAM policy to the destination. This
+     * policy allows delivery to that destination.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Use <code>CreateDelivery</code> to create a <i>delivery</i> by pairing exactly one delivery source and one
+     * delivery destination. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_CreateDelivery.html"
+     * >CreateDelivery</a>.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * You can configure a single delivery source to send logs to multiple destinations by creating multiple deliveries.
+     * You can also create multiple deliveries to configure multiple delivery sources to send logs to the same delivery
+     * destination.
+     * </p>
+     * <p>
+     * Only some Amazon Web Services services support being configured as a delivery source. These services are listed
+     * as <b>Supported [V2 Permissions]</b> in the table at <a href=
+     * "https://docs.aws.amazon.com/ AmazonCloudWatch/latest/logs/AWS-logs-and-resource-policy.html#AWS-vended-logs-permissions"
+     * >Enabling logging from Amazon Web Services services.</a>
+     * </p>
+     * <p>
+     * If you use this operation to update an existing delivery source, all the current delivery source parameters are
+     * overwritten with the new parameter values that you specify.
+     * </p>
+     * 
+     * @param putDeliverySourceRequest
+     * @return Result of the PutDeliverySource operation returned by the service.
+     * @throws ServiceUnavailableException
+     *         The service cannot complete the request.
+     * @throws ConflictException
+     *         This operation attempted to create a resource that already exists.
+     * @throws ValidationException
+     *         One of the parameters for the request is not valid.
+     * @throws ServiceQuotaExceededException
+     *         This request exceeds a service quota.
+     * @throws ResourceNotFoundException
+     *         The specified resource does not exist.
+     * @throws ThrottlingException
+     *         The request was throttled because of quota limits.
+     * @sample AWSLogs.PutDeliverySource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/PutDeliverySource" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public PutDeliverySourceResult putDeliverySource(PutDeliverySourceRequest request) {
+        request = beforeClientExecution(request);
+        return executePutDeliverySource(request);
+    }
+
+    @SdkInternalApi
+    final PutDeliverySourceResult executePutDeliverySource(PutDeliverySourceRequest putDeliverySourceRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(putDeliverySourceRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<PutDeliverySourceRequest> request = null;
+        Response<PutDeliverySourceResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new PutDeliverySourceRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(putDeliverySourceRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "CloudWatch Logs");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "PutDeliverySource");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<PutDeliverySourceResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new PutDeliverySourceResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

@@ -29,12 +29,16 @@ public class PutInsightSelectorsRequest extends com.amazonaws.AmazonWebServiceRe
      * <p>
      * The name of the CloudTrail trail for which you want to change or add Insights selectors.
      * </p>
+     * <p>
+     * You cannot use this parameter with the <code>EventDataStore</code> and <code>InsightsDestination</code>
+     * parameters.
+     * </p>
      */
     private String trailName;
     /**
      * <p>
-     * A JSON string that contains the insight types you want to log on a trail. <code>ApiCallRateInsight</code> and
-     * <code>ApiErrorRateInsight</code> are valid Insight types.
+     * A JSON string that contains the Insights types you want to log on a trail or event data store.
+     * <code>ApiCallRateInsight</code> and <code>ApiErrorRateInsight</code> are valid Insight types.
      * </p>
      * <p>
      * The <code>ApiCallRateInsight</code> Insights type analyzes write-only management API calls that are aggregated
@@ -46,14 +50,43 @@ public class PutInsightSelectorsRequest extends com.amazonaws.AmazonWebServiceRe
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<InsightSelector> insightSelectors;
+    /**
+     * <p>
+     * The ARN (or ID suffix of the ARN) of the source event data store for which you want to change or add Insights
+     * selectors. To enable Insights on an event data store, you must provide both the <code>EventDataStore</code> and
+     * <code>InsightsDestination</code> parameters.
+     * </p>
+     * <p>
+     * You cannot use this parameter with the <code>TrailName</code> parameter.
+     * </p>
+     */
+    private String eventDataStore;
+    /**
+     * <p>
+     * The ARN (or ID suffix of the ARN) of the destination event data store that logs Insights events. To enable
+     * Insights on an event data store, you must provide both the <code>EventDataStore</code> and
+     * <code>InsightsDestination</code> parameters.
+     * </p>
+     * <p>
+     * You cannot use this parameter with the <code>TrailName</code> parameter.
+     * </p>
+     */
+    private String insightsDestination;
 
     /**
      * <p>
      * The name of the CloudTrail trail for which you want to change or add Insights selectors.
      * </p>
+     * <p>
+     * You cannot use this parameter with the <code>EventDataStore</code> and <code>InsightsDestination</code>
+     * parameters.
+     * </p>
      * 
      * @param trailName
-     *        The name of the CloudTrail trail for which you want to change or add Insights selectors.
+     *        The name of the CloudTrail trail for which you want to change or add Insights selectors.</p>
+     *        <p>
+     *        You cannot use this parameter with the <code>EventDataStore</code> and <code>InsightsDestination</code>
+     *        parameters.
      */
 
     public void setTrailName(String trailName) {
@@ -64,8 +97,15 @@ public class PutInsightSelectorsRequest extends com.amazonaws.AmazonWebServiceRe
      * <p>
      * The name of the CloudTrail trail for which you want to change or add Insights selectors.
      * </p>
+     * <p>
+     * You cannot use this parameter with the <code>EventDataStore</code> and <code>InsightsDestination</code>
+     * parameters.
+     * </p>
      * 
-     * @return The name of the CloudTrail trail for which you want to change or add Insights selectors.
+     * @return The name of the CloudTrail trail for which you want to change or add Insights selectors.</p>
+     *         <p>
+     *         You cannot use this parameter with the <code>EventDataStore</code> and <code>InsightsDestination</code>
+     *         parameters.
      */
 
     public String getTrailName() {
@@ -76,9 +116,16 @@ public class PutInsightSelectorsRequest extends com.amazonaws.AmazonWebServiceRe
      * <p>
      * The name of the CloudTrail trail for which you want to change or add Insights selectors.
      * </p>
+     * <p>
+     * You cannot use this parameter with the <code>EventDataStore</code> and <code>InsightsDestination</code>
+     * parameters.
+     * </p>
      * 
      * @param trailName
-     *        The name of the CloudTrail trail for which you want to change or add Insights selectors.
+     *        The name of the CloudTrail trail for which you want to change or add Insights selectors.</p>
+     *        <p>
+     *        You cannot use this parameter with the <code>EventDataStore</code> and <code>InsightsDestination</code>
+     *        parameters.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -89,8 +136,8 @@ public class PutInsightSelectorsRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * A JSON string that contains the insight types you want to log on a trail. <code>ApiCallRateInsight</code> and
-     * <code>ApiErrorRateInsight</code> are valid Insight types.
+     * A JSON string that contains the Insights types you want to log on a trail or event data store.
+     * <code>ApiCallRateInsight</code> and <code>ApiErrorRateInsight</code> are valid Insight types.
      * </p>
      * <p>
      * The <code>ApiCallRateInsight</code> Insights type analyzes write-only management API calls that are aggregated
@@ -101,8 +148,8 @@ public class PutInsightSelectorsRequest extends com.amazonaws.AmazonWebServiceRe
      * error is shown if the API call is unsuccessful.
      * </p>
      * 
-     * @return A JSON string that contains the insight types you want to log on a trail. <code>ApiCallRateInsight</code>
-     *         and <code>ApiErrorRateInsight</code> are valid Insight types.</p>
+     * @return A JSON string that contains the Insights types you want to log on a trail or event data store.
+     *         <code>ApiCallRateInsight</code> and <code>ApiErrorRateInsight</code> are valid Insight types.</p>
      *         <p>
      *         The <code>ApiCallRateInsight</code> Insights type analyzes write-only management API calls that are
      *         aggregated per minute against a baseline API call volume.
@@ -121,8 +168,8 @@ public class PutInsightSelectorsRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * A JSON string that contains the insight types you want to log on a trail. <code>ApiCallRateInsight</code> and
-     * <code>ApiErrorRateInsight</code> are valid Insight types.
+     * A JSON string that contains the Insights types you want to log on a trail or event data store.
+     * <code>ApiCallRateInsight</code> and <code>ApiErrorRateInsight</code> are valid Insight types.
      * </p>
      * <p>
      * The <code>ApiCallRateInsight</code> Insights type analyzes write-only management API calls that are aggregated
@@ -134,8 +181,8 @@ public class PutInsightSelectorsRequest extends com.amazonaws.AmazonWebServiceRe
      * </p>
      * 
      * @param insightSelectors
-     *        A JSON string that contains the insight types you want to log on a trail. <code>ApiCallRateInsight</code>
-     *        and <code>ApiErrorRateInsight</code> are valid Insight types.</p>
+     *        A JSON string that contains the Insights types you want to log on a trail or event data store.
+     *        <code>ApiCallRateInsight</code> and <code>ApiErrorRateInsight</code> are valid Insight types.</p>
      *        <p>
      *        The <code>ApiCallRateInsight</code> Insights type analyzes write-only management API calls that are
      *        aggregated per minute against a baseline API call volume.
@@ -156,8 +203,8 @@ public class PutInsightSelectorsRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * A JSON string that contains the insight types you want to log on a trail. <code>ApiCallRateInsight</code> and
-     * <code>ApiErrorRateInsight</code> are valid Insight types.
+     * A JSON string that contains the Insights types you want to log on a trail or event data store.
+     * <code>ApiCallRateInsight</code> and <code>ApiErrorRateInsight</code> are valid Insight types.
      * </p>
      * <p>
      * The <code>ApiCallRateInsight</code> Insights type analyzes write-only management API calls that are aggregated
@@ -174,8 +221,8 @@ public class PutInsightSelectorsRequest extends com.amazonaws.AmazonWebServiceRe
      * </p>
      * 
      * @param insightSelectors
-     *        A JSON string that contains the insight types you want to log on a trail. <code>ApiCallRateInsight</code>
-     *        and <code>ApiErrorRateInsight</code> are valid Insight types.</p>
+     *        A JSON string that contains the Insights types you want to log on a trail or event data store.
+     *        <code>ApiCallRateInsight</code> and <code>ApiErrorRateInsight</code> are valid Insight types.</p>
      *        <p>
      *        The <code>ApiCallRateInsight</code> Insights type analyzes write-only management API calls that are
      *        aggregated per minute against a baseline API call volume.
@@ -198,8 +245,8 @@ public class PutInsightSelectorsRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * A JSON string that contains the insight types you want to log on a trail. <code>ApiCallRateInsight</code> and
-     * <code>ApiErrorRateInsight</code> are valid Insight types.
+     * A JSON string that contains the Insights types you want to log on a trail or event data store.
+     * <code>ApiCallRateInsight</code> and <code>ApiErrorRateInsight</code> are valid Insight types.
      * </p>
      * <p>
      * The <code>ApiCallRateInsight</code> Insights type analyzes write-only management API calls that are aggregated
@@ -211,8 +258,8 @@ public class PutInsightSelectorsRequest extends com.amazonaws.AmazonWebServiceRe
      * </p>
      * 
      * @param insightSelectors
-     *        A JSON string that contains the insight types you want to log on a trail. <code>ApiCallRateInsight</code>
-     *        and <code>ApiErrorRateInsight</code> are valid Insight types.</p>
+     *        A JSON string that contains the Insights types you want to log on a trail or event data store.
+     *        <code>ApiCallRateInsight</code> and <code>ApiErrorRateInsight</code> are valid Insight types.</p>
      *        <p>
      *        The <code>ApiCallRateInsight</code> Insights type analyzes write-only management API calls that are
      *        aggregated per minute against a baseline API call volume.
@@ -225,6 +272,140 @@ public class PutInsightSelectorsRequest extends com.amazonaws.AmazonWebServiceRe
 
     public PutInsightSelectorsRequest withInsightSelectors(java.util.Collection<InsightSelector> insightSelectors) {
         setInsightSelectors(insightSelectors);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The ARN (or ID suffix of the ARN) of the source event data store for which you want to change or add Insights
+     * selectors. To enable Insights on an event data store, you must provide both the <code>EventDataStore</code> and
+     * <code>InsightsDestination</code> parameters.
+     * </p>
+     * <p>
+     * You cannot use this parameter with the <code>TrailName</code> parameter.
+     * </p>
+     * 
+     * @param eventDataStore
+     *        The ARN (or ID suffix of the ARN) of the source event data store for which you want to change or add
+     *        Insights selectors. To enable Insights on an event data store, you must provide both the
+     *        <code>EventDataStore</code> and <code>InsightsDestination</code> parameters.</p>
+     *        <p>
+     *        You cannot use this parameter with the <code>TrailName</code> parameter.
+     */
+
+    public void setEventDataStore(String eventDataStore) {
+        this.eventDataStore = eventDataStore;
+    }
+
+    /**
+     * <p>
+     * The ARN (or ID suffix of the ARN) of the source event data store for which you want to change or add Insights
+     * selectors. To enable Insights on an event data store, you must provide both the <code>EventDataStore</code> and
+     * <code>InsightsDestination</code> parameters.
+     * </p>
+     * <p>
+     * You cannot use this parameter with the <code>TrailName</code> parameter.
+     * </p>
+     * 
+     * @return The ARN (or ID suffix of the ARN) of the source event data store for which you want to change or add
+     *         Insights selectors. To enable Insights on an event data store, you must provide both the
+     *         <code>EventDataStore</code> and <code>InsightsDestination</code> parameters.</p>
+     *         <p>
+     *         You cannot use this parameter with the <code>TrailName</code> parameter.
+     */
+
+    public String getEventDataStore() {
+        return this.eventDataStore;
+    }
+
+    /**
+     * <p>
+     * The ARN (or ID suffix of the ARN) of the source event data store for which you want to change or add Insights
+     * selectors. To enable Insights on an event data store, you must provide both the <code>EventDataStore</code> and
+     * <code>InsightsDestination</code> parameters.
+     * </p>
+     * <p>
+     * You cannot use this parameter with the <code>TrailName</code> parameter.
+     * </p>
+     * 
+     * @param eventDataStore
+     *        The ARN (or ID suffix of the ARN) of the source event data store for which you want to change or add
+     *        Insights selectors. To enable Insights on an event data store, you must provide both the
+     *        <code>EventDataStore</code> and <code>InsightsDestination</code> parameters.</p>
+     *        <p>
+     *        You cannot use this parameter with the <code>TrailName</code> parameter.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PutInsightSelectorsRequest withEventDataStore(String eventDataStore) {
+        setEventDataStore(eventDataStore);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The ARN (or ID suffix of the ARN) of the destination event data store that logs Insights events. To enable
+     * Insights on an event data store, you must provide both the <code>EventDataStore</code> and
+     * <code>InsightsDestination</code> parameters.
+     * </p>
+     * <p>
+     * You cannot use this parameter with the <code>TrailName</code> parameter.
+     * </p>
+     * 
+     * @param insightsDestination
+     *        The ARN (or ID suffix of the ARN) of the destination event data store that logs Insights events. To enable
+     *        Insights on an event data store, you must provide both the <code>EventDataStore</code> and
+     *        <code>InsightsDestination</code> parameters. </p>
+     *        <p>
+     *        You cannot use this parameter with the <code>TrailName</code> parameter.
+     */
+
+    public void setInsightsDestination(String insightsDestination) {
+        this.insightsDestination = insightsDestination;
+    }
+
+    /**
+     * <p>
+     * The ARN (or ID suffix of the ARN) of the destination event data store that logs Insights events. To enable
+     * Insights on an event data store, you must provide both the <code>EventDataStore</code> and
+     * <code>InsightsDestination</code> parameters.
+     * </p>
+     * <p>
+     * You cannot use this parameter with the <code>TrailName</code> parameter.
+     * </p>
+     * 
+     * @return The ARN (or ID suffix of the ARN) of the destination event data store that logs Insights events. To
+     *         enable Insights on an event data store, you must provide both the <code>EventDataStore</code> and
+     *         <code>InsightsDestination</code> parameters. </p>
+     *         <p>
+     *         You cannot use this parameter with the <code>TrailName</code> parameter.
+     */
+
+    public String getInsightsDestination() {
+        return this.insightsDestination;
+    }
+
+    /**
+     * <p>
+     * The ARN (or ID suffix of the ARN) of the destination event data store that logs Insights events. To enable
+     * Insights on an event data store, you must provide both the <code>EventDataStore</code> and
+     * <code>InsightsDestination</code> parameters.
+     * </p>
+     * <p>
+     * You cannot use this parameter with the <code>TrailName</code> parameter.
+     * </p>
+     * 
+     * @param insightsDestination
+     *        The ARN (or ID suffix of the ARN) of the destination event data store that logs Insights events. To enable
+     *        Insights on an event data store, you must provide both the <code>EventDataStore</code> and
+     *        <code>InsightsDestination</code> parameters. </p>
+     *        <p>
+     *        You cannot use this parameter with the <code>TrailName</code> parameter.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PutInsightSelectorsRequest withInsightsDestination(String insightsDestination) {
+        setInsightsDestination(insightsDestination);
         return this;
     }
 
@@ -243,7 +424,11 @@ public class PutInsightSelectorsRequest extends com.amazonaws.AmazonWebServiceRe
         if (getTrailName() != null)
             sb.append("TrailName: ").append(getTrailName()).append(",");
         if (getInsightSelectors() != null)
-            sb.append("InsightSelectors: ").append(getInsightSelectors());
+            sb.append("InsightSelectors: ").append(getInsightSelectors()).append(",");
+        if (getEventDataStore() != null)
+            sb.append("EventDataStore: ").append(getEventDataStore()).append(",");
+        if (getInsightsDestination() != null)
+            sb.append("InsightsDestination: ").append(getInsightsDestination());
         sb.append("}");
         return sb.toString();
     }
@@ -266,6 +451,14 @@ public class PutInsightSelectorsRequest extends com.amazonaws.AmazonWebServiceRe
             return false;
         if (other.getInsightSelectors() != null && other.getInsightSelectors().equals(this.getInsightSelectors()) == false)
             return false;
+        if (other.getEventDataStore() == null ^ this.getEventDataStore() == null)
+            return false;
+        if (other.getEventDataStore() != null && other.getEventDataStore().equals(this.getEventDataStore()) == false)
+            return false;
+        if (other.getInsightsDestination() == null ^ this.getInsightsDestination() == null)
+            return false;
+        if (other.getInsightsDestination() != null && other.getInsightsDestination().equals(this.getInsightsDestination()) == false)
+            return false;
         return true;
     }
 
@@ -276,6 +469,8 @@ public class PutInsightSelectorsRequest extends com.amazonaws.AmazonWebServiceRe
 
         hashCode = prime * hashCode + ((getTrailName() == null) ? 0 : getTrailName().hashCode());
         hashCode = prime * hashCode + ((getInsightSelectors() == null) ? 0 : getInsightSelectors().hashCode());
+        hashCode = prime * hashCode + ((getEventDataStore() == null) ? 0 : getEventDataStore().hashCode());
+        hashCode = prime * hashCode + ((getInsightsDestination() == null) ? 0 : getInsightsDestination().hashCode());
         return hashCode;
     }
 

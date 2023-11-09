@@ -52,6 +52,12 @@ public class ListIntegrationAssociationsRequest extends com.amazonaws.AmazonWebS
      * </p>
      */
     private Integer maxResults;
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the integration.
+     * </p>
+     */
+    private String integrationArn;
 
     /**
      * <p>
@@ -251,6 +257,46 @@ public class ListIntegrationAssociationsRequest extends com.amazonaws.AmazonWebS
     }
 
     /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the integration.
+     * </p>
+     * 
+     * @param integrationArn
+     *        The Amazon Resource Name (ARN) of the integration.
+     */
+
+    public void setIntegrationArn(String integrationArn) {
+        this.integrationArn = integrationArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the integration.
+     * </p>
+     * 
+     * @return The Amazon Resource Name (ARN) of the integration.
+     */
+
+    public String getIntegrationArn() {
+        return this.integrationArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the integration.
+     * </p>
+     * 
+     * @param integrationArn
+     *        The Amazon Resource Name (ARN) of the integration.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListIntegrationAssociationsRequest withIntegrationArn(String integrationArn) {
+        setIntegrationArn(integrationArn);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -269,7 +315,9 @@ public class ListIntegrationAssociationsRequest extends com.amazonaws.AmazonWebS
         if (getNextToken() != null)
             sb.append("NextToken: ").append(getNextToken()).append(",");
         if (getMaxResults() != null)
-            sb.append("MaxResults: ").append(getMaxResults());
+            sb.append("MaxResults: ").append(getMaxResults()).append(",");
+        if (getIntegrationArn() != null)
+            sb.append("IntegrationArn: ").append(getIntegrationArn());
         sb.append("}");
         return sb.toString();
     }
@@ -300,6 +348,10 @@ public class ListIntegrationAssociationsRequest extends com.amazonaws.AmazonWebS
             return false;
         if (other.getMaxResults() != null && other.getMaxResults().equals(this.getMaxResults()) == false)
             return false;
+        if (other.getIntegrationArn() == null ^ this.getIntegrationArn() == null)
+            return false;
+        if (other.getIntegrationArn() != null && other.getIntegrationArn().equals(this.getIntegrationArn()) == false)
+            return false;
         return true;
     }
 
@@ -312,6 +364,7 @@ public class ListIntegrationAssociationsRequest extends com.amazonaws.AmazonWebS
         hashCode = prime * hashCode + ((getIntegrationType() == null) ? 0 : getIntegrationType().hashCode());
         hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
         hashCode = prime * hashCode + ((getMaxResults() == null) ? 0 : getMaxResults().hashCode());
+        hashCode = prime * hashCode + ((getIntegrationArn() == null) ? 0 : getIntegrationArn().hashCode());
         return hashCode;
     }
 

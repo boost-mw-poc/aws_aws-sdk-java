@@ -17858,6 +17858,67 @@ public interface AmazonEC2Async extends AmazonEC2 {
 
     /**
      * <p>
+     * Disables the <i>block public access for snapshots</i> setting at the account level for the specified Amazon Web
+     * Services Region. After you disable block public access for snapshots in a Region, users can publicly share
+     * snapshots in that Region.
+     * </p>
+     * <p>
+     * If block public access is enabled in <code>block-all-sharing</code> mode, and you disable block public access,
+     * all snapshots that were previously publicly shared are no longer treated as private and they become publicly
+     * accessible again.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-public-access-snapshots.html"> Block public
+     * access for snapshots</a> in the <i>Amazon Elastic Compute Cloud User Guide</i> .
+     * </p>
+     * <p/>
+     * 
+     * @param disableSnapshotBlockPublicAccessRequest
+     * @return A Java Future containing the result of the DisableSnapshotBlockPublicAccess operation returned by the
+     *         service.
+     * @sample AmazonEC2Async.DisableSnapshotBlockPublicAccess
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DisableSnapshotBlockPublicAccess"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DisableSnapshotBlockPublicAccessResult> disableSnapshotBlockPublicAccessAsync(
+            DisableSnapshotBlockPublicAccessRequest disableSnapshotBlockPublicAccessRequest);
+
+    /**
+     * <p>
+     * Disables the <i>block public access for snapshots</i> setting at the account level for the specified Amazon Web
+     * Services Region. After you disable block public access for snapshots in a Region, users can publicly share
+     * snapshots in that Region.
+     * </p>
+     * <p>
+     * If block public access is enabled in <code>block-all-sharing</code> mode, and you disable block public access,
+     * all snapshots that were previously publicly shared are no longer treated as private and they become publicly
+     * accessible again.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-public-access-snapshots.html"> Block public
+     * access for snapshots</a> in the <i>Amazon Elastic Compute Cloud User Guide</i> .
+     * </p>
+     * <p/>
+     * 
+     * @param disableSnapshotBlockPublicAccessRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DisableSnapshotBlockPublicAccess operation returned by the
+     *         service.
+     * @sample AmazonEC2AsyncHandler.DisableSnapshotBlockPublicAccess
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DisableSnapshotBlockPublicAccess"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DisableSnapshotBlockPublicAccessResult> disableSnapshotBlockPublicAccessAsync(
+            DisableSnapshotBlockPublicAccessRequest disableSnapshotBlockPublicAccessRequest,
+            com.amazonaws.handlers.AsyncHandler<DisableSnapshotBlockPublicAccessRequest, DisableSnapshotBlockPublicAccessResult> asyncHandler);
+
+    /**
+     * <p>
      * Disables the specified resource attachment from propagating routes to the specified propagation route table.
      * </p>
      * 
@@ -19162,6 +19223,67 @@ public interface AmazonEC2Async extends AmazonEC2 {
     java.util.concurrent.Future<EnableSerialConsoleAccessResult> enableSerialConsoleAccessAsync(
             EnableSerialConsoleAccessRequest enableSerialConsoleAccessRequest,
             com.amazonaws.handlers.AsyncHandler<EnableSerialConsoleAccessRequest, EnableSerialConsoleAccessResult> asyncHandler);
+
+    /**
+     * <p>
+     * Enables or modifies the <i>block public access for snapshots</i> setting at the account level for the specified
+     * Amazon Web Services Region. After you enable block public access for snapshots in a Region, users can no longer
+     * request public sharing for snapshots in that Region. Snapshots that are already publicly shared are either
+     * treated as private or they remain publicly shared, depending on the <b>State</b> that you specify.
+     * </p>
+     * <p>
+     * If block public access is enabled in <code>block-all-sharing</code> mode, and you change the mode to
+     * <code>block-new-sharing</code>, all snapshots that were previously publicly shared are no longer treated as
+     * private and they become publicly accessible again.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-public-access-snapshots.html"> Block public
+     * access for snapshots</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * </p>
+     * 
+     * @param enableSnapshotBlockPublicAccessRequest
+     * @return A Java Future containing the result of the EnableSnapshotBlockPublicAccess operation returned by the
+     *         service.
+     * @sample AmazonEC2Async.EnableSnapshotBlockPublicAccess
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/EnableSnapshotBlockPublicAccess"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<EnableSnapshotBlockPublicAccessResult> enableSnapshotBlockPublicAccessAsync(
+            EnableSnapshotBlockPublicAccessRequest enableSnapshotBlockPublicAccessRequest);
+
+    /**
+     * <p>
+     * Enables or modifies the <i>block public access for snapshots</i> setting at the account level for the specified
+     * Amazon Web Services Region. After you enable block public access for snapshots in a Region, users can no longer
+     * request public sharing for snapshots in that Region. Snapshots that are already publicly shared are either
+     * treated as private or they remain publicly shared, depending on the <b>State</b> that you specify.
+     * </p>
+     * <p>
+     * If block public access is enabled in <code>block-all-sharing</code> mode, and you change the mode to
+     * <code>block-new-sharing</code>, all snapshots that were previously publicly shared are no longer treated as
+     * private and they become publicly accessible again.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-public-access-snapshots.html"> Block public
+     * access for snapshots</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * </p>
+     * 
+     * @param enableSnapshotBlockPublicAccessRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the EnableSnapshotBlockPublicAccess operation returned by the
+     *         service.
+     * @sample AmazonEC2AsyncHandler.EnableSnapshotBlockPublicAccess
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/EnableSnapshotBlockPublicAccess"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<EnableSnapshotBlockPublicAccessResult> enableSnapshotBlockPublicAccessAsync(
+            EnableSnapshotBlockPublicAccessRequest enableSnapshotBlockPublicAccessRequest,
+            com.amazonaws.handlers.AsyncHandler<EnableSnapshotBlockPublicAccessRequest, EnableSnapshotBlockPublicAccessResult> asyncHandler);
 
     /**
      * <p>
@@ -20890,6 +21012,51 @@ public interface AmazonEC2Async extends AmazonEC2 {
     java.util.concurrent.Future<GetSerialConsoleAccessStatusResult> getSerialConsoleAccessStatusAsync(
             GetSerialConsoleAccessStatusRequest getSerialConsoleAccessStatusRequest,
             com.amazonaws.handlers.AsyncHandler<GetSerialConsoleAccessStatusRequest, GetSerialConsoleAccessStatusResult> asyncHandler);
+
+    /**
+     * <p>
+     * Gets the current state of <i>block public access for snapshots</i> setting for the account and Region.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-public-access-snapshots.html"> Block public
+     * access for snapshots</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * </p>
+     * 
+     * @param getSnapshotBlockPublicAccessStateRequest
+     * @return A Java Future containing the result of the GetSnapshotBlockPublicAccessState operation returned by the
+     *         service.
+     * @sample AmazonEC2Async.GetSnapshotBlockPublicAccessState
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/GetSnapshotBlockPublicAccessState"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetSnapshotBlockPublicAccessStateResult> getSnapshotBlockPublicAccessStateAsync(
+            GetSnapshotBlockPublicAccessStateRequest getSnapshotBlockPublicAccessStateRequest);
+
+    /**
+     * <p>
+     * Gets the current state of <i>block public access for snapshots</i> setting for the account and Region.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-public-access-snapshots.html"> Block public
+     * access for snapshots</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * </p>
+     * 
+     * @param getSnapshotBlockPublicAccessStateRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetSnapshotBlockPublicAccessState operation returned by the
+     *         service.
+     * @sample AmazonEC2AsyncHandler.GetSnapshotBlockPublicAccessState
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/GetSnapshotBlockPublicAccessState"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetSnapshotBlockPublicAccessStateResult> getSnapshotBlockPublicAccessStateAsync(
+            GetSnapshotBlockPublicAccessStateRequest getSnapshotBlockPublicAccessStateRequest,
+            com.amazonaws.handlers.AsyncHandler<GetSnapshotBlockPublicAccessStateRequest, GetSnapshotBlockPublicAccessStateResult> asyncHandler);
 
     /**
      * <p>

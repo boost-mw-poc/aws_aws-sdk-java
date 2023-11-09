@@ -188,7 +188,8 @@ public interface AmazonComprehend {
      * </p>
      * <p>
      * For more information about targeted sentiment, see <a
-     * href="https://docs.aws.amazon.com/comprehend/latest/dg/how-targeted-sentiment.html">Targeted sentiment</a>.
+     * href="https://docs.aws.amazon.com/comprehend/latest/dg/how-targeted-sentiment.html">Targeted sentiment</a> in the
+     * <i>Amazon Comprehend Developer Guide</i>.
      * </p>
      * 
      * @param batchDetectTargetedSentimentRequest
@@ -215,12 +216,28 @@ public interface AmazonComprehend {
 
     /**
      * <p>
-     * Creates a new document classification request to analyze a single document in real-time, using a previously
-     * created and trained custom model and an endpoint.
+     * Creates a classification request to analyze a single document in real-time. <code>ClassifyDocument</code>
+     * supports the following model types:
      * </p>
+     * <ul>
+     * <li>
      * <p>
-     * You can input plain text or you can upload a single-page input document (text, PDF, Word, or image).
+     * Custom classifier - a custom model that you have created and trained. For input, you can provide plain text, a
+     * single-page document (PDF, Word, or image), or Textract API output. For more information, see <a
+     * href="https://docs.aws.amazon.com/comprehend/latest/dg/how-document-classification.html">Custom
+     * classification</a> in the <i>Amazon Comprehend Developer Guide</i>.
      * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Prompt classifier - Amazon Comprehend provides a model for classifying prompts. For input, you provide English
+     * plain text input. For prompt classification, the response includes only the <code>Classes</code> field. For more
+     * information about prompt classifiers, see <a
+     * href="https://docs.aws.amazon.com/comprehend/latest/dg/prompt-classification.html">Prompt classifiers</a> in the
+     * <i>Amazon Comprehend Developer Guide</i>.
+     * </p>
+     * </li>
+     * </ul>
      * <p>
      * If the system detects errors while processing a page in the input document, the API response includes an entry in
      * <code>Errors</code> that describes the errors.
@@ -1135,7 +1152,8 @@ public interface AmazonComprehend {
      * </p>
      * <p>
      * For more information about targeted sentiment, see <a
-     * href="https://docs.aws.amazon.com/comprehend/latest/dg/how-targeted-sentiment.html">Targeted sentiment</a>.
+     * href="https://docs.aws.amazon.com/comprehend/latest/dg/how-targeted-sentiment.html">Targeted sentiment</a> in the
+     * <i>Amazon Comprehend Developer Guide</i>.
      * </p>
      * 
      * @param detectTargetedSentimentRequest
@@ -1156,6 +1174,34 @@ public interface AmazonComprehend {
      *      target="_top">AWS API Documentation</a>
      */
     DetectTargetedSentimentResult detectTargetedSentiment(DetectTargetedSentimentRequest detectTargetedSentimentRequest);
+
+    /**
+     * <p>
+     * Performs toxicity analysis on the list of text strings that you provide as input. The analysis uses the order of
+     * strings in the list to determine context when predicting toxicity. The API response contains a results list that
+     * matches the size of the input list. For more information about toxicity detection, see <a
+     * href="https://docs.aws.amazon.com/comprehend/latest/dg/toxicity-detection.html">Toxicity detection</a> in the
+     * <i>Amazon Comprehend Developer Guide</i>
+     * </p>
+     * 
+     * @param detectToxicContentRequest
+     * @return Result of the DetectToxicContent operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is invalid.
+     * @throws TextSizeLimitExceededException
+     *         The size of the input text exceeds the limit. Use a smaller document.
+     * @throws UnsupportedLanguageException
+     *         Amazon Comprehend can't process the language of the input text. For custom entity recognition APIs, only
+     *         English, Spanish, French, Italian, German, or Portuguese are accepted. For a list of supported languages,
+     *         <a href="https://docs.aws.amazon.com/comprehend/latest/dg/supported-languages.html">Supported
+     *         languages</a> in the Comprehend Developer Guide.
+     * @throws InternalServerException
+     *         An internal server error occurred. Retry your request.
+     * @sample AmazonComprehend.DetectToxicContent
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/comprehend-2017-11-27/DetectToxicContent" target="_top">AWS
+     *      API Documentation</a>
+     */
+    DetectToxicContentResult detectToxicContent(DetectToxicContentRequest detectToxicContentRequest);
 
     /**
      * <p>

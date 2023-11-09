@@ -6369,6 +6369,21 @@ public class AbstractAmazonEC2Async extends AbstractAmazonEC2 implements AmazonE
     }
 
     @Override
+    public java.util.concurrent.Future<DisableSnapshotBlockPublicAccessResult> disableSnapshotBlockPublicAccessAsync(
+            DisableSnapshotBlockPublicAccessRequest request) {
+
+        return disableSnapshotBlockPublicAccessAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DisableSnapshotBlockPublicAccessResult> disableSnapshotBlockPublicAccessAsync(
+            DisableSnapshotBlockPublicAccessRequest request,
+            com.amazonaws.handlers.AsyncHandler<DisableSnapshotBlockPublicAccessRequest, DisableSnapshotBlockPublicAccessResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DisableTransitGatewayRouteTablePropagationResult> disableTransitGatewayRouteTablePropagationAsync(
             DisableTransitGatewayRouteTablePropagationRequest request) {
 
@@ -6765,6 +6780,21 @@ public class AbstractAmazonEC2Async extends AbstractAmazonEC2 implements AmazonE
     @Override
     public java.util.concurrent.Future<EnableSerialConsoleAccessResult> enableSerialConsoleAccessAsync(EnableSerialConsoleAccessRequest request,
             com.amazonaws.handlers.AsyncHandler<EnableSerialConsoleAccessRequest, EnableSerialConsoleAccessResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<EnableSnapshotBlockPublicAccessResult> enableSnapshotBlockPublicAccessAsync(
+            EnableSnapshotBlockPublicAccessRequest request) {
+
+        return enableSnapshotBlockPublicAccessAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<EnableSnapshotBlockPublicAccessResult> enableSnapshotBlockPublicAccessAsync(
+            EnableSnapshotBlockPublicAccessRequest request,
+            com.amazonaws.handlers.AsyncHandler<EnableSnapshotBlockPublicAccessRequest, EnableSnapshotBlockPublicAccessResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -7307,6 +7337,21 @@ public class AbstractAmazonEC2Async extends AbstractAmazonEC2 implements AmazonE
     @Override
     public java.util.concurrent.Future<GetSerialConsoleAccessStatusResult> getSerialConsoleAccessStatusAsync(GetSerialConsoleAccessStatusRequest request,
             com.amazonaws.handlers.AsyncHandler<GetSerialConsoleAccessStatusRequest, GetSerialConsoleAccessStatusResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetSnapshotBlockPublicAccessStateResult> getSnapshotBlockPublicAccessStateAsync(
+            GetSnapshotBlockPublicAccessStateRequest request) {
+
+        return getSnapshotBlockPublicAccessStateAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetSnapshotBlockPublicAccessStateResult> getSnapshotBlockPublicAccessStateAsync(
+            GetSnapshotBlockPublicAccessStateRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetSnapshotBlockPublicAccessStateRequest, GetSnapshotBlockPublicAccessStateResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

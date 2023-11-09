@@ -58,6 +58,14 @@ public class PutInsightSelectorsResultJsonUnmarshaller implements Unmarshaller<P
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("EventDataStoreArn", targetDepth)) {
+                    context.nextToken();
+                    putInsightSelectorsResult.setEventDataStoreArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("InsightsDestination", targetDepth)) {
+                    context.nextToken();
+                    putInsightSelectorsResult.setInsightsDestination(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

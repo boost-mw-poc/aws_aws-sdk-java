@@ -24,7 +24,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * <ul>
  * <li>
  * <p>
- * The document to classify is plain text, but the classifier is a native model.
+ * The document to classify is plain text, but the classifier is a native document model.
  * </p>
  * </li>
  * <li>

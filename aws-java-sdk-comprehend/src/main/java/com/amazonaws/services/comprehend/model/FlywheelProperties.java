@@ -49,7 +49,7 @@ public class FlywheelProperties implements Serializable, Cloneable, StructuredPo
     private String dataAccessRoleArn;
     /**
      * <p>
-     * Configuration about the custom classifier associated with the flywheel.
+     * Configuration about the model associated with a flywheel.
      * </p>
      */
     private TaskConfig taskConfig;
@@ -230,11 +230,11 @@ public class FlywheelProperties implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * Configuration about the custom classifier associated with the flywheel.
+     * Configuration about the model associated with a flywheel.
      * </p>
      * 
      * @param taskConfig
-     *        Configuration about the custom classifier associated with the flywheel.
+     *        Configuration about the model associated with a flywheel.
      */
 
     public void setTaskConfig(TaskConfig taskConfig) {
@@ -243,10 +243,10 @@ public class FlywheelProperties implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * Configuration about the custom classifier associated with the flywheel.
+     * Configuration about the model associated with a flywheel.
      * </p>
      * 
-     * @return Configuration about the custom classifier associated with the flywheel.
+     * @return Configuration about the model associated with a flywheel.
      */
 
     public TaskConfig getTaskConfig() {
@@ -255,11 +255,11 @@ public class FlywheelProperties implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * Configuration about the custom classifier associated with the flywheel.
+     * Configuration about the model associated with a flywheel.
      * </p>
      * 
      * @param taskConfig
-     *        Configuration about the custom classifier associated with the flywheel.
+     *        Configuration about the model associated with a flywheel.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

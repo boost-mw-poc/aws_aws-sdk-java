@@ -231,6 +231,11 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * </li>
      * </ul>
+     * <note>
+     * <p>
+     * Only one of the <code>Capabilities</code> and <code>ResourceType</code> parameters can be specified.
+     * </p>
+     * </note>
      */
     private com.amazonaws.internal.SdkInternalList<String> capabilities;
     /**
@@ -245,6 +250,11 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html">Controlling Access
      * with Identity and Access Management</a>.
      * </p>
+     * <note>
+     * <p>
+     * Only one of the <code>Capabilities</code> and <code>ResourceType</code> parameters can be specified.
+     * </p>
+     * </note>
      */
     private com.amazonaws.internal.SdkInternalList<String> resourceTypes;
     /**
@@ -1003,6 +1013,11 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * </li>
      * </ul>
+     * <note>
+     * <p>
+     * Only one of the <code>Capabilities</code> and <code>ResourceType</code> parameters can be specified.
+     * </p>
+     * </note>
      * 
      * @return In some cases, you must explicitly acknowledge that your stack template contains certain capabilities in
      *         order for CloudFormation to update the stack.</p>
@@ -1132,6 +1147,11 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *         CloudFormation Macros to Perform Custom Processing on Templates</a>.
      *         </p>
      *         </li>
+     *         </ul>
+     *         <note>
+     *         <p>
+     *         Only one of the <code>Capabilities</code> and <code>ResourceType</code> parameters can be specified.
+     *         </p>
      * @see Capability
      */
 
@@ -1271,6 +1291,11 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * </li>
      * </ul>
+     * <note>
+     * <p>
+     * Only one of the <code>Capabilities</code> and <code>ResourceType</code> parameters can be specified.
+     * </p>
+     * </note>
      * 
      * @param capabilities
      *        In some cases, you must explicitly acknowledge that your stack template contains certain capabilities in
@@ -1401,6 +1426,11 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        CloudFormation Macros to Perform Custom Processing on Templates</a>.
      *        </p>
      *        </li>
+     *        </ul>
+     *        <note>
+     *        <p>
+     *        Only one of the <code>Capabilities</code> and <code>ResourceType</code> parameters can be specified.
+     *        </p>
      * @see Capability
      */
 
@@ -1542,6 +1572,11 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * </li>
      * </ul>
+     * <note>
+     * <p>
+     * Only one of the <code>Capabilities</code> and <code>ResourceType</code> parameters can be specified.
+     * </p>
+     * </note>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setCapabilities(java.util.Collection)} or {@link #withCapabilities(java.util.Collection)} if you want to
@@ -1677,6 +1712,11 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        CloudFormation Macros to Perform Custom Processing on Templates</a>.
      *        </p>
      *        </li>
+     *        </ul>
+     *        <note>
+     *        <p>
+     *        Only one of the <code>Capabilities</code> and <code>ResourceType</code> parameters can be specified.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Capability
      */
@@ -1820,6 +1860,11 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * </li>
      * </ul>
+     * <note>
+     * <p>
+     * Only one of the <code>Capabilities</code> and <code>ResourceType</code> parameters can be specified.
+     * </p>
+     * </note>
      * 
      * @param capabilities
      *        In some cases, you must explicitly acknowledge that your stack template contains certain capabilities in
@@ -1950,6 +1995,11 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        CloudFormation Macros to Perform Custom Processing on Templates</a>.
      *        </p>
      *        </li>
+     *        </ul>
+     *        <note>
+     *        <p>
+     *        Only one of the <code>Capabilities</code> and <code>ResourceType</code> parameters can be specified.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Capability
      */
@@ -2088,6 +2138,11 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * </li>
      * </ul>
+     * <note>
+     * <p>
+     * Only one of the <code>Capabilities</code> and <code>ResourceType</code> parameters can be specified.
+     * </p>
+     * </note>
      * 
      * @param capabilities
      *        In some cases, you must explicitly acknowledge that your stack template contains certain capabilities in
@@ -2218,6 +2273,11 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        CloudFormation Macros to Perform Custom Processing on Templates</a>.
      *        </p>
      *        </li>
+     *        </ul>
+     *        <note>
+     *        <p>
+     *        Only one of the <code>Capabilities</code> and <code>ResourceType</code> parameters can be specified.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Capability
      */
@@ -2247,6 +2307,11 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html">Controlling Access
      * with Identity and Access Management</a>.
      * </p>
+     * <note>
+     * <p>
+     * Only one of the <code>Capabilities</code> and <code>ResourceType</code> parameters can be specified.
+     * </p>
+     * </note>
      * 
      * @return The template resource types that you have permissions to work with for this update stack action, such as
      *         <code>AWS::EC2::Instance</code>, <code>AWS::EC2::*</code>, or <code>Custom::MyCustomInstance</code>.</p>
@@ -2256,6 +2321,11 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *         uses this parameter for CloudFormation-specific condition keys in IAM policies. For more information, see
      *         <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html">
      *         Controlling Access with Identity and Access Management</a>.
+     *         </p>
+     *         <note>
+     *         <p>
+     *         Only one of the <code>Capabilities</code> and <code>ResourceType</code> parameters can be specified.
+     *         </p>
      */
 
     public java.util.List<String> getResourceTypes() {
@@ -2277,6 +2347,11 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html">Controlling Access
      * with Identity and Access Management</a>.
      * </p>
+     * <note>
+     * <p>
+     * Only one of the <code>Capabilities</code> and <code>ResourceType</code> parameters can be specified.
+     * </p>
+     * </note>
      * 
      * @param resourceTypes
      *        The template resource types that you have permissions to work with for this update stack action, such as
@@ -2287,6 +2362,11 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        uses this parameter for CloudFormation-specific condition keys in IAM policies. For more information, see
      *        <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html">
      *        Controlling Access with Identity and Access Management</a>.
+     *        </p>
+     *        <note>
+     *        <p>
+     *        Only one of the <code>Capabilities</code> and <code>ResourceType</code> parameters can be specified.
+     *        </p>
      */
 
     public void setResourceTypes(java.util.Collection<String> resourceTypes) {
@@ -2310,6 +2390,11 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html">Controlling Access
      * with Identity and Access Management</a>.
      * </p>
+     * <note>
+     * <p>
+     * Only one of the <code>Capabilities</code> and <code>ResourceType</code> parameters can be specified.
+     * </p>
+     * </note>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setResourceTypes(java.util.Collection)} or {@link #withResourceTypes(java.util.Collection)} if you want
@@ -2325,6 +2410,11 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        uses this parameter for CloudFormation-specific condition keys in IAM policies. For more information, see
      *        <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html">
      *        Controlling Access with Identity and Access Management</a>.
+     *        </p>
+     *        <note>
+     *        <p>
+     *        Only one of the <code>Capabilities</code> and <code>ResourceType</code> parameters can be specified.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2350,6 +2440,11 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html">Controlling Access
      * with Identity and Access Management</a>.
      * </p>
+     * <note>
+     * <p>
+     * Only one of the <code>Capabilities</code> and <code>ResourceType</code> parameters can be specified.
+     * </p>
+     * </note>
      * 
      * @param resourceTypes
      *        The template resource types that you have permissions to work with for this update stack action, such as
@@ -2360,6 +2455,11 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        uses this parameter for CloudFormation-specific condition keys in IAM policies. For more information, see
      *        <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html">
      *        Controlling Access with Identity and Access Management</a>.
+     *        </p>
+     *        <note>
+     *        <p>
+     *        Only one of the <code>Capabilities</code> and <code>ResourceType</code> parameters can be specified.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

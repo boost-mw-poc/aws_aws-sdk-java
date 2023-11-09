@@ -78,7 +78,7 @@ public class DocumentClassifierInputDataConfig implements Serializable, Cloneabl
     private String s3Uri;
     /**
      * <p>
-     * This specifies the Amazon S3 location where the test annotations for an entity recognizer are located. The URI
+     * This specifies the Amazon S3 location that contains the test annotations for the document classifier. The URI
      * must be in the same Amazon Web Services Region as the API endpoint that you are calling.
      * </p>
      */
@@ -106,13 +106,13 @@ public class DocumentClassifierInputDataConfig implements Serializable, Cloneabl
     /**
      * <p>
      * The type of input documents for training the model. Provide plain-text documents to create a plain-text model,
-     * and provide semi-structured documents to create a native model.
+     * and provide semi-structured documents to create a native document model.
      * </p>
      */
     private String documentType;
     /**
      * <p>
-     * The S3 location of the training documents. This parameter is required in a request to create a native classifier
+     * The S3 location of the training documents. This parameter is required in a request to create a native document
      * model.
      * </p>
      */
@@ -447,12 +447,12 @@ public class DocumentClassifierInputDataConfig implements Serializable, Cloneabl
 
     /**
      * <p>
-     * This specifies the Amazon S3 location where the test annotations for an entity recognizer are located. The URI
+     * This specifies the Amazon S3 location that contains the test annotations for the document classifier. The URI
      * must be in the same Amazon Web Services Region as the API endpoint that you are calling.
      * </p>
      * 
      * @param testS3Uri
-     *        This specifies the Amazon S3 location where the test annotations for an entity recognizer are located. The
+     *        This specifies the Amazon S3 location that contains the test annotations for the document classifier. The
      *        URI must be in the same Amazon Web Services Region as the API endpoint that you are calling.
      */
 
@@ -462,12 +462,12 @@ public class DocumentClassifierInputDataConfig implements Serializable, Cloneabl
 
     /**
      * <p>
-     * This specifies the Amazon S3 location where the test annotations for an entity recognizer are located. The URI
+     * This specifies the Amazon S3 location that contains the test annotations for the document classifier. The URI
      * must be in the same Amazon Web Services Region as the API endpoint that you are calling.
      * </p>
      * 
-     * @return This specifies the Amazon S3 location where the test annotations for an entity recognizer are located.
-     *         The URI must be in the same Amazon Web Services Region as the API endpoint that you are calling.
+     * @return This specifies the Amazon S3 location that contains the test annotations for the document classifier. The
+     *         URI must be in the same Amazon Web Services Region as the API endpoint that you are calling.
      */
 
     public String getTestS3Uri() {
@@ -476,12 +476,12 @@ public class DocumentClassifierInputDataConfig implements Serializable, Cloneabl
 
     /**
      * <p>
-     * This specifies the Amazon S3 location where the test annotations for an entity recognizer are located. The URI
+     * This specifies the Amazon S3 location that contains the test annotations for the document classifier. The URI
      * must be in the same Amazon Web Services Region as the API endpoint that you are calling.
      * </p>
      * 
      * @param testS3Uri
-     *        This specifies the Amazon S3 location where the test annotations for an entity recognizer are located. The
+     *        This specifies the Amazon S3 location that contains the test annotations for the document classifier. The
      *        URI must be in the same Amazon Web Services Region as the API endpoint that you are calling.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -656,12 +656,12 @@ public class DocumentClassifierInputDataConfig implements Serializable, Cloneabl
     /**
      * <p>
      * The type of input documents for training the model. Provide plain-text documents to create a plain-text model,
-     * and provide semi-structured documents to create a native model.
+     * and provide semi-structured documents to create a native document model.
      * </p>
      * 
      * @param documentType
      *        The type of input documents for training the model. Provide plain-text documents to create a plain-text
-     *        model, and provide semi-structured documents to create a native model.
+     *        model, and provide semi-structured documents to create a native document model.
      * @see DocumentClassifierDocumentTypeFormat
      */
 
@@ -672,11 +672,11 @@ public class DocumentClassifierInputDataConfig implements Serializable, Cloneabl
     /**
      * <p>
      * The type of input documents for training the model. Provide plain-text documents to create a plain-text model,
-     * and provide semi-structured documents to create a native model.
+     * and provide semi-structured documents to create a native document model.
      * </p>
      * 
      * @return The type of input documents for training the model. Provide plain-text documents to create a plain-text
-     *         model, and provide semi-structured documents to create a native model.
+     *         model, and provide semi-structured documents to create a native document model.
      * @see DocumentClassifierDocumentTypeFormat
      */
 
@@ -687,12 +687,12 @@ public class DocumentClassifierInputDataConfig implements Serializable, Cloneabl
     /**
      * <p>
      * The type of input documents for training the model. Provide plain-text documents to create a plain-text model,
-     * and provide semi-structured documents to create a native model.
+     * and provide semi-structured documents to create a native document model.
      * </p>
      * 
      * @param documentType
      *        The type of input documents for training the model. Provide plain-text documents to create a plain-text
-     *        model, and provide semi-structured documents to create a native model.
+     *        model, and provide semi-structured documents to create a native document model.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see DocumentClassifierDocumentTypeFormat
      */
@@ -705,12 +705,12 @@ public class DocumentClassifierInputDataConfig implements Serializable, Cloneabl
     /**
      * <p>
      * The type of input documents for training the model. Provide plain-text documents to create a plain-text model,
-     * and provide semi-structured documents to create a native model.
+     * and provide semi-structured documents to create a native document model.
      * </p>
      * 
      * @param documentType
      *        The type of input documents for training the model. Provide plain-text documents to create a plain-text
-     *        model, and provide semi-structured documents to create a native model.
+     *        model, and provide semi-structured documents to create a native document model.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see DocumentClassifierDocumentTypeFormat
      */
@@ -722,13 +722,13 @@ public class DocumentClassifierInputDataConfig implements Serializable, Cloneabl
 
     /**
      * <p>
-     * The S3 location of the training documents. This parameter is required in a request to create a native classifier
+     * The S3 location of the training documents. This parameter is required in a request to create a native document
      * model.
      * </p>
      * 
      * @param documents
      *        The S3 location of the training documents. This parameter is required in a request to create a native
-     *        classifier model.
+     *        document model.
      */
 
     public void setDocuments(DocumentClassifierDocuments documents) {
@@ -737,12 +737,12 @@ public class DocumentClassifierInputDataConfig implements Serializable, Cloneabl
 
     /**
      * <p>
-     * The S3 location of the training documents. This parameter is required in a request to create a native classifier
+     * The S3 location of the training documents. This parameter is required in a request to create a native document
      * model.
      * </p>
      * 
      * @return The S3 location of the training documents. This parameter is required in a request to create a native
-     *         classifier model.
+     *         document model.
      */
 
     public DocumentClassifierDocuments getDocuments() {
@@ -751,13 +751,13 @@ public class DocumentClassifierInputDataConfig implements Serializable, Cloneabl
 
     /**
      * <p>
-     * The S3 location of the training documents. This parameter is required in a request to create a native classifier
+     * The S3 location of the training documents. This parameter is required in a request to create a native document
      * model.
      * </p>
      * 
      * @param documents
      *        The S3 location of the training documents. This parameter is required in a request to create a native
-     *        classifier model.
+     *        document model.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

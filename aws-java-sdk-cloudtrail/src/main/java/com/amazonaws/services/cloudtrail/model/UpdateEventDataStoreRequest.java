@@ -55,6 +55,13 @@ public class UpdateEventDataStoreRequest extends com.amazonaws.AmazonWebServiceR
      * <p>
      * Specifies whether an event data store collects events logged for an organization in Organizations.
      * </p>
+     * <note>
+     * <p>
+     * Only the management account for the organization can convert an organization event data store to a
+     * non-organization event data store, or convert a non-organization event data store to an organization event data
+     * store.
+     * </p>
+     * </note>
      */
     private Boolean organizationEnabled;
     /**
@@ -353,9 +360,22 @@ public class UpdateEventDataStoreRequest extends com.amazonaws.AmazonWebServiceR
      * <p>
      * Specifies whether an event data store collects events logged for an organization in Organizations.
      * </p>
+     * <note>
+     * <p>
+     * Only the management account for the organization can convert an organization event data store to a
+     * non-organization event data store, or convert a non-organization event data store to an organization event data
+     * store.
+     * </p>
+     * </note>
      * 
      * @param organizationEnabled
-     *        Specifies whether an event data store collects events logged for an organization in Organizations.
+     *        Specifies whether an event data store collects events logged for an organization in Organizations.</p>
+     *        <note>
+     *        <p>
+     *        Only the management account for the organization can convert an organization event data store to a
+     *        non-organization event data store, or convert a non-organization event data store to an organization event
+     *        data store.
+     *        </p>
      */
 
     public void setOrganizationEnabled(Boolean organizationEnabled) {
@@ -366,8 +386,21 @@ public class UpdateEventDataStoreRequest extends com.amazonaws.AmazonWebServiceR
      * <p>
      * Specifies whether an event data store collects events logged for an organization in Organizations.
      * </p>
+     * <note>
+     * <p>
+     * Only the management account for the organization can convert an organization event data store to a
+     * non-organization event data store, or convert a non-organization event data store to an organization event data
+     * store.
+     * </p>
+     * </note>
      * 
-     * @return Specifies whether an event data store collects events logged for an organization in Organizations.
+     * @return Specifies whether an event data store collects events logged for an organization in Organizations.</p>
+     *         <note>
+     *         <p>
+     *         Only the management account for the organization can convert an organization event data store to a
+     *         non-organization event data store, or convert a non-organization event data store to an organization
+     *         event data store.
+     *         </p>
      */
 
     public Boolean getOrganizationEnabled() {
@@ -378,9 +411,22 @@ public class UpdateEventDataStoreRequest extends com.amazonaws.AmazonWebServiceR
      * <p>
      * Specifies whether an event data store collects events logged for an organization in Organizations.
      * </p>
+     * <note>
+     * <p>
+     * Only the management account for the organization can convert an organization event data store to a
+     * non-organization event data store, or convert a non-organization event data store to an organization event data
+     * store.
+     * </p>
+     * </note>
      * 
      * @param organizationEnabled
-     *        Specifies whether an event data store collects events logged for an organization in Organizations.
+     *        Specifies whether an event data store collects events logged for an organization in Organizations.</p>
+     *        <note>
+     *        <p>
+     *        Only the management account for the organization can convert an organization event data store to a
+     *        non-organization event data store, or convert a non-organization event data store to an organization event
+     *        data store.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -393,8 +439,21 @@ public class UpdateEventDataStoreRequest extends com.amazonaws.AmazonWebServiceR
      * <p>
      * Specifies whether an event data store collects events logged for an organization in Organizations.
      * </p>
+     * <note>
+     * <p>
+     * Only the management account for the organization can convert an organization event data store to a
+     * non-organization event data store, or convert a non-organization event data store to an organization event data
+     * store.
+     * </p>
+     * </note>
      * 
-     * @return Specifies whether an event data store collects events logged for an organization in Organizations.
+     * @return Specifies whether an event data store collects events logged for an organization in Organizations.</p>
+     *         <note>
+     *         <p>
+     *         Only the management account for the organization can convert an organization event data store to a
+     *         non-organization event data store, or convert a non-organization event data store to an organization
+     *         event data store.
+     *         </p>
      */
 
     public Boolean isOrganizationEnabled() {

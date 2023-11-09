@@ -22,7 +22,8 @@ public enum FileType {
 
     FASTQ("FASTQ"),
     BAM("BAM"),
-    CRAM("CRAM");
+    CRAM("CRAM"),
+    UBAM("UBAM");
 
     private String value;
 

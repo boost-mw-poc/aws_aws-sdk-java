@@ -233,6 +233,11 @@ public class AbstractAmazonComprehend implements AmazonComprehend {
     }
 
     @Override
+    public DetectToxicContentResult detectToxicContent(DetectToxicContentRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ImportModelResult importModel(ImportModelRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

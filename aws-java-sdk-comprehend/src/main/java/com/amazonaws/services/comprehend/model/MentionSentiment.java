@@ -23,7 +23,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * </p>
  * <p>
  * For more information about targeted sentiment, see <a
- * href="https://docs.aws.amazon.com/comprehend/latest/dg/how-targeted-sentiment.html">Targeted sentiment</a>.
+ * href="https://docs.aws.amazon.com/comprehend/latest/dg/how-targeted-sentiment.html">Targeted sentiment</a> in the
+ * <i>Amazon Comprehend Developer Guide</i>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/comprehend-2017-11-27/MentionSentiment" target="_top">AWS API

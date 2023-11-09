@@ -1441,6 +1441,39 @@ public class AmazonComprehendAsyncClient extends AmazonComprehendClient implemen
     }
 
     @Override
+    public java.util.concurrent.Future<DetectToxicContentResult> detectToxicContentAsync(DetectToxicContentRequest request) {
+
+        return detectToxicContentAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DetectToxicContentResult> detectToxicContentAsync(final DetectToxicContentRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DetectToxicContentRequest, DetectToxicContentResult> asyncHandler) {
+        final DetectToxicContentRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DetectToxicContentResult>() {
+            @Override
+            public DetectToxicContentResult call() throws Exception {
+                DetectToxicContentResult result = null;
+
+                try {
+                    result = executeDetectToxicContent(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ImportModelResult> importModelAsync(ImportModelRequest request) {
 
         return importModelAsync(request, null);

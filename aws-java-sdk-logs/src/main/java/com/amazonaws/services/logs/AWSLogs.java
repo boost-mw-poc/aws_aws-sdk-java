@@ -235,6 +235,88 @@ public interface AWSLogs {
 
     /**
      * <p>
+     * Creates a <i>delivery</i>. A delivery is a connection between a logical <i>delivery source</i> and a logical
+     * <i>delivery destination</i> that you have already created.
+     * </p>
+     * <p>
+     * Only some Amazon Web Services services support being configured as a delivery source using this operation. These
+     * services are listed as <b>Supported [V2 Permissions]</b> in the table at <a href=
+     * "https://docs.aws.amazon.com/ AmazonCloudWatch/latest/logs/AWS-logs-and-resource-policy.html#AWS-vended-logs-permissions"
+     * >Enabling logging from Amazon Web Services services.</a>
+     * </p>
+     * <p>
+     * A delivery destination can represent a log group in CloudWatch Logs, an Amazon S3 bucket, or a delivery stream in
+     * Kinesis Data Firehose.
+     * </p>
+     * <p>
+     * To configure logs delivery between a supported Amazon Web Services service and a destination, you must do the
+     * following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Create a delivery source, which is a logical object that represents the resource that is actually sending the
+     * logs. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_PutDeliverySource.html"
+     * >PutDeliverySource</a>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Create a <i>delivery destination</i>, which is a logical object that represents the actual delivery destination.
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_PutDeliveryDestination.html"
+     * >PutDeliveryDestination</a>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you are delivering logs cross-account, you must use <a href=
+     * "https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_PutDeliveryDestinationolicy.html"
+     * >PutDeliveryDestinationPolicy</a> in the destination account to assign an IAM policy to the destination. This
+     * policy allows delivery to that destination.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Use <code>CreateDelivery</code> to create a <i>delivery</i> by pairing exactly one delivery source and one
+     * delivery destination.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * You can configure a single delivery source to send logs to multiple destinations by creating multiple deliveries.
+     * You can also create multiple deliveries to configure multiple delivery sources to send logs to the same delivery
+     * destination.
+     * </p>
+     * <p>
+     * You can't update an existing delivery. You can only create and delete deliveries.
+     * </p>
+     * 
+     * @param createDeliveryRequest
+     * @return Result of the CreateDelivery operation returned by the service.
+     * @throws ServiceUnavailableException
+     *         The service cannot complete the request.
+     * @throws ConflictException
+     *         This operation attempted to create a resource that already exists.
+     * @throws ResourceNotFoundException
+     *         The specified resource does not exist.
+     * @throws ValidationException
+     *         One of the parameters for the request is not valid.
+     * @throws AccessDeniedException
+     *         You don't have sufficient permissions to perform this action.
+     * @throws ServiceQuotaExceededException
+     *         This request exceeds a service quota.
+     * @throws ThrottlingException
+     *         The request was throttled because of quota limits.
+     * @sample AWSLogs.CreateDelivery
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/CreateDelivery" target="_top">AWS API
+     *      Documentation</a>
+     */
+    CreateDeliveryResult createDelivery(CreateDeliveryRequest createDeliveryRequest);
+
+    /**
+     * <p>
      * Creates an export task so that you can efficiently export data from a log group to an Amazon S3 bucket. When you
      * perform a <code>CreateExportTask</code> operation, you must use credentials that have permission to write to the
      * S3 bucket that you specify as the destination.
@@ -452,6 +534,120 @@ public interface AWSLogs {
 
     /**
      * <p>
+     * Deletes s <i>delivery</i>. A delivery is a connection between a logical <i>delivery source</i> and a logical
+     * <i>delivery destination</i>. Deleting a delivery only deletes the connection between the delivery source and
+     * delivery destination. It does not delete the delivery destination or the delivery source.
+     * </p>
+     * 
+     * @param deleteDeliveryRequest
+     * @return Result of the DeleteDelivery operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The specified resource does not exist.
+     * @throws ServiceUnavailableException
+     *         The service cannot complete the request.
+     * @throws ConflictException
+     *         This operation attempted to create a resource that already exists.
+     * @throws ValidationException
+     *         One of the parameters for the request is not valid.
+     * @throws ServiceQuotaExceededException
+     *         This request exceeds a service quota.
+     * @throws ThrottlingException
+     *         The request was throttled because of quota limits.
+     * @sample AWSLogs.DeleteDelivery
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/DeleteDelivery" target="_top">AWS API
+     *      Documentation</a>
+     */
+    DeleteDeliveryResult deleteDelivery(DeleteDeliveryRequest deleteDeliveryRequest);
+
+    /**
+     * <p>
+     * Deletes a <i>delivery destination</i>. A delivery is a connection between a logical <i>delivery source</i> and a
+     * logical <i>delivery destination</i>.
+     * </p>
+     * <p>
+     * You can't delete a delivery destination if any current deliveries are associated with it. To find whether any
+     * deliveries are associated with this delivery destination, use the <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_DescribeDeliveries.html"
+     * >DescribeDeliveries</a> operation and check the <code>deliveryDestinationArn</code> field in the results.
+     * </p>
+     * 
+     * @param deleteDeliveryDestinationRequest
+     * @return Result of the DeleteDeliveryDestination operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The specified resource does not exist.
+     * @throws ServiceUnavailableException
+     *         The service cannot complete the request.
+     * @throws ConflictException
+     *         This operation attempted to create a resource that already exists.
+     * @throws ValidationException
+     *         One of the parameters for the request is not valid.
+     * @throws ServiceQuotaExceededException
+     *         This request exceeds a service quota.
+     * @throws ThrottlingException
+     *         The request was throttled because of quota limits.
+     * @sample AWSLogs.DeleteDeliveryDestination
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/DeleteDeliveryDestination" target="_top">AWS
+     *      API Documentation</a>
+     */
+    DeleteDeliveryDestinationResult deleteDeliveryDestination(DeleteDeliveryDestinationRequest deleteDeliveryDestinationRequest);
+
+    /**
+     * <p>
+     * Deletes a delivery destination policy. For more information about these policies, see <a href=
+     * "https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_PutDeliveryDestinationPolicy.html"
+     * >PutDeliveryDestinationPolicy</a>.
+     * </p>
+     * 
+     * @param deleteDeliveryDestinationPolicyRequest
+     * @return Result of the DeleteDeliveryDestinationPolicy operation returned by the service.
+     * @throws ServiceUnavailableException
+     *         The service cannot complete the request.
+     * @throws ValidationException
+     *         One of the parameters for the request is not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource does not exist.
+     * @throws ConflictException
+     *         This operation attempted to create a resource that already exists.
+     * @sample AWSLogs.DeleteDeliveryDestinationPolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/DeleteDeliveryDestinationPolicy"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DeleteDeliveryDestinationPolicyResult deleteDeliveryDestinationPolicy(DeleteDeliveryDestinationPolicyRequest deleteDeliveryDestinationPolicyRequest);
+
+    /**
+     * <p>
+     * Deletes a <i>delivery source</i>. A delivery is a connection between a logical <i>delivery source</i> and a
+     * logical <i>delivery destination</i>.
+     * </p>
+     * <p>
+     * You can't delete a delivery source if any current deliveries are associated with it. To find whether any
+     * deliveries are associated with this delivery source, use the <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_DescribeDeliveries.html"
+     * >DescribeDeliveries</a> operation and check the <code>deliverySourceName</code> field in the results.
+     * </p>
+     * 
+     * @param deleteDeliverySourceRequest
+     * @return Result of the DeleteDeliverySource operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The specified resource does not exist.
+     * @throws ServiceUnavailableException
+     *         The service cannot complete the request.
+     * @throws ConflictException
+     *         This operation attempted to create a resource that already exists.
+     * @throws ValidationException
+     *         One of the parameters for the request is not valid.
+     * @throws ServiceQuotaExceededException
+     *         This request exceeds a service quota.
+     * @throws ThrottlingException
+     *         The request was throttled because of quota limits.
+     * @sample AWSLogs.DeleteDeliverySource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/DeleteDeliverySource" target="_top">AWS API
+     *      Documentation</a>
+     */
+    DeleteDeliverySourceResult deleteDeliverySource(DeleteDeliverySourceRequest deleteDeliverySourceRequest);
+
+    /**
+     * <p>
      * Deletes the specified destination, and eventually disables all the subscription filters that publish to it. This
      * operation does not delete the physical resource encapsulated by the destination.
      * </p>
@@ -648,6 +844,69 @@ public interface AWSLogs {
      *      API Documentation</a>
      */
     DescribeAccountPoliciesResult describeAccountPolicies(DescribeAccountPoliciesRequest describeAccountPoliciesRequest);
+
+    /**
+     * <p>
+     * Retrieves a list of the deliveries that have been created in the account.
+     * </p>
+     * 
+     * @param describeDeliveriesRequest
+     * @return Result of the DescribeDeliveries operation returned by the service.
+     * @throws ServiceUnavailableException
+     *         The service cannot complete the request.
+     * @throws ServiceQuotaExceededException
+     *         This request exceeds a service quota.
+     * @throws ValidationException
+     *         One of the parameters for the request is not valid.
+     * @throws ThrottlingException
+     *         The request was throttled because of quota limits.
+     * @sample AWSLogs.DescribeDeliveries
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/DescribeDeliveries" target="_top">AWS API
+     *      Documentation</a>
+     */
+    DescribeDeliveriesResult describeDeliveries(DescribeDeliveriesRequest describeDeliveriesRequest);
+
+    /**
+     * <p>
+     * Retrieves a list of the delivery destinations that have been created in the account.
+     * </p>
+     * 
+     * @param describeDeliveryDestinationsRequest
+     * @return Result of the DescribeDeliveryDestinations operation returned by the service.
+     * @throws ServiceUnavailableException
+     *         The service cannot complete the request.
+     * @throws ServiceQuotaExceededException
+     *         This request exceeds a service quota.
+     * @throws ValidationException
+     *         One of the parameters for the request is not valid.
+     * @throws ThrottlingException
+     *         The request was throttled because of quota limits.
+     * @sample AWSLogs.DescribeDeliveryDestinations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/DescribeDeliveryDestinations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DescribeDeliveryDestinationsResult describeDeliveryDestinations(DescribeDeliveryDestinationsRequest describeDeliveryDestinationsRequest);
+
+    /**
+     * <p>
+     * Retrieves a list of the delivery sources that have been created in the account.
+     * </p>
+     * 
+     * @param describeDeliverySourcesRequest
+     * @return Result of the DescribeDeliverySources operation returned by the service.
+     * @throws ServiceUnavailableException
+     *         The service cannot complete the request.
+     * @throws ServiceQuotaExceededException
+     *         This request exceeds a service quota.
+     * @throws ValidationException
+     *         One of the parameters for the request is not valid.
+     * @throws ThrottlingException
+     *         The request was throttled because of quota limits.
+     * @sample AWSLogs.DescribeDeliverySources
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/DescribeDeliverySources" target="_top">AWS
+     *      API Documentation</a>
+     */
+    DescribeDeliverySourcesResult describeDeliverySources(DescribeDeliverySourcesRequest describeDeliverySourcesRequest);
 
     /**
      * <p>
@@ -977,6 +1236,104 @@ public interface AWSLogs {
 
     /**
      * <p>
+     * Returns complete information about one <i>delivery</i>. A delivery is a connection between a logical <i>delivery
+     * source</i> and a logical <i>delivery destination</i>
+     * </p>
+     * <p>
+     * You need to specify the delivery <code>id</code> in this operation. You can find the IDs of the deliveries in
+     * your account with the <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_DescribeDeliveries.html"
+     * >DescribeDeliveries</a> operation.
+     * </p>
+     * 
+     * @param getDeliveryRequest
+     * @return Result of the GetDelivery operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The specified resource does not exist.
+     * @throws ServiceUnavailableException
+     *         The service cannot complete the request.
+     * @throws ValidationException
+     *         One of the parameters for the request is not valid.
+     * @throws ServiceQuotaExceededException
+     *         This request exceeds a service quota.
+     * @throws ThrottlingException
+     *         The request was throttled because of quota limits.
+     * @sample AWSLogs.GetDelivery
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/GetDelivery" target="_top">AWS API
+     *      Documentation</a>
+     */
+    GetDeliveryResult getDelivery(GetDeliveryRequest getDeliveryRequest);
+
+    /**
+     * <p>
+     * Retrieves complete information about one delivery destination.
+     * </p>
+     * 
+     * @param getDeliveryDestinationRequest
+     * @return Result of the GetDeliveryDestination operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The specified resource does not exist.
+     * @throws ServiceUnavailableException
+     *         The service cannot complete the request.
+     * @throws ValidationException
+     *         One of the parameters for the request is not valid.
+     * @throws ServiceQuotaExceededException
+     *         This request exceeds a service quota.
+     * @throws ThrottlingException
+     *         The request was throttled because of quota limits.
+     * @sample AWSLogs.GetDeliveryDestination
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/GetDeliveryDestination" target="_top">AWS
+     *      API Documentation</a>
+     */
+    GetDeliveryDestinationResult getDeliveryDestination(GetDeliveryDestinationRequest getDeliveryDestinationRequest);
+
+    /**
+     * <p>
+     * Retrieves the delivery destination policy assigned to the delivery destination that you specify. For more
+     * information about delivery destinations and their policies, see <a href=
+     * "https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_PutDeliveryDestinationPolicy.html"
+     * >PutDeliveryDestinationPolicy</a>.
+     * </p>
+     * 
+     * @param getDeliveryDestinationPolicyRequest
+     * @return Result of the GetDeliveryDestinationPolicy operation returned by the service.
+     * @throws ServiceUnavailableException
+     *         The service cannot complete the request.
+     * @throws ValidationException
+     *         One of the parameters for the request is not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource does not exist.
+     * @sample AWSLogs.GetDeliveryDestinationPolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/GetDeliveryDestinationPolicy"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetDeliveryDestinationPolicyResult getDeliveryDestinationPolicy(GetDeliveryDestinationPolicyRequest getDeliveryDestinationPolicyRequest);
+
+    /**
+     * <p>
+     * Retrieves complete information about one delivery source.
+     * </p>
+     * 
+     * @param getDeliverySourceRequest
+     * @return Result of the GetDeliverySource operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The specified resource does not exist.
+     * @throws ServiceUnavailableException
+     *         The service cannot complete the request.
+     * @throws ValidationException
+     *         One of the parameters for the request is not valid.
+     * @throws ServiceQuotaExceededException
+     *         This request exceeds a service quota.
+     * @throws ThrottlingException
+     *         The request was throttled because of quota limits.
+     * @sample AWSLogs.GetDeliverySource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/GetDeliverySource" target="_top">AWS API
+     *      Documentation</a>
+     */
+    GetDeliverySourceResult getDeliverySource(GetDeliverySourceRequest getDeliverySourceRequest);
+
+    /**
+     * <p>
      * Lists log events from the specified log stream. You can list all of the log events or filter using a time range.
      * </p>
      * <p>
@@ -1090,6 +1447,9 @@ public interface AWSLogs {
      * <p>
      * <code>GetQueryResults</code> does not start running a query. To run a query, use <a
      * href="https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_StartQuery.html">StartQuery</a>.
+     * For more information about how long results of previous queries are available, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/cloudwatch_limits_cwl.html">CloudWatch Logs
+     * quotas</a>.
      * </p>
      * <p>
      * If the value of the <code>Status</code> field in the output is <code>Running</code>, this operation returns only
@@ -1275,6 +1635,227 @@ public interface AWSLogs {
      *      API Documentation</a>
      */
     PutDataProtectionPolicyResult putDataProtectionPolicy(PutDataProtectionPolicyRequest putDataProtectionPolicyRequest);
+
+    /**
+     * <p>
+     * Creates or updates a logical <i>delivery destination</i>. A delivery destination is an Amazon Web Services
+     * resource that represents an Amazon Web Services service that logs can be sent to. CloudWatch Logs, Amazon S3, and
+     * Kinesis Data Firehose are supported as logs delivery destinations.
+     * </p>
+     * <p>
+     * To configure logs delivery between a supported Amazon Web Services service and a destination, you must do the
+     * following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Create a delivery source, which is a logical object that represents the resource that is actually sending the
+     * logs. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_PutDeliverySource.html"
+     * >PutDeliverySource</a>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Use <code>PutDeliveryDestination</code> to create a <i>delivery destination</i>, which is a logical object that
+     * represents the actual delivery destination.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you are delivering logs cross-account, you must use <a href=
+     * "https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_PutDeliveryDestinationolicy.html"
+     * >PutDeliveryDestinationPolicy</a> in the destination account to assign an IAM policy to the destination. This
+     * policy allows delivery to that destination.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Use <code>CreateDelivery</code> to create a <i>delivery</i> by pairing exactly one delivery source and one
+     * delivery destination. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_CreateDelivery.html"
+     * >CreateDelivery</a>.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * You can configure a single delivery source to send logs to multiple destinations by creating multiple deliveries.
+     * You can also create multiple deliveries to configure multiple delivery sources to send logs to the same delivery
+     * destination.
+     * </p>
+     * <p>
+     * Only some Amazon Web Services services support being configured as a delivery source. These services are listed
+     * as <b>Supported [V2 Permissions]</b> in the table at <a href=
+     * "https://docs.aws.amazon.com/ AmazonCloudWatch/latest/logs/AWS-logs-and-resource-policy.html#AWS-vended-logs-permissions"
+     * >Enabling logging from Amazon Web Services services.</a>
+     * </p>
+     * <p>
+     * If you use this operation to update an existing delivery destination, all the current delivery destination
+     * parameters are overwritten with the new parameter values that you specify.
+     * </p>
+     * 
+     * @param putDeliveryDestinationRequest
+     * @return Result of the PutDeliveryDestination operation returned by the service.
+     * @throws ServiceUnavailableException
+     *         The service cannot complete the request.
+     * @throws ConflictException
+     *         This operation attempted to create a resource that already exists.
+     * @throws ValidationException
+     *         One of the parameters for the request is not valid.
+     * @throws ServiceQuotaExceededException
+     *         This request exceeds a service quota.
+     * @throws ThrottlingException
+     *         The request was throttled because of quota limits.
+     * @throws ResourceNotFoundException
+     *         The specified resource does not exist.
+     * @sample AWSLogs.PutDeliveryDestination
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/PutDeliveryDestination" target="_top">AWS
+     *      API Documentation</a>
+     */
+    PutDeliveryDestinationResult putDeliveryDestination(PutDeliveryDestinationRequest putDeliveryDestinationRequest);
+
+    /**
+     * <p>
+     * Creates and assigns an IAM policy that grants permissions to CloudWatch Logs to deliver logs cross-account to a
+     * specified destination in this account. To configure the delivery of logs from an Amazon Web Services service in
+     * another account to a logs delivery destination in the current account, you must do the following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Create a delivery source, which is a logical object that represents the resource that is actually sending the
+     * logs. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_PutDeliverySource.html"
+     * >PutDeliverySource</a>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Create a <i>delivery destination</i>, which is a logical object that represents the actual delivery destination.
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_PutDeliveryDestination.html"
+     * >PutDeliveryDestination</a>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Use this operation in the destination account to assign an IAM policy to the destination. This policy allows
+     * delivery to that destination.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Create a <i>delivery</i> by pairing exactly one delivery source and one delivery destination. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_CreateDelivery.html"
+     * >CreateDelivery</a>.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Only some Amazon Web Services services support being configured as a delivery source. These services are listed
+     * as <b>Supported [V2 Permissions]</b> in the table at <a href=
+     * "https://docs.aws.amazon.com/ AmazonCloudWatch/latest/logs/AWS-logs-and-resource-policy.html#AWS-vended-logs-permissions"
+     * >Enabling logging from Amazon Web Services services.</a>
+     * </p>
+     * <p>
+     * The contents of the policy must include two statements. One statement enables general logs delivery, and the
+     * other allows delivery to the chosen destination. See the examples for the needed policies.
+     * </p>
+     * 
+     * @param putDeliveryDestinationPolicyRequest
+     * @return Result of the PutDeliveryDestinationPolicy operation returned by the service.
+     * @throws ServiceUnavailableException
+     *         The service cannot complete the request.
+     * @throws ValidationException
+     *         One of the parameters for the request is not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource does not exist.
+     * @throws ConflictException
+     *         This operation attempted to create a resource that already exists.
+     * @sample AWSLogs.PutDeliveryDestinationPolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/PutDeliveryDestinationPolicy"
+     *      target="_top">AWS API Documentation</a>
+     */
+    PutDeliveryDestinationPolicyResult putDeliveryDestinationPolicy(PutDeliveryDestinationPolicyRequest putDeliveryDestinationPolicyRequest);
+
+    /**
+     * <p>
+     * Creates or updates a logical <i>delivery source</i>. A delivery source represents an Amazon Web Services resource
+     * that sends logs to an logs delivery destination. The destination can be CloudWatch Logs, Amazon S3, or Kinesis
+     * Data Firehose.
+     * </p>
+     * <p>
+     * To configure logs delivery between a delivery destination and an Amazon Web Services service that is supported as
+     * a delivery source, you must do the following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Use <code>PutDeliverySource</code> to create a delivery source, which is a logical object that represents the
+     * resource that is actually sending the logs.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Use <code>PutDeliveryDestination</code> to create a <i>delivery destination</i>, which is a logical object that
+     * represents the actual delivery destination. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_PutDeliveryDestination.html"
+     * >PutDeliveryDestination</a>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you are delivering logs cross-account, you must use <a href=
+     * "https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_PutDeliveryDestinationolicy.html"
+     * >PutDeliveryDestinationPolicy</a> in the destination account to assign an IAM policy to the destination. This
+     * policy allows delivery to that destination.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Use <code>CreateDelivery</code> to create a <i>delivery</i> by pairing exactly one delivery source and one
+     * delivery destination. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_CreateDelivery.html"
+     * >CreateDelivery</a>.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * You can configure a single delivery source to send logs to multiple destinations by creating multiple deliveries.
+     * You can also create multiple deliveries to configure multiple delivery sources to send logs to the same delivery
+     * destination.
+     * </p>
+     * <p>
+     * Only some Amazon Web Services services support being configured as a delivery source. These services are listed
+     * as <b>Supported [V2 Permissions]</b> in the table at <a href=
+     * "https://docs.aws.amazon.com/ AmazonCloudWatch/latest/logs/AWS-logs-and-resource-policy.html#AWS-vended-logs-permissions"
+     * >Enabling logging from Amazon Web Services services.</a>
+     * </p>
+     * <p>
+     * If you use this operation to update an existing delivery source, all the current delivery source parameters are
+     * overwritten with the new parameter values that you specify.
+     * </p>
+     * 
+     * @param putDeliverySourceRequest
+     * @return Result of the PutDeliverySource operation returned by the service.
+     * @throws ServiceUnavailableException
+     *         The service cannot complete the request.
+     * @throws ConflictException
+     *         This operation attempted to create a resource that already exists.
+     * @throws ValidationException
+     *         One of the parameters for the request is not valid.
+     * @throws ServiceQuotaExceededException
+     *         This request exceeds a service quota.
+     * @throws ResourceNotFoundException
+     *         The specified resource does not exist.
+     * @throws ThrottlingException
+     *         The request was throttled because of quota limits.
+     * @sample AWSLogs.PutDeliverySource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/PutDeliverySource" target="_top">AWS API
+     *      Documentation</a>
+     */
+    PutDeliverySourceResult putDeliverySource(PutDeliverySourceRequest putDeliverySourceRequest);
 
     /**
      * <p>

@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Configuration required for a custom classification model.
+ * Configuration required for a document classification model.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/comprehend-2017-11-27/DocumentClassificationConfig"

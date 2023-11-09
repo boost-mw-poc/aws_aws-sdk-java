@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Configuration about the custom classifier associated with the flywheel.
+ * Configuration about the model associated with a flywheel.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/comprehend-2017-11-27/TaskConfig" target="_top">AWS API
@@ -36,7 +36,7 @@ public class TaskConfig implements Serializable, Cloneable, StructuredPojo {
     private String languageCode;
     /**
      * <p>
-     * Configuration required for a classification model.
+     * Configuration required for a document classification model.
      * </p>
      */
     private DocumentClassificationConfig documentClassificationConfig;
@@ -108,11 +108,11 @@ public class TaskConfig implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Configuration required for a classification model.
+     * Configuration required for a document classification model.
      * </p>
      * 
      * @param documentClassificationConfig
-     *        Configuration required for a classification model.
+     *        Configuration required for a document classification model.
      */
 
     public void setDocumentClassificationConfig(DocumentClassificationConfig documentClassificationConfig) {
@@ -121,10 +121,10 @@ public class TaskConfig implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Configuration required for a classification model.
+     * Configuration required for a document classification model.
      * </p>
      * 
-     * @return Configuration required for a classification model.
+     * @return Configuration required for a document classification model.
      */
 
     public DocumentClassificationConfig getDocumentClassificationConfig() {
@@ -133,11 +133,11 @@ public class TaskConfig implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Configuration required for a classification model.
+     * Configuration required for a document classification model.
      * </p>
      * 
      * @param documentClassificationConfig
-     *        Configuration required for a classification model.
+     *        Configuration required for a document classification model.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

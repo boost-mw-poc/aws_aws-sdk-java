@@ -25,7 +25,7 @@ public class ListAddonsResult extends com.amazonaws.AmazonWebServiceResult<com.a
 
     /**
      * <p>
-     * A list of available add-ons.
+     * A list of installed add-ons.
      * </p>
      */
     private java.util.List<String> addons;
@@ -46,10 +46,10 @@ public class ListAddonsResult extends com.amazonaws.AmazonWebServiceResult<com.a
 
     /**
      * <p>
-     * A list of available add-ons.
+     * A list of installed add-ons.
      * </p>
      * 
-     * @return A list of available add-ons.
+     * @return A list of installed add-ons.
      */
 
     public java.util.List<String> getAddons() {
@@ -58,11 +58,11 @@ public class ListAddonsResult extends com.amazonaws.AmazonWebServiceResult<com.a
 
     /**
      * <p>
-     * A list of available add-ons.
+     * A list of installed add-ons.
      * </p>
      * 
      * @param addons
-     *        A list of available add-ons.
+     *        A list of installed add-ons.
      */
 
     public void setAddons(java.util.Collection<String> addons) {
@@ -76,7 +76,7 @@ public class ListAddonsResult extends com.amazonaws.AmazonWebServiceResult<com.a
 
     /**
      * <p>
-     * A list of available add-ons.
+     * A list of installed add-ons.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -85,7 +85,7 @@ public class ListAddonsResult extends com.amazonaws.AmazonWebServiceResult<com.a
      * </p>
      * 
      * @param addons
-     *        A list of available add-ons.
+     *        A list of installed add-ons.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -101,11 +101,11 @@ public class ListAddonsResult extends com.amazonaws.AmazonWebServiceResult<com.a
 
     /**
      * <p>
-     * A list of available add-ons.
+     * A list of installed add-ons.
      * </p>
      * 
      * @param addons
-     *        A list of available add-ons.
+     *        A list of installed add-ons.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

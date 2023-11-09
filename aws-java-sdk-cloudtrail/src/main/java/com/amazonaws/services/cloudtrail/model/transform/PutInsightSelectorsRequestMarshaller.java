@@ -32,6 +32,10 @@ public class PutInsightSelectorsRequestMarshaller {
             .marshallLocationName("TrailName").build();
     private static final MarshallingInfo<List> INSIGHTSELECTORS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("InsightSelectors").build();
+    private static final MarshallingInfo<String> EVENTDATASTORE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EventDataStore").build();
+    private static final MarshallingInfo<String> INSIGHTSDESTINATION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("InsightsDestination").build();
 
     private static final PutInsightSelectorsRequestMarshaller instance = new PutInsightSelectorsRequestMarshaller();
 
@@ -51,6 +55,8 @@ public class PutInsightSelectorsRequestMarshaller {
         try {
             protocolMarshaller.marshall(putInsightSelectorsRequest.getTrailName(), TRAILNAME_BINDING);
             protocolMarshaller.marshall(putInsightSelectorsRequest.getInsightSelectors(), INSIGHTSELECTORS_BINDING);
+            protocolMarshaller.marshall(putInsightSelectorsRequest.getEventDataStore(), EVENTDATASTORE_BINDING);
+            protocolMarshaller.marshall(putInsightSelectorsRequest.getInsightsDestination(), INSIGHTSDESTINATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

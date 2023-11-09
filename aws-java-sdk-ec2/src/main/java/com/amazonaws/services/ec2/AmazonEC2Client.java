@@ -24239,6 +24239,76 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
     /**
      * <p>
+     * Disables the <i>block public access for snapshots</i> setting at the account level for the specified Amazon Web
+     * Services Region. After you disable block public access for snapshots in a Region, users can publicly share
+     * snapshots in that Region.
+     * </p>
+     * <p>
+     * If block public access is enabled in <code>block-all-sharing</code> mode, and you disable block public access,
+     * all snapshots that were previously publicly shared are no longer treated as private and they become publicly
+     * accessible again.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-public-access-snapshots.html"> Block public
+     * access for snapshots</a> in the <i>Amazon Elastic Compute Cloud User Guide</i> .
+     * </p>
+     * <p/>
+     * 
+     * @param disableSnapshotBlockPublicAccessRequest
+     * @return Result of the DisableSnapshotBlockPublicAccess operation returned by the service.
+     * @sample AmazonEC2.DisableSnapshotBlockPublicAccess
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DisableSnapshotBlockPublicAccess"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DisableSnapshotBlockPublicAccessResult disableSnapshotBlockPublicAccess(DisableSnapshotBlockPublicAccessRequest request) {
+        request = beforeClientExecution(request);
+        return executeDisableSnapshotBlockPublicAccess(request);
+    }
+
+    @SdkInternalApi
+    final DisableSnapshotBlockPublicAccessResult executeDisableSnapshotBlockPublicAccess(
+            DisableSnapshotBlockPublicAccessRequest disableSnapshotBlockPublicAccessRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(disableSnapshotBlockPublicAccessRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DisableSnapshotBlockPublicAccessRequest> request = null;
+        Response<DisableSnapshotBlockPublicAccessResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DisableSnapshotBlockPublicAccessRequestMarshaller().marshall(super.beforeMarshalling(disableSnapshotBlockPublicAccessRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DisableSnapshotBlockPublicAccess");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<DisableSnapshotBlockPublicAccessResult> responseHandler = new StaxResponseHandler<DisableSnapshotBlockPublicAccessResult>(
+                    new DisableSnapshotBlockPublicAccessResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Disables the specified resource attachment from propagating routes to the specified propagation route table.
      * </p>
      * 
@@ -26039,6 +26109,76 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
             StaxResponseHandler<EnableSerialConsoleAccessResult> responseHandler = new StaxResponseHandler<EnableSerialConsoleAccessResult>(
                     new EnableSerialConsoleAccessResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Enables or modifies the <i>block public access for snapshots</i> setting at the account level for the specified
+     * Amazon Web Services Region. After you enable block public access for snapshots in a Region, users can no longer
+     * request public sharing for snapshots in that Region. Snapshots that are already publicly shared are either
+     * treated as private or they remain publicly shared, depending on the <b>State</b> that you specify.
+     * </p>
+     * <p>
+     * If block public access is enabled in <code>block-all-sharing</code> mode, and you change the mode to
+     * <code>block-new-sharing</code>, all snapshots that were previously publicly shared are no longer treated as
+     * private and they become publicly accessible again.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-public-access-snapshots.html"> Block public
+     * access for snapshots</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * </p>
+     * 
+     * @param enableSnapshotBlockPublicAccessRequest
+     * @return Result of the EnableSnapshotBlockPublicAccess operation returned by the service.
+     * @sample AmazonEC2.EnableSnapshotBlockPublicAccess
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/EnableSnapshotBlockPublicAccess"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public EnableSnapshotBlockPublicAccessResult enableSnapshotBlockPublicAccess(EnableSnapshotBlockPublicAccessRequest request) {
+        request = beforeClientExecution(request);
+        return executeEnableSnapshotBlockPublicAccess(request);
+    }
+
+    @SdkInternalApi
+    final EnableSnapshotBlockPublicAccessResult executeEnableSnapshotBlockPublicAccess(
+            EnableSnapshotBlockPublicAccessRequest enableSnapshotBlockPublicAccessRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(enableSnapshotBlockPublicAccessRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<EnableSnapshotBlockPublicAccessRequest> request = null;
+        Response<EnableSnapshotBlockPublicAccessResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new EnableSnapshotBlockPublicAccessRequestMarshaller().marshall(super.beforeMarshalling(enableSnapshotBlockPublicAccessRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "EnableSnapshotBlockPublicAccess");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<EnableSnapshotBlockPublicAccessResult> responseHandler = new StaxResponseHandler<EnableSnapshotBlockPublicAccessResult>(
+                    new EnableSnapshotBlockPublicAccessResultStaxUnmarshaller());
 
             response = invoke(request, responseHandler, executionContext);
 
@@ -28499,6 +28639,68 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
             StaxResponseHandler<GetSerialConsoleAccessStatusResult> responseHandler = new StaxResponseHandler<GetSerialConsoleAccessStatusResult>(
                     new GetSerialConsoleAccessStatusResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Gets the current state of <i>block public access for snapshots</i> setting for the account and Region.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-public-access-snapshots.html"> Block public
+     * access for snapshots</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * </p>
+     * 
+     * @param getSnapshotBlockPublicAccessStateRequest
+     * @return Result of the GetSnapshotBlockPublicAccessState operation returned by the service.
+     * @sample AmazonEC2.GetSnapshotBlockPublicAccessState
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/GetSnapshotBlockPublicAccessState"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetSnapshotBlockPublicAccessStateResult getSnapshotBlockPublicAccessState(GetSnapshotBlockPublicAccessStateRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetSnapshotBlockPublicAccessState(request);
+    }
+
+    @SdkInternalApi
+    final GetSnapshotBlockPublicAccessStateResult executeGetSnapshotBlockPublicAccessState(
+            GetSnapshotBlockPublicAccessStateRequest getSnapshotBlockPublicAccessStateRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getSnapshotBlockPublicAccessStateRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetSnapshotBlockPublicAccessStateRequest> request = null;
+        Response<GetSnapshotBlockPublicAccessStateResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetSnapshotBlockPublicAccessStateRequestMarshaller().marshall(super.beforeMarshalling(getSnapshotBlockPublicAccessStateRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetSnapshotBlockPublicAccessState");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<GetSnapshotBlockPublicAccessStateResult> responseHandler = new StaxResponseHandler<GetSnapshotBlockPublicAccessStateResult>(
+                    new GetSnapshotBlockPublicAccessStateResultStaxUnmarshaller());
 
             response = invoke(request, responseHandler, executionContext);
 

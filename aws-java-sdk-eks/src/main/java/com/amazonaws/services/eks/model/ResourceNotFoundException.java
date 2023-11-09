@@ -45,6 +45,12 @@ public class ResourceNotFoundException extends com.amazonaws.services.eks.model.
     private String fargateProfileName;
 
     private String addonName;
+    /**
+     * <p>
+     * The Amazon EKS subscription ID with the exception.
+     * </p>
+     */
+    private String subscriptionId;
 
     /**
      * Constructs a new ResourceNotFoundException with the specified error message.
@@ -207,6 +213,48 @@ public class ResourceNotFoundException extends com.amazonaws.services.eks.model.
 
     public ResourceNotFoundException withAddonName(String addonName) {
         setAddonName(addonName);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The Amazon EKS subscription ID with the exception.
+     * </p>
+     * 
+     * @param subscriptionId
+     *        The Amazon EKS subscription ID with the exception.
+     */
+
+    @com.fasterxml.jackson.annotation.JsonProperty("subscriptionId")
+    public void setSubscriptionId(String subscriptionId) {
+        this.subscriptionId = subscriptionId;
+    }
+
+    /**
+     * <p>
+     * The Amazon EKS subscription ID with the exception.
+     * </p>
+     * 
+     * @return The Amazon EKS subscription ID with the exception.
+     */
+
+    @com.fasterxml.jackson.annotation.JsonProperty("subscriptionId")
+    public String getSubscriptionId() {
+        return this.subscriptionId;
+    }
+
+    /**
+     * <p>
+     * The Amazon EKS subscription ID with the exception.
+     * </p>
+     * 
+     * @param subscriptionId
+     *        The Amazon EKS subscription ID with the exception.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ResourceNotFoundException withSubscriptionId(String subscriptionId) {
+        setSubscriptionId(subscriptionId);
         return this;
     }
 

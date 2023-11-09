@@ -259,6 +259,147 @@ public interface AWSLogsAsync extends AWSLogs {
 
     /**
      * <p>
+     * Creates a <i>delivery</i>. A delivery is a connection between a logical <i>delivery source</i> and a logical
+     * <i>delivery destination</i> that you have already created.
+     * </p>
+     * <p>
+     * Only some Amazon Web Services services support being configured as a delivery source using this operation. These
+     * services are listed as <b>Supported [V2 Permissions]</b> in the table at <a href=
+     * "https://docs.aws.amazon.com/ AmazonCloudWatch/latest/logs/AWS-logs-and-resource-policy.html#AWS-vended-logs-permissions"
+     * >Enabling logging from Amazon Web Services services.</a>
+     * </p>
+     * <p>
+     * A delivery destination can represent a log group in CloudWatch Logs, an Amazon S3 bucket, or a delivery stream in
+     * Kinesis Data Firehose.
+     * </p>
+     * <p>
+     * To configure logs delivery between a supported Amazon Web Services service and a destination, you must do the
+     * following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Create a delivery source, which is a logical object that represents the resource that is actually sending the
+     * logs. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_PutDeliverySource.html"
+     * >PutDeliverySource</a>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Create a <i>delivery destination</i>, which is a logical object that represents the actual delivery destination.
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_PutDeliveryDestination.html"
+     * >PutDeliveryDestination</a>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you are delivering logs cross-account, you must use <a href=
+     * "https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_PutDeliveryDestinationolicy.html"
+     * >PutDeliveryDestinationPolicy</a> in the destination account to assign an IAM policy to the destination. This
+     * policy allows delivery to that destination.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Use <code>CreateDelivery</code> to create a <i>delivery</i> by pairing exactly one delivery source and one
+     * delivery destination.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * You can configure a single delivery source to send logs to multiple destinations by creating multiple deliveries.
+     * You can also create multiple deliveries to configure multiple delivery sources to send logs to the same delivery
+     * destination.
+     * </p>
+     * <p>
+     * You can't update an existing delivery. You can only create and delete deliveries.
+     * </p>
+     * 
+     * @param createDeliveryRequest
+     * @return A Java Future containing the result of the CreateDelivery operation returned by the service.
+     * @sample AWSLogsAsync.CreateDelivery
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/CreateDelivery" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<CreateDeliveryResult> createDeliveryAsync(CreateDeliveryRequest createDeliveryRequest);
+
+    /**
+     * <p>
+     * Creates a <i>delivery</i>. A delivery is a connection between a logical <i>delivery source</i> and a logical
+     * <i>delivery destination</i> that you have already created.
+     * </p>
+     * <p>
+     * Only some Amazon Web Services services support being configured as a delivery source using this operation. These
+     * services are listed as <b>Supported [V2 Permissions]</b> in the table at <a href=
+     * "https://docs.aws.amazon.com/ AmazonCloudWatch/latest/logs/AWS-logs-and-resource-policy.html#AWS-vended-logs-permissions"
+     * >Enabling logging from Amazon Web Services services.</a>
+     * </p>
+     * <p>
+     * A delivery destination can represent a log group in CloudWatch Logs, an Amazon S3 bucket, or a delivery stream in
+     * Kinesis Data Firehose.
+     * </p>
+     * <p>
+     * To configure logs delivery between a supported Amazon Web Services service and a destination, you must do the
+     * following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Create a delivery source, which is a logical object that represents the resource that is actually sending the
+     * logs. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_PutDeliverySource.html"
+     * >PutDeliverySource</a>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Create a <i>delivery destination</i>, which is a logical object that represents the actual delivery destination.
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_PutDeliveryDestination.html"
+     * >PutDeliveryDestination</a>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you are delivering logs cross-account, you must use <a href=
+     * "https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_PutDeliveryDestinationolicy.html"
+     * >PutDeliveryDestinationPolicy</a> in the destination account to assign an IAM policy to the destination. This
+     * policy allows delivery to that destination.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Use <code>CreateDelivery</code> to create a <i>delivery</i> by pairing exactly one delivery source and one
+     * delivery destination.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * You can configure a single delivery source to send logs to multiple destinations by creating multiple deliveries.
+     * You can also create multiple deliveries to configure multiple delivery sources to send logs to the same delivery
+     * destination.
+     * </p>
+     * <p>
+     * You can't update an existing delivery. You can only create and delete deliveries.
+     * </p>
+     * 
+     * @param createDeliveryRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateDelivery operation returned by the service.
+     * @sample AWSLogsAsyncHandler.CreateDelivery
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/CreateDelivery" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<CreateDeliveryResult> createDeliveryAsync(CreateDeliveryRequest createDeliveryRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateDeliveryRequest, CreateDeliveryResult> asyncHandler);
+
+    /**
+     * <p>
      * Creates an export task so that you can efficiently export data from a log group to an Amazon S3 bucket. When you
      * perform a <code>CreateExportTask</code> operation, you must use credentials that have permission to write to the
      * S3 bucket that you specify as the destination.
@@ -628,6 +769,172 @@ public interface AWSLogsAsync extends AWSLogs {
 
     /**
      * <p>
+     * Deletes s <i>delivery</i>. A delivery is a connection between a logical <i>delivery source</i> and a logical
+     * <i>delivery destination</i>. Deleting a delivery only deletes the connection between the delivery source and
+     * delivery destination. It does not delete the delivery destination or the delivery source.
+     * </p>
+     * 
+     * @param deleteDeliveryRequest
+     * @return A Java Future containing the result of the DeleteDelivery operation returned by the service.
+     * @sample AWSLogsAsync.DeleteDelivery
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/DeleteDelivery" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteDeliveryResult> deleteDeliveryAsync(DeleteDeliveryRequest deleteDeliveryRequest);
+
+    /**
+     * <p>
+     * Deletes s <i>delivery</i>. A delivery is a connection between a logical <i>delivery source</i> and a logical
+     * <i>delivery destination</i>. Deleting a delivery only deletes the connection between the delivery source and
+     * delivery destination. It does not delete the delivery destination or the delivery source.
+     * </p>
+     * 
+     * @param deleteDeliveryRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteDelivery operation returned by the service.
+     * @sample AWSLogsAsyncHandler.DeleteDelivery
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/DeleteDelivery" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteDeliveryResult> deleteDeliveryAsync(DeleteDeliveryRequest deleteDeliveryRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteDeliveryRequest, DeleteDeliveryResult> asyncHandler);
+
+    /**
+     * <p>
+     * Deletes a <i>delivery destination</i>. A delivery is a connection between a logical <i>delivery source</i> and a
+     * logical <i>delivery destination</i>.
+     * </p>
+     * <p>
+     * You can't delete a delivery destination if any current deliveries are associated with it. To find whether any
+     * deliveries are associated with this delivery destination, use the <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_DescribeDeliveries.html"
+     * >DescribeDeliveries</a> operation and check the <code>deliveryDestinationArn</code> field in the results.
+     * </p>
+     * 
+     * @param deleteDeliveryDestinationRequest
+     * @return A Java Future containing the result of the DeleteDeliveryDestination operation returned by the service.
+     * @sample AWSLogsAsync.DeleteDeliveryDestination
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/DeleteDeliveryDestination" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteDeliveryDestinationResult> deleteDeliveryDestinationAsync(
+            DeleteDeliveryDestinationRequest deleteDeliveryDestinationRequest);
+
+    /**
+     * <p>
+     * Deletes a <i>delivery destination</i>. A delivery is a connection between a logical <i>delivery source</i> and a
+     * logical <i>delivery destination</i>.
+     * </p>
+     * <p>
+     * You can't delete a delivery destination if any current deliveries are associated with it. To find whether any
+     * deliveries are associated with this delivery destination, use the <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_DescribeDeliveries.html"
+     * >DescribeDeliveries</a> operation and check the <code>deliveryDestinationArn</code> field in the results.
+     * </p>
+     * 
+     * @param deleteDeliveryDestinationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteDeliveryDestination operation returned by the service.
+     * @sample AWSLogsAsyncHandler.DeleteDeliveryDestination
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/DeleteDeliveryDestination" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteDeliveryDestinationResult> deleteDeliveryDestinationAsync(
+            DeleteDeliveryDestinationRequest deleteDeliveryDestinationRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteDeliveryDestinationRequest, DeleteDeliveryDestinationResult> asyncHandler);
+
+    /**
+     * <p>
+     * Deletes a delivery destination policy. For more information about these policies, see <a href=
+     * "https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_PutDeliveryDestinationPolicy.html"
+     * >PutDeliveryDestinationPolicy</a>.
+     * </p>
+     * 
+     * @param deleteDeliveryDestinationPolicyRequest
+     * @return A Java Future containing the result of the DeleteDeliveryDestinationPolicy operation returned by the
+     *         service.
+     * @sample AWSLogsAsync.DeleteDeliveryDestinationPolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/DeleteDeliveryDestinationPolicy"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteDeliveryDestinationPolicyResult> deleteDeliveryDestinationPolicyAsync(
+            DeleteDeliveryDestinationPolicyRequest deleteDeliveryDestinationPolicyRequest);
+
+    /**
+     * <p>
+     * Deletes a delivery destination policy. For more information about these policies, see <a href=
+     * "https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_PutDeliveryDestinationPolicy.html"
+     * >PutDeliveryDestinationPolicy</a>.
+     * </p>
+     * 
+     * @param deleteDeliveryDestinationPolicyRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteDeliveryDestinationPolicy operation returned by the
+     *         service.
+     * @sample AWSLogsAsyncHandler.DeleteDeliveryDestinationPolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/DeleteDeliveryDestinationPolicy"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteDeliveryDestinationPolicyResult> deleteDeliveryDestinationPolicyAsync(
+            DeleteDeliveryDestinationPolicyRequest deleteDeliveryDestinationPolicyRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteDeliveryDestinationPolicyRequest, DeleteDeliveryDestinationPolicyResult> asyncHandler);
+
+    /**
+     * <p>
+     * Deletes a <i>delivery source</i>. A delivery is a connection between a logical <i>delivery source</i> and a
+     * logical <i>delivery destination</i>.
+     * </p>
+     * <p>
+     * You can't delete a delivery source if any current deliveries are associated with it. To find whether any
+     * deliveries are associated with this delivery source, use the <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_DescribeDeliveries.html"
+     * >DescribeDeliveries</a> operation and check the <code>deliverySourceName</code> field in the results.
+     * </p>
+     * 
+     * @param deleteDeliverySourceRequest
+     * @return A Java Future containing the result of the DeleteDeliverySource operation returned by the service.
+     * @sample AWSLogsAsync.DeleteDeliverySource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/DeleteDeliverySource" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteDeliverySourceResult> deleteDeliverySourceAsync(DeleteDeliverySourceRequest deleteDeliverySourceRequest);
+
+    /**
+     * <p>
+     * Deletes a <i>delivery source</i>. A delivery is a connection between a logical <i>delivery source</i> and a
+     * logical <i>delivery destination</i>.
+     * </p>
+     * <p>
+     * You can't delete a delivery source if any current deliveries are associated with it. To find whether any
+     * deliveries are associated with this delivery source, use the <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_DescribeDeliveries.html"
+     * >DescribeDeliveries</a> operation and check the <code>deliverySourceName</code> field in the results.
+     * </p>
+     * 
+     * @param deleteDeliverySourceRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteDeliverySource operation returned by the service.
+     * @sample AWSLogsAsyncHandler.DeleteDeliverySource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/DeleteDeliverySource" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteDeliverySourceResult> deleteDeliverySourceAsync(DeleteDeliverySourceRequest deleteDeliverySourceRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteDeliverySourceRequest, DeleteDeliverySourceResult> asyncHandler);
+
+    /**
+     * <p>
      * Deletes the specified destination, and eventually disables all the subscription filters that publish to it. This
      * operation does not delete the physical resource encapsulated by the destination.
      * </p>
@@ -932,6 +1239,103 @@ public interface AWSLogsAsync extends AWSLogs {
      */
     java.util.concurrent.Future<DescribeAccountPoliciesResult> describeAccountPoliciesAsync(DescribeAccountPoliciesRequest describeAccountPoliciesRequest,
             com.amazonaws.handlers.AsyncHandler<DescribeAccountPoliciesRequest, DescribeAccountPoliciesResult> asyncHandler);
+
+    /**
+     * <p>
+     * Retrieves a list of the deliveries that have been created in the account.
+     * </p>
+     * 
+     * @param describeDeliveriesRequest
+     * @return A Java Future containing the result of the DescribeDeliveries operation returned by the service.
+     * @sample AWSLogsAsync.DescribeDeliveries
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/DescribeDeliveries" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeDeliveriesResult> describeDeliveriesAsync(DescribeDeliveriesRequest describeDeliveriesRequest);
+
+    /**
+     * <p>
+     * Retrieves a list of the deliveries that have been created in the account.
+     * </p>
+     * 
+     * @param describeDeliveriesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeDeliveries operation returned by the service.
+     * @sample AWSLogsAsyncHandler.DescribeDeliveries
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/DescribeDeliveries" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeDeliveriesResult> describeDeliveriesAsync(DescribeDeliveriesRequest describeDeliveriesRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeDeliveriesRequest, DescribeDeliveriesResult> asyncHandler);
+
+    /**
+     * <p>
+     * Retrieves a list of the delivery destinations that have been created in the account.
+     * </p>
+     * 
+     * @param describeDeliveryDestinationsRequest
+     * @return A Java Future containing the result of the DescribeDeliveryDestinations operation returned by the
+     *         service.
+     * @sample AWSLogsAsync.DescribeDeliveryDestinations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/DescribeDeliveryDestinations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeDeliveryDestinationsResult> describeDeliveryDestinationsAsync(
+            DescribeDeliveryDestinationsRequest describeDeliveryDestinationsRequest);
+
+    /**
+     * <p>
+     * Retrieves a list of the delivery destinations that have been created in the account.
+     * </p>
+     * 
+     * @param describeDeliveryDestinationsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeDeliveryDestinations operation returned by the
+     *         service.
+     * @sample AWSLogsAsyncHandler.DescribeDeliveryDestinations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/DescribeDeliveryDestinations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeDeliveryDestinationsResult> describeDeliveryDestinationsAsync(
+            DescribeDeliveryDestinationsRequest describeDeliveryDestinationsRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeDeliveryDestinationsRequest, DescribeDeliveryDestinationsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Retrieves a list of the delivery sources that have been created in the account.
+     * </p>
+     * 
+     * @param describeDeliverySourcesRequest
+     * @return A Java Future containing the result of the DescribeDeliverySources operation returned by the service.
+     * @sample AWSLogsAsync.DescribeDeliverySources
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/DescribeDeliverySources" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeDeliverySourcesResult> describeDeliverySourcesAsync(DescribeDeliverySourcesRequest describeDeliverySourcesRequest);
+
+    /**
+     * <p>
+     * Retrieves a list of the delivery sources that have been created in the account.
+     * </p>
+     * 
+     * @param describeDeliverySourcesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeDeliverySources operation returned by the service.
+     * @sample AWSLogsAsyncHandler.DescribeDeliverySources
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/DescribeDeliverySources" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeDeliverySourcesResult> describeDeliverySourcesAsync(DescribeDeliverySourcesRequest describeDeliverySourcesRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeDeliverySourcesRequest, DescribeDeliverySourcesResult> asyncHandler);
 
     /**
      * <p>
@@ -1519,6 +1923,154 @@ public interface AWSLogsAsync extends AWSLogs {
 
     /**
      * <p>
+     * Returns complete information about one <i>delivery</i>. A delivery is a connection between a logical <i>delivery
+     * source</i> and a logical <i>delivery destination</i>
+     * </p>
+     * <p>
+     * You need to specify the delivery <code>id</code> in this operation. You can find the IDs of the deliveries in
+     * your account with the <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_DescribeDeliveries.html"
+     * >DescribeDeliveries</a> operation.
+     * </p>
+     * 
+     * @param getDeliveryRequest
+     * @return A Java Future containing the result of the GetDelivery operation returned by the service.
+     * @sample AWSLogsAsync.GetDelivery
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/GetDelivery" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetDeliveryResult> getDeliveryAsync(GetDeliveryRequest getDeliveryRequest);
+
+    /**
+     * <p>
+     * Returns complete information about one <i>delivery</i>. A delivery is a connection between a logical <i>delivery
+     * source</i> and a logical <i>delivery destination</i>
+     * </p>
+     * <p>
+     * You need to specify the delivery <code>id</code> in this operation. You can find the IDs of the deliveries in
+     * your account with the <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_DescribeDeliveries.html"
+     * >DescribeDeliveries</a> operation.
+     * </p>
+     * 
+     * @param getDeliveryRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetDelivery operation returned by the service.
+     * @sample AWSLogsAsyncHandler.GetDelivery
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/GetDelivery" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetDeliveryResult> getDeliveryAsync(GetDeliveryRequest getDeliveryRequest,
+            com.amazonaws.handlers.AsyncHandler<GetDeliveryRequest, GetDeliveryResult> asyncHandler);
+
+    /**
+     * <p>
+     * Retrieves complete information about one delivery destination.
+     * </p>
+     * 
+     * @param getDeliveryDestinationRequest
+     * @return A Java Future containing the result of the GetDeliveryDestination operation returned by the service.
+     * @sample AWSLogsAsync.GetDeliveryDestination
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/GetDeliveryDestination" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<GetDeliveryDestinationResult> getDeliveryDestinationAsync(GetDeliveryDestinationRequest getDeliveryDestinationRequest);
+
+    /**
+     * <p>
+     * Retrieves complete information about one delivery destination.
+     * </p>
+     * 
+     * @param getDeliveryDestinationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetDeliveryDestination operation returned by the service.
+     * @sample AWSLogsAsyncHandler.GetDeliveryDestination
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/GetDeliveryDestination" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<GetDeliveryDestinationResult> getDeliveryDestinationAsync(GetDeliveryDestinationRequest getDeliveryDestinationRequest,
+            com.amazonaws.handlers.AsyncHandler<GetDeliveryDestinationRequest, GetDeliveryDestinationResult> asyncHandler);
+
+    /**
+     * <p>
+     * Retrieves the delivery destination policy assigned to the delivery destination that you specify. For more
+     * information about delivery destinations and their policies, see <a href=
+     * "https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_PutDeliveryDestinationPolicy.html"
+     * >PutDeliveryDestinationPolicy</a>.
+     * </p>
+     * 
+     * @param getDeliveryDestinationPolicyRequest
+     * @return A Java Future containing the result of the GetDeliveryDestinationPolicy operation returned by the
+     *         service.
+     * @sample AWSLogsAsync.GetDeliveryDestinationPolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/GetDeliveryDestinationPolicy"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetDeliveryDestinationPolicyResult> getDeliveryDestinationPolicyAsync(
+            GetDeliveryDestinationPolicyRequest getDeliveryDestinationPolicyRequest);
+
+    /**
+     * <p>
+     * Retrieves the delivery destination policy assigned to the delivery destination that you specify. For more
+     * information about delivery destinations and their policies, see <a href=
+     * "https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_PutDeliveryDestinationPolicy.html"
+     * >PutDeliveryDestinationPolicy</a>.
+     * </p>
+     * 
+     * @param getDeliveryDestinationPolicyRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetDeliveryDestinationPolicy operation returned by the
+     *         service.
+     * @sample AWSLogsAsyncHandler.GetDeliveryDestinationPolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/GetDeliveryDestinationPolicy"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetDeliveryDestinationPolicyResult> getDeliveryDestinationPolicyAsync(
+            GetDeliveryDestinationPolicyRequest getDeliveryDestinationPolicyRequest,
+            com.amazonaws.handlers.AsyncHandler<GetDeliveryDestinationPolicyRequest, GetDeliveryDestinationPolicyResult> asyncHandler);
+
+    /**
+     * <p>
+     * Retrieves complete information about one delivery source.
+     * </p>
+     * 
+     * @param getDeliverySourceRequest
+     * @return A Java Future containing the result of the GetDeliverySource operation returned by the service.
+     * @sample AWSLogsAsync.GetDeliverySource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/GetDeliverySource" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetDeliverySourceResult> getDeliverySourceAsync(GetDeliverySourceRequest getDeliverySourceRequest);
+
+    /**
+     * <p>
+     * Retrieves complete information about one delivery source.
+     * </p>
+     * 
+     * @param getDeliverySourceRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetDeliverySource operation returned by the service.
+     * @sample AWSLogsAsyncHandler.GetDeliverySource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/GetDeliverySource" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetDeliverySourceResult> getDeliverySourceAsync(GetDeliverySourceRequest getDeliverySourceRequest,
+            com.amazonaws.handlers.AsyncHandler<GetDeliverySourceRequest, GetDeliverySourceResult> asyncHandler);
+
+    /**
+     * <p>
      * Lists log events from the specified log stream. You can list all of the log events or filter using a time range.
      * </p>
      * <p>
@@ -1705,6 +2257,9 @@ public interface AWSLogsAsync extends AWSLogs {
      * <p>
      * <code>GetQueryResults</code> does not start running a query. To run a query, use <a
      * href="https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_StartQuery.html">StartQuery</a>.
+     * For more information about how long results of previous queries are available, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/cloudwatch_limits_cwl.html">CloudWatch Logs
+     * quotas</a>.
      * </p>
      * <p>
      * If the value of the <code>Status</code> field in the output is <code>Running</code>, this operation returns only
@@ -1739,6 +2294,9 @@ public interface AWSLogsAsync extends AWSLogs {
      * <p>
      * <code>GetQueryResults</code> does not start running a query. To run a query, use <a
      * href="https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_StartQuery.html">StartQuery</a>.
+     * For more information about how long results of previous queries are available, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/cloudwatch_limits_cwl.html">CloudWatch Logs
+     * quotas</a>.
      * </p>
      * <p>
      * If the value of the <code>Status</code> field in the output is <code>Running</code>, this operation returns only
@@ -2046,6 +2604,403 @@ public interface AWSLogsAsync extends AWSLogs {
      */
     java.util.concurrent.Future<PutDataProtectionPolicyResult> putDataProtectionPolicyAsync(PutDataProtectionPolicyRequest putDataProtectionPolicyRequest,
             com.amazonaws.handlers.AsyncHandler<PutDataProtectionPolicyRequest, PutDataProtectionPolicyResult> asyncHandler);
+
+    /**
+     * <p>
+     * Creates or updates a logical <i>delivery destination</i>. A delivery destination is an Amazon Web Services
+     * resource that represents an Amazon Web Services service that logs can be sent to. CloudWatch Logs, Amazon S3, and
+     * Kinesis Data Firehose are supported as logs delivery destinations.
+     * </p>
+     * <p>
+     * To configure logs delivery between a supported Amazon Web Services service and a destination, you must do the
+     * following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Create a delivery source, which is a logical object that represents the resource that is actually sending the
+     * logs. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_PutDeliverySource.html"
+     * >PutDeliverySource</a>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Use <code>PutDeliveryDestination</code> to create a <i>delivery destination</i>, which is a logical object that
+     * represents the actual delivery destination.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you are delivering logs cross-account, you must use <a href=
+     * "https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_PutDeliveryDestinationolicy.html"
+     * >PutDeliveryDestinationPolicy</a> in the destination account to assign an IAM policy to the destination. This
+     * policy allows delivery to that destination.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Use <code>CreateDelivery</code> to create a <i>delivery</i> by pairing exactly one delivery source and one
+     * delivery destination. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_CreateDelivery.html"
+     * >CreateDelivery</a>.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * You can configure a single delivery source to send logs to multiple destinations by creating multiple deliveries.
+     * You can also create multiple deliveries to configure multiple delivery sources to send logs to the same delivery
+     * destination.
+     * </p>
+     * <p>
+     * Only some Amazon Web Services services support being configured as a delivery source. These services are listed
+     * as <b>Supported [V2 Permissions]</b> in the table at <a href=
+     * "https://docs.aws.amazon.com/ AmazonCloudWatch/latest/logs/AWS-logs-and-resource-policy.html#AWS-vended-logs-permissions"
+     * >Enabling logging from Amazon Web Services services.</a>
+     * </p>
+     * <p>
+     * If you use this operation to update an existing delivery destination, all the current delivery destination
+     * parameters are overwritten with the new parameter values that you specify.
+     * </p>
+     * 
+     * @param putDeliveryDestinationRequest
+     * @return A Java Future containing the result of the PutDeliveryDestination operation returned by the service.
+     * @sample AWSLogsAsync.PutDeliveryDestination
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/PutDeliveryDestination" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<PutDeliveryDestinationResult> putDeliveryDestinationAsync(PutDeliveryDestinationRequest putDeliveryDestinationRequest);
+
+    /**
+     * <p>
+     * Creates or updates a logical <i>delivery destination</i>. A delivery destination is an Amazon Web Services
+     * resource that represents an Amazon Web Services service that logs can be sent to. CloudWatch Logs, Amazon S3, and
+     * Kinesis Data Firehose are supported as logs delivery destinations.
+     * </p>
+     * <p>
+     * To configure logs delivery between a supported Amazon Web Services service and a destination, you must do the
+     * following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Create a delivery source, which is a logical object that represents the resource that is actually sending the
+     * logs. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_PutDeliverySource.html"
+     * >PutDeliverySource</a>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Use <code>PutDeliveryDestination</code> to create a <i>delivery destination</i>, which is a logical object that
+     * represents the actual delivery destination.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you are delivering logs cross-account, you must use <a href=
+     * "https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_PutDeliveryDestinationolicy.html"
+     * >PutDeliveryDestinationPolicy</a> in the destination account to assign an IAM policy to the destination. This
+     * policy allows delivery to that destination.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Use <code>CreateDelivery</code> to create a <i>delivery</i> by pairing exactly one delivery source and one
+     * delivery destination. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_CreateDelivery.html"
+     * >CreateDelivery</a>.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * You can configure a single delivery source to send logs to multiple destinations by creating multiple deliveries.
+     * You can also create multiple deliveries to configure multiple delivery sources to send logs to the same delivery
+     * destination.
+     * </p>
+     * <p>
+     * Only some Amazon Web Services services support being configured as a delivery source. These services are listed
+     * as <b>Supported [V2 Permissions]</b> in the table at <a href=
+     * "https://docs.aws.amazon.com/ AmazonCloudWatch/latest/logs/AWS-logs-and-resource-policy.html#AWS-vended-logs-permissions"
+     * >Enabling logging from Amazon Web Services services.</a>
+     * </p>
+     * <p>
+     * If you use this operation to update an existing delivery destination, all the current delivery destination
+     * parameters are overwritten with the new parameter values that you specify.
+     * </p>
+     * 
+     * @param putDeliveryDestinationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the PutDeliveryDestination operation returned by the service.
+     * @sample AWSLogsAsyncHandler.PutDeliveryDestination
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/PutDeliveryDestination" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<PutDeliveryDestinationResult> putDeliveryDestinationAsync(PutDeliveryDestinationRequest putDeliveryDestinationRequest,
+            com.amazonaws.handlers.AsyncHandler<PutDeliveryDestinationRequest, PutDeliveryDestinationResult> asyncHandler);
+
+    /**
+     * <p>
+     * Creates and assigns an IAM policy that grants permissions to CloudWatch Logs to deliver logs cross-account to a
+     * specified destination in this account. To configure the delivery of logs from an Amazon Web Services service in
+     * another account to a logs delivery destination in the current account, you must do the following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Create a delivery source, which is a logical object that represents the resource that is actually sending the
+     * logs. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_PutDeliverySource.html"
+     * >PutDeliverySource</a>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Create a <i>delivery destination</i>, which is a logical object that represents the actual delivery destination.
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_PutDeliveryDestination.html"
+     * >PutDeliveryDestination</a>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Use this operation in the destination account to assign an IAM policy to the destination. This policy allows
+     * delivery to that destination.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Create a <i>delivery</i> by pairing exactly one delivery source and one delivery destination. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_CreateDelivery.html"
+     * >CreateDelivery</a>.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Only some Amazon Web Services services support being configured as a delivery source. These services are listed
+     * as <b>Supported [V2 Permissions]</b> in the table at <a href=
+     * "https://docs.aws.amazon.com/ AmazonCloudWatch/latest/logs/AWS-logs-and-resource-policy.html#AWS-vended-logs-permissions"
+     * >Enabling logging from Amazon Web Services services.</a>
+     * </p>
+     * <p>
+     * The contents of the policy must include two statements. One statement enables general logs delivery, and the
+     * other allows delivery to the chosen destination. See the examples for the needed policies.
+     * </p>
+     * 
+     * @param putDeliveryDestinationPolicyRequest
+     * @return A Java Future containing the result of the PutDeliveryDestinationPolicy operation returned by the
+     *         service.
+     * @sample AWSLogsAsync.PutDeliveryDestinationPolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/PutDeliveryDestinationPolicy"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<PutDeliveryDestinationPolicyResult> putDeliveryDestinationPolicyAsync(
+            PutDeliveryDestinationPolicyRequest putDeliveryDestinationPolicyRequest);
+
+    /**
+     * <p>
+     * Creates and assigns an IAM policy that grants permissions to CloudWatch Logs to deliver logs cross-account to a
+     * specified destination in this account. To configure the delivery of logs from an Amazon Web Services service in
+     * another account to a logs delivery destination in the current account, you must do the following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Create a delivery source, which is a logical object that represents the resource that is actually sending the
+     * logs. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_PutDeliverySource.html"
+     * >PutDeliverySource</a>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Create a <i>delivery destination</i>, which is a logical object that represents the actual delivery destination.
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_PutDeliveryDestination.html"
+     * >PutDeliveryDestination</a>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Use this operation in the destination account to assign an IAM policy to the destination. This policy allows
+     * delivery to that destination.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Create a <i>delivery</i> by pairing exactly one delivery source and one delivery destination. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_CreateDelivery.html"
+     * >CreateDelivery</a>.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Only some Amazon Web Services services support being configured as a delivery source. These services are listed
+     * as <b>Supported [V2 Permissions]</b> in the table at <a href=
+     * "https://docs.aws.amazon.com/ AmazonCloudWatch/latest/logs/AWS-logs-and-resource-policy.html#AWS-vended-logs-permissions"
+     * >Enabling logging from Amazon Web Services services.</a>
+     * </p>
+     * <p>
+     * The contents of the policy must include two statements. One statement enables general logs delivery, and the
+     * other allows delivery to the chosen destination. See the examples for the needed policies.
+     * </p>
+     * 
+     * @param putDeliveryDestinationPolicyRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the PutDeliveryDestinationPolicy operation returned by the
+     *         service.
+     * @sample AWSLogsAsyncHandler.PutDeliveryDestinationPolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/PutDeliveryDestinationPolicy"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<PutDeliveryDestinationPolicyResult> putDeliveryDestinationPolicyAsync(
+            PutDeliveryDestinationPolicyRequest putDeliveryDestinationPolicyRequest,
+            com.amazonaws.handlers.AsyncHandler<PutDeliveryDestinationPolicyRequest, PutDeliveryDestinationPolicyResult> asyncHandler);
+
+    /**
+     * <p>
+     * Creates or updates a logical <i>delivery source</i>. A delivery source represents an Amazon Web Services resource
+     * that sends logs to an logs delivery destination. The destination can be CloudWatch Logs, Amazon S3, or Kinesis
+     * Data Firehose.
+     * </p>
+     * <p>
+     * To configure logs delivery between a delivery destination and an Amazon Web Services service that is supported as
+     * a delivery source, you must do the following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Use <code>PutDeliverySource</code> to create a delivery source, which is a logical object that represents the
+     * resource that is actually sending the logs.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Use <code>PutDeliveryDestination</code> to create a <i>delivery destination</i>, which is a logical object that
+     * represents the actual delivery destination. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_PutDeliveryDestination.html"
+     * >PutDeliveryDestination</a>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you are delivering logs cross-account, you must use <a href=
+     * "https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_PutDeliveryDestinationolicy.html"
+     * >PutDeliveryDestinationPolicy</a> in the destination account to assign an IAM policy to the destination. This
+     * policy allows delivery to that destination.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Use <code>CreateDelivery</code> to create a <i>delivery</i> by pairing exactly one delivery source and one
+     * delivery destination. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_CreateDelivery.html"
+     * >CreateDelivery</a>.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * You can configure a single delivery source to send logs to multiple destinations by creating multiple deliveries.
+     * You can also create multiple deliveries to configure multiple delivery sources to send logs to the same delivery
+     * destination.
+     * </p>
+     * <p>
+     * Only some Amazon Web Services services support being configured as a delivery source. These services are listed
+     * as <b>Supported [V2 Permissions]</b> in the table at <a href=
+     * "https://docs.aws.amazon.com/ AmazonCloudWatch/latest/logs/AWS-logs-and-resource-policy.html#AWS-vended-logs-permissions"
+     * >Enabling logging from Amazon Web Services services.</a>
+     * </p>
+     * <p>
+     * If you use this operation to update an existing delivery source, all the current delivery source parameters are
+     * overwritten with the new parameter values that you specify.
+     * </p>
+     * 
+     * @param putDeliverySourceRequest
+     * @return A Java Future containing the result of the PutDeliverySource operation returned by the service.
+     * @sample AWSLogsAsync.PutDeliverySource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/PutDeliverySource" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<PutDeliverySourceResult> putDeliverySourceAsync(PutDeliverySourceRequest putDeliverySourceRequest);
+
+    /**
+     * <p>
+     * Creates or updates a logical <i>delivery source</i>. A delivery source represents an Amazon Web Services resource
+     * that sends logs to an logs delivery destination. The destination can be CloudWatch Logs, Amazon S3, or Kinesis
+     * Data Firehose.
+     * </p>
+     * <p>
+     * To configure logs delivery between a delivery destination and an Amazon Web Services service that is supported as
+     * a delivery source, you must do the following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Use <code>PutDeliverySource</code> to create a delivery source, which is a logical object that represents the
+     * resource that is actually sending the logs.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Use <code>PutDeliveryDestination</code> to create a <i>delivery destination</i>, which is a logical object that
+     * represents the actual delivery destination. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_PutDeliveryDestination.html"
+     * >PutDeliveryDestination</a>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you are delivering logs cross-account, you must use <a href=
+     * "https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_PutDeliveryDestinationolicy.html"
+     * >PutDeliveryDestinationPolicy</a> in the destination account to assign an IAM policy to the destination. This
+     * policy allows delivery to that destination.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Use <code>CreateDelivery</code> to create a <i>delivery</i> by pairing exactly one delivery source and one
+     * delivery destination. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_CreateDelivery.html"
+     * >CreateDelivery</a>.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * You can configure a single delivery source to send logs to multiple destinations by creating multiple deliveries.
+     * You can also create multiple deliveries to configure multiple delivery sources to send logs to the same delivery
+     * destination.
+     * </p>
+     * <p>
+     * Only some Amazon Web Services services support being configured as a delivery source. These services are listed
+     * as <b>Supported [V2 Permissions]</b> in the table at <a href=
+     * "https://docs.aws.amazon.com/ AmazonCloudWatch/latest/logs/AWS-logs-and-resource-policy.html#AWS-vended-logs-permissions"
+     * >Enabling logging from Amazon Web Services services.</a>
+     * </p>
+     * <p>
+     * If you use this operation to update an existing delivery source, all the current delivery source parameters are
+     * overwritten with the new parameter values that you specify.
+     * </p>
+     * 
+     * @param putDeliverySourceRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the PutDeliverySource operation returned by the service.
+     * @sample AWSLogsAsyncHandler.PutDeliverySource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/PutDeliverySource" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<PutDeliverySourceResult> putDeliverySourceAsync(PutDeliverySourceRequest putDeliverySourceRequest,
+            com.amazonaws.handlers.AsyncHandler<PutDeliverySourceRequest, PutDeliverySourceResult> asyncHandler);
 
     /**
      * <p>

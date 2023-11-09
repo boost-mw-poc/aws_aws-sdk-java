@@ -196,6 +196,11 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * </li>
      * </ul>
+     * <note>
+     * <p>
+     * Only one of the <code>Capabilities</code> and <code>ResourceType</code> parameters can be specified.
+     * </p>
+     * </note>
      */
     private com.amazonaws.internal.SdkInternalList<String> capabilities;
     /**
@@ -210,6 +215,11 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html">Controlling access
      * with Identity and Access Management</a> in the CloudFormation User Guide.
      * </p>
+     * <note>
+     * <p>
+     * Only one of the <code>Capabilities</code> and <code>ResourceType</code> parameters can be specified.
+     * </p>
+     * </note>
      */
     private com.amazonaws.internal.SdkInternalList<String> resourceTypes;
     /**
@@ -787,6 +797,11 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * </li>
      * </ul>
+     * <note>
+     * <p>
+     * Only one of the <code>Capabilities</code> and <code>ResourceType</code> parameters can be specified.
+     * </p>
+     * </note>
      * 
      * @return In some cases, you must explicitly acknowledge that your stack template contains certain capabilities in
      *         order for CloudFormation to create the stack.</p>
@@ -913,6 +928,11 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      *         CloudFormation macros to perform custom processing on templates</a>.
      *         </p>
      *         </li>
+     *         </ul>
+     *         <note>
+     *         <p>
+     *         Only one of the <code>Capabilities</code> and <code>ResourceType</code> parameters can be specified.
+     *         </p>
      * @see Capability
      */
 
@@ -1048,6 +1068,11 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * </li>
      * </ul>
+     * <note>
+     * <p>
+     * Only one of the <code>Capabilities</code> and <code>ResourceType</code> parameters can be specified.
+     * </p>
+     * </note>
      * 
      * @param capabilities
      *        In some cases, you must explicitly acknowledge that your stack template contains certain capabilities in
@@ -1175,6 +1200,11 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      *        CloudFormation macros to perform custom processing on templates</a>.
      *        </p>
      *        </li>
+     *        </ul>
+     *        <note>
+     *        <p>
+     *        Only one of the <code>Capabilities</code> and <code>ResourceType</code> parameters can be specified.
+     *        </p>
      * @see Capability
      */
 
@@ -1312,6 +1342,11 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * </li>
      * </ul>
+     * <note>
+     * <p>
+     * Only one of the <code>Capabilities</code> and <code>ResourceType</code> parameters can be specified.
+     * </p>
+     * </note>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setCapabilities(java.util.Collection)} or {@link #withCapabilities(java.util.Collection)} if you want to
@@ -1444,6 +1479,11 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      *        CloudFormation macros to perform custom processing on templates</a>.
      *        </p>
      *        </li>
+     *        </ul>
+     *        <note>
+     *        <p>
+     *        Only one of the <code>Capabilities</code> and <code>ResourceType</code> parameters can be specified.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Capability
      */
@@ -1583,6 +1623,11 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * </li>
      * </ul>
+     * <note>
+     * <p>
+     * Only one of the <code>Capabilities</code> and <code>ResourceType</code> parameters can be specified.
+     * </p>
+     * </note>
      * 
      * @param capabilities
      *        In some cases, you must explicitly acknowledge that your stack template contains certain capabilities in
@@ -1710,6 +1755,11 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      *        CloudFormation macros to perform custom processing on templates</a>.
      *        </p>
      *        </li>
+     *        </ul>
+     *        <note>
+     *        <p>
+     *        Only one of the <code>Capabilities</code> and <code>ResourceType</code> parameters can be specified.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Capability
      */
@@ -1844,6 +1894,11 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * </li>
      * </ul>
+     * <note>
+     * <p>
+     * Only one of the <code>Capabilities</code> and <code>ResourceType</code> parameters can be specified.
+     * </p>
+     * </note>
      * 
      * @param capabilities
      *        In some cases, you must explicitly acknowledge that your stack template contains certain capabilities in
@@ -1971,6 +2026,11 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      *        CloudFormation macros to perform custom processing on templates</a>.
      *        </p>
      *        </li>
+     *        </ul>
+     *        <note>
+     *        <p>
+     *        Only one of the <code>Capabilities</code> and <code>ResourceType</code> parameters can be specified.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Capability
      */
@@ -2000,6 +2060,11 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html">Controlling access
      * with Identity and Access Management</a> in the CloudFormation User Guide.
      * </p>
+     * <note>
+     * <p>
+     * Only one of the <code>Capabilities</code> and <code>ResourceType</code> parameters can be specified.
+     * </p>
+     * </note>
      * 
      * @return The template resource types that you have permissions to work with if you execute this change set, such
      *         as <code>AWS::EC2::Instance</code>, <code>AWS::EC2::*</code>, or <code>Custom::MyCustomInstance</code>
@@ -2011,6 +2076,11 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      *         information, see <a
      *         href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html">Controlling
      *         access with Identity and Access Management</a> in the CloudFormation User Guide.
+     *         </p>
+     *         <note>
+     *         <p>
+     *         Only one of the <code>Capabilities</code> and <code>ResourceType</code> parameters can be specified.
+     *         </p>
      */
 
     public java.util.List<String> getResourceTypes() {
@@ -2032,6 +2102,11 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html">Controlling access
      * with Identity and Access Management</a> in the CloudFormation User Guide.
      * </p>
+     * <note>
+     * <p>
+     * Only one of the <code>Capabilities</code> and <code>ResourceType</code> parameters can be specified.
+     * </p>
+     * </note>
      * 
      * @param resourceTypes
      *        The template resource types that you have permissions to work with if you execute this change set, such as
@@ -2042,6 +2117,11 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      *        (IAM) uses this parameter for condition keys in IAM policies for CloudFormation. For more information, see
      *        <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html">
      *        Controlling access with Identity and Access Management</a> in the CloudFormation User Guide.
+     *        </p>
+     *        <note>
+     *        <p>
+     *        Only one of the <code>Capabilities</code> and <code>ResourceType</code> parameters can be specified.
+     *        </p>
      */
 
     public void setResourceTypes(java.util.Collection<String> resourceTypes) {
@@ -2065,6 +2145,11 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html">Controlling access
      * with Identity and Access Management</a> in the CloudFormation User Guide.
      * </p>
+     * <note>
+     * <p>
+     * Only one of the <code>Capabilities</code> and <code>ResourceType</code> parameters can be specified.
+     * </p>
+     * </note>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setResourceTypes(java.util.Collection)} or {@link #withResourceTypes(java.util.Collection)} if you want
@@ -2080,6 +2165,11 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      *        (IAM) uses this parameter for condition keys in IAM policies for CloudFormation. For more information, see
      *        <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html">
      *        Controlling access with Identity and Access Management</a> in the CloudFormation User Guide.
+     *        </p>
+     *        <note>
+     *        <p>
+     *        Only one of the <code>Capabilities</code> and <code>ResourceType</code> parameters can be specified.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2105,6 +2195,11 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html">Controlling access
      * with Identity and Access Management</a> in the CloudFormation User Guide.
      * </p>
+     * <note>
+     * <p>
+     * Only one of the <code>Capabilities</code> and <code>ResourceType</code> parameters can be specified.
+     * </p>
+     * </note>
      * 
      * @param resourceTypes
      *        The template resource types that you have permissions to work with if you execute this change set, such as
@@ -2115,6 +2210,11 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      *        (IAM) uses this parameter for condition keys in IAM policies for CloudFormation. For more information, see
      *        <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html">
      *        Controlling access with Identity and Access Management</a> in the CloudFormation User Guide.
+     *        </p>
+     *        <note>
+     *        <p>
+     *        Only one of the <code>Capabilities</code> and <code>ResourceType</code> parameters can be specified.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

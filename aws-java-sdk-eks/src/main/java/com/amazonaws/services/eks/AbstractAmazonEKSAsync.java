@@ -81,6 +81,19 @@ public class AbstractAmazonEKSAsync extends AbstractAmazonEKS implements AmazonE
     }
 
     @Override
+    public java.util.concurrent.Future<CreateEksAnywhereSubscriptionResult> createEksAnywhereSubscriptionAsync(CreateEksAnywhereSubscriptionRequest request) {
+
+        return createEksAnywhereSubscriptionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateEksAnywhereSubscriptionResult> createEksAnywhereSubscriptionAsync(CreateEksAnywhereSubscriptionRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateEksAnywhereSubscriptionRequest, CreateEksAnywhereSubscriptionResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateFargateProfileResult> createFargateProfileAsync(CreateFargateProfileRequest request) {
 
         return createFargateProfileAsync(request, null);
@@ -128,6 +141,19 @@ public class AbstractAmazonEKSAsync extends AbstractAmazonEKS implements AmazonE
     @Override
     public java.util.concurrent.Future<DeleteClusterResult> deleteClusterAsync(DeleteClusterRequest request,
             com.amazonaws.handlers.AsyncHandler<DeleteClusterRequest, DeleteClusterResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteEksAnywhereSubscriptionResult> deleteEksAnywhereSubscriptionAsync(DeleteEksAnywhereSubscriptionRequest request) {
+
+        return deleteEksAnywhereSubscriptionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteEksAnywhereSubscriptionResult> deleteEksAnywhereSubscriptionAsync(DeleteEksAnywhereSubscriptionRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteEksAnywhereSubscriptionRequest, DeleteEksAnywhereSubscriptionResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -224,6 +250,21 @@ public class AbstractAmazonEKSAsync extends AbstractAmazonEKS implements AmazonE
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeEksAnywhereSubscriptionResult> describeEksAnywhereSubscriptionAsync(
+            DescribeEksAnywhereSubscriptionRequest request) {
+
+        return describeEksAnywhereSubscriptionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeEksAnywhereSubscriptionResult> describeEksAnywhereSubscriptionAsync(
+            DescribeEksAnywhereSubscriptionRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeEksAnywhereSubscriptionRequest, DescribeEksAnywhereSubscriptionResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeFargateProfileResult> describeFargateProfileAsync(DescribeFargateProfileRequest request) {
 
         return describeFargateProfileAsync(request, null);
@@ -312,6 +353,19 @@ public class AbstractAmazonEKSAsync extends AbstractAmazonEKS implements AmazonE
     @Override
     public java.util.concurrent.Future<ListClustersResult> listClustersAsync(ListClustersRequest request,
             com.amazonaws.handlers.AsyncHandler<ListClustersRequest, ListClustersResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListEksAnywhereSubscriptionsResult> listEksAnywhereSubscriptionsAsync(ListEksAnywhereSubscriptionsRequest request) {
+
+        return listEksAnywhereSubscriptionsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListEksAnywhereSubscriptionsResult> listEksAnywhereSubscriptionsAsync(ListEksAnywhereSubscriptionsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListEksAnywhereSubscriptionsRequest, ListEksAnywhereSubscriptionsResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -455,6 +509,19 @@ public class AbstractAmazonEKSAsync extends AbstractAmazonEKS implements AmazonE
     @Override
     public java.util.concurrent.Future<UpdateClusterVersionResult> updateClusterVersionAsync(UpdateClusterVersionRequest request,
             com.amazonaws.handlers.AsyncHandler<UpdateClusterVersionRequest, UpdateClusterVersionResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateEksAnywhereSubscriptionResult> updateEksAnywhereSubscriptionAsync(UpdateEksAnywhereSubscriptionRequest request) {
+
+        return updateEksAnywhereSubscriptionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateEksAnywhereSubscriptionResult> updateEksAnywhereSubscriptionAsync(UpdateEksAnywhereSubscriptionRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateEksAnywhereSubscriptionRequest, UpdateEksAnywhereSubscriptionResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

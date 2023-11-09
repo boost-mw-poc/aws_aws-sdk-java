@@ -19,7 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The location of the training documents. This parameter is required in a request to create a native classifier model.
+ * The location of the training documents. This parameter is required in a request to create a semi-structured document
+ * classification model.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/comprehend-2017-11-27/DocumentClassifierDocuments"

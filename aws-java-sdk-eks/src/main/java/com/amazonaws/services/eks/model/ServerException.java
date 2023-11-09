@@ -37,6 +37,12 @@ public class ServerException extends com.amazonaws.services.eks.model.AmazonEKSE
     private String nodegroupName;
 
     private String addonName;
+    /**
+     * <p>
+     * The Amazon EKS subscription ID with the exception.
+     * </p>
+     */
+    private String subscriptionId;
 
     /**
      * Constructs a new ServerException with the specified error message.
@@ -157,6 +163,48 @@ public class ServerException extends com.amazonaws.services.eks.model.AmazonEKSE
 
     public ServerException withAddonName(String addonName) {
         setAddonName(addonName);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The Amazon EKS subscription ID with the exception.
+     * </p>
+     * 
+     * @param subscriptionId
+     *        The Amazon EKS subscription ID with the exception.
+     */
+
+    @com.fasterxml.jackson.annotation.JsonProperty("subscriptionId")
+    public void setSubscriptionId(String subscriptionId) {
+        this.subscriptionId = subscriptionId;
+    }
+
+    /**
+     * <p>
+     * The Amazon EKS subscription ID with the exception.
+     * </p>
+     * 
+     * @return The Amazon EKS subscription ID with the exception.
+     */
+
+    @com.fasterxml.jackson.annotation.JsonProperty("subscriptionId")
+    public String getSubscriptionId() {
+        return this.subscriptionId;
+    }
+
+    /**
+     * <p>
+     * The Amazon EKS subscription ID with the exception.
+     * </p>
+     * 
+     * @param subscriptionId
+     *        The Amazon EKS subscription ID with the exception.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ServerException withSubscriptionId(String subscriptionId) {
+        setSubscriptionId(subscriptionId);
         return this;
     }
 

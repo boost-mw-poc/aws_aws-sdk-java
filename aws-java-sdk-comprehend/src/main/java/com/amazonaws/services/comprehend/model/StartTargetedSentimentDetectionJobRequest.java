@@ -36,7 +36,7 @@ public class StartTargetedSentimentDetectionJobRequest extends com.amazonaws.Ama
      * <p>
      * The Amazon Resource Name (ARN) of the IAM role that grants Amazon Comprehend read access to your input data. For
      * more information, see <a href=
-     * "https://docs.aws.amazon.com/comprehend/latest/dg/access-control-managing-permissions.html#auth-role-permissions"
+     * "https://docs.aws.amazon.com/comprehend/latest/dg/security_iam_id-based-policy-examples.html#auth-role-permissions"
      * >Role-based permissions</a>.
      * </p>
      */
@@ -160,14 +160,14 @@ public class StartTargetedSentimentDetectionJobRequest extends com.amazonaws.Ama
      * <p>
      * The Amazon Resource Name (ARN) of the IAM role that grants Amazon Comprehend read access to your input data. For
      * more information, see <a href=
-     * "https://docs.aws.amazon.com/comprehend/latest/dg/access-control-managing-permissions.html#auth-role-permissions"
+     * "https://docs.aws.amazon.com/comprehend/latest/dg/security_iam_id-based-policy-examples.html#auth-role-permissions"
      * >Role-based permissions</a>.
      * </p>
      * 
      * @param dataAccessRoleArn
      *        The Amazon Resource Name (ARN) of the IAM role that grants Amazon Comprehend read access to your input
      *        data. For more information, see <a href=
-     *        "https://docs.aws.amazon.com/comprehend/latest/dg/access-control-managing-permissions.html#auth-role-permissions"
+     *        "https://docs.aws.amazon.com/comprehend/latest/dg/security_iam_id-based-policy-examples.html#auth-role-permissions"
      *        >Role-based permissions</a>.
      */
 
@@ -179,13 +179,13 @@ public class StartTargetedSentimentDetectionJobRequest extends com.amazonaws.Ama
      * <p>
      * The Amazon Resource Name (ARN) of the IAM role that grants Amazon Comprehend read access to your input data. For
      * more information, see <a href=
-     * "https://docs.aws.amazon.com/comprehend/latest/dg/access-control-managing-permissions.html#auth-role-permissions"
+     * "https://docs.aws.amazon.com/comprehend/latest/dg/security_iam_id-based-policy-examples.html#auth-role-permissions"
      * >Role-based permissions</a>.
      * </p>
      * 
      * @return The Amazon Resource Name (ARN) of the IAM role that grants Amazon Comprehend read access to your input
      *         data. For more information, see <a href=
-     *         "https://docs.aws.amazon.com/comprehend/latest/dg/access-control-managing-permissions.html#auth-role-permissions"
+     *         "https://docs.aws.amazon.com/comprehend/latest/dg/security_iam_id-based-policy-examples.html#auth-role-permissions"
      *         >Role-based permissions</a>.
      */
 
@@ -197,14 +197,14 @@ public class StartTargetedSentimentDetectionJobRequest extends com.amazonaws.Ama
      * <p>
      * The Amazon Resource Name (ARN) of the IAM role that grants Amazon Comprehend read access to your input data. For
      * more information, see <a href=
-     * "https://docs.aws.amazon.com/comprehend/latest/dg/access-control-managing-permissions.html#auth-role-permissions"
+     * "https://docs.aws.amazon.com/comprehend/latest/dg/security_iam_id-based-policy-examples.html#auth-role-permissions"
      * >Role-based permissions</a>.
      * </p>
      * 
      * @param dataAccessRoleArn
      *        The Amazon Resource Name (ARN) of the IAM role that grants Amazon Comprehend read access to your input
      *        data. For more information, see <a href=
-     *        "https://docs.aws.amazon.com/comprehend/latest/dg/access-control-managing-permissions.html#auth-role-permissions"
+     *        "https://docs.aws.amazon.com/comprehend/latest/dg/security_iam_id-based-policy-examples.html#auth-role-permissions"
      *        >Role-based permissions</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

@@ -213,6 +213,10 @@ public class CreateStackInstancesRequestMarshaller implements Marshaller<Request
                     request.addParameter("OperationPreferences.MaxConcurrentPercentage",
                             StringUtils.fromInteger(operationPreferences.getMaxConcurrentPercentage()));
                 }
+
+                if (operationPreferences.getConcurrencyMode() != null) {
+                    request.addParameter("OperationPreferences.ConcurrencyMode", StringUtils.fromString(operationPreferences.getConcurrencyMode()));
+                }
             }
         }
 

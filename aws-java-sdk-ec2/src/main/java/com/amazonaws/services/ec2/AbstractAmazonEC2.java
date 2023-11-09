@@ -2213,6 +2213,11 @@ public class AbstractAmazonEC2 implements AmazonEC2 {
     }
 
     @Override
+    public DisableSnapshotBlockPublicAccessResult disableSnapshotBlockPublicAccess(DisableSnapshotBlockPublicAccessRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DisableTransitGatewayRouteTablePropagationResult disableTransitGatewayRouteTablePropagation(DisableTransitGatewayRouteTablePropagationRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -2356,6 +2361,11 @@ public class AbstractAmazonEC2 implements AmazonEC2 {
 
     @Override
     public EnableSerialConsoleAccessResult enableSerialConsoleAccess(EnableSerialConsoleAccessRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public EnableSnapshotBlockPublicAccessResult enableSnapshotBlockPublicAccess(EnableSnapshotBlockPublicAccessRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -2558,6 +2568,11 @@ public class AbstractAmazonEC2 implements AmazonEC2 {
 
     @Override
     public GetSerialConsoleAccessStatusResult getSerialConsoleAccessStatus(GetSerialConsoleAccessStatusRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetSnapshotBlockPublicAccessStateResult getSnapshotBlockPublicAccessState(GetSnapshotBlockPublicAccessStateRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

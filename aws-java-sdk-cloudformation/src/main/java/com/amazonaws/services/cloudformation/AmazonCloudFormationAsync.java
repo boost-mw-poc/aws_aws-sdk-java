@@ -1371,7 +1371,7 @@ public interface AmazonCloudFormationAsync extends AmazonCloudFormation {
      * </p>
      * <note>
      * <p>
-     * If the stack doesn't exist, an <code>ValidationError</code> is returned.
+     * If the stack doesn't exist, a <code>ValidationError</code> is returned.
      * </p>
      * </note>
      * 
@@ -1391,7 +1391,7 @@ public interface AmazonCloudFormationAsync extends AmazonCloudFormation {
      * </p>
      * <note>
      * <p>
-     * If the stack doesn't exist, an <code>ValidationError</code> is returned.
+     * If the stack doesn't exist, a <code>ValidationError</code> is returned.
      * </p>
      * </note>
      * 
