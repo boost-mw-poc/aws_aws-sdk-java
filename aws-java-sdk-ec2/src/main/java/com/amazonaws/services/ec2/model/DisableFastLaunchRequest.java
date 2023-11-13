@@ -27,25 +27,25 @@ public class DisableFastLaunchRequest extends AmazonWebServiceRequest implements
 
     /**
      * <p>
-     * The ID of the image for which you’re turning off faster launching, and removing pre-provisioned snapshots.
+     * Specify the ID of the image for which to disable Windows fast launch.
      * </p>
      */
     private String imageId;
     /**
      * <p>
-     * Forces the image settings to turn off faster launching for your Windows AMI. This parameter overrides any errors
-     * that are encountered while cleaning up resources in your account.
+     * Forces the image settings to turn off Windows fast launch for your Windows AMI. This parameter overrides any
+     * errors that are encountered while cleaning up resources in your account.
      * </p>
      */
     private Boolean force;
 
     /**
      * <p>
-     * The ID of the image for which you’re turning off faster launching, and removing pre-provisioned snapshots.
+     * Specify the ID of the image for which to disable Windows fast launch.
      * </p>
      * 
      * @param imageId
-     *        The ID of the image for which you’re turning off faster launching, and removing pre-provisioned snapshots.
+     *        Specify the ID of the image for which to disable Windows fast launch.
      */
 
     public void setImageId(String imageId) {
@@ -54,11 +54,10 @@ public class DisableFastLaunchRequest extends AmazonWebServiceRequest implements
 
     /**
      * <p>
-     * The ID of the image for which you’re turning off faster launching, and removing pre-provisioned snapshots.
+     * Specify the ID of the image for which to disable Windows fast launch.
      * </p>
      * 
-     * @return The ID of the image for which you’re turning off faster launching, and removing pre-provisioned
-     *         snapshots.
+     * @return Specify the ID of the image for which to disable Windows fast launch.
      */
 
     public String getImageId() {
@@ -67,11 +66,11 @@ public class DisableFastLaunchRequest extends AmazonWebServiceRequest implements
 
     /**
      * <p>
-     * The ID of the image for which you’re turning off faster launching, and removing pre-provisioned snapshots.
+     * Specify the ID of the image for which to disable Windows fast launch.
      * </p>
      * 
      * @param imageId
-     *        The ID of the image for which you’re turning off faster launching, and removing pre-provisioned snapshots.
+     *        Specify the ID of the image for which to disable Windows fast launch.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -82,13 +81,13 @@ public class DisableFastLaunchRequest extends AmazonWebServiceRequest implements
 
     /**
      * <p>
-     * Forces the image settings to turn off faster launching for your Windows AMI. This parameter overrides any errors
-     * that are encountered while cleaning up resources in your account.
+     * Forces the image settings to turn off Windows fast launch for your Windows AMI. This parameter overrides any
+     * errors that are encountered while cleaning up resources in your account.
      * </p>
      * 
      * @param force
-     *        Forces the image settings to turn off faster launching for your Windows AMI. This parameter overrides any
-     *        errors that are encountered while cleaning up resources in your account.
+     *        Forces the image settings to turn off Windows fast launch for your Windows AMI. This parameter overrides
+     *        any errors that are encountered while cleaning up resources in your account.
      */
 
     public void setForce(Boolean force) {
@@ -97,12 +96,12 @@ public class DisableFastLaunchRequest extends AmazonWebServiceRequest implements
 
     /**
      * <p>
-     * Forces the image settings to turn off faster launching for your Windows AMI. This parameter overrides any errors
-     * that are encountered while cleaning up resources in your account.
+     * Forces the image settings to turn off Windows fast launch for your Windows AMI. This parameter overrides any
+     * errors that are encountered while cleaning up resources in your account.
      * </p>
      * 
-     * @return Forces the image settings to turn off faster launching for your Windows AMI. This parameter overrides any
-     *         errors that are encountered while cleaning up resources in your account.
+     * @return Forces the image settings to turn off Windows fast launch for your Windows AMI. This parameter overrides
+     *         any errors that are encountered while cleaning up resources in your account.
      */
 
     public Boolean getForce() {
@@ -111,13 +110,13 @@ public class DisableFastLaunchRequest extends AmazonWebServiceRequest implements
 
     /**
      * <p>
-     * Forces the image settings to turn off faster launching for your Windows AMI. This parameter overrides any errors
-     * that are encountered while cleaning up resources in your account.
+     * Forces the image settings to turn off Windows fast launch for your Windows AMI. This parameter overrides any
+     * errors that are encountered while cleaning up resources in your account.
      * </p>
      * 
      * @param force
-     *        Forces the image settings to turn off faster launching for your Windows AMI. This parameter overrides any
-     *        errors that are encountered while cleaning up resources in your account.
+     *        Forces the image settings to turn off Windows fast launch for your Windows AMI. This parameter overrides
+     *        any errors that are encountered while cleaning up resources in your account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -128,12 +127,12 @@ public class DisableFastLaunchRequest extends AmazonWebServiceRequest implements
 
     /**
      * <p>
-     * Forces the image settings to turn off faster launching for your Windows AMI. This parameter overrides any errors
-     * that are encountered while cleaning up resources in your account.
+     * Forces the image settings to turn off Windows fast launch for your Windows AMI. This parameter overrides any
+     * errors that are encountered while cleaning up resources in your account.
      * </p>
      * 
-     * @return Forces the image settings to turn off faster launching for your Windows AMI. This parameter overrides any
-     *         errors that are encountered while cleaning up resources in your account.
+     * @return Forces the image settings to turn off Windows fast launch for your Windows AMI. This parameter overrides
+     *         any errors that are encountered while cleaning up resources in your account.
      */
 
     public Boolean isForce() {

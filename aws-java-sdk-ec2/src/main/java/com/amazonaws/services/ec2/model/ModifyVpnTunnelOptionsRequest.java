@@ -46,7 +46,8 @@ public class ModifyVpnTunnelOptionsRequest extends AmazonWebServiceRequest imple
     private ModifyVpnTunnelOptionsSpecification tunnelOptions;
     /**
      * <p>
-     * Choose whether or not to trigger immediate tunnel replacement.
+     * Choose whether or not to trigger immediate tunnel replacement. This is only applicable when turning on or off
+     * <code>EnableTunnelLifecycleControl</code>.
      * </p>
      * <p>
      * Valid values: <code>True</code> | <code>False</code>
@@ -176,14 +177,16 @@ public class ModifyVpnTunnelOptionsRequest extends AmazonWebServiceRequest imple
 
     /**
      * <p>
-     * Choose whether or not to trigger immediate tunnel replacement.
+     * Choose whether or not to trigger immediate tunnel replacement. This is only applicable when turning on or off
+     * <code>EnableTunnelLifecycleControl</code>.
      * </p>
      * <p>
      * Valid values: <code>True</code> | <code>False</code>
      * </p>
      * 
      * @param skipTunnelReplacement
-     *        Choose whether or not to trigger immediate tunnel replacement.</p>
+     *        Choose whether or not to trigger immediate tunnel replacement. This is only applicable when turning on or
+     *        off <code>EnableTunnelLifecycleControl</code>.</p>
      *        <p>
      *        Valid values: <code>True</code> | <code>False</code>
      */
@@ -194,13 +197,15 @@ public class ModifyVpnTunnelOptionsRequest extends AmazonWebServiceRequest imple
 
     /**
      * <p>
-     * Choose whether or not to trigger immediate tunnel replacement.
+     * Choose whether or not to trigger immediate tunnel replacement. This is only applicable when turning on or off
+     * <code>EnableTunnelLifecycleControl</code>.
      * </p>
      * <p>
      * Valid values: <code>True</code> | <code>False</code>
      * </p>
      * 
-     * @return Choose whether or not to trigger immediate tunnel replacement.</p>
+     * @return Choose whether or not to trigger immediate tunnel replacement. This is only applicable when turning on or
+     *         off <code>EnableTunnelLifecycleControl</code>.</p>
      *         <p>
      *         Valid values: <code>True</code> | <code>False</code>
      */
@@ -211,14 +216,16 @@ public class ModifyVpnTunnelOptionsRequest extends AmazonWebServiceRequest imple
 
     /**
      * <p>
-     * Choose whether or not to trigger immediate tunnel replacement.
+     * Choose whether or not to trigger immediate tunnel replacement. This is only applicable when turning on or off
+     * <code>EnableTunnelLifecycleControl</code>.
      * </p>
      * <p>
      * Valid values: <code>True</code> | <code>False</code>
      * </p>
      * 
      * @param skipTunnelReplacement
-     *        Choose whether or not to trigger immediate tunnel replacement.</p>
+     *        Choose whether or not to trigger immediate tunnel replacement. This is only applicable when turning on or
+     *        off <code>EnableTunnelLifecycleControl</code>.</p>
      *        <p>
      *        Valid values: <code>True</code> | <code>False</code>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -231,13 +238,15 @@ public class ModifyVpnTunnelOptionsRequest extends AmazonWebServiceRequest imple
 
     /**
      * <p>
-     * Choose whether or not to trigger immediate tunnel replacement.
+     * Choose whether or not to trigger immediate tunnel replacement. This is only applicable when turning on or off
+     * <code>EnableTunnelLifecycleControl</code>.
      * </p>
      * <p>
      * Valid values: <code>True</code> | <code>False</code>
      * </p>
      * 
-     * @return Choose whether or not to trigger immediate tunnel replacement.</p>
+     * @return Choose whether or not to trigger immediate tunnel replacement. This is only applicable when turning on or
+     *         off <code>EnableTunnelLifecycleControl</code>.</p>
      *         <p>
      *         Valid values: <code>True</code> | <code>False</code>
      */

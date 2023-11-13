@@ -55,6 +55,8 @@ public class MySQLSettingsMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SecretsManagerAccessRoleArn").build();
     private static final MarshallingInfo<String> SECRETSMANAGERSECRETID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SecretsManagerSecretId").build();
+    private static final MarshallingInfo<Integer> EXECUTETIMEOUT_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ExecuteTimeout").build();
 
     private static final MySQLSettingsMarshaller instance = new MySQLSettingsMarshaller();
 
@@ -86,6 +88,7 @@ public class MySQLSettingsMarshaller {
             protocolMarshaller.marshall(mySQLSettings.getUsername(), USERNAME_BINDING);
             protocolMarshaller.marshall(mySQLSettings.getSecretsManagerAccessRoleArn(), SECRETSMANAGERACCESSROLEARN_BINDING);
             protocolMarshaller.marshall(mySQLSettings.getSecretsManagerSecretId(), SECRETSMANAGERSECRETID_BINDING);
+            protocolMarshaller.marshall(mySQLSettings.getExecuteTimeout(), EXECUTETIMEOUT_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

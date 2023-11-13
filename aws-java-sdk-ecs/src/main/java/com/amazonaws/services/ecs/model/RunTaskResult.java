@@ -27,6 +27,7 @@ public class RunTaskResult extends com.amazonaws.AmazonWebServiceResult<com.amaz
      * A full description of the tasks that were run. The tasks that were successfully placed on your cluster are
      * described here.
      * </p>
+     * <p/>
      */
     private com.amazonaws.internal.SdkInternalList<Task> tasks;
     /**
@@ -41,9 +42,11 @@ public class RunTaskResult extends com.amazonaws.AmazonWebServiceResult<com.amaz
      * A full description of the tasks that were run. The tasks that were successfully placed on your cluster are
      * described here.
      * </p>
+     * <p/>
      * 
      * @return A full description of the tasks that were run. The tasks that were successfully placed on your cluster
      *         are described here.
+     *         </p>
      */
 
     public java.util.List<Task> getTasks() {
@@ -58,10 +61,12 @@ public class RunTaskResult extends com.amazonaws.AmazonWebServiceResult<com.amaz
      * A full description of the tasks that were run. The tasks that were successfully placed on your cluster are
      * described here.
      * </p>
+     * <p/>
      * 
      * @param tasks
      *        A full description of the tasks that were run. The tasks that were successfully placed on your cluster are
      *        described here.
+     *        </p>
      */
 
     public void setTasks(java.util.Collection<Task> tasks) {
@@ -78,6 +83,7 @@ public class RunTaskResult extends com.amazonaws.AmazonWebServiceResult<com.amaz
      * A full description of the tasks that were run. The tasks that were successfully placed on your cluster are
      * described here.
      * </p>
+     * <p/>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setTasks(java.util.Collection)} or {@link #withTasks(java.util.Collection)} if you want to override the
@@ -86,7 +92,7 @@ public class RunTaskResult extends com.amazonaws.AmazonWebServiceResult<com.amaz
      * 
      * @param tasks
      *        A full description of the tasks that were run. The tasks that were successfully placed on your cluster are
-     *        described here.
+     *        described here.</p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -105,10 +111,12 @@ public class RunTaskResult extends com.amazonaws.AmazonWebServiceResult<com.amaz
      * A full description of the tasks that were run. The tasks that were successfully placed on your cluster are
      * described here.
      * </p>
+     * <p/>
      * 
      * @param tasks
      *        A full description of the tasks that were run. The tasks that were successfully placed on your cluster are
      *        described here.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

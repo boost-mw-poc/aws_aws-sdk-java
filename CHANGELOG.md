@@ -1,3 +1,32 @@
+# __1.12.588__ __2023-11-13__
+## __AWS Data Exchange__
+  - ### Features
+    - Removed Required trait for DataSet.OriginDetails.ProductId.
+
+## __AWS Database Migration Service__
+  - ### Features
+    - Added new Db2 LUW Target endpoint with related endpoint settings. New executeTimeout endpoint setting for mysql endpoint. New ReplicationDeprovisionTime field for serverless describe-replications.
+
+## __AWS Service Catalog App Registry__
+  - ### Features
+    - When the customer associates a resource collection to their application with this new feature, then a new application tag will be applied to all supported resources that are part of that collection. This allows customers to more easily find the application that is associated with those resources.
+
+## __Amazon EC2 Container Service__
+  - ### Features
+    - Adds a Client Token parameter to the ECS RunTask API. The Client Token parameter allows for idempotent RunTask requests.
+
+## __Amazon EMR__
+  - ### Features
+    - Updated GetClusterSessionCredentials API  to allow Amazon SageMaker Studio to connect to EMR on EC2 clusters to support IdentityCenter/PEZ integration.
+
+## __Amazon Elastic Compute Cloud__
+  - ### Features
+    - Adds the new EC2 DescribeInstanceTopology API, which you can use to retrieve the network topology of your running instances on select platform types to determine their relative proximity to each other.
+
+## __Amazon Transcribe Streaming Service__
+  - ### Features
+    - This release enables customers to call the AWS Transcribe streaming service with the capability of identifying multiple languages in the stream.
+
 # __1.12.587__ __2023-11-10__
 ## __AWS Control Tower__
   - ### Features

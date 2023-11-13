@@ -216,6 +216,12 @@ public class Replication implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private java.util.Date replicationLastStopTime;
+    /**
+     * <p>
+     * The timestamp when DMS will deprovision the replication.
+     * </p>
+     */
+    private java.util.Date replicationDeprovisionTime;
 
     /**
      * <p>
@@ -1470,6 +1476,46 @@ public class Replication implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The timestamp when DMS will deprovision the replication.
+     * </p>
+     * 
+     * @param replicationDeprovisionTime
+     *        The timestamp when DMS will deprovision the replication.
+     */
+
+    public void setReplicationDeprovisionTime(java.util.Date replicationDeprovisionTime) {
+        this.replicationDeprovisionTime = replicationDeprovisionTime;
+    }
+
+    /**
+     * <p>
+     * The timestamp when DMS will deprovision the replication.
+     * </p>
+     * 
+     * @return The timestamp when DMS will deprovision the replication.
+     */
+
+    public java.util.Date getReplicationDeprovisionTime() {
+        return this.replicationDeprovisionTime;
+    }
+
+    /**
+     * <p>
+     * The timestamp when DMS will deprovision the replication.
+     * </p>
+     * 
+     * @param replicationDeprovisionTime
+     *        The timestamp when DMS will deprovision the replication.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Replication withReplicationDeprovisionTime(java.util.Date replicationDeprovisionTime) {
+        setReplicationDeprovisionTime(replicationDeprovisionTime);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1516,7 +1562,9 @@ public class Replication implements Serializable, Cloneable, StructuredPojo {
         if (getReplicationUpdateTime() != null)
             sb.append("ReplicationUpdateTime: ").append(getReplicationUpdateTime()).append(",");
         if (getReplicationLastStopTime() != null)
-            sb.append("ReplicationLastStopTime: ").append(getReplicationLastStopTime());
+            sb.append("ReplicationLastStopTime: ").append(getReplicationLastStopTime()).append(",");
+        if (getReplicationDeprovisionTime() != null)
+            sb.append("ReplicationDeprovisionTime: ").append(getReplicationDeprovisionTime());
         sb.append("}");
         return sb.toString();
     }
@@ -1603,6 +1651,10 @@ public class Replication implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getReplicationLastStopTime() != null && other.getReplicationLastStopTime().equals(this.getReplicationLastStopTime()) == false)
             return false;
+        if (other.getReplicationDeprovisionTime() == null ^ this.getReplicationDeprovisionTime() == null)
+            return false;
+        if (other.getReplicationDeprovisionTime() != null && other.getReplicationDeprovisionTime().equals(this.getReplicationDeprovisionTime()) == false)
+            return false;
         return true;
     }
 
@@ -1629,6 +1681,7 @@ public class Replication implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getReplicationCreateTime() == null) ? 0 : getReplicationCreateTime().hashCode());
         hashCode = prime * hashCode + ((getReplicationUpdateTime() == null) ? 0 : getReplicationUpdateTime().hashCode());
         hashCode = prime * hashCode + ((getReplicationLastStopTime() == null) ? 0 : getReplicationLastStopTime().hashCode());
+        hashCode = prime * hashCode + ((getReplicationDeprovisionTime() == null) ? 0 : getReplicationDeprovisionTime().hashCode());
         return hashCode;
     }
 

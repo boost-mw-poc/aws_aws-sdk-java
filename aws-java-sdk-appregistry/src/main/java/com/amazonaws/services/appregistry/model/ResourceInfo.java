@@ -52,6 +52,12 @@ public class ResourceInfo implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private ResourceDetails resourceDetails;
+    /**
+     * <p>
+     * Determines whether an application tag is applied or skipped.
+     * </p>
+     */
+    private java.util.List<String> options;
 
     /**
      * <p>
@@ -233,6 +239,104 @@ public class ResourceInfo implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Determines whether an application tag is applied or skipped.
+     * </p>
+     * 
+     * @return Determines whether an application tag is applied or skipped.
+     * @see AssociationOption
+     */
+
+    public java.util.List<String> getOptions() {
+        return options;
+    }
+
+    /**
+     * <p>
+     * Determines whether an application tag is applied or skipped.
+     * </p>
+     * 
+     * @param options
+     *        Determines whether an application tag is applied or skipped.
+     * @see AssociationOption
+     */
+
+    public void setOptions(java.util.Collection<String> options) {
+        if (options == null) {
+            this.options = null;
+            return;
+        }
+
+        this.options = new java.util.ArrayList<String>(options);
+    }
+
+    /**
+     * <p>
+     * Determines whether an application tag is applied or skipped.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setOptions(java.util.Collection)} or {@link #withOptions(java.util.Collection)} if you want to override
+     * the existing values.
+     * </p>
+     * 
+     * @param options
+     *        Determines whether an application tag is applied or skipped.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see AssociationOption
+     */
+
+    public ResourceInfo withOptions(String... options) {
+        if (this.options == null) {
+            setOptions(new java.util.ArrayList<String>(options.length));
+        }
+        for (String ele : options) {
+            this.options.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * Determines whether an application tag is applied or skipped.
+     * </p>
+     * 
+     * @param options
+     *        Determines whether an application tag is applied or skipped.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see AssociationOption
+     */
+
+    public ResourceInfo withOptions(java.util.Collection<String> options) {
+        setOptions(options);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Determines whether an application tag is applied or skipped.
+     * </p>
+     * 
+     * @param options
+     *        Determines whether an application tag is applied or skipped.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see AssociationOption
+     */
+
+    public ResourceInfo withOptions(AssociationOption... options) {
+        java.util.ArrayList<String> optionsCopy = new java.util.ArrayList<String>(options.length);
+        for (AssociationOption value : options) {
+            optionsCopy.add(value.toString());
+        }
+        if (getOptions() == null) {
+            setOptions(optionsCopy);
+        } else {
+            getOptions().addAll(optionsCopy);
+        }
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -251,7 +355,9 @@ public class ResourceInfo implements Serializable, Cloneable, StructuredPojo {
         if (getResourceType() != null)
             sb.append("ResourceType: ").append(getResourceType()).append(",");
         if (getResourceDetails() != null)
-            sb.append("ResourceDetails: ").append(getResourceDetails());
+            sb.append("ResourceDetails: ").append(getResourceDetails()).append(",");
+        if (getOptions() != null)
+            sb.append("Options: ").append(getOptions());
         sb.append("}");
         return sb.toString();
     }
@@ -282,6 +388,10 @@ public class ResourceInfo implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getResourceDetails() != null && other.getResourceDetails().equals(this.getResourceDetails()) == false)
             return false;
+        if (other.getOptions() == null ^ this.getOptions() == null)
+            return false;
+        if (other.getOptions() != null && other.getOptions().equals(this.getOptions()) == false)
+            return false;
         return true;
     }
 
@@ -294,6 +404,7 @@ public class ResourceInfo implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getArn() == null) ? 0 : getArn().hashCode());
         hashCode = prime * hashCode + ((getResourceType() == null) ? 0 : getResourceType().hashCode());
         hashCode = prime * hashCode + ((getResourceDetails() == null) ? 0 : getResourceDetails().hashCode());
+        hashCode = prime * hashCode + ((getOptions() == null) ? 0 : getOptions().hashCode());
         return hashCode;
     }
 

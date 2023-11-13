@@ -88,6 +88,22 @@ public class IBMDb2SettingsJsonUnmarshaller implements Unmarshaller<IBMDb2Settin
                     context.nextToken();
                     iBMDb2Settings.setSecretsManagerSecretId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("LoadTimeout", targetDepth)) {
+                    context.nextToken();
+                    iBMDb2Settings.setLoadTimeout(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
+                if (context.testExpression("WriteBufferSize", targetDepth)) {
+                    context.nextToken();
+                    iBMDb2Settings.setWriteBufferSize(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
+                if (context.testExpression("MaxFileSize", targetDepth)) {
+                    context.nextToken();
+                    iBMDb2Settings.setMaxFileSize(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
+                if (context.testExpression("KeepCsvFiles", targetDepth)) {
+                    context.nextToken();
+                    iBMDb2Settings.setKeepCsvFiles(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

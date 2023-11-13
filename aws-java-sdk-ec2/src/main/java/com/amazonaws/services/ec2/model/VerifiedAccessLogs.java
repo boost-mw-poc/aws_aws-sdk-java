@@ -46,13 +46,13 @@ public class VerifiedAccessLogs implements Serializable, Cloneable {
     private VerifiedAccessLogKinesisDataFirehoseDestination kinesisDataFirehose;
     /**
      * <p>
-     * Describes current setting for the logging version.
+     * The log version.
      * </p>
      */
     private String logVersion;
     /**
      * <p>
-     * Describes current setting for including trust data into the logs.
+     * Indicates whether trust data is included in the logs.
      * </p>
      */
     private Boolean includeTrustContext;
@@ -179,11 +179,11 @@ public class VerifiedAccessLogs implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Describes current setting for the logging version.
+     * The log version.
      * </p>
      * 
      * @param logVersion
-     *        Describes current setting for the logging version.
+     *        The log version.
      */
 
     public void setLogVersion(String logVersion) {
@@ -192,10 +192,10 @@ public class VerifiedAccessLogs implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Describes current setting for the logging version.
+     * The log version.
      * </p>
      * 
-     * @return Describes current setting for the logging version.
+     * @return The log version.
      */
 
     public String getLogVersion() {
@@ -204,11 +204,11 @@ public class VerifiedAccessLogs implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Describes current setting for the logging version.
+     * The log version.
      * </p>
      * 
      * @param logVersion
-     *        Describes current setting for the logging version.
+     *        The log version.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -219,11 +219,11 @@ public class VerifiedAccessLogs implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Describes current setting for including trust data into the logs.
+     * Indicates whether trust data is included in the logs.
      * </p>
      * 
      * @param includeTrustContext
-     *        Describes current setting for including trust data into the logs.
+     *        Indicates whether trust data is included in the logs.
      */
 
     public void setIncludeTrustContext(Boolean includeTrustContext) {
@@ -232,10 +232,10 @@ public class VerifiedAccessLogs implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Describes current setting for including trust data into the logs.
+     * Indicates whether trust data is included in the logs.
      * </p>
      * 
-     * @return Describes current setting for including trust data into the logs.
+     * @return Indicates whether trust data is included in the logs.
      */
 
     public Boolean getIncludeTrustContext() {
@@ -244,11 +244,11 @@ public class VerifiedAccessLogs implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Describes current setting for including trust data into the logs.
+     * Indicates whether trust data is included in the logs.
      * </p>
      * 
      * @param includeTrustContext
-     *        Describes current setting for including trust data into the logs.
+     *        Indicates whether trust data is included in the logs.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -259,10 +259,10 @@ public class VerifiedAccessLogs implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Describes current setting for including trust data into the logs.
+     * Indicates whether trust data is included in the logs.
      * </p>
      * 
-     * @return Describes current setting for including trust data into the logs.
+     * @return Indicates whether trust data is included in the logs.
      */
 
     public Boolean isIncludeTrustContext() {

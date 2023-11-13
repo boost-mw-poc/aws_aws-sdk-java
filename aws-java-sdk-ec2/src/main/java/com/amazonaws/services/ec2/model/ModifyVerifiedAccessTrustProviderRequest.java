@@ -55,7 +55,7 @@ public class ModifyVerifiedAccessTrustProviderRequest extends AmazonWebServiceRe
     private String clientToken;
     /**
      * <p>
-     * Options for server side encryption.
+     * The options for server side encryption.
      * </p>
      */
     private VerifiedAccessSseSpecificationRequest sseSpecification;
@@ -240,11 +240,11 @@ public class ModifyVerifiedAccessTrustProviderRequest extends AmazonWebServiceRe
 
     /**
      * <p>
-     * Options for server side encryption.
+     * The options for server side encryption.
      * </p>
      * 
      * @param sseSpecification
-     *        Options for server side encryption.
+     *        The options for server side encryption.
      */
 
     public void setSseSpecification(VerifiedAccessSseSpecificationRequest sseSpecification) {
@@ -253,10 +253,10 @@ public class ModifyVerifiedAccessTrustProviderRequest extends AmazonWebServiceRe
 
     /**
      * <p>
-     * Options for server side encryption.
+     * The options for server side encryption.
      * </p>
      * 
-     * @return Options for server side encryption.
+     * @return The options for server side encryption.
      */
 
     public VerifiedAccessSseSpecificationRequest getSseSpecification() {
@@ -265,11 +265,11 @@ public class ModifyVerifiedAccessTrustProviderRequest extends AmazonWebServiceRe
 
     /**
      * <p>
-     * Options for server side encryption.
+     * The options for server side encryption.
      * </p>
      * 
      * @param sseSpecification
-     *        Options for server side encryption.
+     *        The options for server side encryption.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

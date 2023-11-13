@@ -65,7 +65,8 @@ public class CreateVerifiedAccessEndpointRequest extends AmazonWebServiceRequest
     private String endpointDomainPrefix;
     /**
      * <p>
-     * The IDs of the security groups to associate with the Verified Access endpoint.
+     * The IDs of the security groups to associate with the Verified Access endpoint. Required if
+     * <code>AttachmentType</code> is set to <code>vpc</code>.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> securityGroupIds;
@@ -110,7 +111,7 @@ public class CreateVerifiedAccessEndpointRequest extends AmazonWebServiceRequest
     private String clientToken;
     /**
      * <p>
-     * Options for server side encryption.
+     * The options for server side encryption.
      * </p>
      */
     private VerifiedAccessSseSpecificationRequest sseSpecification;
@@ -404,10 +405,12 @@ public class CreateVerifiedAccessEndpointRequest extends AmazonWebServiceRequest
 
     /**
      * <p>
-     * The IDs of the security groups to associate with the Verified Access endpoint.
+     * The IDs of the security groups to associate with the Verified Access endpoint. Required if
+     * <code>AttachmentType</code> is set to <code>vpc</code>.
      * </p>
      * 
-     * @return The IDs of the security groups to associate with the Verified Access endpoint.
+     * @return The IDs of the security groups to associate with the Verified Access endpoint. Required if
+     *         <code>AttachmentType</code> is set to <code>vpc</code>.
      */
 
     public java.util.List<String> getSecurityGroupIds() {
@@ -419,11 +422,13 @@ public class CreateVerifiedAccessEndpointRequest extends AmazonWebServiceRequest
 
     /**
      * <p>
-     * The IDs of the security groups to associate with the Verified Access endpoint.
+     * The IDs of the security groups to associate with the Verified Access endpoint. Required if
+     * <code>AttachmentType</code> is set to <code>vpc</code>.
      * </p>
      * 
      * @param securityGroupIds
-     *        The IDs of the security groups to associate with the Verified Access endpoint.
+     *        The IDs of the security groups to associate with the Verified Access endpoint. Required if
+     *        <code>AttachmentType</code> is set to <code>vpc</code>.
      */
 
     public void setSecurityGroupIds(java.util.Collection<String> securityGroupIds) {
@@ -437,7 +442,8 @@ public class CreateVerifiedAccessEndpointRequest extends AmazonWebServiceRequest
 
     /**
      * <p>
-     * The IDs of the security groups to associate with the Verified Access endpoint.
+     * The IDs of the security groups to associate with the Verified Access endpoint. Required if
+     * <code>AttachmentType</code> is set to <code>vpc</code>.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -446,7 +452,8 @@ public class CreateVerifiedAccessEndpointRequest extends AmazonWebServiceRequest
      * </p>
      * 
      * @param securityGroupIds
-     *        The IDs of the security groups to associate with the Verified Access endpoint.
+     *        The IDs of the security groups to associate with the Verified Access endpoint. Required if
+     *        <code>AttachmentType</code> is set to <code>vpc</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -462,11 +469,13 @@ public class CreateVerifiedAccessEndpointRequest extends AmazonWebServiceRequest
 
     /**
      * <p>
-     * The IDs of the security groups to associate with the Verified Access endpoint.
+     * The IDs of the security groups to associate with the Verified Access endpoint. Required if
+     * <code>AttachmentType</code> is set to <code>vpc</code>.
      * </p>
      * 
      * @param securityGroupIds
-     *        The IDs of the security groups to associate with the Verified Access endpoint.
+     *        The IDs of the security groups to associate with the Verified Access endpoint. Required if
+     *        <code>AttachmentType</code> is set to <code>vpc</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -771,11 +780,11 @@ public class CreateVerifiedAccessEndpointRequest extends AmazonWebServiceRequest
 
     /**
      * <p>
-     * Options for server side encryption.
+     * The options for server side encryption.
      * </p>
      * 
      * @param sseSpecification
-     *        Options for server side encryption.
+     *        The options for server side encryption.
      */
 
     public void setSseSpecification(VerifiedAccessSseSpecificationRequest sseSpecification) {
@@ -784,10 +793,10 @@ public class CreateVerifiedAccessEndpointRequest extends AmazonWebServiceRequest
 
     /**
      * <p>
-     * Options for server side encryption.
+     * The options for server side encryption.
      * </p>
      * 
-     * @return Options for server side encryption.
+     * @return The options for server side encryption.
      */
 
     public VerifiedAccessSseSpecificationRequest getSseSpecification() {
@@ -796,11 +805,11 @@ public class CreateVerifiedAccessEndpointRequest extends AmazonWebServiceRequest
 
     /**
      * <p>
-     * Options for server side encryption.
+     * The options for server side encryption.
      * </p>
      * 
      * @param sseSpecification
-     *        Options for server side encryption.
+     *        The options for server side encryption.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

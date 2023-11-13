@@ -161,13 +161,14 @@ public class ModifyVpnTunnelOptionsSpecification implements Serializable, Clonea
     private Integer replayWindowSize;
     /**
      * <p>
-     * The number of seconds after which a DPD timeout occurs.
+     * The number of seconds after which a DPD timeout occurs. A DPD timeout of 40 seconds means that the VPN endpoint
+     * will consider the peer dead 30 seconds after the first failed keep-alive.
      * </p>
      * <p>
      * Constraints: A value greater than or equal to 30.
      * </p>
      * <p>
-     * Default: <code>30</code>
+     * Default: <code>40</code>
      * </p>
      */
     private Integer dPDTimeoutSeconds;
@@ -1086,22 +1087,24 @@ public class ModifyVpnTunnelOptionsSpecification implements Serializable, Clonea
 
     /**
      * <p>
-     * The number of seconds after which a DPD timeout occurs.
+     * The number of seconds after which a DPD timeout occurs. A DPD timeout of 40 seconds means that the VPN endpoint
+     * will consider the peer dead 30 seconds after the first failed keep-alive.
      * </p>
      * <p>
      * Constraints: A value greater than or equal to 30.
      * </p>
      * <p>
-     * Default: <code>30</code>
+     * Default: <code>40</code>
      * </p>
      * 
      * @param dPDTimeoutSeconds
-     *        The number of seconds after which a DPD timeout occurs.</p>
+     *        The number of seconds after which a DPD timeout occurs. A DPD timeout of 40 seconds means that the VPN
+     *        endpoint will consider the peer dead 30 seconds after the first failed keep-alive.</p>
      *        <p>
      *        Constraints: A value greater than or equal to 30.
      *        </p>
      *        <p>
-     *        Default: <code>30</code>
+     *        Default: <code>40</code>
      */
 
     public void setDPDTimeoutSeconds(Integer dPDTimeoutSeconds) {
@@ -1110,21 +1113,23 @@ public class ModifyVpnTunnelOptionsSpecification implements Serializable, Clonea
 
     /**
      * <p>
-     * The number of seconds after which a DPD timeout occurs.
+     * The number of seconds after which a DPD timeout occurs. A DPD timeout of 40 seconds means that the VPN endpoint
+     * will consider the peer dead 30 seconds after the first failed keep-alive.
      * </p>
      * <p>
      * Constraints: A value greater than or equal to 30.
      * </p>
      * <p>
-     * Default: <code>30</code>
+     * Default: <code>40</code>
      * </p>
      * 
-     * @return The number of seconds after which a DPD timeout occurs.</p>
+     * @return The number of seconds after which a DPD timeout occurs. A DPD timeout of 40 seconds means that the VPN
+     *         endpoint will consider the peer dead 30 seconds after the first failed keep-alive.</p>
      *         <p>
      *         Constraints: A value greater than or equal to 30.
      *         </p>
      *         <p>
-     *         Default: <code>30</code>
+     *         Default: <code>40</code>
      */
 
     public Integer getDPDTimeoutSeconds() {
@@ -1133,22 +1138,24 @@ public class ModifyVpnTunnelOptionsSpecification implements Serializable, Clonea
 
     /**
      * <p>
-     * The number of seconds after which a DPD timeout occurs.
+     * The number of seconds after which a DPD timeout occurs. A DPD timeout of 40 seconds means that the VPN endpoint
+     * will consider the peer dead 30 seconds after the first failed keep-alive.
      * </p>
      * <p>
      * Constraints: A value greater than or equal to 30.
      * </p>
      * <p>
-     * Default: <code>30</code>
+     * Default: <code>40</code>
      * </p>
      * 
      * @param dPDTimeoutSeconds
-     *        The number of seconds after which a DPD timeout occurs.</p>
+     *        The number of seconds after which a DPD timeout occurs. A DPD timeout of 40 seconds means that the VPN
+     *        endpoint will consider the peer dead 30 seconds after the first failed keep-alive.</p>
      *        <p>
      *        Constraints: A value greater than or equal to 30.
      *        </p>
      *        <p>
-     *        Default: <code>30</code>
+     *        Default: <code>40</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

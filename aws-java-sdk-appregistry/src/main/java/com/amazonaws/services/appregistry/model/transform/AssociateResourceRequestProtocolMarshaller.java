@@ -34,7 +34,7 @@ public class AssociateResourceRequestProtocolMarshaller implements Marshaller<Re
 
     private static final OperationInfo SDK_OPERATION_BINDING = OperationInfo.builder().protocol(Protocol.REST_JSON)
             .requestUri("/applications/{application}/resources/{resourceType}/{resource}").httpMethodName(HttpMethodName.PUT).hasExplicitPayloadMember(false)
-            .hasPayloadMembers(false).serviceName("AWSAppRegistry").build();
+            .hasPayloadMembers(true).serviceName("AWSAppRegistry").build();
 
     private final com.amazonaws.protocol.json.SdkJsonProtocolFactory protocolFactory;
 

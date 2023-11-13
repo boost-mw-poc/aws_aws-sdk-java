@@ -122,6 +122,10 @@ public class ReplicationJsonUnmarshaller implements Unmarshaller<Replication, Js
                     context.nextToken();
                     replication.setReplicationLastStopTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
                 }
+                if (context.testExpression("ReplicationDeprovisionTime", targetDepth)) {
+                    context.nextToken();
+                    replication.setReplicationDeprovisionTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

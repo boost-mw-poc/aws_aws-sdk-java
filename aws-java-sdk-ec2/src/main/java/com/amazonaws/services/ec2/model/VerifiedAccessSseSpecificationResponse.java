@@ -17,7 +17,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * Describes the options in use for server side encryption.
+ * The options in use for server side encryption.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/VerifiedAccessSseSpecificationResponse"
@@ -28,7 +28,7 @@ public class VerifiedAccessSseSpecificationResponse implements Serializable, Clo
 
     /**
      * <p>
-     * Describes the use of customer managed KMS keys for server side encryption.
+     * Indicates whether customer managed KMS keys are in use for server side encryption.
      * </p>
      * <p>
      * Valid values: <code>True</code> | <code>False</code>
@@ -37,21 +37,21 @@ public class VerifiedAccessSseSpecificationResponse implements Serializable, Clo
     private Boolean customerManagedKeyEnabled;
     /**
      * <p>
-     * Describes the ARN of the KMS key.
+     * The ARN of the KMS key.
      * </p>
      */
     private String kmsKeyArn;
 
     /**
      * <p>
-     * Describes the use of customer managed KMS keys for server side encryption.
+     * Indicates whether customer managed KMS keys are in use for server side encryption.
      * </p>
      * <p>
      * Valid values: <code>True</code> | <code>False</code>
      * </p>
      * 
      * @param customerManagedKeyEnabled
-     *        Describes the use of customer managed KMS keys for server side encryption. </p>
+     *        Indicates whether customer managed KMS keys are in use for server side encryption.</p>
      *        <p>
      *        Valid values: <code>True</code> | <code>False</code>
      */
@@ -62,13 +62,13 @@ public class VerifiedAccessSseSpecificationResponse implements Serializable, Clo
 
     /**
      * <p>
-     * Describes the use of customer managed KMS keys for server side encryption.
+     * Indicates whether customer managed KMS keys are in use for server side encryption.
      * </p>
      * <p>
      * Valid values: <code>True</code> | <code>False</code>
      * </p>
      * 
-     * @return Describes the use of customer managed KMS keys for server side encryption. </p>
+     * @return Indicates whether customer managed KMS keys are in use for server side encryption.</p>
      *         <p>
      *         Valid values: <code>True</code> | <code>False</code>
      */
@@ -79,14 +79,14 @@ public class VerifiedAccessSseSpecificationResponse implements Serializable, Clo
 
     /**
      * <p>
-     * Describes the use of customer managed KMS keys for server side encryption.
+     * Indicates whether customer managed KMS keys are in use for server side encryption.
      * </p>
      * <p>
      * Valid values: <code>True</code> | <code>False</code>
      * </p>
      * 
      * @param customerManagedKeyEnabled
-     *        Describes the use of customer managed KMS keys for server side encryption. </p>
+     *        Indicates whether customer managed KMS keys are in use for server side encryption.</p>
      *        <p>
      *        Valid values: <code>True</code> | <code>False</code>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -99,13 +99,13 @@ public class VerifiedAccessSseSpecificationResponse implements Serializable, Clo
 
     /**
      * <p>
-     * Describes the use of customer managed KMS keys for server side encryption.
+     * Indicates whether customer managed KMS keys are in use for server side encryption.
      * </p>
      * <p>
      * Valid values: <code>True</code> | <code>False</code>
      * </p>
      * 
-     * @return Describes the use of customer managed KMS keys for server side encryption. </p>
+     * @return Indicates whether customer managed KMS keys are in use for server side encryption.</p>
      *         <p>
      *         Valid values: <code>True</code> | <code>False</code>
      */
@@ -116,11 +116,11 @@ public class VerifiedAccessSseSpecificationResponse implements Serializable, Clo
 
     /**
      * <p>
-     * Describes the ARN of the KMS key.
+     * The ARN of the KMS key.
      * </p>
      * 
      * @param kmsKeyArn
-     *        Describes the ARN of the KMS key.
+     *        The ARN of the KMS key.
      */
 
     public void setKmsKeyArn(String kmsKeyArn) {
@@ -129,10 +129,10 @@ public class VerifiedAccessSseSpecificationResponse implements Serializable, Clo
 
     /**
      * <p>
-     * Describes the ARN of the KMS key.
+     * The ARN of the KMS key.
      * </p>
      * 
-     * @return Describes the ARN of the KMS key.
+     * @return The ARN of the KMS key.
      */
 
     public String getKmsKeyArn() {
@@ -141,11 +141,11 @@ public class VerifiedAccessSseSpecificationResponse implements Serializable, Clo
 
     /**
      * <p>
-     * Describes the ARN of the KMS key.
+     * The ARN of the KMS key.
      * </p>
      * 
      * @param kmsKeyArn
-     *        Describes the ARN of the KMS key.
+     *        The ARN of the KMS key.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

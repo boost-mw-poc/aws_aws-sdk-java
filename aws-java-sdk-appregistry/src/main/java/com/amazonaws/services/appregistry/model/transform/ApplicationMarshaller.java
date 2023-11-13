@@ -43,6 +43,8 @@ public class ApplicationMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("lastUpdateTime").timestampFormat("iso8601").build();
     private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("tags").build();
+    private static final MarshallingInfo<Map> APPLICATIONTAG_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("applicationTag").build();
 
     private static final ApplicationMarshaller instance = new ApplicationMarshaller();
 
@@ -67,6 +69,7 @@ public class ApplicationMarshaller {
             protocolMarshaller.marshall(application.getCreationTime(), CREATIONTIME_BINDING);
             protocolMarshaller.marshall(application.getLastUpdateTime(), LASTUPDATETIME_BINDING);
             protocolMarshaller.marshall(application.getTags(), TAGS_BINDING);
+            protocolMarshaller.marshall(application.getApplicationTag(), APPLICATIONTAG_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

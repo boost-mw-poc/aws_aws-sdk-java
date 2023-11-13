@@ -46,7 +46,7 @@ public class VerifiedAccessLogOptions implements Serializable, Cloneable {
     private VerifiedAccessLogKinesisDataFirehoseDestinationOptions kinesisDataFirehose;
     /**
      * <p>
-     * The logging version to use.
+     * The logging version.
      * </p>
      * <p>
      * Valid values: <code>ocsf-0.1</code> | <code>ocsf-1.0.0-rc.2</code>
@@ -55,7 +55,7 @@ public class VerifiedAccessLogOptions implements Serializable, Cloneable {
     private String logVersion;
     /**
      * <p>
-     * Include trust data sent by trust providers into the logs.
+     * Indicates whether to include trust data sent by trust providers in the logs.
      * </p>
      */
     private Boolean includeTrustContext;
@@ -182,14 +182,14 @@ public class VerifiedAccessLogOptions implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The logging version to use.
+     * The logging version.
      * </p>
      * <p>
      * Valid values: <code>ocsf-0.1</code> | <code>ocsf-1.0.0-rc.2</code>
      * </p>
      * 
      * @param logVersion
-     *        The logging version to use. </p>
+     *        The logging version.</p>
      *        <p>
      *        Valid values: <code>ocsf-0.1</code> | <code>ocsf-1.0.0-rc.2</code>
      */
@@ -200,13 +200,13 @@ public class VerifiedAccessLogOptions implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The logging version to use.
+     * The logging version.
      * </p>
      * <p>
      * Valid values: <code>ocsf-0.1</code> | <code>ocsf-1.0.0-rc.2</code>
      * </p>
      * 
-     * @return The logging version to use. </p>
+     * @return The logging version.</p>
      *         <p>
      *         Valid values: <code>ocsf-0.1</code> | <code>ocsf-1.0.0-rc.2</code>
      */
@@ -217,14 +217,14 @@ public class VerifiedAccessLogOptions implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The logging version to use.
+     * The logging version.
      * </p>
      * <p>
      * Valid values: <code>ocsf-0.1</code> | <code>ocsf-1.0.0-rc.2</code>
      * </p>
      * 
      * @param logVersion
-     *        The logging version to use. </p>
+     *        The logging version.</p>
      *        <p>
      *        Valid values: <code>ocsf-0.1</code> | <code>ocsf-1.0.0-rc.2</code>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -237,11 +237,11 @@ public class VerifiedAccessLogOptions implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Include trust data sent by trust providers into the logs.
+     * Indicates whether to include trust data sent by trust providers in the logs.
      * </p>
      * 
      * @param includeTrustContext
-     *        Include trust data sent by trust providers into the logs.
+     *        Indicates whether to include trust data sent by trust providers in the logs.
      */
 
     public void setIncludeTrustContext(Boolean includeTrustContext) {
@@ -250,10 +250,10 @@ public class VerifiedAccessLogOptions implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Include trust data sent by trust providers into the logs.
+     * Indicates whether to include trust data sent by trust providers in the logs.
      * </p>
      * 
-     * @return Include trust data sent by trust providers into the logs.
+     * @return Indicates whether to include trust data sent by trust providers in the logs.
      */
 
     public Boolean getIncludeTrustContext() {
@@ -262,11 +262,11 @@ public class VerifiedAccessLogOptions implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Include trust data sent by trust providers into the logs.
+     * Indicates whether to include trust data sent by trust providers in the logs.
      * </p>
      * 
      * @param includeTrustContext
-     *        Include trust data sent by trust providers into the logs.
+     *        Indicates whether to include trust data sent by trust providers in the logs.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -277,10 +277,10 @@ public class VerifiedAccessLogOptions implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Include trust data sent by trust providers into the logs.
+     * Indicates whether to include trust data sent by trust providers in the logs.
      * </p>
      * 
-     * @return Include trust data sent by trust providers into the logs.
+     * @return Indicates whether to include trust data sent by trust providers in the logs.
      */
 
     public Boolean isIncludeTrustContext() {

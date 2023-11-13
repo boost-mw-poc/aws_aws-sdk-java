@@ -51,7 +51,6 @@ public class AttributeGroupDetails implements Serializable, Cloneable, Structure
      * The name of the attribute group.
      * </p>
      */
-    @Deprecated
     private String name;
     /**
      * <p>
@@ -160,7 +159,7 @@ public class AttributeGroupDetails implements Serializable, Cloneable, Structure
      *        <p>
      *        The name of the attribute group.
      */
-    @Deprecated
+
     public void setName(String name) {
         this.name = name;
     }
@@ -184,7 +183,7 @@ public class AttributeGroupDetails implements Serializable, Cloneable, Structure
      *         <p>
      *         The name of the attribute group.
      */
-    @Deprecated
+
     public String getName() {
         return this.name;
     }
@@ -210,7 +209,7 @@ public class AttributeGroupDetails implements Serializable, Cloneable, Structure
      *        The name of the attribute group.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
-    @Deprecated
+
     public AttributeGroupDetails withName(String name) {
         setName(name);
         return this;

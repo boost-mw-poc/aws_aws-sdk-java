@@ -129,8 +129,8 @@ public class CreateTaskSetRequest extends com.amazonaws.AmazonWebServiceRequest 
     private Scale scale;
     /**
      * <p>
-     * The identifier that you provide to ensure the idempotency of the request. It's case sensitive and must be unique.
-     * It can be up to 32 ASCII characters are allowed.
+     * An identifier that you provide to ensure the idempotency of the request. It must be unique and is case sensitive.
+     * Up to 36 ASCII characters in the range of 33-126 (inclusive) are allowed.
      * </p>
      */
     private String clientToken;
@@ -1028,13 +1028,13 @@ public class CreateTaskSetRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The identifier that you provide to ensure the idempotency of the request. It's case sensitive and must be unique.
-     * It can be up to 32 ASCII characters are allowed.
+     * An identifier that you provide to ensure the idempotency of the request. It must be unique and is case sensitive.
+     * Up to 36 ASCII characters in the range of 33-126 (inclusive) are allowed.
      * </p>
      * 
      * @param clientToken
-     *        The identifier that you provide to ensure the idempotency of the request. It's case sensitive and must be
-     *        unique. It can be up to 32 ASCII characters are allowed.
+     *        An identifier that you provide to ensure the idempotency of the request. It must be unique and is case
+     *        sensitive. Up to 36 ASCII characters in the range of 33-126 (inclusive) are allowed.
      */
 
     public void setClientToken(String clientToken) {
@@ -1043,12 +1043,12 @@ public class CreateTaskSetRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The identifier that you provide to ensure the idempotency of the request. It's case sensitive and must be unique.
-     * It can be up to 32 ASCII characters are allowed.
+     * An identifier that you provide to ensure the idempotency of the request. It must be unique and is case sensitive.
+     * Up to 36 ASCII characters in the range of 33-126 (inclusive) are allowed.
      * </p>
      * 
-     * @return The identifier that you provide to ensure the idempotency of the request. It's case sensitive and must be
-     *         unique. It can be up to 32 ASCII characters are allowed.
+     * @return An identifier that you provide to ensure the idempotency of the request. It must be unique and is case
+     *         sensitive. Up to 36 ASCII characters in the range of 33-126 (inclusive) are allowed.
      */
 
     public String getClientToken() {
@@ -1057,13 +1057,13 @@ public class CreateTaskSetRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The identifier that you provide to ensure the idempotency of the request. It's case sensitive and must be unique.
-     * It can be up to 32 ASCII characters are allowed.
+     * An identifier that you provide to ensure the idempotency of the request. It must be unique and is case sensitive.
+     * Up to 36 ASCII characters in the range of 33-126 (inclusive) are allowed.
      * </p>
      * 
      * @param clientToken
-     *        The identifier that you provide to ensure the idempotency of the request. It's case sensitive and must be
-     *        unique. It can be up to 32 ASCII characters are allowed.
+     *        An identifier that you provide to ensure the idempotency of the request. It must be unique and is case
+     *        sensitive. Up to 36 ASCII characters in the range of 33-126 (inclusive) are allowed.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

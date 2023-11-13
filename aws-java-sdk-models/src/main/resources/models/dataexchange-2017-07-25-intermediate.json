@@ -55725,7 +55725,7 @@
       "packageName" : "com.amazonaws.services.dataexchange.model",
       "requestSignerAware" : false,
       "requestSignerClassFqcn" : null,
-      "required" : [ "ProductId" ],
+      "required" : [ ],
       "shapeName" : "OriginDetails",
       "signerAware" : false,
       "signerType" : null,

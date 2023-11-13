@@ -25,18 +25,18 @@ public class ModifyVerifiedAccessGroupResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * Details of Verified Access group.
+     * Details about the Verified Access group.
      * </p>
      */
     private VerifiedAccessGroup verifiedAccessGroup;
 
     /**
      * <p>
-     * Details of Verified Access group.
+     * Details about the Verified Access group.
      * </p>
      * 
      * @param verifiedAccessGroup
-     *        Details of Verified Access group.
+     *        Details about the Verified Access group.
      */
 
     public void setVerifiedAccessGroup(VerifiedAccessGroup verifiedAccessGroup) {
@@ -45,10 +45,10 @@ public class ModifyVerifiedAccessGroupResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * Details of Verified Access group.
+     * Details about the Verified Access group.
      * </p>
      * 
-     * @return Details of Verified Access group.
+     * @return Details about the Verified Access group.
      */
 
     public VerifiedAccessGroup getVerifiedAccessGroup() {
@@ -57,11 +57,11 @@ public class ModifyVerifiedAccessGroupResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * Details of Verified Access group.
+     * Details about the Verified Access group.
      * </p>
      * 
      * @param verifiedAccessGroup
-     *        Details of Verified Access group.
+     *        Details about the Verified Access group.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.appregistry.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -33,6 +34,12 @@ public class GetAssociatedResourceRequestMarshaller {
             .marshallLocationName("resourceType").build();
     private static final MarshallingInfo<String> RESOURCE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PATH)
             .marshallLocationName("resource").build();
+    private static final MarshallingInfo<String> NEXTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("nextToken").build();
+    private static final MarshallingInfo<List> RESOURCETAGSTATUS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("resourceTagStatus").build();
+    private static final MarshallingInfo<Integer> MAXRESULTS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("maxResults").build();
 
     private static final GetAssociatedResourceRequestMarshaller instance = new GetAssociatedResourceRequestMarshaller();
 
@@ -53,6 +60,9 @@ public class GetAssociatedResourceRequestMarshaller {
             protocolMarshaller.marshall(getAssociatedResourceRequest.getApplication(), APPLICATION_BINDING);
             protocolMarshaller.marshall(getAssociatedResourceRequest.getResourceType(), RESOURCETYPE_BINDING);
             protocolMarshaller.marshall(getAssociatedResourceRequest.getResource(), RESOURCE_BINDING);
+            protocolMarshaller.marshall(getAssociatedResourceRequest.getNextToken(), NEXTTOKEN_BINDING);
+            protocolMarshaller.marshall(getAssociatedResourceRequest.getResourceTagStatus(), RESOURCETAGSTATUS_BINDING);
+            protocolMarshaller.marshall(getAssociatedResourceRequest.getMaxResults(), MAXRESULTS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -104,6 +104,10 @@ public class MySQLSettingsJsonUnmarshaller implements Unmarshaller<MySQLSettings
                     context.nextToken();
                     mySQLSettings.setSecretsManagerSecretId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("ExecuteTimeout", targetDepth)) {
+                    context.nextToken();
+                    mySQLSettings.setExecuteTimeout(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

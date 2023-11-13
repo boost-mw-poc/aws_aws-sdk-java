@@ -64,6 +64,11 @@ public class GetCoipPoolUsageResultStaxUnmarshaller implements Unmarshaller<GetC
                     getCoipPoolUsageResult.setLocalGatewayRouteTableId(StringStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("nextToken", targetDepth)) {
+                    getCoipPoolUsageResult.setNextToken(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return getCoipPoolUsageResult;

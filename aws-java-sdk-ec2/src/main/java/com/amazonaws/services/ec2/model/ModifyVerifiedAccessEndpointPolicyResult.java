@@ -38,7 +38,7 @@ public class ModifyVerifiedAccessEndpointPolicyResult extends com.amazonaws.Amaz
     private String policyDocument;
     /**
      * <p>
-     * Describes the options in use for server side encryption.
+     * The options in use for server side encryption.
      * </p>
      */
     private VerifiedAccessSseSpecificationResponse sseSpecification;
@@ -137,11 +137,11 @@ public class ModifyVerifiedAccessEndpointPolicyResult extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * Describes the options in use for server side encryption.
+     * The options in use for server side encryption.
      * </p>
      * 
      * @param sseSpecification
-     *        Describes the options in use for server side encryption.
+     *        The options in use for server side encryption.
      */
 
     public void setSseSpecification(VerifiedAccessSseSpecificationResponse sseSpecification) {
@@ -150,10 +150,10 @@ public class ModifyVerifiedAccessEndpointPolicyResult extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * Describes the options in use for server side encryption.
+     * The options in use for server side encryption.
      * </p>
      * 
-     * @return Describes the options in use for server side encryption.
+     * @return The options in use for server side encryption.
      */
 
     public VerifiedAccessSseSpecificationResponse getSseSpecification() {
@@ -162,11 +162,11 @@ public class ModifyVerifiedAccessEndpointPolicyResult extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * Describes the options in use for server side encryption.
+     * The options in use for server side encryption.
      * </p>
      * 
      * @param sseSpecification
-     *        Describes the options in use for server side encryption.
+     *        The options in use for server side encryption.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

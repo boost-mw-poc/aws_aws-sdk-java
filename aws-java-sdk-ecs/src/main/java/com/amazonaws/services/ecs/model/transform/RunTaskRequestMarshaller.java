@@ -18,6 +18,8 @@ import javax.annotation.Generated;
 import com.amazonaws.SdkClientException;
 import com.amazonaws.services.ecs.model.*;
 
+import com.amazonaws.util.IdempotentUtils;
+
 import com.amazonaws.protocol.*;
 import com.amazonaws.annotation.SdkInternalApi;
 
@@ -62,6 +64,9 @@ public class RunTaskRequestMarshaller {
             .marshallLocationName("tags").build();
     private static final MarshallingInfo<String> TASKDEFINITION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("taskDefinition").build();
+    private static final MarshallingInfo<String> CLIENTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("clientToken")
+            .defaultValueSupplier(com.amazonaws.util.IdempotentUtils.getGenerator()).build();
 
     private static final RunTaskRequestMarshaller instance = new RunTaskRequestMarshaller();
 
@@ -96,6 +101,7 @@ public class RunTaskRequestMarshaller {
             protocolMarshaller.marshall(runTaskRequest.getStartedBy(), STARTEDBY_BINDING);
             protocolMarshaller.marshall(runTaskRequest.getTags(), TAGS_BINDING);
             protocolMarshaller.marshall(runTaskRequest.getTaskDefinition(), TASKDEFINITION_BINDING);
+            protocolMarshaller.marshall(runTaskRequest.getClientToken(), CLIENTTOKEN_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

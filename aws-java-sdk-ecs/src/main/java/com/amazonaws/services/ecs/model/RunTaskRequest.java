@@ -185,8 +185,8 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
      * An optional tag specified when a task is started. For example, if you automatically trigger a task to run a batch
      * process job, you could apply a unique identifier for that job to your task with the <code>startedBy</code>
      * parameter. You can then identify which tasks belong to that job by filtering the results of a <a>ListTasks</a>
-     * call with the <code>startedBy</code> value. Up to 36 letters (uppercase and lowercase), numbers, hyphens (-), and
-     * underscores (_) are allowed.
+     * call with the <code>startedBy</code> value. Up to 128 letters (uppercase and lowercase), numbers, hyphens (-),
+     * and underscores (_) are allowed.
      * </p>
      * <p>
      * If a task is started by an Amazon ECS service, then the <code>startedBy</code> parameter contains the deployment
@@ -276,6 +276,15 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
      * </p>
      */
     private String taskDefinition;
+    /**
+     * <p>
+     * An identifier that you provide to ensure the idempotency of the request. It must be unique and is case sensitive.
+     * Up to 64 characters are allowed. The valid characters are characters in the range of 33-126, inclusive. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/ECS_Idempotency.html">Ensuring idempotency</a>.
+     * </p>
+     */
+    private String clientToken;
 
     /**
      * <p>
@@ -1528,8 +1537,8 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
      * An optional tag specified when a task is started. For example, if you automatically trigger a task to run a batch
      * process job, you could apply a unique identifier for that job to your task with the <code>startedBy</code>
      * parameter. You can then identify which tasks belong to that job by filtering the results of a <a>ListTasks</a>
-     * call with the <code>startedBy</code> value. Up to 36 letters (uppercase and lowercase), numbers, hyphens (-), and
-     * underscores (_) are allowed.
+     * call with the <code>startedBy</code> value. Up to 128 letters (uppercase and lowercase), numbers, hyphens (-),
+     * and underscores (_) are allowed.
      * </p>
      * <p>
      * If a task is started by an Amazon ECS service, then the <code>startedBy</code> parameter contains the deployment
@@ -1540,7 +1549,7 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
      *        An optional tag specified when a task is started. For example, if you automatically trigger a task to run
      *        a batch process job, you could apply a unique identifier for that job to your task with the
      *        <code>startedBy</code> parameter. You can then identify which tasks belong to that job by filtering the
-     *        results of a <a>ListTasks</a> call with the <code>startedBy</code> value. Up to 36 letters (uppercase and
+     *        results of a <a>ListTasks</a> call with the <code>startedBy</code> value. Up to 128 letters (uppercase and
      *        lowercase), numbers, hyphens (-), and underscores (_) are allowed.</p>
      *        <p>
      *        If a task is started by an Amazon ECS service, then the <code>startedBy</code> parameter contains the
@@ -1556,8 +1565,8 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
      * An optional tag specified when a task is started. For example, if you automatically trigger a task to run a batch
      * process job, you could apply a unique identifier for that job to your task with the <code>startedBy</code>
      * parameter. You can then identify which tasks belong to that job by filtering the results of a <a>ListTasks</a>
-     * call with the <code>startedBy</code> value. Up to 36 letters (uppercase and lowercase), numbers, hyphens (-), and
-     * underscores (_) are allowed.
+     * call with the <code>startedBy</code> value. Up to 128 letters (uppercase and lowercase), numbers, hyphens (-),
+     * and underscores (_) are allowed.
      * </p>
      * <p>
      * If a task is started by an Amazon ECS service, then the <code>startedBy</code> parameter contains the deployment
@@ -1567,8 +1576,8 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
      * @return An optional tag specified when a task is started. For example, if you automatically trigger a task to run
      *         a batch process job, you could apply a unique identifier for that job to your task with the
      *         <code>startedBy</code> parameter. You can then identify which tasks belong to that job by filtering the
-     *         results of a <a>ListTasks</a> call with the <code>startedBy</code> value. Up to 36 letters (uppercase and
-     *         lowercase), numbers, hyphens (-), and underscores (_) are allowed.</p>
+     *         results of a <a>ListTasks</a> call with the <code>startedBy</code> value. Up to 128 letters (uppercase
+     *         and lowercase), numbers, hyphens (-), and underscores (_) are allowed.</p>
      *         <p>
      *         If a task is started by an Amazon ECS service, then the <code>startedBy</code> parameter contains the
      *         deployment ID of the service that starts it.
@@ -1583,8 +1592,8 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
      * An optional tag specified when a task is started. For example, if you automatically trigger a task to run a batch
      * process job, you could apply a unique identifier for that job to your task with the <code>startedBy</code>
      * parameter. You can then identify which tasks belong to that job by filtering the results of a <a>ListTasks</a>
-     * call with the <code>startedBy</code> value. Up to 36 letters (uppercase and lowercase), numbers, hyphens (-), and
-     * underscores (_) are allowed.
+     * call with the <code>startedBy</code> value. Up to 128 letters (uppercase and lowercase), numbers, hyphens (-),
+     * and underscores (_) are allowed.
      * </p>
      * <p>
      * If a task is started by an Amazon ECS service, then the <code>startedBy</code> parameter contains the deployment
@@ -1595,7 +1604,7 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
      *        An optional tag specified when a task is started. For example, if you automatically trigger a task to run
      *        a batch process job, you could apply a unique identifier for that job to your task with the
      *        <code>startedBy</code> parameter. You can then identify which tasks belong to that job by filtering the
-     *        results of a <a>ListTasks</a> call with the <code>startedBy</code> value. Up to 36 letters (uppercase and
+     *        results of a <a>ListTasks</a> call with the <code>startedBy</code> value. Up to 128 letters (uppercase and
      *        lowercase), numbers, hyphens (-), and underscores (_) are allowed.</p>
      *        <p>
      *        If a task is started by an Amazon ECS service, then the <code>startedBy</code> parameter contains the
@@ -2235,6 +2244,67 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
     }
 
     /**
+     * <p>
+     * An identifier that you provide to ensure the idempotency of the request. It must be unique and is case sensitive.
+     * Up to 64 characters are allowed. The valid characters are characters in the range of 33-126, inclusive. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/ECS_Idempotency.html">Ensuring idempotency</a>.
+     * </p>
+     * 
+     * @param clientToken
+     *        An identifier that you provide to ensure the idempotency of the request. It must be unique and is case
+     *        sensitive. Up to 64 characters are allowed. The valid characters are characters in the range of 33-126,
+     *        inclusive. For more information, see <a
+     *        href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/ECS_Idempotency.html">Ensuring
+     *        idempotency</a>.
+     */
+
+    public void setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+    }
+
+    /**
+     * <p>
+     * An identifier that you provide to ensure the idempotency of the request. It must be unique and is case sensitive.
+     * Up to 64 characters are allowed. The valid characters are characters in the range of 33-126, inclusive. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/ECS_Idempotency.html">Ensuring idempotency</a>.
+     * </p>
+     * 
+     * @return An identifier that you provide to ensure the idempotency of the request. It must be unique and is case
+     *         sensitive. Up to 64 characters are allowed. The valid characters are characters in the range of 33-126,
+     *         inclusive. For more information, see <a
+     *         href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/ECS_Idempotency.html">Ensuring
+     *         idempotency</a>.
+     */
+
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    /**
+     * <p>
+     * An identifier that you provide to ensure the idempotency of the request. It must be unique and is case sensitive.
+     * Up to 64 characters are allowed. The valid characters are characters in the range of 33-126, inclusive. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/ECS_Idempotency.html">Ensuring idempotency</a>.
+     * </p>
+     * 
+     * @param clientToken
+     *        An identifier that you provide to ensure the idempotency of the request. It must be unique and is case
+     *        sensitive. Up to 64 characters are allowed. The valid characters are characters in the range of 33-126,
+     *        inclusive. For more information, see <a
+     *        href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/ECS_Idempotency.html">Ensuring
+     *        idempotency</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RunTaskRequest withClientToken(String clientToken) {
+        setClientToken(clientToken);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -2279,7 +2349,9 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
         if (getTags() != null)
             sb.append("Tags: ").append(getTags()).append(",");
         if (getTaskDefinition() != null)
-            sb.append("TaskDefinition: ").append(getTaskDefinition());
+            sb.append("TaskDefinition: ").append(getTaskDefinition()).append(",");
+        if (getClientToken() != null)
+            sb.append("ClientToken: ").append(getClientToken());
         sb.append("}");
         return sb.toString();
     }
@@ -2362,6 +2434,10 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
             return false;
         if (other.getTaskDefinition() != null && other.getTaskDefinition().equals(this.getTaskDefinition()) == false)
             return false;
+        if (other.getClientToken() == null ^ this.getClientToken() == null)
+            return false;
+        if (other.getClientToken() != null && other.getClientToken().equals(this.getClientToken()) == false)
+            return false;
         return true;
     }
 
@@ -2387,6 +2463,7 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
         hashCode = prime * hashCode + ((getStartedBy() == null) ? 0 : getStartedBy().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getTaskDefinition() == null) ? 0 : getTaskDefinition().hashCode());
+        hashCode = prime * hashCode + ((getClientToken() == null) ? 0 : getClientToken().hashCode());
         return hashCode;
     }
 

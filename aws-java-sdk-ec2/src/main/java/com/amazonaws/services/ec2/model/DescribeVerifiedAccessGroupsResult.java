@@ -25,7 +25,7 @@ public class DescribeVerifiedAccessGroupsResult extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The ID of the Verified Access group.
+     * Details about the Verified Access groups.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<VerifiedAccessGroup> verifiedAccessGroups;
@@ -39,10 +39,10 @@ public class DescribeVerifiedAccessGroupsResult extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The ID of the Verified Access group.
+     * Details about the Verified Access groups.
      * </p>
      * 
-     * @return The ID of the Verified Access group.
+     * @return Details about the Verified Access groups.
      */
 
     public java.util.List<VerifiedAccessGroup> getVerifiedAccessGroups() {
@@ -54,11 +54,11 @@ public class DescribeVerifiedAccessGroupsResult extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The ID of the Verified Access group.
+     * Details about the Verified Access groups.
      * </p>
      * 
      * @param verifiedAccessGroups
-     *        The ID of the Verified Access group.
+     *        Details about the Verified Access groups.
      */
 
     public void setVerifiedAccessGroups(java.util.Collection<VerifiedAccessGroup> verifiedAccessGroups) {
@@ -72,7 +72,7 @@ public class DescribeVerifiedAccessGroupsResult extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The ID of the Verified Access group.
+     * Details about the Verified Access groups.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -81,7 +81,7 @@ public class DescribeVerifiedAccessGroupsResult extends com.amazonaws.AmazonWebS
      * </p>
      * 
      * @param verifiedAccessGroups
-     *        The ID of the Verified Access group.
+     *        Details about the Verified Access groups.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -97,11 +97,11 @@ public class DescribeVerifiedAccessGroupsResult extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The ID of the Verified Access group.
+     * Details about the Verified Access groups.
      * </p>
      * 
      * @param verifiedAccessGroups
-     *        The ID of the Verified Access group.
+     *        Details about the Verified Access groups.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

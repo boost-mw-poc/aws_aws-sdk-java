@@ -20,9 +20,9 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public enum AcceleratorManufacturer {
 
-    Nvidia("nvidia"),
-    Amd("amd"),
     AmazonWebServices("amazon-web-services"),
+    Amd("amd"),
+    Nvidia("nvidia"),
     Xilinx("xilinx");
 
     private String value;

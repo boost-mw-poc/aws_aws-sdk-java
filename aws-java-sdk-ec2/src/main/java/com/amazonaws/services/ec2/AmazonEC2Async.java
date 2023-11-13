@@ -9790,7 +9790,7 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * Deletes a VPC peering connection. Either the owner of the requester VPC or the owner of the accepter VPC can
      * delete the VPC peering connection if it's in the <code>active</code> state. The owner of the requester VPC can
      * delete a VPC peering connection in the <code>pending-acceptance</code> state. You cannot delete a VPC peering
-     * connection that's in the <code>failed</code> state.
+     * connection that's in the <code>failed</code> or <code>rejected</code> state.
      * </p>
      * 
      * @param deleteVpcPeeringConnectionRequest
@@ -9807,7 +9807,7 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * Deletes a VPC peering connection. Either the owner of the requester VPC or the owner of the accepter VPC can
      * delete the VPC peering connection if it's in the <code>active</code> state. The owner of the requester VPC can
      * delete a VPC peering connection in the <code>pending-acceptance</code> state. You cannot delete a VPC peering
-     * connection that's in the <code>failed</code> state.
+     * connection that's in the <code>failed</code> or <code>rejected</code> state.
      * </p>
      * 
      * @param deleteVpcPeeringConnectionRequest
@@ -11482,7 +11482,7 @@ public interface AmazonEC2Async extends AmazonEC2 {
 
     /**
      * <p>
-     * Describe details for Windows AMIs that are configured for faster launching.
+     * Describe details for Windows AMIs that are configured for Windows fast launch.
      * </p>
      * 
      * @param describeFastLaunchImagesRequest
@@ -11495,7 +11495,7 @@ public interface AmazonEC2Async extends AmazonEC2 {
 
     /**
      * <p>
-     * Describe details for Windows AMIs that are configured for faster launching.
+     * Describe details for Windows AMIs that are configured for Windows fast launch.
      * </p>
      * 
      * @param describeFastLaunchImagesRequest
@@ -12686,6 +12686,143 @@ public interface AmazonEC2Async extends AmazonEC2 {
      */
     java.util.concurrent.Future<DescribeInstanceStatusResult> describeInstanceStatusAsync(
             com.amazonaws.handlers.AsyncHandler<DescribeInstanceStatusRequest, DescribeInstanceStatusResult> asyncHandler);
+
+    /**
+     * <p>
+     * Describes a tree-based hierarchy that represents the physical host placement of your EC2 instances within an
+     * Availability Zone or Local Zone. You can use this information to determine the relative proximity of your EC2
+     * instances within the Amazon Web Services network to support your tightly coupled workloads.
+     * </p>
+     * <p class="title">
+     * <b>Limitations</b>
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Supported zones
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Availability Zone
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Local Zone
+     * </p>
+     * </li>
+     * </ul>
+     * </li>
+     * <li>
+     * <p>
+     * Supported instance types
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>hpc6a.48xlarge</code> | <code>hpc6id.32xlarge</code> | <code>hpc7a.12xlarge</code> |
+     * <code>hpc7a.24xlarge</code> | <code>hpc7a.48xlarge</code> | <code>hpc7a.96xlarge</code> |
+     * <code>hpc7g.4xlarge</code> | <code>hpc7g.8xlarge</code> | <code>hpc7g.16xlarge</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>p3dn.24xlarge</code> | <code>p4d.24xlarge</code> | <code>p4de.24xlarge</code> | <code>p5.48xlarge</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>trn1.2xlarge</code> | <code>trn1.32xlarge</code> | <code>trn1n.32xlarge</code>
+     * </p>
+     * </li>
+     * </ul>
+     * </li>
+     * </ul>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-topology.html">Amazon EC2 instance
+     * topology</a> in the <i>Amazon EC2 User Guide</i>.
+     * </p>
+     * 
+     * @param describeInstanceTopologyRequest
+     * @return A Java Future containing the result of the DescribeInstanceTopology operation returned by the service.
+     * @sample AmazonEC2Async.DescribeInstanceTopology
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeInstanceTopology" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeInstanceTopologyResult> describeInstanceTopologyAsync(DescribeInstanceTopologyRequest describeInstanceTopologyRequest);
+
+    /**
+     * <p>
+     * Describes a tree-based hierarchy that represents the physical host placement of your EC2 instances within an
+     * Availability Zone or Local Zone. You can use this information to determine the relative proximity of your EC2
+     * instances within the Amazon Web Services network to support your tightly coupled workloads.
+     * </p>
+     * <p class="title">
+     * <b>Limitations</b>
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Supported zones
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Availability Zone
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Local Zone
+     * </p>
+     * </li>
+     * </ul>
+     * </li>
+     * <li>
+     * <p>
+     * Supported instance types
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>hpc6a.48xlarge</code> | <code>hpc6id.32xlarge</code> | <code>hpc7a.12xlarge</code> |
+     * <code>hpc7a.24xlarge</code> | <code>hpc7a.48xlarge</code> | <code>hpc7a.96xlarge</code> |
+     * <code>hpc7g.4xlarge</code> | <code>hpc7g.8xlarge</code> | <code>hpc7g.16xlarge</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>p3dn.24xlarge</code> | <code>p4d.24xlarge</code> | <code>p4de.24xlarge</code> | <code>p5.48xlarge</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>trn1.2xlarge</code> | <code>trn1.32xlarge</code> | <code>trn1n.32xlarge</code>
+     * </p>
+     * </li>
+     * </ul>
+     * </li>
+     * </ul>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-topology.html">Amazon EC2 instance
+     * topology</a> in the <i>Amazon EC2 User Guide</i>.
+     * </p>
+     * 
+     * @param describeInstanceTopologyRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeInstanceTopology operation returned by the service.
+     * @sample AmazonEC2AsyncHandler.DescribeInstanceTopology
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeInstanceTopology" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeInstanceTopologyResult> describeInstanceTopologyAsync(DescribeInstanceTopologyRequest describeInstanceTopologyRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeInstanceTopologyRequest, DescribeInstanceTopologyResult> asyncHandler);
 
     /**
      * <p>
@@ -17523,13 +17660,13 @@ public interface AmazonEC2Async extends AmazonEC2 {
 
     /**
      * <p>
-     * Discontinue faster launching for a Windows AMI, and clean up existing pre-provisioned snapshots. When you disable
-     * faster launching, the AMI uses the standard launch process for each instance. All pre-provisioned snapshots must
-     * be removed before you can enable faster launching again.
+     * Discontinue Windows fast launch for a Windows AMI, and clean up existing pre-provisioned snapshots. After you
+     * disable Windows fast launch, the AMI uses the standard launch process for each new instance. Amazon EC2 must
+     * remove all pre-provisioned snapshots before you can enable Windows fast launch again.
      * </p>
      * <note>
      * <p>
-     * To change these settings, you must own the AMI.
+     * You can only change these settings for Windows AMIs that you own or that have been shared with you.
      * </p>
      * </note>
      * 
@@ -17543,13 +17680,13 @@ public interface AmazonEC2Async extends AmazonEC2 {
 
     /**
      * <p>
-     * Discontinue faster launching for a Windows AMI, and clean up existing pre-provisioned snapshots. When you disable
-     * faster launching, the AMI uses the standard launch process for each instance. All pre-provisioned snapshots must
-     * be removed before you can enable faster launching again.
+     * Discontinue Windows fast launch for a Windows AMI, and clean up existing pre-provisioned snapshots. After you
+     * disable Windows fast launch, the AMI uses the standard launch process for each new instance. Amazon EC2 must
+     * remove all pre-provisioned snapshots before you can enable Windows fast launch again.
      * </p>
      * <note>
      * <p>
-     * To change these settings, you must own the AMI.
+     * You can only change these settings for Windows AMIs that you own or that have been shared with you.
      * </p>
      * </note>
      * 
@@ -17605,8 +17742,8 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * be used for instance launches.
      * </p>
      * <p>
-     * A disabled AMI can't be shared. If a public or shared AMI was previously shared, it is made private. If an AMI
-     * was shared with an Amazon Web Services account, organization, or Organizational Unit, they lose access to the
+     * A disabled AMI can't be shared. If an AMI was public or previously shared, it is made private. If an AMI was
+     * shared with an Amazon Web Services account, organization, or Organizational Unit, they lose access to the
      * disabled AMI.
      * </p>
      * <p>
@@ -17641,8 +17778,8 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * be used for instance launches.
      * </p>
      * <p>
-     * A disabled AMI can't be shared. If a public or shared AMI was previously shared, it is made private. If an AMI
-     * was shared with an Amazon Web Services account, organization, or Organizational Unit, they lose access to the
+     * A disabled AMI can't be shared. If an AMI was public or previously shared, it is made private. If an AMI was
+     * shared with an Amazon Web Services account, organization, or Organizational Unit, they lose access to the
      * disabled AMI.
      * </p>
      * <p>
@@ -18842,7 +18979,7 @@ public interface AmazonEC2Async extends AmazonEC2 {
 
     /**
      * <p>
-     * When you enable faster launching for a Windows AMI, images are pre-provisioned, using snapshots to launch
+     * When you enable Windows fast launch for a Windows AMI, images are pre-provisioned, using snapshots to launch
      * instances up to 65% faster. To create the optimized Windows image, Amazon EC2 launches an instance and runs
      * through Sysprep steps, rebooting as required. Then it creates a set of reserved snapshots that are used for
      * subsequent launches. The reserved snapshots are automatically replenished as they are used, depending on your
@@ -18850,7 +18987,7 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * </p>
      * <note>
      * <p>
-     * To change these settings, you must own the AMI.
+     * You can only change these settings for Windows AMIs that you own or that have been shared with you.
      * </p>
      * </note>
      * 
@@ -18864,7 +19001,7 @@ public interface AmazonEC2Async extends AmazonEC2 {
 
     /**
      * <p>
-     * When you enable faster launching for a Windows AMI, images are pre-provisioned, using snapshots to launch
+     * When you enable Windows fast launch for a Windows AMI, images are pre-provisioned, using snapshots to launch
      * instances up to 65% faster. To create the optimized Windows image, Amazon EC2 launches an instance and runs
      * through Sysprep steps, rebooting as required. Then it creates a set of reserved snapshots that are used for
      * subsequent launches. The reserved snapshots are automatically replenished as they are used, depending on your
@@ -18872,7 +19009,7 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * </p>
      * <note>
      * <p>
-     * To change these settings, you must own the AMI.
+     * You can only change these settings for Windows AMIs that you own or that have been shared with you.
      * </p>
      * </note>
      * 

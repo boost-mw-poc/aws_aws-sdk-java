@@ -47,7 +47,7 @@ public class CreateReplicationSubnetGroupRequest extends com.amazonaws.AmazonWeb
     private String replicationSubnetGroupDescription;
     /**
      * <p>
-     * One or more subnet IDs to be assigned to the subnet group.
+     * Two or more subnet IDs to be assigned to the subnet group.
      * </p>
      */
     private java.util.List<String> subnetIds;
@@ -179,10 +179,10 @@ public class CreateReplicationSubnetGroupRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * One or more subnet IDs to be assigned to the subnet group.
+     * Two or more subnet IDs to be assigned to the subnet group.
      * </p>
      * 
-     * @return One or more subnet IDs to be assigned to the subnet group.
+     * @return Two or more subnet IDs to be assigned to the subnet group.
      */
 
     public java.util.List<String> getSubnetIds() {
@@ -191,11 +191,11 @@ public class CreateReplicationSubnetGroupRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * One or more subnet IDs to be assigned to the subnet group.
+     * Two or more subnet IDs to be assigned to the subnet group.
      * </p>
      * 
      * @param subnetIds
-     *        One or more subnet IDs to be assigned to the subnet group.
+     *        Two or more subnet IDs to be assigned to the subnet group.
      */
 
     public void setSubnetIds(java.util.Collection<String> subnetIds) {
@@ -209,7 +209,7 @@ public class CreateReplicationSubnetGroupRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * One or more subnet IDs to be assigned to the subnet group.
+     * Two or more subnet IDs to be assigned to the subnet group.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -218,7 +218,7 @@ public class CreateReplicationSubnetGroupRequest extends com.amazonaws.AmazonWeb
      * </p>
      * 
      * @param subnetIds
-     *        One or more subnet IDs to be assigned to the subnet group.
+     *        Two or more subnet IDs to be assigned to the subnet group.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -234,11 +234,11 @@ public class CreateReplicationSubnetGroupRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * One or more subnet IDs to be assigned to the subnet group.
+     * Two or more subnet IDs to be assigned to the subnet group.
      * </p>
      * 
      * @param subnetIds
-     *        One or more subnet IDs to be assigned to the subnet group.
+     *        Two or more subnet IDs to be assigned to the subnet group.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

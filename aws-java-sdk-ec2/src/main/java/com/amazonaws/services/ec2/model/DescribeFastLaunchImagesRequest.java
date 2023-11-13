@@ -28,7 +28,7 @@ public class DescribeFastLaunchImagesRequest extends AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * Details for one or more Windows AMI image IDs.
+     * Specify one or more Windows AMI image IDs for the request.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> imageIds;
@@ -40,11 +40,6 @@ public class DescribeFastLaunchImagesRequest extends AmazonWebServiceRequest imp
      * <li>
      * <p>
      * <code>resource-type</code> - The resource type for pre-provisioning.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>launch-template</code> - The launch template that is associated with the pre-provisioned Windows AMI.
      * </p>
      * </li>
      * <li>
@@ -78,10 +73,10 @@ public class DescribeFastLaunchImagesRequest extends AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * Details for one or more Windows AMI image IDs.
+     * Specify one or more Windows AMI image IDs for the request.
      * </p>
      * 
-     * @return Details for one or more Windows AMI image IDs.
+     * @return Specify one or more Windows AMI image IDs for the request.
      */
 
     public java.util.List<String> getImageIds() {
@@ -93,11 +88,11 @@ public class DescribeFastLaunchImagesRequest extends AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * Details for one or more Windows AMI image IDs.
+     * Specify one or more Windows AMI image IDs for the request.
      * </p>
      * 
      * @param imageIds
-     *        Details for one or more Windows AMI image IDs.
+     *        Specify one or more Windows AMI image IDs for the request.
      */
 
     public void setImageIds(java.util.Collection<String> imageIds) {
@@ -111,7 +106,7 @@ public class DescribeFastLaunchImagesRequest extends AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * Details for one or more Windows AMI image IDs.
+     * Specify one or more Windows AMI image IDs for the request.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -120,7 +115,7 @@ public class DescribeFastLaunchImagesRequest extends AmazonWebServiceRequest imp
      * </p>
      * 
      * @param imageIds
-     *        Details for one or more Windows AMI image IDs.
+     *        Specify one or more Windows AMI image IDs for the request.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -136,11 +131,11 @@ public class DescribeFastLaunchImagesRequest extends AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * Details for one or more Windows AMI image IDs.
+     * Specify one or more Windows AMI image IDs for the request.
      * </p>
      * 
      * @param imageIds
-     *        Details for one or more Windows AMI image IDs.
+     *        Specify one or more Windows AMI image IDs for the request.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -161,11 +156,6 @@ public class DescribeFastLaunchImagesRequest extends AmazonWebServiceRequest imp
      * </li>
      * <li>
      * <p>
-     * <code>launch-template</code> - The launch template that is associated with the pre-provisioned Windows AMI.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
      * <code>owner-id</code> - The owner ID for the pre-provisioning resource.
      * </p>
      * </li>
@@ -181,12 +171,6 @@ public class DescribeFastLaunchImagesRequest extends AmazonWebServiceRequest imp
      *         <li>
      *         <p>
      *         <code>resource-type</code> - The resource type for pre-provisioning.
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
-     *         <code>launch-template</code> - The launch template that is associated with the pre-provisioned Windows
-     *         AMI.
      *         </p>
      *         </li>
      *         <li>
@@ -220,11 +204,6 @@ public class DescribeFastLaunchImagesRequest extends AmazonWebServiceRequest imp
      * </li>
      * <li>
      * <p>
-     * <code>launch-template</code> - The launch template that is associated with the pre-provisioned Windows AMI.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
      * <code>owner-id</code> - The owner ID for the pre-provisioning resource.
      * </p>
      * </li>
@@ -241,12 +220,6 @@ public class DescribeFastLaunchImagesRequest extends AmazonWebServiceRequest imp
      *        <li>
      *        <p>
      *        <code>resource-type</code> - The resource type for pre-provisioning.
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>launch-template</code> - The launch template that is associated with the pre-provisioned Windows
-     *        AMI.
      *        </p>
      *        </li>
      *        <li>
@@ -282,11 +255,6 @@ public class DescribeFastLaunchImagesRequest extends AmazonWebServiceRequest imp
      * </li>
      * <li>
      * <p>
-     * <code>launch-template</code> - The launch template that is associated with the pre-provisioned Windows AMI.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
      * <code>owner-id</code> - The owner ID for the pre-provisioning resource.
      * </p>
      * </li>
@@ -308,12 +276,6 @@ public class DescribeFastLaunchImagesRequest extends AmazonWebServiceRequest imp
      *        <li>
      *        <p>
      *        <code>resource-type</code> - The resource type for pre-provisioning.
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>launch-template</code> - The launch template that is associated with the pre-provisioned Windows
-     *        AMI.
      *        </p>
      *        </li>
      *        <li>
@@ -351,11 +313,6 @@ public class DescribeFastLaunchImagesRequest extends AmazonWebServiceRequest imp
      * </li>
      * <li>
      * <p>
-     * <code>launch-template</code> - The launch template that is associated with the pre-provisioned Windows AMI.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
      * <code>owner-id</code> - The owner ID for the pre-provisioning resource.
      * </p>
      * </li>
@@ -372,12 +329,6 @@ public class DescribeFastLaunchImagesRequest extends AmazonWebServiceRequest imp
      *        <li>
      *        <p>
      *        <code>resource-type</code> - The resource type for pre-provisioning.
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>launch-template</code> - The launch template that is associated with the pre-provisioned Windows
-     *        AMI.
      *        </p>
      *        </li>
      *        <li>

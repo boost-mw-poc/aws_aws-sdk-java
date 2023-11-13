@@ -21,14 +21,14 @@ import javax.annotation.Generated;
 public enum AcceleratorName {
 
     A100("a100"),
-    V100("v100"),
+    Inferentia("inferentia"),
+    K520("k520"),
     K80("k80"),
-    T4("t4"),
     M60("m60"),
     RadeonProV520("radeon-pro-v520"),
+    T4("t4"),
     Vu9p("vu9p"),
-    Inferentia("inferentia"),
-    K520("k520");
+    V100("v100");
 
     private String value;
 

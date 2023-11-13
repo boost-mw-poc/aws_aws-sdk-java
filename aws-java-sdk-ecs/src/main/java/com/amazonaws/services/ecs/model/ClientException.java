@@ -17,7 +17,7 @@ import javax.annotation.Generated;
 /**
  * <p>
  * These errors are usually caused by a client action. This client action might be using an action or resource on behalf
- * of a user that doesn't have permissions to use the action or resource,. Or, it might be specifying an identifier that
+ * of a user that doesn't have permissions to use the action or resource. Or, it might be specifying an identifier that
  * isn't valid.
  * </p>
  */

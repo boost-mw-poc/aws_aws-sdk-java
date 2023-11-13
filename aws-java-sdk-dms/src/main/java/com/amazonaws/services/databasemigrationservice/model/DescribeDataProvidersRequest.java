@@ -29,6 +29,9 @@ public class DescribeDataProvidersRequest extends com.amazonaws.AmazonWebService
      * <p>
      * Filters applied to the data providers described in the form of key-value pairs.
      * </p>
+     * <p>
+     * Valid filter names: data-provider-identifier
+     * </p>
      */
     private java.util.List<Filter> filters;
     /**
@@ -57,8 +60,13 @@ public class DescribeDataProvidersRequest extends com.amazonaws.AmazonWebService
      * <p>
      * Filters applied to the data providers described in the form of key-value pairs.
      * </p>
+     * <p>
+     * Valid filter names: data-provider-identifier
+     * </p>
      * 
-     * @return Filters applied to the data providers described in the form of key-value pairs.
+     * @return Filters applied to the data providers described in the form of key-value pairs.</p>
+     *         <p>
+     *         Valid filter names: data-provider-identifier
      */
 
     public java.util.List<Filter> getFilters() {
@@ -69,9 +77,14 @@ public class DescribeDataProvidersRequest extends com.amazonaws.AmazonWebService
      * <p>
      * Filters applied to the data providers described in the form of key-value pairs.
      * </p>
+     * <p>
+     * Valid filter names: data-provider-identifier
+     * </p>
      * 
      * @param filters
-     *        Filters applied to the data providers described in the form of key-value pairs.
+     *        Filters applied to the data providers described in the form of key-value pairs.</p>
+     *        <p>
+     *        Valid filter names: data-provider-identifier
      */
 
     public void setFilters(java.util.Collection<Filter> filters) {
@@ -88,13 +101,18 @@ public class DescribeDataProvidersRequest extends com.amazonaws.AmazonWebService
      * Filters applied to the data providers described in the form of key-value pairs.
      * </p>
      * <p>
+     * Valid filter names: data-provider-identifier
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setFilters(java.util.Collection)} or {@link #withFilters(java.util.Collection)} if you want to override
      * the existing values.
      * </p>
      * 
      * @param filters
-     *        Filters applied to the data providers described in the form of key-value pairs.
+     *        Filters applied to the data providers described in the form of key-value pairs.</p>
+     *        <p>
+     *        Valid filter names: data-provider-identifier
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -112,9 +130,14 @@ public class DescribeDataProvidersRequest extends com.amazonaws.AmazonWebService
      * <p>
      * Filters applied to the data providers described in the form of key-value pairs.
      * </p>
+     * <p>
+     * Valid filter names: data-provider-identifier
+     * </p>
      * 
      * @param filters
-     *        Filters applied to the data providers described in the form of key-value pairs.
+     *        Filters applied to the data providers described in the form of key-value pairs.</p>
+     *        <p>
+     *        Valid filter names: data-provider-identifier
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -56,6 +56,12 @@ public class AssociateResourceResultJsonUnmarshaller implements Unmarshaller<Ass
                     context.nextToken();
                     associateResourceResult.setResourceArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("options", targetDepth)) {
+                    context.nextToken();
+                    associateResourceResult.setOptions(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

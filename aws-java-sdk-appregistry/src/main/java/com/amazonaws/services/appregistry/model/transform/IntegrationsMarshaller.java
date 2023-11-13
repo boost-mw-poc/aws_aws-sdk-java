@@ -29,6 +29,8 @@ public class IntegrationsMarshaller {
 
     private static final MarshallingInfo<StructuredPojo> RESOURCEGROUP_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("resourceGroup").build();
+    private static final MarshallingInfo<StructuredPojo> APPLICATIONTAGRESOURCEGROUP_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("applicationTagResourceGroup").build();
 
     private static final IntegrationsMarshaller instance = new IntegrationsMarshaller();
 
@@ -47,6 +49,7 @@ public class IntegrationsMarshaller {
 
         try {
             protocolMarshaller.marshall(integrations.getResourceGroup(), RESOURCEGROUP_BINDING);
+            protocolMarshaller.marshall(integrations.getApplicationTagResourceGroup(), APPLICATIONTAGRESOURCEGROUP_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

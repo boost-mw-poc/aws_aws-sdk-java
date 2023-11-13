@@ -64,6 +64,8 @@ public class ReplicationMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ReplicationUpdateTime").timestampFormat("unixTimestamp").build();
     private static final MarshallingInfo<java.util.Date> REPLICATIONLASTSTOPTIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ReplicationLastStopTime").timestampFormat("unixTimestamp").build();
+    private static final MarshallingInfo<java.util.Date> REPLICATIONDEPROVISIONTIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ReplicationDeprovisionTime").timestampFormat("unixTimestamp").build();
 
     private static final ReplicationMarshaller instance = new ReplicationMarshaller();
 
@@ -99,6 +101,7 @@ public class ReplicationMarshaller {
             protocolMarshaller.marshall(replication.getReplicationCreateTime(), REPLICATIONCREATETIME_BINDING);
             protocolMarshaller.marshall(replication.getReplicationUpdateTime(), REPLICATIONUPDATETIME_BINDING);
             protocolMarshaller.marshall(replication.getReplicationLastStopTime(), REPLICATIONLASTSTOPTIME_BINDING);
+            protocolMarshaller.marshall(replication.getReplicationDeprovisionTime(), REPLICATIONDEPROVISIONTIME_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

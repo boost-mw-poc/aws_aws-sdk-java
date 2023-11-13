@@ -121,7 +121,8 @@ public class PortMapping implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The protocol used for the port mapping. Valid values are <code>tcp</code> and <code>udp</code>. The default is
-     * <code>tcp</code>.
+     * <code>tcp</code>. <code>protocol</code> is immutable in a Service Connect service. Updating this field requires a
+     * service deletion and redeployment.
      * </p>
      */
     private String protocol;
@@ -149,6 +150,10 @@ public class PortMapping implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * If you don't set a value for this parameter, then TCP is used. However, Amazon ECS doesn't add protocol-specific
      * telemetry for TCP.
+     * </p>
+     * <p>
+     * <code>appProtocol</code> is immutable in a Service Connect service. Updating this field requires a service
+     * deletion and redeployment.
      * </p>
      * <p>
      * Tasks that run in a namespace can use short names to connect to services in the namespace. Tasks can connect to
@@ -668,12 +673,14 @@ public class PortMapping implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The protocol used for the port mapping. Valid values are <code>tcp</code> and <code>udp</code>. The default is
-     * <code>tcp</code>.
+     * <code>tcp</code>. <code>protocol</code> is immutable in a Service Connect service. Updating this field requires a
+     * service deletion and redeployment.
      * </p>
      * 
      * @param protocol
      *        The protocol used for the port mapping. Valid values are <code>tcp</code> and <code>udp</code>. The
-     *        default is <code>tcp</code>.
+     *        default is <code>tcp</code>. <code>protocol</code> is immutable in a Service Connect service. Updating
+     *        this field requires a service deletion and redeployment.
      * @see TransportProtocol
      */
 
@@ -684,11 +691,13 @@ public class PortMapping implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The protocol used for the port mapping. Valid values are <code>tcp</code> and <code>udp</code>. The default is
-     * <code>tcp</code>.
+     * <code>tcp</code>. <code>protocol</code> is immutable in a Service Connect service. Updating this field requires a
+     * service deletion and redeployment.
      * </p>
      * 
      * @return The protocol used for the port mapping. Valid values are <code>tcp</code> and <code>udp</code>. The
-     *         default is <code>tcp</code>.
+     *         default is <code>tcp</code>. <code>protocol</code> is immutable in a Service Connect service. Updating
+     *         this field requires a service deletion and redeployment.
      * @see TransportProtocol
      */
 
@@ -699,12 +708,14 @@ public class PortMapping implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The protocol used for the port mapping. Valid values are <code>tcp</code> and <code>udp</code>. The default is
-     * <code>tcp</code>.
+     * <code>tcp</code>. <code>protocol</code> is immutable in a Service Connect service. Updating this field requires a
+     * service deletion and redeployment.
      * </p>
      * 
      * @param protocol
      *        The protocol used for the port mapping. Valid values are <code>tcp</code> and <code>udp</code>. The
-     *        default is <code>tcp</code>.
+     *        default is <code>tcp</code>. <code>protocol</code> is immutable in a Service Connect service. Updating
+     *        this field requires a service deletion and redeployment.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see TransportProtocol
      */
@@ -717,12 +728,14 @@ public class PortMapping implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The protocol used for the port mapping. Valid values are <code>tcp</code> and <code>udp</code>. The default is
-     * <code>tcp</code>.
+     * <code>tcp</code>. <code>protocol</code> is immutable in a Service Connect service. Updating this field requires a
+     * service deletion and redeployment.
      * </p>
      * 
      * @param protocol
      *        The protocol used for the port mapping. Valid values are <code>tcp</code> and <code>udp</code>. The
-     *        default is <code>tcp</code>.
+     *        default is <code>tcp</code>. <code>protocol</code> is immutable in a Service Connect service. Updating
+     *        this field requires a service deletion and redeployment.
      * @see TransportProtocol
      */
 
@@ -733,12 +746,14 @@ public class PortMapping implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The protocol used for the port mapping. Valid values are <code>tcp</code> and <code>udp</code>. The default is
-     * <code>tcp</code>.
+     * <code>tcp</code>. <code>protocol</code> is immutable in a Service Connect service. Updating this field requires a
+     * service deletion and redeployment.
      * </p>
      * 
      * @param protocol
      *        The protocol used for the port mapping. Valid values are <code>tcp</code> and <code>udp</code>. The
-     *        default is <code>tcp</code>.
+     *        default is <code>tcp</code>. <code>protocol</code> is immutable in a Service Connect service. Updating
+     *        this field requires a service deletion and redeployment.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see TransportProtocol
      */
@@ -845,6 +860,10 @@ public class PortMapping implements Serializable, Cloneable, StructuredPojo {
      * telemetry for TCP.
      * </p>
      * <p>
+     * <code>appProtocol</code> is immutable in a Service Connect service. Updating this field requires a service
+     * deletion and redeployment.
+     * </p>
+     * <p>
      * Tasks that run in a namespace can use short names to connect to services in the namespace. Tasks can connect to
      * services across all of the clusters in the namespace. Tasks connect through a managed proxy container that
      * collects logs and metrics for increased visibility. Only the tasks that Amazon ECS services create are supported
@@ -862,6 +881,10 @@ public class PortMapping implements Serializable, Cloneable, StructuredPojo {
      *        <p>
      *        If you don't set a value for this parameter, then TCP is used. However, Amazon ECS doesn't add
      *        protocol-specific telemetry for TCP.
+     *        </p>
+     *        <p>
+     *        <code>appProtocol</code> is immutable in a Service Connect service. Updating this field requires a service
+     *        deletion and redeployment.
      *        </p>
      *        <p>
      *        Tasks that run in a namespace can use short names to connect to services in the namespace. Tasks can
@@ -889,6 +912,10 @@ public class PortMapping implements Serializable, Cloneable, StructuredPojo {
      * telemetry for TCP.
      * </p>
      * <p>
+     * <code>appProtocol</code> is immutable in a Service Connect service. Updating this field requires a service
+     * deletion and redeployment.
+     * </p>
+     * <p>
      * Tasks that run in a namespace can use short names to connect to services in the namespace. Tasks can connect to
      * services across all of the clusters in the namespace. Tasks connect through a managed proxy container that
      * collects logs and metrics for increased visibility. Only the tasks that Amazon ECS services create are supported
@@ -905,6 +932,10 @@ public class PortMapping implements Serializable, Cloneable, StructuredPojo {
      *         <p>
      *         If you don't set a value for this parameter, then TCP is used. However, Amazon ECS doesn't add
      *         protocol-specific telemetry for TCP.
+     *         </p>
+     *         <p>
+     *         <code>appProtocol</code> is immutable in a Service Connect service. Updating this field requires a
+     *         service deletion and redeployment.
      *         </p>
      *         <p>
      *         Tasks that run in a namespace can use short names to connect to services in the namespace. Tasks can
@@ -932,6 +963,10 @@ public class PortMapping implements Serializable, Cloneable, StructuredPojo {
      * telemetry for TCP.
      * </p>
      * <p>
+     * <code>appProtocol</code> is immutable in a Service Connect service. Updating this field requires a service
+     * deletion and redeployment.
+     * </p>
+     * <p>
      * Tasks that run in a namespace can use short names to connect to services in the namespace. Tasks can connect to
      * services across all of the clusters in the namespace. Tasks connect through a managed proxy container that
      * collects logs and metrics for increased visibility. Only the tasks that Amazon ECS services create are supported
@@ -949,6 +984,10 @@ public class PortMapping implements Serializable, Cloneable, StructuredPojo {
      *        <p>
      *        If you don't set a value for this parameter, then TCP is used. However, Amazon ECS doesn't add
      *        protocol-specific telemetry for TCP.
+     *        </p>
+     *        <p>
+     *        <code>appProtocol</code> is immutable in a Service Connect service. Updating this field requires a service
+     *        deletion and redeployment.
      *        </p>
      *        <p>
      *        Tasks that run in a namespace can use short names to connect to services in the namespace. Tasks can
@@ -978,6 +1017,10 @@ public class PortMapping implements Serializable, Cloneable, StructuredPojo {
      * telemetry for TCP.
      * </p>
      * <p>
+     * <code>appProtocol</code> is immutable in a Service Connect service. Updating this field requires a service
+     * deletion and redeployment.
+     * </p>
+     * <p>
      * Tasks that run in a namespace can use short names to connect to services in the namespace. Tasks can connect to
      * services across all of the clusters in the namespace. Tasks connect through a managed proxy container that
      * collects logs and metrics for increased visibility. Only the tasks that Amazon ECS services create are supported
@@ -995,6 +1038,10 @@ public class PortMapping implements Serializable, Cloneable, StructuredPojo {
      *        <p>
      *        If you don't set a value for this parameter, then TCP is used. However, Amazon ECS doesn't add
      *        protocol-specific telemetry for TCP.
+     *        </p>
+     *        <p>
+     *        <code>appProtocol</code> is immutable in a Service Connect service. Updating this field requires a service
+     *        deletion and redeployment.
      *        </p>
      *        <p>
      *        Tasks that run in a namespace can use short names to connect to services in the namespace. Tasks can
@@ -1022,6 +1069,10 @@ public class PortMapping implements Serializable, Cloneable, StructuredPojo {
      * telemetry for TCP.
      * </p>
      * <p>
+     * <code>appProtocol</code> is immutable in a Service Connect service. Updating this field requires a service
+     * deletion and redeployment.
+     * </p>
+     * <p>
      * Tasks that run in a namespace can use short names to connect to services in the namespace. Tasks can connect to
      * services across all of the clusters in the namespace. Tasks connect through a managed proxy container that
      * collects logs and metrics for increased visibility. Only the tasks that Amazon ECS services create are supported
@@ -1039,6 +1090,10 @@ public class PortMapping implements Serializable, Cloneable, StructuredPojo {
      *        <p>
      *        If you don't set a value for this parameter, then TCP is used. However, Amazon ECS doesn't add
      *        protocol-specific telemetry for TCP.
+     *        </p>
+     *        <p>
+     *        <code>appProtocol</code> is immutable in a Service Connect service. Updating this field requires a service
+     *        deletion and redeployment.
      *        </p>
      *        <p>
      *        Tasks that run in a namespace can use short names to connect to services in the namespace. Tasks can

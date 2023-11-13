@@ -43,6 +43,25 @@ public class GetAssociatedResourceRequest extends com.amazonaws.AmazonWebService
      * </p>
      */
     private String resource;
+    /**
+     * <p>
+     * A unique pagination token for each page of results. Make the call again with the returned token to retrieve the
+     * next page of results.
+     * </p>
+     */
+    private String nextToken;
+    /**
+     * <p>
+     * States whether an application tag is applied, not applied, in the process of being applied, or skipped.
+     * </p>
+     */
+    private java.util.List<String> resourceTagStatus;
+    /**
+     * <p>
+     * The maximum number of results to return. If the parameter is omitted, it defaults to 25. The value is optional.
+     * </p>
+     */
+    private Integer maxResults;
 
     /**
      * <p>
@@ -184,6 +203,193 @@ public class GetAssociatedResourceRequest extends com.amazonaws.AmazonWebService
     }
 
     /**
+     * <p>
+     * A unique pagination token for each page of results. Make the call again with the returned token to retrieve the
+     * next page of results.
+     * </p>
+     * 
+     * @param nextToken
+     *        A unique pagination token for each page of results. Make the call again with the returned token to
+     *        retrieve the next page of results.
+     */
+
+    public void setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+    }
+
+    /**
+     * <p>
+     * A unique pagination token for each page of results. Make the call again with the returned token to retrieve the
+     * next page of results.
+     * </p>
+     * 
+     * @return A unique pagination token for each page of results. Make the call again with the returned token to
+     *         retrieve the next page of results.
+     */
+
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    /**
+     * <p>
+     * A unique pagination token for each page of results. Make the call again with the returned token to retrieve the
+     * next page of results.
+     * </p>
+     * 
+     * @param nextToken
+     *        A unique pagination token for each page of results. Make the call again with the returned token to
+     *        retrieve the next page of results.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetAssociatedResourceRequest withNextToken(String nextToken) {
+        setNextToken(nextToken);
+        return this;
+    }
+
+    /**
+     * <p>
+     * States whether an application tag is applied, not applied, in the process of being applied, or skipped.
+     * </p>
+     * 
+     * @return States whether an application tag is applied, not applied, in the process of being applied, or skipped.
+     * @see ResourceItemStatus
+     */
+
+    public java.util.List<String> getResourceTagStatus() {
+        return resourceTagStatus;
+    }
+
+    /**
+     * <p>
+     * States whether an application tag is applied, not applied, in the process of being applied, or skipped.
+     * </p>
+     * 
+     * @param resourceTagStatus
+     *        States whether an application tag is applied, not applied, in the process of being applied, or skipped.
+     * @see ResourceItemStatus
+     */
+
+    public void setResourceTagStatus(java.util.Collection<String> resourceTagStatus) {
+        if (resourceTagStatus == null) {
+            this.resourceTagStatus = null;
+            return;
+        }
+
+        this.resourceTagStatus = new java.util.ArrayList<String>(resourceTagStatus);
+    }
+
+    /**
+     * <p>
+     * States whether an application tag is applied, not applied, in the process of being applied, or skipped.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setResourceTagStatus(java.util.Collection)} or {@link #withResourceTagStatus(java.util.Collection)} if
+     * you want to override the existing values.
+     * </p>
+     * 
+     * @param resourceTagStatus
+     *        States whether an application tag is applied, not applied, in the process of being applied, or skipped.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ResourceItemStatus
+     */
+
+    public GetAssociatedResourceRequest withResourceTagStatus(String... resourceTagStatus) {
+        if (this.resourceTagStatus == null) {
+            setResourceTagStatus(new java.util.ArrayList<String>(resourceTagStatus.length));
+        }
+        for (String ele : resourceTagStatus) {
+            this.resourceTagStatus.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * States whether an application tag is applied, not applied, in the process of being applied, or skipped.
+     * </p>
+     * 
+     * @param resourceTagStatus
+     *        States whether an application tag is applied, not applied, in the process of being applied, or skipped.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ResourceItemStatus
+     */
+
+    public GetAssociatedResourceRequest withResourceTagStatus(java.util.Collection<String> resourceTagStatus) {
+        setResourceTagStatus(resourceTagStatus);
+        return this;
+    }
+
+    /**
+     * <p>
+     * States whether an application tag is applied, not applied, in the process of being applied, or skipped.
+     * </p>
+     * 
+     * @param resourceTagStatus
+     *        States whether an application tag is applied, not applied, in the process of being applied, or skipped.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ResourceItemStatus
+     */
+
+    public GetAssociatedResourceRequest withResourceTagStatus(ResourceItemStatus... resourceTagStatus) {
+        java.util.ArrayList<String> resourceTagStatusCopy = new java.util.ArrayList<String>(resourceTagStatus.length);
+        for (ResourceItemStatus value : resourceTagStatus) {
+            resourceTagStatusCopy.add(value.toString());
+        }
+        if (getResourceTagStatus() == null) {
+            setResourceTagStatus(resourceTagStatusCopy);
+        } else {
+            getResourceTagStatus().addAll(resourceTagStatusCopy);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The maximum number of results to return. If the parameter is omitted, it defaults to 25. The value is optional.
+     * </p>
+     * 
+     * @param maxResults
+     *        The maximum number of results to return. If the parameter is omitted, it defaults to 25. The value is
+     *        optional.
+     */
+
+    public void setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
+    }
+
+    /**
+     * <p>
+     * The maximum number of results to return. If the parameter is omitted, it defaults to 25. The value is optional.
+     * </p>
+     * 
+     * @return The maximum number of results to return. If the parameter is omitted, it defaults to 25. The value is
+     *         optional.
+     */
+
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    /**
+     * <p>
+     * The maximum number of results to return. If the parameter is omitted, it defaults to 25. The value is optional.
+     * </p>
+     * 
+     * @param maxResults
+     *        The maximum number of results to return. If the parameter is omitted, it defaults to 25. The value is
+     *        optional.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetAssociatedResourceRequest withMaxResults(Integer maxResults) {
+        setMaxResults(maxResults);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -200,7 +406,13 @@ public class GetAssociatedResourceRequest extends com.amazonaws.AmazonWebService
         if (getResourceType() != null)
             sb.append("ResourceType: ").append(getResourceType()).append(",");
         if (getResource() != null)
-            sb.append("Resource: ").append(getResource());
+            sb.append("Resource: ").append(getResource()).append(",");
+        if (getNextToken() != null)
+            sb.append("NextToken: ").append(getNextToken()).append(",");
+        if (getResourceTagStatus() != null)
+            sb.append("ResourceTagStatus: ").append(getResourceTagStatus()).append(",");
+        if (getMaxResults() != null)
+            sb.append("MaxResults: ").append(getMaxResults());
         sb.append("}");
         return sb.toString();
     }
@@ -227,6 +439,18 @@ public class GetAssociatedResourceRequest extends com.amazonaws.AmazonWebService
             return false;
         if (other.getResource() != null && other.getResource().equals(this.getResource()) == false)
             return false;
+        if (other.getNextToken() == null ^ this.getNextToken() == null)
+            return false;
+        if (other.getNextToken() != null && other.getNextToken().equals(this.getNextToken()) == false)
+            return false;
+        if (other.getResourceTagStatus() == null ^ this.getResourceTagStatus() == null)
+            return false;
+        if (other.getResourceTagStatus() != null && other.getResourceTagStatus().equals(this.getResourceTagStatus()) == false)
+            return false;
+        if (other.getMaxResults() == null ^ this.getMaxResults() == null)
+            return false;
+        if (other.getMaxResults() != null && other.getMaxResults().equals(this.getMaxResults()) == false)
+            return false;
         return true;
     }
 
@@ -238,6 +462,9 @@ public class GetAssociatedResourceRequest extends com.amazonaws.AmazonWebService
         hashCode = prime * hashCode + ((getApplication() == null) ? 0 : getApplication().hashCode());
         hashCode = prime * hashCode + ((getResourceType() == null) ? 0 : getResourceType().hashCode());
         hashCode = prime * hashCode + ((getResource() == null) ? 0 : getResource().hashCode());
+        hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
+        hashCode = prime * hashCode + ((getResourceTagStatus() == null) ? 0 : getResourceTagStatus().hashCode());
+        hashCode = prime * hashCode + ((getMaxResults() == null) ? 0 : getMaxResults().hashCode());
         return hashCode;
     }
 

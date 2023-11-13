@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.appregistry.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -33,6 +34,8 @@ public class AssociateResourceRequestMarshaller {
             .marshallLocationName("resourceType").build();
     private static final MarshallingInfo<String> RESOURCE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PATH)
             .marshallLocationName("resource").build();
+    private static final MarshallingInfo<List> OPTIONS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("options").build();
 
     private static final AssociateResourceRequestMarshaller instance = new AssociateResourceRequestMarshaller();
 
@@ -53,6 +56,7 @@ public class AssociateResourceRequestMarshaller {
             protocolMarshaller.marshall(associateResourceRequest.getApplication(), APPLICATION_BINDING);
             protocolMarshaller.marshall(associateResourceRequest.getResourceType(), RESOURCETYPE_BINDING);
             protocolMarshaller.marshall(associateResourceRequest.getResource(), RESOURCE_BINDING);
+            protocolMarshaller.marshall(associateResourceRequest.getOptions(), OPTIONS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

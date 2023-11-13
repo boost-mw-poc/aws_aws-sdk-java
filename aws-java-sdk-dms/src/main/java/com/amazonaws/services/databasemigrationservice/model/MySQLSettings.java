@@ -176,6 +176,12 @@ public class MySQLSettings implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private String secretsManagerSecretId;
+    /**
+     * <p>
+     * Sets the client statement timeout (in seconds) for a MySQL source endpoint.
+     * </p>
+     */
+    private Integer executeTimeout;
 
     /**
      * <p>
@@ -1148,6 +1154,46 @@ public class MySQLSettings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Sets the client statement timeout (in seconds) for a MySQL source endpoint.
+     * </p>
+     * 
+     * @param executeTimeout
+     *        Sets the client statement timeout (in seconds) for a MySQL source endpoint.
+     */
+
+    public void setExecuteTimeout(Integer executeTimeout) {
+        this.executeTimeout = executeTimeout;
+    }
+
+    /**
+     * <p>
+     * Sets the client statement timeout (in seconds) for a MySQL source endpoint.
+     * </p>
+     * 
+     * @return Sets the client statement timeout (in seconds) for a MySQL source endpoint.
+     */
+
+    public Integer getExecuteTimeout() {
+        return this.executeTimeout;
+    }
+
+    /**
+     * <p>
+     * Sets the client statement timeout (in seconds) for a MySQL source endpoint.
+     * </p>
+     * 
+     * @param executeTimeout
+     *        Sets the client statement timeout (in seconds) for a MySQL source endpoint.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public MySQLSettings withExecuteTimeout(Integer executeTimeout) {
+        setExecuteTimeout(executeTimeout);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1186,7 +1232,9 @@ public class MySQLSettings implements Serializable, Cloneable, StructuredPojo {
         if (getSecretsManagerAccessRoleArn() != null)
             sb.append("SecretsManagerAccessRoleArn: ").append(getSecretsManagerAccessRoleArn()).append(",");
         if (getSecretsManagerSecretId() != null)
-            sb.append("SecretsManagerSecretId: ").append(getSecretsManagerSecretId());
+            sb.append("SecretsManagerSecretId: ").append(getSecretsManagerSecretId()).append(",");
+        if (getExecuteTimeout() != null)
+            sb.append("ExecuteTimeout: ").append(getExecuteTimeout());
         sb.append("}");
         return sb.toString();
     }
@@ -1258,6 +1306,10 @@ public class MySQLSettings implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getSecretsManagerSecretId() != null && other.getSecretsManagerSecretId().equals(this.getSecretsManagerSecretId()) == false)
             return false;
+        if (other.getExecuteTimeout() == null ^ this.getExecuteTimeout() == null)
+            return false;
+        if (other.getExecuteTimeout() != null && other.getExecuteTimeout().equals(this.getExecuteTimeout()) == false)
+            return false;
         return true;
     }
 
@@ -1280,6 +1332,7 @@ public class MySQLSettings implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getUsername() == null) ? 0 : getUsername().hashCode());
         hashCode = prime * hashCode + ((getSecretsManagerAccessRoleArn() == null) ? 0 : getSecretsManagerAccessRoleArn().hashCode());
         hashCode = prime * hashCode + ((getSecretsManagerSecretId() == null) ? 0 : getSecretsManagerSecretId().hashCode());
+        hashCode = prime * hashCode + ((getExecuteTimeout() == null) ? 0 : getExecuteTimeout().hashCode());
         return hashCode;
     }
 
