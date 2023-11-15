@@ -35,6 +35,8 @@ public class CreateEnvironmentRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AirflowVersion").build();
     private static final MarshallingInfo<String> DAGS3PATH_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("DagS3Path").build();
+    private static final MarshallingInfo<String> ENDPOINTMANAGEMENT_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EndpointManagement").build();
     private static final MarshallingInfo<String> ENVIRONMENTCLASS_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EnvironmentClass").build();
     private static final MarshallingInfo<String> EXECUTIONROLEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
@@ -93,6 +95,7 @@ public class CreateEnvironmentRequestMarshaller {
             protocolMarshaller.marshall(createEnvironmentRequest.getAirflowConfigurationOptions(), AIRFLOWCONFIGURATIONOPTIONS_BINDING);
             protocolMarshaller.marshall(createEnvironmentRequest.getAirflowVersion(), AIRFLOWVERSION_BINDING);
             protocolMarshaller.marshall(createEnvironmentRequest.getDagS3Path(), DAGS3PATH_BINDING);
+            protocolMarshaller.marshall(createEnvironmentRequest.getEndpointManagement(), ENDPOINTMANAGEMENT_BINDING);
             protocolMarshaller.marshall(createEnvironmentRequest.getEnvironmentClass(), ENVIRONMENTCLASS_BINDING);
             protocolMarshaller.marshall(createEnvironmentRequest.getExecutionRoleArn(), EXECUTIONROLEARN_BINDING);
             protocolMarshaller.marshall(createEnvironmentRequest.getKmsKey(), KMSKEY_BINDING);

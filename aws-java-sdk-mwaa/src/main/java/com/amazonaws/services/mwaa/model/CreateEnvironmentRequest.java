@@ -48,7 +48,7 @@ public class CreateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
      * </p>
      * <p>
      * Valid values: <code>1.10.12</code>, <code>2.0.2</code>, <code>2.2.2</code>, <code>2.4.3</code>,
-     * <code>2.5.1</code>, <code>2.6.3</code>, <code>2.7.2</code>.
+     * <code>2.5.1</code>, <code>2.6.3</code>, <code>2.7.2</code>
      * </p>
      */
     private String airflowVersion;
@@ -60,6 +60,18 @@ public class CreateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
      * </p>
      */
     private String dagS3Path;
+    /**
+     * <p>
+     * Defines whether the VPC endpoints configured for the environment are created, and managed, by the customer or by
+     * Amazon MWAA. If set to <code>SERVICE</code>, Amazon MWAA will create and manage the required VPC endpoints in
+     * your VPC. If set to <code>CUSTOMER</code>, you must create, and manage, the VPC endpoints for your VPC. If you
+     * choose to create an environment in a shared VPC, you must set this value to <code>CUSTOMER</code>. In a shared
+     * VPC deployment, the environment will remain in <code>PENDING</code> status until you create the VPC endpoints. If
+     * you do not take action to create the endpoints within 72 hours, the status will change to
+     * <code>CREATE_FAILED</code>. You can delete the failed environment and create a new one.
+     * </p>
+     */
+    private String endpointManagement;
     /**
      * <p>
      * The environment class type. Valid values: <code>mw1.small</code>, <code>mw1.medium</code>, <code>mw1.large</code>
@@ -233,7 +245,7 @@ public class CreateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
     private java.util.Map<String, String> tags;
     /**
      * <p>
-     * The Apache Airflow <i>Web server</i> access mode. For more information, see <a
+     * Defines the access mode for the Apache Airflow <i>web server</i>. For more information, see <a
      * href="https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-networking.html">Apache Airflow access
      * modes</a>.
      * </p>
@@ -342,7 +354,7 @@ public class CreateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
      * </p>
      * <p>
      * Valid values: <code>1.10.12</code>, <code>2.0.2</code>, <code>2.2.2</code>, <code>2.4.3</code>,
-     * <code>2.5.1</code>, <code>2.6.3</code>, <code>2.7.2</code>.
+     * <code>2.5.1</code>, <code>2.6.3</code>, <code>2.7.2</code>
      * </p>
      * 
      * @param airflowVersion
@@ -352,7 +364,7 @@ public class CreateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
      *        Amazon Managed Workflows for Apache Airflow (MWAA)</a>.</p>
      *        <p>
      *        Valid values: <code>1.10.12</code>, <code>2.0.2</code>, <code>2.2.2</code>, <code>2.4.3</code>,
-     *        <code>2.5.1</code>, <code>2.6.3</code>, <code>2.7.2</code>.
+     *        <code>2.5.1</code>, <code>2.6.3</code>, <code>2.7.2</code>
      */
 
     public void setAirflowVersion(String airflowVersion) {
@@ -367,7 +379,7 @@ public class CreateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
      * </p>
      * <p>
      * Valid values: <code>1.10.12</code>, <code>2.0.2</code>, <code>2.2.2</code>, <code>2.4.3</code>,
-     * <code>2.5.1</code>, <code>2.6.3</code>, <code>2.7.2</code>.
+     * <code>2.5.1</code>, <code>2.6.3</code>, <code>2.7.2</code>
      * </p>
      * 
      * @return The Apache Airflow version for your environment. If no value is specified, it defaults to the latest
@@ -376,7 +388,7 @@ public class CreateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
      *         Amazon Managed Workflows for Apache Airflow (MWAA)</a>.</p>
      *         <p>
      *         Valid values: <code>1.10.12</code>, <code>2.0.2</code>, <code>2.2.2</code>, <code>2.4.3</code>,
-     *         <code>2.5.1</code>, <code>2.6.3</code>, <code>2.7.2</code>.
+     *         <code>2.5.1</code>, <code>2.6.3</code>, <code>2.7.2</code>
      */
 
     public String getAirflowVersion() {
@@ -391,7 +403,7 @@ public class CreateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
      * </p>
      * <p>
      * Valid values: <code>1.10.12</code>, <code>2.0.2</code>, <code>2.2.2</code>, <code>2.4.3</code>,
-     * <code>2.5.1</code>, <code>2.6.3</code>, <code>2.7.2</code>.
+     * <code>2.5.1</code>, <code>2.6.3</code>, <code>2.7.2</code>
      * </p>
      * 
      * @param airflowVersion
@@ -401,7 +413,7 @@ public class CreateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
      *        Amazon Managed Workflows for Apache Airflow (MWAA)</a>.</p>
      *        <p>
      *        Valid values: <code>1.10.12</code>, <code>2.0.2</code>, <code>2.2.2</code>, <code>2.4.3</code>,
-     *        <code>2.5.1</code>, <code>2.6.3</code>, <code>2.7.2</code>.
+     *        <code>2.5.1</code>, <code>2.6.3</code>, <code>2.7.2</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -462,6 +474,117 @@ public class CreateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
 
     public CreateEnvironmentRequest withDagS3Path(String dagS3Path) {
         setDagS3Path(dagS3Path);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Defines whether the VPC endpoints configured for the environment are created, and managed, by the customer or by
+     * Amazon MWAA. If set to <code>SERVICE</code>, Amazon MWAA will create and manage the required VPC endpoints in
+     * your VPC. If set to <code>CUSTOMER</code>, you must create, and manage, the VPC endpoints for your VPC. If you
+     * choose to create an environment in a shared VPC, you must set this value to <code>CUSTOMER</code>. In a shared
+     * VPC deployment, the environment will remain in <code>PENDING</code> status until you create the VPC endpoints. If
+     * you do not take action to create the endpoints within 72 hours, the status will change to
+     * <code>CREATE_FAILED</code>. You can delete the failed environment and create a new one.
+     * </p>
+     * 
+     * @param endpointManagement
+     *        Defines whether the VPC endpoints configured for the environment are created, and managed, by the customer
+     *        or by Amazon MWAA. If set to <code>SERVICE</code>, Amazon MWAA will create and manage the required VPC
+     *        endpoints in your VPC. If set to <code>CUSTOMER</code>, you must create, and manage, the VPC endpoints for
+     *        your VPC. If you choose to create an environment in a shared VPC, you must set this value to
+     *        <code>CUSTOMER</code>. In a shared VPC deployment, the environment will remain in <code>PENDING</code>
+     *        status until you create the VPC endpoints. If you do not take action to create the endpoints within 72
+     *        hours, the status will change to <code>CREATE_FAILED</code>. You can delete the failed environment and
+     *        create a new one.
+     * @see EndpointManagement
+     */
+
+    public void setEndpointManagement(String endpointManagement) {
+        this.endpointManagement = endpointManagement;
+    }
+
+    /**
+     * <p>
+     * Defines whether the VPC endpoints configured for the environment are created, and managed, by the customer or by
+     * Amazon MWAA. If set to <code>SERVICE</code>, Amazon MWAA will create and manage the required VPC endpoints in
+     * your VPC. If set to <code>CUSTOMER</code>, you must create, and manage, the VPC endpoints for your VPC. If you
+     * choose to create an environment in a shared VPC, you must set this value to <code>CUSTOMER</code>. In a shared
+     * VPC deployment, the environment will remain in <code>PENDING</code> status until you create the VPC endpoints. If
+     * you do not take action to create the endpoints within 72 hours, the status will change to
+     * <code>CREATE_FAILED</code>. You can delete the failed environment and create a new one.
+     * </p>
+     * 
+     * @return Defines whether the VPC endpoints configured for the environment are created, and managed, by the
+     *         customer or by Amazon MWAA. If set to <code>SERVICE</code>, Amazon MWAA will create and manage the
+     *         required VPC endpoints in your VPC. If set to <code>CUSTOMER</code>, you must create, and manage, the VPC
+     *         endpoints for your VPC. If you choose to create an environment in a shared VPC, you must set this value
+     *         to <code>CUSTOMER</code>. In a shared VPC deployment, the environment will remain in <code>PENDING</code>
+     *         status until you create the VPC endpoints. If you do not take action to create the endpoints within 72
+     *         hours, the status will change to <code>CREATE_FAILED</code>. You can delete the failed environment and
+     *         create a new one.
+     * @see EndpointManagement
+     */
+
+    public String getEndpointManagement() {
+        return this.endpointManagement;
+    }
+
+    /**
+     * <p>
+     * Defines whether the VPC endpoints configured for the environment are created, and managed, by the customer or by
+     * Amazon MWAA. If set to <code>SERVICE</code>, Amazon MWAA will create and manage the required VPC endpoints in
+     * your VPC. If set to <code>CUSTOMER</code>, you must create, and manage, the VPC endpoints for your VPC. If you
+     * choose to create an environment in a shared VPC, you must set this value to <code>CUSTOMER</code>. In a shared
+     * VPC deployment, the environment will remain in <code>PENDING</code> status until you create the VPC endpoints. If
+     * you do not take action to create the endpoints within 72 hours, the status will change to
+     * <code>CREATE_FAILED</code>. You can delete the failed environment and create a new one.
+     * </p>
+     * 
+     * @param endpointManagement
+     *        Defines whether the VPC endpoints configured for the environment are created, and managed, by the customer
+     *        or by Amazon MWAA. If set to <code>SERVICE</code>, Amazon MWAA will create and manage the required VPC
+     *        endpoints in your VPC. If set to <code>CUSTOMER</code>, you must create, and manage, the VPC endpoints for
+     *        your VPC. If you choose to create an environment in a shared VPC, you must set this value to
+     *        <code>CUSTOMER</code>. In a shared VPC deployment, the environment will remain in <code>PENDING</code>
+     *        status until you create the VPC endpoints. If you do not take action to create the endpoints within 72
+     *        hours, the status will change to <code>CREATE_FAILED</code>. You can delete the failed environment and
+     *        create a new one.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see EndpointManagement
+     */
+
+    public CreateEnvironmentRequest withEndpointManagement(String endpointManagement) {
+        setEndpointManagement(endpointManagement);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Defines whether the VPC endpoints configured for the environment are created, and managed, by the customer or by
+     * Amazon MWAA. If set to <code>SERVICE</code>, Amazon MWAA will create and manage the required VPC endpoints in
+     * your VPC. If set to <code>CUSTOMER</code>, you must create, and manage, the VPC endpoints for your VPC. If you
+     * choose to create an environment in a shared VPC, you must set this value to <code>CUSTOMER</code>. In a shared
+     * VPC deployment, the environment will remain in <code>PENDING</code> status until you create the VPC endpoints. If
+     * you do not take action to create the endpoints within 72 hours, the status will change to
+     * <code>CREATE_FAILED</code>. You can delete the failed environment and create a new one.
+     * </p>
+     * 
+     * @param endpointManagement
+     *        Defines whether the VPC endpoints configured for the environment are created, and managed, by the customer
+     *        or by Amazon MWAA. If set to <code>SERVICE</code>, Amazon MWAA will create and manage the required VPC
+     *        endpoints in your VPC. If set to <code>CUSTOMER</code>, you must create, and manage, the VPC endpoints for
+     *        your VPC. If you choose to create an environment in a shared VPC, you must set this value to
+     *        <code>CUSTOMER</code>. In a shared VPC deployment, the environment will remain in <code>PENDING</code>
+     *        status until you create the VPC endpoints. If you do not take action to create the endpoints within 72
+     *        hours, the status will change to <code>CREATE_FAILED</code>. You can delete the failed environment and
+     *        create a new one.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see EndpointManagement
+     */
+
+    public CreateEnvironmentRequest withEndpointManagement(EndpointManagement endpointManagement) {
+        this.endpointManagement = endpointManagement.toString();
         return this;
     }
 
@@ -1595,13 +1718,13 @@ public class CreateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The Apache Airflow <i>Web server</i> access mode. For more information, see <a
+     * Defines the access mode for the Apache Airflow <i>web server</i>. For more information, see <a
      * href="https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-networking.html">Apache Airflow access
      * modes</a>.
      * </p>
      * 
      * @param webserverAccessMode
-     *        The Apache Airflow <i>Web server</i> access mode. For more information, see <a
+     *        Defines the access mode for the Apache Airflow <i>web server</i>. For more information, see <a
      *        href="https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-networking.html">Apache Airflow access
      *        modes</a>.
      * @see WebserverAccessMode
@@ -1613,12 +1736,12 @@ public class CreateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The Apache Airflow <i>Web server</i> access mode. For more information, see <a
+     * Defines the access mode for the Apache Airflow <i>web server</i>. For more information, see <a
      * href="https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-networking.html">Apache Airflow access
      * modes</a>.
      * </p>
      * 
-     * @return The Apache Airflow <i>Web server</i> access mode. For more information, see <a
+     * @return Defines the access mode for the Apache Airflow <i>web server</i>. For more information, see <a
      *         href="https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-networking.html">Apache Airflow
      *         access modes</a>.
      * @see WebserverAccessMode
@@ -1630,13 +1753,13 @@ public class CreateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The Apache Airflow <i>Web server</i> access mode. For more information, see <a
+     * Defines the access mode for the Apache Airflow <i>web server</i>. For more information, see <a
      * href="https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-networking.html">Apache Airflow access
      * modes</a>.
      * </p>
      * 
      * @param webserverAccessMode
-     *        The Apache Airflow <i>Web server</i> access mode. For more information, see <a
+     *        Defines the access mode for the Apache Airflow <i>web server</i>. For more information, see <a
      *        href="https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-networking.html">Apache Airflow access
      *        modes</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -1650,13 +1773,13 @@ public class CreateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The Apache Airflow <i>Web server</i> access mode. For more information, see <a
+     * Defines the access mode for the Apache Airflow <i>web server</i>. For more information, see <a
      * href="https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-networking.html">Apache Airflow access
      * modes</a>.
      * </p>
      * 
      * @param webserverAccessMode
-     *        The Apache Airflow <i>Web server</i> access mode. For more information, see <a
+     *        Defines the access mode for the Apache Airflow <i>web server</i>. For more information, see <a
      *        href="https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-networking.html">Apache Airflow access
      *        modes</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -1738,6 +1861,8 @@ public class CreateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
             sb.append("AirflowVersion: ").append(getAirflowVersion()).append(",");
         if (getDagS3Path() != null)
             sb.append("DagS3Path: ").append(getDagS3Path()).append(",");
+        if (getEndpointManagement() != null)
+            sb.append("EndpointManagement: ").append(getEndpointManagement()).append(",");
         if (getEnvironmentClass() != null)
             sb.append("EnvironmentClass: ").append(getEnvironmentClass()).append(",");
         if (getExecutionRoleArn() != null)
@@ -1801,6 +1926,10 @@ public class CreateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
         if (other.getDagS3Path() == null ^ this.getDagS3Path() == null)
             return false;
         if (other.getDagS3Path() != null && other.getDagS3Path().equals(this.getDagS3Path()) == false)
+            return false;
+        if (other.getEndpointManagement() == null ^ this.getEndpointManagement() == null)
+            return false;
+        if (other.getEndpointManagement() != null && other.getEndpointManagement().equals(this.getEndpointManagement()) == false)
             return false;
         if (other.getEnvironmentClass() == null ^ this.getEnvironmentClass() == null)
             return false;
@@ -1889,6 +2018,7 @@ public class CreateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
         hashCode = prime * hashCode + ((getAirflowConfigurationOptions() == null) ? 0 : getAirflowConfigurationOptions().hashCode());
         hashCode = prime * hashCode + ((getAirflowVersion() == null) ? 0 : getAirflowVersion().hashCode());
         hashCode = prime * hashCode + ((getDagS3Path() == null) ? 0 : getDagS3Path().hashCode());
+        hashCode = prime * hashCode + ((getEndpointManagement() == null) ? 0 : getEndpointManagement().hashCode());
         hashCode = prime * hashCode + ((getEnvironmentClass() == null) ? 0 : getEnvironmentClass().hashCode());
         hashCode = prime * hashCode + ((getExecutionRoleArn() == null) ? 0 : getExecutionRoleArn().hashCode());
         hashCode = prime * hashCode + ((getKmsKey() == null) ? 0 : getKmsKey().hashCode());

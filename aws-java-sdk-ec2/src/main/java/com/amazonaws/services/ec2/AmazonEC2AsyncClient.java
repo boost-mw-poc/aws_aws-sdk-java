@@ -10518,6 +10518,39 @@ public class AmazonEC2AsyncClient extends AmazonEC2Client implements AmazonEC2As
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeLockedSnapshotsResult> describeLockedSnapshotsAsync(DescribeLockedSnapshotsRequest request) {
+
+        return describeLockedSnapshotsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeLockedSnapshotsResult> describeLockedSnapshotsAsync(final DescribeLockedSnapshotsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeLockedSnapshotsRequest, DescribeLockedSnapshotsResult> asyncHandler) {
+        final DescribeLockedSnapshotsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeLockedSnapshotsResult>() {
+            @Override
+            public DescribeLockedSnapshotsResult call() throws Exception {
+                DescribeLockedSnapshotsResult result = null;
+
+                try {
+                    result = executeDescribeLockedSnapshots(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeManagedPrefixListsResult> describeManagedPrefixListsAsync(DescribeManagedPrefixListsRequest request) {
 
         return describeManagedPrefixListsAsync(request, null);
@@ -17502,6 +17535,39 @@ public class AmazonEC2AsyncClient extends AmazonEC2Client implements AmazonEC2As
     }
 
     @Override
+    public java.util.concurrent.Future<LockSnapshotResult> lockSnapshotAsync(LockSnapshotRequest request) {
+
+        return lockSnapshotAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<LockSnapshotResult> lockSnapshotAsync(final LockSnapshotRequest request,
+            final com.amazonaws.handlers.AsyncHandler<LockSnapshotRequest, LockSnapshotResult> asyncHandler) {
+        final LockSnapshotRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<LockSnapshotResult>() {
+            @Override
+            public LockSnapshotResult call() throws Exception {
+                LockSnapshotResult result = null;
+
+                try {
+                    result = executeLockSnapshot(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ModifyAddressAttributeResult> modifyAddressAttributeAsync(ModifyAddressAttributeRequest request) {
 
         return modifyAddressAttributeAsync(request, null);
@@ -21801,6 +21867,39 @@ public class AmazonEC2AsyncClient extends AmazonEC2Client implements AmazonEC2As
 
                 try {
                     result = executeUnassignPrivateNatGatewayAddress(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UnlockSnapshotResult> unlockSnapshotAsync(UnlockSnapshotRequest request) {
+
+        return unlockSnapshotAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UnlockSnapshotResult> unlockSnapshotAsync(final UnlockSnapshotRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UnlockSnapshotRequest, UnlockSnapshotResult> asyncHandler) {
+        final UnlockSnapshotRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UnlockSnapshotResult>() {
+            @Override
+            public UnlockSnapshotResult call() throws Exception {
+                UnlockSnapshotResult result = null;
+
+                try {
+                    result = executeUnlockSnapshot(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

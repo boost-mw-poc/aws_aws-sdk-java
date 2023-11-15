@@ -95,6 +95,12 @@ public class UpdateEventDataStoreResult extends com.amazonaws.AmazonWebServiceRe
      * </p>
      */
     private String kmsKeyId;
+    /**
+     * <p>
+     * The billing mode for the event data store.
+     * </p>
+     */
+    private String billingMode;
 
     /**
      * <p>
@@ -660,6 +666,65 @@ public class UpdateEventDataStoreResult extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
+     * <p>
+     * The billing mode for the event data store.
+     * </p>
+     * 
+     * @param billingMode
+     *        The billing mode for the event data store.
+     * @see BillingMode
+     */
+
+    public void setBillingMode(String billingMode) {
+        this.billingMode = billingMode;
+    }
+
+    /**
+     * <p>
+     * The billing mode for the event data store.
+     * </p>
+     * 
+     * @return The billing mode for the event data store.
+     * @see BillingMode
+     */
+
+    public String getBillingMode() {
+        return this.billingMode;
+    }
+
+    /**
+     * <p>
+     * The billing mode for the event data store.
+     * </p>
+     * 
+     * @param billingMode
+     *        The billing mode for the event data store.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see BillingMode
+     */
+
+    public UpdateEventDataStoreResult withBillingMode(String billingMode) {
+        setBillingMode(billingMode);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The billing mode for the event data store.
+     * </p>
+     * 
+     * @param billingMode
+     *        The billing mode for the event data store.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see BillingMode
+     */
+
+    public UpdateEventDataStoreResult withBillingMode(BillingMode billingMode) {
+        this.billingMode = billingMode.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -692,7 +757,9 @@ public class UpdateEventDataStoreResult extends com.amazonaws.AmazonWebServiceRe
         if (getUpdatedTimestamp() != null)
             sb.append("UpdatedTimestamp: ").append(getUpdatedTimestamp()).append(",");
         if (getKmsKeyId() != null)
-            sb.append("KmsKeyId: ").append(getKmsKeyId());
+            sb.append("KmsKeyId: ").append(getKmsKeyId()).append(",");
+        if (getBillingMode() != null)
+            sb.append("BillingMode: ").append(getBillingMode());
         sb.append("}");
         return sb.toString();
     }
@@ -751,6 +818,10 @@ public class UpdateEventDataStoreResult extends com.amazonaws.AmazonWebServiceRe
             return false;
         if (other.getKmsKeyId() != null && other.getKmsKeyId().equals(this.getKmsKeyId()) == false)
             return false;
+        if (other.getBillingMode() == null ^ this.getBillingMode() == null)
+            return false;
+        if (other.getBillingMode() != null && other.getBillingMode().equals(this.getBillingMode()) == false)
+            return false;
         return true;
     }
 
@@ -770,6 +841,7 @@ public class UpdateEventDataStoreResult extends com.amazonaws.AmazonWebServiceRe
         hashCode = prime * hashCode + ((getCreatedTimestamp() == null) ? 0 : getCreatedTimestamp().hashCode());
         hashCode = prime * hashCode + ((getUpdatedTimestamp() == null) ? 0 : getUpdatedTimestamp().hashCode());
         hashCode = prime * hashCode + ((getKmsKeyId() == null) ? 0 : getKmsKeyId().hashCode());
+        hashCode = prime * hashCode + ((getBillingMode() == null) ? 0 : getBillingMode().hashCode());
         return hashCode;
     }
 

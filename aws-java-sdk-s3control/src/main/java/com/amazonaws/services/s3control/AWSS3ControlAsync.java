@@ -645,6 +645,73 @@ public interface AWSS3ControlAsync extends AWSS3Control {
 
     /**
      * <p>
+     * Creates a new S3 Storage Lens group and associates it with the specified Amazon Web Services account ID. An S3
+     * Storage Lens group is a custom grouping of objects based on prefix, suffix, object tags, object size, object age,
+     * or a combination of these filters. For each Storage Lens group that you’ve created, you can also optionally add
+     * Amazon Web Services resource tags. For more information about S3 Storage Lens groups, see <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage-lens-groups-overview.html">Working with S3
+     * Storage Lens groups</a>.
+     * </p>
+     * <p>
+     * To use this operation, you must have the permission to perform the <code>s3:CreateStorageLensGroup</code> action.
+     * If you’re trying to create a Storage Lens group with Amazon Web Services resource tags, you must also have
+     * permission to perform the <code>s3:TagResource</code> action. For more information about the required Storage
+     * Lens Groups permissions, see <a href=
+     * "https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage_lens_iam_permissions.html#storage_lens_groups_permissions"
+     * >Setting account permissions to use S3 Storage Lens groups</a>.
+     * </p>
+     * <p>
+     * For information about Storage Lens groups errors, see <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/API/ErrorResponses.html#S3LensErrorCodeList">List of Amazon S3
+     * Storage Lens error codes</a>.
+     * </p>
+     * 
+     * @param createStorageLensGroupRequest
+     * @return A Java Future containing the result of the CreateStorageLensGroup operation returned by the service.
+     * @sample AWSS3ControlAsync.CreateStorageLensGroup
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/CreateStorageLensGroup"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateStorageLensGroupResult> createStorageLensGroupAsync(CreateStorageLensGroupRequest createStorageLensGroupRequest);
+
+    /**
+     * <p>
+     * Creates a new S3 Storage Lens group and associates it with the specified Amazon Web Services account ID. An S3
+     * Storage Lens group is a custom grouping of objects based on prefix, suffix, object tags, object size, object age,
+     * or a combination of these filters. For each Storage Lens group that you’ve created, you can also optionally add
+     * Amazon Web Services resource tags. For more information about S3 Storage Lens groups, see <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage-lens-groups-overview.html">Working with S3
+     * Storage Lens groups</a>.
+     * </p>
+     * <p>
+     * To use this operation, you must have the permission to perform the <code>s3:CreateStorageLensGroup</code> action.
+     * If you’re trying to create a Storage Lens group with Amazon Web Services resource tags, you must also have
+     * permission to perform the <code>s3:TagResource</code> action. For more information about the required Storage
+     * Lens Groups permissions, see <a href=
+     * "https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage_lens_iam_permissions.html#storage_lens_groups_permissions"
+     * >Setting account permissions to use S3 Storage Lens groups</a>.
+     * </p>
+     * <p>
+     * For information about Storage Lens groups errors, see <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/API/ErrorResponses.html#S3LensErrorCodeList">List of Amazon S3
+     * Storage Lens error codes</a>.
+     * </p>
+     * 
+     * @param createStorageLensGroupRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateStorageLensGroup operation returned by the service.
+     * @sample AWSS3ControlAsyncHandler.CreateStorageLensGroup
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/CreateStorageLensGroup"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateStorageLensGroupResult> createStorageLensGroupAsync(CreateStorageLensGroupRequest createStorageLensGroupRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateStorageLensGroupRequest, CreateStorageLensGroupResult> asyncHandler);
+
+    /**
+     * <p>
      * Deletes the specified access point.
      * </p>
      * <p>
@@ -1096,7 +1163,7 @@ public interface AWSS3ControlAsync extends AWSS3Control {
      * <i>Amazon S3 User Guide</i>.
      * </p>
      * <p>
-     * To use this action, you must have permission to perform the <code>s3-outposts:DeleteLifecycleConfiguration</code>
+     * To use this operation, you must have permission to perform the <code>s3-outposts:PutLifecycleConfiguration</code>
      * action. By default, the bucket owner has this permission and the Outposts bucket owner can grant this permission
      * to others.
      * </p>
@@ -1160,7 +1227,7 @@ public interface AWSS3ControlAsync extends AWSS3Control {
      * <i>Amazon S3 User Guide</i>.
      * </p>
      * <p>
-     * To use this action, you must have permission to perform the <code>s3-outposts:DeleteLifecycleConfiguration</code>
+     * To use this operation, you must have permission to perform the <code>s3-outposts:PutLifecycleConfiguration</code>
      * action. By default, the bucket owner has this permission and the Outposts bucket owner can grant this permission
      * to others.
      * </p>
@@ -1974,6 +2041,59 @@ public interface AWSS3ControlAsync extends AWSS3Control {
     java.util.concurrent.Future<DeleteStorageLensConfigurationTaggingResult> deleteStorageLensConfigurationTaggingAsync(
             DeleteStorageLensConfigurationTaggingRequest deleteStorageLensConfigurationTaggingRequest,
             com.amazonaws.handlers.AsyncHandler<DeleteStorageLensConfigurationTaggingRequest, DeleteStorageLensConfigurationTaggingResult> asyncHandler);
+
+    /**
+     * <p>
+     * Deletes an existing S3 Storage Lens group.
+     * </p>
+     * <p>
+     * To use this operation, you must have the permission to perform the <code>s3:DeleteStorageLensGroup</code> action.
+     * For more information about the required Storage Lens Groups permissions, see <a href=
+     * "https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage_lens_iam_permissions.html#storage_lens_groups_permissions"
+     * >Setting account permissions to use S3 Storage Lens groups</a>.
+     * </p>
+     * <p>
+     * For information about Storage Lens groups errors, see <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/API/ErrorResponses.html#S3LensErrorCodeList">List of Amazon S3
+     * Storage Lens error codes</a>.
+     * </p>
+     * 
+     * @param deleteStorageLensGroupRequest
+     * @return A Java Future containing the result of the DeleteStorageLensGroup operation returned by the service.
+     * @sample AWSS3ControlAsync.DeleteStorageLensGroup
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/DeleteStorageLensGroup"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteStorageLensGroupResult> deleteStorageLensGroupAsync(DeleteStorageLensGroupRequest deleteStorageLensGroupRequest);
+
+    /**
+     * <p>
+     * Deletes an existing S3 Storage Lens group.
+     * </p>
+     * <p>
+     * To use this operation, you must have the permission to perform the <code>s3:DeleteStorageLensGroup</code> action.
+     * For more information about the required Storage Lens Groups permissions, see <a href=
+     * "https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage_lens_iam_permissions.html#storage_lens_groups_permissions"
+     * >Setting account permissions to use S3 Storage Lens groups</a>.
+     * </p>
+     * <p>
+     * For information about Storage Lens groups errors, see <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/API/ErrorResponses.html#S3LensErrorCodeList">List of Amazon S3
+     * Storage Lens error codes</a>.
+     * </p>
+     * 
+     * @param deleteStorageLensGroupRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteStorageLensGroup operation returned by the service.
+     * @sample AWSS3ControlAsyncHandler.DeleteStorageLensGroup
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/DeleteStorageLensGroup"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteStorageLensGroupResult> deleteStorageLensGroupAsync(DeleteStorageLensGroupRequest deleteStorageLensGroupRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteStorageLensGroupRequest, DeleteStorageLensGroupResult> asyncHandler);
 
     /**
      * <p>
@@ -4140,6 +4260,59 @@ public interface AWSS3ControlAsync extends AWSS3Control {
 
     /**
      * <p>
+     * Retrieves the Storage Lens group configuration details.
+     * </p>
+     * <p>
+     * To use this operation, you must have the permission to perform the <code>s3:GetStorageLensGroup</code> action.
+     * For more information about the required Storage Lens Groups permissions, see <a href=
+     * "https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage_lens_iam_permissions.html#storage_lens_groups_permissions"
+     * >Setting account permissions to use S3 Storage Lens groups</a>.
+     * </p>
+     * <p>
+     * For information about Storage Lens groups errors, see <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/API/ErrorResponses.html#S3LensErrorCodeList">List of Amazon S3
+     * Storage Lens error codes</a>.
+     * </p>
+     * 
+     * @param getStorageLensGroupRequest
+     * @return A Java Future containing the result of the GetStorageLensGroup operation returned by the service.
+     * @sample AWSS3ControlAsync.GetStorageLensGroup
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/GetStorageLensGroup" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<GetStorageLensGroupResult> getStorageLensGroupAsync(GetStorageLensGroupRequest getStorageLensGroupRequest);
+
+    /**
+     * <p>
+     * Retrieves the Storage Lens group configuration details.
+     * </p>
+     * <p>
+     * To use this operation, you must have the permission to perform the <code>s3:GetStorageLensGroup</code> action.
+     * For more information about the required Storage Lens Groups permissions, see <a href=
+     * "https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage_lens_iam_permissions.html#storage_lens_groups_permissions"
+     * >Setting account permissions to use S3 Storage Lens groups</a>.
+     * </p>
+     * <p>
+     * For information about Storage Lens groups errors, see <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/API/ErrorResponses.html#S3LensErrorCodeList">List of Amazon S3
+     * Storage Lens error codes</a>.
+     * </p>
+     * 
+     * @param getStorageLensGroupRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetStorageLensGroup operation returned by the service.
+     * @sample AWSS3ControlAsyncHandler.GetStorageLensGroup
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/GetStorageLensGroup" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<GetStorageLensGroupResult> getStorageLensGroupAsync(GetStorageLensGroupRequest getStorageLensGroupRequest,
+            com.amazonaws.handlers.AsyncHandler<GetStorageLensGroupRequest, GetStorageLensGroupResult> asyncHandler);
+
+    /**
+     * <p>
      * Returns a list of the access points that are owned by the current account that's associated with the specified
      * bucket. You can retrieve up to 1000 access points per call. If the specified bucket has more than 1,000 access
      * points (or the number specified in <code>maxResults</code>, whichever is less), the response will include a
@@ -4625,6 +4798,124 @@ public interface AWSS3ControlAsync extends AWSS3Control {
     java.util.concurrent.Future<ListStorageLensConfigurationsResult> listStorageLensConfigurationsAsync(
             ListStorageLensConfigurationsRequest listStorageLensConfigurationsRequest,
             com.amazonaws.handlers.AsyncHandler<ListStorageLensConfigurationsRequest, ListStorageLensConfigurationsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Lists all the Storage Lens groups in the specified home Region.
+     * </p>
+     * <p>
+     * To use this operation, you must have the permission to perform the <code>s3:ListStorageLensGroups</code> action.
+     * For more information about the required Storage Lens Groups permissions, see <a href=
+     * "https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage_lens_iam_permissions.html#storage_lens_groups_permissions"
+     * >Setting account permissions to use S3 Storage Lens groups</a>.
+     * </p>
+     * <p>
+     * For information about Storage Lens groups errors, see <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/API/ErrorResponses.html#S3LensErrorCodeList">List of Amazon S3
+     * Storage Lens error codes</a>.
+     * </p>
+     * 
+     * @param listStorageLensGroupsRequest
+     * @return A Java Future containing the result of the ListStorageLensGroups operation returned by the service.
+     * @sample AWSS3ControlAsync.ListStorageLensGroups
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/ListStorageLensGroups"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListStorageLensGroupsResult> listStorageLensGroupsAsync(ListStorageLensGroupsRequest listStorageLensGroupsRequest);
+
+    /**
+     * <p>
+     * Lists all the Storage Lens groups in the specified home Region.
+     * </p>
+     * <p>
+     * To use this operation, you must have the permission to perform the <code>s3:ListStorageLensGroups</code> action.
+     * For more information about the required Storage Lens Groups permissions, see <a href=
+     * "https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage_lens_iam_permissions.html#storage_lens_groups_permissions"
+     * >Setting account permissions to use S3 Storage Lens groups</a>.
+     * </p>
+     * <p>
+     * For information about Storage Lens groups errors, see <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/API/ErrorResponses.html#S3LensErrorCodeList">List of Amazon S3
+     * Storage Lens error codes</a>.
+     * </p>
+     * 
+     * @param listStorageLensGroupsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListStorageLensGroups operation returned by the service.
+     * @sample AWSS3ControlAsyncHandler.ListStorageLensGroups
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/ListStorageLensGroups"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListStorageLensGroupsResult> listStorageLensGroupsAsync(ListStorageLensGroupsRequest listStorageLensGroupsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListStorageLensGroupsRequest, ListStorageLensGroupsResult> asyncHandler);
+
+    /**
+     * <p>
+     * This operation allows you to list all the Amazon Web Services resource tags for the specified resource.
+     * </p>
+     * <p>
+     * To use this operation, you must have the permission to perform the <code>s3:ListTagsForResource</code> action.
+     * For more information about the required Storage Lens Groups permissions, see <a href=
+     * "https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage_lens_iam_permissions.html#storage_lens_groups_permissions"
+     * >Setting account permissions to use S3 Storage Lens groups</a>.
+     * </p>
+     * <p>
+     * For information about S3 Tagging errors, see <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/API/ErrorResponses.html#S3TaggingErrorCodeList">List of Amazon
+     * S3 Tagging error codes</a>.
+     * </p>
+     * <note>
+     * <p>
+     * This operation is only supported for <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage-lens-groups.html">S3 Storage Lens groups</a>.
+     * </p>
+     * </note>
+     * 
+     * @param listTagsForResourceRequest
+     * @return A Java Future containing the result of the ListTagsForResource operation returned by the service.
+     * @sample AWSS3ControlAsync.ListTagsForResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/ListTagsForResource" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ListTagsForResourceResult> listTagsForResourceAsync(ListTagsForResourceRequest listTagsForResourceRequest);
+
+    /**
+     * <p>
+     * This operation allows you to list all the Amazon Web Services resource tags for the specified resource.
+     * </p>
+     * <p>
+     * To use this operation, you must have the permission to perform the <code>s3:ListTagsForResource</code> action.
+     * For more information about the required Storage Lens Groups permissions, see <a href=
+     * "https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage_lens_iam_permissions.html#storage_lens_groups_permissions"
+     * >Setting account permissions to use S3 Storage Lens groups</a>.
+     * </p>
+     * <p>
+     * For information about S3 Tagging errors, see <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/API/ErrorResponses.html#S3TaggingErrorCodeList">List of Amazon
+     * S3 Tagging error codes</a>.
+     * </p>
+     * <note>
+     * <p>
+     * This operation is only supported for <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage-lens-groups.html">S3 Storage Lens groups</a>.
+     * </p>
+     * </note>
+     * 
+     * @param listTagsForResourceRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListTagsForResource operation returned by the service.
+     * @sample AWSS3ControlAsyncHandler.ListTagsForResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/ListTagsForResource" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ListTagsForResourceResult> listTagsForResourceAsync(ListTagsForResourceRequest listTagsForResourceRequest,
+            com.amazonaws.handlers.AsyncHandler<ListTagsForResourceRequest, ListTagsForResourceResult> asyncHandler);
 
     /**
      * <p>
@@ -6442,6 +6733,138 @@ public interface AWSS3ControlAsync extends AWSS3Control {
 
     /**
      * <p>
+     * Creates a new Amazon Web Services resource tag or updates an existing resource tag. You can add up to 50 Amazon
+     * Web Services resource tags for each S3 resource.
+     * </p>
+     * <p>
+     * To use this operation, you must have the permission to perform the <code>s3:TagResource</code> action. For more
+     * information about the required Storage Lens Groups permissions, see <a href=
+     * "https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage_lens_iam_permissions.html#storage_lens_groups_permissions"
+     * >Setting account permissions to use S3 Storage Lens groups</a>.
+     * </p>
+     * <p>
+     * For information about S3 Tagging errors, see <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/API/ErrorResponses.html#S3TaggingErrorCodeList">List of Amazon
+     * S3 Tagging error codes</a>.
+     * </p>
+     * <note>
+     * <p>
+     * This operation is only supported for <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage-lens-groups.html">S3 Storage Lens groups</a>.
+     * </p>
+     * </note>
+     * 
+     * @param tagResourceRequest
+     * @return A Java Future containing the result of the TagResource operation returned by the service.
+     * @sample AWSS3ControlAsync.TagResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/TagResource" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<TagResourceResult> tagResourceAsync(TagResourceRequest tagResourceRequest);
+
+    /**
+     * <p>
+     * Creates a new Amazon Web Services resource tag or updates an existing resource tag. You can add up to 50 Amazon
+     * Web Services resource tags for each S3 resource.
+     * </p>
+     * <p>
+     * To use this operation, you must have the permission to perform the <code>s3:TagResource</code> action. For more
+     * information about the required Storage Lens Groups permissions, see <a href=
+     * "https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage_lens_iam_permissions.html#storage_lens_groups_permissions"
+     * >Setting account permissions to use S3 Storage Lens groups</a>.
+     * </p>
+     * <p>
+     * For information about S3 Tagging errors, see <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/API/ErrorResponses.html#S3TaggingErrorCodeList">List of Amazon
+     * S3 Tagging error codes</a>.
+     * </p>
+     * <note>
+     * <p>
+     * This operation is only supported for <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage-lens-groups.html">S3 Storage Lens groups</a>.
+     * </p>
+     * </note>
+     * 
+     * @param tagResourceRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the TagResource operation returned by the service.
+     * @sample AWSS3ControlAsyncHandler.TagResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/TagResource" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<TagResourceResult> tagResourceAsync(TagResourceRequest tagResourceRequest,
+            com.amazonaws.handlers.AsyncHandler<TagResourceRequest, TagResourceResult> asyncHandler);
+
+    /**
+     * <p>
+     * This operation removes the specified Amazon Web Services resource tags from an S3 resource.
+     * </p>
+     * <p>
+     * To use this operation, you must have the permission to perform the <code>s3:UntagResource</code> action. For more
+     * information about the required Storage Lens Groups permissions, see <a href=
+     * "https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage_lens_iam_permissions.html#storage_lens_groups_permissions"
+     * >Setting account permissions to use S3 Storage Lens groups</a>.
+     * </p>
+     * <p>
+     * For information about S3 Tagging errors, see <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/API/ErrorResponses.html#S3TaggingErrorCodeList">List of Amazon
+     * S3 Tagging error codes</a>.
+     * </p>
+     * <note>
+     * <p>
+     * This operation is only supported for <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage-lens-groups.html">S3 Storage Lens groups</a>.
+     * </p>
+     * </note>
+     * 
+     * @param untagResourceRequest
+     * @return A Java Future containing the result of the UntagResource operation returned by the service.
+     * @sample AWSS3ControlAsync.UntagResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/UntagResource" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<UntagResourceResult> untagResourceAsync(UntagResourceRequest untagResourceRequest);
+
+    /**
+     * <p>
+     * This operation removes the specified Amazon Web Services resource tags from an S3 resource.
+     * </p>
+     * <p>
+     * To use this operation, you must have the permission to perform the <code>s3:UntagResource</code> action. For more
+     * information about the required Storage Lens Groups permissions, see <a href=
+     * "https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage_lens_iam_permissions.html#storage_lens_groups_permissions"
+     * >Setting account permissions to use S3 Storage Lens groups</a>.
+     * </p>
+     * <p>
+     * For information about S3 Tagging errors, see <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/API/ErrorResponses.html#S3TaggingErrorCodeList">List of Amazon
+     * S3 Tagging error codes</a>.
+     * </p>
+     * <note>
+     * <p>
+     * This operation is only supported for <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage-lens-groups.html">S3 Storage Lens groups</a>.
+     * </p>
+     * </note>
+     * 
+     * @param untagResourceRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UntagResource operation returned by the service.
+     * @sample AWSS3ControlAsyncHandler.UntagResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/UntagResource" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<UntagResourceResult> untagResourceAsync(UntagResourceRequest untagResourceRequest,
+            com.amazonaws.handlers.AsyncHandler<UntagResourceRequest, UntagResourceResult> asyncHandler);
+
+    /**
+     * <p>
      * Updates an existing S3 Batch Operations job's priority. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/batch-ops.html">S3 Batch Operations</a> in the
      * <i>Amazon S3 User Guide</i>.
@@ -6615,5 +7038,58 @@ public interface AWSS3ControlAsync extends AWSS3Control {
      */
     java.util.concurrent.Future<UpdateJobStatusResult> updateJobStatusAsync(UpdateJobStatusRequest updateJobStatusRequest,
             com.amazonaws.handlers.AsyncHandler<UpdateJobStatusRequest, UpdateJobStatusResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates the existing Storage Lens group.
+     * </p>
+     * <p>
+     * To use this operation, you must have the permission to perform the <code>s3:UpdateStorageLensGroup</code> action.
+     * For more information about the required Storage Lens Groups permissions, see <a href=
+     * "https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage_lens_iam_permissions.html#storage_lens_groups_permissions"
+     * >Setting account permissions to use S3 Storage Lens groups</a>.
+     * </p>
+     * <p>
+     * For information about Storage Lens groups errors, see <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/API/ErrorResponses.html#S3LensErrorCodeList">List of Amazon S3
+     * Storage Lens error codes</a>.
+     * </p>
+     * 
+     * @param updateStorageLensGroupRequest
+     * @return A Java Future containing the result of the UpdateStorageLensGroup operation returned by the service.
+     * @sample AWSS3ControlAsync.UpdateStorageLensGroup
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/UpdateStorageLensGroup"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateStorageLensGroupResult> updateStorageLensGroupAsync(UpdateStorageLensGroupRequest updateStorageLensGroupRequest);
+
+    /**
+     * <p>
+     * Updates the existing Storage Lens group.
+     * </p>
+     * <p>
+     * To use this operation, you must have the permission to perform the <code>s3:UpdateStorageLensGroup</code> action.
+     * For more information about the required Storage Lens Groups permissions, see <a href=
+     * "https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage_lens_iam_permissions.html#storage_lens_groups_permissions"
+     * >Setting account permissions to use S3 Storage Lens groups</a>.
+     * </p>
+     * <p>
+     * For information about Storage Lens groups errors, see <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/API/ErrorResponses.html#S3LensErrorCodeList">List of Amazon S3
+     * Storage Lens error codes</a>.
+     * </p>
+     * 
+     * @param updateStorageLensGroupRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateStorageLensGroup operation returned by the service.
+     * @sample AWSS3ControlAsyncHandler.UpdateStorageLensGroup
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/UpdateStorageLensGroup"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateStorageLensGroupResult> updateStorageLensGroupAsync(UpdateStorageLensGroupRequest updateStorageLensGroupRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateStorageLensGroupRequest, UpdateStorageLensGroupResult> asyncHandler);
 
 }

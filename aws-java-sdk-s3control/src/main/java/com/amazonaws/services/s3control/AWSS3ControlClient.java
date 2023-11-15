@@ -774,6 +774,91 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
 
     /**
      * <p>
+     * Creates a new S3 Storage Lens group and associates it with the specified Amazon Web Services account ID. An S3
+     * Storage Lens group is a custom grouping of objects based on prefix, suffix, object tags, object size, object age,
+     * or a combination of these filters. For each Storage Lens group that you’ve created, you can also optionally add
+     * Amazon Web Services resource tags. For more information about S3 Storage Lens groups, see <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage-lens-groups-overview.html">Working with S3
+     * Storage Lens groups</a>.
+     * </p>
+     * <p>
+     * To use this operation, you must have the permission to perform the <code>s3:CreateStorageLensGroup</code> action.
+     * If you’re trying to create a Storage Lens group with Amazon Web Services resource tags, you must also have
+     * permission to perform the <code>s3:TagResource</code> action. For more information about the required Storage
+     * Lens Groups permissions, see <a href=
+     * "https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage_lens_iam_permissions.html#storage_lens_groups_permissions"
+     * >Setting account permissions to use S3 Storage Lens groups</a>.
+     * </p>
+     * <p>
+     * For information about Storage Lens groups errors, see <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/API/ErrorResponses.html#S3LensErrorCodeList">List of Amazon S3
+     * Storage Lens error codes</a>.
+     * </p>
+     * 
+     * @param createStorageLensGroupRequest
+     * @return Result of the CreateStorageLensGroup operation returned by the service.
+     * @sample AWSS3Control.CreateStorageLensGroup
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/CreateStorageLensGroup"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public CreateStorageLensGroupResult createStorageLensGroup(CreateStorageLensGroupRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateStorageLensGroup(request);
+    }
+
+    @SdkInternalApi
+    final CreateStorageLensGroupResult executeCreateStorageLensGroup(CreateStorageLensGroupRequest createStorageLensGroupRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createStorageLensGroupRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateStorageLensGroupRequest> request = null;
+        Response<CreateStorageLensGroupResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateStorageLensGroupRequestMarshaller().marshall(super.beforeMarshalling(createStorageLensGroupRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "S3 Control");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateStorageLensGroup");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            URI endpointTraitHost = null;
+            if (!clientConfiguration.isDisableHostPrefixInjection()) {
+                ValidationUtils.assertStringNotEmpty(createStorageLensGroupRequest.getAccountId(), "AccountId");
+                HostnameValidator.validateHostnameCompliant(createStorageLensGroupRequest.getAccountId(), "AccountId", "createStorageLensGroupRequest");
+
+                String hostPrefix = "{AccountId}.";
+                String resolvedHostPrefix = String.format("%s.", createStorageLensGroupRequest.getAccountId());
+
+                endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
+            }
+
+            StaxResponseHandler<CreateStorageLensGroupResult> responseHandler = new com.amazonaws.services.s3control.internal.S3ControlStaxResponseHandler<CreateStorageLensGroupResult>(
+                    new CreateStorageLensGroupResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Deletes the specified access point.
      * </p>
      * <p>
@@ -1341,7 +1426,7 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
      * <i>Amazon S3 User Guide</i>.
      * </p>
      * <p>
-     * To use this action, you must have permission to perform the <code>s3-outposts:DeleteLifecycleConfiguration</code>
+     * To use this operation, you must have permission to perform the <code>s3-outposts:PutLifecycleConfiguration</code>
      * action. By default, the bucket owner has this permission and the Outposts bucket owner can grant this permission
      * to others.
      * </p>
@@ -2302,6 +2387,84 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
 
             StaxResponseHandler<DeleteStorageLensConfigurationTaggingResult> responseHandler = new com.amazonaws.services.s3control.internal.S3ControlStaxResponseHandler<DeleteStorageLensConfigurationTaggingResult>(
                     new DeleteStorageLensConfigurationTaggingResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Deletes an existing S3 Storage Lens group.
+     * </p>
+     * <p>
+     * To use this operation, you must have the permission to perform the <code>s3:DeleteStorageLensGroup</code> action.
+     * For more information about the required Storage Lens Groups permissions, see <a href=
+     * "https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage_lens_iam_permissions.html#storage_lens_groups_permissions"
+     * >Setting account permissions to use S3 Storage Lens groups</a>.
+     * </p>
+     * <p>
+     * For information about Storage Lens groups errors, see <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/API/ErrorResponses.html#S3LensErrorCodeList">List of Amazon S3
+     * Storage Lens error codes</a>.
+     * </p>
+     * 
+     * @param deleteStorageLensGroupRequest
+     * @return Result of the DeleteStorageLensGroup operation returned by the service.
+     * @sample AWSS3Control.DeleteStorageLensGroup
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/DeleteStorageLensGroup"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DeleteStorageLensGroupResult deleteStorageLensGroup(DeleteStorageLensGroupRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteStorageLensGroup(request);
+    }
+
+    @SdkInternalApi
+    final DeleteStorageLensGroupResult executeDeleteStorageLensGroup(DeleteStorageLensGroupRequest deleteStorageLensGroupRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteStorageLensGroupRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteStorageLensGroupRequest> request = null;
+        Response<DeleteStorageLensGroupResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteStorageLensGroupRequestMarshaller().marshall(super.beforeMarshalling(deleteStorageLensGroupRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "S3 Control");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteStorageLensGroup");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            URI endpointTraitHost = null;
+            if (!clientConfiguration.isDisableHostPrefixInjection()) {
+                ValidationUtils.assertStringNotEmpty(deleteStorageLensGroupRequest.getAccountId(), "AccountId");
+                HostnameValidator.validateHostnameCompliant(deleteStorageLensGroupRequest.getAccountId(), "AccountId", "deleteStorageLensGroupRequest");
+
+                String hostPrefix = "{AccountId}.";
+                String resolvedHostPrefix = String.format("%s.", deleteStorageLensGroupRequest.getAccountId());
+
+                endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
+            }
+
+            StaxResponseHandler<DeleteStorageLensGroupResult> responseHandler = new com.amazonaws.services.s3control.internal.S3ControlStaxResponseHandler<DeleteStorageLensGroupResult>(
+                    new DeleteStorageLensGroupResultStaxUnmarshaller());
 
             response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
 
@@ -4769,6 +4932,84 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
 
     /**
      * <p>
+     * Retrieves the Storage Lens group configuration details.
+     * </p>
+     * <p>
+     * To use this operation, you must have the permission to perform the <code>s3:GetStorageLensGroup</code> action.
+     * For more information about the required Storage Lens Groups permissions, see <a href=
+     * "https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage_lens_iam_permissions.html#storage_lens_groups_permissions"
+     * >Setting account permissions to use S3 Storage Lens groups</a>.
+     * </p>
+     * <p>
+     * For information about Storage Lens groups errors, see <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/API/ErrorResponses.html#S3LensErrorCodeList">List of Amazon S3
+     * Storage Lens error codes</a>.
+     * </p>
+     * 
+     * @param getStorageLensGroupRequest
+     * @return Result of the GetStorageLensGroup operation returned by the service.
+     * @sample AWSS3Control.GetStorageLensGroup
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/GetStorageLensGroup" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public GetStorageLensGroupResult getStorageLensGroup(GetStorageLensGroupRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetStorageLensGroup(request);
+    }
+
+    @SdkInternalApi
+    final GetStorageLensGroupResult executeGetStorageLensGroup(GetStorageLensGroupRequest getStorageLensGroupRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getStorageLensGroupRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetStorageLensGroupRequest> request = null;
+        Response<GetStorageLensGroupResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetStorageLensGroupRequestMarshaller().marshall(super.beforeMarshalling(getStorageLensGroupRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "S3 Control");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetStorageLensGroup");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            URI endpointTraitHost = null;
+            if (!clientConfiguration.isDisableHostPrefixInjection()) {
+                ValidationUtils.assertStringNotEmpty(getStorageLensGroupRequest.getAccountId(), "AccountId");
+                HostnameValidator.validateHostnameCompliant(getStorageLensGroupRequest.getAccountId(), "AccountId", "getStorageLensGroupRequest");
+
+                String hostPrefix = "{AccountId}.";
+                String resolvedHostPrefix = String.format("%s.", getStorageLensGroupRequest.getAccountId());
+
+                endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
+            }
+
+            StaxResponseHandler<GetStorageLensGroupResult> responseHandler = new com.amazonaws.services.s3control.internal.S3ControlStaxResponseHandler<GetStorageLensGroupResult>(
+                    new GetStorageLensGroupResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Returns a list of the access points that are owned by the current account that's associated with the specified
      * bucket. You can retrieve up to 1000 access points per call. If the specified bucket has more than 1,000 access
      * points (or the number specified in <code>maxResults</code>, whichever is less), the response will include a
@@ -5336,6 +5577,168 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
 
             StaxResponseHandler<ListStorageLensConfigurationsResult> responseHandler = new com.amazonaws.services.s3control.internal.S3ControlStaxResponseHandler<ListStorageLensConfigurationsResult>(
                     new ListStorageLensConfigurationsResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Lists all the Storage Lens groups in the specified home Region.
+     * </p>
+     * <p>
+     * To use this operation, you must have the permission to perform the <code>s3:ListStorageLensGroups</code> action.
+     * For more information about the required Storage Lens Groups permissions, see <a href=
+     * "https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage_lens_iam_permissions.html#storage_lens_groups_permissions"
+     * >Setting account permissions to use S3 Storage Lens groups</a>.
+     * </p>
+     * <p>
+     * For information about Storage Lens groups errors, see <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/API/ErrorResponses.html#S3LensErrorCodeList">List of Amazon S3
+     * Storage Lens error codes</a>.
+     * </p>
+     * 
+     * @param listStorageLensGroupsRequest
+     * @return Result of the ListStorageLensGroups operation returned by the service.
+     * @sample AWSS3Control.ListStorageLensGroups
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/ListStorageLensGroups"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListStorageLensGroupsResult listStorageLensGroups(ListStorageLensGroupsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListStorageLensGroups(request);
+    }
+
+    @SdkInternalApi
+    final ListStorageLensGroupsResult executeListStorageLensGroups(ListStorageLensGroupsRequest listStorageLensGroupsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listStorageLensGroupsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListStorageLensGroupsRequest> request = null;
+        Response<ListStorageLensGroupsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListStorageLensGroupsRequestMarshaller().marshall(super.beforeMarshalling(listStorageLensGroupsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "S3 Control");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListStorageLensGroups");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            URI endpointTraitHost = null;
+            if (!clientConfiguration.isDisableHostPrefixInjection()) {
+                ValidationUtils.assertStringNotEmpty(listStorageLensGroupsRequest.getAccountId(), "AccountId");
+                HostnameValidator.validateHostnameCompliant(listStorageLensGroupsRequest.getAccountId(), "AccountId", "listStorageLensGroupsRequest");
+
+                String hostPrefix = "{AccountId}.";
+                String resolvedHostPrefix = String.format("%s.", listStorageLensGroupsRequest.getAccountId());
+
+                endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
+            }
+
+            StaxResponseHandler<ListStorageLensGroupsResult> responseHandler = new com.amazonaws.services.s3control.internal.S3ControlStaxResponseHandler<ListStorageLensGroupsResult>(
+                    new ListStorageLensGroupsResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * This operation allows you to list all the Amazon Web Services resource tags for the specified resource.
+     * </p>
+     * <p>
+     * To use this operation, you must have the permission to perform the <code>s3:ListTagsForResource</code> action.
+     * For more information about the required Storage Lens Groups permissions, see <a href=
+     * "https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage_lens_iam_permissions.html#storage_lens_groups_permissions"
+     * >Setting account permissions to use S3 Storage Lens groups</a>.
+     * </p>
+     * <p>
+     * For information about S3 Tagging errors, see <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/API/ErrorResponses.html#S3TaggingErrorCodeList">List of Amazon
+     * S3 Tagging error codes</a>.
+     * </p>
+     * <note>
+     * <p>
+     * This operation is only supported for <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage-lens-groups.html">S3 Storage Lens groups</a>.
+     * </p>
+     * </note>
+     * 
+     * @param listTagsForResourceRequest
+     * @return Result of the ListTagsForResource operation returned by the service.
+     * @sample AWSS3Control.ListTagsForResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/ListTagsForResource" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public ListTagsForResourceResult listTagsForResource(ListTagsForResourceRequest request) {
+        request = beforeClientExecution(request);
+        return executeListTagsForResource(request);
+    }
+
+    @SdkInternalApi
+    final ListTagsForResourceResult executeListTagsForResource(ListTagsForResourceRequest listTagsForResourceRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listTagsForResourceRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListTagsForResourceRequest> request = null;
+        Response<ListTagsForResourceResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListTagsForResourceRequestMarshaller().marshall(super.beforeMarshalling(listTagsForResourceRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "S3 Control");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListTagsForResource");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            URI endpointTraitHost = null;
+            if (!clientConfiguration.isDisableHostPrefixInjection()) {
+                ValidationUtils.assertStringNotEmpty(listTagsForResourceRequest.getAccountId(), "AccountId");
+                HostnameValidator.validateHostnameCompliant(listTagsForResourceRequest.getAccountId(), "AccountId", "listTagsForResourceRequest");
+
+                String hostPrefix = "{AccountId}.";
+                String resolvedHostPrefix = String.format("%s.", listTagsForResourceRequest.getAccountId());
+
+                endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
+            }
+
+            StaxResponseHandler<ListTagsForResourceResult> responseHandler = new com.amazonaws.services.s3control.internal.S3ControlStaxResponseHandler<ListTagsForResourceResult>(
+                    new ListTagsForResourceResultStaxUnmarshaller());
 
             response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
 
@@ -7111,6 +7514,175 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
 
     /**
      * <p>
+     * Creates a new Amazon Web Services resource tag or updates an existing resource tag. You can add up to 50 Amazon
+     * Web Services resource tags for each S3 resource.
+     * </p>
+     * <p>
+     * To use this operation, you must have the permission to perform the <code>s3:TagResource</code> action. For more
+     * information about the required Storage Lens Groups permissions, see <a href=
+     * "https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage_lens_iam_permissions.html#storage_lens_groups_permissions"
+     * >Setting account permissions to use S3 Storage Lens groups</a>.
+     * </p>
+     * <p>
+     * For information about S3 Tagging errors, see <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/API/ErrorResponses.html#S3TaggingErrorCodeList">List of Amazon
+     * S3 Tagging error codes</a>.
+     * </p>
+     * <note>
+     * <p>
+     * This operation is only supported for <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage-lens-groups.html">S3 Storage Lens groups</a>.
+     * </p>
+     * </note>
+     * 
+     * @param tagResourceRequest
+     * @return Result of the TagResource operation returned by the service.
+     * @sample AWSS3Control.TagResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/TagResource" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public TagResourceResult tagResource(TagResourceRequest request) {
+        request = beforeClientExecution(request);
+        return executeTagResource(request);
+    }
+
+    @SdkInternalApi
+    final TagResourceResult executeTagResource(TagResourceRequest tagResourceRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(tagResourceRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<TagResourceRequest> request = null;
+        Response<TagResourceResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new TagResourceRequestMarshaller().marshall(super.beforeMarshalling(tagResourceRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "S3 Control");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "TagResource");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            URI endpointTraitHost = null;
+            if (!clientConfiguration.isDisableHostPrefixInjection()) {
+                ValidationUtils.assertStringNotEmpty(tagResourceRequest.getAccountId(), "AccountId");
+                HostnameValidator.validateHostnameCompliant(tagResourceRequest.getAccountId(), "AccountId", "tagResourceRequest");
+
+                String hostPrefix = "{AccountId}.";
+                String resolvedHostPrefix = String.format("%s.", tagResourceRequest.getAccountId());
+
+                endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
+            }
+
+            StaxResponseHandler<TagResourceResult> responseHandler = new com.amazonaws.services.s3control.internal.S3ControlStaxResponseHandler<TagResourceResult>(
+                    new TagResourceResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * This operation removes the specified Amazon Web Services resource tags from an S3 resource.
+     * </p>
+     * <p>
+     * To use this operation, you must have the permission to perform the <code>s3:UntagResource</code> action. For more
+     * information about the required Storage Lens Groups permissions, see <a href=
+     * "https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage_lens_iam_permissions.html#storage_lens_groups_permissions"
+     * >Setting account permissions to use S3 Storage Lens groups</a>.
+     * </p>
+     * <p>
+     * For information about S3 Tagging errors, see <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/API/ErrorResponses.html#S3TaggingErrorCodeList">List of Amazon
+     * S3 Tagging error codes</a>.
+     * </p>
+     * <note>
+     * <p>
+     * This operation is only supported for <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage-lens-groups.html">S3 Storage Lens groups</a>.
+     * </p>
+     * </note>
+     * 
+     * @param untagResourceRequest
+     * @return Result of the UntagResource operation returned by the service.
+     * @sample AWSS3Control.UntagResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/UntagResource" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public UntagResourceResult untagResource(UntagResourceRequest request) {
+        request = beforeClientExecution(request);
+        return executeUntagResource(request);
+    }
+
+    @SdkInternalApi
+    final UntagResourceResult executeUntagResource(UntagResourceRequest untagResourceRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(untagResourceRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UntagResourceRequest> request = null;
+        Response<UntagResourceResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UntagResourceRequestMarshaller().marshall(super.beforeMarshalling(untagResourceRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "S3 Control");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UntagResource");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            URI endpointTraitHost = null;
+            if (!clientConfiguration.isDisableHostPrefixInjection()) {
+                ValidationUtils.assertStringNotEmpty(untagResourceRequest.getAccountId(), "AccountId");
+                HostnameValidator.validateHostnameCompliant(untagResourceRequest.getAccountId(), "AccountId", "untagResourceRequest");
+
+                String hostPrefix = "{AccountId}.";
+                String resolvedHostPrefix = String.format("%s.", untagResourceRequest.getAccountId());
+
+                endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
+            }
+
+            StaxResponseHandler<UntagResourceResult> responseHandler = new com.amazonaws.services.s3control.internal.S3ControlStaxResponseHandler<UntagResourceResult>(
+                    new UntagResourceResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Updates an existing S3 Batch Operations job's priority. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/batch-ops.html">S3 Batch Operations</a> in the
      * <i>Amazon S3 User Guide</i>.
@@ -7298,6 +7870,84 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
 
             StaxResponseHandler<UpdateJobStatusResult> responseHandler = new com.amazonaws.services.s3control.internal.S3ControlStaxResponseHandler<UpdateJobStatusResult>(
                     new UpdateJobStatusResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Updates the existing Storage Lens group.
+     * </p>
+     * <p>
+     * To use this operation, you must have the permission to perform the <code>s3:UpdateStorageLensGroup</code> action.
+     * For more information about the required Storage Lens Groups permissions, see <a href=
+     * "https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage_lens_iam_permissions.html#storage_lens_groups_permissions"
+     * >Setting account permissions to use S3 Storage Lens groups</a>.
+     * </p>
+     * <p>
+     * For information about Storage Lens groups errors, see <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/API/ErrorResponses.html#S3LensErrorCodeList">List of Amazon S3
+     * Storage Lens error codes</a>.
+     * </p>
+     * 
+     * @param updateStorageLensGroupRequest
+     * @return Result of the UpdateStorageLensGroup operation returned by the service.
+     * @sample AWSS3Control.UpdateStorageLensGroup
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/UpdateStorageLensGroup"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public UpdateStorageLensGroupResult updateStorageLensGroup(UpdateStorageLensGroupRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateStorageLensGroup(request);
+    }
+
+    @SdkInternalApi
+    final UpdateStorageLensGroupResult executeUpdateStorageLensGroup(UpdateStorageLensGroupRequest updateStorageLensGroupRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateStorageLensGroupRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateStorageLensGroupRequest> request = null;
+        Response<UpdateStorageLensGroupResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateStorageLensGroupRequestMarshaller().marshall(super.beforeMarshalling(updateStorageLensGroupRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "S3 Control");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateStorageLensGroup");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            URI endpointTraitHost = null;
+            if (!clientConfiguration.isDisableHostPrefixInjection()) {
+                ValidationUtils.assertStringNotEmpty(updateStorageLensGroupRequest.getAccountId(), "AccountId");
+                HostnameValidator.validateHostnameCompliant(updateStorageLensGroupRequest.getAccountId(), "AccountId", "updateStorageLensGroupRequest");
+
+                String hostPrefix = "{AccountId}.";
+                String resolvedHostPrefix = String.format("%s.", updateStorageLensGroupRequest.getAccountId());
+
+                endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
+            }
+
+            StaxResponseHandler<UpdateStorageLensGroupResult> responseHandler = new com.amazonaws.services.s3control.internal.S3ControlStaxResponseHandler<UpdateStorageLensGroupResult>(
+                    new UpdateStorageLensGroupResultStaxUnmarshaller());
 
             response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
 

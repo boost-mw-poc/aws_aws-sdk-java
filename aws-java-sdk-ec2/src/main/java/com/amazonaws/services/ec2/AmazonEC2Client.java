@@ -18535,6 +18535,62 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
     /**
      * <p>
+     * Describes the lock status for a snapshot.
+     * </p>
+     * 
+     * @param describeLockedSnapshotsRequest
+     * @return Result of the DescribeLockedSnapshots operation returned by the service.
+     * @sample AmazonEC2.DescribeLockedSnapshots
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeLockedSnapshots" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public DescribeLockedSnapshotsResult describeLockedSnapshots(DescribeLockedSnapshotsRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribeLockedSnapshots(request);
+    }
+
+    @SdkInternalApi
+    final DescribeLockedSnapshotsResult executeDescribeLockedSnapshots(DescribeLockedSnapshotsRequest describeLockedSnapshotsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describeLockedSnapshotsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeLockedSnapshotsRequest> request = null;
+        Response<DescribeLockedSnapshotsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeLockedSnapshotsRequestMarshaller().marshall(super.beforeMarshalling(describeLockedSnapshotsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeLockedSnapshots");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<DescribeLockedSnapshotsResult> responseHandler = new StaxResponseHandler<DescribeLockedSnapshotsResult>(
+                    new DescribeLockedSnapshotsResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Describes your managed prefix lists and any Amazon Web Services-managed prefix lists.
      * </p>
      * <p>
@@ -30176,6 +30232,86 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
     /**
      * <p>
+     * Locks an Amazon EBS snapshot in either <i>governance</i> or <i>compliance</i> mode to protect it against
+     * accidental or malicious deletions for a specific duration. A locked snapshot can't be deleted.
+     * </p>
+     * <p>
+     * You can also use this action to modify the lock settings for a snapshot that is already locked. The allowed
+     * modifications depend on the lock mode and lock state:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * If the snapshot is locked in governance mode, you can modify the lock mode and the lock duration or lock
+     * expiration date.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If the snapshot is locked in compliance mode and it is in the cooling-off period, you can modify the lock mode
+     * and the lock duration or lock expiration date.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If the snapshot is locked in compliance mode and the cooling-off period has lapsed, you can only increase the
+     * lock duration or extend the lock expiration date.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param lockSnapshotRequest
+     * @return Result of the LockSnapshot operation returned by the service.
+     * @sample AmazonEC2.LockSnapshot
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/LockSnapshot" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public LockSnapshotResult lockSnapshot(LockSnapshotRequest request) {
+        request = beforeClientExecution(request);
+        return executeLockSnapshot(request);
+    }
+
+    @SdkInternalApi
+    final LockSnapshotResult executeLockSnapshot(LockSnapshotRequest lockSnapshotRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(lockSnapshotRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<LockSnapshotRequest> request = null;
+        Response<LockSnapshotResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new LockSnapshotRequestMarshaller().marshall(super.beforeMarshalling(lockSnapshotRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "LockSnapshot");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<LockSnapshotResult> responseHandler = new StaxResponseHandler<LockSnapshotResult>(new LockSnapshotResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Modifies an attribute of the specified Elastic IP address. For requirements, see <a href=
      * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html#Using_Elastic_Addressing_Reverse_DNS"
      * >Using reverse DNS for email applications</a>.
@@ -38553,6 +38689,64 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
             StaxResponseHandler<UnassignPrivateNatGatewayAddressResult> responseHandler = new StaxResponseHandler<UnassignPrivateNatGatewayAddressResult>(
                     new UnassignPrivateNatGatewayAddressResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Unlocks a snapshot that is locked in governance mode or that is locked in compliance mode but still in the
+     * cooling-off period. You can't unlock a snapshot that is locked in compliance mode after the cooling-off period
+     * has expired.
+     * </p>
+     * 
+     * @param unlockSnapshotRequest
+     * @return Result of the UnlockSnapshot operation returned by the service.
+     * @sample AmazonEC2.UnlockSnapshot
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/UnlockSnapshot" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public UnlockSnapshotResult unlockSnapshot(UnlockSnapshotRequest request) {
+        request = beforeClientExecution(request);
+        return executeUnlockSnapshot(request);
+    }
+
+    @SdkInternalApi
+    final UnlockSnapshotResult executeUnlockSnapshot(UnlockSnapshotRequest unlockSnapshotRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(unlockSnapshotRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UnlockSnapshotRequest> request = null;
+        Response<UnlockSnapshotResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UnlockSnapshotRequestMarshaller().marshall(super.beforeMarshalling(unlockSnapshotRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UnlockSnapshot");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<UnlockSnapshotResult> responseHandler = new StaxResponseHandler<UnlockSnapshotResult>(
+                    new UnlockSnapshotResultStaxUnmarshaller());
 
             response = invoke(request, responseHandler, executionContext);
 

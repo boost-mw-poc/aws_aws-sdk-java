@@ -44,6 +44,7 @@ public interface AWSFinSpaceDataAsync extends AWSFinSpaceData {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/AssociateUserToPermissionGroup"
      *      target="_top">AWS API Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<AssociateUserToPermissionGroupResult> associateUserToPermissionGroupAsync(
             AssociateUserToPermissionGroupRequest associateUserToPermissionGroupRequest);
 
@@ -63,6 +64,7 @@ public interface AWSFinSpaceDataAsync extends AWSFinSpaceData {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/AssociateUserToPermissionGroup"
      *      target="_top">AWS API Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<AssociateUserToPermissionGroupResult> associateUserToPermissionGroupAsync(
             AssociateUserToPermissionGroupRequest associateUserToPermissionGroupRequest,
             com.amazonaws.handlers.AsyncHandler<AssociateUserToPermissionGroupRequest, AssociateUserToPermissionGroupResult> asyncHandler);
@@ -79,6 +81,7 @@ public interface AWSFinSpaceDataAsync extends AWSFinSpaceData {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/CreateChangeset" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<CreateChangesetResult> createChangesetAsync(CreateChangesetRequest createChangesetRequest);
 
     /**
@@ -97,6 +100,7 @@ public interface AWSFinSpaceDataAsync extends AWSFinSpaceData {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/CreateChangeset" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<CreateChangesetResult> createChangesetAsync(CreateChangesetRequest createChangesetRequest,
             com.amazonaws.handlers.AsyncHandler<CreateChangesetRequest, CreateChangesetResult> asyncHandler);
 
@@ -112,6 +116,7 @@ public interface AWSFinSpaceDataAsync extends AWSFinSpaceData {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/CreateDataView" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<CreateDataViewResult> createDataViewAsync(CreateDataViewRequest createDataViewRequest);
 
     /**
@@ -130,6 +135,7 @@ public interface AWSFinSpaceDataAsync extends AWSFinSpaceData {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/CreateDataView" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<CreateDataViewResult> createDataViewAsync(CreateDataViewRequest createDataViewRequest,
             com.amazonaws.handlers.AsyncHandler<CreateDataViewRequest, CreateDataViewResult> asyncHandler);
 
@@ -145,6 +151,7 @@ public interface AWSFinSpaceDataAsync extends AWSFinSpaceData {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/CreateDataset" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<CreateDatasetResult> createDatasetAsync(CreateDatasetRequest createDatasetRequest);
 
     /**
@@ -163,6 +170,7 @@ public interface AWSFinSpaceDataAsync extends AWSFinSpaceData {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/CreateDataset" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<CreateDatasetResult> createDatasetAsync(CreateDatasetRequest createDatasetRequest,
             com.amazonaws.handlers.AsyncHandler<CreateDatasetRequest, CreateDatasetResult> asyncHandler);
 
@@ -177,6 +185,7 @@ public interface AWSFinSpaceDataAsync extends AWSFinSpaceData {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/CreatePermissionGroup" target="_top">AWS
      *      API Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<CreatePermissionGroupResult> createPermissionGroupAsync(CreatePermissionGroupRequest createPermissionGroupRequest);
 
     /**
@@ -194,6 +203,7 @@ public interface AWSFinSpaceDataAsync extends AWSFinSpaceData {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/CreatePermissionGroup" target="_top">AWS
      *      API Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<CreatePermissionGroupResult> createPermissionGroupAsync(CreatePermissionGroupRequest createPermissionGroupRequest,
             com.amazonaws.handlers.AsyncHandler<CreatePermissionGroupRequest, CreatePermissionGroupResult> asyncHandler);
 
@@ -208,6 +218,7 @@ public interface AWSFinSpaceDataAsync extends AWSFinSpaceData {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/CreateUser" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<CreateUserResult> createUserAsync(CreateUserRequest createUserRequest);
 
     /**
@@ -225,6 +236,7 @@ public interface AWSFinSpaceDataAsync extends AWSFinSpaceData {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/CreateUser" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<CreateUserResult> createUserAsync(CreateUserRequest createUserRequest,
             com.amazonaws.handlers.AsyncHandler<CreateUserRequest, CreateUserResult> asyncHandler);
 
@@ -240,6 +252,7 @@ public interface AWSFinSpaceDataAsync extends AWSFinSpaceData {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/DeleteDataset" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<DeleteDatasetResult> deleteDatasetAsync(DeleteDatasetRequest deleteDatasetRequest);
 
     /**
@@ -258,6 +271,7 @@ public interface AWSFinSpaceDataAsync extends AWSFinSpaceData {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/DeleteDataset" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<DeleteDatasetResult> deleteDatasetAsync(DeleteDatasetRequest deleteDatasetRequest,
             com.amazonaws.handlers.AsyncHandler<DeleteDatasetRequest, DeleteDatasetResult> asyncHandler);
 
@@ -272,6 +286,7 @@ public interface AWSFinSpaceDataAsync extends AWSFinSpaceData {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/DeletePermissionGroup" target="_top">AWS
      *      API Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<DeletePermissionGroupResult> deletePermissionGroupAsync(DeletePermissionGroupRequest deletePermissionGroupRequest);
 
     /**
@@ -289,6 +304,7 @@ public interface AWSFinSpaceDataAsync extends AWSFinSpaceData {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/DeletePermissionGroup" target="_top">AWS
      *      API Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<DeletePermissionGroupResult> deletePermissionGroupAsync(DeletePermissionGroupRequest deletePermissionGroupRequest,
             com.amazonaws.handlers.AsyncHandler<DeletePermissionGroupRequest, DeletePermissionGroupResult> asyncHandler);
 
@@ -303,6 +319,7 @@ public interface AWSFinSpaceDataAsync extends AWSFinSpaceData {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/DisableUser" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<DisableUserResult> disableUserAsync(DisableUserRequest disableUserRequest);
 
     /**
@@ -320,6 +337,7 @@ public interface AWSFinSpaceDataAsync extends AWSFinSpaceData {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/DisableUser" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<DisableUserResult> disableUserAsync(DisableUserRequest disableUserRequest,
             com.amazonaws.handlers.AsyncHandler<DisableUserRequest, DisableUserResult> asyncHandler);
 
@@ -335,6 +353,7 @@ public interface AWSFinSpaceDataAsync extends AWSFinSpaceData {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/DisassociateUserFromPermissionGroup"
      *      target="_top">AWS API Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<DisassociateUserFromPermissionGroupResult> disassociateUserFromPermissionGroupAsync(
             DisassociateUserFromPermissionGroupRequest disassociateUserFromPermissionGroupRequest);
 
@@ -354,6 +373,7 @@ public interface AWSFinSpaceDataAsync extends AWSFinSpaceData {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/DisassociateUserFromPermissionGroup"
      *      target="_top">AWS API Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<DisassociateUserFromPermissionGroupResult> disassociateUserFromPermissionGroupAsync(
             DisassociateUserFromPermissionGroupRequest disassociateUserFromPermissionGroupRequest,
             com.amazonaws.handlers.AsyncHandler<DisassociateUserFromPermissionGroupRequest, DisassociateUserFromPermissionGroupResult> asyncHandler);
@@ -369,6 +389,7 @@ public interface AWSFinSpaceDataAsync extends AWSFinSpaceData {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/EnableUser" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<EnableUserResult> enableUserAsync(EnableUserRequest enableUserRequest);
 
     /**
@@ -386,6 +407,7 @@ public interface AWSFinSpaceDataAsync extends AWSFinSpaceData {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/EnableUser" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<EnableUserResult> enableUserAsync(EnableUserRequest enableUserRequest,
             com.amazonaws.handlers.AsyncHandler<EnableUserRequest, EnableUserResult> asyncHandler);
 
@@ -401,6 +423,7 @@ public interface AWSFinSpaceDataAsync extends AWSFinSpaceData {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/GetChangeset" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<GetChangesetResult> getChangesetAsync(GetChangesetRequest getChangesetRequest);
 
     /**
@@ -419,6 +442,7 @@ public interface AWSFinSpaceDataAsync extends AWSFinSpaceData {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/GetChangeset" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<GetChangesetResult> getChangesetAsync(GetChangesetRequest getChangesetRequest,
             com.amazonaws.handlers.AsyncHandler<GetChangesetRequest, GetChangesetResult> asyncHandler);
 
@@ -434,6 +458,7 @@ public interface AWSFinSpaceDataAsync extends AWSFinSpaceData {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/GetDataView" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<GetDataViewResult> getDataViewAsync(GetDataViewRequest getDataViewRequest);
 
     /**
@@ -452,6 +477,7 @@ public interface AWSFinSpaceDataAsync extends AWSFinSpaceData {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/GetDataView" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<GetDataViewResult> getDataViewAsync(GetDataViewRequest getDataViewRequest,
             com.amazonaws.handlers.AsyncHandler<GetDataViewRequest, GetDataViewResult> asyncHandler);
 
@@ -467,6 +493,7 @@ public interface AWSFinSpaceDataAsync extends AWSFinSpaceData {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/GetDataset" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<GetDatasetResult> getDatasetAsync(GetDatasetRequest getDatasetRequest);
 
     /**
@@ -485,6 +512,7 @@ public interface AWSFinSpaceDataAsync extends AWSFinSpaceData {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/GetDataset" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<GetDatasetResult> getDatasetAsync(GetDatasetRequest getDatasetRequest,
             com.amazonaws.handlers.AsyncHandler<GetDatasetRequest, GetDatasetResult> asyncHandler);
 
@@ -513,6 +541,7 @@ public interface AWSFinSpaceDataAsync extends AWSFinSpaceData {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/GetExternalDataViewAccessDetails"
      *      target="_top">AWS API Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<GetExternalDataViewAccessDetailsResult> getExternalDataViewAccessDetailsAsync(
             GetExternalDataViewAccessDetailsRequest getExternalDataViewAccessDetailsRequest);
 
@@ -545,6 +574,7 @@ public interface AWSFinSpaceDataAsync extends AWSFinSpaceData {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/GetExternalDataViewAccessDetails"
      *      target="_top">AWS API Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<GetExternalDataViewAccessDetailsResult> getExternalDataViewAccessDetailsAsync(
             GetExternalDataViewAccessDetailsRequest getExternalDataViewAccessDetailsRequest,
             com.amazonaws.handlers.AsyncHandler<GetExternalDataViewAccessDetailsRequest, GetExternalDataViewAccessDetailsResult> asyncHandler);
@@ -560,6 +590,7 @@ public interface AWSFinSpaceDataAsync extends AWSFinSpaceData {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/GetPermissionGroup" target="_top">AWS
      *      API Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<GetPermissionGroupResult> getPermissionGroupAsync(GetPermissionGroupRequest getPermissionGroupRequest);
 
     /**
@@ -577,6 +608,7 @@ public interface AWSFinSpaceDataAsync extends AWSFinSpaceData {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/GetPermissionGroup" target="_top">AWS
      *      API Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<GetPermissionGroupResult> getPermissionGroupAsync(GetPermissionGroupRequest getPermissionGroupRequest,
             com.amazonaws.handlers.AsyncHandler<GetPermissionGroupRequest, GetPermissionGroupResult> asyncHandler);
 
@@ -595,6 +627,7 @@ public interface AWSFinSpaceDataAsync extends AWSFinSpaceData {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/GetProgrammaticAccessCredentials"
      *      target="_top">AWS API Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<GetProgrammaticAccessCredentialsResult> getProgrammaticAccessCredentialsAsync(
             GetProgrammaticAccessCredentialsRequest getProgrammaticAccessCredentialsRequest);
 
@@ -617,6 +650,7 @@ public interface AWSFinSpaceDataAsync extends AWSFinSpaceData {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/GetProgrammaticAccessCredentials"
      *      target="_top">AWS API Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<GetProgrammaticAccessCredentialsResult> getProgrammaticAccessCredentialsAsync(
             GetProgrammaticAccessCredentialsRequest getProgrammaticAccessCredentialsRequest,
             com.amazonaws.handlers.AsyncHandler<GetProgrammaticAccessCredentialsRequest, GetProgrammaticAccessCredentialsResult> asyncHandler);
@@ -632,6 +666,7 @@ public interface AWSFinSpaceDataAsync extends AWSFinSpaceData {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/GetUser" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<GetUserResult> getUserAsync(GetUserRequest getUserRequest);
 
     /**
@@ -649,6 +684,7 @@ public interface AWSFinSpaceDataAsync extends AWSFinSpaceData {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/GetUser" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<GetUserResult> getUserAsync(GetUserRequest getUserRequest,
             com.amazonaws.handlers.AsyncHandler<GetUserRequest, GetUserResult> asyncHandler);
 
@@ -664,6 +700,7 @@ public interface AWSFinSpaceDataAsync extends AWSFinSpaceData {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/GetWorkingLocation" target="_top">AWS
      *      API Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<GetWorkingLocationResult> getWorkingLocationAsync(GetWorkingLocationRequest getWorkingLocationRequest);
 
     /**
@@ -682,6 +719,7 @@ public interface AWSFinSpaceDataAsync extends AWSFinSpaceData {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/GetWorkingLocation" target="_top">AWS
      *      API Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<GetWorkingLocationResult> getWorkingLocationAsync(GetWorkingLocationRequest getWorkingLocationRequest,
             com.amazonaws.handlers.AsyncHandler<GetWorkingLocationRequest, GetWorkingLocationResult> asyncHandler);
 
@@ -697,6 +735,7 @@ public interface AWSFinSpaceDataAsync extends AWSFinSpaceData {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/ListChangesets" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<ListChangesetsResult> listChangesetsAsync(ListChangesetsRequest listChangesetsRequest);
 
     /**
@@ -715,6 +754,7 @@ public interface AWSFinSpaceDataAsync extends AWSFinSpaceData {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/ListChangesets" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<ListChangesetsResult> listChangesetsAsync(ListChangesetsRequest listChangesetsRequest,
             com.amazonaws.handlers.AsyncHandler<ListChangesetsRequest, ListChangesetsResult> asyncHandler);
 
@@ -730,6 +770,7 @@ public interface AWSFinSpaceDataAsync extends AWSFinSpaceData {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/ListDataViews" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<ListDataViewsResult> listDataViewsAsync(ListDataViewsRequest listDataViewsRequest);
 
     /**
@@ -748,6 +789,7 @@ public interface AWSFinSpaceDataAsync extends AWSFinSpaceData {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/ListDataViews" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<ListDataViewsResult> listDataViewsAsync(ListDataViewsRequest listDataViewsRequest,
             com.amazonaws.handlers.AsyncHandler<ListDataViewsRequest, ListDataViewsResult> asyncHandler);
 
@@ -763,6 +805,7 @@ public interface AWSFinSpaceDataAsync extends AWSFinSpaceData {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/ListDatasets" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<ListDatasetsResult> listDatasetsAsync(ListDatasetsRequest listDatasetsRequest);
 
     /**
@@ -781,6 +824,7 @@ public interface AWSFinSpaceDataAsync extends AWSFinSpaceData {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/ListDatasets" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<ListDatasetsResult> listDatasetsAsync(ListDatasetsRequest listDatasetsRequest,
             com.amazonaws.handlers.AsyncHandler<ListDatasetsRequest, ListDatasetsResult> asyncHandler);
 
@@ -795,6 +839,7 @@ public interface AWSFinSpaceDataAsync extends AWSFinSpaceData {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/ListPermissionGroups" target="_top">AWS
      *      API Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<ListPermissionGroupsResult> listPermissionGroupsAsync(ListPermissionGroupsRequest listPermissionGroupsRequest);
 
     /**
@@ -812,6 +857,7 @@ public interface AWSFinSpaceDataAsync extends AWSFinSpaceData {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/ListPermissionGroups" target="_top">AWS
      *      API Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<ListPermissionGroupsResult> listPermissionGroupsAsync(ListPermissionGroupsRequest listPermissionGroupsRequest,
             com.amazonaws.handlers.AsyncHandler<ListPermissionGroupsRequest, ListPermissionGroupsResult> asyncHandler);
 
@@ -826,6 +872,7 @@ public interface AWSFinSpaceDataAsync extends AWSFinSpaceData {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/ListPermissionGroupsByUser"
      *      target="_top">AWS API Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<ListPermissionGroupsByUserResult> listPermissionGroupsByUserAsync(
             ListPermissionGroupsByUserRequest listPermissionGroupsByUserRequest);
 
@@ -844,6 +891,7 @@ public interface AWSFinSpaceDataAsync extends AWSFinSpaceData {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/ListPermissionGroupsByUser"
      *      target="_top">AWS API Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<ListPermissionGroupsByUserResult> listPermissionGroupsByUserAsync(
             ListPermissionGroupsByUserRequest listPermissionGroupsByUserRequest,
             com.amazonaws.handlers.AsyncHandler<ListPermissionGroupsByUserRequest, ListPermissionGroupsByUserResult> asyncHandler);
@@ -859,6 +907,7 @@ public interface AWSFinSpaceDataAsync extends AWSFinSpaceData {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/ListUsers" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<ListUsersResult> listUsersAsync(ListUsersRequest listUsersRequest);
 
     /**
@@ -876,6 +925,7 @@ public interface AWSFinSpaceDataAsync extends AWSFinSpaceData {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/ListUsers" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<ListUsersResult> listUsersAsync(ListUsersRequest listUsersRequest,
             com.amazonaws.handlers.AsyncHandler<ListUsersRequest, ListUsersResult> asyncHandler);
 
@@ -890,6 +940,7 @@ public interface AWSFinSpaceDataAsync extends AWSFinSpaceData {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/ListUsersByPermissionGroup"
      *      target="_top">AWS API Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<ListUsersByPermissionGroupResult> listUsersByPermissionGroupAsync(
             ListUsersByPermissionGroupRequest listUsersByPermissionGroupRequest);
 
@@ -908,6 +959,7 @@ public interface AWSFinSpaceDataAsync extends AWSFinSpaceData {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/ListUsersByPermissionGroup"
      *      target="_top">AWS API Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<ListUsersByPermissionGroupResult> listUsersByPermissionGroupAsync(
             ListUsersByPermissionGroupRequest listUsersByPermissionGroupRequest,
             com.amazonaws.handlers.AsyncHandler<ListUsersByPermissionGroupRequest, ListUsersByPermissionGroupResult> asyncHandler);
@@ -924,6 +976,7 @@ public interface AWSFinSpaceDataAsync extends AWSFinSpaceData {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/ResetUserPassword" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<ResetUserPasswordResult> resetUserPasswordAsync(ResetUserPasswordRequest resetUserPasswordRequest);
 
     /**
@@ -942,6 +995,7 @@ public interface AWSFinSpaceDataAsync extends AWSFinSpaceData {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/ResetUserPassword" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<ResetUserPasswordResult> resetUserPasswordAsync(ResetUserPasswordRequest resetUserPasswordRequest,
             com.amazonaws.handlers.AsyncHandler<ResetUserPasswordRequest, ResetUserPasswordResult> asyncHandler);
 
@@ -957,6 +1011,7 @@ public interface AWSFinSpaceDataAsync extends AWSFinSpaceData {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/UpdateChangeset" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<UpdateChangesetResult> updateChangesetAsync(UpdateChangesetRequest updateChangesetRequest);
 
     /**
@@ -975,6 +1030,7 @@ public interface AWSFinSpaceDataAsync extends AWSFinSpaceData {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/UpdateChangeset" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<UpdateChangesetResult> updateChangesetAsync(UpdateChangesetRequest updateChangesetRequest,
             com.amazonaws.handlers.AsyncHandler<UpdateChangesetRequest, UpdateChangesetResult> asyncHandler);
 
@@ -990,6 +1046,7 @@ public interface AWSFinSpaceDataAsync extends AWSFinSpaceData {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/UpdateDataset" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<UpdateDatasetResult> updateDatasetAsync(UpdateDatasetRequest updateDatasetRequest);
 
     /**
@@ -1008,6 +1065,7 @@ public interface AWSFinSpaceDataAsync extends AWSFinSpaceData {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/UpdateDataset" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<UpdateDatasetResult> updateDatasetAsync(UpdateDatasetRequest updateDatasetRequest,
             com.amazonaws.handlers.AsyncHandler<UpdateDatasetRequest, UpdateDatasetResult> asyncHandler);
 
@@ -1022,6 +1080,7 @@ public interface AWSFinSpaceDataAsync extends AWSFinSpaceData {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/UpdatePermissionGroup" target="_top">AWS
      *      API Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<UpdatePermissionGroupResult> updatePermissionGroupAsync(UpdatePermissionGroupRequest updatePermissionGroupRequest);
 
     /**
@@ -1039,6 +1098,7 @@ public interface AWSFinSpaceDataAsync extends AWSFinSpaceData {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/UpdatePermissionGroup" target="_top">AWS
      *      API Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<UpdatePermissionGroupResult> updatePermissionGroupAsync(UpdatePermissionGroupRequest updatePermissionGroupRequest,
             com.amazonaws.handlers.AsyncHandler<UpdatePermissionGroupRequest, UpdatePermissionGroupResult> asyncHandler);
 
@@ -1053,6 +1113,7 @@ public interface AWSFinSpaceDataAsync extends AWSFinSpaceData {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/UpdateUser" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<UpdateUserResult> updateUserAsync(UpdateUserRequest updateUserRequest);
 
     /**
@@ -1070,6 +1131,7 @@ public interface AWSFinSpaceDataAsync extends AWSFinSpaceData {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/UpdateUser" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<UpdateUserResult> updateUserAsync(UpdateUserRequest updateUserRequest,
             com.amazonaws.handlers.AsyncHandler<UpdateUserRequest, UpdateUserResult> asyncHandler);
 

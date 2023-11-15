@@ -226,6 +226,46 @@ public class PutStorageLensConfigurationRequestMarshaller implements
                                         xmlWriter.endElement();
                                     }
                                 }
+
+                                {
+                                    StorageLensGroupLevel storageLensGroupLevel = accountLevel.getStorageLensGroupLevel();
+                                    if (storageLensGroupLevel != null) {
+                                        xmlWriter.startElement("StorageLensGroupLevel");
+
+                                        {
+                                            StorageLensGroupLevelSelectionCriteria selectionCriteria = storageLensGroupLevel.getSelectionCriteria();
+                                            if (selectionCriteria != null) {
+                                                xmlWriter.startElement("SelectionCriteria");
+
+                                                java.util.List<String> storageLensGroupLevelSelectionCriteriaIncludeList = selectionCriteria.getInclude();
+                                                if (storageLensGroupLevelSelectionCriteriaIncludeList != null) {
+                                                    xmlWriter.startElement("Include");
+
+                                                    for (String storageLensGroupLevelSelectionCriteriaIncludeListValue : storageLensGroupLevelSelectionCriteriaIncludeList) {
+                                                        xmlWriter.startElement("Arn");
+                                                        xmlWriter.value(storageLensGroupLevelSelectionCriteriaIncludeListValue);
+                                                        xmlWriter.endElement();
+                                                    }
+                                                    xmlWriter.endElement();
+                                                }
+
+                                                java.util.List<String> storageLensGroupLevelSelectionCriteriaExcludeList = selectionCriteria.getExclude();
+                                                if (storageLensGroupLevelSelectionCriteriaExcludeList != null) {
+                                                    xmlWriter.startElement("Exclude");
+
+                                                    for (String storageLensGroupLevelSelectionCriteriaExcludeListValue : storageLensGroupLevelSelectionCriteriaExcludeList) {
+                                                        xmlWriter.startElement("Arn");
+                                                        xmlWriter.value(storageLensGroupLevelSelectionCriteriaExcludeListValue);
+                                                        xmlWriter.endElement();
+                                                    }
+                                                    xmlWriter.endElement();
+                                                }
+                                                xmlWriter.endElement();
+                                            }
+                                        }
+                                        xmlWriter.endElement();
+                                    }
+                                }
                                 xmlWriter.endElement();
                             }
                         }

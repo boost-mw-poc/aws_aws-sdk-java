@@ -260,6 +260,10 @@ public class AutoScalingGroupStaxUnmarshaller implements Unmarshaller<AutoScalin
                     continue;
                 }
 
+                if (context.testExpression("InstanceMaintenancePolicy", targetDepth)) {
+                    autoScalingGroup.setInstanceMaintenancePolicy(InstanceMaintenancePolicyStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return autoScalingGroup;

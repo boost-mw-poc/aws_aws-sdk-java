@@ -340,6 +340,14 @@ public class CreateAutoScalingGroupRequest extends com.amazonaws.AmazonWebServic
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<TrafficSourceIdentifier> trafficSources;
+    /**
+     * <p>
+     * An instance maintenance policy. For more information, see <a
+     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-instance-maintenance-policy.html"
+     * >Set instance maintenance policy</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     * </p>
+     */
+    private InstanceMaintenancePolicy instanceMaintenancePolicy;
 
     /**
      * <p>
@@ -2660,6 +2668,58 @@ public class CreateAutoScalingGroupRequest extends com.amazonaws.AmazonWebServic
     }
 
     /**
+     * <p>
+     * An instance maintenance policy. For more information, see <a
+     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-instance-maintenance-policy.html"
+     * >Set instance maintenance policy</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     * </p>
+     * 
+     * @param instanceMaintenancePolicy
+     *        An instance maintenance policy. For more information, see <a href=
+     *        "https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-instance-maintenance-policy.html"
+     *        >Set instance maintenance policy</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     */
+
+    public void setInstanceMaintenancePolicy(InstanceMaintenancePolicy instanceMaintenancePolicy) {
+        this.instanceMaintenancePolicy = instanceMaintenancePolicy;
+    }
+
+    /**
+     * <p>
+     * An instance maintenance policy. For more information, see <a
+     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-instance-maintenance-policy.html"
+     * >Set instance maintenance policy</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     * </p>
+     * 
+     * @return An instance maintenance policy. For more information, see <a
+     *         href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-instance-maintenance-policy.html"
+     *         >Set instance maintenance policy</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     */
+
+    public InstanceMaintenancePolicy getInstanceMaintenancePolicy() {
+        return this.instanceMaintenancePolicy;
+    }
+
+    /**
+     * <p>
+     * An instance maintenance policy. For more information, see <a
+     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-instance-maintenance-policy.html"
+     * >Set instance maintenance policy</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     * </p>
+     * 
+     * @param instanceMaintenancePolicy
+     *        An instance maintenance policy. For more information, see <a href=
+     *        "https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-instance-maintenance-policy.html"
+     *        >Set instance maintenance policy</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateAutoScalingGroupRequest withInstanceMaintenancePolicy(InstanceMaintenancePolicy instanceMaintenancePolicy) {
+        setInstanceMaintenancePolicy(instanceMaintenancePolicy);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -2724,7 +2784,9 @@ public class CreateAutoScalingGroupRequest extends com.amazonaws.AmazonWebServic
         if (getDefaultInstanceWarmup() != null)
             sb.append("DefaultInstanceWarmup: ").append(getDefaultInstanceWarmup()).append(",");
         if (getTrafficSources() != null)
-            sb.append("TrafficSources: ").append(getTrafficSources());
+            sb.append("TrafficSources: ").append(getTrafficSources()).append(",");
+        if (getInstanceMaintenancePolicy() != null)
+            sb.append("InstanceMaintenancePolicy: ").append(getInstanceMaintenancePolicy());
         sb.append("}");
         return sb.toString();
     }
@@ -2849,6 +2911,10 @@ public class CreateAutoScalingGroupRequest extends com.amazonaws.AmazonWebServic
             return false;
         if (other.getTrafficSources() != null && other.getTrafficSources().equals(this.getTrafficSources()) == false)
             return false;
+        if (other.getInstanceMaintenancePolicy() == null ^ this.getInstanceMaintenancePolicy() == null)
+            return false;
+        if (other.getInstanceMaintenancePolicy() != null && other.getInstanceMaintenancePolicy().equals(this.getInstanceMaintenancePolicy()) == false)
+            return false;
         return true;
     }
 
@@ -2884,6 +2950,7 @@ public class CreateAutoScalingGroupRequest extends com.amazonaws.AmazonWebServic
         hashCode = prime * hashCode + ((getDesiredCapacityType() == null) ? 0 : getDesiredCapacityType().hashCode());
         hashCode = prime * hashCode + ((getDefaultInstanceWarmup() == null) ? 0 : getDefaultInstanceWarmup().hashCode());
         hashCode = prime * hashCode + ((getTrafficSources() == null) ? 0 : getTrafficSources().hashCode());
+        hashCode = prime * hashCode + ((getInstanceMaintenancePolicy() == null) ? 0 : getInstanceMaintenancePolicy().hashCode());
         return hashCode;
     }
 

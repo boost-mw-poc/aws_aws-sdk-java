@@ -35,10 +35,16 @@ public class EnvironmentMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AirflowVersion").build();
     private static final MarshallingInfo<String> ARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Arn").build();
+    private static final MarshallingInfo<String> CELERYEXECUTORQUEUE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CeleryExecutorQueue").build();
     private static final MarshallingInfo<java.util.Date> CREATEDAT_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CreatedAt").timestampFormat("unixTimestamp").build();
     private static final MarshallingInfo<String> DAGS3PATH_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("DagS3Path").build();
+    private static final MarshallingInfo<String> DATABASEVPCENDPOINTSERVICE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DatabaseVpcEndpointService").build();
+    private static final MarshallingInfo<String> ENDPOINTMANAGEMENT_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EndpointManagement").build();
     private static final MarshallingInfo<String> ENVIRONMENTCLASS_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EnvironmentClass").build();
     private static final MarshallingInfo<String> EXECUTIONROLEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
@@ -83,6 +89,8 @@ public class EnvironmentMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("WebserverAccessMode").build();
     private static final MarshallingInfo<String> WEBSERVERURL_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("WebserverUrl").build();
+    private static final MarshallingInfo<String> WEBSERVERVPCENDPOINTSERVICE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("WebserverVpcEndpointService").build();
     private static final MarshallingInfo<String> WEEKLYMAINTENANCEWINDOWSTART_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("WeeklyMaintenanceWindowStart").build();
 
@@ -105,8 +113,11 @@ public class EnvironmentMarshaller {
             protocolMarshaller.marshall(environment.getAirflowConfigurationOptions(), AIRFLOWCONFIGURATIONOPTIONS_BINDING);
             protocolMarshaller.marshall(environment.getAirflowVersion(), AIRFLOWVERSION_BINDING);
             protocolMarshaller.marshall(environment.getArn(), ARN_BINDING);
+            protocolMarshaller.marshall(environment.getCeleryExecutorQueue(), CELERYEXECUTORQUEUE_BINDING);
             protocolMarshaller.marshall(environment.getCreatedAt(), CREATEDAT_BINDING);
             protocolMarshaller.marshall(environment.getDagS3Path(), DAGS3PATH_BINDING);
+            protocolMarshaller.marshall(environment.getDatabaseVpcEndpointService(), DATABASEVPCENDPOINTSERVICE_BINDING);
+            protocolMarshaller.marshall(environment.getEndpointManagement(), ENDPOINTMANAGEMENT_BINDING);
             protocolMarshaller.marshall(environment.getEnvironmentClass(), ENVIRONMENTCLASS_BINDING);
             protocolMarshaller.marshall(environment.getExecutionRoleArn(), EXECUTIONROLEARN_BINDING);
             protocolMarshaller.marshall(environment.getKmsKey(), KMSKEY_BINDING);
@@ -129,6 +140,7 @@ public class EnvironmentMarshaller {
             protocolMarshaller.marshall(environment.getTags(), TAGS_BINDING);
             protocolMarshaller.marshall(environment.getWebserverAccessMode(), WEBSERVERACCESSMODE_BINDING);
             protocolMarshaller.marshall(environment.getWebserverUrl(), WEBSERVERURL_BINDING);
+            protocolMarshaller.marshall(environment.getWebserverVpcEndpointService(), WEBSERVERVPCENDPOINTSERVICE_BINDING);
             protocolMarshaller.marshall(environment.getWeeklyMaintenanceWindowStart(), WEEKLYMAINTENANCEWINDOWSTART_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

@@ -28,13 +28,13 @@ public class RefreshPreferences implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The amount of capacity in the Auto Scaling group that must pass your group's health checks to allow the operation
-     * to continue. The value is expressed as a percentage of the desired capacity of the Auto Scaling group (rounded up
-     * to the nearest integer). The default is <code>90</code>.
+     * Specifies the minimum percentage of the group to keep in service, healthy, and ready to use to support your
+     * workload to allow the operation to continue. The value is expressed as a percentage of the desired capacity of
+     * the Auto Scaling group. Value range is 0 to 100.
      * </p>
      * <p>
-     * Setting the minimum healthy percentage to 100 percent limits the rate of replacement to one instance at a time.
-     * In contrast, setting it to 0 percent has the effect of replacing all instances at the same time.
+     * If you do not specify this property, the default is 90 percent, or the percentage set in the instance maintenance
+     * policy for the Auto Scaling group, if defined.
      * </p>
      */
     private Integer minHealthyPercentage;
@@ -193,25 +193,42 @@ public class RefreshPreferences implements Serializable, Cloneable {
      * </p>
      */
     private AlarmSpecification alarmSpecification;
+    /**
+     * <p>
+     * Specifies the maximum percentage of the group that can be in service and healthy, or pending, to support your
+     * workload when replacing instances. The value is expressed as a percentage of the desired capacity of the Auto
+     * Scaling group. Value range is 100 to 200.
+     * </p>
+     * <p>
+     * If you specify <code>MaxHealthyPercentage</code>, you must also specify <code>MinHealthyPercentage</code>, and
+     * the difference between them cannot be greater than 100. A larger range increases the number of instances that can
+     * be replaced at the same time.
+     * </p>
+     * <p>
+     * If you do not specify this property, the default is 100 percent, or the percentage set in the instance
+     * maintenance policy for the Auto Scaling group, if defined.
+     * </p>
+     */
+    private Integer maxHealthyPercentage;
 
     /**
      * <p>
-     * The amount of capacity in the Auto Scaling group that must pass your group's health checks to allow the operation
-     * to continue. The value is expressed as a percentage of the desired capacity of the Auto Scaling group (rounded up
-     * to the nearest integer). The default is <code>90</code>.
+     * Specifies the minimum percentage of the group to keep in service, healthy, and ready to use to support your
+     * workload to allow the operation to continue. The value is expressed as a percentage of the desired capacity of
+     * the Auto Scaling group. Value range is 0 to 100.
      * </p>
      * <p>
-     * Setting the minimum healthy percentage to 100 percent limits the rate of replacement to one instance at a time.
-     * In contrast, setting it to 0 percent has the effect of replacing all instances at the same time.
+     * If you do not specify this property, the default is 90 percent, or the percentage set in the instance maintenance
+     * policy for the Auto Scaling group, if defined.
      * </p>
      * 
      * @param minHealthyPercentage
-     *        The amount of capacity in the Auto Scaling group that must pass your group's health checks to allow the
-     *        operation to continue. The value is expressed as a percentage of the desired capacity of the Auto Scaling
-     *        group (rounded up to the nearest integer). The default is <code>90</code>.</p>
+     *        Specifies the minimum percentage of the group to keep in service, healthy, and ready to use to support
+     *        your workload to allow the operation to continue. The value is expressed as a percentage of the desired
+     *        capacity of the Auto Scaling group. Value range is 0 to 100.</p>
      *        <p>
-     *        Setting the minimum healthy percentage to 100 percent limits the rate of replacement to one instance at a
-     *        time. In contrast, setting it to 0 percent has the effect of replacing all instances at the same time.
+     *        If you do not specify this property, the default is 90 percent, or the percentage set in the instance
+     *        maintenance policy for the Auto Scaling group, if defined.
      */
 
     public void setMinHealthyPercentage(Integer minHealthyPercentage) {
@@ -220,21 +237,21 @@ public class RefreshPreferences implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The amount of capacity in the Auto Scaling group that must pass your group's health checks to allow the operation
-     * to continue. The value is expressed as a percentage of the desired capacity of the Auto Scaling group (rounded up
-     * to the nearest integer). The default is <code>90</code>.
+     * Specifies the minimum percentage of the group to keep in service, healthy, and ready to use to support your
+     * workload to allow the operation to continue. The value is expressed as a percentage of the desired capacity of
+     * the Auto Scaling group. Value range is 0 to 100.
      * </p>
      * <p>
-     * Setting the minimum healthy percentage to 100 percent limits the rate of replacement to one instance at a time.
-     * In contrast, setting it to 0 percent has the effect of replacing all instances at the same time.
+     * If you do not specify this property, the default is 90 percent, or the percentage set in the instance maintenance
+     * policy for the Auto Scaling group, if defined.
      * </p>
      * 
-     * @return The amount of capacity in the Auto Scaling group that must pass your group's health checks to allow the
-     *         operation to continue. The value is expressed as a percentage of the desired capacity of the Auto Scaling
-     *         group (rounded up to the nearest integer). The default is <code>90</code>.</p>
+     * @return Specifies the minimum percentage of the group to keep in service, healthy, and ready to use to support
+     *         your workload to allow the operation to continue. The value is expressed as a percentage of the desired
+     *         capacity of the Auto Scaling group. Value range is 0 to 100.</p>
      *         <p>
-     *         Setting the minimum healthy percentage to 100 percent limits the rate of replacement to one instance at a
-     *         time. In contrast, setting it to 0 percent has the effect of replacing all instances at the same time.
+     *         If you do not specify this property, the default is 90 percent, or the percentage set in the instance
+     *         maintenance policy for the Auto Scaling group, if defined.
      */
 
     public Integer getMinHealthyPercentage() {
@@ -243,22 +260,22 @@ public class RefreshPreferences implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The amount of capacity in the Auto Scaling group that must pass your group's health checks to allow the operation
-     * to continue. The value is expressed as a percentage of the desired capacity of the Auto Scaling group (rounded up
-     * to the nearest integer). The default is <code>90</code>.
+     * Specifies the minimum percentage of the group to keep in service, healthy, and ready to use to support your
+     * workload to allow the operation to continue. The value is expressed as a percentage of the desired capacity of
+     * the Auto Scaling group. Value range is 0 to 100.
      * </p>
      * <p>
-     * Setting the minimum healthy percentage to 100 percent limits the rate of replacement to one instance at a time.
-     * In contrast, setting it to 0 percent has the effect of replacing all instances at the same time.
+     * If you do not specify this property, the default is 90 percent, or the percentage set in the instance maintenance
+     * policy for the Auto Scaling group, if defined.
      * </p>
      * 
      * @param minHealthyPercentage
-     *        The amount of capacity in the Auto Scaling group that must pass your group's health checks to allow the
-     *        operation to continue. The value is expressed as a percentage of the desired capacity of the Auto Scaling
-     *        group (rounded up to the nearest integer). The default is <code>90</code>.</p>
+     *        Specifies the minimum percentage of the group to keep in service, healthy, and ready to use to support
+     *        your workload to allow the operation to continue. The value is expressed as a percentage of the desired
+     *        capacity of the Auto Scaling group. Value range is 0 to 100.</p>
      *        <p>
-     *        Setting the minimum healthy percentage to 100 percent limits the rate of replacement to one instance at a
-     *        time. In contrast, setting it to 0 percent has the effect of replacing all instances at the same time.
+     *        If you do not specify this property, the default is 90 percent, or the percentage set in the instance
+     *        maintenance policy for the Auto Scaling group, if defined.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1499,6 +1516,109 @@ public class RefreshPreferences implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * Specifies the maximum percentage of the group that can be in service and healthy, or pending, to support your
+     * workload when replacing instances. The value is expressed as a percentage of the desired capacity of the Auto
+     * Scaling group. Value range is 100 to 200.
+     * </p>
+     * <p>
+     * If you specify <code>MaxHealthyPercentage</code>, you must also specify <code>MinHealthyPercentage</code>, and
+     * the difference between them cannot be greater than 100. A larger range increases the number of instances that can
+     * be replaced at the same time.
+     * </p>
+     * <p>
+     * If you do not specify this property, the default is 100 percent, or the percentage set in the instance
+     * maintenance policy for the Auto Scaling group, if defined.
+     * </p>
+     * 
+     * @param maxHealthyPercentage
+     *        Specifies the maximum percentage of the group that can be in service and healthy, or pending, to support
+     *        your workload when replacing instances. The value is expressed as a percentage of the desired capacity of
+     *        the Auto Scaling group. Value range is 100 to 200.</p>
+     *        <p>
+     *        If you specify <code>MaxHealthyPercentage</code>, you must also specify <code>MinHealthyPercentage</code>,
+     *        and the difference between them cannot be greater than 100. A larger range increases the number of
+     *        instances that can be replaced at the same time.
+     *        </p>
+     *        <p>
+     *        If you do not specify this property, the default is 100 percent, or the percentage set in the instance
+     *        maintenance policy for the Auto Scaling group, if defined.
+     */
+
+    public void setMaxHealthyPercentage(Integer maxHealthyPercentage) {
+        this.maxHealthyPercentage = maxHealthyPercentage;
+    }
+
+    /**
+     * <p>
+     * Specifies the maximum percentage of the group that can be in service and healthy, or pending, to support your
+     * workload when replacing instances. The value is expressed as a percentage of the desired capacity of the Auto
+     * Scaling group. Value range is 100 to 200.
+     * </p>
+     * <p>
+     * If you specify <code>MaxHealthyPercentage</code>, you must also specify <code>MinHealthyPercentage</code>, and
+     * the difference between them cannot be greater than 100. A larger range increases the number of instances that can
+     * be replaced at the same time.
+     * </p>
+     * <p>
+     * If you do not specify this property, the default is 100 percent, or the percentage set in the instance
+     * maintenance policy for the Auto Scaling group, if defined.
+     * </p>
+     * 
+     * @return Specifies the maximum percentage of the group that can be in service and healthy, or pending, to support
+     *         your workload when replacing instances. The value is expressed as a percentage of the desired capacity of
+     *         the Auto Scaling group. Value range is 100 to 200.</p>
+     *         <p>
+     *         If you specify <code>MaxHealthyPercentage</code>, you must also specify <code>MinHealthyPercentage</code>
+     *         , and the difference between them cannot be greater than 100. A larger range increases the number of
+     *         instances that can be replaced at the same time.
+     *         </p>
+     *         <p>
+     *         If you do not specify this property, the default is 100 percent, or the percentage set in the instance
+     *         maintenance policy for the Auto Scaling group, if defined.
+     */
+
+    public Integer getMaxHealthyPercentage() {
+        return this.maxHealthyPercentage;
+    }
+
+    /**
+     * <p>
+     * Specifies the maximum percentage of the group that can be in service and healthy, or pending, to support your
+     * workload when replacing instances. The value is expressed as a percentage of the desired capacity of the Auto
+     * Scaling group. Value range is 100 to 200.
+     * </p>
+     * <p>
+     * If you specify <code>MaxHealthyPercentage</code>, you must also specify <code>MinHealthyPercentage</code>, and
+     * the difference between them cannot be greater than 100. A larger range increases the number of instances that can
+     * be replaced at the same time.
+     * </p>
+     * <p>
+     * If you do not specify this property, the default is 100 percent, or the percentage set in the instance
+     * maintenance policy for the Auto Scaling group, if defined.
+     * </p>
+     * 
+     * @param maxHealthyPercentage
+     *        Specifies the maximum percentage of the group that can be in service and healthy, or pending, to support
+     *        your workload when replacing instances. The value is expressed as a percentage of the desired capacity of
+     *        the Auto Scaling group. Value range is 100 to 200.</p>
+     *        <p>
+     *        If you specify <code>MaxHealthyPercentage</code>, you must also specify <code>MinHealthyPercentage</code>,
+     *        and the difference between them cannot be greater than 100. A larger range increases the number of
+     *        instances that can be replaced at the same time.
+     *        </p>
+     *        <p>
+     *        If you do not specify this property, the default is 100 percent, or the percentage set in the instance
+     *        maintenance policy for the Auto Scaling group, if defined.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RefreshPreferences withMaxHealthyPercentage(Integer maxHealthyPercentage) {
+        setMaxHealthyPercentage(maxHealthyPercentage);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1527,7 +1647,9 @@ public class RefreshPreferences implements Serializable, Cloneable {
         if (getStandbyInstances() != null)
             sb.append("StandbyInstances: ").append(getStandbyInstances()).append(",");
         if (getAlarmSpecification() != null)
-            sb.append("AlarmSpecification: ").append(getAlarmSpecification());
+            sb.append("AlarmSpecification: ").append(getAlarmSpecification()).append(",");
+        if (getMaxHealthyPercentage() != null)
+            sb.append("MaxHealthyPercentage: ").append(getMaxHealthyPercentage());
         sb.append("}");
         return sb.toString();
     }
@@ -1578,6 +1700,10 @@ public class RefreshPreferences implements Serializable, Cloneable {
             return false;
         if (other.getAlarmSpecification() != null && other.getAlarmSpecification().equals(this.getAlarmSpecification()) == false)
             return false;
+        if (other.getMaxHealthyPercentage() == null ^ this.getMaxHealthyPercentage() == null)
+            return false;
+        if (other.getMaxHealthyPercentage() != null && other.getMaxHealthyPercentage().equals(this.getMaxHealthyPercentage()) == false)
+            return false;
         return true;
     }
 
@@ -1595,6 +1721,7 @@ public class RefreshPreferences implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getScaleInProtectedInstances() == null) ? 0 : getScaleInProtectedInstances().hashCode());
         hashCode = prime * hashCode + ((getStandbyInstances() == null) ? 0 : getStandbyInstances().hashCode());
         hashCode = prime * hashCode + ((getAlarmSpecification() == null) ? 0 : getAlarmSpecification().hashCode());
+        hashCode = prime * hashCode + ((getMaxHealthyPercentage() == null) ? 0 : getMaxHealthyPercentage().hashCode());
         return hashCode;
     }
 

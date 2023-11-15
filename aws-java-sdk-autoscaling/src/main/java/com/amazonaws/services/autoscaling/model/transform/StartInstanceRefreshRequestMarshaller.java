@@ -634,6 +634,10 @@ public class StartInstanceRefreshRequestMarshaller implements Marshaller<Request
                         }
                     }
                 }
+
+                if (preferences.getMaxHealthyPercentage() != null) {
+                    request.addParameter("Preferences.MaxHealthyPercentage", StringUtils.fromInteger(preferences.getMaxHealthyPercentage()));
+                }
             }
         }
 

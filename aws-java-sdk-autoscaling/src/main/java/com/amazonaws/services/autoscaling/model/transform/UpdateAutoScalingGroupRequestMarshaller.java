@@ -607,6 +607,22 @@ public class UpdateAutoScalingGroupRequestMarshaller implements Marshaller<Reque
             request.addParameter("DefaultInstanceWarmup", StringUtils.fromInteger(updateAutoScalingGroupRequest.getDefaultInstanceWarmup()));
         }
 
+        {
+            InstanceMaintenancePolicy instanceMaintenancePolicy = updateAutoScalingGroupRequest.getInstanceMaintenancePolicy();
+            if (instanceMaintenancePolicy != null) {
+
+                if (instanceMaintenancePolicy.getMinHealthyPercentage() != null) {
+                    request.addParameter("InstanceMaintenancePolicy.MinHealthyPercentage",
+                            StringUtils.fromInteger(instanceMaintenancePolicy.getMinHealthyPercentage()));
+                }
+
+                if (instanceMaintenancePolicy.getMaxHealthyPercentage() != null) {
+                    request.addParameter("InstanceMaintenancePolicy.MaxHealthyPercentage",
+                            StringUtils.fromInteger(instanceMaintenancePolicy.getMaxHealthyPercentage()));
+                }
+            }
+        }
+
         return request;
     }
 

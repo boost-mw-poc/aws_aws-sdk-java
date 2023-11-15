@@ -61,6 +61,10 @@ public class EnvironmentJsonUnmarshaller implements Unmarshaller<Environment, Js
                     context.nextToken();
                     environment.setArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("CeleryExecutorQueue", targetDepth)) {
+                    context.nextToken();
+                    environment.setCeleryExecutorQueue(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("CreatedAt", targetDepth)) {
                     context.nextToken();
                     environment.setCreatedAt(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
@@ -68,6 +72,14 @@ public class EnvironmentJsonUnmarshaller implements Unmarshaller<Environment, Js
                 if (context.testExpression("DagS3Path", targetDepth)) {
                     context.nextToken();
                     environment.setDagS3Path(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("DatabaseVpcEndpointService", targetDepth)) {
+                    context.nextToken();
+                    environment.setDatabaseVpcEndpointService(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("EndpointManagement", targetDepth)) {
+                    context.nextToken();
+                    environment.setEndpointManagement(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("EnvironmentClass", targetDepth)) {
                     context.nextToken();
@@ -157,6 +169,10 @@ public class EnvironmentJsonUnmarshaller implements Unmarshaller<Environment, Js
                 if (context.testExpression("WebserverUrl", targetDepth)) {
                     context.nextToken();
                     environment.setWebserverUrl(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("WebserverVpcEndpointService", targetDepth)) {
+                    context.nextToken();
+                    environment.setWebserverVpcEndpointService(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("WeeklyMaintenanceWindowStart", targetDepth)) {
                     context.nextToken();

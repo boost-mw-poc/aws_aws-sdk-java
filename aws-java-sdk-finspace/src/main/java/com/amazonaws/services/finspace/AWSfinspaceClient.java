@@ -181,6 +181,7 @@ public class AWSfinspaceClient extends AmazonWebServiceClient implements AWSfins
      *      Documentation</a>
      */
     @Override
+    @Deprecated
     public CreateEnvironmentResult createEnvironment(CreateEnvironmentRequest request) {
         request = beforeClientExecution(request);
         return executeCreateEnvironment(request);
@@ -599,6 +600,7 @@ public class AWSfinspaceClient extends AmazonWebServiceClient implements AWSfins
      *      Documentation</a>
      */
     @Override
+    @Deprecated
     public DeleteEnvironmentResult deleteEnvironment(DeleteEnvironmentRequest request) {
         request = beforeClientExecution(request);
         return executeDeleteEnvironment(request);
@@ -930,6 +932,7 @@ public class AWSfinspaceClient extends AmazonWebServiceClient implements AWSfins
      *      Documentation</a>
      */
     @Override
+    @Deprecated
     public GetEnvironmentResult getEnvironment(GetEnvironmentRequest request) {
         request = beforeClientExecution(request);
         return executeGetEnvironment(request);
@@ -1383,6 +1386,7 @@ public class AWSfinspaceClient extends AmazonWebServiceClient implements AWSfins
      *      Documentation</a>
      */
     @Override
+    @Deprecated
     public ListEnvironmentsResult listEnvironments(ListEnvironmentsRequest request) {
         request = beforeClientExecution(request);
         return executeListEnvironments(request);
@@ -2021,6 +2025,7 @@ public class AWSfinspaceClient extends AmazonWebServiceClient implements AWSfins
      *      Documentation</a>
      */
     @Override
+    @Deprecated
     public UpdateEnvironmentResult updateEnvironment(UpdateEnvironmentRequest request) {
         request = beforeClientExecution(request);
         return executeUpdateEnvironment(request);

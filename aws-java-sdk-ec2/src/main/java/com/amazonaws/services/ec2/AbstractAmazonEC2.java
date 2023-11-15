@@ -1615,6 +1615,11 @@ public class AbstractAmazonEC2 implements AmazonEC2 {
     }
 
     @Override
+    public DescribeLockedSnapshotsResult describeLockedSnapshots(DescribeLockedSnapshotsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DescribeManagedPrefixListsResult describeManagedPrefixLists(DescribeManagedPrefixListsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -2704,6 +2709,11 @@ public class AbstractAmazonEC2 implements AmazonEC2 {
     }
 
     @Override
+    public LockSnapshotResult lockSnapshot(LockSnapshotRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ModifyAddressAttributeResult modifyAddressAttribute(ModifyAddressAttributeRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -3354,6 +3364,11 @@ public class AbstractAmazonEC2 implements AmazonEC2 {
 
     @Override
     public UnassignPrivateNatGatewayAddressResult unassignPrivateNatGatewayAddress(UnassignPrivateNatGatewayAddressRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UnlockSnapshotResult unlockSnapshot(UnlockSnapshotRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

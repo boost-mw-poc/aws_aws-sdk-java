@@ -46,6 +46,10 @@ public class DeleteCustomDomainAssociationRequestMarshaller implements
             request.addParameter("ClusterIdentifier", StringUtils.fromString(deleteCustomDomainAssociationRequest.getClusterIdentifier()));
         }
 
+        if (deleteCustomDomainAssociationRequest.getCustomDomainName() != null) {
+            request.addParameter("CustomDomainName", StringUtils.fromString(deleteCustomDomainAssociationRequest.getCustomDomainName()));
+        }
+
         return request;
     }
 

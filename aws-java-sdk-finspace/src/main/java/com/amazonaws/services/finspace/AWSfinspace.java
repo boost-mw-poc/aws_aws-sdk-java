@@ -65,6 +65,7 @@ public interface AWSfinspace {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2021-03-12/CreateEnvironment" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     CreateEnvironmentResult createEnvironment(CreateEnvironmentRequest createEnvironmentRequest);
 
     /**
@@ -231,6 +232,7 @@ public interface AWSfinspace {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2021-03-12/DeleteEnvironment" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     DeleteEnvironmentResult deleteEnvironment(DeleteEnvironmentRequest deleteEnvironmentRequest);
 
     /**
@@ -352,6 +354,7 @@ public interface AWSfinspace {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2021-03-12/GetEnvironment" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     GetEnvironmentResult getEnvironment(GetEnvironmentRequest getEnvironmentRequest);
 
     /**
@@ -510,6 +513,7 @@ public interface AWSfinspace {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2021-03-12/ListEnvironments" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     ListEnvironmentsResult listEnvironments(ListEnvironmentsRequest listEnvironmentsRequest);
 
     /**
@@ -728,6 +732,7 @@ public interface AWSfinspace {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2021-03-12/UpdateEnvironment" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     UpdateEnvironmentResult updateEnvironment(UpdateEnvironmentRequest updateEnvironmentRequest);
 
     /**

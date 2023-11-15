@@ -59,9 +59,9 @@ public class StartInstanceRefreshRequest extends com.amazonaws.AmazonWebServiceR
     /**
      * <p>
      * Sets your preferences for the instance refresh so that it performs as expected when you start it. Includes the
-     * instance warmup time, the minimum healthy percentage, and the behaviors that you want Amazon EC2 Auto Scaling to
-     * use if instances that are in <code>Standby</code> state or protected from scale in are found. You can also choose
-     * to enable additional features, such as the following:
+     * instance warmup time, the minimum and maximum healthy percentages, and the behaviors that you want Amazon EC2
+     * Auto Scaling to use if instances that are in <code>Standby</code> state or protected from scale in are found. You
+     * can also choose to enable additional features, such as the following:
      * </p>
      * <ul>
      * <li>
@@ -305,9 +305,9 @@ public class StartInstanceRefreshRequest extends com.amazonaws.AmazonWebServiceR
     /**
      * <p>
      * Sets your preferences for the instance refresh so that it performs as expected when you start it. Includes the
-     * instance warmup time, the minimum healthy percentage, and the behaviors that you want Amazon EC2 Auto Scaling to
-     * use if instances that are in <code>Standby</code> state or protected from scale in are found. You can also choose
-     * to enable additional features, such as the following:
+     * instance warmup time, the minimum and maximum healthy percentages, and the behaviors that you want Amazon EC2
+     * Auto Scaling to use if instances that are in <code>Standby</code> state or protected from scale in are found. You
+     * can also choose to enable additional features, such as the following:
      * </p>
      * <ul>
      * <li>
@@ -334,9 +334,9 @@ public class StartInstanceRefreshRequest extends com.amazonaws.AmazonWebServiceR
      * 
      * @param preferences
      *        Sets your preferences for the instance refresh so that it performs as expected when you start it. Includes
-     *        the instance warmup time, the minimum healthy percentage, and the behaviors that you want Amazon EC2 Auto
-     *        Scaling to use if instances that are in <code>Standby</code> state or protected from scale in are found.
-     *        You can also choose to enable additional features, such as the following:</p>
+     *        the instance warmup time, the minimum and maximum healthy percentages, and the behaviors that you want
+     *        Amazon EC2 Auto Scaling to use if instances that are in <code>Standby</code> state or protected from scale
+     *        in are found. You can also choose to enable additional features, such as the following:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -367,9 +367,9 @@ public class StartInstanceRefreshRequest extends com.amazonaws.AmazonWebServiceR
     /**
      * <p>
      * Sets your preferences for the instance refresh so that it performs as expected when you start it. Includes the
-     * instance warmup time, the minimum healthy percentage, and the behaviors that you want Amazon EC2 Auto Scaling to
-     * use if instances that are in <code>Standby</code> state or protected from scale in are found. You can also choose
-     * to enable additional features, such as the following:
+     * instance warmup time, the minimum and maximum healthy percentages, and the behaviors that you want Amazon EC2
+     * Auto Scaling to use if instances that are in <code>Standby</code> state or protected from scale in are found. You
+     * can also choose to enable additional features, such as the following:
      * </p>
      * <ul>
      * <li>
@@ -395,9 +395,9 @@ public class StartInstanceRefreshRequest extends com.amazonaws.AmazonWebServiceR
      * </ul>
      * 
      * @return Sets your preferences for the instance refresh so that it performs as expected when you start it.
-     *         Includes the instance warmup time, the minimum healthy percentage, and the behaviors that you want Amazon
-     *         EC2 Auto Scaling to use if instances that are in <code>Standby</code> state or protected from scale in
-     *         are found. You can also choose to enable additional features, such as the following:</p>
+     *         Includes the instance warmup time, the minimum and maximum healthy percentages, and the behaviors that
+     *         you want Amazon EC2 Auto Scaling to use if instances that are in <code>Standby</code> state or protected
+     *         from scale in are found. You can also choose to enable additional features, such as the following:</p>
      *         <ul>
      *         <li>
      *         <p>
@@ -428,9 +428,9 @@ public class StartInstanceRefreshRequest extends com.amazonaws.AmazonWebServiceR
     /**
      * <p>
      * Sets your preferences for the instance refresh so that it performs as expected when you start it. Includes the
-     * instance warmup time, the minimum healthy percentage, and the behaviors that you want Amazon EC2 Auto Scaling to
-     * use if instances that are in <code>Standby</code> state or protected from scale in are found. You can also choose
-     * to enable additional features, such as the following:
+     * instance warmup time, the minimum and maximum healthy percentages, and the behaviors that you want Amazon EC2
+     * Auto Scaling to use if instances that are in <code>Standby</code> state or protected from scale in are found. You
+     * can also choose to enable additional features, such as the following:
      * </p>
      * <ul>
      * <li>
@@ -457,9 +457,9 @@ public class StartInstanceRefreshRequest extends com.amazonaws.AmazonWebServiceR
      * 
      * @param preferences
      *        Sets your preferences for the instance refresh so that it performs as expected when you start it. Includes
-     *        the instance warmup time, the minimum healthy percentage, and the behaviors that you want Amazon EC2 Auto
-     *        Scaling to use if instances that are in <code>Standby</code> state or protected from scale in are found.
-     *        You can also choose to enable additional features, such as the following:</p>
+     *        the instance warmup time, the minimum and maximum healthy percentages, and the behaviors that you want
+     *        Amazon EC2 Auto Scaling to use if instances that are in <code>Standby</code> state or protected from scale
+     *        in are found. You can also choose to enable additional features, such as the following:</p>
      *        <ul>
      *        <li>
      *        <p>

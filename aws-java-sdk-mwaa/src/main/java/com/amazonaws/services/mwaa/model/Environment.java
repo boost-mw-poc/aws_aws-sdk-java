@@ -55,6 +55,15 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
     private String arn;
     /**
      * <p>
+     * The queue ARN for the environment's <a
+     * href="https://airflow.apache.org/docs/apache-airflow/stable/core-concepts/executor/celery.html">Celery
+     * Executor</a>. Amazon MWAA uses a Celery Executor to distribute tasks across multiple workers. When you create an
+     * environment in a shared VPC, you must provide access to the Celery Executor queue from your VPC.
+     * </p>
+     */
+    private String celeryExecutorQueue;
+    /**
+     * <p>
      * The day and time the environment was created.
      * </p>
      */
@@ -67,6 +76,20 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private String dagS3Path;
+    /**
+     * <p>
+     * The VPC endpoint for the environment's Amazon RDS database.
+     * </p>
+     */
+    private String databaseVpcEndpointService;
+    /**
+     * <p>
+     * Defines whether the VPC endpoints configured for the environment are created, and managed, by the customer or by
+     * Amazon MWAA. If set to <code>SERVICE</code>, Amazon MWAA will create and manage the required VPC endpoints in
+     * your VPC. If set to <code>CUSTOMER</code>, you must create, and manage, the VPC endpoints in your VPC.
+     * </p>
+     */
+    private String endpointManagement;
     /**
      * <p>
      * The environment class type. Valid values: <code>mw1.small</code>, <code>mw1.medium</code>, <code>mw1.large</code>
@@ -244,7 +267,10 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
     private String startupScriptS3Path;
     /**
      * <p>
-     * The status of the Amazon MWAA environment. Valid values:
+     * The status of the Amazon MWAA environment.
+     * </p>
+     * <p>
+     * Valid values:
      * </p>
      * <ul>
      * <li>
@@ -269,6 +295,12 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
      * <li>
      * <p>
      * <code>AVAILABLE</code> - Indicates the request was successful and the environment is ready to use.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>PENDING</code> - Indicates the request was successful, but the process to create the environment is paused
+     * until you create the required VPC endpoints in your VPC. After you create the VPC endpoints, the process resumes.
      * </p>
      * </li>
      * <li>
@@ -323,7 +355,7 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
     private java.util.Map<String, String> tags;
     /**
      * <p>
-     * The Apache Airflow <i>Web server</i> access mode. For more information, see <a
+     * The Apache Airflow <i>web server</i> access mode. For more information, see <a
      * href="https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-networking.html">Apache Airflow access
      * modes</a>.
      * </p>
@@ -337,6 +369,12 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private String webserverUrl;
+    /**
+     * <p>
+     * The VPC endpoint for the environment's web server.
+     * </p>
+     */
+    private String webserverVpcEndpointService;
     /**
      * <p>
      * The day and time of the week in Coordinated Universal Time (UTC) 24-hour standard time that weekly maintenance
@@ -534,6 +572,65 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
+     * The queue ARN for the environment's <a
+     * href="https://airflow.apache.org/docs/apache-airflow/stable/core-concepts/executor/celery.html">Celery
+     * Executor</a>. Amazon MWAA uses a Celery Executor to distribute tasks across multiple workers. When you create an
+     * environment in a shared VPC, you must provide access to the Celery Executor queue from your VPC.
+     * </p>
+     * 
+     * @param celeryExecutorQueue
+     *        The queue ARN for the environment's <a
+     *        href="https://airflow.apache.org/docs/apache-airflow/stable/core-concepts/executor/celery.html">Celery
+     *        Executor</a>. Amazon MWAA uses a Celery Executor to distribute tasks across multiple workers. When you
+     *        create an environment in a shared VPC, you must provide access to the Celery Executor queue from your VPC.
+     */
+
+    public void setCeleryExecutorQueue(String celeryExecutorQueue) {
+        this.celeryExecutorQueue = celeryExecutorQueue;
+    }
+
+    /**
+     * <p>
+     * The queue ARN for the environment's <a
+     * href="https://airflow.apache.org/docs/apache-airflow/stable/core-concepts/executor/celery.html">Celery
+     * Executor</a>. Amazon MWAA uses a Celery Executor to distribute tasks across multiple workers. When you create an
+     * environment in a shared VPC, you must provide access to the Celery Executor queue from your VPC.
+     * </p>
+     * 
+     * @return The queue ARN for the environment's <a
+     *         href="https://airflow.apache.org/docs/apache-airflow/stable/core-concepts/executor/celery.html">Celery
+     *         Executor</a>. Amazon MWAA uses a Celery Executor to distribute tasks across multiple workers. When you
+     *         create an environment in a shared VPC, you must provide access to the Celery Executor queue from your
+     *         VPC.
+     */
+
+    public String getCeleryExecutorQueue() {
+        return this.celeryExecutorQueue;
+    }
+
+    /**
+     * <p>
+     * The queue ARN for the environment's <a
+     * href="https://airflow.apache.org/docs/apache-airflow/stable/core-concepts/executor/celery.html">Celery
+     * Executor</a>. Amazon MWAA uses a Celery Executor to distribute tasks across multiple workers. When you create an
+     * environment in a shared VPC, you must provide access to the Celery Executor queue from your VPC.
+     * </p>
+     * 
+     * @param celeryExecutorQueue
+     *        The queue ARN for the environment's <a
+     *        href="https://airflow.apache.org/docs/apache-airflow/stable/core-concepts/executor/celery.html">Celery
+     *        Executor</a>. Amazon MWAA uses a Celery Executor to distribute tasks across multiple workers. When you
+     *        create an environment in a shared VPC, you must provide access to the Celery Executor queue from your VPC.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Environment withCeleryExecutorQueue(String celeryExecutorQueue) {
+        setCeleryExecutorQueue(celeryExecutorQueue);
+        return this;
+    }
+
+    /**
+     * <p>
      * The day and time the environment was created.
      * </p>
      * 
@@ -624,6 +721,125 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
 
     public Environment withDagS3Path(String dagS3Path) {
         setDagS3Path(dagS3Path);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The VPC endpoint for the environment's Amazon RDS database.
+     * </p>
+     * 
+     * @param databaseVpcEndpointService
+     *        The VPC endpoint for the environment's Amazon RDS database.
+     */
+
+    public void setDatabaseVpcEndpointService(String databaseVpcEndpointService) {
+        this.databaseVpcEndpointService = databaseVpcEndpointService;
+    }
+
+    /**
+     * <p>
+     * The VPC endpoint for the environment's Amazon RDS database.
+     * </p>
+     * 
+     * @return The VPC endpoint for the environment's Amazon RDS database.
+     */
+
+    public String getDatabaseVpcEndpointService() {
+        return this.databaseVpcEndpointService;
+    }
+
+    /**
+     * <p>
+     * The VPC endpoint for the environment's Amazon RDS database.
+     * </p>
+     * 
+     * @param databaseVpcEndpointService
+     *        The VPC endpoint for the environment's Amazon RDS database.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Environment withDatabaseVpcEndpointService(String databaseVpcEndpointService) {
+        setDatabaseVpcEndpointService(databaseVpcEndpointService);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Defines whether the VPC endpoints configured for the environment are created, and managed, by the customer or by
+     * Amazon MWAA. If set to <code>SERVICE</code>, Amazon MWAA will create and manage the required VPC endpoints in
+     * your VPC. If set to <code>CUSTOMER</code>, you must create, and manage, the VPC endpoints in your VPC.
+     * </p>
+     * 
+     * @param endpointManagement
+     *        Defines whether the VPC endpoints configured for the environment are created, and managed, by the customer
+     *        or by Amazon MWAA. If set to <code>SERVICE</code>, Amazon MWAA will create and manage the required VPC
+     *        endpoints in your VPC. If set to <code>CUSTOMER</code>, you must create, and manage, the VPC endpoints in
+     *        your VPC.
+     * @see EndpointManagement
+     */
+
+    public void setEndpointManagement(String endpointManagement) {
+        this.endpointManagement = endpointManagement;
+    }
+
+    /**
+     * <p>
+     * Defines whether the VPC endpoints configured for the environment are created, and managed, by the customer or by
+     * Amazon MWAA. If set to <code>SERVICE</code>, Amazon MWAA will create and manage the required VPC endpoints in
+     * your VPC. If set to <code>CUSTOMER</code>, you must create, and manage, the VPC endpoints in your VPC.
+     * </p>
+     * 
+     * @return Defines whether the VPC endpoints configured for the environment are created, and managed, by the
+     *         customer or by Amazon MWAA. If set to <code>SERVICE</code>, Amazon MWAA will create and manage the
+     *         required VPC endpoints in your VPC. If set to <code>CUSTOMER</code>, you must create, and manage, the VPC
+     *         endpoints in your VPC.
+     * @see EndpointManagement
+     */
+
+    public String getEndpointManagement() {
+        return this.endpointManagement;
+    }
+
+    /**
+     * <p>
+     * Defines whether the VPC endpoints configured for the environment are created, and managed, by the customer or by
+     * Amazon MWAA. If set to <code>SERVICE</code>, Amazon MWAA will create and manage the required VPC endpoints in
+     * your VPC. If set to <code>CUSTOMER</code>, you must create, and manage, the VPC endpoints in your VPC.
+     * </p>
+     * 
+     * @param endpointManagement
+     *        Defines whether the VPC endpoints configured for the environment are created, and managed, by the customer
+     *        or by Amazon MWAA. If set to <code>SERVICE</code>, Amazon MWAA will create and manage the required VPC
+     *        endpoints in your VPC. If set to <code>CUSTOMER</code>, you must create, and manage, the VPC endpoints in
+     *        your VPC.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see EndpointManagement
+     */
+
+    public Environment withEndpointManagement(String endpointManagement) {
+        setEndpointManagement(endpointManagement);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Defines whether the VPC endpoints configured for the environment are created, and managed, by the customer or by
+     * Amazon MWAA. If set to <code>SERVICE</code>, Amazon MWAA will create and manage the required VPC endpoints in
+     * your VPC. If set to <code>CUSTOMER</code>, you must create, and manage, the VPC endpoints in your VPC.
+     * </p>
+     * 
+     * @param endpointManagement
+     *        Defines whether the VPC endpoints configured for the environment are created, and managed, by the customer
+     *        or by Amazon MWAA. If set to <code>SERVICE</code>, Amazon MWAA will create and manage the required VPC
+     *        endpoints in your VPC. If set to <code>CUSTOMER</code>, you must create, and manage, the VPC endpoints in
+     *        your VPC.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see EndpointManagement
+     */
+
+    public Environment withEndpointManagement(EndpointManagement endpointManagement) {
+        this.endpointManagement = endpointManagement.toString();
         return this;
     }
 
@@ -1754,7 +1970,10 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The status of the Amazon MWAA environment. Valid values:
+     * The status of the Amazon MWAA environment.
+     * </p>
+     * <p>
+     * Valid values:
      * </p>
      * <ul>
      * <li>
@@ -1779,6 +1998,12 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
      * <li>
      * <p>
      * <code>AVAILABLE</code> - Indicates the request was successful and the environment is ready to use.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>PENDING</code> - Indicates the request was successful, but the process to create the environment is paused
+     * until you create the required VPC endpoints in your VPC. After you create the VPC endpoints, the process resumes.
      * </p>
      * </li>
      * <li>
@@ -1823,7 +2048,10 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param status
-     *        The status of the Amazon MWAA environment. Valid values:</p>
+     *        The status of the Amazon MWAA environment.</p>
+     *        <p>
+     *        Valid values:
+     *        </p>
      *        <ul>
      *        <li>
      *        <p>
@@ -1848,6 +2076,13 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
      *        <li>
      *        <p>
      *        <code>AVAILABLE</code> - Indicates the request was successful and the environment is ready to use.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>PENDING</code> - Indicates the request was successful, but the process to create the environment is
+     *        paused until you create the required VPC endpoints in your VPC. After you create the VPC endpoints, the
+     *        process resumes.
      *        </p>
      *        </li>
      *        <li>
@@ -1899,7 +2134,10 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The status of the Amazon MWAA environment. Valid values:
+     * The status of the Amazon MWAA environment.
+     * </p>
+     * <p>
+     * Valid values:
      * </p>
      * <ul>
      * <li>
@@ -1924,6 +2162,12 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
      * <li>
      * <p>
      * <code>AVAILABLE</code> - Indicates the request was successful and the environment is ready to use.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>PENDING</code> - Indicates the request was successful, but the process to create the environment is paused
+     * until you create the required VPC endpoints in your VPC. After you create the VPC endpoints, the process resumes.
      * </p>
      * </li>
      * <li>
@@ -1967,7 +2211,10 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
      * troubleshooting</a>.
      * </p>
      * 
-     * @return The status of the Amazon MWAA environment. Valid values:</p>
+     * @return The status of the Amazon MWAA environment.</p>
+     *         <p>
+     *         Valid values:
+     *         </p>
      *         <ul>
      *         <li>
      *         <p>
@@ -1992,6 +2239,13 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
      *         <li>
      *         <p>
      *         <code>AVAILABLE</code> - Indicates the request was successful and the environment is ready to use.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>PENDING</code> - Indicates the request was successful, but the process to create the environment is
+     *         paused until you create the required VPC endpoints in your VPC. After you create the VPC endpoints, the
+     *         process resumes.
      *         </p>
      *         </li>
      *         <li>
@@ -2044,7 +2298,10 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The status of the Amazon MWAA environment. Valid values:
+     * The status of the Amazon MWAA environment.
+     * </p>
+     * <p>
+     * Valid values:
      * </p>
      * <ul>
      * <li>
@@ -2069,6 +2326,12 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
      * <li>
      * <p>
      * <code>AVAILABLE</code> - Indicates the request was successful and the environment is ready to use.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>PENDING</code> - Indicates the request was successful, but the process to create the environment is paused
+     * until you create the required VPC endpoints in your VPC. After you create the VPC endpoints, the process resumes.
      * </p>
      * </li>
      * <li>
@@ -2113,7 +2376,10 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param status
-     *        The status of the Amazon MWAA environment. Valid values:</p>
+     *        The status of the Amazon MWAA environment.</p>
+     *        <p>
+     *        Valid values:
+     *        </p>
      *        <ul>
      *        <li>
      *        <p>
@@ -2138,6 +2404,13 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
      *        <li>
      *        <p>
      *        <code>AVAILABLE</code> - Indicates the request was successful and the environment is ready to use.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>PENDING</code> - Indicates the request was successful, but the process to create the environment is
+     *        paused until you create the required VPC endpoints in your VPC. After you create the VPC endpoints, the
+     *        process resumes.
      *        </p>
      *        </li>
      *        <li>
@@ -2191,7 +2464,10 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The status of the Amazon MWAA environment. Valid values:
+     * The status of the Amazon MWAA environment.
+     * </p>
+     * <p>
+     * Valid values:
      * </p>
      * <ul>
      * <li>
@@ -2216,6 +2492,12 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
      * <li>
      * <p>
      * <code>AVAILABLE</code> - Indicates the request was successful and the environment is ready to use.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>PENDING</code> - Indicates the request was successful, but the process to create the environment is paused
+     * until you create the required VPC endpoints in your VPC. After you create the VPC endpoints, the process resumes.
      * </p>
      * </li>
      * <li>
@@ -2260,7 +2542,10 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param status
-     *        The status of the Amazon MWAA environment. Valid values:</p>
+     *        The status of the Amazon MWAA environment.</p>
+     *        <p>
+     *        Valid values:
+     *        </p>
      *        <ul>
      *        <li>
      *        <p>
@@ -2285,6 +2570,13 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
      *        <li>
      *        <p>
      *        <code>AVAILABLE</code> - Indicates the request was successful and the environment is ready to use.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>PENDING</code> - Indicates the request was successful, but the process to create the environment is
+     *        paused until you create the required VPC endpoints in your VPC. After you create the VPC endpoints, the
+     *        process resumes.
      *        </p>
      *        </li>
      *        <li>
@@ -2421,13 +2713,13 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Apache Airflow <i>Web server</i> access mode. For more information, see <a
+     * The Apache Airflow <i>web server</i> access mode. For more information, see <a
      * href="https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-networking.html">Apache Airflow access
      * modes</a>.
      * </p>
      * 
      * @param webserverAccessMode
-     *        The Apache Airflow <i>Web server</i> access mode. For more information, see <a
+     *        The Apache Airflow <i>web server</i> access mode. For more information, see <a
      *        href="https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-networking.html">Apache Airflow access
      *        modes</a>.
      * @see WebserverAccessMode
@@ -2439,12 +2731,12 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Apache Airflow <i>Web server</i> access mode. For more information, see <a
+     * The Apache Airflow <i>web server</i> access mode. For more information, see <a
      * href="https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-networking.html">Apache Airflow access
      * modes</a>.
      * </p>
      * 
-     * @return The Apache Airflow <i>Web server</i> access mode. For more information, see <a
+     * @return The Apache Airflow <i>web server</i> access mode. For more information, see <a
      *         href="https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-networking.html">Apache Airflow
      *         access modes</a>.
      * @see WebserverAccessMode
@@ -2456,13 +2748,13 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Apache Airflow <i>Web server</i> access mode. For more information, see <a
+     * The Apache Airflow <i>web server</i> access mode. For more information, see <a
      * href="https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-networking.html">Apache Airflow access
      * modes</a>.
      * </p>
      * 
      * @param webserverAccessMode
-     *        The Apache Airflow <i>Web server</i> access mode. For more information, see <a
+     *        The Apache Airflow <i>web server</i> access mode. For more information, see <a
      *        href="https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-networking.html">Apache Airflow access
      *        modes</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -2476,13 +2768,13 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Apache Airflow <i>Web server</i> access mode. For more information, see <a
+     * The Apache Airflow <i>web server</i> access mode. For more information, see <a
      * href="https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-networking.html">Apache Airflow access
      * modes</a>.
      * </p>
      * 
      * @param webserverAccessMode
-     *        The Apache Airflow <i>Web server</i> access mode. For more information, see <a
+     *        The Apache Airflow <i>web server</i> access mode. For more information, see <a
      *        href="https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-networking.html">Apache Airflow access
      *        modes</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -2543,6 +2835,46 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
 
     public Environment withWebserverUrl(String webserverUrl) {
         setWebserverUrl(webserverUrl);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The VPC endpoint for the environment's web server.
+     * </p>
+     * 
+     * @param webserverVpcEndpointService
+     *        The VPC endpoint for the environment's web server.
+     */
+
+    public void setWebserverVpcEndpointService(String webserverVpcEndpointService) {
+        this.webserverVpcEndpointService = webserverVpcEndpointService;
+    }
+
+    /**
+     * <p>
+     * The VPC endpoint for the environment's web server.
+     * </p>
+     * 
+     * @return The VPC endpoint for the environment's web server.
+     */
+
+    public String getWebserverVpcEndpointService() {
+        return this.webserverVpcEndpointService;
+    }
+
+    /**
+     * <p>
+     * The VPC endpoint for the environment's web server.
+     * </p>
+     * 
+     * @param webserverVpcEndpointService
+     *        The VPC endpoint for the environment's web server.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Environment withWebserverVpcEndpointService(String webserverVpcEndpointService) {
+        setWebserverVpcEndpointService(webserverVpcEndpointService);
         return this;
     }
 
@@ -2610,10 +2942,16 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
             sb.append("AirflowVersion: ").append(getAirflowVersion()).append(",");
         if (getArn() != null)
             sb.append("Arn: ").append(getArn()).append(",");
+        if (getCeleryExecutorQueue() != null)
+            sb.append("CeleryExecutorQueue: ").append(getCeleryExecutorQueue()).append(",");
         if (getCreatedAt() != null)
             sb.append("CreatedAt: ").append(getCreatedAt()).append(",");
         if (getDagS3Path() != null)
             sb.append("DagS3Path: ").append(getDagS3Path()).append(",");
+        if (getDatabaseVpcEndpointService() != null)
+            sb.append("DatabaseVpcEndpointService: ").append(getDatabaseVpcEndpointService()).append(",");
+        if (getEndpointManagement() != null)
+            sb.append("EndpointManagement: ").append(getEndpointManagement()).append(",");
         if (getEnvironmentClass() != null)
             sb.append("EnvironmentClass: ").append(getEnvironmentClass()).append(",");
         if (getExecutionRoleArn() != null)
@@ -2658,6 +2996,8 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
             sb.append("WebserverAccessMode: ").append(getWebserverAccessMode()).append(",");
         if (getWebserverUrl() != null)
             sb.append("WebserverUrl: ").append(getWebserverUrl()).append(",");
+        if (getWebserverVpcEndpointService() != null)
+            sb.append("WebserverVpcEndpointService: ").append(getWebserverVpcEndpointService()).append(",");
         if (getWeeklyMaintenanceWindowStart() != null)
             sb.append("WeeklyMaintenanceWindowStart: ").append(getWeeklyMaintenanceWindowStart());
         sb.append("}");
@@ -2686,6 +3026,10 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getArn() != null && other.getArn().equals(this.getArn()) == false)
             return false;
+        if (other.getCeleryExecutorQueue() == null ^ this.getCeleryExecutorQueue() == null)
+            return false;
+        if (other.getCeleryExecutorQueue() != null && other.getCeleryExecutorQueue().equals(this.getCeleryExecutorQueue()) == false)
+            return false;
         if (other.getCreatedAt() == null ^ this.getCreatedAt() == null)
             return false;
         if (other.getCreatedAt() != null && other.getCreatedAt().equals(this.getCreatedAt()) == false)
@@ -2693,6 +3037,14 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
         if (other.getDagS3Path() == null ^ this.getDagS3Path() == null)
             return false;
         if (other.getDagS3Path() != null && other.getDagS3Path().equals(this.getDagS3Path()) == false)
+            return false;
+        if (other.getDatabaseVpcEndpointService() == null ^ this.getDatabaseVpcEndpointService() == null)
+            return false;
+        if (other.getDatabaseVpcEndpointService() != null && other.getDatabaseVpcEndpointService().equals(this.getDatabaseVpcEndpointService()) == false)
+            return false;
+        if (other.getEndpointManagement() == null ^ this.getEndpointManagement() == null)
+            return false;
+        if (other.getEndpointManagement() != null && other.getEndpointManagement().equals(this.getEndpointManagement()) == false)
             return false;
         if (other.getEnvironmentClass() == null ^ this.getEnvironmentClass() == null)
             return false;
@@ -2782,6 +3134,10 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getWebserverUrl() != null && other.getWebserverUrl().equals(this.getWebserverUrl()) == false)
             return false;
+        if (other.getWebserverVpcEndpointService() == null ^ this.getWebserverVpcEndpointService() == null)
+            return false;
+        if (other.getWebserverVpcEndpointService() != null && other.getWebserverVpcEndpointService().equals(this.getWebserverVpcEndpointService()) == false)
+            return false;
         if (other.getWeeklyMaintenanceWindowStart() == null ^ this.getWeeklyMaintenanceWindowStart() == null)
             return false;
         if (other.getWeeklyMaintenanceWindowStart() != null && other.getWeeklyMaintenanceWindowStart().equals(this.getWeeklyMaintenanceWindowStart()) == false)
@@ -2797,8 +3153,11 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getAirflowConfigurationOptions() == null) ? 0 : getAirflowConfigurationOptions().hashCode());
         hashCode = prime * hashCode + ((getAirflowVersion() == null) ? 0 : getAirflowVersion().hashCode());
         hashCode = prime * hashCode + ((getArn() == null) ? 0 : getArn().hashCode());
+        hashCode = prime * hashCode + ((getCeleryExecutorQueue() == null) ? 0 : getCeleryExecutorQueue().hashCode());
         hashCode = prime * hashCode + ((getCreatedAt() == null) ? 0 : getCreatedAt().hashCode());
         hashCode = prime * hashCode + ((getDagS3Path() == null) ? 0 : getDagS3Path().hashCode());
+        hashCode = prime * hashCode + ((getDatabaseVpcEndpointService() == null) ? 0 : getDatabaseVpcEndpointService().hashCode());
+        hashCode = prime * hashCode + ((getEndpointManagement() == null) ? 0 : getEndpointManagement().hashCode());
         hashCode = prime * hashCode + ((getEnvironmentClass() == null) ? 0 : getEnvironmentClass().hashCode());
         hashCode = prime * hashCode + ((getExecutionRoleArn() == null) ? 0 : getExecutionRoleArn().hashCode());
         hashCode = prime * hashCode + ((getKmsKey() == null) ? 0 : getKmsKey().hashCode());
@@ -2821,6 +3180,7 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getWebserverAccessMode() == null) ? 0 : getWebserverAccessMode().hashCode());
         hashCode = prime * hashCode + ((getWebserverUrl() == null) ? 0 : getWebserverUrl().hashCode());
+        hashCode = prime * hashCode + ((getWebserverVpcEndpointService() == null) ? 0 : getWebserverVpcEndpointService().hashCode());
         hashCode = prime * hashCode + ((getWeeklyMaintenanceWindowStart() == null) ? 0 : getWeeklyMaintenanceWindowStart().hashCode());
         return hashCode;
     }

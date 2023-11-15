@@ -28,6 +28,7 @@ public class AbstractAWSfinspace implements AWSfinspace {
     }
 
     @Override
+    @Deprecated
     public CreateEnvironmentResult createEnvironment(CreateEnvironmentRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -58,6 +59,7 @@ public class AbstractAWSfinspace implements AWSfinspace {
     }
 
     @Override
+    @Deprecated
     public DeleteEnvironmentResult deleteEnvironment(DeleteEnvironmentRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -83,6 +85,7 @@ public class AbstractAWSfinspace implements AWSfinspace {
     }
 
     @Override
+    @Deprecated
     public GetEnvironmentResult getEnvironment(GetEnvironmentRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -118,6 +121,7 @@ public class AbstractAWSfinspace implements AWSfinspace {
     }
 
     @Override
+    @Deprecated
     public ListEnvironmentsResult listEnvironments(ListEnvironmentsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -168,6 +172,7 @@ public class AbstractAWSfinspace implements AWSfinspace {
     }
 
     @Override
+    @Deprecated
     public UpdateEnvironmentResult updateEnvironment(UpdateEnvironmentRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

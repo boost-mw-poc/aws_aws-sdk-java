@@ -67,6 +67,11 @@ public class AccountLevelStaxUnmarshaller implements Unmarshaller<AccountLevel, 
                     accountLevel.setDetailedStatusCodesMetrics(DetailedStatusCodesMetricsStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("StorageLensGroupLevel", targetDepth)) {
+                    accountLevel.setStorageLensGroupLevel(StorageLensGroupLevelStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return accountLevel;

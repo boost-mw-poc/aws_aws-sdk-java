@@ -31,6 +31,12 @@ public class DeleteCustomDomainAssociationRequest extends com.amazonaws.AmazonWe
      * </p>
      */
     private String clusterIdentifier;
+    /**
+     * <p>
+     * The custom domain name for the custom domain association.
+     * </p>
+     */
+    private String customDomainName;
 
     /**
      * <p>
@@ -73,6 +79,46 @@ public class DeleteCustomDomainAssociationRequest extends com.amazonaws.AmazonWe
     }
 
     /**
+     * <p>
+     * The custom domain name for the custom domain association.
+     * </p>
+     * 
+     * @param customDomainName
+     *        The custom domain name for the custom domain association.
+     */
+
+    public void setCustomDomainName(String customDomainName) {
+        this.customDomainName = customDomainName;
+    }
+
+    /**
+     * <p>
+     * The custom domain name for the custom domain association.
+     * </p>
+     * 
+     * @return The custom domain name for the custom domain association.
+     */
+
+    public String getCustomDomainName() {
+        return this.customDomainName;
+    }
+
+    /**
+     * <p>
+     * The custom domain name for the custom domain association.
+     * </p>
+     * 
+     * @param customDomainName
+     *        The custom domain name for the custom domain association.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DeleteCustomDomainAssociationRequest withCustomDomainName(String customDomainName) {
+        setCustomDomainName(customDomainName);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -85,7 +131,9 @@ public class DeleteCustomDomainAssociationRequest extends com.amazonaws.AmazonWe
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getClusterIdentifier() != null)
-            sb.append("ClusterIdentifier: ").append(getClusterIdentifier());
+            sb.append("ClusterIdentifier: ").append(getClusterIdentifier()).append(",");
+        if (getCustomDomainName() != null)
+            sb.append("CustomDomainName: ").append(getCustomDomainName());
         sb.append("}");
         return sb.toString();
     }
@@ -104,6 +152,10 @@ public class DeleteCustomDomainAssociationRequest extends com.amazonaws.AmazonWe
             return false;
         if (other.getClusterIdentifier() != null && other.getClusterIdentifier().equals(this.getClusterIdentifier()) == false)
             return false;
+        if (other.getCustomDomainName() == null ^ this.getCustomDomainName() == null)
+            return false;
+        if (other.getCustomDomainName() != null && other.getCustomDomainName().equals(this.getCustomDomainName()) == false)
+            return false;
         return true;
     }
 
@@ -113,6 +165,7 @@ public class DeleteCustomDomainAssociationRequest extends com.amazonaws.AmazonWe
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getClusterIdentifier() == null) ? 0 : getClusterIdentifier().hashCode());
+        hashCode = prime * hashCode + ((getCustomDomainName() == null) ? 0 : getCustomDomainName().hashCode());
         return hashCode;
     }
 

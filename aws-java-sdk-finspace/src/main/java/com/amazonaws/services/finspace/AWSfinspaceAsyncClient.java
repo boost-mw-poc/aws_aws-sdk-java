@@ -74,12 +74,14 @@ public class AWSfinspaceAsyncClient extends AWSfinspaceClient implements AWSfins
     }
 
     @Override
+    @Deprecated
     public java.util.concurrent.Future<CreateEnvironmentResult> createEnvironmentAsync(CreateEnvironmentRequest request) {
 
         return createEnvironmentAsync(request, null);
     }
 
     @Override
+    @Deprecated
     public java.util.concurrent.Future<CreateEnvironmentResult> createEnvironmentAsync(final CreateEnvironmentRequest request,
             final com.amazonaws.handlers.AsyncHandler<CreateEnvironmentRequest, CreateEnvironmentResult> asyncHandler) {
         final CreateEnvironmentRequest finalRequest = beforeClientExecution(request);
@@ -272,12 +274,14 @@ public class AWSfinspaceAsyncClient extends AWSfinspaceClient implements AWSfins
     }
 
     @Override
+    @Deprecated
     public java.util.concurrent.Future<DeleteEnvironmentResult> deleteEnvironmentAsync(DeleteEnvironmentRequest request) {
 
         return deleteEnvironmentAsync(request, null);
     }
 
     @Override
+    @Deprecated
     public java.util.concurrent.Future<DeleteEnvironmentResult> deleteEnvironmentAsync(final DeleteEnvironmentRequest request,
             final com.amazonaws.handlers.AsyncHandler<DeleteEnvironmentRequest, DeleteEnvironmentResult> asyncHandler) {
         final DeleteEnvironmentRequest finalRequest = beforeClientExecution(request);
@@ -437,12 +441,14 @@ public class AWSfinspaceAsyncClient extends AWSfinspaceClient implements AWSfins
     }
 
     @Override
+    @Deprecated
     public java.util.concurrent.Future<GetEnvironmentResult> getEnvironmentAsync(GetEnvironmentRequest request) {
 
         return getEnvironmentAsync(request, null);
     }
 
     @Override
+    @Deprecated
     public java.util.concurrent.Future<GetEnvironmentResult> getEnvironmentAsync(final GetEnvironmentRequest request,
             final com.amazonaws.handlers.AsyncHandler<GetEnvironmentRequest, GetEnvironmentResult> asyncHandler) {
         final GetEnvironmentRequest finalRequest = beforeClientExecution(request);
@@ -668,12 +674,14 @@ public class AWSfinspaceAsyncClient extends AWSfinspaceClient implements AWSfins
     }
 
     @Override
+    @Deprecated
     public java.util.concurrent.Future<ListEnvironmentsResult> listEnvironmentsAsync(ListEnvironmentsRequest request) {
 
         return listEnvironmentsAsync(request, null);
     }
 
     @Override
+    @Deprecated
     public java.util.concurrent.Future<ListEnvironmentsResult> listEnvironmentsAsync(final ListEnvironmentsRequest request,
             final com.amazonaws.handlers.AsyncHandler<ListEnvironmentsRequest, ListEnvironmentsResult> asyncHandler) {
         final ListEnvironmentsRequest finalRequest = beforeClientExecution(request);
@@ -998,12 +1006,14 @@ public class AWSfinspaceAsyncClient extends AWSfinspaceClient implements AWSfins
     }
 
     @Override
+    @Deprecated
     public java.util.concurrent.Future<UpdateEnvironmentResult> updateEnvironmentAsync(UpdateEnvironmentRequest request) {
 
         return updateEnvironmentAsync(request, null);
     }
 
     @Override
+    @Deprecated
     public java.util.concurrent.Future<UpdateEnvironmentResult> updateEnvironmentAsync(final UpdateEnvironmentRequest request,
             final com.amazonaws.handlers.AsyncHandler<UpdateEnvironmentRequest, UpdateEnvironmentResult> asyncHandler) {
         final UpdateEnvironmentRequest finalRequest = beforeClientExecution(request);

@@ -171,6 +171,7 @@ public class AWSFinSpaceDataClient extends AmazonWebServiceClient implements AWS
      *      target="_top">AWS API Documentation</a>
      */
     @Override
+    @Deprecated
     public AssociateUserToPermissionGroupResult associateUserToPermissionGroup(AssociateUserToPermissionGroupRequest request) {
         request = beforeClientExecution(request);
         return executeAssociateUserToPermissionGroup(request);
@@ -243,6 +244,7 @@ public class AWSFinSpaceDataClient extends AmazonWebServiceClient implements AWS
      *      Documentation</a>
      */
     @Override
+    @Deprecated
     public CreateChangesetResult createChangeset(CreateChangesetRequest request) {
         request = beforeClientExecution(request);
         return executeCreateChangeset(request);
@@ -311,6 +313,7 @@ public class AWSFinSpaceDataClient extends AmazonWebServiceClient implements AWS
      *      Documentation</a>
      */
     @Override
+    @Deprecated
     public CreateDataViewResult createDataView(CreateDataViewRequest request) {
         request = beforeClientExecution(request);
         return executeCreateDataView(request);
@@ -381,6 +384,7 @@ public class AWSFinSpaceDataClient extends AmazonWebServiceClient implements AWS
      *      Documentation</a>
      */
     @Override
+    @Deprecated
     public CreateDatasetResult createDataset(CreateDatasetRequest request) {
         request = beforeClientExecution(request);
         return executeCreateDataset(request);
@@ -448,6 +452,7 @@ public class AWSFinSpaceDataClient extends AmazonWebServiceClient implements AWS
      *      API Documentation</a>
      */
     @Override
+    @Deprecated
     public CreatePermissionGroupResult createPermissionGroup(CreatePermissionGroupRequest request) {
         request = beforeClientExecution(request);
         return executeCreatePermissionGroup(request);
@@ -516,6 +521,7 @@ public class AWSFinSpaceDataClient extends AmazonWebServiceClient implements AWS
      *      Documentation</a>
      */
     @Override
+    @Deprecated
     public CreateUserResult createUser(CreateUserRequest request) {
         request = beforeClientExecution(request);
         return executeCreateUser(request);
@@ -586,6 +592,7 @@ public class AWSFinSpaceDataClient extends AmazonWebServiceClient implements AWS
      *      Documentation</a>
      */
     @Override
+    @Deprecated
     public DeleteDatasetResult deleteDataset(DeleteDatasetRequest request) {
         request = beforeClientExecution(request);
         return executeDeleteDataset(request);
@@ -655,6 +662,7 @@ public class AWSFinSpaceDataClient extends AmazonWebServiceClient implements AWS
      *      API Documentation</a>
      */
     @Override
+    @Deprecated
     public DeletePermissionGroupResult deletePermissionGroup(DeletePermissionGroupRequest request) {
         request = beforeClientExecution(request);
         return executeDeletePermissionGroup(request);
@@ -723,6 +731,7 @@ public class AWSFinSpaceDataClient extends AmazonWebServiceClient implements AWS
      *      Documentation</a>
      */
     @Override
+    @Deprecated
     public DisableUserResult disableUser(DisableUserRequest request) {
         request = beforeClientExecution(request);
         return executeDisableUser(request);
@@ -790,6 +799,7 @@ public class AWSFinSpaceDataClient extends AmazonWebServiceClient implements AWS
      *      target="_top">AWS API Documentation</a>
      */
     @Override
+    @Deprecated
     public DisassociateUserFromPermissionGroupResult disassociateUserFromPermissionGroup(DisassociateUserFromPermissionGroupRequest request) {
         request = beforeClientExecution(request);
         return executeDisassociateUserFromPermissionGroup(request);
@@ -862,6 +872,7 @@ public class AWSFinSpaceDataClient extends AmazonWebServiceClient implements AWS
      *      Documentation</a>
      */
     @Override
+    @Deprecated
     public EnableUserResult enableUser(EnableUserRequest request) {
         request = beforeClientExecution(request);
         return executeEnableUser(request);
@@ -930,6 +941,7 @@ public class AWSFinSpaceDataClient extends AmazonWebServiceClient implements AWS
      *      Documentation</a>
      */
     @Override
+    @Deprecated
     public GetChangesetResult getChangeset(GetChangesetRequest request) {
         request = beforeClientExecution(request);
         return executeGetChangeset(request);
@@ -996,6 +1008,7 @@ public class AWSFinSpaceDataClient extends AmazonWebServiceClient implements AWS
      *      Documentation</a>
      */
     @Override
+    @Deprecated
     public GetDataViewResult getDataView(GetDataViewRequest request) {
         request = beforeClientExecution(request);
         return executeGetDataView(request);
@@ -1064,6 +1077,7 @@ public class AWSFinSpaceDataClient extends AmazonWebServiceClient implements AWS
      *      Documentation</a>
      */
     @Override
+    @Deprecated
     public GetDatasetResult getDataset(GetDatasetRequest request) {
         request = beforeClientExecution(request);
         return executeGetDataset(request);
@@ -1142,6 +1156,7 @@ public class AWSFinSpaceDataClient extends AmazonWebServiceClient implements AWS
      *      target="_top">AWS API Documentation</a>
      */
     @Override
+    @Deprecated
     public GetExternalDataViewAccessDetailsResult getExternalDataViewAccessDetails(GetExternalDataViewAccessDetailsRequest request) {
         request = beforeClientExecution(request);
         return executeGetExternalDataViewAccessDetails(request);
@@ -1210,6 +1225,7 @@ public class AWSFinSpaceDataClient extends AmazonWebServiceClient implements AWS
      *      API Documentation</a>
      */
     @Override
+    @Deprecated
     public GetPermissionGroupResult getPermissionGroup(GetPermissionGroupRequest request) {
         request = beforeClientExecution(request);
         return executeGetPermissionGroup(request);
@@ -1276,6 +1292,7 @@ public class AWSFinSpaceDataClient extends AmazonWebServiceClient implements AWS
      *      target="_top">AWS API Documentation</a>
      */
     @Override
+    @Deprecated
     public GetProgrammaticAccessCredentialsResult getProgrammaticAccessCredentials(GetProgrammaticAccessCredentialsRequest request) {
         request = beforeClientExecution(request);
         return executeGetProgrammaticAccessCredentials(request);
@@ -1344,6 +1361,7 @@ public class AWSFinSpaceDataClient extends AmazonWebServiceClient implements AWS
      *      Documentation</a>
      */
     @Override
+    @Deprecated
     public GetUserResult getUser(GetUserRequest request) {
         request = beforeClientExecution(request);
         return executeGetUser(request);
@@ -1408,6 +1426,7 @@ public class AWSFinSpaceDataClient extends AmazonWebServiceClient implements AWS
      *      API Documentation</a>
      */
     @Override
+    @Deprecated
     public GetWorkingLocationResult getWorkingLocation(GetWorkingLocationRequest request) {
         request = beforeClientExecution(request);
         return executeGetWorkingLocation(request);
@@ -1476,6 +1495,7 @@ public class AWSFinSpaceDataClient extends AmazonWebServiceClient implements AWS
      *      Documentation</a>
      */
     @Override
+    @Deprecated
     public ListChangesetsResult listChangesets(ListChangesetsRequest request) {
         request = beforeClientExecution(request);
         return executeListChangesets(request);
@@ -1542,6 +1562,7 @@ public class AWSFinSpaceDataClient extends AmazonWebServiceClient implements AWS
      *      Documentation</a>
      */
     @Override
+    @Deprecated
     public ListDataViewsResult listDataViews(ListDataViewsRequest request) {
         request = beforeClientExecution(request);
         return executeListDataViews(request);
@@ -1608,6 +1629,7 @@ public class AWSFinSpaceDataClient extends AmazonWebServiceClient implements AWS
      *      Documentation</a>
      */
     @Override
+    @Deprecated
     public ListDatasetsResult listDatasets(ListDatasetsRequest request) {
         request = beforeClientExecution(request);
         return executeListDatasets(request);
@@ -1671,6 +1693,7 @@ public class AWSFinSpaceDataClient extends AmazonWebServiceClient implements AWS
      *      API Documentation</a>
      */
     @Override
+    @Deprecated
     public ListPermissionGroupsResult listPermissionGroups(ListPermissionGroupsRequest request) {
         request = beforeClientExecution(request);
         return executeListPermissionGroups(request);
@@ -1736,6 +1759,7 @@ public class AWSFinSpaceDataClient extends AmazonWebServiceClient implements AWS
      *      target="_top">AWS API Documentation</a>
      */
     @Override
+    @Deprecated
     public ListPermissionGroupsByUserResult listPermissionGroupsByUser(ListPermissionGroupsByUserRequest request) {
         request = beforeClientExecution(request);
         return executeListPermissionGroupsByUser(request);
@@ -1801,6 +1825,7 @@ public class AWSFinSpaceDataClient extends AmazonWebServiceClient implements AWS
      *      Documentation</a>
      */
     @Override
+    @Deprecated
     public ListUsersResult listUsers(ListUsersRequest request) {
         request = beforeClientExecution(request);
         return executeListUsers(request);
@@ -1866,6 +1891,7 @@ public class AWSFinSpaceDataClient extends AmazonWebServiceClient implements AWS
      *      target="_top">AWS API Documentation</a>
      */
     @Override
+    @Deprecated
     public ListUsersByPermissionGroupResult listUsersByPermissionGroup(ListUsersByPermissionGroupRequest request) {
         request = beforeClientExecution(request);
         return executeListUsersByPermissionGroup(request);
@@ -1936,6 +1962,7 @@ public class AWSFinSpaceDataClient extends AmazonWebServiceClient implements AWS
      *      Documentation</a>
      */
     @Override
+    @Deprecated
     public ResetUserPasswordResult resetUserPassword(ResetUserPasswordRequest request) {
         request = beforeClientExecution(request);
         return executeResetUserPassword(request);
@@ -2004,6 +2031,7 @@ public class AWSFinSpaceDataClient extends AmazonWebServiceClient implements AWS
      *      Documentation</a>
      */
     @Override
+    @Deprecated
     public UpdateChangesetResult updateChangeset(UpdateChangesetRequest request) {
         request = beforeClientExecution(request);
         return executeUpdateChangeset(request);
@@ -2072,6 +2100,7 @@ public class AWSFinSpaceDataClient extends AmazonWebServiceClient implements AWS
      *      Documentation</a>
      */
     @Override
+    @Deprecated
     public UpdateDatasetResult updateDataset(UpdateDatasetRequest request) {
         request = beforeClientExecution(request);
         return executeUpdateDataset(request);
@@ -2139,6 +2168,7 @@ public class AWSFinSpaceDataClient extends AmazonWebServiceClient implements AWS
      *      API Documentation</a>
      */
     @Override
+    @Deprecated
     public UpdatePermissionGroupResult updatePermissionGroup(UpdatePermissionGroupRequest request) {
         request = beforeClientExecution(request);
         return executeUpdatePermissionGroup(request);
@@ -2207,6 +2237,7 @@ public class AWSFinSpaceDataClient extends AmazonWebServiceClient implements AWS
      *      Documentation</a>
      */
     @Override
+    @Deprecated
     public UpdateUserResult updateUser(UpdateUserRequest request) {
         request = beforeClientExecution(request);
         return executeUpdateUser(request);

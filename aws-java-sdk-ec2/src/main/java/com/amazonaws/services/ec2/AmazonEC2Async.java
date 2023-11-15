@@ -13572,6 +13572,37 @@ public interface AmazonEC2Async extends AmazonEC2 {
 
     /**
      * <p>
+     * Describes the lock status for a snapshot.
+     * </p>
+     * 
+     * @param describeLockedSnapshotsRequest
+     * @return A Java Future containing the result of the DescribeLockedSnapshots operation returned by the service.
+     * @sample AmazonEC2Async.DescribeLockedSnapshots
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeLockedSnapshots" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeLockedSnapshotsResult> describeLockedSnapshotsAsync(DescribeLockedSnapshotsRequest describeLockedSnapshotsRequest);
+
+    /**
+     * <p>
+     * Describes the lock status for a snapshot.
+     * </p>
+     * 
+     * @param describeLockedSnapshotsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeLockedSnapshots operation returned by the service.
+     * @sample AmazonEC2AsyncHandler.DescribeLockedSnapshots
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeLockedSnapshots" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeLockedSnapshotsResult> describeLockedSnapshotsAsync(DescribeLockedSnapshotsRequest describeLockedSnapshotsRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeLockedSnapshotsRequest, DescribeLockedSnapshotsResult> asyncHandler);
+
+    /**
+     * <p>
      * Describes your managed prefix lists and any Amazon Web Services-managed prefix lists.
      * </p>
      * <p>
@@ -22148,6 +22179,87 @@ public interface AmazonEC2Async extends AmazonEC2 {
 
     /**
      * <p>
+     * Locks an Amazon EBS snapshot in either <i>governance</i> or <i>compliance</i> mode to protect it against
+     * accidental or malicious deletions for a specific duration. A locked snapshot can't be deleted.
+     * </p>
+     * <p>
+     * You can also use this action to modify the lock settings for a snapshot that is already locked. The allowed
+     * modifications depend on the lock mode and lock state:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * If the snapshot is locked in governance mode, you can modify the lock mode and the lock duration or lock
+     * expiration date.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If the snapshot is locked in compliance mode and it is in the cooling-off period, you can modify the lock mode
+     * and the lock duration or lock expiration date.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If the snapshot is locked in compliance mode and the cooling-off period has lapsed, you can only increase the
+     * lock duration or extend the lock expiration date.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param lockSnapshotRequest
+     * @return A Java Future containing the result of the LockSnapshot operation returned by the service.
+     * @sample AmazonEC2Async.LockSnapshot
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/LockSnapshot" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<LockSnapshotResult> lockSnapshotAsync(LockSnapshotRequest lockSnapshotRequest);
+
+    /**
+     * <p>
+     * Locks an Amazon EBS snapshot in either <i>governance</i> or <i>compliance</i> mode to protect it against
+     * accidental or malicious deletions for a specific duration. A locked snapshot can't be deleted.
+     * </p>
+     * <p>
+     * You can also use this action to modify the lock settings for a snapshot that is already locked. The allowed
+     * modifications depend on the lock mode and lock state:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * If the snapshot is locked in governance mode, you can modify the lock mode and the lock duration or lock
+     * expiration date.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If the snapshot is locked in compliance mode and it is in the cooling-off period, you can modify the lock mode
+     * and the lock duration or lock expiration date.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If the snapshot is locked in compliance mode and the cooling-off period has lapsed, you can only increase the
+     * lock duration or extend the lock expiration date.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param lockSnapshotRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the LockSnapshot operation returned by the service.
+     * @sample AmazonEC2AsyncHandler.LockSnapshot
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/LockSnapshot" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<LockSnapshotResult> lockSnapshotAsync(LockSnapshotRequest lockSnapshotRequest,
+            com.amazonaws.handlers.AsyncHandler<LockSnapshotRequest, LockSnapshotResult> asyncHandler);
+
+    /**
+     * <p>
      * Modifies an attribute of the specified Elastic IP address. For requirements, see <a href=
      * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html#Using_Elastic_Addressing_Reverse_DNS"
      * >Using reverse DNS for email applications</a>.
@@ -28678,6 +28790,41 @@ public interface AmazonEC2Async extends AmazonEC2 {
     java.util.concurrent.Future<UnassignPrivateNatGatewayAddressResult> unassignPrivateNatGatewayAddressAsync(
             UnassignPrivateNatGatewayAddressRequest unassignPrivateNatGatewayAddressRequest,
             com.amazonaws.handlers.AsyncHandler<UnassignPrivateNatGatewayAddressRequest, UnassignPrivateNatGatewayAddressResult> asyncHandler);
+
+    /**
+     * <p>
+     * Unlocks a snapshot that is locked in governance mode or that is locked in compliance mode but still in the
+     * cooling-off period. You can't unlock a snapshot that is locked in compliance mode after the cooling-off period
+     * has expired.
+     * </p>
+     * 
+     * @param unlockSnapshotRequest
+     * @return A Java Future containing the result of the UnlockSnapshot operation returned by the service.
+     * @sample AmazonEC2Async.UnlockSnapshot
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/UnlockSnapshot" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<UnlockSnapshotResult> unlockSnapshotAsync(UnlockSnapshotRequest unlockSnapshotRequest);
+
+    /**
+     * <p>
+     * Unlocks a snapshot that is locked in governance mode or that is locked in compliance mode but still in the
+     * cooling-off period. You can't unlock a snapshot that is locked in compliance mode after the cooling-off period
+     * has expired.
+     * </p>
+     * 
+     * @param unlockSnapshotRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UnlockSnapshot operation returned by the service.
+     * @sample AmazonEC2AsyncHandler.UnlockSnapshot
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/UnlockSnapshot" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<UnlockSnapshotResult> unlockSnapshotAsync(UnlockSnapshotRequest unlockSnapshotRequest,
+            com.amazonaws.handlers.AsyncHandler<UnlockSnapshotRequest, UnlockSnapshotResult> asyncHandler);
 
     /**
      * <p>

@@ -110,7 +110,7 @@ public class S3CopyObjectOperation implements Serializable, Cloneable {
     /**
      * <p>
      * Indicates the algorithm that you want Amazon S3 to use to create the checksum. For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/CheckingObjectIntegrity.xml"> Checking object
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html"> Checking object
      * integrity</a> in the <i>Amazon S3 User Guide</i>.
      * </p>
      */
@@ -981,13 +981,13 @@ public class S3CopyObjectOperation implements Serializable, Cloneable {
     /**
      * <p>
      * Indicates the algorithm that you want Amazon S3 to use to create the checksum. For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/CheckingObjectIntegrity.xml"> Checking object
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html"> Checking object
      * integrity</a> in the <i>Amazon S3 User Guide</i>.
      * </p>
      * 
      * @param checksumAlgorithm
      *        Indicates the algorithm that you want Amazon S3 to use to create the checksum. For more information, see
-     *        <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/CheckingObjectIntegrity.xml"> Checking
+     *        <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html"> Checking
      *        object integrity</a> in the <i>Amazon S3 User Guide</i>.
      * @see S3ChecksumAlgorithm
      */
@@ -999,12 +999,12 @@ public class S3CopyObjectOperation implements Serializable, Cloneable {
     /**
      * <p>
      * Indicates the algorithm that you want Amazon S3 to use to create the checksum. For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/CheckingObjectIntegrity.xml"> Checking object
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html"> Checking object
      * integrity</a> in the <i>Amazon S3 User Guide</i>.
      * </p>
      * 
      * @return Indicates the algorithm that you want Amazon S3 to use to create the checksum. For more information, see
-     *         <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/CheckingObjectIntegrity.xml"> Checking
+     *         <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html"> Checking
      *         object integrity</a> in the <i>Amazon S3 User Guide</i>.
      * @see S3ChecksumAlgorithm
      */
@@ -1016,13 +1016,13 @@ public class S3CopyObjectOperation implements Serializable, Cloneable {
     /**
      * <p>
      * Indicates the algorithm that you want Amazon S3 to use to create the checksum. For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/CheckingObjectIntegrity.xml"> Checking object
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html"> Checking object
      * integrity</a> in the <i>Amazon S3 User Guide</i>.
      * </p>
      * 
      * @param checksumAlgorithm
      *        Indicates the algorithm that you want Amazon S3 to use to create the checksum. For more information, see
-     *        <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/CheckingObjectIntegrity.xml"> Checking
+     *        <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html"> Checking
      *        object integrity</a> in the <i>Amazon S3 User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see S3ChecksumAlgorithm
@@ -1036,13 +1036,13 @@ public class S3CopyObjectOperation implements Serializable, Cloneable {
     /**
      * <p>
      * Indicates the algorithm that you want Amazon S3 to use to create the checksum. For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/CheckingObjectIntegrity.xml"> Checking object
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html"> Checking object
      * integrity</a> in the <i>Amazon S3 User Guide</i>.
      * </p>
      * 
      * @param checksumAlgorithm
      *        Indicates the algorithm that you want Amazon S3 to use to create the checksum. For more information, see
-     *        <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/CheckingObjectIntegrity.xml"> Checking
+     *        <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html"> Checking
      *        object integrity</a> in the <i>Amazon S3 User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see S3ChecksumAlgorithm

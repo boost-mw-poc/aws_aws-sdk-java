@@ -1143,6 +1143,8 @@ public interface AmazonRedshift {
      *         The <code>ClusterIdentifier</code> parameter does not refer to an existing cluster.
      * @throws CustomCnameAssociationException
      *         An error occurred when an attempt was made to change the custom domain association.
+     * @throws CustomDomainAssociationNotFoundException
+     *         An error occurred. The custom domain name couldn't be found.
      * @sample AmazonRedshift.DeleteCustomDomainAssociation
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/DeleteCustomDomainAssociation"
      *      target="_top">AWS API Documentation</a>
@@ -2939,6 +2941,8 @@ public interface AmazonRedshift {
      *         The <code>ClusterIdentifier</code> parameter does not refer to an existing cluster.
      * @throws CustomCnameAssociationException
      *         An error occurred when an attempt was made to change the custom domain association.
+     * @throws CustomDomainAssociationNotFoundException
+     *         An error occurred. The custom domain name couldn't be found.
      * @sample AmazonRedshift.ModifyCustomDomainAssociation
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/ModifyCustomDomainAssociation"
      *      target="_top">AWS API Documentation</a>

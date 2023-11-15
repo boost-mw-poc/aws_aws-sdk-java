@@ -53,6 +53,11 @@ public class AbstractAWSS3Control implements AWSS3Control {
     }
 
     @Override
+    public CreateStorageLensGroupResult createStorageLensGroup(CreateStorageLensGroupRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DeleteAccessPointResult deleteAccessPoint(DeleteAccessPointRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -119,6 +124,11 @@ public class AbstractAWSS3Control implements AWSS3Control {
 
     @Override
     public DeleteStorageLensConfigurationTaggingResult deleteStorageLensConfigurationTagging(DeleteStorageLensConfigurationTaggingRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteStorageLensGroupResult deleteStorageLensGroup(DeleteStorageLensGroupRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -238,6 +248,11 @@ public class AbstractAWSS3Control implements AWSS3Control {
     }
 
     @Override
+    public GetStorageLensGroupResult getStorageLensGroup(GetStorageLensGroupRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListAccessPointsResult listAccessPoints(ListAccessPointsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -264,6 +279,16 @@ public class AbstractAWSS3Control implements AWSS3Control {
 
     @Override
     public ListStorageLensConfigurationsResult listStorageLensConfigurations(ListStorageLensConfigurationsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListStorageLensGroupsResult listStorageLensGroups(ListStorageLensGroupsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListTagsForResourceResult listTagsForResource(ListTagsForResourceRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -338,12 +363,27 @@ public class AbstractAWSS3Control implements AWSS3Control {
     }
 
     @Override
+    public TagResourceResult tagResource(TagResourceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UntagResourceResult untagResource(UntagResourceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public UpdateJobPriorityResult updateJobPriority(UpdateJobPriorityRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
     @Override
     public UpdateJobStatusResult updateJobStatus(UpdateJobStatusRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateStorageLensGroupResult updateStorageLensGroup(UpdateStorageLensGroupRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

@@ -790,7 +790,8 @@ public enum InstanceType {
     R7i12xlarge("r7i.12xlarge"),
     R7i16xlarge("r7i.16xlarge"),
     R7i24xlarge("r7i.24xlarge"),
-    R7i48xlarge("r7i.48xlarge");
+    R7i48xlarge("r7i.48xlarge"),
+    Dl2q24xlarge("dl2q.24xlarge");
 
     private String value;
 

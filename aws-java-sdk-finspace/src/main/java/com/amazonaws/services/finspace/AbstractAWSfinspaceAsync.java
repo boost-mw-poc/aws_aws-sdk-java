@@ -28,12 +28,14 @@ public class AbstractAWSfinspaceAsync extends AbstractAWSfinspace implements AWS
     }
 
     @Override
+    @Deprecated
     public java.util.concurrent.Future<CreateEnvironmentResult> createEnvironmentAsync(CreateEnvironmentRequest request) {
 
         return createEnvironmentAsync(request, null);
     }
 
     @Override
+    @Deprecated
     public java.util.concurrent.Future<CreateEnvironmentResult> createEnvironmentAsync(CreateEnvironmentRequest request,
             com.amazonaws.handlers.AsyncHandler<CreateEnvironmentRequest, CreateEnvironmentResult> asyncHandler) {
 
@@ -106,12 +108,14 @@ public class AbstractAWSfinspaceAsync extends AbstractAWSfinspace implements AWS
     }
 
     @Override
+    @Deprecated
     public java.util.concurrent.Future<DeleteEnvironmentResult> deleteEnvironmentAsync(DeleteEnvironmentRequest request) {
 
         return deleteEnvironmentAsync(request, null);
     }
 
     @Override
+    @Deprecated
     public java.util.concurrent.Future<DeleteEnvironmentResult> deleteEnvironmentAsync(DeleteEnvironmentRequest request,
             com.amazonaws.handlers.AsyncHandler<DeleteEnvironmentRequest, DeleteEnvironmentResult> asyncHandler) {
 
@@ -171,12 +175,14 @@ public class AbstractAWSfinspaceAsync extends AbstractAWSfinspace implements AWS
     }
 
     @Override
+    @Deprecated
     public java.util.concurrent.Future<GetEnvironmentResult> getEnvironmentAsync(GetEnvironmentRequest request) {
 
         return getEnvironmentAsync(request, null);
     }
 
     @Override
+    @Deprecated
     public java.util.concurrent.Future<GetEnvironmentResult> getEnvironmentAsync(GetEnvironmentRequest request,
             com.amazonaws.handlers.AsyncHandler<GetEnvironmentRequest, GetEnvironmentResult> asyncHandler) {
 
@@ -262,12 +268,14 @@ public class AbstractAWSfinspaceAsync extends AbstractAWSfinspace implements AWS
     }
 
     @Override
+    @Deprecated
     public java.util.concurrent.Future<ListEnvironmentsResult> listEnvironmentsAsync(ListEnvironmentsRequest request) {
 
         return listEnvironmentsAsync(request, null);
     }
 
     @Override
+    @Deprecated
     public java.util.concurrent.Future<ListEnvironmentsResult> listEnvironmentsAsync(ListEnvironmentsRequest request,
             com.amazonaws.handlers.AsyncHandler<ListEnvironmentsRequest, ListEnvironmentsResult> asyncHandler) {
 
@@ -392,12 +400,14 @@ public class AbstractAWSfinspaceAsync extends AbstractAWSfinspace implements AWS
     }
 
     @Override
+    @Deprecated
     public java.util.concurrent.Future<UpdateEnvironmentResult> updateEnvironmentAsync(UpdateEnvironmentRequest request) {
 
         return updateEnvironmentAsync(request, null);
     }
 
     @Override
+    @Deprecated
     public java.util.concurrent.Future<UpdateEnvironmentResult> updateEnvironmentAsync(UpdateEnvironmentRequest request,
             com.amazonaws.handlers.AsyncHandler<UpdateEnvironmentRequest, UpdateEnvironmentResult> asyncHandler) {
 

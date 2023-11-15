@@ -95,6 +95,10 @@ public class UpdateEventDataStoreResultJsonUnmarshaller implements Unmarshaller<
                     context.nextToken();
                     updateEventDataStoreResult.setKmsKeyId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("BillingMode", targetDepth)) {
+                    context.nextToken();
+                    updateEventDataStoreResult.setBillingMode(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)
