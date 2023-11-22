@@ -81,7 +81,7 @@ public class StoppingCondition implements Serializable, Cloneable, StructuredPoj
     private Integer maxWaitTimeInSeconds;
     /**
      * <p>
-     * The maximum pending time in seconds.
+     * The maximum length of time, in seconds, that a training or compilation job can be pending before it is stopped.
      * </p>
      */
     private Integer maxPendingTimeInSeconds;
@@ -288,11 +288,12 @@ public class StoppingCondition implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The maximum pending time in seconds.
+     * The maximum length of time, in seconds, that a training or compilation job can be pending before it is stopped.
      * </p>
      * 
      * @param maxPendingTimeInSeconds
-     *        The maximum pending time in seconds.
+     *        The maximum length of time, in seconds, that a training or compilation job can be pending before it is
+     *        stopped.
      */
 
     public void setMaxPendingTimeInSeconds(Integer maxPendingTimeInSeconds) {
@@ -301,10 +302,11 @@ public class StoppingCondition implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The maximum pending time in seconds.
+     * The maximum length of time, in seconds, that a training or compilation job can be pending before it is stopped.
      * </p>
      * 
-     * @return The maximum pending time in seconds.
+     * @return The maximum length of time, in seconds, that a training or compilation job can be pending before it is
+     *         stopped.
      */
 
     public Integer getMaxPendingTimeInSeconds() {
@@ -313,11 +315,12 @@ public class StoppingCondition implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The maximum pending time in seconds.
+     * The maximum length of time, in seconds, that a training or compilation job can be pending before it is stopped.
      * </p>
      * 
      * @param maxPendingTimeInSeconds
-     *        The maximum pending time in seconds.
+     *        The maximum length of time, in seconds, that a training or compilation job can be pending before it is
+     *        stopped.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

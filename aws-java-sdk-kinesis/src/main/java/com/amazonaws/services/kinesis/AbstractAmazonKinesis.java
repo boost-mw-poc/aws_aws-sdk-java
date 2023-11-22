@@ -59,6 +59,11 @@ public class AbstractAmazonKinesis implements AmazonKinesis {
     }
 
     @Override
+    public DeleteResourcePolicyResult deleteResourcePolicy(DeleteResourcePolicyRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DeleteStreamResult deleteStream(DeleteStreamRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -120,6 +125,11 @@ public class AbstractAmazonKinesis implements AmazonKinesis {
 
     @Override
     public GetRecordsResult getRecords(GetRecordsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetResourcePolicyResult getResourcePolicy(GetResourcePolicyRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -207,6 +217,11 @@ public class AbstractAmazonKinesis implements AmazonKinesis {
 
     @Override
     public PutRecordsResult putRecords(PutRecordsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public PutResourcePolicyResult putResourcePolicy(PutResourcePolicyRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

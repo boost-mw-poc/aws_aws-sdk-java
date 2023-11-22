@@ -684,6 +684,70 @@ public class CreateJobRequestMarshaller implements Marshaller<Request<CreateJobR
                                             }
                                             xmlWriter.endElement();
                                         }
+
+                                        {
+                                            KeyNameConstraint keyNameConstraint = filter.getKeyNameConstraint();
+                                            if (keyNameConstraint != null) {
+                                                xmlWriter.startElement("KeyNameConstraint");
+
+                                                java.util.List<String> keyNameConstraintMatchAnyPrefixList = keyNameConstraint.getMatchAnyPrefix();
+                                                if (keyNameConstraintMatchAnyPrefixList != null) {
+                                                    xmlWriter.startElement("MatchAnyPrefix");
+
+                                                    for (String keyNameConstraintMatchAnyPrefixListValue : keyNameConstraintMatchAnyPrefixList) {
+                                                        xmlWriter.startElement("member");
+                                                        xmlWriter.value(keyNameConstraintMatchAnyPrefixListValue);
+                                                        xmlWriter.endElement();
+                                                    }
+                                                    xmlWriter.endElement();
+                                                }
+
+                                                java.util.List<String> keyNameConstraintMatchAnySuffixList = keyNameConstraint.getMatchAnySuffix();
+                                                if (keyNameConstraintMatchAnySuffixList != null) {
+                                                    xmlWriter.startElement("MatchAnySuffix");
+
+                                                    for (String keyNameConstraintMatchAnySuffixListValue : keyNameConstraintMatchAnySuffixList) {
+                                                        xmlWriter.startElement("member");
+                                                        xmlWriter.value(keyNameConstraintMatchAnySuffixListValue);
+                                                        xmlWriter.endElement();
+                                                    }
+                                                    xmlWriter.endElement();
+                                                }
+
+                                                java.util.List<String> keyNameConstraintMatchAnySubstringList = keyNameConstraint.getMatchAnySubstring();
+                                                if (keyNameConstraintMatchAnySubstringList != null) {
+                                                    xmlWriter.startElement("MatchAnySubstring");
+
+                                                    for (String keyNameConstraintMatchAnySubstringListValue : keyNameConstraintMatchAnySubstringList) {
+                                                        xmlWriter.startElement("member");
+                                                        xmlWriter.value(keyNameConstraintMatchAnySubstringListValue);
+                                                        xmlWriter.endElement();
+                                                    }
+                                                    xmlWriter.endElement();
+                                                }
+                                                xmlWriter.endElement();
+                                            }
+                                        }
+
+                                        if (filter.getObjectSizeGreaterThanBytes() != null) {
+                                            xmlWriter.startElement("ObjectSizeGreaterThanBytes").value(filter.getObjectSizeGreaterThanBytes()).endElement();
+                                        }
+
+                                        if (filter.getObjectSizeLessThanBytes() != null) {
+                                            xmlWriter.startElement("ObjectSizeLessThanBytes").value(filter.getObjectSizeLessThanBytes()).endElement();
+                                        }
+
+                                        java.util.List<String> jobManifestGeneratorFilterMatchAnyStorageClassList = filter.getMatchAnyStorageClass();
+                                        if (jobManifestGeneratorFilterMatchAnyStorageClassList != null) {
+                                            xmlWriter.startElement("MatchAnyStorageClass");
+
+                                            for (String jobManifestGeneratorFilterMatchAnyStorageClassListValue : jobManifestGeneratorFilterMatchAnyStorageClassList) {
+                                                xmlWriter.startElement("member");
+                                                xmlWriter.value(jobManifestGeneratorFilterMatchAnyStorageClassListValue);
+                                                xmlWriter.endElement();
+                                            }
+                                            xmlWriter.endElement();
+                                        }
                                         xmlWriter.endElement();
                                     }
                                 }

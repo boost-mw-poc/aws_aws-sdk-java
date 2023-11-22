@@ -40,8 +40,8 @@ public interface AmazonKinesisAsync extends AmazonKinesis {
      * </p>
      * <note>
      * <p>
-     * When invoking this API, it is recommended you use the <code>StreamARN</code> input parameter rather than the
-     * <code>StreamName</code> input parameter.
+     * When invoking this API, you must use either the <code>StreamARN</code> or the <code>StreamName</code> parameter,
+     * or both. It is recommended that you use the <code>StreamARN</code> input parameter when you invoke this API.
      * </p>
      * </note>
      * <p>
@@ -67,8 +67,8 @@ public interface AmazonKinesisAsync extends AmazonKinesis {
      * </p>
      * <note>
      * <p>
-     * When invoking this API, it is recommended you use the <code>StreamARN</code> input parameter rather than the
-     * <code>StreamName</code> input parameter.
+     * When invoking this API, you must use either the <code>StreamARN</code> or the <code>StreamName</code> parameter,
+     * or both. It is recommended that you use the <code>StreamARN</code> input parameter when you invoke this API.
      * </p>
      * </note>
      * <p>
@@ -254,8 +254,8 @@ public interface AmazonKinesisAsync extends AmazonKinesis {
      * </p>
      * <note>
      * <p>
-     * When invoking this API, it is recommended you use the <code>StreamARN</code> input parameter rather than the
-     * <code>StreamName</code> input parameter.
+     * When invoking this API, you must use either the <code>StreamARN</code> or the <code>StreamName</code> parameter,
+     * or both. It is recommended that you use the <code>StreamARN</code> input parameter when you invoke this API.
      * </p>
      * </note>
      * <p>
@@ -281,8 +281,8 @@ public interface AmazonKinesisAsync extends AmazonKinesis {
      * </p>
      * <note>
      * <p>
-     * When invoking this API, it is recommended you use the <code>StreamARN</code> input parameter rather than the
-     * <code>StreamName</code> input parameter.
+     * When invoking this API, you must use either the <code>StreamARN</code> or the <code>StreamName</code> parameter,
+     * or both. It is recommended that you use the <code>StreamARN</code> input parameter when you invoke this API.
      * </p>
      * </note>
      * <p>
@@ -308,14 +308,71 @@ public interface AmazonKinesisAsync extends AmazonKinesis {
 
     /**
      * <p>
+     * Delete a policy for the specified data stream or consumer. Request patterns can be one of the following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Data stream pattern: <code>arn:aws.*:kinesis:.*:\d{12}:.*stream/\S+</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Consumer pattern:
+     * <code>^(arn):aws.*:kinesis:.*:\d{12}:.*stream\/[a-zA-Z0-9_.-]+\/consumer\/[a-zA-Z0-9_.-]+:[0-9]+</code>
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param deleteResourcePolicyRequest
+     * @return A Java Future containing the result of the DeleteResourcePolicy operation returned by the service.
+     * @sample AmazonKinesisAsync.DeleteResourcePolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kinesis-2013-12-02/DeleteResourcePolicy" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteResourcePolicyResult> deleteResourcePolicyAsync(DeleteResourcePolicyRequest deleteResourcePolicyRequest);
+
+    /**
+     * <p>
+     * Delete a policy for the specified data stream or consumer. Request patterns can be one of the following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Data stream pattern: <code>arn:aws.*:kinesis:.*:\d{12}:.*stream/\S+</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Consumer pattern:
+     * <code>^(arn):aws.*:kinesis:.*:\d{12}:.*stream\/[a-zA-Z0-9_.-]+\/consumer\/[a-zA-Z0-9_.-]+:[0-9]+</code>
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param deleteResourcePolicyRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteResourcePolicy operation returned by the service.
+     * @sample AmazonKinesisAsyncHandler.DeleteResourcePolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kinesis-2013-12-02/DeleteResourcePolicy" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteResourcePolicyResult> deleteResourcePolicyAsync(DeleteResourcePolicyRequest deleteResourcePolicyRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteResourcePolicyRequest, DeleteResourcePolicyResult> asyncHandler);
+
+    /**
+     * <p>
      * Deletes a Kinesis data stream and all its shards and data. You must shut down any applications that are operating
      * on the stream before you delete the stream. If an application attempts to operate on a deleted stream, it
      * receives the exception <code>ResourceNotFoundException</code>.
      * </p>
      * <note>
      * <p>
-     * When invoking this API, it is recommended you use the <code>StreamARN</code> input parameter rather than the
-     * <code>StreamName</code> input parameter.
+     * When invoking this API, you must use either the <code>StreamARN</code> or the <code>StreamName</code> parameter,
+     * or both. It is recommended that you use the <code>StreamARN</code> input parameter when you invoke this API.
      * </p>
      * </note>
      * <p>
@@ -356,8 +413,8 @@ public interface AmazonKinesisAsync extends AmazonKinesis {
      * </p>
      * <note>
      * <p>
-     * When invoking this API, it is recommended you use the <code>StreamARN</code> input parameter rather than the
-     * <code>StreamName</code> input parameter.
+     * When invoking this API, you must use either the <code>StreamARN</code> or the <code>StreamName</code> parameter,
+     * or both. It is recommended that you use the <code>StreamARN</code> input parameter when you invoke this API.
      * </p>
      * </note>
      * <p>
@@ -510,8 +567,8 @@ public interface AmazonKinesisAsync extends AmazonKinesis {
      * </p>
      * </note> <note>
      * <p>
-     * When invoking this API, it is recommended you use the <code>StreamARN</code> input parameter rather than the
-     * <code>StreamName</code> input parameter.
+     * When invoking this API, you must use either the <code>StreamARN</code> or the <code>StreamName</code> parameter,
+     * or both. It is recommended that you use the <code>StreamARN</code> input parameter when you invoke this API.
      * </p>
      * </note>
      * <p>
@@ -555,8 +612,8 @@ public interface AmazonKinesisAsync extends AmazonKinesis {
      * </p>
      * </note> <note>
      * <p>
-     * When invoking this API, it is recommended you use the <code>StreamARN</code> input parameter rather than the
-     * <code>StreamName</code> input parameter.
+     * When invoking this API, you must use either the <code>StreamARN</code> or the <code>StreamName</code> parameter,
+     * or both. It is recommended that you use the <code>StreamARN</code> input parameter when you invoke this API.
      * </p>
      * </note>
      * <p>
@@ -649,6 +706,12 @@ public interface AmazonKinesisAsync extends AmazonKinesis {
      * <p>
      * This operation has a limit of 20 transactions per second per stream.
      * </p>
+     * <note>
+     * <p>
+     * When making a cross-account call with <code>DescribeStreamConsumer</code>, make sure to provide the ARN of the
+     * consumer.
+     * </p>
+     * </note>
      * 
      * @param describeStreamConsumerRequest
      * @return A Java Future containing the result of the DescribeStreamConsumer operation returned by the service.
@@ -669,6 +732,12 @@ public interface AmazonKinesisAsync extends AmazonKinesis {
      * <p>
      * This operation has a limit of 20 transactions per second per stream.
      * </p>
+     * <note>
+     * <p>
+     * When making a cross-account call with <code>DescribeStreamConsumer</code>, make sure to provide the ARN of the
+     * consumer.
+     * </p>
+     * </note>
      * 
      * @param describeStreamConsumerRequest
      * @param asyncHandler
@@ -689,8 +758,8 @@ public interface AmazonKinesisAsync extends AmazonKinesis {
      * </p>
      * <note>
      * <p>
-     * When invoking this API, it is recommended you use the <code>StreamARN</code> input parameter rather than the
-     * <code>StreamName</code> input parameter.
+     * When invoking this API, you must use either the <code>StreamARN</code> or the <code>StreamName</code> parameter,
+     * or both. It is recommended that you use the <code>StreamARN</code> input parameter when you invoke this API.
      * </p>
      * </note>
      * <p>
@@ -715,8 +784,8 @@ public interface AmazonKinesisAsync extends AmazonKinesis {
      * </p>
      * <note>
      * <p>
-     * When invoking this API, it is recommended you use the <code>StreamARN</code> input parameter rather than the
-     * <code>StreamName</code> input parameter.
+     * When invoking this API, you must use either the <code>StreamARN</code> or the <code>StreamName</code> parameter,
+     * or both. It is recommended that you use the <code>StreamARN</code> input parameter when you invoke this API.
      * </p>
      * </note>
      * <p>
@@ -746,8 +815,8 @@ public interface AmazonKinesisAsync extends AmazonKinesis {
      * </p>
      * <note>
      * <p>
-     * When invoking this API, it is recommended you use the <code>StreamARN</code> input parameter rather than the
-     * <code>StreamName</code> input parameter.
+     * When invoking this API, you must use either the <code>StreamARN</code> or the <code>StreamName</code> parameter,
+     * or both. It is recommended that you use the <code>StreamARN</code> input parameter when you invoke this API.
      * </p>
      * </note>
      * 
@@ -767,8 +836,8 @@ public interface AmazonKinesisAsync extends AmazonKinesis {
      * </p>
      * <note>
      * <p>
-     * When invoking this API, it is recommended you use the <code>StreamARN</code> input parameter rather than the
-     * <code>StreamName</code> input parameter.
+     * When invoking this API, you must use either the <code>StreamARN</code> or the <code>StreamName</code> parameter,
+     * or both. It is recommended that you use the <code>StreamARN</code> input parameter when you invoke this API.
      * </p>
      * </note>
      * 
@@ -793,8 +862,8 @@ public interface AmazonKinesisAsync extends AmazonKinesis {
      * </p>
      * <note>
      * <p>
-     * When invoking this API, it is recommended you use the <code>StreamARN</code> input parameter rather than the
-     * <code>StreamName</code> input parameter.
+     * When invoking this API, you must use either the <code>StreamARN</code> or the <code>StreamName</code> parameter,
+     * or both. It is recommended that you use the <code>StreamARN</code> input parameter when you invoke this API.
      * </p>
      * </note>
      * 
@@ -813,8 +882,8 @@ public interface AmazonKinesisAsync extends AmazonKinesis {
      * </p>
      * <note>
      * <p>
-     * When invoking this API, it is recommended you use the <code>StreamARN</code> input parameter rather than the
-     * <code>StreamName</code> input parameter.
+     * When invoking this API, you must use either the <code>StreamARN</code> or the <code>StreamName</code> parameter,
+     * or both. It is recommended that you use the <code>StreamARN</code> input parameter when you invoke this API.
      * </p>
      * </note>
      * 
@@ -838,8 +907,8 @@ public interface AmazonKinesisAsync extends AmazonKinesis {
      * </p>
      * <note>
      * <p>
-     * When invoking this API, it is recommended you use the <code>StreamARN</code> input parameter in addition to the
-     * <code>ShardIterator</code> parameter.
+     * When invoking this API, you must use either the <code>StreamARN</code> or the <code>StreamName</code> parameter,
+     * or both. It is recommended that you use the <code>StreamARN</code> input parameter when you invoke this API.
      * </p>
      * </note>
      * <p>
@@ -911,8 +980,8 @@ public interface AmazonKinesisAsync extends AmazonKinesis {
      * </p>
      * <note>
      * <p>
-     * When invoking this API, it is recommended you use the <code>StreamARN</code> input parameter in addition to the
-     * <code>ShardIterator</code> parameter.
+     * When invoking this API, you must use either the <code>StreamARN</code> or the <code>StreamName</code> parameter,
+     * or both. It is recommended that you use the <code>StreamARN</code> input parameter when you invoke this API.
      * </p>
      * </note>
      * <p>
@@ -985,12 +1054,69 @@ public interface AmazonKinesisAsync extends AmazonKinesis {
 
     /**
      * <p>
+     * Returns a policy attached to the specified data stream or consumer. Request patterns can be one of the following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Data stream pattern: <code>arn:aws.*:kinesis:.*:\d{12}:.*stream/\S+</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Consumer pattern:
+     * <code>^(arn):aws.*:kinesis:.*:\d{12}:.*stream\/[a-zA-Z0-9_.-]+\/consumer\/[a-zA-Z0-9_.-]+:[0-9]+</code>
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param getResourcePolicyRequest
+     * @return A Java Future containing the result of the GetResourcePolicy operation returned by the service.
+     * @sample AmazonKinesisAsync.GetResourcePolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kinesis-2013-12-02/GetResourcePolicy" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetResourcePolicyResult> getResourcePolicyAsync(GetResourcePolicyRequest getResourcePolicyRequest);
+
+    /**
+     * <p>
+     * Returns a policy attached to the specified data stream or consumer. Request patterns can be one of the following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Data stream pattern: <code>arn:aws.*:kinesis:.*:\d{12}:.*stream/\S+</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Consumer pattern:
+     * <code>^(arn):aws.*:kinesis:.*:\d{12}:.*stream\/[a-zA-Z0-9_.-]+\/consumer\/[a-zA-Z0-9_.-]+:[0-9]+</code>
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param getResourcePolicyRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetResourcePolicy operation returned by the service.
+     * @sample AmazonKinesisAsyncHandler.GetResourcePolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kinesis-2013-12-02/GetResourcePolicy" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetResourcePolicyResult> getResourcePolicyAsync(GetResourcePolicyRequest getResourcePolicyRequest,
+            com.amazonaws.handlers.AsyncHandler<GetResourcePolicyRequest, GetResourcePolicyResult> asyncHandler);
+
+    /**
+     * <p>
      * Gets an Amazon Kinesis shard iterator. A shard iterator expires 5 minutes after it is returned to the requester.
      * </p>
      * <note>
      * <p>
-     * When invoking this API, it is recommended you use the <code>StreamARN</code> input parameter rather than the
-     * <code>StreamName</code> input parameter.
+     * When invoking this API, you must use either the <code>StreamARN</code> or the <code>StreamName</code> parameter,
+     * or both. It is recommended that you use the <code>StreamARN</code> input parameter when you invoke this API.
      * </p>
      * </note>
      * <p>
@@ -1047,8 +1173,8 @@ public interface AmazonKinesisAsync extends AmazonKinesis {
      * </p>
      * <note>
      * <p>
-     * When invoking this API, it is recommended you use the <code>StreamARN</code> input parameter rather than the
-     * <code>StreamName</code> input parameter.
+     * When invoking this API, you must use either the <code>StreamARN</code> or the <code>StreamName</code> parameter,
+     * or both. It is recommended that you use the <code>StreamARN</code> input parameter when you invoke this API.
      * </p>
      * </note>
      * <p>
@@ -1142,8 +1268,8 @@ public interface AmazonKinesisAsync extends AmazonKinesis {
      * </p>
      * <note>
      * <p>
-     * When invoking this API, it is recommended you use the <code>StreamARN</code> input parameter rather than the
-     * <code>StreamName</code> input parameter.
+     * When invoking this API, you must use either the <code>StreamARN</code> or the <code>StreamName</code> parameter,
+     * or both. It is recommended that you use the <code>StreamARN</code> input parameter when you invoke this API.
      * </p>
      * </note>
      * <p>
@@ -1172,8 +1298,8 @@ public interface AmazonKinesisAsync extends AmazonKinesis {
      * </p>
      * <note>
      * <p>
-     * When invoking this API, it is recommended you use the <code>StreamARN</code> input parameter rather than the
-     * <code>StreamName</code> input parameter.
+     * When invoking this API, you must use either the <code>StreamARN</code> or the <code>StreamName</code> parameter,
+     * or both. It is recommended that you use the <code>StreamARN</code> input parameter when you invoke this API.
      * </p>
      * </note>
      * <p>
@@ -1207,8 +1333,8 @@ public interface AmazonKinesisAsync extends AmazonKinesis {
      * </p>
      * <note>
      * <p>
-     * When invoking this API, it is recommended you use the <code>StreamARN</code> input parameter rather than the
-     * <code>StreamName</code> input parameter.
+     * When invoking this API, you must use either the <code>StreamARN</code> or the <code>StreamName</code> parameter,
+     * or both. It is recommended that you use the <code>StreamARN</code> input parameter when you invoke this API.
      * </p>
      * </note>
      * <p>
@@ -1240,8 +1366,8 @@ public interface AmazonKinesisAsync extends AmazonKinesis {
      * </p>
      * <note>
      * <p>
-     * When invoking this API, it is recommended you use the <code>StreamARN</code> input parameter rather than the
-     * <code>StreamName</code> input parameter.
+     * When invoking this API, you must use either the <code>StreamARN</code> or the <code>StreamName</code> parameter,
+     * or both. It is recommended that you use the <code>StreamARN</code> input parameter when you invoke this API.
      * </p>
      * </note>
      * <p>
@@ -1424,8 +1550,8 @@ public interface AmazonKinesisAsync extends AmazonKinesis {
      * </p>
      * <note>
      * <p>
-     * When invoking this API, it is recommended you use the <code>StreamARN</code> input parameter rather than the
-     * <code>StreamName</code> input parameter.
+     * When invoking this API, you must use either the <code>StreamARN</code> or the <code>StreamName</code> parameter,
+     * or both. It is recommended that you use the <code>StreamARN</code> input parameter when you invoke this API.
      * </p>
      * </note>
      * 
@@ -1445,8 +1571,8 @@ public interface AmazonKinesisAsync extends AmazonKinesis {
      * </p>
      * <note>
      * <p>
-     * When invoking this API, it is recommended you use the <code>StreamARN</code> input parameter rather than the
-     * <code>StreamName</code> input parameter.
+     * When invoking this API, you must use either the <code>StreamARN</code> or the <code>StreamName</code> parameter,
+     * or both. It is recommended that you use the <code>StreamARN</code> input parameter when you invoke this API.
      * </p>
      * </note>
      * 
@@ -1476,8 +1602,8 @@ public interface AmazonKinesisAsync extends AmazonKinesis {
      * </p>
      * <note>
      * <p>
-     * When invoking this API, it is recommended you use the <code>StreamARN</code> input parameter rather than the
-     * <code>StreamName</code> input parameter.
+     * When invoking this API, you must use either the <code>StreamARN</code> or the <code>StreamName</code> parameter,
+     * or both. It is recommended that you use the <code>StreamARN</code> input parameter when you invoke this API.
      * </p>
      * </note>
      * <p>
@@ -1537,8 +1663,8 @@ public interface AmazonKinesisAsync extends AmazonKinesis {
      * </p>
      * <note>
      * <p>
-     * When invoking this API, it is recommended you use the <code>StreamARN</code> input parameter rather than the
-     * <code>StreamName</code> input parameter.
+     * When invoking this API, you must use either the <code>StreamARN</code> or the <code>StreamName</code> parameter,
+     * or both. It is recommended that you use the <code>StreamARN</code> input parameter when you invoke this API.
      * </p>
      * </note>
      * <p>
@@ -1614,8 +1740,8 @@ public interface AmazonKinesisAsync extends AmazonKinesis {
      * </p>
      * <note>
      * <p>
-     * When invoking this API, it is recommended you use the <code>StreamARN</code> input parameter rather than the
-     * <code>StreamName</code> input parameter.
+     * When invoking this API, you must use either the <code>StreamARN</code> or the <code>StreamName</code> parameter,
+     * or both. It is recommended that you use the <code>StreamARN</code> input parameter when you invoke this API.
      * </p>
      * </note>
      * <p>
@@ -1682,8 +1808,8 @@ public interface AmazonKinesisAsync extends AmazonKinesis {
      * </p>
      * <note>
      * <p>
-     * When invoking this API, it is recommended you use the <code>StreamARN</code> input parameter rather than the
-     * <code>StreamName</code> input parameter.
+     * When invoking this API, you must use either the <code>StreamARN</code> or the <code>StreamName</code> parameter,
+     * or both. It is recommended that you use the <code>StreamARN</code> input parameter when you invoke this API.
      * </p>
      * </note>
      * <p>
@@ -1786,8 +1912,8 @@ public interface AmazonKinesisAsync extends AmazonKinesis {
      * </p>
      * <note>
      * <p>
-     * When invoking this API, it is recommended you use the <code>StreamARN</code> input parameter rather than the
-     * <code>StreamName</code> input parameter.
+     * When invoking this API, you must use either the <code>StreamARN</code> or the <code>StreamName</code> parameter,
+     * or both. It is recommended that you use the <code>StreamARN</code> input parameter when you invoke this API.
      * </p>
      * </note>
      * <p>
@@ -1875,8 +2001,8 @@ public interface AmazonKinesisAsync extends AmazonKinesis {
      * </p>
      * <note>
      * <p>
-     * When invoking this API, it is recommended you use the <code>StreamARN</code> input parameter rather than the
-     * <code>StreamName</code> input parameter.
+     * When invoking this API, you must use either the <code>StreamARN</code> or the <code>StreamName</code> parameter,
+     * or both. It is recommended that you use the <code>StreamARN</code> input parameter when you invoke this API.
      * </p>
      * </note>
      * <p>
@@ -1963,6 +2089,89 @@ public interface AmazonKinesisAsync extends AmazonKinesis {
 
     /**
      * <p>
+     * Attaches a resource-based policy to a data stream or registered consumer. If you are using an identity other than
+     * the root user of the Amazon Web Services account that owns the resource, the calling identity must have the
+     * <code>PutResourcePolicy</code> permissions on the specified Kinesis Data Streams resource and belong to the
+     * owner's account in order to use this operation. If you don't have <code>PutResourcePolicy</code> permissions,
+     * Amazon Kinesis Data Streams returns a <code>403 Access Denied error</code>. If you receive a
+     * <code>ResourceNotFoundException</code>, check to see if you passed a valid stream or consumer resource.
+     * </p>
+     * <p>
+     * Request patterns can be one of the following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Data stream pattern: <code>arn:aws.*:kinesis:.*:\d{12}:.*stream/\S+</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Consumer pattern:
+     * <code>^(arn):aws.*:kinesis:.*:\d{12}:.*stream\/[a-zA-Z0-9_.-]+\/consumer\/[a-zA-Z0-9_.-]+:[0-9]+</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/streams/latest/dev/controlling-access.html">Controlling Access to Amazon
+     * Kinesis Data Streams Resources Using IAM</a>.
+     * </p>
+     * 
+     * @param putResourcePolicyRequest
+     * @return A Java Future containing the result of the PutResourcePolicy operation returned by the service.
+     * @sample AmazonKinesisAsync.PutResourcePolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kinesis-2013-12-02/PutResourcePolicy" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<PutResourcePolicyResult> putResourcePolicyAsync(PutResourcePolicyRequest putResourcePolicyRequest);
+
+    /**
+     * <p>
+     * Attaches a resource-based policy to a data stream or registered consumer. If you are using an identity other than
+     * the root user of the Amazon Web Services account that owns the resource, the calling identity must have the
+     * <code>PutResourcePolicy</code> permissions on the specified Kinesis Data Streams resource and belong to the
+     * owner's account in order to use this operation. If you don't have <code>PutResourcePolicy</code> permissions,
+     * Amazon Kinesis Data Streams returns a <code>403 Access Denied error</code>. If you receive a
+     * <code>ResourceNotFoundException</code>, check to see if you passed a valid stream or consumer resource.
+     * </p>
+     * <p>
+     * Request patterns can be one of the following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Data stream pattern: <code>arn:aws.*:kinesis:.*:\d{12}:.*stream/\S+</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Consumer pattern:
+     * <code>^(arn):aws.*:kinesis:.*:\d{12}:.*stream\/[a-zA-Z0-9_.-]+\/consumer\/[a-zA-Z0-9_.-]+:[0-9]+</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/streams/latest/dev/controlling-access.html">Controlling Access to Amazon
+     * Kinesis Data Streams Resources Using IAM</a>.
+     * </p>
+     * 
+     * @param putResourcePolicyRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the PutResourcePolicy operation returned by the service.
+     * @sample AmazonKinesisAsyncHandler.PutResourcePolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kinesis-2013-12-02/PutResourcePolicy" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<PutResourcePolicyResult> putResourcePolicyAsync(PutResourcePolicyRequest putResourcePolicyRequest,
+            com.amazonaws.handlers.AsyncHandler<PutResourcePolicyRequest, PutResourcePolicyResult> asyncHandler);
+
+    /**
+     * <p>
      * Registers a consumer with a Kinesis data stream. When you use this operation, the consumer you register can then
      * call <a>SubscribeToShard</a> to receive data from the stream using enhanced fan-out, at a rate of up to 2 MiB per
      * second for every shard you subscribe to. This rate is unaffected by the total number of consumers that read from
@@ -2035,8 +2244,8 @@ public interface AmazonKinesisAsync extends AmazonKinesis {
      * </p>
      * <note>
      * <p>
-     * When invoking this API, it is recommended you use the <code>StreamARN</code> input parameter rather than the
-     * <code>StreamName</code> input parameter.
+     * When invoking this API, you must use either the <code>StreamARN</code> or the <code>StreamName</code> parameter,
+     * or both. It is recommended that you use the <code>StreamARN</code> input parameter when you invoke this API.
      * </p>
      * </note>
      * <p>
@@ -2062,8 +2271,8 @@ public interface AmazonKinesisAsync extends AmazonKinesis {
      * </p>
      * <note>
      * <p>
-     * When invoking this API, it is recommended you use the <code>StreamARN</code> input parameter rather than the
-     * <code>StreamName</code> input parameter.
+     * When invoking this API, you must use either the <code>StreamARN</code> or the <code>StreamName</code> parameter,
+     * or both. It is recommended that you use the <code>StreamARN</code> input parameter when you invoke this API.
      * </p>
      * </note>
      * <p>
@@ -2096,8 +2305,8 @@ public interface AmazonKinesisAsync extends AmazonKinesis {
      * </p>
      * <note>
      * <p>
-     * When invoking this API, it is recommended you use the <code>StreamARN</code> input parameter rather than the
-     * <code>StreamName</code> input parameter.
+     * When invoking this API, you must use either the <code>StreamARN</code> or the <code>StreamName</code> parameter,
+     * or both. It is recommended that you use the <code>StreamARN</code> input parameter when you invoke this API.
      * </p>
      * </note>
      * <p>
@@ -2167,8 +2376,8 @@ public interface AmazonKinesisAsync extends AmazonKinesis {
      * </p>
      * <note>
      * <p>
-     * When invoking this API, it is recommended you use the <code>StreamARN</code> input parameter rather than the
-     * <code>StreamName</code> input parameter.
+     * When invoking this API, you must use either the <code>StreamARN</code> or the <code>StreamName</code> parameter,
+     * or both. It is recommended that you use the <code>StreamARN</code> input parameter when you invoke this API.
      * </p>
      * </note>
      * <p>
@@ -2253,6 +2462,12 @@ public interface AmazonKinesisAsync extends AmazonKinesis {
      * <p>
      * Enables or updates server-side encryption using an Amazon Web Services KMS key for a specified stream.
      * </p>
+     * <note>
+     * <p>
+     * When invoking this API, you must use either the <code>StreamARN</code> or the <code>StreamName</code> parameter,
+     * or both. It is recommended that you use the <code>StreamARN</code> input parameter when you invoke this API.
+     * </p>
+     * </note>
      * <p>
      * Starting encryption is an asynchronous operation. Upon receiving the request, Kinesis Data Streams returns
      * immediately and sets the status of the stream to <code>UPDATING</code>. After the update is complete, Kinesis
@@ -2270,12 +2485,6 @@ public interface AmazonKinesisAsync extends AmazonKinesis {
      * to the stream are encrypted. After you enable encryption, you can verify that encryption is applied by inspecting
      * the API response from <code>PutRecord</code> or <code>PutRecords</code>.
      * </p>
-     * <note>
-     * <p>
-     * When invoking this API, it is recommended you use the <code>StreamARN</code> input parameter rather than the
-     * <code>StreamName</code> input parameter.
-     * </p>
-     * </note>
      * 
      * @param startStreamEncryptionRequest
      * @return A Java Future containing the result of the StartStreamEncryption operation returned by the service.
@@ -2289,6 +2498,12 @@ public interface AmazonKinesisAsync extends AmazonKinesis {
      * <p>
      * Enables or updates server-side encryption using an Amazon Web Services KMS key for a specified stream.
      * </p>
+     * <note>
+     * <p>
+     * When invoking this API, you must use either the <code>StreamARN</code> or the <code>StreamName</code> parameter,
+     * or both. It is recommended that you use the <code>StreamARN</code> input parameter when you invoke this API.
+     * </p>
+     * </note>
      * <p>
      * Starting encryption is an asynchronous operation. Upon receiving the request, Kinesis Data Streams returns
      * immediately and sets the status of the stream to <code>UPDATING</code>. After the update is complete, Kinesis
@@ -2306,12 +2521,6 @@ public interface AmazonKinesisAsync extends AmazonKinesis {
      * to the stream are encrypted. After you enable encryption, you can verify that encryption is applied by inspecting
      * the API response from <code>PutRecord</code> or <code>PutRecords</code>.
      * </p>
-     * <note>
-     * <p>
-     * When invoking this API, it is recommended you use the <code>StreamARN</code> input parameter rather than the
-     * <code>StreamName</code> input parameter.
-     * </p>
-     * </note>
      * 
      * @param startStreamEncryptionRequest
      * @param asyncHandler
@@ -2332,8 +2541,8 @@ public interface AmazonKinesisAsync extends AmazonKinesis {
      * </p>
      * <note>
      * <p>
-     * When invoking this API, it is recommended you use the <code>StreamARN</code> input parameter rather than the
-     * <code>StreamName</code> input parameter.
+     * When invoking this API, you must use either the <code>StreamARN</code> or the <code>StreamName</code> parameter,
+     * or both. It is recommended that you use the <code>StreamARN</code> input parameter when you invoke this API.
      * </p>
      * </note>
      * <p>
@@ -2367,8 +2576,8 @@ public interface AmazonKinesisAsync extends AmazonKinesis {
      * </p>
      * <note>
      * <p>
-     * When invoking this API, it is recommended you use the <code>StreamARN</code> input parameter rather than the
-     * <code>StreamName</code> input parameter.
+     * When invoking this API, you must use either the <code>StreamARN</code> or the <code>StreamName</code> parameter,
+     * or both. It is recommended that you use the <code>StreamARN</code> input parameter when you invoke this API.
      * </p>
      * </note>
      * <p>
@@ -2408,8 +2617,8 @@ public interface AmazonKinesisAsync extends AmazonKinesis {
      * </p>
      * <note>
      * <p>
-     * When invoking this API, it is recommended you use the <code>StreamARN</code> input parameter rather than the
-     * <code>StreamName</code> input parameter.
+     * When invoking this API, you must use either the <code>StreamARN</code> or the <code>StreamName</code> parameter,
+     * or both. It is recommended that you use the <code>StreamARN</code> input parameter when you invoke this API.
      * </p>
      * </note>
      * <p>
@@ -2461,6 +2670,11 @@ public interface AmazonKinesisAsync extends AmazonKinesis {
      * <li>
      * <p>
      * Scale up to more than the shard limit for your account
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Make over 10 TPS. TPS over 10 will trigger the LimitExceededException
      * </p>
      * </li>
      * </ul>
@@ -2488,8 +2702,8 @@ public interface AmazonKinesisAsync extends AmazonKinesis {
      * </p>
      * <note>
      * <p>
-     * When invoking this API, it is recommended you use the <code>StreamARN</code> input parameter rather than the
-     * <code>StreamName</code> input parameter.
+     * When invoking this API, you must use either the <code>StreamARN</code> or the <code>StreamName</code> parameter,
+     * or both. It is recommended that you use the <code>StreamARN</code> input parameter when you invoke this API.
      * </p>
      * </note>
      * <p>
@@ -2541,6 +2755,11 @@ public interface AmazonKinesisAsync extends AmazonKinesis {
      * <li>
      * <p>
      * Scale up to more than the shard limit for your account
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Make over 10 TPS. TPS over 10 will trigger the LimitExceededException
      * </p>
      * </li>
      * </ul>

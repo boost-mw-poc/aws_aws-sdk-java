@@ -70,6 +70,31 @@ public class JobManifestGeneratorFilterStaxUnmarshaller implements Unmarshaller<
                     continue;
                 }
 
+                if (context.testExpression("KeyNameConstraint", targetDepth)) {
+                    jobManifestGeneratorFilter.setKeyNameConstraint(KeyNameConstraintStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
+                if (context.testExpression("ObjectSizeGreaterThanBytes", targetDepth)) {
+                    jobManifestGeneratorFilter.setObjectSizeGreaterThanBytes(LongStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
+                if (context.testExpression("ObjectSizeLessThanBytes", targetDepth)) {
+                    jobManifestGeneratorFilter.setObjectSizeLessThanBytes(LongStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
+                if (context.testExpression("MatchAnyStorageClass", targetDepth)) {
+                    jobManifestGeneratorFilter.withMatchAnyStorageClass(new ArrayList<String>());
+                    continue;
+                }
+
+                if (context.testExpression("MatchAnyStorageClass/member", targetDepth)) {
+                    jobManifestGeneratorFilter.withMatchAnyStorageClass(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return jobManifestGeneratorFilter;

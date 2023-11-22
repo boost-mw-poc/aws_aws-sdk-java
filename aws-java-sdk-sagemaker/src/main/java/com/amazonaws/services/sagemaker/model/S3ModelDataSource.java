@@ -139,6 +139,15 @@ public class S3ModelDataSource implements Serializable, Cloneable, StructuredPoj
      * </ul>
      */
     private String compressionType;
+    /**
+     * <p>
+     * Specifies the access configuration file for the ML model. You can explicitly accept the model end-user license
+     * agreement (EULA) within the <code>ModelAccessConfig</code>. You are responsible for reviewing and complying with
+     * any applicable license terms and making sure they are acceptable for your use case before downloading or using a
+     * model.
+     * </p>
+     */
+    private ModelAccessConfig modelAccessConfig;
 
     /**
      * <p>
@@ -1046,6 +1055,64 @@ public class S3ModelDataSource implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
+     * <p>
+     * Specifies the access configuration file for the ML model. You can explicitly accept the model end-user license
+     * agreement (EULA) within the <code>ModelAccessConfig</code>. You are responsible for reviewing and complying with
+     * any applicable license terms and making sure they are acceptable for your use case before downloading or using a
+     * model.
+     * </p>
+     * 
+     * @param modelAccessConfig
+     *        Specifies the access configuration file for the ML model. You can explicitly accept the model end-user
+     *        license agreement (EULA) within the <code>ModelAccessConfig</code>. You are responsible for reviewing and
+     *        complying with any applicable license terms and making sure they are acceptable for your use case before
+     *        downloading or using a model.
+     */
+
+    public void setModelAccessConfig(ModelAccessConfig modelAccessConfig) {
+        this.modelAccessConfig = modelAccessConfig;
+    }
+
+    /**
+     * <p>
+     * Specifies the access configuration file for the ML model. You can explicitly accept the model end-user license
+     * agreement (EULA) within the <code>ModelAccessConfig</code>. You are responsible for reviewing and complying with
+     * any applicable license terms and making sure they are acceptable for your use case before downloading or using a
+     * model.
+     * </p>
+     * 
+     * @return Specifies the access configuration file for the ML model. You can explicitly accept the model end-user
+     *         license agreement (EULA) within the <code>ModelAccessConfig</code>. You are responsible for reviewing and
+     *         complying with any applicable license terms and making sure they are acceptable for your use case before
+     *         downloading or using a model.
+     */
+
+    public ModelAccessConfig getModelAccessConfig() {
+        return this.modelAccessConfig;
+    }
+
+    /**
+     * <p>
+     * Specifies the access configuration file for the ML model. You can explicitly accept the model end-user license
+     * agreement (EULA) within the <code>ModelAccessConfig</code>. You are responsible for reviewing and complying with
+     * any applicable license terms and making sure they are acceptable for your use case before downloading or using a
+     * model.
+     * </p>
+     * 
+     * @param modelAccessConfig
+     *        Specifies the access configuration file for the ML model. You can explicitly accept the model end-user
+     *        license agreement (EULA) within the <code>ModelAccessConfig</code>. You are responsible for reviewing and
+     *        complying with any applicable license terms and making sure they are acceptable for your use case before
+     *        downloading or using a model.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public S3ModelDataSource withModelAccessConfig(ModelAccessConfig modelAccessConfig) {
+        setModelAccessConfig(modelAccessConfig);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1062,7 +1129,9 @@ public class S3ModelDataSource implements Serializable, Cloneable, StructuredPoj
         if (getS3DataType() != null)
             sb.append("S3DataType: ").append(getS3DataType()).append(",");
         if (getCompressionType() != null)
-            sb.append("CompressionType: ").append(getCompressionType());
+            sb.append("CompressionType: ").append(getCompressionType()).append(",");
+        if (getModelAccessConfig() != null)
+            sb.append("ModelAccessConfig: ").append(getModelAccessConfig());
         sb.append("}");
         return sb.toString();
     }
@@ -1089,6 +1158,10 @@ public class S3ModelDataSource implements Serializable, Cloneable, StructuredPoj
             return false;
         if (other.getCompressionType() != null && other.getCompressionType().equals(this.getCompressionType()) == false)
             return false;
+        if (other.getModelAccessConfig() == null ^ this.getModelAccessConfig() == null)
+            return false;
+        if (other.getModelAccessConfig() != null && other.getModelAccessConfig().equals(this.getModelAccessConfig()) == false)
+            return false;
         return true;
     }
 
@@ -1100,6 +1173,7 @@ public class S3ModelDataSource implements Serializable, Cloneable, StructuredPoj
         hashCode = prime * hashCode + ((getS3Uri() == null) ? 0 : getS3Uri().hashCode());
         hashCode = prime * hashCode + ((getS3DataType() == null) ? 0 : getS3DataType().hashCode());
         hashCode = prime * hashCode + ((getCompressionType() == null) ? 0 : getCompressionType().hashCode());
+        hashCode = prime * hashCode + ((getModelAccessConfig() == null) ? 0 : getModelAccessConfig().hashCode());
         return hashCode;
     }
 

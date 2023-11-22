@@ -60,6 +60,10 @@ public class S3ModelDataSourceJsonUnmarshaller implements Unmarshaller<S3ModelDa
                     context.nextToken();
                     s3ModelDataSource.setCompressionType(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("ModelAccessConfig", targetDepth)) {
+                    context.nextToken();
+                    s3ModelDataSource.setModelAccessConfig(ModelAccessConfigJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

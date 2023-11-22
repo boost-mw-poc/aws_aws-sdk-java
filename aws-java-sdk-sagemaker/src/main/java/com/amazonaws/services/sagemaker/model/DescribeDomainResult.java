@@ -55,7 +55,8 @@ public class DescribeDomainResult extends com.amazonaws.AmazonWebServiceResult<c
     private String singleSignOnManagedApplicationInstanceId;
     /**
      * <p>
-     * The ARN of the associated Amazon Web Services Single Sign-On application for this Domain.
+     * The ARN of the application managed by SageMaker in IAM Identity Center. This value is only returned for domains
+     * created after September 19, 2023.
      * </p>
      */
     private String singleSignOnApplicationArn;
@@ -376,11 +377,13 @@ public class DescribeDomainResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The ARN of the associated Amazon Web Services Single Sign-On application for this Domain.
+     * The ARN of the application managed by SageMaker in IAM Identity Center. This value is only returned for domains
+     * created after September 19, 2023.
      * </p>
      * 
      * @param singleSignOnApplicationArn
-     *        The ARN of the associated Amazon Web Services Single Sign-On application for this Domain.
+     *        The ARN of the application managed by SageMaker in IAM Identity Center. This value is only returned for
+     *        domains created after September 19, 2023.
      */
 
     public void setSingleSignOnApplicationArn(String singleSignOnApplicationArn) {
@@ -389,10 +392,12 @@ public class DescribeDomainResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The ARN of the associated Amazon Web Services Single Sign-On application for this Domain.
+     * The ARN of the application managed by SageMaker in IAM Identity Center. This value is only returned for domains
+     * created after September 19, 2023.
      * </p>
      * 
-     * @return The ARN of the associated Amazon Web Services Single Sign-On application for this Domain.
+     * @return The ARN of the application managed by SageMaker in IAM Identity Center. This value is only returned for
+     *         domains created after September 19, 2023.
      */
 
     public String getSingleSignOnApplicationArn() {
@@ -401,11 +406,13 @@ public class DescribeDomainResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The ARN of the associated Amazon Web Services Single Sign-On application for this Domain.
+     * The ARN of the application managed by SageMaker in IAM Identity Center. This value is only returned for domains
+     * created after September 19, 2023.
      * </p>
      * 
      * @param singleSignOnApplicationArn
-     *        The ARN of the associated Amazon Web Services Single Sign-On application for this Domain.
+     *        The ARN of the application managed by SageMaker in IAM Identity Center. This value is only returned for
+     *        domains created after September 19, 2023.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
