@@ -222,6 +222,14 @@ public class AwsSecurityFindingFiltersMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ComplianceSecurityControlId").build();
     private static final MarshallingInfo<List> COMPLIANCEASSOCIATEDSTANDARDSID_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ComplianceAssociatedStandardsId").build();
+    private static final MarshallingInfo<List> VULNERABILITIESEXPLOITAVAILABLE_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("VulnerabilitiesExploitAvailable").build();
+    private static final MarshallingInfo<List> VULNERABILITIESFIXAVAILABLE_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("VulnerabilitiesFixAvailable").build();
+    private static final MarshallingInfo<List> COMPLIANCESECURITYCONTROLPARAMETERSNAME_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ComplianceSecurityControlParametersName").build();
+    private static final MarshallingInfo<List> COMPLIANCESECURITYCONTROLPARAMETERSVALUE_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ComplianceSecurityControlParametersValue").build();
 
     private static final AwsSecurityFindingFiltersMarshaller instance = new AwsSecurityFindingFiltersMarshaller();
 
@@ -338,6 +346,12 @@ public class AwsSecurityFindingFiltersMarshaller {
             protocolMarshaller.marshall(awsSecurityFindingFilters.getSample(), SAMPLE_BINDING);
             protocolMarshaller.marshall(awsSecurityFindingFilters.getComplianceSecurityControlId(), COMPLIANCESECURITYCONTROLID_BINDING);
             protocolMarshaller.marshall(awsSecurityFindingFilters.getComplianceAssociatedStandardsId(), COMPLIANCEASSOCIATEDSTANDARDSID_BINDING);
+            protocolMarshaller.marshall(awsSecurityFindingFilters.getVulnerabilitiesExploitAvailable(), VULNERABILITIESEXPLOITAVAILABLE_BINDING);
+            protocolMarshaller.marshall(awsSecurityFindingFilters.getVulnerabilitiesFixAvailable(), VULNERABILITIESFIXAVAILABLE_BINDING);
+            protocolMarshaller
+                    .marshall(awsSecurityFindingFilters.getComplianceSecurityControlParametersName(), COMPLIANCESECURITYCONTROLPARAMETERSNAME_BINDING);
+            protocolMarshaller.marshall(awsSecurityFindingFilters.getComplianceSecurityControlParametersValue(),
+                    COMPLIANCESECURITYCONTROLPARAMETERSVALUE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

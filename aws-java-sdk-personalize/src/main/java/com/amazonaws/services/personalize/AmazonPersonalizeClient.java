@@ -152,10 +152,32 @@ public class AmazonPersonalizeClient extends AmazonWebServiceClient implements A
 
     /**
      * <p>
-     * Creates a batch inference job. The operation can handle up to 50 million records and the input file must be in
-     * JSON format. For more information, see <a
-     * href="https://docs.aws.amazon.com/personalize/latest/dg/creating-batch-inference-job.html">Creating a batch
-     * inference job</a>.
+     * Generates batch recommendations based on a list of items or users stored in Amazon S3 and exports the
+     * recommendations to an Amazon S3 bucket.
+     * </p>
+     * <p>
+     * To generate batch recommendations, specify the ARN of a solution version and an Amazon S3 URI for the input and
+     * output data. For user personalization, popular items, and personalized ranking solutions, the batch inference job
+     * generates a list of recommended items for each user ID in the input file. For related items solutions, the job
+     * generates a list of recommended items for each item ID in the input file.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/getting-batch-recommendations.html">Creating a batch
+     * inference job </a>.
+     * </p>
+     * <p>
+     * If you use the Similar-Items recipe, Amazon Personalize can add descriptive themes to batch recommendations. To
+     * generate themes, set the job's mode to <code>THEME_GENERATION</code> and specify the name of the field that
+     * contains item names in the input data.
+     * </p>
+     * <p>
+     * For more information about generating themes, see <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/themed-batch-recommendations.html">Batch recommendations
+     * with themes from Content Generator </a>.
+     * </p>
+     * <p>
+     * You can't get batch recommendations with the Trending-Now or Next-Best-Action recipes.
      * </p>
      * 
      * @param createBatchInferenceJobRequest
@@ -450,12 +472,12 @@ public class AmazonPersonalizeClient extends AmazonWebServiceClient implements A
      * >CreateDatasetImportJob</a> to import your training data to a dataset.
      * </p>
      * <p>
-     * There are three types of datasets:
+     * There are 5 types of datasets:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * Interactions
+     * Item interactions
      * </p>
      * </li>
      * <li>
@@ -468,10 +490,20 @@ public class AmazonPersonalizeClient extends AmazonWebServiceClient implements A
      * Users
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * Action interactions
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Actions
+     * </p>
+     * </li>
      * </ul>
      * <p>
-     * Each dataset type has an associated schema with required field types. Only the <code>Interactions</code> dataset
-     * is required in order to train a model (also referred to as creating a solution).
+     * Each dataset type has an associated schema with required field types. Only the <code>Item interactions</code>
+     * dataset is required in order to train a model (also referred to as creating a solution).
      * </p>
      * <p>
      * A dataset can be in one of the following states:
@@ -680,7 +712,7 @@ public class AmazonPersonalizeClient extends AmazonWebServiceClient implements A
      * <ul>
      * <li>
      * <p>
-     * Interactions
+     * Item interactions
      * </p>
      * </li>
      * <li>
@@ -691,6 +723,16 @@ public class AmazonPersonalizeClient extends AmazonWebServiceClient implements A
      * <li>
      * <p>
      * Users
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Actions
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Action interactions
      * </p>
      * </li>
      * </ul>
@@ -945,8 +987,8 @@ public class AmazonPersonalizeClient extends AmazonWebServiceClient implements A
      * <p>
      * When you create an event tracker, the response includes a tracking ID, which you pass as a parameter when you use
      * the <a href="https://docs.aws.amazon.com/personalize/latest/dg/API_UBS_PutEvents.html">PutEvents</a> operation.
-     * Amazon Personalize then appends the event data to the Interactions dataset of the dataset group you specify in
-     * your event tracker.
+     * Amazon Personalize then appends the event data to the Item interactions dataset of the dataset group you specify
+     * in your event tracker.
      * </p>
      * <p>
      * The event tracker can be in one of the following states:
@@ -1957,8 +1999,8 @@ public class AmazonPersonalizeClient extends AmazonWebServiceClient implements A
 
     /**
      * <p>
-     * Deletes the event tracker. Does not delete the event-interactions dataset from the associated dataset group. For
-     * more information on event trackers, see <a
+     * Deletes the event tracker. Does not delete the dataset from the dataset group. For more information on event
+     * trackers, see <a
      * href="https://docs.aws.amazon.com/personalize/latest/dg/API_CreateEventTracker.html">CreateEventTracker</a>.
      * </p>
      * 
@@ -4888,8 +4930,8 @@ public class AmazonPersonalizeClient extends AmazonWebServiceClient implements A
 
     /**
      * <p>
-     * Updates a campaign by either deploying a new solution or changing the value of the campaign's
-     * <code>minProvisionedTPS</code> parameter.
+     * Updates a campaign to deploy a retrained solution version with an existing campaign, change your campaign's
+     * <code>minProvisionedTPS</code>, or modify your campaign's configuration, such as the exploration configuration.
      * </p>
      * <p>
      * To update a campaign, the campaign status must be ACTIVE or CREATE FAILED. Check the campaign status using the <a
@@ -4904,8 +4946,10 @@ public class AmazonPersonalizeClient extends AmazonWebServiceClient implements A
      * </p>
      * </note>
      * <p>
-     * For more information on campaigns, see <a
-     * href="https://docs.aws.amazon.com/personalize/latest/dg/API_CreateCampaign.html">CreateCampaign</a>.
+     * For more information about updating a campaign, including code samples, see <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/update-campaigns.html">Updating a campaign</a>. For more
+     * information about campaigns, see <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/campaigns.html">Creating a campaign</a>.
      * </p>
      * 
      * @param updateCampaignRequest

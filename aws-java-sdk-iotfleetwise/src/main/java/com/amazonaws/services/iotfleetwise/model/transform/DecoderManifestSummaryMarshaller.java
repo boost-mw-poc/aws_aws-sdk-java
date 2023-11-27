@@ -41,6 +41,8 @@ public class DecoderManifestSummaryMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("creationTime").timestampFormat("unixTimestamp").build();
     private static final MarshallingInfo<java.util.Date> LASTMODIFICATIONTIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("lastModificationTime").timestampFormat("unixTimestamp").build();
+    private static final MarshallingInfo<String> MESSAGE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("message").build();
 
     private static final DecoderManifestSummaryMarshaller instance = new DecoderManifestSummaryMarshaller();
 
@@ -65,6 +67,7 @@ public class DecoderManifestSummaryMarshaller {
             protocolMarshaller.marshall(decoderManifestSummary.getStatus(), STATUS_BINDING);
             protocolMarshaller.marshall(decoderManifestSummary.getCreationTime(), CREATIONTIME_BINDING);
             protocolMarshaller.marshall(decoderManifestSummary.getLastModificationTime(), LASTMODIFICATIONTIME_BINDING);
+            protocolMarshaller.marshall(decoderManifestSummary.getMessage(), MESSAGE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

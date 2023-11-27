@@ -138,6 +138,9 @@ public class AWSSecurityHubClient extends AmazonWebServiceClient implements AWSS
                     .withSupportsIon(false)
                     .withContentTypeOverride("application/json")
                     .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("ResourceInUseException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.securityhub.model.transform.ResourceInUseExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("InvalidInputException").withExceptionUnmarshaller(
                                     com.amazonaws.services.securityhub.model.transform.InvalidInputExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
@@ -3787,6 +3790,75 @@ public class AWSSecurityHubClient extends AmazonWebServiceClient implements AWSS
 
     /**
      * <p>
+     * Retrieves the definition of a security control. The definition includes the control title, description, Region
+     * availability, parameter definitions, and other details.
+     * </p>
+     * 
+     * @param getSecurityControlDefinitionRequest
+     * @return Result of the GetSecurityControlDefinition operation returned by the service.
+     * @throws InternalException
+     *         Internal server error.
+     * @throws InvalidInputException
+     *         The request was rejected because you supplied an invalid or out-of-range value for an input parameter.
+     * @throws InvalidAccessException
+     *         The account doesn't have permission to perform this action.
+     * @throws LimitExceededException
+     *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
+     *         account or throttling limits. The error code describes the limit exceeded.
+     * @throws ResourceNotFoundException
+     *         The request was rejected because we can't find the specified resource.
+     * @sample AWSSecurityHub.GetSecurityControlDefinition
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/GetSecurityControlDefinition"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetSecurityControlDefinitionResult getSecurityControlDefinition(GetSecurityControlDefinitionRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetSecurityControlDefinition(request);
+    }
+
+    @SdkInternalApi
+    final GetSecurityControlDefinitionResult executeGetSecurityControlDefinition(GetSecurityControlDefinitionRequest getSecurityControlDefinitionRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getSecurityControlDefinitionRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetSecurityControlDefinitionRequest> request = null;
+        Response<GetSecurityControlDefinitionResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetSecurityControlDefinitionRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(getSecurityControlDefinitionRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "SecurityHub");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetSecurityControlDefinition");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetSecurityControlDefinitionResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new GetSecurityControlDefinitionResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Invites other Amazon Web Services accounts to become member accounts for the Security Hub administrator account
      * that the invitation is sent from.
      * </p>
@@ -4915,6 +4987,76 @@ public class AWSSecurityHubClient extends AmazonWebServiceClient implements AWSS
             HttpResponseHandler<AmazonWebServiceResponse<UpdateOrganizationConfigurationResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new UpdateOrganizationConfigurationResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Updates the properties of a security control.
+     * </p>
+     * 
+     * @param updateSecurityControlRequest
+     * @return Result of the UpdateSecurityControl operation returned by the service.
+     * @throws InternalException
+     *         Internal server error.
+     * @throws InvalidInputException
+     *         The request was rejected because you supplied an invalid or out-of-range value for an input parameter.
+     * @throws InvalidAccessException
+     *         The account doesn't have permission to perform this action.
+     * @throws LimitExceededException
+     *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
+     *         account or throttling limits. The error code describes the limit exceeded.
+     * @throws ResourceNotFoundException
+     *         The request was rejected because we can't find the specified resource.
+     * @throws ResourceInUseException
+     *         The request was rejected because it conflicts with the resource's availability. For example, you tried to
+     *         update a security control that's currently in the <code>UPDATING</code> state.
+     * @sample AWSSecurityHub.UpdateSecurityControl
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/UpdateSecurityControl"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public UpdateSecurityControlResult updateSecurityControl(UpdateSecurityControlRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateSecurityControl(request);
+    }
+
+    @SdkInternalApi
+    final UpdateSecurityControlResult executeUpdateSecurityControl(UpdateSecurityControlRequest updateSecurityControlRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateSecurityControlRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateSecurityControlRequest> request = null;
+        Response<UpdateSecurityControlResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateSecurityControlRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(updateSecurityControlRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "SecurityHub");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateSecurityControl");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdateSecurityControlResult>> responseHandler = protocolFactory
+                    .createResponseHandler(new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                            new UpdateSecurityControlResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

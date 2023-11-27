@@ -65,6 +65,10 @@ public class ConfigurationItemMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("configuration").build();
     private static final MarshallingInfo<Map> SUPPLEMENTARYCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.MAP)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("supplementaryConfiguration").build();
+    private static final MarshallingInfo<String> RECORDINGFREQUENCY_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("recordingFrequency").build();
+    private static final MarshallingInfo<java.util.Date> CONFIGURATIONITEMDELIVERYTIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("configurationItemDeliveryTime").timestampFormat("unixTimestamp").build();
 
     private static final ConfigurationItemMarshaller instance = new ConfigurationItemMarshaller();
 
@@ -100,6 +104,8 @@ public class ConfigurationItemMarshaller {
             protocolMarshaller.marshall(configurationItem.getRelationships(), RELATIONSHIPS_BINDING);
             protocolMarshaller.marshall(configurationItem.getConfiguration(), CONFIGURATION_BINDING);
             protocolMarshaller.marshall(configurationItem.getSupplementaryConfiguration(), SUPPLEMENTARYCONFIGURATION_BINDING);
+            protocolMarshaller.marshall(configurationItem.getRecordingFrequency(), RECORDINGFREQUENCY_BINDING);
+            protocolMarshaller.marshall(configurationItem.getConfigurationItemDeliveryTime(), CONFIGURATIONITEMDELIVERYTIME_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

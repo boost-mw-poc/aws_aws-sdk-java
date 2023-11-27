@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Represents user interaction event information sent using the <code>PutEvents</code> API.
+ * Represents item interaction event information sent using the <code>PutEvents</code> API.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/personalize-events-2018-03-22/Event" target="_top">AWS API
@@ -31,7 +31,7 @@ public class Event implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * An ID associated with the event. If an event ID is not provided, Amazon Personalize generates a unique ID for the
-     * event. An event ID is not used as an input to the model. Amazon Personalize uses the event ID to distinquish
+     * event. An event ID is not used as an input to the model. Amazon Personalize uses the event ID to distinguish
      * unique events. Any subsequent events after the first with the same event ID are not used in model training.
      * </p>
      */
@@ -39,19 +39,19 @@ public class Event implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The type of event, such as click or download. This property corresponds to the <code>EVENT_TYPE</code> field of
-     * your Interactions schema and depends on the types of events you are tracking.
+     * your Item interactions dataset's schema and depends on the types of events you are tracking.
      * </p>
      */
     private String eventType;
     /**
      * <p>
-     * The event value that corresponds to the <code>EVENT_VALUE</code> field of the Interactions schema.
+     * The event value that corresponds to the <code>EVENT_VALUE</code> field of the Item interactions schema.
      * </p>
      */
     private Float eventValue;
     /**
      * <p>
-     * The item ID key that corresponds to the <code>ITEM_ID</code> field of the Interactions schema.
+     * The item ID key that corresponds to the <code>ITEM_ID</code> field of the Item interactions dataset's schema.
      * </p>
      */
     private String itemId;
@@ -68,9 +68,45 @@ public class Event implements Serializable, Cloneable, StructuredPojo {
      * <code>{"numberOfRatings": "12"}</code>
      * </p>
      * <p>
-     * The keys use camel case names that match the fields in the Interactions schema. In the above example, the
-     * <code>numberOfRatings</code> would match the 'NUMBER_OF_RATINGS' field defined in the Interactions schema.
+     * The keys use camel case names that match the fields in the Item interactions dataset's schema. In the above
+     * example, the <code>numberOfRatings</code> would match the 'NUMBER_OF_RATINGS' field defined in the Item
+     * interactions dataset's schema.
      * </p>
+     * <p>
+     * The following can't be included as a keyword for properties (case insensitive).
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * userId
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * sessionId
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * eventType
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * timestamp
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * recommendationId
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * impression
+     * </p>
+     * </li>
+     * </ul>
      */
     private String properties;
     /**
@@ -118,14 +154,14 @@ public class Event implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * An ID associated with the event. If an event ID is not provided, Amazon Personalize generates a unique ID for the
-     * event. An event ID is not used as an input to the model. Amazon Personalize uses the event ID to distinquish
+     * event. An event ID is not used as an input to the model. Amazon Personalize uses the event ID to distinguish
      * unique events. Any subsequent events after the first with the same event ID are not used in model training.
      * </p>
      * 
      * @param eventId
      *        An ID associated with the event. If an event ID is not provided, Amazon Personalize generates a unique ID
      *        for the event. An event ID is not used as an input to the model. Amazon Personalize uses the event ID to
-     *        distinquish unique events. Any subsequent events after the first with the same event ID are not used in
+     *        distinguish unique events. Any subsequent events after the first with the same event ID are not used in
      *        model training.
      */
 
@@ -136,13 +172,13 @@ public class Event implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * An ID associated with the event. If an event ID is not provided, Amazon Personalize generates a unique ID for the
-     * event. An event ID is not used as an input to the model. Amazon Personalize uses the event ID to distinquish
+     * event. An event ID is not used as an input to the model. Amazon Personalize uses the event ID to distinguish
      * unique events. Any subsequent events after the first with the same event ID are not used in model training.
      * </p>
      * 
      * @return An ID associated with the event. If an event ID is not provided, Amazon Personalize generates a unique ID
      *         for the event. An event ID is not used as an input to the model. Amazon Personalize uses the event ID to
-     *         distinquish unique events. Any subsequent events after the first with the same event ID are not used in
+     *         distinguish unique events. Any subsequent events after the first with the same event ID are not used in
      *         model training.
      */
 
@@ -153,14 +189,14 @@ public class Event implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * An ID associated with the event. If an event ID is not provided, Amazon Personalize generates a unique ID for the
-     * event. An event ID is not used as an input to the model. Amazon Personalize uses the event ID to distinquish
+     * event. An event ID is not used as an input to the model. Amazon Personalize uses the event ID to distinguish
      * unique events. Any subsequent events after the first with the same event ID are not used in model training.
      * </p>
      * 
      * @param eventId
      *        An ID associated with the event. If an event ID is not provided, Amazon Personalize generates a unique ID
      *        for the event. An event ID is not used as an input to the model. Amazon Personalize uses the event ID to
-     *        distinquish unique events. Any subsequent events after the first with the same event ID are not used in
+     *        distinguish unique events. Any subsequent events after the first with the same event ID are not used in
      *        model training.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -173,12 +209,12 @@ public class Event implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The type of event, such as click or download. This property corresponds to the <code>EVENT_TYPE</code> field of
-     * your Interactions schema and depends on the types of events you are tracking.
+     * your Item interactions dataset's schema and depends on the types of events you are tracking.
      * </p>
      * 
      * @param eventType
      *        The type of event, such as click or download. This property corresponds to the <code>EVENT_TYPE</code>
-     *        field of your Interactions schema and depends on the types of events you are tracking.
+     *        field of your Item interactions dataset's schema and depends on the types of events you are tracking.
      */
 
     public void setEventType(String eventType) {
@@ -188,11 +224,11 @@ public class Event implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The type of event, such as click or download. This property corresponds to the <code>EVENT_TYPE</code> field of
-     * your Interactions schema and depends on the types of events you are tracking.
+     * your Item interactions dataset's schema and depends on the types of events you are tracking.
      * </p>
      * 
      * @return The type of event, such as click or download. This property corresponds to the <code>EVENT_TYPE</code>
-     *         field of your Interactions schema and depends on the types of events you are tracking.
+     *         field of your Item interactions dataset's schema and depends on the types of events you are tracking.
      */
 
     public String getEventType() {
@@ -202,12 +238,12 @@ public class Event implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The type of event, such as click or download. This property corresponds to the <code>EVENT_TYPE</code> field of
-     * your Interactions schema and depends on the types of events you are tracking.
+     * your Item interactions dataset's schema and depends on the types of events you are tracking.
      * </p>
      * 
      * @param eventType
      *        The type of event, such as click or download. This property corresponds to the <code>EVENT_TYPE</code>
-     *        field of your Interactions schema and depends on the types of events you are tracking.
+     *        field of your Item interactions dataset's schema and depends on the types of events you are tracking.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -218,11 +254,11 @@ public class Event implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The event value that corresponds to the <code>EVENT_VALUE</code> field of the Interactions schema.
+     * The event value that corresponds to the <code>EVENT_VALUE</code> field of the Item interactions schema.
      * </p>
      * 
      * @param eventValue
-     *        The event value that corresponds to the <code>EVENT_VALUE</code> field of the Interactions schema.
+     *        The event value that corresponds to the <code>EVENT_VALUE</code> field of the Item interactions schema.
      */
 
     public void setEventValue(Float eventValue) {
@@ -231,10 +267,10 @@ public class Event implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The event value that corresponds to the <code>EVENT_VALUE</code> field of the Interactions schema.
+     * The event value that corresponds to the <code>EVENT_VALUE</code> field of the Item interactions schema.
      * </p>
      * 
-     * @return The event value that corresponds to the <code>EVENT_VALUE</code> field of the Interactions schema.
+     * @return The event value that corresponds to the <code>EVENT_VALUE</code> field of the Item interactions schema.
      */
 
     public Float getEventValue() {
@@ -243,11 +279,11 @@ public class Event implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The event value that corresponds to the <code>EVENT_VALUE</code> field of the Interactions schema.
+     * The event value that corresponds to the <code>EVENT_VALUE</code> field of the Item interactions schema.
      * </p>
      * 
      * @param eventValue
-     *        The event value that corresponds to the <code>EVENT_VALUE</code> field of the Interactions schema.
+     *        The event value that corresponds to the <code>EVENT_VALUE</code> field of the Item interactions schema.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -258,11 +294,12 @@ public class Event implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The item ID key that corresponds to the <code>ITEM_ID</code> field of the Interactions schema.
+     * The item ID key that corresponds to the <code>ITEM_ID</code> field of the Item interactions dataset's schema.
      * </p>
      * 
      * @param itemId
-     *        The item ID key that corresponds to the <code>ITEM_ID</code> field of the Interactions schema.
+     *        The item ID key that corresponds to the <code>ITEM_ID</code> field of the Item interactions dataset's
+     *        schema.
      */
 
     public void setItemId(String itemId) {
@@ -271,10 +308,11 @@ public class Event implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The item ID key that corresponds to the <code>ITEM_ID</code> field of the Interactions schema.
+     * The item ID key that corresponds to the <code>ITEM_ID</code> field of the Item interactions dataset's schema.
      * </p>
      * 
-     * @return The item ID key that corresponds to the <code>ITEM_ID</code> field of the Interactions schema.
+     * @return The item ID key that corresponds to the <code>ITEM_ID</code> field of the Item interactions dataset's
+     *         schema.
      */
 
     public String getItemId() {
@@ -283,11 +321,12 @@ public class Event implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The item ID key that corresponds to the <code>ITEM_ID</code> field of the Interactions schema.
+     * The item ID key that corresponds to the <code>ITEM_ID</code> field of the Item interactions dataset's schema.
      * </p>
      * 
      * @param itemId
-     *        The item ID key that corresponds to the <code>ITEM_ID</code> field of the Interactions schema.
+     *        The item ID key that corresponds to the <code>ITEM_ID</code> field of the Item interactions dataset's
+     *        schema.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -309,9 +348,45 @@ public class Event implements Serializable, Cloneable, StructuredPojo {
      * <code>{"numberOfRatings": "12"}</code>
      * </p>
      * <p>
-     * The keys use camel case names that match the fields in the Interactions schema. In the above example, the
-     * <code>numberOfRatings</code> would match the 'NUMBER_OF_RATINGS' field defined in the Interactions schema.
+     * The keys use camel case names that match the fields in the Item interactions dataset's schema. In the above
+     * example, the <code>numberOfRatings</code> would match the 'NUMBER_OF_RATINGS' field defined in the Item
+     * interactions dataset's schema.
      * </p>
+     * <p>
+     * The following can't be included as a keyword for properties (case insensitive).
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * userId
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * sessionId
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * eventType
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * timestamp
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * recommendationId
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * impression
+     * </p>
+     * </li>
+     * </ul>
      * <p>
      * This field's value must be valid JSON according to RFC 7159, including the opening and closing braces. For
      * example: '{"key": "value"}'.
@@ -332,8 +407,44 @@ public class Event implements Serializable, Cloneable, StructuredPojo {
      *        <code>{"numberOfRatings": "12"}</code>
      *        </p>
      *        <p>
-     *        The keys use camel case names that match the fields in the Interactions schema. In the above example, the
-     *        <code>numberOfRatings</code> would match the 'NUMBER_OF_RATINGS' field defined in the Interactions schema.
+     *        The keys use camel case names that match the fields in the Item interactions dataset's schema. In the
+     *        above example, the <code>numberOfRatings</code> would match the 'NUMBER_OF_RATINGS' field defined in the
+     *        Item interactions dataset's schema.
+     *        </p>
+     *        <p>
+     *        The following can't be included as a keyword for properties (case insensitive).
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        userId
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        sessionId
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        eventType
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        timestamp
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        recommendationId
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        impression
+     *        </p>
+     *        </li>
      */
 
     public void setProperties(String properties) {
@@ -353,9 +464,45 @@ public class Event implements Serializable, Cloneable, StructuredPojo {
      * <code>{"numberOfRatings": "12"}</code>
      * </p>
      * <p>
-     * The keys use camel case names that match the fields in the Interactions schema. In the above example, the
-     * <code>numberOfRatings</code> would match the 'NUMBER_OF_RATINGS' field defined in the Interactions schema.
+     * The keys use camel case names that match the fields in the Item interactions dataset's schema. In the above
+     * example, the <code>numberOfRatings</code> would match the 'NUMBER_OF_RATINGS' field defined in the Item
+     * interactions dataset's schema.
      * </p>
+     * <p>
+     * The following can't be included as a keyword for properties (case insensitive).
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * userId
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * sessionId
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * eventType
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * timestamp
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * recommendationId
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * impression
+     * </p>
+     * </li>
+     * </ul>
      * <p>
      * This field's value will be valid JSON according to RFC 7159, including the opening and closing braces. For
      * example: '{"key": "value"}'.
@@ -371,9 +518,44 @@ public class Event implements Serializable, Cloneable, StructuredPojo {
      *         <code>{"numberOfRatings": "12"}</code>
      *         </p>
      *         <p>
-     *         The keys use camel case names that match the fields in the Interactions schema. In the above example, the
-     *         <code>numberOfRatings</code> would match the 'NUMBER_OF_RATINGS' field defined in the Interactions
-     *         schema.
+     *         The keys use camel case names that match the fields in the Item interactions dataset's schema. In the
+     *         above example, the <code>numberOfRatings</code> would match the 'NUMBER_OF_RATINGS' field defined in the
+     *         Item interactions dataset's schema.
+     *         </p>
+     *         <p>
+     *         The following can't be included as a keyword for properties (case insensitive).
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         userId
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         sessionId
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         eventType
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         timestamp
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         recommendationId
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         impression
+     *         </p>
+     *         </li>
      */
 
     public String getProperties() {
@@ -393,9 +575,45 @@ public class Event implements Serializable, Cloneable, StructuredPojo {
      * <code>{"numberOfRatings": "12"}</code>
      * </p>
      * <p>
-     * The keys use camel case names that match the fields in the Interactions schema. In the above example, the
-     * <code>numberOfRatings</code> would match the 'NUMBER_OF_RATINGS' field defined in the Interactions schema.
+     * The keys use camel case names that match the fields in the Item interactions dataset's schema. In the above
+     * example, the <code>numberOfRatings</code> would match the 'NUMBER_OF_RATINGS' field defined in the Item
+     * interactions dataset's schema.
      * </p>
+     * <p>
+     * The following can't be included as a keyword for properties (case insensitive).
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * userId
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * sessionId
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * eventType
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * timestamp
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * recommendationId
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * impression
+     * </p>
+     * </li>
+     * </ul>
      * <p>
      * This field's value must be valid JSON according to RFC 7159, including the opening and closing braces. For
      * example: '{"key": "value"}'.
@@ -416,8 +634,44 @@ public class Event implements Serializable, Cloneable, StructuredPojo {
      *        <code>{"numberOfRatings": "12"}</code>
      *        </p>
      *        <p>
-     *        The keys use camel case names that match the fields in the Interactions schema. In the above example, the
-     *        <code>numberOfRatings</code> would match the 'NUMBER_OF_RATINGS' field defined in the Interactions schema.
+     *        The keys use camel case names that match the fields in the Item interactions dataset's schema. In the
+     *        above example, the <code>numberOfRatings</code> would match the 'NUMBER_OF_RATINGS' field defined in the
+     *        Item interactions dataset's schema.
+     *        </p>
+     *        <p>
+     *        The following can't be included as a keyword for properties (case insensitive).
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        userId
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        sessionId
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        eventType
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        timestamp
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        recommendationId
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        impression
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

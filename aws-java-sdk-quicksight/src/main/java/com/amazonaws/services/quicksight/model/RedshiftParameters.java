@@ -63,6 +63,16 @@ public class RedshiftParameters implements Serializable, Cloneable, StructuredPo
      * </p>
      */
     private RedshiftIAMParameters iAMParameters;
+    /**
+     * <p>
+     * An optional parameter that configures IAM Identity Center authentication to grant Amazon QuickSight access to
+     * your cluster.
+     * </p>
+     * <p>
+     * This parameter can only be specified if your Amazon QuickSight account is configured with IAM Identity Center.
+     * </p>
+     */
+    private IdentityCenterConfiguration identityCenterConfiguration;
 
     /**
      * <p>
@@ -283,6 +293,70 @@ public class RedshiftParameters implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * An optional parameter that configures IAM Identity Center authentication to grant Amazon QuickSight access to
+     * your cluster.
+     * </p>
+     * <p>
+     * This parameter can only be specified if your Amazon QuickSight account is configured with IAM Identity Center.
+     * </p>
+     * 
+     * @param identityCenterConfiguration
+     *        An optional parameter that configures IAM Identity Center authentication to grant Amazon QuickSight access
+     *        to your cluster.</p>
+     *        <p>
+     *        This parameter can only be specified if your Amazon QuickSight account is configured with IAM Identity
+     *        Center.
+     */
+
+    public void setIdentityCenterConfiguration(IdentityCenterConfiguration identityCenterConfiguration) {
+        this.identityCenterConfiguration = identityCenterConfiguration;
+    }
+
+    /**
+     * <p>
+     * An optional parameter that configures IAM Identity Center authentication to grant Amazon QuickSight access to
+     * your cluster.
+     * </p>
+     * <p>
+     * This parameter can only be specified if your Amazon QuickSight account is configured with IAM Identity Center.
+     * </p>
+     * 
+     * @return An optional parameter that configures IAM Identity Center authentication to grant Amazon QuickSight
+     *         access to your cluster.</p>
+     *         <p>
+     *         This parameter can only be specified if your Amazon QuickSight account is configured with IAM Identity
+     *         Center.
+     */
+
+    public IdentityCenterConfiguration getIdentityCenterConfiguration() {
+        return this.identityCenterConfiguration;
+    }
+
+    /**
+     * <p>
+     * An optional parameter that configures IAM Identity Center authentication to grant Amazon QuickSight access to
+     * your cluster.
+     * </p>
+     * <p>
+     * This parameter can only be specified if your Amazon QuickSight account is configured with IAM Identity Center.
+     * </p>
+     * 
+     * @param identityCenterConfiguration
+     *        An optional parameter that configures IAM Identity Center authentication to grant Amazon QuickSight access
+     *        to your cluster.</p>
+     *        <p>
+     *        This parameter can only be specified if your Amazon QuickSight account is configured with IAM Identity
+     *        Center.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RedshiftParameters withIdentityCenterConfiguration(IdentityCenterConfiguration identityCenterConfiguration) {
+        setIdentityCenterConfiguration(identityCenterConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -303,7 +377,9 @@ public class RedshiftParameters implements Serializable, Cloneable, StructuredPo
         if (getClusterId() != null)
             sb.append("ClusterId: ").append(getClusterId()).append(",");
         if (getIAMParameters() != null)
-            sb.append("IAMParameters: ").append(getIAMParameters());
+            sb.append("IAMParameters: ").append(getIAMParameters()).append(",");
+        if (getIdentityCenterConfiguration() != null)
+            sb.append("IdentityCenterConfiguration: ").append(getIdentityCenterConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -338,6 +414,10 @@ public class RedshiftParameters implements Serializable, Cloneable, StructuredPo
             return false;
         if (other.getIAMParameters() != null && other.getIAMParameters().equals(this.getIAMParameters()) == false)
             return false;
+        if (other.getIdentityCenterConfiguration() == null ^ this.getIdentityCenterConfiguration() == null)
+            return false;
+        if (other.getIdentityCenterConfiguration() != null && other.getIdentityCenterConfiguration().equals(this.getIdentityCenterConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -351,6 +431,7 @@ public class RedshiftParameters implements Serializable, Cloneable, StructuredPo
         hashCode = prime * hashCode + ((getDatabase() == null) ? 0 : getDatabase().hashCode());
         hashCode = prime * hashCode + ((getClusterId() == null) ? 0 : getClusterId().hashCode());
         hashCode = prime * hashCode + ((getIAMParameters() == null) ? 0 : getIAMParameters().hashCode());
+        hashCode = prime * hashCode + ((getIdentityCenterConfiguration() == null) ? 0 : getIdentityCenterConfiguration().hashCode());
         return hashCode;
     }
 

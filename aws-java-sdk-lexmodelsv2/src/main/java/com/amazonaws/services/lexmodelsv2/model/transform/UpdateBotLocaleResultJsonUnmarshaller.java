@@ -100,6 +100,10 @@ public class UpdateBotLocaleResultJsonUnmarshaller implements Unmarshaller<Updat
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("generativeAISettings", targetDepth)) {
+                    context.nextToken();
+                    updateBotLocaleResult.setGenerativeAISettings(GenerativeAISettingsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

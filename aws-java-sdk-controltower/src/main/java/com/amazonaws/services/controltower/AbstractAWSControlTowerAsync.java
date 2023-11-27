@@ -28,6 +28,19 @@ public class AbstractAWSControlTowerAsync extends AbstractAWSControlTower implem
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteLandingZoneResult> deleteLandingZoneAsync(DeleteLandingZoneRequest request) {
+
+        return deleteLandingZoneAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteLandingZoneResult> deleteLandingZoneAsync(DeleteLandingZoneRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteLandingZoneRequest, DeleteLandingZoneResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DisableControlResult> disableControlAsync(DisableControlRequest request) {
 
         return disableControlAsync(request, null);
@@ -80,6 +93,19 @@ public class AbstractAWSControlTowerAsync extends AbstractAWSControlTower implem
     }
 
     @Override
+    public java.util.concurrent.Future<GetLandingZoneOperationResult> getLandingZoneOperationAsync(GetLandingZoneOperationRequest request) {
+
+        return getLandingZoneOperationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetLandingZoneOperationResult> getLandingZoneOperationAsync(GetLandingZoneOperationRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetLandingZoneOperationRequest, GetLandingZoneOperationResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ListEnabledControlsResult> listEnabledControlsAsync(ListEnabledControlsRequest request) {
 
         return listEnabledControlsAsync(request, null);
@@ -93,6 +119,19 @@ public class AbstractAWSControlTowerAsync extends AbstractAWSControlTower implem
     }
 
     @Override
+    public java.util.concurrent.Future<ListLandingZonesResult> listLandingZonesAsync(ListLandingZonesRequest request) {
+
+        return listLandingZonesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListLandingZonesResult> listLandingZonesAsync(ListLandingZonesRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListLandingZonesRequest, ListLandingZonesResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ListTagsForResourceResult> listTagsForResourceAsync(ListTagsForResourceRequest request) {
 
         return listTagsForResourceAsync(request, null);
@@ -101,6 +140,19 @@ public class AbstractAWSControlTowerAsync extends AbstractAWSControlTower implem
     @Override
     public java.util.concurrent.Future<ListTagsForResourceResult> listTagsForResourceAsync(ListTagsForResourceRequest request,
             com.amazonaws.handlers.AsyncHandler<ListTagsForResourceRequest, ListTagsForResourceResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ResetLandingZoneResult> resetLandingZoneAsync(ResetLandingZoneRequest request) {
+
+        return resetLandingZoneAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ResetLandingZoneResult> resetLandingZoneAsync(ResetLandingZoneRequest request,
+            com.amazonaws.handlers.AsyncHandler<ResetLandingZoneRequest, ResetLandingZoneResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

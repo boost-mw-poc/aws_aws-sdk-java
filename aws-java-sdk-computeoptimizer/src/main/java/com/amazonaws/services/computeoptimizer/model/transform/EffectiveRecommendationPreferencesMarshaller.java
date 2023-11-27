@@ -36,6 +36,14 @@ public class EffectiveRecommendationPreferencesMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("inferredWorkloadTypes").build();
     private static final MarshallingInfo<StructuredPojo> EXTERNALMETRICSPREFERENCE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("externalMetricsPreference").build();
+    private static final MarshallingInfo<String> LOOKBACKPERIOD_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("lookBackPeriod").build();
+    private static final MarshallingInfo<List> UTILIZATIONPREFERENCES_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("utilizationPreferences").build();
+    private static final MarshallingInfo<List> PREFERREDRESOURCES_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("preferredResources").build();
+    private static final MarshallingInfo<StructuredPojo> SAVINGSESTIMATIONMODE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("savingsEstimationMode").build();
 
     private static final EffectiveRecommendationPreferencesMarshaller instance = new EffectiveRecommendationPreferencesMarshaller();
 
@@ -57,6 +65,10 @@ public class EffectiveRecommendationPreferencesMarshaller {
             protocolMarshaller.marshall(effectiveRecommendationPreferences.getEnhancedInfrastructureMetrics(), ENHANCEDINFRASTRUCTUREMETRICS_BINDING);
             protocolMarshaller.marshall(effectiveRecommendationPreferences.getInferredWorkloadTypes(), INFERREDWORKLOADTYPES_BINDING);
             protocolMarshaller.marshall(effectiveRecommendationPreferences.getExternalMetricsPreference(), EXTERNALMETRICSPREFERENCE_BINDING);
+            protocolMarshaller.marshall(effectiveRecommendationPreferences.getLookBackPeriod(), LOOKBACKPERIOD_BINDING);
+            protocolMarshaller.marshall(effectiveRecommendationPreferences.getUtilizationPreferences(), UTILIZATIONPREFERENCES_BINDING);
+            protocolMarshaller.marshall(effectiveRecommendationPreferences.getPreferredResources(), PREFERREDRESOURCES_BINDING);
+            protocolMarshaller.marshall(effectiveRecommendationPreferences.getSavingsEstimationMode(), SAVINGSESTIMATIONMODE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

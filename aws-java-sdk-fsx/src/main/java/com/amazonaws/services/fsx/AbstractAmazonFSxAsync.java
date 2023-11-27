@@ -66,6 +66,19 @@ public class AbstractAmazonFSxAsync extends AbstractAmazonFSx implements AmazonF
     }
 
     @Override
+    public java.util.concurrent.Future<CopySnapshotAndUpdateVolumeResult> copySnapshotAndUpdateVolumeAsync(CopySnapshotAndUpdateVolumeRequest request) {
+
+        return copySnapshotAndUpdateVolumeAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CopySnapshotAndUpdateVolumeResult> copySnapshotAndUpdateVolumeAsync(CopySnapshotAndUpdateVolumeRequest request,
+            com.amazonaws.handlers.AsyncHandler<CopySnapshotAndUpdateVolumeRequest, CopySnapshotAndUpdateVolumeResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateBackupResult> createBackupAsync(CreateBackupRequest request) {
 
         return createBackupAsync(request, null);
@@ -371,6 +384,19 @@ public class AbstractAmazonFSxAsync extends AbstractAmazonFSx implements AmazonF
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeSharedVpcConfigurationResult> describeSharedVpcConfigurationAsync(DescribeSharedVpcConfigurationRequest request) {
+
+        return describeSharedVpcConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeSharedVpcConfigurationResult> describeSharedVpcConfigurationAsync(DescribeSharedVpcConfigurationRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeSharedVpcConfigurationRequest, DescribeSharedVpcConfigurationResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeSnapshotsResult> describeSnapshotsAsync(DescribeSnapshotsRequest request) {
 
         return describeSnapshotsAsync(request, null);
@@ -539,6 +565,19 @@ public class AbstractAmazonFSxAsync extends AbstractAmazonFSx implements AmazonF
     @Override
     public java.util.concurrent.Future<UpdateFileSystemResult> updateFileSystemAsync(UpdateFileSystemRequest request,
             com.amazonaws.handlers.AsyncHandler<UpdateFileSystemRequest, UpdateFileSystemResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateSharedVpcConfigurationResult> updateSharedVpcConfigurationAsync(UpdateSharedVpcConfigurationRequest request) {
+
+        return updateSharedVpcConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateSharedVpcConfigurationResult> updateSharedVpcConfigurationAsync(UpdateSharedVpcConfigurationRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateSharedVpcConfigurationRequest, UpdateSharedVpcConfigurationResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

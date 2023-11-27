@@ -74,6 +74,39 @@ public class AmazonPersonalizeRuntimeAsyncClient extends AmazonPersonalizeRuntim
     }
 
     @Override
+    public java.util.concurrent.Future<GetActionRecommendationsResult> getActionRecommendationsAsync(GetActionRecommendationsRequest request) {
+
+        return getActionRecommendationsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetActionRecommendationsResult> getActionRecommendationsAsync(final GetActionRecommendationsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetActionRecommendationsRequest, GetActionRecommendationsResult> asyncHandler) {
+        final GetActionRecommendationsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetActionRecommendationsResult>() {
+            @Override
+            public GetActionRecommendationsResult call() throws Exception {
+                GetActionRecommendationsResult result = null;
+
+                try {
+                    result = executeGetActionRecommendations(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetPersonalizedRankingResult> getPersonalizedRankingAsync(GetPersonalizedRankingRequest request) {
 
         return getPersonalizedRankingAsync(request, null);

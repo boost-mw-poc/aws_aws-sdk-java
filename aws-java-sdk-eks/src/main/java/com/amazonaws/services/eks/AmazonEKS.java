@@ -187,6 +187,26 @@ public interface AmazonEKS {
      * Kubernetes API server endpoint and a certificate file that is created for your cluster.
      * </p>
      * <p>
+     * You can use the <code>endpointPublicAccess</code> and <code>endpointPrivateAccess</code> parameters to enable or
+     * disable public and private access to your cluster's Kubernetes API server endpoint. By default, public access is
+     * enabled, and private access is disabled. For more information, see <a
+     * href="https://docs.aws.amazon.com/eks/latest/userguide/cluster-endpoint.html">Amazon EKS Cluster Endpoint Access
+     * Control</a> in the <i> <i>Amazon EKS User Guide</i> </i>.
+     * </p>
+     * <p>
+     * You can use the <code>logging</code> parameter to enable or disable exporting the Kubernetes control plane logs
+     * for your cluster to CloudWatch Logs. By default, cluster control plane logs aren't exported to CloudWatch Logs.
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/eks/latest/userguide/control-plane-logs.html">Amazon EKS Cluster Control Plane
+     * Logs</a> in the <i> <i>Amazon EKS User Guide</i> </i>.
+     * </p>
+     * <note>
+     * <p>
+     * CloudWatch Logs ingestion, archive storage, and data scanning rates apply to exported control plane logs. For
+     * more information, see <a href="http://aws.amazon.com/cloudwatch/pricing/">CloudWatch Pricing</a>.
+     * </p>
+     * </note>
+     * <p>
      * In most cases, it takes several minutes to create a cluster. After you create an Amazon EKS cluster, you must
      * configure your Kubernetes tooling to communicate with the API server and launch nodes into your cluster. For more
      * information, see <a href="https://docs.aws.amazon.com/eks/latest/userguide/managing-auth.html">Managing Cluster
@@ -359,6 +379,49 @@ public interface AmazonEKS {
 
     /**
      * <p>
+     * Creates an EKS Pod Identity association between a service account in an Amazon EKS cluster and an IAM role with
+     * <i>EKS Pod Identity</i>. Use EKS Pod Identity to give temporary IAM credentials to pods and the credentials are
+     * rotated automatically.
+     * </p>
+     * <p>
+     * Amazon EKS Pod Identity associations provide the ability to manage credentials for your applications, similar to
+     * the way that 7EC2l instance profiles provide credentials to Amazon EC2 instances.
+     * </p>
+     * <p>
+     * If a pod uses a service account that has an association, Amazon EKS sets environment variables in the containers
+     * of the pod. The environment variables configure the Amazon Web Services SDKs, including the Command Line
+     * Interface, to use the EKS Pod Identity credentials.
+     * </p>
+     * <p>
+     * Pod Identity is a simpler method than <i>IAM roles for service accounts</i>, as this method doesn't use OIDC
+     * identity providers. Additionally, you can configure a role for Pod Identity once, and reuse it across clusters.
+     * </p>
+     * 
+     * @param createPodIdentityAssociationRequest
+     * @return Result of the CreatePodIdentityAssociation operation returned by the service.
+     * @throws ServerException
+     *         These errors are usually caused by a server-side issue.
+     * @throws ResourceNotFoundException
+     *         The specified resource could not be found. You can view your available clusters with <a>ListClusters</a>.
+     *         You can view your available managed node groups with <a>ListNodegroups</a>. Amazon EKS clusters and node
+     *         groups are Region-specific.
+     * @throws InvalidRequestException
+     *         The request is invalid given the state of the cluster. Check the state of the cluster and the associated
+     *         operations.
+     * @throws InvalidParameterException
+     *         The specified parameter is invalid. Review the available parameters for the API request.
+     * @throws ResourceLimitExceededException
+     *         You have encountered a service limit on the specified resource.
+     * @throws ResourceInUseException
+     *         The specified resource is in use.
+     * @sample AmazonEKS.CreatePodIdentityAssociation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/eks-2017-11-01/CreatePodIdentityAssociation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    CreatePodIdentityAssociationResult createPodIdentityAssociation(CreatePodIdentityAssociationRequest createPodIdentityAssociationRequest);
+
+    /**
+     * <p>
      * Delete an Amazon EKS add-on.
      * </p>
      * <p>
@@ -433,9 +496,9 @@ public interface AmazonEKS {
 
     /**
      * <p>
-     * Deletes an expired / inactive subscription. Deleting inactive subscriptions removes them from the Amazon Web
+     * Deletes an expired or inactive subscription. Deleting inactive subscriptions removes them from the Amazon Web
      * Services Management Console view and from list/describe API responses. Subscriptions can only be cancelled within
-     * 7 days of creation, and are cancelled by creating a ticket in the Amazon Web Services Support Center.
+     * 7 days of creation and are cancelled by creating a ticket in the Amazon Web Services Support Center.
      * </p>
      * 
      * @param deleteEksAnywhereSubscriptionRequest
@@ -527,6 +590,35 @@ public interface AmazonEKS {
      *      Documentation</a>
      */
     DeleteNodegroupResult deleteNodegroup(DeleteNodegroupRequest deleteNodegroupRequest);
+
+    /**
+     * <p>
+     * Deletes a EKS Pod Identity association.
+     * </p>
+     * <p>
+     * The temporary Amazon Web Services credentials from the previous IAM role session might still be valid until the
+     * session expiry. If you need to immediately revoke the temporary session credentials, then go to the role in the
+     * IAM console.
+     * </p>
+     * 
+     * @param deletePodIdentityAssociationRequest
+     * @return Result of the DeletePodIdentityAssociation operation returned by the service.
+     * @throws ServerException
+     *         These errors are usually caused by a server-side issue.
+     * @throws ResourceNotFoundException
+     *         The specified resource could not be found. You can view your available clusters with <a>ListClusters</a>.
+     *         You can view your available managed node groups with <a>ListNodegroups</a>. Amazon EKS clusters and node
+     *         groups are Region-specific.
+     * @throws InvalidRequestException
+     *         The request is invalid given the state of the cluster. Check the state of the cluster and the associated
+     *         operations.
+     * @throws InvalidParameterException
+     *         The specified parameter is invalid. Review the available parameters for the API request.
+     * @sample AmazonEKS.DeletePodIdentityAssociation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/eks-2017-11-01/DeletePodIdentityAssociation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DeletePodIdentityAssociationResult deletePodIdentityAssociation(DeletePodIdentityAssociationRequest deletePodIdentityAssociationRequest);
 
     /**
      * <p>
@@ -790,6 +882,35 @@ public interface AmazonEKS {
 
     /**
      * <p>
+     * Returns descriptive information about an EKS Pod Identity association.
+     * </p>
+     * <p>
+     * This action requires the ID of the association. You can get the ID from the response to the
+     * <code>CreatePodIdentityAssocation</code> for newly created associations. Or, you can list the IDs for
+     * associations with <code>ListPodIdentityAssociations</code> and filter the list by namespace or service account.
+     * </p>
+     * 
+     * @param describePodIdentityAssociationRequest
+     * @return Result of the DescribePodIdentityAssociation operation returned by the service.
+     * @throws ServerException
+     *         These errors are usually caused by a server-side issue.
+     * @throws ResourceNotFoundException
+     *         The specified resource could not be found. You can view your available clusters with <a>ListClusters</a>.
+     *         You can view your available managed node groups with <a>ListNodegroups</a>. Amazon EKS clusters and node
+     *         groups are Region-specific.
+     * @throws InvalidRequestException
+     *         The request is invalid given the state of the cluster. Check the state of the cluster and the associated
+     *         operations.
+     * @throws InvalidParameterException
+     *         The specified parameter is invalid. Review the available parameters for the API request.
+     * @sample AmazonEKS.DescribePodIdentityAssociation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/eks-2017-11-01/DescribePodIdentityAssociation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DescribePodIdentityAssociationResult describePodIdentityAssociation(DescribePodIdentityAssociationRequest describePodIdentityAssociationRequest);
+
+    /**
+     * <p>
      * Returns descriptive information about an update against your Amazon EKS cluster or associated managed node group
      * or Amazon EKS add-on.
      * </p>
@@ -1025,6 +1146,31 @@ public interface AmazonEKS {
 
     /**
      * <p>
+     * List the EKS Pod Identity associations in a cluster. You can filter the list by the namespace that the
+     * association is in or the service account that the association uses.
+     * </p>
+     * 
+     * @param listPodIdentityAssociationsRequest
+     * @return Result of the ListPodIdentityAssociations operation returned by the service.
+     * @throws ServerException
+     *         These errors are usually caused by a server-side issue.
+     * @throws ResourceNotFoundException
+     *         The specified resource could not be found. You can view your available clusters with <a>ListClusters</a>.
+     *         You can view your available managed node groups with <a>ListNodegroups</a>. Amazon EKS clusters and node
+     *         groups are Region-specific.
+     * @throws InvalidRequestException
+     *         The request is invalid given the state of the cluster. Check the state of the cluster and the associated
+     *         operations.
+     * @throws InvalidParameterException
+     *         The specified parameter is invalid. Review the available parameters for the API request.
+     * @sample AmazonEKS.ListPodIdentityAssociations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/eks-2017-11-01/ListPodIdentityAssociations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListPodIdentityAssociationsResult listPodIdentityAssociations(ListPodIdentityAssociationsRequest listPodIdentityAssociationsRequest);
+
+    /**
+     * <p>
      * List the tags for an Amazon EKS resource.
      * </p>
      * 
@@ -1225,11 +1371,14 @@ public interface AmazonEKS {
      * see <a href="https://docs.aws.amazon.com/eks/latest/userguide/cluster-endpoint.html">Amazon EKS cluster endpoint
      * access control</a> in the <i> <i>Amazon EKS User Guide</i> </i>.
      * </p>
-     * <important>
      * <p>
-     * You can't update the subnets or security group IDs for an existing cluster.
+     * You can also use this API operation to choose different subnets and security groups for the cluster. You must
+     * specify at least two subnets that are in different Availability Zones. You can't change which VPC the subnets are
+     * from, the subnets must be in the same VPC as the subnets that the cluster was created with. For more information
+     * about the VPC requirements, see <a
+     * href="https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html">https
+     * ://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html</a> in the <i> <i>Amazon EKS User Guide</i> </i>.
      * </p>
-     * </important>
      * <p>
      * Cluster updates are asynchronous, and they should finish within a few minutes. During an update, the cluster
      * status moves to <code>UPDATING</code> (this status transition is eventually consistent). When the update is
@@ -1429,6 +1578,32 @@ public interface AmazonEKS {
      *      Documentation</a>
      */
     UpdateNodegroupVersionResult updateNodegroupVersion(UpdateNodegroupVersionRequest updateNodegroupVersionRequest);
+
+    /**
+     * <p>
+     * Updates a EKS Pod Identity association. Only the IAM role can be changed; an association can't be moved between
+     * clusters, namespaces, or service accounts. If you need to edit the namespace or service account, you need to
+     * remove the association and then create a new association with your desired settings.
+     * </p>
+     * 
+     * @param updatePodIdentityAssociationRequest
+     * @return Result of the UpdatePodIdentityAssociation operation returned by the service.
+     * @throws ServerException
+     *         These errors are usually caused by a server-side issue.
+     * @throws ResourceNotFoundException
+     *         The specified resource could not be found. You can view your available clusters with <a>ListClusters</a>.
+     *         You can view your available managed node groups with <a>ListNodegroups</a>. Amazon EKS clusters and node
+     *         groups are Region-specific.
+     * @throws InvalidRequestException
+     *         The request is invalid given the state of the cluster. Check the state of the cluster and the associated
+     *         operations.
+     * @throws InvalidParameterException
+     *         The specified parameter is invalid. Review the available parameters for the API request.
+     * @sample AmazonEKS.UpdatePodIdentityAssociation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/eks-2017-11-01/UpdatePodIdentityAssociation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    UpdatePodIdentityAssociationResult updatePodIdentityAssociation(UpdatePodIdentityAssociationRequest updatePodIdentityAssociationRequest);
 
     /**
      * Shuts down this client object, releasing any resources that might be held open. This is an optional method, and

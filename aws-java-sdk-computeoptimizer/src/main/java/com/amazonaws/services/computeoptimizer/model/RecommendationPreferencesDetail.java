@@ -89,6 +89,42 @@ public class RecommendationPreferencesDetail implements Serializable, Cloneable,
      * </p>
      */
     private ExternalMetricsPreference externalMetricsPreference;
+    /**
+     * <p>
+     * The preference to control the number of days the utilization metrics of the Amazon Web Services resource are
+     * analyzed. If the preference isn’t set, this object is null.
+     * </p>
+     */
+    private String lookBackPeriod;
+    /**
+     * <p>
+     * The preference to control the resource’s CPU utilization thresholds - threshold and headroom. If the preference
+     * isn’t set, this object is null.
+     * </p>
+     * <note>
+     * <p>
+     * This preference is only available for the Amazon EC2 instance resource type.
+     * </p>
+     * </note>
+     */
+    private java.util.List<UtilizationPreference> utilizationPreferences;
+    /**
+     * <p>
+     * The preference to control which resource type values are considered when generating rightsizing recommendations.
+     * This object resolves any wildcard expressions and returns the effective list of candidate resource type values.
+     * If the preference isn’t set, this object is null.
+     * </p>
+     */
+    private java.util.List<EffectivePreferredResource> preferredResources;
+    /**
+     * <p>
+     * Describes the savings estimation mode used for calculating savings opportunity.
+     * </p>
+     * <p>
+     * Only the account manager or delegated administrator of your organization can activate this preference.
+     * </p>
+     */
+    private String savingsEstimationMode;
 
     /**
      * <p>
@@ -556,6 +592,348 @@ public class RecommendationPreferencesDetail implements Serializable, Cloneable,
     }
 
     /**
+     * <p>
+     * The preference to control the number of days the utilization metrics of the Amazon Web Services resource are
+     * analyzed. If the preference isn’t set, this object is null.
+     * </p>
+     * 
+     * @param lookBackPeriod
+     *        The preference to control the number of days the utilization metrics of the Amazon Web Services resource
+     *        are analyzed. If the preference isn’t set, this object is null.
+     * @see LookBackPeriodPreference
+     */
+
+    public void setLookBackPeriod(String lookBackPeriod) {
+        this.lookBackPeriod = lookBackPeriod;
+    }
+
+    /**
+     * <p>
+     * The preference to control the number of days the utilization metrics of the Amazon Web Services resource are
+     * analyzed. If the preference isn’t set, this object is null.
+     * </p>
+     * 
+     * @return The preference to control the number of days the utilization metrics of the Amazon Web Services resource
+     *         are analyzed. If the preference isn’t set, this object is null.
+     * @see LookBackPeriodPreference
+     */
+
+    public String getLookBackPeriod() {
+        return this.lookBackPeriod;
+    }
+
+    /**
+     * <p>
+     * The preference to control the number of days the utilization metrics of the Amazon Web Services resource are
+     * analyzed. If the preference isn’t set, this object is null.
+     * </p>
+     * 
+     * @param lookBackPeriod
+     *        The preference to control the number of days the utilization metrics of the Amazon Web Services resource
+     *        are analyzed. If the preference isn’t set, this object is null.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see LookBackPeriodPreference
+     */
+
+    public RecommendationPreferencesDetail withLookBackPeriod(String lookBackPeriod) {
+        setLookBackPeriod(lookBackPeriod);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The preference to control the number of days the utilization metrics of the Amazon Web Services resource are
+     * analyzed. If the preference isn’t set, this object is null.
+     * </p>
+     * 
+     * @param lookBackPeriod
+     *        The preference to control the number of days the utilization metrics of the Amazon Web Services resource
+     *        are analyzed. If the preference isn’t set, this object is null.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see LookBackPeriodPreference
+     */
+
+    public RecommendationPreferencesDetail withLookBackPeriod(LookBackPeriodPreference lookBackPeriod) {
+        this.lookBackPeriod = lookBackPeriod.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * The preference to control the resource’s CPU utilization thresholds - threshold and headroom. If the preference
+     * isn’t set, this object is null.
+     * </p>
+     * <note>
+     * <p>
+     * This preference is only available for the Amazon EC2 instance resource type.
+     * </p>
+     * </note>
+     * 
+     * @return The preference to control the resource’s CPU utilization thresholds - threshold and headroom. If the
+     *         preference isn’t set, this object is null. </p> <note>
+     *         <p>
+     *         This preference is only available for the Amazon EC2 instance resource type.
+     *         </p>
+     */
+
+    public java.util.List<UtilizationPreference> getUtilizationPreferences() {
+        return utilizationPreferences;
+    }
+
+    /**
+     * <p>
+     * The preference to control the resource’s CPU utilization thresholds - threshold and headroom. If the preference
+     * isn’t set, this object is null.
+     * </p>
+     * <note>
+     * <p>
+     * This preference is only available for the Amazon EC2 instance resource type.
+     * </p>
+     * </note>
+     * 
+     * @param utilizationPreferences
+     *        The preference to control the resource’s CPU utilization thresholds - threshold and headroom. If the
+     *        preference isn’t set, this object is null. </p> <note>
+     *        <p>
+     *        This preference is only available for the Amazon EC2 instance resource type.
+     *        </p>
+     */
+
+    public void setUtilizationPreferences(java.util.Collection<UtilizationPreference> utilizationPreferences) {
+        if (utilizationPreferences == null) {
+            this.utilizationPreferences = null;
+            return;
+        }
+
+        this.utilizationPreferences = new java.util.ArrayList<UtilizationPreference>(utilizationPreferences);
+    }
+
+    /**
+     * <p>
+     * The preference to control the resource’s CPU utilization thresholds - threshold and headroom. If the preference
+     * isn’t set, this object is null.
+     * </p>
+     * <note>
+     * <p>
+     * This preference is only available for the Amazon EC2 instance resource type.
+     * </p>
+     * </note>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setUtilizationPreferences(java.util.Collection)} or
+     * {@link #withUtilizationPreferences(java.util.Collection)} if you want to override the existing values.
+     * </p>
+     * 
+     * @param utilizationPreferences
+     *        The preference to control the resource’s CPU utilization thresholds - threshold and headroom. If the
+     *        preference isn’t set, this object is null. </p> <note>
+     *        <p>
+     *        This preference is only available for the Amazon EC2 instance resource type.
+     *        </p>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RecommendationPreferencesDetail withUtilizationPreferences(UtilizationPreference... utilizationPreferences) {
+        if (this.utilizationPreferences == null) {
+            setUtilizationPreferences(new java.util.ArrayList<UtilizationPreference>(utilizationPreferences.length));
+        }
+        for (UtilizationPreference ele : utilizationPreferences) {
+            this.utilizationPreferences.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The preference to control the resource’s CPU utilization thresholds - threshold and headroom. If the preference
+     * isn’t set, this object is null.
+     * </p>
+     * <note>
+     * <p>
+     * This preference is only available for the Amazon EC2 instance resource type.
+     * </p>
+     * </note>
+     * 
+     * @param utilizationPreferences
+     *        The preference to control the resource’s CPU utilization thresholds - threshold and headroom. If the
+     *        preference isn’t set, this object is null. </p> <note>
+     *        <p>
+     *        This preference is only available for the Amazon EC2 instance resource type.
+     *        </p>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RecommendationPreferencesDetail withUtilizationPreferences(java.util.Collection<UtilizationPreference> utilizationPreferences) {
+        setUtilizationPreferences(utilizationPreferences);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The preference to control which resource type values are considered when generating rightsizing recommendations.
+     * This object resolves any wildcard expressions and returns the effective list of candidate resource type values.
+     * If the preference isn’t set, this object is null.
+     * </p>
+     * 
+     * @return The preference to control which resource type values are considered when generating rightsizing
+     *         recommendations. This object resolves any wildcard expressions and returns the effective list of
+     *         candidate resource type values. If the preference isn’t set, this object is null.
+     */
+
+    public java.util.List<EffectivePreferredResource> getPreferredResources() {
+        return preferredResources;
+    }
+
+    /**
+     * <p>
+     * The preference to control which resource type values are considered when generating rightsizing recommendations.
+     * This object resolves any wildcard expressions and returns the effective list of candidate resource type values.
+     * If the preference isn’t set, this object is null.
+     * </p>
+     * 
+     * @param preferredResources
+     *        The preference to control which resource type values are considered when generating rightsizing
+     *        recommendations. This object resolves any wildcard expressions and returns the effective list of candidate
+     *        resource type values. If the preference isn’t set, this object is null.
+     */
+
+    public void setPreferredResources(java.util.Collection<EffectivePreferredResource> preferredResources) {
+        if (preferredResources == null) {
+            this.preferredResources = null;
+            return;
+        }
+
+        this.preferredResources = new java.util.ArrayList<EffectivePreferredResource>(preferredResources);
+    }
+
+    /**
+     * <p>
+     * The preference to control which resource type values are considered when generating rightsizing recommendations.
+     * This object resolves any wildcard expressions and returns the effective list of candidate resource type values.
+     * If the preference isn’t set, this object is null.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setPreferredResources(java.util.Collection)} or {@link #withPreferredResources(java.util.Collection)} if
+     * you want to override the existing values.
+     * </p>
+     * 
+     * @param preferredResources
+     *        The preference to control which resource type values are considered when generating rightsizing
+     *        recommendations. This object resolves any wildcard expressions and returns the effective list of candidate
+     *        resource type values. If the preference isn’t set, this object is null.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RecommendationPreferencesDetail withPreferredResources(EffectivePreferredResource... preferredResources) {
+        if (this.preferredResources == null) {
+            setPreferredResources(new java.util.ArrayList<EffectivePreferredResource>(preferredResources.length));
+        }
+        for (EffectivePreferredResource ele : preferredResources) {
+            this.preferredResources.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The preference to control which resource type values are considered when generating rightsizing recommendations.
+     * This object resolves any wildcard expressions and returns the effective list of candidate resource type values.
+     * If the preference isn’t set, this object is null.
+     * </p>
+     * 
+     * @param preferredResources
+     *        The preference to control which resource type values are considered when generating rightsizing
+     *        recommendations. This object resolves any wildcard expressions and returns the effective list of candidate
+     *        resource type values. If the preference isn’t set, this object is null.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RecommendationPreferencesDetail withPreferredResources(java.util.Collection<EffectivePreferredResource> preferredResources) {
+        setPreferredResources(preferredResources);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Describes the savings estimation mode used for calculating savings opportunity.
+     * </p>
+     * <p>
+     * Only the account manager or delegated administrator of your organization can activate this preference.
+     * </p>
+     * 
+     * @param savingsEstimationMode
+     *        Describes the savings estimation mode used for calculating savings opportunity. </p>
+     *        <p>
+     *        Only the account manager or delegated administrator of your organization can activate this preference.
+     * @see SavingsEstimationMode
+     */
+
+    public void setSavingsEstimationMode(String savingsEstimationMode) {
+        this.savingsEstimationMode = savingsEstimationMode;
+    }
+
+    /**
+     * <p>
+     * Describes the savings estimation mode used for calculating savings opportunity.
+     * </p>
+     * <p>
+     * Only the account manager or delegated administrator of your organization can activate this preference.
+     * </p>
+     * 
+     * @return Describes the savings estimation mode used for calculating savings opportunity. </p>
+     *         <p>
+     *         Only the account manager or delegated administrator of your organization can activate this preference.
+     * @see SavingsEstimationMode
+     */
+
+    public String getSavingsEstimationMode() {
+        return this.savingsEstimationMode;
+    }
+
+    /**
+     * <p>
+     * Describes the savings estimation mode used for calculating savings opportunity.
+     * </p>
+     * <p>
+     * Only the account manager or delegated administrator of your organization can activate this preference.
+     * </p>
+     * 
+     * @param savingsEstimationMode
+     *        Describes the savings estimation mode used for calculating savings opportunity. </p>
+     *        <p>
+     *        Only the account manager or delegated administrator of your organization can activate this preference.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see SavingsEstimationMode
+     */
+
+    public RecommendationPreferencesDetail withSavingsEstimationMode(String savingsEstimationMode) {
+        setSavingsEstimationMode(savingsEstimationMode);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Describes the savings estimation mode used for calculating savings opportunity.
+     * </p>
+     * <p>
+     * Only the account manager or delegated administrator of your organization can activate this preference.
+     * </p>
+     * 
+     * @param savingsEstimationMode
+     *        Describes the savings estimation mode used for calculating savings opportunity. </p>
+     *        <p>
+     *        Only the account manager or delegated administrator of your organization can activate this preference.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see SavingsEstimationMode
+     */
+
+    public RecommendationPreferencesDetail withSavingsEstimationMode(SavingsEstimationMode savingsEstimationMode) {
+        this.savingsEstimationMode = savingsEstimationMode.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -576,7 +954,15 @@ public class RecommendationPreferencesDetail implements Serializable, Cloneable,
         if (getInferredWorkloadTypes() != null)
             sb.append("InferredWorkloadTypes: ").append(getInferredWorkloadTypes()).append(",");
         if (getExternalMetricsPreference() != null)
-            sb.append("ExternalMetricsPreference: ").append(getExternalMetricsPreference());
+            sb.append("ExternalMetricsPreference: ").append(getExternalMetricsPreference()).append(",");
+        if (getLookBackPeriod() != null)
+            sb.append("LookBackPeriod: ").append(getLookBackPeriod()).append(",");
+        if (getUtilizationPreferences() != null)
+            sb.append("UtilizationPreferences: ").append(getUtilizationPreferences()).append(",");
+        if (getPreferredResources() != null)
+            sb.append("PreferredResources: ").append(getPreferredResources()).append(",");
+        if (getSavingsEstimationMode() != null)
+            sb.append("SavingsEstimationMode: ").append(getSavingsEstimationMode());
         sb.append("}");
         return sb.toString();
     }
@@ -612,6 +998,22 @@ public class RecommendationPreferencesDetail implements Serializable, Cloneable,
             return false;
         if (other.getExternalMetricsPreference() != null && other.getExternalMetricsPreference().equals(this.getExternalMetricsPreference()) == false)
             return false;
+        if (other.getLookBackPeriod() == null ^ this.getLookBackPeriod() == null)
+            return false;
+        if (other.getLookBackPeriod() != null && other.getLookBackPeriod().equals(this.getLookBackPeriod()) == false)
+            return false;
+        if (other.getUtilizationPreferences() == null ^ this.getUtilizationPreferences() == null)
+            return false;
+        if (other.getUtilizationPreferences() != null && other.getUtilizationPreferences().equals(this.getUtilizationPreferences()) == false)
+            return false;
+        if (other.getPreferredResources() == null ^ this.getPreferredResources() == null)
+            return false;
+        if (other.getPreferredResources() != null && other.getPreferredResources().equals(this.getPreferredResources()) == false)
+            return false;
+        if (other.getSavingsEstimationMode() == null ^ this.getSavingsEstimationMode() == null)
+            return false;
+        if (other.getSavingsEstimationMode() != null && other.getSavingsEstimationMode().equals(this.getSavingsEstimationMode()) == false)
+            return false;
         return true;
     }
 
@@ -625,6 +1027,10 @@ public class RecommendationPreferencesDetail implements Serializable, Cloneable,
         hashCode = prime * hashCode + ((getEnhancedInfrastructureMetrics() == null) ? 0 : getEnhancedInfrastructureMetrics().hashCode());
         hashCode = prime * hashCode + ((getInferredWorkloadTypes() == null) ? 0 : getInferredWorkloadTypes().hashCode());
         hashCode = prime * hashCode + ((getExternalMetricsPreference() == null) ? 0 : getExternalMetricsPreference().hashCode());
+        hashCode = prime * hashCode + ((getLookBackPeriod() == null) ? 0 : getLookBackPeriod().hashCode());
+        hashCode = prime * hashCode + ((getUtilizationPreferences() == null) ? 0 : getUtilizationPreferences().hashCode());
+        hashCode = prime * hashCode + ((getPreferredResources() == null) ? 0 : getPreferredResources().hashCode());
+        hashCode = prime * hashCode + ((getSavingsEstimationMode() == null) ? 0 : getSavingsEstimationMode().hashCode());
         return hashCode;
     }
 

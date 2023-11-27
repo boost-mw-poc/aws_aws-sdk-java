@@ -31,10 +31,10 @@ public class ListIdentityProviderConfigsResult extends com.amazonaws.AmazonWebSe
     private java.util.List<IdentityProviderConfig> identityProviderConfigs;
     /**
      * <p>
-     * The <code>nextToken</code> value returned from a previous paginated
-     * <code>ListIdentityProviderConfigsResponse</code> where <code>maxResults</code> was used and the results exceeded
-     * the value of that parameter. Pagination continues from the end of the previous results that returned the
-     * <code>nextToken</code> value.
+     * The <code>nextToken</code> value to include in a future <code>ListIdentityProviderConfigsResponse</code> request.
+     * When the results of a <code>ListIdentityProviderConfigsResponse</code> request exceed <code>maxResults</code>,
+     * you can use this value to retrieve the next page of results. This value is <code>null</code> when there are no
+     * more results to return.
      * </p>
      */
     private String nextToken;
@@ -111,17 +111,17 @@ public class ListIdentityProviderConfigsResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The <code>nextToken</code> value returned from a previous paginated
-     * <code>ListIdentityProviderConfigsResponse</code> where <code>maxResults</code> was used and the results exceeded
-     * the value of that parameter. Pagination continues from the end of the previous results that returned the
-     * <code>nextToken</code> value.
+     * The <code>nextToken</code> value to include in a future <code>ListIdentityProviderConfigsResponse</code> request.
+     * When the results of a <code>ListIdentityProviderConfigsResponse</code> request exceed <code>maxResults</code>,
+     * you can use this value to retrieve the next page of results. This value is <code>null</code> when there are no
+     * more results to return.
      * </p>
      * 
      * @param nextToken
-     *        The <code>nextToken</code> value returned from a previous paginated
-     *        <code>ListIdentityProviderConfigsResponse</code> where <code>maxResults</code> was used and the results
-     *        exceeded the value of that parameter. Pagination continues from the end of the previous results that
-     *        returned the <code>nextToken</code> value.
+     *        The <code>nextToken</code> value to include in a future <code>ListIdentityProviderConfigsResponse</code>
+     *        request. When the results of a <code>ListIdentityProviderConfigsResponse</code> request exceed
+     *        <code>maxResults</code>, you can use this value to retrieve the next page of results. This value is
+     *        <code>null</code> when there are no more results to return.
      */
 
     public void setNextToken(String nextToken) {
@@ -130,16 +130,16 @@ public class ListIdentityProviderConfigsResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The <code>nextToken</code> value returned from a previous paginated
-     * <code>ListIdentityProviderConfigsResponse</code> where <code>maxResults</code> was used and the results exceeded
-     * the value of that parameter. Pagination continues from the end of the previous results that returned the
-     * <code>nextToken</code> value.
+     * The <code>nextToken</code> value to include in a future <code>ListIdentityProviderConfigsResponse</code> request.
+     * When the results of a <code>ListIdentityProviderConfigsResponse</code> request exceed <code>maxResults</code>,
+     * you can use this value to retrieve the next page of results. This value is <code>null</code> when there are no
+     * more results to return.
      * </p>
      * 
-     * @return The <code>nextToken</code> value returned from a previous paginated
-     *         <code>ListIdentityProviderConfigsResponse</code> where <code>maxResults</code> was used and the results
-     *         exceeded the value of that parameter. Pagination continues from the end of the previous results that
-     *         returned the <code>nextToken</code> value.
+     * @return The <code>nextToken</code> value to include in a future <code>ListIdentityProviderConfigsResponse</code>
+     *         request. When the results of a <code>ListIdentityProviderConfigsResponse</code> request exceed
+     *         <code>maxResults</code>, you can use this value to retrieve the next page of results. This value is
+     *         <code>null</code> when there are no more results to return.
      */
 
     public String getNextToken() {
@@ -148,17 +148,17 @@ public class ListIdentityProviderConfigsResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The <code>nextToken</code> value returned from a previous paginated
-     * <code>ListIdentityProviderConfigsResponse</code> where <code>maxResults</code> was used and the results exceeded
-     * the value of that parameter. Pagination continues from the end of the previous results that returned the
-     * <code>nextToken</code> value.
+     * The <code>nextToken</code> value to include in a future <code>ListIdentityProviderConfigsResponse</code> request.
+     * When the results of a <code>ListIdentityProviderConfigsResponse</code> request exceed <code>maxResults</code>,
+     * you can use this value to retrieve the next page of results. This value is <code>null</code> when there are no
+     * more results to return.
      * </p>
      * 
      * @param nextToken
-     *        The <code>nextToken</code> value returned from a previous paginated
-     *        <code>ListIdentityProviderConfigsResponse</code> where <code>maxResults</code> was used and the results
-     *        exceeded the value of that parameter. Pagination continues from the end of the previous results that
-     *        returned the <code>nextToken</code> value.
+     *        The <code>nextToken</code> value to include in a future <code>ListIdentityProviderConfigsResponse</code>
+     *        request. When the results of a <code>ListIdentityProviderConfigsResponse</code> request exceed
+     *        <code>maxResults</code>, you can use this value to retrieve the next page of results. This value is
+     *        <code>null</code> when there are no more results to return.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

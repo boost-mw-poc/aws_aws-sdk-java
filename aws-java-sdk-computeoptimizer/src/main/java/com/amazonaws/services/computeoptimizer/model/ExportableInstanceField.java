@@ -83,7 +83,14 @@ public enum ExportableInstanceField {
     UtilizationMetricsGpuMemoryPercentageMaximum("UtilizationMetricsGpuMemoryPercentageMaximum"),
     RecommendationOptionsProjectedUtilizationMetricsGpuPercentageMaximum("RecommendationOptionsProjectedUtilizationMetricsGpuPercentageMaximum"),
     RecommendationOptionsProjectedUtilizationMetricsGpuMemoryPercentageMaximum("RecommendationOptionsProjectedUtilizationMetricsGpuMemoryPercentageMaximum"),
-    Idle("Idle");
+    Idle("Idle"),
+    EffectiveRecommendationPreferencesPreferredResources("EffectiveRecommendationPreferencesPreferredResources"),
+    EffectiveRecommendationPreferencesLookBackPeriod("EffectiveRecommendationPreferencesLookBackPeriod"),
+    EffectiveRecommendationPreferencesUtilizationPreferences("EffectiveRecommendationPreferencesUtilizationPreferences"),
+    EffectiveRecommendationPreferencesSavingsEstimationMode("EffectiveRecommendationPreferencesSavingsEstimationMode"),
+    RecommendationOptionsSavingsOpportunityAfterDiscountsPercentage("RecommendationOptionsSavingsOpportunityAfterDiscountsPercentage"),
+    RecommendationOptionsEstimatedMonthlySavingsCurrencyAfterDiscounts("RecommendationOptionsEstimatedMonthlySavingsCurrencyAfterDiscounts"),
+    RecommendationOptionsEstimatedMonthlySavingsValueAfterDiscounts("RecommendationOptionsEstimatedMonthlySavingsValueAfterDiscounts");
 
     private String value;
 

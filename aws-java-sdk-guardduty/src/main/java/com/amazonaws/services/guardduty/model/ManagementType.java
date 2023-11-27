@@ -21,7 +21,8 @@ import javax.annotation.Generated;
 public enum ManagementType {
 
     AUTO_MANAGED("AUTO_MANAGED"),
-    MANUAL("MANUAL");
+    MANUAL("MANUAL"),
+    DISABLED("DISABLED");
 
     private String value;
 

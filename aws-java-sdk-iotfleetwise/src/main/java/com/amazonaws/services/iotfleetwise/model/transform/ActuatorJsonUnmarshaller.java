@@ -90,6 +90,10 @@ public class ActuatorJsonUnmarshaller implements Unmarshaller<Actuator, JsonUnma
                     context.nextToken();
                     actuator.setComment(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("structFullyQualifiedName", targetDepth)) {
+                    context.nextToken();
+                    actuator.setStructFullyQualifiedName(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

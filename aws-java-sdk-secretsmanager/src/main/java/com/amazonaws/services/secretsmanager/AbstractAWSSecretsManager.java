@@ -28,6 +28,11 @@ public class AbstractAWSSecretsManager implements AWSSecretsManager {
     }
 
     @Override
+    public BatchGetSecretValueResult batchGetSecretValue(BatchGetSecretValueRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CancelRotateSecretResult cancelRotateSecret(CancelRotateSecretRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

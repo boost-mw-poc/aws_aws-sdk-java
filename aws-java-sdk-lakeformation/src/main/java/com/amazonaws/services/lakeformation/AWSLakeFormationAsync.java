@@ -307,6 +307,45 @@ public interface AWSLakeFormationAsync extends AWSLakeFormation {
 
     /**
      * <p>
+     * Creates an IAM Identity Center connection with Lake Formation to allow IAM Identity Center users and groups to
+     * access Data Catalog resources.
+     * </p>
+     * 
+     * @param createLakeFormationIdentityCenterConfigurationRequest
+     * @return A Java Future containing the result of the CreateLakeFormationIdentityCenterConfiguration operation
+     *         returned by the service.
+     * @sample AWSLakeFormationAsync.CreateLakeFormationIdentityCenterConfiguration
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/lakeformation-2017-03-31/CreateLakeFormationIdentityCenterConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateLakeFormationIdentityCenterConfigurationResult> createLakeFormationIdentityCenterConfigurationAsync(
+            CreateLakeFormationIdentityCenterConfigurationRequest createLakeFormationIdentityCenterConfigurationRequest);
+
+    /**
+     * <p>
+     * Creates an IAM Identity Center connection with Lake Formation to allow IAM Identity Center users and groups to
+     * access Data Catalog resources.
+     * </p>
+     * 
+     * @param createLakeFormationIdentityCenterConfigurationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateLakeFormationIdentityCenterConfiguration operation
+     *         returned by the service.
+     * @sample AWSLakeFormationAsyncHandler.CreateLakeFormationIdentityCenterConfiguration
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/lakeformation-2017-03-31/CreateLakeFormationIdentityCenterConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateLakeFormationIdentityCenterConfigurationResult> createLakeFormationIdentityCenterConfigurationAsync(
+            CreateLakeFormationIdentityCenterConfigurationRequest createLakeFormationIdentityCenterConfigurationRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateLakeFormationIdentityCenterConfigurationRequest, CreateLakeFormationIdentityCenterConfigurationResult> asyncHandler);
+
+    /**
+     * <p>
      * Enforce Lake Formation permissions for the given databases, tables, and principals.
      * </p>
      * 
@@ -403,6 +442,43 @@ public interface AWSLakeFormationAsync extends AWSLakeFormation {
      */
     java.util.concurrent.Future<DeleteLFTagResult> deleteLFTagAsync(DeleteLFTagRequest deleteLFTagRequest,
             com.amazonaws.handlers.AsyncHandler<DeleteLFTagRequest, DeleteLFTagResult> asyncHandler);
+
+    /**
+     * <p>
+     * Deletes an IAM Identity Center connection with Lake Formation.
+     * </p>
+     * 
+     * @param deleteLakeFormationIdentityCenterConfigurationRequest
+     * @return A Java Future containing the result of the DeleteLakeFormationIdentityCenterConfiguration operation
+     *         returned by the service.
+     * @sample AWSLakeFormationAsync.DeleteLakeFormationIdentityCenterConfiguration
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/lakeformation-2017-03-31/DeleteLakeFormationIdentityCenterConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteLakeFormationIdentityCenterConfigurationResult> deleteLakeFormationIdentityCenterConfigurationAsync(
+            DeleteLakeFormationIdentityCenterConfigurationRequest deleteLakeFormationIdentityCenterConfigurationRequest);
+
+    /**
+     * <p>
+     * Deletes an IAM Identity Center connection with Lake Formation.
+     * </p>
+     * 
+     * @param deleteLakeFormationIdentityCenterConfigurationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteLakeFormationIdentityCenterConfiguration operation
+     *         returned by the service.
+     * @sample AWSLakeFormationAsyncHandler.DeleteLakeFormationIdentityCenterConfiguration
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/lakeformation-2017-03-31/DeleteLakeFormationIdentityCenterConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteLakeFormationIdentityCenterConfigurationResult> deleteLakeFormationIdentityCenterConfigurationAsync(
+            DeleteLakeFormationIdentityCenterConfigurationRequest deleteLakeFormationIdentityCenterConfigurationRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteLakeFormationIdentityCenterConfigurationRequest, DeleteLakeFormationIdentityCenterConfigurationResult> asyncHandler);
 
     /**
      * <p>
@@ -520,6 +596,43 @@ public interface AWSLakeFormationAsync extends AWSLakeFormation {
      */
     java.util.concurrent.Future<DeregisterResourceResult> deregisterResourceAsync(DeregisterResourceRequest deregisterResourceRequest,
             com.amazonaws.handlers.AsyncHandler<DeregisterResourceRequest, DeregisterResourceResult> asyncHandler);
+
+    /**
+     * <p>
+     * Retrieves the instance ARN and application ARN for the connection.
+     * </p>
+     * 
+     * @param describeLakeFormationIdentityCenterConfigurationRequest
+     * @return A Java Future containing the result of the DescribeLakeFormationIdentityCenterConfiguration operation
+     *         returned by the service.
+     * @sample AWSLakeFormationAsync.DescribeLakeFormationIdentityCenterConfiguration
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/lakeformation-2017-03-31/DescribeLakeFormationIdentityCenterConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeLakeFormationIdentityCenterConfigurationResult> describeLakeFormationIdentityCenterConfigurationAsync(
+            DescribeLakeFormationIdentityCenterConfigurationRequest describeLakeFormationIdentityCenterConfigurationRequest);
+
+    /**
+     * <p>
+     * Retrieves the instance ARN and application ARN for the connection.
+     * </p>
+     * 
+     * @param describeLakeFormationIdentityCenterConfigurationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeLakeFormationIdentityCenterConfiguration operation
+     *         returned by the service.
+     * @sample AWSLakeFormationAsyncHandler.DescribeLakeFormationIdentityCenterConfiguration
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/lakeformation-2017-03-31/DescribeLakeFormationIdentityCenterConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeLakeFormationIdentityCenterConfigurationResult> describeLakeFormationIdentityCenterConfigurationAsync(
+            DescribeLakeFormationIdentityCenterConfigurationRequest describeLakeFormationIdentityCenterConfigurationRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeLakeFormationIdentityCenterConfigurationRequest, DescribeLakeFormationIdentityCenterConfigurationResult> asyncHandler);
 
     /**
      * <p>
@@ -1707,6 +1820,43 @@ public interface AWSLakeFormationAsync extends AWSLakeFormation {
      */
     java.util.concurrent.Future<UpdateLFTagResult> updateLFTagAsync(UpdateLFTagRequest updateLFTagRequest,
             com.amazonaws.handlers.AsyncHandler<UpdateLFTagRequest, UpdateLFTagResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates the IAM Identity Center connection parameters.
+     * </p>
+     * 
+     * @param updateLakeFormationIdentityCenterConfigurationRequest
+     * @return A Java Future containing the result of the UpdateLakeFormationIdentityCenterConfiguration operation
+     *         returned by the service.
+     * @sample AWSLakeFormationAsync.UpdateLakeFormationIdentityCenterConfiguration
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/lakeformation-2017-03-31/UpdateLakeFormationIdentityCenterConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateLakeFormationIdentityCenterConfigurationResult> updateLakeFormationIdentityCenterConfigurationAsync(
+            UpdateLakeFormationIdentityCenterConfigurationRequest updateLakeFormationIdentityCenterConfigurationRequest);
+
+    /**
+     * <p>
+     * Updates the IAM Identity Center connection parameters.
+     * </p>
+     * 
+     * @param updateLakeFormationIdentityCenterConfigurationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateLakeFormationIdentityCenterConfiguration operation
+     *         returned by the service.
+     * @sample AWSLakeFormationAsyncHandler.UpdateLakeFormationIdentityCenterConfiguration
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/lakeformation-2017-03-31/UpdateLakeFormationIdentityCenterConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateLakeFormationIdentityCenterConfigurationResult> updateLakeFormationIdentityCenterConfigurationAsync(
+            UpdateLakeFormationIdentityCenterConfigurationRequest updateLakeFormationIdentityCenterConfigurationRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateLakeFormationIdentityCenterConfigurationRequest, UpdateLakeFormationIdentityCenterConfigurationResult> asyncHandler);
 
     /**
      * <p>

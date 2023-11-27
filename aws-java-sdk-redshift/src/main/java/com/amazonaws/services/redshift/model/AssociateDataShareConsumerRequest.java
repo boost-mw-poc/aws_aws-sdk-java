@@ -50,6 +50,12 @@ public class AssociateDataShareConsumerRequest extends com.amazonaws.AmazonWebSe
      * </p>
      */
     private String consumerRegion;
+    /**
+     * <p>
+     * If set to true, allows write operations for a datashare.
+     * </p>
+     */
+    private Boolean allowWrites;
 
     /**
      * <p>
@@ -233,6 +239,58 @@ public class AssociateDataShareConsumerRequest extends com.amazonaws.AmazonWebSe
     }
 
     /**
+     * <p>
+     * If set to true, allows write operations for a datashare.
+     * </p>
+     * 
+     * @param allowWrites
+     *        If set to true, allows write operations for a datashare.
+     */
+
+    public void setAllowWrites(Boolean allowWrites) {
+        this.allowWrites = allowWrites;
+    }
+
+    /**
+     * <p>
+     * If set to true, allows write operations for a datashare.
+     * </p>
+     * 
+     * @return If set to true, allows write operations for a datashare.
+     */
+
+    public Boolean getAllowWrites() {
+        return this.allowWrites;
+    }
+
+    /**
+     * <p>
+     * If set to true, allows write operations for a datashare.
+     * </p>
+     * 
+     * @param allowWrites
+     *        If set to true, allows write operations for a datashare.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AssociateDataShareConsumerRequest withAllowWrites(Boolean allowWrites) {
+        setAllowWrites(allowWrites);
+        return this;
+    }
+
+    /**
+     * <p>
+     * If set to true, allows write operations for a datashare.
+     * </p>
+     * 
+     * @return If set to true, allows write operations for a datashare.
+     */
+
+    public Boolean isAllowWrites() {
+        return this.allowWrites;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -251,7 +309,9 @@ public class AssociateDataShareConsumerRequest extends com.amazonaws.AmazonWebSe
         if (getConsumerArn() != null)
             sb.append("ConsumerArn: ").append(getConsumerArn()).append(",");
         if (getConsumerRegion() != null)
-            sb.append("ConsumerRegion: ").append(getConsumerRegion());
+            sb.append("ConsumerRegion: ").append(getConsumerRegion()).append(",");
+        if (getAllowWrites() != null)
+            sb.append("AllowWrites: ").append(getAllowWrites());
         sb.append("}");
         return sb.toString();
     }
@@ -282,6 +342,10 @@ public class AssociateDataShareConsumerRequest extends com.amazonaws.AmazonWebSe
             return false;
         if (other.getConsumerRegion() != null && other.getConsumerRegion().equals(this.getConsumerRegion()) == false)
             return false;
+        if (other.getAllowWrites() == null ^ this.getAllowWrites() == null)
+            return false;
+        if (other.getAllowWrites() != null && other.getAllowWrites().equals(this.getAllowWrites()) == false)
+            return false;
         return true;
     }
 
@@ -294,6 +358,7 @@ public class AssociateDataShareConsumerRequest extends com.amazonaws.AmazonWebSe
         hashCode = prime * hashCode + ((getAssociateEntireAccount() == null) ? 0 : getAssociateEntireAccount().hashCode());
         hashCode = prime * hashCode + ((getConsumerArn() == null) ? 0 : getConsumerArn().hashCode());
         hashCode = prime * hashCode + ((getConsumerRegion() == null) ? 0 : getConsumerRegion().hashCode());
+        hashCode = prime * hashCode + ((getAllowWrites() == null) ? 0 : getAllowWrites().hashCode());
         return hashCode;
     }
 

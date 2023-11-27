@@ -28,6 +28,19 @@ public class AbstractAmazonPersonalizeRuntimeAsync extends AbstractAmazonPersona
     }
 
     @Override
+    public java.util.concurrent.Future<GetActionRecommendationsResult> getActionRecommendationsAsync(GetActionRecommendationsRequest request) {
+
+        return getActionRecommendationsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetActionRecommendationsResult> getActionRecommendationsAsync(GetActionRecommendationsRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetActionRecommendationsRequest, GetActionRecommendationsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetPersonalizedRankingResult> getPersonalizedRankingAsync(GetPersonalizedRankingRequest request) {
 
         return getPersonalizedRankingAsync(request, null);

@@ -48,6 +48,10 @@ public class CreateFileSystemOntapConfigurationMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ThroughputCapacity").build();
     private static final MarshallingInfo<String> WEEKLYMAINTENANCESTARTTIME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("WeeklyMaintenanceStartTime").build();
+    private static final MarshallingInfo<Integer> HAPAIRS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("HAPairs").build();
+    private static final MarshallingInfo<Integer> THROUGHPUTCAPACITYPERHAPAIR_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ThroughputCapacityPerHAPair").build();
 
     private static final CreateFileSystemOntapConfigurationMarshaller instance = new CreateFileSystemOntapConfigurationMarshaller();
 
@@ -75,6 +79,8 @@ public class CreateFileSystemOntapConfigurationMarshaller {
             protocolMarshaller.marshall(createFileSystemOntapConfiguration.getRouteTableIds(), ROUTETABLEIDS_BINDING);
             protocolMarshaller.marshall(createFileSystemOntapConfiguration.getThroughputCapacity(), THROUGHPUTCAPACITY_BINDING);
             protocolMarshaller.marshall(createFileSystemOntapConfiguration.getWeeklyMaintenanceStartTime(), WEEKLYMAINTENANCESTARTTIME_BINDING);
+            protocolMarshaller.marshall(createFileSystemOntapConfiguration.getHAPairs(), HAPAIRS_BINDING);
+            protocolMarshaller.marshall(createFileSystemOntapConfiguration.getThroughputCapacityPerHAPair(), THROUGHPUTCAPACITYPERHAPAIR_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

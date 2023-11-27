@@ -21,7 +21,9 @@ import javax.annotation.Generated;
 public enum Type {
 
     ACCOUNT("ACCOUNT"),
-    ORGANIZATION("ORGANIZATION");
+    ORGANIZATION("ORGANIZATION"),
+    ACCOUNT_UNUSED_ACCESS("ACCOUNT_UNUSED_ACCESS"),
+    ORGANIZATION_UNUSED_ACCESS("ORGANIZATION_UNUSED_ACCESS");
 
     private String value;
 

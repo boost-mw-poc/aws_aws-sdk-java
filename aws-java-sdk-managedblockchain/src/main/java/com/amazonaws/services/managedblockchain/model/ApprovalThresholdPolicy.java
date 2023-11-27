@@ -56,7 +56,7 @@ public class ApprovalThresholdPolicy implements Serializable, Cloneable, Structu
     /**
      * <p>
      * Determines whether the vote percentage must be greater than the <code>ThresholdPercentage</code> or must be
-     * greater than or equal to the <code>ThreholdPercentage</code> to be approved.
+     * greater than or equal to the <code>ThresholdPercentage</code> to be approved.
      * </p>
      */
     private String thresholdComparator;
@@ -192,12 +192,12 @@ public class ApprovalThresholdPolicy implements Serializable, Cloneable, Structu
     /**
      * <p>
      * Determines whether the vote percentage must be greater than the <code>ThresholdPercentage</code> or must be
-     * greater than or equal to the <code>ThreholdPercentage</code> to be approved.
+     * greater than or equal to the <code>ThresholdPercentage</code> to be approved.
      * </p>
      * 
      * @param thresholdComparator
      *        Determines whether the vote percentage must be greater than the <code>ThresholdPercentage</code> or must
-     *        be greater than or equal to the <code>ThreholdPercentage</code> to be approved.
+     *        be greater than or equal to the <code>ThresholdPercentage</code> to be approved.
      * @see ThresholdComparator
      */
 
@@ -208,11 +208,11 @@ public class ApprovalThresholdPolicy implements Serializable, Cloneable, Structu
     /**
      * <p>
      * Determines whether the vote percentage must be greater than the <code>ThresholdPercentage</code> or must be
-     * greater than or equal to the <code>ThreholdPercentage</code> to be approved.
+     * greater than or equal to the <code>ThresholdPercentage</code> to be approved.
      * </p>
      * 
      * @return Determines whether the vote percentage must be greater than the <code>ThresholdPercentage</code> or must
-     *         be greater than or equal to the <code>ThreholdPercentage</code> to be approved.
+     *         be greater than or equal to the <code>ThresholdPercentage</code> to be approved.
      * @see ThresholdComparator
      */
 
@@ -223,12 +223,12 @@ public class ApprovalThresholdPolicy implements Serializable, Cloneable, Structu
     /**
      * <p>
      * Determines whether the vote percentage must be greater than the <code>ThresholdPercentage</code> or must be
-     * greater than or equal to the <code>ThreholdPercentage</code> to be approved.
+     * greater than or equal to the <code>ThresholdPercentage</code> to be approved.
      * </p>
      * 
      * @param thresholdComparator
      *        Determines whether the vote percentage must be greater than the <code>ThresholdPercentage</code> or must
-     *        be greater than or equal to the <code>ThreholdPercentage</code> to be approved.
+     *        be greater than or equal to the <code>ThresholdPercentage</code> to be approved.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ThresholdComparator
      */
@@ -241,12 +241,12 @@ public class ApprovalThresholdPolicy implements Serializable, Cloneable, Structu
     /**
      * <p>
      * Determines whether the vote percentage must be greater than the <code>ThresholdPercentage</code> or must be
-     * greater than or equal to the <code>ThreholdPercentage</code> to be approved.
+     * greater than or equal to the <code>ThresholdPercentage</code> to be approved.
      * </p>
      * 
      * @param thresholdComparator
      *        Determines whether the vote percentage must be greater than the <code>ThresholdPercentage</code> or must
-     *        be greater than or equal to the <code>ThreholdPercentage</code> to be approved.
+     *        be greater than or equal to the <code>ThresholdPercentage</code> to be approved.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ThresholdComparator
      */

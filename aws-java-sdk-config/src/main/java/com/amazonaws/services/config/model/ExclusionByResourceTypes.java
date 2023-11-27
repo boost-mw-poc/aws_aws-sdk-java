@@ -29,7 +29,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * </p>
  * <note>
  * <p>
- * <b>How to use</b>
+ * <b>How to use the exclusion recording strategy </b>
  * </p>
  * <p>
  * To use this option, you must set the <code>useOnly</code> field of <a
@@ -41,13 +41,17 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * specify to exclude from being recorded.
  * </p>
  * <p>
- * <b>Globally recorded resources</b>
+ * <b>Global resource types and the exclusion recording strategy </b>
  * </p>
  * <p>
  * Unless specifically listed as exclusions, <code>AWS::RDS::GlobalCluster</code> will be recorded automatically in all
- * supported Config Regions were the configuration recorder is enabled. IAM users, groups, roles, and customer managed
- * policies will be recorded automatically in all enabled Config Regions where Config was available before February
- * 2022. This list does not include the following Regions:
+ * supported Config Regions were the configuration recorder is enabled.
+ * </p>
+ * <p>
+ * IAM users, groups, roles, and customer managed policies will be recorded in the Region where you set up the
+ * configuration recorder if that is a Region where Config was available before February 2022. You cannot be record the
+ * global IAM resouce types in Regions supported by Config after February 2022. This list where you cannot record the
+ * global IAM resource types includes the following Regions:
  * </p>
  * <ul>
  * <li>

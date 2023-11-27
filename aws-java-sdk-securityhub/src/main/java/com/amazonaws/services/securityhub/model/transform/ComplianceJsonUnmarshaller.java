@@ -74,6 +74,13 @@ public class ComplianceJsonUnmarshaller implements Unmarshaller<Compliance, Json
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("SecurityControlParameters", targetDepth)) {
+                    context.nextToken();
+                    compliance.setSecurityControlParameters(new ListUnmarshaller<SecurityControlParameter>(SecurityControlParameterJsonUnmarshaller
+                            .getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

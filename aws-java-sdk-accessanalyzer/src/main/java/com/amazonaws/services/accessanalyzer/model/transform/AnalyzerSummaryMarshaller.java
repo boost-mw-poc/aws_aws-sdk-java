@@ -47,6 +47,8 @@ public class AnalyzerSummaryMarshaller {
             .marshallLocationName("status").build();
     private static final MarshallingInfo<StructuredPojo> STATUSREASON_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("statusReason").build();
+    private static final MarshallingInfo<StructuredPojo> CONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("configuration").build();
 
     private static final AnalyzerSummaryMarshaller instance = new AnalyzerSummaryMarshaller();
 
@@ -73,6 +75,7 @@ public class AnalyzerSummaryMarshaller {
             protocolMarshaller.marshall(analyzerSummary.getTags(), TAGS_BINDING);
             protocolMarshaller.marshall(analyzerSummary.getStatus(), STATUS_BINDING);
             protocolMarshaller.marshall(analyzerSummary.getStatusReason(), STATUSREASON_BINDING);
+            protocolMarshaller.marshall(analyzerSummary.getConfiguration(), CONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

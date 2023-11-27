@@ -118,6 +118,39 @@ public class AWSSecretsManagerAsyncClient extends AWSSecretsManagerClient implem
     }
 
     @Override
+    public java.util.concurrent.Future<BatchGetSecretValueResult> batchGetSecretValueAsync(BatchGetSecretValueRequest request) {
+
+        return batchGetSecretValueAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<BatchGetSecretValueResult> batchGetSecretValueAsync(final BatchGetSecretValueRequest request,
+            final com.amazonaws.handlers.AsyncHandler<BatchGetSecretValueRequest, BatchGetSecretValueResult> asyncHandler) {
+        final BatchGetSecretValueRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<BatchGetSecretValueResult>() {
+            @Override
+            public BatchGetSecretValueResult call() throws Exception {
+                BatchGetSecretValueResult result = null;
+
+                try {
+                    result = executeBatchGetSecretValue(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<CancelRotateSecretResult> cancelRotateSecretAsync(CancelRotateSecretRequest request) {
 
         return cancelRotateSecretAsync(request, null);

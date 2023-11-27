@@ -87,6 +87,18 @@ public class AWSComputeOptimizerClient extends AmazonWebServiceClient implements
                     .withSupportsCbor(false)
                     .withSupportsIon(false)
                     .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("InternalServerException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.computeoptimizer.model.transform.InternalServerExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("LimitExceededException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.computeoptimizer.model.transform.LimitExceededExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("ResourceNotFoundException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.computeoptimizer.model.transform.ResourceNotFoundExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("MissingAuthenticationToken").withExceptionUnmarshaller(
+                                    com.amazonaws.services.computeoptimizer.model.transform.MissingAuthenticationTokenExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("InvalidParameterValueException").withExceptionUnmarshaller(
                                     com.amazonaws.services.computeoptimizer.model.transform.InvalidParameterValueExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
@@ -96,20 +108,8 @@ public class AWSComputeOptimizerClient extends AmazonWebServiceClient implements
                             new JsonErrorShapeMetadata().withErrorCode("OptInRequiredException").withExceptionUnmarshaller(
                                     com.amazonaws.services.computeoptimizer.model.transform.OptInRequiredExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("InternalServerException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.computeoptimizer.model.transform.InternalServerExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("LimitExceededException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.computeoptimizer.model.transform.LimitExceededExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("AccessDeniedException").withExceptionUnmarshaller(
                                     com.amazonaws.services.computeoptimizer.model.transform.AccessDeniedExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("ResourceNotFoundException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.computeoptimizer.model.transform.ResourceNotFoundExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("MissingAuthenticationToken").withExceptionUnmarshaller(
-                                    com.amazonaws.services.computeoptimizer.model.transform.MissingAuthenticationTokenExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ServiceUnavailableException").withExceptionUnmarshaller(
                                     com.amazonaws.services.computeoptimizer.model.transform.ServiceUnavailableExceptionUnmarshaller.getInstance()))

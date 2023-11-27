@@ -47,6 +47,12 @@ public class OntapFileSystemConfiguration implements Serializable, Cloneable, St
      * <code>SINGLE_AZ_1</code> - A file system configured for Single-AZ redundancy.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>SINGLE_AZ_2</code> - A file system configured with multiple high-availability (HA) pairs for Single-AZ
+     * redundancy.
+     * </p>
+     * </li>
      * </ul>
      * <p>
      * For information about the use cases for Multi-AZ and Single-AZ deployments, refer to <a
@@ -98,6 +104,79 @@ public class OntapFileSystemConfiguration implements Serializable, Cloneable, St
      * </p>
      */
     private String fsxAdminPassword;
+    /**
+     * <p>
+     * Specifies how many high-availability (HA) file server pairs the file system will have. The default value is 1.
+     * The value of this property affects the values of <code>StorageCapacity</code>, <code>Iops</code>, and
+     * <code>ThroughputCapacity</code>. For more information, see <a
+     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/HA-pairs.html">High-availability (HA) pairs</a> in the
+     * FSx for ONTAP user guide.
+     * </p>
+     * <p>
+     * Amazon FSx responds with an HTTP status code 400 (Bad Request) for the following conditions:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The value of <code>HAPairs</code> is less than 1 or greater than 6.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The value of <code>HAPairs</code> is greater than 1 and the value of <code>DeploymentType</code> is
+     * <code>SINGLE_AZ_1</code> or <code>MULTI_AZ_1</code>.
+     * </p>
+     * </li>
+     * </ul>
+     */
+    private Integer hAPairs;
+    /**
+     * <p>
+     * Use to choose the throughput capacity per HA pair. When the value of <code>HAPairs</code> is equal to 1, the
+     * value of <code>ThroughputCapacityPerHAPair</code> is the total throughput for the file system.
+     * </p>
+     * <p>
+     * This field and <code>ThroughputCapacity</code> cannot be defined in the same API call, but one is required.
+     * </p>
+     * <p>
+     * This field and <code>ThroughputCapacity</code> are the same for file systems with one HA pair.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * For <code>SINGLE_AZ_1</code> and <code>MULTI_AZ_1</code>, valid values are 128, 256, 512, 1024, 2048, or 4096
+     * MBps.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For <code>SINGLE_AZ_2</code>, valid values are 3072 or 6144 MBps.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Amazon FSx responds with an HTTP status code 400 (Bad Request) for the following conditions:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The value of <code>ThroughputCapacity</code> and <code>ThroughputCapacityPerHAPair</code> are not the same value.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The value of deployment type is <code>SINGLE_AZ_2</code> and <code>ThroughputCapacity</code> /
+     * <code>ThroughputCapacityPerHAPair</code> is a valid HA pair (a value between 2 and 6).
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The value of <code>ThroughputCapacityPerHAPair</code> is not a valid value.
+     * </p>
+     * </li>
+     * </ul>
+     */
+    private Integer throughputCapacityPerHAPair;
 
     /**
      * @param automaticBackupRetentionDays
@@ -167,6 +246,12 @@ public class OntapFileSystemConfiguration implements Serializable, Cloneable, St
      * <code>SINGLE_AZ_1</code> - A file system configured for Single-AZ redundancy.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>SINGLE_AZ_2</code> - A file system configured with multiple high-availability (HA) pairs for Single-AZ
+     * redundancy.
+     * </p>
+     * </li>
      * </ul>
      * <p>
      * For information about the use cases for Multi-AZ and Single-AZ deployments, refer to <a
@@ -186,6 +271,12 @@ public class OntapFileSystemConfiguration implements Serializable, Cloneable, St
      *        <li>
      *        <p>
      *        <code>SINGLE_AZ_1</code> - A file system configured for Single-AZ redundancy.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>SINGLE_AZ_2</code> - A file system configured with multiple high-availability (HA) pairs for
+     *        Single-AZ redundancy.
      *        </p>
      *        </li>
      *        </ul>
@@ -216,6 +307,12 @@ public class OntapFileSystemConfiguration implements Serializable, Cloneable, St
      * <code>SINGLE_AZ_1</code> - A file system configured for Single-AZ redundancy.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>SINGLE_AZ_2</code> - A file system configured with multiple high-availability (HA) pairs for Single-AZ
+     * redundancy.
+     * </p>
+     * </li>
      * </ul>
      * <p>
      * For information about the use cases for Multi-AZ and Single-AZ deployments, refer to <a
@@ -234,6 +331,12 @@ public class OntapFileSystemConfiguration implements Serializable, Cloneable, St
      *         <li>
      *         <p>
      *         <code>SINGLE_AZ_1</code> - A file system configured for Single-AZ redundancy.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>SINGLE_AZ_2</code> - A file system configured with multiple high-availability (HA) pairs for
+     *         Single-AZ redundancy.
      *         </p>
      *         </li>
      *         </ul>
@@ -264,6 +367,12 @@ public class OntapFileSystemConfiguration implements Serializable, Cloneable, St
      * <code>SINGLE_AZ_1</code> - A file system configured for Single-AZ redundancy.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>SINGLE_AZ_2</code> - A file system configured with multiple high-availability (HA) pairs for Single-AZ
+     * redundancy.
+     * </p>
+     * </li>
      * </ul>
      * <p>
      * For information about the use cases for Multi-AZ and Single-AZ deployments, refer to <a
@@ -283,6 +392,12 @@ public class OntapFileSystemConfiguration implements Serializable, Cloneable, St
      *        <li>
      *        <p>
      *        <code>SINGLE_AZ_1</code> - A file system configured for Single-AZ redundancy.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>SINGLE_AZ_2</code> - A file system configured with multiple high-availability (HA) pairs for
+     *        Single-AZ redundancy.
      *        </p>
      *        </li>
      *        </ul>
@@ -315,6 +430,12 @@ public class OntapFileSystemConfiguration implements Serializable, Cloneable, St
      * <code>SINGLE_AZ_1</code> - A file system configured for Single-AZ redundancy.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>SINGLE_AZ_2</code> - A file system configured with multiple high-availability (HA) pairs for Single-AZ
+     * redundancy.
+     * </p>
+     * </li>
      * </ul>
      * <p>
      * For information about the use cases for Multi-AZ and Single-AZ deployments, refer to <a
@@ -334,6 +455,12 @@ public class OntapFileSystemConfiguration implements Serializable, Cloneable, St
      *        <li>
      *        <p>
      *        <code>SINGLE_AZ_1</code> - A file system configured for Single-AZ redundancy.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>SINGLE_AZ_2</code> - A file system configured with multiple high-availability (HA) pairs for
+     *        Single-AZ redundancy.
      *        </p>
      *        </li>
      *        </ul>
@@ -701,6 +828,452 @@ public class OntapFileSystemConfiguration implements Serializable, Cloneable, St
     }
 
     /**
+     * <p>
+     * Specifies how many high-availability (HA) file server pairs the file system will have. The default value is 1.
+     * The value of this property affects the values of <code>StorageCapacity</code>, <code>Iops</code>, and
+     * <code>ThroughputCapacity</code>. For more information, see <a
+     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/HA-pairs.html">High-availability (HA) pairs</a> in the
+     * FSx for ONTAP user guide.
+     * </p>
+     * <p>
+     * Amazon FSx responds with an HTTP status code 400 (Bad Request) for the following conditions:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The value of <code>HAPairs</code> is less than 1 or greater than 6.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The value of <code>HAPairs</code> is greater than 1 and the value of <code>DeploymentType</code> is
+     * <code>SINGLE_AZ_1</code> or <code>MULTI_AZ_1</code>.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param hAPairs
+     *        Specifies how many high-availability (HA) file server pairs the file system will have. The default value
+     *        is 1. The value of this property affects the values of <code>StorageCapacity</code>, <code>Iops</code>,
+     *        and <code>ThroughputCapacity</code>. For more information, see <a
+     *        href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/HA-pairs.html">High-availability (HA) pairs</a> in
+     *        the FSx for ONTAP user guide.</p>
+     *        <p>
+     *        Amazon FSx responds with an HTTP status code 400 (Bad Request) for the following conditions:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        The value of <code>HAPairs</code> is less than 1 or greater than 6.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The value of <code>HAPairs</code> is greater than 1 and the value of <code>DeploymentType</code> is
+     *        <code>SINGLE_AZ_1</code> or <code>MULTI_AZ_1</code>.
+     *        </p>
+     *        </li>
+     */
+
+    public void setHAPairs(Integer hAPairs) {
+        this.hAPairs = hAPairs;
+    }
+
+    /**
+     * <p>
+     * Specifies how many high-availability (HA) file server pairs the file system will have. The default value is 1.
+     * The value of this property affects the values of <code>StorageCapacity</code>, <code>Iops</code>, and
+     * <code>ThroughputCapacity</code>. For more information, see <a
+     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/HA-pairs.html">High-availability (HA) pairs</a> in the
+     * FSx for ONTAP user guide.
+     * </p>
+     * <p>
+     * Amazon FSx responds with an HTTP status code 400 (Bad Request) for the following conditions:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The value of <code>HAPairs</code> is less than 1 or greater than 6.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The value of <code>HAPairs</code> is greater than 1 and the value of <code>DeploymentType</code> is
+     * <code>SINGLE_AZ_1</code> or <code>MULTI_AZ_1</code>.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @return Specifies how many high-availability (HA) file server pairs the file system will have. The default value
+     *         is 1. The value of this property affects the values of <code>StorageCapacity</code>, <code>Iops</code>,
+     *         and <code>ThroughputCapacity</code>. For more information, see <a
+     *         href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/HA-pairs.html">High-availability (HA) pairs</a>
+     *         in the FSx for ONTAP user guide.</p>
+     *         <p>
+     *         Amazon FSx responds with an HTTP status code 400 (Bad Request) for the following conditions:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         The value of <code>HAPairs</code> is less than 1 or greater than 6.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         The value of <code>HAPairs</code> is greater than 1 and the value of <code>DeploymentType</code> is
+     *         <code>SINGLE_AZ_1</code> or <code>MULTI_AZ_1</code>.
+     *         </p>
+     *         </li>
+     */
+
+    public Integer getHAPairs() {
+        return this.hAPairs;
+    }
+
+    /**
+     * <p>
+     * Specifies how many high-availability (HA) file server pairs the file system will have. The default value is 1.
+     * The value of this property affects the values of <code>StorageCapacity</code>, <code>Iops</code>, and
+     * <code>ThroughputCapacity</code>. For more information, see <a
+     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/HA-pairs.html">High-availability (HA) pairs</a> in the
+     * FSx for ONTAP user guide.
+     * </p>
+     * <p>
+     * Amazon FSx responds with an HTTP status code 400 (Bad Request) for the following conditions:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The value of <code>HAPairs</code> is less than 1 or greater than 6.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The value of <code>HAPairs</code> is greater than 1 and the value of <code>DeploymentType</code> is
+     * <code>SINGLE_AZ_1</code> or <code>MULTI_AZ_1</code>.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param hAPairs
+     *        Specifies how many high-availability (HA) file server pairs the file system will have. The default value
+     *        is 1. The value of this property affects the values of <code>StorageCapacity</code>, <code>Iops</code>,
+     *        and <code>ThroughputCapacity</code>. For more information, see <a
+     *        href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/HA-pairs.html">High-availability (HA) pairs</a> in
+     *        the FSx for ONTAP user guide.</p>
+     *        <p>
+     *        Amazon FSx responds with an HTTP status code 400 (Bad Request) for the following conditions:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        The value of <code>HAPairs</code> is less than 1 or greater than 6.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The value of <code>HAPairs</code> is greater than 1 and the value of <code>DeploymentType</code> is
+     *        <code>SINGLE_AZ_1</code> or <code>MULTI_AZ_1</code>.
+     *        </p>
+     *        </li>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public OntapFileSystemConfiguration withHAPairs(Integer hAPairs) {
+        setHAPairs(hAPairs);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Use to choose the throughput capacity per HA pair. When the value of <code>HAPairs</code> is equal to 1, the
+     * value of <code>ThroughputCapacityPerHAPair</code> is the total throughput for the file system.
+     * </p>
+     * <p>
+     * This field and <code>ThroughputCapacity</code> cannot be defined in the same API call, but one is required.
+     * </p>
+     * <p>
+     * This field and <code>ThroughputCapacity</code> are the same for file systems with one HA pair.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * For <code>SINGLE_AZ_1</code> and <code>MULTI_AZ_1</code>, valid values are 128, 256, 512, 1024, 2048, or 4096
+     * MBps.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For <code>SINGLE_AZ_2</code>, valid values are 3072 or 6144 MBps.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Amazon FSx responds with an HTTP status code 400 (Bad Request) for the following conditions:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The value of <code>ThroughputCapacity</code> and <code>ThroughputCapacityPerHAPair</code> are not the same value.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The value of deployment type is <code>SINGLE_AZ_2</code> and <code>ThroughputCapacity</code> /
+     * <code>ThroughputCapacityPerHAPair</code> is a valid HA pair (a value between 2 and 6).
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The value of <code>ThroughputCapacityPerHAPair</code> is not a valid value.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param throughputCapacityPerHAPair
+     *        Use to choose the throughput capacity per HA pair. When the value of <code>HAPairs</code> is equal to 1,
+     *        the value of <code>ThroughputCapacityPerHAPair</code> is the total throughput for the file system.</p>
+     *        <p>
+     *        This field and <code>ThroughputCapacity</code> cannot be defined in the same API call, but one is
+     *        required.
+     *        </p>
+     *        <p>
+     *        This field and <code>ThroughputCapacity</code> are the same for file systems with one HA pair.
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        For <code>SINGLE_AZ_1</code> and <code>MULTI_AZ_1</code>, valid values are 128, 256, 512, 1024, 2048, or
+     *        4096 MBps.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        For <code>SINGLE_AZ_2</code>, valid values are 3072 or 6144 MBps.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        Amazon FSx responds with an HTTP status code 400 (Bad Request) for the following conditions:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        The value of <code>ThroughputCapacity</code> and <code>ThroughputCapacityPerHAPair</code> are not the same
+     *        value.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The value of deployment type is <code>SINGLE_AZ_2</code> and <code>ThroughputCapacity</code> /
+     *        <code>ThroughputCapacityPerHAPair</code> is a valid HA pair (a value between 2 and 6).
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The value of <code>ThroughputCapacityPerHAPair</code> is not a valid value.
+     *        </p>
+     *        </li>
+     */
+
+    public void setThroughputCapacityPerHAPair(Integer throughputCapacityPerHAPair) {
+        this.throughputCapacityPerHAPair = throughputCapacityPerHAPair;
+    }
+
+    /**
+     * <p>
+     * Use to choose the throughput capacity per HA pair. When the value of <code>HAPairs</code> is equal to 1, the
+     * value of <code>ThroughputCapacityPerHAPair</code> is the total throughput for the file system.
+     * </p>
+     * <p>
+     * This field and <code>ThroughputCapacity</code> cannot be defined in the same API call, but one is required.
+     * </p>
+     * <p>
+     * This field and <code>ThroughputCapacity</code> are the same for file systems with one HA pair.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * For <code>SINGLE_AZ_1</code> and <code>MULTI_AZ_1</code>, valid values are 128, 256, 512, 1024, 2048, or 4096
+     * MBps.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For <code>SINGLE_AZ_2</code>, valid values are 3072 or 6144 MBps.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Amazon FSx responds with an HTTP status code 400 (Bad Request) for the following conditions:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The value of <code>ThroughputCapacity</code> and <code>ThroughputCapacityPerHAPair</code> are not the same value.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The value of deployment type is <code>SINGLE_AZ_2</code> and <code>ThroughputCapacity</code> /
+     * <code>ThroughputCapacityPerHAPair</code> is a valid HA pair (a value between 2 and 6).
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The value of <code>ThroughputCapacityPerHAPair</code> is not a valid value.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @return Use to choose the throughput capacity per HA pair. When the value of <code>HAPairs</code> is equal to 1,
+     *         the value of <code>ThroughputCapacityPerHAPair</code> is the total throughput for the file system.</p>
+     *         <p>
+     *         This field and <code>ThroughputCapacity</code> cannot be defined in the same API call, but one is
+     *         required.
+     *         </p>
+     *         <p>
+     *         This field and <code>ThroughputCapacity</code> are the same for file systems with one HA pair.
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         For <code>SINGLE_AZ_1</code> and <code>MULTI_AZ_1</code>, valid values are 128, 256, 512, 1024, 2048, or
+     *         4096 MBps.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         For <code>SINGLE_AZ_2</code>, valid values are 3072 or 6144 MBps.
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         Amazon FSx responds with an HTTP status code 400 (Bad Request) for the following conditions:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         The value of <code>ThroughputCapacity</code> and <code>ThroughputCapacityPerHAPair</code> are not the
+     *         same value.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         The value of deployment type is <code>SINGLE_AZ_2</code> and <code>ThroughputCapacity</code> /
+     *         <code>ThroughputCapacityPerHAPair</code> is a valid HA pair (a value between 2 and 6).
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         The value of <code>ThroughputCapacityPerHAPair</code> is not a valid value.
+     *         </p>
+     *         </li>
+     */
+
+    public Integer getThroughputCapacityPerHAPair() {
+        return this.throughputCapacityPerHAPair;
+    }
+
+    /**
+     * <p>
+     * Use to choose the throughput capacity per HA pair. When the value of <code>HAPairs</code> is equal to 1, the
+     * value of <code>ThroughputCapacityPerHAPair</code> is the total throughput for the file system.
+     * </p>
+     * <p>
+     * This field and <code>ThroughputCapacity</code> cannot be defined in the same API call, but one is required.
+     * </p>
+     * <p>
+     * This field and <code>ThroughputCapacity</code> are the same for file systems with one HA pair.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * For <code>SINGLE_AZ_1</code> and <code>MULTI_AZ_1</code>, valid values are 128, 256, 512, 1024, 2048, or 4096
+     * MBps.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For <code>SINGLE_AZ_2</code>, valid values are 3072 or 6144 MBps.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Amazon FSx responds with an HTTP status code 400 (Bad Request) for the following conditions:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The value of <code>ThroughputCapacity</code> and <code>ThroughputCapacityPerHAPair</code> are not the same value.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The value of deployment type is <code>SINGLE_AZ_2</code> and <code>ThroughputCapacity</code> /
+     * <code>ThroughputCapacityPerHAPair</code> is a valid HA pair (a value between 2 and 6).
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The value of <code>ThroughputCapacityPerHAPair</code> is not a valid value.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param throughputCapacityPerHAPair
+     *        Use to choose the throughput capacity per HA pair. When the value of <code>HAPairs</code> is equal to 1,
+     *        the value of <code>ThroughputCapacityPerHAPair</code> is the total throughput for the file system.</p>
+     *        <p>
+     *        This field and <code>ThroughputCapacity</code> cannot be defined in the same API call, but one is
+     *        required.
+     *        </p>
+     *        <p>
+     *        This field and <code>ThroughputCapacity</code> are the same for file systems with one HA pair.
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        For <code>SINGLE_AZ_1</code> and <code>MULTI_AZ_1</code>, valid values are 128, 256, 512, 1024, 2048, or
+     *        4096 MBps.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        For <code>SINGLE_AZ_2</code>, valid values are 3072 or 6144 MBps.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        Amazon FSx responds with an HTTP status code 400 (Bad Request) for the following conditions:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        The value of <code>ThroughputCapacity</code> and <code>ThroughputCapacityPerHAPair</code> are not the same
+     *        value.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The value of deployment type is <code>SINGLE_AZ_2</code> and <code>ThroughputCapacity</code> /
+     *        <code>ThroughputCapacityPerHAPair</code> is a valid HA pair (a value between 2 and 6).
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The value of <code>ThroughputCapacityPerHAPair</code> is not a valid value.
+     *        </p>
+     *        </li>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public OntapFileSystemConfiguration withThroughputCapacityPerHAPair(Integer throughputCapacityPerHAPair) {
+        setThroughputCapacityPerHAPair(throughputCapacityPerHAPair);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -733,7 +1306,11 @@ public class OntapFileSystemConfiguration implements Serializable, Cloneable, St
         if (getWeeklyMaintenanceStartTime() != null)
             sb.append("WeeklyMaintenanceStartTime: ").append(getWeeklyMaintenanceStartTime()).append(",");
         if (getFsxAdminPassword() != null)
-            sb.append("FsxAdminPassword: ").append("***Sensitive Data Redacted***");
+            sb.append("FsxAdminPassword: ").append("***Sensitive Data Redacted***").append(",");
+        if (getHAPairs() != null)
+            sb.append("HAPairs: ").append(getHAPairs()).append(",");
+        if (getThroughputCapacityPerHAPair() != null)
+            sb.append("ThroughputCapacityPerHAPair: ").append(getThroughputCapacityPerHAPair());
         sb.append("}");
         return sb.toString();
     }
@@ -793,6 +1370,14 @@ public class OntapFileSystemConfiguration implements Serializable, Cloneable, St
             return false;
         if (other.getFsxAdminPassword() != null && other.getFsxAdminPassword().equals(this.getFsxAdminPassword()) == false)
             return false;
+        if (other.getHAPairs() == null ^ this.getHAPairs() == null)
+            return false;
+        if (other.getHAPairs() != null && other.getHAPairs().equals(this.getHAPairs()) == false)
+            return false;
+        if (other.getThroughputCapacityPerHAPair() == null ^ this.getThroughputCapacityPerHAPair() == null)
+            return false;
+        if (other.getThroughputCapacityPerHAPair() != null && other.getThroughputCapacityPerHAPair().equals(this.getThroughputCapacityPerHAPair()) == false)
+            return false;
         return true;
     }
 
@@ -812,6 +1397,8 @@ public class OntapFileSystemConfiguration implements Serializable, Cloneable, St
         hashCode = prime * hashCode + ((getThroughputCapacity() == null) ? 0 : getThroughputCapacity().hashCode());
         hashCode = prime * hashCode + ((getWeeklyMaintenanceStartTime() == null) ? 0 : getWeeklyMaintenanceStartTime().hashCode());
         hashCode = prime * hashCode + ((getFsxAdminPassword() == null) ? 0 : getFsxAdminPassword().hashCode());
+        hashCode = prime * hashCode + ((getHAPairs() == null) ? 0 : getHAPairs().hashCode());
+        hashCode = prime * hashCode + ((getThroughputCapacityPerHAPair() == null) ? 0 : getThroughputCapacityPerHAPair().hashCode());
         return hashCode;
     }
 

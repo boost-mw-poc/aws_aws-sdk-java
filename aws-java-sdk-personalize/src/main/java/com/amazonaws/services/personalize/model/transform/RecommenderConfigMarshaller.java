@@ -35,6 +35,8 @@ public class RecommenderConfigMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("minRecommendationRequestsPerSecond").build();
     private static final MarshallingInfo<StructuredPojo> TRAININGDATACONFIG_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("trainingDataConfig").build();
+    private static final MarshallingInfo<Boolean> ENABLEMETADATAWITHRECOMMENDATIONS_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("enableMetadataWithRecommendations").build();
 
     private static final RecommenderConfigMarshaller instance = new RecommenderConfigMarshaller();
 
@@ -55,6 +57,7 @@ public class RecommenderConfigMarshaller {
             protocolMarshaller.marshall(recommenderConfig.getItemExplorationConfig(), ITEMEXPLORATIONCONFIG_BINDING);
             protocolMarshaller.marshall(recommenderConfig.getMinRecommendationRequestsPerSecond(), MINRECOMMENDATIONREQUESTSPERSECOND_BINDING);
             protocolMarshaller.marshall(recommenderConfig.getTrainingDataConfig(), TRAININGDATACONFIG_BINDING);
+            protocolMarshaller.marshall(recommenderConfig.getEnableMetadataWithRecommendations(), ENABLEMETADATAWITHRECOMMENDATIONS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

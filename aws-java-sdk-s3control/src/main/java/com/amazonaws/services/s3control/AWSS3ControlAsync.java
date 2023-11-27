@@ -34,6 +34,340 @@ public interface AWSS3ControlAsync extends AWSS3Control {
 
     /**
      * <p>
+     * Associate your S3 Access Grants instance with an Amazon Web Services IAM Identity Center instance. Use this
+     * action if you want to create access grants for users or groups from your corporate identity directory. First, you
+     * must add your corporate identity directory to Amazon Web Services IAM Identity Center. Then, you can associate
+     * this IAM Identity Center instance with your S3 Access Grants instance.
+     * </p>
+     * <dl>
+     * <dt>Permissions</dt>
+     * <dd>
+     * <p>
+     * You must have the <code>s3:AssociateAccessGrantsIdentityCenter</code> permission to use this operation.
+     * </p>
+     * </dd>
+     * <dt>Additional Permissions</dt>
+     * <dd>
+     * <p>
+     * You must also have the following permissions: <code>sso:CreateApplication</code>,
+     * <code>sso:PutApplicationGrant</code>, and <code>sso:PutApplicationAuthenticationMethod</code>.
+     * </p>
+     * </dd>
+     * </dl>
+     * 
+     * @param associateAccessGrantsIdentityCenterRequest
+     * @return A Java Future containing the result of the AssociateAccessGrantsIdentityCenter operation returned by the
+     *         service.
+     * @sample AWSS3ControlAsync.AssociateAccessGrantsIdentityCenter
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/AssociateAccessGrantsIdentityCenter"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<AssociateAccessGrantsIdentityCenterResult> associateAccessGrantsIdentityCenterAsync(
+            AssociateAccessGrantsIdentityCenterRequest associateAccessGrantsIdentityCenterRequest);
+
+    /**
+     * <p>
+     * Associate your S3 Access Grants instance with an Amazon Web Services IAM Identity Center instance. Use this
+     * action if you want to create access grants for users or groups from your corporate identity directory. First, you
+     * must add your corporate identity directory to Amazon Web Services IAM Identity Center. Then, you can associate
+     * this IAM Identity Center instance with your S3 Access Grants instance.
+     * </p>
+     * <dl>
+     * <dt>Permissions</dt>
+     * <dd>
+     * <p>
+     * You must have the <code>s3:AssociateAccessGrantsIdentityCenter</code> permission to use this operation.
+     * </p>
+     * </dd>
+     * <dt>Additional Permissions</dt>
+     * <dd>
+     * <p>
+     * You must also have the following permissions: <code>sso:CreateApplication</code>,
+     * <code>sso:PutApplicationGrant</code>, and <code>sso:PutApplicationAuthenticationMethod</code>.
+     * </p>
+     * </dd>
+     * </dl>
+     * 
+     * @param associateAccessGrantsIdentityCenterRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the AssociateAccessGrantsIdentityCenter operation returned by the
+     *         service.
+     * @sample AWSS3ControlAsyncHandler.AssociateAccessGrantsIdentityCenter
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/AssociateAccessGrantsIdentityCenter"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<AssociateAccessGrantsIdentityCenterResult> associateAccessGrantsIdentityCenterAsync(
+            AssociateAccessGrantsIdentityCenterRequest associateAccessGrantsIdentityCenterRequest,
+            com.amazonaws.handlers.AsyncHandler<AssociateAccessGrantsIdentityCenterRequest, AssociateAccessGrantsIdentityCenterResult> asyncHandler);
+
+    /**
+     * <p>
+     * Creates an access grant that gives a grantee access to your S3 data. The grantee can be an IAM user or role or a
+     * directory user, or group. Before you can create a grant, you must have an S3 Access Grants instance in the same
+     * Region as the S3 data. You can create an S3 Access Grants instance using the <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_CreateAccessGrantsInstance.html"
+     * >CreateAccessGrantsInstance</a>. You must also have registered at least one S3 data location in your S3 Access
+     * Grants instance using <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_CreateAccessGrantsLocation.html"
+     * >CreateAccessGrantsLocation</a>.
+     * </p>
+     * <dl>
+     * <dt>Permissions</dt>
+     * <dd>
+     * <p>
+     * You must have the <code>s3:CreateAccessGrant</code> permission to use this operation.
+     * </p>
+     * </dd>
+     * <dt>Additional Permissions</dt>
+     * <dd>
+     * <p>
+     * For any directory identity - <code>sso:DescribeInstance</code> and <code>sso:DescribeApplication</code>
+     * </p>
+     * <p>
+     * For directory users - <code>identitystore:DescribeUser</code>
+     * </p>
+     * <p>
+     * For directory groups - <code>identitystore:DescribeGroup</code>
+     * </p>
+     * </dd>
+     * </dl>
+     * 
+     * @param createAccessGrantRequest
+     * @return A Java Future containing the result of the CreateAccessGrant operation returned by the service.
+     * @sample AWSS3ControlAsync.CreateAccessGrant
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/CreateAccessGrant" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateAccessGrantResult> createAccessGrantAsync(CreateAccessGrantRequest createAccessGrantRequest);
+
+    /**
+     * <p>
+     * Creates an access grant that gives a grantee access to your S3 data. The grantee can be an IAM user or role or a
+     * directory user, or group. Before you can create a grant, you must have an S3 Access Grants instance in the same
+     * Region as the S3 data. You can create an S3 Access Grants instance using the <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_CreateAccessGrantsInstance.html"
+     * >CreateAccessGrantsInstance</a>. You must also have registered at least one S3 data location in your S3 Access
+     * Grants instance using <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_CreateAccessGrantsLocation.html"
+     * >CreateAccessGrantsLocation</a>.
+     * </p>
+     * <dl>
+     * <dt>Permissions</dt>
+     * <dd>
+     * <p>
+     * You must have the <code>s3:CreateAccessGrant</code> permission to use this operation.
+     * </p>
+     * </dd>
+     * <dt>Additional Permissions</dt>
+     * <dd>
+     * <p>
+     * For any directory identity - <code>sso:DescribeInstance</code> and <code>sso:DescribeApplication</code>
+     * </p>
+     * <p>
+     * For directory users - <code>identitystore:DescribeUser</code>
+     * </p>
+     * <p>
+     * For directory groups - <code>identitystore:DescribeGroup</code>
+     * </p>
+     * </dd>
+     * </dl>
+     * 
+     * @param createAccessGrantRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateAccessGrant operation returned by the service.
+     * @sample AWSS3ControlAsyncHandler.CreateAccessGrant
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/CreateAccessGrant" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateAccessGrantResult> createAccessGrantAsync(CreateAccessGrantRequest createAccessGrantRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateAccessGrantRequest, CreateAccessGrantResult> asyncHandler);
+
+    /**
+     * <p>
+     * Creates an S3 Access Grants instance, which serves as a logical grouping for access grants. You can create one S3
+     * Access Grants instance per Region per account.
+     * </p>
+     * <dl>
+     * <dt>Permissions</dt>
+     * <dd>
+     * <p>
+     * You must have the <code>s3:CreateAccessGrantsInstance</code> permission to use this operation.
+     * </p>
+     * </dd>
+     * <dt>Additional Permissions</dt>
+     * <dd>
+     * <p>
+     * To associate an IAM Identity Center instance with your S3 Access Grants instance, you must also have the
+     * <code>sso:DescribeInstance</code>, <code>sso:CreateApplication</code>, <code>sso:PutApplicationGrant</code>, and
+     * <code>sso:PutApplicationAuthenticationMethod</code> permissions.
+     * </p>
+     * </dd>
+     * </dl>
+     * 
+     * @param createAccessGrantsInstanceRequest
+     * @return A Java Future containing the result of the CreateAccessGrantsInstance operation returned by the service.
+     * @sample AWSS3ControlAsync.CreateAccessGrantsInstance
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/CreateAccessGrantsInstance"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateAccessGrantsInstanceResult> createAccessGrantsInstanceAsync(
+            CreateAccessGrantsInstanceRequest createAccessGrantsInstanceRequest);
+
+    /**
+     * <p>
+     * Creates an S3 Access Grants instance, which serves as a logical grouping for access grants. You can create one S3
+     * Access Grants instance per Region per account.
+     * </p>
+     * <dl>
+     * <dt>Permissions</dt>
+     * <dd>
+     * <p>
+     * You must have the <code>s3:CreateAccessGrantsInstance</code> permission to use this operation.
+     * </p>
+     * </dd>
+     * <dt>Additional Permissions</dt>
+     * <dd>
+     * <p>
+     * To associate an IAM Identity Center instance with your S3 Access Grants instance, you must also have the
+     * <code>sso:DescribeInstance</code>, <code>sso:CreateApplication</code>, <code>sso:PutApplicationGrant</code>, and
+     * <code>sso:PutApplicationAuthenticationMethod</code> permissions.
+     * </p>
+     * </dd>
+     * </dl>
+     * 
+     * @param createAccessGrantsInstanceRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateAccessGrantsInstance operation returned by the service.
+     * @sample AWSS3ControlAsyncHandler.CreateAccessGrantsInstance
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/CreateAccessGrantsInstance"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateAccessGrantsInstanceResult> createAccessGrantsInstanceAsync(
+            CreateAccessGrantsInstanceRequest createAccessGrantsInstanceRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateAccessGrantsInstanceRequest, CreateAccessGrantsInstanceResult> asyncHandler);
+
+    /**
+     * <p>
+     * The S3 data location that you would like to register in your S3 Access Grants instance. Your S3 data must be in
+     * the same Region as your S3 Access Grants instance. The location can be one of the following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The default S3 location <code>s3://</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * A bucket - <code>S3://&lt;bucket-name&gt;</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * A bucket and prefix - <code>S3://&lt;bucket-name&gt;/&lt;prefix&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When you register a location, you must include the IAM role that has permission to manage the S3 location that
+     * you are registering. Give S3 Access Grants permission to assume this role <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-grants-location.html">using a policy</a>. S3
+     * Access Grants assumes this role to manage access to the location and to vend temporary credentials to grantees or
+     * client applications.
+     * </p>
+     * <dl>
+     * <dt>Permissions</dt>
+     * <dd>
+     * <p>
+     * You must have the <code>s3:CreateAccessGrantsLocation</code> permission to use this operation.
+     * </p>
+     * </dd>
+     * <dt>Additional Permissions</dt>
+     * <dd>
+     * <p>
+     * You must also have the following permission for the specified IAM role: <code>iam:PassRole</code>
+     * </p>
+     * </dd>
+     * </dl>
+     * 
+     * @param createAccessGrantsLocationRequest
+     * @return A Java Future containing the result of the CreateAccessGrantsLocation operation returned by the service.
+     * @sample AWSS3ControlAsync.CreateAccessGrantsLocation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/CreateAccessGrantsLocation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateAccessGrantsLocationResult> createAccessGrantsLocationAsync(
+            CreateAccessGrantsLocationRequest createAccessGrantsLocationRequest);
+
+    /**
+     * <p>
+     * The S3 data location that you would like to register in your S3 Access Grants instance. Your S3 data must be in
+     * the same Region as your S3 Access Grants instance. The location can be one of the following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The default S3 location <code>s3://</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * A bucket - <code>S3://&lt;bucket-name&gt;</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * A bucket and prefix - <code>S3://&lt;bucket-name&gt;/&lt;prefix&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When you register a location, you must include the IAM role that has permission to manage the S3 location that
+     * you are registering. Give S3 Access Grants permission to assume this role <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-grants-location.html">using a policy</a>. S3
+     * Access Grants assumes this role to manage access to the location and to vend temporary credentials to grantees or
+     * client applications.
+     * </p>
+     * <dl>
+     * <dt>Permissions</dt>
+     * <dd>
+     * <p>
+     * You must have the <code>s3:CreateAccessGrantsLocation</code> permission to use this operation.
+     * </p>
+     * </dd>
+     * <dt>Additional Permissions</dt>
+     * <dd>
+     * <p>
+     * You must also have the following permission for the specified IAM role: <code>iam:PassRole</code>
+     * </p>
+     * </dd>
+     * </dl>
+     * 
+     * @param createAccessGrantsLocationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateAccessGrantsLocation operation returned by the service.
+     * @sample AWSS3ControlAsyncHandler.CreateAccessGrantsLocation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/CreateAccessGrantsLocation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateAccessGrantsLocationResult> createAccessGrantsLocationAsync(
+            CreateAccessGrantsLocationRequest createAccessGrantsLocationRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateAccessGrantsLocationRequest, CreateAccessGrantsLocationResult> asyncHandler);
+
+    /**
+     * <p>
      * Creates an access point and associates it with the specified bucket. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-points.html">Managing Data Access with Amazon
      * S3 Access Points</a> in the <i>Amazon S3 User Guide</i>.
@@ -709,6 +1043,238 @@ public interface AWSS3ControlAsync extends AWSS3Control {
      */
     java.util.concurrent.Future<CreateStorageLensGroupResult> createStorageLensGroupAsync(CreateStorageLensGroupRequest createStorageLensGroupRequest,
             com.amazonaws.handlers.AsyncHandler<CreateStorageLensGroupRequest, CreateStorageLensGroupResult> asyncHandler);
+
+    /**
+     * <p>
+     * Deletes the access grant from the S3 Access Grants instance. You cannot undo an access grant deletion and the
+     * grantee will no longer have access to the S3 data.
+     * </p>
+     * <dl>
+     * <dt>Permissions</dt>
+     * <dd>
+     * <p>
+     * You must have the <code>s3:DeleteAccessGrant</code> permission to use this operation.
+     * </p>
+     * </dd>
+     * </dl>
+     * 
+     * @param deleteAccessGrantRequest
+     * @return A Java Future containing the result of the DeleteAccessGrant operation returned by the service.
+     * @sample AWSS3ControlAsync.DeleteAccessGrant
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/DeleteAccessGrant" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteAccessGrantResult> deleteAccessGrantAsync(DeleteAccessGrantRequest deleteAccessGrantRequest);
+
+    /**
+     * <p>
+     * Deletes the access grant from the S3 Access Grants instance. You cannot undo an access grant deletion and the
+     * grantee will no longer have access to the S3 data.
+     * </p>
+     * <dl>
+     * <dt>Permissions</dt>
+     * <dd>
+     * <p>
+     * You must have the <code>s3:DeleteAccessGrant</code> permission to use this operation.
+     * </p>
+     * </dd>
+     * </dl>
+     * 
+     * @param deleteAccessGrantRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteAccessGrant operation returned by the service.
+     * @sample AWSS3ControlAsyncHandler.DeleteAccessGrant
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/DeleteAccessGrant" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteAccessGrantResult> deleteAccessGrantAsync(DeleteAccessGrantRequest deleteAccessGrantRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteAccessGrantRequest, DeleteAccessGrantResult> asyncHandler);
+
+    /**
+     * <p>
+     * Deletes your S3 Access Grants instance. You must first delete the access grants and locations before S3 Access
+     * Grants can delete the instance. See <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DeleteAccessGrant.html">DeleteAccessGrant</a>
+     * and <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DeleteAccessGrantsLocation.html">
+     * DeleteAccessGrantsLocation</a>. If you have associated an IAM Identity Center instance with your S3 Access Grants
+     * instance, you must first dissassociate the Identity Center instance from the S3 Access Grants instance before you
+     * can delete the S3 Access Grants instance. See <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_AssociateAccessGrantsIdentityCenter.html"
+     * >AssociateAccessGrantsIdentityCenter</a> and <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DissociateAccessGrantsIdentityCenter.html"
+     * >DissociateAccessGrantsIdentityCenter</a>.
+     * </p>
+     * <dl>
+     * <dt>Permissions</dt>
+     * <dd>
+     * <p>
+     * You must have the <code>s3:DeleteAccessGrantsInstance</code> permission to use this operation.
+     * </p>
+     * </dd>
+     * </dl>
+     * 
+     * @param deleteAccessGrantsInstanceRequest
+     * @return A Java Future containing the result of the DeleteAccessGrantsInstance operation returned by the service.
+     * @sample AWSS3ControlAsync.DeleteAccessGrantsInstance
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/DeleteAccessGrantsInstance"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteAccessGrantsInstanceResult> deleteAccessGrantsInstanceAsync(
+            DeleteAccessGrantsInstanceRequest deleteAccessGrantsInstanceRequest);
+
+    /**
+     * <p>
+     * Deletes your S3 Access Grants instance. You must first delete the access grants and locations before S3 Access
+     * Grants can delete the instance. See <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DeleteAccessGrant.html">DeleteAccessGrant</a>
+     * and <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DeleteAccessGrantsLocation.html">
+     * DeleteAccessGrantsLocation</a>. If you have associated an IAM Identity Center instance with your S3 Access Grants
+     * instance, you must first dissassociate the Identity Center instance from the S3 Access Grants instance before you
+     * can delete the S3 Access Grants instance. See <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_AssociateAccessGrantsIdentityCenter.html"
+     * >AssociateAccessGrantsIdentityCenter</a> and <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DissociateAccessGrantsIdentityCenter.html"
+     * >DissociateAccessGrantsIdentityCenter</a>.
+     * </p>
+     * <dl>
+     * <dt>Permissions</dt>
+     * <dd>
+     * <p>
+     * You must have the <code>s3:DeleteAccessGrantsInstance</code> permission to use this operation.
+     * </p>
+     * </dd>
+     * </dl>
+     * 
+     * @param deleteAccessGrantsInstanceRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteAccessGrantsInstance operation returned by the service.
+     * @sample AWSS3ControlAsyncHandler.DeleteAccessGrantsInstance
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/DeleteAccessGrantsInstance"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteAccessGrantsInstanceResult> deleteAccessGrantsInstanceAsync(
+            DeleteAccessGrantsInstanceRequest deleteAccessGrantsInstanceRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteAccessGrantsInstanceRequest, DeleteAccessGrantsInstanceResult> asyncHandler);
+
+    /**
+     * <p>
+     * Deletes the resource policy of the S3 Access Grants instance. The resource policy is used to manage cross-account
+     * access to your S3 Access Grants instance. By deleting the resource policy, you delete any cross-account
+     * permissions to your S3 Access Grants instance.
+     * </p>
+     * <dl>
+     * <dt>Permissions</dt>
+     * <dd>
+     * <p>
+     * You must have the <code>s3:DeleteAccessGrantsInstanceResourcePolicy</code> permission to use this operation.
+     * </p>
+     * </dd>
+     * </dl>
+     * 
+     * @param deleteAccessGrantsInstanceResourcePolicyRequest
+     * @return A Java Future containing the result of the DeleteAccessGrantsInstanceResourcePolicy operation returned by
+     *         the service.
+     * @sample AWSS3ControlAsync.DeleteAccessGrantsInstanceResourcePolicy
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/DeleteAccessGrantsInstanceResourcePolicy"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteAccessGrantsInstanceResourcePolicyResult> deleteAccessGrantsInstanceResourcePolicyAsync(
+            DeleteAccessGrantsInstanceResourcePolicyRequest deleteAccessGrantsInstanceResourcePolicyRequest);
+
+    /**
+     * <p>
+     * Deletes the resource policy of the S3 Access Grants instance. The resource policy is used to manage cross-account
+     * access to your S3 Access Grants instance. By deleting the resource policy, you delete any cross-account
+     * permissions to your S3 Access Grants instance.
+     * </p>
+     * <dl>
+     * <dt>Permissions</dt>
+     * <dd>
+     * <p>
+     * You must have the <code>s3:DeleteAccessGrantsInstanceResourcePolicy</code> permission to use this operation.
+     * </p>
+     * </dd>
+     * </dl>
+     * 
+     * @param deleteAccessGrantsInstanceResourcePolicyRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteAccessGrantsInstanceResourcePolicy operation returned by
+     *         the service.
+     * @sample AWSS3ControlAsyncHandler.DeleteAccessGrantsInstanceResourcePolicy
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/DeleteAccessGrantsInstanceResourcePolicy"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteAccessGrantsInstanceResourcePolicyResult> deleteAccessGrantsInstanceResourcePolicyAsync(
+            DeleteAccessGrantsInstanceResourcePolicyRequest deleteAccessGrantsInstanceResourcePolicyRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteAccessGrantsInstanceResourcePolicyRequest, DeleteAccessGrantsInstanceResourcePolicyResult> asyncHandler);
+
+    /**
+     * <p>
+     * Deregisters a location from your S3 Access Grants instance. You can only delete a location registration from an
+     * S3 Access Grants instance if there are no grants associated with this location. See <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DeleteAccessGrant.html">Delete a grant</a> for
+     * information on how to delete grants. You need to have at least one registered location in your S3 Access Grants
+     * instance in order to create access grants.
+     * </p>
+     * <dl>
+     * <dt>Permissions</dt>
+     * <dd>
+     * <p>
+     * You must have the <code>s3:DeleteAccessGrantsLocation</code> permission to use this operation.
+     * </p>
+     * </dd>
+     * </dl>
+     * 
+     * @param deleteAccessGrantsLocationRequest
+     * @return A Java Future containing the result of the DeleteAccessGrantsLocation operation returned by the service.
+     * @sample AWSS3ControlAsync.DeleteAccessGrantsLocation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/DeleteAccessGrantsLocation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteAccessGrantsLocationResult> deleteAccessGrantsLocationAsync(
+            DeleteAccessGrantsLocationRequest deleteAccessGrantsLocationRequest);
+
+    /**
+     * <p>
+     * Deregisters a location from your S3 Access Grants instance. You can only delete a location registration from an
+     * S3 Access Grants instance if there are no grants associated with this location. See <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DeleteAccessGrant.html">Delete a grant</a> for
+     * information on how to delete grants. You need to have at least one registered location in your S3 Access Grants
+     * instance in order to create access grants.
+     * </p>
+     * <dl>
+     * <dt>Permissions</dt>
+     * <dd>
+     * <p>
+     * You must have the <code>s3:DeleteAccessGrantsLocation</code> permission to use this operation.
+     * </p>
+     * </dd>
+     * </dl>
+     * 
+     * @param deleteAccessGrantsLocationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteAccessGrantsLocation operation returned by the service.
+     * @sample AWSS3ControlAsyncHandler.DeleteAccessGrantsLocation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/DeleteAccessGrantsLocation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteAccessGrantsLocationResult> deleteAccessGrantsLocationAsync(
+            DeleteAccessGrantsLocationRequest deleteAccessGrantsLocationRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteAccessGrantsLocationRequest, DeleteAccessGrantsLocationResult> asyncHandler);
 
     /**
      * <p>
@@ -2287,6 +2853,328 @@ public interface AWSS3ControlAsync extends AWSS3Control {
 
     /**
      * <p>
+     * Dissociates the Amazon Web Services IAM Identity Center instance from the S3 Access Grants instance.
+     * </p>
+     * <dl>
+     * <dt>Permissions</dt>
+     * <dd>
+     * <p>
+     * You must have the <code>s3:DissociateAccessGrantsIdentityCenter</code> permission to use this operation.
+     * </p>
+     * </dd>
+     * <dt>Additional Permissions</dt>
+     * <dd>
+     * <p>
+     * You must have the <code>sso:DeleteApplication</code> permission to use this operation.
+     * </p>
+     * </dd>
+     * </dl>
+     * 
+     * @param dissociateAccessGrantsIdentityCenterRequest
+     * @return A Java Future containing the result of the DissociateAccessGrantsIdentityCenter operation returned by the
+     *         service.
+     * @sample AWSS3ControlAsync.DissociateAccessGrantsIdentityCenter
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/DissociateAccessGrantsIdentityCenter"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DissociateAccessGrantsIdentityCenterResult> dissociateAccessGrantsIdentityCenterAsync(
+            DissociateAccessGrantsIdentityCenterRequest dissociateAccessGrantsIdentityCenterRequest);
+
+    /**
+     * <p>
+     * Dissociates the Amazon Web Services IAM Identity Center instance from the S3 Access Grants instance.
+     * </p>
+     * <dl>
+     * <dt>Permissions</dt>
+     * <dd>
+     * <p>
+     * You must have the <code>s3:DissociateAccessGrantsIdentityCenter</code> permission to use this operation.
+     * </p>
+     * </dd>
+     * <dt>Additional Permissions</dt>
+     * <dd>
+     * <p>
+     * You must have the <code>sso:DeleteApplication</code> permission to use this operation.
+     * </p>
+     * </dd>
+     * </dl>
+     * 
+     * @param dissociateAccessGrantsIdentityCenterRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DissociateAccessGrantsIdentityCenter operation returned by the
+     *         service.
+     * @sample AWSS3ControlAsyncHandler.DissociateAccessGrantsIdentityCenter
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/DissociateAccessGrantsIdentityCenter"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DissociateAccessGrantsIdentityCenterResult> dissociateAccessGrantsIdentityCenterAsync(
+            DissociateAccessGrantsIdentityCenterRequest dissociateAccessGrantsIdentityCenterRequest,
+            com.amazonaws.handlers.AsyncHandler<DissociateAccessGrantsIdentityCenterRequest, DissociateAccessGrantsIdentityCenterResult> asyncHandler);
+
+    /**
+     * <p>
+     * Get the details of an access grant from your S3 Access Grants instance.
+     * </p>
+     * <dl>
+     * <dt>Permissions</dt>
+     * <dd>
+     * <p>
+     * You must have the <code>s3:GetAccessGrant</code> permission to use this operation.
+     * </p>
+     * </dd>
+     * </dl>
+     * 
+     * @param getAccessGrantRequest
+     * @return A Java Future containing the result of the GetAccessGrant operation returned by the service.
+     * @sample AWSS3ControlAsync.GetAccessGrant
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/GetAccessGrant" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetAccessGrantResult> getAccessGrantAsync(GetAccessGrantRequest getAccessGrantRequest);
+
+    /**
+     * <p>
+     * Get the details of an access grant from your S3 Access Grants instance.
+     * </p>
+     * <dl>
+     * <dt>Permissions</dt>
+     * <dd>
+     * <p>
+     * You must have the <code>s3:GetAccessGrant</code> permission to use this operation.
+     * </p>
+     * </dd>
+     * </dl>
+     * 
+     * @param getAccessGrantRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetAccessGrant operation returned by the service.
+     * @sample AWSS3ControlAsyncHandler.GetAccessGrant
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/GetAccessGrant" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetAccessGrantResult> getAccessGrantAsync(GetAccessGrantRequest getAccessGrantRequest,
+            com.amazonaws.handlers.AsyncHandler<GetAccessGrantRequest, GetAccessGrantResult> asyncHandler);
+
+    /**
+     * <p>
+     * Retrieves the S3 Access Grants instance for a Region in your account.
+     * </p>
+     * <dl>
+     * <dt>Permissions</dt>
+     * <dd>
+     * <p>
+     * You must have the <code>s3:GetAccessGrantsInstance</code> permission to use this operation.
+     * </p>
+     * </dd>
+     * </dl>
+     * 
+     * @param getAccessGrantsInstanceRequest
+     * @return A Java Future containing the result of the GetAccessGrantsInstance operation returned by the service.
+     * @sample AWSS3ControlAsync.GetAccessGrantsInstance
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/GetAccessGrantsInstance"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetAccessGrantsInstanceResult> getAccessGrantsInstanceAsync(GetAccessGrantsInstanceRequest getAccessGrantsInstanceRequest);
+
+    /**
+     * <p>
+     * Retrieves the S3 Access Grants instance for a Region in your account.
+     * </p>
+     * <dl>
+     * <dt>Permissions</dt>
+     * <dd>
+     * <p>
+     * You must have the <code>s3:GetAccessGrantsInstance</code> permission to use this operation.
+     * </p>
+     * </dd>
+     * </dl>
+     * 
+     * @param getAccessGrantsInstanceRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetAccessGrantsInstance operation returned by the service.
+     * @sample AWSS3ControlAsyncHandler.GetAccessGrantsInstance
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/GetAccessGrantsInstance"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetAccessGrantsInstanceResult> getAccessGrantsInstanceAsync(GetAccessGrantsInstanceRequest getAccessGrantsInstanceRequest,
+            com.amazonaws.handlers.AsyncHandler<GetAccessGrantsInstanceRequest, GetAccessGrantsInstanceResult> asyncHandler);
+
+    /**
+     * <p>
+     * Retrieve the S3 Access Grants instance that contains a particular prefix.
+     * </p>
+     * <dl>
+     * <dt>Permissions</dt>
+     * <dd>
+     * <p>
+     * You must have the <code>s3:GetAccessGrantsInstanceForPrefix</code> permission for the caller account to use this
+     * operation.
+     * </p>
+     * </dd>
+     * <dt>Additional Permissions</dt>
+     * <dd>
+     * <p>
+     * The prefix owner account must grant you the following permissions to their S3 Access Grants instance:
+     * <code>s3:GetAccessGrantsInstanceForPrefix</code>.
+     * </p>
+     * </dd>
+     * </dl>
+     * 
+     * @param getAccessGrantsInstanceForPrefixRequest
+     * @return A Java Future containing the result of the GetAccessGrantsInstanceForPrefix operation returned by the
+     *         service.
+     * @sample AWSS3ControlAsync.GetAccessGrantsInstanceForPrefix
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/GetAccessGrantsInstanceForPrefix"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetAccessGrantsInstanceForPrefixResult> getAccessGrantsInstanceForPrefixAsync(
+            GetAccessGrantsInstanceForPrefixRequest getAccessGrantsInstanceForPrefixRequest);
+
+    /**
+     * <p>
+     * Retrieve the S3 Access Grants instance that contains a particular prefix.
+     * </p>
+     * <dl>
+     * <dt>Permissions</dt>
+     * <dd>
+     * <p>
+     * You must have the <code>s3:GetAccessGrantsInstanceForPrefix</code> permission for the caller account to use this
+     * operation.
+     * </p>
+     * </dd>
+     * <dt>Additional Permissions</dt>
+     * <dd>
+     * <p>
+     * The prefix owner account must grant you the following permissions to their S3 Access Grants instance:
+     * <code>s3:GetAccessGrantsInstanceForPrefix</code>.
+     * </p>
+     * </dd>
+     * </dl>
+     * 
+     * @param getAccessGrantsInstanceForPrefixRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetAccessGrantsInstanceForPrefix operation returned by the
+     *         service.
+     * @sample AWSS3ControlAsyncHandler.GetAccessGrantsInstanceForPrefix
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/GetAccessGrantsInstanceForPrefix"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetAccessGrantsInstanceForPrefixResult> getAccessGrantsInstanceForPrefixAsync(
+            GetAccessGrantsInstanceForPrefixRequest getAccessGrantsInstanceForPrefixRequest,
+            com.amazonaws.handlers.AsyncHandler<GetAccessGrantsInstanceForPrefixRequest, GetAccessGrantsInstanceForPrefixResult> asyncHandler);
+
+    /**
+     * <p>
+     * Returns the resource policy of the S3 Access Grants instance.
+     * </p>
+     * <dl>
+     * <dt>Permissions</dt>
+     * <dd>
+     * <p>
+     * You must have the <code>s3:GetAccessGrantsInstanceResourcePolicy</code> permission to use this operation.
+     * </p>
+     * </dd>
+     * </dl>
+     * 
+     * @param getAccessGrantsInstanceResourcePolicyRequest
+     * @return A Java Future containing the result of the GetAccessGrantsInstanceResourcePolicy operation returned by
+     *         the service.
+     * @sample AWSS3ControlAsync.GetAccessGrantsInstanceResourcePolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/GetAccessGrantsInstanceResourcePolicy"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetAccessGrantsInstanceResourcePolicyResult> getAccessGrantsInstanceResourcePolicyAsync(
+            GetAccessGrantsInstanceResourcePolicyRequest getAccessGrantsInstanceResourcePolicyRequest);
+
+    /**
+     * <p>
+     * Returns the resource policy of the S3 Access Grants instance.
+     * </p>
+     * <dl>
+     * <dt>Permissions</dt>
+     * <dd>
+     * <p>
+     * You must have the <code>s3:GetAccessGrantsInstanceResourcePolicy</code> permission to use this operation.
+     * </p>
+     * </dd>
+     * </dl>
+     * 
+     * @param getAccessGrantsInstanceResourcePolicyRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetAccessGrantsInstanceResourcePolicy operation returned by
+     *         the service.
+     * @sample AWSS3ControlAsyncHandler.GetAccessGrantsInstanceResourcePolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/GetAccessGrantsInstanceResourcePolicy"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetAccessGrantsInstanceResourcePolicyResult> getAccessGrantsInstanceResourcePolicyAsync(
+            GetAccessGrantsInstanceResourcePolicyRequest getAccessGrantsInstanceResourcePolicyRequest,
+            com.amazonaws.handlers.AsyncHandler<GetAccessGrantsInstanceResourcePolicyRequest, GetAccessGrantsInstanceResourcePolicyResult> asyncHandler);
+
+    /**
+     * <p>
+     * Retrieves the details of a particular location registered in your S3 Access Grants instance.
+     * </p>
+     * <dl>
+     * <dt>Permissions</dt>
+     * <dd>
+     * <p>
+     * You must have the <code>s3:GetAccessGrantsLocation</code> permission to use this operation.
+     * </p>
+     * </dd>
+     * </dl>
+     * 
+     * @param getAccessGrantsLocationRequest
+     * @return A Java Future containing the result of the GetAccessGrantsLocation operation returned by the service.
+     * @sample AWSS3ControlAsync.GetAccessGrantsLocation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/GetAccessGrantsLocation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetAccessGrantsLocationResult> getAccessGrantsLocationAsync(GetAccessGrantsLocationRequest getAccessGrantsLocationRequest);
+
+    /**
+     * <p>
+     * Retrieves the details of a particular location registered in your S3 Access Grants instance.
+     * </p>
+     * <dl>
+     * <dt>Permissions</dt>
+     * <dd>
+     * <p>
+     * You must have the <code>s3:GetAccessGrantsLocation</code> permission to use this operation.
+     * </p>
+     * </dd>
+     * </dl>
+     * 
+     * @param getAccessGrantsLocationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetAccessGrantsLocation operation returned by the service.
+     * @sample AWSS3ControlAsyncHandler.GetAccessGrantsLocation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/GetAccessGrantsLocation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetAccessGrantsLocationResult> getAccessGrantsLocationAsync(GetAccessGrantsLocationRequest getAccessGrantsLocationRequest,
+            com.amazonaws.handlers.AsyncHandler<GetAccessGrantsLocationRequest, GetAccessGrantsLocationResult> asyncHandler);
+
+    /**
+     * <p>
      * Returns configuration information about the specified access point.
      * </p>
      * <p/>
@@ -3620,6 +4508,73 @@ public interface AWSS3ControlAsync extends AWSS3Control {
 
     /**
      * <p>
+     * Returns a temporary access credential from S3 Access Grants to the grantee or client application. The <a
+     * href="https://docs.aws.amazon.com/STS/latest/APIReference/API_Credentials.html">temporary credential</a> is an
+     * Amazon Web Services STS token that grants them access to the S3 data.
+     * </p>
+     * <dl>
+     * <dt>Permissions</dt>
+     * <dd>
+     * <p>
+     * You must have the <code>s3:GetDataAccess</code> permission to use this operation.
+     * </p>
+     * </dd>
+     * <dt>Additional Permissions</dt>
+     * <dd>
+     * <p>
+     * The IAM role that S3 Access Grants assumes must have the following permissions specified in the trust policy when
+     * registering the location: <code>sts:AssumeRole</code>, for directory users or groups <code>sts:SetContext</code>,
+     * and for IAM users or roles <code>sts:SourceIdentity</code>.
+     * </p>
+     * </dd>
+     * </dl>
+     * 
+     * @param getDataAccessRequest
+     * @return A Java Future containing the result of the GetDataAccess operation returned by the service.
+     * @sample AWSS3ControlAsync.GetDataAccess
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/GetDataAccess" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetDataAccessResult> getDataAccessAsync(GetDataAccessRequest getDataAccessRequest);
+
+    /**
+     * <p>
+     * Returns a temporary access credential from S3 Access Grants to the grantee or client application. The <a
+     * href="https://docs.aws.amazon.com/STS/latest/APIReference/API_Credentials.html">temporary credential</a> is an
+     * Amazon Web Services STS token that grants them access to the S3 data.
+     * </p>
+     * <dl>
+     * <dt>Permissions</dt>
+     * <dd>
+     * <p>
+     * You must have the <code>s3:GetDataAccess</code> permission to use this operation.
+     * </p>
+     * </dd>
+     * <dt>Additional Permissions</dt>
+     * <dd>
+     * <p>
+     * The IAM role that S3 Access Grants assumes must have the following permissions specified in the trust policy when
+     * registering the location: <code>sts:AssumeRole</code>, for directory users or groups <code>sts:SetContext</code>,
+     * and for IAM users or roles <code>sts:SourceIdentity</code>.
+     * </p>
+     * </dd>
+     * </dl>
+     * 
+     * @param getDataAccessRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetDataAccess operation returned by the service.
+     * @sample AWSS3ControlAsyncHandler.GetDataAccess
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/GetDataAccess" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetDataAccessResult> getDataAccessAsync(GetDataAccessRequest getDataAccessRequest,
+            com.amazonaws.handlers.AsyncHandler<GetDataAccessRequest, GetDataAccessResult> asyncHandler);
+
+    /**
+     * <p>
      * Returns the tags on an S3 Batch Operations job. To use the <code>GetJobTagging</code> operation, you must have
      * permission to perform the <code>s3:GetJobTagging</code> action. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/batch-ops-managing-jobs.html#batch-ops-job-tags"
@@ -4313,6 +5268,153 @@ public interface AWSS3ControlAsync extends AWSS3Control {
 
     /**
      * <p>
+     * Returns the list of access grants in your S3 Access Grants instance.
+     * </p>
+     * <dl>
+     * <dt>Permissions</dt>
+     * <dd>
+     * <p>
+     * You must have the <code>s3:ListAccessGrants</code> permission to use this operation.
+     * </p>
+     * </dd>
+     * </dl>
+     * 
+     * @param listAccessGrantsRequest
+     * @return A Java Future containing the result of the ListAccessGrants operation returned by the service.
+     * @sample AWSS3ControlAsync.ListAccessGrants
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/ListAccessGrants" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListAccessGrantsResult> listAccessGrantsAsync(ListAccessGrantsRequest listAccessGrantsRequest);
+
+    /**
+     * <p>
+     * Returns the list of access grants in your S3 Access Grants instance.
+     * </p>
+     * <dl>
+     * <dt>Permissions</dt>
+     * <dd>
+     * <p>
+     * You must have the <code>s3:ListAccessGrants</code> permission to use this operation.
+     * </p>
+     * </dd>
+     * </dl>
+     * 
+     * @param listAccessGrantsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListAccessGrants operation returned by the service.
+     * @sample AWSS3ControlAsyncHandler.ListAccessGrants
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/ListAccessGrants" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListAccessGrantsResult> listAccessGrantsAsync(ListAccessGrantsRequest listAccessGrantsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListAccessGrantsRequest, ListAccessGrantsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Returns a list of S3 Access Grants instances. An S3 Access Grants instance serves as a logical grouping for your
+     * individual access grants. You can only have one S3 Access Grants instance per Region per account.
+     * </p>
+     * <dl>
+     * <dt>Permissions</dt>
+     * <dd>
+     * <p>
+     * You must have the <code>s3:ListAccessGrantsInstances</code> permission to use this operation.
+     * </p>
+     * </dd>
+     * </dl>
+     * 
+     * @param listAccessGrantsInstancesRequest
+     * @return A Java Future containing the result of the ListAccessGrantsInstances operation returned by the service.
+     * @sample AWSS3ControlAsync.ListAccessGrantsInstances
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/ListAccessGrantsInstances"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListAccessGrantsInstancesResult> listAccessGrantsInstancesAsync(
+            ListAccessGrantsInstancesRequest listAccessGrantsInstancesRequest);
+
+    /**
+     * <p>
+     * Returns a list of S3 Access Grants instances. An S3 Access Grants instance serves as a logical grouping for your
+     * individual access grants. You can only have one S3 Access Grants instance per Region per account.
+     * </p>
+     * <dl>
+     * <dt>Permissions</dt>
+     * <dd>
+     * <p>
+     * You must have the <code>s3:ListAccessGrantsInstances</code> permission to use this operation.
+     * </p>
+     * </dd>
+     * </dl>
+     * 
+     * @param listAccessGrantsInstancesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListAccessGrantsInstances operation returned by the service.
+     * @sample AWSS3ControlAsyncHandler.ListAccessGrantsInstances
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/ListAccessGrantsInstances"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListAccessGrantsInstancesResult> listAccessGrantsInstancesAsync(
+            ListAccessGrantsInstancesRequest listAccessGrantsInstancesRequest,
+            com.amazonaws.handlers.AsyncHandler<ListAccessGrantsInstancesRequest, ListAccessGrantsInstancesResult> asyncHandler);
+
+    /**
+     * <p>
+     * Returns a list of the locations registered in your S3 Access Grants instance.
+     * </p>
+     * <dl>
+     * <dt>Permissions</dt>
+     * <dd>
+     * <p>
+     * You must have the <code>s3:ListAccessGrantsLocations</code> permission to use this operation.
+     * </p>
+     * </dd>
+     * </dl>
+     * 
+     * @param listAccessGrantsLocationsRequest
+     * @return A Java Future containing the result of the ListAccessGrantsLocations operation returned by the service.
+     * @sample AWSS3ControlAsync.ListAccessGrantsLocations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/ListAccessGrantsLocations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListAccessGrantsLocationsResult> listAccessGrantsLocationsAsync(
+            ListAccessGrantsLocationsRequest listAccessGrantsLocationsRequest);
+
+    /**
+     * <p>
+     * Returns a list of the locations registered in your S3 Access Grants instance.
+     * </p>
+     * <dl>
+     * <dt>Permissions</dt>
+     * <dd>
+     * <p>
+     * You must have the <code>s3:ListAccessGrantsLocations</code> permission to use this operation.
+     * </p>
+     * </dd>
+     * </dl>
+     * 
+     * @param listAccessGrantsLocationsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListAccessGrantsLocations operation returned by the service.
+     * @sample AWSS3ControlAsyncHandler.ListAccessGrantsLocations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/ListAccessGrantsLocations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListAccessGrantsLocationsResult> listAccessGrantsLocationsAsync(
+            ListAccessGrantsLocationsRequest listAccessGrantsLocationsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListAccessGrantsLocationsRequest, ListAccessGrantsLocationsResult> asyncHandler);
+
+    /**
+     * <p>
      * Returns a list of the access points that are owned by the current account that's associated with the specified
      * bucket. You can retrieve up to 1000 access points per call. If the specified bucket has more than 1,000 access
      * points (or the number specified in <code>maxResults</code>, whichever is less), the response will include a
@@ -4854,10 +5956,28 @@ public interface AWSS3ControlAsync extends AWSS3Control {
 
     /**
      * <p>
-     * This operation allows you to list all the Amazon Web Services resource tags for the specified resource.
+     * This operation allows you to list all the Amazon Web Services resource tags for a specified resource. Each tag is
+     * a label consisting of a user-defined key and value. Tags can help you manage, identify, organize, search for, and
+     * filter resources.
      * </p>
+     * <dl>
+     * <dt>Permissions</dt>
+     * <dd>
      * <p>
-     * To use this operation, you must have the permission to perform the <code>s3:ListTagsForResource</code> action.
+     * You must have the <code>s3:ListTagsForResource</code> permission to use this operation.
+     * </p>
+     * </dd>
+     * </dl>
+     * <note>
+     * <p>
+     * This operation is only supported for <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage-lens-groups.html">S3 Storage Lens groups</a>
+     * and for <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-grants-tagging.html">S3 Access
+     * Grants</a>. The tagged resource can be an S3 Storage Lens group or S3 Access Grants instance, registered
+     * location, or grant.
+     * </p>
+     * </note>
+     * <p>
      * For more information about the required Storage Lens Groups permissions, see <a href=
      * "https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage_lens_iam_permissions.html#storage_lens_groups_permissions"
      * >Setting account permissions to use S3 Storage Lens groups</a>.
@@ -4867,12 +5987,6 @@ public interface AWSS3ControlAsync extends AWSS3Control {
      * href="https://docs.aws.amazon.com/AmazonS3/latest/API/ErrorResponses.html#S3TaggingErrorCodeList">List of Amazon
      * S3 Tagging error codes</a>.
      * </p>
-     * <note>
-     * <p>
-     * This operation is only supported for <a
-     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage-lens-groups.html">S3 Storage Lens groups</a>.
-     * </p>
-     * </note>
      * 
      * @param listTagsForResourceRequest
      * @return A Java Future containing the result of the ListTagsForResource operation returned by the service.
@@ -4884,10 +5998,28 @@ public interface AWSS3ControlAsync extends AWSS3Control {
 
     /**
      * <p>
-     * This operation allows you to list all the Amazon Web Services resource tags for the specified resource.
+     * This operation allows you to list all the Amazon Web Services resource tags for a specified resource. Each tag is
+     * a label consisting of a user-defined key and value. Tags can help you manage, identify, organize, search for, and
+     * filter resources.
      * </p>
+     * <dl>
+     * <dt>Permissions</dt>
+     * <dd>
      * <p>
-     * To use this operation, you must have the permission to perform the <code>s3:ListTagsForResource</code> action.
+     * You must have the <code>s3:ListTagsForResource</code> permission to use this operation.
+     * </p>
+     * </dd>
+     * </dl>
+     * <note>
+     * <p>
+     * This operation is only supported for <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage-lens-groups.html">S3 Storage Lens groups</a>
+     * and for <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-grants-tagging.html">S3 Access
+     * Grants</a>. The tagged resource can be an S3 Storage Lens group or S3 Access Grants instance, registered
+     * location, or grant.
+     * </p>
+     * </note>
+     * <p>
      * For more information about the required Storage Lens Groups permissions, see <a href=
      * "https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage_lens_iam_permissions.html#storage_lens_groups_permissions"
      * >Setting account permissions to use S3 Storage Lens groups</a>.
@@ -4897,12 +6029,6 @@ public interface AWSS3ControlAsync extends AWSS3Control {
      * href="https://docs.aws.amazon.com/AmazonS3/latest/API/ErrorResponses.html#S3TaggingErrorCodeList">List of Amazon
      * S3 Tagging error codes</a>.
      * </p>
-     * <note>
-     * <p>
-     * This operation is only supported for <a
-     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage-lens-groups.html">S3 Storage Lens groups</a>.
-     * </p>
-     * </note>
      * 
      * @param listTagsForResourceRequest
      * @param asyncHandler
@@ -4916,6 +6042,57 @@ public interface AWSS3ControlAsync extends AWSS3Control {
      */
     java.util.concurrent.Future<ListTagsForResourceResult> listTagsForResourceAsync(ListTagsForResourceRequest listTagsForResourceRequest,
             com.amazonaws.handlers.AsyncHandler<ListTagsForResourceRequest, ListTagsForResourceResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates the resource policy of the S3 Access Grants instance.
+     * </p>
+     * <dl>
+     * <dt>Permissions</dt>
+     * <dd>
+     * <p>
+     * You must have the <code>s3:PutAccessGrantsInstanceResourcePolicy</code> permission to use this operation.
+     * </p>
+     * </dd>
+     * </dl>
+     * 
+     * @param putAccessGrantsInstanceResourcePolicyRequest
+     * @return A Java Future containing the result of the PutAccessGrantsInstanceResourcePolicy operation returned by
+     *         the service.
+     * @sample AWSS3ControlAsync.PutAccessGrantsInstanceResourcePolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/PutAccessGrantsInstanceResourcePolicy"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<PutAccessGrantsInstanceResourcePolicyResult> putAccessGrantsInstanceResourcePolicyAsync(
+            PutAccessGrantsInstanceResourcePolicyRequest putAccessGrantsInstanceResourcePolicyRequest);
+
+    /**
+     * <p>
+     * Updates the resource policy of the S3 Access Grants instance.
+     * </p>
+     * <dl>
+     * <dt>Permissions</dt>
+     * <dd>
+     * <p>
+     * You must have the <code>s3:PutAccessGrantsInstanceResourcePolicy</code> permission to use this operation.
+     * </p>
+     * </dd>
+     * </dl>
+     * 
+     * @param putAccessGrantsInstanceResourcePolicyRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the PutAccessGrantsInstanceResourcePolicy operation returned by
+     *         the service.
+     * @sample AWSS3ControlAsyncHandler.PutAccessGrantsInstanceResourcePolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/PutAccessGrantsInstanceResourcePolicy"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<PutAccessGrantsInstanceResourcePolicyResult> putAccessGrantsInstanceResourcePolicyAsync(
+            PutAccessGrantsInstanceResourcePolicyRequest putAccessGrantsInstanceResourcePolicyRequest,
+            com.amazonaws.handlers.AsyncHandler<PutAccessGrantsInstanceResourcePolicyRequest, PutAccessGrantsInstanceResourcePolicyResult> asyncHandler);
 
     /**
      * <p>
@@ -6733,12 +7910,29 @@ public interface AWSS3ControlAsync extends AWSS3Control {
 
     /**
      * <p>
-     * Creates a new Amazon Web Services resource tag or updates an existing resource tag. You can add up to 50 Amazon
-     * Web Services resource tags for each S3 resource.
+     * Creates a new Amazon Web Services resource tag or updates an existing resource tag. Each tag is a label
+     * consisting of a user-defined key and value. Tags can help you manage, identify, organize, search for, and filter
+     * resources. You can add up to 50 Amazon Web Services resource tags for each S3 resource.
      * </p>
+     * <note>
      * <p>
-     * To use this operation, you must have the permission to perform the <code>s3:TagResource</code> action. For more
-     * information about the required Storage Lens Groups permissions, see <a href=
+     * This operation is only supported for <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage-lens-groups.html">S3 Storage Lens groups</a>
+     * and for <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-grants-tagging.html">S3 Access
+     * Grants</a>. The tagged resource can be an S3 Storage Lens group or S3 Access Grants instance, registered
+     * location, or grant.
+     * </p>
+     * </note>
+     * <dl>
+     * <dt>Permissions</dt>
+     * <dd>
+     * <p>
+     * You must have the <code>s3:TagResource</code> permission to use this operation.
+     * </p>
+     * </dd>
+     * </dl>
+     * <p>
+     * For more information about the required Storage Lens Groups permissions, see <a href=
      * "https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage_lens_iam_permissions.html#storage_lens_groups_permissions"
      * >Setting account permissions to use S3 Storage Lens groups</a>.
      * </p>
@@ -6747,12 +7941,6 @@ public interface AWSS3ControlAsync extends AWSS3Control {
      * href="https://docs.aws.amazon.com/AmazonS3/latest/API/ErrorResponses.html#S3TaggingErrorCodeList">List of Amazon
      * S3 Tagging error codes</a>.
      * </p>
-     * <note>
-     * <p>
-     * This operation is only supported for <a
-     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage-lens-groups.html">S3 Storage Lens groups</a>.
-     * </p>
-     * </note>
      * 
      * @param tagResourceRequest
      * @return A Java Future containing the result of the TagResource operation returned by the service.
@@ -6764,12 +7952,29 @@ public interface AWSS3ControlAsync extends AWSS3Control {
 
     /**
      * <p>
-     * Creates a new Amazon Web Services resource tag or updates an existing resource tag. You can add up to 50 Amazon
-     * Web Services resource tags for each S3 resource.
+     * Creates a new Amazon Web Services resource tag or updates an existing resource tag. Each tag is a label
+     * consisting of a user-defined key and value. Tags can help you manage, identify, organize, search for, and filter
+     * resources. You can add up to 50 Amazon Web Services resource tags for each S3 resource.
      * </p>
+     * <note>
      * <p>
-     * To use this operation, you must have the permission to perform the <code>s3:TagResource</code> action. For more
-     * information about the required Storage Lens Groups permissions, see <a href=
+     * This operation is only supported for <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage-lens-groups.html">S3 Storage Lens groups</a>
+     * and for <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-grants-tagging.html">S3 Access
+     * Grants</a>. The tagged resource can be an S3 Storage Lens group or S3 Access Grants instance, registered
+     * location, or grant.
+     * </p>
+     * </note>
+     * <dl>
+     * <dt>Permissions</dt>
+     * <dd>
+     * <p>
+     * You must have the <code>s3:TagResource</code> permission to use this operation.
+     * </p>
+     * </dd>
+     * </dl>
+     * <p>
+     * For more information about the required Storage Lens Groups permissions, see <a href=
      * "https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage_lens_iam_permissions.html#storage_lens_groups_permissions"
      * >Setting account permissions to use S3 Storage Lens groups</a>.
      * </p>
@@ -6778,12 +7983,6 @@ public interface AWSS3ControlAsync extends AWSS3Control {
      * href="https://docs.aws.amazon.com/AmazonS3/latest/API/ErrorResponses.html#S3TaggingErrorCodeList">List of Amazon
      * S3 Tagging error codes</a>.
      * </p>
-     * <note>
-     * <p>
-     * This operation is only supported for <a
-     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage-lens-groups.html">S3 Storage Lens groups</a>.
-     * </p>
-     * </note>
      * 
      * @param tagResourceRequest
      * @param asyncHandler
@@ -6800,11 +7999,29 @@ public interface AWSS3ControlAsync extends AWSS3Control {
 
     /**
      * <p>
-     * This operation removes the specified Amazon Web Services resource tags from an S3 resource.
+     * This operation removes the specified Amazon Web Services resource tags from an S3 resource. Each tag is a label
+     * consisting of a user-defined key and value. Tags can help you manage, identify, organize, search for, and filter
+     * resources.
      * </p>
+     * <note>
      * <p>
-     * To use this operation, you must have the permission to perform the <code>s3:UntagResource</code> action. For more
-     * information about the required Storage Lens Groups permissions, see <a href=
+     * This operation is only supported for <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage-lens-groups.html">S3 Storage Lens groups</a>
+     * and for <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-grants-tagging.html">S3 Access
+     * Grants</a>. The tagged resource can be an S3 Storage Lens group or S3 Access Grants instance, registered
+     * location, or grant.
+     * </p>
+     * </note>
+     * <dl>
+     * <dt>Permissions</dt>
+     * <dd>
+     * <p>
+     * You must have the <code>s3:UntagResource</code> permission to use this operation.
+     * </p>
+     * </dd>
+     * </dl>
+     * <p>
+     * For more information about the required Storage Lens Groups permissions, see <a href=
      * "https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage_lens_iam_permissions.html#storage_lens_groups_permissions"
      * >Setting account permissions to use S3 Storage Lens groups</a>.
      * </p>
@@ -6813,12 +8030,6 @@ public interface AWSS3ControlAsync extends AWSS3Control {
      * href="https://docs.aws.amazon.com/AmazonS3/latest/API/ErrorResponses.html#S3TaggingErrorCodeList">List of Amazon
      * S3 Tagging error codes</a>.
      * </p>
-     * <note>
-     * <p>
-     * This operation is only supported for <a
-     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage-lens-groups.html">S3 Storage Lens groups</a>.
-     * </p>
-     * </note>
      * 
      * @param untagResourceRequest
      * @return A Java Future containing the result of the UntagResource operation returned by the service.
@@ -6830,11 +8041,29 @@ public interface AWSS3ControlAsync extends AWSS3Control {
 
     /**
      * <p>
-     * This operation removes the specified Amazon Web Services resource tags from an S3 resource.
+     * This operation removes the specified Amazon Web Services resource tags from an S3 resource. Each tag is a label
+     * consisting of a user-defined key and value. Tags can help you manage, identify, organize, search for, and filter
+     * resources.
      * </p>
+     * <note>
      * <p>
-     * To use this operation, you must have the permission to perform the <code>s3:UntagResource</code> action. For more
-     * information about the required Storage Lens Groups permissions, see <a href=
+     * This operation is only supported for <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage-lens-groups.html">S3 Storage Lens groups</a>
+     * and for <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-grants-tagging.html">S3 Access
+     * Grants</a>. The tagged resource can be an S3 Storage Lens group or S3 Access Grants instance, registered
+     * location, or grant.
+     * </p>
+     * </note>
+     * <dl>
+     * <dt>Permissions</dt>
+     * <dd>
+     * <p>
+     * You must have the <code>s3:UntagResource</code> permission to use this operation.
+     * </p>
+     * </dd>
+     * </dl>
+     * <p>
+     * For more information about the required Storage Lens Groups permissions, see <a href=
      * "https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage_lens_iam_permissions.html#storage_lens_groups_permissions"
      * >Setting account permissions to use S3 Storage Lens groups</a>.
      * </p>
@@ -6843,12 +8072,6 @@ public interface AWSS3ControlAsync extends AWSS3Control {
      * href="https://docs.aws.amazon.com/AmazonS3/latest/API/ErrorResponses.html#S3TaggingErrorCodeList">List of Amazon
      * S3 Tagging error codes</a>.
      * </p>
-     * <note>
-     * <p>
-     * This operation is only supported for <a
-     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage-lens-groups.html">S3 Storage Lens groups</a>.
-     * </p>
-     * </note>
      * 
      * @param untagResourceRequest
      * @param asyncHandler
@@ -6862,6 +8085,67 @@ public interface AWSS3ControlAsync extends AWSS3Control {
      */
     java.util.concurrent.Future<UntagResourceResult> untagResourceAsync(UntagResourceRequest untagResourceRequest,
             com.amazonaws.handlers.AsyncHandler<UntagResourceRequest, UntagResourceResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates the IAM role of a registered location in your S3 Access Grants instance.
+     * </p>
+     * <dl>
+     * <dt>Permissions</dt>
+     * <dd>
+     * <p>
+     * You must have the <code>s3:UpdateAccessGrantsLocation</code> permission to use this operation.
+     * </p>
+     * </dd>
+     * <dt>Additional Permissions</dt>
+     * <dd>
+     * <p>
+     * You must also have the following permission: <code>iam:PassRole</code>
+     * </p>
+     * </dd>
+     * </dl>
+     * 
+     * @param updateAccessGrantsLocationRequest
+     * @return A Java Future containing the result of the UpdateAccessGrantsLocation operation returned by the service.
+     * @sample AWSS3ControlAsync.UpdateAccessGrantsLocation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/UpdateAccessGrantsLocation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateAccessGrantsLocationResult> updateAccessGrantsLocationAsync(
+            UpdateAccessGrantsLocationRequest updateAccessGrantsLocationRequest);
+
+    /**
+     * <p>
+     * Updates the IAM role of a registered location in your S3 Access Grants instance.
+     * </p>
+     * <dl>
+     * <dt>Permissions</dt>
+     * <dd>
+     * <p>
+     * You must have the <code>s3:UpdateAccessGrantsLocation</code> permission to use this operation.
+     * </p>
+     * </dd>
+     * <dt>Additional Permissions</dt>
+     * <dd>
+     * <p>
+     * You must also have the following permission: <code>iam:PassRole</code>
+     * </p>
+     * </dd>
+     * </dl>
+     * 
+     * @param updateAccessGrantsLocationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateAccessGrantsLocation operation returned by the service.
+     * @sample AWSS3ControlAsyncHandler.UpdateAccessGrantsLocation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/UpdateAccessGrantsLocation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateAccessGrantsLocationResult> updateAccessGrantsLocationAsync(
+            UpdateAccessGrantsLocationRequest updateAccessGrantsLocationRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateAccessGrantsLocationRequest, UpdateAccessGrantsLocationResult> asyncHandler);
 
     /**
      * <p>

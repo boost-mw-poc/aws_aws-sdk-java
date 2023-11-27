@@ -3024,13 +3024,23 @@ public interface AmazonConfig {
      * @return Result of the PutConfigurationRecorder operation returned by the service.
      * @throws MaxNumberOfConfigurationRecordersExceededException
      *         You have reached the limit of the number of configuration recorders you can create.
+     * @throws ValidationException
+     *         The requested action is not valid.</p>
+     *         <p>
+     *         For PutStoredQuery, you will see this exception if there are missing required fields or if the input
+     *         value fails the validation, or if you are trying to create more than 300 queries.
+     *         </p>
+     *         <p>
+     *         For GetStoredQuery, ListStoredQuery, and DeleteStoredQuery you will see this exception if there are
+     *         missing required fields or if the input value fails the validation.
      * @throws InvalidConfigurationRecorderNameException
      *         You have provided a name for the configuration recorder that is not valid.
      * @throws InvalidRoleException
      *         You have provided a null or empty Amazon Resource Name (ARN) for the IAM role assumed by Config and used
      *         by the configuration recorder.
      * @throws InvalidRecordingGroupException
-     *         Indicates one of the following errors:</p>
+     *         Indicates one of the following errors:
+     *         </p>
      *         <ul>
      *         <li>
      *         <p>

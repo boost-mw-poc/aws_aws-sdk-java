@@ -129,6 +129,13 @@ public class CallAnalyticsJobSettings implements Serializable, Cloneable, Struct
      * </p>
      */
     private java.util.Map<String, LanguageIdSettings> languageIdSettings;
+    /**
+     * <p>
+     * Contains <code>GenerateAbstractiveSummary</code>, which is a required parameter if you want to enable Generative
+     * call summarization in your Call Analytics request.
+     * </p>
+     */
+    private Summarization summarization;
 
     /**
      * <p>
@@ -931,6 +938,52 @@ public class CallAnalyticsJobSettings implements Serializable, Cloneable, Struct
     }
 
     /**
+     * <p>
+     * Contains <code>GenerateAbstractiveSummary</code>, which is a required parameter if you want to enable Generative
+     * call summarization in your Call Analytics request.
+     * </p>
+     * 
+     * @param summarization
+     *        Contains <code>GenerateAbstractiveSummary</code>, which is a required parameter if you want to enable
+     *        Generative call summarization in your Call Analytics request.
+     */
+
+    public void setSummarization(Summarization summarization) {
+        this.summarization = summarization;
+    }
+
+    /**
+     * <p>
+     * Contains <code>GenerateAbstractiveSummary</code>, which is a required parameter if you want to enable Generative
+     * call summarization in your Call Analytics request.
+     * </p>
+     * 
+     * @return Contains <code>GenerateAbstractiveSummary</code>, which is a required parameter if you want to enable
+     *         Generative call summarization in your Call Analytics request.
+     */
+
+    public Summarization getSummarization() {
+        return this.summarization;
+    }
+
+    /**
+     * <p>
+     * Contains <code>GenerateAbstractiveSummary</code>, which is a required parameter if you want to enable Generative
+     * call summarization in your Call Analytics request.
+     * </p>
+     * 
+     * @param summarization
+     *        Contains <code>GenerateAbstractiveSummary</code>, which is a required parameter if you want to enable
+     *        Generative call summarization in your Call Analytics request.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CallAnalyticsJobSettings withSummarization(Summarization summarization) {
+        setSummarization(summarization);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -955,7 +1008,9 @@ public class CallAnalyticsJobSettings implements Serializable, Cloneable, Struct
         if (getLanguageOptions() != null)
             sb.append("LanguageOptions: ").append(getLanguageOptions()).append(",");
         if (getLanguageIdSettings() != null)
-            sb.append("LanguageIdSettings: ").append(getLanguageIdSettings());
+            sb.append("LanguageIdSettings: ").append(getLanguageIdSettings()).append(",");
+        if (getSummarization() != null)
+            sb.append("Summarization: ").append(getSummarization());
         sb.append("}");
         return sb.toString();
     }
@@ -998,6 +1053,10 @@ public class CallAnalyticsJobSettings implements Serializable, Cloneable, Struct
             return false;
         if (other.getLanguageIdSettings() != null && other.getLanguageIdSettings().equals(this.getLanguageIdSettings()) == false)
             return false;
+        if (other.getSummarization() == null ^ this.getSummarization() == null)
+            return false;
+        if (other.getSummarization() != null && other.getSummarization().equals(this.getSummarization()) == false)
+            return false;
         return true;
     }
 
@@ -1013,6 +1072,7 @@ public class CallAnalyticsJobSettings implements Serializable, Cloneable, Struct
         hashCode = prime * hashCode + ((getContentRedaction() == null) ? 0 : getContentRedaction().hashCode());
         hashCode = prime * hashCode + ((getLanguageOptions() == null) ? 0 : getLanguageOptions().hashCode());
         hashCode = prime * hashCode + ((getLanguageIdSettings() == null) ? 0 : getLanguageIdSettings().hashCode());
+        hashCode = prime * hashCode + ((getSummarization() == null) ? 0 : getSummarization().hashCode());
         return hashCode;
     }
 

@@ -423,6 +423,39 @@ public class AWSLogsAsyncClient extends AWSLogsClient implements AWSLogsAsync {
     }
 
     @Override
+    public java.util.concurrent.Future<CreateLogAnomalyDetectorResult> createLogAnomalyDetectorAsync(CreateLogAnomalyDetectorRequest request) {
+
+        return createLogAnomalyDetectorAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateLogAnomalyDetectorResult> createLogAnomalyDetectorAsync(final CreateLogAnomalyDetectorRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateLogAnomalyDetectorRequest, CreateLogAnomalyDetectorResult> asyncHandler) {
+        final CreateLogAnomalyDetectorRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateLogAnomalyDetectorResult>() {
+            @Override
+            public CreateLogAnomalyDetectorResult call() throws Exception {
+                CreateLogAnomalyDetectorResult result = null;
+
+                try {
+                    result = executeCreateLogAnomalyDetector(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateLogGroupResult> createLogGroupAsync(CreateLogGroupRequest request) {
 
         return createLogGroupAsync(request, null);
@@ -706,6 +739,39 @@ public class AWSLogsAsyncClient extends AWSLogsClient implements AWSLogsAsync {
 
                 try {
                     result = executeDeleteDestination(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteLogAnomalyDetectorResult> deleteLogAnomalyDetectorAsync(DeleteLogAnomalyDetectorRequest request) {
+
+        return deleteLogAnomalyDetectorAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteLogAnomalyDetectorResult> deleteLogAnomalyDetectorAsync(final DeleteLogAnomalyDetectorRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteLogAnomalyDetectorRequest, DeleteLogAnomalyDetectorResult> asyncHandler) {
+        final DeleteLogAnomalyDetectorRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteLogAnomalyDetectorResult>() {
+            @Override
+            public DeleteLogAnomalyDetectorResult call() throws Exception {
+                DeleteLogAnomalyDetectorResult result = null;
+
+                try {
+                    result = executeDeleteLogAnomalyDetector(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -1659,6 +1725,39 @@ public class AWSLogsAsyncClient extends AWSLogsClient implements AWSLogsAsync {
     }
 
     @Override
+    public java.util.concurrent.Future<GetLogAnomalyDetectorResult> getLogAnomalyDetectorAsync(GetLogAnomalyDetectorRequest request) {
+
+        return getLogAnomalyDetectorAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetLogAnomalyDetectorResult> getLogAnomalyDetectorAsync(final GetLogAnomalyDetectorRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetLogAnomalyDetectorRequest, GetLogAnomalyDetectorResult> asyncHandler) {
+        final GetLogAnomalyDetectorRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetLogAnomalyDetectorResult>() {
+            @Override
+            public GetLogAnomalyDetectorResult call() throws Exception {
+                GetLogAnomalyDetectorResult result = null;
+
+                try {
+                    result = executeGetLogAnomalyDetector(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetLogEventsResult> getLogEventsAsync(GetLogEventsRequest request) {
 
         return getLogEventsAsync(request, null);
@@ -1775,6 +1874,72 @@ public class AWSLogsAsyncClient extends AWSLogsClient implements AWSLogsAsync {
 
                 try {
                     result = executeGetQueryResults(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListAnomaliesResult> listAnomaliesAsync(ListAnomaliesRequest request) {
+
+        return listAnomaliesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListAnomaliesResult> listAnomaliesAsync(final ListAnomaliesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListAnomaliesRequest, ListAnomaliesResult> asyncHandler) {
+        final ListAnomaliesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListAnomaliesResult>() {
+            @Override
+            public ListAnomaliesResult call() throws Exception {
+                ListAnomaliesResult result = null;
+
+                try {
+                    result = executeListAnomalies(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListLogAnomalyDetectorsResult> listLogAnomalyDetectorsAsync(ListLogAnomalyDetectorsRequest request) {
+
+        return listLogAnomalyDetectorsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListLogAnomalyDetectorsResult> listLogAnomalyDetectorsAsync(final ListLogAnomalyDetectorsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListLogAnomalyDetectorsRequest, ListLogAnomalyDetectorsResult> asyncHandler) {
+        final ListLogAnomalyDetectorsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListLogAnomalyDetectorsResult>() {
+            @Override
+            public ListLogAnomalyDetectorsResult call() throws Exception {
+                ListLogAnomalyDetectorsResult result = null;
+
+                try {
+                    result = executeListLogAnomalyDetectors(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -2507,6 +2672,72 @@ public class AWSLogsAsyncClient extends AWSLogsClient implements AWSLogsAsync {
 
                 try {
                     result = executeUntagResource(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateAnomalyResult> updateAnomalyAsync(UpdateAnomalyRequest request) {
+
+        return updateAnomalyAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateAnomalyResult> updateAnomalyAsync(final UpdateAnomalyRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateAnomalyRequest, UpdateAnomalyResult> asyncHandler) {
+        final UpdateAnomalyRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateAnomalyResult>() {
+            @Override
+            public UpdateAnomalyResult call() throws Exception {
+                UpdateAnomalyResult result = null;
+
+                try {
+                    result = executeUpdateAnomaly(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateLogAnomalyDetectorResult> updateLogAnomalyDetectorAsync(UpdateLogAnomalyDetectorRequest request) {
+
+        return updateLogAnomalyDetectorAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateLogAnomalyDetectorResult> updateLogAnomalyDetectorAsync(final UpdateLogAnomalyDetectorRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateLogAnomalyDetectorRequest, UpdateLogAnomalyDetectorResult> asyncHandler) {
+        final UpdateLogAnomalyDetectorRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateLogAnomalyDetectorResult>() {
+            @Override
+            public UpdateLogAnomalyDetectorResult call() throws Exception {
+                UpdateLogAnomalyDetectorResult result = null;
+
+                try {
+                    result = executeUpdateLogAnomalyDetector(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

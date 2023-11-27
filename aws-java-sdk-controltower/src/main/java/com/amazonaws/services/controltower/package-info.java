@@ -13,8 +13,9 @@
 
 /**
  * <p>
- * These interfaces allow you to apply the AWS library of pre-defined <i>controls</i> to your organizational units,
- * programmatically. In AWS Control Tower, the terms "control" and "guardrail" are synonyms.
+ * These interfaces allow you to apply the Amazon Web Services library of pre-defined <i>controls</i> to your
+ * organizational units, programmatically. In Amazon Web Services Control Tower, the terms "control" and "guardrail" are
+ * synonyms.
  * </p>
  * <p>
  * To call these APIs, you'll need to know:
@@ -44,19 +45,19 @@
  * <code>controlIdentifier</code> in the console on the <b>Control details</b> page, as well as in the documentation.
  * </p>
  * <p>
- * The <code>controlIdentifier</code> is unique in each AWS Region for each control. You can find the
+ * The <code>controlIdentifier</code> is unique in each Amazon Web Services Region for each control. You can find the
  * <code>controlIdentifier</code> for each Region and control in the <a
  * href="https://docs.aws.amazon.com/controltower/latest/userguide/control-metadata-tables.html">Tables of control
- * metadata</a> in the <i>AWS Control Tower User Guide.</i>
+ * metadata</a> in the <i>Amazon Web Services Control Tower User Guide.</i>
  * </p>
  * <p>
- * A quick-reference list of control identifers for the AWS Control Tower legacy <i>Strongly recommended</i> and
- * <i>Elective</i> controls is given in <a
+ * A quick-reference list of control identifers for the Amazon Web Services Control Tower legacy <i>Strongly
+ * recommended</i> and <i>Elective</i> controls is given in <a
  * href="https://docs.aws.amazon.com/controltower/latest/userguide/control-identifiers.html.html">Resource identifiers
  * for APIs and controls</a> in the <a
  * href="https://docs.aws.amazon.com/controltower/latest/userguide/control-identifiers.html">Controls reference guide
- * section</a> of the <i>AWS Control Tower User Guide</i>. Remember that <i>Mandatory</i> controls cannot be added or
- * removed.
+ * section</a> of the <i>Amazon Web Services Control Tower User Guide</i>. Remember that <i>Mandatory</i> controls
+ * cannot be added or removed.
  * </p>
  * <note>
  * <p>
@@ -76,8 +77,8 @@
  * The <code>targetIdentifier</code> is the ARN for an OU.
  * </p>
  * <p>
- * In the AWS Organizations console, you can find the ARN for the OU on the <b>Organizational unit details</b> page
- * associated with that OU.
+ * In the Amazon Web Services Organizations console, you can find the ARN for the OU on the <b>Organizational unit
+ * details</b> page associated with that OU.
  * </p>
  * <note>
  * <p>
@@ -129,7 +130,7 @@
  * <li>
  * <p>
  * <a href="https://docs.aws.amazon.com/controltower/latest/userguide/creating-resources-with-cloudformation.html">
- * Creating AWS Control Tower resources with AWS CloudFormation</a>
+ * Creating Amazon Web Services Control Tower resources with Amazon Web Services CloudFormation</a>
  * </p>
  * </li>
  * </ul>
@@ -142,13 +143,15 @@
  * <b>Recording API Requests</b>
  * </p>
  * <p>
- * AWS Control Tower supports AWS CloudTrail, a service that records AWS API calls for your AWS account and delivers log
- * files to an Amazon S3 bucket. By using information collected by CloudTrail, you can determine which requests the AWS
- * Control Tower service received, who made the request and when, and so on. For more about AWS Control Tower and its
- * support for CloudTrail, see <a
- * href="https://docs.aws.amazon.com/controltower/latest/userguide/logging-using-cloudtrail.html">Logging AWS Control
- * Tower Actions with AWS CloudTrail</a> in the AWS Control Tower User Guide. To learn more about CloudTrail, including
- * how to turn it on and find your log files, see the AWS CloudTrail User Guide.
+ * Amazon Web Services Control Tower supports Amazon Web Services CloudTrail, a service that records Amazon Web Services
+ * API calls for your Amazon Web Services account and delivers log files to an Amazon S3 bucket. By using information
+ * collected by CloudTrail, you can determine which requests the Amazon Web Services Control Tower service received, who
+ * made the request and when, and so on. For more about Amazon Web Services Control Tower and its support for
+ * CloudTrail, see <a
+ * href="https://docs.aws.amazon.com/controltower/latest/userguide/logging-using-cloudtrail.html">Logging Amazon Web
+ * Services Control Tower Actions with Amazon Web Services CloudTrail</a> in the Amazon Web Services Control Tower User
+ * Guide. To learn more about CloudTrail, including how to turn it on and find your log files, see the Amazon Web
+ * Services CloudTrail User Guide.
  * </p>
  */
 package com.amazonaws.services.controltower;

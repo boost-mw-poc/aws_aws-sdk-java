@@ -84,6 +84,10 @@ public class DatasetJsonUnmarshaller implements Unmarshaller<Dataset, JsonUnmars
                     context.nextToken();
                     dataset.setLatestDatasetUpdate(DatasetUpdateSummaryJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("trackingId", targetDepth)) {
+                    context.nextToken();
+                    dataset.setTrackingId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

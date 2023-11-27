@@ -79,6 +79,10 @@ public class CallAnalyticsJobSettingsJsonUnmarshaller implements Unmarshaller<Ca
                     callAnalyticsJobSettings.setLanguageIdSettings(new MapUnmarshaller<String, LanguageIdSettings>(context.getUnmarshaller(String.class),
                             LanguageIdSettingsJsonUnmarshaller.getInstance()).unmarshall(context));
                 }
+                if (context.testExpression("Summarization", targetDepth)) {
+                    context.nextToken();
+                    callAnalyticsJobSettings.setSummarization(SummarizationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

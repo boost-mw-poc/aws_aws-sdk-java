@@ -33,7 +33,8 @@ public class ListTagsForResourceRequest extends com.amazonaws.AmazonWebServiceRe
     private String accountId;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the S3 resource that you want to list the tags for.
+     * The Amazon Resource Name (ARN) of the S3 resource that you want to list the tags for. The tagged resource can be
+     * an S3 Storage Lens group or S3 Access Grants instance, registered location, or grant.
      * </p>
      */
     private String resourceArn;
@@ -80,11 +81,13 @@ public class ListTagsForResourceRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the S3 resource that you want to list the tags for.
+     * The Amazon Resource Name (ARN) of the S3 resource that you want to list the tags for. The tagged resource can be
+     * an S3 Storage Lens group or S3 Access Grants instance, registered location, or grant.
      * </p>
      * 
      * @param resourceArn
-     *        The Amazon Resource Name (ARN) of the S3 resource that you want to list the tags for.
+     *        The Amazon Resource Name (ARN) of the S3 resource that you want to list the tags for. The tagged resource
+     *        can be an S3 Storage Lens group or S3 Access Grants instance, registered location, or grant.
      */
 
     public void setResourceArn(String resourceArn) {
@@ -93,10 +96,12 @@ public class ListTagsForResourceRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the S3 resource that you want to list the tags for.
+     * The Amazon Resource Name (ARN) of the S3 resource that you want to list the tags for. The tagged resource can be
+     * an S3 Storage Lens group or S3 Access Grants instance, registered location, or grant.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the S3 resource that you want to list the tags for.
+     * @return The Amazon Resource Name (ARN) of the S3 resource that you want to list the tags for. The tagged resource
+     *         can be an S3 Storage Lens group or S3 Access Grants instance, registered location, or grant.
      */
 
     public String getResourceArn() {
@@ -105,11 +110,13 @@ public class ListTagsForResourceRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the S3 resource that you want to list the tags for.
+     * The Amazon Resource Name (ARN) of the S3 resource that you want to list the tags for. The tagged resource can be
+     * an S3 Storage Lens group or S3 Access Grants instance, registered location, or grant.
      * </p>
      * 
      * @param resourceArn
-     *        The Amazon Resource Name (ARN) of the S3 resource that you want to list the tags for.
+     *        The Amazon Resource Name (ARN) of the S3 resource that you want to list the tags for. The tagged resource
+     *        can be an S3 Storage Lens group or S3 Access Grants instance, registered location, or grant.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

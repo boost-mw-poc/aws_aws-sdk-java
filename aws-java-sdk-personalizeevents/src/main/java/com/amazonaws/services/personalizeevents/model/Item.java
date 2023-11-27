@@ -20,7 +20,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 /**
  * <p>
  * Represents item metadata added to an Items dataset using the <code>PutItems</code> API. For more information see <a
- * href="https://docs.aws.amazon.com/personalize/latest/dg/importing-items.html">Importing Items Incrementally</a>.
+ * href="https://docs.aws.amazon.com/personalize/latest/dg/importing-items.html">Importing items individually</a>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/personalize-events-2018-03-22/Item" target="_top">AWS API

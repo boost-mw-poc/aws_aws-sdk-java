@@ -44,6 +44,11 @@ public class AbstractAmazonPrometheus implements AmazonPrometheus {
     }
 
     @Override
+    public CreateScraperResult createScraper(CreateScraperRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateWorkspaceResult createWorkspace(CreateWorkspaceRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -60,6 +65,11 @@ public class AbstractAmazonPrometheus implements AmazonPrometheus {
 
     @Override
     public DeleteRuleGroupsNamespaceResult deleteRuleGroupsNamespace(DeleteRuleGroupsNamespaceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteScraperResult deleteScraper(DeleteScraperRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -84,12 +94,27 @@ public class AbstractAmazonPrometheus implements AmazonPrometheus {
     }
 
     @Override
+    public DescribeScraperResult describeScraper(DescribeScraperRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DescribeWorkspaceResult describeWorkspace(DescribeWorkspaceRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
     @Override
+    public GetDefaultScraperConfigurationResult getDefaultScraperConfiguration(GetDefaultScraperConfigurationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListRuleGroupsNamespacesResult listRuleGroupsNamespaces(ListRuleGroupsNamespacesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListScrapersResult listScrapers(ListScrapersRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

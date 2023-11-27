@@ -142,6 +142,21 @@ public class OpenZFSVolumeConfiguration implements Serializable, Cloneable, Stru
      * </p>
      */
     private Boolean deleteClonedVolumes;
+    /**
+     * <p>
+     * A Boolean value indicating whether snapshot data that differs between the current state and the specified
+     * snapshot should be overwritten when a volume is restored from a snapshot.
+     * </p>
+     */
+    private Boolean deleteIntermediateData;
+
+    private String sourceSnapshotARN;
+    /**
+     * <p>
+     * The ID of the snapshot that's being copied or was most recently copied to the destination volume.
+     * </p>
+     */
+    private String destinationSnapshot;
 
     /**
      * <p>
@@ -1059,6 +1074,132 @@ public class OpenZFSVolumeConfiguration implements Serializable, Cloneable, Stru
     }
 
     /**
+     * <p>
+     * A Boolean value indicating whether snapshot data that differs between the current state and the specified
+     * snapshot should be overwritten when a volume is restored from a snapshot.
+     * </p>
+     * 
+     * @param deleteIntermediateData
+     *        A Boolean value indicating whether snapshot data that differs between the current state and the specified
+     *        snapshot should be overwritten when a volume is restored from a snapshot.
+     */
+
+    public void setDeleteIntermediateData(Boolean deleteIntermediateData) {
+        this.deleteIntermediateData = deleteIntermediateData;
+    }
+
+    /**
+     * <p>
+     * A Boolean value indicating whether snapshot data that differs between the current state and the specified
+     * snapshot should be overwritten when a volume is restored from a snapshot.
+     * </p>
+     * 
+     * @return A Boolean value indicating whether snapshot data that differs between the current state and the specified
+     *         snapshot should be overwritten when a volume is restored from a snapshot.
+     */
+
+    public Boolean getDeleteIntermediateData() {
+        return this.deleteIntermediateData;
+    }
+
+    /**
+     * <p>
+     * A Boolean value indicating whether snapshot data that differs between the current state and the specified
+     * snapshot should be overwritten when a volume is restored from a snapshot.
+     * </p>
+     * 
+     * @param deleteIntermediateData
+     *        A Boolean value indicating whether snapshot data that differs between the current state and the specified
+     *        snapshot should be overwritten when a volume is restored from a snapshot.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public OpenZFSVolumeConfiguration withDeleteIntermediateData(Boolean deleteIntermediateData) {
+        setDeleteIntermediateData(deleteIntermediateData);
+        return this;
+    }
+
+    /**
+     * <p>
+     * A Boolean value indicating whether snapshot data that differs between the current state and the specified
+     * snapshot should be overwritten when a volume is restored from a snapshot.
+     * </p>
+     * 
+     * @return A Boolean value indicating whether snapshot data that differs between the current state and the specified
+     *         snapshot should be overwritten when a volume is restored from a snapshot.
+     */
+
+    public Boolean isDeleteIntermediateData() {
+        return this.deleteIntermediateData;
+    }
+
+    /**
+     * @param sourceSnapshotARN
+     */
+
+    public void setSourceSnapshotARN(String sourceSnapshotARN) {
+        this.sourceSnapshotARN = sourceSnapshotARN;
+    }
+
+    /**
+     * @return
+     */
+
+    public String getSourceSnapshotARN() {
+        return this.sourceSnapshotARN;
+    }
+
+    /**
+     * @param sourceSnapshotARN
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public OpenZFSVolumeConfiguration withSourceSnapshotARN(String sourceSnapshotARN) {
+        setSourceSnapshotARN(sourceSnapshotARN);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The ID of the snapshot that's being copied or was most recently copied to the destination volume.
+     * </p>
+     * 
+     * @param destinationSnapshot
+     *        The ID of the snapshot that's being copied or was most recently copied to the destination volume.
+     */
+
+    public void setDestinationSnapshot(String destinationSnapshot) {
+        this.destinationSnapshot = destinationSnapshot;
+    }
+
+    /**
+     * <p>
+     * The ID of the snapshot that's being copied or was most recently copied to the destination volume.
+     * </p>
+     * 
+     * @return The ID of the snapshot that's being copied or was most recently copied to the destination volume.
+     */
+
+    public String getDestinationSnapshot() {
+        return this.destinationSnapshot;
+    }
+
+    /**
+     * <p>
+     * The ID of the snapshot that's being copied or was most recently copied to the destination volume.
+     * </p>
+     * 
+     * @param destinationSnapshot
+     *        The ID of the snapshot that's being copied or was most recently copied to the destination volume.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public OpenZFSVolumeConfiguration withDestinationSnapshot(String destinationSnapshot) {
+        setDestinationSnapshot(destinationSnapshot);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1097,7 +1238,13 @@ public class OpenZFSVolumeConfiguration implements Serializable, Cloneable, Stru
         if (getDeleteIntermediateSnaphots() != null)
             sb.append("DeleteIntermediateSnaphots: ").append(getDeleteIntermediateSnaphots()).append(",");
         if (getDeleteClonedVolumes() != null)
-            sb.append("DeleteClonedVolumes: ").append(getDeleteClonedVolumes());
+            sb.append("DeleteClonedVolumes: ").append(getDeleteClonedVolumes()).append(",");
+        if (getDeleteIntermediateData() != null)
+            sb.append("DeleteIntermediateData: ").append(getDeleteIntermediateData()).append(",");
+        if (getSourceSnapshotARN() != null)
+            sb.append("SourceSnapshotARN: ").append(getSourceSnapshotARN()).append(",");
+        if (getDestinationSnapshot() != null)
+            sb.append("DestinationSnapshot: ").append(getDestinationSnapshot());
         sb.append("}");
         return sb.toString();
     }
@@ -1169,6 +1316,18 @@ public class OpenZFSVolumeConfiguration implements Serializable, Cloneable, Stru
             return false;
         if (other.getDeleteClonedVolumes() != null && other.getDeleteClonedVolumes().equals(this.getDeleteClonedVolumes()) == false)
             return false;
+        if (other.getDeleteIntermediateData() == null ^ this.getDeleteIntermediateData() == null)
+            return false;
+        if (other.getDeleteIntermediateData() != null && other.getDeleteIntermediateData().equals(this.getDeleteIntermediateData()) == false)
+            return false;
+        if (other.getSourceSnapshotARN() == null ^ this.getSourceSnapshotARN() == null)
+            return false;
+        if (other.getSourceSnapshotARN() != null && other.getSourceSnapshotARN().equals(this.getSourceSnapshotARN()) == false)
+            return false;
+        if (other.getDestinationSnapshot() == null ^ this.getDestinationSnapshot() == null)
+            return false;
+        if (other.getDestinationSnapshot() != null && other.getDestinationSnapshot().equals(this.getDestinationSnapshot()) == false)
+            return false;
         return true;
     }
 
@@ -1191,6 +1350,9 @@ public class OpenZFSVolumeConfiguration implements Serializable, Cloneable, Stru
         hashCode = prime * hashCode + ((getRestoreToSnapshot() == null) ? 0 : getRestoreToSnapshot().hashCode());
         hashCode = prime * hashCode + ((getDeleteIntermediateSnaphots() == null) ? 0 : getDeleteIntermediateSnaphots().hashCode());
         hashCode = prime * hashCode + ((getDeleteClonedVolumes() == null) ? 0 : getDeleteClonedVolumes().hashCode());
+        hashCode = prime * hashCode + ((getDeleteIntermediateData() == null) ? 0 : getDeleteIntermediateData().hashCode());
+        hashCode = prime * hashCode + ((getSourceSnapshotARN() == null) ? 0 : getSourceSnapshotARN().hashCode());
+        hashCode = prime * hashCode + ((getDestinationSnapshot() == null) ? 0 : getDestinationSnapshot().hashCode());
         return hashCode;
     }
 

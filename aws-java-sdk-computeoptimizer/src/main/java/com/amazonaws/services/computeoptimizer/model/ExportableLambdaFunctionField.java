@@ -46,7 +46,11 @@ public enum ExportableLambdaFunctionField {
     RecommendationOptionsSavingsOpportunityPercentage("RecommendationOptionsSavingsOpportunityPercentage"),
     RecommendationOptionsEstimatedMonthlySavingsCurrency("RecommendationOptionsEstimatedMonthlySavingsCurrency"),
     RecommendationOptionsEstimatedMonthlySavingsValue("RecommendationOptionsEstimatedMonthlySavingsValue"),
-    Tags("Tags");
+    Tags("Tags"),
+    EffectiveRecommendationPreferencesSavingsEstimationMode("EffectiveRecommendationPreferencesSavingsEstimationMode"),
+    RecommendationOptionsSavingsOpportunityAfterDiscountsPercentage("RecommendationOptionsSavingsOpportunityAfterDiscountsPercentage"),
+    RecommendationOptionsEstimatedMonthlySavingsCurrencyAfterDiscounts("RecommendationOptionsEstimatedMonthlySavingsCurrencyAfterDiscounts"),
+    RecommendationOptionsEstimatedMonthlySavingsValueAfterDiscounts("RecommendationOptionsEstimatedMonthlySavingsValueAfterDiscounts");
 
     private String value;
 

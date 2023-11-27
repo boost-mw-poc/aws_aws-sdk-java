@@ -699,6 +699,72 @@ public class AWSCloudTrailAsyncClient extends AWSCloudTrailClient implements AWS
     }
 
     @Override
+    public java.util.concurrent.Future<DisableFederationResult> disableFederationAsync(DisableFederationRequest request) {
+
+        return disableFederationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DisableFederationResult> disableFederationAsync(final DisableFederationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DisableFederationRequest, DisableFederationResult> asyncHandler) {
+        final DisableFederationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DisableFederationResult>() {
+            @Override
+            public DisableFederationResult call() throws Exception {
+                DisableFederationResult result = null;
+
+                try {
+                    result = executeDisableFederation(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<EnableFederationResult> enableFederationAsync(EnableFederationRequest request) {
+
+        return enableFederationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<EnableFederationResult> enableFederationAsync(final EnableFederationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<EnableFederationRequest, EnableFederationResult> asyncHandler) {
+        final EnableFederationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<EnableFederationResult>() {
+            @Override
+            public EnableFederationResult call() throws Exception {
+                EnableFederationResult result = null;
+
+                try {
+                    result = executeEnableFederation(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetChannelResult> getChannelAsync(GetChannelRequest request) {
 
         return getChannelAsync(request, null);

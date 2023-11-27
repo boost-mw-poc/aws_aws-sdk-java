@@ -242,6 +242,34 @@ public interface AWSLakeFormation {
 
     /**
      * <p>
+     * Creates an IAM Identity Center connection with Lake Formation to allow IAM Identity Center users and groups to
+     * access Data Catalog resources.
+     * </p>
+     * 
+     * @param createLakeFormationIdentityCenterConfigurationRequest
+     * @return Result of the CreateLakeFormationIdentityCenterConfiguration operation returned by the service.
+     * @throws InvalidInputException
+     *         The input provided was not valid.
+     * @throws AlreadyExistsException
+     *         A resource to be created or added already exists.
+     * @throws InternalServiceException
+     *         An internal service error occurred.
+     * @throws OperationTimeoutException
+     *         The operation timed out.
+     * @throws AccessDeniedException
+     *         Access to a resource was denied.
+     * @throws ConcurrentModificationException
+     *         Two processes are trying to modify a resource simultaneously.
+     * @sample AWSLakeFormation.CreateLakeFormationIdentityCenterConfiguration
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/lakeformation-2017-03-31/CreateLakeFormationIdentityCenterConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    CreateLakeFormationIdentityCenterConfigurationResult createLakeFormationIdentityCenterConfiguration(
+            CreateLakeFormationIdentityCenterConfigurationRequest createLakeFormationIdentityCenterConfigurationRequest);
+
+    /**
+     * <p>
      * Enforce Lake Formation permissions for the given databases, tables, and principals.
      * </p>
      * 
@@ -313,6 +341,33 @@ public interface AWSLakeFormation {
      *      Documentation</a>
      */
     DeleteLFTagResult deleteLFTag(DeleteLFTagRequest deleteLFTagRequest);
+
+    /**
+     * <p>
+     * Deletes an IAM Identity Center connection with Lake Formation.
+     * </p>
+     * 
+     * @param deleteLakeFormationIdentityCenterConfigurationRequest
+     * @return Result of the DeleteLakeFormationIdentityCenterConfiguration operation returned by the service.
+     * @throws InvalidInputException
+     *         The input provided was not valid.
+     * @throws EntityNotFoundException
+     *         A specified entity does not exist.
+     * @throws InternalServiceException
+     *         An internal service error occurred.
+     * @throws OperationTimeoutException
+     *         The operation timed out.
+     * @throws AccessDeniedException
+     *         Access to a resource was denied.
+     * @throws ConcurrentModificationException
+     *         Two processes are trying to modify a resource simultaneously.
+     * @sample AWSLakeFormation.DeleteLakeFormationIdentityCenterConfiguration
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/lakeformation-2017-03-31/DeleteLakeFormationIdentityCenterConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DeleteLakeFormationIdentityCenterConfigurationResult deleteLakeFormationIdentityCenterConfiguration(
+            DeleteLakeFormationIdentityCenterConfigurationRequest deleteLakeFormationIdentityCenterConfigurationRequest);
 
     /**
      * <p>
@@ -401,6 +456,31 @@ public interface AWSLakeFormation {
      *      target="_top">AWS API Documentation</a>
      */
     DeregisterResourceResult deregisterResource(DeregisterResourceRequest deregisterResourceRequest);
+
+    /**
+     * <p>
+     * Retrieves the instance ARN and application ARN for the connection.
+     * </p>
+     * 
+     * @param describeLakeFormationIdentityCenterConfigurationRequest
+     * @return Result of the DescribeLakeFormationIdentityCenterConfiguration operation returned by the service.
+     * @throws InvalidInputException
+     *         The input provided was not valid.
+     * @throws EntityNotFoundException
+     *         A specified entity does not exist.
+     * @throws InternalServiceException
+     *         An internal service error occurred.
+     * @throws OperationTimeoutException
+     *         The operation timed out.
+     * @throws AccessDeniedException
+     *         Access to a resource was denied.
+     * @sample AWSLakeFormation.DescribeLakeFormationIdentityCenterConfiguration
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/lakeformation-2017-03-31/DescribeLakeFormationIdentityCenterConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DescribeLakeFormationIdentityCenterConfigurationResult describeLakeFormationIdentityCenterConfiguration(
+            DescribeLakeFormationIdentityCenterConfigurationRequest describeLakeFormationIdentityCenterConfigurationRequest);
 
     /**
      * <p>
@@ -1222,6 +1302,33 @@ public interface AWSLakeFormation {
      *      Documentation</a>
      */
     UpdateLFTagResult updateLFTag(UpdateLFTagRequest updateLFTagRequest);
+
+    /**
+     * <p>
+     * Updates the IAM Identity Center connection parameters.
+     * </p>
+     * 
+     * @param updateLakeFormationIdentityCenterConfigurationRequest
+     * @return Result of the UpdateLakeFormationIdentityCenterConfiguration operation returned by the service.
+     * @throws InvalidInputException
+     *         The input provided was not valid.
+     * @throws EntityNotFoundException
+     *         A specified entity does not exist.
+     * @throws InternalServiceException
+     *         An internal service error occurred.
+     * @throws OperationTimeoutException
+     *         The operation timed out.
+     * @throws AccessDeniedException
+     *         Access to a resource was denied.
+     * @throws ConcurrentModificationException
+     *         Two processes are trying to modify a resource simultaneously.
+     * @sample AWSLakeFormation.UpdateLakeFormationIdentityCenterConfiguration
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/lakeformation-2017-03-31/UpdateLakeFormationIdentityCenterConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    UpdateLakeFormationIdentityCenterConfigurationResult updateLakeFormationIdentityCenterConfiguration(
+            UpdateLakeFormationIdentityCenterConfigurationRequest updateLakeFormationIdentityCenterConfigurationRequest);
 
     /**
      * <p>

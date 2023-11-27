@@ -76,6 +76,10 @@ public class GetDecoderManifestResultJsonUnmarshaller implements Unmarshaller<Ge
                     context.nextToken();
                     getDecoderManifestResult.setLastModificationTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
                 }
+                if (context.testExpression("message", targetDepth)) {
+                    context.nextToken();
+                    getDecoderManifestResult.setMessage(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

@@ -74,6 +74,20 @@ public class SecurityControlDefinition implements Serializable, Cloneable, Struc
      * </p>
      */
     private String currentRegionAvailability;
+    /**
+     * <p>
+     * Security control properties that you can customize. Currently, only parameter customization is supported for
+     * select controls. An empty array is returned for controls that don’t support custom properties.
+     * </p>
+     */
+    private java.util.List<String> customizableProperties;
+    /**
+     * <p>
+     * An object that provides a security control parameter name, description, and the options for customizing it. This
+     * object is excluded for a control that doesn't support custom parameters.
+     * </p>
+     */
+    private java.util.Map<String, ParameterDefinition> parameterDefinitions;
 
     /**
      * <p>
@@ -417,6 +431,188 @@ public class SecurityControlDefinition implements Serializable, Cloneable, Struc
     }
 
     /**
+     * <p>
+     * Security control properties that you can customize. Currently, only parameter customization is supported for
+     * select controls. An empty array is returned for controls that don’t support custom properties.
+     * </p>
+     * 
+     * @return Security control properties that you can customize. Currently, only parameter customization is supported
+     *         for select controls. An empty array is returned for controls that don’t support custom properties.
+     * @see SecurityControlProperty
+     */
+
+    public java.util.List<String> getCustomizableProperties() {
+        return customizableProperties;
+    }
+
+    /**
+     * <p>
+     * Security control properties that you can customize. Currently, only parameter customization is supported for
+     * select controls. An empty array is returned for controls that don’t support custom properties.
+     * </p>
+     * 
+     * @param customizableProperties
+     *        Security control properties that you can customize. Currently, only parameter customization is supported
+     *        for select controls. An empty array is returned for controls that don’t support custom properties.
+     * @see SecurityControlProperty
+     */
+
+    public void setCustomizableProperties(java.util.Collection<String> customizableProperties) {
+        if (customizableProperties == null) {
+            this.customizableProperties = null;
+            return;
+        }
+
+        this.customizableProperties = new java.util.ArrayList<String>(customizableProperties);
+    }
+
+    /**
+     * <p>
+     * Security control properties that you can customize. Currently, only parameter customization is supported for
+     * select controls. An empty array is returned for controls that don’t support custom properties.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setCustomizableProperties(java.util.Collection)} or
+     * {@link #withCustomizableProperties(java.util.Collection)} if you want to override the existing values.
+     * </p>
+     * 
+     * @param customizableProperties
+     *        Security control properties that you can customize. Currently, only parameter customization is supported
+     *        for select controls. An empty array is returned for controls that don’t support custom properties.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see SecurityControlProperty
+     */
+
+    public SecurityControlDefinition withCustomizableProperties(String... customizableProperties) {
+        if (this.customizableProperties == null) {
+            setCustomizableProperties(new java.util.ArrayList<String>(customizableProperties.length));
+        }
+        for (String ele : customizableProperties) {
+            this.customizableProperties.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * Security control properties that you can customize. Currently, only parameter customization is supported for
+     * select controls. An empty array is returned for controls that don’t support custom properties.
+     * </p>
+     * 
+     * @param customizableProperties
+     *        Security control properties that you can customize. Currently, only parameter customization is supported
+     *        for select controls. An empty array is returned for controls that don’t support custom properties.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see SecurityControlProperty
+     */
+
+    public SecurityControlDefinition withCustomizableProperties(java.util.Collection<String> customizableProperties) {
+        setCustomizableProperties(customizableProperties);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Security control properties that you can customize. Currently, only parameter customization is supported for
+     * select controls. An empty array is returned for controls that don’t support custom properties.
+     * </p>
+     * 
+     * @param customizableProperties
+     *        Security control properties that you can customize. Currently, only parameter customization is supported
+     *        for select controls. An empty array is returned for controls that don’t support custom properties.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see SecurityControlProperty
+     */
+
+    public SecurityControlDefinition withCustomizableProperties(SecurityControlProperty... customizableProperties) {
+        java.util.ArrayList<String> customizablePropertiesCopy = new java.util.ArrayList<String>(customizableProperties.length);
+        for (SecurityControlProperty value : customizableProperties) {
+            customizablePropertiesCopy.add(value.toString());
+        }
+        if (getCustomizableProperties() == null) {
+            setCustomizableProperties(customizablePropertiesCopy);
+        } else {
+            getCustomizableProperties().addAll(customizablePropertiesCopy);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * An object that provides a security control parameter name, description, and the options for customizing it. This
+     * object is excluded for a control that doesn't support custom parameters.
+     * </p>
+     * 
+     * @return An object that provides a security control parameter name, description, and the options for customizing
+     *         it. This object is excluded for a control that doesn't support custom parameters.
+     */
+
+    public java.util.Map<String, ParameterDefinition> getParameterDefinitions() {
+        return parameterDefinitions;
+    }
+
+    /**
+     * <p>
+     * An object that provides a security control parameter name, description, and the options for customizing it. This
+     * object is excluded for a control that doesn't support custom parameters.
+     * </p>
+     * 
+     * @param parameterDefinitions
+     *        An object that provides a security control parameter name, description, and the options for customizing
+     *        it. This object is excluded for a control that doesn't support custom parameters.
+     */
+
+    public void setParameterDefinitions(java.util.Map<String, ParameterDefinition> parameterDefinitions) {
+        this.parameterDefinitions = parameterDefinitions;
+    }
+
+    /**
+     * <p>
+     * An object that provides a security control parameter name, description, and the options for customizing it. This
+     * object is excluded for a control that doesn't support custom parameters.
+     * </p>
+     * 
+     * @param parameterDefinitions
+     *        An object that provides a security control parameter name, description, and the options for customizing
+     *        it. This object is excluded for a control that doesn't support custom parameters.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public SecurityControlDefinition withParameterDefinitions(java.util.Map<String, ParameterDefinition> parameterDefinitions) {
+        setParameterDefinitions(parameterDefinitions);
+        return this;
+    }
+
+    /**
+     * Add a single ParameterDefinitions entry
+     *
+     * @see SecurityControlDefinition#withParameterDefinitions
+     * @returns a reference to this object so that method calls can be chained together.
+     */
+
+    public SecurityControlDefinition addParameterDefinitionsEntry(String key, ParameterDefinition value) {
+        if (null == this.parameterDefinitions) {
+            this.parameterDefinitions = new java.util.HashMap<String, ParameterDefinition>();
+        }
+        if (this.parameterDefinitions.containsKey(key))
+            throw new IllegalArgumentException("Duplicated keys (" + key.toString() + ") are provided.");
+        this.parameterDefinitions.put(key, value);
+        return this;
+    }
+
+    /**
+     * Removes all the entries added into ParameterDefinitions.
+     *
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public SecurityControlDefinition clearParameterDefinitionsEntries() {
+        this.parameterDefinitions = null;
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -439,7 +635,11 @@ public class SecurityControlDefinition implements Serializable, Cloneable, Struc
         if (getSeverityRating() != null)
             sb.append("SeverityRating: ").append(getSeverityRating()).append(",");
         if (getCurrentRegionAvailability() != null)
-            sb.append("CurrentRegionAvailability: ").append(getCurrentRegionAvailability());
+            sb.append("CurrentRegionAvailability: ").append(getCurrentRegionAvailability()).append(",");
+        if (getCustomizableProperties() != null)
+            sb.append("CustomizableProperties: ").append(getCustomizableProperties()).append(",");
+        if (getParameterDefinitions() != null)
+            sb.append("ParameterDefinitions: ").append(getParameterDefinitions());
         sb.append("}");
         return sb.toString();
     }
@@ -478,6 +678,14 @@ public class SecurityControlDefinition implements Serializable, Cloneable, Struc
             return false;
         if (other.getCurrentRegionAvailability() != null && other.getCurrentRegionAvailability().equals(this.getCurrentRegionAvailability()) == false)
             return false;
+        if (other.getCustomizableProperties() == null ^ this.getCustomizableProperties() == null)
+            return false;
+        if (other.getCustomizableProperties() != null && other.getCustomizableProperties().equals(this.getCustomizableProperties()) == false)
+            return false;
+        if (other.getParameterDefinitions() == null ^ this.getParameterDefinitions() == null)
+            return false;
+        if (other.getParameterDefinitions() != null && other.getParameterDefinitions().equals(this.getParameterDefinitions()) == false)
+            return false;
         return true;
     }
 
@@ -492,6 +700,8 @@ public class SecurityControlDefinition implements Serializable, Cloneable, Struc
         hashCode = prime * hashCode + ((getRemediationUrl() == null) ? 0 : getRemediationUrl().hashCode());
         hashCode = prime * hashCode + ((getSeverityRating() == null) ? 0 : getSeverityRating().hashCode());
         hashCode = prime * hashCode + ((getCurrentRegionAvailability() == null) ? 0 : getCurrentRegionAvailability().hashCode());
+        hashCode = prime * hashCode + ((getCustomizableProperties() == null) ? 0 : getCustomizableProperties().hashCode());
+        hashCode = prime * hashCode + ((getParameterDefinitions() == null) ? 0 : getParameterDefinitions().hashCode());
         return hashCode;
     }
 

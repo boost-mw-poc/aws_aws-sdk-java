@@ -58,6 +58,11 @@ public class AbstractAWSLogs implements AWSLogs {
     }
 
     @Override
+    public CreateLogAnomalyDetectorResult createLogAnomalyDetector(CreateLogAnomalyDetectorRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateLogGroupResult createLogGroup(CreateLogGroupRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -99,6 +104,11 @@ public class AbstractAWSLogs implements AWSLogs {
 
     @Override
     public DeleteDestinationResult deleteDestination(DeleteDestinationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteLogAnomalyDetectorResult deleteLogAnomalyDetector(DeleteLogAnomalyDetectorRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -248,6 +258,11 @@ public class AbstractAWSLogs implements AWSLogs {
     }
 
     @Override
+    public GetLogAnomalyDetectorResult getLogAnomalyDetector(GetLogAnomalyDetectorRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetLogEventsResult getLogEvents(GetLogEventsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -264,6 +279,16 @@ public class AbstractAWSLogs implements AWSLogs {
 
     @Override
     public GetQueryResultsResult getQueryResults(GetQueryResultsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListAnomaliesResult listAnomalies(ListAnomaliesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListLogAnomalyDetectorsResult listLogAnomalyDetectors(ListLogAnomalyDetectorsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -377,6 +402,16 @@ public class AbstractAWSLogs implements AWSLogs {
 
     @Override
     public UntagResourceResult untagResource(UntagResourceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateAnomalyResult updateAnomaly(UpdateAnomalyRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateLogAnomalyDetectorResult updateLogAnomalyDetector(UpdateLogAnomalyDetectorRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

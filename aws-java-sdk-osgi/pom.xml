@@ -5,7 +5,7 @@
   <parent>
     <groupId>com.amazonaws</groupId>
     <artifactId>aws-java-sdk-pom</artifactId>
-    <version>1.12.596-SNAPSHOT</version>
+    <version>1.12.596</version>
   </parent>
   <groupId>com.amazonaws</groupId>
   <artifactId>aws-java-sdk-osgi</artifactId>
@@ -15,6 +15,42 @@
 
   <!-- The dependencies section in pom.xml is auto generated. No manual changes are allowed -->
   <dependencies>
+    <dependency>
+        <artifactId>aws-java-sdk-workspacesthinclient</artifactId>
+        <groupId>com.amazonaws</groupId>
+        <optional>false</optional>
+        <version>${awsjavasdk.version}</version>
+    </dependency>
+    <dependency>
+        <artifactId>aws-java-sdk-eksauth</artifactId>
+        <groupId>com.amazonaws</groupId>
+        <optional>false</optional>
+        <version>${awsjavasdk.version}</version>
+    </dependency>
+    <dependency>
+        <artifactId>aws-java-sdk-freetier</artifactId>
+        <groupId>com.amazonaws</groupId>
+        <optional>false</optional>
+        <version>${awsjavasdk.version}</version>
+    </dependency>
+    <dependency>
+        <artifactId>aws-java-sdk-bcmdataexports</artifactId>
+        <groupId>com.amazonaws</groupId>
+        <optional>false</optional>
+        <version>${awsjavasdk.version}</version>
+    </dependency>
+    <dependency>
+        <artifactId>aws-java-sdk-repostspace</artifactId>
+        <groupId>com.amazonaws</groupId>
+        <optional>false</optional>
+        <version>${awsjavasdk.version}</version>
+    </dependency>
+    <dependency>
+        <artifactId>aws-java-sdk-costoptimizationhub</artifactId>
+        <groupId>com.amazonaws</groupId>
+        <optional>false</optional>
+        <version>${awsjavasdk.version}</version>
+    </dependency>
     <dependency>
         <artifactId>aws-java-sdk-inspectorscan</artifactId>
         <groupId>com.amazonaws</groupId>
@@ -2282,6 +2318,30 @@
                               </taglet>
                           </taglets>
                           <groups>
+                              <group>
+                                  <title>Amazon WorkSpaces Thin Client</title>
+                                  <packages>com.amazonaws.services.workspacesthinclient*</packages>
+                              </group>
+                              <group>
+                                  <title>Amazon EKS Auth</title>
+                                  <packages>com.amazonaws.services.eksauth*</packages>
+                              </group>
+                              <group>
+                                  <title>AWS Free Tier</title>
+                                  <packages>com.amazonaws.services.freetier*</packages>
+                              </group>
+                              <group>
+                                  <title>AWS Billing and Cost Management Data Exports</title>
+                                  <packages>com.amazonaws.services.bcmdataexports*</packages>
+                              </group>
+                              <group>
+                                  <title>AWS re:Post Private</title>
+                                  <packages>com.amazonaws.services.repostspace*</packages>
+                              </group>
+                              <group>
+                                  <title>Cost Optimization Hub</title>
+                                  <packages>com.amazonaws.services.costoptimizationhub*</packages>
+                              </group>
                               <group>
                                   <title>Inspector Scan</title>
                                   <packages>com.amazonaws.services.inspectorscan*</packages>

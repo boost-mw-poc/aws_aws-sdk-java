@@ -28,6 +28,60 @@ public class AbstractAWSS3ControlAsync extends AbstractAWSS3Control implements A
     }
 
     @Override
+    public java.util.concurrent.Future<AssociateAccessGrantsIdentityCenterResult> associateAccessGrantsIdentityCenterAsync(
+            AssociateAccessGrantsIdentityCenterRequest request) {
+
+        return associateAccessGrantsIdentityCenterAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<AssociateAccessGrantsIdentityCenterResult> associateAccessGrantsIdentityCenterAsync(
+            AssociateAccessGrantsIdentityCenterRequest request,
+            com.amazonaws.handlers.AsyncHandler<AssociateAccessGrantsIdentityCenterRequest, AssociateAccessGrantsIdentityCenterResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateAccessGrantResult> createAccessGrantAsync(CreateAccessGrantRequest request) {
+
+        return createAccessGrantAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateAccessGrantResult> createAccessGrantAsync(CreateAccessGrantRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateAccessGrantRequest, CreateAccessGrantResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateAccessGrantsInstanceResult> createAccessGrantsInstanceAsync(CreateAccessGrantsInstanceRequest request) {
+
+        return createAccessGrantsInstanceAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateAccessGrantsInstanceResult> createAccessGrantsInstanceAsync(CreateAccessGrantsInstanceRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateAccessGrantsInstanceRequest, CreateAccessGrantsInstanceResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateAccessGrantsLocationResult> createAccessGrantsLocationAsync(CreateAccessGrantsLocationRequest request) {
+
+        return createAccessGrantsLocationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateAccessGrantsLocationResult> createAccessGrantsLocationAsync(CreateAccessGrantsLocationRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateAccessGrantsLocationRequest, CreateAccessGrantsLocationResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateAccessPointResult> createAccessPointAsync(CreateAccessPointRequest request) {
 
         return createAccessPointAsync(request, null);
@@ -103,6 +157,60 @@ public class AbstractAWSS3ControlAsync extends AbstractAWSS3Control implements A
     @Override
     public java.util.concurrent.Future<CreateStorageLensGroupResult> createStorageLensGroupAsync(CreateStorageLensGroupRequest request,
             com.amazonaws.handlers.AsyncHandler<CreateStorageLensGroupRequest, CreateStorageLensGroupResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteAccessGrantResult> deleteAccessGrantAsync(DeleteAccessGrantRequest request) {
+
+        return deleteAccessGrantAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteAccessGrantResult> deleteAccessGrantAsync(DeleteAccessGrantRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteAccessGrantRequest, DeleteAccessGrantResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteAccessGrantsInstanceResult> deleteAccessGrantsInstanceAsync(DeleteAccessGrantsInstanceRequest request) {
+
+        return deleteAccessGrantsInstanceAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteAccessGrantsInstanceResult> deleteAccessGrantsInstanceAsync(DeleteAccessGrantsInstanceRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteAccessGrantsInstanceRequest, DeleteAccessGrantsInstanceResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteAccessGrantsInstanceResourcePolicyResult> deleteAccessGrantsInstanceResourcePolicyAsync(
+            DeleteAccessGrantsInstanceResourcePolicyRequest request) {
+
+        return deleteAccessGrantsInstanceResourcePolicyAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteAccessGrantsInstanceResourcePolicyResult> deleteAccessGrantsInstanceResourcePolicyAsync(
+            DeleteAccessGrantsInstanceResourcePolicyRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteAccessGrantsInstanceResourcePolicyRequest, DeleteAccessGrantsInstanceResourcePolicyResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteAccessGrantsLocationResult> deleteAccessGrantsLocationAsync(DeleteAccessGrantsLocationRequest request) {
+
+        return deleteAccessGrantsLocationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteAccessGrantsLocationResult> deleteAccessGrantsLocationAsync(DeleteAccessGrantsLocationRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteAccessGrantsLocationRequest, DeleteAccessGrantsLocationResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -339,6 +447,90 @@ public class AbstractAWSS3ControlAsync extends AbstractAWSS3Control implements A
     }
 
     @Override
+    public java.util.concurrent.Future<DissociateAccessGrantsIdentityCenterResult> dissociateAccessGrantsIdentityCenterAsync(
+            DissociateAccessGrantsIdentityCenterRequest request) {
+
+        return dissociateAccessGrantsIdentityCenterAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DissociateAccessGrantsIdentityCenterResult> dissociateAccessGrantsIdentityCenterAsync(
+            DissociateAccessGrantsIdentityCenterRequest request,
+            com.amazonaws.handlers.AsyncHandler<DissociateAccessGrantsIdentityCenterRequest, DissociateAccessGrantsIdentityCenterResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetAccessGrantResult> getAccessGrantAsync(GetAccessGrantRequest request) {
+
+        return getAccessGrantAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetAccessGrantResult> getAccessGrantAsync(GetAccessGrantRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetAccessGrantRequest, GetAccessGrantResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetAccessGrantsInstanceResult> getAccessGrantsInstanceAsync(GetAccessGrantsInstanceRequest request) {
+
+        return getAccessGrantsInstanceAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetAccessGrantsInstanceResult> getAccessGrantsInstanceAsync(GetAccessGrantsInstanceRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetAccessGrantsInstanceRequest, GetAccessGrantsInstanceResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetAccessGrantsInstanceForPrefixResult> getAccessGrantsInstanceForPrefixAsync(
+            GetAccessGrantsInstanceForPrefixRequest request) {
+
+        return getAccessGrantsInstanceForPrefixAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetAccessGrantsInstanceForPrefixResult> getAccessGrantsInstanceForPrefixAsync(
+            GetAccessGrantsInstanceForPrefixRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetAccessGrantsInstanceForPrefixRequest, GetAccessGrantsInstanceForPrefixResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetAccessGrantsInstanceResourcePolicyResult> getAccessGrantsInstanceResourcePolicyAsync(
+            GetAccessGrantsInstanceResourcePolicyRequest request) {
+
+        return getAccessGrantsInstanceResourcePolicyAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetAccessGrantsInstanceResourcePolicyResult> getAccessGrantsInstanceResourcePolicyAsync(
+            GetAccessGrantsInstanceResourcePolicyRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetAccessGrantsInstanceResourcePolicyRequest, GetAccessGrantsInstanceResourcePolicyResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetAccessGrantsLocationResult> getAccessGrantsLocationAsync(GetAccessGrantsLocationRequest request) {
+
+        return getAccessGrantsLocationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetAccessGrantsLocationResult> getAccessGrantsLocationAsync(GetAccessGrantsLocationRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetAccessGrantsLocationRequest, GetAccessGrantsLocationResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetAccessPointResult> getAccessPointAsync(GetAccessPointRequest request) {
 
         return getAccessPointAsync(request, null);
@@ -516,6 +708,19 @@ public class AbstractAWSS3ControlAsync extends AbstractAWSS3Control implements A
     }
 
     @Override
+    public java.util.concurrent.Future<GetDataAccessResult> getDataAccessAsync(GetDataAccessRequest request) {
+
+        return getDataAccessAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetDataAccessResult> getDataAccessAsync(GetDataAccessRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetDataAccessRequest, GetDataAccessResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetJobTaggingResult> getJobTaggingAsync(GetJobTaggingRequest request) {
 
         return getJobTaggingAsync(request, null);
@@ -641,6 +846,45 @@ public class AbstractAWSS3ControlAsync extends AbstractAWSS3Control implements A
     }
 
     @Override
+    public java.util.concurrent.Future<ListAccessGrantsResult> listAccessGrantsAsync(ListAccessGrantsRequest request) {
+
+        return listAccessGrantsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListAccessGrantsResult> listAccessGrantsAsync(ListAccessGrantsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListAccessGrantsRequest, ListAccessGrantsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListAccessGrantsInstancesResult> listAccessGrantsInstancesAsync(ListAccessGrantsInstancesRequest request) {
+
+        return listAccessGrantsInstancesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListAccessGrantsInstancesResult> listAccessGrantsInstancesAsync(ListAccessGrantsInstancesRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListAccessGrantsInstancesRequest, ListAccessGrantsInstancesResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListAccessGrantsLocationsResult> listAccessGrantsLocationsAsync(ListAccessGrantsLocationsRequest request) {
+
+        return listAccessGrantsLocationsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListAccessGrantsLocationsResult> listAccessGrantsLocationsAsync(ListAccessGrantsLocationsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListAccessGrantsLocationsRequest, ListAccessGrantsLocationsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ListAccessPointsResult> listAccessPointsAsync(ListAccessPointsRequest request) {
 
         return listAccessPointsAsync(request, null);
@@ -742,6 +986,21 @@ public class AbstractAWSS3ControlAsync extends AbstractAWSS3Control implements A
     @Override
     public java.util.concurrent.Future<ListTagsForResourceResult> listTagsForResourceAsync(ListTagsForResourceRequest request,
             com.amazonaws.handlers.AsyncHandler<ListTagsForResourceRequest, ListTagsForResourceResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<PutAccessGrantsInstanceResourcePolicyResult> putAccessGrantsInstanceResourcePolicyAsync(
+            PutAccessGrantsInstanceResourcePolicyRequest request) {
+
+        return putAccessGrantsInstanceResourcePolicyAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<PutAccessGrantsInstanceResourcePolicyResult> putAccessGrantsInstanceResourcePolicyAsync(
+            PutAccessGrantsInstanceResourcePolicyRequest request,
+            com.amazonaws.handlers.AsyncHandler<PutAccessGrantsInstanceResourcePolicyRequest, PutAccessGrantsInstanceResourcePolicyResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -962,6 +1221,19 @@ public class AbstractAWSS3ControlAsync extends AbstractAWSS3Control implements A
     @Override
     public java.util.concurrent.Future<UntagResourceResult> untagResourceAsync(UntagResourceRequest request,
             com.amazonaws.handlers.AsyncHandler<UntagResourceRequest, UntagResourceResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateAccessGrantsLocationResult> updateAccessGrantsLocationAsync(UpdateAccessGrantsLocationRequest request) {
+
+        return updateAccessGrantsLocationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateAccessGrantsLocationResult> updateAccessGrantsLocationAsync(UpdateAccessGrantsLocationRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateAccessGrantsLocationRequest, UpdateAccessGrantsLocationResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

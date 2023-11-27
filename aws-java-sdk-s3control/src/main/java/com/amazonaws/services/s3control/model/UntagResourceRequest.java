@@ -33,13 +33,13 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
     private String accountId;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the S3 resource that you want to remove the resource tags from.
+     * The Amazon Resource Name (ARN) of the S3 resource that you're trying to remove the tags from.
      * </p>
      */
     private String resourceArn;
     /**
      * <p>
-     * The tag key pair of the S3 resource tag that you're trying to remove.
+     * The array of tag key-value pairs that you're trying to remove from of the S3 resource.
      * </p>
      */
     private java.util.List<String> tagKeys;
@@ -86,11 +86,11 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the S3 resource that you want to remove the resource tags from.
+     * The Amazon Resource Name (ARN) of the S3 resource that you're trying to remove the tags from.
      * </p>
      * 
      * @param resourceArn
-     *        The Amazon Resource Name (ARN) of the S3 resource that you want to remove the resource tags from.
+     *        The Amazon Resource Name (ARN) of the S3 resource that you're trying to remove the tags from.
      */
 
     public void setResourceArn(String resourceArn) {
@@ -99,10 +99,10 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the S3 resource that you want to remove the resource tags from.
+     * The Amazon Resource Name (ARN) of the S3 resource that you're trying to remove the tags from.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the S3 resource that you want to remove the resource tags from.
+     * @return The Amazon Resource Name (ARN) of the S3 resource that you're trying to remove the tags from.
      */
 
     public String getResourceArn() {
@@ -111,11 +111,11 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the S3 resource that you want to remove the resource tags from.
+     * The Amazon Resource Name (ARN) of the S3 resource that you're trying to remove the tags from.
      * </p>
      * 
      * @param resourceArn
-     *        The Amazon Resource Name (ARN) of the S3 resource that you want to remove the resource tags from.
+     *        The Amazon Resource Name (ARN) of the S3 resource that you're trying to remove the tags from.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -126,10 +126,10 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The tag key pair of the S3 resource tag that you're trying to remove.
+     * The array of tag key-value pairs that you're trying to remove from of the S3 resource.
      * </p>
      * 
-     * @return The tag key pair of the S3 resource tag that you're trying to remove.
+     * @return The array of tag key-value pairs that you're trying to remove from of the S3 resource.
      */
 
     public java.util.List<String> getTagKeys() {
@@ -138,11 +138,11 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The tag key pair of the S3 resource tag that you're trying to remove.
+     * The array of tag key-value pairs that you're trying to remove from of the S3 resource.
      * </p>
      * 
      * @param tagKeys
-     *        The tag key pair of the S3 resource tag that you're trying to remove.
+     *        The array of tag key-value pairs that you're trying to remove from of the S3 resource.
      */
 
     public void setTagKeys(java.util.Collection<String> tagKeys) {
@@ -156,7 +156,7 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The tag key pair of the S3 resource tag that you're trying to remove.
+     * The array of tag key-value pairs that you're trying to remove from of the S3 resource.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -165,7 +165,7 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      * 
      * @param tagKeys
-     *        The tag key pair of the S3 resource tag that you're trying to remove.
+     *        The array of tag key-value pairs that you're trying to remove from of the S3 resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -181,11 +181,11 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The tag key pair of the S3 resource tag that you're trying to remove.
+     * The array of tag key-value pairs that you're trying to remove from of the S3 resource.
      * </p>
      * 
      * @param tagKeys
-     *        The tag key pair of the S3 resource tag that you're trying to remove.
+     *        The array of tag key-value pairs that you're trying to remove from of the S3 resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

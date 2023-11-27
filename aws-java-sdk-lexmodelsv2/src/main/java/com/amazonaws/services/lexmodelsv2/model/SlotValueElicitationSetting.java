@@ -63,6 +63,12 @@ public class SlotValueElicitationSetting implements Serializable, Cloneable, Str
      * </p>
      */
     private SlotCaptureSetting slotCaptureSetting;
+    /**
+     * <p>
+     * An object containing information about whether assisted slot resolution is turned on for the slot or not.
+     * </p>
+     */
+    private SlotResolutionSetting slotResolutionSetting;
 
     /**
      * <p>
@@ -363,6 +369,46 @@ public class SlotValueElicitationSetting implements Serializable, Cloneable, Str
     }
 
     /**
+     * <p>
+     * An object containing information about whether assisted slot resolution is turned on for the slot or not.
+     * </p>
+     * 
+     * @param slotResolutionSetting
+     *        An object containing information about whether assisted slot resolution is turned on for the slot or not.
+     */
+
+    public void setSlotResolutionSetting(SlotResolutionSetting slotResolutionSetting) {
+        this.slotResolutionSetting = slotResolutionSetting;
+    }
+
+    /**
+     * <p>
+     * An object containing information about whether assisted slot resolution is turned on for the slot or not.
+     * </p>
+     * 
+     * @return An object containing information about whether assisted slot resolution is turned on for the slot or not.
+     */
+
+    public SlotResolutionSetting getSlotResolutionSetting() {
+        return this.slotResolutionSetting;
+    }
+
+    /**
+     * <p>
+     * An object containing information about whether assisted slot resolution is turned on for the slot or not.
+     * </p>
+     * 
+     * @param slotResolutionSetting
+     *        An object containing information about whether assisted slot resolution is turned on for the slot or not.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public SlotValueElicitationSetting withSlotResolutionSetting(SlotResolutionSetting slotResolutionSetting) {
+        setSlotResolutionSetting(slotResolutionSetting);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -385,7 +431,9 @@ public class SlotValueElicitationSetting implements Serializable, Cloneable, Str
         if (getWaitAndContinueSpecification() != null)
             sb.append("WaitAndContinueSpecification: ").append(getWaitAndContinueSpecification()).append(",");
         if (getSlotCaptureSetting() != null)
-            sb.append("SlotCaptureSetting: ").append(getSlotCaptureSetting());
+            sb.append("SlotCaptureSetting: ").append(getSlotCaptureSetting()).append(",");
+        if (getSlotResolutionSetting() != null)
+            sb.append("SlotResolutionSetting: ").append(getSlotResolutionSetting());
         sb.append("}");
         return sb.toString();
     }
@@ -424,6 +472,10 @@ public class SlotValueElicitationSetting implements Serializable, Cloneable, Str
             return false;
         if (other.getSlotCaptureSetting() != null && other.getSlotCaptureSetting().equals(this.getSlotCaptureSetting()) == false)
             return false;
+        if (other.getSlotResolutionSetting() == null ^ this.getSlotResolutionSetting() == null)
+            return false;
+        if (other.getSlotResolutionSetting() != null && other.getSlotResolutionSetting().equals(this.getSlotResolutionSetting()) == false)
+            return false;
         return true;
     }
 
@@ -438,6 +490,7 @@ public class SlotValueElicitationSetting implements Serializable, Cloneable, Str
         hashCode = prime * hashCode + ((getSampleUtterances() == null) ? 0 : getSampleUtterances().hashCode());
         hashCode = prime * hashCode + ((getWaitAndContinueSpecification() == null) ? 0 : getWaitAndContinueSpecification().hashCode());
         hashCode = prime * hashCode + ((getSlotCaptureSetting() == null) ? 0 : getSlotCaptureSetting().hashCode());
+        hashCode = prime * hashCode + ((getSlotResolutionSetting() == null) ? 0 : getSlotResolutionSetting().hashCode());
         return hashCode;
     }
 

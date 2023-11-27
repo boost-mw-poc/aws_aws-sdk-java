@@ -35,7 +35,12 @@ public class InvalidRequestException extends com.amazonaws.services.eks.model.Am
      * </p>
      */
     private String nodegroupName;
-
+    /**
+     * <p>
+     * The request is invalid given the state of the add-on name. Check the state of the cluster and the associated
+     * operations.
+     * </p>
+     */
     private String addonName;
     /**
      * <p>
@@ -139,7 +144,14 @@ public class InvalidRequestException extends com.amazonaws.services.eks.model.Am
     }
 
     /**
+     * <p>
+     * The request is invalid given the state of the add-on name. Check the state of the cluster and the associated
+     * operations.
+     * </p>
+     * 
      * @param addonName
+     *        The request is invalid given the state of the add-on name. Check the state of the cluster and the
+     *        associated operations.
      */
 
     @com.fasterxml.jackson.annotation.JsonProperty("addonName")
@@ -148,7 +160,13 @@ public class InvalidRequestException extends com.amazonaws.services.eks.model.Am
     }
 
     /**
-     * @return
+     * <p>
+     * The request is invalid given the state of the add-on name. Check the state of the cluster and the associated
+     * operations.
+     * </p>
+     * 
+     * @return The request is invalid given the state of the add-on name. Check the state of the cluster and the
+     *         associated operations.
      */
 
     @com.fasterxml.jackson.annotation.JsonProperty("addonName")
@@ -157,7 +175,14 @@ public class InvalidRequestException extends com.amazonaws.services.eks.model.Am
     }
 
     /**
+     * <p>
+     * The request is invalid given the state of the add-on name. Check the state of the cluster and the associated
+     * operations.
+     * </p>
+     * 
      * @param addonName
+     *        The request is invalid given the state of the add-on name. Check the state of the cluster and the
+     *        associated operations.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

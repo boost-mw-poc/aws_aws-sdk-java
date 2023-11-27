@@ -205,6 +205,120 @@ public class AWSSecretsManagerClient extends AmazonWebServiceClient implements A
 
     /**
      * <p>
+     * Retrieves the contents of the encrypted fields <code>SecretString</code> or <code>SecretBinary</code> for up to
+     * 20 secrets. To retrieve a single secret, call <a>GetSecretValue</a>.
+     * </p>
+     * <p>
+     * To choose which secrets to retrieve, you can specify a list of secrets by name or ARN, or you can use filters. If
+     * Secrets Manager encounters errors such as <code>AccessDeniedException</code> while attempting to retrieve any of
+     * the secrets, you can see the errors in <code>Errors</code> in the response.
+     * </p>
+     * <p>
+     * Secrets Manager generates CloudTrail <code>GetSecretValue</code> log entries for each secret you request when you
+     * call this action. Do not include sensitive information in request parameters because it might be logged. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/retrieve-ct-entries.html">Logging Secrets
+     * Manager events with CloudTrail</a>.
+     * </p>
+     * <p>
+     * <b>Required permissions: </b> <code>secretsmanager:BatchGetSecretValue</code>, and you must have
+     * <code>secretsmanager:GetSecretValue</code> for each secret. If you use filters, you must also have
+     * <code>secretsmanager:ListSecrets</code>. If the secrets are encrypted using customer-managed keys instead of the
+     * Amazon Web Services managed key <code>aws/secretsmanager</code>, then you also need <code>kms:Decrypt</code>
+     * permissions for the keys. For more information, see <a href=
+     * "https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_iam-permissions.html#reference_iam-permissions_actions"
+     * > IAM policy actions for Secrets Manager</a> and <a
+     * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access.html">Authentication and access
+     * control in Secrets Manager</a>.
+     * </p>
+     * 
+     * @param batchGetSecretValueRequest
+     * @return Result of the BatchGetSecretValue operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         Secrets Manager can't find the resource that you asked for.
+     * @throws InvalidParameterException
+     *         The parameter name or value is invalid.
+     * @throws InvalidRequestException
+     *         A parameter value is not valid for the current state of the resource.</p>
+     *         <p>
+     *         Possible causes:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         The secret is scheduled for deletion.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         You tried to enable rotation on a secret that doesn't already have a Lambda function ARN configured and
+     *         you didn't include such an ARN as a parameter in this call.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         The secret is managed by another service, and you must use that service to update it. For more
+     *         information, see <a
+     *         href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/service-linked-secrets.html">Secrets
+     *         managed by other Amazon Web Services services</a>.
+     *         </p>
+     *         </li>
+     * @throws DecryptionFailureException
+     *         Secrets Manager can't decrypt the protected secret text using the provided KMS key.
+     * @throws InternalServiceErrorException
+     *         An error occurred on the server side.
+     * @throws InvalidNextTokenException
+     *         The <code>NextToken</code> value is invalid.
+     * @sample AWSSecretsManager.BatchGetSecretValue
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/secretsmanager-2017-10-17/BatchGetSecretValue"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public BatchGetSecretValueResult batchGetSecretValue(BatchGetSecretValueRequest request) {
+        request = beforeClientExecution(request);
+        return executeBatchGetSecretValue(request);
+    }
+
+    @SdkInternalApi
+    final BatchGetSecretValueResult executeBatchGetSecretValue(BatchGetSecretValueRequest batchGetSecretValueRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(batchGetSecretValueRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<BatchGetSecretValueRequest> request = null;
+        Response<BatchGetSecretValueResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new BatchGetSecretValueRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(batchGetSecretValueRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Secrets Manager");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "BatchGetSecretValue");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<BatchGetSecretValueResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new BatchGetSecretValueResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Turns off automatic rotation, and if a rotation is currently in progress, cancels the rotation.
      * </p>
      * <p>
@@ -987,6 +1101,9 @@ public class AWSSecretsManagerClient extends AmazonWebServiceClient implements A
      * specified version of a secret, whichever contains content.
      * </p>
      * <p>
+     * To retrieve the values for a group of secrets, call <a>BatchGetSecretValue</a>.
+     * </p>
+     * <p>
      * We recommend that you cache your secret values by using client-side caching. Caching secrets improves speed and
      * reduces your costs. For more information, see <a
      * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/retrieving-secrets.html">Cache secrets for your
@@ -1193,7 +1310,7 @@ public class AWSSecretsManagerClient extends AmazonWebServiceClient implements A
      * To list the versions of a secret, use <a>ListSecretVersionIds</a>.
      * </p>
      * <p>
-     * To get the secret value from <code>SecretString</code> or <code>SecretBinary</code>, call <a>GetSecretValue</a>.
+     * To retrieve the values for the secrets, call <a>BatchGetSecretValue</a> or <a>GetSecretValue</a>.
      * </p>
      * <p>
      * For information about finding secrets in the console, see <a

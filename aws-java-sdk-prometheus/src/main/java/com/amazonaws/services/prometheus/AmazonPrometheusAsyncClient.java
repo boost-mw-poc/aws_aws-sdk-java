@@ -175,6 +175,39 @@ public class AmazonPrometheusAsyncClient extends AmazonPrometheusClient implemen
     }
 
     @Override
+    public java.util.concurrent.Future<CreateScraperResult> createScraperAsync(CreateScraperRequest request) {
+
+        return createScraperAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateScraperResult> createScraperAsync(final CreateScraperRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateScraperRequest, CreateScraperResult> asyncHandler) {
+        final CreateScraperRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateScraperResult>() {
+            @Override
+            public CreateScraperResult call() throws Exception {
+                CreateScraperResult result = null;
+
+                try {
+                    result = executeCreateScraper(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateWorkspaceResult> createWorkspaceAsync(CreateWorkspaceRequest request) {
 
         return createWorkspaceAsync(request, null);
@@ -291,6 +324,39 @@ public class AmazonPrometheusAsyncClient extends AmazonPrometheusClient implemen
 
                 try {
                     result = executeDeleteRuleGroupsNamespace(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteScraperResult> deleteScraperAsync(DeleteScraperRequest request) {
+
+        return deleteScraperAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteScraperResult> deleteScraperAsync(final DeleteScraperRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteScraperRequest, DeleteScraperResult> asyncHandler) {
+        final DeleteScraperRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteScraperResult>() {
+            @Override
+            public DeleteScraperResult call() throws Exception {
+                DeleteScraperResult result = null;
+
+                try {
+                    result = executeDeleteScraper(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -440,6 +506,39 @@ public class AmazonPrometheusAsyncClient extends AmazonPrometheusClient implemen
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeScraperResult> describeScraperAsync(DescribeScraperRequest request) {
+
+        return describeScraperAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeScraperResult> describeScraperAsync(final DescribeScraperRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeScraperRequest, DescribeScraperResult> asyncHandler) {
+        final DescribeScraperRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeScraperResult>() {
+            @Override
+            public DescribeScraperResult call() throws Exception {
+                DescribeScraperResult result = null;
+
+                try {
+                    result = executeDescribeScraper(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeWorkspaceResult> describeWorkspaceAsync(DescribeWorkspaceRequest request) {
 
         return describeWorkspaceAsync(request, null);
@@ -473,6 +572,40 @@ public class AmazonPrometheusAsyncClient extends AmazonPrometheusClient implemen
     }
 
     @Override
+    public java.util.concurrent.Future<GetDefaultScraperConfigurationResult> getDefaultScraperConfigurationAsync(GetDefaultScraperConfigurationRequest request) {
+
+        return getDefaultScraperConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetDefaultScraperConfigurationResult> getDefaultScraperConfigurationAsync(
+            final GetDefaultScraperConfigurationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetDefaultScraperConfigurationRequest, GetDefaultScraperConfigurationResult> asyncHandler) {
+        final GetDefaultScraperConfigurationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetDefaultScraperConfigurationResult>() {
+            @Override
+            public GetDefaultScraperConfigurationResult call() throws Exception {
+                GetDefaultScraperConfigurationResult result = null;
+
+                try {
+                    result = executeGetDefaultScraperConfiguration(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ListRuleGroupsNamespacesResult> listRuleGroupsNamespacesAsync(ListRuleGroupsNamespacesRequest request) {
 
         return listRuleGroupsNamespacesAsync(request, null);
@@ -490,6 +623,39 @@ public class AmazonPrometheusAsyncClient extends AmazonPrometheusClient implemen
 
                 try {
                     result = executeListRuleGroupsNamespaces(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListScrapersResult> listScrapersAsync(ListScrapersRequest request) {
+
+        return listScrapersAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListScrapersResult> listScrapersAsync(final ListScrapersRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListScrapersRequest, ListScrapersResult> asyncHandler) {
+        final ListScrapersRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListScrapersResult>() {
+            @Override
+            public ListScrapersResult call() throws Exception {
+                ListScrapersResult result = null;
+
+                try {
+                    result = executeListScrapers(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

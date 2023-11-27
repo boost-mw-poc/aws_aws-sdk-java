@@ -48,6 +48,10 @@ public class AuthorizeDataShareRequestMarshaller implements Marshaller<Request<A
             request.addParameter("ConsumerIdentifier", StringUtils.fromString(authorizeDataShareRequest.getConsumerIdentifier()));
         }
 
+        if (authorizeDataShareRequest.getAllowWrites() != null) {
+            request.addParameter("AllowWrites", StringUtils.fromBoolean(authorizeDataShareRequest.getAllowWrites()));
+        }
+
         return request;
     }
 

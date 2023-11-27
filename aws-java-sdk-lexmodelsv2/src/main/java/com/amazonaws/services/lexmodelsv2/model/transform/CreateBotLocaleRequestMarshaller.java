@@ -39,6 +39,8 @@ public class CreateBotLocaleRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("nluIntentConfidenceThreshold").build();
     private static final MarshallingInfo<StructuredPojo> VOICESETTINGS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("voiceSettings").build();
+    private static final MarshallingInfo<StructuredPojo> GENERATIVEAISETTINGS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("generativeAISettings").build();
 
     private static final CreateBotLocaleRequestMarshaller instance = new CreateBotLocaleRequestMarshaller();
 
@@ -62,6 +64,7 @@ public class CreateBotLocaleRequestMarshaller {
             protocolMarshaller.marshall(createBotLocaleRequest.getDescription(), DESCRIPTION_BINDING);
             protocolMarshaller.marshall(createBotLocaleRequest.getNluIntentConfidenceThreshold(), NLUINTENTCONFIDENCETHRESHOLD_BINDING);
             protocolMarshaller.marshall(createBotLocaleRequest.getVoiceSettings(), VOICESETTINGS_BINDING);
+            protocolMarshaller.marshall(createBotLocaleRequest.getGenerativeAISettings(), GENERATIVEAISETTINGS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

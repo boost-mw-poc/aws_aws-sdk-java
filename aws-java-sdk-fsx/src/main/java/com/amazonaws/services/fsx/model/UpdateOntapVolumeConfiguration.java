@@ -111,6 +111,12 @@ public class UpdateOntapVolumeConfiguration implements Serializable, Cloneable, 
      * </p>
      */
     private UpdateSnaplockConfiguration snaplockConfiguration;
+    /**
+     * <p>
+     * The configured size of the volume, in bytes.
+     * </p>
+     */
+    private Long sizeInBytes;
 
     /**
      * <p>
@@ -697,6 +703,46 @@ public class UpdateOntapVolumeConfiguration implements Serializable, Cloneable, 
     }
 
     /**
+     * <p>
+     * The configured size of the volume, in bytes.
+     * </p>
+     * 
+     * @param sizeInBytes
+     *        The configured size of the volume, in bytes.
+     */
+
+    public void setSizeInBytes(Long sizeInBytes) {
+        this.sizeInBytes = sizeInBytes;
+    }
+
+    /**
+     * <p>
+     * The configured size of the volume, in bytes.
+     * </p>
+     * 
+     * @return The configured size of the volume, in bytes.
+     */
+
+    public Long getSizeInBytes() {
+        return this.sizeInBytes;
+    }
+
+    /**
+     * <p>
+     * The configured size of the volume, in bytes.
+     * </p>
+     * 
+     * @param sizeInBytes
+     *        The configured size of the volume, in bytes.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateOntapVolumeConfiguration withSizeInBytes(Long sizeInBytes) {
+        setSizeInBytes(sizeInBytes);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -723,7 +769,9 @@ public class UpdateOntapVolumeConfiguration implements Serializable, Cloneable, 
         if (getCopyTagsToBackups() != null)
             sb.append("CopyTagsToBackups: ").append(getCopyTagsToBackups()).append(",");
         if (getSnaplockConfiguration() != null)
-            sb.append("SnaplockConfiguration: ").append(getSnaplockConfiguration());
+            sb.append("SnaplockConfiguration: ").append(getSnaplockConfiguration()).append(",");
+        if (getSizeInBytes() != null)
+            sb.append("SizeInBytes: ").append(getSizeInBytes());
         sb.append("}");
         return sb.toString();
     }
@@ -770,6 +818,10 @@ public class UpdateOntapVolumeConfiguration implements Serializable, Cloneable, 
             return false;
         if (other.getSnaplockConfiguration() != null && other.getSnaplockConfiguration().equals(this.getSnaplockConfiguration()) == false)
             return false;
+        if (other.getSizeInBytes() == null ^ this.getSizeInBytes() == null)
+            return false;
+        if (other.getSizeInBytes() != null && other.getSizeInBytes().equals(this.getSizeInBytes()) == false)
+            return false;
         return true;
     }
 
@@ -786,6 +838,7 @@ public class UpdateOntapVolumeConfiguration implements Serializable, Cloneable, 
         hashCode = prime * hashCode + ((getSnapshotPolicy() == null) ? 0 : getSnapshotPolicy().hashCode());
         hashCode = prime * hashCode + ((getCopyTagsToBackups() == null) ? 0 : getCopyTagsToBackups().hashCode());
         hashCode = prime * hashCode + ((getSnaplockConfiguration() == null) ? 0 : getSnaplockConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getSizeInBytes() == null) ? 0 : getSizeInBytes().hashCode());
         return hashCode;
     }
 

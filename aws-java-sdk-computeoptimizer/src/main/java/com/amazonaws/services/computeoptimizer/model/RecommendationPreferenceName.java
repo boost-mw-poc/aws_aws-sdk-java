@@ -22,7 +22,10 @@ public enum RecommendationPreferenceName {
 
     EnhancedInfrastructureMetrics("EnhancedInfrastructureMetrics"),
     InferredWorkloadTypes("InferredWorkloadTypes"),
-    ExternalMetricsPreference("ExternalMetricsPreference");
+    ExternalMetricsPreference("ExternalMetricsPreference"),
+    LookBackPeriodPreference("LookBackPeriodPreference"),
+    PreferredResources("PreferredResources"),
+    UtilizationPreferences("UtilizationPreferences");
 
     private String value;
 

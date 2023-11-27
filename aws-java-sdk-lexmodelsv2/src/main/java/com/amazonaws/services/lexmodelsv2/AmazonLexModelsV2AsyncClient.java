@@ -1203,6 +1203,40 @@ public class AmazonLexModelsV2AsyncClient extends AmazonLexModelsV2Client implem
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeBotResourceGenerationResult> describeBotResourceGenerationAsync(DescribeBotResourceGenerationRequest request) {
+
+        return describeBotResourceGenerationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeBotResourceGenerationResult> describeBotResourceGenerationAsync(
+            final DescribeBotResourceGenerationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeBotResourceGenerationRequest, DescribeBotResourceGenerationResult> asyncHandler) {
+        final DescribeBotResourceGenerationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeBotResourceGenerationResult>() {
+            @Override
+            public DescribeBotResourceGenerationResult call() throws Exception {
+                DescribeBotResourceGenerationResult result = null;
+
+                try {
+                    result = executeDescribeBotResourceGeneration(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeBotVersionResult> describeBotVersionAsync(DescribeBotVersionRequest request) {
 
         return describeBotVersionAsync(request, null);
@@ -1603,6 +1637,39 @@ public class AmazonLexModelsV2AsyncClient extends AmazonLexModelsV2Client implem
     }
 
     @Override
+    public java.util.concurrent.Future<GenerateBotElementResult> generateBotElementAsync(GenerateBotElementRequest request) {
+
+        return generateBotElementAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GenerateBotElementResult> generateBotElementAsync(final GenerateBotElementRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GenerateBotElementRequest, GenerateBotElementResult> asyncHandler) {
+        final GenerateBotElementRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GenerateBotElementResult>() {
+            @Override
+            public GenerateBotElementResult call() throws Exception {
+                GenerateBotElementResult result = null;
+
+                try {
+                    result = executeGenerateBotElement(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetTestExecutionArtifactsUrlResult> getTestExecutionArtifactsUrlAsync(GetTestExecutionArtifactsUrlRequest request) {
 
         return getTestExecutionArtifactsUrlAsync(request, null);
@@ -1752,6 +1819,39 @@ public class AmazonLexModelsV2AsyncClient extends AmazonLexModelsV2Client implem
 
                 try {
                     result = executeListBotRecommendations(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListBotResourceGenerationsResult> listBotResourceGenerationsAsync(ListBotResourceGenerationsRequest request) {
+
+        return listBotResourceGenerationsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListBotResourceGenerationsResult> listBotResourceGenerationsAsync(final ListBotResourceGenerationsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListBotResourceGenerationsRequest, ListBotResourceGenerationsResult> asyncHandler) {
+        final ListBotResourceGenerationsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListBotResourceGenerationsResult>() {
+            @Override
+            public ListBotResourceGenerationsResult call() throws Exception {
+                ListBotResourceGenerationsResult result = null;
+
+                try {
+                    result = executeListBotResourceGenerations(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -2577,6 +2677,39 @@ public class AmazonLexModelsV2AsyncClient extends AmazonLexModelsV2Client implem
 
                 try {
                     result = executeStartBotRecommendation(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartBotResourceGenerationResult> startBotResourceGenerationAsync(StartBotResourceGenerationRequest request) {
+
+        return startBotResourceGenerationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartBotResourceGenerationResult> startBotResourceGenerationAsync(final StartBotResourceGenerationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<StartBotResourceGenerationRequest, StartBotResourceGenerationResult> asyncHandler) {
+        final StartBotResourceGenerationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<StartBotResourceGenerationResult>() {
+            @Override
+            public StartBotResourceGenerationResult call() throws Exception {
+                StartBotResourceGenerationResult result = null;
+
+                try {
+                    result = executeStartBotResourceGeneration(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

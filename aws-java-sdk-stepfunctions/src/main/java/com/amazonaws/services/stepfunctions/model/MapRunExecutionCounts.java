@@ -83,9 +83,9 @@ public class MapRunExecutionCounts implements Serializable, Cloneable, Structure
     /**
      * <p>
      * The number of <code>FAILED</code>, <code>ABORTED</code>, or <code>TIMED_OUT</code> child workflow executions that
-     * cannot be redriven because their execution status is terminal. For example, if your execution event history
-     * contains 25,000 entries, or the <code>toleratedFailureCount</code> or <code>toleratedFailurePercentage</code> for
-     * the Distributed Map has exceeded.
+     * cannot be redriven because their execution status is terminal. For example, child workflows with an execution
+     * status of <code>FAILED</code>, <code>ABORTED</code>, or <code>TIMED_OUT</code> and a <code>redriveStatus</code>
+     * of <code>NOT_REDRIVABLE</code>.
      * </p>
      */
     private Long failuresNotRedrivable;
@@ -454,16 +454,16 @@ public class MapRunExecutionCounts implements Serializable, Cloneable, Structure
     /**
      * <p>
      * The number of <code>FAILED</code>, <code>ABORTED</code>, or <code>TIMED_OUT</code> child workflow executions that
-     * cannot be redriven because their execution status is terminal. For example, if your execution event history
-     * contains 25,000 entries, or the <code>toleratedFailureCount</code> or <code>toleratedFailurePercentage</code> for
-     * the Distributed Map has exceeded.
+     * cannot be redriven because their execution status is terminal. For example, child workflows with an execution
+     * status of <code>FAILED</code>, <code>ABORTED</code>, or <code>TIMED_OUT</code> and a <code>redriveStatus</code>
+     * of <code>NOT_REDRIVABLE</code>.
      * </p>
      * 
      * @param failuresNotRedrivable
      *        The number of <code>FAILED</code>, <code>ABORTED</code>, or <code>TIMED_OUT</code> child workflow
-     *        executions that cannot be redriven because their execution status is terminal. For example, if your
-     *        execution event history contains 25,000 entries, or the <code>toleratedFailureCount</code> or
-     *        <code>toleratedFailurePercentage</code> for the Distributed Map has exceeded.
+     *        executions that cannot be redriven because their execution status is terminal. For example, child
+     *        workflows with an execution status of <code>FAILED</code>, <code>ABORTED</code>, or <code>TIMED_OUT</code>
+     *        and a <code>redriveStatus</code> of <code>NOT_REDRIVABLE</code>.
      */
 
     public void setFailuresNotRedrivable(Long failuresNotRedrivable) {
@@ -473,15 +473,15 @@ public class MapRunExecutionCounts implements Serializable, Cloneable, Structure
     /**
      * <p>
      * The number of <code>FAILED</code>, <code>ABORTED</code>, or <code>TIMED_OUT</code> child workflow executions that
-     * cannot be redriven because their execution status is terminal. For example, if your execution event history
-     * contains 25,000 entries, or the <code>toleratedFailureCount</code> or <code>toleratedFailurePercentage</code> for
-     * the Distributed Map has exceeded.
+     * cannot be redriven because their execution status is terminal. For example, child workflows with an execution
+     * status of <code>FAILED</code>, <code>ABORTED</code>, or <code>TIMED_OUT</code> and a <code>redriveStatus</code>
+     * of <code>NOT_REDRIVABLE</code>.
      * </p>
      * 
      * @return The number of <code>FAILED</code>, <code>ABORTED</code>, or <code>TIMED_OUT</code> child workflow
-     *         executions that cannot be redriven because their execution status is terminal. For example, if your
-     *         execution event history contains 25,000 entries, or the <code>toleratedFailureCount</code> or
-     *         <code>toleratedFailurePercentage</code> for the Distributed Map has exceeded.
+     *         executions that cannot be redriven because their execution status is terminal. For example, child
+     *         workflows with an execution status of <code>FAILED</code>, <code>ABORTED</code>, or
+     *         <code>TIMED_OUT</code> and a <code>redriveStatus</code> of <code>NOT_REDRIVABLE</code>.
      */
 
     public Long getFailuresNotRedrivable() {
@@ -491,16 +491,16 @@ public class MapRunExecutionCounts implements Serializable, Cloneable, Structure
     /**
      * <p>
      * The number of <code>FAILED</code>, <code>ABORTED</code>, or <code>TIMED_OUT</code> child workflow executions that
-     * cannot be redriven because their execution status is terminal. For example, if your execution event history
-     * contains 25,000 entries, or the <code>toleratedFailureCount</code> or <code>toleratedFailurePercentage</code> for
-     * the Distributed Map has exceeded.
+     * cannot be redriven because their execution status is terminal. For example, child workflows with an execution
+     * status of <code>FAILED</code>, <code>ABORTED</code>, or <code>TIMED_OUT</code> and a <code>redriveStatus</code>
+     * of <code>NOT_REDRIVABLE</code>.
      * </p>
      * 
      * @param failuresNotRedrivable
      *        The number of <code>FAILED</code>, <code>ABORTED</code>, or <code>TIMED_OUT</code> child workflow
-     *        executions that cannot be redriven because their execution status is terminal. For example, if your
-     *        execution event history contains 25,000 entries, or the <code>toleratedFailureCount</code> or
-     *        <code>toleratedFailurePercentage</code> for the Distributed Map has exceeded.
+     *        executions that cannot be redriven because their execution status is terminal. For example, child
+     *        workflows with an execution status of <code>FAILED</code>, <code>ABORTED</code>, or <code>TIMED_OUT</code>
+     *        and a <code>redriveStatus</code> of <code>NOT_REDRIVABLE</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -55,6 +55,16 @@ public class ECSServiceRecommendationOption implements Serializable, Cloneable, 
      * </p>
      */
     private java.util.List<ContainerRecommendation> containerRecommendations;
+    /**
+     * <p>
+     * Describes the savings opportunity for Amazon ECS service recommendations or for the recommendation option.
+     * </p>
+     * <p>
+     * Savings opportunity represents the estimated monthly savings after applying Savings Plans discounts. You can
+     * achieve this by implementing a given Compute Optimizer recommendation.
+     * </p>
+     */
+    private ECSSavingsOpportunityAfterDiscounts savingsOpportunityAfterDiscounts;
 
     /**
      * <p>
@@ -311,6 +321,70 @@ public class ECSServiceRecommendationOption implements Serializable, Cloneable, 
     }
 
     /**
+     * <p>
+     * Describes the savings opportunity for Amazon ECS service recommendations or for the recommendation option.
+     * </p>
+     * <p>
+     * Savings opportunity represents the estimated monthly savings after applying Savings Plans discounts. You can
+     * achieve this by implementing a given Compute Optimizer recommendation.
+     * </p>
+     * 
+     * @param savingsOpportunityAfterDiscounts
+     *        Describes the savings opportunity for Amazon ECS service recommendations or for the recommendation option.
+     *        </p>
+     *        <p>
+     *        Savings opportunity represents the estimated monthly savings after applying Savings Plans discounts. You
+     *        can achieve this by implementing a given Compute Optimizer recommendation.
+     */
+
+    public void setSavingsOpportunityAfterDiscounts(ECSSavingsOpportunityAfterDiscounts savingsOpportunityAfterDiscounts) {
+        this.savingsOpportunityAfterDiscounts = savingsOpportunityAfterDiscounts;
+    }
+
+    /**
+     * <p>
+     * Describes the savings opportunity for Amazon ECS service recommendations or for the recommendation option.
+     * </p>
+     * <p>
+     * Savings opportunity represents the estimated monthly savings after applying Savings Plans discounts. You can
+     * achieve this by implementing a given Compute Optimizer recommendation.
+     * </p>
+     * 
+     * @return Describes the savings opportunity for Amazon ECS service recommendations or for the recommendation
+     *         option. </p>
+     *         <p>
+     *         Savings opportunity represents the estimated monthly savings after applying Savings Plans discounts. You
+     *         can achieve this by implementing a given Compute Optimizer recommendation.
+     */
+
+    public ECSSavingsOpportunityAfterDiscounts getSavingsOpportunityAfterDiscounts() {
+        return this.savingsOpportunityAfterDiscounts;
+    }
+
+    /**
+     * <p>
+     * Describes the savings opportunity for Amazon ECS service recommendations or for the recommendation option.
+     * </p>
+     * <p>
+     * Savings opportunity represents the estimated monthly savings after applying Savings Plans discounts. You can
+     * achieve this by implementing a given Compute Optimizer recommendation.
+     * </p>
+     * 
+     * @param savingsOpportunityAfterDiscounts
+     *        Describes the savings opportunity for Amazon ECS service recommendations or for the recommendation option.
+     *        </p>
+     *        <p>
+     *        Savings opportunity represents the estimated monthly savings after applying Savings Plans discounts. You
+     *        can achieve this by implementing a given Compute Optimizer recommendation.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ECSServiceRecommendationOption withSavingsOpportunityAfterDiscounts(ECSSavingsOpportunityAfterDiscounts savingsOpportunityAfterDiscounts) {
+        setSavingsOpportunityAfterDiscounts(savingsOpportunityAfterDiscounts);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -331,7 +405,9 @@ public class ECSServiceRecommendationOption implements Serializable, Cloneable, 
         if (getProjectedUtilizationMetrics() != null)
             sb.append("ProjectedUtilizationMetrics: ").append(getProjectedUtilizationMetrics()).append(",");
         if (getContainerRecommendations() != null)
-            sb.append("ContainerRecommendations: ").append(getContainerRecommendations());
+            sb.append("ContainerRecommendations: ").append(getContainerRecommendations()).append(",");
+        if (getSavingsOpportunityAfterDiscounts() != null)
+            sb.append("SavingsOpportunityAfterDiscounts: ").append(getSavingsOpportunityAfterDiscounts());
         sb.append("}");
         return sb.toString();
     }
@@ -366,6 +442,11 @@ public class ECSServiceRecommendationOption implements Serializable, Cloneable, 
             return false;
         if (other.getContainerRecommendations() != null && other.getContainerRecommendations().equals(this.getContainerRecommendations()) == false)
             return false;
+        if (other.getSavingsOpportunityAfterDiscounts() == null ^ this.getSavingsOpportunityAfterDiscounts() == null)
+            return false;
+        if (other.getSavingsOpportunityAfterDiscounts() != null
+                && other.getSavingsOpportunityAfterDiscounts().equals(this.getSavingsOpportunityAfterDiscounts()) == false)
+            return false;
         return true;
     }
 
@@ -379,6 +460,7 @@ public class ECSServiceRecommendationOption implements Serializable, Cloneable, 
         hashCode = prime * hashCode + ((getSavingsOpportunity() == null) ? 0 : getSavingsOpportunity().hashCode());
         hashCode = prime * hashCode + ((getProjectedUtilizationMetrics() == null) ? 0 : getProjectedUtilizationMetrics().hashCode());
         hashCode = prime * hashCode + ((getContainerRecommendations() == null) ? 0 : getContainerRecommendations().hashCode());
+        hashCode = prime * hashCode + ((getSavingsOpportunityAfterDiscounts() == null) ? 0 : getSavingsOpportunityAfterDiscounts().hashCode());
         return hashCode;
     }
 

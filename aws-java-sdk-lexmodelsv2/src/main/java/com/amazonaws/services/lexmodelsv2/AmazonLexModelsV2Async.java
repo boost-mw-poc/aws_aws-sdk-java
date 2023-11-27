@@ -275,12 +275,10 @@ public interface AmazonLexModelsV2Async extends AmazonLexModelsV2 {
 
     /**
      * <p>
-     * Creates a new version of the bot based on the <code>DRAFT</code> version. If the <code>DRAFT</code> version of
-     * this resource hasn't changed since you created the last version, Amazon Lex doesn't create a new version, it
-     * returns the last created version.
-     * </p>
-     * <p>
-     * When you create the first version of a bot, Amazon Lex sets the version to 1. Subsequent versions increment by 1.
+     * Creates an immutable version of the bot. When you create the first version of a bot, Amazon Lex sets the version
+     * number to 1. Subsequent bot versions increase in an increment of 1. The version number will always represent the
+     * total number of versions created of the bot, not the current number of versions. If a bot version is deleted,
+     * that bot version number will not be reused.
      * </p>
      * 
      * @param createBotVersionRequest
@@ -293,12 +291,10 @@ public interface AmazonLexModelsV2Async extends AmazonLexModelsV2 {
 
     /**
      * <p>
-     * Creates a new version of the bot based on the <code>DRAFT</code> version. If the <code>DRAFT</code> version of
-     * this resource hasn't changed since you created the last version, Amazon Lex doesn't create a new version, it
-     * returns the last created version.
-     * </p>
-     * <p>
-     * When you create the first version of a bot, Amazon Lex sets the version to 1. Subsequent versions increment by 1.
+     * Creates an immutable version of the bot. When you create the first version of a bot, Amazon Lex sets the version
+     * number to 1. Subsequent bot versions increase in an increment of 1. The version number will always represent the
+     * total number of versions created of the bot, not the current number of versions. If a bot version is deleted,
+     * that bot version number will not be reused.
      * </p>
      * 
      * @param createBotVersionRequest
@@ -1338,6 +1334,45 @@ public interface AmazonLexModelsV2Async extends AmazonLexModelsV2 {
 
     /**
      * <p>
+     * Returns information about a request to generate a bot through natural language description, made through the
+     * <code>StartBotResource</code> API. Use the <code>generatedBotLocaleUrl</code> to retrieve the Amazon S3 object
+     * containing the bot locale configuration. You can then modify and import this configuration.
+     * </p>
+     * 
+     * @param describeBotResourceGenerationRequest
+     * @return A Java Future containing the result of the DescribeBotResourceGeneration operation returned by the
+     *         service.
+     * @sample AmazonLexModelsV2Async.DescribeBotResourceGeneration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/DescribeBotResourceGeneration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeBotResourceGenerationResult> describeBotResourceGenerationAsync(
+            DescribeBotResourceGenerationRequest describeBotResourceGenerationRequest);
+
+    /**
+     * <p>
+     * Returns information about a request to generate a bot through natural language description, made through the
+     * <code>StartBotResource</code> API. Use the <code>generatedBotLocaleUrl</code> to retrieve the Amazon S3 object
+     * containing the bot locale configuration. You can then modify and import this configuration.
+     * </p>
+     * 
+     * @param describeBotResourceGenerationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeBotResourceGeneration operation returned by the
+     *         service.
+     * @sample AmazonLexModelsV2AsyncHandler.DescribeBotResourceGeneration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/DescribeBotResourceGeneration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeBotResourceGenerationResult> describeBotResourceGenerationAsync(
+            DescribeBotResourceGenerationRequest describeBotResourceGenerationRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeBotResourceGenerationRequest, DescribeBotResourceGenerationResult> asyncHandler);
+
+    /**
+     * <p>
      * Provides metadata about a version of a bot.
      * </p>
      * 
@@ -1720,6 +1755,37 @@ public interface AmazonLexModelsV2Async extends AmazonLexModelsV2 {
 
     /**
      * <p>
+     * Generates sample utterances for an intent.
+     * </p>
+     * 
+     * @param generateBotElementRequest
+     * @return A Java Future containing the result of the GenerateBotElement operation returned by the service.
+     * @sample AmazonLexModelsV2Async.GenerateBotElement
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/GenerateBotElement"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GenerateBotElementResult> generateBotElementAsync(GenerateBotElementRequest generateBotElementRequest);
+
+    /**
+     * <p>
+     * Generates sample utterances for an intent.
+     * </p>
+     * 
+     * @param generateBotElementRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GenerateBotElement operation returned by the service.
+     * @sample AmazonLexModelsV2AsyncHandler.GenerateBotElement
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/GenerateBotElement"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GenerateBotElementResult> generateBotElementAsync(GenerateBotElementRequest generateBotElementRequest,
+            com.amazonaws.handlers.AsyncHandler<GenerateBotElementRequest, GenerateBotElementResult> asyncHandler);
+
+    /**
+     * <p>
      * The pre-signed Amazon S3 URL to download the test execution result artifacts.
      * </p>
      * 
@@ -1940,6 +2006,39 @@ public interface AmazonLexModelsV2Async extends AmazonLexModelsV2 {
      */
     java.util.concurrent.Future<ListBotRecommendationsResult> listBotRecommendationsAsync(ListBotRecommendationsRequest listBotRecommendationsRequest,
             com.amazonaws.handlers.AsyncHandler<ListBotRecommendationsRequest, ListBotRecommendationsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Lists the generation requests made for a bot locale.
+     * </p>
+     * 
+     * @param listBotResourceGenerationsRequest
+     * @return A Java Future containing the result of the ListBotResourceGenerations operation returned by the service.
+     * @sample AmazonLexModelsV2Async.ListBotResourceGenerations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/ListBotResourceGenerations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListBotResourceGenerationsResult> listBotResourceGenerationsAsync(
+            ListBotResourceGenerationsRequest listBotResourceGenerationsRequest);
+
+    /**
+     * <p>
+     * Lists the generation requests made for a bot locale.
+     * </p>
+     * 
+     * @param listBotResourceGenerationsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListBotResourceGenerations operation returned by the service.
+     * @sample AmazonLexModelsV2AsyncHandler.ListBotResourceGenerations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/ListBotResourceGenerations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListBotResourceGenerationsResult> listBotResourceGenerationsAsync(
+            ListBotResourceGenerationsRequest listBotResourceGenerationsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListBotResourceGenerationsRequest, ListBotResourceGenerationsResult> asyncHandler);
 
     /**
      * <p>
@@ -3247,6 +3346,47 @@ public interface AmazonLexModelsV2Async extends AmazonLexModelsV2 {
      */
     java.util.concurrent.Future<StartBotRecommendationResult> startBotRecommendationAsync(StartBotRecommendationRequest startBotRecommendationRequest,
             com.amazonaws.handlers.AsyncHandler<StartBotRecommendationRequest, StartBotRecommendationResult> asyncHandler);
+
+    /**
+     * <p>
+     * Starts a request for the descriptive bot builder to generate a bot locale configuration based on the prompt you
+     * provide it. After you make this call, use the <code>DescribeBotResourceGeneration</code> operation to check on
+     * the status of the generation and for the <code>generatedBotLocaleUrl</code> when the generation is complete. Use
+     * that value to retrieve the Amazon S3 object containing the bot locale configuration. You can then modify and
+     * import this configuration.
+     * </p>
+     * 
+     * @param startBotResourceGenerationRequest
+     * @return A Java Future containing the result of the StartBotResourceGeneration operation returned by the service.
+     * @sample AmazonLexModelsV2Async.StartBotResourceGeneration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/StartBotResourceGeneration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<StartBotResourceGenerationResult> startBotResourceGenerationAsync(
+            StartBotResourceGenerationRequest startBotResourceGenerationRequest);
+
+    /**
+     * <p>
+     * Starts a request for the descriptive bot builder to generate a bot locale configuration based on the prompt you
+     * provide it. After you make this call, use the <code>DescribeBotResourceGeneration</code> operation to check on
+     * the status of the generation and for the <code>generatedBotLocaleUrl</code> when the generation is complete. Use
+     * that value to retrieve the Amazon S3 object containing the bot locale configuration. You can then modify and
+     * import this configuration.
+     * </p>
+     * 
+     * @param startBotResourceGenerationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the StartBotResourceGeneration operation returned by the service.
+     * @sample AmazonLexModelsV2AsyncHandler.StartBotResourceGeneration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/StartBotResourceGeneration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<StartBotResourceGenerationResult> startBotResourceGenerationAsync(
+            StartBotResourceGenerationRequest startBotResourceGenerationRequest,
+            com.amazonaws.handlers.AsyncHandler<StartBotResourceGenerationRequest, StartBotResourceGenerationResult> asyncHandler);
 
     /**
      * <p>

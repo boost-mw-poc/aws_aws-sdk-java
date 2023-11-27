@@ -68,6 +68,12 @@ public class AbstractAWSLakeFormation implements AWSLakeFormation {
     }
 
     @Override
+    public CreateLakeFormationIdentityCenterConfigurationResult createLakeFormationIdentityCenterConfiguration(
+            CreateLakeFormationIdentityCenterConfigurationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateLakeFormationOptInResult createLakeFormationOptIn(CreateLakeFormationOptInRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -83,6 +89,12 @@ public class AbstractAWSLakeFormation implements AWSLakeFormation {
     }
 
     @Override
+    public DeleteLakeFormationIdentityCenterConfigurationResult deleteLakeFormationIdentityCenterConfiguration(
+            DeleteLakeFormationIdentityCenterConfigurationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DeleteLakeFormationOptInResult deleteLakeFormationOptIn(DeleteLakeFormationOptInRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -94,6 +106,12 @@ public class AbstractAWSLakeFormation implements AWSLakeFormation {
 
     @Override
     public DeregisterResourceResult deregisterResource(DeregisterResourceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DescribeLakeFormationIdentityCenterConfigurationResult describeLakeFormationIdentityCenterConfiguration(
+            DescribeLakeFormationIdentityCenterConfigurationRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -259,6 +277,12 @@ public class AbstractAWSLakeFormation implements AWSLakeFormation {
 
     @Override
     public UpdateLFTagResult updateLFTag(UpdateLFTagRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateLakeFormationIdentityCenterConfigurationResult updateLakeFormationIdentityCenterConfiguration(
+            UpdateLakeFormationIdentityCenterConfigurationRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

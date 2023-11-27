@@ -99,6 +99,14 @@ public class UpdateEventDataStoreResultJsonUnmarshaller implements Unmarshaller<
                     context.nextToken();
                     updateEventDataStoreResult.setBillingMode(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("FederationStatus", targetDepth)) {
+                    context.nextToken();
+                    updateEventDataStoreResult.setFederationStatus(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("FederationRoleArn", targetDepth)) {
+                    context.nextToken();
+                    updateEventDataStoreResult.setFederationRoleArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

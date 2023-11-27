@@ -433,6 +433,19 @@ public class AbstractAWSStepFunctionsAsync extends AbstractAWSStepFunctions impl
     }
 
     @Override
+    public java.util.concurrent.Future<TestStateResult> testStateAsync(TestStateRequest request) {
+
+        return testStateAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<TestStateResult> testStateAsync(TestStateRequest request,
+            com.amazonaws.handlers.AsyncHandler<TestStateRequest, TestStateResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<UntagResourceResult> untagResourceAsync(UntagResourceRequest request) {
 
         return untagResourceAsync(request, null);

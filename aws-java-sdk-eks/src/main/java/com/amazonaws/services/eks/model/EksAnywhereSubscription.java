@@ -62,7 +62,7 @@ public class EksAnywhereSubscription implements Serializable, Cloneable, Structu
     private java.util.Date expirationDate;
     /**
      * <p>
-     * The number of licenses included in a subscription. Valid values are between 1 and 1000.
+     * The number of licenses included in a subscription. Valid values are between 1 and 100.
      * </p>
      */
     private Integer licenseQuantity;
@@ -93,7 +93,7 @@ public class EksAnywhereSubscription implements Serializable, Cloneable, Structu
     private Boolean autoRenew;
     /**
      * <p>
-     * License Manager License ARNs associated with the subscription.
+     * Amazon Web Services License Manager ARN associated with the subscription.
      * </p>
      */
     private java.util.List<String> licenseArns;
@@ -313,11 +313,11 @@ public class EksAnywhereSubscription implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The number of licenses included in a subscription. Valid values are between 1 and 1000.
+     * The number of licenses included in a subscription. Valid values are between 1 and 100.
      * </p>
      * 
      * @param licenseQuantity
-     *        The number of licenses included in a subscription. Valid values are between 1 and 1000.
+     *        The number of licenses included in a subscription. Valid values are between 1 and 100.
      */
 
     public void setLicenseQuantity(Integer licenseQuantity) {
@@ -326,10 +326,10 @@ public class EksAnywhereSubscription implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The number of licenses included in a subscription. Valid values are between 1 and 1000.
+     * The number of licenses included in a subscription. Valid values are between 1 and 100.
      * </p>
      * 
-     * @return The number of licenses included in a subscription. Valid values are between 1 and 1000.
+     * @return The number of licenses included in a subscription. Valid values are between 1 and 100.
      */
 
     public Integer getLicenseQuantity() {
@@ -338,11 +338,11 @@ public class EksAnywhereSubscription implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The number of licenses included in a subscription. Valid values are between 1 and 1000.
+     * The number of licenses included in a subscription. Valid values are between 1 and 100.
      * </p>
      * 
      * @param licenseQuantity
-     *        The number of licenses included in a subscription. Valid values are between 1 and 1000.
+     *        The number of licenses included in a subscription. Valid values are between 1 and 100.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -552,10 +552,10 @@ public class EksAnywhereSubscription implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * License Manager License ARNs associated with the subscription.
+     * Amazon Web Services License Manager ARN associated with the subscription.
      * </p>
      * 
-     * @return License Manager License ARNs associated with the subscription.
+     * @return Amazon Web Services License Manager ARN associated with the subscription.
      */
 
     public java.util.List<String> getLicenseArns() {
@@ -564,11 +564,11 @@ public class EksAnywhereSubscription implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * License Manager License ARNs associated with the subscription.
+     * Amazon Web Services License Manager ARN associated with the subscription.
      * </p>
      * 
      * @param licenseArns
-     *        License Manager License ARNs associated with the subscription.
+     *        Amazon Web Services License Manager ARN associated with the subscription.
      */
 
     public void setLicenseArns(java.util.Collection<String> licenseArns) {
@@ -582,7 +582,7 @@ public class EksAnywhereSubscription implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * License Manager License ARNs associated with the subscription.
+     * Amazon Web Services License Manager ARN associated with the subscription.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -591,7 +591,7 @@ public class EksAnywhereSubscription implements Serializable, Cloneable, Structu
      * </p>
      * 
      * @param licenseArns
-     *        License Manager License ARNs associated with the subscription.
+     *        Amazon Web Services License Manager ARN associated with the subscription.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -607,11 +607,11 @@ public class EksAnywhereSubscription implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * License Manager License ARNs associated with the subscription.
+     * Amazon Web Services License Manager ARN associated with the subscription.
      * </p>
      * 
      * @param licenseArns
-     *        License Manager License ARNs associated with the subscription.
+     *        Amazon Web Services License Manager ARN associated with the subscription.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

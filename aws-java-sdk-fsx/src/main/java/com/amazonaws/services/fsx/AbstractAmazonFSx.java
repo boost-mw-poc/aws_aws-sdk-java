@@ -43,6 +43,11 @@ public class AbstractAmazonFSx implements AmazonFSx {
     }
 
     @Override
+    public CopySnapshotAndUpdateVolumeResult copySnapshotAndUpdateVolume(CopySnapshotAndUpdateVolumeRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateBackupResult createBackup(CreateBackupRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -158,6 +163,11 @@ public class AbstractAmazonFSx implements AmazonFSx {
     }
 
     @Override
+    public DescribeSharedVpcConfigurationResult describeSharedVpcConfiguration(DescribeSharedVpcConfigurationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DescribeSnapshotsResult describeSnapshots(DescribeSnapshotsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -219,6 +229,11 @@ public class AbstractAmazonFSx implements AmazonFSx {
 
     @Override
     public UpdateFileSystemResult updateFileSystem(UpdateFileSystemRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateSharedVpcConfigurationResult updateSharedVpcConfiguration(UpdateSharedVpcConfigurationRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

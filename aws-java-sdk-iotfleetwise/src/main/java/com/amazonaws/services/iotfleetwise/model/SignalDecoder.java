@@ -60,6 +60,12 @@ public class SignalDecoder implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private ObdSignal obdSignal;
+    /**
+     * <p>
+     * The decoding information for a specific message which supports higher order data types.
+     * </p>
+     */
+    private MessageSignal messageSignal;
 
     /**
      * <p>
@@ -297,6 +303,46 @@ public class SignalDecoder implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The decoding information for a specific message which supports higher order data types.
+     * </p>
+     * 
+     * @param messageSignal
+     *        The decoding information for a specific message which supports higher order data types.
+     */
+
+    public void setMessageSignal(MessageSignal messageSignal) {
+        this.messageSignal = messageSignal;
+    }
+
+    /**
+     * <p>
+     * The decoding information for a specific message which supports higher order data types.
+     * </p>
+     * 
+     * @return The decoding information for a specific message which supports higher order data types.
+     */
+
+    public MessageSignal getMessageSignal() {
+        return this.messageSignal;
+    }
+
+    /**
+     * <p>
+     * The decoding information for a specific message which supports higher order data types.
+     * </p>
+     * 
+     * @param messageSignal
+     *        The decoding information for a specific message which supports higher order data types.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public SignalDecoder withMessageSignal(MessageSignal messageSignal) {
+        setMessageSignal(messageSignal);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -317,7 +363,9 @@ public class SignalDecoder implements Serializable, Cloneable, StructuredPojo {
         if (getCanSignal() != null)
             sb.append("CanSignal: ").append(getCanSignal()).append(",");
         if (getObdSignal() != null)
-            sb.append("ObdSignal: ").append(getObdSignal());
+            sb.append("ObdSignal: ").append(getObdSignal()).append(",");
+        if (getMessageSignal() != null)
+            sb.append("MessageSignal: ").append(getMessageSignal());
         sb.append("}");
         return sb.toString();
     }
@@ -352,6 +400,10 @@ public class SignalDecoder implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getObdSignal() != null && other.getObdSignal().equals(this.getObdSignal()) == false)
             return false;
+        if (other.getMessageSignal() == null ^ this.getMessageSignal() == null)
+            return false;
+        if (other.getMessageSignal() != null && other.getMessageSignal().equals(this.getMessageSignal()) == false)
+            return false;
         return true;
     }
 
@@ -365,6 +417,7 @@ public class SignalDecoder implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getInterfaceId() == null) ? 0 : getInterfaceId().hashCode());
         hashCode = prime * hashCode + ((getCanSignal() == null) ? 0 : getCanSignal().hashCode());
         hashCode = prime * hashCode + ((getObdSignal() == null) ? 0 : getObdSignal().hashCode());
+        hashCode = prime * hashCode + ((getMessageSignal() == null) ? 0 : getMessageSignal().hashCode());
         return hashCode;
     }
 

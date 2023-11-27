@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Describes an Amazon FSx for NetApp ONTAP or Amazon FSx for OpenZFS volume.
+ * Describes an Amazon FSx volume.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/Volume" target="_top">AWS API Documentation</a>

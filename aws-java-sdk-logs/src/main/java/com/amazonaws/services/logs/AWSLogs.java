@@ -240,9 +240,9 @@ public interface AWSLogs {
      * </p>
      * <p>
      * Only some Amazon Web Services services support being configured as a delivery source using this operation. These
-     * services are listed as <b>Supported [V2 Permissions]</b> in the table at <a href=
-     * "https://docs.aws.amazon.com/ AmazonCloudWatch/latest/logs/AWS-logs-and-resource-policy.html#AWS-vended-logs-permissions"
-     * >Enabling logging from Amazon Web Services services.</a>
+     * services are listed as <b>Supported [V2 Permissions]</b> in the table at <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/AWS-logs-and-resource-policy.html">Enabling
+     * logging from Amazon Web Services services.</a>
      * </p>
      * <p>
      * A delivery destination can represent a log group in CloudWatch Logs, an Amazon S3 bucket, or a delivery stream in
@@ -367,6 +367,63 @@ public interface AWSLogs {
      *      Documentation</a>
      */
     CreateExportTaskResult createExportTask(CreateExportTaskRequest createExportTaskRequest);
+
+    /**
+     * <p>
+     * Creates an <i>anomaly detector</i> that regularly scans one or more log groups and look for patterns and
+     * anomalies in the logs.
+     * </p>
+     * <p>
+     * An anomaly detector can help surface issues by automatically discovering anomalies in your log event traffic. An
+     * anomaly detector uses machine learning algorithms to scan log events and find <i>patterns</i>. A pattern is a
+     * shared text structure that recurs among your log fields. Patterns provide a useful tool for analyzing large sets
+     * of logs because a large number of log events can often be compressed into a few patterns.
+     * </p>
+     * <p>
+     * The anomaly detector uses pattern recognition to find <code>anomalies</code>, which are unusual log events. It
+     * uses the <code>evaluationFrequency</code> to compare current log events and patterns with trained baselines.
+     * </p>
+     * <p>
+     * Fields within a pattern are called <i>tokens</i>. Fields that vary within a pattern, such as a request ID or
+     * timestamp, are referred to as <i>dynamic tokens</i> and represented by <code>&lt;*&gt;</code>.
+     * </p>
+     * <p>
+     * The following is an example of a pattern:
+     * </p>
+     * <p>
+     * <code>[INFO] Request time: &lt;*&gt; ms</code>
+     * </p>
+     * <p>
+     * This pattern represents log events like <code>[INFO] Request time: 327 ms</code> and other similar log events
+     * that differ only by the number, in this csse 327. When the pattern is displayed, the different numbers are
+     * replaced by <code>&lt;*&gt;</code>
+     * </p>
+     * <note>
+     * <p>
+     * Any parts of log events that are masked as sensitive data are not scanned for anomalies. For more information
+     * about masking sensitive data, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/mask-sensitive-log-data.html">Help protect
+     * sensitive log data with masking</a>.
+     * </p>
+     * </note>
+     * 
+     * @param createLogAnomalyDetectorRequest
+     * @return Result of the CreateLogAnomalyDetector operation returned by the service.
+     * @throws InvalidParameterException
+     *         A parameter is specified incorrectly.
+     * @throws ResourceNotFoundException
+     *         The specified resource does not exist.
+     * @throws ServiceUnavailableException
+     *         The service cannot complete the request.
+     * @throws OperationAbortedException
+     *         Multiple concurrent requests to update the same resource were in conflict.
+     * @throws LimitExceededException
+     *         You have reached the maximum number of resources that can be created.
+     * @sample AWSLogs.CreateLogAnomalyDetector
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/CreateLogAnomalyDetector" target="_top">AWS
+     *      API Documentation</a>
+     */
+    CreateLogAnomalyDetectorResult createLogAnomalyDetector(CreateLogAnomalyDetectorRequest createLogAnomalyDetectorRequest);
 
     /**
      * <p>
@@ -667,6 +724,27 @@ public interface AWSLogs {
      *      Documentation</a>
      */
     DeleteDestinationResult deleteDestination(DeleteDestinationRequest deleteDestinationRequest);
+
+    /**
+     * <p>
+     * Deletes the specified CloudWatch Logs anomaly detector.
+     * </p>
+     * 
+     * @param deleteLogAnomalyDetectorRequest
+     * @return Result of the DeleteLogAnomalyDetector operation returned by the service.
+     * @throws InvalidParameterException
+     *         A parameter is specified incorrectly.
+     * @throws ResourceNotFoundException
+     *         The specified resource does not exist.
+     * @throws ServiceUnavailableException
+     *         The service cannot complete the request.
+     * @throws OperationAbortedException
+     *         Multiple concurrent requests to update the same resource were in conflict.
+     * @sample AWSLogs.DeleteLogAnomalyDetector
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/DeleteLogAnomalyDetector" target="_top">AWS
+     *      API Documentation</a>
+     */
+    DeleteLogAnomalyDetectorResult deleteLogAnomalyDetector(DeleteLogAnomalyDetectorRequest deleteLogAnomalyDetectorRequest);
 
     /**
      * <p>
@@ -1334,6 +1412,27 @@ public interface AWSLogs {
 
     /**
      * <p>
+     * Retrieves information about the log anomaly detector that you specify.
+     * </p>
+     * 
+     * @param getLogAnomalyDetectorRequest
+     * @return Result of the GetLogAnomalyDetector operation returned by the service.
+     * @throws InvalidParameterException
+     *         A parameter is specified incorrectly.
+     * @throws ResourceNotFoundException
+     *         The specified resource does not exist.
+     * @throws ServiceUnavailableException
+     *         The service cannot complete the request.
+     * @throws OperationAbortedException
+     *         Multiple concurrent requests to update the same resource were in conflict.
+     * @sample AWSLogs.GetLogAnomalyDetector
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/GetLogAnomalyDetector" target="_top">AWS API
+     *      Documentation</a>
+     */
+    GetLogAnomalyDetectorResult getLogAnomalyDetector(GetLogAnomalyDetectorRequest getLogAnomalyDetectorRequest);
+
+    /**
+     * <p>
      * Lists log events from the specified log stream. You can list all of the log events or filter using a time range.
      * </p>
      * <p>
@@ -1476,6 +1575,49 @@ public interface AWSLogs {
      *      Documentation</a>
      */
     GetQueryResultsResult getQueryResults(GetQueryResultsRequest getQueryResultsRequest);
+
+    /**
+     * <p>
+     * Returns a list of anomalies that log anomaly detectors have found. For details about the structure format of each
+     * anomaly object that is returned, see the example in this section.
+     * </p>
+     * 
+     * @param listAnomaliesRequest
+     * @return Result of the ListAnomalies operation returned by the service.
+     * @throws InvalidParameterException
+     *         A parameter is specified incorrectly.
+     * @throws ResourceNotFoundException
+     *         The specified resource does not exist.
+     * @throws ServiceUnavailableException
+     *         The service cannot complete the request.
+     * @throws OperationAbortedException
+     *         Multiple concurrent requests to update the same resource were in conflict.
+     * @sample AWSLogs.ListAnomalies
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/ListAnomalies" target="_top">AWS API
+     *      Documentation</a>
+     */
+    ListAnomaliesResult listAnomalies(ListAnomaliesRequest listAnomaliesRequest);
+
+    /**
+     * <p>
+     * Retrieves a list of the log anomaly detectors in the account.
+     * </p>
+     * 
+     * @param listLogAnomalyDetectorsRequest
+     * @return Result of the ListLogAnomalyDetectors operation returned by the service.
+     * @throws InvalidParameterException
+     *         A parameter is specified incorrectly.
+     * @throws ResourceNotFoundException
+     *         The specified resource does not exist.
+     * @throws ServiceUnavailableException
+     *         The service cannot complete the request.
+     * @throws OperationAbortedException
+     *         Multiple concurrent requests to update the same resource were in conflict.
+     * @sample AWSLogs.ListLogAnomalyDetectors
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/ListLogAnomalyDetectors" target="_top">AWS
+     *      API Documentation</a>
+     */
+    ListLogAnomalyDetectorsResult listLogAnomalyDetectors(ListLogAnomalyDetectorsRequest listLogAnomalyDetectorsRequest);
 
     /**
      * <p>
@@ -1685,9 +1827,9 @@ public interface AWSLogs {
      * </p>
      * <p>
      * Only some Amazon Web Services services support being configured as a delivery source. These services are listed
-     * as <b>Supported [V2 Permissions]</b> in the table at <a href=
-     * "https://docs.aws.amazon.com/ AmazonCloudWatch/latest/logs/AWS-logs-and-resource-policy.html#AWS-vended-logs-permissions"
-     * >Enabling logging from Amazon Web Services services.</a>
+     * as <b>Supported [V2 Permissions]</b> in the table at <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/AWS-logs-and-resource-policy.html">Enabling
+     * logging from Amazon Web Services services.</a>
      * </p>
      * <p>
      * If you use this operation to update an existing delivery destination, all the current delivery destination
@@ -1754,9 +1896,9 @@ public interface AWSLogs {
      * </ul>
      * <p>
      * Only some Amazon Web Services services support being configured as a delivery source. These services are listed
-     * as <b>Supported [V2 Permissions]</b> in the table at <a href=
-     * "https://docs.aws.amazon.com/ AmazonCloudWatch/latest/logs/AWS-logs-and-resource-policy.html#AWS-vended-logs-permissions"
-     * >Enabling logging from Amazon Web Services services.</a>
+     * as <b>Supported [V2 Permissions]</b> in the table at <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/AWS-logs-and-resource-policy.html">Enabling
+     * logging from Amazon Web Services services.</a>
      * </p>
      * <p>
      * The contents of the policy must include two statements. One statement enables general logs delivery, and the
@@ -1828,9 +1970,9 @@ public interface AWSLogs {
      * </p>
      * <p>
      * Only some Amazon Web Services services support being configured as a delivery source. These services are listed
-     * as <b>Supported [V2 Permissions]</b> in the table at <a href=
-     * "https://docs.aws.amazon.com/ AmazonCloudWatch/latest/logs/AWS-logs-and-resource-policy.html#AWS-vended-logs-permissions"
-     * >Enabling logging from Amazon Web Services services.</a>
+     * as <b>Supported [V2 Permissions]</b> in the table at <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/AWS-logs-and-resource-policy.html">Enabling
+     * logging from Amazon Web Services services.</a>
      * </p>
      * <p>
      * If you use this operation to update an existing delivery source, all the current delivery source parameters are
@@ -2461,6 +2603,59 @@ public interface AWSLogs {
      *      Documentation</a>
      */
     UntagResourceResult untagResource(UntagResourceRequest untagResourceRequest);
+
+    /**
+     * <p>
+     * Use this operation to <i>suppress</i> anomaly detection for a specified anomaly or pattern. If you suppress an
+     * anomaly, CloudWatch Logs won’t report new occurrences of that anomaly and won't update that anomaly with new
+     * data. If you suppress a pattern, CloudWatch Logs won’t report any anomalies related to that pattern.
+     * </p>
+     * <p>
+     * You must specify either <code>anomalyId</code> or <code>patternId</code>, but you can't specify both parameters
+     * in the same operation.
+     * </p>
+     * <p>
+     * If you have previously used this operation to suppress detection of a pattern or anomaly, you can use it again to
+     * cause CloudWatch Logs to end the suppression. To do this, use this operation and specify the anomaly or pattern
+     * to stop suppressing, and omit the <code>suppressionType</code> and <code>suppressionPeriod</code> parameters.
+     * </p>
+     * 
+     * @param updateAnomalyRequest
+     * @return Result of the UpdateAnomaly operation returned by the service.
+     * @throws InvalidParameterException
+     *         A parameter is specified incorrectly.
+     * @throws ResourceNotFoundException
+     *         The specified resource does not exist.
+     * @throws ServiceUnavailableException
+     *         The service cannot complete the request.
+     * @throws OperationAbortedException
+     *         Multiple concurrent requests to update the same resource were in conflict.
+     * @sample AWSLogs.UpdateAnomaly
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/UpdateAnomaly" target="_top">AWS API
+     *      Documentation</a>
+     */
+    UpdateAnomalyResult updateAnomaly(UpdateAnomalyRequest updateAnomalyRequest);
+
+    /**
+     * <p>
+     * Updates an existing log anomaly detector.
+     * </p>
+     * 
+     * @param updateLogAnomalyDetectorRequest
+     * @return Result of the UpdateLogAnomalyDetector operation returned by the service.
+     * @throws InvalidParameterException
+     *         A parameter is specified incorrectly.
+     * @throws ResourceNotFoundException
+     *         The specified resource does not exist.
+     * @throws ServiceUnavailableException
+     *         The service cannot complete the request.
+     * @throws OperationAbortedException
+     *         Multiple concurrent requests to update the same resource were in conflict.
+     * @sample AWSLogs.UpdateLogAnomalyDetector
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/UpdateLogAnomalyDetector" target="_top">AWS
+     *      API Documentation</a>
+     */
+    UpdateLogAnomalyDetectorResult updateLogAnomalyDetector(UpdateLogAnomalyDetectorRequest updateLogAnomalyDetectorRequest);
 
     /**
      * Shuts down this client object, releasing any resources that might be held open. This is an optional method, and

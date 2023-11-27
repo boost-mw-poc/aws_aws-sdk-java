@@ -35,7 +35,11 @@ public class ServerException extends com.amazonaws.services.eks.model.AmazonEKSE
      * </p>
      */
     private String nodegroupName;
-
+    /**
+     * <p>
+     * The Amazon EKS add-on name associated with the exception.
+     * </p>
+     */
     private String addonName;
     /**
      * <p>
@@ -139,7 +143,12 @@ public class ServerException extends com.amazonaws.services.eks.model.AmazonEKSE
     }
 
     /**
+     * <p>
+     * The Amazon EKS add-on name associated with the exception.
+     * </p>
+     * 
      * @param addonName
+     *        The Amazon EKS add-on name associated with the exception.
      */
 
     @com.fasterxml.jackson.annotation.JsonProperty("addonName")
@@ -148,7 +157,11 @@ public class ServerException extends com.amazonaws.services.eks.model.AmazonEKSE
     }
 
     /**
-     * @return
+     * <p>
+     * The Amazon EKS add-on name associated with the exception.
+     * </p>
+     * 
+     * @return The Amazon EKS add-on name associated with the exception.
      */
 
     @com.fasterxml.jackson.annotation.JsonProperty("addonName")
@@ -157,7 +170,12 @@ public class ServerException extends com.amazonaws.services.eks.model.AmazonEKSE
     }
 
     /**
+     * <p>
+     * The Amazon EKS add-on name associated with the exception.
+     * </p>
+     * 
      * @param addonName
+     *        The Amazon EKS add-on name associated with the exception.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

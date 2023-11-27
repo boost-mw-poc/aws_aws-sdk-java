@@ -43,6 +43,8 @@ public class AccessorMarshaller {
             .marshallLocationName("Arn").build();
     private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Tags").build();
+    private static final MarshallingInfo<String> NETWORKTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("NetworkType").build();
 
     private static final AccessorMarshaller instance = new AccessorMarshaller();
 
@@ -67,6 +69,7 @@ public class AccessorMarshaller {
             protocolMarshaller.marshall(accessor.getCreationDate(), CREATIONDATE_BINDING);
             protocolMarshaller.marshall(accessor.getArn(), ARN_BINDING);
             protocolMarshaller.marshall(accessor.getTags(), TAGS_BINDING);
+            protocolMarshaller.marshall(accessor.getNetworkType(), NETWORKTYPE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

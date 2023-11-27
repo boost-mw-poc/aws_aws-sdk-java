@@ -33,6 +33,8 @@ public class ConfigurationRecorderMarshaller {
             .marshallLocationName("roleARN").build();
     private static final MarshallingInfo<StructuredPojo> RECORDINGGROUP_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("recordingGroup").build();
+    private static final MarshallingInfo<StructuredPojo> RECORDINGMODE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("recordingMode").build();
 
     private static final ConfigurationRecorderMarshaller instance = new ConfigurationRecorderMarshaller();
 
@@ -53,6 +55,7 @@ public class ConfigurationRecorderMarshaller {
             protocolMarshaller.marshall(configurationRecorder.getName(), NAME_BINDING);
             protocolMarshaller.marshall(configurationRecorder.getRoleARN(), ROLEARN_BINDING);
             protocolMarshaller.marshall(configurationRecorder.getRecordingGroup(), RECORDINGGROUP_BINDING);
+            protocolMarshaller.marshall(configurationRecorder.getRecordingMode(), RECORDINGMODE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

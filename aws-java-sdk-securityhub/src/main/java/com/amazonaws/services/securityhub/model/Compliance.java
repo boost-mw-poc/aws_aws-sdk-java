@@ -95,6 +95,12 @@ public class Compliance implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private java.util.List<AssociatedStandard> associatedStandards;
+    /**
+     * <p>
+     * An object that includes security control parameter names and values.
+     * </p>
+     */
+    private java.util.List<SecurityControlParameter> securityControlParameters;
 
     /**
      * <p>
@@ -688,6 +694,76 @@ public class Compliance implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * An object that includes security control parameter names and values.
+     * </p>
+     * 
+     * @return An object that includes security control parameter names and values.
+     */
+
+    public java.util.List<SecurityControlParameter> getSecurityControlParameters() {
+        return securityControlParameters;
+    }
+
+    /**
+     * <p>
+     * An object that includes security control parameter names and values.
+     * </p>
+     * 
+     * @param securityControlParameters
+     *        An object that includes security control parameter names and values.
+     */
+
+    public void setSecurityControlParameters(java.util.Collection<SecurityControlParameter> securityControlParameters) {
+        if (securityControlParameters == null) {
+            this.securityControlParameters = null;
+            return;
+        }
+
+        this.securityControlParameters = new java.util.ArrayList<SecurityControlParameter>(securityControlParameters);
+    }
+
+    /**
+     * <p>
+     * An object that includes security control parameter names and values.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setSecurityControlParameters(java.util.Collection)} or
+     * {@link #withSecurityControlParameters(java.util.Collection)} if you want to override the existing values.
+     * </p>
+     * 
+     * @param securityControlParameters
+     *        An object that includes security control parameter names and values.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Compliance withSecurityControlParameters(SecurityControlParameter... securityControlParameters) {
+        if (this.securityControlParameters == null) {
+            setSecurityControlParameters(new java.util.ArrayList<SecurityControlParameter>(securityControlParameters.length));
+        }
+        for (SecurityControlParameter ele : securityControlParameters) {
+            this.securityControlParameters.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * An object that includes security control parameter names and values.
+     * </p>
+     * 
+     * @param securityControlParameters
+     *        An object that includes security control parameter names and values.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Compliance withSecurityControlParameters(java.util.Collection<SecurityControlParameter> securityControlParameters) {
+        setSecurityControlParameters(securityControlParameters);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -708,7 +784,9 @@ public class Compliance implements Serializable, Cloneable, StructuredPojo {
         if (getSecurityControlId() != null)
             sb.append("SecurityControlId: ").append(getSecurityControlId()).append(",");
         if (getAssociatedStandards() != null)
-            sb.append("AssociatedStandards: ").append(getAssociatedStandards());
+            sb.append("AssociatedStandards: ").append(getAssociatedStandards()).append(",");
+        if (getSecurityControlParameters() != null)
+            sb.append("SecurityControlParameters: ").append(getSecurityControlParameters());
         sb.append("}");
         return sb.toString();
     }
@@ -743,6 +821,10 @@ public class Compliance implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getAssociatedStandards() != null && other.getAssociatedStandards().equals(this.getAssociatedStandards()) == false)
             return false;
+        if (other.getSecurityControlParameters() == null ^ this.getSecurityControlParameters() == null)
+            return false;
+        if (other.getSecurityControlParameters() != null && other.getSecurityControlParameters().equals(this.getSecurityControlParameters()) == false)
+            return false;
         return true;
     }
 
@@ -756,6 +838,7 @@ public class Compliance implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getStatusReasons() == null) ? 0 : getStatusReasons().hashCode());
         hashCode = prime * hashCode + ((getSecurityControlId() == null) ? 0 : getSecurityControlId().hashCode());
         hashCode = prime * hashCode + ((getAssociatedStandards() == null) ? 0 : getAssociatedStandards().hashCode());
+        hashCode = prime * hashCode + ((getSecurityControlParameters() == null) ? 0 : getSecurityControlParameters().hashCode());
         return hashCode;
     }
 

@@ -38,9 +38,7 @@ public class SecretListEntry implements Serializable, Cloneable, StructuredPojo 
     private String aRN;
     /**
      * <p>
-     * The friendly name of the secret. You can use forward slashes in the name to represent a path hierarchy. For
-     * example, <code>/prod/databases/dbserver1</code> could represent the secret for a server named
-     * <code>dbserver1</code> in the folder <code>databases</code> in the folder <code>prod</code>.
+     * The friendly name of the secret.
      * </p>
      */
     private String name;
@@ -199,15 +197,11 @@ public class SecretListEntry implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The friendly name of the secret. You can use forward slashes in the name to represent a path hierarchy. For
-     * example, <code>/prod/databases/dbserver1</code> could represent the secret for a server named
-     * <code>dbserver1</code> in the folder <code>databases</code> in the folder <code>prod</code>.
+     * The friendly name of the secret.
      * </p>
      * 
      * @param name
-     *        The friendly name of the secret. You can use forward slashes in the name to represent a path hierarchy.
-     *        For example, <code>/prod/databases/dbserver1</code> could represent the secret for a server named
-     *        <code>dbserver1</code> in the folder <code>databases</code> in the folder <code>prod</code>.
+     *        The friendly name of the secret.
      */
 
     public void setName(String name) {
@@ -216,14 +210,10 @@ public class SecretListEntry implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The friendly name of the secret. You can use forward slashes in the name to represent a path hierarchy. For
-     * example, <code>/prod/databases/dbserver1</code> could represent the secret for a server named
-     * <code>dbserver1</code> in the folder <code>databases</code> in the folder <code>prod</code>.
+     * The friendly name of the secret.
      * </p>
      * 
-     * @return The friendly name of the secret. You can use forward slashes in the name to represent a path hierarchy.
-     *         For example, <code>/prod/databases/dbserver1</code> could represent the secret for a server named
-     *         <code>dbserver1</code> in the folder <code>databases</code> in the folder <code>prod</code>.
+     * @return The friendly name of the secret.
      */
 
     public String getName() {
@@ -232,15 +222,11 @@ public class SecretListEntry implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The friendly name of the secret. You can use forward slashes in the name to represent a path hierarchy. For
-     * example, <code>/prod/databases/dbserver1</code> could represent the secret for a server named
-     * <code>dbserver1</code> in the folder <code>databases</code> in the folder <code>prod</code>.
+     * The friendly name of the secret.
      * </p>
      * 
      * @param name
-     *        The friendly name of the secret. You can use forward slashes in the name to represent a path hierarchy.
-     *        For example, <code>/prod/databases/dbserver1</code> could represent the secret for a server named
-     *        <code>dbserver1</code> in the folder <code>databases</code> in the folder <code>prod</code>.
+     *        The friendly name of the secret.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

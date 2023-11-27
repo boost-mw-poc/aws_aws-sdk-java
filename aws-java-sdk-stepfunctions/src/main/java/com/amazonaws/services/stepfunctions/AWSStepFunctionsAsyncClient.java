@@ -1304,6 +1304,39 @@ public class AWSStepFunctionsAsyncClient extends AWSStepFunctionsClient implemen
     }
 
     @Override
+    public java.util.concurrent.Future<TestStateResult> testStateAsync(TestStateRequest request) {
+
+        return testStateAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<TestStateResult> testStateAsync(final TestStateRequest request,
+            final com.amazonaws.handlers.AsyncHandler<TestStateRequest, TestStateResult> asyncHandler) {
+        final TestStateRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<TestStateResult>() {
+            @Override
+            public TestStateResult call() throws Exception {
+                TestStateResult result = null;
+
+                try {
+                    result = executeTestState(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<UntagResourceResult> untagResourceAsync(UntagResourceRequest request) {
 
         return untagResourceAsync(request, null);

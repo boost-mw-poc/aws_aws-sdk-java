@@ -25,7 +25,11 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class UpdateEksAnywhereSubscriptionRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
-    /** <p/> */
+    /**
+     * <p>
+     * The ID of the subscription.
+     * </p>
+     */
     private String id;
     /**
      * <p>
@@ -41,9 +45,12 @@ public class UpdateEksAnywhereSubscriptionRequest extends com.amazonaws.AmazonWe
     private String clientRequestToken;
 
     /**
-     * <p/>
+     * <p>
+     * The ID of the subscription.
+     * </p>
      * 
      * @param id
+     *        The ID of the subscription.
      */
 
     public void setId(String id) {
@@ -51,9 +58,11 @@ public class UpdateEksAnywhereSubscriptionRequest extends com.amazonaws.AmazonWe
     }
 
     /**
-     * <p/>
+     * <p>
+     * The ID of the subscription.
+     * </p>
      * 
-     * @return
+     * @return The ID of the subscription.
      */
 
     public String getId() {
@@ -61,9 +70,12 @@ public class UpdateEksAnywhereSubscriptionRequest extends com.amazonaws.AmazonWe
     }
 
     /**
-     * <p/>
+     * <p>
+     * The ID of the subscription.
+     * </p>
      * 
      * @param id
+     *        The ID of the subscription.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

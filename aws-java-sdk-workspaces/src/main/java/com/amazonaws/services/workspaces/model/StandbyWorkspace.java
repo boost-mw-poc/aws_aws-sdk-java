@@ -52,6 +52,12 @@ public class StandbyWorkspace implements Serializable, Cloneable, StructuredPojo
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<Tag> tags;
+    /**
+     * <p>
+     * Indicates whether data replication is enabled, and if enabled, the type of data replication.
+     * </p>
+     */
+    private String dataReplication;
 
     /**
      * <p>
@@ -247,6 +253,65 @@ public class StandbyWorkspace implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * <p>
+     * Indicates whether data replication is enabled, and if enabled, the type of data replication.
+     * </p>
+     * 
+     * @param dataReplication
+     *        Indicates whether data replication is enabled, and if enabled, the type of data replication.
+     * @see DataReplication
+     */
+
+    public void setDataReplication(String dataReplication) {
+        this.dataReplication = dataReplication;
+    }
+
+    /**
+     * <p>
+     * Indicates whether data replication is enabled, and if enabled, the type of data replication.
+     * </p>
+     * 
+     * @return Indicates whether data replication is enabled, and if enabled, the type of data replication.
+     * @see DataReplication
+     */
+
+    public String getDataReplication() {
+        return this.dataReplication;
+    }
+
+    /**
+     * <p>
+     * Indicates whether data replication is enabled, and if enabled, the type of data replication.
+     * </p>
+     * 
+     * @param dataReplication
+     *        Indicates whether data replication is enabled, and if enabled, the type of data replication.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see DataReplication
+     */
+
+    public StandbyWorkspace withDataReplication(String dataReplication) {
+        setDataReplication(dataReplication);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Indicates whether data replication is enabled, and if enabled, the type of data replication.
+     * </p>
+     * 
+     * @param dataReplication
+     *        Indicates whether data replication is enabled, and if enabled, the type of data replication.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see DataReplication
+     */
+
+    public StandbyWorkspace withDataReplication(DataReplication dataReplication) {
+        this.dataReplication = dataReplication.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -265,7 +330,9 @@ public class StandbyWorkspace implements Serializable, Cloneable, StructuredPojo
         if (getDirectoryId() != null)
             sb.append("DirectoryId: ").append(getDirectoryId()).append(",");
         if (getTags() != null)
-            sb.append("Tags: ").append(getTags());
+            sb.append("Tags: ").append(getTags()).append(",");
+        if (getDataReplication() != null)
+            sb.append("DataReplication: ").append(getDataReplication());
         sb.append("}");
         return sb.toString();
     }
@@ -296,6 +363,10 @@ public class StandbyWorkspace implements Serializable, Cloneable, StructuredPojo
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
             return false;
+        if (other.getDataReplication() == null ^ this.getDataReplication() == null)
+            return false;
+        if (other.getDataReplication() != null && other.getDataReplication().equals(this.getDataReplication()) == false)
+            return false;
         return true;
     }
 
@@ -308,6 +379,7 @@ public class StandbyWorkspace implements Serializable, Cloneable, StructuredPojo
         hashCode = prime * hashCode + ((getVolumeEncryptionKey() == null) ? 0 : getVolumeEncryptionKey().hashCode());
         hashCode = prime * hashCode + ((getDirectoryId() == null) ? 0 : getDirectoryId().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
+        hashCode = prime * hashCode + ((getDataReplication() == null) ? 0 : getDataReplication().hashCode());
         return hashCode;
     }
 

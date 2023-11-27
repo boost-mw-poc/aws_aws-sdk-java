@@ -19,11 +19,10 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * A collection of attributes that are applied to all active Security Hub-aggregated findings and that result in a
- * subset of findings that are included in this insight.
+ * A collection of filters that are applied to all active findings aggregated by Security Hub.
  * </p>
  * <p>
- * You can filter by up to 10 finding attributes. For each attribute, you can provide up to 20 filter values.
+ * You can filter by up to ten finding attributes. For each attribute, you can provide up to 20 filter values.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/AwsSecurityFindingFilters"
@@ -778,6 +777,32 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
      * </p>
      */
     private java.util.List<StringFilter> complianceAssociatedStandardsId;
+    /**
+     * <p>
+     * Indicates whether a software vulnerability in your environment has a known exploit. You can filter findings by
+     * this field only if you use Security Hub and Amazon Inspector.
+     * </p>
+     */
+    private java.util.List<StringFilter> vulnerabilitiesExploitAvailable;
+    /**
+     * <p>
+     * Indicates whether a vulnerability is fixed in a newer version of the affected software packages. You can filter
+     * findings by this field only if you use Security Hub and Amazon Inspector.
+     * </p>
+     */
+    private java.util.List<StringFilter> vulnerabilitiesFixAvailable;
+    /**
+     * <p>
+     * The name of a security control parameter.
+     * </p>
+     */
+    private java.util.List<StringFilter> complianceSecurityControlParametersName;
+    /**
+     * <p>
+     * The current value of a security control parameter.
+     * </p>
+     */
+    private java.util.List<StringFilter> complianceSecurityControlParametersValue;
 
     /**
      * <p>
@@ -8853,6 +8878,304 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
     }
 
     /**
+     * <p>
+     * Indicates whether a software vulnerability in your environment has a known exploit. You can filter findings by
+     * this field only if you use Security Hub and Amazon Inspector.
+     * </p>
+     * 
+     * @return Indicates whether a software vulnerability in your environment has a known exploit. You can filter
+     *         findings by this field only if you use Security Hub and Amazon Inspector.
+     */
+
+    public java.util.List<StringFilter> getVulnerabilitiesExploitAvailable() {
+        return vulnerabilitiesExploitAvailable;
+    }
+
+    /**
+     * <p>
+     * Indicates whether a software vulnerability in your environment has a known exploit. You can filter findings by
+     * this field only if you use Security Hub and Amazon Inspector.
+     * </p>
+     * 
+     * @param vulnerabilitiesExploitAvailable
+     *        Indicates whether a software vulnerability in your environment has a known exploit. You can filter
+     *        findings by this field only if you use Security Hub and Amazon Inspector.
+     */
+
+    public void setVulnerabilitiesExploitAvailable(java.util.Collection<StringFilter> vulnerabilitiesExploitAvailable) {
+        if (vulnerabilitiesExploitAvailable == null) {
+            this.vulnerabilitiesExploitAvailable = null;
+            return;
+        }
+
+        this.vulnerabilitiesExploitAvailable = new java.util.ArrayList<StringFilter>(vulnerabilitiesExploitAvailable);
+    }
+
+    /**
+     * <p>
+     * Indicates whether a software vulnerability in your environment has a known exploit. You can filter findings by
+     * this field only if you use Security Hub and Amazon Inspector.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setVulnerabilitiesExploitAvailable(java.util.Collection)} or
+     * {@link #withVulnerabilitiesExploitAvailable(java.util.Collection)} if you want to override the existing values.
+     * </p>
+     * 
+     * @param vulnerabilitiesExploitAvailable
+     *        Indicates whether a software vulnerability in your environment has a known exploit. You can filter
+     *        findings by this field only if you use Security Hub and Amazon Inspector.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AwsSecurityFindingFilters withVulnerabilitiesExploitAvailable(StringFilter... vulnerabilitiesExploitAvailable) {
+        if (this.vulnerabilitiesExploitAvailable == null) {
+            setVulnerabilitiesExploitAvailable(new java.util.ArrayList<StringFilter>(vulnerabilitiesExploitAvailable.length));
+        }
+        for (StringFilter ele : vulnerabilitiesExploitAvailable) {
+            this.vulnerabilitiesExploitAvailable.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * Indicates whether a software vulnerability in your environment has a known exploit. You can filter findings by
+     * this field only if you use Security Hub and Amazon Inspector.
+     * </p>
+     * 
+     * @param vulnerabilitiesExploitAvailable
+     *        Indicates whether a software vulnerability in your environment has a known exploit. You can filter
+     *        findings by this field only if you use Security Hub and Amazon Inspector.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AwsSecurityFindingFilters withVulnerabilitiesExploitAvailable(java.util.Collection<StringFilter> vulnerabilitiesExploitAvailable) {
+        setVulnerabilitiesExploitAvailable(vulnerabilitiesExploitAvailable);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Indicates whether a vulnerability is fixed in a newer version of the affected software packages. You can filter
+     * findings by this field only if you use Security Hub and Amazon Inspector.
+     * </p>
+     * 
+     * @return Indicates whether a vulnerability is fixed in a newer version of the affected software packages. You can
+     *         filter findings by this field only if you use Security Hub and Amazon Inspector.
+     */
+
+    public java.util.List<StringFilter> getVulnerabilitiesFixAvailable() {
+        return vulnerabilitiesFixAvailable;
+    }
+
+    /**
+     * <p>
+     * Indicates whether a vulnerability is fixed in a newer version of the affected software packages. You can filter
+     * findings by this field only if you use Security Hub and Amazon Inspector.
+     * </p>
+     * 
+     * @param vulnerabilitiesFixAvailable
+     *        Indicates whether a vulnerability is fixed in a newer version of the affected software packages. You can
+     *        filter findings by this field only if you use Security Hub and Amazon Inspector.
+     */
+
+    public void setVulnerabilitiesFixAvailable(java.util.Collection<StringFilter> vulnerabilitiesFixAvailable) {
+        if (vulnerabilitiesFixAvailable == null) {
+            this.vulnerabilitiesFixAvailable = null;
+            return;
+        }
+
+        this.vulnerabilitiesFixAvailable = new java.util.ArrayList<StringFilter>(vulnerabilitiesFixAvailable);
+    }
+
+    /**
+     * <p>
+     * Indicates whether a vulnerability is fixed in a newer version of the affected software packages. You can filter
+     * findings by this field only if you use Security Hub and Amazon Inspector.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setVulnerabilitiesFixAvailable(java.util.Collection)} or
+     * {@link #withVulnerabilitiesFixAvailable(java.util.Collection)} if you want to override the existing values.
+     * </p>
+     * 
+     * @param vulnerabilitiesFixAvailable
+     *        Indicates whether a vulnerability is fixed in a newer version of the affected software packages. You can
+     *        filter findings by this field only if you use Security Hub and Amazon Inspector.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AwsSecurityFindingFilters withVulnerabilitiesFixAvailable(StringFilter... vulnerabilitiesFixAvailable) {
+        if (this.vulnerabilitiesFixAvailable == null) {
+            setVulnerabilitiesFixAvailable(new java.util.ArrayList<StringFilter>(vulnerabilitiesFixAvailable.length));
+        }
+        for (StringFilter ele : vulnerabilitiesFixAvailable) {
+            this.vulnerabilitiesFixAvailable.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * Indicates whether a vulnerability is fixed in a newer version of the affected software packages. You can filter
+     * findings by this field only if you use Security Hub and Amazon Inspector.
+     * </p>
+     * 
+     * @param vulnerabilitiesFixAvailable
+     *        Indicates whether a vulnerability is fixed in a newer version of the affected software packages. You can
+     *        filter findings by this field only if you use Security Hub and Amazon Inspector.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AwsSecurityFindingFilters withVulnerabilitiesFixAvailable(java.util.Collection<StringFilter> vulnerabilitiesFixAvailable) {
+        setVulnerabilitiesFixAvailable(vulnerabilitiesFixAvailable);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The name of a security control parameter.
+     * </p>
+     * 
+     * @return The name of a security control parameter.
+     */
+
+    public java.util.List<StringFilter> getComplianceSecurityControlParametersName() {
+        return complianceSecurityControlParametersName;
+    }
+
+    /**
+     * <p>
+     * The name of a security control parameter.
+     * </p>
+     * 
+     * @param complianceSecurityControlParametersName
+     *        The name of a security control parameter.
+     */
+
+    public void setComplianceSecurityControlParametersName(java.util.Collection<StringFilter> complianceSecurityControlParametersName) {
+        if (complianceSecurityControlParametersName == null) {
+            this.complianceSecurityControlParametersName = null;
+            return;
+        }
+
+        this.complianceSecurityControlParametersName = new java.util.ArrayList<StringFilter>(complianceSecurityControlParametersName);
+    }
+
+    /**
+     * <p>
+     * The name of a security control parameter.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setComplianceSecurityControlParametersName(java.util.Collection)} or
+     * {@link #withComplianceSecurityControlParametersName(java.util.Collection)} if you want to override the existing
+     * values.
+     * </p>
+     * 
+     * @param complianceSecurityControlParametersName
+     *        The name of a security control parameter.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AwsSecurityFindingFilters withComplianceSecurityControlParametersName(StringFilter... complianceSecurityControlParametersName) {
+        if (this.complianceSecurityControlParametersName == null) {
+            setComplianceSecurityControlParametersName(new java.util.ArrayList<StringFilter>(complianceSecurityControlParametersName.length));
+        }
+        for (StringFilter ele : complianceSecurityControlParametersName) {
+            this.complianceSecurityControlParametersName.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The name of a security control parameter.
+     * </p>
+     * 
+     * @param complianceSecurityControlParametersName
+     *        The name of a security control parameter.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AwsSecurityFindingFilters withComplianceSecurityControlParametersName(java.util.Collection<StringFilter> complianceSecurityControlParametersName) {
+        setComplianceSecurityControlParametersName(complianceSecurityControlParametersName);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The current value of a security control parameter.
+     * </p>
+     * 
+     * @return The current value of a security control parameter.
+     */
+
+    public java.util.List<StringFilter> getComplianceSecurityControlParametersValue() {
+        return complianceSecurityControlParametersValue;
+    }
+
+    /**
+     * <p>
+     * The current value of a security control parameter.
+     * </p>
+     * 
+     * @param complianceSecurityControlParametersValue
+     *        The current value of a security control parameter.
+     */
+
+    public void setComplianceSecurityControlParametersValue(java.util.Collection<StringFilter> complianceSecurityControlParametersValue) {
+        if (complianceSecurityControlParametersValue == null) {
+            this.complianceSecurityControlParametersValue = null;
+            return;
+        }
+
+        this.complianceSecurityControlParametersValue = new java.util.ArrayList<StringFilter>(complianceSecurityControlParametersValue);
+    }
+
+    /**
+     * <p>
+     * The current value of a security control parameter.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setComplianceSecurityControlParametersValue(java.util.Collection)} or
+     * {@link #withComplianceSecurityControlParametersValue(java.util.Collection)} if you want to override the existing
+     * values.
+     * </p>
+     * 
+     * @param complianceSecurityControlParametersValue
+     *        The current value of a security control parameter.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AwsSecurityFindingFilters withComplianceSecurityControlParametersValue(StringFilter... complianceSecurityControlParametersValue) {
+        if (this.complianceSecurityControlParametersValue == null) {
+            setComplianceSecurityControlParametersValue(new java.util.ArrayList<StringFilter>(complianceSecurityControlParametersValue.length));
+        }
+        for (StringFilter ele : complianceSecurityControlParametersValue) {
+            this.complianceSecurityControlParametersValue.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The current value of a security control parameter.
+     * </p>
+     * 
+     * @param complianceSecurityControlParametersValue
+     *        The current value of a security control parameter.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AwsSecurityFindingFilters withComplianceSecurityControlParametersValue(java.util.Collection<StringFilter> complianceSecurityControlParametersValue) {
+        setComplianceSecurityControlParametersValue(complianceSecurityControlParametersValue);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -9057,7 +9380,15 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
         if (getComplianceSecurityControlId() != null)
             sb.append("ComplianceSecurityControlId: ").append(getComplianceSecurityControlId()).append(",");
         if (getComplianceAssociatedStandardsId() != null)
-            sb.append("ComplianceAssociatedStandardsId: ").append(getComplianceAssociatedStandardsId());
+            sb.append("ComplianceAssociatedStandardsId: ").append(getComplianceAssociatedStandardsId()).append(",");
+        if (getVulnerabilitiesExploitAvailable() != null)
+            sb.append("VulnerabilitiesExploitAvailable: ").append(getVulnerabilitiesExploitAvailable()).append(",");
+        if (getVulnerabilitiesFixAvailable() != null)
+            sb.append("VulnerabilitiesFixAvailable: ").append(getVulnerabilitiesFixAvailable()).append(",");
+        if (getComplianceSecurityControlParametersName() != null)
+            sb.append("ComplianceSecurityControlParametersName: ").append(getComplianceSecurityControlParametersName()).append(",");
+        if (getComplianceSecurityControlParametersValue() != null)
+            sb.append("ComplianceSecurityControlParametersValue: ").append(getComplianceSecurityControlParametersValue());
         sb.append("}");
         return sb.toString();
     }
@@ -9480,6 +9811,25 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
         if (other.getComplianceAssociatedStandardsId() != null
                 && other.getComplianceAssociatedStandardsId().equals(this.getComplianceAssociatedStandardsId()) == false)
             return false;
+        if (other.getVulnerabilitiesExploitAvailable() == null ^ this.getVulnerabilitiesExploitAvailable() == null)
+            return false;
+        if (other.getVulnerabilitiesExploitAvailable() != null
+                && other.getVulnerabilitiesExploitAvailable().equals(this.getVulnerabilitiesExploitAvailable()) == false)
+            return false;
+        if (other.getVulnerabilitiesFixAvailable() == null ^ this.getVulnerabilitiesFixAvailable() == null)
+            return false;
+        if (other.getVulnerabilitiesFixAvailable() != null && other.getVulnerabilitiesFixAvailable().equals(this.getVulnerabilitiesFixAvailable()) == false)
+            return false;
+        if (other.getComplianceSecurityControlParametersName() == null ^ this.getComplianceSecurityControlParametersName() == null)
+            return false;
+        if (other.getComplianceSecurityControlParametersName() != null
+                && other.getComplianceSecurityControlParametersName().equals(this.getComplianceSecurityControlParametersName()) == false)
+            return false;
+        if (other.getComplianceSecurityControlParametersValue() == null ^ this.getComplianceSecurityControlParametersValue() == null)
+            return false;
+        if (other.getComplianceSecurityControlParametersValue() != null
+                && other.getComplianceSecurityControlParametersValue().equals(this.getComplianceSecurityControlParametersValue()) == false)
+            return false;
         return true;
     }
 
@@ -9587,6 +9937,10 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
         hashCode = prime * hashCode + ((getSample() == null) ? 0 : getSample().hashCode());
         hashCode = prime * hashCode + ((getComplianceSecurityControlId() == null) ? 0 : getComplianceSecurityControlId().hashCode());
         hashCode = prime * hashCode + ((getComplianceAssociatedStandardsId() == null) ? 0 : getComplianceAssociatedStandardsId().hashCode());
+        hashCode = prime * hashCode + ((getVulnerabilitiesExploitAvailable() == null) ? 0 : getVulnerabilitiesExploitAvailable().hashCode());
+        hashCode = prime * hashCode + ((getVulnerabilitiesFixAvailable() == null) ? 0 : getVulnerabilitiesFixAvailable().hashCode());
+        hashCode = prime * hashCode + ((getComplianceSecurityControlParametersName() == null) ? 0 : getComplianceSecurityControlParametersName().hashCode());
+        hashCode = prime * hashCode + ((getComplianceSecurityControlParametersValue() == null) ? 0 : getComplianceSecurityControlParametersValue().hashCode());
         return hashCode;
     }
 

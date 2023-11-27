@@ -670,6 +670,19 @@ public class AbstractAWSSecurityHubAsync extends AbstractAWSSecurityHub implemen
     }
 
     @Override
+    public java.util.concurrent.Future<GetSecurityControlDefinitionResult> getSecurityControlDefinitionAsync(GetSecurityControlDefinitionRequest request) {
+
+        return getSecurityControlDefinitionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetSecurityControlDefinitionResult> getSecurityControlDefinitionAsync(GetSecurityControlDefinitionRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetSecurityControlDefinitionRequest, GetSecurityControlDefinitionResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<InviteMembersResult> inviteMembersAsync(InviteMembersRequest request) {
 
         return inviteMembersAsync(request, null);
@@ -890,6 +903,19 @@ public class AbstractAWSSecurityHubAsync extends AbstractAWSSecurityHub implemen
     public java.util.concurrent.Future<UpdateOrganizationConfigurationResult> updateOrganizationConfigurationAsync(
             UpdateOrganizationConfigurationRequest request,
             com.amazonaws.handlers.AsyncHandler<UpdateOrganizationConfigurationRequest, UpdateOrganizationConfigurationResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateSecurityControlResult> updateSecurityControlAsync(UpdateSecurityControlRequest request) {
+
+        return updateSecurityControlAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateSecurityControlResult> updateSecurityControlAsync(UpdateSecurityControlRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateSecurityControlRequest, UpdateSecurityControlResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

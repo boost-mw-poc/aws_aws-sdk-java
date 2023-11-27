@@ -81,6 +81,29 @@ public class LogGroup implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> inheritedProperties;
+    /**
+     * <p>
+     * This specifies the log group class for this log group. There are two classes:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The <code>Standard</code> log class supports all CloudWatch Logs features.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The <code>Infrequent Access</code> log class supports a subset of CloudWatch Logs features and incurs lower
+     * costs.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For details about the features supported by each class, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CloudWatch_Logs_Log_Classes.html">Log classes</a>
+     * </p>
+     */
+    private String logGroupClass;
 
     /**
      * <p>
@@ -536,6 +559,201 @@ public class LogGroup implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * This specifies the log group class for this log group. There are two classes:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The <code>Standard</code> log class supports all CloudWatch Logs features.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The <code>Infrequent Access</code> log class supports a subset of CloudWatch Logs features and incurs lower
+     * costs.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For details about the features supported by each class, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CloudWatch_Logs_Log_Classes.html">Log classes</a>
+     * </p>
+     * 
+     * @param logGroupClass
+     *        This specifies the log group class for this log group. There are two classes:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        The <code>Standard</code> log class supports all CloudWatch Logs features.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The <code>Infrequent Access</code> log class supports a subset of CloudWatch Logs features and incurs
+     *        lower costs.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        For details about the features supported by each class, see <a
+     *        href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CloudWatch_Logs_Log_Classes.html">Log
+     *        classes</a>
+     * @see LogGroupClass
+     */
+
+    public void setLogGroupClass(String logGroupClass) {
+        this.logGroupClass = logGroupClass;
+    }
+
+    /**
+     * <p>
+     * This specifies the log group class for this log group. There are two classes:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The <code>Standard</code> log class supports all CloudWatch Logs features.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The <code>Infrequent Access</code> log class supports a subset of CloudWatch Logs features and incurs lower
+     * costs.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For details about the features supported by each class, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CloudWatch_Logs_Log_Classes.html">Log classes</a>
+     * </p>
+     * 
+     * @return This specifies the log group class for this log group. There are two classes:</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         The <code>Standard</code> log class supports all CloudWatch Logs features.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         The <code>Infrequent Access</code> log class supports a subset of CloudWatch Logs features and incurs
+     *         lower costs.
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         For details about the features supported by each class, see <a
+     *         href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CloudWatch_Logs_Log_Classes.html">Log
+     *         classes</a>
+     * @see LogGroupClass
+     */
+
+    public String getLogGroupClass() {
+        return this.logGroupClass;
+    }
+
+    /**
+     * <p>
+     * This specifies the log group class for this log group. There are two classes:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The <code>Standard</code> log class supports all CloudWatch Logs features.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The <code>Infrequent Access</code> log class supports a subset of CloudWatch Logs features and incurs lower
+     * costs.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For details about the features supported by each class, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CloudWatch_Logs_Log_Classes.html">Log classes</a>
+     * </p>
+     * 
+     * @param logGroupClass
+     *        This specifies the log group class for this log group. There are two classes:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        The <code>Standard</code> log class supports all CloudWatch Logs features.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The <code>Infrequent Access</code> log class supports a subset of CloudWatch Logs features and incurs
+     *        lower costs.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        For details about the features supported by each class, see <a
+     *        href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CloudWatch_Logs_Log_Classes.html">Log
+     *        classes</a>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see LogGroupClass
+     */
+
+    public LogGroup withLogGroupClass(String logGroupClass) {
+        setLogGroupClass(logGroupClass);
+        return this;
+    }
+
+    /**
+     * <p>
+     * This specifies the log group class for this log group. There are two classes:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The <code>Standard</code> log class supports all CloudWatch Logs features.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The <code>Infrequent Access</code> log class supports a subset of CloudWatch Logs features and incurs lower
+     * costs.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For details about the features supported by each class, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CloudWatch_Logs_Log_Classes.html">Log classes</a>
+     * </p>
+     * 
+     * @param logGroupClass
+     *        This specifies the log group class for this log group. There are two classes:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        The <code>Standard</code> log class supports all CloudWatch Logs features.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The <code>Infrequent Access</code> log class supports a subset of CloudWatch Logs features and incurs
+     *        lower costs.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        For details about the features supported by each class, see <a
+     *        href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CloudWatch_Logs_Log_Classes.html">Log
+     *        classes</a>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see LogGroupClass
+     */
+
+    public LogGroup withLogGroupClass(LogGroupClass logGroupClass) {
+        this.logGroupClass = logGroupClass.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -564,7 +782,9 @@ public class LogGroup implements Serializable, Cloneable, StructuredPojo {
         if (getDataProtectionStatus() != null)
             sb.append("DataProtectionStatus: ").append(getDataProtectionStatus()).append(",");
         if (getInheritedProperties() != null)
-            sb.append("InheritedProperties: ").append(getInheritedProperties());
+            sb.append("InheritedProperties: ").append(getInheritedProperties()).append(",");
+        if (getLogGroupClass() != null)
+            sb.append("LogGroupClass: ").append(getLogGroupClass());
         sb.append("}");
         return sb.toString();
     }
@@ -615,6 +835,10 @@ public class LogGroup implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getInheritedProperties() != null && other.getInheritedProperties().equals(this.getInheritedProperties()) == false)
             return false;
+        if (other.getLogGroupClass() == null ^ this.getLogGroupClass() == null)
+            return false;
+        if (other.getLogGroupClass() != null && other.getLogGroupClass().equals(this.getLogGroupClass()) == false)
+            return false;
         return true;
     }
 
@@ -632,6 +856,7 @@ public class LogGroup implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getKmsKeyId() == null) ? 0 : getKmsKeyId().hashCode());
         hashCode = prime * hashCode + ((getDataProtectionStatus() == null) ? 0 : getDataProtectionStatus().hashCode());
         hashCode = prime * hashCode + ((getInheritedProperties() == null) ? 0 : getInheritedProperties().hashCode());
+        hashCode = prime * hashCode + ((getLogGroupClass() == null) ? 0 : getLogGroupClass().hashCode());
         return hashCode;
     }
 

@@ -47,9 +47,8 @@ public class Accessor implements Serializable, Cloneable, StructuredPojo {
     private String type;
     /**
      * <p>
-     * The billing token is a property of the accessor. Use this token to make Ethereum API calls to your Ethereum node.
-     * The billing token is used to track your accessor object for billing Ethereum API requests made to your Ethereum
-     * nodes.
+     * The billing token is a property of the Accessor. Use this token to when making calls to the blockchain network.
+     * The billing token is used to track your accessor token for billing requests.
      * </p>
      */
     private String billingToken;
@@ -86,6 +85,12 @@ public class Accessor implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private java.util.Map<String, String> tags;
+    /**
+     * <p>
+     * The blockchain network that the Accessor token is created for.
+     * </p>
+     */
+    private String networkType;
 
     /**
      * <p>
@@ -220,15 +225,13 @@ public class Accessor implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The billing token is a property of the accessor. Use this token to make Ethereum API calls to your Ethereum node.
-     * The billing token is used to track your accessor object for billing Ethereum API requests made to your Ethereum
-     * nodes.
+     * The billing token is a property of the Accessor. Use this token to when making calls to the blockchain network.
+     * The billing token is used to track your accessor token for billing requests.
      * </p>
      * 
      * @param billingToken
-     *        The billing token is a property of the accessor. Use this token to make Ethereum API calls to your
-     *        Ethereum node. The billing token is used to track your accessor object for billing Ethereum API requests
-     *        made to your Ethereum nodes.
+     *        The billing token is a property of the Accessor. Use this token to when making calls to the blockchain
+     *        network. The billing token is used to track your accessor token for billing requests.
      */
 
     public void setBillingToken(String billingToken) {
@@ -237,14 +240,12 @@ public class Accessor implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The billing token is a property of the accessor. Use this token to make Ethereum API calls to your Ethereum node.
-     * The billing token is used to track your accessor object for billing Ethereum API requests made to your Ethereum
-     * nodes.
+     * The billing token is a property of the Accessor. Use this token to when making calls to the blockchain network.
+     * The billing token is used to track your accessor token for billing requests.
      * </p>
      * 
-     * @return The billing token is a property of the accessor. Use this token to make Ethereum API calls to your
-     *         Ethereum node. The billing token is used to track your accessor object for billing Ethereum API requests
-     *         made to your Ethereum nodes.
+     * @return The billing token is a property of the Accessor. Use this token to when making calls to the blockchain
+     *         network. The billing token is used to track your accessor token for billing requests.
      */
 
     public String getBillingToken() {
@@ -253,15 +254,13 @@ public class Accessor implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The billing token is a property of the accessor. Use this token to make Ethereum API calls to your Ethereum node.
-     * The billing token is used to track your accessor object for billing Ethereum API requests made to your Ethereum
-     * nodes.
+     * The billing token is a property of the Accessor. Use this token to when making calls to the blockchain network.
+     * The billing token is used to track your accessor token for billing requests.
      * </p>
      * 
      * @param billingToken
-     *        The billing token is a property of the accessor. Use this token to make Ethereum API calls to your
-     *        Ethereum node. The billing token is used to track your accessor object for billing Ethereum API requests
-     *        made to your Ethereum nodes.
+     *        The billing token is a property of the Accessor. Use this token to when making calls to the blockchain
+     *        network. The billing token is used to track your accessor token for billing requests.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -529,6 +528,65 @@ public class Accessor implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The blockchain network that the Accessor token is created for.
+     * </p>
+     * 
+     * @param networkType
+     *        The blockchain network that the Accessor token is created for.
+     * @see AccessorNetworkType
+     */
+
+    public void setNetworkType(String networkType) {
+        this.networkType = networkType;
+    }
+
+    /**
+     * <p>
+     * The blockchain network that the Accessor token is created for.
+     * </p>
+     * 
+     * @return The blockchain network that the Accessor token is created for.
+     * @see AccessorNetworkType
+     */
+
+    public String getNetworkType() {
+        return this.networkType;
+    }
+
+    /**
+     * <p>
+     * The blockchain network that the Accessor token is created for.
+     * </p>
+     * 
+     * @param networkType
+     *        The blockchain network that the Accessor token is created for.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see AccessorNetworkType
+     */
+
+    public Accessor withNetworkType(String networkType) {
+        setNetworkType(networkType);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The blockchain network that the Accessor token is created for.
+     * </p>
+     * 
+     * @param networkType
+     *        The blockchain network that the Accessor token is created for.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see AccessorNetworkType
+     */
+
+    public Accessor withNetworkType(AccessorNetworkType networkType) {
+        this.networkType = networkType.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -553,7 +611,9 @@ public class Accessor implements Serializable, Cloneable, StructuredPojo {
         if (getArn() != null)
             sb.append("Arn: ").append(getArn()).append(",");
         if (getTags() != null)
-            sb.append("Tags: ").append(getTags());
+            sb.append("Tags: ").append(getTags()).append(",");
+        if (getNetworkType() != null)
+            sb.append("NetworkType: ").append(getNetworkType());
         sb.append("}");
         return sb.toString();
     }
@@ -596,6 +656,10 @@ public class Accessor implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
             return false;
+        if (other.getNetworkType() == null ^ this.getNetworkType() == null)
+            return false;
+        if (other.getNetworkType() != null && other.getNetworkType().equals(this.getNetworkType()) == false)
+            return false;
         return true;
     }
 
@@ -611,6 +675,7 @@ public class Accessor implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getCreationDate() == null) ? 0 : getCreationDate().hashCode());
         hashCode = prime * hashCode + ((getArn() == null) ? 0 : getArn().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
+        hashCode = prime * hashCode + ((getNetworkType() == null) ? 0 : getNetworkType().hashCode());
         return hashCode;
     }
 

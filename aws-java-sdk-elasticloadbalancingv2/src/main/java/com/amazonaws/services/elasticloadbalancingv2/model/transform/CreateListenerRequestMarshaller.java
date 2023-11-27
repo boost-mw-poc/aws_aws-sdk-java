@@ -402,6 +402,25 @@ public class CreateListenerRequestMarshaller implements Marshaller<Request<Creat
             }
         }
 
+        {
+            MutualAuthenticationAttributes mutualAuthentication = createListenerRequest.getMutualAuthentication();
+            if (mutualAuthentication != null) {
+
+                if (mutualAuthentication.getMode() != null) {
+                    request.addParameter("MutualAuthentication.Mode", StringUtils.fromString(mutualAuthentication.getMode()));
+                }
+
+                if (mutualAuthentication.getTrustStoreArn() != null) {
+                    request.addParameter("MutualAuthentication.TrustStoreArn", StringUtils.fromString(mutualAuthentication.getTrustStoreArn()));
+                }
+
+                if (mutualAuthentication.getIgnoreClientCertificateExpiry() != null) {
+                    request.addParameter("MutualAuthentication.IgnoreClientCertificateExpiry",
+                            StringUtils.fromBoolean(mutualAuthentication.getIgnoreClientCertificateExpiry()));
+                }
+            }
+        }
+
         return request;
     }
 

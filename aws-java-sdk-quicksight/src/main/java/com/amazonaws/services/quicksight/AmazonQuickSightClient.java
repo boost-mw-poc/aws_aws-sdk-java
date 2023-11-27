@@ -2904,6 +2904,81 @@ public class AmazonQuickSightClient extends AmazonWebServiceClient implements Am
 
     /**
      * <p>
+     * Deletes all access scopes and authorized targets that are associated with a service from the Amazon QuickSight
+     * IAM Identity Center application.
+     * </p>
+     * <p>
+     * This operation is only supported for Amazon QuickSight accounts that use IAM Identity Center.
+     * </p>
+     * 
+     * @param deleteIdentityPropagationConfigRequest
+     * @return Result of the DeleteIdentityPropagationConfig operation returned by the service.
+     * @throws AccessDeniedException
+     *         You don't have access to this item. The provided credentials couldn't be validated. You might not be
+     *         authorized to carry out the request. Make sure that your account is authorized to use the Amazon
+     *         QuickSight service, that your policies have the correct permissions, and that you are using the correct
+     *         credentials.
+     * @throws InvalidParameterValueException
+     *         One or more parameters has a value that isn't valid.
+     * @throws ResourceNotFoundException
+     *         One or more resources can't be found.
+     * @throws ThrottlingException
+     *         Access is throttled.
+     * @throws InternalFailureException
+     *         An internal failure occurred.
+     * @sample AmazonQuickSight.DeleteIdentityPropagationConfig
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/DeleteIdentityPropagationConfig"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DeleteIdentityPropagationConfigResult deleteIdentityPropagationConfig(DeleteIdentityPropagationConfigRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteIdentityPropagationConfig(request);
+    }
+
+    @SdkInternalApi
+    final DeleteIdentityPropagationConfigResult executeDeleteIdentityPropagationConfig(
+            DeleteIdentityPropagationConfigRequest deleteIdentityPropagationConfigRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteIdentityPropagationConfigRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteIdentityPropagationConfigRequest> request = null;
+        Response<DeleteIdentityPropagationConfigResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteIdentityPropagationConfigRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(deleteIdentityPropagationConfigRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "QuickSight");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteIdentityPropagationConfig");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeleteIdentityPropagationConfigResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new DeleteIdentityPropagationConfigResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Deletes a namespace and the users and groups that are associated with the namespace. This is an asynchronous
      * process. Assets including dashboards, analyses, datasets and data sources are not deleted. To delete these
      * assets, you use the API operations for the relevant asset.
@@ -8418,6 +8493,79 @@ public class AmazonQuickSightClient extends AmazonWebServiceClient implements Am
 
     /**
      * <p>
+     * Lists all services and authorized targets that the Amazon QuickSight IAM Identity Center application can access.
+     * </p>
+     * <p>
+     * This operation is only supported for Amazon QuickSight accounts that use IAM Identity Center.
+     * </p>
+     * 
+     * @param listIdentityPropagationConfigsRequest
+     * @return Result of the ListIdentityPropagationConfigs operation returned by the service.
+     * @throws AccessDeniedException
+     *         You don't have access to this item. The provided credentials couldn't be validated. You might not be
+     *         authorized to carry out the request. Make sure that your account is authorized to use the Amazon
+     *         QuickSight service, that your policies have the correct permissions, and that you are using the correct
+     *         credentials.
+     * @throws InvalidParameterValueException
+     *         One or more parameters has a value that isn't valid.
+     * @throws ResourceNotFoundException
+     *         One or more resources can't be found.
+     * @throws ThrottlingException
+     *         Access is throttled.
+     * @throws InternalFailureException
+     *         An internal failure occurred.
+     * @sample AmazonQuickSight.ListIdentityPropagationConfigs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/ListIdentityPropagationConfigs"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListIdentityPropagationConfigsResult listIdentityPropagationConfigs(ListIdentityPropagationConfigsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListIdentityPropagationConfigs(request);
+    }
+
+    @SdkInternalApi
+    final ListIdentityPropagationConfigsResult executeListIdentityPropagationConfigs(ListIdentityPropagationConfigsRequest listIdentityPropagationConfigsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listIdentityPropagationConfigsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListIdentityPropagationConfigsRequest> request = null;
+        Response<ListIdentityPropagationConfigsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListIdentityPropagationConfigsRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(listIdentityPropagationConfigsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "QuickSight");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListIdentityPropagationConfigs");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListIdentityPropagationConfigsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new ListIdentityPropagationConfigsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Lists the history of SPICE ingestions for a dataset.
      * </p>
      * 
@@ -11788,6 +11936,81 @@ public class AmazonQuickSightClient extends AmazonWebServiceClient implements Am
             HttpResponseHandler<AmazonWebServiceResponse<UpdateIAMPolicyAssignmentResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new UpdateIAMPolicyAssignmentResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Adds or updates services and authorized targets to configure what the Amazon QuickSight IAM Identity Center
+     * application can access.
+     * </p>
+     * <p>
+     * This operation is only supported for Amazon QuickSight accounts using IAM Identity Center
+     * </p>
+     * 
+     * @param updateIdentityPropagationConfigRequest
+     * @return Result of the UpdateIdentityPropagationConfig operation returned by the service.
+     * @throws AccessDeniedException
+     *         You don't have access to this item. The provided credentials couldn't be validated. You might not be
+     *         authorized to carry out the request. Make sure that your account is authorized to use the Amazon
+     *         QuickSight service, that your policies have the correct permissions, and that you are using the correct
+     *         credentials.
+     * @throws InvalidParameterValueException
+     *         One or more parameters has a value that isn't valid.
+     * @throws ResourceNotFoundException
+     *         One or more resources can't be found.
+     * @throws ThrottlingException
+     *         Access is throttled.
+     * @throws InternalFailureException
+     *         An internal failure occurred.
+     * @sample AmazonQuickSight.UpdateIdentityPropagationConfig
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/UpdateIdentityPropagationConfig"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public UpdateIdentityPropagationConfigResult updateIdentityPropagationConfig(UpdateIdentityPropagationConfigRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateIdentityPropagationConfig(request);
+    }
+
+    @SdkInternalApi
+    final UpdateIdentityPropagationConfigResult executeUpdateIdentityPropagationConfig(
+            UpdateIdentityPropagationConfigRequest updateIdentityPropagationConfigRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateIdentityPropagationConfigRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateIdentityPropagationConfigRequest> request = null;
+        Response<UpdateIdentityPropagationConfigResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateIdentityPropagationConfigRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(updateIdentityPropagationConfigRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "QuickSight");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateIdentityPropagationConfig");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdateIdentityPropagationConfigResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new UpdateIdentityPropagationConfigResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

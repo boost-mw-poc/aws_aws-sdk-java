@@ -88,8 +88,7 @@ public class DescribeMapRunResult extends com.amazonaws.AmazonWebServiceResult<c
     /**
      * <p>
      * The number of times you've redriven a Map Run. If you have not yet redriven a Map Run, the
-     * <code>redriveCount</code> is 0. This count is not updated for redrives that failed to start or are pending to be
-     * redriven.
+     * <code>redriveCount</code> is 0. This count is only updated if you successfully redrive a Map Run.
      * </p>
      */
     private Integer redriveCount;
@@ -541,14 +540,12 @@ public class DescribeMapRunResult extends com.amazonaws.AmazonWebServiceResult<c
     /**
      * <p>
      * The number of times you've redriven a Map Run. If you have not yet redriven a Map Run, the
-     * <code>redriveCount</code> is 0. This count is not updated for redrives that failed to start or are pending to be
-     * redriven.
+     * <code>redriveCount</code> is 0. This count is only updated if you successfully redrive a Map Run.
      * </p>
      * 
      * @param redriveCount
      *        The number of times you've redriven a Map Run. If you have not yet redriven a Map Run, the
-     *        <code>redriveCount</code> is 0. This count is not updated for redrives that failed to start or are pending
-     *        to be redriven.
+     *        <code>redriveCount</code> is 0. This count is only updated if you successfully redrive a Map Run.
      */
 
     public void setRedriveCount(Integer redriveCount) {
@@ -558,13 +555,11 @@ public class DescribeMapRunResult extends com.amazonaws.AmazonWebServiceResult<c
     /**
      * <p>
      * The number of times you've redriven a Map Run. If you have not yet redriven a Map Run, the
-     * <code>redriveCount</code> is 0. This count is not updated for redrives that failed to start or are pending to be
-     * redriven.
+     * <code>redriveCount</code> is 0. This count is only updated if you successfully redrive a Map Run.
      * </p>
      * 
      * @return The number of times you've redriven a Map Run. If you have not yet redriven a Map Run, the
-     *         <code>redriveCount</code> is 0. This count is not updated for redrives that failed to start or are
-     *         pending to be redriven.
+     *         <code>redriveCount</code> is 0. This count is only updated if you successfully redrive a Map Run.
      */
 
     public Integer getRedriveCount() {
@@ -574,14 +569,12 @@ public class DescribeMapRunResult extends com.amazonaws.AmazonWebServiceResult<c
     /**
      * <p>
      * The number of times you've redriven a Map Run. If you have not yet redriven a Map Run, the
-     * <code>redriveCount</code> is 0. This count is not updated for redrives that failed to start or are pending to be
-     * redriven.
+     * <code>redriveCount</code> is 0. This count is only updated if you successfully redrive a Map Run.
      * </p>
      * 
      * @param redriveCount
      *        The number of times you've redriven a Map Run. If you have not yet redriven a Map Run, the
-     *        <code>redriveCount</code> is 0. This count is not updated for redrives that failed to start or are pending
-     *        to be redriven.
+     *        <code>redriveCount</code> is 0. This count is only updated if you successfully redrive a Map Run.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

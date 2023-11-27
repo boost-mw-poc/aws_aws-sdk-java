@@ -60,6 +60,10 @@ public class InterpretationJsonUnmarshaller implements Unmarshaller<Interpretati
                     context.nextToken();
                     interpretation.setIntent(IntentJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("interpretationSource", targetDepth)) {
+                    context.nextToken();
+                    interpretation.setInterpretationSource(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

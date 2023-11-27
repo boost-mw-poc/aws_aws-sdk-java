@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * You've reached the limit on the number of tags per load balancer.
+ * You've reached the limit on the number of tags for this resource.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

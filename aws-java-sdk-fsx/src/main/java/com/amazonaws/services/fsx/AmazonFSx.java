@@ -190,6 +190,32 @@ public interface AmazonFSx {
 
     /**
      * <p>
+     * Updates an existing volume by using a snapshot from another Amazon FSx for OpenZFS file system. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/on-demand-replication.html">on-demand data
+     * replication</a> in the Amazon FSx for OpenZFS User Guide.
+     * </p>
+     * 
+     * @param copySnapshotAndUpdateVolumeRequest
+     * @return Result of the CopySnapshotAndUpdateVolume operation returned by the service.
+     * @throws BadRequestException
+     *         A generic error indicating a failure with a client request.
+     * @throws IncompatibleParameterErrorException
+     *         The error returned when a second request is received with the same client request token but different
+     *         parameters settings. A client request token should always uniquely identify a single request.
+     * @throws InternalServerErrorException
+     *         A generic error indicating a server-side failure.
+     * @throws ServiceLimitExceededException
+     *         An error indicating that a particular service limit was exceeded. You can increase some service limits by
+     *         contacting Amazon Web Services Support.
+     * @sample AmazonFSx.CopySnapshotAndUpdateVolume
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/CopySnapshotAndUpdateVolume"
+     *      target="_top">AWS API Documentation</a>
+     */
+    CopySnapshotAndUpdateVolumeResult copySnapshotAndUpdateVolume(CopySnapshotAndUpdateVolumeRequest copySnapshotAndUpdateVolumeRequest);
+
+    /**
+     * <p>
      * Creates a backup of an existing Amazon FSx for Windows File Server file system, Amazon FSx for Lustre file
      * system, Amazon FSx for NetApp ONTAP volume, or Amazon FSx for OpenZFS file system. We recommend creating regular
      * backups so that you can restore a file system or volume from a backup if an issue arises with the original file
@@ -1266,6 +1292,26 @@ public interface AmazonFSx {
 
     /**
      * <p>
+     * Indicates whether participant accounts in your organization can create Amazon FSx for NetApp ONTAP Multi-AZ file
+     * systems in subnets that are shared by a virtual private cloud (VPC) owner. For more information, see the <a
+     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/maz-shared-vpc.html">Amazon FSx for NetApp ONTAP User
+     * Guide</a>.
+     * </p>
+     * 
+     * @param describeSharedVpcConfigurationRequest
+     * @return Result of the DescribeSharedVpcConfiguration operation returned by the service.
+     * @throws BadRequestException
+     *         A generic error indicating a failure with a client request.
+     * @throws InternalServerErrorException
+     *         A generic error indicating a server-side failure.
+     * @sample AmazonFSx.DescribeSharedVpcConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/DescribeSharedVpcConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DescribeSharedVpcConfigurationResult describeSharedVpcConfiguration(DescribeSharedVpcConfigurationRequest describeSharedVpcConfigurationRequest);
+
+    /**
+     * <p>
      * Returns the description of specific Amazon FSx for OpenZFS snapshots, if a <code>SnapshotIds</code> value is
      * provided. Otherwise, this operation returns all snapshots owned by your Amazon Web Services account in the Amazon
      * Web Services Region of the endpoint that you're calling.
@@ -1356,7 +1402,7 @@ public interface AmazonFSx {
      * <p>
      * Use this action to disassociate, or remove, one or more Domain Name Service (DNS) aliases from an Amazon FSx for
      * Windows File Server file system. If you attempt to disassociate a DNS alias that is not associated with the file
-     * system, Amazon FSx responds with a 400 Bad Request. For more information, see <a
+     * system, Amazon FSx responds with an HTTP status code 400 (Bad Request). For more information, see <a
      * href="https://docs.aws.amazon.com/fsx/latest/WindowsGuide/managing-dns-aliases.html">Working with DNS
      * Aliases</a>.
      * </p>
@@ -1742,6 +1788,11 @@ public interface AmazonFSx {
      * </li>
      * <li>
      * <p>
+     * <code>HAPairs</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>RemoveRouteTableIds</code>
      * </p>
      * </li>
@@ -1753,6 +1804,11 @@ public interface AmazonFSx {
      * <li>
      * <p>
      * <code>ThroughputCapacity</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ThroughputCapacityPerHAPair</code>
      * </p>
      * </li>
      * <li>
@@ -1843,6 +1899,38 @@ public interface AmazonFSx {
      *      Documentation</a>
      */
     UpdateFileSystemResult updateFileSystem(UpdateFileSystemRequest updateFileSystemRequest);
+
+    /**
+     * <p>
+     * Configures whether participant accounts in your organization can create Amazon FSx for NetApp ONTAP Multi-AZ file
+     * systems in subnets that are shared by a virtual private cloud (VPC) owner. For more information, see the <a
+     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/maz-shared-vpc.html">Amazon FSx for NetApp ONTAP User
+     * Guide</a>.
+     * </p>
+     * <note>
+     * <p>
+     * We strongly recommend that participant-created Multi-AZ file systems in the shared VPC are deleted before you
+     * disable this feature. Once the feature is disabled, these file systems will enter a <code>MISCONFIGURED</code>
+     * state and behave like Single-AZ file systems. For more information, see <a
+     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/maz-shared-vpc.html#disabling-maz-vpc-sharing">Important
+     * considerations before disabling shared VPC support for Multi-AZ file systems</a>.
+     * </p>
+     * </note>
+     * 
+     * @param updateSharedVpcConfigurationRequest
+     * @return Result of the UpdateSharedVpcConfiguration operation returned by the service.
+     * @throws BadRequestException
+     *         A generic error indicating a failure with a client request.
+     * @throws IncompatibleParameterErrorException
+     *         The error returned when a second request is received with the same client request token but different
+     *         parameters settings. A client request token should always uniquely identify a single request.
+     * @throws InternalServerErrorException
+     *         A generic error indicating a server-side failure.
+     * @sample AmazonFSx.UpdateSharedVpcConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/UpdateSharedVpcConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    UpdateSharedVpcConfigurationResult updateSharedVpcConfiguration(UpdateSharedVpcConfigurationRequest updateSharedVpcConfigurationRequest);
 
     /**
      * <p>

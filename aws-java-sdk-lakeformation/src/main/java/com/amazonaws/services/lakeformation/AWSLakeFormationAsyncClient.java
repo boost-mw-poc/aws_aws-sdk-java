@@ -341,6 +341,41 @@ public class AWSLakeFormationAsyncClient extends AWSLakeFormationClient implemen
     }
 
     @Override
+    public java.util.concurrent.Future<CreateLakeFormationIdentityCenterConfigurationResult> createLakeFormationIdentityCenterConfigurationAsync(
+            CreateLakeFormationIdentityCenterConfigurationRequest request) {
+
+        return createLakeFormationIdentityCenterConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateLakeFormationIdentityCenterConfigurationResult> createLakeFormationIdentityCenterConfigurationAsync(
+            final CreateLakeFormationIdentityCenterConfigurationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateLakeFormationIdentityCenterConfigurationRequest, CreateLakeFormationIdentityCenterConfigurationResult> asyncHandler) {
+        final CreateLakeFormationIdentityCenterConfigurationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateLakeFormationIdentityCenterConfigurationResult>() {
+            @Override
+            public CreateLakeFormationIdentityCenterConfigurationResult call() throws Exception {
+                CreateLakeFormationIdentityCenterConfigurationResult result = null;
+
+                try {
+                    result = executeCreateLakeFormationIdentityCenterConfiguration(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateLakeFormationOptInResult> createLakeFormationOptInAsync(CreateLakeFormationOptInRequest request) {
 
         return createLakeFormationOptInAsync(request, null);
@@ -440,6 +475,41 @@ public class AWSLakeFormationAsyncClient extends AWSLakeFormationClient implemen
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteLakeFormationIdentityCenterConfigurationResult> deleteLakeFormationIdentityCenterConfigurationAsync(
+            DeleteLakeFormationIdentityCenterConfigurationRequest request) {
+
+        return deleteLakeFormationIdentityCenterConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteLakeFormationIdentityCenterConfigurationResult> deleteLakeFormationIdentityCenterConfigurationAsync(
+            final DeleteLakeFormationIdentityCenterConfigurationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteLakeFormationIdentityCenterConfigurationRequest, DeleteLakeFormationIdentityCenterConfigurationResult> asyncHandler) {
+        final DeleteLakeFormationIdentityCenterConfigurationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteLakeFormationIdentityCenterConfigurationResult>() {
+            @Override
+            public DeleteLakeFormationIdentityCenterConfigurationResult call() throws Exception {
+                DeleteLakeFormationIdentityCenterConfigurationResult result = null;
+
+                try {
+                    result = executeDeleteLakeFormationIdentityCenterConfiguration(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteLakeFormationOptInResult> deleteLakeFormationOptInAsync(DeleteLakeFormationOptInRequest request) {
 
         return deleteLakeFormationOptInAsync(request, null);
@@ -523,6 +593,41 @@ public class AWSLakeFormationAsyncClient extends AWSLakeFormationClient implemen
 
                 try {
                     result = executeDeregisterResource(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeLakeFormationIdentityCenterConfigurationResult> describeLakeFormationIdentityCenterConfigurationAsync(
+            DescribeLakeFormationIdentityCenterConfigurationRequest request) {
+
+        return describeLakeFormationIdentityCenterConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeLakeFormationIdentityCenterConfigurationResult> describeLakeFormationIdentityCenterConfigurationAsync(
+            final DescribeLakeFormationIdentityCenterConfigurationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeLakeFormationIdentityCenterConfigurationRequest, DescribeLakeFormationIdentityCenterConfigurationResult> asyncHandler) {
+        final DescribeLakeFormationIdentityCenterConfigurationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeLakeFormationIdentityCenterConfigurationResult>() {
+            @Override
+            public DescribeLakeFormationIdentityCenterConfigurationResult call() throws Exception {
+                DescribeLakeFormationIdentityCenterConfigurationResult result = null;
+
+                try {
+                    result = executeDescribeLakeFormationIdentityCenterConfiguration(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -1617,6 +1722,41 @@ public class AWSLakeFormationAsyncClient extends AWSLakeFormationClient implemen
 
                 try {
                     result = executeUpdateLFTag(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateLakeFormationIdentityCenterConfigurationResult> updateLakeFormationIdentityCenterConfigurationAsync(
+            UpdateLakeFormationIdentityCenterConfigurationRequest request) {
+
+        return updateLakeFormationIdentityCenterConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateLakeFormationIdentityCenterConfigurationResult> updateLakeFormationIdentityCenterConfigurationAsync(
+            final UpdateLakeFormationIdentityCenterConfigurationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateLakeFormationIdentityCenterConfigurationRequest, UpdateLakeFormationIdentityCenterConfigurationResult> asyncHandler) {
+        final UpdateLakeFormationIdentityCenterConfigurationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateLakeFormationIdentityCenterConfigurationResult>() {
+            @Override
+            public UpdateLakeFormationIdentityCenterConfigurationResult call() throws Exception {
+                UpdateLakeFormationIdentityCenterConfigurationResult result = null;
+
+                try {
+                    result = executeUpdateLakeFormationIdentityCenterConfiguration(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

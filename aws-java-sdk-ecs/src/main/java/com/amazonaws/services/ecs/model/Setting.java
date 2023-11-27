@@ -46,6 +46,17 @@ public class Setting implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private String principalArn;
+    /**
+     * <p>
+     * Indicates whether Amazon Web Services manages the account setting, or if the user manages it.
+     * </p>
+     * <p>
+     * <code>aws_managed</code> account settings are read-only, as Amazon Web Services manages such on the customer's
+     * behalf. Currently, the <code>guardDutyActivate</code> account setting is the only one Amazon Web Services
+     * manages.
+     * </p>
+     */
+    private String type;
 
     /**
      * <p>
@@ -193,6 +204,101 @@ public class Setting implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Indicates whether Amazon Web Services manages the account setting, or if the user manages it.
+     * </p>
+     * <p>
+     * <code>aws_managed</code> account settings are read-only, as Amazon Web Services manages such on the customer's
+     * behalf. Currently, the <code>guardDutyActivate</code> account setting is the only one Amazon Web Services
+     * manages.
+     * </p>
+     * 
+     * @param type
+     *        Indicates whether Amazon Web Services manages the account setting, or if the user manages it.</p>
+     *        <p>
+     *        <code>aws_managed</code> account settings are read-only, as Amazon Web Services manages such on the
+     *        customer's behalf. Currently, the <code>guardDutyActivate</code> account setting is the only one Amazon
+     *        Web Services manages.
+     * @see SettingType
+     */
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    /**
+     * <p>
+     * Indicates whether Amazon Web Services manages the account setting, or if the user manages it.
+     * </p>
+     * <p>
+     * <code>aws_managed</code> account settings are read-only, as Amazon Web Services manages such on the customer's
+     * behalf. Currently, the <code>guardDutyActivate</code> account setting is the only one Amazon Web Services
+     * manages.
+     * </p>
+     * 
+     * @return Indicates whether Amazon Web Services manages the account setting, or if the user manages it.</p>
+     *         <p>
+     *         <code>aws_managed</code> account settings are read-only, as Amazon Web Services manages such on the
+     *         customer's behalf. Currently, the <code>guardDutyActivate</code> account setting is the only one Amazon
+     *         Web Services manages.
+     * @see SettingType
+     */
+
+    public String getType() {
+        return this.type;
+    }
+
+    /**
+     * <p>
+     * Indicates whether Amazon Web Services manages the account setting, or if the user manages it.
+     * </p>
+     * <p>
+     * <code>aws_managed</code> account settings are read-only, as Amazon Web Services manages such on the customer's
+     * behalf. Currently, the <code>guardDutyActivate</code> account setting is the only one Amazon Web Services
+     * manages.
+     * </p>
+     * 
+     * @param type
+     *        Indicates whether Amazon Web Services manages the account setting, or if the user manages it.</p>
+     *        <p>
+     *        <code>aws_managed</code> account settings are read-only, as Amazon Web Services manages such on the
+     *        customer's behalf. Currently, the <code>guardDutyActivate</code> account setting is the only one Amazon
+     *        Web Services manages.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see SettingType
+     */
+
+    public Setting withType(String type) {
+        setType(type);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Indicates whether Amazon Web Services manages the account setting, or if the user manages it.
+     * </p>
+     * <p>
+     * <code>aws_managed</code> account settings are read-only, as Amazon Web Services manages such on the customer's
+     * behalf. Currently, the <code>guardDutyActivate</code> account setting is the only one Amazon Web Services
+     * manages.
+     * </p>
+     * 
+     * @param type
+     *        Indicates whether Amazon Web Services manages the account setting, or if the user manages it.</p>
+     *        <p>
+     *        <code>aws_managed</code> account settings are read-only, as Amazon Web Services manages such on the
+     *        customer's behalf. Currently, the <code>guardDutyActivate</code> account setting is the only one Amazon
+     *        Web Services manages.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see SettingType
+     */
+
+    public Setting withType(SettingType type) {
+        this.type = type.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -209,7 +315,9 @@ public class Setting implements Serializable, Cloneable, StructuredPojo {
         if (getValue() != null)
             sb.append("Value: ").append(getValue()).append(",");
         if (getPrincipalArn() != null)
-            sb.append("PrincipalArn: ").append(getPrincipalArn());
+            sb.append("PrincipalArn: ").append(getPrincipalArn()).append(",");
+        if (getType() != null)
+            sb.append("Type: ").append(getType());
         sb.append("}");
         return sb.toString();
     }
@@ -236,6 +344,10 @@ public class Setting implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getPrincipalArn() != null && other.getPrincipalArn().equals(this.getPrincipalArn()) == false)
             return false;
+        if (other.getType() == null ^ this.getType() == null)
+            return false;
+        if (other.getType() != null && other.getType().equals(this.getType()) == false)
+            return false;
         return true;
     }
 
@@ -247,6 +359,7 @@ public class Setting implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
         hashCode = prime * hashCode + ((getValue() == null) ? 0 : getValue().hashCode());
         hashCode = prime * hashCode + ((getPrincipalArn() == null) ? 0 : getPrincipalArn().hashCode());
+        hashCode = prime * hashCode + ((getType() == null) ? 0 : getType().hashCode());
         return hashCode;
     }
 

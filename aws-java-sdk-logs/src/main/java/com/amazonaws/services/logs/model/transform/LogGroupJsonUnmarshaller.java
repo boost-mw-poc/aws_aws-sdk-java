@@ -86,6 +86,10 @@ public class LogGroupJsonUnmarshaller implements Unmarshaller<LogGroup, JsonUnma
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("logGroupClass", targetDepth)) {
+                    context.nextToken();
+                    logGroup.setLogGroupClass(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

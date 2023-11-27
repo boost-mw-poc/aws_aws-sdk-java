@@ -85,6 +85,10 @@ public class AnalyzerSummaryJsonUnmarshaller implements Unmarshaller<AnalyzerSum
                     context.nextToken();
                     analyzerSummary.setStatusReason(StatusReasonJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("configuration", targetDepth)) {
+                    context.nextToken();
+                    analyzerSummary.setConfiguration(AnalyzerConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

@@ -317,6 +317,39 @@ public class AmazonEKSAsyncClient extends AmazonEKSClient implements AmazonEKSAs
     }
 
     @Override
+    public java.util.concurrent.Future<CreatePodIdentityAssociationResult> createPodIdentityAssociationAsync(CreatePodIdentityAssociationRequest request) {
+
+        return createPodIdentityAssociationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreatePodIdentityAssociationResult> createPodIdentityAssociationAsync(final CreatePodIdentityAssociationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreatePodIdentityAssociationRequest, CreatePodIdentityAssociationResult> asyncHandler) {
+        final CreatePodIdentityAssociationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreatePodIdentityAssociationResult>() {
+            @Override
+            public CreatePodIdentityAssociationResult call() throws Exception {
+                CreatePodIdentityAssociationResult result = null;
+
+                try {
+                    result = executeCreatePodIdentityAssociation(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteAddonResult> deleteAddonAsync(DeleteAddonRequest request) {
 
         return deleteAddonAsync(request, null);
@@ -467,6 +500,39 @@ public class AmazonEKSAsyncClient extends AmazonEKSClient implements AmazonEKSAs
 
                 try {
                     result = executeDeleteNodegroup(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeletePodIdentityAssociationResult> deletePodIdentityAssociationAsync(DeletePodIdentityAssociationRequest request) {
+
+        return deletePodIdentityAssociationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeletePodIdentityAssociationResult> deletePodIdentityAssociationAsync(final DeletePodIdentityAssociationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeletePodIdentityAssociationRequest, DeletePodIdentityAssociationResult> asyncHandler) {
+        final DeletePodIdentityAssociationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeletePodIdentityAssociationResult>() {
+            @Override
+            public DeletePodIdentityAssociationResult call() throws Exception {
+                DeletePodIdentityAssociationResult result = null;
+
+                try {
+                    result = executeDeletePodIdentityAssociation(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -783,6 +849,40 @@ public class AmazonEKSAsyncClient extends AmazonEKSClient implements AmazonEKSAs
     }
 
     @Override
+    public java.util.concurrent.Future<DescribePodIdentityAssociationResult> describePodIdentityAssociationAsync(DescribePodIdentityAssociationRequest request) {
+
+        return describePodIdentityAssociationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribePodIdentityAssociationResult> describePodIdentityAssociationAsync(
+            final DescribePodIdentityAssociationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribePodIdentityAssociationRequest, DescribePodIdentityAssociationResult> asyncHandler) {
+        final DescribePodIdentityAssociationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribePodIdentityAssociationResult>() {
+            @Override
+            public DescribePodIdentityAssociationResult call() throws Exception {
+                DescribePodIdentityAssociationResult result = null;
+
+                try {
+                    result = executeDescribePodIdentityAssociation(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeUpdateResult> describeUpdateAsync(DescribeUpdateRequest request) {
 
         return describeUpdateAsync(request, null);
@@ -1033,6 +1133,39 @@ public class AmazonEKSAsyncClient extends AmazonEKSClient implements AmazonEKSAs
 
                 try {
                     result = executeListNodegroups(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListPodIdentityAssociationsResult> listPodIdentityAssociationsAsync(ListPodIdentityAssociationsRequest request) {
+
+        return listPodIdentityAssociationsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListPodIdentityAssociationsResult> listPodIdentityAssociationsAsync(final ListPodIdentityAssociationsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListPodIdentityAssociationsRequest, ListPodIdentityAssociationsResult> asyncHandler) {
+        final ListPodIdentityAssociationsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListPodIdentityAssociationsResult>() {
+            @Override
+            public ListPodIdentityAssociationsResult call() throws Exception {
+                ListPodIdentityAssociationsResult result = null;
+
+                try {
+                    result = executeListPodIdentityAssociations(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -1397,6 +1530,39 @@ public class AmazonEKSAsyncClient extends AmazonEKSClient implements AmazonEKSAs
 
                 try {
                     result = executeUpdateNodegroupVersion(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdatePodIdentityAssociationResult> updatePodIdentityAssociationAsync(UpdatePodIdentityAssociationRequest request) {
+
+        return updatePodIdentityAssociationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdatePodIdentityAssociationResult> updatePodIdentityAssociationAsync(final UpdatePodIdentityAssociationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdatePodIdentityAssociationRequest, UpdatePodIdentityAssociationResult> asyncHandler) {
+        final UpdatePodIdentityAssociationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdatePodIdentityAssociationResult>() {
+            @Override
+            public UpdatePodIdentityAssociationResult call() throws Exception {
+                UpdatePodIdentityAssociationResult result = null;
+
+                try {
+                    result = executeUpdatePodIdentityAssociation(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

@@ -37,6 +37,8 @@ public class AccessorSummaryMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CreationDate").timestampFormat("iso8601").build();
     private static final MarshallingInfo<String> ARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Arn").build();
+    private static final MarshallingInfo<String> NETWORKTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("NetworkType").build();
 
     private static final AccessorSummaryMarshaller instance = new AccessorSummaryMarshaller();
 
@@ -59,6 +61,7 @@ public class AccessorSummaryMarshaller {
             protocolMarshaller.marshall(accessorSummary.getStatus(), STATUS_BINDING);
             protocolMarshaller.marshall(accessorSummary.getCreationDate(), CREATIONDATE_BINDING);
             protocolMarshaller.marshall(accessorSummary.getArn(), ARN_BINDING);
+            protocolMarshaller.marshall(accessorSummary.getNetworkType(), NETWORKTYPE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

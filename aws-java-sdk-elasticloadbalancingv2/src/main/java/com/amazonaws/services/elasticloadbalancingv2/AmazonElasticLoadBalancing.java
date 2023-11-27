@@ -165,7 +165,7 @@ public interface AmazonElasticLoadBalancing {
     /**
      * <p>
      * Adds the specified tags to the specified Elastic Load Balancing resource. You can tag your Application Load
-     * Balancers, Network Load Balancers, Gateway Load Balancers, target groups, listeners, and rules.
+     * Balancers, Network Load Balancers, Gateway Load Balancers, target groups, trust stores, listeners, and rules.
      * </p>
      * <p>
      * Each tag consists of a key and an optional value. If a resource already has a tag with the same key,
@@ -177,7 +177,7 @@ public interface AmazonElasticLoadBalancing {
      * @throws DuplicateTagKeysException
      *         A tag key was specified more than once.
      * @throws TooManyTagsException
-     *         You've reached the limit on the number of tags per load balancer.
+     *         You've reached the limit on the number of tags for this resource.
      * @throws LoadBalancerNotFoundException
      *         The specified load balancer does not exist.
      * @throws TargetGroupNotFoundException
@@ -186,11 +186,34 @@ public interface AmazonElasticLoadBalancing {
      *         The specified listener does not exist.
      * @throws RuleNotFoundException
      *         The specified rule does not exist.
+     * @throws TrustStoreNotFoundException
+     *         The specified trust store does not exist.
      * @sample AmazonElasticLoadBalancing.AddTags
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/elasticloadbalancingv2-2015-12-01/AddTags" target="_top">AWS
      *      API Documentation</a>
      */
     AddTagsResult addTags(AddTagsRequest addTagsRequest);
+
+    /**
+     * <p>
+     * Adds the specified revocation file to the specified trust store.
+     * </p>
+     * 
+     * @param addTrustStoreRevocationsRequest
+     * @return Result of the AddTrustStoreRevocations operation returned by the service.
+     * @throws TrustStoreNotFoundException
+     *         The specified trust store does not exist.
+     * @throws InvalidRevocationContentException
+     *         The provided revocation file is an invalid format, or uses an incorrect algorithm.
+     * @throws TooManyTrustStoreRevocationEntriesException
+     *         The specified trust store has too many revocation entries.
+     * @throws RevocationContentNotFoundException
+     *         The specified revocation file does not exist.
+     * @sample AmazonElasticLoadBalancing.AddTrustStoreRevocations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/elasticloadbalancingv2-2015-12-01/AddTrustStoreRevocations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    AddTrustStoreRevocationsResult addTrustStoreRevocations(AddTrustStoreRevocationsRequest addTrustStoreRevocationsRequest);
 
     /**
      * <p>
@@ -262,7 +285,11 @@ public interface AmazonElasticLoadBalancing {
      * @throws ALPNPolicyNotSupportedException
      *         The specified ALPN policy is not supported.
      * @throws TooManyTagsException
-     *         You've reached the limit on the number of tags per load balancer.
+     *         You've reached the limit on the number of tags for this resource.
+     * @throws TrustStoreNotFoundException
+     *         The specified trust store does not exist.
+     * @throws TrustStoreNotReadyException
+     *         The specified trust store is not active.
      * @sample AmazonElasticLoadBalancing.CreateListener
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/elasticloadbalancingv2-2015-12-01/CreateListener"
      *      target="_top">AWS API Documentation</a>
@@ -318,7 +345,7 @@ public interface AmazonElasticLoadBalancing {
      * @throws InvalidSchemeException
      *         The requested scheme is not valid.
      * @throws TooManyTagsException
-     *         You've reached the limit on the number of tags per load balancer.
+     *         You've reached the limit on the number of tags for this resource.
      * @throws DuplicateTagKeysException
      *         A tag key was specified more than once.
      * @throws ResourceInUseException
@@ -380,7 +407,7 @@ public interface AmazonElasticLoadBalancing {
      *         You've reached the limit on the number of unique target groups per load balancer across all listeners. If
      *         a target group is used by multiple actions for a load balancer, it is counted as only one use.
      * @throws TooManyTagsException
-     *         You've reached the limit on the number of tags per load balancer.
+     *         You've reached the limit on the number of tags for this resource.
      * @sample AmazonElasticLoadBalancing.CreateRule
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/elasticloadbalancingv2-2015-12-01/CreateRule"
      *      target="_top">AWS API Documentation</a>
@@ -428,12 +455,37 @@ public interface AmazonElasticLoadBalancing {
      * @throws InvalidConfigurationRequestException
      *         The requested configuration is not valid.
      * @throws TooManyTagsException
-     *         You've reached the limit on the number of tags per load balancer.
+     *         You've reached the limit on the number of tags for this resource.
      * @sample AmazonElasticLoadBalancing.CreateTargetGroup
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/elasticloadbalancingv2-2015-12-01/CreateTargetGroup"
      *      target="_top">AWS API Documentation</a>
      */
     CreateTargetGroupResult createTargetGroup(CreateTargetGroupRequest createTargetGroupRequest);
+
+    /**
+     * <p>
+     * Creates a trust store.
+     * </p>
+     * 
+     * @param createTrustStoreRequest
+     * @return Result of the CreateTrustStore operation returned by the service.
+     * @throws DuplicateTrustStoreNameException
+     *         A trust store with the specified name already exists.
+     * @throws TooManyTrustStoresException
+     *         You've reached the limit on the number of trust stores for your Amazon Web Services account.
+     * @throws InvalidCaCertificatesBundleException
+     *         The specified ca certificate bundle is in an invalid format, or corrupt.
+     * @throws CaCertificatesBundleNotFoundException
+     *         The specified ca certificate bundle does not exist.
+     * @throws TooManyTagsException
+     *         You've reached the limit on the number of tags for this resource.
+     * @throws DuplicateTagKeysException
+     *         A tag key was specified more than once.
+     * @sample AmazonElasticLoadBalancing.CreateTrustStore
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/elasticloadbalancingv2-2015-12-01/CreateTrustStore"
+     *      target="_top">AWS API Documentation</a>
+     */
+    CreateTrustStoreResult createTrustStore(CreateTrustStoreRequest createTrustStoreRequest);
 
     /**
      * <p>
@@ -523,6 +575,23 @@ public interface AmazonElasticLoadBalancing {
      *      target="_top">AWS API Documentation</a>
      */
     DeleteTargetGroupResult deleteTargetGroup(DeleteTargetGroupRequest deleteTargetGroupRequest);
+
+    /**
+     * <p>
+     * Deletes a trust store.
+     * </p>
+     * 
+     * @param deleteTrustStoreRequest
+     * @return Result of the DeleteTrustStore operation returned by the service.
+     * @throws TrustStoreNotFoundException
+     *         The specified trust store does not exist.
+     * @throws TrustStoreInUseException
+     *         The specified trust store is currently in use.
+     * @sample AmazonElasticLoadBalancing.DeleteTrustStore
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/elasticloadbalancingv2-2015-12-01/DeleteTrustStore"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DeleteTrustStoreResult deleteTrustStore(DeleteTrustStoreRequest deleteTrustStoreRequest);
 
     /**
      * <p>
@@ -776,6 +845,8 @@ public interface AmazonElasticLoadBalancing {
      *         The specified listener does not exist.
      * @throws RuleNotFoundException
      *         The specified rule does not exist.
+     * @throws TrustStoreNotFoundException
+     *         The specified trust store does not exist.
      * @sample AmazonElasticLoadBalancing.DescribeTags
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/elasticloadbalancingv2-2015-12-01/DescribeTags"
      *      target="_top">AWS API Documentation</a>
@@ -865,6 +936,95 @@ public interface AmazonElasticLoadBalancing {
 
     /**
      * <p>
+     * Describes all resources associated with the specified trust store.
+     * </p>
+     * 
+     * @param describeTrustStoreAssociationsRequest
+     * @return Result of the DescribeTrustStoreAssociations operation returned by the service.
+     * @throws TrustStoreNotFoundException
+     *         The specified trust store does not exist.
+     * @sample AmazonElasticLoadBalancing.DescribeTrustStoreAssociations
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/elasticloadbalancingv2-2015-12-01/DescribeTrustStoreAssociations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DescribeTrustStoreAssociationsResult describeTrustStoreAssociations(DescribeTrustStoreAssociationsRequest describeTrustStoreAssociationsRequest);
+
+    /**
+     * <p>
+     * Describes the revocation files in use by the specified trust store arn, or revocation ID.
+     * </p>
+     * 
+     * @param describeTrustStoreRevocationsRequest
+     * @return Result of the DescribeTrustStoreRevocations operation returned by the service.
+     * @throws TrustStoreNotFoundException
+     *         The specified trust store does not exist.
+     * @throws RevocationIdNotFoundException
+     *         The specified revocation ID does not exist.
+     * @sample AmazonElasticLoadBalancing.DescribeTrustStoreRevocations
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/elasticloadbalancingv2-2015-12-01/DescribeTrustStoreRevocations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DescribeTrustStoreRevocationsResult describeTrustStoreRevocations(DescribeTrustStoreRevocationsRequest describeTrustStoreRevocationsRequest);
+
+    /**
+     * <p>
+     * Describes all trust stores for a given account by trust store arn’s or name.
+     * </p>
+     * 
+     * @param describeTrustStoresRequest
+     * @return Result of the DescribeTrustStores operation returned by the service.
+     * @throws TrustStoreNotFoundException
+     *         The specified trust store does not exist.
+     * @sample AmazonElasticLoadBalancing.DescribeTrustStores
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/elasticloadbalancingv2-2015-12-01/DescribeTrustStores"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DescribeTrustStoresResult describeTrustStores(DescribeTrustStoresRequest describeTrustStoresRequest);
+
+    /**
+     * <p>
+     * Retrieves the ca certificate bundle.
+     * </p>
+     * <p>
+     * This action returns a pre-signed S3 URI which is active for ten minutes.
+     * </p>
+     * 
+     * @param getTrustStoreCaCertificatesBundleRequest
+     * @return Result of the GetTrustStoreCaCertificatesBundle operation returned by the service.
+     * @throws TrustStoreNotFoundException
+     *         The specified trust store does not exist.
+     * @sample AmazonElasticLoadBalancing.GetTrustStoreCaCertificatesBundle
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/elasticloadbalancingv2-2015-12-01/GetTrustStoreCaCertificatesBundle"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetTrustStoreCaCertificatesBundleResult getTrustStoreCaCertificatesBundle(GetTrustStoreCaCertificatesBundleRequest getTrustStoreCaCertificatesBundleRequest);
+
+    /**
+     * <p>
+     * Retrieves the specified revocation file.
+     * </p>
+     * <p>
+     * This action returns a pre-signed S3 URI which is active for ten minutes.
+     * </p>
+     * 
+     * @param getTrustStoreRevocationContentRequest
+     * @return Result of the GetTrustStoreRevocationContent operation returned by the service.
+     * @throws TrustStoreNotFoundException
+     *         The specified trust store does not exist.
+     * @throws RevocationIdNotFoundException
+     *         The specified revocation ID does not exist.
+     * @sample AmazonElasticLoadBalancing.GetTrustStoreRevocationContent
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/elasticloadbalancingv2-2015-12-01/GetTrustStoreRevocationContent"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetTrustStoreRevocationContentResult getTrustStoreRevocationContent(GetTrustStoreRevocationContentRequest getTrustStoreRevocationContentRequest);
+
+    /**
+     * <p>
      * Replaces the specified properties of the specified listener. Any properties that you do not specify remain
      * unchanged.
      * </p>
@@ -915,6 +1075,10 @@ public interface AmazonElasticLoadBalancing {
      *         a target group is used by multiple actions for a load balancer, it is counted as only one use.
      * @throws ALPNPolicyNotSupportedException
      *         The specified ALPN policy is not supported.
+     * @throws TrustStoreNotFoundException
+     *         The specified trust store does not exist.
+     * @throws TrustStoreNotReadyException
+     *         The specified trust store is not active.
      * @sample AmazonElasticLoadBalancing.ModifyListener
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/elasticloadbalancingv2-2015-12-01/ModifyListener"
      *      target="_top">AWS API Documentation</a>
@@ -1021,6 +1185,25 @@ public interface AmazonElasticLoadBalancing {
 
     /**
      * <p>
+     * Update the ca certificate bundle for a given trust store.
+     * </p>
+     * 
+     * @param modifyTrustStoreRequest
+     * @return Result of the ModifyTrustStore operation returned by the service.
+     * @throws TrustStoreNotFoundException
+     *         The specified trust store does not exist.
+     * @throws InvalidCaCertificatesBundleException
+     *         The specified ca certificate bundle is in an invalid format, or corrupt.
+     * @throws CaCertificatesBundleNotFoundException
+     *         The specified ca certificate bundle does not exist.
+     * @sample AmazonElasticLoadBalancing.ModifyTrustStore
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/elasticloadbalancingv2-2015-12-01/ModifyTrustStore"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ModifyTrustStoreResult modifyTrustStore(ModifyTrustStoreRequest modifyTrustStoreRequest);
+
+    /**
+     * <p>
      * Registers the specified targets with the specified target group.
      * </p>
      * <p>
@@ -1090,12 +1273,32 @@ public interface AmazonElasticLoadBalancing {
      * @throws RuleNotFoundException
      *         The specified rule does not exist.
      * @throws TooManyTagsException
-     *         You've reached the limit on the number of tags per load balancer.
+     *         You've reached the limit on the number of tags for this resource.
+     * @throws TrustStoreNotFoundException
+     *         The specified trust store does not exist.
      * @sample AmazonElasticLoadBalancing.RemoveTags
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/elasticloadbalancingv2-2015-12-01/RemoveTags"
      *      target="_top">AWS API Documentation</a>
      */
     RemoveTagsResult removeTags(RemoveTagsRequest removeTagsRequest);
+
+    /**
+     * <p>
+     * Removes the specified revocation file from the specified trust store.
+     * </p>
+     * 
+     * @param removeTrustStoreRevocationsRequest
+     * @return Result of the RemoveTrustStoreRevocations operation returned by the service.
+     * @throws TrustStoreNotFoundException
+     *         The specified trust store does not exist.
+     * @throws RevocationIdNotFoundException
+     *         The specified revocation ID does not exist.
+     * @sample AmazonElasticLoadBalancing.RemoveTrustStoreRevocations
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/elasticloadbalancingv2-2015-12-01/RemoveTrustStoreRevocations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    RemoveTrustStoreRevocationsResult removeTrustStoreRevocations(RemoveTrustStoreRevocationsRequest removeTrustStoreRevocationsRequest);
 
     /**
      * <p>

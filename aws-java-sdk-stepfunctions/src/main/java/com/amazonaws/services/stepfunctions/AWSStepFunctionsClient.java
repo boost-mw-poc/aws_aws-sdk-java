@@ -2370,10 +2370,10 @@ public class AWSStepFunctionsClient extends AmazonWebServiceClient implements AW
      * that failed or aborted.
      * </p>
      * <p>
-     * To redrive a workflow that includes a Distributed Map state with failed child workflow executions, you must
-     * redrive the <a href=
+     * To redrive a workflow that includes a Distributed Map state whose Map Run failed, you must redrive the <a href=
      * "https://docs.aws.amazon.com/step-functions/latest/dg/use-dist-map-orchestrate-large-scale-parallel-workloads.html#dist-map-orchestrate-parallel-workloads-key-terms"
-     * >parent workflow</a>. The parent workflow redrives all the unsuccessful states, including Distributed Map.
+     * >parent workflow</a>. The parent workflow redrives all the unsuccessful states, including a failed Map Run. If a
+     * Map Run was not started in the original execution attempt, the redriven parent workflow starts the Map Run.
      * </p>
      * <note>
      * <p>
@@ -3060,6 +3060,159 @@ public class AWSStepFunctionsClient extends AmazonWebServiceClient implements AW
 
     /**
      * <p>
+     * Accepts the definition of a single state and executes it. You can test a state without creating a state machine
+     * or updating an existing state machine. Using this API, you can test the following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * A state's <a href=
+     * "https://docs.aws.amazon.com/step-functions/latest/dg/test-state-isolation.html#test-state-input-output-dataflow"
+     * >input and output processing</a> data flow
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * An <a href="https://docs.aws.amazon.com/step-functions/latest/dg/connect-to-services.html">Amazon Web Services
+     * service integration</a> request and response
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * An <a href="https://docs.aws.amazon.com/step-functions/latest/dg/connect-third-party-apis.html">HTTP Task</a>
+     * request and response
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * You can call this API on only one state at a time. The states that you can test include the following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <a href="https://docs.aws.amazon.com/step-functions/latest/dg/amazon-states-language-task-state.html#task-types">
+     * All Task types</a> except <a
+     * href="https://docs.aws.amazon.com/step-functions/latest/dg/concepts-activities.html">Activity</a>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <a href="https://docs.aws.amazon.com/step-functions/latest/dg/amazon-states-language-pass-state.html">Pass</a>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <a href="https://docs.aws.amazon.com/step-functions/latest/dg/amazon-states-language-wait-state.html">Wait</a>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <a
+     * href="https://docs.aws.amazon.com/step-functions/latest/dg/amazon-states-language-choice-state.html">Choice</a>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <a
+     * href="https://docs.aws.amazon.com/step-functions/latest/dg/amazon-states-language-succeed-state.html">Succeed</a>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <a href="https://docs.aws.amazon.com/step-functions/latest/dg/amazon-states-language-fail-state.html">Fail</a>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * The <code>TestState</code> API assumes an IAM role which must contain the required IAM permissions for the
+     * resources your state is accessing. For information about the permissions a state might need, see <a
+     * href="https://docs.aws.amazon.com/step-functions/latest/dg/test-state-isolation.html#test-state-permissions">IAM
+     * permissions to test a state</a>.
+     * </p>
+     * <p>
+     * The <code>TestState</code> API can run for up to five minutes. If the execution of a state exceeds this duration,
+     * it fails with the <code>States.Timeout</code> error.
+     * </p>
+     * <p>
+     * <code>TestState</code> doesn't support <a
+     * href="https://docs.aws.amazon.com/step-functions/latest/dg/concepts-activities.html">Activity tasks</a>,
+     * <code>.sync</code> or <code>.waitForTaskToken</code> <a
+     * href="https://docs.aws.amazon.com/step-functions/latest/dg/connect-to-resource.html">service integration
+     * patterns</a>, <a
+     * href="https://docs.aws.amazon.com/step-functions/latest/dg/amazon-states-language-parallel-state.html"
+     * >Parallel</a>, or <a
+     * href="https://docs.aws.amazon.com/step-functions/latest/dg/amazon-states-language-map-state.html">Map</a> states.
+     * </p>
+     * 
+     * @param testStateRequest
+     * @return Result of the TestState operation returned by the service.
+     * @throws InvalidArnException
+     *         The provided Amazon Resource Name (ARN) is not valid.
+     * @throws InvalidDefinitionException
+     *         The provided Amazon States Language definition is not valid.
+     * @throws InvalidExecutionInputException
+     *         The provided JSON input data is not valid.
+     * @throws ValidationException
+     *         The input does not satisfy the constraints specified by an Amazon Web Services service.
+     * @sample AWSStepFunctions.TestState
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/states-2016-11-23/TestState" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public TestStateResult testState(TestStateRequest request) {
+        request = beforeClientExecution(request);
+        return executeTestState(request);
+    }
+
+    @SdkInternalApi
+    final TestStateResult executeTestState(TestStateRequest testStateRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(testStateRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<TestStateRequest> request = null;
+        Response<TestStateResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new TestStateRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(testStateRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "SFN");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "TestState");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            URI endpointTraitHost = null;
+            if (!clientConfiguration.isDisableHostPrefixInjection()) {
+
+                String hostPrefix = "sync-";
+                String resolvedHostPrefix = String.format("sync-");
+
+                endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<TestStateResult>> responseHandler = protocolFactory.createResponseHandler(new JsonOperationMetadata()
+                    .withPayloadJson(true).withHasStreamingSuccessResponse(false), new TestStateResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Remove a tag from a Step Functions resource
      * </p>
      * 
@@ -3397,6 +3550,8 @@ public class AWSStepFunctionsClient extends AmazonWebServiceClient implements AW
      *         <a>UpdateStateMachine</a> with the <code>publish</code> parameter set to <code>true</code>.</p>
      *         <p>
      *         HTTP Status Code: 409
+     * @throws StateMachineDeletingException
+     *         The specified state machine is being deleted.
      * @sample AWSStepFunctions.UpdateStateMachineAlias
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/states-2016-11-23/UpdateStateMachineAlias" target="_top">AWS
      *      API Documentation</a>

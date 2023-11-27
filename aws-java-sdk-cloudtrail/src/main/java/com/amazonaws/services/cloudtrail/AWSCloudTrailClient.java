@@ -100,6 +100,9 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
                     .withSupportsCbor(false)
                     .withSupportsIon(false)
                     .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("ConcurrentModificationException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.cloudtrail.model.transform.ConcurrentModificationExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("EventDataStoreMaxLimitExceededException").withExceptionUnmarshaller(
                                     com.amazonaws.services.cloudtrail.model.transform.EventDataStoreMaxLimitExceededExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
@@ -156,6 +159,9 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("AccountNotRegisteredException").withExceptionUnmarshaller(
                                     com.amazonaws.services.cloudtrail.model.transform.AccountNotRegisteredExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("EventDataStoreFederationEnabledException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.cloudtrail.model.transform.EventDataStoreFederationEnabledExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("CloudTrailAccessNotEnabledException").withExceptionUnmarshaller(
                                     com.amazonaws.services.cloudtrail.model.transform.CloudTrailAccessNotEnabledExceptionUnmarshaller.getInstance()))
@@ -259,6 +265,9 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("InvalidTokenException").withExceptionUnmarshaller(
                                     com.amazonaws.services.cloudtrail.model.transform.InvalidTokenExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("AccessDeniedException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.cloudtrail.model.transform.AccessDeniedExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("CloudTrailARNInvalidException").withExceptionUnmarshaller(
                                     com.amazonaws.services.cloudtrail.model.transform.CloudTrailARNInvalidExceptionUnmarshaller.getInstance()))
@@ -1237,8 +1246,9 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      * Disables the event data store specified by <code>EventDataStore</code>, which accepts an event data store ARN.
      * After you run <code>DeleteEventDataStore</code>, the event data store enters a <code>PENDING_DELETION</code>
      * state, and is automatically deleted after a wait period of seven days. <code>TerminationProtectionEnabled</code>
-     * must be set to <code>False</code> on the event data store; this operation cannot work if
-     * <code>TerminationProtectionEnabled</code> is <code>True</code>.
+     * must be set to <code>False</code> on the event data store and the <code>FederationStatus</code> must be
+     * <code>DISABLED</code>. You cannot delete an event data store if <code>TerminationProtectionEnabled</code> is
+     * <code>True</code> or the <code>FederationStatus</code> is <code>ENABLED</code>.
      * </p>
      * <p>
      * After you run <code>DeleteEventDataStore</code> on an event data store, you cannot run <code>ListQueries</code>,
@@ -1282,6 +1292,15 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      * @throws InsufficientDependencyServiceAccessPermissionException
      *         This exception is thrown when the IAM identity that is used to create the organization resource lacks one
      *         or more required permissions for creating an organization resource in a required service.
+     * @throws ConflictException
+     *         This exception is thrown when the specified resource is not ready for an operation. This can occur when
+     *         you try to run an operation on a resource before CloudTrail has time to fully load the resource, or
+     *         because another operation is modifying the resource. If this exception occurs, wait a few minutes, and
+     *         then try the operation again.
+     * @throws EventDataStoreFederationEnabledException
+     *         You cannot delete the event data store because Lake query federation is enabled. To delete the event data
+     *         store, run the <code>DisableFederation</code> operation to disable Lake query federation on the event
+     *         data store.
      * @sample AWSCloudTrail.DeleteEventDataStore
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/DeleteEventDataStore"
      *      target="_top">AWS API Documentation</a>
@@ -1797,6 +1816,227 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
     @Override
     public DescribeTrailsResult describeTrails() {
         return describeTrails(new DescribeTrailsRequest());
+    }
+
+    /**
+     * <p>
+     * Disables Lake query federation on the specified event data store. When you disable federation, CloudTrail removes
+     * the metadata associated with the federated event data store in the Glue Data Catalog and removes registration for
+     * the federation role ARN and event data store in Lake Formation. No CloudTrail Lake data is deleted when you
+     * disable federation.
+     * </p>
+     * 
+     * @param disableFederationRequest
+     * @return Result of the DisableFederation operation returned by the service.
+     * @throws EventDataStoreARNInvalidException
+     *         The specified event data store ARN is not valid or does not map to an event data store in your account.
+     * @throws EventDataStoreNotFoundException
+     *         The specified event data store was not found.
+     * @throws InvalidParameterException
+     *         The request includes a parameter that is not valid.
+     * @throws InactiveEventDataStoreException
+     *         The event data store is inactive.
+     * @throws OperationNotPermittedException
+     *         This exception is thrown when the requested operation is not permitted.
+     * @throws UnsupportedOperationException
+     *         This exception is thrown when the requested operation is not supported.
+     * @throws CloudTrailAccessNotEnabledException
+     *         This exception is thrown when trusted access has not been enabled between CloudTrail and Organizations.
+     *         For more information, see <a
+     *         href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services.html">Enabling
+     *         Trusted Access with Other Amazon Web Services Services</a> and <a href=
+     *         "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/creating-an-organizational-trail-prepare.html"
+     *         >Prepare For Creating a Trail For Your Organization</a>.
+     * @throws InsufficientDependencyServiceAccessPermissionException
+     *         This exception is thrown when the IAM identity that is used to create the organization resource lacks one
+     *         or more required permissions for creating an organization resource in a required service.
+     * @throws NotOrganizationMasterAccountException
+     *         This exception is thrown when the Amazon Web Services account making the request to create or update an
+     *         organization trail or event data store is not the management account for an organization in
+     *         Organizations. For more information, see <a href=
+     *         "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/creating-an-organizational-trail-prepare.html"
+     *         >Prepare For Creating a Trail For Your Organization</a> or <a
+     *         href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/query-event-data-store.html">Create an
+     *         event data store</a>.
+     * @throws NoManagementAccountSLRExistsException
+     *         This exception is thrown when the management account does not have a service-linked role.
+     * @throws OrganizationsNotInUseException
+     *         This exception is thrown when the request is made from an Amazon Web Services account that is not a
+     *         member of an organization. To make this request, sign in using the credentials of an account that belongs
+     *         to an organization.
+     * @throws OrganizationNotInAllFeaturesModeException
+     *         This exception is thrown when Organizations is not configured to support all features. All features must
+     *         be enabled in Organizations to support creating an organization trail or event data store.
+     * @throws ConcurrentModificationException
+     *         You are trying to update a resource when another request is in progress. Allow sufficient wait time for
+     *         the previous request to complete, then retry your request.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @sample AWSCloudTrail.DisableFederation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/DisableFederation" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public DisableFederationResult disableFederation(DisableFederationRequest request) {
+        request = beforeClientExecution(request);
+        return executeDisableFederation(request);
+    }
+
+    @SdkInternalApi
+    final DisableFederationResult executeDisableFederation(DisableFederationRequest disableFederationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(disableFederationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DisableFederationRequest> request = null;
+        Response<DisableFederationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DisableFederationRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(disableFederationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "CloudTrail");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DisableFederation");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DisableFederationResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DisableFederationResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Enables Lake query federation on the specified event data store. Federating an event data store lets you view the
+     * metadata associated with the event data store in the Glue <a
+     * href="https://docs.aws.amazon.com/glue/latest/dg/components-overview.html#data-catalog-intro">Data Catalog</a>
+     * and run SQL queries against your event data using Amazon Athena. The table metadata stored in the Glue Data
+     * Catalog lets the Athena query engine know how to find, read, and process the data that you want to query.
+     * </p>
+     * <p>
+     * When you enable Lake query federation, CloudTrail creates a federated database named <code>aws:cloudtrail</code>
+     * (if the database doesn't already exist) and a federated table in the Glue Data Catalog. The event data store ID
+     * is used for the table name. CloudTrail registers the role ARN and event data store in <a
+     * href="https://docs.aws.amazon.com/lake-formation/latest/dg/how-it-works.html">Lake Formation</a>, the service
+     * responsible for revoking or granting permissions to the federated resources in the Glue Data Catalog.
+     * </p>
+     * <p>
+     * For more information about Lake query federation, see <a
+     * href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/query-federation.html">Federate an event data
+     * store</a>.
+     * </p>
+     * 
+     * @param enableFederationRequest
+     * @return Result of the EnableFederation operation returned by the service.
+     * @throws EventDataStoreARNInvalidException
+     *         The specified event data store ARN is not valid or does not map to an event data store in your account.
+     * @throws EventDataStoreNotFoundException
+     *         The specified event data store was not found.
+     * @throws InvalidParameterException
+     *         The request includes a parameter that is not valid.
+     * @throws InactiveEventDataStoreException
+     *         The event data store is inactive.
+     * @throws OperationNotPermittedException
+     *         This exception is thrown when the requested operation is not permitted.
+     * @throws UnsupportedOperationException
+     *         This exception is thrown when the requested operation is not supported.
+     * @throws CloudTrailAccessNotEnabledException
+     *         This exception is thrown when trusted access has not been enabled between CloudTrail and Organizations.
+     *         For more information, see <a
+     *         href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services.html">Enabling
+     *         Trusted Access with Other Amazon Web Services Services</a> and <a href=
+     *         "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/creating-an-organizational-trail-prepare.html"
+     *         >Prepare For Creating a Trail For Your Organization</a>.
+     * @throws InsufficientDependencyServiceAccessPermissionException
+     *         This exception is thrown when the IAM identity that is used to create the organization resource lacks one
+     *         or more required permissions for creating an organization resource in a required service.
+     * @throws NotOrganizationMasterAccountException
+     *         This exception is thrown when the Amazon Web Services account making the request to create or update an
+     *         organization trail or event data store is not the management account for an organization in
+     *         Organizations. For more information, see <a href=
+     *         "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/creating-an-organizational-trail-prepare.html"
+     *         >Prepare For Creating a Trail For Your Organization</a> or <a
+     *         href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/query-event-data-store.html">Create an
+     *         event data store</a>.
+     * @throws NoManagementAccountSLRExistsException
+     *         This exception is thrown when the management account does not have a service-linked role.
+     * @throws OrganizationsNotInUseException
+     *         This exception is thrown when the request is made from an Amazon Web Services account that is not a
+     *         member of an organization. To make this request, sign in using the credentials of an account that belongs
+     *         to an organization.
+     * @throws OrganizationNotInAllFeaturesModeException
+     *         This exception is thrown when Organizations is not configured to support all features. All features must
+     *         be enabled in Organizations to support creating an organization trail or event data store.
+     * @throws ConcurrentModificationException
+     *         You are trying to update a resource when another request is in progress. Allow sufficient wait time for
+     *         the previous request to complete, then retry your request.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws EventDataStoreFederationEnabledException
+     *         You cannot delete the event data store because Lake query federation is enabled. To delete the event data
+     *         store, run the <code>DisableFederation</code> operation to disable Lake query federation on the event
+     *         data store.
+     * @sample AWSCloudTrail.EnableFederation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/EnableFederation" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public EnableFederationResult enableFederation(EnableFederationRequest request) {
+        request = beforeClientExecution(request);
+        return executeEnableFederation(request);
+    }
+
+    @SdkInternalApi
+    final EnableFederationResult executeEnableFederation(EnableFederationRequest enableFederationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(enableFederationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<EnableFederationRequest> request = null;
+        Response<EnableFederationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new EnableFederationRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(enableFederationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "CloudTrail");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "EnableFederation");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<EnableFederationResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new EnableFederationResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
     }
 
     /**

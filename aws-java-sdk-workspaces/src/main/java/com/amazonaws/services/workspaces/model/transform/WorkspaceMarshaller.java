@@ -60,6 +60,10 @@ public class WorkspaceMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ModificationStates").build();
     private static final MarshallingInfo<List> RELATEDWORKSPACES_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("RelatedWorkspaces").build();
+    private static final MarshallingInfo<StructuredPojo> DATAREPLICATIONSETTINGS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DataReplicationSettings").build();
+    private static final MarshallingInfo<List> STANDBYWORKSPACESPROPERTIES_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("StandbyWorkspacesProperties").build();
 
     private static final WorkspaceMarshaller instance = new WorkspaceMarshaller();
 
@@ -93,6 +97,8 @@ public class WorkspaceMarshaller {
             protocolMarshaller.marshall(workspace.getWorkspaceProperties(), WORKSPACEPROPERTIES_BINDING);
             protocolMarshaller.marshall(workspace.getModificationStates(), MODIFICATIONSTATES_BINDING);
             protocolMarshaller.marshall(workspace.getRelatedWorkspaces(), RELATEDWORKSPACES_BINDING);
+            protocolMarshaller.marshall(workspace.getDataReplicationSettings(), DATAREPLICATIONSETTINGS_BINDING);
+            protocolMarshaller.marshall(workspace.getStandbyWorkspacesProperties(), STANDBYWORKSPACESPROPERTIES_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

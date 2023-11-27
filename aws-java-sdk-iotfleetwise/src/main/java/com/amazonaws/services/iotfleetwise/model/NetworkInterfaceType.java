@@ -21,7 +21,9 @@ import javax.annotation.Generated;
 public enum NetworkInterfaceType {
 
     CAN_INTERFACE("CAN_INTERFACE"),
-    OBD_INTERFACE("OBD_INTERFACE");
+    OBD_INTERFACE("OBD_INTERFACE"),
+    VEHICLE_MIDDLEWARE("VEHICLE_MIDDLEWARE"),
+    CUSTOMER_DECODED_INTERFACE("CUSTOMER_DECODED_INTERFACE");
 
     private String value;
 

@@ -90,6 +90,14 @@ public class CreateFileSystemOntapConfigurationJsonUnmarshaller implements Unmar
                     context.nextToken();
                     createFileSystemOntapConfiguration.setWeeklyMaintenanceStartTime(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("HAPairs", targetDepth)) {
+                    context.nextToken();
+                    createFileSystemOntapConfiguration.setHAPairs(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
+                if (context.testExpression("ThroughputCapacityPerHAPair", targetDepth)) {
+                    context.nextToken();
+                    createFileSystemOntapConfiguration.setThroughputCapacityPerHAPair(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

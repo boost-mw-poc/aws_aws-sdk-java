@@ -46,6 +46,18 @@ public class NumberFilter implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private Double eq;
+    /**
+     * <p>
+     * The greater-than condition to be applied to a single field when querying for findings.
+     * </p>
+     */
+    private Double gt;
+    /**
+     * <p>
+     * The less-than condition to be applied to a single field when querying for findings.
+     * </p>
+     */
+    private Double lt;
 
     /**
      * <p>
@@ -168,6 +180,86 @@ public class NumberFilter implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The greater-than condition to be applied to a single field when querying for findings.
+     * </p>
+     * 
+     * @param gt
+     *        The greater-than condition to be applied to a single field when querying for findings.
+     */
+
+    public void setGt(Double gt) {
+        this.gt = gt;
+    }
+
+    /**
+     * <p>
+     * The greater-than condition to be applied to a single field when querying for findings.
+     * </p>
+     * 
+     * @return The greater-than condition to be applied to a single field when querying for findings.
+     */
+
+    public Double getGt() {
+        return this.gt;
+    }
+
+    /**
+     * <p>
+     * The greater-than condition to be applied to a single field when querying for findings.
+     * </p>
+     * 
+     * @param gt
+     *        The greater-than condition to be applied to a single field when querying for findings.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public NumberFilter withGt(Double gt) {
+        setGt(gt);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The less-than condition to be applied to a single field when querying for findings.
+     * </p>
+     * 
+     * @param lt
+     *        The less-than condition to be applied to a single field when querying for findings.
+     */
+
+    public void setLt(Double lt) {
+        this.lt = lt;
+    }
+
+    /**
+     * <p>
+     * The less-than condition to be applied to a single field when querying for findings.
+     * </p>
+     * 
+     * @return The less-than condition to be applied to a single field when querying for findings.
+     */
+
+    public Double getLt() {
+        return this.lt;
+    }
+
+    /**
+     * <p>
+     * The less-than condition to be applied to a single field when querying for findings.
+     * </p>
+     * 
+     * @param lt
+     *        The less-than condition to be applied to a single field when querying for findings.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public NumberFilter withLt(Double lt) {
+        setLt(lt);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -184,7 +276,11 @@ public class NumberFilter implements Serializable, Cloneable, StructuredPojo {
         if (getLte() != null)
             sb.append("Lte: ").append(getLte()).append(",");
         if (getEq() != null)
-            sb.append("Eq: ").append(getEq());
+            sb.append("Eq: ").append(getEq()).append(",");
+        if (getGt() != null)
+            sb.append("Gt: ").append(getGt()).append(",");
+        if (getLt() != null)
+            sb.append("Lt: ").append(getLt());
         sb.append("}");
         return sb.toString();
     }
@@ -211,6 +307,14 @@ public class NumberFilter implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getEq() != null && other.getEq().equals(this.getEq()) == false)
             return false;
+        if (other.getGt() == null ^ this.getGt() == null)
+            return false;
+        if (other.getGt() != null && other.getGt().equals(this.getGt()) == false)
+            return false;
+        if (other.getLt() == null ^ this.getLt() == null)
+            return false;
+        if (other.getLt() != null && other.getLt().equals(this.getLt()) == false)
+            return false;
         return true;
     }
 
@@ -222,6 +326,8 @@ public class NumberFilter implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getGte() == null) ? 0 : getGte().hashCode());
         hashCode = prime * hashCode + ((getLte() == null) ? 0 : getLte().hashCode());
         hashCode = prime * hashCode + ((getEq() == null) ? 0 : getEq().hashCode());
+        hashCode = prime * hashCode + ((getGt() == null) ? 0 : getGt().hashCode());
+        hashCode = prime * hashCode + ((getLt() == null) ? 0 : getLt().hashCode());
         return hashCode;
     }
 

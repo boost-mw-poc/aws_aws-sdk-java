@@ -80,6 +80,10 @@ public class UpdateOntapVolumeConfigurationJsonUnmarshaller implements Unmarshal
                     context.nextToken();
                     updateOntapVolumeConfiguration.setSnaplockConfiguration(UpdateSnaplockConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("SizeInBytes", targetDepth)) {
+                    context.nextToken();
+                    updateOntapVolumeConfiguration.setSizeInBytes(context.getUnmarshaller(Long.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

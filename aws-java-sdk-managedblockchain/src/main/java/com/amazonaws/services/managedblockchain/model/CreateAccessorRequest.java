@@ -62,6 +62,35 @@ public class CreateAccessorRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      */
     private java.util.Map<String, String> tags;
+    /**
+     * <p>
+     * The blockchain network that the <code>Accessor</code> token is created for.
+     * </p>
+     * <note>
+     * <p>
+     * We recommend using the appropriate <code>networkType</code> value for the blockchain network that you are
+     * creating the <code>Accessor</code> token for. You cannnot use the value <code>ETHEREUM_MAINNET_AND_GOERLI</code>
+     * to specify a <code>networkType</code> for your Accessor token.
+     * </p>
+     * <p>
+     * The default value of <code>ETHEREUM_MAINNET_AND_GOERLI</code> is only applied:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * when the <code>CreateAccessor</code> action does not set a <code>networkType</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * to all existing <code>Accessor</code> tokens that were created before the <code>networkType</code> property was
+     * introduced.
+     * </p>
+     * </li>
+     * </ul>
+     * </note>
+     */
+    private String networkType;
 
     /**
      * <p>
@@ -344,6 +373,241 @@ public class CreateAccessorRequest extends com.amazonaws.AmazonWebServiceRequest
     }
 
     /**
+     * <p>
+     * The blockchain network that the <code>Accessor</code> token is created for.
+     * </p>
+     * <note>
+     * <p>
+     * We recommend using the appropriate <code>networkType</code> value for the blockchain network that you are
+     * creating the <code>Accessor</code> token for. You cannnot use the value <code>ETHEREUM_MAINNET_AND_GOERLI</code>
+     * to specify a <code>networkType</code> for your Accessor token.
+     * </p>
+     * <p>
+     * The default value of <code>ETHEREUM_MAINNET_AND_GOERLI</code> is only applied:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * when the <code>CreateAccessor</code> action does not set a <code>networkType</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * to all existing <code>Accessor</code> tokens that were created before the <code>networkType</code> property was
+     * introduced.
+     * </p>
+     * </li>
+     * </ul>
+     * </note>
+     * 
+     * @param networkType
+     *        The blockchain network that the <code>Accessor</code> token is created for.</p> <note>
+     *        <p>
+     *        We recommend using the appropriate <code>networkType</code> value for the blockchain network that you are
+     *        creating the <code>Accessor</code> token for. You cannnot use the value
+     *        <code>ETHEREUM_MAINNET_AND_GOERLI</code> to specify a <code>networkType</code> for your Accessor token.
+     *        </p>
+     *        <p>
+     *        The default value of <code>ETHEREUM_MAINNET_AND_GOERLI</code> is only applied:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        when the <code>CreateAccessor</code> action does not set a <code>networkType</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        to all existing <code>Accessor</code> tokens that were created before the <code>networkType</code>
+     *        property was introduced.
+     *        </p>
+     *        </li>
+     *        </ul>
+     * @see AccessorNetworkType
+     */
+
+    public void setNetworkType(String networkType) {
+        this.networkType = networkType;
+    }
+
+    /**
+     * <p>
+     * The blockchain network that the <code>Accessor</code> token is created for.
+     * </p>
+     * <note>
+     * <p>
+     * We recommend using the appropriate <code>networkType</code> value for the blockchain network that you are
+     * creating the <code>Accessor</code> token for. You cannnot use the value <code>ETHEREUM_MAINNET_AND_GOERLI</code>
+     * to specify a <code>networkType</code> for your Accessor token.
+     * </p>
+     * <p>
+     * The default value of <code>ETHEREUM_MAINNET_AND_GOERLI</code> is only applied:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * when the <code>CreateAccessor</code> action does not set a <code>networkType</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * to all existing <code>Accessor</code> tokens that were created before the <code>networkType</code> property was
+     * introduced.
+     * </p>
+     * </li>
+     * </ul>
+     * </note>
+     * 
+     * @return The blockchain network that the <code>Accessor</code> token is created for.</p> <note>
+     *         <p>
+     *         We recommend using the appropriate <code>networkType</code> value for the blockchain network that you are
+     *         creating the <code>Accessor</code> token for. You cannnot use the value
+     *         <code>ETHEREUM_MAINNET_AND_GOERLI</code> to specify a <code>networkType</code> for your Accessor token.
+     *         </p>
+     *         <p>
+     *         The default value of <code>ETHEREUM_MAINNET_AND_GOERLI</code> is only applied:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         when the <code>CreateAccessor</code> action does not set a <code>networkType</code>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         to all existing <code>Accessor</code> tokens that were created before the <code>networkType</code>
+     *         property was introduced.
+     *         </p>
+     *         </li>
+     *         </ul>
+     * @see AccessorNetworkType
+     */
+
+    public String getNetworkType() {
+        return this.networkType;
+    }
+
+    /**
+     * <p>
+     * The blockchain network that the <code>Accessor</code> token is created for.
+     * </p>
+     * <note>
+     * <p>
+     * We recommend using the appropriate <code>networkType</code> value for the blockchain network that you are
+     * creating the <code>Accessor</code> token for. You cannnot use the value <code>ETHEREUM_MAINNET_AND_GOERLI</code>
+     * to specify a <code>networkType</code> for your Accessor token.
+     * </p>
+     * <p>
+     * The default value of <code>ETHEREUM_MAINNET_AND_GOERLI</code> is only applied:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * when the <code>CreateAccessor</code> action does not set a <code>networkType</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * to all existing <code>Accessor</code> tokens that were created before the <code>networkType</code> property was
+     * introduced.
+     * </p>
+     * </li>
+     * </ul>
+     * </note>
+     * 
+     * @param networkType
+     *        The blockchain network that the <code>Accessor</code> token is created for.</p> <note>
+     *        <p>
+     *        We recommend using the appropriate <code>networkType</code> value for the blockchain network that you are
+     *        creating the <code>Accessor</code> token for. You cannnot use the value
+     *        <code>ETHEREUM_MAINNET_AND_GOERLI</code> to specify a <code>networkType</code> for your Accessor token.
+     *        </p>
+     *        <p>
+     *        The default value of <code>ETHEREUM_MAINNET_AND_GOERLI</code> is only applied:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        when the <code>CreateAccessor</code> action does not set a <code>networkType</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        to all existing <code>Accessor</code> tokens that were created before the <code>networkType</code>
+     *        property was introduced.
+     *        </p>
+     *        </li>
+     *        </ul>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see AccessorNetworkType
+     */
+
+    public CreateAccessorRequest withNetworkType(String networkType) {
+        setNetworkType(networkType);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The blockchain network that the <code>Accessor</code> token is created for.
+     * </p>
+     * <note>
+     * <p>
+     * We recommend using the appropriate <code>networkType</code> value for the blockchain network that you are
+     * creating the <code>Accessor</code> token for. You cannnot use the value <code>ETHEREUM_MAINNET_AND_GOERLI</code>
+     * to specify a <code>networkType</code> for your Accessor token.
+     * </p>
+     * <p>
+     * The default value of <code>ETHEREUM_MAINNET_AND_GOERLI</code> is only applied:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * when the <code>CreateAccessor</code> action does not set a <code>networkType</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * to all existing <code>Accessor</code> tokens that were created before the <code>networkType</code> property was
+     * introduced.
+     * </p>
+     * </li>
+     * </ul>
+     * </note>
+     * 
+     * @param networkType
+     *        The blockchain network that the <code>Accessor</code> token is created for.</p> <note>
+     *        <p>
+     *        We recommend using the appropriate <code>networkType</code> value for the blockchain network that you are
+     *        creating the <code>Accessor</code> token for. You cannnot use the value
+     *        <code>ETHEREUM_MAINNET_AND_GOERLI</code> to specify a <code>networkType</code> for your Accessor token.
+     *        </p>
+     *        <p>
+     *        The default value of <code>ETHEREUM_MAINNET_AND_GOERLI</code> is only applied:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        when the <code>CreateAccessor</code> action does not set a <code>networkType</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        to all existing <code>Accessor</code> tokens that were created before the <code>networkType</code>
+     *        property was introduced.
+     *        </p>
+     *        </li>
+     *        </ul>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see AccessorNetworkType
+     */
+
+    public CreateAccessorRequest withNetworkType(AccessorNetworkType networkType) {
+        this.networkType = networkType.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -360,7 +624,9 @@ public class CreateAccessorRequest extends com.amazonaws.AmazonWebServiceRequest
         if (getAccessorType() != null)
             sb.append("AccessorType: ").append(getAccessorType()).append(",");
         if (getTags() != null)
-            sb.append("Tags: ").append(getTags());
+            sb.append("Tags: ").append(getTags()).append(",");
+        if (getNetworkType() != null)
+            sb.append("NetworkType: ").append(getNetworkType());
         sb.append("}");
         return sb.toString();
     }
@@ -387,6 +653,10 @@ public class CreateAccessorRequest extends com.amazonaws.AmazonWebServiceRequest
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
             return false;
+        if (other.getNetworkType() == null ^ this.getNetworkType() == null)
+            return false;
+        if (other.getNetworkType() != null && other.getNetworkType().equals(this.getNetworkType()) == false)
+            return false;
         return true;
     }
 
@@ -398,6 +668,7 @@ public class CreateAccessorRequest extends com.amazonaws.AmazonWebServiceRequest
         hashCode = prime * hashCode + ((getClientRequestToken() == null) ? 0 : getClientRequestToken().hashCode());
         hashCode = prime * hashCode + ((getAccessorType() == null) ? 0 : getAccessorType().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
+        hashCode = prime * hashCode + ((getNetworkType() == null) ? 0 : getNetworkType().hashCode());
         return hashCode;
     }
 

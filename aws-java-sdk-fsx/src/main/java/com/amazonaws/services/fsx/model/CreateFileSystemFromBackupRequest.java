@@ -134,7 +134,8 @@ public class CreateFileSystemFromBackupRequest extends com.amazonaws.AmazonWebSe
      * </p>
      * <p>
      * If used to create a file system other than OpenZFS, you must provide a value that matches the backup's
-     * <code>StorageCapacity</code> value. If you provide any other value, Amazon FSx responds with a 400 Bad Request.
+     * <code>StorageCapacity</code> value. If you provide any other value, Amazon FSx responds with with an HTTP status
+     * code 400 Bad Request.
      * </p>
      */
     private Integer storageCapacity;
@@ -986,7 +987,8 @@ public class CreateFileSystemFromBackupRequest extends com.amazonaws.AmazonWebSe
      * </p>
      * <p>
      * If used to create a file system other than OpenZFS, you must provide a value that matches the backup's
-     * <code>StorageCapacity</code> value. If you provide any other value, Amazon FSx responds with a 400 Bad Request.
+     * <code>StorageCapacity</code> value. If you provide any other value, Amazon FSx responds with with an HTTP status
+     * code 400 Bad Request.
      * </p>
      * 
      * @param storageCapacity
@@ -997,8 +999,8 @@ public class CreateFileSystemFromBackupRequest extends com.amazonaws.AmazonWebSe
      *        value.</p>
      *        <p>
      *        If used to create a file system other than OpenZFS, you must provide a value that matches the backup's
-     *        <code>StorageCapacity</code> value. If you provide any other value, Amazon FSx responds with a 400 Bad
-     *        Request.
+     *        <code>StorageCapacity</code> value. If you provide any other value, Amazon FSx responds with with an HTTP
+     *        status code 400 Bad Request.
      */
 
     public void setStorageCapacity(Integer storageCapacity) {
@@ -1014,7 +1016,8 @@ public class CreateFileSystemFromBackupRequest extends com.amazonaws.AmazonWebSe
      * </p>
      * <p>
      * If used to create a file system other than OpenZFS, you must provide a value that matches the backup's
-     * <code>StorageCapacity</code> value. If you provide any other value, Amazon FSx responds with a 400 Bad Request.
+     * <code>StorageCapacity</code> value. If you provide any other value, Amazon FSx responds with with an HTTP status
+     * code 400 Bad Request.
      * </p>
      * 
      * @return Sets the storage capacity of the OpenZFS file system that you're creating from a backup, in gibibytes
@@ -1024,8 +1027,8 @@ public class CreateFileSystemFromBackupRequest extends com.amazonaws.AmazonWebSe
      *         value.</p>
      *         <p>
      *         If used to create a file system other than OpenZFS, you must provide a value that matches the backup's
-     *         <code>StorageCapacity</code> value. If you provide any other value, Amazon FSx responds with a 400 Bad
-     *         Request.
+     *         <code>StorageCapacity</code> value. If you provide any other value, Amazon FSx responds with with an HTTP
+     *         status code 400 Bad Request.
      */
 
     public Integer getStorageCapacity() {
@@ -1041,7 +1044,8 @@ public class CreateFileSystemFromBackupRequest extends com.amazonaws.AmazonWebSe
      * </p>
      * <p>
      * If used to create a file system other than OpenZFS, you must provide a value that matches the backup's
-     * <code>StorageCapacity</code> value. If you provide any other value, Amazon FSx responds with a 400 Bad Request.
+     * <code>StorageCapacity</code> value. If you provide any other value, Amazon FSx responds with with an HTTP status
+     * code 400 Bad Request.
      * </p>
      * 
      * @param storageCapacity
@@ -1052,8 +1056,8 @@ public class CreateFileSystemFromBackupRequest extends com.amazonaws.AmazonWebSe
      *        value.</p>
      *        <p>
      *        If used to create a file system other than OpenZFS, you must provide a value that matches the backup's
-     *        <code>StorageCapacity</code> value. If you provide any other value, Amazon FSx responds with a 400 Bad
-     *        Request.
+     *        <code>StorageCapacity</code> value. If you provide any other value, Amazon FSx responds with with an HTTP
+     *        status code 400 Bad Request.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

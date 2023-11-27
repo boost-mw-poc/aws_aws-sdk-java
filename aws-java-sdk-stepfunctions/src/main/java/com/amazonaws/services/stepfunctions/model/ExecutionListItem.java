@@ -140,8 +140,7 @@ public class ExecutionListItem implements Serializable, Cloneable, StructuredPoj
     /**
      * <p>
      * The number of times you've redriven an execution. If you have not yet redriven an execution, the
-     * <code>redriveCount</code> is 0. This count is not updated for redrives that failed to start or are pending to be
-     * redriven.
+     * <code>redriveCount</code> is 0. This count is only updated when you successfully redrive an execution.
      * </p>
      */
     private Integer redriveCount;
@@ -873,14 +872,12 @@ public class ExecutionListItem implements Serializable, Cloneable, StructuredPoj
     /**
      * <p>
      * The number of times you've redriven an execution. If you have not yet redriven an execution, the
-     * <code>redriveCount</code> is 0. This count is not updated for redrives that failed to start or are pending to be
-     * redriven.
+     * <code>redriveCount</code> is 0. This count is only updated when you successfully redrive an execution.
      * </p>
      * 
      * @param redriveCount
      *        The number of times you've redriven an execution. If you have not yet redriven an execution, the
-     *        <code>redriveCount</code> is 0. This count is not updated for redrives that failed to start or are pending
-     *        to be redriven.
+     *        <code>redriveCount</code> is 0. This count is only updated when you successfully redrive an execution.
      */
 
     public void setRedriveCount(Integer redriveCount) {
@@ -890,13 +887,11 @@ public class ExecutionListItem implements Serializable, Cloneable, StructuredPoj
     /**
      * <p>
      * The number of times you've redriven an execution. If you have not yet redriven an execution, the
-     * <code>redriveCount</code> is 0. This count is not updated for redrives that failed to start or are pending to be
-     * redriven.
+     * <code>redriveCount</code> is 0. This count is only updated when you successfully redrive an execution.
      * </p>
      * 
      * @return The number of times you've redriven an execution. If you have not yet redriven an execution, the
-     *         <code>redriveCount</code> is 0. This count is not updated for redrives that failed to start or are
-     *         pending to be redriven.
+     *         <code>redriveCount</code> is 0. This count is only updated when you successfully redrive an execution.
      */
 
     public Integer getRedriveCount() {
@@ -906,14 +901,12 @@ public class ExecutionListItem implements Serializable, Cloneable, StructuredPoj
     /**
      * <p>
      * The number of times you've redriven an execution. If you have not yet redriven an execution, the
-     * <code>redriveCount</code> is 0. This count is not updated for redrives that failed to start or are pending to be
-     * redriven.
+     * <code>redriveCount</code> is 0. This count is only updated when you successfully redrive an execution.
      * </p>
      * 
      * @param redriveCount
      *        The number of times you've redriven an execution. If you have not yet redriven an execution, the
-     *        <code>redriveCount</code> is 0. This count is not updated for redrives that failed to start or are pending
-     *        to be redriven.
+     *        <code>redriveCount</code> is 0. This count is only updated when you successfully redrive an execution.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

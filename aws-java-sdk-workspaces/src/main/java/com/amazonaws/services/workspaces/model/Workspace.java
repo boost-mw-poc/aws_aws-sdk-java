@@ -136,6 +136,18 @@ public class Workspace implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<RelatedWorkspaceProperties> relatedWorkspaces;
+    /**
+     * <p>
+     * Indicates the settings of the data replication.
+     * </p>
+     */
+    private DataReplicationSettings dataReplicationSettings;
+    /**
+     * <p>
+     * The properties of the standby WorkSpace
+     * </p>
+     */
+    private com.amazonaws.internal.SdkInternalList<StandbyWorkspacesProperties> standbyWorkspacesProperties;
 
     /**
      * <p>
@@ -1007,6 +1019,119 @@ public class Workspace implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Indicates the settings of the data replication.
+     * </p>
+     * 
+     * @param dataReplicationSettings
+     *        Indicates the settings of the data replication.
+     */
+
+    public void setDataReplicationSettings(DataReplicationSettings dataReplicationSettings) {
+        this.dataReplicationSettings = dataReplicationSettings;
+    }
+
+    /**
+     * <p>
+     * Indicates the settings of the data replication.
+     * </p>
+     * 
+     * @return Indicates the settings of the data replication.
+     */
+
+    public DataReplicationSettings getDataReplicationSettings() {
+        return this.dataReplicationSettings;
+    }
+
+    /**
+     * <p>
+     * Indicates the settings of the data replication.
+     * </p>
+     * 
+     * @param dataReplicationSettings
+     *        Indicates the settings of the data replication.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Workspace withDataReplicationSettings(DataReplicationSettings dataReplicationSettings) {
+        setDataReplicationSettings(dataReplicationSettings);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The properties of the standby WorkSpace
+     * </p>
+     * 
+     * @return The properties of the standby WorkSpace
+     */
+
+    public java.util.List<StandbyWorkspacesProperties> getStandbyWorkspacesProperties() {
+        if (standbyWorkspacesProperties == null) {
+            standbyWorkspacesProperties = new com.amazonaws.internal.SdkInternalList<StandbyWorkspacesProperties>();
+        }
+        return standbyWorkspacesProperties;
+    }
+
+    /**
+     * <p>
+     * The properties of the standby WorkSpace
+     * </p>
+     * 
+     * @param standbyWorkspacesProperties
+     *        The properties of the standby WorkSpace
+     */
+
+    public void setStandbyWorkspacesProperties(java.util.Collection<StandbyWorkspacesProperties> standbyWorkspacesProperties) {
+        if (standbyWorkspacesProperties == null) {
+            this.standbyWorkspacesProperties = null;
+            return;
+        }
+
+        this.standbyWorkspacesProperties = new com.amazonaws.internal.SdkInternalList<StandbyWorkspacesProperties>(standbyWorkspacesProperties);
+    }
+
+    /**
+     * <p>
+     * The properties of the standby WorkSpace
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setStandbyWorkspacesProperties(java.util.Collection)} or
+     * {@link #withStandbyWorkspacesProperties(java.util.Collection)} if you want to override the existing values.
+     * </p>
+     * 
+     * @param standbyWorkspacesProperties
+     *        The properties of the standby WorkSpace
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Workspace withStandbyWorkspacesProperties(StandbyWorkspacesProperties... standbyWorkspacesProperties) {
+        if (this.standbyWorkspacesProperties == null) {
+            setStandbyWorkspacesProperties(new com.amazonaws.internal.SdkInternalList<StandbyWorkspacesProperties>(standbyWorkspacesProperties.length));
+        }
+        for (StandbyWorkspacesProperties ele : standbyWorkspacesProperties) {
+            this.standbyWorkspacesProperties.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The properties of the standby WorkSpace
+     * </p>
+     * 
+     * @param standbyWorkspacesProperties
+     *        The properties of the standby WorkSpace
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Workspace withStandbyWorkspacesProperties(java.util.Collection<StandbyWorkspacesProperties> standbyWorkspacesProperties) {
+        setStandbyWorkspacesProperties(standbyWorkspacesProperties);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1049,7 +1174,11 @@ public class Workspace implements Serializable, Cloneable, StructuredPojo {
         if (getModificationStates() != null)
             sb.append("ModificationStates: ").append(getModificationStates()).append(",");
         if (getRelatedWorkspaces() != null)
-            sb.append("RelatedWorkspaces: ").append(getRelatedWorkspaces());
+            sb.append("RelatedWorkspaces: ").append(getRelatedWorkspaces()).append(",");
+        if (getDataReplicationSettings() != null)
+            sb.append("DataReplicationSettings: ").append(getDataReplicationSettings()).append(",");
+        if (getStandbyWorkspacesProperties() != null)
+            sb.append("StandbyWorkspacesProperties: ").append(getStandbyWorkspacesProperties());
         sb.append("}");
         return sb.toString();
     }
@@ -1128,6 +1257,14 @@ public class Workspace implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getRelatedWorkspaces() != null && other.getRelatedWorkspaces().equals(this.getRelatedWorkspaces()) == false)
             return false;
+        if (other.getDataReplicationSettings() == null ^ this.getDataReplicationSettings() == null)
+            return false;
+        if (other.getDataReplicationSettings() != null && other.getDataReplicationSettings().equals(this.getDataReplicationSettings()) == false)
+            return false;
+        if (other.getStandbyWorkspacesProperties() == null ^ this.getStandbyWorkspacesProperties() == null)
+            return false;
+        if (other.getStandbyWorkspacesProperties() != null && other.getStandbyWorkspacesProperties().equals(this.getStandbyWorkspacesProperties()) == false)
+            return false;
         return true;
     }
 
@@ -1152,6 +1289,8 @@ public class Workspace implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getWorkspaceProperties() == null) ? 0 : getWorkspaceProperties().hashCode());
         hashCode = prime * hashCode + ((getModificationStates() == null) ? 0 : getModificationStates().hashCode());
         hashCode = prime * hashCode + ((getRelatedWorkspaces() == null) ? 0 : getRelatedWorkspaces().hashCode());
+        hashCode = prime * hashCode + ((getDataReplicationSettings() == null) ? 0 : getDataReplicationSettings().hashCode());
+        hashCode = prime * hashCode + ((getStandbyWorkspacesProperties() == null) ? 0 : getStandbyWorkspacesProperties().hashCode());
         return hashCode;
     }
 

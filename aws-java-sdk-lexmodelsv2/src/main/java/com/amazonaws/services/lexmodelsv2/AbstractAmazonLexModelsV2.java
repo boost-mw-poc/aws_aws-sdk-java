@@ -199,6 +199,11 @@ public class AbstractAmazonLexModelsV2 implements AmazonLexModelsV2 {
     }
 
     @Override
+    public DescribeBotResourceGenerationResult describeBotResourceGeneration(DescribeBotResourceGenerationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DescribeBotVersionResult describeBotVersion(DescribeBotVersionRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -259,6 +264,11 @@ public class AbstractAmazonLexModelsV2 implements AmazonLexModelsV2 {
     }
 
     @Override
+    public GenerateBotElementResult generateBotElement(GenerateBotElementRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetTestExecutionArtifactsUrlResult getTestExecutionArtifactsUrl(GetTestExecutionArtifactsUrlRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -280,6 +290,11 @@ public class AbstractAmazonLexModelsV2 implements AmazonLexModelsV2 {
 
     @Override
     public ListBotRecommendationsResult listBotRecommendations(ListBotRecommendationsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListBotResourceGenerationsResult listBotResourceGenerations(ListBotResourceGenerationsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -405,6 +420,11 @@ public class AbstractAmazonLexModelsV2 implements AmazonLexModelsV2 {
 
     @Override
     public StartBotRecommendationResult startBotRecommendation(StartBotRecommendationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public StartBotResourceGenerationResult startBotResourceGeneration(StartBotResourceGenerationRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

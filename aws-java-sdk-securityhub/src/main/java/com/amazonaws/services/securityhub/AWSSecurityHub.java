@@ -1624,6 +1624,31 @@ public interface AWSSecurityHub {
 
     /**
      * <p>
+     * Retrieves the definition of a security control. The definition includes the control title, description, Region
+     * availability, parameter definitions, and other details.
+     * </p>
+     * 
+     * @param getSecurityControlDefinitionRequest
+     * @return Result of the GetSecurityControlDefinition operation returned by the service.
+     * @throws InternalException
+     *         Internal server error.
+     * @throws InvalidInputException
+     *         The request was rejected because you supplied an invalid or out-of-range value for an input parameter.
+     * @throws InvalidAccessException
+     *         The account doesn't have permission to perform this action.
+     * @throws LimitExceededException
+     *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
+     *         account or throttling limits. The error code describes the limit exceeded.
+     * @throws ResourceNotFoundException
+     *         The request was rejected because we can't find the specified resource.
+     * @sample AWSSecurityHub.GetSecurityControlDefinition
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/GetSecurityControlDefinition"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetSecurityControlDefinitionResult getSecurityControlDefinition(GetSecurityControlDefinitionRequest getSecurityControlDefinitionRequest);
+
+    /**
+     * <p>
      * Invites other Amazon Web Services accounts to become member accounts for the Security Hub administrator account
      * that the invitation is sent from.
      * </p>
@@ -2032,6 +2057,33 @@ public interface AWSSecurityHub {
      *      target="_top">AWS API Documentation</a>
      */
     UpdateOrganizationConfigurationResult updateOrganizationConfiguration(UpdateOrganizationConfigurationRequest updateOrganizationConfigurationRequest);
+
+    /**
+     * <p>
+     * Updates the properties of a security control.
+     * </p>
+     * 
+     * @param updateSecurityControlRequest
+     * @return Result of the UpdateSecurityControl operation returned by the service.
+     * @throws InternalException
+     *         Internal server error.
+     * @throws InvalidInputException
+     *         The request was rejected because you supplied an invalid or out-of-range value for an input parameter.
+     * @throws InvalidAccessException
+     *         The account doesn't have permission to perform this action.
+     * @throws LimitExceededException
+     *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
+     *         account or throttling limits. The error code describes the limit exceeded.
+     * @throws ResourceNotFoundException
+     *         The request was rejected because we can't find the specified resource.
+     * @throws ResourceInUseException
+     *         The request was rejected because it conflicts with the resource's availability. For example, you tried to
+     *         update a security control that's currently in the <code>UPDATING</code> state.
+     * @sample AWSSecurityHub.UpdateSecurityControl
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/UpdateSecurityControl"
+     *      target="_top">AWS API Documentation</a>
+     */
+    UpdateSecurityControlResult updateSecurityControl(UpdateSecurityControlRequest updateSecurityControlRequest);
 
     /**
      * <p>

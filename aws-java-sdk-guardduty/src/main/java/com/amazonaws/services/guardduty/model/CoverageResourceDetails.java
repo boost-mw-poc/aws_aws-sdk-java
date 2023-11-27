@@ -40,6 +40,24 @@ public class CoverageResourceDetails implements Serializable, Cloneable, Structu
      * </p>
      */
     private String resourceType;
+    /**
+     * <p>
+     * Information about the Amazon ECS cluster that is assessed for runtime coverage.
+     * </p>
+     */
+    private CoverageEcsClusterDetails ecsClusterDetails;
+    /**
+     * <note>
+     * <p>
+     * This API is also used when you use GuardDuty Runtime Monitoring for your Amazon EC2 instances (currently in
+     * preview release) and is subject to change.
+     * </p>
+     * </note>
+     * <p>
+     * Information about the Amazon EC2 instance assessed for runtime coverage.
+     * </p>
+     */
+    private CoverageEc2InstanceDetails ec2InstanceDetails;
 
     /**
      * <p>
@@ -141,6 +159,122 @@ public class CoverageResourceDetails implements Serializable, Cloneable, Structu
     }
 
     /**
+     * <p>
+     * Information about the Amazon ECS cluster that is assessed for runtime coverage.
+     * </p>
+     * 
+     * @param ecsClusterDetails
+     *        Information about the Amazon ECS cluster that is assessed for runtime coverage.
+     */
+
+    public void setEcsClusterDetails(CoverageEcsClusterDetails ecsClusterDetails) {
+        this.ecsClusterDetails = ecsClusterDetails;
+    }
+
+    /**
+     * <p>
+     * Information about the Amazon ECS cluster that is assessed for runtime coverage.
+     * </p>
+     * 
+     * @return Information about the Amazon ECS cluster that is assessed for runtime coverage.
+     */
+
+    public CoverageEcsClusterDetails getEcsClusterDetails() {
+        return this.ecsClusterDetails;
+    }
+
+    /**
+     * <p>
+     * Information about the Amazon ECS cluster that is assessed for runtime coverage.
+     * </p>
+     * 
+     * @param ecsClusterDetails
+     *        Information about the Amazon ECS cluster that is assessed for runtime coverage.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CoverageResourceDetails withEcsClusterDetails(CoverageEcsClusterDetails ecsClusterDetails) {
+        setEcsClusterDetails(ecsClusterDetails);
+        return this;
+    }
+
+    /**
+     * <note>
+     * <p>
+     * This API is also used when you use GuardDuty Runtime Monitoring for your Amazon EC2 instances (currently in
+     * preview release) and is subject to change.
+     * </p>
+     * </note>
+     * <p>
+     * Information about the Amazon EC2 instance assessed for runtime coverage.
+     * </p>
+     * 
+     * @param ec2InstanceDetails
+     *        <p>
+     *        This API is also used when you use GuardDuty Runtime Monitoring for your Amazon EC2 instances (currently
+     *        in preview release) and is subject to change.
+     *        </p>
+     *        </note>
+     *        <p>
+     *        Information about the Amazon EC2 instance assessed for runtime coverage.
+     */
+
+    public void setEc2InstanceDetails(CoverageEc2InstanceDetails ec2InstanceDetails) {
+        this.ec2InstanceDetails = ec2InstanceDetails;
+    }
+
+    /**
+     * <note>
+     * <p>
+     * This API is also used when you use GuardDuty Runtime Monitoring for your Amazon EC2 instances (currently in
+     * preview release) and is subject to change.
+     * </p>
+     * </note>
+     * <p>
+     * Information about the Amazon EC2 instance assessed for runtime coverage.
+     * </p>
+     * 
+     * @return <p>
+     *         This API is also used when you use GuardDuty Runtime Monitoring for your Amazon EC2 instances (currently
+     *         in preview release) and is subject to change.
+     *         </p>
+     *         </note>
+     *         <p>
+     *         Information about the Amazon EC2 instance assessed for runtime coverage.
+     */
+
+    public CoverageEc2InstanceDetails getEc2InstanceDetails() {
+        return this.ec2InstanceDetails;
+    }
+
+    /**
+     * <note>
+     * <p>
+     * This API is also used when you use GuardDuty Runtime Monitoring for your Amazon EC2 instances (currently in
+     * preview release) and is subject to change.
+     * </p>
+     * </note>
+     * <p>
+     * Information about the Amazon EC2 instance assessed for runtime coverage.
+     * </p>
+     * 
+     * @param ec2InstanceDetails
+     *        <p>
+     *        This API is also used when you use GuardDuty Runtime Monitoring for your Amazon EC2 instances (currently
+     *        in preview release) and is subject to change.
+     *        </p>
+     *        </note>
+     *        <p>
+     *        Information about the Amazon EC2 instance assessed for runtime coverage.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CoverageResourceDetails withEc2InstanceDetails(CoverageEc2InstanceDetails ec2InstanceDetails) {
+        setEc2InstanceDetails(ec2InstanceDetails);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -155,7 +289,11 @@ public class CoverageResourceDetails implements Serializable, Cloneable, Structu
         if (getEksClusterDetails() != null)
             sb.append("EksClusterDetails: ").append(getEksClusterDetails()).append(",");
         if (getResourceType() != null)
-            sb.append("ResourceType: ").append(getResourceType());
+            sb.append("ResourceType: ").append(getResourceType()).append(",");
+        if (getEcsClusterDetails() != null)
+            sb.append("EcsClusterDetails: ").append(getEcsClusterDetails()).append(",");
+        if (getEc2InstanceDetails() != null)
+            sb.append("Ec2InstanceDetails: ").append(getEc2InstanceDetails());
         sb.append("}");
         return sb.toString();
     }
@@ -178,6 +316,14 @@ public class CoverageResourceDetails implements Serializable, Cloneable, Structu
             return false;
         if (other.getResourceType() != null && other.getResourceType().equals(this.getResourceType()) == false)
             return false;
+        if (other.getEcsClusterDetails() == null ^ this.getEcsClusterDetails() == null)
+            return false;
+        if (other.getEcsClusterDetails() != null && other.getEcsClusterDetails().equals(this.getEcsClusterDetails()) == false)
+            return false;
+        if (other.getEc2InstanceDetails() == null ^ this.getEc2InstanceDetails() == null)
+            return false;
+        if (other.getEc2InstanceDetails() != null && other.getEc2InstanceDetails().equals(this.getEc2InstanceDetails()) == false)
+            return false;
         return true;
     }
 
@@ -188,6 +334,8 @@ public class CoverageResourceDetails implements Serializable, Cloneable, Structu
 
         hashCode = prime * hashCode + ((getEksClusterDetails() == null) ? 0 : getEksClusterDetails().hashCode());
         hashCode = prime * hashCode + ((getResourceType() == null) ? 0 : getResourceType().hashCode());
+        hashCode = prime * hashCode + ((getEcsClusterDetails() == null) ? 0 : getEcsClusterDetails().hashCode());
+        hashCode = prime * hashCode + ((getEc2InstanceDetails() == null) ? 0 : getEc2InstanceDetails().hashCode());
         return hashCode;
     }
 

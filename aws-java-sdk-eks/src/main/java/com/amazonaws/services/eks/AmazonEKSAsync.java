@@ -199,6 +199,26 @@ public interface AmazonEKSAsync extends AmazonEKS {
      * Kubernetes API server endpoint and a certificate file that is created for your cluster.
      * </p>
      * <p>
+     * You can use the <code>endpointPublicAccess</code> and <code>endpointPrivateAccess</code> parameters to enable or
+     * disable public and private access to your cluster's Kubernetes API server endpoint. By default, public access is
+     * enabled, and private access is disabled. For more information, see <a
+     * href="https://docs.aws.amazon.com/eks/latest/userguide/cluster-endpoint.html">Amazon EKS Cluster Endpoint Access
+     * Control</a> in the <i> <i>Amazon EKS User Guide</i> </i>.
+     * </p>
+     * <p>
+     * You can use the <code>logging</code> parameter to enable or disable exporting the Kubernetes control plane logs
+     * for your cluster to CloudWatch Logs. By default, cluster control plane logs aren't exported to CloudWatch Logs.
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/eks/latest/userguide/control-plane-logs.html">Amazon EKS Cluster Control Plane
+     * Logs</a> in the <i> <i>Amazon EKS User Guide</i> </i>.
+     * </p>
+     * <note>
+     * <p>
+     * CloudWatch Logs ingestion, archive storage, and data scanning rates apply to exported control plane logs. For
+     * more information, see <a href="http://aws.amazon.com/cloudwatch/pricing/">CloudWatch Pricing</a>.
+     * </p>
+     * </note>
+     * <p>
      * In most cases, it takes several minutes to create a cluster. After you create an Amazon EKS cluster, you must
      * configure your Kubernetes tooling to communicate with the API server and launch nodes into your cluster. For more
      * information, see <a href="https://docs.aws.amazon.com/eks/latest/userguide/managing-auth.html">Managing Cluster
@@ -234,6 +254,26 @@ public interface AmazonEKSAsync extends AmazonEKS {
      * Amazon EKS nodes run in your Amazon Web Services account and connect to your cluster's control plane over the
      * Kubernetes API server endpoint and a certificate file that is created for your cluster.
      * </p>
+     * <p>
+     * You can use the <code>endpointPublicAccess</code> and <code>endpointPrivateAccess</code> parameters to enable or
+     * disable public and private access to your cluster's Kubernetes API server endpoint. By default, public access is
+     * enabled, and private access is disabled. For more information, see <a
+     * href="https://docs.aws.amazon.com/eks/latest/userguide/cluster-endpoint.html">Amazon EKS Cluster Endpoint Access
+     * Control</a> in the <i> <i>Amazon EKS User Guide</i> </i>.
+     * </p>
+     * <p>
+     * You can use the <code>logging</code> parameter to enable or disable exporting the Kubernetes control plane logs
+     * for your cluster to CloudWatch Logs. By default, cluster control plane logs aren't exported to CloudWatch Logs.
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/eks/latest/userguide/control-plane-logs.html">Amazon EKS Cluster Control Plane
+     * Logs</a> in the <i> <i>Amazon EKS User Guide</i> </i>.
+     * </p>
+     * <note>
+     * <p>
+     * CloudWatch Logs ingestion, archive storage, and data scanning rates apply to exported control plane logs. For
+     * more information, see <a href="http://aws.amazon.com/cloudwatch/pricing/">CloudWatch Pricing</a>.
+     * </p>
+     * </note>
      * <p>
      * In most cases, it takes several minutes to create a cluster. After you create an Amazon EKS cluster, you must
      * configure your Kubernetes tooling to communicate with the API server and launch nodes into your cluster. For more
@@ -442,6 +482,71 @@ public interface AmazonEKSAsync extends AmazonEKS {
 
     /**
      * <p>
+     * Creates an EKS Pod Identity association between a service account in an Amazon EKS cluster and an IAM role with
+     * <i>EKS Pod Identity</i>. Use EKS Pod Identity to give temporary IAM credentials to pods and the credentials are
+     * rotated automatically.
+     * </p>
+     * <p>
+     * Amazon EKS Pod Identity associations provide the ability to manage credentials for your applications, similar to
+     * the way that 7EC2l instance profiles provide credentials to Amazon EC2 instances.
+     * </p>
+     * <p>
+     * If a pod uses a service account that has an association, Amazon EKS sets environment variables in the containers
+     * of the pod. The environment variables configure the Amazon Web Services SDKs, including the Command Line
+     * Interface, to use the EKS Pod Identity credentials.
+     * </p>
+     * <p>
+     * Pod Identity is a simpler method than <i>IAM roles for service accounts</i>, as this method doesn't use OIDC
+     * identity providers. Additionally, you can configure a role for Pod Identity once, and reuse it across clusters.
+     * </p>
+     * 
+     * @param createPodIdentityAssociationRequest
+     * @return A Java Future containing the result of the CreatePodIdentityAssociation operation returned by the
+     *         service.
+     * @sample AmazonEKSAsync.CreatePodIdentityAssociation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/eks-2017-11-01/CreatePodIdentityAssociation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreatePodIdentityAssociationResult> createPodIdentityAssociationAsync(
+            CreatePodIdentityAssociationRequest createPodIdentityAssociationRequest);
+
+    /**
+     * <p>
+     * Creates an EKS Pod Identity association between a service account in an Amazon EKS cluster and an IAM role with
+     * <i>EKS Pod Identity</i>. Use EKS Pod Identity to give temporary IAM credentials to pods and the credentials are
+     * rotated automatically.
+     * </p>
+     * <p>
+     * Amazon EKS Pod Identity associations provide the ability to manage credentials for your applications, similar to
+     * the way that 7EC2l instance profiles provide credentials to Amazon EC2 instances.
+     * </p>
+     * <p>
+     * If a pod uses a service account that has an association, Amazon EKS sets environment variables in the containers
+     * of the pod. The environment variables configure the Amazon Web Services SDKs, including the Command Line
+     * Interface, to use the EKS Pod Identity credentials.
+     * </p>
+     * <p>
+     * Pod Identity is a simpler method than <i>IAM roles for service accounts</i>, as this method doesn't use OIDC
+     * identity providers. Additionally, you can configure a role for Pod Identity once, and reuse it across clusters.
+     * </p>
+     * 
+     * @param createPodIdentityAssociationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreatePodIdentityAssociation operation returned by the
+     *         service.
+     * @sample AmazonEKSAsyncHandler.CreatePodIdentityAssociation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/eks-2017-11-01/CreatePodIdentityAssociation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreatePodIdentityAssociationResult> createPodIdentityAssociationAsync(
+            CreatePodIdentityAssociationRequest createPodIdentityAssociationRequest,
+            com.amazonaws.handlers.AsyncHandler<CreatePodIdentityAssociationRequest, CreatePodIdentityAssociationResult> asyncHandler);
+
+    /**
+     * <p>
      * Delete an Amazon EKS add-on.
      * </p>
      * <p>
@@ -534,9 +639,9 @@ public interface AmazonEKSAsync extends AmazonEKS {
 
     /**
      * <p>
-     * Deletes an expired / inactive subscription. Deleting inactive subscriptions removes them from the Amazon Web
+     * Deletes an expired or inactive subscription. Deleting inactive subscriptions removes them from the Amazon Web
      * Services Management Console view and from list/describe API responses. Subscriptions can only be cancelled within
-     * 7 days of creation, and are cancelled by creating a ticket in the Amazon Web Services Support Center.
+     * 7 days of creation and are cancelled by creating a ticket in the Amazon Web Services Support Center.
      * </p>
      * 
      * @param deleteEksAnywhereSubscriptionRequest
@@ -551,9 +656,9 @@ public interface AmazonEKSAsync extends AmazonEKS {
 
     /**
      * <p>
-     * Deletes an expired / inactive subscription. Deleting inactive subscriptions removes them from the Amazon Web
+     * Deletes an expired or inactive subscription. Deleting inactive subscriptions removes them from the Amazon Web
      * Services Management Console view and from list/describe API responses. Subscriptions can only be cancelled within
-     * 7 days of creation, and are cancelled by creating a ticket in the Amazon Web Services Support Center.
+     * 7 days of creation and are cancelled by creating a ticket in the Amazon Web Services Support Center.
      * </p>
      * 
      * @param deleteEksAnywhereSubscriptionRequest
@@ -650,6 +755,51 @@ public interface AmazonEKSAsync extends AmazonEKS {
      */
     java.util.concurrent.Future<DeleteNodegroupResult> deleteNodegroupAsync(DeleteNodegroupRequest deleteNodegroupRequest,
             com.amazonaws.handlers.AsyncHandler<DeleteNodegroupRequest, DeleteNodegroupResult> asyncHandler);
+
+    /**
+     * <p>
+     * Deletes a EKS Pod Identity association.
+     * </p>
+     * <p>
+     * The temporary Amazon Web Services credentials from the previous IAM role session might still be valid until the
+     * session expiry. If you need to immediately revoke the temporary session credentials, then go to the role in the
+     * IAM console.
+     * </p>
+     * 
+     * @param deletePodIdentityAssociationRequest
+     * @return A Java Future containing the result of the DeletePodIdentityAssociation operation returned by the
+     *         service.
+     * @sample AmazonEKSAsync.DeletePodIdentityAssociation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/eks-2017-11-01/DeletePodIdentityAssociation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeletePodIdentityAssociationResult> deletePodIdentityAssociationAsync(
+            DeletePodIdentityAssociationRequest deletePodIdentityAssociationRequest);
+
+    /**
+     * <p>
+     * Deletes a EKS Pod Identity association.
+     * </p>
+     * <p>
+     * The temporary Amazon Web Services credentials from the previous IAM role session might still be valid until the
+     * session expiry. If you need to immediately revoke the temporary session credentials, then go to the role in the
+     * IAM console.
+     * </p>
+     * 
+     * @param deletePodIdentityAssociationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeletePodIdentityAssociation operation returned by the
+     *         service.
+     * @sample AmazonEKSAsyncHandler.DeletePodIdentityAssociation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/eks-2017-11-01/DeletePodIdentityAssociation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeletePodIdentityAssociationResult> deletePodIdentityAssociationAsync(
+            DeletePodIdentityAssociationRequest deletePodIdentityAssociationRequest,
+            com.amazonaws.handlers.AsyncHandler<DeletePodIdentityAssociationRequest, DeletePodIdentityAssociationResult> asyncHandler);
 
     /**
      * <p>
@@ -968,6 +1118,51 @@ public interface AmazonEKSAsync extends AmazonEKS {
 
     /**
      * <p>
+     * Returns descriptive information about an EKS Pod Identity association.
+     * </p>
+     * <p>
+     * This action requires the ID of the association. You can get the ID from the response to the
+     * <code>CreatePodIdentityAssocation</code> for newly created associations. Or, you can list the IDs for
+     * associations with <code>ListPodIdentityAssociations</code> and filter the list by namespace or service account.
+     * </p>
+     * 
+     * @param describePodIdentityAssociationRequest
+     * @return A Java Future containing the result of the DescribePodIdentityAssociation operation returned by the
+     *         service.
+     * @sample AmazonEKSAsync.DescribePodIdentityAssociation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/eks-2017-11-01/DescribePodIdentityAssociation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribePodIdentityAssociationResult> describePodIdentityAssociationAsync(
+            DescribePodIdentityAssociationRequest describePodIdentityAssociationRequest);
+
+    /**
+     * <p>
+     * Returns descriptive information about an EKS Pod Identity association.
+     * </p>
+     * <p>
+     * This action requires the ID of the association. You can get the ID from the response to the
+     * <code>CreatePodIdentityAssocation</code> for newly created associations. Or, you can list the IDs for
+     * associations with <code>ListPodIdentityAssociations</code> and filter the list by namespace or service account.
+     * </p>
+     * 
+     * @param describePodIdentityAssociationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribePodIdentityAssociation operation returned by the
+     *         service.
+     * @sample AmazonEKSAsyncHandler.DescribePodIdentityAssociation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/eks-2017-11-01/DescribePodIdentityAssociation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribePodIdentityAssociationResult> describePodIdentityAssociationAsync(
+            DescribePodIdentityAssociationRequest describePodIdentityAssociationRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribePodIdentityAssociationRequest, DescribePodIdentityAssociationResult> asyncHandler);
+
+    /**
+     * <p>
      * Returns descriptive information about an update against your Amazon EKS cluster or associated managed node group
      * or Amazon EKS add-on.
      * </p>
@@ -1246,6 +1441,41 @@ public interface AmazonEKSAsync extends AmazonEKS {
 
     /**
      * <p>
+     * List the EKS Pod Identity associations in a cluster. You can filter the list by the namespace that the
+     * association is in or the service account that the association uses.
+     * </p>
+     * 
+     * @param listPodIdentityAssociationsRequest
+     * @return A Java Future containing the result of the ListPodIdentityAssociations operation returned by the service.
+     * @sample AmazonEKSAsync.ListPodIdentityAssociations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/eks-2017-11-01/ListPodIdentityAssociations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListPodIdentityAssociationsResult> listPodIdentityAssociationsAsync(
+            ListPodIdentityAssociationsRequest listPodIdentityAssociationsRequest);
+
+    /**
+     * <p>
+     * List the EKS Pod Identity associations in a cluster. You can filter the list by the namespace that the
+     * association is in or the service account that the association uses.
+     * </p>
+     * 
+     * @param listPodIdentityAssociationsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListPodIdentityAssociations operation returned by the service.
+     * @sample AmazonEKSAsyncHandler.ListPodIdentityAssociations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/eks-2017-11-01/ListPodIdentityAssociations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListPodIdentityAssociationsResult> listPodIdentityAssociationsAsync(
+            ListPodIdentityAssociationsRequest listPodIdentityAssociationsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListPodIdentityAssociationsRequest, ListPodIdentityAssociationsResult> asyncHandler);
+
+    /**
+     * <p>
      * List the tags for an Amazon EKS resource.
      * </p>
      * 
@@ -1502,11 +1732,14 @@ public interface AmazonEKSAsync extends AmazonEKS {
      * see <a href="https://docs.aws.amazon.com/eks/latest/userguide/cluster-endpoint.html">Amazon EKS cluster endpoint
      * access control</a> in the <i> <i>Amazon EKS User Guide</i> </i>.
      * </p>
-     * <important>
      * <p>
-     * You can't update the subnets or security group IDs for an existing cluster.
+     * You can also use this API operation to choose different subnets and security groups for the cluster. You must
+     * specify at least two subnets that are in different Availability Zones. You can't change which VPC the subnets are
+     * from, the subnets must be in the same VPC as the subnets that the cluster was created with. For more information
+     * about the VPC requirements, see <a
+     * href="https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html">https
+     * ://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html</a> in the <i> <i>Amazon EKS User Guide</i> </i>.
      * </p>
-     * </important>
      * <p>
      * Cluster updates are asynchronous, and they should finish within a few minutes. During an update, the cluster
      * status moves to <code>UPDATING</code> (this status transition is eventually consistent). When the update is
@@ -1546,11 +1779,14 @@ public interface AmazonEKSAsync extends AmazonEKS {
      * see <a href="https://docs.aws.amazon.com/eks/latest/userguide/cluster-endpoint.html">Amazon EKS cluster endpoint
      * access control</a> in the <i> <i>Amazon EKS User Guide</i> </i>.
      * </p>
-     * <important>
      * <p>
-     * You can't update the subnets or security group IDs for an existing cluster.
+     * You can also use this API operation to choose different subnets and security groups for the cluster. You must
+     * specify at least two subnets that are in different Availability Zones. You can't change which VPC the subnets are
+     * from, the subnets must be in the same VPC as the subnets that the cluster was created with. For more information
+     * about the VPC requirements, see <a
+     * href="https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html">https
+     * ://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html</a> in the <i> <i>Amazon EKS User Guide</i> </i>.
      * </p>
-     * </important>
      * <p>
      * Cluster updates are asynchronous, and they should finish within a few minutes. During an update, the cluster
      * status moves to <code>UPDATING</code> (this status transition is eventually consistent). When the update is
@@ -1778,5 +2014,44 @@ public interface AmazonEKSAsync extends AmazonEKS {
      */
     java.util.concurrent.Future<UpdateNodegroupVersionResult> updateNodegroupVersionAsync(UpdateNodegroupVersionRequest updateNodegroupVersionRequest,
             com.amazonaws.handlers.AsyncHandler<UpdateNodegroupVersionRequest, UpdateNodegroupVersionResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates a EKS Pod Identity association. Only the IAM role can be changed; an association can't be moved between
+     * clusters, namespaces, or service accounts. If you need to edit the namespace or service account, you need to
+     * remove the association and then create a new association with your desired settings.
+     * </p>
+     * 
+     * @param updatePodIdentityAssociationRequest
+     * @return A Java Future containing the result of the UpdatePodIdentityAssociation operation returned by the
+     *         service.
+     * @sample AmazonEKSAsync.UpdatePodIdentityAssociation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/eks-2017-11-01/UpdatePodIdentityAssociation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdatePodIdentityAssociationResult> updatePodIdentityAssociationAsync(
+            UpdatePodIdentityAssociationRequest updatePodIdentityAssociationRequest);
+
+    /**
+     * <p>
+     * Updates a EKS Pod Identity association. Only the IAM role can be changed; an association can't be moved between
+     * clusters, namespaces, or service accounts. If you need to edit the namespace or service account, you need to
+     * remove the association and then create a new association with your desired settings.
+     * </p>
+     * 
+     * @param updatePodIdentityAssociationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdatePodIdentityAssociation operation returned by the
+     *         service.
+     * @sample AmazonEKSAsyncHandler.UpdatePodIdentityAssociation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/eks-2017-11-01/UpdatePodIdentityAssociation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdatePodIdentityAssociationResult> updatePodIdentityAssociationAsync(
+            UpdatePodIdentityAssociationRequest updatePodIdentityAssociationRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdatePodIdentityAssociationRequest, UpdatePodIdentityAssociationResult> asyncHandler);
 
 }

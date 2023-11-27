@@ -88,8 +88,8 @@ public class DataLakeSettings implements Serializable, Cloneable, StructuredPojo
     private java.util.List<PrincipalPermissions> createTableDefaultPermissions;
     /**
      * <p>
-     * A key-value map that provides an additional configuration on your data lake. CrossAccountVersion is the key you
-     * can configure in the Parameters field. Accepted values for the CrossAccountVersion key are 1, 2, and 3.
+     * A key-value map that provides an additional configuration on your data lake. CROSS_ACCOUNT_VERSION is the key you
+     * can configure in the Parameters field. Accepted values for the CrossAccountVersion key are 1, 2, 3, and 4.
      * </p>
      */
     private java.util.Map<String, String> parameters;
@@ -684,13 +684,13 @@ public class DataLakeSettings implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * A key-value map that provides an additional configuration on your data lake. CrossAccountVersion is the key you
-     * can configure in the Parameters field. Accepted values for the CrossAccountVersion key are 1, 2, and 3.
+     * A key-value map that provides an additional configuration on your data lake. CROSS_ACCOUNT_VERSION is the key you
+     * can configure in the Parameters field. Accepted values for the CrossAccountVersion key are 1, 2, 3, and 4.
      * </p>
      * 
-     * @return A key-value map that provides an additional configuration on your data lake. CrossAccountVersion is the
+     * @return A key-value map that provides an additional configuration on your data lake. CROSS_ACCOUNT_VERSION is the
      *         key you can configure in the Parameters field. Accepted values for the CrossAccountVersion key are 1, 2,
-     *         and 3.
+     *         3, and 4.
      */
 
     public java.util.Map<String, String> getParameters() {
@@ -699,14 +699,14 @@ public class DataLakeSettings implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * A key-value map that provides an additional configuration on your data lake. CrossAccountVersion is the key you
-     * can configure in the Parameters field. Accepted values for the CrossAccountVersion key are 1, 2, and 3.
+     * A key-value map that provides an additional configuration on your data lake. CROSS_ACCOUNT_VERSION is the key you
+     * can configure in the Parameters field. Accepted values for the CrossAccountVersion key are 1, 2, 3, and 4.
      * </p>
      * 
      * @param parameters
-     *        A key-value map that provides an additional configuration on your data lake. CrossAccountVersion is the
+     *        A key-value map that provides an additional configuration on your data lake. CROSS_ACCOUNT_VERSION is the
      *        key you can configure in the Parameters field. Accepted values for the CrossAccountVersion key are 1, 2,
-     *        and 3.
+     *        3, and 4.
      */
 
     public void setParameters(java.util.Map<String, String> parameters) {
@@ -715,14 +715,14 @@ public class DataLakeSettings implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * A key-value map that provides an additional configuration on your data lake. CrossAccountVersion is the key you
-     * can configure in the Parameters field. Accepted values for the CrossAccountVersion key are 1, 2, and 3.
+     * A key-value map that provides an additional configuration on your data lake. CROSS_ACCOUNT_VERSION is the key you
+     * can configure in the Parameters field. Accepted values for the CrossAccountVersion key are 1, 2, 3, and 4.
      * </p>
      * 
      * @param parameters
-     *        A key-value map that provides an additional configuration on your data lake. CrossAccountVersion is the
+     *        A key-value map that provides an additional configuration on your data lake. CROSS_ACCOUNT_VERSION is the
      *        key you can configure in the Parameters field. Accepted values for the CrossAccountVersion key are 1, 2,
-     *        and 3.
+     *        3, and 4.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

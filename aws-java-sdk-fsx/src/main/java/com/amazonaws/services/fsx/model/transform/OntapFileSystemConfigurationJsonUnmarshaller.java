@@ -94,6 +94,14 @@ public class OntapFileSystemConfigurationJsonUnmarshaller implements Unmarshalle
                     context.nextToken();
                     ontapFileSystemConfiguration.setFsxAdminPassword(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("HAPairs", targetDepth)) {
+                    context.nextToken();
+                    ontapFileSystemConfiguration.setHAPairs(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
+                if (context.testExpression("ThroughputCapacityPerHAPair", targetDepth)) {
+                    context.nextToken();
+                    ontapFileSystemConfiguration.setThroughputCapacityPerHAPair(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

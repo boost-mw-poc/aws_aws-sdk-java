@@ -21,7 +21,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * <p>
  * Specifies which resource types Config records for configuration changes. By default, Config records configuration
  * changes for all current and future supported resource types in the Amazon Web Services Region where you have enabled
- * Config (excluding the globally recorded IAM resource types: IAM users, groups, roles, and customer managed policies).
+ * Config, excluding the global IAM resource types: IAM users, groups, roles, and customer managed policies.
  * </p>
  * <p>
  * In the recording group, you specify whether you want to record all supported current and future supported resource
@@ -30,8 +30,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * >Supported Resource Types</a> in the <i>Config developer guide</i>.
  * </p>
  * <p>
- * If you don't want Config to record all current and future supported resource types, use one of the following
- * recording strategies:
+ * If you don't want Config to record all current and future supported resource types (excluding the global IAM resource
+ * types), use one of the following recording strategies:
  * </p>
  * <ol>
  * <li>
@@ -45,9 +45,14 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * </p>
  * </li>
  * </ol>
+ * <p>
+ * If you use the recording strategy to <b>Record all current and future resource types</b> (
+ * <code>ALL_SUPPORTED_RESOURCE_TYPES</code>), you can use the flag <code>includeGlobalResourceTypes</code> to include
+ * the global IAM resource types in your recording.
+ * </p>
  * <important>
  * <p>
- * <b>Aurora global clusters are automatically globally recorded</b>
+ * <b>Aurora global clusters are recorded in all enabled Regions</b>
  * </p>
  * <p>
  * The <code>AWS::RDS::GlobalCluster</code> resource type will be recorded in all supported Config Regions where the
@@ -67,11 +72,12 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Specifies whether Config records configuration changes for all supported regionally recorded resource types.
+     * Specifies whether Config records configuration changes for all supported resource types, excluding the global IAM
+     * resource types.
      * </p>
      * <p>
-     * If you set this field to <code>true</code>, when Config adds support for a new regionally recorded resource type,
-     * Config starts recording resources of that type automatically.
+     * If you set this field to <code>true</code>, when Config adds support for a new resource type, Config starts
+     * recording resources of that type automatically.
      * </p>
      * <p>
      * If you set this field to <code>true</code>, you cannot enumerate specific resource types to record in the
@@ -83,7 +89,7 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <note>
      * <p>
-     * <b>Region Availability</b>
+     * <b>Region availability</b>
      * </p>
      * <p>
      * Check <a
@@ -96,9 +102,11 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
     private Boolean allSupported;
     /**
      * <p>
-     * A legacy field which <b>only applies to the globally recorded IAM resource types</b>: IAM users, groups, roles,
-     * and customer managed policies. If you select this option, these resource types will be recorded in all enabled
-     * Config regions where Config was available before February 2022. This list does not include the following Regions:
+     * This option is a bundle which only applies to the global IAM resource types: IAM users, groups, roles, and
+     * customer managed policies. These global IAM resource types can only be recorded by Config in Regions where Config
+     * was available before February 2022. You cannot be record the global IAM resouce types in Regions supported by
+     * Config after February 2022. This list where you cannot record the global IAM resource types includes the
+     * following Regions:
      * </p>
      * <ul>
      * <li>
@@ -134,13 +142,13 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
      * </ul>
      * <important>
      * <p>
-     * <b>Aurora global clusters are automatically globally recorded</b>
+     * <b>Aurora global clusters are recorded in all enabled Regions</b>
      * </p>
      * <p>
      * The <code>AWS::RDS::GlobalCluster</code> resource type will be recorded in all supported Config Regions where the
      * configuration recorder is enabled, even if <code>includeGlobalResourceTypes</code> is not set to
-     * <code>true</code>. <code>includeGlobalResourceTypes</code> is a legacy field which only applies to IAM users,
-     * groups, roles, and customer managed policies.
+     * <code>true</code>. The <code>includeGlobalResourceTypes</code> option is a bundle which only applies to IAM
+     * users, groups, roles, and customer managed policies.
      * </p>
      * <p>
      * If you do not want to record <code>AWS::RDS::GlobalCluster</code> in all enabled Regions, use one of the
@@ -166,9 +174,6 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * </important> <note>
      * <p>
-     * <b>Required and optional fields</b>
-     * </p>
-     * <p>
      * Before you set this field to <code>true</code>, set the <code>allSupported</code> field of <a
      * href="https://docs.aws.amazon.com/config/latest/APIReference/API_RecordingGroup.html">RecordingGroup</a> to
      * <code>true</code>. Optionally, you can set the <code>useOnly</code> field of <a
@@ -180,16 +185,16 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
      * <b>Overriding fields</b>
      * </p>
      * <p>
-     * If you set this field to <code>false</code> but list globally recorded IAM resource types in the
-     * <code>resourceTypes</code> field of <a
+     * If you set this field to <code>false</code> but list global IAM resource types in the <code>resourceTypes</code>
+     * field of <a
      * href="https://docs.aws.amazon.com/config/latest/APIReference/API_RecordingGroup.html">RecordingGroup</a>, Config
      * will still record configuration changes for those specified resource types <i>regardless</i> of if you set the
      * <code>includeGlobalResourceTypes</code> field to false.
      * </p>
      * <p>
-     * If you do not want to record configuration changes to the globally recorded IAM resource types (IAM users,
-     * groups, roles, and customer managed policies), make sure to not list them in the <code>resourceTypes</code> field
-     * in addition to setting the <code>includeGlobalResourceTypes</code> field to false.
+     * If you do not want to record configuration changes to the global IAM resource types (IAM users, groups, roles,
+     * and customer managed policies), make sure to not list them in the <code>resourceTypes</code> field in addition to
+     * setting the <code>includeGlobalResourceTypes</code> field to false.
      * </p>
      * </note>
      */
@@ -197,6 +202,15 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * A comma-separated list that specifies which resource types Config records.
+     * </p>
+     * <p>
+     * For a list of valid <code>resourceTypes</code> values, see the <b>Resource Type Value</b> column in <a href=
+     * "https://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html#supported-resources"
+     * >Supported Amazon Web Services resource Types</a> in the <i>Config developer guide</i>.
+     * </p>
+     * <note>
+     * <p>
+     * <b>Required and optional fields</b>
      * </p>
      * <p>
      * Optionally, you can set the <code>useOnly</code> field of <a
@@ -211,14 +225,9 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
      * Config adds support for a new type of resource, it will not record resources of that type unless you manually add
      * that type to your recording group.
      * </p>
+     * </note> <note>
      * <p>
-     * For a list of valid <code>resourceTypes</code> values, see the <b>Resource Type Value</b> column in <a href=
-     * "https://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html#supported-resources"
-     * >Supported Amazon Web Services resource Types</a> in the <i>Config developer guide</i>.
-     * </p>
-     * <note>
-     * <p>
-     * <b>Region Availability</b>
+     * <b>Region availability</b>
      * </p>
      * <p>
      * Before specifying a resource type for Config to track, check <a
@@ -235,11 +244,16 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * An object that specifies how Config excludes resource types from being recorded by the configuration recorder.
      * </p>
+     * <note>
+     * <p>
+     * <b>Required fields</b>
+     * </p>
      * <p>
      * To use this option, you must set the <code>useOnly</code> field of <a
      * href="https://docs.aws.amazon.com/config/latest/APIReference/API_RecordingStrategy.html">RecordingStrategy</a> to
      * <code>EXCLUSION_BY_RESOURCE_TYPES</code>.
      * </p>
+     * </note>
      */
     private ExclusionByResourceTypes exclusionByResourceTypes;
     /**
@@ -251,11 +265,11 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * If you set the <code>useOnly</code> field of <a
      * href="https://docs.aws.amazon.com/config/latest/APIReference/API_RecordingStrategy.html">RecordingStrategy</a> to
-     * <code>ALL_SUPPORTED_RESOURCE_TYPES</code>, Config records configuration changes for all supported regionally
-     * recorded resource types. You also must set the <code>allSupported</code> field of <a
+     * <code>ALL_SUPPORTED_RESOURCE_TYPES</code>, Config records configuration changes for all supported resource types,
+     * excluding the global IAM resource types. You also must set the <code>allSupported</code> field of <a
      * href="https://docs.aws.amazon.com/config/latest/APIReference/API_RecordingGroup.html">RecordingGroup</a> to
-     * <code>true</code>. When Config adds support for a new regionally recorded resource type, Config automatically
-     * starts recording resources of that type.
+     * <code>true</code>. When Config adds support for a new resource type, Config automatically starts recording
+     * resources of that type.
      * </p>
      * </li>
      * <li>
@@ -307,9 +321,9 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
      * <code>exclusionByResourceTypes</code> field will override other properties in the request.
      * </p>
      * <p>
-     * For example, even if you set <code>includeGlobalResourceTypes</code> to false, globally recorded IAM resource
-     * types will still be automatically recorded in this option unless those resource types are specifically listed as
-     * exclusions in the <code>resourceTypes</code> field of <code>exclusionByResourceTypes</code>.
+     * For example, even if you set <code>includeGlobalResourceTypes</code> to false, global IAM resource types will
+     * still be automatically recorded in this option unless those resource types are specifically listed as exclusions
+     * in the <code>resourceTypes</code> field of <code>exclusionByResourceTypes</code>.
      * </p>
      * </note> <note>
      * <p>
@@ -321,10 +335,14 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
      * resource types, Config starts recording resources of that type automatically.
      * </p>
      * <p>
-     * In addition, unless specifically listed as exclusions, <code>AWS::RDS::GlobalCluster</code> will be recorded
-     * automatically in all supported Config Regions were the configuration recorder is enabled. IAM users, groups,
-     * roles, and customer managed policies will be recorded automatically in all enabled Config Regions where Config
-     * was available before February 2022. This list does not include the following Regions:
+     * Unless specifically listed as exclusions, <code>AWS::RDS::GlobalCluster</code> will be recorded automatically in
+     * all supported Config Regions were the configuration recorder is enabled.
+     * </p>
+     * <p>
+     * IAM users, groups, roles, and customer managed policies will be recorded in the Region where you set up the
+     * configuration recorder if that is a Region where Config was available before February 2022. You cannot be record
+     * the global IAM resouce types in Regions supported by Config after February 2022. This list where you cannot
+     * record the global IAM resource types includes the following Regions:
      * </p>
      * <ul>
      * <li>
@@ -364,11 +382,12 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Specifies whether Config records configuration changes for all supported regionally recorded resource types.
+     * Specifies whether Config records configuration changes for all supported resource types, excluding the global IAM
+     * resource types.
      * </p>
      * <p>
-     * If you set this field to <code>true</code>, when Config adds support for a new regionally recorded resource type,
-     * Config starts recording resources of that type automatically.
+     * If you set this field to <code>true</code>, when Config adds support for a new resource type, Config starts
+     * recording resources of that type automatically.
      * </p>
      * <p>
      * If you set this field to <code>true</code>, you cannot enumerate specific resource types to record in the
@@ -380,7 +399,7 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <note>
      * <p>
-     * <b>Region Availability</b>
+     * <b>Region availability</b>
      * </p>
      * <p>
      * Check <a
@@ -391,11 +410,11 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
      * </note>
      * 
      * @param allSupported
-     *        Specifies whether Config records configuration changes for all supported regionally recorded resource
-     *        types.</p>
+     *        Specifies whether Config records configuration changes for all supported resource types, excluding the
+     *        global IAM resource types.</p>
      *        <p>
-     *        If you set this field to <code>true</code>, when Config adds support for a new regionally recorded
-     *        resource type, Config starts recording resources of that type automatically.
+     *        If you set this field to <code>true</code>, when Config adds support for a new resource type, Config
+     *        starts recording resources of that type automatically.
      *        </p>
      *        <p>
      *        If you set this field to <code>true</code>, you cannot enumerate specific resource types to record in the
@@ -407,7 +426,7 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
      *        </p>
      *        <note>
      *        <p>
-     *        <b>Region Availability</b>
+     *        <b>Region availability</b>
      *        </p>
      *        <p>
      *        Check <a
@@ -423,11 +442,12 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Specifies whether Config records configuration changes for all supported regionally recorded resource types.
+     * Specifies whether Config records configuration changes for all supported resource types, excluding the global IAM
+     * resource types.
      * </p>
      * <p>
-     * If you set this field to <code>true</code>, when Config adds support for a new regionally recorded resource type,
-     * Config starts recording resources of that type automatically.
+     * If you set this field to <code>true</code>, when Config adds support for a new resource type, Config starts
+     * recording resources of that type automatically.
      * </p>
      * <p>
      * If you set this field to <code>true</code>, you cannot enumerate specific resource types to record in the
@@ -439,7 +459,7 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <note>
      * <p>
-     * <b>Region Availability</b>
+     * <b>Region availability</b>
      * </p>
      * <p>
      * Check <a
@@ -449,11 +469,11 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * </note>
      * 
-     * @return Specifies whether Config records configuration changes for all supported regionally recorded resource
-     *         types.</p>
+     * @return Specifies whether Config records configuration changes for all supported resource types, excluding the
+     *         global IAM resource types.</p>
      *         <p>
-     *         If you set this field to <code>true</code>, when Config adds support for a new regionally recorded
-     *         resource type, Config starts recording resources of that type automatically.
+     *         If you set this field to <code>true</code>, when Config adds support for a new resource type, Config
+     *         starts recording resources of that type automatically.
      *         </p>
      *         <p>
      *         If you set this field to <code>true</code>, you cannot enumerate specific resource types to record in the
@@ -465,7 +485,7 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
      *         </p>
      *         <note>
      *         <p>
-     *         <b>Region Availability</b>
+     *         <b>Region availability</b>
      *         </p>
      *         <p>
      *         Check <a
@@ -481,11 +501,12 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Specifies whether Config records configuration changes for all supported regionally recorded resource types.
+     * Specifies whether Config records configuration changes for all supported resource types, excluding the global IAM
+     * resource types.
      * </p>
      * <p>
-     * If you set this field to <code>true</code>, when Config adds support for a new regionally recorded resource type,
-     * Config starts recording resources of that type automatically.
+     * If you set this field to <code>true</code>, when Config adds support for a new resource type, Config starts
+     * recording resources of that type automatically.
      * </p>
      * <p>
      * If you set this field to <code>true</code>, you cannot enumerate specific resource types to record in the
@@ -497,7 +518,7 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <note>
      * <p>
-     * <b>Region Availability</b>
+     * <b>Region availability</b>
      * </p>
      * <p>
      * Check <a
@@ -508,11 +529,11 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
      * </note>
      * 
      * @param allSupported
-     *        Specifies whether Config records configuration changes for all supported regionally recorded resource
-     *        types.</p>
+     *        Specifies whether Config records configuration changes for all supported resource types, excluding the
+     *        global IAM resource types.</p>
      *        <p>
-     *        If you set this field to <code>true</code>, when Config adds support for a new regionally recorded
-     *        resource type, Config starts recording resources of that type automatically.
+     *        If you set this field to <code>true</code>, when Config adds support for a new resource type, Config
+     *        starts recording resources of that type automatically.
      *        </p>
      *        <p>
      *        If you set this field to <code>true</code>, you cannot enumerate specific resource types to record in the
@@ -524,7 +545,7 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
      *        </p>
      *        <note>
      *        <p>
-     *        <b>Region Availability</b>
+     *        <b>Region availability</b>
      *        </p>
      *        <p>
      *        Check <a
@@ -542,11 +563,12 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Specifies whether Config records configuration changes for all supported regionally recorded resource types.
+     * Specifies whether Config records configuration changes for all supported resource types, excluding the global IAM
+     * resource types.
      * </p>
      * <p>
-     * If you set this field to <code>true</code>, when Config adds support for a new regionally recorded resource type,
-     * Config starts recording resources of that type automatically.
+     * If you set this field to <code>true</code>, when Config adds support for a new resource type, Config starts
+     * recording resources of that type automatically.
      * </p>
      * <p>
      * If you set this field to <code>true</code>, you cannot enumerate specific resource types to record in the
@@ -558,7 +580,7 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <note>
      * <p>
-     * <b>Region Availability</b>
+     * <b>Region availability</b>
      * </p>
      * <p>
      * Check <a
@@ -568,11 +590,11 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * </note>
      * 
-     * @return Specifies whether Config records configuration changes for all supported regionally recorded resource
-     *         types.</p>
+     * @return Specifies whether Config records configuration changes for all supported resource types, excluding the
+     *         global IAM resource types.</p>
      *         <p>
-     *         If you set this field to <code>true</code>, when Config adds support for a new regionally recorded
-     *         resource type, Config starts recording resources of that type automatically.
+     *         If you set this field to <code>true</code>, when Config adds support for a new resource type, Config
+     *         starts recording resources of that type automatically.
      *         </p>
      *         <p>
      *         If you set this field to <code>true</code>, you cannot enumerate specific resource types to record in the
@@ -584,7 +606,7 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
      *         </p>
      *         <note>
      *         <p>
-     *         <b>Region Availability</b>
+     *         <b>Region availability</b>
      *         </p>
      *         <p>
      *         Check <a
@@ -600,9 +622,11 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A legacy field which <b>only applies to the globally recorded IAM resource types</b>: IAM users, groups, roles,
-     * and customer managed policies. If you select this option, these resource types will be recorded in all enabled
-     * Config regions where Config was available before February 2022. This list does not include the following Regions:
+     * This option is a bundle which only applies to the global IAM resource types: IAM users, groups, roles, and
+     * customer managed policies. These global IAM resource types can only be recorded by Config in Regions where Config
+     * was available before February 2022. You cannot be record the global IAM resouce types in Regions supported by
+     * Config after February 2022. This list where you cannot record the global IAM resource types includes the
+     * following Regions:
      * </p>
      * <ul>
      * <li>
@@ -638,13 +662,13 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
      * </ul>
      * <important>
      * <p>
-     * <b>Aurora global clusters are automatically globally recorded</b>
+     * <b>Aurora global clusters are recorded in all enabled Regions</b>
      * </p>
      * <p>
      * The <code>AWS::RDS::GlobalCluster</code> resource type will be recorded in all supported Config Regions where the
      * configuration recorder is enabled, even if <code>includeGlobalResourceTypes</code> is not set to
-     * <code>true</code>. <code>includeGlobalResourceTypes</code> is a legacy field which only applies to IAM users,
-     * groups, roles, and customer managed policies.
+     * <code>true</code>. The <code>includeGlobalResourceTypes</code> option is a bundle which only applies to IAM
+     * users, groups, roles, and customer managed policies.
      * </p>
      * <p>
      * If you do not want to record <code>AWS::RDS::GlobalCluster</code> in all enabled Regions, use one of the
@@ -670,9 +694,6 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * </important> <note>
      * <p>
-     * <b>Required and optional fields</b>
-     * </p>
-     * <p>
      * Before you set this field to <code>true</code>, set the <code>allSupported</code> field of <a
      * href="https://docs.aws.amazon.com/config/latest/APIReference/API_RecordingGroup.html">RecordingGroup</a> to
      * <code>true</code>. Optionally, you can set the <code>useOnly</code> field of <a
@@ -684,24 +705,25 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
      * <b>Overriding fields</b>
      * </p>
      * <p>
-     * If you set this field to <code>false</code> but list globally recorded IAM resource types in the
-     * <code>resourceTypes</code> field of <a
+     * If you set this field to <code>false</code> but list global IAM resource types in the <code>resourceTypes</code>
+     * field of <a
      * href="https://docs.aws.amazon.com/config/latest/APIReference/API_RecordingGroup.html">RecordingGroup</a>, Config
      * will still record configuration changes for those specified resource types <i>regardless</i> of if you set the
      * <code>includeGlobalResourceTypes</code> field to false.
      * </p>
      * <p>
-     * If you do not want to record configuration changes to the globally recorded IAM resource types (IAM users,
-     * groups, roles, and customer managed policies), make sure to not list them in the <code>resourceTypes</code> field
-     * in addition to setting the <code>includeGlobalResourceTypes</code> field to false.
+     * If you do not want to record configuration changes to the global IAM resource types (IAM users, groups, roles,
+     * and customer managed policies), make sure to not list them in the <code>resourceTypes</code> field in addition to
+     * setting the <code>includeGlobalResourceTypes</code> field to false.
      * </p>
      * </note>
      * 
      * @param includeGlobalResourceTypes
-     *        A legacy field which <b>only applies to the globally recorded IAM resource types</b>: IAM users, groups,
-     *        roles, and customer managed policies. If you select this option, these resource types will be recorded in
-     *        all enabled Config regions where Config was available before February 2022. This list does not include the
-     *        following Regions:</p>
+     *        This option is a bundle which only applies to the global IAM resource types: IAM users, groups, roles, and
+     *        customer managed policies. These global IAM resource types can only be recorded by Config in Regions where
+     *        Config was available before February 2022. You cannot be record the global IAM resouce types in Regions
+     *        supported by Config after February 2022. This list where you cannot record the global IAM resource types
+     *        includes the following Regions:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -736,13 +758,13 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
      *        </ul>
      *        <important>
      *        <p>
-     *        <b>Aurora global clusters are automatically globally recorded</b>
+     *        <b>Aurora global clusters are recorded in all enabled Regions</b>
      *        </p>
      *        <p>
      *        The <code>AWS::RDS::GlobalCluster</code> resource type will be recorded in all supported Config Regions
      *        where the configuration recorder is enabled, even if <code>includeGlobalResourceTypes</code> is not set to
-     *        <code>true</code>. <code>includeGlobalResourceTypes</code> is a legacy field which only applies to IAM
-     *        users, groups, roles, and customer managed policies.
+     *        <code>true</code>. The <code>includeGlobalResourceTypes</code> option is a bundle which only applies to
+     *        IAM users, groups, roles, and customer managed policies.
      *        </p>
      *        <p>
      *        If you do not want to record <code>AWS::RDS::GlobalCluster</code> in all enabled Regions, use one of the
@@ -768,9 +790,6 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
      *        </p>
      *        </important> <note>
      *        <p>
-     *        <b>Required and optional fields</b>
-     *        </p>
-     *        <p>
      *        Before you set this field to <code>true</code>, set the <code>allSupported</code> field of <a
      *        href="https://docs.aws.amazon.com/config/latest/APIReference/API_RecordingGroup.html">RecordingGroup</a>
      *        to <code>true</code>. Optionally, you can set the <code>useOnly</code> field of <a
@@ -782,17 +801,16 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
      *        <b>Overriding fields</b>
      *        </p>
      *        <p>
-     *        If you set this field to <code>false</code> but list globally recorded IAM resource types in the
+     *        If you set this field to <code>false</code> but list global IAM resource types in the
      *        <code>resourceTypes</code> field of <a
      *        href="https://docs.aws.amazon.com/config/latest/APIReference/API_RecordingGroup.html">RecordingGroup</a>,
      *        Config will still record configuration changes for those specified resource types <i>regardless</i> of if
      *        you set the <code>includeGlobalResourceTypes</code> field to false.
      *        </p>
      *        <p>
-     *        If you do not want to record configuration changes to the globally recorded IAM resource types (IAM users,
-     *        groups, roles, and customer managed policies), make sure to not list them in the
-     *        <code>resourceTypes</code> field in addition to setting the <code>includeGlobalResourceTypes</code> field
-     *        to false.
+     *        If you do not want to record configuration changes to the global IAM resource types (IAM users, groups,
+     *        roles, and customer managed policies), make sure to not list them in the <code>resourceTypes</code> field
+     *        in addition to setting the <code>includeGlobalResourceTypes</code> field to false.
      *        </p>
      */
 
@@ -802,9 +820,11 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A legacy field which <b>only applies to the globally recorded IAM resource types</b>: IAM users, groups, roles,
-     * and customer managed policies. If you select this option, these resource types will be recorded in all enabled
-     * Config regions where Config was available before February 2022. This list does not include the following Regions:
+     * This option is a bundle which only applies to the global IAM resource types: IAM users, groups, roles, and
+     * customer managed policies. These global IAM resource types can only be recorded by Config in Regions where Config
+     * was available before February 2022. You cannot be record the global IAM resouce types in Regions supported by
+     * Config after February 2022. This list where you cannot record the global IAM resource types includes the
+     * following Regions:
      * </p>
      * <ul>
      * <li>
@@ -840,13 +860,13 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
      * </ul>
      * <important>
      * <p>
-     * <b>Aurora global clusters are automatically globally recorded</b>
+     * <b>Aurora global clusters are recorded in all enabled Regions</b>
      * </p>
      * <p>
      * The <code>AWS::RDS::GlobalCluster</code> resource type will be recorded in all supported Config Regions where the
      * configuration recorder is enabled, even if <code>includeGlobalResourceTypes</code> is not set to
-     * <code>true</code>. <code>includeGlobalResourceTypes</code> is a legacy field which only applies to IAM users,
-     * groups, roles, and customer managed policies.
+     * <code>true</code>. The <code>includeGlobalResourceTypes</code> option is a bundle which only applies to IAM
+     * users, groups, roles, and customer managed policies.
      * </p>
      * <p>
      * If you do not want to record <code>AWS::RDS::GlobalCluster</code> in all enabled Regions, use one of the
@@ -872,9 +892,6 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * </important> <note>
      * <p>
-     * <b>Required and optional fields</b>
-     * </p>
-     * <p>
      * Before you set this field to <code>true</code>, set the <code>allSupported</code> field of <a
      * href="https://docs.aws.amazon.com/config/latest/APIReference/API_RecordingGroup.html">RecordingGroup</a> to
      * <code>true</code>. Optionally, you can set the <code>useOnly</code> field of <a
@@ -886,23 +903,24 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
      * <b>Overriding fields</b>
      * </p>
      * <p>
-     * If you set this field to <code>false</code> but list globally recorded IAM resource types in the
-     * <code>resourceTypes</code> field of <a
+     * If you set this field to <code>false</code> but list global IAM resource types in the <code>resourceTypes</code>
+     * field of <a
      * href="https://docs.aws.amazon.com/config/latest/APIReference/API_RecordingGroup.html">RecordingGroup</a>, Config
      * will still record configuration changes for those specified resource types <i>regardless</i> of if you set the
      * <code>includeGlobalResourceTypes</code> field to false.
      * </p>
      * <p>
-     * If you do not want to record configuration changes to the globally recorded IAM resource types (IAM users,
-     * groups, roles, and customer managed policies), make sure to not list them in the <code>resourceTypes</code> field
-     * in addition to setting the <code>includeGlobalResourceTypes</code> field to false.
+     * If you do not want to record configuration changes to the global IAM resource types (IAM users, groups, roles,
+     * and customer managed policies), make sure to not list them in the <code>resourceTypes</code> field in addition to
+     * setting the <code>includeGlobalResourceTypes</code> field to false.
      * </p>
      * </note>
      * 
-     * @return A legacy field which <b>only applies to the globally recorded IAM resource types</b>: IAM users, groups,
-     *         roles, and customer managed policies. If you select this option, these resource types will be recorded in
-     *         all enabled Config regions where Config was available before February 2022. This list does not include
-     *         the following Regions:</p>
+     * @return This option is a bundle which only applies to the global IAM resource types: IAM users, groups, roles,
+     *         and customer managed policies. These global IAM resource types can only be recorded by Config in Regions
+     *         where Config was available before February 2022. You cannot be record the global IAM resouce types in
+     *         Regions supported by Config after February 2022. This list where you cannot record the global IAM
+     *         resource types includes the following Regions:</p>
      *         <ul>
      *         <li>
      *         <p>
@@ -937,13 +955,13 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
      *         </ul>
      *         <important>
      *         <p>
-     *         <b>Aurora global clusters are automatically globally recorded</b>
+     *         <b>Aurora global clusters are recorded in all enabled Regions</b>
      *         </p>
      *         <p>
      *         The <code>AWS::RDS::GlobalCluster</code> resource type will be recorded in all supported Config Regions
      *         where the configuration recorder is enabled, even if <code>includeGlobalResourceTypes</code> is not set
-     *         to <code>true</code>. <code>includeGlobalResourceTypes</code> is a legacy field which only applies to IAM
-     *         users, groups, roles, and customer managed policies.
+     *         to <code>true</code>. The <code>includeGlobalResourceTypes</code> option is a bundle which only applies
+     *         to IAM users, groups, roles, and customer managed policies.
      *         </p>
      *         <p>
      *         If you do not want to record <code>AWS::RDS::GlobalCluster</code> in all enabled Regions, use one of the
@@ -969,9 +987,6 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
      *         </p>
      *         </important> <note>
      *         <p>
-     *         <b>Required and optional fields</b>
-     *         </p>
-     *         <p>
      *         Before you set this field to <code>true</code>, set the <code>allSupported</code> field of <a
      *         href="https://docs.aws.amazon.com/config/latest/APIReference/API_RecordingGroup.html">RecordingGroup</a>
      *         to <code>true</code>. Optionally, you can set the <code>useOnly</code> field of <a
@@ -983,17 +998,16 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
      *         <b>Overriding fields</b>
      *         </p>
      *         <p>
-     *         If you set this field to <code>false</code> but list globally recorded IAM resource types in the
+     *         If you set this field to <code>false</code> but list global IAM resource types in the
      *         <code>resourceTypes</code> field of <a
      *         href="https://docs.aws.amazon.com/config/latest/APIReference/API_RecordingGroup.html">RecordingGroup</a>,
      *         Config will still record configuration changes for those specified resource types <i>regardless</i> of if
      *         you set the <code>includeGlobalResourceTypes</code> field to false.
      *         </p>
      *         <p>
-     *         If you do not want to record configuration changes to the globally recorded IAM resource types (IAM
-     *         users, groups, roles, and customer managed policies), make sure to not list them in the
-     *         <code>resourceTypes</code> field in addition to setting the <code>includeGlobalResourceTypes</code> field
-     *         to false.
+     *         If you do not want to record configuration changes to the global IAM resource types (IAM users, groups,
+     *         roles, and customer managed policies), make sure to not list them in the <code>resourceTypes</code> field
+     *         in addition to setting the <code>includeGlobalResourceTypes</code> field to false.
      *         </p>
      */
 
@@ -1003,9 +1017,11 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A legacy field which <b>only applies to the globally recorded IAM resource types</b>: IAM users, groups, roles,
-     * and customer managed policies. If you select this option, these resource types will be recorded in all enabled
-     * Config regions where Config was available before February 2022. This list does not include the following Regions:
+     * This option is a bundle which only applies to the global IAM resource types: IAM users, groups, roles, and
+     * customer managed policies. These global IAM resource types can only be recorded by Config in Regions where Config
+     * was available before February 2022. You cannot be record the global IAM resouce types in Regions supported by
+     * Config after February 2022. This list where you cannot record the global IAM resource types includes the
+     * following Regions:
      * </p>
      * <ul>
      * <li>
@@ -1041,13 +1057,13 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
      * </ul>
      * <important>
      * <p>
-     * <b>Aurora global clusters are automatically globally recorded</b>
+     * <b>Aurora global clusters are recorded in all enabled Regions</b>
      * </p>
      * <p>
      * The <code>AWS::RDS::GlobalCluster</code> resource type will be recorded in all supported Config Regions where the
      * configuration recorder is enabled, even if <code>includeGlobalResourceTypes</code> is not set to
-     * <code>true</code>. <code>includeGlobalResourceTypes</code> is a legacy field which only applies to IAM users,
-     * groups, roles, and customer managed policies.
+     * <code>true</code>. The <code>includeGlobalResourceTypes</code> option is a bundle which only applies to IAM
+     * users, groups, roles, and customer managed policies.
      * </p>
      * <p>
      * If you do not want to record <code>AWS::RDS::GlobalCluster</code> in all enabled Regions, use one of the
@@ -1073,9 +1089,6 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * </important> <note>
      * <p>
-     * <b>Required and optional fields</b>
-     * </p>
-     * <p>
      * Before you set this field to <code>true</code>, set the <code>allSupported</code> field of <a
      * href="https://docs.aws.amazon.com/config/latest/APIReference/API_RecordingGroup.html">RecordingGroup</a> to
      * <code>true</code>. Optionally, you can set the <code>useOnly</code> field of <a
@@ -1087,24 +1100,25 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
      * <b>Overriding fields</b>
      * </p>
      * <p>
-     * If you set this field to <code>false</code> but list globally recorded IAM resource types in the
-     * <code>resourceTypes</code> field of <a
+     * If you set this field to <code>false</code> but list global IAM resource types in the <code>resourceTypes</code>
+     * field of <a
      * href="https://docs.aws.amazon.com/config/latest/APIReference/API_RecordingGroup.html">RecordingGroup</a>, Config
      * will still record configuration changes for those specified resource types <i>regardless</i> of if you set the
      * <code>includeGlobalResourceTypes</code> field to false.
      * </p>
      * <p>
-     * If you do not want to record configuration changes to the globally recorded IAM resource types (IAM users,
-     * groups, roles, and customer managed policies), make sure to not list them in the <code>resourceTypes</code> field
-     * in addition to setting the <code>includeGlobalResourceTypes</code> field to false.
+     * If you do not want to record configuration changes to the global IAM resource types (IAM users, groups, roles,
+     * and customer managed policies), make sure to not list them in the <code>resourceTypes</code> field in addition to
+     * setting the <code>includeGlobalResourceTypes</code> field to false.
      * </p>
      * </note>
      * 
      * @param includeGlobalResourceTypes
-     *        A legacy field which <b>only applies to the globally recorded IAM resource types</b>: IAM users, groups,
-     *        roles, and customer managed policies. If you select this option, these resource types will be recorded in
-     *        all enabled Config regions where Config was available before February 2022. This list does not include the
-     *        following Regions:</p>
+     *        This option is a bundle which only applies to the global IAM resource types: IAM users, groups, roles, and
+     *        customer managed policies. These global IAM resource types can only be recorded by Config in Regions where
+     *        Config was available before February 2022. You cannot be record the global IAM resouce types in Regions
+     *        supported by Config after February 2022. This list where you cannot record the global IAM resource types
+     *        includes the following Regions:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -1139,13 +1153,13 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
      *        </ul>
      *        <important>
      *        <p>
-     *        <b>Aurora global clusters are automatically globally recorded</b>
+     *        <b>Aurora global clusters are recorded in all enabled Regions</b>
      *        </p>
      *        <p>
      *        The <code>AWS::RDS::GlobalCluster</code> resource type will be recorded in all supported Config Regions
      *        where the configuration recorder is enabled, even if <code>includeGlobalResourceTypes</code> is not set to
-     *        <code>true</code>. <code>includeGlobalResourceTypes</code> is a legacy field which only applies to IAM
-     *        users, groups, roles, and customer managed policies.
+     *        <code>true</code>. The <code>includeGlobalResourceTypes</code> option is a bundle which only applies to
+     *        IAM users, groups, roles, and customer managed policies.
      *        </p>
      *        <p>
      *        If you do not want to record <code>AWS::RDS::GlobalCluster</code> in all enabled Regions, use one of the
@@ -1171,9 +1185,6 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
      *        </p>
      *        </important> <note>
      *        <p>
-     *        <b>Required and optional fields</b>
-     *        </p>
-     *        <p>
      *        Before you set this field to <code>true</code>, set the <code>allSupported</code> field of <a
      *        href="https://docs.aws.amazon.com/config/latest/APIReference/API_RecordingGroup.html">RecordingGroup</a>
      *        to <code>true</code>. Optionally, you can set the <code>useOnly</code> field of <a
@@ -1185,17 +1196,16 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
      *        <b>Overriding fields</b>
      *        </p>
      *        <p>
-     *        If you set this field to <code>false</code> but list globally recorded IAM resource types in the
+     *        If you set this field to <code>false</code> but list global IAM resource types in the
      *        <code>resourceTypes</code> field of <a
      *        href="https://docs.aws.amazon.com/config/latest/APIReference/API_RecordingGroup.html">RecordingGroup</a>,
      *        Config will still record configuration changes for those specified resource types <i>regardless</i> of if
      *        you set the <code>includeGlobalResourceTypes</code> field to false.
      *        </p>
      *        <p>
-     *        If you do not want to record configuration changes to the globally recorded IAM resource types (IAM users,
-     *        groups, roles, and customer managed policies), make sure to not list them in the
-     *        <code>resourceTypes</code> field in addition to setting the <code>includeGlobalResourceTypes</code> field
-     *        to false.
+     *        If you do not want to record configuration changes to the global IAM resource types (IAM users, groups,
+     *        roles, and customer managed policies), make sure to not list them in the <code>resourceTypes</code> field
+     *        in addition to setting the <code>includeGlobalResourceTypes</code> field to false.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -1207,9 +1217,11 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A legacy field which <b>only applies to the globally recorded IAM resource types</b>: IAM users, groups, roles,
-     * and customer managed policies. If you select this option, these resource types will be recorded in all enabled
-     * Config regions where Config was available before February 2022. This list does not include the following Regions:
+     * This option is a bundle which only applies to the global IAM resource types: IAM users, groups, roles, and
+     * customer managed policies. These global IAM resource types can only be recorded by Config in Regions where Config
+     * was available before February 2022. You cannot be record the global IAM resouce types in Regions supported by
+     * Config after February 2022. This list where you cannot record the global IAM resource types includes the
+     * following Regions:
      * </p>
      * <ul>
      * <li>
@@ -1245,13 +1257,13 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
      * </ul>
      * <important>
      * <p>
-     * <b>Aurora global clusters are automatically globally recorded</b>
+     * <b>Aurora global clusters are recorded in all enabled Regions</b>
      * </p>
      * <p>
      * The <code>AWS::RDS::GlobalCluster</code> resource type will be recorded in all supported Config Regions where the
      * configuration recorder is enabled, even if <code>includeGlobalResourceTypes</code> is not set to
-     * <code>true</code>. <code>includeGlobalResourceTypes</code> is a legacy field which only applies to IAM users,
-     * groups, roles, and customer managed policies.
+     * <code>true</code>. The <code>includeGlobalResourceTypes</code> option is a bundle which only applies to IAM
+     * users, groups, roles, and customer managed policies.
      * </p>
      * <p>
      * If you do not want to record <code>AWS::RDS::GlobalCluster</code> in all enabled Regions, use one of the
@@ -1277,9 +1289,6 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * </important> <note>
      * <p>
-     * <b>Required and optional fields</b>
-     * </p>
-     * <p>
      * Before you set this field to <code>true</code>, set the <code>allSupported</code> field of <a
      * href="https://docs.aws.amazon.com/config/latest/APIReference/API_RecordingGroup.html">RecordingGroup</a> to
      * <code>true</code>. Optionally, you can set the <code>useOnly</code> field of <a
@@ -1291,23 +1300,24 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
      * <b>Overriding fields</b>
      * </p>
      * <p>
-     * If you set this field to <code>false</code> but list globally recorded IAM resource types in the
-     * <code>resourceTypes</code> field of <a
+     * If you set this field to <code>false</code> but list global IAM resource types in the <code>resourceTypes</code>
+     * field of <a
      * href="https://docs.aws.amazon.com/config/latest/APIReference/API_RecordingGroup.html">RecordingGroup</a>, Config
      * will still record configuration changes for those specified resource types <i>regardless</i> of if you set the
      * <code>includeGlobalResourceTypes</code> field to false.
      * </p>
      * <p>
-     * If you do not want to record configuration changes to the globally recorded IAM resource types (IAM users,
-     * groups, roles, and customer managed policies), make sure to not list them in the <code>resourceTypes</code> field
-     * in addition to setting the <code>includeGlobalResourceTypes</code> field to false.
+     * If you do not want to record configuration changes to the global IAM resource types (IAM users, groups, roles,
+     * and customer managed policies), make sure to not list them in the <code>resourceTypes</code> field in addition to
+     * setting the <code>includeGlobalResourceTypes</code> field to false.
      * </p>
      * </note>
      * 
-     * @return A legacy field which <b>only applies to the globally recorded IAM resource types</b>: IAM users, groups,
-     *         roles, and customer managed policies. If you select this option, these resource types will be recorded in
-     *         all enabled Config regions where Config was available before February 2022. This list does not include
-     *         the following Regions:</p>
+     * @return This option is a bundle which only applies to the global IAM resource types: IAM users, groups, roles,
+     *         and customer managed policies. These global IAM resource types can only be recorded by Config in Regions
+     *         where Config was available before February 2022. You cannot be record the global IAM resouce types in
+     *         Regions supported by Config after February 2022. This list where you cannot record the global IAM
+     *         resource types includes the following Regions:</p>
      *         <ul>
      *         <li>
      *         <p>
@@ -1342,13 +1352,13 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
      *         </ul>
      *         <important>
      *         <p>
-     *         <b>Aurora global clusters are automatically globally recorded</b>
+     *         <b>Aurora global clusters are recorded in all enabled Regions</b>
      *         </p>
      *         <p>
      *         The <code>AWS::RDS::GlobalCluster</code> resource type will be recorded in all supported Config Regions
      *         where the configuration recorder is enabled, even if <code>includeGlobalResourceTypes</code> is not set
-     *         to <code>true</code>. <code>includeGlobalResourceTypes</code> is a legacy field which only applies to IAM
-     *         users, groups, roles, and customer managed policies.
+     *         to <code>true</code>. The <code>includeGlobalResourceTypes</code> option is a bundle which only applies
+     *         to IAM users, groups, roles, and customer managed policies.
      *         </p>
      *         <p>
      *         If you do not want to record <code>AWS::RDS::GlobalCluster</code> in all enabled Regions, use one of the
@@ -1374,9 +1384,6 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
      *         </p>
      *         </important> <note>
      *         <p>
-     *         <b>Required and optional fields</b>
-     *         </p>
-     *         <p>
      *         Before you set this field to <code>true</code>, set the <code>allSupported</code> field of <a
      *         href="https://docs.aws.amazon.com/config/latest/APIReference/API_RecordingGroup.html">RecordingGroup</a>
      *         to <code>true</code>. Optionally, you can set the <code>useOnly</code> field of <a
@@ -1388,17 +1395,16 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
      *         <b>Overriding fields</b>
      *         </p>
      *         <p>
-     *         If you set this field to <code>false</code> but list globally recorded IAM resource types in the
+     *         If you set this field to <code>false</code> but list global IAM resource types in the
      *         <code>resourceTypes</code> field of <a
      *         href="https://docs.aws.amazon.com/config/latest/APIReference/API_RecordingGroup.html">RecordingGroup</a>,
      *         Config will still record configuration changes for those specified resource types <i>regardless</i> of if
      *         you set the <code>includeGlobalResourceTypes</code> field to false.
      *         </p>
      *         <p>
-     *         If you do not want to record configuration changes to the globally recorded IAM resource types (IAM
-     *         users, groups, roles, and customer managed policies), make sure to not list them in the
-     *         <code>resourceTypes</code> field in addition to setting the <code>includeGlobalResourceTypes</code> field
-     *         to false.
+     *         If you do not want to record configuration changes to the global IAM resource types (IAM users, groups,
+     *         roles, and customer managed policies), make sure to not list them in the <code>resourceTypes</code> field
+     *         in addition to setting the <code>includeGlobalResourceTypes</code> field to false.
      *         </p>
      */
 
@@ -1409,6 +1415,15 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * A comma-separated list that specifies which resource types Config records.
+     * </p>
+     * <p>
+     * For a list of valid <code>resourceTypes</code> values, see the <b>Resource Type Value</b> column in <a href=
+     * "https://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html#supported-resources"
+     * >Supported Amazon Web Services resource Types</a> in the <i>Config developer guide</i>.
+     * </p>
+     * <note>
+     * <p>
+     * <b>Required and optional fields</b>
      * </p>
      * <p>
      * Optionally, you can set the <code>useOnly</code> field of <a
@@ -1423,14 +1438,9 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
      * Config adds support for a new type of resource, it will not record resources of that type unless you manually add
      * that type to your recording group.
      * </p>
+     * </note> <note>
      * <p>
-     * For a list of valid <code>resourceTypes</code> values, see the <b>Resource Type Value</b> column in <a href=
-     * "https://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html#supported-resources"
-     * >Supported Amazon Web Services resource Types</a> in the <i>Config developer guide</i>.
-     * </p>
-     * <note>
-     * <p>
-     * <b>Region Availability</b>
+     * <b>Region availability</b>
      * </p>
      * <p>
      * Before specifying a resource type for Config to track, check <a
@@ -1444,6 +1454,16 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
      * 
      * @return A comma-separated list that specifies which resource types Config records.</p>
      *         <p>
+     *         For a list of valid <code>resourceTypes</code> values, see the <b>Resource Type Value</b> column in <a
+     *         href=
+     *         "https://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html#supported-resources"
+     *         >Supported Amazon Web Services resource Types</a> in the <i>Config developer guide</i>.
+     *         </p>
+     *         <note>
+     *         <p>
+     *         <b>Required and optional fields</b>
+     *         </p>
+     *         <p>
      *         Optionally, you can set the <code>useOnly</code> field of <a
      *         href="https://docs.aws.amazon.com/config/latest/APIReference/API_RecordingStrategy.html"
      *         >RecordingStrategy</a> to <code>INCLUSION_BY_RESOURCE_TYPES</code>.
@@ -1456,15 +1476,9 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
      *         <code>resourceTypes</code>, when Config adds support for a new type of resource, it will not record
      *         resources of that type unless you manually add that type to your recording group.
      *         </p>
+     *         </note> <note>
      *         <p>
-     *         For a list of valid <code>resourceTypes</code> values, see the <b>Resource Type Value</b> column in <a
-     *         href=
-     *         "https://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html#supported-resources"
-     *         >Supported Amazon Web Services resource Types</a> in the <i>Config developer guide</i>.
-     *         </p>
-     *         <note>
-     *         <p>
-     *         <b>Region Availability</b>
+     *         <b>Region availability</b>
      *         </p>
      *         <p>
      *         Before specifying a resource type for Config to track, check <a
@@ -1489,6 +1503,15 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
      * A comma-separated list that specifies which resource types Config records.
      * </p>
      * <p>
+     * For a list of valid <code>resourceTypes</code> values, see the <b>Resource Type Value</b> column in <a href=
+     * "https://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html#supported-resources"
+     * >Supported Amazon Web Services resource Types</a> in the <i>Config developer guide</i>.
+     * </p>
+     * <note>
+     * <p>
+     * <b>Required and optional fields</b>
+     * </p>
+     * <p>
      * Optionally, you can set the <code>useOnly</code> field of <a
      * href="https://docs.aws.amazon.com/config/latest/APIReference/API_RecordingStrategy.html">RecordingStrategy</a> to
      * <code>INCLUSION_BY_RESOURCE_TYPES</code>.
@@ -1501,14 +1524,9 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
      * Config adds support for a new type of resource, it will not record resources of that type unless you manually add
      * that type to your recording group.
      * </p>
+     * </note> <note>
      * <p>
-     * For a list of valid <code>resourceTypes</code> values, see the <b>Resource Type Value</b> column in <a href=
-     * "https://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html#supported-resources"
-     * >Supported Amazon Web Services resource Types</a> in the <i>Config developer guide</i>.
-     * </p>
-     * <note>
-     * <p>
-     * <b>Region Availability</b>
+     * <b>Region availability</b>
      * </p>
      * <p>
      * Before specifying a resource type for Config to track, check <a
@@ -1523,6 +1541,16 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
      * @param resourceTypes
      *        A comma-separated list that specifies which resource types Config records.</p>
      *        <p>
+     *        For a list of valid <code>resourceTypes</code> values, see the <b>Resource Type Value</b> column in <a
+     *        href=
+     *        "https://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html#supported-resources"
+     *        >Supported Amazon Web Services resource Types</a> in the <i>Config developer guide</i>.
+     *        </p>
+     *        <note>
+     *        <p>
+     *        <b>Required and optional fields</b>
+     *        </p>
+     *        <p>
      *        Optionally, you can set the <code>useOnly</code> field of <a
      *        href="https://docs.aws.amazon.com/config/latest/APIReference/API_RecordingStrategy.html"
      *        >RecordingStrategy</a> to <code>INCLUSION_BY_RESOURCE_TYPES</code>.
@@ -1535,15 +1563,9 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
      *        <code>resourceTypes</code>, when Config adds support for a new type of resource, it will not record
      *        resources of that type unless you manually add that type to your recording group.
      *        </p>
+     *        </note> <note>
      *        <p>
-     *        For a list of valid <code>resourceTypes</code> values, see the <b>Resource Type Value</b> column in <a
-     *        href=
-     *        "https://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html#supported-resources"
-     *        >Supported Amazon Web Services resource Types</a> in the <i>Config developer guide</i>.
-     *        </p>
-     *        <note>
-     *        <p>
-     *        <b>Region Availability</b>
+     *        <b>Region availability</b>
      *        </p>
      *        <p>
      *        Before specifying a resource type for Config to track, check <a
@@ -1570,6 +1592,15 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
      * A comma-separated list that specifies which resource types Config records.
      * </p>
      * <p>
+     * For a list of valid <code>resourceTypes</code> values, see the <b>Resource Type Value</b> column in <a href=
+     * "https://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html#supported-resources"
+     * >Supported Amazon Web Services resource Types</a> in the <i>Config developer guide</i>.
+     * </p>
+     * <note>
+     * <p>
+     * <b>Required and optional fields</b>
+     * </p>
+     * <p>
      * Optionally, you can set the <code>useOnly</code> field of <a
      * href="https://docs.aws.amazon.com/config/latest/APIReference/API_RecordingStrategy.html">RecordingStrategy</a> to
      * <code>INCLUSION_BY_RESOURCE_TYPES</code>.
@@ -1582,14 +1613,9 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
      * Config adds support for a new type of resource, it will not record resources of that type unless you manually add
      * that type to your recording group.
      * </p>
+     * </note> <note>
      * <p>
-     * For a list of valid <code>resourceTypes</code> values, see the <b>Resource Type Value</b> column in <a href=
-     * "https://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html#supported-resources"
-     * >Supported Amazon Web Services resource Types</a> in the <i>Config developer guide</i>.
-     * </p>
-     * <note>
-     * <p>
-     * <b>Region Availability</b>
+     * <b>Region availability</b>
      * </p>
      * <p>
      * Before specifying a resource type for Config to track, check <a
@@ -1609,6 +1635,16 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
      * @param resourceTypes
      *        A comma-separated list that specifies which resource types Config records.</p>
      *        <p>
+     *        For a list of valid <code>resourceTypes</code> values, see the <b>Resource Type Value</b> column in <a
+     *        href=
+     *        "https://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html#supported-resources"
+     *        >Supported Amazon Web Services resource Types</a> in the <i>Config developer guide</i>.
+     *        </p>
+     *        <note>
+     *        <p>
+     *        <b>Required and optional fields</b>
+     *        </p>
+     *        <p>
      *        Optionally, you can set the <code>useOnly</code> field of <a
      *        href="https://docs.aws.amazon.com/config/latest/APIReference/API_RecordingStrategy.html"
      *        >RecordingStrategy</a> to <code>INCLUSION_BY_RESOURCE_TYPES</code>.
@@ -1621,15 +1657,9 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
      *        <code>resourceTypes</code>, when Config adds support for a new type of resource, it will not record
      *        resources of that type unless you manually add that type to your recording group.
      *        </p>
+     *        </note> <note>
      *        <p>
-     *        For a list of valid <code>resourceTypes</code> values, see the <b>Resource Type Value</b> column in <a
-     *        href=
-     *        "https://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html#supported-resources"
-     *        >Supported Amazon Web Services resource Types</a> in the <i>Config developer guide</i>.
-     *        </p>
-     *        <note>
-     *        <p>
-     *        <b>Region Availability</b>
+     *        <b>Region availability</b>
      *        </p>
      *        <p>
      *        Before specifying a resource type for Config to track, check <a
@@ -1658,6 +1688,15 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
      * A comma-separated list that specifies which resource types Config records.
      * </p>
      * <p>
+     * For a list of valid <code>resourceTypes</code> values, see the <b>Resource Type Value</b> column in <a href=
+     * "https://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html#supported-resources"
+     * >Supported Amazon Web Services resource Types</a> in the <i>Config developer guide</i>.
+     * </p>
+     * <note>
+     * <p>
+     * <b>Required and optional fields</b>
+     * </p>
+     * <p>
      * Optionally, you can set the <code>useOnly</code> field of <a
      * href="https://docs.aws.amazon.com/config/latest/APIReference/API_RecordingStrategy.html">RecordingStrategy</a> to
      * <code>INCLUSION_BY_RESOURCE_TYPES</code>.
@@ -1670,14 +1709,9 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
      * Config adds support for a new type of resource, it will not record resources of that type unless you manually add
      * that type to your recording group.
      * </p>
+     * </note> <note>
      * <p>
-     * For a list of valid <code>resourceTypes</code> values, see the <b>Resource Type Value</b> column in <a href=
-     * "https://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html#supported-resources"
-     * >Supported Amazon Web Services resource Types</a> in the <i>Config developer guide</i>.
-     * </p>
-     * <note>
-     * <p>
-     * <b>Region Availability</b>
+     * <b>Region availability</b>
      * </p>
      * <p>
      * Before specifying a resource type for Config to track, check <a
@@ -1692,6 +1726,16 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
      * @param resourceTypes
      *        A comma-separated list that specifies which resource types Config records.</p>
      *        <p>
+     *        For a list of valid <code>resourceTypes</code> values, see the <b>Resource Type Value</b> column in <a
+     *        href=
+     *        "https://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html#supported-resources"
+     *        >Supported Amazon Web Services resource Types</a> in the <i>Config developer guide</i>.
+     *        </p>
+     *        <note>
+     *        <p>
+     *        <b>Required and optional fields</b>
+     *        </p>
+     *        <p>
      *        Optionally, you can set the <code>useOnly</code> field of <a
      *        href="https://docs.aws.amazon.com/config/latest/APIReference/API_RecordingStrategy.html"
      *        >RecordingStrategy</a> to <code>INCLUSION_BY_RESOURCE_TYPES</code>.
@@ -1704,15 +1748,9 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
      *        <code>resourceTypes</code>, when Config adds support for a new type of resource, it will not record
      *        resources of that type unless you manually add that type to your recording group.
      *        </p>
+     *        </note> <note>
      *        <p>
-     *        For a list of valid <code>resourceTypes</code> values, see the <b>Resource Type Value</b> column in <a
-     *        href=
-     *        "https://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html#supported-resources"
-     *        >Supported Amazon Web Services resource Types</a> in the <i>Config developer guide</i>.
-     *        </p>
-     *        <note>
-     *        <p>
-     *        <b>Region Availability</b>
+     *        <b>Region availability</b>
      *        </p>
      *        <p>
      *        Before specifying a resource type for Config to track, check <a
@@ -1736,6 +1774,15 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
      * A comma-separated list that specifies which resource types Config records.
      * </p>
      * <p>
+     * For a list of valid <code>resourceTypes</code> values, see the <b>Resource Type Value</b> column in <a href=
+     * "https://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html#supported-resources"
+     * >Supported Amazon Web Services resource Types</a> in the <i>Config developer guide</i>.
+     * </p>
+     * <note>
+     * <p>
+     * <b>Required and optional fields</b>
+     * </p>
+     * <p>
      * Optionally, you can set the <code>useOnly</code> field of <a
      * href="https://docs.aws.amazon.com/config/latest/APIReference/API_RecordingStrategy.html">RecordingStrategy</a> to
      * <code>INCLUSION_BY_RESOURCE_TYPES</code>.
@@ -1748,14 +1795,9 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
      * Config adds support for a new type of resource, it will not record resources of that type unless you manually add
      * that type to your recording group.
      * </p>
+     * </note> <note>
      * <p>
-     * For a list of valid <code>resourceTypes</code> values, see the <b>Resource Type Value</b> column in <a href=
-     * "https://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html#supported-resources"
-     * >Supported Amazon Web Services resource Types</a> in the <i>Config developer guide</i>.
-     * </p>
-     * <note>
-     * <p>
-     * <b>Region Availability</b>
+     * <b>Region availability</b>
      * </p>
      * <p>
      * Before specifying a resource type for Config to track, check <a
@@ -1770,6 +1812,16 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
      * @param resourceTypes
      *        A comma-separated list that specifies which resource types Config records.</p>
      *        <p>
+     *        For a list of valid <code>resourceTypes</code> values, see the <b>Resource Type Value</b> column in <a
+     *        href=
+     *        "https://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html#supported-resources"
+     *        >Supported Amazon Web Services resource Types</a> in the <i>Config developer guide</i>.
+     *        </p>
+     *        <note>
+     *        <p>
+     *        <b>Required and optional fields</b>
+     *        </p>
+     *        <p>
      *        Optionally, you can set the <code>useOnly</code> field of <a
      *        href="https://docs.aws.amazon.com/config/latest/APIReference/API_RecordingStrategy.html"
      *        >RecordingStrategy</a> to <code>INCLUSION_BY_RESOURCE_TYPES</code>.
@@ -1782,15 +1834,9 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
      *        <code>resourceTypes</code>, when Config adds support for a new type of resource, it will not record
      *        resources of that type unless you manually add that type to your recording group.
      *        </p>
+     *        </note> <note>
      *        <p>
-     *        For a list of valid <code>resourceTypes</code> values, see the <b>Resource Type Value</b> column in <a
-     *        href=
-     *        "https://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html#supported-resources"
-     *        >Supported Amazon Web Services resource Types</a> in the <i>Config developer guide</i>.
-     *        </p>
-     *        <note>
-     *        <p>
-     *        <b>Region Availability</b>
+     *        <b>Region availability</b>
      *        </p>
      *        <p>
      *        Before specifying a resource type for Config to track, check <a
@@ -1821,19 +1867,28 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * An object that specifies how Config excludes resource types from being recorded by the configuration recorder.
      * </p>
+     * <note>
+     * <p>
+     * <b>Required fields</b>
+     * </p>
      * <p>
      * To use this option, you must set the <code>useOnly</code> field of <a
      * href="https://docs.aws.amazon.com/config/latest/APIReference/API_RecordingStrategy.html">RecordingStrategy</a> to
      * <code>EXCLUSION_BY_RESOURCE_TYPES</code>.
      * </p>
+     * </note>
      * 
      * @param exclusionByResourceTypes
      *        An object that specifies how Config excludes resource types from being recorded by the configuration
-     *        recorder.</p>
+     *        recorder.</p> <note>
+     *        <p>
+     *        <b>Required fields</b>
+     *        </p>
      *        <p>
      *        To use this option, you must set the <code>useOnly</code> field of <a
      *        href="https://docs.aws.amazon.com/config/latest/APIReference/API_RecordingStrategy.html"
      *        >RecordingStrategy</a> to <code>EXCLUSION_BY_RESOURCE_TYPES</code>.
+     *        </p>
      */
 
     public void setExclusionByResourceTypes(ExclusionByResourceTypes exclusionByResourceTypes) {
@@ -1844,18 +1899,27 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * An object that specifies how Config excludes resource types from being recorded by the configuration recorder.
      * </p>
+     * <note>
+     * <p>
+     * <b>Required fields</b>
+     * </p>
      * <p>
      * To use this option, you must set the <code>useOnly</code> field of <a
      * href="https://docs.aws.amazon.com/config/latest/APIReference/API_RecordingStrategy.html">RecordingStrategy</a> to
      * <code>EXCLUSION_BY_RESOURCE_TYPES</code>.
      * </p>
+     * </note>
      * 
      * @return An object that specifies how Config excludes resource types from being recorded by the configuration
-     *         recorder.</p>
+     *         recorder.</p> <note>
+     *         <p>
+     *         <b>Required fields</b>
+     *         </p>
      *         <p>
      *         To use this option, you must set the <code>useOnly</code> field of <a
      *         href="https://docs.aws.amazon.com/config/latest/APIReference/API_RecordingStrategy.html"
      *         >RecordingStrategy</a> to <code>EXCLUSION_BY_RESOURCE_TYPES</code>.
+     *         </p>
      */
 
     public ExclusionByResourceTypes getExclusionByResourceTypes() {
@@ -1866,19 +1930,28 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * An object that specifies how Config excludes resource types from being recorded by the configuration recorder.
      * </p>
+     * <note>
+     * <p>
+     * <b>Required fields</b>
+     * </p>
      * <p>
      * To use this option, you must set the <code>useOnly</code> field of <a
      * href="https://docs.aws.amazon.com/config/latest/APIReference/API_RecordingStrategy.html">RecordingStrategy</a> to
      * <code>EXCLUSION_BY_RESOURCE_TYPES</code>.
      * </p>
+     * </note>
      * 
      * @param exclusionByResourceTypes
      *        An object that specifies how Config excludes resource types from being recorded by the configuration
-     *        recorder.</p>
+     *        recorder.</p> <note>
+     *        <p>
+     *        <b>Required fields</b>
+     *        </p>
      *        <p>
      *        To use this option, you must set the <code>useOnly</code> field of <a
      *        href="https://docs.aws.amazon.com/config/latest/APIReference/API_RecordingStrategy.html"
      *        >RecordingStrategy</a> to <code>EXCLUSION_BY_RESOURCE_TYPES</code>.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1896,11 +1969,11 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * If you set the <code>useOnly</code> field of <a
      * href="https://docs.aws.amazon.com/config/latest/APIReference/API_RecordingStrategy.html">RecordingStrategy</a> to
-     * <code>ALL_SUPPORTED_RESOURCE_TYPES</code>, Config records configuration changes for all supported regionally
-     * recorded resource types. You also must set the <code>allSupported</code> field of <a
+     * <code>ALL_SUPPORTED_RESOURCE_TYPES</code>, Config records configuration changes for all supported resource types,
+     * excluding the global IAM resource types. You also must set the <code>allSupported</code> field of <a
      * href="https://docs.aws.amazon.com/config/latest/APIReference/API_RecordingGroup.html">RecordingGroup</a> to
-     * <code>true</code>. When Config adds support for a new regionally recorded resource type, Config automatically
-     * starts recording resources of that type.
+     * <code>true</code>. When Config adds support for a new resource type, Config automatically starts recording
+     * resources of that type.
      * </p>
      * </li>
      * <li>
@@ -1952,9 +2025,9 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
      * <code>exclusionByResourceTypes</code> field will override other properties in the request.
      * </p>
      * <p>
-     * For example, even if you set <code>includeGlobalResourceTypes</code> to false, globally recorded IAM resource
-     * types will still be automatically recorded in this option unless those resource types are specifically listed as
-     * exclusions in the <code>resourceTypes</code> field of <code>exclusionByResourceTypes</code>.
+     * For example, even if you set <code>includeGlobalResourceTypes</code> to false, global IAM resource types will
+     * still be automatically recorded in this option unless those resource types are specifically listed as exclusions
+     * in the <code>resourceTypes</code> field of <code>exclusionByResourceTypes</code>.
      * </p>
      * </note> <note>
      * <p>
@@ -1966,10 +2039,14 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
      * resource types, Config starts recording resources of that type automatically.
      * </p>
      * <p>
-     * In addition, unless specifically listed as exclusions, <code>AWS::RDS::GlobalCluster</code> will be recorded
-     * automatically in all supported Config Regions were the configuration recorder is enabled. IAM users, groups,
-     * roles, and customer managed policies will be recorded automatically in all enabled Config Regions where Config
-     * was available before February 2022. This list does not include the following Regions:
+     * Unless specifically listed as exclusions, <code>AWS::RDS::GlobalCluster</code> will be recorded automatically in
+     * all supported Config Regions were the configuration recorder is enabled.
+     * </p>
+     * <p>
+     * IAM users, groups, roles, and customer managed policies will be recorded in the Region where you set up the
+     * configuration recorder if that is a Region where Config was available before February 2022. You cannot be record
+     * the global IAM resouce types in Regions supported by Config after February 2022. This list where you cannot
+     * record the global IAM resource types includes the following Regions:
      * </p>
      * <ul>
      * <li>
@@ -2013,11 +2090,11 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
      *        If you set the <code>useOnly</code> field of <a
      *        href="https://docs.aws.amazon.com/config/latest/APIReference/API_RecordingStrategy.html"
      *        >RecordingStrategy</a> to <code>ALL_SUPPORTED_RESOURCE_TYPES</code>, Config records configuration changes
-     *        for all supported regionally recorded resource types. You also must set the <code>allSupported</code>
-     *        field of <a
+     *        for all supported resource types, excluding the global IAM resource types. You also must set the
+     *        <code>allSupported</code> field of <a
      *        href="https://docs.aws.amazon.com/config/latest/APIReference/API_RecordingGroup.html">RecordingGroup</a>
-     *        to <code>true</code>. When Config adds support for a new regionally recorded resource type, Config
-     *        automatically starts recording resources of that type.
+     *        to <code>true</code>. When Config adds support for a new resource type, Config automatically starts
+     *        recording resources of that type.
      *        </p>
      *        </li>
      *        <li>
@@ -2071,10 +2148,9 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
      *        <code>exclusionByResourceTypes</code> field will override other properties in the request.
      *        </p>
      *        <p>
-     *        For example, even if you set <code>includeGlobalResourceTypes</code> to false, globally recorded IAM
-     *        resource types will still be automatically recorded in this option unless those resource types are
-     *        specifically listed as exclusions in the <code>resourceTypes</code> field of
-     *        <code>exclusionByResourceTypes</code>.
+     *        For example, even if you set <code>includeGlobalResourceTypes</code> to false, global IAM resource types
+     *        will still be automatically recorded in this option unless those resource types are specifically listed as
+     *        exclusions in the <code>resourceTypes</code> field of <code>exclusionByResourceTypes</code>.
      *        </p>
      *        </note> <note>
      *        <p>
@@ -2086,10 +2162,14 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
      *        global resource types, Config starts recording resources of that type automatically.
      *        </p>
      *        <p>
-     *        In addition, unless specifically listed as exclusions, <code>AWS::RDS::GlobalCluster</code> will be
-     *        recorded automatically in all supported Config Regions were the configuration recorder is enabled. IAM
-     *        users, groups, roles, and customer managed policies will be recorded automatically in all enabled Config
-     *        Regions where Config was available before February 2022. This list does not include the following Regions:
+     *        Unless specifically listed as exclusions, <code>AWS::RDS::GlobalCluster</code> will be recorded
+     *        automatically in all supported Config Regions were the configuration recorder is enabled.
+     *        </p>
+     *        <p>
+     *        IAM users, groups, roles, and customer managed policies will be recorded in the Region where you set up
+     *        the configuration recorder if that is a Region where Config was available before February 2022. You cannot
+     *        be record the global IAM resouce types in Regions supported by Config after February 2022. This list where
+     *        you cannot record the global IAM resource types includes the following Regions:
      *        </p>
      *        <ul>
      *        <li>
@@ -2138,11 +2218,11 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * If you set the <code>useOnly</code> field of <a
      * href="https://docs.aws.amazon.com/config/latest/APIReference/API_RecordingStrategy.html">RecordingStrategy</a> to
-     * <code>ALL_SUPPORTED_RESOURCE_TYPES</code>, Config records configuration changes for all supported regionally
-     * recorded resource types. You also must set the <code>allSupported</code> field of <a
+     * <code>ALL_SUPPORTED_RESOURCE_TYPES</code>, Config records configuration changes for all supported resource types,
+     * excluding the global IAM resource types. You also must set the <code>allSupported</code> field of <a
      * href="https://docs.aws.amazon.com/config/latest/APIReference/API_RecordingGroup.html">RecordingGroup</a> to
-     * <code>true</code>. When Config adds support for a new regionally recorded resource type, Config automatically
-     * starts recording resources of that type.
+     * <code>true</code>. When Config adds support for a new resource type, Config automatically starts recording
+     * resources of that type.
      * </p>
      * </li>
      * <li>
@@ -2194,9 +2274,9 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
      * <code>exclusionByResourceTypes</code> field will override other properties in the request.
      * </p>
      * <p>
-     * For example, even if you set <code>includeGlobalResourceTypes</code> to false, globally recorded IAM resource
-     * types will still be automatically recorded in this option unless those resource types are specifically listed as
-     * exclusions in the <code>resourceTypes</code> field of <code>exclusionByResourceTypes</code>.
+     * For example, even if you set <code>includeGlobalResourceTypes</code> to false, global IAM resource types will
+     * still be automatically recorded in this option unless those resource types are specifically listed as exclusions
+     * in the <code>resourceTypes</code> field of <code>exclusionByResourceTypes</code>.
      * </p>
      * </note> <note>
      * <p>
@@ -2208,10 +2288,14 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
      * resource types, Config starts recording resources of that type automatically.
      * </p>
      * <p>
-     * In addition, unless specifically listed as exclusions, <code>AWS::RDS::GlobalCluster</code> will be recorded
-     * automatically in all supported Config Regions were the configuration recorder is enabled. IAM users, groups,
-     * roles, and customer managed policies will be recorded automatically in all enabled Config Regions where Config
-     * was available before February 2022. This list does not include the following Regions:
+     * Unless specifically listed as exclusions, <code>AWS::RDS::GlobalCluster</code> will be recorded automatically in
+     * all supported Config Regions were the configuration recorder is enabled.
+     * </p>
+     * <p>
+     * IAM users, groups, roles, and customer managed policies will be recorded in the Region where you set up the
+     * configuration recorder if that is a Region where Config was available before February 2022. You cannot be record
+     * the global IAM resouce types in Regions supported by Config after February 2022. This list where you cannot
+     * record the global IAM resource types includes the following Regions:
      * </p>
      * <ul>
      * <li>
@@ -2254,11 +2338,11 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
      *         If you set the <code>useOnly</code> field of <a
      *         href="https://docs.aws.amazon.com/config/latest/APIReference/API_RecordingStrategy.html"
      *         >RecordingStrategy</a> to <code>ALL_SUPPORTED_RESOURCE_TYPES</code>, Config records configuration changes
-     *         for all supported regionally recorded resource types. You also must set the <code>allSupported</code>
-     *         field of <a
+     *         for all supported resource types, excluding the global IAM resource types. You also must set the
+     *         <code>allSupported</code> field of <a
      *         href="https://docs.aws.amazon.com/config/latest/APIReference/API_RecordingGroup.html">RecordingGroup</a>
-     *         to <code>true</code>. When Config adds support for a new regionally recorded resource type, Config
-     *         automatically starts recording resources of that type.
+     *         to <code>true</code>. When Config adds support for a new resource type, Config automatically starts
+     *         recording resources of that type.
      *         </p>
      *         </li>
      *         <li>
@@ -2312,10 +2396,9 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
      *         <code>exclusionByResourceTypes</code> field will override other properties in the request.
      *         </p>
      *         <p>
-     *         For example, even if you set <code>includeGlobalResourceTypes</code> to false, globally recorded IAM
-     *         resource types will still be automatically recorded in this option unless those resource types are
-     *         specifically listed as exclusions in the <code>resourceTypes</code> field of
-     *         <code>exclusionByResourceTypes</code>.
+     *         For example, even if you set <code>includeGlobalResourceTypes</code> to false, global IAM resource types
+     *         will still be automatically recorded in this option unless those resource types are specifically listed
+     *         as exclusions in the <code>resourceTypes</code> field of <code>exclusionByResourceTypes</code>.
      *         </p>
      *         </note> <note>
      *         <p>
@@ -2327,11 +2410,14 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
      *         global resource types, Config starts recording resources of that type automatically.
      *         </p>
      *         <p>
-     *         In addition, unless specifically listed as exclusions, <code>AWS::RDS::GlobalCluster</code> will be
-     *         recorded automatically in all supported Config Regions were the configuration recorder is enabled. IAM
-     *         users, groups, roles, and customer managed policies will be recorded automatically in all enabled Config
-     *         Regions where Config was available before February 2022. This list does not include the following
-     *         Regions:
+     *         Unless specifically listed as exclusions, <code>AWS::RDS::GlobalCluster</code> will be recorded
+     *         automatically in all supported Config Regions were the configuration recorder is enabled.
+     *         </p>
+     *         <p>
+     *         IAM users, groups, roles, and customer managed policies will be recorded in the Region where you set up
+     *         the configuration recorder if that is a Region where Config was available before February 2022. You
+     *         cannot be record the global IAM resouce types in Regions supported by Config after February 2022. This
+     *         list where you cannot record the global IAM resource types includes the following Regions:
      *         </p>
      *         <ul>
      *         <li>
@@ -2380,11 +2466,11 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * If you set the <code>useOnly</code> field of <a
      * href="https://docs.aws.amazon.com/config/latest/APIReference/API_RecordingStrategy.html">RecordingStrategy</a> to
-     * <code>ALL_SUPPORTED_RESOURCE_TYPES</code>, Config records configuration changes for all supported regionally
-     * recorded resource types. You also must set the <code>allSupported</code> field of <a
+     * <code>ALL_SUPPORTED_RESOURCE_TYPES</code>, Config records configuration changes for all supported resource types,
+     * excluding the global IAM resource types. You also must set the <code>allSupported</code> field of <a
      * href="https://docs.aws.amazon.com/config/latest/APIReference/API_RecordingGroup.html">RecordingGroup</a> to
-     * <code>true</code>. When Config adds support for a new regionally recorded resource type, Config automatically
-     * starts recording resources of that type.
+     * <code>true</code>. When Config adds support for a new resource type, Config automatically starts recording
+     * resources of that type.
      * </p>
      * </li>
      * <li>
@@ -2436,9 +2522,9 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
      * <code>exclusionByResourceTypes</code> field will override other properties in the request.
      * </p>
      * <p>
-     * For example, even if you set <code>includeGlobalResourceTypes</code> to false, globally recorded IAM resource
-     * types will still be automatically recorded in this option unless those resource types are specifically listed as
-     * exclusions in the <code>resourceTypes</code> field of <code>exclusionByResourceTypes</code>.
+     * For example, even if you set <code>includeGlobalResourceTypes</code> to false, global IAM resource types will
+     * still be automatically recorded in this option unless those resource types are specifically listed as exclusions
+     * in the <code>resourceTypes</code> field of <code>exclusionByResourceTypes</code>.
      * </p>
      * </note> <note>
      * <p>
@@ -2450,10 +2536,14 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
      * resource types, Config starts recording resources of that type automatically.
      * </p>
      * <p>
-     * In addition, unless specifically listed as exclusions, <code>AWS::RDS::GlobalCluster</code> will be recorded
-     * automatically in all supported Config Regions were the configuration recorder is enabled. IAM users, groups,
-     * roles, and customer managed policies will be recorded automatically in all enabled Config Regions where Config
-     * was available before February 2022. This list does not include the following Regions:
+     * Unless specifically listed as exclusions, <code>AWS::RDS::GlobalCluster</code> will be recorded automatically in
+     * all supported Config Regions were the configuration recorder is enabled.
+     * </p>
+     * <p>
+     * IAM users, groups, roles, and customer managed policies will be recorded in the Region where you set up the
+     * configuration recorder if that is a Region where Config was available before February 2022. You cannot be record
+     * the global IAM resouce types in Regions supported by Config after February 2022. This list where you cannot
+     * record the global IAM resource types includes the following Regions:
      * </p>
      * <ul>
      * <li>
@@ -2497,11 +2587,11 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
      *        If you set the <code>useOnly</code> field of <a
      *        href="https://docs.aws.amazon.com/config/latest/APIReference/API_RecordingStrategy.html"
      *        >RecordingStrategy</a> to <code>ALL_SUPPORTED_RESOURCE_TYPES</code>, Config records configuration changes
-     *        for all supported regionally recorded resource types. You also must set the <code>allSupported</code>
-     *        field of <a
+     *        for all supported resource types, excluding the global IAM resource types. You also must set the
+     *        <code>allSupported</code> field of <a
      *        href="https://docs.aws.amazon.com/config/latest/APIReference/API_RecordingGroup.html">RecordingGroup</a>
-     *        to <code>true</code>. When Config adds support for a new regionally recorded resource type, Config
-     *        automatically starts recording resources of that type.
+     *        to <code>true</code>. When Config adds support for a new resource type, Config automatically starts
+     *        recording resources of that type.
      *        </p>
      *        </li>
      *        <li>
@@ -2555,10 +2645,9 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
      *        <code>exclusionByResourceTypes</code> field will override other properties in the request.
      *        </p>
      *        <p>
-     *        For example, even if you set <code>includeGlobalResourceTypes</code> to false, globally recorded IAM
-     *        resource types will still be automatically recorded in this option unless those resource types are
-     *        specifically listed as exclusions in the <code>resourceTypes</code> field of
-     *        <code>exclusionByResourceTypes</code>.
+     *        For example, even if you set <code>includeGlobalResourceTypes</code> to false, global IAM resource types
+     *        will still be automatically recorded in this option unless those resource types are specifically listed as
+     *        exclusions in the <code>resourceTypes</code> field of <code>exclusionByResourceTypes</code>.
      *        </p>
      *        </note> <note>
      *        <p>
@@ -2570,10 +2659,14 @@ public class RecordingGroup implements Serializable, Cloneable, StructuredPojo {
      *        global resource types, Config starts recording resources of that type automatically.
      *        </p>
      *        <p>
-     *        In addition, unless specifically listed as exclusions, <code>AWS::RDS::GlobalCluster</code> will be
-     *        recorded automatically in all supported Config Regions were the configuration recorder is enabled. IAM
-     *        users, groups, roles, and customer managed policies will be recorded automatically in all enabled Config
-     *        Regions where Config was available before February 2022. This list does not include the following Regions:
+     *        Unless specifically listed as exclusions, <code>AWS::RDS::GlobalCluster</code> will be recorded
+     *        automatically in all supported Config Regions were the configuration recorder is enabled.
+     *        </p>
+     *        <p>
+     *        IAM users, groups, roles, and customer managed policies will be recorded in the Region where you set up
+     *        the configuration recorder if that is a Region where Config was available before February 2022. You cannot
+     *        be record the global IAM resouce types in Regions supported by Config after February 2022. This list where
+     *        you cannot record the global IAM resource types includes the following Regions:
      *        </p>
      *        <ul>
      *        <li>

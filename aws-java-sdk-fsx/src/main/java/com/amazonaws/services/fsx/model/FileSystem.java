@@ -105,6 +105,10 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The storage capacity of the file system in gibibytes (GiB).
      * </p>
+     * <p>
+     * Amazon FSx responds with an HTTP status code 400 (Bad Request) if the value of <code>StorageCapacity</code> is
+     * outside of the minimum or maximum values.
+     * </p>
      */
     private Integer storageCapacity;
     /**
@@ -830,9 +834,16 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The storage capacity of the file system in gibibytes (GiB).
      * </p>
+     * <p>
+     * Amazon FSx responds with an HTTP status code 400 (Bad Request) if the value of <code>StorageCapacity</code> is
+     * outside of the minimum or maximum values.
+     * </p>
      * 
      * @param storageCapacity
-     *        The storage capacity of the file system in gibibytes (GiB).
+     *        The storage capacity of the file system in gibibytes (GiB).</p>
+     *        <p>
+     *        Amazon FSx responds with an HTTP status code 400 (Bad Request) if the value of
+     *        <code>StorageCapacity</code> is outside of the minimum or maximum values.
      */
 
     public void setStorageCapacity(Integer storageCapacity) {
@@ -843,8 +854,15 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The storage capacity of the file system in gibibytes (GiB).
      * </p>
+     * <p>
+     * Amazon FSx responds with an HTTP status code 400 (Bad Request) if the value of <code>StorageCapacity</code> is
+     * outside of the minimum or maximum values.
+     * </p>
      * 
-     * @return The storage capacity of the file system in gibibytes (GiB).
+     * @return The storage capacity of the file system in gibibytes (GiB).</p>
+     *         <p>
+     *         Amazon FSx responds with an HTTP status code 400 (Bad Request) if the value of
+     *         <code>StorageCapacity</code> is outside of the minimum or maximum values.
      */
 
     public Integer getStorageCapacity() {
@@ -855,9 +873,16 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The storage capacity of the file system in gibibytes (GiB).
      * </p>
+     * <p>
+     * Amazon FSx responds with an HTTP status code 400 (Bad Request) if the value of <code>StorageCapacity</code> is
+     * outside of the minimum or maximum values.
+     * </p>
      * 
      * @param storageCapacity
-     *        The storage capacity of the file system in gibibytes (GiB).
+     *        The storage capacity of the file system in gibibytes (GiB).</p>
+     *        <p>
+     *        Amazon FSx responds with an HTTP status code 400 (Bad Request) if the value of
+     *        <code>StorageCapacity</code> is outside of the minimum or maximum values.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

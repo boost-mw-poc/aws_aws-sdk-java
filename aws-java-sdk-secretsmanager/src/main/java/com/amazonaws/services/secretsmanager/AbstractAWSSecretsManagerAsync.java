@@ -28,6 +28,19 @@ public class AbstractAWSSecretsManagerAsync extends AbstractAWSSecretsManager im
     }
 
     @Override
+    public java.util.concurrent.Future<BatchGetSecretValueResult> batchGetSecretValueAsync(BatchGetSecretValueRequest request) {
+
+        return batchGetSecretValueAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<BatchGetSecretValueResult> batchGetSecretValueAsync(BatchGetSecretValueRequest request,
+            com.amazonaws.handlers.AsyncHandler<BatchGetSecretValueRequest, BatchGetSecretValueResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<CancelRotateSecretResult> cancelRotateSecretAsync(CancelRotateSecretRequest request) {
 
         return cancelRotateSecretAsync(request, null);

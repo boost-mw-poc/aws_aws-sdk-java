@@ -64,6 +64,10 @@ public class NetworkInterfaceJsonUnmarshaller implements Unmarshaller<NetworkInt
                     context.nextToken();
                     networkInterface.setObdInterface(ObdInterfaceJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("vehicleMiddleware", targetDepth)) {
+                    context.nextToken();
+                    networkInterface.setVehicleMiddleware(VehicleMiddlewareJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

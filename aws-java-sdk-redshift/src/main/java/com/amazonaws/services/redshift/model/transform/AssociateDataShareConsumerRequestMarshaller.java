@@ -57,6 +57,10 @@ public class AssociateDataShareConsumerRequestMarshaller implements Marshaller<R
             request.addParameter("ConsumerRegion", StringUtils.fromString(associateDataShareConsumerRequest.getConsumerRegion()));
         }
 
+        if (associateDataShareConsumerRequest.getAllowWrites() != null) {
+            request.addParameter("AllowWrites", StringUtils.fromBoolean(associateDataShareConsumerRequest.getAllowWrites()));
+        }
+
         return request;
     }
 

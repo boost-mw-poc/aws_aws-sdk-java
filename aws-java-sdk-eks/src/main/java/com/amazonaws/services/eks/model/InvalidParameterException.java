@@ -41,7 +41,11 @@ public class InvalidParameterException extends com.amazonaws.services.eks.model.
      * </p>
      */
     private String fargateProfileName;
-
+    /**
+     * <p>
+     * The specified parameter for the add-on name is invalid. Review the available parameters for the API request
+     * </p>
+     */
     private String addonName;
     /**
      * <p>
@@ -187,7 +191,13 @@ public class InvalidParameterException extends com.amazonaws.services.eks.model.
     }
 
     /**
+     * <p>
+     * The specified parameter for the add-on name is invalid. Review the available parameters for the API request
+     * </p>
+     * 
      * @param addonName
+     *        The specified parameter for the add-on name is invalid. Review the available parameters for the API
+     *        request
      */
 
     @com.fasterxml.jackson.annotation.JsonProperty("addonName")
@@ -196,7 +206,12 @@ public class InvalidParameterException extends com.amazonaws.services.eks.model.
     }
 
     /**
-     * @return
+     * <p>
+     * The specified parameter for the add-on name is invalid. Review the available parameters for the API request
+     * </p>
+     * 
+     * @return The specified parameter for the add-on name is invalid. Review the available parameters for the API
+     *         request
      */
 
     @com.fasterxml.jackson.annotation.JsonProperty("addonName")
@@ -205,7 +220,13 @@ public class InvalidParameterException extends com.amazonaws.services.eks.model.
     }
 
     /**
+     * <p>
+     * The specified parameter for the add-on name is invalid. Review the available parameters for the API request
+     * </p>
+     * 
      * @param addonName
+     *        The specified parameter for the add-on name is invalid. Review the available parameters for the API
+     *        request
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

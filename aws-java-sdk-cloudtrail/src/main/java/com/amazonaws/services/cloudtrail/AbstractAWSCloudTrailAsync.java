@@ -209,6 +209,32 @@ public class AbstractAWSCloudTrailAsync extends AbstractAWSCloudTrail implements
     }
 
     @Override
+    public java.util.concurrent.Future<DisableFederationResult> disableFederationAsync(DisableFederationRequest request) {
+
+        return disableFederationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DisableFederationResult> disableFederationAsync(DisableFederationRequest request,
+            com.amazonaws.handlers.AsyncHandler<DisableFederationRequest, DisableFederationResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<EnableFederationResult> enableFederationAsync(EnableFederationRequest request) {
+
+        return enableFederationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<EnableFederationResult> enableFederationAsync(EnableFederationRequest request,
+            com.amazonaws.handlers.AsyncHandler<EnableFederationRequest, EnableFederationResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetChannelResult> getChannelAsync(GetChannelRequest request) {
 
         return getChannelAsync(request, null);

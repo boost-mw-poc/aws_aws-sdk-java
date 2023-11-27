@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.computeoptimizer.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -37,6 +38,14 @@ public class PutRecommendationPreferencesRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("inferredWorkloadTypes").build();
     private static final MarshallingInfo<StructuredPojo> EXTERNALMETRICSPREFERENCE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("externalMetricsPreference").build();
+    private static final MarshallingInfo<String> LOOKBACKPERIOD_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("lookBackPeriod").build();
+    private static final MarshallingInfo<List> UTILIZATIONPREFERENCES_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("utilizationPreferences").build();
+    private static final MarshallingInfo<List> PREFERREDRESOURCES_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("preferredResources").build();
+    private static final MarshallingInfo<String> SAVINGSESTIMATIONMODE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("savingsEstimationMode").build();
 
     private static final PutRecommendationPreferencesRequestMarshaller instance = new PutRecommendationPreferencesRequestMarshaller();
 
@@ -59,6 +68,10 @@ public class PutRecommendationPreferencesRequestMarshaller {
             protocolMarshaller.marshall(putRecommendationPreferencesRequest.getEnhancedInfrastructureMetrics(), ENHANCEDINFRASTRUCTUREMETRICS_BINDING);
             protocolMarshaller.marshall(putRecommendationPreferencesRequest.getInferredWorkloadTypes(), INFERREDWORKLOADTYPES_BINDING);
             protocolMarshaller.marshall(putRecommendationPreferencesRequest.getExternalMetricsPreference(), EXTERNALMETRICSPREFERENCE_BINDING);
+            protocolMarshaller.marshall(putRecommendationPreferencesRequest.getLookBackPeriod(), LOOKBACKPERIOD_BINDING);
+            protocolMarshaller.marshall(putRecommendationPreferencesRequest.getUtilizationPreferences(), UTILIZATIONPREFERENCES_BINDING);
+            protocolMarshaller.marshall(putRecommendationPreferencesRequest.getPreferredResources(), PREFERREDRESOURCES_BINDING);
+            protocolMarshaller.marshall(putRecommendationPreferencesRequest.getSavingsEstimationMode(), SAVINGSESTIMATIONMODE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

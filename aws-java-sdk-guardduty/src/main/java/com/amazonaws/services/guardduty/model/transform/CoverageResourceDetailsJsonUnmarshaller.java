@@ -56,6 +56,14 @@ public class CoverageResourceDetailsJsonUnmarshaller implements Unmarshaller<Cov
                     context.nextToken();
                     coverageResourceDetails.setResourceType(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("ecsClusterDetails", targetDepth)) {
+                    context.nextToken();
+                    coverageResourceDetails.setEcsClusterDetails(CoverageEcsClusterDetailsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("ec2InstanceDetails", targetDepth)) {
+                    context.nextToken();
+                    coverageResourceDetails.setEc2InstanceDetails(CoverageEc2InstanceDetailsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

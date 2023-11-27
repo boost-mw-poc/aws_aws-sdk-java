@@ -36,6 +36,8 @@ public class StandbyWorkspaceMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DirectoryId").build();
     private static final MarshallingInfo<List> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Tags").build();
+    private static final MarshallingInfo<String> DATAREPLICATION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DataReplication").build();
 
     private static final StandbyWorkspaceMarshaller instance = new StandbyWorkspaceMarshaller();
 
@@ -57,6 +59,7 @@ public class StandbyWorkspaceMarshaller {
             protocolMarshaller.marshall(standbyWorkspace.getVolumeEncryptionKey(), VOLUMEENCRYPTIONKEY_BINDING);
             protocolMarshaller.marshall(standbyWorkspace.getDirectoryId(), DIRECTORYID_BINDING);
             protocolMarshaller.marshall(standbyWorkspace.getTags(), TAGS_BINDING);
+            protocolMarshaller.marshall(standbyWorkspace.getDataReplication(), DATAREPLICATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

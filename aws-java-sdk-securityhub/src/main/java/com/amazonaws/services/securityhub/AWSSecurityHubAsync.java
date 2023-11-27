@@ -2447,6 +2447,43 @@ public interface AWSSecurityHubAsync extends AWSSecurityHub {
 
     /**
      * <p>
+     * Retrieves the definition of a security control. The definition includes the control title, description, Region
+     * availability, parameter definitions, and other details.
+     * </p>
+     * 
+     * @param getSecurityControlDefinitionRequest
+     * @return A Java Future containing the result of the GetSecurityControlDefinition operation returned by the
+     *         service.
+     * @sample AWSSecurityHubAsync.GetSecurityControlDefinition
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/GetSecurityControlDefinition"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetSecurityControlDefinitionResult> getSecurityControlDefinitionAsync(
+            GetSecurityControlDefinitionRequest getSecurityControlDefinitionRequest);
+
+    /**
+     * <p>
+     * Retrieves the definition of a security control. The definition includes the control title, description, Region
+     * availability, parameter definitions, and other details.
+     * </p>
+     * 
+     * @param getSecurityControlDefinitionRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetSecurityControlDefinition operation returned by the
+     *         service.
+     * @sample AWSSecurityHubAsyncHandler.GetSecurityControlDefinition
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/GetSecurityControlDefinition"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetSecurityControlDefinitionResult> getSecurityControlDefinitionAsync(
+            GetSecurityControlDefinitionRequest getSecurityControlDefinitionRequest,
+            com.amazonaws.handlers.AsyncHandler<GetSecurityControlDefinitionRequest, GetSecurityControlDefinitionResult> asyncHandler);
+
+    /**
+     * <p>
      * Invites other Amazon Web Services accounts to become member accounts for the Security Hub administrator account
      * that the invitation is sent from.
      * </p>
@@ -3057,6 +3094,37 @@ public interface AWSSecurityHubAsync extends AWSSecurityHub {
     java.util.concurrent.Future<UpdateOrganizationConfigurationResult> updateOrganizationConfigurationAsync(
             UpdateOrganizationConfigurationRequest updateOrganizationConfigurationRequest,
             com.amazonaws.handlers.AsyncHandler<UpdateOrganizationConfigurationRequest, UpdateOrganizationConfigurationResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates the properties of a security control.
+     * </p>
+     * 
+     * @param updateSecurityControlRequest
+     * @return A Java Future containing the result of the UpdateSecurityControl operation returned by the service.
+     * @sample AWSSecurityHubAsync.UpdateSecurityControl
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/UpdateSecurityControl"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateSecurityControlResult> updateSecurityControlAsync(UpdateSecurityControlRequest updateSecurityControlRequest);
+
+    /**
+     * <p>
+     * Updates the properties of a security control.
+     * </p>
+     * 
+     * @param updateSecurityControlRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateSecurityControl operation returned by the service.
+     * @sample AWSSecurityHubAsyncHandler.UpdateSecurityControl
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/UpdateSecurityControl"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateSecurityControlResult> updateSecurityControlAsync(UpdateSecurityControlRequest updateSecurityControlRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateSecurityControlRequest, UpdateSecurityControlResult> asyncHandler);
 
     /**
      * <p>

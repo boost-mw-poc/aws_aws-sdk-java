@@ -35,6 +35,8 @@ public class NetworkInterfaceMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("canInterface").build();
     private static final MarshallingInfo<StructuredPojo> OBDINTERFACE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("obdInterface").build();
+    private static final MarshallingInfo<StructuredPojo> VEHICLEMIDDLEWARE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("vehicleMiddleware").build();
 
     private static final NetworkInterfaceMarshaller instance = new NetworkInterfaceMarshaller();
 
@@ -56,6 +58,7 @@ public class NetworkInterfaceMarshaller {
             protocolMarshaller.marshall(networkInterface.getType(), TYPE_BINDING);
             protocolMarshaller.marshall(networkInterface.getCanInterface(), CANINTERFACE_BINDING);
             protocolMarshaller.marshall(networkInterface.getObdInterface(), OBDINTERFACE_BINDING);
+            protocolMarshaller.marshall(networkInterface.getVehicleMiddleware(), VEHICLEMIDDLEWARE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

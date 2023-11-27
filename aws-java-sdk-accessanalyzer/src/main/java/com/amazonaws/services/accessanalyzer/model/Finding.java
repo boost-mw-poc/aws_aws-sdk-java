@@ -36,7 +36,7 @@ public class Finding implements Serializable, Cloneable, StructuredPojo {
     private String id;
     /**
      * <p>
-     * The external principal that access to a resource within the zone of trust.
+     * The external principal that has access to a resource within the zone of trust.
      * </p>
      */
     private java.util.Map<String, String> principal;
@@ -156,10 +156,10 @@ public class Finding implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The external principal that access to a resource within the zone of trust.
+     * The external principal that has access to a resource within the zone of trust.
      * </p>
      * 
-     * @return The external principal that access to a resource within the zone of trust.
+     * @return The external principal that has access to a resource within the zone of trust.
      */
 
     public java.util.Map<String, String> getPrincipal() {
@@ -168,11 +168,11 @@ public class Finding implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The external principal that access to a resource within the zone of trust.
+     * The external principal that has access to a resource within the zone of trust.
      * </p>
      * 
      * @param principal
-     *        The external principal that access to a resource within the zone of trust.
+     *        The external principal that has access to a resource within the zone of trust.
      */
 
     public void setPrincipal(java.util.Map<String, String> principal) {
@@ -181,11 +181,11 @@ public class Finding implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The external principal that access to a resource within the zone of trust.
+     * The external principal that has access to a resource within the zone of trust.
      * </p>
      * 
      * @param principal
-     *        The external principal that access to a resource within the zone of trust.
+     *        The external principal that has access to a resource within the zone of trust.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

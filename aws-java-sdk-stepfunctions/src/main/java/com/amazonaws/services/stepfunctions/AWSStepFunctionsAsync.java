@@ -1793,10 +1793,10 @@ public interface AWSStepFunctionsAsync extends AWSStepFunctions {
      * that failed or aborted.
      * </p>
      * <p>
-     * To redrive a workflow that includes a Distributed Map state with failed child workflow executions, you must
-     * redrive the <a href=
+     * To redrive a workflow that includes a Distributed Map state whose Map Run failed, you must redrive the <a href=
      * "https://docs.aws.amazon.com/step-functions/latest/dg/use-dist-map-orchestrate-large-scale-parallel-workloads.html#dist-map-orchestrate-parallel-workloads-key-terms"
-     * >parent workflow</a>. The parent workflow redrives all the unsuccessful states, including Distributed Map.
+     * >parent workflow</a>. The parent workflow redrives all the unsuccessful states, including a failed Map Run. If a
+     * Map Run was not started in the original execution attempt, the redriven parent workflow starts the Map Run.
      * </p>
      * <note>
      * <p>
@@ -1869,10 +1869,10 @@ public interface AWSStepFunctionsAsync extends AWSStepFunctions {
      * that failed or aborted.
      * </p>
      * <p>
-     * To redrive a workflow that includes a Distributed Map state with failed child workflow executions, you must
-     * redrive the <a href=
+     * To redrive a workflow that includes a Distributed Map state whose Map Run failed, you must redrive the <a href=
      * "https://docs.aws.amazon.com/step-functions/latest/dg/use-dist-map-orchestrate-large-scale-parallel-workloads.html#dist-map-orchestrate-parallel-workloads-key-terms"
-     * >parent workflow</a>. The parent workflow redrives all the unsuccessful states, including Distributed Map.
+     * >parent workflow</a>. The parent workflow redrives all the unsuccessful states, including a failed Map Run. If a
+     * Map Run was not started in the original execution attempt, the redriven parent workflow starts the Map Run.
      * </p>
      * <note>
      * <p>
@@ -2385,6 +2385,199 @@ public interface AWSStepFunctionsAsync extends AWSStepFunctions {
      */
     java.util.concurrent.Future<TagResourceResult> tagResourceAsync(TagResourceRequest tagResourceRequest,
             com.amazonaws.handlers.AsyncHandler<TagResourceRequest, TagResourceResult> asyncHandler);
+
+    /**
+     * <p>
+     * Accepts the definition of a single state and executes it. You can test a state without creating a state machine
+     * or updating an existing state machine. Using this API, you can test the following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * A state's <a href=
+     * "https://docs.aws.amazon.com/step-functions/latest/dg/test-state-isolation.html#test-state-input-output-dataflow"
+     * >input and output processing</a> data flow
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * An <a href="https://docs.aws.amazon.com/step-functions/latest/dg/connect-to-services.html">Amazon Web Services
+     * service integration</a> request and response
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * An <a href="https://docs.aws.amazon.com/step-functions/latest/dg/connect-third-party-apis.html">HTTP Task</a>
+     * request and response
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * You can call this API on only one state at a time. The states that you can test include the following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <a href="https://docs.aws.amazon.com/step-functions/latest/dg/amazon-states-language-task-state.html#task-types">
+     * All Task types</a> except <a
+     * href="https://docs.aws.amazon.com/step-functions/latest/dg/concepts-activities.html">Activity</a>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <a href="https://docs.aws.amazon.com/step-functions/latest/dg/amazon-states-language-pass-state.html">Pass</a>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <a href="https://docs.aws.amazon.com/step-functions/latest/dg/amazon-states-language-wait-state.html">Wait</a>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <a
+     * href="https://docs.aws.amazon.com/step-functions/latest/dg/amazon-states-language-choice-state.html">Choice</a>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <a
+     * href="https://docs.aws.amazon.com/step-functions/latest/dg/amazon-states-language-succeed-state.html">Succeed</a>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <a href="https://docs.aws.amazon.com/step-functions/latest/dg/amazon-states-language-fail-state.html">Fail</a>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * The <code>TestState</code> API assumes an IAM role which must contain the required IAM permissions for the
+     * resources your state is accessing. For information about the permissions a state might need, see <a
+     * href="https://docs.aws.amazon.com/step-functions/latest/dg/test-state-isolation.html#test-state-permissions">IAM
+     * permissions to test a state</a>.
+     * </p>
+     * <p>
+     * The <code>TestState</code> API can run for up to five minutes. If the execution of a state exceeds this duration,
+     * it fails with the <code>States.Timeout</code> error.
+     * </p>
+     * <p>
+     * <code>TestState</code> doesn't support <a
+     * href="https://docs.aws.amazon.com/step-functions/latest/dg/concepts-activities.html">Activity tasks</a>,
+     * <code>.sync</code> or <code>.waitForTaskToken</code> <a
+     * href="https://docs.aws.amazon.com/step-functions/latest/dg/connect-to-resource.html">service integration
+     * patterns</a>, <a
+     * href="https://docs.aws.amazon.com/step-functions/latest/dg/amazon-states-language-parallel-state.html"
+     * >Parallel</a>, or <a
+     * href="https://docs.aws.amazon.com/step-functions/latest/dg/amazon-states-language-map-state.html">Map</a> states.
+     * </p>
+     * 
+     * @param testStateRequest
+     * @return A Java Future containing the result of the TestState operation returned by the service.
+     * @sample AWSStepFunctionsAsync.TestState
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/states-2016-11-23/TestState" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<TestStateResult> testStateAsync(TestStateRequest testStateRequest);
+
+    /**
+     * <p>
+     * Accepts the definition of a single state and executes it. You can test a state without creating a state machine
+     * or updating an existing state machine. Using this API, you can test the following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * A state's <a href=
+     * "https://docs.aws.amazon.com/step-functions/latest/dg/test-state-isolation.html#test-state-input-output-dataflow"
+     * >input and output processing</a> data flow
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * An <a href="https://docs.aws.amazon.com/step-functions/latest/dg/connect-to-services.html">Amazon Web Services
+     * service integration</a> request and response
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * An <a href="https://docs.aws.amazon.com/step-functions/latest/dg/connect-third-party-apis.html">HTTP Task</a>
+     * request and response
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * You can call this API on only one state at a time. The states that you can test include the following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <a href="https://docs.aws.amazon.com/step-functions/latest/dg/amazon-states-language-task-state.html#task-types">
+     * All Task types</a> except <a
+     * href="https://docs.aws.amazon.com/step-functions/latest/dg/concepts-activities.html">Activity</a>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <a href="https://docs.aws.amazon.com/step-functions/latest/dg/amazon-states-language-pass-state.html">Pass</a>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <a href="https://docs.aws.amazon.com/step-functions/latest/dg/amazon-states-language-wait-state.html">Wait</a>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <a
+     * href="https://docs.aws.amazon.com/step-functions/latest/dg/amazon-states-language-choice-state.html">Choice</a>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <a
+     * href="https://docs.aws.amazon.com/step-functions/latest/dg/amazon-states-language-succeed-state.html">Succeed</a>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <a href="https://docs.aws.amazon.com/step-functions/latest/dg/amazon-states-language-fail-state.html">Fail</a>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * The <code>TestState</code> API assumes an IAM role which must contain the required IAM permissions for the
+     * resources your state is accessing. For information about the permissions a state might need, see <a
+     * href="https://docs.aws.amazon.com/step-functions/latest/dg/test-state-isolation.html#test-state-permissions">IAM
+     * permissions to test a state</a>.
+     * </p>
+     * <p>
+     * The <code>TestState</code> API can run for up to five minutes. If the execution of a state exceeds this duration,
+     * it fails with the <code>States.Timeout</code> error.
+     * </p>
+     * <p>
+     * <code>TestState</code> doesn't support <a
+     * href="https://docs.aws.amazon.com/step-functions/latest/dg/concepts-activities.html">Activity tasks</a>,
+     * <code>.sync</code> or <code>.waitForTaskToken</code> <a
+     * href="https://docs.aws.amazon.com/step-functions/latest/dg/connect-to-resource.html">service integration
+     * patterns</a>, <a
+     * href="https://docs.aws.amazon.com/step-functions/latest/dg/amazon-states-language-parallel-state.html"
+     * >Parallel</a>, or <a
+     * href="https://docs.aws.amazon.com/step-functions/latest/dg/amazon-states-language-map-state.html">Map</a> states.
+     * </p>
+     * 
+     * @param testStateRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the TestState operation returned by the service.
+     * @sample AWSStepFunctionsAsyncHandler.TestState
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/states-2016-11-23/TestState" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<TestStateResult> testStateAsync(TestStateRequest testStateRequest,
+            com.amazonaws.handlers.AsyncHandler<TestStateRequest, TestStateResult> asyncHandler);
 
     /**
      * <p>

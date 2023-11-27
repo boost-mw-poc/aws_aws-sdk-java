@@ -37,8 +37,8 @@ public class DestinationToCreate implements Serializable, Cloneable, StructuredP
     private String region;
     /**
      * <p>
-     * To create a file system that uses EFS One Zone storage, specify the name of the Availability Zone in which to
-     * create the destination file system.
+     * To create a file system that uses One Zone storage, specify the name of the Availability Zone in which to create
+     * the destination file system.
      * </p>
      */
     private String availabilityZoneName;
@@ -123,13 +123,13 @@ public class DestinationToCreate implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * To create a file system that uses EFS One Zone storage, specify the name of the Availability Zone in which to
-     * create the destination file system.
+     * To create a file system that uses One Zone storage, specify the name of the Availability Zone in which to create
+     * the destination file system.
      * </p>
      * 
      * @param availabilityZoneName
-     *        To create a file system that uses EFS One Zone storage, specify the name of the Availability Zone in which
-     *        to create the destination file system.
+     *        To create a file system that uses One Zone storage, specify the name of the Availability Zone in which to
+     *        create the destination file system.
      */
 
     public void setAvailabilityZoneName(String availabilityZoneName) {
@@ -138,12 +138,12 @@ public class DestinationToCreate implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * To create a file system that uses EFS One Zone storage, specify the name of the Availability Zone in which to
-     * create the destination file system.
+     * To create a file system that uses One Zone storage, specify the name of the Availability Zone in which to create
+     * the destination file system.
      * </p>
      * 
-     * @return To create a file system that uses EFS One Zone storage, specify the name of the Availability Zone in
-     *         which to create the destination file system.
+     * @return To create a file system that uses One Zone storage, specify the name of the Availability Zone in which to
+     *         create the destination file system.
      */
 
     public String getAvailabilityZoneName() {
@@ -152,13 +152,13 @@ public class DestinationToCreate implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * To create a file system that uses EFS One Zone storage, specify the name of the Availability Zone in which to
-     * create the destination file system.
+     * To create a file system that uses One Zone storage, specify the name of the Availability Zone in which to create
+     * the destination file system.
      * </p>
      * 
      * @param availabilityZoneName
-     *        To create a file system that uses EFS One Zone storage, specify the name of the Availability Zone in which
-     *        to create the destination file system.
+     *        To create a file system that uses One Zone storage, specify the name of the Availability Zone in which to
+     *        create the destination file system.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

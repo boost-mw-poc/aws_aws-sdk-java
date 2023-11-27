@@ -1271,6 +1271,36 @@ public interface AmazonQuickSight {
 
     /**
      * <p>
+     * Deletes all access scopes and authorized targets that are associated with a service from the Amazon QuickSight
+     * IAM Identity Center application.
+     * </p>
+     * <p>
+     * This operation is only supported for Amazon QuickSight accounts that use IAM Identity Center.
+     * </p>
+     * 
+     * @param deleteIdentityPropagationConfigRequest
+     * @return Result of the DeleteIdentityPropagationConfig operation returned by the service.
+     * @throws AccessDeniedException
+     *         You don't have access to this item. The provided credentials couldn't be validated. You might not be
+     *         authorized to carry out the request. Make sure that your account is authorized to use the Amazon
+     *         QuickSight service, that your policies have the correct permissions, and that you are using the correct
+     *         credentials.
+     * @throws InvalidParameterValueException
+     *         One or more parameters has a value that isn't valid.
+     * @throws ResourceNotFoundException
+     *         One or more resources can't be found.
+     * @throws ThrottlingException
+     *         Access is throttled.
+     * @throws InternalFailureException
+     *         An internal failure occurred.
+     * @sample AmazonQuickSight.DeleteIdentityPropagationConfig
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/DeleteIdentityPropagationConfig"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DeleteIdentityPropagationConfigResult deleteIdentityPropagationConfig(DeleteIdentityPropagationConfigRequest deleteIdentityPropagationConfigRequest);
+
+    /**
+     * <p>
      * Deletes a namespace and the users and groups that are associated with the namespace. This is an asynchronous
      * process. Assets including dashboards, analyses, datasets and data sources are not deleted. To delete these
      * assets, you use the API operations for the relevant asset.
@@ -3683,6 +3713,35 @@ public interface AmazonQuickSight {
 
     /**
      * <p>
+     * Lists all services and authorized targets that the Amazon QuickSight IAM Identity Center application can access.
+     * </p>
+     * <p>
+     * This operation is only supported for Amazon QuickSight accounts that use IAM Identity Center.
+     * </p>
+     * 
+     * @param listIdentityPropagationConfigsRequest
+     * @return Result of the ListIdentityPropagationConfigs operation returned by the service.
+     * @throws AccessDeniedException
+     *         You don't have access to this item. The provided credentials couldn't be validated. You might not be
+     *         authorized to carry out the request. Make sure that your account is authorized to use the Amazon
+     *         QuickSight service, that your policies have the correct permissions, and that you are using the correct
+     *         credentials.
+     * @throws InvalidParameterValueException
+     *         One or more parameters has a value that isn't valid.
+     * @throws ResourceNotFoundException
+     *         One or more resources can't be found.
+     * @throws ThrottlingException
+     *         Access is throttled.
+     * @throws InternalFailureException
+     *         An internal failure occurred.
+     * @sample AmazonQuickSight.ListIdentityPropagationConfigs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/ListIdentityPropagationConfigs"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListIdentityPropagationConfigsResult listIdentityPropagationConfigs(ListIdentityPropagationConfigsRequest listIdentityPropagationConfigsRequest);
+
+    /**
+     * <p>
      * Lists the history of SPICE ingestions for a dataset.
      * </p>
      * 
@@ -5144,6 +5203,36 @@ public interface AmazonQuickSight {
      *      target="_top">AWS API Documentation</a>
      */
     UpdateIAMPolicyAssignmentResult updateIAMPolicyAssignment(UpdateIAMPolicyAssignmentRequest updateIAMPolicyAssignmentRequest);
+
+    /**
+     * <p>
+     * Adds or updates services and authorized targets to configure what the Amazon QuickSight IAM Identity Center
+     * application can access.
+     * </p>
+     * <p>
+     * This operation is only supported for Amazon QuickSight accounts using IAM Identity Center
+     * </p>
+     * 
+     * @param updateIdentityPropagationConfigRequest
+     * @return Result of the UpdateIdentityPropagationConfig operation returned by the service.
+     * @throws AccessDeniedException
+     *         You don't have access to this item. The provided credentials couldn't be validated. You might not be
+     *         authorized to carry out the request. Make sure that your account is authorized to use the Amazon
+     *         QuickSight service, that your policies have the correct permissions, and that you are using the correct
+     *         credentials.
+     * @throws InvalidParameterValueException
+     *         One or more parameters has a value that isn't valid.
+     * @throws ResourceNotFoundException
+     *         One or more resources can't be found.
+     * @throws ThrottlingException
+     *         Access is throttled.
+     * @throws InternalFailureException
+     *         An internal failure occurred.
+     * @sample AmazonQuickSight.UpdateIdentityPropagationConfig
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/UpdateIdentityPropagationConfig"
+     *      target="_top">AWS API Documentation</a>
+     */
+    UpdateIdentityPropagationConfigResult updateIdentityPropagationConfig(UpdateIdentityPropagationConfigRequest updateIdentityPropagationConfigRequest);
 
     /**
      * <p>

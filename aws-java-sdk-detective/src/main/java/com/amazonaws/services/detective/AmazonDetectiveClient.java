@@ -191,6 +191,12 @@ public class AmazonDetectiveClient extends AmazonWebServiceClient implements Ama
                     .withSupportsIon(false)
                     .withContentTypeOverride("application/json")
                     .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("ServiceQuotaExceededException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.detective.model.transform.ServiceQuotaExceededExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("InternalServerException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.detective.model.transform.InternalServerExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("AccessDeniedException").withExceptionUnmarshaller(
                                     com.amazonaws.services.detective.model.transform.AccessDeniedExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
@@ -202,12 +208,6 @@ public class AmazonDetectiveClient extends AmazonWebServiceClient implements Ama
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ValidationException").withExceptionUnmarshaller(
                                     com.amazonaws.services.detective.model.transform.ValidationExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("ServiceQuotaExceededException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.detective.model.transform.ServiceQuotaExceededExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("InternalServerException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.detective.model.transform.InternalServerExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("TooManyRequestsException").withExceptionUnmarshaller(
                                     com.amazonaws.services.detective.model.transform.TooManyRequestsExceptionUnmarshaller.getInstance()))
@@ -1132,6 +1132,71 @@ public class AmazonDetectiveClient extends AmazonWebServiceClient implements Ama
 
     /**
      * <p>
+     * Returns the investigation results of an investigation for a behavior graph.
+     * </p>
+     * 
+     * @param getInvestigationRequest
+     * @return Result of the GetInvestigation operation returned by the service.
+     * @throws AccessDeniedException
+     *         The request issuer does not have permission to access this resource or perform this operation.
+     * @throws InternalServerException
+     *         The request was valid but failed because of a problem with the service.
+     * @throws ValidationException
+     *         The request parameters are invalid.
+     * @throws ResourceNotFoundException
+     *         The request refers to a nonexistent resource.
+     * @throws TooManyRequestsException
+     *         The request cannot be completed because too many other requests are occurring at the same time.
+     * @sample AmazonDetective.GetInvestigation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/detective-2018-10-26/GetInvestigation" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public GetInvestigationResult getInvestigation(GetInvestigationRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetInvestigation(request);
+    }
+
+    @SdkInternalApi
+    final GetInvestigationResult executeGetInvestigation(GetInvestigationRequest getInvestigationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getInvestigationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetInvestigationRequest> request = null;
+        Response<GetInvestigationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetInvestigationRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getInvestigationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Detective");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetInvestigation");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetInvestigationResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetInvestigationResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Returns the membership details for specified member accounts for a behavior graph.
      * </p>
      * 
@@ -1313,6 +1378,136 @@ public class AmazonDetectiveClient extends AmazonWebServiceClient implements Ama
 
             HttpResponseHandler<AmazonWebServiceResponse<ListGraphsResult>> responseHandler = protocolFactory.createResponseHandler(new JsonOperationMetadata()
                     .withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListGraphsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Get the indicators from an investigation
+     * </p>
+     * 
+     * @param listIndicatorsRequest
+     * @return Result of the ListIndicators operation returned by the service.
+     * @throws AccessDeniedException
+     *         The request issuer does not have permission to access this resource or perform this operation.
+     * @throws InternalServerException
+     *         The request was valid but failed because of a problem with the service.
+     * @throws ValidationException
+     *         The request parameters are invalid.
+     * @throws ResourceNotFoundException
+     *         The request refers to a nonexistent resource.
+     * @throws TooManyRequestsException
+     *         The request cannot be completed because too many other requests are occurring at the same time.
+     * @sample AmazonDetective.ListIndicators
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/detective-2018-10-26/ListIndicators" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public ListIndicatorsResult listIndicators(ListIndicatorsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListIndicators(request);
+    }
+
+    @SdkInternalApi
+    final ListIndicatorsResult executeListIndicators(ListIndicatorsRequest listIndicatorsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listIndicatorsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListIndicatorsRequest> request = null;
+        Response<ListIndicatorsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListIndicatorsRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listIndicatorsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Detective");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListIndicators");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListIndicatorsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListIndicatorsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * List all Investigations.
+     * </p>
+     * 
+     * @param listInvestigationsRequest
+     * @return Result of the ListInvestigations operation returned by the service.
+     * @throws AccessDeniedException
+     *         The request issuer does not have permission to access this resource or perform this operation.
+     * @throws InternalServerException
+     *         The request was valid but failed because of a problem with the service.
+     * @throws ValidationException
+     *         The request parameters are invalid.
+     * @throws ResourceNotFoundException
+     *         The request refers to a nonexistent resource.
+     * @throws TooManyRequestsException
+     *         The request cannot be completed because too many other requests are occurring at the same time.
+     * @sample AmazonDetective.ListInvestigations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/detective-2018-10-26/ListInvestigations" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public ListInvestigationsResult listInvestigations(ListInvestigationsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListInvestigations(request);
+    }
+
+    @SdkInternalApi
+    final ListInvestigationsResult executeListInvestigations(ListInvestigationsRequest listInvestigationsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listInvestigationsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListInvestigationsRequest> request = null;
+        Response<ListInvestigationsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListInvestigationsRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listInvestigationsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Detective");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListInvestigations");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListInvestigationsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListInvestigationsResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -1663,6 +1858,71 @@ public class AmazonDetectiveClient extends AmazonWebServiceClient implements Ama
 
     /**
      * <p>
+     * initiate an investigation on an entity in a graph
+     * </p>
+     * 
+     * @param startInvestigationRequest
+     * @return Result of the StartInvestigation operation returned by the service.
+     * @throws AccessDeniedException
+     *         The request issuer does not have permission to access this resource or perform this operation.
+     * @throws InternalServerException
+     *         The request was valid but failed because of a problem with the service.
+     * @throws ValidationException
+     *         The request parameters are invalid.
+     * @throws TooManyRequestsException
+     *         The request cannot be completed because too many other requests are occurring at the same time.
+     * @throws ResourceNotFoundException
+     *         The request refers to a nonexistent resource.
+     * @sample AmazonDetective.StartInvestigation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/detective-2018-10-26/StartInvestigation" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public StartInvestigationResult startInvestigation(StartInvestigationRequest request) {
+        request = beforeClientExecution(request);
+        return executeStartInvestigation(request);
+    }
+
+    @SdkInternalApi
+    final StartInvestigationResult executeStartInvestigation(StartInvestigationRequest startInvestigationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(startInvestigationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<StartInvestigationRequest> request = null;
+        Response<StartInvestigationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new StartInvestigationRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(startInvestigationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Detective");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "StartInvestigation");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<StartInvestigationResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new StartInvestigationResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Sends a request to enable data ingest for a member account that has a status of
      * <code>ACCEPTED_BUT_DISABLED</code>.
      * </p>
@@ -1964,6 +2224,73 @@ public class AmazonDetectiveClient extends AmazonWebServiceClient implements Ama
             HttpResponseHandler<AmazonWebServiceResponse<UpdateDatasourcePackagesResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new UpdateDatasourcePackagesResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Update the state of an investigation.
+     * </p>
+     * 
+     * @param updateInvestigationStateRequest
+     * @return Result of the UpdateInvestigationState operation returned by the service.
+     * @throws AccessDeniedException
+     *         The request issuer does not have permission to access this resource or perform this operation.
+     * @throws InternalServerException
+     *         The request was valid but failed because of a problem with the service.
+     * @throws ValidationException
+     *         The request parameters are invalid.
+     * @throws ResourceNotFoundException
+     *         The request refers to a nonexistent resource.
+     * @throws TooManyRequestsException
+     *         The request cannot be completed because too many other requests are occurring at the same time.
+     * @sample AmazonDetective.UpdateInvestigationState
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/detective-2018-10-26/UpdateInvestigationState"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public UpdateInvestigationStateResult updateInvestigationState(UpdateInvestigationStateRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateInvestigationState(request);
+    }
+
+    @SdkInternalApi
+    final UpdateInvestigationStateResult executeUpdateInvestigationState(UpdateInvestigationStateRequest updateInvestigationStateRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateInvestigationStateRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateInvestigationStateRequest> request = null;
+        Response<UpdateInvestigationStateResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateInvestigationStateRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(updateInvestigationStateRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Detective");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateInvestigationState");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdateInvestigationStateResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new UpdateInvestigationStateResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

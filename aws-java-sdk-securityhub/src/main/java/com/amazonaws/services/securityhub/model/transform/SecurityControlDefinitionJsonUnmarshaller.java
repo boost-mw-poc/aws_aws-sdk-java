@@ -72,6 +72,17 @@ public class SecurityControlDefinitionJsonUnmarshaller implements Unmarshaller<S
                     context.nextToken();
                     securityControlDefinition.setCurrentRegionAvailability(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("CustomizableProperties", targetDepth)) {
+                    context.nextToken();
+                    securityControlDefinition.setCustomizableProperties(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
+
+                    .unmarshall(context));
+                }
+                if (context.testExpression("ParameterDefinitions", targetDepth)) {
+                    context.nextToken();
+                    securityControlDefinition.setParameterDefinitions(new MapUnmarshaller<String, ParameterDefinition>(context.getUnmarshaller(String.class),
+                            ParameterDefinitionJsonUnmarshaller.getInstance()).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

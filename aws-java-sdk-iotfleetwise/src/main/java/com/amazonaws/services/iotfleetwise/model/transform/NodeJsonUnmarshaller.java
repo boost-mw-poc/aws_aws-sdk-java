@@ -64,6 +64,14 @@ public class NodeJsonUnmarshaller implements Unmarshaller<Node, JsonUnmarshaller
                     context.nextToken();
                     node.setAttribute(AttributeJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("struct", targetDepth)) {
+                    context.nextToken();
+                    node.setStruct(CustomStructJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("property", targetDepth)) {
+                    context.nextToken();
+                    node.setProperty(CustomPropertyJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

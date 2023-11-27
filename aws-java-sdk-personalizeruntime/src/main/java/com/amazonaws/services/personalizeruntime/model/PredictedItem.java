@@ -50,6 +50,12 @@ public class PredictedItem implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private String promotionName;
+    /**
+     * <p>
+     * Metadata about the item from your Items dataset.
+     * </p>
+     */
+    private java.util.Map<String, String> metadata;
 
     /**
      * <p>
@@ -178,6 +184,74 @@ public class PredictedItem implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Metadata about the item from your Items dataset.
+     * </p>
+     * 
+     * @return Metadata about the item from your Items dataset.
+     */
+
+    public java.util.Map<String, String> getMetadata() {
+        return metadata;
+    }
+
+    /**
+     * <p>
+     * Metadata about the item from your Items dataset.
+     * </p>
+     * 
+     * @param metadata
+     *        Metadata about the item from your Items dataset.
+     */
+
+    public void setMetadata(java.util.Map<String, String> metadata) {
+        this.metadata = metadata;
+    }
+
+    /**
+     * <p>
+     * Metadata about the item from your Items dataset.
+     * </p>
+     * 
+     * @param metadata
+     *        Metadata about the item from your Items dataset.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PredictedItem withMetadata(java.util.Map<String, String> metadata) {
+        setMetadata(metadata);
+        return this;
+    }
+
+    /**
+     * Add a single Metadata entry
+     *
+     * @see PredictedItem#withMetadata
+     * @returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PredictedItem addMetadataEntry(String key, String value) {
+        if (null == this.metadata) {
+            this.metadata = new java.util.HashMap<String, String>();
+        }
+        if (this.metadata.containsKey(key))
+            throw new IllegalArgumentException("Duplicated keys (" + key.toString() + ") are provided.");
+        this.metadata.put(key, value);
+        return this;
+    }
+
+    /**
+     * Removes all the entries added into Metadata.
+     *
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PredictedItem clearMetadataEntries() {
+        this.metadata = null;
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -194,7 +268,9 @@ public class PredictedItem implements Serializable, Cloneable, StructuredPojo {
         if (getScore() != null)
             sb.append("Score: ").append(getScore()).append(",");
         if (getPromotionName() != null)
-            sb.append("PromotionName: ").append(getPromotionName());
+            sb.append("PromotionName: ").append(getPromotionName()).append(",");
+        if (getMetadata() != null)
+            sb.append("Metadata: ").append(getMetadata());
         sb.append("}");
         return sb.toString();
     }
@@ -221,6 +297,10 @@ public class PredictedItem implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getPromotionName() != null && other.getPromotionName().equals(this.getPromotionName()) == false)
             return false;
+        if (other.getMetadata() == null ^ this.getMetadata() == null)
+            return false;
+        if (other.getMetadata() != null && other.getMetadata().equals(this.getMetadata()) == false)
+            return false;
         return true;
     }
 
@@ -232,6 +312,7 @@ public class PredictedItem implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getItemId() == null) ? 0 : getItemId().hashCode());
         hashCode = prime * hashCode + ((getScore() == null) ? 0 : getScore().hashCode());
         hashCode = prime * hashCode + ((getPromotionName() == null) ? 0 : getPromotionName().hashCode());
+        hashCode = prime * hashCode + ((getMetadata() == null) ? 0 : getMetadata().hashCode());
         return hashCode;
     }
 

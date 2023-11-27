@@ -46,6 +46,8 @@ public class SensorMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("deprecationMessage").build();
     private static final MarshallingInfo<String> COMMENT_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("comment").build();
+    private static final MarshallingInfo<String> STRUCTFULLYQUALIFIEDNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("structFullyQualifiedName").build();
 
     private static final SensorMarshaller instance = new SensorMarshaller();
 
@@ -72,6 +74,7 @@ public class SensorMarshaller {
             protocolMarshaller.marshall(sensor.getMax(), MAX_BINDING);
             protocolMarshaller.marshall(sensor.getDeprecationMessage(), DEPRECATIONMESSAGE_BINDING);
             protocolMarshaller.marshall(sensor.getComment(), COMMENT_BINDING);
+            protocolMarshaller.marshall(sensor.getStructFullyQualifiedName(), STRUCTFULLYQUALIFIEDNAME_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

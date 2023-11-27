@@ -48,6 +48,8 @@ public class ActuatorMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("deprecationMessage").build();
     private static final MarshallingInfo<String> COMMENT_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("comment").build();
+    private static final MarshallingInfo<String> STRUCTFULLYQUALIFIEDNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("structFullyQualifiedName").build();
 
     private static final ActuatorMarshaller instance = new ActuatorMarshaller();
 
@@ -75,6 +77,7 @@ public class ActuatorMarshaller {
             protocolMarshaller.marshall(actuator.getAssignedValue(), ASSIGNEDVALUE_BINDING);
             protocolMarshaller.marshall(actuator.getDeprecationMessage(), DEPRECATIONMESSAGE_BINDING);
             protocolMarshaller.marshall(actuator.getComment(), COMMENT_BINDING);
+            protocolMarshaller.marshall(actuator.getStructFullyQualifiedName(), STRUCTFULLYQUALIFIEDNAME_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -170,6 +170,12 @@ public class ECSServiceRecommendation implements Serializable, Cloneable, Struct
      * </p>
      */
     private java.util.List<Tag> tags;
+    /**
+     * <p>
+     * Describes the effective recommendation preferences for Amazon ECS services.
+     * </p>
+     */
+    private ECSEffectiveRecommendationPreferences effectiveRecommendationPreferences;
 
     /**
      * <p>
@@ -1451,6 +1457,46 @@ public class ECSServiceRecommendation implements Serializable, Cloneable, Struct
     }
 
     /**
+     * <p>
+     * Describes the effective recommendation preferences for Amazon ECS services.
+     * </p>
+     * 
+     * @param effectiveRecommendationPreferences
+     *        Describes the effective recommendation preferences for Amazon ECS services.
+     */
+
+    public void setEffectiveRecommendationPreferences(ECSEffectiveRecommendationPreferences effectiveRecommendationPreferences) {
+        this.effectiveRecommendationPreferences = effectiveRecommendationPreferences;
+    }
+
+    /**
+     * <p>
+     * Describes the effective recommendation preferences for Amazon ECS services.
+     * </p>
+     * 
+     * @return Describes the effective recommendation preferences for Amazon ECS services.
+     */
+
+    public ECSEffectiveRecommendationPreferences getEffectiveRecommendationPreferences() {
+        return this.effectiveRecommendationPreferences;
+    }
+
+    /**
+     * <p>
+     * Describes the effective recommendation preferences for Amazon ECS services.
+     * </p>
+     * 
+     * @param effectiveRecommendationPreferences
+     *        Describes the effective recommendation preferences for Amazon ECS services.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ECSServiceRecommendation withEffectiveRecommendationPreferences(ECSEffectiveRecommendationPreferences effectiveRecommendationPreferences) {
+        setEffectiveRecommendationPreferences(effectiveRecommendationPreferences);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1485,7 +1531,9 @@ public class ECSServiceRecommendation implements Serializable, Cloneable, Struct
         if (getCurrentPerformanceRisk() != null)
             sb.append("CurrentPerformanceRisk: ").append(getCurrentPerformanceRisk()).append(",");
         if (getTags() != null)
-            sb.append("Tags: ").append(getTags());
+            sb.append("Tags: ").append(getTags()).append(",");
+        if (getEffectiveRecommendationPreferences() != null)
+            sb.append("EffectiveRecommendationPreferences: ").append(getEffectiveRecommendationPreferences());
         sb.append("}");
         return sb.toString();
     }
@@ -1548,6 +1596,11 @@ public class ECSServiceRecommendation implements Serializable, Cloneable, Struct
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
             return false;
+        if (other.getEffectiveRecommendationPreferences() == null ^ this.getEffectiveRecommendationPreferences() == null)
+            return false;
+        if (other.getEffectiveRecommendationPreferences() != null
+                && other.getEffectiveRecommendationPreferences().equals(this.getEffectiveRecommendationPreferences()) == false)
+            return false;
         return true;
     }
 
@@ -1568,6 +1621,7 @@ public class ECSServiceRecommendation implements Serializable, Cloneable, Struct
         hashCode = prime * hashCode + ((getServiceRecommendationOptions() == null) ? 0 : getServiceRecommendationOptions().hashCode());
         hashCode = prime * hashCode + ((getCurrentPerformanceRisk() == null) ? 0 : getCurrentPerformanceRisk().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
+        hashCode = prime * hashCode + ((getEffectiveRecommendationPreferences() == null) ? 0 : getEffectiveRecommendationPreferences().hashCode());
         return hashCode;
     }
 

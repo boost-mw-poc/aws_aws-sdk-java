@@ -87,6 +87,29 @@ public class DescribeLogGroupsRequest extends com.amazonaws.AmazonWebServiceRequ
      * </p>
      */
     private Boolean includeLinkedAccounts;
+    /**
+     * <p>
+     * Specifies the log group class for this log group. There are two classes:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The <code>Standard</code> log class supports all CloudWatch Logs features.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The <code>Infrequent Access</code> log class supports a subset of CloudWatch Logs features and incurs lower
+     * costs.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For details about the features supported by each class, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CloudWatch_Logs_Log_Classes.html">Log classes</a>
+     * </p>
+     */
+    private String logGroupClass;
 
     /**
      * <p>
@@ -531,6 +554,201 @@ public class DescribeLogGroupsRequest extends com.amazonaws.AmazonWebServiceRequ
     }
 
     /**
+     * <p>
+     * Specifies the log group class for this log group. There are two classes:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The <code>Standard</code> log class supports all CloudWatch Logs features.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The <code>Infrequent Access</code> log class supports a subset of CloudWatch Logs features and incurs lower
+     * costs.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For details about the features supported by each class, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CloudWatch_Logs_Log_Classes.html">Log classes</a>
+     * </p>
+     * 
+     * @param logGroupClass
+     *        Specifies the log group class for this log group. There are two classes:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        The <code>Standard</code> log class supports all CloudWatch Logs features.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The <code>Infrequent Access</code> log class supports a subset of CloudWatch Logs features and incurs
+     *        lower costs.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        For details about the features supported by each class, see <a
+     *        href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CloudWatch_Logs_Log_Classes.html">Log
+     *        classes</a>
+     * @see LogGroupClass
+     */
+
+    public void setLogGroupClass(String logGroupClass) {
+        this.logGroupClass = logGroupClass;
+    }
+
+    /**
+     * <p>
+     * Specifies the log group class for this log group. There are two classes:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The <code>Standard</code> log class supports all CloudWatch Logs features.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The <code>Infrequent Access</code> log class supports a subset of CloudWatch Logs features and incurs lower
+     * costs.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For details about the features supported by each class, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CloudWatch_Logs_Log_Classes.html">Log classes</a>
+     * </p>
+     * 
+     * @return Specifies the log group class for this log group. There are two classes:</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         The <code>Standard</code> log class supports all CloudWatch Logs features.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         The <code>Infrequent Access</code> log class supports a subset of CloudWatch Logs features and incurs
+     *         lower costs.
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         For details about the features supported by each class, see <a
+     *         href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CloudWatch_Logs_Log_Classes.html">Log
+     *         classes</a>
+     * @see LogGroupClass
+     */
+
+    public String getLogGroupClass() {
+        return this.logGroupClass;
+    }
+
+    /**
+     * <p>
+     * Specifies the log group class for this log group. There are two classes:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The <code>Standard</code> log class supports all CloudWatch Logs features.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The <code>Infrequent Access</code> log class supports a subset of CloudWatch Logs features and incurs lower
+     * costs.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For details about the features supported by each class, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CloudWatch_Logs_Log_Classes.html">Log classes</a>
+     * </p>
+     * 
+     * @param logGroupClass
+     *        Specifies the log group class for this log group. There are two classes:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        The <code>Standard</code> log class supports all CloudWatch Logs features.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The <code>Infrequent Access</code> log class supports a subset of CloudWatch Logs features and incurs
+     *        lower costs.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        For details about the features supported by each class, see <a
+     *        href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CloudWatch_Logs_Log_Classes.html">Log
+     *        classes</a>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see LogGroupClass
+     */
+
+    public DescribeLogGroupsRequest withLogGroupClass(String logGroupClass) {
+        setLogGroupClass(logGroupClass);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Specifies the log group class for this log group. There are two classes:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The <code>Standard</code> log class supports all CloudWatch Logs features.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The <code>Infrequent Access</code> log class supports a subset of CloudWatch Logs features and incurs lower
+     * costs.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For details about the features supported by each class, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CloudWatch_Logs_Log_Classes.html">Log classes</a>
+     * </p>
+     * 
+     * @param logGroupClass
+     *        Specifies the log group class for this log group. There are two classes:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        The <code>Standard</code> log class supports all CloudWatch Logs features.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The <code>Infrequent Access</code> log class supports a subset of CloudWatch Logs features and incurs
+     *        lower costs.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        For details about the features supported by each class, see <a
+     *        href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CloudWatch_Logs_Log_Classes.html">Log
+     *        classes</a>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see LogGroupClass
+     */
+
+    public DescribeLogGroupsRequest withLogGroupClass(LogGroupClass logGroupClass) {
+        this.logGroupClass = logGroupClass.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -553,7 +771,9 @@ public class DescribeLogGroupsRequest extends com.amazonaws.AmazonWebServiceRequ
         if (getLimit() != null)
             sb.append("Limit: ").append(getLimit()).append(",");
         if (getIncludeLinkedAccounts() != null)
-            sb.append("IncludeLinkedAccounts: ").append(getIncludeLinkedAccounts());
+            sb.append("IncludeLinkedAccounts: ").append(getIncludeLinkedAccounts()).append(",");
+        if (getLogGroupClass() != null)
+            sb.append("LogGroupClass: ").append(getLogGroupClass());
         sb.append("}");
         return sb.toString();
     }
@@ -592,6 +812,10 @@ public class DescribeLogGroupsRequest extends com.amazonaws.AmazonWebServiceRequ
             return false;
         if (other.getIncludeLinkedAccounts() != null && other.getIncludeLinkedAccounts().equals(this.getIncludeLinkedAccounts()) == false)
             return false;
+        if (other.getLogGroupClass() == null ^ this.getLogGroupClass() == null)
+            return false;
+        if (other.getLogGroupClass() != null && other.getLogGroupClass().equals(this.getLogGroupClass()) == false)
+            return false;
         return true;
     }
 
@@ -606,6 +830,7 @@ public class DescribeLogGroupsRequest extends com.amazonaws.AmazonWebServiceRequ
         hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
         hashCode = prime * hashCode + ((getLimit() == null) ? 0 : getLimit().hashCode());
         hashCode = prime * hashCode + ((getIncludeLinkedAccounts() == null) ? 0 : getIncludeLinkedAccounts().hashCode());
+        hashCode = prime * hashCode + ((getLogGroupClass() == null) ? 0 : getLogGroupClass().hashCode());
         return hashCode;
     }
 

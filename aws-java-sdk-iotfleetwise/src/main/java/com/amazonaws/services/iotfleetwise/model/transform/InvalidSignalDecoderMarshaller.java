@@ -31,6 +31,8 @@ public class InvalidSignalDecoderMarshaller {
             .marshallLocationName("name").build();
     private static final MarshallingInfo<String> REASON_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("reason").build();
+    private static final MarshallingInfo<String> HINT_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("hint").build();
 
     private static final InvalidSignalDecoderMarshaller instance = new InvalidSignalDecoderMarshaller();
 
@@ -50,6 +52,7 @@ public class InvalidSignalDecoderMarshaller {
         try {
             protocolMarshaller.marshall(invalidSignalDecoder.getName(), NAME_BINDING);
             protocolMarshaller.marshall(invalidSignalDecoder.getReason(), REASON_BINDING);
+            protocolMarshaller.marshall(invalidSignalDecoder.getHint(), HINT_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

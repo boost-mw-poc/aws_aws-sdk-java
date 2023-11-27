@@ -640,12 +640,10 @@ public class AmazonLexModelsV2Client extends AmazonWebServiceClient implements A
 
     /**
      * <p>
-     * Creates a new version of the bot based on the <code>DRAFT</code> version. If the <code>DRAFT</code> version of
-     * this resource hasn't changed since you created the last version, Amazon Lex doesn't create a new version, it
-     * returns the last created version.
-     * </p>
-     * <p>
-     * When you create the first version of a bot, Amazon Lex sets the version to 1. Subsequent versions increment by 1.
+     * Creates an immutable version of the bot. When you create the first version of a bot, Amazon Lex sets the version
+     * number to 1. Subsequent bot versions increase in an increment of 1. The version number will always represent the
+     * total number of versions created of the bot, not the current number of versions. If a bot version is deleted,
+     * that bot version number will not be reused.
      * </p>
      * 
      * @param createBotVersionRequest
@@ -2583,6 +2581,74 @@ public class AmazonLexModelsV2Client extends AmazonWebServiceClient implements A
 
     /**
      * <p>
+     * Returns information about a request to generate a bot through natural language description, made through the
+     * <code>StartBotResource</code> API. Use the <code>generatedBotLocaleUrl</code> to retrieve the Amazon S3 object
+     * containing the bot locale configuration. You can then modify and import this configuration.
+     * </p>
+     * 
+     * @param describeBotResourceGenerationRequest
+     * @return Result of the DescribeBotResourceGeneration operation returned by the service.
+     * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
+     * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
+     * @throws ResourceNotFoundException
+     *         You asked to describe a resource that doesn't exist. Check the resource that you are requesting and try
+     *         again.
+     * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
+     * @sample AmazonLexModelsV2.DescribeBotResourceGeneration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/DescribeBotResourceGeneration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DescribeBotResourceGenerationResult describeBotResourceGeneration(DescribeBotResourceGenerationRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribeBotResourceGeneration(request);
+    }
+
+    @SdkInternalApi
+    final DescribeBotResourceGenerationResult executeDescribeBotResourceGeneration(DescribeBotResourceGenerationRequest describeBotResourceGenerationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describeBotResourceGenerationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeBotResourceGenerationRequest> request = null;
+        Response<DescribeBotResourceGenerationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeBotResourceGenerationRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(describeBotResourceGenerationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Lex Models V2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeBotResourceGeneration");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DescribeBotResourceGenerationResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new DescribeBotResourceGenerationResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Provides metadata about a version of a bot.
      * </p>
      * 
@@ -3377,6 +3443,81 @@ public class AmazonLexModelsV2Client extends AmazonWebServiceClient implements A
 
     /**
      * <p>
+     * Generates sample utterances for an intent.
+     * </p>
+     * 
+     * @param generateBotElementRequest
+     * @return Result of the GenerateBotElement operation returned by the service.
+     * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
+     * @throws ServiceQuotaExceededException
+     *         You have reached a quota for your bot.
+     * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
+     * @throws ResourceNotFoundException
+     *         You asked to describe a resource that doesn't exist. Check the resource that you are requesting and try
+     *         again.
+     * @throws ConflictException
+     *         The action that you tried to perform couldn't be completed because the resource is in a conflicting
+     *         state. For example, deleting a bot that is in the CREATING state. Try your request again.
+     * @throws PreconditionFailedException
+     *         Your request couldn't be completed because one or more request fields aren't valid. Check the fields in
+     *         your request and try again.
+     * @throws ConflictException
+     *         The action that you tried to perform couldn't be completed because the resource is in a conflicting
+     *         state. For example, deleting a bot that is in the CREATING state. Try your request again.
+     * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
+     * @sample AmazonLexModelsV2.GenerateBotElement
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/GenerateBotElement"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GenerateBotElementResult generateBotElement(GenerateBotElementRequest request) {
+        request = beforeClientExecution(request);
+        return executeGenerateBotElement(request);
+    }
+
+    @SdkInternalApi
+    final GenerateBotElementResult executeGenerateBotElement(GenerateBotElementRequest generateBotElementRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(generateBotElementRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GenerateBotElementRequest> request = null;
+        Response<GenerateBotElementResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GenerateBotElementRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(generateBotElementRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Lex Models V2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GenerateBotElement");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GenerateBotElementResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GenerateBotElementResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * The pre-signed Amazon S3 URL to download the test execution result artifacts.
      * </p>
      * 
@@ -3722,6 +3863,72 @@ public class AmazonLexModelsV2Client extends AmazonWebServiceClient implements A
             HttpResponseHandler<AmazonWebServiceResponse<ListBotRecommendationsResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new ListBotRecommendationsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Lists the generation requests made for a bot locale.
+     * </p>
+     * 
+     * @param listBotResourceGenerationsRequest
+     * @return Result of the ListBotResourceGenerations operation returned by the service.
+     * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
+     * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
+     * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
+     * @throws ResourceNotFoundException
+     *         You asked to describe a resource that doesn't exist. Check the resource that you are requesting and try
+     *         again.
+     * @sample AmazonLexModelsV2.ListBotResourceGenerations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/ListBotResourceGenerations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListBotResourceGenerationsResult listBotResourceGenerations(ListBotResourceGenerationsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListBotResourceGenerations(request);
+    }
+
+    @SdkInternalApi
+    final ListBotResourceGenerationsResult executeListBotResourceGenerations(ListBotResourceGenerationsRequest listBotResourceGenerationsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listBotResourceGenerationsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListBotResourceGenerationsRequest> request = null;
+        Response<ListBotResourceGenerationsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListBotResourceGenerationsRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(listBotResourceGenerationsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Lex Models V2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListBotResourceGenerations");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListBotResourceGenerationsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new ListBotResourceGenerationsResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -5616,6 +5823,81 @@ public class AmazonLexModelsV2Client extends AmazonWebServiceClient implements A
             HttpResponseHandler<AmazonWebServiceResponse<StartBotRecommendationResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new StartBotRecommendationResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Starts a request for the descriptive bot builder to generate a bot locale configuration based on the prompt you
+     * provide it. After you make this call, use the <code>DescribeBotResourceGeneration</code> operation to check on
+     * the status of the generation and for the <code>generatedBotLocaleUrl</code> when the generation is complete. Use
+     * that value to retrieve the Amazon S3 object containing the bot locale configuration. You can then modify and
+     * import this configuration.
+     * </p>
+     * 
+     * @param startBotResourceGenerationRequest
+     * @return Result of the StartBotResourceGeneration operation returned by the service.
+     * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
+     * @throws ServiceQuotaExceededException
+     *         You have reached a quota for your bot.
+     * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
+     * @throws PreconditionFailedException
+     *         Your request couldn't be completed because one or more request fields aren't valid. Check the fields in
+     *         your request and try again.
+     * @throws ConflictException
+     *         The action that you tried to perform couldn't be completed because the resource is in a conflicting
+     *         state. For example, deleting a bot that is in the CREATING state. Try your request again.
+     * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
+     * @sample AmazonLexModelsV2.StartBotResourceGeneration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/StartBotResourceGeneration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public StartBotResourceGenerationResult startBotResourceGeneration(StartBotResourceGenerationRequest request) {
+        request = beforeClientExecution(request);
+        return executeStartBotResourceGeneration(request);
+    }
+
+    @SdkInternalApi
+    final StartBotResourceGenerationResult executeStartBotResourceGeneration(StartBotResourceGenerationRequest startBotResourceGenerationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(startBotResourceGenerationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<StartBotResourceGenerationRequest> request = null;
+        Response<StartBotResourceGenerationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new StartBotResourceGenerationRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(startBotResourceGenerationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Lex Models V2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "StartBotResourceGeneration");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<StartBotResourceGenerationResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new StartBotResourceGenerationResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

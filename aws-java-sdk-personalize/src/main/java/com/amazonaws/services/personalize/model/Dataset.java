@@ -66,6 +66,16 @@ public class Dataset implements Serializable, Cloneable, StructuredPojo {
      * Users
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * Actions
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Action_Interactions
+     * </p>
+     * </li>
      * </ul>
      */
     private String datasetType;
@@ -114,6 +124,14 @@ public class Dataset implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private DatasetUpdateSummary latestDatasetUpdate;
+    /**
+     * <p>
+     * The ID of the event tracker for an Action interactions dataset. You specify the tracker's ID in the
+     * <code>PutActionInteractions</code> API operation. Amazon Personalize uses it to direct new data to the Action
+     * interactions dataset in your dataset group.
+     * </p>
+     */
+    private String trackingId;
 
     /**
      * <p>
@@ -255,6 +273,16 @@ public class Dataset implements Serializable, Cloneable, StructuredPojo {
      * Users
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * Actions
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Action_Interactions
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param datasetType
@@ -273,6 +301,16 @@ public class Dataset implements Serializable, Cloneable, StructuredPojo {
      *        <li>
      *        <p>
      *        Users
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Actions
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Action_Interactions
      *        </p>
      *        </li>
      */
@@ -301,6 +339,16 @@ public class Dataset implements Serializable, Cloneable, StructuredPojo {
      * Users
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * Actions
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Action_Interactions
+     * </p>
+     * </li>
      * </ul>
      * 
      * @return One of the following values:</p>
@@ -318,6 +366,16 @@ public class Dataset implements Serializable, Cloneable, StructuredPojo {
      *         <li>
      *         <p>
      *         Users
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Actions
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Action_Interactions
      *         </p>
      *         </li>
      */
@@ -346,6 +404,16 @@ public class Dataset implements Serializable, Cloneable, StructuredPojo {
      * Users
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * Actions
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Action_Interactions
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param datasetType
@@ -364,6 +432,16 @@ public class Dataset implements Serializable, Cloneable, StructuredPojo {
      *        <li>
      *        <p>
      *        Users
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Actions
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Action_Interactions
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -662,6 +740,58 @@ public class Dataset implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The ID of the event tracker for an Action interactions dataset. You specify the tracker's ID in the
+     * <code>PutActionInteractions</code> API operation. Amazon Personalize uses it to direct new data to the Action
+     * interactions dataset in your dataset group.
+     * </p>
+     * 
+     * @param trackingId
+     *        The ID of the event tracker for an Action interactions dataset. You specify the tracker's ID in the
+     *        <code>PutActionInteractions</code> API operation. Amazon Personalize uses it to direct new data to the
+     *        Action interactions dataset in your dataset group.
+     */
+
+    public void setTrackingId(String trackingId) {
+        this.trackingId = trackingId;
+    }
+
+    /**
+     * <p>
+     * The ID of the event tracker for an Action interactions dataset. You specify the tracker's ID in the
+     * <code>PutActionInteractions</code> API operation. Amazon Personalize uses it to direct new data to the Action
+     * interactions dataset in your dataset group.
+     * </p>
+     * 
+     * @return The ID of the event tracker for an Action interactions dataset. You specify the tracker's ID in the
+     *         <code>PutActionInteractions</code> API operation. Amazon Personalize uses it to direct new data to the
+     *         Action interactions dataset in your dataset group.
+     */
+
+    public String getTrackingId() {
+        return this.trackingId;
+    }
+
+    /**
+     * <p>
+     * The ID of the event tracker for an Action interactions dataset. You specify the tracker's ID in the
+     * <code>PutActionInteractions</code> API operation. Amazon Personalize uses it to direct new data to the Action
+     * interactions dataset in your dataset group.
+     * </p>
+     * 
+     * @param trackingId
+     *        The ID of the event tracker for an Action interactions dataset. You specify the tracker's ID in the
+     *        <code>PutActionInteractions</code> API operation. Amazon Personalize uses it to direct new data to the
+     *        Action interactions dataset in your dataset group.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Dataset withTrackingId(String trackingId) {
+        setTrackingId(trackingId);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -690,7 +820,9 @@ public class Dataset implements Serializable, Cloneable, StructuredPojo {
         if (getLastUpdatedDateTime() != null)
             sb.append("LastUpdatedDateTime: ").append(getLastUpdatedDateTime()).append(",");
         if (getLatestDatasetUpdate() != null)
-            sb.append("LatestDatasetUpdate: ").append(getLatestDatasetUpdate());
+            sb.append("LatestDatasetUpdate: ").append(getLatestDatasetUpdate()).append(",");
+        if (getTrackingId() != null)
+            sb.append("TrackingId: ").append(getTrackingId());
         sb.append("}");
         return sb.toString();
     }
@@ -741,6 +873,10 @@ public class Dataset implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getLatestDatasetUpdate() != null && other.getLatestDatasetUpdate().equals(this.getLatestDatasetUpdate()) == false)
             return false;
+        if (other.getTrackingId() == null ^ this.getTrackingId() == null)
+            return false;
+        if (other.getTrackingId() != null && other.getTrackingId().equals(this.getTrackingId()) == false)
+            return false;
         return true;
     }
 
@@ -758,6 +894,7 @@ public class Dataset implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getCreationDateTime() == null) ? 0 : getCreationDateTime().hashCode());
         hashCode = prime * hashCode + ((getLastUpdatedDateTime() == null) ? 0 : getLastUpdatedDateTime().hashCode());
         hashCode = prime * hashCode + ((getLatestDatasetUpdate() == null) ? 0 : getLatestDatasetUpdate().hashCode());
+        hashCode = prime * hashCode + ((getTrackingId() == null) ? 0 : getTrackingId().hashCode());
         return hashCode;
     }
 

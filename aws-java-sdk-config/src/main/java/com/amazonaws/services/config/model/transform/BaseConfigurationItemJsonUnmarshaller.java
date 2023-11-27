@@ -105,6 +105,14 @@ public class BaseConfigurationItemJsonUnmarshaller implements Unmarshaller<BaseC
                     baseConfigurationItem.setSupplementaryConfiguration(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context
                             .getUnmarshaller(String.class)).unmarshall(context));
                 }
+                if (context.testExpression("recordingFrequency", targetDepth)) {
+                    context.nextToken();
+                    baseConfigurationItem.setRecordingFrequency(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("configurationItemDeliveryTime", targetDepth)) {
+                    context.nextToken();
+                    baseConfigurationItem.setConfigurationItemDeliveryTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

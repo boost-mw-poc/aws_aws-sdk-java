@@ -27,18 +27,18 @@ public class DescribeBackupPolicyRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Specifies which EFS file system to retrieve the <code>BackupPolicy</code> for.
+     * Specifies which EFS file system for which to retrieve the <code>BackupPolicy</code>.
      * </p>
      */
     private String fileSystemId;
 
     /**
      * <p>
-     * Specifies which EFS file system to retrieve the <code>BackupPolicy</code> for.
+     * Specifies which EFS file system for which to retrieve the <code>BackupPolicy</code>.
      * </p>
      * 
      * @param fileSystemId
-     *        Specifies which EFS file system to retrieve the <code>BackupPolicy</code> for.
+     *        Specifies which EFS file system for which to retrieve the <code>BackupPolicy</code>.
      */
 
     public void setFileSystemId(String fileSystemId) {
@@ -47,10 +47,10 @@ public class DescribeBackupPolicyRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Specifies which EFS file system to retrieve the <code>BackupPolicy</code> for.
+     * Specifies which EFS file system for which to retrieve the <code>BackupPolicy</code>.
      * </p>
      * 
-     * @return Specifies which EFS file system to retrieve the <code>BackupPolicy</code> for.
+     * @return Specifies which EFS file system for which to retrieve the <code>BackupPolicy</code>.
      */
 
     public String getFileSystemId() {
@@ -59,11 +59,11 @@ public class DescribeBackupPolicyRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Specifies which EFS file system to retrieve the <code>BackupPolicy</code> for.
+     * Specifies which EFS file system for which to retrieve the <code>BackupPolicy</code>.
      * </p>
      * 
      * @param fileSystemId
-     *        Specifies which EFS file system to retrieve the <code>BackupPolicy</code> for.
+     *        Specifies which EFS file system for which to retrieve the <code>BackupPolicy</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

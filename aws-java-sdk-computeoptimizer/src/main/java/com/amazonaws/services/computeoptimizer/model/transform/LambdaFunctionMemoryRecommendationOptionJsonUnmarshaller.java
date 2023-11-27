@@ -68,6 +68,11 @@ public class LambdaFunctionMemoryRecommendationOptionJsonUnmarshaller implements
                     context.nextToken();
                     lambdaFunctionMemoryRecommendationOption.setSavingsOpportunity(SavingsOpportunityJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("savingsOpportunityAfterDiscounts", targetDepth)) {
+                    context.nextToken();
+                    lambdaFunctionMemoryRecommendationOption.setSavingsOpportunityAfterDiscounts(LambdaSavingsOpportunityAfterDiscountsJsonUnmarshaller
+                            .getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

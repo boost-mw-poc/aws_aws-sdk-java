@@ -362,6 +362,76 @@ public class AmazonPrometheusClient extends AmazonWebServiceClient implements Am
 
     /**
      * <p>
+     * Create a scraper.
+     * </p>
+     * 
+     * @param createScraperRequest
+     *        Represents the input of a CreateScraper operation.
+     * @return Result of the CreateScraper operation returned by the service.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @throws ConflictException
+     *         Updating or deleting a resource can cause an inconsistent state.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
+     * @throws ResourceNotFoundException
+     *         Request references a resource which does not exist.
+     * @throws AccessDeniedException
+     *         User does not have sufficient access to perform this action.
+     * @throws InternalServerException
+     *         Unexpected error during processing of request.
+     * @throws ServiceQuotaExceededException
+     *         Request would cause a service quota to be exceeded.
+     * @sample AmazonPrometheus.CreateScraper
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/amp-2020-08-01/CreateScraper" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public CreateScraperResult createScraper(CreateScraperRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateScraper(request);
+    }
+
+    @SdkInternalApi
+    final CreateScraperResult executeCreateScraper(CreateScraperRequest createScraperRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createScraperRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateScraperRequest> request = null;
+        Response<CreateScraperResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateScraperRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(createScraperRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "amp");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateScraper");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<CreateScraperResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new CreateScraperResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Creates a new AMP workspace.
      * </p>
      * 
@@ -626,6 +696,74 @@ public class AmazonPrometheusClient extends AmazonWebServiceClient implements Am
             HttpResponseHandler<AmazonWebServiceResponse<DeleteRuleGroupsNamespaceResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new DeleteRuleGroupsNamespaceResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Deletes a scraper.
+     * </p>
+     * 
+     * @param deleteScraperRequest
+     *        Represents the input of a DeleteScraper operation.
+     * @return Result of the DeleteScraper operation returned by the service.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @throws ConflictException
+     *         Updating or deleting a resource can cause an inconsistent state.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
+     * @throws ResourceNotFoundException
+     *         Request references a resource which does not exist.
+     * @throws AccessDeniedException
+     *         User does not have sufficient access to perform this action.
+     * @throws InternalServerException
+     *         Unexpected error during processing of request.
+     * @sample AmazonPrometheus.DeleteScraper
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/amp-2020-08-01/DeleteScraper" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public DeleteScraperResult deleteScraper(DeleteScraperRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteScraper(request);
+    }
+
+    @SdkInternalApi
+    final DeleteScraperResult executeDeleteScraper(DeleteScraperRequest deleteScraperRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteScraperRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteScraperRequest> request = null;
+        Response<DeleteScraperResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteScraperRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(deleteScraperRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "amp");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteScraper");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeleteScraperResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DeleteScraperResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -908,6 +1046,72 @@ public class AmazonPrometheusClient extends AmazonWebServiceClient implements Am
 
     /**
      * <p>
+     * Describe an existing scraper.
+     * </p>
+     * 
+     * @param describeScraperRequest
+     *        Represents the input of a DescribeScraper operation.
+     * @return Result of the DescribeScraper operation returned by the service.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
+     * @throws ResourceNotFoundException
+     *         Request references a resource which does not exist.
+     * @throws AccessDeniedException
+     *         User does not have sufficient access to perform this action.
+     * @throws InternalServerException
+     *         Unexpected error during processing of request.
+     * @sample AmazonPrometheus.DescribeScraper
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/amp-2020-08-01/DescribeScraper" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public DescribeScraperResult describeScraper(DescribeScraperRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribeScraper(request);
+    }
+
+    @SdkInternalApi
+    final DescribeScraperResult executeDescribeScraper(DescribeScraperRequest describeScraperRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describeScraperRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeScraperRequest> request = null;
+        Response<DescribeScraperResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeScraperRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(describeScraperRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "amp");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeScraper");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DescribeScraperResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DescribeScraperResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Describes an existing AMP workspace.
      * </p>
      * 
@@ -962,6 +1166,70 @@ public class AmazonPrometheusClient extends AmazonWebServiceClient implements Am
 
             HttpResponseHandler<AmazonWebServiceResponse<DescribeWorkspaceResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DescribeWorkspaceResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Gets a default configuration.
+     * </p>
+     * 
+     * @param getDefaultScraperConfigurationRequest
+     *        Represents the input of a GetDefaultScraperConfiguration operation.
+     * @return Result of the GetDefaultScraperConfiguration operation returned by the service.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @throws AccessDeniedException
+     *         User does not have sufficient access to perform this action.
+     * @throws InternalServerException
+     *         Unexpected error during processing of request.
+     * @sample AmazonPrometheus.GetDefaultScraperConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/amp-2020-08-01/GetDefaultScraperConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetDefaultScraperConfigurationResult getDefaultScraperConfiguration(GetDefaultScraperConfigurationRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetDefaultScraperConfiguration(request);
+    }
+
+    @SdkInternalApi
+    final GetDefaultScraperConfigurationResult executeGetDefaultScraperConfiguration(GetDefaultScraperConfigurationRequest getDefaultScraperConfigurationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getDefaultScraperConfigurationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetDefaultScraperConfigurationRequest> request = null;
+        Response<GetDefaultScraperConfigurationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetDefaultScraperConfigurationRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(getDefaultScraperConfigurationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "amp");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetDefaultScraperConfiguration");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetDefaultScraperConfigurationResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new GetDefaultScraperConfigurationResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -1030,6 +1298,71 @@ public class AmazonPrometheusClient extends AmazonWebServiceClient implements Am
             HttpResponseHandler<AmazonWebServiceResponse<ListRuleGroupsNamespacesResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new ListRuleGroupsNamespacesResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Lists all scrapers in a customer account, including scrapers being created or deleted. You may provide filters to
+     * return a more specific list of results.
+     * </p>
+     * 
+     * @param listScrapersRequest
+     *        Represents the input of a ListScrapers operation.
+     * @return Result of the ListScrapers operation returned by the service.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
+     * @throws AccessDeniedException
+     *         User does not have sufficient access to perform this action.
+     * @throws InternalServerException
+     *         Unexpected error during processing of request.
+     * @sample AmazonPrometheus.ListScrapers
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/amp-2020-08-01/ListScrapers" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public ListScrapersResult listScrapers(ListScrapersRequest request) {
+        request = beforeClientExecution(request);
+        return executeListScrapers(request);
+    }
+
+    @SdkInternalApi
+    final ListScrapersResult executeListScrapers(ListScrapersRequest listScrapersRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listScrapersRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListScrapersRequest> request = null;
+        Response<ListScrapersResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListScrapersRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listScrapersRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "amp");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListScrapers");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListScrapersResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListScrapersResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

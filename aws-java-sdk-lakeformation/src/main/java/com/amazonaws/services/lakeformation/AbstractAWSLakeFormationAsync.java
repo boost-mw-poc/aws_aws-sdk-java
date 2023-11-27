@@ -132,6 +132,21 @@ public class AbstractAWSLakeFormationAsync extends AbstractAWSLakeFormation impl
     }
 
     @Override
+    public java.util.concurrent.Future<CreateLakeFormationIdentityCenterConfigurationResult> createLakeFormationIdentityCenterConfigurationAsync(
+            CreateLakeFormationIdentityCenterConfigurationRequest request) {
+
+        return createLakeFormationIdentityCenterConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateLakeFormationIdentityCenterConfigurationResult> createLakeFormationIdentityCenterConfigurationAsync(
+            CreateLakeFormationIdentityCenterConfigurationRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateLakeFormationIdentityCenterConfigurationRequest, CreateLakeFormationIdentityCenterConfigurationResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateLakeFormationOptInResult> createLakeFormationOptInAsync(CreateLakeFormationOptInRequest request) {
 
         return createLakeFormationOptInAsync(request, null);
@@ -171,6 +186,21 @@ public class AbstractAWSLakeFormationAsync extends AbstractAWSLakeFormation impl
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteLakeFormationIdentityCenterConfigurationResult> deleteLakeFormationIdentityCenterConfigurationAsync(
+            DeleteLakeFormationIdentityCenterConfigurationRequest request) {
+
+        return deleteLakeFormationIdentityCenterConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteLakeFormationIdentityCenterConfigurationResult> deleteLakeFormationIdentityCenterConfigurationAsync(
+            DeleteLakeFormationIdentityCenterConfigurationRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteLakeFormationIdentityCenterConfigurationRequest, DeleteLakeFormationIdentityCenterConfigurationResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteLakeFormationOptInResult> deleteLakeFormationOptInAsync(DeleteLakeFormationOptInRequest request) {
 
         return deleteLakeFormationOptInAsync(request, null);
@@ -205,6 +235,21 @@ public class AbstractAWSLakeFormationAsync extends AbstractAWSLakeFormation impl
     @Override
     public java.util.concurrent.Future<DeregisterResourceResult> deregisterResourceAsync(DeregisterResourceRequest request,
             com.amazonaws.handlers.AsyncHandler<DeregisterResourceRequest, DeregisterResourceResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeLakeFormationIdentityCenterConfigurationResult> describeLakeFormationIdentityCenterConfigurationAsync(
+            DescribeLakeFormationIdentityCenterConfigurationRequest request) {
+
+        return describeLakeFormationIdentityCenterConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeLakeFormationIdentityCenterConfigurationResult> describeLakeFormationIdentityCenterConfigurationAsync(
+            DescribeLakeFormationIdentityCenterConfigurationRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeLakeFormationIdentityCenterConfigurationRequest, DescribeLakeFormationIdentityCenterConfigurationResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -638,6 +683,21 @@ public class AbstractAWSLakeFormationAsync extends AbstractAWSLakeFormation impl
     @Override
     public java.util.concurrent.Future<UpdateLFTagResult> updateLFTagAsync(UpdateLFTagRequest request,
             com.amazonaws.handlers.AsyncHandler<UpdateLFTagRequest, UpdateLFTagResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateLakeFormationIdentityCenterConfigurationResult> updateLakeFormationIdentityCenterConfigurationAsync(
+            UpdateLakeFormationIdentityCenterConfigurationRequest request) {
+
+        return updateLakeFormationIdentityCenterConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateLakeFormationIdentityCenterConfigurationResult> updateLakeFormationIdentityCenterConfigurationAsync(
+            UpdateLakeFormationIdentityCenterConfigurationRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateLakeFormationIdentityCenterConfigurationRequest, UpdateLakeFormationIdentityCenterConfigurationResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

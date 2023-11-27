@@ -46,7 +46,9 @@ public enum NodeDataType {
     DOUBLE_ARRAY("DOUBLE_ARRAY"),
     STRING_ARRAY("STRING_ARRAY"),
     UNIX_TIMESTAMP_ARRAY("UNIX_TIMESTAMP_ARRAY"),
-    UNKNOWN("UNKNOWN");
+    UNKNOWN("UNKNOWN"),
+    STRUCT("STRUCT"),
+    STRUCT_ARRAY("STRUCT_ARRAY");
 
     private String value;
 

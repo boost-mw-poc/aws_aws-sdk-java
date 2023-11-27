@@ -56,6 +56,10 @@ public class InvalidSignalDecoderJsonUnmarshaller implements Unmarshaller<Invali
                     context.nextToken();
                     invalidSignalDecoder.setReason(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("hint", targetDepth)) {
+                    context.nextToken();
+                    invalidSignalDecoder.setHint(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

@@ -67,6 +67,19 @@ public class AbstractAmazonPrometheusAsync extends AbstractAmazonPrometheus impl
     }
 
     @Override
+    public java.util.concurrent.Future<CreateScraperResult> createScraperAsync(CreateScraperRequest request) {
+
+        return createScraperAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateScraperResult> createScraperAsync(CreateScraperRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateScraperRequest, CreateScraperResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateWorkspaceResult> createWorkspaceAsync(CreateWorkspaceRequest request) {
 
         return createWorkspaceAsync(request, null);
@@ -114,6 +127,19 @@ public class AbstractAmazonPrometheusAsync extends AbstractAmazonPrometheus impl
     @Override
     public java.util.concurrent.Future<DeleteRuleGroupsNamespaceResult> deleteRuleGroupsNamespaceAsync(DeleteRuleGroupsNamespaceRequest request,
             com.amazonaws.handlers.AsyncHandler<DeleteRuleGroupsNamespaceRequest, DeleteRuleGroupsNamespaceResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteScraperResult> deleteScraperAsync(DeleteScraperRequest request) {
+
+        return deleteScraperAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteScraperResult> deleteScraperAsync(DeleteScraperRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteScraperRequest, DeleteScraperResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -171,6 +197,19 @@ public class AbstractAmazonPrometheusAsync extends AbstractAmazonPrometheus impl
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeScraperResult> describeScraperAsync(DescribeScraperRequest request) {
+
+        return describeScraperAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeScraperResult> describeScraperAsync(DescribeScraperRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeScraperRequest, DescribeScraperResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeWorkspaceResult> describeWorkspaceAsync(DescribeWorkspaceRequest request) {
 
         return describeWorkspaceAsync(request, null);
@@ -184,6 +223,19 @@ public class AbstractAmazonPrometheusAsync extends AbstractAmazonPrometheus impl
     }
 
     @Override
+    public java.util.concurrent.Future<GetDefaultScraperConfigurationResult> getDefaultScraperConfigurationAsync(GetDefaultScraperConfigurationRequest request) {
+
+        return getDefaultScraperConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetDefaultScraperConfigurationResult> getDefaultScraperConfigurationAsync(GetDefaultScraperConfigurationRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetDefaultScraperConfigurationRequest, GetDefaultScraperConfigurationResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ListRuleGroupsNamespacesResult> listRuleGroupsNamespacesAsync(ListRuleGroupsNamespacesRequest request) {
 
         return listRuleGroupsNamespacesAsync(request, null);
@@ -192,6 +244,19 @@ public class AbstractAmazonPrometheusAsync extends AbstractAmazonPrometheus impl
     @Override
     public java.util.concurrent.Future<ListRuleGroupsNamespacesResult> listRuleGroupsNamespacesAsync(ListRuleGroupsNamespacesRequest request,
             com.amazonaws.handlers.AsyncHandler<ListRuleGroupsNamespacesRequest, ListRuleGroupsNamespacesResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListScrapersResult> listScrapersAsync(ListScrapersRequest request) {
+
+        return listScrapersAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListScrapersResult> listScrapersAsync(ListScrapersRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListScrapersRequest, ListScrapersResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

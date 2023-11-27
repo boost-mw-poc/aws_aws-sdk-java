@@ -35,7 +35,11 @@ public class ResourceInUseException extends com.amazonaws.services.eks.model.Ama
      * </p>
      */
     private String nodegroupName;
-
+    /**
+     * <p>
+     * The specified add-on name is in use.
+     * </p>
+     */
     private String addonName;
 
     /**
@@ -133,7 +137,12 @@ public class ResourceInUseException extends com.amazonaws.services.eks.model.Ama
     }
 
     /**
+     * <p>
+     * The specified add-on name is in use.
+     * </p>
+     * 
      * @param addonName
+     *        The specified add-on name is in use.
      */
 
     @com.fasterxml.jackson.annotation.JsonProperty("addonName")
@@ -142,7 +151,11 @@ public class ResourceInUseException extends com.amazonaws.services.eks.model.Ama
     }
 
     /**
-     * @return
+     * <p>
+     * The specified add-on name is in use.
+     * </p>
+     * 
+     * @return The specified add-on name is in use.
      */
 
     @com.fasterxml.jackson.annotation.JsonProperty("addonName")
@@ -151,7 +164,12 @@ public class ResourceInUseException extends com.amazonaws.services.eks.model.Ama
     }
 
     /**
+     * <p>
+     * The specified add-on name is in use.
+     * </p>
+     * 
      * @param addonName
+     *        The specified add-on name is in use.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

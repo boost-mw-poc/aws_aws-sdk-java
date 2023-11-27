@@ -483,6 +483,21 @@ public class AbstractAmazonQuickSightAsync extends AbstractAmazonQuickSight impl
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteIdentityPropagationConfigResult> deleteIdentityPropagationConfigAsync(
+            DeleteIdentityPropagationConfigRequest request) {
+
+        return deleteIdentityPropagationConfigAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteIdentityPropagationConfigResult> deleteIdentityPropagationConfigAsync(
+            DeleteIdentityPropagationConfigRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteIdentityPropagationConfigRequest, DeleteIdentityPropagationConfigResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteNamespaceResult> deleteNamespaceAsync(DeleteNamespaceRequest request) {
 
         return deleteNamespaceAsync(request, null);
@@ -1431,6 +1446,19 @@ public class AbstractAmazonQuickSightAsync extends AbstractAmazonQuickSight impl
     }
 
     @Override
+    public java.util.concurrent.Future<ListIdentityPropagationConfigsResult> listIdentityPropagationConfigsAsync(ListIdentityPropagationConfigsRequest request) {
+
+        return listIdentityPropagationConfigsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListIdentityPropagationConfigsResult> listIdentityPropagationConfigsAsync(ListIdentityPropagationConfigsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListIdentityPropagationConfigsRequest, ListIdentityPropagationConfigsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ListIngestionsResult> listIngestionsAsync(ListIngestionsRequest request) {
 
         return listIngestionsAsync(request, null);
@@ -2013,6 +2041,21 @@ public class AbstractAmazonQuickSightAsync extends AbstractAmazonQuickSight impl
     @Override
     public java.util.concurrent.Future<UpdateIAMPolicyAssignmentResult> updateIAMPolicyAssignmentAsync(UpdateIAMPolicyAssignmentRequest request,
             com.amazonaws.handlers.AsyncHandler<UpdateIAMPolicyAssignmentRequest, UpdateIAMPolicyAssignmentResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateIdentityPropagationConfigResult> updateIdentityPropagationConfigAsync(
+            UpdateIdentityPropagationConfigRequest request) {
+
+        return updateIdentityPropagationConfigAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateIdentityPropagationConfigResult> updateIdentityPropagationConfigAsync(
+            UpdateIdentityPropagationConfigRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateIdentityPropagationConfigRequest, UpdateIdentityPropagationConfigResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

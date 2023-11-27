@@ -21,7 +21,8 @@ import javax.annotation.Generated;
 public enum OpenZFSCopyStrategy {
 
     CLONE("CLONE"),
-    FULL_COPY("FULL_COPY");
+    FULL_COPY("FULL_COPY"),
+    INCREMENTAL_COPY("INCREMENTAL_COPY");
 
     private String value;
 

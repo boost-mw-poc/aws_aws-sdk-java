@@ -74,6 +74,140 @@ public class AWSS3ControlAsyncClient extends AWSS3ControlClient implements AWSS3
     }
 
     @Override
+    public java.util.concurrent.Future<AssociateAccessGrantsIdentityCenterResult> associateAccessGrantsIdentityCenterAsync(
+            AssociateAccessGrantsIdentityCenterRequest request) {
+
+        return associateAccessGrantsIdentityCenterAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<AssociateAccessGrantsIdentityCenterResult> associateAccessGrantsIdentityCenterAsync(
+            final AssociateAccessGrantsIdentityCenterRequest request,
+            final com.amazonaws.handlers.AsyncHandler<AssociateAccessGrantsIdentityCenterRequest, AssociateAccessGrantsIdentityCenterResult> asyncHandler) {
+        final AssociateAccessGrantsIdentityCenterRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<AssociateAccessGrantsIdentityCenterResult>() {
+            @Override
+            public AssociateAccessGrantsIdentityCenterResult call() throws Exception {
+                AssociateAccessGrantsIdentityCenterResult result = null;
+
+                try {
+                    result = executeAssociateAccessGrantsIdentityCenter(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateAccessGrantResult> createAccessGrantAsync(CreateAccessGrantRequest request) {
+
+        return createAccessGrantAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateAccessGrantResult> createAccessGrantAsync(final CreateAccessGrantRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateAccessGrantRequest, CreateAccessGrantResult> asyncHandler) {
+        final CreateAccessGrantRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateAccessGrantResult>() {
+            @Override
+            public CreateAccessGrantResult call() throws Exception {
+                CreateAccessGrantResult result = null;
+
+                try {
+                    result = executeCreateAccessGrant(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateAccessGrantsInstanceResult> createAccessGrantsInstanceAsync(CreateAccessGrantsInstanceRequest request) {
+
+        return createAccessGrantsInstanceAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateAccessGrantsInstanceResult> createAccessGrantsInstanceAsync(final CreateAccessGrantsInstanceRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateAccessGrantsInstanceRequest, CreateAccessGrantsInstanceResult> asyncHandler) {
+        final CreateAccessGrantsInstanceRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateAccessGrantsInstanceResult>() {
+            @Override
+            public CreateAccessGrantsInstanceResult call() throws Exception {
+                CreateAccessGrantsInstanceResult result = null;
+
+                try {
+                    result = executeCreateAccessGrantsInstance(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateAccessGrantsLocationResult> createAccessGrantsLocationAsync(CreateAccessGrantsLocationRequest request) {
+
+        return createAccessGrantsLocationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateAccessGrantsLocationResult> createAccessGrantsLocationAsync(final CreateAccessGrantsLocationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateAccessGrantsLocationRequest, CreateAccessGrantsLocationResult> asyncHandler) {
+        final CreateAccessGrantsLocationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateAccessGrantsLocationResult>() {
+            @Override
+            public CreateAccessGrantsLocationResult call() throws Exception {
+                CreateAccessGrantsLocationResult result = null;
+
+                try {
+                    result = executeCreateAccessGrantsLocation(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateAccessPointResult> createAccessPointAsync(CreateAccessPointRequest request) {
 
         return createAccessPointAsync(request, null);
@@ -258,6 +392,140 @@ public class AWSS3ControlAsyncClient extends AWSS3ControlClient implements AWSS3
 
                 try {
                     result = executeCreateStorageLensGroup(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteAccessGrantResult> deleteAccessGrantAsync(DeleteAccessGrantRequest request) {
+
+        return deleteAccessGrantAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteAccessGrantResult> deleteAccessGrantAsync(final DeleteAccessGrantRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteAccessGrantRequest, DeleteAccessGrantResult> asyncHandler) {
+        final DeleteAccessGrantRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteAccessGrantResult>() {
+            @Override
+            public DeleteAccessGrantResult call() throws Exception {
+                DeleteAccessGrantResult result = null;
+
+                try {
+                    result = executeDeleteAccessGrant(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteAccessGrantsInstanceResult> deleteAccessGrantsInstanceAsync(DeleteAccessGrantsInstanceRequest request) {
+
+        return deleteAccessGrantsInstanceAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteAccessGrantsInstanceResult> deleteAccessGrantsInstanceAsync(final DeleteAccessGrantsInstanceRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteAccessGrantsInstanceRequest, DeleteAccessGrantsInstanceResult> asyncHandler) {
+        final DeleteAccessGrantsInstanceRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteAccessGrantsInstanceResult>() {
+            @Override
+            public DeleteAccessGrantsInstanceResult call() throws Exception {
+                DeleteAccessGrantsInstanceResult result = null;
+
+                try {
+                    result = executeDeleteAccessGrantsInstance(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteAccessGrantsInstanceResourcePolicyResult> deleteAccessGrantsInstanceResourcePolicyAsync(
+            DeleteAccessGrantsInstanceResourcePolicyRequest request) {
+
+        return deleteAccessGrantsInstanceResourcePolicyAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteAccessGrantsInstanceResourcePolicyResult> deleteAccessGrantsInstanceResourcePolicyAsync(
+            final DeleteAccessGrantsInstanceResourcePolicyRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteAccessGrantsInstanceResourcePolicyRequest, DeleteAccessGrantsInstanceResourcePolicyResult> asyncHandler) {
+        final DeleteAccessGrantsInstanceResourcePolicyRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteAccessGrantsInstanceResourcePolicyResult>() {
+            @Override
+            public DeleteAccessGrantsInstanceResourcePolicyResult call() throws Exception {
+                DeleteAccessGrantsInstanceResourcePolicyResult result = null;
+
+                try {
+                    result = executeDeleteAccessGrantsInstanceResourcePolicy(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteAccessGrantsLocationResult> deleteAccessGrantsLocationAsync(DeleteAccessGrantsLocationRequest request) {
+
+        return deleteAccessGrantsLocationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteAccessGrantsLocationResult> deleteAccessGrantsLocationAsync(final DeleteAccessGrantsLocationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteAccessGrantsLocationRequest, DeleteAccessGrantsLocationResult> asyncHandler) {
+        final DeleteAccessGrantsLocationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteAccessGrantsLocationResult>() {
+            @Override
+            public DeleteAccessGrantsLocationResult call() throws Exception {
+                DeleteAccessGrantsLocationResult result = null;
+
+                try {
+                    result = executeDeleteAccessGrantsLocation(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -846,6 +1114,210 @@ public class AWSS3ControlAsyncClient extends AWSS3ControlClient implements AWSS3
     }
 
     @Override
+    public java.util.concurrent.Future<DissociateAccessGrantsIdentityCenterResult> dissociateAccessGrantsIdentityCenterAsync(
+            DissociateAccessGrantsIdentityCenterRequest request) {
+
+        return dissociateAccessGrantsIdentityCenterAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DissociateAccessGrantsIdentityCenterResult> dissociateAccessGrantsIdentityCenterAsync(
+            final DissociateAccessGrantsIdentityCenterRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DissociateAccessGrantsIdentityCenterRequest, DissociateAccessGrantsIdentityCenterResult> asyncHandler) {
+        final DissociateAccessGrantsIdentityCenterRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DissociateAccessGrantsIdentityCenterResult>() {
+            @Override
+            public DissociateAccessGrantsIdentityCenterResult call() throws Exception {
+                DissociateAccessGrantsIdentityCenterResult result = null;
+
+                try {
+                    result = executeDissociateAccessGrantsIdentityCenter(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetAccessGrantResult> getAccessGrantAsync(GetAccessGrantRequest request) {
+
+        return getAccessGrantAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetAccessGrantResult> getAccessGrantAsync(final GetAccessGrantRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetAccessGrantRequest, GetAccessGrantResult> asyncHandler) {
+        final GetAccessGrantRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetAccessGrantResult>() {
+            @Override
+            public GetAccessGrantResult call() throws Exception {
+                GetAccessGrantResult result = null;
+
+                try {
+                    result = executeGetAccessGrant(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetAccessGrantsInstanceResult> getAccessGrantsInstanceAsync(GetAccessGrantsInstanceRequest request) {
+
+        return getAccessGrantsInstanceAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetAccessGrantsInstanceResult> getAccessGrantsInstanceAsync(final GetAccessGrantsInstanceRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetAccessGrantsInstanceRequest, GetAccessGrantsInstanceResult> asyncHandler) {
+        final GetAccessGrantsInstanceRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetAccessGrantsInstanceResult>() {
+            @Override
+            public GetAccessGrantsInstanceResult call() throws Exception {
+                GetAccessGrantsInstanceResult result = null;
+
+                try {
+                    result = executeGetAccessGrantsInstance(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetAccessGrantsInstanceForPrefixResult> getAccessGrantsInstanceForPrefixAsync(
+            GetAccessGrantsInstanceForPrefixRequest request) {
+
+        return getAccessGrantsInstanceForPrefixAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetAccessGrantsInstanceForPrefixResult> getAccessGrantsInstanceForPrefixAsync(
+            final GetAccessGrantsInstanceForPrefixRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetAccessGrantsInstanceForPrefixRequest, GetAccessGrantsInstanceForPrefixResult> asyncHandler) {
+        final GetAccessGrantsInstanceForPrefixRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetAccessGrantsInstanceForPrefixResult>() {
+            @Override
+            public GetAccessGrantsInstanceForPrefixResult call() throws Exception {
+                GetAccessGrantsInstanceForPrefixResult result = null;
+
+                try {
+                    result = executeGetAccessGrantsInstanceForPrefix(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetAccessGrantsInstanceResourcePolicyResult> getAccessGrantsInstanceResourcePolicyAsync(
+            GetAccessGrantsInstanceResourcePolicyRequest request) {
+
+        return getAccessGrantsInstanceResourcePolicyAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetAccessGrantsInstanceResourcePolicyResult> getAccessGrantsInstanceResourcePolicyAsync(
+            final GetAccessGrantsInstanceResourcePolicyRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetAccessGrantsInstanceResourcePolicyRequest, GetAccessGrantsInstanceResourcePolicyResult> asyncHandler) {
+        final GetAccessGrantsInstanceResourcePolicyRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetAccessGrantsInstanceResourcePolicyResult>() {
+            @Override
+            public GetAccessGrantsInstanceResourcePolicyResult call() throws Exception {
+                GetAccessGrantsInstanceResourcePolicyResult result = null;
+
+                try {
+                    result = executeGetAccessGrantsInstanceResourcePolicy(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetAccessGrantsLocationResult> getAccessGrantsLocationAsync(GetAccessGrantsLocationRequest request) {
+
+        return getAccessGrantsLocationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetAccessGrantsLocationResult> getAccessGrantsLocationAsync(final GetAccessGrantsLocationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetAccessGrantsLocationRequest, GetAccessGrantsLocationResult> asyncHandler) {
+        final GetAccessGrantsLocationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetAccessGrantsLocationResult>() {
+            @Override
+            public GetAccessGrantsLocationResult call() throws Exception {
+                GetAccessGrantsLocationResult result = null;
+
+                try {
+                    result = executeGetAccessGrantsLocation(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetAccessPointResult> getAccessPointAsync(GetAccessPointRequest request) {
 
         return getAccessPointAsync(request, null);
@@ -1284,6 +1756,39 @@ public class AWSS3ControlAsyncClient extends AWSS3ControlClient implements AWSS3
     }
 
     @Override
+    public java.util.concurrent.Future<GetDataAccessResult> getDataAccessAsync(GetDataAccessRequest request) {
+
+        return getDataAccessAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetDataAccessResult> getDataAccessAsync(final GetDataAccessRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetDataAccessRequest, GetDataAccessResult> asyncHandler) {
+        final GetDataAccessRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetDataAccessResult>() {
+            @Override
+            public GetDataAccessResult call() throws Exception {
+                GetDataAccessResult result = null;
+
+                try {
+                    result = executeGetDataAccess(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetJobTaggingResult> getJobTaggingAsync(GetJobTaggingRequest request) {
 
         return getJobTaggingAsync(request, null);
@@ -1589,6 +2094,105 @@ public class AWSS3ControlAsyncClient extends AWSS3ControlClient implements AWSS3
     }
 
     @Override
+    public java.util.concurrent.Future<ListAccessGrantsResult> listAccessGrantsAsync(ListAccessGrantsRequest request) {
+
+        return listAccessGrantsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListAccessGrantsResult> listAccessGrantsAsync(final ListAccessGrantsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListAccessGrantsRequest, ListAccessGrantsResult> asyncHandler) {
+        final ListAccessGrantsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListAccessGrantsResult>() {
+            @Override
+            public ListAccessGrantsResult call() throws Exception {
+                ListAccessGrantsResult result = null;
+
+                try {
+                    result = executeListAccessGrants(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListAccessGrantsInstancesResult> listAccessGrantsInstancesAsync(ListAccessGrantsInstancesRequest request) {
+
+        return listAccessGrantsInstancesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListAccessGrantsInstancesResult> listAccessGrantsInstancesAsync(final ListAccessGrantsInstancesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListAccessGrantsInstancesRequest, ListAccessGrantsInstancesResult> asyncHandler) {
+        final ListAccessGrantsInstancesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListAccessGrantsInstancesResult>() {
+            @Override
+            public ListAccessGrantsInstancesResult call() throws Exception {
+                ListAccessGrantsInstancesResult result = null;
+
+                try {
+                    result = executeListAccessGrantsInstances(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListAccessGrantsLocationsResult> listAccessGrantsLocationsAsync(ListAccessGrantsLocationsRequest request) {
+
+        return listAccessGrantsLocationsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListAccessGrantsLocationsResult> listAccessGrantsLocationsAsync(final ListAccessGrantsLocationsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListAccessGrantsLocationsRequest, ListAccessGrantsLocationsResult> asyncHandler) {
+        final ListAccessGrantsLocationsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListAccessGrantsLocationsResult>() {
+            @Override
+            public ListAccessGrantsLocationsResult call() throws Exception {
+                ListAccessGrantsLocationsResult result = null;
+
+                try {
+                    result = executeListAccessGrantsLocations(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ListAccessPointsResult> listAccessPointsAsync(ListAccessPointsRequest request) {
 
         return listAccessPointsAsync(request, null);
@@ -1840,6 +2444,41 @@ public class AWSS3ControlAsyncClient extends AWSS3ControlClient implements AWSS3
 
                 try {
                     result = executeListTagsForResource(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<PutAccessGrantsInstanceResourcePolicyResult> putAccessGrantsInstanceResourcePolicyAsync(
+            PutAccessGrantsInstanceResourcePolicyRequest request) {
+
+        return putAccessGrantsInstanceResourcePolicyAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<PutAccessGrantsInstanceResourcePolicyResult> putAccessGrantsInstanceResourcePolicyAsync(
+            final PutAccessGrantsInstanceResourcePolicyRequest request,
+            final com.amazonaws.handlers.AsyncHandler<PutAccessGrantsInstanceResourcePolicyRequest, PutAccessGrantsInstanceResourcePolicyResult> asyncHandler) {
+        final PutAccessGrantsInstanceResourcePolicyRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<PutAccessGrantsInstanceResourcePolicyResult>() {
+            @Override
+            public PutAccessGrantsInstanceResourcePolicyResult call() throws Exception {
+                PutAccessGrantsInstanceResourcePolicyResult result = null;
+
+                try {
+                    result = executePutAccessGrantsInstanceResourcePolicy(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -2380,6 +3019,39 @@ public class AWSS3ControlAsyncClient extends AWSS3ControlClient implements AWSS3
 
                 try {
                     result = executeUntagResource(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateAccessGrantsLocationResult> updateAccessGrantsLocationAsync(UpdateAccessGrantsLocationRequest request) {
+
+        return updateAccessGrantsLocationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateAccessGrantsLocationResult> updateAccessGrantsLocationAsync(final UpdateAccessGrantsLocationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateAccessGrantsLocationRequest, UpdateAccessGrantsLocationResult> asyncHandler) {
+        final UpdateAccessGrantsLocationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateAccessGrantsLocationResult>() {
+            @Override
+            public UpdateAccessGrantsLocationResult call() throws Exception {
+                UpdateAccessGrantsLocationResult result = null;
+
+                try {
+                    result = executeUpdateAccessGrantsLocation(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

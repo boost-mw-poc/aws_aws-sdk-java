@@ -122,6 +122,34 @@ public interface AmazonPrometheus {
 
     /**
      * <p>
+     * Create a scraper.
+     * </p>
+     * 
+     * @param createScraperRequest
+     *        Represents the input of a CreateScraper operation.
+     * @return Result of the CreateScraper operation returned by the service.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @throws ConflictException
+     *         Updating or deleting a resource can cause an inconsistent state.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
+     * @throws ResourceNotFoundException
+     *         Request references a resource which does not exist.
+     * @throws AccessDeniedException
+     *         User does not have sufficient access to perform this action.
+     * @throws InternalServerException
+     *         Unexpected error during processing of request.
+     * @throws ServiceQuotaExceededException
+     *         Request would cause a service quota to be exceeded.
+     * @sample AmazonPrometheus.CreateScraper
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/amp-2020-08-01/CreateScraper" target="_top">AWS API
+     *      Documentation</a>
+     */
+    CreateScraperResult createScraper(CreateScraperRequest createScraperRequest);
+
+    /**
+     * <p>
      * Creates a new AMP workspace.
      * </p>
      * 
@@ -224,6 +252,32 @@ public interface AmazonPrometheus {
 
     /**
      * <p>
+     * Deletes a scraper.
+     * </p>
+     * 
+     * @param deleteScraperRequest
+     *        Represents the input of a DeleteScraper operation.
+     * @return Result of the DeleteScraper operation returned by the service.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @throws ConflictException
+     *         Updating or deleting a resource can cause an inconsistent state.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
+     * @throws ResourceNotFoundException
+     *         Request references a resource which does not exist.
+     * @throws AccessDeniedException
+     *         User does not have sufficient access to perform this action.
+     * @throws InternalServerException
+     *         Unexpected error during processing of request.
+     * @sample AmazonPrometheus.DeleteScraper
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/amp-2020-08-01/DeleteScraper" target="_top">AWS API
+     *      Documentation</a>
+     */
+    DeleteScraperResult deleteScraper(DeleteScraperRequest deleteScraperRequest);
+
+    /**
+     * <p>
      * Deletes an AMP workspace.
      * </p>
      * 
@@ -320,6 +374,30 @@ public interface AmazonPrometheus {
 
     /**
      * <p>
+     * Describe an existing scraper.
+     * </p>
+     * 
+     * @param describeScraperRequest
+     *        Represents the input of a DescribeScraper operation.
+     * @return Result of the DescribeScraper operation returned by the service.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
+     * @throws ResourceNotFoundException
+     *         Request references a resource which does not exist.
+     * @throws AccessDeniedException
+     *         User does not have sufficient access to perform this action.
+     * @throws InternalServerException
+     *         Unexpected error during processing of request.
+     * @sample AmazonPrometheus.DescribeScraper
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/amp-2020-08-01/DescribeScraper" target="_top">AWS API
+     *      Documentation</a>
+     */
+    DescribeScraperResult describeScraper(DescribeScraperRequest describeScraperRequest);
+
+    /**
+     * <p>
      * Describes an existing AMP workspace.
      * </p>
      * 
@@ -344,6 +422,26 @@ public interface AmazonPrometheus {
 
     /**
      * <p>
+     * Gets a default configuration.
+     * </p>
+     * 
+     * @param getDefaultScraperConfigurationRequest
+     *        Represents the input of a GetDefaultScraperConfiguration operation.
+     * @return Result of the GetDefaultScraperConfiguration operation returned by the service.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @throws AccessDeniedException
+     *         User does not have sufficient access to perform this action.
+     * @throws InternalServerException
+     *         Unexpected error during processing of request.
+     * @sample AmazonPrometheus.GetDefaultScraperConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/amp-2020-08-01/GetDefaultScraperConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetDefaultScraperConfigurationResult getDefaultScraperConfiguration(GetDefaultScraperConfigurationRequest getDefaultScraperConfigurationRequest);
+
+    /**
+     * <p>
      * Lists rule groups namespaces.
      * </p>
      * 
@@ -365,6 +463,29 @@ public interface AmazonPrometheus {
      *      API Documentation</a>
      */
     ListRuleGroupsNamespacesResult listRuleGroupsNamespaces(ListRuleGroupsNamespacesRequest listRuleGroupsNamespacesRequest);
+
+    /**
+     * <p>
+     * Lists all scrapers in a customer account, including scrapers being created or deleted. You may provide filters to
+     * return a more specific list of results.
+     * </p>
+     * 
+     * @param listScrapersRequest
+     *        Represents the input of a ListScrapers operation.
+     * @return Result of the ListScrapers operation returned by the service.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
+     * @throws AccessDeniedException
+     *         User does not have sufficient access to perform this action.
+     * @throws InternalServerException
+     *         Unexpected error during processing of request.
+     * @sample AmazonPrometheus.ListScrapers
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/amp-2020-08-01/ListScrapers" target="_top">AWS API
+     *      Documentation</a>
+     */
+    ListScrapersResult listScrapers(ListScrapersRequest listScrapersRequest);
 
     /**
      * <p>

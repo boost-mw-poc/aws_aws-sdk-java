@@ -93,7 +93,7 @@ import javax.annotation.Generated;
  * <code>IOPS_OPTIMIZATION</code> has been completed successfully, the parent <code>FILE_SYSTEM_UPDATE</code> action
  * status changes to <code>COMPLETED</code>. For more information, see <a
  * href="https://docs.aws.amazon.com/fsx/latest/WindowsGuide/managing-provisioned-ssd-iops.html">Managing provisioned
- * SSD IOPS</a> in the <i>Amazon FSx for Windows File Server User Guide</i>.
+ * SSD IOPS</a> in the Amazon FSx for Windows File Server User Guide.
  * </p>
  * </li>
  * <li>
@@ -109,8 +109,8 @@ import javax.annotation.Generated;
  * </li>
  * <li>
  * <p>
- * <code>VOLUME_UPDATE</code> - A volume update to an Amazon FSx for NetApp ONTAP or Amazon FSx for OpenZFS volume
- * initiated from the Amazon FSx console, API (<code>UpdateVolume</code>), or CLI (<code>update-volume</code>).
+ * <code>VOLUME_UPDATE</code> - A volume update to an Amazon FSx for OpenZFS volume initiated from the Amazon FSx
+ * console, API (<code>UpdateVolume</code>), or CLI (<code>update-volume</code>).
  * </p>
  * </li>
  * <li>
@@ -132,6 +132,20 @@ import javax.annotation.Generated;
  * OpenZFS file system.
  * </p>
  * </li>
+ * <li>
+ * <p>
+ * <code>VOLUME_INITIALIZE_WITH_SNAPSHOT</code> - A volume is being created from a snapshot on a different FSx for
+ * OpenZFS file system. You can initiate this from the Amazon FSx console, API (<code>CreateVolume</code>), or CLI (
+ * <code>create-volume</code>) when using the using the <code>FULL_COPY</code> strategy.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <code>VOLUME_UPDATE_WITH_SNAPSHOT</code> - A volume is being updated from a snapshot on a different FSx for OpenZFS
+ * file system. You can initiate this from the Amazon FSx console, API (<code>CopySnapshotAndUpdateVolume</code>), or
+ * CLI (<code>copy-snapshot-and-update-volume</code>).
+ * </p>
+ * </li>
  * </ul>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
@@ -148,7 +162,9 @@ public enum AdministrativeActionType {
     THROUGHPUT_OPTIMIZATION("THROUGHPUT_OPTIMIZATION"),
     IOPS_OPTIMIZATION("IOPS_OPTIMIZATION"),
     STORAGE_TYPE_OPTIMIZATION("STORAGE_TYPE_OPTIMIZATION"),
-    MISCONFIGURED_STATE_RECOVERY("MISCONFIGURED_STATE_RECOVERY");
+    MISCONFIGURED_STATE_RECOVERY("MISCONFIGURED_STATE_RECOVERY"),
+    VOLUME_UPDATE_WITH_SNAPSHOT("VOLUME_UPDATE_WITH_SNAPSHOT"),
+    VOLUME_INITIALIZE_WITH_SNAPSHOT("VOLUME_INITIALIZE_WITH_SNAPSHOT");
 
     private String value;
 

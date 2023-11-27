@@ -58,6 +58,24 @@ public class GetEffectiveRecommendationPreferencesResultJsonUnmarshaller impleme
                     getEffectiveRecommendationPreferencesResult.setExternalMetricsPreference(ExternalMetricsPreferenceJsonUnmarshaller.getInstance()
                             .unmarshall(context));
                 }
+                if (context.testExpression("lookBackPeriod", targetDepth)) {
+                    context.nextToken();
+                    getEffectiveRecommendationPreferencesResult.setLookBackPeriod(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("utilizationPreferences", targetDepth)) {
+                    context.nextToken();
+                    getEffectiveRecommendationPreferencesResult.setUtilizationPreferences(new ListUnmarshaller<UtilizationPreference>(
+                            UtilizationPreferenceJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
+                if (context.testExpression("preferredResources", targetDepth)) {
+                    context.nextToken();
+                    getEffectiveRecommendationPreferencesResult.setPreferredResources(new ListUnmarshaller<EffectivePreferredResource>(
+                            EffectivePreferredResourceJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

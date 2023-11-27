@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * An AWS Region in which AWS Control Tower expects to find the control deployed.
+ * An Amazon Web Services Region in which Amazon Web Services Control Tower expects to find the control deployed.
  * </p>
  * <p>
  * The expected Regions are based on the Regions that are governed by the landing zone. In certain cases, a control is
@@ -36,18 +36,18 @@ public class Region implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS Region name.
+     * The Amazon Web Services Region name.
      * </p>
      */
     private String name;
 
     /**
      * <p>
-     * The AWS Region name.
+     * The Amazon Web Services Region name.
      * </p>
      * 
      * @param name
-     *        The AWS Region name.
+     *        The Amazon Web Services Region name.
      */
 
     public void setName(String name) {
@@ -56,10 +56,10 @@ public class Region implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS Region name.
+     * The Amazon Web Services Region name.
      * </p>
      * 
-     * @return The AWS Region name.
+     * @return The Amazon Web Services Region name.
      */
 
     public String getName() {
@@ -68,11 +68,11 @@ public class Region implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS Region name.
+     * The Amazon Web Services Region name.
      * </p>
      * 
      * @param name
-     *        The AWS Region name.
+     *        The Amazon Web Services Region name.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

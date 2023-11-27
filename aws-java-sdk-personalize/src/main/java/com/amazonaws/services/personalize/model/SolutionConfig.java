@@ -42,7 +42,7 @@ public class SolutionConfig implements Serializable, Cloneable, StructuredPojo {
     private HPOConfig hpoConfig;
     /**
      * <p>
-     * Lists the hyperparameter names and ranges.
+     * Lists the algorithm hyperparameters and their values.
      * </p>
      */
     private java.util.Map<String, String> algorithmHyperParameters;
@@ -157,10 +157,10 @@ public class SolutionConfig implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Lists the hyperparameter names and ranges.
+     * Lists the algorithm hyperparameters and their values.
      * </p>
      * 
-     * @return Lists the hyperparameter names and ranges.
+     * @return Lists the algorithm hyperparameters and their values.
      */
 
     public java.util.Map<String, String> getAlgorithmHyperParameters() {
@@ -169,11 +169,11 @@ public class SolutionConfig implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Lists the hyperparameter names and ranges.
+     * Lists the algorithm hyperparameters and their values.
      * </p>
      * 
      * @param algorithmHyperParameters
-     *        Lists the hyperparameter names and ranges.
+     *        Lists the algorithm hyperparameters and their values.
      */
 
     public void setAlgorithmHyperParameters(java.util.Map<String, String> algorithmHyperParameters) {
@@ -182,11 +182,11 @@ public class SolutionConfig implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Lists the hyperparameter names and ranges.
+     * Lists the algorithm hyperparameters and their values.
      * </p>
      * 
      * @param algorithmHyperParameters
-     *        Lists the hyperparameter names and ranges.
+     *        Lists the algorithm hyperparameters and their values.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

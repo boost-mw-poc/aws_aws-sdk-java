@@ -38,6 +38,16 @@ public class AbstractAWSAccessAnalyzer implements AWSAccessAnalyzer {
     }
 
     @Override
+    public CheckAccessNotGrantedResult checkAccessNotGranted(CheckAccessNotGrantedRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public CheckNoNewAccessResult checkNoNewAccess(CheckNoNewAccessRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateAccessPreviewResult createAccessPreview(CreateAccessPreviewRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -88,6 +98,11 @@ public class AbstractAWSAccessAnalyzer implements AWSAccessAnalyzer {
     }
 
     @Override
+    public GetFindingV2Result getFindingV2(GetFindingV2Request request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetGeneratedPolicyResult getGeneratedPolicy(GetGeneratedPolicyRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -119,6 +134,11 @@ public class AbstractAWSAccessAnalyzer implements AWSAccessAnalyzer {
 
     @Override
     public ListFindingsResult listFindings(ListFindingsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListFindingsV2Result listFindingsV2(ListFindingsV2Request request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

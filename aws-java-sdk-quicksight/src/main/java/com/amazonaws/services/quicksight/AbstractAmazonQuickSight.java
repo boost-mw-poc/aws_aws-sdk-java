@@ -203,6 +203,11 @@ public class AbstractAmazonQuickSight implements AmazonQuickSight {
     }
 
     @Override
+    public DeleteIdentityPropagationConfigResult deleteIdentityPropagationConfig(DeleteIdentityPropagationConfigRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DeleteNamespaceResult deleteNamespace(DeleteNamespaceRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -563,6 +568,11 @@ public class AbstractAmazonQuickSight implements AmazonQuickSight {
     }
 
     @Override
+    public ListIdentityPropagationConfigsResult listIdentityPropagationConfigs(ListIdentityPropagationConfigsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListIngestionsResult listIngestions(ListIngestionsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -784,6 +794,11 @@ public class AbstractAmazonQuickSight implements AmazonQuickSight {
 
     @Override
     public UpdateIAMPolicyAssignmentResult updateIAMPolicyAssignment(UpdateIAMPolicyAssignmentRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateIdentityPropagationConfigResult updateIdentityPropagationConfig(UpdateIdentityPropagationConfigRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

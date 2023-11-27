@@ -74,6 +74,10 @@ public class SlotValueElicitationSettingJsonUnmarshaller implements Unmarshaller
                     context.nextToken();
                     slotValueElicitationSetting.setSlotCaptureSetting(SlotCaptureSettingJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("slotResolutionSetting", targetDepth)) {
+                    context.nextToken();
+                    slotValueElicitationSetting.setSlotResolutionSetting(SlotResolutionSettingJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

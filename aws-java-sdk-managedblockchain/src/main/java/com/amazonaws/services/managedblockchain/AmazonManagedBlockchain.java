@@ -56,8 +56,8 @@ public interface AmazonManagedBlockchain {
 
     /**
      * <p>
-     * Creates a new accessor for use with Managed Blockchain Ethereum nodes. An accessor contains information required
-     * for token based access to your Ethereum nodes.
+     * Creates a new accessor for use with Amazon Managed Blockchain service that supports token based access. The
+     * accessor contains information required for token based access.
      * </p>
      * 
      * @param createAccessorRequest

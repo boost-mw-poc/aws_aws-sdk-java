@@ -271,6 +271,11 @@ public class AbstractAWSSecurityHub implements AWSSecurityHub {
     }
 
     @Override
+    public GetSecurityControlDefinitionResult getSecurityControlDefinition(GetSecurityControlDefinitionRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public InviteMembersResult inviteMembers(InviteMembersRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -352,6 +357,11 @@ public class AbstractAWSSecurityHub implements AWSSecurityHub {
 
     @Override
     public UpdateOrganizationConfigurationResult updateOrganizationConfiguration(UpdateOrganizationConfigurationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateSecurityControlResult updateSecurityControl(UpdateSecurityControlRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

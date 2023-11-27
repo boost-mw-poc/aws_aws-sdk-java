@@ -30,7 +30,7 @@ public class Destination implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Describes the status of the destination Amazon EFS file system.
+     * Describes the status of the destination EFS file system.
      * </p>
      * <ul>
      * <li>
@@ -78,7 +78,7 @@ public class Destination implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Describes the status of the destination Amazon EFS file system.
+     * Describes the status of the destination EFS file system.
      * </p>
      * <ul>
      * <li>
@@ -103,7 +103,7 @@ public class Destination implements Serializable, Cloneable, StructuredPojo {
      * </ul>
      * 
      * @param status
-     *        Describes the status of the destination Amazon EFS file system.</p>
+     *        Describes the status of the destination EFS file system.</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -133,7 +133,7 @@ public class Destination implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Describes the status of the destination Amazon EFS file system.
+     * Describes the status of the destination EFS file system.
      * </p>
      * <ul>
      * <li>
@@ -157,7 +157,7 @@ public class Destination implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * </ul>
      * 
-     * @return Describes the status of the destination Amazon EFS file system.</p>
+     * @return Describes the status of the destination EFS file system.</p>
      *         <ul>
      *         <li>
      *         <p>
@@ -187,7 +187,7 @@ public class Destination implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Describes the status of the destination Amazon EFS file system.
+     * Describes the status of the destination EFS file system.
      * </p>
      * <ul>
      * <li>
@@ -212,7 +212,7 @@ public class Destination implements Serializable, Cloneable, StructuredPojo {
      * </ul>
      * 
      * @param status
-     *        Describes the status of the destination Amazon EFS file system.</p>
+     *        Describes the status of the destination EFS file system.</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -244,7 +244,7 @@ public class Destination implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Describes the status of the destination Amazon EFS file system.
+     * Describes the status of the destination EFS file system.
      * </p>
      * <ul>
      * <li>
@@ -269,7 +269,7 @@ public class Destination implements Serializable, Cloneable, StructuredPojo {
      * </ul>
      * 
      * @param status
-     *        Describes the status of the destination Amazon EFS file system.</p>
+     *        Describes the status of the destination EFS file system.</p>
      *        <ul>
      *        <li>
      *        <p>

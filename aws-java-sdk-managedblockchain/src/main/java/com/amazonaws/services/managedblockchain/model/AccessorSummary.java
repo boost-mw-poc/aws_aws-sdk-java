@@ -65,6 +65,12 @@ public class AccessorSummary implements Serializable, Cloneable, StructuredPojo 
      * </p>
      */
     private String arn;
+    /**
+     * <p>
+     * The blockchain network that the Accessor token is created for.
+     * </p>
+     */
+    private String networkType;
 
     /**
      * <p>
@@ -349,6 +355,65 @@ public class AccessorSummary implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
+     * <p>
+     * The blockchain network that the Accessor token is created for.
+     * </p>
+     * 
+     * @param networkType
+     *        The blockchain network that the Accessor token is created for.
+     * @see AccessorNetworkType
+     */
+
+    public void setNetworkType(String networkType) {
+        this.networkType = networkType;
+    }
+
+    /**
+     * <p>
+     * The blockchain network that the Accessor token is created for.
+     * </p>
+     * 
+     * @return The blockchain network that the Accessor token is created for.
+     * @see AccessorNetworkType
+     */
+
+    public String getNetworkType() {
+        return this.networkType;
+    }
+
+    /**
+     * <p>
+     * The blockchain network that the Accessor token is created for.
+     * </p>
+     * 
+     * @param networkType
+     *        The blockchain network that the Accessor token is created for.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see AccessorNetworkType
+     */
+
+    public AccessorSummary withNetworkType(String networkType) {
+        setNetworkType(networkType);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The blockchain network that the Accessor token is created for.
+     * </p>
+     * 
+     * @param networkType
+     *        The blockchain network that the Accessor token is created for.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see AccessorNetworkType
+     */
+
+    public AccessorSummary withNetworkType(AccessorNetworkType networkType) {
+        this.networkType = networkType.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -369,7 +434,9 @@ public class AccessorSummary implements Serializable, Cloneable, StructuredPojo 
         if (getCreationDate() != null)
             sb.append("CreationDate: ").append(getCreationDate()).append(",");
         if (getArn() != null)
-            sb.append("Arn: ").append(getArn());
+            sb.append("Arn: ").append(getArn()).append(",");
+        if (getNetworkType() != null)
+            sb.append("NetworkType: ").append(getNetworkType());
         sb.append("}");
         return sb.toString();
     }
@@ -404,6 +471,10 @@ public class AccessorSummary implements Serializable, Cloneable, StructuredPojo 
             return false;
         if (other.getArn() != null && other.getArn().equals(this.getArn()) == false)
             return false;
+        if (other.getNetworkType() == null ^ this.getNetworkType() == null)
+            return false;
+        if (other.getNetworkType() != null && other.getNetworkType().equals(this.getNetworkType()) == false)
+            return false;
         return true;
     }
 
@@ -417,6 +488,7 @@ public class AccessorSummary implements Serializable, Cloneable, StructuredPojo 
         hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
         hashCode = prime * hashCode + ((getCreationDate() == null) ? 0 : getCreationDate().hashCode());
         hashCode = prime * hashCode + ((getArn() == null) ? 0 : getArn().hashCode());
+        hashCode = prime * hashCode + ((getNetworkType() == null) ? 0 : getNetworkType().hashCode());
         return hashCode;
     }
 

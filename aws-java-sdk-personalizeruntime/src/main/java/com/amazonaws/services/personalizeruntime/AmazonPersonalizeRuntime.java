@@ -41,6 +41,32 @@ public interface AmazonPersonalizeRuntime {
 
     /**
      * <p>
+     * Returns a list of recommended actions in sorted in descending order by prediction score. Use the
+     * <code>GetActionRecommendations</code> API if you have a custom campaign that deploys a solution version trained
+     * with a PERSONALIZED_ACTIONS recipe.
+     * </p>
+     * <p>
+     * For more information about PERSONALIZED_ACTIONS recipes, see <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/nexts-best-action-recipes.html">PERSONALIZED_ACTIONS
+     * recipes</a>. For more information about getting action recommendations, see <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/get-action-recommendations.html">Getting action
+     * recommendations</a>.
+     * </p>
+     * 
+     * @param getActionRecommendationsRequest
+     * @return Result of the GetActionRecommendations operation returned by the service.
+     * @throws InvalidInputException
+     *         Provide a valid value for the field or parameter.
+     * @throws ResourceNotFoundException
+     *         The specified resource does not exist.
+     * @sample AmazonPersonalizeRuntime.GetActionRecommendations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/personalize-runtime-2018-05-22/GetActionRecommendations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetActionRecommendationsResult getActionRecommendations(GetActionRecommendationsRequest getActionRecommendationsRequest);
+
+    /**
+     * <p>
      * Re-ranks a list of recommended items for the given user. The first item in the list is deemed the most likely
      * item to be of interest to the user.
      * </p>

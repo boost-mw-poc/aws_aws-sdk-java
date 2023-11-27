@@ -43,7 +43,11 @@ public enum ExportableECSServiceField {
     RecommendationOptionsContainerRecommendations("RecommendationOptionsContainerRecommendations"),
     RecommendationOptionsProjectedUtilizationMetricsCpuMaximum("RecommendationOptionsProjectedUtilizationMetricsCpuMaximum"),
     RecommendationOptionsProjectedUtilizationMetricsMemoryMaximum("RecommendationOptionsProjectedUtilizationMetricsMemoryMaximum"),
-    Tags("Tags");
+    Tags("Tags"),
+    EffectiveRecommendationPreferencesSavingsEstimationMode("EffectiveRecommendationPreferencesSavingsEstimationMode"),
+    RecommendationOptionsSavingsOpportunityAfterDiscountsPercentage("RecommendationOptionsSavingsOpportunityAfterDiscountsPercentage"),
+    RecommendationOptionsEstimatedMonthlySavingsCurrencyAfterDiscounts("RecommendationOptionsEstimatedMonthlySavingsCurrencyAfterDiscounts"),
+    RecommendationOptionsEstimatedMonthlySavingsValueAfterDiscounts("RecommendationOptionsEstimatedMonthlySavingsValueAfterDiscounts");
 
     private String value;
 

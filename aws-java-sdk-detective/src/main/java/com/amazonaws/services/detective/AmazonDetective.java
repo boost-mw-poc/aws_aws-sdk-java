@@ -551,6 +551,29 @@ public interface AmazonDetective {
 
     /**
      * <p>
+     * Returns the investigation results of an investigation for a behavior graph.
+     * </p>
+     * 
+     * @param getInvestigationRequest
+     * @return Result of the GetInvestigation operation returned by the service.
+     * @throws AccessDeniedException
+     *         The request issuer does not have permission to access this resource or perform this operation.
+     * @throws InternalServerException
+     *         The request was valid but failed because of a problem with the service.
+     * @throws ValidationException
+     *         The request parameters are invalid.
+     * @throws ResourceNotFoundException
+     *         The request refers to a nonexistent resource.
+     * @throws TooManyRequestsException
+     *         The request cannot be completed because too many other requests are occurring at the same time.
+     * @sample AmazonDetective.GetInvestigation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/detective-2018-10-26/GetInvestigation" target="_top">AWS API
+     *      Documentation</a>
+     */
+    GetInvestigationResult getInvestigation(GetInvestigationRequest getInvestigationRequest);
+
+    /**
+     * <p>
      * Returns the membership details for specified member accounts for a behavior graph.
      * </p>
      * 
@@ -614,6 +637,52 @@ public interface AmazonDetective {
      *      Documentation</a>
      */
     ListGraphsResult listGraphs(ListGraphsRequest listGraphsRequest);
+
+    /**
+     * <p>
+     * Get the indicators from an investigation
+     * </p>
+     * 
+     * @param listIndicatorsRequest
+     * @return Result of the ListIndicators operation returned by the service.
+     * @throws AccessDeniedException
+     *         The request issuer does not have permission to access this resource or perform this operation.
+     * @throws InternalServerException
+     *         The request was valid but failed because of a problem with the service.
+     * @throws ValidationException
+     *         The request parameters are invalid.
+     * @throws ResourceNotFoundException
+     *         The request refers to a nonexistent resource.
+     * @throws TooManyRequestsException
+     *         The request cannot be completed because too many other requests are occurring at the same time.
+     * @sample AmazonDetective.ListIndicators
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/detective-2018-10-26/ListIndicators" target="_top">AWS API
+     *      Documentation</a>
+     */
+    ListIndicatorsResult listIndicators(ListIndicatorsRequest listIndicatorsRequest);
+
+    /**
+     * <p>
+     * List all Investigations.
+     * </p>
+     * 
+     * @param listInvestigationsRequest
+     * @return Result of the ListInvestigations operation returned by the service.
+     * @throws AccessDeniedException
+     *         The request issuer does not have permission to access this resource or perform this operation.
+     * @throws InternalServerException
+     *         The request was valid but failed because of a problem with the service.
+     * @throws ValidationException
+     *         The request parameters are invalid.
+     * @throws ResourceNotFoundException
+     *         The request refers to a nonexistent resource.
+     * @throws TooManyRequestsException
+     *         The request cannot be completed because too many other requests are occurring at the same time.
+     * @sample AmazonDetective.ListInvestigations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/detective-2018-10-26/ListInvestigations" target="_top">AWS
+     *      API Documentation</a>
+     */
+    ListInvestigationsResult listInvestigations(ListInvestigationsRequest listInvestigationsRequest);
 
     /**
      * <p>
@@ -740,6 +809,29 @@ public interface AmazonDetective {
      *      Documentation</a>
      */
     RejectInvitationResult rejectInvitation(RejectInvitationRequest rejectInvitationRequest);
+
+    /**
+     * <p>
+     * initiate an investigation on an entity in a graph
+     * </p>
+     * 
+     * @param startInvestigationRequest
+     * @return Result of the StartInvestigation operation returned by the service.
+     * @throws AccessDeniedException
+     *         The request issuer does not have permission to access this resource or perform this operation.
+     * @throws InternalServerException
+     *         The request was valid but failed because of a problem with the service.
+     * @throws ValidationException
+     *         The request parameters are invalid.
+     * @throws TooManyRequestsException
+     *         The request cannot be completed because too many other requests are occurring at the same time.
+     * @throws ResourceNotFoundException
+     *         The request refers to a nonexistent resource.
+     * @sample AmazonDetective.StartInvestigation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/detective-2018-10-26/StartInvestigation" target="_top">AWS
+     *      API Documentation</a>
+     */
+    StartInvestigationResult startInvestigation(StartInvestigationRequest startInvestigationRequest);
 
     /**
      * <p>
@@ -882,6 +974,29 @@ public interface AmazonDetective {
      *      target="_top">AWS API Documentation</a>
      */
     UpdateDatasourcePackagesResult updateDatasourcePackages(UpdateDatasourcePackagesRequest updateDatasourcePackagesRequest);
+
+    /**
+     * <p>
+     * Update the state of an investigation.
+     * </p>
+     * 
+     * @param updateInvestigationStateRequest
+     * @return Result of the UpdateInvestigationState operation returned by the service.
+     * @throws AccessDeniedException
+     *         The request issuer does not have permission to access this resource or perform this operation.
+     * @throws InternalServerException
+     *         The request was valid but failed because of a problem with the service.
+     * @throws ValidationException
+     *         The request parameters are invalid.
+     * @throws ResourceNotFoundException
+     *         The request refers to a nonexistent resource.
+     * @throws TooManyRequestsException
+     *         The request cannot be completed because too many other requests are occurring at the same time.
+     * @sample AmazonDetective.UpdateInvestigationState
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/detective-2018-10-26/UpdateInvestigationState"
+     *      target="_top">AWS API Documentation</a>
+     */
+    UpdateInvestigationStateResult updateInvestigationState(UpdateInvestigationStateRequest updateInvestigationStateRequest);
 
     /**
      * <p>

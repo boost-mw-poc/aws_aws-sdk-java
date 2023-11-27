@@ -267,8 +267,9 @@ public interface AWSCloudTrailAsync extends AWSCloudTrail {
      * Disables the event data store specified by <code>EventDataStore</code>, which accepts an event data store ARN.
      * After you run <code>DeleteEventDataStore</code>, the event data store enters a <code>PENDING_DELETION</code>
      * state, and is automatically deleted after a wait period of seven days. <code>TerminationProtectionEnabled</code>
-     * must be set to <code>False</code> on the event data store; this operation cannot work if
-     * <code>TerminationProtectionEnabled</code> is <code>True</code>.
+     * must be set to <code>False</code> on the event data store and the <code>FederationStatus</code> must be
+     * <code>DISABLED</code>. You cannot delete an event data store if <code>TerminationProtectionEnabled</code> is
+     * <code>True</code> or the <code>FederationStatus</code> is <code>ENABLED</code>.
      * </p>
      * <p>
      * After you run <code>DeleteEventDataStore</code> on an event data store, you cannot run <code>ListQueries</code>,
@@ -290,8 +291,9 @@ public interface AWSCloudTrailAsync extends AWSCloudTrail {
      * Disables the event data store specified by <code>EventDataStore</code>, which accepts an event data store ARN.
      * After you run <code>DeleteEventDataStore</code>, the event data store enters a <code>PENDING_DELETION</code>
      * state, and is automatically deleted after a wait period of seven days. <code>TerminationProtectionEnabled</code>
-     * must be set to <code>False</code> on the event data store; this operation cannot work if
-     * <code>TerminationProtectionEnabled</code> is <code>True</code>.
+     * must be set to <code>False</code> on the event data store and the <code>FederationStatus</code> must be
+     * <code>DISABLED</code>. You cannot delete an event data store if <code>TerminationProtectionEnabled</code> is
+     * <code>True</code> or the <code>FederationStatus</code> is <code>ENABLED</code>.
      * </p>
      * <p>
      * After you run <code>DeleteEventDataStore</code> on an event data store, you cannot run <code>ListQueries</code>,
@@ -510,6 +512,106 @@ public interface AWSCloudTrailAsync extends AWSCloudTrail {
      */
     java.util.concurrent.Future<DescribeTrailsResult> describeTrailsAsync(
             com.amazonaws.handlers.AsyncHandler<DescribeTrailsRequest, DescribeTrailsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Disables Lake query federation on the specified event data store. When you disable federation, CloudTrail removes
+     * the metadata associated with the federated event data store in the Glue Data Catalog and removes registration for
+     * the federation role ARN and event data store in Lake Formation. No CloudTrail Lake data is deleted when you
+     * disable federation.
+     * </p>
+     * 
+     * @param disableFederationRequest
+     * @return A Java Future containing the result of the DisableFederation operation returned by the service.
+     * @sample AWSCloudTrailAsync.DisableFederation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/DisableFederation" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DisableFederationResult> disableFederationAsync(DisableFederationRequest disableFederationRequest);
+
+    /**
+     * <p>
+     * Disables Lake query federation on the specified event data store. When you disable federation, CloudTrail removes
+     * the metadata associated with the federated event data store in the Glue Data Catalog and removes registration for
+     * the federation role ARN and event data store in Lake Formation. No CloudTrail Lake data is deleted when you
+     * disable federation.
+     * </p>
+     * 
+     * @param disableFederationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DisableFederation operation returned by the service.
+     * @sample AWSCloudTrailAsyncHandler.DisableFederation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/DisableFederation" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DisableFederationResult> disableFederationAsync(DisableFederationRequest disableFederationRequest,
+            com.amazonaws.handlers.AsyncHandler<DisableFederationRequest, DisableFederationResult> asyncHandler);
+
+    /**
+     * <p>
+     * Enables Lake query federation on the specified event data store. Federating an event data store lets you view the
+     * metadata associated with the event data store in the Glue <a
+     * href="https://docs.aws.amazon.com/glue/latest/dg/components-overview.html#data-catalog-intro">Data Catalog</a>
+     * and run SQL queries against your event data using Amazon Athena. The table metadata stored in the Glue Data
+     * Catalog lets the Athena query engine know how to find, read, and process the data that you want to query.
+     * </p>
+     * <p>
+     * When you enable Lake query federation, CloudTrail creates a federated database named <code>aws:cloudtrail</code>
+     * (if the database doesn't already exist) and a federated table in the Glue Data Catalog. The event data store ID
+     * is used for the table name. CloudTrail registers the role ARN and event data store in <a
+     * href="https://docs.aws.amazon.com/lake-formation/latest/dg/how-it-works.html">Lake Formation</a>, the service
+     * responsible for revoking or granting permissions to the federated resources in the Glue Data Catalog.
+     * </p>
+     * <p>
+     * For more information about Lake query federation, see <a
+     * href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/query-federation.html">Federate an event data
+     * store</a>.
+     * </p>
+     * 
+     * @param enableFederationRequest
+     * @return A Java Future containing the result of the EnableFederation operation returned by the service.
+     * @sample AWSCloudTrailAsync.EnableFederation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/EnableFederation" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<EnableFederationResult> enableFederationAsync(EnableFederationRequest enableFederationRequest);
+
+    /**
+     * <p>
+     * Enables Lake query federation on the specified event data store. Federating an event data store lets you view the
+     * metadata associated with the event data store in the Glue <a
+     * href="https://docs.aws.amazon.com/glue/latest/dg/components-overview.html#data-catalog-intro">Data Catalog</a>
+     * and run SQL queries against your event data using Amazon Athena. The table metadata stored in the Glue Data
+     * Catalog lets the Athena query engine know how to find, read, and process the data that you want to query.
+     * </p>
+     * <p>
+     * When you enable Lake query federation, CloudTrail creates a federated database named <code>aws:cloudtrail</code>
+     * (if the database doesn't already exist) and a federated table in the Glue Data Catalog. The event data store ID
+     * is used for the table name. CloudTrail registers the role ARN and event data store in <a
+     * href="https://docs.aws.amazon.com/lake-formation/latest/dg/how-it-works.html">Lake Formation</a>, the service
+     * responsible for revoking or granting permissions to the federated resources in the Glue Data Catalog.
+     * </p>
+     * <p>
+     * For more information about Lake query federation, see <a
+     * href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/query-federation.html">Federate an event data
+     * store</a>.
+     * </p>
+     * 
+     * @param enableFederationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the EnableFederation operation returned by the service.
+     * @sample AWSCloudTrailAsyncHandler.EnableFederation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/EnableFederation" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<EnableFederationResult> enableFederationAsync(EnableFederationRequest enableFederationRequest,
+            com.amazonaws.handlers.AsyncHandler<EnableFederationRequest, EnableFederationResult> asyncHandler);
 
     /**
      * <p>

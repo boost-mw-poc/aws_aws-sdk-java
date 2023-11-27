@@ -35,7 +35,8 @@ public class RedriveExecutionRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * A unique, case-sensitive identifier that you provide to ensure the idempotency of the request. If you don’t
      * specify a client token, the Amazon Web Services SDK automatically generates a client token and uses it for the
-     * request to ensure idempotency. The API uses one of the last 10 client tokens provided.
+     * request to ensure idempotency. The API will return idempotent responses for the last 10 client tokens used to
+     * successfully redrive the execution. These client tokens are valid for up to 15 minutes after they are first used.
      * </p>
      */
     private String clientToken;
@@ -84,13 +85,16 @@ public class RedriveExecutionRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * A unique, case-sensitive identifier that you provide to ensure the idempotency of the request. If you don’t
      * specify a client token, the Amazon Web Services SDK automatically generates a client token and uses it for the
-     * request to ensure idempotency. The API uses one of the last 10 client tokens provided.
+     * request to ensure idempotency. The API will return idempotent responses for the last 10 client tokens used to
+     * successfully redrive the execution. These client tokens are valid for up to 15 minutes after they are first used.
      * </p>
      * 
      * @param clientToken
      *        A unique, case-sensitive identifier that you provide to ensure the idempotency of the request. If you
      *        don’t specify a client token, the Amazon Web Services SDK automatically generates a client token and uses
-     *        it for the request to ensure idempotency. The API uses one of the last 10 client tokens provided.
+     *        it for the request to ensure idempotency. The API will return idempotent responses for the last 10 client
+     *        tokens used to successfully redrive the execution. These client tokens are valid for up to 15 minutes
+     *        after they are first used.
      */
 
     public void setClientToken(String clientToken) {
@@ -101,12 +105,15 @@ public class RedriveExecutionRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * A unique, case-sensitive identifier that you provide to ensure the idempotency of the request. If you don’t
      * specify a client token, the Amazon Web Services SDK automatically generates a client token and uses it for the
-     * request to ensure idempotency. The API uses one of the last 10 client tokens provided.
+     * request to ensure idempotency. The API will return idempotent responses for the last 10 client tokens used to
+     * successfully redrive the execution. These client tokens are valid for up to 15 minutes after they are first used.
      * </p>
      * 
      * @return A unique, case-sensitive identifier that you provide to ensure the idempotency of the request. If you
      *         don’t specify a client token, the Amazon Web Services SDK automatically generates a client token and uses
-     *         it for the request to ensure idempotency. The API uses one of the last 10 client tokens provided.
+     *         it for the request to ensure idempotency. The API will return idempotent responses for the last 10 client
+     *         tokens used to successfully redrive the execution. These client tokens are valid for up to 15 minutes
+     *         after they are first used.
      */
 
     public String getClientToken() {
@@ -117,13 +124,16 @@ public class RedriveExecutionRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * A unique, case-sensitive identifier that you provide to ensure the idempotency of the request. If you don’t
      * specify a client token, the Amazon Web Services SDK automatically generates a client token and uses it for the
-     * request to ensure idempotency. The API uses one of the last 10 client tokens provided.
+     * request to ensure idempotency. The API will return idempotent responses for the last 10 client tokens used to
+     * successfully redrive the execution. These client tokens are valid for up to 15 minutes after they are first used.
      * </p>
      * 
      * @param clientToken
      *        A unique, case-sensitive identifier that you provide to ensure the idempotency of the request. If you
      *        don’t specify a client token, the Amazon Web Services SDK automatically generates a client token and uses
-     *        it for the request to ensure idempotency. The API uses one of the last 10 client tokens provided.
+     *        it for the request to ensure idempotency. The API will return idempotent responses for the last 10 client
+     *        tokens used to successfully redrive the execution. These client tokens are valid for up to 15 minutes
+     *        after they are first used.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

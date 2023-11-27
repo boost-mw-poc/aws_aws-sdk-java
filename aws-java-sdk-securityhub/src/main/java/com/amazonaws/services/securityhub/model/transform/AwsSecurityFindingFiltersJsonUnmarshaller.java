@@ -637,6 +637,32 @@ public class AwsSecurityFindingFiltersJsonUnmarshaller implements Unmarshaller<A
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("VulnerabilitiesExploitAvailable", targetDepth)) {
+                    context.nextToken();
+                    awsSecurityFindingFilters.setVulnerabilitiesExploitAvailable(new ListUnmarshaller<StringFilter>(StringFilterJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
+                if (context.testExpression("VulnerabilitiesFixAvailable", targetDepth)) {
+                    context.nextToken();
+                    awsSecurityFindingFilters.setVulnerabilitiesFixAvailable(new ListUnmarshaller<StringFilter>(StringFilterJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
+                if (context.testExpression("ComplianceSecurityControlParametersName", targetDepth)) {
+                    context.nextToken();
+                    awsSecurityFindingFilters.setComplianceSecurityControlParametersName(new ListUnmarshaller<StringFilter>(StringFilterJsonUnmarshaller
+                            .getInstance())
+
+                    .unmarshall(context));
+                }
+                if (context.testExpression("ComplianceSecurityControlParametersValue", targetDepth)) {
+                    context.nextToken();
+                    awsSecurityFindingFilters.setComplianceSecurityControlParametersValue(new ListUnmarshaller<StringFilter>(StringFilterJsonUnmarshaller
+                            .getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

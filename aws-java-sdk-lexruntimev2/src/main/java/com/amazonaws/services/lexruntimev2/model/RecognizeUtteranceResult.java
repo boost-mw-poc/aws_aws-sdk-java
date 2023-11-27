@@ -25,7 +25,7 @@ public class RecognizeUtteranceResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * Indicates whether the input mode to the operation was text or speech.
+     * Indicates whether the input mode to the operation was text, speech, or from a touch-tone keypad.
      * </p>
      */
     private String inputMode;
@@ -128,11 +128,11 @@ public class RecognizeUtteranceResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * Indicates whether the input mode to the operation was text or speech.
+     * Indicates whether the input mode to the operation was text, speech, or from a touch-tone keypad.
      * </p>
      * 
      * @param inputMode
-     *        Indicates whether the input mode to the operation was text or speech.
+     *        Indicates whether the input mode to the operation was text, speech, or from a touch-tone keypad.
      */
 
     public void setInputMode(String inputMode) {
@@ -141,10 +141,10 @@ public class RecognizeUtteranceResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * Indicates whether the input mode to the operation was text or speech.
+     * Indicates whether the input mode to the operation was text, speech, or from a touch-tone keypad.
      * </p>
      * 
-     * @return Indicates whether the input mode to the operation was text or speech.
+     * @return Indicates whether the input mode to the operation was text, speech, or from a touch-tone keypad.
      */
 
     public String getInputMode() {
@@ -153,11 +153,11 @@ public class RecognizeUtteranceResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * Indicates whether the input mode to the operation was text or speech.
+     * Indicates whether the input mode to the operation was text, speech, or from a touch-tone keypad.
      * </p>
      * 
      * @param inputMode
-     *        Indicates whether the input mode to the operation was text or speech.
+     *        Indicates whether the input mode to the operation was text, speech, or from a touch-tone keypad.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

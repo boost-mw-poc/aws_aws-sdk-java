@@ -1386,6 +1386,49 @@ public interface AmazonQuickSightAsync extends AmazonQuickSight {
 
     /**
      * <p>
+     * Deletes all access scopes and authorized targets that are associated with a service from the Amazon QuickSight
+     * IAM Identity Center application.
+     * </p>
+     * <p>
+     * This operation is only supported for Amazon QuickSight accounts that use IAM Identity Center.
+     * </p>
+     * 
+     * @param deleteIdentityPropagationConfigRequest
+     * @return A Java Future containing the result of the DeleteIdentityPropagationConfig operation returned by the
+     *         service.
+     * @sample AmazonQuickSightAsync.DeleteIdentityPropagationConfig
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/DeleteIdentityPropagationConfig"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteIdentityPropagationConfigResult> deleteIdentityPropagationConfigAsync(
+            DeleteIdentityPropagationConfigRequest deleteIdentityPropagationConfigRequest);
+
+    /**
+     * <p>
+     * Deletes all access scopes and authorized targets that are associated with a service from the Amazon QuickSight
+     * IAM Identity Center application.
+     * </p>
+     * <p>
+     * This operation is only supported for Amazon QuickSight accounts that use IAM Identity Center.
+     * </p>
+     * 
+     * @param deleteIdentityPropagationConfigRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteIdentityPropagationConfig operation returned by the
+     *         service.
+     * @sample AmazonQuickSightAsyncHandler.DeleteIdentityPropagationConfig
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/DeleteIdentityPropagationConfig"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteIdentityPropagationConfigResult> deleteIdentityPropagationConfigAsync(
+            DeleteIdentityPropagationConfigRequest deleteIdentityPropagationConfigRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteIdentityPropagationConfigRequest, DeleteIdentityPropagationConfigResult> asyncHandler);
+
+    /**
+     * <p>
      * Deletes a namespace and the users and groups that are associated with the namespace. This is an asynchronous
      * process. Assets including dashboards, analyses, datasets and data sources are not deleted. To delete these
      * assets, you use the API operations for the relevant asset.
@@ -4264,6 +4307,47 @@ public interface AmazonQuickSightAsync extends AmazonQuickSight {
 
     /**
      * <p>
+     * Lists all services and authorized targets that the Amazon QuickSight IAM Identity Center application can access.
+     * </p>
+     * <p>
+     * This operation is only supported for Amazon QuickSight accounts that use IAM Identity Center.
+     * </p>
+     * 
+     * @param listIdentityPropagationConfigsRequest
+     * @return A Java Future containing the result of the ListIdentityPropagationConfigs operation returned by the
+     *         service.
+     * @sample AmazonQuickSightAsync.ListIdentityPropagationConfigs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/ListIdentityPropagationConfigs"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListIdentityPropagationConfigsResult> listIdentityPropagationConfigsAsync(
+            ListIdentityPropagationConfigsRequest listIdentityPropagationConfigsRequest);
+
+    /**
+     * <p>
+     * Lists all services and authorized targets that the Amazon QuickSight IAM Identity Center application can access.
+     * </p>
+     * <p>
+     * This operation is only supported for Amazon QuickSight accounts that use IAM Identity Center.
+     * </p>
+     * 
+     * @param listIdentityPropagationConfigsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListIdentityPropagationConfigs operation returned by the
+     *         service.
+     * @sample AmazonQuickSightAsyncHandler.ListIdentityPropagationConfigs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/ListIdentityPropagationConfigs"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListIdentityPropagationConfigsResult> listIdentityPropagationConfigsAsync(
+            ListIdentityPropagationConfigsRequest listIdentityPropagationConfigsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListIdentityPropagationConfigsRequest, ListIdentityPropagationConfigsResult> asyncHandler);
+
+    /**
+     * <p>
      * Lists the history of SPICE ingestions for a dataset.
      * </p>
      * 
@@ -5910,6 +5994,49 @@ public interface AmazonQuickSightAsync extends AmazonQuickSight {
     java.util.concurrent.Future<UpdateIAMPolicyAssignmentResult> updateIAMPolicyAssignmentAsync(
             UpdateIAMPolicyAssignmentRequest updateIAMPolicyAssignmentRequest,
             com.amazonaws.handlers.AsyncHandler<UpdateIAMPolicyAssignmentRequest, UpdateIAMPolicyAssignmentResult> asyncHandler);
+
+    /**
+     * <p>
+     * Adds or updates services and authorized targets to configure what the Amazon QuickSight IAM Identity Center
+     * application can access.
+     * </p>
+     * <p>
+     * This operation is only supported for Amazon QuickSight accounts using IAM Identity Center
+     * </p>
+     * 
+     * @param updateIdentityPropagationConfigRequest
+     * @return A Java Future containing the result of the UpdateIdentityPropagationConfig operation returned by the
+     *         service.
+     * @sample AmazonQuickSightAsync.UpdateIdentityPropagationConfig
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/UpdateIdentityPropagationConfig"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateIdentityPropagationConfigResult> updateIdentityPropagationConfigAsync(
+            UpdateIdentityPropagationConfigRequest updateIdentityPropagationConfigRequest);
+
+    /**
+     * <p>
+     * Adds or updates services and authorized targets to configure what the Amazon QuickSight IAM Identity Center
+     * application can access.
+     * </p>
+     * <p>
+     * This operation is only supported for Amazon QuickSight accounts using IAM Identity Center
+     * </p>
+     * 
+     * @param updateIdentityPropagationConfigRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateIdentityPropagationConfig operation returned by the
+     *         service.
+     * @sample AmazonQuickSightAsyncHandler.UpdateIdentityPropagationConfig
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/UpdateIdentityPropagationConfig"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateIdentityPropagationConfigResult> updateIdentityPropagationConfigAsync(
+            UpdateIdentityPropagationConfigRequest updateIdentityPropagationConfigRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateIdentityPropagationConfigRequest, UpdateIdentityPropagationConfigResult> asyncHandler);
 
     /**
      * <p>

@@ -12,6 +12,8 @@
  */
 package com.amazonaws.services.securityhub.model.transform;
 
+import java.util.Map;
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -39,6 +41,10 @@ public class SecurityControlDefinitionMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SeverityRating").build();
     private static final MarshallingInfo<String> CURRENTREGIONAVAILABILITY_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CurrentRegionAvailability").build();
+    private static final MarshallingInfo<List> CUSTOMIZABLEPROPERTIES_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CustomizableProperties").build();
+    private static final MarshallingInfo<Map> PARAMETERDEFINITIONS_BINDING = MarshallingInfo.builder(MarshallingType.MAP)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ParameterDefinitions").build();
 
     private static final SecurityControlDefinitionMarshaller instance = new SecurityControlDefinitionMarshaller();
 
@@ -62,6 +68,8 @@ public class SecurityControlDefinitionMarshaller {
             protocolMarshaller.marshall(securityControlDefinition.getRemediationUrl(), REMEDIATIONURL_BINDING);
             protocolMarshaller.marshall(securityControlDefinition.getSeverityRating(), SEVERITYRATING_BINDING);
             protocolMarshaller.marshall(securityControlDefinition.getCurrentRegionAvailability(), CURRENTREGIONAVAILABILITY_BINDING);
+            protocolMarshaller.marshall(securityControlDefinition.getCustomizableProperties(), CUSTOMIZABLEPROPERTIES_BINDING);
+            protocolMarshaller.marshall(securityControlDefinition.getParameterDefinitions(), PARAMETERDEFINITIONS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

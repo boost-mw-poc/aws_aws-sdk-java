@@ -100,6 +100,10 @@ public class ListenerStaxUnmarshaller implements Unmarshaller<Listener, StaxUnma
                     continue;
                 }
 
+                if (context.testExpression("MutualAuthentication", targetDepth)) {
+                    listener.setMutualAuthentication(MutualAuthenticationAttributesStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return listener;

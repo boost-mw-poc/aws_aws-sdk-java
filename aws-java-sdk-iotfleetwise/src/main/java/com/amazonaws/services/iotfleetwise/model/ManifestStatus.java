@@ -21,7 +21,9 @@ import javax.annotation.Generated;
 public enum ManifestStatus {
 
     ACTIVE("ACTIVE"),
-    DRAFT("DRAFT");
+    DRAFT("DRAFT"),
+    INVALID("INVALID"),
+    VALIDATING("VALIDATING");
 
     private String value;
 

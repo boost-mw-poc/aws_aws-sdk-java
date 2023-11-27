@@ -193,6 +193,11 @@ public class AbstractAWSStepFunctions implements AWSStepFunctions {
     }
 
     @Override
+    public TestStateResult testState(TestStateRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public UntagResourceResult untagResource(UntagResourceRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

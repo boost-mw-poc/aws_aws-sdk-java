@@ -444,6 +444,26 @@ public class AmazonEKSClient extends AmazonWebServiceClient implements AmazonEKS
      * Kubernetes API server endpoint and a certificate file that is created for your cluster.
      * </p>
      * <p>
+     * You can use the <code>endpointPublicAccess</code> and <code>endpointPrivateAccess</code> parameters to enable or
+     * disable public and private access to your cluster's Kubernetes API server endpoint. By default, public access is
+     * enabled, and private access is disabled. For more information, see <a
+     * href="https://docs.aws.amazon.com/eks/latest/userguide/cluster-endpoint.html">Amazon EKS Cluster Endpoint Access
+     * Control</a> in the <i> <i>Amazon EKS User Guide</i> </i>.
+     * </p>
+     * <p>
+     * You can use the <code>logging</code> parameter to enable or disable exporting the Kubernetes control plane logs
+     * for your cluster to CloudWatch Logs. By default, cluster control plane logs aren't exported to CloudWatch Logs.
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/eks/latest/userguide/control-plane-logs.html">Amazon EKS Cluster Control Plane
+     * Logs</a> in the <i> <i>Amazon EKS User Guide</i> </i>.
+     * </p>
+     * <note>
+     * <p>
+     * CloudWatch Logs ingestion, archive storage, and data scanning rates apply to exported control plane logs. For
+     * more information, see <a href="http://aws.amazon.com/cloudwatch/pricing/">CloudWatch Pricing</a>.
+     * </p>
+     * </note>
+     * <p>
      * In most cases, it takes several minutes to create a cluster. After you create an Amazon EKS cluster, you must
      * configure your Kubernetes tooling to communicate with the API server and launch nodes into your cluster. For more
      * information, see <a href="https://docs.aws.amazon.com/eks/latest/userguide/managing-auth.html">Managing Cluster
@@ -786,6 +806,93 @@ public class AmazonEKSClient extends AmazonWebServiceClient implements AmazonEKS
 
     /**
      * <p>
+     * Creates an EKS Pod Identity association between a service account in an Amazon EKS cluster and an IAM role with
+     * <i>EKS Pod Identity</i>. Use EKS Pod Identity to give temporary IAM credentials to pods and the credentials are
+     * rotated automatically.
+     * </p>
+     * <p>
+     * Amazon EKS Pod Identity associations provide the ability to manage credentials for your applications, similar to
+     * the way that 7EC2l instance profiles provide credentials to Amazon EC2 instances.
+     * </p>
+     * <p>
+     * If a pod uses a service account that has an association, Amazon EKS sets environment variables in the containers
+     * of the pod. The environment variables configure the Amazon Web Services SDKs, including the Command Line
+     * Interface, to use the EKS Pod Identity credentials.
+     * </p>
+     * <p>
+     * Pod Identity is a simpler method than <i>IAM roles for service accounts</i>, as this method doesn't use OIDC
+     * identity providers. Additionally, you can configure a role for Pod Identity once, and reuse it across clusters.
+     * </p>
+     * 
+     * @param createPodIdentityAssociationRequest
+     * @return Result of the CreatePodIdentityAssociation operation returned by the service.
+     * @throws ServerException
+     *         These errors are usually caused by a server-side issue.
+     * @throws ResourceNotFoundException
+     *         The specified resource could not be found. You can view your available clusters with <a>ListClusters</a>.
+     *         You can view your available managed node groups with <a>ListNodegroups</a>. Amazon EKS clusters and node
+     *         groups are Region-specific.
+     * @throws InvalidRequestException
+     *         The request is invalid given the state of the cluster. Check the state of the cluster and the associated
+     *         operations.
+     * @throws InvalidParameterException
+     *         The specified parameter is invalid. Review the available parameters for the API request.
+     * @throws ResourceLimitExceededException
+     *         You have encountered a service limit on the specified resource.
+     * @throws ResourceInUseException
+     *         The specified resource is in use.
+     * @sample AmazonEKS.CreatePodIdentityAssociation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/eks-2017-11-01/CreatePodIdentityAssociation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public CreatePodIdentityAssociationResult createPodIdentityAssociation(CreatePodIdentityAssociationRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreatePodIdentityAssociation(request);
+    }
+
+    @SdkInternalApi
+    final CreatePodIdentityAssociationResult executeCreatePodIdentityAssociation(CreatePodIdentityAssociationRequest createPodIdentityAssociationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createPodIdentityAssociationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreatePodIdentityAssociationRequest> request = null;
+        Response<CreatePodIdentityAssociationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreatePodIdentityAssociationRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(createPodIdentityAssociationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EKS");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreatePodIdentityAssociation");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<CreatePodIdentityAssociationResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new CreatePodIdentityAssociationResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Delete an Amazon EKS add-on.
      * </p>
      * <p>
@@ -944,9 +1051,9 @@ public class AmazonEKSClient extends AmazonWebServiceClient implements AmazonEKS
 
     /**
      * <p>
-     * Deletes an expired / inactive subscription. Deleting inactive subscriptions removes them from the Amazon Web
+     * Deletes an expired or inactive subscription. Deleting inactive subscriptions removes them from the Amazon Web
      * Services Management Console view and from list/describe API responses. Subscriptions can only be cancelled within
-     * 7 days of creation, and are cancelled by creating a ticket in the Amazon Web Services Support Center.
+     * 7 days of creation and are cancelled by creating a ticket in the Amazon Web Services Support Center.
      * </p>
      * 
      * @param deleteEksAnywhereSubscriptionRequest
@@ -1157,6 +1264,79 @@ public class AmazonEKSClient extends AmazonWebServiceClient implements AmazonEKS
 
             HttpResponseHandler<AmazonWebServiceResponse<DeleteNodegroupResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DeleteNodegroupResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Deletes a EKS Pod Identity association.
+     * </p>
+     * <p>
+     * The temporary Amazon Web Services credentials from the previous IAM role session might still be valid until the
+     * session expiry. If you need to immediately revoke the temporary session credentials, then go to the role in the
+     * IAM console.
+     * </p>
+     * 
+     * @param deletePodIdentityAssociationRequest
+     * @return Result of the DeletePodIdentityAssociation operation returned by the service.
+     * @throws ServerException
+     *         These errors are usually caused by a server-side issue.
+     * @throws ResourceNotFoundException
+     *         The specified resource could not be found. You can view your available clusters with <a>ListClusters</a>.
+     *         You can view your available managed node groups with <a>ListNodegroups</a>. Amazon EKS clusters and node
+     *         groups are Region-specific.
+     * @throws InvalidRequestException
+     *         The request is invalid given the state of the cluster. Check the state of the cluster and the associated
+     *         operations.
+     * @throws InvalidParameterException
+     *         The specified parameter is invalid. Review the available parameters for the API request.
+     * @sample AmazonEKS.DeletePodIdentityAssociation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/eks-2017-11-01/DeletePodIdentityAssociation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DeletePodIdentityAssociationResult deletePodIdentityAssociation(DeletePodIdentityAssociationRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeletePodIdentityAssociation(request);
+    }
+
+    @SdkInternalApi
+    final DeletePodIdentityAssociationResult executeDeletePodIdentityAssociation(DeletePodIdentityAssociationRequest deletePodIdentityAssociationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deletePodIdentityAssociationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeletePodIdentityAssociationRequest> request = null;
+        Response<DeletePodIdentityAssociationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeletePodIdentityAssociationRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(deletePodIdentityAssociationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EKS");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeletePodIdentityAssociation");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeletePodIdentityAssociationResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new DeletePodIdentityAssociationResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -1816,6 +1996,79 @@ public class AmazonEKSClient extends AmazonWebServiceClient implements AmazonEKS
 
     /**
      * <p>
+     * Returns descriptive information about an EKS Pod Identity association.
+     * </p>
+     * <p>
+     * This action requires the ID of the association. You can get the ID from the response to the
+     * <code>CreatePodIdentityAssocation</code> for newly created associations. Or, you can list the IDs for
+     * associations with <code>ListPodIdentityAssociations</code> and filter the list by namespace or service account.
+     * </p>
+     * 
+     * @param describePodIdentityAssociationRequest
+     * @return Result of the DescribePodIdentityAssociation operation returned by the service.
+     * @throws ServerException
+     *         These errors are usually caused by a server-side issue.
+     * @throws ResourceNotFoundException
+     *         The specified resource could not be found. You can view your available clusters with <a>ListClusters</a>.
+     *         You can view your available managed node groups with <a>ListNodegroups</a>. Amazon EKS clusters and node
+     *         groups are Region-specific.
+     * @throws InvalidRequestException
+     *         The request is invalid given the state of the cluster. Check the state of the cluster and the associated
+     *         operations.
+     * @throws InvalidParameterException
+     *         The specified parameter is invalid. Review the available parameters for the API request.
+     * @sample AmazonEKS.DescribePodIdentityAssociation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/eks-2017-11-01/DescribePodIdentityAssociation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DescribePodIdentityAssociationResult describePodIdentityAssociation(DescribePodIdentityAssociationRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribePodIdentityAssociation(request);
+    }
+
+    @SdkInternalApi
+    final DescribePodIdentityAssociationResult executeDescribePodIdentityAssociation(DescribePodIdentityAssociationRequest describePodIdentityAssociationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describePodIdentityAssociationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribePodIdentityAssociationRequest> request = null;
+        Response<DescribePodIdentityAssociationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribePodIdentityAssociationRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(describePodIdentityAssociationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EKS");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribePodIdentityAssociation");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DescribePodIdentityAssociationResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new DescribePodIdentityAssociationResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Returns descriptive information about an update against your Amazon EKS cluster or associated managed node group
      * or Amazon EKS add-on.
      * </p>
@@ -2393,6 +2646,75 @@ public class AmazonEKSClient extends AmazonWebServiceClient implements AmazonEKS
 
     /**
      * <p>
+     * List the EKS Pod Identity associations in a cluster. You can filter the list by the namespace that the
+     * association is in or the service account that the association uses.
+     * </p>
+     * 
+     * @param listPodIdentityAssociationsRequest
+     * @return Result of the ListPodIdentityAssociations operation returned by the service.
+     * @throws ServerException
+     *         These errors are usually caused by a server-side issue.
+     * @throws ResourceNotFoundException
+     *         The specified resource could not be found. You can view your available clusters with <a>ListClusters</a>.
+     *         You can view your available managed node groups with <a>ListNodegroups</a>. Amazon EKS clusters and node
+     *         groups are Region-specific.
+     * @throws InvalidRequestException
+     *         The request is invalid given the state of the cluster. Check the state of the cluster and the associated
+     *         operations.
+     * @throws InvalidParameterException
+     *         The specified parameter is invalid. Review the available parameters for the API request.
+     * @sample AmazonEKS.ListPodIdentityAssociations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/eks-2017-11-01/ListPodIdentityAssociations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListPodIdentityAssociationsResult listPodIdentityAssociations(ListPodIdentityAssociationsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListPodIdentityAssociations(request);
+    }
+
+    @SdkInternalApi
+    final ListPodIdentityAssociationsResult executeListPodIdentityAssociations(ListPodIdentityAssociationsRequest listPodIdentityAssociationsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listPodIdentityAssociationsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListPodIdentityAssociationsRequest> request = null;
+        Response<ListPodIdentityAssociationsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListPodIdentityAssociationsRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(listPodIdentityAssociationsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EKS");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListPodIdentityAssociations");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListPodIdentityAssociationsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new ListPodIdentityAssociationsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * List the tags for an Amazon EKS resource.
      * </p>
      * 
@@ -2845,11 +3167,14 @@ public class AmazonEKSClient extends AmazonWebServiceClient implements AmazonEKS
      * see <a href="https://docs.aws.amazon.com/eks/latest/userguide/cluster-endpoint.html">Amazon EKS cluster endpoint
      * access control</a> in the <i> <i>Amazon EKS User Guide</i> </i>.
      * </p>
-     * <important>
      * <p>
-     * You can't update the subnets or security group IDs for an existing cluster.
+     * You can also use this API operation to choose different subnets and security groups for the cluster. You must
+     * specify at least two subnets that are in different Availability Zones. You can't change which VPC the subnets are
+     * from, the subnets must be in the same VPC as the subnets that the cluster was created with. For more information
+     * about the VPC requirements, see <a
+     * href="https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html">https
+     * ://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html</a> in the <i> <i>Amazon EKS User Guide</i> </i>.
      * </p>
-     * </important>
      * <p>
      * Cluster updates are asynchronous, and they should finish within a few minutes. During an update, the cluster
      * status moves to <code>UPDATING</code> (this status transition is eventually consistent). When the update is
@@ -3254,6 +3579,76 @@ public class AmazonEKSClient extends AmazonWebServiceClient implements AmazonEKS
             HttpResponseHandler<AmazonWebServiceResponse<UpdateNodegroupVersionResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new UpdateNodegroupVersionResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Updates a EKS Pod Identity association. Only the IAM role can be changed; an association can't be moved between
+     * clusters, namespaces, or service accounts. If you need to edit the namespace or service account, you need to
+     * remove the association and then create a new association with your desired settings.
+     * </p>
+     * 
+     * @param updatePodIdentityAssociationRequest
+     * @return Result of the UpdatePodIdentityAssociation operation returned by the service.
+     * @throws ServerException
+     *         These errors are usually caused by a server-side issue.
+     * @throws ResourceNotFoundException
+     *         The specified resource could not be found. You can view your available clusters with <a>ListClusters</a>.
+     *         You can view your available managed node groups with <a>ListNodegroups</a>. Amazon EKS clusters and node
+     *         groups are Region-specific.
+     * @throws InvalidRequestException
+     *         The request is invalid given the state of the cluster. Check the state of the cluster and the associated
+     *         operations.
+     * @throws InvalidParameterException
+     *         The specified parameter is invalid. Review the available parameters for the API request.
+     * @sample AmazonEKS.UpdatePodIdentityAssociation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/eks-2017-11-01/UpdatePodIdentityAssociation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public UpdatePodIdentityAssociationResult updatePodIdentityAssociation(UpdatePodIdentityAssociationRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdatePodIdentityAssociation(request);
+    }
+
+    @SdkInternalApi
+    final UpdatePodIdentityAssociationResult executeUpdatePodIdentityAssociation(UpdatePodIdentityAssociationRequest updatePodIdentityAssociationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updatePodIdentityAssociationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdatePodIdentityAssociationRequest> request = null;
+        Response<UpdatePodIdentityAssociationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdatePodIdentityAssociationRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(updatePodIdentityAssociationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EKS");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdatePodIdentityAssociation");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdatePodIdentityAssociationResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new UpdatePodIdentityAssociationResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

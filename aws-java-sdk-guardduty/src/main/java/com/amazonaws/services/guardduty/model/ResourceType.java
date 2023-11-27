@@ -20,7 +20,9 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public enum ResourceType {
 
-    EKS("EKS");
+    EKS("EKS"),
+    ECS("ECS"),
+    EC2("EC2");
 
     private String value;
 

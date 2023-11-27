@@ -31,6 +31,8 @@ public class CampaignConfigMarshaller {
 
     private static final MarshallingInfo<Map> ITEMEXPLORATIONCONFIG_BINDING = MarshallingInfo.builder(MarshallingType.MAP)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("itemExplorationConfig").build();
+    private static final MarshallingInfo<Boolean> ENABLEMETADATAWITHRECOMMENDATIONS_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("enableMetadataWithRecommendations").build();
 
     private static final CampaignConfigMarshaller instance = new CampaignConfigMarshaller();
 
@@ -49,6 +51,7 @@ public class CampaignConfigMarshaller {
 
         try {
             protocolMarshaller.marshall(campaignConfig.getItemExplorationConfig(), ITEMEXPLORATIONCONFIG_BINDING);
+            protocolMarshaller.marshall(campaignConfig.getEnableMetadataWithRecommendations(), ENABLEMETADATAWITHRECOMMENDATIONS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

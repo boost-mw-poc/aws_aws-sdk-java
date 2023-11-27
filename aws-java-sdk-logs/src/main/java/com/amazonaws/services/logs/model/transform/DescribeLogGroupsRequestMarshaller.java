@@ -40,6 +40,8 @@ public class DescribeLogGroupsRequestMarshaller {
             .marshallLocationName("limit").build();
     private static final MarshallingInfo<Boolean> INCLUDELINKEDACCOUNTS_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("includeLinkedAccounts").build();
+    private static final MarshallingInfo<String> LOGGROUPCLASS_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("logGroupClass").build();
 
     private static final DescribeLogGroupsRequestMarshaller instance = new DescribeLogGroupsRequestMarshaller();
 
@@ -63,6 +65,7 @@ public class DescribeLogGroupsRequestMarshaller {
             protocolMarshaller.marshall(describeLogGroupsRequest.getNextToken(), NEXTTOKEN_BINDING);
             protocolMarshaller.marshall(describeLogGroupsRequest.getLimit(), LIMIT_BINDING);
             protocolMarshaller.marshall(describeLogGroupsRequest.getIncludeLinkedAccounts(), INCLUDELINKEDACCOUNTS_BINDING);
+            protocolMarshaller.marshall(describeLogGroupsRequest.getLogGroupClass(), LOGGROUPCLASS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

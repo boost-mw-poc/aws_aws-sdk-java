@@ -120,6 +120,19 @@ public class AbstractAmazonEKSAsync extends AbstractAmazonEKS implements AmazonE
     }
 
     @Override
+    public java.util.concurrent.Future<CreatePodIdentityAssociationResult> createPodIdentityAssociationAsync(CreatePodIdentityAssociationRequest request) {
+
+        return createPodIdentityAssociationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreatePodIdentityAssociationResult> createPodIdentityAssociationAsync(CreatePodIdentityAssociationRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreatePodIdentityAssociationRequest, CreatePodIdentityAssociationResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteAddonResult> deleteAddonAsync(DeleteAddonRequest request) {
 
         return deleteAddonAsync(request, null);
@@ -180,6 +193,19 @@ public class AbstractAmazonEKSAsync extends AbstractAmazonEKS implements AmazonE
     @Override
     public java.util.concurrent.Future<DeleteNodegroupResult> deleteNodegroupAsync(DeleteNodegroupRequest request,
             com.amazonaws.handlers.AsyncHandler<DeleteNodegroupRequest, DeleteNodegroupResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeletePodIdentityAssociationResult> deletePodIdentityAssociationAsync(DeletePodIdentityAssociationRequest request) {
+
+        return deletePodIdentityAssociationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeletePodIdentityAssociationResult> deletePodIdentityAssociationAsync(DeletePodIdentityAssociationRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeletePodIdentityAssociationRequest, DeletePodIdentityAssociationResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -304,6 +330,19 @@ public class AbstractAmazonEKSAsync extends AbstractAmazonEKS implements AmazonE
     }
 
     @Override
+    public java.util.concurrent.Future<DescribePodIdentityAssociationResult> describePodIdentityAssociationAsync(DescribePodIdentityAssociationRequest request) {
+
+        return describePodIdentityAssociationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribePodIdentityAssociationResult> describePodIdentityAssociationAsync(DescribePodIdentityAssociationRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribePodIdentityAssociationRequest, DescribePodIdentityAssociationResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeUpdateResult> describeUpdateAsync(DescribeUpdateRequest request) {
 
         return describeUpdateAsync(request, null);
@@ -405,6 +444,19 @@ public class AbstractAmazonEKSAsync extends AbstractAmazonEKS implements AmazonE
     @Override
     public java.util.concurrent.Future<ListNodegroupsResult> listNodegroupsAsync(ListNodegroupsRequest request,
             com.amazonaws.handlers.AsyncHandler<ListNodegroupsRequest, ListNodegroupsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListPodIdentityAssociationsResult> listPodIdentityAssociationsAsync(ListPodIdentityAssociationsRequest request) {
+
+        return listPodIdentityAssociationsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListPodIdentityAssociationsResult> listPodIdentityAssociationsAsync(ListPodIdentityAssociationsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListPodIdentityAssociationsRequest, ListPodIdentityAssociationsResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -548,6 +600,19 @@ public class AbstractAmazonEKSAsync extends AbstractAmazonEKS implements AmazonE
     @Override
     public java.util.concurrent.Future<UpdateNodegroupVersionResult> updateNodegroupVersionAsync(UpdateNodegroupVersionRequest request,
             com.amazonaws.handlers.AsyncHandler<UpdateNodegroupVersionRequest, UpdateNodegroupVersionResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdatePodIdentityAssociationResult> updatePodIdentityAssociationAsync(UpdatePodIdentityAssociationRequest request) {
+
+        return updatePodIdentityAssociationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdatePodIdentityAssociationResult> updatePodIdentityAssociationAsync(UpdatePodIdentityAssociationRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdatePodIdentityAssociationRequest, UpdatePodIdentityAssociationResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

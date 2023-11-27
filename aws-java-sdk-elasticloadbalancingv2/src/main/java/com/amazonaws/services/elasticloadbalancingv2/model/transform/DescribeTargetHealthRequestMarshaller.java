@@ -75,6 +75,22 @@ public class DescribeTargetHealthRequestMarshaller implements Marshaller<Request
             }
         }
 
+        if (describeTargetHealthRequest.getInclude() != null) {
+            java.util.List<String> includeList = describeTargetHealthRequest.getInclude();
+            if (includeList.isEmpty()) {
+                request.addParameter("Include", "");
+            } else {
+                int includeListIndex = 1;
+
+                for (String includeListValue : includeList) {
+                    if (includeListValue != null) {
+                        request.addParameter("Include.member." + includeListIndex, StringUtils.fromString(includeListValue));
+                    }
+                    includeListIndex++;
+                }
+            }
+        }
+
         return request;
     }
 

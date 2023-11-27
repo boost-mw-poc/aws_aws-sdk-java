@@ -722,6 +722,79 @@ public class AWSLakeFormationClient extends AmazonWebServiceClient implements AW
 
     /**
      * <p>
+     * Creates an IAM Identity Center connection with Lake Formation to allow IAM Identity Center users and groups to
+     * access Data Catalog resources.
+     * </p>
+     * 
+     * @param createLakeFormationIdentityCenterConfigurationRequest
+     * @return Result of the CreateLakeFormationIdentityCenterConfiguration operation returned by the service.
+     * @throws InvalidInputException
+     *         The input provided was not valid.
+     * @throws AlreadyExistsException
+     *         A resource to be created or added already exists.
+     * @throws InternalServiceException
+     *         An internal service error occurred.
+     * @throws OperationTimeoutException
+     *         The operation timed out.
+     * @throws AccessDeniedException
+     *         Access to a resource was denied.
+     * @throws ConcurrentModificationException
+     *         Two processes are trying to modify a resource simultaneously.
+     * @sample AWSLakeFormation.CreateLakeFormationIdentityCenterConfiguration
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/lakeformation-2017-03-31/CreateLakeFormationIdentityCenterConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public CreateLakeFormationIdentityCenterConfigurationResult createLakeFormationIdentityCenterConfiguration(
+            CreateLakeFormationIdentityCenterConfigurationRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateLakeFormationIdentityCenterConfiguration(request);
+    }
+
+    @SdkInternalApi
+    final CreateLakeFormationIdentityCenterConfigurationResult executeCreateLakeFormationIdentityCenterConfiguration(
+            CreateLakeFormationIdentityCenterConfigurationRequest createLakeFormationIdentityCenterConfigurationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createLakeFormationIdentityCenterConfigurationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateLakeFormationIdentityCenterConfigurationRequest> request = null;
+        Response<CreateLakeFormationIdentityCenterConfigurationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateLakeFormationIdentityCenterConfigurationRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(createLakeFormationIdentityCenterConfigurationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "LakeFormation");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateLakeFormationIdentityCenterConfiguration");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<CreateLakeFormationIdentityCenterConfigurationResult>> responseHandler = protocolFactory
+                    .createResponseHandler(new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                            new CreateLakeFormationIdentityCenterConfigurationResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Enforce Lake Formation permissions for the given databases, tables, and principals.
      * </p>
      * 
@@ -913,6 +986,78 @@ public class AWSLakeFormationClient extends AmazonWebServiceClient implements AW
 
             HttpResponseHandler<AmazonWebServiceResponse<DeleteLFTagResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DeleteLFTagResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Deletes an IAM Identity Center connection with Lake Formation.
+     * </p>
+     * 
+     * @param deleteLakeFormationIdentityCenterConfigurationRequest
+     * @return Result of the DeleteLakeFormationIdentityCenterConfiguration operation returned by the service.
+     * @throws InvalidInputException
+     *         The input provided was not valid.
+     * @throws EntityNotFoundException
+     *         A specified entity does not exist.
+     * @throws InternalServiceException
+     *         An internal service error occurred.
+     * @throws OperationTimeoutException
+     *         The operation timed out.
+     * @throws AccessDeniedException
+     *         Access to a resource was denied.
+     * @throws ConcurrentModificationException
+     *         Two processes are trying to modify a resource simultaneously.
+     * @sample AWSLakeFormation.DeleteLakeFormationIdentityCenterConfiguration
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/lakeformation-2017-03-31/DeleteLakeFormationIdentityCenterConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DeleteLakeFormationIdentityCenterConfigurationResult deleteLakeFormationIdentityCenterConfiguration(
+            DeleteLakeFormationIdentityCenterConfigurationRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteLakeFormationIdentityCenterConfiguration(request);
+    }
+
+    @SdkInternalApi
+    final DeleteLakeFormationIdentityCenterConfigurationResult executeDeleteLakeFormationIdentityCenterConfiguration(
+            DeleteLakeFormationIdentityCenterConfigurationRequest deleteLakeFormationIdentityCenterConfigurationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteLakeFormationIdentityCenterConfigurationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteLakeFormationIdentityCenterConfigurationRequest> request = null;
+        Response<DeleteLakeFormationIdentityCenterConfigurationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteLakeFormationIdentityCenterConfigurationRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(deleteLakeFormationIdentityCenterConfigurationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "LakeFormation");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteLakeFormationIdentityCenterConfiguration");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeleteLakeFormationIdentityCenterConfigurationResult>> responseHandler = protocolFactory
+                    .createResponseHandler(new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                            new DeleteLakeFormationIdentityCenterConfigurationResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -1130,6 +1275,76 @@ public class AWSLakeFormationClient extends AmazonWebServiceClient implements AW
 
             HttpResponseHandler<AmazonWebServiceResponse<DeregisterResourceResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DeregisterResourceResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Retrieves the instance ARN and application ARN for the connection.
+     * </p>
+     * 
+     * @param describeLakeFormationIdentityCenterConfigurationRequest
+     * @return Result of the DescribeLakeFormationIdentityCenterConfiguration operation returned by the service.
+     * @throws InvalidInputException
+     *         The input provided was not valid.
+     * @throws EntityNotFoundException
+     *         A specified entity does not exist.
+     * @throws InternalServiceException
+     *         An internal service error occurred.
+     * @throws OperationTimeoutException
+     *         The operation timed out.
+     * @throws AccessDeniedException
+     *         Access to a resource was denied.
+     * @sample AWSLakeFormation.DescribeLakeFormationIdentityCenterConfiguration
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/lakeformation-2017-03-31/DescribeLakeFormationIdentityCenterConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DescribeLakeFormationIdentityCenterConfigurationResult describeLakeFormationIdentityCenterConfiguration(
+            DescribeLakeFormationIdentityCenterConfigurationRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribeLakeFormationIdentityCenterConfiguration(request);
+    }
+
+    @SdkInternalApi
+    final DescribeLakeFormationIdentityCenterConfigurationResult executeDescribeLakeFormationIdentityCenterConfiguration(
+            DescribeLakeFormationIdentityCenterConfigurationRequest describeLakeFormationIdentityCenterConfigurationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describeLakeFormationIdentityCenterConfigurationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeLakeFormationIdentityCenterConfigurationRequest> request = null;
+        Response<DescribeLakeFormationIdentityCenterConfigurationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeLakeFormationIdentityCenterConfigurationRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(describeLakeFormationIdentityCenterConfigurationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "LakeFormation");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeLakeFormationIdentityCenterConfiguration");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DescribeLakeFormationIdentityCenterConfigurationResult>> responseHandler = protocolFactory
+                    .createResponseHandler(new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                            new DescribeLakeFormationIdentityCenterConfigurationResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -3400,6 +3615,78 @@ public class AWSLakeFormationClient extends AmazonWebServiceClient implements AW
 
             HttpResponseHandler<AmazonWebServiceResponse<UpdateLFTagResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new UpdateLFTagResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Updates the IAM Identity Center connection parameters.
+     * </p>
+     * 
+     * @param updateLakeFormationIdentityCenterConfigurationRequest
+     * @return Result of the UpdateLakeFormationIdentityCenterConfiguration operation returned by the service.
+     * @throws InvalidInputException
+     *         The input provided was not valid.
+     * @throws EntityNotFoundException
+     *         A specified entity does not exist.
+     * @throws InternalServiceException
+     *         An internal service error occurred.
+     * @throws OperationTimeoutException
+     *         The operation timed out.
+     * @throws AccessDeniedException
+     *         Access to a resource was denied.
+     * @throws ConcurrentModificationException
+     *         Two processes are trying to modify a resource simultaneously.
+     * @sample AWSLakeFormation.UpdateLakeFormationIdentityCenterConfiguration
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/lakeformation-2017-03-31/UpdateLakeFormationIdentityCenterConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public UpdateLakeFormationIdentityCenterConfigurationResult updateLakeFormationIdentityCenterConfiguration(
+            UpdateLakeFormationIdentityCenterConfigurationRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateLakeFormationIdentityCenterConfiguration(request);
+    }
+
+    @SdkInternalApi
+    final UpdateLakeFormationIdentityCenterConfigurationResult executeUpdateLakeFormationIdentityCenterConfiguration(
+            UpdateLakeFormationIdentityCenterConfigurationRequest updateLakeFormationIdentityCenterConfigurationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateLakeFormationIdentityCenterConfigurationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateLakeFormationIdentityCenterConfigurationRequest> request = null;
+        Response<UpdateLakeFormationIdentityCenterConfigurationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateLakeFormationIdentityCenterConfigurationRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(updateLakeFormationIdentityCenterConfigurationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "LakeFormation");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateLakeFormationIdentityCenterConfiguration");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdateLakeFormationIdentityCenterConfigurationResult>> responseHandler = protocolFactory
+                    .createResponseHandler(new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                            new UpdateLakeFormationIdentityCenterConfigurationResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

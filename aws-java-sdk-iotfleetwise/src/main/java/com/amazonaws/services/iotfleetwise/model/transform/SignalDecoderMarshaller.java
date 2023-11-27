@@ -37,6 +37,8 @@ public class SignalDecoderMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("canSignal").build();
     private static final MarshallingInfo<StructuredPojo> OBDSIGNAL_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("obdSignal").build();
+    private static final MarshallingInfo<StructuredPojo> MESSAGESIGNAL_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("messageSignal").build();
 
     private static final SignalDecoderMarshaller instance = new SignalDecoderMarshaller();
 
@@ -59,6 +61,7 @@ public class SignalDecoderMarshaller {
             protocolMarshaller.marshall(signalDecoder.getInterfaceId(), INTERFACEID_BINDING);
             protocolMarshaller.marshall(signalDecoder.getCanSignal(), CANSIGNAL_BINDING);
             protocolMarshaller.marshall(signalDecoder.getObdSignal(), OBDSIGNAL_BINDING);
+            protocolMarshaller.marshall(signalDecoder.getMessageSignal(), MESSAGESIGNAL_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

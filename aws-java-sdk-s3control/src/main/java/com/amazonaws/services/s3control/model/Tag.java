@@ -22,8 +22,10 @@ import javax.annotation.Generated;
  * </p>
  * <note>
  * <p>
- * This data type is only supported for <a
- * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage-lens-groups.html">S3 Storage Lens groups</a>.
+ * This operation is only supported for <a
+ * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage-lens-groups.html">S3 Storage Lens groups</a> and
+ * for <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-grants-tagging.html">S3 Access Grants</a>.
+ * The tagged resource can be an S3 Storage Lens group or S3 Access Grants instance, registered location, or grant.
  * </p>
  * </note>
  * 
@@ -35,28 +37,31 @@ public class Tag implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The tag key for your Amazon Web Services resource. A tag key can be up to 128 Unicode characters in length and is
-     * case-sensitive. System created tags that begin with <code>aws:</code> aren’t supported.
+     * The key of the key-value pair of a tag added to your Amazon Web Services resource. A tag key can be up to 128
+     * Unicode characters in length and is case-sensitive. System created tags that begin with <code>aws:</code> aren’t
+     * supported.
      * </p>
      */
     private String key;
     /**
      * <p>
-     * The tag value for your Amazon Web Services resource. A tag value can be up to 256 Unicode characters in length
-     * and is case-sensitive.
+     * The value of the key-value pair of a tag added to your Amazon Web Services resource. A tag value can be up to 256
+     * Unicode characters in length and is case-sensitive.
      * </p>
      */
     private String value;
 
     /**
      * <p>
-     * The tag key for your Amazon Web Services resource. A tag key can be up to 128 Unicode characters in length and is
-     * case-sensitive. System created tags that begin with <code>aws:</code> aren’t supported.
+     * The key of the key-value pair of a tag added to your Amazon Web Services resource. A tag key can be up to 128
+     * Unicode characters in length and is case-sensitive. System created tags that begin with <code>aws:</code> aren’t
+     * supported.
      * </p>
      * 
      * @param key
-     *        The tag key for your Amazon Web Services resource. A tag key can be up to 128 Unicode characters in length
-     *        and is case-sensitive. System created tags that begin with <code>aws:</code> aren’t supported.
+     *        The key of the key-value pair of a tag added to your Amazon Web Services resource. A tag key can be up to
+     *        128 Unicode characters in length and is case-sensitive. System created tags that begin with
+     *        <code>aws:</code> aren’t supported.
      */
 
     public void setKey(String key) {
@@ -65,12 +70,14 @@ public class Tag implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The tag key for your Amazon Web Services resource. A tag key can be up to 128 Unicode characters in length and is
-     * case-sensitive. System created tags that begin with <code>aws:</code> aren’t supported.
+     * The key of the key-value pair of a tag added to your Amazon Web Services resource. A tag key can be up to 128
+     * Unicode characters in length and is case-sensitive. System created tags that begin with <code>aws:</code> aren’t
+     * supported.
      * </p>
      * 
-     * @return The tag key for your Amazon Web Services resource. A tag key can be up to 128 Unicode characters in
-     *         length and is case-sensitive. System created tags that begin with <code>aws:</code> aren’t supported.
+     * @return The key of the key-value pair of a tag added to your Amazon Web Services resource. A tag key can be up to
+     *         128 Unicode characters in length and is case-sensitive. System created tags that begin with
+     *         <code>aws:</code> aren’t supported.
      */
 
     public String getKey() {
@@ -79,13 +86,15 @@ public class Tag implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The tag key for your Amazon Web Services resource. A tag key can be up to 128 Unicode characters in length and is
-     * case-sensitive. System created tags that begin with <code>aws:</code> aren’t supported.
+     * The key of the key-value pair of a tag added to your Amazon Web Services resource. A tag key can be up to 128
+     * Unicode characters in length and is case-sensitive. System created tags that begin with <code>aws:</code> aren’t
+     * supported.
      * </p>
      * 
      * @param key
-     *        The tag key for your Amazon Web Services resource. A tag key can be up to 128 Unicode characters in length
-     *        and is case-sensitive. System created tags that begin with <code>aws:</code> aren’t supported.
+     *        The key of the key-value pair of a tag added to your Amazon Web Services resource. A tag key can be up to
+     *        128 Unicode characters in length and is case-sensitive. System created tags that begin with
+     *        <code>aws:</code> aren’t supported.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -96,13 +105,13 @@ public class Tag implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The tag value for your Amazon Web Services resource. A tag value can be up to 256 Unicode characters in length
-     * and is case-sensitive.
+     * The value of the key-value pair of a tag added to your Amazon Web Services resource. A tag value can be up to 256
+     * Unicode characters in length and is case-sensitive.
      * </p>
      * 
      * @param value
-     *        The tag value for your Amazon Web Services resource. A tag value can be up to 256 Unicode characters in
-     *        length and is case-sensitive.
+     *        The value of the key-value pair of a tag added to your Amazon Web Services resource. A tag value can be up
+     *        to 256 Unicode characters in length and is case-sensitive.
      */
 
     public void setValue(String value) {
@@ -111,12 +120,12 @@ public class Tag implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The tag value for your Amazon Web Services resource. A tag value can be up to 256 Unicode characters in length
-     * and is case-sensitive.
+     * The value of the key-value pair of a tag added to your Amazon Web Services resource. A tag value can be up to 256
+     * Unicode characters in length and is case-sensitive.
      * </p>
      * 
-     * @return The tag value for your Amazon Web Services resource. A tag value can be up to 256 Unicode characters in
-     *         length and is case-sensitive.
+     * @return The value of the key-value pair of a tag added to your Amazon Web Services resource. A tag value can be
+     *         up to 256 Unicode characters in length and is case-sensitive.
      */
 
     public String getValue() {
@@ -125,13 +134,13 @@ public class Tag implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The tag value for your Amazon Web Services resource. A tag value can be up to 256 Unicode characters in length
-     * and is case-sensitive.
+     * The value of the key-value pair of a tag added to your Amazon Web Services resource. A tag value can be up to 256
+     * Unicode characters in length and is case-sensitive.
      * </p>
      * 
      * @param value
-     *        The tag value for your Amazon Web Services resource. A tag value can be up to 256 Unicode characters in
-     *        length and is case-sensitive.
+     *        The value of the key-value pair of a tag added to your Amazon Web Services resource. A tag value can be up
+     *        to 256 Unicode characters in length and is case-sensitive.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

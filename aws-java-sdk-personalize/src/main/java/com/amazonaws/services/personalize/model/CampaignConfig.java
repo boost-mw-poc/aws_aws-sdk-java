@@ -39,6 +39,18 @@ public class CampaignConfig implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private java.util.Map<String, String> itemExplorationConfig;
+    /**
+     * <p>
+     * Whether metadata with recommendations is enabled for the campaign. If enabled, you can specify the columns from
+     * your Items dataset in your request for recommendations. Amazon Personalize returns this data for each item in the
+     * recommendation response.
+     * </p>
+     * <p>
+     * If you enable metadata in recommendations, you will incur additional costs. For more information, see <a
+     * href="https://aws.amazon.com/personalize/pricing/">Amazon Personalize pricing</a>.
+     * </p>
+     */
+    private Boolean enableMetadataWithRecommendations;
 
     /**
      * <p>
@@ -139,6 +151,102 @@ public class CampaignConfig implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Whether metadata with recommendations is enabled for the campaign. If enabled, you can specify the columns from
+     * your Items dataset in your request for recommendations. Amazon Personalize returns this data for each item in the
+     * recommendation response.
+     * </p>
+     * <p>
+     * If you enable metadata in recommendations, you will incur additional costs. For more information, see <a
+     * href="https://aws.amazon.com/personalize/pricing/">Amazon Personalize pricing</a>.
+     * </p>
+     * 
+     * @param enableMetadataWithRecommendations
+     *        Whether metadata with recommendations is enabled for the campaign. If enabled, you can specify the columns
+     *        from your Items dataset in your request for recommendations. Amazon Personalize returns this data for each
+     *        item in the recommendation response. </p>
+     *        <p>
+     *        If you enable metadata in recommendations, you will incur additional costs. For more information, see <a
+     *        href="https://aws.amazon.com/personalize/pricing/">Amazon Personalize pricing</a>.
+     */
+
+    public void setEnableMetadataWithRecommendations(Boolean enableMetadataWithRecommendations) {
+        this.enableMetadataWithRecommendations = enableMetadataWithRecommendations;
+    }
+
+    /**
+     * <p>
+     * Whether metadata with recommendations is enabled for the campaign. If enabled, you can specify the columns from
+     * your Items dataset in your request for recommendations. Amazon Personalize returns this data for each item in the
+     * recommendation response.
+     * </p>
+     * <p>
+     * If you enable metadata in recommendations, you will incur additional costs. For more information, see <a
+     * href="https://aws.amazon.com/personalize/pricing/">Amazon Personalize pricing</a>.
+     * </p>
+     * 
+     * @return Whether metadata with recommendations is enabled for the campaign. If enabled, you can specify the
+     *         columns from your Items dataset in your request for recommendations. Amazon Personalize returns this data
+     *         for each item in the recommendation response. </p>
+     *         <p>
+     *         If you enable metadata in recommendations, you will incur additional costs. For more information, see <a
+     *         href="https://aws.amazon.com/personalize/pricing/">Amazon Personalize pricing</a>.
+     */
+
+    public Boolean getEnableMetadataWithRecommendations() {
+        return this.enableMetadataWithRecommendations;
+    }
+
+    /**
+     * <p>
+     * Whether metadata with recommendations is enabled for the campaign. If enabled, you can specify the columns from
+     * your Items dataset in your request for recommendations. Amazon Personalize returns this data for each item in the
+     * recommendation response.
+     * </p>
+     * <p>
+     * If you enable metadata in recommendations, you will incur additional costs. For more information, see <a
+     * href="https://aws.amazon.com/personalize/pricing/">Amazon Personalize pricing</a>.
+     * </p>
+     * 
+     * @param enableMetadataWithRecommendations
+     *        Whether metadata with recommendations is enabled for the campaign. If enabled, you can specify the columns
+     *        from your Items dataset in your request for recommendations. Amazon Personalize returns this data for each
+     *        item in the recommendation response. </p>
+     *        <p>
+     *        If you enable metadata in recommendations, you will incur additional costs. For more information, see <a
+     *        href="https://aws.amazon.com/personalize/pricing/">Amazon Personalize pricing</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CampaignConfig withEnableMetadataWithRecommendations(Boolean enableMetadataWithRecommendations) {
+        setEnableMetadataWithRecommendations(enableMetadataWithRecommendations);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Whether metadata with recommendations is enabled for the campaign. If enabled, you can specify the columns from
+     * your Items dataset in your request for recommendations. Amazon Personalize returns this data for each item in the
+     * recommendation response.
+     * </p>
+     * <p>
+     * If you enable metadata in recommendations, you will incur additional costs. For more information, see <a
+     * href="https://aws.amazon.com/personalize/pricing/">Amazon Personalize pricing</a>.
+     * </p>
+     * 
+     * @return Whether metadata with recommendations is enabled for the campaign. If enabled, you can specify the
+     *         columns from your Items dataset in your request for recommendations. Amazon Personalize returns this data
+     *         for each item in the recommendation response. </p>
+     *         <p>
+     *         If you enable metadata in recommendations, you will incur additional costs. For more information, see <a
+     *         href="https://aws.amazon.com/personalize/pricing/">Amazon Personalize pricing</a>.
+     */
+
+    public Boolean isEnableMetadataWithRecommendations() {
+        return this.enableMetadataWithRecommendations;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -151,7 +259,9 @@ public class CampaignConfig implements Serializable, Cloneable, StructuredPojo {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getItemExplorationConfig() != null)
-            sb.append("ItemExplorationConfig: ").append(getItemExplorationConfig());
+            sb.append("ItemExplorationConfig: ").append(getItemExplorationConfig()).append(",");
+        if (getEnableMetadataWithRecommendations() != null)
+            sb.append("EnableMetadataWithRecommendations: ").append(getEnableMetadataWithRecommendations());
         sb.append("}");
         return sb.toString();
     }
@@ -170,6 +280,11 @@ public class CampaignConfig implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getItemExplorationConfig() != null && other.getItemExplorationConfig().equals(this.getItemExplorationConfig()) == false)
             return false;
+        if (other.getEnableMetadataWithRecommendations() == null ^ this.getEnableMetadataWithRecommendations() == null)
+            return false;
+        if (other.getEnableMetadataWithRecommendations() != null
+                && other.getEnableMetadataWithRecommendations().equals(this.getEnableMetadataWithRecommendations()) == false)
+            return false;
         return true;
     }
 
@@ -179,6 +294,7 @@ public class CampaignConfig implements Serializable, Cloneable, StructuredPojo {
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getItemExplorationConfig() == null) ? 0 : getItemExplorationConfig().hashCode());
+        hashCode = prime * hashCode + ((getEnableMetadataWithRecommendations() == null) ? 0 : getEnableMetadataWithRecommendations().hashCode());
         return hashCode;
     }
 

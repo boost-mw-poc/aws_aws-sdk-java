@@ -47,6 +47,8 @@ public class GetRecommendationsRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("recommenderArn").build();
     private static final MarshallingInfo<List> PROMOTIONS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("promotions").build();
+    private static final MarshallingInfo<Map> METADATACOLUMNS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("metadataColumns").build();
 
     private static final GetRecommendationsRequestMarshaller instance = new GetRecommendationsRequestMarshaller();
 
@@ -73,6 +75,7 @@ public class GetRecommendationsRequestMarshaller {
             protocolMarshaller.marshall(getRecommendationsRequest.getFilterValues(), FILTERVALUES_BINDING);
             protocolMarshaller.marshall(getRecommendationsRequest.getRecommenderArn(), RECOMMENDERARN_BINDING);
             protocolMarshaller.marshall(getRecommendationsRequest.getPromotions(), PROMOTIONS_BINDING);
+            protocolMarshaller.marshall(getRecommendationsRequest.getMetadataColumns(), METADATACOLUMNS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

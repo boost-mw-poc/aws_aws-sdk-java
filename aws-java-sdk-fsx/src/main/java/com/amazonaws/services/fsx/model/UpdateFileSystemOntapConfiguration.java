@@ -56,12 +56,27 @@ public class UpdateFileSystemOntapConfiguration implements Serializable, Cloneab
     private DiskIopsConfiguration diskIopsConfiguration;
     /**
      * <p>
-     * Enter a new value to change the amount of throughput capacity for the file system. Throughput capacity is
-     * measured in megabytes per second (MBps). Valid values are 128, 256, 512, 1024, 2048, and 4096 MBps. For more
-     * information, see <a
+     * Enter a new value to change the amount of throughput capacity for the file system in megabytes per second (MBps).
+     * For more information, see <a
      * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-throughput-capacity.html">Managing throughput
      * capacity</a> in the FSx for ONTAP User Guide.
      * </p>
+     * <p>
+     * Amazon FSx responds with an HTTP status code 400 (Bad Request) for the following conditions:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The value of <code>ThroughputCapacity</code> and <code>ThroughputCapacityPerHAPair</code> are not the same value.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The value of <code>ThroughputCapacity</code> when divided by the value of <code>HAPairs</code> is outside of the
+     * valid range for <code>ThroughputCapacity</code>.
+     * </p>
+     * </li>
+     * </ul>
      */
     private Integer throughputCapacity;
     /**
@@ -79,6 +94,40 @@ public class UpdateFileSystemOntapConfiguration implements Serializable, Cloneab
      * </p>
      */
     private java.util.List<String> removeRouteTableIds;
+    /**
+     * <p>
+     * Use to choose the throughput capacity per HA pair, rather than the total throughput for the file system.
+     * </p>
+     * <p>
+     * This field and <code>ThroughputCapacity</code> cannot be defined in the same API call, but one is required.
+     * </p>
+     * <p>
+     * This field and <code>ThroughputCapacity</code> are the same for file systems with one HA pair.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * For <code>SINGLE_AZ_1</code> and <code>MULTI_AZ_1</code>, valid values are 128, 256, 512, 1024, 2048, or 4096
+     * MBps.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For <code>SINGLE_AZ_2</code>, valid values are 3072 or 6144 MBps.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Amazon FSx responds with an HTTP status code 400 (Bad Request) for the following conditions:
+     * </p>
+     * <p>
+     * The value of <code>ThroughputCapacity</code> and <code>ThroughputCapacityPerHAPair</code> are not the same value.
+     * </p>
+     * <p>
+     * The value of <code>ThroughputCapacityPerHAPair</code> is not a valid value.
+     * </p>
+     */
+    private Integer throughputCapacityPerHAPair;
 
     /**
      * @param automaticBackupRetentionDays
@@ -297,19 +346,49 @@ public class UpdateFileSystemOntapConfiguration implements Serializable, Cloneab
 
     /**
      * <p>
-     * Enter a new value to change the amount of throughput capacity for the file system. Throughput capacity is
-     * measured in megabytes per second (MBps). Valid values are 128, 256, 512, 1024, 2048, and 4096 MBps. For more
-     * information, see <a
+     * Enter a new value to change the amount of throughput capacity for the file system in megabytes per second (MBps).
+     * For more information, see <a
      * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-throughput-capacity.html">Managing throughput
      * capacity</a> in the FSx for ONTAP User Guide.
      * </p>
+     * <p>
+     * Amazon FSx responds with an HTTP status code 400 (Bad Request) for the following conditions:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The value of <code>ThroughputCapacity</code> and <code>ThroughputCapacityPerHAPair</code> are not the same value.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The value of <code>ThroughputCapacity</code> when divided by the value of <code>HAPairs</code> is outside of the
+     * valid range for <code>ThroughputCapacity</code>.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param throughputCapacity
-     *        Enter a new value to change the amount of throughput capacity for the file system. Throughput capacity is
-     *        measured in megabytes per second (MBps). Valid values are 128, 256, 512, 1024, 2048, and 4096 MBps. For
-     *        more information, see <a
+     *        Enter a new value to change the amount of throughput capacity for the file system in megabytes per second
+     *        (MBps). For more information, see <a
      *        href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-throughput-capacity.html">Managing
-     *        throughput capacity</a> in the FSx for ONTAP User Guide.
+     *        throughput capacity</a> in the FSx for ONTAP User Guide.</p>
+     *        <p>
+     *        Amazon FSx responds with an HTTP status code 400 (Bad Request) for the following conditions:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        The value of <code>ThroughputCapacity</code> and <code>ThroughputCapacityPerHAPair</code> are not the same
+     *        value.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The value of <code>ThroughputCapacity</code> when divided by the value of <code>HAPairs</code> is outside
+     *        of the valid range for <code>ThroughputCapacity</code>.
+     *        </p>
+     *        </li>
      */
 
     public void setThroughputCapacity(Integer throughputCapacity) {
@@ -318,18 +397,48 @@ public class UpdateFileSystemOntapConfiguration implements Serializable, Cloneab
 
     /**
      * <p>
-     * Enter a new value to change the amount of throughput capacity for the file system. Throughput capacity is
-     * measured in megabytes per second (MBps). Valid values are 128, 256, 512, 1024, 2048, and 4096 MBps. For more
-     * information, see <a
+     * Enter a new value to change the amount of throughput capacity for the file system in megabytes per second (MBps).
+     * For more information, see <a
      * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-throughput-capacity.html">Managing throughput
      * capacity</a> in the FSx for ONTAP User Guide.
      * </p>
+     * <p>
+     * Amazon FSx responds with an HTTP status code 400 (Bad Request) for the following conditions:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The value of <code>ThroughputCapacity</code> and <code>ThroughputCapacityPerHAPair</code> are not the same value.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The value of <code>ThroughputCapacity</code> when divided by the value of <code>HAPairs</code> is outside of the
+     * valid range for <code>ThroughputCapacity</code>.
+     * </p>
+     * </li>
+     * </ul>
      * 
-     * @return Enter a new value to change the amount of throughput capacity for the file system. Throughput capacity is
-     *         measured in megabytes per second (MBps). Valid values are 128, 256, 512, 1024, 2048, and 4096 MBps. For
-     *         more information, see <a
+     * @return Enter a new value to change the amount of throughput capacity for the file system in megabytes per second
+     *         (MBps). For more information, see <a
      *         href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-throughput-capacity.html">Managing
-     *         throughput capacity</a> in the FSx for ONTAP User Guide.
+     *         throughput capacity</a> in the FSx for ONTAP User Guide.</p>
+     *         <p>
+     *         Amazon FSx responds with an HTTP status code 400 (Bad Request) for the following conditions:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         The value of <code>ThroughputCapacity</code> and <code>ThroughputCapacityPerHAPair</code> are not the
+     *         same value.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         The value of <code>ThroughputCapacity</code> when divided by the value of <code>HAPairs</code> is outside
+     *         of the valid range for <code>ThroughputCapacity</code>.
+     *         </p>
+     *         </li>
      */
 
     public Integer getThroughputCapacity() {
@@ -338,19 +447,49 @@ public class UpdateFileSystemOntapConfiguration implements Serializable, Cloneab
 
     /**
      * <p>
-     * Enter a new value to change the amount of throughput capacity for the file system. Throughput capacity is
-     * measured in megabytes per second (MBps). Valid values are 128, 256, 512, 1024, 2048, and 4096 MBps. For more
-     * information, see <a
+     * Enter a new value to change the amount of throughput capacity for the file system in megabytes per second (MBps).
+     * For more information, see <a
      * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-throughput-capacity.html">Managing throughput
      * capacity</a> in the FSx for ONTAP User Guide.
      * </p>
+     * <p>
+     * Amazon FSx responds with an HTTP status code 400 (Bad Request) for the following conditions:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The value of <code>ThroughputCapacity</code> and <code>ThroughputCapacityPerHAPair</code> are not the same value.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The value of <code>ThroughputCapacity</code> when divided by the value of <code>HAPairs</code> is outside of the
+     * valid range for <code>ThroughputCapacity</code>.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param throughputCapacity
-     *        Enter a new value to change the amount of throughput capacity for the file system. Throughput capacity is
-     *        measured in megabytes per second (MBps). Valid values are 128, 256, 512, 1024, 2048, and 4096 MBps. For
-     *        more information, see <a
+     *        Enter a new value to change the amount of throughput capacity for the file system in megabytes per second
+     *        (MBps). For more information, see <a
      *        href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-throughput-capacity.html">Managing
-     *        throughput capacity</a> in the FSx for ONTAP User Guide.
+     *        throughput capacity</a> in the FSx for ONTAP User Guide.</p>
+     *        <p>
+     *        Amazon FSx responds with an HTTP status code 400 (Bad Request) for the following conditions:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        The value of <code>ThroughputCapacity</code> and <code>ThroughputCapacityPerHAPair</code> are not the same
+     *        value.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The value of <code>ThroughputCapacity</code> when divided by the value of <code>HAPairs</code> is outside
+     *        of the valid range for <code>ThroughputCapacity</code>.
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -524,6 +663,220 @@ public class UpdateFileSystemOntapConfiguration implements Serializable, Cloneab
     }
 
     /**
+     * <p>
+     * Use to choose the throughput capacity per HA pair, rather than the total throughput for the file system.
+     * </p>
+     * <p>
+     * This field and <code>ThroughputCapacity</code> cannot be defined in the same API call, but one is required.
+     * </p>
+     * <p>
+     * This field and <code>ThroughputCapacity</code> are the same for file systems with one HA pair.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * For <code>SINGLE_AZ_1</code> and <code>MULTI_AZ_1</code>, valid values are 128, 256, 512, 1024, 2048, or 4096
+     * MBps.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For <code>SINGLE_AZ_2</code>, valid values are 3072 or 6144 MBps.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Amazon FSx responds with an HTTP status code 400 (Bad Request) for the following conditions:
+     * </p>
+     * <p>
+     * The value of <code>ThroughputCapacity</code> and <code>ThroughputCapacityPerHAPair</code> are not the same value.
+     * </p>
+     * <p>
+     * The value of <code>ThroughputCapacityPerHAPair</code> is not a valid value.
+     * </p>
+     * 
+     * @param throughputCapacityPerHAPair
+     *        Use to choose the throughput capacity per HA pair, rather than the total throughput for the file system.
+     *        </p>
+     *        <p>
+     *        This field and <code>ThroughputCapacity</code> cannot be defined in the same API call, but one is
+     *        required.
+     *        </p>
+     *        <p>
+     *        This field and <code>ThroughputCapacity</code> are the same for file systems with one HA pair.
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        For <code>SINGLE_AZ_1</code> and <code>MULTI_AZ_1</code>, valid values are 128, 256, 512, 1024, 2048, or
+     *        4096 MBps.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        For <code>SINGLE_AZ_2</code>, valid values are 3072 or 6144 MBps.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        Amazon FSx responds with an HTTP status code 400 (Bad Request) for the following conditions:
+     *        </p>
+     *        <p>
+     *        The value of <code>ThroughputCapacity</code> and <code>ThroughputCapacityPerHAPair</code> are not the same
+     *        value.
+     *        </p>
+     *        <p>
+     *        The value of <code>ThroughputCapacityPerHAPair</code> is not a valid value.
+     */
+
+    public void setThroughputCapacityPerHAPair(Integer throughputCapacityPerHAPair) {
+        this.throughputCapacityPerHAPair = throughputCapacityPerHAPair;
+    }
+
+    /**
+     * <p>
+     * Use to choose the throughput capacity per HA pair, rather than the total throughput for the file system.
+     * </p>
+     * <p>
+     * This field and <code>ThroughputCapacity</code> cannot be defined in the same API call, but one is required.
+     * </p>
+     * <p>
+     * This field and <code>ThroughputCapacity</code> are the same for file systems with one HA pair.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * For <code>SINGLE_AZ_1</code> and <code>MULTI_AZ_1</code>, valid values are 128, 256, 512, 1024, 2048, or 4096
+     * MBps.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For <code>SINGLE_AZ_2</code>, valid values are 3072 or 6144 MBps.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Amazon FSx responds with an HTTP status code 400 (Bad Request) for the following conditions:
+     * </p>
+     * <p>
+     * The value of <code>ThroughputCapacity</code> and <code>ThroughputCapacityPerHAPair</code> are not the same value.
+     * </p>
+     * <p>
+     * The value of <code>ThroughputCapacityPerHAPair</code> is not a valid value.
+     * </p>
+     * 
+     * @return Use to choose the throughput capacity per HA pair, rather than the total throughput for the file system.
+     *         </p>
+     *         <p>
+     *         This field and <code>ThroughputCapacity</code> cannot be defined in the same API call, but one is
+     *         required.
+     *         </p>
+     *         <p>
+     *         This field and <code>ThroughputCapacity</code> are the same for file systems with one HA pair.
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         For <code>SINGLE_AZ_1</code> and <code>MULTI_AZ_1</code>, valid values are 128, 256, 512, 1024, 2048, or
+     *         4096 MBps.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         For <code>SINGLE_AZ_2</code>, valid values are 3072 or 6144 MBps.
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         Amazon FSx responds with an HTTP status code 400 (Bad Request) for the following conditions:
+     *         </p>
+     *         <p>
+     *         The value of <code>ThroughputCapacity</code> and <code>ThroughputCapacityPerHAPair</code> are not the
+     *         same value.
+     *         </p>
+     *         <p>
+     *         The value of <code>ThroughputCapacityPerHAPair</code> is not a valid value.
+     */
+
+    public Integer getThroughputCapacityPerHAPair() {
+        return this.throughputCapacityPerHAPair;
+    }
+
+    /**
+     * <p>
+     * Use to choose the throughput capacity per HA pair, rather than the total throughput for the file system.
+     * </p>
+     * <p>
+     * This field and <code>ThroughputCapacity</code> cannot be defined in the same API call, but one is required.
+     * </p>
+     * <p>
+     * This field and <code>ThroughputCapacity</code> are the same for file systems with one HA pair.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * For <code>SINGLE_AZ_1</code> and <code>MULTI_AZ_1</code>, valid values are 128, 256, 512, 1024, 2048, or 4096
+     * MBps.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For <code>SINGLE_AZ_2</code>, valid values are 3072 or 6144 MBps.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Amazon FSx responds with an HTTP status code 400 (Bad Request) for the following conditions:
+     * </p>
+     * <p>
+     * The value of <code>ThroughputCapacity</code> and <code>ThroughputCapacityPerHAPair</code> are not the same value.
+     * </p>
+     * <p>
+     * The value of <code>ThroughputCapacityPerHAPair</code> is not a valid value.
+     * </p>
+     * 
+     * @param throughputCapacityPerHAPair
+     *        Use to choose the throughput capacity per HA pair, rather than the total throughput for the file system.
+     *        </p>
+     *        <p>
+     *        This field and <code>ThroughputCapacity</code> cannot be defined in the same API call, but one is
+     *        required.
+     *        </p>
+     *        <p>
+     *        This field and <code>ThroughputCapacity</code> are the same for file systems with one HA pair.
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        For <code>SINGLE_AZ_1</code> and <code>MULTI_AZ_1</code>, valid values are 128, 256, 512, 1024, 2048, or
+     *        4096 MBps.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        For <code>SINGLE_AZ_2</code>, valid values are 3072 or 6144 MBps.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        Amazon FSx responds with an HTTP status code 400 (Bad Request) for the following conditions:
+     *        </p>
+     *        <p>
+     *        The value of <code>ThroughputCapacity</code> and <code>ThroughputCapacityPerHAPair</code> are not the same
+     *        value.
+     *        </p>
+     *        <p>
+     *        The value of <code>ThroughputCapacityPerHAPair</code> is not a valid value.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateFileSystemOntapConfiguration withThroughputCapacityPerHAPair(Integer throughputCapacityPerHAPair) {
+        setThroughputCapacityPerHAPair(throughputCapacityPerHAPair);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -550,7 +903,9 @@ public class UpdateFileSystemOntapConfiguration implements Serializable, Cloneab
         if (getAddRouteTableIds() != null)
             sb.append("AddRouteTableIds: ").append(getAddRouteTableIds()).append(",");
         if (getRemoveRouteTableIds() != null)
-            sb.append("RemoveRouteTableIds: ").append(getRemoveRouteTableIds());
+            sb.append("RemoveRouteTableIds: ").append(getRemoveRouteTableIds()).append(",");
+        if (getThroughputCapacityPerHAPair() != null)
+            sb.append("ThroughputCapacityPerHAPair: ").append(getThroughputCapacityPerHAPair());
         sb.append("}");
         return sb.toString();
     }
@@ -598,6 +953,10 @@ public class UpdateFileSystemOntapConfiguration implements Serializable, Cloneab
             return false;
         if (other.getRemoveRouteTableIds() != null && other.getRemoveRouteTableIds().equals(this.getRemoveRouteTableIds()) == false)
             return false;
+        if (other.getThroughputCapacityPerHAPair() == null ^ this.getThroughputCapacityPerHAPair() == null)
+            return false;
+        if (other.getThroughputCapacityPerHAPair() != null && other.getThroughputCapacityPerHAPair().equals(this.getThroughputCapacityPerHAPair()) == false)
+            return false;
         return true;
     }
 
@@ -614,6 +973,7 @@ public class UpdateFileSystemOntapConfiguration implements Serializable, Cloneab
         hashCode = prime * hashCode + ((getThroughputCapacity() == null) ? 0 : getThroughputCapacity().hashCode());
         hashCode = prime * hashCode + ((getAddRouteTableIds() == null) ? 0 : getAddRouteTableIds().hashCode());
         hashCode = prime * hashCode + ((getRemoveRouteTableIds() == null) ? 0 : getRemoveRouteTableIds().hashCode());
+        hashCode = prime * hashCode + ((getThroughputCapacityPerHAPair() == null) ? 0 : getThroughputCapacityPerHAPair().hashCode());
         return hashCode;
     }
 

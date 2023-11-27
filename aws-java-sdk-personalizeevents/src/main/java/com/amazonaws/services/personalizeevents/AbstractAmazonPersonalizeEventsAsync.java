@@ -28,6 +28,32 @@ public class AbstractAmazonPersonalizeEventsAsync extends AbstractAmazonPersonal
     }
 
     @Override
+    public java.util.concurrent.Future<PutActionInteractionsResult> putActionInteractionsAsync(PutActionInteractionsRequest request) {
+
+        return putActionInteractionsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<PutActionInteractionsResult> putActionInteractionsAsync(PutActionInteractionsRequest request,
+            com.amazonaws.handlers.AsyncHandler<PutActionInteractionsRequest, PutActionInteractionsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<PutActionsResult> putActionsAsync(PutActionsRequest request) {
+
+        return putActionsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<PutActionsResult> putActionsAsync(PutActionsRequest request,
+            com.amazonaws.handlers.AsyncHandler<PutActionsRequest, PutActionsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<PutEventsResult> putEventsAsync(PutEventsRequest request) {
 
         return putEventsAsync(request, null);

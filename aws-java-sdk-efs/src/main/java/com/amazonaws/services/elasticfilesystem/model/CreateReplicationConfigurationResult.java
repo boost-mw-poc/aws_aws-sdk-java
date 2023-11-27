@@ -35,7 +35,7 @@ public class CreateReplicationConfigurationResult extends com.amazonaws.AmazonWe
     private String sourceFileSystemId;
     /**
      * <p>
-     * The Amazon Web Services Region in which the source Amazon EFS file system is located.
+     * The Amazon Web Services Region in which the source EFS file system is located.
      * </p>
      */
     private String sourceFileSystemRegion;
@@ -47,7 +47,7 @@ public class CreateReplicationConfigurationResult extends com.amazonaws.AmazonWe
     private String sourceFileSystemArn;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the original source Amazon EFS file system in the replication configuration.
+     * The Amazon Resource Name (ARN) of the original source EFS file system in the replication configuration.
      * </p>
      */
     private String originalSourceFileSystemArn;
@@ -106,11 +106,11 @@ public class CreateReplicationConfigurationResult extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * The Amazon Web Services Region in which the source Amazon EFS file system is located.
+     * The Amazon Web Services Region in which the source EFS file system is located.
      * </p>
      * 
      * @param sourceFileSystemRegion
-     *        The Amazon Web Services Region in which the source Amazon EFS file system is located.
+     *        The Amazon Web Services Region in which the source EFS file system is located.
      */
 
     public void setSourceFileSystemRegion(String sourceFileSystemRegion) {
@@ -119,10 +119,10 @@ public class CreateReplicationConfigurationResult extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * The Amazon Web Services Region in which the source Amazon EFS file system is located.
+     * The Amazon Web Services Region in which the source EFS file system is located.
      * </p>
      * 
-     * @return The Amazon Web Services Region in which the source Amazon EFS file system is located.
+     * @return The Amazon Web Services Region in which the source EFS file system is located.
      */
 
     public String getSourceFileSystemRegion() {
@@ -131,11 +131,11 @@ public class CreateReplicationConfigurationResult extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * The Amazon Web Services Region in which the source Amazon EFS file system is located.
+     * The Amazon Web Services Region in which the source EFS file system is located.
      * </p>
      * 
      * @param sourceFileSystemRegion
-     *        The Amazon Web Services Region in which the source Amazon EFS file system is located.
+     *        The Amazon Web Services Region in which the source EFS file system is located.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -186,12 +186,11 @@ public class CreateReplicationConfigurationResult extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the original source Amazon EFS file system in the replication configuration.
+     * The Amazon Resource Name (ARN) of the original source EFS file system in the replication configuration.
      * </p>
      * 
      * @param originalSourceFileSystemArn
-     *        The Amazon Resource Name (ARN) of the original source Amazon EFS file system in the replication
-     *        configuration.
+     *        The Amazon Resource Name (ARN) of the original source EFS file system in the replication configuration.
      */
 
     public void setOriginalSourceFileSystemArn(String originalSourceFileSystemArn) {
@@ -200,11 +199,10 @@ public class CreateReplicationConfigurationResult extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the original source Amazon EFS file system in the replication configuration.
+     * The Amazon Resource Name (ARN) of the original source EFS file system in the replication configuration.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the original source Amazon EFS file system in the replication
-     *         configuration.
+     * @return The Amazon Resource Name (ARN) of the original source EFS file system in the replication configuration.
      */
 
     public String getOriginalSourceFileSystemArn() {
@@ -213,12 +211,11 @@ public class CreateReplicationConfigurationResult extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the original source Amazon EFS file system in the replication configuration.
+     * The Amazon Resource Name (ARN) of the original source EFS file system in the replication configuration.
      * </p>
      * 
      * @param originalSourceFileSystemArn
-     *        The Amazon Resource Name (ARN) of the original source Amazon EFS file system in the replication
-     *        configuration.
+     *        The Amazon Resource Name (ARN) of the original source EFS file system in the replication configuration.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

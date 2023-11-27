@@ -84,6 +84,10 @@ public class CreateBotLocaleResultJsonUnmarshaller implements Unmarshaller<Creat
                     context.nextToken();
                     createBotLocaleResult.setCreationDateTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
                 }
+                if (context.testExpression("generativeAISettings", targetDepth)) {
+                    context.nextToken();
+                    createBotLocaleResult.setGenerativeAISettings(GenerativeAISettingsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

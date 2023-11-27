@@ -46,6 +46,8 @@ public class LogGroupMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("dataProtectionStatus").build();
     private static final MarshallingInfo<List> INHERITEDPROPERTIES_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("inheritedProperties").build();
+    private static final MarshallingInfo<String> LOGGROUPCLASS_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("logGroupClass").build();
 
     private static final LogGroupMarshaller instance = new LogGroupMarshaller();
 
@@ -72,6 +74,7 @@ public class LogGroupMarshaller {
             protocolMarshaller.marshall(logGroup.getKmsKeyId(), KMSKEYID_BINDING);
             protocolMarshaller.marshall(logGroup.getDataProtectionStatus(), DATAPROTECTIONSTATUS_BINDING);
             protocolMarshaller.marshall(logGroup.getInheritedProperties(), INHERITEDPROPERTIES_BINDING);
+            protocolMarshaller.marshall(logGroup.getLogGroupClass(), LOGGROUPCLASS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

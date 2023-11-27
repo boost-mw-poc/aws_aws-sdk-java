@@ -38,6 +38,8 @@ public class CreateAccessorRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AccessorType").build();
     private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Tags").build();
+    private static final MarshallingInfo<String> NETWORKTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("NetworkType").build();
 
     private static final CreateAccessorRequestMarshaller instance = new CreateAccessorRequestMarshaller();
 
@@ -58,6 +60,7 @@ public class CreateAccessorRequestMarshaller {
             protocolMarshaller.marshall(createAccessorRequest.getClientRequestToken(), CLIENTREQUESTTOKEN_BINDING);
             protocolMarshaller.marshall(createAccessorRequest.getAccessorType(), ACCESSORTYPE_BINDING);
             protocolMarshaller.marshall(createAccessorRequest.getTags(), TAGS_BINDING);
+            protocolMarshaller.marshall(createAccessorRequest.getNetworkType(), NETWORKTYPE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

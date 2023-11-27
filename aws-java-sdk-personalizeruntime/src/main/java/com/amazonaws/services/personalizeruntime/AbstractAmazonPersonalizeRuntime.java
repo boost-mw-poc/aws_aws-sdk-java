@@ -28,6 +28,11 @@ public class AbstractAmazonPersonalizeRuntime implements AmazonPersonalizeRuntim
     }
 
     @Override
+    public GetActionRecommendationsResult getActionRecommendations(GetActionRecommendationsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetPersonalizedRankingResult getPersonalizedRanking(GetPersonalizedRankingRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

@@ -19,9 +19,9 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Records configuration changes to specified resource types. For more information about the configuration recorder, see
- * <a href="https://docs.aws.amazon.com/config/latest/developerguide/stop-start-recorder.html"> <b>Managing the
- * Configuration Recorder</b> </a> in the <i>Config Developer Guide</i>.
+ * Records configuration changes to your specified resource types. For more information about the configuration
+ * recorder, see <a href="https://docs.aws.amazon.com/config/latest/developerguide/stop-start-recorder.html">
+ * <b>Managing the Configuration Recorder</b> </a> in the <i>Config Developer Guide</i>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/ConfigurationRecorder" target="_top">AWS API
@@ -35,10 +35,12 @@ public class ConfigurationRecorder implements Serializable, Cloneable, Structure
      * The name of the configuration recorder. Config automatically assigns the name of "default" when creating the
      * configuration recorder.
      * </p>
+     * <note>
      * <p>
      * You cannot change the name of the configuration recorder after it has been created. To change the configuration
      * recorder name, you must delete it and create a new configuration recorder with a new name.
      * </p>
+     * </note>
      */
     private String name;
     /**
@@ -94,23 +96,54 @@ public class ConfigurationRecorder implements Serializable, Cloneable, Structure
      * </note>
      */
     private RecordingGroup recordingGroup;
+    /**
+     * <p>
+     * Specifies the default recording frequency that Config uses to record configuration changes. Config supports
+     * <i>Continuous recording</i> and <i>Daily recording</i>.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Continuous recording allows you to record configuration changes continuously whenever a change occurs.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Daily recording allows you record configuration data once every 24 hours, only if a change has occurred.
+     * </p>
+     * </li>
+     * </ul>
+     * <note>
+     * <p>
+     * Firewall Manager depends on continuous recording to monitor your resources. If you are using Firewall Manager, it
+     * is recommended that you set the recording frequency to Continuous.
+     * </p>
+     * </note>
+     * <p>
+     * You can also override the recording frequency for specific resource types.
+     * </p>
+     */
+    private RecordingMode recordingMode;
 
     /**
      * <p>
      * The name of the configuration recorder. Config automatically assigns the name of "default" when creating the
      * configuration recorder.
      * </p>
+     * <note>
      * <p>
      * You cannot change the name of the configuration recorder after it has been created. To change the configuration
      * recorder name, you must delete it and create a new configuration recorder with a new name.
      * </p>
+     * </note>
      * 
      * @param name
      *        The name of the configuration recorder. Config automatically assigns the name of "default" when creating
-     *        the configuration recorder.</p>
+     *        the configuration recorder.</p> <note>
      *        <p>
      *        You cannot change the name of the configuration recorder after it has been created. To change the
      *        configuration recorder name, you must delete it and create a new configuration recorder with a new name.
+     *        </p>
      */
 
     public void setName(String name) {
@@ -122,16 +155,19 @@ public class ConfigurationRecorder implements Serializable, Cloneable, Structure
      * The name of the configuration recorder. Config automatically assigns the name of "default" when creating the
      * configuration recorder.
      * </p>
+     * <note>
      * <p>
      * You cannot change the name of the configuration recorder after it has been created. To change the configuration
      * recorder name, you must delete it and create a new configuration recorder with a new name.
      * </p>
+     * </note>
      * 
      * @return The name of the configuration recorder. Config automatically assigns the name of "default" when creating
-     *         the configuration recorder.</p>
+     *         the configuration recorder.</p> <note>
      *         <p>
      *         You cannot change the name of the configuration recorder after it has been created. To change the
      *         configuration recorder name, you must delete it and create a new configuration recorder with a new name.
+     *         </p>
      */
 
     public String getName() {
@@ -143,17 +179,20 @@ public class ConfigurationRecorder implements Serializable, Cloneable, Structure
      * The name of the configuration recorder. Config automatically assigns the name of "default" when creating the
      * configuration recorder.
      * </p>
+     * <note>
      * <p>
      * You cannot change the name of the configuration recorder after it has been created. To change the configuration
      * recorder name, you must delete it and create a new configuration recorder with a new name.
      * </p>
+     * </note>
      * 
      * @param name
      *        The name of the configuration recorder. Config automatically assigns the name of "default" when creating
-     *        the configuration recorder.</p>
+     *        the configuration recorder.</p> <note>
      *        <p>
      *        You cannot change the name of the configuration recorder after it has been created. To change the
      *        configuration recorder name, you must delete it and create a new configuration recorder with a new name.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -486,6 +525,175 @@ public class ConfigurationRecorder implements Serializable, Cloneable, Structure
     }
 
     /**
+     * <p>
+     * Specifies the default recording frequency that Config uses to record configuration changes. Config supports
+     * <i>Continuous recording</i> and <i>Daily recording</i>.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Continuous recording allows you to record configuration changes continuously whenever a change occurs.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Daily recording allows you record configuration data once every 24 hours, only if a change has occurred.
+     * </p>
+     * </li>
+     * </ul>
+     * <note>
+     * <p>
+     * Firewall Manager depends on continuous recording to monitor your resources. If you are using Firewall Manager, it
+     * is recommended that you set the recording frequency to Continuous.
+     * </p>
+     * </note>
+     * <p>
+     * You can also override the recording frequency for specific resource types.
+     * </p>
+     * 
+     * @param recordingMode
+     *        Specifies the default recording frequency that Config uses to record configuration changes. Config
+     *        supports <i>Continuous recording</i> and <i>Daily recording</i>.</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        Continuous recording allows you to record configuration changes continuously whenever a change occurs.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Daily recording allows you record configuration data once every 24 hours, only if a change has occurred.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <note>
+     *        <p>
+     *        Firewall Manager depends on continuous recording to monitor your resources. If you are using Firewall
+     *        Manager, it is recommended that you set the recording frequency to Continuous.
+     *        </p>
+     *        </note>
+     *        <p>
+     *        You can also override the recording frequency for specific resource types.
+     */
+
+    public void setRecordingMode(RecordingMode recordingMode) {
+        this.recordingMode = recordingMode;
+    }
+
+    /**
+     * <p>
+     * Specifies the default recording frequency that Config uses to record configuration changes. Config supports
+     * <i>Continuous recording</i> and <i>Daily recording</i>.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Continuous recording allows you to record configuration changes continuously whenever a change occurs.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Daily recording allows you record configuration data once every 24 hours, only if a change has occurred.
+     * </p>
+     * </li>
+     * </ul>
+     * <note>
+     * <p>
+     * Firewall Manager depends on continuous recording to monitor your resources. If you are using Firewall Manager, it
+     * is recommended that you set the recording frequency to Continuous.
+     * </p>
+     * </note>
+     * <p>
+     * You can also override the recording frequency for specific resource types.
+     * </p>
+     * 
+     * @return Specifies the default recording frequency that Config uses to record configuration changes. Config
+     *         supports <i>Continuous recording</i> and <i>Daily recording</i>.</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         Continuous recording allows you to record configuration changes continuously whenever a change occurs.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Daily recording allows you record configuration data once every 24 hours, only if a change has occurred.
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <note>
+     *         <p>
+     *         Firewall Manager depends on continuous recording to monitor your resources. If you are using Firewall
+     *         Manager, it is recommended that you set the recording frequency to Continuous.
+     *         </p>
+     *         </note>
+     *         <p>
+     *         You can also override the recording frequency for specific resource types.
+     */
+
+    public RecordingMode getRecordingMode() {
+        return this.recordingMode;
+    }
+
+    /**
+     * <p>
+     * Specifies the default recording frequency that Config uses to record configuration changes. Config supports
+     * <i>Continuous recording</i> and <i>Daily recording</i>.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Continuous recording allows you to record configuration changes continuously whenever a change occurs.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Daily recording allows you record configuration data once every 24 hours, only if a change has occurred.
+     * </p>
+     * </li>
+     * </ul>
+     * <note>
+     * <p>
+     * Firewall Manager depends on continuous recording to monitor your resources. If you are using Firewall Manager, it
+     * is recommended that you set the recording frequency to Continuous.
+     * </p>
+     * </note>
+     * <p>
+     * You can also override the recording frequency for specific resource types.
+     * </p>
+     * 
+     * @param recordingMode
+     *        Specifies the default recording frequency that Config uses to record configuration changes. Config
+     *        supports <i>Continuous recording</i> and <i>Daily recording</i>.</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        Continuous recording allows you to record configuration changes continuously whenever a change occurs.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Daily recording allows you record configuration data once every 24 hours, only if a change has occurred.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <note>
+     *        <p>
+     *        Firewall Manager depends on continuous recording to monitor your resources. If you are using Firewall
+     *        Manager, it is recommended that you set the recording frequency to Continuous.
+     *        </p>
+     *        </note>
+     *        <p>
+     *        You can also override the recording frequency for specific resource types.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ConfigurationRecorder withRecordingMode(RecordingMode recordingMode) {
+        setRecordingMode(recordingMode);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -502,7 +710,9 @@ public class ConfigurationRecorder implements Serializable, Cloneable, Structure
         if (getRoleARN() != null)
             sb.append("RoleARN: ").append(getRoleARN()).append(",");
         if (getRecordingGroup() != null)
-            sb.append("RecordingGroup: ").append(getRecordingGroup());
+            sb.append("RecordingGroup: ").append(getRecordingGroup()).append(",");
+        if (getRecordingMode() != null)
+            sb.append("RecordingMode: ").append(getRecordingMode());
         sb.append("}");
         return sb.toString();
     }
@@ -529,6 +739,10 @@ public class ConfigurationRecorder implements Serializable, Cloneable, Structure
             return false;
         if (other.getRecordingGroup() != null && other.getRecordingGroup().equals(this.getRecordingGroup()) == false)
             return false;
+        if (other.getRecordingMode() == null ^ this.getRecordingMode() == null)
+            return false;
+        if (other.getRecordingMode() != null && other.getRecordingMode().equals(this.getRecordingMode()) == false)
+            return false;
         return true;
     }
 
@@ -540,6 +754,7 @@ public class ConfigurationRecorder implements Serializable, Cloneable, Structure
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
         hashCode = prime * hashCode + ((getRoleARN() == null) ? 0 : getRoleARN().hashCode());
         hashCode = prime * hashCode + ((getRecordingGroup() == null) ? 0 : getRecordingGroup().hashCode());
+        hashCode = prime * hashCode + ((getRecordingMode() == null) ? 0 : getRecordingMode().hashCode());
         return hashCode;
     }
 

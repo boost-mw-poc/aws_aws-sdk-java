@@ -88,6 +88,18 @@ public class CreateOntapVolumeConfigurationJsonUnmarshaller implements Unmarshal
                     context.nextToken();
                     createOntapVolumeConfiguration.setSnaplockConfiguration(CreateSnaplockConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("VolumeStyle", targetDepth)) {
+                    context.nextToken();
+                    createOntapVolumeConfiguration.setVolumeStyle(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("AggregateConfiguration", targetDepth)) {
+                    context.nextToken();
+                    createOntapVolumeConfiguration.setAggregateConfiguration(CreateAggregateConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("SizeInBytes", targetDepth)) {
+                    context.nextToken();
+                    createOntapVolumeConfiguration.setSizeInBytes(context.getUnmarshaller(Long.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

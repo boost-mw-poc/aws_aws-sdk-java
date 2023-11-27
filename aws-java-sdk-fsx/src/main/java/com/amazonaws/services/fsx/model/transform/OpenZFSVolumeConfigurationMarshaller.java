@@ -56,6 +56,12 @@ public class OpenZFSVolumeConfigurationMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DeleteIntermediateSnaphots").build();
     private static final MarshallingInfo<Boolean> DELETECLONEDVOLUMES_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DeleteClonedVolumes").build();
+    private static final MarshallingInfo<Boolean> DELETEINTERMEDIATEDATA_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DeleteIntermediateData").build();
+    private static final MarshallingInfo<String> SOURCESNAPSHOTARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SourceSnapshotARN").build();
+    private static final MarshallingInfo<String> DESTINATIONSNAPSHOT_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DestinationSnapshot").build();
 
     private static final OpenZFSVolumeConfigurationMarshaller instance = new OpenZFSVolumeConfigurationMarshaller();
 
@@ -87,6 +93,9 @@ public class OpenZFSVolumeConfigurationMarshaller {
             protocolMarshaller.marshall(openZFSVolumeConfiguration.getRestoreToSnapshot(), RESTORETOSNAPSHOT_BINDING);
             protocolMarshaller.marshall(openZFSVolumeConfiguration.getDeleteIntermediateSnaphots(), DELETEINTERMEDIATESNAPHOTS_BINDING);
             protocolMarshaller.marshall(openZFSVolumeConfiguration.getDeleteClonedVolumes(), DELETECLONEDVOLUMES_BINDING);
+            protocolMarshaller.marshall(openZFSVolumeConfiguration.getDeleteIntermediateData(), DELETEINTERMEDIATEDATA_BINDING);
+            protocolMarshaller.marshall(openZFSVolumeConfiguration.getSourceSnapshotARN(), SOURCESNAPSHOTARN_BINDING);
+            protocolMarshaller.marshall(openZFSVolumeConfiguration.getDestinationSnapshot(), DESTINATIONSNAPSHOT_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

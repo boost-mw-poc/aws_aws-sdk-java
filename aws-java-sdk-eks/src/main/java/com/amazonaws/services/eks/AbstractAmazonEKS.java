@@ -64,6 +64,11 @@ public class AbstractAmazonEKS implements AmazonEKS {
     }
 
     @Override
+    public CreatePodIdentityAssociationResult createPodIdentityAssociation(CreatePodIdentityAssociationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DeleteAddonResult deleteAddon(DeleteAddonRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -85,6 +90,11 @@ public class AbstractAmazonEKS implements AmazonEKS {
 
     @Override
     public DeleteNodegroupResult deleteNodegroup(DeleteNodegroupRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeletePodIdentityAssociationResult deletePodIdentityAssociation(DeletePodIdentityAssociationRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -134,6 +144,11 @@ public class AbstractAmazonEKS implements AmazonEKS {
     }
 
     @Override
+    public DescribePodIdentityAssociationResult describePodIdentityAssociation(DescribePodIdentityAssociationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DescribeUpdateResult describeUpdate(DescribeUpdateRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -170,6 +185,11 @@ public class AbstractAmazonEKS implements AmazonEKS {
 
     @Override
     public ListNodegroupsResult listNodegroups(ListNodegroupsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListPodIdentityAssociationsResult listPodIdentityAssociations(ListPodIdentityAssociationsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -225,6 +245,11 @@ public class AbstractAmazonEKS implements AmazonEKS {
 
     @Override
     public UpdateNodegroupVersionResult updateNodegroupVersion(UpdateNodegroupVersionRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdatePodIdentityAssociationResult updatePodIdentityAssociation(UpdatePodIdentityAssociationRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

@@ -67,6 +67,16 @@ public class DataShareAssociationStaxUnmarshaller implements Unmarshaller<DataSh
                     dataShareAssociation.setStatusChangeDate(DateStaxUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("ProducerAllowedWrites", targetDepth)) {
+                    dataShareAssociation.setProducerAllowedWrites(BooleanStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
+                if (context.testExpression("ConsumerAcceptedWrites", targetDepth)) {
+                    dataShareAssociation.setConsumerAcceptedWrites(BooleanStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return dataShareAssociation;

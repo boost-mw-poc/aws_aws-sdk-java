@@ -73,8 +73,8 @@ public class AccessPointDescription implements Serializable, Cloneable, Structur
     private PosixUser posixUser;
     /**
      * <p>
-     * The directory on the Amazon EFS file system that the access point exposes as the root directory to NFS clients
-     * using the access point.
+     * The directory on the EFS file system that the access point exposes as the root directory to NFS clients using the
+     * access point.
      * </p>
      */
     private RootDirectory rootDirectory;
@@ -412,13 +412,13 @@ public class AccessPointDescription implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The directory on the Amazon EFS file system that the access point exposes as the root directory to NFS clients
-     * using the access point.
+     * The directory on the EFS file system that the access point exposes as the root directory to NFS clients using the
+     * access point.
      * </p>
      * 
      * @param rootDirectory
-     *        The directory on the Amazon EFS file system that the access point exposes as the root directory to NFS
-     *        clients using the access point.
+     *        The directory on the EFS file system that the access point exposes as the root directory to NFS clients
+     *        using the access point.
      */
 
     public void setRootDirectory(RootDirectory rootDirectory) {
@@ -427,12 +427,12 @@ public class AccessPointDescription implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The directory on the Amazon EFS file system that the access point exposes as the root directory to NFS clients
-     * using the access point.
+     * The directory on the EFS file system that the access point exposes as the root directory to NFS clients using the
+     * access point.
      * </p>
      * 
-     * @return The directory on the Amazon EFS file system that the access point exposes as the root directory to NFS
-     *         clients using the access point.
+     * @return The directory on the EFS file system that the access point exposes as the root directory to NFS clients
+     *         using the access point.
      */
 
     public RootDirectory getRootDirectory() {
@@ -441,13 +441,13 @@ public class AccessPointDescription implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The directory on the Amazon EFS file system that the access point exposes as the root directory to NFS clients
-     * using the access point.
+     * The directory on the EFS file system that the access point exposes as the root directory to NFS clients using the
+     * access point.
      * </p>
      * 
      * @param rootDirectory
-     *        The directory on the Amazon EFS file system that the access point exposes as the root directory to NFS
-     *        clients using the access point.
+     *        The directory on the EFS file system that the access point exposes as the root directory to NFS clients
+     *        using the access point.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

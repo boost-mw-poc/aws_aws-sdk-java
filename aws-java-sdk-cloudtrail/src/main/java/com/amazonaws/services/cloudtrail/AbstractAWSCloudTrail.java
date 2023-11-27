@@ -103,6 +103,16 @@ public class AbstractAWSCloudTrail implements AWSCloudTrail {
     }
 
     @Override
+    public DisableFederationResult disableFederation(DisableFederationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public EnableFederationResult enableFederation(EnableFederationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetChannelResult getChannel(GetChannelRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

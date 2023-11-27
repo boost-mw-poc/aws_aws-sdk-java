@@ -39,7 +39,7 @@ public class Severity implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Deprecated. This attribute is being deprecated. Instead of providing <code>Product</code>, provide
+     * Deprecated. This attribute isn't included in findings. Instead of providing <code>Product</code>, provide
      * <code>Original</code>.
      * </p>
      * <p>
@@ -114,8 +114,8 @@ public class Severity implements Serializable, Cloneable, StructuredPojo {
     private String label;
     /**
      * <p>
-     * Deprecated. The normalized severity of a finding. This attribute is being deprecated. Instead of providing
-     * <code>Normalized</code>, provide <code>Label</code>.
+     * Deprecated. The normalized severity of a finding. Instead of providing <code>Normalized</code>, provide
+     * <code>Label</code>.
      * </p>
      * <p>
      * If you provide <code>Label</code> and do not provide <code>Normalized</code>, then <code>Normalized</code> is set
@@ -159,7 +159,7 @@ public class Severity implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Deprecated. This attribute is being deprecated. Instead of providing <code>Product</code>, provide
+     * Deprecated. This attribute isn't included in findings. Instead of providing <code>Product</code>, provide
      * <code>Original</code>.
      * </p>
      * <p>
@@ -168,7 +168,7 @@ public class Severity implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param product
-     *        Deprecated. This attribute is being deprecated. Instead of providing <code>Product</code>, provide
+     *        Deprecated. This attribute isn't included in findings. Instead of providing <code>Product</code>, provide
      *        <code>Original</code>.</p>
      *        <p>
      *        The native severity as defined by the Amazon Web Services service or integrated partner product that
@@ -181,7 +181,7 @@ public class Severity implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Deprecated. This attribute is being deprecated. Instead of providing <code>Product</code>, provide
+     * Deprecated. This attribute isn't included in findings. Instead of providing <code>Product</code>, provide
      * <code>Original</code>.
      * </p>
      * <p>
@@ -189,7 +189,7 @@ public class Severity implements Serializable, Cloneable, StructuredPojo {
      * the finding.
      * </p>
      * 
-     * @return Deprecated. This attribute is being deprecated. Instead of providing <code>Product</code>, provide
+     * @return Deprecated. This attribute isn't included in findings. Instead of providing <code>Product</code>, provide
      *         <code>Original</code>.</p>
      *         <p>
      *         The native severity as defined by the Amazon Web Services service or integrated partner product that
@@ -202,7 +202,7 @@ public class Severity implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Deprecated. This attribute is being deprecated. Instead of providing <code>Product</code>, provide
+     * Deprecated. This attribute isn't included in findings. Instead of providing <code>Product</code>, provide
      * <code>Original</code>.
      * </p>
      * <p>
@@ -211,7 +211,7 @@ public class Severity implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param product
-     *        Deprecated. This attribute is being deprecated. Instead of providing <code>Product</code>, provide
+     *        Deprecated. This attribute isn't included in findings. Instead of providing <code>Product</code>, provide
      *        <code>Original</code>.</p>
      *        <p>
      *        The native severity as defined by the Amazon Web Services service or integrated partner product that
@@ -745,8 +745,8 @@ public class Severity implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Deprecated. The normalized severity of a finding. This attribute is being deprecated. Instead of providing
-     * <code>Normalized</code>, provide <code>Label</code>.
+     * Deprecated. The normalized severity of a finding. Instead of providing <code>Normalized</code>, provide
+     * <code>Label</code>.
      * </p>
      * <p>
      * If you provide <code>Label</code> and do not provide <code>Normalized</code>, then <code>Normalized</code> is set
@@ -781,8 +781,8 @@ public class Severity implements Serializable, Cloneable, StructuredPojo {
      * </ul>
      * 
      * @param normalized
-     *        Deprecated. The normalized severity of a finding. This attribute is being deprecated. Instead of providing
-     *        <code>Normalized</code>, provide <code>Label</code>.</p>
+     *        Deprecated. The normalized severity of a finding. Instead of providing <code>Normalized</code>, provide
+     *        <code>Label</code>.</p>
      *        <p>
      *        If you provide <code>Label</code> and do not provide <code>Normalized</code>, then <code>Normalized</code>
      *        is set automatically as follows.
@@ -821,8 +821,8 @@ public class Severity implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Deprecated. The normalized severity of a finding. This attribute is being deprecated. Instead of providing
-     * <code>Normalized</code>, provide <code>Label</code>.
+     * Deprecated. The normalized severity of a finding. Instead of providing <code>Normalized</code>, provide
+     * <code>Label</code>.
      * </p>
      * <p>
      * If you provide <code>Label</code> and do not provide <code>Normalized</code>, then <code>Normalized</code> is set
@@ -856,8 +856,8 @@ public class Severity implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * </ul>
      * 
-     * @return Deprecated. The normalized severity of a finding. This attribute is being deprecated. Instead of
-     *         providing <code>Normalized</code>, provide <code>Label</code>.</p>
+     * @return Deprecated. The normalized severity of a finding. Instead of providing <code>Normalized</code>, provide
+     *         <code>Label</code>.</p>
      *         <p>
      *         If you provide <code>Label</code> and do not provide <code>Normalized</code>, then
      *         <code>Normalized</code> is set automatically as follows.
@@ -896,8 +896,8 @@ public class Severity implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Deprecated. The normalized severity of a finding. This attribute is being deprecated. Instead of providing
-     * <code>Normalized</code>, provide <code>Label</code>.
+     * Deprecated. The normalized severity of a finding. Instead of providing <code>Normalized</code>, provide
+     * <code>Label</code>.
      * </p>
      * <p>
      * If you provide <code>Label</code> and do not provide <code>Normalized</code>, then <code>Normalized</code> is set
@@ -932,8 +932,8 @@ public class Severity implements Serializable, Cloneable, StructuredPojo {
      * </ul>
      * 
      * @param normalized
-     *        Deprecated. The normalized severity of a finding. This attribute is being deprecated. Instead of providing
-     *        <code>Normalized</code>, provide <code>Label</code>.</p>
+     *        Deprecated. The normalized severity of a finding. Instead of providing <code>Normalized</code>, provide
+     *        <code>Label</code>.</p>
      *        <p>
      *        If you provide <code>Label</code> and do not provide <code>Normalized</code>, then <code>Normalized</code>
      *        is set automatically as follows.

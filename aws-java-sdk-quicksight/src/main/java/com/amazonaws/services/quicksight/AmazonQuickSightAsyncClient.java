@@ -1235,6 +1235,41 @@ public class AmazonQuickSightAsyncClient extends AmazonQuickSightClient implemen
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteIdentityPropagationConfigResult> deleteIdentityPropagationConfigAsync(
+            DeleteIdentityPropagationConfigRequest request) {
+
+        return deleteIdentityPropagationConfigAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteIdentityPropagationConfigResult> deleteIdentityPropagationConfigAsync(
+            final DeleteIdentityPropagationConfigRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteIdentityPropagationConfigRequest, DeleteIdentityPropagationConfigResult> asyncHandler) {
+        final DeleteIdentityPropagationConfigRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteIdentityPropagationConfigResult>() {
+            @Override
+            public DeleteIdentityPropagationConfigResult call() throws Exception {
+                DeleteIdentityPropagationConfigResult result = null;
+
+                try {
+                    result = executeDeleteIdentityPropagationConfig(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteNamespaceResult> deleteNamespaceAsync(DeleteNamespaceRequest request) {
 
         return deleteNamespaceAsync(request, null);
@@ -3624,6 +3659,40 @@ public class AmazonQuickSightAsyncClient extends AmazonQuickSightClient implemen
     }
 
     @Override
+    public java.util.concurrent.Future<ListIdentityPropagationConfigsResult> listIdentityPropagationConfigsAsync(ListIdentityPropagationConfigsRequest request) {
+
+        return listIdentityPropagationConfigsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListIdentityPropagationConfigsResult> listIdentityPropagationConfigsAsync(
+            final ListIdentityPropagationConfigsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListIdentityPropagationConfigsRequest, ListIdentityPropagationConfigsResult> asyncHandler) {
+        final ListIdentityPropagationConfigsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListIdentityPropagationConfigsResult>() {
+            @Override
+            public ListIdentityPropagationConfigsResult call() throws Exception {
+                ListIdentityPropagationConfigsResult result = null;
+
+                try {
+                    result = executeListIdentityPropagationConfigs(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ListIngestionsResult> listIngestionsAsync(ListIngestionsRequest request) {
 
         return listIngestionsAsync(request, null);
@@ -5095,6 +5164,41 @@ public class AmazonQuickSightAsyncClient extends AmazonQuickSightClient implemen
 
                 try {
                     result = executeUpdateIAMPolicyAssignment(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateIdentityPropagationConfigResult> updateIdentityPropagationConfigAsync(
+            UpdateIdentityPropagationConfigRequest request) {
+
+        return updateIdentityPropagationConfigAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateIdentityPropagationConfigResult> updateIdentityPropagationConfigAsync(
+            final UpdateIdentityPropagationConfigRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateIdentityPropagationConfigRequest, UpdateIdentityPropagationConfigResult> asyncHandler) {
+        final UpdateIdentityPropagationConfigRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateIdentityPropagationConfigResult>() {
+            @Override
+            public UpdateIdentityPropagationConfigResult call() throws Exception {
+                UpdateIdentityPropagationConfigResult result = null;
+
+                try {
+                    result = executeUpdateIdentityPropagationConfig(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

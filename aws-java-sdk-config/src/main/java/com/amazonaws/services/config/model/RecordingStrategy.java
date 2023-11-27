@@ -36,10 +36,11 @@ public class RecordingStrategy implements Serializable, Cloneable, StructuredPoj
      * <li>
      * <p>
      * If you set this option to <code>ALL_SUPPORTED_RESOURCE_TYPES</code>, Config records configuration changes for all
-     * supported regionally recorded resource types. You also must set the <code>allSupported</code> field of <a
+     * supported resource types, excluding the global IAM resource types. You also must set the
+     * <code>allSupported</code> field of <a
      * href="https://docs.aws.amazon.com/config/latest/APIReference/API_RecordingGroup.html">RecordingGroup</a> to
-     * <code>true</code>. When Config adds support for a new regionally recorded resource type, Config automatically
-     * starts recording resources of that type. For a list of supported resource types, see <a href=
+     * <code>true</code>. When Config adds support for a new resource type, Config automatically starts recording
+     * resources of that type. For a list of supported resource types, see <a href=
      * "https://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html#supported-resources"
      * >Supported Resource Types</a> in the <i>Config developer guide</i>.
      * </p>
@@ -90,9 +91,9 @@ public class RecordingStrategy implements Serializable, Cloneable, StructuredPoj
      * <code>exclusionByResourceTypes</code> field will override other properties in the request.
      * </p>
      * <p>
-     * For example, even if you set <code>includeGlobalResourceTypes</code> to false, globally recorded IAM resource
-     * types will still be automatically recorded in this option unless those resource types are specifically listed as
-     * exclusions in the <code>resourceTypes</code> field of <code>exclusionByResourceTypes</code>.
+     * For example, even if you set <code>includeGlobalResourceTypes</code> to false, global IAM resource types will
+     * still be automatically recorded in this option unless those resource types are specifically listed as exclusions
+     * in the <code>resourceTypes</code> field of <code>exclusionByResourceTypes</code>.
      * </p>
      * </note> <note>
      * <p>
@@ -104,10 +105,14 @@ public class RecordingStrategy implements Serializable, Cloneable, StructuredPoj
      * resource types, Config starts recording resources of that type automatically.
      * </p>
      * <p>
-     * In addition, unless specifically listed as exclusions, <code>AWS::RDS::GlobalCluster</code> will be recorded
-     * automatically in all supported Config Regions were the configuration recorder is enabled. IAM users, groups,
-     * roles, and customer managed policies will be recorded automatically in all enabled Config Regions where Config
-     * was available before February 2022. This list does not include the following Regions:
+     * Unless specifically listed as exclusions, <code>AWS::RDS::GlobalCluster</code> will be recorded automatically in
+     * all supported Config Regions were the configuration recorder is enabled.
+     * </p>
+     * <p>
+     * IAM users, groups, roles, and customer managed policies will be recorded in the Region where you set up the
+     * configuration recorder if that is a Region where Config was available before February 2022. You cannot be record
+     * the global IAM resouce types in Regions supported by Config after February 2022. This list where you cannot
+     * record the global IAM resource types includes the following Regions:
      * </p>
      * <ul>
      * <li>
@@ -153,10 +158,11 @@ public class RecordingStrategy implements Serializable, Cloneable, StructuredPoj
      * <li>
      * <p>
      * If you set this option to <code>ALL_SUPPORTED_RESOURCE_TYPES</code>, Config records configuration changes for all
-     * supported regionally recorded resource types. You also must set the <code>allSupported</code> field of <a
+     * supported resource types, excluding the global IAM resource types. You also must set the
+     * <code>allSupported</code> field of <a
      * href="https://docs.aws.amazon.com/config/latest/APIReference/API_RecordingGroup.html">RecordingGroup</a> to
-     * <code>true</code>. When Config adds support for a new regionally recorded resource type, Config automatically
-     * starts recording resources of that type. For a list of supported resource types, see <a href=
+     * <code>true</code>. When Config adds support for a new resource type, Config automatically starts recording
+     * resources of that type. For a list of supported resource types, see <a href=
      * "https://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html#supported-resources"
      * >Supported Resource Types</a> in the <i>Config developer guide</i>.
      * </p>
@@ -207,9 +213,9 @@ public class RecordingStrategy implements Serializable, Cloneable, StructuredPoj
      * <code>exclusionByResourceTypes</code> field will override other properties in the request.
      * </p>
      * <p>
-     * For example, even if you set <code>includeGlobalResourceTypes</code> to false, globally recorded IAM resource
-     * types will still be automatically recorded in this option unless those resource types are specifically listed as
-     * exclusions in the <code>resourceTypes</code> field of <code>exclusionByResourceTypes</code>.
+     * For example, even if you set <code>includeGlobalResourceTypes</code> to false, global IAM resource types will
+     * still be automatically recorded in this option unless those resource types are specifically listed as exclusions
+     * in the <code>resourceTypes</code> field of <code>exclusionByResourceTypes</code>.
      * </p>
      * </note> <note>
      * <p>
@@ -221,10 +227,14 @@ public class RecordingStrategy implements Serializable, Cloneable, StructuredPoj
      * resource types, Config starts recording resources of that type automatically.
      * </p>
      * <p>
-     * In addition, unless specifically listed as exclusions, <code>AWS::RDS::GlobalCluster</code> will be recorded
-     * automatically in all supported Config Regions were the configuration recorder is enabled. IAM users, groups,
-     * roles, and customer managed policies will be recorded automatically in all enabled Config Regions where Config
-     * was available before February 2022. This list does not include the following Regions:
+     * Unless specifically listed as exclusions, <code>AWS::RDS::GlobalCluster</code> will be recorded automatically in
+     * all supported Config Regions were the configuration recorder is enabled.
+     * </p>
+     * <p>
+     * IAM users, groups, roles, and customer managed policies will be recorded in the Region where you set up the
+     * configuration recorder if that is a Region where Config was available before February 2022. You cannot be record
+     * the global IAM resouce types in Regions supported by Config after February 2022. This list where you cannot
+     * record the global IAM resource types includes the following Regions:
      * </p>
      * <ul>
      * <li>
@@ -266,12 +276,11 @@ public class RecordingStrategy implements Serializable, Cloneable, StructuredPoj
      *        <li>
      *        <p>
      *        If you set this option to <code>ALL_SUPPORTED_RESOURCE_TYPES</code>, Config records configuration changes
-     *        for all supported regionally recorded resource types. You also must set the <code>allSupported</code>
-     *        field of <a
+     *        for all supported resource types, excluding the global IAM resource types. You also must set the
+     *        <code>allSupported</code> field of <a
      *        href="https://docs.aws.amazon.com/config/latest/APIReference/API_RecordingGroup.html">RecordingGroup</a>
-     *        to <code>true</code>. When Config adds support for a new regionally recorded resource type, Config
-     *        automatically starts recording resources of that type. For a list of supported resource types, see <a
-     *        href=
+     *        to <code>true</code>. When Config adds support for a new resource type, Config automatically starts
+     *        recording resources of that type. For a list of supported resource types, see <a href=
      *        "https://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html#supported-resources"
      *        >Supported Resource Types</a> in the <i>Config developer guide</i>.
      *        </p>
@@ -323,10 +332,9 @@ public class RecordingStrategy implements Serializable, Cloneable, StructuredPoj
      *        <code>exclusionByResourceTypes</code> field will override other properties in the request.
      *        </p>
      *        <p>
-     *        For example, even if you set <code>includeGlobalResourceTypes</code> to false, globally recorded IAM
-     *        resource types will still be automatically recorded in this option unless those resource types are
-     *        specifically listed as exclusions in the <code>resourceTypes</code> field of
-     *        <code>exclusionByResourceTypes</code>.
+     *        For example, even if you set <code>includeGlobalResourceTypes</code> to false, global IAM resource types
+     *        will still be automatically recorded in this option unless those resource types are specifically listed as
+     *        exclusions in the <code>resourceTypes</code> field of <code>exclusionByResourceTypes</code>.
      *        </p>
      *        </note> <note>
      *        <p>
@@ -338,10 +346,14 @@ public class RecordingStrategy implements Serializable, Cloneable, StructuredPoj
      *        global resource types, Config starts recording resources of that type automatically.
      *        </p>
      *        <p>
-     *        In addition, unless specifically listed as exclusions, <code>AWS::RDS::GlobalCluster</code> will be
-     *        recorded automatically in all supported Config Regions were the configuration recorder is enabled. IAM
-     *        users, groups, roles, and customer managed policies will be recorded automatically in all enabled Config
-     *        Regions where Config was available before February 2022. This list does not include the following Regions:
+     *        Unless specifically listed as exclusions, <code>AWS::RDS::GlobalCluster</code> will be recorded
+     *        automatically in all supported Config Regions were the configuration recorder is enabled.
+     *        </p>
+     *        <p>
+     *        IAM users, groups, roles, and customer managed policies will be recorded in the Region where you set up
+     *        the configuration recorder if that is a Region where Config was available before February 2022. You cannot
+     *        be record the global IAM resouce types in Regions supported by Config after February 2022. This list where
+     *        you cannot record the global IAM resource types includes the following Regions:
      *        </p>
      *        <ul>
      *        <li>
@@ -390,10 +402,11 @@ public class RecordingStrategy implements Serializable, Cloneable, StructuredPoj
      * <li>
      * <p>
      * If you set this option to <code>ALL_SUPPORTED_RESOURCE_TYPES</code>, Config records configuration changes for all
-     * supported regionally recorded resource types. You also must set the <code>allSupported</code> field of <a
+     * supported resource types, excluding the global IAM resource types. You also must set the
+     * <code>allSupported</code> field of <a
      * href="https://docs.aws.amazon.com/config/latest/APIReference/API_RecordingGroup.html">RecordingGroup</a> to
-     * <code>true</code>. When Config adds support for a new regionally recorded resource type, Config automatically
-     * starts recording resources of that type. For a list of supported resource types, see <a href=
+     * <code>true</code>. When Config adds support for a new resource type, Config automatically starts recording
+     * resources of that type. For a list of supported resource types, see <a href=
      * "https://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html#supported-resources"
      * >Supported Resource Types</a> in the <i>Config developer guide</i>.
      * </p>
@@ -444,9 +457,9 @@ public class RecordingStrategy implements Serializable, Cloneable, StructuredPoj
      * <code>exclusionByResourceTypes</code> field will override other properties in the request.
      * </p>
      * <p>
-     * For example, even if you set <code>includeGlobalResourceTypes</code> to false, globally recorded IAM resource
-     * types will still be automatically recorded in this option unless those resource types are specifically listed as
-     * exclusions in the <code>resourceTypes</code> field of <code>exclusionByResourceTypes</code>.
+     * For example, even if you set <code>includeGlobalResourceTypes</code> to false, global IAM resource types will
+     * still be automatically recorded in this option unless those resource types are specifically listed as exclusions
+     * in the <code>resourceTypes</code> field of <code>exclusionByResourceTypes</code>.
      * </p>
      * </note> <note>
      * <p>
@@ -458,10 +471,14 @@ public class RecordingStrategy implements Serializable, Cloneable, StructuredPoj
      * resource types, Config starts recording resources of that type automatically.
      * </p>
      * <p>
-     * In addition, unless specifically listed as exclusions, <code>AWS::RDS::GlobalCluster</code> will be recorded
-     * automatically in all supported Config Regions were the configuration recorder is enabled. IAM users, groups,
-     * roles, and customer managed policies will be recorded automatically in all enabled Config Regions where Config
-     * was available before February 2022. This list does not include the following Regions:
+     * Unless specifically listed as exclusions, <code>AWS::RDS::GlobalCluster</code> will be recorded automatically in
+     * all supported Config Regions were the configuration recorder is enabled.
+     * </p>
+     * <p>
+     * IAM users, groups, roles, and customer managed policies will be recorded in the Region where you set up the
+     * configuration recorder if that is a Region where Config was available before February 2022. You cannot be record
+     * the global IAM resouce types in Regions supported by Config after February 2022. This list where you cannot
+     * record the global IAM resource types includes the following Regions:
      * </p>
      * <ul>
      * <li>
@@ -502,12 +519,11 @@ public class RecordingStrategy implements Serializable, Cloneable, StructuredPoj
      *         <li>
      *         <p>
      *         If you set this option to <code>ALL_SUPPORTED_RESOURCE_TYPES</code>, Config records configuration changes
-     *         for all supported regionally recorded resource types. You also must set the <code>allSupported</code>
-     *         field of <a
+     *         for all supported resource types, excluding the global IAM resource types. You also must set the
+     *         <code>allSupported</code> field of <a
      *         href="https://docs.aws.amazon.com/config/latest/APIReference/API_RecordingGroup.html">RecordingGroup</a>
-     *         to <code>true</code>. When Config adds support for a new regionally recorded resource type, Config
-     *         automatically starts recording resources of that type. For a list of supported resource types, see <a
-     *         href=
+     *         to <code>true</code>. When Config adds support for a new resource type, Config automatically starts
+     *         recording resources of that type. For a list of supported resource types, see <a href=
      *         "https://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html#supported-resources"
      *         >Supported Resource Types</a> in the <i>Config developer guide</i>.
      *         </p>
@@ -559,10 +575,9 @@ public class RecordingStrategy implements Serializable, Cloneable, StructuredPoj
      *         <code>exclusionByResourceTypes</code> field will override other properties in the request.
      *         </p>
      *         <p>
-     *         For example, even if you set <code>includeGlobalResourceTypes</code> to false, globally recorded IAM
-     *         resource types will still be automatically recorded in this option unless those resource types are
-     *         specifically listed as exclusions in the <code>resourceTypes</code> field of
-     *         <code>exclusionByResourceTypes</code>.
+     *         For example, even if you set <code>includeGlobalResourceTypes</code> to false, global IAM resource types
+     *         will still be automatically recorded in this option unless those resource types are specifically listed
+     *         as exclusions in the <code>resourceTypes</code> field of <code>exclusionByResourceTypes</code>.
      *         </p>
      *         </note> <note>
      *         <p>
@@ -574,11 +589,14 @@ public class RecordingStrategy implements Serializable, Cloneable, StructuredPoj
      *         global resource types, Config starts recording resources of that type automatically.
      *         </p>
      *         <p>
-     *         In addition, unless specifically listed as exclusions, <code>AWS::RDS::GlobalCluster</code> will be
-     *         recorded automatically in all supported Config Regions were the configuration recorder is enabled. IAM
-     *         users, groups, roles, and customer managed policies will be recorded automatically in all enabled Config
-     *         Regions where Config was available before February 2022. This list does not include the following
-     *         Regions:
+     *         Unless specifically listed as exclusions, <code>AWS::RDS::GlobalCluster</code> will be recorded
+     *         automatically in all supported Config Regions were the configuration recorder is enabled.
+     *         </p>
+     *         <p>
+     *         IAM users, groups, roles, and customer managed policies will be recorded in the Region where you set up
+     *         the configuration recorder if that is a Region where Config was available before February 2022. You
+     *         cannot be record the global IAM resouce types in Regions supported by Config after February 2022. This
+     *         list where you cannot record the global IAM resource types includes the following Regions:
      *         </p>
      *         <ul>
      *         <li>
@@ -627,10 +645,11 @@ public class RecordingStrategy implements Serializable, Cloneable, StructuredPoj
      * <li>
      * <p>
      * If you set this option to <code>ALL_SUPPORTED_RESOURCE_TYPES</code>, Config records configuration changes for all
-     * supported regionally recorded resource types. You also must set the <code>allSupported</code> field of <a
+     * supported resource types, excluding the global IAM resource types. You also must set the
+     * <code>allSupported</code> field of <a
      * href="https://docs.aws.amazon.com/config/latest/APIReference/API_RecordingGroup.html">RecordingGroup</a> to
-     * <code>true</code>. When Config adds support for a new regionally recorded resource type, Config automatically
-     * starts recording resources of that type. For a list of supported resource types, see <a href=
+     * <code>true</code>. When Config adds support for a new resource type, Config automatically starts recording
+     * resources of that type. For a list of supported resource types, see <a href=
      * "https://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html#supported-resources"
      * >Supported Resource Types</a> in the <i>Config developer guide</i>.
      * </p>
@@ -681,9 +700,9 @@ public class RecordingStrategy implements Serializable, Cloneable, StructuredPoj
      * <code>exclusionByResourceTypes</code> field will override other properties in the request.
      * </p>
      * <p>
-     * For example, even if you set <code>includeGlobalResourceTypes</code> to false, globally recorded IAM resource
-     * types will still be automatically recorded in this option unless those resource types are specifically listed as
-     * exclusions in the <code>resourceTypes</code> field of <code>exclusionByResourceTypes</code>.
+     * For example, even if you set <code>includeGlobalResourceTypes</code> to false, global IAM resource types will
+     * still be automatically recorded in this option unless those resource types are specifically listed as exclusions
+     * in the <code>resourceTypes</code> field of <code>exclusionByResourceTypes</code>.
      * </p>
      * </note> <note>
      * <p>
@@ -695,10 +714,14 @@ public class RecordingStrategy implements Serializable, Cloneable, StructuredPoj
      * resource types, Config starts recording resources of that type automatically.
      * </p>
      * <p>
-     * In addition, unless specifically listed as exclusions, <code>AWS::RDS::GlobalCluster</code> will be recorded
-     * automatically in all supported Config Regions were the configuration recorder is enabled. IAM users, groups,
-     * roles, and customer managed policies will be recorded automatically in all enabled Config Regions where Config
-     * was available before February 2022. This list does not include the following Regions:
+     * Unless specifically listed as exclusions, <code>AWS::RDS::GlobalCluster</code> will be recorded automatically in
+     * all supported Config Regions were the configuration recorder is enabled.
+     * </p>
+     * <p>
+     * IAM users, groups, roles, and customer managed policies will be recorded in the Region where you set up the
+     * configuration recorder if that is a Region where Config was available before February 2022. You cannot be record
+     * the global IAM resouce types in Regions supported by Config after February 2022. This list where you cannot
+     * record the global IAM resource types includes the following Regions:
      * </p>
      * <ul>
      * <li>
@@ -740,12 +763,11 @@ public class RecordingStrategy implements Serializable, Cloneable, StructuredPoj
      *        <li>
      *        <p>
      *        If you set this option to <code>ALL_SUPPORTED_RESOURCE_TYPES</code>, Config records configuration changes
-     *        for all supported regionally recorded resource types. You also must set the <code>allSupported</code>
-     *        field of <a
+     *        for all supported resource types, excluding the global IAM resource types. You also must set the
+     *        <code>allSupported</code> field of <a
      *        href="https://docs.aws.amazon.com/config/latest/APIReference/API_RecordingGroup.html">RecordingGroup</a>
-     *        to <code>true</code>. When Config adds support for a new regionally recorded resource type, Config
-     *        automatically starts recording resources of that type. For a list of supported resource types, see <a
-     *        href=
+     *        to <code>true</code>. When Config adds support for a new resource type, Config automatically starts
+     *        recording resources of that type. For a list of supported resource types, see <a href=
      *        "https://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html#supported-resources"
      *        >Supported Resource Types</a> in the <i>Config developer guide</i>.
      *        </p>
@@ -797,10 +819,9 @@ public class RecordingStrategy implements Serializable, Cloneable, StructuredPoj
      *        <code>exclusionByResourceTypes</code> field will override other properties in the request.
      *        </p>
      *        <p>
-     *        For example, even if you set <code>includeGlobalResourceTypes</code> to false, globally recorded IAM
-     *        resource types will still be automatically recorded in this option unless those resource types are
-     *        specifically listed as exclusions in the <code>resourceTypes</code> field of
-     *        <code>exclusionByResourceTypes</code>.
+     *        For example, even if you set <code>includeGlobalResourceTypes</code> to false, global IAM resource types
+     *        will still be automatically recorded in this option unless those resource types are specifically listed as
+     *        exclusions in the <code>resourceTypes</code> field of <code>exclusionByResourceTypes</code>.
      *        </p>
      *        </note> <note>
      *        <p>
@@ -812,10 +833,14 @@ public class RecordingStrategy implements Serializable, Cloneable, StructuredPoj
      *        global resource types, Config starts recording resources of that type automatically.
      *        </p>
      *        <p>
-     *        In addition, unless specifically listed as exclusions, <code>AWS::RDS::GlobalCluster</code> will be
-     *        recorded automatically in all supported Config Regions were the configuration recorder is enabled. IAM
-     *        users, groups, roles, and customer managed policies will be recorded automatically in all enabled Config
-     *        Regions where Config was available before February 2022. This list does not include the following Regions:
+     *        Unless specifically listed as exclusions, <code>AWS::RDS::GlobalCluster</code> will be recorded
+     *        automatically in all supported Config Regions were the configuration recorder is enabled.
+     *        </p>
+     *        <p>
+     *        IAM users, groups, roles, and customer managed policies will be recorded in the Region where you set up
+     *        the configuration recorder if that is a Region where Config was available before February 2022. You cannot
+     *        be record the global IAM resouce types in Regions supported by Config after February 2022. This list where
+     *        you cannot record the global IAM resource types includes the following Regions:
      *        </p>
      *        <ul>
      *        <li>
@@ -866,10 +891,11 @@ public class RecordingStrategy implements Serializable, Cloneable, StructuredPoj
      * <li>
      * <p>
      * If you set this option to <code>ALL_SUPPORTED_RESOURCE_TYPES</code>, Config records configuration changes for all
-     * supported regionally recorded resource types. You also must set the <code>allSupported</code> field of <a
+     * supported resource types, excluding the global IAM resource types. You also must set the
+     * <code>allSupported</code> field of <a
      * href="https://docs.aws.amazon.com/config/latest/APIReference/API_RecordingGroup.html">RecordingGroup</a> to
-     * <code>true</code>. When Config adds support for a new regionally recorded resource type, Config automatically
-     * starts recording resources of that type. For a list of supported resource types, see <a href=
+     * <code>true</code>. When Config adds support for a new resource type, Config automatically starts recording
+     * resources of that type. For a list of supported resource types, see <a href=
      * "https://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html#supported-resources"
      * >Supported Resource Types</a> in the <i>Config developer guide</i>.
      * </p>
@@ -920,9 +946,9 @@ public class RecordingStrategy implements Serializable, Cloneable, StructuredPoj
      * <code>exclusionByResourceTypes</code> field will override other properties in the request.
      * </p>
      * <p>
-     * For example, even if you set <code>includeGlobalResourceTypes</code> to false, globally recorded IAM resource
-     * types will still be automatically recorded in this option unless those resource types are specifically listed as
-     * exclusions in the <code>resourceTypes</code> field of <code>exclusionByResourceTypes</code>.
+     * For example, even if you set <code>includeGlobalResourceTypes</code> to false, global IAM resource types will
+     * still be automatically recorded in this option unless those resource types are specifically listed as exclusions
+     * in the <code>resourceTypes</code> field of <code>exclusionByResourceTypes</code>.
      * </p>
      * </note> <note>
      * <p>
@@ -934,10 +960,14 @@ public class RecordingStrategy implements Serializable, Cloneable, StructuredPoj
      * resource types, Config starts recording resources of that type automatically.
      * </p>
      * <p>
-     * In addition, unless specifically listed as exclusions, <code>AWS::RDS::GlobalCluster</code> will be recorded
-     * automatically in all supported Config Regions were the configuration recorder is enabled. IAM users, groups,
-     * roles, and customer managed policies will be recorded automatically in all enabled Config Regions where Config
-     * was available before February 2022. This list does not include the following Regions:
+     * Unless specifically listed as exclusions, <code>AWS::RDS::GlobalCluster</code> will be recorded automatically in
+     * all supported Config Regions were the configuration recorder is enabled.
+     * </p>
+     * <p>
+     * IAM users, groups, roles, and customer managed policies will be recorded in the Region where you set up the
+     * configuration recorder if that is a Region where Config was available before February 2022. You cannot be record
+     * the global IAM resouce types in Regions supported by Config after February 2022. This list where you cannot
+     * record the global IAM resource types includes the following Regions:
      * </p>
      * <ul>
      * <li>
@@ -979,12 +1009,11 @@ public class RecordingStrategy implements Serializable, Cloneable, StructuredPoj
      *        <li>
      *        <p>
      *        If you set this option to <code>ALL_SUPPORTED_RESOURCE_TYPES</code>, Config records configuration changes
-     *        for all supported regionally recorded resource types. You also must set the <code>allSupported</code>
-     *        field of <a
+     *        for all supported resource types, excluding the global IAM resource types. You also must set the
+     *        <code>allSupported</code> field of <a
      *        href="https://docs.aws.amazon.com/config/latest/APIReference/API_RecordingGroup.html">RecordingGroup</a>
-     *        to <code>true</code>. When Config adds support for a new regionally recorded resource type, Config
-     *        automatically starts recording resources of that type. For a list of supported resource types, see <a
-     *        href=
+     *        to <code>true</code>. When Config adds support for a new resource type, Config automatically starts
+     *        recording resources of that type. For a list of supported resource types, see <a href=
      *        "https://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html#supported-resources"
      *        >Supported Resource Types</a> in the <i>Config developer guide</i>.
      *        </p>
@@ -1036,10 +1065,9 @@ public class RecordingStrategy implements Serializable, Cloneable, StructuredPoj
      *        <code>exclusionByResourceTypes</code> field will override other properties in the request.
      *        </p>
      *        <p>
-     *        For example, even if you set <code>includeGlobalResourceTypes</code> to false, globally recorded IAM
-     *        resource types will still be automatically recorded in this option unless those resource types are
-     *        specifically listed as exclusions in the <code>resourceTypes</code> field of
-     *        <code>exclusionByResourceTypes</code>.
+     *        For example, even if you set <code>includeGlobalResourceTypes</code> to false, global IAM resource types
+     *        will still be automatically recorded in this option unless those resource types are specifically listed as
+     *        exclusions in the <code>resourceTypes</code> field of <code>exclusionByResourceTypes</code>.
      *        </p>
      *        </note> <note>
      *        <p>
@@ -1051,10 +1079,14 @@ public class RecordingStrategy implements Serializable, Cloneable, StructuredPoj
      *        global resource types, Config starts recording resources of that type automatically.
      *        </p>
      *        <p>
-     *        In addition, unless specifically listed as exclusions, <code>AWS::RDS::GlobalCluster</code> will be
-     *        recorded automatically in all supported Config Regions were the configuration recorder is enabled. IAM
-     *        users, groups, roles, and customer managed policies will be recorded automatically in all enabled Config
-     *        Regions where Config was available before February 2022. This list does not include the following Regions:
+     *        Unless specifically listed as exclusions, <code>AWS::RDS::GlobalCluster</code> will be recorded
+     *        automatically in all supported Config Regions were the configuration recorder is enabled.
+     *        </p>
+     *        <p>
+     *        IAM users, groups, roles, and customer managed policies will be recorded in the Region where you set up
+     *        the configuration recorder if that is a Region where Config was available before February 2022. You cannot
+     *        be record the global IAM resouce types in Regions supported by Config after February 2022. This list where
+     *        you cannot record the global IAM resource types includes the following Regions:
      *        </p>
      *        <ul>
      *        <li>

@@ -107,6 +107,12 @@ public class VolumeRecommendation implements Serializable, Cloneable, Structured
      * </p>
      */
     private java.util.List<Tag> tags;
+    /**
+     * <p>
+     * Describes the effective recommendation preferences for Amazon EBS volume.
+     * </p>
+     */
+    private EBSEffectiveRecommendationPreferences effectiveRecommendationPreferences;
 
     /**
      * <p>
@@ -785,6 +791,46 @@ public class VolumeRecommendation implements Serializable, Cloneable, Structured
     }
 
     /**
+     * <p>
+     * Describes the effective recommendation preferences for Amazon EBS volume.
+     * </p>
+     * 
+     * @param effectiveRecommendationPreferences
+     *        Describes the effective recommendation preferences for Amazon EBS volume.
+     */
+
+    public void setEffectiveRecommendationPreferences(EBSEffectiveRecommendationPreferences effectiveRecommendationPreferences) {
+        this.effectiveRecommendationPreferences = effectiveRecommendationPreferences;
+    }
+
+    /**
+     * <p>
+     * Describes the effective recommendation preferences for Amazon EBS volume.
+     * </p>
+     * 
+     * @return Describes the effective recommendation preferences for Amazon EBS volume.
+     */
+
+    public EBSEffectiveRecommendationPreferences getEffectiveRecommendationPreferences() {
+        return this.effectiveRecommendationPreferences;
+    }
+
+    /**
+     * <p>
+     * Describes the effective recommendation preferences for Amazon EBS volume.
+     * </p>
+     * 
+     * @param effectiveRecommendationPreferences
+     *        Describes the effective recommendation preferences for Amazon EBS volume.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public VolumeRecommendation withEffectiveRecommendationPreferences(EBSEffectiveRecommendationPreferences effectiveRecommendationPreferences) {
+        setEffectiveRecommendationPreferences(effectiveRecommendationPreferences);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -815,7 +861,9 @@ public class VolumeRecommendation implements Serializable, Cloneable, Structured
         if (getCurrentPerformanceRisk() != null)
             sb.append("CurrentPerformanceRisk: ").append(getCurrentPerformanceRisk()).append(",");
         if (getTags() != null)
-            sb.append("Tags: ").append(getTags());
+            sb.append("Tags: ").append(getTags()).append(",");
+        if (getEffectiveRecommendationPreferences() != null)
+            sb.append("EffectiveRecommendationPreferences: ").append(getEffectiveRecommendationPreferences());
         sb.append("}");
         return sb.toString();
     }
@@ -870,6 +918,11 @@ public class VolumeRecommendation implements Serializable, Cloneable, Structured
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
             return false;
+        if (other.getEffectiveRecommendationPreferences() == null ^ this.getEffectiveRecommendationPreferences() == null)
+            return false;
+        if (other.getEffectiveRecommendationPreferences() != null
+                && other.getEffectiveRecommendationPreferences().equals(this.getEffectiveRecommendationPreferences()) == false)
+            return false;
         return true;
     }
 
@@ -888,6 +941,7 @@ public class VolumeRecommendation implements Serializable, Cloneable, Structured
         hashCode = prime * hashCode + ((getLastRefreshTimestamp() == null) ? 0 : getLastRefreshTimestamp().hashCode());
         hashCode = prime * hashCode + ((getCurrentPerformanceRisk() == null) ? 0 : getCurrentPerformanceRisk().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
+        hashCode = prime * hashCode + ((getEffectiveRecommendationPreferences() == null) ? 0 : getEffectiveRecommendationPreferences().hashCode());
         return hashCode;
     }
 

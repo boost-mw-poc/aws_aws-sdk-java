@@ -68,6 +68,28 @@ public class RecommendationPreferencesDetailJsonUnmarshaller implements Unmarsha
                     context.nextToken();
                     recommendationPreferencesDetail.setExternalMetricsPreference(ExternalMetricsPreferenceJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("lookBackPeriod", targetDepth)) {
+                    context.nextToken();
+                    recommendationPreferencesDetail.setLookBackPeriod(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("utilizationPreferences", targetDepth)) {
+                    context.nextToken();
+                    recommendationPreferencesDetail.setUtilizationPreferences(new ListUnmarshaller<UtilizationPreference>(UtilizationPreferenceJsonUnmarshaller
+                            .getInstance())
+
+                    .unmarshall(context));
+                }
+                if (context.testExpression("preferredResources", targetDepth)) {
+                    context.nextToken();
+                    recommendationPreferencesDetail.setPreferredResources(new ListUnmarshaller<EffectivePreferredResource>(
+                            EffectivePreferredResourceJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
+                if (context.testExpression("savingsEstimationMode", targetDepth)) {
+                    context.nextToken();
+                    recommendationPreferencesDetail.setSavingsEstimationMode(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

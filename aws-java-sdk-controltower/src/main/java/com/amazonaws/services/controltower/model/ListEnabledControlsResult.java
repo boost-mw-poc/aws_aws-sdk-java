@@ -25,8 +25,8 @@ public class ListEnabledControlsResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * Lists the controls enabled by AWS Control Tower on the specified organizational unit and the accounts it
-     * contains.
+     * Lists the controls enabled by Amazon Web Services Control Tower on the specified organizational unit and the
+     * accounts it contains.
      * </p>
      */
     private java.util.List<EnabledControlSummary> enabledControls;
@@ -39,12 +39,12 @@ public class ListEnabledControlsResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * Lists the controls enabled by AWS Control Tower on the specified organizational unit and the accounts it
-     * contains.
+     * Lists the controls enabled by Amazon Web Services Control Tower on the specified organizational unit and the
+     * accounts it contains.
      * </p>
      * 
-     * @return Lists the controls enabled by AWS Control Tower on the specified organizational unit and the accounts it
-     *         contains.
+     * @return Lists the controls enabled by Amazon Web Services Control Tower on the specified organizational unit and
+     *         the accounts it contains.
      */
 
     public java.util.List<EnabledControlSummary> getEnabledControls() {
@@ -53,13 +53,13 @@ public class ListEnabledControlsResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * Lists the controls enabled by AWS Control Tower on the specified organizational unit and the accounts it
-     * contains.
+     * Lists the controls enabled by Amazon Web Services Control Tower on the specified organizational unit and the
+     * accounts it contains.
      * </p>
      * 
      * @param enabledControls
-     *        Lists the controls enabled by AWS Control Tower on the specified organizational unit and the accounts it
-     *        contains.
+     *        Lists the controls enabled by Amazon Web Services Control Tower on the specified organizational unit and
+     *        the accounts it contains.
      */
 
     public void setEnabledControls(java.util.Collection<EnabledControlSummary> enabledControls) {
@@ -73,8 +73,8 @@ public class ListEnabledControlsResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * Lists the controls enabled by AWS Control Tower on the specified organizational unit and the accounts it
-     * contains.
+     * Lists the controls enabled by Amazon Web Services Control Tower on the specified organizational unit and the
+     * accounts it contains.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -83,8 +83,8 @@ public class ListEnabledControlsResult extends com.amazonaws.AmazonWebServiceRes
      * </p>
      * 
      * @param enabledControls
-     *        Lists the controls enabled by AWS Control Tower on the specified organizational unit and the accounts it
-     *        contains.
+     *        Lists the controls enabled by Amazon Web Services Control Tower on the specified organizational unit and
+     *        the accounts it contains.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -100,13 +100,13 @@ public class ListEnabledControlsResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * Lists the controls enabled by AWS Control Tower on the specified organizational unit and the accounts it
-     * contains.
+     * Lists the controls enabled by Amazon Web Services Control Tower on the specified organizational unit and the
+     * accounts it contains.
      * </p>
      * 
      * @param enabledControls
-     *        Lists the controls enabled by AWS Control Tower on the specified organizational unit and the accounts it
-     *        contains.
+     *        Lists the controls enabled by Amazon Web Services Control Tower on the specified organizational unit and
+     *        the accounts it contains.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

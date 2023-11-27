@@ -76,6 +76,19 @@ public class SecurityControlJsonUnmarshaller implements Unmarshaller<SecurityCon
                     context.nextToken();
                     securityControl.setSecurityControlStatus(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("UpdateStatus", targetDepth)) {
+                    context.nextToken();
+                    securityControl.setUpdateStatus(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("Parameters", targetDepth)) {
+                    context.nextToken();
+                    securityControl.setParameters(new MapUnmarshaller<String, ParameterConfiguration>(context.getUnmarshaller(String.class),
+                            ParameterConfigurationJsonUnmarshaller.getInstance()).unmarshall(context));
+                }
+                if (context.testExpression("LastUpdateReason", targetDepth)) {
+                    context.nextToken();
+                    securityControl.setLastUpdateReason(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

@@ -52,6 +52,18 @@ public class RecommenderConfig implements Serializable, Cloneable, StructuredPoj
      * </p>
      */
     private TrainingDataConfig trainingDataConfig;
+    /**
+     * <p>
+     * Whether metadata with recommendations is enabled for the recommender. If enabled, you can specify the columns
+     * from your Items dataset in your request for recommendations. Amazon Personalize returns this data for each item
+     * in the recommendation response.
+     * </p>
+     * <p>
+     * If you enable metadata in recommendations, you will incur additional costs. For more information, see <a
+     * href="https://aws.amazon.com/personalize/pricing/">Amazon Personalize pricing</a>.
+     * </p>
+     */
+    private Boolean enableMetadataWithRecommendations;
 
     /**
      * <p>
@@ -239,6 +251,102 @@ public class RecommenderConfig implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
+     * <p>
+     * Whether metadata with recommendations is enabled for the recommender. If enabled, you can specify the columns
+     * from your Items dataset in your request for recommendations. Amazon Personalize returns this data for each item
+     * in the recommendation response.
+     * </p>
+     * <p>
+     * If you enable metadata in recommendations, you will incur additional costs. For more information, see <a
+     * href="https://aws.amazon.com/personalize/pricing/">Amazon Personalize pricing</a>.
+     * </p>
+     * 
+     * @param enableMetadataWithRecommendations
+     *        Whether metadata with recommendations is enabled for the recommender. If enabled, you can specify the
+     *        columns from your Items dataset in your request for recommendations. Amazon Personalize returns this data
+     *        for each item in the recommendation response. </p>
+     *        <p>
+     *        If you enable metadata in recommendations, you will incur additional costs. For more information, see <a
+     *        href="https://aws.amazon.com/personalize/pricing/">Amazon Personalize pricing</a>.
+     */
+
+    public void setEnableMetadataWithRecommendations(Boolean enableMetadataWithRecommendations) {
+        this.enableMetadataWithRecommendations = enableMetadataWithRecommendations;
+    }
+
+    /**
+     * <p>
+     * Whether metadata with recommendations is enabled for the recommender. If enabled, you can specify the columns
+     * from your Items dataset in your request for recommendations. Amazon Personalize returns this data for each item
+     * in the recommendation response.
+     * </p>
+     * <p>
+     * If you enable metadata in recommendations, you will incur additional costs. For more information, see <a
+     * href="https://aws.amazon.com/personalize/pricing/">Amazon Personalize pricing</a>.
+     * </p>
+     * 
+     * @return Whether metadata with recommendations is enabled for the recommender. If enabled, you can specify the
+     *         columns from your Items dataset in your request for recommendations. Amazon Personalize returns this data
+     *         for each item in the recommendation response. </p>
+     *         <p>
+     *         If you enable metadata in recommendations, you will incur additional costs. For more information, see <a
+     *         href="https://aws.amazon.com/personalize/pricing/">Amazon Personalize pricing</a>.
+     */
+
+    public Boolean getEnableMetadataWithRecommendations() {
+        return this.enableMetadataWithRecommendations;
+    }
+
+    /**
+     * <p>
+     * Whether metadata with recommendations is enabled for the recommender. If enabled, you can specify the columns
+     * from your Items dataset in your request for recommendations. Amazon Personalize returns this data for each item
+     * in the recommendation response.
+     * </p>
+     * <p>
+     * If you enable metadata in recommendations, you will incur additional costs. For more information, see <a
+     * href="https://aws.amazon.com/personalize/pricing/">Amazon Personalize pricing</a>.
+     * </p>
+     * 
+     * @param enableMetadataWithRecommendations
+     *        Whether metadata with recommendations is enabled for the recommender. If enabled, you can specify the
+     *        columns from your Items dataset in your request for recommendations. Amazon Personalize returns this data
+     *        for each item in the recommendation response. </p>
+     *        <p>
+     *        If you enable metadata in recommendations, you will incur additional costs. For more information, see <a
+     *        href="https://aws.amazon.com/personalize/pricing/">Amazon Personalize pricing</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RecommenderConfig withEnableMetadataWithRecommendations(Boolean enableMetadataWithRecommendations) {
+        setEnableMetadataWithRecommendations(enableMetadataWithRecommendations);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Whether metadata with recommendations is enabled for the recommender. If enabled, you can specify the columns
+     * from your Items dataset in your request for recommendations. Amazon Personalize returns this data for each item
+     * in the recommendation response.
+     * </p>
+     * <p>
+     * If you enable metadata in recommendations, you will incur additional costs. For more information, see <a
+     * href="https://aws.amazon.com/personalize/pricing/">Amazon Personalize pricing</a>.
+     * </p>
+     * 
+     * @return Whether metadata with recommendations is enabled for the recommender. If enabled, you can specify the
+     *         columns from your Items dataset in your request for recommendations. Amazon Personalize returns this data
+     *         for each item in the recommendation response. </p>
+     *         <p>
+     *         If you enable metadata in recommendations, you will incur additional costs. For more information, see <a
+     *         href="https://aws.amazon.com/personalize/pricing/">Amazon Personalize pricing</a>.
+     */
+
+    public Boolean isEnableMetadataWithRecommendations() {
+        return this.enableMetadataWithRecommendations;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -255,7 +363,9 @@ public class RecommenderConfig implements Serializable, Cloneable, StructuredPoj
         if (getMinRecommendationRequestsPerSecond() != null)
             sb.append("MinRecommendationRequestsPerSecond: ").append(getMinRecommendationRequestsPerSecond()).append(",");
         if (getTrainingDataConfig() != null)
-            sb.append("TrainingDataConfig: ").append(getTrainingDataConfig());
+            sb.append("TrainingDataConfig: ").append(getTrainingDataConfig()).append(",");
+        if (getEnableMetadataWithRecommendations() != null)
+            sb.append("EnableMetadataWithRecommendations: ").append(getEnableMetadataWithRecommendations());
         sb.append("}");
         return sb.toString();
     }
@@ -283,6 +393,11 @@ public class RecommenderConfig implements Serializable, Cloneable, StructuredPoj
             return false;
         if (other.getTrainingDataConfig() != null && other.getTrainingDataConfig().equals(this.getTrainingDataConfig()) == false)
             return false;
+        if (other.getEnableMetadataWithRecommendations() == null ^ this.getEnableMetadataWithRecommendations() == null)
+            return false;
+        if (other.getEnableMetadataWithRecommendations() != null
+                && other.getEnableMetadataWithRecommendations().equals(this.getEnableMetadataWithRecommendations()) == false)
+            return false;
         return true;
     }
 
@@ -294,6 +409,7 @@ public class RecommenderConfig implements Serializable, Cloneable, StructuredPoj
         hashCode = prime * hashCode + ((getItemExplorationConfig() == null) ? 0 : getItemExplorationConfig().hashCode());
         hashCode = prime * hashCode + ((getMinRecommendationRequestsPerSecond() == null) ? 0 : getMinRecommendationRequestsPerSecond().hashCode());
         hashCode = prime * hashCode + ((getTrainingDataConfig() == null) ? 0 : getTrainingDataConfig().hashCode());
+        hashCode = prime * hashCode + ((getEnableMetadataWithRecommendations() == null) ? 0 : getEnableMetadataWithRecommendations().hashCode());
         return hashCode;
     }
 

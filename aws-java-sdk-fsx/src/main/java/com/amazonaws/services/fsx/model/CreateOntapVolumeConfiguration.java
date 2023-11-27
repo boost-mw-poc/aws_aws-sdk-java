@@ -70,6 +70,7 @@ public class CreateOntapVolumeConfiguration implements Serializable, Cloneable, 
      * Specifies the size of the volume, in megabytes (MB), that you are creating.
      * </p>
      */
+    @Deprecated
     private Integer sizeInMegabytes;
     /**
      * <p>
@@ -160,6 +161,26 @@ public class CreateOntapVolumeConfiguration implements Serializable, Cloneable, 
      * </p>
      */
     private CreateSnaplockConfiguration snaplockConfiguration;
+    /**
+     * <p>
+     * Use to specify the style of an ONTAP volume. For more information about FlexVols and FlexGroups, see <a
+     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-types.html">Volume types</a> in Amazon FSx for
+     * NetApp ONTAP User Guide.
+     * </p>
+     */
+    private String volumeStyle;
+    /**
+     * <p>
+     * Use to specify configuration options for a volume’s storage aggregate or aggregates.
+     * </p>
+     */
+    private CreateAggregateConfiguration aggregateConfiguration;
+    /**
+     * <p>
+     * The configured size of the volume, in bytes.
+     * </p>
+     */
+    private Long sizeInBytes;
 
     /**
      * <p>
@@ -466,7 +487,7 @@ public class CreateOntapVolumeConfiguration implements Serializable, Cloneable, 
      * @param sizeInMegabytes
      *        Specifies the size of the volume, in megabytes (MB), that you are creating.
      */
-
+    @Deprecated
     public void setSizeInMegabytes(Integer sizeInMegabytes) {
         this.sizeInMegabytes = sizeInMegabytes;
     }
@@ -478,7 +499,7 @@ public class CreateOntapVolumeConfiguration implements Serializable, Cloneable, 
      * 
      * @return Specifies the size of the volume, in megabytes (MB), that you are creating.
      */
-
+    @Deprecated
     public Integer getSizeInMegabytes() {
         return this.sizeInMegabytes;
     }
@@ -492,7 +513,7 @@ public class CreateOntapVolumeConfiguration implements Serializable, Cloneable, 
      *        Specifies the size of the volume, in megabytes (MB), that you are creating.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
-
+    @Deprecated
     public CreateOntapVolumeConfiguration withSizeInMegabytes(Integer sizeInMegabytes) {
         setSizeInMegabytes(sizeInMegabytes);
         return this;
@@ -1151,6 +1172,161 @@ public class CreateOntapVolumeConfiguration implements Serializable, Cloneable, 
     }
 
     /**
+     * <p>
+     * Use to specify the style of an ONTAP volume. For more information about FlexVols and FlexGroups, see <a
+     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-types.html">Volume types</a> in Amazon FSx for
+     * NetApp ONTAP User Guide.
+     * </p>
+     * 
+     * @param volumeStyle
+     *        Use to specify the style of an ONTAP volume. For more information about FlexVols and FlexGroups, see <a
+     *        href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-types.html">Volume types</a> in Amazon FSx
+     *        for NetApp ONTAP User Guide.
+     * @see VolumeStyle
+     */
+
+    public void setVolumeStyle(String volumeStyle) {
+        this.volumeStyle = volumeStyle;
+    }
+
+    /**
+     * <p>
+     * Use to specify the style of an ONTAP volume. For more information about FlexVols and FlexGroups, see <a
+     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-types.html">Volume types</a> in Amazon FSx for
+     * NetApp ONTAP User Guide.
+     * </p>
+     * 
+     * @return Use to specify the style of an ONTAP volume. For more information about FlexVols and FlexGroups, see <a
+     *         href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-types.html">Volume types</a> in Amazon FSx
+     *         for NetApp ONTAP User Guide.
+     * @see VolumeStyle
+     */
+
+    public String getVolumeStyle() {
+        return this.volumeStyle;
+    }
+
+    /**
+     * <p>
+     * Use to specify the style of an ONTAP volume. For more information about FlexVols and FlexGroups, see <a
+     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-types.html">Volume types</a> in Amazon FSx for
+     * NetApp ONTAP User Guide.
+     * </p>
+     * 
+     * @param volumeStyle
+     *        Use to specify the style of an ONTAP volume. For more information about FlexVols and FlexGroups, see <a
+     *        href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-types.html">Volume types</a> in Amazon FSx
+     *        for NetApp ONTAP User Guide.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see VolumeStyle
+     */
+
+    public CreateOntapVolumeConfiguration withVolumeStyle(String volumeStyle) {
+        setVolumeStyle(volumeStyle);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Use to specify the style of an ONTAP volume. For more information about FlexVols and FlexGroups, see <a
+     * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-types.html">Volume types</a> in Amazon FSx for
+     * NetApp ONTAP User Guide.
+     * </p>
+     * 
+     * @param volumeStyle
+     *        Use to specify the style of an ONTAP volume. For more information about FlexVols and FlexGroups, see <a
+     *        href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-types.html">Volume types</a> in Amazon FSx
+     *        for NetApp ONTAP User Guide.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see VolumeStyle
+     */
+
+    public CreateOntapVolumeConfiguration withVolumeStyle(VolumeStyle volumeStyle) {
+        this.volumeStyle = volumeStyle.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * Use to specify configuration options for a volume’s storage aggregate or aggregates.
+     * </p>
+     * 
+     * @param aggregateConfiguration
+     *        Use to specify configuration options for a volume’s storage aggregate or aggregates.
+     */
+
+    public void setAggregateConfiguration(CreateAggregateConfiguration aggregateConfiguration) {
+        this.aggregateConfiguration = aggregateConfiguration;
+    }
+
+    /**
+     * <p>
+     * Use to specify configuration options for a volume’s storage aggregate or aggregates.
+     * </p>
+     * 
+     * @return Use to specify configuration options for a volume’s storage aggregate or aggregates.
+     */
+
+    public CreateAggregateConfiguration getAggregateConfiguration() {
+        return this.aggregateConfiguration;
+    }
+
+    /**
+     * <p>
+     * Use to specify configuration options for a volume’s storage aggregate or aggregates.
+     * </p>
+     * 
+     * @param aggregateConfiguration
+     *        Use to specify configuration options for a volume’s storage aggregate or aggregates.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateOntapVolumeConfiguration withAggregateConfiguration(CreateAggregateConfiguration aggregateConfiguration) {
+        setAggregateConfiguration(aggregateConfiguration);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The configured size of the volume, in bytes.
+     * </p>
+     * 
+     * @param sizeInBytes
+     *        The configured size of the volume, in bytes.
+     */
+
+    public void setSizeInBytes(Long sizeInBytes) {
+        this.sizeInBytes = sizeInBytes;
+    }
+
+    /**
+     * <p>
+     * The configured size of the volume, in bytes.
+     * </p>
+     * 
+     * @return The configured size of the volume, in bytes.
+     */
+
+    public Long getSizeInBytes() {
+        return this.sizeInBytes;
+    }
+
+    /**
+     * <p>
+     * The configured size of the volume, in bytes.
+     * </p>
+     * 
+     * @param sizeInBytes
+     *        The configured size of the volume, in bytes.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateOntapVolumeConfiguration withSizeInBytes(Long sizeInBytes) {
+        setSizeInBytes(sizeInBytes);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1181,7 +1357,13 @@ public class CreateOntapVolumeConfiguration implements Serializable, Cloneable, 
         if (getCopyTagsToBackups() != null)
             sb.append("CopyTagsToBackups: ").append(getCopyTagsToBackups()).append(",");
         if (getSnaplockConfiguration() != null)
-            sb.append("SnaplockConfiguration: ").append(getSnaplockConfiguration());
+            sb.append("SnaplockConfiguration: ").append(getSnaplockConfiguration()).append(",");
+        if (getVolumeStyle() != null)
+            sb.append("VolumeStyle: ").append(getVolumeStyle()).append(",");
+        if (getAggregateConfiguration() != null)
+            sb.append("AggregateConfiguration: ").append(getAggregateConfiguration()).append(",");
+        if (getSizeInBytes() != null)
+            sb.append("SizeInBytes: ").append(getSizeInBytes());
         sb.append("}");
         return sb.toString();
     }
@@ -1236,6 +1418,18 @@ public class CreateOntapVolumeConfiguration implements Serializable, Cloneable, 
             return false;
         if (other.getSnaplockConfiguration() != null && other.getSnaplockConfiguration().equals(this.getSnaplockConfiguration()) == false)
             return false;
+        if (other.getVolumeStyle() == null ^ this.getVolumeStyle() == null)
+            return false;
+        if (other.getVolumeStyle() != null && other.getVolumeStyle().equals(this.getVolumeStyle()) == false)
+            return false;
+        if (other.getAggregateConfiguration() == null ^ this.getAggregateConfiguration() == null)
+            return false;
+        if (other.getAggregateConfiguration() != null && other.getAggregateConfiguration().equals(this.getAggregateConfiguration()) == false)
+            return false;
+        if (other.getSizeInBytes() == null ^ this.getSizeInBytes() == null)
+            return false;
+        if (other.getSizeInBytes() != null && other.getSizeInBytes().equals(this.getSizeInBytes()) == false)
+            return false;
         return true;
     }
 
@@ -1254,6 +1448,9 @@ public class CreateOntapVolumeConfiguration implements Serializable, Cloneable, 
         hashCode = prime * hashCode + ((getSnapshotPolicy() == null) ? 0 : getSnapshotPolicy().hashCode());
         hashCode = prime * hashCode + ((getCopyTagsToBackups() == null) ? 0 : getCopyTagsToBackups().hashCode());
         hashCode = prime * hashCode + ((getSnaplockConfiguration() == null) ? 0 : getSnaplockConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getVolumeStyle() == null) ? 0 : getVolumeStyle().hashCode());
+        hashCode = prime * hashCode + ((getAggregateConfiguration() == null) ? 0 : getAggregateConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getSizeInBytes() == null) ? 0 : getSizeInBytes().hashCode());
         return hashCode;
     }
 

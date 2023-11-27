@@ -39,7 +39,7 @@ public class EksAnywhereSubscriptionTerm implements Serializable, Cloneable, Str
     private Integer duration;
     /**
      * <p>
-     * The term unit of the subscription. Valid value is MONTHS.
+     * The term unit of the subscription. Valid value is <code>MONTHS</code>.
      * </p>
      */
     private String unit;
@@ -92,11 +92,11 @@ public class EksAnywhereSubscriptionTerm implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The term unit of the subscription. Valid value is MONTHS.
+     * The term unit of the subscription. Valid value is <code>MONTHS</code>.
      * </p>
      * 
      * @param unit
-     *        The term unit of the subscription. Valid value is MONTHS.
+     *        The term unit of the subscription. Valid value is <code>MONTHS</code>.
      * @see EksAnywhereSubscriptionTermUnit
      */
 
@@ -106,10 +106,10 @@ public class EksAnywhereSubscriptionTerm implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The term unit of the subscription. Valid value is MONTHS.
+     * The term unit of the subscription. Valid value is <code>MONTHS</code>.
      * </p>
      * 
-     * @return The term unit of the subscription. Valid value is MONTHS.
+     * @return The term unit of the subscription. Valid value is <code>MONTHS</code>.
      * @see EksAnywhereSubscriptionTermUnit
      */
 
@@ -119,11 +119,11 @@ public class EksAnywhereSubscriptionTerm implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The term unit of the subscription. Valid value is MONTHS.
+     * The term unit of the subscription. Valid value is <code>MONTHS</code>.
      * </p>
      * 
      * @param unit
-     *        The term unit of the subscription. Valid value is MONTHS.
+     *        The term unit of the subscription. Valid value is <code>MONTHS</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see EksAnywhereSubscriptionTermUnit
      */
@@ -135,11 +135,11 @@ public class EksAnywhereSubscriptionTerm implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The term unit of the subscription. Valid value is MONTHS.
+     * The term unit of the subscription. Valid value is <code>MONTHS</code>.
      * </p>
      * 
      * @param unit
-     *        The term unit of the subscription. Valid value is MONTHS.
+     *        The term unit of the subscription. Valid value is <code>MONTHS</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see EksAnywhereSubscriptionTermUnit
      */

@@ -141,6 +141,39 @@ public interface AmazonPrometheusAsync extends AmazonPrometheus {
 
     /**
      * <p>
+     * Create a scraper.
+     * </p>
+     * 
+     * @param createScraperRequest
+     *        Represents the input of a CreateScraper operation.
+     * @return A Java Future containing the result of the CreateScraper operation returned by the service.
+     * @sample AmazonPrometheusAsync.CreateScraper
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/amp-2020-08-01/CreateScraper" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<CreateScraperResult> createScraperAsync(CreateScraperRequest createScraperRequest);
+
+    /**
+     * <p>
+     * Create a scraper.
+     * </p>
+     * 
+     * @param createScraperRequest
+     *        Represents the input of a CreateScraper operation.
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateScraper operation returned by the service.
+     * @sample AmazonPrometheusAsyncHandler.CreateScraper
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/amp-2020-08-01/CreateScraper" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<CreateScraperResult> createScraperAsync(CreateScraperRequest createScraperRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateScraperRequest, CreateScraperResult> asyncHandler);
+
+    /**
+     * <p>
      * Creates a new AMP workspace.
      * </p>
      * 
@@ -278,6 +311,39 @@ public interface AmazonPrometheusAsync extends AmazonPrometheus {
     java.util.concurrent.Future<DeleteRuleGroupsNamespaceResult> deleteRuleGroupsNamespaceAsync(
             DeleteRuleGroupsNamespaceRequest deleteRuleGroupsNamespaceRequest,
             com.amazonaws.handlers.AsyncHandler<DeleteRuleGroupsNamespaceRequest, DeleteRuleGroupsNamespaceResult> asyncHandler);
+
+    /**
+     * <p>
+     * Deletes a scraper.
+     * </p>
+     * 
+     * @param deleteScraperRequest
+     *        Represents the input of a DeleteScraper operation.
+     * @return A Java Future containing the result of the DeleteScraper operation returned by the service.
+     * @sample AmazonPrometheusAsync.DeleteScraper
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/amp-2020-08-01/DeleteScraper" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteScraperResult> deleteScraperAsync(DeleteScraperRequest deleteScraperRequest);
+
+    /**
+     * <p>
+     * Deletes a scraper.
+     * </p>
+     * 
+     * @param deleteScraperRequest
+     *        Represents the input of a DeleteScraper operation.
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteScraper operation returned by the service.
+     * @sample AmazonPrometheusAsyncHandler.DeleteScraper
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/amp-2020-08-01/DeleteScraper" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteScraperResult> deleteScraperAsync(DeleteScraperRequest deleteScraperRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteScraperRequest, DeleteScraperResult> asyncHandler);
 
     /**
      * <p>
@@ -423,6 +489,39 @@ public interface AmazonPrometheusAsync extends AmazonPrometheus {
 
     /**
      * <p>
+     * Describe an existing scraper.
+     * </p>
+     * 
+     * @param describeScraperRequest
+     *        Represents the input of a DescribeScraper operation.
+     * @return A Java Future containing the result of the DescribeScraper operation returned by the service.
+     * @sample AmazonPrometheusAsync.DescribeScraper
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/amp-2020-08-01/DescribeScraper" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeScraperResult> describeScraperAsync(DescribeScraperRequest describeScraperRequest);
+
+    /**
+     * <p>
+     * Describe an existing scraper.
+     * </p>
+     * 
+     * @param describeScraperRequest
+     *        Represents the input of a DescribeScraper operation.
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeScraper operation returned by the service.
+     * @sample AmazonPrometheusAsyncHandler.DescribeScraper
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/amp-2020-08-01/DescribeScraper" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeScraperResult> describeScraperAsync(DescribeScraperRequest describeScraperRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeScraperRequest, DescribeScraperResult> asyncHandler);
+
+    /**
+     * <p>
      * Describes an existing AMP workspace.
      * </p>
      * 
@@ -456,6 +555,43 @@ public interface AmazonPrometheusAsync extends AmazonPrometheus {
 
     /**
      * <p>
+     * Gets a default configuration.
+     * </p>
+     * 
+     * @param getDefaultScraperConfigurationRequest
+     *        Represents the input of a GetDefaultScraperConfiguration operation.
+     * @return A Java Future containing the result of the GetDefaultScraperConfiguration operation returned by the
+     *         service.
+     * @sample AmazonPrometheusAsync.GetDefaultScraperConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/amp-2020-08-01/GetDefaultScraperConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetDefaultScraperConfigurationResult> getDefaultScraperConfigurationAsync(
+            GetDefaultScraperConfigurationRequest getDefaultScraperConfigurationRequest);
+
+    /**
+     * <p>
+     * Gets a default configuration.
+     * </p>
+     * 
+     * @param getDefaultScraperConfigurationRequest
+     *        Represents the input of a GetDefaultScraperConfiguration operation.
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetDefaultScraperConfiguration operation returned by the
+     *         service.
+     * @sample AmazonPrometheusAsyncHandler.GetDefaultScraperConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/amp-2020-08-01/GetDefaultScraperConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetDefaultScraperConfigurationResult> getDefaultScraperConfigurationAsync(
+            GetDefaultScraperConfigurationRequest getDefaultScraperConfigurationRequest,
+            com.amazonaws.handlers.AsyncHandler<GetDefaultScraperConfigurationRequest, GetDefaultScraperConfigurationResult> asyncHandler);
+
+    /**
+     * <p>
      * Lists rule groups namespaces.
      * </p>
      * 
@@ -486,6 +622,41 @@ public interface AmazonPrometheusAsync extends AmazonPrometheus {
      */
     java.util.concurrent.Future<ListRuleGroupsNamespacesResult> listRuleGroupsNamespacesAsync(ListRuleGroupsNamespacesRequest listRuleGroupsNamespacesRequest,
             com.amazonaws.handlers.AsyncHandler<ListRuleGroupsNamespacesRequest, ListRuleGroupsNamespacesResult> asyncHandler);
+
+    /**
+     * <p>
+     * Lists all scrapers in a customer account, including scrapers being created or deleted. You may provide filters to
+     * return a more specific list of results.
+     * </p>
+     * 
+     * @param listScrapersRequest
+     *        Represents the input of a ListScrapers operation.
+     * @return A Java Future containing the result of the ListScrapers operation returned by the service.
+     * @sample AmazonPrometheusAsync.ListScrapers
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/amp-2020-08-01/ListScrapers" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListScrapersResult> listScrapersAsync(ListScrapersRequest listScrapersRequest);
+
+    /**
+     * <p>
+     * Lists all scrapers in a customer account, including scrapers being created or deleted. You may provide filters to
+     * return a more specific list of results.
+     * </p>
+     * 
+     * @param listScrapersRequest
+     *        Represents the input of a ListScrapers operation.
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListScrapers operation returned by the service.
+     * @sample AmazonPrometheusAsyncHandler.ListScrapers
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/amp-2020-08-01/ListScrapers" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListScrapersResult> listScrapersAsync(ListScrapersRequest listScrapersRequest,
+            com.amazonaws.handlers.AsyncHandler<ListScrapersRequest, ListScrapersResult> asyncHandler);
 
     /**
      * <p>

@@ -56,6 +56,13 @@ public class PutAccountSettingDefaultRequest extends com.amazonaws.AmazonWebServ
      * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-maintenance.html">Amazon Web Services
      * Fargate task maintenance</a> in the <i>Amazon ECS Developer Guide</i>.
      * </p>
+     * <p>
+     * The <code>guardDutyActivate</code> parameter is read-only in Amazon ECS and indicates whether Amazon ECS Runtime
+     * Monitoring is enabled or disabled by your security administrator in your Amazon ECS account. Amazon GuardDuty
+     * controls this account setting on your behalf. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-guard-duty-integration.html">Protecting
+     * Amazon ECS workloads with Amazon ECS Runtime Monitoring</a>.
+     * </p>
      */
     private String name;
     /**
@@ -118,6 +125,13 @@ public class PutAccountSettingDefaultRequest extends com.amazonaws.AmazonWebServ
      * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-maintenance.html">Amazon Web Services
      * Fargate task maintenance</a> in the <i>Amazon ECS Developer Guide</i>.
      * </p>
+     * <p>
+     * The <code>guardDutyActivate</code> parameter is read-only in Amazon ECS and indicates whether Amazon ECS Runtime
+     * Monitoring is enabled or disabled by your security administrator in your Amazon ECS account. Amazon GuardDuty
+     * controls this account setting on your behalf. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-guard-duty-integration.html">Protecting
+     * Amazon ECS workloads with Amazon ECS Runtime Monitoring</a>.
+     * </p>
      * 
      * @param name
      *        The resource name for which to modify the account setting. If you specify
@@ -148,6 +162,13 @@ public class PutAccountSettingDefaultRequest extends com.amazonaws.AmazonWebServ
      *        For information about the Fargate tasks maintenance, see <a
      *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-maintenance.html">Amazon Web
      *        Services Fargate task maintenance</a> in the <i>Amazon ECS Developer Guide</i>.
+     *        </p>
+     *        <p>
+     *        The <code>guardDutyActivate</code> parameter is read-only in Amazon ECS and indicates whether Amazon ECS
+     *        Runtime Monitoring is enabled or disabled by your security administrator in your Amazon ECS account.
+     *        Amazon GuardDuty controls this account setting on your behalf. For more information, see <a
+     *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-guard-duty-integration.html"
+     *        >Protecting Amazon ECS workloads with Amazon ECS Runtime Monitoring</a>.
      * @see SettingName
      */
 
@@ -186,6 +207,13 @@ public class PutAccountSettingDefaultRequest extends com.amazonaws.AmazonWebServ
      * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-maintenance.html">Amazon Web Services
      * Fargate task maintenance</a> in the <i>Amazon ECS Developer Guide</i>.
      * </p>
+     * <p>
+     * The <code>guardDutyActivate</code> parameter is read-only in Amazon ECS and indicates whether Amazon ECS Runtime
+     * Monitoring is enabled or disabled by your security administrator in your Amazon ECS account. Amazon GuardDuty
+     * controls this account setting on your behalf. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-guard-duty-integration.html">Protecting
+     * Amazon ECS workloads with Amazon ECS Runtime Monitoring</a>.
+     * </p>
      * 
      * @return The resource name for which to modify the account setting. If you specify
      *         <code>serviceLongArnFormat</code>, the ARN for your Amazon ECS services is affected. If you specify
@@ -215,6 +243,13 @@ public class PutAccountSettingDefaultRequest extends com.amazonaws.AmazonWebServ
      *         default. For information about the Fargate tasks maintenance, see <a
      *         href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-maintenance.html">Amazon Web
      *         Services Fargate task maintenance</a> in the <i>Amazon ECS Developer Guide</i>.
+     *         </p>
+     *         <p>
+     *         The <code>guardDutyActivate</code> parameter is read-only in Amazon ECS and indicates whether Amazon ECS
+     *         Runtime Monitoring is enabled or disabled by your security administrator in your Amazon ECS account.
+     *         Amazon GuardDuty controls this account setting on your behalf. For more information, see <a
+     *         href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-guard-duty-integration.html"
+     *         >Protecting Amazon ECS workloads with Amazon ECS Runtime Monitoring</a>.
      * @see SettingName
      */
 
@@ -253,6 +288,13 @@ public class PutAccountSettingDefaultRequest extends com.amazonaws.AmazonWebServ
      * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-maintenance.html">Amazon Web Services
      * Fargate task maintenance</a> in the <i>Amazon ECS Developer Guide</i>.
      * </p>
+     * <p>
+     * The <code>guardDutyActivate</code> parameter is read-only in Amazon ECS and indicates whether Amazon ECS Runtime
+     * Monitoring is enabled or disabled by your security administrator in your Amazon ECS account. Amazon GuardDuty
+     * controls this account setting on your behalf. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-guard-duty-integration.html">Protecting
+     * Amazon ECS workloads with Amazon ECS Runtime Monitoring</a>.
+     * </p>
      * 
      * @param name
      *        The resource name for which to modify the account setting. If you specify
@@ -283,6 +325,13 @@ public class PutAccountSettingDefaultRequest extends com.amazonaws.AmazonWebServ
      *        For information about the Fargate tasks maintenance, see <a
      *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-maintenance.html">Amazon Web
      *        Services Fargate task maintenance</a> in the <i>Amazon ECS Developer Guide</i>.
+     *        </p>
+     *        <p>
+     *        The <code>guardDutyActivate</code> parameter is read-only in Amazon ECS and indicates whether Amazon ECS
+     *        Runtime Monitoring is enabled or disabled by your security administrator in your Amazon ECS account.
+     *        Amazon GuardDuty controls this account setting on your behalf. For more information, see <a
+     *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-guard-duty-integration.html"
+     *        >Protecting Amazon ECS workloads with Amazon ECS Runtime Monitoring</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see SettingName
      */
@@ -323,6 +372,13 @@ public class PutAccountSettingDefaultRequest extends com.amazonaws.AmazonWebServ
      * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-maintenance.html">Amazon Web Services
      * Fargate task maintenance</a> in the <i>Amazon ECS Developer Guide</i>.
      * </p>
+     * <p>
+     * The <code>guardDutyActivate</code> parameter is read-only in Amazon ECS and indicates whether Amazon ECS Runtime
+     * Monitoring is enabled or disabled by your security administrator in your Amazon ECS account. Amazon GuardDuty
+     * controls this account setting on your behalf. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-guard-duty-integration.html">Protecting
+     * Amazon ECS workloads with Amazon ECS Runtime Monitoring</a>.
+     * </p>
      * 
      * @param name
      *        The resource name for which to modify the account setting. If you specify
@@ -353,6 +409,13 @@ public class PutAccountSettingDefaultRequest extends com.amazonaws.AmazonWebServ
      *        For information about the Fargate tasks maintenance, see <a
      *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-maintenance.html">Amazon Web
      *        Services Fargate task maintenance</a> in the <i>Amazon ECS Developer Guide</i>.
+     *        </p>
+     *        <p>
+     *        The <code>guardDutyActivate</code> parameter is read-only in Amazon ECS and indicates whether Amazon ECS
+     *        Runtime Monitoring is enabled or disabled by your security administrator in your Amazon ECS account.
+     *        Amazon GuardDuty controls this account setting on your behalf. For more information, see <a
+     *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-guard-duty-integration.html"
+     *        >Protecting Amazon ECS workloads with Amazon ECS Runtime Monitoring</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see SettingName
      */

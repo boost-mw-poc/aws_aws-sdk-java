@@ -189,6 +189,378 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
 
     /**
      * <p>
+     * Associate your S3 Access Grants instance with an Amazon Web Services IAM Identity Center instance. Use this
+     * action if you want to create access grants for users or groups from your corporate identity directory. First, you
+     * must add your corporate identity directory to Amazon Web Services IAM Identity Center. Then, you can associate
+     * this IAM Identity Center instance with your S3 Access Grants instance.
+     * </p>
+     * <dl>
+     * <dt>Permissions</dt>
+     * <dd>
+     * <p>
+     * You must have the <code>s3:AssociateAccessGrantsIdentityCenter</code> permission to use this operation.
+     * </p>
+     * </dd>
+     * <dt>Additional Permissions</dt>
+     * <dd>
+     * <p>
+     * You must also have the following permissions: <code>sso:CreateApplication</code>,
+     * <code>sso:PutApplicationGrant</code>, and <code>sso:PutApplicationAuthenticationMethod</code>.
+     * </p>
+     * </dd>
+     * </dl>
+     * 
+     * @param associateAccessGrantsIdentityCenterRequest
+     * @return Result of the AssociateAccessGrantsIdentityCenter operation returned by the service.
+     * @sample AWSS3Control.AssociateAccessGrantsIdentityCenter
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/AssociateAccessGrantsIdentityCenter"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public AssociateAccessGrantsIdentityCenterResult associateAccessGrantsIdentityCenter(AssociateAccessGrantsIdentityCenterRequest request) {
+        request = beforeClientExecution(request);
+        return executeAssociateAccessGrantsIdentityCenter(request);
+    }
+
+    @SdkInternalApi
+    final AssociateAccessGrantsIdentityCenterResult executeAssociateAccessGrantsIdentityCenter(
+            AssociateAccessGrantsIdentityCenterRequest associateAccessGrantsIdentityCenterRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(associateAccessGrantsIdentityCenterRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<AssociateAccessGrantsIdentityCenterRequest> request = null;
+        Response<AssociateAccessGrantsIdentityCenterResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new AssociateAccessGrantsIdentityCenterRequestMarshaller().marshall(super
+                        .beforeMarshalling(associateAccessGrantsIdentityCenterRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "S3 Control");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "AssociateAccessGrantsIdentityCenter");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            URI endpointTraitHost = null;
+            if (!clientConfiguration.isDisableHostPrefixInjection()) {
+                ValidationUtils.assertStringNotEmpty(associateAccessGrantsIdentityCenterRequest.getAccountId(), "AccountId");
+                HostnameValidator.validateHostnameCompliant(associateAccessGrantsIdentityCenterRequest.getAccountId(), "AccountId",
+                        "associateAccessGrantsIdentityCenterRequest");
+
+                String hostPrefix = "{AccountId}.";
+                String resolvedHostPrefix = String.format("%s.", associateAccessGrantsIdentityCenterRequest.getAccountId());
+
+                endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
+            }
+
+            StaxResponseHandler<AssociateAccessGrantsIdentityCenterResult> responseHandler = new com.amazonaws.services.s3control.internal.S3ControlStaxResponseHandler<AssociateAccessGrantsIdentityCenterResult>(
+                    new AssociateAccessGrantsIdentityCenterResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Creates an access grant that gives a grantee access to your S3 data. The grantee can be an IAM user or role or a
+     * directory user, or group. Before you can create a grant, you must have an S3 Access Grants instance in the same
+     * Region as the S3 data. You can create an S3 Access Grants instance using the <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_CreateAccessGrantsInstance.html"
+     * >CreateAccessGrantsInstance</a>. You must also have registered at least one S3 data location in your S3 Access
+     * Grants instance using <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_CreateAccessGrantsLocation.html"
+     * >CreateAccessGrantsLocation</a>.
+     * </p>
+     * <dl>
+     * <dt>Permissions</dt>
+     * <dd>
+     * <p>
+     * You must have the <code>s3:CreateAccessGrant</code> permission to use this operation.
+     * </p>
+     * </dd>
+     * <dt>Additional Permissions</dt>
+     * <dd>
+     * <p>
+     * For any directory identity - <code>sso:DescribeInstance</code> and <code>sso:DescribeApplication</code>
+     * </p>
+     * <p>
+     * For directory users - <code>identitystore:DescribeUser</code>
+     * </p>
+     * <p>
+     * For directory groups - <code>identitystore:DescribeGroup</code>
+     * </p>
+     * </dd>
+     * </dl>
+     * 
+     * @param createAccessGrantRequest
+     * @return Result of the CreateAccessGrant operation returned by the service.
+     * @sample AWSS3Control.CreateAccessGrant
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/CreateAccessGrant" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public CreateAccessGrantResult createAccessGrant(CreateAccessGrantRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateAccessGrant(request);
+    }
+
+    @SdkInternalApi
+    final CreateAccessGrantResult executeCreateAccessGrant(CreateAccessGrantRequest createAccessGrantRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createAccessGrantRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateAccessGrantRequest> request = null;
+        Response<CreateAccessGrantResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateAccessGrantRequestMarshaller().marshall(super.beforeMarshalling(createAccessGrantRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "S3 Control");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateAccessGrant");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            URI endpointTraitHost = null;
+            if (!clientConfiguration.isDisableHostPrefixInjection()) {
+                ValidationUtils.assertStringNotEmpty(createAccessGrantRequest.getAccountId(), "AccountId");
+                HostnameValidator.validateHostnameCompliant(createAccessGrantRequest.getAccountId(), "AccountId", "createAccessGrantRequest");
+
+                String hostPrefix = "{AccountId}.";
+                String resolvedHostPrefix = String.format("%s.", createAccessGrantRequest.getAccountId());
+
+                endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
+            }
+
+            StaxResponseHandler<CreateAccessGrantResult> responseHandler = new com.amazonaws.services.s3control.internal.S3ControlStaxResponseHandler<CreateAccessGrantResult>(
+                    new CreateAccessGrantResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Creates an S3 Access Grants instance, which serves as a logical grouping for access grants. You can create one S3
+     * Access Grants instance per Region per account.
+     * </p>
+     * <dl>
+     * <dt>Permissions</dt>
+     * <dd>
+     * <p>
+     * You must have the <code>s3:CreateAccessGrantsInstance</code> permission to use this operation.
+     * </p>
+     * </dd>
+     * <dt>Additional Permissions</dt>
+     * <dd>
+     * <p>
+     * To associate an IAM Identity Center instance with your S3 Access Grants instance, you must also have the
+     * <code>sso:DescribeInstance</code>, <code>sso:CreateApplication</code>, <code>sso:PutApplicationGrant</code>, and
+     * <code>sso:PutApplicationAuthenticationMethod</code> permissions.
+     * </p>
+     * </dd>
+     * </dl>
+     * 
+     * @param createAccessGrantsInstanceRequest
+     * @return Result of the CreateAccessGrantsInstance operation returned by the service.
+     * @sample AWSS3Control.CreateAccessGrantsInstance
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/CreateAccessGrantsInstance"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public CreateAccessGrantsInstanceResult createAccessGrantsInstance(CreateAccessGrantsInstanceRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateAccessGrantsInstance(request);
+    }
+
+    @SdkInternalApi
+    final CreateAccessGrantsInstanceResult executeCreateAccessGrantsInstance(CreateAccessGrantsInstanceRequest createAccessGrantsInstanceRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createAccessGrantsInstanceRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateAccessGrantsInstanceRequest> request = null;
+        Response<CreateAccessGrantsInstanceResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateAccessGrantsInstanceRequestMarshaller().marshall(super.beforeMarshalling(createAccessGrantsInstanceRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "S3 Control");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateAccessGrantsInstance");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            URI endpointTraitHost = null;
+            if (!clientConfiguration.isDisableHostPrefixInjection()) {
+                ValidationUtils.assertStringNotEmpty(createAccessGrantsInstanceRequest.getAccountId(), "AccountId");
+                HostnameValidator.validateHostnameCompliant(createAccessGrantsInstanceRequest.getAccountId(), "AccountId", "createAccessGrantsInstanceRequest");
+
+                String hostPrefix = "{AccountId}.";
+                String resolvedHostPrefix = String.format("%s.", createAccessGrantsInstanceRequest.getAccountId());
+
+                endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
+            }
+
+            StaxResponseHandler<CreateAccessGrantsInstanceResult> responseHandler = new com.amazonaws.services.s3control.internal.S3ControlStaxResponseHandler<CreateAccessGrantsInstanceResult>(
+                    new CreateAccessGrantsInstanceResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * The S3 data location that you would like to register in your S3 Access Grants instance. Your S3 data must be in
+     * the same Region as your S3 Access Grants instance. The location can be one of the following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The default S3 location <code>s3://</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * A bucket - <code>S3://&lt;bucket-name&gt;</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * A bucket and prefix - <code>S3://&lt;bucket-name&gt;/&lt;prefix&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When you register a location, you must include the IAM role that has permission to manage the S3 location that
+     * you are registering. Give S3 Access Grants permission to assume this role <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-grants-location.html">using a policy</a>. S3
+     * Access Grants assumes this role to manage access to the location and to vend temporary credentials to grantees or
+     * client applications.
+     * </p>
+     * <dl>
+     * <dt>Permissions</dt>
+     * <dd>
+     * <p>
+     * You must have the <code>s3:CreateAccessGrantsLocation</code> permission to use this operation.
+     * </p>
+     * </dd>
+     * <dt>Additional Permissions</dt>
+     * <dd>
+     * <p>
+     * You must also have the following permission for the specified IAM role: <code>iam:PassRole</code>
+     * </p>
+     * </dd>
+     * </dl>
+     * 
+     * @param createAccessGrantsLocationRequest
+     * @return Result of the CreateAccessGrantsLocation operation returned by the service.
+     * @sample AWSS3Control.CreateAccessGrantsLocation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/CreateAccessGrantsLocation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public CreateAccessGrantsLocationResult createAccessGrantsLocation(CreateAccessGrantsLocationRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateAccessGrantsLocation(request);
+    }
+
+    @SdkInternalApi
+    final CreateAccessGrantsLocationResult executeCreateAccessGrantsLocation(CreateAccessGrantsLocationRequest createAccessGrantsLocationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createAccessGrantsLocationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateAccessGrantsLocationRequest> request = null;
+        Response<CreateAccessGrantsLocationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateAccessGrantsLocationRequestMarshaller().marshall(super.beforeMarshalling(createAccessGrantsLocationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "S3 Control");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateAccessGrantsLocation");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            URI endpointTraitHost = null;
+            if (!clientConfiguration.isDisableHostPrefixInjection()) {
+                ValidationUtils.assertStringNotEmpty(createAccessGrantsLocationRequest.getAccountId(), "AccountId");
+                HostnameValidator.validateHostnameCompliant(createAccessGrantsLocationRequest.getAccountId(), "AccountId", "createAccessGrantsLocationRequest");
+
+                String hostPrefix = "{AccountId}.";
+                String resolvedHostPrefix = String.format("%s.", createAccessGrantsLocationRequest.getAccountId());
+
+                endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
+            }
+
+            StaxResponseHandler<CreateAccessGrantsLocationResult> responseHandler = new com.amazonaws.services.s3control.internal.S3ControlStaxResponseHandler<CreateAccessGrantsLocationResult>(
+                    new CreateAccessGrantsLocationResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Creates an access point and associates it with the specified bucket. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-points.html">Managing Data Access with Amazon
      * S3 Access Points</a> in the <i>Amazon S3 User Guide</i>.
@@ -846,6 +1218,327 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
 
             StaxResponseHandler<CreateStorageLensGroupResult> responseHandler = new com.amazonaws.services.s3control.internal.S3ControlStaxResponseHandler<CreateStorageLensGroupResult>(
                     new CreateStorageLensGroupResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Deletes the access grant from the S3 Access Grants instance. You cannot undo an access grant deletion and the
+     * grantee will no longer have access to the S3 data.
+     * </p>
+     * <dl>
+     * <dt>Permissions</dt>
+     * <dd>
+     * <p>
+     * You must have the <code>s3:DeleteAccessGrant</code> permission to use this operation.
+     * </p>
+     * </dd>
+     * </dl>
+     * 
+     * @param deleteAccessGrantRequest
+     * @return Result of the DeleteAccessGrant operation returned by the service.
+     * @sample AWSS3Control.DeleteAccessGrant
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/DeleteAccessGrant" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public DeleteAccessGrantResult deleteAccessGrant(DeleteAccessGrantRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteAccessGrant(request);
+    }
+
+    @SdkInternalApi
+    final DeleteAccessGrantResult executeDeleteAccessGrant(DeleteAccessGrantRequest deleteAccessGrantRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteAccessGrantRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteAccessGrantRequest> request = null;
+        Response<DeleteAccessGrantResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteAccessGrantRequestMarshaller().marshall(super.beforeMarshalling(deleteAccessGrantRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "S3 Control");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteAccessGrant");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            URI endpointTraitHost = null;
+            if (!clientConfiguration.isDisableHostPrefixInjection()) {
+                ValidationUtils.assertStringNotEmpty(deleteAccessGrantRequest.getAccountId(), "AccountId");
+                HostnameValidator.validateHostnameCompliant(deleteAccessGrantRequest.getAccountId(), "AccountId", "deleteAccessGrantRequest");
+
+                String hostPrefix = "{AccountId}.";
+                String resolvedHostPrefix = String.format("%s.", deleteAccessGrantRequest.getAccountId());
+
+                endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
+            }
+
+            StaxResponseHandler<DeleteAccessGrantResult> responseHandler = new com.amazonaws.services.s3control.internal.S3ControlStaxResponseHandler<DeleteAccessGrantResult>(
+                    new DeleteAccessGrantResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Deletes your S3 Access Grants instance. You must first delete the access grants and locations before S3 Access
+     * Grants can delete the instance. See <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DeleteAccessGrant.html">DeleteAccessGrant</a>
+     * and <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DeleteAccessGrantsLocation.html">
+     * DeleteAccessGrantsLocation</a>. If you have associated an IAM Identity Center instance with your S3 Access Grants
+     * instance, you must first dissassociate the Identity Center instance from the S3 Access Grants instance before you
+     * can delete the S3 Access Grants instance. See <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_AssociateAccessGrantsIdentityCenter.html"
+     * >AssociateAccessGrantsIdentityCenter</a> and <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DissociateAccessGrantsIdentityCenter.html"
+     * >DissociateAccessGrantsIdentityCenter</a>.
+     * </p>
+     * <dl>
+     * <dt>Permissions</dt>
+     * <dd>
+     * <p>
+     * You must have the <code>s3:DeleteAccessGrantsInstance</code> permission to use this operation.
+     * </p>
+     * </dd>
+     * </dl>
+     * 
+     * @param deleteAccessGrantsInstanceRequest
+     * @return Result of the DeleteAccessGrantsInstance operation returned by the service.
+     * @sample AWSS3Control.DeleteAccessGrantsInstance
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/DeleteAccessGrantsInstance"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DeleteAccessGrantsInstanceResult deleteAccessGrantsInstance(DeleteAccessGrantsInstanceRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteAccessGrantsInstance(request);
+    }
+
+    @SdkInternalApi
+    final DeleteAccessGrantsInstanceResult executeDeleteAccessGrantsInstance(DeleteAccessGrantsInstanceRequest deleteAccessGrantsInstanceRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteAccessGrantsInstanceRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteAccessGrantsInstanceRequest> request = null;
+        Response<DeleteAccessGrantsInstanceResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteAccessGrantsInstanceRequestMarshaller().marshall(super.beforeMarshalling(deleteAccessGrantsInstanceRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "S3 Control");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteAccessGrantsInstance");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            URI endpointTraitHost = null;
+            if (!clientConfiguration.isDisableHostPrefixInjection()) {
+                ValidationUtils.assertStringNotEmpty(deleteAccessGrantsInstanceRequest.getAccountId(), "AccountId");
+                HostnameValidator.validateHostnameCompliant(deleteAccessGrantsInstanceRequest.getAccountId(), "AccountId", "deleteAccessGrantsInstanceRequest");
+
+                String hostPrefix = "{AccountId}.";
+                String resolvedHostPrefix = String.format("%s.", deleteAccessGrantsInstanceRequest.getAccountId());
+
+                endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
+            }
+
+            StaxResponseHandler<DeleteAccessGrantsInstanceResult> responseHandler = new com.amazonaws.services.s3control.internal.S3ControlStaxResponseHandler<DeleteAccessGrantsInstanceResult>(
+                    new DeleteAccessGrantsInstanceResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Deletes the resource policy of the S3 Access Grants instance. The resource policy is used to manage cross-account
+     * access to your S3 Access Grants instance. By deleting the resource policy, you delete any cross-account
+     * permissions to your S3 Access Grants instance.
+     * </p>
+     * <dl>
+     * <dt>Permissions</dt>
+     * <dd>
+     * <p>
+     * You must have the <code>s3:DeleteAccessGrantsInstanceResourcePolicy</code> permission to use this operation.
+     * </p>
+     * </dd>
+     * </dl>
+     * 
+     * @param deleteAccessGrantsInstanceResourcePolicyRequest
+     * @return Result of the DeleteAccessGrantsInstanceResourcePolicy operation returned by the service.
+     * @sample AWSS3Control.DeleteAccessGrantsInstanceResourcePolicy
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/DeleteAccessGrantsInstanceResourcePolicy"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DeleteAccessGrantsInstanceResourcePolicyResult deleteAccessGrantsInstanceResourcePolicy(DeleteAccessGrantsInstanceResourcePolicyRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteAccessGrantsInstanceResourcePolicy(request);
+    }
+
+    @SdkInternalApi
+    final DeleteAccessGrantsInstanceResourcePolicyResult executeDeleteAccessGrantsInstanceResourcePolicy(
+            DeleteAccessGrantsInstanceResourcePolicyRequest deleteAccessGrantsInstanceResourcePolicyRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteAccessGrantsInstanceResourcePolicyRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteAccessGrantsInstanceResourcePolicyRequest> request = null;
+        Response<DeleteAccessGrantsInstanceResourcePolicyResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteAccessGrantsInstanceResourcePolicyRequestMarshaller().marshall(super
+                        .beforeMarshalling(deleteAccessGrantsInstanceResourcePolicyRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "S3 Control");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteAccessGrantsInstanceResourcePolicy");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            URI endpointTraitHost = null;
+            if (!clientConfiguration.isDisableHostPrefixInjection()) {
+                ValidationUtils.assertStringNotEmpty(deleteAccessGrantsInstanceResourcePolicyRequest.getAccountId(), "AccountId");
+                HostnameValidator.validateHostnameCompliant(deleteAccessGrantsInstanceResourcePolicyRequest.getAccountId(), "AccountId",
+                        "deleteAccessGrantsInstanceResourcePolicyRequest");
+
+                String hostPrefix = "{AccountId}.";
+                String resolvedHostPrefix = String.format("%s.", deleteAccessGrantsInstanceResourcePolicyRequest.getAccountId());
+
+                endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
+            }
+
+            StaxResponseHandler<DeleteAccessGrantsInstanceResourcePolicyResult> responseHandler = new com.amazonaws.services.s3control.internal.S3ControlStaxResponseHandler<DeleteAccessGrantsInstanceResourcePolicyResult>(
+                    new DeleteAccessGrantsInstanceResourcePolicyResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Deregisters a location from your S3 Access Grants instance. You can only delete a location registration from an
+     * S3 Access Grants instance if there are no grants associated with this location. See <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_DeleteAccessGrant.html">Delete a grant</a> for
+     * information on how to delete grants. You need to have at least one registered location in your S3 Access Grants
+     * instance in order to create access grants.
+     * </p>
+     * <dl>
+     * <dt>Permissions</dt>
+     * <dd>
+     * <p>
+     * You must have the <code>s3:DeleteAccessGrantsLocation</code> permission to use this operation.
+     * </p>
+     * </dd>
+     * </dl>
+     * 
+     * @param deleteAccessGrantsLocationRequest
+     * @return Result of the DeleteAccessGrantsLocation operation returned by the service.
+     * @sample AWSS3Control.DeleteAccessGrantsLocation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/DeleteAccessGrantsLocation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DeleteAccessGrantsLocationResult deleteAccessGrantsLocation(DeleteAccessGrantsLocationRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteAccessGrantsLocation(request);
+    }
+
+    @SdkInternalApi
+    final DeleteAccessGrantsLocationResult executeDeleteAccessGrantsLocation(DeleteAccessGrantsLocationRequest deleteAccessGrantsLocationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteAccessGrantsLocationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteAccessGrantsLocationRequest> request = null;
+        Response<DeleteAccessGrantsLocationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteAccessGrantsLocationRequestMarshaller().marshall(super.beforeMarshalling(deleteAccessGrantsLocationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "S3 Control");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteAccessGrantsLocation");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            URI endpointTraitHost = null;
+            if (!clientConfiguration.isDisableHostPrefixInjection()) {
+                ValidationUtils.assertStringNotEmpty(deleteAccessGrantsLocationRequest.getAccountId(), "AccountId");
+                HostnameValidator.validateHostnameCompliant(deleteAccessGrantsLocationRequest.getAccountId(), "AccountId", "deleteAccessGrantsLocationRequest");
+
+                String hostPrefix = "{AccountId}.";
+                String resolvedHostPrefix = String.format("%s.", deleteAccessGrantsLocationRequest.getAccountId());
+
+                endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
+            }
+
+            StaxResponseHandler<DeleteAccessGrantsLocationResult> responseHandler = new com.amazonaws.services.s3control.internal.S3ControlStaxResponseHandler<DeleteAccessGrantsLocationResult>(
+                    new DeleteAccessGrantsLocationResultStaxUnmarshaller());
 
             response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
 
@@ -2681,6 +3374,478 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
 
     /**
      * <p>
+     * Dissociates the Amazon Web Services IAM Identity Center instance from the S3 Access Grants instance.
+     * </p>
+     * <dl>
+     * <dt>Permissions</dt>
+     * <dd>
+     * <p>
+     * You must have the <code>s3:DissociateAccessGrantsIdentityCenter</code> permission to use this operation.
+     * </p>
+     * </dd>
+     * <dt>Additional Permissions</dt>
+     * <dd>
+     * <p>
+     * You must have the <code>sso:DeleteApplication</code> permission to use this operation.
+     * </p>
+     * </dd>
+     * </dl>
+     * 
+     * @param dissociateAccessGrantsIdentityCenterRequest
+     * @return Result of the DissociateAccessGrantsIdentityCenter operation returned by the service.
+     * @sample AWSS3Control.DissociateAccessGrantsIdentityCenter
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/DissociateAccessGrantsIdentityCenter"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DissociateAccessGrantsIdentityCenterResult dissociateAccessGrantsIdentityCenter(DissociateAccessGrantsIdentityCenterRequest request) {
+        request = beforeClientExecution(request);
+        return executeDissociateAccessGrantsIdentityCenter(request);
+    }
+
+    @SdkInternalApi
+    final DissociateAccessGrantsIdentityCenterResult executeDissociateAccessGrantsIdentityCenter(
+            DissociateAccessGrantsIdentityCenterRequest dissociateAccessGrantsIdentityCenterRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(dissociateAccessGrantsIdentityCenterRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DissociateAccessGrantsIdentityCenterRequest> request = null;
+        Response<DissociateAccessGrantsIdentityCenterResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DissociateAccessGrantsIdentityCenterRequestMarshaller().marshall(super
+                        .beforeMarshalling(dissociateAccessGrantsIdentityCenterRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "S3 Control");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DissociateAccessGrantsIdentityCenter");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            URI endpointTraitHost = null;
+            if (!clientConfiguration.isDisableHostPrefixInjection()) {
+                ValidationUtils.assertStringNotEmpty(dissociateAccessGrantsIdentityCenterRequest.getAccountId(), "AccountId");
+                HostnameValidator.validateHostnameCompliant(dissociateAccessGrantsIdentityCenterRequest.getAccountId(), "AccountId",
+                        "dissociateAccessGrantsIdentityCenterRequest");
+
+                String hostPrefix = "{AccountId}.";
+                String resolvedHostPrefix = String.format("%s.", dissociateAccessGrantsIdentityCenterRequest.getAccountId());
+
+                endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
+            }
+
+            StaxResponseHandler<DissociateAccessGrantsIdentityCenterResult> responseHandler = new com.amazonaws.services.s3control.internal.S3ControlStaxResponseHandler<DissociateAccessGrantsIdentityCenterResult>(
+                    new DissociateAccessGrantsIdentityCenterResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Get the details of an access grant from your S3 Access Grants instance.
+     * </p>
+     * <dl>
+     * <dt>Permissions</dt>
+     * <dd>
+     * <p>
+     * You must have the <code>s3:GetAccessGrant</code> permission to use this operation.
+     * </p>
+     * </dd>
+     * </dl>
+     * 
+     * @param getAccessGrantRequest
+     * @return Result of the GetAccessGrant operation returned by the service.
+     * @sample AWSS3Control.GetAccessGrant
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/GetAccessGrant" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public GetAccessGrantResult getAccessGrant(GetAccessGrantRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetAccessGrant(request);
+    }
+
+    @SdkInternalApi
+    final GetAccessGrantResult executeGetAccessGrant(GetAccessGrantRequest getAccessGrantRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getAccessGrantRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetAccessGrantRequest> request = null;
+        Response<GetAccessGrantResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetAccessGrantRequestMarshaller().marshall(super.beforeMarshalling(getAccessGrantRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "S3 Control");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetAccessGrant");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            URI endpointTraitHost = null;
+            if (!clientConfiguration.isDisableHostPrefixInjection()) {
+                ValidationUtils.assertStringNotEmpty(getAccessGrantRequest.getAccountId(), "AccountId");
+                HostnameValidator.validateHostnameCompliant(getAccessGrantRequest.getAccountId(), "AccountId", "getAccessGrantRequest");
+
+                String hostPrefix = "{AccountId}.";
+                String resolvedHostPrefix = String.format("%s.", getAccessGrantRequest.getAccountId());
+
+                endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
+            }
+
+            StaxResponseHandler<GetAccessGrantResult> responseHandler = new com.amazonaws.services.s3control.internal.S3ControlStaxResponseHandler<GetAccessGrantResult>(
+                    new GetAccessGrantResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Retrieves the S3 Access Grants instance for a Region in your account.
+     * </p>
+     * <dl>
+     * <dt>Permissions</dt>
+     * <dd>
+     * <p>
+     * You must have the <code>s3:GetAccessGrantsInstance</code> permission to use this operation.
+     * </p>
+     * </dd>
+     * </dl>
+     * 
+     * @param getAccessGrantsInstanceRequest
+     * @return Result of the GetAccessGrantsInstance operation returned by the service.
+     * @sample AWSS3Control.GetAccessGrantsInstance
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/GetAccessGrantsInstance"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetAccessGrantsInstanceResult getAccessGrantsInstance(GetAccessGrantsInstanceRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetAccessGrantsInstance(request);
+    }
+
+    @SdkInternalApi
+    final GetAccessGrantsInstanceResult executeGetAccessGrantsInstance(GetAccessGrantsInstanceRequest getAccessGrantsInstanceRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getAccessGrantsInstanceRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetAccessGrantsInstanceRequest> request = null;
+        Response<GetAccessGrantsInstanceResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetAccessGrantsInstanceRequestMarshaller().marshall(super.beforeMarshalling(getAccessGrantsInstanceRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "S3 Control");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetAccessGrantsInstance");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            URI endpointTraitHost = null;
+            if (!clientConfiguration.isDisableHostPrefixInjection()) {
+                ValidationUtils.assertStringNotEmpty(getAccessGrantsInstanceRequest.getAccountId(), "AccountId");
+                HostnameValidator.validateHostnameCompliant(getAccessGrantsInstanceRequest.getAccountId(), "AccountId", "getAccessGrantsInstanceRequest");
+
+                String hostPrefix = "{AccountId}.";
+                String resolvedHostPrefix = String.format("%s.", getAccessGrantsInstanceRequest.getAccountId());
+
+                endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
+            }
+
+            StaxResponseHandler<GetAccessGrantsInstanceResult> responseHandler = new com.amazonaws.services.s3control.internal.S3ControlStaxResponseHandler<GetAccessGrantsInstanceResult>(
+                    new GetAccessGrantsInstanceResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Retrieve the S3 Access Grants instance that contains a particular prefix.
+     * </p>
+     * <dl>
+     * <dt>Permissions</dt>
+     * <dd>
+     * <p>
+     * You must have the <code>s3:GetAccessGrantsInstanceForPrefix</code> permission for the caller account to use this
+     * operation.
+     * </p>
+     * </dd>
+     * <dt>Additional Permissions</dt>
+     * <dd>
+     * <p>
+     * The prefix owner account must grant you the following permissions to their S3 Access Grants instance:
+     * <code>s3:GetAccessGrantsInstanceForPrefix</code>.
+     * </p>
+     * </dd>
+     * </dl>
+     * 
+     * @param getAccessGrantsInstanceForPrefixRequest
+     * @return Result of the GetAccessGrantsInstanceForPrefix operation returned by the service.
+     * @sample AWSS3Control.GetAccessGrantsInstanceForPrefix
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/GetAccessGrantsInstanceForPrefix"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetAccessGrantsInstanceForPrefixResult getAccessGrantsInstanceForPrefix(GetAccessGrantsInstanceForPrefixRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetAccessGrantsInstanceForPrefix(request);
+    }
+
+    @SdkInternalApi
+    final GetAccessGrantsInstanceForPrefixResult executeGetAccessGrantsInstanceForPrefix(
+            GetAccessGrantsInstanceForPrefixRequest getAccessGrantsInstanceForPrefixRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getAccessGrantsInstanceForPrefixRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetAccessGrantsInstanceForPrefixRequest> request = null;
+        Response<GetAccessGrantsInstanceForPrefixResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetAccessGrantsInstanceForPrefixRequestMarshaller().marshall(super.beforeMarshalling(getAccessGrantsInstanceForPrefixRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "S3 Control");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetAccessGrantsInstanceForPrefix");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            URI endpointTraitHost = null;
+            if (!clientConfiguration.isDisableHostPrefixInjection()) {
+                ValidationUtils.assertStringNotEmpty(getAccessGrantsInstanceForPrefixRequest.getAccountId(), "AccountId");
+                HostnameValidator.validateHostnameCompliant(getAccessGrantsInstanceForPrefixRequest.getAccountId(), "AccountId",
+                        "getAccessGrantsInstanceForPrefixRequest");
+
+                String hostPrefix = "{AccountId}.";
+                String resolvedHostPrefix = String.format("%s.", getAccessGrantsInstanceForPrefixRequest.getAccountId());
+
+                endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
+            }
+
+            StaxResponseHandler<GetAccessGrantsInstanceForPrefixResult> responseHandler = new com.amazonaws.services.s3control.internal.S3ControlStaxResponseHandler<GetAccessGrantsInstanceForPrefixResult>(
+                    new GetAccessGrantsInstanceForPrefixResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Returns the resource policy of the S3 Access Grants instance.
+     * </p>
+     * <dl>
+     * <dt>Permissions</dt>
+     * <dd>
+     * <p>
+     * You must have the <code>s3:GetAccessGrantsInstanceResourcePolicy</code> permission to use this operation.
+     * </p>
+     * </dd>
+     * </dl>
+     * 
+     * @param getAccessGrantsInstanceResourcePolicyRequest
+     * @return Result of the GetAccessGrantsInstanceResourcePolicy operation returned by the service.
+     * @sample AWSS3Control.GetAccessGrantsInstanceResourcePolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/GetAccessGrantsInstanceResourcePolicy"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetAccessGrantsInstanceResourcePolicyResult getAccessGrantsInstanceResourcePolicy(GetAccessGrantsInstanceResourcePolicyRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetAccessGrantsInstanceResourcePolicy(request);
+    }
+
+    @SdkInternalApi
+    final GetAccessGrantsInstanceResourcePolicyResult executeGetAccessGrantsInstanceResourcePolicy(
+            GetAccessGrantsInstanceResourcePolicyRequest getAccessGrantsInstanceResourcePolicyRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getAccessGrantsInstanceResourcePolicyRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetAccessGrantsInstanceResourcePolicyRequest> request = null;
+        Response<GetAccessGrantsInstanceResourcePolicyResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetAccessGrantsInstanceResourcePolicyRequestMarshaller().marshall(super
+                        .beforeMarshalling(getAccessGrantsInstanceResourcePolicyRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "S3 Control");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetAccessGrantsInstanceResourcePolicy");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            URI endpointTraitHost = null;
+            if (!clientConfiguration.isDisableHostPrefixInjection()) {
+                ValidationUtils.assertStringNotEmpty(getAccessGrantsInstanceResourcePolicyRequest.getAccountId(), "AccountId");
+                HostnameValidator.validateHostnameCompliant(getAccessGrantsInstanceResourcePolicyRequest.getAccountId(), "AccountId",
+                        "getAccessGrantsInstanceResourcePolicyRequest");
+
+                String hostPrefix = "{AccountId}.";
+                String resolvedHostPrefix = String.format("%s.", getAccessGrantsInstanceResourcePolicyRequest.getAccountId());
+
+                endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
+            }
+
+            StaxResponseHandler<GetAccessGrantsInstanceResourcePolicyResult> responseHandler = new com.amazonaws.services.s3control.internal.S3ControlStaxResponseHandler<GetAccessGrantsInstanceResourcePolicyResult>(
+                    new GetAccessGrantsInstanceResourcePolicyResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Retrieves the details of a particular location registered in your S3 Access Grants instance.
+     * </p>
+     * <dl>
+     * <dt>Permissions</dt>
+     * <dd>
+     * <p>
+     * You must have the <code>s3:GetAccessGrantsLocation</code> permission to use this operation.
+     * </p>
+     * </dd>
+     * </dl>
+     * 
+     * @param getAccessGrantsLocationRequest
+     * @return Result of the GetAccessGrantsLocation operation returned by the service.
+     * @sample AWSS3Control.GetAccessGrantsLocation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/GetAccessGrantsLocation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetAccessGrantsLocationResult getAccessGrantsLocation(GetAccessGrantsLocationRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetAccessGrantsLocation(request);
+    }
+
+    @SdkInternalApi
+    final GetAccessGrantsLocationResult executeGetAccessGrantsLocation(GetAccessGrantsLocationRequest getAccessGrantsLocationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getAccessGrantsLocationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetAccessGrantsLocationRequest> request = null;
+        Response<GetAccessGrantsLocationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetAccessGrantsLocationRequestMarshaller().marshall(super.beforeMarshalling(getAccessGrantsLocationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "S3 Control");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetAccessGrantsLocation");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            URI endpointTraitHost = null;
+            if (!clientConfiguration.isDisableHostPrefixInjection()) {
+                ValidationUtils.assertStringNotEmpty(getAccessGrantsLocationRequest.getAccountId(), "AccountId");
+                HostnameValidator.validateHostnameCompliant(getAccessGrantsLocationRequest.getAccountId(), "AccountId", "getAccessGrantsLocationRequest");
+
+                String hostPrefix = "{AccountId}.";
+                String resolvedHostPrefix = String.format("%s.", getAccessGrantsLocationRequest.getAccountId());
+
+                endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
+            }
+
+            StaxResponseHandler<GetAccessGrantsLocationResult> responseHandler = new com.amazonaws.services.s3control.internal.S3ControlStaxResponseHandler<GetAccessGrantsLocationResult>(
+                    new GetAccessGrantsLocationResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Returns configuration information about the specified access point.
      * </p>
      * <p/>
@@ -4193,6 +5358,91 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
 
     /**
      * <p>
+     * Returns a temporary access credential from S3 Access Grants to the grantee or client application. The <a
+     * href="https://docs.aws.amazon.com/STS/latest/APIReference/API_Credentials.html">temporary credential</a> is an
+     * Amazon Web Services STS token that grants them access to the S3 data.
+     * </p>
+     * <dl>
+     * <dt>Permissions</dt>
+     * <dd>
+     * <p>
+     * You must have the <code>s3:GetDataAccess</code> permission to use this operation.
+     * </p>
+     * </dd>
+     * <dt>Additional Permissions</dt>
+     * <dd>
+     * <p>
+     * The IAM role that S3 Access Grants assumes must have the following permissions specified in the trust policy when
+     * registering the location: <code>sts:AssumeRole</code>, for directory users or groups <code>sts:SetContext</code>,
+     * and for IAM users or roles <code>sts:SourceIdentity</code>.
+     * </p>
+     * </dd>
+     * </dl>
+     * 
+     * @param getDataAccessRequest
+     * @return Result of the GetDataAccess operation returned by the service.
+     * @sample AWSS3Control.GetDataAccess
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/GetDataAccess" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public GetDataAccessResult getDataAccess(GetDataAccessRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetDataAccess(request);
+    }
+
+    @SdkInternalApi
+    final GetDataAccessResult executeGetDataAccess(GetDataAccessRequest getDataAccessRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getDataAccessRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetDataAccessRequest> request = null;
+        Response<GetDataAccessResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetDataAccessRequestMarshaller().marshall(super.beforeMarshalling(getDataAccessRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "S3 Control");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetDataAccess");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            URI endpointTraitHost = null;
+            if (!clientConfiguration.isDisableHostPrefixInjection()) {
+                ValidationUtils.assertStringNotEmpty(getDataAccessRequest.getAccountId(), "AccountId");
+                HostnameValidator.validateHostnameCompliant(getDataAccessRequest.getAccountId(), "AccountId", "getDataAccessRequest");
+
+                String hostPrefix = "{AccountId}.";
+                String resolvedHostPrefix = String.format("%s.", getDataAccessRequest.getAccountId());
+
+                endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
+            }
+
+            StaxResponseHandler<GetDataAccessResult> responseHandler = new com.amazonaws.services.s3control.internal.S3ControlStaxResponseHandler<GetDataAccessResult>(
+                    new GetDataAccessResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Returns the tags on an S3 Batch Operations job. To use the <code>GetJobTagging</code> operation, you must have
      * permission to perform the <code>s3:GetJobTagging</code> action. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/batch-ops-managing-jobs.html#batch-ops-job-tags"
@@ -5010,6 +6260,232 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
 
     /**
      * <p>
+     * Returns the list of access grants in your S3 Access Grants instance.
+     * </p>
+     * <dl>
+     * <dt>Permissions</dt>
+     * <dd>
+     * <p>
+     * You must have the <code>s3:ListAccessGrants</code> permission to use this operation.
+     * </p>
+     * </dd>
+     * </dl>
+     * 
+     * @param listAccessGrantsRequest
+     * @return Result of the ListAccessGrants operation returned by the service.
+     * @sample AWSS3Control.ListAccessGrants
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/ListAccessGrants" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public ListAccessGrantsResult listAccessGrants(ListAccessGrantsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListAccessGrants(request);
+    }
+
+    @SdkInternalApi
+    final ListAccessGrantsResult executeListAccessGrants(ListAccessGrantsRequest listAccessGrantsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listAccessGrantsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListAccessGrantsRequest> request = null;
+        Response<ListAccessGrantsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListAccessGrantsRequestMarshaller().marshall(super.beforeMarshalling(listAccessGrantsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "S3 Control");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListAccessGrants");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            URI endpointTraitHost = null;
+            if (!clientConfiguration.isDisableHostPrefixInjection()) {
+                ValidationUtils.assertStringNotEmpty(listAccessGrantsRequest.getAccountId(), "AccountId");
+                HostnameValidator.validateHostnameCompliant(listAccessGrantsRequest.getAccountId(), "AccountId", "listAccessGrantsRequest");
+
+                String hostPrefix = "{AccountId}.";
+                String resolvedHostPrefix = String.format("%s.", listAccessGrantsRequest.getAccountId());
+
+                endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
+            }
+
+            StaxResponseHandler<ListAccessGrantsResult> responseHandler = new com.amazonaws.services.s3control.internal.S3ControlStaxResponseHandler<ListAccessGrantsResult>(
+                    new ListAccessGrantsResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Returns a list of S3 Access Grants instances. An S3 Access Grants instance serves as a logical grouping for your
+     * individual access grants. You can only have one S3 Access Grants instance per Region per account.
+     * </p>
+     * <dl>
+     * <dt>Permissions</dt>
+     * <dd>
+     * <p>
+     * You must have the <code>s3:ListAccessGrantsInstances</code> permission to use this operation.
+     * </p>
+     * </dd>
+     * </dl>
+     * 
+     * @param listAccessGrantsInstancesRequest
+     * @return Result of the ListAccessGrantsInstances operation returned by the service.
+     * @sample AWSS3Control.ListAccessGrantsInstances
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/ListAccessGrantsInstances"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListAccessGrantsInstancesResult listAccessGrantsInstances(ListAccessGrantsInstancesRequest request) {
+        request = beforeClientExecution(request);
+        return executeListAccessGrantsInstances(request);
+    }
+
+    @SdkInternalApi
+    final ListAccessGrantsInstancesResult executeListAccessGrantsInstances(ListAccessGrantsInstancesRequest listAccessGrantsInstancesRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listAccessGrantsInstancesRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListAccessGrantsInstancesRequest> request = null;
+        Response<ListAccessGrantsInstancesResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListAccessGrantsInstancesRequestMarshaller().marshall(super.beforeMarshalling(listAccessGrantsInstancesRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "S3 Control");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListAccessGrantsInstances");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            URI endpointTraitHost = null;
+            if (!clientConfiguration.isDisableHostPrefixInjection()) {
+                ValidationUtils.assertStringNotEmpty(listAccessGrantsInstancesRequest.getAccountId(), "AccountId");
+                HostnameValidator.validateHostnameCompliant(listAccessGrantsInstancesRequest.getAccountId(), "AccountId", "listAccessGrantsInstancesRequest");
+
+                String hostPrefix = "{AccountId}.";
+                String resolvedHostPrefix = String.format("%s.", listAccessGrantsInstancesRequest.getAccountId());
+
+                endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
+            }
+
+            StaxResponseHandler<ListAccessGrantsInstancesResult> responseHandler = new com.amazonaws.services.s3control.internal.S3ControlStaxResponseHandler<ListAccessGrantsInstancesResult>(
+                    new ListAccessGrantsInstancesResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Returns a list of the locations registered in your S3 Access Grants instance.
+     * </p>
+     * <dl>
+     * <dt>Permissions</dt>
+     * <dd>
+     * <p>
+     * You must have the <code>s3:ListAccessGrantsLocations</code> permission to use this operation.
+     * </p>
+     * </dd>
+     * </dl>
+     * 
+     * @param listAccessGrantsLocationsRequest
+     * @return Result of the ListAccessGrantsLocations operation returned by the service.
+     * @sample AWSS3Control.ListAccessGrantsLocations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/ListAccessGrantsLocations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListAccessGrantsLocationsResult listAccessGrantsLocations(ListAccessGrantsLocationsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListAccessGrantsLocations(request);
+    }
+
+    @SdkInternalApi
+    final ListAccessGrantsLocationsResult executeListAccessGrantsLocations(ListAccessGrantsLocationsRequest listAccessGrantsLocationsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listAccessGrantsLocationsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListAccessGrantsLocationsRequest> request = null;
+        Response<ListAccessGrantsLocationsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListAccessGrantsLocationsRequestMarshaller().marshall(super.beforeMarshalling(listAccessGrantsLocationsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "S3 Control");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListAccessGrantsLocations");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            URI endpointTraitHost = null;
+            if (!clientConfiguration.isDisableHostPrefixInjection()) {
+                ValidationUtils.assertStringNotEmpty(listAccessGrantsLocationsRequest.getAccountId(), "AccountId");
+                HostnameValidator.validateHostnameCompliant(listAccessGrantsLocationsRequest.getAccountId(), "AccountId", "listAccessGrantsLocationsRequest");
+
+                String hostPrefix = "{AccountId}.";
+                String resolvedHostPrefix = String.format("%s.", listAccessGrantsLocationsRequest.getAccountId());
+
+                endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
+            }
+
+            StaxResponseHandler<ListAccessGrantsLocationsResult> responseHandler = new com.amazonaws.services.s3control.internal.S3ControlStaxResponseHandler<ListAccessGrantsLocationsResult>(
+                    new ListAccessGrantsLocationsResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Returns a list of the access points that are owned by the current account that's associated with the specified
      * bucket. You can retrieve up to 1000 access points per call. If the specified bucket has more than 1,000 access
      * points (or the number specified in <code>maxResults</code>, whichever is less), the response will include a
@@ -5668,10 +7144,28 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
 
     /**
      * <p>
-     * This operation allows you to list all the Amazon Web Services resource tags for the specified resource.
+     * This operation allows you to list all the Amazon Web Services resource tags for a specified resource. Each tag is
+     * a label consisting of a user-defined key and value. Tags can help you manage, identify, organize, search for, and
+     * filter resources.
      * </p>
+     * <dl>
+     * <dt>Permissions</dt>
+     * <dd>
      * <p>
-     * To use this operation, you must have the permission to perform the <code>s3:ListTagsForResource</code> action.
+     * You must have the <code>s3:ListTagsForResource</code> permission to use this operation.
+     * </p>
+     * </dd>
+     * </dl>
+     * <note>
+     * <p>
+     * This operation is only supported for <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage-lens-groups.html">S3 Storage Lens groups</a>
+     * and for <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-grants-tagging.html">S3 Access
+     * Grants</a>. The tagged resource can be an S3 Storage Lens group or S3 Access Grants instance, registered
+     * location, or grant.
+     * </p>
+     * </note>
+     * <p>
      * For more information about the required Storage Lens Groups permissions, see <a href=
      * "https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage_lens_iam_permissions.html#storage_lens_groups_permissions"
      * >Setting account permissions to use S3 Storage Lens groups</a>.
@@ -5681,12 +7175,6 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
      * href="https://docs.aws.amazon.com/AmazonS3/latest/API/ErrorResponses.html#S3TaggingErrorCodeList">List of Amazon
      * S3 Tagging error codes</a>.
      * </p>
-     * <note>
-     * <p>
-     * This operation is only supported for <a
-     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage-lens-groups.html">S3 Storage Lens groups</a>.
-     * </p>
-     * </note>
      * 
      * @param listTagsForResourceRequest
      * @return Result of the ListTagsForResource operation returned by the service.
@@ -5739,6 +7227,84 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
 
             StaxResponseHandler<ListTagsForResourceResult> responseHandler = new com.amazonaws.services.s3control.internal.S3ControlStaxResponseHandler<ListTagsForResourceResult>(
                     new ListTagsForResourceResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Updates the resource policy of the S3 Access Grants instance.
+     * </p>
+     * <dl>
+     * <dt>Permissions</dt>
+     * <dd>
+     * <p>
+     * You must have the <code>s3:PutAccessGrantsInstanceResourcePolicy</code> permission to use this operation.
+     * </p>
+     * </dd>
+     * </dl>
+     * 
+     * @param putAccessGrantsInstanceResourcePolicyRequest
+     * @return Result of the PutAccessGrantsInstanceResourcePolicy operation returned by the service.
+     * @sample AWSS3Control.PutAccessGrantsInstanceResourcePolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/PutAccessGrantsInstanceResourcePolicy"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public PutAccessGrantsInstanceResourcePolicyResult putAccessGrantsInstanceResourcePolicy(PutAccessGrantsInstanceResourcePolicyRequest request) {
+        request = beforeClientExecution(request);
+        return executePutAccessGrantsInstanceResourcePolicy(request);
+    }
+
+    @SdkInternalApi
+    final PutAccessGrantsInstanceResourcePolicyResult executePutAccessGrantsInstanceResourcePolicy(
+            PutAccessGrantsInstanceResourcePolicyRequest putAccessGrantsInstanceResourcePolicyRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(putAccessGrantsInstanceResourcePolicyRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<PutAccessGrantsInstanceResourcePolicyRequest> request = null;
+        Response<PutAccessGrantsInstanceResourcePolicyResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new PutAccessGrantsInstanceResourcePolicyRequestMarshaller().marshall(super
+                        .beforeMarshalling(putAccessGrantsInstanceResourcePolicyRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "S3 Control");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "PutAccessGrantsInstanceResourcePolicy");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            URI endpointTraitHost = null;
+            if (!clientConfiguration.isDisableHostPrefixInjection()) {
+                ValidationUtils.assertStringNotEmpty(putAccessGrantsInstanceResourcePolicyRequest.getAccountId(), "AccountId");
+                HostnameValidator.validateHostnameCompliant(putAccessGrantsInstanceResourcePolicyRequest.getAccountId(), "AccountId",
+                        "putAccessGrantsInstanceResourcePolicyRequest");
+
+                String hostPrefix = "{AccountId}.";
+                String resolvedHostPrefix = String.format("%s.", putAccessGrantsInstanceResourcePolicyRequest.getAccountId());
+
+                endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
+            }
+
+            StaxResponseHandler<PutAccessGrantsInstanceResourcePolicyResult> responseHandler = new com.amazonaws.services.s3control.internal.S3ControlStaxResponseHandler<PutAccessGrantsInstanceResourcePolicyResult>(
+                    new PutAccessGrantsInstanceResourcePolicyResultStaxUnmarshaller());
 
             response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
 
@@ -7514,12 +9080,29 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
 
     /**
      * <p>
-     * Creates a new Amazon Web Services resource tag or updates an existing resource tag. You can add up to 50 Amazon
-     * Web Services resource tags for each S3 resource.
+     * Creates a new Amazon Web Services resource tag or updates an existing resource tag. Each tag is a label
+     * consisting of a user-defined key and value. Tags can help you manage, identify, organize, search for, and filter
+     * resources. You can add up to 50 Amazon Web Services resource tags for each S3 resource.
      * </p>
+     * <note>
      * <p>
-     * To use this operation, you must have the permission to perform the <code>s3:TagResource</code> action. For more
-     * information about the required Storage Lens Groups permissions, see <a href=
+     * This operation is only supported for <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage-lens-groups.html">S3 Storage Lens groups</a>
+     * and for <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-grants-tagging.html">S3 Access
+     * Grants</a>. The tagged resource can be an S3 Storage Lens group or S3 Access Grants instance, registered
+     * location, or grant.
+     * </p>
+     * </note>
+     * <dl>
+     * <dt>Permissions</dt>
+     * <dd>
+     * <p>
+     * You must have the <code>s3:TagResource</code> permission to use this operation.
+     * </p>
+     * </dd>
+     * </dl>
+     * <p>
+     * For more information about the required Storage Lens Groups permissions, see <a href=
      * "https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage_lens_iam_permissions.html#storage_lens_groups_permissions"
      * >Setting account permissions to use S3 Storage Lens groups</a>.
      * </p>
@@ -7528,12 +9111,6 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
      * href="https://docs.aws.amazon.com/AmazonS3/latest/API/ErrorResponses.html#S3TaggingErrorCodeList">List of Amazon
      * S3 Tagging error codes</a>.
      * </p>
-     * <note>
-     * <p>
-     * This operation is only supported for <a
-     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage-lens-groups.html">S3 Storage Lens groups</a>.
-     * </p>
-     * </note>
      * 
      * @param tagResourceRequest
      * @return Result of the TagResource operation returned by the service.
@@ -7599,11 +9176,29 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
 
     /**
      * <p>
-     * This operation removes the specified Amazon Web Services resource tags from an S3 resource.
+     * This operation removes the specified Amazon Web Services resource tags from an S3 resource. Each tag is a label
+     * consisting of a user-defined key and value. Tags can help you manage, identify, organize, search for, and filter
+     * resources.
      * </p>
+     * <note>
      * <p>
-     * To use this operation, you must have the permission to perform the <code>s3:UntagResource</code> action. For more
-     * information about the required Storage Lens Groups permissions, see <a href=
+     * This operation is only supported for <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage-lens-groups.html">S3 Storage Lens groups</a>
+     * and for <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-grants-tagging.html">S3 Access
+     * Grants</a>. The tagged resource can be an S3 Storage Lens group or S3 Access Grants instance, registered
+     * location, or grant.
+     * </p>
+     * </note>
+     * <dl>
+     * <dt>Permissions</dt>
+     * <dd>
+     * <p>
+     * You must have the <code>s3:UntagResource</code> permission to use this operation.
+     * </p>
+     * </dd>
+     * </dl>
+     * <p>
+     * For more information about the required Storage Lens Groups permissions, see <a href=
      * "https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage_lens_iam_permissions.html#storage_lens_groups_permissions"
      * >Setting account permissions to use S3 Storage Lens groups</a>.
      * </p>
@@ -7612,12 +9207,6 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
      * href="https://docs.aws.amazon.com/AmazonS3/latest/API/ErrorResponses.html#S3TaggingErrorCodeList">List of Amazon
      * S3 Tagging error codes</a>.
      * </p>
-     * <note>
-     * <p>
-     * This operation is only supported for <a
-     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage-lens-groups.html">S3 Storage Lens groups</a>.
-     * </p>
-     * </note>
      * 
      * @param untagResourceRequest
      * @return Result of the UntagResource operation returned by the service.
@@ -7670,6 +9259,87 @@ public class AWSS3ControlClient extends AmazonWebServiceClient implements AWSS3C
 
             StaxResponseHandler<UntagResourceResult> responseHandler = new com.amazonaws.services.s3control.internal.S3ControlStaxResponseHandler<UntagResourceResult>(
                     new UntagResourceResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Updates the IAM role of a registered location in your S3 Access Grants instance.
+     * </p>
+     * <dl>
+     * <dt>Permissions</dt>
+     * <dd>
+     * <p>
+     * You must have the <code>s3:UpdateAccessGrantsLocation</code> permission to use this operation.
+     * </p>
+     * </dd>
+     * <dt>Additional Permissions</dt>
+     * <dd>
+     * <p>
+     * You must also have the following permission: <code>iam:PassRole</code>
+     * </p>
+     * </dd>
+     * </dl>
+     * 
+     * @param updateAccessGrantsLocationRequest
+     * @return Result of the UpdateAccessGrantsLocation operation returned by the service.
+     * @sample AWSS3Control.UpdateAccessGrantsLocation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3control-2018-08-20/UpdateAccessGrantsLocation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public UpdateAccessGrantsLocationResult updateAccessGrantsLocation(UpdateAccessGrantsLocationRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateAccessGrantsLocation(request);
+    }
+
+    @SdkInternalApi
+    final UpdateAccessGrantsLocationResult executeUpdateAccessGrantsLocation(UpdateAccessGrantsLocationRequest updateAccessGrantsLocationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateAccessGrantsLocationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateAccessGrantsLocationRequest> request = null;
+        Response<UpdateAccessGrantsLocationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateAccessGrantsLocationRequestMarshaller().marshall(super.beforeMarshalling(updateAccessGrantsLocationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "S3 Control");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateAccessGrantsLocation");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            URI endpointTraitHost = null;
+            if (!clientConfiguration.isDisableHostPrefixInjection()) {
+                ValidationUtils.assertStringNotEmpty(updateAccessGrantsLocationRequest.getAccountId(), "AccountId");
+                HostnameValidator.validateHostnameCompliant(updateAccessGrantsLocationRequest.getAccountId(), "AccountId", "updateAccessGrantsLocationRequest");
+
+                String hostPrefix = "{AccountId}.";
+                String resolvedHostPrefix = String.format("%s.", updateAccessGrantsLocationRequest.getAccountId());
+
+                endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
+            }
+
+            StaxResponseHandler<UpdateAccessGrantsLocationResult> responseHandler = new com.amazonaws.services.s3control.internal.S3ControlStaxResponseHandler<UpdateAccessGrantsLocationResult>(
+                    new UpdateAccessGrantsLocationResultStaxUnmarshaller());
 
             response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
 

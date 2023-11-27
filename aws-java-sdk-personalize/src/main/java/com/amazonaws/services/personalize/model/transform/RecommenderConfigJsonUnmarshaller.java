@@ -61,6 +61,10 @@ public class RecommenderConfigJsonUnmarshaller implements Unmarshaller<Recommend
                     context.nextToken();
                     recommenderConfig.setTrainingDataConfig(TrainingDataConfigJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("enableMetadataWithRecommendations", targetDepth)) {
+                    context.nextToken();
+                    recommenderConfig.setEnableMetadataWithRecommendations(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

@@ -33,6 +33,10 @@ public class NumberFilterMarshaller {
             .marshallLocationName("Lte").build();
     private static final MarshallingInfo<Double> EQ_BINDING = MarshallingInfo.builder(MarshallingType.DOUBLE).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Eq").build();
+    private static final MarshallingInfo<Double> GT_BINDING = MarshallingInfo.builder(MarshallingType.DOUBLE).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Gt").build();
+    private static final MarshallingInfo<Double> LT_BINDING = MarshallingInfo.builder(MarshallingType.DOUBLE).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Lt").build();
 
     private static final NumberFilterMarshaller instance = new NumberFilterMarshaller();
 
@@ -53,6 +57,8 @@ public class NumberFilterMarshaller {
             protocolMarshaller.marshall(numberFilter.getGte(), GTE_BINDING);
             protocolMarshaller.marshall(numberFilter.getLte(), LTE_BINDING);
             protocolMarshaller.marshall(numberFilter.getEq(), EQ_BINDING);
+            protocolMarshaller.marshall(numberFilter.getGt(), GT_BINDING);
+            protocolMarshaller.marshall(numberFilter.getLt(), LT_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

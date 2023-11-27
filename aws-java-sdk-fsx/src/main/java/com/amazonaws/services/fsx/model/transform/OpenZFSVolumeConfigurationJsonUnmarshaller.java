@@ -109,6 +109,18 @@ public class OpenZFSVolumeConfigurationJsonUnmarshaller implements Unmarshaller<
                     context.nextToken();
                     openZFSVolumeConfiguration.setDeleteClonedVolumes(context.getUnmarshaller(Boolean.class).unmarshall(context));
                 }
+                if (context.testExpression("DeleteIntermediateData", targetDepth)) {
+                    context.nextToken();
+                    openZFSVolumeConfiguration.setDeleteIntermediateData(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
+                if (context.testExpression("SourceSnapshotARN", targetDepth)) {
+                    context.nextToken();
+                    openZFSVolumeConfiguration.setSourceSnapshotARN(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("DestinationSnapshot", targetDepth)) {
+                    context.nextToken();
+                    openZFSVolumeConfiguration.setDestinationSnapshot(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

@@ -47,6 +47,12 @@ public class CreateOntapVolumeConfigurationMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CopyTagsToBackups").build();
     private static final MarshallingInfo<StructuredPojo> SNAPLOCKCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SnaplockConfiguration").build();
+    private static final MarshallingInfo<String> VOLUMESTYLE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("VolumeStyle").build();
+    private static final MarshallingInfo<StructuredPojo> AGGREGATECONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AggregateConfiguration").build();
+    private static final MarshallingInfo<Long> SIZEINBYTES_BINDING = MarshallingInfo.builder(MarshallingType.LONG).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("SizeInBytes").build();
 
     private static final CreateOntapVolumeConfigurationMarshaller instance = new CreateOntapVolumeConfigurationMarshaller();
 
@@ -74,6 +80,9 @@ public class CreateOntapVolumeConfigurationMarshaller {
             protocolMarshaller.marshall(createOntapVolumeConfiguration.getSnapshotPolicy(), SNAPSHOTPOLICY_BINDING);
             protocolMarshaller.marshall(createOntapVolumeConfiguration.getCopyTagsToBackups(), COPYTAGSTOBACKUPS_BINDING);
             protocolMarshaller.marshall(createOntapVolumeConfiguration.getSnaplockConfiguration(), SNAPLOCKCONFIGURATION_BINDING);
+            protocolMarshaller.marshall(createOntapVolumeConfiguration.getVolumeStyle(), VOLUMESTYLE_BINDING);
+            protocolMarshaller.marshall(createOntapVolumeConfiguration.getAggregateConfiguration(), AGGREGATECONFIGURATION_BINDING);
+            protocolMarshaller.marshall(createOntapVolumeConfiguration.getSizeInBytes(), SIZEINBYTES_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

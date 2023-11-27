@@ -116,6 +116,17 @@ public class WorkspaceJsonUnmarshaller implements Unmarshaller<Workspace, JsonUn
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("DataReplicationSettings", targetDepth)) {
+                    context.nextToken();
+                    workspace.setDataReplicationSettings(DataReplicationSettingsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("StandbyWorkspacesProperties", targetDepth)) {
+                    context.nextToken();
+                    workspace.setStandbyWorkspacesProperties(new ListUnmarshaller<StandbyWorkspacesProperties>(StandbyWorkspacesPropertiesJsonUnmarshaller
+                            .getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

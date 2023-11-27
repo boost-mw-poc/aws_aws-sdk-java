@@ -33,8 +33,8 @@ public class ListDatasetsRequest extends com.amazonaws.AmazonWebServiceRequest i
     private String datasetGroupArn;
     /**
      * <p>
-     * A token returned from the previous call to <code>ListDatasetImportJobs</code> for getting the next set of dataset
-     * import jobs (if they exist).
+     * A token returned from the previous call to <code>ListDatasets</code> for getting the next set of dataset import
+     * jobs (if they exist).
      * </p>
      */
     private String nextToken;
@@ -87,13 +87,13 @@ public class ListDatasetsRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * A token returned from the previous call to <code>ListDatasetImportJobs</code> for getting the next set of dataset
-     * import jobs (if they exist).
+     * A token returned from the previous call to <code>ListDatasets</code> for getting the next set of dataset import
+     * jobs (if they exist).
      * </p>
      * 
      * @param nextToken
-     *        A token returned from the previous call to <code>ListDatasetImportJobs</code> for getting the next set of
-     *        dataset import jobs (if they exist).
+     *        A token returned from the previous call to <code>ListDatasets</code> for getting the next set of dataset
+     *        import jobs (if they exist).
      */
 
     public void setNextToken(String nextToken) {
@@ -102,12 +102,12 @@ public class ListDatasetsRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * A token returned from the previous call to <code>ListDatasetImportJobs</code> for getting the next set of dataset
-     * import jobs (if they exist).
+     * A token returned from the previous call to <code>ListDatasets</code> for getting the next set of dataset import
+     * jobs (if they exist).
      * </p>
      * 
-     * @return A token returned from the previous call to <code>ListDatasetImportJobs</code> for getting the next set of
-     *         dataset import jobs (if they exist).
+     * @return A token returned from the previous call to <code>ListDatasets</code> for getting the next set of dataset
+     *         import jobs (if they exist).
      */
 
     public String getNextToken() {
@@ -116,13 +116,13 @@ public class ListDatasetsRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * A token returned from the previous call to <code>ListDatasetImportJobs</code> for getting the next set of dataset
-     * import jobs (if they exist).
+     * A token returned from the previous call to <code>ListDatasets</code> for getting the next set of dataset import
+     * jobs (if they exist).
      * </p>
      * 
      * @param nextToken
-     *        A token returned from the previous call to <code>ListDatasetImportJobs</code> for getting the next set of
-     *        dataset import jobs (if they exist).
+     *        A token returned from the previous call to <code>ListDatasets</code> for getting the next set of dataset
+     *        import jobs (if they exist).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

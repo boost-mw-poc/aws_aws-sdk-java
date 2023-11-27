@@ -527,10 +527,19 @@ public class AmazonElasticFileSystemClient extends AmazonWebServiceClient implem
      * </note>
      * <p>
      * This operation accepts an optional <code>PerformanceMode</code> parameter that you choose for your file system.
-     * We recommend <code>generalPurpose</code> performance mode for most file systems. File systems using the
-     * <code>maxIO</code> performance mode can scale to higher levels of aggregate throughput and operations per second
-     * with a tradeoff of slightly higher latencies for most file operations. The performance mode can't be changed
-     * after the file system has been created. For more information, see <a
+     * We recommend <code>generalPurpose</code> performance mode for all file systems. File systems using the
+     * <code>maxIO</code> mode is a previous generation performance type that is designed for highly parallelized
+     * workloads that can tolerate higher latencies than the General Purpose mode. Max I/O mode is not supported for One
+     * Zone file systems or file systems that use Elastic throughput.
+     * </p>
+     * <important>
+     * <p>
+     * Due to the higher per-operation latencies with Max I/O, we recommend using General Purpose performance mode for
+     * all file systems.
+     * </p>
+     * </important>
+     * <p>
+     * The performance mode can't be changed after the file system has been created. For more information, see <a
      * href="https://docs.aws.amazon.com/efs/latest/ug/performance.html#performancemodes.html">Amazon EFS performance
      * modes</a>.
      * </p>
@@ -639,11 +648,11 @@ public class AmazonElasticFileSystemClient extends AmazonWebServiceClient implem
      * subnet as the mount target in order to access their file system.
      * </p>
      * <p>
-     * You can create only one mount target for an EFS file system using One Zone storage classes. You must create that
-     * mount target in the same Availability Zone in which the file system is located. Use the
-     * <code>AvailabilityZoneName</code> and <code>AvailabiltyZoneId</code> properties in the <a>DescribeFileSystems</a>
-     * response object to get this information. Use the <code>subnetId</code> associated with the file system's
-     * Availability Zone when creating the mount target.
+     * You can create only one mount target for a One Zone file system. You must create that mount target in the same
+     * Availability Zone in which the file system is located. Use the <code>AvailabilityZoneName</code> and
+     * <code>AvailabiltyZoneId</code> properties in the <a>DescribeFileSystems</a> response object to get this
+     * information. Use the <code>subnetId</code> associated with the file system's Availability Zone when creating the
+     * mount target.
      * </p>
      * <p>
      * For more information, see <a href="https://docs.aws.amazon.com/efs/latest/ug/how-it-works.html">Amazon EFS: How
@@ -926,10 +935,10 @@ public class AmazonElasticFileSystemClient extends AmazonWebServiceClient implem
      * </li>
      * <li>
      * <p>
-     * <b>Availability Zone</b> - If you want the destination file system to use EFS One Zone availability and
-     * durability, you must specify the Availability Zone to create the file system in. For more information about EFS
-     * storage classes, see <a href="https://docs.aws.amazon.com/efs/latest/ug/storage-classes.html"> Amazon EFS storage
-     * classes</a> in the <i>Amazon EFS User Guide</i>.
+     * <b>Availability Zone</b> - If you want the destination file system to use EFS One Zone availability, you must
+     * specify the Availability Zone to create the file system in. For more information about EFS storage classes, see
+     * <a href="https://docs.aws.amazon.com/efs/latest/ug/storage-classes.html"> Amazon EFS storage classes</a> in the
+     * <i>Amazon EFS User Guide</i>.
      * </p>
      * </li>
      * <li>
@@ -970,14 +979,13 @@ public class AmazonElasticFileSystemClient extends AmazonWebServiceClient implem
      * <ul>
      * <li>
      * <p>
-     * <b>Lifecycle management</b> - EFS lifecycle management and EFS Intelligent-Tiering are not enabled on the
-     * destination file system. After the destination file system is created, you can enable EFS lifecycle management
-     * and EFS Intelligent-Tiering.
+     * <b>Lifecycle management</b> – Lifecycle management is not enabled on the destination file system. After the
+     * destination file system is created, you can enable it.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b>Automatic backups</b> - Automatic daily backups are enabled on the destination file system. After the file
+     * <b>Automatic backups</b> – Automatic daily backups are enabled on the destination file system. After the file
      * system is created, you can change this setting.
      * </p>
      * </li>
@@ -1982,14 +1990,10 @@ public class AmazonElasticFileSystemClient extends AmazonWebServiceClient implem
 
     /**
      * <p>
-     * Returns the current <code>LifecycleConfiguration</code> object for the specified Amazon EFS file system. EFS
-     * lifecycle management uses the <code>LifecycleConfiguration</code> object to identify which files to move to the
-     * EFS Infrequent Access (IA) storage class. For a file system without a <code>LifecycleConfiguration</code> object,
-     * the call returns an empty array in the response.
-     * </p>
-     * <p>
-     * When EFS Intelligent-Tiering is enabled, <code>TransitionToPrimaryStorageClass</code> has a value of
-     * <code>AFTER_1_ACCESS</code>.
+     * Returns the current <code>LifecycleConfiguration</code> object for the specified Amazon EFS file system.
+     * Llifecycle management uses the <code>LifecycleConfiguration</code> object to identify when to move files between
+     * storage classes. For a file system without a <code>LifecycleConfiguration</code> object, the call returns an
+     * empty array in the response.
      * </p>
      * <p>
      * This operation requires permissions for the <code>elasticfilesystem:DescribeLifecycleConfiguration</code>
@@ -2757,42 +2761,48 @@ public class AmazonElasticFileSystemClient extends AmazonWebServiceClient implem
 
     /**
      * <p>
-     * Use this action to manage EFS lifecycle management and EFS Intelligent-Tiering. A
-     * <code>LifecycleConfiguration</code> consists of one or more <code>LifecyclePolicy</code> objects that define the
-     * following:
+     * Use this action to manage storage of your file system. A <code>LifecycleConfiguration</code> consists of one or
+     * more <code>LifecyclePolicy</code> objects that define the following:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <b>EFS Lifecycle management</b> - When Amazon EFS automatically transitions files in a file system into the
-     * lower-cost EFS Infrequent Access (IA) storage class.
-     * </p>
-     * <p>
-     * To enable EFS Lifecycle management, set the value of <code>TransitionToIA</code> to one of the available options.
+     * <b> <code>TransitionToIA</code> </b> – When to move files in the file system from primary storage (Standard
+     * storage class) into the Infrequent Access (IA) storage.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b>EFS Intelligent-Tiering</b> - When Amazon EFS automatically transitions files from IA back into the file
-     * system's primary storage class (EFS Standard or EFS One Zone Standard).
+     * <b> <code>TransitionToArchive</code> </b> – When to move files in the file system from their current storage
+     * class (either IA or Standard storage) into the Archive storage.
      * </p>
      * <p>
-     * To enable EFS Intelligent-Tiering, set the value of <code>TransitionToPrimaryStorageClass</code> to
-     * <code>AFTER_1_ACCESS</code>.
+     * File systems cannot transition into Archive storage before transitioning into IA storage. Therefore,
+     * TransitionToArchive must either not be set or must be later than TransitionToIA.
+     * </p>
+     * <note>
+     * <p>
+     * The Archive storage class is available only for file systems that use the Elastic Throughput mode and the General
+     * Purpose Performance mode.
+     * </p>
+     * </note></li>
+     * <li>
+     * <p>
+     * <b> <code>TransitionToPrimaryStorageClass</code> </b> – Whether to move files in the file system back to primary
+     * storage (Standard storage class) after they are accessed in IA or Archive storage.
      * </p>
      * </li>
      * </ul>
      * <p>
-     * For more information, see <a href="https://docs.aws.amazon.com/efs/latest/ug/lifecycle-management-efs.html">EFS
-     * Lifecycle Management</a>.
+     * For more information, see <a href="https://docs.aws.amazon.com/efs/latest/ug/lifecycle-management-efs.html">
+     * Managing file system storage</a>.
      * </p>
      * <p>
      * Each Amazon EFS file system supports one lifecycle configuration, which applies to all files in the file system.
      * If a <code>LifecycleConfiguration</code> object already exists for the specified file system, a
      * <code>PutLifecycleConfiguration</code> call modifies the existing configuration. A
      * <code>PutLifecycleConfiguration</code> call with an empty <code>LifecyclePolicies</code> array in the request
-     * body deletes any existing <code>LifecycleConfiguration</code> and turns off lifecycle management and EFS
-     * Intelligent-Tiering for the file system.
+     * body deletes any existing <code>LifecycleConfiguration</code> for the file system.
      * </p>
      * <p>
      * In the request, specify the following:
@@ -2800,14 +2810,13 @@ public class AmazonElasticFileSystemClient extends AmazonWebServiceClient implem
      * <ul>
      * <li>
      * <p>
-     * The ID for the file system for which you are enabling, disabling, or modifying lifecycle management and EFS
-     * Intelligent-Tiering.
+     * The ID for the file system for which you are enabling, disabling, or modifying Lifecycle management.
      * </p>
      * </li>
      * <li>
      * <p>
-     * A <code>LifecyclePolicies</code> array of <code>LifecyclePolicy</code> objects that define when files are moved
-     * into IA storage, and when they are moved back to Standard storage.
+     * A <code>LifecyclePolicies</code> array of <code>LifecyclePolicy</code> objects that define when to move files to
+     * IA storage, to Archive storage, and back to primary storage.
      * </p>
      * <note>
      * <p>

@@ -93,7 +93,7 @@ public class UpdateFileSystemResult extends com.amazonaws.AmazonWebServiceResult
     private FileSystemSize sizeInBytes;
     /**
      * <p>
-     * The performance mode of the file system.
+     * The Performance mode of the file system.
      * </p>
      */
     private String performanceMode;
@@ -127,7 +127,7 @@ public class UpdateFileSystemResult extends com.amazonaws.AmazonWebServiceResult
     /**
      * <p>
      * Describes the Amazon Web Services Availability Zone in which the file system is located, and is valid only for
-     * file systems using One Zone storage classes. For more information, see <a
+     * One Zone file systems. For more information, see <a
      * href="https://docs.aws.amazon.com/efs/latest/ug/storage-classes.html">Using EFS storage classes</a> in the
      * <i>Amazon EFS User Guide</i>.
      * </p>
@@ -135,9 +135,9 @@ public class UpdateFileSystemResult extends com.amazonaws.AmazonWebServiceResult
     private String availabilityZoneName;
     /**
      * <p>
-     * The unique and consistent identifier of the Availability Zone in which the file system's One Zone storage classes
-     * exist. For example, <code>use1-az1</code> is an Availability Zone ID for the us-east-1 Amazon Web Services
-     * Region, and it has the same location in every Amazon Web Services account.
+     * The unique and consistent identifier of the Availability Zone in which the file system is located, and is valid
+     * only for One Zone file systems. For example, <code>use1-az1</code> is an Availability Zone ID for the us-east-1
+     * Amazon Web Services Region, and it has the same location in every Amazon Web Services account.
      * </p>
      */
     private String availabilityZoneId;
@@ -613,11 +613,11 @@ public class UpdateFileSystemResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The performance mode of the file system.
+     * The Performance mode of the file system.
      * </p>
      * 
      * @param performanceMode
-     *        The performance mode of the file system.
+     *        The Performance mode of the file system.
      * @see PerformanceMode
      */
 
@@ -627,10 +627,10 @@ public class UpdateFileSystemResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The performance mode of the file system.
+     * The Performance mode of the file system.
      * </p>
      * 
-     * @return The performance mode of the file system.
+     * @return The Performance mode of the file system.
      * @see PerformanceMode
      */
 
@@ -640,11 +640,11 @@ public class UpdateFileSystemResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The performance mode of the file system.
+     * The Performance mode of the file system.
      * </p>
      * 
      * @param performanceMode
-     *        The performance mode of the file system.
+     *        The Performance mode of the file system.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PerformanceMode
      */
@@ -656,11 +656,11 @@ public class UpdateFileSystemResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The performance mode of the file system.
+     * The Performance mode of the file system.
      * </p>
      * 
      * @param performanceMode
-     *        The performance mode of the file system.
+     *        The Performance mode of the file system.
      * @see PerformanceMode
      */
 
@@ -670,11 +670,11 @@ public class UpdateFileSystemResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The performance mode of the file system.
+     * The Performance mode of the file system.
      * </p>
      * 
      * @param performanceMode
-     *        The performance mode of the file system.
+     *        The Performance mode of the file system.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PerformanceMode
      */
@@ -918,14 +918,14 @@ public class UpdateFileSystemResult extends com.amazonaws.AmazonWebServiceResult
     /**
      * <p>
      * Describes the Amazon Web Services Availability Zone in which the file system is located, and is valid only for
-     * file systems using One Zone storage classes. For more information, see <a
+     * One Zone file systems. For more information, see <a
      * href="https://docs.aws.amazon.com/efs/latest/ug/storage-classes.html">Using EFS storage classes</a> in the
      * <i>Amazon EFS User Guide</i>.
      * </p>
      * 
      * @param availabilityZoneName
      *        Describes the Amazon Web Services Availability Zone in which the file system is located, and is valid only
-     *        for file systems using One Zone storage classes. For more information, see <a
+     *        for One Zone file systems. For more information, see <a
      *        href="https://docs.aws.amazon.com/efs/latest/ug/storage-classes.html">Using EFS storage classes</a> in the
      *        <i>Amazon EFS User Guide</i>.
      */
@@ -937,13 +937,13 @@ public class UpdateFileSystemResult extends com.amazonaws.AmazonWebServiceResult
     /**
      * <p>
      * Describes the Amazon Web Services Availability Zone in which the file system is located, and is valid only for
-     * file systems using One Zone storage classes. For more information, see <a
+     * One Zone file systems. For more information, see <a
      * href="https://docs.aws.amazon.com/efs/latest/ug/storage-classes.html">Using EFS storage classes</a> in the
      * <i>Amazon EFS User Guide</i>.
      * </p>
      * 
      * @return Describes the Amazon Web Services Availability Zone in which the file system is located, and is valid
-     *         only for file systems using One Zone storage classes. For more information, see <a
+     *         only for One Zone file systems. For more information, see <a
      *         href="https://docs.aws.amazon.com/efs/latest/ug/storage-classes.html">Using EFS storage classes</a> in
      *         the <i>Amazon EFS User Guide</i>.
      */
@@ -955,14 +955,14 @@ public class UpdateFileSystemResult extends com.amazonaws.AmazonWebServiceResult
     /**
      * <p>
      * Describes the Amazon Web Services Availability Zone in which the file system is located, and is valid only for
-     * file systems using One Zone storage classes. For more information, see <a
+     * One Zone file systems. For more information, see <a
      * href="https://docs.aws.amazon.com/efs/latest/ug/storage-classes.html">Using EFS storage classes</a> in the
      * <i>Amazon EFS User Guide</i>.
      * </p>
      * 
      * @param availabilityZoneName
      *        Describes the Amazon Web Services Availability Zone in which the file system is located, and is valid only
-     *        for file systems using One Zone storage classes. For more information, see <a
+     *        for One Zone file systems. For more information, see <a
      *        href="https://docs.aws.amazon.com/efs/latest/ug/storage-classes.html">Using EFS storage classes</a> in the
      *        <i>Amazon EFS User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -975,15 +975,16 @@ public class UpdateFileSystemResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The unique and consistent identifier of the Availability Zone in which the file system's One Zone storage classes
-     * exist. For example, <code>use1-az1</code> is an Availability Zone ID for the us-east-1 Amazon Web Services
-     * Region, and it has the same location in every Amazon Web Services account.
+     * The unique and consistent identifier of the Availability Zone in which the file system is located, and is valid
+     * only for One Zone file systems. For example, <code>use1-az1</code> is an Availability Zone ID for the us-east-1
+     * Amazon Web Services Region, and it has the same location in every Amazon Web Services account.
      * </p>
      * 
      * @param availabilityZoneId
-     *        The unique and consistent identifier of the Availability Zone in which the file system's One Zone storage
-     *        classes exist. For example, <code>use1-az1</code> is an Availability Zone ID for the us-east-1 Amazon Web
-     *        Services Region, and it has the same location in every Amazon Web Services account.
+     *        The unique and consistent identifier of the Availability Zone in which the file system is located, and is
+     *        valid only for One Zone file systems. For example, <code>use1-az1</code> is an Availability Zone ID for
+     *        the us-east-1 Amazon Web Services Region, and it has the same location in every Amazon Web Services
+     *        account.
      */
 
     public void setAvailabilityZoneId(String availabilityZoneId) {
@@ -992,14 +993,15 @@ public class UpdateFileSystemResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The unique and consistent identifier of the Availability Zone in which the file system's One Zone storage classes
-     * exist. For example, <code>use1-az1</code> is an Availability Zone ID for the us-east-1 Amazon Web Services
-     * Region, and it has the same location in every Amazon Web Services account.
+     * The unique and consistent identifier of the Availability Zone in which the file system is located, and is valid
+     * only for One Zone file systems. For example, <code>use1-az1</code> is an Availability Zone ID for the us-east-1
+     * Amazon Web Services Region, and it has the same location in every Amazon Web Services account.
      * </p>
      * 
-     * @return The unique and consistent identifier of the Availability Zone in which the file system's One Zone storage
-     *         classes exist. For example, <code>use1-az1</code> is an Availability Zone ID for the us-east-1 Amazon Web
-     *         Services Region, and it has the same location in every Amazon Web Services account.
+     * @return The unique and consistent identifier of the Availability Zone in which the file system is located, and is
+     *         valid only for One Zone file systems. For example, <code>use1-az1</code> is an Availability Zone ID for
+     *         the us-east-1 Amazon Web Services Region, and it has the same location in every Amazon Web Services
+     *         account.
      */
 
     public String getAvailabilityZoneId() {
@@ -1008,15 +1010,16 @@ public class UpdateFileSystemResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The unique and consistent identifier of the Availability Zone in which the file system's One Zone storage classes
-     * exist. For example, <code>use1-az1</code> is an Availability Zone ID for the us-east-1 Amazon Web Services
-     * Region, and it has the same location in every Amazon Web Services account.
+     * The unique and consistent identifier of the Availability Zone in which the file system is located, and is valid
+     * only for One Zone file systems. For example, <code>use1-az1</code> is an Availability Zone ID for the us-east-1
+     * Amazon Web Services Region, and it has the same location in every Amazon Web Services account.
      * </p>
      * 
      * @param availabilityZoneId
-     *        The unique and consistent identifier of the Availability Zone in which the file system's One Zone storage
-     *        classes exist. For example, <code>use1-az1</code> is an Availability Zone ID for the us-east-1 Amazon Web
-     *        Services Region, and it has the same location in every Amazon Web Services account.
+     *        The unique and consistent identifier of the Availability Zone in which the file system is located, and is
+     *        valid only for One Zone file systems. For example, <code>use1-az1</code> is an Availability Zone ID for
+     *        the us-east-1 Amazon Web Services Region, and it has the same location in every Amazon Web Services
+     *        account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

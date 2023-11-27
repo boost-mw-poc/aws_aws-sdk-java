@@ -27,7 +27,8 @@ public enum SettingName {
     ContainerInsights("containerInsights"),
     FargateFIPSMode("fargateFIPSMode"),
     TagResourceAuthorization("tagResourceAuthorization"),
-    FargateTaskRetirementWaitPeriod("fargateTaskRetirementWaitPeriod");
+    FargateTaskRetirementWaitPeriod("fargateTaskRetirementWaitPeriod"),
+    GuardDutyActivate("guardDutyActivate");
 
     private String value;
 

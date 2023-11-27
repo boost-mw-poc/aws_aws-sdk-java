@@ -62,7 +62,7 @@ public class EnabledControlDetails implements Serializable, Cloneable, Structure
     private String targetIdentifier;
     /**
      * <p>
-     * Target AWS Regions for the enabled control.
+     * Target Amazon Web Services Regions for the enabled control.
      * </p>
      */
     private java.util.List<Region> targetRegions;
@@ -285,10 +285,10 @@ public class EnabledControlDetails implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * Target AWS Regions for the enabled control.
+     * Target Amazon Web Services Regions for the enabled control.
      * </p>
      * 
-     * @return Target AWS Regions for the enabled control.
+     * @return Target Amazon Web Services Regions for the enabled control.
      */
 
     public java.util.List<Region> getTargetRegions() {
@@ -297,11 +297,11 @@ public class EnabledControlDetails implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * Target AWS Regions for the enabled control.
+     * Target Amazon Web Services Regions for the enabled control.
      * </p>
      * 
      * @param targetRegions
-     *        Target AWS Regions for the enabled control.
+     *        Target Amazon Web Services Regions for the enabled control.
      */
 
     public void setTargetRegions(java.util.Collection<Region> targetRegions) {
@@ -315,7 +315,7 @@ public class EnabledControlDetails implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * Target AWS Regions for the enabled control.
+     * Target Amazon Web Services Regions for the enabled control.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -324,7 +324,7 @@ public class EnabledControlDetails implements Serializable, Cloneable, Structure
      * </p>
      * 
      * @param targetRegions
-     *        Target AWS Regions for the enabled control.
+     *        Target Amazon Web Services Regions for the enabled control.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -340,11 +340,11 @@ public class EnabledControlDetails implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * Target AWS Regions for the enabled control.
+     * Target Amazon Web Services Regions for the enabled control.
      * </p>
      * 
      * @param targetRegions
-     *        Target AWS Regions for the enabled control.
+     *        Target Amazon Web Services Regions for the enabled control.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

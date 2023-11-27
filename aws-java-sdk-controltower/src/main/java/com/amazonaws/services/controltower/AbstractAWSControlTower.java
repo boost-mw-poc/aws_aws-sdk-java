@@ -28,6 +28,11 @@ public class AbstractAWSControlTower implements AWSControlTower {
     }
 
     @Override
+    public DeleteLandingZoneResult deleteLandingZone(DeleteLandingZoneRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DisableControlResult disableControl(DisableControlRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -48,12 +53,27 @@ public class AbstractAWSControlTower implements AWSControlTower {
     }
 
     @Override
+    public GetLandingZoneOperationResult getLandingZoneOperation(GetLandingZoneOperationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListEnabledControlsResult listEnabledControls(ListEnabledControlsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
     @Override
+    public ListLandingZonesResult listLandingZones(ListLandingZonesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListTagsForResourceResult listTagsForResource(ListTagsForResourceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ResetLandingZoneResult resetLandingZone(ResetLandingZoneRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

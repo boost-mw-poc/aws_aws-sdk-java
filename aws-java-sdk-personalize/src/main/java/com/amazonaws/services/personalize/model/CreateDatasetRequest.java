@@ -66,6 +66,16 @@ public class CreateDatasetRequest extends com.amazonaws.AmazonWebServiceRequest 
      * Users
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * Actions
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Action_Interactions
+     * </p>
+     * </li>
      * </ul>
      */
     private String datasetType;
@@ -220,6 +230,16 @@ public class CreateDatasetRequest extends com.amazonaws.AmazonWebServiceRequest 
      * Users
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * Actions
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Action_Interactions
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param datasetType
@@ -241,6 +261,16 @@ public class CreateDatasetRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        <li>
      *        <p>
      *        Users
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Actions
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Action_Interactions
      *        </p>
      *        </li>
      */
@@ -272,6 +302,16 @@ public class CreateDatasetRequest extends com.amazonaws.AmazonWebServiceRequest 
      * Users
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * Actions
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Action_Interactions
+     * </p>
+     * </li>
      * </ul>
      * 
      * @return The type of dataset.</p>
@@ -292,6 +332,16 @@ public class CreateDatasetRequest extends com.amazonaws.AmazonWebServiceRequest 
      *         <li>
      *         <p>
      *         Users
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Actions
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Action_Interactions
      *         </p>
      *         </li>
      */
@@ -323,6 +373,16 @@ public class CreateDatasetRequest extends com.amazonaws.AmazonWebServiceRequest 
      * Users
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * Actions
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Action_Interactions
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param datasetType
@@ -344,6 +404,16 @@ public class CreateDatasetRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        <li>
      *        <p>
      *        Users
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Actions
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Action_Interactions
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

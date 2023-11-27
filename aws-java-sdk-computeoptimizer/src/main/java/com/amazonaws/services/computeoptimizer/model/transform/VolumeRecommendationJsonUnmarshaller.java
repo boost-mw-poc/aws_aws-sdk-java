@@ -95,6 +95,11 @@ public class VolumeRecommendationJsonUnmarshaller implements Unmarshaller<Volume
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("effectiveRecommendationPreferences", targetDepth)) {
+                    context.nextToken();
+                    volumeRecommendation.setEffectiveRecommendationPreferences(EBSEffectiveRecommendationPreferencesJsonUnmarshaller.getInstance().unmarshall(
+                            context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

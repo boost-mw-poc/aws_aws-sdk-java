@@ -57,6 +57,11 @@ public class TargetHealthDescriptionStaxUnmarshaller implements Unmarshaller<Tar
                     targetHealthDescription.setTargetHealth(TargetHealthStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("AnomalyDetection", targetDepth)) {
+                    targetHealthDescription.setAnomalyDetection(AnomalyDetectionStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return targetHealthDescription;

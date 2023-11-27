@@ -68,6 +68,10 @@ public class SignalDecoderJsonUnmarshaller implements Unmarshaller<SignalDecoder
                     context.nextToken();
                     signalDecoder.setObdSignal(ObdSignalJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("messageSignal", targetDepth)) {
+                    context.nextToken();
+                    signalDecoder.setMessageSignal(MessageSignalJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

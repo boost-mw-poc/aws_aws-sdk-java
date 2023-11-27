@@ -79,7 +79,13 @@ public enum ExportableAutoScalingGroupField {
     UtilizationMetricsGpuPercentageMaximum("UtilizationMetricsGpuPercentageMaximum"),
     UtilizationMetricsGpuMemoryPercentageMaximum("UtilizationMetricsGpuMemoryPercentageMaximum"),
     RecommendationOptionsProjectedUtilizationMetricsGpuPercentageMaximum("RecommendationOptionsProjectedUtilizationMetricsGpuPercentageMaximum"),
-    RecommendationOptionsProjectedUtilizationMetricsGpuMemoryPercentageMaximum("RecommendationOptionsProjectedUtilizationMetricsGpuMemoryPercentageMaximum");
+    RecommendationOptionsProjectedUtilizationMetricsGpuMemoryPercentageMaximum("RecommendationOptionsProjectedUtilizationMetricsGpuMemoryPercentageMaximum"),
+    EffectiveRecommendationPreferencesSavingsEstimationMode("EffectiveRecommendationPreferencesSavingsEstimationMode"),
+    RecommendationOptionsSavingsOpportunityAfterDiscountsPercentage("RecommendationOptionsSavingsOpportunityAfterDiscountsPercentage"),
+    RecommendationOptionsEstimatedMonthlySavingsCurrencyAfterDiscounts("RecommendationOptionsEstimatedMonthlySavingsCurrencyAfterDiscounts"),
+    RecommendationOptionsEstimatedMonthlySavingsValueAfterDiscounts("RecommendationOptionsEstimatedMonthlySavingsValueAfterDiscounts"),
+    EffectiveRecommendationPreferencesPreferredResources("EffectiveRecommendationPreferencesPreferredResources"),
+    EffectiveRecommendationPreferencesLookBackPeriod("EffectiveRecommendationPreferencesLookBackPeriod");
 
     private String value;
 

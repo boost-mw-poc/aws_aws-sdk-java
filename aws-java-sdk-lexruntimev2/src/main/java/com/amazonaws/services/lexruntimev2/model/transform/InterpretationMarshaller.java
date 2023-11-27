@@ -33,6 +33,8 @@ public class InterpretationMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("sentimentResponse").build();
     private static final MarshallingInfo<StructuredPojo> INTENT_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("intent").build();
+    private static final MarshallingInfo<String> INTERPRETATIONSOURCE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("interpretationSource").build();
 
     private static final InterpretationMarshaller instance = new InterpretationMarshaller();
 
@@ -53,6 +55,7 @@ public class InterpretationMarshaller {
             protocolMarshaller.marshall(interpretation.getNluConfidence(), NLUCONFIDENCE_BINDING);
             protocolMarshaller.marshall(interpretation.getSentimentResponse(), SENTIMENTRESPONSE_BINDING);
             protocolMarshaller.marshall(interpretation.getIntent(), INTENT_BINDING);
+            protocolMarshaller.marshall(interpretation.getInterpretationSource(), INTERPRETATIONSOURCE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -68,6 +68,10 @@ public class AccessorSummaryJsonUnmarshaller implements Unmarshaller<AccessorSum
                     context.nextToken();
                     accessorSummary.setArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("NetworkType", targetDepth)) {
+                    context.nextToken();
+                    accessorSummary.setNetworkType(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

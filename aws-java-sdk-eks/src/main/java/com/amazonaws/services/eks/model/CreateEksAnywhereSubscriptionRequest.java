@@ -44,8 +44,8 @@ public class CreateEksAnywhereSubscriptionRequest extends com.amazonaws.AmazonWe
     private EksAnywhereSubscriptionTerm term;
     /**
      * <p>
-     * The number of licenses to purchase with the subscription. Valid values are between 1 and 1000. This value cannot
-     * be changed after creating the subscription.
+     * The number of licenses to purchase with the subscription. Valid values are between 1 and 100. This value can't be
+     * changed after creating the subscription.
      * </p>
      */
     private Integer licenseQuantity;
@@ -71,7 +71,7 @@ public class CreateEksAnywhereSubscriptionRequest extends com.amazonaws.AmazonWe
     /**
      * <p>
      * The metadata for a subscription to assist with categorization and organization. Each tag consists of a key and an
-     * optional value. Subscription tags do not propagate to any other resources associated with the subscription.
+     * optional value. Subscription tags don't propagate to any other resources associated with the subscription.
      * </p>
      */
     private java.util.Map<String, String> tags;
@@ -191,13 +191,13 @@ public class CreateEksAnywhereSubscriptionRequest extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * The number of licenses to purchase with the subscription. Valid values are between 1 and 1000. This value cannot
-     * be changed after creating the subscription.
+     * The number of licenses to purchase with the subscription. Valid values are between 1 and 100. This value can't be
+     * changed after creating the subscription.
      * </p>
      * 
      * @param licenseQuantity
-     *        The number of licenses to purchase with the subscription. Valid values are between 1 and 1000. This value
-     *        cannot be changed after creating the subscription.
+     *        The number of licenses to purchase with the subscription. Valid values are between 1 and 100. This value
+     *        can't be changed after creating the subscription.
      */
 
     public void setLicenseQuantity(Integer licenseQuantity) {
@@ -206,12 +206,12 @@ public class CreateEksAnywhereSubscriptionRequest extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * The number of licenses to purchase with the subscription. Valid values are between 1 and 1000. This value cannot
-     * be changed after creating the subscription.
+     * The number of licenses to purchase with the subscription. Valid values are between 1 and 100. This value can't be
+     * changed after creating the subscription.
      * </p>
      * 
-     * @return The number of licenses to purchase with the subscription. Valid values are between 1 and 1000. This value
-     *         cannot be changed after creating the subscription.
+     * @return The number of licenses to purchase with the subscription. Valid values are between 1 and 100. This value
+     *         can't be changed after creating the subscription.
      */
 
     public Integer getLicenseQuantity() {
@@ -220,13 +220,13 @@ public class CreateEksAnywhereSubscriptionRequest extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * The number of licenses to purchase with the subscription. Valid values are between 1 and 1000. This value cannot
-     * be changed after creating the subscription.
+     * The number of licenses to purchase with the subscription. Valid values are between 1 and 100. This value can't be
+     * changed after creating the subscription.
      * </p>
      * 
      * @param licenseQuantity
-     *        The number of licenses to purchase with the subscription. Valid values are between 1 and 1000. This value
-     *        cannot be changed after creating the subscription.
+     *        The number of licenses to purchase with the subscription. Valid values are between 1 and 100. This value
+     *        can't be changed after creating the subscription.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -397,11 +397,11 @@ public class CreateEksAnywhereSubscriptionRequest extends com.amazonaws.AmazonWe
     /**
      * <p>
      * The metadata for a subscription to assist with categorization and organization. Each tag consists of a key and an
-     * optional value. Subscription tags do not propagate to any other resources associated with the subscription.
+     * optional value. Subscription tags don't propagate to any other resources associated with the subscription.
      * </p>
      * 
      * @return The metadata for a subscription to assist with categorization and organization. Each tag consists of a
-     *         key and an optional value. Subscription tags do not propagate to any other resources associated with the
+     *         key and an optional value. Subscription tags don't propagate to any other resources associated with the
      *         subscription.
      */
 
@@ -412,12 +412,12 @@ public class CreateEksAnywhereSubscriptionRequest extends com.amazonaws.AmazonWe
     /**
      * <p>
      * The metadata for a subscription to assist with categorization and organization. Each tag consists of a key and an
-     * optional value. Subscription tags do not propagate to any other resources associated with the subscription.
+     * optional value. Subscription tags don't propagate to any other resources associated with the subscription.
      * </p>
      * 
      * @param tags
      *        The metadata for a subscription to assist with categorization and organization. Each tag consists of a key
-     *        and an optional value. Subscription tags do not propagate to any other resources associated with the
+     *        and an optional value. Subscription tags don't propagate to any other resources associated with the
      *        subscription.
      */
 
@@ -428,12 +428,12 @@ public class CreateEksAnywhereSubscriptionRequest extends com.amazonaws.AmazonWe
     /**
      * <p>
      * The metadata for a subscription to assist with categorization and organization. Each tag consists of a key and an
-     * optional value. Subscription tags do not propagate to any other resources associated with the subscription.
+     * optional value. Subscription tags don't propagate to any other resources associated with the subscription.
      * </p>
      * 
      * @param tags
      *        The metadata for a subscription to assist with categorization and organization. Each tag consists of a key
-     *        and an optional value. Subscription tags do not propagate to any other resources associated with the
+     *        and an optional value. Subscription tags don't propagate to any other resources associated with the
      *        subscription.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

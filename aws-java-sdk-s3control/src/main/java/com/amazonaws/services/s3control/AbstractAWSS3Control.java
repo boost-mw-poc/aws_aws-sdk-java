@@ -28,6 +28,26 @@ public class AbstractAWSS3Control implements AWSS3Control {
     }
 
     @Override
+    public AssociateAccessGrantsIdentityCenterResult associateAccessGrantsIdentityCenter(AssociateAccessGrantsIdentityCenterRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public CreateAccessGrantResult createAccessGrant(CreateAccessGrantRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public CreateAccessGrantsInstanceResult createAccessGrantsInstance(CreateAccessGrantsInstanceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public CreateAccessGrantsLocationResult createAccessGrantsLocation(CreateAccessGrantsLocationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateAccessPointResult createAccessPoint(CreateAccessPointRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -54,6 +74,26 @@ public class AbstractAWSS3Control implements AWSS3Control {
 
     @Override
     public CreateStorageLensGroupResult createStorageLensGroup(CreateStorageLensGroupRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteAccessGrantResult deleteAccessGrant(DeleteAccessGrantRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteAccessGrantsInstanceResult deleteAccessGrantsInstance(DeleteAccessGrantsInstanceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteAccessGrantsInstanceResourcePolicyResult deleteAccessGrantsInstanceResourcePolicy(DeleteAccessGrantsInstanceResourcePolicyRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteAccessGrantsLocationResult deleteAccessGrantsLocation(DeleteAccessGrantsLocationRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -143,6 +183,36 @@ public class AbstractAWSS3Control implements AWSS3Control {
     }
 
     @Override
+    public DissociateAccessGrantsIdentityCenterResult dissociateAccessGrantsIdentityCenter(DissociateAccessGrantsIdentityCenterRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetAccessGrantResult getAccessGrant(GetAccessGrantRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetAccessGrantsInstanceResult getAccessGrantsInstance(GetAccessGrantsInstanceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetAccessGrantsInstanceForPrefixResult getAccessGrantsInstanceForPrefix(GetAccessGrantsInstanceForPrefixRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetAccessGrantsInstanceResourcePolicyResult getAccessGrantsInstanceResourcePolicy(GetAccessGrantsInstanceResourcePolicyRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetAccessGrantsLocationResult getAccessGrantsLocation(GetAccessGrantsLocationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetAccessPointResult getAccessPoint(GetAccessPointRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -208,6 +278,11 @@ public class AbstractAWSS3Control implements AWSS3Control {
     }
 
     @Override
+    public GetDataAccessResult getDataAccess(GetDataAccessRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetJobTaggingResult getJobTagging(GetJobTaggingRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -253,6 +328,21 @@ public class AbstractAWSS3Control implements AWSS3Control {
     }
 
     @Override
+    public ListAccessGrantsResult listAccessGrants(ListAccessGrantsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListAccessGrantsInstancesResult listAccessGrantsInstances(ListAccessGrantsInstancesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListAccessGrantsLocationsResult listAccessGrantsLocations(ListAccessGrantsLocationsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListAccessPointsResult listAccessPoints(ListAccessPointsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -289,6 +379,11 @@ public class AbstractAWSS3Control implements AWSS3Control {
 
     @Override
     public ListTagsForResourceResult listTagsForResource(ListTagsForResourceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public PutAccessGrantsInstanceResourcePolicyResult putAccessGrantsInstanceResourcePolicy(PutAccessGrantsInstanceResourcePolicyRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -369,6 +464,11 @@ public class AbstractAWSS3Control implements AWSS3Control {
 
     @Override
     public UntagResourceResult untagResource(UntagResourceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateAccessGrantsLocationResult updateAccessGrantsLocation(UpdateAccessGrantsLocationRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

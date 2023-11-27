@@ -1739,6 +1739,39 @@ public class AWSSecurityHubAsyncClient extends AWSSecurityHubClient implements A
     }
 
     @Override
+    public java.util.concurrent.Future<GetSecurityControlDefinitionResult> getSecurityControlDefinitionAsync(GetSecurityControlDefinitionRequest request) {
+
+        return getSecurityControlDefinitionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetSecurityControlDefinitionResult> getSecurityControlDefinitionAsync(final GetSecurityControlDefinitionRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetSecurityControlDefinitionRequest, GetSecurityControlDefinitionResult> asyncHandler) {
+        final GetSecurityControlDefinitionRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetSecurityControlDefinitionResult>() {
+            @Override
+            public GetSecurityControlDefinitionResult call() throws Exception {
+                GetSecurityControlDefinitionResult result = null;
+
+                try {
+                    result = executeGetSecurityControlDefinition(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<InviteMembersResult> inviteMembersAsync(InviteMembersRequest request) {
 
         return inviteMembersAsync(request, null);
@@ -2290,6 +2323,39 @@ public class AWSSecurityHubAsyncClient extends AWSSecurityHubClient implements A
 
                 try {
                     result = executeUpdateOrganizationConfiguration(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateSecurityControlResult> updateSecurityControlAsync(UpdateSecurityControlRequest request) {
+
+        return updateSecurityControlAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateSecurityControlResult> updateSecurityControlAsync(final UpdateSecurityControlRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateSecurityControlRequest, UpdateSecurityControlResult> asyncHandler) {
+        final UpdateSecurityControlRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateSecurityControlResult>() {
+            @Override
+            public UpdateSecurityControlResult call() throws Exception {
+                UpdateSecurityControlResult result = null;
+
+                try {
+                    result = executeUpdateSecurityControl(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

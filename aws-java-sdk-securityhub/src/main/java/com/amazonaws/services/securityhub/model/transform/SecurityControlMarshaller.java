@@ -12,6 +12,8 @@
  */
 package com.amazonaws.services.securityhub.model.transform;
 
+import java.util.Map;
+
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -41,6 +43,12 @@ public class SecurityControlMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SeverityRating").build();
     private static final MarshallingInfo<String> SECURITYCONTROLSTATUS_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SecurityControlStatus").build();
+    private static final MarshallingInfo<String> UPDATESTATUS_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("UpdateStatus").build();
+    private static final MarshallingInfo<Map> PARAMETERS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Parameters").build();
+    private static final MarshallingInfo<String> LASTUPDATEREASON_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LastUpdateReason").build();
 
     private static final SecurityControlMarshaller instance = new SecurityControlMarshaller();
 
@@ -65,6 +73,9 @@ public class SecurityControlMarshaller {
             protocolMarshaller.marshall(securityControl.getRemediationUrl(), REMEDIATIONURL_BINDING);
             protocolMarshaller.marshall(securityControl.getSeverityRating(), SEVERITYRATING_BINDING);
             protocolMarshaller.marshall(securityControl.getSecurityControlStatus(), SECURITYCONTROLSTATUS_BINDING);
+            protocolMarshaller.marshall(securityControl.getUpdateStatus(), UPDATESTATUS_BINDING);
+            protocolMarshaller.marshall(securityControl.getParameters(), PARAMETERS_BINDING);
+            protocolMarshaller.marshall(securityControl.getLastUpdateReason(), LASTUPDATEREASON_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

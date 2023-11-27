@@ -31,6 +31,10 @@ public class CoverageResourceDetailsMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("eksClusterDetails").build();
     private static final MarshallingInfo<String> RESOURCETYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("resourceType").build();
+    private static final MarshallingInfo<StructuredPojo> ECSCLUSTERDETAILS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ecsClusterDetails").build();
+    private static final MarshallingInfo<StructuredPojo> EC2INSTANCEDETAILS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ec2InstanceDetails").build();
 
     private static final CoverageResourceDetailsMarshaller instance = new CoverageResourceDetailsMarshaller();
 
@@ -50,6 +54,8 @@ public class CoverageResourceDetailsMarshaller {
         try {
             protocolMarshaller.marshall(coverageResourceDetails.getEksClusterDetails(), EKSCLUSTERDETAILS_BINDING);
             protocolMarshaller.marshall(coverageResourceDetails.getResourceType(), RESOURCETYPE_BINDING);
+            protocolMarshaller.marshall(coverageResourceDetails.getEcsClusterDetails(), ECSCLUSTERDETAILS_BINDING);
+            protocolMarshaller.marshall(coverageResourceDetails.getEc2InstanceDetails(), EC2INSTANCEDETAILS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }
