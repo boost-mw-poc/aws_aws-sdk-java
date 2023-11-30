@@ -24,7 +24,9 @@ public enum AppType {
     KernelGateway("KernelGateway"),
     TensorBoard("TensorBoard"),
     RStudioServerPro("RStudioServerPro"),
-    RSessionGateway("RSessionGateway");
+    RSessionGateway("RSessionGateway"),
+    JupyterLab("JupyterLab"),
+    CodeEditor("CodeEditor");
 
     private String value;
 

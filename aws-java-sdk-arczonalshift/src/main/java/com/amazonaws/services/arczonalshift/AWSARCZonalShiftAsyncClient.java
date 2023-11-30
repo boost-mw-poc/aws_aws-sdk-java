@@ -26,32 +26,37 @@ import java.util.concurrent.ExecutorService;
  * notification when an asynchronous operation completes.
  * <p>
  * <p>
- * This is the API Reference Guide for the zonal shift feature of Amazon Route 53 Application Recovery Controller. This
- * guide is for developers who need detailed information about zonal shift API actions, data types, and errors.
+ * Welcome to the Zonal Shift API Reference Guide for Amazon Route 53 Application Recovery Controller (Route 53 ARC).
  * </p>
  * <p>
- * Zonal shift is in preview release for Amazon Route 53 Application Recovery Controller and is subject to change.
+ * You can start a zonal shift to move traffic for a load balancer resource away from an Availability Zone to help your
+ * application recover quickly from an impairment in an Availability Zone. For example, you can recover your application
+ * from a developer's bad code deployment or from an Amazon Web Services infrastructure failure in a single Availability
+ * Zone.
  * </p>
  * <p>
- * Zonal shift in Route 53 ARC enables you to move traffic for a load balancer resource away from an Availability Zone.
- * Starting a zonal shift helps your application recover immediately, for example, from a developer's bad code
- * deployment or from an AWS infrastructure failure in a single Availability Zone, reducing the impact and time lost
- * from an issue in one zone.
+ * You can also configure zonal autoshift for a load balancer resource. Zonal autoshift is a capability in Route 53 ARC
+ * where Amazon Web Services shifts away application resource traffic from an Availability Zone, on your behalf, to help
+ * reduce your time to recovery during events. Amazon Web Services shifts away traffic for resources that are enabled
+ * for zonal autoshift whenever Amazon Web Services determines that there's an issue in the Availability Zone that could
+ * potentially affect customers.
  * </p>
  * <p>
- * Supported AWS resources are automatically registered with Route 53 ARC. Resources that are registered for zonal
- * shifts in Route 53 ARC are managed resources in Route 53 ARC. You can start a zonal shift for any managed resource in
- * your account in a Region. At this time, you can only start a zonal shift for Network Load Balancers and Application
- * Load Balancers with cross-zone load balancing turned off.
+ * To ensure that zonal autoshift is safe for your application, you must also configure practice runs when you enable
+ * zonal autoshift for a resource. Practice runs start weekly zonal shifts for a resource, to shift traffic for the
+ * resource out of an Availability Zone. Practice runs make sure, on a regular basis, that you have enough capacity in
+ * all the Availability Zones in an Amazon Web Services Region for your application to continue to operate normally when
+ * traffic for a resource is shifted away from one Availability Zone.
  * </p>
+ * <important>
  * <p>
- * Zonal shifts are temporary. You must specify an expiration when you start a zonal shift, of up to three days
- * initially. If you want to still keep traffic away from an Availability Zone, you can update the zonal shift and set a
- * new expiration. You can also cancel a zonal shift, before it expires, for example, if you're ready to restore traffic
- * to the Availability Zone.
+ * You must prescale resource capacity in all Availability Zones in the Region where your application is deployed,
+ * before you configure practice runs or enable zonal autoshift for a resource. You should not rely on scaling on demand
+ * when an autoshift or practice run starts.
  * </p>
+ * </important>
  * <p>
- * For more information about using zonal shift, see the <a
+ * For more information about using zonal shift and zonal autoshift, see the <a
  * href="https://docs.aws.amazon.com/r53recovery/latest/dg/what-is-route53-recovery.html">Amazon Route 53 Application
  * Recovery Controller Developer Guide</a>.
  * </p>
@@ -136,6 +141,74 @@ public class AWSARCZonalShiftAsyncClient extends AWSARCZonalShiftClient implemen
     }
 
     @Override
+    public java.util.concurrent.Future<CreatePracticeRunConfigurationResult> createPracticeRunConfigurationAsync(CreatePracticeRunConfigurationRequest request) {
+
+        return createPracticeRunConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreatePracticeRunConfigurationResult> createPracticeRunConfigurationAsync(
+            final CreatePracticeRunConfigurationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreatePracticeRunConfigurationRequest, CreatePracticeRunConfigurationResult> asyncHandler) {
+        final CreatePracticeRunConfigurationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreatePracticeRunConfigurationResult>() {
+            @Override
+            public CreatePracticeRunConfigurationResult call() throws Exception {
+                CreatePracticeRunConfigurationResult result = null;
+
+                try {
+                    result = executeCreatePracticeRunConfiguration(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeletePracticeRunConfigurationResult> deletePracticeRunConfigurationAsync(DeletePracticeRunConfigurationRequest request) {
+
+        return deletePracticeRunConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeletePracticeRunConfigurationResult> deletePracticeRunConfigurationAsync(
+            final DeletePracticeRunConfigurationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeletePracticeRunConfigurationRequest, DeletePracticeRunConfigurationResult> asyncHandler) {
+        final DeletePracticeRunConfigurationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeletePracticeRunConfigurationResult>() {
+            @Override
+            public DeletePracticeRunConfigurationResult call() throws Exception {
+                DeletePracticeRunConfigurationResult result = null;
+
+                try {
+                    result = executeDeletePracticeRunConfiguration(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetManagedResourceResult> getManagedResourceAsync(GetManagedResourceRequest request) {
 
         return getManagedResourceAsync(request, null);
@@ -153,6 +226,39 @@ public class AWSARCZonalShiftAsyncClient extends AWSARCZonalShiftClient implemen
 
                 try {
                     result = executeGetManagedResource(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListAutoshiftsResult> listAutoshiftsAsync(ListAutoshiftsRequest request) {
+
+        return listAutoshiftsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListAutoshiftsResult> listAutoshiftsAsync(final ListAutoshiftsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListAutoshiftsRequest, ListAutoshiftsResult> asyncHandler) {
+        final ListAutoshiftsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListAutoshiftsResult>() {
+            @Override
+            public ListAutoshiftsResult call() throws Exception {
+                ListAutoshiftsResult result = null;
+
+                try {
+                    result = executeListAutoshifts(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -252,6 +358,75 @@ public class AWSARCZonalShiftAsyncClient extends AWSARCZonalShiftClient implemen
 
                 try {
                     result = executeStartZonalShift(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdatePracticeRunConfigurationResult> updatePracticeRunConfigurationAsync(UpdatePracticeRunConfigurationRequest request) {
+
+        return updatePracticeRunConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdatePracticeRunConfigurationResult> updatePracticeRunConfigurationAsync(
+            final UpdatePracticeRunConfigurationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdatePracticeRunConfigurationRequest, UpdatePracticeRunConfigurationResult> asyncHandler) {
+        final UpdatePracticeRunConfigurationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdatePracticeRunConfigurationResult>() {
+            @Override
+            public UpdatePracticeRunConfigurationResult call() throws Exception {
+                UpdatePracticeRunConfigurationResult result = null;
+
+                try {
+                    result = executeUpdatePracticeRunConfiguration(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateZonalAutoshiftConfigurationResult> updateZonalAutoshiftConfigurationAsync(
+            UpdateZonalAutoshiftConfigurationRequest request) {
+
+        return updateZonalAutoshiftConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateZonalAutoshiftConfigurationResult> updateZonalAutoshiftConfigurationAsync(
+            final UpdateZonalAutoshiftConfigurationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateZonalAutoshiftConfigurationRequest, UpdateZonalAutoshiftConfigurationResult> asyncHandler) {
+        final UpdateZonalAutoshiftConfigurationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateZonalAutoshiftConfigurationResult>() {
+            @Override
+            public UpdateZonalAutoshiftConfigurationResult call() throws Exception {
+                UpdateZonalAutoshiftConfigurationResult result = null;
+
+                try {
+                    result = executeUpdateZonalAutoshiftConfiguration(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

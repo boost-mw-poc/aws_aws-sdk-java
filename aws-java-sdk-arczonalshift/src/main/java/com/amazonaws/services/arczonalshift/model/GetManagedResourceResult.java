@@ -38,10 +38,30 @@ public class GetManagedResourceResult extends com.amazonaws.AmazonWebServiceResu
     private String arn;
     /**
      * <p>
+     * An array of the autoshifts that are active for the resource.
+     * </p>
+     */
+    private java.util.List<AutoshiftInResource> autoshifts;
+    /**
+     * <p>
      * The name of the resource.
      * </p>
      */
     private String name;
+    /**
+     * <p>
+     * The practice run configuration for zonal autoshift that's associated with the resource.
+     * </p>
+     */
+    private PracticeRunConfiguration practiceRunConfiguration;
+    /**
+     * <p>
+     * The status for zonal autoshift for a resource. When the autoshift status is <code>ENABLED</code>, Amazon Web
+     * Services shifts traffic for a resource away from an Availability Zone, on your behalf, when Amazon Web Services
+     * determines that there's an issue in the Availability Zone that could potentially affect customers.
+     * </p>
+     */
+    private String zonalAutoshiftStatus;
     /**
      * <p>
      * The zonal shifts that are currently active for a resource.
@@ -165,6 +185,76 @@ public class GetManagedResourceResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
+     * An array of the autoshifts that are active for the resource.
+     * </p>
+     * 
+     * @return An array of the autoshifts that are active for the resource.
+     */
+
+    public java.util.List<AutoshiftInResource> getAutoshifts() {
+        return autoshifts;
+    }
+
+    /**
+     * <p>
+     * An array of the autoshifts that are active for the resource.
+     * </p>
+     * 
+     * @param autoshifts
+     *        An array of the autoshifts that are active for the resource.
+     */
+
+    public void setAutoshifts(java.util.Collection<AutoshiftInResource> autoshifts) {
+        if (autoshifts == null) {
+            this.autoshifts = null;
+            return;
+        }
+
+        this.autoshifts = new java.util.ArrayList<AutoshiftInResource>(autoshifts);
+    }
+
+    /**
+     * <p>
+     * An array of the autoshifts that are active for the resource.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setAutoshifts(java.util.Collection)} or {@link #withAutoshifts(java.util.Collection)} if you want to
+     * override the existing values.
+     * </p>
+     * 
+     * @param autoshifts
+     *        An array of the autoshifts that are active for the resource.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetManagedResourceResult withAutoshifts(AutoshiftInResource... autoshifts) {
+        if (this.autoshifts == null) {
+            setAutoshifts(new java.util.ArrayList<AutoshiftInResource>(autoshifts.length));
+        }
+        for (AutoshiftInResource ele : autoshifts) {
+            this.autoshifts.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * An array of the autoshifts that are active for the resource.
+     * </p>
+     * 
+     * @param autoshifts
+     *        An array of the autoshifts that are active for the resource.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetManagedResourceResult withAutoshifts(java.util.Collection<AutoshiftInResource> autoshifts) {
+        setAutoshifts(autoshifts);
+        return this;
+    }
+
+    /**
+     * <p>
      * The name of the resource.
      * </p>
      * 
@@ -200,6 +290,125 @@ public class GetManagedResourceResult extends com.amazonaws.AmazonWebServiceResu
 
     public GetManagedResourceResult withName(String name) {
         setName(name);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The practice run configuration for zonal autoshift that's associated with the resource.
+     * </p>
+     * 
+     * @param practiceRunConfiguration
+     *        The practice run configuration for zonal autoshift that's associated with the resource.
+     */
+
+    public void setPracticeRunConfiguration(PracticeRunConfiguration practiceRunConfiguration) {
+        this.practiceRunConfiguration = practiceRunConfiguration;
+    }
+
+    /**
+     * <p>
+     * The practice run configuration for zonal autoshift that's associated with the resource.
+     * </p>
+     * 
+     * @return The practice run configuration for zonal autoshift that's associated with the resource.
+     */
+
+    public PracticeRunConfiguration getPracticeRunConfiguration() {
+        return this.practiceRunConfiguration;
+    }
+
+    /**
+     * <p>
+     * The practice run configuration for zonal autoshift that's associated with the resource.
+     * </p>
+     * 
+     * @param practiceRunConfiguration
+     *        The practice run configuration for zonal autoshift that's associated with the resource.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetManagedResourceResult withPracticeRunConfiguration(PracticeRunConfiguration practiceRunConfiguration) {
+        setPracticeRunConfiguration(practiceRunConfiguration);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The status for zonal autoshift for a resource. When the autoshift status is <code>ENABLED</code>, Amazon Web
+     * Services shifts traffic for a resource away from an Availability Zone, on your behalf, when Amazon Web Services
+     * determines that there's an issue in the Availability Zone that could potentially affect customers.
+     * </p>
+     * 
+     * @param zonalAutoshiftStatus
+     *        The status for zonal autoshift for a resource. When the autoshift status is <code>ENABLED</code>, Amazon
+     *        Web Services shifts traffic for a resource away from an Availability Zone, on your behalf, when Amazon Web
+     *        Services determines that there's an issue in the Availability Zone that could potentially affect
+     *        customers.
+     * @see ZonalAutoshiftStatus
+     */
+
+    public void setZonalAutoshiftStatus(String zonalAutoshiftStatus) {
+        this.zonalAutoshiftStatus = zonalAutoshiftStatus;
+    }
+
+    /**
+     * <p>
+     * The status for zonal autoshift for a resource. When the autoshift status is <code>ENABLED</code>, Amazon Web
+     * Services shifts traffic for a resource away from an Availability Zone, on your behalf, when Amazon Web Services
+     * determines that there's an issue in the Availability Zone that could potentially affect customers.
+     * </p>
+     * 
+     * @return The status for zonal autoshift for a resource. When the autoshift status is <code>ENABLED</code>, Amazon
+     *         Web Services shifts traffic for a resource away from an Availability Zone, on your behalf, when Amazon
+     *         Web Services determines that there's an issue in the Availability Zone that could potentially affect
+     *         customers.
+     * @see ZonalAutoshiftStatus
+     */
+
+    public String getZonalAutoshiftStatus() {
+        return this.zonalAutoshiftStatus;
+    }
+
+    /**
+     * <p>
+     * The status for zonal autoshift for a resource. When the autoshift status is <code>ENABLED</code>, Amazon Web
+     * Services shifts traffic for a resource away from an Availability Zone, on your behalf, when Amazon Web Services
+     * determines that there's an issue in the Availability Zone that could potentially affect customers.
+     * </p>
+     * 
+     * @param zonalAutoshiftStatus
+     *        The status for zonal autoshift for a resource. When the autoshift status is <code>ENABLED</code>, Amazon
+     *        Web Services shifts traffic for a resource away from an Availability Zone, on your behalf, when Amazon Web
+     *        Services determines that there's an issue in the Availability Zone that could potentially affect
+     *        customers.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ZonalAutoshiftStatus
+     */
+
+    public GetManagedResourceResult withZonalAutoshiftStatus(String zonalAutoshiftStatus) {
+        setZonalAutoshiftStatus(zonalAutoshiftStatus);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The status for zonal autoshift for a resource. When the autoshift status is <code>ENABLED</code>, Amazon Web
+     * Services shifts traffic for a resource away from an Availability Zone, on your behalf, when Amazon Web Services
+     * determines that there's an issue in the Availability Zone that could potentially affect customers.
+     * </p>
+     * 
+     * @param zonalAutoshiftStatus
+     *        The status for zonal autoshift for a resource. When the autoshift status is <code>ENABLED</code>, Amazon
+     *        Web Services shifts traffic for a resource away from an Availability Zone, on your behalf, when Amazon Web
+     *        Services determines that there's an issue in the Availability Zone that could potentially affect
+     *        customers.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ZonalAutoshiftStatus
+     */
+
+    public GetManagedResourceResult withZonalAutoshiftStatus(ZonalAutoshiftStatus zonalAutoshiftStatus) {
+        this.zonalAutoshiftStatus = zonalAutoshiftStatus.toString();
         return this;
     }
 
@@ -289,8 +498,14 @@ public class GetManagedResourceResult extends com.amazonaws.AmazonWebServiceResu
             sb.append("AppliedWeights: ").append(getAppliedWeights()).append(",");
         if (getArn() != null)
             sb.append("Arn: ").append(getArn()).append(",");
+        if (getAutoshifts() != null)
+            sb.append("Autoshifts: ").append(getAutoshifts()).append(",");
         if (getName() != null)
             sb.append("Name: ").append(getName()).append(",");
+        if (getPracticeRunConfiguration() != null)
+            sb.append("PracticeRunConfiguration: ").append(getPracticeRunConfiguration()).append(",");
+        if (getZonalAutoshiftStatus() != null)
+            sb.append("ZonalAutoshiftStatus: ").append(getZonalAutoshiftStatus()).append(",");
         if (getZonalShifts() != null)
             sb.append("ZonalShifts: ").append(getZonalShifts());
         sb.append("}");
@@ -315,9 +530,21 @@ public class GetManagedResourceResult extends com.amazonaws.AmazonWebServiceResu
             return false;
         if (other.getArn() != null && other.getArn().equals(this.getArn()) == false)
             return false;
+        if (other.getAutoshifts() == null ^ this.getAutoshifts() == null)
+            return false;
+        if (other.getAutoshifts() != null && other.getAutoshifts().equals(this.getAutoshifts()) == false)
+            return false;
         if (other.getName() == null ^ this.getName() == null)
             return false;
         if (other.getName() != null && other.getName().equals(this.getName()) == false)
+            return false;
+        if (other.getPracticeRunConfiguration() == null ^ this.getPracticeRunConfiguration() == null)
+            return false;
+        if (other.getPracticeRunConfiguration() != null && other.getPracticeRunConfiguration().equals(this.getPracticeRunConfiguration()) == false)
+            return false;
+        if (other.getZonalAutoshiftStatus() == null ^ this.getZonalAutoshiftStatus() == null)
+            return false;
+        if (other.getZonalAutoshiftStatus() != null && other.getZonalAutoshiftStatus().equals(this.getZonalAutoshiftStatus()) == false)
             return false;
         if (other.getZonalShifts() == null ^ this.getZonalShifts() == null)
             return false;
@@ -333,7 +560,10 @@ public class GetManagedResourceResult extends com.amazonaws.AmazonWebServiceResu
 
         hashCode = prime * hashCode + ((getAppliedWeights() == null) ? 0 : getAppliedWeights().hashCode());
         hashCode = prime * hashCode + ((getArn() == null) ? 0 : getArn().hashCode());
+        hashCode = prime * hashCode + ((getAutoshifts() == null) ? 0 : getAutoshifts().hashCode());
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
+        hashCode = prime * hashCode + ((getPracticeRunConfiguration() == null) ? 0 : getPracticeRunConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getZonalAutoshiftStatus() == null) ? 0 : getZonalAutoshiftStatus().hashCode());
         hashCode = prime * hashCode + ((getZonalShifts() == null) ? 0 : getZonalShifts().hashCode());
         return hashCode;
     }

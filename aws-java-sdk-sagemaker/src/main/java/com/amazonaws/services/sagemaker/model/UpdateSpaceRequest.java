@@ -43,6 +43,12 @@ public class UpdateSpaceRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      */
     private SpaceSettings spaceSettings;
+    /**
+     * <p>
+     * The name of the space that appears in the Amazon SageMaker Studio UI.
+     * </p>
+     */
+    private String spaceDisplayName;
 
     /**
      * <p>
@@ -165,6 +171,46 @@ public class UpdateSpaceRequest extends com.amazonaws.AmazonWebServiceRequest im
     }
 
     /**
+     * <p>
+     * The name of the space that appears in the Amazon SageMaker Studio UI.
+     * </p>
+     * 
+     * @param spaceDisplayName
+     *        The name of the space that appears in the Amazon SageMaker Studio UI.
+     */
+
+    public void setSpaceDisplayName(String spaceDisplayName) {
+        this.spaceDisplayName = spaceDisplayName;
+    }
+
+    /**
+     * <p>
+     * The name of the space that appears in the Amazon SageMaker Studio UI.
+     * </p>
+     * 
+     * @return The name of the space that appears in the Amazon SageMaker Studio UI.
+     */
+
+    public String getSpaceDisplayName() {
+        return this.spaceDisplayName;
+    }
+
+    /**
+     * <p>
+     * The name of the space that appears in the Amazon SageMaker Studio UI.
+     * </p>
+     * 
+     * @param spaceDisplayName
+     *        The name of the space that appears in the Amazon SageMaker Studio UI.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateSpaceRequest withSpaceDisplayName(String spaceDisplayName) {
+        setSpaceDisplayName(spaceDisplayName);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -181,7 +227,9 @@ public class UpdateSpaceRequest extends com.amazonaws.AmazonWebServiceRequest im
         if (getSpaceName() != null)
             sb.append("SpaceName: ").append(getSpaceName()).append(",");
         if (getSpaceSettings() != null)
-            sb.append("SpaceSettings: ").append(getSpaceSettings());
+            sb.append("SpaceSettings: ").append(getSpaceSettings()).append(",");
+        if (getSpaceDisplayName() != null)
+            sb.append("SpaceDisplayName: ").append(getSpaceDisplayName());
         sb.append("}");
         return sb.toString();
     }
@@ -208,6 +256,10 @@ public class UpdateSpaceRequest extends com.amazonaws.AmazonWebServiceRequest im
             return false;
         if (other.getSpaceSettings() != null && other.getSpaceSettings().equals(this.getSpaceSettings()) == false)
             return false;
+        if (other.getSpaceDisplayName() == null ^ this.getSpaceDisplayName() == null)
+            return false;
+        if (other.getSpaceDisplayName() != null && other.getSpaceDisplayName().equals(this.getSpaceDisplayName()) == false)
+            return false;
         return true;
     }
 
@@ -219,6 +271,7 @@ public class UpdateSpaceRequest extends com.amazonaws.AmazonWebServiceRequest im
         hashCode = prime * hashCode + ((getDomainId() == null) ? 0 : getDomainId().hashCode());
         hashCode = prime * hashCode + ((getSpaceName() == null) ? 0 : getSpaceName().hashCode());
         hashCode = prime * hashCode + ((getSpaceSettings() == null) ? 0 : getSpaceSettings().hashCode());
+        hashCode = prime * hashCode + ((getSpaceDisplayName() == null) ? 0 : getSpaceDisplayName().hashCode());
         return hashCode;
     }
 

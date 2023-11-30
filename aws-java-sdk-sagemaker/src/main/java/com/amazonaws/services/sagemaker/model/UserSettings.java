@@ -103,6 +103,24 @@ public class UserSettings implements Serializable, Cloneable, StructuredPojo {
     private CanvasAppSettings canvasAppSettings;
     /**
      * <p>
+     * The settings for the JupyterLab application.
+     * </p>
+     */
+    private JupyterLabAppSettings jupyterLabAppSettings;
+    /**
+     * <p>
+     * The Code Editor application settings.
+     * </p>
+     */
+    private CodeEditorAppSettings codeEditorAppSettings;
+    /**
+     * <p>
+     * The storage settings for a private space.
+     * </p>
+     */
+    private DefaultSpaceStorageSettings spaceStorageSettings;
+    /**
+     * <p>
      * The default experience that the user is directed to when accessing the domain. The supported values are:
      * </p>
      * <ul>
@@ -127,6 +145,19 @@ public class UserSettings implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private String studioWebPortal;
+    /**
+     * <p>
+     * Details about the POSIX identity that is used for file system operations.
+     * </p>
+     */
+    private CustomPosixUserConfig customPosixUserConfig;
+    /**
+     * <p>
+     * The settings for assigning a custom file system to a user profile. Permitted users can access this file system in
+     * Amazon SageMaker Studio.
+     * </p>
+     */
+    private java.util.List<CustomFileSystemConfig> customFileSystemConfigs;
 
     /**
      * <p>
@@ -613,6 +644,126 @@ public class UserSettings implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
+     * The settings for the JupyterLab application.
+     * </p>
+     * 
+     * @param jupyterLabAppSettings
+     *        The settings for the JupyterLab application.
+     */
+
+    public void setJupyterLabAppSettings(JupyterLabAppSettings jupyterLabAppSettings) {
+        this.jupyterLabAppSettings = jupyterLabAppSettings;
+    }
+
+    /**
+     * <p>
+     * The settings for the JupyterLab application.
+     * </p>
+     * 
+     * @return The settings for the JupyterLab application.
+     */
+
+    public JupyterLabAppSettings getJupyterLabAppSettings() {
+        return this.jupyterLabAppSettings;
+    }
+
+    /**
+     * <p>
+     * The settings for the JupyterLab application.
+     * </p>
+     * 
+     * @param jupyterLabAppSettings
+     *        The settings for the JupyterLab application.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UserSettings withJupyterLabAppSettings(JupyterLabAppSettings jupyterLabAppSettings) {
+        setJupyterLabAppSettings(jupyterLabAppSettings);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The Code Editor application settings.
+     * </p>
+     * 
+     * @param codeEditorAppSettings
+     *        The Code Editor application settings.
+     */
+
+    public void setCodeEditorAppSettings(CodeEditorAppSettings codeEditorAppSettings) {
+        this.codeEditorAppSettings = codeEditorAppSettings;
+    }
+
+    /**
+     * <p>
+     * The Code Editor application settings.
+     * </p>
+     * 
+     * @return The Code Editor application settings.
+     */
+
+    public CodeEditorAppSettings getCodeEditorAppSettings() {
+        return this.codeEditorAppSettings;
+    }
+
+    /**
+     * <p>
+     * The Code Editor application settings.
+     * </p>
+     * 
+     * @param codeEditorAppSettings
+     *        The Code Editor application settings.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UserSettings withCodeEditorAppSettings(CodeEditorAppSettings codeEditorAppSettings) {
+        setCodeEditorAppSettings(codeEditorAppSettings);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The storage settings for a private space.
+     * </p>
+     * 
+     * @param spaceStorageSettings
+     *        The storage settings for a private space.
+     */
+
+    public void setSpaceStorageSettings(DefaultSpaceStorageSettings spaceStorageSettings) {
+        this.spaceStorageSettings = spaceStorageSettings;
+    }
+
+    /**
+     * <p>
+     * The storage settings for a private space.
+     * </p>
+     * 
+     * @return The storage settings for a private space.
+     */
+
+    public DefaultSpaceStorageSettings getSpaceStorageSettings() {
+        return this.spaceStorageSettings;
+    }
+
+    /**
+     * <p>
+     * The storage settings for a private space.
+     * </p>
+     * 
+     * @param spaceStorageSettings
+     *        The storage settings for a private space.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UserSettings withSpaceStorageSettings(DefaultSpaceStorageSettings spaceStorageSettings) {
+        setSpaceStorageSettings(spaceStorageSettings);
+        return this;
+    }
+
+    /**
+     * <p>
      * The default experience that the user is directed to when accessing the domain. The supported values are:
      * </p>
      * <ul>
@@ -797,6 +948,124 @@ public class UserSettings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Details about the POSIX identity that is used for file system operations.
+     * </p>
+     * 
+     * @param customPosixUserConfig
+     *        Details about the POSIX identity that is used for file system operations.
+     */
+
+    public void setCustomPosixUserConfig(CustomPosixUserConfig customPosixUserConfig) {
+        this.customPosixUserConfig = customPosixUserConfig;
+    }
+
+    /**
+     * <p>
+     * Details about the POSIX identity that is used for file system operations.
+     * </p>
+     * 
+     * @return Details about the POSIX identity that is used for file system operations.
+     */
+
+    public CustomPosixUserConfig getCustomPosixUserConfig() {
+        return this.customPosixUserConfig;
+    }
+
+    /**
+     * <p>
+     * Details about the POSIX identity that is used for file system operations.
+     * </p>
+     * 
+     * @param customPosixUserConfig
+     *        Details about the POSIX identity that is used for file system operations.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UserSettings withCustomPosixUserConfig(CustomPosixUserConfig customPosixUserConfig) {
+        setCustomPosixUserConfig(customPosixUserConfig);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The settings for assigning a custom file system to a user profile. Permitted users can access this file system in
+     * Amazon SageMaker Studio.
+     * </p>
+     * 
+     * @return The settings for assigning a custom file system to a user profile. Permitted users can access this file
+     *         system in Amazon SageMaker Studio.
+     */
+
+    public java.util.List<CustomFileSystemConfig> getCustomFileSystemConfigs() {
+        return customFileSystemConfigs;
+    }
+
+    /**
+     * <p>
+     * The settings for assigning a custom file system to a user profile. Permitted users can access this file system in
+     * Amazon SageMaker Studio.
+     * </p>
+     * 
+     * @param customFileSystemConfigs
+     *        The settings for assigning a custom file system to a user profile. Permitted users can access this file
+     *        system in Amazon SageMaker Studio.
+     */
+
+    public void setCustomFileSystemConfigs(java.util.Collection<CustomFileSystemConfig> customFileSystemConfigs) {
+        if (customFileSystemConfigs == null) {
+            this.customFileSystemConfigs = null;
+            return;
+        }
+
+        this.customFileSystemConfigs = new java.util.ArrayList<CustomFileSystemConfig>(customFileSystemConfigs);
+    }
+
+    /**
+     * <p>
+     * The settings for assigning a custom file system to a user profile. Permitted users can access this file system in
+     * Amazon SageMaker Studio.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setCustomFileSystemConfigs(java.util.Collection)} or
+     * {@link #withCustomFileSystemConfigs(java.util.Collection)} if you want to override the existing values.
+     * </p>
+     * 
+     * @param customFileSystemConfigs
+     *        The settings for assigning a custom file system to a user profile. Permitted users can access this file
+     *        system in Amazon SageMaker Studio.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UserSettings withCustomFileSystemConfigs(CustomFileSystemConfig... customFileSystemConfigs) {
+        if (this.customFileSystemConfigs == null) {
+            setCustomFileSystemConfigs(new java.util.ArrayList<CustomFileSystemConfig>(customFileSystemConfigs.length));
+        }
+        for (CustomFileSystemConfig ele : customFileSystemConfigs) {
+            this.customFileSystemConfigs.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The settings for assigning a custom file system to a user profile. Permitted users can access this file system in
+     * Amazon SageMaker Studio.
+     * </p>
+     * 
+     * @param customFileSystemConfigs
+     *        The settings for assigning a custom file system to a user profile. Permitted users can access this file
+     *        system in Amazon SageMaker Studio.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UserSettings withCustomFileSystemConfigs(java.util.Collection<CustomFileSystemConfig> customFileSystemConfigs) {
+        setCustomFileSystemConfigs(customFileSystemConfigs);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -826,10 +1095,20 @@ public class UserSettings implements Serializable, Cloneable, StructuredPojo {
             sb.append("RSessionAppSettings: ").append(getRSessionAppSettings()).append(",");
         if (getCanvasAppSettings() != null)
             sb.append("CanvasAppSettings: ").append(getCanvasAppSettings()).append(",");
+        if (getJupyterLabAppSettings() != null)
+            sb.append("JupyterLabAppSettings: ").append(getJupyterLabAppSettings()).append(",");
+        if (getCodeEditorAppSettings() != null)
+            sb.append("CodeEditorAppSettings: ").append(getCodeEditorAppSettings()).append(",");
+        if (getSpaceStorageSettings() != null)
+            sb.append("SpaceStorageSettings: ").append(getSpaceStorageSettings()).append(",");
         if (getDefaultLandingUri() != null)
             sb.append("DefaultLandingUri: ").append(getDefaultLandingUri()).append(",");
         if (getStudioWebPortal() != null)
-            sb.append("StudioWebPortal: ").append(getStudioWebPortal());
+            sb.append("StudioWebPortal: ").append(getStudioWebPortal()).append(",");
+        if (getCustomPosixUserConfig() != null)
+            sb.append("CustomPosixUserConfig: ").append(getCustomPosixUserConfig()).append(",");
+        if (getCustomFileSystemConfigs() != null)
+            sb.append("CustomFileSystemConfigs: ").append(getCustomFileSystemConfigs());
         sb.append("}");
         return sb.toString();
     }
@@ -880,6 +1159,18 @@ public class UserSettings implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getCanvasAppSettings() != null && other.getCanvasAppSettings().equals(this.getCanvasAppSettings()) == false)
             return false;
+        if (other.getJupyterLabAppSettings() == null ^ this.getJupyterLabAppSettings() == null)
+            return false;
+        if (other.getJupyterLabAppSettings() != null && other.getJupyterLabAppSettings().equals(this.getJupyterLabAppSettings()) == false)
+            return false;
+        if (other.getCodeEditorAppSettings() == null ^ this.getCodeEditorAppSettings() == null)
+            return false;
+        if (other.getCodeEditorAppSettings() != null && other.getCodeEditorAppSettings().equals(this.getCodeEditorAppSettings()) == false)
+            return false;
+        if (other.getSpaceStorageSettings() == null ^ this.getSpaceStorageSettings() == null)
+            return false;
+        if (other.getSpaceStorageSettings() != null && other.getSpaceStorageSettings().equals(this.getSpaceStorageSettings()) == false)
+            return false;
         if (other.getDefaultLandingUri() == null ^ this.getDefaultLandingUri() == null)
             return false;
         if (other.getDefaultLandingUri() != null && other.getDefaultLandingUri().equals(this.getDefaultLandingUri()) == false)
@@ -887,6 +1178,14 @@ public class UserSettings implements Serializable, Cloneable, StructuredPojo {
         if (other.getStudioWebPortal() == null ^ this.getStudioWebPortal() == null)
             return false;
         if (other.getStudioWebPortal() != null && other.getStudioWebPortal().equals(this.getStudioWebPortal()) == false)
+            return false;
+        if (other.getCustomPosixUserConfig() == null ^ this.getCustomPosixUserConfig() == null)
+            return false;
+        if (other.getCustomPosixUserConfig() != null && other.getCustomPosixUserConfig().equals(this.getCustomPosixUserConfig()) == false)
+            return false;
+        if (other.getCustomFileSystemConfigs() == null ^ this.getCustomFileSystemConfigs() == null)
+            return false;
+        if (other.getCustomFileSystemConfigs() != null && other.getCustomFileSystemConfigs().equals(this.getCustomFileSystemConfigs()) == false)
             return false;
         return true;
     }
@@ -905,8 +1204,13 @@ public class UserSettings implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getRStudioServerProAppSettings() == null) ? 0 : getRStudioServerProAppSettings().hashCode());
         hashCode = prime * hashCode + ((getRSessionAppSettings() == null) ? 0 : getRSessionAppSettings().hashCode());
         hashCode = prime * hashCode + ((getCanvasAppSettings() == null) ? 0 : getCanvasAppSettings().hashCode());
+        hashCode = prime * hashCode + ((getJupyterLabAppSettings() == null) ? 0 : getJupyterLabAppSettings().hashCode());
+        hashCode = prime * hashCode + ((getCodeEditorAppSettings() == null) ? 0 : getCodeEditorAppSettings().hashCode());
+        hashCode = prime * hashCode + ((getSpaceStorageSettings() == null) ? 0 : getSpaceStorageSettings().hashCode());
         hashCode = prime * hashCode + ((getDefaultLandingUri() == null) ? 0 : getDefaultLandingUri().hashCode());
         hashCode = prime * hashCode + ((getStudioWebPortal() == null) ? 0 : getStudioWebPortal().hashCode());
+        hashCode = prime * hashCode + ((getCustomPosixUserConfig() == null) ? 0 : getCustomPosixUserConfig().hashCode());
+        hashCode = prime * hashCode + ((getCustomFileSystemConfigs() == null) ? 0 : getCustomFileSystemConfigs().hashCode());
         return hashCode;
     }
 

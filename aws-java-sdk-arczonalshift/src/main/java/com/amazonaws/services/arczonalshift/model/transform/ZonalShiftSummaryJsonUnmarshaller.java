@@ -60,6 +60,10 @@ public class ZonalShiftSummaryJsonUnmarshaller implements Unmarshaller<ZonalShif
                     context.nextToken();
                     zonalShiftSummary.setExpiryTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
                 }
+                if (context.testExpression("practiceRunOutcome", targetDepth)) {
+                    context.nextToken();
+                    zonalShiftSummary.setPracticeRunOutcome(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("resourceIdentifier", targetDepth)) {
                     context.nextToken();
                     zonalShiftSummary.setResourceIdentifier(context.getUnmarshaller(String.class).unmarshall(context));

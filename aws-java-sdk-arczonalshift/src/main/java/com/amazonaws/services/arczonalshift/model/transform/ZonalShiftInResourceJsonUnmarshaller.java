@@ -64,6 +64,10 @@ public class ZonalShiftInResourceJsonUnmarshaller implements Unmarshaller<ZonalS
                     context.nextToken();
                     zonalShiftInResource.setExpiryTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
                 }
+                if (context.testExpression("practiceRunOutcome", targetDepth)) {
+                    context.nextToken();
+                    zonalShiftInResource.setPracticeRunOutcome(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("resourceIdentifier", targetDepth)) {
                     context.nextToken();
                     zonalShiftInResource.setResourceIdentifier(context.getUnmarshaller(String.class).unmarshall(context));

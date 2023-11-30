@@ -22,7 +22,10 @@ public enum ConflictExceptionReason {
 
     ZonalShiftAlreadyExists("ZonalShiftAlreadyExists"),
     ZonalShiftStatusNotActive("ZonalShiftStatusNotActive"),
-    SimultaneousZonalShiftsConflict("SimultaneousZonalShiftsConflict");
+    SimultaneousZonalShiftsConflict("SimultaneousZonalShiftsConflict"),
+    PracticeConfigurationAlreadyExists("PracticeConfigurationAlreadyExists"),
+    AutoShiftEnabled("AutoShiftEnabled"),
+    PracticeConfigurationDoesNotExist("PracticeConfigurationDoesNotExist");
 
     private String value;
 

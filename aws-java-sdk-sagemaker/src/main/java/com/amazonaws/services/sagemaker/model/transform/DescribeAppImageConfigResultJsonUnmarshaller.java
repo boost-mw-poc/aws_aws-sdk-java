@@ -68,6 +68,10 @@ public class DescribeAppImageConfigResultJsonUnmarshaller implements Unmarshalle
                     context.nextToken();
                     describeAppImageConfigResult.setKernelGatewayImageConfig(KernelGatewayImageConfigJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("JupyterLabAppImageConfig", targetDepth)) {
+                    context.nextToken();
+                    describeAppImageConfigResult.setJupyterLabAppImageConfig(JupyterLabAppImageConfigJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

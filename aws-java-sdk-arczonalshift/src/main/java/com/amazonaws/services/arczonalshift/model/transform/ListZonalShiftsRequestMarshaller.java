@@ -31,6 +31,8 @@ public class ListZonalShiftsRequestMarshaller {
             .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("maxResults").build();
     private static final MarshallingInfo<String> NEXTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("nextToken").build();
+    private static final MarshallingInfo<String> RESOURCEIDENTIFIER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("resourceIdentifier").build();
     private static final MarshallingInfo<String> STATUS_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("status").build();
 
@@ -52,6 +54,7 @@ public class ListZonalShiftsRequestMarshaller {
         try {
             protocolMarshaller.marshall(listZonalShiftsRequest.getMaxResults(), MAXRESULTS_BINDING);
             protocolMarshaller.marshall(listZonalShiftsRequest.getNextToken(), NEXTTOKEN_BINDING);
+            protocolMarshaller.marshall(listZonalShiftsRequest.getResourceIdentifier(), RESOURCEIDENTIFIER_BINDING);
             protocolMarshaller.marshall(listZonalShiftsRequest.getStatus(), STATUS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

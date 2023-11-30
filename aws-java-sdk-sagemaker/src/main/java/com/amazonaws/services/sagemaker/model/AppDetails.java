@@ -71,6 +71,8 @@ public class AppDetails implements Serializable, Cloneable, StructuredPojo {
      */
     private String spaceName;
 
+    private ResourceSpec resourceSpec;
+
     /**
      * <p>
      * The domain ID.
@@ -390,6 +392,32 @@ public class AppDetails implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * @param resourceSpec
+     */
+
+    public void setResourceSpec(ResourceSpec resourceSpec) {
+        this.resourceSpec = resourceSpec;
+    }
+
+    /**
+     * @return
+     */
+
+    public ResourceSpec getResourceSpec() {
+        return this.resourceSpec;
+    }
+
+    /**
+     * @param resourceSpec
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AppDetails withResourceSpec(ResourceSpec resourceSpec) {
+        setResourceSpec(resourceSpec);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -414,7 +442,9 @@ public class AppDetails implements Serializable, Cloneable, StructuredPojo {
         if (getCreationTime() != null)
             sb.append("CreationTime: ").append(getCreationTime()).append(",");
         if (getSpaceName() != null)
-            sb.append("SpaceName: ").append(getSpaceName());
+            sb.append("SpaceName: ").append(getSpaceName()).append(",");
+        if (getResourceSpec() != null)
+            sb.append("ResourceSpec: ").append(getResourceSpec());
         sb.append("}");
         return sb.toString();
     }
@@ -457,6 +487,10 @@ public class AppDetails implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getSpaceName() != null && other.getSpaceName().equals(this.getSpaceName()) == false)
             return false;
+        if (other.getResourceSpec() == null ^ this.getResourceSpec() == null)
+            return false;
+        if (other.getResourceSpec() != null && other.getResourceSpec().equals(this.getResourceSpec()) == false)
+            return false;
         return true;
     }
 
@@ -472,6 +506,7 @@ public class AppDetails implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
         hashCode = prime * hashCode + ((getCreationTime() == null) ? 0 : getCreationTime().hashCode());
         hashCode = prime * hashCode + ((getSpaceName() == null) ? 0 : getSpaceName().hashCode());
+        hashCode = prime * hashCode + ((getResourceSpec() == null) ? 0 : getResourceSpec().hashCode());
         return hashCode;
     }
 

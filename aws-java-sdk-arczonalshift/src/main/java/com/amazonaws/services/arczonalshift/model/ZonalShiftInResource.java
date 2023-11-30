@@ -30,8 +30,22 @@ public class ZonalShiftInResource implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * An <code>appliedStatus</code> for a zonal shift for a resource can have one of two values: <code>APPLIED</code>
-     * or <code>NOT_APPLIED</code>.
+     * The <code>appliedStatus</code> field specifies which application traffic shift is in effect for a resource when
+     * there is more than one traffic shift active. There can be more than one application traffic shift in progress at
+     * the same time - that is, practice run zonal shifts, customer-started zonal shifts, or an autoshift. The
+     * <code>appliedStatus</code> field for an autoshift for a resource can have one of two values: <code>APPLIED</code>
+     * or <code>NOT_APPLIED</code>. The zonal shift or autoshift that is currently in effect for the resource has an
+     * applied status set to <code>APPLIED</code>.
+     * </p>
+     * <p>
+     * The overall principle for precedence is that zonal shifts that you start as a customer take precedence
+     * autoshifts, which take precedence over practice runs. That is, customer-started zonal shifts &gt; autoshifts &gt;
+     * practice run zonal shifts.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/r53recovery/latest/dg/arc-zonal-autoshift.how-it-works.html">How zonal
+     * autoshift and practice runs work</a> in the Amazon Route 53 Application Recovery Controller Developer Guide.
      * </p>
      */
     private String appliedStatus;
@@ -39,7 +53,7 @@ public class ZonalShiftInResource implements Serializable, Cloneable, Structured
      * <p>
      * The Availability Zone that traffic is moved away from for a resource when you start a zonal shift. Until the
      * zonal shift expires or you cancel it, traffic for the resource is instead moved to other Availability Zones in
-     * the AWS Region.
+     * the Amazon Web Services Region.
      * </p>
      */
     private String awayFrom;
@@ -52,17 +66,55 @@ public class ZonalShiftInResource implements Serializable, Cloneable, Structured
     private String comment;
     /**
      * <p>
-     * The expiry time (expiration time) for the zonal shift. A zonal shift is temporary and must be set to expire when
-     * you start the zonal shift. You can initially set a zonal shift to expire in a maximum of three days (72 hours).
-     * However, you can update a zonal shift to set a new expiration at any time.
+     * The expiry time (expiration time) for a customer-started zonal shift. A zonal shift is temporary and must be set
+     * to expire when you start the zonal shift. You can initially set a zonal shift to expire in a maximum of three
+     * days (72 hours). However, you can update a zonal shift to set a new expiration at any time.
      * </p>
      * <p>
      * When you start a zonal shift, you specify how long you want it to be active, which Route 53 ARC converts to an
-     * expiry time (expiration time). You can cancel a zonal shift, for example, if you're ready to restore traffic to
-     * the Availability Zone. Or you can update the zonal shift to specify another length of time to expire in.
+     * expiry time (expiration time). You can cancel a zonal shift when you're ready to restore traffic to the
+     * Availability Zone, or just wait for it to expire. Or you can update the zonal shift to specify another length of
+     * time to expire in.
      * </p>
      */
     private java.util.Date expiryTime;
+    /**
+     * <p>
+     * The outcome, or end state, returned for a practice run. The following values can be returned:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <b>PENDING:</b> Outcome value when a practice run is in progress.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b>SUCCEEDED:</b> Outcome value when the outcome alarm specified for the practice run configuration does not go
+     * into an <code>ALARM</code> state during the practice run, and the practice run was not interrupted before it
+     * completed the expected 30 minute zonal shift.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b>INTERRUPTED:</b> Outcome value when the practice run was stopped before the expected 30 minute zonal shift
+     * duration, or there was another problem with the practice run that created an inconclusive outcome.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b>FAILED:</b> Outcome value when the outcome alarm specified for the practice run configuration goes into an
+     * <code>ALARM</code> state during the practice run, and the practice run was not interrupted before it completed.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For more information about practice run outcomes, see <a
+     * href="https://docs.aws.amazon.com/r53recovery/latest/dg/arc-zonal-autoshift.configure.html"> Considerations when
+     * you configure zonal autoshift</a> in the Amazon Route 53 Application Recovery Controller Developer Guide.
+     * </p>
+     */
+    private String practiceRunOutcome;
     /**
      * <p>
      * The identifier for the resource to include in a zonal shift. The identifier is the Amazon Resource Name (ARN) for
@@ -76,7 +128,7 @@ public class ZonalShiftInResource implements Serializable, Cloneable, Structured
     private String resourceIdentifier;
     /**
      * <p>
-     * The time (UTC) when the zonal shift is started.
+     * The time (UTC) when the zonal shift starts.
      * </p>
      */
     private java.util.Date startTime;
@@ -89,13 +141,41 @@ public class ZonalShiftInResource implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * An <code>appliedStatus</code> for a zonal shift for a resource can have one of two values: <code>APPLIED</code>
-     * or <code>NOT_APPLIED</code>.
+     * The <code>appliedStatus</code> field specifies which application traffic shift is in effect for a resource when
+     * there is more than one traffic shift active. There can be more than one application traffic shift in progress at
+     * the same time - that is, practice run zonal shifts, customer-started zonal shifts, or an autoshift. The
+     * <code>appliedStatus</code> field for an autoshift for a resource can have one of two values: <code>APPLIED</code>
+     * or <code>NOT_APPLIED</code>. The zonal shift or autoshift that is currently in effect for the resource has an
+     * applied status set to <code>APPLIED</code>.
+     * </p>
+     * <p>
+     * The overall principle for precedence is that zonal shifts that you start as a customer take precedence
+     * autoshifts, which take precedence over practice runs. That is, customer-started zonal shifts &gt; autoshifts &gt;
+     * practice run zonal shifts.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/r53recovery/latest/dg/arc-zonal-autoshift.how-it-works.html">How zonal
+     * autoshift and practice runs work</a> in the Amazon Route 53 Application Recovery Controller Developer Guide.
      * </p>
      * 
      * @param appliedStatus
-     *        An <code>appliedStatus</code> for a zonal shift for a resource can have one of two values:
-     *        <code>APPLIED</code> or <code>NOT_APPLIED</code>.
+     *        The <code>appliedStatus</code> field specifies which application traffic shift is in effect for a resource
+     *        when there is more than one traffic shift active. There can be more than one application traffic shift in
+     *        progress at the same time - that is, practice run zonal shifts, customer-started zonal shifts, or an
+     *        autoshift. The <code>appliedStatus</code> field for an autoshift for a resource can have one of two
+     *        values: <code>APPLIED</code> or <code>NOT_APPLIED</code>. The zonal shift or autoshift that is currently
+     *        in effect for the resource has an applied status set to <code>APPLIED</code>.</p>
+     *        <p>
+     *        The overall principle for precedence is that zonal shifts that you start as a customer take precedence
+     *        autoshifts, which take precedence over practice runs. That is, customer-started zonal shifts &gt;
+     *        autoshifts &gt; practice run zonal shifts.
+     *        </p>
+     *        <p>
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/r53recovery/latest/dg/arc-zonal-autoshift.how-it-works.html">How zonal
+     *        autoshift and practice runs work</a> in the Amazon Route 53 Application Recovery Controller Developer
+     *        Guide.
      * @see AppliedStatus
      */
 
@@ -105,12 +185,40 @@ public class ZonalShiftInResource implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * An <code>appliedStatus</code> for a zonal shift for a resource can have one of two values: <code>APPLIED</code>
-     * or <code>NOT_APPLIED</code>.
+     * The <code>appliedStatus</code> field specifies which application traffic shift is in effect for a resource when
+     * there is more than one traffic shift active. There can be more than one application traffic shift in progress at
+     * the same time - that is, practice run zonal shifts, customer-started zonal shifts, or an autoshift. The
+     * <code>appliedStatus</code> field for an autoshift for a resource can have one of two values: <code>APPLIED</code>
+     * or <code>NOT_APPLIED</code>. The zonal shift or autoshift that is currently in effect for the resource has an
+     * applied status set to <code>APPLIED</code>.
+     * </p>
+     * <p>
+     * The overall principle for precedence is that zonal shifts that you start as a customer take precedence
+     * autoshifts, which take precedence over practice runs. That is, customer-started zonal shifts &gt; autoshifts &gt;
+     * practice run zonal shifts.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/r53recovery/latest/dg/arc-zonal-autoshift.how-it-works.html">How zonal
+     * autoshift and practice runs work</a> in the Amazon Route 53 Application Recovery Controller Developer Guide.
      * </p>
      * 
-     * @return An <code>appliedStatus</code> for a zonal shift for a resource can have one of two values:
-     *         <code>APPLIED</code> or <code>NOT_APPLIED</code>.
+     * @return The <code>appliedStatus</code> field specifies which application traffic shift is in effect for a
+     *         resource when there is more than one traffic shift active. There can be more than one application traffic
+     *         shift in progress at the same time - that is, practice run zonal shifts, customer-started zonal shifts,
+     *         or an autoshift. The <code>appliedStatus</code> field for an autoshift for a resource can have one of two
+     *         values: <code>APPLIED</code> or <code>NOT_APPLIED</code>. The zonal shift or autoshift that is currently
+     *         in effect for the resource has an applied status set to <code>APPLIED</code>.</p>
+     *         <p>
+     *         The overall principle for precedence is that zonal shifts that you start as a customer take precedence
+     *         autoshifts, which take precedence over practice runs. That is, customer-started zonal shifts &gt;
+     *         autoshifts &gt; practice run zonal shifts.
+     *         </p>
+     *         <p>
+     *         For more information, see <a
+     *         href="https://docs.aws.amazon.com/r53recovery/latest/dg/arc-zonal-autoshift.how-it-works.html">How zonal
+     *         autoshift and practice runs work</a> in the Amazon Route 53 Application Recovery Controller Developer
+     *         Guide.
      * @see AppliedStatus
      */
 
@@ -120,13 +228,41 @@ public class ZonalShiftInResource implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * An <code>appliedStatus</code> for a zonal shift for a resource can have one of two values: <code>APPLIED</code>
-     * or <code>NOT_APPLIED</code>.
+     * The <code>appliedStatus</code> field specifies which application traffic shift is in effect for a resource when
+     * there is more than one traffic shift active. There can be more than one application traffic shift in progress at
+     * the same time - that is, practice run zonal shifts, customer-started zonal shifts, or an autoshift. The
+     * <code>appliedStatus</code> field for an autoshift for a resource can have one of two values: <code>APPLIED</code>
+     * or <code>NOT_APPLIED</code>. The zonal shift or autoshift that is currently in effect for the resource has an
+     * applied status set to <code>APPLIED</code>.
+     * </p>
+     * <p>
+     * The overall principle for precedence is that zonal shifts that you start as a customer take precedence
+     * autoshifts, which take precedence over practice runs. That is, customer-started zonal shifts &gt; autoshifts &gt;
+     * practice run zonal shifts.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/r53recovery/latest/dg/arc-zonal-autoshift.how-it-works.html">How zonal
+     * autoshift and practice runs work</a> in the Amazon Route 53 Application Recovery Controller Developer Guide.
      * </p>
      * 
      * @param appliedStatus
-     *        An <code>appliedStatus</code> for a zonal shift for a resource can have one of two values:
-     *        <code>APPLIED</code> or <code>NOT_APPLIED</code>.
+     *        The <code>appliedStatus</code> field specifies which application traffic shift is in effect for a resource
+     *        when there is more than one traffic shift active. There can be more than one application traffic shift in
+     *        progress at the same time - that is, practice run zonal shifts, customer-started zonal shifts, or an
+     *        autoshift. The <code>appliedStatus</code> field for an autoshift for a resource can have one of two
+     *        values: <code>APPLIED</code> or <code>NOT_APPLIED</code>. The zonal shift or autoshift that is currently
+     *        in effect for the resource has an applied status set to <code>APPLIED</code>.</p>
+     *        <p>
+     *        The overall principle for precedence is that zonal shifts that you start as a customer take precedence
+     *        autoshifts, which take precedence over practice runs. That is, customer-started zonal shifts &gt;
+     *        autoshifts &gt; practice run zonal shifts.
+     *        </p>
+     *        <p>
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/r53recovery/latest/dg/arc-zonal-autoshift.how-it-works.html">How zonal
+     *        autoshift and practice runs work</a> in the Amazon Route 53 Application Recovery Controller Developer
+     *        Guide.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AppliedStatus
      */
@@ -138,13 +274,41 @@ public class ZonalShiftInResource implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * An <code>appliedStatus</code> for a zonal shift for a resource can have one of two values: <code>APPLIED</code>
-     * or <code>NOT_APPLIED</code>.
+     * The <code>appliedStatus</code> field specifies which application traffic shift is in effect for a resource when
+     * there is more than one traffic shift active. There can be more than one application traffic shift in progress at
+     * the same time - that is, practice run zonal shifts, customer-started zonal shifts, or an autoshift. The
+     * <code>appliedStatus</code> field for an autoshift for a resource can have one of two values: <code>APPLIED</code>
+     * or <code>NOT_APPLIED</code>. The zonal shift or autoshift that is currently in effect for the resource has an
+     * applied status set to <code>APPLIED</code>.
+     * </p>
+     * <p>
+     * The overall principle for precedence is that zonal shifts that you start as a customer take precedence
+     * autoshifts, which take precedence over practice runs. That is, customer-started zonal shifts &gt; autoshifts &gt;
+     * practice run zonal shifts.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/r53recovery/latest/dg/arc-zonal-autoshift.how-it-works.html">How zonal
+     * autoshift and practice runs work</a> in the Amazon Route 53 Application Recovery Controller Developer Guide.
      * </p>
      * 
      * @param appliedStatus
-     *        An <code>appliedStatus</code> for a zonal shift for a resource can have one of two values:
-     *        <code>APPLIED</code> or <code>NOT_APPLIED</code>.
+     *        The <code>appliedStatus</code> field specifies which application traffic shift is in effect for a resource
+     *        when there is more than one traffic shift active. There can be more than one application traffic shift in
+     *        progress at the same time - that is, practice run zonal shifts, customer-started zonal shifts, or an
+     *        autoshift. The <code>appliedStatus</code> field for an autoshift for a resource can have one of two
+     *        values: <code>APPLIED</code> or <code>NOT_APPLIED</code>. The zonal shift or autoshift that is currently
+     *        in effect for the resource has an applied status set to <code>APPLIED</code>.</p>
+     *        <p>
+     *        The overall principle for precedence is that zonal shifts that you start as a customer take precedence
+     *        autoshifts, which take precedence over practice runs. That is, customer-started zonal shifts &gt;
+     *        autoshifts &gt; practice run zonal shifts.
+     *        </p>
+     *        <p>
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/r53recovery/latest/dg/arc-zonal-autoshift.how-it-works.html">How zonal
+     *        autoshift and practice runs work</a> in the Amazon Route 53 Application Recovery Controller Developer
+     *        Guide.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AppliedStatus
      */
@@ -158,13 +322,13 @@ public class ZonalShiftInResource implements Serializable, Cloneable, Structured
      * <p>
      * The Availability Zone that traffic is moved away from for a resource when you start a zonal shift. Until the
      * zonal shift expires or you cancel it, traffic for the resource is instead moved to other Availability Zones in
-     * the AWS Region.
+     * the Amazon Web Services Region.
      * </p>
      * 
      * @param awayFrom
      *        The Availability Zone that traffic is moved away from for a resource when you start a zonal shift. Until
      *        the zonal shift expires or you cancel it, traffic for the resource is instead moved to other Availability
-     *        Zones in the AWS Region.
+     *        Zones in the Amazon Web Services Region.
      */
 
     public void setAwayFrom(String awayFrom) {
@@ -175,12 +339,12 @@ public class ZonalShiftInResource implements Serializable, Cloneable, Structured
      * <p>
      * The Availability Zone that traffic is moved away from for a resource when you start a zonal shift. Until the
      * zonal shift expires or you cancel it, traffic for the resource is instead moved to other Availability Zones in
-     * the AWS Region.
+     * the Amazon Web Services Region.
      * </p>
      * 
      * @return The Availability Zone that traffic is moved away from for a resource when you start a zonal shift. Until
      *         the zonal shift expires or you cancel it, traffic for the resource is instead moved to other Availability
-     *         Zones in the AWS Region.
+     *         Zones in the Amazon Web Services Region.
      */
 
     public String getAwayFrom() {
@@ -191,13 +355,13 @@ public class ZonalShiftInResource implements Serializable, Cloneable, Structured
      * <p>
      * The Availability Zone that traffic is moved away from for a resource when you start a zonal shift. Until the
      * zonal shift expires or you cancel it, traffic for the resource is instead moved to other Availability Zones in
-     * the AWS Region.
+     * the Amazon Web Services Region.
      * </p>
      * 
      * @param awayFrom
      *        The Availability Zone that traffic is moved away from for a resource when you start a zonal shift. Until
      *        the zonal shift expires or you cancel it, traffic for the resource is instead moved to other Availability
-     *        Zones in the AWS Region.
+     *        Zones in the Amazon Web Services Region.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -254,25 +418,27 @@ public class ZonalShiftInResource implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The expiry time (expiration time) for the zonal shift. A zonal shift is temporary and must be set to expire when
-     * you start the zonal shift. You can initially set a zonal shift to expire in a maximum of three days (72 hours).
-     * However, you can update a zonal shift to set a new expiration at any time.
+     * The expiry time (expiration time) for a customer-started zonal shift. A zonal shift is temporary and must be set
+     * to expire when you start the zonal shift. You can initially set a zonal shift to expire in a maximum of three
+     * days (72 hours). However, you can update a zonal shift to set a new expiration at any time.
      * </p>
      * <p>
      * When you start a zonal shift, you specify how long you want it to be active, which Route 53 ARC converts to an
-     * expiry time (expiration time). You can cancel a zonal shift, for example, if you're ready to restore traffic to
-     * the Availability Zone. Or you can update the zonal shift to specify another length of time to expire in.
+     * expiry time (expiration time). You can cancel a zonal shift when you're ready to restore traffic to the
+     * Availability Zone, or just wait for it to expire. Or you can update the zonal shift to specify another length of
+     * time to expire in.
      * </p>
      * 
      * @param expiryTime
-     *        The expiry time (expiration time) for the zonal shift. A zonal shift is temporary and must be set to
-     *        expire when you start the zonal shift. You can initially set a zonal shift to expire in a maximum of three
-     *        days (72 hours). However, you can update a zonal shift to set a new expiration at any time. </p>
+     *        The expiry time (expiration time) for a customer-started zonal shift. A zonal shift is temporary and must
+     *        be set to expire when you start the zonal shift. You can initially set a zonal shift to expire in a
+     *        maximum of three days (72 hours). However, you can update a zonal shift to set a new expiration at any
+     *        time. </p>
      *        <p>
      *        When you start a zonal shift, you specify how long you want it to be active, which Route 53 ARC converts
-     *        to an expiry time (expiration time). You can cancel a zonal shift, for example, if you're ready to restore
-     *        traffic to the Availability Zone. Or you can update the zonal shift to specify another length of time to
-     *        expire in.
+     *        to an expiry time (expiration time). You can cancel a zonal shift when you're ready to restore traffic to
+     *        the Availability Zone, or just wait for it to expire. Or you can update the zonal shift to specify another
+     *        length of time to expire in.
      */
 
     public void setExpiryTime(java.util.Date expiryTime) {
@@ -281,24 +447,26 @@ public class ZonalShiftInResource implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The expiry time (expiration time) for the zonal shift. A zonal shift is temporary and must be set to expire when
-     * you start the zonal shift. You can initially set a zonal shift to expire in a maximum of three days (72 hours).
-     * However, you can update a zonal shift to set a new expiration at any time.
+     * The expiry time (expiration time) for a customer-started zonal shift. A zonal shift is temporary and must be set
+     * to expire when you start the zonal shift. You can initially set a zonal shift to expire in a maximum of three
+     * days (72 hours). However, you can update a zonal shift to set a new expiration at any time.
      * </p>
      * <p>
      * When you start a zonal shift, you specify how long you want it to be active, which Route 53 ARC converts to an
-     * expiry time (expiration time). You can cancel a zonal shift, for example, if you're ready to restore traffic to
-     * the Availability Zone. Or you can update the zonal shift to specify another length of time to expire in.
+     * expiry time (expiration time). You can cancel a zonal shift when you're ready to restore traffic to the
+     * Availability Zone, or just wait for it to expire. Or you can update the zonal shift to specify another length of
+     * time to expire in.
      * </p>
      * 
-     * @return The expiry time (expiration time) for the zonal shift. A zonal shift is temporary and must be set to
-     *         expire when you start the zonal shift. You can initially set a zonal shift to expire in a maximum of
-     *         three days (72 hours). However, you can update a zonal shift to set a new expiration at any time. </p>
+     * @return The expiry time (expiration time) for a customer-started zonal shift. A zonal shift is temporary and must
+     *         be set to expire when you start the zonal shift. You can initially set a zonal shift to expire in a
+     *         maximum of three days (72 hours). However, you can update a zonal shift to set a new expiration at any
+     *         time. </p>
      *         <p>
      *         When you start a zonal shift, you specify how long you want it to be active, which Route 53 ARC converts
-     *         to an expiry time (expiration time). You can cancel a zonal shift, for example, if you're ready to
-     *         restore traffic to the Availability Zone. Or you can update the zonal shift to specify another length of
-     *         time to expire in.
+     *         to an expiry time (expiration time). You can cancel a zonal shift when you're ready to restore traffic to
+     *         the Availability Zone, or just wait for it to expire. Or you can update the zonal shift to specify
+     *         another length of time to expire in.
      */
 
     public java.util.Date getExpiryTime() {
@@ -307,30 +475,343 @@ public class ZonalShiftInResource implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The expiry time (expiration time) for the zonal shift. A zonal shift is temporary and must be set to expire when
-     * you start the zonal shift. You can initially set a zonal shift to expire in a maximum of three days (72 hours).
-     * However, you can update a zonal shift to set a new expiration at any time.
+     * The expiry time (expiration time) for a customer-started zonal shift. A zonal shift is temporary and must be set
+     * to expire when you start the zonal shift. You can initially set a zonal shift to expire in a maximum of three
+     * days (72 hours). However, you can update a zonal shift to set a new expiration at any time.
      * </p>
      * <p>
      * When you start a zonal shift, you specify how long you want it to be active, which Route 53 ARC converts to an
-     * expiry time (expiration time). You can cancel a zonal shift, for example, if you're ready to restore traffic to
-     * the Availability Zone. Or you can update the zonal shift to specify another length of time to expire in.
+     * expiry time (expiration time). You can cancel a zonal shift when you're ready to restore traffic to the
+     * Availability Zone, or just wait for it to expire. Or you can update the zonal shift to specify another length of
+     * time to expire in.
      * </p>
      * 
      * @param expiryTime
-     *        The expiry time (expiration time) for the zonal shift. A zonal shift is temporary and must be set to
-     *        expire when you start the zonal shift. You can initially set a zonal shift to expire in a maximum of three
-     *        days (72 hours). However, you can update a zonal shift to set a new expiration at any time. </p>
+     *        The expiry time (expiration time) for a customer-started zonal shift. A zonal shift is temporary and must
+     *        be set to expire when you start the zonal shift. You can initially set a zonal shift to expire in a
+     *        maximum of three days (72 hours). However, you can update a zonal shift to set a new expiration at any
+     *        time. </p>
      *        <p>
      *        When you start a zonal shift, you specify how long you want it to be active, which Route 53 ARC converts
-     *        to an expiry time (expiration time). You can cancel a zonal shift, for example, if you're ready to restore
-     *        traffic to the Availability Zone. Or you can update the zonal shift to specify another length of time to
-     *        expire in.
+     *        to an expiry time (expiration time). You can cancel a zonal shift when you're ready to restore traffic to
+     *        the Availability Zone, or just wait for it to expire. Or you can update the zonal shift to specify another
+     *        length of time to expire in.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public ZonalShiftInResource withExpiryTime(java.util.Date expiryTime) {
         setExpiryTime(expiryTime);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The outcome, or end state, returned for a practice run. The following values can be returned:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <b>PENDING:</b> Outcome value when a practice run is in progress.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b>SUCCEEDED:</b> Outcome value when the outcome alarm specified for the practice run configuration does not go
+     * into an <code>ALARM</code> state during the practice run, and the practice run was not interrupted before it
+     * completed the expected 30 minute zonal shift.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b>INTERRUPTED:</b> Outcome value when the practice run was stopped before the expected 30 minute zonal shift
+     * duration, or there was another problem with the practice run that created an inconclusive outcome.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b>FAILED:</b> Outcome value when the outcome alarm specified for the practice run configuration goes into an
+     * <code>ALARM</code> state during the practice run, and the practice run was not interrupted before it completed.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For more information about practice run outcomes, see <a
+     * href="https://docs.aws.amazon.com/r53recovery/latest/dg/arc-zonal-autoshift.configure.html"> Considerations when
+     * you configure zonal autoshift</a> in the Amazon Route 53 Application Recovery Controller Developer Guide.
+     * </p>
+     * 
+     * @param practiceRunOutcome
+     *        The outcome, or end state, returned for a practice run. The following values can be returned:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <b>PENDING:</b> Outcome value when a practice run is in progress.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <b>SUCCEEDED:</b> Outcome value when the outcome alarm specified for the practice run configuration does
+     *        not go into an <code>ALARM</code> state during the practice run, and the practice run was not interrupted
+     *        before it completed the expected 30 minute zonal shift.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <b>INTERRUPTED:</b> Outcome value when the practice run was stopped before the expected 30 minute zonal
+     *        shift duration, or there was another problem with the practice run that created an inconclusive outcome.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <b>FAILED:</b> Outcome value when the outcome alarm specified for the practice run configuration goes into
+     *        an <code>ALARM</code> state during the practice run, and the practice run was not interrupted before it
+     *        completed.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        For more information about practice run outcomes, see <a
+     *        href="https://docs.aws.amazon.com/r53recovery/latest/dg/arc-zonal-autoshift.configure.html">
+     *        Considerations when you configure zonal autoshift</a> in the Amazon Route 53 Application Recovery
+     *        Controller Developer Guide.
+     * @see PracticeRunOutcome
+     */
+
+    public void setPracticeRunOutcome(String practiceRunOutcome) {
+        this.practiceRunOutcome = practiceRunOutcome;
+    }
+
+    /**
+     * <p>
+     * The outcome, or end state, returned for a practice run. The following values can be returned:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <b>PENDING:</b> Outcome value when a practice run is in progress.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b>SUCCEEDED:</b> Outcome value when the outcome alarm specified for the practice run configuration does not go
+     * into an <code>ALARM</code> state during the practice run, and the practice run was not interrupted before it
+     * completed the expected 30 minute zonal shift.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b>INTERRUPTED:</b> Outcome value when the practice run was stopped before the expected 30 minute zonal shift
+     * duration, or there was another problem with the practice run that created an inconclusive outcome.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b>FAILED:</b> Outcome value when the outcome alarm specified for the practice run configuration goes into an
+     * <code>ALARM</code> state during the practice run, and the practice run was not interrupted before it completed.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For more information about practice run outcomes, see <a
+     * href="https://docs.aws.amazon.com/r53recovery/latest/dg/arc-zonal-autoshift.configure.html"> Considerations when
+     * you configure zonal autoshift</a> in the Amazon Route 53 Application Recovery Controller Developer Guide.
+     * </p>
+     * 
+     * @return The outcome, or end state, returned for a practice run. The following values can be returned:</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <b>PENDING:</b> Outcome value when a practice run is in progress.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <b>SUCCEEDED:</b> Outcome value when the outcome alarm specified for the practice run configuration does
+     *         not go into an <code>ALARM</code> state during the practice run, and the practice run was not interrupted
+     *         before it completed the expected 30 minute zonal shift.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <b>INTERRUPTED:</b> Outcome value when the practice run was stopped before the expected 30 minute zonal
+     *         shift duration, or there was another problem with the practice run that created an inconclusive outcome.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <b>FAILED:</b> Outcome value when the outcome alarm specified for the practice run configuration goes
+     *         into an <code>ALARM</code> state during the practice run, and the practice run was not interrupted before
+     *         it completed.
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         For more information about practice run outcomes, see <a
+     *         href="https://docs.aws.amazon.com/r53recovery/latest/dg/arc-zonal-autoshift.configure.html">
+     *         Considerations when you configure zonal autoshift</a> in the Amazon Route 53 Application Recovery
+     *         Controller Developer Guide.
+     * @see PracticeRunOutcome
+     */
+
+    public String getPracticeRunOutcome() {
+        return this.practiceRunOutcome;
+    }
+
+    /**
+     * <p>
+     * The outcome, or end state, returned for a practice run. The following values can be returned:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <b>PENDING:</b> Outcome value when a practice run is in progress.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b>SUCCEEDED:</b> Outcome value when the outcome alarm specified for the practice run configuration does not go
+     * into an <code>ALARM</code> state during the practice run, and the practice run was not interrupted before it
+     * completed the expected 30 minute zonal shift.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b>INTERRUPTED:</b> Outcome value when the practice run was stopped before the expected 30 minute zonal shift
+     * duration, or there was another problem with the practice run that created an inconclusive outcome.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b>FAILED:</b> Outcome value when the outcome alarm specified for the practice run configuration goes into an
+     * <code>ALARM</code> state during the practice run, and the practice run was not interrupted before it completed.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For more information about practice run outcomes, see <a
+     * href="https://docs.aws.amazon.com/r53recovery/latest/dg/arc-zonal-autoshift.configure.html"> Considerations when
+     * you configure zonal autoshift</a> in the Amazon Route 53 Application Recovery Controller Developer Guide.
+     * </p>
+     * 
+     * @param practiceRunOutcome
+     *        The outcome, or end state, returned for a practice run. The following values can be returned:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <b>PENDING:</b> Outcome value when a practice run is in progress.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <b>SUCCEEDED:</b> Outcome value when the outcome alarm specified for the practice run configuration does
+     *        not go into an <code>ALARM</code> state during the practice run, and the practice run was not interrupted
+     *        before it completed the expected 30 minute zonal shift.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <b>INTERRUPTED:</b> Outcome value when the practice run was stopped before the expected 30 minute zonal
+     *        shift duration, or there was another problem with the practice run that created an inconclusive outcome.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <b>FAILED:</b> Outcome value when the outcome alarm specified for the practice run configuration goes into
+     *        an <code>ALARM</code> state during the practice run, and the practice run was not interrupted before it
+     *        completed.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        For more information about practice run outcomes, see <a
+     *        href="https://docs.aws.amazon.com/r53recovery/latest/dg/arc-zonal-autoshift.configure.html">
+     *        Considerations when you configure zonal autoshift</a> in the Amazon Route 53 Application Recovery
+     *        Controller Developer Guide.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see PracticeRunOutcome
+     */
+
+    public ZonalShiftInResource withPracticeRunOutcome(String practiceRunOutcome) {
+        setPracticeRunOutcome(practiceRunOutcome);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The outcome, or end state, returned for a practice run. The following values can be returned:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <b>PENDING:</b> Outcome value when a practice run is in progress.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b>SUCCEEDED:</b> Outcome value when the outcome alarm specified for the practice run configuration does not go
+     * into an <code>ALARM</code> state during the practice run, and the practice run was not interrupted before it
+     * completed the expected 30 minute zonal shift.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b>INTERRUPTED:</b> Outcome value when the practice run was stopped before the expected 30 minute zonal shift
+     * duration, or there was another problem with the practice run that created an inconclusive outcome.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b>FAILED:</b> Outcome value when the outcome alarm specified for the practice run configuration goes into an
+     * <code>ALARM</code> state during the practice run, and the practice run was not interrupted before it completed.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For more information about practice run outcomes, see <a
+     * href="https://docs.aws.amazon.com/r53recovery/latest/dg/arc-zonal-autoshift.configure.html"> Considerations when
+     * you configure zonal autoshift</a> in the Amazon Route 53 Application Recovery Controller Developer Guide.
+     * </p>
+     * 
+     * @param practiceRunOutcome
+     *        The outcome, or end state, returned for a practice run. The following values can be returned:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <b>PENDING:</b> Outcome value when a practice run is in progress.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <b>SUCCEEDED:</b> Outcome value when the outcome alarm specified for the practice run configuration does
+     *        not go into an <code>ALARM</code> state during the practice run, and the practice run was not interrupted
+     *        before it completed the expected 30 minute zonal shift.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <b>INTERRUPTED:</b> Outcome value when the practice run was stopped before the expected 30 minute zonal
+     *        shift duration, or there was another problem with the practice run that created an inconclusive outcome.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <b>FAILED:</b> Outcome value when the outcome alarm specified for the practice run configuration goes into
+     *        an <code>ALARM</code> state during the practice run, and the practice run was not interrupted before it
+     *        completed.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        For more information about practice run outcomes, see <a
+     *        href="https://docs.aws.amazon.com/r53recovery/latest/dg/arc-zonal-autoshift.configure.html">
+     *        Considerations when you configure zonal autoshift</a> in the Amazon Route 53 Application Recovery
+     *        Controller Developer Guide.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see PracticeRunOutcome
+     */
+
+    public ZonalShiftInResource withPracticeRunOutcome(PracticeRunOutcome practiceRunOutcome) {
+        this.practiceRunOutcome = practiceRunOutcome.toString();
         return this;
     }
 
@@ -403,11 +884,11 @@ public class ZonalShiftInResource implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The time (UTC) when the zonal shift is started.
+     * The time (UTC) when the zonal shift starts.
      * </p>
      * 
      * @param startTime
-     *        The time (UTC) when the zonal shift is started.
+     *        The time (UTC) when the zonal shift starts.
      */
 
     public void setStartTime(java.util.Date startTime) {
@@ -416,10 +897,10 @@ public class ZonalShiftInResource implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The time (UTC) when the zonal shift is started.
+     * The time (UTC) when the zonal shift starts.
      * </p>
      * 
-     * @return The time (UTC) when the zonal shift is started.
+     * @return The time (UTC) when the zonal shift starts.
      */
 
     public java.util.Date getStartTime() {
@@ -428,11 +909,11 @@ public class ZonalShiftInResource implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The time (UTC) when the zonal shift is started.
+     * The time (UTC) when the zonal shift starts.
      * </p>
      * 
      * @param startTime
-     *        The time (UTC) when the zonal shift is started.
+     *        The time (UTC) when the zonal shift starts.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -501,6 +982,8 @@ public class ZonalShiftInResource implements Serializable, Cloneable, Structured
             sb.append("Comment: ").append(getComment()).append(",");
         if (getExpiryTime() != null)
             sb.append("ExpiryTime: ").append(getExpiryTime()).append(",");
+        if (getPracticeRunOutcome() != null)
+            sb.append("PracticeRunOutcome: ").append(getPracticeRunOutcome()).append(",");
         if (getResourceIdentifier() != null)
             sb.append("ResourceIdentifier: ").append(getResourceIdentifier()).append(",");
         if (getStartTime() != null)
@@ -537,6 +1020,10 @@ public class ZonalShiftInResource implements Serializable, Cloneable, Structured
             return false;
         if (other.getExpiryTime() != null && other.getExpiryTime().equals(this.getExpiryTime()) == false)
             return false;
+        if (other.getPracticeRunOutcome() == null ^ this.getPracticeRunOutcome() == null)
+            return false;
+        if (other.getPracticeRunOutcome() != null && other.getPracticeRunOutcome().equals(this.getPracticeRunOutcome()) == false)
+            return false;
         if (other.getResourceIdentifier() == null ^ this.getResourceIdentifier() == null)
             return false;
         if (other.getResourceIdentifier() != null && other.getResourceIdentifier().equals(this.getResourceIdentifier()) == false)
@@ -561,6 +1048,7 @@ public class ZonalShiftInResource implements Serializable, Cloneable, Structured
         hashCode = prime * hashCode + ((getAwayFrom() == null) ? 0 : getAwayFrom().hashCode());
         hashCode = prime * hashCode + ((getComment() == null) ? 0 : getComment().hashCode());
         hashCode = prime * hashCode + ((getExpiryTime() == null) ? 0 : getExpiryTime().hashCode());
+        hashCode = prime * hashCode + ((getPracticeRunOutcome() == null) ? 0 : getPracticeRunOutcome().hashCode());
         hashCode = prime * hashCode + ((getResourceIdentifier() == null) ? 0 : getResourceIdentifier().hashCode());
         hashCode = prime * hashCode + ((getStartTime() == null) ? 0 : getStartTime().hashCode());
         hashCode = prime * hashCode + ((getZonalShiftId() == null) ? 0 : getZonalShiftId().hashCode());

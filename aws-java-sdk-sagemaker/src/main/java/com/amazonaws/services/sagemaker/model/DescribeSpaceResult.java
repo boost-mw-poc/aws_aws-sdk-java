@@ -100,6 +100,24 @@ public class DescribeSpaceResult extends com.amazonaws.AmazonWebServiceResult<co
      * </ul>
      */
     private String url;
+    /**
+     * <p>
+     * The name of the space that appears in the Amazon SageMaker Studio UI.
+     * </p>
+     */
+    private String spaceDisplayName;
+    /**
+     * <p>
+     * The collection of ownership settings for a space.
+     * </p>
+     */
+    private OwnershipSettings ownershipSettings;
+    /**
+     * <p>
+     * The collection of space sharing settings for a space.
+     * </p>
+     */
+    private SpaceSharingSettings spaceSharingSettings;
 
     /**
      * <p>
@@ -623,6 +641,126 @@ public class DescribeSpaceResult extends com.amazonaws.AmazonWebServiceResult<co
     }
 
     /**
+     * <p>
+     * The name of the space that appears in the Amazon SageMaker Studio UI.
+     * </p>
+     * 
+     * @param spaceDisplayName
+     *        The name of the space that appears in the Amazon SageMaker Studio UI.
+     */
+
+    public void setSpaceDisplayName(String spaceDisplayName) {
+        this.spaceDisplayName = spaceDisplayName;
+    }
+
+    /**
+     * <p>
+     * The name of the space that appears in the Amazon SageMaker Studio UI.
+     * </p>
+     * 
+     * @return The name of the space that appears in the Amazon SageMaker Studio UI.
+     */
+
+    public String getSpaceDisplayName() {
+        return this.spaceDisplayName;
+    }
+
+    /**
+     * <p>
+     * The name of the space that appears in the Amazon SageMaker Studio UI.
+     * </p>
+     * 
+     * @param spaceDisplayName
+     *        The name of the space that appears in the Amazon SageMaker Studio UI.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeSpaceResult withSpaceDisplayName(String spaceDisplayName) {
+        setSpaceDisplayName(spaceDisplayName);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The collection of ownership settings for a space.
+     * </p>
+     * 
+     * @param ownershipSettings
+     *        The collection of ownership settings for a space.
+     */
+
+    public void setOwnershipSettings(OwnershipSettings ownershipSettings) {
+        this.ownershipSettings = ownershipSettings;
+    }
+
+    /**
+     * <p>
+     * The collection of ownership settings for a space.
+     * </p>
+     * 
+     * @return The collection of ownership settings for a space.
+     */
+
+    public OwnershipSettings getOwnershipSettings() {
+        return this.ownershipSettings;
+    }
+
+    /**
+     * <p>
+     * The collection of ownership settings for a space.
+     * </p>
+     * 
+     * @param ownershipSettings
+     *        The collection of ownership settings for a space.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeSpaceResult withOwnershipSettings(OwnershipSettings ownershipSettings) {
+        setOwnershipSettings(ownershipSettings);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The collection of space sharing settings for a space.
+     * </p>
+     * 
+     * @param spaceSharingSettings
+     *        The collection of space sharing settings for a space.
+     */
+
+    public void setSpaceSharingSettings(SpaceSharingSettings spaceSharingSettings) {
+        this.spaceSharingSettings = spaceSharingSettings;
+    }
+
+    /**
+     * <p>
+     * The collection of space sharing settings for a space.
+     * </p>
+     * 
+     * @return The collection of space sharing settings for a space.
+     */
+
+    public SpaceSharingSettings getSpaceSharingSettings() {
+        return this.spaceSharingSettings;
+    }
+
+    /**
+     * <p>
+     * The collection of space sharing settings for a space.
+     * </p>
+     * 
+     * @param spaceSharingSettings
+     *        The collection of space sharing settings for a space.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeSpaceResult withSpaceSharingSettings(SpaceSharingSettings spaceSharingSettings) {
+        setSpaceSharingSettings(spaceSharingSettings);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -653,7 +791,13 @@ public class DescribeSpaceResult extends com.amazonaws.AmazonWebServiceResult<co
         if (getSpaceSettings() != null)
             sb.append("SpaceSettings: ").append(getSpaceSettings()).append(",");
         if (getUrl() != null)
-            sb.append("Url: ").append(getUrl());
+            sb.append("Url: ").append(getUrl()).append(",");
+        if (getSpaceDisplayName() != null)
+            sb.append("SpaceDisplayName: ").append(getSpaceDisplayName()).append(",");
+        if (getOwnershipSettings() != null)
+            sb.append("OwnershipSettings: ").append(getOwnershipSettings()).append(",");
+        if (getSpaceSharingSettings() != null)
+            sb.append("SpaceSharingSettings: ").append(getSpaceSharingSettings());
         sb.append("}");
         return sb.toString();
     }
@@ -708,6 +852,18 @@ public class DescribeSpaceResult extends com.amazonaws.AmazonWebServiceResult<co
             return false;
         if (other.getUrl() != null && other.getUrl().equals(this.getUrl()) == false)
             return false;
+        if (other.getSpaceDisplayName() == null ^ this.getSpaceDisplayName() == null)
+            return false;
+        if (other.getSpaceDisplayName() != null && other.getSpaceDisplayName().equals(this.getSpaceDisplayName()) == false)
+            return false;
+        if (other.getOwnershipSettings() == null ^ this.getOwnershipSettings() == null)
+            return false;
+        if (other.getOwnershipSettings() != null && other.getOwnershipSettings().equals(this.getOwnershipSettings()) == false)
+            return false;
+        if (other.getSpaceSharingSettings() == null ^ this.getSpaceSharingSettings() == null)
+            return false;
+        if (other.getSpaceSharingSettings() != null && other.getSpaceSharingSettings().equals(this.getSpaceSharingSettings()) == false)
+            return false;
         return true;
     }
 
@@ -726,6 +882,9 @@ public class DescribeSpaceResult extends com.amazonaws.AmazonWebServiceResult<co
         hashCode = prime * hashCode + ((getFailureReason() == null) ? 0 : getFailureReason().hashCode());
         hashCode = prime * hashCode + ((getSpaceSettings() == null) ? 0 : getSpaceSettings().hashCode());
         hashCode = prime * hashCode + ((getUrl() == null) ? 0 : getUrl().hashCode());
+        hashCode = prime * hashCode + ((getSpaceDisplayName() == null) ? 0 : getSpaceDisplayName().hashCode());
+        hashCode = prime * hashCode + ((getOwnershipSettings() == null) ? 0 : getOwnershipSettings().hashCode());
+        hashCode = prime * hashCode + ((getSpaceSharingSettings() == null) ? 0 : getSpaceSharingSettings().hashCode());
         return hashCode;
     }
 

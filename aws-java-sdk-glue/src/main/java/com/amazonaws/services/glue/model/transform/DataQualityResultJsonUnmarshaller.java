@@ -94,6 +94,19 @@ public class DataQualityResultJsonUnmarshaller implements Unmarshaller<DataQuali
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("AnalyzerResults", targetDepth)) {
+                    context.nextToken();
+                    dataQualityResult.setAnalyzerResults(new ListUnmarshaller<DataQualityAnalyzerResult>(DataQualityAnalyzerResultJsonUnmarshaller
+                            .getInstance())
+
+                    .unmarshall(context));
+                }
+                if (context.testExpression("Observations", targetDepth)) {
+                    context.nextToken();
+                    dataQualityResult.setObservations(new ListUnmarshaller<DataQualityObservation>(DataQualityObservationJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.sagemaker.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -31,6 +32,16 @@ public class SpaceSettingsMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("JupyterServerAppSettings").build();
     private static final MarshallingInfo<StructuredPojo> KERNELGATEWAYAPPSETTINGS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("KernelGatewayAppSettings").build();
+    private static final MarshallingInfo<StructuredPojo> JUPYTERLABAPPSETTINGS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("JupyterLabAppSettings").build();
+    private static final MarshallingInfo<StructuredPojo> CODEEDITORAPPSETTINGS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CodeEditorAppSettings").build();
+    private static final MarshallingInfo<StructuredPojo> SPACESTORAGESETTINGS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SpaceStorageSettings").build();
+    private static final MarshallingInfo<String> APPTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("AppType").build();
+    private static final MarshallingInfo<List> CUSTOMFILESYSTEMS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CustomFileSystems").build();
 
     private static final SpaceSettingsMarshaller instance = new SpaceSettingsMarshaller();
 
@@ -50,6 +61,11 @@ public class SpaceSettingsMarshaller {
         try {
             protocolMarshaller.marshall(spaceSettings.getJupyterServerAppSettings(), JUPYTERSERVERAPPSETTINGS_BINDING);
             protocolMarshaller.marshall(spaceSettings.getKernelGatewayAppSettings(), KERNELGATEWAYAPPSETTINGS_BINDING);
+            protocolMarshaller.marshall(spaceSettings.getJupyterLabAppSettings(), JUPYTERLABAPPSETTINGS_BINDING);
+            protocolMarshaller.marshall(spaceSettings.getCodeEditorAppSettings(), CODEEDITORAPPSETTINGS_BINDING);
+            protocolMarshaller.marshall(spaceSettings.getSpaceStorageSettings(), SPACESTORAGESETTINGS_BINDING);
+            protocolMarshaller.marshall(spaceSettings.getAppType(), APPTYPE_BINDING);
+            protocolMarshaller.marshall(spaceSettings.getCustomFileSystems(), CUSTOMFILESYSTEMS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

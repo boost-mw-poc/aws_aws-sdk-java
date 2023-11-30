@@ -57,9 +57,23 @@ public class GetManagedResourceResultJsonUnmarshaller implements Unmarshaller<Ge
                     context.nextToken();
                     getManagedResourceResult.setArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("autoshifts", targetDepth)) {
+                    context.nextToken();
+                    getManagedResourceResult.setAutoshifts(new ListUnmarshaller<AutoshiftInResource>(AutoshiftInResourceJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
                 if (context.testExpression("name", targetDepth)) {
                     context.nextToken();
                     getManagedResourceResult.setName(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("practiceRunConfiguration", targetDepth)) {
+                    context.nextToken();
+                    getManagedResourceResult.setPracticeRunConfiguration(PracticeRunConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("zonalAutoshiftStatus", targetDepth)) {
+                    context.nextToken();
+                    getManagedResourceResult.setZonalAutoshiftStatus(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("zonalShifts", targetDepth)) {
                     context.nextToken();

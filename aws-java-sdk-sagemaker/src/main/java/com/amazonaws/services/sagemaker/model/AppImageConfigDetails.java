@@ -58,6 +58,12 @@ public class AppImageConfigDetails implements Serializable, Cloneable, Structure
      * </p>
      */
     private KernelGatewayImageConfig kernelGatewayImageConfig;
+    /**
+     * <p>
+     * The configuration for the file system and the runtime, such as the environment variables and entry point.
+     * </p>
+     */
+    private JupyterLabAppImageConfig jupyterLabAppImageConfig;
 
     /**
      * <p>
@@ -260,6 +266,46 @@ public class AppImageConfigDetails implements Serializable, Cloneable, Structure
     }
 
     /**
+     * <p>
+     * The configuration for the file system and the runtime, such as the environment variables and entry point.
+     * </p>
+     * 
+     * @param jupyterLabAppImageConfig
+     *        The configuration for the file system and the runtime, such as the environment variables and entry point.
+     */
+
+    public void setJupyterLabAppImageConfig(JupyterLabAppImageConfig jupyterLabAppImageConfig) {
+        this.jupyterLabAppImageConfig = jupyterLabAppImageConfig;
+    }
+
+    /**
+     * <p>
+     * The configuration for the file system and the runtime, such as the environment variables and entry point.
+     * </p>
+     * 
+     * @return The configuration for the file system and the runtime, such as the environment variables and entry point.
+     */
+
+    public JupyterLabAppImageConfig getJupyterLabAppImageConfig() {
+        return this.jupyterLabAppImageConfig;
+    }
+
+    /**
+     * <p>
+     * The configuration for the file system and the runtime, such as the environment variables and entry point.
+     * </p>
+     * 
+     * @param jupyterLabAppImageConfig
+     *        The configuration for the file system and the runtime, such as the environment variables and entry point.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AppImageConfigDetails withJupyterLabAppImageConfig(JupyterLabAppImageConfig jupyterLabAppImageConfig) {
+        setJupyterLabAppImageConfig(jupyterLabAppImageConfig);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -280,7 +326,9 @@ public class AppImageConfigDetails implements Serializable, Cloneable, Structure
         if (getLastModifiedTime() != null)
             sb.append("LastModifiedTime: ").append(getLastModifiedTime()).append(",");
         if (getKernelGatewayImageConfig() != null)
-            sb.append("KernelGatewayImageConfig: ").append(getKernelGatewayImageConfig());
+            sb.append("KernelGatewayImageConfig: ").append(getKernelGatewayImageConfig()).append(",");
+        if (getJupyterLabAppImageConfig() != null)
+            sb.append("JupyterLabAppImageConfig: ").append(getJupyterLabAppImageConfig());
         sb.append("}");
         return sb.toString();
     }
@@ -315,6 +363,10 @@ public class AppImageConfigDetails implements Serializable, Cloneable, Structure
             return false;
         if (other.getKernelGatewayImageConfig() != null && other.getKernelGatewayImageConfig().equals(this.getKernelGatewayImageConfig()) == false)
             return false;
+        if (other.getJupyterLabAppImageConfig() == null ^ this.getJupyterLabAppImageConfig() == null)
+            return false;
+        if (other.getJupyterLabAppImageConfig() != null && other.getJupyterLabAppImageConfig().equals(this.getJupyterLabAppImageConfig()) == false)
+            return false;
         return true;
     }
 
@@ -328,6 +380,7 @@ public class AppImageConfigDetails implements Serializable, Cloneable, Structure
         hashCode = prime * hashCode + ((getCreationTime() == null) ? 0 : getCreationTime().hashCode());
         hashCode = prime * hashCode + ((getLastModifiedTime() == null) ? 0 : getLastModifiedTime().hashCode());
         hashCode = prime * hashCode + ((getKernelGatewayImageConfig() == null) ? 0 : getKernelGatewayImageConfig().hashCode());
+        hashCode = prime * hashCode + ((getJupyterLabAppImageConfig() == null) ? 0 : getJupyterLabAppImageConfig().hashCode());
         return hashCode;
     }
 

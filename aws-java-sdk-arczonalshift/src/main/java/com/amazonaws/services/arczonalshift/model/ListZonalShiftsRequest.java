@@ -41,6 +41,13 @@ public class ListZonalShiftsRequest extends com.amazonaws.AmazonWebServiceReques
     private String nextToken;
     /**
      * <p>
+     * The identifier for the resource that you want to list zonal shifts for. The identifier is the Amazon Resource
+     * Name (ARN) for the resource.
+     * </p>
+     */
+    private String resourceIdentifier;
+    /**
+     * <p>
      * A status for a zonal shift.
      * </p>
      * <p>
@@ -49,7 +56,7 @@ public class ListZonalShiftsRequest extends com.amazonaws.AmazonWebServiceReques
      * <ul>
      * <li>
      * <p>
-     * <b>ACTIVE</b>: The zonal shift is started and active.
+     * <b>ACTIVE</b>: The zonal shift has been started and active.
      * </p>
      * </li>
      * <li>
@@ -163,6 +170,52 @@ public class ListZonalShiftsRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
+     * The identifier for the resource that you want to list zonal shifts for. The identifier is the Amazon Resource
+     * Name (ARN) for the resource.
+     * </p>
+     * 
+     * @param resourceIdentifier
+     *        The identifier for the resource that you want to list zonal shifts for. The identifier is the Amazon
+     *        Resource Name (ARN) for the resource.
+     */
+
+    public void setResourceIdentifier(String resourceIdentifier) {
+        this.resourceIdentifier = resourceIdentifier;
+    }
+
+    /**
+     * <p>
+     * The identifier for the resource that you want to list zonal shifts for. The identifier is the Amazon Resource
+     * Name (ARN) for the resource.
+     * </p>
+     * 
+     * @return The identifier for the resource that you want to list zonal shifts for. The identifier is the Amazon
+     *         Resource Name (ARN) for the resource.
+     */
+
+    public String getResourceIdentifier() {
+        return this.resourceIdentifier;
+    }
+
+    /**
+     * <p>
+     * The identifier for the resource that you want to list zonal shifts for. The identifier is the Amazon Resource
+     * Name (ARN) for the resource.
+     * </p>
+     * 
+     * @param resourceIdentifier
+     *        The identifier for the resource that you want to list zonal shifts for. The identifier is the Amazon
+     *        Resource Name (ARN) for the resource.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListZonalShiftsRequest withResourceIdentifier(String resourceIdentifier) {
+        setResourceIdentifier(resourceIdentifier);
+        return this;
+    }
+
+    /**
+     * <p>
      * A status for a zonal shift.
      * </p>
      * <p>
@@ -171,7 +224,7 @@ public class ListZonalShiftsRequest extends com.amazonaws.AmazonWebServiceReques
      * <ul>
      * <li>
      * <p>
-     * <b>ACTIVE</b>: The zonal shift is started and active.
+     * <b>ACTIVE</b>: The zonal shift has been started and active.
      * </p>
      * </li>
      * <li>
@@ -194,7 +247,7 @@ public class ListZonalShiftsRequest extends com.amazonaws.AmazonWebServiceReques
      *        <ul>
      *        <li>
      *        <p>
-     *        <b>ACTIVE</b>: The zonal shift is started and active.
+     *        <b>ACTIVE</b>: The zonal shift has been started and active.
      *        </p>
      *        </li>
      *        <li>
@@ -224,7 +277,7 @@ public class ListZonalShiftsRequest extends com.amazonaws.AmazonWebServiceReques
      * <ul>
      * <li>
      * <p>
-     * <b>ACTIVE</b>: The zonal shift is started and active.
+     * <b>ACTIVE</b>: The zonal shift has been started and active.
      * </p>
      * </li>
      * <li>
@@ -246,7 +299,7 @@ public class ListZonalShiftsRequest extends com.amazonaws.AmazonWebServiceReques
      *         <ul>
      *         <li>
      *         <p>
-     *         <b>ACTIVE</b>: The zonal shift is started and active.
+     *         <b>ACTIVE</b>: The zonal shift has been started and active.
      *         </p>
      *         </li>
      *         <li>
@@ -276,7 +329,7 @@ public class ListZonalShiftsRequest extends com.amazonaws.AmazonWebServiceReques
      * <ul>
      * <li>
      * <p>
-     * <b>ACTIVE</b>: The zonal shift is started and active.
+     * <b>ACTIVE</b>: The zonal shift has been started and active.
      * </p>
      * </li>
      * <li>
@@ -299,7 +352,7 @@ public class ListZonalShiftsRequest extends com.amazonaws.AmazonWebServiceReques
      *        <ul>
      *        <li>
      *        <p>
-     *        <b>ACTIVE</b>: The zonal shift is started and active.
+     *        <b>ACTIVE</b>: The zonal shift has been started and active.
      *        </p>
      *        </li>
      *        <li>
@@ -331,7 +384,7 @@ public class ListZonalShiftsRequest extends com.amazonaws.AmazonWebServiceReques
      * <ul>
      * <li>
      * <p>
-     * <b>ACTIVE</b>: The zonal shift is started and active.
+     * <b>ACTIVE</b>: The zonal shift has been started and active.
      * </p>
      * </li>
      * <li>
@@ -354,7 +407,7 @@ public class ListZonalShiftsRequest extends com.amazonaws.AmazonWebServiceReques
      *        <ul>
      *        <li>
      *        <p>
-     *        <b>ACTIVE</b>: The zonal shift is started and active.
+     *        <b>ACTIVE</b>: The zonal shift has been started and active.
      *        </p>
      *        </li>
      *        <li>
@@ -392,6 +445,8 @@ public class ListZonalShiftsRequest extends com.amazonaws.AmazonWebServiceReques
             sb.append("MaxResults: ").append(getMaxResults()).append(",");
         if (getNextToken() != null)
             sb.append("NextToken: ").append(getNextToken()).append(",");
+        if (getResourceIdentifier() != null)
+            sb.append("ResourceIdentifier: ").append(getResourceIdentifier()).append(",");
         if (getStatus() != null)
             sb.append("Status: ").append(getStatus());
         sb.append("}");
@@ -416,6 +471,10 @@ public class ListZonalShiftsRequest extends com.amazonaws.AmazonWebServiceReques
             return false;
         if (other.getNextToken() != null && other.getNextToken().equals(this.getNextToken()) == false)
             return false;
+        if (other.getResourceIdentifier() == null ^ this.getResourceIdentifier() == null)
+            return false;
+        if (other.getResourceIdentifier() != null && other.getResourceIdentifier().equals(this.getResourceIdentifier()) == false)
+            return false;
         if (other.getStatus() == null ^ this.getStatus() == null)
             return false;
         if (other.getStatus() != null && other.getStatus().equals(this.getStatus()) == false)
@@ -430,6 +489,7 @@ public class ListZonalShiftsRequest extends com.amazonaws.AmazonWebServiceReques
 
         hashCode = prime * hashCode + ((getMaxResults() == null) ? 0 : getMaxResults().hashCode());
         hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
+        hashCode = prime * hashCode + ((getResourceIdentifier() == null) ? 0 : getResourceIdentifier().hashCode());
         hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
         return hashCode;
     }

@@ -33,6 +33,8 @@ public class UpdateSpaceRequestMarshaller {
             .marshallLocationName("SpaceName").build();
     private static final MarshallingInfo<StructuredPojo> SPACESETTINGS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SpaceSettings").build();
+    private static final MarshallingInfo<String> SPACEDISPLAYNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SpaceDisplayName").build();
 
     private static final UpdateSpaceRequestMarshaller instance = new UpdateSpaceRequestMarshaller();
 
@@ -53,6 +55,7 @@ public class UpdateSpaceRequestMarshaller {
             protocolMarshaller.marshall(updateSpaceRequest.getDomainId(), DOMAINID_BINDING);
             protocolMarshaller.marshall(updateSpaceRequest.getSpaceName(), SPACENAME_BINDING);
             protocolMarshaller.marshall(updateSpaceRequest.getSpaceSettings(), SPACESETTINGS_BINDING);
+            protocolMarshaller.marshall(updateSpaceRequest.getSpaceDisplayName(), SPACEDISPLAYNAME_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

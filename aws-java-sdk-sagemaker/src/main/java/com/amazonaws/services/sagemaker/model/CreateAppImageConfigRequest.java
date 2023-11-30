@@ -44,6 +44,14 @@ public class CreateAppImageConfigRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      */
     private KernelGatewayImageConfig kernelGatewayImageConfig;
+    /**
+     * <p>
+     * The <code>JupyterLabAppImageConfig</code>. You can only specify one image kernel in the
+     * <code>AppImageConfig</code> API. This kernel is shown to users before the image starts. After the image runs, all
+     * kernels are visible in JupyterLab.
+     * </p>
+     */
+    private JupyterLabAppImageConfig jupyterLabAppImageConfig;
 
     /**
      * <p>
@@ -205,6 +213,58 @@ public class CreateAppImageConfigRequest extends com.amazonaws.AmazonWebServiceR
     }
 
     /**
+     * <p>
+     * The <code>JupyterLabAppImageConfig</code>. You can only specify one image kernel in the
+     * <code>AppImageConfig</code> API. This kernel is shown to users before the image starts. After the image runs, all
+     * kernels are visible in JupyterLab.
+     * </p>
+     * 
+     * @param jupyterLabAppImageConfig
+     *        The <code>JupyterLabAppImageConfig</code>. You can only specify one image kernel in the
+     *        <code>AppImageConfig</code> API. This kernel is shown to users before the image starts. After the image
+     *        runs, all kernels are visible in JupyterLab.
+     */
+
+    public void setJupyterLabAppImageConfig(JupyterLabAppImageConfig jupyterLabAppImageConfig) {
+        this.jupyterLabAppImageConfig = jupyterLabAppImageConfig;
+    }
+
+    /**
+     * <p>
+     * The <code>JupyterLabAppImageConfig</code>. You can only specify one image kernel in the
+     * <code>AppImageConfig</code> API. This kernel is shown to users before the image starts. After the image runs, all
+     * kernels are visible in JupyterLab.
+     * </p>
+     * 
+     * @return The <code>JupyterLabAppImageConfig</code>. You can only specify one image kernel in the
+     *         <code>AppImageConfig</code> API. This kernel is shown to users before the image starts. After the image
+     *         runs, all kernels are visible in JupyterLab.
+     */
+
+    public JupyterLabAppImageConfig getJupyterLabAppImageConfig() {
+        return this.jupyterLabAppImageConfig;
+    }
+
+    /**
+     * <p>
+     * The <code>JupyterLabAppImageConfig</code>. You can only specify one image kernel in the
+     * <code>AppImageConfig</code> API. This kernel is shown to users before the image starts. After the image runs, all
+     * kernels are visible in JupyterLab.
+     * </p>
+     * 
+     * @param jupyterLabAppImageConfig
+     *        The <code>JupyterLabAppImageConfig</code>. You can only specify one image kernel in the
+     *        <code>AppImageConfig</code> API. This kernel is shown to users before the image starts. After the image
+     *        runs, all kernels are visible in JupyterLab.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateAppImageConfigRequest withJupyterLabAppImageConfig(JupyterLabAppImageConfig jupyterLabAppImageConfig) {
+        setJupyterLabAppImageConfig(jupyterLabAppImageConfig);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -221,7 +281,9 @@ public class CreateAppImageConfigRequest extends com.amazonaws.AmazonWebServiceR
         if (getTags() != null)
             sb.append("Tags: ").append(getTags()).append(",");
         if (getKernelGatewayImageConfig() != null)
-            sb.append("KernelGatewayImageConfig: ").append(getKernelGatewayImageConfig());
+            sb.append("KernelGatewayImageConfig: ").append(getKernelGatewayImageConfig()).append(",");
+        if (getJupyterLabAppImageConfig() != null)
+            sb.append("JupyterLabAppImageConfig: ").append(getJupyterLabAppImageConfig());
         sb.append("}");
         return sb.toString();
     }
@@ -248,6 +310,10 @@ public class CreateAppImageConfigRequest extends com.amazonaws.AmazonWebServiceR
             return false;
         if (other.getKernelGatewayImageConfig() != null && other.getKernelGatewayImageConfig().equals(this.getKernelGatewayImageConfig()) == false)
             return false;
+        if (other.getJupyterLabAppImageConfig() == null ^ this.getJupyterLabAppImageConfig() == null)
+            return false;
+        if (other.getJupyterLabAppImageConfig() != null && other.getJupyterLabAppImageConfig().equals(this.getJupyterLabAppImageConfig()) == false)
+            return false;
         return true;
     }
 
@@ -259,6 +325,7 @@ public class CreateAppImageConfigRequest extends com.amazonaws.AmazonWebServiceR
         hashCode = prime * hashCode + ((getAppImageConfigName() == null) ? 0 : getAppImageConfigName().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getKernelGatewayImageConfig() == null) ? 0 : getKernelGatewayImageConfig().hashCode());
+        hashCode = prime * hashCode + ((getJupyterLabAppImageConfig() == null) ? 0 : getJupyterLabAppImageConfig().hashCode());
         return hashCode;
     }
 

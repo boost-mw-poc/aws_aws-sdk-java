@@ -56,6 +56,28 @@ public class SpaceSettingsJsonUnmarshaller implements Unmarshaller<SpaceSettings
                     context.nextToken();
                     spaceSettings.setKernelGatewayAppSettings(KernelGatewayAppSettingsJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("JupyterLabAppSettings", targetDepth)) {
+                    context.nextToken();
+                    spaceSettings.setJupyterLabAppSettings(SpaceJupyterLabAppSettingsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("CodeEditorAppSettings", targetDepth)) {
+                    context.nextToken();
+                    spaceSettings.setCodeEditorAppSettings(SpaceCodeEditorAppSettingsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("SpaceStorageSettings", targetDepth)) {
+                    context.nextToken();
+                    spaceSettings.setSpaceStorageSettings(SpaceStorageSettingsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("AppType", targetDepth)) {
+                    context.nextToken();
+                    spaceSettings.setAppType(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("CustomFileSystems", targetDepth)) {
+                    context.nextToken();
+                    spaceSettings.setCustomFileSystems(new ListUnmarshaller<CustomFileSystem>(CustomFileSystemJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

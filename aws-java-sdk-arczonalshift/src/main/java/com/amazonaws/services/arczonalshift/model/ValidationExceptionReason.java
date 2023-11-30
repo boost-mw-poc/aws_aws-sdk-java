@@ -26,7 +26,10 @@ public enum ValidationExceptionReason {
     InvalidToken("InvalidToken"),
     InvalidResourceIdentifier("InvalidResourceIdentifier"),
     InvalidAz("InvalidAz"),
-    UnsupportedAz("UnsupportedAz");
+    UnsupportedAz("UnsupportedAz"),
+    InvalidAlarmCondition("InvalidAlarmCondition"),
+    InvalidConditionType("InvalidConditionType"),
+    InvalidPracticeBlocker("InvalidPracticeBlocker");
 
     private String value;
 

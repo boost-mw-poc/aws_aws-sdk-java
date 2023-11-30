@@ -35,6 +35,8 @@ public class ZonalShiftInResourceMarshaller {
             .marshallLocationName("comment").build();
     private static final MarshallingInfo<java.util.Date> EXPIRYTIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("expiryTime").timestampFormat("unixTimestamp").build();
+    private static final MarshallingInfo<String> PRACTICERUNOUTCOME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("practiceRunOutcome").build();
     private static final MarshallingInfo<String> RESOURCEIDENTIFIER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("resourceIdentifier").build();
     private static final MarshallingInfo<java.util.Date> STARTTIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
@@ -62,6 +64,7 @@ public class ZonalShiftInResourceMarshaller {
             protocolMarshaller.marshall(zonalShiftInResource.getAwayFrom(), AWAYFROM_BINDING);
             protocolMarshaller.marshall(zonalShiftInResource.getComment(), COMMENT_BINDING);
             protocolMarshaller.marshall(zonalShiftInResource.getExpiryTime(), EXPIRYTIME_BINDING);
+            protocolMarshaller.marshall(zonalShiftInResource.getPracticeRunOutcome(), PRACTICERUNOUTCOME_BINDING);
             protocolMarshaller.marshall(zonalShiftInResource.getResourceIdentifier(), RESOURCEIDENTIFIER_BINDING);
             protocolMarshaller.marshall(zonalShiftInResource.getStartTime(), STARTTIME_BINDING);
             protocolMarshaller.marshall(zonalShiftInResource.getZonalShiftId(), ZONALSHIFTID_BINDING);

@@ -50,6 +50,10 @@ public class DataQualityResultMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("RulesetEvaluationRunId").build();
     private static final MarshallingInfo<List> RULERESULTS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("RuleResults").build();
+    private static final MarshallingInfo<List> ANALYZERRESULTS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AnalyzerResults").build();
+    private static final MarshallingInfo<List> OBSERVATIONS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Observations").build();
 
     private static final DataQualityResultMarshaller instance = new DataQualityResultMarshaller();
 
@@ -78,6 +82,8 @@ public class DataQualityResultMarshaller {
             protocolMarshaller.marshall(dataQualityResult.getJobRunId(), JOBRUNID_BINDING);
             protocolMarshaller.marshall(dataQualityResult.getRulesetEvaluationRunId(), RULESETEVALUATIONRUNID_BINDING);
             protocolMarshaller.marshall(dataQualityResult.getRuleResults(), RULERESULTS_BINDING);
+            protocolMarshaller.marshall(dataQualityResult.getAnalyzerResults(), ANALYZERRESULTS_BINDING);
+            protocolMarshaller.marshall(dataQualityResult.getObservations(), OBSERVATIONS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

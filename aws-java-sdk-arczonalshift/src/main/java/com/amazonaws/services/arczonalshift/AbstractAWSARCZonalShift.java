@@ -33,7 +33,22 @@ public class AbstractAWSARCZonalShift implements AWSARCZonalShift {
     }
 
     @Override
+    public CreatePracticeRunConfigurationResult createPracticeRunConfiguration(CreatePracticeRunConfigurationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeletePracticeRunConfigurationResult deletePracticeRunConfiguration(DeletePracticeRunConfigurationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetManagedResourceResult getManagedResource(GetManagedResourceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListAutoshiftsResult listAutoshifts(ListAutoshiftsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -49,6 +64,16 @@ public class AbstractAWSARCZonalShift implements AWSARCZonalShift {
 
     @Override
     public StartZonalShiftResult startZonalShift(StartZonalShiftRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdatePracticeRunConfigurationResult updatePracticeRunConfiguration(UpdatePracticeRunConfigurationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateZonalAutoshiftConfigurationResult updateZonalAutoshiftConfiguration(UpdateZonalAutoshiftConfigurationRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

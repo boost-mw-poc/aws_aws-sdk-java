@@ -29,7 +29,7 @@ public class StartZonalShiftRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * The Availability Zone that traffic is moved away from for a resource when you start a zonal shift. Until the
      * zonal shift expires or you cancel it, traffic for the resource is instead moved to other Availability Zones in
-     * the AWS Region.
+     * the Amazon Web Services Region.
      * </p>
      */
     private String awayFrom;
@@ -55,20 +55,32 @@ public class StartZonalShiftRequest extends com.amazonaws.AmazonWebServiceReques
      * To set a length of time for a zonal shift to be active, specify a whole number, and then one of the following,
      * with no space:
      * </p>
-     * 
-     * <pre>
-     * <code> &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;b&gt;A lowercase letter m:&lt;/b&gt; To specify that the value is in minutes.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;b&gt;A lowercase letter h:&lt;/b&gt; To specify that the value is in hours.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;For example: &lt;code&gt;20h&lt;/code&gt; means the zonal shift expires in 20 hours. &lt;code&gt;120m&lt;/code&gt; means the zonal shift expires in 120 minutes (2 hours).&lt;/p&gt; </code>
-     * </pre>
+     * <ul>
+     * <li>
+     * <p>
+     * <b>A lowercase letter m:</b> To specify that the value is in minutes.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b>A lowercase letter h:</b> To specify that the value is in hours.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For example: <code>20h</code> means the zonal shift expires in 20 hours. <code>120m</code> means the zonal shift
+     * expires in 120 minutes (2 hours).
+     * </p>
      */
     private String expiresIn;
     /**
      * <p>
-     * The identifier for the resource to include in a zonal shift. The identifier is the Amazon Resource Name (ARN) for
+     * The identifier for the resource to shift away traffic for. The identifier is the Amazon Resource Name (ARN) for
      * the resource.
      * </p>
      * <p>
-     * At this time, you can only start a zonal shift for Network Load Balancers and Application Load Balancers with
-     * cross-zone load balancing turned off.
+     * At this time, supported resources are Network Load Balancers and Application Load Balancers with cross-zone load
+     * balancing turned off.
      * </p>
      */
     private String resourceIdentifier;
@@ -77,13 +89,13 @@ public class StartZonalShiftRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * The Availability Zone that traffic is moved away from for a resource when you start a zonal shift. Until the
      * zonal shift expires or you cancel it, traffic for the resource is instead moved to other Availability Zones in
-     * the AWS Region.
+     * the Amazon Web Services Region.
      * </p>
      * 
      * @param awayFrom
      *        The Availability Zone that traffic is moved away from for a resource when you start a zonal shift. Until
      *        the zonal shift expires or you cancel it, traffic for the resource is instead moved to other Availability
-     *        Zones in the AWS Region.
+     *        Zones in the Amazon Web Services Region.
      */
 
     public void setAwayFrom(String awayFrom) {
@@ -94,12 +106,12 @@ public class StartZonalShiftRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * The Availability Zone that traffic is moved away from for a resource when you start a zonal shift. Until the
      * zonal shift expires or you cancel it, traffic for the resource is instead moved to other Availability Zones in
-     * the AWS Region.
+     * the Amazon Web Services Region.
      * </p>
      * 
      * @return The Availability Zone that traffic is moved away from for a resource when you start a zonal shift. Until
      *         the zonal shift expires or you cancel it, traffic for the resource is instead moved to other Availability
-     *         Zones in the AWS Region.
+     *         Zones in the Amazon Web Services Region.
      */
 
     public String getAwayFrom() {
@@ -110,13 +122,13 @@ public class StartZonalShiftRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * The Availability Zone that traffic is moved away from for a resource when you start a zonal shift. Until the
      * zonal shift expires or you cancel it, traffic for the resource is instead moved to other Availability Zones in
-     * the AWS Region.
+     * the Amazon Web Services Region.
      * </p>
      * 
      * @param awayFrom
      *        The Availability Zone that traffic is moved away from for a resource when you start a zonal shift. Until
      *        the zonal shift expires or you cancel it, traffic for the resource is instead moved to other Availability
-     *        Zones in the AWS Region.
+     *        Zones in the Amazon Web Services Region.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -186,10 +198,22 @@ public class StartZonalShiftRequest extends com.amazonaws.AmazonWebServiceReques
      * To set a length of time for a zonal shift to be active, specify a whole number, and then one of the following,
      * with no space:
      * </p>
-     * 
-     * <pre>
-     * <code> &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;b&gt;A lowercase letter m:&lt;/b&gt; To specify that the value is in minutes.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;b&gt;A lowercase letter h:&lt;/b&gt; To specify that the value is in hours.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;For example: &lt;code&gt;20h&lt;/code&gt; means the zonal shift expires in 20 hours. &lt;code&gt;120m&lt;/code&gt; means the zonal shift expires in 120 minutes (2 hours).&lt;/p&gt; </code>
-     * </pre>
+     * <ul>
+     * <li>
+     * <p>
+     * <b>A lowercase letter m:</b> To specify that the value is in minutes.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b>A lowercase letter h:</b> To specify that the value is in hours.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For example: <code>20h</code> means the zonal shift expires in 20 hours. <code>120m</code> means the zonal shift
+     * expires in 120 minutes (2 hours).
+     * </p>
      * 
      * @param expiresIn
      *        The length of time that you want a zonal shift to be active, which Route 53 ARC converts to an expiry time
@@ -204,8 +228,21 @@ public class StartZonalShiftRequest extends com.amazonaws.AmazonWebServiceReques
      *        To set a length of time for a zonal shift to be active, specify a whole number, and then one of the
      *        following, with no space:
      *        </p>
-     * 
-     * <pre><code> &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;b&gt;A lowercase letter m:&lt;/b&gt; To specify that the value is in minutes.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;b&gt;A lowercase letter h:&lt;/b&gt; To specify that the value is in hours.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;For example: &lt;code&gt;20h&lt;/code&gt; means the zonal shift expires in 20 hours. &lt;code&gt;120m&lt;/code&gt; means the zonal shift expires in 120 minutes (2 hours).&lt;/p&gt; </code>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <b>A lowercase letter m:</b> To specify that the value is in minutes.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <b>A lowercase letter h:</b> To specify that the value is in hours.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        For example: <code>20h</code> means the zonal shift expires in 20 hours. <code>120m</code> means the zonal
+     *        shift expires in 120 minutes (2 hours).
      */
 
     public void setExpiresIn(String expiresIn) {
@@ -227,10 +264,22 @@ public class StartZonalShiftRequest extends com.amazonaws.AmazonWebServiceReques
      * To set a length of time for a zonal shift to be active, specify a whole number, and then one of the following,
      * with no space:
      * </p>
-     * 
-     * <pre>
-     * <code> &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;b&gt;A lowercase letter m:&lt;/b&gt; To specify that the value is in minutes.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;b&gt;A lowercase letter h:&lt;/b&gt; To specify that the value is in hours.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;For example: &lt;code&gt;20h&lt;/code&gt; means the zonal shift expires in 20 hours. &lt;code&gt;120m&lt;/code&gt; means the zonal shift expires in 120 minutes (2 hours).&lt;/p&gt; </code>
-     * </pre>
+     * <ul>
+     * <li>
+     * <p>
+     * <b>A lowercase letter m:</b> To specify that the value is in minutes.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b>A lowercase letter h:</b> To specify that the value is in hours.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For example: <code>20h</code> means the zonal shift expires in 20 hours. <code>120m</code> means the zonal shift
+     * expires in 120 minutes (2 hours).
+     * </p>
      * 
      * @return The length of time that you want a zonal shift to be active, which Route 53 ARC converts to an expiry
      *         time (expiration time). Zonal shifts are temporary. You can set a zonal shift to be active initially for
@@ -244,8 +293,21 @@ public class StartZonalShiftRequest extends com.amazonaws.AmazonWebServiceReques
      *         To set a length of time for a zonal shift to be active, specify a whole number, and then one of the
      *         following, with no space:
      *         </p>
-     * 
-     * <pre><code> &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;b&gt;A lowercase letter m:&lt;/b&gt; To specify that the value is in minutes.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;b&gt;A lowercase letter h:&lt;/b&gt; To specify that the value is in hours.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;For example: &lt;code&gt;20h&lt;/code&gt; means the zonal shift expires in 20 hours. &lt;code&gt;120m&lt;/code&gt; means the zonal shift expires in 120 minutes (2 hours).&lt;/p&gt; </code>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <b>A lowercase letter m:</b> To specify that the value is in minutes.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <b>A lowercase letter h:</b> To specify that the value is in hours.
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         For example: <code>20h</code> means the zonal shift expires in 20 hours. <code>120m</code> means the
+     *         zonal shift expires in 120 minutes (2 hours).
      */
 
     public String getExpiresIn() {
@@ -267,10 +329,22 @@ public class StartZonalShiftRequest extends com.amazonaws.AmazonWebServiceReques
      * To set a length of time for a zonal shift to be active, specify a whole number, and then one of the following,
      * with no space:
      * </p>
-     * 
-     * <pre>
-     * <code> &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;b&gt;A lowercase letter m:&lt;/b&gt; To specify that the value is in minutes.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;b&gt;A lowercase letter h:&lt;/b&gt; To specify that the value is in hours.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;For example: &lt;code&gt;20h&lt;/code&gt; means the zonal shift expires in 20 hours. &lt;code&gt;120m&lt;/code&gt; means the zonal shift expires in 120 minutes (2 hours).&lt;/p&gt; </code>
-     * </pre>
+     * <ul>
+     * <li>
+     * <p>
+     * <b>A lowercase letter m:</b> To specify that the value is in minutes.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b>A lowercase letter h:</b> To specify that the value is in hours.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For example: <code>20h</code> means the zonal shift expires in 20 hours. <code>120m</code> means the zonal shift
+     * expires in 120 minutes (2 hours).
+     * </p>
      * 
      * @param expiresIn
      *        The length of time that you want a zonal shift to be active, which Route 53 ARC converts to an expiry time
@@ -285,9 +359,21 @@ public class StartZonalShiftRequest extends com.amazonaws.AmazonWebServiceReques
      *        To set a length of time for a zonal shift to be active, specify a whole number, and then one of the
      *        following, with no space:
      *        </p>
-     * 
-     *        <pre>
-     * <code> &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;b&gt;A lowercase letter m:&lt;/b&gt; To specify that the value is in minutes.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;b&gt;A lowercase letter h:&lt;/b&gt; To specify that the value is in hours.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;For example: &lt;code&gt;20h&lt;/code&gt; means the zonal shift expires in 20 hours. &lt;code&gt;120m&lt;/code&gt; means the zonal shift expires in 120 minutes (2 hours).&lt;/p&gt; </code>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <b>A lowercase letter m:</b> To specify that the value is in minutes.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <b>A lowercase letter h:</b> To specify that the value is in hours.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        For example: <code>20h</code> means the zonal shift expires in 20 hours. <code>120m</code> means the zonal
+     *        shift expires in 120 minutes (2 hours).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -298,20 +384,20 @@ public class StartZonalShiftRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The identifier for the resource to include in a zonal shift. The identifier is the Amazon Resource Name (ARN) for
+     * The identifier for the resource to shift away traffic for. The identifier is the Amazon Resource Name (ARN) for
      * the resource.
      * </p>
      * <p>
-     * At this time, you can only start a zonal shift for Network Load Balancers and Application Load Balancers with
-     * cross-zone load balancing turned off.
+     * At this time, supported resources are Network Load Balancers and Application Load Balancers with cross-zone load
+     * balancing turned off.
      * </p>
      * 
      * @param resourceIdentifier
-     *        The identifier for the resource to include in a zonal shift. The identifier is the Amazon Resource Name
+     *        The identifier for the resource to shift away traffic for. The identifier is the Amazon Resource Name
      *        (ARN) for the resource.</p>
      *        <p>
-     *        At this time, you can only start a zonal shift for Network Load Balancers and Application Load Balancers
-     *        with cross-zone load balancing turned off.
+     *        At this time, supported resources are Network Load Balancers and Application Load Balancers with
+     *        cross-zone load balancing turned off.
      */
 
     public void setResourceIdentifier(String resourceIdentifier) {
@@ -320,19 +406,19 @@ public class StartZonalShiftRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The identifier for the resource to include in a zonal shift. The identifier is the Amazon Resource Name (ARN) for
+     * The identifier for the resource to shift away traffic for. The identifier is the Amazon Resource Name (ARN) for
      * the resource.
      * </p>
      * <p>
-     * At this time, you can only start a zonal shift for Network Load Balancers and Application Load Balancers with
-     * cross-zone load balancing turned off.
+     * At this time, supported resources are Network Load Balancers and Application Load Balancers with cross-zone load
+     * balancing turned off.
      * </p>
      * 
-     * @return The identifier for the resource to include in a zonal shift. The identifier is the Amazon Resource Name
+     * @return The identifier for the resource to shift away traffic for. The identifier is the Amazon Resource Name
      *         (ARN) for the resource.</p>
      *         <p>
-     *         At this time, you can only start a zonal shift for Network Load Balancers and Application Load Balancers
-     *         with cross-zone load balancing turned off.
+     *         At this time, supported resources are Network Load Balancers and Application Load Balancers with
+     *         cross-zone load balancing turned off.
      */
 
     public String getResourceIdentifier() {
@@ -341,20 +427,20 @@ public class StartZonalShiftRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The identifier for the resource to include in a zonal shift. The identifier is the Amazon Resource Name (ARN) for
+     * The identifier for the resource to shift away traffic for. The identifier is the Amazon Resource Name (ARN) for
      * the resource.
      * </p>
      * <p>
-     * At this time, you can only start a zonal shift for Network Load Balancers and Application Load Balancers with
-     * cross-zone load balancing turned off.
+     * At this time, supported resources are Network Load Balancers and Application Load Balancers with cross-zone load
+     * balancing turned off.
      * </p>
      * 
      * @param resourceIdentifier
-     *        The identifier for the resource to include in a zonal shift. The identifier is the Amazon Resource Name
+     *        The identifier for the resource to shift away traffic for. The identifier is the Amazon Resource Name
      *        (ARN) for the resource.</p>
      *        <p>
-     *        At this time, you can only start a zonal shift for Network Load Balancers and Application Load Balancers
-     *        with cross-zone load balancing turned off.
+     *        At this time, supported resources are Network Load Balancers and Application Load Balancers with
+     *        cross-zone load balancing turned off.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

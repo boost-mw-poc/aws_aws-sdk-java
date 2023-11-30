@@ -21,7 +21,9 @@ import javax.annotation.Generated;
 public enum StudioLifecycleConfigAppType {
 
     JupyterServer("JupyterServer"),
-    KernelGateway("KernelGateway");
+    KernelGateway("KernelGateway"),
+    JupyterLab("JupyterLab"),
+    CodeEditor("CodeEditor");
 
     private String value;
 

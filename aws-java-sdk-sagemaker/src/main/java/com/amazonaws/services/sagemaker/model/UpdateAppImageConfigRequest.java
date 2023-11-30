@@ -37,6 +37,12 @@ public class UpdateAppImageConfigRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      */
     private KernelGatewayImageConfig kernelGatewayImageConfig;
+    /**
+     * <p>
+     * The JupyterLab app running on the image.
+     * </p>
+     */
+    private JupyterLabAppImageConfig jupyterLabAppImageConfig;
 
     /**
      * <p>
@@ -119,6 +125,46 @@ public class UpdateAppImageConfigRequest extends com.amazonaws.AmazonWebServiceR
     }
 
     /**
+     * <p>
+     * The JupyterLab app running on the image.
+     * </p>
+     * 
+     * @param jupyterLabAppImageConfig
+     *        The JupyterLab app running on the image.
+     */
+
+    public void setJupyterLabAppImageConfig(JupyterLabAppImageConfig jupyterLabAppImageConfig) {
+        this.jupyterLabAppImageConfig = jupyterLabAppImageConfig;
+    }
+
+    /**
+     * <p>
+     * The JupyterLab app running on the image.
+     * </p>
+     * 
+     * @return The JupyterLab app running on the image.
+     */
+
+    public JupyterLabAppImageConfig getJupyterLabAppImageConfig() {
+        return this.jupyterLabAppImageConfig;
+    }
+
+    /**
+     * <p>
+     * The JupyterLab app running on the image.
+     * </p>
+     * 
+     * @param jupyterLabAppImageConfig
+     *        The JupyterLab app running on the image.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateAppImageConfigRequest withJupyterLabAppImageConfig(JupyterLabAppImageConfig jupyterLabAppImageConfig) {
+        setJupyterLabAppImageConfig(jupyterLabAppImageConfig);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -133,7 +179,9 @@ public class UpdateAppImageConfigRequest extends com.amazonaws.AmazonWebServiceR
         if (getAppImageConfigName() != null)
             sb.append("AppImageConfigName: ").append(getAppImageConfigName()).append(",");
         if (getKernelGatewayImageConfig() != null)
-            sb.append("KernelGatewayImageConfig: ").append(getKernelGatewayImageConfig());
+            sb.append("KernelGatewayImageConfig: ").append(getKernelGatewayImageConfig()).append(",");
+        if (getJupyterLabAppImageConfig() != null)
+            sb.append("JupyterLabAppImageConfig: ").append(getJupyterLabAppImageConfig());
         sb.append("}");
         return sb.toString();
     }
@@ -156,6 +204,10 @@ public class UpdateAppImageConfigRequest extends com.amazonaws.AmazonWebServiceR
             return false;
         if (other.getKernelGatewayImageConfig() != null && other.getKernelGatewayImageConfig().equals(this.getKernelGatewayImageConfig()) == false)
             return false;
+        if (other.getJupyterLabAppImageConfig() == null ^ this.getJupyterLabAppImageConfig() == null)
+            return false;
+        if (other.getJupyterLabAppImageConfig() != null && other.getJupyterLabAppImageConfig().equals(this.getJupyterLabAppImageConfig()) == false)
+            return false;
         return true;
     }
 
@@ -166,6 +218,7 @@ public class UpdateAppImageConfigRequest extends com.amazonaws.AmazonWebServiceR
 
         hashCode = prime * hashCode + ((getAppImageConfigName() == null) ? 0 : getAppImageConfigName().hashCode());
         hashCode = prime * hashCode + ((getKernelGatewayImageConfig() == null) ? 0 : getKernelGatewayImageConfig().hashCode());
+        hashCode = prime * hashCode + ((getJupyterLabAppImageConfig() == null) ? 0 : getJupyterLabAppImageConfig().hashCode());
         return hashCode;
     }
 

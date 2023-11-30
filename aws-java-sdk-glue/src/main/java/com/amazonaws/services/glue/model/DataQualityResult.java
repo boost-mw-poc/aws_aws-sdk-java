@@ -96,6 +96,19 @@ public class DataQualityResult implements Serializable, Cloneable, StructuredPoj
      * </p>
      */
     private java.util.List<DataQualityRuleResult> ruleResults;
+    /**
+     * <p>
+     * A list of <code>DataQualityAnalyzerResult</code> objects representing the results for each analyzer.
+     * </p>
+     */
+    private java.util.List<DataQualityAnalyzerResult> analyzerResults;
+    /**
+     * <p>
+     * A list of <code>DataQualityObservation</code> objects representing the observations generated after evaluating
+     * the rules and analyzers.
+     * </p>
+     */
+    private java.util.List<DataQualityObservation> observations;
 
     /**
      * <p>
@@ -580,6 +593,154 @@ public class DataQualityResult implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
+     * <p>
+     * A list of <code>DataQualityAnalyzerResult</code> objects representing the results for each analyzer.
+     * </p>
+     * 
+     * @return A list of <code>DataQualityAnalyzerResult</code> objects representing the results for each analyzer.
+     */
+
+    public java.util.List<DataQualityAnalyzerResult> getAnalyzerResults() {
+        return analyzerResults;
+    }
+
+    /**
+     * <p>
+     * A list of <code>DataQualityAnalyzerResult</code> objects representing the results for each analyzer.
+     * </p>
+     * 
+     * @param analyzerResults
+     *        A list of <code>DataQualityAnalyzerResult</code> objects representing the results for each analyzer.
+     */
+
+    public void setAnalyzerResults(java.util.Collection<DataQualityAnalyzerResult> analyzerResults) {
+        if (analyzerResults == null) {
+            this.analyzerResults = null;
+            return;
+        }
+
+        this.analyzerResults = new java.util.ArrayList<DataQualityAnalyzerResult>(analyzerResults);
+    }
+
+    /**
+     * <p>
+     * A list of <code>DataQualityAnalyzerResult</code> objects representing the results for each analyzer.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setAnalyzerResults(java.util.Collection)} or {@link #withAnalyzerResults(java.util.Collection)} if you
+     * want to override the existing values.
+     * </p>
+     * 
+     * @param analyzerResults
+     *        A list of <code>DataQualityAnalyzerResult</code> objects representing the results for each analyzer.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DataQualityResult withAnalyzerResults(DataQualityAnalyzerResult... analyzerResults) {
+        if (this.analyzerResults == null) {
+            setAnalyzerResults(new java.util.ArrayList<DataQualityAnalyzerResult>(analyzerResults.length));
+        }
+        for (DataQualityAnalyzerResult ele : analyzerResults) {
+            this.analyzerResults.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * A list of <code>DataQualityAnalyzerResult</code> objects representing the results for each analyzer.
+     * </p>
+     * 
+     * @param analyzerResults
+     *        A list of <code>DataQualityAnalyzerResult</code> objects representing the results for each analyzer.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DataQualityResult withAnalyzerResults(java.util.Collection<DataQualityAnalyzerResult> analyzerResults) {
+        setAnalyzerResults(analyzerResults);
+        return this;
+    }
+
+    /**
+     * <p>
+     * A list of <code>DataQualityObservation</code> objects representing the observations generated after evaluating
+     * the rules and analyzers.
+     * </p>
+     * 
+     * @return A list of <code>DataQualityObservation</code> objects representing the observations generated after
+     *         evaluating the rules and analyzers.
+     */
+
+    public java.util.List<DataQualityObservation> getObservations() {
+        return observations;
+    }
+
+    /**
+     * <p>
+     * A list of <code>DataQualityObservation</code> objects representing the observations generated after evaluating
+     * the rules and analyzers.
+     * </p>
+     * 
+     * @param observations
+     *        A list of <code>DataQualityObservation</code> objects representing the observations generated after
+     *        evaluating the rules and analyzers.
+     */
+
+    public void setObservations(java.util.Collection<DataQualityObservation> observations) {
+        if (observations == null) {
+            this.observations = null;
+            return;
+        }
+
+        this.observations = new java.util.ArrayList<DataQualityObservation>(observations);
+    }
+
+    /**
+     * <p>
+     * A list of <code>DataQualityObservation</code> objects representing the observations generated after evaluating
+     * the rules and analyzers.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setObservations(java.util.Collection)} or {@link #withObservations(java.util.Collection)} if you want to
+     * override the existing values.
+     * </p>
+     * 
+     * @param observations
+     *        A list of <code>DataQualityObservation</code> objects representing the observations generated after
+     *        evaluating the rules and analyzers.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DataQualityResult withObservations(DataQualityObservation... observations) {
+        if (this.observations == null) {
+            setObservations(new java.util.ArrayList<DataQualityObservation>(observations.length));
+        }
+        for (DataQualityObservation ele : observations) {
+            this.observations.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * A list of <code>DataQualityObservation</code> objects representing the observations generated after evaluating
+     * the rules and analyzers.
+     * </p>
+     * 
+     * @param observations
+     *        A list of <code>DataQualityObservation</code> objects representing the observations generated after
+     *        evaluating the rules and analyzers.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DataQualityResult withObservations(java.util.Collection<DataQualityObservation> observations) {
+        setObservations(observations);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -612,7 +773,11 @@ public class DataQualityResult implements Serializable, Cloneable, StructuredPoj
         if (getRulesetEvaluationRunId() != null)
             sb.append("RulesetEvaluationRunId: ").append(getRulesetEvaluationRunId()).append(",");
         if (getRuleResults() != null)
-            sb.append("RuleResults: ").append(getRuleResults());
+            sb.append("RuleResults: ").append(getRuleResults()).append(",");
+        if (getAnalyzerResults() != null)
+            sb.append("AnalyzerResults: ").append(getAnalyzerResults()).append(",");
+        if (getObservations() != null)
+            sb.append("Observations: ").append(getObservations());
         sb.append("}");
         return sb.toString();
     }
@@ -671,6 +836,14 @@ public class DataQualityResult implements Serializable, Cloneable, StructuredPoj
             return false;
         if (other.getRuleResults() != null && other.getRuleResults().equals(this.getRuleResults()) == false)
             return false;
+        if (other.getAnalyzerResults() == null ^ this.getAnalyzerResults() == null)
+            return false;
+        if (other.getAnalyzerResults() != null && other.getAnalyzerResults().equals(this.getAnalyzerResults()) == false)
+            return false;
+        if (other.getObservations() == null ^ this.getObservations() == null)
+            return false;
+        if (other.getObservations() != null && other.getObservations().equals(this.getObservations()) == false)
+            return false;
         return true;
     }
 
@@ -690,6 +863,8 @@ public class DataQualityResult implements Serializable, Cloneable, StructuredPoj
         hashCode = prime * hashCode + ((getJobRunId() == null) ? 0 : getJobRunId().hashCode());
         hashCode = prime * hashCode + ((getRulesetEvaluationRunId() == null) ? 0 : getRulesetEvaluationRunId().hashCode());
         hashCode = prime * hashCode + ((getRuleResults() == null) ? 0 : getRuleResults().hashCode());
+        hashCode = prime * hashCode + ((getAnalyzerResults() == null) ? 0 : getAnalyzerResults().hashCode());
+        hashCode = prime * hashCode + ((getObservations() == null) ? 0 : getObservations().hashCode());
         return hashCode;
     }
 

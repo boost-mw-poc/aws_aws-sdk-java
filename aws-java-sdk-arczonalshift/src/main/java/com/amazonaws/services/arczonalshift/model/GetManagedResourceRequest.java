@@ -27,32 +27,32 @@ public class GetManagedResourceRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The identifier for the resource to include in a zonal shift. The identifier is the Amazon Resource Name (ARN) for
+     * The identifier for the resource to shift away traffic for. The identifier is the Amazon Resource Name (ARN) for
      * the resource.
      * </p>
      * <p>
-     * At this time, you can only start a zonal shift for Network Load Balancers and Application Load Balancers with
-     * cross-zone load balancing turned off.
+     * At this time, supported resources are Network Load Balancers and Application Load Balancers with cross-zone load
+     * balancing turned off.
      * </p>
      */
     private String resourceIdentifier;
 
     /**
      * <p>
-     * The identifier for the resource to include in a zonal shift. The identifier is the Amazon Resource Name (ARN) for
+     * The identifier for the resource to shift away traffic for. The identifier is the Amazon Resource Name (ARN) for
      * the resource.
      * </p>
      * <p>
-     * At this time, you can only start a zonal shift for Network Load Balancers and Application Load Balancers with
-     * cross-zone load balancing turned off.
+     * At this time, supported resources are Network Load Balancers and Application Load Balancers with cross-zone load
+     * balancing turned off.
      * </p>
      * 
      * @param resourceIdentifier
-     *        The identifier for the resource to include in a zonal shift. The identifier is the Amazon Resource Name
+     *        The identifier for the resource to shift away traffic for. The identifier is the Amazon Resource Name
      *        (ARN) for the resource.</p>
      *        <p>
-     *        At this time, you can only start a zonal shift for Network Load Balancers and Application Load Balancers
-     *        with cross-zone load balancing turned off.
+     *        At this time, supported resources are Network Load Balancers and Application Load Balancers with
+     *        cross-zone load balancing turned off.
      */
 
     public void setResourceIdentifier(String resourceIdentifier) {
@@ -61,19 +61,19 @@ public class GetManagedResourceRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The identifier for the resource to include in a zonal shift. The identifier is the Amazon Resource Name (ARN) for
+     * The identifier for the resource to shift away traffic for. The identifier is the Amazon Resource Name (ARN) for
      * the resource.
      * </p>
      * <p>
-     * At this time, you can only start a zonal shift for Network Load Balancers and Application Load Balancers with
-     * cross-zone load balancing turned off.
+     * At this time, supported resources are Network Load Balancers and Application Load Balancers with cross-zone load
+     * balancing turned off.
      * </p>
      * 
-     * @return The identifier for the resource to include in a zonal shift. The identifier is the Amazon Resource Name
+     * @return The identifier for the resource to shift away traffic for. The identifier is the Amazon Resource Name
      *         (ARN) for the resource.</p>
      *         <p>
-     *         At this time, you can only start a zonal shift for Network Load Balancers and Application Load Balancers
-     *         with cross-zone load balancing turned off.
+     *         At this time, supported resources are Network Load Balancers and Application Load Balancers with
+     *         cross-zone load balancing turned off.
      */
 
     public String getResourceIdentifier() {
@@ -82,20 +82,20 @@ public class GetManagedResourceRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The identifier for the resource to include in a zonal shift. The identifier is the Amazon Resource Name (ARN) for
+     * The identifier for the resource to shift away traffic for. The identifier is the Amazon Resource Name (ARN) for
      * the resource.
      * </p>
      * <p>
-     * At this time, you can only start a zonal shift for Network Load Balancers and Application Load Balancers with
-     * cross-zone load balancing turned off.
+     * At this time, supported resources are Network Load Balancers and Application Load Balancers with cross-zone load
+     * balancing turned off.
      * </p>
      * 
      * @param resourceIdentifier
-     *        The identifier for the resource to include in a zonal shift. The identifier is the Amazon Resource Name
+     *        The identifier for the resource to shift away traffic for. The identifier is the Amazon Resource Name
      *        (ARN) for the resource.</p>
      *        <p>
-     *        At this time, you can only start a zonal shift for Network Load Balancers and Application Load Balancers
-     *        with cross-zone load balancing turned off.
+     *        At this time, supported resources are Network Load Balancers and Application Load Balancers with
+     *        cross-zone load balancing turned off.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

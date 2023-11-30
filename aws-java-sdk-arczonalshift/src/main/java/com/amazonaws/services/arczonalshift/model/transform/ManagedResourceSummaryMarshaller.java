@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.arczonalshift.model.transform;
 
+import java.util.Map;
 import java.util.List;
 import javax.annotation.Generated;
 
@@ -28,12 +29,22 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class ManagedResourceSummaryMarshaller {
 
+    private static final MarshallingInfo<Map> APPLIEDWEIGHTS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("appliedWeights").build();
     private static final MarshallingInfo<String> ARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("arn").build();
+    private static final MarshallingInfo<List> AUTOSHIFTS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("autoshifts").build();
     private static final MarshallingInfo<List> AVAILABILITYZONES_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("availabilityZones").build();
     private static final MarshallingInfo<String> NAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("name").build();
+    private static final MarshallingInfo<String> PRACTICERUNSTATUS_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("practiceRunStatus").build();
+    private static final MarshallingInfo<String> ZONALAUTOSHIFTSTATUS_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("zonalAutoshiftStatus").build();
+    private static final MarshallingInfo<List> ZONALSHIFTS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("zonalShifts").build();
 
     private static final ManagedResourceSummaryMarshaller instance = new ManagedResourceSummaryMarshaller();
 
@@ -51,9 +62,14 @@ public class ManagedResourceSummaryMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(managedResourceSummary.getAppliedWeights(), APPLIEDWEIGHTS_BINDING);
             protocolMarshaller.marshall(managedResourceSummary.getArn(), ARN_BINDING);
+            protocolMarshaller.marshall(managedResourceSummary.getAutoshifts(), AUTOSHIFTS_BINDING);
             protocolMarshaller.marshall(managedResourceSummary.getAvailabilityZones(), AVAILABILITYZONES_BINDING);
             protocolMarshaller.marshall(managedResourceSummary.getName(), NAME_BINDING);
+            protocolMarshaller.marshall(managedResourceSummary.getPracticeRunStatus(), PRACTICERUNSTATUS_BINDING);
+            protocolMarshaller.marshall(managedResourceSummary.getZonalAutoshiftStatus(), ZONALAUTOSHIFTSTATUS_BINDING);
+            protocolMarshaller.marshall(managedResourceSummary.getZonalShifts(), ZONALSHIFTS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

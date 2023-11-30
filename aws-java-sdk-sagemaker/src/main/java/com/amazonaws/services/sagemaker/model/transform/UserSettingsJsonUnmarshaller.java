@@ -86,6 +86,18 @@ public class UserSettingsJsonUnmarshaller implements Unmarshaller<UserSettings, 
                     context.nextToken();
                     userSettings.setCanvasAppSettings(CanvasAppSettingsJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("JupyterLabAppSettings", targetDepth)) {
+                    context.nextToken();
+                    userSettings.setJupyterLabAppSettings(JupyterLabAppSettingsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("CodeEditorAppSettings", targetDepth)) {
+                    context.nextToken();
+                    userSettings.setCodeEditorAppSettings(CodeEditorAppSettingsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("SpaceStorageSettings", targetDepth)) {
+                    context.nextToken();
+                    userSettings.setSpaceStorageSettings(DefaultSpaceStorageSettingsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("DefaultLandingUri", targetDepth)) {
                     context.nextToken();
                     userSettings.setDefaultLandingUri(context.getUnmarshaller(String.class).unmarshall(context));
@@ -93,6 +105,16 @@ public class UserSettingsJsonUnmarshaller implements Unmarshaller<UserSettings, 
                 if (context.testExpression("StudioWebPortal", targetDepth)) {
                     context.nextToken();
                     userSettings.setStudioWebPortal(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("CustomPosixUserConfig", targetDepth)) {
+                    context.nextToken();
+                    userSettings.setCustomPosixUserConfig(CustomPosixUserConfigJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("CustomFileSystemConfigs", targetDepth)) {
+                    context.nextToken();
+                    userSettings.setCustomFileSystemConfigs(new ListUnmarshaller<CustomFileSystemConfig>(CustomFileSystemConfigJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

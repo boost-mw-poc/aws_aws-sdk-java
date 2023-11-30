@@ -41,6 +41,8 @@ public class AppDetailsMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CreationTime").timestampFormat("unixTimestamp").build();
     private static final MarshallingInfo<String> SPACENAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("SpaceName").build();
+    private static final MarshallingInfo<StructuredPojo> RESOURCESPEC_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ResourceSpec").build();
 
     private static final AppDetailsMarshaller instance = new AppDetailsMarshaller();
 
@@ -65,6 +67,7 @@ public class AppDetailsMarshaller {
             protocolMarshaller.marshall(appDetails.getStatus(), STATUS_BINDING);
             protocolMarshaller.marshall(appDetails.getCreationTime(), CREATIONTIME_BINDING);
             protocolMarshaller.marshall(appDetails.getSpaceName(), SPACENAME_BINDING);
+            protocolMarshaller.marshall(appDetails.getResourceSpec(), RESOURCESPEC_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

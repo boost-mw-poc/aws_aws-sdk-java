@@ -41,6 +41,32 @@ public class AbstractAWSARCZonalShiftAsync extends AbstractAWSARCZonalShift impl
     }
 
     @Override
+    public java.util.concurrent.Future<CreatePracticeRunConfigurationResult> createPracticeRunConfigurationAsync(CreatePracticeRunConfigurationRequest request) {
+
+        return createPracticeRunConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreatePracticeRunConfigurationResult> createPracticeRunConfigurationAsync(CreatePracticeRunConfigurationRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreatePracticeRunConfigurationRequest, CreatePracticeRunConfigurationResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeletePracticeRunConfigurationResult> deletePracticeRunConfigurationAsync(DeletePracticeRunConfigurationRequest request) {
+
+        return deletePracticeRunConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeletePracticeRunConfigurationResult> deletePracticeRunConfigurationAsync(DeletePracticeRunConfigurationRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeletePracticeRunConfigurationRequest, DeletePracticeRunConfigurationResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetManagedResourceResult> getManagedResourceAsync(GetManagedResourceRequest request) {
 
         return getManagedResourceAsync(request, null);
@@ -49,6 +75,19 @@ public class AbstractAWSARCZonalShiftAsync extends AbstractAWSARCZonalShift impl
     @Override
     public java.util.concurrent.Future<GetManagedResourceResult> getManagedResourceAsync(GetManagedResourceRequest request,
             com.amazonaws.handlers.AsyncHandler<GetManagedResourceRequest, GetManagedResourceResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListAutoshiftsResult> listAutoshiftsAsync(ListAutoshiftsRequest request) {
+
+        return listAutoshiftsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListAutoshiftsResult> listAutoshiftsAsync(ListAutoshiftsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListAutoshiftsRequest, ListAutoshiftsResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -88,6 +127,34 @@ public class AbstractAWSARCZonalShiftAsync extends AbstractAWSARCZonalShift impl
     @Override
     public java.util.concurrent.Future<StartZonalShiftResult> startZonalShiftAsync(StartZonalShiftRequest request,
             com.amazonaws.handlers.AsyncHandler<StartZonalShiftRequest, StartZonalShiftResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdatePracticeRunConfigurationResult> updatePracticeRunConfigurationAsync(UpdatePracticeRunConfigurationRequest request) {
+
+        return updatePracticeRunConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdatePracticeRunConfigurationResult> updatePracticeRunConfigurationAsync(UpdatePracticeRunConfigurationRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdatePracticeRunConfigurationRequest, UpdatePracticeRunConfigurationResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateZonalAutoshiftConfigurationResult> updateZonalAutoshiftConfigurationAsync(
+            UpdateZonalAutoshiftConfigurationRequest request) {
+
+        return updateZonalAutoshiftConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateZonalAutoshiftConfigurationResult> updateZonalAutoshiftConfigurationAsync(
+            UpdateZonalAutoshiftConfigurationRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateZonalAutoshiftConfigurationRequest, UpdateZonalAutoshiftConfigurationResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

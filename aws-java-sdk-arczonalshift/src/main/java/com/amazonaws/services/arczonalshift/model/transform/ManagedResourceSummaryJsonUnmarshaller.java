@@ -48,9 +48,20 @@ public class ManagedResourceSummaryJsonUnmarshaller implements Unmarshaller<Mana
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("appliedWeights", targetDepth)) {
+                    context.nextToken();
+                    managedResourceSummary.setAppliedWeights(new MapUnmarshaller<String, Float>(context.getUnmarshaller(String.class), context
+                            .getUnmarshaller(Float.class)).unmarshall(context));
+                }
                 if (context.testExpression("arn", targetDepth)) {
                     context.nextToken();
                     managedResourceSummary.setArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("autoshifts", targetDepth)) {
+                    context.nextToken();
+                    managedResourceSummary.setAutoshifts(new ListUnmarshaller<AutoshiftInResource>(AutoshiftInResourceJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
                 }
                 if (context.testExpression("availabilityZones", targetDepth)) {
                     context.nextToken();
@@ -61,6 +72,20 @@ public class ManagedResourceSummaryJsonUnmarshaller implements Unmarshaller<Mana
                 if (context.testExpression("name", targetDepth)) {
                     context.nextToken();
                     managedResourceSummary.setName(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("practiceRunStatus", targetDepth)) {
+                    context.nextToken();
+                    managedResourceSummary.setPracticeRunStatus(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("zonalAutoshiftStatus", targetDepth)) {
+                    context.nextToken();
+                    managedResourceSummary.setZonalAutoshiftStatus(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("zonalShifts", targetDepth)) {
+                    context.nextToken();
+                    managedResourceSummary.setZonalShifts(new ListUnmarshaller<ZonalShiftInResource>(ZonalShiftInResourceJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
