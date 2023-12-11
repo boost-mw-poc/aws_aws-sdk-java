@@ -223,6 +223,10 @@ public class ResourceDetailsMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AwsRoute53HostedZone").build();
     private static final MarshallingInfo<StructuredPojo> AWSMSKCLUSTER_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AwsMskCluster").build();
+    private static final MarshallingInfo<StructuredPojo> AWSS3ACCESSPOINT_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AwsS3AccessPoint").build();
+    private static final MarshallingInfo<StructuredPojo> AWSEC2CLIENTVPNENDPOINT_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AwsEc2ClientVpnEndpoint").build();
 
     private static final ResourceDetailsMarshaller instance = new ResourceDetailsMarshaller();
 
@@ -337,6 +341,8 @@ public class ResourceDetailsMarshaller {
             protocolMarshaller.marshall(resourceDetails.getAwsDmsReplicationInstance(), AWSDMSREPLICATIONINSTANCE_BINDING);
             protocolMarshaller.marshall(resourceDetails.getAwsRoute53HostedZone(), AWSROUTE53HOSTEDZONE_BINDING);
             protocolMarshaller.marshall(resourceDetails.getAwsMskCluster(), AWSMSKCLUSTER_BINDING);
+            protocolMarshaller.marshall(resourceDetails.getAwsS3AccessPoint(), AWSS3ACCESSPOINT_BINDING);
+            protocolMarshaller.marshall(resourceDetails.getAwsEc2ClientVpnEndpoint(), AWSEC2CLIENTVPNENDPOINT_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

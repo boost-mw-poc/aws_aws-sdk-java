@@ -61,6 +61,12 @@ public class ClusterPendingModifiedValues implements Serializable, Cloneable {
     private Integer backupRetentionPeriod;
     /**
      * <p>
+     * The storage type for the DB cluster.
+     * </p>
+     */
+    private String storageType;
+    /**
+     * <p>
      * The allocated storage size in gibibytes (GiB) for database engines. For Neptune, <code>AllocatedStorage</code>
      * always returns 1, because Neptune DB cluster storage size isn't fixed, but instead automatically adjusts as
      * needed.
@@ -302,6 +308,46 @@ public class ClusterPendingModifiedValues implements Serializable, Cloneable {
 
     /**
      * <p>
+     * The storage type for the DB cluster.
+     * </p>
+     * 
+     * @param storageType
+     *        The storage type for the DB cluster.
+     */
+
+    public void setStorageType(String storageType) {
+        this.storageType = storageType;
+    }
+
+    /**
+     * <p>
+     * The storage type for the DB cluster.
+     * </p>
+     * 
+     * @return The storage type for the DB cluster.
+     */
+
+    public String getStorageType() {
+        return this.storageType;
+    }
+
+    /**
+     * <p>
+     * The storage type for the DB cluster.
+     * </p>
+     * 
+     * @param storageType
+     *        The storage type for the DB cluster.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ClusterPendingModifiedValues withStorageType(String storageType) {
+        setStorageType(storageType);
+        return this;
+    }
+
+    /**
+     * <p>
      * The allocated storage size in gibibytes (GiB) for database engines. For Neptune, <code>AllocatedStorage</code>
      * always returns 1, because Neptune DB cluster storage size isn't fixed, but instead automatically adjusts as
      * needed.
@@ -417,6 +463,8 @@ public class ClusterPendingModifiedValues implements Serializable, Cloneable {
             sb.append("EngineVersion: ").append(getEngineVersion()).append(",");
         if (getBackupRetentionPeriod() != null)
             sb.append("BackupRetentionPeriod: ").append(getBackupRetentionPeriod()).append(",");
+        if (getStorageType() != null)
+            sb.append("StorageType: ").append(getStorageType()).append(",");
         if (getAllocatedStorage() != null)
             sb.append("AllocatedStorage: ").append(getAllocatedStorage()).append(",");
         if (getIops() != null)
@@ -456,6 +504,10 @@ public class ClusterPendingModifiedValues implements Serializable, Cloneable {
             return false;
         if (other.getBackupRetentionPeriod() != null && other.getBackupRetentionPeriod().equals(this.getBackupRetentionPeriod()) == false)
             return false;
+        if (other.getStorageType() == null ^ this.getStorageType() == null)
+            return false;
+        if (other.getStorageType() != null && other.getStorageType().equals(this.getStorageType()) == false)
+            return false;
         if (other.getAllocatedStorage() == null ^ this.getAllocatedStorage() == null)
             return false;
         if (other.getAllocatedStorage() != null && other.getAllocatedStorage().equals(this.getAllocatedStorage()) == false)
@@ -477,6 +529,7 @@ public class ClusterPendingModifiedValues implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getIAMDatabaseAuthenticationEnabled() == null) ? 0 : getIAMDatabaseAuthenticationEnabled().hashCode());
         hashCode = prime * hashCode + ((getEngineVersion() == null) ? 0 : getEngineVersion().hashCode());
         hashCode = prime * hashCode + ((getBackupRetentionPeriod() == null) ? 0 : getBackupRetentionPeriod().hashCode());
+        hashCode = prime * hashCode + ((getStorageType() == null) ? 0 : getStorageType().hashCode());
         hashCode = prime * hashCode + ((getAllocatedStorage() == null) ? 0 : getAllocatedStorage().hashCode());
         hashCode = prime * hashCode + ((getIops() == null) ? 0 : getIops().hashCode());
         return hashCode;

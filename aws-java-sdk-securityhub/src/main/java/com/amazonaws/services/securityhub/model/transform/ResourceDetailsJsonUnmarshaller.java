@@ -440,6 +440,14 @@ public class ResourceDetailsJsonUnmarshaller implements Unmarshaller<ResourceDet
                     context.nextToken();
                     resourceDetails.setAwsMskCluster(AwsMskClusterDetailsJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("AwsS3AccessPoint", targetDepth)) {
+                    context.nextToken();
+                    resourceDetails.setAwsS3AccessPoint(AwsS3AccessPointDetailsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("AwsEc2ClientVpnEndpoint", targetDepth)) {
+                    context.nextToken();
+                    resourceDetails.setAwsEc2ClientVpnEndpoint(AwsEc2ClientVpnEndpointDetailsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

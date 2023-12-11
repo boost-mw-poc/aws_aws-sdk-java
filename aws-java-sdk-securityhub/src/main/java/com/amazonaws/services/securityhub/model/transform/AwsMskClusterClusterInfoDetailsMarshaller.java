@@ -37,6 +37,8 @@ public class AwsMskClusterClusterInfoDetailsMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ClusterName").build();
     private static final MarshallingInfo<StructuredPojo> CLIENTAUTHENTICATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ClientAuthentication").build();
+    private static final MarshallingInfo<String> ENHANCEDMONITORING_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EnhancedMonitoring").build();
 
     private static final AwsMskClusterClusterInfoDetailsMarshaller instance = new AwsMskClusterClusterInfoDetailsMarshaller();
 
@@ -59,6 +61,7 @@ public class AwsMskClusterClusterInfoDetailsMarshaller {
             protocolMarshaller.marshall(awsMskClusterClusterInfoDetails.getNumberOfBrokerNodes(), NUMBEROFBROKERNODES_BINDING);
             protocolMarshaller.marshall(awsMskClusterClusterInfoDetails.getClusterName(), CLUSTERNAME_BINDING);
             protocolMarshaller.marshall(awsMskClusterClusterInfoDetails.getClientAuthentication(), CLIENTAUTHENTICATION_BINDING);
+            protocolMarshaller.marshall(awsMskClusterClusterInfoDetails.getEnhancedMonitoring(), ENHANCEDMONITORING_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

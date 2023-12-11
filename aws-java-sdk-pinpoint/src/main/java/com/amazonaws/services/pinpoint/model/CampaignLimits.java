@@ -47,8 +47,8 @@ public class CampaignLimits implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The maximum number of messages that a campaign can send each second. For an application, this value specifies the
-     * default limit for the number of messages that campaigns can send each second. The minimum value is 50. The
-     * maximum value is 20,000.
+     * default limit for the number of messages that campaigns can send each second. The minimum value is 1. The maximum
+     * value is 20,000.
      * </p>
      */
     private Integer messagesPerSecond;
@@ -167,14 +167,14 @@ public class CampaignLimits implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The maximum number of messages that a campaign can send each second. For an application, this value specifies the
-     * default limit for the number of messages that campaigns can send each second. The minimum value is 50. The
-     * maximum value is 20,000.
+     * default limit for the number of messages that campaigns can send each second. The minimum value is 1. The maximum
+     * value is 20,000.
      * </p>
      * 
      * @param messagesPerSecond
      *        The maximum number of messages that a campaign can send each second. For an application, this value
      *        specifies the default limit for the number of messages that campaigns can send each second. The minimum
-     *        value is 50. The maximum value is 20,000.
+     *        value is 1. The maximum value is 20,000.
      */
 
     public void setMessagesPerSecond(Integer messagesPerSecond) {
@@ -184,13 +184,13 @@ public class CampaignLimits implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The maximum number of messages that a campaign can send each second. For an application, this value specifies the
-     * default limit for the number of messages that campaigns can send each second. The minimum value is 50. The
-     * maximum value is 20,000.
+     * default limit for the number of messages that campaigns can send each second. The minimum value is 1. The maximum
+     * value is 20,000.
      * </p>
      * 
      * @return The maximum number of messages that a campaign can send each second. For an application, this value
      *         specifies the default limit for the number of messages that campaigns can send each second. The minimum
-     *         value is 50. The maximum value is 20,000.
+     *         value is 1. The maximum value is 20,000.
      */
 
     public Integer getMessagesPerSecond() {
@@ -200,14 +200,14 @@ public class CampaignLimits implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The maximum number of messages that a campaign can send each second. For an application, this value specifies the
-     * default limit for the number of messages that campaigns can send each second. The minimum value is 50. The
-     * maximum value is 20,000.
+     * default limit for the number of messages that campaigns can send each second. The minimum value is 1. The maximum
+     * value is 20,000.
      * </p>
      * 
      * @param messagesPerSecond
      *        The maximum number of messages that a campaign can send each second. For an application, this value
      *        specifies the default limit for the number of messages that campaigns can send each second. The minimum
-     *        value is 50. The maximum value is 20,000.
+     *        value is 1. The maximum value is 20,000.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

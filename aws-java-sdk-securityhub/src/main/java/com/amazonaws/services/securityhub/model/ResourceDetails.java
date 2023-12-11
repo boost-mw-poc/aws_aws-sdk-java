@@ -644,6 +644,20 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
      * </p>
      */
     private AwsMskClusterDetails awsMskCluster;
+    /**
+     * <p>
+     * Provides details about an Amazon Simple Storage Service (Amazon S3) access point. S3 access points are named
+     * network endpoints that are attached to S3 buckets that you can use to perform S3 object operations.
+     * </p>
+     */
+    private AwsS3AccessPointDetails awsS3AccessPoint;
+    /**
+     * <p>
+     * Provides details about an Client VPN endpoint. A Client VPN endpoint is the resource that you create and
+     * configure to enable and manage client VPN sessions. It's the termination point for all client VPN sessions.
+     * </p>
+     */
+    private AwsEc2ClientVpnEndpointDetails awsEc2ClientVpnEndpoint;
 
     /**
      * <p>
@@ -4726,6 +4740,101 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
+     * <p>
+     * Provides details about an Amazon Simple Storage Service (Amazon S3) access point. S3 access points are named
+     * network endpoints that are attached to S3 buckets that you can use to perform S3 object operations.
+     * </p>
+     * 
+     * @param awsS3AccessPoint
+     *        Provides details about an Amazon Simple Storage Service (Amazon S3) access point. S3 access points are
+     *        named network endpoints that are attached to S3 buckets that you can use to perform S3 object operations.
+     */
+
+    public void setAwsS3AccessPoint(AwsS3AccessPointDetails awsS3AccessPoint) {
+        this.awsS3AccessPoint = awsS3AccessPoint;
+    }
+
+    /**
+     * <p>
+     * Provides details about an Amazon Simple Storage Service (Amazon S3) access point. S3 access points are named
+     * network endpoints that are attached to S3 buckets that you can use to perform S3 object operations.
+     * </p>
+     * 
+     * @return Provides details about an Amazon Simple Storage Service (Amazon S3) access point. S3 access points are
+     *         named network endpoints that are attached to S3 buckets that you can use to perform S3 object operations.
+     */
+
+    public AwsS3AccessPointDetails getAwsS3AccessPoint() {
+        return this.awsS3AccessPoint;
+    }
+
+    /**
+     * <p>
+     * Provides details about an Amazon Simple Storage Service (Amazon S3) access point. S3 access points are named
+     * network endpoints that are attached to S3 buckets that you can use to perform S3 object operations.
+     * </p>
+     * 
+     * @param awsS3AccessPoint
+     *        Provides details about an Amazon Simple Storage Service (Amazon S3) access point. S3 access points are
+     *        named network endpoints that are attached to S3 buckets that you can use to perform S3 object operations.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ResourceDetails withAwsS3AccessPoint(AwsS3AccessPointDetails awsS3AccessPoint) {
+        setAwsS3AccessPoint(awsS3AccessPoint);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Provides details about an Client VPN endpoint. A Client VPN endpoint is the resource that you create and
+     * configure to enable and manage client VPN sessions. It's the termination point for all client VPN sessions.
+     * </p>
+     * 
+     * @param awsEc2ClientVpnEndpoint
+     *        Provides details about an Client VPN endpoint. A Client VPN endpoint is the resource that you create and
+     *        configure to enable and manage client VPN sessions. It's the termination point for all client VPN
+     *        sessions.
+     */
+
+    public void setAwsEc2ClientVpnEndpoint(AwsEc2ClientVpnEndpointDetails awsEc2ClientVpnEndpoint) {
+        this.awsEc2ClientVpnEndpoint = awsEc2ClientVpnEndpoint;
+    }
+
+    /**
+     * <p>
+     * Provides details about an Client VPN endpoint. A Client VPN endpoint is the resource that you create and
+     * configure to enable and manage client VPN sessions. It's the termination point for all client VPN sessions.
+     * </p>
+     * 
+     * @return Provides details about an Client VPN endpoint. A Client VPN endpoint is the resource that you create and
+     *         configure to enable and manage client VPN sessions. It's the termination point for all client VPN
+     *         sessions.
+     */
+
+    public AwsEc2ClientVpnEndpointDetails getAwsEc2ClientVpnEndpoint() {
+        return this.awsEc2ClientVpnEndpoint;
+    }
+
+    /**
+     * <p>
+     * Provides details about an Client VPN endpoint. A Client VPN endpoint is the resource that you create and
+     * configure to enable and manage client VPN sessions. It's the termination point for all client VPN sessions.
+     * </p>
+     * 
+     * @param awsEc2ClientVpnEndpoint
+     *        Provides details about an Client VPN endpoint. A Client VPN endpoint is the resource that you create and
+     *        configure to enable and manage client VPN sessions. It's the termination point for all client VPN
+     *        sessions.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ResourceDetails withAwsEc2ClientVpnEndpoint(AwsEc2ClientVpnEndpointDetails awsEc2ClientVpnEndpoint) {
+        setAwsEc2ClientVpnEndpoint(awsEc2ClientVpnEndpoint);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -4930,7 +5039,11 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
         if (getAwsRoute53HostedZone() != null)
             sb.append("AwsRoute53HostedZone: ").append(getAwsRoute53HostedZone()).append(",");
         if (getAwsMskCluster() != null)
-            sb.append("AwsMskCluster: ").append(getAwsMskCluster());
+            sb.append("AwsMskCluster: ").append(getAwsMskCluster()).append(",");
+        if (getAwsS3AccessPoint() != null)
+            sb.append("AwsS3AccessPoint: ").append(getAwsS3AccessPoint()).append(",");
+        if (getAwsEc2ClientVpnEndpoint() != null)
+            sb.append("AwsEc2ClientVpnEndpoint: ").append(getAwsEc2ClientVpnEndpoint());
         sb.append("}");
         return sb.toString();
     }
@@ -5339,6 +5452,14 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
             return false;
         if (other.getAwsMskCluster() != null && other.getAwsMskCluster().equals(this.getAwsMskCluster()) == false)
             return false;
+        if (other.getAwsS3AccessPoint() == null ^ this.getAwsS3AccessPoint() == null)
+            return false;
+        if (other.getAwsS3AccessPoint() != null && other.getAwsS3AccessPoint().equals(this.getAwsS3AccessPoint()) == false)
+            return false;
+        if (other.getAwsEc2ClientVpnEndpoint() == null ^ this.getAwsEc2ClientVpnEndpoint() == null)
+            return false;
+        if (other.getAwsEc2ClientVpnEndpoint() != null && other.getAwsEc2ClientVpnEndpoint().equals(this.getAwsEc2ClientVpnEndpoint()) == false)
+            return false;
         return true;
     }
 
@@ -5444,6 +5565,8 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
         hashCode = prime * hashCode + ((getAwsDmsReplicationInstance() == null) ? 0 : getAwsDmsReplicationInstance().hashCode());
         hashCode = prime * hashCode + ((getAwsRoute53HostedZone() == null) ? 0 : getAwsRoute53HostedZone().hashCode());
         hashCode = prime * hashCode + ((getAwsMskCluster() == null) ? 0 : getAwsMskCluster().hashCode());
+        hashCode = prime * hashCode + ((getAwsS3AccessPoint() == null) ? 0 : getAwsS3AccessPoint().hashCode());
+        hashCode = prime * hashCode + ((getAwsEc2ClientVpnEndpoint() == null) ? 0 : getAwsEc2ClientVpnEndpoint().hashCode());
         return hashCode;
     }
 

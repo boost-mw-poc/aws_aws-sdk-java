@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Provide details about an Amazon MSK cluster.
+ * Provide details about an Amazon Managed Streaming for Apache Kafka (Amazon MSK) cluster.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/AwsMskClusterClusterInfoDetails"
@@ -37,7 +37,7 @@ public class AwsMskClusterClusterInfoDetails implements Serializable, Cloneable,
     private AwsMskClusterClusterInfoEncryptionInfoDetails encryptionInfo;
     /**
      * <p>
-     * The current version of the MSK cluster.
+     * The current version of the cluster.
      * </p>
      */
     private String currentVersion;
@@ -59,6 +59,12 @@ public class AwsMskClusterClusterInfoDetails implements Serializable, Cloneable,
      * </p>
      */
     private AwsMskClusterClusterInfoClientAuthenticationDetails clientAuthentication;
+    /**
+     * <p>
+     * Specifies the level of monitoring for the cluster.
+     * </p>
+     */
+    private String enhancedMonitoring;
 
     /**
      * <p>
@@ -108,11 +114,11 @@ public class AwsMskClusterClusterInfoDetails implements Serializable, Cloneable,
 
     /**
      * <p>
-     * The current version of the MSK cluster.
+     * The current version of the cluster.
      * </p>
      * 
      * @param currentVersion
-     *        The current version of the MSK cluster.
+     *        The current version of the cluster.
      */
 
     public void setCurrentVersion(String currentVersion) {
@@ -121,10 +127,10 @@ public class AwsMskClusterClusterInfoDetails implements Serializable, Cloneable,
 
     /**
      * <p>
-     * The current version of the MSK cluster.
+     * The current version of the cluster.
      * </p>
      * 
-     * @return The current version of the MSK cluster.
+     * @return The current version of the cluster.
      */
 
     public String getCurrentVersion() {
@@ -133,11 +139,11 @@ public class AwsMskClusterClusterInfoDetails implements Serializable, Cloneable,
 
     /**
      * <p>
-     * The current version of the MSK cluster.
+     * The current version of the cluster.
      * </p>
      * 
      * @param currentVersion
-     *        The current version of the MSK cluster.
+     *        The current version of the cluster.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -267,6 +273,46 @@ public class AwsMskClusterClusterInfoDetails implements Serializable, Cloneable,
     }
 
     /**
+     * <p>
+     * Specifies the level of monitoring for the cluster.
+     * </p>
+     * 
+     * @param enhancedMonitoring
+     *        Specifies the level of monitoring for the cluster.
+     */
+
+    public void setEnhancedMonitoring(String enhancedMonitoring) {
+        this.enhancedMonitoring = enhancedMonitoring;
+    }
+
+    /**
+     * <p>
+     * Specifies the level of monitoring for the cluster.
+     * </p>
+     * 
+     * @return Specifies the level of monitoring for the cluster.
+     */
+
+    public String getEnhancedMonitoring() {
+        return this.enhancedMonitoring;
+    }
+
+    /**
+     * <p>
+     * Specifies the level of monitoring for the cluster.
+     * </p>
+     * 
+     * @param enhancedMonitoring
+     *        Specifies the level of monitoring for the cluster.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AwsMskClusterClusterInfoDetails withEnhancedMonitoring(String enhancedMonitoring) {
+        setEnhancedMonitoring(enhancedMonitoring);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -287,7 +333,9 @@ public class AwsMskClusterClusterInfoDetails implements Serializable, Cloneable,
         if (getClusterName() != null)
             sb.append("ClusterName: ").append(getClusterName()).append(",");
         if (getClientAuthentication() != null)
-            sb.append("ClientAuthentication: ").append(getClientAuthentication());
+            sb.append("ClientAuthentication: ").append(getClientAuthentication()).append(",");
+        if (getEnhancedMonitoring() != null)
+            sb.append("EnhancedMonitoring: ").append(getEnhancedMonitoring());
         sb.append("}");
         return sb.toString();
     }
@@ -322,6 +370,10 @@ public class AwsMskClusterClusterInfoDetails implements Serializable, Cloneable,
             return false;
         if (other.getClientAuthentication() != null && other.getClientAuthentication().equals(this.getClientAuthentication()) == false)
             return false;
+        if (other.getEnhancedMonitoring() == null ^ this.getEnhancedMonitoring() == null)
+            return false;
+        if (other.getEnhancedMonitoring() != null && other.getEnhancedMonitoring().equals(this.getEnhancedMonitoring()) == false)
+            return false;
         return true;
     }
 
@@ -335,6 +387,7 @@ public class AwsMskClusterClusterInfoDetails implements Serializable, Cloneable,
         hashCode = prime * hashCode + ((getNumberOfBrokerNodes() == null) ? 0 : getNumberOfBrokerNodes().hashCode());
         hashCode = prime * hashCode + ((getClusterName() == null) ? 0 : getClusterName().hashCode());
         hashCode = prime * hashCode + ((getClientAuthentication() == null) ? 0 : getClientAuthentication().hashCode());
+        hashCode = prime * hashCode + ((getEnhancedMonitoring() == null) ? 0 : getEnhancedMonitoring().hashCode());
         return hashCode;
     }
 

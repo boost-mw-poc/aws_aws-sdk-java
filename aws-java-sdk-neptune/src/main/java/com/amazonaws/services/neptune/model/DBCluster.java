@@ -263,7 +263,10 @@ public class DBCluster implements Serializable, Cloneable {
     private Boolean copyTagsToSnapshot;
     /**
      * <p>
-     * A list of log types that this DB cluster is configured to export to CloudWatch Logs.
+     * A list of the log types that this DB cluster is configured to export to CloudWatch Logs. Valid log types are:
+     * <code>audit</code> (to publish audit logs to CloudWatch) and slowquery (to publish slow-query logs to
+     * CloudWatch). See <a href="https://docs.aws.amazon.com/neptune/latest/userguide/cloudwatch-logs.html">Publishing
+     * Neptune logs to Amazon CloudWatch logs</a>.
      * </p>
      */
     private java.util.List<String> enabledCloudwatchLogsExports;
@@ -311,6 +314,18 @@ public class DBCluster implements Serializable, Cloneable {
      * </p>
      */
     private String globalClusterIdentifier;
+    /**
+     * <p>
+     * The next time you can modify the DB cluster to use the <code>iopt1</code> storage type.
+     * </p>
+     */
+    private java.util.Date iOOptimizedNextAllowedModificationTime;
+    /**
+     * <p>
+     * The storage type associated with the DB cluster.
+     * </p>
+     */
+    private String storageType;
 
     /**
      * <p>
@@ -2090,10 +2105,17 @@ public class DBCluster implements Serializable, Cloneable {
 
     /**
      * <p>
-     * A list of log types that this DB cluster is configured to export to CloudWatch Logs.
+     * A list of the log types that this DB cluster is configured to export to CloudWatch Logs. Valid log types are:
+     * <code>audit</code> (to publish audit logs to CloudWatch) and slowquery (to publish slow-query logs to
+     * CloudWatch). See <a href="https://docs.aws.amazon.com/neptune/latest/userguide/cloudwatch-logs.html">Publishing
+     * Neptune logs to Amazon CloudWatch logs</a>.
      * </p>
      * 
-     * @return A list of log types that this DB cluster is configured to export to CloudWatch Logs.
+     * @return A list of the log types that this DB cluster is configured to export to CloudWatch Logs. Valid log types
+     *         are: <code>audit</code> (to publish audit logs to CloudWatch) and slowquery (to publish slow-query logs
+     *         to CloudWatch). See <a
+     *         href="https://docs.aws.amazon.com/neptune/latest/userguide/cloudwatch-logs.html">Publishing Neptune logs
+     *         to Amazon CloudWatch logs</a>.
      */
 
     public java.util.List<String> getEnabledCloudwatchLogsExports() {
@@ -2102,11 +2124,18 @@ public class DBCluster implements Serializable, Cloneable {
 
     /**
      * <p>
-     * A list of log types that this DB cluster is configured to export to CloudWatch Logs.
+     * A list of the log types that this DB cluster is configured to export to CloudWatch Logs. Valid log types are:
+     * <code>audit</code> (to publish audit logs to CloudWatch) and slowquery (to publish slow-query logs to
+     * CloudWatch). See <a href="https://docs.aws.amazon.com/neptune/latest/userguide/cloudwatch-logs.html">Publishing
+     * Neptune logs to Amazon CloudWatch logs</a>.
      * </p>
      * 
      * @param enabledCloudwatchLogsExports
-     *        A list of log types that this DB cluster is configured to export to CloudWatch Logs.
+     *        A list of the log types that this DB cluster is configured to export to CloudWatch Logs. Valid log types
+     *        are: <code>audit</code> (to publish audit logs to CloudWatch) and slowquery (to publish slow-query logs to
+     *        CloudWatch). See <a
+     *        href="https://docs.aws.amazon.com/neptune/latest/userguide/cloudwatch-logs.html">Publishing Neptune logs
+     *        to Amazon CloudWatch logs</a>.
      */
 
     public void setEnabledCloudwatchLogsExports(java.util.Collection<String> enabledCloudwatchLogsExports) {
@@ -2120,7 +2149,10 @@ public class DBCluster implements Serializable, Cloneable {
 
     /**
      * <p>
-     * A list of log types that this DB cluster is configured to export to CloudWatch Logs.
+     * A list of the log types that this DB cluster is configured to export to CloudWatch Logs. Valid log types are:
+     * <code>audit</code> (to publish audit logs to CloudWatch) and slowquery (to publish slow-query logs to
+     * CloudWatch). See <a href="https://docs.aws.amazon.com/neptune/latest/userguide/cloudwatch-logs.html">Publishing
+     * Neptune logs to Amazon CloudWatch logs</a>.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -2129,7 +2161,11 @@ public class DBCluster implements Serializable, Cloneable {
      * </p>
      * 
      * @param enabledCloudwatchLogsExports
-     *        A list of log types that this DB cluster is configured to export to CloudWatch Logs.
+     *        A list of the log types that this DB cluster is configured to export to CloudWatch Logs. Valid log types
+     *        are: <code>audit</code> (to publish audit logs to CloudWatch) and slowquery (to publish slow-query logs to
+     *        CloudWatch). See <a
+     *        href="https://docs.aws.amazon.com/neptune/latest/userguide/cloudwatch-logs.html">Publishing Neptune logs
+     *        to Amazon CloudWatch logs</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2145,11 +2181,18 @@ public class DBCluster implements Serializable, Cloneable {
 
     /**
      * <p>
-     * A list of log types that this DB cluster is configured to export to CloudWatch Logs.
+     * A list of the log types that this DB cluster is configured to export to CloudWatch Logs. Valid log types are:
+     * <code>audit</code> (to publish audit logs to CloudWatch) and slowquery (to publish slow-query logs to
+     * CloudWatch). See <a href="https://docs.aws.amazon.com/neptune/latest/userguide/cloudwatch-logs.html">Publishing
+     * Neptune logs to Amazon CloudWatch logs</a>.
      * </p>
      * 
      * @param enabledCloudwatchLogsExports
-     *        A list of log types that this DB cluster is configured to export to CloudWatch Logs.
+     *        A list of the log types that this DB cluster is configured to export to CloudWatch Logs. Valid log types
+     *        are: <code>audit</code> (to publish audit logs to CloudWatch) and slowquery (to publish slow-query logs to
+     *        CloudWatch). See <a
+     *        href="https://docs.aws.amazon.com/neptune/latest/userguide/cloudwatch-logs.html">Publishing Neptune logs
+     *        to Amazon CloudWatch logs</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2470,6 +2513,86 @@ public class DBCluster implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * The next time you can modify the DB cluster to use the <code>iopt1</code> storage type.
+     * </p>
+     * 
+     * @param iOOptimizedNextAllowedModificationTime
+     *        The next time you can modify the DB cluster to use the <code>iopt1</code> storage type.
+     */
+
+    public void setIOOptimizedNextAllowedModificationTime(java.util.Date iOOptimizedNextAllowedModificationTime) {
+        this.iOOptimizedNextAllowedModificationTime = iOOptimizedNextAllowedModificationTime;
+    }
+
+    /**
+     * <p>
+     * The next time you can modify the DB cluster to use the <code>iopt1</code> storage type.
+     * </p>
+     * 
+     * @return The next time you can modify the DB cluster to use the <code>iopt1</code> storage type.
+     */
+
+    public java.util.Date getIOOptimizedNextAllowedModificationTime() {
+        return this.iOOptimizedNextAllowedModificationTime;
+    }
+
+    /**
+     * <p>
+     * The next time you can modify the DB cluster to use the <code>iopt1</code> storage type.
+     * </p>
+     * 
+     * @param iOOptimizedNextAllowedModificationTime
+     *        The next time you can modify the DB cluster to use the <code>iopt1</code> storage type.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DBCluster withIOOptimizedNextAllowedModificationTime(java.util.Date iOOptimizedNextAllowedModificationTime) {
+        setIOOptimizedNextAllowedModificationTime(iOOptimizedNextAllowedModificationTime);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The storage type associated with the DB cluster.
+     * </p>
+     * 
+     * @param storageType
+     *        The storage type associated with the DB cluster.
+     */
+
+    public void setStorageType(String storageType) {
+        this.storageType = storageType;
+    }
+
+    /**
+     * <p>
+     * The storage type associated with the DB cluster.
+     * </p>
+     * 
+     * @return The storage type associated with the DB cluster.
+     */
+
+    public String getStorageType() {
+        return this.storageType;
+    }
+
+    /**
+     * <p>
+     * The storage type associated with the DB cluster.
+     * </p>
+     * 
+     * @param storageType
+     *        The storage type associated with the DB cluster.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DBCluster withStorageType(String storageType) {
+        setStorageType(storageType);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -2566,7 +2689,11 @@ public class DBCluster implements Serializable, Cloneable {
         if (getServerlessV2ScalingConfiguration() != null)
             sb.append("ServerlessV2ScalingConfiguration: ").append(getServerlessV2ScalingConfiguration()).append(",");
         if (getGlobalClusterIdentifier() != null)
-            sb.append("GlobalClusterIdentifier: ").append(getGlobalClusterIdentifier());
+            sb.append("GlobalClusterIdentifier: ").append(getGlobalClusterIdentifier()).append(",");
+        if (getIOOptimizedNextAllowedModificationTime() != null)
+            sb.append("IOOptimizedNextAllowedModificationTime: ").append(getIOOptimizedNextAllowedModificationTime()).append(",");
+        if (getStorageType() != null)
+            sb.append("StorageType: ").append(getStorageType());
         sb.append("}");
         return sb.toString();
     }
@@ -2756,6 +2883,15 @@ public class DBCluster implements Serializable, Cloneable {
             return false;
         if (other.getGlobalClusterIdentifier() != null && other.getGlobalClusterIdentifier().equals(this.getGlobalClusterIdentifier()) == false)
             return false;
+        if (other.getIOOptimizedNextAllowedModificationTime() == null ^ this.getIOOptimizedNextAllowedModificationTime() == null)
+            return false;
+        if (other.getIOOptimizedNextAllowedModificationTime() != null
+                && other.getIOOptimizedNextAllowedModificationTime().equals(this.getIOOptimizedNextAllowedModificationTime()) == false)
+            return false;
+        if (other.getStorageType() == null ^ this.getStorageType() == null)
+            return false;
+        if (other.getStorageType() != null && other.getStorageType().equals(this.getStorageType()) == false)
+            return false;
         return true;
     }
 
@@ -2807,6 +2943,8 @@ public class DBCluster implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getAutomaticRestartTime() == null) ? 0 : getAutomaticRestartTime().hashCode());
         hashCode = prime * hashCode + ((getServerlessV2ScalingConfiguration() == null) ? 0 : getServerlessV2ScalingConfiguration().hashCode());
         hashCode = prime * hashCode + ((getGlobalClusterIdentifier() == null) ? 0 : getGlobalClusterIdentifier().hashCode());
+        hashCode = prime * hashCode + ((getIOOptimizedNextAllowedModificationTime() == null) ? 0 : getIOOptimizedNextAllowedModificationTime().hashCode());
+        hashCode = prime * hashCode + ((getStorageType() == null) ? 0 : getStorageType().hashCode());
         return hashCode;
     }
 

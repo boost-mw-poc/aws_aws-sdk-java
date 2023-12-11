@@ -5768,6 +5768,11 @@ public class AWSSecurityHubClient extends AmazonWebServiceClient implements AWSS
      *         update a security control that's currently in the <code>UPDATING</code> state.
      * @throws AccessDeniedException
      *         You don't have permission to perform the action specified in the request.
+     * @throws ResourceNotFoundException
+     *         The request was rejected because we can't find the specified resource.
+     * @throws ResourceInUseException
+     *         The request was rejected because it conflicts with the resource's availability. For example, you tried to
+     *         update a security control that's currently in the <code>UPDATING</code> state.
      * @sample AWSSecurityHub.UpdateSecurityControl
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/UpdateSecurityControl"
      *      target="_top">AWS API Documentation</a>

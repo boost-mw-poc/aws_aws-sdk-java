@@ -66,6 +66,8 @@ public class AwsDynamoDbTableDetailsMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("TableSizeBytes").build();
     private static final MarshallingInfo<String> TABLESTATUS_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("TableStatus").build();
+    private static final MarshallingInfo<Boolean> DELETIONPROTECTIONENABLED_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DeletionProtectionEnabled").build();
 
     private static final AwsDynamoDbTableDetailsMarshaller instance = new AwsDynamoDbTableDetailsMarshaller();
 
@@ -102,6 +104,7 @@ public class AwsDynamoDbTableDetailsMarshaller {
             protocolMarshaller.marshall(awsDynamoDbTableDetails.getTableName(), TABLENAME_BINDING);
             protocolMarshaller.marshall(awsDynamoDbTableDetails.getTableSizeBytes(), TABLESIZEBYTES_BINDING);
             protocolMarshaller.marshall(awsDynamoDbTableDetails.getTableStatus(), TABLESTATUS_BINDING);
+            protocolMarshaller.marshall(awsDynamoDbTableDetails.getDeletionProtectionEnabled(), DELETIONPROTECTIONENABLED_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -179,6 +179,10 @@ public class ModifyDBClusterRequestMarshaller implements Marshaller<Request<Modi
             }
         }
 
+        if (modifyDBClusterRequest.getStorageType() != null) {
+            request.addParameter("StorageType", StringUtils.fromString(modifyDBClusterRequest.getStorageType()));
+        }
+
         return request;
     }
 

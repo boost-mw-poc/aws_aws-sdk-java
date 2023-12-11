@@ -1,3 +1,16 @@
+# __1.12.610__ __2023-12-11__
+## __AWS SecurityHub__
+  - ### Features
+    - Added new resource detail objects to ASFF, including resources for AwsDynamoDbTable, AwsEc2ClientVpnEndpoint, AwsMskCluster, AwsS3AccessPoint, AwsS3Bucket
+
+## __Amazon Neptune__
+  - ### Features
+    - This release adds a new parameter configuration setting to the Neptune cluster related APIs that can be leveraged to switch between the underlying supported storage modes.
+
+## __Amazon Pinpoint__
+  - ### Features
+    - This release includes Amazon Pinpoint API documentation updates pertaining to campaign message sending rate limits.
+
 # __1.12.609__ __2023-12-08__
 ## __Amazon CloudWatch__
   - ### Features

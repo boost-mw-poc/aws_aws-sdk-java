@@ -27,7 +27,8 @@ public class CreateConfigurationPolicyRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The name of the configuration policy.
+     * The name of the configuration policy. Alphanumeric characters and the following ASCII characters are permitted:
+     * <code>-, ., !, *, /</code>.
      * </p>
      */
     private String name;
@@ -59,11 +60,13 @@ public class CreateConfigurationPolicyRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The name of the configuration policy.
+     * The name of the configuration policy. Alphanumeric characters and the following ASCII characters are permitted:
+     * <code>-, ., !, *, /</code>.
      * </p>
      * 
      * @param name
-     *        The name of the configuration policy.
+     *        The name of the configuration policy. Alphanumeric characters and the following ASCII characters are
+     *        permitted: <code>-, ., !, *, /</code>.
      */
 
     public void setName(String name) {
@@ -72,10 +75,12 @@ public class CreateConfigurationPolicyRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The name of the configuration policy.
+     * The name of the configuration policy. Alphanumeric characters and the following ASCII characters are permitted:
+     * <code>-, ., !, *, /</code>.
      * </p>
      * 
-     * @return The name of the configuration policy.
+     * @return The name of the configuration policy. Alphanumeric characters and the following ASCII characters are
+     *         permitted: <code>-, ., !, *, /</code>.
      */
 
     public String getName() {
@@ -84,11 +89,13 @@ public class CreateConfigurationPolicyRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The name of the configuration policy.
+     * The name of the configuration policy. Alphanumeric characters and the following ASCII characters are permitted:
+     * <code>-, ., !, *, /</code>.
      * </p>
      * 
      * @param name
-     *        The name of the configuration policy.
+     *        The name of the configuration policy. Alphanumeric characters and the following ASCII characters are
+     *        permitted: <code>-, ., !, *, /</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The details of an Amazon S3 bucket.
+ * The details of an Amazon Simple Storage Service (Amazon S3) bucket.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/AwsS3BucketDetails" target="_top">AWS API
@@ -65,7 +65,7 @@ public class AwsS3BucketDetails implements Serializable, Cloneable, StructuredPo
     private AwsS3BucketServerSideEncryptionConfiguration serverSideEncryptionConfiguration;
     /**
      * <p>
-     * The lifecycle configuration for objects in the S3 bucket.
+     * The lifecycle configuration for objects in the specified bucket.
      * </p>
      */
     private AwsS3BucketBucketLifecycleConfigurationDetails bucketLifecycleConfiguration;
@@ -107,10 +107,16 @@ public class AwsS3BucketDetails implements Serializable, Cloneable, StructuredPo
     private AwsS3BucketBucketVersioningConfiguration bucketVersioningConfiguration;
     /**
      * <p>
-     * Specifies which rule Amazon S3 applies by default to every new object placed in the specified bucket.
+     * Specifies which rule Amazon S3 applies by default to every new object placed in the bucket.
      * </p>
      */
     private AwsS3BucketObjectLockConfiguration objectLockConfiguration;
+    /**
+     * <p>
+     * The name of the bucket.
+     * </p>
+     */
+    private String name;
 
     /**
      * <p>
@@ -344,11 +350,11 @@ public class AwsS3BucketDetails implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The lifecycle configuration for objects in the S3 bucket.
+     * The lifecycle configuration for objects in the specified bucket.
      * </p>
      * 
      * @param bucketLifecycleConfiguration
-     *        The lifecycle configuration for objects in the S3 bucket.
+     *        The lifecycle configuration for objects in the specified bucket.
      */
 
     public void setBucketLifecycleConfiguration(AwsS3BucketBucketLifecycleConfigurationDetails bucketLifecycleConfiguration) {
@@ -357,10 +363,10 @@ public class AwsS3BucketDetails implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The lifecycle configuration for objects in the S3 bucket.
+     * The lifecycle configuration for objects in the specified bucket.
      * </p>
      * 
-     * @return The lifecycle configuration for objects in the S3 bucket.
+     * @return The lifecycle configuration for objects in the specified bucket.
      */
 
     public AwsS3BucketBucketLifecycleConfigurationDetails getBucketLifecycleConfiguration() {
@@ -369,11 +375,11 @@ public class AwsS3BucketDetails implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The lifecycle configuration for objects in the S3 bucket.
+     * The lifecycle configuration for objects in the specified bucket.
      * </p>
      * 
      * @param bucketLifecycleConfiguration
-     *        The lifecycle configuration for objects in the S3 bucket.
+     *        The lifecycle configuration for objects in the specified bucket.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -624,11 +630,11 @@ public class AwsS3BucketDetails implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * Specifies which rule Amazon S3 applies by default to every new object placed in the specified bucket.
+     * Specifies which rule Amazon S3 applies by default to every new object placed in the bucket.
      * </p>
      * 
      * @param objectLockConfiguration
-     *        Specifies which rule Amazon S3 applies by default to every new object placed in the specified bucket.
+     *        Specifies which rule Amazon S3 applies by default to every new object placed in the bucket.
      */
 
     public void setObjectLockConfiguration(AwsS3BucketObjectLockConfiguration objectLockConfiguration) {
@@ -637,10 +643,10 @@ public class AwsS3BucketDetails implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * Specifies which rule Amazon S3 applies by default to every new object placed in the specified bucket.
+     * Specifies which rule Amazon S3 applies by default to every new object placed in the bucket.
      * </p>
      * 
-     * @return Specifies which rule Amazon S3 applies by default to every new object placed in the specified bucket.
+     * @return Specifies which rule Amazon S3 applies by default to every new object placed in the bucket.
      */
 
     public AwsS3BucketObjectLockConfiguration getObjectLockConfiguration() {
@@ -649,16 +655,56 @@ public class AwsS3BucketDetails implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * Specifies which rule Amazon S3 applies by default to every new object placed in the specified bucket.
+     * Specifies which rule Amazon S3 applies by default to every new object placed in the bucket.
      * </p>
      * 
      * @param objectLockConfiguration
-     *        Specifies which rule Amazon S3 applies by default to every new object placed in the specified bucket.
+     *        Specifies which rule Amazon S3 applies by default to every new object placed in the bucket.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public AwsS3BucketDetails withObjectLockConfiguration(AwsS3BucketObjectLockConfiguration objectLockConfiguration) {
         setObjectLockConfiguration(objectLockConfiguration);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The name of the bucket.
+     * </p>
+     * 
+     * @param name
+     *        The name of the bucket.
+     */
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    /**
+     * <p>
+     * The name of the bucket.
+     * </p>
+     * 
+     * @return The name of the bucket.
+     */
+
+    public String getName() {
+        return this.name;
+    }
+
+    /**
+     * <p>
+     * The name of the bucket.
+     * </p>
+     * 
+     * @param name
+     *        The name of the bucket.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AwsS3BucketDetails withName(String name) {
+        setName(name);
         return this;
     }
 
@@ -699,7 +745,9 @@ public class AwsS3BucketDetails implements Serializable, Cloneable, StructuredPo
         if (getBucketVersioningConfiguration() != null)
             sb.append("BucketVersioningConfiguration: ").append(getBucketVersioningConfiguration()).append(",");
         if (getObjectLockConfiguration() != null)
-            sb.append("ObjectLockConfiguration: ").append(getObjectLockConfiguration());
+            sb.append("ObjectLockConfiguration: ").append(getObjectLockConfiguration()).append(",");
+        if (getName() != null)
+            sb.append("Name: ").append(getName());
         sb.append("}");
         return sb.toString();
     }
@@ -770,6 +818,10 @@ public class AwsS3BucketDetails implements Serializable, Cloneable, StructuredPo
             return false;
         if (other.getObjectLockConfiguration() != null && other.getObjectLockConfiguration().equals(this.getObjectLockConfiguration()) == false)
             return false;
+        if (other.getName() == null ^ this.getName() == null)
+            return false;
+        if (other.getName() != null && other.getName().equals(this.getName()) == false)
+            return false;
         return true;
     }
 
@@ -791,6 +843,7 @@ public class AwsS3BucketDetails implements Serializable, Cloneable, StructuredPo
         hashCode = prime * hashCode + ((getBucketNotificationConfiguration() == null) ? 0 : getBucketNotificationConfiguration().hashCode());
         hashCode = prime * hashCode + ((getBucketVersioningConfiguration() == null) ? 0 : getBucketVersioningConfiguration().hashCode());
         hashCode = prime * hashCode + ((getObjectLockConfiguration() == null) ? 0 : getObjectLockConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
         return hashCode;
     }
 

@@ -3598,6 +3598,8 @@ public class AmazonNeptuneClient extends AmazonWebServiceClient implements Amazo
      *         The specified DB instance is not in the <i>available</i> state.
      * @throws DBClusterAlreadyExistsException
      *         User already has a DB cluster with the given identifier.
+     * @throws StorageTypeNotSupportedException
+     *         <i>StorageType</i> specified cannot be associated with the DB Instance.
      * @sample AmazonNeptune.ModifyDBCluster
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/neptune-2014-10-31/ModifyDBCluster" target="_top">AWS API
      *      Documentation</a>

@@ -31,7 +31,16 @@ public class ParameterConfiguration implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * Identifies whether a control parameter uses a custom user-defined value or the Security Hub default value.
+     * Identifies whether a control parameter uses a custom user-defined value or subscribes to the default Security Hub
+     * behavior.
+     * </p>
+     * <p>
+     * When <code>ValueType</code> is set equal to <code>DEFAULT</code>, the default behavior can be a specific Security
+     * Hub default value, or the default behavior can be to ignore a specific parameter. When <code>ValueType</code> is
+     * set equal to <code>DEFAULT</code>, Security Hub ignores user-provided input for the <code>Value</code> field.
+     * </p>
+     * <p>
+     * When <code>ValueType</code> is set equal to <code>CUSTOM</code>, the <code>Value</code> field can't be empty.
      * </p>
      */
     private String valueType;
@@ -44,11 +53,30 @@ public class ParameterConfiguration implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * Identifies whether a control parameter uses a custom user-defined value or the Security Hub default value.
+     * Identifies whether a control parameter uses a custom user-defined value or subscribes to the default Security Hub
+     * behavior.
+     * </p>
+     * <p>
+     * When <code>ValueType</code> is set equal to <code>DEFAULT</code>, the default behavior can be a specific Security
+     * Hub default value, or the default behavior can be to ignore a specific parameter. When <code>ValueType</code> is
+     * set equal to <code>DEFAULT</code>, Security Hub ignores user-provided input for the <code>Value</code> field.
+     * </p>
+     * <p>
+     * When <code>ValueType</code> is set equal to <code>CUSTOM</code>, the <code>Value</code> field can't be empty.
      * </p>
      * 
      * @param valueType
-     *        Identifies whether a control parameter uses a custom user-defined value or the Security Hub default value.
+     *        Identifies whether a control parameter uses a custom user-defined value or subscribes to the default
+     *        Security Hub behavior.</p>
+     *        <p>
+     *        When <code>ValueType</code> is set equal to <code>DEFAULT</code>, the default behavior can be a specific
+     *        Security Hub default value, or the default behavior can be to ignore a specific parameter. When
+     *        <code>ValueType</code> is set equal to <code>DEFAULT</code>, Security Hub ignores user-provided input for
+     *        the <code>Value</code> field.
+     *        </p>
+     *        <p>
+     *        When <code>ValueType</code> is set equal to <code>CUSTOM</code>, the <code>Value</code> field can't be
+     *        empty.
      * @see ParameterValueType
      */
 
@@ -58,11 +86,29 @@ public class ParameterConfiguration implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * Identifies whether a control parameter uses a custom user-defined value or the Security Hub default value.
+     * Identifies whether a control parameter uses a custom user-defined value or subscribes to the default Security Hub
+     * behavior.
+     * </p>
+     * <p>
+     * When <code>ValueType</code> is set equal to <code>DEFAULT</code>, the default behavior can be a specific Security
+     * Hub default value, or the default behavior can be to ignore a specific parameter. When <code>ValueType</code> is
+     * set equal to <code>DEFAULT</code>, Security Hub ignores user-provided input for the <code>Value</code> field.
+     * </p>
+     * <p>
+     * When <code>ValueType</code> is set equal to <code>CUSTOM</code>, the <code>Value</code> field can't be empty.
      * </p>
      * 
-     * @return Identifies whether a control parameter uses a custom user-defined value or the Security Hub default
-     *         value.
+     * @return Identifies whether a control parameter uses a custom user-defined value or subscribes to the default
+     *         Security Hub behavior.</p>
+     *         <p>
+     *         When <code>ValueType</code> is set equal to <code>DEFAULT</code>, the default behavior can be a specific
+     *         Security Hub default value, or the default behavior can be to ignore a specific parameter. When
+     *         <code>ValueType</code> is set equal to <code>DEFAULT</code>, Security Hub ignores user-provided input for
+     *         the <code>Value</code> field.
+     *         </p>
+     *         <p>
+     *         When <code>ValueType</code> is set equal to <code>CUSTOM</code>, the <code>Value</code> field can't be
+     *         empty.
      * @see ParameterValueType
      */
 
@@ -72,11 +118,30 @@ public class ParameterConfiguration implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * Identifies whether a control parameter uses a custom user-defined value or the Security Hub default value.
+     * Identifies whether a control parameter uses a custom user-defined value or subscribes to the default Security Hub
+     * behavior.
+     * </p>
+     * <p>
+     * When <code>ValueType</code> is set equal to <code>DEFAULT</code>, the default behavior can be a specific Security
+     * Hub default value, or the default behavior can be to ignore a specific parameter. When <code>ValueType</code> is
+     * set equal to <code>DEFAULT</code>, Security Hub ignores user-provided input for the <code>Value</code> field.
+     * </p>
+     * <p>
+     * When <code>ValueType</code> is set equal to <code>CUSTOM</code>, the <code>Value</code> field can't be empty.
      * </p>
      * 
      * @param valueType
-     *        Identifies whether a control parameter uses a custom user-defined value or the Security Hub default value.
+     *        Identifies whether a control parameter uses a custom user-defined value or subscribes to the default
+     *        Security Hub behavior.</p>
+     *        <p>
+     *        When <code>ValueType</code> is set equal to <code>DEFAULT</code>, the default behavior can be a specific
+     *        Security Hub default value, or the default behavior can be to ignore a specific parameter. When
+     *        <code>ValueType</code> is set equal to <code>DEFAULT</code>, Security Hub ignores user-provided input for
+     *        the <code>Value</code> field.
+     *        </p>
+     *        <p>
+     *        When <code>ValueType</code> is set equal to <code>CUSTOM</code>, the <code>Value</code> field can't be
+     *        empty.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ParameterValueType
      */
@@ -88,11 +153,30 @@ public class ParameterConfiguration implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * Identifies whether a control parameter uses a custom user-defined value or the Security Hub default value.
+     * Identifies whether a control parameter uses a custom user-defined value or subscribes to the default Security Hub
+     * behavior.
+     * </p>
+     * <p>
+     * When <code>ValueType</code> is set equal to <code>DEFAULT</code>, the default behavior can be a specific Security
+     * Hub default value, or the default behavior can be to ignore a specific parameter. When <code>ValueType</code> is
+     * set equal to <code>DEFAULT</code>, Security Hub ignores user-provided input for the <code>Value</code> field.
+     * </p>
+     * <p>
+     * When <code>ValueType</code> is set equal to <code>CUSTOM</code>, the <code>Value</code> field can't be empty.
      * </p>
      * 
      * @param valueType
-     *        Identifies whether a control parameter uses a custom user-defined value or the Security Hub default value.
+     *        Identifies whether a control parameter uses a custom user-defined value or subscribes to the default
+     *        Security Hub behavior.</p>
+     *        <p>
+     *        When <code>ValueType</code> is set equal to <code>DEFAULT</code>, the default behavior can be a specific
+     *        Security Hub default value, or the default behavior can be to ignore a specific parameter. When
+     *        <code>ValueType</code> is set equal to <code>DEFAULT</code>, Security Hub ignores user-provided input for
+     *        the <code>Value</code> field.
+     *        </p>
+     *        <p>
+     *        When <code>ValueType</code> is set equal to <code>CUSTOM</code>, the <code>Value</code> field can't be
+     *        empty.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ParameterValueType
      */

@@ -311,7 +311,10 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
     private Boolean enableIAMDatabaseAuthentication;
     /**
      * <p>
-     * The list of log types that need to be enabled for exporting to CloudWatch Logs.
+     * A list of the log types that this DB cluster should export to CloudWatch Logs. Valid log types are:
+     * <code>audit</code> (to publish audit logs) and <code>slowquery</code> (to publish slow-query logs). See <a
+     * href="https://docs.aws.amazon.com/neptune/latest/userguide/cloudwatch-logs.html">Publishing Neptune logs to
+     * Amazon CloudWatch logs</a>.
      * </p>
      */
     private java.util.List<String> enableCloudwatchLogsExports;
@@ -339,6 +342,38 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      */
     private String globalClusterIdentifier;
+    /**
+     * <p>
+     * The storage type to associate with the DB cluster.
+     * </p>
+     * <p>
+     * Valid Values:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>standard | iopt1</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Default:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>standard</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <note>
+     * <p>
+     * When you create a Neptune cluster with the storage type set to <code>iopt1</code>, the storage type is returned
+     * in the response. The storage type isn't returned when you set it to <code>standard</code>.
+     * </p>
+     * </note>
+     */
+    private String storageType;
     /** The region where the source instance is located. */
     private String sourceRegion;
 
@@ -2243,10 +2278,16 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The list of log types that need to be enabled for exporting to CloudWatch Logs.
+     * A list of the log types that this DB cluster should export to CloudWatch Logs. Valid log types are:
+     * <code>audit</code> (to publish audit logs) and <code>slowquery</code> (to publish slow-query logs). See <a
+     * href="https://docs.aws.amazon.com/neptune/latest/userguide/cloudwatch-logs.html">Publishing Neptune logs to
+     * Amazon CloudWatch logs</a>.
      * </p>
      * 
-     * @return The list of log types that need to be enabled for exporting to CloudWatch Logs.
+     * @return A list of the log types that this DB cluster should export to CloudWatch Logs. Valid log types are:
+     *         <code>audit</code> (to publish audit logs) and <code>slowquery</code> (to publish slow-query logs). See
+     *         <a href="https://docs.aws.amazon.com/neptune/latest/userguide/cloudwatch-logs.html">Publishing Neptune
+     *         logs to Amazon CloudWatch logs</a>.
      */
 
     public java.util.List<String> getEnableCloudwatchLogsExports() {
@@ -2255,11 +2296,17 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The list of log types that need to be enabled for exporting to CloudWatch Logs.
+     * A list of the log types that this DB cluster should export to CloudWatch Logs. Valid log types are:
+     * <code>audit</code> (to publish audit logs) and <code>slowquery</code> (to publish slow-query logs). See <a
+     * href="https://docs.aws.amazon.com/neptune/latest/userguide/cloudwatch-logs.html">Publishing Neptune logs to
+     * Amazon CloudWatch logs</a>.
      * </p>
      * 
      * @param enableCloudwatchLogsExports
-     *        The list of log types that need to be enabled for exporting to CloudWatch Logs.
+     *        A list of the log types that this DB cluster should export to CloudWatch Logs. Valid log types are:
+     *        <code>audit</code> (to publish audit logs) and <code>slowquery</code> (to publish slow-query logs). See <a
+     *        href="https://docs.aws.amazon.com/neptune/latest/userguide/cloudwatch-logs.html">Publishing Neptune logs
+     *        to Amazon CloudWatch logs</a>.
      */
 
     public void setEnableCloudwatchLogsExports(java.util.Collection<String> enableCloudwatchLogsExports) {
@@ -2273,7 +2320,10 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The list of log types that need to be enabled for exporting to CloudWatch Logs.
+     * A list of the log types that this DB cluster should export to CloudWatch Logs. Valid log types are:
+     * <code>audit</code> (to publish audit logs) and <code>slowquery</code> (to publish slow-query logs). See <a
+     * href="https://docs.aws.amazon.com/neptune/latest/userguide/cloudwatch-logs.html">Publishing Neptune logs to
+     * Amazon CloudWatch logs</a>.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -2282,7 +2332,10 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * 
      * @param enableCloudwatchLogsExports
-     *        The list of log types that need to be enabled for exporting to CloudWatch Logs.
+     *        A list of the log types that this DB cluster should export to CloudWatch Logs. Valid log types are:
+     *        <code>audit</code> (to publish audit logs) and <code>slowquery</code> (to publish slow-query logs). See <a
+     *        href="https://docs.aws.amazon.com/neptune/latest/userguide/cloudwatch-logs.html">Publishing Neptune logs
+     *        to Amazon CloudWatch logs</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2298,11 +2351,17 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The list of log types that need to be enabled for exporting to CloudWatch Logs.
+     * A list of the log types that this DB cluster should export to CloudWatch Logs. Valid log types are:
+     * <code>audit</code> (to publish audit logs) and <code>slowquery</code> (to publish slow-query logs). See <a
+     * href="https://docs.aws.amazon.com/neptune/latest/userguide/cloudwatch-logs.html">Publishing Neptune logs to
+     * Amazon CloudWatch logs</a>.
      * </p>
      * 
      * @param enableCloudwatchLogsExports
-     *        The list of log types that need to be enabled for exporting to CloudWatch Logs.
+     *        A list of the log types that this DB cluster should export to CloudWatch Logs. Valid log types are:
+     *        <code>audit</code> (to publish audit logs) and <code>slowquery</code> (to publish slow-query logs). See <a
+     *        href="https://docs.aws.amazon.com/neptune/latest/userguide/cloudwatch-logs.html">Publishing Neptune logs
+     *        to Amazon CloudWatch logs</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2479,6 +2538,199 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
     }
 
     /**
+     * <p>
+     * The storage type to associate with the DB cluster.
+     * </p>
+     * <p>
+     * Valid Values:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>standard | iopt1</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Default:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>standard</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <note>
+     * <p>
+     * When you create a Neptune cluster with the storage type set to <code>iopt1</code>, the storage type is returned
+     * in the response. The storage type isn't returned when you set it to <code>standard</code>.
+     * </p>
+     * </note>
+     * 
+     * @param storageType
+     *        The storage type to associate with the DB cluster.</p>
+     *        <p>
+     *        Valid Values:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>standard | iopt1</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        Default:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>standard</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <note>
+     *        <p>
+     *        When you create a Neptune cluster with the storage type set to <code>iopt1</code>, the storage type is
+     *        returned in the response. The storage type isn't returned when you set it to <code>standard</code>.
+     *        </p>
+     */
+
+    public void setStorageType(String storageType) {
+        this.storageType = storageType;
+    }
+
+    /**
+     * <p>
+     * The storage type to associate with the DB cluster.
+     * </p>
+     * <p>
+     * Valid Values:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>standard | iopt1</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Default:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>standard</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <note>
+     * <p>
+     * When you create a Neptune cluster with the storage type set to <code>iopt1</code>, the storage type is returned
+     * in the response. The storage type isn't returned when you set it to <code>standard</code>.
+     * </p>
+     * </note>
+     * 
+     * @return The storage type to associate with the DB cluster.</p>
+     *         <p>
+     *         Valid Values:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>standard | iopt1</code>
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         Default:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>standard</code>
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <note>
+     *         <p>
+     *         When you create a Neptune cluster with the storage type set to <code>iopt1</code>, the storage type is
+     *         returned in the response. The storage type isn't returned when you set it to <code>standard</code>.
+     *         </p>
+     */
+
+    public String getStorageType() {
+        return this.storageType;
+    }
+
+    /**
+     * <p>
+     * The storage type to associate with the DB cluster.
+     * </p>
+     * <p>
+     * Valid Values:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>standard | iopt1</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Default:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>standard</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <note>
+     * <p>
+     * When you create a Neptune cluster with the storage type set to <code>iopt1</code>, the storage type is returned
+     * in the response. The storage type isn't returned when you set it to <code>standard</code>.
+     * </p>
+     * </note>
+     * 
+     * @param storageType
+     *        The storage type to associate with the DB cluster.</p>
+     *        <p>
+     *        Valid Values:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>standard | iopt1</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        Default:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>standard</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <note>
+     *        <p>
+     *        When you create a Neptune cluster with the storage type set to <code>iopt1</code>, the storage type is
+     *        returned in the response. The storage type isn't returned when you set it to <code>standard</code>.
+     *        </p>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateDBClusterRequest withStorageType(String storageType) {
+        setStorageType(storageType);
+        return this;
+    }
+
+    /**
      * The region where the source instance is located.
      * 
      * @param sourceRegion
@@ -2578,6 +2830,8 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
             sb.append("ServerlessV2ScalingConfiguration: ").append(getServerlessV2ScalingConfiguration()).append(",");
         if (getGlobalClusterIdentifier() != null)
             sb.append("GlobalClusterIdentifier: ").append(getGlobalClusterIdentifier()).append(",");
+        if (getStorageType() != null)
+            sb.append("StorageType: ").append(getStorageType()).append(",");
         if (getSourceRegion() != null)
             sb.append("SourceRegion: ").append(getSourceRegion());
         sb.append("}");
@@ -2704,6 +2958,10 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
             return false;
         if (other.getGlobalClusterIdentifier() != null && other.getGlobalClusterIdentifier().equals(this.getGlobalClusterIdentifier()) == false)
             return false;
+        if (other.getStorageType() == null ^ this.getStorageType() == null)
+            return false;
+        if (other.getStorageType() != null && other.getStorageType().equals(this.getStorageType()) == false)
+            return false;
         if (other.getSourceRegion() == null ^ this.getSourceRegion() == null)
             return false;
         if (other.getSourceRegion() != null && other.getSourceRegion().equals(this.getSourceRegion()) == false)
@@ -2743,6 +3001,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
         hashCode = prime * hashCode + ((getDeletionProtection() == null) ? 0 : getDeletionProtection().hashCode());
         hashCode = prime * hashCode + ((getServerlessV2ScalingConfiguration() == null) ? 0 : getServerlessV2ScalingConfiguration().hashCode());
         hashCode = prime * hashCode + ((getGlobalClusterIdentifier() == null) ? 0 : getGlobalClusterIdentifier().hashCode());
+        hashCode = prime * hashCode + ((getStorageType() == null) ? 0 : getStorageType().hashCode());
         hashCode = prime * hashCode + ((getSourceRegion() == null) ? 0 : getSourceRegion().hashCode());
         return hashCode;
     }

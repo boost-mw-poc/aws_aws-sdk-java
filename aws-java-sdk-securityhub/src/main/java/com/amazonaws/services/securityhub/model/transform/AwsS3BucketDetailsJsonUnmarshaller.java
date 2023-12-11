@@ -105,6 +105,10 @@ public class AwsS3BucketDetailsJsonUnmarshaller implements Unmarshaller<AwsS3Buc
                     context.nextToken();
                     awsS3BucketDetails.setObjectLockConfiguration(AwsS3BucketObjectLockConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("Name", targetDepth)) {
+                    context.nextToken();
+                    awsS3BucketDetails.setName(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

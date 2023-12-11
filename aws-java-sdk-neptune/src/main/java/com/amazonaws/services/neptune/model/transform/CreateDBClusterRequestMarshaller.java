@@ -220,6 +220,10 @@ public class CreateDBClusterRequestMarshaller implements Marshaller<Request<Crea
             request.addParameter("GlobalClusterIdentifier", StringUtils.fromString(createDBClusterRequest.getGlobalClusterIdentifier()));
         }
 
+        if (createDBClusterRequest.getStorageType() != null) {
+            request.addParameter("StorageType", StringUtils.fromString(createDBClusterRequest.getStorageType()));
+        }
+
         if (createDBClusterRequest.getSourceRegion() != null) {
             request.addParameter("SourceRegion", StringUtils.fromString(createDBClusterRequest.getSourceRegion()));
         }
