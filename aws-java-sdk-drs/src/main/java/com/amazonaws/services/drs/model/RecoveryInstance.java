@@ -30,6 +30,12 @@ public class RecoveryInstance implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
+     * The version of the DRS agent installed on the recovery instance
+     * </p>
+     */
+    private String agentVersion;
+    /**
+     * <p>
      * The ARN of the Recovery Instance.
      * </p>
      */
@@ -112,6 +118,46 @@ public class RecoveryInstance implements Serializable, Cloneable, StructuredPojo
      * </p>
      */
     private java.util.Map<String, String> tags;
+
+    /**
+     * <p>
+     * The version of the DRS agent installed on the recovery instance
+     * </p>
+     * 
+     * @param agentVersion
+     *        The version of the DRS agent installed on the recovery instance
+     */
+
+    public void setAgentVersion(String agentVersion) {
+        this.agentVersion = agentVersion;
+    }
+
+    /**
+     * <p>
+     * The version of the DRS agent installed on the recovery instance
+     * </p>
+     * 
+     * @return The version of the DRS agent installed on the recovery instance
+     */
+
+    public String getAgentVersion() {
+        return this.agentVersion;
+    }
+
+    /**
+     * <p>
+     * The version of the DRS agent installed on the recovery instance
+     * </p>
+     * 
+     * @param agentVersion
+     *        The version of the DRS agent installed on the recovery instance
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RecoveryInstance withAgentVersion(String agentVersion) {
+        setAgentVersion(agentVersion);
+        return this;
+    }
 
     /**
      * <p>
@@ -763,6 +809,8 @@ public class RecoveryInstance implements Serializable, Cloneable, StructuredPojo
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getAgentVersion() != null)
+            sb.append("AgentVersion: ").append(getAgentVersion()).append(",");
         if (getArn() != null)
             sb.append("Arn: ").append(getArn()).append(",");
         if (getDataReplicationInfo() != null)
@@ -805,6 +853,10 @@ public class RecoveryInstance implements Serializable, Cloneable, StructuredPojo
         if (obj instanceof RecoveryInstance == false)
             return false;
         RecoveryInstance other = (RecoveryInstance) obj;
+        if (other.getAgentVersion() == null ^ this.getAgentVersion() == null)
+            return false;
+        if (other.getAgentVersion() != null && other.getAgentVersion().equals(this.getAgentVersion()) == false)
+            return false;
         if (other.getArn() == null ^ this.getArn() == null)
             return false;
         if (other.getArn() != null && other.getArn().equals(this.getArn()) == false)
@@ -869,6 +921,7 @@ public class RecoveryInstance implements Serializable, Cloneable, StructuredPojo
         final int prime = 31;
         int hashCode = 1;
 
+        hashCode = prime * hashCode + ((getAgentVersion() == null) ? 0 : getAgentVersion().hashCode());
         hashCode = prime * hashCode + ((getArn() == null) ? 0 : getArn().hashCode());
         hashCode = prime * hashCode + ((getDataReplicationInfo() == null) ? 0 : getDataReplicationInfo().hashCode());
         hashCode = prime * hashCode + ((getEc2InstanceID() == null) ? 0 : getEc2InstanceID().hashCode());

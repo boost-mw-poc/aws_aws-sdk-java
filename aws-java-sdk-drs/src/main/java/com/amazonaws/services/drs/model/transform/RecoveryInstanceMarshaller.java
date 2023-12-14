@@ -29,6 +29,8 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class RecoveryInstanceMarshaller {
 
+    private static final MarshallingInfo<String> AGENTVERSION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("agentVersion").build();
     private static final MarshallingInfo<String> ARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("arn").build();
     private static final MarshallingInfo<StructuredPojo> DATAREPLICATIONINFO_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
@@ -74,6 +76,7 @@ public class RecoveryInstanceMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(recoveryInstance.getAgentVersion(), AGENTVERSION_BINDING);
             protocolMarshaller.marshall(recoveryInstance.getArn(), ARN_BINDING);
             protocolMarshaller.marshall(recoveryInstance.getDataReplicationInfo(), DATAREPLICATIONINFO_BINDING);
             protocolMarshaller.marshall(recoveryInstance.getEc2InstanceID(), EC2INSTANCEID_BINDING);

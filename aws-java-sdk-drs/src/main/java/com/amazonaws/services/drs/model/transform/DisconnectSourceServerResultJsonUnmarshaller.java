@@ -48,6 +48,10 @@ public class DisconnectSourceServerResultJsonUnmarshaller implements Unmarshalle
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("agentVersion", targetDepth)) {
+                    context.nextToken();
+                    disconnectSourceServerResult.setAgentVersion(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("arn", targetDepth)) {
                     context.nextToken();
                     disconnectSourceServerResult.setArn(context.getUnmarshaller(String.class).unmarshall(context));

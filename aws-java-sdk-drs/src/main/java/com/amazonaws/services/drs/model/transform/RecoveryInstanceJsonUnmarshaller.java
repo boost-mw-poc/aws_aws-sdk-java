@@ -48,6 +48,10 @@ public class RecoveryInstanceJsonUnmarshaller implements Unmarshaller<RecoveryIn
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("agentVersion", targetDepth)) {
+                    context.nextToken();
+                    recoveryInstance.setAgentVersion(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("arn", targetDepth)) {
                     context.nextToken();
                     recoveryInstance.setArn(context.getUnmarshaller(String.class).unmarshall(context));
